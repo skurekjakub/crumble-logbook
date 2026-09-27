@@ -1,0 +1,66 @@
+import type {
+  GearRecInput,
+  GearRecRow,
+  MechanicInput,
+  MechanicRow,
+  RecommendationInput,
+  RecommendationRow,
+  RngFactorInput,
+  RngFactorRow,
+  TakeawayInput,
+  TakeawayRow,
+  TimelineEventInput,
+  TimelineEventRow,
+  Values,
+} from "@crumble/schema";
+import type { Store } from "../repos";
+import type { ContentService } from "./content";
+import { createContentService } from "./content";
+import type { ScoreService } from "./scores";
+import { createScoreService } from "./scores";
+
+/** Every content and score service the server exposes. Later tasks add keys. */
+export interface Services {
+  mechanics: ContentService<MechanicRow, Values<MechanicInput>>;
+  rngFactors: ContentService<RngFactorRow, Values<RngFactorInput>>;
+  timeline: ContentService<TimelineEventRow, Values<TimelineEventInput>>;
+  takeaways: ContentService<TakeawayRow, Values<TakeawayInput>>;
+  gearRecs: ContentService<GearRecRow, Values<GearRecInput>>;
+  recommendations: ContentService<RecommendationRow, Values<RecommendationInput>>;
+  scores: ScoreService;
+}
+
+/**
+ * Builds every service over a shared {@link Store}.
+ * @param store - the store services persist through
+ * @returns the service set
+ */
+export function createServices(store: Store): Services {
+  return {
+    mechanics: createContentService<MechanicRow, Values<MechanicInput>>(store, {
+      entity: "mechanic",
+      table: (repos) => repos.mechanics,
+    }),
+    rngFactors: createContentService<RngFactorRow, Values<RngFactorInput>>(store, {
+      entity: "rng_factor",
+      table: (repos) => repos.rngFactors,
+    }),
+    timeline: createContentService<TimelineEventRow, Values<TimelineEventInput>>(store, {
+      entity: "timeline_event",
+      table: (repos) => repos.timeline,
+    }),
+    takeaways: createContentService<TakeawayRow, Values<TakeawayInput>>(store, {
+      entity: "takeaway",
+      table: (repos) => repos.takeaways,
+    }),
+    gearRecs: createContentService<GearRecRow, Values<GearRecInput>>(store, {
+      entity: "gear_rec",
+      table: (repos) => repos.gearRecs,
+    }),
+    recommendations: createContentService<RecommendationRow, Values<RecommendationInput>>(store, {
+      entity: "recommendation",
+      table: (repos) => repos.recommendations,
+    }),
+    scores: createScoreService(store),
+  };
+}

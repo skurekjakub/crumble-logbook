@@ -12,6 +12,11 @@ export class NotFoundError extends Error {
 
 /** Thrown when an input references source or deck ids that don't exist. */
 export class UnknownRefsError extends Error {
+  /** Which kind of id was referenced, `"sources"` or `"decks"`. */
+  readonly kind: "sources" | "decks";
+  /** The referenced ids that don't exist. */
+  readonly ids: string[];
+
   /**
    * @param kind - which kind of id was referenced, `"sources"` or `"decks"`
    * @param ids - the referenced ids that don't exist
@@ -19,6 +24,8 @@ export class UnknownRefsError extends Error {
   constructor(kind: "sources" | "decks", ids: string[]) {
     super(`unknown ${kind}: ${ids.join(", ")}`);
     this.name = "UnknownRefsError";
+    this.kind = kind;
+    this.ids = ids;
   }
 }
 

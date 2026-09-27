@@ -1,13 +1,29 @@
+import type { GearRecRow, MechanicRow, RecommendationRow, RngFactorRow, ScoreRow, TakeawayRow, TimelineEventRow } from "@crumble/schema";
+import { gearRecs, mechanics, recommendations, rngFactors, scores, takeaways, timeline } from "@crumble/schema";
+import type { InferInsertModel } from "drizzle-orm";
+import { asc } from "drizzle-orm";
 import type { Db } from "../db/client";
 import type { CitationsRepo } from "./citations";
 import { createCitationsRepo } from "./citations";
+import type { DecksRepo } from "./decks";
+import { createDecksRepo } from "./decks";
 import type { SourcesRepo } from "./sources";
 import { createSourcesRepo } from "./sources";
+import type { TableRepo } from "./table-repo";
+import { createTableRepo } from "./table-repo";
 
 /** Every repo the server exposes, keyed by name. Later tasks add keys. */
 export interface Repos {
   sources: SourcesRepo;
   citations: CitationsRepo;
+  decks: DecksRepo;
+  mechanics: TableRepo<MechanicRow, InferInsertModel<typeof mechanics>>;
+  rngFactors: TableRepo<RngFactorRow, InferInsertModel<typeof rngFactors>>;
+  timeline: TableRepo<TimelineEventRow, InferInsertModel<typeof timeline>>;
+  takeaways: TableRepo<TakeawayRow, InferInsertModel<typeof takeaways>>;
+  gearRecs: TableRepo<GearRecRow, InferInsertModel<typeof gearRecs>>;
+  recommendations: TableRepo<RecommendationRow, InferInsertModel<typeof recommendations>>;
+  scores: TableRepo<ScoreRow, InferInsertModel<typeof scores>>;
 }
 
 /**
@@ -19,6 +35,14 @@ export function createRepos(db: Db): Repos {
   return {
     sources: createSourcesRepo(db),
     citations: createCitationsRepo(db),
+    decks: createDecksRepo(db),
+    mechanics: createTableRepo(db, mechanics),
+    rngFactors: createTableRepo(db, rngFactors),
+    timeline: createTableRepo(db, timeline, [asc(timeline.date), asc(timeline.id)]),
+    takeaways: createTableRepo(db, takeaways, [asc(takeaways.position), asc(takeaways.id)]),
+    gearRecs: createTableRepo(db, gearRecs),
+    recommendations: createTableRepo(db, recommendations),
+    scores: createTableRepo(db, scores),
   };
 }
 
