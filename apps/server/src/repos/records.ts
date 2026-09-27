@@ -25,8 +25,6 @@ export interface RecordsRepo {
   upsert(row: RecordInsert): ResearchRecordRow;
   /** Returns the number of research records. */
   count(): number;
-  /** Deletes every research record. */
-  clear(): void;
 }
 
 /**
@@ -45,8 +43,5 @@ export function createRecordsRepo(db: Db): RecordsRepo {
         .returning()
         .get(),
     count: () => db.select({ n: count() }).from(researchRecords).get()!.n,
-    clear: () => {
-      db.delete(researchRecords).run();
-    },
   };
 }

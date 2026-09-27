@@ -1,10 +1,20 @@
+import { getTableName, sql } from "drizzle-orm";
 import { describe, expect, it } from "vitest";
+import { openDb } from "../../src/db/client";
 import { ConflictError } from "../../src/errors";
+import type { TableKey } from "../../src/registry";
+import { specOf } from "../../src/registry";
 import type { Store } from "../../src/repos";
 import { createServices } from "../../src/services";
 import type { Snapshot } from "../../src/services/export";
 import { assertSnapshotNonEmpty, exportSnapshot, restoreSnapshot } from "../../src/services/export";
 import { addSource, testStore } from "../helpers";
+
+/**
+ * Tables the migrations create that a snapshot deliberately leaves out:
+ * transient job state, SQLite's id counters, and drizzle's migration log.
+ */
+const NOT_SNAPSHOTTED = ["jobs", "sqlite_sequence", "__drizzle_migrations"];
 
 /** The ids the round-trip test asserts survive restore, gaps and all. */
 interface SeedIds {
@@ -211,6 +221,16 @@ describe("exportSnapshot / restoreSnapshot", () => {
     for (const [table, rows] of Object.entries(first.tables)) {
       expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);
     }
+    // The snapshot must cover every table the migrations create, so a new
+    // table that nobody registers fails here rather than going unexported.
+    const created = openDb(":memory:")
+      .all<{ name: string }>(sql`select name from sqlite_master where type = 'table'`)
+      .map((row) => row.name)
+      .filter((name) => !NOT_SNAPSHOTTED.includes(name));
+    const snapshotted = (Object.keys(first.tables) as TableKey[]).map((key) =>
+      getTableName(specOf(key).table),
+    );
+    expect([...snapshotted].sort()).toEqual([...created].sort());
 
     // The specific, gapped ids survived restore rather than being
     // reassigned by a fresh autoincrement counter.

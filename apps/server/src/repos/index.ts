@@ -1,28 +1,6 @@
-import type {
-  BuffValueRow,
-  FightEventRow,
-  GearRecRow,
-  MechanicRow,
-  RecommendationRow,
-  RngFactorRow,
-  ScoreRow,
-  TakeawayRow,
-  TimelineEventRow,
-} from "@crumble/schema";
-import {
-  buffValues,
-  fightEvents,
-  gearRecs,
-  mechanics,
-  recommendations,
-  rngFactors,
-  scores,
-  takeaways,
-  timeline,
-} from "@crumble/schema";
-import type { InferInsertModel } from "drizzle-orm";
-import { asc, sql } from "drizzle-orm";
 import type { Db } from "../db/client";
+import type { ContentKey, InsertOf, RowOf } from "../registry";
+import { CONTENT_KEYS, specOf } from "../registry";
 import type { CitationsRepo } from "./citations";
 import { createCitationsRepo } from "./citations";
 import type { DecksRepo } from "./decks";
@@ -38,10 +16,18 @@ import { createRuneBuildsRepo } from "./rune-builds";
 import type { SourcesRepo } from "./sources";
 import { createSourcesRepo } from "./sources";
 import type { TableRepo } from "./table-repo";
-import { createTableRepo } from "./table-repo";
+import { createTableRepo, orderTerms } from "./table-repo";
+import type { TablesRepo } from "./tables";
+import { createTablesRepo } from "./tables";
 
-/** Every repo the server exposes, keyed by name. Later tasks add keys. */
-export interface Repos {
+/**
+ * One generic table repo per registered content type, in the type's
+ * declared list order.
+ */
+export type ContentRepos = { [K in ContentKey]: TableRepo<RowOf<K>, InsertOf<K>> };
+
+/** Every repo the server exposes, keyed by name. */
+export type Repos = ContentRepos & {
   sources: SourcesRepo;
   citations: CitationsRepo;
   decks: DecksRepo;
@@ -49,17 +35,25 @@ export interface Repos {
   runeBuilds: RuneBuildsRepo;
   rankings: RankingsRepo;
   records: RecordsRepo;
-  mechanics: TableRepo<MechanicRow, InferInsertModel<typeof mechanics>>;
-  rngFactors: TableRepo<RngFactorRow, InferInsertModel<typeof rngFactors>>;
-  timeline: TableRepo<TimelineEventRow, InferInsertModel<typeof timeline>>;
-  takeaways: TableRepo<TakeawayRow, InferInsertModel<typeof takeaways>>;
-  gearRecs: TableRepo<GearRecRow, InferInsertModel<typeof gearRecs>>;
-  recommendations: TableRepo<RecommendationRow, InferInsertModel<typeof recommendations>>;
-  scores: TableRepo<ScoreRow, InferInsertModel<typeof scores>>;
-  /** Fight events, in elapsed-time order; events with no time come last. */
-  fightEvents: TableRepo<FightEventRow, InferInsertModel<typeof fightEvents>>;
-  /** Buff values, ordered by cookie, effect type, then skill grade. */
-  buffValues: TableRepo<BuffValueRow, InferInsertModel<typeof buffValues>>;
+  /** Whole-table dump, load, count and clear over every registered table. */
+  tables: TablesRepo;
+};
+
+/**
+ * Builds the generic repo of every registered content type.
+ * @param db - database or transaction handle
+ */
+function createContentRepos(db: Db): ContentRepos {
+  return Object.fromEntries(
+    CONTENT_KEYS.map((key) => {
+      const { table, content } = specOf(key);
+      const order = content?.order;
+      return [
+        key,
+        createTableRepo(db, table as never, order ? orderTerms(table, order) : undefined),
+      ];
+    }),
+  ) as unknown as ContentRepos;
 }
 
 /**
@@ -69,6 +63,7 @@ export interface Repos {
  */
 export function createRepos(db: Db): Repos {
   return {
+    ...createContentRepos(db),
     sources: createSourcesRepo(db),
     citations: createCitationsRepo(db),
     decks: createDecksRepo(db),
@@ -76,24 +71,7 @@ export function createRepos(db: Db): Repos {
     runeBuilds: createRuneBuildsRepo(db),
     rankings: createRankingsRepo(db),
     records: createRecordsRepo(db),
-    mechanics: createTableRepo(db, mechanics),
-    rngFactors: createTableRepo(db, rngFactors),
-    timeline: createTableRepo(db, timeline, [asc(timeline.date), asc(timeline.id)]),
-    takeaways: createTableRepo(db, takeaways, [asc(takeaways.position), asc(takeaways.id)]),
-    gearRecs: createTableRepo(db, gearRecs),
-    recommendations: createTableRepo(db, recommendations),
-    scores: createTableRepo(db, scores),
-    fightEvents: createTableRepo(db, fightEvents, [
-      sql`${fightEvents.tElapsed} is null`,
-      asc(fightEvents.tElapsed),
-      asc(fightEvents.id),
-    ]),
-    buffValues: createTableRepo(db, buffValues, [
-      asc(buffValues.cookieKr),
-      asc(buffValues.effectType),
-      asc(buffValues.skillGrade),
-      asc(buffValues.id),
-    ]),
+    tables: createTablesRepo(db),
   };
 }
 

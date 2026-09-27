@@ -5,14 +5,7 @@ import { ImportError } from "../errors";
 import { parseFile, readJson } from "./files";
 import type { BuffValuesSpec, FightEventsSpec } from "./manifest";
 import { formatIssues } from "./manifest";
-
-/** Column values ready to insert, with the source ids the row cites. */
-export interface CitedValues<V> {
-  /** The row's column values. */
-  values: V;
-  /** The curated source ids the row cites, deduplicated. */
-  sources: string[];
-}
+import type { CitedValues } from "./steps";
 
 /** One entry of an extraction's `encounter.timeline`. */
 const timelineEntry = z.strictObject({
@@ -146,7 +139,9 @@ const catalogFile = z.object({
  * `fromStar` is the lowest star count the catalog's `starGrowth` gives for
  * that step. A buff's `valuePct` is its `rawValue` (basis points) ÷ 100 and
  * scales with the caster's skill amp; a debuff's is its `basePercent`
- * application chance, with base `Fixed`, and doesn't scale.
+ * application chance, with base `Fixed`, and doesn't scale. A row's
+ * `target` is `self` when `spec.selfBuffs` lists its cookie and effect
+ * type, else `team`.
  *
  * @param recordDir - absolute path to the record directory
  * @param spec - the manifest's `buffValues` block
@@ -155,10 +150,12 @@ const catalogFile = z.object({
  * @returns the rows, cookie by cookie in `spec.cookies` order, then by
  *   grade, buffs before debuffs, each citing `spec.source`
  * @throws {ImportError} naming `import.json` if `spec.source` isn't
- *   curated or a cookie isn't a glossary `kr`; naming `spec.catalog` if a
- *   cookie isn't in it or no star reaches a grade; naming `spec.file` (and
- *   the cookie and grade) if a file is missing or malformed, a cookie has
- *   no entry, or a debuff's effect has no `debuffEffects` mapping
+ *   curated, a cookie isn't a glossary `kr`, or a `selfBuffs` entry matches
+ *   no row; naming `spec.catalog` if a cookie isn't in it or no star
+ *   reaches a grade; naming `spec.file` (and the cookie and grade) if a
+ *   file is missing or malformed, a cookie has no entry, a debuff's effect
+ *   has no `debuffEffects` mapping, or two rows share a cookie, effect type
+ *   and grade
  */
 export function readBuffValues(
   recordDir: string,
@@ -171,8 +168,10 @@ export function readBuffValues(
   }
   const { recommendations } = parseFile(spec.file, readJson(recordDir, spec.file), captureFile);
   const { cookies } = parseFile(spec.catalog, readJson(recordDir, spec.catalog), catalogFile);
+  const isSelf = (kr: string, effectType: string) =>
+    spec.selfBuffs[kr]?.includes(effectType) ?? false;
 
-  return spec.cookies.flatMap((kr, index) => {
+  const rows = spec.cookies.flatMap((kr, index) => {
     if (!glossaryKrs.has(kr)) {
       throw new ImportError(
         "import.json",
@@ -214,6 +213,7 @@ export function readBuffValues(
           maxStack: buff.maxStack,
           base: buff.base,
           scalesWithCasterAmp: true,
+          target: isSelf(kr, buff.effectType) ? ("self" as const) : ("team" as const),
         })),
         ...debuffs.map((debuff) => {
           const effectType = spec.debuffEffects[debuff.effect];
@@ -233,10 +233,36 @@ export function readBuffValues(
             maxStack: debuff.maxStack,
             base: "Fixed" as const,
             scalesWithCasterAmp: false,
+            target: isSelf(kr, effectType) ? ("self" as const) : ("team" as const),
           };
         }),
       ];
       return rows.map((values) => ({ values, sources: [spec.source] }));
     });
   });
+
+  const seen = new Set<string>();
+  for (const { values } of rows) {
+    const key = `${values.cookieKr}|${values.effectType}|${values.skillGrade}`;
+    if (seen.has(key)) {
+      throw new ImportError(
+        spec.file,
+        `${values.cookieKr} grade ${values.skillGrade}`,
+        `duplicate buff value (effect type ${values.effectType})`,
+      );
+    }
+    seen.add(key);
+  }
+  for (const [kr, effectTypes] of Object.entries(spec.selfBuffs)) {
+    for (const effectType of effectTypes) {
+      if (!rows.some(({ values }) => values.cookieKr === kr && values.effectType === effectType)) {
+        throw new ImportError(
+          "import.json",
+          `buffValues.selfBuffs ${kr}`,
+          `no buff value of "${kr}" has effect type ${effectType}`,
+        );
+      }
+    }
+  }
+  return rows;
 }

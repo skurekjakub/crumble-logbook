@@ -1,0 +1,2 @@
+ALTER TABLE `buff_values` ADD `target` text DEFAULT 'team' NOT NULL;--> statement-breakpoint
+CREATE UNIQUE INDEX `buff_values_cookie_kr_effect_type_skill_grade_uq` ON `buff_values` (`cookie_kr`,`effect_type`,`skill_grade`);

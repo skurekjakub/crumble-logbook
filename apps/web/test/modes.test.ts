@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { activeTab, MODES, sectionForPath } from "../src/app/modes";
+import { decksQuery, scoresQuery } from "../src/api/queries";
+import { activeTab, ARENA, CONQUEST, MODES, sectionForPath } from "../src/app/modes";
 
 describe("sectionForPath", () => {
   it("maps /conquest and its sub-paths to Guild Conquest", () => {
@@ -37,5 +38,28 @@ describe("activeTab", () => {
 describe("MODES", () => {
   it("names the Guild Conquest research record", () => {
     expect(MODES.find((m) => m.id === "conquest")?.recordSlug).toBe("001-guild-conquest-meta");
+  });
+
+  it("gives every mode its own API scope", () => {
+    const modes = MODES.map((m) => m.scope.mode);
+    expect(new Set(modes).size).toBe(MODES.length);
+  });
+
+  it("gives a mode with no sub-tabs a placeholder, and one with sub-tabs none", () => {
+    for (const mode of MODES) {
+      expect(mode.placeholder === null, mode.id).toBe(mode.tabs.length > 0);
+    }
+  });
+});
+
+describe("mode-scoped queries", () => {
+  it("key each mode's lists apart, and the unscoped list apart from both", () => {
+    expect(decksQuery(CONQUEST.scope).queryKey).toEqual(["decks", { mode: "guild_conquest" }]);
+    expect(decksQuery(ARENA.scope).queryKey).toEqual(["decks", { mode: "arena" }]);
+    expect(decksQuery().queryKey).toEqual(["decks", { mode: null }]);
+    expect(scoresQuery(CONQUEST.scope, "cherry").queryKey).toEqual([
+      "scores",
+      { mode: "guild_conquest", deck: "cherry" },
+    ]);
   });
 });

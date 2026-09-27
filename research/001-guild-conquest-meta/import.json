@@ -76,6 +76,7 @@
       "실론나이트 쿠키",
       "다크초코 쿠키"
     ],
-    "debuffEffects": { "방어력이 감소합니다.": "DefensePointReductionChance" }
+    "debuffEffects": { "방어력이 감소합니다.": "DefensePointReductionChance" },
+    "selfBuffs": { "실론나이트 쿠키": ["DefensePointMultiplier"] }
   }
 }

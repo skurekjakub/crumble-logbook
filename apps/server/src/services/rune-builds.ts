@@ -1,8 +1,11 @@
 import type { RuneBuildInput, RuneBuildPatch, RuneBuildRow } from "@crumble/schema";
 import { NotFoundError, UnknownRefsError } from "../errors";
+import type { FiltersOf } from "../registry";
+import { REGISTRY } from "../registry";
 import type { Repos, Store } from "../repos";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
+import { applyFilters } from "./filters";
 import { createNameResolver } from "./names";
 
 /**
@@ -20,10 +23,10 @@ export type RuneBuildView = Cited<RuneBuildRow> & { en: string | null; decks: st
 export interface RuneBuildService {
   /**
    * Returns every rune build view, ordered by `id`.
-   * @param filter - restrict the list to rune builds linked to a single
-   *   deck, when given
+   * @param filter - the registry's list filters: `deck` restricts the list
+   *   to rune builds linked to that deck, when given
    */
-  list(filter?: { deck?: string }): RuneBuildView[];
+  list(filter?: FiltersOf<"runeBuilds">): RuneBuildView[];
   /**
    * Returns the rune build view for `id`.
    * @param id - the rune build's numeric id
@@ -91,8 +94,11 @@ export function createRuneBuildService(store: Store): RuneBuildService {
   return {
     list: (filter) => {
       const repos = store.repos;
-      const views = toViews(repos, repos.runeBuilds.list());
-      return filter?.deck ? views.filter((view) => view.decks.includes(filter.deck!)) : views;
+      return applyFilters(
+        toViews(repos, repos.runeBuilds.list()),
+        REGISTRY.runeBuilds.filters,
+        filter,
+      );
     },
     get: (id) => {
       const repos = store.repos;

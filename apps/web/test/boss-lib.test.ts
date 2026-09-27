@@ -10,6 +10,7 @@ import {
   staggerRows,
   starLabel,
   trackPercent,
+  whenLabel,
 } from "../src/lib/boss";
 
 /** A buff row with defaults for the fields a test doesn't care about. */
@@ -22,6 +23,7 @@ function buff(p: Partial<BuffValue> & Pick<BuffValue, "cookieKr" | "effectType">
     maxStack: 1,
     base: "Fixed",
     scalesWithCasterAmp: true,
+    target: "team",
     sources: [],
     en: null,
     ...p,
@@ -30,17 +32,20 @@ function buff(p: Partial<BuffValue> & Pick<BuffValue, "cookieKr" | "effectType">
 
 const TEA = "실론나이트 쿠키";
 
+/** The Piñata fight's length, in seconds. */
+const FIGHT = 60;
+
 describe("fight track scale", () => {
   it("maps 0–60 s elapsed onto 0–100% of the track", () => {
-    expect(trackPercent(0)).toBe(0);
-    expect(trackPercent(30)).toBe(50);
-    expect(trackPercent(43)).toBeCloseTo(71.667, 2);
-    expect(trackPercent(60)).toBe(100);
+    expect(trackPercent(0, FIGHT)).toBe(0);
+    expect(trackPercent(30, FIGHT)).toBe(50);
+    expect(trackPercent(43, FIGHT)).toBeCloseTo(71.667, 2);
+    expect(trackPercent(60, FIGHT)).toBe(100);
   });
 
   it("clamps times outside the fight to the track's ends", () => {
-    expect(trackPercent(-5)).toBe(0);
-    expect(trackPercent(70)).toBe(100);
+    expect(trackPercent(-5, FIGHT)).toBe(0);
+    expect(trackPercent(70, FIGHT)).toBe(100);
   });
 
   it("scales to another fight length", () => {
@@ -48,9 +53,14 @@ describe("fight track scale", () => {
   });
 
   it("reads the in-game countdown off elapsed time", () => {
-    expect(secondsLeft(43)).toBe(17);
-    expect(secondsLeft(30)).toBe(30);
-    expect(secondsLeft(0)).toBe(60);
+    expect(secondsLeft(43, FIGHT)).toBe(17);
+    expect(secondsLeft(30, FIGHT)).toBe(30);
+    expect(secondsLeft(0, FIGHT)).toBe(60);
+  });
+
+  it("says when an event happens, or that it's off the clock", () => {
+    expect(whenLabel(43, FIGHT)).toBe("43 s · 17 s left");
+    expect(whenLabel(null, FIGHT)).toBe("Off the clock");
   });
 
   it("puts events closer than the gap on separate rows, reusing rows once clear", () => {
@@ -74,6 +84,7 @@ describe("buffs by star", () => {
       fromStar: 0,
       valuePct: 10,
       maxStack: 2,
+      target: "self",
       sources: ["web:sp"],
     }),
     buff({
@@ -107,6 +118,7 @@ describe("buffs by star", () => {
       fromStar: 9,
       valuePct: 60,
       maxStack: 2,
+      target: "self",
       sources: ["web:sp"],
     }),
     buff({
@@ -138,7 +150,7 @@ describe("buffs by star", () => {
     expect(boss.selfOnly).toBe(false);
   });
 
-  it("puts team buffs before self-only ones and marks Tea Knight's DEF buff as self-only", () => {
+  it("puts team buffs before self-only ones, marking a row self-only from its target", () => {
     const pivot = pivotBuffs(rows);
     expect(pivot.map((r) => r.effectType)).toEqual([
       "BossDamageRateAddition",

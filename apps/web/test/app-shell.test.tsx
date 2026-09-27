@@ -1,10 +1,8 @@
-import { QueryClientProvider } from "@tanstack/react-query";
-import { createMemoryHistory, RouterProvider } from "@tanstack/react-router";
-import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { createAppRouter } from "../src/router";
+import type { Deck, ResearchRecord, Source } from "../src/api/types";
 import type { Canned } from "./helpers";
-import { stubApi, testQueryClient } from "./helpers";
+import { renderRoute } from "./view-harness";
 
 const RECORD = {
   slug: "001-guild-conquest-meta",
@@ -15,14 +13,14 @@ const RECORD = {
   seasonLabel: "S5 (live)",
   lede: "What Korean and global players run in Guild Conquest.",
   caveat: "Snapshot of 2026-09-27.",
-};
+} satisfies ResearchRecord;
 
 const SOURCES = [
   { id: "dc:76135", site: "dc", url: "https://example.test/dc/76135", title: "1T" },
   { id: "nv:43653", site: "nv", url: "https://example.test/nv/43653", title: "Cherry" },
-];
+] satisfies Partial<Source>[];
 
-const DECKS = [{ id: "cherry" }, { id: "meso" }, { id: "herb" }];
+const DECKS = [{ id: "cherry" }, { id: "meso" }, { id: "herb" }] satisfies Partial<Deck>[];
 
 const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
@@ -32,21 +30,8 @@ const API: Record<string, Canned> = {
   "/api/recommendations": { body: [] },
 };
 
-/** Renders the whole app at `path` against the stubbed API. */
-async function renderAt(path: string, api: Record<string, Canned> = API) {
-  stubApi(api);
-  const router = createAppRouter({
-    queryClient: testQueryClient(),
-    history: createMemoryHistory({ initialEntries: [path] }),
-  });
-  await router.load();
-  render(
-    <QueryClientProvider client={router.options.context.queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>,
-  );
-  return router;
-}
+/** Renders the whole app at `path` against this file's stubbed API. */
+const renderAt = (path: string, api: Record<string, Canned> = API) => renderRoute(path, api);
 
 /** The stamp's label → value pairs. */
 function stamp(): Record<string, string> {

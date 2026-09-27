@@ -195,22 +195,3 @@ export const seedGlossaryEntry = z
   .catchall(z.unknown());
 /** Output of {@link seedGlossaryEntry}. */
 export type SeedGlossaryEntry = z.output<typeof seedGlossaryEntry>;
-
-/** `manifest.json`: which file holds each curated collection, relative to the curated directory. */
-export const seedManifest = z.object({
-  collections: z.object({
-    meta: z.string(),
-    takeaways: z.string(),
-    decks: z.string(),
-    runes: z.string(),
-    gear: z.string(),
-    scores: z.string(),
-    rng: z.string(),
-    mechanics: z.string(),
-    timeline: z.string(),
-    sources: z.string(),
-    glossary: z.string(),
-  }),
-});
-/** Output of {@link seedManifest}. */
-export type SeedManifest = z.output<typeof seedManifest>;

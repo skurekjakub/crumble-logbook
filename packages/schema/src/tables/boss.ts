@@ -1,5 +1,5 @@
-import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { BUFF_BASE, CONFIDENCE } from "../enums";
+import { integer, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
+import { BUFF_BASE, BUFF_TARGET, CONFIDENCE } from "../enums";
 
 /**
  * A timed event of a boss fight. `tElapsed` is seconds since the fight
@@ -21,16 +21,28 @@ export const fightEvents = sqliteTable("fight_events", {
  * `valuePct` is a percent: for a buff, the value before the caster's skill
  * amp (`scalesWithCasterAmp`) is applied; for a debuff, its base
  * application chance. `fromStar` is the lowest star count that reaches
- * `skillGrade`.
+ * `skillGrade`. `target` is `self` for an effect that lands on the caster
+ * alone, else `team`. A cookie has one row per effect type and grade.
  */
-export const buffValues = sqliteTable("buff_values", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  cookieKr: text("cookie_kr").notNull(),
-  effectType: text("effect_type").notNull(),
-  skillGrade: integer("skill_grade").notNull(),
-  fromStar: integer("from_star").notNull(),
-  valuePct: real("value_pct").notNull(),
-  maxStack: integer("max_stack"),
-  base: text("base", { enum: BUFF_BASE }).notNull(),
-  scalesWithCasterAmp: integer("scales_with_caster_amp", { mode: "boolean" }).notNull(),
-});
+export const buffValues = sqliteTable(
+  "buff_values",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    cookieKr: text("cookie_kr").notNull(),
+    effectType: text("effect_type").notNull(),
+    skillGrade: integer("skill_grade").notNull(),
+    fromStar: integer("from_star").notNull(),
+    valuePct: real("value_pct").notNull(),
+    maxStack: integer("max_stack"),
+    base: text("base", { enum: BUFF_BASE }).notNull(),
+    scalesWithCasterAmp: integer("scales_with_caster_amp", { mode: "boolean" }).notNull(),
+    target: text("target", { enum: BUFF_TARGET }).notNull().default("team"),
+  },
+  (t) => [
+    uniqueIndex("buff_values_cookie_kr_effect_type_skill_grade_uq").on(
+      t.cookieKr,
+      t.effectType,
+      t.skillGrade,
+    ),
+  ],
+);

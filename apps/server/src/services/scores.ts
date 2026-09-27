@@ -1,8 +1,9 @@
 import type { ScoreInput, ScoreRow, Values } from "@crumble/schema";
-import { UnknownRefsError } from "../errors";
+import type { FiltersOf } from "../registry";
 import type { Store } from "../repos";
 import type { Cited } from "./citations";
-import { createContentService } from "./content";
+import type { ContentService } from "./content";
+import { registeredService } from "./content";
 
 /** A score row with its sources and its computed damage/power ratio. */
 export type ScoreView = Cited<ScoreRow> & { ratio: number | null };
@@ -21,64 +22,31 @@ export function ratio(damageG: number, powerG: number | null): number | null {
   return Math.round(damageG / powerG);
 }
 
-/** CRUD over `scores`, with the damage/power ratio attached to every view. */
-export interface ScoreService {
-  /**
-   * Returns every score, sorted by `damageG` descending.
-   * @param filter - restrict the list to a single deck, when given
-   */
-  list(filter?: { deck?: string }): ScoreView[];
-  /**
-   * Returns the score with `id`.
-   * @throws {NotFoundError} if `id` doesn't exist
-   */
-  get(id: number): ScoreView;
-  /**
-   * Inserts a score and cites it.
-   * @throws {UnknownRefsError} if any source id doesn't exist (`"sources"`),
-   *   or a non-null `deckId` doesn't exist (`"decks"`)
-   */
-  create(values: Values<ScoreInput>, sources: string[]): ScoreView;
-  /**
-   * Updates the score with `id`.
-   * @throws {NotFoundError} if `id` doesn't exist
-   * @throws {UnknownRefsError} for an unknown `sources` or `deckId`
-   */
-  update(id: number, patch: Partial<Values<ScoreInput>>, sources?: string[]): ScoreView;
-  /**
-   * Deletes the score with `id` and its citations.
-   * @throws {NotFoundError} if `id` doesn't exist
-   */
-  remove(id: number): void;
-}
+/**
+ * CRUD over `scores`, listed by damage descending (the registry's order),
+ * filterable by `deck`, with the damage/power ratio attached to every view.
+ * A non-null `deckId` must name an existing deck (`UnknownRefsError`
+ * `"decks"` otherwise).
+ */
+export type ScoreService = ContentService<
+  ScoreRow,
+  Values<ScoreInput>,
+  ScoreView,
+  FiltersOf<"scores">
+>;
 
 /**
  * Builds a {@link ScoreService} over `store`.
  * @param store - the store to persist through
  */
 export function createScoreService(store: Store): ScoreService {
-  const content = createContentService<ScoreRow, Values<ScoreInput>>(store, {
-    entity: "score",
-    table: (repos) => repos.scores,
-    checkRefs: (repos, values) => {
-      if (values.deckId != null && !repos.decks.exists(values.deckId)) {
-        throw new UnknownRefsError("decks", [values.deckId]);
-      }
-    },
-  });
-
+  const content = registeredService(store, "scores");
   const withRatio = (row: Cited<ScoreRow>): ScoreView => ({
     ...row,
     ratio: ratio(row.damageG, row.powerG),
   });
-
   return {
-    list: (filter) =>
-      content
-        .list()
-        .filter((row) => !filter?.deck || row.deckId === filter.deck)
-        .map(withRatio)
-        .sort((a, b) => b.damageG - a.damageG),
+    list: (filter) => content.list(filter).map(withRatio),
     get: (id) => withRatio(content.get(id)),
     create: (values, sources) => withRatio(content.create(values, sources)),
     update: (id, patch, sources) => withRatio(content.update(id, patch, sources)),

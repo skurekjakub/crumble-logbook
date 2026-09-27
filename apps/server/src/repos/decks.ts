@@ -9,7 +9,6 @@ import { deckCookies, deckNotes, deckPets, decks } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { asc, count, eq, inArray, max } from "drizzle-orm";
 import type { Db } from "../db/client";
-import { resetIds } from "./sequence";
 
 /** Insert payload for {@link DecksRepo.insert} and {@link DecksRepo.update}. */
 export type DeckInsert = InferInsertModel<typeof decks>;
@@ -106,38 +105,8 @@ export interface DecksRepo {
   replaceNotes(deckId: string, notes: DeckNoteInsert[]): void;
   /** Returns the number of decks. */
   count(): number;
-  /**
-   * Deletes every deck, and (via cascade) every cookie, pet and note, and
-   * resets the cookie, pet and note id counters.
-   */
-  clear(): void;
-  /** Returns every cookie slot across every deck, ordered by deck then `position`; for export. */
+  /** Returns every cookie slot across every deck, ordered by deck then `position`. */
   allCookies(): DeckCookieRow[];
-  /** Returns every pet slot across every deck, ordered by deck then `position`; for export. */
-  allPets(): DeckPetRow[];
-  /** Returns every note across every deck, ordered by deck then `position`; for export. */
-  allNotes(): DeckNoteRow[];
-  /**
-   * Inserts `rows` into `deck_cookies` as-is, preserving `id`. For restoring
-   * a snapshot.
-   * @param rows - full cookie rows, including `id`; `[]` inserts nothing
-   * @throws if any row's `deckId` doesn't exist, or its `id` is already taken
-   */
-  insertRawCookies(rows: DeckCookieRow[]): void;
-  /**
-   * Inserts `rows` into `deck_pets` as-is, preserving `id`. For restoring a
-   * snapshot.
-   * @param rows - full pet rows, including `id`; `[]` inserts nothing
-   * @throws if any row's `deckId` doesn't exist, or its `id` is already taken
-   */
-  insertRawPets(rows: DeckPetRow[]): void;
-  /**
-   * Inserts `rows` into `deck_notes` as-is, preserving `id`. For restoring a
-   * snapshot.
-   * @param rows - full note rows, including `id`; `[]` inserts nothing
-   * @throws if any row's `deckId` doesn't exist, or its `id` is already taken
-   */
-  insertRawNotes(rows: DeckNoteRow[]): void;
 }
 
 /**
@@ -225,28 +194,11 @@ export function createDecksRepo(db: Db): DecksRepo {
       }
     },
     count: () => db.select({ n: count() }).from(decks).get()!.n,
-    clear: () => {
-      db.delete(decks).run();
-      resetIds(db, deckCookies, deckPets, deckNotes);
-    },
     allCookies: () =>
       db
         .select()
         .from(deckCookies)
         .orderBy(asc(deckCookies.deckId), asc(deckCookies.position))
         .all(),
-    allPets: () =>
-      db.select().from(deckPets).orderBy(asc(deckPets.deckId), asc(deckPets.position)).all(),
-    allNotes: () =>
-      db.select().from(deckNotes).orderBy(asc(deckNotes.deckId), asc(deckNotes.position)).all(),
-    insertRawCookies: (rows) => {
-      if (rows.length > 0) db.insert(deckCookies).values(rows).run();
-    },
-    insertRawPets: (rows) => {
-      if (rows.length > 0) db.insert(deckPets).values(rows).run();
-    },
-    insertRawNotes: (rows) => {
-      if (rows.length > 0) db.insert(deckNotes).values(rows).run();
-    },
   };
 }

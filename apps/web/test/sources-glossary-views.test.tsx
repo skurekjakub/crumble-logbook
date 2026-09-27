@@ -1,10 +1,11 @@
 import { fireEvent, screen, waitFor } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import type { GlossaryEntry } from "../src/api/types";
 import { bodyRows, renderRoute, VIEW_SOURCES } from "./view-harness";
 
 const panel = () => screen.getByRole("tabpanel");
 
-const entry = (o: Record<string, unknown>) => ({
+const entry = (o: Pick<GlossaryEntry, "kr"> & Partial<GlossaryEntry>): GlossaryEntry => ({
   shorthand: [],
   en: null,
   kind: "cookie",

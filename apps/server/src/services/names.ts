@@ -8,6 +8,12 @@ export interface NameRef {
   en: string | null;
 }
 
+/** The fields of a glossary entry that it can be looked up by. */
+export type LookupEntry = Pick<GlossaryRow, "kr"> & {
+  shorthand?: readonly string[];
+  en?: string | null;
+};
+
 /**
  * Collapses case and whitespace differences for glossary lookup keys: the
  * key {@link createNameResolver} indexes and looks up a name under.
@@ -20,9 +26,21 @@ export function normalizeName(name: string): string {
 }
 
 /**
+ * Lists the normalized keys a glossary entry is found under: its Korean
+ * form, each shorthand, and its English gloss when it has one.
+ *
+ * @param entry - the entry
+ * @returns the distinct keys, in that order
+ */
+export function lookupKeys(entry: LookupEntry): string[] {
+  const names = [entry.kr, ...(entry.shorthand ?? []), ...(entry.en ? [entry.en] : [])];
+  return [...new Set(names.map(normalizeName))];
+}
+
+/**
  * Builds a resolver from a glossary snapshot: each entry is indexed under
- * its Korean form, every one of its shorthands, and its English gloss (when
- * it has one), all case- and whitespace-insensitively.
+ * its {@link lookupKeys}. When two entries share a key, the later one in
+ * `entries` wins.
  *
  * @param entries - the glossary rows to index
  * @returns a function mapping a name, as written, to a {@link NameRef}. The
@@ -30,12 +48,10 @@ export function normalizeName(name: string): string {
  *   gloss (itself possibly `null`), or `null` if `name` matches no entry
  *   under any of its keys
  */
-export function createNameResolver(entries: GlossaryRow[]): (name: string) => NameRef {
+export function createNameResolver(entries: readonly LookupEntry[]): (name: string) => NameRef {
   const byKey = new Map<string, string | null>();
   for (const entry of entries) {
-    byKey.set(normalizeName(entry.kr), entry.en);
-    for (const shorthand of entry.shorthand) byKey.set(normalizeName(shorthand), entry.en);
-    if (entry.en) byKey.set(normalizeName(entry.en), entry.en);
+    for (const key of lookupKeys(entry)) byKey.set(key, entry.en ?? null);
   }
   return (name) => ({ kr: name, en: byKey.get(normalizeName(name)) ?? null });
 }
