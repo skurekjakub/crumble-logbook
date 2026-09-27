@@ -56,4 +56,12 @@ describe("createTableRepo", () => {
     expect(repo.count()).toBe(0);
     expect(repo.list()).toEqual([]);
   });
+
+  it("clear resets the id counter, so the next insert gets id 1", () => {
+    const repo = createTableRepo(db, mechanics);
+    repo.insert({ title: "a", body: "a", confidence: "high" });
+    repo.insert({ title: "b", body: "b", confidence: "low" });
+    repo.clear();
+    expect(repo.insert({ title: "c", body: "c", confidence: "low" }).id).toBe(1);
+  });
 });

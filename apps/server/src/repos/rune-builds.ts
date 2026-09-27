@@ -3,6 +3,7 @@ import { runeBuildDecks, runeBuilds } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { asc, count, eq, inArray } from "drizzle-orm";
 import type { Db } from "../db/client";
+import { resetIds } from "./sequence";
 
 /** Insert/patch payload for {@link RuneBuildsRepo.insert} and `.update`. */
 export type RuneBuildInsert = InferInsertModel<typeof runeBuilds>;
@@ -53,7 +54,7 @@ export interface RuneBuildsRepo {
   replaceDecks(id: number, deckIds: string[]): void;
   /** Returns the number of rune builds. */
   count(): number;
-  /** Deletes every rune build, and (via cascade) every deck link. */
+  /** Deletes every rune build, and (via cascade) every deck link, and resets the rune build id counter. */
   clear(): void;
   /** Returns every deck link across every rune build, ordered by rune build then deck; for export. */
   allLinks(): RuneBuildDeckRow[];
@@ -101,6 +102,7 @@ export function createRuneBuildsRepo(db: Db): RuneBuildsRepo {
     count: () => db.select({ n: count() }).from(runeBuilds).get()!.n,
     clear: () => {
       db.delete(runeBuilds).run();
+      resetIds(db, runeBuilds);
     },
     allLinks: () =>
       db

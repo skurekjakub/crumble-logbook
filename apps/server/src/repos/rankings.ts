@@ -3,6 +3,7 @@ import { rankings } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { and, asc, count, eq } from "drizzle-orm";
 import type { Db } from "../db/client";
+import { resetIds } from "./sequence";
 
 /** Insert payload for {@link RankingsRepo.insertMany}. */
 export type RankingInsert = InferInsertModel<typeof rankings>;
@@ -52,7 +53,7 @@ export interface RankingsRepo {
   countForSource(sourceId: string): number;
   /** Returns the total number of ranking rows. */
   count(): number;
-  /** Deletes every ranking row. */
+  /** Deletes every ranking row and resets the ranking id counter. */
   clear(): void;
 }
 
@@ -109,6 +110,7 @@ export function createRankingsRepo(db: Db): RankingsRepo {
     count: () => db.select({ n: count() }).from(rankings).get()!.n,
     clear: () => {
       db.delete(rankings).run();
+      resetIds(db, rankings);
     },
   };
 }

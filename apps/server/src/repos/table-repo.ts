@@ -2,6 +2,7 @@ import type { InferInsertModel, InferSelectModel, SQL } from "drizzle-orm";
 import { asc, count, eq } from "drizzle-orm";
 import type { SQLiteColumn, SQLiteTable } from "drizzle-orm/sqlite-core";
 import type { Db } from "../db/client";
+import { resetIds } from "./sequence";
 
 /** A drizzle SQLite table with an integer `id` primary key column. */
 type IdTable = SQLiteTable & { id: SQLiteColumn };
@@ -41,7 +42,7 @@ export interface TableRepo<Row, Insert> {
   remove(id: number): boolean;
   /** Returns the number of rows in the table. */
   count(): number;
-  /** Deletes every row in the table. */
+  /** Deletes every row in the table and resets its id counter, so the next insert gets id 1. */
   clear(): void;
 }
 
@@ -86,6 +87,7 @@ export function createTableRepo<T extends IdTable>(
     count: () => db.select({ n: count() }).from(base).get()!.n,
     clear: () => {
       db.delete(base).run();
+      resetIds(db, base);
     },
   };
 }
