@@ -83,7 +83,8 @@ export interface BossViewProps {
 /**
  * A boss screen: the boss's cited facts, its fight on a 0–length track,
  * what it takes to survive its lethal patterns, the buffers' values by star,
- * what to run, and the ATK-order checklist. Every research claim comes from
+ * what to run, and the ATK-order checklist, with an "On this page" list of
+ * those sections. Every research claim comes from
  * the API data, selected by mechanics topic or fight-event key, with its
  * confidence and sources. Each block renders its own query, so one failed
  * resource leaves the others in place.
