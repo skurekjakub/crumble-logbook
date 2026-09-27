@@ -1,0 +1,414 @@
+{
+  "batch": "kr-encounter",
+  "posts": [
+    {
+      "source": "dc", "id": "67285", "url": "https://m.dcinside.com/board/projectcc/67285", "date": "2026-09-14",
+      "title_kr": "[일반] 길드토벌전보스 클뜯 해봤는데", "title_en": "I datamined the Guild Conquest boss", "relevance": 3,
+      "summary_en": "First pass at a boss datamine: the boss's damage reduction (피감) runs through 6 stages, 10/20/30/50/90/99%, so the OP reasons the first 12 s should carry maximum damage. A commenter notes the per-stage score multiplier also differs and most of a run's score still lands mid-fight. Superseded/refined by the same author's dc:71383.",
+      "mechanics": [
+        "Boss damage reduction (피감) has 6 stages: 10%, 20%, 30%, 50%, 90%, 99% (first draft; see dc:71383 for the revised numbers with an added timing schedule).",
+        "Commenter: the score multiplier differs by stage, and in practice most points are still earned mid-fight, not in the opening seconds."
+      ],
+      "disagreements": ["OP's stage list (10/20/30/50/90/99) differs slightly from the same author's later post dc:71383 (10/30/50/70/90/99); treat the later post as the corrected version."],
+      "quotes": [{"kr": "피감이 1단계부터 6단계까지 10% 20% 30% 50% 90% 99% 이렇게 되어있음", "en": "The damage reduction runs stage 1 to 6 as 10/20/30/50/90/99%."}]
+    },
+    {
+      "source": "dc", "id": "67299", "url": "https://m.dcinside.com/board/projectcc/67299", "date": "2026-09-14",
+      "title_kr": "[일반] 이 겜은 왜 보스 능력치랑 보스 스킬을 안 알려줌?", "title_en": "Why doesn't this game show boss stats and boss skills?", "relevance": 3,
+      "summary_en": "Same author as dc:67285 gives raw boss stat-table numbers from a datamine attempt: HP around 2^62, DEF 2000, ATK 5000, with the caveat that these are base table values and it's unclear whether further runtime modifiers apply. This is the strongest (if still unverified) source for 'is boss HP effectively infinite'.",
+      "mechanics": [
+        "Claimed boss stat-table values: HP ≈ 2^62 (~4.6×10^18, described loosely by the poster as '4경'); DEF 2000; ATK 5000. Poster flags these as raw table values only, unsure if extra multipliers are added at runtime.",
+        "Commenter thread: defense-shred efficiency is believed to fall off as target DEF rises (unconfirmed, poster's own speculation)."
+      ],
+      "quotes": [{"kr": "토벌전 보스 체력은 2의 62승 약 4경? 정도 될거임 아마 / 방어력은 2000 / 공격력은 5000", "en": "Guild Conquest boss HP is probably around 2^62 / DEF is 2000 / ATK is 5000."}]
+    },
+    {
+      "source": "dc", "id": "67350", "url": "https://m.dcinside.com/board/projectcc/67350", "date": "2026-09-14",
+      "title_kr": "[일반] 연구소 체방이 많이중요한듯", "title_en": "Lab HP/DEF research matters a lot", "relevance": 2,
+      "summary_en": "Short post/comments: raising HP+DEF lab research let the poster survive the 30 s slam (부랄찢기); a commenter ranks HP research ahead of DEF, and ahead of ATK research too.",
+      "mechanics": ["Lab HP research prioritized over lab DEF, and both over lab ATK, for surviving the 30 s pattern (commenter opinion, not measured)."]
+    },
+    {
+      "source": "dc", "id": "67659", "url": "https://m.dcinside.com/board/projectcc/67659", "date": "2026-09-15",
+      "title_kr": "[일반] 방체 연구 어느정도 해야 토벌전 30초버텨짐?", "title_en": "How much DEF/HP research to survive the 30 s?", "relevance": 3,
+      "summary_en": "OP already survives the 30 s slam but the team then dies to mob self-destructs. A commenter gives a concrete threshold: with a crit-res/DR gear preset, front row ~5M HP and back row ~mid-3M HP guarantees reaching 17 s.",
+      "mechanics": [
+        "OP survives the 30 s slam ('30초 쿵') but the team then wipes to a mob self-destruct ('쫄 자폭') — a distinct, later sub-event.",
+        "Threshold quoted for reaching the 17 s mark: front row ~5M HP, back row ~3.5M HP, under a crit-res+DR gear preset."
+      ],
+      "quotes": [{"kr": "대강 치저피감 프리셋 쓰는기준 던전안에서 전열 체력 5M 후열 3M중반 되면 확정으로 17초간다고 보면됨", "en": "Roughly: on a crit-res+DR preset, front row 5M HP and back row mid-3M HP in-dungeon reaches 17 s for sure."}]
+    },
+    {
+      "source": "dc", "id": "69165", "url": "https://m.dcinside.com/board/projectcc/69165", "date": "2026-09-17",
+      "title_kr": "[일반] 마카롱 공증이 퇴물이지 스캠은 아니었음", "title_en": "Macaron ATK% isn't a scam, just obsolete now", "relevance": 1,
+      "summary_en": "Historical note: early on even ranker guilds wiped before 30 s, so raising other cookies' levels (funded by Macaron ATK%) to survive that window used to raise scores. Confirms the 30 s wipe was once a hard wall even for top guilds.",
+      "mechanics": ["As of the early meta, even ranked guilds regularly wiped before the 30 s mark; leveling filler cookies to survive it was the score driver at the time."]
+    },
+    {
+      "source": "dc", "id": "69168", "url": "https://m.dcinside.com/board/projectcc/69168", "date": "2026-09-17",
+      "title_kr": "[일반] 30초찍기 못버티는 200m뉴비는 몇쳐야됨?", "title_en": "What score should a 200M-power newbie get if they can't survive 30s?", "relevance": 1,
+      "summary_en": "A ~200-300M power account not surviving the 30 s slam is scoring 8-10G; a commenter's own similar-power run got ~7.7G. Confirms low scores are normal pre-survival and require mercenary Lv4 + HP research to progress.",
+      "scores": [{"damage": "8-10G", "power": "200-300M", "ratio": "", "deck": "", "note": "does not survive the 30s slam"}]
+    },
+    {
+      "source": "dc", "id": "69201", "url": "https://m.dcinside.com/board/projectcc/69201", "date": "2026-09-17",
+      "title_kr": "[일반] 100배도 안뽑히는데 어케하노", "title_en": "Can't even pull 100x, what do I do", "relevance": 2,
+      "summary_en": "Confirms the fight doesn't require surviving to a checkpoint to score: a commenter reports a full wipe still scoring over 100x, since damage already dealt before death still counts. Score is framed as run-to-run RNG requiring many retries (매크로).",
+      "mechanics": ["A run that wipes completely can still score >100x — damage dealt before death is retained; there's no need to survive the full 60 s to get a non-trivial score."]
+    },
+    {
+      "source": "dc", "id": "69250", "url": "https://m.dcinside.com/board/projectcc/69250", "date": "2026-09-17",
+      "title_kr": "[일반] 17초에 안죽으려면 투력 몇정도임?", "title_en": "How much power to not die at 17s?", "relevance": 2,
+      "summary_en": "As of 9/17, even accounts at 2.2G team power still die at the 17 s super-jump — confirms that on this date nobody (including high-power accounts) had cracked survival yet.",
+      "quotes": [{"kr": "2.2g도 죽는대", "en": "Even 2.2G [power] dies, apparently."}]
+    },
+    {
+      "source": "dc", "id": "69358", "url": "https://m.dcinside.com/board/projectcc/69358", "date": "2026-09-17",
+      "title_kr": "[일반] 토벌전 17초", "title_en": "Guild Conquest 17s", "relevance": 1,
+      "summary_en": "OP at 900M deck power asks who is surviving past 17s; no replies. Corroborates that survival was still considered a high-spec-only feat in mid-September.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "69428", "url": "https://m.dcinside.com/board/projectcc/69428", "date": "2026-09-17",
+      "title_kr": "[✋️질문] 토벌 치케가 자꾸 30초 쿵 하기 전에 죽어버림 어캄?", "title_en": "Cheesecake keeps dying right before the 30s slam", "relevance": 1,
+      "summary_en": "OP's max-level Cheesecake dies just before the 30 s slam while others live; asks whether to rune DR/DEF. No replies, but it's evidence individual cookies can die to chip damage even before the named 30 s pattern lands.",
+      "mechanics": ["A cookie can die to chip damage in the seconds just before the 30 s slam itself, independent of the slam hit."]
+    },
+    {
+      "source": "dc", "id": "70056", "url": "https://m.dcinside.com/board/projectcc/70056", "date": "2026-09-18",
+      "title_kr": "[일반] 시발 기갱페이스였는데", "title_en": "Damn, I was on a new-record pace", "relevance": 3,
+      "summary_en": "Milk dies at the 30 s slam after ~1000 attempts. In the comment thread the author gives concrete diagnostic checkpoints top players use to judge whether a run's positioning/buff-landing is good: whether Brightseeker and Macaron keep receiving every buff to the end, and elapsed-time deadlines for Pomegranate's beam-count upgrades.",
+      "mechanics": [
+        "Positioning/buff diagnostic used by a top poster: check whether Brightseeker and Macaron keep receiving buffs through the whole fight; for a Jungle Warrior deck, whether Pomegranate's 2-beam upgrade lands within 45 s (elapsed) and her 3-beam upgrade within 27 s (elapsed); and whether Tea Knight (실론) receives Pomegranate's beam at least once.",
+        "Beam-count shorthand given: base (Milk/Skating Queen/Brightseeker) = plain Pomegranate; +2 beams from Tea Knight's synergy stack; +3 beams from Jungle Warrior's synergy stack."
+      ],
+      "quotes": [{"kr": "브싴 마카롱 끝까지 다받는지 정전덱 기준 석류 2다발을 45초 안에 받는지 석류 3다발을 27초 안에 받는지 실론이 한번 이상 석류 받는지", "en": "[Check] whether Brightseeker/Macaron keep receiving buffs to the end; for the Jungle Warrior deck, whether Pomegranate's 2-multi-hit lands within 45s and 3-multi-hit within 27s; whether Tea Knight gets Pomegranate's buff at least once."}]
+    },
+    {
+      "source": "dc", "id": "70123", "url": "https://m.dcinside.com/board/projectcc/70123", "date": "2026-09-19",
+      "title_kr": "[일반] 300m따리 토벌", "title_en": "Guild Conquest at 300M power", "relevance": 1,
+      "summary_en": "At 300M power, at most 5-6 of 12 cookies survive the 30 s slam and Milk dies to it every time; scores land around 7-20G depending on ATK-order/rune choices.",
+      "scores": [{"damage": "7-20G", "power": "240-300M", "ratio": "", "deck": "체리덱", "note": "5-6 survivors typical after the 30s slam; Milk always dies to it at this power"}]
+    },
+    {
+      "source": "dc", "id": "70150", "url": "https://m.dcinside.com/board/projectcc/70150", "date": "2026-09-19",
+      "title_kr": "[✋️질문] 뉴비 나름 토벌전 진짜 열심히 깎았다 자랑+질문", "title_en": "Newbie proud of grinding their Guild Conquest build", "relevance": 1,
+      "summary_en": "OP survives to 29s with Jungle Warrior but not with Herb (insufficient HP); illustrates that deck choice (Herb vs Jungle Warrior) trades survivability for beam count.",
+      "mechanics": ["At low HP investment, swapping Herb for Jungle Warrior can be the difference between surviving to 29s and not, independent of the beam-count tradeoff."]
+    },
+    {
+      "source": "dc", "id": "70521", "url": "https://m.dcinside.com/board/projectcc/70521", "date": "2026-09-19",
+      "title_kr": "[일반] 렙따하면 30초에 뒤지고 만렙 박으면 빨대 못 받고", "title_en": "Level them and they die at 30s; max them and they miss the straw", "relevance": 1,
+      "summary_en": "One-line venting post capturing the core tension: leveling a filler for survival HP risks it out-ATKing the intended Pomegranate-buff recipients.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "70607", "url": "https://m.dcinside.com/board/projectcc/70607", "date": "2026-09-19",
+      "title_kr": "[일반] 토벌 30초에 자꾸 다 죽음", "title_en": "Guild Conquest: everyone keeps dying at 30s", "relevance": 3,
+      "summary_en": "Active thread on the 30 s slam threshold: commenters converge on roughly 3-4M HP as the survival floor ('anything below one-shots'), mercenary Lv4 as a prerequisite, and report run-to-run variance at fixed power (two failures then a 30s-clear that jumped score ~2x, followed by ten more failures at the same build).",
+      "mechanics": [
+        "Survival floor for the 30 s slam: roughly 3-4M HP; below that, it's a guaranteed one-shot regardless of other stats.",
+        "RNG: at fixed power/build, the 30 s slam can be survived or not from run to run (reported: 2 failures at 590M score, then a clear that jumped to 1000, then 10 more failures on the same build)."
+      ],
+      "quotes": [{"kr": "30초 버틸려면 체력 4M 넘어야됨 딱 4는 아니고 대충 3~4 그 언저리 그 밑이면 뭔짓해도 한방임", "en": "You need over 4M HP to survive the 30s; not exactly 4, more like 3-4ish — below that you get one-shot no matter what."}]
+    },
+    {
+      "source": "dc", "id": "70625", "url": "https://m.dcinside.com/board/projectcc/70625", "date": "2026-09-19",
+      "title_kr": "[일반] 1렙 준 애들은 30초 쿵찍에 무조건 뒤지네", "title_en": "Lv.1 fillers always die to the 30s slam", "relevance": 2,
+      "summary_en": "Commenters give row-specific HP thresholds for the 30 s slam: back row ~3.5M, front row ~4.5M as the floor.",
+      "mechanics": ["30 s slam HP floor, by row: back row ≈3.5M HP, front row ≈4.5M HP (commenter's stated 'last line')."]
+    },
+    {
+      "source": "dc", "id": "70832", "url": "https://m.dcinside.com/board/projectcc/70832", "date": "2026-09-20",
+      "title_kr": "[✋️질문] 토벌 우유 질문", "title_en": "Question about Milk in Guild Conquest", "relevance": 3,
+      "summary_en": "OP's Milk dies specifically to the 30s slam ('30초 내려찍기') while Lv.1 fillers survive, apparently because Milk is busy healing others during that window and receives no heal herself, leaving the team without her ATK buff from 28s down to the 17s wipe.",
+      "mechanics": [
+        "Milk can die to the 30 s slam even when lower-HP fillers survive it, reportedly because she's spending the window healing teammates and isn't healed in return.",
+        "Losing Milk at the 30 s slam creates an ~11-second buff gap (from 28s remaining to the 17s wipe) with no ATK buff active on the team."
+      ],
+      "quotes": [{"kr": "이거땜에 애들이 28초부터 17초까지 우유가없는상황까지감", "en": "Because of this the team goes without Milk from 28s down to 17s."}]
+    },
+    {
+      "source": "dc", "id": "71028", "url": "https://m.dcinside.com/board/projectcc/71028", "date": "2026-09-20",
+      "title_kr": "[일반] 허브 17초에 죽는데 닥 정전임?", "title_en": "Herb dies at 17s, is it Dark Choco or Jungle Warrior?", "relevance": 1,
+      "summary_en": "Reconfirms that as of 9/20 dying at 17s is still the norm ('아직은 다 17초에 죽을걸'); a commenter notes Jungle Warrior can be swapped out for Herb once the 30 s window is secured.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "71121", "url": "https://m.dcinside.com/board/projectcc/71121", "date": "2026-09-20",
+      "title_kr": "[일반] 1T하고싶다요", "title_en": "I want to hit 1T", "relevance": 1,
+      "summary_en": "Jungle Warrior loses formation/buff cohesion after the 30s mark for this account; Herb keeps formation but is weaker. Notes move-speed tuning is still unresolved for this build.",
+      "mechanics": ["Jungle Warrior deck reportedly loses formation/buff-uptime cohesion specifically after the 30s mark passes (account-specific observation)."]
+    },
+    {
+      "source": "dc", "id": "71136", "url": "https://m.dcinside.com/board/projectcc/71136", "date": "2026-09-20",
+      "title_kr": "[일반] 드디어 100G", "title_en": "Finally 100G", "relevance": 1,
+      "summary_en": "Switching Jungle Warrior for Herb finally let the 30s slam be survived, unlocking a 100G score for this account.",
+      "scores": [{"damage": "100G", "power": "", "ratio": "", "deck": "허브덱", "note": "first run to survive the 30s slam for this account"}]
+    },
+    {
+      "source": "dc", "id": "71141", "url": "https://m.dcinside.com/board/projectcc/71141", "date": "2026-09-20",
+      "title_kr": "[일반] 토벌 배치만보려고 복지 렙조정 안하고 돌리면 기갱각나오네", "title_en": "Running without the welfare level-adjust just to check formation ends up beating my record", "relevance": 1,
+      "summary_en": "One-liner: disabling the welfare-perk level-adjust (used purely to inspect formation) sometimes produces a personal-best run anyway.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "71219", "url": "https://m.dcinside.com/board/projectcc/71219", "date": "2026-09-20",
+      "title_kr": "[일반] 토벌 27~30초 버티는 체방이 어느정도임?", "title_en": "How much HP/DEF to survive the 27-30s window?", "relevance": 3,
+      "summary_en": "Screenshots (not re-transcribed in text) plus body text show a distinct sub-event at 27s: a Lv.1 Dark Choco dies to the 30s slam itself, but a Lv.100 (fully built) Dark Choco instead dies to a mob/add wave ('쫄') at 27s remaining — a separate, later hit from the slam. A commenter's own Dark Choco read DEF 301 / HP 3.79M at Lv.1.",
+      "mechanics": [
+        "There is a second, distinct damage tick around 27s remaining (a mob/add wave, '쫄') separate from the 30s slam itself — surviving the slam doesn't guarantee surviving this follow-up.",
+        "Lv.1 Dark Choco reference stats (in-dungeon): DEF 301, HP 3.79M."
+      ],
+      "quotes": [{"kr": "1렙닼초고 30초 쿵 에 뒤짐 / 100닼초는 27초 쫄에 뒤짐", "en": "Lv.1 Dark Choco dies to the 30s slam; Lv.100 Dark Choco [instead] dies to the 27s mob wave."}]
+    },
+    {
+      "source": "dc", "id": "71269", "url": "https://m.dcinside.com/board/projectcc/71269", "date": "2026-09-20",
+      "title_kr": "[일반] 달토끼 범위 받으려나", "title_en": "Will Moon Rabbit's range reach?", "relevance": 1,
+      "summary_en": "Speculative idea (from the same poster who documented the 641x Cherry deck) about putting Macaron in the Cherry slot as an aggro sink to try surviving 17s; a commenter warns a run without the boss's DEF-shred landing in time will need retries.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "71279", "url": "https://m.dcinside.com/board/projectcc/71279", "date": "2026-09-20",
+      "title_kr": "[일반] 토벌리트는 체급좀 맞추고하는게맞나", "title_en": "Should Guild Conquest retries match your power tier?", "relevance": 1,
+      "summary_en": "Community rule-of-thumb thresholds: mercenary Lv3 + surviving the 30s slam ≈ 80x is a fair result; below that isn't worth heavy retrying; mercenary Lv4 + surviving 30s is where serious retrying starts.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "71290", "url": "https://m.dcinside.com/board/projectcc/71290", "date": "2026-09-20",
+      "title_kr": "[일반] 100배면 1인분은 했냐", "title_en": "Is 100x pulling your weight?", "relevance": 1,
+      "summary_en": "Mercenary Lv3, full wipe at the 30s slam ('전멸'); OP feels there's nothing to retry for. Confirms 'wipe at 30s' is treated as a distinct named failure state separate from the 17s wipe.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "71383", "url": "https://m.dcinside.com/board/projectcc/71383", "date": "2026-09-21",
+      "title_kr": "[일반] 토벌전 보스 시간 지날수록 피감 늘어남", "title_en": "The Guild Conquest boss's damage reduction rises over time", "relevance": 3,
+      "summary_en": "The same author as dc:67285/67299 posts a refined datamine: boss damage reduction runs through 6 stages (10/30/50/70/90/99%) starting at 0% at fight start, upgrading first at 10s elapsed then every 12s after; boss ATK (offense stat) also jumps by orders of magnitude at each of the same stage boundaries. The 99% stage is never reached because the fight is only 60s long. This is the single most load-bearing (if unverified) post for the fight's difficulty curve.",
+      "mechanics": [
+        "Boss damage reduction (defense side): starts at 0% (elapsed 0-10s), then 10% (10-22s), 30% (22-34s), 50% (34-46s), 70% (46-58s), 90% (58s+); a 99% stage exists in the data but is never reached in a 60s fight.",
+        "Boss ATK (offense side) at each of those same stage boundaries: 5000 -> 505,000 -> 2,500,500 -> 12,500,500 -> 250,005,000 -> 750,005,000 -> 1,562,505,000. Boss DEF is stated fixed at 2000 throughout (matches dc:67299's earlier figure).",
+        "Poster's own confusion: doesn't know why a 99% DR / final-ATK stage exists in the table if the fight is capped at 60s — speculates a future time-limit extension."
+      ],
+      "disagreements": ["The DR stage values here (10/30/50/70/90/99) differ slightly from the same author's first draft in dc:67285 (10/20/30/50/90/99); this post is the later, more detailed one and includes a timing schedule the first one lacked."],
+      "quotes": [{"kr": "피감은 단계마다 10%, 30%, 50%, 70%, 90%, 99% ... 방어력은 2000고정, 시작피감은 0% 10초부터 강화되서 12초마다 올라감 근데 마지막 단계는 토벌전이 60초라 적용이 안되긴함", "en": "DR per stage is 10/30/50/70/90/99%... DEF is fixed at 2000, starting DR is 0%; it upgrades starting at 10s and every 12s after. But the last stage never applies since Guild Conquest is 60s."}]
+    },
+    {
+      "source": "dc", "id": "71457", "url": "https://m.dcinside.com/board/projectcc/71457", "date": "2026-09-21",
+      "title_kr": "[✋️질문] 토벌덱 대미지 안나오는건 무조건 장비 문제겠지?", "title_en": "Is low Guild Conquest damage always a gear problem?", "relevance": 1,
+      "summary_en": "OP followed a guide's runes/ATK-order and survived the 30s slam but still underperforms; a commenter blames a gear preset built for stage power instead of skill haste/amp, reinforcing that raid and stage gear presets should differ.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "71477", "url": "https://m.dcinside.com/board/projectcc/71477", "date": "2026-09-21",
+      "title_kr": "[일반] 이번토벌은 96배 마감", "title_en": "This week's Guild Conquest ended at 96x", "relevance": 1,
+      "summary_en": "OP attributes their capped score to lacking the '방수특' (Armor Repair) mercenary perk, without which the 30s slam can't be crossed.",
+      "mechanics": ["The Armor Repair (방어구 수리 특약) mercenary perk is cited as a hard requirement to cross the 30s slam at this power level (matches nv:44761's '+10% DR with 3+ defense-type cookies' effect)."]
+    },
+    {
+      "source": "dc", "id": "72351", "url": "https://m.dcinside.com/board/projectcc/72351", "date": "2026-09-22",
+      "title_kr": "[일반] 펫을 하나로 압축해줬네 ㅋㅋ", "title_en": "They compressed two pets into one", "relevance": 1,
+      "summary_en": "Discussion of the new combined lift-resist+HP pet (Candy Shade Pouch) replacing the old split between Panda Dumpling (lift resist, used vs airborne bosses) and other survival pets.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "72559", "url": "https://m.dcinside.com/board/projectcc/72559", "date": "2026-09-22",
+      "title_kr": "[일반] 색동주머니 나오면 초코왕방울은 버려지려나", "title_en": "Will Candy Shade Pouch replace the Choco King Bell?", "relevance": 1,
+      "summary_en": "Debate on whether the older pure-HP pet is now obsolete versus the new lift-resist+HP Candy Shade Pouch; several say run both.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "72759", "url": "https://m.dcinside.com/board/projectcc/72759", "date": "2026-09-22",
+      "title_kr": "[일반] 크럼블 우유 무조건 앞으로 보내는 법 깨달았다", "title_en": "Found a way to always push Milk to the front", "relevance": 3,
+      "summary_en": "Removing every backline support/healer (Herb, Rockstar, Lime, Angel, bird-pet-cookie etc, or setting their power to Lv.1 so they can't spawn) forces Milk to charge all the way to melee contact with the boss, because nothing is left behind her to stop the advance. Confirms formation resolves as a straight run-in that stops on first blocking ally/collision, not a scripted stop point; over-optimizing it can wipe the team too early, capping score.",
+      "mechanics": [
+        "Cookie run-in behaviour: with no cookies left behind a given unit, it keeps advancing until it reaches the boss/front; formation is a physical run-in-and-collide process, not fixed stop points.",
+        "Killing the formation puzzle too well (everyone reaches an ideal position) can cause the team to engage/die too early in the fight, which caps total score even though positioning looks perfect — survival duration and positioning both matter for score."
+      ],
+      "quotes": [{"kr": "뒤에있는 서폿 싹빼면됨 ... 근데 너무 일찍 전멸해서 점수는 별로 안오르네", "en": "Just strip out every backline support ... but the team wipes too early this way so the score doesn't go up much."}]
+    },
+    {
+      "source": "dc", "id": "73225", "url": "https://m.dcinside.com/board/projectcc/73225", "date": "2026-09-23",
+      "title_kr": "[일반] 30초남았는데 문 연다 안연다", "title_en": "30s left, will the door open or not", "relevance": 0,
+      "summary_en": "One-line post, ambiguous whether about Guild Conquest or a different stage/dungeon gate mechanic. No corroborating detail found; not used."
+    },
+    {
+      "source": "dc", "id": "73387", "url": "https://m.dcinside.com/board/projectcc/73387", "date": "2026-09-23",
+      "title_kr": "[일반] 팬더만두 ㄹㅇ 고생많았다", "title_en": "RIP Panda Dumpling, you served well", "relevance": 3,
+      "summary_en": "Retirement thread for Panda Dumpling now that Candy Shade Pouch exists. Images (transcribed) give exact pet values: Panda Dumpling at 9★ gives allies +18% lift resist and +70 flat HP to support-type cookies; Candy Shade Pouch at 5★(SSR) gives allies +22.5% lift resist / +7.5% max HP, plus +1.70% Water-element damage as an owned-cookie bonus. Commenters report Candy Shade Pouch capping at +30% lift resist / +7.5% HP at 10-14★ — the +7.5% HP cap contradicts mechanics.json's existing '+12.5% HP max' claim for this pet.",
+      "mechanics": [
+        "Panda Dumpling (9★, image-verified): party-wide +18% lift resistance ('동행 효과'); +70 flat HP to support-type cookies owned ('보유 효과').",
+        "Candy Shade Pouch (5★ SSR, image-verified): party-wide +22.5% lift resistance, +7.5% max HP; +1.70% Water-element damage as an owned-cookie bonus.",
+        "Commenters (10-14★, unverified by image): Candy Shade Pouch caps at +30% lift resistance and +7.5% max HP — NOTE this HP figure (7.5%) conflicts with the existing dashboard mechanics.json entry of '+12.5% HP max' for this pet; the 5★ HP number (7.5%) matches the higher-star reports exactly, suggesting HP may not scale further past 5★ and the 12.5% figure should be rechecked."
+      ]
+    },
+    {
+      "source": "dc", "id": "73560", "url": "https://m.dcinside.com/board/projectcc/73560", "date": "2026-09-23",
+      "title_kr": "[일반] 이거 토벌전 바리도 고정으로 들어갈꺼같은데", "title_en": "Feels like Princess Bari is becoming a Guild Conquest staple too", "relevance": 2,
+      "summary_en": "Lists the current 'fixed' Cherry-deck core (Macaron, Pinot Noir, Cheesecake, Pomegranate, Skating Queen, Milk, Dark Choco, Tea Knight, Brightseeker) with only the Scorpion/Melon-or-Cherry and Jungle-Warrior-or-Herb slots flexible; proposes swapping in Princess Bari + Moon Rabbit as charge units for extra 17s-survival damage. A commenter shoots this down: charge-type cookies always rush into boss contact, wrecking the formation and Milk's buff range — 'that's exactly why charge-types are never used' (echoes dc:72759's finding).",
+      "mechanics": [
+        "Confirms the standing 'fixed core' of the Cherry deck (9 of 12 slots) versus the flexible slots (Scorpion/Melon Soda/Cherry; Jungle Warrior/Herb).",
+        "Charge-type (돌격형) cookies are avoided in Guild Conquest specifically because they physically rush to melee range on the boss, breaking the tuned line formation and usually missing Milk's ATK-buff range."
+      ],
+      "quotes": [{"kr": "우유 버프 못받고 진형 지랄날 것 같은데 ... 돌격형 절~대 안쓰는 이유가 있다니까?", "en": "It'll miss Milk's buff and wreck the formation ... that's exactly why charge-types are never, ever used."}]
+    },
+    {
+      "source": "dc", "id": "73584", "url": "https://m.dcinside.com/board/projectcc/73584", "date": "2026-09-23",
+      "title_kr": "[일반] 일단 바리 달토끼 둘다 토벌전엔 못씀", "title_en": "Neither Bari nor Moon Rabbit are usable in Guild Conquest yet", "relevance": 1,
+      "summary_en": "Even if Moon Rabbit's debuff could help reach 17s, there's no free slot to fit it into the standard 12-cookie deck.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "73593", "url": "https://m.dcinside.com/board/projectcc/73593", "date": "2026-09-23",
+      "title_kr": "[일반] 달토끼가 아레나 필수인 이유", "title_en": "Why Moon Rabbit is a must in Arena", "relevance": 1,
+      "summary_en": "Arena-focused explanation of why Moon Rabbit's ATK-down debuff is strong specifically because it can land on the enemy Milk (collapsing the enemy's whole ATK-buff chain). Not Guild-Conquest specific — the boss isn't a 'Milk' that can be debuffed this way — but explains why the same debuff idea doesn't transfer to the raid.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "74441", "url": "https://m.dcinside.com/board/projectcc/74441", "date": "2026-09-24",
+      "title_kr": "[✋️질문] 이온 변신 왜이리 빨라짐?", "title_en": "Why did Ion's transform get so much faster?", "relevance": 0,
+      "summary_en": "Unrelated cookie-kit question; a commenter's answer references the 9/23 patch's new 'Skill Prep' stat (already known from crumbgg patch notes), no new Guild Conquest fact."
+    },
+    {
+      "source": "dc", "id": "74789", "url": "https://m.dcinside.com/board/projectcc/74789", "date": "2026-09-24", "title_kr": "[✋️질문] 토벌 30초 안버텨지면 걍 좆대로치면됌?", "title_en": "If you can't survive 30s, just wing it?", "relevance": 0,
+      "summary_en": "One-line complaint, no new information."
+    },
+    {
+      "source": "dc", "id": "74791", "url": "https://m.dcinside.com/board/projectcc/74791", "date": "2026-09-24",
+      "title_kr": "[일반] 토벌 덱 풀리니까 약간 느낌이 이상하네 ㅋㅋ", "title_en": "Now that the deck's dialed in it feels strange", "relevance": 1,
+      "summary_en": "OP recalls scoring 30G at the 30s mark used to feel like a good pace; now getting only 100G by that point feels like a bad run — illustrates the score bar's rapid mid-September escalation.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "74793", "url": "https://m.dcinside.com/board/projectcc/74793", "date": "2026-09-24",
+      "title_kr": "[일반] 18초에 애들 죽는데 렙업 시켜야함?", "title_en": "Cookies start dying at 18s, should I level them?", "relevance": 3,
+      "summary_en": "Reports that the wipe isn't an instant simultaneous kill exactly at 17s: cookies start getting picked off individually from ~19s remaining, with the last ones going down at the 17s mark. Screenshot (transcribed) shows a mid-fight frame: damage counter 112,876,676,987, a small '18.767' readout near the boss, several dead-cookie portraits (greyed with an hourglass badge) still shown in the bottom bar alongside living ones — dead cookies remain visible in the UI with a distinct 'downed' icon rather than disappearing.",
+      "mechanics": [
+        "The 17s wipe is not simultaneous: individual cookies start dying from around 19s remaining, tapering off through 17s as the last survivors fall.",
+        "UI: a dead cookie's portrait stays in the bottom formation bar but gets an hourglass/greyed 'downed' badge — no visual indicates revival."
+      ],
+      "quotes": [{"kr": "17초 점프에 죽는게 아니리 19초부터 한두명씩 쓸리는데", "en": "It's not that they die at the 17s jump — they get picked off one or two at a time starting from 19s."}]
+    },
+    {
+      "source": "dc", "id": "74804", "url": "https://m.dcinside.com/board/projectcc/74804", "date": "2026-09-24",
+      "title_kr": "[일반] 석류 씨발련아", "title_en": "Damn you, Pomegranate", "relevance": 2,
+      "summary_en": "OP complains Pomegranate (a pure buffer who should stay at the back) keeps charging forward and wrecking the formation; a commenter's fix is to strip all move-speed stats and rebuild as a full Cherry-deck.",
+      "mechanics": ["Even a backline buffer (Pomegranate) will run forward and disrupt formation if it has leftover move-speed stats; the fix used is to zero out move speed rather than rely on positioning alone."]
+    },
+    {
+      "source": "dc", "id": "74887", "url": "https://m.dcinside.com/board/projectcc/74887", "date": "2026-09-24",
+      "title_kr": "[일반] 마지막에 배치 개판인데 고점 근처나오는 거 보면", "title_en": "Even with a wrecked final formation the score is near my best", "relevance": 1,
+      "summary_en": "OP notes that runs with visibly bad end-of-fight formation can still land close to their personal best, implying formation quality is one of several score factors (crit RNG, buff timing) rather than a single deciding one.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "74964", "url": "https://m.dcinside.com/board/projectcc/74964", "date": "2026-09-24", "title_kr": "[일반] 나만 복주머니넣고 토벌점수 이상함?", "title_en": "Is my score weird with just the Pouch pet?", "relevance": 0,
+      "summary_en": "One-liner, no new information beyond pet-swap guessing."
+    },
+    {
+      "source": "dc", "id": "75054", "url": "https://m.dcinside.com/board/projectcc/75054", "date": "2026-09-24", "title_kr": "[일반] 토벌 30초 못 버티면 무슨 덱이 맞냐?", "title_en": "What deck is right if I can't survive 30s?", "relevance": 0,
+      "summary_en": "One-line question, no reply, no new information."
+    },
+    {
+      "source": "dc", "id": "75547", "url": "https://m.dcinside.com/board/projectcc/75547", "date": "2026-09-25",
+      "title_kr": "[✋️질문] 토벌 투력 몇쯤돼야 30초에 안뒤짐?", "title_en": "What power is needed to not die at 30s?", "relevance": 3,
+      "summary_en": "Gives a rough power-to-30s-survival curve from two independent commenters: ~400M power survives with 1-2 cookies, ~600M survives with the whole team, ~1.5G power comfortably never dies at 30s.",
+      "mechanics": ["30s-slam survival by team power (commenter-reported, approximate): ~400M power -> 1-2 survivors; ~600M -> full team survives; ~1.5G -> essentially never dies there."]
+    },
+    {
+      "source": "dc", "id": "76283", "url": "https://m.dcinside.com/board/projectcc/76283", "date": "2026-09-26",
+      "title_kr": "[일반] 30초 찍기 정전으로 버텨지니까 300배 이상 잘나오네", "title_en": "Once I could survive the 30s slam with Jungle Warrior, scores jumped past 300x", "relevance": 2,
+      "summary_en": "Screenshot (transcribed): a mid-fight frame showing the boss (a large plush pinata styled like a blue elephant/hippo in a birthday/party-themed arena with balloons and gift boxes), a running damage counter of 112,876,676,987, a small side readout '18.767' (unclear if a per-hit multiplier or a stat display, not confirmed as the timer), and the bottom formation bar showing 3 cookies already downed (grey portraits with an hourglass badge, levels 100/1/100) alongside 5 still-alive cookies (levels 100/95/100/95). Confirms surviving the 30s slam with a Jungle Warrior line-up pushed this account's score past 300x.",
+      "mechanics": []
+    },
+    {
+      "source": "dc", "id": "76759", "url": "https://m.dcinside.com/board/projectcc/76759", "date": "2026-09-27",
+      "title_kr": "[일반] 토벌전 30초 쿵에 다뒤지면 념글 460배 덱 의미없지?", "title_en": "If everyone dies at the 30s slam, is a hot-post 460x deck pointless?", "relevance": 1,
+      "summary_en": "OP worries a popular 460x guide deck is useless if their account wipes at 30s; a top poster (캔디애플, seen elsewhere in this batch) replies that ATK order/pets/runes should be kept as-is regardless, and that if the account is going to die anyway, the Jungle Warrior variant scores better than Herb.",
+      "mechanics": ["If a build can't avoid dying at the 30s slam anyway, the Jungle Warrior variant is recommended over Herb (more beams/damage before death, since the extra survivability from Herb isn't paying off)."]
+    }
+  ],
+  "encounter": {
+    "timeline": [
+      {"t_seconds": 60, "event": "fight_length", "detail": "Guild Conquest fight lasts 60 s total, confirmed independently by crumb.gg's DPS chart page ('Fight length 60 s', evidence/15-crumbgg/32-dps-read.txt) and by a datamine poster ('토벌전이 60초', dc:71383). The in-run HUD timer counts down from 60 to 0 (dc:69724, prior evidence); '17초' and '30초' in community shorthand are both remaining-time marks, i.e. elapsed 43 s and elapsed 30 s respectively.", "sources": ["web:crumbgg:dps", "dc:71383", "dc:69724"], "confidence": "high"},
+      {"t_seconds": 0, "event": "engage", "detail": "Team runs in from starting positions and collides into a line; there is no scripted stop point; a cookie keeps advancing until physically blocked by an ally or the boss, so leftover move-speed stats or missing backline units change where the line settles (dc:72759, dc:74804; prior evidence dc:60340, dc:64839).", "sources": ["dc:72759", "dc:74804"], "confidence": "high"},
+      {"t_seconds": 0, "event": "boss_defense_phase_0", "detail": "Per an unverified single-author datamine (dc:67285, refined in dc:71383): boss damage reduction is 0% and boss ATK is at its base value (5000) for the first 10 s. This is the highest-damage-efficiency window of the fight, before the boss starts scaling up its own mitigation and offense.", "sources": ["dc:71383", "dc:67285"], "confidence": "low"},
+      {"t_seconds": 10, "event": "boss_defense_phase_1", "detail": "Datamine claim: boss DR steps to 10% and boss ATK jumps to 505,000 at 10 s elapsed. DEF stays fixed at 2000 throughout (matches the independent DEF figure in dc:67299 by the same author).", "sources": ["dc:71383"], "confidence": "low"},
+      {"t_seconds": 22, "event": "boss_defense_phase_2", "detail": "Datamine claim: DR steps to 30%, boss ATK to 2,500,500.", "sources": ["dc:71383"], "confidence": "low"},
+      {"t_seconds": 27, "event": "mob_wave_hit", "detail": "A distinct sub-event around 27 s remaining, separate from the 30 s slam: thrown mobs ('쫄') self-destruct near the front line. A fully-built (Lv.100) Dark Choco was reported dying to this specifically, while a Lv.1 Dark Choco instead died to the 30 s slam itself (dc:71219); matches the '3 bomb mobs thrown at the front line' step of the previously-recorded 30 s sequence (dc:53667, prior evidence).", "sources": ["dc:71219", "dc:67659", "dc:53667"], "confidence": "medium"},
+      {"t_seconds": 30, "event": "slam_pattern", "detail": "The '30 s slam' ('30초 쿵'/'30초 내려찍기'/'부랄찢기'): the boss's first major team-wide hit. Prior evidence (dc:53667) describes the full sequence as gift-bomb -> ground pounds -> 3 bomb-mobs thrown at the front line -> jump. This batch adds concrete HP survival floors (~3-4M HP generally, front row ~4.5M / back row ~3.5M as a more granular split) and a team-power curve (~400M power = 1-2 survivors, ~600M = full survival, ~1.5G = never dies here). It is RNG-sensitive even at fixed power/build (one account cleared it on a 3rd retry after 2 failures at identical build). Milk is disproportionately likely to die here because she is healing others during this window without being healed herself, which then removes her ATK buff for the remainder of the fight.", "sources": ["dc:70607", "dc:70625", "dc:67659", "dc:75547", "dc:70832", "dc:70123", "dc:71219"], "confidence": "high"},
+      {"t_seconds": 34, "event": "boss_defense_phase_3", "detail": "Datamine claim: DR steps to 50%, boss ATK to 12,500,500. This bracket covers the 30 s slam window through the run-up to the 17 s wipe.", "sources": ["dc:71383"], "confidence": "low"},
+      {"t_seconds": 43, "event": "chip_deaths_begin", "detail": "Cookies begin dying individually starting around 19 s remaining (elapsed ~41 s) — the wipe is a taper, not a single simultaneous kill. Dead cookies remain visible in the formation UI with a greyed portrait and an hourglass badge rather than disappearing; no evidence of in-run revival was found (searches for '부활' turned up only unrelated gacha-cookie discussion).", "sources": ["dc:74793"], "confidence": "medium"},
+      {"t_seconds": 43, "event": "super_jump_wipe", "detail": "The '17 s super-jump' (elapsed 43 s): historically a certain full-team wipe ('확정전멸') for every publicly documented run through at least late September, including runs at 2.2G team power (dc:69250) and the #1 guild's own 827G video (prior evidence). The first credible survival reports appear only at very high account power (~21G, dc:76583, prior evidence), and only for 4 of 12 cookies (Macaron/Brightseeker/Pomegranate/Skating Queen), who then keep dealing damage until about 8 s remain. This remains a timing correlation with the Season 5 score jump, not a shown, replicated build.", "sources": ["dc:69250", "dc:69358", "dc:71028", "top-players:76583"], "confidence": "high"},
+      {"t_seconds": 46, "event": "boss_defense_phase_4", "detail": "Datamine claim: DR steps to 70%, boss ATK to 250,005,000.", "sources": ["dc:71383"], "confidence": "low"},
+      {"t_seconds": 58, "event": "boss_defense_phase_5", "detail": "Datamine claim: DR steps to 90%, boss ATK to 750,005,000, for the final ~2 s of the fight.", "sources": ["dc:71383"], "confidence": "low"},
+      {"t_seconds": 60, "event": "fight_ends", "detail": "The 60 s timer, not a team wipe, ends the fight and locks the score. A team that wipes completely well before 60 s still keeps whatever damage it dealt before dying (a full wipe at the 30 s slam still scored >100x in one report) — there is no bonus or penalty tied to surviving to the buzzer beyond the extra damage window that survival buys.", "sources": ["dc:69201"], "confidence": "medium"},
+      {"t_seconds": null, "event": "unresolved_final_dr_stage", "detail": "The datamine's implied 7th stage (99% DR, boss ATK 1,562,505,000, which would start at elapsed 70 s) is never reached inside a 60 s fight. The original poster has no explanation for why the data table extends past the fight's own time limit — flagged as an open question for a client datamine (is there an unused 'overtime' mode, or is this a leftover/placeholder stage).", "sources": ["dc:71383"], "confidence": "low"}
+    ],
+    "boss": {
+      "name_kr": "지나치게 무거워진 피냐타", "name_en": "Extra Stuffed Piñata", "element": "Dark", "weakness": "Light",
+      "hp": "Unverified single-source datamine claims boss HP ~2^62 (~4.6×10^18); functionally this plus the fixed 60 s clock and the escalating DR schedule mean the encounter is a pure damage race, not a depletable-HP kill — no source anywhere claims the boss can be brought to 0 HP or that doing so changes the outcome.",
+      "defense": "Claimed fixed DEF 2000 throughout the fight (two independent posts by the same author agree on this number, dc:67299 and dc:71383); damage reduction (a separate, time-gated stat) instead ramps from 0% to 90%+ across 6 stages timed off elapsed seconds (see timeline). Accuracy and focus/resist are reported as unnecessary against this boss (prior evidence, dc:43653, dc:71381): crit resistance does nothing and the boss has low evasion/resist.",
+      "attack": "Claimed boss ATK stat scales by orders of magnitude at each of the same DR stage boundaries (5,000 at phase 0 up to 750,005,000 at phase 5), which is offered as the likely reason the 30 s and 17 s patterns hit so much harder than earlier chip damage.",
+      "movement_targeting": "No source in this batch describes the boss moving toward or selecting individual cookie targets; damage appears to land on the team's front line/whoever is in range rather than a single chased target. Open question for a datamine.",
+      "lift_and_cc": "The boss can lift/launch cookies airborne (에어본); lift resistance (띄우기 저항) on the ally side is what prevents a skill being cancelled by it (prior evidence, dc:52401, unchanged by this batch). No boss-side CC immunities or resistances were found in this batch; whether the boss itself can be lifted, knocked back, or stunned is unresolved (searches for '면역' in this batch returned only unrelated cookie-kit discussion).",
+      "death_of_cookies": "A cookie reduced to 0 HP is shown greyed out with an hourglass badge in the formation UI and deals no further damage for the rest of the run (dc:74793). No source describes a revive mechanic inside a Guild Conquest attempt; death appears permanent for that attempt.",
+      "sources": ["dc:67299", "dc:71383", "dc:74793", "web:crumbgg:sources for boss element (prior evidence)"],
+      "confidence": "medium (element/weakness and the damage-race framing are high confidence from prior evidence; the specific HP/DEF/ATK/DR numbers are low confidence, resting on one unverified poster's self-described datamine)"
+    },
+    "patterns": [
+      {
+        "name_kr": "30초 쿵 / 30초 내려찍기 / 부랄찢기", "name_en": "the 30s slam",
+        "timing": "Elapsed ~30 s (countdown ~30 s remaining), immediately followed by a distinct mob/add hit around elapsed ~33 s (countdown ~27 s remaining).",
+        "detail": "Multi-part: gift-bomb, then ground pounds, then 3 bomb-mobs thrown at the front line (prior evidence dc:53667), then the mob wave detonates a few seconds later. HP floor to survive is roughly 3-4M generally, or front row ~4.5M / back row ~3.5M split by row; team-power curve is roughly 400M power (1-2 survive) -> 600M (whole team survives) -> 1.5G+ (never dies here). RNG-sensitive even at a fixed build.",
+        "sources": ["dc:70607", "dc:70625", "dc:67659", "dc:75547", "dc:71219", "dc:53667 (prior)"],
+        "confidence": "high"
+      },
+      {
+        "name_kr": "17초 슈퍼점프 / 확정전멸", "name_en": "the 17s super-jump wipe",
+        "timing": "Elapsed ~43 s (countdown 17 s remaining); individual deaths taper in from about elapsed ~41 s (countdown 19 s remaining).",
+        "detail": "Historically a certain full-team wipe for every publicly documented run except a handful of ~21G-power accounts, where 4 specific cookies (Macaron/Brightseeker/Pomegranate/Skating Queen) have been reported surviving and dealing damage until ~8 s remain (prior evidence, dc:76583/69856/74801). Survival threshold reported at roughly 9M HP + 45% damage reduction per surviving cookie (prior evidence).",
+        "sources": ["dc:69250", "dc:69358", "dc:71028", "dc:74793", "top-players:76583 (prior)", "top-players:69856 (prior)"],
+        "confidence": "high"
+      },
+      {
+        "name_kr": "보스 피해감소/공격력 단계 (datamine)", "name_en": "boss defense/offense phase ramp",
+        "timing": "0-10s: DR 0%; 10-22s: 10%; 22-34s: 30%; 34-46s: 50%; 46-58s: 70%; 58s+: 90%; a 99% stage exists in the data but its 70s start is never reached in a 60s fight.",
+        "detail": "Unverified single-poster datamine (dc:67285, refined by the same author in dc:71383); boss ATK is claimed to scale up at the same stage boundaries, from 5,000 to 750,005,000. If real, this explains why chip damage in the first ~10s is comparatively cheap for the team to survive while the 30s and 17s patterns are lethal, and why raw damage output (not just survival) should be front-loaded before defense stacks up. Needs independent confirmation from a client datamine.",
+        "sources": ["dc:71383", "dc:67285"],
+        "confidence": "low"
+      }
+    ],
+    "scoring": {
+      "what_counts": "Cumulative damage dealt by the team during the 60 s window; a run that wipes entirely well before the timer still keeps and scores the damage already dealt (dc:69201: a full wipe still scored >100x). No source in this batch specifically confirms or denies whether summon/DoT damage (Scorpion poison, Cool Mint's fan, etc.) is included, but crumb.gg's DPS chart (prior evidence, 15-crumbgg/32-dps-read.txt) explicitly counts summon damage 'in full' for its own ranking purposes, which is at least suggestive that the game does the same.",
+      "time_limit": "60 s fixed (see timeline). The fight is not ended early by a team wipe; the clock runs to 0 regardless, and any earlier death simply stops that cookie's contribution.",
+      "result_screen": "Not directly captured in this batch beyond the mid-fight damage counter transcribed from dc:76283/74793's screenshots (a running total, not obviously a distinct 'result screen' state). Open question: what the end-of-run result screen actually shows (final score breakdown per cookie? time-of-death log?).",
+      "sources": ["dc:69201", "web:crumbgg:dps"],
+      "confidence": "medium"
+    },
+    "positioning": {
+      "run_in_behaviour": "There is no scripted formation; cookies run in from their configured 12-slot order and physically collide into a line, stopping only when blocked by an ally or the boss. Leftover move-speed stats on any cookie (including pure buffers like Pomegranate) will push it further forward than intended, breaking the tuned line (dc:72759, dc:74804). Removing all backline supports lets a targeted cookie (e.g. Milk) run all the way to melee contact with the boss, at the cost of engaging/dying too early to maximize score (dc:72759).",
+      "charge_type_avoidance": "Charge-type (돌격형) cookies are avoided in the Guild Conquest lineup specifically because they always rush into melee range on the boss regardless of the rest of the formation, which both breaks the tuned line and typically puts them outside Milk's ATK-buff range (dc:73560, corroborating prior evidence on why Cherry/Melon Soda are used instead to force a straight line).",
+      "diagnostic_checkpoints": "Top players judge whether a run's positioning/buff-landing 'worked' using elapsed-time checkpoints rather than just the final formation: whether Brightseeker and Macaron keep receiving every buff through to the end of the fight, and — for the Jungle Warrior variant — whether Pomegranate's 2-beam upgrade lands by 45 s elapsed and her 3-beam upgrade by 27 s elapsed, and whether Tea Knight receives at least one Pomegranate beam (dc:70056).",
+      "formation_quality_is_not_everything": "A visibly poor end-of-fight formation can still land close to a personal-best score, implying formation is one of several score-driving factors (alongside crit RNG and buff-timing luck) rather than the single deciding one (dc:74887).",
+      "sources": ["dc:72759", "dc:74804", "dc:73560", "dc:70056", "dc:74887"],
+      "confidence": "high"
+    },
+    "buff_mechanics": [
+      {"title": "Pomegranate beam-count timing checkpoints", "body": "For the Jungle Warrior variant specifically, a top player's own diagnostic requires Pomegranate's beam count to step up to 2 multi-hit stacks by 45 s elapsed and to 3 stacks by 27 s elapsed, plus Tea Knight receiving at least one beam, as evidence a run's positioning/buff landing was good (not just the final ATK order).", "sources": ["dc:70056"], "confidence": "medium"},
+      {"title": "Milk's death window from the 30s slam removes her buff for the rest of the fight", "body": "Because Milk is often occupied healing teammates during the 30s slam and isn't healed herself, she can die at that pattern even when lower-HP fillers survive it — creating an observed ~11 s gap (28s to 17s remaining) with no ATK buff active before the final wipe finishes the run.", "sources": ["dc:70832"], "confidence": "medium"},
+      {"title": "Buffers still need move-speed zeroed, not just positioning", "body": "A pure buffer (Pomegranate) with leftover move-speed stats will run forward into the wrong position even in an otherwise-tuned Cherry deck; the practical fix used is stripping move speed entirely rather than relying on formation order alone.", "sources": ["dc:74804"], "confidence": "medium"},
+      {"title": "Score doesn't require survival to the buzzer", "body": "Damage dealt before a cookie's or team's death is retained; a full wipe at the 30s slam can still score over 100x. This confirms score = cumulative damage over the 60s clock, not a pass/fail tied to reaching any checkpoint.", "sources": ["dc:69201"], "confidence": "medium"}
+    ],
+    "open_questions": [
+      "Independent confirmation of the boss's DR/ATK/DEF/HP datamine numbers (dc:67285/67299/71383) — this rests on one poster's self-described, admittedly uncertain client datamine with no screenshot evidence. A real client extraction should look for a boss stat table / status-effect table keyed to the Guild Conquest stage id (something like a 'GuildRaid boss phase' or 'BossPhaseCondition' data row gated on elapsed battle time, given the '10s then every 12s' cadence described).",
+      "Whether the 27s mob-wave hit (dc:71219, dc:67659) is a fixed, separately-named pattern in the game's own data, or just community shorthand for the tail end of the '30s slam' sequence described in prior evidence (dc:53667: gift-bomb -> ground pounds -> 3 bomb-mobs -> jump). Look for a distinct skill/pattern id firing a few seconds after the id likely responsible for the 30s hit.",
+      "Whether the boss ever moves toward, chases, or selects a specific cookie target, or whether all its patterns are untargeted AoE hitting whoever is in range/front line. No source in this project describes boss movement or single-target boss attacks.",
+      "Whether the boss itself has any CC immunities (lift, knockback, stun) or whether it can be lifted/staggered by ally skills — not found in any source to date.",
+      "Whether summon/pet/DoT damage (Scorpion poison ticks, Cool Mint fan hits, etc.) counts toward the Guild Conquest score the same way crumb.gg's DPS chart counts them for its own ranking purposes.",
+      "What the actual post-fight result screen shows (per-cookie damage breakdown? time of each death? just a total?) — not captured in any source read so far.",
+      "Exact 12-slot formation-to-screen-position mapping (which of the 12 list positions in crumb.gg's simulator corresponds to which physical row/column in the actual fight) — crumb.gg's own simulator UI confirms the ordered 12-slot list exists but doesn't expose the physical layout.",
+      "Whether a cookie that dies can ever be revived mid-run by any Guild-Conquest-legal effect — no evidence found either way beyond the observed 'downed' UI state and the assumption (from every survival-focused post read) that death is permanent for that attempt.",
+      "The likely underlying data to search for in a client datamine, by name: a 'GuildRaid' or 'GuildConquest' boss definition table with a phase/stage array keyed on elapsed time (matching the claimed 10s-then-12s cadence); a boss pattern/skill table with cast-time fields for whatever ids drive the 30s and 17s hits; and a 'DamageReductionByPhase' or similar stat-modifier table on the boss's status-effect definitions."
+    ]
+  }
+}

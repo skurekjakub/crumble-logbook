@@ -1,0 +1,406 @@
+{
+  "batch": "kr-highscore",
+  "posts": [
+    {
+      "source": "dc", "id": "66849", "url": "https://m.dcinside.com/board/projectcc/66849", "date": "2026-09-14",
+      "title_kr": "토벌 체리덱도 리트할수록 고점 차이 큼?", "title_en": "Does the Cherry raid deck also show a bigger peak the more you retry?",
+      "relevance": 1, "summary_en": "One-line question asking whether retry count still spreads the peak even though the Cherry deck's formation is fixed by positioning, not manual play. No answer given (0 comments).",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": ["Unanswered question: does a fixed-formation deck still have run-to-run variance from retries?"], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "67350", "url": "https://m.dcinside.com/board/projectcc/67350", "date": "2026-09-14",
+      "title_kr": "연구소 체방이 많이중요한듯", "title_en": "Lab HP/DEF research seems to matter a lot",
+      "relevance": 2, "summary_en": "Author says prioritizing lab HP (체력) let almost the whole team survive the 30 s slam. A commenter agrees HP always outpaces displayed power inflation and should be prioritized over DEF; another says to raise HP research before ATK research.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Lab (연구소) HP research prioritized over DEF/ATK research raises 30 s-slam survival, independent of sugar runes/gear."],
+      "disagreements": [], "quotes": [{"kr": "체방위주로 올리니까 토벌전 30초 부랄찢기때 거의 다 생존함", "en": "Prioritizing HP/DEF research, almost everyone survives the 30 s slam."}]
+    },
+    {
+      "source": "dc", "id": "68341", "url": "https://m.dcinside.com/board/projectcc/68341", "date": "2026-09-16",
+      "title_kr": "쿨민 레버 돌리기 알려준놈 ㅈㄴ 고맙다", "title_en": "Whoever taught the '35% Cool-Mint spin the joystick' trick, thank you",
+      "relevance": 2, "summary_en": "For the 35% auto/farming Cherry-formation deck against Cool Mint (a different boss/stage, not confirmed to be the Guild Conquest piñata), spinning the movement lever in a fast circle right after each drill-attack window regroups the team and pushed clear rate to near 100%. Several commenters say they didn't know this and it 'one-shot' fixed their runs.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": ["Manual joystick-spin timing trick raises consistency/clear-rate, not confirmed to raise raid damage specifically."],
+      "mechanics": ["Spinning the control lever in a circle right after a drill/attack animation ends re-bunches the team formation."],
+      "disagreements": ["Context is ambiguous: title says 'Guild Conquest' (토벌) but the boss named is Cool Mint (쿨민), which reads more like a stage/dungeon boss. Flagged, not confirmed to transfer to the Extra Stuffed Piñata fight."],
+      "quotes": [{"kr": "드릴끝난 타이밍 마다 레버 원으로 빠르게 돌려서 뭉쳐주기 이것만 하니까 걍 클리어확률 거진 100%네", "en": "Just spinning the lever in a fast circle after every drill ends, to regroup — did only that and clear rate is basically 100% now."}]
+    },
+    {
+      "source": "dc", "id": "69159", "url": "https://m.dcinside.com/board/projectcc/69159", "date": "2026-09-17",
+      "title_kr": "토벌덱투 530m", "title_en": "Raid deck, 530M power",
+      "relevance": 1, "summary_en": "Player at 530M power asks how many retries are typical; has passed 60G with the Cherry deck. No replies.",
+      "scores": [{"damage": "60G+", "power": "530M", "ratio": null, "deck": "체리덱", "note": "in-progress retry session"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "69390", "url": "https://m.dcinside.com/board/projectcc/69390", "date": "2026-09-17",
+      "title_kr": "1렙 생존 가능하면 마카롱 스증이 맞음", "title_en": "If Lv.1 survival is possible, Macaron skill-amp is correct",
+      "relevance": 3, "summary_en": "캔디애플 (a recognized guide poster elsewhere in the gallery) claims 1% skill amp on Macaron converts to 1.1% ally crit rate, so skill-amp is worth keeping on her even before a team can survive to the point that would make ATK% pointless. Confirms dealer level has zero correlation with damage output, and confirms Milk-Bright-Skate-Macaron-TeaKnight-Ceylon (우브피마치실) as the ATK order. Also states that once Brightseeker is 5-star, 3 skill-haste lines beat 3 skill-amp lines.",
+      "scores": [], "teams": [{"name": "체리덱", "cookies": [], "pets": [], "atk_order": ["우유", "브시커", "피겨", "마카롱", "치케", "실론"], "perks": "", "formation": "", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [{"cookie": "마카롱", "stats": "skill amp (스증)", "why": "1% skill amp on Macaron ≈ 1.1% additional ally crit rate (claimed conversion rate, single source)."}],
+      "gear": [], "rng": [],
+      "mechanics": ["Claimed exchange rate: Macaron skill amp 1% ↔ team crit rate +1.1% (unverified, single poster, agreed to by others in-thread).", "Dealer cookie's own level has no correlation with team damage ('딜러 렙은 딜이랑 1도 상관없음')."],
+      "disagreements": ["No counter-source found for the 1%→1.1% crit-rate conversion; record as claim pending corroboration."],
+      "quotes": [{"kr": "스증 1퍼당 아군 치확 1.1퍼", "en": "1% skill amp gives allies 1.1% crit rate."}, {"kr": "딜러 렙은 딜이랑 1도 상관없음", "en": "A dealer's level has zero correlation with damage."}]
+    },
+    {
+      "source": "dc", "id": "70195", "url": "https://m.dcinside.com/board/projectcc/70195", "date": "2026-09-19",
+      "title_kr": "1G 토벌 241G", "title_en": "1G power, 241G raid damage",
+      "relevance": 3, "summary_en": "Screenshot-verified 241G 662M damage at 1.05G team power (≈230×), guild rank #2 individually (guild itself ranked far lower in aggregate). Author's personal-best recipe: Brightseeker's ATK peaked at 45 s remaining, Pomegranate's multi-hit hit 3 at 42 s, and cookies were still alive at 29 s remaining — that specific timing alignment produced the best run. A commenter reports reaching Brightseeker ATK 4.8M. No move speed on gear. Full-level (100) on a filler steals Pomegranate's beam target (confirmed again).",
+      "scores": [{"damage": "241.662G", "power": "1.05G", "ratio": "230x", "deck": "cherry", "note": "screenshot-verified; guild-wide leaderboard in the same screenshot (914G/638G/636G) is the GUILD aggregate total across all members, not one player's run — do not confuse with individual damage."}],
+      "teams": [{"name": "체리덱", "cookies": [
+        {"kr": "우유", "en": "Milk", "level": "100", "stars": "5", "note": "ATK #1"},
+        {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "5", "note": "carry; ATK peaked 4.8M per a commenter"},
+        {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "5", "note": ""},
+        {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "red cookie, likely Skating Queen or Macaron"},
+        {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "5", "note": ""},
+        {"kr": "체리", "en": "Cherry", "level": "1", "stars": "5", "note": "formation only"},
+        {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "5", "note": ""},
+        {"kr": "?", "en": null, "level": "96", "stars": "5", "note": "red, near-max level"},
+        {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "gold"},
+        {"kr": "실론", "en": "Tea Knight", "level": "100", "stars": "5", "note": ""},
+        {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "light-blue, likely Macaron"},
+        {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "gray, likely Cheesecake"}
+      ], "pets": ["20-star (green)", "17-star (panda)", "20-star (hot dog)"], "atk_order": [], "perks": "", "formation": "no move speed", "substitutions": [], "unorthodox": ["Full-level (100) fillers steal Pomegranate's beam target, confirmed again by a commenter's reply."]}],
+      "sugar_runes": [], "gear": [{"slot": "general", "substats": "no move speed", "context": "raid", "why": ""}],
+      "rng": ["Best run coincided with three specific timing markers: Brightseeker ATK peak at 45 s remaining, Pomegranate's 3rd multi-hit stack at 42 s, cookies still alive at 29 s remaining."],
+      "mechanics": ["Leveling a filler to max steals Pomegranate's beam target from the intended carries (reconfirmed)."],
+      "disagreements": [], "quotes": [{"kr": "45초에 시커 공격력 최고점 / 42초에 석류 다발3 / 29초에 쿠키들 생존 / 하면 최고기록", "en": "Brightseeker ATK peaks at 45s / Pomegranate multi-hit-3 at 42s / cookies alive at 29s → best record."}]
+    },
+    {
+      "source": "dc", "id": "70756", "url": "https://m.dcinside.com/board/projectcc/70756", "date": "2026-09-20",
+      "title_kr": "토벌 공 맞출때 석류도 낮춰여대?", "title_en": "When leveling to hit an ATK target, does Pomegranate need to be lowered too?",
+      "relevance": 1, "summary_en": "Asks whether Pomegranate needs to be leveled down like other fillers. Answer: no, because she only gives a buff and never receives the beam herself, so her level is irrelevant.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": ["Pomegranate's level/ATK is fully irrelevant since she cannot receive her own beam buff (reconfirmed)."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "71066", "url": "https://m.dcinside.com/board/projectcc/71066", "date": "2026-09-20",
+      "title_kr": "아까 토벌 체리덱에 바궁 어쩌구", "title_en": "That Princess Bari-in-Cherry-deck thing from earlier",
+      "relevance": 3, "summary_en": "Clean before/after floor comparison: standard Cherry deck (with Scorpion as beam-catcher) swung from a 4-5G floor up to a 14.4G peak over ~10 runs. Swapping Scorpion out for Princess Bari raised the FLOOR to 6.5G (worse peak, much more consistent), attributed to Scorpion carrying meaningful damage share when it does connect. Author's own spec: mercenary squad level 3, Brightseeker 6-star, gear haste total 10.8, Brightseeker rune haste 21, ATK order Milk-Bright-Skate-Macaron-TeaKnight-Ceylon or Milk-Bright-Macaron-Skate-TeaKnight-Ceylon.",
+      "scores": [{"damage": "4-5G to 14.4G (floor-peak range)", "power": null, "deck": "cherry", "note": "10 runs, Scorpion beam-catcher variant"}, {"damage": "6.5G floor", "power": null, "deck": "cherry+bari", "note": "Scorpion replaced by Princess Bari — raises floor, not peak"}],
+      "teams": [{"name": "체리덱 (변형)", "cookies": [], "pets": [], "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론"], "perks": "", "formation": "", "substitutions": ["전갈 → 바리공주 (raises floor/consistency at the cost of peak damage share)"], "unorthodox": []}],
+      "sugar_runes": [{"cookie": "브시커", "stats": "haste 21 (rune) + 10.8 total gear haste", "why": "6-star Brightseeker build."}],
+      "gear": [], "rng": ["A clean A/B: same account, same deck minus one cookie swap, floor moved from 4-5G to 6.5G."],
+      "mechanics": [], "disagreements": [], "quotes": [{"kr": "원래 체리덱으로 했을때 고점이 14.4g까지 나왔고 저점이 4~5g정도 나왔는디 전갈 빼고 바궁 넣었을 땐 저점이 6.5가 찍힘", "en": "Standard Cherry deck peaked at 14.4G, floor 4-5G; swapping Scorpion for Princess Bari brought the floor to 6.5G."}]
+    },
+    {
+      "source": "dc", "id": "71848", "url": "https://m.dcinside.com/board/projectcc/71848", "date": "2026-09-21",
+      "title_kr": "바리공주 버프 구린데?", "title_en": "Princess Bari's buff is bad?",
+      "relevance": 2, "summary_en": "Long discussion (16 comments) arguing Princess Bari's kit (DR + launch/knockback immunity for 'assault'-type cookies) doesn't solve the real problem, which is that Milk's ATK buff is positional and doesn't reach assault-type formations. Commenters note launch resistance is already solved by Pinot+Panda, and knockback resistance is separately gated (only ghost-type pets raise it). Consensus: Bari is not obviously a raid damage lever by herself; her value is speculative pending her 'soul damage' mechanic being measured.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Knockback (밀치기) resistance is a separate stat from launch/lift (띄우기) resistance; Pinot/Panda only cover launch, not knockback. Only 'ghost'-type pets raise knockback resistance."],
+      "disagreements": ["Community split on whether Bari is worth building around for the raid: skeptics say her buff doesn't fix Milk's positional-buff problem; others hold out hope her damage-over-time ('soul') mechanic could be very strong once measured."],
+      "quotes": [{"kr": "돌격형 문제는 생존보다는 우유 버프가 제일 큰데 이러면 우유 버프는 해결이 하나도 안 된거잖아?", "en": "The assault-type problem is mainly Milk's buff, not survival — this doesn't fix that at all."}]
+    },
+    {
+      "source": "dc", "id": "72489", "url": "https://m.dcinside.com/board/projectcc/72489", "date": "2026-09-22",
+      "title_kr": "업뎃하면 오븐 체크 5개로 늘어나니까", "title_en": "After the update, gear will roll 5 substats instead of 4",
+      "relevance": 1, "summary_en": "Anticipates a gear substat-count increase to 5 lines, discusses adding accuracy/focus/dodge to the raid preset. Not clearly datable to a confirmed patch; treat as forward-looking speculation, cross-check with 72512.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "72512", "url": "https://m.dcinside.com/board/projectcc/72512", "date": "2026-09-22",
+      "title_kr": "근데 옵션 5개 고정이면", "title_en": "But if it's 5 fixed substat slots",
+      "relevance": 2, "summary_en": "Confirms the raid preset target once gear moved to 5 substats: skill amp + crit dmg + skill haste + damage reduction + accuracy (or focus). One poster reports accuracy (명중) needs only ~1200-1400 (achieved incidentally via plate enhancement +13→+14), so it's a soft floor, not a stat to actively chase past that. On crit rate vs crit dmg for arena, one reply says despite enemy crit resistance, crit dmg still wins in practice because Macaron already pushes crit rate near/over the cap.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [{"slot": "general", "substats": "skill amp, skill haste, crit dmg, damage reduction, accuracy (~1200-1400 is enough, not worth over-investing)", "context": "raid", "why": "5-substat gear preset; accuracy has a soft floor from incidental enhancement, not an active investment target."}],
+      "rng": [], "mechanics": [], "disagreements": ["One poster still argues crit rate over crit dmg for arena due to crit resistance; another counters Macaron's crit-rate buff already saturates crit rate, so crit dmg wins in practice."],
+      "quotes": [{"kr": "집중 1200이면 충분해서 15강 되면 집중 좀 덜어내도 될 것 같음", "en": "1200 focus/accuracy is enough — once the plate hits +15 you can probably drop some of it."}]
+    },
+    {
+      "source": "dc", "id": "72776", "url": "https://m.dcinside.com/board/projectcc/72776", "date": "2026-09-22",
+      "title_kr": "너프전 248-30 801.5m 35% + 169~248 덱 정리&장비", "title_en": "Pre-nerf stage 248-30, 801.5M at 35%, plus a 169-248 deck/gear summary",
+      "relevance": 0, "summary_en": "Detailed stage-clearing (스테이지) deck and gear guide for regular Stage content, not Guild Conquest. Off-topic for the raid damage question; kept for completeness only.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "73895", "url": "https://m.dcinside.com/board/projectcc/73895", "date": "2026-09-23",
+      "title_kr": "토벌덱 바뀌는거없지?", "title_en": "Nothing changes in the raid deck, right?",
+      "relevance": 0, "summary_en": "Asks if only the pet needs swapping to Candy Shade Pouch; a reply says the pet isn't unlocked yet for them. No new info.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "74180", "url": "https://m.dcinside.com/board/projectcc/74180", "date": "2026-09-23",
+      "title_kr": "토끼랑 명쿠 차이 존나 크네", "title_en": "Big difference between Rabbit and Merry Cookie",
+      "relevance": 0, "summary_en": "Comparing a stage-farming debuff-proc cookie (Moon Rabbit vs an older cookie); unrelated to Guild Conquest raid damage.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "74793", "url": "https://m.dcinside.com/board/projectcc/74793", "date": "2026-09-24",
+      "title_kr": "18초에 애들 죽는데 렙업 시켜야함?", "title_en": "Cookies are dying at 18s, should I level them up?",
+      "relevance": 2, "summary_en": "Author reports the wipe actually starts creeping in from 19s remaining (not a clean instant 17s wipe), killing cookies one or two at a time; asks if leveling fillers (currently Lv.1, except the 6 carries 우시피마치실) for a little more damage/HP before they die is worth it. Screenshot shows a mid-fight cumulative counter of 112,876,676,987 at an 18.767x multiplier at that point. No replies.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": ["The 17s 'wipe' is not instantaneous — cookies start dying gradually from ~19s remaining."], "mechanics": [], "disagreements": [], "quotes": [{"kr": "17초 점프에 죽는게 아니리 19초부터 한두명씩 쓸리는데 1,2초라도 딜할려면 렙업하는게 밎냐?", "en": "It's not that they die at the 17s jump — from 19s people get wiped one or two at a time. Is leveling worth it for 1-2 more seconds of damage?"}]
+    },
+    {
+      "source": "dc", "id": "75054", "url": "https://m.dcinside.com/board/projectcc/75054", "date": "2026-09-24",
+      "title_kr": "토벌 30초 못 버티면 무슨 덱이 맞냐?", "title_en": "What deck is right if you can't survive the 30s slam?",
+      "relevance": 0, "summary_en": "One-line question, no answer; already documented elsewhere that Herb replaces Tiger Lily for survival.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75087", "url": "https://m.dcinside.com/board/projectcc/75087", "date": "2026-09-24",
+      "title_kr": "천장 막힌 기분임", "title_en": "Feels like I've hit a ceiling",
+      "relevance": 1, "summary_en": "Author expected raid damage to keep climbing with account growth but feels stalled/capped. No specifics, no replies, but corroborates that growth-vs-damage returns feel non-linear/diminishing to players around the mid tier.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75328", "url": "https://m.dcinside.com/board/projectcc/75328", "date": "2026-09-25",
+      "title_kr": "치확이냐 스증이냐....", "title_en": "Crit rate or skill amp....",
+      "relevance": 2, "summary_en": "Gear-roll dilemma between a haste/crit-rate piece already equipped vs. a haste/skill-amp roll. Consensus across 6 replies: take skill amp, because it also benefits the team's buffers' own skills, not just raw crit; one reply gives a fallback heuristic (pick whichever of crit rate/skill amp/crit dmg shows the highest displayed power number, usually skill amp).",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [{"slot": "general", "substats": "skill amp preferred over crit rate when substats otherwise tie", "context": "raid", "why": "Skill amp helps buffer skills too, not just the wearer's crit."}],
+      "rng": [], "mechanics": [], "disagreements": [], "quotes": [{"kr": "모르겠으면 치확스증치피중에 투력 더주는거 골라라 보통 스증일거임", "en": "If unsure, pick whichever of crit rate/skill amp/crit dmg gives more displayed power — usually skill amp."}]
+    },
+    {
+      "source": "dc", "id": "75441", "url": "https://m.dcinside.com/board/projectcc/75441", "date": "2026-09-25",
+      "title_kr": "스가는 전투력을 다시 측정 해야하지 않을까", "title_en": "Shouldn't skill haste's power-score weighting be recalculated?",
+      "relevance": 1, "summary_en": "Complains that skill haste is a top-tier stat for Stage, Raid AND Arena alike, but contributes very little to the displayed 전투력 (power) number, discouraging players from stacking it because it 'looks weak' relative to power gained. Reinforces that chasing displayed power is a poor proxy for raid damage.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Skill haste is heavily underweighted in the displayed 전투력 (team power) score relative to its actual damage value across all three modes — a mismatch that leads players to under-invest in it because gearing for haste visibly shrinks their power number."],
+      "disagreements": [], "quotes": [{"kr": "스테,토벌전,아레나 모든 분야 goat 옵션인데 전투력이 너무 joat임", "en": "It's the GOAT stat in Stage, Raid AND Arena, but its power-score contribution is a joke."}]
+    },
+    {
+      "source": "dc", "id": "75601", "url": "https://m.dcinside.com/board/projectcc/75601", "date": "2026-09-25",
+      "title_kr": "바리 스테 구리다는거 바없찐들 연막이냐?", "title_en": "Is 'Bari's stage performance is bad' a smokescreen from people without her?",
+      "relevance": 0, "summary_en": "Argument about Princess Bari's performance in regular Stage content (not raid); tangential to the raid-damage question.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76557", "url": "https://m.dcinside.com/board/projectcc/76557", "date": "2026-09-27",
+      "title_kr": "토벌 프리셋 오른쪽 하단 스가집중 vs 스가피감", "title_en": "Raid preset bottom-right: haste+focus vs haste+DR",
+      "relevance": 1, "summary_en": "Unanswered question asking if raising focus (집중) helps Dark Choco/Scorpion debuffs land more reliably against the raid boss, as an alternative to the standard haste+damage-reduction bottom-right slot.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": ["Open question, unresolved: does focus meaningfully raise Dark Choco/Scorpion debuff proc rate against the raid boss, given the dashboard's existing note that the boss has low resistance? No answer in-thread."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76804", "url": "https://m.dcinside.com/board/projectcc/76804", "date": "2026-09-27",
+      "title_kr": "개인적으로 내가 제일 좋아하는 35퍼 오토덱", "title_en": "My personal favorite 35% auto deck",
+      "relevance": 0, "summary_en": "A 35%-difficulty stage auto-farm deck share; off-topic for Guild Conquest raid damage.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76612", "url": "https://m.dcinside.com/board/projectcc/76612", "date": "2026-09-27",
+      "title_kr": "색동주머니 < 얘 덕에 쿨민이 훨씬 쉬워졌어", "title_en": "Candy Shade Pouch made Cool Mint (stage boss) much easier",
+      "relevance": 0, "summary_en": "Praise for Candy Shade Pouch in a Stage context, not Guild Conquest. Off-topic.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "73742", "url": "https://m.dcinside.com/board/projectcc/73742", "date": "2026-09-23",
+      "title_kr": "색동주머니 하나로는 부족한듯", "title_en": "One Candy Shade Pouch alone isn't enough",
+      "relevance": 2, "summary_en": "Tried dropping Pinot and running only Candy Shade Pouch's 30% lift resistance against a Stage boss; still got launched. A reply confirms Pinot's lift-resistance value is higher than the pouch's, so Pinot is not replaceable by the pouch alone — they must stack, matching the dashboard's known lift-resistance stacking formula (base + extra − base×extra).",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Candy Shade Pouch's 30% lift resistance alone (without Pinot) is insufficient to prevent launches; Pinot's lift-resistance contribution is larger and the two must stack, not substitute."],
+      "disagreements": [], "quotes": [{"kr": "설인에서 피노 빼고 색동주머니 30퍼만 넣어봤는데 붕 뜬다", "en": "Tried dropping Pinot and using only the Pouch's 30%, and I still got launched."}]
+    },
+    {
+      "source": "dc", "id": "73234", "url": "https://m.dcinside.com/board/projectcc/73234", "date": "2026-09-23",
+      "title_kr": "판다 버려라", "title_en": "Ditch the Panda [Dumpling pet]",
+      "relevance": 1, "summary_en": "One-line recommendation to replace Panda Dumpling with Candy Shade Pouch; no data given, consistent with the deck notes already in decks.json.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "74440", "url": "https://m.dcinside.com/board/projectcc/74440", "date": "2026-09-24",
+      "title_kr": "색동주머니 어떤가요? 사기인가요", "title_en": "How's Candy Shade Pouch, is it broken?",
+      "relevance": 3, "summary_en": "Asks whether the pet needs to be pulled to 20 stars. Consensus across 4 replies: NO — 10 stars (one reply even says 15) is already 'decent efficiency' and several players are deliberately capping investment there rather than chasing 20 stars. This directly contradicts a 'max the pet stars' lever: diminishing returns set in well before 20★.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Pet star investment (Candy Shade Pouch, by extension likely other raid pets) shows sharply diminishing returns after ~10-15 stars; community consensus is NOT to push to 20★ for raid value."],
+      "disagreements": [], "quotes": [{"kr": "저는 판다 버리고 쓸거라 적당히 10성만 찍었음", "en": "I'm dropping Panda for this, so I only put it to 10 stars, which is enough."}, {"kr": "펫은 10성만해도 효율 ㅅㅌㅊ", "en": "Even just 10 stars on the pet gives decent efficiency."}]
+    },
+    {
+      "source": "dc", "id": "72559", "url": "https://m.dcinside.com/board/projectcc/72559", "date": "2026-09-22",
+      "title_kr": "색동주머니 나오면 초코왕방울은 버려지려나", "title_en": "Will Choco King Bell get dropped once Candy Shade Pouch arrives?",
+      "relevance": 2, "summary_en": "Debate on whether Candy Shade Pouch (lift resistance) replaces Choco King Bell (higher raw HP). Consensus in comments: run both together, plus Ice Bird (얼음새) — one commenter explicitly calls '왕방울+얼음새+색동' the emerging survival-pet meta.",
+      "scores": [], "teams": [{"name": "survival pet trio", "cookies": [], "pets": ["초코왕방울 (Choco King Bell, HP)", "얼음새 (Ice Bird)", "색동주머니 (Candy Shade Pouch, lift resistance + HP)"], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Choco King Bell (raw HP) + Ice Bird + Candy Shade Pouch (lift resistance + HP) is described as the emerging 3-pet combo for surviving the raid's slam/wipe, matching the dashboard's dc:69856 finding (which cites 왕방울+얼음새 already)."],
+      "disagreements": [], "quotes": [{"kr": "왕방울 얼음새 색동 메타 ㄷㄷ", "en": "Choco King Bell + Ice Bird + Candy Shade Pouch, that's the meta."}]
+    },
+    {
+      "source": "dc", "id": "74994", "url": "https://m.dcinside.com/board/projectcc/74994", "date": "2026-09-24",
+      "title_kr": "500배는 뭐 어케하는건데!", "title_en": "500x, how do people even do that!",
+      "relevance": 3, "summary_en": "Author stuck below 400x asks for help; a commenter diagnoses the exact bug: Scorpion's level was NOT reset after leveling experiments, so its ATK crept above the intended carries and stole Pomegranate's beam. Fix: keep Scorpion (and all non-carries) strictly below the 6 named buffers (우브마피치실 = Milk-Bright-Macaron-Figure-TeaKnight-Ceylon) in ATK, regardless of stars. After the fix, the author reports hitting 400x. A second sub-thread separately confirms move-speed tuning (이속) is what separates 'higher-peak' players from Cherry-only players — but nobody in-thread knows exactly how to do it ('이속은 다 0인데... 이속은 장비에다 주는거임?').",
+      "scores": [{"damage": null, "power": "330G", "ratio": "400x (after fix)", "deck": "cherry", "note": "before/after: below 400x before the Scorpion-level fix, 400x immediately after"}],
+      "teams": [{"name": "체리덱", "cookies": [{"kr": "전갈", "en": "Scorpion", "level": "reset to 1 (was accidentally left higher)", "stars": null, "note": "stray ATK above the buffer group was stealing Pomegranate's beam"}], "pets": [], "atk_order": ["우유", "브시커", "마카롱", "피겨", "실론", "치케"], "perks": "", "formation": "", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [], "gear": [], "rng": ["A single un-reset filler level, invisible unless you check in-battle ATK order, silently caps the score regardless of everything else."],
+      "mechanics": ["Reconfirms: any non-carry cookie (not just Scorpion) must be kept below all 6 named buffers (Milk, Brightseeker, Macaron, Skating Queen, Tea Knight, Cheesecake) in ATK, or it steals a beam."],
+      "disagreements": [], "quotes": [{"kr": "전갈 렙초기화해라 빨대 뺏어간다", "en": "Reset Scorpion's level, it's stealing the beam."}, {"kr": "덕분에 400배 찍었어 계속 리트 더해봐야지", "en": "Thanks to that I hit 400x, going to keep retrying."}]
+    },
+    {
+      "source": "dc", "id": "74911", "url": "https://m.dcinside.com/board/projectcc/74911", "date": "2026-09-24",
+      "title_kr": "토벌 6드론 안되면 500배 못찍음?", "title_en": "Can't hit 500x without the 6-drone Brightseeker?",
+      "relevance": 3, "summary_en": "Player stuck at 300x without full skill-haste on Brightseeker asks if the 5-star '6-drone' state is a hard requirement for 500x. One reply confirms: yes, it's essential (필수임). Corroborates decks.json's note that going 4★→5★ on Brightseeker (unlocking the extra drone) is one of the single biggest jumps available (+25-47% per the existing dataset).",
+      "scores": [{"damage": null, "power": null, "ratio": "300x (stuck)", "deck": "cherry", "note": "author has not reached 5-star/6-drone Brightseeker"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Community consensus: Brightseeker's 5-star 6th drone is treated as a hard gate for reaching the ~500x tier, not merely a nice-to-have."],
+      "disagreements": [], "quotes": [{"kr": "필수임", "en": "It's essential."}]
+    },
+    {
+      "source": "dc", "id": "68867", "url": "https://m.dcinside.com/board/projectcc/68867", "date": "2026-09-17",
+      "title_kr": "근데 모든딜러가 다 스가가 좋은건 아님", "title_en": "But skill haste isn't good for every dealer",
+      "relevance": 3, "summary_en": "Argues multi-hit ('연타') skill users (named example: Dark Cacao/호두, and Cherry Cola/딸크) feel like skill amp gives ~500x value for them specifically, because their true cooldown is dominated by the multi-hit animation, not the nominal skill cooldown that haste reduces — e.g. Cherry Cola's stated 4s cooldown runs concurrently with a ~0.75s-interval, 5-hit punch combo, so haste barely shortens the real time between casts once the combo is already near-continuous. Conclusion (multiple commenters): haste has a much lower ceiling on multi-hit attackers than on single-cast attackers like Brightseeker, so skill amp is the better investment for that subset.",
+      "scores": [], "teams": [], "sugar_runes": [{"cookie": "닼초 (호두 example)", "stats": "skill amp over haste", "why": "Multi-hit cooldown is masked by the combo's own animation length, so haste has a low ceiling on multi-hit dealers."}, {"cookie": "딸크 (Cherry Cola)", "stats": "skill amp over haste", "why": "Same multi-hit mechanic; 4s nominal cooldown but hits every ~0.75s during the combo, making the combo itself nearly continuous."}],
+      "gear": [], "rng": [],
+      "mechanics": ["Skill cooldown timers start counting down when the skill is CAST, so a long multi-hit animation (e.g. a 5-hit punch combo) already overlaps most of the nominal cooldown; extra haste on such a cookie yields far less real DPS than the same haste on a single-cast cookie like Brightseeker."],
+      "disagreements": ["Contradicts a blanket 'stack haste everywhere' reading of the existing gear/rune notes — this is a specific carve-out for multi-hit dealers (not Brightseeker), consistent with existing dashboard notes that Dark Choco already runs haste for a different reason (reapplying DEF shred), so check for conflation."],
+      "quotes": [{"kr": "연타애들은 스증이 체감 500배임", "en": "For multi-hit cookies, skill amp feels like a 500x multiplier."}, {"kr": "스킬 시전할때 쿨도는데 스킬 시전 모션이 길어질수록 스가많이올리면 비효율적이긴함", "en": "The cooldown starts at cast, so the longer the cast animation, the less efficient stacking haste becomes."}]
+    },
+    {
+      "source": "dc", "id": "70064", "url": "https://m.dcinside.com/board/projectcc/70064", "date": "2026-09-18",
+      "title_kr": "스증단 400배 500배 좀 이해가 안감", "title_en": "I don't really get the 400x/500x skill-amp teams",
+      "relevance": 3, "summary_en": "Detailed debate with real before/after numbers. Author's own baseline: full-ATK% ('공증단') team at 1.88G power hits 500G damage (265x). Author questions whether re-gearing to skill amp (which lowers displayed power, e.g. to ~1.3G) to chase a higher multiplier (~460x, ~600G) is worth the rune-rebuild cost for someone already invested in ATK%. 캔디애플 (recognized poster) replies that switching to skill amp from the start gives a higher ceiling, but for someone already deep into ATK% runes, a full rebuild isn't obviously worth it — a cheaper partial upgrade (e.g., landing one more SSR Brightseeker haste line, or an extra Milk/Pomegranate SSR ATK/amp line) may be better ROI than restarting the whole rune set. A separate commenter estimates that switching to skill amp AND fixing the ATK order on the author's 1.88G/500G baseline could reach ~700G (≈372x).",
+      "scores": [{"damage": "500G", "power": "1.88G", "ratio": "265x", "deck": "cherry (all-ATK% variant)", "note": "author's own verified baseline"}, {"damage": "600G (projected)", "power": "1.3G (projected)", "ratio": "~460x", "deck": "cherry (all-skill-amp variant)", "note": "author's own hypothetical, not yet run"}, {"damage": "700G (estimated)", "power": null, "ratio": null, "deck": "cherry", "note": "a commenter's estimate if the 1.88G/500G account switched to skill amp AND fixed the ATK order"}],
+      "teams": [], "sugar_runes": [{"cookie": "team-wide", "stats": "全ATK% vs 全skill-amp", "why": "Debate over whether an already-ATK%-built account should pay the reroll cost to switch to the higher-ceiling skill-amp build."}],
+      "gear": [], "rng": [],
+      "mechanics": ["Displayed team power (전투력) drops when switching from ATK% to skill amp even though raw raid damage output rises — power is not a reliable proxy for raid damage between the two stat archetypes."],
+      "disagreements": ["Open ROI disagreement: author argues players already deep into ATK% runes shouldn't necessarily convert to skill amp (sunk-cost rune-rebuild is expensive); 캔디애플 and another commenter argue skill amp is objectively the higher-ceiling choice and worth the switch, especially for anyone still setting up their build."],
+      "quotes": [{"kr": "공증단 하면 배율도 낮아지겠지만 딜 자체도 소폭 내려가지 스증으로 무조건 바꿔라!!! 이건 아닌데 시작할때 스증으로 하는게 고점이긴 하잖음", "en": "Going full ATK% lowers both the multiplier and raw damage a bit — it's not 'you must switch to skill amp,' but starting out with skill amp does give a higher ceiling."}, {"kr": "1.88g에 500g면 스증으로 바꾸고 공순서맞게 렙조절했을때 700g도 갈것같긴해", "en": "At 1.88G giving 500G, switching to skill amp and fixing the ATK order could probably reach 700G."}]
+    },
+    {
+      "source": "dc", "id": "69923", "url": "https://m.dcinside.com/board/projectcc/69923", "date": "2026-09-18",
+      "title_kr": "토벌 구조가 뭔가 존나 기이한것같음", "title_en": "The raid's structure feels really bizarre",
+      "relevance": 3, "summary_en": "A synthesis-level thread directly explaining WHY score variance is so extreme (30x-500x among similarly built accounts): Milk/Pomegranate/Macaron's buffs are all positional/conditional (must land on the correct cookie by ATK order or formation), rather than flat team-wide buffs. Multiple commenters agree this — not raw stat investment — is the actual source of the wide floor-to-peak spread: score measures 'how well the buff chain landed' as much as it measures gear/level investment.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": ["Explains the median-vs-peak gap directly: because all three key buffs (Milk, Pomegranate, Macaron) are conditional on ATK order/position rather than flat/team-wide, two accounts with identical investment can differ 30x-500x depending purely on how reliably the buff chain landed that run."],
+      "mechanics": ["Reconfirms Tea Knight's tSSR skill functions as a 'launch pad' stat check: whichever cookie unlocks the next tSSR redefines the raid meta and forces a full re-optimization ('발사대'), implying today's Cherry-deck ATK-order optimization is inherently temporary."],
+      "disagreements": [], "quotes": [{"kr": "그게 지금 우석마치 버프가 전부 조건부라서 그래 아군 위치 상관없이 아군 전체로 버프 줬으면 저점고점 편차 안 심했을 텐데 우석마치 버퍼가 전부 조건부 범위다 보니까 얼마나 버프가 잘 들어갔냐고 점수가 나와서 그러는 거", "en": "It's because the Milk/Pomegranate/Macaron/Tea Knight buffs are all conditional. If they buffed the whole team regardless of position, the floor-to-peak spread wouldn't be this severe — since they're all conditional-range buffers, your score comes out as 'how well did the buff land.'"}]
+    },
+    {
+      "source": "dc", "id": "71155", "url": "https://m.dcinside.com/board/projectcc/71155", "date": "2026-09-20",
+      "title_kr": "대충 500배 떴다", "title_en": "Roughly hit 500x",
+      "relevance": 3, "summary_en": "Screenshot-verified 448G 710M at 973.96M/915.28M power (~490x), individual rank #10, with a 10-star Brightseeker (10 stars visible on her card) and Cheesecake deliberately left at Lv.91 (not maxed). IMPORTANT CLARIFICATION: the same screenshot's '길드 랭킹' (guild ranking) panel shows totals of 4T791G / 4T574G / 4T371G — these are GUILD-WIDE AGGREGATE damage sums across ~30 members each, NOT a single player's run; do not read these as individual score records. In a reply, the author quantifies star investment: Brightseeker 7★→8★ alone gave only ~10% more damage over a ~340G(억?) baseline ('3400억' = 340G), while raising Milk's own star breakthrough had a noticeably bigger felt impact than the Brightseeker star-up.",
+      "scores": [{"damage": "448.710G", "power": "915.28M", "ratio": "~490x", "deck": "cherry", "note": "screenshot-verified; 10-star Brightseeker, Cheesecake at Lv.91"}],
+      "teams": [{"name": "체리덱", "cookies": [{"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "10", "note": "reported ~10% gain from 7★→8★ alone over a ~340G baseline"}, {"kr": "치케", "en": "Cheesecake", "level": "91", "stars": "5", "note": "deliberately under Lv.100"}], "pets": ["20-star", "20-star", "17-star (panda)"], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Star-up value is uneven across cookies: Brightseeker 7★→8★ measured ~10% over a ~340G baseline (smaller than the deck notes' earlier 4★→5★ jump), while Milk's own star breakthrough was felt to matter more, per the same player."],
+      "disagreements": ["Naming clarification only: guild-ranking totals in screenshots are guild-wide sums, not individual damage records — flagged to avoid the dataset (or a future reader) mistaking a 4T+ guild total for a 4T+ individual run."],
+      "quotes": [{"kr": "브시커 7>8 자체로는 막 큰 체감 안됐고 우유 9성다는거 선택권으로 올리니까 체감 컸음 브시커 자체로는 3400억에서 한 10퍼정도 올린듯", "en": "Brightseeker 7→8 alone wasn't a big felt difference; raising Milk's own star-choice option had a bigger felt impact. Brightseeker alone gave about 10% over a 340G baseline."}]
+    },
+    {
+      "source": "dc", "id": "70969", "url": "https://m.dcinside.com/board/projectcc/70969", "date": "2026-09-20",
+      "title_kr": "체리넣고 400배 달성", "title_en": "Hit 400x with Cherry in the deck",
+      "relevance": 2, "summary_en": "Author at ~80% rune completion hit 400x with the standard Cherry deck, and projects 500x+ once sugar runes are maxed — implying the last 20% of rune completion is worth roughly 100x of headroom at this power tier.",
+      "scores": [{"damage": null, "power": null, "ratio": "400x", "deck": "cherry", "note": "~80% rune completion"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "71110", "url": "https://m.dcinside.com/board/projectcc/71110", "date": "2026-09-20",
+      "title_kr": "체리넣고 460배", "title_en": "Hit 460x with Cherry in the deck",
+      "relevance": 3, "summary_en": "Screenshot-verified 451G 54M at 973.96M power (≈463x), 10-star Brightseeker, Cheesecake Lv.91. Author states rune allocation: Milk all-ATK%, Brightseeker all-haste (converting), everyone else moving from a mixed skill-amp/haste split to all-skill-amp; no move speed on anyone; author explicitly says they lack the confidence to tune move speed for the higher-ceiling Melon Soda-style deck, and states plainly that the move-speed-tuned deck's ceiling is meaningfully higher than Cherry's ('고점도 이속깎는쪽이 훨씬 높다').",
+      "scores": [{"damage": "451.054G", "power": "973.96M", "ratio": "463x", "deck": "cherry", "note": "screenshot-verified; runes still ~incomplete, author expects 500x+ once finished"}],
+      "teams": [{"name": "체리덱", "cookies": [{"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "10", "note": ""}, {"kr": "치케", "en": "Cheesecake", "level": "91", "stars": "5", "note": ""}], "pets": ["20-star", "20-star", "18-star (panda)"], "atk_order": [], "perks": "", "formation": "no move speed", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [{"cookie": "우유", "stats": "all ATK%", "why": ""}, {"cookie": "브시커", "stats": "all skill haste", "why": ""}, {"cookie": "everyone else", "stats": "converting from mixed skill-amp/haste to all skill-amp", "why": ""}],
+      "gear": [], "rng": ["Author explicitly states the move-speed-tuned (Melon Soda-style) deck's damage ceiling is meaningfully higher than the Cherry deck's, but describes the tuning itself as too hard/risky to attempt ('체리는 진짜 못깎겠던데')."],
+      "mechanics": [], "disagreements": [], "quotes": [{"kr": "고점은 메소 넣고 이속조절하는게 더 높을텐디 나는 세계선 찾을 자신이 없어서 걍 체리넣은상태로 어디까지 올라가나 해보는중", "en": "The ceiling is probably higher with Melon Soda + tuned move speed, but I don't have the confidence to find that exact configuration, so I'm just seeing how far Cherry can go."}]
+    }
+  ],
+  "levers": [
+    {
+      "lever": "ATK-order discipline: keep every non-carry (fillers, backstops) strictly below all 6 named buffers' ATK, in-battle, not just in the lobby",
+      "effect_claim": "A single un-reset filler level (invisible unless checked mid-battle) silently caps the score at a fraction of what the build should do, regardless of runes/gear/power; fixing it alone took one player from stuck-below-400x to 400x immediately.",
+      "numbers": "Before/after: stuck <400x → 400x from one Scorpion-level reset (dc:74994). 6-drone/5-star Brightseeker is treated as a hard gate for ~500x (dc:74911, 'necessary').",
+      "conditions": "Cherry deck, ATK order Milk-Bright-(Macaron/Skating Queen)-...-TeaKnight-Cheesecake; must be checked in-battle because a pet (Octo Wasabi, +8%) can reorder ranks live.",
+      "confidence": "high",
+      "sources": ["dc:74994", "dc:74911", "dc:75400", "dc:76135"],
+      "disagreements": []
+    },
+    {
+      "lever": "Convert stat allocation from ATK% to skill amp on non-Milk cookies once the ATK order is locked",
+      "effect_claim": "Switching a team from an ATK%-heavy build to a skill-amp-heavy build raises the damage MULTIPLE even though it lowers the displayed team power, because skill amp scales buffer skills (Milk's ATK buff, Macaron's crit buff, Pomegranate's beam) rather than just raw hits.",
+      "numbers": "One account: 1.88G power / 500G damage (265x) on ATK%. Author's own skill-amp hypothetical: ~1.3G power / ~600G (~460x). A commenter's estimate for the same account fixing ATK order too: ~700G (~372x on the higher power, or higher still on the lower).",
+      "conditions": "Applies to cookies other than Milk (who should stay all-ATK% because her buff scales off her own ATK). Rebuild cost (rerolling sugar runes) is real; disputed whether already-ATK%-invested accounts should pay it.",
+      "confidence": "medium",
+      "sources": ["dc:70064", "dc:68867"],
+      "disagreements": ["Author of dc:70064 argues the rune-reroll cost may not be worth it for someone already deep into ATK%; 캔디애플 and another commenter argue skill amp is the objectively higher ceiling and worth switching to, especially for anyone still building."]
+    },
+    {
+      "lever": "Skill haste has a low ceiling on multi-hit ('연타') skill users; skill amp is the better investment for those specific cookies",
+      "effect_claim": "Multi-hit dealers' true attack rate is bottlenecked by their combo animation length, not the nominal cooldown haste reduces, so haste yields little extra DPS on them once the combo is already near-continuous; skill amp is described as feeling like '500x' for those cookies.",
+      "numbers": "Example given: a 4s nominal cooldown skill that fires 5 hits at ~0.75s intervals during its own combo (dc:68867, qualitative, no isolated A/B number).",
+      "conditions": "Applies to multi-hit dealers (examples named: Dark Cacao/호두, Cherry Cola/딸크), NOT to single-cast cookies like Brightseeker, where the existing haste-breakpoint model (haste to ~40 total) still holds.",
+      "confidence": "medium",
+      "sources": ["dc:68867"],
+      "disagreements": ["Existing dashboard mechanics.json documents Dark Choco running haste for a different reason (reapplying DEF-shred faster); this lever's claim about multi-hit dealers generally needs reconciling with that per-cookie exception rather than read as a blanket rule."]
+    },
+    {
+      "lever": "Milk's own star-breakthrough investment matters more than expected relative to Brightseeker's late stars",
+      "effect_claim": "One player felt Brightseeker's 7★→8★ upgrade alone gave only a modest gain, while raising Milk's own star-choice option had a noticeably bigger felt impact on the same run.",
+      "numbers": "Brightseeker 7★→8★: ~10% over a ~340G baseline (single data point).",
+      "conditions": "Both cookies were otherwise maxed (Lv.100, near-complete runes) on the same 915M-power account.",
+      "confidence": "low",
+      "sources": ["dc:71155"],
+      "disagreements": []
+    },
+    {
+      "lever": "Pet star investment (Candy Shade Pouch, and by extension other raid pets) has sharply diminishing returns past 10-15 stars",
+      "effect_claim": "Community consensus is that pulling a raid pet to 20 stars is not worth it; 10 (or at most 15) stars already captures most of the value.",
+      "numbers": "Qualitative only ('효율 ㅅㅌㅊ' = decent efficiency) at 10★; no isolated damage delta given.",
+      "conditions": "Specific to Candy Shade Pouch in the thread, but framed as general pet-investment advice.",
+      "confidence": "medium",
+      "sources": ["dc:74440"],
+      "disagreements": []
+    },
+    {
+      "lever": "Survival past the 17s wipe is gated by a specific 3-pet HP/lift-resistance combo, not by HP/DR runes alone",
+      "effect_claim": "Candy Shade Pouch's 30% lift resistance alone (no Pinot) is insufficient; the emerging consensus 'meta' pairs Choco King Bell (raw HP) + Ice Bird + Candy Shade Pouch together, consistent with the dashboard's existing 9M HP / 45% DR survival threshold finding.",
+      "numbers": "Existing dashboard figures reconfirmed: ~9M HP + 45% DR per surviving cookie (dc:74801, dc:69856); this batch adds the 3-pet combo framing (dc:72559) and the 'pouch alone isn't enough' negative result (dc:73742).",
+      "conditions": "Raid-specific; Pinot's lift resistance must stack with, not be replaced by, the pouch's.",
+      "confidence": "medium",
+      "sources": ["dc:72559", "dc:73742", "dc:74801", "dc:69856"],
+      "disagreements": []
+    },
+    {
+      "lever": "Move-speed-tuned formation (Melon Soda-style) has a materially higher damage ceiling than the Cherry-forced-line formation, at equal power",
+      "effect_claim": "Multiple top posters state directly that the move-speed-tuned deck's peak is meaningfully higher than Cherry's, but describe the tuning itself as too fragile/risky to reliably execute, so they stay on Cherry despite knowing it caps their ceiling lower.",
+      "numbers": "No new isolated number beyond the existing dashboard figures (Melon Soda ceiling ≈1T at 1.6G/625x vs Cherry's higher documented peaks); this batch reconfirms the qualitative ranking from players actively choosing not to attempt it.",
+      "conditions": "Per-account, per-device move-speed tuning to hundredths; previously documented as failing ~1 in 4 runs even when tuned.",
+      "confidence": "medium",
+      "sources": ["dc:71110", "dc:74994"],
+      "disagreements": []
+    },
+    {
+      "lever": "The 17s 'wipe' is gradual (starting ~19s remaining), not an instant simultaneous kill at 17s",
+      "effect_claim": "Cookies die one or two at a time starting around 19s remaining rather than all at once at 17s, meaning survival tuning is a continuum (each extra ~1-2s of an individual cookie's life adds some damage) rather than a single pass/fail threshold.",
+      "numbers": "Qualitative only, single report.",
+      "conditions": "Team was mostly Lv.1 fillers except the 6 named carries.",
+      "confidence": "low",
+      "sources": ["dc:74793"],
+      "disagreements": []
+    },
+    {
+      "lever": "Score variance (30x-500x among similarly built accounts) is structurally explained by the CONDITIONAL/positional nature of the Milk/Pomegranate/Macaron/Tea Knight buffs, not primarily by raw stat gaps",
+      "effect_claim": "Because these key buffs only land on the correct cookie by ATK order or formation rather than buffing the whole team unconditionally, score measures 'how well the buff chain landed this run' as much as it measures investment — this is offered by the community itself as the root explanation for why a 550G median vs a 1T+ peak can come from the same account.",
+      "numbers": "Qualitative, but consistent with observed spreads elsewhere in the dataset (e.g. dc:71066's 4-5G floor vs 14.4G peak on one account).",
+      "conditions": "General to the raid's buff design, not specific to one deck.",
+      "confidence": "medium",
+      "sources": ["dc:69923", "dc:71066"],
+      "disagreements": []
+    },
+    {
+      "lever": "Reverse-engineered exchange rate: ATK% and skill amp are NOT 1:1; roughly 1% ATK% ≈ 0.617% skill amp in damage terms",
+      "effect_claim": "A dedicated stat-testing post derived this conversion ratio by isolating ATK%-only vs skill-amp-only sugar rune sets against a fixed stage boss and reverse-solving the damage formula.",
+      "numbers": "1% ATK increase = 0.617% skill amp increase, in terms of equivalent damage output (nv:24362).",
+      "conditions": "Derived on 2026-08-23 against a Stage boss (168-30), BEFORE the 8/27 patch that removed skill amp's effect on stat-reduction debuffs and DR buffs — likely stale for the current raid meta and not raid-specific; flagged as a historical baseline only, not a current-patch number.",
+      "confidence": "low",
+      "sources": ["nv:24362"],
+      "disagreements": ["Superseded in spirit by the current forum consensus (dashboard's existing decks.json/runes.json) that skill amp should be prioritized on nearly every cookie except Milk — this pre-nerf 0.617 ratio undersells skill amp's current relative value if taken literally today."]
+    },
+    {
+      "lever": "Macaron's own skill amp allegedly converts to team crit rate at roughly 1:1.1",
+      "effect_claim": "1% skill amp invested on Macaron raises allies' crit rate by about 1.1%, offered as the justification for keeping skill amp on her rather than switching to ATK% even once a team can survive to Lv.1-filler-viable states.",
+      "numbers": "1% skill amp → +1.1% ally crit rate (single-poster claim).",
+      "conditions": "Unverified formula; no second independent source found in this batch or the existing dataset.",
+      "confidence": "low",
+      "sources": ["dc:69390"],
+      "disagreements": ["No counter-source, but also no corroborating source beyond agreement replies in the same thread; treat as an open, unverified quantitative claim worth checking against datamined formulas."]
+    },
+    {
+      "lever": "Lab (연구소) HP research prioritized over ATK/DEF research raises 30s-slam survival independent of sugar runes/gear",
+      "effect_claim": "A player who focused lab HP research reports nearly the whole team surviving the 30s slam as a result, with a commenter agreeing HP research should be prioritized ahead of ATK research.",
+      "numbers": "Qualitative only ('거의 다 생존함' = almost everyone survives).",
+      "conditions": "Independent, additive lever on top of gear/rune HP and DR investment; not previously logged in the dashboard's mechanics/gear notes as a distinct account-wide lever.",
+      "confidence": "low",
+      "sources": ["dc:67350"],
+      "disagreements": []
+    }
+  ],
+  "glossary": [
+    {"kr": "길드 랭킹", "en": "Guild ranking (aggregate)", "kind": "term", "confidence": "high", "evidence": "dc:70195, dc:71155 screenshots show guild-wide totals (e.g. 4T791G) alongside a single player's individual score two orders of magnitude smaller (448G) — the guild number sums ~30 members, and must not be read as an individual run record."},
+    {"kr": "쿨민", "en": "Cool Mint (a different boss, likely Stage/dungeon content)", "kind": "term", "confidence": "low", "evidence": "dc:68341, dc:76612 use '쿨민' in what reads as Stage-farming context, not Guild Conquest; flagged so future extractions don't conflate it with the raid boss."},
+    {"kr": "연타", "en": "multi-hit / combo skill", "kind": "term", "confidence": "high", "evidence": "dc:68867: cookies whose skill fires several hits in a combo (e.g. 딸크/Cherry Cola, 호두/Dark Cacao) rather than a single cast."}
+  ]
+}
