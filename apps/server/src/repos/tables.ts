@@ -57,6 +57,14 @@ export interface TablesRepo {
    */
   ownedIds(key: TableKey, slug: string): string[];
   /**
+   * Maps each row of `key` that a research record owns to that record.
+   * @param key - the table's snapshot name; its primary key is one column
+   * @returns primary key, as a string (the entity id its citations are
+   *   stored under) → the owning record's slug; rows no record owns are absent
+   * @throws `Error` if no record owns `key`'s rows
+   */
+  owners(key: TableKey): Map<string, string>;
+  /**
    * Deletes the rows of `key` that record `slug` owns, except those a row
    * of another table still references through a foreign key that neither
    * cascades nor nulls. Rows that cascade from a deleted row go with it.
@@ -185,6 +193,13 @@ export function createTablesRepo(db: Db): TablesRepo {
         .where(eq(ownerOf(key), slug))
         .all()
         .map((row) => String(row.id));
+    },
+    owners: (key) => {
+      const table = tableOf(key);
+      const id = columnOf(table, primaryKey(table)[0]!);
+      const owner = ownerOf(key);
+      const rows = db.select({ id, owner }).from(table).where(isNotNull(owner)).all();
+      return new Map(rows.map((row) => [String(row.id), String(row.owner)]));
     },
     clearOwned: (key, slug) => {
       const table = tableOf(key);

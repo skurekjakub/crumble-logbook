@@ -1,3 +1,4 @@
+import type { SourceSite } from "@crumble/schema";
 import { CITED_ENTITY } from "@crumble/schema";
 import { getTableConfig } from "drizzle-orm/sqlite-core";
 import type { hc } from "hono/client";
@@ -21,6 +22,7 @@ type RegisteredPath = {
 
 /** A registered table the filter test knows how to seed. */
 type SeededKey =
+  | "sources"
   | "decks"
   | "runeBuilds"
   | "gearRecs"
@@ -54,6 +56,10 @@ const MODE_CASE: FilterCase = { match: { mode: "arena" }, other: {}, value: "are
 
 /** The case of every declared filter other than `mode`, by table and filter name. */
 const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
+  sources: {
+    site: { match: { site: "nv" }, other: {}, value: "nv" },
+    record: { match: { recordSlug: "r1" }, other: { recordSlug: "r2" }, value: "r1" },
+  },
   runeBuilds: { deck: { match: { decks: ["d1"] }, other: { decks: ["d2"] }, value: "d1" } },
   scores: { deck: { match: { deckId: "d1" }, other: { deckId: "d2" }, value: "d1" } },
   mechanics: { topic: { match: { topic: "rules" }, other: {}, value: "rules" } },
@@ -100,6 +106,12 @@ const deckBase = {
 
 /** How the filter test seeds a row of each filtered type. */
 const SEEDS: Record<SeededKey, Seed> = {
+  sources: (store, _services, over) => {
+    const site = (over.site as SourceSite | undefined) ?? "dc";
+    const id = `${site}:${++serial}`;
+    store.repos.sources.insert({ id, site, url: `https://example.test/${id}`, ...over });
+    return ["id", id];
+  },
   decks: (store, services, over) => {
     cite(store);
     const id = `deck-${++serial}`;

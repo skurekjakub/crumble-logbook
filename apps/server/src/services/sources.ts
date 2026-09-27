@@ -1,6 +1,16 @@
-import type { SourceInput, SourcePatch, SourceRow, SourceSite } from "@crumble/schema";
+import type { CitedEntity, SourceInput, SourcePatch, SourceRow, SourceSite } from "@crumble/schema";
 import { ConflictError, NotFoundError } from "../errors";
+import type { FiltersOf } from "../registry";
+import { recordColumnOf, REGISTRY, specOf, TABLE_KEYS } from "../registry";
 import type { Repos, Store } from "../repos";
+import { applyFilters } from "./filters";
+
+/**
+ * A source as listed: its row, plus the research records it belongs to,
+ * sorted: the record that owns the row and every record whose own rows
+ * cite it.
+ */
+export type SourceListView = SourceRow & { records: string[] };
 
 /** A source row with the number of rows (citations and rankings) that reference it. */
 export type SourceView = SourceRow & { citedBy: number };
@@ -13,9 +23,11 @@ export type SourceView = SourceRow & { citedBy: number };
 export interface SourcesService {
   /**
    * Lists sources, dated newest first with null dates last, then by `id`.
-   * @param site - restrict the list to this site, when given
+   * @param filter - the registry's list filters for sources, each applied
+   *   when given: `site` keeps one site's sources, `record` those the record
+   *   owns or cites
    */
-  list(site?: SourceSite): SourceRow[];
+  list(filter?: FiltersOf<"sources">): SourceListView[];
   /**
    * Returns the source with `id`, with its citing-row count.
    * @param id - the source's `<site>:<key>` id
@@ -49,12 +61,45 @@ function citedByCount(repos: Repos, id: string): number {
 }
 
 /**
+ * Maps each cited source to the records whose rows cite it, across every
+ * registered cited table whose rows a record owns.
+ *
+ * @param repos - the repos to read
+ * @returns source id → the citing records' slugs; sources no owned row cites are absent
+ */
+function citingRecords(repos: Repos): Map<string, Set<string>> {
+  const owners = new Map<CitedEntity, Map<string, string>>();
+  for (const key of TABLE_KEYS) {
+    const { entity } = specOf(key);
+    if (entity && recordColumnOf(key)) owners.set(entity, repos.tables.owners(key));
+  }
+  const bySource = new Map<string, Set<string>>();
+  for (const { entity, entityId, sourceId } of repos.citations.all()) {
+    const record = owners.get(entity)?.get(entityId);
+    if (!record) continue;
+    const records = bySource.get(sourceId) ?? new Set<string>();
+    records.add(record);
+    bySource.set(sourceId, records);
+  }
+  return bySource;
+}
+
+/**
  * Builds a {@link SourcesService} over `store`.
  * @param store - the store to persist through
  */
 export function createSourcesService(store: Store): SourcesService {
   return {
-    list: (site) => store.repos.sources.list(site),
+    list: (filter) => {
+      const repos = store.repos;
+      const citing = citingRecords(repos);
+      const views = repos.sources.list().map((row) => {
+        const records = new Set(citing.get(row.id));
+        if (row.recordSlug) records.add(row.recordSlug);
+        return { ...row, records: [...records].sort() };
+      });
+      return applyFilters(views, REGISTRY.sources.filters, filter);
+    },
     get: (id) => {
       const repos = store.repos;
       const row = repos.sources.get(id);

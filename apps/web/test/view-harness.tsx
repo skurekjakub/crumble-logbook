@@ -22,6 +22,7 @@ export const VIEW_SOURCES = [
     summaryEn: null,
     capturePath: "research/001-guild-conquest-meta/evidence/03-dc-posts/76135.md",
     recordSlug: null,
+    records: ["001-guild-conquest-meta"],
   },
   {
     id: "nv:43653",
@@ -35,6 +36,7 @@ export const VIEW_SOURCES = [
     summaryEn: null,
     capturePath: null,
     recordSlug: null,
+    records: ["001-guild-conquest-meta"],
   },
   {
     id: "web:crumbgg:rankings-s5",
@@ -48,6 +50,7 @@ export const VIEW_SOURCES = [
     summaryEn: null,
     capturePath: "research/001-guild-conquest-meta/evidence/12-crumbgg/s5.json",
     recordSlug: null,
+    records: ["001-guild-conquest-meta"],
   },
 ] satisfies Source[];
 

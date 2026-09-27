@@ -20,6 +20,7 @@
 import type { CitedEntity, Values } from "@crumble/schema";
 import {
   GAME_MODE,
+  SOURCE_SITE,
   USAGE_KIND,
   buffValueInput,
   buffValuePatch,
@@ -210,7 +211,13 @@ const nonEmpty = z.string().min(1);
  * transient job state and isn't registered.
  */
 export const REGISTRY = {
-  sources: entry(sources, { path: "/sources" }),
+  sources: entry(sources, {
+    path: "/sources",
+    filters: {
+      site: { schema: z.enum(SOURCE_SITE), match: { equals: "site" } },
+      record: { schema: nonEmpty, match: { includes: "records" } },
+    },
+  }),
   researchRecords: entry(researchRecords, { path: "/records", record: "slug" }),
   recordModes: entry(recordModes, {}),
   glossary: entry(glossary, { path: "/glossary" }),
