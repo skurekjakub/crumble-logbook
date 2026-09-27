@@ -6,6 +6,7 @@ import {
   CONFIDENCE,
   DECK_NOTE_KIND,
   DECK_STATUS,
+  GAME_MODE,
   GEAR_CONTEXT,
   GEAR_SLOT,
   GLOSSARY_KIND,
@@ -13,6 +14,7 @@ import {
   RANKING_BOARD,
   RECORD_STATUS,
   SOURCE_SITE,
+  USAGE_KIND,
 } from "../src/enums";
 import * as schemas from "../src/zod";
 import * as tables from "../src/tables";
@@ -335,6 +337,62 @@ describe("enum columns", () => {
         entityId: "x",
         sourceId: "dc:cite-source",
       }).success,
+    ).toBe(false);
+  });
+
+  it("game mode: every member inserts and round-trips; a non-member is rejected", () => {
+    const db = createTestDb();
+    for (const mode of GAME_MODE) {
+      const values = schemas.mechanicInsert.parse({
+        title: `mode-${mode}`,
+        body: "b",
+        confidence: "high",
+        mode,
+      });
+      db.insert(tables.mechanics).values(values).run();
+      const selected = db
+        .select()
+        .from(tables.mechanics)
+        .where(eq(tables.mechanics.title, `mode-${mode}`))
+        .get();
+      expect(selected?.mode).toBe(mode);
+    }
+    expect(
+      schemas.mechanicInsert.safeParse({ title: "t", body: "b", confidence: "high", mode: "raid" })
+        .success,
+    ).toBe(false);
+  });
+
+  it("game mode defaults to guild_conquest on every moded table", () => {
+    const db = createTestDb();
+    db.insert(tables.mechanics).values({ title: "t", body: "b", confidence: "high" }).run();
+    db.insert(tables.researchRecords)
+      .values({ slug: "s", question: "q", status: "active", startedAt: "x", updatedAt: "x" })
+      .run();
+    expect(db.select().from(tables.mechanics).get()?.mode).toBe("guild_conquest");
+    expect(db.select().from(tables.researchRecords).get()?.mode).toBe("guild_conquest");
+  });
+
+  it("usage kind: every member inserts and round-trips; a non-member is rejected", () => {
+    const db = createTestDb();
+    const usage = {
+      mode: "rumble_arena",
+      usagePct: 50,
+      sample: "top 100",
+      capturedAt: "2026-09-27",
+    };
+    for (const kind of USAGE_KIND) {
+      const values = schemas.usageStatInsert.parse({ ...usage, kind, subject: `subject-${kind}` });
+      db.insert(tables.usageStats).values(values).run();
+      const selected = db
+        .select()
+        .from(tables.usageStats)
+        .where(eq(tables.usageStats.subject, `subject-${kind}`))
+        .get();
+      expect(selected?.kind).toBe(kind);
+    }
+    expect(
+      schemas.usageStatInsert.safeParse({ ...usage, kind: "rune", subject: "s" }).success,
     ).toBe(false);
   });
 

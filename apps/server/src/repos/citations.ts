@@ -4,6 +4,9 @@ import { and, count, eq, inArray } from "drizzle-orm";
 import type { Db } from "../db/client";
 import { resetIds } from "./sequence";
 
+/** Ids per `IN (...)` list, well under SQLite's bound-parameter limit. */
+const ID_CHUNK = 500;
+
 /** Links from cited entities (decks, mechanics, …) to the sources that back them. */
 export interface CitationsRepo {
   /**
@@ -29,6 +32,12 @@ export interface CitationsRepo {
    * @param entityId - the specific entity's id
    */
   removeAll(entity: CitedEntity, entityId: string): void;
+  /**
+   * Deletes every citation of each of `entityIds` for `entity`.
+   * @param entity - the cited entity kind
+   * @param entityIds - the entities' ids; `[]` deletes nothing
+   */
+  removeFor(entity: CitedEntity, entityIds: readonly string[]): void;
   /** Returns how many citations reference `sourceId`, across every entity. */
   countForSource(sourceId: string): number;
   /** Returns the total number of citations. */
@@ -76,6 +85,14 @@ export function createCitationsRepo(db: Db): CitationsRepo {
       db.delete(citations)
         .where(and(eq(citations.entity, entity), eq(citations.entityId, entityId)))
         .run();
+    },
+    removeFor: (entity, entityIds) => {
+      for (let start = 0; start < entityIds.length; start += ID_CHUNK) {
+        const ids = entityIds.slice(start, start + ID_CHUNK);
+        db.delete(citations)
+          .where(and(eq(citations.entity, entity), inArray(citations.entityId, ids)))
+          .run();
+      }
     },
     countForSource: (sourceId) =>
       db.select({ n: count() }).from(citations).where(eq(citations.sourceId, sourceId)).get()!.n,

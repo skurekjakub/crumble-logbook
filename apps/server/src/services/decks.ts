@@ -1,16 +1,20 @@
 import type { DeckCookieRow, DeckInput, DeckNoteKind, DeckPatch, DeckRow } from "@crumble/schema";
 import { ConflictError, NotFoundError } from "../errors";
+import type { FiltersOf } from "../registry";
+import { REGISTRY } from "../registry";
 import type { Repos, Store } from "../repos";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
+import { applyFilters } from "./filters";
 import type { NameRef } from "./names";
-import { createNameResolver } from "./names";
+import { createNameResolver, recordsOf } from "./names";
 
 /**
  * A deck as returned to callers: its cookies and pets carry a resolved
- * English gloss alongside their stored Korean name, `atkOrder` is resolved
- * from a raw name list to {@link NameRef}s (or stays `null`), and the row
- * carries its citing sources.
+ * English gloss alongside their stored Korean name (the deck's own record's
+ * glossary entries first), `atkOrder` is resolved from a raw name list to
+ * {@link NameRef}s (or stays `null`), and the row carries its citing
+ * sources.
  */
 export type DeckView = Omit<Cited<DeckRow>, "atkOrder"> & {
   cookies: Array<Omit<DeckCookieRow, "deckId"> & { en: string | null }>;
@@ -25,8 +29,12 @@ export type DeckView = Omit<Cited<DeckRow>, "atkOrder"> & {
  * glossary on every read.
  */
 export interface DeckService {
-  /** Returns every deck view, ordered by `position` then `id`. */
-  list(): DeckView[];
+  /**
+   * Returns every deck view, ordered by `position` then `id`.
+   * @param filter - the registry's list filters for decks (`mode`), each
+   *   applied when given
+   */
+  list(filter?: FiltersOf<"decks">): DeckView[];
   /**
    * Returns the deck view for `id`.
    * @param id - the deck's slug id
@@ -86,23 +94,29 @@ export function createDeckService(store: Store): DeckService {
     const petsByDeck = groupByDeckId(repos.decks.pets(ids));
     const notesByDeck = groupByDeckId(repos.decks.notes(ids));
     const sourcesById = repos.citations.sourcesFor("deck", ids);
-    return rows.map((row) => ({
-      ...row,
-      sources: sourcesById.get(row.id) ?? [],
-      atkOrder: row.atkOrder ? row.atkOrder.map(resolve) : null,
-      cookies: (cookiesByDeck.get(row.id) ?? []).map(({ deckId: _deckId, ...cookie }) => ({
-        ...cookie,
-        en: resolve(cookie.cookieKr).en,
-      })),
-      pets: (petsByDeck.get(row.id) ?? []).map((pet) => resolve(pet.petKr)),
-      notes: (notesByDeck.get(row.id) ?? []).map((note) => ({ kind: note.kind, text: note.text })),
-    }));
+    return rows.map((row) => {
+      const records = recordsOf(row);
+      return {
+        ...row,
+        sources: sourcesById.get(row.id) ?? [],
+        atkOrder: row.atkOrder ? row.atkOrder.map((name) => resolve(name, records)) : null,
+        cookies: (cookiesByDeck.get(row.id) ?? []).map(({ deckId: _deckId, ...cookie }) => ({
+          ...cookie,
+          en: resolve(cookie.cookieKr, records).en,
+        })),
+        pets: (petsByDeck.get(row.id) ?? []).map((pet) => resolve(pet.petKr, records)),
+        notes: (notesByDeck.get(row.id) ?? []).map((note) => ({
+          kind: note.kind,
+          text: note.text,
+        })),
+      };
+    });
   };
 
   return {
-    list: () => {
+    list: (filter) => {
       const repos = store.repos;
-      return toViews(repos, repos.decks.list());
+      return applyFilters(toViews(repos, repos.decks.list()), REGISTRY.decks.filters, filter);
     },
     get: (id) => {
       const repos = store.repos;

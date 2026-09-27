@@ -99,6 +99,7 @@ const citedRows: Cited[] = [
 const expectedCounts = {
   sources: Object.keys(sources).length,
   researchRecords: 1,
+  recordModes: 0,
   glossary: glossary.length,
   decks: decks.length,
   deckCookies: sum(decks.map((d) => d.cookies.length)),
@@ -119,6 +120,8 @@ const expectedCounts = {
   recommendations: 1,
   fightEvents: fightTimeline.length,
   buffValues: sum(buffRowsPerCookie),
+  counters: 0,
+  usageStats: 0,
   citations:
     sum(citedRows.map((r) => distinct(r.sources))) +
     distinct(meta.you.sources) +
@@ -279,7 +282,7 @@ describe("importRecord guards", () => {
     const before = exportSnapshot(store);
     expect(() => importRecord(store, recordDir)).toThrow(ImportError);
     expect(() => importRecord(store, recordDir)).toThrow(
-      "database already has content; pass --replace to load record 001-guild-conquest-meta over it",
+      "record 001-guild-conquest-meta is already loaded; pass --replace to load it again",
     );
     expect(exportSnapshot(store)).toEqual(before);
   });
@@ -292,23 +295,15 @@ describe("importRecord guards", () => {
     expect(tableCounts(store)).toEqual(expectedCounts);
   });
 
-  it("refuses a database whose only content is a fight event, and replace clears it", () => {
+  it("loads next to rows no record owns, and replace keeps them", () => {
     const store = testStore();
-    store.repos.fightEvents.insert({
+    const stray = store.repos.fightEvents.insert({
       boss: "stray",
       tElapsed: 1,
       event: "stray",
       detail: "not from the record",
       confidence: "low",
     });
-    expect(() => importRecord(store, recordDir)).toThrow(/database already has content/);
-    importRecord(store, recordDir, { replace: true });
-    expect(store.repos.fightEvents.list().some((e) => e.boss === "stray")).toBe(false);
-    expect(tableCounts(store)).toEqual(expectedCounts);
-  });
-
-  it("replace clears buff values added outside the import", () => {
-    const store = testStore();
     importRecord(store, recordDir);
     store.repos.buffValues.insert({
       cookieKr: "stray",
@@ -321,8 +316,29 @@ describe("importRecord guards", () => {
       scalesWithCasterAmp: true,
     });
     importRecord(store, recordDir, { replace: true });
-    expect(store.repos.buffValues.list().some((b) => b.cookieKr === "stray")).toBe(false);
-    expect(tableCounts(store)).toEqual(expectedCounts);
+    expect(store.repos.fightEvents.get(stray.id)?.boss).toBe("stray");
+    expect(store.repos.buffValues.list().some((b) => b.cookieKr === "stray")).toBe(true);
+    expect(tableCounts(store)).toEqual({
+      ...expectedCounts,
+      fightEvents: expectedCounts.fightEvents + 1,
+      buffValues: expectedCounts.buffValues + 1,
+    });
+  });
+
+  it("files record 001 under Guild Conquest, covering no other mode, with every row stamped", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    expect(createServices(store).records.get("001-guild-conquest-meta")).toMatchObject({
+      mode: "guild_conquest",
+      modes: [],
+    });
+    const snapshot = exportSnapshot(store);
+    for (const [table, rows] of Object.entries(snapshot.tables)) {
+      for (const row of rows as Array<Record<string, unknown>>) {
+        if ("recordSlug" in row) expect(row.recordSlug, table).toBe("001-guild-conquest-meta");
+        if ("mode" in row) expect(row.mode, table).toBe("guild_conquest");
+      }
+    }
   });
 
   it("a replace import over a populated database exports the same snapshot as a fresh import, ids included", () => {
@@ -394,6 +410,66 @@ describe("importRecord validation", () => {
   function expectEmpty(store: Store): void {
     expect(Object.values(tableCounts(store)).every((n) => n === 0)).toBe(true);
   }
+
+  it("accepts a curated manifest that leaves out scores, counters and usage", () => {
+    const dir = tempRecord(null, () => {});
+    editJson<{ collections: Record<string, string> }>(dir, "curated/manifest.json", (m) => {
+      delete m.collections.scores;
+    });
+    const { counts } = importRecord(testStore(), dir);
+    expect(counts.scores).toBe(0);
+    expect(counts.counters).toBe(0);
+    expect(counts.usageStats).toBe(0);
+  });
+
+  it("rejects a counter whose decks aren't curated decks, naming the file and row", () => {
+    const dir = tempRecord(null, () => {});
+    writeFileSync(
+      join(dir, "curated", "counters.json"),
+      JSON.stringify([
+        {
+          id: "cherry-vs-nothing",
+          mode: "guild_conquest",
+          team: "cherry",
+          beaten_by: "no-such-deck",
+          why: "w",
+          confidence: "low",
+          sources: ["dc:76135"],
+        },
+      ]),
+    );
+    editJson<{ collections: Record<string, string> }>(dir, "curated/manifest.json", (m) => {
+      m.collections.counters = "counters.json";
+    });
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(
+      /counters\.json \[0\]: unknown deck ids: no-such-deck/,
+    );
+    expectEmpty(store);
+  });
+
+  it("rejects a rule filed under another mode's block, naming the row", () => {
+    const dir = tempRecord(null, () => {});
+    editJson<Record<string, unknown>>(dir, "curated/meta.json", (meta) => {
+      meta.modes = {
+        arena: {
+          rules: [
+            {
+              mode: "rumble_arena",
+              topic: "rules",
+              title: "Format",
+              body: "b",
+              confidence: "high",
+              sources: ["dc:76135"],
+            },
+          ],
+        },
+      };
+    });
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      /meta\.json \[modes\.arena\.rules 0\]: a rule in the arena block has mode rumble_arena/,
+    );
+  });
 
   it("rejects a cited source id that isn't curated, naming the file and row, and writes nothing", () => {
     const dir = tempRecord("scores.json", (rows) => {

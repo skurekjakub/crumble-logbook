@@ -1,7 +1,12 @@
 import { sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { GLOSSARY_KIND } from "../enums";
+import { recordSlugColumn } from "./columns";
 
-/** A Korean term (cookie, pet, stat, gear slot, or general term) and its English gloss. */
+/**
+ * A Korean term (cookie, pet, stat, gear slot, or general term) and its
+ * English gloss. `recordSlug` is the record whose glossary it came from; a
+ * name resolver asked about that record prefers its entries.
+ */
 export const glossary = sqliteTable("glossary", {
   kr: text("kr").primaryKey(),
   shorthand: text("shorthand", { mode: "json" })
@@ -17,4 +22,5 @@ export const glossary = sqliteTable("glossary", {
     .$type<Record<string, unknown>>()
     .notNull()
     .$defaultFn(() => ({})),
+  recordSlug: recordSlugColumn(),
 });

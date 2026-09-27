@@ -9,6 +9,7 @@ const FIGHT_EVENTS = [
   {
     id: 2,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: 0,
     event: "engage",
     detail: "Team runs in and collides into a line.",
@@ -18,6 +19,7 @@ const FIGHT_EVENTS = [
   {
     id: 4,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: 10,
     event: "boss_defense_phase_1",
     detail: "Datamine claim: boss DR steps to 10%.",
@@ -27,6 +29,7 @@ const FIGHT_EVENTS = [
   {
     id: 7,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: 30,
     event: "slam_pattern",
     detail: "The 30 s slam: front row ~4.5M / back row ~3.5M HP; ~1.5G = never dies here.",
@@ -36,6 +39,7 @@ const FIGHT_EVENTS = [
   {
     id: 9,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: 41,
     event: "chip_deaths_begin",
     detail: "Cookies begin dying individually around 19 s remaining.",
@@ -45,6 +49,7 @@ const FIGHT_EVENTS = [
   {
     id: 10,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: 43,
     event: "super_jump_wipe",
     detail: "The 17 s super-jump: a certain wipe, including runs at 2.2G team power.",
@@ -54,6 +59,7 @@ const FIGHT_EVENTS = [
   {
     id: 1,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: 60,
     event: "fight_length",
     detail: "Guild Conquest fight lasts 60 s total.",
@@ -63,6 +69,7 @@ const FIGHT_EVENTS = [
   {
     id: 13,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: 60,
     event: "fight_ends",
     detail: "The timer ends the fight; damage already dealt is kept.",
@@ -72,6 +79,7 @@ const FIGHT_EVENTS = [
   {
     id: 14,
     boss: "pinata",
+    recordSlug: null,
     tElapsed: null,
     event: "unresolved_final_dr_stage",
     detail: "The datamine's implied 99% DR stage is never reached.",
@@ -96,6 +104,7 @@ function grades(
     base: "Fixed",
     scalesWithCasterAmp: true,
     target: "team",
+    recordSlug: null,
     sources: ["web:crumbgg:rankings-s5"],
     ...extra,
   }));
@@ -133,6 +142,9 @@ const BUFF_VALUES = [
 const MECHANICS = [
   {
     id: 6,
+    mode: "guild_conquest",
+    topic: null,
+    recordSlug: null,
     title: "Brightseeker haste breakpoint",
     body: "Haste pays off steeply until about 40 total; past about 58 her drones split onto adds.",
     confidence: "medium",
@@ -140,6 +152,9 @@ const MECHANICS = [
   },
   {
     id: 12,
+    mode: "guild_conquest",
+    topic: null,
+    recordSlug: null,
     title: "Surviving the 17 s wipe",
     body: "Posters put the floor at about 9M HP and 45% damage reduction per surviving cookie.",
     confidence: "medium",
@@ -147,6 +162,9 @@ const MECHANICS = [
   },
   {
     id: 16,
+    mode: "guild_conquest",
+    topic: null,
+    recordSlug: null,
     title: "HP to survive the slam",
     body: "Cookies need about 3.5–4M HP to live through the 30 s slam.",
     confidence: "medium",
@@ -154,6 +172,9 @@ const MECHANICS = [
   },
   {
     id: 10,
+    mode: "guild_conquest",
+    topic: null,
+    recordSlug: null,
     title: "Octo Wasabi pet",
     body: "The bonus isn't shown on the stat screen, so ATK-order tuning has to add it by hand.",
     confidence: "medium",
@@ -161,6 +182,9 @@ const MECHANICS = [
   },
   {
     id: 4,
+    mode: "guild_conquest",
+    topic: null,
+    recordSlug: null,
     title: "Crit above 100%",
     body: "Crit rate past 100% rolls extra crit tiers.",
     confidence: "high",
@@ -173,6 +197,8 @@ const RUNE_BUILDS = [
     id: 2,
     cookieKr: "브시커",
     en: "Brightseeker Cookie",
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "Skill haste first (target 40–50 total with gear)",
     why: "More haste keeps more of her drones up; top posters run 44.6–49.6.",
     disputed: "At 58.6 haste, 1–2 drones peeled off onto adds.",
@@ -183,6 +209,8 @@ const RUNE_BUILDS = [
     id: 9,
     cookieKr: "닼초",
     en: "Dark Choco Cookie",
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "Skill haste (+ damage reduction)",
     why: "Her DEF shred isn't amplified by skill amp, so haste to reapply it faster.",
     disputed: "One commenter argues focus raises her debuff proc chance.",
@@ -193,6 +221,8 @@ const RUNE_BUILDS = [
     id: 12,
     cookieKr: "메소",
     en: "Melon Soda Cookie",
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "Move speed",
     why: "Placement cookie in the Melon Soda deck.",
     disputed: null,
@@ -205,6 +235,8 @@ const DECKS = [
   {
     id: "cherry",
     position: 0,
+    mode: "guild_conquest",
+    recordSlug: null,
     nameEn: "Cherry deck",
     nameKr: "체리덱",
     status: "meta",
@@ -228,6 +260,7 @@ const DECKS = [
         level: null,
         levelRule: "Lv.1–45, keeping ATK ≥10% below the 6th cookie after Octo Wasabi's +8%",
         stars: null,
+        slot: null,
         why: "A backstop. Check the order in battle, not in the lobby.",
       },
     ],
@@ -240,6 +273,8 @@ const DECKS = [
 const GEAR = [
   {
     id: 4,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "bottom_left",
     substats: "Damage reduction + HP",
     context: "raid",
@@ -248,6 +283,8 @@ const GEAR = [
   },
   {
     id: 2,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "top_left",
     substats: "Skill amp + crit rate (arena)",
     context: "arena",
@@ -259,19 +296,19 @@ const GEAR = [
 const FULL = {
   "/api/fight-events?boss=pinata": { body: FIGHT_EVENTS },
   "/api/buff-values": { body: BUFF_VALUES },
-  "/api/mechanics": { body: MECHANICS },
-  "/api/rune-builds": { body: RUNE_BUILDS },
-  "/api/decks": { body: DECKS },
-  "/api/gear-recs": { body: GEAR },
+  "/api/mechanics?mode=guild_conquest": { body: MECHANICS },
+  "/api/rune-builds?mode=guild_conquest": { body: RUNE_BUILDS },
+  "/api/decks?mode=guild_conquest": { body: DECKS },
+  "/api/gear-recs?mode=guild_conquest": { body: GEAR },
 };
 
 const EMPTY = {
   "/api/fight-events?boss=pinata": { body: [] },
   "/api/buff-values": { body: [] },
-  "/api/mechanics": { body: [] },
-  "/api/rune-builds": { body: [] },
-  "/api/decks": { body: [] },
-  "/api/gear-recs": { body: [] },
+  "/api/mechanics?mode=guild_conquest": { body: [] },
+  "/api/rune-builds?mode=guild_conquest": { body: [] },
+  "/api/decks?mode=guild_conquest": { body: [] },
+  "/api/gear-recs?mode=guild_conquest": { body: [] },
 };
 
 /** The page section labelled by the heading `name`. */

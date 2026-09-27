@@ -7,6 +7,7 @@
  *
  * @module
  */
+import type { GlossaryRow } from "@crumble/schema";
 import { z } from "zod";
 import { ImportError } from "../errors";
 import type { ContentKey, ValuesOf } from "../registry";
@@ -17,8 +18,18 @@ import { findCapture } from "./captures";
 import { parseFile } from "./files";
 import type { ImportManifest } from "./manifest";
 import { formatIssues } from "./manifest";
-import { mapDeck, mapGearSlot, mapGlossary, mapMeta, mapScore, mapSource } from "./seed/map";
 import {
+  mapCounter,
+  mapDeck,
+  mapGearSlot,
+  mapGlossary,
+  mapMeta,
+  mapScore,
+  mapSource,
+  mapUsage,
+} from "./seed/map";
+import {
+  seedCounter,
   seedDeck,
   seedGear,
   seedGlossaryEntry,
@@ -30,8 +41,9 @@ import {
   seedSources,
   seedTakeaway,
   seedTimeline,
+  seedUsage,
 } from "./seed/schema";
-import type { WriteStep } from "./steps";
+import type { WriteContext, WriteStep } from "./steps";
 import { insertCited } from "./steps";
 
 /** What one row of a collection references, checked before anything is written. */
@@ -165,6 +177,102 @@ export function glossaryWarnings(entries: readonly GlossaryInsert[]): string[] {
 }
 
 /**
+ * Names the fields in which two versions of a shared row differ.
+ * @param kept - the row already in the database
+ * @param incoming - the row this import would have written
+ * @param fields - the fields to compare, by value
+ * @returns the differing field names, in `fields` order
+ */
+function differences<T>(kept: T, incoming: T, fields: readonly (keyof T)[]): string[] {
+  return fields
+    .filter(
+      (field) => JSON.stringify(kept[field] ?? null) !== JSON.stringify(incoming[field] ?? null),
+    )
+    .map(String);
+}
+
+/**
+ * Writes a row several records can share, keyed by its natural id: inserts
+ * it when absent, rewrites it when the record being written owns it, and
+ * otherwise keeps the row already there (the first record to load it
+ * wins), warning when this record's version differs.
+ *
+ * @param existing - the row already stored under the same id, if any
+ * @param incoming - this record's version, without an owner
+ * @param context - the write context: the record, and where warnings go
+ * @param write - stores `incoming` owned by the record, as an insert or an
+ *   overwrite
+ * @param label - how a warning names the row, e.g. `source dc:1`
+ * @param fields - the fields a warning compares
+ */
+function writeShared<T extends { recordSlug?: string | null }>(
+  existing: T | undefined,
+  incoming: T,
+  context: WriteContext,
+  write: (row: T) => void,
+  label: string,
+  fields: readonly (keyof T)[],
+): void {
+  if (!existing || existing.recordSlug === context.record) {
+    write({ ...incoming, recordSlug: context.record });
+    return;
+  }
+  const changed = differences(existing, incoming, fields);
+  if (changed.length === 0) return;
+  context.warn(
+    `${label} is already loaded by record ${existing.recordSlug ?? "(none)"}; keeping that row (this record's differs in ${changed.join(", ")})`,
+  );
+}
+
+/** The source fields a shared-source warning compares. */
+const SOURCE_FIELDS = [
+  "url",
+  "title",
+  "titleEn",
+  "date",
+  "relevance",
+  "note",
+  "summaryEn",
+  "capturePath",
+] as const satisfies readonly (keyof SourceInsert)[];
+
+/** The glossary fields a shared-entry warning compares. */
+const GLOSSARY_FIELDS = [
+  "shorthand",
+  "en",
+  "kind",
+  "element",
+  "class",
+  "rarity",
+  "extra",
+] as const satisfies readonly (keyof GlossaryInsert)[];
+
+/**
+ * Lists the lookup keys of `record`'s glossary entries that another
+ * record's entries also claim, once both are stored.
+ * @param entries - every stored glossary row
+ * @param record - the record whose entries to check
+ * @returns one warning per contested key and other entry
+ */
+function crossRecordGlossaryWarnings(entries: readonly GlossaryRow[], record: string): string[] {
+  const others = new Map<string, GlossaryRow[]>();
+  for (const entry of entries) {
+    if (entry.recordSlug === record) continue;
+    for (const key of lookupKeys(entry)) others.set(key, [...(others.get(key) ?? []), entry]);
+  }
+  return entries
+    .filter((entry) => entry.recordSlug === record)
+    .flatMap((entry) =>
+      lookupKeys(entry).flatMap((key) =>
+        (others.get(key) ?? []).map(
+          (other) =>
+            `glossary key "${key}" of "${entry.kr}" (${entry.en ?? "no en"}) is also claimed by "${other.kr}" (${other.en ?? "no en"}) of record ${other.recordSlug ?? "(none)"}; each record's rows resolve it with their own record's entry`,
+        ),
+      ),
+    );
+}
+
+/**
  * Every curated collection, by its key in the curated manifest, in write
  * order: a collection's rows only reference rows written before them.
  */
@@ -182,8 +290,18 @@ export const COLLECTIONS = {
         };
       });
       return [
-        (repos) => {
-          for (const row of rows) repos.sources.insert(row);
+        (repos, context) => {
+          for (const row of rows) {
+            const existing = repos.sources.get(row.id);
+            const write = (owned: SourceInsert) => {
+              if (existing) repos.sources.update(row.id, owned);
+              else repos.sources.insert(owned);
+              if (owned.site !== "web" && owned.capturePath === null) {
+                context.warn(`source ${row.id} has no capture under this record's capture rules`);
+              }
+            };
+            writeShared(existing, row, context, write, `source ${row.id}`, SOURCE_FIELDS);
+          }
         },
       ];
     },
@@ -202,21 +320,56 @@ export const COLLECTIONS = {
     prepare: (entries) => {
       const rows = entries.map(mapGlossary);
       return [
-        (repos) => {
-          for (const row of rows) repos.glossary.upsert(row);
+        (repos, context) => {
+          for (const row of rows) {
+            const write = (owned: GlossaryInsert) => void repos.glossary.upsert(owned);
+            const label = `glossary entry "${row.kr}"`;
+            writeShared(repos.glossary.get(row.kr), row, context, write, label, GLOSSARY_FIELDS);
+          }
+          for (const warning of crossRecordGlossaryWarnings(
+            repos.glossary.list(),
+            context.record,
+          )) {
+            context.warn(warning);
+          }
         },
       ];
     },
   }),
   meta: collection({
     parse: (file, raw) => parseFile(file, raw, seedMeta),
-    refs: (meta) => [{ row: "you", sources: meta.you.sources }],
+    refs: (meta) => [
+      { row: "you", sources: meta.you.sources },
+      ...Object.entries(meta.modes ?? {}).flatMap(([mode, block]) =>
+        block.rules.map((rule, index) => ({
+          row: `modes.${mode}.rules ${index}`,
+          sources: rule.sources,
+        })),
+      ),
+    ],
+    check: (file, meta) => {
+      for (const [mode, block] of Object.entries(meta.modes ?? {})) {
+        block.rules.forEach((rule, index) => {
+          if (rule.mode !== undefined && rule.mode !== mode) {
+            throw new ImportError(
+              file,
+              `modes.${mode}.rules ${index}`,
+              `a rule in the ${mode} block has mode ${rule.mode}`,
+            );
+          }
+        });
+      }
+    },
     prepare: (meta, { manifest }) => {
-      const { record, recommendation } = mapMeta(meta, manifest.record);
+      const { record, modes, recommendation, rules } = mapMeta(meta, manifest.record);
       const { sources, ...values } = recommendation;
       return [
-        (repos) => void repos.records.upsert(record),
+        (repos) => {
+          repos.records.upsert(record);
+          repos.records.replaceModes(record.slug, modes);
+        },
         insertCited("recommendations", [{ values, sources }]),
+        insertCited("mechanics", rules),
       ];
     },
   }),
@@ -226,9 +379,9 @@ export const COLLECTIONS = {
     prepare: (decks) => {
       const mapped = decks.map((seed, position) => ({ ...mapDeck(seed, position), seed }));
       return [
-        (repos) => {
+        (repos, { record }) => {
           for (const { deck, cookies, pets, notes, seed } of mapped) {
-            repos.decks.insert(deck);
+            repos.decks.insert({ ...deck, recordSlug: record });
             repos.decks.replaceCookies(deck.id, cookies);
             repos.decks.replacePets(deck.id, pets);
             repos.decks.replaceNotes(deck.id, notes);
@@ -243,13 +396,15 @@ export const COLLECTIONS = {
     refs: (runes) =>
       runes.map((rune, index) => ({ row: index, sources: rune.sources, decks: rune.decks })),
     prepare: (runes) => [
-      (repos) => {
+      (repos, { record }) => {
         for (const rune of runes) {
           const row = repos.runeBuilds.insert({
             cookieKr: rune.cookie,
             lines: rune.lines,
             why: rune.why,
             disputed: rune.disputed ?? null,
+            mode: rune.mode,
+            recordSlug: record,
           });
           repos.runeBuilds.replaceDecks(row.id, rune.decks);
           repos.citations.replace("rune_build", String(row.id), rune.sources);
@@ -262,25 +417,37 @@ export const COLLECTIONS = {
     substats: gear.substats,
     context: gear.context,
     why: gear.why,
+    mode: gear.mode,
   })),
-  scores: citedRows("scores", seedScore, mapScore, (score) =>
-    score.deck === null ? [] : [score.deck],
-  ),
+  scores: {
+    ...citedRows("scores", seedScore, mapScore, (score) =>
+      score.deck === null ? [] : [score.deck],
+    ),
+    optional: true,
+  },
   mechanics: citedRows("mechanics", seedMechanic, ({ sources: _sources, ...values }) => values),
   rng: citedRows("rngFactors", seedRng, (factor) => ({
     factor: factor.factor,
     effect: factor.effect,
     mitigation: factor.mitigation ?? null,
+    mode: factor.mode,
   })),
   timeline: citedRows("timeline", seedTimeline, (event) => ({
     date: event.date,
     event: event.event,
+    mode: event.mode,
   })),
   takeaways: citedRows("takeaways", seedTakeaway, (takeaway, position) => ({
     position,
     text: takeaway.text,
     detail: takeaway.detail ?? null,
+    mode: takeaway.mode,
   })),
+  counters: {
+    ...citedRows("counters", seedCounter, mapCounter, (edge) => [edge.team, edge.beaten_by]),
+    optional: true,
+  },
+  usage: { ...citedRows("usageStats", seedUsage, mapUsage), optional: true },
 };
 
 /** The curated collections by manifest key. */

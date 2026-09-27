@@ -7,8 +7,8 @@ import type { TableRepo } from "../repos/table-repo";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
 import { applyFilters, filtersNeedGlossary } from "./filters";
-import type { NameRef } from "./names";
-import { createNameResolver } from "./names";
+import type { NameResolver } from "./names";
+import { createNameResolver, recordsOf } from "./names";
 
 /**
  * CRUD over a cited-content table: every row carries the source ids that
@@ -91,7 +91,7 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
  * exist, runs `spec.checkRefs`, writes the row, then replaces its
  * citations. `update` only touches citations when `sources` is given. A
  * view is the row, then `sources`, then `en` when `spec.gloss` names a
- * column.
+ * column, glossed with the row's own record's entries first.
  *
  * @param store - the store to persist through
  * @param spec - the table and entity this service manages
@@ -108,9 +108,13 @@ export function createContentService<
 
   const resolver = (repos: Repos) =>
     usesGlossary ? createNameResolver(repos.glossary.list()) : undefined;
-  const toView = (row: Row, sources: string[], resolve?: (name: string) => NameRef): View =>
+  const toView = (row: Row, sources: string[], resolve?: NameResolver): View =>
     (gloss !== undefined && resolve
-      ? { ...row, sources, en: resolve(String((row as Record<string, unknown>)[gloss])).en }
+      ? {
+          ...row,
+          sources,
+          en: resolve(String((row as Record<string, unknown>)[gloss]), recordsOf(row)).en,
+        }
       : { ...row, sources }) as View;
   const withSources = (repos: Repos, row: Row): View => {
     const sources = repos.citations.sourcesFor(entity, [String(row.id)]).get(String(row.id)) ?? [];

@@ -21,6 +21,8 @@ const RECORD = {
   seasonLabel: "S5 (live)",
   lede: "What Korean and global players run in Guild Conquest.",
   caveat: "Snapshot of 2026-09-27; Season 5 closes 2026-09-28.",
+  mode: "guild_conquest",
+  modes: [],
 } satisfies ResearchRecord;
 
 const SOURCES = [
@@ -34,9 +36,19 @@ const TAKEAWAYS = [
     position: 1,
     text: "Stack skill amp on the buffers.",
     detail: "Their buffs scale with the caster's skill amp.",
+    mode: "guild_conquest",
+    recordSlug: null,
     sources: ["nv:43653"],
   },
-  { id: 2, position: 2, text: "Keep fillers at Lv.1.", detail: null, sources: ["dc:76135"] },
+  {
+    id: 2,
+    position: 2,
+    text: "Keep fillers at Lv.1.",
+    detail: null,
+    mode: "guild_conquest",
+    recordSlug: null,
+    sources: ["dc:76135"],
+  },
 ] satisfies Takeaway[];
 
 const RECOMMENDATIONS = [
@@ -44,6 +56,7 @@ const RECOMMENDATIONS = [
     id: 1,
     summary: "Your lineup matches the meta deck.",
     changes: ["Level Scorpion to Lv.10–45.", "Raise Candy Shade Pouch."],
+    recordSlug: null,
     sources: ["dc:76135"],
   },
 ] satisfies Recommendation[];
@@ -52,6 +65,8 @@ const DECKS = [
   {
     id: "cherry",
     position: 1,
+    mode: "guild_conquest",
+    recordSlug: null,
     nameEn: "Cherry deck",
     nameKr: "체리덱",
     status: "meta",
@@ -76,6 +91,7 @@ const DECKS = [
         level: "100",
         levelRule: null,
         stars: null,
+        slot: null,
         why: "ATK #1 on purpose.",
       },
       {
@@ -86,6 +102,7 @@ const DECKS = [
         level: null,
         levelRule: "As high as possible while ATK < Milk",
         stars: null,
+        slot: null,
         why: "Ranks into the beams on base ATK.",
       },
       {
@@ -96,6 +113,7 @@ const DECKS = [
         level: "1",
         levelRule: null,
         stars: null,
+        slot: null,
         why: "Formation only.",
       },
     ],
@@ -111,6 +129,8 @@ const DECKS = [
   {
     id: "meso",
     position: 2,
+    mode: "guild_conquest",
+    recordSlug: null,
     nameEn: "Melon Soda deck",
     nameKr: null,
     status: "alt",
@@ -133,6 +153,8 @@ const RUNES = [
     id: 1,
     cookieKr: "우유",
     en: "Milk",
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "All ATK%",
     why: "Milk's buff scales with her own ATK.",
     disputed: "One commenter says skill amp is better on Milk.",
@@ -143,6 +165,8 @@ const RUNES = [
     id: 2,
     cookieKr: "석류",
     en: "Pomegranate",
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "All skill amp",
     why: "Her buffs scale with the caster's skill amp.",
     disputed: null,
@@ -153,6 +177,8 @@ const RUNES = [
     id: 3,
     cookieKr: "메소",
     en: null,
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "Move speed",
     why: "Placement cookie.",
     disputed: null,
@@ -164,6 +190,8 @@ const RUNES = [
 const GEAR = [
   {
     id: 1,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "top_left",
     substats: "Skill amp + crit dmg",
     context: "raid",
@@ -172,6 +200,8 @@ const GEAR = [
   },
   {
     id: 2,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "top_left",
     substats: "Skill amp + crit rate (arena)",
     context: "arena",
@@ -180,6 +210,8 @@ const GEAR = [
   },
   {
     id: 3,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "general",
     substats: "No move speed, accuracy or focus",
     context: "raid",
@@ -191,11 +223,11 @@ const GEAR = [
 const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
   "/api/sources": { body: SOURCES },
-  "/api/decks": { body: DECKS },
-  "/api/takeaways": { body: TAKEAWAYS },
-  "/api/recommendations": { body: RECOMMENDATIONS },
-  "/api/rune-builds": { body: RUNES },
-  "/api/gear-recs": { body: GEAR },
+  "/api/decks?mode=guild_conquest": { body: DECKS },
+  "/api/takeaways?mode=guild_conquest": { body: TAKEAWAYS },
+  "/api/recommendations?record=001-guild-conquest-meta": { body: RECOMMENDATIONS },
+  "/api/rune-builds?mode=guild_conquest": { body: RUNES },
+  "/api/gear-recs?mode=guild_conquest": { body: GEAR },
 };
 
 /** Renders the whole app at `path` against this file's stubbed API, overriding some responses. */
@@ -235,15 +267,17 @@ describe("/conquest overview", () => {
 
   it("shows the legacy empty message with no takeaways and omits the account block", async () => {
     await renderAt("/conquest", {
-      "/api/takeaways": { body: [] },
-      "/api/recommendations": { body: [] },
+      "/api/takeaways?mode=guild_conquest": { body: [] },
+      "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
     });
     expect(await panel().findByText("No takeaways yet.")).toHaveClass("empty");
     expect(panel().queryByText("Your lineup against the meta")).toBeNull();
   });
 
   it("names the failed resource when takeaways fail, and still shows the account block", async () => {
-    await renderAt("/conquest", { "/api/takeaways": { status: 500, body: { error: "x" } } });
+    await renderAt("/conquest", {
+      "/api/takeaways?mode=guild_conquest": { status: 500, body: { error: "x" } },
+    });
     expect(await panel().findByRole("alert")).toHaveTextContent("Couldn't load takeaways");
     expect(await panel().findByText(RECOMMENDATIONS[0]!.summary)).toBeVisible();
   });
@@ -321,7 +355,7 @@ describe("/conquest/decks", () => {
   });
 
   it("shows the legacy empty message with no decks", async () => {
-    await renderAt("/conquest/decks", { "/api/decks": { body: [] } });
+    await renderAt("/conquest/decks", { "/api/decks?mode=guild_conquest": { body: [] } });
     expect(await panel().findByText("No decks recorded yet.")).toHaveClass("empty");
   });
 });
@@ -379,7 +413,7 @@ describe("/conquest/runes", () => {
   });
 
   it("shows the empty message with no rune builds", async () => {
-    await renderAt("/conquest/runes", { "/api/rune-builds": { body: [] } });
+    await renderAt("/conquest/runes", { "/api/rune-builds?mode=guild_conquest": { body: [] } });
     expect(await panel().findByText("No rune builds recorded yet.")).toHaveClass("muted");
   });
 });
@@ -405,7 +439,7 @@ describe("/conquest/gear", () => {
   });
 
   it("shows every slot's empty message and no general card with no gear", async () => {
-    await renderAt("/conquest/gear", { "/api/gear-recs": { body: [] } });
+    await renderAt("/conquest/gear", { "/api/gear-recs?mode=guild_conquest": { body: [] } });
     await waitFor(() => expect(panel().getAllByText("No data yet.")).toHaveLength(4));
     expect(panel().queryByText("General gear notes")).toBeNull();
   });

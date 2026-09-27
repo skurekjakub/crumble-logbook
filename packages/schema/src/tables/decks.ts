@@ -1,8 +1,9 @@
 import { sql } from "drizzle-orm";
 import { check, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { DECK_NOTE_KIND, DECK_STATUS } from "../enums";
+import { modeColumn, recordSlugColumn } from "./columns";
 
-/** A deck: a named cookie/pet lineup with a meta tier and formation notes. */
+/** A deck: a named cookie/pet lineup for one game mode, with a meta tier and formation notes. */
 export const decks = sqliteTable("decks", {
   id: text("id").primaryKey(),
   position: integer("position").notNull(),
@@ -16,12 +17,15 @@ export const decks = sqliteTable("decks", {
   rng: text("rng"),
   atkOrder: text("atk_order", { mode: "json" }).$type<string[]>(),
   atkOrderNote: text("atk_order_note"),
+  mode: modeColumn(),
+  recordSlug: recordSlugColumn(),
 });
 
 /**
  * A single cookie slot within a deck's lineup, in placement order. Every
  * cookie carries a `level` or a `levelRule` (or both) — enforced with a
- * CHECK constraint since it's a cross-field invariant.
+ * CHECK constraint since it's a cross-field invariant. `slot` is the
+ * formation position as displayed (free text, e.g. `row1-3`), when known.
  */
 export const deckCookies = sqliteTable(
   "deck_cookies",
@@ -36,6 +40,7 @@ export const deckCookies = sqliteTable(
     levelRule: text("level_rule"),
     stars: text("stars"),
     why: text("why").notNull(),
+    slot: text("slot"),
   },
   (t) => [
     check("deck_cookies_level_or_rule", sql`${t.level} is not null or ${t.levelRule} is not null`),

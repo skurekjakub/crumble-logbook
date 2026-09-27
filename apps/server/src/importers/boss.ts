@@ -5,7 +5,7 @@ import { ImportError } from "../errors";
 import { parseFile, readJson } from "./files";
 import type { BuffValuesSpec, FightEventsSpec } from "./manifest";
 import { formatIssues } from "./manifest";
-import type { CitedValues } from "./steps";
+import type { CitedValues, WriteStep } from "./steps";
 
 /** One entry of an extraction's `encounter.timeline`. */
 const timelineEntry = z.strictObject({
@@ -265,4 +265,52 @@ export function readBuffValues(
     }
   }
   return rows;
+}
+
+/** The buff value fields two records' versions of one row must agree on. */
+const BUFF_FACTS = [
+  "fromStar",
+  "valuePct",
+  "maxStack",
+  "base",
+  "scalesWithCasterAmp",
+  "target",
+] as const satisfies readonly (keyof Values<BuffValueInput>)[];
+
+/**
+ * A step writing buff values as shared game facts: a row whose cookie,
+ * effect type and grade no record has loaded is inserted, owned by the
+ * record being written and cited to its sources; a row another record
+ * already loaded is skipped when identical.
+ *
+ * @param file - the buff capture's record-relative path, as errors name it
+ * @param rows - the rows, as {@link readBuffValues} returns them
+ * @returns the step
+ * @throws {ImportError} (from the step) naming `file`, the cookie and the
+ *   grade, if a row differs from the one another record loaded; the import
+ *   then writes nothing
+ */
+export function insertBuffValues(
+  file: string,
+  rows: ReadonlyArray<CitedValues<Values<BuffValueInput>>>,
+): WriteStep {
+  const key = (v: Pick<Values<BuffValueInput>, "cookieKr" | "effectType" | "skillGrade">) =>
+    `${v.cookieKr}|${v.effectType}|${v.skillGrade}`;
+  return (repos, { record }) => {
+    const loaded = new Map(repos.buffValues.list().map((row) => [key(row), row]));
+    for (const { values, sources } of rows) {
+      const existing = loaded.get(key(values));
+      if (existing) {
+        const incoming = { target: "team", ...values };
+        if (BUFF_FACTS.every((field) => existing[field] === (incoming[field] ?? null))) continue;
+        throw new ImportError(
+          file,
+          `${values.cookieKr} grade ${values.skillGrade}`,
+          `buff value (effect type ${values.effectType}) conflicts with the one record ${existing.recordSlug ?? "(none)"} loaded`,
+        );
+      }
+      const row = repos.buffValues.insert({ ...values, recordSlug: record });
+      repos.citations.replace("buff_value", String(row.id), [...sources]);
+    }
+  };
 }

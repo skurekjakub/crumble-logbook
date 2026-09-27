@@ -18,6 +18,7 @@ const score = (o: Pick<Score, "id" | "damageG"> & Partial<Score>): Score => ({
   player: null,
   note: null,
   ratio: null,
+  recordSlug: null,
   sources: [],
   ...o,
 });
@@ -35,6 +36,8 @@ const RNG = [
     factor: "Who Pomegranate's beams hit",
     effect: "Beams go to the top-ATK cookies.",
     mitigation: "Lv.1 fillers.",
+    mode: "guild_conquest",
+    recordSlug: null,
     sources: ["nv:43653"],
   },
 ] satisfies RngFactor[];
@@ -57,13 +60,14 @@ const ranking = (
   ref: null,
   capturedAt: "2026-09-27",
   sourceId: "web:crumbgg:rankings-s5",
+  recordSlug: null,
   ...o,
 });
 
 const API: Record<string, Canned> = {
-  "/api/decks": { body: DECKS },
+  "/api/decks?mode=guild_conquest": { body: DECKS },
   "/api/scores": { body: SCORES },
-  "/api/rng-factors": { body: RNG },
+  "/api/rng-factors?mode=guild_conquest": { body: RNG },
   "/api/rankings/seasons": { body: SEASONS },
   "/api/rankings?season=5&board=players": {
     body: [
@@ -148,7 +152,7 @@ describe("scores view", () => {
     await renderRoute("/conquest/scores", {
       ...API,
       "/api/scores": { body: [] },
-      "/api/rng-factors": { body: [] },
+      "/api/rng-factors?mode=guild_conquest": { body: [] },
     });
     expect(await screen.findByText("No scores with both damage and power yet.")).toHaveClass(
       "empty",

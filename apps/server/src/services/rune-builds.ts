@@ -6,12 +6,13 @@ import type { Repos, Store } from "../repos";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
 import { applyFilters } from "./filters";
-import { createNameResolver } from "./names";
+import { createNameResolver, recordsOf } from "./names";
 
 /**
  * A rune build as returned to callers: its cookie carries a resolved English
- * gloss alongside its stored Korean name, and it lists the decks it applies
- * to (by id, not resolved further).
+ * gloss alongside its stored Korean name (the build's own record's glossary
+ * entries first), and it lists the decks it applies to (by id, not resolved
+ * further).
  */
 export type RuneBuildView = Cited<RuneBuildRow> & { en: string | null; decks: string[] };
 
@@ -23,8 +24,9 @@ export type RuneBuildView = Cited<RuneBuildRow> & { en: string | null; decks: st
 export interface RuneBuildService {
   /**
    * Returns every rune build view, ordered by `id`.
-   * @param filter - the registry's list filters: `deck` restricts the list
-   *   to rune builds linked to that deck, when given
+   * @param filter - the registry's list filters, each applied when given:
+   *   `deck` keeps the rune builds linked to that deck, `mode` those of
+   *   that game mode
    */
   list(filter?: FiltersOf<"runeBuilds">): RuneBuildView[];
   /**
@@ -86,7 +88,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
     return rows.map((row) => ({
       ...row,
       sources: sourcesById.get(String(row.id)) ?? [],
-      en: resolve(row.cookieKr).en,
+      en: resolve(row.cookieKr, recordsOf(row)).en,
       decks: decksById.get(row.id) ?? [],
     }));
   };

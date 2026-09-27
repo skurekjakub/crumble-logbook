@@ -8,7 +8,9 @@
  * `CITED_ENTITY` value in `@crumble/schema`, an entry here, a `.route()`
  * line in `app.ts` (kept explicit so the typed client keeps every route's
  * types) and a view. `test/registry.test.ts` fails if the route or the
- * entity is missing.
+ * entity is missing, or if a declared list filter doesn't narrow its list.
+ * A table with a `mode` column gets the `?mode=` list filter without
+ * declaring it.
  *
  * This module is layer-neutral: it holds declarations only, and imports no
  * repo, service, route or drizzle query builder.
@@ -17,10 +19,15 @@
  */
 import type { CitedEntity, Values } from "@crumble/schema";
 import {
+  GAME_MODE,
+  USAGE_KIND,
   buffValueInput,
   buffValuePatch,
   buffValues,
   citations,
+  counterInput,
+  counterPatch,
+  counters,
   deckCookies,
   deckInput,
   deckNotes,
@@ -42,6 +49,7 @@ import {
   recommendationInput,
   recommendationPatch,
   recommendations,
+  recordModes,
   researchRecords,
   rngFactorInput,
   rngFactorPatch,
@@ -60,6 +68,9 @@ import {
   timeline,
   timelineEventInput,
   timelineEventPatch,
+  usageStatInput,
+  usageStatPatch,
+  usageStats,
 } from "@crumble/schema";
 import type { InferInsertModel, InferSelectModel } from "drizzle-orm";
 import type { SQLiteTable } from "drizzle-orm/sqlite-core";
@@ -78,6 +89,7 @@ export type OrderKey<Row> =
 /**
  * How a list filter matches a view:
  * - `equals`: the view's column equals the value;
+ * - `anyOf`: at least one of the view's columns equals the value;
  * - `sameName`: the view's column names the same thing as the value, as a
  *   stored name, a glossary shorthand or the English gloss (case- and
  *   whitespace-insensitive);
@@ -85,7 +97,10 @@ export type OrderKey<Row> =
  *   contains the value.
  */
 export type FilterMatch<Row> =
-  { equals: ColumnOf<Row> } | { sameName: ColumnOf<Row> } | { includes: string };
+  | { equals: ColumnOf<Row> }
+  | { anyOf: readonly ColumnOf<Row>[] }
+  | { sameName: ColumnOf<Row> }
+  | { includes: string };
 
 /** A declared list filter: the query param's schema, and how its value matches a view. */
 export interface ListFilter<Row> {
@@ -103,7 +118,8 @@ export interface AnyListFilter {
   /** Validates the query value. */
   schema: z.ZodType<string>;
   /** How a validated value selects views. */
-  match: { equals: string } | { sameName: string } | { includes: string };
+  match:
+    { equals: string } | { anyOf: readonly string[] } | { sameName: string } | { includes: string };
 }
 
 /** Declared list filters of any row shape, by query param name. */
@@ -143,21 +159,43 @@ export interface TableSpec<T extends SQLiteTable = SQLiteTable> {
   api?: ApiSpec;
   /** Present when the generic table repo and content service handle it. */
   content?: ContentSpec<InferSelectModel<T>>;
+  /**
+   * The column naming the research record that owns a row, when it isn't
+   * `recordSlug` (see {@link recordColumnOf}).
+   */
+  record?: ColumnOf<InferSelectModel<T>>;
 }
+
+/** The `?mode=` filter every table with a `mode` column gets: the column equals a `GAME_MODE`. */
+const modeFilter = { schema: z.enum(GAME_MODE), match: { equals: "mode" } } as const;
+
+/**
+ * A registry entry: the declared spec and its table, plus the derived
+ * `mode` filter when the table has a `mode` column.
+ */
+type Entry<T extends SQLiteTable, S> = S & { table: T } & ("mode" extends ColumnOf<
+    InferSelectModel<T>
+  >
+    ? { filters: { mode: typeof modeFilter } }
+    : unknown);
 
 /**
  * Declares one registry entry, keeping its literal types (the route path
- * above all) for the typed client.
+ * above all) for the typed client. A table with a `mode` column gets the
+ * `mode` list filter without declaring it.
  *
  * @param table - the drizzle table
- * @param spec - everything else about it
+ * @param spec - everything else about it; a `filters.mode` it declares is
+ *   replaced by the derived one
  * @returns the entry
  */
 function entry<T extends SQLiteTable, const S extends Omit<TableSpec<T>, "table">>(
   table: T,
   spec: S,
-): S & { table: T } {
-  return { ...spec, table };
+): Entry<T, S> {
+  const hasMode = (table as unknown as Record<string, unknown>).mode !== undefined;
+  const filters = hasMode ? { ...spec.filters, mode: modeFilter } : spec.filters;
+  return { ...spec, table, ...(filters ? { filters } : {}) } as Entry<T, S>;
 }
 
 /** A positive integer `:id` path parameter, coerced from its string form. */
@@ -173,7 +211,8 @@ const nonEmpty = z.string().min(1);
  */
 export const REGISTRY = {
   sources: entry(sources, { path: "/sources" }),
-  researchRecords: entry(researchRecords, { path: "/records" }),
+  researchRecords: entry(researchRecords, { path: "/records", record: "slug" }),
+  recordModes: entry(recordModes, {}),
   glossary: entry(glossary, { path: "/glossary" }),
   decks: entry(decks, {
     path: "/decks",
@@ -207,6 +246,7 @@ export const REGISTRY = {
   mechanics: entry(mechanics, {
     path: "/mechanics",
     entity: "mechanic",
+    filters: { topic: { schema: nonEmpty, match: { equals: "topic" } } },
     api: { id: rowId, input: mechanicInput, patch: mechanicPatch },
     content: {},
   }),
@@ -231,6 +271,7 @@ export const REGISTRY = {
   recommendations: entry(recommendations, {
     path: "/recommendations",
     entity: "recommendation",
+    filters: { record: { schema: nonEmpty, match: { equals: "recordSlug" } } },
     api: { id: rowId, input: recommendationInput, patch: recommendationPatch },
     content: {},
   }),
@@ -247,6 +288,20 @@ export const REGISTRY = {
     filters: { cookie: { schema: nonEmpty, match: { sameName: "cookieKr" } } },
     api: { id: rowId, input: buffValueInput, patch: buffValuePatch },
     content: { order: ["cookieKr", "effectType", "skillGrade", "id"], gloss: "cookieKr" },
+  }),
+  counters: entry(counters, {
+    path: "/counters",
+    entity: "counter",
+    filters: { deck: { schema: deckSlug, match: { anyOf: ["teamDeckId", "beatenByDeckId"] } } },
+    api: { id: rowId, input: counterInput, patch: counterPatch },
+    content: { refs: { teamDeckId: "decks", beatenByDeckId: "decks" } },
+  }),
+  usageStats: entry(usageStats, {
+    path: "/usage",
+    entity: "usage_stat",
+    filters: { kind: { schema: z.enum(USAGE_KIND), match: { equals: "kind" } } },
+    api: { id: rowId, input: usageStatInput, patch: usageStatPatch },
+    content: { order: [{ column: "usagePct", desc: true }, "id"], gloss: "subject" },
   }),
   citations: entry(citations, {}),
 };
@@ -297,4 +352,21 @@ export const CONTENT_KEYS = TABLE_KEYS.filter(
  */
 export function specOf(key: TableKey): TableSpec {
   return REGISTRY[key] as TableSpec;
+}
+
+/**
+ * The column naming the research record that owns a row of `key`: the
+ * entry's declared `record` column, else `recordSlug` when the table has
+ * one. A record's re-import clears the rows it owns.
+ *
+ * @param key - a table's snapshot name
+ * @returns the column's JS name, or `undefined` for a table whose rows no
+ *   record owns directly (child rows, citations)
+ */
+export function recordColumnOf(key: TableKey): string | undefined {
+  const { record, table } = specOf(key);
+  if (record) return record;
+  return (table as unknown as Record<string, unknown>).recordSlug !== undefined
+    ? "recordSlug"
+    : undefined;
 }

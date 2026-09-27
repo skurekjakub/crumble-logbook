@@ -1,4 +1,5 @@
 import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { recordSlugColumn } from "./columns";
 import { decks } from "./decks";
 
 /** A recorded raid/arena/stage score, optionally tied to the deck that produced it. */
@@ -12,4 +13,5 @@ export const scores = sqliteTable("scores", {
   season: integer("season"),
   player: text("player"),
   note: text("note"),
+  recordSlug: recordSlugColumn(),
 });

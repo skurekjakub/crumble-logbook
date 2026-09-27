@@ -59,6 +59,15 @@ describe("findCapture", () => {
     expect(findCapture(recordDir, rules, "web:100", root)).toBeNull();
   });
 
+  it("follows a rule into another record's evidence", () => {
+    const shared: CaptureRule[] = [
+      { site: "nv", dir: "../001-test/evidence/07-nv-posts", file: "nv-{id}.md" },
+    ];
+    expect(findCapture(join(root, "research", "002-test"), shared, "nv:300", root)).toBe(
+      "research/001-test/evidence/07-nv-posts/nv-300.md",
+    );
+  });
+
   it("defaults to paths relative to the repo root", () => {
     const path = findCapture(recordDir, rules, "dc:100");
     expect(path).not.toBeNull();

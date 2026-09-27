@@ -13,6 +13,8 @@ const RECORD = {
   seasonLabel: "S5 (live)",
   lede: "What Korean and global players run in Guild Conquest.",
   caveat: "Snapshot of 2026-09-27.",
+  mode: "guild_conquest",
+  modes: [],
 } satisfies ResearchRecord;
 
 const SOURCES = [
@@ -25,9 +27,9 @@ const DECKS = [{ id: "cherry" }, { id: "meso" }, { id: "herb" }] satisfies Parti
 const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
   "/api/sources": { body: SOURCES },
-  "/api/decks": { body: DECKS },
-  "/api/takeaways": { body: [] },
-  "/api/recommendations": { body: [] },
+  "/api/decks?mode=guild_conquest": { body: DECKS },
+  "/api/takeaways?mode=guild_conquest": { body: [] },
+  "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
 };
 
 /** Renders the whole app at `path` against this file's stubbed API. */

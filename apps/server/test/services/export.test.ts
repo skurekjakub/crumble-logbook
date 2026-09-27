@@ -179,6 +179,46 @@ function seedEverything(store: Store): SeedIds {
     ["web:2"],
   );
 
+  store.repos.tables.load("recordModes", [
+    { recordSlug: "kr-levers", mode: "arena", lede: "Arena lede", caveat: null },
+  ]);
+  services.decks.create({
+    id: "rival",
+    nameEn: "Rival",
+    status: "alt",
+    mode: "arena",
+    cookies: [{ cookieKr: "체리 쿠키", level: "1", levelRule: null, stars: null, why: "x" }],
+    pets: [],
+    notes: [],
+    sources: ["dc:1"],
+  });
+  services.counters.create(
+    {
+      slug: "cherry-onion-vs-rival",
+      mode: "arena",
+      teamDeckId: "cherry-onion",
+      beatenByDeckId: "rival",
+      conditions: null,
+      why: "dives first",
+      confidence: "low",
+    },
+    ["dc:1"],
+  );
+  services.usageStats.create(
+    {
+      mode: "rumble_arena",
+      kind: "team",
+      subject: "Cherry Onion",
+      members: ["체리 쿠키"],
+      usagePct: 12.5,
+      confirmedPct: null,
+      sample: "top 100",
+      capturedAt: "2026-01-01",
+      note: null,
+    },
+    ["web:2"],
+  );
+
   return { mechanicId: mechanic.id, scoreId: score.id, deckCookieId };
 }
 
@@ -199,9 +239,10 @@ describe("exportSnapshot / restoreSnapshot", () => {
     expect(counts).toEqual({
       sources: 2,
       researchRecords: 1,
+      recordModes: 1,
       glossary: 1,
-      decks: 1,
-      deckCookies: 1,
+      decks: 2,
+      deckCookies: 2,
       deckPets: 1,
       deckNotes: 1,
       runeBuilds: 1,
@@ -216,7 +257,9 @@ describe("exportSnapshot / restoreSnapshot", () => {
       recommendations: 1,
       fightEvents: 1,
       buffValues: 1,
-      citations: 11,
+      counters: 1,
+      usageStats: 1,
+      citations: 14,
     });
     for (const [table, rows] of Object.entries(first.tables)) {
       expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);
@@ -339,6 +382,18 @@ describe("exportSnapshot / restoreSnapshot", () => {
 
     expect(source.repos.rankings.list().map((r) => r.id)).toEqual([2, 1]);
     expect(snapshot.tables.rankings.map((r) => r.id)).toEqual([1, 2]);
+  });
+
+  it("restores a snapshot written before a table existed, leaving that table empty", () => {
+    const source = testStore();
+    seedEverything(source);
+    const { usageStats: _usageStats, ...older } = exportSnapshot(source).tables;
+
+    const target = testStore();
+    const counts = restoreSnapshot(target, { version: 1, tables: older as Snapshot["tables"] });
+    expect(counts.usageStats).toBe(0);
+    expect(counts.decks).toBe(2);
+    expect(exportSnapshot(target).tables.usageStats).toEqual([]);
   });
 
   it("restoring into a non-empty store throws ConflictError", () => {

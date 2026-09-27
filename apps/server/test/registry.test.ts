@@ -1,10 +1,231 @@
 import { CITED_ENTITY } from "@crumble/schema";
 import { getTableConfig } from "drizzle-orm/sqlite-core";
-import { describe, expect, it } from "vitest";
+import type { hc } from "hono/client";
+import { describe, expect, expectTypeOf, it } from "vitest";
+import type { AppType } from "../src/app";
 import { createApp } from "../src/app";
+import type { Registry, TableKey } from "../src/registry";
 import { CONTENT_KEYS, REGISTRY, TABLE_KEYS, specOf } from "../src/registry";
+import type { Store } from "../src/repos";
+import type { Services } from "../src/services";
 import { createServices } from "../src/services";
-import { testStore } from "./helpers";
+import { addSource, testStore } from "./helpers";
+
+/** The typed client's routes under `/api`, by first path segment. */
+type ClientRoutes = ReturnType<typeof hc<AppType>>["api"];
+
+/** Every registered route path, without its leading slash. */
+type RegisteredPath = {
+  [K in TableKey]: Registry[K] extends { path: `/${infer P}` } ? P : never;
+}[TableKey];
+
+/** A registered table the filter test knows how to seed. */
+type SeededKey =
+  | "decks"
+  | "runeBuilds"
+  | "gearRecs"
+  | "scores"
+  | "mechanics"
+  | "rngFactors"
+  | "timeline"
+  | "takeaways"
+  | "recommendations"
+  | "fightEvents"
+  | "buffValues"
+  | "researchRecords"
+  | "counters"
+  | "usageStats";
+
+/**
+ * Creates one valid row of a type, with `over` applied on top.
+ * @returns the view field that identifies the row, and its value
+ */
+type Seed = (store: Store, services: Services, over: Record<string, unknown>) => [string, unknown];
+
+/** Two rows that differ on one filter, and the query value that selects the first. */
+interface FilterCase {
+  match: Record<string, unknown>;
+  other: Record<string, unknown>;
+  value: string;
+}
+
+/** The case every derived `?mode=` filter runs. */
+const MODE_CASE: FilterCase = { match: { mode: "arena" }, other: {}, value: "arena" };
+
+/** The case of every declared filter other than `mode`, by table and filter name. */
+const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
+  runeBuilds: { deck: { match: { decks: ["d1"] }, other: { decks: ["d2"] }, value: "d1" } },
+  scores: { deck: { match: { deckId: "d1" }, other: { deckId: "d2" }, value: "d1" } },
+  mechanics: { topic: { match: { topic: "rules" }, other: {}, value: "rules" } },
+  recommendations: {
+    record: { match: { recordSlug: "r1" }, other: { recordSlug: "r2" }, value: "r1" },
+  },
+  fightEvents: { boss: { match: { boss: "pinata" }, other: { boss: "golem" }, value: "pinata" } },
+  buffValues: { cookie: { match: { cookieKr: "a" }, other: { cookieKr: "b" }, value: "a" } },
+  counters: {
+    deck: {
+      match: { teamDeckId: "d3", beatenByDeckId: "d1" },
+      other: { teamDeckId: "d2", beatenByDeckId: "d3" },
+      value: "d1",
+    },
+  },
+  usageStats: { kind: { match: { kind: "core" }, other: { kind: "pet" }, value: "core" } },
+};
+
+let serial = 0;
+
+/** Creates the decks `d1`–`d3` that seeds reference, once per store. */
+function ensureDecks(store: Store, services: Services): void {
+  cite(store);
+  for (const id of ["d1", "d2", "d3"]) {
+    if (store.repos.decks.exists(id)) continue;
+    services.decks.create({ ...deckBase, id, nameEn: id });
+  }
+}
+
+/** A source every seeded row cites, added once per store. */
+function cite(store: Store): string[] {
+  if (store.repos.sources.missing(["dc:1"]).length > 0) addSource(store, "dc:1");
+  return ["dc:1"];
+}
+
+const deckBase = {
+  nameEn: "deck",
+  status: "meta" as const,
+  cookies: [{ cookieKr: "체리 쿠키", level: "1", levelRule: null, stars: null, why: "x" }],
+  pets: [],
+  notes: [],
+  sources: ["dc:1"],
+};
+
+/** How the filter test seeds a row of each filtered type. */
+const SEEDS: Record<SeededKey, Seed> = {
+  decks: (store, services, over) => {
+    cite(store);
+    const id = `deck-${++serial}`;
+    services.decks.create({ ...deckBase, id, ...over });
+    return ["id", id];
+  },
+  runeBuilds: (store, services, over) => {
+    cite(store);
+    ensureDecks(store, services);
+    const row = services.runeBuilds.create({
+      cookieKr: "체리 쿠키",
+      lines: "ATK",
+      why: "x",
+      disputed: null,
+      decks: [],
+      sources: ["dc:1"],
+      ...over,
+    });
+    return ["id", row.id];
+  },
+  gearRecs: (store, services, over) => {
+    const row = services.gearRecs.create(
+      { slot: "top_left", substats: "ATK", context: "raid", why: "x", ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  scores: (store, services, over) => {
+    ensureDecks(store, services);
+    const row = services.scores.create({ damageG: 1, verified: false, ...over }, cite(store));
+    return ["id", row.id];
+  },
+  mechanics: (store, services, over) => {
+    const row = services.mechanics.create(
+      { title: "t", body: "b", confidence: "high", ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  rngFactors: (store, services, over) => {
+    const row = services.rngFactors.create(
+      { factor: "f", effect: "e", mitigation: null, ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  timeline: (store, services, over) => {
+    const row = services.timeline.create({ date: "2026-01-01", event: "e", ...over }, cite(store));
+    return ["id", row.id];
+  },
+  takeaways: (store, services, over) => {
+    const row = services.takeaways.create({ position: 0, text: "t", ...over }, cite(store));
+    return ["id", row.id];
+  },
+  recommendations: (store, services, over) => {
+    const row = services.recommendations.create(
+      { summary: "s", changes: ["c"], ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  fightEvents: (store, services, over) => {
+    const row = services.fightEvents.create(
+      { boss: "pinata", tElapsed: 1, event: "e", detail: "d", confidence: "high", ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  buffValues: (store, services, over) => {
+    const row = services.buffValues.create(
+      {
+        cookieKr: "c",
+        effectType: `Effect${++serial}`,
+        skillGrade: 0,
+        fromStar: 0,
+        valuePct: 1,
+        base: "Fixed",
+        scalesWithCasterAmp: true,
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  researchRecords: (store, _services, over) => {
+    const slug = `record-${++serial}`;
+    store.repos.records.upsert({
+      slug,
+      question: "q",
+      status: "active",
+      startedAt: "2026-01-01",
+      updatedAt: "2026-01-01",
+      ...over,
+    });
+    return ["slug", slug];
+  },
+  counters: (store, services, over) => {
+    ensureDecks(store, services);
+    const row = services.counters.create(
+      {
+        slug: `edge-${++serial}`,
+        teamDeckId: "d1",
+        beatenByDeckId: "d2",
+        why: "w",
+        confidence: "low",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  usageStats: (store, services, over) => {
+    const row = services.usageStats.create(
+      {
+        kind: "cookie",
+        subject: "s",
+        usagePct: 1,
+        sample: "top 100",
+        capturedAt: "2026-01-01",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+};
 
 /** The routes the app serves, as `METHOD /path`. */
 function mountedRoutes(): Set<string> {
@@ -32,6 +253,11 @@ describe("the content-type registry", () => {
     }
   });
 
+  it("types every registered path into the hono client", () => {
+    expectTypeOf<Exclude<RegisteredPath, keyof ClientRoutes>>().toBeNever();
+    expectTypeOf<ClientRoutes>().toHaveProperty("counters");
+  });
+
   it("registers every cited entity exactly once, and only cited entities", () => {
     const entities = TABLE_KEYS.flatMap((key) => specOf(key).entity ?? []);
     expect([...entities].sort()).toEqual([...CITED_ENTITY].sort());
@@ -52,6 +278,47 @@ describe("the content-type registry", () => {
     for (const key of CONTENT_KEYS) {
       expect(store.repos[key].count(), key).toBe(0);
       expect(services[key].list(), key).toEqual([]);
+    }
+  });
+
+  it("gives every table with a mode column a ?mode= filter on its mode, and no other table one", () => {
+    for (const key of TABLE_KEYS) {
+      const { table, filters } = specOf(key);
+      const hasMode = Object.values(getTableConfig(table).columns).some((c) => c.name === "mode");
+      if (hasMode) expect(filters?.mode?.match, key).toEqual({ equals: "mode" });
+      else expect(filters?.mode, key).toBeUndefined();
+    }
+    expect(REGISTRY.decks.filters.mode.schema.safeParse("arena").success).toBe(true);
+    expect(REGISTRY.decks.filters.mode.schema.safeParse("raid").success).toBe(false);
+  });
+
+  it("serves every declared list filter: each one narrows GET <path> to the matching row", async () => {
+    const filtered = TABLE_KEYS.filter(
+      (key) => specOf(key).path && Object.keys(specOf(key).filters ?? {}).length > 0,
+    );
+    expect(filtered.length).toBeGreaterThan(0);
+    for (const key of filtered) {
+      const seed = SEEDS[key as SeededKey];
+      expect(seed, `${key} needs a seed in SEEDS`).toBeDefined();
+      for (const name of Object.keys(specOf(key).filters!)) {
+        const probe = FILTER_CASES[key]?.[name] ?? (name === "mode" ? MODE_CASE : undefined);
+        expect(probe, `${key}?${name}= needs a case in FILTER_CASES`).toBeDefined();
+        const store = testStore();
+        const services = createServices(store);
+        const app = createApp(services);
+        const [field, wanted] = seed(store, services, probe!.match);
+        seed(store, services, probe!.other);
+        const url = `/api${specOf(key).path!}`;
+        const all = (await (await app.request(url)).json()) as Record<string, unknown>[];
+        expect(all, `${key}: both rows listed unfiltered`).toHaveLength(2);
+        const res = await app.request(`${url}?${name}=${encodeURIComponent(probe!.value)}`);
+        expect(res.status, `${key}?${name}=`).toBe(200);
+        const rows = (await res.json()) as Record<string, unknown>[];
+        expect(
+          rows.map((row) => row[field]),
+          `${key}?${name}=${probe!.value}`,
+        ).toEqual([wanted]);
+      }
     }
   });
 

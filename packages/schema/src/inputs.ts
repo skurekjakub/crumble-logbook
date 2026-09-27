@@ -1,6 +1,7 @@
 import { z } from "zod";
 import {
   buffValueInsert,
+  counterInsert,
   deckCookieInsert,
   deckInsert,
   deckNoteInsert,
@@ -18,6 +19,7 @@ import {
   sourceInsert,
   takeawayInsert,
   timelineEventInsert,
+  usageStatInsert,
 } from "./zod";
 
 /** A non-empty list of source ids a submitted entity must cite. */
@@ -161,6 +163,43 @@ export const buffValuePatch = buffValueInsert
   .extend({ sources: sourceIds.optional() });
 /** Output of {@link buffValuePatch}. */
 export type BuffValuePatch = z.output<typeof buffValuePatch>;
+
+/**
+ * Input for creating a counter edge, with the sources that support it. A
+ * deck can't counter itself: `teamDeckId` and `beatenByDeckId` must differ.
+ * The omit runs before the refine because zod 4 rejects `.omit()` on an
+ * already-refined object.
+ */
+export const counterInput = counterInsert
+  .omit({ id: true })
+  .extend({ sources: sourceIds })
+  .refine((c) => c.teamDeckId !== c.beatenByDeckId, {
+    message: "a deck can't be its own counter",
+    path: ["beatenByDeckId"],
+  });
+/** Output of {@link counterInput}. */
+export type CounterInput = z.output<typeof counterInput>;
+
+/** Patch for updating a counter edge. `sources`, if given, must be non-empty. */
+export const counterPatch = counterInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
+/** Output of {@link counterPatch}. */
+export type CounterPatch = z.output<typeof counterPatch>;
+
+/** Input for creating a usage figure, with the sources that support it. */
+export const usageStatInput = usageStatInsert.omit({ id: true }).extend({ sources: sourceIds });
+/** Output of {@link usageStatInput}. */
+export type UsageStatInput = z.output<typeof usageStatInput>;
+
+/** Patch for updating a usage figure. `sources`, if given, must be non-empty. */
+export const usageStatPatch = usageStatInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
+/** Output of {@link usageStatPatch}. */
+export type UsageStatPatch = z.output<typeof usageStatPatch>;
 
 /**
  * Input for a single deck cookie slot. `id`, `deckId` and `position` are

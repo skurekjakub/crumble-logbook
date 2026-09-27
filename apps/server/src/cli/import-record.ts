@@ -1,8 +1,9 @@
 /**
- * Loads a research record into `config.dbPath`. Run via `pnpm import:record
- * <slug> [--replace]`, where `<slug>` names a directory under `research/`.
- * Prints the rows written per table and any warnings. Without `--replace`
- * it refuses a database that already has content. Exits 1 with the
+ * Loads a research record into `config.dbPath`, next to any records already
+ * there. Run via `pnpm import:record <slug> [--replace]`, where `<slug>`
+ * names a directory under `research/`. Prints the rows inserted per table
+ * and any warnings. Without `--replace` it refuses a record that is already
+ * loaded; with it, it clears that record's rows first. Exits 1 with the
  * `ImportError` message (file, row and reason) on a failed import, with
  * `import failed: <message>` and no stack trace on any other error, or with
  * a usage line when no slug is given; nothing is written in any case.

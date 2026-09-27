@@ -58,7 +58,8 @@ export function assertSnapshotNonEmpty(snapshot: Snapshot): void {
 
 /**
  * Restores every table of `snapshot` into `store`, preserving every row's
- * id, inside a single transaction, in the registry's insert order.
+ * id, inside a single transaction, in the registry's insert order. A table
+ * the snapshot doesn't have (it predates the table) stays empty.
  *
  * @param store - the store to restore into; every registered table must be
  *   empty
@@ -75,7 +76,9 @@ export function restoreSnapshot(store: Store, snapshot: Snapshot): TableCounts {
   if (snapshot.version !== 1) {
     throw new ConflictError(`unsupported snapshot version: ${String(snapshot.version)}`);
   }
-  const { tables } = snapshot;
+  const tables = Object.fromEntries(
+    TABLE_KEYS.map((key) => [key, (snapshot.tables as Partial<SnapshotTables>)[key] ?? []]),
+  ) as SnapshotTables;
   // See `DeckService.create`'s implementation for why the inner return is
   // cast `as never` and the outer call `as TableCounts`: `Store.transaction`
   // can't infer its type parameter through its own conditional return type.

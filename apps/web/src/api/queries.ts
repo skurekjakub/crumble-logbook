@@ -9,8 +9,9 @@
  * describes.
  *
  * A list that holds research content takes an optional {@link ModeScope}:
- * its params go on the request and its mode goes in the query key, so each
- * mode's lists are cached apart. Without a scope the list covers every mode.
+ * its mode goes on the request as `?mode=` (where the endpoint has one) and
+ * in the query key, so each mode's lists are cached apart. Without a scope
+ * the list covers every mode.
  */
 import { queryOptions } from "@tanstack/react-query";
 import type { InferRequestType } from "hono/client";
@@ -32,22 +33,16 @@ export type RankingBoardFilter = NonNullable<
   InferRequestType<typeof api.rankings.$get>["query"]["board"]
 >;
 
-/** A game mode, as research content is tagged with it. */
-export type GameMode = "guild_conquest" | "arena" | "rumble_arena";
-
 /**
- * The list params every research-content endpoint accepts, read off
- * `/api/mechanics` (a plain content type), so a mode can only send params
- * the server declares.
+ * A game mode, as research content is tagged with it: the values the
+ * server's `?mode=` list filter accepts.
  */
-export type ModeParams = InferRequestType<typeof api.mechanics.$get>["query"];
+export type GameMode = NonNullable<InferRequestType<typeof api.mechanics.$get>["query"]["mode"]>;
 
 /** How one mode's views scope their list requests. */
 export interface ModeScope {
-  /** The mode; it keys the mode's cached lists. */
+  /** The mode: each list request sends it as `?mode=`, and it keys the mode's cached lists. */
   mode: GameMode;
-  /** The params every list request of the mode carries. */
-  params: ModeParams;
 }
 
 /** A list query key's scope part: the mode, or `null` for every mode. */
@@ -59,7 +54,7 @@ function scopeKey(scope: ModeScope | undefined) {
 export const recordsQuery = () =>
   queryOptions({
     queryKey: ["records"],
-    queryFn: () => parseResponse(api.records.$get()),
+    queryFn: () => parseResponse(api.records.$get({ query: {} })),
   });
 
 /**
@@ -99,7 +94,7 @@ export const glossaryQuery = (kind?: GlossaryKindFilter) =>
 export const decksQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["decks", scopeKey(scope)],
-    queryFn: () => parseResponse(api.decks.$get({ query: { ...scope?.params } })),
+    queryFn: () => parseResponse(api.decks.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
@@ -113,14 +108,15 @@ export const deckQuery = (id: string) =>
   });
 
 /**
- * Scores sorted by damage, highest first, each with its 배 `ratio`.
- * @param scope - the mode to list, when given
+ * Scores sorted by damage, highest first, each with its 배 `ratio`. Scores
+ * carry no mode, so the scope only keys the cache.
+ * @param scope - the mode the list is shown in, when given
  * @param deck - restrict to one deck's slug
  */
 export const scoresQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
     queryKey: ["scores", { ...scopeKey(scope), deck: deck ?? null }],
-    queryFn: () => parseResponse(api.scores.$get({ query: { ...scope?.params, deck } })),
+    queryFn: () => parseResponse(api.scores.$get({ query: { deck } })),
   });
 
 /**
@@ -131,7 +127,7 @@ export const scoresQuery = (scope?: ModeScope, deck?: string) =>
 export const runeBuildsQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
     queryKey: ["rune-builds", { ...scopeKey(scope), deck: deck ?? null }],
-    queryFn: () => parseResponse(api["rune-builds"].$get({ query: { ...scope?.params, deck } })),
+    queryFn: () => parseResponse(api["rune-builds"].$get({ query: { mode: scope?.mode, deck } })),
   });
 
 /**
@@ -141,7 +137,7 @@ export const runeBuildsQuery = (scope?: ModeScope, deck?: string) =>
 export const gearRecsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["gear-recs", scopeKey(scope)],
-    queryFn: () => parseResponse(api["gear-recs"].$get({ query: { ...scope?.params } })),
+    queryFn: () => parseResponse(api["gear-recs"].$get({ query: { mode: scope?.mode } })),
   });
 
 /**
@@ -172,7 +168,7 @@ export const buffValuesQuery = (cookie?: string) =>
 export const mechanicsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["mechanics", scopeKey(scope)],
-    queryFn: () => parseResponse(api.mechanics.$get({ query: { ...scope?.params } })),
+    queryFn: () => parseResponse(api.mechanics.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
@@ -182,7 +178,7 @@ export const mechanicsQuery = (scope?: ModeScope) =>
 export const rngFactorsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["rng-factors", scopeKey(scope)],
-    queryFn: () => parseResponse(api["rng-factors"].$get({ query: { ...scope?.params } })),
+    queryFn: () => parseResponse(api["rng-factors"].$get({ query: { mode: scope?.mode } })),
   });
 
 /**
@@ -192,7 +188,7 @@ export const rngFactorsQuery = (scope?: ModeScope) =>
 export const timelineQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["timeline", scopeKey(scope)],
-    queryFn: () => parseResponse(api.timeline.$get({ query: { ...scope?.params } })),
+    queryFn: () => parseResponse(api.timeline.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
@@ -202,17 +198,20 @@ export const timelineQuery = (scope?: ModeScope) =>
 export const takeawaysQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["takeaways", scopeKey(scope)],
-    queryFn: () => parseResponse(api.takeaways.$get({ query: { ...scope?.params } })),
+    queryFn: () => parseResponse(api.takeaways.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
- * "For your account" recommendations.
- * @param scope - the mode to list, when given
+ * "For your account" recommendations, which belong to a research record
+ * rather than a mode.
+ * @param record - the record whose recommendations to list; null or
+ *   omitted for every record's
  */
-export const recommendationsQuery = (scope?: ModeScope) =>
+export const recommendationsQuery = (record?: string | null) =>
   queryOptions({
-    queryKey: ["recommendations", scopeKey(scope)],
-    queryFn: () => parseResponse(api.recommendations.$get({ query: { ...scope?.params } })),
+    queryKey: ["recommendations", { record: record ?? null }],
+    queryFn: () =>
+      parseResponse(api.recommendations.$get({ query: { record: record ?? undefined } })),
   });
 
 /**

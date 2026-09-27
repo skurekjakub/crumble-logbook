@@ -144,7 +144,7 @@ export const CONQUEST = {
     { id: "timeline", label: "Timeline", to: "/conquest/timeline" },
     { id: "boss", label: "Piñata", to: "/conquest/boss" },
   ],
-  scope: { mode: "guild_conquest", params: {} },
+  scope: { mode: "guild_conquest" },
   placeholder: null,
   copy: {
     overview: {
@@ -220,7 +220,7 @@ export const ARENA = {
   lede: "Arena research is in progress; its screens come once the record has findings.",
   stamp: [],
   tabs: [],
-  scope: { mode: "arena", params: {} },
+  scope: { mode: "arena" },
   placeholder: "Arena research in progress.",
   copy: {},
   boss: null,
@@ -239,7 +239,7 @@ export const RUMBLE = {
   lede: "Rumble Arena research is in progress; its screens come once the record has findings.",
   stamp: [],
   tabs: [],
-  scope: { mode: "rumble_arena", params: {} },
+  scope: { mode: "rumble_arena" },
   placeholder: "Rumble Arena research in progress.",
   copy: {},
   boss: null,
