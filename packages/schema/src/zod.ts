@@ -15,7 +15,7 @@ export const sourceId = z.string().regex(/^(dc|nv|web):.+$/, "expected <site>:<k
 export const deckSlug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "expected a lowercase slug");
 
 /** A non-empty list of non-empty strings, used for json string-array columns. */
-const nameList = z.array(z.string().min(1));
+export const nameList = z.array(z.string().min(1));
 
 /**
  * Insert schema for `sources`. `id` must be `<site>:<key>`; `date`, when
