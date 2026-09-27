@@ -24,6 +24,7 @@ function buff(p: Partial<BuffValue> & Pick<BuffValue, "cookieKr" | "effectType">
     base: "Fixed",
     scalesWithCasterAmp: true,
     target: "team",
+    recordSlug: null,
     sources: [],
     en: null,
     ...p,

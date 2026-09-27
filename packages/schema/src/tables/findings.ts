@@ -1,12 +1,19 @@
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { CONFIDENCE } from "../enums";
+import { modeColumn, recordSlugColumn } from "./columns";
 
-/** A game mechanic writeup with an assigned confidence level. */
+/**
+ * A game mechanic writeup with an assigned confidence level. `topic` groups
+ * writeups of one kind, e.g. `rules` for a mode's rules; `null` for none.
+ */
 export const mechanics = sqliteTable("mechanics", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   title: text("title").notNull(),
   body: text("body").notNull(),
   confidence: text("confidence", { enum: CONFIDENCE }).notNull(),
+  mode: modeColumn(),
+  topic: text("topic"),
+  recordSlug: recordSlugColumn(),
 });
 
 /** A source of run-to-run randomness and how to mitigate it. */
@@ -15,6 +22,8 @@ export const rngFactors = sqliteTable("rng_factors", {
   factor: text("factor").notNull(),
   effect: text("effect").notNull(),
   mitigation: text("mitigation"),
+  mode: modeColumn(),
+  recordSlug: recordSlugColumn(),
 });
 
 /** A dated event on the meta's timeline. */
@@ -22,6 +31,8 @@ export const timeline = sqliteTable("timeline", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   date: text("date").notNull(),
   event: text("event").notNull(),
+  mode: modeColumn(),
+  recordSlug: recordSlugColumn(),
 });
 
 /** A ranked, one-line takeaway from a research record. */
@@ -30,4 +41,6 @@ export const takeaways = sqliteTable("takeaways", {
   position: integer("position").notNull(),
   text: text("text").notNull(),
   detail: text("detail"),
+  mode: modeColumn(),
+  recordSlug: recordSlugColumn(),
 });

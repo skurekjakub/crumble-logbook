@@ -99,6 +99,7 @@ const citedRows: Cited[] = [
 const expectedCounts = {
   sources: Object.keys(sources).length,
   researchRecords: 1,
+  recordModes: 0,
   glossary: glossary.length,
   decks: decks.length,
   deckCookies: sum(decks.map((d) => d.cookies.length)),
@@ -119,6 +120,8 @@ const expectedCounts = {
   recommendations: 1,
   fightEvents: fightTimeline.length,
   buffValues: sum(buffRowsPerCookie),
+  counters: 0,
+  usageStats: 0,
   citations:
     sum(citedRows.map((r) => distinct(r.sources))) +
     distinct(meta.you.sources) +

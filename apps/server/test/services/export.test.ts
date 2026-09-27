@@ -179,6 +179,48 @@ function seedEverything(store: Store): SeedIds {
     ["web:2"],
   );
 
+  store.repos.tables.load("recordModes", [
+    { recordSlug: "kr-levers", mode: "arena", lede: "Arena lede", caveat: null },
+  ]);
+  services.decks.create({
+    id: "rival",
+    nameEn: "Rival",
+    status: "alt",
+    mode: "arena",
+    cookies: [{ cookieKr: "체리 쿠키", level: "1", levelRule: null, stars: null, why: "x" }],
+    pets: [],
+    notes: [],
+    sources: ["dc:1"],
+  });
+  store.repos.tables.load("counters", [
+    {
+      id: 1,
+      slug: "cherry-onion-vs-rival",
+      mode: "arena",
+      teamDeckId: "cherry-onion",
+      beatenByDeckId: "rival",
+      conditions: null,
+      why: "dives first",
+      confidence: "low",
+      recordSlug: null,
+    },
+  ]);
+  store.repos.tables.load("usageStats", [
+    {
+      id: 1,
+      mode: "rumble_arena",
+      kind: "team",
+      subject: "Cherry Onion",
+      members: ["체리 쿠키"],
+      usagePct: 12.5,
+      confirmedPct: null,
+      sample: "top 100",
+      capturedAt: "2026-01-01",
+      note: null,
+      recordSlug: null,
+    },
+  ]);
+
   return { mechanicId: mechanic.id, scoreId: score.id, deckCookieId };
 }
 
@@ -199,9 +241,10 @@ describe("exportSnapshot / restoreSnapshot", () => {
     expect(counts).toEqual({
       sources: 2,
       researchRecords: 1,
+      recordModes: 1,
       glossary: 1,
-      decks: 1,
-      deckCookies: 1,
+      decks: 2,
+      deckCookies: 2,
       deckPets: 1,
       deckNotes: 1,
       runeBuilds: 1,
@@ -216,7 +259,9 @@ describe("exportSnapshot / restoreSnapshot", () => {
       recommendations: 1,
       fightEvents: 1,
       buffValues: 1,
-      citations: 11,
+      counters: 1,
+      usageStats: 1,
+      citations: 12,
     });
     for (const [table, rows] of Object.entries(first.tables)) {
       expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);

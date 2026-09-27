@@ -40,6 +40,13 @@ export const researchRecordSelect = createSelectSchema(t.researchRecords);
 /** A row selected from `research_records`. */
 export type ResearchRecordRow = typeof t.researchRecords.$inferSelect;
 
+/** Insert schema for `record_modes`. */
+export const recordModeInsert = createInsertSchema(t.recordModes);
+/** Select schema for `record_modes`, mirroring the stored row shape. */
+export const recordModeSelect = createSelectSchema(t.recordModes);
+/** A row selected from `record_modes`. */
+export type RecordModeRow = typeof t.recordModes.$inferSelect;
+
 /**
  * Insert schema for `glossary`. `kr` must be non-empty; `shorthand` and
  * `extra` are optional on insert (both have a runtime default).
@@ -215,6 +222,45 @@ export const buffValueInsert = createInsertSchema(t.buffValues, {
 export const buffValueSelect = createSelectSchema(t.buffValues);
 /** A row selected from `buff_values`. */
 export type BuffValueRow = typeof t.buffValues.$inferSelect;
+
+/**
+ * Insert schema for `counters`. `slug` and both deck ids must be lowercase
+ * slugs; `why` must be non-empty.
+ */
+export const counterInsert = createInsertSchema(t.counters, {
+  slug: () => deckSlug,
+  teamDeckId: () => deckSlug,
+  beatenByDeckId: () => deckSlug,
+  why: (s) => s.min(1),
+});
+/** Select schema for `counters`, mirroring the stored row shape. */
+export const counterSelect = createSelectSchema(t.counters);
+/** A row selected from `counters`. */
+export type CounterRow = typeof t.counters.$inferSelect;
+
+/** A percentage, 0-100. */
+const percent = z.number().min(0).max(100);
+
+/**
+ * Insert schema for `usage_stats`. `subject` and `sample` must be
+ * non-empty; `usagePct` and `confirmedPct` (when present) are 0-100;
+ * `capturedAt` must be `YYYY-MM-DD`; `members`, when present, may be `null`
+ * or a name list.
+ */
+export const usageStatInsert = createInsertSchema(t.usageStats, {
+  subject: (s) => s.min(1),
+  members: () => nameList.nullish(),
+  usagePct: () => percent,
+  confirmedPct: () => percent.nullish(),
+  sample: (s) => s.min(1),
+  capturedAt: () => isoDate,
+});
+/** Select schema for `usage_stats`, with `members` typed precisely. */
+export const usageStatSelect = createSelectSchema(t.usageStats, {
+  members: () => nameList.nullable(),
+});
+/** A row selected from `usage_stats`. */
+export type UsageStatRow = typeof t.usageStats.$inferSelect;
 
 /** Insert schema for `citations`. */
 export const citationInsert = createInsertSchema(t.citations);

@@ -75,10 +75,19 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
 
     roundtrip(
       db,
+      tables.recordModes,
+      schemas.recordModeInsert,
+      schemas.recordModeSelect,
+      { recordSlug: "gc-meta", mode: "arena", lede: "Arena lede", caveat: null },
+      (rm) => and(eq(rm.recordSlug, "gc-meta"), eq(rm.mode, "arena"))!,
+    );
+
+    roundtrip(
+      db,
       tables.glossary,
       schemas.glossaryInsert,
       schemas.glossarySelect,
-      { kr: "피겨", shorthand: ["피겨"], kind: "cookie" },
+      { kr: "피겨", shorthand: ["피겨"], kind: "cookie", recordSlug: "gc-meta" },
       (g) => eq(g.kr, "피겨"),
     );
 
@@ -93,6 +102,8 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
         nameEn: "Burn Rush",
         status: "meta",
         atkOrder: ["front", "back"],
+        mode: "arena",
+        recordSlug: "gc-meta",
       },
       (d) => eq(d.id, "burn-rush"),
     );
@@ -108,8 +119,56 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
         cookieKr: "불꽃정령맛",
         level: "60",
         why: "primary burn dealer",
+        slot: "row1-1",
       },
       (dc) => eq(dc.deckId, deck.id),
+    );
+
+    const rival = roundtrip(
+      db,
+      tables.decks,
+      schemas.deckInsert,
+      schemas.deckSelect,
+      { id: "rival", position: 2, nameEn: "Rival", status: "alt", mode: "arena" },
+      (d) => eq(d.id, "rival"),
+    );
+
+    roundtrip(
+      db,
+      tables.counters,
+      schemas.counterInsert,
+      schemas.counterSelect,
+      {
+        slug: "burn-rush-vs-rival",
+        mode: "arena",
+        teamDeckId: deck.id,
+        beatenByDeckId: rival.id,
+        conditions: "at similar power",
+        why: "the rival's dive lands first",
+        confidence: "medium",
+        recordSlug: "gc-meta",
+      },
+      (c) => eq(c.slug, "burn-rush-vs-rival"),
+    );
+
+    roundtrip(
+      db,
+      tables.usageStats,
+      schemas.usageStatInsert,
+      schemas.usageStatSelect,
+      {
+        mode: "rumble_arena",
+        kind: "core",
+        subject: "support core",
+        members: ["석류맛 쿠키", "우유맛 쿠키"],
+        usagePct: 97,
+        confirmedPct: 70,
+        sample: "top 100 defenses",
+        capturedAt: "2026-09-27",
+        note: "upper bound",
+        recordSlug: "gc-meta",
+      },
+      (u) => eq(u.subject, "support core"),
     );
 
     roundtrip(
@@ -214,6 +273,8 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
         title: "Shield stacking",
         body: "Shields absorb before defense buffs apply.",
         confidence: "high",
+        mode: "rumble_arena",
+        topic: "rules",
       },
       (m) => eq(m.title, "Shield stacking"),
     );

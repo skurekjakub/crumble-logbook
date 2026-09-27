@@ -13,6 +13,7 @@ const entry = (o: Pick<GlossaryEntry, "kr"> & Partial<GlossaryEntry>): GlossaryE
   class: null,
   rarity: null,
   extra: {},
+  recordSlug: null,
   ...o,
 });
 

@@ -11,6 +11,7 @@ const skatingQueen: GlossaryRow = {
   class: null,
   rarity: null,
   extra: {},
+  recordSlug: null,
 };
 
 const unglossed: GlossaryRow = {
@@ -22,6 +23,7 @@ const unglossed: GlossaryRow = {
   class: null,
   rarity: null,
   extra: {},
+  recordSlug: null,
 };
 
 describe("createNameResolver", () => {

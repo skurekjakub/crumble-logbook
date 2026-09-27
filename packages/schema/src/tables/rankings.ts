@@ -1,5 +1,6 @@
 import { integer, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 import { RANKING_BOARD } from "../enums";
+import { recordSlugColumn } from "./columns";
 import { sources } from "./sources";
 
 /** A single leaderboard entry captured at a point in time. */
@@ -19,6 +20,7 @@ export const rankings = sqliteTable(
     sourceId: text("source_id")
       .notNull()
       .references(() => sources.id),
+    recordSlug: recordSlugColumn(),
   },
   (t) => [
     uniqueIndex("rankings_board_season_rank_captured_at_uq").on(

@@ -1,9 +1,11 @@
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { SOURCE_SITE } from "../enums";
+import { recordSlugColumn } from "./columns";
 
 /**
  * A citable source: a Discord message, Naver cafe post, or web page the
  * research draws on. `id` is a `<site>:<key>` string, e.g. `dc:76135`.
+ * Records share sources: `recordSlug` is the first record that loaded it.
  */
 export const sources = sqliteTable("sources", {
   id: text("id").primaryKey(),
@@ -16,4 +18,5 @@ export const sources = sqliteTable("sources", {
   note: text("note"),
   summaryEn: text("summary_en"),
   capturePath: text("capture_path"),
+  recordSlug: recordSlugColumn(),
 });

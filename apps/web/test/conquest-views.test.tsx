@@ -21,6 +21,7 @@ const RECORD = {
   seasonLabel: "S5 (live)",
   lede: "What Korean and global players run in Guild Conquest.",
   caveat: "Snapshot of 2026-09-27; Season 5 closes 2026-09-28.",
+  mode: "guild_conquest",
 } satisfies ResearchRecord;
 
 const SOURCES = [
@@ -34,9 +35,19 @@ const TAKEAWAYS = [
     position: 1,
     text: "Stack skill amp on the buffers.",
     detail: "Their buffs scale with the caster's skill amp.",
+    mode: "guild_conquest",
+    recordSlug: null,
     sources: ["nv:43653"],
   },
-  { id: 2, position: 2, text: "Keep fillers at Lv.1.", detail: null, sources: ["dc:76135"] },
+  {
+    id: 2,
+    position: 2,
+    text: "Keep fillers at Lv.1.",
+    detail: null,
+    mode: "guild_conquest",
+    recordSlug: null,
+    sources: ["dc:76135"],
+  },
 ] satisfies Takeaway[];
 
 const RECOMMENDATIONS = [
@@ -44,6 +55,7 @@ const RECOMMENDATIONS = [
     id: 1,
     summary: "Your lineup matches the meta deck.",
     changes: ["Level Scorpion to Lv.10–45.", "Raise Candy Shade Pouch."],
+    recordSlug: null,
     sources: ["dc:76135"],
   },
 ] satisfies Recommendation[];
@@ -52,6 +64,8 @@ const DECKS = [
   {
     id: "cherry",
     position: 1,
+    mode: "guild_conquest",
+    recordSlug: null,
     nameEn: "Cherry deck",
     nameKr: "체리덱",
     status: "meta",
@@ -76,6 +90,7 @@ const DECKS = [
         level: "100",
         levelRule: null,
         stars: null,
+        slot: null,
         why: "ATK #1 on purpose.",
       },
       {
@@ -86,6 +101,7 @@ const DECKS = [
         level: null,
         levelRule: "As high as possible while ATK < Milk",
         stars: null,
+        slot: null,
         why: "Ranks into the beams on base ATK.",
       },
       {
@@ -96,6 +112,7 @@ const DECKS = [
         level: "1",
         levelRule: null,
         stars: null,
+        slot: null,
         why: "Formation only.",
       },
     ],
@@ -111,6 +128,8 @@ const DECKS = [
   {
     id: "meso",
     position: 2,
+    mode: "guild_conquest",
+    recordSlug: null,
     nameEn: "Melon Soda deck",
     nameKr: null,
     status: "alt",
@@ -133,6 +152,8 @@ const RUNES = [
     id: 1,
     cookieKr: "우유",
     en: "Milk",
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "All ATK%",
     why: "Milk's buff scales with her own ATK.",
     disputed: "One commenter says skill amp is better on Milk.",
@@ -143,6 +164,8 @@ const RUNES = [
     id: 2,
     cookieKr: "석류",
     en: "Pomegranate",
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "All skill amp",
     why: "Her buffs scale with the caster's skill amp.",
     disputed: null,
@@ -153,6 +176,8 @@ const RUNES = [
     id: 3,
     cookieKr: "메소",
     en: null,
+    mode: "guild_conquest",
+    recordSlug: null,
     lines: "Move speed",
     why: "Placement cookie.",
     disputed: null,
@@ -164,6 +189,8 @@ const RUNES = [
 const GEAR = [
   {
     id: 1,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "top_left",
     substats: "Skill amp + crit dmg",
     context: "raid",
@@ -172,6 +199,8 @@ const GEAR = [
   },
   {
     id: 2,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "top_left",
     substats: "Skill amp + crit rate (arena)",
     context: "arena",
@@ -180,6 +209,8 @@ const GEAR = [
   },
   {
     id: 3,
+    mode: "guild_conquest",
+    recordSlug: null,
     slot: "general",
     substats: "No move speed, accuracy or focus",
     context: "raid",

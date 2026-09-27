@@ -6,6 +6,9 @@ import { renderRoute } from "./view-harness";
 const MECHANICS = [
   {
     id: 1,
+    mode: "guild_conquest",
+    topic: null,
+    recordSlug: null,
     title: "Pomegranate's beams (빨대)",
     body: "Her skill gives +69% skill amp for 9 s through beams.",
     confidence: "high",
@@ -13,6 +16,9 @@ const MECHANICS = [
   },
   {
     id: 2,
+    mode: "guild_conquest",
+    topic: null,
+    recordSlug: null,
     title: "Power correction",
     body: "Unclear whether raids use it.",
     confidence: "low",
@@ -21,8 +27,22 @@ const MECHANICS = [
 ] satisfies Mechanic[];
 
 const TIMELINE = [
-  { id: 2, date: "2026-09-01", event: "Season 5 opens.", sources: ["nv:43653"] },
-  { id: 1, date: "2026-08-13", event: "Patch: skill amp scales Milk's buff.", sources: [] },
+  {
+    id: 2,
+    date: "2026-09-01",
+    event: "Season 5 opens.",
+    mode: "guild_conquest",
+    recordSlug: null,
+    sources: ["nv:43653"],
+  },
+  {
+    id: 1,
+    date: "2026-08-13",
+    event: "Patch: skill amp scales Milk's buff.",
+    mode: "guild_conquest",
+    recordSlug: null,
+    sources: [],
+  },
 ] satisfies TimelineEvent[];
 
 describe("mechanics view", () => {

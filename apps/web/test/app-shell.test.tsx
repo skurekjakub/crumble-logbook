@@ -13,6 +13,7 @@ const RECORD = {
   seasonLabel: "S5 (live)",
   lede: "What Korean and global players run in Guild Conquest.",
   caveat: "Snapshot of 2026-09-27.",
+  mode: "guild_conquest",
 } satisfies ResearchRecord;
 
 const SOURCES = [

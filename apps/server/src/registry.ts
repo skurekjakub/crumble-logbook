@@ -21,6 +21,7 @@ import {
   buffValuePatch,
   buffValues,
   citations,
+  counters,
   deckCookies,
   deckInput,
   deckNotes,
@@ -42,6 +43,7 @@ import {
   recommendationInput,
   recommendationPatch,
   recommendations,
+  recordModes,
   researchRecords,
   rngFactorInput,
   rngFactorPatch,
@@ -60,6 +62,7 @@ import {
   timeline,
   timelineEventInput,
   timelineEventPatch,
+  usageStats,
 } from "@crumble/schema";
 import type { InferInsertModel, InferSelectModel } from "drizzle-orm";
 import type { SQLiteTable } from "drizzle-orm/sqlite-core";
@@ -174,6 +177,7 @@ const nonEmpty = z.string().min(1);
 export const REGISTRY = {
   sources: entry(sources, { path: "/sources" }),
   researchRecords: entry(researchRecords, { path: "/records" }),
+  recordModes: entry(recordModes, {}),
   glossary: entry(glossary, { path: "/glossary" }),
   decks: entry(decks, {
     path: "/decks",
@@ -248,6 +252,8 @@ export const REGISTRY = {
     api: { id: rowId, input: buffValueInput, patch: buffValuePatch },
     content: { order: ["cookieKr", "effectType", "skillGrade", "id"], gloss: "cookieKr" },
   }),
+  counters: entry(counters, { entity: "counter" }),
+  usageStats: entry(usageStats, { entity: "usage_stat" }),
   citations: entry(citations, {}),
 };
 

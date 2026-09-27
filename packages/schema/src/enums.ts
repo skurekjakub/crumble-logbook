@@ -39,6 +39,21 @@ export type GearContext = (typeof GEAR_CONTEXT)[number];
 export const RANKING_BOARD = ["players", "guilds", "power"] as const;
 export type RankingBoard = (typeof RANKING_BOARD)[number];
 
+/**
+ * Game mode research content is about: Guild Conquest (길드 토벌전), regular
+ * Arena (아레나) or Rumble Arena (와글와글 아레나). The first is the default of
+ * every `mode` column.
+ */
+export const GAME_MODE = ["guild_conquest", "arena", "rumble_arena"] as const;
+export type GameMode = (typeof GAME_MODE)[number];
+
+/**
+ * What a usage figure counts: one cookie, a group of cookies that appear
+ * together (`core`), one pet, or a whole team.
+ */
+export const USAGE_KIND = ["cookie", "core", "pet", "team"] as const;
+export type UsageKind = (typeof USAGE_KIND)[number];
+
 /** Confidence assigned to a mechanic writeup. */
 export const CONFIDENCE = ["high", "medium", "low"] as const;
 export type Confidence = (typeof CONFIDENCE)[number];
@@ -71,5 +86,7 @@ export const CITED_ENTITY = [
   "recommendation",
   "fight_event",
   "buff_value",
+  "counter",
+  "usage_stat",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];
