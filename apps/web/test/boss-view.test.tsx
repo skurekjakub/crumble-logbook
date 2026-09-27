@@ -200,6 +200,14 @@ const MECHANICS = [
     confidence: "high",
   }),
   mechanic({
+    id: 19,
+    topic: "boss_name",
+    title: "English name",
+    body: "Extra-Stuffed Piñata in the official English patch notes.",
+    confidence: "medium",
+    sources: ["web:crumbgg:rankings-s5"],
+  }),
+  mechanic({
     id: 20,
     topic: "boss_element",
     title: "Element",
@@ -369,15 +377,19 @@ const EMPTY = {
 const section = (name: string) => screen.getByRole("region", { name });
 
 describe("Piñata boss view", () => {
-  it("heads the page with the boss's names and its cited element, weakness, fight length and scoring", async () => {
+  it("heads the page with the boss's label and Korean name, and its cited English name, element, weakness, fight length and scoring", async () => {
     await renderRoute(PATH, FULL);
-    expect(await screen.findByRole("heading", { level: 2 })).toHaveTextContent(
-      "Extra Stuffed Piñata",
-    );
+    const heading = await screen.findByRole("heading", { level: 2 });
+    expect(heading).toHaveTextContent("Piñata");
+    expect(heading).not.toHaveTextContent("Extra");
     expect(screen.getByText("지나치게 무거워진 피냐타")).toHaveClass("kr");
     const kv = document.querySelector("dl.kv") as HTMLElement;
     const dd = async (label: string) =>
       (await within(kv).findByText(label)).nextElementSibling as HTMLElement;
+
+    const name = await dd("English name");
+    expect(name).toHaveTextContent("Extra-Stuffed Piñata in the official English patch notes.");
+    expect(within(name).getByText("medium")).toHaveClass("pill", "medium");
 
     const element = await dd("Element");
     expect(element).toHaveTextContent("Dark: the lobby shows the moon icon.");
@@ -428,6 +440,7 @@ describe("Piñata boss view", () => {
     });
     const kv = document.querySelector("dl.kv") as HTMLElement;
     expect(await within(kv).findByText("60 s")).toBeVisible();
+    expect(within(kv).queryByText("English name")).toBeNull();
     expect(within(kv).queryByText("Element")).toBeNull();
     expect(within(kv).queryByText("Weak to")).toBeNull();
     expect(within(kv).queryByText("Score")).toBeNull();
@@ -463,6 +476,20 @@ describe("Piñata boss view", () => {
     expect(wipe).toHaveTextContent("43 s · 17 s left");
     expect(wipe).toHaveTextContent("a certain wipe");
     expect(await within(wipe).findByRole("link", { name: "DC 76135" })).toBeVisible();
+  });
+
+  it("without an event stating the fight's length, spans the track to the latest timed event", async () => {
+    await renderRoute(PATH, {
+      ...FULL,
+      "/api/fight-events?boss=pinata": {
+        body: FIGHT_EVENTS.filter((e) => e.event !== "fight_length" && e.event !== "fight_ends"),
+      },
+    });
+    const timeline = await screen.findByRole("region", { name: "Fight timeline" });
+    const marks = await within(timeline).findAllByTestId("fight-mark");
+    const left = (event: string) => marks.find((m) => m.dataset.event === event)!.style.left;
+    expect(left("super_jump_wipe")).toBe("100%");
+    expect(left("slam_pattern")).toBe(`${(30 / 43) * 100}%`);
   });
 
   it("hatches low-confidence events and labels them as unverified claims (RF4)", async () => {
@@ -673,7 +700,7 @@ describe("Piñata boss view", () => {
     );
     expect(await screen.findByText("The Cherry deck isn't recorded yet.")).toHaveClass("empty");
     expect(screen.queryByRole("alert")).toBeNull();
-    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("Extra Stuffed Piñata");
+    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("Piñata");
   });
 
   it("names the failed resource and keeps the rest of the page", async () => {

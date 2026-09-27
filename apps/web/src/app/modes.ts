@@ -28,10 +28,15 @@ export interface SectionTab {
   to: AppPath;
 }
 
-/** A view's heading and the lede under it. */
+/**
+ * A view's heading and the lede under it. Copy is plain UI text: a research
+ * claim the view needs to state goes in a mechanics row, named by `topic`.
+ */
 export interface ViewCopy {
   title: string;
   lede: string;
+  /** The mechanics topic whose cited rows the view shows under its lede, when it has one. */
+  topic?: string;
 }
 
 /** The views several modes share, by name. */
@@ -94,8 +99,10 @@ export interface SurvivalCard {
 export interface BossConfig {
   /** The boss id fight events are stored under. */
   id: string;
+  /** The boss's Korean name, as the game shows it. */
   kr: string;
-  en: string;
+  /** The screen's heading: a UI label, not a claim about the English client's name (that's a fact topic). */
+  name: string;
   /** The header list's facts, in order, each read from its mechanics topic. */
   facts: readonly BossFact[];
   /** The mechanics topics the screen's callouts read. */
@@ -111,8 +118,6 @@ export interface BossConfig {
   };
   /** The screen's lede. */
   lede: string;
-  /** The fight's length in seconds, when no fight event states it. */
-  fightSeconds: number;
   /** The deck whose runes and ATK order the screen checks. */
   deck: string;
   /** The gear context the screen shows. */
@@ -125,7 +130,7 @@ export interface BossConfig {
   hasteKr: string;
   /** The debuffer whose application chance gets a callout (rune-build shorthand). */
   debufferKr: string;
-  /** The fight-event key stating the fight's length. */
+  /** The fight-event key stating the fight's length; without it, the track ends at the latest timed event. */
   lengthEvent: string;
   /** The survival cards, in order. */
   survival: readonly SurvivalCard[];
@@ -200,7 +205,8 @@ export const CONQUEST = {
     },
     decks: {
       title: "Decks",
-      lede: "Lineups as the guides post them. Striped slots are deliberate Lv.1 fillers: they're there for a synergy or passive and kept low so Pomegranate's buff never lands on them.",
+      lede: "Lineups as the guides post them. Striped slots are deliberate Lv.1 fillers; each cookie's row under its deck says why it's there.",
+      topic: "filler_levels",
     },
     runes: {
       title: "Sugar runes",
@@ -208,7 +214,7 @@ export const CONQUEST = {
     },
     gear: {
       title: "Gear substats",
-      lede: "Laid out like the equipment screen. Since the 9/23 patch raid gear has its own preset, so it doesn't have to double as arena gear.",
+      lede: "Laid out like the equipment screen. Notes that apply to the whole set, such as which preset to wear, are under the board.",
     },
     scores: {
       title: "Scores and RNG",
@@ -226,8 +232,9 @@ export const CONQUEST = {
   boss: {
     id: "pinata",
     kr: "지나치게 무거워진 피냐타",
-    en: "Extra Stuffed Piñata",
+    name: "Piñata",
     facts: [
+      { label: "English name", topic: "boss_name" },
       { label: "Element", topic: "boss_element" },
       { label: "Weak to", topic: "boss_weakness" },
       { label: "Score", topic: "boss_score" },
@@ -239,7 +246,6 @@ export const CONQUEST = {
       atkPet: "atk_pet",
     },
     lede: "The Guild Conquest boss on one page: when it hits, what it takes to live through it, what each buffer gives by star, and what to run.",
-    fightSeconds: 60,
     deck: "cherry",
     gearContext: "raid",
     catcherKr: "전갈",
@@ -286,7 +292,7 @@ const PVP_COPY = {
   },
   gear: {
     title: "Gear substats",
-    lede: "Laid out like the equipment screen. Arena gear has its own preset since the 9/23 patch.",
+    lede: "Laid out like the equipment screen. Notes that apply to the whole set, such as which preset to wear, are under the board.",
   },
   mechanics: {
     title: "Mechanics",

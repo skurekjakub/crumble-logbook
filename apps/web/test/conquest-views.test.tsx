@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import type {
   Deck,
   GearRec,
+  Mechanic,
   Recommendation,
   ResearchRecord,
   RuneBuild,
@@ -220,6 +221,29 @@ const GEAR = [
   },
 ] satisfies GearRec[];
 
+const MECHANICS = [
+  {
+    id: 7,
+    mode: "guild_conquest",
+    recordSlug: null,
+    topic: "filler_levels",
+    title: "Why fillers sit at Lv.1",
+    body: "Beams go to the highest-ATK allies, so the fillers stay low.",
+    confidence: "high",
+    sources: ["dc:76135"],
+  },
+  {
+    id: 8,
+    mode: "guild_conquest",
+    recordSlug: null,
+    topic: null,
+    title: "Crit above 100%",
+    body: "Crit rate past 100% rolls extra crit tiers.",
+    confidence: "high",
+    sources: [],
+  },
+] satisfies Mechanic[];
+
 const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
   "/api/sources": { body: SOURCES },
@@ -228,6 +252,7 @@ const API: Record<string, Canned> = {
   "/api/recommendations?record=001-guild-conquest-meta": { body: RECOMMENDATIONS },
   "/api/rune-builds?mode=guild_conquest": { body: RUNES },
   "/api/gear-recs?mode=guild_conquest": { body: GEAR },
+  "/api/mechanics?mode=guild_conquest": { body: MECHANICS },
 };
 
 /** Renders the whole app at `path` against this file's stubbed API, overriding some responses. */
@@ -284,6 +309,18 @@ describe("/conquest overview", () => {
 });
 
 describe("/conquest/decks", () => {
+  it("keeps the filler claim out of the lede and shows its cited mechanic under it", async () => {
+    await renderAt("/conquest/decks");
+    const lede = await panel().findByText(/Striped slots are deliberate Lv\.1 fillers/, {
+      selector: ".lede",
+    });
+    expect(lede).not.toHaveTextContent(/Pomegranate|beam/);
+    const note = (await panel().findByText(MECHANICS[0]!.body)).closest(".note") as HTMLElement;
+    expect(within(note).getByText("high")).toHaveClass("pill", "high");
+    expect(await within(note).findByRole("link", { name: "DC 76135" })).toBeVisible();
+    expect(panel().queryByText(MECHANICS[1]!.body)).toBeNull();
+  });
+
   it("renders each deck as a card with lineup, levels, ATK order, pets and notes", async () => {
     await renderAt("/conquest/decks");
     const card = (await panel().findByRole("heading", { name: /Cherry deck/ })).closest(
@@ -478,6 +515,9 @@ describe("/conquest/gear", () => {
     await renderAt("/conquest/gear");
     expect(await panel().findByText("Skill amp + crit dmg")).toHaveClass("stat");
     expect(panel().getByRole("heading", { name: "Gear substats" })).toBeVisible();
+    expect(panel().getByText(/equipment screen/, { selector: ".lede" })).not.toHaveTextContent(
+      /9\/23|patch/,
+    );
     const slot = panel().getByText("Skill amp + crit dmg").closest(".gslot") as HTMLElement;
     expect(within(slot).getByText("raid")).toHaveClass("chip");
     expect(within(slot).getByText("arena")).toHaveClass("chip");

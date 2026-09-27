@@ -6,7 +6,7 @@ import type { ModeSection } from "../app/modes";
 import { EmptyState } from "../components/EmptyState";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
-import { ViewHeader } from "../components/ViewHeader";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /** Orders events by date, oldest first; same-date events keep their id order. */
 function byDate(a: TimelineEvent, b: TimelineEvent): number {
@@ -24,7 +24,7 @@ export function TimelineView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
   return (
     <>
-      <ViewHeader title={mode.copy.timeline?.title ?? "Timeline"} lede={mode.copy.timeline?.lede} />
+      <ModeViewHeader mode={mode} view="timeline" fallbackTitle="Timeline" />
       <QueryResult query={timeline} resource="timeline">
         {(events) =>
           events.length ? (

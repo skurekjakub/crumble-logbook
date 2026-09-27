@@ -8,8 +8,8 @@ import { EmptyState } from "../components/EmptyState";
 import { Kv } from "../components/Kv";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
-import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /** The numbered takeaways, each with its detail and sources; "No takeaways yet." when there are none. */
 function Takeaways({ rows, sources }: { rows: readonly Takeaway[]; sources: SourceIndex }) {
@@ -130,7 +130,7 @@ export function OverviewView({ mode }: { mode: ModeSection }) {
           {c}
         </div>
       ))}
-      <ViewHeader title={mode.copy.overview?.title ?? "Overview"} lede={mode.copy.overview?.lede} />
+      <ModeViewHeader mode={mode} view="overview" fallbackTitle="Overview" />
       {mode.rules ? (
         <QueryResult query={rules} resource="rules">
           {(rows) => <Rules rows={rows} config={mode.rules!} sources={sources} />}

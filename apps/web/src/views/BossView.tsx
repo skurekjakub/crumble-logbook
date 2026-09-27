@@ -30,6 +30,7 @@ import {
   buffStars,
   effectLabel,
   effectName,
+  fightLength,
   formatPct,
   pivotBuffs,
   starCells,
@@ -102,14 +103,14 @@ export function BossView({ mode, boss }: BossViewProps) {
   const events = fights.data ?? [];
   const mechs = mechanics.data ?? [];
   const lengthEvent = events.find((e) => e.event === boss.lengthEvent);
-  const length = lengthEvent?.tElapsed ?? boss.fightSeconds;
+  const length = fightLength(events, boss.lengthEvent);
 
   return (
     <>
       <ViewHeader
         title={
           <>
-            {boss.en} <span className="kr">{boss.kr}</span>
+            {boss.name} <span className="kr">{boss.kr}</span>
           </>
         }
         lede={boss.lede}

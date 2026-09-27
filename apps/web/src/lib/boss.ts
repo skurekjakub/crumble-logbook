@@ -31,6 +31,23 @@ export function trackPercent(t: number, length: number): number {
 }
 
 /**
+ * The fight's length: the time of the event that states it, else the time
+ * of the latest timed event.
+ *
+ * @param events - the fight's events; `/api/fight-events` rows fit as they are
+ * @param lengthEvent - the key of the event that states the length
+ * @returns seconds; 0 when no event is timed
+ */
+export function fightLength(
+  events: readonly { event: string; tElapsed: number | null }[],
+  lengthEvent: string,
+): number {
+  const stated = events.find((e) => e.event === lengthEvent)?.tElapsed;
+  if (stated != null) return stated;
+  return events.reduce((latest, e) => Math.max(latest, e.tElapsed ?? 0), 0);
+}
+
+/**
  * The in-game countdown at a moment: the HUD counts down, and the community
  * names patterns by that remaining time ("the 17 s wipe").
  *

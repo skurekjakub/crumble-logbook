@@ -10,8 +10,8 @@ import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
 import { UsageBars, UsageLegend } from "../components/UsageBars";
-import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /** Section heading per usage kind, in display order. */
 const KIND_LABELS: Readonly<Record<UsageStat["kind"], string>> = {
@@ -125,7 +125,7 @@ export function UsageView({ mode }: { mode: ModeSection }) {
   return (
     <>
       {caveat ? <div className="note">{caveat}</div> : null}
-      <ViewHeader title={mode.copy.usage?.title ?? "Usage"} lede={mode.copy.usage?.lede} />
+      <ModeViewHeader mode={mode} view="usage" fallbackTitle="Usage" />
       <QueryResult query={usage} resource="usage figures">
         {(rows) => {
           if (!rows.length) return <EmptyState>No usage data recorded yet.</EmptyState>;

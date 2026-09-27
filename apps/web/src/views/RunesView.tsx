@@ -9,8 +9,8 @@ import { EmptyState } from "../components/EmptyState";
 import { ErrorBox } from "../components/ErrorBox";
 import { QueryResult } from "../components/QueryResult";
 import { RuneCard } from "../components/RuneBuilds";
-import { ViewHeader } from "../components/ViewHeader";
 import { optionalText } from "../lib/search";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /** The runes view's search params: a deck slug and a text query, both optional. */
 export interface RunesSearch {
@@ -55,7 +55,7 @@ export function RunesView({ mode, search, onSearch }: RunesViewProps) {
 
   return (
     <>
-      <ViewHeader title={mode.copy.runes?.title ?? "Runes"} lede={mode.copy.runes?.lede} />
+      <ModeViewHeader mode={mode} view="runes" fallbackTitle="Runes" />
       {decks.isError ? <ErrorBox resource="decks" error={decks.error} /> : null}
       <QueryResult query={runes} resource="rune builds">
         {(rows) => {
