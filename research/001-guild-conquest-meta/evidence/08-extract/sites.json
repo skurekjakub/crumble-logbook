@@ -1,0 +1,1614 @@
+{
+ "batch": "sites",
+ "posts": [
+  {
+   "source": "other",
+   "id": "crumblehub-clear-decks-guild_raid",
+   "url": "https://crumblehub.co/api/clear-decks?mode=guild_raid&sort=recommended&limit=50&roster=4",
+   "date": "2026-09-27",
+   "title_kr": "크럼블 허브 유저 공유 덱 — 길드 토벌전 (GUILD_RAID)",
+   "title_en": "CrumbleHub community shared decks filtered to Guild Conquest",
+   "relevance": 2,
+   "summary_en": "CrumbleHub's deck-sharing database has a guild_raid mode; it held 11 shared decks on 2026-09-27 (one titled '1G dmg at 69M Power'). Records carry 12 cookies, 3 pets, captain slot and mercenary-band perks but no levels/stars/runes. Appearance count across decks: 브시커 11, 석류 11, 우유 11, 전갈 11, 마카롱 11, 닼초 10, 피노 10, 피겨 9, 허브 9, 호밀 9, 실론 9, 메소 5, 딸크 4, 정전 4, 치케 3, 밀키 1, 딸기쇼트케이크 1, 포도넝쿨 1, 마들렌 1, 바람궁수 1. Pets are near-uniform: 갓난갓방울 in every deck, 판다만두 in most, plus 핫도그도그 or 전지멜로우.",
+   "scores": [
+    {
+     "damage": "1G",
+     "power": "69M",
+     "ratio": "~14.5배 (computed, not stated)",
+     "deck": "1G dmg at 69M Power",
+     "note": "Deck title by MammaryMints, 2026-09-05 04:24:34; squad Lv4, captain 호밀맛 쿠키"
+    }
+   ],
+   "teams": [
+    {
+     "name": "Extra-stuffed Piñata — by 익명 (2026-08-27 22:14:55, +36/-9)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "판다만두",
+      "핫도그도그"
+     ],
+     "atk_order": [],
+     "perks": "no mercenary-band data entered",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 마카롱 / 브시커 / 전갈 / 호밀 / 메소 / 피노 / 석류 / 피겨 / 우유 / 딸크 / 허브 / 닼초. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "1G dmg at 69M Power — by MammaryMints (2026-09-05 04:24:34, +14/-1)",
+     "cookies": [
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": "captain (단장) slot"
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "전지멜로우",
+      "판다만두"
+     ],
+     "atk_order": [],
+     "perks": "용병단 Lv4 베테랑 용병단; perks: 초고속 승진 (공격력 가장 높은 아군 공격력 7% 증가)",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 전갈 / 브시커 / 피겨 / 메소 / 실론 / 피노 / 닼초 / 우유 / 호밀 / 허브 / 마카롱 / 석류. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "범용덱 — by 청룡맛쿠키 (2026-09-05 00:22:37, +5/-1)",
+     "cookies": [
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": "captain (단장) slot"
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "판다만두",
+      "갓난갓방울",
+      "핫도그도그"
+     ],
+     "atk_order": [],
+     "perks": "용병단 Lv4 베테랑 용병단; perks: 크런치 모드 (최대체력 낮은 아군 2명 공격력 15% 증가, 최대체력 10% 감소), 열정페이 (공격력 가장 높은 아군 공격력 20% 증가, 최대체력 20% 감소)",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 브시커 / 전갈 / 피겨 / 딸크 / 실론 / 우유 / 닼초 / 석류 / 피노 / 호밀 / 허브 / 마카롱. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "(untitled) — by Anax (2026-09-20 16:50:35, +2/-0)",
+     "cookies": [
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": "captain (단장) slot"
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "핫도그도그",
+      "판다만두"
+     ],
+     "atk_order": [],
+     "perks": "용병단 Lv4 베테랑 용병단; perks: 수석 용병단 (전투력 높은 아군 3명 공격력, 방어력, 최대체력 3% 증가), 초고속 승진 (공격력 가장 높은 아군 공격력 7% 증가)",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 정전 / 마카롱 / 치케 / 피노 / 석류 / 우유 / 닼초 / 실론 / 메소 / 전갈 / 브시커 / 피겨. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "Rapid Fire Mode Guild Raid — by Doggo (2026-09-19 22:30:32, +2/-0)",
+     "cookies": [
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": "captain (단장) slot"
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "전지멜로우",
+      "판다만두"
+     ],
+     "atk_order": [],
+     "perks": "용병단 Lv4 베테랑 용병단; perks: 방어구 수리 특약 (방어형 3명 이상 편성된 경우 아군 피해감소 10% 증가), 열정페이 (공격력 가장 높은 아군 공격력 20% 증가, 최대체력 20% 감소)",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 브시커 / 전갈 / 피겨 / 딸크 / 실론 / 우유 / 닼초 / 피노 / 석류 / 호밀 / 마카롱 / 허브. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "anti lift — by Esper` (2026-08-28 04:17:14, +4/-3)",
+     "cookies": [
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "새콤달곰",
+      "판다만두"
+     ],
+     "atk_order": [],
+     "perks": "no mercenary-band data entered",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 전갈 / 브시커 / 마카롱 / 실론 / 피겨 / 피노 / 석류 / 닼초 / 우유 / 호밀 / 정전 / 허브. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "DMG(Guild) — by MidNight (2026-09-02 19:49:33, +2/-1)",
+     "cookies": [
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "전지멜로우",
+      "판다만두"
+     ],
+     "atk_order": [],
+     "perks": "no mercenary-band data entered",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 브시커 / 전갈 / 메소 / 피겨 / 실론 / 닼초 / 우유 / 석류 / 피노 / 호밀 / 마카롱 / 정전. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "anti lift — by 익명 (2026-08-28 04:17:00, +1/-0)",
+     "cookies": [
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "새콤달곰",
+      "판다만두"
+     ],
+     "atk_order": [],
+     "perks": "no mercenary-band data entered",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 전갈 / 브시커 / 마카롱 / 실론 / 피겨 / 피노 / 석류 / 닼초 / 우유 / 호밀 / 정전 / 허브. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "DMG (pinata) — by 익명 (2026-08-27 21:59:18, +6/-6)",
+     "cookies": [
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "밀키웨이맛 쿠키",
+       "en": "Milky Way Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "딸기쇼트케이크맛 쿠키",
+       "en": "Strawberry Shortcake Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마들렌맛 쿠키",
+       "en": "Madeleine Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "포도넝쿨맛 쿠키",
+       "en": "Grapevine Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "와사비 문어",
+      "핫도그도그"
+     ],
+     "atk_order": [],
+     "perks": "no mercenary-band data entered",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 브시커 / 밀키 / 실론 / 우유 / 딸기쇼트케이크 / 전갈 / 석류 / 마들렌 / 마카롱 / 허브 / 치케 / 포도넝쿨. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": [
+      "Only shared raid deck using 밀키웨이/딸기쇼트케이크/마들렌/포도넝쿨 and 와사비 문어 pet; voted +6/-6."
+     ]
+    },
+    {
+     "name": "Guild Conquest — by RubyStar (2026-08-28 22:12:57, +0/-1)",
+     "cookies": [
+      {
+       "kr": "바람궁수 쿠키",
+       "en": "Wind Archer Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론나이트 쿠키",
+       "en": "Tea Knight Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "털뭉치 멍뭉이",
+      "핫도그도그"
+     ],
+     "atk_order": [],
+     "perks": "no mercenary-band data entered",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 바람궁수 / 브시커 / 호밀 / 치케 / 우유 / 닼초 / 마카롱 / 허브 / 전갈 / 피노 / 석류 / 실론. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "Extra-stuffed Piñata — by 익명 (2026-08-27 22:14:48, +0/-1)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie's Crunchy Strong Pediatrician",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "갓난갓방울",
+      "(empty)",
+      "핫도그도그"
+     ],
+     "atk_order": [],
+     "perks": "no mercenary-band data entered",
+     "formation": "Slot order as stored by crumblehub deck builder (index 0-11): 마카롱 / 브시커 / 전갈 / 호밀 / 메소 / 피노 / 석류 / 피겨 / 우유 / 딸크 / 허브 / 닼초. Levels, stars and runes are not part of the shared record.",
+     "substitutions": [],
+     "unorthodox": [
+      "One pet slot left empty (likely an incomplete duplicate of the Extra-stuffed Piñata deck)."
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumblehub-meta-decks",
+   "url": "https://crumblehub.co/api/meta-decks",
+   "date": "2026-09-27",
+   "title_kr": "크럼블 허브 메타 덱 (큐레이션)",
+   "title_en": "CrumbleHub curated meta decks",
+   "relevance": 1,
+   "summary_en": "Curated meta-deck list has a '길드 토벌전' category in the UI code, but on 2026-09-27 the API returned only stage, implant_tower and arena decks — no curated Guild Conquest deck yet.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumblehub-guides-stats",
+   "url": "https://crumblehub.co/guides/stats",
+   "date": "2026-09-27",
+   "title_kr": "전투 스탯 가이드 | 크럼블 허브",
+   "title_en": "Combat stat guide (CrumbleHub)",
+   "relevance": 2,
+   "summary_en": "Unofficial formula sheet: crit rate over 100% rolls into a higher crit tier, element advantage is +15% plus element-damage bonus, skill haste works as base x 100/(100+haste), under-power penalty hits outgoing damage only, DR stacks multiplicatively.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "치명확률 above 100% is not wasted: 150% = guaranteed crit + 50% chance of a one-tier-stronger crit; effective crit tiers = (crit rate − target crit res) ÷ 100.",
+    "Element advantage: Fire>Grass, Water>Fire, Grass>Water, Light<->Dark. Advantage multiplier = 1 + 15% + element-damage bonus; element-damage bonus does nothing without advantage.",
+    "Skill haste: effective cooldown = base cooldown × 100 ÷ (100 + haste); haste 50 → 66.67% cooldown, haste 100 → 50%.",
+    "Below recommended power, outgoing damage is penalised; healing and damage taken are not.",
+    "Final ATK = floor(base ATK × (1 + % bonuses) + flat bonuses); companion-pet conditional passives are applied separately, so the stat screen ATK can hide them.",
+    "Defense multiplier = 1 ÷ (1 + ln(1 + DEF ÷ 500)); DEF 500 → ~59.05% damage taken.",
+    "DMG reduction stacks multiplicatively: A + B − A×B (two 20% → 36%).",
+    "Debuff application ≈ base rate × focus ÷ target resist (cap 100%); some status effects ignore resist."
+   ],
+   "disagreements": [
+    "Defense formula differs from alkapa: crumblehub 1/(1+ln(1+DEF/500)) vs alkapa effective HP = HP × (1 + DEF/500)."
+   ],
+   "quotes": [
+    {
+     "kr": "적용 쿨타임 = 기본 쿨타임 × 100 ÷ (100 + 스킬가속)",
+     "en": "Applied cooldown = base cooldown × 100 ÷ (100 + skill haste)"
+    },
+    {
+     "kr": "유리 상성 피해 배율 = 1 + 15% + 속성 피해 증가",
+     "en": "Advantage damage multiplier = 1 + 15% + element damage bonus"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "alkapa-option-consult",
+   "url": "https://alkapa.gg/lab/crumble/option-consult",
+   "date": "2026-09-27",
+   "title_kr": "쿠키런 크럼블 슈가룬 추천 | 쿠키별 옵션 우선순위 (KAPA LAB, 게임 1.4.002)",
+   "title_en": "Recommended sugar-rune options per cookie (alkapa)",
+   "relevance": 2,
+   "summary_en": "Static per-cookie top-3 sugar-rune option list for all 76 cookies, with a '핵심' badge (fill most slots with it) and a '토벌' badge marking options used strategically in Guild Conquest regardless of their damage value. Only three '토벌' tags exist, all 공격력 증폭 on buffers: 마카롱, 피겨, 치즈케이크. Its (unexposed) calculator also knows that some buffs apply only in dungeon 13 = 길드 토벌전 and caps haste where buff uptime hits 100%.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "브시커",
+     "stats": "1) 스킬가속 2) 공격력 증폭 3) 스킬증폭",
+     "why": ""
+    },
+    {
+     "cookie": "석류",
+     "stats": "1) 스킬증폭 2) 스킬가속 3) 피해감소 [스킬증폭 = 핵심]",
+     "why": ""
+    },
+    {
+     "cookie": "우유",
+     "stats": "1) 공격력 증폭 2) 스킬가속 3) 스킬증폭 [공격력 증폭 = 핵심]",
+     "why": ""
+    },
+    {
+     "cookie": "마카롱",
+     "stats": "1) 스킬증폭 2) 공격력 증폭 3) 스킬가속 [스킬증폭 = 핵심; 공격력 증폭 tagged 토벌]",
+     "why": "토벌 badge = \"토벌에서 전략적으로 사용되는 옵션\" (strategic in raid, not for damage)"
+    },
+    {
+     "cookie": "피겨",
+     "stats": "1) 스킬증폭 2) 스킬가속 3) 공격력 증폭 [스킬증폭 = 핵심; 공격력 증폭 tagged 토벌]",
+     "why": "토벌 badge = \"토벌에서 전략적으로 사용되는 옵션\" (strategic in raid, not for damage)"
+    },
+    {
+     "cookie": "치케",
+     "stats": "1) 스킬증폭 2) 공격력 증폭 3) 스킬가속 [스킬증폭 = 핵심; 공격력 증폭 tagged 토벌]",
+     "why": "토벌 badge = \"토벌에서 전략적으로 사용되는 옵션\" (strategic in raid, not for damage)"
+    },
+    {
+     "cookie": "실론",
+     "stats": "1) 스킬증폭 2) 스킬가속 3) 피해감소 [스킬증폭 = 핵심]",
+     "why": ""
+    },
+    {
+     "cookie": "전갈",
+     "stats": "1) 공격력 증폭 2) 집중확률 3) 스킬가속",
+     "why": ""
+    },
+    {
+     "cookie": "메소",
+     "stats": "1) 공격력 증폭 2) 스킬가속 3) 스킬증폭",
+     "why": ""
+    },
+    {
+     "cookie": "닼초",
+     "stats": "1) 스킬가속 2) 피해감소 3) 집중확률",
+     "why": ""
+    },
+    {
+     "cookie": "피노",
+     "stats": "1) 스킬가속 2) 피해감소 3) 공격력 증폭",
+     "why": ""
+    },
+    {
+     "cookie": "호밀",
+     "stats": "1) 공격력 증폭 2) 스킬가속 3) 치명피해",
+     "why": ""
+    },
+    {
+     "cookie": "허브",
+     "stats": "1) 공격력 증폭 2) 스킬가속 3) 피해감소",
+     "why": ""
+    },
+    {
+     "cookie": "딸크",
+     "stats": "1) 스킬가속 2) 공격력 증폭 3) 피해감소",
+     "why": ""
+    },
+    {
+     "cookie": "정전",
+     "stats": "1) 스킬가속 2) 공격력 증폭 3) 피해감소",
+     "why": ""
+    },
+    {
+     "cookie": "밀키",
+     "stats": "1) 공격력 증폭 2) 스킬가속 3) 치명확률",
+     "why": ""
+    },
+    {
+     "cookie": "바리",
+     "stats": "1) 스킬가속 2) 스킬증폭 3) 공격력 증폭",
+     "why": ""
+    },
+    {
+     "cookie": "달토",
+     "stats": "1) 스킬가속 2) 집중확률 3) 피해감소",
+     "why": ""
+    },
+    {
+     "cookie": "체콜",
+     "stats": "1) 공격력 증폭 2) 스킬증폭 3) 피해감소",
+     "why": ""
+    },
+    {
+     "cookie": "체리",
+     "stats": "1) 공격력 증폭 2) 스킬가속 3) 스킬증폭",
+     "why": ""
+    },
+    {
+     "cookie": "쿨민",
+     "stats": "1) 스킬가속 2) 공격력 증폭 3) 스킬증폭",
+     "why": ""
+    },
+    {
+     "cookie": "오방",
+     "stats": "1) 공격력 증폭 2) 스킬가속 3) 스킬증폭",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Calculator reason strings: \"스킬가속 {ceiling} 에서 버프 유지율이 100%가 됩니다 — 거기까지가 가속의 상한입니다\" (haste has a per-cookie ceiling where buff uptime reaches 100%).",
+    "Calculator reason strings: \"이 쿠키의 버프는 {dungeon} 에서만 걸립니다\" with dungeon 13 = 길드 토벌전 (raid-only buffs, i.e. Tea Knight Boss DMG, are modelled).",
+    "Calculator reasons: buff scales with ATK (\"이 쿠키의 버프량은 {stat} 기준\"), with Skill AMP (\"버프량은 스킬증폭에 비례\"), or is fixed (then own damage or survival is optimised)."
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "실제 피해 증가와 관계없이 전략적으로 필요한 옵션은 ‘토벌’로 별도 표시합니다.",
+     "en": "Options that are strategically needed regardless of actual damage gain are marked separately as 'Raid'."
+    },
+    {
+     "kr": "스킬가속 {ceiling} 에서 버프 유지율이 100%가 됩니다 — 거기까지가 가속의 상한입니다",
+     "en": "At skill haste {ceiling} buff uptime reaches 100% — that is the ceiling for haste."
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "alkapa-logic",
+   "url": "https://alkapa.gg/lab/crumble/logic",
+   "date": "2026-09-27",
+   "title_kr": "쿠키런: 크럼블 가이드 — 알아두면 좋은 전투 원리 (KAPA LAB, 게임 1.3.002 기준)",
+   "title_en": "Combat principles explainer (alkapa)",
+   "relevance": 2,
+   "summary_en": "Combat-rule explainer written against game 1.3.002: crit multiplier 1 + crit rate × crit dmg with no 100% cap, element bonus exclusive with target element defense, haste diminishing, PvE crit res saturates at 10%, DR has no diminishing returns, accuracy/focus saturate at 100% hit/apply.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Crit multiplier = 1 + crit rate × crit dmg, no 100% cap on crit rate.",
+    "If the target has the matching element defense, your element-damage bonus is not applied (only their reduction); bonuses and reductions never sum.",
+    "Skill haste sits in the cooldown denominator → diminishing returns.",
+    "PvE crit res saturates at 10% (most monsters have 10% crit rate).",
+    "Effective survivability ∝ 1 ÷ (1 − DR): no diminishing returns; effective HP = HP × (1 + DEF ÷ 500).",
+    "Accuracy saturates at 100% hit rate; focus saturates at 100% debuff application."
+   ],
+   "disagreements": [
+    "Crit >100%: alkapa models it as linear (1 + rate × dmg); crumblehub describes discrete crit tiers. Same expected value, different variance model.",
+    "Defense formula conflicts with crumblehub (see crumblehub-guides-stats)."
+   ],
+   "quotes": [
+    {
+     "kr": "치명 배수는 1 + 치명확률 × 치명피해로 계산되며, 치명확률에는 100% 상한이 적용되지 않습니다.",
+     "en": "Crit multiplier is 1 + crit rate × crit damage; crit rate has no 100% cap."
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "sugarpocket-catalog",
+   "url": "https://cookieruncrumble.app/api/catalog/gameplay + /api/catalog/database",
+   "date": "2026-09-23",
+   "title_kr": "슈가포켓 게임 데이터 카탈로그 (클라이언트 1.4.002 추출)",
+   "title_en": "Sugar Pocket datamined catalog (client 1.4.002)",
+   "relevance": 3,
+   "summary_en": "Session-cookie-gated JSON API exposing datamined client data (1.4.002, generated 2026-09-23): all 76 cookies and 57 pets with ko/en names, per-star skill coefficients, buff/debuff raw values and cooldowns, gear plates with main/sub option pools, and sugar-rune roll pools with weights. Values are raw game integers; units are inferred (buff rawValue 6900 on a percent stat likely = 69%). The site's own community deck list (/api/decks) has no raid decks.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "(all)",
+     "stats": "Sugar-rune slots unlock at stars 0/2/4/6/8/8/10/10. SSR roll values: ATK%/DEF%/HP% 6.1/6.5/7.0 (weights 6/3/1); CRIT%/CRIT RES/CRIT DMG 7.0/7.4/8.0; Accuracy/Evasion/Focus/Resist rate 5.2/5.6/6.0; Skill AMP 4.4/4.7/5.0; DMG Reduction 5.3/5.7/6.0 (raw ÷100, weights 6/3/1). Skill Haste SSR line = 4 or 5 flat (raw 40000/50000 ÷1e4, weights 8/2), so 8 SSR slots give at most 40 haste from runes alone.",
+     "why": "database.sugarRunes.pools/slots"
+    }
+   ],
+   "gear": [
+    {
+     "slot": "무기 (Sword/Bow/Staff)",
+     "substats": "pool: Skill AMP, Accuracy, ATK, CRIT DMG, CRIT%; mains ATK / Accuracy / CRIT%",
+     "context": "datamine",
+     "why": "equipment[].subOptions"
+    },
+    {
+     "slot": "방어구 (Helmet/Armor/Shield)",
+     "substats": "pool: Evasion, CRIT RES, DMG Reduction, DEF, HP; mains DEF / HP / Evasion",
+     "context": "datamine",
+     "why": ""
+    },
+    {
+     "slot": "장신구 (Necklace/Ring/Brooch)",
+     "substats": "pool: Skill AMP, Skill Haste, Accuracy, ATK, CRIT DMG, CRIT%, Focus, RES, Mov SPD; mains CRIT RES / Focus / RES",
+     "context": "datamine",
+     "why": ""
+    },
+    {
+     "slot": "특수 (Artifact/Book/Food)",
+     "substats": "pool: Skill Haste, Evasion, CRIT RES, DMG Reduction, DEF, Focus, HP, RES, Mov SPD; mains CRIT DMG / Skill AMP / DMG Reduction",
+     "context": "datamine",
+     "why": "Only group that can roll both Skill Haste and DMG Reduction → matches community \"우하단 스가 + 피감\" (inference)"
+    },
+    {
+     "slot": "(all)",
+     "substats": "Sub-option count by gear rarity: Normal/Fine/Advanced 0, Magic/Epic 1, Unique/Legendary/Special/SuperEpic/Eternal 2",
+     "context": "datamine",
+     "why": ""
+    }
+   ],
+   "rng": [],
+   "mechanics": [
+    "석류 Pomegranate (top star data): Pomegranate Magic, cooldown 10 s, duration 9 s, buff Skill AMP rawValue 6900 (Fixed, maxStack 1), grants Projectile Speed synergy.",
+    "실론나이트 Tea Knight: slam every 10 s; self DEF% raw 6000 (stack 2) and BossDamageRateAddition raw 7000 to allies, Guild Conquest only.",
+    "우유 Milk (Pediatrician): cooldown 7 s, ATK buff rawValue 1000 with base \"CastersAttackPoint\" (scales from Milk's own ATK), maxStack 10; grants Duration synergy.",
+    "치즈케이크 Cheesecake: cooldown 8 s, duration 7 s, ATK% raw 6000 Fixed; grants Volley.",
+    "마카롱 Macaron: cooldown 7 s, CRIT% raw 1200 Fixed, maxStack 10; grants Range.",
+    "피겨 Skating Queen: cooldown 8 s, CRIT DMG raw 6500 Fixed to allies on the ice; grants Chain; chain-count increase.",
+    "다크초코 Dark Choco: cooldown 6 s, DEF reduction basePercent 20, maxStack 10.",
+    "피노누아 Pinot Noir: ally buff every 9.5 s gives Lift resistance + Rapid Fire synergy (skill-repeat count up); bullets every 3.25 s cut enemy healing 80%.",
+    "전갈 Scorpion: DoT basePercent 100, maxStack 20, skill every 4.25 s.",
+    "달토 Moon Rabbit alt: ATK −60% and CRIT% −60% debuffs on enemies (basePercent), 7 s cooldown.",
+    "Pets: 갓난갓방울 Ally ATK +20%; 핫도그도그 Ally Skill AMP +10%; 판다만두 Ally Lift RES +20%; 색동 주머니 Ally Lift RES +30%, Max HP +12.5%; 전지멜로우 Rapid Fire synergy +2 and ATK +10% to receivers (max-star values)."
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "제자리에서 점프하며 내려쳐 적들에게 피해를 주고, 자신의 방어력을 증가시키고, 길드 토벌전에서 모든 아군들에게 보스피해 증가를 준다.",
+     "en": "Jumps in place, striking down to deal damage to enemies, increase his own DEF, and grant additional Boss DMG to allies in Guild Conquest."
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumblehelper-home",
+   "url": "https://crumblehelper.com/",
+   "date": "2026-09-27",
+   "title_kr": "쿠키런크럼블 최다시너지 * 조합 요청/공유 * 티어표 * 스텔라링크",
+   "title_en": "Crumble Helper synergy/team finder",
+   "relevance": 1,
+   "summary_en": "Synergy-maximising team finder with content modes 방치/PVP/보스; no Guild Conquest mode, no rune or gear advice. States that duplicate synergies and duplicate debuffs do not stack (only the strongest applies).",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Same synergy from two givers does not stack; only the stronger applies. Same for debuffs (two DEF-reduction cookies → only the larger)."
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "같은 종류의 시너지가 겹치면 더 센 것 하나만 적용됩니다.",
+     "en": "When the same synergy overlaps, only the stronger one applies."
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "cookieruncrumble-net-guild-raid-guide",
+   "url": "https://cookieruncrumble.net/ko/blog/cookierun-crumble-guild-raid-guide",
+   "date": "2026-08-27",
+   "title_kr": "쿠키런: 크럼블 길드 토벌전 공략 — 피냐타 보스, 보상 & 팀 구성",
+   "title_en": "Guild Conquest guide — Piñata boss, rewards & teams",
+   "relevance": 1,
+   "summary_en": "Generic launch-day overview (also tea-knight and brightseeker posts): pure damage race, Tea Knight is the only ally Boss DMG buff, pair with Brightseeker. No runes, gear or measured numbers; related Tea Knight post names a non-existent \"시 페어리 쿠키\", so treat as low-quality.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "실론나이트 쿠키가 MVP — 배틀마스터 스킬이 길드 토벌전에서 아군에게 보스 추가 피해를 부여하는 유일한 버프.",
+     "en": "Tea Knight is the MVP — Battlemaster is the only buff that grants allies extra Boss DMG in Guild Conquest."
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbleguides-guild-conquest",
+   "url": "https://crumbleguides.com/guides/cookie-run-crumble-guild-conquest",
+   "date": "2026-09-03",
+   "title_kr": "",
+   "title_en": "Cookie Run: Crumble — Guild Conquest Guide",
+   "relevance": 1,
+   "summary_en": "EN overview: scoring is cumulative damage, five-guild raid groups, Tea Knight is Guild Medal exchange-only. Gives EN boss name as \"Overly Heavy Pinata\" (EN notice). No builds.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "gamemeca-trees-1571",
+   "url": "https://www.gamemeca.com/trees/view.php?seq=1571",
+   "date": "2026-08-12",
+   "title_kr": "쿠키런: 크럼블 추천 조합",
+   "title_en": "Recommended teams (Gamemeca)",
+   "relevance": 0,
+   "summary_en": "Team images last updated 2026-08-12, before Guild Conquest existed; stage/boss teams only. Caption notes 우유/석류/치즈/닼초/피겨 must survive the first 30 s vs Cool Mint 38-30.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "'우유, 석류, 치즈, 닼초, 피겨'가 첫 30초 동안 절대 죽으면 안됨",
+     "en": "Milk, Pomegranate, Cheesecake, Dark Choco and Skating Queen must not die in the first 30 s"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "oslink-team-building-guide",
+   "url": "https://www.oslink.io/blog/guide/cookierun-crumble-team-building-guide.html",
+   "date": "2026-07-31",
+   "title_kr": "쿠키런: 크럼블 추천 덱 공략 - 콘텐츠별 최적 파티 조합과 쿠키 역할 정리",
+   "title_en": "OSLink team-building guide",
+   "relevance": 0,
+   "summary_en": "Pre-raid (2026-07-31) remote-play vendor blog; no Guild Conquest, rune or gear content.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  }
+ ],
+ "glossary": [
+  {
+   "kr": "실론나이트 쿠키",
+   "en": "Tea Knight Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "game data name ko/en"
+  },
+  {
+   "kr": "피겨여왕맛 쿠키",
+   "en": "Skating Queen Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "game data name ko/en (brief guess confirmed)"
+  },
+  {
+   "kr": "정글전사 쿠키",
+   "en": "Tiger Lily Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "game data name ko/en (brief guess \"Jungle Warrior\" corrected)"
+  },
+  {
+   "kr": "체콜",
+   "en": "Cherry Cola Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "game data 체리콜라맛 쿠키"
+  },
+  {
+   "kr": "핫도그도그",
+   "en": "Hot Doggie",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "game data"
+  },
+  {
+   "kr": "와사비 문어",
+   "en": "Octo Wasabi",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "game data (not \"Wasabi Octopus\")"
+  },
+  {
+   "kr": "색동 주머니",
+   "en": "Candy Shade Pouch",
+   "kind": "pet",
+   "confidence": "low",
+   "evidence": "crumblehub dictionary; no EN in game data 1.4.002"
+  },
+  {
+   "kr": "갓난갓방울",
+   "en": "Holy Baby Drop",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "game data; in every crumblehub raid deck"
+  },
+  {
+   "kr": "단장",
+   "en": "Captain (squad leader slot)",
+   "kind": "term",
+   "confidence": "low",
+   "evidence": "crumblehub captainSlot tooltip"
+  },
+  {
+   "kr": "다발",
+   "en": "Volley",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "game skill text"
+  },
+  {
+   "kr": "연타",
+   "en": "Rapid Fire",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "game pet text"
+  }
+ ]
+}

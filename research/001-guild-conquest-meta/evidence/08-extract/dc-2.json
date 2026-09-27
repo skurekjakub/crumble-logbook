@@ -1,0 +1,950 @@
+{
+  "batch": "dc-2",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "69368",
+      "url": "https://m.dcinside.com/board/projectcc/69368",
+      "date": "2026-09-17",
+      "title_kr": "[📚정보] 470배클럽 + faq",
+      "title_en": "[Info] 470x club + FAQ",
+      "relevance": 3,
+      "summary_en": "Group #1 player 캔디애플 (guild 탄산수맛쿠키) posts three Pinata raid decks at ~1.03-1.05G team power scoring 455G, 470.5G and 561.9G (≈442x/448x/540x) with a Seeker at only 5★, plus an FAQ on sugar runes, perks (20%/7% = 열정페이+초고속승진), ATK order and why filler cookies are Lv.1. The later, stronger deck is a Melon Soda + Jungle Warrior deck with move speed (이속) sugar-rune lines only on Pinot Noir to control arrival order/positioning. The 129-comment thread covers move-speed micro-tuning, Milk dying at ~24s (fix: use Herb), and Scorpion stealing Pomegranate's buff.",
+      "scores": [
+        {"damage": "455.333G (455,333,070,183)", "power": "1.03G", "ratio": "~442배", "deck": "Deck A (image 2): 우브피마치 + 메소 Lv1 + 허브 Lv61 (no 정전/체리)", "note": "Battle-over screen shows timer 17.200; guild 탄산수맛쿠키 1st, guild score 2T 947G. Personal ranking #1 in group."},
+        {"damage": "470.506G (470,505,950,005)", "power": "1.05G", "ratio": "~448배", "deck": "Deck B (image 4, 'new deck'): 우브피실마치 cherry deck — 체리 Lv1 + 정글전사 Lv1 + 실론 Lv100", "note": "Timer 17.233; guild score 4T 337G. Title '470배클럽' refers to this."},
+        {"damage": "561.912G (561,912,105,403)", "power": "1.04G", "ratio": "~540배", "deck": "Deck C (image 6): '우브피실마치보다 좋은 메소덱' — 메론소다 Lv1 + 정글전사 Lv1, 피노만 이속", "note": "Timer 17.233; guild score 4T 606G; group personal rank 2nd (허허 665.42G was 1st). Deck screenshot itself shows personal best 476G 907M at the time it was taken."},
+        {"damage": "88.35G", "power": "480M", "ratio": "184배", "deck": "commenter ㅇㄹ following this guide", "note": ""},
+        {"damage": "?", "power": "?", "ratio": "200배", "deck": "commenter Pusher", "note": "'시커 3성의 한계인가'"},
+        {"damage": "41G", "power": "402M", "ratio": "~102배", "deck": "commenter ㅇㅇ7, before switching to 스증 and before Lv.1 fillers", "note": "after Lv.1-ing fillers got ~20G per run (worse, Scorpion kept stealing Pomegranate)"},
+        {"damage": "?", "power": "1.13G (if fillers levelled)", "ratio": "", "deck": "author", "note": "Author: 3 Lv.1 fillers give 1.03G; leveling them would read 1.13G — i.e. Lv.1 fillers deflate power by ~0.1G, improving the 배 ratio."},
+        {"damage": "?", "power": "?", "ratio": ">100배", "deck": "commenter with no 피노 이속 and no 시커 스가", "note": "'피노 이속 x 시커 스가 x 인데도100배 뚫었네'"}
+      ],
+      "teams": [
+        {
+          "name": "Deck A (455G, 1.03G) — 우브피마치 메소/허브",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "8 (3 pink + 2 gold)", "note": "grass; row1 slot1"},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "9", "note": "fire; row1 slot2; 'don't let Scorpion receive Pomegranate'"},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "8", "note": "dark; row1 slot3"},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "9", "note": "dark; row1 slot4"},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "10 (5 pink)", "note": "light; mercenary leader (단장) badge; row1 slot5"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "55", "stars": "9", "note": "dark; level deliberately reduced so its ATK does not exceed buffed targets"},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "5 (all gold)", "note": "light; author confirms Seeker is only 5★"},
+            {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "8", "note": "water"},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "8", "note": "light"},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "9", "note": "water; 피겨여왕맛 쿠키"},
+            {"kr": "허브", "en": "Herb", "level": "61", "stars": "8", "note": "grass; identity inferred (green-haired grass cookie; comments discuss 허브 in this slot); level deliberately reduced"},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "100", "stars": "3 (gold)", "note": "light"}
+          ],
+          "pets": ["핫도그 20★", "와사비문어 20★", "판다 18★"],
+          "atk_order": ["우유", "브시커", "피겨", "마카롱", "치케"],
+          "perks": "공 20퍼 7퍼 (열정페이 + 초고속승진), leader 우유",
+          "formation": "12-cookie roster (2×6 grid in UI); in-field placement governed by move speed/arrival order",
+          "substitutions": ["If Milk dies around 24s / team wipes at 30s slam: use 허브 (Herb) instead of 정글전사"],
+          "unorthodox": ["전갈, 피노, 메소 at Lv.1 as placement fillers so Pomegranate cannot target them", "닼초 Lv55 and 허브 Lv61 deliberately under-levelled to keep them out of the ATK top-5"]
+        },
+        {
+          "name": "Deck B (470.5G, 1.05G) — 우브피실마치 cherry + jungle warrior",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "8", "note": ""},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "5", "note": ""},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "8", "note": ""},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "9", "note": ""},
+            {"kr": "정전", "en": "Jungle Warrior", "level": "1", "stars": "8", "note": "grass; teal hair + flower"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "43", "stars": "9", "note": ""},
+            {"kr": "체리", "en": "Cherry", "level": "1", "stars": "8", "note": "fire; 체리맛 쿠키 (not Cherry Cola)"},
+            {"kr": "전갈", "en": "Scorpion", "level": "58", "stars": "9", "note": ""},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "8", "note": ""},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "9", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "10", "note": "leader"},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "100", "stars": "3", "note": ""}
+          ],
+          "pets": ["핫도그 20★", "와사비문어 20★", "판다 18★"],
+          "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론", "치케"],
+          "perks": "열정페이 20% + 초고속승진 7%",
+          "formation": "체리 used for placement; no move speed anywhere ('체리정전: 이속x')",
+          "substitutions": [],
+          "unorthodox": ["체리, 정전, 피노 at Lv.1", "전갈 Lv58 (partly levelled)", "닼초 Lv43"]
+        },
+        {
+          "name": "Deck C (561.9G, 1.04G) — Melon Soda + Jungle Warrior ('보다 좋은 메소덱')",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "8", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "9", "note": ""},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "8", "note": "only cookie given move speed (4.33 per author comment; '한두줄')"},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "9", "note": ""},
+            {"kr": "정전", "en": "Jungle Warrior", "level": "1", "stars": "8", "note": "no move speed"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "43", "stars": "9", "note": ""},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "5", "note": ""},
+            {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "8", "note": "water; green goggles"},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "8", "note": ""},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "9", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "10", "note": "leader"},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "100", "stars": "3", "note": ""}
+          ],
+          "pets": ["핫도그 20★", "와사비문어 20★", "판다 18★"],
+          "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론", "치케"],
+          "perks": "열정페이 + 초고속승진",
+          "formation": "Equipment move speed 0; Pinot Noir only gets 1–2 move-speed rune lines ('메소정전: 장비 이속x 피노 이속 1줄'); later comment says giving Melon Soda speed too also works",
+          "substitutions": ["Commenter 코워드: lazy variant — put 정전 in Herb's slot, give move speed only to 피노 + 메소; aligns cleanly with some retries (author: alignment good but 다발 multi-hit chain breaks, less damage)"],
+          "unorthodox": ["All four placement cookies (전갈, 피노, 정전, 메소) at Lv.1", "Deliberate move-speed micro-tuning; 0.03 difference can break alignment"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "브시커", "stats": "스가 (skill haste)", "why": "FAQ; 5 lines of 스가 is enough ('5줄로도 돌아감')"},
+        {"cookie": "닼초", "stats": "스가", "why": "FAQ"},
+        {"cookie": "메소", "stats": "스증, 치피", "why": "FAQ"},
+        {"cookie": "전갈", "stats": "스증, 치피", "why": "FAQ; sub-DPS"},
+        {"cookie": "마카롱", "stats": "all 스증", "why": "FAQ + comment '치즈 마카롱 올스증'; commenter was on all 공증 and told to switch"},
+        {"cookie": "치케", "stats": "all 스증", "why": "FAQ"},
+        {"cookie": "피겨", "stats": "스증", "why": "FAQ"},
+        {"cookie": "실론", "stats": "스증", "why": "author comment"},
+        {"cookie": "우유", "stats": "공증 (ATK%)", "why": "FAQ"},
+        {"cookie": "정전", "stats": "no move speed ('이속안주기')", "why": "author comment"},
+        {"cookie": "피노누아", "stats": "1–2 lines of 이동속도 (author total 4.33); rest irrelevant (e.g. 집중 is fine)", "why": "controls arrival/formation; '도배가 아니라 한두줄'"}
+      ],
+      "gear": [
+        {"slot": "all", "substats": "no move speed on gear (장비 이속 0)", "context": "raid, 메소/체리 decks", "why": "move speed is tuned only via Pinot Noir runes"}
+      ],
+      "rng": [
+        "Pomegranate straw (빨대) jumps to wrong target if Milk's buff is received unevenly ('우유를 골고루못받아서') — why fillers are Lv.1.",
+        "Move-speed tuning is highly individual ('개인차 너무심해서'); 0.03 difference can fail.",
+        "Author: with speed tuning 'at least 1 in 3 runs perfect placement' → Melon Soda; if not worth the runes → Cherry.",
+        "Run ends at ~17.2 s timer displayed on result screens (17.200 / 17.233) — i.e. the counted fight length.",
+        "Milk dying early (~24 s) seen by one user; fix = Herb.",
+        "370M power: team wiped at the 30 s slam; answer 허브."
+      ],
+      "mechanics": [
+        "Lv.1 fillers: Milk's flat ATK buff is so large that level barely matters, and Lv.1 guarantees fillers never out-ATK the targets and steal Pomegranate's buff.",
+        "Commenter: level does not matter in raid; with gear + lab HP research a Lv.1 cookie has ~4M HP in raid. Author: HP ≥3.5M usually survives.",
+        "Pomegranate should buff exactly 우유/브시커/피겨 + 마카롱/치케 (5 targets) in the Herb deck.",
+        "Scorpion included for sub-damage and to improve placement ('섭딜+배치개선').",
+        "Seeker star level matters a lot; author's Seeker is only 5★ despite heavy spending.",
+        "Cherry deck is better when a Pomegranate + Jungle Warrior multi-hit (다발) lands; commenter says Cherry receives Pomegranate/JW better."
+      ],
+      "disagreements": [
+        "Herb vs Jungle Warrior: 코워드 says JW in Herb's slot + speed on Pinot/Soda aligns well; author tested — alignment fine but 다발 chain breaks so damage lower.",
+        "Ceylon: author 'theoretically best but damage not coming out yet', later finds the 실론 deck (470G); commenter in 71135 says Pomegranate straw rarely attaches to Ceylon."
+      ],
+      "quotes": [
+        {"kr": "전갈 석류 못받게하셈", "en": "Don't let Scorpion receive Pomegranate('s buff)."},
+        {"kr": "Q: 왜 1렙만 줌 A: 우유가 주는 깡공이 너무 크기 때문에 렙이 의미가 없음 그래서 혹시 우유 우연히 덜받더라도 석류 튀는 상황 안나오게 안전하게 1렙만 줌", "en": "Why Lv.1? Milk's flat ATK is so large that level is meaningless, so to be safe against Pomegranate's buff jumping even if Milk's buff lands unevenly, they're kept Lv.1."},
+        {"kr": "Q: 슈가룬 어케줌 A: 브싴, 닼초: 스가 / 메소, 전갈: 스증,치피 / 마카롱, 치케, 피겨: 스증 / 우유: 공증", "en": "Sugar runes: Seeker, Dark Choco: skill haste; Melon Soda, Scorpion: skill amp + crit dmg; Macaron, Cheesecake, Figure: skill amp; Milk: ATK%."},
+        {"kr": "Q: 복지 뭐씀 A: 공 20퍼 7퍼", "en": "Perks: ATK 20% and 7%."},
+        {"kr": "Q: 공순서 뭐임 A: 우유브싴피겨/마카롱실론/치케", "en": "ATK order: Milk, Seeker, Figure / Macaron, Ceylon / Cheesecake."},
+        {"kr": "체리정전: 이속x 메소정전: 장비 이속x 피노 이속 1줄", "en": "Cherry+JW: no move speed. Melon Soda+JW: no gear speed, 1 line of speed on Pinot."},
+        {"kr": "내가 이속조절해서 3판에 1판 이상 완벽한 배치가 가능하다-> 메소 슈가룬 아깝고 귀찮다->체리", "en": "If you can tune speed to get perfect placement ≥1 in 3 runs → Melon Soda; if the runes are a waste/hassle → Cherry."},
+        {"kr": "맞음 이속 안된다고 욕 너무많이먹어서 상처받음 0.03차이로도 안되는데", "en": "Got flamed a lot when speed didn't work for people; even a 0.03 difference breaks it."},
+        {"kr": "1렙따리 3개에 1.03g면 렙 올리면 몇이지 → 1.13 ... 근데 렙 주면 아다리 잘못맞으면 석류 튀어서 죽는거 아니면 1렙주는게 맞음", "en": "3 Lv.1s at 1.03G → 1.13G if levelled; but unless you'd survive anyway, Lv.1 is right because a mis-timed level causes Pomegranate to jump."},
+        {"kr": "토벌은 레벨 전혀 안중요함 장비작해놨고 연구소 체방연구 내실잘해놨으면 1렙짜리 토벌던전체력이 4m임", "en": "Level doesn't matter in raid; with gear and lab HP/DEF research a Lv.1 has ~4M HP in the raid."},
+        {"kr": "시커 성급 존ㄴㄴㄴㄴ나탐 돈 존나썼는데 천장 말곤 거의 안떠서 저지랄임", "en": "Seeker star level matters hugely; I spent a lot but only got the pity, hence 5★."},
+        {"kr": "피노이속 몇으로 넣었음? → 4.33", "en": "Pinot move speed? → 4.33."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "71135",
+      "url": "https://m.dcinside.com/board/projectcc/71135",
+      "date": "2026-09-20",
+      "title_kr": "[📚정보] 토벌 체리덱 460배 세팅(ai이미지 주의)",
+      "title_en": "[Info] Guild Conquest Cherry deck 460x setup (AI-made image warning)",
+      "relevance": 3,
+      "summary_en": "Full infographic guide for the stability-oriented Cherry deck: 451.05G at 973.96M (≈463x; later 483x with same setup) with a 10★ Seeker. Covers roster/levels, leader Milk + perks 열정페이+초고속승진, ATK ranking 1–6, pets (Wasabi Octopus, Hot Dog, Panda) with their effects, gear substats per slot in three progression stages, per-cookie sugar runes, and a Q&A. Expected spread: floor 150x, average 250–350x, peak 400x+.",
+      "scores": [
+        {"damage": "451.054G", "power": "973.96M", "ratio": "~463배", "deck": "체리덱 (Cherry + Jungle Warrior + Scorpion Lv.1, Seeker 10★)", "note": "individual rank 1 shown"},
+        {"damage": "?", "power": "?", "ratio": "483배", "deck": "same setting", "note": "author comment: '같은 세팅으로 483배 마무리'"},
+        {"damage": "", "power": "", "ratio": "floor 150배 / avg 250–350배 / peak 400배~", "deck": "체리덱", "note": "author's own variance"},
+        {"damage": "4.4G", "power": "139M", "ratio": "~32배", "deck": "commenter 194cm using this guide", "note": "mercenary Lv3"},
+        {"damage": "30G", "power": "400M", "ratio": "~75배", "deck": "commenter; wipes at 30 s even with Herb", "note": ""}
+      ],
+      "teams": [
+        {
+          "name": "체리덱 (Cherry deck)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "8", "note": "grass; ATK rank 4"},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "10", "note": "light; ATK rank 2; main DPS"},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "10", "note": "dark; for lift resistance with Panda"},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "10", "note": "dark; buffer — ATK irrelevant"},
+            {"kr": "정전", "en": "Jungle Warrior", "level": "1", "stars": "8", "note": "grass"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "10", "note": "dark; debuffer"},
+            {"kr": "체리", "en": "Cherry", "level": "1", "stars": "9", "note": "fire; placement only"},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "10", "note": "fire; placement only despite being a sub-DPS"},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "9", "note": "light; ATK rank 5"},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "10", "note": "water; 피겨여왕맛 쿠키; ATK rank 3"},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "10", "note": "light; leader; ATK rank 1 fixed"},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "91", "stars": "4 (gold)", "note": "light; 실론나이트 쿠키; ATK rank 6 (level tuned)"}
+          ],
+          "pets": ["와사비문어 20★ (아군 지속 시너지 +40%, 지속 시너지를 받는 아군 공격력 10% 증가)", "핫도그 20★ (아군 스킬증폭 10% 증가)", "판다 18★ (아군 띄우기 저항 18% 증가)"],
+          "atk_order": ["우유", "브시커", "피겨", "마카롱", "치케", "실론"],
+          "perks": "Leader 우유; 복지 열정페이 (highest-ATK ally +20% ATK, −20% max HP) + 초고속승진 (highest-ATK ally +7% ATK). Mercenary 베테랑 용병단 Lv4 (adds 2nd perk slot, 3rd pet slot, leader ATK/DEF/HP +10%).",
+          "formation": "No move speed on any gear or rune; Cherry and Scorpion exist only to give the optimal placement for buffs to be exchanged cleanly.",
+          "substitutions": ["If the team wipes around 30 s: 허브 instead of 정글전사, and drop 실론나이트 to Lv.1 (lower ceiling, more stability)", "If you can tune move speed: 메론소다 instead of 체리 (higher ceiling, huge sugar-rune cost)"],
+          "unorthodox": ["Scorpion (a sub-DPS) at Lv.1 — used only for placement, for stability", "Cherry used only for formation", "Ceylon at Lv91 deliberately to separate ATK rank 6", "Pinot Noir at Lv.1 purely as a lift-resistance carrier", "Wasabi Octopus + Hot Dog instead of 갓방울"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "우유", "stats": "all 공증 (ATK%)", "why": "Milk's ATK is directly converted into its buff, so push ATK via runes and perks; commenters: ATK% runes are basically Milk-only."},
+        {"cookie": "브시커", "stats": "all 스킬가속 (skill haste)", "why": "Infographic section 06"},
+        {"cookie": "닼초", "stats": "all 스킬가속", "why": "Corrected after comments: Dark Choco's DEF shred is not boosted by skill amp, so use haste to stack faster."},
+        {"cookie": "마카롱, 석류, 치케, 피겨, 실론", "stats": "all 스킬증폭 (skill amp)", "why": "buffers/debuffers"},
+        {"cookie": "피노누아, 정전, 체리, 전갈", "stats": "적당히 (whatever)", "why": "placement/utility only"},
+        {"cookie": "all", "stats": "never 이동속도 unless you are micro-tuning speed", "why": "speed breaks Cherry-deck placement"}
+      ],
+      "gear": [
+        {"slot": "A (무기/왼쪽 위 — three weapons, top-left block)", "substats": "stage 1: –; stage 2: 스증 + 치확 or 치피; final: 스증 + 치확 or 치피", "context": "raid", "why": ""},
+        {"slot": "B (우상단 — top-right block)", "substats": "stage 1: 스가 3 parts; stage 2: 스가 + 스증; final: 스가 + 스증", "context": "raid", "why": ""},
+        {"slot": "C (방어구 — bottom-left block)", "substats": "stage 1: –; stage 2: –; final: 피감 + @(anything)", "context": "raid", "why": "survive the 30 s slam"},
+        {"slot": "D (우하단 — bottom-right block)", "substats": "stage 1: 스가 3 parts; stage 2: 스가 3 parts; final: 스가 + 피감", "context": "raid", "why": ""},
+        {"slot": "all", "substats": "never roll 이동속도; 0–3 lines only if you are tuning speed yourself", "context": "raid", "why": ""},
+        {"slot": "commenter gramPH final set", "substats": "3스가/스증, 3스가/피감, 3스가/치피, 3피감/체력", "context": "raid (Seeker 4★)", "why": ""}
+      ],
+      "rng": [
+        "'세계선 찾기' (finding the lucky world-line) — deck is tuned to minimise retries rather than maximise peak.",
+        "Floor 150x, average 250–350x, peak 400x+.",
+        "Straw-jumping (Pomegranate buff alternating between cookies) can be exploited for a higher-peak build, but randomness raises retries too much.",
+        "Levelling fillers above Lv.1: if Milk or Wasabi Octopus buff lands wrong, the ATK order for Pomegranate's buff gets tangled."
+      ],
+      "mechanics": [
+        "ATK order exists only to receive Pomegranate's buff; Pomegranate itself may exceed the ranked cookies' ATK.",
+        "Pomegranate straws: buffed by Herb → 5 straws; buffed by Jungle Warrior → 6 straws. Hence with Herb only ranks 1–5 get buffed, and Ceylon (rank 6) is dropped to Lv.1 to widen the ATK gap and stop straws bouncing.",
+        "If you do level a filler, keep its ATK ≥10% below the rank-6 cookie.",
+        "Lift resistance is needed so the boss's airborne (에어본) doesn't interrupt skills → Pinot Noir + Panda.",
+        "Buff/debuff stacking and Bright Seeker's single-target damage are the core of the deck.",
+        "Guide assumes a high-spec account whose Lv.1 cookies survive the 30 s stomp (30초 스탬프 구간).",
+        "Dark Choco's DEF shred is not amplified by 스증 (commenters, accepted by author)."
+      ],
+      "disagreements": [
+        "Dark Choco runes: original image said 스증-type; commenters said DEF shred ignores skill amp → author changed to 스가.",
+        "캔디애플: Cherry deck breaks the moment any move speed is added; do speed tuning only with Melon Soda. Author agrees: Cherry deck should strip all speed from gear and runes.",
+        "Commenter: Pomegranate straws attach badly to Ceylon.",
+        "Seeker star level: Q1 concedes the result may be because Seeker is 10★; a commenter says high Seeker stars are mandatory."
+      ],
+      "quotes": [
+        {"kr": "체리덱의 지향점은 적당한 고점을 찾으면서도 세계선 찾기 트라이 횟수를 최소화 하는데 있다고 생각함", "en": "The Cherry deck aims for a decent peak while minimising the number of tries to find the lucky run."},
+        {"kr": "서브딜러인 전갈은 왜 1렙줌? -> 안정성 지향이라 전갈/체리는 걍 배치용으로만 썻음", "en": "Why is sub-DPS Scorpion Lv.1? → Stability-oriented, Scorpion/Cherry are used purely for placement."},
+        {"kr": "메소넣고 이속 미세조절 가능하면 그게 고점 더 높음. 대신 이속세팅은 정답이 없고 사람마다 필요한 수치가 다름", "en": "Melon Soda with fine-tuned speed has a higher ceiling, but there's no single right speed; everyone needs different values."},
+        {"kr": "저점 150배 평균 250~350배 고점 400배~", "en": "Floor 150x, average 250–350x, peak 400x+."},
+        {"kr": "위 여섯 쿠키 + 석류맛 쿠키 100레벨 ... 나머지 쿠키는 1레벨 주기.", "en": "The six ranked cookies + Pomegranate at Lv100; all other cookies Lv.1."},
+        {"kr": "버프/디버프의 중첩과 브라이트시커 쿠키의 단일딜이 핵심이기 때문에 갓방울 대신 와사비문어 + 핫도그 장착.", "en": "Buff/debuff stacking and Bright Seeker's single-target damage are key, so Wasabi Octopus + Hot Dog instead of 갓방울."},
+        {"kr": "띄우기 저항이 갖추어져 있어야 보스의 에어본에 스킬이 안 끊어지므로 피노아누맛 쿠키 + 판다 장착.", "en": "Lift resistance is needed so skills aren't interrupted by the boss's airborne, so Pinot Noir + Panda."},
+        {"kr": "단순히 허브버프받은 석류 빨대는 5개 정전버프받은 석류 빨대는 6개 이 차이 때문에 허브로 바꾸면 5순위까지만 버프를 받음", "en": "Pomegranate buffed by Herb gets 5 straws, buffed by Jungle Warrior 6; so with Herb only ranks 1–5 get the buff."},
+        {"kr": "닼초의 방깎은 스증버프 못받아서 스가를 활용한 빠른스택쌓는것도 좋습니다", "en": "Dark Choco's DEF shred doesn't benefit from skill amp, so use haste to stack faster."},
+        {"kr": "우유의 경우에는 공격력수치 = 버프에 그대로 반영되다보니까 슈가룬으로 억지로 끌어올리고 복지까지 몰아 주는게 가장 효율이 좋음", "en": "For Milk, ATK translates directly into the buff, so forcing ATK up with runes and perks is most efficient."},
+        {"kr": "정글전사 대신 허브맛 쿠키를 넣고 실론나이트 쿠키를 1레벨로 변경. 고점은 낮아지지만 안정성은 오름.", "en": "Replace Jungle Warrior with Herb and set Ceylon Knight to Lv.1 — lower peak but more stable."},
+        {"kr": "이동속도 옵션은 절대 뽑지 말기. 본인이 이동속도 미세조절중이면 본인 판단하에 0~3줄 뽑기", "en": "Never roll move speed on gear; only 0–3 lines if you're micro-tuning speed yourself."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "71105",
+      "url": "https://m.dcinside.com/board/projectcc/71105",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 거의 600배",
+      "title_en": "Almost 600x",
+      "relevance": 3,
+      "summary_en": "캔디애플 (69368 author) hits 637.79G at 1.14G power (~559x) with a 5★ Seeker via the Melon Soda + Jungle Warrior deck and extreme move-speed micro-tuning. The sugar-rune screenshots show the speed values: Pinot Noir 0.26+0.57 (+0.32), Melon Soda 0.51+0.20, Seeker 0.32, Jungle Warrior three skill-haste lines. Scorpion's ATK was raised a bit (Lv7) so Pomegranate's buff stops bouncing to Melon Soda.",
+      "scores": [
+        {"damage": "637.789G (637,789,363,813)", "power": "1.14G", "ratio": "~559배", "deck": "메소+정전 deck, Seeker 5★", "note": "timer 17.233; guild 탄산수맛쿠키 5T 353G 1st; personal group rank 2 (허허 665.42G)."}
+      ],
+      "teams": [
+        {
+          "name": "메소정전 (Melon Soda + Jungle Warrior)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "8 (same account as 69368)", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "7", "stars": "9", "note": "ATK raised slightly to stop Pomegranate jumping to Melon Soda"},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "2", "stars": "8", "note": "move speed"},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "9", "note": ""},
+            {"kr": "정전", "en": "Jungle Warrior", "level": "1", "stars": "8", "note": "all skill haste"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "6", "stars": "9", "note": ""},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "5", "note": "move speed 0.32"},
+            {"kr": "메소", "en": "Melon Soda", "level": "2", "stars": "8", "note": "move speed 0.71"},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "8", "note": ""},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "9", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "10", "note": "leader"},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "100", "stars": "3", "note": ""}
+          ],
+          "pets": ["핫도그 20★", "와사비문어 20★", "판다 18★"],
+          "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론", "치케", "전갈 (≈7th, per commenter '딱 전갈 공 7등')"],
+          "perks": "not stated (same account as 69368: 열정페이 + 초고속승진)",
+          "formation": "Move speed from sugar runes only (no gear speed) on Pinot, Melon Soda and Seeker; aligns team in one line (일렬/일자 정렬).",
+          "substitutions": [],
+          "unorthodox": ["Scorpion Lv7, Pinot Lv2, Melon Soda Lv2, Dark Choco Lv6 — levels used as fine ATK-ordering knobs", "Seeker given a move-speed rune line despite having only 3 unlocked rune slots at 5★"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "정전 (정글전사)", "stats": "SSR 스킬가속 +5.00 (locked), SR 스킬가속 +2.00 (locked), R 치명저항 4.20%, R 공격력 증폭 3.70%, SR 방어력 증폭 5.10%, SR 스킬가속 +3.00 (locked); ★10 slots: 회피율 0.80%, 이동속도 +0.51 (not unlocked)", "why": "author: gave JW 스가 and damage rose ~130G ('해골물같긴한데')"},
+        {"cookie": "피노누아", "stats": "C 방어력 증폭 0.90%, U 스킬증폭 1.60%, C 공격력 증폭 0.90%, C 이동속도 +0.26 (locked), R 이동속도 +0.57 (locked), U 이동속도 +0.32 (unlocked)", "why": "move-speed tuning for placement"},
+        {"cookie": "메소 (메론소다)", "stats": "C 방어력 증폭 1.40%, R 이동속도 +0.51 (locked), C 체력 증폭 1.40%, U 방어력 증폭 2.30%, C 이동속도 +0.20 (locked), U 피해감소 2.60%", "why": "author: removing 0.03 of Melon Soda speed improved placement"},
+        {"cookie": "브시커 (5★)", "stats": "SSR 스킬가속 +5.00 (locked), SSR 스킬가속 +4.00 (locked), U 이동속도 +0.32; locked-by-star slots: ★6 치명피해 1.00%, ★8 공격력 증폭 1.40%, ★8 스킬증폭 2.50%, ★10 치명저항 1.00%, ★10 체력 증폭 0.90%", "why": "Seeker was arriving slightly slow; tried 0.2 / 0.26 / 0.29 (all failed), 0.32 aligned"}
+      ],
+      "gear": [
+        {"slot": "all", "substats": "no move speed on gear (장비이속x)", "context": "raid", "why": "speed only from runes"}
+      ],
+      "rng": [
+        "'밤새 수동리트' — manual retries all night.",
+        "Speed values 0.2/0.26/0.29 on Seeker all failed; 0.32 aligned. If speed tuning fails 'you want to quit the game'.",
+        "True peak = on the 2nd Pomegranate cast Jungle Warrior's buff lands, Ceylon's skill fires, Milk's ATK buff drops off and Scorpion receives Pomegranate."
+      ],
+      "mechanics": [
+        "Sugar rune slot count is gated by star level: 5★ Seeker has 3 usable slots; extra slots unlock at ★6, ★8 (×2) and ★10 (×2).",
+        "Author estimate: a 10★ Seeker on this setup would give ~1000x."
+      ],
+      "disagreements": [
+        "Author warns he takes no responsibility if copying his speed values lowers your score (individual variance)."
+      ],
+      "quotes": [
+        {"kr": "개선한점: 전갈 공을 좀 높여서 가끔 메소한테 석류 튀는거 개선", "en": "Improvement: raised Scorpion's ATK a bit, fixing Pomegranate occasionally jumping to Melon Soda."},
+        {"kr": "이속+정전 슈가룬 장비이속x", "en": "Move speed + Jungle Warrior sugar runes; no move speed on gear."},
+        {"kr": "0.2 0.26 0.29 싹다 안되다가 0.32하니까 정렬되더라", "en": "0.2, 0.26, 0.29 all failed; at 0.32 it aligned."},
+        {"kr": "메소 이속 0.03 빼니까 배치가 더 개선됨", "en": "Removing 0.03 move speed from Melon Soda improved placement further."},
+        {"kr": "찐고점은 두번째 석류에 정전받고 실론 스킬 돌리고 우유공 빠져서 전갈이 석류 받는거임", "en": "The real peak is when the 2nd Pomegranate gets Jungle Warrior's buff, Ceylon's skill cycles, Milk's ATK buff drops, and Scorpion receives Pomegranate."},
+        {"kr": "내 슈가룬 개십창임 ... 이속 초미세조정이 큼", "en": "My sugar runes are garbage ... the ultra-fine speed tuning is what matters."},
+        {"kr": "10성이면 천배나올듯", "en": "With a 10★ (Seeker) it'd probably hit 1000x."},
+        {"kr": "정전 스가주고 130g인가 늘었음..", "en": "Giving Jungle Warrior skill haste added about 130G."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "67435",
+      "url": "https://m.dcinside.com/board/projectcc/67435",
+      "date": "2026-09-15",
+      "title_kr": "[📜공지] 갤길 [치트키] 토벌전 관련 공지",
+      "title_en": "[Notice] Gallery guild [치트키] Guild Conquest notice",
+      "relevance": 1,
+      "summary_en": "Guild master of gallery guild 치트키 (68th overall, 1T 543G, 3rd Guild Conquest season) sets an expectation of ~10x total account power in raid damage and names seven members to be kicked. No mandated setup; comments give benchmarks (guild average ~20x total power, 10–15x at ~1G total) and the tip that swapping accuracy/focus gear for skill amp/haste can double score.",
+      "scores": [
+        {"damage": "1T 543G", "power": "", "ratio": "", "deck": "guild total, 치트키 68th overall", "note": ""},
+        {"damage": "", "power": "970M total account", "ratio": "6.7x total power", "deck": "lowest-power member", "note": "metric is damage ÷ total account power, not deck power"},
+        {"damage": "", "power": "", "ratio": "15x total power", "deck": "member at mercenary Lv3", "note": ""},
+        {"damage": "", "power": "1–2G total", "ratio": "10–15x (20x with macro)", "deck": "commenter", "note": ""},
+        {"damage": "200G", "power": "", "ratio": "", "deck": "commenter", "note": "survived until 17 s ('200g 17초까지 버텨졌음')"}
+      ],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "(commenter's pvp set used in raid)", "stats": "스가 4 lines, 스증 6 lines, 명집 0", "why": "switched from 명집 set; no misses"}
+      ],
+      "gear": [
+        {"slot": "all", "substats": "replace 명중/집중 with 스증/스가", "context": "raid", "why": "commenter: doubles score"}
+      ],
+      "rng": ["Commenter: 2 hours of retries without improving the peak."],
+      "mechanics": [
+        "Mercenary Lv3 vs Lv4 makes a big difference (Lv4 = 3rd pet slot + extra perk).",
+        "A commenter assumed dying at the ~30 s slam was unavoidable; others say it can be survived and scores rise if you do."
+      ],
+      "disagreements": ["Some commenters argue to give flagged members another chance / wait until mercenary Lv4."],
+      "quotes": [
+        {"kr": "메타덱만 반영해서 본인 총투력 대비 10배 정도만 쳐주고 쉬어도 ㄹㅇ 괜찮은데 (ex. 총투력 1g면 10g 정도)", "en": "Just use the meta deck and hit ~10x your total power (e.g. 1G total → 10G) and that's fine."},
+        {"kr": "투력대비 점수 안나오는 애들은 명중집중 장비끼고 하는지 확인해야할듯 그거 전부다 스증스가만 바꿔도 점수2배 나오는데", "en": "People under-scoring should check if they're wearing accuracy/focus gear; switching it all to skill amp/haste doubles the score."},
+        {"kr": "pvp가 스가 4줄에 스증 6줄 명집 0줄임", "en": "My PvP set is 4 lines haste, 6 lines skill amp, 0 accuracy/focus."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "71827",
+      "url": "https://m.dcinside.com/board/projectcc/71827",
+      "date": "2026-09-21",
+      "title_kr": "[📜공지] [갤길] 토벌전 공지ㅇㅇㅇㅇㅇㅇ",
+      "title_en": "[Notice] [Gallery guild] Guild Conquest notice",
+      "relevance": 2,
+      "summary_en": "Gallery-guild master posts a spreadsheet of members' total account power vs boss damage (G) with an efficiency (damage ÷ power) and verdict columns, and will kick the two 'priority removal' members. No mandated setup. The table gives a population view: top member 506.386G at 9.36G total power (54.1x), many at 10–30x, several under 5x.",
+      "scores": [
+        {"damage": "506.386G", "power": "9.36G total account", "ratio": "54.10x total", "deck": "rank-1 member **년", "note": "table rows follow"},
+        {"damage": "485.716G", "power": "9.30G", "ratio": "52.23x", "deck": "착실****꾼", "note": ""},
+        {"damage": "414.131G", "power": "8.64G", "ratio": "47.93x", "deck": "농염포도**병단", "note": ""},
+        {"damage": "140.941G", "power": "4.56G", "ratio": "30.91x", "deck": "검은*", "note": ""},
+        {"damage": "62.315G", "power": "2.06G", "ratio": "30.25x", "deck": "18***포*남", "note": ""},
+        {"damage": "18.980G", "power": "4.69G", "ratio": "4.05x", "deck": "**다이노 (차출 우선)", "note": ""},
+        {"damage": "10.178G", "power": "3.09G", "ratio": "3.29x", "deck": "두**름* (차출 우선)", "note": ""},
+        {"damage": "47G", "power": "2.5G total", "ratio": "~19x total", "deck": "commenter", "note": ""},
+        {"damage": "170G", "power": "700M", "ratio": "~243배", "deck": "commenter ('몸비틀어서')", "note": "700M likely deck power"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Spreadsheet verdict thresholds: 우수 efficiency ≥15, 양호 ≥12, 1인분 ≥8, 극저효율 <3 (total-power multiples)."],
+      "disagreements": ["Commenter: 70x (deck-power) is 'human-like' enough even if not a member."],
+      "quotes": [
+        {"kr": "전투력/보스 데미지는 G 기준으로 통일 (1G = 1000M)", "en": "Power/boss damage unified in G (1G = 1000M)."},
+        {"kr": "내가 700m으로 몸비틀어서 170g 뽑았는데", "en": "I squeezed out 170G with 700M."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "70308",
+      "url": "https://m.dcinside.com/board/projectcc/70308",
+      "date": "2026-09-19",
+      "title_kr": "[📚정보] 168 이후 All In One 단일 덱 및 보스별 스위칭 공유",
+      "title_en": "[Info] Post-168 all-in-one deck and per-boss switches (story stages)",
+      "relevance": 1,
+      "summary_en": "Story-stage (not Guild Conquest) all-in-one deck guide at ~816–862M power with pet swaps per boss. Relevant shared rule: leader Milk + 열정페이, and Milk must be #1 in displayed ATK (author lowers 피겨 and 체리콜라 by 1–2 levels to guarantee it). Banner image confirms 피노누아맛 쿠키 and 체리콜라맛 쿠키 are SSR and 브라이트시커 is TSSR.",
+      "scores": [],
+      "teams": [
+        {
+          "name": "All-in-one story deck (850.32M)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "note": "formation view, levels not shown"},
+            {"kr": "?", "en": null, "level": "?", "stars": "?", "note": "orange/black hat cookie with feather, back row 2"},
+            {"kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "?", "stars": "?", "note": "leader"},
+            {"kr": "?", "en": null, "level": "?", "stars": "?", "note": "pink-haired cookie (likely 딸기맛 per text)"},
+            {"kr": "허브", "en": "Herb", "level": "?", "stars": "?", "note": "green-haired"},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "?", "stars": "?", "note": ""},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "note": ""},
+            {"kr": "피겨", "en": null, "level": "?", "stars": "?", "note": ""},
+            {"kr": "?", "en": null, "level": "?", "stars": "?", "note": "small white/red cookie (possibly 들개)"},
+            {"kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "note": "pink/black hair, eyepatch"},
+            {"kr": "?", "en": null, "level": "?", "stars": "?", "note": "dark armoured knight with sword"}
+          ],
+          "pets": ["핫도그 17★", "갓방울? (golden bell pet) 20★", "건전지? 16★ (third pet varies: 얼음과자새/초코왕방울/건전지/판다만두)"],
+          "atk_order": ["우유 (must be #1)"],
+          "perks": "Leader 우유 + 열정페이; second perk 방어구 특약 (hard bosses) or 초고속승진",
+          "formation": "",
+          "substitutions": ["비겁한 쿠키: 호밀맛→전갈맛, 딸기맛→이온맛", "폭주단 바이커: 호밀맛→전갈맛", "폭주단 트럭: 딸기맛→이온맛 + 얼음과자새", "Airborne bosses: swap in 판다만두"],
+          "unorthodox": ["피겨 and 체리콜라 levelled down 1–2 steps so Milk stays #1 ATK"]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Story bosses: 10–20 full-auto retries."],
+      "mechanics": ["열정페이 targets the ally with the highest ATK, so Milk must have the highest displayed ATK stat (the second line, 공격력, on the cookie screen)."],
+      "disagreements": ["Commenter: Hot Dog's skill amp is minor; drop it first when switching pets."],
+      "quotes": [
+        {"kr": "우유맛 쿠키의 공격력이 무조건 1등이 되도록 세팅해야 합니다. (작성자 본인도 공격력 맞추려고 피겨맛, 체리콜라맛 쿠키 레벨을 1~2단계 낮춰서 사용 중입니다.)", "en": "Milk must be #1 in ATK (the author lowers Figure and Cherry Cola by 1–2 levels to achieve this)."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "70999",
+      "url": "https://m.dcinside.com/board/projectcc/70999",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 토벌전 석류도 공격력 순서있는거임?",
+      "title_en": "Does Pomegranate also have an ATK-order position?",
+      "relevance": 2,
+      "summary_en": "Q&A: Pomegranate's own ATK doesn't matter; the ATK ranking exists for receiving Pomegranate's buff.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Pomegranate is the buff giver, so its ATK is irrelevant to the ATK order; keep it Lv100."],
+      "disagreements": [],
+      "quotes": [{"kr": "공격력 순위는 석류버프를 받기 위해서 필요한거고 석류는 본인이 석류버프 주는놈이라 공격력 상관 x", "en": "ATK ranking is for receiving Pomegranate's buff; Pomegranate gives it, so its ATK doesn't matter."}]
+    },
+    {
+      "source": "dc",
+      "id": "71032",
+      "url": "https://m.dcinside.com/board/projectcc/71032",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 토벌 이게 국룰임?",
+      "title_en": "Is this the standard raid setup?",
+      "relevance": 2,
+      "summary_en": "User shows a 1.12G Herb deck with most cookies at Lv100; replies tell them to put Pinot Noir and Herb (and Ceylon) at Lv.1, or at that power drop Herb for Jungle Warrior and keep Ceylon Lv100.",
+      "scores": [],
+      "teams": [
+        {
+          "name": "User's Herb deck (1.12G)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": ""},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "?", "note": ""},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "?", "note": "told to Lv.1"},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "leader"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": ""},
+            {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": ""},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": ""},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "허브", "en": "Herb", "level": "100", "stars": "?", "note": "told to Lv.1 or swap for 정전"},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "100", "stars": "?", "note": ""}
+          ],
+          "pets": ["핫도그 20★", "와사비문어 20★", "판다 17★"],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": ["누브티스: at your power, drop Herb, add Jungle Warrior Lv.1, keep Ceylon Lv100"],
+          "unorthodox": []
+        }
+      ],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "피노 허브 실론도 1렙 니 전투력이면 허브 빼고1렙 정전 넣고 실론100렙 유지해도 될듯", "en": "Pinot, Herb, Ceylon to Lv.1 — or at your power drop Herb, add Lv.1 Jungle Warrior and keep Ceylon at 100."}]
+    },
+    {
+      "source": "dc",
+      "id": "71044",
+      "url": "https://m.dcinside.com/board/projectcc/71044",
+      "date": "2026-09-20",
+      "title_kr": "[✋️질문] 뉴비 토벌 공격력순서 맞추라는거 질문좀",
+      "title_en": "Newbie question about the raid ATK order",
+      "relevance": 1,
+      "summary_en": "Clarifies the ATK order uses the 공격력 (second line) stat on the cookie info screen, not total combat power.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["ATK order = the 공격력 stat (2nd line) in cookie info, not per-cookie combat power (1st line)."],
+      "disagreements": [], "quotes": [{"kr": "2", "en": "(Answer:) the second one (ATK)."}]
+    },
+    {
+      "source": "dc",
+      "id": "71056",
+      "url": "https://m.dcinside.com/board/projectcc/71056",
+      "date": "2026-09-20",
+      "title_kr": "[✋️질문] 토벌 체리덱",
+      "title_en": "Raid Cherry deck question",
+      "relevance": 2,
+      "summary_en": "Asks whether replacing Scorpion with 바궁 (Princess Bari?) in the Cherry deck works, since Seeker reportedly does >90% of damage and Bari+Cherry lines Seeker and Macaron up. A tester reports the floor rises but the ceiling drops.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Claim: Bright Seeker accounts for over 90% of damage share.", "Claim: 바궁 + 체리 together put Seeker and Macaron in a single line."],
+      "disagreements": ["칰킨: swapping Scorpion for 바궁 raises the floor but lowers the ceiling."],
+      "quotes": [
+        {"kr": "어짜피 브시커가 딜 지분 90 넘는다며", "en": "They say Bright Seeker's damage share is over 90% anyway."},
+        {"kr": "해봤는데 저점은 오르고 고점은 낮아지는거 같음", "en": "Tried it — floor goes up, ceiling goes down."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "71059",
+      "url": "https://m.dcinside.com/board/projectcc/71059",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 토벌전 소년가장 뉴비 도와주실 고수님 구합니다ㅠ",
+      "title_en": "Newbie carrying his guild asks for raid help",
+      "relevance": 2,
+      "summary_en": "User at 539.9M with a 5★ Seeker went from ~50G to 95.8G and then 123G (228x) after switching perks from 스가15 + 열정페이 to 초고속승진 + 열정페이. Commenter notes the 스가15 perk wasn't applying to this deck (only 2 shooter-type cookies).",
+      "scores": [
+        {"damage": "~50G", "power": "539.9M", "ratio": "~93배", "deck": "Herb cherry deck with 스가15 + 열정페이 perks", "note": "before fix"},
+        {"damage": "95.817G", "power": "539.9M", "ratio": "~177배", "deck": "same, perks 초고속승진 + 열정페이", "note": "screenshot; guild 1st in group at 108G 859M"},
+        {"damage": "123G", "power": "539.9M", "ratio": "228배", "deck": "same", "note": "follow-up comment"}
+      ],
+      "teams": [
+        {
+          "name": "User's deck (539.9M)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": ""},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "5", "note": ""},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "?", "note": ""},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "leader"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": ""},
+            {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": ""},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": ""},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "허브", "en": "Herb", "level": "1", "stars": "?", "note": ""},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "95", "stars": "?", "note": ""}
+          ],
+          "pets": ["와사비문어 19★", "판다 16★", "핫도그 20★"],
+          "atk_order": [],
+          "perks": "열정페이 + 초고속승진 (after fix)",
+          "formation": "", "substitutions": [], "unorthodox": []
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [{"slot": "all", "substats": "gear skill haste total 13.6", "context": "raid", "why": ""}],
+      "rng": [],
+      "mechanics": ["The 스가15 perk only applies to a cookie type (commenter implies 사격형/shooter); this deck has only 2 shooters, so it didn't apply."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "복지 스가는 적용이 안되고있는 덱인데?", "en": "The skill-haste perk isn't applying to this deck."},
+        {"kr": "사격형 2마린데 스가15를쓴다고?", "en": "You have only 2 shooter-types and use haste-15?"},
+        {"kr": "300배 치려면 플레이트+연구 좀 더 되어야할듯", "en": "For 300x you need more plates + research."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "71060",
+      "url": "https://m.dcinside.com/board/projectcc/71060",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 시커 5성 아래인 사람들 토벌 몇점까지 나오냐",
+      "title_en": "Sub-5★ Seeker users, what do you score?",
+      "relevance": 2,
+      "summary_en": "Benchmarks for low-star Seekers: 3★ max 150G; 3★ at 900M → 215G; 600M → 119G.",
+      "scores": [
+        {"damage": "150G", "power": "?", "ratio": "", "deck": "Seeker 3★ (OP)", "note": ""},
+        {"damage": "215G", "power": "900M", "ratio": "~239배", "deck": "Seeker 3★ (Pusher)", "note": ""},
+        {"damage": "119G", "power": "600M", "ratio": "~198배", "deck": "?", "note": ""}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Commenter: at the same power, low-star Seekers score noticeably less; 'with 5★ you'd get 200G'."],
+      "disagreements": [], "quotes": [{"kr": "3성 투력 900M 215G", "en": "3★, 900M power, 215G."}]
+    },
+    {
+      "source": "dc",
+      "id": "71140",
+      "url": "https://m.dcinside.com/board/projectcc/71140",
+      "date": "2026-09-20",
+      "title_kr": "[✋️질문] 토벌전 조언좀",
+      "title_en": "Raid advice please",
+      "relevance": 2,
+      "summary_en": "Low-power user (129.5M, 5.64G ≈ 44x) with the Cherry-deck roster dies at ~29 s even with Herb. Advice: at this power aim to maximise damage until the 30 s wipe using Jungle Warrior; alternatively swap to survival pets (왕초코/피감새) and 딸크 + armor perk to live longer.",
+      "scores": [{"damage": "5.642G", "power": "129.5M", "ratio": "~44배", "deck": "Cherry deck, partly levelled", "note": ""}],
+      "teams": [
+        {
+          "name": "User's deck (129.5M)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "75", "stars": "?", "note": ""},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "?", "note": ""},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "80", "stars": "?", "note": ""},
+            {"kr": "석류", "en": "Pomegranate", "level": "85", "stars": "?", "note": ""},
+            {"kr": "정전", "en": "Jungle Warrior", "level": "1", "stars": "?", "note": ""},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": ""},
+            {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": ""},
+            {"kr": "치케", "en": "Cheesecake", "level": "90", "stars": "?", "note": ""},
+            {"kr": "피겨", "en": null, "level": "90", "stars": "?", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "leader"},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "75", "stars": "?", "note": ""}
+          ],
+          "pets": ["와사비문어 13★", "핫도그 15★", "판다 11★"],
+          "atk_order": [], "perks": "", "formation": "",
+          "substitutions": ["스라소닉: replace 핫도그+문어 (peak-chasing pets) with 왕초코 + 피감새 to survive longer; 정전 → 딸크; perk 방어구 수리 특약 (if perk level 4) else 초고속"],
+          "unorthodox": []
+        }
+      ],
+      "sugar_runes": [], "gear": [],
+      "rng": [],
+      "mechanics": ["Hot Dog and Wasabi Octopus are peak-damage pets; survival pets help low-spec accounts outlast the 30 s slam."],
+      "disagreements": ["저장용 (71135 author): Herb still dies at 30 s for you, so use JW and optimise damage up to 30 s — vs 스라소닉's survival-pet approach."],
+      "quotes": [{"kr": "너같은 경우는 허브 넣어도 30초에 죽으니 걍 정전넣고 30초 까지 딜 뽑는걸 기준으로 시도해보는게 맞는거같음", "en": "Since you die at 30 s even with Herb, use Jungle Warrior and aim to maximise damage until 30 s."}]
+    },
+    {
+      "source": "dc",
+      "id": "71187",
+      "url": "https://m.dcinside.com/board/projectcc/71187",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 저거 길드토벌덱 90스테 뉴비도 1렙 해줘?",
+      "title_en": "Should a stage-90 newbie also use Lv.1 in the raid deck?",
+      "relevance": 1,
+      "summary_en": "Lv.1 fillers are for high-spec accounts; low-research accounts would die. One user copying the deck (not levels) got 7x power.",
+      "scores": [{"damage": "", "power": "", "ratio": "7배", "deck": "copied deck, not levels", "note": ""}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Without research, Lv.1 fillers die immediately."],
+      "disagreements": [], "quotes": [{"kr": "그럼 다터져 저건 개고수용", "en": "Then everything explodes — that's for pros."}]
+    },
+    {
+      "source": "dc",
+      "id": "71237",
+      "url": "https://m.dcinside.com/board/projectcc/71237",
+      "date": "2026-09-20",
+      "title_kr": "[✋️질문] 토벌 공략 보면서 해봐도",
+      "title_en": "Following the raid guide but...",
+      "relevance": 2,
+      "summary_en": "At 150M raid power (Ceylon 2★, Seeker 5★, others 7–9★) user caps at 60–70x. Replies: normal at that power; ~350M needed to barely survive 30 s; cookie HP of 3.5–4M is where scores jump.",
+      "scores": [{"damage": "", "power": "150M", "ratio": "60–70배", "deck": "guide deck, Seeker 5★, Ceylon 2★", "note": ""}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["~350M deck power needed to barely survive the 30 s slam.", "Cookie HP of 3.5–4M is the threshold where scores jump."],
+      "disagreements": [], "quotes": [{"kr": "애들 체력이 3.5 ~ 4 m 사이가 되는 내실이 되어야 점수가 확 튐", "en": "Scores jump once your account is developed enough that cookies have 3.5–4M HP."}]
+    },
+    {
+      "source": "dc",
+      "id": "71266",
+      "url": "https://m.dcinside.com/board/projectcc/71266",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 280-30 비겁 35퍼 명랑없이 해봄",
+      "title_en": "Cleared stage 280-30 (Cowardly Cookie) at 35% without 명랑",
+      "relevance": 1,
+      "summary_en": "Story-stage clear using the raid gear set ('명집 700대 토벌셋') rather than a stage accuracy/focus set. Screenshot shows Bright Seeker in this set with boss dmg 84%, element dmg 111.15%, accuracy 761.82, focus 751.93. Damage reduction including perks 45%.",
+      "scores": [],
+      "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "raid preset (토벌셋)", "substats": "accuracy/focus around 700s (Seeker: 명중 761.82, 집중 751.93; 보스피해 84%, 속성피해 111.15%)", "context": "raid gear reused for stages", "why": ""}],
+      "rng": [], "mechanics": [], "disagreements": ["Thread argument over whether high-accuracy/focus stage sets are a scam."],
+      "quotes": [{"kr": "스테용 명집셋도 아니고 걍 명집 700대 토벌셋으로 밀어버림", "en": "Not a stage accuracy/focus set — just pushed with my raid set that has ~700 accuracy/focus."}]
+    },
+    {
+      "source": "dc",
+      "id": "71288",
+      "url": "https://m.dcinside.com/board/projectcc/71288",
+      "date": "2026-09-20",
+      "title_kr": "[일반] 토벌 메소덱 일렬은 되는데 전갈도 마카롱 풀로 받는 건 세계선이지?",
+      "title_en": "Melon Soda deck lines up, but Scorpion getting full Macaron buff is a lucky run?",
+      "relevance": 1,
+      "summary_en": "One-line question: in the Melon Soda deck the team aligns, but Scorpion getting Macaron's full buff depends on its slightly-left position (lucky run). No replies.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [],
+      "rng": ["Scorpion receiving Macaron's buff depends on whether it sits slightly left — treated as a lucky 'world-line'."],
+      "mechanics": ["Macaron's buff is positional (area-based)."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "71352",
+      "url": "https://m.dcinside.com/board/projectcc/71352",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 토벌 전갈메소덱 전갈 1렙줘도 빨대 가져가는건",
+      "title_en": "Scorpion steals the straw even at Lv.1 in the Scorpion/Melon Soda deck",
+      "relevance": 1,
+      "summary_en": "With speed on Seeker, Pinot and Melon Soda the team aligns, but Lv.1 Scorpion still takes Pomegranate's straw. Reply: the intended receiver is missing Milk's buff.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [],
+      "rng": ["Lv.1 Scorpion can still steal Pomegranate's buff when an intended target misses Milk's buff."],
+      "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "석류 받을 쿠키가 우유 버프 끊기나 본데", "en": "Looks like the cookie meant to get Pomegranate is losing Milk's buff."}]
+    },
+    {
+      "source": "dc",
+      "id": "71374",
+      "url": "https://m.dcinside.com/board/projectcc/71374",
+      "date": "2026-09-21",
+      "title_kr": "[✋️질문] 토벌에서 시커가 무조건 피겨보다 공격력 높아야 함?",
+      "title_en": "Must Seeker have higher ATK than Figure?",
+      "relevance": 1,
+      "summary_en": "Answer: order of ranks 2 and 3 doesn't matter.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["ATK ranks 2 and 3 (Seeker/Figure) can be in either order."],
+      "disagreements": [], "quotes": [{"kr": "23은 순서 상관없음", "en": "Ranks 2 and 3 order doesn't matter."}]
+    },
+    {
+      "source": "dc",
+      "id": "71381",
+      "url": "https://m.dcinside.com/board/projectcc/71381",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 장비 피감보다 치저위주로 챙기니까 토벌때 못 버틸때가 많네",
+      "title_en": "Prioritising crit res over dmg reduction on gear makes me die in raid",
+      "relevance": 2,
+      "summary_en": "Replies: crit resistance doesn't apply in Guild Conquest; for stages and raid it's a junk stat. Image is an unrelated meme (zebra in an alley).",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "all", "substats": "치저 (crit res) is useless; use 피감", "context": "raid", "why": "crit res not applied in raid"}],
+      "rng": [], "mechanics": ["Crit resistance is not applied in Guild Conquest."], "disagreements": [],
+      "quotes": [{"kr": "토벌에선 치저적용안됨", "en": "Crit res isn't applied in the raid."}, {"kr": "스테이지랑 토벌은 치저 잡옵임", "en": "In stages and raid, crit res is a junk option."}]
+    },
+    {
+      "source": "dc",
+      "id": "71393",
+      "url": "https://m.dcinside.com/board/projectcc/71393",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 토벌 이게 200배 맞음?",
+      "title_en": "Is this 200x?",
+      "relevance": 1,
+      "summary_en": "User at 95.78M scored 2.36G (they misread as 200x; it's ~25x). Replies: ~400–500M needed before 100x becomes possible because you must survive boss damage and have sugar runes / gear presets set.",
+      "scores": [{"damage": "2.36G", "power": "95.78M", "ratio": "~25배", "deck": "cherry-deck roster mostly Lv90, Milk Lv100, JW/Cherry Lv1", "note": "pets 핫도그15, 판다14, 와사비문어15"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Must not lose a single cookie at 30 s.", "~400–500M deck power before 100x is realistic (저장용)."],
+      "disagreements": [], "quotes": [{"kr": "대충 4~500M은 돼야 그때부터 100배 나올걸여?", "en": "You need about 400–500M before 100x starts coming out."}]
+    },
+    {
+      "source": "dc",
+      "id": "71419",
+      "url": "https://m.dcinside.com/board/projectcc/71419",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 토벌전 시커 2성이면 보통 몇배임?",
+      "title_en": "What multiple with a 2★ Seeker?",
+      "relevance": 2,
+      "summary_en": "Seeker-star benchmarks: OP 2★ stuck at 70x; others report 3★ 150x, 2★ 125x, 2★ ~150x, 2★ 250x.",
+      "scores": [
+        {"damage": "", "power": "", "ratio": "70배", "deck": "Seeker 2★ (OP)", "note": ""},
+        {"damage": "", "power": "", "ratio": "150배 / 125배", "deck": "Seeker 3★ / 2★", "note": "same commenter"},
+        {"damage": "", "power": "", "ratio": "250배", "deck": "Seeker 2★ (러너)", "note": ""}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": [{"kr": "2성 250배 했으", "en": "Did 250x with 2★."}]
+    },
+    {
+      "source": "dc",
+      "id": "71420",
+      "url": "https://m.dcinside.com/board/projectcc/71420",
+      "date": "2026-09-21",
+      "title_kr": "[✋️질문] 토벌에서 이속, 배치, 체리에 대해 잘 정리된 글 있음?",
+      "title_en": "Any good write-up on move speed, placement and Cherry?",
+      "relevance": 1,
+      "summary_en": "캔디애플 points to 69368 and 71135 as the reference posts on move speed, placement and Cherry.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "71434",
+      "url": "https://m.dcinside.com/board/projectcc/71434",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 이번 토벌전은 200g로 마감.",
+      "title_en": "Finished this Guild Conquest at 200G",
+      "relevance": 2,
+      "summary_en": "204.24G at 616.66M (~331x) with a Herb/Cherry roster. ATK order includes Scorpion (Lv78) in the top five, which contrasts with 69368's 'keep Scorpion off Pomegranate'. Perks 20/7.",
+      "scores": [{"damage": "204.242G", "power": "616.66M", "ratio": "~331배", "deck": "Herb + Cherry deck with Scorpion Lv78", "note": "guild group #1 at 3T 763G (redacted)"}],
+      "teams": [
+        {
+          "name": "언담's deck (616.66M)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": ""},
+            {"kr": "브시커", "en": "Bright Seeker", "level": "100", "stars": "?", "note": ""},
+            {"kr": "피노누아", "en": "Pinot Noir", "level": "42", "stars": "?", "note": ""},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "leader"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "42", "stars": "?", "note": ""},
+            {"kr": "체리", "en": "Cherry", "level": "18", "stars": "?", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "78", "stars": "?", "note": "in ATK top-5"},
+            {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": ""},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "허브", "en": "Herb", "level": "47", "stars": "?", "note": ""},
+            {"kr": "실론", "en": "Ceylon Knight", "level": "100", "stars": "?", "note": ""}
+          ],
+          "pets": ["핫도그 18★", "와사비문어 19★", "판다 16★"],
+          "atk_order": ["우유", "시커", "피겨", "마카롱", "전갈", "실론", "치케"],
+          "perks": "20 / 7 (열정페이 + 초고속승진)",
+          "formation": "", "substitutions": [],
+          "unorthodox": ["Scorpion in the Pomegranate-receiving top 5 instead of Ceylon/Cheesecake", "Fillers at intermediate levels (18–47) rather than Lv.1"]
+        }
+      ],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [],
+      "disagreements": ["Puts Scorpion in the ATK top 5 (contrasts with 69368 'don't let Scorpion receive Pomegranate')."],
+      "quotes": [{"kr": "우유시커피겨 마카롱전갈 실론치케 207", "en": "Milk-Seeker-Figure, Macaron-Scorpion, Ceylon-Cheesecake; 20/7."}]
+    },
+    {
+      "source": "dc",
+      "id": "71442",
+      "url": "https://m.dcinside.com/board/projectcc/71442",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 난 투력이 낮은데 토벌딜 개쌔게치고 있는데 빡친다",
+      "title_en": "Meta complaint about guild-member complaint posts",
+      "relevance": 0,
+      "summary_en": "Off-topic complaint about 'my guildmates under-perform' posts.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "71457",
+      "url": "https://m.dcinside.com/board/projectcc/71457",
+      "date": "2026-09-21",
+      "title_kr": "[✋️질문] 토벌덱 대미지 안나오는건 무조건 장비 문제겠지?",
+      "title_en": "Low raid damage must be gear?",
+      "relevance": 2,
+      "summary_en": "User matched guide runes and survives the 30 s slam but damage is low, with gear built for inflated stage power. Reply: skill haste is mandatory everywhere (raid, stage, arena) — switch to haste.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "all", "substats": "스가 (skill haste) everywhere", "context": "raid/stage/arena", "why": "'닥스가'"}],
+      "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "일단 닥스가임 나중에 스테밀떄도 닥스가고 아레나도 닥스가라 스가로 바꿔라", "en": "It's skill haste, period — stages, arena too; switch to haste."}]
+    },
+    {
+      "source": "dc",
+      "id": "71491",
+      "url": "https://m.dcinside.com/board/projectcc/71491",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 토벌 시커 5성 미만 질문",
+      "title_en": "Raid with a Seeker below 5★",
+      "relevance": 2,
+      "summary_en": "4★ Seeker Cherry-deck user can't reach 200x. Reports: 3★ 130x, 3★ ~100x, alt 3★ 200x (good runes and 10★ Milk would pass 300x), 4★ 183x.",
+      "scores": [
+        {"damage": "", "power": "", "ratio": "<200배", "deck": "체리덱, Seeker 4★", "note": "OP"},
+        {"damage": "", "power": "", "ratio": "130배", "deck": "Seeker 3★", "note": ""},
+        {"damage": "", "power": "", "ratio": "~100배", "deck": "Seeker 3★", "note": ""},
+        {"damage": "", "power": "", "ratio": "200배", "deck": "Seeker 3★ alt account", "note": ""},
+        {"damage": "", "power": "", "ratio": "183배", "deck": "Seeker 4★", "note": ""}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Milk star level (10★) also matters for high multiples (SR star level)."],
+      "disagreements": [], "quotes": [{"kr": "부캐 3성 200배침 룬좋고 우유10성인애들은 300배 그냥 넘을듯", "en": "My alt with 3★ hit 200x; people with good runes and 10★ Milk will easily pass 300x."}]
+    },
+    {
+      "source": "dc",
+      "id": "71495",
+      "url": "https://m.dcinside.com/board/projectcc/71495",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 념글 토벌공략 보고 돌렸는데 만족스럽게 갱신이 안되네",
+      "title_en": "Followed the popular raid guide but couldn't beat my record",
+      "relevance": 1,
+      "summary_en": "User ran a PC macro overnight for two nights of retries and still couldn't pass 100G.",
+      "scores": [{"damage": "<100G", "power": "?", "ratio": "", "deck": "guide deck", "note": ""}],
+      "teams": [], "sugar_runes": [], "gear": [],
+      "rng": ["Overnight macro retries on PC for two nights without passing 100G."],
+      "mechanics": [], "disagreements": [], "quotes": [{"kr": "어제랑 그제 잘때 컴퓨터로 매크로도 돌려놓고 잤는데 100g를 못넘기네", "en": "Ran a macro on PC while sleeping two nights and still couldn't pass 100G."}]
+    },
+    {
+      "source": "dc",
+      "id": "71583",
+      "url": "https://m.dcinside.com/board/projectcc/71583",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 장비옵션 깡공이 무옵이라는 애들은 뭐임?",
+      "title_en": "Why do people call flat-ATK gear options worthless?",
+      "relevance": 2,
+      "summary_en": "OP claims flat ATK (깡공) gear lines visibly raise Milk's ATK and hit harder in raid than crit rate/crit dmg; others say efficiency is bad. One commenter: at Eternal grade, flat ATK + skill amp weapons are valid.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "weapon", "substats": "깡공 (flat ATK) + 스증", "context": "raid, Eternal grade", "why": "raises Milk's ATK → buff"}],
+      "rng": [], "mechanics": [],
+      "disagreements": ["OP: flat ATK > crit rate/crit dmg in raid via Milk; 랑겨울: 'not worthless, but efficiency is trash'; 카론: at Eternal grade flat ATK + skill amp weapons are valid."],
+      "quotes": [{"kr": "장비깡공옵이 우유공 생각보다 눈에띄게 많이올라서 토벌 , 크럼블에서 확실히 체감되게 쎈데", "en": "Flat-ATK gear lines raise Milk's ATK noticeably, clearly stronger in raid."}, {"kr": "이터널 기준 깡공+스증 무기류가 유효는 맞긴한데", "en": "At Eternal grade flat ATK + skill amp weapons are indeed valid."}]
+    },
+    {
+      "source": "dc",
+      "id": "71651",
+      "url": "https://m.dcinside.com/board/projectcc/71651",
+      "date": "2026-09-21",
+      "title_kr": "[✋️질문] 명중집중<스캠이면 토벌전 장비를 아레나랑 겸하는게 아니라",
+      "title_en": "If accuracy/focus is a scam, share raid gear with stages rather than arena?",
+      "relevance": 2,
+      "summary_en": "Proposes gear presets: arena weapons 스증+깡공, accessories 스증+스가 / 치저+스가; stage/raid weapons 스증+치명, accessories 스증+치명 / 피감+스가, armor 치저+피감. Replies: drop crit res for raid; just use a separate raid preset; haste matters more than accuracy/focus for healing uptime.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [
+        {"slot": "weapons (검/활/지팡이)", "substats": "arena: 스증 + 깡공; stage/raid: 스증 + 치명", "context": "proposal", "why": ""},
+        {"slot": "accessories (악세)", "substats": "arena: 스증+스가 / 치저+스가; stage/raid: 스증+치명 / 피감+스가", "context": "proposal", "why": ""},
+        {"slot": "방어구", "substats": "치저 + 피감 fixed (stage); raid should drop 치저", "context": "proposal + reply", "why": ""}
+      ],
+      "rng": [],
+      "mechanics": ["Gear presets cannot be shared between accounts (complaint)."],
+      "disagreements": ["Some say armor crit res is needed for stages (flat stats keep power up); others dropped crit res entirely.", "ㅇㅇ3: haste matters more than accuracy/focus because heal uptime is needed; crit/amp/ATK come from buffer cookies, but haste only from runes and gear."],
+      "quotes": [{"kr": "장비에서 오는 치확치피스증공증은 버퍼쿠키가 너무 잘올려주는데 스킬가속은 땡길게 룬이랑 장비뿐이라...", "en": "Crit/crit dmg/skill amp/ATK from gear are easily supplied by buffer cookies, but haste can only come from runes and gear."}]
+    },
+    {
+      "source": "dc",
+      "id": "71840",
+      "url": "https://m.dcinside.com/board/projectcc/71840",
+      "date": "2026-09-21",
+      "title_kr": "[일반] 토벌장비 걍 스증이 맞지?",
+      "title_en": "Raid gear: skill amp, right?",
+      "relevance": 1,
+      "summary_en": "Asks whether Legendary 스가+스증 beats Eternal 스가+치확 for raid; one reply 'ok' (yes).",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "?", "substats": "스가 + 스증 (Legendary) preferred over 스가 + 치확 (Eternal)", "context": "raid", "why": ""}],
+      "rng": [], "mechanics": [], "disagreements": [], "quotes": [{"kr": "스가 스증 레전 vs 스가 치확 이터널이면 닥전?", "en": "Haste+amp Legendary vs haste+crit Eternal — obviously the former?"}]
+    },
+    {
+      "source": "dc",
+      "id": "71939",
+      "url": "https://m.dcinside.com/board/projectcc/71939",
+      "date": "2026-09-21",
+      "title_kr": "[📜공지] [계란] 길드 토벌전 정산 09.21",
+      "title_en": "[Notice] [계란] guild Guild Conquest settlement 09.21",
+      "relevance": 1,
+      "summary_en": "Guild 계란: last week 792.779G (148th), this week 1T 368G (231st overall, 5th in group). Member table of total account power vs boss damage: top member 172.447G at 7.5G total power (22.99x total). The master mentions a gear-preset improvement coming next week.",
+      "scores": [
+        {"damage": "1T 368G", "power": "", "ratio": "", "deck": "guild 계란 total", "note": "231st overall, 5th in group; previous week 792G 779M (148th)"},
+        {"damage": "172.447G", "power": "7.5G total account", "ratio": "22.99x total", "deck": "top member", "note": "column 배율 = damage ÷ total account power"},
+        {"damage": "52.237G", "power": "2.71G", "ratio": "19.28x", "deck": "member 동*", "note": ""}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": ["Gear preset improvement due the following week (from 9/21)."], "disagreements": [], "quotes": [{"kr": "다음주에 장비프리셋 개선 들어오면 확실하게 강해진 길마를 볼 수 있도록 노력하겠습니다", "en": "When the gear-preset improvement arrives next week, I'll try to show a stronger guild master."}]
+    },
+    {
+      "source": "dc",
+      "id": "71992",
+      "url": "https://m.dcinside.com/board/projectcc/71992",
+      "date": "2026-09-22",
+      "title_kr": "[✋️질문] 브시커 스가 2 먹냐?",
+      "title_en": "Is a +2 skill haste line on Bright Seeker worth keeping?",
+      "relevance": 2,
+      "summary_en": "Bright Seeker sugar rune screen: SR 스가 +3.00, SSR 스가 +4.00, SR 스가 +2.00 (unlocked), and pre-locked star-gated slots (★8 SSR 스가 +4 ×2, ★10 SSR 스가 +4 and +5; ★6 U 공증 2.30% unlocked). Commenters mock locking the ★8/★10 slots when the user won't reach those stars, since locks raise the reroll cost (240 crystals per roll).",
+      "scores": [], "teams": [],
+      "sugar_runes": [{"cookie": "브시커", "stats": "SR 스가+3.00, SSR 스가+4.00, SR 스가+2.00; star-gated: ★6 공증 2.30%, ★8 SSR 스가+4.00 ×2 (locked), ★10 SSR 스가+4.00 and +5.00 (locked)", "why": "all-haste Seeker; +2 roll considered weak"}],
+      "gear": [], "rng": [],
+      "mechanics": ["Star-gated rune slots can be rolled and locked before the cookie reaches that star; locking raises reroll cost (240 per reroll shown with 5 locks)."],
+      "disagreements": ["Commenters: pointless to lock ★8/★10 slots if you won't reach those stars — wastes rune crystals."],
+      "quotes": [{"kr": "그냥윗줄3개만ssr 띄우는게더적게먹겠다룬결정개아까워", "en": "Just aim for SSR on the top 3 lines; much cheaper — what a waste of rune crystals."}]
+    }
+  ],
+  "glossary": [
+    {"kr": "치케", "en": "Cheesecake (치즈케이크맛 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71135 infographic ATK-rank card labelled 치즈케이크맛 쿠키 (gold, light element)"},
+    {"kr": "피겨", "en": null, "kind": "cookie", "confidence": "high", "evidence": "Full name 피겨여왕맛 쿠키 (71135 card); water element, purple hood. English name not confirmed."},
+    {"kr": "실론", "en": "Ceylon Knight (실론나이트 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71135 ATK rank 6 card labelled 실론나이트 쿠키; white-bearded old knight, light"},
+    {"kr": "우유", "en": "Milk (우유맛 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71135 rank 1 card 우유맛 쿠키; doctor with pink bear; used as mercenary leader"},
+    {"kr": "브시커", "en": "Bright Seeker (브라이트시커 쿠키), TSSR", "kind": "cookie", "confidence": "high", "evidence": "71135 card + 70308 banner"},
+    {"kr": "피노", "en": "Pinot Noir (피노누아맛 쿠키), SSR", "kind": "cookie", "confidence": "high", "evidence": "70308 banner + 71105 sugar-rune screen; dark-element man with monocle/suit"},
+    {"kr": "메소", "en": "Melon Soda (메론소다맛 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71105 sugar-rune screen; water element, green hair + goggles"},
+    {"kr": "정전", "en": "Jungle Warrior (정글전사 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71105 sugar-rune screen 정글전사 쿠키; grass element, teal hair with orange flower"},
+    {"kr": "체리", "en": "Cherry (체리맛 쿠키) — NOT Cherry Cola", "kind": "cookie", "confidence": "high", "evidence": "71135 Q4 '체리맛 쿠키나 전갈맛 쿠키'; fire element orange cookie. 체리콜라맛 쿠키 is a separate SSR (70308 banner) and is used in story decks, not the raid deck. Brief's 'Cherry Cola?' is wrong for the raid deck."},
+    {"kr": "전갈", "en": "Scorpion (전갈맛 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71135 Q4 '전갈맛 쿠키'; fire element red-haired"},
+    {"kr": "석류", "en": "Pomegranate (석류맛 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71135 level text '석류맛 쿠키 100레벨'; dark element red curly hair"},
+    {"kr": "닼초/닥초", "en": "Dark Choco", "kind": "cookie", "confidence": "high", "evidence": "71135 rune guide '브시/닼초' card shows dark element black/red cookie"},
+    {"kr": "마카롱", "en": "Macaron (마카롱맛 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "71135 rank 4 card"},
+    {"kr": "허브", "en": "Herb (허브맛 쿠키)", "kind": "cookie", "confidence": "low", "evidence": "71135 Q3 names 허브맛 쿠키; slot identified as green-haired grass cookie by elimination (69368/71032/71059/71434 decks)"},
+    {"kr": "바궁", "en": "Princess Bari?", "kind": "cookie", "confidence": "low", "evidence": "71056 only, no image"},
+    {"kr": "와사비문어", "en": "Wasabi Octopus pet", "kind": "pet", "confidence": "high", "evidence": "71135: at 20★ 아군 지속 시너지 +40%, 지속 시너지를 받는 아군 공격력 10% 증가; green pickle-like icon"},
+    {"kr": "핫도그", "en": "Hot Doggie pet", "kind": "pet", "confidence": "high", "evidence": "71135: at 20★ 아군 스킬증폭 10% 증가"},
+    {"kr": "판다 / 판다만두", "en": "Panda Dumpling pet", "kind": "pet", "confidence": "high", "evidence": "71135: at 18★ 아군 띄우기 저항 18% 증가; used vs airborne bosses (70308)"},
+    {"kr": "열정페이", "en": "perk: highest-ATK ally +20% ATK, −20% max HP", "kind": "term", "confidence": "high", "evidence": "71135/70308 perk card"},
+    {"kr": "초고속 승진", "en": "perk: highest-ATK ally +7% ATK", "kind": "term", "confidence": "high", "evidence": "71135/70308 perk card; '복지 20 7' = these two"},
+    {"kr": "단장", "en": "mercenary leader (gets +10% ATK/DEF/HP at 베테랑 용병단 Lv4)", "kind": "term", "confidence": "high", "evidence": "71135 image: Lv4 adds 1 more perk slot, 3rd pet slot, leader ATK/DEF/HP +10%"},
+    {"kr": "빨대", "en": "Pomegranate's buff link ('straw'); 5 straws when Pomegranate is Herb-buffed, 6 when Jungle-Warrior-buffed", "kind": "term", "confidence": "high", "evidence": "71135 author comment"},
+    {"kr": "세계선", "en": "'world-line' = a lucky RNG run", "kind": "term", "confidence": "high", "evidence": "71135, 71288"},
+    {"kr": "다발", "en": "multi-hit chain (Pomegranate + Jungle Warrior)", "kind": "term", "confidence": "low", "evidence": "69368 comments '다발이 끊겨서', '석류 정전다발'"},
+    {"kr": "명집", "en": "accuracy + focus (명중 + 집중)", "kind": "stat", "confidence": "high", "evidence": "67435, 71266, 71651"},
+    {"kr": "pink stars", "en": "star levels 6–10 (each pink star replaces a gold star); 5 gold = 5★, 5 pink = 10★", "kind": "term", "confidence": "high", "evidence": "69368 author's Seeker 5 gold = confirmed 5★; 71135 Seeker 5 pink = confirmed 10★"},
+    {"kr": "통나무", "en": "'log' = guild member who contributes nothing", "kind": "term", "confidence": "high", "evidence": "71827"},
+    {"kr": "기갱", "en": "record renewal (personal best)", "kind": "term", "confidence": "high", "evidence": "69368 comments"}
+  ]
+}

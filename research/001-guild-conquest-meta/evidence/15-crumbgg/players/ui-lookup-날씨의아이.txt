@@ -1,0 +1,44 @@
+- banner
+  - link "crumb — home" [ref=e8726, url=https://crumb.gg/]
+  - link "Sign in" [ref=e8727, url=https://crumb.gg/account]
+  - button "한국어로 보기" [ref=e8728]
+  - button "Switch to dark mode" [ref=e8729]
+  - button "Menu" [expanded=false, ref=e8731]
+- main
+  - heading "Lookup" [level=1, ref=e8730]
+  - combobox "Player or guild name" [expanded=false, ref=e8732]: 날씨의아이
+  - heading "날씨의아이" [level=2, ref=e8735]
+  - StaticText "Lv 190"
+  - StaticText "· S"
+  - StaticText "28"
+  - StaticText "·"
+  - button "카페" [ref=e8736]
+  - StaticText "COMBAT POWER"
+  - StaticText "25.81B"
+  - StaticText "RUMBLE RANK"
+  - StaticText "#2"
+  - StaticText "2m ago"
+  - StaticText "RUMBLE RATING"
+  - StaticText "3,973"
+  - StaticText "Season 1"
+  - StaticText "GUILD CONQUEST"
+  - StaticText "#1"
+  - StaticText "3T 226G · S5"
+  - StaticText "RUMBLE RATING"
+  - image "3,973 · #2 · 27 Sept, 11:36"
+  - StaticText "GUILD CONQUEST RANK"
+  - generic
+  - StaticText "DEFENSE TEAM"
+  - list "Defense formation"
+    - listitem "1. Macaron Cookie" [level=1, ref=e8737]
+    - listitem "Hidden" [level=1, ref=e8738]
+    - listitem "3. Pinot Noir Cookie" [level=1, ref=e8739]
+    - listitem "4. Cheesecake Cookie" [level=1, ref=e8740]
+    - listitem "5. Pomegranate Cookie" [level=1, ref=e8741]
+    - listitem "Hidden" [level=1, ref=e8742]
+    - listitem "7. Milk Cookie's Crunchy Strong Pediatrician" [level=1, ref=e8743]
+    - listitem "8. Nameless Cake Hound" [level=1, ref=e8744]
+    - listitem "9. Ion Cookie Robot" [level=1, ref=e8745]
+    - listitem "Hidden" [level=1, ref=e8746]
+    - listitem "Hidden" [level=1, ref=e8747]
+    - listitem "12. Moon Rabbit Cookie's Pampered with Persimmon" [level=1, ref=e8748]

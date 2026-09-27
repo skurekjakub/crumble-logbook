@@ -47,7 +47,7 @@ Dependencies only point downward: `web → schema`, `server → schema`. The web
 ### Migration from the vault
 
 - `Games/crumble/research/**` moves to `research/`, including every evidence capture (post text, images, comments). The user chose to publish raw captures.
-- `Games/crumble/dashboard/` is replaced by `apps/web`. Its `data/*.json` becomes the first import seed, and its tokens and CSS carry over.
+- `Games/crumble/dashboard/` is copied to `legacy/dashboard/` as the reference for the port and is replaced by `apps/web`. Its `data/*.json` becomes the first import seed, and its tokens and CSS carry over. `legacy/` is deleted once `apps/web` covers every view.
 - The vault's `.claude/` (skills, hooks, settings) is copied into the repo. Before the first push, every file is checked for secrets, tokens, and absolute paths that shouldn't be public; findings go to the user.
 - The session memory (`agent-browser-arm64-windows`, `prefer-browser-over-curl`) is copied into the new repo's Claude project memory folder.
 - The vault keeps `conquest.md`, `Build for guild conquest.md` and `_media/`. Only the research and dashboard move.
@@ -112,7 +112,7 @@ Rules:
 - Initial kinds:
   - `scrape:dc`: search and fetch posts, images and comments from the `projectcc` gallery.
   - `scrape:naver`: board list and article fetch from the cafe `31688486` API.
-  - `scrape:crumbgg`: rankings per season and board. It uses the agent-browser CLI with `AGENT_BROWSER_EXECUTABLE_PATH` set to the native Chrome, never `wait <ms>`, and closes its own session.
+  - `scrape:crumbgg`: rankings per season and board from crumb.gg's public JSON API (`/pub/rankings?kind=`, `/pub/live?board=`, `/pub/live-history`, `/pub/leaderboard`; player lookup at `api.crumb.gg/api/lookup/*`; examples in `research/001-guild-conquest-meta/evidence/15-crumbgg/api/`). Past seasons are public to the top 50 only. The agent-browser CLI (native Chrome via `AGENT_BROWSER_EXECUTABLE_PATH`, never `wait <ms>`, closes its own session) is the fallback for pages the API doesn't cover.
   - `import:record`: load a research record's extraction JSON and the dashboard seed.
 - Scrapers write raw captures into `research/<record>/evidence/` in the existing layout. Importers read, validate with Zod, and upsert.
 

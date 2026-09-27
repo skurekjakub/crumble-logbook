@@ -1,0 +1,251 @@
+- banner
+  - link "crumb — home" [ref=e13116]
+  - link "로그인" [ref=e13117]
+  - button "Switch to English" [ref=e13118]
+  - button "어두운 화면으로" [ref=e13119]
+  - button "메뉴" [expanded=false, ref=e13122]
+- main
+  - paragraph
+    - StaticText "길드 토벌전"
+  - heading "시뮬레이터" [level=1, ref=e13120]
+  - button "어떻게 돌아가나요?" [expanded=false, ref=e13123]
+  - tablist [ref=e13121] clickable [onclick]
+    - tab "시뮬레이션" [selected, ref=e13124]
+    - tab "비교길드" [ref=e13125]
+      - StaticText "비교길드"
+    - tab "스탯 실험길드" [ref=e13126]
+      - StaticText "스탯 실험길드"
+    - tab "장비길드" [ref=e13127]
+      - StaticText "장비길드"
+    - tab "교체 찾기길드" [ref=e13128]
+      - StaticText "교체 찾기길드"
+  - generic
+    - StaticText "편성"
+    - StaticText " · "
+    - StaticText "0"
+    - StaticText "/12"
+    - link "편성 저장" [ref=e13129]
+    - button "공유" [disabled, ref=e13130]
+    - button "비우기" [ref=e13131]
+    - list "게임 내 배치 순서대로 본 편성"
+      - listitem "빈 자리" [level=1, ref=e13150]
+      - listitem "빈 자리" [level=1, ref=e13151]
+      - listitem "빈 자리" [level=1, ref=e13152]
+      - listitem "빈 자리" [level=1, ref=e13153]
+      - listitem "빈 자리" [level=1, ref=e13154]
+      - listitem "빈 자리" [level=1, ref=e13155]
+      - listitem "빈 자리" [level=1, ref=e13156]
+      - listitem "빈 자리" [level=1, ref=e13157]
+      - listitem "빈 자리" [level=1, ref=e13158]
+      - listitem "빈 자리" [level=1, ref=e13159]
+      - listitem "빈 자리" [level=1, ref=e13160]
+      - listitem "빈 자리" [level=1, ref=e13161]
+    - StaticText "쿠키"
+    - textbox "검색" [ref=e13132]
+    - combobox [expanded=false, ref=e13133]: 모든 속성
+      - MenuListPopup
+        - option "모든 속성" [selected, ref=e13295]
+        - option "불속성" [ref=e13296]
+        - option "물속성" [ref=e13297]
+        - option "풀속성" [ref=e13298]
+        - option "빛속성" [ref=e13299]
+        - option "어둠속성" [ref=e13300]
+    - combobox [expanded=false, ref=e13134]: 모든 역할
+      - MenuListPopup
+        - option "모든 역할" [selected, ref=e13301]
+        - option "방어" [ref=e13302]
+        - option "돌격" [ref=e13303]
+        - option "사격" [ref=e13304]
+        - option "지원" [ref=e13305]
+    - generic
+      - button "브라이트시커 쿠키 브라이트시커" [ref=e13162]
+      - button "오븐방랑자 쿠키 오븐방랑자" [ref=e13163]
+      - button "바리공주맛 쿠키 바리공주맛" [ref=e13164]
+      - button "바람궁수 쿠키 바람궁수" [ref=e13165]
+      - button "체리콜라맛 쿠키 체리콜라맛" [ref=e13166]
+      - button "쿨링민트맛 쿠키 쿨링민트맛" [ref=e13167]
+      - button "슈크림맛 쿠키 슈크림맛" [ref=e13168]
+      - button "크림소다맛 쿠키 크림소다맛" [ref=e13169]
+      - button "다크초코 쿠키 다크초코" [ref=e13170]
+      - button "에스프레소맛 쿠키 에스프레소맛" [ref=e13171]
+      - button "이온맛 쿠키로봇 이온맛 쿠키로봇" [ref=e13172]
+      - button "마들렌맛 쿠키 마들렌맛" [ref=e13173]
+      - button "메론소다맛 쿠키 메론소다맛" [ref=e13174]
+      - button "바삭튼튼 소아과 의사 우유맛 쿠키 우유맛" [ref=e13175]
+      - button "밀키웨이맛 쿠키 밀키웨이맛" [ref=e13176]
+      - button "감감술래 놀이 달토끼맛 쿠키 달토끼맛" [ref=e13177]
+      - button "이름 모를 케이크 들개 이름 모를 케이크 들개" [ref=e13178]
+      - button "피노누아맛 쿠키 피노누아맛" [ref=e13179]
+      - button "석류맛 쿠키 석류맛" [ref=e13180]
+      - button "찰스 찰스" [ref=e13181]
+      - button "전갈맛 쿠키 전갈맛" [ref=e13182]
+      - button "피겨여왕맛 쿠키 피겨여왕맛" [ref=e13183]
+      - button "도넛행성 에일리언 도넛킹 에일리언 도넛킹" [ref=e13184]
+      - button "딸기크레페맛 쿠키 딸기크레페맛" [ref=e13185]
+      - button "딸기쇼트케이크맛 쿠키 딸기쇼트케이크맛" [ref=e13186]
+      - button "실론나이트 쿠키 실론나이트" [ref=e13187]
+      - button "치약초코 쿠키 치약초코" [ref=e13188]
+      - button "트위즐젤리맛 쿠키 트위즐젤리맛" [ref=e13189]
+      - button "뱀파이어맛 쿠키 뱀파이어맛" [ref=e13190]
+      - button "닥터 뼈다귀 쿠키 닥터 뼈다귀" [ref=e13191]
+      - button "닥터 와사비 쿠키 닥터 와사비" [ref=e13192]
+      - button "허브맛 쿠키 허브맛" [ref=e13193]
+      - button "레몬맛 쿠키 레몬맛" [ref=e13194]
+      - button "감초맛 쿠키 감초맛" [ref=e13195]
+      - button "라임맛 쿠키 라임맛" [ref=e13196]
+      - button "마카롱맛 쿠키 마카롱맛" [ref=e13197]
+      - button "오렌지맛 쿠키 오렌지맛" [ref=e13198]
+      - button "팬케이크맛 쿠키 팬케이크맛" [ref=e13199]
+      - button "복숭아맛 쿠키 복숭아맛" [ref=e13200]
+      - button "팝콘맛 쿠키 팝콘맛" [ref=e13201]
+      - button "락스타맛 쿠키 락스타맛" [ref=e13202]
+      - button "호밀맛 쿠키 호밀맛" [ref=e13203]
+      - button "정글전사 쿠키 정글전사" [ref=e13204]
+      - button "위치베리맛 쿠키 위치베리맛" [ref=e13205]
+      - button "연금술사맛 쿠키 연금술사맛" [ref=e13206]
+      - button "일꾼 곰젤리 일꾼 곰젤리" [ref=e13207]
+      - button "요거트베리맛 쿠키 요거트베리맛" [ref=e13208]
+      - button "블랙베리맛 쿠키 블랙베리맛" [ref=e13209]
+      - button "치즈케이크맛 쿠키 치즈케이크맛" [ref=e13210]
+      - button "체리맛 쿠키 체리맛" [ref=e13211]
+      - button "코코아맛 쿠키 코코아맛" [ref=e13212]
+      - button "다크체리맛 쿠키 다크체리맛" [ref=e13213]
+      - button "포도넝쿨맛 쿠키 포도넝쿨맛" [ref=e13214]
+      - button "라일락맛 쿠키 라일락맛" [ref=e13215]
+      - button "독버섯맛 쿠키 독버섯맛" [ref=e13216]
+      - button "에일리언 도넛 에일리언 도넛" [ref=e13217]
+      - button "탐험가맛 쿠키 탐험가맛" [ref=e13218]
+      - button "천사맛 쿠키 천사맛" [ref=e13219]
+      - button "치어리더맛 쿠키 치어리더맛" [ref=e13220]
+      - button "커피맛 쿠키 커피맛" [ref=e13221]
+      - button "악마맛 쿠키 악마맛" [ref=e13222]
+      - button "버블껌맛 쿠키 버블껌맛" [ref=e13223]
+      - button "용사맛 쿠키 용사맛" [ref=e13224]
+      - button "양파맛 쿠키 양파맛" [ref=e13225]
+      - button "공주맛 쿠키 공주맛" [ref=e13226]
+      - button "홍고추맛 쿠키 홍고추맛" [ref=e13227]
+      - button "좀비맛 쿠키 좀비맛" [ref=e13228]
+      - button "블루베리 새 블루베리 새" [ref=e13229]
+      - button "용감한 쿠키 용감한 쿠키" [ref=e13230]
+      - button "명랑한 쿠키 명랑한 쿠키" [ref=e13231]
+      - button "근육맛 쿠키 근육맛" [ref=e13232]
+      - button "닌자맛 쿠키 닌자맛" [ref=e13233]
+      - button "보더맛 쿠키 보더맛" [ref=e13234]
+      - button "딸기맛 쿠키 딸기맛" [ref=e13235]
+      - button "설탕노움 설탕노움" [ref=e13236]
+      - button "마법사맛 쿠키 마법사맛" [ref=e13237]
+    - StaticText "펫"
+    - StaticText " · "
+    - StaticText "0"
+    - StaticText "/3"
+    - generic
+      - button "황금방울 황금방울" [ref=e13238]
+      - button "치즈뭉치 고양이 치즈뭉치 고양이" [ref=e13239]
+      - button "키위새 키위새" [ref=e13240]
+      - button "털뭉치 멍뭉이 털뭉치 멍뭉이" [ref=e13241]
+      - button "마시멜로 햄찌 마시멜로 햄찌" [ref=e13242]
+      - button "사바나나 사자 사바나나 사자" [ref=e13243]
+      - button "와사비 문어 와사비 문어" [ref=e13244]
+      - button "핫도그도그 핫도그도그" [ref=e13245]
+      - button "아보카포 아보카포" [ref=e13246]
+      - button "망고부리새 망고부리새" [ref=e13247]
+      - button "인삼이라지 인삼이라지" [ref=e13248]
+      - button "꽃개구리 꽃개구리" [ref=e13249]
+      - button "통나무케이크 통나무케이크" [ref=e13250]
+      - button "파우치사우루스 파우치사우루스" [ref=e13251]
+      - button "봉봉버드 봉봉버드" [ref=e13252]
+      - button "약과 찹사리 약과 찹사리" [ref=e13253]
+      - button "달걀머리새 달걀머리새" [ref=e13254]
+      - button "식빵아지 식빵아지" [ref=e13255]
+      - button "앵앵베리버드 앵앵베리버드" [ref=e13256]
+      - button "초코고양이 네로 초코고양이 네로" [ref=e13257]
+      - button "갓난갓방울 갓난갓방울" [ref=e13258]
+      - button "근엄한 초코왕방울 근엄한 초코왕방울" [ref=e13259]
+      - button "새콤달곰 새콤달곰" [ref=e13260]
+      - button "전지멜로우 전지멜로우" [ref=e13261]
+      - button "색동 주머니 색동 주머니" [ref=e13262]
+      - button "무한바퀴 무한바퀴" [ref=e13263]
+      - button "토끼사과 토끼사과" [ref=e13264]
+      - button "조각레몬 조각레몬" [ref=e13265]
+      - button "도토리 부엉이 도토리 부엉이" [ref=e13266]
+      - button "어린쥐 어린쥐" [ref=e13267]
+      - button "찹쌀 하프물범 찹쌀 하프물범" [ref=e13268]
+      - button "화나구마 화나구마" [ref=e13269]
+      - button "우유보틀 엔젤 우유보틀 엔젤" [ref=e13270]
+      - button "조수 테디 조수 테디" [ref=e13271]
+      - button "치즈크럼블 고양이 치즈크럼블 고양이" [ref=e13272]
+      - button "크림티즈 크림티즈" [ref=e13273]
+      - button "얼음과자새 얼음과자새" [ref=e13274]
+      - button "뽀글방울 뽀글방울" [ref=e13275]
+      - button "꼬마유령 꼬마유령" [ref=e13276]
+      - button "판다만두 판다만두" [ref=e13277]
+      - button "영혼 투구 영혼 투구" [ref=e13278]
+      - button "구름 펠리칸 구름 펠리칸" [ref=e13279]
+      - button "열매사슴 열매사슴" [ref=e13280]
+      - button "당근케이크 토끼 당근케이크 토끼" [ref=e13281]
+      - button "루돌프벨 루돌프벨" [ref=e13282]
+      - button "복슬이람 복슬이람" [ref=e13283]
+      - button "어린니 어린니" [ref=e13284]
+      - button "용의 꼬리 용의 꼬리" [ref=e13285]
+      - button "브레인껌 브레인껌" [ref=e13286]
+      - button "생크림 모카커피 생크림 모카커피" [ref=e13287]
+      - button "천상의 별 천상의 별" [ref=e13288]
+      - button "불꽃박쥐 불꽃박쥐" [ref=e13289]
+      - button "포켓딸기 포켓딸기" [ref=e13290]
+      - button "초코방울 초코방울" [ref=e13291]
+      - button "치즈방울 치즈방울" [ref=e13292]
+      - button "뭉치유니콘 뭉치유니콘" [ref=e13293]
+      - button "안깐 마늘 안깐 마늘" [ref=e13294]
+    - StaticText "용병단 복지"
+    - StaticText " · "
+    - StaticText "0"
+    - StaticText "/2"
+    - button "종합 복지 패키지 종합 복지 패키지" [ref=e13135]
+      - image "종합 복지 패키지"
+      - StaticText "종합 복지 패키지"
+    - button "종합 복지 패키지 Lv2 종합 복지 패키지 Lv2" [ref=e13136]
+      - image "종합 복지 패키지 Lv2"
+      - StaticText "종합 복지 패키지 Lv2"
+    - button "구내식당 제공 구내식당 제공" [ref=e13137]
+      - image "구내식당 제공"
+      - StaticText "구내식당 제공"
+    - button "이달의 우수 용병 이달의 우수 용병" [ref=e13138]
+      - image "이달의 우수 용병"
+      - StaticText "이달의 우수 용병"
+    - button "초고속 승진 초고속 승진" [ref=e13139]
+      - image "초고속 승진"
+      - StaticText "초고속 승진"
+    - button "수석 용병단 수석 용병단" [ref=e13140]
+      - image "수석 용병단"
+      - StaticText "수석 용병단"
+    - button "열정페이 열정페이" [ref=e13141]
+      - image "열정페이"
+      - StaticText "열정페이"
+    - button "크런치 모드 크런치 모드" [ref=e13142]
+      - image "크런치 모드"
+      - StaticText "크런치 모드"
+    - button "가족 같은 용병단 가족 같은 용병단" [ref=e13143]
+      - image "가족 같은 용병단"
+      - StaticText "가족 같은 용병단"
+    - button "탄약비 전액 지원 탄약비 전액 지원" [ref=e13144]
+      - image "탄약비 전액 지원"
+      - StaticText "탄약비 전액 지원"
+    - button "방어구 수리 특약 방어구 수리 특약" [ref=e13145]
+      - image "방어구 수리 특약"
+      - StaticText "방어구 수리 특약"
+    - button "파괴 면책권 파괴 면책권" [ref=e13146]
+      - image "파괴 면책권"
+      - StaticText "파괴 면책권"
+    - button "의료보험 의료보험" [ref=e13147]
+      - image "의료보험"
+      - StaticText "의료보험"
+  - complementary
+    - heading "시작하기 전에" [level=2, ref=e13148]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+        - link "문의하기" [ref=e13306]
+    - button "확인했습니다" [ref=e13149]

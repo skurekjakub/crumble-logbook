@@ -1,0 +1,5432 @@
+{
+ "batch": "crumbgg",
+ "fetched": "2026-09-27 18:29 KST",
+ "posts": [
+  {
+   "source": "other",
+   "id": "crumbgg:rankings-s1",
+   "url": "https://crumb.gg/rankings",
+   "date": null,
+   "title_kr": "길드 토벌전 개인 랭킹 시즌 1",
+   "title_en": "Guild Conquest player rankings, Season 1",
+   "relevance": 2,
+   "summary_en": "crumb.gg public Guild Conquest player board for Season 1: 50 rows public (past season, top 50 public; ranks below 50 are guild-only). #1 도리 (Carpediem) 248.450G; #10 147.262G; #50 72.814G. ",
+   "scores": [
+    {
+     "damage": "248.450G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 1, 도리 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "212.757G",
+     "power": "26.545G (account CP, 2026-09-27)",
+     "ratio": "8.0x score/CP",
+     "deck": null,
+     "note": "rank 2, Arsen (Eden)",
+     "verified": true
+    },
+    {
+     "damage": "212.359G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 3, DrexSnow (Eden)",
+     "verified": true
+    },
+    {
+     "damage": "208.428G",
+     "power": "25.813G (account CP, 2026-09-27)",
+     "ratio": "8.1x score/CP",
+     "deck": null,
+     "note": "rank 4, 날씨의아이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "196.573G",
+     "power": "22.440G (account CP, 2026-09-27)",
+     "ratio": "8.8x score/CP",
+     "deck": null,
+     "note": "rank 5, Evenil (Eden)",
+     "verified": true
+    },
+    {
+     "damage": "179.116G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 6, DeminBeet (고양이무역단)",
+     "verified": true
+    },
+    {
+     "damage": "178.332G",
+     "power": "24.410G (account CP, 2026-09-27)",
+     "ratio": "7.3x score/CP",
+     "deck": null,
+     "note": "rank 7, 눈의 (애봉)",
+     "verified": true
+    },
+    {
+     "damage": "174.554G",
+     "power": "20.783G (account CP, 2026-09-27)",
+     "ratio": "8.4x score/CP",
+     "deck": null,
+     "note": "rank 8, 환상 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "170.937G",
+     "power": "27.905G (account CP, 2026-09-27)",
+     "ratio": "6.1x score/CP",
+     "deck": null,
+     "note": "rank 9, Kazen (Eden)",
+     "verified": true
+    },
+    {
+     "damage": "147.262G",
+     "power": "24.957G (account CP, 2026-09-27)",
+     "ratio": "5.9x score/CP",
+     "deck": null,
+     "note": "rank 10, 아나 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "98.599G",
+     "power": "17.299G (account CP, 2026-09-27)",
+     "ratio": "5.7x score/CP",
+     "deck": null,
+     "note": "rank 25, 젱젱 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "72.814G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 50, 놀래미 (판도라)",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:rankings-s2",
+   "url": "https://crumb.gg/rankings",
+   "date": null,
+   "title_kr": "길드 토벌전 개인 랭킹 시즌 2",
+   "title_en": "Guild Conquest player rankings, Season 2",
+   "relevance": 2,
+   "summary_en": "crumb.gg public Guild Conquest player board for Season 2: 50 rows public (past season, top 50 public; ranks below 50 are guild-only). #1 도리 (Carpediem) 881.689G; #10 377.707G; #50 229.383G. ",
+   "scores": [
+    {
+     "damage": "881.689G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 1, 도리 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "637.094G",
+     "power": "27.124G (account CP, 2026-09-27)",
+     "ratio": "23.5x score/CP",
+     "deck": null,
+     "note": "rank 2, 凱凱の餅乾軍團 (史萊姆遊樂區)",
+     "verified": true
+    },
+    {
+     "damage": "568.668G",
+     "power": "24.957G (account CP, 2026-09-27)",
+     "ratio": "22.8x score/CP",
+     "deck": null,
+     "note": "rank 3, 아나 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "559.680G",
+     "power": "20.783G (account CP, 2026-09-27)",
+     "ratio": "26.9x score/CP",
+     "deck": null,
+     "note": "rank 4, 환상 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "524.163G",
+     "power": "28.748G (account CP, 2026-09-27)",
+     "ratio": "18.2x score/CP",
+     "deck": null,
+     "note": "rank 5, 적신 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "497.655G",
+     "power": "24.410G (account CP, 2026-09-27)",
+     "ratio": "20.4x score/CP",
+     "deck": null,
+     "note": "rank 6, 눈의 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "477.488G",
+     "power": "25.813G (account CP, 2026-09-27)",
+     "ratio": "18.5x score/CP",
+     "deck": null,
+     "note": "rank 7, 날씨의아이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "440.340G",
+     "power": "24.799G (account CP, 2026-09-27)",
+     "ratio": "17.8x score/CP",
+     "deck": null,
+     "note": "rank 8, 타미 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "401.358G",
+     "power": "26.545G (account CP, 2026-09-27)",
+     "ratio": "15.1x score/CP",
+     "deck": null,
+     "note": "rank 9, Arsen (방랑자)",
+     "verified": true
+    },
+    {
+     "damage": "377.707G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 10, 은우 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "291.860G",
+     "power": "12.719G (account CP, 2026-09-27)",
+     "ratio": "22.9x score/CP",
+     "deck": null,
+     "note": "rank 25, 가을 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "229.383G",
+     "power": "24.765G (account CP, 2026-09-27)",
+     "ratio": "9.3x score/CP",
+     "deck": null,
+     "note": "rank 50, cipherX (Eden)",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:rankings-s3",
+   "url": "https://crumb.gg/rankings",
+   "date": null,
+   "title_kr": "길드 토벌전 개인 랭킹 시즌 3",
+   "title_en": "Guild Conquest player rankings, Season 3",
+   "relevance": 2,
+   "summary_en": "crumb.gg public Guild Conquest player board for Season 3: 50 rows public (past season, top 50 public; ranks below 50 are guild-only). #1 날씨의아이 (카페) 1T 111G; #10 762.928G; #50 542.460G. ",
+   "scores": [
+    {
+     "damage": "1T 111G",
+     "power": "25.813G (account CP, 2026-09-27)",
+     "ratio": "43.0x score/CP",
+     "deck": null,
+     "note": "rank 1, 날씨의아이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "978.325G",
+     "power": "23.754G (account CP, 2026-09-27)",
+     "ratio": "41.2x score/CP",
+     "deck": null,
+     "note": "rank 2, 솔라 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "974.089G",
+     "power": "24.625G (account CP, 2026-09-27)",
+     "ratio": "39.6x score/CP",
+     "deck": null,
+     "note": "rank 3, 현이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "918.133G",
+     "power": "22.019G (account CP, 2026-09-27)",
+     "ratio": "41.7x score/CP",
+     "deck": null,
+     "note": "rank 4, 똥에디 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "896.161G",
+     "power": "24.799G (account CP, 2026-09-27)",
+     "ratio": "36.1x score/CP",
+     "deck": null,
+     "note": "rank 5, 타미 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "874.206G",
+     "power": "22.662G (account CP, 2026-09-27)",
+     "ratio": "38.6x score/CP",
+     "deck": null,
+     "note": "rank 6, 나비 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "855.328G",
+     "power": "28.748G (account CP, 2026-09-27)",
+     "ratio": "29.8x score/CP",
+     "deck": null,
+     "note": "rank 7, 적신 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "849.616G",
+     "power": "23.476G (account CP, 2026-09-27)",
+     "ratio": "36.2x score/CP",
+     "deck": null,
+     "note": "rank 8, 댕댕 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "779.362G",
+     "power": "27.124G (account CP, 2026-09-27)",
+     "ratio": "28.7x score/CP",
+     "deck": null,
+     "note": "rank 9, 凱凱の餅乾軍團 (史萊姆遊樂區)",
+     "verified": true
+    },
+    {
+     "damage": "762.928G",
+     "power": "22.446G (account CP, 2026-09-27)",
+     "ratio": "34.0x score/CP",
+     "deck": null,
+     "note": "rank 10, 몽글 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "685.128G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 25, 똠 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "542.460G",
+     "power": null,
+     "ratio": null,
+     "deck": null,
+     "note": "rank 50, 19강터짐10강오너 (카페)",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:rankings-s4",
+   "url": "https://crumb.gg/rankings",
+   "date": null,
+   "title_kr": "길드 토벌전 개인 랭킹 시즌 4",
+   "title_en": "Guild Conquest player rankings, Season 4",
+   "relevance": 2,
+   "summary_en": "crumb.gg public Guild Conquest player board for Season 4: 50 rows public (past season, top 50 public; ranks below 50 are guild-only). #1 날씨의아이 (카페) 1T 786G; #10 1T 434G; #50 1T 031G. ",
+   "scores": [
+    {
+     "damage": "1T 786G",
+     "power": "25.813G (account CP, 2026-09-27)",
+     "ratio": "69.2x score/CP",
+     "deck": null,
+     "note": "rank 1, 날씨의아이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "1T 775G",
+     "power": "24.799G (account CP, 2026-09-27)",
+     "ratio": "71.6x score/CP",
+     "deck": null,
+     "note": "rank 2, 타미 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "1T 626G",
+     "power": "24.591G (account CP, 2026-09-27)",
+     "ratio": "66.1x score/CP",
+     "deck": null,
+     "note": "rank 3, 슈퍼땅콩 (각성)",
+     "verified": true
+    },
+    {
+     "damage": "1T 569G",
+     "power": "26.545G (account CP, 2026-09-27)",
+     "ratio": "59.1x score/CP",
+     "deck": null,
+     "note": "rank 4, Arsen (방랑자)",
+     "verified": true
+    },
+    {
+     "damage": "1T 550G",
+     "power": "24.625G (account CP, 2026-09-27)",
+     "ratio": "62.9x score/CP",
+     "deck": null,
+     "note": "rank 5, 현이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "1T 499G",
+     "power": "22.019G (account CP, 2026-09-27)",
+     "ratio": "68.1x score/CP",
+     "deck": null,
+     "note": "rank 6, 똥에디 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "1T 462G",
+     "power": "25.143G (account CP, 2026-09-27)",
+     "ratio": "58.1x score/CP",
+     "deck": null,
+     "note": "rank 7, Bishop (카페)",
+     "verified": true
+    },
+    {
+     "damage": "1T 455G",
+     "power": "27.124G (account CP, 2026-09-27)",
+     "ratio": "53.6x score/CP",
+     "deck": null,
+     "note": "rank 8, 凱凱の餅乾軍團 (史萊姆遊樂區)",
+     "verified": true
+    },
+    {
+     "damage": "1T 443G",
+     "power": "22.537G (account CP, 2026-09-27)",
+     "ratio": "64.0x score/CP",
+     "deck": null,
+     "note": "rank 9, 준준이쿠키 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "1T 434G",
+     "power": "22.196G (account CP, 2026-09-27)",
+     "ratio": "64.6x score/CP",
+     "deck": null,
+     "note": "rank 10, 스타 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "1T 156G",
+     "power": "18.248G (account CP, 2026-09-27)",
+     "ratio": "63.3x score/CP",
+     "deck": null,
+     "note": "rank 25, 칠성 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "1T 031G",
+     "power": "22.496G (account CP, 2026-09-27)",
+     "ratio": "45.8x score/CP",
+     "deck": null,
+     "note": "rank 50, 순기능 (카페)",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:rankings-s5",
+   "url": "https://crumb.gg/rankings",
+   "date": "2026-09-24",
+   "title_kr": "길드 토벌전 개인 랭킹 시즌 5",
+   "title_en": "Guild Conquest player rankings, Season 5",
+   "relevance": 2,
+   "summary_en": "crumb.gg public Guild Conquest player board for Season 5: 100 rows public (live board, top 100). #1 날씨의아이 (카페) 3T 226G; #10 2T 484G; #50 1T 916G. Live snapshot fetched 2026-09-27 18:29 KST; season runs 2026-09-24 16:00 KST to 2026-09-28 12:00 KST, so S5 scores may still rise.",
+   "scores": [
+    {
+     "damage": "3T 226G",
+     "power": "25.813G (account CP, 2026-09-27)",
+     "ratio": "125.0x score/CP",
+     "deck": null,
+     "note": "rank 1, 날씨의아이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "2T 892G",
+     "power": "24.625G (account CP, 2026-09-27)",
+     "ratio": "117.4x score/CP",
+     "deck": null,
+     "note": "rank 2, 현이 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "2T 840G",
+     "power": "23.083G (account CP, 2026-09-27)",
+     "ratio": "123.0x score/CP",
+     "deck": null,
+     "note": "rank 3, 검은반장 (바삭젤리단)",
+     "verified": true
+    },
+    {
+     "damage": "2T 720G",
+     "power": "24.799G (account CP, 2026-09-27)",
+     "ratio": "109.7x score/CP",
+     "deck": null,
+     "note": "rank 4, 타미 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "2T 696G",
+     "power": "25.687G (account CP, 2026-09-27)",
+     "ratio": "105.0x score/CP",
+     "deck": null,
+     "note": "rank 5, 다함께차차차 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "2T 659G",
+     "power": "20.638G (account CP, 2026-09-27)",
+     "ratio": "128.8x score/CP",
+     "deck": null,
+     "note": "rank 6, 燕之助 (薑餅棉花妮妮樂園)",
+     "verified": true
+    },
+    {
+     "damage": "2T 637G",
+     "power": "24.957G (account CP, 2026-09-27)",
+     "ratio": "105.7x score/CP",
+     "deck": null,
+     "note": "rank 7, 아나 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "2T 542G",
+     "power": "22.379G (account CP, 2026-09-27)",
+     "ratio": "113.6x score/CP",
+     "deck": null,
+     "note": "rank 8, 노을 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "2T 509G",
+     "power": "18.692G (account CP, 2026-09-27)",
+     "ratio": "134.2x score/CP",
+     "deck": null,
+     "note": "rank 9, 페즈 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "2T 484G",
+     "power": "22.196G (account CP, 2026-09-27)",
+     "ratio": "111.9x score/CP",
+     "deck": null,
+     "note": "rank 10, 스타 (카페)",
+     "verified": true
+    },
+    {
+     "damage": "2T 225G",
+     "power": "20.894G (account CP, 2026-09-27)",
+     "ratio": "106.5x score/CP",
+     "deck": null,
+     "note": "rank 25, 다크닉스 (Carpediem)",
+     "verified": true
+    },
+    {
+     "damage": "1T 916G",
+     "power": "20.425G (account CP, 2026-09-27)",
+     "ratio": "93.8x score/CP",
+     "deck": null,
+     "note": "rank 50, 김개똥 (월드)",
+     "verified": true
+    },
+    {
+     "damage": "1T 562G",
+     "power": "22.225G (account CP, 2026-09-27)",
+     "ratio": "70.3x score/CP",
+     "deck": null,
+     "note": "rank 100, 멋진참외 (Carpediem)",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-날씨의아이",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "날씨의아이 (카페)",
+   "title_en": "crumb.gg Lookup: 날씨의아이",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #1 with 3T 226G (best run recorded 2026-09-27 03:52 KST). Lv 190, server S28, combat power 25.81G (power-leaderboard rank 12). Season history: S1: #4 208.428G; S2: #7 477.488G; S3: #1 1T 111G; S4: #1 1T 786G; S5: #1 3T 226G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "3T 226G",
+     "power": "25.81G (account combat power)",
+     "ratio": "125.0x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 4,
+     "score": "208.428G"
+    },
+    {
+     "season": 2,
+     "rank": 7,
+     "score": "477.488G"
+    },
+    {
+     "season": 3,
+     "rank": 1,
+     "score": "1T 111G"
+    },
+    {
+     "season": 4,
+     "rank": 1,
+     "score": "1T 786G"
+    },
+    {
+     "season": 5,
+     "rank": 1,
+     "score": "3T 226G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     6,
+     10,
+     11
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-현이",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "현이 (카페)",
+   "title_en": "crumb.gg Lookup: 현이",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #2 with 2T 892G (best run recorded 2026-09-27 17:57 KST). Lv 189, server S8, combat power 24.63G (power-leaderboard rank 23). Season history: S2: #23 297.628G; S3: #3 974.089G; S4: #5 1T 549G; S5: #2 2T 892G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 892G",
+     "power": "24.63G (account combat power)",
+     "ratio": "117.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 23,
+     "score": "297.628G"
+    },
+    {
+     "season": 3,
+     "rank": 3,
+     "score": "974.089G"
+    },
+    {
+     "season": 4,
+     "rank": 5,
+     "score": "1T 549G"
+    },
+    {
+     "season": 5,
+     "rank": 2,
+     "score": "2T 892G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     8,
+     9
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-검은반장",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-26",
+   "title_kr": "검은반장 (바삭젤리단)",
+   "title_en": "crumb.gg Lookup: 검은반장",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #3 with 2T 840G (best run recorded 2026-09-26 22:01 KST). Lv 189, server S176, combat power 23.08G (power-leaderboard rank 41). Season history: S4: #11 1T 400G; S5: #3 2T 840G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 840G",
+     "power": "23.08G (account combat power)",
+     "ratio": "123.0x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 4,
+     "rank": 11,
+     "score": "1T 400G"
+    },
+    {
+     "season": 5,
+     "rank": 3,
+     "score": "2T 840G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "포도넝쿨맛 쿠키",
+      "en": "Grapevine Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     7,
+     8,
+     10
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "얼음과자새 / Icy Birdie (Ally DMG Reduction +12%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-타미",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "타미 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 타미",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #4 with 2T 720G (best run recorded 2026-09-27 04:57 KST). Lv 190, server S264, combat power 24.80G (power-leaderboard rank 21). Season history: S1: #47 74.774G; S2: #8 440.340G; S3: #5 896.161G; S4: #2 1T 775G; S5: #4 2T 720G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 720G",
+     "power": "24.80G (account combat power)",
+     "ratio": "109.7x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 47,
+     "score": "74.774G"
+    },
+    {
+     "season": 2,
+     "rank": 8,
+     "score": "440.340G"
+    },
+    {
+     "season": 3,
+     "rank": 5,
+     "score": "896.161G"
+    },
+    {
+     "season": 4,
+     "rank": 2,
+     "score": "1T 775G"
+    },
+    {
+     "season": 5,
+     "rank": 4,
+     "score": "2T 720G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     4,
+     6,
+     12
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-다함께차차차",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "다함께차차차 (카페)",
+   "title_en": "crumb.gg Lookup: 다함께차차차",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #5 with 2T 696G (best run recorded 2026-09-27 11:41 KST). Lv 189, server S302, combat power 25.69G (power-leaderboard rank 13). Season history: S2: #31 271.012G; S3: #12 757.027G; S4: #12 1T 360G; S5: #5 2T 696G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 696G",
+     "power": "25.69G (account combat power)",
+     "ratio": "105.0x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 31,
+     "score": "271.012G"
+    },
+    {
+     "season": 3,
+     "rank": 12,
+     "score": "757.027G"
+    },
+    {
+     "season": 4,
+     "rank": 12,
+     "score": "1T 360G"
+    },
+    {
+     "season": 5,
+     "rank": 5,
+     "score": "2T 696G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-燕之助",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "燕之助 (薑餅棉花妮妮樂園)",
+   "title_en": "crumb.gg Lookup: 燕之助",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #6 with 2T 659G (best run recorded 2026-09-27 11:08 KST). Lv 188, server S128, combat power 20.64G (power-leaderboard rank 123). Season history: S5: #6 2T 659G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 659G",
+     "power": "20.64G (account combat power)",
+     "ratio": "128.8x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 6,
+     "score": "2T 659G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-아나",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "아나 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 아나",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #7 with 2T 637G (best run recorded 2026-09-27 13:36 KST). Lv 189, server S90, combat power 24.96G (power-leaderboard rank 20). Season history: S1: #10 147.262G; S2: #3 568.668G; S3: #14 740.546G; S4: #18 1T 275G; S5: #7 2T 637G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 637G",
+     "power": "24.96G (account combat power)",
+     "ratio": "105.7x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 10,
+     "score": "147.262G"
+    },
+    {
+     "season": 2,
+     "rank": 3,
+     "score": "568.668G"
+    },
+    {
+     "season": 3,
+     "rank": 14,
+     "score": "740.546G"
+    },
+    {
+     "season": 4,
+     "rank": 18,
+     "score": "1T 275G"
+    },
+    {
+     "season": 5,
+     "rank": 7,
+     "score": "2T 637G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     3,
+     8,
+     9,
+     10
+    ],
+    "pets": [
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-노을",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "노을 (카페)",
+   "title_en": "crumb.gg Lookup: 노을",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #8 with 2T 542G (best run recorded 2026-09-27 11:08 KST). Lv 189, server S307, combat power 22.38G (power-leaderboard rank 62). Season history: S2: #49 230.680G; S5: #8 2T 542G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 542G",
+     "power": "22.38G (account combat power)",
+     "ratio": "113.6x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 49,
+     "score": "230.680G"
+    },
+    {
+     "season": 5,
+     "rank": 8,
+     "score": "2T 542G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [],
+    "pets": [
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-페즈",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "페즈 (카페)",
+   "title_en": "crumb.gg Lookup: 페즈",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #9 with 2T 509G (best run recorded 2026-09-27 17:33 KST). Lv 188, server S193, combat power 18.69G (power-leaderboard rank 196). Season history: S3: #13 746.411G; S4: #20 1T 238G; S5: #9 2T 509G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 509G",
+     "power": "18.69G (account combat power)",
+     "ratio": "134.2x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 3,
+     "rank": 13,
+     "score": "746.411G"
+    },
+    {
+     "season": 4,
+     "rank": 20,
+     "score": "1T 238G"
+    },
+    {
+     "season": 5,
+     "rank": 9,
+     "score": "2T 509G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     6,
+     12
+    ],
+    "pets": [
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-스타",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "스타 (카페)",
+   "title_en": "crumb.gg Lookup: 스타",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #10 with 2T 484G (best run recorded 2026-09-27 17:29 KST). Lv 189, server S345, combat power 22.20G (power-leaderboard rank 65). Season history: S4: #10 1T 434G; S5: #10 2T 484G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 484G",
+     "power": "22.20G (account combat power)",
+     "ratio": "111.9x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 4,
+     "rank": 10,
+     "score": "1T 434G"
+    },
+    {
+     "season": 5,
+     "rank": 10,
+     "score": "2T 484G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     1,
+     6,
+     11
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-딘딘",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "딘딘 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 딘딘",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #11 with 2T 464G (best run recorded 2026-09-27 16:07 KST). Lv 188, server S148, combat power 25.56G (power-leaderboard rank 14). Season history: S4: #24 1T 210G; S5: #11 2T 464G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 464G",
+     "power": "25.56G (account combat power)",
+     "ratio": "96.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 4,
+     "rank": 24,
+     "score": "1T 210G"
+    },
+    {
+     "season": 5,
+     "rank": 11,
+     "score": "2T 464G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-華夏戶籍防盜部隊",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "華夏戶籍防盜部隊 (小孩坐一桌)",
+   "title_en": "crumb.gg Lookup: 華夏戶籍防盜部隊",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #12 with 2T 451G (best run recorded 2026-09-27 16:07 KST). Lv 188, server S284, combat power 22.92G (power-leaderboard rank 43). Season history: S5: #12 2T 451G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 451G",
+     "power": "22.92G (account combat power)",
+     "ratio": "107.0x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 12,
+     "score": "2T 451G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     6,
+     8,
+     10
+    ],
+    "pets": [
+     "달걀머리새 / Eggbeak (Charge Ally DMG Reduction +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-홍백련",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "홍백련 (품격)",
+   "title_en": "crumb.gg Lookup: 홍백련",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #13 with 2T 446G (best run recorded 2026-09-27 16:07 KST). Lv 190, server S250, combat power 24.34G (power-leaderboard rank 26). Season history: S1: #36 85.599G; S5: #13 2T 446G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 446G",
+     "power": "24.34G (account combat power)",
+     "ratio": "100.5x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 36,
+     "score": "85.599G"
+    },
+    {
+     "season": 5,
+     "rank": 13,
+     "score": "2T 446G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-뜨뜨뜨뜨",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "뜨뜨뜨뜨 (카페)",
+   "title_en": "crumb.gg Lookup: 뜨뜨뜨뜨",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #14 with 2T 423G (best run recorded 2026-09-27 16:07 KST). Lv 189, server S28, combat power 16.97G (power-leaderboard rank 249). Season history: S3: #33 626.452G; S4: #30 1T 134G; S5: #14 2T 423G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 423G",
+     "power": "16.97G (account combat power)",
+     "ratio": "142.8x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 3,
+     "rank": 33,
+     "score": "626.452G"
+    },
+    {
+     "season": 4,
+     "rank": 30,
+     "score": "1T 134G"
+    },
+    {
+     "season": 5,
+     "rank": 14,
+     "score": "2T 423G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-やなぎ",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "やなぎ (카페)",
+   "title_en": "crumb.gg Lookup: やなぎ",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #15 with 2T 417G (best run recorded 2026-09-27 16:07 KST). Lv 188, server S52, combat power 23.88G (power-leaderboard rank 28). Season history: S2: #45 243.034G; S3: #35 610.863G; S4: #27 1T 142G; S5: #15 2T 417G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 417G",
+     "power": "23.88G (account combat power)",
+     "ratio": "101.2x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 45,
+     "score": "243.034G"
+    },
+    {
+     "season": 3,
+     "rank": 35,
+     "score": "610.863G"
+    },
+    {
+     "season": 4,
+     "rank": 27,
+     "score": "1T 142G"
+    },
+    {
+     "season": 5,
+     "rank": 15,
+     "score": "2T 417G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     4,
+     6,
+     9
+    ],
+    "pets": [
+     "색동 주머니 / Candy Shade Pouch (Ally Lift RES +30%, Max HP +12.5%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-젱젱",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "젱젱 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 젱젱",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #16 with 2T 416G (best run recorded 2026-09-27 16:07 KST). Lv 189, server S93, combat power 17.30G (power-leaderboard rank 239). Season history: S1: #25 98.599G; S2: #17 321.056G; S3: #49 542.475G; S4: #43 1T 086G; S5: #16 2T 416G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 416G",
+     "power": "17.30G (account combat power)",
+     "ratio": "139.7x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 25,
+     "score": "98.599G"
+    },
+    {
+     "season": 2,
+     "rank": 17,
+     "score": "321.056G"
+    },
+    {
+     "season": 3,
+     "rank": 49,
+     "score": "542.475G"
+    },
+    {
+     "season": 4,
+     "rank": 43,
+     "score": "1T 086G"
+    },
+    {
+     "season": 5,
+     "rank": 16,
+     "score": "2T 416G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     6,
+     7,
+     10
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-솔라",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "솔라 (카페)",
+   "title_en": "crumb.gg Lookup: 솔라",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #17 with 2T 384G (best run recorded 2026-09-27 15:55 KST). Lv 189, server S15, combat power 23.75G (power-leaderboard rank 29). Season history: S1: #19 114.542G; S2: #11 369.943G; S3: #2 978.325G; S4: #16 1T 309G; S5: #17 2T 384G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 384G",
+     "power": "23.75G (account combat power)",
+     "ratio": "100.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 19,
+     "score": "114.542G"
+    },
+    {
+     "season": 2,
+     "rank": 11,
+     "score": "369.943G"
+    },
+    {
+     "season": 3,
+     "rank": 2,
+     "score": "978.325G"
+    },
+    {
+     "season": 4,
+     "rank": 16,
+     "score": "1T 309G"
+    },
+    {
+     "season": 5,
+     "rank": 17,
+     "score": "2T 384G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "호밀맛 쿠키",
+      "en": "Rye Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "포도넝쿨맛 쿠키",
+      "en": "Grapevine Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "라임맛 쿠키",
+      "en": "Lime Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "락스타맛 쿠키",
+      "en": "Rockstar Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [],
+    "pets": [
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "얼음과자새 / Icy Birdie (Ally DMG Reduction +12%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-준준이쿠키",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "준준이쿠키 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 준준이쿠키",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #18 with 2T 381G (best run recorded 2026-09-27 15:55 KST). Lv 189, server S1, combat power 22.54G (power-leaderboard rank 56). Season history: S4: #9 1T 443G; S5: #18 2T 381G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 381G",
+     "power": "22.54G (account combat power)",
+     "ratio": "105.6x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 4,
+     "rank": 9,
+     "score": "1T 443G"
+    },
+    {
+     "season": 5,
+     "rank": 18,
+     "score": "2T 381G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-슈퍼땅콩",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "슈퍼땅콩 (각성)",
+   "title_en": "crumb.gg Lookup: 슈퍼땅콩",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #19 with 2T 339G (best run recorded 2026-09-27 17:12 KST). Lv 189, server S161, combat power 24.59G (power-leaderboard rank 27). Season history: S1: #44 77.436G; S3: #20 715.991G; S4: #3 1T 626G; S5: #19 2T 339G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 339G",
+     "power": "24.59G (account combat power)",
+     "ratio": "95.1x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 44,
+     "score": "77.436G"
+    },
+    {
+     "season": 3,
+     "rank": 20,
+     "score": "715.991G"
+    },
+    {
+     "season": 4,
+     "rank": 3,
+     "score": "1T 626G"
+    },
+    {
+     "season": 5,
+     "rank": 19,
+     "score": "2T 339G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     1,
+     6,
+     11
+    ],
+    "pets": [
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-Arsen",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "Arsen (방랑자)",
+   "title_en": "crumb.gg Lookup: Arsen",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #20 with 2T 320G (best run recorded 2026-09-27 17:12 KST). Lv 187, server S1, combat power 26.54G (power-leaderboard rank 9). Season history: S1: #2 212.757G; S2: #9 401.358G; S3: #31 640.295G; S4: #4 1T 569G; S5: #20 2T 320G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 320G",
+     "power": "26.54G (account combat power)",
+     "ratio": "87.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 2,
+     "score": "212.757G"
+    },
+    {
+     "season": 2,
+     "rank": 9,
+     "score": "401.358G"
+    },
+    {
+     "season": 3,
+     "rank": 31,
+     "score": "640.295G"
+    },
+    {
+     "season": 4,
+     "rank": 4,
+     "score": "1T 569G"
+    },
+    {
+     "season": 5,
+     "rank": 20,
+     "score": "2T 320G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-루키",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "루키 (방랑자)",
+   "title_en": "crumb.gg Lookup: 루키",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #21 with 2T 295G (best run recorded 2026-09-27 17:12 KST). Lv 188, server S6, combat power 21.19G (power-leaderboard rank 98). Season history: S1: #23 100.615G; S2: #15 327.336G; S3: #37 608.245G; S4: #19 1T 268G; S5: #21 2T 295G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 295G",
+     "power": "21.19G (account combat power)",
+     "ratio": "108.3x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 23,
+     "score": "100.615G"
+    },
+    {
+     "season": 2,
+     "rank": 15,
+     "score": "327.336G"
+    },
+    {
+     "season": 3,
+     "rank": 37,
+     "score": "608.245G"
+    },
+    {
+     "season": 4,
+     "rank": 19,
+     "score": "1T 268G"
+    },
+    {
+     "season": 5,
+     "rank": 21,
+     "score": "2T 295G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-초코",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "초코 (방랑자)",
+   "title_en": "crumb.gg Lookup: 초코",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #22 with 2T 289G (best run recorded 2026-09-27 17:12 KST). Lv 188, server S48, combat power 21.19G (power-leaderboard rank 97). Season history: S1: #46 75.035G; S4: #44 1T 077G; S5: #22 2T 289G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 289G",
+     "power": "21.19G (account combat power)",
+     "ratio": "108.0x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 46,
+     "score": "75.035G"
+    },
+    {
+     "season": 4,
+     "rank": 44,
+     "score": "1T 077G"
+    },
+    {
+     "season": 5,
+     "rank": 22,
+     "score": "2T 289G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-환상",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "환상 (카페)",
+   "title_en": "crumb.gg Lookup: 환상",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #23 with 2T 289G (best run recorded 2026-09-27 17:12 KST). Lv 189, server S47, combat power 20.78G (power-leaderboard rank 115). Season history: S1: #8 174.554G; S2: #4 559.680G; S3: #19 721.582G; S4: #26 1T 156G; S5: #23 2T 289G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 289G",
+     "power": "20.78G (account combat power)",
+     "ratio": "110.1x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 8,
+     "score": "174.554G"
+    },
+    {
+     "season": 2,
+     "rank": 4,
+     "score": "559.680G"
+    },
+    {
+     "season": 3,
+     "rank": 19,
+     "score": "721.582G"
+    },
+    {
+     "season": 4,
+     "rank": 26,
+     "score": "1T 156G"
+    },
+    {
+     "season": 5,
+     "rank": 23,
+     "score": "2T 289G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     6,
+     10
+    ],
+    "pets": [
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-newbiee",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "newbiee (카페)",
+   "title_en": "crumb.gg Lookup: newbiee",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #24 with 2T 239G (best run recorded 2026-09-27 17:12 KST). Lv 189, server S5, combat power 30.00G (power-leaderboard rank 1). Season history: S5: #24 2T 239G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 239G",
+     "power": "30.00G (account combat power)",
+     "ratio": "74.6x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 24,
+     "score": "2T 239G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "딸기크레페맛 쿠키",
+      "en": "Strawberry Crepe Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-다크닉스",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "다크닉스 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 다크닉스",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #25 with 2T 225G (best run recorded 2026-09-27 15:55 KST). Lv 188, server S98, combat power 20.89G (power-leaderboard rank 112). Season history: S2: #44 244.408G; S4: #21 1T 229G; S5: #25 2T 225G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 225G",
+     "power": "20.89G (account combat power)",
+     "ratio": "106.5x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 44,
+     "score": "244.408G"
+    },
+    {
+     "season": 4,
+     "rank": 21,
+     "score": "1T 229G"
+    },
+    {
+     "season": 5,
+     "rank": 25,
+     "score": "2T 225G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     4,
+     6
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-전투토끼",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "전투토끼 (월드)",
+   "title_en": "crumb.gg Lookup: 전투토끼",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #26 with 2T 220G (best run recorded 2026-09-27 15:55 KST). Lv 188, server S4, combat power 22.99G (power-leaderboard rank 40). Season history: S5: #26 2T 220G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 220G",
+     "power": "22.99G (account combat power)",
+     "ratio": "96.6x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 26,
+     "score": "2T 220G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     6,
+     7,
+     8
+    ],
+    "pets": [
+     "얼음과자새 / Icy Birdie (Ally DMG Reduction +12%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-Malicious",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "Malicious (방랑자)",
+   "title_en": "crumb.gg Lookup: Malicious",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #27 with 2T 196G (best run recorded 2026-09-27 15:55 KST). Lv 188, server S235, combat power 22.30G (power-leaderboard rank 64). Season history: S5: #27 2T 196G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 196G",
+     "power": "22.30G (account combat power)",
+     "ratio": "98.5x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 27,
+     "score": "2T 196G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-똥에디",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "똥에디 (카페)",
+   "title_en": "crumb.gg Lookup: 똥에디",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #28 with 2T 153G (best run recorded 2026-09-27 15:55 KST). Lv 190, server S9, combat power 22.02G (power-leaderboard rank 74). Season history: S1: #24 98.925G; S2: #19 310.971G; S3: #4 918.133G; S4: #6 1T 499G; S5: #28 2T 153G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 153G",
+     "power": "22.02G (account combat power)",
+     "ratio": "97.8x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 24,
+     "score": "98.925G"
+    },
+    {
+     "season": 2,
+     "rank": 19,
+     "score": "310.971G"
+    },
+    {
+     "season": 3,
+     "rank": 4,
+     "score": "918.133G"
+    },
+    {
+     "season": 4,
+     "rank": 6,
+     "score": "1T 499G"
+    },
+    {
+     "season": 5,
+     "rank": 28,
+     "score": "2T 153G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     3,
+     6,
+     11,
+     12
+    ],
+    "pets": [
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-눈의",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "눈의 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 눈의",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #29 with 2T 116G (best run recorded 2026-09-27 15:55 KST). Lv 188, server S2, combat power 24.41G (power-leaderboard rank 25). Season history: S1: #7 178.332G; S2: #6 497.655G; S5: #29 2T 116G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 116G",
+     "power": "24.41G (account combat power)",
+     "ratio": "86.7x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 7,
+     "score": "178.332G"
+    },
+    {
+     "season": 2,
+     "rank": 6,
+     "score": "497.655G"
+    },
+    {
+     "season": 5,
+     "rank": 29,
+     "score": "2T 116G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     4,
+     8,
+     10
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-칠성",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "칠성 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 칠성",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #30 with 2T 106G (best run recorded 2026-09-27 15:55 KST). Lv 187, server S41, combat power 18.25G (power-leaderboard rank 207). Season history: S2: #12 364.752G; S3: #16 729.043G; S4: #25 1T 156G; S5: #30 2T 106G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 106G",
+     "power": "18.25G (account combat power)",
+     "ratio": "115.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 12,
+     "score": "364.752G"
+    },
+    {
+     "season": 3,
+     "rank": 16,
+     "score": "729.043G"
+    },
+    {
+     "season": 4,
+     "rank": 25,
+     "score": "1T 156G"
+    },
+    {
+     "season": 5,
+     "rank": 30,
+     "score": "2T 106G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-나비",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "나비 (카페)",
+   "title_en": "crumb.gg Lookup: 나비",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #31 with 2T 104G (best run recorded 2026-09-27 15:55 KST). Lv 188, server S8, combat power 22.66G (power-leaderboard rank 51). Season history: S2: #32 270.969G; S3: #6 874.206G; S4: #15 1T 309G; S5: #31 2T 104G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 104G",
+     "power": "22.66G (account combat power)",
+     "ratio": "92.8x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 32,
+     "score": "270.969G"
+    },
+    {
+     "season": 3,
+     "rank": 6,
+     "score": "874.206G"
+    },
+    {
+     "season": 4,
+     "rank": 15,
+     "score": "1T 309G"
+    },
+    {
+     "season": 5,
+     "rank": 31,
+     "score": "2T 104G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-댕댕",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "댕댕 (카페)",
+   "title_en": "crumb.gg Lookup: 댕댕",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #32 with 2T 086G (best run recorded 2026-09-27 15:55 KST). Lv 189, server S21, combat power 23.48G (power-leaderboard rank 33). Season history: S2: #21 307.543G; S3: #8 849.616G; S4: #33 1T 125G; S5: #32 2T 086G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 086G",
+     "power": "23.48G (account combat power)",
+     "ratio": "88.9x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 21,
+     "score": "307.543G"
+    },
+    {
+     "season": 3,
+     "rank": 8,
+     "score": "849.616G"
+    },
+    {
+     "season": 4,
+     "rank": 33,
+     "score": "1T 125G"
+    },
+    {
+     "season": 5,
+     "rank": 32,
+     "score": "2T 086G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-빵빵",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "빵빵 (월드)",
+   "title_en": "crumb.gg Lookup: 빵빵",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #33 with 2T 027G (best run recorded 2026-09-27 15:55 KST). Lv 188, server S19, combat power 17.42G (power-leaderboard rank 236). Season history: S4: #36 1T 103G; S5: #33 2T 027G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 027G",
+     "power": "17.42G (account combat power)",
+     "ratio": "116.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 4,
+     "rank": 36,
+     "score": "1T 103G"
+    },
+    {
+     "season": 5,
+     "rank": 33,
+     "score": "2T 027G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "락스타맛 쿠키",
+      "en": "Rockstar Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     1,
+     3,
+     6
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-히히서커스",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "히히서커스 (Carpediem)",
+   "title_en": "crumb.gg Lookup: 히히서커스",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #34 with 2T 025G (best run recorded 2026-09-27 15:55 KST). Lv 189, server S28, combat power 21.95G (power-leaderboard rank 79). Season history: S5: #34 2T 025G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 025G",
+     "power": "21.95G (account combat power)",
+     "ratio": "92.3x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 34,
+     "score": "2T 025G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     3,
+     7
+    ],
+    "pets": [
+     "얼음과자새 / Icy Birdie (Ally DMG Reduction +12%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-똑똑이아빠",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "똑똑이아빠 (카페)",
+   "title_en": "crumb.gg Lookup: 똑똑이아빠",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #35 with 2T 015G (best run recorded 2026-09-27 17:30 KST). Lv 188, server S24, combat power 20.36G (power-leaderboard rank 134). Season history: S3: #40 588.078G; S5: #35 2T 015G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 015G",
+     "power": "20.36G (account combat power)",
+     "ratio": "99.0x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 3,
+     "rank": 40,
+     "score": "588.078G"
+    },
+    {
+     "season": 5,
+     "rank": 35,
+     "score": "2T 015G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "호밀맛 쿠키",
+      "en": "Rye Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "도넛행성 에일리언 도넛킹",
+      "en": "Space Doughnut's Royal Excellence",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     7,
+     10,
+     12
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-노페",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "노페 (카페)",
+   "title_en": "crumb.gg Lookup: 노페",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #36 with 2T 013G (best run recorded 2026-09-27 17:30 KST). Lv 189, server S206, combat power 21.79G (power-leaderboard rank 83). Season history: S3: #29 654.298G; S4: #35 1T 108G; S5: #36 2T 013G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "2T 013G",
+     "power": "21.79G (account combat power)",
+     "ratio": "92.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 3,
+     "rank": 29,
+     "score": "654.298G"
+    },
+    {
+     "season": 4,
+     "rank": 35,
+     "score": "1T 108G"
+    },
+    {
+     "season": 5,
+     "rank": 36,
+     "score": "2T 013G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-SCANDAL",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "SCANDAL (미르)",
+   "title_en": "crumb.gg Lookup: SCANDAL",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #37 with 2T 011G (best run recorded 2026-09-27 17:30 KST). Lv 189, server S51, combat power 21.24G (power-leaderboard rank 100). Season history: S5: #37 2T 011G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 011G",
+     "power": "21.24G (account combat power)",
+     "ratio": "94.7x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 37,
+     "score": "2T 011G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     3,
+     8,
+     9
+    ],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-Bishop",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "Bishop (카페)",
+   "title_en": "crumb.gg Lookup: Bishop",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #38 with 2T 008G (best run recorded 2026-09-27 17:30 KST). Lv 190, server S263, combat power 25.14G (power-leaderboard rank 18). Season history: S4: #7 1T 462G; S5: #38 2T 008G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 008G",
+     "power": "25.14G (account combat power)",
+     "ratio": "79.9x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 4,
+     "rank": 7,
+     "score": "1T 462G"
+    },
+    {
+     "season": 5,
+     "rank": 38,
+     "score": "2T 008G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     6,
+     8,
+     10
+    ],
+    "pets": [
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-벼락맞은선인장",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "벼락맞은선인장 (카페)",
+   "title_en": "crumb.gg Lookup: 벼락맞은선인장",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #39 with 2T 003G (best run recorded 2026-09-27 17:30 KST). Lv 189, server S285, combat power 21.34G (power-leaderboard rank 94). Season history: S3: #32 630.890G; S4: #28 1T 136G; S5: #39 2T 003G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "2T 003G",
+     "power": "21.34G (account combat power)",
+     "ratio": "93.9x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 3,
+     "rank": 32,
+     "score": "630.890G"
+    },
+    {
+     "season": 4,
+     "rank": 28,
+     "score": "1T 136G"
+    },
+    {
+     "season": 5,
+     "rank": 39,
+     "score": "2T 003G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "체리콜라맛 쿠키",
+      "en": "Cherry Cola Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [],
+    "pets": [
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-섬영",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "섬영 (판도라)",
+   "title_en": "crumb.gg Lookup: 섬영",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #40 with 1T 999G (best run recorded 2026-09-27 17:30 KST). Lv 187, server S96, combat power 22.00G (power-leaderboard rank 75). Season history: S5: #40 1T 999G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 999G",
+     "power": "22.00G (account combat power)",
+     "ratio": "90.9x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 40,
+     "score": "1T 999G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-푸키",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "푸키 (Eden)",
+   "title_en": "crumb.gg Lookup: 푸키",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #41 with 1T 998G (best run recorded 2026-09-27 17:30 KST). Lv 189, server S123, combat power 19.36G (power-leaderboard rank 170). Season history: S5: #41 1T 998G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 998G",
+     "power": "19.36G (account combat power)",
+     "ratio": "103.2x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 41,
+     "score": "1T 998G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-부스러기",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "부스러기 (방랑자)",
+   "title_en": "crumb.gg Lookup: 부스러기",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #42 with 1T 982G (best run recorded 2026-09-27 18:13 KST). Lv 187, server S288, combat power 22.49G (power-leaderboard rank 58). Season history: S5: #42 1T 982G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 982G",
+     "power": "22.49G (account combat power)",
+     "ratio": "88.1x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 42,
+     "score": "1T 982G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-군무원",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "군무원 (카페)",
+   "title_en": "crumb.gg Lookup: 군무원",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #43 with 1T 967G (best run recorded 2026-09-27 18:13 KST). Lv 190, server S4, combat power 24.60G (power-leaderboard rank 24). Season history: S2: #37 262.194G; S3: #26 672.318G; S4: #22 1T 225G; S5: #43 1T 967G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "1T 967G",
+     "power": "24.60G (account combat power)",
+     "ratio": "79.9x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 2,
+     "rank": 37,
+     "score": "262.194G"
+    },
+    {
+     "season": 3,
+     "rank": 26,
+     "score": "672.318G"
+    },
+    {
+     "season": 4,
+     "rank": 22,
+     "score": "1T 225G"
+    },
+    {
+     "season": 5,
+     "rank": 43,
+     "score": "1T 967G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "허브맛 쿠키",
+      "en": "Herb Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [
+     2,
+     4,
+     6,
+     10
+    ],
+    "pets": [
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-八雲Shiro",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "八雲Shiro (幻想郷の人間の里)",
+   "title_en": "crumb.gg Lookup: 八雲Shiro",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #44 with 1T 959G (best run recorded 2026-09-27 18:13 KST). Lv 188, server S188, combat power 21.33G (power-leaderboard rank 95). Season history: S5: #44 1T 959G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 959G",
+     "power": "21.33G (account combat power)",
+     "ratio": "91.9x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 44,
+     "score": "1T 959G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-鮭魚soz",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "鮭魚soz (阿Seng餅乾集團)",
+   "title_en": "crumb.gg Lookup: 鮭魚soz",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #45 with 1T 951G (best run recorded 2026-09-27 18:15 KST). Lv 188, server S312, combat power 19.21G (power-leaderboard rank 176). Season history: S5: #45 1T 951G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 951G",
+     "power": "19.21G (account combat power)",
+     "ratio": "101.5x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 45,
+     "score": "1T 951G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-무드",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "무드 (월드)",
+   "title_en": "crumb.gg Lookup: 무드",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #46 with 1T 944G (best run recorded 2026-09-27 18:15 KST). Lv 188, server S311, combat power 23.55G (power-leaderboard rank 30). Season history: S5: #46 1T 944G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 944G",
+     "power": "23.55G (account combat power)",
+     "ratio": "82.6x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 46,
+     "score": "1T 944G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-Lineve",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "Lineve (Eden)",
+   "title_en": "crumb.gg Lookup: Lineve",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #47 with 1T 939G (best run recorded 2026-09-27 18:15 KST). Lv 186, server S1, combat power 22.17G (power-leaderboard rank 69). Season history: S1: #20 108.551G; S5: #47 1T 939G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (below).",
+   "scores": [
+    {
+     "damage": "1T 939G",
+     "power": "22.17G (account combat power)",
+     "ratio": "87.4x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 1,
+     "rank": 20,
+     "score": "108.551G"
+    },
+    {
+     "season": 5,
+     "rank": 47,
+     "score": "1T 939G"
+    }
+   ],
+   "arena_defense_team": {
+    "context": "Rumble Arena DEFENSE TEAM shown on Lookup; NOT the Guild Conquest raid team. null slots are shown as 'Hidden' on the site.",
+    "cookies": [
+     {
+      "kr": "마카롱맛 쿠키",
+      "en": "Macaron Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 1 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "오븐방랑자 쿠키",
+      "en": "Oven Wanderer Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 2 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피노누아맛 쿠키",
+      "en": "Pinot Noir Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 3 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "치즈케이크맛 쿠키",
+      "en": "Cheesecake Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 4 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "석류맛 쿠키",
+      "en": "Pomegranate Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 5 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "뱀파이어맛 쿠키",
+      "en": "Vampire Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 6 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "피겨여왕맛 쿠키",
+      "en": "Skating Queen Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 7 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바리공주맛 쿠키",
+      "en": "Princess Bari Cookie",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 8 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "en": "Milk Cookie's Crunchy Strong Pediatrician",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 9 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이름 모를 케이크 들개",
+      "en": "Nameless Cake Hound",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 10 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "이온맛 쿠키로봇",
+      "en": "Ion Cookie Robot",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 11 of 12 (arena defense grid)"
+     },
+     {
+      "kr": "감감술래 놀이 달토끼맛 쿠키",
+      "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+      "level": "?",
+      "stars": "?",
+      "note": "slot 12 of 12 (arena defense grid)"
+     }
+    ],
+    "hidden_slots": [],
+    "pets": [
+     "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)"
+    ]
+   }
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-군산",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "군산 (1TOP)",
+   "title_en": "crumb.gg Lookup: 군산",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #48 with 1T 929G (best run recorded 2026-09-27 18:15 KST). Lv 188, server S47, combat power 20.36G (power-leaderboard rank 135). Season history: S5: #48 1T 929G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 929G",
+     "power": "20.36G (account combat power)",
+     "ratio": "94.8x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 48,
+     "score": "1T 929G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-조봉순",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "조봉순 (판도라)",
+   "title_en": "crumb.gg Lookup: 조봉순",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #49 with 1T 926G (best run recorded 2026-09-27 18:15 KST). Lv 188, server S18, combat power 21.76G (power-leaderboard rank 84). Season history: S5: #49 1T 926G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 926G",
+     "power": "21.76G (account combat power)",
+     "ratio": "88.5x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 5,
+     "rank": 49,
+     "score": "1T 926G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:player-김개똥",
+   "url": "https://crumb.gg/lookup",
+   "date": "2026-09-27",
+   "title_kr": "김개똥 (월드)",
+   "title_en": "crumb.gg Lookup: 김개똥",
+   "relevance": 2,
+   "summary_en": "S5 Guild Conquest #50 with 1T 916G (best run recorded 2026-09-27 18:15 KST). Lv 189, server S45, combat power 20.42G (power-leaderboard rank 133). Season history: S4: #32 1T 126G; S5: #50 1T 916G. crumb.gg shows no raid team, levels, stars, runes or gear; only a Rumble Arena defense team (none recorded for this player).",
+   "scores": [
+    {
+     "damage": "1T 916G",
+     "power": "20.42G (account combat power)",
+     "ratio": "93.8x (score / account CP)",
+     "deck": "not shown on crumb.gg",
+     "note": "power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+     "verified": true
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "gc_seasons": [
+    {
+     "season": 4,
+     "rank": 32,
+     "score": "1T 126G"
+    },
+    {
+     "season": 5,
+     "rank": 50,
+     "score": "1T 916G"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:power-leaderboard",
+   "url": "https://crumb.gg/rankings (Power tab)",
+   "date": "2026-09-27",
+   "title_kr": "전투력 랭킹",
+   "title_en": "Power leaderboard (top 500 by combat power)",
+   "relevance": 1,
+   "summary_en": "Current snapshot only (no season selector): top 500 players by combat power, 'only players we've recorded'. #1 newbiee (카페) 30.00B, #500 9.49B. Expanding a row shows the player's Guild Conquest and Rumble Arena standing, joined by name. power = crumb.gg 'COMBAT POWER' (Power tab: 'Top 500 by combat power'); the site does not define it. At ~17-30G it is ~20x the ~1G team power that gallery screenshots show for 400-560배 runs, so it is most likely total account power, not deck power; ratio here is NOT comparable to gallery 배.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "Top 500 by combat power · only players we've recorded",
+     "en": "(site text, English UI)"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:patches",
+   "url": "https://crumb.gg/patches",
+   "date": "2026-09-23",
+   "title_kr": "패치 노트",
+   "title_en": "crumb.gg patch digest (global)",
+   "relevance": 2,
+   "summary_en": "Patch digest from /data/patches.json. Guild Conquest launched with the 2026-08-27 update (Brightseeker and Pinot Noir same patch). 2026-09-10 (1.3.002, Cherry Cola) fixed manual control in Guild Conquest and changed buff-conflict resolution to post-Skill-AMP value. 2026-09-23 (1.4.002, Princess Bari, Rumble Arena, Dimensional Rift) lowered GC tier thresholds, raised group medal rewards, added the Skill Prep stat and oven gear presets.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [
+    {
+     "slot": "presets",
+     "substats": "Oven: change presets with drawn gear; filter up to 5 sub-stats in auto bake.",
+     "context": "2026-09-23 patch",
+     "why": ""
+    }
+   ],
+   "rng": [],
+   "mechanics": [
+    "2026-08-27: Guild Conquest: the guild fights the Extra-Stuffed Piñata. Weekly score, groups of 5 guilds, Guild Medals for the new exchange.",
+    "2026-08-27: Tea Knight Cookie (Guild Medal Exchange): every 10 s thunder strike of 155.2% ATK and all allies Boss DMG +70% for 10 s (Guild Conquest only; +45% at the lowest grade).",
+    "2026-09-10: fix: cookies could be controlled by hand in Crumble Dungeon and Guild Conquest.",
+    "2026-09-10: When buffs or debuffs conflict, the one that applies is now decided by its value after all stats are applied, Skill AMP included.",
+    "2026-09-10: Boss HP bars show decimals.",
+    "2026-09-23: new stat Skill Prep: shortens the wait for a cookie's first skill; Princess Bari and Moon Rabbit (Pampered with Persimmon) have Skill Prep 50%.",
+    "2026-09-23: Princess Bari: guided souls lose 30% damage on each repeat hit against the same enemy (100/70/49%), so her total against a single boss is lower than the raw number suggests.",
+    "2026-09-23: Dimensional Rift exchange pet/item 'Ally Boss DMG +150%' has no effect in Guild Conquest.",
+    "2026-09-23: Guild Conquest tier requirements lowered (Gold 2 1.5G -> 1.1G, Gold 3 1G -> 600M, ...)."
+   ],
+   "disagreements": [
+    "Patch note says the new group rewards apply 'From season 6 (Sep 24)', but crumb.gg labels the week starting 2026-09-24 as Season 5. Season numbering differs by one between the patch digest and the rankings board (possible preseason/first-week counting difference)."
+   ],
+   "quotes": [
+    {
+     "kr": "길드 토벌전 그룹 순위 보상(길드 메달): ... 시즌 6(9/24)부터",
+     "en": "Guild Conquest group rewards (Guild Medals): 2nd 1,400 → 1,500, 3rd 1,000 → 1,200, 4th 600 → 1,000, unranked 200 → 900. From season 6 (Sep 24)."
+    },
+    {
+     "kr": "10초마다 공격력 155.2% 번개 일격, 모든 아군 보스피해 +70% 10초 (길드 토벌전 전용, 최저 등급 +45%).",
+     "en": "Every 10 s: thunder strike of 155.2% ATK and all allies Boss DMG +70% for 10 s (Guild Conquest only; +45% at the lowest grade)."
+    },
+    {
+     "kr": "크럼블 던전과 길드 토벌전에서 쿠키를 직접 조작할 수 있던 문제.",
+     "en": "Cookies could be controlled by hand in Crumble Dungeon and Guild Conquest. (fixed 2026-09-10)"
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:sim",
+   "url": "https://crumb.gg/sim",
+   "date": null,
+   "title_kr": "길드 토벌전 시뮬레이터",
+   "title_en": "Guild Conquest simulator",
+   "relevance": 1,
+   "summary_en": "A Guild Conquest simulator: pick 12 cookies, 3 pets, 2 mercenary cards; it replays the fight a few hundred times on a fixed account and scores 0-100 (median and best), not raw damage. Needs sign-in; Compare, What-if, Gear and Swap finder are guild-only. No boss mechanics or formulas are published on the page.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "Site: 'Cookie movement can't be modelled exactly, so how often certain things happen in a fight can be off.'",
+    "Site: 'Skill Haste shifts when every skill goes off, so with different haste on your cookies the same fight can play out differently in your game.'",
+    "Site: 'Short runs are less reliable: with few fights the rare perfect run may not show up at all.'"
+   ],
+   "mechanics": [
+    "Lineup = 12 cookies + 3 pets + 2 mercenary cards (perks)."
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "",
+     "en": "Results are a value from 0 to 100, not raw damage: \"typical\" is the median fight, \"best\" the highest. The scale is stretched at the top, so losing a fifth of the damage costs about 5 points."
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:dps",
+   "url": "https://crumb.gg/dps",
+   "date": null,
+   "title_kr": "DPS 차트",
+   "title_en": "DPS chart (MV/s)",
+   "relevance": 1,
+   "summary_en": "Generic per-cookie skill multiplier per second (MV/s) chart, 1/3/5/10 enemies, with max vs no synergies over 60 s. Single-target top: Brightseeker 7.59, Cherry Cola 6.98, Scorpion 6.39, Cool Mint 5.76, Witchberry 4.60, Melon Soda 4.08 (max synergies). Not Guild Conquest specific; ignores buffers like Pomegranate/Milk/Pinot Noir. Raw data saved as api/data-dpschart.json.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Synergy sources listed: Projectile Speed +1 from Pomegranate; Rapid Fire +2 from Pinot Noir/Orange/Grapevine; Duration +0.75 from Milk/Coffee/Cheerleader; Chain +2 from Skating Queen/Lime.",
+    "Princess Bari guides 2 Charge allies; her souls hit with their ATK."
+   ],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:arena-stats",
+   "url": "https://crumb.gg/rankings (Rumble Arena tab)",
+   "date": "2026-09-27",
+   "title_kr": "와글와글 아레나 상위 100 덱 통계",
+   "title_en": "Rumble Arena top-100 team usage",
+   "relevance": 1,
+   "summary_en": "/pub/stats aggregates the top-100 Rumble Arena teams (934 revealed / 266 hidden cookie slots, 300 pets). This is ARENA data, not Guild Conquest, but the same cookies dominate the raid discussion: Pomegranate 100, Milk 97, Pinot Noir 94, Macaron 91, Ion 85, Cheesecake 79, Nameless Cake Hound 75, Moon Rabbit 73, Herb 64, Oven Wanderer 53, Cherry Cola 47, Princess Bari 41.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [],
+   "cookie_counts": [
+    {
+     "en": "Pomegranate Cookie",
+     "kr": "석류맛 쿠키",
+     "n": 100
+    },
+    {
+     "en": "Milk Cookie's Crunchy Strong Pediatrician",
+     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "n": 97
+    },
+    {
+     "en": "Pinot Noir Cookie",
+     "kr": "피노누아맛 쿠키",
+     "n": 94
+    },
+    {
+     "en": "Macaron Cookie",
+     "kr": "마카롱맛 쿠키",
+     "n": 91
+    },
+    {
+     "en": "Ion Cookie Robot",
+     "kr": "이온맛 쿠키로봇",
+     "n": 85
+    },
+    {
+     "en": "Cheesecake Cookie",
+     "kr": "치즈케이크맛 쿠키",
+     "n": 79
+    },
+    {
+     "en": "Nameless Cake Hound",
+     "kr": "이름 모를 케이크 들개",
+     "n": 75
+    },
+    {
+     "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+     "kr": "감감술래 놀이 달토끼맛 쿠키",
+     "n": 73
+    },
+    {
+     "en": "Herb Cookie",
+     "kr": "허브맛 쿠키",
+     "n": 64
+    },
+    {
+     "en": "Oven Wanderer Cookie",
+     "kr": "오븐방랑자 쿠키",
+     "n": 53
+    },
+    {
+     "en": "Cherry Cola Cookie",
+     "kr": "체리콜라맛 쿠키",
+     "n": 47
+    },
+    {
+     "en": "Princess Bari Cookie",
+     "kr": "바리공주맛 쿠키",
+     "n": 41
+    },
+    {
+     "en": "Strawberry Crepe Cookie",
+     "kr": "딸기크레페맛 쿠키",
+     "n": 8
+    },
+    {
+     "en": "Rye Cookie",
+     "kr": "호밀맛 쿠키",
+     "n": 7
+    },
+    {
+     "en": "Grapevine Cookie",
+     "kr": "포도넝쿨맛 쿠키",
+     "n": 4
+    },
+    {
+     "en": "Rockstar Cookie",
+     "kr": "락스타맛 쿠키",
+     "n": 4
+    },
+    {
+     "en": "Skating Queen Cookie",
+     "kr": "피겨여왕맛 쿠키",
+     "n": 3
+    },
+    {
+     "en": "Space Doughnut's Royal Excellence",
+     "kr": "도넛행성 에일리언 도넛킹",
+     "n": 3
+    },
+    {
+     "en": "Lime Cookie",
+     "kr": "라임맛 쿠키",
+     "n": 2
+    },
+    {
+     "en": "Wind Archer Cookie",
+     "kr": "바람궁수 쿠키",
+     "n": 1
+    },
+    {
+     "en": "Vampire Cookie",
+     "kr": "뱀파이어맛 쿠키",
+     "n": 1
+    },
+    {
+     "en": "Espresso Cookie",
+     "kr": "에스프레소맛 쿠키",
+     "n": 1
+    },
+    {
+     "en": "Brightseeker Cookie",
+     "kr": "브라이트시커 쿠키",
+     "n": 1
+    }
+   ],
+   "pet_counts": [
+    {
+     "pet": "근엄한 초코왕방울 / Majestic King Choco Drop (Ally Max HP +20%)",
+     "n": 97
+    },
+    {
+     "pet": "갓난갓방울 / Holy Baby Drop (Ally ATK +20%)",
+     "n": 89
+    },
+    {
+     "pet": "핫도그도그 / Hot Doggie (Ally Skill AMP +10%)",
+     "n": 82
+    },
+    {
+     "pet": "얼음과자새 / Icy Birdie (Ally DMG Reduction +12%)",
+     "n": 14
+    },
+    {
+     "pet": "전지멜로우 / Chargemellow (Ally Rapid Fire Synergy +2, Rapid Fire Synergy Receiving Ally ATK +10%)",
+     "n": 7
+    },
+    {
+     "pet": "색동 주머니 / Candy Shade Pouch (Ally Lift RES +30%, Max HP +12.5%)",
+     "n": 5
+    },
+    {
+     "pet": "달걀머리새 / Eggbeak (Charge Ally DMG Reduction +20%)",
+     "n": 3
+    },
+    {
+     "pet": "망고부리새 / Mango Toucan (Ally Evasion Rate +10%)",
+     "n": 2
+    },
+    {
+     "pet": "치즈뭉치 고양이 / Fluffy Cheese Cat (Ally Chain Synergy +2, Chain Synergy Receiving Ally ATK +10%)",
+     "n": 1
+    }
+   ]
+  },
+  {
+   "source": "other",
+   "id": "crumbgg:api",
+   "url": "https://crumb.gg",
+   "date": "2026-09-27",
+   "title_kr": "",
+   "title_en": "crumb.gg JSON endpoints",
+   "relevance": 2,
+   "summary_en": "Public JSON (no auth): /pub/rankings?kind=players|guilds (past seasons, top 50 each), /pub/live?board=guild_conquest_players|guild_conquest_guilds|rumble_arena (live, top 100), /pub/live-history?board=...&hours=N (last 450 snapshots, ~10 min apart; first point is S4 final), /pub/leaderboard (power top 500), /pub/guilds, /pub/stats, /data/meta.json, /data/patches.json, /data/dpschart.json, /data/stages.json. api.crumb.gg: /api/meta, /api/lookup/suggest?q=, /api/lookup/player?ref=, /api/lookup/player/live?ref=, /api/lookup/guild?ref=, /api/lookup/guild/members?ref= (refs are opaque, obtained from suggest). Scores are in G (3226 = 3T 226G). Signed-in /api/rankings returned the same 50 rows.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  }
+ ],
+ "season_progression": [
+  {
+   "season": 1,
+   "rank1": "248.450G (도리, Carpediem)",
+   "rank10": "147.262G",
+   "rank50": "72.814G",
+   "rank100": "not public (top 50 only)",
+   "dates": "~2026-08-27 (Thu) week; INFERRED from weekly cadence + GC launch 2026-08-27, crumb.gg gives no past dates"
+  },
+  {
+   "season": 2,
+   "rank1": "881.689G (도리, Carpediem)",
+   "rank10": "377.707G",
+   "rank50": "229.383G",
+   "rank100": "not public (top 50 only)",
+   "dates": "~2026-09-03 (Thu) week; INFERRED from weekly cadence + GC launch 2026-08-27, crumb.gg gives no past dates"
+  },
+  {
+   "season": 3,
+   "rank1": "1T 111G (날씨의아이, 카페)",
+   "rank10": "762.928G",
+   "rank50": "542.460G",
+   "rank100": "not public (top 50 only)",
+   "dates": "~2026-09-10 (Thu) week; INFERRED from weekly cadence + GC launch 2026-08-27, crumb.gg gives no past dates"
+  },
+  {
+   "season": 4,
+   "rank1": "1T 786G (날씨의아이, 카페)",
+   "rank10": "1T 434G",
+   "rank50": "1T 031G",
+   "rank100": "not public (top 50 only)",
+   "dates": "~2026-09-17 (Thu) week; INFERRED from weekly cadence + GC launch 2026-08-27, crumb.gg gives no past dates"
+  },
+  {
+   "season": 5,
+   "rank1": "3T 226G (날씨의아이, 카페)",
+   "rank10": "2T 484G",
+   "rank50": "1T 916G",
+   "rank100": "1T 562G",
+   "dates": "2026-09-24 16:00 KST to 2026-09-28 12:00 KST (from API; next season 2026-10-01 16:00 KST)"
+  }
+ ],
+ "glossary": [
+  {
+   "kr": "석류맛 쿠키",
+   "en": "Pomegranate Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+   "en": "Milk Cookie's Crunchy Strong Pediatrician",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "피노누아맛 쿠키",
+   "en": "Pinot Noir Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "마카롱맛 쿠키",
+   "en": "Macaron Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "이온맛 쿠키로봇",
+   "en": "Ion Cookie Robot",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "치즈케이크맛 쿠키",
+   "en": "Cheesecake Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "이름 모를 케이크 들개",
+   "en": "Nameless Cake Hound",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "감감술래 놀이 달토끼맛 쿠키",
+   "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "허브맛 쿠키",
+   "en": "Herb Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "오븐방랑자 쿠키",
+   "en": "Oven Wanderer Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "체리콜라맛 쿠키",
+   "en": "Cherry Cola Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "바리공주맛 쿠키",
+   "en": "Princess Bari Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "브라이트시커 쿠키",
+   "en": "Brightseeker Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "실론나이트 쿠키",
+   "en": "Tea Knight Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "피겨여왕맛 쿠키",
+   "en": "Skating Queen Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "전갈맛 쿠키",
+   "en": "Scorpion Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "메론소다맛 쿠키",
+   "en": "Melon Soda Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "다크초코 쿠키",
+   "en": "Dark Choco Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "체리맛 쿠키",
+   "en": "Cherry Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "딸기크레페맛 쿠키",
+   "en": "Strawberry Crepe Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "도넛행성 에일리언 도넛킹",
+   "en": "Space Doughnut's Royal Excellence",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "쿨링민트맛 쿠키",
+   "en": "Cool Mint Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator, EN vs 한국어 UI, same button order (15-crumbgg/30-sim.txt vs 34-sim-ko.txt)"
+  },
+  {
+   "kr": "근엄한 초코왕방울",
+   "en": "Majestic King Choco Drop",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally Max HP +20%"
+  },
+  {
+   "kr": "갓난갓방울",
+   "en": "Holy Baby Drop",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally ATK +20%"
+  },
+  {
+   "kr": "핫도그도그",
+   "en": "Hot Doggie",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally Skill AMP +10%"
+  },
+  {
+   "kr": "얼음과자새",
+   "en": "Icy Birdie",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally DMG Reduction +12%"
+  },
+  {
+   "kr": "전지멜로우",
+   "en": "Chargemellow",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally Rapid Fire Synergy +2, Rapid Fire Synergy Receiving Ally ATK +10%"
+  },
+  {
+   "kr": "색동 주머니",
+   "en": "Candy Shade Pouch",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally Lift RES +30%, Max HP +12.5%"
+  },
+  {
+   "kr": "와사비 문어",
+   "en": "Octo Wasabi",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally Duration Synergy +40%, Duration Synergy Receiving Ally ATK +10%"
+  },
+  {
+   "kr": "판다만두",
+   "en": "Panda Dumpling",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Ally Lift RES +20%"
+  },
+  {
+   "kr": "달걀머리새",
+   "en": "Eggbeak",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "crumb.gg Simulator EN/KO; effect: Charge Ally DMG Reduction +20%"
+  }
+ ]
+}

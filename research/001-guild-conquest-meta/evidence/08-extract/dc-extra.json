@@ -1,0 +1,5351 @@
+{
+ "batch": "dc-extra",
+ "posts": [
+  {
+   "source": "dc",
+   "id": "75540",
+   "url": "https://m.dcinside.com/board/projectcc/75540",
+   "date": "2026-09-25",
+   "title_kr": "갠적으로 이덱이 스테 오토 제일 괜찮은듯",
+   "title_en": "Personally this deck is the best for stage auto",
+   "relevance": 1,
+   "summary_en": "Stage (not raid) auto deck share. Pinot Noir kept low level deliberately so it does not take Pomegranate's buff; starting buff recipients 호밀/우유/딸크. Perks: armor special + 열정페이. Not raid-specific.",
+   "scores": [],
+   "teams": [
+    {
+     "name": "stage auto deck",
+     "cookies": [],
+     "pets": [],
+     "atk_order": [],
+     "perks": "방어구 특약, 열정페이",
+     "formation": "",
+     "substitutions": [
+      "no 바리/체콜 (low Bari stars; dislikes Cherry Cola movement)"
+     ],
+     "unorthodox": [
+      "피노 low level so it does not take 석류 buff (stage context)"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "피노 렙 왜저럼 > 빨대 받지 말라고",
+     "en": "Why is Pinot's level like that? So it doesn't take the straw (Pomegranate buff)"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "75766",
+   "url": "https://m.dcinside.com/board/projectcc/75766",
+   "date": "2026-09-26",
+   "title_kr": "딱히 없는 것 같아서 메모해놓는 스테/아레나/토벌 장비 옵션 (조언요)",
+   "title_en": "Memo of stage/arena/raid gear substats (advice wanted)",
+   "relevance": 2,
+   "summary_en": "Author lists gear substat priorities per slot for stage, arena and raid (raid section admittedly unsure). A commenter gives a compact per-slot table for each mode, including raid: TL 스증치피 / TR 스가스증 / BL 피감체력 / BR 스가피감.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [
+    {
+     "slot": "무기 (검활지팡이) / 좌상단",
+     "substats": "스증 required, 치확 or 치피; maybe 1 line 집중/명중",
+     "context": "raid (author unsure)",
+     "why": ""
+    },
+    {
+     "slot": "방어구 (투구갑옷방패) / 좌하단",
+     "substats": "피감 + 체력 required",
+     "context": "raid (author unsure)",
+     "why": "survive"
+    },
+    {
+     "slot": "장신구 (목걸이반지브로치) / 우상단",
+     "substats": "스증 + 스가 required; 집중/명중 1 line if short",
+     "context": "raid (author unsure)",
+     "why": ""
+    },
+    {
+     "slot": "마법물체책음식 / 우하단",
+     "substats": "스가 required, rest unknown",
+     "context": "raid (author unsure)",
+     "why": ""
+    },
+    {
+     "slot": "좌상단",
+     "substats": "스증 + 치피",
+     "context": "raid (commenter djckdksnamx)",
+     "why": ""
+    },
+    {
+     "slot": "우상단",
+     "substats": "스가 + 스증",
+     "context": "raid (commenter)",
+     "why": ""
+    },
+    {
+     "slot": "좌하단",
+     "substats": "피감 + 체력",
+     "context": "raid (commenter)",
+     "why": ""
+    },
+    {
+     "slot": "우하단",
+     "substats": "스가 + 피감",
+     "context": "raid (commenter)",
+     "why": ""
+    },
+    {
+     "slot": "좌상단/우상단/좌하단/우하단",
+     "substats": "스증치확 / 스가스증 / 치저피감 / 스가치저",
+     "context": "arena (commenter)",
+     "why": "arena swaps 체력 for 치저"
+    },
+    {
+     "slot": "all",
+     "substats": "명중 900–1000, 집중 800–900, then highest power",
+     "context": "stage (commenter)",
+     "why": ""
+    }
+   ],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "[토벌]좌상단 : 스증치피 / 우상단 : 스가스증 / 좌하단 : 피감체력 / 우하단 : 스가피감",
+     "en": "[Raid] top-left: skill amp + crit dmg / top-right: haste + skill amp / bottom-left: dmg reduction + HP / bottom-right: haste + dmg reduction"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "74759",
+   "url": "https://m.dcinside.com/board/projectcc/74759",
+   "date": "2026-09-24",
+   "title_kr": "시커 5성 1t단 입갤",
+   "title_en": "Seeker 5★ joins the 1T club",
+   "relevance": 3,
+   "summary_en": "Melon Soda deck (메소/전갈/브시커) reaching ~1T at 1.6G team power (~625x per commenter) with only a 5★ Bright Seeker. Key tech: move-speed (이동속도) sugar-rune lines locked on Pinot Noir, Melon Soda and Seeker to force a formation/ordering that works; he gets correct ordering ~3 of 4 runs, fails by 0.03 speed differences. Jungle Warrior runes are all skill-haste.",
+   "scores": [
+    {
+     "damage": "~1T (title '1t단')",
+     "power": "1.6G",
+     "ratio": "~625배 (commenter computed)",
+     "deck": "메소덱 (메소 전갈 브시커) + new pet",
+     "note": "Seeker 5★; Seeker haste 36.6 with sword +19, other gear +15"
+    }
+   ],
+   "teams": [
+    {
+     "name": "메소덱",
+     "cookies": [
+      {
+       "kr": "브시커",
+       "en": "Bright Seeker",
+       "level": "?",
+       "stars": "5",
+       "note": "move-speed 'all' on runes (올림)"
+      },
+      {
+       "kr": "메소",
+       "en": "Melon Soda",
+       "level": "?",
+       "stars": "?",
+       "note": "move speed lines"
+      },
+      {
+       "kr": "피노",
+       "en": "Pinot Noir",
+       "level": "?",
+       "stars": "?",
+       "note": "move speed lines"
+      },
+      {
+       "kr": "전갈",
+       "en": "Scorpion",
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사",
+       "en": "Jungle Warrior",
+       "level": "?",
+       "stars": "?",
+       "note": "all-haste runes"
+      }
+     ],
+     "pets": [
+      "new pet (색동주머니) replaced previous"
+     ],
+     "atk_order": [],
+     "perks": "열정페이 + 초고속승진 (per commenter Q, author said yes)",
+     "formation": "ordering driven by move speed",
+     "substitutions": [],
+     "unorthodox": [
+      "Move-speed runes on Seeker/Pinot/Melon Soda to control where cookies stand so Pomegranate's buff lands right; cherry deck variant strips ALL move speed instead"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "정글전사 쿠키",
+     "stats": "SSR 스가 +5.00 (locked), SR 스가 +2.00 (locked), R 치저 4.20%, R 공증 3.70%, SR 방증 5.10%, SR 스가 +3.00 (locked); 10★ slots: 회피 0.80%, 이속 +0.51",
+     "why": "only haste lines are locked — haste matters, rest is filler"
+    },
+    {
+     "cookie": "피노누아맛 쿠키",
+     "stats": "C 방증 0.90%, U 스증 1.60%, C 공증 0.90%, C 이속 +0.26 (locked), R 이속 +0.57 (locked), U 이속 +0.32; 10★: 명중 1.60%, 명중 0.80%",
+     "why": "move speed to control formation"
+    },
+    {
+     "cookie": "메론소다맛 쿠키",
+     "stats": "C 방증 1.40%, R 이속 +0.51 (locked), C 체력 1.40%, U 방증 2.30%, C 이속 +0.20 (locked), U 피감 2.60%; 10★: 체력 1.40%, 치확 1.00%",
+     "why": "move speed to control formation"
+    },
+    {
+     "cookie": "브시커",
+     "stats": "move speed 'all' (올림) per author; screenshot of Seeker runes failed to upload (reposted in post 74818)",
+     "why": "formation"
+    }
+   ],
+   "gear": [
+    {
+     "slot": "all",
+     "substats": "skill haste; Seeker total haste 36.6; sword +19, others +15",
+     "context": "raid",
+     "why": ""
+    }
+   ],
+   "rng": [
+    "Ordering works ~3 of 4 runs; a 0.03 move-speed gap can break it entirely",
+    "석류 sometimes walks forward and breaks the ordering; author suggests checking gear for move speed, lift-resistance level, or haste differences, then retrying"
+   ],
+   "mechanics": [
+    "Commenter: after the patch lift resistance (띄우기 저항) went up and move speeds changed; author says the new ordering is actually better",
+    "Lift resistance shown as 72% on one player's screen"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "0.03차이로 아예 안되는경우 많음 나는 4판중 3번은 정렬됨",
+     "en": "Often a 0.03 difference breaks it completely; for me 3 of 4 runs line up"
+    },
+    {
+     "kr": "체리덱은 이속다빼고",
+     "en": "Cherry deck: remove all move speed"
+    },
+    {
+     "kr": "ㄴㄴ시커 가속 36.6 검19강 나머지 15",
+     "en": "No — Seeker haste 36.6, sword +19, the rest +15"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "76317",
+   "url": "https://m.dcinside.com/board/projectcc/76317",
+   "date": "2026-09-26",
+   "title_kr": "체리덱780배가능함님들ㄱㄱ",
+   "title_en": "Cherry deck 780x is possible",
+   "relevance": 2,
+   "summary_en": "Claim of 780x with the cherry deck at 3.6G power (~2.8T), with no move-speed tricks. Commenter notes low-power accounts melt around 30 s so this is out of reach for them.",
+   "scores": [
+    {
+     "damage": "~2.8T (780 × 3.6G, computed)",
+     "power": "3.6G",
+     "ratio": "780배",
+     "deck": "체리덱",
+     "note": "no screenshot; 'no move speed, just the known setup'"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "'It kept not going higher, then suddenly spiked' — high variance at top"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "이속이런거없고 다아는그건데 780배뜸",
+     "en": "No move-speed stuff, just the known setup, and 780x came out"
+    },
+    {
+     "kr": "ㅇㅇ더뜰거같았는데 안뜨다가 갑자기퐉뜨네",
+     "en": "Felt it should go higher, didn't for a while, then suddenly spiked"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "71216",
+   "url": "https://m.dcinside.com/board/projectcc/71216",
+   "date": "2026-09-20",
+   "title_kr": "체리덱601배인데",
+   "title_en": "Cherry deck 601x",
+   "relevance": 1,
+   "summary_en": "Asks whether more than 601x is possible with the cherry deck; a commenter suggests replacing Cherry with a damage dealer (Melon Soda) and rolling for a good 'world line'.",
+   "scores": [
+    {
+     "damage": "?",
+     "power": "?",
+     "ratio": "601배",
+     "deck": "체리덱",
+     "note": "no screenshot"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "'체리 대신 딜러놓고 세계선 존나뽑으면 더나오는거 아님?' — commenter frames score as rolling for the right world-line"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "체리 대신 딜러놓고 세계선 존나뽑으면 더나오는거 아님?",
+     "en": "Wouldn't you get more by putting a dealer instead of Cherry and rerolling world-lines a lot?"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69200",
+   "url": "https://m.dcinside.com/board/projectcc/69200",
+   "date": "2026-09-17",
+   "title_kr": "토벌전 현시점 빌드 2개 소개한다",
+   "title_en": "Two current raid builds",
+   "relevance": 2,
+   "summary_en": "As of 9/17: skill-amp Macaron build gives ~300–400x team power if you can survive the 30 s slam (lvl-down others still reaches 17 s); ATK-amp Macaron build gives ~150–300x and is the stable fallback for weaker accounts that can't survive 30 s. Rule: if you reach 17 s with a skill-amp setup, skill amp is the ceiling; if not, ATK amp is.",
+   "scores": [
+    {
+     "damage": "",
+     "power": "",
+     "ratio": "300~400배",
+     "deck": "스증 마카롱",
+     "note": "author estimate"
+    },
+    {
+     "damage": "",
+     "power": "",
+     "ratio": "150~300배",
+     "deck": "공증 마카롱",
+     "note": "author estimate"
+    }
+   ],
+   "teams": [
+    {
+     "name": "스증 마카롱 / 공증 마카롱",
+     "cookies": [
+      {
+       "kr": "마카롱",
+       "en": "Macaron",
+       "level": "100",
+       "stars": "?",
+       "note": "rune ATK% vs skill-amp variant"
+      }
+     ],
+     "pets": [],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [
+      "정글전사 vs 허브: 정전 higher ceiling (3 buffs) but harder positioning and only Milk heals"
+     ],
+     "unorthodox": [
+      "ATK-rune Macaron so she takes Pomegranate's buff; other cookies leveled down to minimum"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "마카롱",
+     "stats": "스증 build vs 공증 build",
+     "why": "공증 makes Macaron receive Pomegranate's buff (ATK order) and survive-able low-level team; 스증 higher ceiling once 30 s survivable"
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Nobody (even rank 1) survives the 17 s super jump as of 9/17",
+    "Jungle Warrior grants 3 buffs (다발3) → higher ceiling than 허브 (Herb)",
+    "Commenter: with 정전 the early 정전 buff often misses Pomegranate, making it score lower than Herb"
+   ],
+   "disagreements": [
+    "Commenter says 'eventually everyone uses skill amp so just go skill amp'; author objects that the post says it depends on whether you survive 17 s"
+   ],
+   "quotes": [
+    {
+     "kr": "스증 세팅에 애들 렙따 해도 17초까지 본다. <- 스증이 최고점",
+     "en": "If with a skill-amp setup and leveled-down cookies you reach 17 s, skill amp is the ceiling"
+    },
+    {
+     "kr": "고점은 정글전사가 나을걸 정글전사가 다발3이라",
+     "en": "Jungle Warrior has the higher ceiling since it gives 3 buffs"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "75617",
+   "url": "https://m.dcinside.com/board/projectcc/75617",
+   "date": "2026-09-25",
+   "title_kr": "토벌 1T 넣는사람 팀투 몇임??",
+   "title_en": "What team power do 1T raiders have?",
+   "relevance": 2,
+   "summary_en": "Q&A: ~2G power seen for 1T; one player (저장용) does it at 1.77G. Full level list: 우유 브시 피겨 카롱 실론 치케 석류 at Lv100, 전갈 Lv10, 체리 닼초 피노 정전 Lv1. Pets 와사비문어 / 핫도그 / 색동주머니.",
+   "scores": [
+    {
+     "damage": "1T",
+     "power": "1.77G",
+     "ratio": "~565배",
+     "deck": "체리덱",
+     "note": "저장용"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 (저장용)",
+     "cookies": [
+      {
+       "kr": "우유",
+       "en": "Milk",
+       "level": "100",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브시",
+       "en": "Bright Seeker",
+       "level": "100",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨",
+       "en": null,
+       "level": "100",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "카롱",
+       "en": "Macaron",
+       "level": "100",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론",
+       "en": null,
+       "level": "100",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "치케",
+       "en": "Cheesecake",
+       "level": "100",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류",
+       "en": "Pomegranate",
+       "level": "100",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈",
+       "en": "Scorpion",
+       "level": "10",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "체리",
+       "en": "Cherry",
+       "level": "1",
+       "stars": "?",
+       "note": "formation"
+      },
+      {
+       "kr": "닼초",
+       "en": "Dark Choco",
+       "level": "1",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노",
+       "en": "Pinot Noir",
+       "level": "1",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "정전",
+       "en": "Jungle Warrior",
+       "level": "1",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "와사비문어",
+      "핫도그",
+      "색동주머니"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "4 Lv.1 cookies + Scorpion Lv10 to keep them out of Pomegranate's buff"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "우유 브시 피겨 카롱 실론 치케 석류100 전갈 10 체리 닼초 피노 정전 1",
+     "en": "Milk, Seeker, 피겨, Macaron, 실론, Cheesecake, Pomegranate at 100; Scorpion 10; Cherry, Dark Choco, Pinot, Jungle Warrior at 1"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "75176",
+   "url": "https://m.dcinside.com/board/projectcc/75176",
+   "date": "2026-09-25",
+   "title_kr": "1T 클럽 가입 완료",
+   "title_en": "Joined the 1T club",
+   "relevance": 3,
+   "summary_en": "Screenshot: 1T 66G personal best at 2.38G team power (~448x), cherry-deck roster WITHOUT the new pet (핫도그 20, 와사비문어 20, 판다 19). Scorpion at Lv60 — commenter warns this may mess up ATK order.",
+   "scores": [
+    {
+     "damage": "1T 66G",
+     "power": "2.38G",
+     "ratio": "~448배 (computed)",
+     "deck": "체리덱 (old pets, 판다)",
+     "note": "deck slot 1"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 grid (screenshot)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,65,100,73,60 / row2: 1,60,100,66,100,100",
+       "stars": "mostly 5★ purple/gold",
+       "note": "Pinot Lv65, Jungle Warrior Lv73, Dark Choco Lv60, Cherry Lv1, Scorpion Lv60; water cookie (pos10) Lv66"
+      }
+     ],
+     "pets": [
+      "핫도그 (20★)",
+      "와사비문어 (20★)",
+      "판다 (19★)"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [
+      "commenters: new pet would raise it further"
+     ],
+     "unorthodox": [
+      "Only Cherry at Lv1; fillers left at mid levels"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [
+    "Commenter: Scorpion Lv60 should break ATK order"
+   ],
+   "quotes": [
+    {
+     "kr": "전갈 60렙이면 공순서 꼬이는거 아니야???",
+     "en": "Won't Scorpion at Lv60 tangle the ATK order?"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "74815",
+   "url": "https://m.dcinside.com/board/projectcc/74815",
+   "date": "2026-09-24",
+   "title_kr": "체리덱 580배",
+   "title_en": "Cherry deck 580x",
+   "relevance": 3,
+   "summary_en": "981G 118M at 1.69G (580x) with the 71135 cherry setup, just more sugar-rune polish and spec-ups. Seeker runes changed from all-haste to mostly haste plus a little skill amp/crit dmg. ~1 in 5 manual runs hits 500x; author estimates the true ceiling ≈ your ~20-run best + 10–20%.",
+   "scores": [
+    {
+     "damage": "981G 118M",
+     "power": "1.69G",
+     "ratio": "580배",
+     "deck": "체리덱",
+     "note": "manual, no macro"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 (저장용)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,1,100,1,1 / row2: 1,1,100,100,100,92",
+       "stars": "5★",
+       "note": "pos12 Lv92"
+      }
+     ],
+     "pets": [
+      "와사비문어 (20)",
+      "핫도그 (20)",
+      "색동주머니 (19)"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "5 Lv.1 cookies (피노, 정전, 닼초, 체리, 전갈)"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "브시커",
+     "stats": "was all 스가 → now mostly 스가 with a little 스증/치피",
+     "why": "refinement"
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "~1 in 5 manual runs reaches 500x",
+    "Ceiling ≈ best of ~20 runs + 10–20%",
+    "Seeker 10★ likely part of the gap between players with same tries"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "500배는 5판에 한판 정도는 뜨는듯",
+     "en": "500x comes out about once in 5 runs"
+    },
+    {
+     "kr": "변수를 최대한 줄인 컨셉이라서 일반적인 상황에서 한 20판정도 박은 고점에서 + 10~20% 정도가 최고점일거임",
+     "en": "It's built to minimize variance, so the max is roughly your ~20-run best plus 10–20%"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "74758",
+   "url": "https://m.dcinside.com/board/projectcc/74758",
+   "date": "2026-09-24",
+   "title_kr": "체리덱 528배",
+   "title_en": "Cherry deck 528x",
+   "relevance": 2,
+   "summary_en": "Same author (저장용): 528x with the 71135 cherry deck after finishing sugar runes and spec-ups.",
+   "scores": [
+    {
+     "damage": "893G 197M",
+     "power": "1.69G",
+     "ratio": "528배",
+     "deck": "체리덱",
+     "note": "from screenshot"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "70645",
+   "url": "https://m.dcinside.com/board/projectcc/70645",
+   "date": "2026-09-19",
+   "title_kr": "450배 쳤는데 소소한 팁",
+   "title_en": "Hit 450x, small tips",
+   "relevance": 3,
+   "summary_en": "Tips: all-haste runes on Pinot Noir raised score (fewer knockbacks during the slam, author guesses); cherry deck ceiling ~300x in his view, auto players should use Melon Soda deck; Bright Seeker at 55 haste outperformed 45 haste — just stack haste rather than mixing skill amp. Commenter objects Pinot's lift-resist skill has 9.5 s CD and 10 s duration so haste is pointless.",
+   "scores": [
+    {
+     "damage": "6??G (blurred)",
+     "power": "?",
+     "ratio": "450배",
+     "deck": "메소덱?",
+     "note": "screenshot blurred"
+    },
+    {
+     "damage": "",
+     "power": "",
+     "ratio": "440배",
+     "deck": "체리덱",
+     "note": "commenter"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "피노",
+     "stats": "all 스가",
+     "why": "author: fewer knockbacks on slam"
+    },
+    {
+     "cookie": "브시커",
+     "stats": "스가 55 total (better than 45); no 스증 mixed in",
+     "why": "more drone uptime"
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "피노 띄우기 저항: 9.5 s cooldown, 10 s duration (commenter)"
+   ],
+   "disagreements": [
+    "Commenter: Pinot lift-resistance buff CD 9.5 s vs 10 s duration, so haste on Pinot is meaningless ('빨간약')",
+    "Author says cherry deck caps ~300x; commenter reports 440x with cherry"
+   ],
+   "quotes": [
+    {
+     "kr": "브시커 스가 55인데 45일때보다 딜 더 넣음",
+     "en": "Seeker at 55 haste deals more than at 45"
+    },
+    {
+     "kr": "피노 띄우기 저항 쿨타임 9.5초에 유지 시간 10초인데 스가 의미있음 ???",
+     "en": "Pinot's lift resistance has 9.5 s CD and 10 s duration — is haste meaningful?"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "70638",
+   "url": "https://m.dcinside.com/board/projectcc/70638",
+   "date": "2026-09-19",
+   "title_kr": "900m 370배",
+   "title_en": "900M power, 370x",
+   "relevance": 3,
+   "summary_en": "334G 156M at 900.2M power (~371x), cherry-style deck; Jungle Warrior given haste, Pinot given move speed runes. Author only had gear haste; Seeker 4/4/3 haste. Candy Apple comment: in Melon deck also give move speed: Pinot 4.33, Melon Soda 4.71 (absolute speed values). Top guilds at the time 4T 79G / 3T 831G / 3T 510G.",
+   "scores": [
+    {
+     "damage": "334G 156M",
+     "power": "900.2M",
+     "ratio": "~371배",
+     "deck": "체리덱 (정전 haste, 피노 이속)",
+     "note": "12th in guild"
+    }
+   ],
+   "teams": [
+    {
+     "name": "deck 3",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,1,100,1,55 / row2: 1,1,100,100,100,100",
+       "stars": "5★",
+       "note": "Pinot 1, JW 1, Dark Choco 55, Cherry 1, Scorpion 1"
+      }
+     ],
+     "pets": [
+      "와사비문어 20",
+      "핫도그 20",
+      "판다 16"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Pinot move-speed rune for positioning"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "정전",
+     "stats": "스가",
+     "why": "trial"
+    },
+    {
+     "cookie": "피노",
+     "stats": "이속 line(s)",
+     "why": "positioning"
+    },
+    {
+     "cookie": "브시커",
+     "stats": "haste 4/4/3 lines (approx)",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Melon deck move-speed targets (캔디애플): Pinot 4.33, Melon Soda 4.71"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "메소덱 머리 박아본 결과 메소에도 이속 주는게 좋음 피노 4.33 메소4.71",
+     "en": "After grinding the Melon deck: better to give Melon Soda move speed too — Pinot 4.33, Melon 4.71"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69212",
+   "url": "https://m.dcinside.com/board/projectcc/69212",
+   "date": "2026-09-17",
+   "title_kr": "공증단 250배",
+   "title_en": "ATK-amp team 250x",
+   "relevance": 2,
+   "summary_en": "Author settles on ATK-amp runes (250x) rather than swapping ATK/skill-amp for raid; notes skill-amp setup still scores higher. Nobody had survived 17 s at 9/17 even heavy spenders (max ~3G power).",
+   "scores": [
+    {
+     "damage": "443G 441M",
+     "power": "1.77G",
+     "ratio": "250배",
+     "deck": "공증 마카롱",
+     "note": "from screenshot"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "As of 9/17 nobody documented surviving the 17 s slam; top accounts under 3G power"
+   ],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "69707",
+   "url": "https://m.dcinside.com/board/projectcc/69707",
+   "date": "2026-09-18",
+   "title_kr": "이게 ㄹㅇ 고점같은데",
+   "title_en": "This is the real ceiling",
+   "relevance": 3,
+   "summary_en": "Candy Apple (캔디애플, guild 탄산수맛쿠키, rank-1 guild) posts 462G 534M at 1.03G (~449x) with the cherry deck plus Jungle Warrior / 실론 buff chain. Lv.1 cookies (Scorpion, Pinot, JW, Cherry) and Dark Choco at Lv43 exist only so Pomegranate doesn't pick them; Cherry is included purely for formation. ATK order 우브피실마치. Priority list of damage factors given. 265 comments.",
+   "scores": [
+    {
+     "damage": "462G 534M",
+     "power": "1.03G",
+     "ratio": "~449배",
+     "deck": "체리덱 + 정전 + 실론",
+     "note": "missed record by 1G"
+    },
+    {
+     "damage": "<160G",
+     "power": "1.6G",
+     "ratio": "<100배",
+     "deck": "?",
+     "note": "commenter"
+    },
+    {
+     "damage": "~100G",
+     "power": "?",
+     "ratio": "",
+     "deck": "",
+     "note": "commenter"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 (캔디애플, deck 2)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,1,100,1,43 / row2: 1,1,100,100,100,100",
+       "stars": "5★",
+       "note": "Dark Choco Lv43"
+      },
+      {
+       "kr": "우유",
+       "en": "Milk",
+       "level": "100",
+       "stars": "?",
+       "note": "ATK 670k"
+      },
+      {
+       "kr": "다크초코",
+       "en": "Dark Choco",
+       "level": "43",
+       "stars": "?",
+       "note": "raised from 1 because it died ~1 in 100 runs"
+      },
+      {
+       "kr": "전갈",
+       "en": "Scorpion",
+       "level": "1",
+       "stars": "?",
+       "note": "so it doesn't take 석류"
+      },
+      {
+       "kr": "체리",
+       "en": "Cherry",
+       "level": "1",
+       "stars": "?",
+       "note": "'배치' — formation only"
+      }
+     ],
+     "pets": [
+      "핫도그 20",
+      "와사비문어 20",
+      "판다 18"
+     ],
+     "atk_order": [
+      "우유",
+      "브시커",
+      "피겨",
+      "실론",
+      "마카롱",
+      "치케"
+     ],
+     "perks": "축복 20 / 7",
+     "formation": "Cherry for 배치",
+     "substitutions": [
+      "If Milk dies ~20 s, use 허브 instead of 정전"
+     ],
+     "unorthodox": [
+      "Dealer levels irrelevant: Milk gives ~6M ATK, leveling a dealer adds <100k",
+      "Scorpion Lv1 (never receives 석류)",
+      "Cherry used only for formation",
+      "all move speed removed for experiment"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "브시커",
+     "stats": "스가 (not 스증)",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "'saw it rise 20G per second at one moment'; late-run stalls",
+    "Dark Choco at Lv1 died ~1 in 100 runs"
+   ],
+   "mechanics": [
+    "Damage-factor priority: 1) Seeker + Macaron 2) fast Pomegranate 3-buff 3) Scorpion + Macaron 4) 실론 + Macaron 5) Pomegranate alternating targets",
+    "Milk ATK buff ~6M; dealer level contributes <100k ATK",
+    "Score jumps when 실론's max-ATK buff procs"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "우유가 공격력 6m정도 주는데 딜러 렙 올려봤자 100k도 안늘어",
+     "en": "Milk gives ~6M ATK; leveling a dealer adds under 100k"
+    },
+    {
+     "kr": "딜상승 요소 비중순으로 정리하면 1. 브싴 마카롱 2. 빠른 석류 3다발 3. 전갈 마카롱 4. 실론 마카롱 5. 니말대로 석류 번갈아가면서 주기",
+     "en": "Damage factors by weight: 1. Seeker+Macaron 2. fast Pomegranate triple 3. Scorpion+Macaron 4. 실론+Macaron 5. Pomegranate alternating"
+    },
+    {
+     "kr": "석류못받게하려고 100판에한번정도죽어서 렙좀줌",
+     "en": "(Dark Choco low) so it doesn't get Pomegranate; it died about once in 100 runs so I gave it some levels"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "75400",
+   "url": "https://m.dcinside.com/board/projectcc/75400",
+   "date": "2026-09-25",
+   "title_kr": "체리덱 641배 찍었음",
+   "title_en": "Cherry deck hit 641x",
+   "relevance": 3,
+   "summary_en": "1T 116G at 1.74G (641x). ATK order 우유 브시 피겨 카롱 실론 치케 전갈; Scorpion raised to Lv45 so that when 실론 (too far forward) misses Milk's buff, the stray Pomegranate buff falls to Scorpion rather than Dark Choco. Wasabi Octopus pet gives Scorpion +8% ATK, so verify in battle that Scorpion's ATK stays below Cheesecake's. Gear: 6 스가 + 6 스증 lines, rest 치확/치피, spare parts 피감; no move speed anywhere in the cherry deck. ~1–2 of 10 runs near 1T, occasionally 1.1T.",
+   "scores": [
+    {
+     "damage": "1T 116G",
+     "power": "1.74G",
+     "ratio": "641배",
+     "deck": "체리덱",
+     "note": "deck 4"
+    },
+    {
+     "damage": "500G",
+     "power": "?",
+     "ratio": "",
+     "deck": "체리덱",
+     "note": "commenter, 7★ Seeker, 20 tries"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 (저장용)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,1,100,1,1 / row2: 1,45,100,100,100,100",
+       "stars": "5★",
+       "note": "Scorpion Lv45"
+      }
+     ],
+     "pets": [
+      "와사비문어 20",
+      "핫도그 20",
+      "색동주머니 20"
+     ],
+     "atk_order": [
+      "우유",
+      "브시",
+      "피겨",
+      "카롱",
+      "실론",
+      "치케",
+      "전갈"
+     ],
+     "perks": "",
+     "formation": "no move speed on any gear/cookie",
+     "substitutions": [],
+     "unorthodox": [
+      "Scorpion leveled to 45 as a 'buff sink' so stray 석류 buffs go to Scorpion instead of Dark Choco",
+      "Check Scorpion's in-battle ATK stays below Cheesecake (Wasabi pet +8% ATK)"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "브시커",
+     "stats": "watch drone count; if 6 drones appear, mostly 스가 with 치피/스증 mixed",
+     "why": "haste 50 = 6 drones (commenter)"
+    }
+   ],
+   "gear": [
+    {
+     "slot": "all 4 slots",
+     "substats": "6 lines 스가 + 6 lines 스증 (each piece's options are fixed), rest 치확/치피, spare 피감",
+     "context": "raid",
+     "why": ""
+    },
+    {
+     "slot": "all",
+     "substats": "all haste on gear (Seeker at 50 haste needed for 6 drones)",
+     "context": "raid",
+     "why": "most cookies' skill duration < cooldown"
+    }
+   ],
+   "rng": [
+    "10 runs → 1T once or twice, occasionally 1.1T",
+    "When 실론 is too far forward it misses Milk's buff and the Pomegranate buff 'jumps' to someone else"
+   ],
+   "mechanics": [
+    "New pet 색동주머니 max: lift resist 30, HP 12.5%",
+    "Cherry deck: 17 s = certain wipe",
+    "Seeker needs ~50 haste for 6 drones (commenter); at 53.6 haste drones sometimes target adds (commenter)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "스가6 스증6 나머지 치확/치피 섞어서 잉여파트는 피감",
+     "en": "6 haste, 6 skill amp, rest crit rate/crit dmg mixed, spare parts dmg reduction"
+    },
+    {
+     "kr": "내기준 10판 했을때 1T 언저리 한두번 정도 나오고. 그중에서 어쩌다 1.1T 나옴",
+     "en": "For me, in 10 runs ~1T comes out once or twice, occasionally 1.1T"
+    },
+    {
+     "kr": "전갈이 와사비문어 공증8% 먹으니 전투화면 돌입 후 전갈이 치케보다 공격력 낮은지 확인 필요",
+     "en": "Scorpion gets Wasabi Octopus +8% ATK, so check in battle that Scorpion's ATK is below Cheesecake's"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69375",
+   "url": "https://m.dcinside.com/board/projectcc/69375",
+   "date": "2026-09-17",
+   "title_kr": "토벌 용병3렙 100배 공략",
+   "title_en": "Raid guide: 100x with mercenary lv3",
+   "relevance": 3,
+   "summary_en": "46G 916M at 403.19M (~116x). ATK order 우유 > 시커 > 피겨 > 전갈 > 마카롱 > 실론나이트 > 치즈케이크 (character-select screen values). Herb vs JW irrelevant since all die at 30 s; JW's first buff on Pomegranate lets 실론 get the buff and give a strong 8 s ATK buff. All runes skill amp except Milk; Pinot must have zero move speed (0.5 makes it run ahead and get interrupted). Candy Apple disagrees: 2 high move-speed lines (1.05) on Pinot is much better in the Melon deck.",
+   "scores": [
+    {
+     "damage": "46G 916M",
+     "power": "403.19M",
+     "ratio": "~116배",
+     "deck": "체리덱 (early)",
+     "note": ""
+    }
+   ],
+   "teams": [
+    {
+     "name": "early deck",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,95,100,1,89 / row2: 41,100,1,100,100,1",
+       "stars": "5★",
+       "note": "levels temporarily changed per author"
+      }
+     ],
+     "pets": [
+      "핫도그 18",
+      "와사비문어 18",
+      "판다 16"
+     ],
+     "atk_order": [
+      "우유",
+      "시커",
+      "피겨",
+      "전갈",
+      "마카롱",
+      "실론나이트",
+      "치즈케이크"
+     ],
+     "perks": "",
+     "formation": "",
+     "substitutions": [
+      "허브 instead of 정전 — same result, everyone dies at 30 s"
+     ],
+     "unorthodox": [
+      "No healer needed because all die at 30 s anyway"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "all except 우유",
+     "stats": "스증",
+     "why": "at the time"
+    },
+    {
+     "cookie": "피노누아",
+     "stats": "no move speed (author) vs 2 lines ~1.05 total (캔디애플, Melon deck)",
+     "why": "0.5 move speed makes Pinot run ahead, get hit by the gift and interrupted"
+    },
+    {
+     "cookie": "브시커",
+     "stats": "스가 (캔디애플): 'more is better, not stepwise; even 32 is much better'",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "ATK order is by character-select-screen ATK",
+    "JW's first buff hitting Pomegranate → 실론 gets buffed and gives a big 8 s ATK buff",
+    "Seeker was ~80% of damage"
+   ],
+   "disagreements": [
+    "Pinot move speed: author says zero; 캔디애플 says 2 high lines (~1.05) is much better (Melon deck)",
+    "Seeker haste only from 8★? — reply: not stepwise, more is better"
+   ],
+   "quotes": [
+    {
+     "kr": "피노누아에 이속 슈가룬이 하나도 없어야함. 0.5있으니깐 먼저가서 스킬 끊기고 자꾸 맛가더라.",
+     "en": "Pinot must have no move-speed runes; with 0.5 it goes ahead, gets its skill interrupted and breaks"
+    },
+    {
+     "kr": "그거 이속 없애도 가끔 그럼 이속높2줄부턴 그런거 아예없음",
+     "en": "Even without move speed it sometimes happens; from 2 high move-speed lines it never does"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "70578",
+   "url": "https://m.dcinside.com/board/projectcc/70578",
+   "date": "2026-09-19",
+   "title_kr": "누가 정전 스가 줘보래서 줘봄",
+   "title_en": "Tried giving Jungle Warrior haste",
+   "relevance": 3,
+   "summary_en": "Candy Apple: gave JW 10 haste; new record 572,544,361,088 (572.5G) at 1.12G (~511x, author says 520x) with Melon Soda deck; floor rose noticeably. Battle ended at 17.233 s. Discussion: JW skill CD 10 s vs synergy 7 s, so ~50 haste could keep Pomegranate's 6-straw uptime; retry until JW casts while Pomegranate is in range after knockback.",
+   "scores": [
+    {
+     "damage": "572,544,361,088",
+     "power": "1.12G",
+     "ratio": "~511배 (author: 520배)",
+     "deck": "메소덱 + 정전 스가",
+     "note": "battle timer 17.233; guild 탄산수맛쿠키 4T 896G"
+    }
+   ],
+   "teams": [
+    {
+     "name": "메소덱 (캔디애플, deck 2)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,1,1,100,1,43 / row2: 100,1,100,100,100,100",
+       "stars": "5★",
+       "note": "Seeker moved to pos7 Lv100; Scorpion(red, fire) Lv1 at pos2; Melon Soda (water, green) Lv1 at pos8; Dark Choco 43"
+      }
+     ],
+     "pets": [
+      "핫도그 20",
+      "와사비문어 20",
+      "판다 18"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Melon Soda and Scorpion at Lv1"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "정글전사",
+     "stats": "스가 10",
+     "why": "raise floor; JW synergy uptime"
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "'레전드 세계선' — needs the right world-line; retry until JW casts in range of Pomegranate"
+   ],
+   "mechanics": [
+    "JW skill CD 10 s, synergy duration 7 s (commenter) → ~30% CDR (≈50 haste) theoretically near-permanent 6-straw Pomegranate",
+    "Retry until JW's buff lands on Pomegranate after knockback"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "기갱 성공함 스가 줘서 그런지는 모르겠는데 저점 꽤올라감",
+     "en": "Record renewed; not sure if due to haste but my floor rose a lot"
+    },
+    {
+     "kr": "넉백에 밀릴때 스킬 쓸때까지 리트",
+     "en": "Retry until it casts while being pushed by knockback"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69357",
+   "url": "https://m.dcinside.com/board/projectcc/69357",
+   "date": "2026-09-17",
+   "title_kr": "토벌전 투력 300M대로 6G 내면 병신인건가?",
+   "title_en": "6G at 300M power — am I bad?",
+   "relevance": 2,
+   "summary_en": "Low-power calibration thread: 6G at ~300M with no lv4 mercenary; replies: 250M → 10G with infinite retries and no ATK-order; 280M → 16G; 'should be 15–20G even without surviving 30 s'; 400M with mercenary lv3 → 45G with 1–2 surviving 30 s.",
+   "scores": [
+    {
+     "damage": "6G",
+     "power": "300M대",
+     "ratio": "~20배",
+     "deck": "?",
+     "note": "author"
+    },
+    {
+     "damage": "10G",
+     "power": "250M",
+     "ratio": "~40배",
+     "deck": "?",
+     "note": "infinite retries, no ATK order"
+    },
+    {
+     "damage": "16G",
+     "power": "280M",
+     "ratio": "~57배",
+     "deck": "?",
+     "note": ""
+    },
+    {
+     "damage": "~20G",
+     "power": "300M대",
+     "ratio": "",
+     "deck": "",
+     "note": "commenter at author's spec"
+    },
+    {
+     "damage": "45G",
+     "power": "400M",
+     "ratio": "~112배",
+     "deck": "용병 3렙",
+     "note": "1–2 survive 30 s"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "'무한 리트' (infinite retries) got 250M to 10G"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "250M로 공격력 순서 안맞추고 무한 리트박다보니까 10G까지는 가지던데",
+     "en": "At 250M, without setting ATK order, infinite retries got me to 10G"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "75462",
+   "url": "https://m.dcinside.com/board/projectcc/75462",
+   "date": "2026-09-25",
+   "title_kr": "기갱했다요",
+   "title_en": "Renewed my record",
+   "relevance": 3,
+   "summary_en": "Result screen 1,617,831,110,058 (1.62T), '~600x of power' (→ ~2.7G), guild rank 1 with 14T 849G guild total. Seeker 10★, only 4 haste lines on Seeker, 색동주머니 pet, no move speed.",
+   "scores": [
+    {
+     "damage": "1,617,831,110,058",
+     "power": "~2.7G (from '600배')",
+     "ratio": "~600배",
+     "deck": "체리덱? (주머니 pet, no move speed)",
+     "note": "Seeker 10★; guild 14T 849G, +349G 921M this run"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "브시커",
+     "stats": "only 4 스가 lines",
+     "why": "Seeker 10★"
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "나도 스가는 딱 4줄줬다요",
+     "en": "I also gave exactly 4 haste lines"
+    },
+    {
+     "kr": "주머니꼈고 이속없다요",
+     "en": "Used the pouch pet, no move speed"
+    },
+    {
+     "kr": "1000배클럽 뽑아오도록",
+     "en": "(캔디애플) Go get the 1000x club"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "70172",
+   "url": "https://m.dcinside.com/board/projectcc/70172",
+   "date": "2026-09-19",
+   "title_kr": "드디어 토벌 기갱했다 410배 후",
+   "title_en": "Finally renewed raid record, 410x",
+   "relevance": 3,
+   "summary_en": "Went from ~150x to 300–400x just by removing move speed from gear. Result 594,468,439,582 at 1.41G (level-downed) ≈ 421x, battle ended at timer 17.233. Only move speed kept: Pinot 1 line, Seeker 0.39 — then 전갈/호밀/시커 line up in front of Macaron without Cherry. ATK order 우유 브시 피겨 마카 치즈; 호밀 Lv20, 전갈 Lv40; 실론 정전 닥초 피노 Lv1 (they were stealing skill-amp buffs); low levels don't change survival time.",
+   "scores": [
+    {
+     "damage": "594,468,439,582",
+     "power": "1.41G",
+     "ratio": "~421배",
+     "deck": "호밀 deck (no Cherry), minimal move speed",
+     "note": "previous best 546.88G shown; ended at 17.233"
+    }
+   ],
+   "teams": [
+    {
+     "name": "호밀 variant",
+     "cookies": [
+      {
+       "kr": "호밀",
+       "en": "Rye",
+       "level": "20",
+       "stars": "?",
+       "note": "leveled down"
+      },
+      {
+       "kr": "전갈",
+       "en": "Scorpion",
+       "level": "40",
+       "stars": "?",
+       "note": "leveled down"
+      },
+      {
+       "kr": "실론",
+       "en": null,
+       "level": "1",
+       "stars": "?",
+       "note": "was taking skill-amp buff"
+      },
+      {
+       "kr": "정전",
+       "en": "Jungle Warrior",
+       "level": "1",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "닥초",
+       "en": "Dark Choco",
+       "level": "1",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노",
+       "en": "Pinot Noir",
+       "level": "1",
+       "stars": "?",
+       "note": "1 move-speed line"
+      }
+     ],
+     "pets": [],
+     "atk_order": [
+      "우유",
+      "브시",
+      "피겨",
+      "마카",
+      "치즈"
+     ],
+     "perks": "",
+     "formation": "Pinot 1 move-speed line + Seeker 0.39 → 전갈/호밀/시커 line up in front of Macaron",
+     "substitutions": [
+      "호밀 in place of Cherry"
+     ],
+     "unorthodox": [
+      "실론 at Lv1 (normally a buff target)",
+      "Cherry replaced by Rye leveled to 20"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "피노",
+     "stats": "1 이속 line",
+     "why": "formation"
+    },
+    {
+     "cookie": "브시커",
+     "stats": "이속 0.39 total",
+     "why": "formation; commenter: add one line >0.5 if it fails"
+    }
+   ],
+   "gear": [
+    {
+     "slot": "all",
+     "substats": "NO move speed on any gear",
+     "context": "raid",
+     "why": "150x→300–400x"
+    }
+   ],
+   "rng": [],
+   "mechanics": [
+    "Low levels do not change survival time (author)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "장비 이속 빼니까 300~400배 그냥 나오노",
+     "en": "Once I removed move speed from gear, 300–400x just comes out"
+    },
+    {
+     "kr": "실론 정전 닥초 피노는 렙 1로 둿음 이새끼들이 스증 가져가더라. 어차피 얘네 렙1둬도 생존 시간은 안변함",
+     "en": "Left 실론, JW, Dark Choco, Pinot at Lv1 — they were taking the skill-amp buff; survival time doesn't change at Lv1 anyway"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "76580",
+   "url": "https://m.dcinside.com/board/projectcc/76580",
+   "date": "2026-09-27",
+   "title_kr": "시커6성 1T클럽 가입햇다",
+   "title_en": "Joined 1T club with 6★ Seeker",
+   "relevance": 3,
+   "summary_en": "Cherry deck 1T?? (digits hidden) at 2.09G team power with Seeker 6★, account total power ~13G. Pomegranate itself at Lv1 ('concept to inflate'). ATK order 우브피마실치. Seeker in-game haste 42+. Pets 와사비 20, 핫도그 20, 색동주머니 12. A commenter with the same total power only gets 387G.",
+   "scores": [
+    {
+     "damage": "1T ?G",
+     "power": "2.09G",
+     "ratio": "≥478배",
+     "deck": "체리덱",
+     "note": "Seeker 6★, account total ~13G"
+    },
+    {
+     "damage": "387G",
+     "power": "same total (~13G)",
+     "ratio": "",
+     "deck": "?",
+     "note": "commenter"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 (러유)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,1,1,1,1 / row2: 1,1,100,100,100,100",
+       "stars": "5★",
+       "note": "Pomegranate (pos4) Lv1"
+      },
+      {
+       "kr": "석류",
+       "en": "Pomegranate",
+       "level": "1",
+       "stars": "?",
+       "note": "deliberately Lv1"
+      }
+     ],
+     "pets": [
+      "와사비문어 20",
+      "핫도그 20",
+      "색동주머니 12"
+     ],
+     "atk_order": [
+      "우유",
+      "브시커",
+      "피겨",
+      "마카롱",
+      "실론",
+      "치케"
+     ],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Pomegranate at Lv1 — its buff apparently doesn't need its level; lowers team power ('투력뻥치려고 컨셉')"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "브시커",
+     "stats": "in-game haste 42+",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "석류는 왜1이야 / 투력뻥치려고 컨셉같은거임",
+     "en": "Why is Pomegranate Lv1? / It's a concept to pad the numbers (power)"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69724",
+   "url": "https://m.dcinside.com/board/projectcc/69724",
+   "date": "2026-09-18",
+   "title_kr": "500배 클럽 좀있으면 갈듯",
+   "title_en": "Almost at the 500x club",
+   "relevance": 3,
+   "summary_en": "Candy Apple: 470,505,950,005 (470.5G), battle ended at 17.233, guild 1st (4T 337G). Cherry + Jungle Warrior is great but finding the right 'world-line' is very hard. All move speed removed from all 12 cookies' gear and runes. Lists the world-lines to hunt: Seeker+Macaron; fast Pomegranate 2- or 3-buff; Scorpion+Macaron; 실론+Pomegranate; alternating 실론/전갈. JW has no haste. Milk survives past 27 s. A buff can land as early as 53 s.",
+   "scores": [
+    {
+     "damage": "470,505,950,005",
+     "power": "~1.03G (same deck as 69707)",
+     "ratio": "~457배",
+     "deck": "체리정전",
+     "note": "timer 17.233; previous best 462.53G"
+    },
+    {
+     "damage": "120G",
+     "power": "450M",
+     "ratio": "~267배",
+     "deck": "?",
+     "note": "commenter 흐암 using this guide"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리정전",
+     "cookies": [],
+     "pets": [],
+     "atk_order": [],
+     "perks": "",
+     "formation": "no move speed anywhere (gear + runes, all 12 cookies)",
+     "substitutions": [],
+     "unorthodox": [
+      "JW instead of healer — everyone survived anyway"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "all 12",
+     "stats": "no 이속 at all",
+     "why": "cherry deck positioning"
+    },
+    {
+     "cookie": "정글전사",
+     "stats": "no haste",
+     "why": "(at this time)"
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "World-lines to hunt: 1) Seeker+Macaron 2) fast Pomegranate 2x/3x buff 3) Scorpion+Macaron 4) 실론+Pomegranate 5) 실론/전갈 alternating (seen once)",
+    "'2 (fast Pomegranate) is absurdly hard'",
+    "A 3-buff can land as early as the 53 s mark"
+   ],
+   "mechanics": [
+    "Timer counts DOWN: runs end at 17.233 (the 17 s jump) — so '17초/30초' are countdown marks",
+    "실론 usually gets less of Milk's ATK buff; can alternate Pomegranate between 실론 and 전갈"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "체리정전 진짜 좋은데 세계선 찾기 너무빡셈",
+     "en": "Cherry+JW is really good but finding the world-line is brutal"
+    },
+    {
+     "kr": "나 12명 장비 이속 싹다뺌 체리덱 할때는",
+     "en": "In the cherry deck I remove all move speed from all 12 cookies' gear"
+    },
+    {
+     "kr": "53초에 다발받는 세계선도 있음",
+     "en": "There's even a world-line where the multi-buff lands at 53 s"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69832",
+   "url": "https://m.dcinside.com/board/projectcc/69832",
+   "date": "2026-09-18",
+   "title_kr": "내가 쓰는건 이거긴함",
+   "title_en": "This is what I use",
+   "relevance": 3,
+   "summary_en": "Cherry deck: ATK order 우유 시커 마카롱 피겨 치케 실론; no move speed; infinite retries; JW instead of Herb. Macaron and Cheesecake all skill amp; Seeker all-haste vs mixed is debated, mixing some skill amp doesn't wreck damage. All die at 17 s. 450–500x achievable; 600x is spec. Commenter: 1T players have nearly all-SSR sugar runes; buffers' runes matter most (Pomegranate, Milk, then Cheesecake/Macaron/피겨/실론); with Wasabi pet Seeker doesn't need all haste.",
+   "scores": [
+    {
+     "damage": "",
+     "power": "",
+     "ratio": "450~500배",
+     "deck": "체리덱",
+     "note": "author typical"
+    },
+    {
+     "damage": "540G",
+     "power": "?",
+     "ratio": "",
+     "deck": "?",
+     "note": "commenter, at 30 s mark; Seeker missed Macaron buff"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 (손성전)",
+     "cookies": [],
+     "pets": [],
+     "atk_order": [
+      "우유",
+      "시커",
+      "마카롱",
+      "피겨",
+      "치케",
+      "실론"
+     ],
+     "perks": "",
+     "formation": "no move speed",
+     "substitutions": [
+      "정전 instead of 허브"
+     ],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "마카롱",
+     "stats": "all 스증",
+     "why": ""
+    },
+    {
+     "cookie": "치케",
+     "stats": "all 스증",
+     "why": ""
+    },
+    {
+     "cookie": "브시커",
+     "stats": "all 스가 or mixed 스가/스증 — both fine",
+     "why": "with Wasabi pet Seeker can run without all-haste (commenter)"
+    },
+    {
+     "cookie": "석류, 우유 (buffers)",
+     "stats": "SSR-quality lines matter most",
+     "why": "1T players have nearly all SSR runes (commenter 켈트)"
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "'무한리트' is step 3 of the recipe",
+    "Runs where Seeker misses Macaron's buff but survive long are the best — keep retrying"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "1t 쉽게뽑는애들보면 슈가룬 전부 ssr이거나 1-2개만 sr임 버퍼들 슈가룬차이 많이 큼 특히 석류 우유가 젤중요하고",
+     "en": "People who easily hit 1T have all-SSR sugar runes or only 1–2 SR; buffer runes matter a lot, especially Pomegranate and Milk"
+    },
+    {
+     "kr": "17초까지 생존가능한 사람 기준으로 4-500배는 할만함",
+     "en": "If you survive to 17 s, 400–500x is doable"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "76022",
+   "url": "https://m.dcinside.com/board/projectcc/76022",
+   "date": "2026-09-26",
+   "title_kr": "400배까지는 쳤는데 1T치는 비법소스좀",
+   "title_en": "Hit 400x, what's the secret to 1T?",
+   "relevance": 2,
+   "summary_en": "Melon Soda deck at 2.06G, 86?G (digits hidden) — later the same user (러유) hits 1T with the cherry deck (76580). Replies: use Panda; drop Melon, add Cheesecake and retry infinitely; infinite move-speed tuning.",
+   "scores": [
+    {
+     "damage": "86?G",
+     "power": "2.06G",
+     "ratio": "~400배",
+     "deck": "메소덱",
+     "note": "pets 핫도그20/색동주머니12/와사비20"
+    }
+   ],
+   "teams": [
+    {
+     "name": "메소덱 (러유)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,1,1,100,1,1 / row2: 100,1,100,100,100,100",
+       "stars": "5★",
+       "note": "Scorpion Lv1, Melon Soda Lv1"
+      }
+     ],
+     "pets": [
+      "핫도그 20",
+      "색동주머니 12",
+      "와사비문어 20"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [
+      "Replies: 판다 pet; replace Melon with Cheesecake"
+     ],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "메론버리고 치케넣고 무제한 리트를 박자",
+     "en": "Drop Melon, add Cheesecake and retry without limit"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "70840",
+   "url": "https://m.dcinside.com/board/projectcc/70840",
+   "date": "2026-09-20",
+   "title_kr": "토벌 정전vs허브는 체방 구간마다 다 다름",
+   "title_en": "JW vs Herb depends on your HP/DEF bracket",
+   "relevance": 3,
+   "summary_en": "If everyone dies at 30 s anyway, JW has the higher ceiling. What matters is whether you survive 30→17 s without Herb; Milk sits mid-front and loses 20% HP, dies easily — then Herb scores better since Herb keeps all 12 alive. If you survive 30→17 without Herb, JW is again the ceiling, but JW's longer buff interval and range far from Pomegranate need more retries.",
+   "scores": [],
+   "teams": [
+    {
+     "name": "정전 vs 허브",
+     "cookies": [],
+     "pets": [],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [
+      "허브 ↔ 정전 depending on survival 30→17 s"
+     ],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "JW needs many more retries than Herb for the same ceiling (author, 켈트, 캔디애플 agree)"
+   ],
+   "mechanics": [],
+   "disagreements": [
+    "나나리: survives to 17 s and Herb still scores better"
+   ],
+   "quotes": [
+    {
+     "kr": "정전 고점이 더 높은데 허브보다 리트횟수가 훨씬많이필요함",
+     "en": "JW has a higher ceiling but needs far more retries than Herb"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69685",
+   "url": "https://m.dcinside.com/board/projectcc/69685",
+   "date": "2026-09-18",
+   "title_kr": "본인 2g 다되가는데 토벌전 17초 1마리 버팀",
+   "title_en": "Nearly 2G and one cookie survives 17 s",
+   "relevance": 2,
+   "summary_en": "In-battle stat screen: Dark Choco SSR HP 8M 942K, crit res 132.23%, dmg reduction 54.07%, skill amp 213.20%, crit rate 352.48%, crit dmg 392.15%, move speed 4, haste 31.6 — survived the 17 s slam with a sliver. Author estimates >10M HP needed for others to survive.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Surviving the 17 s super-jump needs roughly 9–10M HP at ~54% DR (Dark Choco 8.94M HP survived barely)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "체력 10m 넘어가면 사는애들 나오겠는데",
+     "en": "Once HP passes 10M some will survive"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "76419",
+   "url": "https://m.dcinside.com/board/projectcc/76419",
+   "date": "2026-09-27",
+   "title_kr": "토벌 이제 17초 이후로도 버티는데",
+   "title_en": "Now surviving past 17 s",
+   "relevance": 2,
+   "summary_en": "At 2.45G team power the team survives past 17 s (≈9M HP confirmed). Tried Herb again, but damage dropped — back to JW.",
+   "scores": [
+    {
+     "damage": "",
+     "power": "2.45G",
+     "ratio": "",
+     "deck": "정전",
+     "note": "survives past 17 s"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "~9M HP to survive 17 s (confirmed by author)"
+   ],
+   "disagreements": [
+    "Survival past 17 s but Herb still lowered damage vs JW"
+   ],
+   "quotes": [
+    {
+     "kr": "허브넣으면딜더떨어지네 걍정전으로돌려야제",
+     "en": "With Herb damage drops, so back to JW"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69413",
+   "url": "https://m.dcinside.com/board/projectcc/69413",
+   "date": "2026-09-17",
+   "title_kr": "토벌 60배",
+   "title_en": "Raid 60x",
+   "relevance": 2,
+   "summary_en": "14,657,991,631 (14.66G) at 254.47M (~58x), mercenary lv3; cherry deck felt more stable than melon; dies right after 30 s (battle over at timer 27.900). Herb (green) at Lv1. ATK order written 우브피석치, corrected by commenter to 우브피마치 (Macaron, not Pomegranate).",
+   "scores": [
+    {
+     "damage": "14,657,991,631",
+     "power": "254.47M",
+     "ratio": "~58배",
+     "deck": "체리덱 + 허브",
+     "note": "ended at 27.900"
+    }
+   ],
+   "teams": [
+    {
+     "name": "low-spec cherry",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 91,100,1,100,100,1 / row2: 1,1,100,99,1,90",
+       "stars": "5★",
+       "note": "Herb (leaf, green) Lv1 at pos11"
+      }
+     ],
+     "pets": [
+      "와사비문어 18",
+      "핫도그 18",
+      "판다 15"
+     ],
+     "atk_order": [
+      "우유",
+      "브시커",
+      "피겨",
+      "마카롱",
+      "치케"
+     ],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "ㄴㄴ우브피마치임 석류말고마카롱",
+     "en": "No, it's Milk-Seeker-피겨-Macaron-Cheesecake: Macaron, not Pomegranate"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "74818",
+   "url": "https://m.dcinside.com/board/projectcc/74818",
+   "date": "2026-09-24",
+   "title_kr": "이속 기록",
+   "title_en": "Move-speed record (rune screenshots)",
+   "relevance": 3,
+   "summary_en": "Candy Apple's repost of the Melon-deck move-speed runes. Jungle Warrior: SSR haste +5, SR +2, SR +3 locked. Pinot: locked move speed C +0.26, R +0.57 (plus unlocked U +0.32). Melon Soda: locked R +0.51, C +0.20. Bright Seeker (5★, only 3 rune slots unlocked): SSR haste +5, SSR haste +4, U move speed +0.32. Perks still 열정페이 + 초고속승진. When Pomegranate breaks the line, just retry. A commenter infers final speeds Pinot 4.65 / Melon 4.71 / Seeker 3.82 (unconfirmed).",
+   "scores": [],
+   "teams": [
+    {
+     "name": "메소덱 (캔디애플)",
+     "cookies": [],
+     "pets": [],
+     "atk_order": [],
+     "perks": "열정페이 + 초고속승진",
+     "formation": "move speed on Pinot / Melon / Seeker",
+     "substitutions": [],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "정글전사 쿠키",
+     "stats": "SSR 스가+5.00 (lock), SR 스가+2.00 (lock), R 치저 4.20%, R 공증 3.70%, SR 방증 5.10%, SR 스가+3.00 (lock); ★10 slots: 회피 0.80%, 이속 +0.51",
+     "why": "haste = JW buff uptime"
+    },
+    {
+     "cookie": "피노누아맛 쿠키",
+     "stats": "C 방증 0.90%, U 스증 1.60%, C 공증 0.90%, C 이속+0.26 (lock), R 이속+0.57 (lock), U 이속+0.32; ★10: 명중 1.60%, 명중 0.80%",
+     "why": "formation"
+    },
+    {
+     "cookie": "메론소다맛 쿠키",
+     "stats": "C 방증 1.40%, R 이속+0.51 (lock), C 체력 1.40%, U 방증 2.30%, C 이속+0.20 (lock), U 피감 2.60%; ★10: 체력 1.40%, 치확 1.00%",
+     "why": "formation"
+    },
+    {
+     "cookie": "브라이트시커 쿠키 (5★)",
+     "stats": "SSR 스가+5.00 (lock), SSR 스가+4.00 (lock), U 이속+0.32; locked-until-promotion: ★6 치피 1.00%, ★8 공증 1.40%, ★8 스증 2.50%, ★10 치저 1.00%, ★10 체력 0.90%",
+     "why": "haste + small move speed for formation"
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "'가끔 석류가 창내는데 그건 리트함' — occasionally Pomegranate breaks the line; retry"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "가끔 석류가 창내는데 그건 리트함",
+     "en": "Sometimes Pomegranate wrecks it; then I just retry"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "53945",
+   "url": "https://m.dcinside.com/board/projectcc/53945",
+   "date": "2026-08-30",
+   "title_kr": "나도 덱 공유함",
+   "title_en": "Sharing my deck too",
+   "relevance": 3,
+   "summary_en": "Early-season (8/30) Candy Apple deck: 25G 284M at 425.55M (~59x), no 실론 yet (들개 in its slot). Key tip: make Milk #1 in ATK and Macaron #6 (Pomegranate itself excluded) so that Macaron is among the 6 straw targets; with Pomegranate buff Macaron's crit rate goes ~550%. Pomegranate gives buffs by ATK rank except 탄속(?) — 6 straws with JW, 5 with Herb. Achieved by lowering others' levels, not ATK runes. Witchberry tested instead of Rye → ~5G lower. Pets 판다 16, 핫도그 19, yellow pet 20.",
+   "scores": [
+    {
+     "damage": "25G 284M",
+     "power": "425.55M",
+     "ratio": "~59배",
+     "deck": "early melon/rye deck, no 실론",
+     "note": "guild 탄산수맛쿠키 1st at 140G"
+    },
+    {
+     "damage": "14G→17G",
+     "power": "?",
+     "ratio": "",
+     "deck": "copy",
+     "note": "commenter"
+    }
+   ],
+   "teams": [
+    {
+     "name": "early deck (캔디애플)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,98,100,100,100,99 / row2: 100,100,98,98,96,96",
+       "stars": "5★",
+       "note": "all ~Lv96–100"
+      }
+     ],
+     "pets": [
+      "판다 16",
+      "핫도그? 19",
+      "yellow pet 20"
+     ],
+     "atk_order": [
+      "우유",
+      "시커",
+      "전갈",
+      "메소",
+      "마카롱 (#6 incl. others; Pomegranate excluded)"
+     ],
+     "perks": "열정페이 + 고속승진",
+     "formation": "",
+     "substitutions": [
+      "들개 until 실론 obtained",
+      "Witchberry vs Rye: Witchberry ~5G lower in ~10 runs"
+     ],
+     "unorthodox": [
+      "Level other cookies down so Macaron lands exactly at ATK rank 6"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Pomegranate straws = 6 with JW, 5 with Herb (buff count varies with synergy)",
+    "ATK rank is read from the formation (편성) screen",
+    "Macaron with Pomegranate buff: crit rate ~550%"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "미세팁은 공격력 마카롱 6등 우유1등 되게하기",
+     "en": "Fine tip: make Macaron #6 and Milk #1 in ATK"
+    },
+    {
+     "kr": "석류 빨대가 6개임 그래서 탄속 제외하곤 공격력순으로 주니 6등으로해서 석류 받으라는거임 마카롱이 석류 받으면 치확 막 550%이지랄나서",
+     "en": "Pomegranate has 6 straws and gives by ATK order, so put Macaron 6th to receive it; with it Macaron's crit rate goes to ~550%"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "59442",
+   "url": "https://m.dcinside.com/board/projectcc/59442",
+   "date": "2026-09-04",
+   "title_kr": "치케로또덱 내기준 고점터졌을때 전갈메소 vs 호밀메소 점수차",
+   "title_en": "Cheesecake lottery deck: Scorpion+Melon vs Rye+Melon peaks",
+   "relevance": 3,
+   "summary_en": "Cheesecake 'lottery' deck. Scorpion+Melon peaked 92,721,575,932 (92.7G) at ~550M (level-adjusted) — seen once in 5 hours. Rye+Melon peaked 85,666,848,921 (85.7G) at ~600M (all Lv100) — near-peak ~8 times in 1 hour. Both ended at 17.233. Perks 열정페이 + all-cookie 2% (ATK 7% felt worse). Pets: ATK, skill amp, Panda. Milk haste 25, Cheesecake 30. Floor when Cheesecake overwrites buffs: 17G.",
+   "scores": [
+    {
+     "damage": "92,721,575,932",
+     "power": "~550M",
+     "ratio": "~169배",
+     "deck": "치케 로또덱 (전갈메소)",
+     "note": "1 peak in 5 hours"
+    },
+    {
+     "damage": "85,666,848,921",
+     "power": "~600M",
+     "ratio": "~143배",
+     "deck": "치케 로또덱 (호밀메소)",
+     "note": "~8 near-peaks per hour; floor 17G"
+    }
+   ],
+   "teams": [
+    {
+     "name": "치케 로또덱",
+     "cookies": [],
+     "pets": [
+      "ATK pet",
+      "skill-amp pet",
+      "판다"
+     ],
+     "atk_order": [
+      "우유",
+      "시커",
+      "피겨",
+      "메소",
+      "마카롱 (5th incl. all 12)",
+      "호밀"
+     ],
+     "perks": "열정페이 + 올쿠키 2%",
+     "formation": "",
+     "substitutions": [
+      "전갈메소 vs 호밀메소"
+     ],
+     "unorthodox": [
+      "Removed ATK runes from everyone but Macaron/피겨/Milk so all-100 still yields correct order"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "우유",
+     "stats": "스가 25",
+     "why": ""
+    },
+    {
+     "cookie": "치케",
+     "stats": "스가 30",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "전갈메소 peak seen once in 5 hours; 호밀메소 near-peak ~8 times in 1 hour — higher ceiling vs higher frequency",
+    "Cheesecake overwriting buffs gives floor ~17G",
+    "Commenter: ~200 runs with cheesecake deck, never hit a peak",
+    "피겨 dodges Milk's buff due to movement"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "전갈메소는 5시간동안 저 고점 딱 한번 봤고 호밀메소는 85G나 저 근처 고점 1시간동안 거의 여덟번은 봄",
+     "en": "Scorpion-Melon: saw that peak exactly once in 5 hours; Rye-Melon: ~85G-ish peak nearly eight times in an hour"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "53669",
+   "url": "https://m.dcinside.com/board/projectcc/53669",
+   "date": "2026-08-30",
+   "title_kr": "토벌전 536G 실론 없이 48G 뽑음",
+   "title_en": "48G at 536M without 실론",
+   "relevance": 2,
+   "summary_en": "47G 891M at 536.61M (~89x) without 실론 (들개 instead), Seeker 5★, perks ATK 7% + 열정페이. Huge peak/floor gap. Dark Choco level not lowered yet Macaron still got the straw (likely Dark Choco missed Milk's buff). Commenter (러유): replacing 들개 with Cheesecake peaks higher but makes ATK jumpy so Pomegranate targets drift.",
+   "scores": [
+    {
+     "damage": "47G 891M",
+     "power": "536.61M",
+     "ratio": "~89배",
+     "deck": "no-실론 common deck + 들개",
+     "note": "Seeker 5★"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "'고점 저점차이 좆되노' — huge high/low gap",
+    "Commenter: 2+ hours of retries hardly seeing 40G"
+   ],
+   "mechanics": [
+    "Cheesecake ATK buff makes ATK order unstable, so Pomegranate targets shift"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "치케때문에 공격력 들쭉날쭉해져서 석류버프가 의도한대로 안들어감",
+     "en": "Because of Cheesecake, ATK fluctuates and Pomegranate's buff doesn't go where intended"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "48559",
+   "url": "https://m.dcinside.com/board/projectcc/48559",
+   "date": "2026-08-27",
+   "title_kr": "토벌 한 50판 박아봤는데",
+   "title_en": "Ran ~50 raid attempts",
+   "relevance": 1,
+   "summary_en": "Launch-day deck after ~50 runs: 1G 187M. Light-element dealers (Donut, Popcorn) outperform Milky Way; Hot Dog pet beat the multi-hit pet over ~7–8 runs each; Demon > Dark Choco; Panda pet expected. 'After 30 s is whale territory, deal your damage before 30 s.' A commenter found Cheesecake > Herb at low power.",
+   "scores": [
+    {
+     "damage": "1G 187M",
+     "power": "?",
+     "ratio": "",
+     "deck": "launch-day light deck",
+     "note": ""
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Boss weak to Light; light dealers favoured on day 1"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "30초 이후엔 과금러 영역이라 30초 이전에 딜 다 박아야 하는 듯",
+     "en": "After 30 s is whale territory, so you have to dump all damage before 30 s"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "65758",
+   "url": "https://m.dcinside.com/board/projectcc/65758",
+   "date": "2026-09-12",
+   "title_kr": "기갱성공",
+   "title_en": "Record renewed",
+   "relevance": 3,
+   "summary_en": "Candy Apple: 203,600,667,677 (203.6G) at 689M deck power (~295x), battle ended 17.367. Base move speed 4.99, Seeker 5.31; Melon two R–SR move-speed lines, Pinot same. The single-file line-up happens about 1 in 3 runs. Commenter: copied deck/order/speeds, 20+ hours of retries, stuck at ~150x.",
+   "scores": [
+    {
+     "damage": "203,600,667,677",
+     "power": "689M",
+     "ratio": "~295배",
+     "deck": "메소덱 (move-speed)",
+     "note": "ended 17.367; guild 2nd 1T 633G"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "메소",
+     "stats": "2 lines 이속 (R–SR)",
+     "why": "line-up"
+    },
+    {
+     "cookie": "피노",
+     "stats": "2 lines 이속 (R–SR)",
+     "why": "line-up"
+    },
+    {
+     "cookie": "브시커",
+     "stats": "speed 5.31 vs base 4.99",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [
+    "Line-up succeeds ~1 in 3 runs",
+    "Commenter: 20+ hours of retries without beating ~150x"
+   ],
+   "mechanics": [
+    "Base move speed 4.99; Seeker 5.31 in this setup"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "기본이속 4.99 브싴5.31",
+     "en": "Base move speed 4.99, Seeker 5.31"
+    },
+    {
+     "kr": "20시간 넘게 리트해서 기존 150배 언저리에서 기갱 안되더라",
+     "en": "Retried 20+ hours and couldn't beat my ~150x"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "64838",
+   "url": "https://m.dcinside.com/board/projectcc/64838",
+   "date": "2026-09-11",
+   "title_kr": "200g클럽",
+   "title_en": "200G club",
+   "relevance": 3,
+   "summary_en": "Candy Apple on the Global/English client: 199,092,348,546 (199.1G) at 685.14M (~291x), ended 17.233; 160G dealt by the 30 s mark. Perks 20/7. Pomegranate's 3-buff went to 우/피/브/전/마. Low levels on Dark Choco/Pinot/Herb are to steer Pomegranate; exact-level tuning also works but Milk stack differences sometimes break it. Suggests using an arena-style gear preset. Rune details in post 64844.",
+   "scores": [
+    {
+     "damage": "199,092,348,546",
+     "power": "685.14M",
+     "ratio": "~291배",
+     "deck": "메소덱 + 허브",
+     "note": "English client; 160G by the 30 s mark"
+    }
+   ],
+   "teams": [
+    {
+     "name": "메소덱 (캔디애플, 9/11)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,57,100,100,52 / row2: 100,69,100,100,77,100",
+       "stars": "5★",
+       "note": "Pinot 57, Dark Choco 52, Melon 69, Herb 77"
+      }
+     ],
+     "pets": [
+      "핫도그 20",
+      "yellow pet 20",
+      "판다 17"
+     ],
+     "atk_order": [
+      "우유",
+      "피겨",
+      "브시커",
+      "전갈",
+      "마카롱"
+     ],
+     "perks": "20 / 7",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Dark Choco / Pinot / Herb heavily leveled down to steer Pomegranate"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Global client names: 'Guild Conquest', 'Extra-Stuffed Piñata', 'Power' (from screenshot)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "딱코도되는데 가끔 우유스택차이로 억까당함",
+     "en": "Exact-level tuning works too, but sometimes Milk stack differences screw you"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "53986",
+   "url": "https://m.dcinside.com/board/projectcc/53986",
+   "date": "2026-08-30",
+   "title_kr": "실론X 토벌덱 이리저리 바꿔보다 결국 기존에 하던거로 돌아옴",
+   "title_en": "No-실론 deck: went back to the original",
+   "relevance": 2,
+   "summary_en": "47G 891M at 528.14M (~91x), no 실론; 'infinite retries, nothing beats it'. Pomegranate targets 우유/전갈/브시커/피겨/마카롱; Melon and Rye leveled down for Macaron. Milk all ATK runes; perks 열정페이 + ATK 7%. A commenter at 162.84M gets 4.9G ('mercenary lv4 gap').",
+   "scores": [
+    {
+     "damage": "47G 891M",
+     "power": "528.14M",
+     "ratio": "~91배",
+     "deck": "no-실론 deck",
+     "note": ""
+    },
+    {
+     "damage": "4.9G",
+     "power": "162.84M",
+     "ratio": "~30배",
+     "deck": "same",
+     "note": "commenter"
+    }
+   ],
+   "teams": [
+    {
+     "name": "no-실론",
+     "cookies": [],
+     "pets": [
+      "판다 16",
+      "yellow 20",
+      "핫도그 19"
+     ],
+     "atk_order": [
+      "우유",
+      "전갈",
+      "브시커",
+      "피겨",
+      "마카롱"
+     ],
+     "perks": "열정페이 + 공7%",
+     "formation": "",
+     "substitutions": [
+      "실론 would replace 들개 with ATK runes"
+     ],
+     "unorthodox": [
+      "Melon/Rye leveled down for Macaron to get the straw"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "우유",
+     "stats": "all 공증",
+     "why": "Milk's ATK buff scales off its own ATK"
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "JW is melee-range so its buff may not reach Pomegranate (commenter)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "무한리트 고점은 걍 이만한게 없는듯",
+     "en": "For infinite-retry ceiling nothing beats this"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "62838",
+   "url": "https://m.dcinside.com/board/projectcc/62838",
+   "date": "2026-09-09",
+   "title_kr": "장비 선택 팁 준다",
+   "title_en": "Gear selection tips",
+   "relevance": 1,
+   "summary_en": "General gear advice: stage at 55% cut — keep accuracy/focus ~80% of requirement, take higher power; 35% runs — accuracy/focus first; arena — haste + arena options; Crumble dungeon/raid — pick damage options.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [
+    {
+     "slot": "all",
+     "substats": "damage options (딜옵션)",
+     "context": "raid/crumble dungeon",
+     "why": ""
+    }
+   ],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "66407",
+   "url": "https://m.dcinside.com/board/projectcc/66407",
+   "date": "2026-09-13",
+   "title_kr": "토벌 덱 까긴뭘까 수정해서 캡쳐한거지 바보새끼들이냐",
+   "title_en": "'Raid deck leak' is edited screenshots",
+   "relevance": 0,
+   "summary_en": "Skeptic post claiming a circulating 'top raid deck reveal' was just an edited screenshot with no score attached.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "59350",
+   "url": "https://m.dcinside.com/board/projectcc/59350",
+   "date": "2026-09-04",
+   "title_kr": "토벌 투력462M 106G",
+   "title_en": "106G at 462M",
+   "relevance": 2,
+   "summary_en": "106,812,748,586 at 462.45M (~231x), ended 17.233. Macaron ATK rank 4 (우유 피겨 시커 마카롱 메소); Cheesecake and 실론 ATK too low to get buffed. Perk: Milk ATK 27%.",
+   "scores": [
+    {
+     "damage": "106,812,748,586",
+     "power": "462.45M",
+     "ratio": "~231배",
+     "deck": "메소덱 + 허브",
+     "note": "ended 17.233"
+    }
+   ],
+   "teams": [
+    {
+     "name": "낙타",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,99,92,100,100,78 / row2: 100,100,100,100,89,100",
+       "stars": "5★",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "판다 16",
+      "yellow 20",
+      "핫도그 19"
+     ],
+     "atk_order": [
+      "우유",
+      "피겨",
+      "시커",
+      "마카롱",
+      "메소"
+     ],
+     "perks": "우유 공 27%",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "치케 실론 공이 너무낮아서 안받았어요",
+     "en": "Cheesecake and 실론 ATK too low so they didn't get it"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "62608",
+   "url": "https://m.dcinside.com/board/projectcc/62608",
+   "date": "2026-09-09",
+   "title_kr": "마카롱 공증안줘도 되는 이유가",
+   "title_en": "Why Macaron doesn't need ATK runes",
+   "relevance": 3,
+   "summary_en": "Milk's ATK buff scales with Milk's own ATK, not the target's. Scorpion ~300k ATK → 1.4M with Milk's buff → 3M if Milk has Cheesecake's buff too. So dealer levels matter little; skill amp is for damage, ATK amp only helps survival/straw targeting. Debate: ATK runes on Macaron are for guaranteeing Pomegranate's straw; alternative is lowering others' levels (e.g., to ~70 at Seeker 6★).",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "마카롱",
+     "stats": "스증 (author) vs 공증 (to secure straw)",
+     "why": "Milk buff dominates ATK"
+    },
+    {
+     "cookie": "우유",
+     "stats": "공증",
+     "why": "Milk buff scales off Milk ATK"
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Milk ATK buff ∝ Milk's own ATK: Scorpion 300k → 1.4M, → 3M if Milk also holds Cheesecake's buff",
+    "Ranking of value: 공증 < tanking < 스증 for damage (author)"
+   ],
+   "disagreements": [
+    "gramPH: needs both level-downs and ATK runes (already 8★ Macaron with 5 ATK lines, others at Lv80–90); author: just level others down, go all skill amp"
+   ],
+   "quotes": [
+    {
+     "kr": "우유공증버프가 버프받는 대상 공격력비례가 아니라 지 공격력 비례임",
+     "en": "Milk's ATK buff scales with Milk's own ATK, not the target's"
+    },
+    {
+     "kr": "지금 내 전갈이 대충 300k인데 우유공증버프로 1m400k까지 오르고 치케버프를 우유만 받은상태로 공증버프돌리면 3m까지 오름",
+     "en": "My Scorpion ~300k goes to 1.4M with Milk's buff, and to 3M if Milk alone holds Cheesecake's buff"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "59298",
+   "url": "https://m.dcinside.com/board/projectcc/59298",
+   "date": "2026-09-04",
+   "title_kr": "토벌전 저점 보장덱으로 21g 나왔는데",
+   "title_en": "21G with a 'floor-guarantee' deck",
+   "relevance": 2,
+   "summary_en": "Floor deck (no Cheesecake; Pomegranate to Milk/Macaron/피겨) gives 21G at 476.94M (~44x). Asks if the next step is swapping Scorpion for Cheesecake and retrying infinitely. Replies: run an emulator macro (MuMu/LD) overnight. Using the arena preset.",
+   "scores": [
+    {
+     "damage": "21G",
+     "power": "476.94M",
+     "ratio": "~44배",
+     "deck": "저점 보장덱",
+     "note": "arena preset"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "Players run emulator click-macros overnight to brute-force Cheesecake lottery"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "잘때 매크로켜야댐",
+     "en": "You have to turn on a macro while you sleep"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66143",
+   "url": "https://m.dcinside.com/board/projectcc/66143",
+   "date": "2026-09-13",
+   "title_kr": "사람들은 뭐 토벌전 점수가 수십에서 수백배 나온다는데",
+   "title_en": "Others get 10s–100s x, I get 14x",
+   "relevance": 2,
+   "summary_en": "Player at 14x asks why. Answers: check Milk ATK runes and buffer ATK order; mercenary (용병단) lv4 perks are huge; dedicated raid gear preset with 스가/스증/피감 substats (add 치확/치피/치저 if sharing with arena); move speed to line cookies up for Macaron's buff. Another commenter: 160x.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [
+    {
+     "slot": "raid preset",
+     "substats": "스가, 스증, 피감 (add 치확/치피/치저 if shared with arena)",
+     "context": "raid",
+     "why": ""
+    }
+   ],
+   "rng": [],
+   "mechanics": [
+    "Mercenary (용병단) level 4 perk is 'broken' — main reason for tens-of-x gaps"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "프리셋 토벌에만 쓸거면 부옵은 스가 스증 피감 위주로 챙기고",
+     "en": "If the preset is raid-only, prioritize haste, skill amp, dmg reduction substats"
+    },
+    {
+     "kr": "4렙 복지가 개사기임",
+     "en": "The lv4 perk is broken"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "59825",
+   "url": "https://m.dcinside.com/board/projectcc/59825",
+   "date": "2026-09-05",
+   "title_kr": "토벌 내가쓰는덱",
+   "title_en": "My raid deck",
+   "relevance": 2,
+   "summary_en": "Leader Milk, 열정페이 + 초고속승진; best 130G at 690.73M (~188x). ATK order 우유 피겨 마카롱 시커 전갈 메소; Dark Choco / 실론 ATK similar to Melon. Average damage doubled vs old deck.",
+   "scores": [
+    {
+     "damage": "130G",
+     "power": "690.73M",
+     "ratio": "~188배",
+     "deck": "메소덱 (념글)",
+     "note": ""
+    }
+   ],
+   "teams": [
+    {
+     "name": "념글덱",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 74,61,70,100,100,70 / row2: 100,82,100,51,86,91",
+       "stars": "5★",
+       "note": "Macaron Lv74"
+      }
+     ],
+     "pets": [
+      "핫도그 20",
+      "yellow 20",
+      "판다 17"
+     ],
+     "atk_order": [
+      "우유",
+      "피겨",
+      "마카롱",
+      "시커",
+      "전갈",
+      "메소"
+     ],
+     "perks": "단장 우유, 열정페이 + 초고속승진",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Macaron Lv74 yet above Seeker in ATK"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "47632",
+   "url": "https://m.dcinside.com/board/projectcc/47632",
+   "date": "2026-08-27",
+   "title_kr": "노실론 피냐타 덱 공유함",
+   "title_en": "No-실론 Piñata deck",
+   "relevance": 1,
+   "summary_en": "Launch day: 2G 251M at 230.19M (~10x), guild 1st at 3G. Light-leaning deck with Cream Puff and Strawberry Crepe.",
+   "scores": [
+    {
+     "damage": "2G 251M",
+     "power": "230.19M",
+     "ratio": "~10배",
+     "deck": "launch-day no-실론",
+     "note": ""
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "58428",
+   "url": "https://m.dcinside.com/board/projectcc/58428",
+   "date": "2026-09-03",
+   "title_kr": "토벌 30g(시커5성)",
+   "title_en": "30G with 5★ Seeker",
+   "relevance": 2,
+   "summary_en": "30,910,684,402 (30.9G) at 520.37M (~59x), ended 17.233. ATK order 우유 > 마카롱 > 피겨 > 시커 > 전갈 (Macaron overtakes via ATK runes and ATK-potential diet on others). Needs retries for single-file positioning. Perks 열정페이 + 고속승진, leader Milk. Commenter at similar power max 12G.",
+   "scores": [
+    {
+     "damage": "30,910,684,402",
+     "power": "520.37M",
+     "ratio": "~59배",
+     "deck": "전갈 deck",
+     "note": "ended 17.233"
+    },
+    {
+     "damage": "12G",
+     "power": "similar",
+     "ratio": "",
+     "deck": "same",
+     "note": "commenter"
+    }
+   ],
+   "teams": [
+    {
+     "name": "부활민초크",
+     "cookies": [],
+     "pets": [
+      "yellow 20",
+      "판다 16",
+      "? 14"
+     ],
+     "atk_order": [
+      "우유",
+      "마카롱",
+      "피겨",
+      "시커",
+      "전갈"
+     ],
+     "perks": "열정페이 + 고속승진, 단장 우유",
+     "formation": "1-line positioning needs retries",
+     "substitutions": [
+      "실론 would be first buff target at higher stars"
+     ],
+     "unorthodox": [
+      "ATK-potential stripped on others so Macaron is #2 ATK"
+     ]
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "마카롱",
+     "stats": "ATK (공) heavy",
+     "why": "rank #2 in ATK"
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "공잠재 다이어트하고 뚱카롱 공격력 많이 먹여서 뚱카롱이 추월합니다",
+     "en": "Put others' ATK potentials on a diet and feed Macaron ATK so she overtakes"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66716",
+   "url": "https://m.dcinside.com/board/projectcc/66716",
+   "date": "2026-09-13",
+   "title_kr": "나 토벌 이 점수면 찾을 수 있는 세계선 다 찾은거임?",
+   "title_en": "Have I found every world-line at this score?",
+   "relevance": 2,
+   "summary_en": "59G 827M at 350.19M (~171x). Commenter: at mercenary lv4, 300x is max; with low Seeker stars ~70G possible. Seeker dies at the 30 s slam despite higher HP/DEF than Herb. Cheesecake at Lv1 used deliberately ('secret honey').",
+   "scores": [
+    {
+     "damage": "59G 827M",
+     "power": "350.19M",
+     "ratio": "~171배",
+     "deck": "메소덱 + 허브 + 치케 Lv1",
+     "note": "guild 13th"
+    }
+   ],
+   "teams": [
+    {
+     "name": "ccffk556",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,100,100,100,100,100 / row2: 100,98,1,100,100,1",
+       "stars": "5★",
+       "note": "Cheesecake Lv1, 실론 Lv1"
+      }
+     ],
+     "pets": [
+      "yellow 20",
+      "핫도그 19",
+      "판다 16"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Cheesecake Lv1 kept in deck"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "'150배 넘겼으면 그냥 이번시즌은 넘겨라' — stop at 150x (advice)"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "용병 4렙기준 300배가 맥스인데",
+     "en": "With mercenary lv4, 300x is the max (as of 9/13)"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66556",
+   "url": "https://m.dcinside.com/board/projectcc/66556",
+   "date": "2026-09-13",
+   "title_kr": "슈가룬 추천기 화면 ㄱㅊ?",
+   "title_en": "Sugar-rune recommender (Excel) screenshot",
+   "relevance": 3,
+   "summary_en": "A player built an Excel sugar-rune optimizer. On his data it recommends: Milk all ATK (8 lines ~56.6%), Pomegranate/Macaron/피겨/Cheesecake all skill amp (8 lines ~40%), 실론 1 ATK + 7 skill amp, dealers either all skill amp or all crit rate (~64%); estimated total damage 425.86M → 977.54M (+135%). Max per line: ATK 7%, crit rate 8%, crit dmg 8%, skill amp 5%. A commenter (칰킨) posts full buffer stats and runes.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "우유",
+     "stats": "optimizer: 공8/스0 (current 공26.6)",
+     "why": "Milk buff scales off own ATK"
+    },
+    {
+     "cookie": "석류",
+     "stats": "optimizer: 공0/스8",
+     "why": "not a buff target itself → skill amp"
+    },
+    {
+     "cookie": "마카롱/피겨/치케",
+     "stats": "optimizer: 공0/스8",
+     "why": ""
+    },
+    {
+     "cookie": "실론",
+     "stats": "optimizer: 공1/스7",
+     "why": "1 ATK line to secure Pomegranate target slot"
+    },
+    {
+     "cookie": "딜러",
+     "stats": "optimizer: all 스증 or all 치확 (8 lines)",
+     "why": "crit focus when receiving Pomegranate"
+    },
+    {
+     "cookie": "마카롱 (칰킨)",
+     "stats": "ATK 353.85K, skill amp 50.51; runes 스증 12.3",
+     "why": ""
+    },
+    {
+     "cookie": "우유 (칰킨)",
+     "stats": "ATK 474.68K; runes 공증 27.5",
+     "why": ""
+    },
+    {
+     "cookie": "피겨 (칰킨)",
+     "stats": "ATK 428.87K, skill amp 55.01; runes 18.7",
+     "why": ""
+    },
+    {
+     "cookie": "실론 (칰킨)",
+     "stats": "ATK 350.4K; runes 스증 3.8 + 공증 7; Lv97",
+     "why": ""
+    },
+    {
+     "cookie": "치케 (칰킨)",
+     "stats": "ATK 329.5K, skill amp 60.61; runes 스증 24.3",
+     "why": ""
+    },
+    {
+     "cookie": "석류 (칰킨)",
+     "stats": "ATK 398.96K, skill amp 60.01; runes 23.7",
+     "why": ""
+    },
+    {
+     "cookie": "브시커 (칰킨)",
+     "stats": "runes 치피 18.2, 스가 6, 스증 4.4; ATK 426.09K, CR 192.07, CD 187.18, Lv92",
+     "why": ""
+    },
+    {
+     "cookie": "메론 (칰킨)",
+     "stats": "runes 스증 12.3, 치확 16",
+     "why": ""
+    },
+    {
+     "cookie": "호밀 (칰킨)",
+     "stats": "runes 치피 12.8, 스증 8.8, 치확 12.2",
+     "why": ""
+    },
+    {
+     "cookie": "허브 (칰킨)",
+     "stats": "runes 스증 6.4, 공증 4.7",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Sugar-rune per-line max (per spreadsheet): ATK 7%, crit rate 8%, crit dmg 8%, skill amp 5%",
+    "Spreadsheet model predicts +135% total damage from rune re-roll (model, not measured)"
+   ],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "64844",
+   "url": "https://m.dcinside.com/board/projectcc/64844",
+   "date": "2026-09-11",
+   "title_kr": "이속 세팅 공유함",
+   "title_en": "Sharing my move-speed setup",
+   "relevance": 3,
+   "summary_en": "Candy Apple's rune screenshots (English client) behind his 199G run: Pinot, Melon Soda and Bright Seeker runes, with move speed on each; 'don't give Seeker too much'. Gear: move speed + haste on 2 of the bottom-right three pieces (raid/crumble-dungeon preset used for all three modes). Status-screen move speeds: Cheesecake 5.5, Melon 6.51, Pinot 6.31, Seeker 5.38. Buffer runes matter most, placement second; dealers' extra skill-amp/crit-dmg % barely matter. Milk has only one SSR ATK line despite 'millions spent'.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "Pinot Noir",
+     "stats": "C CRIT DMG 1.00%, SR Mov SPD +0.75 (lock), U DEF AMP 1.90%, R Mov SPD +0.57, SR DMG Reduction 4.20% (lock), C DMG Reduction 1.50%; ★10: HP AMP 3.70%, Resistance 1.60%",
+     "why": "formation + tank"
+    },
+    {
+     "cookie": "Melon Soda",
+     "stats": "SR Mov SPD +0.69, R CRIT DMG 4.20%, SSR Skill Haste +4.00, SR Skill AMP 3.20%, U Mov SPD +0.32, SR CRIT DMG 4.80% (all locked); ★10: CRIT% 1.00%, 1.60%",
+     "why": "formation + damage"
+    },
+    {
+     "cookie": "Brightseeker (5★)",
+     "stats": "SR CRIT% 4.80%, R CRIT% 3.80%, U Mov SPD +0.39 (lock); ★6 SSR Skill AMP 4.40% (locked-in, promotion needed); ★8 Mov SPD +0.51, Resistance 2.00%; ★10 CRIT% 2.20%, DEF AMP 0.90%",
+     "why": "'too much speed on Seeker is bad'"
+    }
+   ],
+   "gear": [
+    {
+     "slot": "우하단 계열 (bottom-right three pieces)",
+     "substats": "2 pieces with 스가 + 이속",
+     "context": "raid / crumble dungeon preset (also used for arena)",
+     "why": "formation; 'many say 1 line is better but mine broke with 1'"
+    }
+   ],
+   "rng": [],
+   "mechanics": [
+    "Status-screen move speeds (Melon deck): Cheesecake 5.5, Melon 6.51, Pinot 6.31, Seeker 5.38",
+    "Buffer runes > placement > dealer runes"
+   ],
+   "disagreements": [
+    "1 vs 2 move-speed gear lines: many say 1; author needed 2"
+   ],
+   "quotes": [
+    {
+     "kr": "쟤들 스증 치피 몇퍼 더준다고 딜 거의 안는다는거임 버퍼 슈가룬이 제일 중요함 배치가 그다음으로 중요하고",
+     "en": "A few % more skill amp / crit dmg on them barely adds damage; buffer sugar runes matter most, placement next"
+    },
+    {
+     "kr": "오른쪽아래 3개에서 스가이속으로 챙기는게 베스트",
+     "en": "Best is haste + move speed on the bottom-right three"
+    },
+    {
+     "kr": "우유에 몇백만박고 ssr공1개라",
+     "en": "Spent millions on Milk and got one SSR ATK line"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "69331",
+   "url": "https://m.dcinside.com/board/projectcc/69331",
+   "date": "2026-09-17",
+   "title_kr": "400배",
+   "title_en": "400x",
+   "relevance": 3,
+   "summary_en": "659G 961M at 1.49G (~443x), deck 5; no move speed; everything Lv100 except Cherry Lv1 (stage-pushing) — says to level down Pinot, Dark Choco, Herb for raid; gave some extra haste to Dark Choco/Pinot/Cheesecake. Top guilds that day: 6T 23G / 5T 452G / 3T 953G. This is the post referenced for '280M → 16G'.",
+   "scores": [
+    {
+     "damage": "659G 961M",
+     "power": "1.49G",
+     "ratio": "~443배",
+     "deck": "체리덱 + 허브",
+     "note": "guild 3rd; personal 3rd"
+    }
+   ],
+   "teams": [
+    {
+     "name": "체리덱 (섬영)",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100×6 / row2: 1,100,100,100,100,100",
+       "stars": "5★",
+       "note": "only Cherry Lv1 in screenshot"
+      }
+     ],
+     "pets": [
+      "와사비문어 20",
+      "핫도그 20",
+      "판다 18"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "no move speed",
+     "substitutions": [],
+     "unorthodox": [
+      "Cherry Lv1 as positioning filler"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "스테미느라 올려놓은거임 피노 닼초 허브 렙따ㄱ",
+     "en": "They're leveled for stage; level down Pinot, Dark Choco, Herb"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "60231",
+   "url": "https://m.dcinside.com/board/projectcc/60231",
+   "date": "2026-09-06",
+   "title_kr": "토벌전 750m으로 120G때린조합",
+   "title_en": "120G at 750M",
+   "relevance": 2,
+   "summary_en": "120G 24M at 747.36M (~161x) after only 30 min of retries; expects ~150G with more tries. JW instead of Herb ('if dealers die before 20 s they die anyway'). Levels keyed to Macaron's ATK: 우유 > 피겨 > 마카롱 > everyone else below Macaron. Perks ATK 7 + 20.",
+   "scores": [
+    {
+     "damage": "120G 24M",
+     "power": "747.36M",
+     "ratio": "~161배",
+     "deck": "메소덱 + 정전",
+     "note": "30 min of retries"
+    }
+   ],
+   "teams": [
+    {
+     "name": "760m",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,81,98,100,100,96 / row2: 96,85,100,100,100,100",
+       "stars": "5★",
+       "note": "JW (leaf) Lv100 at pos5"
+      }
+     ],
+     "pets": [
+      "판다 16",
+      "yellow 20",
+      "핫도그 20"
+     ],
+     "atk_order": [
+      "우유",
+      "피겨",
+      "마카롱",
+      "(rest below Macaron)"
+     ],
+     "perks": "공증 7 + 20",
+     "formation": "",
+     "substitutions": [
+      "정전 instead of 허브"
+     ],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "30 minutes of retries → 120G; 'with many more tries maybe 150G'"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "59829",
+   "url": "https://m.dcinside.com/board/projectcc/59829",
+   "date": "2026-09-05",
+   "title_kr": "토벌 허브",
+   "title_en": "Herb in raid",
+   "relevance": 2,
+   "summary_en": "If you survive to 17 s without Herb, JW is strictly better (one more Pomegranate beam and more Scorpion stingers). A commenter switched and went 94G → 110G. Lowest dealer HP 3.5M. Downsides: Milk dies at the 30 s slam more often; JW sometimes too far from Pomegranate.",
+   "scores": [
+    {
+     "damage": "94G → 110G",
+     "power": "?",
+     "ratio": "",
+     "deck": "Herb → JW",
+     "note": "commenter"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "JW adds one more Pomegranate straw and more Scorpion stingers than Herb"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "94G > 110G로 오름",
+     "en": "Went from 94G to 110G"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66476",
+   "url": "https://m.dcinside.com/board/projectcc/66476",
+   "date": "2026-09-13",
+   "title_kr": "결국 최상위권조합도 문어말곤 다 갤에 올라왔던거네",
+   "title_en": "Even the top combo was already posted, except the octopus",
+   "relevance": 2,
+   "summary_en": "After the rank-1 guild's combo leaked: Panda, Cherry for formation, level-adjusted Pomegranate straws, runes and move speed were all already known from the gallery; the only new element was the Wasabi Octopus pet (문어). Top players reported move-speed/rune tricks had no effect for them.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Top-tier elements as of 9/13: Panda pet, Cherry formation, level-adjusted straws, runes/move speed, Wasabi Octopus pet (new)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "결국 최상위권조합도 문어말곤 다 갤에 올라왔던거네",
+     "en": "In the end even the top combo was all on the gallery except the octopus"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66348",
+   "url": "https://m.dcinside.com/board/projectcc/66348",
+   "date": "2026-09-13",
+   "title_kr": "1등 길드인데 토벌전 꿀통은",
+   "title_en": "From the #1 guild: the raid secret",
+   "relevance": 3,
+   "summary_en": "Member of the #1 guild (카페, 16T 966G): no new build — just character investment plus sugar runes and gear; a few more runes/gear today gave +200G. Screenshot: 616G 853M at 1.32G (~467x), pets 와사비문어 20, 핫도그 20, 판다 19. Aims for 800G. Commenters: likely JW + Cheesecake lottery deck without Kiwi.",
+   "scores": [
+    {
+     "damage": "616G 853M",
+     "power": "1.32G",
+     "ratio": "~467배",
+     "deck": "#1 guild deck (체리/정전?)",
+     "note": "guild 카페 16T 966G; 2nd 12T 40G; 3rd 7T 232G"
+    }
+   ],
+   "teams": [
+    {
+     "name": "#1 guild member",
+     "cookies": [],
+     "pets": [
+      "와사비문어 20",
+      "핫도그 20",
+      "판다 19"
+     ],
+     "atk_order": [],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Wasabi Octopus pet (surprised commenters who expected 갓방울)"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "신빌드 없고 내실이랑 슈가룬 장비만 잘맞추면됨",
+     "en": "No new build — just account investment plus proper sugar runes and gear"
+    },
+    {
+     "kr": "오늘 슈가룬이랑 장비 몇개 더 먹고 200G 더오름",
+     "en": "Got a few more sugar runes and gear today and went up 200G"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66446",
+   "url": "https://m.dcinside.com/board/projectcc/66446",
+   "date": "2026-09-13",
+   "title_kr": "★★그러니까 꿀통 정리하면",
+   "title_en": "Summary of the 'honey pot' (top deck)",
+   "relevance": 2,
+   "summary_en": "Summary of the leaked top deck: cookies 마카 브시 피노 석류 우유 닼초 / 딸크(or 체리) 전갈 치케 피겨 허브 실론; pets 와사비 판다 핫도그; perks 열정 + 초고속; ATK order 우유 > 피겨 > 브시 > 전갈 > 마카. Commenters: Wasabi reason = Seeker 6 drones + stable Dark Choco DEF-shred; some say 갓방울 is stronger; some claim hacks.",
+   "scores": [],
+   "teams": [
+    {
+     "name": "leaked top deck",
+     "cookies": [
+      {
+       "kr": "마카롱",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "브시커",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "우유",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "닼초",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "딸크 or 체리",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "치케",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      },
+      {
+       "kr": "실론",
+       "en": null,
+       "level": "?",
+       "stars": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "와사비문어",
+      "판다",
+      "핫도그"
+     ],
+     "atk_order": [
+      "우유",
+      "피겨",
+      "브시",
+      "전갈",
+      "마카"
+     ],
+     "perks": "열정페이 + 초고속승진",
+     "formation": "",
+     "substitutions": [
+      "딸크 vs 체리 (two versions)"
+     ],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Wasabi Octopus: enables Seeker 6 drones + steady Dark Choco DEF-down (commenter)"
+   ],
+   "disagreements": [
+    "Some say 갓방울 pet beats Wasabi",
+    "Some attribute top scores to hacks"
+   ],
+   "quotes": [
+    {
+     "kr": "시커 6드론 + 닼초방깍유지안정 이거인듯",
+     "en": "Seems to be Seeker 6 drones + stable Dark Choco DEF shred"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "59818",
+   "url": "https://m.dcinside.com/board/projectcc/59818",
+   "date": "2026-09-05",
+   "title_kr": "공략대로 10판해봤는데",
+   "title_en": "Tried the guide for 10 runs",
+   "relevance": 2,
+   "summary_en": "Following the popular (념글) guide for 10 runs doubled average damage and raised the floor, but his old Scorpion+Melon deck's lottery peak passes 100G by the 30 s mark. Dealers must be below 피겨 in ATK; Pomegranate's own ATK doesn't matter.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "Guide deck: average doubled, floor guaranteed; old lottery deck: higher peak (100G by 30 s)"
+   ],
+   "mechanics": [
+    "Pomegranate's own ATK irrelevant to ATK order"
+   ],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "58508",
+   "url": "https://m.dcinside.com/board/projectcc/58508",
+   "date": "2026-09-03",
+   "title_kr": "토벌전 용병단3 35G",
+   "title_en": "35G with mercenary lv3",
+   "relevance": 2,
+   "summary_en": "35,144,304,747 (35.1G), battle ended 18.700; straws to 우유/마카/피겨. Buff 'jumps' mid-fight because Milk's ATK buff reorders ATK — look for world-lines where it doesn't. Macaron only 4 ATK rune lines; SR tier is a wall. Oven 28, breakthrough ~700, 초고속 perk.",
+   "scores": [
+    {
+     "damage": "35,144,304,747",
+     "power": "?",
+     "ratio": "",
+     "deck": "우유/마카/피겨 straws",
+     "note": "mercenary lv3; ended 18.700"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Straw targets are fixed by ATK at start, but Milk's ATK buff mid-fight makes Pomegranate's buff jump to others (호밀, 피노)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "중간에 우유 공증 때문에 버프 튐; 잘 안튀는 세계선 찾기",
+     "en": "Mid-fight the buff jumps because of Milk's ATK buff; find a world-line where it doesn't"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "64957",
+   "url": "https://m.dcinside.com/board/projectcc/64957",
+   "date": "2026-09-11",
+   "title_kr": "이속 체감 ㄷㄷ 토벌 2배뻥됨",
+   "title_en": "Move speed doubled my raid score",
+   "relevance": 3,
+   "summary_en": "Same deck: stage gear preset at 619.15M → best 44G after 8 hours of macro; switched to a rough skill-amp/haste raid preset at 532.74M (lower power) with 2 gear pieces of move speed and 1 move-speed rune line each on Macaron/Pinot/Melon/Seeker → 109.6G. Floor went from 20–30G to 40–80G. ATK order 우유 피겨 시커 전갈 마카롱. Commenters: it's world-line luck / preset difference.",
+   "scores": [
+    {
+     "damage": "44G 144M",
+     "power": "619.15M",
+     "ratio": "~71배",
+     "deck": "stage preset",
+     "note": "8 h macro best"
+    },
+    {
+     "damage": "109G 634M",
+     "power": "532.74M",
+     "ratio": "~206배",
+     "deck": "raid preset + move speed",
+     "note": ""
+    }
+   ],
+   "teams": [
+    {
+     "name": "떨븜",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,79,77,100,100,82 / row2: 95,61,100,100,93,100",
+       "stars": "5★",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "yellow 20",
+      "핫도그 20",
+      "판다 17"
+     ],
+     "atk_order": [
+      "우유",
+      "피겨",
+      "시커",
+      "전갈",
+      "마카롱"
+     ],
+     "perks": "",
+     "formation": "move speed: 2 gear pieces + 1 rune line each on 마카롱/피노/메소/시커",
+     "substitutions": [],
+     "unorthodox": [
+      "Lower power (raid preset) scored 2.5x more"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [
+    {
+     "slot": "2 pieces",
+     "substats": "이속 + 스증/스가",
+     "context": "raid preset",
+     "why": "stage preset → raid preset doubled score"
+    }
+   ],
+   "rng": [
+    "Stage preset: 8 hours of macro → 44G max; floor 20–30G. Raid preset: floor 40–80G"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "44G는 스테 프리셋으로 8시간 매크로 켜놓은 최대점수였음",
+     "en": "44G was the max after 8 hours of macro on the stage preset"
+    },
+    {
+     "kr": "저점 20G 30G 야랄하다가 프리셋 바꾸니까 40 50 80 막뜸",
+     "en": "Floor was 20–30G; after switching preset, 40, 50, 80 came easily"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "52639",
+   "url": "https://m.dcinside.com/board/projectcc/52639",
+   "date": "2026-08-29",
+   "title_kr": "지금껏 전갈에 석류빨대 안 꼽혀있었네",
+   "title_en": "Pomegranate never buffed my Scorpion",
+   "relevance": 2,
+   "summary_en": "Pomegranate targets: first cookies holding the 탄속(?) synergy, then by ATK. Base 3 targets; 5 when 정전/치케/허브 multi-buff (다발2) applies.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Pomegranate: base 3 straws; +2 with JW/Cheesecake/Herb multi-synergy (commenter 언담)",
+    "Priority: synergy holders first, then ATK order (author)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "원래셋이고 정전 치케 허브 다발2받으면 다섯명",
+     "en": "Normally three; five when it gets the 2-stack from JW/Cheesecake/Herb"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66531",
+   "url": "https://m.dcinside.com/board/projectcc/66531",
+   "date": "2026-09-13",
+   "title_kr": "공순서 우(브/마) 치실피 인가",
+   "title_en": "Is ATK order Milk-(Seeker/Macaron)-Cheesecake-실론-피겨?",
+   "relevance": 2,
+   "summary_en": "Tech: put 피겨 at ATK #6 (level ~40) so that when 실론 misses Milk's buff, 피겨 is the one who steals the straw; reached ~300x with Melon deck. 'Making Scorpion trash' was the alternative. Surviving at low levels relied on lab HP/DEF research + breakthrough ~750.",
+   "scores": [
+    {
+     "damage": "",
+     "power": "",
+     "ratio": "~300배",
+     "deck": "메소덱",
+     "note": "author"
+    }
+   ],
+   "teams": [
+    {
+     "name": "전치 variant",
+     "cookies": [
+      {
+       "kr": "피겨",
+       "en": null,
+       "level": "~40",
+       "stars": "?",
+       "note": "deliberately ATK #6"
+      }
+     ],
+     "pets": [],
+     "atk_order": [
+      "우유",
+      "브시커/마카롱",
+      "치케",
+      "실론",
+      "피겨"
+     ],
+     "perks": "",
+     "formation": "",
+     "substitutions": [],
+     "unorthodox": [
+      "피겨 leveled to ~40 to be the 6th ATK 'straw thief'"
+     ]
+    }
+   ],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "실론 5등 줘도 우유 안받으면 보통 6등이 뺏어먹으니까",
+     "en": "Even with 실론 at #5, if it misses Milk's buff the #6 usually steals it"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "64839",
+   "url": "https://m.dcinside.com/board/projectcc/64839",
+   "date": "2026-09-11",
+   "title_kr": "길토 비법소스 찾은듯?",
+   "title_en": "Found the raid secret sauce?",
+   "relevance": 3,
+   "summary_en": "After the Cheesecake-buff fix, move speed raised his peak ~100G. Level adjustment + move speed runes produce the single-file line (Macaron getting buffs while dodging Cheesecake) without Cherry and without infinite retries. Author ~1.5 total move speed; too much breaks placement. Candy Apple: controlling via move speed beats infinite retries on bad placement; 1 gear line is always worth it. Patch detail: Cheesecake used to overwrite Milk's buff; now Milk's stacked buff no longer gets overwritten when higher, raising lottery odds.",
+   "scores": [
+    {
+     "damage": "+~100G peak",
+     "power": "627.68M",
+     "ratio": "",
+     "deck": "메소덱",
+     "note": "team screenshot 627.68M"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [
+    {
+     "slot": "any",
+     "substats": "1 line 이속",
+     "context": "raid",
+     "why": "formation; 'always worth it' (캔디애플)"
+    }
+   ],
+   "rng": [],
+   "mechanics": [
+    "Cheesecake patch (~9/10): Milk's stacking ATK buff no longer overwritten by Cheesecake's when higher → cheesecake lottery odds up",
+    "Too much move speed also breaks placement; tune ~1.5"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "그지같은 배치로 무한 리트할 시간에 유효한 배치로 한두판 더하는게 훨씬좋음",
+     "en": "Better to play one or two runs with a valid placement than retry forever with junk placement"
+    },
+    {
+     "kr": "너무 빨라도 배치가 이상해져서 적정선을 찾아야 할듯",
+     "en": "Too fast also breaks placement; find the sweet spot"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "53804",
+   "url": "https://m.dcinside.com/board/projectcc/53804",
+   "date": "2026-08-30",
+   "title_kr": "허브는 다발시너지 2고 정전은 3이잖아",
+   "title_en": "Herb gives multi-synergy 2, JW 3",
+   "relevance": 2,
+   "summary_en": "Herb = +2 multi-synergy, JW = +3: Pomegranate gains +2/+3 straws; Scorpion gains 2 stingers per synergy (only 4 stingers without; JW gives 10 stacks from the first shot). Herb for heal/floor, JW is instant. Herb's buff too short for Pomegranate to take.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Scorpion: +2 stingers per synergy stack; 4 stingers base; JW → 10 stacks from first volley",
+    "Pomegranate straws: +2 (Herb) / +3 (JW)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "전갈은 시너지 하나당 2개가 늘어남",
+     "en": "Scorpion gains 2 per synergy"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "53586",
+   "url": "https://m.dcinside.com/board/projectcc/53586",
+   "date": "2026-08-30",
+   "title_kr": "토벌전 덱 600M 56G",
+   "title_en": "600M, 56G",
+   "relevance": 1,
+   "summary_en": "56G at ~600M (585.56M shown, ~96x). Straws 우유 피겨 브시커 전갈 메소; 실론 Lv1; Milk ATK 456k; others leveled 1–4 below. Suggestion: give one straw to Macaron.",
+   "scores": [
+    {
+     "damage": "56G",
+     "power": "585.56M (600M at full levels)",
+     "ratio": "~96배",
+     "deck": "메소덱",
+     "note": ""
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "66459",
+   "url": "https://m.dcinside.com/board/projectcc/66459",
+   "date": "2026-09-13",
+   "title_kr": "1등 토벌전 영상",
+   "title_en": "Rank-1 raid video",
+   "relevance": 1,
+   "summary_en": "Link to a YouTube short of the #1 guild member's 827G run (levels hidden, combo visible). Drama about leaks and hacking accusations; confirms the guild used Cherry.",
+   "scores": [
+    {
+     "damage": "827G",
+     "power": "?",
+     "ratio": "",
+     "deck": "#1 guild (체리)",
+     "note": "video"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "66309",
+   "url": "https://m.dcinside.com/board/projectcc/66309",
+   "date": "2026-09-13",
+   "title_kr": "사실 토벌 600배 비밀이",
+   "title_en": "The 600x secret",
+   "relevance": 0,
+   "summary_en": "Joke post; commenter: the 'dash club' variant got 10x with Milk dying.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "64671",
+   "url": "https://m.dcinside.com/board/projectcc/64671",
+   "date": "2026-09-11",
+   "title_kr": "토벌에서 렙낮추고 체리맛넣고 똥꼬쇼 하는 이유가 머임?",
+   "title_en": "Why level down and use Cherry?",
+   "relevance": 2,
+   "summary_en": "Explanation: lowering levels sets ATK order for Pomegranate targeting; Cherry is inserted between Macaron and Seeker so they line up. After the Cheesecake lottery died, Macaron single-line works without Cherry; one commenter says Cherry was 'mostly a scam from the start'.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Cherry sits between Macaron and Seeker to force a single-file line"
+   ],
+   "disagreements": [
+    "Cherry useful for formation vs 'Cherry was almost a scam from the start'"
+   ],
+   "quotes": [
+    {
+     "kr": "체리맛 넣는 건 마카롱이랑 브시커 사이에 쿠키 하나 넣어서 마카롱이랑 브시컹 일자로 정렬되게 하려고",
+     "en": "Cherry is there to sit between Macaron and Seeker so they line up in a row"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "60521",
+   "url": "https://m.dcinside.com/board/projectcc/60521",
+   "date": "2026-09-06",
+   "title_kr": "토벌덱 공유",
+   "title_en": "Raid deck share",
+   "relevance": 2,
+   "summary_en": "Main (account 2.43G): 73G 83M at 607.95M (~120x); alt (908M account): 10G 979M at 212.1M (~52x). Cheesecake-proc runs show as 'not dying when they should mid-late'. Commenter with slightly lower power using Rye instead of Scorpion gets 142G.",
+   "scores": [
+    {
+     "damage": "73G 83M",
+     "power": "607.95M",
+     "ratio": "~120배",
+     "deck": "메소덱 + 허브",
+     "note": "main"
+    },
+    {
+     "damage": "10G 979M",
+     "power": "212.1M",
+     "ratio": "~52배",
+     "deck": "same",
+     "note": "alt"
+    },
+    {
+     "damage": "142G",
+     "power": "<607M",
+     "ratio": "",
+     "deck": "호밀 instead of 전갈",
+     "note": "commenter"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "59932",
+   "url": "https://m.dcinside.com/board/projectcc/59932",
+   "date": "2026-09-05",
+   "title_kr": "475M 112G",
+   "title_en": "112G at 475M",
+   "relevance": 2,
+   "summary_en": "112,824,807,845 (112.8G) at ~475M (~237x), battle ended 17.433; Macaron ATK rank 5; swapped Rye → Scorpion and renewed the record. Commenter at 400M (Seeker 6★, other stars one lower) maxed 36G after 6 hours; another with Seeker 3★ at 570M gets less than half.",
+   "scores": [
+    {
+     "damage": "112,824,807,845",
+     "power": "~475M",
+     "ratio": "~237배",
+     "deck": "메소덱 (호밀→전갈)",
+     "note": "ended 17.433; guild 2nd 538G"
+    },
+    {
+     "damage": "36G",
+     "power": "400M",
+     "ratio": "~90배",
+     "deck": "same",
+     "note": "commenter, 6 hours of retries"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "Commenter: 6 hours of retries → 36G max at 400M"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "60763",
+   "url": "https://m.dcinside.com/board/projectcc/60763",
+   "date": "2026-09-07",
+   "title_kr": "토벌전770m으로 150G",
+   "title_en": "150G at 770M",
+   "relevance": 3,
+   "summary_en": "150G 78M at 772.94M (~194x). Macaron ATK #3; gear haste total 21.8; sugar-rune haste only on Cheesecake 8, 피겨 8, Dark Choco 4, JW 4. JW over Herb (world-lines where Herb still dies at 30 s exist anyway). Commenter: 950M → 320G (~337x) running a macro.",
+   "scores": [
+    {
+     "damage": "150G 78M",
+     "power": "772.94M",
+     "ratio": "~194배",
+     "deck": "메소덱 + 정전",
+     "note": ""
+    },
+    {
+     "damage": "320G",
+     "power": "950M",
+     "ratio": "~337배",
+     "deck": "?",
+     "note": "commenter, macro"
+    }
+   ],
+   "teams": [
+    {
+     "name": "770m",
+     "cookies": [
+      {
+       "kr": "grid",
+       "en": null,
+       "level": "row1: 100,83,100,100,100,97 / row2: 97,86,100,100,100,100",
+       "stars": "5★",
+       "note": "JW (leaf) Lv100"
+      }
+     ],
+     "pets": [
+      "판다 17",
+      "yellow 20",
+      "핫도그 20"
+     ],
+     "atk_order": [
+      "?",
+      "?",
+      "마카롱 (#3)"
+     ],
+     "perks": "",
+     "formation": "",
+     "substitutions": [
+      "정전 instead of 허브"
+     ],
+     "unorthodox": []
+    }
+   ],
+   "sugar_runes": [
+    {
+     "cookie": "치케",
+     "stats": "스가 8",
+     "why": ""
+    },
+    {
+     "cookie": "피겨",
+     "stats": "스가 8",
+     "why": ""
+    },
+    {
+     "cookie": "닼초",
+     "stats": "스가 4",
+     "why": ""
+    },
+    {
+     "cookie": "정전",
+     "stats": "스가 4",
+     "why": ""
+    }
+   ],
+   "gear": [
+    {
+     "slot": "all",
+     "substats": "total 스가 21.8",
+     "context": "raid",
+     "why": ""
+    }
+   ],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "장비스가21.8 치케슈가룬 스가8,피겨슈가룬 스가8 닼쵸스가4 정전스가4 외에는 스가 없었음",
+     "en": "Gear haste 21.8; Cheesecake runes haste 8, 피겨 haste 8, Dark Choco 4, JW 4; no other haste"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "59654",
+   "url": "https://m.dcinside.com/board/projectcc/59654",
+   "date": "2026-09-05",
+   "title_kr": "치케로또 무한 리트로 기록내는 애들 조심해라",
+   "title_en": "Beware infinite-retry cheesecake lottery",
+   "relevance": 1,
+   "summary_en": "Speculation that devs might add an attempt limit instead of fixing Cheesecake; commenters doubt it.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "Infinite retries allowed; speculation about a future attempt cap"
+   ],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "60820",
+   "url": "https://m.dcinside.com/board/projectcc/60820",
+   "date": "2026-09-07",
+   "title_kr": "토벌 고점은 스가 인거 같다",
+   "title_en": "Raid ceiling is skill haste",
+   "relevance": 2,
+   "summary_en": "Stuck under 30G; raising skill haste from 4 to 12 unlocked 40G. Only Seeker really needs ~3 haste lines among dealers; Cheesecake haste is the key question. A commenter: '6 skill amp + 6 haste is strongest'. Regret: spent 70k on Cheesecake ATK runes.",
+   "scores": [
+    {
+     "damage": "30G → 40G",
+     "power": "?",
+     "ratio": "",
+     "deck": "?",
+     "note": "haste 4 → 12"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "브시커",
+     "stats": "3 스가 lines (2 lucky 스가 lines beat 스증)",
+     "why": ""
+    },
+    {
+     "cookie": "치케",
+     "stats": "haste is 'the key' (untested)",
+     "why": ""
+    }
+   ],
+   "gear": [
+    {
+     "slot": "all",
+     "substats": "스증 6 lines + 스가 6 lines",
+     "context": "raid (commenter)",
+     "why": "'strongest'"
+    }
+   ],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "스증 6 + 스가 6 이게 젤 쌤",
+     "en": "6 skill amp + 6 haste is the strongest"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "64932",
+   "url": "https://m.dcinside.com/board/projectcc/64932",
+   "date": "2026-09-11",
+   "title_kr": "시커 석류 빨대받으니까 스증버다 치확 치피가 좋다던데",
+   "title_en": "Seeker with straw: crit better than skill amp?",
+   "relevance": 2,
+   "summary_en": "Once Seeker gets Pomegranate + Macaron buffs crit rate exceeds 400% and crit dmg +300% from 피겨, so it hardly matters; one commenter thinks crit rate is valued higher than crit dmg in the formula.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "With Macaron buff crit rate >400%; 피겨 adds >+300% crit dmg (commenter)"
+   ],
+   "disagreements": [
+    "crit dmg vs crit rate value — unresolved"
+   ],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "66083",
+   "url": "https://m.dcinside.com/board/projectcc/66083",
+   "date": "2026-09-13",
+   "title_kr": "해보니까 150배까진 스가랑 이속 주는게 맞음",
+   "title_en": "Up to 150x, haste + move speed is right",
+   "relevance": 2,
+   "summary_en": "Reached 150x with 20 skill haste and move speed on two gear pieces (needed an Eternal-grade piece with both haste and move speed). Seeker 5★ needed for ~200x. 600x players seem to use JW. Commenter tried 6 move-speed lines on JW: terrible. Cheesecake deck topped at ~300x.",
+   "scores": [
+    {
+     "damage": "",
+     "power": "",
+     "ratio": "150배",
+     "deck": "메소덱 + move speed",
+     "note": "haste 20"
+    },
+    {
+     "damage": "",
+     "power": "",
+     "ratio": "~300배",
+     "deck": "치케덱",
+     "note": "commenter"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "정글전사",
+     "stats": "6 이속 lines — 'terrible' (commenter)",
+     "why": "test"
+    }
+   ],
+   "gear": [
+    {
+     "slot": "2 pieces (Eternal)",
+     "substats": "스가 + 이속",
+     "context": "raid",
+     "why": ""
+    }
+   ],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "150배까진 스가 20 이속 두줄 장비 챙기니까 됨",
+     "en": "Up to 150x: 20 haste and two gear lines of move speed does it"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "53667",
+   "url": "https://m.dcinside.com/board/projectcc/53667",
+   "date": "2026-08-30",
+   "title_kr": "토벌전 30초 이후 쿠키가 사는 조건 생각해봄",
+   "title_en": "Conditions for surviving past 30 s",
+   "relevance": 3,
+   "summary_en": "Pattern before the 3rd jump at 30 s: gift bomb → ground pounds → throws 3 bomb mobs at the front line (big damage) → jump. Front-liners already low die to the jump; when bombs spread across Herb/Dark Choco/실론 everyone survives at ~half HP. ~1–2 in 5 runs all survive with mercenary lv3. Stat screens: Scorpion (never died) HP 3.88M, crit res 56.9%, DR 16.61%, skill amp 159.72%, crit 425.11%, crit dmg 161.77%, speed 3.5, haste 24; Ceylon Knight (dies most) HP 3.54M, crit res 56.9%, DR 18.52%, skill amp 38.62%, crit 142.25%, crit dmg 154.77%, speed 4.5, haste 27. When 실론 survives, runs hit near-best.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "~1–2 of 5 runs everyone survives 30 s (mercenary lv3)",
+    "Runs where 실론 survives are near-record"
+   ],
+   "mechanics": [
+    "30 s sequence: gift bomb → ground pounds → 3 bomb mobs thrown at the front line → jump",
+    "Back line almost always survives; front line dies if bombs concentrate",
+    "Scorpion 3.88M HP / 16.6% DR survived every 30 s slam; 실론 3.54M HP / 18.5% DR died most often"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "선물폭탄 후 땅 꽝꽝 두드리기 > 앞라인에 폭탄몹 3개 투척 (이게 터지면 데미지 ㅈㄴ 큼) > 이후 점프",
+     "en": "Gift bomb, then ground pounding > throws 3 bomb mobs at the front line (huge damage) > then the jump"
+    },
+    {
+     "kr": "보통 실론 살 때마다 고점 근처 뽑거나 고점갱신함",
+     "en": "Usually whenever 실론 survives I get near my best or a new best"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "55487",
+   "url": "https://m.dcinside.com/board/projectcc/55487",
+   "date": "2026-08-31",
+   "title_kr": "그니까 토벌딜뻥은 이거네",
+   "title_en": "So this is the raid damage spike",
+   "relevance": 3,
+   "summary_en": "Conditions for the damage spike: 1) dealers + 피겨 + Macaron take Milk's ATK buff while dodging Cheesecake's, and Milk takes Cheesecake's; 2) Seeker and Scorpion get pushed in front of Macaron to both receive Macaron's buff; 3) the 30 s gift box misses/hits lightly the back line so all including 실론 survive the slam. 'Retry-hell game'; 'pachinko'.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [
+    "Three independent random conditions must line up; score depends on retry count"
+   ],
+   "mechanics": [
+    "Milk holding Cheesecake's buff amplifies Milk's buff to others (see 62608)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "좆지랄리트겜시발",
+     "en": "(expletive) retry game"
+    },
+    {
+     "kr": "ㄹㅇ딜오르는게 랜덤이다보니까 리트 많이박을수로 고점이다름",
+     "en": "Since the damage spike is random, the more retries the higher your peak"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66495",
+   "url": "https://m.dcinside.com/board/projectcc/66495",
+   "date": "2026-09-13",
+   "title_kr": "토벌기준 최대딜을 넣는 슈가룬 조합 찾고있음",
+   "title_en": "Searching the max-damage sugar-rune combination",
+   "relevance": 2,
+   "summary_en": "Optimizer table (model): across buff-stack scenarios (10/5/0 stacks, 'stable'), best config is Milk 공8/스0, Pomegranate 공0/스8; recipients 우유, 마카롱 or 피겨, 실론, 쿠키2, 쿠키3; ~2.1–2.35x vs current.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [
+    {
+     "cookie": "우유",
+     "stats": "model: ATK 8 lines",
+     "why": ""
+    },
+    {
+     "cookie": "석류",
+     "stats": "model: skill amp 8 lines",
+     "why": ""
+    }
+   ],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Model output, not measured"
+   ],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "74813",
+   "url": "https://m.dcinside.com/board/projectcc/74813",
+   "date": "2026-09-24",
+   "title_kr": "17초 이후에 피겨랑 2마리 더 사는데",
+   "title_en": "피겨 and two more survive past 17 s",
+   "relevance": 1,
+   "summary_en": "At ~2.7G (levels excluded) 피겨 + 2 others survive past 17 s; asks how to reach 1T with cherry deck. Reply: infinite retries.",
+   "scores": [
+    {
+     "damage": "<1T",
+     "power": "~2.7G",
+     "ratio": "",
+     "deck": "체리덱",
+     "note": "survives 17 s"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "73149",
+   "url": "https://m.dcinside.com/board/projectcc/73149",
+   "date": "2026-09-23",
+   "title_kr": "배치만 어떻게 잘 되면 달토끼 넣고 17초생존 가능할듯",
+   "title_en": "Moon Rabbit might enable 17 s survival",
+   "relevance": 2,
+   "summary_en": "Candy Apple muses Moon Rabbit (50% ATK-down?) could let the team survive 17 s. Commenter: old back-line survival cutoff was 9M HP + 45% DR; asks whether 4M HP cookies could survive with 50% ATK-down. Another: surviving past 17 s adds little because boss DR rises sharply.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Back-line survival cutoff for 17 s ≈ 9M HP + 45% DR (commenter)",
+    "Boss damage reduction rises a lot after 17 s (commenter)"
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "기존 뒷라인 생존 커트라인이 체 9M에 피감 45퍼였는데",
+     "en": "The old back-line survival cutoff was 9M HP with 45% DR"
+    }
+   ]
+  },
+  {
+   "source": "dc",
+   "id": "66516",
+   "url": "https://m.dcinside.com/board/projectcc/66516",
+   "date": "2026-09-13",
+   "title_kr": "토벌전 500G 넘는거부터 슈가룬 최적화 지리는거같은데",
+   "title_en": "Above 500G it's all sugar-rune optimization",
+   "relevance": 2,
+   "summary_en": "Stuck in the 300G range at >1G power; suspects sugar-rune quality (SR lines locked). Idea: two SSR crit-dmg lines (7%) beat pushing skill amp from 15% to 20%.",
+   "scores": [
+    {
+     "damage": "300G대",
+     "power": ">1G",
+     "ratio": "<300배",
+     "deck": "?",
+     "note": ""
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "65390",
+   "url": "https://m.dcinside.com/board/projectcc/65390",
+   "date": "2026-09-12",
+   "title_kr": "총투 2g로 토벌전 354g가 가능함..?",
+   "title_en": "354G with 2G total account power?",
+   "relevance": 1,
+   "summary_en": "Doubt whether a guildmate with 2G total account power could score 354G; possibly raid-deck power ~1G.",
+   "scores": [
+    {
+     "damage": "354G",
+     "power": "2G total account",
+     "ratio": "",
+     "deck": "?",
+     "note": "unverified"
+    }
+   ],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "dc",
+   "id": "59683",
+   "url": "https://m.dcinside.com/board/projectcc/59683",
+   "date": "2026-09-05",
+   "title_kr": "토벌 치케 리트 조건이",
+   "title_en": "Cheesecake retry condition",
+   "relevance": 1,
+   "summary_en": "Cheesecake-lottery condition: except Milk and 피겨, nobody may exceed Macaron in ATK; then retry infinitely. ATK runes on Macaron judged not great.",
+   "scores": [],
+   "teams": [],
+   "sugar_runes": [],
+   "gear": [],
+   "rng": [],
+   "mechanics": [
+    "Cheesecake lottery precondition: only Milk and 피겨 above Macaron in ATK"
+   ],
+   "disagreements": [],
+   "quotes": []
+  }
+ ],
+ "glossary": [
+  {
+   "kr": "브시커 / 브싴 / 브라이트시커 쿠키",
+   "en": "Brightseeker Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "English-client sugar-rune screen in 64844 shows 'Brightseeker Cookie'; KR screen in 74818 shows 브라이트시커 쿠키"
+  },
+  {
+   "kr": "피노 / 피노누아맛 쿠키",
+   "en": "Pinot Noir Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "64844 English rune screen"
+  },
+  {
+   "kr": "메소 / 메론 / 메론소다맛 쿠키",
+   "en": "Melon Soda Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "64844 English rune screen"
+  },
+  {
+   "kr": "실론 / 실론나이트 쿠키",
+   "en": null,
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "53945-2: SSR, Light element, Defense class; white-bearded armored knight (last slot in most team grids). English name not seen"
+  },
+  {
+   "kr": "정전 / 정글전사 쿠키",
+   "en": null,
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "74818 rune screen title 정글전사 쿠키; English name not seen"
+  },
+  {
+   "kr": "다크초코 쿠키 / 닼초",
+   "en": "Dark Choco Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "69685 stat screen: SSR, moon element, defense"
+  },
+  {
+   "kr": "전갈맛 쿠키 / 전갈",
+   "en": null,
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "53667-3 stat screen: SSR, fire element, ranged; English name not seen"
+  },
+  {
+   "kr": "지나치게 무거워진 피냐타",
+   "en": "Extra-Stuffed Piñata",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "64838 English client screenshot"
+  },
+  {
+   "kr": "길드 토벌전",
+   "en": "Guild Conquest",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "64838 English client screenshot"
+  },
+  {
+   "kr": "전투력 / 투력",
+   "en": "Power",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "64838 English client"
+  },
+  {
+   "kr": "스킬가속 / 스가",
+   "en": "Skill Haste",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844 English rune screen"
+  },
+  {
+   "kr": "스킬증폭 / 스증",
+   "en": "Skill AMP",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844"
+  },
+  {
+   "kr": "이동속도 / 이속",
+   "en": "Mov SPD",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844"
+  },
+  {
+   "kr": "치명피해 / 치피",
+   "en": "CRIT DMG",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844"
+  },
+  {
+   "kr": "치명확률 / 치확",
+   "en": "CRIT%",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844"
+  },
+  {
+   "kr": "피해감소 / 피감",
+   "en": "DMG Reduction",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844"
+  },
+  {
+   "kr": "방어력 증폭",
+   "en": "DEF AMP",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844"
+  },
+  {
+   "kr": "체력 증폭",
+   "en": "HP AMP",
+   "kind": "stat",
+   "confidence": "high",
+   "evidence": "64844"
+  },
+  {
+   "kr": "치명저항 / 치저",
+   "en": "Resistance Rate (?)",
+   "kind": "stat",
+   "confidence": "low",
+   "evidence": "64844 shows 'Resistance Rate Increase' in a slot where KR screens show 치명저항 증가 on other cookies"
+  },
+  {
+   "kr": "17초 / 30초",
+   "en": "countdown-timer marks (17 s super-jump wipe, 30 s slam)",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "Result screens show the battle ending at timer 17.233 (e.g. 70578, 69724, 59350) or 27.900 when wiped at the 30 s slam (69413); 69724 mentions a buff 'at 53 s' — timer counts down"
+  },
+  {
+   "kr": "세계선",
+   "en": "'world-line' = a lucky RNG roll/outcome",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "used throughout for retry outcomes"
+  },
+  {
+   "kr": "빨대",
+   "en": "Pomegranate buff link ('straw')",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "53945, 52639"
+  },
+  {
+   "kr": "한줄서기 / 1자정렬",
+   "en": "single-file line-up of cookies (so Macaron's buff hits Seeker/Scorpion)",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "64839, 65758, 64671"
+  },
+  {
+   "kr": "용병단 (3렙/4렙)",
+   "en": "mercenary corps perk level; lv4 perks called 'broken'",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "66143, 66716"
+  },
+  {
+   "kr": "복지: 열정페이 / 초고속승진 / 공증7% / 올쿠키2%",
+   "en": "perk cards",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "53945, 59442, 74818"
+  },
+  {
+   "kr": "와사비문어",
+   "en": "Wasabi Octopus pet (green, cactus-like icon)",
+   "kind": "pet",
+   "confidence": "low",
+   "evidence": "icon mapping inferred from 66348 comment '와사비 문어를 쓰네' + green pet icon"
+  },
+  {
+   "kr": "핫도그",
+   "en": "Hot Doggie pet (orange sausage-with-mustard icon)",
+   "kind": "pet",
+   "confidence": "low",
+   "evidence": "icon appearance"
+  },
+  {
+   "kr": "판다",
+   "en": "Panda pet (panda face icon)",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "icon"
+  },
+  {
+   "kr": "색동주머니 / 주머니",
+   "en": "new pouch pet (red/white creature icon); max: lift resist 30, HP 12.5%",
+   "kind": "pet",
+   "confidence": "low",
+   "evidence": "75400 comment for stats; icon mapping inferred"
+  },
+  {
+   "kr": "석류 (grid slot 4, moon, red hair)",
+   "en": "Pomegranate",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "76580: slot-4 cookie Lv1 and comment '석류는 왜1이야'"
+  },
+  {
+   "kr": "전갈 (grid slot 8, fire, red hair, bow)",
+   "en": "Scorpion",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "75400: slot-8 Lv45 matches '전갈 레벨 조금 올림'"
+  },
+  {
+   "kr": "다크초코 (grid slot 6)",
+   "en": "Dark Choco",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "69707: slot-6 Lv43 matches '다크초코는 왜 43레벨'"
+  },
+  {
+   "kr": "체리 (grid slot 7, fire, orange, bow)",
+   "en": "Cherry",
+   "kind": "cookie",
+   "confidence": "low",
+   "evidence": "slot-7 is the only Lv1 kept in 69331/75176 cherry decks; disappears in melon decks"
+  },
+  {
+   "kr": "우유 (white doctor with pink bear, guild-banner slot)",
+   "en": "Milk",
+   "kind": "cookie",
+   "confidence": "low",
+   "evidence": "pediatrician look; always Lv100; inference only"
+  }
+ ],
+ "score_distribution": [
+  {
+   "ratio_or_damage": "~1T (title '1t단') / ~625배 (commenter computed)",
+   "power": "1.6G",
+   "deck": "메소덱 (메소 전갈 브시커) + new pet",
+   "retries": "formation lines up ~3 of 4 runs",
+   "source_id": "74759"
+  },
+  {
+   "ratio_or_damage": "~2.8T (780 × 3.6G, computed) / 780배",
+   "power": "3.6G",
+   "deck": "체리덱",
+   "retries": "stalled, then sudden spike",
+   "source_id": "76317"
+  },
+  {
+   "ratio_or_damage": "? / 601배",
+   "power": "?",
+   "deck": "체리덱",
+   "retries": "",
+   "source_id": "71216"
+  },
+  {
+   "ratio_or_damage": "300~400배",
+   "power": "",
+   "deck": "스증 마카롱",
+   "retries": "",
+   "source_id": "69200"
+  },
+  {
+   "ratio_or_damage": "150~300배",
+   "power": "",
+   "deck": "공증 마카롱",
+   "retries": "",
+   "source_id": "69200"
+  },
+  {
+   "ratio_or_damage": "1T / ~565배",
+   "power": "1.77G",
+   "deck": "체리덱",
+   "retries": "",
+   "source_id": "75617"
+  },
+  {
+   "ratio_or_damage": "1T 66G / ~448배 (computed)",
+   "power": "2.38G",
+   "deck": "체리덱 (old pets, 판다)",
+   "retries": "",
+   "source_id": "75176"
+  },
+  {
+   "ratio_or_damage": "981G 118M / 580배",
+   "power": "1.69G",
+   "deck": "체리덱",
+   "retries": "500x ≈ 1 in 5 manual runs; ceiling ≈ best of ~20 runs +10–20%",
+   "source_id": "74815"
+  },
+  {
+   "ratio_or_damage": "893G 197M / 528배",
+   "power": "1.69G",
+   "deck": "체리덱",
+   "retries": "",
+   "source_id": "74758"
+  },
+  {
+   "ratio_or_damage": "6??G (blurred) / 450배",
+   "power": "?",
+   "deck": "메소덱?",
+   "retries": "",
+   "source_id": "70645"
+  },
+  {
+   "ratio_or_damage": "440배",
+   "power": "",
+   "deck": "체리덱",
+   "retries": "",
+   "source_id": "70645"
+  },
+  {
+   "ratio_or_damage": "334G 156M / ~371배",
+   "power": "900.2M",
+   "deck": "체리덱 (정전 haste, 피노 이속)",
+   "retries": "",
+   "source_id": "70638"
+  },
+  {
+   "ratio_or_damage": "443G 441M / 250배",
+   "power": "1.77G",
+   "deck": "공증 마카롱",
+   "retries": "",
+   "source_id": "69212"
+  },
+  {
+   "ratio_or_damage": "462G 534M / ~449배",
+   "power": "1.03G",
+   "deck": "체리덱 + 정전 + 실론",
+   "retries": "",
+   "source_id": "69707"
+  },
+  {
+   "ratio_or_damage": "<160G / <100배",
+   "power": "1.6G",
+   "deck": "?",
+   "retries": "",
+   "source_id": "69707"
+  },
+  {
+   "ratio_or_damage": "~100G",
+   "power": "?",
+   "deck": "",
+   "retries": "",
+   "source_id": "69707"
+  },
+  {
+   "ratio_or_damage": "1T 116G / 641배",
+   "power": "1.74G",
+   "deck": "체리덱",
+   "retries": "10 runs → ~1T once or twice; 1.1T occasionally",
+   "source_id": "75400"
+  },
+  {
+   "ratio_or_damage": "500G",
+   "power": "?",
+   "deck": "체리덱",
+   "retries": "10 runs → ~1T once or twice; 1.1T occasionally",
+   "source_id": "75400"
+  },
+  {
+   "ratio_or_damage": "46G 916M / ~116배",
+   "power": "403.19M",
+   "deck": "체리덱 (early)",
+   "retries": "",
+   "source_id": "69375"
+  },
+  {
+   "ratio_or_damage": "572,544,361,088 / ~511배 (author: 520배)",
+   "power": "1.12G",
+   "deck": "메소덱 + 정전 스가",
+   "retries": "retry until JW buff hits Pomegranate",
+   "source_id": "70578"
+  },
+  {
+   "ratio_or_damage": "6G / ~20배",
+   "power": "300M대",
+   "deck": "?",
+   "retries": "infinite retries (250M → 10G)",
+   "source_id": "69357"
+  },
+  {
+   "ratio_or_damage": "10G / ~40배",
+   "power": "250M",
+   "deck": "?",
+   "retries": "infinite retries (250M → 10G)",
+   "source_id": "69357"
+  },
+  {
+   "ratio_or_damage": "16G / ~57배",
+   "power": "280M",
+   "deck": "?",
+   "retries": "infinite retries (250M → 10G)",
+   "source_id": "69357"
+  },
+  {
+   "ratio_or_damage": "~20G",
+   "power": "300M대",
+   "deck": "",
+   "retries": "infinite retries (250M → 10G)",
+   "source_id": "69357"
+  },
+  {
+   "ratio_or_damage": "45G / ~112배",
+   "power": "400M",
+   "deck": "용병 3렙",
+   "retries": "infinite retries (250M → 10G)",
+   "source_id": "69357"
+  },
+  {
+   "ratio_or_damage": "1,617,831,110,058 / ~600배",
+   "power": "~2.7G (from '600배')",
+   "deck": "체리덱? (주머니 pet, no move speed)",
+   "retries": "",
+   "source_id": "75462"
+  },
+  {
+   "ratio_or_damage": "594,468,439,582 / ~421배",
+   "power": "1.41G",
+   "deck": "호밀 deck (no Cherry), minimal move speed",
+   "retries": "",
+   "source_id": "70172"
+  },
+  {
+   "ratio_or_damage": "1T ?G / ≥478배",
+   "power": "2.09G",
+   "deck": "체리덱",
+   "retries": "",
+   "source_id": "76580"
+  },
+  {
+   "ratio_or_damage": "387G",
+   "power": "same total (~13G)",
+   "deck": "?",
+   "retries": "",
+   "source_id": "76580"
+  },
+  {
+   "ratio_or_damage": "470,505,950,005 / ~457배",
+   "power": "~1.03G (same deck as 69707)",
+   "deck": "체리정전",
+   "retries": "world-line hunting, 'absurdly hard'",
+   "source_id": "69724"
+  },
+  {
+   "ratio_or_damage": "120G / ~267배",
+   "power": "450M",
+   "deck": "?",
+   "retries": "world-line hunting, 'absurdly hard'",
+   "source_id": "69724"
+  },
+  {
+   "ratio_or_damage": "450~500배",
+   "power": "",
+   "deck": "체리덱",
+   "retries": "infinite retries",
+   "source_id": "69832"
+  },
+  {
+   "ratio_or_damage": "540G",
+   "power": "?",
+   "deck": "?",
+   "retries": "infinite retries",
+   "source_id": "69832"
+  },
+  {
+   "ratio_or_damage": "86?G / ~400배",
+   "power": "2.06G",
+   "deck": "메소덱",
+   "retries": "",
+   "source_id": "76022"
+  },
+  {
+   "ratio_or_damage": "",
+   "power": "2.45G",
+   "deck": "정전",
+   "retries": "",
+   "source_id": "76419"
+  },
+  {
+   "ratio_or_damage": "14,657,991,631 / ~58배",
+   "power": "254.47M",
+   "deck": "체리덱 + 허브",
+   "retries": "",
+   "source_id": "69413"
+  },
+  {
+   "ratio_or_damage": "25G 284M / ~59배",
+   "power": "425.55M",
+   "deck": "early melon/rye deck, no 실론",
+   "retries": "",
+   "source_id": "53945"
+  },
+  {
+   "ratio_or_damage": "14G→17G",
+   "power": "?",
+   "deck": "copy",
+   "retries": "",
+   "source_id": "53945"
+  },
+  {
+   "ratio_or_damage": "92,721,575,932 / ~169배",
+   "power": "~550M",
+   "deck": "치케 로또덱 (전갈메소)",
+   "retries": "전갈메소 peak once in 5 h; 호밀메소 near-peak ~8×/h",
+   "source_id": "59442"
+  },
+  {
+   "ratio_or_damage": "85,666,848,921 / ~143배",
+   "power": "~600M",
+   "deck": "치케 로또덱 (호밀메소)",
+   "retries": "전갈메소 peak once in 5 h; 호밀메소 near-peak ~8×/h",
+   "source_id": "59442"
+  },
+  {
+   "ratio_or_damage": "47G 891M / ~89배",
+   "power": "536.61M",
+   "deck": "no-실론 common deck + 들개",
+   "retries": "",
+   "source_id": "53669"
+  },
+  {
+   "ratio_or_damage": "1G 187M",
+   "power": "?",
+   "deck": "launch-day light deck",
+   "retries": "",
+   "source_id": "48559"
+  },
+  {
+   "ratio_or_damage": "203,600,667,677 / ~295배",
+   "power": "689M",
+   "deck": "메소덱 (move-speed)",
+   "retries": "single-file line-up ~1 in 3 runs",
+   "source_id": "65758"
+  },
+  {
+   "ratio_or_damage": "199,092,348,546 / ~291배",
+   "power": "685.14M",
+   "deck": "메소덱 + 허브",
+   "retries": "",
+   "source_id": "64838"
+  },
+  {
+   "ratio_or_damage": "47G 891M / ~91배",
+   "power": "528.14M",
+   "deck": "no-실론 deck",
+   "retries": "'infinite retries'",
+   "source_id": "53986"
+  },
+  {
+   "ratio_or_damage": "4.9G / ~30배",
+   "power": "162.84M",
+   "deck": "same",
+   "retries": "'infinite retries'",
+   "source_id": "53986"
+  },
+  {
+   "ratio_or_damage": "106,812,748,586 / ~231배",
+   "power": "462.45M",
+   "deck": "메소덱 + 허브",
+   "retries": "",
+   "source_id": "59350"
+  },
+  {
+   "ratio_or_damage": "21G / ~44배",
+   "power": "476.94M",
+   "deck": "저점 보장덱",
+   "retries": "",
+   "source_id": "59298"
+  },
+  {
+   "ratio_or_damage": "130G / ~188배",
+   "power": "690.73M",
+   "deck": "메소덱 (념글)",
+   "retries": "",
+   "source_id": "59825"
+  },
+  {
+   "ratio_or_damage": "2G 251M / ~10배",
+   "power": "230.19M",
+   "deck": "launch-day no-실론",
+   "retries": "",
+   "source_id": "47632"
+  },
+  {
+   "ratio_or_damage": "30,910,684,402 / ~59배",
+   "power": "520.37M",
+   "deck": "전갈 deck",
+   "retries": "",
+   "source_id": "58428"
+  },
+  {
+   "ratio_or_damage": "12G",
+   "power": "similar",
+   "deck": "same",
+   "retries": "",
+   "source_id": "58428"
+  },
+  {
+   "ratio_or_damage": "59G 827M / ~171배",
+   "power": "350.19M",
+   "deck": "메소덱 + 허브 + 치케 Lv1",
+   "retries": "long retries; advice: stop at 150x",
+   "source_id": "66716"
+  },
+  {
+   "ratio_or_damage": "659G 961M / ~443배",
+   "power": "1.49G",
+   "deck": "체리덱 + 허브",
+   "retries": "",
+   "source_id": "69331"
+  },
+  {
+   "ratio_or_damage": "120G 24M / ~161배",
+   "power": "747.36M",
+   "deck": "메소덱 + 정전",
+   "retries": "30 min of retries",
+   "source_id": "60231"
+  },
+  {
+   "ratio_or_damage": "94G → 110G",
+   "power": "?",
+   "deck": "Herb → JW",
+   "retries": "",
+   "source_id": "59829"
+  },
+  {
+   "ratio_or_damage": "616G 853M / ~467배",
+   "power": "1.32G",
+   "deck": "#1 guild deck (체리/정전?)",
+   "retries": "",
+   "source_id": "66348"
+  },
+  {
+   "ratio_or_damage": "35,144,304,747",
+   "power": "?",
+   "deck": "우유/마카/피겨 straws",
+   "retries": "",
+   "source_id": "58508"
+  },
+  {
+   "ratio_or_damage": "44G 144M / ~71배",
+   "power": "619.15M",
+   "deck": "stage preset",
+   "retries": "stage preset: best of 8 h macro",
+   "source_id": "64957"
+  },
+  {
+   "ratio_or_damage": "109G 634M / ~206배",
+   "power": "532.74M",
+   "deck": "raid preset + move speed",
+   "retries": "stage preset: best of 8 h macro",
+   "source_id": "64957"
+  },
+  {
+   "ratio_or_damage": "~300배",
+   "power": "",
+   "deck": "메소덱",
+   "retries": "",
+   "source_id": "66531"
+  },
+  {
+   "ratio_or_damage": "+~100G peak",
+   "power": "627.68M",
+   "deck": "메소덱",
+   "retries": "",
+   "source_id": "64839"
+  },
+  {
+   "ratio_or_damage": "56G / ~96배",
+   "power": "585.56M (600M at full levels)",
+   "deck": "메소덱",
+   "retries": "",
+   "source_id": "53586"
+  },
+  {
+   "ratio_or_damage": "827G",
+   "power": "?",
+   "deck": "#1 guild (체리)",
+   "retries": "",
+   "source_id": "66459"
+  },
+  {
+   "ratio_or_damage": "73G 83M / ~120배",
+   "power": "607.95M",
+   "deck": "메소덱 + 허브",
+   "retries": "",
+   "source_id": "60521"
+  },
+  {
+   "ratio_or_damage": "10G 979M / ~52배",
+   "power": "212.1M",
+   "deck": "same",
+   "retries": "",
+   "source_id": "60521"
+  },
+  {
+   "ratio_or_damage": "142G",
+   "power": "<607M",
+   "deck": "호밀 instead of 전갈",
+   "retries": "",
+   "source_id": "60521"
+  },
+  {
+   "ratio_or_damage": "112,824,807,845 / ~237배",
+   "power": "~475M",
+   "deck": "메소덱 (호밀→전갈)",
+   "retries": "commenter: 6 h of retries → 36G",
+   "source_id": "59932"
+  },
+  {
+   "ratio_or_damage": "36G / ~90배",
+   "power": "400M",
+   "deck": "same",
+   "retries": "commenter: 6 h of retries → 36G",
+   "source_id": "59932"
+  },
+  {
+   "ratio_or_damage": "150G 78M / ~194배",
+   "power": "772.94M",
+   "deck": "메소덱 + 정전",
+   "retries": "commenter used macro (320G)",
+   "source_id": "60763"
+  },
+  {
+   "ratio_or_damage": "320G / ~337배",
+   "power": "950M",
+   "deck": "?",
+   "retries": "commenter used macro (320G)",
+   "source_id": "60763"
+  },
+  {
+   "ratio_or_damage": "30G → 40G",
+   "power": "?",
+   "deck": "?",
+   "retries": "",
+   "source_id": "60820"
+  },
+  {
+   "ratio_or_damage": "150배",
+   "power": "",
+   "deck": "메소덱 + move speed",
+   "retries": "",
+   "source_id": "66083"
+  },
+  {
+   "ratio_or_damage": "~300배",
+   "power": "",
+   "deck": "치케덱",
+   "retries": "",
+   "source_id": "66083"
+  },
+  {
+   "ratio_or_damage": "<1T",
+   "power": "~2.7G",
+   "deck": "체리덱",
+   "retries": "",
+   "source_id": "74813"
+  },
+  {
+   "ratio_or_damage": "300G대 / <300배",
+   "power": ">1G",
+   "deck": "?",
+   "retries": "",
+   "source_id": "66516"
+  },
+  {
+   "ratio_or_damage": "354G",
+   "power": "2G total account",
+   "deck": "?",
+   "retries": "",
+   "source_id": "65390"
+  },
+  {
+   "ratio_or_damage": "300배+ (title only)",
+   "power": "",
+   "deck": "정전 (survives 30 s)",
+   "retries": "",
+   "source_id": "76283"
+  },
+  {
+   "ratio_or_damage": "100G (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "71136"
+  },
+  {
+   "ratio_or_damage": "120배 (title only)",
+   "power": "",
+   "deck": "mercenary lv3",
+   "retries": "",
+   "source_id": "66856"
+  },
+  {
+   "ratio_or_damage": "400~500배 (title only)",
+   "power": "",
+   "deck": "치케덱",
+   "retries": "",
+   "source_id": "66304"
+  },
+  {
+   "ratio_or_damage": "100G+ (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "66079"
+  },
+  {
+   "ratio_or_damage": "200G (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "65235"
+  },
+  {
+   "ratio_or_damage": "972G (poster asks if hacked) (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "64947"
+  },
+  {
+   "ratio_or_damage": "100배 (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "64698"
+  },
+  {
+   "ratio_or_damage": "38G (title only)",
+   "power": "580M",
+   "deck": "",
+   "retries": "",
+   "source_id": "64659"
+  },
+  {
+   "ratio_or_damage": "146G (title only)",
+   "power": "838M",
+   "deck": "",
+   "retries": "",
+   "source_id": "64557"
+  },
+  {
+   "ratio_or_damage": "200배 (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "64520"
+  },
+  {
+   "ratio_or_damage": "8G (title only)",
+   "power": "364M",
+   "deck": "",
+   "retries": "",
+   "source_id": "60843"
+  },
+  {
+   "ratio_or_damage": "10G (title only)",
+   "power": "",
+   "deck": "lag spike",
+   "retries": "",
+   "source_id": "60757"
+  },
+  {
+   "ratio_or_damage": "100G+ (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "60752"
+  },
+  {
+   "ratio_or_damage": "62G (title only)",
+   "power": "607M",
+   "deck": "",
+   "retries": "",
+   "source_id": "60551"
+  },
+  {
+   "ratio_or_damage": "57G (title only)",
+   "power": "670M",
+   "deck": "",
+   "retries": "",
+   "source_id": "60531"
+  },
+  {
+   "ratio_or_damage": "31G (title only)",
+   "power": "418M",
+   "deck": "",
+   "retries": "",
+   "source_id": "60213"
+  },
+  {
+   "ratio_or_damage": "35G (title only)",
+   "power": "490M",
+   "deck": "mercenary lv3",
+   "retries": "",
+   "source_id": "59859"
+  },
+  {
+   "ratio_or_damage": "25G (title only)",
+   "power": "550M",
+   "deck": "",
+   "retries": "",
+   "source_id": "59280"
+  },
+  {
+   "ratio_or_damage": "200배 (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "59250"
+  },
+  {
+   "ratio_or_damage": "1.7G (title only)",
+   "power": "83M",
+   "deck": "",
+   "retries": "",
+   "source_id": "58877"
+  },
+  {
+   "ratio_or_damage": "21T (rank-1 user? title) (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "58557"
+  },
+  {
+   "ratio_or_damage": "'79M' (likely 79G) (title only)",
+   "power": "690M",
+   "deck": "1 hour of retries",
+   "retries": "",
+   "source_id": "58535"
+  },
+  {
+   "ratio_or_damage": "floor 8G / peak 23G (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "58530"
+  },
+  {
+   "ratio_or_damage": "48G (title only)",
+   "power": "740M",
+   "deck": "",
+   "retries": "",
+   "source_id": "58519"
+  },
+  {
+   "ratio_or_damage": "16.5G (title only)",
+   "power": "",
+   "deck": "Seeker 5★",
+   "retries": "",
+   "source_id": "58503"
+  },
+  {
+   "ratio_or_damage": "18G (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "58430"
+  },
+  {
+   "ratio_or_damage": "26G (title only)",
+   "power": "460M",
+   "deck": "치케",
+   "retries": "",
+   "source_id": "54326"
+  },
+  {
+   "ratio_or_damage": "27G (title only)",
+   "power": "438M",
+   "deck": "",
+   "retries": "",
+   "source_id": "54311"
+  },
+  {
+   "ratio_or_damage": "8G (title only)",
+   "power": "210M",
+   "deck": "",
+   "retries": "",
+   "source_id": "54013"
+  },
+  {
+   "ratio_or_damage": "4.48G (title only)",
+   "power": "130M",
+   "deck": "",
+   "retries": "",
+   "source_id": "53824"
+  },
+  {
+   "ratio_or_damage": "2G (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "53725"
+  },
+  {
+   "ratio_or_damage": "26G (title only)",
+   "power": "480M",
+   "deck": "",
+   "retries": "",
+   "source_id": "53173"
+  },
+  {
+   "ratio_or_damage": "51G (title only)",
+   "power": "608M",
+   "deck": "",
+   "retries": "",
+   "source_id": "53077"
+  },
+  {
+   "ratio_or_damage": "2.19G (title only)",
+   "power": "110M",
+   "deck": "",
+   "retries": "",
+   "source_id": "51587"
+  },
+  {
+   "ratio_or_damage": "1.9G (title only)",
+   "power": "",
+   "deck": "day 1",
+   "retries": "",
+   "source_id": "51346"
+  },
+  {
+   "ratio_or_damage": "2.5G (title only)",
+   "power": "200M",
+   "deck": "day 1",
+   "retries": "",
+   "source_id": "48407"
+  },
+  {
+   "ratio_or_damage": "60G (title only)",
+   "power": "",
+   "deck": "day 1",
+   "retries": "",
+   "source_id": "47387"
+  },
+  {
+   "ratio_or_damage": "top guilds up to 600배 (hearsay) (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "65783"
+  },
+  {
+   "ratio_or_damage": "200배 max vs 300~600배 'hacks?' (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "66377"
+  },
+  {
+   "ratio_or_damage": "<1T (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "76598"
+  },
+  {
+   "ratio_or_damage": "100배 = 'infinite-retry territory?' (title only)",
+   "power": "",
+   "deck": "",
+   "retries": "",
+   "source_id": "66121"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.vite/
+
+# local database and scratch
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.env
+.env.*
+
+# personal Claude Code overrides
+.claude/settings.local.json
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini

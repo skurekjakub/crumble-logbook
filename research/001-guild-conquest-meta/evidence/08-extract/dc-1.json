@@ -1,0 +1,768 @@
+{
+  "batch": "dc-1",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "17035",
+      "url": "https://m.dcinside.com/board/projectcc/17035",
+      "date": "2026-08-07",
+      "title_kr": "[📚정보] 전투력 보정 정리",
+      "title_en": "[Info] Summary of the combat-power correction",
+      "relevance": 1,
+      "summary_en": "Explains the stepped final-damage multiplier from team power vs. a stage's recommended power (sourced from crumblehub.co). Below 100% of the recommendation, damage drops in steps. At 120% or more it caps at 120%. This is for stages. The post doesn't say whether Guild Conquest uses it.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Stage power correction tiers from the image (stage 42-17, recommended 8,093,303): <10% of recommended -> 1% final dmg; >=10% -> 5%; >=20% -> 15%; >=40% -> 35%; >=60% -> 55%; >=80% -> 75%; >=100% -> 100%; >=120% -> 120% (max).",
+        "Body: '전투력 아무리 올려도 120%가 최대' (no benefit beyond 120% of recommended power). Stage-scoped. The post does not say whether it applies to Guild Conquest."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "현재 전투력을 권장 전투력과 비교해 최종 데미지에 단계별 배율 적용됨", "en": "Current power is compared with recommended power, and a stepped multiplier is applied to final damage"},
+        {"kr": "전투력 아무리 올려도 120%가 최대", "en": "No matter how much you raise power, 120% is the max"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "31305",
+      "url": "https://m.dcinside.com/board/projectcc/31305",
+      "date": "2026-08-14",
+      "title_kr": "[📚정보] 스킬가속 정리",
+      "title_en": "[Info] Skill haste summary",
+      "relevance": 2,
+      "summary_en": "Datamine of game version 1.1.002. Skill haste uses the LoL-style formula: final CD = base CD × 100/(100+haste). Only the root skill cooldown is hasted. Internal delays of multi-stage skills, such as child spawn delays and dash intervals, are not. That is why haste seems to work differently per cookie.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Final cooldown = base cooldown × 100 / (100 + H), with H = SkillHaste raw value / 10,000. Cooldown reduction = H/(100+H). Haste 10 -> 9.09%, 20 -> 16.67%, 50 -> 33.33%, 100 -> 50%, 200 -> 66.67%. No cap was found in the calc function.",
+        "Diminishing returns: haste 50 gives a 33% cooldown cut, not 50%. Example: 12 s base at 50 haste = 8 s.",
+        "No per-skill haste coefficient or IgnoreHaste tag exists in 1.1.002 data (901 Cooldown entries, 56 SkillZeroInitialCooldownModel). SkillZeroInitialCooldownTag makes the first cast instant.",
+        "Multi-stage skills: only the parent skill cooldown is hasted. SpawnDelay, durations and follow-up attack intervals are not. Example, Cream Soda (크림소다맛 쿠키): root CD 3.5 s -> 2.333 s at haste 50, while the 0.58 s and 1.10 s internal delays are unchanged. Example, 피겨여왕맛 쿠키: root CD 8 s -> 5.333 s at haste 50, while the 1 s gaps between its 4 dashes are unchanged.",
+        "Other reasons measured haste can look different: an animation or action lock can delay a recast after the cooldown ends (the gap grows at high haste); StateTriggerConditionModel skills need extra trigger conditions; frame/tick rounding; and role/element conditional haste bonuses (FinalStatData.AbilityHaste)."
+      ],
+      "disagreements": [
+        "Commenters conclude '25까지만 챙기는게 효율적' (only ~25 haste is efficient) for arena. This is the arena context, not raid."
+      ],
+      "quotes": [
+        {"kr": "스킬가속 공식: 기본쿨 * 100/(100+스가)", "en": "Skill haste formula: base CD × 100/(100+haste)"},
+        {"kr": "기본 쿨타임 자체는 모든 스킬이 다 똑같이 감소하지만, 몇몇 스킬들은 스킬 구조에 따라 또 다른 내부 쿨타임들이 있는 경우가 있음. 이런 내부 쿨타임들은 스킬가속 적용을 받지 못한다고 한다.", "en": "The base cooldown is reduced equally for every skill, but some skills have other internal cooldowns depending on structure, and those are not affected by skill haste."},
+        {"kr": "롤이랑 똑같은 계산식인데 ssr 한줄에 4 5 ㅇㅈㄹ로 퍼주는거 보면 걍 슈가룬에서 뽑는건 병신짓이였누", "en": "(commenter) Same formula as LoL, and given SSR lines hand out 4-5 each, rolling it on sugar runes was dumb"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "31349",
+      "url": "https://m.dcinside.com/board/projectcc/31349",
+      "date": "2026-08-14",
+      "title_kr": "[📚정보] 치명 관련 스탯 정리",
+      "title_en": "[Info] Crit-related stats summary",
+      "relevance": 2,
+      "summary_en": "Datamine of the crit system. Crit rate above 100% gives tiered crits: 1st/2nd/3rd-degree crits, where the integer part is guaranteed and the fraction is the chance of the next tier. Crit multiplier = 1 + tier × (0.5 + bonus crit dmg). Past 100% effective crit rate, crit damage is worth more per point than crit rate. Sugar-rune max per line is 8% for both crit rate and crit damage.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "(general)", "stats": "Max per sugar-rune line: 치확 8% and 치피 8% (equal)", "why": "Past 100% base crit rate, stack 치피 on sugar runes instead of 치확"}
+      ],
+      "gear": [],
+      "rng": [
+        "Crit tier: N = floor(X) + Bernoulli(X - floor(X)). At 120% effective crit rate, 80% of hits are 1st-degree crits and 20% are 2nd-degree. At 150%: 50/50. At 235%: 65% 2nd-degree, 35% 3rd-degree."
+      ],
+      "mechanics": [
+        "Base crit damage multiplier 1.5× (bonus crit dmg 0).",
+        "Crit dmg multiplier = 1 + crit tier × final crit dmg rate, where final rate = base 50% + bonus crit dmg. With bonus 30%: 1st = 1.8×, 2nd = 2.6×, 3rd = 3.4×.",
+        "Crit rate over 100% does not waste. It rolls higher-tier crits (200% = always 2nd-degree, 300% = always 3rd-degree).",
+        "Marginal value of +10% crit rate is always +0.10× expected. +10% crit dmg adds (effective crit rate × 0.1): 0.025× at 25% CR, 0.10× at 100%, 0.15× at 150%, 0.30× at 300%. Crit rate is better below 100% effective, they are equal at 100%, and crit dmg is better above 100%.",
+        "Worked example: CR 150%, final CD 100% -> 1 + 1.5×1.0 = 2.5×. +10% CR -> 2.6×. +10% CD -> 2.65×.",
+        "Crit resistance on the target lowers effective crit rate, so judge by effective CR after resistance (relevant to arena)."
+      ],
+      "disagreements": [
+        "Commenter: in arena everyone has ~60% 치저, so skip 치피 there. Another commenter: PvE players should take 치피 and arena players 치확."
+      ],
+      "quotes": [
+        {"kr": "치명타 데미지 수식: 1 + 치명타 단계 * (0.5 + 추가 치명타 데미지)", "en": "Crit damage formula: 1 + crit tier × (0.5 + bonus crit damage)"},
+        {"kr": "치명 100% 넘어가면 치뎀에 투자하는게 더 효율 굳", "en": "Once crit is over 100%, investing in crit damage is more efficient"},
+        {"kr": "참고로 슈가룬에서 챙길수 있는 max 치확이랑 치뎀은 둘다 8퍼로 동일.", "en": "For reference, the max crit rate and crit damage you can get on a sugar rune (line) are both 8%."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "32255",
+      "url": "https://m.dcinside.com/board/projectcc/32255",
+      "date": "2026-08-15",
+      "title_kr": "[📚정보] 보스별 덱 정리해봄 (+ 추가 임플란트 덱) (+ 수정 던전 덱)",
+      "title_en": "[Info] Per-boss decks (+ implant deck, + dungeon decks)",
+      "relevance": 1,
+      "summary_en": "Stage-boss decks (비겁이, 쿨링민트, 망치공주, 오염된 그루터기, 은행강도 폭탄광, 폭주단 트럭/바이커, 생크림 콘 독수리, 초코왕방울, 얼음골렘, 설인거인, 용암슈가와플도마뱀), plus element-weakness daily-dungeon decks and a general stage deck. The images are sprite line-ups without names or stats, except the dungeon decks (Lv.68, power 8.25M–9.29M). None of it is Guild Conquest.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Author uses 치케 (Cheesecake) for its ATK buff (공증) and 라임 over 피겨 because 라임 buffs crit rate and heals. A commenter replies that 피겨's crit-dmg buff is stronger but needs crits to land first."
+      ],
+      "disagreements": [
+        "bangsug: '라임보단 피겨가 보통 더 좋지 않나'. Author: '라임이 치확 늘려주고 힐도 넉넉해서 넣음'.",
+        "Several commenters say the 30-20 deck doesn't clear. The author blames their play ('손가락 문제')."
+      ],
+      "quotes": [
+        {"kr": "펫은 갓난갓방울 새콤달곰 초코왕방울( 없으면 핫도그 )", "en": "Pets: 갓난갓방울, 새콤달곰, 초코왕방울 (Hot Doggie if you don't have it)"},
+        {"kr": "아프면 키위나 초코왕방울 딜 넣을려면 핫도그나 문어 하시면 됩니다", "en": "If it hurts, use Kiwi or 초코왕방울; for damage use Hot Doggie or Octopus"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "45804",
+      "url": "https://m.dcinside.com/board/projectcc/45804",
+      "date": "2026-08-27",
+      "title_kr": "[📚정보] 딱히 알 필요는 없는 잡지식(+결론 한 줄 정리)",
+      "title_en": "[Info] Trivia you don't really need",
+      "relevance": 0,
+      "summary_en": "Explains that the border colour of in-battle cookie portraits reflects how many Stella constellation nodes are unlocked. Cosmetic only; no stat effect.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "결론: 스텔라 1별 해금할 때마다 테두리 색이 변함", "en": "Conclusion: each Stella star unlocked changes a border colour"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "46452",
+      "url": "https://m.dcinside.com/board/projectcc/46452",
+      "date": "2026-08-27",
+      "title_kr": "[📢소식] [안내] 스킬 증폭 적용 방식 수정 및 슈가룬 재화 환급 안내",
+      "title_en": "[News] Official notice: skill amp application change + sugar rune refund",
+      "relevance": 2,
+      "summary_en": "Official dev notice. Skill amp (스킬증폭) will no longer scale enemy stat-reducing debuffs or damage-reduction buffs, and the defense-reduction floor is set at 0 because stacked skill amp was driving enemy DEF below 0. Listed cookies include 다크초코 쿠키. Sugar runes spent on the listed cookies are refunded in full on 9/1 18:00 KST.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "다크초코 쿠키 and other listed debuffers", "stats": "Skill amp no longer scales their stat-reduction debuff", "why": "Official change; runes refunded so players can re-roll"}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Defense-reduction effects get a lower bound: target DEF can no longer drop below 0. Previously high stacked skill amp pushed DEF negative and final damage 'excessively exceeded normal range'.",
+        "Skill amp no longer applies to (a) debuffs that reduce enemy stats and (b) damage-reduction buffs.",
+        "Affected stat-reduction debuff cookies: 악마맛 쿠키, 팬케이크맛 쿠키, 다크초코 쿠키, 명랑한 쿠키, 양파맛 쿠키, 버블껌맛 쿠키, 뱀파이어맛 쿠키.",
+        "Affected damage-reduction buff cookies: 코코아맛 쿠키, 천사맛 쿠키, 이온맛 쿠키로봇, 이름 모를 케이크 들개.",
+        "Refund: all sugar runes used on the listed cookies before the notice; 9/1 (Tue) 18:00 KST."
+      ],
+      "disagreements": [
+        "A commenter says Dark Choco was broken in the Crumble dungeon before this ('다크초코 크럼블던전 개사기였는데 결국 고쳐졌구나'). Another notes that even without the Pomegranate buff, gear alone gives over 30% skill amp, so PvE gets much harder."
+      ],
+      "quotes": [
+        {"kr": "방어력 감소 효과에 높은 수치의 스킬증폭이 중복 적용될 경우, 대상의 방어력이 0 미만으로 적용되어 최종 피해량이 정상 범위를 과도하게 초과하는 현상이 확인되어 방어력 수치가 0 미만으로 떨어지지 않도록 수정될 예정입니다.", "en": "When high skill amp stacks onto defense-reduction effects, target DEF goes below 0 and final damage excessively exceeds the normal range; DEF will be prevented from dropping below 0."},
+        {"kr": "스킬증폭 미적용 대상 효과 : ㄴ 적의 능력치를 감소시키는 디버프 효과 ㄴ 피해감소 버프 효과", "en": "Effects no longer amplified by skill amp: debuffs that reduce enemy stats; damage-reduction buffs"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "48412",
+      "url": "https://m.dcinside.com/board/projectcc/48412",
+      "date": "2026-08-27",
+      "title_kr": "[일반] 토벌전 피노+판다펫 필수임",
+      "title_en": "Guild Conquest: Pinot (Noir) + Panda pet are mandatory",
+      "relevance": 2,
+      "summary_en": "An early Guild Conquest (Extra Stuffed Piñata) post. With 피노 (Pinot Noir) and the Panda pet the boss 'doesn't jump' on them and damage is very stable. The screenshot shows the lobby: boss is Dark (moon) and weak to Light, personal #1 is 7G 907M, guild #1 광제단 is 40G 861M, and the OP's team is 319.5M power. Commenters report the Panda pet raised their score a lot.",
+      "scores": [
+        {"damage": "7G 907M", "power": "?", "ratio": "?", "deck": "?", "note": "Personal ranking #1 shown in lobby: 스피키맛쿠키 (title 부스러기); not the OP's score"},
+        {"damage": "40G 861M", "power": "?", "ratio": "?", "deck": "guild total", "note": "Guild ranking #1 광제단; #2 슈가슈가룬 85M 819K; #3 純愛クッキー 2M 649K (early season)"}
+      ],
+      "teams": [{
+        "name": "OP's 토벌전 deck (slot 1)",
+        "cookies": [
+          {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "Row1 pos1: Grass, shooter icon, green leafy cookie"},
+          {"kr": "? (likely 브시커)", "en": null, "level": "100", "stars": "5", "note": "Row1 pos2: Light, shooter icon, pink-hat cookie. Same sprite that 60340 appears to label 시커 (low confidence)"},
+          {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "Row1 pos3: Fire, shooter icon, cookie in brown hat with red coat"},
+          {"kr": "피노누아 (할배)", "en": "Pinot Noir", "level": "80", "stars": "5", "note": "Row1 pos4: Dark, support icon, older mustached cookie. Identified from the title plus 51143/52401 context (medium confidence). Lv.80, not 100"},
+          {"kr": "?", "en": null, "level": "80", "stars": "5", "note": "Row1 pos5: Dark, shooter icon, orange horned devil-like cookie; Lv.80"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "5", "note": "Row1 pos6: Light, support icon, doctor with pink bear; leader banner (단장)"},
+          {"kr": "?", "en": null, "level": "90", "stars": "5", "note": "Row2 pos1: Grass, support icon, pink-haired cookie with red/white hat and drum; Lv.90"},
+          {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "Row2 pos2: Fire, shooter icon, red-haired cookie"},
+          {"kr": "? (possibly 메소)", "en": null, "level": "100", "stars": "5", "note": "Row2 pos3: Water, shooter icon, green hair with goggles"},
+          {"kr": "석류", "en": "Pomegranate", "level": "95", "stars": "5", "note": "Row2 pos4: Dark, support icon, red cookie with pomegranates; Lv.95"},
+          {"kr": "? (possibly 피겨)", "en": null, "level": "100", "stars": "5", "note": "Row2 pos5: Water, charge (bell) icon, gingerbread face with purple headband"},
+          {"kr": "?", "en": null, "level": "97", "stars": "5", "note": "Row2 pos6: Fire, defense (shield) icon, red/white cookie with horns; Lv.97"}
+        ],
+        "pets": ["? (yellow dumpling-like pet, ★20)", "? (pink-haired pet with blue lightning, ★10)", "판다(만두) (★15)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "Screenshot is the lobby grid (6+6); no battle formation shown",
+        "substitutions": [],
+        "unorthodox": ["Several cookies are deliberately below Lv.100 (피노 Lv.80, a dark shooter Lv.80, a grass support Lv.90, 석류 Lv.95, a fire defender Lv.97). No reason is stated; later posts tie level-tuning to steering Pomegranate's buff."]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Boss 지나치게 무거워진 피냐타 is Dark (moon icon) with 약점 shown as Light (sun icon) on the lobby screen.",
+        "With 피노 + Panda pet, per the OP: '걍 점프를 안하는데?' (the boss just doesn't jump / the cookies aren't launched), and damage is very stable. Commenter: '와 석류 스킬이 안끊기네' (Pomegranate's skill no longer gets interrupted)."
+      ],
+      "disagreements": [
+        "Commenter suggests getting Pomegranate's buff onto 할배 (Pinot) could reach 100 lift resistance. In 52401 a commenter says Pinot's lift resistance isn't boosted by skill amp ('피노누아 스증도 안되니')."
+      ],
+      "quotes": [
+        {"kr": "걍 점프를 안하는데?딜 ㅈㄴ안정적으로 넣음", "en": "It just doesn't jump? Damage goes in super stably"},
+        {"kr": "석류버프가 할배한테 가게 하면 잘만하면 띄우기저항 100 가능할거같은데", "en": "If you get the Pomegranate buff onto grandpa, you might be able to reach 100 lift resistance"},
+        {"kr": "이거보고 판다펫 넣으니 점수 개떡상했네ㅁㅊ", "en": "Saw this, put in the Panda pet, and my score skyrocketed"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "48445",
+      "url": "https://m.dcinside.com/board/projectcc/48445",
+      "date": "2026-08-27",
+      "title_kr": "[일반] 뒷서버에서 놀다가 토벌전 개인랭킹보니까 무슨 고질라보는거같네",
+      "title_en": "Looking at the conquest personal ranking from a late server is like watching Godzilla",
+      "relevance": 0,
+      "summary_en": "Joke post: top conquest personal scores look like Attack-on-Titan giants to players on newer servers. No data.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "51143",
+      "url": "https://m.dcinside.com/board/projectcc/51143",
+      "date": "2026-08-28",
+      "title_kr": "[📚정보] 본인 1~5덱 편성 공유(이걸로 더이상 보스별 덱 검색 안함)",
+      "title_en": "[Info] Sharing my decks 1-5 for stage bosses",
+      "relevance": 1,
+      "summary_en": "Stage-boss decks at 72-86M power: 비겁이, 쿨링민트, a lift-boss deck for 망치공주/그루터기, and an all-in-one deck. Not Guild Conquest. The details that carry over: the author fixes 우유 as 단장 (leader), and a commenter says the Panda Dumpling pet keeps 피겨 and 석류 from being interrupted by the boss drill. The lift-boss deck makes the 'blue panda' pet mandatory.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [
+        "Author frames the boss clears as 'pray meta' (기도메타), with each deck clearing within ~10 retries (10트안에)."
+      ],
+      "mechanics": [
+        "Lift (띄우기) bosses: 'the blue panda pet is mandatory because of the lifting' (띄우기때문에 파란색 팬더곰 필수임).",
+        "Commenter: with the Panda Dumpling pet, even a direct hit from 쿨민's drill doesn't interrupt 피겨 and 석류."
+      ],
+      "disagreements": [
+        "Commenter 우엉. says swapping 쿨민 for 할배 plus the Panda pet in deck 4 clears everything except 비겁이. The author doesn't know who '할배' is."
+      ],
+      "quotes": [
+        {"kr": "쿨민이도 펫 판다만두로 바꾸셈. 쿨민이 드릴 깡으로 맞아도 피겨랑 석류 안끊김", "en": "Switch the pet to Panda Dumpling for Cooling Mint too; even taking the drill raw, Figure and Pomegranate don't get interrupted"},
+        {"kr": "단장 누구로 해놨어? / 우유 고정", "en": "Who is your leader? / Milk, fixed"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "52401",
+      "url": "https://m.dcinside.com/board/projectcc/52401",
+      "date": "2026-08-29",
+      "title_kr": "[📚정보] 띄우기 저항 작동 방식 정리",
+      "title_en": "[Info] How lift (airborne) resistance works",
+      "relevance": 3,
+      "summary_en": "Lift resistance shortens airborne time; it is not a chance to ignore the lift. Resistances combine multiplicatively, and a skill is cancelled if the cookie is airborne for 0.4 s or more. Base 20% + Pinot Noir 35% = 48%, and adding the Panda Dumpling pet's 20% gives 64%, so a 1 s lift drops to 0.36 s and no longer cancels skills. The OP also gives lift durations for several cookies.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Final lift resistance = base + extra − (base × extra). Airborne time = original × (1 − final resistance).",
+        "A cookie airborne for 0.4 s or more has its current skill cancelled. Under 0.4 s it lifts briefly but the skill continues.",
+        "All cookies have 20% base lift resistance. A 1 s lift becomes 0.8 s, so the skill is cancelled.",
+        "피노누아 (Pinot Noir) buff: +35% lift resistance to allies, 10 s duration, 9.5 s skill CD, max 1 stack (re-cast only refreshes), dispellable. It is effectively always up.",
+        "Base + Pinot: 20% + 35% − 7% = 48%. A 1 s lift becomes 0.52 s (cancelled); a 0.75 s lift becomes 0.39 s (not cancelled).",
+        "Pinot + 판다만두 pet (20%): extra = 35% + 20% = 55%, and 20% + 55% − 11% = 64%. A 1 s lift becomes 0.36 s, so the skill is not cancelled.",
+        "Lift resistance does not reduce damage, does not apply to knockback, stun or root, is separate from focus/resist rolls, and does not shorten a lift already in progress.",
+        "OP's lift durations (comment): 크림소다 0.3 s; 코코아, 슈크림, 복숭아, 이온, 에스프레소, 요거트베리, 찰스 etc. 0.4 s; 용감한 쿠키 and 근육맛 0.45 s at low tier, 0.6 s at high tier; 쿨링민트 0.4 s -> 0.6 s; 이름 모를 케이크 들개 1.2 s. Monsters all differ. The boss's lift duration is unknown."
+      ],
+      "disagreements": [
+        "Commenter: with base 20% a 0.4 s lift becomes 0.32 s, so it wouldn't cancel. The thread links this to Pomegranate being interrupted by 슈크림.",
+        "Commenter lolhhkyne: Pinot's buff isn't boosted by skill amp either, so the Panda pet is the only other option."
+      ],
+      "quotes": [
+        {"kr": "띄우기는 그대로 걸리는데 공중에 떠 있는 시간만 줄여주는 옵션임", "en": "The lift still applies; the option only shortens airborne time"},
+        {"kr": "이 게임은 실제로 공중에 떠 있는 시간이 0.4초 이상이면 쓰던 스킬이 취소됨", "en": "In this game, if a cookie is actually airborne 0.4 s or more, the skill it was using is cancelled"},
+        {"kr": "20% + 55% - (20% × 55%) = 최종 64% 이 경우 1초짜리 띄우기도 0.36초로 줄어들어서 스킬이 안 끊김", "en": "20% + 55% − (20% × 55%) = 64% final; then even a 1 s lift shrinks to 0.36 s and the skill isn't interrupted"},
+        {"kr": "피노누아 스증도 안되니 진짜 판다 같이 쓰는거 말곤 방법이 딱히 없네 그럼", "en": "(commenter) Pinot Noir doesn't get skill-amp either, so there's really no way other than using Panda alongside"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "53921",
+      "url": "https://m.dcinside.com/board/projectcc/53921",
+      "date": "2026-08-30",
+      "title_kr": "[일반] 토벌덱 좃구리네 씨발새끼가",
+      "title_en": "Conquest deck sucks (rant)",
+      "relevance": 0,
+      "summary_en": "Rant with an MS-Paint meme image. A commenter says 밀키 and 슈크림 aren't it.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "밀키랑 슈크림은 아니긴해 ㅋㅋ", "en": "(commenter) Milky and Cream Puff really aren't it lol"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "53977",
+      "url": "https://m.dcinside.com/board/projectcc/53977",
+      "date": "2026-08-30",
+      "title_kr": "[📚정보] 슈가룬 질문많길래 정리해봄",
+      "title_en": "[Info] Sugar rune guide (by role)",
+      "relevance": 3,
+      "summary_en": "Per-cookie sugar rune stat priorities by role. The key rule: dealers get no ATK% because Milk must be the highest-ATK cookie. Milk's buff scales with her ATK, and a mercenary-corps perk gives the top-ATK cookie a 20% ATK card. Bright Seeker takes skill amp and haste, or all haste for conquest high scores. Pomegranate is all skill amp and Milk is all ATK%.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "브시커", "stats": "스증 스가 (토벌 고점볼거면 올스가 / all haste for conquest high score)", "why": "Commenter: skill amp boosts the drone damage; crit rate/crit dmg not useful for it"},
+        {"cookie": "바궁", "stats": "스증 치피 치확", "why": ""},
+        {"cookie": "메론소다", "stats": "스증 치피 치확", "why": ""},
+        {"cookie": "전갈", "stats": "치피 치확 스증", "why": ""},
+        {"cookie": "밀키", "stats": "스증 치피 치확", "why": ""},
+        {"cookie": "호밀", "stats": "스증 치피 공증 치확", "why": ""},
+        {"cookie": "트즐", "stats": "스증 치피 치확", "why": ""},
+        {"cookie": "에소", "stats": "스증 치확 치피 스가", "why": ""},
+        {"cookie": "other dealers", "stats": "스증 치확 치피 (공증 etc. skill-damage stats)", "why": "Dealers generally skip 공증 so Milk stays top ATK"},
+        {"cookie": "피노누아", "stats": "집중 스가 피감", "why": ""},
+        {"cookie": "석류", "stats": "스증 (all)", "why": "Commenter: one SSR 스가 line is OK but skill amp is far more efficient; Pomegranate won't exceed Milk's ATK since it has no 공증"},
+        {"cookie": "우유", "stats": "공증 (all)", "why": "Milk's buff scales with her ATK. She needs top ATK for the 용병단 lvl-4 perk (20% ATK card to the #1-ATK cookie) and always receives Pomegranate's buff. Commenter: even with 5 SSR 스증 lines, re-roll to 공증; no 스가 needed"},
+        {"cookie": "허브", "stats": "공증 스증 스가 피감", "why": ""},
+        {"cookie": "마카롱", "stats": "스증", "why": ""},
+        {"cookie": "라임", "stats": "스증 스가", "why": ""},
+        {"cookie": "포도넝쿨", "stats": "공증 스증 피감 스가", "why": ""},
+        {"cookie": "치약초코", "stats": "스증 스가", "why": ""},
+        {"cookie": "에일리언 도넛", "stats": "집중 스가", "why": ""},
+        {"cookie": "오렌지", "stats": "스증 스가", "why": ""},
+        {"cookie": "락스타", "stats": "스증 스가", "why": ""},
+        {"cookie": "치케", "stats": "스증 스(가?) (text: '스증 스')", "why": "Text truncated in the post"},
+        {"cookie": "쿨민", "stats": "스증 스가 치피 치확 공증", "why": ""},
+        {"cookie": "정전", "stats": "스가", "why": ""},
+        {"cookie": "명랑", "stats": "집중 피감 스가", "why": ""},
+        {"cookie": "탐험가", "stats": "스가 피감", "why": ""},
+        {"cookie": "방랑자", "stats": "X (none / don't invest)", "why": ""},
+        {"cookie": "피겨", "stats": "스가 스증", "why": ""},
+        {"cookie": "닼초", "stats": "집중 피감 스가", "why": ""},
+        {"cookie": "이온", "stats": "체력 피감 공증", "why": ""},
+        {"cookie": "이름모를들개", "stats": "스가 피감", "why": ""},
+        {"cookie": "딸크", "stats": "스증 치확 치피 스가", "why": "Commenter: 딸크 plays closer to a dealer"},
+        {"cookie": "(rarity rule)", "stats": "Dealers: 5–6 SSR lines if aiming for rankings, else 3–4 SSR. Single-stat buffers like 석류/우유: 2–3 SSR, or 1–2 SSR plus SR if short on resources", "why": "Commenter answer to SR-vs-SSR question"}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Milk's buff is proportional to Milk's ATK ('우유 버프가 우유 공격력 비례임').",
+        "용병단 (mercenary corps) lvl 4 perk: a 20% ATK card goes to the #1-ATK cookie, so Milk should hold #1 ATK ('나중에 용병단4렙에 공1등 20퍼 공증카드 생겨서 그거 우유줄려면 공증 도배해야함').",
+        "Commenter: Milk always receives Pomegranate's buff ('우유사 석류한테 무조건 버프받는애').",
+        "Commenter: past 1 line of 공증 on dealers it becomes hard to keep them below Milk's ATK, so cap dealers at 1 공증 line. The exact answer depends on each account's star levels, so compare ATK against Milk yourself."
+      ],
+      "disagreements": [
+        "Some people recommended 명중 (accuracy) on 전갈. The OP and commenters call that 'not understanding the game' ('씹겜안분'). The OP says the source guide (찻집) had junk stats like 명중 which he removed.",
+        "Commenter 바없찐탈출: they ended up putting only 공증 on 호밀 to get it the Pomegranate buff. This conflicts with the no-공증-on-dealers rule.",
+        "A late commenter says they heard 치케 is better with 스가."
+      ],
+      "quotes": [
+        {"kr": "브시커 - 스증 스가 ( 토벌 고점볼거면 올스가)", "en": "Bright Seeker - skill amp, skill haste (all haste if you want the conquest high score)"},
+        {"kr": "딜러들 공증안주는이유는 우유가 공1등 먹어야해서임", "en": "The reason dealers get no ATK% is that Milk has to be #1 in ATK"},
+        {"kr": "ㅇㅇ 5줄이여도 공증이절대적임 공증20퍼 우유가받으면 팀전체적으로 공증이랑 힐받는게 압도적이라", "en": "Yes, even with 5 lines, ATK% is absolute — when Milk gets the 20% ATK the whole team's ATK buff and healing is overwhelming"},
+        {"kr": "딜러는 좀 랭킹노릴거면 5~6줄하고 아니면 3~4줄 ssr이맞고 석류나 우유처럼 옵션 한개 저격해야하는것들은 2~3개 여유없으면 1~2개만 ssr하고 나머지 sr로 하는게맞음", "en": "Dealers: 5–6 SSR lines if chasing rankings, else 3–4; single-stat cookies like Pomegranate/Milk 2–3 SSR, or 1–2 SSR + SR if tight"},
+        {"kr": "대충 비교해봤는데 2줄부턴 확실히 우유보다 공낮게맞추기 빡센듯 1줄까지만하고 치확 치피 스증으로 도배 ㄱ", "en": "Roughly compared: from 2 lines it's hard to keep ATK below Milk; do at most 1 line, fill the rest with crit rate/crit dmg/skill amp"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "54497",
+      "url": "https://m.dcinside.com/board/projectcc/54497",
+      "date": "2026-08-31",
+      "title_kr": "[일반] 토벌전 1위 떳노?!",
+      "title_en": "Got #1 in Guild Conquest?!",
+      "relevance": 1,
+      "summary_en": "OP (풀지갑) shows the first-season Guild Conquest personal ranking, where he is #1 at 248G 450M (guild Carpediem). No deck is shared; commenters ask for it.",
+      "scores": [
+        {"damage": "248G 450M", "power": "?", "ratio": "?", "deck": "? (not shared)", "note": "Personal #1, first season, OP, guild Carpediem, title 견습 용병"},
+        {"damage": "212G 757M", "power": "?", "ratio": "?", "deck": "?", "note": "#2 (Eden)"},
+        {"damage": "212G 359M", "power": "?", "ratio": "?", "deck": "?", "note": "#3 (Eden)"},
+        {"damage": "208G 428M", "power": "?", "ratio": "?", "deck": "?", "note": "#4 (카페)"},
+        {"damage": "196G 577M", "power": "?", "ratio": "?", "deck": "?", "note": "#5 (Eden)"},
+        {"damage": "179G 116M (partly obscured)", "power": "?", "ratio": "?", "deck": "?", "note": "#6 (고양이무역단)"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [
+        "OP: '갤럼들도 리트한다고 수고했다노' (gallery folks worked hard retrying too). Retrying is the norm."
+      ],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "첫시즌 1위 타이틀은 못뺏기제", "en": "Can't let anyone take the first-season #1 title"},
+        {"kr": "갤럼들도 리트한다고 수고했다노", "en": "Gallery folks, good work on all the retries"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "55485",
+      "url": "https://m.dcinside.com/board/projectcc/55485",
+      "date": "2026-08-31",
+      "title_kr": "[📚정보] 치즈 우유 버프 정리",
+      "title_en": "[Info] Cheesecake vs Milk buff interaction",
+      "relevance": 3,
+      "summary_en": "Tested on a Lv.1 GingerBrave with Milk (Lv.100) and Cheesecake (Lv.91). Cheesecake's ATK buff has priority over Milk's: a cookie that gets Cheesecake's buff loses Milk's. Milk buffed by Cheesecake gives a much larger ATK buff, but only to cookies that did not also get Cheesecake's buff. So in conquest you want Cheesecake to buff Milk while the dealers dodge Cheesecake's buff, which the thread treats as a retry-lottery.",
+      "scores": [],
+      "teams": [{
+        "name": "Test setup",
+        "cookies": [
+          {"kr": "용감한 쿠키", "en": "GingerBrave", "level": "1", "stars": "5", "note": "Deliberate Lv.1 test dummy (Fire, charge icon)"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "5", "note": "Light, support icon, doctor with pink bear, leader banner"},
+          {"kr": "치케", "en": "Cheesecake", "level": "91", "stars": "5", "note": "Light, support icon, yellow cookie"}
+        ],
+        "pets": [],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["Lv.1 GingerBrave used as a measuring target"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [
+        "Commenters: since Milk's buff gets overridden by Cheesecake's, going for a high score means infinite retries for the 'world line' where every dealer dodges Cheesecake's buff, gets Milk's, and Milk gets Cheesecake's."
+      ],
+      "mechanics": [
+        "GingerBrave (Lv.1) ATK readings. Milk buff only: 483K. Cheesecake buff only: 228K. Both: 228K (Milk's is overridden). Cheesecake-buffed Milk's buff only: 667K. Cheesecake-buffed Milk's buff plus Cheesecake buff: 228K. DEF 97,446, HP 1M 103K, CR 150.15%, crit res 46.65%, CD 131.38%, DR 13.56%, move speed 4 (all constant).",
+        "Buff priority: 치케 buff > 우유 buff. Commenter's explanation: Milk's is a stacking buff while Cheesecake's is a one-shot 50%.",
+        "Commenter: Macaron works the same way. With Lime and Orange also in the team, cookies don't get Macaron's buff in full.",
+        "Commenter 김종민: dealer level adjustment (딜러렙조정) is done for Pomegranate targeting, which is separate from this.",
+        "Commenter: the best damage comes when Pomegranate buffs cookies like Macaron and Milk."
+      ],
+      "disagreements": [
+        "Arena: some say drop Cheesecake. Others say removing Cheesecake lowered their arena win rate because arena comes down to who melts 1–2 cookies on the first hit."
+      ],
+      "quotes": [
+        {"kr": "우유가 치케한테 버프받으면 공뻥 되는건 여전하나, 우유가 먼저 버프를 먹여도 치케 버프를 먹으면 치케 버프가 우선순위가 높아서 공뻥이 무의미해짐", "en": "Milk buffed by Cheesecake still gives a big ATK boost, but even if Milk buffs first, once a cookie gets Cheesecake's buff that takes priority and the boost is wasted"},
+        {"kr": "버프우선순위 치케 버프 > 우유 버프", "en": "Buff priority: Cheesecake buff > Milk buff"},
+        {"kr": "딜러 모두가 치케 버프를 피하면서 우유버프는 다 받아야하고 우유한테 치케 버프는 먹여줘야함 이게 될까", "en": "All dealers must dodge Cheesecake's buff while all getting Milk's, and Milk must get Cheesecake's — is that even possible?"},
+        {"kr": "딜러렙조정은 석류때매하는거고", "en": "Adjusting dealer levels is for Pomegranate"},
+        {"kr": "석류가 버프를 마카롱 우유 이런애들한테 걸어줘야 딜이 젤 잘뽑힌다고들음", "en": "I heard damage is best when Pomegranate puts its buff on Macaron, Milk and the like"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "58607",
+      "url": "https://m.dcinside.com/board/projectcc/58607",
+      "date": "2026-09-03",
+      "title_kr": "[일반] 토벌전 랜덤 아녓노?",
+      "title_en": "Wasn't conquest grouping random?",
+      "relevance": 1,
+      "summary_en": "Guild Conquest guild-ranking screenshot. The top guilds are in one group: Carpediem 2T 528G, 카페 1T 881G, Eden 1T 538G, 홍연 1T 96G. Commenters say the first grouping was random and later groups are matched on result score or tier.",
+      "scores": [
+        {"damage": "2T 528G", "power": "?", "ratio": "?", "deck": "guild total", "note": "Guild Carpediem, #1 in group"},
+        {"damage": "1T 881G", "power": "?", "ratio": "?", "deck": "guild total", "note": "Guild 카페"},
+        {"damage": "1T 538G", "power": "?", "ratio": "?", "deck": "guild total", "note": "Guild Eden"},
+        {"damage": "1T 96G", "power": "?", "ratio": "?", "deck": "guild total", "note": "Guild 홍연"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Commenters: the group assignment is random only the first time; after that matching is based on the previous result score or tier."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "처음만 그렇고 다음부턴 결과점수 기반 매칭임", "en": "Only the first time; after that it's matched on result score"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "58670",
+      "url": "https://m.dcinside.com/board/projectcc/58670",
+      "date": "2026-09-03",
+      "title_kr": "[일반] 우유 단장에서 치케 단장으로 바꾸니까 딜 오른다는 애 말을 믿노",
+      "title_en": "You believe the guy who says switching leader from Milk to Cheesecake raises damage?",
+      "relevance": 1,
+      "summary_en": "Mocking post with no body. Someone on the gallery claimed that making 치케 the 단장 (leader) instead of 우유 raises damage, and the OP and commenters dismiss it without data.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "An unnamed poster claims a Cheesecake leader beats a Milk leader for damage. The OP ridicules this, and no one gives numbers either way."
+      ],
+      "quotes": [
+        {"kr": "우유 단장에서 치케 단장으로 바꾸니까 딜 오른다는 애 말을 믿노", "en": "You believe the guy saying damage goes up when you switch leader from Milk to Cheesecake?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "60340",
+      "url": "https://m.dcinside.com/board/projectcc/60340",
+      "date": "2026-09-06",
+      "title_kr": "[일반] 토벌 나뭔가 발견함",
+      "title_en": "Found something for conquest",
+      "relevance": 3,
+      "summary_en": "OP adjusted levels and added movement-speed (이동속도) substats to 닼초, 치케, 메소, 시커 and 피노. The team then lines up in a single row as it runs in, which dodges Cheesecake's buff while Macaron's buff lands. That line-up previously needed Cherry plus endless retries (the popular '치케 lottery manipulation' post). He scored 157G 391M at 627.68M power after 2 hours of retries. A commenter confirms one gear line of movement speed helps noticeably but two lines ruin it.",
+      "scores": [
+        {"damage": "157G 391M", "power": "627.68M", "ratio": "~250배 (computed: 157.391G ÷ 0.62768G)", "deck": "Move-speed line-up deck (Milk leader, 석류, 피노, 치케, 닼초, 시커, 메소 …)", "note": "After 2 h of retries; OP plans to leave it retrying overnight"}
+      ],
+      "teams": [{
+        "name": "OP's move-speed alignment deck",
+        "cookies": [
+          {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "Lobby row1 pos1: Grass, support icon, pink-haired cookie with red/white hat and drum"},
+          {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "Row1 pos2: Fire, shooter icon, brown hat and red coat"},
+          {"kr": "피노누아", "en": "Pinot Noir", "level": "70", "stars": "5", "note": "Row1 pos3: Dark, support icon, mustached older cookie. Lv.70 in the lobby, Lv.80 in the battle bar. Has 이속 (~4 by the in-game stat)"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "5", "note": "Row1 pos4: Dark, support icon"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "5", "note": "Row1 pos5: Light, support icon, leader (단장) banner"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "77", "stars": "5", "note": "Row1 pos6: Dark, defense (shield) icon, black/red cookie; Lv.77; has 이속 (identified by role and the OP's list, medium confidence)"},
+          {"kr": "시커 (브시커)", "en": "Bright Seeker", "level": "83", "stars": "5", "note": "Row2 pos1: Light, shooter icon, pink-hat cookie; Lv.83; 이속 ~4 (identified by the OP's list and level tuning, medium confidence)"},
+          {"kr": "메소 (메론소다)", "en": "Melon Soda", "level": "73", "stars": "5", "note": "Row2 pos2: Water, shooter icon, green hair with goggles. Lv.73 in the lobby, Lv.80 in the battle bar. 이속 ~5 (medium confidence)"},
+          {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "5", "note": "Row2 pos3: Light, support icon, yellow cookie; 이속 ~5"},
+          {"kr": "? (possibly 피겨)", "en": null, "level": "100", "stars": "5", "note": "Row2 pos4: Water, charge (bell) icon, gingerbread face with purple headband"},
+          {"kr": "?", "en": null, "level": "87", "stars": "5", "note": "Row2 pos5: Grass, support icon, green-haired cookie. Lv.87 in the lobby, 91 in the battle bar"},
+          {"kr": "?", "en": null, "level": "100", "stars": "5", "note": "Row2 pos6: Light, defense (shield) icon, white-bearded armored cookie"}
+        ],
+        "pets": ["? (brown bowl/red-sauce pet, ★20)", "? (yellow dumpling-like pet, ★20)", "판다(만두) (★17)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "Battle bar order in 60340-3 (left to right): grass drum support 100, light shooter 83, fire shooter 87, water shooter 80, 피노 80, 치케 100, 석류 100, water charger 100, 우유 100 (leader), grass support 91, 닼초 77, light defender 100. When the team runs in they settle into a single straight line (1자정렬); OP circles four cookies in the battle image.",
+        "substitutions": ["Replaces the Cherry-based line-up trick from the earlier popular post ('념글에 치케로또조작법 있음 체리넣어서하는거')"],
+        "unorthodox": [
+          "Movement-speed (이동속도) sugar-rune lines on 닼초, 치케, 메소, 시커 and 피노 control where cookies stand at engage. Per the OP's comment: '치케메소5 시커피노4정도' (in-game stat values).",
+          "Deliberately sub-100 levels (피노 70, 메소 73, 닼초 77, 시커 83, a grass support 87) for level adjustment (레벨조정)."
+        ]
+      }],
+      "sugar_runes": [
+        {"cookie": "치케, 메소", "stats": "이동속도 (move speed), more than one line; in-game move-speed stat ~5", "why": "Positioning at engage: dodge the Cheesecake buff and let Macaron's buff land in a straight line"},
+        {"cookie": "시커, 피노", "stats": "이동속도; in-game move-speed stat ~4", "why": "Same"},
+        {"cookie": "닼초", "stats": "이동속도 (amount not stated)", "why": "Same"}
+      ],
+      "gear": [
+        {"slot": "(total across gear)", "substats": "스가 ~27 from gear", "context": "raid", "why": "OP's answer to whether he stacked haste on gear or runestones"},
+        {"slot": "(any accessory with 이동속도)", "substats": "이동속도: 1 line noticeable, 2 lines 'garbage', 3 untested (commenter 제리콘, no sugar-rune move speed)", "context": "raid", "why": "Movement speed changes the engage alignment"}
+      ],
+      "rng": [
+        "157G 391M came from 2 hours of retries. OP plans to keep retrying overnight ('잘때 돌려바야겠음').",
+        "Without the move-speed trick, the straight line-up that dodges Cheesecake and lands Macaron needed Cherry plus infinite retries (한무리트)."
+      ],
+      "mechanics": [
+        "Starting positions and the run-in order decide who gets Cheesecake's and Macaron's buffs. Move speed changes where each cookie ends up when the team charges.",
+        "In-battle counter reads 4,147,584,002 at timer 45.167 (60340-3)."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "레벨조정하고 슈가룬에서 이동속도<< 얘 건드려봤더니 념글에 치즈 피하면서 마카롱꽂히는 1자정렬이 체리안넣고 한무리트안해도 걍 됨", "en": "After adjusting levels and touching move speed on sugar runes, the straight-line alignment from the popular post — dodging Cheesecake while Macaron's buff lands — just happens, without Cherry or infinite retries"},
+        {"kr": "슈가룬 부족해서 실험못해바서 최적은 아닌데 닼초 치케 메소 시커 피노만 건드렸음", "en": "Not optimal since I lacked sugar runes to experiment, but I only changed Dark Choco, Cheesecake, Melon Soda, Seeker and Pinot"},
+        {"kr": "치케메소5 시커피노4정도", "en": "About 5 on Cheesecake/Melon Soda and 4 on Seeker/Pinot (in-game stat)"},
+        {"kr": "념글에 치케로또조작법 있음 체리넣어서하는거", "en": "There's a Cheesecake-lottery manipulation method in the popular posts, done by adding Cherry"},
+        {"kr": "난 슈가룬은 안줌 장비 1줄: 체감됨, 2줄: 쓰레기됨, 3줄: 안써봄", "en": "(commenter) I don't put it on sugar runes; gear 1 line: noticeable, 2 lines: garbage, 3 lines: untested"},
+        {"kr": "리트 2시간해서 나온점순데 잘때 돌려바야겠음", "en": "This score came from 2 hours of retries; I'll leave it running while I sleep"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "64661",
+      "url": "https://m.dcinside.com/board/projectcc/64661",
+      "date": "2026-09-11",
+      "title_kr": "[📚정보] 장비 플레이트 강화 수치 / 옵션표",
+      "title_en": "[Info] Gear plate enhancement values / option tables",
+      "relevance": 2,
+      "summary_en": "Full gear tables: main stat per slot, rarity multipliers, plate enhancement bonus (+0 to +20), sub-option count by rarity, and sub-option ranges per slot group. Skill haste appears only as a sub-option on accessories, at flat 1–2 per line before enhancement. Skill amp is a sub-option on weapons and attack accessories and the main stat of the Book (책).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "Main stats by slot", "substats": "검 ATK; 활 명중; 지팡이 치확; 투구 DEF; 갑옷 HP; 방패 회피; 목걸이 치저; 반지 집중; 브로치 저항; 마법물체 치피; 책 스킬증폭; 음식 피해감소. Lv.150 base at 100% grade, +0: 책 스증 6%, 음식 피감 6%, 마법물체 치피 13.5%, 지팡이 치확 18%", "context": "general", "why": "Main value = level base × grade multiplier × (1 + enhance bonus); e.g. legendary Lv.75 +12 sword = 339 × 500% × 1.69 = 2,864"},
+        {"slot": "무기 (검/활/지팡이) sub-options", "substats": "ATK, 명중, 치확, 치피, 스킬증폭. Eternal (+0): 치확 4.8–9.6%, 치피 3.6–7.2%, 스증 3.2–4%; Legendary: 치확 4–8%, 치피 2.9–5.8%, 스증 2.4–3.2%", "context": "general", "why": ""},
+        {"slot": "방어구 (투구/갑옷/방패) sub-options", "substats": "DEF, HP, 회피, 치저, 피해감소. Eternal: 피감 2.4–3%, 치저 4.8–9.6%", "context": "general", "why": "No damage stats on armor"},
+        {"slot": "장신구 공격형 (목걸이/반지/브로치) sub-options", "substats": "ATK, 명중, 치확, 치피, 스증, 집중, 저항, 스킬가속, 이동속도. 스킬가속 is flat 1 (magic–super epic) or 2 (unique/legendary/eternal) at +0. 이동속도 eternal 0.38–0.45", "context": "general", "why": "The only slot group with both skill amp and skill haste"},
+        {"slot": "장신구 방어형 (마법물체/책/음식) sub-options", "substats": "DEF, HP, 회피, 치저, 피감, 집중, 저항, 스킬가속 (1–2), 이동속도", "context": "general", "why": "Haste available but no skill amp or crit sub-options"}
+      ],
+      "rng": [],
+      "mechanics": [
+        "Grade multipliers (ATK/DEF/HP vs other stats): common 100/100, 고급 150/110, 우수 200/120, 마법 250/130, 에픽 300/140, 스페셜 350/150, 슈퍼에픽 400/162.5, 유니크 450/175, 레전더리 500/187.5, 이터널 550/200 (%).",
+        "Plate enhancement bonus (main / sub): +1..+4 main +3% per level (sub none); +5 15%/30%; +6..+9 +6% per level (21–39%)/30%; +10 45%/70%; +11..+14 +12% per level (57–93%)/70%; +15 105%/130%; +16..+19 +18% per level (123–177%)/130%; +20 200%/200%. Sub-options jump at +5, +10, +15 and +20.",
+        "Sub-option count: 스페셜 and above 2 lines; 마법/에픽 1 line; 일반/고급/우수 0.",
+        "Sub-option ranges are listed at +0 (0강 기준). The table shows a +200% sub-option bonus at +20 but doesn't give an example of the resulting value."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "메인 값 = 레벨 기본값 × 등급 배율 × (1 + 강화 증폭)", "en": "Main value = level base value × grade multiplier × (1 + enhancement bonus)"},
+        {"kr": "공격력·방어력·체력은 등급당 +50%p(최대 550%), 그 외(명중 · 치명확률 · 회피 · 치명저항 · 집중 · 저항 · 치명피해 · 스킬증폭 · 피해감소)는 완만히 증가(최대 200%)", "en": "ATK/DEF/HP +50%p per grade (max 550%); the other stats rise gently (max 200%)"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "65772",
+      "url": "https://m.dcinside.com/board/projectcc/65772",
+      "date": "2026-09-12",
+      "title_kr": "[📚정보] 최종딜 계산기 만듦 이걸로 석류 버프 토론 종결 ㄱㄱ(오류 수정함)",
+      "title_en": "[Info] Made a final-damage calculator — settle the Pomegranate buff debate (errors fixed)",
+      "relevance": 2,
+      "summary_en": "초코초코케이크 shares a Google Sheets/Excel final-damage calculator meant to settle the Pomegranate-buff debate. It includes a sugar-rune recommendation mode, and 66636 shows its output. The author twice corrected errors: once in the rune-comparison logic, and once in the crit formula after a commenter caught it. The crit fix changes results by about 6% in the file's current example.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Calculator link: https://docs.google.com/spreadsheets/d/17IzI0esvzaXN4U54e7fH8Ml_6W-vhH0r/copy",
+        "The calculator gives min, max and average damage by crit rate.",
+        "Crit expected-value correction from commenter: average crit coefficient = 1 + (CR/100)×(CD/100). The old sheet formula went negative when CR and CD were below 100%."
+      ],
+      "disagreements": [
+        "Commenter: average crit coefficient should be 1+(CR)(CD), e.g. CR 50%, CD 150% gives 1.75. The author first objected ('should be 1.25'), then agreed and fixed the sheet. The difference is about 6% in the current example. Note this differs from 31349's tiered model (1 + tier×(0.5+bonus)) unless 'CD' means total crit dmg."
+      ],
+      "quotes": [
+        {"kr": "치명 평균계수는 치명확률과 관계없이 1+(치명확률/100)*(치명피해/100) 일텐데", "en": "(commenter) The average crit coefficient should be 1+(CR/100)×(CD/100) regardless of crit rate"},
+        {"kr": "현재 파일안에 있는 계산식에서는 6%정도 차이가 남", "en": "In the formula currently in the file, it makes about a 6% difference"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "66336",
+      "url": "https://m.dcinside.com/board/projectcc/66336",
+      "date": "2026-09-13",
+      "title_kr": "[일반] 토벌 빨간약 그냥 공개할게요",
+      "title_en": "I'll just reveal the conquest 'red pill'",
+      "relevance": 1,
+      "summary_en": "Claims a free Android hack mod for version 1.3.002 (DMG MUL, DEF MUL, GOD MODE) was released that Friday. The OP says some high conquest and Crumble scores come from players who toggle it carefully to avoid detection. This is the 'red pill' in the title; it is not a legit strategy. No proof of use on the leaderboard.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Screenshot: 'CookieRun: Crumble - Idle RPG Hack Mod for ANDROID', Version 1.3.002, package com.devsisters.cc, no root, features DMG MUL, DEF MUL, GOD MODE, NO ADS."
+      ],
+      "disagreements": [
+        "A commenter asks whether the #1 guild used hacks. Goblin칠칠 replies 'that's not it' (그건아님). Another commenter notes unfamiliar players suddenly posting uniform scores in a top guild."
+      ],
+      "quotes": [
+        {"kr": "무적모드 키면 토벌전 풀타임 딜 가능하고요 데미지 2배 껐켰 컨하면서 딜 조절도 가능해요", "en": "With god mode on you can deal damage for the full conquest duration, and toggle 2× damage to tune your score"},
+        {"kr": "토벌전이나 크럼블 지금 딜 높은 애들 중 핵 쓰는 애들 꽤 될 거에요", "en": "Quite a few of the current high-damage players in conquest or Crumble are probably using hacks"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "66636",
+      "url": "https://m.dcinside.com/board/projectcc/66636",
+      "date": "2026-09-13",
+      "title_kr": "[📚정보] 슈가룬 요약(토벌전 기준)",
+      "title_en": "[Info] Sugar rune summary (Guild Conquest basis)",
+      "relevance": 3,
+      "summary_en": "Sugar-rune optimizer output from the 65772 calculator for a 12-cookie conquest team where Pomegranate buffs 5 targets. It assumes Macaron, Milk (buffed by Cheesecake), Figure and Ceylon buffs always land. Milk goes all ATK%, Pomegranate all skill amp, and Cheesecake and Figure all skill amp. Macaron and Ceylon get just enough ATK% to enter Pomegranate's top-5, with the rest in skill amp. Dealers that receive Pomegranate's buff go all crit (crit dmg at 10 Macaron stacks, crit rate at 5 or 0 stacks); dealers that don't go all skill amp. The recommended runes roughly double the calculated damage.",
+      "scores": [
+        {"damage": "829.38M → 1582.79M (calculator units)", "power": "?", "ratio": "+90.8%", "deck": "10 Macaron-stack basis", "note": "Current vs recommended runes; not in-game score"},
+        {"damage": "593.34M → 1168.61M (calculator units)", "power": "?", "ratio": "+97.0%", "deck": "5-stack / 안정형 (stable) basis", "note": "Calculator output"},
+        {"damage": "357.30M → 848.36M (calculator units)", "power": "?", "ratio": "+137.4%", "deck": "0-stack basis", "note": "Calculator output"}
+      ],
+      "teams": [{
+        "name": "Calculator team (12 cookies, 석류 대상 수 5)",
+        "cookies": [
+          {"kr": "우유", "en": "Milk", "level": "?", "stars": "?", "note": "Buffer; always a Pomegranate recipient"},
+          {"kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "note": "Buffer; excluded from its own buff"},
+          {"kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "note": "Buffer; a recipient at 10 stacks only"},
+          {"kr": "피겨", "en": null, "level": "?", "stars": "?", "note": "Buffer; high base ATK, so it gets Pomegranate's buff without 공증"},
+          {"kr": "실론", "en": null, "level": "?", "stars": "?", "note": "Buffer; needs some 공증 to become a recipient"},
+          {"kr": "치케", "en": "Cheesecake", "level": "?", "stars": "?", "note": "Buffer; not a recipient, all 스증"},
+          {"kr": "시커", "en": "Bright Seeker", "level": "?", "stars": "?", "note": "Dealer; a recipient"},
+          {"kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "note": "Dealer; a recipient except in the 10-stack case"},
+          {"kr": "딸크", "en": null, "level": "?", "stars": "?", "note": "Dealer; not a recipient"}
+        ],
+        "pets": [],
+        "atk_order": ["Pomegranate recipients (top-5), recommended: 10-stack: 우유 / 마카롱 / 피겨 / 실론 / 시커; 5-stack, 0-stack and stable: 우유 / 피겨 / 실론 / 시커 / 전갈. The user's current recipients were 우유 / 피겨 / 시커 / 전갈 / 마카롱"],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["10-stack: OUT 전갈 / IN 실론 as a Pomegranate recipient", "5-stack, 0-stack and stable: OUT 마카롱 / IN 실론"],
+        "unorthodox": ["Macaron and Ceylon, both buffers, are given ATK% lines on purpose so they rank into Pomegranate's 5 targets"]
+      }],
+      "sugar_runes": [
+        {"cookie": "우유", "stats": "공8/스0 (all 8 lines ATK% = 56%). The user's previous runes were 공27.5% / 스0", "why": "'우유 스냅샷 공격력과 1중첩 버프량을 함께 최적화' (optimizes Milk's snapshot ATK and her 1-stack buff amount); Pomegranate recipient"},
+        {"cookie": "석류", "stats": "공0/스8 (40% skill amp)", "why": "'자기 석류 버프를 받지 못하므로 스증 우선' (can't receive its own buff, so skill amp first)"},
+        {"cookie": "마카롱", "stats": "10-stack: 공3/스5 (21% ATK, 25% 스증), a recipient. 5-stack, 0-stack and stable: 공0/스8 (40%), not a recipient", "why": "'석류 수혜에 필요한 최소 공증 후 남은 줄을 스증에 배분' (minimum 공증 needed to get Pomegranate's buff, rest into skill amp)"},
+        {"cookie": "피겨", "stats": "공0/스8 (40% 스증)", "why": "'공증 없이 석류 수혜 가능해 스증 집중' (gets Pomegranate's buff without 공증, so focus skill amp)"},
+        {"cookie": "실론", "stats": "10-stack: 공5/스3 (35% ATK, 15% 스증). Other bases: 공2/스6 (14% ATK, 30% 스증). User's previous: 공7/스3.8", "why": "Minimum 공증 to be a Pomegranate recipient, rest skill amp"},
+        {"cookie": "치케", "stats": "공0/스8 (40% 스증)", "why": "'석류 진입보다 스증 투자가 파티 종딜에 유리' (skill amp beats entering Pomegranate's targets for party damage)"},
+        {"cookie": "시커", "stats": "10-stack: 공0/치0/치피8/스0 (64% crit dmg). 5-stack, 0-stack and stable: 공0/치8/치피0/스0 (64% crit rate). User's previous: 치피18.2 / 스4.4", "why": "Pomegranate recipient; 'optimizes personal damage including the Pomegranate buff'"},
+        {"cookie": "전갈", "stats": "10-stack: 공0/치0/치피0/스8 (40% 스증), not a recipient. 5-stack, 0-stack and stable: 치8 (64% crit rate), a recipient. User's previous: 치16 / 스12.3", "why": "Recipient status flips with Macaron stacks"},
+        {"cookie": "딸크", "stats": "10-stack, 5-stack and stable: 스8 (40% 스증). 0-stack: 치5/스3 (40% crit rate, 15% 스증). User's previous: 치12.2 / 치피12.8 / 스8.8", "why": "'석류 진입보다 자체 딜 옵션 최적화' (optimize own damage rather than entering Pomegranate's targets)"},
+        {"cookie": "(per-line maxima)", "stats": "1줄 최대값: 공증 7% / 치확 8% / 치피 8% / 스증 5%; 8 lines per cookie (사용 가능 8)", "why": "Sheet footnote"}
+      ],
+      "gear": [],
+      "rng": [
+        "Macaron buff stacks (0/5/10) are the main swing in the calculator. For the same runes, 10 stacks is about 2.3× 0 stacks (829M vs 357M current; 1583M vs 630M recommended)."
+      ],
+      "mechanics": [
+        "The sheet models Pomegranate as buffing the top-N ATK cookies (석류 대상 수 = 5, excluding itself). Hence the '석류 수혜에 필요한 최소 공증' logic: Macaron and Ceylon take just enough ATK% to rank into the top 5.",
+        "Author's stated assumptions: Macaron's buff always lands, Milk's buff always lands, Cheesecake always buffs Milk, and Figure's and Ceylon's buffs always land.",
+        "Body rule: a dealer that receives Pomegranate's buff is best with all crit dmg; one that doesn't is best with all skill amp, which beats a crit rate/crit dmg mix on final damage.",
+        "Top-5 alternatives are within 0.4–0.8% of each other (1.908× vs 1.900× vs 1.899× at 10 stacks), so small rune variations barely matter once the recipient set is right."
+      ],
+      "disagreements": [
+        "The body says Pomegranate-buffed dealers should go 'all crit dmg'. The sheet does that only at 10 Macaron stacks; at 5, 0 and 'stable' it recommends all crit rate (치8) for 시커 and 전갈.",
+        "Commenter: they heard 치케 is better with 스가, against the author's all-스증.",
+        "Commenter: getting Ceylon into Pomegranate's buff is hell ('실론이 석류 받는 게 헬이네')."
+      ],
+      "quotes": [
+        {"kr": "우유 올공, 석류 올 스증 이건 모두 같을거임", "en": "Milk all ATK, Pomegranate all skill amp — that'll be the same for everyone"},
+        {"kr": "마카롱은 공,스를 줘서 석류 버프를 반드시 받도록 해야함", "en": "Give Macaron ATK and skill amp so it definitely receives the Pomegranate buff"},
+        {"kr": "피겨는 어짜피 공격력이 높아서 스증만 줘도 석류 버프를 받으니 상관ㄴ", "en": "Figure has high ATK anyway, so it gets the Pomegranate buff with only skill amp"},
+        {"kr": "석류 버프를 받는 딜러는 올 치피가 가장 좋고, 석류 버프를 안 받으면 올 스증을 주면 됨. 치확 치피보다 더 최종딜이 좋음.", "en": "Dealers that get the Pomegranate buff are best with all crit dmg; if they don't, give all skill amp — better final damage than crit rate/crit dmg"},
+        {"kr": "1줄 최대값: 공증 7% / 치확 8% / 치피 8% / 스증 5%.", "en": "Per-line maximum: ATK% 7% / crit rate 8% / crit dmg 8% / skill amp 5%."}
+      ]
+    }
+  ],
+  "glossary": [
+    {"kr": "피노누아 / 피노 / 할배", "en": "Pinot Noir Cookie", "kind": "cookie", "confidence": "high", "evidence": "52401 spells out 피노누아 and gives its +35% lift-res buff. The '할배' (grandpa) = 피노 link is medium confidence: a Dark support older mustached sprite appears in 48412 ('피노+판다펫' post) and 60340 (피노 in the move-speed list), and commenters in 51143/48412 call it 할배."},
+    {"kr": "판다만두 / 판다 / 파란색 팬더곰", "en": "Panda Dumpling (pet)", "kind": "pet", "confidence": "high", "evidence": "52401: 판다만두 gives +20% lift resistance. The blue panda pet icon appears in 48412/51143/60340."},
+    {"kr": "치케 / 치즈", "en": "Cheesecake Cookie", "kind": "cookie", "confidence": "high", "evidence": "55485 '치즈 우유 버프' test: yellow Light support Lv.91. Its buff overrides Milk's."},
+    {"kr": "우유", "en": "Milk (doctor-with-pink-bear sprite)", "kind": "cookie", "confidence": "high", "evidence": "55485/60340: Light support doctor with a pink bear, usually the leader (단장). Build: all ATK%."},
+    {"kr": "석류", "en": "Pomegranate Cookie", "kind": "cookie", "confidence": "high", "evidence": "Dark support, red cookie holding pomegranates (48412, 60340)"},
+    {"kr": "메소 / 메론소다", "en": "Melon Soda Cookie", "kind": "cookie", "confidence": "high", "evidence": "53977 writes 메론소다 in full. The sprite (Water shooter, green hair with goggles) is medium confidence."},
+    {"kr": "시커 / 브시커 / 브라이트시커", "en": "Bright Seeker", "kind": "cookie", "confidence": "low", "evidence": "54497 shows the title '브라이트시커 쿠키의 조수'. The sprite (Light shooter, pink hat) is inferred from 60340's list plus level tuning."},
+    {"kr": "피겨 / 피겨여왕맛 쿠키", "en": "Figure Skating Queen? (literal 'Figure Queen Cookie')", "kind": "cookie", "confidence": "low", "evidence": "31305 datamine names 피겨여왕맛 쿠키 (8 s root CD, 4 dashes 1 s apart). 53977 lists 피겨 as 돌격형 (charge). The sprite is possibly the Water charger with a purple headband."},
+    {"kr": "크림소다맛 쿠키", "en": "Cream Soda Cookie", "kind": "cookie", "confidence": "high", "evidence": "31305 datamine example (3.5 s CD, 8 sword-wave spawner)"},
+    {"kr": "용감한 쿠키", "en": "GingerBrave", "kind": "cookie", "confidence": "high", "evidence": "55485 test dummy (Fire, charge icon)"},
+    {"kr": "닼초 / 다크초코 쿠키", "en": "Dark Choco Cookie", "kind": "cookie", "confidence": "high", "evidence": "46452 official list. 53977 puts it under 방어형; sprite in 60340 is a Dark shield-role black/red cookie (medium)."},
+    {"kr": "이름 모를 케이크 들개 / 들개", "en": "Nameless Cake Stray Dog (literal)", "kind": "cookie", "confidence": "low", "evidence": "46452 official list (DR buff cookie). Lift duration 1.2 s per 52401."},
+    {"kr": "이온 / 이온맛 쿠키로봇", "en": "Ion Cookie Robot (literal)", "kind": "cookie", "confidence": "low", "evidence": "46452 official list (DR buff)"},
+    {"kr": "명랑 / 명랑한 쿠키", "en": "Cheerful Cookie (literal)", "kind": "cookie", "confidence": "low", "evidence": "46452 official list (stat-reduction debuff)"},
+    {"kr": "딸크", "en": null, "kind": "cookie", "confidence": "low", "evidence": "53977: 방어형 but 'closer to a dealer'. 66636 treats it as a dealer. Full name not given."},
+    {"kr": "실론 / 실론나이트?", "en": "Ceylon (possibly 'Ceylon Knight')", "kind": "cookie", "confidence": "low", "evidence": "48412 commenter mentions '실론나이트'. 66636 treats 실론 as a buffer."},
+    {"kr": "에소 / 에스프레소", "en": "Espresso Cookie", "kind": "cookie", "confidence": "low", "evidence": "52401 lists 에스프레소. 53977 uses 에소 as a shooter."},
+    {"kr": "트즐 / 트위즐", "en": null, "kind": "cookie", "confidence": "low", "evidence": "32255 comment '트위즐'; 53977 '트즐' (shooter)"},
+    {"kr": "쿨민 / 쿨링민트", "en": "Cooling Mint", "kind": "cookie", "confidence": "low", "evidence": "Used both as a stage-boss name (32255) and a charge cookie (53977)"},
+    {"kr": "갓난갓방울, 초코왕방울, 새콤달곰, 키위(새), 핫도그, 문어(와사비문어)", "en": null, "kind": "pet", "confidence": "low", "evidence": "32255/51143 pet recommendations for stage bosses. Icons are not individually labelled."},
+    {"kr": "단장", "en": "team leader / captain slot", "kind": "term", "confidence": "high", "evidence": "51143 '단장 누구로 해놨어? 우유 고정'; banner icon on Milk in 48412/60340"},
+    {"kr": "용병단 (복지)", "en": "Mercenary corps (perk)", "kind": "term", "confidence": "high", "evidence": "53977: lvl-4 perk gives the #1-ATK cookie a 20% ATK card"},
+    {"kr": "마카롱 중첩", "en": "Macaron buff stacks (0/5/10)", "kind": "term", "confidence": "high", "evidence": "66636 calculator rows 10중첩/5중첩/0중첩"},
+    {"kr": "1자정렬", "en": "single-line alignment at engage", "kind": "term", "confidence": "high", "evidence": "60340"},
+    {"kr": "치케로또(조작법)", "en": "Cheesecake lottery (manipulation)", "kind": "term", "confidence": "high", "evidence": "60340 comment: the popular post trick of adding Cherry to control who gets Cheesecake's buff"},
+    {"kr": "레벨조정 / 딜러렙조정", "en": "level adjustment (to steer Pomegranate targeting)", "kind": "term", "confidence": "high", "evidence": "55485 comment '딜러렙조정은 석류때매하는거고'; 60340"},
+    {"kr": "띄우기 저항", "en": "lift / airborne resistance", "kind": "stat", "confidence": "high", "evidence": "52401"},
+    {"kr": "이동속도 / 이속", "en": "movement speed", "kind": "stat", "confidence": "high", "evidence": "60340, 64661"},
+    {"kr": "스가 / 스킬가속", "en": "skill haste", "kind": "stat", "confidence": "high", "evidence": "31305"},
+    {"kr": "스증 / 스킬증폭", "en": "skill amplification", "kind": "stat", "confidence": "high", "evidence": "46452, 64661"},
+    {"kr": "무기: 검/활/지팡이; 방어구: 투구/갑옷/방패; 장신구(공격형): 목걸이/반지/브로치; 장신구(방어형): 마법물체/책/음식", "en": "weapon: sword/bow/staff; armor: helmet/armor/shield; attack accessories: necklace/ring/brooch; defense accessories: magic object/book/food", "kind": "slot", "confidence": "high", "evidence": "64661 tables. How these map to 왼쪽 위/우상단/우하단 UI positions is not stated."},
+    {"kr": "지나치게 무거워진 피냐타", "en": "Extra Stuffed Piñata (conquest boss), Dark element, weak to Light", "kind": "term", "confidence": "high", "evidence": "48412 lobby screenshot: moon icon, 약점 sun icon"}
+  ]
+}

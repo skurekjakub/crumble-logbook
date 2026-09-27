@@ -1,0 +1,67 @@
+crumb
+
+SimulatorDPSRankingsGuildsLookupNewStagesPatchesContact
+
+Sign in
+
+한국어
+
+Guild Conquest
+
+# Simulator
+
+How does this work?
+
+## How this works
+
+- Pick 12 cookies, 3 pets and 2 mercenary cards, then press Simulate.
+
+- The website plays the whole Guild Conquest fight a few hundred times with the game's own numbers and shows how the lineup did.
+
+- Every lineup runs on the same fixed account, so the results compare lineups. They don't predict your own score.
+
+- Results are a value from 0 to 100, not raw damage: "typical" is the median fight, "best" the highest. The scale is stretched at the top, so losing a fifth of the damage costs about 5 points.
+
+- The best fight of the run can be replayed.
+
+- You need an account to run it. Compare, What-if, Gear and the Swap finder are limited to guild.
+
+SimulateCompareguildWhat-ifguildGearguildSwap finderguild
+
+Lineup · 0/12
+
+Save lineupShareClear
+
+123456789101112
+
+CookiesAll elementsFireWaterGrassLightDarkAll rolesTankChargeRangedSupport
+
+BrightseekerOven WandererPrincess BariWind ArcherCherry ColaCool MintCream PuffCream SodaDark ChocoEspressoIonMadeleineMelon SodaMilkMilky WayMoon RabbitNameless Cake HoundPinot NoirPomegranateSchwarzwälderScorpionSkating QueenSpace DoughnutStrawberry CrepeStrawberry ShortcakeTea KnightToothpasteTwizzly GummyVampireDr. BonesDr. WasabiHerbLemonLicoriceLimeMacaronOrangePancakePeachPopcornRockstarRyeTiger LilyWitchberryAlchemistBear Jelly WorkerBerry YogurtBlackberryCheesecakeCherryCocoaDark CherryGrapevineLilacPoison MushroomSpace DoughnutAdventurerAngelCheerleaderCoffeeDevilGumballKnightOnionPrincessRed PepperZombieBlueberry BirdGingerBraveGingerBrightMuscleNinjaSkaterStrawberrySugar GnomeWizard
+
+Pets · 0/3
+
+Gold DropFluffy Cheese CatKiwi BirdFurball PupMarshmallow HamsterBanana LionOcto WasabiHot DoggieAvocatapultMango ToucanRootyFloral FrogletYule Log CakePterosatchelBonbon BirdyYakgwa PupperEggbeakBreadogBerry AngrybeakConstable WhiskersHoly Baby DropMajestic King Choco DropSweet n' SourChargemellowCandy Shade PouchContinuum CogApple RabbitLemon SliceOwlcornMini Orange MouseSweet Rice SealFirestarterMilk AngelJunior Sleuth TedLord Crumbles IIICreamteseIcy BirdieSoda DollopLittle GhostPanda DumplingDark Spirit HelmetCloud PelicanFruit DoeCarrot Cake RabbitJingle DeerFloofy FruityToofieDragon's TailBrain GumMocha DelightCelestial StarFlame BatPocket StrawberryChoco DropCheese DropDust UnicornUnpeeled Garlic
+
+Mercenary cards · 0/2
+
+General PerksGeneral Perks Lv.2Meals ProvidedMerc of the MonthRapid PromotionTop MercsPassion PayCrunch ModeLike A FamilyAll Ammo ProvidedArmor RepairNo LiabilityHealth Insurance
+
+## Before you run it
+
+- Cookie movement can't be modelled exactly, so how often certain things happen in a fight can be off.
+
+- Skill Haste shifts when every skill goes off, so with different haste on your cookies the same fight can play out differently in your game.
+
+- Treat the results as a guide, not as fact.
+
+- Short runs are less reliable: with few fights the rare perfect run may not show up at all.
+
+- Noticed something off? Get in contact
+
+Got it
+
+Sign in to run the simulator
+
+Sign in
+
+Fan site. Not affiliated with Devsisters.

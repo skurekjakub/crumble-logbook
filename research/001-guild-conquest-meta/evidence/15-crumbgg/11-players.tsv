@@ -1,0 +1,301 @@
+season	rank	player	guild	score_text	score_G	power_G	power_source	ratio	power_contemporaneous	crumb_player_id
+1	1	도리	Carpediem	248.450G	248.45				no	p1869347059e4c9
+1	2	Arsen	Eden	212.757G	212.757	26.545	lookup(cp)	8.0	no	pa178af0b469e59
+1	3	DrexSnow	Eden	212.359G	212.359				no	p0e5a31a890f430
+1	4	날씨의아이	카페	208.428G	208.428	25.813	lookup(cp)	8.1	no	pe773d5ab714ec8
+1	5	Evenil	Eden	196.573G	196.573	22.440	lookup(cp)	8.8	no	pa4f49702d0e7ca
+1	6	DeminBeet	고양이무역단	179.116G	179.116				no	pd1f4426304a7d2
+1	7	눈의	애봉	178.332G	178.332	24.410	lookup(cp)	7.3	no	p92cf6df8b66bca
+1	8	환상	Carpediem	174.554G	174.554	20.783	lookup(cp)	8.4	no	pdae726f7364f70
+1	9	Kazen	Eden	170.937G	170.937	27.905	lookup(cp)	6.1	no	p08cde43141c68c
+1	10	아나	Carpediem	147.262G	147.262	24.957	lookup(cp)	5.9	no	p0ef2ea6e7bfb58
+1	11	대단한물거기	Carpediem	144.634G	144.634	21.233	power-leaderboard(name)	6.8	no	pbe6415c7a57bbe
+1	12	쏘게러웨이	사이버펑크	135.035G	135.035				no	p01b300f2485266
+1	13	nongpeawnarak	Eden	132.286G	132.286				no	p0a473b55855ecc
+1	14	Annie	Eden	129.258G	129.258	16.218	power-leaderboard(name+guild)	8.0	no	p7aa8cee25edf8d
+1	15	중국어	史萊姆遊樂區	128.194G	128.194				no	p1bd31047114843
+1	16	PookieMark	Eden	122.894G	122.894				no	p207adfadac78ce
+1	17	검은반장	APEX	121.300G	121.3	23.083	lookup(cp)	5.3	no	p7941148edb63ef
+1	18	은우	Carpediem	120.213G	120.213				no	p69850dc91304dc
+1	19	솔라	카페	114.542G	114.542	23.754	lookup(cp)	4.8	no	p094259a856f7cf
+1	20	Lineve	Eden	108.551G	108.551	22.174	lookup(cp)	4.9	no	pf66c7f789aa7cc
+1	21	J0K3R	Eden	107.762G	107.762	19.894	power-leaderboard(name+guild)	5.4	no	p1e90b760624b61
+1	22	전설	운명	104.320G	104.32	21.088	power-leaderboard(name+guild)	4.9	no	p9b3d72275d4448
+1	23	루키	방랑자	100.615G	100.615	21.187	lookup(cp)	4.7	no	p943d1f17b3b344
+1	24	똥에디	카페	98.925G	98.925	22.019	lookup(cp)	4.5	no	pbd4f89e9d4ce2d
+1	25	젱젱	Carpediem	98.599G	98.599	17.299	lookup(cp)	5.7	no	pb6edb5d16895c0
+1	26	UdonMM	Eden	96.620G	96.62	20.962	lookup(cp)	4.6	no	p9e371fbe10882d
+1	27	cipherX	Eden	96.612G	96.612	24.765	power-leaderboard(name+guild)	3.9	no	pc97124015dd1ca
+1	28	댕댕	홍연	95.620G	95.62	23.476	lookup(cp)	4.1	no	p0e90d1cbbf9513
+1	29	Turdo	Eden	95.004G	95.004				no	p60a74e7bc1687c
+1	30	1타법사	Carpediem	90.834G	90.834				no	pd731f442b3870d
+1	31	주말랭이	바삭젤리단	90.462G	90.462				no	p554df1efbb675c
+1	32	Akram	Eden	89.873G	89.873	12.295	power-leaderboard(name+guild)	7.3	no	p4a597346bece09
+1	33	GARU	바삭젤리단	87.508G	87.508	20.831	lookup(cp)	4.2	no	p4925dd3f25637d
+1	34	중국어2	小孩坐一桌	86.812G	86.812				no	pc614f1b01116b6
+1	35	멋진참외	Carpediem	86.438G	86.438	22.225	lookup(cp)	3.9	no	p288dfc70d4fe9b
+1	36	홍백련	품격	85.599G	85.599	24.343	lookup(cp)	3.5	no	p6c0272a7611c4e
+1	37	고수	월드	85.200G	85.2	20.851	lookup(cp)	4.1	no	pf3a1e67329d0b4
+1	38	이하령	Carpediem	83.180G	83.18				no	p4c36d69c4cbdd8
+1	39	Hazelicious	Eternal	81.737G	81.737	19.000	power-leaderboard(name+guild)	4.3	no	p93ff2e1cf23467
+1	40	다람쥐	Carpediem	81.606G	81.606				no	pf583b2fcad9033
+1	41	아도어	Carpediem	80.198G	80.198				no	pc81570e753b52e
+1	42	어쎔블	카페	79.300G	79.3	19.236	lookup(cp)	4.1	no	p755c97cc8dd235
+1	43	복구	Carpediem	77.613G	77.613	17.830	lookup(cp)	4.4	no	pca1d9008514657
+1	44	슈퍼땅콩	각성	77.436G	77.436	24.591	lookup(cp)	3.1	no	p21ccfe3a472902
+1	45	쌀먹장인남궁탄소	카페	75.574G	75.574				no	paf74aeac1af43b
+1	46	초코	방랑자	75.035G	75.035	21.192	lookup(cp)	3.5	no	pd83f410cd43a68
+1	47	타미	Carpediem	74.774G	74.774	24.799	lookup(cp)	3.0	no	pcb61ea3ccab342
+1	48	비지	킹덤	74.262G	74.262				no	pc018a50084adc5
+1	49	적신	월드	74.186G	74.186	28.748	power-leaderboard(name)	2.6	no	p201efa494ffc75
+1	50	놀래미	판도라	72.814G	72.814				no	p12d68f6b01cf0b
+2	1	도리	Carpediem	881.689G	881.689				no	p1869347059e4c9
+2	2	凱凱の餅乾軍團	史萊姆遊樂區	637.094G	637.094	27.124	power-leaderboard(name+guild)	23.5	no	p118f965b4b2bb8
+2	3	아나	Carpediem	568.668G	568.668	24.957	lookup(cp)	22.8	no	p0ef2ea6e7bfb58
+2	4	환상	Carpediem	559.680G	559.68	20.783	lookup(cp)	26.9	no	pdae726f7364f70
+2	5	적신	Carpediem	524.163G	524.163	28.748	power-leaderboard(name)	18.2	no	p201efa494ffc75
+2	6	눈의	Carpediem	497.655G	497.655	24.410	lookup(cp)	20.4	no	p92cf6df8b66bca
+2	7	날씨의아이	카페	477.488G	477.488	25.813	lookup(cp)	18.5	no	pe773d5ab714ec8
+2	8	타미	Carpediem	440.340G	440.34	24.799	lookup(cp)	17.8	no	pcb61ea3ccab342
+2	9	Arsen	방랑자	401.358G	401.358	26.545	lookup(cp)	15.1	no	pa178af0b469e59
+2	10	은우	Carpediem	377.707G	377.707				no	p69850dc91304dc
+2	11	솔라	카페	369.943G	369.943	23.754	lookup(cp)	15.6	no	p094259a856f7cf
+2	12	칠성	Carpediem	364.752G	364.752	18.248	lookup(cp)	20.0	no	p68459c59b2bef6
+2	13	대단한물거기	Carpediem	350.054G	350.054	21.233	power-leaderboard(name)	16.5	no	pbe6415c7a57bbe
+2	14	쏘게러웨이	사이버펑크	348.241G	348.241				no	p01b300f2485266
+2	15	루키	방랑자	327.336G	327.336	21.187	lookup(cp)	15.4	no	p943d1f17b3b344
+2	16	검은반장	APEX	326.405G	326.405	23.083	lookup(cp)	14.1	no	p7941148edb63ef
+2	17	젱젱	Carpediem	321.056G	321.056	17.299	lookup(cp)	18.6	no	pb6edb5d16895c0
+2	18	회장	Carpediem	317.149G	317.149	26.444	lookup(cp)	12.0	no	pb6e19da9a80ccf
+2	19	똥에디	카페	310.971G	310.971	22.019	lookup(cp)	14.1	no	pbd4f89e9d4ce2d
+2	20	다람쥐	Carpediem	308.765G	308.765				no	pf583b2fcad9033
+2	21	댕댕	카페	307.543G	307.543	23.476	lookup(cp)	13.1	no	p0e90d1cbbf9513
+2	22	주말랭이	바삭젤리단	301.601G	301.601				no	p554df1efbb675c
+2	23	현이	카페	297.628G	297.628	24.625	lookup(cp)	12.1	no	p4054d13f79e2dd
+2	24	Playy	Eden	293.966G	293.966				no	p0da4a807b56db0
+2	25	가을	카페	291.860G	291.86	12.719	power-leaderboard(name)	22.9	no	pcc672eeee5b32d
+2	26	고수	월드	286.779G	286.779	20.851	lookup(cp)	13.8	no	pf3a1e67329d0b4
+2	27	Kazen	Eden	284.560G	284.56	27.905	lookup(cp)	10.2	no	p08cde43141c68c
+2	28	Evenil	Eden	280.950G	280.95	22.440	lookup(cp)	12.5	no	pa4f49702d0e7ca
+2	29	복구	Carpediem	277.685G	277.685	17.830	lookup(cp)	15.6	no	pca1d9008514657
+2	30	1타법사	Carpediem	271.907G	271.907				no	pd731f442b3870d
+2	31	다함께차차차	판도라	271.012G	271.012	25.687	lookup(cp)	10.6	no	p64128beef62793
+2	32	나비	카페	270.969G	270.969	22.662	lookup(cp)	12.0	no	p9797f12b38060f
+2	33	塔塔大魔王	小孩坐一桌	269.408G	269.408	18.852	power-leaderboard(name+guild)	14.3	no	p824d2ce14477fa
+2	34	ㅎㅎ	카페	266.398G	266.398				no	p4f9b9e808cfa76
+2	35	쿠키	Carpediem	262.961G	262.961		ambiguous-name		no	p01875b38032b17
+2	36	순기능	카페	262.540G	262.54	22.496	lookup(cp)	11.7	no	p8b0482cd747cfa
+2	37	군무원	카페	262.194G	262.194	24.604	lookup(cp)	10.7	no	p2dc8bac8bcb4be
+2	38	수영	카페	259.091G	259.091	22.674	lookup(cp)	11.4	no	pf3dae0295b55bc
+2	39	이하령	Carpediem	257.357G	257.357				no	p4c36d69c4cbdd8
+2	40	아도어	Carpediem	255.669G	255.669				no	pc81570e753b52e
+2	41	몽글	카페	254.220G	254.22	22.446	lookup(cp)	11.3	no	pbeb08dfbb84690
+2	42	멋진참외	Carpediem	251.528G	251.528	22.225	lookup(cp)	11.3	no	p288dfc70d4fe9b
+2	43	J0K3R	Eden	248.662G	248.662	19.894	power-leaderboard(name+guild)	12.5	no	p1e90b760624b61
+2	44	다크닉스	텐프로	244.408G	244.408	20.894	lookup(cp)	11.7	no	p4d93e639426c83
+2	45	やなぎ	카페	243.034G	243.034	23.882	lookup(cp)	10.2	no	pb92cf4bbd31c50
+2	46	똠	Carpediem	242.761G	242.761				no	p88fc0143063d67
+2	47	김뱅글	뽀시래기	237.201G	237.201	20.202	power-leaderboard(name+guild)	11.7	no	pa3290cb4622ad7
+2	48	nongpeawnarak	Eden	235.781G	235.781				no	p0a473b55855ecc
+2	49	노을	카페	230.680G	230.68	22.379	lookup(cp)	10.3	no	p9174b886b9c5f2
+2	50	cipherX	Eden	229.383G	229.383	24.765	power-leaderboard(name+guild)	9.3	no	pc97124015dd1ca
+3	1	날씨의아이	카페	1T 111G	1111	25.813	lookup(cp)	43.0	no	pe773d5ab714ec8
+3	2	솔라	카페	978.325G	978.325	23.754	lookup(cp)	41.2	no	p094259a856f7cf
+3	3	현이	카페	974.089G	974.089	24.625	lookup(cp)	39.6	no	p4054d13f79e2dd
+3	4	똥에디	카페	918.133G	918.133	22.019	lookup(cp)	41.7	no	pbd4f89e9d4ce2d
+3	5	타미	Carpediem	896.161G	896.161	24.799	lookup(cp)	36.1	no	pcb61ea3ccab342
+3	6	나비	카페	874.206G	874.206	22.662	lookup(cp)	38.6	no	p9797f12b38060f
+3	7	적신	Carpediem	855.328G	855.328	28.748	power-leaderboard(name)	29.8	no	p201efa494ffc75
+3	8	댕댕	카페	849.616G	849.616	23.476	lookup(cp)	36.2	no	p0e90d1cbbf9513
+3	9	凱凱の餅乾軍團	史萊姆遊樂區	779.362G	779.362	27.124	power-leaderboard(name+guild)	28.7	no	p118f965b4b2bb8
+3	10	몽글	카페	762.928G	762.928	22.446	lookup(cp)	34.0	no	pbeb08dfbb84690
+3	11	회장	Carpediem	762.589G	762.589	26.444	lookup(cp)	28.8	no	pb6e19da9a80ccf
+3	12	다함께차차차	카페	757.027G	757.027	25.687	lookup(cp)	29.5	no	p64128beef62793
+3	13	페즈	카페	746.411G	746.411	18.692	lookup(cp)	39.9	no	p2605d3b38963d5
+3	14	아나	Carpediem	740.546G	740.546	24.957	lookup(cp)	29.7	no	p0ef2ea6e7bfb58
+3	15	Evenil	Eden	735.296G	735.296	22.440	lookup(cp)	32.8	no	pa4f49702d0e7ca
+3	16	칠성	Carpediem	729.043G	729.043	18.248	lookup(cp)	40.0	no	p68459c59b2bef6
+3	17	Kazen	Eden	726.804G	726.804	27.905	lookup(cp)	26.0	no	p08cde43141c68c
+3	18	은우	Carpediem	726.492G	726.492				no	p69850dc91304dc
+3	19	환상	Carpediem	721.582G	721.582	20.783	lookup(cp)	34.7	no	pdae726f7364f70
+3	20	슈퍼땅콩	각성	715.991G	715.991	24.591	lookup(cp)	29.1	no	p21ccfe3a472902
+3	21	리라	미르	714.024G	714.024	22.339	lookup(cp)	32.0	no	pdfbe8a6b025b63
+3	22	어쎔블	카페	702.630G	702.63	19.236	lookup(cp)	36.5	no	p755c97cc8dd235
+3	23	망베	4EVER	693.099G	693.099	16.598	power-leaderboard(name)	41.8	no	p11c0acaa37e588
+3	24	순기능	카페	692.165G	692.165	22.496	lookup(cp)	30.8	no	p8b0482cd747cfa
+3	25	똠	Carpediem	685.128G	685.128				no	p88fc0143063d67
+3	26	군무원	카페	672.318G	672.318	24.604	lookup(cp)	27.3	no	p2dc8bac8bcb4be
+3	27	대단한물거기	Carpediem	671.258G	671.258	21.233	power-leaderboard(name)	31.6	no	pbe6415c7a57bbe
+3	28	다크닉스	템프로	660.218G	660.218	20.894	lookup(cp)	31.6	no	p4d93e639426c83
+3	29	노페	카페	654.298G	654.298	21.788	lookup(cp)	30.0	no	pc59d1c6e73f4bd
+3	30	멋진참외	Carpediem	651.549G	651.549	22.225	lookup(cp)	29.3	no	p288dfc70d4fe9b
+3	31	Arsen	방랑자	640.295G	640.295	26.545	lookup(cp)	24.1	no	pa178af0b469e59
+3	32	벼락맞은선인장	카페	630.890G	630.89	21.340	lookup(cp)	29.6	no	p0b63f1edfbdf98
+3	33	뜨뜨뜨뜨	카페	626.452G	626.452	16.966	lookup(cp)	36.9	no	pe1162251ff3477
+3	34	고수	월드	623.758G	623.758	20.851	lookup(cp)	29.9	no	pf3a1e67329d0b4
+3	35	やなぎ	카페	610.863G	610.863	23.882	lookup(cp)	25.6	no	pb92cf4bbd31c50
+3	36	복구	Carpediem	608.676G	608.676	17.830	lookup(cp)	34.1	no	pca1d9008514657
+3	37	루키	방랑자	608.245G	608.245	21.187	lookup(cp)	28.7	no	p943d1f17b3b344
+3	38	다크닉스	텐프로	600.916G	600.916	20.894	lookup(cp)	28.8	no	p4d93e639426c83
+3	39	쏘게러웨이	사이버펑크	590.782G	590.782				no	p01b300f2485266
+3	40	똑똑이아빠	카페	588.078G	588.078	20.362	lookup(cp)	28.9	no	p309b580efd5334
+3	41	Bishop	킹덤	586.967G	586.967	25.143	lookup(cp)	23.3	no	p8d625e40ac1d8d
+3	42	야르맛쿠키	카페	585.985G	585.985	20.931	power-leaderboard(name+guild)	28.0	no	p702e7ee56bfcc9
+3	43	공포	카페	581.195G	581.195	16.260	lookup(cp)	35.7	no	pe343d14b5bb860
+3	44	율율율	카페	579.427G	579.427	17.747	lookup(cp)	32.6	no	p675e08501960e0
+3	45	GARU	바삭젤리단	563.119G	563.119	20.831	lookup(cp)	27.0	no	p4925dd3f25637d
+3	46	민석	카페	551.763G	551.763	20.007	lookup(cp)	27.6	no	p34cb654481f631
+3	47	수영	카페	546.474G	546.474	22.674	lookup(cp)	24.1	no	pf3dae0295b55bc
+3	48	Annie	Eden	542.646G	542.646	16.218	power-leaderboard(name+guild)	33.5	no	p7aa8cee25edf8d
+3	49	젱젱	Carpediem	542.475G	542.475	17.299	lookup(cp)	31.4	no	pb6edb5d16895c0
+3	50	19강터짐10강오너	카페	542.460G	542.46				no	p8e91fce1b09670
+4	1	날씨의아이	카페	1T 786G	1786	25.813	lookup(cp)	69.2	no	pe773d5ab714ec8
+4	2	타미	Carpediem	1T 775G	1775	24.799	lookup(cp)	71.6	no	pcb61ea3ccab342
+4	3	슈퍼땅콩	각성	1T 626G	1626	24.591	lookup(cp)	66.1	no	p21ccfe3a472902
+4	4	Arsen	방랑자	1T 569G	1569	26.545	lookup(cp)	59.1	no	pa178af0b469e59
+4	5	현이	카페	1T 550G	1550	24.625	lookup(cp)	62.9	no	p4054d13f79e2dd
+4	6	똥에디	카페	1T 499G	1499	22.019	lookup(cp)	68.1	no	pbd4f89e9d4ce2d
+4	7	Bishop	카페	1T 462G	1462	25.143	lookup(cp)	58.1	no	p8d625e40ac1d8d
+4	8	凱凱の餅乾軍團	史萊姆遊樂區	1T 455G	1455	27.124	power-leaderboard(name+guild)	53.6	no	p118f965b4b2bb8
+4	9	준준이쿠키	Carpediem	1T 443G	1443	22.537	lookup(cp)	64.0	no	p0e8a478460cd4c
+4	10	스타	카페	1T 434G	1434	22.196	lookup(cp)	64.6	no	p25c6744f0b074b
+4	11	검은반장	바삭젤리단	1T 400G	1400	23.083	lookup(cp)	60.6	no	p7941148edb63ef
+4	12	다함께차차차	카페	1T 362G	1362	25.687	lookup(cp)	53.0	no	p64128beef62793
+4	13	적신	카페	1T 358G	1358	28.748	power-leaderboard(name)	47.2	no	p201efa494ffc75
+4	14	회장	Carpediem	1T 351G	1351	26.444	lookup(cp)	51.1	no	pb6e19da9a80ccf
+4	15	나비	카페	1T 309G	1309	22.662	lookup(cp)	57.8	no	p9797f12b38060f
+4	16	ㅈ니	카페	1T 309G	1309				no	p0c7f0aac67e9ec
+4	17	대단한물거기	카페	1T 287G	1287	21.233	power-leaderboard(name+guild)	60.6	no	pbe6415c7a57bbe
+4	18	아나	Carpediem	1T 275G	1275	24.957	lookup(cp)	51.1	no	p0ef2ea6e7bfb58
+4	19	루키	방랑자	1T 270G	1270	21.187	lookup(cp)	59.9	no	p943d1f17b3b344
+4	20	페즈	카페	1T 238G	1238	18.692	lookup(cp)	66.2	no	p2605d3b38963d5
+4	21	다크닉스	텐프로	1T 229G	1229	20.894	lookup(cp)	58.8	no	p4d93e639426c83
+4	22	군무원	카페	1T 225G	1225	24.604	lookup(cp)	49.8	no	p2dc8bac8bcb4be
+4	23	료쨩	Carpediem	1T 211G	1211	22.156	lookup(cp)	54.7	no	paebcbf9b1226ce
+4	24	딘딘	Carpediem	1T 210G	1210	25.563	lookup(cp)	47.3	no	p254abac98a46d9
+4	25	칠성	Carpediem	1T 156G	1156	18.248	lookup(cp)	63.3	no	p68459c59b2bef6
+4	26	환상	모험	1T 156G	1156	20.783	lookup(cp)	55.6	no	pdae726f7364f70
+4	27	やなぎ	카페	1T 142G	1142	23.882	lookup(cp)	47.8	no	pb92cf4bbd31c50
+4	28	벼락맞은선인장	카페	1T 136G	1136	21.340	lookup(cp)	53.2	no	p0b63f1edfbdf98
+4	29	리라	카페	1T 135G	1135	22.339	lookup(cp)	50.8	no	pdfbe8a6b025b63
+4	30	뜨뜨뜨뜨	카페	1T 134G	1134	16.966	lookup(cp)	66.8	no	pe1162251ff3477
+4	31	복구	Carpediem	1T 131G	1131	17.830	lookup(cp)	63.4	no	pca1d9008514657
+4	32	김개똥	월드	1T 126G	1126	20.425	lookup(cp)	55.1	no	pb8b98451c2dabe
+4	33	댕댕	카페	1T 125G	1125	23.476	lookup(cp)	47.9	no	p0e90d1cbbf9513
+4	34	고수	월드	1T 124G	1124	20.851	lookup(cp)	53.9	no	pf3a1e67329d0b4
+4	35	노페	카페	1T 108G	1108	21.788	lookup(cp)	50.9	no	pc59d1c6e73f4bd
+4	36	빵빵	월드	1T 103G	1103	17.417	lookup(cp)	63.3	no	pde3567cc637fa6
+4	37	멋진참외	Carpediem	1T 096G	1096	22.225	lookup(cp)	49.3	no	p288dfc70d4fe9b
+4	38	마왕	Carpediem	1T 094G	1094	23.031	lookup(cp)	47.5	no	p8355301bfb64cd
+4	39	GARU	바삭젤리단	1T 093G	1093	20.831	lookup(cp)	52.5	no	p4925dd3f25637d
+4	40	지안	월드	1T 090G	1090	23.186	lookup(cp)	47.0	no	p736ae0ae85b7b1
+4	41	꽁룡	월드	1T 090G	1090	15.133	power-leaderboard(name+guild)	72.0	no	p58eae58ad59a30
+4	42	라바킹	미르	1T 089G	1089	20.328	power-leaderboard(name+guild)	53.6	no	paf95c9319d01cf
+4	43	젱젱	Carpediem	1T 086G	1086	17.299	lookup(cp)	62.8	no	pb6edb5d16895c0
+4	44	초코	방랑자	1T 077G	1077	21.192	lookup(cp)	50.8	no	pd83f410cd43a68
+4	45	율율율	카페	1T 070G	1070	17.747	lookup(cp)	60.3	no	p675e08501960e0
+4	46	수영	카페	1T 055G	1055	22.674	lookup(cp)	46.5	no	pf3dae0295b55bc
+4	47	똠	Carpediem	1T 048G	1048				no	p88fc0143063d67
+4	48	몽글	카페	1T 042G	1042	22.446	lookup(cp)	46.4	no	pbeb08dfbb84690
+4	49	주말랭이	바삭젤리단	1T 041G	1041				no	p554df1efbb675c
+4	50	순기능	카페	1T 031G	1031	22.496	lookup(cp)	45.8	no	p8b0482cd747cfa
+5	1	날씨의아이	카페	3T 226G	3226	25.813	lookup(cp)	125.0	yes	pe773d5ab714ec8
+5	2	현이	카페	2T 892G	2892	24.625	lookup(cp)	117.4	yes	p4054d13f79e2dd
+5	3	검은반장	바삭젤리단	2T 840G	2840	23.083	lookup(cp)	123.0	yes	p7941148edb63ef
+5	4	타미	Carpediem	2T 720G	2720	24.799	lookup(cp)	109.7	yes	pcb61ea3ccab342
+5	5	다함께차차차	카페	2T 696G	2696	25.687	lookup(cp)	105.0	yes	p64128beef62793
+5	6	燕之助	薑餅棉花妮妮樂園	2T 659G	2659	20.638	lookup(cp)	128.8	yes	p1178132157a6df
+5	7	아나	Carpediem	2T 637G	2637	24.957	lookup(cp)	105.7	yes	p0ef2ea6e7bfb58
+5	8	노을	카페	2T 542G	2542	22.379	lookup(cp)	113.6	yes	p9174b886b9c5f2
+5	9	페즈	카페	2T 509G	2509	18.692	lookup(cp)	134.2	yes	p2605d3b38963d5
+5	10	스타	카페	2T 484G	2484	22.196	lookup(cp)	111.9	yes	p25c6744f0b074b
+5	11	딘딘	Carpediem	2T 464G	2464	25.563	lookup(cp)	96.4	yes	p254abac98a46d9
+5	12	華夏戶籍防盜部隊	小孩坐一桌	2T 451G	2451	22.917	lookup(cp)	107.0	yes	p1fcba070b0aae2
+5	13	홍백련	품격	2T 446G	2446	24.343	lookup(cp)	100.5	yes	p6c0272a7611c4e
+5	14	뜨뜨뜨뜨	카페	2T 423G	2423	16.966	lookup(cp)	142.8	yes	pe1162251ff3477
+5	15	やなぎ	카페	2T 417G	2417	23.882	lookup(cp)	101.2	yes	pb92cf4bbd31c50
+5	16	젱젱	Carpediem	2T 416G	2416	17.299	lookup(cp)	139.7	yes	pb6edb5d16895c0
+5	17	솔라	카페	2T 384G	2384	23.754	lookup(cp)	100.4	yes	p094259a856f7cf
+5	18	준준이쿠키	Carpediem	2T 381G	2381	22.537	lookup(cp)	105.6	yes	p0e8a478460cd4c
+5	19	슈퍼땅콩	각성	2T 339G	2339	24.591	lookup(cp)	95.1	yes	p21ccfe3a472902
+5	20	Arsen	방랑자	2T 320G	2320	26.545	lookup(cp)	87.4	yes	pa178af0b469e59
+5	21	루키	방랑자	2T 295G	2295	21.187	lookup(cp)	108.3	yes	p943d1f17b3b344
+5	22	초코	방랑자	2T 289G	2289	21.192	lookup(cp)	108.0	yes	pd83f410cd43a68
+5	23	환상	카페	2T 289G	2289	20.783	lookup(cp)	110.1	yes	pdae726f7364f70
+5	24	newbiee	카페	2T 239G	2239	30.000	lookup(cp)	74.6	yes	p24868eae416969
+5	25	다크닉스	Carpediem	2T 225G	2225	20.894	lookup(cp)	106.5	yes	p4d93e639426c83
+5	26	전투토끼	월드	2T 220G	2220	22.987	lookup(cp)	96.6	yes	pe5b4fc6f9d3c4f
+5	27	Malicious	방랑자	2T 196G	2196	22.300	lookup(cp)	98.5	yes	p2bb9607ac69e35
+5	28	똥에디	카페	2T 153G	2153	22.019	lookup(cp)	97.8	yes	pbd4f89e9d4ce2d
+5	29	눈의	Carpediem	2T 116G	2116	24.410	lookup(cp)	86.7	yes	p92cf6df8b66bca
+5	30	칠성	Carpediem	2T 106G	2106	18.248	lookup(cp)	115.4	yes	p68459c59b2bef6
+5	31	나비	카페	2T 104G	2104	22.662	lookup(cp)	92.8	yes	p9797f12b38060f
+5	32	댕댕	카페	2T 086G	2086	23.476	lookup(cp)	88.9	yes	p0e90d1cbbf9513
+5	33	빵빵	월드	2T 027G	2027	17.417	lookup(cp)	116.4	yes	pde3567cc637fa6
+5	34	히히서커스	Carpediem	2T 025G	2025	21.948	lookup(cp)	92.3	yes	p9d21c23e6aa4a8
+5	35	똑똑이아빠	카페	2T 015G	2015	20.362	lookup(cp)	99.0	yes	p309b580efd5334
+5	36	노페	카페	2T 013G	2013	21.788	lookup(cp)	92.4	yes	pc59d1c6e73f4bd
+5	37	SCANDAL	미르	2T 011G	2011	21.243	lookup(cp)	94.7	yes	pcb4f02268249c1
+5	38	Bishop	카페	2T 008G	2008	25.143	lookup(cp)	79.9	yes	p8d625e40ac1d8d
+5	39	벼락맞은선인장	카페	2T 003G	2003	21.340	lookup(cp)	93.9	yes	p0b63f1edfbdf98
+5	40	섬영	판도라	1T 999G	1999	21.996	lookup(cp)	90.9	yes	p6b15c5cda31c34
+5	41	푸키	Eden	1T 998G	1998	19.358	lookup(cp)	103.2	yes	pe40978c51eb3b9
+5	42	부스러기	방랑자	1T 982G	1982	22.492	lookup(cp)	88.1	yes	p451c4ad01e3c47
+5	43	군무원	카페	1T 967G	1967	24.604	lookup(cp)	79.9	yes	p2dc8bac8bcb4be
+5	44	八雲Shiro	幻想郷の人間の里	1T 959G	1959	21.326	lookup(cp)	91.9	yes	p5d312f9e630b1d
+5	45	鮭魚soz	阿Seng餅乾集團	1T 951G	1951	19.213	lookup(cp)	101.5	yes	p7bac1719a13ce6
+5	46	무드	월드	1T 944G	1944	23.547	lookup(cp)	82.6	yes	p894428c8045279
+5	47	Lineve	Eden	1T 939G	1939	22.174	lookup(cp)	87.4	yes	pf66c7f789aa7cc
+5	48	군산	1TOP	1T 929G	1929	20.358	lookup(cp)	94.8	yes	p3098c6dc03b4db
+5	49	조봉순	판도라	1T 926G	1926	21.762	lookup(cp)	88.5	yes	pc7d06d6b03b127
+5	50	김개똥	월드	1T 916G	1916	20.425	lookup(cp)	93.8	yes	pb8b98451c2dabe
+5	51	코니	월드	1T 912G	1912	15.652	lookup(cp)	122.2	yes	p46e956037d9b10
+5	52	똠ຸ	Carpediem	1T 911G	1911	25.173	lookup(cp)	75.9	yes	p3e3b4e0e50acb7
+5	53	순기능	카페	1T 907G	1907	22.496	lookup(cp)	84.8	yes	p8b0482cd747cfa
+5	54	최동	블루	1T 900G	1900	21.094	lookup(cp)	90.1	yes	p4922c07ac7daa3
+5	55	리라	카페	1T 894G	1894	22.339	lookup(cp)	84.8	yes	pdfbe8a6b025b63
+5	56	여포	Carpediem	1T 883G	1883	22.161	lookup(cp)	85.0	yes	p40c9aa1b2de37e
+5	57	고수	월드	1T 879G	1879	20.851	lookup(cp)	90.1	yes	pf3a1e67329d0b4
+5	58	불꽃	월드	1T 877G	1877	17.838	lookup(cp)	105.2	yes	p99b449ad593641
+5	59	황금도넛	월드	1T 875G	1875	20.156	lookup(cp)	93.0	yes	p523bf2c5d1e864
+5	60	chomeisa	會蹦蹦的餅乾	1T 875G	1875	18.971	lookup(cp)	98.8	yes	pca8ebb580563a7
+5	61	박살장인남궁탄소	월드	1T 855G	1855	18.215	lookup(cp)	101.8	yes	p2ed2adb7b0105c
+5	62	GARU	바삭젤리단	1T 847G	1847	20.831	lookup(cp)	88.7	yes	p4925dd3f25637d
+5	63	공포	카페	1T 822G	1822	16.260	lookup(cp)	112.1	yes	pe343d14b5bb860
+5	64	採棉糕手妮哥醬	薑餅棉花妮妮樂園	1T 814G	1814	21.966	lookup(cp)	82.6	yes	paa279d6d44dfe4
+5	65	Kazen	Eden	1T 784G	1784	27.905	lookup(cp)	63.9	yes	p08cde43141c68c
+5	66	몽글	카페	1T 783G	1783	22.446	lookup(cp)	79.4	yes	pbeb08dfbb84690
+5	67	율율율	카페	1T 779G	1779	17.747	lookup(cp)	100.2	yes	p675e08501960e0
+5	68	거니	방랑자	1T 775G	1775	21.444	lookup(cp)	82.8	yes	p37c913409bc983
+5	69	우나기	2030썸남썸녀	1T 760G	1760	22.963	lookup(cp)	76.6	yes	p46a3ce2aff420b
+5	70	단풍	각성	1T 759G	1759	20.259	lookup(cp)	86.8	yes	p134449dc24cb17
+5	71	김하이	바삭젤리단	1T 748G	1748	21.111	lookup(cp)	82.8	yes	p0412d96e2f723a
+5	72	귀신	방랑자	1T 741G	1741	21.801	lookup(cp)	79.9	yes	pd3bd27fff94964
+5	73	리리	방랑자	1T 738G	1738	19.482	lookup(cp)	89.2	yes	pf500625a68a1c1
+5	74	복구	Carpediem	1T 729G	1729	17.830	lookup(cp)	97.0	yes	pca1d9008514657
+5	75	시원	월드	1T 728G	1728	16.223	lookup(cp)	106.5	yes	p22f02d668f59b0
+5	76	brph	Eden	1T 724G	1724	20.176	lookup(cp)	85.4	yes	pfa3af58389f0c8
+5	77	참이슬	Carpediem	1T 717G	1717	19.994	lookup(cp)	85.9	yes	p74310661a71e31
+5	78	수정	각성	1T 703G	1703	22.244	lookup(cp)	76.6	yes	p875fbe22c38ff8
+5	79	회장	Carpediem	1T 700G	1700	26.444	lookup(cp)	64.3	yes	pb6e19da9a80ccf
+5	80	Evenil	Eden	1T 698G	1698	22.440	lookup(cp)	75.7	yes	pa4f49702d0e7ca
+5	81	릴리안느	품격	1T 681G	1681	20.832	lookup(cp)	80.7	yes	pf8fd10087cfc3c
+5	82	감자칩	사과별	1T 676G	1676	21.057	lookup(cp)	79.6	yes	pe8203f896926c0
+5	83	민석	카페	1T 669G	1669	20.007	lookup(cp)	83.4	yes	p34cb654481f631
+5	84	사랑	점화	1T 668G	1668	26.428	lookup(cp)	63.1	yes	p245cd92e6c3232
+5	85	오즈	회사탈출	1T 668G	1668	25.029	lookup(cp)	66.6	yes	p685f6f234658bb
+5	86	마녀	킹덤	1T 668G	1668	21.479	lookup(cp)	77.7	yes	pd025e5065c84cc
+5	87	지안	월드	1T 665G	1665	23.186	lookup(cp)	71.8	yes	p736ae0ae85b7b1
+5	88	웨더리포트	뽀시래기	1T 665G	1665	22.833	lookup(cp)	72.9	yes	pb13bd7e6c1c159
+5	89	료쨩	Carpediem	1T 658G	1658	22.156	lookup(cp)	74.8	yes	paebcbf9b1226ce
+5	90	초과	미르	1T 640G	1640	20.619	lookup(cp)	79.5	yes	pb7db41144d1220
+5	91	UdonMM	Eden	1T 635G	1635	20.962	lookup(cp)	78.0	yes	p9e371fbe10882d
+5	92	수영	카페	1T 617G	1617	22.674	lookup(cp)	71.3	yes	pf3dae0295b55bc
+5	93	도둑	각성	1T 615G	1615	19.200	lookup(cp)	84.1	yes	pae18cb33fec21d
+5	94	어쎔블	카페	1T 610G	1610	19.236	lookup(cp)	83.7	yes	p755c97cc8dd235
+5	95	트제	각성	1T 598G	1598	21.048	lookup(cp)	75.9	yes	pd663626849284b
+5	96	시노니	애봉	1T 593G	1593	20.341	lookup(cp)	78.3	yes	p6a3493a40f2146
+5	97	힘찬잉어	킹덤	1T 591G	1591	20.659	lookup(cp)	77.0	yes	p1eab7cac229632
+5	98	마왕	Carpediem	1T 573G	1573	23.031	lookup(cp)	68.3	yes	p8355301bfb64cd
+5	99	인미	마누라	1T 570G	1570	23.270	lookup(cp)	67.5	yes	pe88507a23948b6
+5	100	멋진참외	Carpediem	1T 562G	1562	22.225	lookup(cp)	70.3	yes	p288dfc70d4fe9b

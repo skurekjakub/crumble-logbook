@@ -1,0 +1,379 @@
+crumb
+
+SimulatorDPSRankingsGuildsLookupNewStagesPatchesContact
+
+Sign in
+
+한국어
+
+# Patch notes
+
+Updates
+
+- 1.4.002Sep 23
+
+- 1.3.002Sep 10
+
+- Aug 27
+
+- Aug 13
+
+- Jul 30
+
+1.4.0021.3.002Aug 27Aug 13Jul 30
+
+Sep 23, 20261.4.002
+
+## Princess Bari, Rumble Arena and Dimensional Rift
+
+Princess Bari
+
+TSSR · Fire · Charge
+
+Soul Guidance: charges at high-ATK enemies, then guided souls around her and her allies give DMG Down, Push RES and Lift RES and hit nearby enemies.
+
+Every 5.5 s: 16 slashes of 79.7% ATK. Souls on her and 2 Charge allies deal 141% ATK every 0.66 s for 3.5 s (30% less for each repeat hit on the same enemy). DMG Down 40%, Lift RES and Push RES +100% for 3.5 s. Skill Prep 50%.
+
+Moon Rabbit
+
+SSR · Grass · Tank
+
+Rams into enemies, then turns into a Giant Rice Cake Bunny to deal more damage and lower their ATK and CRIT%.
+
+Every 7 s: 3 smashes of 38.8% ATK around her. 60% chance to lower ATK by 50% and CRIT% by 130% for 5 s (one roll for both). Skill Prep 50%.
+
+Candy Shade Pouch
+
+SSR · Pet
+
+Ally Lift RES +30%, Max HP +12.5%.
+
+Same effect group as Panda Dumpling's Lift RES: they don't stack, the higher one counts.
+
+Continuum Cog
+
+SSR · Pet
+
+Ally Boss DMG +150%, only in the Dimensional Rift. From the Dimensional Rift exchange.
+
++50% at the lowest grade, +150% at the highest. No effect in Guild Conquest.
+
+### Cookie & pet changes
+
+- ▲ BuffSkill Prep0% → 50%
+
+- ▲ BuffSkill Prep0% → 25%
+
+### New
+
+- Rumble Arena: fight Mercenaries from other servers. Irregular seasons, each with its own passive effects. Rumble Medals go to the Rumble Arena Exchange. New Rumble Special Pass.
+
+- Dimensional Rift: opens after the last main stage. Boss-only stages; raise your Dimensional Energy level for stats. Season rewards: profile frames and Dimension Fragments for the exchange.open
+
+- Crumble Patches: collectibles earned from rewards and achievements, shown on your profile.
+
+### Balance
+
+- New stat Skill Prep: shortens the wait for a cookie's first skill. Cookies that already cast at the start show 100%.
+
+- Main stages 169-1 to 328-30 made easier; the bosses of 169-1 to 248-30 too (Cool Mint Cookie, Rowdy Biker, GingerCraven, Cream Eagle, Tainted Ent, Redberry Assassin, Choco Werehound Princess).
+
+- Recommended power, enemy ATK and HP on those stages: from almost the same at 169-1 to 30% lower at 248-30 and 36% lower at the end. Stage 328-30 power:15.61B → 10.00B
+
+- Guild Conquest tier requirements lowered: Chocolate 1 100M → 15M, Bronze 2 150M → 30M, Bronze 1 200M → 50M, Silver 3 300M → 100M, Silver 2 450M → 200M, Silver 1 650M → 300M, Gold 3 1G → 600M, Gold 2 1.5G → 1.1G.
+
+- Guild Conquest group rewards (Guild Medals): 2nd 1,400 → 1,500, 3rd 1,000 → 1,200, 4th 600 → 1,000, unranked 200 → 900. From season 6 (Sep 24).
+
+### Expansions
+
+- Daily Dungeons up to stage 770.
+
+- Gnome Laboratory up to research 110-2 and special research 19.
+
+- Plating up to level 25.
+
+### Events
+
+- Soothing Flame: collect Wisps of Guidance for Princess Bari's gacha (leftovers turn into Crystals).
+
+- Moon Rabbit Cookie pick-up event.
+
+- CRASH! Rumble Arena event.
+
+- Chuseok 7-day check-in, and a new 7-day check-in with Vampire Cookie.
+
+### Not in the patch notes
+
+- ▲ BuffNow gives Water allies +18% Max HP. It had no effect at all before this update.
+
+- ChangeGuided souls lose 30% damage on each repeat hit against the same enemy (100 / 70 / 49%), so her total against a single boss is lower than the raw number suggests.
+
+Improvements and fixes (7)
+
+- Broken plates can be repaired with Metal Syrup, and a break now drops the plate only 2 levels.
+
+- Hold the level-up button to pick the target level.
+
+- Oven: change presets with drawn gear; filter up to 5 sub-stats in auto bake.
+
+- Chat translation button.
+
+- CookieTalk and Adventure Note updates.
+
+- Guild Conquest: the group with fewer than 5 guilds is now the last group instead of a top one.
+
+- Quest 34731 rewards order fixed (21 more Rune Crystals, 18,000 fewer Coins in total).
+
+Official patch notes ↗
+
+Sep 10, 20261.3.002
+
+## Cherry Cola Cookie
+
+Cherry Cola
+
+SSR · Water · Charge
+
+Tart Cherry Slash: charges at high-ATK enemies and damages the enemies around her.
+
+Every 1.75 s: 2 slashes of 182% ATK. Every 9 hits a dash finisher of 245% ATK.
+
+### Expansions
+
+- Main stages up to 328-30 (80 new chapters, new stage bosses).
+
+- Daily Dungeons up to stage 570.
+
+- Quest rewards for the new stages, including 1-hour Auto Hunt rewards.
+
+- Gnome Laboratory up to 90-2 (special research 16), Fame up to level 360, Resolve up to stage 1,500.
+
+### Balance
+
+- When buffs or debuffs conflict, the one that applies is now decided by its value after all stats are applied, Skill AMP included.
+
+### Events
+
+- Cherry Cola Cookie pick-up event.
+
+- Golden Brown Lucky Dough Bake.
+
+- 7-day check-in with Melon Soda Cookie.
+
+Improvements and fixes (15)
+
+- Boss HP bars show decimals (no more 0% while the boss is still alive).
+
+- Chat: turn off the preview, no jump to the bottom while scrolling, recent messages kept, report messages and nicknames.
+
+- CookieTalk on/off switch.
+
+- Auto Arena until tickets run out.
+
+- Resolve: the x100 button is now MAX.
+
+- Plating toggles keep their setting.
+
+- No gacha animation for cookies and pets you already own (TSSR still shows).
+
+- Event missions count progress made before the update.
+
+- Your place is kept in the Defense Record after a battle.
+
+- Sugar Rune crafting: system messages no longer block the animation.
+
+- The Mission pop-up opens on a tab that has rewards ready.
+
+- The Sugarcoating boost also applies when full Auto Hunt rewards are auto-collected.
+
+- Cookies could be controlled by hand in Crumble Dungeon and Guild Conquest.
+
+- Lag in the Organize Gear window.
+
+- Misplaced "EXP Dungeon Level" / "Coin Dungeon Level" text in the Adventure Record in some languages.
+
+Official patch notes ↗
+
+Aug 27, 2026
+
+## Guild Conquest, Brightseeker and Pinot Noir
+
+Brightseeker
+
+TSSR · Light · Ranged
+
+Satellite Shock: Lollipop Drones fire lasers that set off shockwaves.
+
+Every 9 s: 3 drones. Lasers 78.5% ATK, shockwaves 213% ATK.
+
+Pinot Noir
+
+SSR · Dark · Support
+
+Shadow Bind: gives allies Lift RES and Rapid Fire synergy; her shadow bullets cut enemy healing.
+
+Every 9.5 s: all allies Lift RES +35% for 10 s. Shadow bullets 90.4% ATK, 80% chance to cut enemy healing by 70% for 5 s.
+
+Tea Knight
+
+SSR · Light · Tank
+
+From the Guild Medal Exchange. Gives allies Boss DMG in Guild Conquest.
+
+Every 10 s: thunder strike of 155.2% ATK and all allies Boss DMG +70% for 10 s (Guild Conquest only; +45% at the lowest grade).
+
+Chargemellow
+
+SSR · Pet
+
+Allies get Rapid Fire synergy +2, and allies with Rapid Fire +10% ATK.
+
+### New
+
+- Guild Conquest: the guild fights the Extra-Stuffed Piñata. Weekly score, groups of 5 guilds, Guild Medals for the new exchange.open
+
+- CCC Chicken collab with 60chicken (Chicken Out? CCC Chickenbot): summon CCC Chickenbots with event tickets and trade the currency in the event exchange.
+
+### Expansions
+
+- Main stages up to 248-30.
+
+- Resolve up to level 1,000.
+
+### Balance
+
+- Overlapping buffs and debuffs: the strongest one now applies (a wrong value was used before).
+
+- Cookies no longer wander outside their scan range when healing or buffing allies.
+
+### Events
+
+- Light of Knowledge: collect Lights of Knowledge for Brightseeker's gacha.
+
+- Pinot Noir Cookie pick-up event.
+
+- Sugar Rune Artisan event.
+
+- 7-day and 25-day check-ins.
+
+Improvements and fixes (14)
+
+- Give up or retry a main stage boss fight.
+
+- Manual control moves the whole team.
+
+- No CookieTalk during boss fights.
+
+- Auto bake up to 50 gear.
+
+- Arena: Champion 1-3 tiers for the top 3; Master 4 to Grand Master 1 by rank.
+
+- Guild: a warning pop-up before donating over a set amount of Crystals; the Help Center stays open after Help All.
+
+- Adventure Records now show your Rune Crystal Dungeon level.
+
+- Higher stock limits in the Victory Medal and Mileage exchanges.
+
+- Arena defense teams stand as in their lineup.
+
+- Dough Dungeon boss HP showing -1%.
+
+- The Arena Guide now covers Pet Collection effects.
+
+- Gnome Laboratory shows its red dot as soon as research finishes via Guild Help.
+
+- Damage and Healing numbers now display when the setting is on.
+
+- The shop now shows correctly when the Weekly Free Sugarcoating is available.
+
+Official patch notes ↗
+
+Aug 13, 2026
+
+## Cool Mint Cookie and the Rune Crystal Dungeon
+
+Cool Mint
+
+SSR · Water · Charge
+
+Implant Excavation: drills into the ground, knocking enemies away, and summons skulls from the dug-up ground.
+
+### Cookie & pet changes
+
+- ▲ BuffSkill AMP now boosts their ATK buff and shields.
+
+- ChangeSummon ATK now shown with the multiplier applied (26.7% → 74.8% at 9★). Display only, real damage unchanged.
+
+### New
+
+- Rune Crystal Dungeon: beat the White Sugar Guardian for Rune Crystals (used to craft Sugar Runes).
+
+### Balance
+
+- Resolve after level 101, ATK and DEF per level:+1 → +2
+
+- Resolve after level 101, HP per level:+10 → +20
+
+- Skill AMP now raises summons' ATK, DEF and HP.
+
+### Events
+
+- King Choco Drop's Roulette.
+
+- 7-day check-in with Pomegranate Cookie.
+
+- Rune Crystal Dungeon Conquest event.
+
+### Not in the patch notes
+
+- ▲ BuffTransformed headbutt damage (9★).115.4% → 202%
+
+- ▼ NerfSlow.-70% → -62%
+
+- ChangeMovement speed buff changed from a flat bonus to a percentage.
+
+Improvements and fixes (15)
+
+- Bulk clear guide quests after 30 stages; level up the whole lineup at once.
+
+- Auto bake up to 20 gear depending on Oven level (was 8).
+
+- Accuracy, Evasion, Focus, Resistance and Skill Haste shown with decimals.
+
+- Crumble Dungeon daily rank rewards now at 12:00 PM (KST).
+
+- Arena match continues after a forced app close.
+
+- Scorpion Cookie's skill description clarified (0★: 7.5% → 7.5% of Caster's ATK). Values unchanged.
+
+- The early tutorial now explains how to reset a cookie's level.
+
+- A warning pop-up now shows the Crystal cost to refresh Arena opponents.
+
+- Collection opens on the Pet tab when only pet rewards are available.
+
+- Grapevine Cookie's skill renamed to Overly Rich Juice; Espresso Cookie's icon updated.
+
+- Black screen on some devices; synergy filter and preset fixes.
+
+- The Pickup Gacha no longer shows probabilities for Gacha Levels 1-3 (where it is not available).
+
+- The team preset no longer resets to Preset 1 after clearing a Daily Dungeon.
+
+- Cookies with two synergies now appear when filtering for just one of them.
+
+- Flames of Bravery were converted to Crystals on Aug 27 (1 : 1) after Oven Wanderer's gacha ended.
+
+Official patch notes ↗
+
+Jul 30, 2026
+
+## Global launch
+
+### New
+
+- CookieRun: Crumble launches with 69 cookies and 54 pets. Main stages up to 168-30.
+
+- Aug 3: app update with bug fixes and usability improvements.
+
+Fan site. Not affiliated with Devsisters.

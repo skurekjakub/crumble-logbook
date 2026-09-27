@@ -1,0 +1,252 @@
+- banner
+  - link "crumb — home" [ref=e9234, url=https://crumb.gg/]
+  - link "Sign in" [ref=e9235, url=https://crumb.gg/account]
+  - button "한국어로 보기" [ref=e9236]
+  - button "Switch to dark mode" [ref=e9237]
+  - button "Menu" [expanded=false, ref=e9240]
+- main
+  - paragraph
+    - StaticText "GUILD CONQUEST"
+  - heading "Simulator" [level=1, ref=e9238]
+  - button "How does this work?" [expanded=false, ref=e9241]
+  - tablist [ref=e9239] clickable [onclick]
+    - tab "Simulate" [selected, ref=e9242]
+    - tab "CompareGUILD" [ref=e9243]
+      - StaticText "CompareGUILD"
+    - tab "What-ifGUILD" [ref=e9244]
+      - StaticText "What-ifGUILD"
+    - tab "GearGUILD" [ref=e9245]
+      - StaticText "GearGUILD"
+    - tab "Swap finderGUILD" [ref=e9246]
+      - StaticText "Swap finderGUILD"
+  - generic
+    - StaticText "LINEUP"
+    - StaticText " · "
+    - StaticText "0"
+    - StaticText "/12"
+    - link "Save lineup" [ref=e9247, url=https://crumb.gg/account]
+    - button "Share" [disabled, ref=e9248]
+    - button "Clear" [ref=e9249]
+    - list "Lineup in game order"
+      - listitem "Empty slot" [level=1, ref=e9268]
+      - listitem "Empty slot" [level=1, ref=e9269]
+      - listitem "Empty slot" [level=1, ref=e9270]
+      - listitem "Empty slot" [level=1, ref=e9271]
+      - listitem "Empty slot" [level=1, ref=e9272]
+      - listitem "Empty slot" [level=1, ref=e9273]
+      - listitem "Empty slot" [level=1, ref=e9274]
+      - listitem "Empty slot" [level=1, ref=e9275]
+      - listitem "Empty slot" [level=1, ref=e9276]
+      - listitem "Empty slot" [level=1, ref=e9277]
+      - listitem "Empty slot" [level=1, ref=e9278]
+      - listitem "Empty slot" [level=1, ref=e9279]
+    - StaticText "COOKIES"
+    - textbox "Search" [ref=e9250]
+    - combobox [expanded=false, ref=e9251]: All elements
+      - MenuListPopup
+        - option "All elements" [selected, ref=e9413]
+        - option "Fire" [ref=e9414]
+        - option "Water" [ref=e9415]
+        - option "Grass" [ref=e9416]
+        - option "Light" [ref=e9417]
+        - option "Dark" [ref=e9418]
+    - combobox [expanded=false, ref=e9252]: All roles
+      - MenuListPopup
+        - option "All roles" [selected, ref=e9419]
+        - option "Tank" [ref=e9420]
+        - option "Charge" [ref=e9421]
+        - option "Ranged" [ref=e9422]
+        - option "Support" [ref=e9423]
+    - generic
+      - button "Brightseeker Cookie Brightseeker" [ref=e9280]
+      - button "Oven Wanderer Cookie Oven Wanderer" [ref=e9281]
+      - button "Princess Bari Cookie Princess Bari" [ref=e9282]
+      - button "Wind Archer Cookie Wind Archer" [ref=e9283]
+      - button "Cherry Cola Cookie Cherry Cola" [ref=e9284]
+      - button "Cool Mint Cookie Cool Mint" [ref=e9285]
+      - button "Cream Puff Cookie Cream Puff" [ref=e9286]
+      - button "Cream Soda Cookie Cream Soda" [ref=e9287]
+      - button "Dark Choco Cookie Dark Choco" [ref=e9288]
+      - button "Espresso Cookie Espresso" [ref=e9289]
+      - button "Ion Cookie Robot Ion" [ref=e9290]
+      - button "Madeleine Cookie Madeleine" [ref=e9291]
+      - button "Melon Soda Cookie Melon Soda" [ref=e9292]
+      - button "Milk Cookie's Crunchy Strong Pediatrician Milk" [ref=e9293]
+      - button "Milky Way Cookie Milky Way" [ref=e9294]
+      - button "Moon Rabbit Cookie's Pampered with Persimmon Moon Rabbit" [ref=e9295]
+      - button "Nameless Cake Hound Nameless Cake Hound" [ref=e9296]
+      - button "Pinot Noir Cookie Pinot Noir" [ref=e9297]
+      - button "Pomegranate Cookie Pomegranate" [ref=e9298]
+      - button "Schwarzwälder Schwarzwälder" [ref=e9299]
+      - button "Scorpion Cookie Scorpion" [ref=e9300]
+      - button "Skating Queen Cookie Skating Queen" [ref=e9301]
+      - button "Space Doughnut's Royal Excellence Space Doughnut" [ref=e9302]
+      - button "Strawberry Crepe Cookie Strawberry Crepe" [ref=e9303]
+      - button "Strawberry Shortcake Cookie Strawberry Shortcake" [ref=e9304]
+      - button "Tea Knight Cookie Tea Knight" [ref=e9305]
+      - button "Toothpaste Cookie Toothpaste" [ref=e9306]
+      - button "Twizzly Gummy Cookie Twizzly Gummy" [ref=e9307]
+      - button "Vampire Cookie Vampire" [ref=e9308]
+      - button "Dr. Bones Cookie Dr. Bones" [ref=e9309]
+      - button "Dr. Wasabi Cookie Dr. Wasabi" [ref=e9310]
+      - button "Herb Cookie Herb" [ref=e9311]
+      - button "Lemon Cookie Lemon" [ref=e9312]
+      - button "Licorice Cookie Licorice" [ref=e9313]
+      - button "Lime Cookie Lime" [ref=e9314]
+      - button "Macaron Cookie Macaron" [ref=e9315]
+      - button "Orange Cookie Orange" [ref=e9316]
+      - button "Pancake Cookie Pancake" [ref=e9317]
+      - button "Peach Cookie Peach" [ref=e9318]
+      - button "Popcorn Cookie Popcorn" [ref=e9319]
+      - button "Rockstar Cookie Rockstar" [ref=e9320]
+      - button "Rye Cookie Rye" [ref=e9321]
+      - button "Tiger Lily Cookie Tiger Lily" [ref=e9322]
+      - button "Witchberry Cookie Witchberry" [ref=e9323]
+      - button "Alchemist Cookie Alchemist" [ref=e9324]
+      - button "Bear Jelly Worker Bear Jelly Worker" [ref=e9325]
+      - button "Berry Yogurt Cookie Berry Yogurt" [ref=e9326]
+      - button "Blackberry Cookie Blackberry" [ref=e9327]
+      - button "Cheesecake Cookie Cheesecake" [ref=e9328]
+      - button "Cherry Cookie Cherry" [ref=e9329]
+      - button "Cocoa Cookie Cocoa" [ref=e9330]
+      - button "Dark Cherry Cookie Dark Cherry" [ref=e9331]
+      - button "Grapevine Cookie Grapevine" [ref=e9332]
+      - button "Lilac Cookie Lilac" [ref=e9333]
+      - button "Poison Mushroom Cookie Poison Mushroom" [ref=e9334]
+      - button "Space Doughnut Space Doughnut" [ref=e9335]
+      - button "Adventurer Cookie Adventurer" [ref=e9336]
+      - button "Angel Cookie Angel" [ref=e9337]
+      - button "Cheerleader Cookie Cheerleader" [ref=e9338]
+      - button "Coffee Cookie Coffee" [ref=e9339]
+      - button "Devil Cookie Devil" [ref=e9340]
+      - button "Gumball Cookie Gumball" [ref=e9341]
+      - button "Knight Cookie Knight" [ref=e9342]
+      - button "Onion Cookie Onion" [ref=e9343]
+      - button "Princess Cookie Princess" [ref=e9344]
+      - button "Red Pepper Cookie Red Pepper" [ref=e9345]
+      - button "Zombie Cookie Zombie" [ref=e9346]
+      - button "Blueberry Bird Blueberry Bird" [ref=e9347]
+      - button "GingerBrave GingerBrave" [ref=e9348]
+      - button "GingerBright GingerBright" [ref=e9349]
+      - button "Muscle Cookie Muscle" [ref=e9350]
+      - button "Ninja Cookie Ninja" [ref=e9351]
+      - button "Skater Cookie Skater" [ref=e9352]
+      - button "Strawberry Cookie Strawberry" [ref=e9353]
+      - button "Sugar Gnome Sugar Gnome" [ref=e9354]
+      - button "Wizard Cookie Wizard" [ref=e9355]
+    - StaticText "PETS"
+    - StaticText " · "
+    - StaticText "0"
+    - StaticText "/3"
+    - generic
+      - button "Gold Drop Gold Drop" [ref=e9356]
+      - button "Fluffy Cheese Cat Fluffy Cheese Cat" [ref=e9357]
+      - button "Kiwi Bird Kiwi Bird" [ref=e9358]
+      - button "Furball Pup Furball Pup" [ref=e9359]
+      - button "Marshmallow Hamster Marshmallow Hamster" [ref=e9360]
+      - button "Banana Lion Banana Lion" [ref=e9361]
+      - button "Octo Wasabi Octo Wasabi" [ref=e9362]
+      - button "Hot Doggie Hot Doggie" [ref=e9363]
+      - button "Avocatapult Avocatapult" [ref=e9364]
+      - button "Mango Toucan Mango Toucan" [ref=e9365]
+      - button "Rooty Rooty" [ref=e9366]
+      - button "Floral Froglet Floral Froglet" [ref=e9367]
+      - button "Yule Log Cake Yule Log Cake" [ref=e9368]
+      - button "Pterosatchel Pterosatchel" [ref=e9369]
+      - button "Bonbon Birdy Bonbon Birdy" [ref=e9370]
+      - button "Yakgwa Pupper Yakgwa Pupper" [ref=e9371]
+      - button "Eggbeak Eggbeak" [ref=e9372]
+      - button "Breadog Breadog" [ref=e9373]
+      - button "Berry Angrybeak Berry Angrybeak" [ref=e9374]
+      - button "Constable Whiskers Constable Whiskers" [ref=e9375]
+      - button "Holy Baby Drop Holy Baby Drop" [ref=e9376]
+      - button "Majestic King Choco Drop Majestic King Choco Drop" [ref=e9377]
+      - button "Sweet n' Sour Sweet n' Sour" [ref=e9378]
+      - button "Chargemellow Chargemellow" [ref=e9379]
+      - button "Candy Shade Pouch Candy Shade Pouch" [ref=e9380]
+      - button "Continuum Cog Continuum Cog" [ref=e9381]
+      - button "Apple Rabbit Apple Rabbit" [ref=e9382]
+      - button "Lemon Slice Lemon Slice" [ref=e9383]
+      - button "Owlcorn Owlcorn" [ref=e9384]
+      - button "Mini Orange Mouse Mini Orange Mouse" [ref=e9385]
+      - button "Sweet Rice Seal Sweet Rice Seal" [ref=e9386]
+      - button "Firestarter Firestarter" [ref=e9387]
+      - button "Milk Angel Milk Angel" [ref=e9388]
+      - button "Junior Sleuth Ted Junior Sleuth Ted" [ref=e9389]
+      - button "Lord Crumbles III Lord Crumbles III" [ref=e9390]
+      - button "Creamtese Creamtese" [ref=e9391]
+      - button "Icy Birdie Icy Birdie" [ref=e9392]
+      - button "Soda Dollop Soda Dollop" [ref=e9393]
+      - button "Little Ghost Little Ghost" [ref=e9394]
+      - button "Panda Dumpling Panda Dumpling" [ref=e9395]
+      - button "Dark Spirit Helmet Dark Spirit Helmet" [ref=e9396]
+      - button "Cloud Pelican Cloud Pelican" [ref=e9397]
+      - button "Fruit Doe Fruit Doe" [ref=e9398]
+      - button "Carrot Cake Rabbit Carrot Cake Rabbit" [ref=e9399]
+      - button "Jingle Deer Jingle Deer" [ref=e9400]
+      - button "Floofy Fruity Floofy Fruity" [ref=e9401]
+      - button "Toofie Toofie" [ref=e9402]
+      - button "Dragon's Tail Dragon's Tail" [ref=e9403]
+      - button "Brain Gum Brain Gum" [ref=e9404]
+      - button "Mocha Delight Mocha Delight" [ref=e9405]
+      - button "Celestial Star Celestial Star" [ref=e9406]
+      - button "Flame Bat Flame Bat" [ref=e9407]
+      - button "Pocket Strawberry Pocket Strawberry" [ref=e9408]
+      - button "Choco Drop Choco Drop" [ref=e9409]
+      - button "Cheese Drop Cheese Drop" [ref=e9410]
+      - button "Dust Unicorn Dust Unicorn" [ref=e9411]
+      - button "Unpeeled Garlic Unpeeled Garlic" [ref=e9412]
+    - StaticText "MERCENARY CARDS"
+    - StaticText " · "
+    - StaticText "0"
+    - StaticText "/2"
+    - button "General Perks General Perks" [ref=e9253]
+      - image "General Perks"
+      - StaticText "General Perks"
+    - button "General Perks Lv.2 General Perks Lv.2" [ref=e9254]
+      - image "General Perks Lv.2"
+      - StaticText "General Perks Lv.2"
+    - button "Meals Provided Meals Provided" [ref=e9255]
+      - image "Meals Provided"
+      - StaticText "Meals Provided"
+    - button "Merc of the Month Merc of the Month" [ref=e9256]
+      - image "Merc of the Month"
+      - StaticText "Merc of the Month"
+    - button "Rapid Promotion Rapid Promotion" [ref=e9257]
+      - image "Rapid Promotion"
+      - StaticText "Rapid Promotion"
+    - button "Top Mercs Top Mercs" [ref=e9258]
+      - image "Top Mercs"
+      - StaticText "Top Mercs"
+    - button "Passion Pay Passion Pay" [ref=e9259]
+      - image "Passion Pay"
+      - StaticText "Passion Pay"
+    - button "Crunch Mode Crunch Mode" [ref=e9260]
+      - image "Crunch Mode"
+      - StaticText "Crunch Mode"
+    - button "Like A Family Like A Family" [ref=e9261]
+      - image "Like A Family"
+      - StaticText "Like A Family"
+    - button "All Ammo Provided All Ammo Provided" [ref=e9262]
+      - image "All Ammo Provided"
+      - StaticText "All Ammo Provided"
+    - button "Armor Repair Armor Repair" [ref=e9263]
+      - image "Armor Repair"
+      - StaticText "Armor Repair"
+    - button "No Liability No Liability" [ref=e9264]
+      - image "No Liability"
+      - StaticText "No Liability"
+    - button "Health Insurance Health Insurance" [ref=e9265]
+      - image "Health Insurance"
+      - StaticText "Health Insurance"
+  - complementary
+    - heading "Before you run it" [level=2, ref=e9266]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+        - StaticText "Short runs are less reliable: with few fights the rare perfect run may not show up at all."
+      - listitem [level=1]
+        - link "Get in contact" [ref=e9424, url=https://crumb.gg/contact]
+    - button "Got it" [ref=e9267]

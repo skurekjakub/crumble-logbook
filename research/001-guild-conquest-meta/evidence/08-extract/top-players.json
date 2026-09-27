@@ -1,0 +1,149 @@
+{
+  "batch": "top-players",
+  "posts": [
+    {
+      "source": "other", "id": "crumbgg-join", "url": "https://crumb.gg/pub/live?board=guild_conquest_players + https://crumb.gg/pub/leaderboard + https://api.crumb.gg/api/rankings?kind=players",
+      "date": "2026-09-27", "title_kr": "", "title_en": "crumb.gg public JSON: S5 conquest scores joined with account power and season history",
+      "relevance": 3,
+      "summary_en": "Raw captures are in 16-top-players/09–16. crumb.gg's public leaderboard gives each top conquest player's total account power (cp) and level. The S5 top 20 are all Lv.188–190 with 17–26G total power, and S5 score ÷ total power is roughly 95–143×. Season history shows steady growth, e.g. 날씨의아이 S1 208G, S2 477G, S3 1.11T, S4 1.79T, S5 3.23T. The S4 leaders were about 1.8T, which matches the forum's 1.3–1.6T ceiling, so the S5 jump is recent. Conquest teams are not exposed; the lookup API returns cp, rank and arena rating only.",
+      "scores": [
+        {"damage": "3226G", "power": "25.81G total (not team)", "ratio": "125× total", "deck": "?", "note": "날씨의아이 (카페), Lv190, server 28"},
+        {"damage": "2892G", "power": "24.63G total", "ratio": "117× total", "deck": "?", "note": "현이 (카페)"},
+        {"damage": "2840G", "power": "23.08G total", "ratio": "123× total", "deck": "?", "note": "검은반장 (바삭젤리단)"},
+        {"damage": "2720G", "power": "25.22G total", "ratio": "108× total", "deck": "?", "note": "타미 (Carpediem guild master)"},
+        {"damage": "2696G", "power": "25.69G total", "ratio": "105× total", "deck": "?", "note": "다함께차차차 (카페)"},
+        {"damage": "2659G", "power": "20.55G total", "ratio": "129× total", "deck": "?", "note": "燕之助"},
+        {"damage": "2637G", "power": "24.96G total", "ratio": "106× total", "deck": "?", "note": "아나 (Carpediem)"},
+        {"damage": "2542G", "power": "22.38G total", "ratio": "114× total", "deck": "?", "note": "노을 (카페)"},
+        {"damage": "2509G", "power": "18.69G total", "ratio": "134× total", "deck": "?", "note": "페즈 (카페)"},
+        {"damage": "2484G", "power": "22.20G total", "ratio": "112× total", "deck": "?", "note": "스타 (카페)"},
+        {"damage": "2464G", "power": "25.56G total", "ratio": "96× total", "deck": "?", "note": "딘딘 (Carpediem)"},
+        {"damage": "2451G", "power": "22.92G total", "ratio": "107× total", "deck": "?", "note": "華夏戶籍防盜部隊"},
+        {"damage": "2446G", "power": "23.98G total", "ratio": "102× total", "deck": "?", "note": "홍백련 (품격)"},
+        {"damage": "2423G", "power": "16.97G total", "ratio": "143× total", "deck": "?", "note": "뜨뜨뜨뜨 (카페)"},
+        {"damage": "2417G", "power": "23.86G total", "ratio": "101× total", "deck": "?", "note": "やなぎ (카페)"},
+        {"damage": "2416G", "power": "17.89G total", "ratio": "135× total", "deck": "?", "note": "젱젱 (Carpediem)"},
+        {"damage": "2384G", "power": "23.45G total", "ratio": "102× total", "deck": "?", "note": "솔라 (카페 guild master)"},
+        {"damage": "2381G", "power": "22.54G total", "ratio": "106× total", "deck": "?", "note": "준준이쿠키 (Carpediem)"},
+        {"damage": "2339G", "power": "24.59G total", "ratio": "95× total", "deck": "?", "note": "슈퍼땅콩 (각성)"}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["S5 window per API: start 1790233200000, end 1790564400000 (ms epoch), weekly. Guild raid_score for 카페 = 60,797G across 30 members (≈2T average)."],
+      "disagreements": [],
+      "quotes": []
+    },
+    {
+      "source": "other", "id": "crumbgg-arena", "url": "https://crumb.gg/pub/live?board=rumble_arena",
+      "date": "2026-09-27", "title_kr": "", "title_en": "crumb.gg Rumble Arena teams of the same top players (ARENA mode, not conquest)",
+      "relevance": 1,
+      "summary_en": "Many S5 conquest leaders also rank in Rumble Arena (날씨의아이 #2, 검은반장 #5, 현이 #8, 타미 #14, 아나 #15). Their arena teams are public: nearly all run Macaron, Pinot Noir, Cheesecake, Pomegranate, Milk (Crunchy Strong Pediatrician) plus Nameless Cake Hound, Ion, Moon Rabbit, Oven Wanderer, Bari, Cherry Cola or Herb. Pets are almost always Hot Doggie, Holy Baby Drop (ATK +20%) and Majestic King Choco Drop (HP +20%). This is arena, not conquest, so it shows what they own and build, not their conquest lineup.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76235", "url": "https://m.dcinside.com/board/projectcc/76235", "date": "2026-09-26",
+      "title_kr": "2T클럽에 가입", "title_en": "Joined the 2T club", "relevance": 3,
+      "summary_en": "The result screen shows a final score of 1,999,420,771,386 (1T 999G) with guild rank 1st. The author says it was the Cherry deck at about 650× team power, with all move speed removed. Milk's ATK is 1.27M from six SSR ATK lines, all minimum rolls. They cleared 차원의 이면, but it gave no spec for conquest.",
+      "scores": [{"damage": "1T 999G", "power": "≈3.07G (derived from 650배)", "ratio": "≈650배", "deck": "체리덱", "note": "guild rank 1st"}],
+      "teams": [{"name": "체리덱", "cookies": [{"kr": "우유", "en": "Milk", "level": "?", "stars": "?", "note": "ATK 1.27M; 6 SSR ATK sugar-rune lines, all min rolls"}], "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": ["no move speed anywhere"]}],
+      "sugar_runes": [{"cookie": "우유", "stats": "6× SSR 공증 lines (min rolls)", "why": ""}],
+      "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "체리다요", "en": "It's the Cherry deck"}, {"kr": "그렇게 높게친건아님 덱투 650배정도라", "en": "Not that high a multiple, about 650× deck power"}, {"kr": "1.27M", "en": "(Milk ATK) 1.27M"}]
+    },
+    {
+      "source": "dc", "id": "76583", "url": "https://m.dcinside.com/board/projectcc/76583", "date": "2026-09-27",
+      "title_kr": "토벌 기갱이 안돼", "title_en": "Can't beat my raid record", "relevance": 3,
+      "summary_en": "Already extracted in dc-*; repeated here for the top-player comment. A commenter with 21G total account power, the same band as the crumb.gg top 20, expects 3T soon. They run a plain Cherry deck with Jungle Warrior at 780×. Macaron, Seeker, Pomegranate and Figure survive the 17 s wipe and keep dealing damage until 8 s remain. Another reply says survival depends on in-dungeon HP and damage reduction, not total power.",
+      "scores": [{"damage": "→3T (expected)", "power": "21G total", "ratio": "780배", "deck": "체리덱 (정전)", "note": "commenter"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["At ~21G total power, 마카롱/시커/석류/피겨 survive the 17 s wipe and deal damage until 8 s remain."],
+      "disagreements": [],
+      "quotes": [{"kr": "그냥체리덱임ㅇㅇ780배뜸", "en": "Just the Cherry deck, got 780x"}, {"kr": "마카롱 시커 석류 피겨만 살아서 딜 넣음 8초까지", "en": "Only Macaron, Seeker, Pomegranate, Figure survive and deal damage until 8 s"}, {"kr": "총투 21G", "en": "Total power 21G"}]
+    },
+    {
+      "source": "dc", "id": "69856", "url": "https://m.dcinside.com/board/projectcc/69856", "date": "2026-09-18",
+      "title_kr": "토벌 17초 이후로도 버틸수있나 한번해봤는데", "title_en": "Tried whether you can survive past 17 s", "relevance": 3,
+      "summary_en": "The in-battle stat screen shows Bright Seeker (TSSR) at HP 9M 404K, ATK 1M 418K, DEF 364K, crit rate 202.10%, crit dmg 211.44%, crit res 119.03%, DR 45.64% and move speed 3.5. The Seeker reliably survives the 17 s wipe to about 9 s, while Dark Choco and the ATK-tuned cookies (~5M HP) do not. The author used the 왕방울 and 얼음새 pets for the test, plus Hot Dog on the front line. A commenter says 카페 (the #1 guild) earlier published a video near 1T that did NOT survive 17 s, and speculates their later growth comes from dealers surviving 17 s for extra poison and drone damage.",
+      "scores": [{"damage": "164,315,471,357 shown mid-fight", "power": "~1.6G team, 7G+ total", "ratio": "", "deck": "test", "note": "breakthrough 850"}],
+      "teams": [{"name": "survival test", "cookies": [], "pets": ["왕방울", "얼음새", "들개(핫도그?)"], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": ["HP/DR pets instead of damage pets to survive 17 s"]}],
+      "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Seeker with 9.4M HP / 45.6% DR survives the 17 s super-jump; 5M-HP ATK-order cookies cannot."],
+      "disagreements": [],
+      "quotes": [{"kr": "카페는 애초에 저번에 1T근처찍는 영상공개했는데 그때 17초못넘겼음", "en": "카페 earlier published a video hitting near 1T, and back then they didn't get past 17 s"}, {"kr": "17초때 딜러들 생존하면 독딜에 시커 드론딜해서 고점 더 뚫는중인가번데", "en": "If dealers survive at 17 s they get poison damage plus Seeker drone damage, which is probably how they keep raising the ceiling"}]
+    },
+    {
+      "source": "dc", "id": "74801", "url": "https://m.dcinside.com/board/projectcc/74801", "date": "2026-09-24",
+      "title_kr": "17초 이후 버티는 사람있음?", "title_en": "Anyone surviving past 17 s?", "relevance": 2,
+      "summary_en": "One reply gives the minimum condition for surviving the 17 s wipe as 9M HP and 45% damage reduction. Another says it is possible but not a damage gain yet.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["17 s survival threshold: HP 9M + DR 45%."],
+      "disagreements": ["'possible but not a damage gain' (74801 reply) vs 76583/76530 saying it now adds damage"],
+      "quotes": [{"kr": "최소조건이 체력 9M 피감 45퍼임", "en": "Minimum condition is 9M HP and 45% damage reduction"}, {"kr": "ㅇㅇ가능은한데 딜적으로이득은아닌듯", "en": "Possible, but doesn't seem like a damage gain"}]
+    },
+    {
+      "source": "dc", "id": "76530", "url": "https://m.dcinside.com/board/projectcc/76530", "date": "2026-09-27",
+      "title_kr": "토벌 덱 새로나왓음?", "title_en": "Did a new raid deck come out?", "relevance": 2,
+      "summary_en": "The author asks why scores rose so much and whether rankers now survive past 17 s. Replies: the multiplier tends to rise with spec, and surviving past 17 s is possible now.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "랭커들은17초이후생존해서 그런건가", "en": "Is it because rankers survive past 17 s?"}, {"kr": "스펙업 할수록 배수가 높아지는 경향이 있는거같음", "en": "The multiplier seems to rise as spec rises"}, {"kr": "17초이후생존가능이제", "en": "Surviving past 17 s is possible now"}]
+    },
+    {
+      "source": "dc", "id": "75994", "url": "https://m.dcinside.com/board/projectcc/75994", "date": "2026-09-26",
+      "title_kr": "30초 이후에 마카롱 버프 못받았는데 기갱 ㄷㄷ", "title_en": "New record even without Macaron buff after 30 s", "relevance": 2,
+      "summary_en": "The author set a new record even though Macaron's buff never landed after 30 s. Damage varies even while the Seeker's buff holds, and the team no longer wipes after 17 s.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": ["Record despite missing Macaron buff after 30 s; damage 'fluctuates' even with the buff maintained."],
+      "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "그나저나 이제 17초 이후에 전멸 안당하네", "en": "Anyway, now we don't get wiped after 17 s"}]
+    },
+    {
+      "source": "dc", "id": "76333", "url": "https://m.dcinside.com/board/projectcc/76333", "date": "2026-09-26",
+      "title_kr": "5번정도 1.3T 나오면 이게 내 고점인거지?", "title_en": "Hit 1.3T about five times — is that my ceiling?", "relevance": 2,
+      "summary_en": "The author has 3G team power (~450×) and keeps getting 1.3T. Replies: at 2.6G one player got 1.5T; 600× should be normal; one went to 780× after more retries. Skill amp 6 lines plus skill haste 6 lines is expected. On the top-left gear piece, higher skill amp beats crit, and whether to take crit rate or crit dmg depends on crit rate after Macaron's buff (30 or more: crit rate, below: crit dmg).",
+      "scores": [{"damage": "1.3T", "power": "3G", "ratio": "~450배", "deck": "?", "note": "author"}, {"damage": "1.5T", "power": "2.6G", "ratio": "~577배", "deck": "?", "note": "commenter"}, {"damage": "?", "power": "?", "ratio": "780배", "deck": "?", "note": "commenter after more retries"}],
+      "teams": [], "sugar_runes": [], "gear": [{"slot": "top-left", "substats": "higher 스증 wins; 치확 if crit ≥30 (two-digit display after Macaron), else 치피", "context": "raid", "why": ""}],
+      "rng": ["Retries: 1.3T ×5 then told to keep going; commenter jumped to 780배 after more retries"],
+      "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "더돌려봐600배는떠야정상이여", "en": "Keep rolling, 600x is normal"}, {"kr": "스증6줄 스가6줄은채웟지?", "en": "You filled 6 lines of skill amp and 6 of haste, right?"}]
+    },
+    {
+      "source": "dc", "id": "69824", "url": "https://m.dcinside.com/board/projectcc/69824", "date": "2026-09-18",
+      "title_kr": "토벌딜 꿀통 푼다", "title_en": "Releasing the raid-damage honey pot", "relevance": 2,
+      "summary_en": "An anonymous claim: players hitting 400–600× have highly enhanced weapons and high breakthrough power (돌파력), and 돌파력 applies in conquest.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [{"slot": "무기", "substats": "high enhancement (고강)", "context": "raid", "why": "claimed secret of 400–600×"}],
+      "rng": [], "mechanics": ["돌파력 (breakthrough) applies in conquest (per commenter)."], "disagreements": [],
+      "quotes": [{"kr": "무기가 고강이고 돌파력이 높다는거다", "en": "Their weapon is highly enhanced and their breakthrough power is high"}]
+    },
+    {
+      "source": "dc", "id": "69800", "url": "https://m.dcinside.com/board/projectcc/69800", "date": "2026-09-18",
+      "title_kr": "카페 길드 얘네", "title_en": "This 카페 guild", "relevance": 1,
+      "summary_en": "The author asks what 카페's secret is, since their scores are in a different league. Commenters guess they beat the 17 s wall ('Dark Choco survived', per a post below it), which 켈트 denies. Another says Carpediem's whales all moved to 카페.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": ["17 s passed (anon) vs '못넘김 그건' (켈트)"],
+      "quotes": [{"kr": "카르페디엠 고래들 다 절로갔자나", "en": "Carpediem's whales all went over there"}]
+    },
+    {"source": "dc", "id": "75685", "url": "https://m.dcinside.com/board/projectcc/75685", "date": "2026-09-25", "title_kr": "토벌전 딜량 복사 진짜 있는거였구나", "title_en": "So the raid damage 'copy' is real", "relevance": 1, "summary_en": "The author, usually around 15×, once got ~80× and can't reproduce it. They call the lucky spike '점수 복사' (score copy) and say this is why people hunt for the right 'world-line'. A reply mentions running macros. It's RNG slang, not a shown exploit.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": ["15× typical → 80× one-off, not reproducible"], "mechanics": [], "disagreements": [], "quotes": [{"kr": "그 맛에 매크로 돌리지", "en": "That's why you run a macro"}]},
+    {"source": "dc", "id": "74992", "url": "https://m.dcinside.com/board/projectcc/74992", "date": "2026-09-24", "title_kr": "와레나 1등 보아라 !!!!", "title_en": "Look at the world-arena #1", "relevance": 0, "summary_en": "A world-arena match screen with the names blurred; the poster is 3rd at 25.35M. A commenter unmasks the players as 'ㄹㄹ노아' and 타미 (Carpediem, conquest #4). The strongest opponent is about 30M. Arena only.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": [{"kr": "이름을 가려서 뭐함 ㄹㄹ노아랑 타미자너", "en": "Why blur the names, it's ㄹㄹ노아 and 타미"}]},
+    {"source": "dc", "id": "76751", "url": "https://m.dcinside.com/board/projectcc/76751", "date": "2026-09-27", "title_kr": "호밀덱 계속 실험해봤는데 락이더 좋은거 같다", "title_en": "Rye deck: Rockstar better", "relevance": 0, "summary_en": "Arena Rye deck tuning, off-topic for conquest. It matched the nickname search '스타' only as part of '락스타'.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []},
+    {"source": "dc", "id": "75963", "url": "https://m.dcinside.com/board/projectcc/75963", "date": "2026-09-26", "title_kr": "연구 이거 뚫는거 존나 크네", "title_en": "Research HP +30% node is huge", "relevance": 1, "summary_en": "A guild-research HP +30% node added 60M power, but the author still dies at 17 s (research stone dungeon stage 612, Crumble Lv176).", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": ["Research node: HP +30%."], "disagreements": [], "quotes": []},
+    {"source": "dc", "id": "76608", "url": "https://m.dcinside.com/board/projectcc/76608", "date": "2026-09-27", "title_kr": "체력 9m 넘으면 토벌 17초 안터짐?", "title_en": "Above 9M HP, no 17 s wipe?", "relevance": 1, "summary_en": "Reply: there is also a DR requirement, but roughly yes.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []},
+    {"source": "dc", "id": "74790", "url": "https://m.dcinside.com/board/projectcc/74790", "date": "2026-09-24", "title_kr": "17초 슬슬 버티네", "title_en": "Starting to survive 17 s", "relevance": 1, "summary_en": "The author will take the HP +30% research. Reply: only Milk and Seeker survive, so it isn't worth it yet.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []},
+    {"source": "naver", "id": "45427", "url": "https://cafe.naver.com/ccrumble/45427", "date": "2026-09-23", "title_kr": "Lv14 토벌8위 '' 각성 '' 마지막 한분 모십니다", "title_en": "각성 guild recruiting (8th)", "relevance": 1, "summary_en": "슈퍼땅콩's guild 각성 finished 8th, 10th, 8th and 8th in seasons 1–4. Its only recruiting condition is a conquest score of 800G or more. No team info.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": [{"kr": "토벌 800G 이상", "en": "Conquest 800G+"}]},
+    {"source": "naver", "id": "44740", "url": "https://cafe.naver.com/ccrumble/44740", "date": "2026-09-22", "title_kr": "토벌 시즌 전체 7위 마무리 \" 품격 \"", "title_en": "품격 guild recruiting (7th)", "relevance": 1, "summary_en": "홍백련's guild 품격: guild power 302.69G across 30 members, previous season 7th at 14T 620G. Recruiting requires a 350G+ conquest score on servers 1–150. No team info.", "scores": [{"damage": "14T 620G (guild)", "power": "302.69G guild", "ratio": "", "deck": "", "note": "guild totals"}], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []}
+  ],
+  "deltas": [
+    {"player": "S5 top 20 (all)", "evidence": "crumb.gg leaderboard: total account power 16.97–25.81G, Lv.188–190; S5 score ÷ total power ≈95–143×", "difference_from_meta": "Account spec is several times the forum guide authors' (guide teams 0.9–3G team power). The top-20 gap is mostly raw spec, not a different score-per-power efficiency visible here.", "source": "16-top-players/10-crumbgg-live-conquest-players.json, 11-crumbgg-leaderboard-power.json"},
+    {"player": "commenter at 21G total (same band as top 20)", "evidence": "dc 76583: plain Cherry deck with Jungle Warrior, 780×, expects 3T; Macaron/Seeker/Pomegranate/Figure survive the 17 s wipe and deal damage until 8 s", "difference_from_meta": "Survives past the 17 s wipe (guides: everyone dies at 17 s); multiplier 780× vs guide 450–640×", "source": "dc:76583"},
+    {"player": "anonymous (guild rank 1)", "evidence": "dc 76235: 1,999,420,771,386 with Cherry deck ≈650×, no move speed, Milk ATK 1.27M from 6 SSR ATK lines", "difference_from_meta": "Same Cherry deck; higher multiplier (650× vs guide ~460–640×)", "source": "dc:76235"},
+    {"player": "survival threshold (multiple posters)", "evidence": "dc 74801: minimum HP 9M + DR 45%; dc 69856 stat screen: Seeker HP 9.40M, DR 45.64%, crit res 119% survives to ~9 s using 왕방울 + 얼음새 pets", "difference_from_meta": "Surviving 17 s requires ~9M HP/45% DR on the cookies that should survive; ATK-order cookies (~5M HP) and Milk (열정페이) still die", "source": "dc:74801, dc:69856"},
+    {"player": "#1 guild 카페 (via commenter)", "evidence": "dc 69856 comment: 카페 earlier published a ~1T video that did not survive 17 s; speculation that surviving dealers add poison + Seeker drone damage", "difference_from_meta": "Suggested source of the 2–3T gap: post-17 s damage window (speculation, not shown)", "source": "dc:69856"},
+    {"player": "anonymous (1.62T)", "evidence": "dc 75462: 1.62T at ~600×, Seeker 10★, only 4 haste lines on Seeker, 색동주머니 pet, no move speed", "difference_from_meta": "Seeker 10★ with only 4 haste lines, versus the guide's 'Seeker all haste'", "source": "dc:75462"},
+    {"player": "anonymous claim", "evidence": "dc 69824: 400–600× players have highly enhanced weapons and high 돌파력", "difference_from_meta": "Weapon enhancement level and breakthrough power, not deck choice (unverified claim)", "source": "dc:69824"},
+    {"player": "top-20 season history", "evidence": "crumb.gg: S4 leaders ≈1.2–1.8T (날씨의아이 1786G, 타미 1775G); S5 leaders 2.3–3.2T. The S5 jump coincides with 17 s-survival reports (dc 74790/74801 on 9/24, 75994 on 9/26, 76419/76530 on 9/27)", "difference_from_meta": "Forum 1.3–1.6T matches S4-level ceilings; the S5 rise is recent (timing correlation only)", "source": "16-top-players/09-crumbgg-rankings-players-all-seasons.json"}
+  ],
+  "glossary": [
+    {"kr": "왕방울", "en": "Majestic King Choco Drop (pet, ally max HP +20%)", "kind": "pet", "confidence": "low", "evidence": "69856 uses 왕방울+얼음새 for survival; crumb.gg meta lists Majestic King Choco Drop = Ally Max HP +20%"},
+    {"kr": "얼음새", "en": "Icy Birdie (pet, ally DMG reduction +12%)", "kind": "pet", "confidence": "low", "evidence": "crumb.gg meta pet effect; used for survival in 69856"},
+    {"kr": "갓방울", "en": "Holy Baby Drop? (pet, ally ATK +20%)", "kind": "pet", "confidence": "low", "evidence": "crumb.gg meta; top arena teams use it"},
+    {"kr": "색동주머니", "en": "Candy Shade Pouch (pet, lift RES +30%, max HP +12.5%)", "kind": "pet", "confidence": "low", "evidence": "crumb.gg meta effect text; matches 'new pet'"},
+    {"kr": "딜량 복사 / 점수 복사", "en": "'damage copy': slang for a lucky outlier run", "kind": "term", "confidence": "low", "evidence": "dc 75685"},
+    {"kr": "돌파력", "en": "breakthrough power", "kind": "stat", "confidence": "low", "evidence": "dc 69824, 69856"}
+  ]
+}

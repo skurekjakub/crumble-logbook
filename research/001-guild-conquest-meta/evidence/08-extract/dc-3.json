@@ -1,0 +1,1065 @@
+{
+  "batch": "dc-3",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "72449",
+      "url": "https://m.dcinside.com/board/projectcc/72449",
+      "date": "2026-09-22",
+      "title_kr": "바리공주는 계수 까봐야 안다고 하는 이유가",
+      "title_en": "Why people say you have to see Princess Bari's coefficients to know",
+      "relevance": 1,
+      "summary_en": "Pre-release speculation on Princess Bari's skill: besides CC immunity and damage reduction, her buff on allied charge-type (돌격형) cookies deals periodic AoE damage (blue flame aura). Whether that damage scales off Bari's ATK or the buffed cookie's ATK decides whether charge decks rise; author expects in raid/Crumble she'll just be added next to 피겨/뱀파. A commenter says the leak says it scales on the buffed cookie's ATK.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Image 1 (skill text): '영혼 인도' — dashes toward the highest-ATK enemy dealing damage, wraps self and allied 돌격형 cookies in a soul granting 피해감소, 띄우기/밀치기 면역, and damage to nearby enemies.",
+        "Image 2: gameplay capture of blue flame/slash aura around a cookie (the periodic AoE).",
+        "Author: charge cookies tend to break the ally formation; Bari's dash is slow, seemingly designed around Milk (우유) buff range.",
+        "Commenter (ㅇㅇ 1): leak says the aura damage uses the buffed cookie's ATK; others argue caster-ATK is more typical for skill descriptions."
+      ],
+      "disagreements": [
+        "Whether aura damage scales on Bari's ATK (then Milk-buffed Bari makes 오방 a launch pad) vs the buffed cookie's ATK (then 오방, who never gets Milk buff, is out)."
+      ],
+      "quotes": [
+        {"kr": "그리고 어떤 루트를 가던 크던에서 안쓰던 돌격은 계속 개좆병신이라 계수가 개좋아도 걍 쓰던 피겨 뱀파에 바리만 추가될 가능성이 높음", "en": "Whatever route, charge cookies unused in Crumble stay trash, so even with great coefficients Bari will likely just be added to the 피겨/뱀파 we already use."},
+        {"kr": "유출 보니 버프 받은 쿠키 공격력이 기준임", "en": "Per the leak it's based on the buffed cookie's ATK."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "72508",
+      "url": "https://m.dcinside.com/board/projectcc/72508",
+      "date": "2026-09-22",
+      "title_kr": "프리셋 개선 이걸로 끝일줄은 상상도 못했다",
+      "title_en": "Never imagined the preset improvement would end with just this",
+      "relevance": 1,
+      "summary_en": "Complaint about the gear-preset improvement: the only change is removing the restriction 'cannot change preset while results remain in the oven'. Author hoped for a storage (보관함) so an arena 스증치확 weapon could be moved to a raid preset. Images: auto-open result screen, the paid 패키지 장비 보관함, and the removed error toast.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "무기/왼쪽 위", "substats": "스증 + 치확 (author's arena weapon)", "context": "arena", "why": "Author wanted to move it into a raid preset."}
+      ],
+      "rng": [],
+      "mechanics": [
+        "Image 3 toast (removed restriction): '오븐에 남은 결과가 있어 프리셋을 변경할 수 없습니다'.",
+        "Image 2: '패키지 장비 보관함' exists for paid package gear only."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "아레나에서 쓰던 스증치확 무기 토벌 돌릴때는 토벌전 프리셋으로 옮기는 등", "en": "e.g. moving the 스증치확 weapon used in arena into the raid preset when running raid"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "72951",
+      "url": "https://m.dcinside.com/board/projectcc/72951",
+      "date": "2026-09-23",
+      "title_kr": "지금 시커 토벌아레나 스가 49.6인데 더올려?",
+      "title_en": "My Seeker's raid/arena skill haste is 49.6 — raise it more?",
+      "relevance": 2,
+      "summary_en": "Bright Seeker (브라이트시커 쿠키) sugar rune screenshot with 8 lines; total skill haste in raid/arena preset is 49.6. Rune has 5 스가 lines plus 치확 and 치피 locked, last C line being rerolled. Commenters: aim above 50; one asks why crit rate is locked.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "브시커", "stats": "Image: SSR 스가 +4.00, SR 치확 5.40%, SSR 스가 +5.00, SSR 스가 +4.00, SSR 치피 8.00%, SSR 스가 +5.00, SSR 스가 +4.00, C 저항확률 0.80% (unlocked). Rune 스가 = 22; total raid/arena 스가 49.6 (incl. gear).", "why": "Asking whether to push 스가 beyond 49.6."}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "Commenter questions keeping 치확 locked ('치확을 왜 잠궈')."
+      ],
+      "quotes": [
+        {"kr": "난 50은 넘길라고", "en": "I'm going to get it over 50."},
+        {"kr": "치확을 왜 잠궈", "en": "Why lock crit rate?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "73082",
+      "url": "https://m.dcinside.com/board/projectcc/73082",
+      "date": "2026-09-23",
+      "title_kr": "바리공주 스킬계수 클뜯 떳다",
+      "title_en": "Princess Bari skill coefficient datamine is out",
+      "relevance": 0,
+      "summary_en": "Announcement-only post (no numbers in body); comments react that it's broken ('좆사기네'). Actual numbers are in 73113.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "좆사기네", "en": "It's absurdly broken."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "73113",
+      "url": "https://m.dcinside.com/board/projectcc/73113",
+      "date": "2026-09-23",
+      "title_kr": "달토끼, 바리공주 스킬계수",
+      "title_en": "Moon Rabbit and Princess Bari skill coefficients (leak)",
+      "relevance": 2,
+      "summary_en": "Rough datamine (클뜯) values: Princess Bari 9★ damage reduction 40%; Moon Rabbit 9★ ATK reduction 50%, crit-damage reduction 130%, range ~4.2. Also max-stage recommended power drops ~36%. Commenters read it mostly as an arena/PvP shake-up (crit damage becomes worthless vs Moon Rabbit).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "바리공주 9성: 피감 40% (author says values are a rough read).",
+        "달토끼 9성: 공감 50%, 치명감소 130%, 범위 4.2? (proc chance/duration not given; commenters asked).",
+        "막스테 권장투력 ~36% reduced (patch)."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "바리공주 9성 : 피감 40%", "en": "Princess Bari 9★: damage reduction 40%"},
+        {"kr": "달토끼 9성 : 공감 50% 치명감소 130% 범위 4.2?", "en": "Moon Rabbit 9★: ATK reduction 50%, crit reduction 130%, range 4.2?"},
+        {"kr": "일단 대충 본 클뜯값이라 ㅁㄹ", "en": "These are datamine values I only skimmed, so not sure."},
+        {"kr": "그리고 막스테 권투력은 약 36%감소함", "en": "Also max-stage recommended power is reduced ~36%."},
+        {"kr": "씨바 치감 130이면 뭐 그냥 치피는 이제 쓰레기 된 수준인데", "en": "If crit reduction is 130, crit damage is basically trash now."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "73273",
+      "url": "https://m.dcinside.com/board/projectcc/73273",
+      "date": "2026-09-23",
+      "title_kr": "시커 10성도 올스가야?",
+      "title_en": "Is 10★ Seeker also all skill haste?",
+      "relevance": 2,
+      "summary_en": "Same Bright Seeker rune as 72951 (8 lines) with 치확 5.40%, 치피 8.00% and C 저항확률 lines unlocked. Author computes that rolling those 3 lines to 스가 +4 would bring raid/arena 스가 to 61.6. No replies.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "브시커 (10성)", "stats": "Image: 스가 +4, 치확 5.40% (unlocked), 스가 +5, 스가 +4, 치피 8.00% (unlocked), 스가 +5, 스가 +4, C 저항확률 0.80% (unlocked). Plan: reroll 3 unlocked lines to 스가 +4 → total 61.6.", "why": "Asking if all-스가 still right at 10★."}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "여기서 3줄 스가 4 띄운다치면 토벌아레나 스가 61.6인데", "en": "If I roll 스가 4 on 3 lines here, raid/arena haste would be 61.6."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "73965",
+      "url": "https://m.dcinside.com/board/projectcc/73965",
+      "date": "2026-09-23",
+      "title_kr": "pvp랑 토벌이랑 장비 골자는 비슷함?",
+      "title_en": "Are PvP and raid gear basically the same?",
+      "relevance": 1,
+      "summary_en": "Short Q; commenter says arena-attack and raid can share gear, plus one extra arena evasion defence preset. Follow-up about which slot (bottom-left or bottom-right) gets evasion went unanswered.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "all", "substats": "same set for arena attack and raid; separate 회피 defence set for arena", "context": "arena vs raid", "why": ""}
+      ],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "아레나 공격,토벌 같은거 쓰고 아레나 회피방덱 하나더하면될듯", "en": "Use the same for arena attack and raid, and add one more arena evasion defence deck."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74082",
+      "url": "https://m.dcinside.com/board/projectcc/74082",
+      "date": "2026-09-23",
+      "title_kr": "아레나/토벌전 장비 추천",
+      "title_en": "Arena/raid gear recommendation",
+      "relevance": 2,
+      "summary_en": "Author compares two necklaces for arena/raid: equipped Eternal one with 치확 + 스가 (higher power) vs Legendary one with 스증 + 스가 (17.46M less power). Reply: memorize '스가스증' — skill amp wins despite lower power.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "? (necklace-type item, 치명저항 main)", "substats": "Image A (equipped): 이터널 '덧없는 허무의 목걸이' Lv97 +15, main 치명저항 34.03%, subs 치확 21.71%, 스가 +4.60, 전투력 130.48M. Image B: 레전더리 '은은한 향기를 품은 해독제' Lv99 +15, main 치명저항 33.04%, subs 스증 7.15%, 스가 +4.60, 전투력 113.02M (-17.46M).", "context": "arena/raid", "why": "Commenter: 스가스증 over 치확 regardless of displayed power."}
+      ],
+      "rng": [],
+      "mechanics": [
+        "Displayed 전투력 does not reflect raid value of 스증 vs 치확."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "외워라 스가스증", "en": "Memorize it: skill haste, skill amp."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74249",
+      "url": "https://m.dcinside.com/board/projectcc/74249",
+      "date": "2026-09-24",
+      "title_kr": "아 시발 브시커 슈가룬 시발",
+      "title_en": "Ugh, Bright Seeker sugar rune",
+      "relevance": 3,
+      "summary_en": "Bright Seeker rune with 7 SSR 스가 lines (4/5/5/4/4/4/5 = +31) and the last C line (회피율 1.20%) still being rolled — author says ~300k crystals went into the last line alone. Debate: one says 스가 only needs a threshold (40–45) and the rest should be 스증; author pulls 스증/치확/치피 from gear and 스가 from the rune; reply that uptime differences make up to 50 worthwhile (6 drones).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "브시커", "stats": "Image: C 회피율 1.20% (unlocked, being rerolled), SSR 스가 +4, +5, +5, +4, +4, +4, +5 (7 lines, +31 total).", "why": "Author: get 스증/치확/치피 from gear and 스가 from rune because numerically better."}
+      ],
+      "gear": [
+        {"slot": "all", "substats": "스증/치확/치피 from gear (author)", "context": "raid", "why": "Rune supplies the 스가."}
+      ],
+      "rng": [
+        "~300k sugar crystals (author's estimate) spent on rerolling the final rune line."
+      ],
+      "mechanics": [
+        "Claim: 스가 above 40–45 is heard to be pointless since next cap is far higher; counter-claim: 6 drones aren't permanently up, so uptime keeps improving to 50."
+      ],
+      "disagreements": [
+        "ㅇㅇ 1: take a fixed amount of 스가 and the rest 스증; 40–45+ is meaningless and over-hasted given gear 스가. Author/reply: uptime (가동률) differs, so good up to 50."
+      ],
+      "quotes": [
+        {"kr": "마지막줄에서만 지금 30만개 먹은거 같은데", "en": "I think the last line alone has eaten 300k."},
+        {"kr": "장비에서 스증 치확 치피를 땡기고 슈가룬에서 스가로 땡길라고 수치상 그게 더 좋길래", "en": "I'm pulling 스증/치확/치피 from gear and 스가 from the sugar rune, since that's numerically better."},
+        {"kr": "40-45 이상 맞춰봤자 의미없다고 들었는데 다음 스가캡이 한참 위라", "en": "I heard going beyond 40–45 is meaningless since the next haste cap is far above."},
+        {"kr": "근데 거기서도 6드론 상시 유지 이런게 아니라 가동률 차이나서 50까진 좋다던데", "en": "But even there 6 drones aren't permanently maintained; uptime differs, so they say up to 50 is good."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74323",
+      "url": "https://m.dcinside.com/board/projectcc/74323",
+      "date": "2026-09-24",
+      "title_kr": "토벌에서 치저 필요 없으면 방어력 장비 고르는게 나음?",
+      "title_en": "If crit res isn't needed in raid, should I pick DEF gear?",
+      "relevance": 2,
+      "summary_en": "Author building raid set wants to swap 피감+치저 gear for 피감+방어력. Only reply: 'all mine are 피감+체력'.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "defensive slots (unspecified)", "substats": "피감 + 체력 (commenter 언담); author considering 피감 + 방어력 instead of 피감 + 치저", "context": "raid", "why": "치저 assumed unnecessary vs raid boss."}
+      ],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "난 전부 피감체력임", "en": "Mine are all DR + HP."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74350",
+      "url": "https://m.dcinside.com/board/projectcc/74350",
+      "date": "2026-09-24",
+      "title_kr": "토벌덱 저번주에 800M 이었는데",
+      "title_en": "My raid deck was 800M last week",
+      "relevance": 1,
+      "summary_en": "Author's raid score went from 800M last week to 1.6G. Image is a reaction GIF (chibi red-haired girl), no data.",
+      "scores": [
+        {"damage": "1.6G", "power": "?", "ratio": "?", "deck": "?", "note": "Up from 800M the previous week; same author as 75617 (멍청2)."}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "1.6G 됐네 피냐타 딱대", "en": "It's 1.6G now — Piñata, watch out."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74672",
+      "url": "https://m.dcinside.com/board/projectcc/74672",
+      "date": "2026-09-24",
+      "title_kr": "각 프리셋당 옵션 정리글 있음?",
+      "title_en": "Is there a summary of options per preset?",
+      "relevance": 2,
+      "summary_en": "Author wants three presets (arena, stage, raid). One commenter: arena = 명중 + 집중; raid = 공격 + 회피. (This conflicts with other posts, where 명중/집중 is the stage set.)",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "all", "substats": "명중 + 집중", "context": "arena (per commenter ㅇㅇ 1)", "why": ""},
+        {"slot": "all", "substats": "공격 + 회피", "context": "raid (per commenter ㅇㅇ 1)", "why": ""}
+      ],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "Commenter's 'arena 명중+집중 / raid 공격+회피' conflicts with 75542/75029 where 명중집중 is the stage (35%) preset and raid is 스가/스증."
+      ],
+      "quotes": [
+        {"kr": "아레나용 - 명중 + 집중", "en": "Arena: accuracy + focus"},
+        {"kr": "토벌 - 공격 + 회피", "en": "Raid: attack + evasion"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74755",
+      "url": "https://m.dcinside.com/board/projectcc/74755",
+      "date": "2026-09-24",
+      "title_kr": "토벌펫 여전히 판다지??",
+      "title_en": "Raid pet is still Panda, right?",
+      "relevance": 2,
+      "summary_en": "Four replies unanimously say to use the new pet instead of Panda; it's a strict upgrade and Panda is 'retired'.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "New pet (색동주머니, per 75400/75617) replaces 판다 in raid."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "이번 신펫이 판다 완전 상위호환인데", "en": "The new pet is a complete upgrade over Panda."},
+        {"kr": "판다 은퇴했으니 찾지마", "en": "Panda has retired, don't look for it."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74767",
+      "url": "https://m.dcinside.com/board/projectcc/74767",
+      "date": "2026-09-24",
+      "title_kr": "토벌 체리덱에서",
+      "title_en": "In the raid Cherry deck",
+      "relevance": 2,
+      "summary_en": "Q: why exactly is Cherry in the Cherry deck (some use Melon Soda)? Answers: it's one way to make Seeker receive Macaron's buff well; each cookie included slightly changes starting placement, and Cherry is there to make the formation a straight line. Other says deck choice makes little difference as long as Seeker is buffed.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Starting placement shifts depending on which cookies are in the deck; Cherry is included to force a straight-line (1자) formation.",
+        "Goal of Cherry/Melon Soda variants: get 시커 inside 마카롱's buff."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "걍 결론은 시커가 마카롱 버프잘받게하는방법중하나임", "en": "Bottom line, it's one way of making Seeker receive Macaron's buff well."},
+        {"kr": "들어가는 쿠키마다 시작할때 배치가 살짝 바뀌는데 배치 1자로 만드려고 체리 드는겨", "en": "Starting placement changes slightly per cookie; Cherry is brought to make the formation a straight line."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74796",
+      "url": "https://m.dcinside.com/board/projectcc/74796",
+      "date": "2026-09-24",
+      "title_kr": "토벌 ㄹㅇ 왜케 안나옴",
+      "title_en": "Why is my raid score so low",
+      "relevance": 2,
+      "summary_en": "Cherry-deck screenshot: 72G 82M at 752.83M team power (~96배), 4th personal rank; same 12-cookie layout as 75400 but the Lv.45/90 slot is Lv.1 and one Lv.100 slot is Lv.80. Advice: retry count is the issue; replace 정전 with 허브 if someone dies at 30s; level the others to ~3.5M HP while keeping ATK order. Author says they do survive 30s and use 스증스가 raid gear.",
+      "scores": [
+        {"damage": "72G 82M", "power": "752.83M", "ratio": "~96배 (computed)", "deck": "체리덱 layout", "note": "Guild ranks shown: 339G 872M / 211G 95M / 154G 267M (guild totals)."}
+      ],
+      "teams": [
+        {
+          "name": "체리덱 (author 지지말아요)",
+          "cookies": [
+            {"kr": "? (row1 c1, leaf, pink hair red hat)", "en": null, "level": "100", "stars": "5?", "note": ""},
+            {"kr": "? (row1 c2, light)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row1 c3, dark)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row1 c4, dark, red hair)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row1 c5, leaf, teal hair)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row1 c6, dark, black hair)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row2 c1, fire, round)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row2 c2, fire, red hair; 전갈 slot in 75400)", "en": null, "level": "1", "stars": "?", "note": "Lv.45 in 75400, Lv.90 in 74829"},
+            {"kr": "? (row2 c3, light, blond)", "en": null, "level": "80", "stars": "?", "note": ""},
+            {"kr": "? (row2 c4, water)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row2 c5, light, white hair glasses + guild badge)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row2 c6, light, white beard)", "en": null, "level": "100", "stars": "?", "note": ""}
+          ],
+          "pets": ["? (white/red pet, ★12 — likely 색동주머니)", "? (hotdog-looking, ★20 — likely 핫도그)", "? (green, ★18 — likely 와사비문어)"],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": ["If a cookie dies at 30s: remove 정전, add 허브 (commenter)."],
+          "unorthodox": ["4 Lv.1 cookies + Lv.1 in the 전갈 slot (Lv.1 fillers)."]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "all", "substats": "스증 + 스가 (author confirms), not stage gear", "context": "raid", "why": ""}
+      ],
+      "rng": [
+        "Commenter: the problem is number of tries (트라이수), implying infinite retries (무한 리트)."
+      ],
+      "mechanics": [
+        "17s checkpoint: must survive to 17s; 30s slam kills cookies.",
+        "Suggestion: raise other cookies' levels until ~3.5M HP each, within limits that keep ATK order intact."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "트라이수가 문제지", "en": "The number of tries is the problem."},
+        {"kr": "30초에 누군가 죽는다면 정전 빼고 허브 넣는게 나음", "en": "If someone dies at 30s, better to drop Jungle Warrior and put in Herb."},
+        {"kr": "나머지들을 체력 3.5m 정도 될 정도로만 렙을 맞춰봐 공순서는 지킬수 있을 정도 선에서", "en": "Level the others just enough to have ~3.5M HP, within the range that keeps the ATK order."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74811",
+      "url": "https://m.dcinside.com/board/projectcc/74811",
+      "date": "2026-09-24",
+      "title_kr": "뉴비 토벌전 17배 나오는데 이정도면 어떤수준임?",
+      "title_en": "Newbie getting 17x in raid — what level is that?",
+      "relevance": 2,
+      "summary_en": "Newbie at 22M power scores ~380M (~17배) copying the raid deck with 전갈/피노/정글 at Lv.1; Seeker 6★, cannot survive to 17s. Replies: 15x+ is good at that power; surviving to 17s and Seeker 5★+ matter; survival comes from gear and 돌파력 research raising DEF/HP/DR.",
+      "scores": [
+        {"damage": "~380M", "power": "22M", "ratio": "17배", "deck": "토벌덱 copy (전갈/피노/정글 Lv.1)", "note": "Seeker 6★; dies before 17s."}
+      ],
+      "teams": [
+        {
+          "name": "토벌덱 (newbie copy)",
+          "cookies": [
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": ""},
+            {"kr": "피노", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "정글", "en": "Jungle Warrior?", "level": "1", "stars": "?", "note": "written 정글"},
+            {"kr": "시커", "en": "Bright Seeker", "level": "?", "stars": "6", "note": ""}
+          ],
+          "pets": [],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": [],
+          "unorthodox": ["전갈 also at Lv.1 here (vs Lv.10–90 in other posts)."]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Surviving until 17s remaining/elapsed and Seeker ≥5★ are key; survival via gear + 돌파력 research (DEF, HP, DR)."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "대충 15배 이상만 되면 잘치는거일걸 그 투력에선", "en": "At that power, around 15x+ counts as hitting well."},
+        {"kr": "17초 남을때까지 버텨지는거랑 시커 5성 이상인게 중요함", "en": "What matters is surviving to the 17s mark and Seeker being 5★+."},
+        {"kr": "그건그냥 장비랑 돌파력 연구로 방어 체력 피감 올려야함", "en": "For that you just raise DEF/HP/DR through gear and breakthrough research."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74829",
+      "url": "https://m.dcinside.com/board/projectcc/74829",
+      "date": "2026-09-24",
+      "title_kr": "토벌 기갱 263g",
+      "title_en": "Raid new record 263G",
+      "relevance": 3,
+      "summary_en": "Cherry-deck layout, 263G 471M personal (rank 1 in guild) at 1.19G team power (~221배), up from 190G. ATK order given: 우 브 피 실 마 치 전. Commenters: with retries 500G+; someone with Seeker 7★ and 900M power got 350G after ~100 runs; another says that spec can reach 700G; 'up to 400 is reachable, beyond that only if you grind like a log'.",
+      "scores": [
+        {"damage": "263G 471M", "power": "1.19G", "ratio": "~221배 (computed)", "deck": "체리덱 layout", "note": "Previous best 190G. Guild ranking shows 612G 943M / 492G 474M / 428G 161M (guild totals)."},
+        {"damage": "350G", "power": "900M", "ratio": "~389배 (computed)", "deck": "?", "note": "Commenter, Seeker 7★, ~100 runs."}
+      ],
+      "teams": [
+        {
+          "name": "체리덱 (author 우유)",
+          "cookies": [
+            {"kr": "? (row1 c1, leaf, pink hair red hat)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row1 c2, light)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row1 c3, dark)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row1 c4, dark, red hair)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row1 c5, leaf, teal hair)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row1 c6, dark, black hair)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row2 c1, fire, round)", "en": null, "level": "1", "stars": "?", "note": ""},
+            {"kr": "? (row2 c2, fire, red hair — 전갈 slot per 75400)", "en": null, "level": "90", "stars": "?", "note": ""},
+            {"kr": "? (row2 c3, light, blond)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row2 c4, water)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row2 c5, light, white hair glasses)", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "? (row2 c6, light, white beard)", "en": null, "level": "100", "stars": "? (fewer stars visible)", "note": ""}
+          ],
+          "pets": ["? (hotdog-looking, ★20)", "? (green, ★20)", "? (white/red, ★13)"],
+          "atk_order": ["우", "브", "피", "실", "마", "치", "전"],
+          "perks": "",
+          "formation": "",
+          "substitutions": [],
+          "unorthodox": ["4 Lv.1 cookies.", "ATK order puts 실(론) ahead of 마(카롱), unlike 75400 (카롱 before 실론)."]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [
+        "'리트좀하면 500이상도 나옴' — with some retries 500G+.",
+        "Commenter: 350G at 900M power after ~100 runs.",
+        "Author: retries are fun but tedious; worried a retry session takes all day.",
+        "'400까진 비빌만 하고 그 위는 통나무 들거 아니면 ㄱㅊ' — up to 400 is reachable, beyond needs extreme grinding."
+      ],
+      "mechanics": [],
+      "disagreements": [
+        "Estimates for author's ceiling vary: 300G (author), 400G, 500G+, 700G."
+      ],
+      "quotes": [
+        {"kr": "우 브 피 실 마 치 전", "en": "(ATK order) Milk, Bright Seeker, 피(겨?), Ceylon?, Macaron, Cheesecake, Scorpion"},
+        {"kr": "리트좀하면 500이상도 나옴", "en": "With some retries you get 500+."},
+        {"kr": "나 시커 7성 900m인데 350g함", "en": "I'm Seeker 7★, 900M, and did 350G."},
+        {"kr": "100판 정도 돌린 듯", "en": "I think I ran about 100 games."},
+        {"kr": "그스펙이면 700g가능", "en": "With that spec 700G is possible."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74928",
+      "url": "https://m.dcinside.com/board/projectcc/74928",
+      "date": "2026-09-24",
+      "title_kr": "브시커 슈가룬 어케해야댈지 고민중",
+      "title_en": "Deciding how to do Bright Seeker's sugar rune",
+      "relevance": 3,
+      "summary_en": "Pre-10★ Bright Seeker rune with 6 active lines (3 스가, 1 스증, 2 치피) and 2 lines locked until ★10. Author considers rerolling both 치피 into 스가. Replies: all-스가 is the standard ('국룰'); skill stacks; one dissent '10성기준 스가4 스증6 정배'.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "브시커 (<10성)", "stats": "Image: SSR 스가 +4.00, SSR 스증 4.70%, SSR 치피 7.00%, SSR 스가 +4.00, SSR 스가 +4.00, SSR 치피 7.00%; locked until ★10: C 회피율 0.80%, R 저항확률 3.20%.", "why": "Considering replacing both 치피 with 스가."},
+        {"cookie": "브시커", "stats": "올스가 (all 스가) — '국룰' per several commenters", "why": "'스킬중첩된다던데' — skills stack."},
+        {"cookie": "브시커 (10성)", "stats": "스가4 스증6 (박모모; meaning ambiguous — rune has 8 lines, may refer to lines or values)", "why": ""}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Sugar rune line count grows with cookie stars: last 2 lines shown as '쿠키 ★10 승급 시' unlock.",
+        "Commenter: Seeker skill stacks (중첩), so more haste is better."
+      ],
+      "disagreements": [
+        "All-스가 (3 commenters) vs 박모모's '10성기준 스가4 스증6 정배'."
+      ],
+      "quotes": [
+        {"kr": "닥 스가 아님? 스킬중첩된다던데", "en": "Isn't it just haste? I heard the skill stacks."},
+        {"kr": "올스가가 국룰", "en": "All-haste is the standard."},
+        {"kr": "10성기준 스가4 스증6 정배", "en": "At 10★ the standard is haste 4, skill amp 6."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74960",
+      "url": "https://m.dcinside.com/board/projectcc/74960",
+      "date": "2026-09-24",
+      "title_kr": "토벌전 30초꽝 못버티면 무슨 조합 들고가야해?",
+      "title_en": "What comp if I can't survive the 30-second slam?",
+      "relevance": 2,
+      "summary_en": "Author fears the Lv.1 strategy won't work without surviving the 30s slam. Reply: just use the 정전 Cherry deck anyway — commenter's alt at 200M power got 6G even with everyone dying at the 30s slam, with 전갈 and 피노 both Lv.1. Another: drop 정전, add 허브.",
+      "scores": [
+        {"damage": "6G", "power": "200M", "ratio": "~30배 (computed)", "deck": "정전 체리덱 (Lv.1 공략)", "note": "Alt account; everyone died at the 30s slam; 전갈 and 피노 Lv.1."}
+      ],
+      "teams": [
+        {
+          "name": "정전 체리덱 (commenter alt)",
+          "cookies": [
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": ""},
+            {"kr": "피노", "en": null, "level": "1", "stars": "?", "note": ""}
+          ],
+          "pets": [],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": ["정전 → 허브 if can't survive 30s."],
+          "unorthodox": ["Lv.1 전갈 and 피노; deck still peaks even when wiped at 30s."]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "30초 꽝 (30s slam) wipes weak teams; score still high because damage is front-loaded."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "못버텨도 걍 정전 체리덱 쓰면 고점 나오던데 부캐 200m으로 30초 꽝에 다 죽어도 6g뽑음", "en": "Even if you can't survive, the Jungle Warrior Cherry deck peaks — my 200M alt got 6G while everyone died at the 30s slam."},
+        {"kr": "정전빼고 허브 넣어바", "en": "Take out Jungle Warrior and put Herb in."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "74998",
+      "url": "https://m.dcinside.com/board/projectcc/74998",
+      "date": "2026-09-24",
+      "title_kr": "어제오늘 쌔빠지게 뚫어서 이면 도착햇는데",
+      "title_en": "Grinded through to the Other Side (이면)",
+      "relevance": 1,
+      "summary_en": "The 차원의 이면 dungeon's bonus stats apply only inside that dungeon, not to raid; its pet gives 50% 이면-boss damage. Image: 차원의 힘 level effects (ATK/DEF/HP +10%, crit dmg +30%, crit rate +10%, focus +5%, accuracy +10%, all '차원의 이면' only). Author cleared at ~4.2G team power.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "이면 bonus stats do not apply to 토벌 or other content (author).",
+        "Image: 차원의 힘 Lv.2 effects: 공격력 증폭 10%, 방어력 증폭 10%, 체력 증폭 10%, 치명피해 30%, 치명확률 10%, 집중확률 5%, 명중률 10% — all '차원의 이면' scoped."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "추가능력치는 이면던전에서만 적용되는 능력치 (토벌 및 기타컨탠츠 적용x)", "en": "The bonus stats apply only in the 이면 dungeon (not to raid or other content)."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75029",
+      "url": "https://m.dcinside.com/board/projectcc/75029",
+      "date": "2026-09-24",
+      "title_kr": "장비 프리셋생기고 너무 어려운데 내 판단 맞는지 조언 부탁해!",
+      "title_en": "Gear presets are confusing — is my plan right?",
+      "relevance": 2,
+      "summary_en": "Author plans stage/arena/raid presets: stage = 명중/집중 line, arena = 스가/스증/피감, raid = 회피/스증/피감. Replies: 전투력 only matters for stage; one commenter isn't sure a raid preset is needed at all and gives a per-slot arena layout (top-left 스증+치확, bottom-left 피감+치저, top-right 스증+스가, bottom-right 스가 + 치저/피감) and stage accuracy/focus ~1000/1100.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "all", "substats": "회피 + 스증 + 피감", "context": "raid (author's plan)", "why": ""},
+        {"slot": "all", "substats": "명중 + 집중 one line, then max power; target 명중/집중 ~1000/1000 (commenter has 1000/1100 at stage 270-10)", "context": "stage", "why": ""},
+        {"slot": "무기/왼쪽 위", "substats": "스증 + 치확 best; 치피 also valid; 명중 1 line situationally", "context": "arena (commenter)", "why": ""},
+        {"slot": "왼쪽 아래 (방어구)", "substats": "피감 + 치저", "context": "arena (commenter)", "why": ""},
+        {"slot": "우상단", "substats": "스증 + 스가 best; otherwise 스가 fixed + 치확/치피", "context": "arena (commenter)", "why": ""},
+        {"slot": "우하단", "substats": "스가 fixed + 치저 or 피감", "context": "arena (commenter)", "why": ""}
+      ],
+      "rng": [],
+      "mechanics": [
+        "전투력 (displayed power) only matters for stage content."
+      ],
+      "disagreements": [
+        "Commenter questions whether a separate raid preset is needed at all."
+      ],
+      "quotes": [
+        {"kr": "전투력은 스테만 보는거란다", "en": "Power only matters for stages."},
+        {"kr": "왼쪽 윗줄 무기류는 스증 치확이 베스트라 생각함 치피도 유효옵 맞음 명중은 때에 따라서 1줄 정도 챙기는 것도 ㄱㅊ 왼쪽 아래는 피감치저 오른쪽 장비 윗줄은 스증 스가가 베스트 그 외엔 스가 고정 치확 치피등 챙기면 됨 아랫줄은 스가 고정에 치저나 피감 집으면 됨", "en": "Top-left weapons: 스증+치확 best, 치피 valid, 1 line of accuracy OK sometimes. Bottom-left: DR+crit res. Right top: 스증+스가 best, else fixed 스가 plus crit/crit dmg. Right bottom: fixed 스가 plus crit res or DR."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75038",
+      "url": "https://m.dcinside.com/board/projectcc/75038",
+      "date": "2026-09-24",
+      "title_kr": "토벌전 장비 프리셋 치확vs치피",
+      "title_en": "Raid gear preset: crit rate vs crit damage",
+      "relevance": 2,
+      "summary_en": "Author: top-right 스가+스증; top-left is it 스증+치확 (arena) and 스증+치피 (raid)? Replies: just take higher 스증; another says the opposite — raid doesn't use 치피, only 치확, with 스증 main; a third notes 치피 is bad in arena due to 치저.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "우상단", "substats": "스가 + 스증", "context": "raid", "why": ""},
+        {"slot": "좌상단", "substats": "스증 + 치확 (commenter: raid uses only 치확, 스증 main)", "context": "raid", "why": ""}
+      ],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "Author: arena 치확 / raid 치피. Commenter ㅇㅇ 1: reverse — raid uses 치확 only, not 치피. Commenter ㅇㅇ: just pick the higher 스증."
+      ],
+      "quotes": [
+        {"kr": "반대임 아레나는 굳이 쓸거면 치피 써도 되는데 토벌은 치피 안 씀 치확만 씀 써도 스증이 메인이고", "en": "It's the reverse: arena can use crit dmg if you must, but raid doesn't use crit dmg, only crit rate — and even then skill amp is the main."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75041",
+      "url": "https://m.dcinside.com/board/projectcc/75041",
+      "date": "2026-09-24",
+      "title_kr": "메소정전 토벌덱 전갈이 영원히 마카롱을 못받으면",
+      "title_en": "Melon Soda/Jungle Warrior raid deck: Scorpion never gets Macaron",
+      "relevance": 1,
+      "summary_en": "Question: in the 메소+정전 raid deck, if Scorpion never gets Macaron's buff, should you tune 메소/피노 move speed? No replies.",
+      "scores": [],
+      "teams": [
+        {
+          "name": "메소정전 토벌덱",
+          "cookies": [
+            {"kr": "메소", "en": "Melon Soda", "level": "?", "stars": "?", "note": ""},
+            {"kr": "정전", "en": "Jungle Warrior?", "level": "?", "stars": "?", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "note": "Needs Macaron buff"},
+            {"kr": "피노", "en": null, "level": "?", "stars": "?", "note": ""},
+            {"kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "note": ""}
+          ],
+          "pets": [],
+          "atk_order": [],
+          "perks": "",
+          "formation": "Tuned via 메소/피노 move speed (이속)",
+          "substitutions": [],
+          "unorthodox": ["Move speed of 메소/피노 used to steer positioning."]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "메소피노 이속을 조절해야함?", "en": "Do I need to adjust Melon Soda/Pinot move speed?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75081",
+      "url": "https://m.dcinside.com/board/projectcc/75081",
+      "date": "2026-09-24",
+      "title_kr": "바리 보니까 브시커는 걍 딜러1 이였네",
+      "title_en": "Seeing Bari, Bright Seeker was just 'dealer #1'",
+      "relevance": 1,
+      "summary_en": "Opinion that Princess Bari is even more broken than Bright Seeker, except in Crumble/raid where control issues make her troll. Commenter calls her 오방's 'wheelchair' (enables 오방).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "컨 안되서 트롤하는 크럼블이나 토벌은 쩔수인데 나머진 걍 비빌수가 없는 수준이네", "en": "In Crumble or raid where she trolls because you can't control her it can't be helped, but elsewhere nothing competes."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75239",
+      "url": "https://m.dcinside.com/board/projectcc/75239",
+      "date": "2026-09-25",
+      "title_kr": "총투 14G면 토벌 얼마나 칠 수 있을것같냐",
+      "title_en": "With 14G total account power, how much raid damage?",
+      "relevance": 1,
+      "summary_en": "Author has 14G total account power (raid-deck power unknown). Guesses: 600G, 400G.",
+      "scores": [
+        {"damage": "600G / 400G (guesses)", "power": "14G (account total, not deck)", "ratio": "?", "deck": "?", "note": "Commenter estimates only."}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "Estimates 600G vs 400G."
+      ],
+      "quotes": [
+        {"kr": "토벌덱 투력은 모름", "en": "Don't know the raid deck's power."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75287",
+      "url": "https://m.dcinside.com/board/projectcc/75287",
+      "date": "2026-09-25",
+      "title_kr": "토벌 메소덱 맞춰봤는데",
+      "title_en": "Tried the raid Melon Soda deck",
+      "relevance": 3,
+      "summary_en": "Author matched move speeds and alignment (정렬) per a guide for the Melon Soda deck, but even an overnight macro retry never produced a 'world line' run; stuck at ~400배. Manual retries showed late Macaron alignment failing; alignment is much harder to get than in the Cherry deck. Another says alignment worked last week but not this week, possibly because of Seeker's 스가 timing.",
+      "scores": [
+        {"damage": "?", "power": "?", "ratio": "400배", "deck": "메소덱", "note": "Author hoped 600배 if everything lined up; overnight macro stayed at 400배."}
+      ],
+      "teams": [
+        {
+          "name": "메소덱",
+          "cookies": [
+            {"kr": "메소", "en": "Melon Soda", "level": "?", "stars": "?", "note": ""}
+          ],
+          "pets": [],
+          "atk_order": [],
+          "perks": "",
+          "formation": "Move speed (이속) tuned + alignment (정렬) per guide",
+          "substitutions": [],
+          "unorthodox": ["Move-speed tuning to control alignment."]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [
+        "Overnight macro retries did not produce the 'world line' (세계선) run.",
+        "Late-fight Macaron alignment frequently fails; alignment much harder to hit than Cherry deck.",
+        "Commenter: alignment worked last week but not this week; suspects Seeker 스가 changes timing."
+      ],
+      "mechanics": [
+        "Alignment (정렬) possibly interacts with skill-haste timing (스가 아다리)."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "어지간히 리트해서는 세계선 안나온다 밤새 돌려놔도 세계선 안뜸", "en": "Ordinary retrying won't give the world line; even running overnight it doesn't appear."},
+        {"kr": "수동리트 조지는 리트괴물만 써야하나봄", "en": "Seems only retry monsters grinding manual retries should use it."},
+        {"kr": "손으로 리트하면서 후반 마카롱 정렬못받고 400배쳐서 아다리 다 맞으면 600배 되겠다 싶어서 밤새 매크로 돌려놧는데 400배 점수 그대로임", "en": "Retrying by hand I got 400x without late Macaron alignment, figured it'd be 600x if everything lined up, ran a macro overnight — score stayed 400x."},
+        {"kr": "리트해보면 그냥 정렬맞는게 체리덱에비해 개빡셈", "en": "When retrying, getting alignment is way harder than with the Cherry deck."},
+        {"kr": "정렬유지가 뭐 스가 아다리랑도 상관있는지 저번주엔 되다가 이번주엔 ㅈㄴ 안되더라 시커 스가때문인지", "en": "Maybe keeping alignment relates to haste timing — it worked last week but not this week, maybe due to Seeker's haste."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75400",
+      "url": "https://m.dcinside.com/board/projectcc/75400",
+      "date": "2026-09-25",
+      "title_kr": "체리덱 641배 찍었음",
+      "title_en": "Hit 641x with the Cherry deck",
+      "relevance": 3,
+      "summary_en": "Cherry deck: 1T 116G at 1.74G team power (641배), guild rank 1. ATK order 우유 브시 피겨 카롱 실론 치케 전갈; 4 Lv.1 cookies (체리 닼초 피노 정전) and 전갈 raised to Lv.45 deliberately so Pomegranate's straw goes to Scorpion rather than Dark Choco when Ceylon misses Milk's buff. Pets 와사비문어/핫도그/색동주머니 all ★20. Gear: 스가 6 + 스증 6, rest crit/crit dmg, spare slots DR; no move speed anywhere; team wipes at 17s; ~1T once or twice per 10 runs, occasionally 1.1T.",
+      "scores": [
+        {"damage": "1T 116G", "power": "1.74G", "ratio": "641배", "deck": "체리덱", "note": "Guild tab 4 shown; wipes at 17s (확정전멸)."},
+        {"damage": "500G (best in ~20 runs)", "power": "?", "ratio": "?", "deck": "?", "note": "Commenter 340, Seeker 7★."}
+      ],
+      "teams": [
+        {
+          "name": "체리덱 (author 저장용)",
+          "cookies": [
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "ATK order #1. Screenshot row1 c1 (leaf, pink hair red hat) likely — identification by elimination, unconfirmed."},
+            {"kr": "브시", "en": "Bright Seeker", "level": "100", "stars": "?", "note": "ATK #2"},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "?", "note": "ATK #3"},
+            {"kr": "카롱", "en": "Macaron", "level": "100", "stars": "?", "note": "ATK #4"},
+            {"kr": "실론", "en": null, "level": "100", "stars": "?", "note": "ATK #5; positions too far forward, sometimes misses Milk buff"},
+            {"kr": "치케", "en": "Cheesecake?", "level": "100", "stars": "?", "note": "ATK #6"},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "Not in ATK order; buff-giver (빨대)"},
+            {"kr": "전갈", "en": "Scorpion", "level": "45", "stars": "?", "note": "ATK #7; screenshot Lv.45 (Lv.10 per 75617 comment). Must stay below 치케 ATK after 와사비문어 +8% ATK."},
+            {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": "Formation"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "스증 meaningless for it"},
+            {"kr": "피노", "en": "Pinot Noir?", "level": "1", "stars": "?", "note": "No move speed given"},
+            {"kr": "정전", "en": "Jungle Warrior?", "level": "1", "stars": "?", "note": ""}
+          ],
+          "pets": ["와사비문어 (★20; +8% ATK)", "핫도그 (★20)", "색동주머니 (★20; max: 띄우기저항 30, 체력 12.5%)"],
+          "atk_order": ["우유", "브시", "피겨", "카롱", "실론", "치케", "전갈"],
+          "perks": "",
+          "formation": "Screenshot: 2 rows × 6. Lv.100 ×7, Lv.45 ×1 (row2 c2, fire), Lv.1 ×4 (row1 c3 dark, row1 c5 leaf, row1 c6 dark, row2 c1 fire).",
+          "substitutions": [],
+          "unorthodox": [
+            "4 Lv.1 fillers (체리 닼초 피노 정전).",
+            "전갈 levelled only to ~45 so it ranks last in ATK order but still catches Pomegranate's straw instead of Dark Choco when Ceylon misses Milk buff.",
+            "No move speed (이속) on any gear or cookie in the Cherry deck, contrary to advice to give Pinot one line.",
+            "Team wipes at 17s by design — no Herb."
+          ]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "브시커", "stats": "Rune: 스가-focused, mix 치피/스증 once 6 drones appear (watch in battle)", "why": "Author: gear is all 스가; tune rune by observing whether 6 drones spawn."},
+        {"cookie": "others", "stats": "Not individually 스가 runes; haste comes from gear", "why": "Most cookies' skill duration is shorter than cooldown, so unless every cookie gets 스가 runes, pulling 스가 from gear is right."}
+      ],
+      "gear": [
+        {"slot": "all", "substats": "스가 ×6 + 스증 ×6 lines, remaining lines 치확/치피 mix, leftover parts 피감", "context": "raid", "why": "Each gear piece has a fixed option pool, so 6 each of 스가/스증 is the max."},
+        {"slot": "all", "substats": "No 이속 (move speed) anywhere", "context": "raid, Cherry deck", "why": ""}
+      ],
+      "rng": [
+        "Author: in ~10 runs, around 1T once or twice, occasionally 1.1T.",
+        "Ceylon positions too far forward, sometimes misses Milk's buff, which shifts Pomegranate's straw target.",
+        "Commenter 340: best 500G after ~20 runs (Seeker 7★).",
+        "Commenter: 스가 53.6 but drones go to trash mobs."
+      ],
+      "mechanics": [
+        "Pomegranate's straw (석류빨대) target shifts when a cookie misses Milk's buff; ATK order used to control it.",
+        "와사비문어 gives +8% ATK — check in battle that 전갈's ATK is still below 치케's.",
+        "New pet (색동주머니) max: lift resistance 30, HP 12.5%; makes surviving easier than Panda.",
+        "Team wipes at 17s (확정전멸).",
+        "Seeker needs ~50 스가 for 6 drones (commenter 340's understanding)."
+      ],
+      "disagreements": [
+        "Commenter says others advise one line of move speed on Pinot; author: no move speed in Cherry deck."
+      ],
+      "quotes": [
+        {"kr": "공순서 우유 브시 피겨 카롱 실론 치케 전갈", "en": "ATK order: Milk, Bright Seeker, 피겨, Macaron, 실론, Cheesecake, Scorpion"},
+        {"kr": "실론이 너무 전방이라 종종 우유버프 못받아서 석류빨대가 튀는데 스증이 아무 의미없는 닼초에게 튀기보단 전갈이 받는게 나은거 같아서 전갈 레벨 조금 올림", "en": "Ceylon is too far forward and sometimes misses Milk's buff, so Pomegranate's straw jumps; rather than it going to Dark Choco, for whom skill amp means nothing, Scorpion getting it seemed better, so I raised Scorpion's level a bit."},
+        {"kr": "전갈이 와사비문어 공증8% 먹으니 전투화면 돌입 후 전갈이 치케보다 공격력 낮은지 확인 필요", "en": "Scorpion gets Wasabi Octopus's +8% ATK, so after entering battle check that Scorpion's ATK is lower than Cheesecake's."},
+        {"kr": "체리덱에선 장비/쿠키 싹 다 이속X", "en": "In the Cherry deck, no move speed on any gear or cookie."},
+        {"kr": "띄우기저항30, 체럭12.5%", "en": "(New pet max) lift resistance 30, HP 12.5%."},
+        {"kr": "못버팀. 확정전멸", "en": "(17s) Can't survive. Guaranteed wipe."},
+        {"kr": "스가6 스증6 나머지 치확/치피 섞어서 잉여파트는 피감", "en": "Haste 6, skill amp 6, rest a mix of crit rate/crit dmg, leftover parts DR."},
+        {"kr": "장비는 올스가. 시커는 니가 눈팅해보고 드론6개 뜨면 스가위주로 치피 스증 등등 섞어주면 됨", "en": "Gear all haste. For Seeker, watch it — if 6 drones appear, mix crit dmg, skill amp etc. into a haste-focused setup."},
+        {"kr": "쿠키 대부분이 스킬쿨보다 지속이 짧아서 하나하나 스가룬 다 챙겨줄주는거 아니명 장비에서 스가 땡기는게 마따", "en": "Most cookies have skill duration shorter than cooldown, so unless you give each one haste runes, pulling haste from gear is right."},
+        {"kr": "내기준 10판 했을때 1T 언저리 한두번 정도 나오고. 그중에서 어쩌다 1.1T 나옴", "en": "For me, in 10 runs about 1T comes out once or twice, and occasionally 1.1T."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75460",
+      "url": "https://m.dcinside.com/board/projectcc/75460",
+      "date": "2026-09-25",
+      "title_kr": "토벌 시커 7성인데 슈가룬 올 스가 주는게 맞냐?",
+      "title_en": "Seeker 7★ for raid — all haste on sugar rune?",
+      "relevance": 1,
+      "summary_en": "Question from 340 (Seeker 7★) whether to go all-스가 on the rune; single reply 'go' (ㄱㄱ).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "브시커 (7성)", "stats": "올 스가 (endorsed by one reply)", "why": ""}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "ㄱㄱ", "en": "Go for it."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75520",
+      "url": "https://m.dcinside.com/board/projectcc/75520",
+      "date": "2026-09-25",
+      "title_kr": "토벌 장비 골라주라 치확 치피때문에 고민임..",
+      "title_en": "Pick my raid gear — torn on crit rate vs crit dmg",
+      "relevance": 2,
+      "summary_en": "Weapon comparison for raid: Lv95 wand with 스증 7.52% + 치피 13.63% vs Lv100 wand with 치확 16.39% + 스증 9.13%. Single reply: definitely right one (higher 스증, 치확).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "무기/왼쪽 위", "substats": "Left (equipped): 이터널 '환상을 여는 꿈빛지팡이' Lv95 +15, main 치명확률 33.21%, subs 스증 7.52%, 치피 13.63%, power 149.68M. Right: same item Lv100 +15, main 치명확률 36.08%, subs 치확 16.39%, 스증 9.13%, power 186.08M (+36.39M). Reply: '닥우' (right).", "context": "raid", "why": "Higher 스증 wins."}
+      ],
+      "rng": [],
+      "mechanics": [
+        "Weapon main stat is 치명확률 on this item."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "닥우", "en": "Right one, no question."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75542",
+      "url": "https://m.dcinside.com/board/projectcc/75542",
+      "date": "2026-09-25",
+      "title_kr": "내 장비 프리셋 목록",
+      "title_en": "My gear preset list",
+      "relevance": 2,
+      "summary_en": "Preset names (image): '35%(명중집중)' for stage, '아레나(전투+치감)', '토벌전(스가세팅)', '쓰레기통' (dump for auto-sell by power), and a joke empty slot. Commenter afrehh runs 5: 스테(뻥툴), 토벌, 아레나1(정석), 아레나2(회피), 아레나3(명중) because arena is rock-paper-scissors.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "preset", "substats": "35%(명중집중)", "context": "stage", "why": ""},
+        {"slot": "preset", "substats": "아레나(전투+치감)", "context": "arena", "why": ""},
+        {"slot": "preset", "substats": "토벌전(스가세팅)", "context": "raid", "why": ""},
+        {"slot": "preset", "substats": "스테(뻥툴), 토벌, 아레나1(정석), 아레나2(회피), 아레나3(명중)", "context": "commenter afrehh's 5 presets", "why": "Arena is rock-paper-scissors; swap by opponent setup."}
+      ],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "스테(뻥툴), 토벌, 아레나1(정석) 아레나2(회피) 아레나3(명중)", "en": "Stage (power-inflated), raid, arena1 (standard), arena2 (evasion), arena3 (accuracy)."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75589",
+      "url": "https://m.dcinside.com/board/projectcc/75589",
+      "date": "2026-09-25",
+      "title_kr": "토벌 치확이 필요함?",
+      "title_en": "Is crit rate needed in raid?",
+      "relevance": 3,
+      "summary_en": "Author: boss has no crit res so is crit rate needed? Answers: crit rate above 100% keeps adding — every 100% of crit rate adds another crit-damage instance (200% = crits twice; 198% = one crit plus 98% chance of a second). So crit rate is 'more is better'; one says always double crit rate (치확 둘둘). Unresolved whether 치확 or 치피 is better when forced to choose.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "?", "substats": "치확 둘둘 (double crit rate) — 박모모", "context": "raid", "why": "Overcrit multiplies crit damage."}
+      ],
+      "rng": [
+        "Crit rate beyond a 100% multiple is a probability for one additional crit."
+      ],
+      "mechanics": [
+        "Boss appears to have no crit res; author sees red (crit) numbers.",
+        "Crit rate over 100%: each 100% (100/200/300/400) adds another crit-damage application; 198% = 1 guaranteed crit + 98% chance of a second."
+      ],
+      "disagreements": [
+        "340 assumed crit rate is only for overcoming arena crit res; commenters say it scales past 100% so it matters in raid.",
+        "Unresolved: 치확 vs 치피 when forced to choose ('몰루 걍 반반')."
+      ],
+      "quotes": [
+        {"kr": "근데 크럼블은 치명 100퍼 넘어가면 치명피해가 여러번 들어가서 다다익선이지", "en": "In Crumble, above 100% crit, crit damage applies multiple times, so more is better."},
+        {"kr": "이게임은 치확 100 200 300 400마다 치피가 그만큼 추가로 들어가서 그럼", "en": "In this game, each 100/200/300/400 of crit rate adds crit damage again."},
+        {"kr": "치명타 한번터지고 98프로 확률로 한번더", "en": "(At 198%) one crit, then a 98% chance for one more."},
+        {"kr": "무조건 치확 둘둘", "en": "Always double crit rate."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75606",
+      "url": "https://m.dcinside.com/board/projectcc/75606",
+      "date": "2026-09-25",
+      "title_kr": "토벌 장비추천좀",
+      "title_en": "Raid gear recommendation please",
+      "relevance": 2,
+      "summary_en": "340 set weapons all to 스증+치피 and compares Lv98 wand (스증 7.47% + 치피 14.53%) vs Lv103 wand (치확 16.51% + 스증 8.00%). Replies favour the latter: 1.4 crit rate ≈ 1 crit dmg in value, but higher 스증 always wins; aim for +15 pieces with 치확/치피 20%+ and 스증 9%+. 340 notes their arena set (치확) scored lower in raid than the raid set (치피).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "무기/왼쪽 위", "substats": "Left (equipped): 이터널 '환상을 여는 꿈빛지팡이' Lv98 +15, main 치명확률 34.85%, subs 스증 7.47%, 치피 14.53%, power 249.17M. Right: Lv103 +15, main 치명확률 37.72%, subs 치확 16.51%, 스증 8.00%, power 279.52M (+30.35M).", "context": "raid", "why": "Commenters pick right: higher 스증."},
+        {"slot": "무기/왼쪽 위", "substats": "Target: at +15, 치확/치피 20%+ and 스증 9%+", "context": "raid", "why": "썸바디헬프미"}
+      ],
+      "rng": [],
+      "mechanics": [
+        "캔디애플: 치확 1.4 ≈ 치피 1 in value; 스증 always higher priority."
+      ],
+      "disagreements": [
+        "340: arena set (치확) scored worse in raid than raid set (치피), contrary to 75038/75589 commenters favouring 치확."
+      ],
+      "quotes": [
+        {"kr": "치확 1.4랑 치피 1이랑 비슷함 근데 무조건 스증높은게 우위임", "en": "1.4 crit rate is about the same as 1 crit dmg, but higher skill amp is always better."},
+        {"kr": "아레나셋은 치확이고 토벌셋은 치피인데 아레나셋으로 치니까 더 안나오더라고", "en": "My arena set is crit rate and raid set crit dmg, and with the arena set I scored less."},
+        {"kr": "15강 기준 치확 치피 20퍼 이상 스증 9퍼이상 뜨는경우있는데 그거 노리자", "en": "At +15 you can get crit rate/crit dmg 20%+ and skill amp 9%+; aim for that."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "75617",
+      "url": "https://m.dcinside.com/board/projectcc/75617",
+      "date": "2026-09-25",
+      "title_kr": "토벌 1T 넣는사람 팀투 몇임??",
+      "title_en": "What's the team power of people doing 1T in raid?",
+      "relevance": 3,
+      "summary_en": "People scoring 1T in raid have ~2G team power per one comment; 저장용 (the 641배 author) is at 1.77G with the full level list: 우유 브시 피겨 카롱 실론 치케 석류 at Lv.100, 전갈 Lv.10, 체리 닼초 피노 정전 Lv.1; pets 와사비문어 핫도그 색동주머니.",
+      "scores": [
+        {"damage": "1T", "power": "~2G", "ratio": "~500배", "deck": "?", "note": "Commenter observation."},
+        {"damage": "1T+", "power": "1.77G", "ratio": "?", "deck": "체리덱 (저장용)", "note": "Screenshot in 75400 shows 1.74G with 전갈 Lv.45."}
+      ],
+      "teams": [
+        {
+          "name": "체리덱 (저장용)",
+          "cookies": [
+            {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": ""},
+            {"kr": "브시", "en": "Bright Seeker", "level": "100", "stars": "?", "note": ""},
+            {"kr": "피겨", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "카롱", "en": "Macaron", "level": "100", "stars": "?", "note": ""},
+            {"kr": "실론", "en": null, "level": "100", "stars": "?", "note": ""},
+            {"kr": "치케", "en": "Cheesecake?", "level": "100", "stars": "?", "note": ""},
+            {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "10", "stars": "?", "note": "Stated Lv.10 (75400 screenshot shows Lv.45)"},
+            {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": ""},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": ""},
+            {"kr": "피노", "en": "Pinot Noir?", "level": "1", "stars": "?", "note": ""},
+            {"kr": "정전", "en": "Jungle Warrior?", "level": "1", "stars": "?", "note": ""}
+          ],
+          "pets": ["와사비문어", "핫도그", "색동주머니"],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": [],
+          "unorthodox": ["4 Lv.1 fillers; 전갈 at Lv.10."]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "전갈 level: Lv.10 stated here vs Lv.45 in the 75400 screenshot (same author)."
+      ],
+      "quotes": [
+        {"kr": "아까 보니까 2g쯤 되던데", "en": "I saw earlier it's around 2G."},
+        {"kr": "우유 브시 피겨 카롱 실론 치케 석류100 전갈 10 체리 닼초 피노 정전 1", "en": "Milk, Bright Seeker, 피겨, Macaron, 실론, Cheesecake, Pomegranate at 100; Scorpion 10; Cherry, Dark Choco, Pinot, Jungle Warrior at 1."},
+        {"kr": "와사비문어 핫도그 색동주머니", "en": "Wasabi Octopus, Hot Doggie, 색동주머니 (pets)."}
+      ]
+    }
+  ],
+  "glossary": [
+    {"kr": "브시커 / 시커 / 브시", "en": "Bright Seeker", "kind": "cookie", "confidence": "high", "evidence": "Sugar rune screens in 72951/73273/74249/74928 are labelled '브라이트시커 쿠키'."},
+    {"kr": "색동주머니", "en": null, "kind": "pet", "confidence": "high", "evidence": "75400: new pet, max stats 띄우기저항 30, 체력 12.5%; 74755: replaces 판다 as raid pet."},
+    {"kr": "와사비문어", "en": "Wasabi Octopus", "kind": "pet", "confidence": "high", "evidence": "75400: gives 공증 8% (ATK +8%)."},
+    {"kr": "석류빨대", "en": "Pomegranate's 'straw' (buff/link target)", "kind": "term", "confidence": "high", "evidence": "75400: shifts target when a cookie misses Milk's buff."},
+    {"kr": "허브", "en": "Herb", "kind": "cookie", "confidence": "low", "evidence": "74796/74960: swap for 정전 to survive the 30s slam (healer implied)."},
+    {"kr": "피겨", "en": null, "kind": "cookie", "confidence": "low", "evidence": "75400 ATK order #3 at Lv.100; 72449 mentions '피겨 뱀파' as current Crumble/raid staples. Not identified from images."},
+    {"kr": "실론", "en": null, "kind": "cookie", "confidence": "low", "evidence": "75400: Lv.100, positions too far forward. Not identified from images."},
+    {"kr": "정전 / 정글", "en": "Jungle Warrior?", "kind": "cookie", "confidence": "low", "evidence": "74811 writes '정글' for the Lv.1 slot; unconfirmed English."},
+    {"kr": "오방", "en": null, "kind": "cookie", "confidence": "low", "evidence": "72449/75081: charge-type cookie that roams away from Milk's buff."},
+    {"kr": "달토끼", "en": "Moon Rabbit", "kind": "cookie", "confidence": "high", "evidence": "73113 title."},
+    {"kr": "바리공주", "en": "Princess Bari", "kind": "cookie", "confidence": "high", "evidence": "73113; skill '영혼 인도' in 72449 image."},
+    {"kr": "세계선", "en": "'world line' — dream RNG run", "kind": "term", "confidence": "high", "evidence": "75287."},
+    {"kr": "정렬", "en": "alignment (cookies lining up in buff range)", "kind": "term", "confidence": "high", "evidence": "75287, 74767 (1자 배치)."},
+    {"kr": "30초 꽝", "en": "30-second slam (boss wipe pattern)", "kind": "term", "confidence": "high", "evidence": "74960, 74796."},
+    {"kr": "치감", "en": "crit (damage) reduction", "kind": "stat", "confidence": "low", "evidence": "73113 '치명감소 130%'; 75542 preset '아레나(전투+치감)'."},
+    {"kr": "공감", "en": "ATK reduction (debuff)", "kind": "stat", "confidence": "high", "evidence": "73113 Moon Rabbit 공감 50%."},
+    {"kr": "권투력", "en": "recommended power (권장 투력)", "kind": "term", "confidence": "high", "evidence": "73113 막스테 권투력 36% 감소."},
+    {"kr": "이면 / 차원의 이면", "en": "Other Side dimension dungeon", "kind": "term", "confidence": "low", "evidence": "74998: separate dungeon whose bonuses don't apply to raid."},
+    {"kr": "돌파력 연구", "en": "breakthrough research", "kind": "term", "confidence": "low", "evidence": "74811: source of DEF/HP/DR."}
+  ]
+}

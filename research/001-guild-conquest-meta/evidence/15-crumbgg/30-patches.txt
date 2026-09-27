@@ -1,0 +1,252 @@
+- banner
+  - link "crumb — home" [ref=e8749, url=https://crumb.gg/]
+  - link "Sign in" [ref=e8750, url=https://crumb.gg/account]
+  - button "한국어로 보기" [ref=e8751]
+  - button "Switch to dark mode" [ref=e8752]
+  - button "Menu" [expanded=false, ref=e8754]
+- main
+  - heading "Patch notes" [level=1, ref=e8753]
+  - navigation
+    - paragraph
+      - StaticText "UPDATES"
+    - list
+      - listitem [level=1]
+        - link "1.4.002 Sep 23" [ref=e8783, url=https://crumb.gg/patches#2026-09-23]
+      - listitem [level=1]
+        - link "1.3.002 Sep 10" [ref=e8784, url=https://crumb.gg/patches#2026-09-10]
+      - listitem [level=1]
+        - link "Aug 27" [ref=e8785, url=https://crumb.gg/patches#2026-08-27]
+      - listitem [level=1]
+        - link "Aug 13" [ref=e8786, url=https://crumb.gg/patches#2026-08-13]
+      - listitem [level=1]
+        - link "Jul 30" [ref=e8787, url=https://crumb.gg/patches#2026-07-30]
+  - generic
+    - sectionheader
+      - StaticText "Sep 23, 2026"
+      - StaticText "1.4.002"
+      - heading "Princess Bari, Rumble Arena and Dimensional Rift" [level=2, ref=e8774]
+    - image "Princess Bari Cookie"
+    - paragraph
+      - StaticText "Princess Bari"
+    - paragraph
+      - StaticText "TSSR · Fire · Charge"
+    - paragraph
+      - StaticText "Soul Guidance: charges at high-ATK enemies, then guided souls around her and her allies give DMG Down, Push RES and Lift RES and hit nearby enemies."
+    - paragraph
+      - StaticText "Every 5.5 s: 16 slashes of 79.7% ATK. Souls on her and 2 Charge allies deal 141% ATK every 0.66 s for 3.5 s (30% less for each repeat hit on the same enemy). DMG Down 40%, Lift RES and Push RES +100% for 3.5 s. Skill Prep 50%."
+    - image "Moon Rabbit Cookie's Pampered with Persimmon"
+    - paragraph
+      - StaticText "Moon Rabbit"
+    - paragraph
+      - StaticText "SSR · Grass · Tank"
+    - paragraph
+      - StaticText "Rams into enemies, then turns into a Giant Rice Cake Bunny to deal more damage and lower their ATK and CRIT%."
+    - paragraph
+      - StaticText "Every 7 s: 3 smashes of 38.8% ATK around her. 60% chance to lower ATK by 50% and CRIT% by 130% for 5 s (one roll for both). Skill Prep 50%."
+    - image "Candy Shade Pouch"
+    - paragraph
+      - StaticText "Candy Shade Pouch"
+    - paragraph
+      - StaticText "SSR · Pet"
+    - paragraph
+      - StaticText "Ally Lift RES +30%, Max HP +12.5%."
+    - paragraph
+      - StaticText "Same effect group as Panda Dumpling's Lift RES: they don't stack, the higher one counts."
+    - image "Continuum Cog"
+    - paragraph
+      - StaticText "Continuum Cog"
+    - paragraph
+      - StaticText "SSR · Pet"
+    - paragraph
+      - StaticText "Ally Boss DMG +150%, only in the Dimensional Rift. From the Dimensional Rift exchange."
+    - paragraph
+      - StaticText "+50% at the lowest grade, +150% at the highest. No effect in Guild Conquest."
+    - heading "COOKIE & PET CHANGES" [level=3, ref=e8755]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "NEW" [level=3, ref=e8756]
+    - list
+      - listitem [level=1]
+        - StaticText "Rumble Arena: fight Mercenaries from other servers. Irregular seasons, each with its own passive effects. Rumble Medals go to the Rumble Arena Exchange. New Rumble Special Pass."
+      - listitem [level=1]
+        - StaticText "Dimensional Rift: opens after the last main stage. Boss-only stages; raise your Dimensional Energy level for stats. Season rewards: profile frames and Dimension Fragments for the exchange."
+        - link "open" [ref=e8788, url=https://crumb.gg/stages?tab=rift]
+      - listitem [level=1]
+        - StaticText "Crumble Patches: collectibles earned from rewards and achievements, shown on your profile."
+    - heading "BALANCE" [level=3, ref=e8757]
+    - list
+      - listitem [level=1]
+        - StaticText "New stat Skill Prep: shortens the wait for a cookie's first skill. Cookies that already cast at the start show 100%."
+      - listitem [level=1]
+      - listitem [level=1]
+        - StaticText "Recommended power, enemy ATK and HP on those stages: from almost the same at 169-1 to 30% lower at 248-30 and 36% lower at the end. Stage 328-30 power:15.61B → 10.00B"
+      - listitem [level=1]
+        - StaticText "Guild Conquest tier requirements lowered: Chocolate 1 100M → 15M, Bronze 2 150M → 30M, Bronze 1 200M → 50M, Silver 3 300M → 100M, Silver 2 450M → 200M, Silver 1 650M → 300M, Gold 3 1G → 600M, Gold 2 1.5G → 1.1G."
+      - listitem [level=1]
+        - StaticText "Guild Conquest group rewards (Guild Medals): 2nd 1,400 → 1,500, 3rd 1,000 → 1,200, 4th 600 → 1,000, unranked 200 → 900. From season 6 (Sep 24)."
+    - heading "EXPANSIONS" [level=3, ref=e8758]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "EVENTS" [level=3, ref=e8759]
+    - list
+      - listitem [level=1]
+        - StaticText "Soothing Flame: collect Wisps of Guidance for Princess Bari's gacha (leftovers turn into Crystals)."
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "NOT IN THE PATCH NOTES" [level=3, ref=e8760]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+    - group
+      - DisclosureTriangle "Improvements and fixes (7)" [expanded=false]
+    - paragraph
+      - link "Official patch notes ↗" [ref=e8775, url=https://x.com/CRCrumbleEN/article/2102246763549921352]
+  - generic
+    - sectionheader
+      - StaticText "Sep 10, 2026"
+      - StaticText "1.3.002"
+      - heading "Cherry Cola Cookie" [level=2, ref=e8776]
+    - image "Cherry Cola Cookie"
+    - paragraph
+      - StaticText "Cherry Cola"
+    - paragraph
+      - StaticText "SSR · Water · Charge"
+    - paragraph
+      - StaticText "Tart Cherry Slash: charges at high-ATK enemies and damages the enemies around her."
+    - paragraph
+      - StaticText "Every 1.75 s: 2 slashes of 182% ATK. Every 9 hits a dash finisher of 245% ATK."
+    - heading "EXPANSIONS" [level=3, ref=e8761]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "BALANCE" [level=3, ref=e8762]
+    - list
+      - listitem [level=1]
+    - heading "EVENTS" [level=3, ref=e8763]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - group
+      - DisclosureTriangle "Improvements and fixes (15)" [expanded=false]
+    - paragraph
+      - link "Official patch notes ↗" [ref=e8777, url=https://x.com/CRCrumbleEN/article/2097535501372719278]
+  - generic
+    - sectionheader
+      - StaticText "Aug 27, 2026"
+      - heading "Guild Conquest, Brightseeker and Pinot Noir" [level=2, ref=e8778]
+    - image "Brightseeker Cookie"
+    - paragraph
+      - StaticText "Brightseeker"
+    - paragraph
+      - StaticText "TSSR · Light · Ranged"
+    - paragraph
+      - StaticText "Satellite Shock: Lollipop Drones fire lasers that set off shockwaves."
+    - paragraph
+      - StaticText "Every 9 s: 3 drones. Lasers 78.5% ATK, shockwaves 213% ATK."
+    - image "Pinot Noir Cookie"
+    - paragraph
+      - StaticText "Pinot Noir"
+    - paragraph
+      - StaticText "SSR · Dark · Support"
+    - paragraph
+      - StaticText "Shadow Bind: gives allies Lift RES and Rapid Fire synergy; her shadow bullets cut enemy healing."
+    - paragraph
+      - StaticText "Every 9.5 s: all allies Lift RES +35% for 10 s. Shadow bullets 90.4% ATK, 80% chance to cut enemy healing by 70% for 5 s."
+    - image "Tea Knight Cookie"
+    - paragraph
+      - StaticText "Tea Knight"
+    - paragraph
+      - StaticText "SSR · Light · Tank"
+    - paragraph
+      - StaticText "From the Guild Medal Exchange. Gives allies Boss DMG in Guild Conquest."
+    - paragraph
+      - StaticText "Every 10 s: thunder strike of 155.2% ATK and all allies Boss DMG +70% for 10 s (Guild Conquest only; +45% at the lowest grade)."
+    - image "Chargemellow"
+    - paragraph
+      - StaticText "Chargemellow"
+    - paragraph
+      - StaticText "SSR · Pet"
+    - paragraph
+      - StaticText "Allies get Rapid Fire synergy +2, and allies with Rapid Fire +10% ATK."
+    - heading "NEW" [level=3, ref=e8764]
+    - list
+      - listitem [level=1]
+        - StaticText "Guild Conquest: the guild fights the Extra-Stuffed Piñata. Weekly score, groups of 5 guilds, Guild Medals for the new exchange."
+        - link "open" [ref=e8789, url=https://crumb.gg/sim]
+      - listitem [level=1]
+        - StaticText "CCC Chicken collab with 60chicken (Chicken Out? CCC Chickenbot): summon CCC Chickenbots with event tickets and trade the currency in the event exchange."
+    - heading "EXPANSIONS" [level=3, ref=e8765]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "BALANCE" [level=3, ref=e8766]
+    - list
+      - listitem [level=1]
+        - StaticText "Overlapping buffs and debuffs: the strongest one now applies (a wrong value was used before)."
+      - listitem [level=1]
+    - heading "EVENTS" [level=3, ref=e8767]
+    - list
+      - listitem [level=1]
+        - StaticText "Light of Knowledge: collect Lights of Knowledge for Brightseeker's gacha."
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - group
+      - DisclosureTriangle "Improvements and fixes (14)" [expanded=false]
+    - paragraph
+      - link "Official patch notes ↗" [ref=e8779, url=https://x.com/CRCrumbleEN/article/2092462127684706397]
+  - generic
+    - sectionheader
+      - StaticText "Aug 13, 2026"
+      - heading "Cool Mint Cookie and the Rune Crystal Dungeon" [level=2, ref=e8780]
+    - image "Cool Mint Cookie"
+    - paragraph
+      - StaticText "Cool Mint"
+    - paragraph
+      - StaticText "SSR · Water · Charge"
+    - paragraph
+      - StaticText "Implant Excavation: drills into the ground, knocking enemies away, and summons skulls from the dug-up ground."
+    - heading "COOKIE & PET CHANGES" [level=3, ref=e8768]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "NEW" [level=3, ref=e8769]
+    - list
+      - listitem [level=1]
+        - StaticText "Rune Crystal Dungeon: beat the White Sugar Guardian for Rune Crystals (used to craft Sugar Runes)."
+    - heading "BALANCE" [level=3, ref=e8770]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "EVENTS" [level=3, ref=e8771]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - heading "NOT IN THE PATCH NOTES" [level=3, ref=e8772]
+    - list
+      - listitem [level=1]
+      - listitem [level=1]
+      - listitem [level=1]
+    - group
+      - DisclosureTriangle "Improvements and fixes (15)" [expanded=false]
+    - paragraph
+      - link "Official patch notes ↗" [ref=e8781, url=https://x.com/CRCrumbleEN/article/2087388813777949029]
+  - generic
+    - sectionheader
+      - StaticText "Jul 30, 2026"
+      - heading "Global launch" [level=2, ref=e8782]
+    - heading "NEW" [level=3, ref=e8773]
+    - list
+      - listitem [level=1]
+        - StaticText "CookieRun: Crumble launches with 69 cookies and 54 pets. Main stages up to 168-30."
+      - listitem [level=1]
+        - StaticText "Aug 3: app update with bug fixes and usability improvements."

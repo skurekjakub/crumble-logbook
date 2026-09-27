@@ -1,0 +1,3582 @@
+[
+ {
+  "kr": "피겨여왕맛 쿠키",
+  "kr_short": [
+   "피겨",
+   "피겨여왕"
+  ],
+  "en": "Skating Queen Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "돌격/Charge",
+  "rarity": "SSR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "완벽한 연기",
+  "skill_en": "A Perfect Performance",
+  "resource_key": "cookie0018",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Skating Queen Cookie\"",
+  "note": "Official EN is Skating Queen Cookie (confirms brief guess)."
+ },
+ {
+  "kr": "이온맛 쿠키로봇",
+  "kr_short": [],
+  "en": "Ion Cookie Robot",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "이온 실드",
+  "skill_en": "Ion Shield",
+  "resource_key": "cookie0136",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Ion Cookie Robot\""
+ },
+ {
+  "kr": "크림소다맛 쿠키",
+  "kr_short": [
+   "크림소다"
+  ],
+  "en": "Cream Soda Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "돌격/Charge",
+  "rarity": "SSR",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "크림소다 블레이드",
+  "skill_en": "Cream Soda Blade",
+  "resource_key": "cookie1004",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cream Soda Cookie\""
+ },
+ {
+  "kr": "도넛행성 에일리언 도넛킹",
+  "kr_short": [
+   "도넛킹"
+  ],
+  "en": "Space Doughnut's Royal Excellence",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "지원/Support",
+  "rarity": "SSR",
+  "synergy_received": [
+   "연타",
+   "지속"
+  ],
+  "skill_kr": "도넛도넛 빔",
+  "skill_en": "Doughnut Beam",
+  "resource_key": "cookie4018",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Space Doughnut's Royal Excellence\""
+ },
+ {
+  "kr": "전갈맛 쿠키",
+  "kr_short": [
+   "전갈"
+  ],
+  "en": "Scorpion Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "사격/Ranged",
+  "rarity": "SSR",
+  "synergy_received": [
+   "다발",
+   "지속"
+  ],
+  "skill_kr": "전갈 독침",
+  "skill_en": "Venom Sting",
+  "resource_key": "cookie0181",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Scorpion Cookie\""
+ },
+ {
+  "kr": "석류맛 쿠키",
+  "kr_short": [
+   "석류"
+  ],
+  "en": "Pomegranate Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "지원/Support",
+  "rarity": "SSR",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "석류 주술",
+  "skill_en": "Pomegranate Magic",
+  "resource_key": "cookie0126",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Pomegranate Cookie\""
+ },
+ {
+  "kr": "트위즐젤리맛 쿠키",
+  "kr_short": [
+   "트위즐젤리"
+  ],
+  "en": "Twizzly Gummy Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "사격/Ranged",
+  "rarity": "SSR",
+  "synergy_received": [
+   "연쇄"
+  ],
+  "skill_kr": "트위즐 레이저",
+  "skill_en": "Twizzly Beam",
+  "resource_key": "cookie0527",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Twizzly Gummy Cookie\""
+ },
+ {
+  "kr": "슈크림맛 쿠키",
+  "kr_short": [
+   "슈크림"
+  ],
+  "en": "Cream Puff Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "사격/Ranged",
+  "rarity": "SSR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "젤리우스 익스트리모스",
+  "skill_en": "Jellius Extremus!",
+  "resource_key": "cookie0048",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cream Puff Cookie\""
+ },
+ {
+  "kr": "딸기크레페맛 쿠키",
+  "kr_short": [
+   "딸크",
+   "딸기크레페"
+  ],
+  "en": "Strawberry Crepe Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "크레페 크래쉬",
+  "skill_en": "Crepe Crasher",
+  "resource_key": "cookie0518",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Strawberry Crepe Cookie\""
+ },
+ {
+  "kr": "에스프레소맛 쿠키",
+  "kr_short": [
+   "에스프레소"
+  ],
+  "en": "Espresso Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "사격/Ranged",
+  "rarity": "SSR",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "그라인딩",
+  "skill_en": "Grinding",
+  "resource_key": "cookie0513",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Espresso Cookie\""
+ },
+ {
+  "kr": "뱀파이어맛 쿠키",
+  "kr_short": [
+   "뱀파이어"
+  ],
+  "en": "Vampire Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "SSR",
+  "synergy_received": [
+   "연쇄"
+  ],
+  "skill_kr": "흡혈",
+  "skill_en": "Vampirism",
+  "resource_key": "cookie0035",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Vampire Cookie\""
+ },
+ {
+  "kr": "바람궁수 쿠키",
+  "kr_short": [
+   "바람궁수"
+  ],
+  "en": "Wind Archer Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "사격/Ranged",
+  "rarity": "TSSR",
+  "synergy_received": [
+   "관통"
+  ],
+  "skill_kr": "최후의 바람",
+  "skill_en": "Last Wind",
+  "resource_key": "cookie0070",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Wind Archer Cookie\""
+ },
+ {
+  "kr": "설탕노움",
+  "kr_short": [],
+  "en": "Sugar Gnome",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "돌격/Charge",
+  "rarity": "C",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "혁명의 망치",
+  "skill_en": "Hammer of Revolution",
+  "resource_key": "cookie4022",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Sugar Gnome\""
+ },
+ {
+  "kr": "블루베리 새",
+  "kr_short": [],
+  "en": "Blueberry Bird",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "지원/Support",
+  "rarity": "C",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "블루베리 소원 배달",
+  "skill_en": "Blueberry Wish Delivery",
+  "resource_key": "cookie4021",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Blueberry Bird\""
+ },
+ {
+  "kr": "명랑한 쿠키",
+  "kr_short": [
+   "명랑",
+   "명랑한"
+  ],
+  "en": "GingerBright",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "돌격/Charge",
+  "rarity": "C",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "명랑한 사탕",
+  "skill_en": "Jolly Candy",
+  "resource_key": "cookie0003",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"GingerBright\""
+ },
+ {
+  "kr": "용감한 쿠키",
+  "kr_short": [
+   "용감한"
+  ],
+  "en": "GingerBrave",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "C",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "용감한 돌격",
+  "skill_en": "Brave Dash",
+  "resource_key": "cookie0001",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"GingerBrave\""
+ },
+ {
+  "kr": "보더맛 쿠키",
+  "kr_short": [
+   "보더"
+  ],
+  "en": "Skater Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "돌격/Charge",
+  "rarity": "C",
+  "synergy_received": [
+   "연쇄"
+  ],
+  "skill_kr": "더 빨리 달리기",
+  "skill_en": "Rolling Faster",
+  "resource_key": "cookie0011",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Skater Cookie\""
+ },
+ {
+  "kr": "마법사맛 쿠키",
+  "kr_short": [
+   "마법사"
+  ],
+  "en": "Wizard Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "사격/Ranged",
+  "rarity": "C",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "번개구름 소환",
+  "skill_en": "Magic Storm",
+  "resource_key": "cookie0025",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Wizard Cookie\""
+ },
+ {
+  "kr": "닌자맛 쿠키",
+  "kr_short": [
+   "닌자"
+  ],
+  "en": "Ninja Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "사격/Ranged",
+  "rarity": "C",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "조용한 기습",
+  "skill_en": "Swift Strike",
+  "resource_key": "cookie0007",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Ninja Cookie\""
+ },
+ {
+  "kr": "근육맛 쿠키",
+  "kr_short": [
+   "근육"
+  ],
+  "en": "Muscle Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "방어/Tank",
+  "rarity": "C",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "머슬킹 파워",
+  "skill_en": "Muscle King Power",
+  "resource_key": "cookie0015",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Muscle Cookie\""
+ },
+ {
+  "kr": "딸기맛 쿠키",
+  "kr_short": [
+   "딸기"
+  ],
+  "en": "Strawberry Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "C",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "다가오지 마…",
+  "skill_en": "Stay Away...",
+  "resource_key": "cookie0002",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Strawberry Cookie\""
+ },
+ {
+  "kr": "탐험가맛 쿠키",
+  "kr_short": [
+   "탐험가"
+  ],
+  "en": "Adventurer Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "돌격/Charge",
+  "rarity": "U",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "밧줄의 고수",
+  "skill_en": "Rope Master",
+  "resource_key": "cookie0038",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Adventurer Cookie\""
+ },
+ {
+  "kr": "홍고추맛 쿠키",
+  "kr_short": [
+   "홍고추"
+  ],
+  "en": "Red Pepper Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "U",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "불타는 투지",
+  "skill_en": "Burning Spirit",
+  "resource_key": "cookie0047",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Red Pepper Cookie\""
+ },
+ {
+  "kr": "악마맛 쿠키",
+  "kr_short": [
+   "악마"
+  ],
+  "en": "Devil Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "사격/Ranged",
+  "rarity": "U",
+  "synergy_received": [
+   "관통"
+  ],
+  "skill_kr": "캔디 포크 투척",
+  "skill_en": "Candy Fork Toss",
+  "resource_key": "cookie0023",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Devil Cookie\""
+ },
+ {
+  "kr": "양파맛 쿠키",
+  "kr_short": [
+   "양파"
+  ],
+  "en": "Onion Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "지원/Support",
+  "rarity": "U",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "눈물 폭풍",
+  "skill_en": "Unstoppable Tears",
+  "resource_key": "cookie0058",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Onion Cookie\""
+ },
+ {
+  "kr": "버블껌맛 쿠키",
+  "kr_short": [
+   "버블껌"
+  ],
+  "en": "Gumball Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "방어/Tank",
+  "rarity": "U",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "받아라, 버블껌포!",
+  "skill_en": "Gumball Cannon",
+  "resource_key": "cookie0050",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Gumball Cookie\""
+ },
+ {
+  "kr": "천사맛 쿠키",
+  "kr_short": [
+   "천사"
+  ],
+  "en": "Angel Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "지원/Support",
+  "rarity": "U",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "성스러운 천상의 빛",
+  "skill_en": "Celestial Light",
+  "resource_key": "cookie0012",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Angel Cookie\""
+ },
+ {
+  "kr": "용사맛 쿠키",
+  "kr_short": [
+   "용사"
+  ],
+  "en": "Knight Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "방어/Tank",
+  "rarity": "U",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "용맹한 질주",
+  "skill_en": "Cavalry Charge",
+  "resource_key": "cookie0009",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Knight Cookie\""
+ },
+ {
+  "kr": "공주맛 쿠키",
+  "kr_short": [
+   "공주"
+  ],
+  "en": "Princess Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "U",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "로얄케인 스윙",
+  "skill_en": "Royal Swing",
+  "resource_key": "cookie0008",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Princess Cookie\""
+ },
+ {
+  "kr": "좀비맛 쿠키",
+  "kr_short": [
+   "좀비"
+  ],
+  "en": "Zombie Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "방어/Tank",
+  "rarity": "U",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "브레에에이이이인",
+  "skill_en": "Braiiiiins",
+  "resource_key": "cookie0013",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Zombie Cookie\""
+ },
+ {
+  "kr": "메론소다맛 쿠키",
+  "kr_short": [
+   "메소",
+   "메론소다"
+  ],
+  "en": "Melon Soda Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "사격/Ranged",
+  "rarity": "SSR",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "소다 펌프",
+  "skill_en": "Soda Blast",
+  "resource_key": "cookie3001",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Melon Soda Cookie\""
+ },
+ {
+  "kr": "이름 모를 케이크 들개",
+  "kr_short": [
+   "들개"
+  ],
+  "en": "Nameless Cake Hound",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "거염참",
+  "skill_en": "Giant Flame Slash",
+  "resource_key": "cookie4024",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Nameless Cake Hound\""
+ },
+ {
+  "kr": "딸기쇼트케이크맛 쿠키",
+  "kr_short": [
+   "딸기쇼트케이크"
+  ],
+  "en": "Strawberry Shortcake Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "돌격/Charge",
+  "rarity": "SSR",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "거대 케이크들개",
+  "skill_en": "Giant Cake Hound",
+  "resource_key": "cookie0072",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Strawberry Shortcake Cookie\""
+ },
+ {
+  "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "kr_short": [
+   "우유",
+   "소아과",
+   "소아과 의사 우유맛 쿠키",
+   "바삭튼튼 소아과 의사 우유"
+  ],
+  "en": "Milk Cookie's Crunchy Strong Pediatrician",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "지원/Support",
+  "rarity": "SSR",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "상냥한 치료",
+  "skill_en": "Gentle Remedy",
+  "resource_key": "cookie4019",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Milk Cookie's Crunchy Strong Pediatrician\"",
+  "note": "Crumble has no plain Milk Cookie; community \"우유\" means this alt."
+ },
+ {
+  "kr": "찰스",
+  "kr_short": [],
+  "en": "Schwarzwälder",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "초코칩 망치",
+  "skill_en": "Choco Chip Hammer",
+  "resource_key": "cookie0570",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Schwarzwälder\"",
+  "note": "Datamined EN name is Schwarzwälder."
+ },
+ {
+  "kr": "치약초코 쿠키",
+  "kr_short": [
+   "치약초코"
+  ],
+  "en": "Toothpaste Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "지원/Support",
+  "rarity": "SSR",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "전장의 전자음악단",
+  "skill_en": "Electronic Battlefield Orchestra",
+  "resource_key": "cookie4017",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Toothpaste Cookie\"",
+  "note": "Official EN is Toothpaste Cookie."
+ },
+ {
+  "kr": "다크초코 쿠키",
+  "kr_short": [
+   "닼초",
+   "다크초코"
+  ],
+  "en": "Dark Choco Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "어둠의 검격",
+  "skill_en": "Dark Sword Strike",
+  "resource_key": "cookie0103",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Dark Choco Cookie\""
+ },
+ {
+  "kr": "오븐방랑자 쿠키",
+  "kr_short": [
+   "오방",
+   "오븐방랑자"
+  ],
+  "en": "Oven Wanderer Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "TSSR",
+  "synergy_received": [
+   "연쇄"
+  ],
+  "skill_kr": "용감한 검격",
+  "skill_en": "Brave Slash",
+  "resource_key": "cookie4012",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Oven Wanderer Cookie\""
+ },
+ {
+  "kr": "밀키웨이맛 쿠키",
+  "kr_short": [
+   "밀키",
+   "밀키웨이"
+  ],
+  "en": "Milky Way Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "사격/Ranged",
+  "rarity": "SSR",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "꿈의 열차",
+  "skill_en": "Sugarcloud Express",
+  "resource_key": "cookie0573",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Milky Way Cookie\""
+ },
+ {
+  "kr": "커피맛 쿠키",
+  "kr_short": [
+   "커피"
+  ],
+  "en": "Coffee Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "지원/Support",
+  "rarity": "U",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "커피 한 잔 하실래요?",
+  "skill_en": "Care for Some Coffee?",
+  "resource_key": "cookie0010",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Coffee Cookie\""
+ },
+ {
+  "kr": "치어리더맛 쿠키",
+  "kr_short": [
+   "치어리더"
+  ],
+  "en": "Cheerleader Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "지원/Support",
+  "rarity": "U",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "너에게 힘이 되어줄게!",
+  "skill_en": "Cheering You On!",
+  "resource_key": "cookie0020",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cheerleader Cookie\""
+ },
+ {
+  "kr": "일꾼 곰젤리",
+  "kr_short": [],
+  "en": "Bear Jelly Worker",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "R",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "궁극의 일격",
+  "skill_en": "Ultimate Strike",
+  "resource_key": "cookie4023",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Bear Jelly Worker\""
+ },
+ {
+  "kr": "코코아맛 쿠키",
+  "kr_short": [
+   "코코아"
+  ],
+  "en": "Cocoa Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "방어/Tank",
+  "rarity": "R",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "마시멜로 코코아",
+  "skill_en": "Marshmallow Cocoa",
+  "resource_key": "cookie0045",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cocoa Cookie\""
+ },
+ {
+  "kr": "체리맛 쿠키",
+  "kr_short": [
+   "체리"
+  ],
+  "en": "Cherry Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "사격/Ranged",
+  "rarity": "R",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "체리 폭탄",
+  "skill_en": "Cherry Bomb",
+  "resource_key": "cookie0028",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cherry Cookie\"",
+  "note": "\"체리\" = Cherry Cookie (R, Fire). Cherry Cola is \"체콜\"; check context when a post writes 체리 for Cherry Cola."
+ },
+ {
+  "kr": "치즈케이크맛 쿠키",
+  "kr_short": [
+   "치케",
+   "치즈",
+   "치즈케이크"
+  ],
+  "en": "Cheesecake Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "지원/Support",
+  "rarity": "R",
+  "synergy_received": [
+   "관통"
+  ],
+  "skill_kr": "신나는 파티 초대장!",
+  "skill_en": "Cheerful Invitation!",
+  "resource_key": "cookie0037",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cheesecake Cookie\""
+ },
+ {
+  "kr": "요거트베리맛 쿠키",
+  "kr_short": [
+   "요거트베리"
+  ],
+  "en": "Berry Yogurt Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "방어/Tank",
+  "rarity": "R",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "요거스매셔",
+  "skill_en": "Yogurt Smash",
+  "resource_key": "cookie4002",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Berry Yogurt Cookie\""
+ },
+ {
+  "kr": "포도넝쿨맛 쿠키",
+  "kr_short": [
+   "포도넝쿨"
+  ],
+  "en": "Grapevine Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "지원/Support",
+  "rarity": "R",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "지나치게 진한 포도 주스",
+  "skill_en": "Overly Rich Juice",
+  "resource_key": "cookie4003",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Grapevine Cookie\""
+ },
+ {
+  "kr": "다크체리맛 쿠키",
+  "kr_short": [
+   "다크체리"
+  ],
+  "en": "Dark Cherry Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "R",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "벤다!",
+  "skill_en": "SLICE!",
+  "resource_key": "cookie4001",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Dark Cherry Cookie\""
+ },
+ {
+  "kr": "독버섯맛 쿠키",
+  "kr_short": [
+   "독버섯"
+  ],
+  "en": "Poison Mushroom Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "돌격/Charge",
+  "rarity": "R",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "보라버섯 독구름",
+  "skill_en": "Poison Cloud",
+  "resource_key": "cookie0502",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Poison Mushroom Cookie\""
+ },
+ {
+  "kr": "에일리언 도넛",
+  "kr_short": [],
+  "en": "Space Doughnut",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "사격/Ranged",
+  "rarity": "R",
+  "synergy_received": [
+   "관통"
+  ],
+  "skill_kr": "도넛 빔",
+  "skill_en": "Doughnut Beam",
+  "resource_key": "cookie0106",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Space Doughnut\""
+ },
+ {
+  "kr": "라일락맛 쿠키",
+  "kr_short": [
+   "라일락"
+  ],
+  "en": "Lilac Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "사격/Ranged",
+  "rarity": "R",
+  "synergy_received": [
+   "관통"
+  ],
+  "skill_kr": "보랏빛 검무",
+  "skill_en": "Chakram Throw",
+  "resource_key": "cookie0522",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Lilac Cookie\""
+ },
+ {
+  "kr": "연금술사맛 쿠키",
+  "kr_short": [
+   "연금술사"
+  ],
+  "en": "Alchemist Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "사격/Ranged",
+  "rarity": "R",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "임상실험",
+  "skill_en": "Clinical Trial",
+  "resource_key": "cookie0034",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Alchemist Cookie\""
+ },
+ {
+  "kr": "블랙베리맛 쿠키",
+  "kr_short": [
+   "블랙베리"
+  ],
+  "en": "Blackberry Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "돌격/Charge",
+  "rarity": "R",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "당신 뒤의 유령",
+  "skill_en": "Ghost Servants",
+  "resource_key": "cookie0042",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Blackberry Cookie\""
+ },
+ {
+  "kr": "위치베리맛 쿠키",
+  "kr_short": [
+   "위치베리"
+  ],
+  "en": "Witchberry Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "사격/Ranged",
+  "rarity": "SR",
+  "synergy_received": [
+   "관통"
+  ],
+  "skill_kr": "소동을 일으키자냥!",
+  "skill_en": "Feline Ruckus",
+  "resource_key": "cookie2006",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Witchberry Cookie\""
+ },
+ {
+  "kr": "닥터 뼈다귀 쿠키",
+  "kr_short": [
+   "닥터 뼈다귀"
+  ],
+  "en": "Dr. Bones Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "지원/Support",
+  "rarity": "SR",
+  "synergy_received": [
+   "연쇄"
+  ],
+  "skill_kr": "긴급 심폐소생술",
+  "skill_en": "Emergency CPR",
+  "resource_key": "cookie0195",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Dr. Bones Cookie\""
+ },
+ {
+  "kr": "레몬맛 쿠키",
+  "kr_short": [
+   "레몬"
+  ],
+  "en": "Lemon Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "사격/Ranged",
+  "rarity": "SR",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "라이트닝 큐브",
+  "skill_en": "Lightning Cube",
+  "resource_key": "cookie0052",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Lemon Cookie\""
+ },
+ {
+  "kr": "정글전사 쿠키",
+  "kr_short": [
+   "정전",
+   "정글전사"
+  ],
+  "en": "Tiger Lily Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "돌격/Charge",
+  "rarity": "SR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "타이거 라이더",
+  "skill_en": "Tiger Pounce",
+  "resource_key": "cookie0040",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Tiger Lily Cookie\"",
+  "note": "Official EN is Tiger Lily Cookie, not \"Jungle Warrior\"."
+ },
+ {
+  "kr": "락스타맛 쿠키",
+  "kr_short": [
+   "락스타"
+  ],
+  "en": "Rockstar Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "지원/Support",
+  "rarity": "SR",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "전설의 락스타",
+  "skill_en": "Legend of Rock",
+  "resource_key": "cookie0027",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Rockstar Cookie\""
+ },
+ {
+  "kr": "마카롱맛 쿠키",
+  "kr_short": [
+   "마카롱"
+  ],
+  "en": "Macaron Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "지원/Support",
+  "rarity": "SR",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "우당탕탕 마카롱 행진",
+  "skill_en": "Mighty Macaron Parade",
+  "resource_key": "cookie0059",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Macaron Cookie\""
+ },
+ {
+  "kr": "오렌지맛 쿠키",
+  "kr_short": [
+   "오렌지"
+  ],
+  "en": "Orange Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "지원/Support",
+  "rarity": "SR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "과즙 폭발 스매시",
+  "skill_en": "Juicy Smash",
+  "resource_key": "cookie0053",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Orange Cookie\""
+ },
+ {
+  "kr": "팬케이크맛 쿠키",
+  "kr_short": [
+   "팬케이크"
+  ],
+  "en": "Pancake Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "사격/Ranged",
+  "rarity": "SR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "도토리 줄게!",
+  "skill_en": "Take an Acorn!",
+  "resource_key": "cookie0069",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Pancake Cookie\""
+ },
+ {
+  "kr": "복숭아맛 쿠키",
+  "kr_short": [
+   "복숭아"
+  ],
+  "en": "Peach Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "SR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "복숭봉술",
+  "skill_en": "Peach Bo-staff",
+  "resource_key": "cookie0056",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Peach Cookie\""
+ },
+ {
+  "kr": "닥터 와사비 쿠키",
+  "kr_short": [
+   "닥터 와사비"
+  ],
+  "en": "Dr. Wasabi Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "사격/Ranged",
+  "rarity": "SR",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "와사비 시럽",
+  "skill_en": "Wasabi Syrup",
+  "resource_key": "cookie0107",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Dr. Wasabi Cookie\""
+ },
+ {
+  "kr": "팝콘맛 쿠키",
+  "kr_short": [
+   "팝콘"
+  ],
+  "en": "Popcorn Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "사격/Ranged",
+  "rarity": "SR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "레디, 액션!",
+  "skill_en": "Ready, Action!",
+  "resource_key": "cookie0101",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Popcorn Cookie\""
+ },
+ {
+  "kr": "호밀맛 쿠키",
+  "kr_short": [
+   "호밀"
+  ],
+  "en": "Rye Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "사격/Ranged",
+  "rarity": "SR",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "결투의 순간",
+  "skill_en": "Showdown Time",
+  "resource_key": "cookie0515",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Rye Cookie\""
+ },
+ {
+  "kr": "허브맛 쿠키",
+  "kr_short": [
+   "허브"
+  ],
+  "en": "Herb Cookie",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "지원/Support",
+  "rarity": "SR",
+  "synergy_received": [
+   "연타"
+  ],
+  "skill_kr": "따스한 정원",
+  "skill_en": "Sunny Garden",
+  "resource_key": "cookie0063",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Herb Cookie\""
+ },
+ {
+  "kr": "감초맛 쿠키",
+  "kr_short": [
+   "감초"
+  ],
+  "en": "Licorice Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "방어/Tank",
+  "rarity": "SR",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "해골 부르기",
+  "skill_en": "Licorice Servants",
+  "resource_key": "cookie0503",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Licorice Cookie\""
+ },
+ {
+  "kr": "마들렌맛 쿠키",
+  "kr_short": [
+   "마들렌"
+  ],
+  "en": "Madeleine Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "탄속",
+   "범위"
+  ],
+  "skill_kr": "기사단장의 검기",
+  "skill_en": "Commander's Blade",
+  "resource_key": "cookie0511",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Madeleine Cookie\""
+ },
+ {
+  "kr": "라임맛 쿠키",
+  "kr_short": [
+   "라임"
+  ],
+  "en": "Lime Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "지원/Support",
+  "rarity": "SR",
+  "synergy_received": [
+   "다발"
+  ],
+  "skill_kr": "비치볼 속 깜짝 선물",
+  "skill_en": "Beach Ball Surprise",
+  "resource_key": "cookie0054",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Lime Cookie\""
+ },
+ {
+  "kr": "쿨링민트맛 쿠키",
+  "kr_short": [
+   "쿨민",
+   "쿨링민트"
+  ],
+  "en": "Cool Mint Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "돌격/Charge",
+  "rarity": "SSR",
+  "synergy_received": [
+   "다발",
+   "지속"
+  ],
+  "skill_kr": "임플란트식 채굴",
+  "skill_en": "Implant Excavation",
+  "resource_key": "cookie4006",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cool Mint Cookie\""
+ },
+ {
+  "kr": "브라이트시커 쿠키",
+  "kr_short": [
+   "브시커",
+   "시커",
+   "브라이트시커"
+  ],
+  "en": "Brightseeker Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "사격/Ranged",
+  "rarity": "TSSR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "새틀라이트 쇼크",
+  "skill_en": "Satellite Shock",
+  "resource_key": "cookie4013",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Brightseeker Cookie\""
+ },
+ {
+  "kr": "실론나이트 쿠키",
+  "kr_short": [
+   "실론",
+   "실론나이트"
+  ],
+  "en": "Tea Knight Cookie",
+  "kind": "cookie",
+  "element": "빛/Light",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "전투 지휘",
+  "skill_en": "Battlemaster",
+  "resource_key": "cookie0532",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Tea Knight Cookie\"",
+  "note": "Official EN is Tea Knight Cookie. Skill grants allies Boss DMG in Guild Conquest only."
+ },
+ {
+  "kr": "피노누아맛 쿠키",
+  "kr_short": [
+   "피노",
+   "피노누아"
+  ],
+  "en": "Pinot Noir Cookie",
+  "kind": "cookie",
+  "element": "어둠/Dark",
+  "class": "지원/Support",
+  "rarity": "SSR",
+  "synergy_received": [
+   "연쇄"
+  ],
+  "skill_kr": "그림자 결속",
+  "skill_en": "Shadow Bind",
+  "resource_key": "cookie4010",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Pinot Noir Cookie\""
+ },
+ {
+  "kr": "체리콜라맛 쿠키",
+  "kr_short": [
+   "체콜",
+   "체리콜라"
+  ],
+  "en": "Cherry Cola Cookie",
+  "kind": "cookie",
+  "element": "물/Water",
+  "class": "돌격/Charge",
+  "rarity": "SSR",
+  "synergy_received": [
+   "연타",
+   "다발"
+  ],
+  "skill_kr": "새콤달콤 체리시",
+  "skill_en": "Tart Cherry Slash",
+  "resource_key": "cookie0250",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Cherry Cola Cookie\""
+ },
+ {
+  "kr": "감감술래 놀이 달토끼맛 쿠키",
+  "kr_short": [
+   "달토",
+   "달토끼",
+   "감감술래 놀이 달토끼"
+  ],
+  "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+  "kind": "cookie",
+  "element": "풀/Grass",
+  "class": "방어/Tank",
+  "rarity": "SSR",
+  "synergy_received": [
+   "지속"
+  ],
+  "skill_kr": "거대 떡토끼 변신",
+  "skill_en": "Giant Rice Cake Bunny",
+  "resource_key": "cookie4025",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Moon Rabbit Cookie's Pampered with Persimmon\"",
+  "note": "Moon Rabbit alt (\"Pampered with Persimmon\")."
+ },
+ {
+  "kr": "바리공주맛 쿠키",
+  "kr_short": [
+   "바리",
+   "바궁",
+   "바리공주"
+  ],
+  "en": "Princess Bari Cookie",
+  "kind": "cookie",
+  "element": "불/Fire",
+  "class": "돌격/Charge",
+  "rarity": "TSSR",
+  "synergy_received": [
+   "범위"
+  ],
+  "skill_kr": "영혼 인도",
+  "skill_en": "Soul Guidance",
+  "resource_key": "cookie0081",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "crosscheck": "crumblehub EN = \"Princess Bari Cookie\""
+ },
+ {
+  "kr": "비겁한 쿠키",
+  "kr_short": [
+   "비겁"
+  ],
+  "en": "Cowardly Cookie",
+  "kind": "cookie",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "status": "not playable as of 1.4.002",
+  "note": "Announced Alternative (TSSR tier on namu) shown struck-through = 출시 예정 (not yet released). In game data 1.4.002 it exists only as a stage boss (\"비겁한 쿠키\" in stageBosses). EN \"Cowardly Cookie\" from crumblehub UI string.",
+  "source": "https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "샤르도네맛 쿠키",
+  "kr_short": [
+   "샤르도네"
+  ],
+  "en": "Chardonnay Cookie",
+  "kind": "cookie",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "status": "not playable as of 1.4.002",
+  "note": "Listed under [NPC] on namu, not a playable cookie in game data 1.4.002. EN from crumblehub dictionary.",
+  "source": "https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "데빌스투스 쿠키",
+  "kr_short": [
+   "데빌스투스"
+  ],
+  "en": null,
+  "kind": "cookie",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "status": "not playable as of 1.4.002",
+  "note": "Struck-through (출시 예정) on namu; not in game data 1.4.002. No EN name found.",
+  "source": "https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "레디베리 쿠키",
+  "kr_short": [
+   "레디베리"
+  ],
+  "en": null,
+  "kind": "cookie",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "status": "not playable as of 1.4.002",
+  "note": "Announced Alternative, struck-through (출시 예정) on namu; not in game data 1.4.002. No EN name found.",
+  "source": "https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "대천사이보그 쿠키",
+  "kr_short": [
+   "대천사이보그"
+  ],
+  "en": null,
+  "kind": "cookie",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "status": "not playable as of 1.4.002",
+  "note": "Announced Alternative, struck-through (출시 예정) on namu; not in game data 1.4.002. No EN name found.",
+  "source": "https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "털뭉치 멍뭉이",
+  "kr_short": [
+   "털뭉치멍뭉이"
+  ],
+  "en": "Furball Pup",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "CriticalResistAddition",
+  "battle_passive_max_kr": "아군 탄속 시너지 +50%, 탄속 시너지를 받는 아군 공격력 10% 증가",
+  "battle_passive_max_en": "Ally Projectile Speed Synergy +50%, Projectile Speed Synergy Receiving Ally ATK +10%",
+  "resource_key": "pet0053",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "우유보틀 엔젤",
+  "kr_short": [
+   "우유보틀엔젤"
+  ],
+  "en": "Milk Angel",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "ResistAddition",
+  "battle_passive_max_kr": "방어형 아군 치명저항 14% 증가",
+  "battle_passive_max_en": "Tank Ally CRIT RES +14%",
+  "resource_key": "pet0135",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "용의 꼬리",
+  "kr_short": [
+   "용의꼬리"
+  ],
+  "en": "Dragon's Tail",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "U",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "아군 공격력 100 증가",
+  "battle_passive_max_en": "Ally ATK +100",
+  "resource_key": "pet0017",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "황금방울",
+  "kr_short": [],
+  "en": "Gold Drop",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "아군 치명확률 14% 증가",
+  "battle_passive_max_en": "Ally CRIT% +14%",
+  "resource_key": "pet0029",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "치즈뭉치 고양이",
+  "kr_short": [
+   "치즈뭉치고양이"
+  ],
+  "en": "Fluffy Cheese Cat",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "CriticalResistAddition",
+  "battle_passive_max_kr": "아군 연쇄 시너지 +2, 연쇄 시너지를 받는 아군 공격력 10% 증가",
+  "battle_passive_max_en": "Ally Chain Synergy +2, Chain Synergy Receiving Ally ATK +10%",
+  "resource_key": "pet0047",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "와사비 문어",
+  "kr_short": [
+   "와사비문어",
+   "문어"
+  ],
+  "en": "Octo Wasabi",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 지속 시너지 +40%, 지속 시너지를 받는 아군 공격력 10% 증가",
+  "battle_passive_max_en": "Ally Duration Synergy +40%, Duration Synergy Receiving Ally ATK +10%",
+  "resource_key": "pet0110",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "핫도그도그",
+  "kr_short": [
+   "핫도그"
+  ],
+  "en": "Hot Doggie",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 스킬증폭 10% 증가",
+  "battle_passive_max_en": "Ally Skill AMP +10%",
+  "resource_key": "pet0111",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "망고부리새",
+  "kr_short": [],
+  "en": "Mango Toucan",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 회피율 10% 증가",
+  "battle_passive_max_en": "Ally Evasion Rate +10%",
+  "resource_key": "pet0154",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "인삼이라지",
+  "kr_short": [],
+  "en": "Rooty",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "아군 명중률 10% 증가",
+  "battle_passive_max_en": "Ally Accuracy Rate +10%",
+  "resource_key": "pet0183",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "꽃개구리",
+  "kr_short": [],
+  "en": "Floral Froglet",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "불속성 아군 치명피해 28% 증가",
+  "battle_passive_max_en": "Fire Ally CRIT DMG +28%",
+  "resource_key": "pet0184",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "파우치사우루스",
+  "kr_short": [],
+  "en": "Pterosatchel",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "풀속성 아군 치명피해 28% 증가",
+  "battle_passive_max_en": "Grass Ally CRIT DMG +28%",
+  "resource_key": "pet0186",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "봉봉버드",
+  "kr_short": [],
+  "en": "Bonbon Birdy",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "빛속성 아군 치명피해 28% 증가",
+  "battle_passive_max_en": "Light Ally CRIT DMG +28%",
+  "resource_key": "pet0187",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "약과 찹사리",
+  "kr_short": [
+   "약과찹사리"
+  ],
+  "en": "Yakgwa Pupper",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "아군 집중확률 10% 증가",
+  "battle_passive_max_en": "Ally Focus Rate +10%",
+  "resource_key": "pet0207",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "달걀머리새",
+  "kr_short": [],
+  "en": "Eggbeak",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "돌격형 아군 피해감소 20% 증가",
+  "battle_passive_max_en": "Charge Ally DMG Reduction +20%",
+  "resource_key": "pet0239",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "식빵아지",
+  "kr_short": [],
+  "en": "Breadog",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "방어형 아군 회피율 20% 증가",
+  "battle_passive_max_en": "Tank Ally Evasion Rate +20%",
+  "resource_key": "pet0243",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "앵앵베리버드",
+  "kr_short": [],
+  "en": "Berry Angrybeak",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "사격형 아군 명중률 20% 증가",
+  "battle_passive_max_en": "Ranged Ally Accuracy Rate +20%",
+  "resource_key": "pet0252",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "초코고양이 네로",
+  "kr_short": [
+   "초코고양이네로"
+  ],
+  "en": "Constable Whiskers",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "지원형 아군 집중확률 20% 증가",
+  "battle_passive_max_en": "Support Ally Focus Rate +20%",
+  "resource_key": "pet0517",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "갓난갓방울",
+  "kr_short": [],
+  "en": "Holy Baby Drop",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "아군 공격력 20% 증가",
+  "battle_passive_max_en": "Ally ATK +20%",
+  "resource_key": "pet4001",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "새콤달곰",
+  "kr_short": [],
+  "en": "Sweet n' Sour",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 치명피해 14% 증가",
+  "battle_passive_max_en": "Ally CRIT DMG +14%",
+  "resource_key": "pet4004",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "근엄한 초코왕방울",
+  "kr_short": [
+   "근엄한초코왕방울"
+  ],
+  "en": "Majestic King Choco Drop",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "ElementDamageBonusAddition",
+  "battle_passive_max_kr": "아군 최대체력 20% 증가",
+  "battle_passive_max_en": "Ally Max HP +20%",
+  "resource_key": "pet4003",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "토끼사과",
+  "kr_short": [],
+  "en": "Apple Rabbit",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "AvoidanceAddition",
+  "battle_passive_max_kr": "불속성 아군 공격력 24% 증가",
+  "battle_passive_max_en": "Fire Ally ATK +24%",
+  "resource_key": "pet0046",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "조각레몬",
+  "kr_short": [],
+  "en": "Lemon Slice",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "FocusAddition",
+  "battle_passive_max_kr": "물속성 아군 공격력 24% 증가",
+  "battle_passive_max_en": "Water Ally ATK +24%",
+  "resource_key": "pet0050",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "도토리 부엉이",
+  "kr_short": [
+   "도토리부엉이"
+  ],
+  "en": "Owlcorn",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "FocusAddition",
+  "battle_passive_max_kr": "풀속성 아군 공격력 24% 증가",
+  "battle_passive_max_en": "Grass Ally ATK +24%",
+  "resource_key": "pet0059",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "어린쥐",
+  "kr_short": [],
+  "en": "Mini Orange Mouse",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "FocusAddition",
+  "battle_passive_max_kr": "빛속성 아군 공격력 24% 증가",
+  "battle_passive_max_en": "Light Ally ATK +24%",
+  "resource_key": "pet0064",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "찹쌀 하프물범",
+  "kr_short": [
+   "찹쌀하프물범"
+  ],
+  "en": "Sweet Rice Seal",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "FocusAddition",
+  "battle_passive_max_kr": "어둠속성 아군 공격력 24% 증가",
+  "battle_passive_max_en": "Dark Ally ATK +24%",
+  "resource_key": "pet0074",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "화나구마",
+  "kr_short": [],
+  "en": "Firestarter",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "ResistAddition",
+  "battle_passive_max_kr": "돌격형 아군 치명확률 14% 증가",
+  "battle_passive_max_en": "Charge Ally CRIT DMG +14%",
+  "resource_key": "pet0134",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "조수 테디",
+  "kr_short": [
+   "조수테디"
+  ],
+  "en": "Junior Sleuth Ted",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "ResistAddition",
+  "battle_passive_max_kr": "사격형 아군 치명피해 14% 증가",
+  "battle_passive_max_en": "Ranged Ally CRIT DMG +14%",
+  "resource_key": "pet0141",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "치즈크럼블 고양이",
+  "kr_short": [
+   "치즈크럼블고양이"
+  ],
+  "en": "Lord Crumbles III",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "ResistAddition",
+  "battle_passive_max_kr": "지원형 아군 스킬증폭 12% 증가",
+  "battle_passive_max_en": "Support Ally Skill AMP +12%",
+  "resource_key": "pet0142",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "크림티즈",
+  "kr_short": [],
+  "en": "Creamtese",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "아군 공격력 12% 증가",
+  "battle_passive_max_en": "Ally ATK +12%",
+  "resource_key": "pet0216",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "얼음과자새",
+  "kr_short": [],
+  "en": "Icy Birdie",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "아군 피해감소 12% 증가",
+  "battle_passive_max_en": "Ally DMG Reduction +12%",
+  "resource_key": "pet0230",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "뽀글방울",
+  "kr_short": [],
+  "en": "Soda Dollop",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "아군 최대체력 12% 증가",
+  "battle_passive_max_en": "Ally Max HP +12%",
+  "resource_key": "pet1004",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "꼬마유령",
+  "kr_short": [],
+  "en": "Little Ghost",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "아군 밀치기 저항 20% 증가",
+  "battle_passive_max_en": "Ally Push RES +20%",
+  "resource_key": "pet0012",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "판다만두",
+  "kr_short": [
+   "판다"
+  ],
+  "en": "Panda Dumpling",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "아군 띄우기 저항 20% 증가",
+  "battle_passive_max_en": "Ally Lift RES +20%",
+  "resource_key": "pet0069",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "영혼 투구",
+  "kr_short": [
+   "영혼투구"
+  ],
+  "en": "Dark Spirit Helmet",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "아군 이동속도 8% 증가",
+  "battle_passive_max_en": "Ally Mov SPD +8%",
+  "resource_key": "pet0104",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "구름 펠리칸",
+  "kr_short": [
+   "구름펠리칸"
+  ],
+  "en": "Cloud Pelican",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "불속성 아군 최대체력 18% 증가",
+  "battle_passive_max_en": "Fire Ally Max HP +18%",
+  "resource_key": "pet0106",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "열매사슴",
+  "kr_short": [],
+  "en": "Fruit Doe",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "물속성 아군 최대체력 18% 증가",
+  "battle_passive_max_en": "Water Ally Max HP +18%",
+  "resource_key": "pet0131",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "당근케이크 토끼",
+  "kr_short": [
+   "당근케이크토끼"
+  ],
+  "en": "Carrot Cake Rabbit",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "풀속성 아군 최대체력 18% 증가",
+  "battle_passive_max_en": "Grass Ally Max HP +18%",
+  "resource_key": "pet0132",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "루돌프벨",
+  "kr_short": [],
+  "en": "Jingle Deer",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "CriticalResistAddition",
+  "battle_passive_max_kr": "빛속성 아군 최대체력 18% 증가",
+  "battle_passive_max_en": "Light Ally Max HP +18%",
+  "resource_key": "pet0147",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "복슬이람",
+  "kr_short": [],
+  "en": "Floofy Fruity",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "CriticalResistAddition",
+  "battle_passive_max_kr": "어둠속성 아군 최대체력 18% 증가",
+  "battle_passive_max_en": "Dark Ally Max HP +18%",
+  "resource_key": "pet0197",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "어린니",
+  "kr_short": [],
+  "en": "Toofie",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "owned_stat": "CriticalResistAddition",
+  "battle_passive_max_kr": "아군 공격력 10% 증가",
+  "battle_passive_max_en": "Ally ATK +10%",
+  "resource_key": "pet4002",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "브레인껌",
+  "kr_short": [],
+  "en": "Brain Gum",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "U",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "아군 방어력 100 증가",
+  "battle_passive_max_en": "Ally DEF +100",
+  "resource_key": "pet0018",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "생크림 모카커피",
+  "kr_short": [
+   "생크림모카커피"
+  ],
+  "en": "Mocha Delight",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "U",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "아군 치명확률 8% 증가",
+  "battle_passive_max_en": "Ally CRIT% +8%",
+  "resource_key": "pet0019",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "천상의 별",
+  "kr_short": [
+   "천상의별"
+  ],
+  "en": "Celestial Star",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "U",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "아군 최대체력 1000 증가",
+  "battle_passive_max_en": "Ally Max HP +1000",
+  "resource_key": "pet0020",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "불꽃박쥐",
+  "kr_short": [],
+  "en": "Flame Bat",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "U",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "아군 치명피해 8% 증가",
+  "battle_passive_max_en": "Ally CRIT DMG +8%",
+  "resource_key": "pet0028",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "포켓딸기",
+  "kr_short": [],
+  "en": "Pocket Strawberry",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "U",
+  "owned_stat": "HealthPointAddition",
+  "battle_passive_max_kr": "아군 피해감소 8% 증가",
+  "battle_passive_max_en": "Ally DMG Reduction +8%",
+  "resource_key": "pet0109",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "초코방울",
+  "kr_short": [],
+  "en": "Choco Drop",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "C",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 명중 100 증가",
+  "battle_passive_max_en": "Ally Accuracy +100",
+  "resource_key": "pet0001",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "치즈방울",
+  "kr_short": [],
+  "en": "Cheese Drop",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "C",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 회피 100 증가",
+  "battle_passive_max_en": "Ally Evasion +100",
+  "resource_key": "pet0002",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "뭉치유니콘",
+  "kr_short": [],
+  "en": "Dust Unicorn",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "C",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 집중 100 증가",
+  "battle_passive_max_en": "Ally Focus +100",
+  "resource_key": "pet0005",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "안깐 마늘",
+  "kr_short": [
+   "안깐마늘"
+  ],
+  "en": "Unpeeled Garlic",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "C",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 저항 100 증가",
+  "battle_passive_max_en": "Ally RES +100",
+  "resource_key": "pet0010",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "키위새",
+  "kr_short": [],
+  "en": "Kiwi Bird",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "CriticalResistAddition",
+  "battle_passive_max_kr": "아군 방어력 20% 증가",
+  "battle_passive_max_en": "Ally DEF +20%",
+  "resource_key": "pet0052",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "마시멜로 햄찌",
+  "kr_short": [
+   "마시멜로햄찌"
+  ],
+  "en": "Marshmallow Hamster",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "CriticalResistAddition",
+  "battle_passive_max_kr": "어둠속성 아군 치명피해 28% 증가",
+  "battle_passive_max_en": "Dark Ally CRIT DMG +28%",
+  "resource_key": "pet0056",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "사바나나 사자",
+  "kr_short": [
+   "사바나나사자"
+  ],
+  "en": "Banana Lion",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "ElementDamageBonusAddition",
+  "battle_passive_max_kr": "아군 범위 시너지 +30%, 범위 시너지를 받는 아군 공격력 10% 증가",
+  "battle_passive_max_en": "Ally Range Synergy +30%, Range Synergy Receiving Ally ATK +10%",
+  "resource_key": "pet0080",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "아보카포",
+  "kr_short": [],
+  "en": "Avocatapult",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "AttackPointAddition",
+  "battle_passive_max_kr": "아군 저항확률 10% 증가",
+  "battle_passive_max_en": "Ally Resistance Rate +10%",
+  "resource_key": "pet0115",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "통나무케이크",
+  "kr_short": [],
+  "en": "Yule Log Cake",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "DefensePointAddition",
+  "battle_passive_max_kr": "물속성 아군 치명피해 28% 증가",
+  "battle_passive_max_en": "Water Ally CRIT DMG +28%",
+  "resource_key": "pet0037",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "전지멜로우",
+  "kr_short": [
+   "전지"
+  ],
+  "en": "Chargemellow",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "CriticalRateAddition",
+  "battle_passive_max_kr": "아군 연타 시너지 +2, 연타 시너지를 받는 아군 공격력 10% 증가",
+  "battle_passive_max_en": "Ally Rapid Fire Synergy +2, Rapid Fire Synergy Receiving Ally ATK +10%",
+  "resource_key": "pet4005",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "무한바퀴",
+  "kr_short": [],
+  "en": "Continuum Cog",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "AvoidanceAddition",
+  "battle_passive_max_kr": "차원의 이면에서 아군 보스피해 150% 증가",
+  "battle_passive_max_en": "+150% Ally Boss DMG in the Dimentional Rift",
+  "resource_key": "pet0167",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "색동 주머니",
+  "kr_short": [
+   "색동주머니",
+   "주머니",
+   "색동"
+  ],
+  "en": "Candy Shade Pouch",
+  "kind": "pet",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "owned_stat": "ElementDamageBonusAddition",
+  "battle_passive_max_kr": "아군 띄우기 저항 30%, 최대체력 12.5% 증가",
+  "battle_passive_max_en": "아군 띄우기 저항 30%, 최대체력 12.5% 증가",
+  "resource_key": "pet0228",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)",
+  "note": "Game data 1.4.002 has no EN string yet; EN from crumblehub dictionary."
+ },
+ {
+  "kr": "공격력",
+  "kr_short": [
+   "공"
+  ],
+  "en": "ATK",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally ATK +N%\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "공격력 증폭",
+  "kr_short": [
+   "공증",
+   "공퍼",
+   "공%"
+  ],
+  "en": "ATK AMP",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Sugar-rune % ATK line (statType AttackPointMultiplier). EN \"ATK AMP\" from crumblehub; alkapa EN says \"ATK Amplification\". Official EN string not found in game data.",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "방어력",
+  "kr_short": [
+   "방"
+  ],
+  "en": "DEF",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "방어력 증폭",
+  "kr_short": [
+   "방증",
+   "방퍼"
+  ],
+  "en": "DEF AMP",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Sugar-rune % DEF line (DefensePointMultiplier); EN from crumblehub.",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "체력",
+  "kr_short": [
+   "체",
+   "최대체력"
+  ],
+  "en": "HP / Max HP",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text uses \"Max HP\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "체력 증폭",
+  "kr_short": [
+   "체증",
+   "체퍼"
+  ],
+  "en": "HP AMP",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Sugar-rune % HP line (HealthPointMultiplier); EN from crumblehub; alkapa EN \"HP Amplification\".",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "치명확률",
+  "kr_short": [
+   "치확"
+  ],
+  "en": "CRIT%",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally CRIT% +N%\"); alkapa EN \"CRIT Rate\". Crumblehub/alkapa: values above 100% still add damage.",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "치명피해",
+  "kr_short": [
+   "치피",
+   "치댐"
+  ],
+  "en": "CRIT DMG",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "치명저항",
+  "kr_short": [
+   "치저"
+  ],
+  "en": "CRIT RES",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Tank Ally CRIT RES\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "스킬증폭",
+  "kr_short": [
+   "스증"
+  ],
+  "en": "Skill AMP",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Skill AMP +N%\"); alkapa EN \"Skill Amplification\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "스킬가속",
+  "kr_short": [
+   "스가",
+   "가속"
+  ],
+  "en": "Skill Haste",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "No EN string in game data; \"Skill Haste\" used by crumblehub + alkapa. Cooldown = base x 100 / (100 + haste) per crumblehub stats guide.",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "피해감소",
+  "kr_short": [
+   "피감"
+  ],
+  "en": "DMG Reduction",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally DMG Reduction +N%\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "받는 피해 감소",
+  "kr_short": [
+   "받피감"
+  ],
+  "en": "DMG Taken Reduction",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "crumblehub dictionary; game skill text \"reduces Damage Taken\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "명중",
+  "kr_short": [],
+  "en": "Accuracy",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Accuracy +100\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "명중률",
+  "kr_short": [
+   "명중확률"
+  ],
+  "en": "Accuracy Rate",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Accuracy Rate +N%\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "회피",
+  "kr_short": [],
+  "en": "Evasion",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "회피율",
+  "kr_short": [
+   "회피확률"
+  ],
+  "en": "Evasion Rate",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "집중",
+  "kr_short": [],
+  "en": "Focus",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Focus +100\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "집중확률",
+  "kr_short": [
+   "집확"
+  ],
+  "en": "Focus Rate",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Focus Rate +N%\"); alkapa EN \"Focus Rate\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "저항",
+  "kr_short": [],
+  "en": "RES",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally RES +100\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "저항확률",
+  "kr_short": [
+   "저확"
+  ],
+  "en": "Resistance Rate",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Resistance Rate +N%\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "이동속도",
+  "kr_short": [
+   "이속"
+  ],
+  "en": "Mov SPD",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Mov SPD +N%\"); crumblehub \"Move SPD\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "보스피해",
+  "kr_short": [
+   "보피"
+  ],
+  "en": "Boss DMG",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"+N% Ally Boss DMG in the Dimentional Rift\"; Tea Knight \"Boss DMG ... in Guild Conquest\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "속성피해",
+  "kr_short": [
+   "속피"
+  ],
+  "en": "Element damage",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Sugar Pocket label for ElementDamageBonusAddition (pet owned stat); no official EN found. Advantage = +15% base per crumblehub stats guide.",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "띄우기 저항",
+  "kr_short": [
+   "띄저",
+   "띄우기저항"
+  ],
+  "en": "Lift RES",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Lift RES +N%\"); crumblehub \"Knock-up Resistance\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "밀치기 저항",
+  "kr_short": [],
+  "en": "Push RES",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"Ally Push RES +N%\")",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "방어력 감소",
+  "kr_short": [
+   "방깎"
+  ],
+  "en": "DEF Reduction",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"reducing their DEF\"); crumblehub dictionary",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "공격력 감소",
+  "kr_short": [
+   "공깎"
+  ],
+  "en": "ATK Reduction",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "crumblehub dictionary",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "전투력",
+  "kr_short": [
+   "투력",
+   "전투력"
+  ],
+  "en": "Power",
+  "kind": "stat",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "crumblehub EN UI (\"My Team Power\", \"Recommended Power\"); official EN not verified",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
+ },
+ {
+  "kr": "무기",
+  "kr_short": [
+   "왼쪽 위",
+   "좌상단",
+   "무기 슬롯"
+  ],
+  "en": "Weapon (gear group)",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Plates Sword/Bow/Staff. Main stat per plate: ATK / Accuracy / CRIT%. Substat pool: Skill AMP, Accuracy, ATK, CRIT DMG, CRIT%. Brief equates 무기 with the top-left slot.",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "방어구",
+  "kr_short": [
+   "왼쪽 아래",
+   "좌하단"
+  ],
+  "en": "Armor (gear group)",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Plates Helmet/Armor/Shield. Main: DEF / HP / Evasion. Substat pool: Evasion, CRIT RES, DMG Reduction, DEF, HP. Position name inferred.",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "장신구",
+  "kr_short": [
+   "우상단",
+   "오른쪽 위"
+  ],
+  "en": "Accessory (gear group)",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Plates Necklace/Ring/Brooch. Main: CRIT RES / Focus / RES. Substat pool: Skill AMP, Skill Haste, Accuracy, ATK, CRIT DMG, CRIT%, Focus, RES, Mov SPD. 우상단 = 장신구 is INFERRED (only offense-side pool with Skill Haste), not seen in UI.",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "특수",
+  "kr_short": [
+   "우하단",
+   "오른쪽 아래"
+  ],
+  "en": "Special (gear group)",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Plates Artifact/Book/Food. Main: CRIT DMG / Skill AMP / DMG Reduction. Substat pool: Skill Haste, Evasion, CRIT RES, DMG Reduction, DEF, Focus, HP, RES, Mov SPD. 우하단 = 특수 is INFERRED: \"우하단 스가 + 피감\" only fits this pool (accessory has Skill Haste but no DMG Reduction).",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "플레이트",
+  "kr_short": [
+   "판"
+  ],
+  "en": "Plate",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Gear piece; 12 plate types (4 groups x 3), unlocked by Oven level (Sugar Pocket: \"APK의 12개 플레이트와 오븐 레벨별 해금\"). EN \"Plates\" / \"Plating Reinforcement\" from game item text.",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "장비 프리셋",
+  "kr_short": [
+   "프리셋"
+  ],
+  "en": "Gear preset",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Added in 9/23 patch per brief; EN wording not verified.",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "부옵",
+  "kr_short": [
+   "부옵션",
+   "서브옵"
+  ],
+  "en": "Substat",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Gear sub-option. Sugar Pocket: sub-option count 0 (Normal/Fine/Advanced), 1 (Magic/Epic), 2 (Unique and above).",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "주옵",
+  "kr_short": [
+   "주옵션",
+   "메인옵"
+  ],
+  "en": "Main stat",
+  "kind": "gear_slot",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Gear main option; fixed per plate type.",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002) (equipment[].type/mainOptions/subOptions) ; https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js"
+ },
+ {
+  "kr": "길드 토벌전",
+  "kr_short": [
+   "토벌전",
+   "토벌",
+   "길토"
+  ],
+  "en": "Guild Conquest",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game item text \"Guild Conquest Score Patch\"; Tea Knight skill text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "지나치게 무거워진 피냐타",
+  "kr_short": [
+   "피냐타"
+  ],
+  "en": "Overly Heavy Pinata (EN notice per crumbleguides) / \"Extra-stuffed Piñata\" (crumblehub deck title)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Official EN not confirmed from game data; game patch text says \"지나치게 무거운 피냐타\".",
+  "source": "https://crumbleguides.com/guides/cookie-run-crumble-guild-conquest"
+ },
+ {
+  "kr": "길드 메달",
+  "kr_short": [],
+  "en": "Guild Medal",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game item text",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002)"
+ },
+ {
+  "kr": "용병단",
+  "kr_short": [],
+  "en": "Mercenary squad",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text (\"your Mercenary squad\"); team-level system with perks",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002)"
+ },
+ {
+  "kr": "단장",
+  "kr_short": [
+   "캡틴"
+  ],
+  "en": "Captain (squad leader slot)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "crumblehub deck field captainSlot, tooltip \"단장\"",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "복지",
+  "kr_short": [
+   "용병단 특전",
+   "특전"
+  ],
+  "en": "Mercenary perks",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Community shorthand for the perk picks; see perk entries",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "시너지",
+  "kr_short": [],
+  "en": "Synergy",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "범위",
+  "kr_short": [],
+  "en": "Range (synergy)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text \"Range Synergy\"; Sugar Pocket/crumblehub label \"Area\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "지속",
+  "kr_short": [],
+  "en": "Duration (synergy)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "다발",
+  "kr_short": [],
+  "en": "Volley (synergy)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text \"grant Volley\"; Sugar Pocket labels it \"Multishot\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "탄속",
+  "kr_short": [],
+  "en": "Projectile Speed (synergy)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "연타",
+  "kr_short": [],
+  "en": "Rapid Fire (synergy)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text; Sugar Pocket labels it \"Multistrike\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "관통",
+  "kr_short": [],
+  "en": "Pierce (synergy)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "연쇄",
+  "kr_short": [],
+  "en": "Chain (synergy)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "돌격",
+  "kr_short": [
+   "돌격형"
+  ],
+  "en": "Charge (role)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game pet text \"Charge Ally\"; Sugar Pocket label \"Attacker\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "방어",
+  "kr_short": [
+   "방어형",
+   "탱"
+  ],
+  "en": "Tank (role)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game pet text \"Tank Ally\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "사격",
+  "kr_short": [
+   "사격형"
+  ],
+  "en": "Ranged (role)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game pet text \"Ranged Ally\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "지원",
+  "kr_short": [
+   "지원형",
+   "서폿"
+  ],
+  "en": "Support (role)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game pet text \"Support Ally\"",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "불",
+  "kr_short": [
+   "불속성"
+  ],
+  "en": "Fire",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "element; beats Grass",
+  "source": "https://crumblehub.co/guides/stats"
+ },
+ {
+  "kr": "물",
+  "kr_short": [
+   "물속성"
+  ],
+  "en": "Water",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "element; beats Fire",
+  "source": "https://crumblehub.co/guides/stats"
+ },
+ {
+  "kr": "풀",
+  "kr_short": [
+   "풀속성"
+  ],
+  "en": "Grass",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "element; beats Water",
+  "source": "https://crumblehub.co/guides/stats"
+ },
+ {
+  "kr": "빛",
+  "kr_short": [
+   "빛속성"
+  ],
+  "en": "Light",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "element; Light and Dark beat each other",
+  "source": "https://crumblehub.co/guides/stats"
+ },
+ {
+  "kr": "어둠",
+  "kr_short": [
+   "어둠속성"
+  ],
+  "en": "Dark",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "element; Light and Dark beat each other",
+  "source": "https://crumblehub.co/guides/stats"
+ },
+ {
+  "kr": "성급",
+  "kr_short": [
+   "성",
+   "★"
+  ],
+  "en": "Stars / Star Level",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "crumblehub EN \"Cookie Stars\"",
+  "source": "https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "승급",
+  "kr_short": [],
+  "en": "Promotion",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "crumblehub EN \"Promotion Pass\"; sugar-rune slots open at 0/2/4/6/8/8/10/10 stars (Sugar Pocket sugarRunes.slots)",
+  "source": "https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "슈가룬",
+  "kr_short": [
+   "룬"
+  ],
+  "en": "Sugar Runes",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game item text",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002)"
+ },
+ {
+  "kr": "룬결정",
+  "kr_short": [],
+  "en": "Rune Crystals",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game item text; used for Sugar Rune Crafting",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002)"
+ },
+ {
+  "kr": "세공",
+  "kr_short": [
+   "슈가룬 세공",
+   "룬 돌리기"
+  ],
+  "en": "Sugar Rune Crafting (reroll)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game item text \"Sugar Rune Crafting\"",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002)"
+ },
+ {
+  "kr": "차원의 이면",
+  "kr_short": [],
+  "en": "Dimensional Rift",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
+ },
+ {
+  "kr": "오븐",
+  "kr_short": [],
+  "en": "Oven",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game text; bakes Gear",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002)"
+ },
+ {
+  "kr": "스텔라 링크",
+  "kr_short": [
+   "스텔라"
+  ],
+  "en": "Stellar Link",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "game item text",
+  "source": "https://cookieruncrumble.app/api/catalog/database (game 1.4.002)"
+ },
+ {
+  "kr": "리트",
+  "kr_short": [
+   "리트라이"
+  ],
+  "en": "retry",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "community slang",
+  "source": "community usage"
+ },
+ {
+  "kr": "클뜯",
+  "kr_short": [],
+  "en": "datamine (client dig)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "community slang",
+  "source": "community usage"
+ },
+ {
+  "kr": "로또덱",
+  "kr_short": [],
+  "en": "lottery deck (high-variance deck)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "community slang",
+  "source": "community usage"
+ },
+ {
+  "kr": "투력",
+  "kr_short": [
+   "전투력"
+  ],
+  "en": "Power (team power)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "see stat 전투력",
+  "source": "https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "배",
+  "kr_short": [],
+  "en": "multiple (damage / power)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "community metric per brief",
+  "source": "record brief"
+ },
+ {
+  "kr": "C",
+  "kr_short": [],
+  "en": "Common",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "C",
+  "note": "rarity grade",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://namu.wiki/w/쿠키런: 크럼블"
+ },
+ {
+  "kr": "U",
+  "kr_short": [],
+  "en": "Uncommon",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "U",
+  "note": "rarity grade",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://namu.wiki/w/쿠키런: 크럼블"
+ },
+ {
+  "kr": "R",
+  "kr_short": [],
+  "en": "Rare",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "R",
+  "note": "rarity grade",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://namu.wiki/w/쿠키런: 크럼블"
+ },
+ {
+  "kr": "SR",
+  "kr_short": [],
+  "en": "Super Rare",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "SR",
+  "note": "rarity grade",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://namu.wiki/w/쿠키런: 크럼블"
+ },
+ {
+  "kr": "SSR",
+  "kr_short": [],
+  "en": "Super Special Rare",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "SSR",
+  "note": "rarity grade",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://namu.wiki/w/쿠키런: 크럼블"
+ },
+ {
+  "kr": "TSSR",
+  "kr_short": [],
+  "en": "top tier (Alternative/Legendary per namu)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "TSSR",
+  "note": "rarity grade",
+  "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://namu.wiki/w/쿠키런: 크럼블"
+ },
+ {
+  "kr": "부스러기 용병단",
+  "kr_short": [],
+  "en": "Less Than Crumbs",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary squad level 0",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "견습 용병단",
+  "kr_short": [],
+  "en": "Mercenaries in Training",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary squad level 1",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "그럭저럭 용병단",
+  "kr_short": [],
+  "en": "Real Mercenaries",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary squad level 2",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "정예 용병단",
+  "kr_short": [],
+  "en": "Elite Mercenaries",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary squad level 3",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "베테랑 용병단",
+  "kr_short": [],
+  "en": "Veteran Mercenaries",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary squad level 4",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "종합 복지 패키지",
+  "kr_short": [],
+  "en": "General Perks",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv1, id 1393192041: 아군 공격력, 방어력, 최대체력 1% 증가 / +1% Ally ATK, DEF, Max HP",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "이달의 우수 용병",
+  "kr_short": [],
+  "en": "Merc of the Month",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv2, id 1703769231: 전투력 가장 높은 아군 공격력, 방어력, 최대체력 5% 증가 / +5% ATK, DEF, Max HP for strongest Ally",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "구내식당 제공",
+  "kr_short": [],
+  "en": "Meals Provided",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv2, id 1916013163: 아군 최대체력 3% 증가 / +3% Ally Max HP",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "수석 용병단",
+  "kr_short": [],
+  "en": "Top Mercs",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv2, id 1684690448: 전투력 높은 아군 3명 공격력, 방어력, 최대체력 3% 증가 / +3% ATK, DEF, Max HP for Top 3 Allies",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "종합 복지 패키지 Lv2",
+  "kr_short": [],
+  "en": "General Perks Lv.2",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv3, id 1609127295: 아군 공격력, 방어력, 최대체력 2% 증가 / +2% Ally ATK, DEF, Max HP",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "의료보험",
+  "kr_short": [],
+  "en": "Health Insurance",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv3, id 1990502699: 지원형 2명 이상 편성된 경우 아군 최대체력 5% 증가 / +5% Max HP with over 2 Support Cookies in Lineup",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "초고속 승진",
+  "kr_short": [],
+  "en": "Rapid Promotion",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv3, id 2013373177: 공격력 가장 높은 아군 공격력 7% 증가 / +7% ATK for highest ATK Ally",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "크런치 모드",
+  "kr_short": [],
+  "en": "Crunch Mode",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv4, id 1392918664: 최대체력 낮은 아군 2명 공격력 15% 증가, 최대체력 10% 감소 / +15% ATK, -10% Max HP for 2 lowest Max HP Allies",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "가족 같은 용병단",
+  "kr_short": [],
+  "en": "Like A Family",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv4, id 1281404238: 가장 많이 편성된 속성 쿠키 1명당 아군 속성피해 2% 증가 / +2% Elemental DMG per Cookie of the most common Element in Lineup",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "열정페이",
+  "kr_short": [],
+  "en": "Passion Pay",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv4, id 2074679842: 공격력 가장 높은 아군 공격력 20% 증가, 최대체력 20% 감소 / +20% ATK, -20% Max HP for highest ATK Ally",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "방어구 수리 특약",
+  "kr_short": [],
+  "en": "Armor Repair",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv4, id 1795794802: 방어형 3명 이상 편성된 경우 아군 피해감소 10% 증가 / +10% Ally DMG Reduction with over 3 Tank Cookies in Lineup",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "탄약비 전액 지원",
+  "kr_short": [],
+  "en": "All Ammo Provided",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv4, id 1091470840: 사격형 5명 이상 편성된 경우 사격형 아군 스킬가속 15 증가 / +15 Ranged Ally Skill Haste with over 5 Ranged Cookies in Lineup",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "파괴 면책권",
+  "kr_short": [],
+  "en": "No Liability",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Mercenary perk (복지), unlock squad Lv4, id 2073791116: 돌격형 6명 이상 편성된 경우 돌격형 아군 이동속도 2 증가 / +2 Mov SPD with over 6 Charge Cookies in Lineup",
+  "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ }
+]
