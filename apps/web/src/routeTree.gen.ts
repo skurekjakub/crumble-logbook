@@ -11,8 +11,16 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GlossaryRouteImport } from './routes/glossary'
+import { Route as ResearchRouteImport } from './routes/research'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as ArenaIndexRouteImport } from './routes/arena/index'
+import { Route as ArenaCountersRouteImport } from './routes/arena/counters'
+import { Route as ArenaGearRouteImport } from './routes/arena/gear'
+import { Route as ArenaMechanicsRouteImport } from './routes/arena/mechanics'
+import { Route as ArenaRunesRouteImport } from './routes/arena/runes'
+import { Route as ArenaTeamsRouteImport } from './routes/arena/teams'
+import { Route as ArenaTimelineRouteImport } from './routes/arena/timeline'
+import { Route as ArenaUsageRouteImport } from './routes/arena/usage'
 import { Route as ConquestIndexRouteImport } from './routes/conquest/index'
 import { Route as ConquestBossRouteImport } from './routes/conquest/boss'
 import { Route as ConquestDecksRouteImport } from './routes/conquest/decks'
@@ -22,6 +30,13 @@ import { Route as ConquestRunesRouteImport } from './routes/conquest/runes'
 import { Route as ConquestScoresRouteImport } from './routes/conquest/scores'
 import { Route as ConquestTimelineRouteImport } from './routes/conquest/timeline'
 import { Route as RumbleIndexRouteImport } from './routes/rumble/index'
+import { Route as RumbleCountersRouteImport } from './routes/rumble/counters'
+import { Route as RumbleGearRouteImport } from './routes/rumble/gear'
+import { Route as RumbleMechanicsRouteImport } from './routes/rumble/mechanics'
+import { Route as RumbleRunesRouteImport } from './routes/rumble/runes'
+import { Route as RumbleTeamsRouteImport } from './routes/rumble/teams'
+import { Route as RumbleTimelineRouteImport } from './routes/rumble/timeline'
+import { Route as RumbleUsageRouteImport } from './routes/rumble/usage'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -33,6 +48,11 @@ const GlossaryRoute = GlossaryRouteImport.update({
   path: '/glossary',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SourcesRoute = SourcesRouteImport.update({
   id: '/sources',
   path: '/sources',
@@ -41,6 +61,41 @@ const SourcesRoute = SourcesRouteImport.update({
 const ArenaIndexRoute = ArenaIndexRouteImport.update({
   id: '/arena/',
   path: '/arena/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArenaCountersRoute = ArenaCountersRouteImport.update({
+  id: '/arena/counters',
+  path: '/arena/counters',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArenaGearRoute = ArenaGearRouteImport.update({
+  id: '/arena/gear',
+  path: '/arena/gear',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArenaMechanicsRoute = ArenaMechanicsRouteImport.update({
+  id: '/arena/mechanics',
+  path: '/arena/mechanics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArenaRunesRoute = ArenaRunesRouteImport.update({
+  id: '/arena/runes',
+  path: '/arena/runes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArenaTeamsRoute = ArenaTeamsRouteImport.update({
+  id: '/arena/teams',
+  path: '/arena/teams',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArenaTimelineRoute = ArenaTimelineRouteImport.update({
+  id: '/arena/timeline',
+  path: '/arena/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArenaUsageRoute = ArenaUsageRouteImport.update({
+  id: '/arena/usage',
+  path: '/arena/usage',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConquestIndexRoute = ConquestIndexRouteImport.update({
@@ -88,11 +143,54 @@ const RumbleIndexRoute = RumbleIndexRouteImport.update({
   path: '/rumble/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RumbleCountersRoute = RumbleCountersRouteImport.update({
+  id: '/rumble/counters',
+  path: '/rumble/counters',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RumbleGearRoute = RumbleGearRouteImport.update({
+  id: '/rumble/gear',
+  path: '/rumble/gear',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RumbleMechanicsRoute = RumbleMechanicsRouteImport.update({
+  id: '/rumble/mechanics',
+  path: '/rumble/mechanics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RumbleRunesRoute = RumbleRunesRouteImport.update({
+  id: '/rumble/runes',
+  path: '/rumble/runes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RumbleTeamsRoute = RumbleTeamsRouteImport.update({
+  id: '/rumble/teams',
+  path: '/rumble/teams',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RumbleTimelineRoute = RumbleTimelineRouteImport.update({
+  id: '/rumble/timeline',
+  path: '/rumble/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RumbleUsageRoute = RumbleUsageRouteImport.update({
+  id: '/rumble/usage',
+  path: '/rumble/usage',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/glossary': typeof GlossaryRoute
+  '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
+  '/arena/counters': typeof ArenaCountersRoute
+  '/arena/gear': typeof ArenaGearRoute
+  '/arena/mechanics': typeof ArenaMechanicsRoute
+  '/arena/runes': typeof ArenaRunesRoute
+  '/arena/teams': typeof ArenaTeamsRoute
+  '/arena/timeline': typeof ArenaTimelineRoute
+  '/arena/usage': typeof ArenaUsageRoute
   '/conquest/boss': typeof ConquestBossRoute
   '/conquest/decks': typeof ConquestDecksRoute
   '/conquest/gear': typeof ConquestGearRoute
@@ -100,6 +198,13 @@ export interface FileRoutesByFullPath {
   '/conquest/runes': typeof ConquestRunesRoute
   '/conquest/scores': typeof ConquestScoresRoute
   '/conquest/timeline': typeof ConquestTimelineRoute
+  '/rumble/counters': typeof RumbleCountersRoute
+  '/rumble/gear': typeof RumbleGearRoute
+  '/rumble/mechanics': typeof RumbleMechanicsRoute
+  '/rumble/runes': typeof RumbleRunesRoute
+  '/rumble/teams': typeof RumbleTeamsRoute
+  '/rumble/timeline': typeof RumbleTimelineRoute
+  '/rumble/usage': typeof RumbleUsageRoute
   '/arena/': typeof ArenaIndexRoute
   '/conquest/': typeof ConquestIndexRoute
   '/rumble/': typeof RumbleIndexRoute
@@ -107,7 +212,15 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/glossary': typeof GlossaryRoute
+  '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
+  '/arena/counters': typeof ArenaCountersRoute
+  '/arena/gear': typeof ArenaGearRoute
+  '/arena/mechanics': typeof ArenaMechanicsRoute
+  '/arena/runes': typeof ArenaRunesRoute
+  '/arena/teams': typeof ArenaTeamsRoute
+  '/arena/timeline': typeof ArenaTimelineRoute
+  '/arena/usage': typeof ArenaUsageRoute
   '/conquest/boss': typeof ConquestBossRoute
   '/conquest/decks': typeof ConquestDecksRoute
   '/conquest/gear': typeof ConquestGearRoute
@@ -115,6 +228,13 @@ export interface FileRoutesByTo {
   '/conquest/runes': typeof ConquestRunesRoute
   '/conquest/scores': typeof ConquestScoresRoute
   '/conquest/timeline': typeof ConquestTimelineRoute
+  '/rumble/counters': typeof RumbleCountersRoute
+  '/rumble/gear': typeof RumbleGearRoute
+  '/rumble/mechanics': typeof RumbleMechanicsRoute
+  '/rumble/runes': typeof RumbleRunesRoute
+  '/rumble/teams': typeof RumbleTeamsRoute
+  '/rumble/timeline': typeof RumbleTimelineRoute
+  '/rumble/usage': typeof RumbleUsageRoute
   '/arena': typeof ArenaIndexRoute
   '/conquest': typeof ConquestIndexRoute
   '/rumble': typeof RumbleIndexRoute
@@ -123,7 +243,15 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/glossary': typeof GlossaryRoute
+  '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
+  '/arena/counters': typeof ArenaCountersRoute
+  '/arena/gear': typeof ArenaGearRoute
+  '/arena/mechanics': typeof ArenaMechanicsRoute
+  '/arena/runes': typeof ArenaRunesRoute
+  '/arena/teams': typeof ArenaTeamsRoute
+  '/arena/timeline': typeof ArenaTimelineRoute
+  '/arena/usage': typeof ArenaUsageRoute
   '/conquest/boss': typeof ConquestBossRoute
   '/conquest/decks': typeof ConquestDecksRoute
   '/conquest/gear': typeof ConquestGearRoute
@@ -131,6 +259,13 @@ export interface FileRoutesById {
   '/conquest/runes': typeof ConquestRunesRoute
   '/conquest/scores': typeof ConquestScoresRoute
   '/conquest/timeline': typeof ConquestTimelineRoute
+  '/rumble/counters': typeof RumbleCountersRoute
+  '/rumble/gear': typeof RumbleGearRoute
+  '/rumble/mechanics': typeof RumbleMechanicsRoute
+  '/rumble/runes': typeof RumbleRunesRoute
+  '/rumble/teams': typeof RumbleTeamsRoute
+  '/rumble/timeline': typeof RumbleTimelineRoute
+  '/rumble/usage': typeof RumbleUsageRoute
   '/arena/': typeof ArenaIndexRoute
   '/conquest/': typeof ConquestIndexRoute
   '/rumble/': typeof RumbleIndexRoute
@@ -140,7 +275,15 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/glossary'
+    | '/research'
     | '/sources'
+    | '/arena/counters'
+    | '/arena/gear'
+    | '/arena/mechanics'
+    | '/arena/runes'
+    | '/arena/teams'
+    | '/arena/timeline'
+    | '/arena/usage'
     | '/conquest/boss'
     | '/conquest/decks'
     | '/conquest/gear'
@@ -148,6 +291,13 @@ export interface FileRouteTypes {
     | '/conquest/runes'
     | '/conquest/scores'
     | '/conquest/timeline'
+    | '/rumble/counters'
+    | '/rumble/gear'
+    | '/rumble/mechanics'
+    | '/rumble/runes'
+    | '/rumble/teams'
+    | '/rumble/timeline'
+    | '/rumble/usage'
     | '/arena/'
     | '/conquest/'
     | '/rumble/'
@@ -155,7 +305,15 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/glossary'
+    | '/research'
     | '/sources'
+    | '/arena/counters'
+    | '/arena/gear'
+    | '/arena/mechanics'
+    | '/arena/runes'
+    | '/arena/teams'
+    | '/arena/timeline'
+    | '/arena/usage'
     | '/conquest/boss'
     | '/conquest/decks'
     | '/conquest/gear'
@@ -163,6 +321,13 @@ export interface FileRouteTypes {
     | '/conquest/runes'
     | '/conquest/scores'
     | '/conquest/timeline'
+    | '/rumble/counters'
+    | '/rumble/gear'
+    | '/rumble/mechanics'
+    | '/rumble/runes'
+    | '/rumble/teams'
+    | '/rumble/timeline'
+    | '/rumble/usage'
     | '/arena'
     | '/conquest'
     | '/rumble'
@@ -170,7 +335,15 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/glossary'
+    | '/research'
     | '/sources'
+    | '/arena/counters'
+    | '/arena/gear'
+    | '/arena/mechanics'
+    | '/arena/runes'
+    | '/arena/teams'
+    | '/arena/timeline'
+    | '/arena/usage'
     | '/conquest/boss'
     | '/conquest/decks'
     | '/conquest/gear'
@@ -178,6 +351,13 @@ export interface FileRouteTypes {
     | '/conquest/runes'
     | '/conquest/scores'
     | '/conquest/timeline'
+    | '/rumble/counters'
+    | '/rumble/gear'
+    | '/rumble/mechanics'
+    | '/rumble/runes'
+    | '/rumble/teams'
+    | '/rumble/timeline'
+    | '/rumble/usage'
     | '/arena/'
     | '/conquest/'
     | '/rumble/'
@@ -186,7 +366,15 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GlossaryRoute: typeof GlossaryRoute
+  ResearchRoute: typeof ResearchRoute
   SourcesRoute: typeof SourcesRoute
+  ArenaCountersRoute: typeof ArenaCountersRoute
+  ArenaGearRoute: typeof ArenaGearRoute
+  ArenaMechanicsRoute: typeof ArenaMechanicsRoute
+  ArenaRunesRoute: typeof ArenaRunesRoute
+  ArenaTeamsRoute: typeof ArenaTeamsRoute
+  ArenaTimelineRoute: typeof ArenaTimelineRoute
+  ArenaUsageRoute: typeof ArenaUsageRoute
   ConquestBossRoute: typeof ConquestBossRoute
   ConquestDecksRoute: typeof ConquestDecksRoute
   ConquestGearRoute: typeof ConquestGearRoute
@@ -194,6 +382,13 @@ export interface RootRouteChildren {
   ConquestRunesRoute: typeof ConquestRunesRoute
   ConquestScoresRoute: typeof ConquestScoresRoute
   ConquestTimelineRoute: typeof ConquestTimelineRoute
+  RumbleCountersRoute: typeof RumbleCountersRoute
+  RumbleGearRoute: typeof RumbleGearRoute
+  RumbleMechanicsRoute: typeof RumbleMechanicsRoute
+  RumbleRunesRoute: typeof RumbleRunesRoute
+  RumbleTeamsRoute: typeof RumbleTeamsRoute
+  RumbleTimelineRoute: typeof RumbleTimelineRoute
+  RumbleUsageRoute: typeof RumbleUsageRoute
   ArenaIndexRoute: typeof ArenaIndexRoute
   ConquestIndexRoute: typeof ConquestIndexRoute
   RumbleIndexRoute: typeof RumbleIndexRoute
@@ -215,6 +410,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlossaryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sources': {
       id: '/sources'
       path: '/sources'
@@ -227,6 +429,55 @@ declare module '@tanstack/react-router' {
       path: '/arena'
       fullPath: '/arena/'
       preLoaderRoute: typeof ArenaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arena/counters': {
+      id: '/arena/counters'
+      path: '/arena/counters'
+      fullPath: '/arena/counters'
+      preLoaderRoute: typeof ArenaCountersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arena/gear': {
+      id: '/arena/gear'
+      path: '/arena/gear'
+      fullPath: '/arena/gear'
+      preLoaderRoute: typeof ArenaGearRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arena/mechanics': {
+      id: '/arena/mechanics'
+      path: '/arena/mechanics'
+      fullPath: '/arena/mechanics'
+      preLoaderRoute: typeof ArenaMechanicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arena/runes': {
+      id: '/arena/runes'
+      path: '/arena/runes'
+      fullPath: '/arena/runes'
+      preLoaderRoute: typeof ArenaRunesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arena/teams': {
+      id: '/arena/teams'
+      path: '/arena/teams'
+      fullPath: '/arena/teams'
+      preLoaderRoute: typeof ArenaTeamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arena/timeline': {
+      id: '/arena/timeline'
+      path: '/arena/timeline'
+      fullPath: '/arena/timeline'
+      preLoaderRoute: typeof ArenaTimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arena/usage': {
+      id: '/arena/usage'
+      path: '/arena/usage'
+      fullPath: '/arena/usage'
+      preLoaderRoute: typeof ArenaUsageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/conquest/': {
@@ -292,13 +543,70 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RumbleIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/rumble/counters': {
+      id: '/rumble/counters'
+      path: '/rumble/counters'
+      fullPath: '/rumble/counters'
+      preLoaderRoute: typeof RumbleCountersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rumble/gear': {
+      id: '/rumble/gear'
+      path: '/rumble/gear'
+      fullPath: '/rumble/gear'
+      preLoaderRoute: typeof RumbleGearRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rumble/mechanics': {
+      id: '/rumble/mechanics'
+      path: '/rumble/mechanics'
+      fullPath: '/rumble/mechanics'
+      preLoaderRoute: typeof RumbleMechanicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rumble/runes': {
+      id: '/rumble/runes'
+      path: '/rumble/runes'
+      fullPath: '/rumble/runes'
+      preLoaderRoute: typeof RumbleRunesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rumble/teams': {
+      id: '/rumble/teams'
+      path: '/rumble/teams'
+      fullPath: '/rumble/teams'
+      preLoaderRoute: typeof RumbleTeamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rumble/timeline': {
+      id: '/rumble/timeline'
+      path: '/rumble/timeline'
+      fullPath: '/rumble/timeline'
+      preLoaderRoute: typeof RumbleTimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rumble/usage': {
+      id: '/rumble/usage'
+      path: '/rumble/usage'
+      fullPath: '/rumble/usage'
+      preLoaderRoute: typeof RumbleUsageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GlossaryRoute: GlossaryRoute,
+  ResearchRoute: ResearchRoute,
   SourcesRoute: SourcesRoute,
+  ArenaCountersRoute: ArenaCountersRoute,
+  ArenaGearRoute: ArenaGearRoute,
+  ArenaMechanicsRoute: ArenaMechanicsRoute,
+  ArenaRunesRoute: ArenaRunesRoute,
+  ArenaTeamsRoute: ArenaTeamsRoute,
+  ArenaTimelineRoute: ArenaTimelineRoute,
+  ArenaUsageRoute: ArenaUsageRoute,
   ConquestBossRoute: ConquestBossRoute,
   ConquestDecksRoute: ConquestDecksRoute,
   ConquestGearRoute: ConquestGearRoute,
@@ -306,6 +614,13 @@ const rootRouteChildren: RootRouteChildren = {
   ConquestRunesRoute: ConquestRunesRoute,
   ConquestScoresRoute: ConquestScoresRoute,
   ConquestTimelineRoute: ConquestTimelineRoute,
+  RumbleCountersRoute: RumbleCountersRoute,
+  RumbleGearRoute: RumbleGearRoute,
+  RumbleMechanicsRoute: RumbleMechanicsRoute,
+  RumbleRunesRoute: RumbleRunesRoute,
+  RumbleTeamsRoute: RumbleTeamsRoute,
+  RumbleTimelineRoute: RumbleTimelineRoute,
+  RumbleUsageRoute: RumbleUsageRoute,
   ArenaIndexRoute: ArenaIndexRoute,
   ConquestIndexRoute: ConquestIndexRoute,
   RumbleIndexRoute: RumbleIndexRoute,

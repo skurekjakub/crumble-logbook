@@ -27,6 +27,7 @@ const DECKS = [{ id: "cherry" }, { id: "meso" }, { id: "herb" }] satisfies Parti
 const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
   "/api/sources": { body: SOURCES },
+  "/api/sources?record=001-guild-conquest-meta": { body: SOURCES },
   "/api/decks?mode=guild_conquest": { body: DECKS },
   "/api/takeaways?mode=guild_conquest": { body: [] },
   "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
@@ -74,7 +75,7 @@ describe("app shell", () => {
       within(modes)
         .getAllByRole("tab")
         .map((t) => t.textContent),
-    ).toEqual(["Guild Conquest", "Arena", "Rumble Arena", "Sources", "Glossary"]);
+    ).toEqual(["Guild Conquest", "Arena", "Rumble Arena", "Research", "Sources", "Glossary"]);
     expect(within(modes).getByRole("tab", { name: "Guild Conquest" })).toHaveAttribute(
       "aria-selected",
       "true",
@@ -100,7 +101,7 @@ describe("app shell", () => {
     const router = await renderAt("/conquest");
     fireEvent.click(screen.getByRole("tab", { name: "Arena" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/arena"));
-    expect(await screen.findByText(/research in progress/i)).toHaveClass("empty");
+    expect(await screen.findByRole("tablist", { name: "Arena sections" })).toBeVisible();
     expect(screen.queryByRole("tablist", { name: "Guild Conquest sections" })).toBeNull();
   });
 

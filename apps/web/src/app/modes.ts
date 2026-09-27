@@ -35,7 +35,15 @@ export interface ViewCopy {
 
 /** The views several modes share, by name. */
 export type SharedView =
-  "overview" | "decks" | "runes" | "gear" | "scores" | "mechanics" | "timeline";
+  | "overview"
+  | "decks"
+  | "runes"
+  | "gear"
+  | "scores"
+  | "mechanics"
+  | "timeline"
+  | "counters"
+  | "usage";
 
 /** What a top-level section has, whether a game mode or a shared page. */
 interface SectionBase {
@@ -100,6 +108,14 @@ export interface LeaderboardConfig extends ViewCopy {
   boards: Readonly<Record<RankingBoardFilter, string>>;
 }
 
+/** A mode's rules card on its overview: the mode's `rules` mechanics. */
+export interface RulesConfig {
+  /** The card's heading. */
+  title: string;
+  /** The title of the rules row shown apart, above the card, as the season's buffs. */
+  highlight: string;
+}
+
 /** A game mode's section. */
 export interface ModeSection extends SectionBase {
   kind: "mode";
@@ -113,6 +129,8 @@ export interface ModeSection extends SectionBase {
   boss: BossConfig | null;
   /** The mode's leaderboard on the scores view, when it has one. */
   leaderboard: LeaderboardConfig | null;
+  /** The overview's rules card, for a mode whose record files its rules as mechanics. */
+  rules: RulesConfig | null;
 }
 
 /** A section shared by every mode. */
@@ -206,44 +224,113 @@ export const CONQUEST = {
     lede: "The crumb.gg board for one season, in rank order. The players and guilds boards rank by damage; the power board ranks by team power.",
     boards: { players: "Players", guilds: "Guilds", power: "Power" },
   },
+  rules: null,
 } as const satisfies ModeSection;
 
-/** Arena (아레나). */
+/** The PvP views' copy that doesn't depend on the mode. */
+const PVP_COPY = {
+  decks: {
+    title: "Teams",
+    lede: "The teams as their owners post them, laid out like the formation screen: two rows, back line on the left, front on the right (inferred from attack ranges). A team known only from an opponent's defense card has no slots and shows as a plain lineup. Stars are rarely readable in screenshots; ? marks an unknown.",
+  },
+  counters: {
+    title: "Counters",
+    lede: "Directed: each row is a team, each column a team that beats it, and each cell says under what conditions. A matchup that goes both ways is two cells with their own conditions. Shading follows confidence; hatched cells are unverified claims. Pick a cell for the mechanism and the posts.",
+  },
+  runes: {
+    title: "Sugar runes",
+    lede: 'PvP rune lines per cookie. "All" means every line rolls the same stat. Disputed rows are where posters disagreed; both sides are kept.',
+  },
+  gear: {
+    title: "Gear substats",
+    lede: "Laid out like the equipment screen. Arena gear has its own preset since the 9/23 patch.",
+  },
+  mechanics: {
+    title: "Mechanics",
+    lede: "What players measured or datamined, and how this logbook resolved conflicting claims. Confidence reflects how well each point is sourced. The mode's rules are on its overview.",
+  },
+  timeline: {
+    title: "How the meta moved",
+    lede: "Patches, new cookies, seasons and the teams that followed, oldest first.",
+  },
+} as const satisfies Partial<Record<SharedView, ViewCopy>>;
+
+/**
+ * A PvP mode's sub-tabs, under its path.
+ * @param to - the mode's path
+ * @returns the tabs, overview first
+ */
+function pvpTabs<const P extends "/arena" | "/rumble">(to: P) {
+  return [
+    { id: "overview", label: "Overview", to },
+    { id: "teams", label: "Teams", to: `${to}/teams` },
+    { id: "counters", label: "Counters", to: `${to}/counters` },
+    { id: "usage", label: "Usage", to: `${to}/usage` },
+    { id: "runes", label: "Sugar runes", to: `${to}/runes` },
+    { id: "gear", label: "Gear", to: `${to}/gear` },
+    { id: "mechanics", label: "Mechanics", to: `${to}/mechanics` },
+    { id: "timeline", label: "Timeline", to: `${to}/timeline` },
+  ] as const;
+}
+
+/** Arena (아레나): regular, per-server PvP. */
 export const ARENA = {
   id: "arena",
   kind: "mode",
   label: "Arena",
-  labelKr: null,
+  labelKr: "아레나",
   title: "Arena Logbook",
   to: "/arena",
-  recordSlug: null,
-  lede: "Arena research is in progress; its screens come once the record has findings.",
-  stamp: [],
-  tabs: [],
+  recordSlug: "002-pvp-meta",
+  lede: null,
+  stamp: ["updated", "sources", "decks"],
+  tabs: pvpTabs("/arena"),
   scope: { mode: "arena" },
-  placeholder: "Arena research in progress.",
-  copy: {},
+  placeholder: null,
+  copy: {
+    ...PVP_COPY,
+    overview: {
+      title: "What wins in Arena",
+      lede: "How the mode works, then the load-bearing findings, each with the posts it stands on.",
+    },
+    usage: {
+      title: "Usage",
+      lede: "How often each cookie and pet appears in community-shared Arena decks on crumblehub. These are shared decks, not ladder usage: no site publishes regular-Arena usage.",
+    },
+  },
   boss: null,
   leaderboard: null,
+  rules: { title: "How Arena works", highlight: "Season buffs" },
 } as const satisfies ModeSection;
 
-/** Rumble Arena (와글와글 아레나). */
+/** Rumble Arena (와글와글 아레나): cross-server PvP with a passive per season. */
 export const RUMBLE = {
   id: "rumble",
   kind: "mode",
   label: "Rumble Arena",
-  labelKr: null,
+  labelKr: "와글와글 아레나",
   title: "Rumble Arena Logbook",
   to: "/rumble",
-  recordSlug: null,
-  lede: "Rumble Arena research is in progress; its screens come once the record has findings.",
-  stamp: [],
-  tabs: [],
+  recordSlug: "002-pvp-meta",
+  lede: null,
+  stamp: ["updated", "sources", "decks"],
+  tabs: pvpTabs("/rumble"),
   scope: { mode: "rumble_arena" },
-  placeholder: "Rumble Arena research in progress.",
-  copy: {},
+  placeholder: null,
+  copy: {
+    ...PVP_COPY,
+    overview: {
+      title: "What wins in Rumble Arena",
+      lede: "The season's buffs shape this mode's meta, so they come first. Then how the mode works and the load-bearing findings, each with the posts it stands on.",
+    },
+    usage: {
+      title: "Usage",
+      lede: "How often each cookie, core, pet and team appears among the top defenses on crumb.gg. The game hides some defenders, so cookie figures are lower bounds, and core and team figures are upper bounds: the solid part of their bars has every member revealed.",
+    },
+  },
   boss: null,
   leaderboard: null,
+  rules: { title: "How Rumble Arena works", highlight: "Season buffs" },
 } as const satisfies ModeSection;
 
 /** Game modes, in tab order. */
@@ -251,6 +338,18 @@ export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE];
 
 /** Sections shared by every mode, in tab order after the modes. */
 export const SHARED_SECTIONS: readonly SharedSection[] = [
+  {
+    id: "research",
+    kind: "shared",
+    label: "Research",
+    labelKr: null,
+    title: "Crumble Logbook",
+    to: "/research",
+    recordSlug: null,
+    lede: null,
+    stamp: [],
+    tabs: [],
+  },
   {
     id: "sources",
     kind: "shared",

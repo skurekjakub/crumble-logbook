@@ -78,7 +78,11 @@ export async function renderRoute(
   const slug = mode.recordSlug;
   stubApi({
     ...(slug
-      ? { [`/api/records/${slug}`]: { body: { slug, lede: `${mode.label} research.` } } }
+      ? {
+          [`/api/records/${slug}`]: {
+            body: { slug, lede: `${mode.label} research.`, modes: [] },
+          },
+        }
       : {}),
     "/api/sources": { body: VIEW_SOURCES },
     ...api,

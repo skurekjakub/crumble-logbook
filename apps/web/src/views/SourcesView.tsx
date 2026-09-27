@@ -74,7 +74,7 @@ export interface SourcesViewProps {
 
 /** Every cited source, newest first, filterable by site (`?site=`) and title (`?q=`). */
 export function SourcesView({ search: { site, q }, onSearch }: SourcesViewProps) {
-  const sources = useQuery(sourcesQuery(site));
+  const sources = useQuery(sourcesQuery({ site }));
   return (
     <>
       <ViewHeader

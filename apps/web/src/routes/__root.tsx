@@ -45,7 +45,9 @@ function panelLabelId(
 }
 
 /**
- * The app chrome: header (from the active mode's research record), mode and
+ * The app chrome: header (from the active mode's research record, with the
+ * record's own lede for that mode when it has one, and figures scoped to
+ * the record and mode), mode and
  * shared-section tabs, the active section's sub-tabs, the view in a tab
  * panel, and the footer.
  */
@@ -59,7 +61,10 @@ function RootLayout() {
   const scope = section?.kind === "mode" ? section.scope : undefined;
 
   const record = useQuery({ ...recordQuery(slug ?? ""), enabled: slug != null });
-  const sources = useQuery({ ...sourcesQuery(), enabled: stamp.includes("sources") });
+  const sources = useQuery({
+    ...sourcesQuery(slug ? { record: slug } : {}),
+    enabled: stamp.includes("sources"),
+  });
   const decks = useQuery({ ...decksQuery(scope), enabled: stamp.includes("decks") });
 
   const values: Record<StampStat, string | number | null | undefined> = {
@@ -68,10 +73,11 @@ function RootLayout() {
     sources: sources.data?.length,
     decks: decks.data?.length,
   };
+  const modeLede = record.data?.modes.find((m) => m.mode === scope?.mode)?.lede;
   const lede = record.isError ? (
     <ErrorBox resource="research record" error={record.error} />
   ) : (
-    (record.data?.lede ?? section?.lede ?? "")
+    (modeLede ?? record.data?.lede ?? section?.lede ?? "")
   );
 
   const go = (target: { to: AppPath }) => () => void navigate({ to: target.to });
