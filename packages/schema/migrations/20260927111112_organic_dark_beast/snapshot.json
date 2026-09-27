@@ -1,7 +1,7 @@
 {
   "version": "7",
   "dialect": "sqlite",
-  "id": "2b2aa269-8bbe-4308-ab5b-23d9ed495804",
+  "id": "195f404d-0c51-4ec8-b277-184b080e1caa",
   "prevIds": [
     "00000000-0000-0000-0000-000000000000"
   ],
@@ -1619,6 +1619,12 @@
       "name": "citations_entity_entity_id_idx",
       "entityType": "indexes",
       "table": "citations"
+    },
+    {
+      "value": "\"level\" is not null or \"level_rule\" is not null",
+      "name": "deck_cookies_level_or_rule",
+      "entityType": "checks",
+      "table": "deck_cookies"
     }
   ],
   "renames": []

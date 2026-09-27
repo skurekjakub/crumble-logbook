@@ -1,4 +1,5 @@
-import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { sql } from "drizzle-orm";
+import { check, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { DECK_NOTE_KIND, DECK_STATUS } from "../enums";
 
 /** A deck: a named cookie/pet lineup with a meta tier and formation notes. */
@@ -17,19 +18,27 @@ export const decks = sqliteTable("decks", {
   atkOrderNote: text("atk_order_note"),
 });
 
-/** A single cookie slot within a deck's lineup, in placement order. */
-export const deckCookies = sqliteTable("deck_cookies", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  deckId: text("deck_id")
-    .notNull()
-    .references(() => decks.id, { onDelete: "cascade" }),
-  position: integer("position").notNull(),
-  cookieKr: text("cookie_kr").notNull(),
-  level: text("level"),
-  levelRule: text("level_rule"),
-  stars: text("stars"),
-  why: text("why").notNull(),
-});
+/**
+ * A single cookie slot within a deck's lineup, in placement order. Every
+ * cookie carries a `level` or a `levelRule` (or both) — enforced with a
+ * CHECK constraint since it's a cross-field invariant.
+ */
+export const deckCookies = sqliteTable(
+  "deck_cookies",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    deckId: text("deck_id")
+      .notNull()
+      .references(() => decks.id, { onDelete: "cascade" }),
+    position: integer("position").notNull(),
+    cookieKr: text("cookie_kr").notNull(),
+    level: text("level"),
+    levelRule: text("level_rule"),
+    stars: text("stars"),
+    why: text("why").notNull(),
+  },
+  (t) => [check("deck_cookies_level_or_rule", sql`${t.level} is not null or ${t.levelRule} is not null`)],
+);
 
 /** A pet slot within a deck's lineup, in placement order. */
 export const deckPets = sqliteTable("deck_pets", {

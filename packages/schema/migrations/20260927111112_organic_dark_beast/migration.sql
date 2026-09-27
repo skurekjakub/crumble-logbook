@@ -42,7 +42,8 @@ CREATE TABLE `deck_cookies` (
 	`level_rule` text,
 	`stars` text,
 	`why` text NOT NULL,
-	CONSTRAINT `fk_deck_cookies_deck_id_decks_id_fk` FOREIGN KEY (`deck_id`) REFERENCES `decks`(`id`) ON DELETE CASCADE
+	CONSTRAINT `fk_deck_cookies_deck_id_decks_id_fk` FOREIGN KEY (`deck_id`) REFERENCES `decks`(`id`) ON DELETE CASCADE,
+	CONSTRAINT "deck_cookies_level_or_rule" CHECK("level" is not null or "level_rule" is not null)
 );
 --> statement-breakpoint
 CREATE TABLE `deck_notes` (
