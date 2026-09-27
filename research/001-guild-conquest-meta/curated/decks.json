@@ -55,17 +55,17 @@
       { "kr": "석류", "level": "100", "why": "Buffer; level is irrelevant to her buff." },
       { "kr": "메소", "level_rule": "Lv.1–2", "why": "Placement cookie. Move speed 0.51 + 0.20 on sugar runes (later −0.03, which improved alignment). Kept low so she never takes a beam." },
       { "kr": "피노", "level_rule": "Lv.1–2", "why": "Lift resistance plus 1–2 move-speed rune lines (0.26 + 0.57 on the source account) to control arrival order." },
-      { "kr": "전갈", "level_rule": "Lv.1–7", "why": "The level is a fine ATK knob: raised just enough that a stray beam lands on her rather than on Melon Soda." },
+      { "kr": "전갈", "level_rule": "Lv.1–7, set so she is exactly 7th in ATK (checked in battle)", "why": "A backstop. The target is Scorpion at exactly 7th in ATK: above Melon Soda and Dark Choco, below the six beam recipients, so a stray Pomegranate beam lands on her (she uses skill amp) instead of on Melon Soda. The deck's author raised her ATK a little for exactly this, to stop beams bouncing to Melon Soda (dc:71105), and a commenter there confirms 'exactly 7th in ATK' works best. Only a few levels are needed: Milk's flat ATK buff dwarfs what filler levels add ('우유가 주는 깡공이 너무 크기 때문에 렙이 의미가 없음', dc:69368), so the level only breaks ties and the order depends on who catches Milk's buff." },
       { "kr": "정전", "level": "1", "why": "Multi-hit synergy for 6 beams. All skill-haste runes, and no move speed." },
       { "kr": "닼초", "level_rule": "Lv.6–43", "why": "DEF shred. Level tuned so her ATK stays under the beam recipients." }
     ],
     "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론", "치케"],
-    "atk_order_note": "Scorpion sits exactly 7th.",
+    "atk_order_note": "Scorpion sits exactly 7th, ahead of Melon Soda and Dark Choco.",
     "pets": ["핫도그", "와사비문어", "판다만두"],
     "perks": "열정페이 + 초고속승진 on Milk.",
     "formation": "Move speed only from sugar runes, on Brightseeker, Pinot and Melon Soda. None on gear. The target is a single line (일렬).",
     "substitutions": [
-      "Panda Dumpling is still used here instead of Candy Shade Pouch, because the pet's lift resistance changes placement and the speed values were tuned with Panda.",
+      "Pet: either Panda Dumpling or Candy Shade Pouch. The deck's 1T run (about 1T at 1.6G, dc:74759) kept everything and swapped only to the new Candy Shade Pouch ('그대로 신규펫만'); its author found the pet's higher lift resistance shifted the alignment for the better at the old speeds. Others keep Panda because their speed values were tuned with it and the different lift resistance moves placement: 867G at 1.57G with Panda (dc:76144).",
       "Lazy variant: Tiger Lily in Herb's slot with speed only on Pinot and Melon Soda. It aligns well but breaks the multi-hit chain, so damage is lower."
     ],
     "rng": "The source player gets a good alignment in about 3 of 4 runs. A 0.03 speed difference can stop the line forming at all. The same setup aligned on one device and not on another (Galaxy vs Lenovo tablet).",
@@ -73,7 +73,7 @@
       "Move speed tuned to hundredths on sugar runes to script where each cookie stops.",
       "A 5★ Brightseeker reached 637.8G at 1.14G power, higher per power than most 10★ Cherry decks at the time."
     ],
-    "sources": ["dc:69368", "dc:71105", "dc:76144", "dc:76716"]
+    "sources": ["dc:69368", "dc:71105", "dc:74759", "dc:76144", "dc:76716"]
   },
   {
     "id": "herb",
