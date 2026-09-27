@@ -2204,6 +2204,13 @@
   "date": "2026-07-31",
   "signal": "relevance 0/3"
  },
+ "web:crumbgg-lookup-seomyeong": {
+  "url": "https://crumb.gg/lookup",
+  "title": "섬영 · 판도라",
+  "title_en": "crumb.gg Lookup and live S5 board for 섬영 (판도라): 1T 999G, #45, 22.20B account power; captured to verify the 1T 999G run (evidence/20-verify-1t999)",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
  "web:crumbgg-join": {
   "url": "https://crumb.gg/pub/live?board=guild_conquest_players + https://crumb.gg/pub/leaderboard + https://api.crumb.gg/api/rankings?kind=players",
   "title": "",

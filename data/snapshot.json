@@ -3183,6 +3183,18 @@
     "capturePath": null
    },
    {
+    "id": "web:crumbgg-lookup-seomyeong",
+    "site": "web",
+    "url": "https://crumb.gg/lookup",
+    "title": "섬영 · 판도라",
+    "titleEn": "crumb.gg Lookup and live S5 board for 섬영 (판도라): 1T 999G, #45, 22.20B account power; captured to verify the 1T 999G run (evidence/20-verify-1t999)",
+    "date": "2026-09-27",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": null,
+    "capturePath": null
+   },
+   {
     "id": "web:crumbgg-s5",
     "site": "web",
     "url": "https://crumb.gg/rankings",
@@ -4224,7 +4236,7 @@
     "updatedAt": "2026-09-27",
     "seasonLabel": "S5 (live)",
     "lede": "What Korean and global players run in Guild Conquest (길드 토벌전), taken from DCInside, the official Naver cafe and crumb.gg. Every claim links to the post it came from.",
-    "caveat": "Snapshot of 2026-09-27; Season 5 closes 2026-09-28 12:00 KST, so its top scores can still move. The Season 5 leaders (2.3–3.2T) haven't published their teams. The decks here are the best documented ones, which reach 1T 999G at about 3G team power. The research record's STATE.md lists what's still open."
+    "caveat": "Snapshot of 2026-09-27; Season 5 closes 2026-09-28 12:00 KST, so its top scores can still move. The Season 5 leaders (2.3–3.2T) haven't published their teams. The decks here are the best documented ones. The top documented run is 1T 999G with the Cherry deck (score screenshot; crumb.gg lists it as 섬영, 판도라); its team power isn't shown anywhere, and the author's own ~650× puts it near 3G. The research record's STATE.md lists what's still open."
    }
   ],
   "glossary": [
@@ -9535,7 +9547,7 @@
     "date": "2026-09-26",
     "season": null,
     "player": null,
-    "note": "Best documented forum run (the '2T club' post). Cherry deck, no move speed, about 650× (power derived from the author's own multiple). Milk at 1.27M ATK from six SSR ATK% lines, all minimum rolls. The later post shows the same run as the author's record."
+    "note": "Best documented forum run (the '2T club' post); crumb.gg lists the score under 섬영 (판도라). The score is on screen. The power is not shown anywhere: 3.07G is derived from the author's '~650×' (his next-day '780×' would give 2.56G); his last visible deck power was 1.49G on 9/17 (dc:69331). Cherry deck, Tiger Lily, no move speed. Milk at 1.27M ATK from six SSR ATK% lines, all minimum rolls."
    },
    {
     "id": 8,
@@ -24519,7 +24531,7 @@
    {
     "id": 6,
     "position": 5,
-    "text": "The best documented run is 1T 999G with the plain Cherry deck at about 3.07G team power (650×). crumb.gg's Season 5 leaders sit at 2.3–3.2T, and none of them has published a team.",
+    "text": "The best documented run is 1T 999G with the plain Cherry deck. The score is on screen and crumb.gg lists it as 섬영 (판도라); the team power isn't shown, and the author's stated ~650× implies about 3.07G (his later 780× would imply 2.56G). crumb.gg's Season 5 leaders sit at 2.3–3.2T, and none of them has published a team.",
     "detail": "The arithmetic closes most of the gap: about 3G of team power at 650–780× is 2–2.3T, and a poster at 21G account power (the top-20 band is 17–26G) reports 780× and expects 3T. Power is necessary but not sufficient: 2.38G gave 1.07T at 448×, and 3G gave 1.3T at 450×. The multiple still comes from ATK order, runes and retries."
    },
    {
@@ -25855,1457 +25867,1481 @@
    {
     "id": 102,
     "entity": "score",
+    "entityId": "7",
+    "sourceId": "dc:69331"
+   },
+   {
+    "id": 103,
+    "entity": "score",
+    "entityId": "7",
+    "sourceId": "web:crumbgg-lookup-seomyeong"
+   },
+   {
+    "id": 104,
+    "entity": "score",
     "entityId": "8",
     "sourceId": "dc:75462"
    },
    {
-    "id": 103,
+    "id": 105,
     "entity": "score",
     "entityId": "9",
     "sourceId": "dc:76333"
    },
    {
-    "id": 104,
+    "id": 106,
     "entity": "score",
     "entityId": "10",
     "sourceId": "dc:76333"
    },
    {
-    "id": 105,
+    "id": 107,
     "entity": "score",
     "entityId": "11",
     "sourceId": "web:yt-IkY9i5s7SOA"
    },
    {
-    "id": 106,
+    "id": 108,
     "entity": "score",
     "entityId": "12",
     "sourceId": "web:yt-ZjPH1YEbDnA"
    },
    {
-    "id": 107,
+    "id": 109,
     "entity": "score",
     "entityId": "13",
     "sourceId": "web:yt-yeICL4cCLZU"
    },
    {
-    "id": 108,
+    "id": 110,
     "entity": "score",
     "entityId": "14",
     "sourceId": "dc:76317"
    },
    {
-    "id": 109,
+    "id": 111,
     "entity": "score",
     "entityId": "15",
     "sourceId": "dc:75176"
    },
    {
-    "id": 110,
+    "id": 112,
     "entity": "score",
     "entityId": "16",
     "sourceId": "dc:74815"
    },
    {
-    "id": 111,
+    "id": 113,
     "entity": "score",
     "entityId": "17",
     "sourceId": "dc:74758"
    },
    {
-    "id": 112,
+    "id": 114,
     "entity": "score",
     "entityId": "18",
     "sourceId": "dc:69331"
    },
    {
-    "id": 113,
+    "id": 115,
     "entity": "score",
     "entityId": "19",
     "sourceId": "dc:76135"
    },
    {
-    "id": 114,
+    "id": 116,
     "entity": "score",
     "entityId": "20",
     "sourceId": "dc:75400"
    },
    {
-    "id": 115,
+    "id": 117,
     "entity": "score",
     "entityId": "21",
     "sourceId": "dc:74759"
    },
    {
-    "id": 116,
+    "id": 118,
     "entity": "score",
     "entityId": "22",
     "sourceId": "dc:76144"
    },
    {
-    "id": 117,
+    "id": 119,
     "entity": "score",
     "entityId": "23",
     "sourceId": "nv:43653"
    },
    {
-    "id": 118,
+    "id": 120,
     "entity": "score",
     "entityId": "24",
     "sourceId": "dc:71105"
    },
    {
-    "id": 119,
+    "id": 121,
     "entity": "score",
     "entityId": "25",
     "sourceId": "dc:69368"
    },
    {
-    "id": 120,
+    "id": 122,
     "entity": "score",
     "entityId": "26",
     "sourceId": "dc:76545"
    },
    {
-    "id": 121,
+    "id": 123,
     "entity": "score",
     "entityId": "27",
     "sourceId": "dc:69368"
    },
    {
-    "id": 122,
+    "id": 124,
     "entity": "score",
     "entityId": "28",
     "sourceId": "dc:69368"
    },
    {
-    "id": 123,
+    "id": 125,
     "entity": "score",
     "entityId": "29",
     "sourceId": "dc:71135"
    },
    {
-    "id": 124,
+    "id": 126,
     "entity": "score",
     "entityId": "30",
     "sourceId": "dc:75922"
    },
    {
-    "id": 125,
+    "id": 127,
     "entity": "score",
     "entityId": "31",
     "sourceId": "dc:76343"
    },
    {
-    "id": 126,
+    "id": 128,
     "entity": "score",
     "entityId": "32",
     "sourceId": "dc:76605"
    },
    {
-    "id": 127,
+    "id": 129,
     "entity": "score",
     "entityId": "33",
     "sourceId": "dc:76721"
    },
    {
-    "id": 128,
+    "id": 130,
     "entity": "score",
     "entityId": "34",
     "sourceId": "nv:44761"
    },
    {
-    "id": 129,
+    "id": 131,
     "entity": "score",
     "entityId": "35",
     "sourceId": "dc:74829"
    },
    {
-    "id": 130,
+    "id": 132,
     "entity": "score",
     "entityId": "36",
     "sourceId": "dc:71434"
    },
    {
-    "id": 131,
+    "id": 133,
     "entity": "score",
     "entityId": "37",
     "sourceId": "nv:43011"
    },
    {
-    "id": 132,
+    "id": 134,
     "entity": "score",
     "entityId": "38",
     "sourceId": "dc:76157"
    },
    {
-    "id": 133,
+    "id": 135,
     "entity": "score",
     "entityId": "39",
     "sourceId": "dc:60340"
    },
    {
-    "id": 134,
+    "id": 136,
     "entity": "score",
     "entityId": "40",
     "sourceId": "nv:43011"
    },
    {
-    "id": 135,
+    "id": 137,
     "entity": "score",
     "entityId": "41",
     "sourceId": "dc:71059"
    },
    {
-    "id": 136,
+    "id": 138,
     "entity": "score",
     "entityId": "42",
     "sourceId": "nv:36231"
    },
    {
-    "id": 137,
+    "id": 139,
     "entity": "score",
     "entityId": "43",
     "sourceId": "nv:36558"
    },
    {
-    "id": 138,
+    "id": 140,
     "entity": "score",
     "entityId": "44",
     "sourceId": "nv:30003"
    },
    {
-    "id": 139,
+    "id": 141,
     "entity": "mechanic",
     "entityId": "1",
     "sourceId": "nv:29690"
    },
    {
-    "id": 140,
+    "id": 142,
     "entity": "mechanic",
     "entityId": "1",
     "sourceId": "nv:36558"
    },
    {
-    "id": 141,
+    "id": 143,
     "entity": "mechanic",
     "entityId": "1",
     "sourceId": "nv:42630"
    },
    {
-    "id": 142,
-    "entity": "mechanic",
-    "entityId": "1",
-    "sourceId": "dc:71135"
-   },
-   {
-    "id": 143,
-    "entity": "mechanic",
-    "entityId": "1",
-    "sourceId": "dc:76135"
-   },
-   {
     "id": 144,
     "entity": "mechanic",
     "entityId": "1",
-    "sourceId": "dc:53804"
+    "sourceId": "dc:71135"
    },
    {
     "id": 145,
     "entity": "mechanic",
     "entityId": "1",
-    "sourceId": "dc:52639"
+    "sourceId": "dc:76135"
    },
    {
     "id": 146,
     "entity": "mechanic",
     "entityId": "1",
-    "sourceId": "dc:70056"
+    "sourceId": "dc:53804"
    },
    {
     "id": 147,
     "entity": "mechanic",
     "entityId": "1",
-    "sourceId": "dc:69724"
+    "sourceId": "dc:52639"
    },
    {
     "id": 148,
     "entity": "mechanic",
     "entityId": "1",
-    "sourceId": "web:sugarpocket-bundle-1.4.002"
+    "sourceId": "dc:70056"
    },
    {
     "id": 149,
     "entity": "mechanic",
-    "entityId": "2",
-    "sourceId": "nv:36231"
+    "entityId": "1",
+    "sourceId": "dc:69724"
    },
    {
     "id": 150,
     "entity": "mechanic",
-    "entityId": "2",
-    "sourceId": "dc:53977"
+    "entityId": "1",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
     "id": 151,
     "entity": "mechanic",
     "entityId": "2",
-    "sourceId": "dc:71135"
+    "sourceId": "nv:36231"
    },
    {
     "id": 152,
     "entity": "mechanic",
     "entityId": "2",
-    "sourceId": "dc:76142"
+    "sourceId": "dc:53977"
    },
    {
     "id": 153,
+    "entity": "mechanic",
+    "entityId": "2",
+    "sourceId": "dc:71135"
+   },
+   {
+    "id": 154,
+    "entity": "mechanic",
+    "entityId": "2",
+    "sourceId": "dc:76142"
+   },
+   {
+    "id": 155,
     "entity": "mechanic",
     "entityId": "3",
     "sourceId": "dc:55485"
    },
    {
-    "id": 154,
+    "id": 156,
     "entity": "mechanic",
     "entityId": "4",
     "sourceId": "dc:31349"
    },
    {
-    "id": 155,
+    "id": 157,
     "entity": "mechanic",
     "entityId": "4",
     "sourceId": "dc:75589"
    },
    {
-    "id": 156,
+    "id": 158,
     "entity": "mechanic",
     "entityId": "4",
     "sourceId": "dc:75854"
    },
    {
-    "id": 157,
+    "id": 159,
     "entity": "mechanic",
     "entityId": "5",
     "sourceId": "dc:31305"
    },
    {
-    "id": 158,
+    "id": 160,
     "entity": "mechanic",
     "entityId": "6",
     "sourceId": "nv:44761"
    },
    {
-    "id": 159,
+    "id": 161,
     "entity": "mechanic",
     "entityId": "6",
     "sourceId": "dc:75934"
    },
    {
-    "id": 160,
+    "id": 162,
     "entity": "mechanic",
     "entityId": "7",
     "sourceId": "dc:52401"
    },
    {
-    "id": 161,
+    "id": 163,
     "entity": "mechanic",
     "entityId": "7",
     "sourceId": "dc:75400"
    },
    {
-    "id": 162,
+    "id": 164,
     "entity": "mechanic",
     "entityId": "8",
     "sourceId": "dc:46452"
    },
    {
-    "id": 163,
+    "id": 165,
     "entity": "mechanic",
     "entityId": "8",
     "sourceId": "dc:71135"
    },
    {
-    "id": 164,
+    "id": 166,
     "entity": "mechanic",
     "entityId": "9",
     "sourceId": "dc:48412"
    },
    {
-    "id": 165,
+    "id": 167,
     "entity": "mechanic",
     "entityId": "9",
     "sourceId": "nv:43653"
    },
    {
-    "id": 166,
+    "id": 168,
     "entity": "mechanic",
     "entityId": "9",
     "sourceId": "nv:44761"
    },
    {
-    "id": 167,
+    "id": 169,
     "entity": "mechanic",
     "entityId": "9",
     "sourceId": "dc:71381"
    },
    {
-    "id": 168,
+    "id": 170,
     "entity": "mechanic",
     "entityId": "10",
     "sourceId": "dc:71135"
    },
    {
-    "id": 169,
+    "id": 171,
     "entity": "mechanic",
     "entityId": "10",
     "sourceId": "dc:75400"
    },
    {
-    "id": 170,
+    "id": 172,
     "entity": "mechanic",
     "entityId": "10",
     "sourceId": "dc:76135"
    },
    {
-    "id": 171,
+    "id": 173,
     "entity": "mechanic",
     "entityId": "10",
     "sourceId": "web:yt-yeICL4cCLZU"
-   },
-   {
-    "id": 172,
-    "entity": "mechanic",
-    "entityId": "11",
-    "sourceId": "web:crumbgg:patches"
-   },
-   {
-    "id": 173,
-    "entity": "mechanic",
-    "entityId": "11",
-    "sourceId": "nv:27449"
    },
    {
     "id": 174,
     "entity": "mechanic",
     "entityId": "11",
-    "sourceId": "nv:43653"
+    "sourceId": "web:crumbgg:patches"
    },
    {
     "id": 175,
     "entity": "mechanic",
     "entityId": "11",
-    "sourceId": "dc:75400"
+    "sourceId": "nv:27449"
    },
    {
     "id": 176,
     "entity": "mechanic",
-    "entityId": "12",
-    "sourceId": "dc:74801"
+    "entityId": "11",
+    "sourceId": "nv:43653"
    },
    {
     "id": 177,
     "entity": "mechanic",
-    "entityId": "12",
-    "sourceId": "dc:69856"
+    "entityId": "11",
+    "sourceId": "dc:75400"
    },
    {
     "id": 178,
     "entity": "mechanic",
     "entityId": "12",
-    "sourceId": "dc:76583"
+    "sourceId": "dc:74801"
    },
    {
     "id": 179,
+    "entity": "mechanic",
+    "entityId": "12",
+    "sourceId": "dc:69856"
+   },
+   {
+    "id": 180,
+    "entity": "mechanic",
+    "entityId": "12",
+    "sourceId": "dc:76583"
+   },
+   {
+    "id": 181,
     "entity": "mechanic",
     "entityId": "13",
     "sourceId": "web:37730"
    },
    {
-    "id": 180,
+    "id": 182,
     "entity": "mechanic",
     "entityId": "13",
     "sourceId": "web:yt-yeICL4cCLZU"
    },
    {
-    "id": 181,
+    "id": 183,
     "entity": "mechanic",
     "entityId": "14",
     "sourceId": "web:16132"
    },
    {
-    "id": 182,
+    "id": 184,
     "entity": "mechanic",
     "entityId": "15",
     "sourceId": "dc:76333"
    },
    {
-    "id": 183,
+    "id": 185,
     "entity": "mechanic",
     "entityId": "16",
     "sourceId": "dc:69368"
    },
    {
-    "id": 184,
+    "id": 186,
     "entity": "mechanic",
     "entityId": "16",
     "sourceId": "dc:71237"
    },
    {
-    "id": 185,
+    "id": 187,
     "entity": "mechanic",
     "entityId": "16",
     "sourceId": "dc:74796"
    },
    {
-    "id": 186,
+    "id": 188,
     "entity": "mechanic",
     "entityId": "17",
     "sourceId": "dc:66636"
    },
    {
-    "id": 187,
+    "id": 189,
     "entity": "mechanic",
     "entityId": "17",
     "sourceId": "dc:71105"
    },
    {
-    "id": 188,
+    "id": 190,
     "entity": "mechanic",
     "entityId": "17",
     "sourceId": "dc:76652"
    },
    {
-    "id": 189,
+    "id": 191,
     "entity": "mechanic",
     "entityId": "18",
     "sourceId": "dc:64661"
    },
    {
-    "id": 190,
+    "id": 192,
     "entity": "mechanic",
     "entityId": "18",
     "sourceId": "nv:43011"
    },
    {
-    "id": 191,
+    "id": 193,
     "entity": "rng_factor",
     "entityId": "1",
     "sourceId": "dc:75400"
    },
    {
-    "id": 192,
+    "id": 194,
     "entity": "rng_factor",
     "entityId": "1",
     "sourceId": "dc:76135"
    },
    {
-    "id": 193,
+    "id": 195,
     "entity": "rng_factor",
     "entityId": "1",
     "sourceId": "nv:43011"
    },
    {
-    "id": 194,
-    "entity": "rng_factor",
-    "entityId": "1",
-    "sourceId": "dc:69368"
-   },
-   {
-    "id": 195,
-    "entity": "rng_factor",
-    "entityId": "2",
-    "sourceId": "dc:60340"
-   },
-   {
     "id": 196,
     "entity": "rng_factor",
-    "entityId": "2",
+    "entityId": "1",
     "sourceId": "dc:69368"
    },
    {
     "id": 197,
     "entity": "rng_factor",
     "entityId": "2",
-    "sourceId": "dc:71105"
+    "sourceId": "dc:60340"
    },
    {
     "id": 198,
     "entity": "rng_factor",
     "entityId": "2",
-    "sourceId": "dc:76716"
+    "sourceId": "dc:69368"
    },
    {
     "id": 199,
     "entity": "rng_factor",
-    "entityId": "3",
-    "sourceId": "dc:75922"
+    "entityId": "2",
+    "sourceId": "dc:71105"
    },
    {
     "id": 200,
     "entity": "rng_factor",
-    "entityId": "3",
-    "sourceId": "dc:74829"
+    "entityId": "2",
+    "sourceId": "dc:76716"
    },
    {
     "id": 201,
     "entity": "rng_factor",
     "entityId": "3",
-    "sourceId": "dc:76545"
+    "sourceId": "dc:75922"
    },
    {
     "id": 202,
     "entity": "rng_factor",
     "entityId": "3",
-    "sourceId": "dc:75400"
+    "sourceId": "dc:74829"
    },
    {
     "id": 203,
     "entity": "rng_factor",
-    "entityId": "4",
-    "sourceId": "nv:43653"
+    "entityId": "3",
+    "sourceId": "dc:76545"
    },
    {
     "id": 204,
     "entity": "rng_factor",
-    "entityId": "4",
-    "sourceId": "nv:44761"
+    "entityId": "3",
+    "sourceId": "dc:75400"
    },
    {
     "id": 205,
     "entity": "rng_factor",
     "entityId": "4",
-    "sourceId": "nv:46283"
+    "sourceId": "nv:43653"
    },
    {
     "id": 206,
     "entity": "rng_factor",
     "entityId": "4",
-    "sourceId": "dc:76583"
+    "sourceId": "nv:44761"
    },
    {
     "id": 207,
+    "entity": "rng_factor",
+    "entityId": "4",
+    "sourceId": "nv:46283"
+   },
+   {
+    "id": 208,
+    "entity": "rng_factor",
+    "entityId": "4",
+    "sourceId": "dc:76583"
+   },
+   {
+    "id": 209,
     "entity": "timeline_event",
     "entityId": "1",
     "sourceId": "web:16132"
    },
    {
-    "id": 208,
+    "id": 210,
     "entity": "timeline_event",
     "entityId": "2",
     "sourceId": "nv:25475"
    },
    {
-    "id": 209,
+    "id": 211,
     "entity": "timeline_event",
     "entityId": "2",
     "sourceId": "dc:46452"
    },
    {
-    "id": 210,
+    "id": 212,
     "entity": "timeline_event",
     "entityId": "2",
     "sourceId": "nv:26733"
    },
    {
-    "id": 211,
+    "id": 213,
     "entity": "timeline_event",
     "entityId": "3",
     "sourceId": "nv:27449"
    },
    {
-    "id": 212,
+    "id": 214,
     "entity": "timeline_event",
     "entityId": "3",
     "sourceId": "nv:27682"
    },
    {
-    "id": 213,
+    "id": 215,
     "entity": "timeline_event",
     "entityId": "4",
     "sourceId": "nv:29690"
    },
    {
-    "id": 214,
+    "id": 216,
     "entity": "timeline_event",
     "entityId": "5",
     "sourceId": "dc:55485"
    },
    {
-    "id": 215,
+    "id": 217,
     "entity": "timeline_event",
     "entityId": "6",
     "sourceId": "dc:60340"
    },
    {
-    "id": 216,
+    "id": 218,
     "entity": "timeline_event",
     "entityId": "7",
     "sourceId": "nv:36558"
    },
    {
-    "id": 217,
+    "id": 219,
     "entity": "timeline_event",
     "entityId": "8",
     "sourceId": "web:37730"
    },
    {
-    "id": 218,
+    "id": 220,
     "entity": "timeline_event",
     "entityId": "9",
     "sourceId": "web:yt-IkY9i5s7SOA"
    },
    {
-    "id": 219,
+    "id": 221,
     "entity": "timeline_event",
     "entityId": "10",
     "sourceId": "dc:69368"
    },
    {
-    "id": 220,
+    "id": 222,
     "entity": "timeline_event",
     "entityId": "11",
     "sourceId": "nv:43011"
    },
    {
-    "id": 221,
+    "id": 223,
     "entity": "timeline_event",
     "entityId": "12",
     "sourceId": "nv:43653"
    },
    {
-    "id": 222,
+    "id": 224,
     "entity": "timeline_event",
     "entityId": "12",
     "sourceId": "dc:71135"
    },
    {
-    "id": 223,
+    "id": 225,
     "entity": "timeline_event",
     "entityId": "13",
     "sourceId": "nv:44761"
-   },
-   {
-    "id": 224,
-    "entity": "timeline_event",
-    "entityId": "14",
-    "sourceId": "nv:45362"
-   },
-   {
-    "id": 225,
-    "entity": "timeline_event",
-    "entityId": "14",
-    "sourceId": "dc:75400"
    },
    {
     "id": 226,
     "entity": "timeline_event",
     "entityId": "14",
-    "sourceId": "dc:73113"
+    "sourceId": "nv:45362"
    },
    {
     "id": 227,
     "entity": "timeline_event",
-    "entityId": "15",
+    "entityId": "14",
     "sourceId": "dc:75400"
    },
    {
     "id": 228,
     "entity": "timeline_event",
+    "entityId": "14",
+    "sourceId": "dc:73113"
+   },
+   {
+    "id": 229,
+    "entity": "timeline_event",
+    "entityId": "15",
+    "sourceId": "dc:75400"
+   },
+   {
+    "id": 230,
+    "entity": "timeline_event",
     "entityId": "15",
     "sourceId": "nv:46283"
    },
    {
-    "id": 229,
+    "id": 231,
     "entity": "timeline_event",
     "entityId": "16",
     "sourceId": "web:crumbgg-join"
    },
    {
-    "id": 230,
+    "id": 232,
     "entity": "timeline_event",
     "entityId": "16",
     "sourceId": "dc:74801"
    },
    {
-    "id": 231,
+    "id": 233,
     "entity": "timeline_event",
     "entityId": "17",
     "sourceId": "dc:75462"
    },
    {
-    "id": 232,
+    "id": 234,
     "entity": "timeline_event",
     "entityId": "18",
     "sourceId": "dc:76135"
    },
    {
-    "id": 233,
+    "id": 235,
     "entity": "timeline_event",
     "entityId": "19",
     "sourceId": "dc:76235"
-   },
-   {
-    "id": 234,
-    "entity": "timeline_event",
-    "entityId": "20",
-    "sourceId": "web:crumbgg-s5"
-   },
-   {
-    "id": 235,
-    "entity": "timeline_event",
-    "entityId": "20",
-    "sourceId": "web:crumbgg:rankings-s1"
    },
    {
     "id": 236,
     "entity": "timeline_event",
     "entityId": "20",
-    "sourceId": "web:crumbgg:rankings-s4"
+    "sourceId": "web:crumbgg-s5"
    },
    {
     "id": 237,
     "entity": "timeline_event",
     "entityId": "20",
-    "sourceId": "web:crumbgg:rankings-s5"
+    "sourceId": "web:crumbgg:rankings-s1"
    },
    {
     "id": 238,
-    "entity": "takeaway",
-    "entityId": "1",
-    "sourceId": "nv:43653"
+    "entity": "timeline_event",
+    "entityId": "20",
+    "sourceId": "web:crumbgg:rankings-s4"
    },
    {
     "id": 239,
-    "entity": "takeaway",
-    "entityId": "1",
-    "sourceId": "dc:76135"
+    "entity": "timeline_event",
+    "entityId": "20",
+    "sourceId": "web:crumbgg:rankings-s5"
    },
    {
     "id": 240,
     "entity": "takeaway",
     "entityId": "1",
-    "sourceId": "dc:71135"
+    "sourceId": "nv:43653"
    },
    {
     "id": 241,
     "entity": "takeaway",
-    "entityId": "2",
-    "sourceId": "dc:75400"
+    "entityId": "1",
+    "sourceId": "dc:76135"
    },
    {
     "id": 242,
     "entity": "takeaway",
-    "entityId": "2",
-    "sourceId": "dc:76135"
+    "entityId": "1",
+    "sourceId": "dc:71135"
    },
    {
     "id": 243,
     "entity": "takeaway",
     "entityId": "2",
-    "sourceId": "nv:42630"
+    "sourceId": "dc:75400"
    },
    {
     "id": 244,
     "entity": "takeaway",
     "entityId": "2",
-    "sourceId": "nv:29690"
+    "sourceId": "dc:76135"
    },
    {
     "id": 245,
+    "entity": "takeaway",
+    "entityId": "2",
+    "sourceId": "nv:42630"
+   },
+   {
+    "id": 246,
+    "entity": "takeaway",
+    "entityId": "2",
+    "sourceId": "nv:29690"
+   },
+   {
+    "id": 247,
     "entity": "takeaway",
     "entityId": "3",
     "sourceId": "dc:76135"
    },
    {
-    "id": 246,
+    "id": 248,
     "entity": "takeaway",
     "entityId": "4",
     "sourceId": "nv:43653"
    },
    {
-    "id": 247,
+    "id": 249,
     "entity": "takeaway",
     "entityId": "4",
     "sourceId": "dc:71135"
    },
    {
-    "id": 248,
+    "id": 250,
     "entity": "takeaway",
     "entityId": "4",
     "sourceId": "nv:44761"
    },
    {
-    "id": 249,
+    "id": 251,
     "entity": "takeaway",
     "entityId": "5",
     "sourceId": "dc:75854"
    },
    {
-    "id": 250,
+    "id": 252,
     "entity": "takeaway",
     "entityId": "5",
     "sourceId": "dc:76218"
    },
    {
-    "id": 251,
+    "id": 253,
     "entity": "takeaway",
     "entityId": "5",
     "sourceId": "nv:43653"
    },
    {
-    "id": 252,
+    "id": 254,
     "entity": "takeaway",
     "entityId": "6",
     "sourceId": "dc:76235"
    },
    {
-    "id": 253,
+    "id": 255,
     "entity": "takeaway",
     "entityId": "6",
     "sourceId": "dc:75462"
    },
    {
-    "id": 254,
-    "entity": "takeaway",
-    "entityId": "6",
-    "sourceId": "dc:76583"
-   },
-   {
-    "id": 255,
-    "entity": "takeaway",
-    "entityId": "6",
-    "sourceId": "dc:76333"
-   },
-   {
     "id": 256,
     "entity": "takeaway",
     "entityId": "6",
-    "sourceId": "dc:75176"
+    "sourceId": "dc:76583"
    },
    {
     "id": 257,
     "entity": "takeaway",
     "entityId": "6",
-    "sourceId": "web:crumbgg-join"
+    "sourceId": "dc:76333"
    },
    {
     "id": 258,
     "entity": "takeaway",
-    "entityId": "7",
-    "sourceId": "dc:74801"
+    "entityId": "6",
+    "sourceId": "dc:75176"
    },
    {
     "id": 259,
     "entity": "takeaway",
-    "entityId": "7",
-    "sourceId": "dc:69856"
+    "entityId": "6",
+    "sourceId": "web:crumbgg-join"
    },
    {
     "id": 260,
     "entity": "takeaway",
-    "entityId": "7",
-    "sourceId": "dc:76583"
+    "entityId": "6",
+    "sourceId": "dc:69331"
    },
    {
     "id": 261,
     "entity": "takeaway",
-    "entityId": "7",
-    "sourceId": "web:yt-IkY9i5s7SOA"
+    "entityId": "6",
+    "sourceId": "web:crumbgg-lookup-seomyeong"
    },
    {
     "id": 262,
     "entity": "takeaway",
     "entityId": "7",
-    "sourceId": "web:crumbgg:rankings-s4"
+    "sourceId": "dc:74801"
    },
    {
     "id": 263,
+    "entity": "takeaway",
+    "entityId": "7",
+    "sourceId": "dc:69856"
+   },
+   {
+    "id": 264,
+    "entity": "takeaway",
+    "entityId": "7",
+    "sourceId": "dc:76583"
+   },
+   {
+    "id": 265,
+    "entity": "takeaway",
+    "entityId": "7",
+    "sourceId": "web:yt-IkY9i5s7SOA"
+   },
+   {
+    "id": 266,
+    "entity": "takeaway",
+    "entityId": "7",
+    "sourceId": "web:crumbgg:rankings-s4"
+   },
+   {
+    "id": 267,
     "entity": "takeaway",
     "entityId": "8",
     "sourceId": "web:crumbgg-join"
    },
    {
-    "id": 264,
+    "id": 268,
     "entity": "takeaway",
     "entityId": "8",
     "sourceId": "web:crumbgg:power-leaderboard"
    },
    {
-    "id": 265,
+    "id": 269,
     "entity": "takeaway",
     "entityId": "9",
     "sourceId": "dc:74815"
    },
    {
-    "id": 266,
+    "id": 270,
     "entity": "takeaway",
     "entityId": "9",
     "sourceId": "dc:75400"
    },
    {
-    "id": 267,
+    "id": 271,
     "entity": "takeaway",
     "entityId": "9",
     "sourceId": "dc:76545"
    },
    {
-    "id": 268,
+    "id": 272,
     "entity": "fight_event",
     "entityId": "1",
     "sourceId": "web:crumbgg:dps"
    },
    {
-    "id": 269,
-    "entity": "fight_event",
-    "entityId": "1",
-    "sourceId": "dc:71383"
-   },
-   {
-    "id": 270,
-    "entity": "fight_event",
-    "entityId": "1",
-    "sourceId": "dc:69724"
-   },
-   {
-    "id": 271,
-    "entity": "fight_event",
-    "entityId": "2",
-    "sourceId": "dc:72759"
-   },
-   {
-    "id": 272,
-    "entity": "fight_event",
-    "entityId": "2",
-    "sourceId": "dc:74804"
-   },
-   {
     "id": 273,
     "entity": "fight_event",
-    "entityId": "3",
+    "entityId": "1",
     "sourceId": "dc:71383"
    },
    {
     "id": 274,
     "entity": "fight_event",
+    "entityId": "1",
+    "sourceId": "dc:69724"
+   },
+   {
+    "id": 275,
+    "entity": "fight_event",
+    "entityId": "2",
+    "sourceId": "dc:72759"
+   },
+   {
+    "id": 276,
+    "entity": "fight_event",
+    "entityId": "2",
+    "sourceId": "dc:74804"
+   },
+   {
+    "id": 277,
+    "entity": "fight_event",
+    "entityId": "3",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 278,
+    "entity": "fight_event",
     "entityId": "3",
     "sourceId": "dc:67285"
    },
    {
-    "id": 275,
+    "id": 279,
     "entity": "fight_event",
     "entityId": "4",
     "sourceId": "dc:71383"
    },
    {
-    "id": 276,
+    "id": 280,
     "entity": "fight_event",
     "entityId": "5",
     "sourceId": "dc:71383"
    },
    {
-    "id": 277,
+    "id": 281,
     "entity": "fight_event",
     "entityId": "6",
     "sourceId": "dc:71219"
    },
    {
-    "id": 278,
-    "entity": "fight_event",
-    "entityId": "6",
-    "sourceId": "dc:67659"
-   },
-   {
-    "id": 279,
-    "entity": "fight_event",
-    "entityId": "6",
-    "sourceId": "dc:53667"
-   },
-   {
-    "id": 280,
-    "entity": "fight_event",
-    "entityId": "7",
-    "sourceId": "dc:70607"
-   },
-   {
-    "id": 281,
-    "entity": "fight_event",
-    "entityId": "7",
-    "sourceId": "dc:70625"
-   },
-   {
     "id": 282,
     "entity": "fight_event",
-    "entityId": "7",
+    "entityId": "6",
     "sourceId": "dc:67659"
    },
    {
     "id": 283,
     "entity": "fight_event",
-    "entityId": "7",
-    "sourceId": "dc:75547"
+    "entityId": "6",
+    "sourceId": "dc:53667"
    },
    {
     "id": 284,
     "entity": "fight_event",
     "entityId": "7",
-    "sourceId": "dc:70832"
+    "sourceId": "dc:70607"
    },
    {
     "id": 285,
     "entity": "fight_event",
     "entityId": "7",
-    "sourceId": "dc:70123"
+    "sourceId": "dc:70625"
    },
    {
     "id": 286,
     "entity": "fight_event",
     "entityId": "7",
-    "sourceId": "dc:71219"
+    "sourceId": "dc:67659"
    },
    {
     "id": 287,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:75547"
+   },
+   {
+    "id": 288,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:70832"
+   },
+   {
+    "id": 289,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:70123"
+   },
+   {
+    "id": 290,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:71219"
+   },
+   {
+    "id": 291,
     "entity": "fight_event",
     "entityId": "8",
     "sourceId": "dc:71383"
    },
    {
-    "id": 288,
+    "id": 292,
     "entity": "fight_event",
     "entityId": "9",
     "sourceId": "dc:74793"
    },
    {
-    "id": 289,
+    "id": 293,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:69250"
    },
    {
-    "id": 290,
+    "id": 294,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:69358"
    },
    {
-    "id": 291,
+    "id": 295,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:71028"
    },
    {
-    "id": 292,
+    "id": 296,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:76583"
    },
    {
-    "id": 293,
+    "id": 297,
     "entity": "fight_event",
     "entityId": "11",
     "sourceId": "dc:71383"
    },
    {
-    "id": 294,
+    "id": 298,
     "entity": "fight_event",
     "entityId": "12",
     "sourceId": "dc:71383"
    },
    {
-    "id": 295,
+    "id": 299,
     "entity": "fight_event",
     "entityId": "13",
     "sourceId": "dc:69201"
    },
    {
-    "id": 296,
+    "id": 300,
     "entity": "fight_event",
     "entityId": "14",
     "sourceId": "dc:71383"
    },
    {
-    "id": 297,
+    "id": 301,
     "entity": "buff_value",
     "entityId": "1",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 298,
+    "id": 302,
     "entity": "buff_value",
     "entityId": "2",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 299,
+    "id": 303,
     "entity": "buff_value",
     "entityId": "3",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 300,
+    "id": 304,
     "entity": "buff_value",
     "entityId": "4",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 301,
+    "id": 305,
     "entity": "buff_value",
     "entityId": "5",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 302,
+    "id": 306,
     "entity": "buff_value",
     "entityId": "6",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 303,
+    "id": 307,
     "entity": "buff_value",
     "entityId": "7",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 304,
+    "id": 308,
     "entity": "buff_value",
     "entityId": "8",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 305,
+    "id": 309,
     "entity": "buff_value",
     "entityId": "9",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 306,
+    "id": 310,
     "entity": "buff_value",
     "entityId": "10",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 307,
+    "id": 311,
     "entity": "buff_value",
     "entityId": "11",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 308,
+    "id": 312,
     "entity": "buff_value",
     "entityId": "12",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 309,
+    "id": 313,
     "entity": "buff_value",
     "entityId": "13",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 310,
+    "id": 314,
     "entity": "buff_value",
     "entityId": "14",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 311,
+    "id": 315,
     "entity": "buff_value",
     "entityId": "15",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 312,
+    "id": 316,
     "entity": "buff_value",
     "entityId": "16",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 313,
+    "id": 317,
     "entity": "buff_value",
     "entityId": "17",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 314,
+    "id": 318,
     "entity": "buff_value",
     "entityId": "18",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 315,
+    "id": 319,
     "entity": "buff_value",
     "entityId": "19",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 316,
+    "id": 320,
     "entity": "buff_value",
     "entityId": "20",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 317,
+    "id": 321,
     "entity": "buff_value",
     "entityId": "21",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 318,
+    "id": 322,
     "entity": "buff_value",
     "entityId": "22",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 319,
+    "id": 323,
     "entity": "buff_value",
     "entityId": "23",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 320,
+    "id": 324,
     "entity": "buff_value",
     "entityId": "24",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 321,
+    "id": 325,
     "entity": "buff_value",
     "entityId": "25",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 322,
+    "id": 326,
     "entity": "buff_value",
     "entityId": "26",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 323,
+    "id": 327,
     "entity": "buff_value",
     "entityId": "27",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 324,
+    "id": 328,
     "entity": "buff_value",
     "entityId": "28",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 325,
+    "id": 329,
     "entity": "buff_value",
     "entityId": "29",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 326,
+    "id": 330,
     "entity": "buff_value",
     "entityId": "30",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 327,
+    "id": 331,
     "entity": "buff_value",
     "entityId": "31",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 328,
+    "id": 332,
     "entity": "buff_value",
     "entityId": "32",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 329,
+    "id": 333,
     "entity": "buff_value",
     "entityId": "33",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 330,
+    "id": 334,
     "entity": "buff_value",
     "entityId": "34",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 331,
+    "id": 335,
     "entity": "buff_value",
     "entityId": "35",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 332,
+    "id": 336,
     "entity": "buff_value",
     "entityId": "36",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 333,
+    "id": 337,
     "entity": "buff_value",
     "entityId": "37",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 334,
+    "id": 338,
     "entity": "buff_value",
     "entityId": "38",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 335,
+    "id": 339,
     "entity": "buff_value",
     "entityId": "39",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 336,
+    "id": 340,
     "entity": "buff_value",
     "entityId": "40",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 337,
+    "id": 341,
     "entity": "buff_value",
     "entityId": "41",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 338,
+    "id": 342,
     "entity": "buff_value",
     "entityId": "42",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 339,
+    "id": 343,
     "entity": "buff_value",
     "entityId": "43",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 340,
+    "id": 344,
     "entity": "buff_value",
     "entityId": "44",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 341,
+    "id": 345,
     "entity": "buff_value",
     "entityId": "45",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 342,
+    "id": 346,
     "entity": "buff_value",
     "entityId": "46",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 343,
+    "id": 347,
     "entity": "buff_value",
     "entityId": "47",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 344,
+    "id": 348,
     "entity": "buff_value",
     "entityId": "48",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
