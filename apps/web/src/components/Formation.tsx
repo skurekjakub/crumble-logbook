@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { formationGrid } from "../lib/formation";
 import type { LineupCookie } from "./Lineup";
 import { Lineup, LineupSlot } from "./Lineup";
@@ -26,7 +27,9 @@ export function hasFormation(cookies: readonly FormationCookie[]): boolean {
 
 /**
  * The team laid out as the formation screen: rows top to bottom, columns
- * from the back line (left) to the front (right), empty cells dashed. Cookies
+ * from the back line (left) to the front (right), empty cells dashed. On a
+ * phone the grid turns a quarter: each row becomes a column, back line on
+ * top. Cookies
  * without a readable slot follow as a plain lineup. Renders nothing when no
  * cookie has a slot.
  */
@@ -36,7 +39,10 @@ export function Formation({ cookies }: FormationProps) {
   return (
     <>
       <div className="formation">
-        <div className="formation-grid">
+        <div
+          className="formation-grid"
+          style={{ "--formation-cols": rows[0]!.length } as CSSProperties}
+        >
           {rows.map((row, r) => (
             <div className="formation-row" key={r}>
               {row.map((c, col) =>
@@ -48,10 +54,10 @@ export function Formation({ cookies }: FormationProps) {
               )}
             </div>
           ))}
-          <div className="formation-axis label" aria-hidden="true">
-            <span>← Back</span>
-            <span>Front →</span>
-          </div>
+        </div>
+        <div className="formation-axis label" aria-hidden="true">
+          <span className="back">Back</span>
+          <span className="front">Front</span>
         </div>
       </div>
       {unplaced.length ? (

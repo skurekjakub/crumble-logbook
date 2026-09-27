@@ -11,15 +11,24 @@
   background: var(--surface);
 }
 
-/* Formation: rows of six columns, back line left; scrolls inside itself on phones. */
+/* A card head's chips (a PvP deck's ceiling is a sentence) wrap instead of overflowing. */
+.card-head .chips {
+  min-width: 0;
+}
+.card-head .chip {
+  white-space: normal;
+}
+
+/* Formation: rows of columns, back line left. On phones each row becomes a
+   column (cells fill column-first), back line on top. */
 .formation {
-  overflow-x: auto;
-  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .formation-grid {
   display: grid;
   gap: 6px;
-  min-width: 540px;
 }
 .formation-row {
   display: grid;
@@ -34,6 +43,34 @@
 .formation-axis {
   display: flex;
   justify-content: space-between;
+}
+.formation-axis .back::before {
+  content: "← ";
+}
+.formation-axis .front::after {
+  content: " →";
+}
+@media (max-width: 620px) {
+  .formation-grid {
+    grid-auto-flow: column;
+    grid-template-rows: repeat(var(--formation-cols, 6), auto);
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  .formation-row {
+    display: contents;
+  }
+  .formation-grid .slot {
+    min-height: 0;
+  }
+  .formation-axis {
+    order: -1;
+  }
+  .formation-axis .back::before {
+    content: "↑ ";
+  }
+  .formation-axis .front::after {
+    content: " ↓";
+  }
 }
 
 /* Counters: a directed matrix whose cells are shaded by confidence. */
