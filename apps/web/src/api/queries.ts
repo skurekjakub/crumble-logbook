@@ -109,6 +109,27 @@ export const gearRecsQuery = () =>
     queryFn: () => parseResponse(api["gear-recs"].$get()),
   });
 
+/**
+ * A boss's fight events in elapsed-time order; events with no time come last.
+ * @param boss - the boss id, e.g. `pinata`
+ */
+export const fightEventsQuery = (boss: string) =>
+  queryOptions({
+    queryKey: ["fight-events", { boss }],
+    queryFn: () => parseResponse(api["fight-events"].$get({ query: { boss } })),
+  });
+
+/**
+ * Skill buff and debuff values per cookie and skill grade, ordered by cookie,
+ * effect type, then grade.
+ * @param cookie - restrict to one cookie (Korean name, shorthand or English)
+ */
+export const buffValuesQuery = (cookie?: string) =>
+  queryOptions({
+    queryKey: ["buff-values", { cookie: cookie ?? null }],
+    queryFn: () => parseResponse(api["buff-values"].$get({ query: { cookie } })),
+  });
+
 /** Mechanics, each with a confidence level. */
 export const mechanicsQuery = () =>
   queryOptions({

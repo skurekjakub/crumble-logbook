@@ -1,0 +1,158 @@
+/* The boss screen: page sections, the fight track and its event list, and the buff-table marks. */
+
+.boss-sec {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+.boss-sec > h3 {
+  margin: 0;
+}
+.boss-sec h4 {
+  margin: 0;
+}
+.boss-sec .card {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+/* A cited note inside a card; low-confidence notes get the same hatch as the track. */
+.boss-note {
+  display: grid;
+  gap: 4px;
+}
+.boss-note.low,
+.fe-list li.low {
+  border-left: 3px dashed var(--bad);
+  padding-left: 10px;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0 7px,
+    color-mix(in srgb, var(--bad) 10%, transparent) 7px 9px
+  );
+}
+
+/* Fight track: each lane is a label column plus a scale positioned in % of the fight. */
+.fe-track {
+  display: grid;
+  gap: 2px;
+  padding: 10px 0 2px;
+}
+.fe-lane,
+.fe-axis {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  align-items: center;
+}
+.fe-lane {
+  border-bottom: 1px dashed var(--line);
+  padding: 4px 0;
+}
+.fe-lane-label {
+  font: 500 11px/1.3 var(--mono);
+  color: var(--ink-3);
+}
+.fe-scale {
+  position: relative;
+  margin-inline: 12px;
+}
+.fe-mark {
+  position: absolute;
+  transform: translateX(-50%);
+  min-width: 22px;
+  height: 22px;
+  padding: 0 4px;
+  border: 1.5px solid var(--accent);
+  border-radius: 11px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font: 600 11px/19px var(--mono);
+  text-align: center;
+}
+.fe-mark.low {
+  border-style: dashed;
+  border-color: var(--bad);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--surface) 0 3px,
+    color-mix(in srgb, var(--bad) 22%, var(--surface)) 3px 5px
+  );
+}
+.fe-axis .fe-scale {
+  height: 34px;
+  border-top: 1px solid var(--ink-3);
+}
+.fe-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  display: grid;
+  padding-top: 3px;
+  font: 500 11px/1.3 var(--mono);
+  text-align: center;
+  white-space: nowrap;
+}
+.fe-tick::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  height: 4px;
+  border-left: 1px solid var(--ink-3);
+}
+.fe-tick .left {
+  color: var(--ink-3);
+}
+
+/* The numbered event list under the track. */
+.fe-list {
+  display: grid;
+  gap: 12px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.fe-list li {
+  display: grid;
+  gap: 4px;
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.fe-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.fe-num {
+  min-width: 22px;
+  border-radius: 11px;
+  background: var(--surface-2);
+  font: 600 11px/20px var(--mono);
+  text-align: center;
+}
+.fe-when {
+  font: 500 12px var(--mono);
+  color: var(--ink-2);
+}
+
+/* Buff-table and checklist marks. */
+.boss-mark {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font: 500 11px/1.4 var(--mono);
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.boss-check {
+  display: grid;
+  gap: 8px;
+}
+.boss-check li::before {
+  content: "☐ ";
+  color: var(--accent);
+}

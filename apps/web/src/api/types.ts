@@ -32,6 +32,12 @@ export type RuneBuild = InferResponseType<(typeof api)["rune-builds"]["$get"], 2
 /** A gear substat recommendation. */
 export type GearRec = InferResponseType<(typeof api)["gear-recs"]["$get"], 200>[number];
 
+/** A boss fight event: `tElapsed` in seconds since the fight began (null when off the clock), its confidence and sources. */
+export type FightEvent = InferResponseType<(typeof api)["fight-events"]["$get"], 200>[number];
+
+/** One skill grade's buff (or debuff chance) value for a cookie, with the cookie's `en` and sources. */
+export type BuffValue = InferResponseType<(typeof api)["buff-values"]["$get"], 200>[number];
+
 /** A mechanic with its confidence. */
 export type Mechanic = InferResponseType<typeof api.mechanics.$get, 200>[number];
 
