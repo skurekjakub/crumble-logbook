@@ -1,4 +1,4 @@
-import type { SourceSite } from "@crumble/schema";
+import type { GameMode, SourceSite } from "@crumble/schema";
 import { CITED_ENTITY } from "@crumble/schema";
 import { getTableConfig } from "drizzle-orm/sqlite-core";
 import type { hc } from "hono/client";
@@ -87,6 +87,17 @@ function ensureDecks(store: Store, services: Services): void {
     if (store.repos.decks.exists(id)) continue;
     services.decks.create({ ...deckBase, id, nameEn: id });
   }
+}
+
+/**
+ * Creates two decks of `mode`, for a row that must name decks of its own
+ * mode (a counter edge).
+ * @returns the two decks' ids
+ */
+function modeDecks(services: Services, mode: GameMode): [string, string] {
+  const ids: [string, string] = [`${mode.replace("_", "-")}-1`, `${mode.replace("_", "-")}-2`];
+  for (const id of ids) services.decks.create({ ...deckBase, id, nameEn: id, mode });
+  return ids;
 }
 
 /** A source every seeded row cites, added once per store. */
@@ -210,11 +221,13 @@ const SEEDS: Record<SeededKey, Seed> = {
   },
   counters: (store, services, over) => {
     ensureDecks(store, services);
+    const mode = over.mode as GameMode | undefined;
+    const [teamDeckId, beatenByDeckId] = mode ? modeDecks(services, mode) : ["d1", "d2"];
     const row = services.counters.create(
       {
         slug: `edge-${++serial}`,
-        teamDeckId: "d1",
-        beatenByDeckId: "d2",
+        teamDeckId,
+        beatenByDeckId,
         why: "w",
         confidence: "low",
         ...over,

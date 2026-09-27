@@ -13,6 +13,7 @@ import { ImportError } from "../errors";
 import type { ContentKey, ValuesOf } from "../registry";
 import type { GlossaryInsert } from "../repos/glossary";
 import type { SourceInsert } from "../repos/sources";
+import { deckModeMismatch } from "../services/deck-modes";
 import { lookupKeys } from "../services/names";
 import { findCapture } from "./captures";
 import { parseFile } from "./files";
@@ -503,13 +504,8 @@ export const COLLECTIONS = {
     check: (file, edges, { deckModes }) => {
       edges.forEach((edge, index) => {
         for (const deck of [edge.team, edge.beaten_by]) {
-          const deckMode = deckModes.get(deck);
-          if (deckMode === undefined || deckMode === edge.mode) continue;
-          throw new ImportError(
-            file,
-            index,
-            `counter mode ${edge.mode} doesn't match deck ${deck}'s mode ${deckMode}`,
-          );
+          const mismatch = deckModeMismatch("counter", edge.mode, deck, deckModes.get(deck));
+          if (mismatch) throw new ImportError(file, index, mismatch);
         }
       });
     },

@@ -82,6 +82,43 @@ describe("counters routes", () => {
     expect(res.status).toBe(400);
   });
 
+  it("POST with a mode that isn't its decks' mode returns 409 naming the deck, and writes nothing", async () => {
+    const { app, store } = setup();
+    store.repos.decks.insert({ id: "cherry", position: 0, nameEn: "Cherry", status: "meta" });
+    const res = await app.request(
+      "/api/counters",
+      jsonBody({ ...edge, teamDeckId: "cherry", beatenByDeckId: "wizard" }),
+    );
+    expect(res.status).toBe(409);
+    expect(await readJson<{ message: string }>(res)).toMatchObject({
+      error: "conflict",
+      message: "counter mode arena doesn't match deck cherry's mode guild_conquest",
+    });
+    expect(store.repos.counters.count()).toBe(0);
+  });
+
+  it("POST without a mode takes the default mode, so arena decks are rejected", async () => {
+    const { app, store } = setup();
+    const res = await app.request("/api/counters", jsonBody({ ...edge, mode: undefined }));
+    expect(res.status).toBe(409);
+    expect(await readJson<{ message: string }>(res)).toMatchObject({
+      message: "counter mode guild_conquest doesn't match deck rye's mode arena",
+    });
+    expect(store.repos.counters.count()).toBe(0);
+  });
+
+  it("PATCH to a mode its decks don't share returns 409 and keeps the row", async () => {
+    const { app } = setup();
+    const { id } = await readJson<CounterView>(await app.request("/api/counters", jsonBody(edge)));
+    const res = await app.request(`/api/counters/${id}`, {
+      ...jsonBody({ mode: "rumble_arena" }),
+      method: "PATCH",
+    });
+    expect(res.status).toBe(409);
+    const after = await readJson<{ mode: string }>(await app.request(`/api/counters/${id}`));
+    expect(after.mode).toBe("arena");
+  });
+
   it("POST with a slug already taken returns 409", async () => {
     const { app } = setup();
     await app.request("/api/counters", jsonBody(edge));
