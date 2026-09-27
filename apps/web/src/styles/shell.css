@@ -35,23 +35,20 @@ nav.tabs.sub a {
 }
 .rune-why {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 .rune-lines {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 2px 8px;
-  font: 500 13px/1.4 var(--mono);
+  font: 500 var(--fs-xs) / 1.4 var(--mono);
   color: var(--ink-2);
 }
 .rune-lines .k {
-  font: 600 11px/1.4 var(--mono);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font: 600 var(--fs-xs) / 1.4 var(--body);
   color: var(--ink-3);
 }
 .rune-decks {
-  font-size: 13px;
+  font-size: var(--fs-xs);
 }

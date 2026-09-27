@@ -7,7 +7,12 @@
   --good:#1f7a3a; --warn:#9a6400; --bad:#b3261e;
   /* categorical series, fixed order (validated: dataviz validate_palette.js, light + dark) */
   --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s0:#7f8f8d;
-  --radius:10px;
+  --radius:8px; --radius-s:5px;
+  /* type scale (px, on a 14px body) and spacing steps */
+  --fs-2xs:11px; --fs-xs:12px; --fs-s:13px; --fs-base:14px; --fs-m:15px; --fs-l:18px; --fs-xl:21px; --fs-2xl:26px;
+  --sp-1:4px; --sp-2:6px; --sp-3:10px; --sp-4:14px; --sp-5:20px; --sp-6:28px;
+  /* shell: the sidebar's width and the phone top bar's height */
+  --nav-w:208px; --bar-h:48px;
   --display:"Bagel Fat One","Arial Rounded MT Bold","Trebuchet MS",sans-serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
