@@ -44,7 +44,7 @@ There are two tracks:
 - **Plan 1, data core** (`docs/superpowers/plans/2026-09-27-data-core.md`), on branch `feat/data-core`:
   - `packages/schema`: Drizzle tables, migrations, Zod schemas.
   - `apps/server`: the Hono API over `node:sqlite` (resources listed in the root `README.md`), `pnpm import:record`, `pnpm db:export` / `db:restore`, `pnpm dev:server`.
-  - Record 001's curated dataset is copied into `research/001-guild-conquest-meta/curated/` (blob-identical to `legacy/dashboard/data/`), and `import.json` next to it drives the import.
+  - Record 001's curated dataset is copied into `research/001-guild-conquest-meta/curated/`, and `import.json` next to it drives the import. The files match `legacy/dashboard/data/` except `curated/sources.json`, which has since gained the Sugar Pocket bundle (`web:sugarpocket-bundle-1.4.002`) and the DC posts the fight timeline cites (from `evidence/08-extract/kr-encounter.json`). The curated copy is the source of truth.
   - `data/snapshot.json` is the committed dump of a fresh import of record 001. `data/crumble.db` is local and gitignored; rebuild it with `pnpm import:record 001-guild-conquest-meta` or `pnpm db:restore`.
   - The import warns that the glossary keys 전투력 and 투력 are each claimed by two entries (Power, Power (team power)); both resolve to 투력's gloss. Fix the curated glossary if that matters.
 - **Plan 3, web app** is written: `docs/superpowers/plans/2026-09-27-web-app.md`.
@@ -58,7 +58,7 @@ There are two tracks:
 
 ## 4. Research findings (the load-bearing ones)
 
-Source ids: `dc:NNNNN` = `m.dcinside.com/board/projectcc/NNNNN`; `nv:NNNNN` = Naver cafe 31688486 article; `web:*` = see `legacy/dashboard/data/sources.json`.
+Source ids: `dc:NNNNN` = `m.dcinside.com/board/projectcc/NNNNN`; `nv:NNNNN` = Naver cafe 31688486 article; `web:*` = see `research/001-guild-conquest-meta/curated/sources.json` (or `/api/sources`).
 
 - **The meta deck is the Cherry deck (체리덱).** The user's own lineup already matches it.
   - ATK order (by 공격력): Milk › Brightseeker › Skating Queen › Macaron › Tea Knight › Cheesecake.
