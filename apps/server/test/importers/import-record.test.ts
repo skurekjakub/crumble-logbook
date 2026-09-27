@@ -448,6 +448,34 @@ describe("importRecord validation", () => {
     expectEmpty(store);
   });
 
+  it("rejects a counter filed under another mode than its decks, naming the file and row", () => {
+    const dir = tempRecord(null, () => {});
+    const edge = {
+      mode: "guild_conquest",
+      team: "cherry",
+      beaten_by: "meso",
+      why: "w",
+      confidence: "low",
+      sources: ["dc:76135"],
+    };
+    writeFileSync(
+      join(dir, "curated", "counters.json"),
+      JSON.stringify([
+        { ...edge, id: "cherry-vs-meso" },
+        { ...edge, id: "cherry-vs-meso-arena", mode: "arena" },
+      ]),
+    );
+    editJson<{ collections: Record<string, string> }>(dir, "curated/manifest.json", (m) => {
+      m.collections.counters = "counters.json";
+    });
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(ImportError);
+    expect(() => importRecord(store, dir)).toThrow(
+      /counters\.json \[1\]: counter mode arena doesn't match deck cherry's mode guild_conquest/,
+    );
+    expectEmpty(store);
+  });
+
   it("rejects a rule filed under another mode's block, naming the row", () => {
     const dir = tempRecord(null, () => {});
     editJson<Record<string, unknown>>(dir, "curated/meta.json", (meta) => {

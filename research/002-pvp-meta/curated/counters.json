@@ -100,16 +100,6 @@
     "sources": ["dc:67269", "dc:74792"]
   },
   {
-    "id": "wizard-vs-bari-oven",
-    "mode": "arena",
-    "team": "arena-wizard",
-    "beaten_by": "arena-bari-oven-cola",
-    "conditions": "Bari at 5★ or more with Oven Wanderer.",
-    "why": "The charge burst kills the Wizard deck before it stabilises; its author calls the matchup catastrophic.",
-    "confidence": "medium",
-    "sources": ["nv:45902"]
-  },
-  {
     "id": "ranged-vs-standard-12",
     "mode": "rumble_arena",
     "team": "rumble-ranged",
@@ -174,10 +164,10 @@
     "mode": "rumble_arena",
     "team": "rumble-wizard",
     "beaten_by": "rumble-standard-12",
-    "conditions": "Any early-sweep Bari deck.",
-    "why": "The Wizard deck is wiped in the opening seconds, before Wizard gets going.",
+    "conditions": "Any early-sweep Bari deck; the author calls it catastrophic once Bari is 5★ or more with Oven Wanderer. Stated from about 100 fights, no loss shown.",
+    "why": "The charge burst wipes the Wizard deck in the opening seconds, before Wizard gets going.",
     "confidence": "medium",
-    "sources": ["dc:74028"]
+    "sources": ["dc:74028", "nv:45902"]
   },
   {
     "id": "ranged-vs-wizard",

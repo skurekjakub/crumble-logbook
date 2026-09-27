@@ -257,6 +257,101 @@ describe("importing several records", () => {
   });
 });
 
+describe("ids another record already loaded", () => {
+  let tmp: string | undefined;
+  afterEach(() => {
+    if (tmp) rmSync(tmp, { recursive: true, force: true });
+    tmp = undefined;
+  });
+
+  const conquestManifest = JSON.parse(
+    readFileSync(join(conquestDir, "import.json"), "utf-8"),
+  ) as Record<string, unknown> & { record: object };
+  const cite = Object.keys(conquestSources)[0]!;
+
+  /** A curated deck of mode arena with `id`, citing a record 001 source. */
+  const deck = (id: string) => ({
+    id,
+    mode: "arena",
+    name_en: id,
+    status: "niche",
+    cookies: [{ kr: "우유", level: "100", why: "w" }],
+    sources: [cite],
+  });
+
+  /**
+   * Builds a record `003-clash` from record 001's sources, glossary and
+   * meta, with `decks` and `counters` as its only other content.
+   */
+  function clashRecord(decks: object[], counters: object[]): string {
+    tmp = mkdtempSync(join(tmpdir(), "crumble-clash-"));
+    cpSync(join(conquestDir, "curated"), join(tmp, "curated"), { recursive: true });
+    for (const file of ["runes", "gear", "scores", "mechanics", "rng", "timeline", "takeaways"]) {
+      writeFileSync(join(tmp, "curated", `${file}.json`), "[]");
+    }
+    writeFileSync(join(tmp, "curated", "decks.json"), JSON.stringify(decks));
+    writeFileSync(join(tmp, "curated", "counters.json"), JSON.stringify(counters));
+    const manifestFile = join(tmp, "curated", "manifest.json");
+    const curatedManifest = JSON.parse(readFileSync(manifestFile, "utf-8")) as {
+      collections: Record<string, string>;
+    };
+    curatedManifest.collections.counters = "counters.json";
+    writeFileSync(manifestFile, JSON.stringify(curatedManifest));
+    mkdirSync(join(tmp, "extract"));
+    writeFileSync(
+      join(tmp, "import.json"),
+      JSON.stringify({
+        ...conquestManifest,
+        record: { ...conquestManifest.record, slug: "003-clash" },
+        extractions: "extract",
+        captures: [],
+        rankings: [],
+        fightEvents: undefined,
+        buffValues: undefined,
+      }),
+    );
+    return tmp;
+  }
+
+  it("rejects a deck id another record loaded, naming the file, row and record, and writes nothing", () => {
+    const store = testStore();
+    importRecord(store, pvpDir);
+    const before = exportSnapshot(store);
+    const dir = clashRecord([deck("clash-new"), deck(decks[0]!.id)], []);
+    expect(() => importRecord(store, dir)).toThrow(ImportError);
+    expect(() => importRecord(store, dir)).toThrow(
+      `curated/decks.json [1]: deck id "${decks[0]!.id}" is already loaded by record ${PVP}`,
+    );
+    expect(exportSnapshot(store)).toEqual(before);
+  });
+
+  it("rejects a counter slug another record loaded, naming the file, row and record, and writes nothing", () => {
+    const store = testStore();
+    importRecord(store, pvpDir);
+    const before = exportSnapshot(store);
+    const edge = {
+      mode: "arena",
+      team: "clash-a",
+      beaten_by: "clash-b",
+      why: "w",
+      confidence: "low",
+      sources: [cite],
+    };
+    const dir = clashRecord(
+      [deck("clash-a"), deck("clash-b")],
+      [
+        { ...edge, id: "clash-a-vs-clash-b" },
+        { ...edge, id: counters[0]!.id },
+      ],
+    );
+    expect(() => importRecord(store, dir)).toThrow(ImportError);
+    expect(() => importRecord(store, dir)).toThrow(
+      `curated/counters.json [1]: counter slug "${counters[0]!.id}" is already loaded by record ${PVP}`,
+    );
+    expect(exportSnapshot(store)).toEqual(before);
+  });
+});
+
 /** The table each repo write method writes, when it isn't the repo's own. */
 const WRITES: Record<string, TableKey> = {
   "records.upsert": "researchRecords",
