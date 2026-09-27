@@ -1,13 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import {
-  createRootRouteWithContext,
-  Outlet,
-  useLocation,
-  useNavigate,
-} from "@tanstack/react-router";
+import { createRootRouteWithContext, Outlet, useLocation } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { decksQuery, recordQuery, sourcesQuery } from "../api/queries";
-import type { AppPath, Section, SectionTab, StampStat } from "../app/modes";
+import type { Section, StampStat } from "../app/modes";
 import { activeTab, SECTIONS, sectionForPath } from "../app/modes";
 import type { RouterContext } from "../app/router-context";
 import { ErrorBox } from "../components/ErrorBox";
@@ -35,25 +30,14 @@ function headerContext(section: Section | undefined): ReactNode {
   return section.labelKr ? <span className="kr">{section.labelKr}</span> : section.label;
 }
 
-/** The DOM id of the tab labelling the panel: the selected sub-tab, else the section's tab. */
-function panelLabelId(
-  section: Section | undefined,
-  tab: SectionTab | undefined,
-): string | undefined {
-  if (!section) return undefined;
-  return tab ? `tab-${section.id}-${tab.id}` : `tab-${section.id}`;
-}
-
 /**
  * The app chrome: header (from the active mode's research record, with the
  * record's own lede for that mode when it has one, and figures scoped to
- * the record and mode), mode and
- * shared-section tabs, the active section's sub-tabs, the view in a tab
- * panel, and the footer.
+ * the record and mode), the mode and shared-section links, the active
+ * section's links, the view in the main landmark, and the footer.
  */
 function RootLayout() {
   const pathname = useLocation({ select: (l) => l.pathname });
-  const navigate = useNavigate();
   const section = sectionForPath(pathname);
   const tab = section ? activeTab(section.tabs, pathname) : undefined;
   const stamp = section?.stamp ?? [];
@@ -80,7 +64,7 @@ function RootLayout() {
     (modeLede ?? record.data?.lede ?? section?.lede ?? "")
   );
 
-  const go = (target: { to: AppPath }) => () => void navigate({ to: target.to });
+  const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
 
   return (
     <div className="wrap">
@@ -94,11 +78,11 @@ function RootLayout() {
         className="modes"
         label="Game modes and shared sections"
         items={SECTIONS.map((s, i) => ({
-          domId: `tab-${s.id}`,
+          id: s.id,
           label: s.label,
-          selected: s.id === section?.id,
+          to: s.to,
+          current: s.id !== section?.id ? null : path === s.to ? "page" : "section",
           startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",
-          onSelect: go(s),
         }))}
       />
       {section && section.tabs.length > 0 && (
@@ -106,15 +90,15 @@ function RootLayout() {
           className="sub"
           label={`${section.label} sections`}
           items={section.tabs.map((t) => ({
-            domId: `tab-${section.id}-${t.id}`,
+            id: t.id,
             label: t.label,
-            selected: t.id === tab?.id,
-            onSelect: go(t),
+            to: t.to,
+            current: t.id === tab?.id ? "page" : null,
           }))}
         />
       )}
       <main>
-        <section className="panel" role="tabpanel" aria-labelledby={panelLabelId(section, tab)}>
+        <section className="panel">
           <Outlet />
         </section>
       </main>

@@ -17,12 +17,22 @@
   align-content: start;
 }
 
-/* A cited note inside a card; low-confidence notes get the same hatch as the track. */
+/* A cited note inside a card, and a cited one-line fact; unverified ones get the same hatch as the track. */
 .boss-note {
   display: grid;
   gap: 4px;
 }
+.boss-fact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+.boss-fact + .boss-fact {
+  margin-top: 4px;
+}
 .boss-note.low,
+.boss-fact.low,
 .fe-list li.low {
   border-left: 3px dashed var(--bad);
   padding-left: 10px;
@@ -137,7 +147,10 @@
   color: var(--ink-2);
 }
 
-/* Buff-table and checklist marks. */
+/* Buff-table and checklist marks; a value carried over from the column to its left is greyed. */
+.carried {
+  color: var(--ink-3);
+}
 .boss-mark {
   display: inline-block;
   margin-left: 6px;

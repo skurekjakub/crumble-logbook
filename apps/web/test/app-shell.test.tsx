@@ -68,28 +68,35 @@ describe("app shell", () => {
     );
   });
 
-  it("shows mode tabs, shared sections and the Guild Conquest sub-tabs", async () => {
+  it("shows mode links, shared sections and the Guild Conquest section links, marking the current ones", async () => {
     await renderAt("/conquest/decks");
-    const modes = screen.getByRole("tablist", { name: "Game modes and shared sections" });
+    const modes = screen.getByRole("navigation", { name: "Game modes and shared sections" });
     expect(
       within(modes)
-        .getAllByRole("tab")
+        .getAllByRole("link")
         .map((t) => t.textContent),
     ).toEqual(["Guild Conquest", "Arena", "Rumble Arena", "Research", "Sources", "Glossary"]);
-    expect(within(modes).getByRole("tab", { name: "Guild Conquest" })).toHaveAttribute(
-      "aria-selected",
-      "true",
+    const conquest = within(modes).getByRole("link", { name: "Guild Conquest" });
+    expect(conquest).toHaveAttribute("href", "/conquest");
+    expect(conquest).toHaveAttribute("aria-current", "true");
+    expect(within(modes).getByRole("link", { name: "Arena" })).not.toHaveAttribute("aria-current");
+    const sub = screen.getByRole("navigation", { name: "Guild Conquest sections" });
+    const decks = within(sub).getByRole("link", { name: "Decks" });
+    expect(decks).toHaveAttribute("href", "/conquest/decks");
+    expect(decks).toHaveAttribute("aria-current", "page");
+    expect(within(sub).getByRole("link", { name: "Overview" })).not.toHaveAttribute("aria-current");
+    expect(screen.queryByRole("tab")).toBeNull();
+    expect(screen.queryByRole("tabpanel")).toBeNull();
+    expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+
+  it("marks a mode link as the current page on the mode's landing page", async () => {
+    await renderAt("/conquest");
+    const modes = screen.getByRole("navigation", { name: "Game modes and shared sections" });
+    expect(within(modes).getByRole("link", { name: "Guild Conquest" })).toHaveAttribute(
+      "aria-current",
+      "page",
     );
-    const sub = screen.getByRole("tablist", { name: "Guild Conquest sections" });
-    expect(within(sub).getByRole("tab", { name: "Decks" })).toHaveAttribute(
-      "aria-selected",
-      "true",
-    );
-    expect(within(sub).getByRole("tab", { name: "Overview" })).toHaveAttribute(
-      "aria-selected",
-      "false",
-    );
-    expect(screen.getByRole("tabpanel")).toHaveAttribute("aria-labelledby", "tab-conquest-decks");
   });
 
   it("redirects / to /conquest", async () => {
@@ -97,12 +104,12 @@ describe("app shell", () => {
     await waitFor(() => expect(router.state.location.pathname).toBe("/conquest"));
   });
 
-  it("navigates when a tab is clicked", async () => {
+  it("navigates when a link is clicked", async () => {
     const router = await renderAt("/conquest");
-    fireEvent.click(screen.getByRole("tab", { name: "Arena" }));
+    fireEvent.click(screen.getByRole("link", { name: "Arena" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/arena"));
-    expect(await screen.findByRole("tablist", { name: "Arena sections" })).toBeVisible();
-    expect(screen.queryByRole("tablist", { name: "Guild Conquest sections" })).toBeNull();
+    expect(await screen.findByRole("navigation", { name: "Arena sections" })).toBeVisible();
+    expect(screen.queryByRole("navigation", { name: "Guild Conquest sections" })).toBeNull();
   });
 
   it("keeps the app working when the research record fails to load", async () => {
@@ -111,14 +118,17 @@ describe("app shell", () => {
       "/api/records/001-guild-conquest-meta": { status: 500, body: { error: "internal" } },
     });
     expect(await screen.findByRole("alert")).toHaveTextContent("Couldn't load research record");
-    expect(screen.getByRole("tablist", { name: "Game modes and shared sections" })).toBeVisible();
-    expect(screen.getByRole("tabpanel")).toBeInTheDocument();
+    expect(
+      screen.getByRole("navigation", { name: "Game modes and shared sections" }),
+    ).toBeVisible();
+    expect(screen.getByRole("main")).toBeInTheDocument();
   });
 
-  it("shows the generic chrome on a shared section", async () => {
+  it("shows the generic chrome on a shared section, with no empty lede", async () => {
     await renderAt("/sources");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Crumble Logbook");
-    expect(screen.getByRole("tab", { name: "Sources" })).toHaveAttribute("aria-selected", "true");
-    expect(screen.queryByRole("tablist", { name: "Guild Conquest sections" })).toBeNull();
+    expect(screen.getByRole("link", { name: "Sources" })).toHaveAttribute("aria-current", "page");
+    expect(screen.queryByRole("navigation", { name: "Guild Conquest sections" })).toBeNull();
+    expect(document.querySelector("header.top .lede")).toBeNull();
   });
 });

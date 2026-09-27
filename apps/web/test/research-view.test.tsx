@@ -52,10 +52,10 @@ const card = async (slug: string) =>
 describe("/research", () => {
   it("sits among the shared sections with the generic chrome", async () => {
     await renderRoute("/research", API);
-    const modes = screen.getByRole("tablist", { name: "Game modes and shared sections" });
-    expect(within(modes).getByRole("tab", { name: "Research" })).toHaveAttribute(
-      "aria-selected",
-      "true",
+    const modes = screen.getByRole("navigation", { name: "Game modes and shared sections" });
+    expect(within(modes).getByRole("link", { name: "Research" })).toHaveAttribute(
+      "aria-current",
+      "page",
     );
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Crumble Logbook");
   });

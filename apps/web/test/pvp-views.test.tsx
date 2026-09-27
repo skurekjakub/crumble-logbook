@@ -336,8 +336,8 @@ function api(mode: ModeSection): Record<string, Canned> {
 const renderAt = (path: string, mode: ModeSection, overrides: Record<string, Canned> = {}) =>
   renderRoute(path, { ...api(mode), ...overrides }, { mode });
 
-/** The view's tab panel. */
-const panel = () => within(screen.getByRole("tabpanel"));
+/** The view's main landmark. */
+const panel = () => within(screen.getByRole("main"));
 
 /** The stamp's label → value pairs. */
 function stamp(): Record<string, string> {
@@ -372,10 +372,10 @@ describe("PvP chrome", () => {
 
   it("shows each PvP mode's sub-tabs", async () => {
     await renderAt("/arena/counters", ARENA);
-    const sub = screen.getByRole("tablist", { name: "Arena sections" });
+    const sub = screen.getByRole("navigation", { name: "Arena sections" });
     expect(
       within(sub)
-        .getAllByRole("tab")
+        .getAllByRole("link")
         .map((t) => t.textContent),
     ).toEqual([
       "Overview",
@@ -387,9 +387,9 @@ describe("PvP chrome", () => {
       "Mechanics",
       "Timeline",
     ]);
-    expect(within(sub).getByRole("tab", { name: "Counters" })).toHaveAttribute(
-      "aria-selected",
-      "true",
+    expect(within(sub).getByRole("link", { name: "Counters" })).toHaveAttribute(
+      "aria-current",
+      "page",
     );
   });
 });
@@ -494,12 +494,15 @@ describe("PvP teams", () => {
 });
 
 describe("PvP counters", () => {
+  /** A matrix heading's English name, without the Korean beneath it. */
+  const english = (th: Element) => (th.querySelector(".name-stack")?.firstChild ?? th).textContent;
+
   /** The matrix's column headings and each row's heading and cell texts. */
   function matrix() {
     const table = screen.getByRole("table", { name: /beaten by/i });
-    const columns = [...table.querySelectorAll("thead th")].slice(1).map((th) => th.textContent);
+    const columns = [...table.querySelectorAll("thead th")].slice(1).map(english);
     const rows = [...table.querySelectorAll("tbody tr")].map((tr) => ({
-      team: tr.querySelector("th")!.textContent,
+      team: english(tr.querySelector("th")!),
       cells: [...tr.querySelectorAll("td")],
     }));
     return { columns, rows };
@@ -519,14 +522,55 @@ describe("PvP counters", () => {
     expect(within(edge).getByRole("link")).toHaveAccessibleName(
       "Rye one-carry deck is beaten by Bari–Oven deck: medium confidence. Bari and Oven at 8–10★.",
     );
-    expect(edge).toHaveClass("ctr", "medium");
+    expect(within(edge).getByRole("link")).toHaveClass("medium");
     expect(edge).toHaveTextContent("mediumBari and Oven at 8–10★.");
     const reverse = cell("Bari–Oven deck", "Rye one-carry deck");
     expect(within(reverse).queryByRole("link")).toBeNull();
-    expect(reverse).not.toHaveClass("medium");
     expect(cell("Rye one-carry deck", "Rye one-carry deck")).toHaveClass("self");
-    expect(cell("Bari–Oven deck", "Crepe–Espresso deck")).toHaveClass("ctr", "low");
-    expect(cell("Crepe–Espresso deck", "Rye one-carry deck")).toHaveClass("ctr", "high");
+    expect(within(cell("Bari–Oven deck", "Crepe–Espresso deck")).getByRole("link")).toHaveClass(
+      "low",
+    );
+    expect(within(cell("Crepe–Espresso deck", "Rye one-carry deck")).getByRole("link")).toHaveClass(
+      "high",
+    );
+  });
+
+  it("names each team in English with its Korean name beneath, on both axes", async () => {
+    await renderAt("/arena/counters", ARENA);
+    const table = await panel().findByRole("table", { name: /beaten by/i });
+    const col = within(table).getByRole("columnheader", { name: /Rye one-carry deck/ });
+    expect(within(col).getByText("호밀 원툴덱")).toHaveClass("kr");
+    const row = within(table).getByRole("rowheader", { name: /Rye one-carry deck/ });
+    expect(within(row).getByText("호밀 원툴덱")).toHaveClass("kr");
+    const bari = within(table).getByRole("columnheader", { name: "Bari–Oven deck" });
+    expect(bari.querySelector(".kr")).toBeNull();
+  });
+
+  it("styles each edge in a cell by its own confidence", async () => {
+    const second = {
+      ...COUNTERS[0]!,
+      id: 5,
+      slug: "rye-vs-bari-late",
+      conditions: "Late-season Bari.",
+      confidence: "low",
+    } satisfies Counter;
+    await renderAt("/arena/counters", ARENA, {
+      "/api/counters?mode=arena": { body: [...COUNTERS, second] },
+    });
+    await panel().findByRole("table", { name: /beaten by/i });
+    const { columns, rows } = matrix();
+    const edge = rows.find((r) => r.team === "Rye one-carry deck")!.cells[
+      columns.indexOf("Bari–Oven deck")
+    ]!;
+    const links = within(edge).getAllByRole("link");
+    expect(links.map((a) => [a.classList.contains("medium"), a.classList.contains("low")])).toEqual(
+      [
+        [true, false],
+        [false, true],
+      ],
+    );
+    expect(edge).not.toHaveClass("medium");
+    expect(edge).not.toHaveClass("low");
   });
 
   it("gives a matchup that goes both ways two cells, each with its own conditions", async () => {
@@ -551,7 +595,7 @@ describe("PvP counters", () => {
     expect(there).toHaveTextContent("Bari and Oven at 8–10★.");
     expect(there).not.toHaveTextContent("Bari at 8★ or less.");
     expect(back).toHaveTextContent("Bari at 8★ or less.");
-    expect(back).toHaveClass("high");
+    expect(within(back).getByRole("link")).toHaveClass("high");
     expect(within(back).getByRole("link")).toHaveAttribute("href", "#counter-bari-vs-rye");
   });
 
@@ -638,7 +682,9 @@ describe("PvP builds, mechanics and timeline", () => {
   it("shows the mode's rune builds", async () => {
     await renderAt("/arena/runes", ARENA);
     expect(await panel().findByText("Rank behind Milk for the first beam.")).toBeVisible();
-    expect(await panel().findByRole("cell", { name: "Rye one-carry deck" })).toBeVisible();
+    expect(
+      (await panel().findAllByText("Rye one-carry deck", { selector: ".rune-decks" })).length,
+    ).toBeGreaterThan(0);
   });
 
   it("shows the mode's gear", async () => {

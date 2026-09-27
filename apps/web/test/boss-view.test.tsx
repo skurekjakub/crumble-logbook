@@ -111,7 +111,23 @@ function grades(
 }
 
 const TEA = { cookieKr: "실론나이트 쿠키", en: "Tea Knight Cookie" };
+const CHOCO_CHANCE = grades(
+  {
+    id: 4,
+    cookieKr: "다크초코 쿠키",
+    en: "Dark Choco Cookie",
+    effectType: "DefensePointReductionChance",
+  },
+  [20, 20, 20, 20, 20, 20],
+  { maxStack: 10, scalesWithCasterAmp: false },
+);
 const BUFF_VALUES = [
+  // Another debuffer with no English name, listed first: matching Dark Choco by `en` would pick it.
+  ...grades(
+    { id: 5, cookieKr: "미확인 쿠키", en: null, effectType: "DefensePointReductionChance" },
+    [35, 35, 35, 35, 35, 35],
+    { scalesWithCasterAmp: false },
+  ),
   ...grades({ id: 1, ...TEA, effectType: "BossDamageRateAddition" }, [45, 50, 55, 60, 65, 70]),
   ...grades({ id: 2, ...TEA, effectType: "DefensePointMultiplier" }, [10, 20, 30, 40, 50, 60], {
     maxStack: 2,
@@ -127,70 +143,103 @@ const BUFF_VALUES = [
     [6, 6.8, 7.6, 8.4, 9.2, 10],
     { maxStack: 10, base: "CastersAttackPoint" },
   ),
-  ...grades(
-    {
-      id: 4,
-      cookieKr: "다크초코 쿠키",
-      en: "Dark Choco Cookie",
-      effectType: "DefensePointReductionChance",
-    },
-    [20, 20, 20, 20, 20, 20],
-    { maxStack: 10, scalesWithCasterAmp: false },
-  ),
+  ...CHOCO_CHANCE,
 ];
 
+/** A conquest mechanic with defaults for the fields a test doesn't care about. */
+function mechanic(
+  m: Pick<Mechanic, "id" | "title" | "body" | "confidence" | "topic"> & Partial<Mechanic>,
+): Mechanic {
+  return { mode: "guild_conquest", recordSlug: null, sources: [], ...m };
+}
+
+/** Titles here deliberately don't name what the screen shows them as: the view selects by topic. */
 const MECHANICS = [
-  {
+  mechanic({
     id: 6,
-    mode: "guild_conquest",
-    topic: null,
-    recordSlug: null,
-    title: "Brightseeker haste breakpoint",
+    topic: "haste_breakpoint",
+    title: "Drone uptime",
     body: "Haste pays off steeply until about 40 total; past about 58 her drones split onto adds.",
     confidence: "medium",
     sources: ["dc:76135"],
-  },
-  {
+  }),
+  mechanic({
     id: 12,
-    mode: "guild_conquest",
-    topic: null,
-    recordSlug: null,
-    title: "Surviving the 17 s wipe",
+    topic: "survival_wipe",
+    title: "Living to the buzzer",
     body: "Posters put the floor at about 9M HP and 45% damage reduction per surviving cookie.",
     confidence: "medium",
     sources: ["nv:43653"],
-  },
-  {
+  }),
+  mechanic({
     id: 16,
-    mode: "guild_conquest",
-    topic: null,
-    recordSlug: null,
-    title: "HP to survive the slam",
+    topic: "survival_slam",
+    title: "First big hit",
     body: "Cookies need about 3.5–4M HP to live through the 30 s slam.",
-    confidence: "medium",
-    sources: [],
-  },
-  {
-    id: 10,
-    mode: "guild_conquest",
+    confidence: "low",
+  }),
+  mechanic({
+    id: 17,
     topic: null,
-    recordSlug: null,
-    title: "Octo Wasabi pet",
+    title: "Surviving the slam without topic",
+    body: "A survival-sounding title with no topic stays off the boss screen.",
+    confidence: "high",
+  }),
+  mechanic({
+    id: 10,
+    topic: "atk_pet",
+    title: "The pet",
     body: "The bonus isn't shown on the stat screen, so ATK-order tuning has to add it by hand.",
     confidence: "medium",
-    sources: [],
-  },
-  {
+  }),
+  mechanic({
     id: 4,
-    mode: "guild_conquest",
     topic: null,
-    recordSlug: null,
     title: "Crit above 100%",
     body: "Crit rate past 100% rolls extra crit tiers.",
     confidence: "high",
-    sources: [],
-  },
-] satisfies Mechanic[];
+  }),
+  mechanic({
+    id: 20,
+    topic: "boss_element",
+    title: "Element",
+    body: "Dark: the lobby shows the moon icon.",
+    confidence: "high",
+    sources: ["dc:76135"],
+  }),
+  mechanic({
+    id: 21,
+    topic: "boss_weakness",
+    title: "Weakness",
+    body: "Light: the lobby marks the sun icon.",
+    confidence: "high",
+    sources: ["nv:43653"],
+  }),
+  mechanic({
+    id: 22,
+    topic: "boss_score",
+    title: "Scoring",
+    body: "Damage dealt before the timer ends the fight; an early wipe keeps its damage.",
+    confidence: "medium",
+    sources: ["web:crumbgg:rankings-s5"],
+  }),
+  mechanic({
+    id: 23,
+    topic: "buff_formula",
+    title: "Buff formula",
+    body: "A buff is base × value × (1 + the caster's skill amp).",
+    confidence: "medium",
+    sources: ["web:crumbgg:rankings-s5"],
+  }),
+  mechanic({
+    id: 24,
+    topic: "debuff_formula",
+    title: "Debuff formula",
+    body: "Chance = base chance × (focus ÷ resist + focus% − resist%).",
+    confidence: "medium",
+    sources: ["dc:76135"],
+  }),
+];
 
 const RUNE_BUILDS = [
   {
@@ -293,9 +342,13 @@ const GEAR = [
   },
 ] satisfies GearRec[];
 
+/** The buff-values request for one cookie, as the client encodes it. */
+const buffsOf = (cookie: string) => `/api/buff-values?cookie=${encodeURIComponent(cookie)}`;
+
 const FULL = {
   "/api/fight-events?boss=pinata": { body: FIGHT_EVENTS },
   "/api/buff-values": { body: BUFF_VALUES },
+  [buffsOf("닼초")]: { body: CHOCO_CHANCE },
   "/api/mechanics?mode=guild_conquest": { body: MECHANICS },
   "/api/rune-builds?mode=guild_conquest": { body: RUNE_BUILDS },
   "/api/decks?mode=guild_conquest": { body: DECKS },
@@ -305,6 +358,7 @@ const FULL = {
 const EMPTY = {
   "/api/fight-events?boss=pinata": { body: [] },
   "/api/buff-values": { body: [] },
+  [buffsOf("닼초")]: { body: [] },
   "/api/mechanics?mode=guild_conquest": { body: [] },
   "/api/rune-builds?mode=guild_conquest": { body: [] },
   "/api/decks?mode=guild_conquest": { body: [] },
@@ -315,23 +369,51 @@ const EMPTY = {
 const section = (name: string) => screen.getByRole("region", { name });
 
 describe("Piñata boss view", () => {
-  it("heads the page with the boss's names, element, weakness, fight length and scoring", async () => {
+  it("heads the page with the boss's names and its cited element, weakness, fight length and scoring", async () => {
     await renderRoute(PATH, FULL);
     expect(await screen.findByRole("heading", { level: 2 })).toHaveTextContent(
       "Extra Stuffed Piñata",
     );
     expect(screen.getByText("지나치게 무거워진 피냐타")).toHaveClass("kr");
     const kv = document.querySelector("dl.kv") as HTMLElement;
-    expect(within(kv).getByText("Element").nextElementSibling).toHaveTextContent("Dark");
-    expect(within(kv).getByText("Weak to").nextElementSibling).toHaveTextContent("Light");
+    const dd = async (label: string) =>
+      (await within(kv).findByText(label)).nextElementSibling as HTMLElement;
+
+    const element = await dd("Element");
+    expect(element).toHaveTextContent("Dark: the lobby shows the moon icon.");
+    expect(within(element).getByText("high")).toHaveClass("pill", "high");
+    expect(await within(element).findByRole("link", { name: "DC 76135" })).toBeVisible();
+
+    const weak = await dd("Weak to");
+    expect(weak).toHaveTextContent("Light: the lobby marks the sun icon.");
+    expect(within(weak).getByText("high")).toHaveClass("pill", "high");
+    expect(await within(weak).findByRole("link", { name: "Naver 43653" })).toBeVisible();
+
     const length = await within(kv).findByText("60 s");
     expect(length.closest("dd")).toHaveTextContent("60 s");
     expect(
       await within(length.closest("dd")!).findByRole("link", { name: "crumbgg:rankings-s5" }),
     ).toBeVisible();
-    expect(within(kv).getByText("Score").nextElementSibling).toHaveTextContent(
-      /cumulative damage.*kept even after a wipe/i,
-    );
+
+    const score = await dd("Score");
+    expect(score).toHaveTextContent("an early wipe keeps its damage");
+    expect(within(score).getByText("medium")).toHaveClass("pill", "medium");
+    expect(await within(score).findByRole("link", { name: "crumbgg:rankings-s5" })).toBeVisible();
+  });
+
+  it("states no element, weakness or scoring the data doesn't hold", async () => {
+    await renderRoute(PATH, {
+      ...FULL,
+      "/api/mechanics?mode=guild_conquest": {
+        body: MECHANICS.filter((m) => !m.topic?.startsWith("boss_")),
+      },
+    });
+    const kv = document.querySelector("dl.kv") as HTMLElement;
+    expect(await within(kv).findByText("60 s")).toBeVisible();
+    expect(within(kv).queryByText("Element")).toBeNull();
+    expect(within(kv).queryByText("Weak to")).toBeNull();
+    expect(within(kv).queryByText("Score")).toBeNull();
+    expect(kv).not.toHaveTextContent(/Dark|Light|wipe/);
   });
 
   it("places each timed event on a 0–60 s track, with the in-game countdown under it", async () => {
@@ -387,13 +469,14 @@ describe("Piñata boss view", () => {
     expect(within(slam).getByText("high")).toHaveClass("pill", "high");
   });
 
-  it("shows what it takes to survive the slam and the wipe, from the events and mechanics", async () => {
+  it("shows what it takes to survive the slam and the wipe, from the events and the mechanics by topic", async () => {
     await renderRoute(PATH, FULL);
     await screen.findByText("Cookies need about 3.5–4M HP to live through the 30 s slam.");
     const survival = section("Survival");
     const slam = within(survival).getByRole("heading", { name: "The 30 s slam" }).closest(".card")!;
     expect(slam).toHaveTextContent("front row ~4.5M / back row ~3.5M HP");
     expect(slam).toHaveTextContent("30 s · 30 s left");
+    expect(slam).toHaveTextContent("First big hit");
     expect(slam).toHaveTextContent("3.5–4M HP");
     const wipe = within(survival)
       .getByRole("heading", { name: "The 17 s super-jump wipe" })
@@ -403,6 +486,41 @@ describe("Piñata boss view", () => {
     expect(wipe).toHaveTextContent("Cookies begin dying individually");
     expect(await within(wipe).findByRole("link", { name: "Naver 43653" })).toBeVisible();
     expect(survival).not.toHaveTextContent("Crit rate past 100%");
+    expect(survival).not.toHaveTextContent("survival-sounding title");
+  });
+
+  it("titles each survival card by the countdown at its event, not a fixed time", async () => {
+    await renderRoute(PATH, {
+      ...FULL,
+      "/api/fight-events?boss=pinata": {
+        body: FIGHT_EVENTS.map((e) =>
+          e.event === "fight_length"
+            ? { ...e, tElapsed: 90 }
+            : e.event === "super_jump_wipe"
+              ? { ...e, tElapsed: 70 }
+              : e,
+        ),
+      },
+    });
+    const survival = await screen.findByRole("region", { name: "Survival" });
+    expect(await within(survival).findByRole("heading", { name: "The 60 s slam" })).toBeVisible();
+    expect(
+      within(survival).getByRole("heading", { name: "The 20 s super-jump wipe" }),
+    ).toBeVisible();
+  });
+
+  it("hatches a low-confidence mechanic in a card and labels it an unverified claim (RF4)", async () => {
+    await renderRoute(PATH, FULL);
+    const note = (
+      await screen.findByText("Cookies need about 3.5–4M HP to live through the 30 s slam.")
+    ).closest(".boss-note")!;
+    expect(note).toHaveClass("low");
+    expect(within(note as HTMLElement).getByText("unverified claim")).toHaveClass("pill", "low");
+    const wipeNote = screen
+      .getByText(/9M HP and 45% damage reduction/)
+      .closest(".boss-note") as HTMLElement;
+    expect(wipeNote).not.toHaveClass("low");
+    expect(within(wipeNote).getByText("medium")).toHaveClass("pill", "medium");
   });
 
   it("pivots buff grades into star columns, with Tea Knight's boss-damage buff at 70% from 9★", async () => {
@@ -429,8 +547,33 @@ describe("Piñata boss view", () => {
     expect(milk[1]).toContain("share of the caster's ATK");
     expect(milk[7]).toBe("10%");
     expect(milk[8]).toBe("×10");
-    expect(within(buffs).getByText(/value × \(1 \+ the caster's skill amp\)/)).toBeVisible();
-    expect(buffs).toHaveTextContent(/Milk Cookie's Crunchy Strong Pediatrician runs ATK%/);
+    const formula = within(buffs)
+      .getByText("A buff is base × value × (1 + the caster's skill amp).")
+      .closest(".boss-note") as HTMLElement;
+    expect(within(formula).getByText("medium")).toHaveClass("pill", "medium");
+    expect(await within(formula).findByRole("link", { name: "crumbgg:rankings-s5" })).toBeVisible();
+    expect(buffs).not.toHaveTextContent(/runs ATK%/);
+  });
+
+  it("explains the star columns without claiming a dash holds a value", async () => {
+    await renderRoute(PATH, FULL);
+    const buffs = await screen.findByRole("region", { name: "Buffs by star" });
+    await within(buffs).findByRole("table");
+    expect(buffs).toHaveTextContent(/a greyed value is unchanged from the column to its left/i);
+  });
+
+  it("writes no formula note of its own when the data has no formula mechanics", async () => {
+    await renderRoute(PATH, {
+      ...FULL,
+      "/api/mechanics?mode=guild_conquest": {
+        body: MECHANICS.filter((m) => !m.topic?.endsWith("_formula")),
+      },
+    });
+    const buffs = await screen.findByRole("region", { name: "Buffs by star" });
+    await within(buffs).findByRole("table");
+    await screen.findByText(/haste pays off steeply/i);
+    expect(buffs).not.toHaveTextContent(/skill amp/);
+    expect(buffs).not.toHaveTextContent(/focus/);
   });
 
   it("marks Tea Knight's DEF buff as self-only and Dark Choco's row as an application chance", async () => {
@@ -445,31 +588,40 @@ describe("Piñata boss view", () => {
     expect(within(team).queryByText("self only")).toBeNull();
     const shred = trs.find((tr) => tr.textContent!.includes("DEF shred"))!;
     expect(within(shred).getByText("chance")).toBeVisible();
-    expect(buffs).toHaveTextContent(/Dark Choco Cookie's row is an application chance/);
-    expect(buffs).toHaveTextContent(/focus/);
+    expect(buffs).toHaveTextContent(
+      /미확인 쿠키's and Dark Choco Cookie's rows are application chances, not buff sizes/,
+    );
+    const formula = within(buffs)
+      .getByText(/Chance = base chance × \(focus ÷ resist/)
+      .closest(".boss-note") as HTMLElement;
+    expect(within(formula).getByText("medium")).toHaveClass("pill", "medium");
+    expect(await within(formula).findByRole("link", { name: "DC 76135" })).toBeVisible();
   });
 
-  it("gives the deck's rune guidance, the Brightseeker haste breakpoint and Dark Choco's focus question", async () => {
+  it("gives one card per deck cookie, reason first, with the haste breakpoint and Dark Choco's chance on theirs", async () => {
     await renderRoute(PATH, FULL);
     await screen.findByText(/haste pays off steeply/i);
     const run = section("What to run");
-    const haste = within(run)
-      .getByText(/haste pays off steeply/i)
-      .closest(".card")!;
-    expect(haste).toHaveTextContent("Brightseeker haste breakpoint");
-    expect(haste).toHaveTextContent("44.6–49.6");
-    expect(haste).toHaveTextContent("peeled off onto adds");
-    const choco = within(run)
-      .getByRole("heading", { name: "Dark Choco: haste or focus" })
-      .closest(".card")!;
-    expect(choco).toHaveTextContent("focus raises her debuff proc chance");
-    expect(choco).toHaveTextContent("DEF shred base application chance: 20% by star");
-    const rows = bodyRows(within(run).getByRole("table"));
-    expect(rows.map((r) => r[0])).toEqual([
+    const cards = [...run.querySelectorAll<HTMLElement>(".rune-card")];
+    expect(cards.map((c) => c.querySelector("h4")!.textContent)).toEqual([
       expect.stringContaining("Brightseeker"),
       expect.stringContaining("Dark Choco"),
     ]);
-    expect(rows[0]![2]).toContain("Disputed: At 58.6 haste");
+    const [seeker, choco] = cards as [HTMLElement, HTMLElement];
+    const why = within(seeker).getByText(/top posters run 44\.6–49\.6/);
+    const lines = within(seeker).getByText("Skill haste first (target 40–50 total with gear)");
+    expect(why.compareDocumentPosition(lines) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(seeker).toHaveTextContent("Disputed: At 58.6 haste");
+    expect(seeker).toHaveTextContent(/haste pays off steeply/i);
+    expect(within(seeker).getByText("medium")).toHaveClass("pill", "medium");
+
+    expect(choco).toHaveTextContent("focus raises her debuff proc chance");
+    expect(choco).toHaveTextContent("DEF shred base application chance: 20% at every star.");
+    expect(within(choco).getByRole("link", { name: /Buffs by star/ })).toHaveAttribute(
+      "href",
+      "#boss-buffs",
+    );
+    expect(choco).not.toHaveTextContent("35%");
     expect(within(run).getByText("Damage reduction + HP")).toBeVisible();
     expect(within(run).queryByText("Skill amp + crit rate (arena)")).toBeNull();
   });

@@ -72,6 +72,7 @@ export function GlossaryView({ search: { kind, q }, onSearch }: GlossaryViewProp
               placeholder: "Search Korean or English",
             }}
             select={{
+              name: "Kind",
               label: "All kinds",
               options: Object.entries(KIND_LABELS),
               value: kind ?? "",

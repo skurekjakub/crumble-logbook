@@ -94,6 +94,7 @@ export function SourcesView({ search: { site, q }, onSearch }: SourcesViewProps)
               placeholder: "Search titles",
             }}
             select={{
+              name: "Site",
               label: "All sites",
               options: Object.entries(SITE_LABELS),
               value: site ?? "",

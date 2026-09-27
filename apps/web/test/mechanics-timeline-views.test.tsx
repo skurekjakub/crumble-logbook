@@ -67,6 +67,31 @@ describe("mechanics view", () => {
     expect(screen.getByText("low")).toHaveClass("pill", "low");
   });
 
+  it("leaves out the topics the mode shows elsewhere, and keeps the rest", async () => {
+    const row = (id: number, topic: string | null, title: string): Mechanic => ({
+      ...MECHANICS[0]!,
+      id,
+      topic,
+      title,
+    });
+    await renderRoute("/conquest/mechanics", {
+      "/api/mechanics?mode=guild_conquest": {
+        body: [
+          row(10, "rules", "A rule"),
+          row(11, "boss_element", "The boss's element"),
+          row(12, "boss_weakness", "The boss's weakness"),
+          row(13, "boss_score", "How a run is scored"),
+          row(14, "buff_formula", "The buff formula"),
+          row(15, "survival_wipe", "Surviving the wipe"),
+          row(16, null, "No topic"),
+        ],
+      },
+    });
+    await screen.findByRole("heading", { name: "No topic" });
+    const titles = screen.getAllByRole("heading", { level: 3 }).map((h) => h.textContent);
+    expect(titles).toEqual(["The buff formula", "Surviving the wipe", "No topic"]);
+  });
+
   it("shows the legacy empty message", async () => {
     await renderRoute("/conquest/mechanics", {
       "/api/mechanics?mode=guild_conquest": { body: [] },

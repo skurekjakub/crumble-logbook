@@ -5,10 +5,13 @@ import {
   effectLabel,
   eventLabel,
   formatPct,
+  markerRows,
   pivotBuffs,
   secondsLeft,
   staggerRows,
+  starCells,
   starLabel,
+  survivalTitle,
   trackPercent,
   whenLabel,
 } from "../src/lib/boss";
@@ -64,10 +67,25 @@ describe("fight track scale", () => {
     expect(whenLabel(null, FIGHT)).toBe("Off the clock");
   });
 
-  it("puts events closer than the gap on separate rows, reusing rows once clear", () => {
+  it("puts positions closer than the gap on separate rows, reusing rows once clear", () => {
     expect(staggerRows([0, 30, 33, 41, 43, 60], 4)).toEqual([0, 0, 1, 0, 1, 0]);
     expect(staggerRows([10, 10, 10], 4)).toEqual([0, 1, 2]);
     expect(staggerRows([], 4)).toEqual([]);
+  });
+
+  it("staggers markers by their rendered pixel distance, so a phone-width track needs more rows", () => {
+    const times = [30, 33, 41, 43, 46, 58];
+    // About 3.5 px per second: markers 5 s apart are 17.5 px apart and would overlap.
+    expect(markerRows(times, FIGHT, 210, 26)).toEqual([0, 1, 0, 1, 2, 0]);
+    // About 18 px per second: every marker clears its neighbour on one row.
+    expect(markerRows(times, FIGHT, 1100, 26)).toEqual([0, 0, 0, 0, 0, 0]);
+  });
+
+  it("titles a survival card by the in-game countdown at its anchor event", () => {
+    expect(survivalTitle("slam", 30, FIGHT)).toBe("The 30 s slam");
+    expect(survivalTitle("super-jump wipe", 43, FIGHT)).toBe("The 17 s super-jump wipe");
+    expect(survivalTitle("super-jump wipe", 43, 90)).toBe("The 47 s super-jump wipe");
+    expect(survivalTitle("slam", null, FIGHT)).toBe("Slam");
   });
 
   it("turns an event key into a sentence-case label", () => {
@@ -161,6 +179,44 @@ describe("buffs by star", () => {
     const def = pivot.at(-1)!;
     expect(def.selfOnly).toBe(true);
     expect(def.maxStack).toBe(2);
+  });
+
+  it("keeps two skills with the same effect type apart instead of merging them", () => {
+    const pivot = pivotBuffs([
+      buff({ cookieKr: TEA, effectType: "AttackPointAddition", valuePct: 5 }),
+      buff({
+        cookieKr: TEA,
+        effectType: "AttackPointAddition",
+        valuePct: 8,
+        base: "CastersAttackPoint",
+      }),
+      buff({ cookieKr: TEA, effectType: "AttackPointAddition", valuePct: 9 }),
+    ]);
+    expect(pivot.map((r) => [r.base, r.byStar])).toEqual([
+      ["Fixed", { 0: 5 }],
+      ["CastersAttackPoint", { 0: 8 }],
+      ["Fixed", { 0: 9 }],
+    ]);
+    expect(new Set(pivot.map((r) => r.key)).size).toBe(3);
+  });
+
+  it("carries a value across the star columns a row has no grade for", () => {
+    const pivot = pivotBuffs(rows);
+    const stars = buffStars(rows);
+    const def = pivot.find((r) => r.effectType === "DefensePointMultiplier")!;
+    expect(starCells(def, stars)).toEqual([
+      { value: 10, carried: false },
+      { value: 10, carried: true },
+      { value: 60, carried: false },
+    ]);
+    const late = pivotBuffs([
+      buff({ cookieKr: TEA, effectType: "X", fromStar: 3, valuePct: 5 }),
+    ])[0]!;
+    expect(starCells(late, [0, 3, 9])).toEqual([
+      { value: undefined, carried: false },
+      { value: 5, carried: false },
+      { value: 5, carried: true },
+    ]);
   });
 
   it("marks an application chance, which doesn't scale with skill amp", () => {

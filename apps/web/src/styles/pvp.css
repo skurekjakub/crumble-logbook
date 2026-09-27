@@ -73,7 +73,8 @@
   }
 }
 
-/* Counters: a directed matrix whose cells are shaded by confidence. */
+/* Counters: a directed matrix whose edges are shaded by their own confidence. The row
+   headings stick to the left edge so a wide matrix keeps its team names on a phone. */
 table.matrix caption {
   caption-side: top;
   text-align: left;
@@ -83,16 +84,31 @@ table.matrix th {
   min-width: 7.5em;
   max-width: 11em;
 }
+table.matrix th .kr {
+  font: 500 12px/1.3 var(--body);
+  text-transform: none;
+  letter-spacing: 0;
+}
 table.matrix tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
   font: 600 13px/1.3 var(--body);
   text-transform: none;
   letter-spacing: 0;
   color: var(--ink);
   background: var(--surface);
+  box-shadow: inset -1px 0 0 var(--line);
+}
+table.matrix thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
 }
 td.ctr {
   min-width: 9em;
   max-width: 16em;
+  padding: 4px;
   font-size: 12px;
   line-height: 1.35;
 }
@@ -100,8 +116,13 @@ td.ctr a {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  padding: 5px 8px;
+  border-radius: 6px;
   color: var(--ink);
   text-decoration: none;
+}
+td.ctr a + a {
+  margin-top: 4px;
 }
 td.ctr a:hover .cond {
   text-decoration: underline;
@@ -118,23 +139,23 @@ td.ctr .cond {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-td.ctr.high,
+td.ctr a.high,
 .ctr-sw.high {
   background: color-mix(in srgb, var(--good) 20%, var(--surface));
   box-shadow: inset 3px 0 0 var(--good);
 }
-td.ctr.high b {
+td.ctr a.high b {
   color: var(--good);
 }
-td.ctr.medium,
+td.ctr a.medium,
 .ctr-sw.medium {
   background: color-mix(in srgb, var(--warn) 14%, var(--surface));
   box-shadow: inset 3px 0 0 var(--warn);
 }
-td.ctr.medium b {
+td.ctr a.medium b {
   color: var(--warn);
 }
-td.ctr.low,
+td.ctr a.low,
 .ctr-sw.low {
   background: repeating-linear-gradient(
     135deg,
@@ -143,10 +164,11 @@ td.ctr.low,
   );
   box-shadow: inset 3px 0 0 var(--bad);
 }
-td.ctr.low b {
+td.ctr a.low b {
   color: var(--bad);
 }
 td.ctr.self {
+  padding: 9px 12px;
   background: var(--surface-2);
   color: var(--ink-3);
   text-align: center;

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { PLOT, Scatter } from "../src/components/Scatter";
 
@@ -65,17 +65,31 @@ describe("Scatter", () => {
     const { container } = render(<Scatter {...props} />);
     const tip = container.querySelector(".tip") as HTMLElement;
     expect(tip).not.toBeVisible();
-    fireEvent.focus(screen.getByLabelText("2T at 3.07G"));
+    const point = screen.getByRole("img", { name: "2T at 3.07G power, 651배: run 2" });
+    fireEvent.focus(point);
     expect(tip).toBeVisible();
     expect(tip).toHaveTextContent("2T at 3.07G power · 651배");
     expect(tip).toHaveTextContent("run 2");
-    fireEvent.blur(screen.getByLabelText("2T at 3.07G"));
+    fireEvent.blur(point);
     expect(tip).not.toBeVisible();
+  });
+
+  it("names each focusable point with its numbers and label, inside a group rather than an image", () => {
+    render(<Scatter {...props} />);
+    const chart = screen.getByRole("group", { name: /damage against team power/ });
+    const points = within(chart).getAllByRole("img");
+    expect(points.map((p) => p.getAttribute("aria-label"))).toEqual([
+      "100G at 1G power, 100배: run 1",
+      "2T at 3.07G power, 651배: run 2",
+      "1.31T at 1.8G power, 729배: run 3",
+    ]);
+    for (const p of points) expect(p).toHaveAttribute("tabindex", "0");
+    expect(chart.closest("[role=img]")).toBeNull();
   });
 
   it("shows the tooltip on hover", () => {
     const { container } = render(<Scatter {...props} />);
-    fireEvent.mouseEnter(screen.getByLabelText("100G at 1G"));
+    fireEvent.mouseEnter(screen.getByRole("img", { name: /^100G at 1G power/ }));
     expect(container.querySelector(".tip")).toHaveTextContent("100G at 1G power · 100배");
   });
 

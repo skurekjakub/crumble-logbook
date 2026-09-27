@@ -55,21 +55,57 @@ export function whenLabel(tElapsed: number | null, length: number): string {
 }
 
 /**
- * Assigns each moment a row so that markers on the same row are at least
- * `minGap` seconds apart: each takes the lowest row that is clear.
+ * Assigns each position a row so that positions on the same row are at
+ * least `minGap` apart: each takes the lowest row that is clear.
  *
- * @param times - moments in ascending order, in seconds
- * @param minGap - the smallest gap, in seconds, two markers on one row may have
- * @returns the row index (0 = top) for each moment, in input order
+ * @param positions - positions in ascending order, in any one unit
+ * @param minGap - the smallest gap, in that unit, two positions on one row may have
+ * @returns the row index (0 = top) for each position, in input order
  */
-export function staggerRows(times: readonly number[], minGap: number): number[] {
+export function staggerRows(positions: readonly number[], minGap: number): number[] {
   const rowEnds: number[] = [];
-  return times.map((t) => {
-    let row = rowEnds.findIndex((end) => t - end >= minGap);
+  return positions.map((x) => {
+    let row = rowEnds.findIndex((end) => x - end >= minGap);
     if (row === -1) row = rowEnds.length;
-    rowEnds[row] = t;
+    rowEnds[row] = x;
     return row;
   });
+}
+
+/**
+ * Assigns each fight marker a row by where it renders: markers whose
+ * centres sit closer than one marker's width on the track go on separate rows.
+ *
+ * @param times - moments in ascending order, in seconds since the fight began
+ * @param length - the fight's length in seconds
+ * @param trackPx - the track's rendered width in pixels
+ * @param markerPx - the space one marker needs, in pixels
+ * @returns the row index (0 = top) for each moment, in input order
+ */
+export function markerRows(
+  times: readonly number[],
+  length: number,
+  trackPx: number,
+  markerPx: number,
+): number[] {
+  return staggerRows(
+    times.map((t) => (trackPercent(t, length) / 100) * trackPx),
+    markerPx,
+  );
+}
+
+/**
+ * A lethal pattern's card title, named the way the community names it: by
+ * the in-game countdown when it lands ("The 17 s super-jump wipe").
+ *
+ * @param name - the pattern's name, lower case, e.g. `slam`
+ * @param tElapsed - when its anchor event happens, or null when unknown
+ * @param length - the fight's length in seconds
+ * @returns the title; just the capitalised name when there's no time
+ */
+export function survivalTitle(name: string, tElapsed: number | null, length: number): string {
+  if (tElapsed == null) return name.charAt(0).toUpperCase() + name.slice(1);
+  return `The ${secondsLeft(tElapsed, length)} s ${name}`;
 }
 
 /**
@@ -112,6 +148,15 @@ const BASE_NAMES: Readonly<Record<string, string>> = {
 };
 
 /**
+ * An effect type's display name, e.g. "Boss DMG +" or "DEF shred".
+ *
+ * @param effectType - the stored effect type; an unknown one is returned as is
+ */
+export function effectName(effectType: string): string {
+  return EFFECT_NAMES[effectType] ?? effectType;
+}
+
+/**
  * An effect in words, e.g. "Boss DMG +" or "ATK + (share of the caster's ATK)".
  *
  * @param effectType - the stored effect type; an unknown one is shown as is
@@ -119,7 +164,7 @@ const BASE_NAMES: Readonly<Record<string, string>> = {
  * @returns the label; chances end in ": application chance"
  */
 export function effectLabel(effectType: string, base: string): string {
-  const name = EFFECT_NAMES[effectType] ?? effectType;
+  const name = effectName(effectType);
   if (isChance(effectType)) return `${name}: application chance`;
   const of = BASE_NAMES[base];
   return of ? `${name} (${of})` : name;
@@ -127,7 +172,11 @@ export function effectLabel(effectType: string, base: string): string {
 
 /** One cookie's effect across every star, as a row of the buff table. */
 export interface BuffStarRow {
-  /** `<cookieKr>|<effectType>`, unique per row. */
+  /**
+   * `<cookieKr>|<effectType>|<base>|<target>`, with `#2`, `#3`… appended for
+   * a further skill that has a value at a star the earlier one already holds;
+   * unique per row.
+   */
   key: string;
   cookieKr: string;
   en: string | null;
@@ -168,8 +217,10 @@ export function starLabel(star: number, stars: readonly number[]): string {
 }
 
 /**
- * Pivots per-grade buff values into one row per cookie and effect, with each
- * grade's value under the star count it starts at. Team buffs come first and
+ * Pivots per-grade buff values into one row per cookie, effect, base and
+ * target, with each grade's value under the star count it starts at. A
+ * grade whose star is already filled in its row goes to a further row, so
+ * no value overwrites another. Team buffs come first and
  * self-only buffs last; within each group rows keep the input's order.
  *
  * @param rows - buff values, as `/api/buff-values` returns them
@@ -178,7 +229,9 @@ export function starLabel(star: number, stars: readonly number[]): string {
 export function pivotBuffs(rows: readonly BuffValueLike[]): BuffStarRow[] {
   const byKey = new Map<string, BuffStarRow>();
   for (const r of rows) {
-    const key = `${r.cookieKr}|${r.effectType}`;
+    const base = `${r.cookieKr}|${r.effectType}|${r.base}|${r.target}`;
+    let key = base;
+    for (let n = 2; byKey.get(key)?.byStar[r.fromStar] !== undefined; n++) key = `${base}#${n}`;
     let row = byKey.get(key);
     if (!row) {
       row = {
@@ -202,6 +255,34 @@ export function pivotBuffs(rows: readonly BuffValueLike[]): BuffStarRow[] {
   }
   const all = [...byKey.values()];
   return [...all.filter((r) => !r.selfOnly), ...all.filter((r) => r.selfOnly)];
+}
+
+/** A buff-table cell: the value in force at a star column, and whether it carries over from the left. */
+export interface StarCell {
+  /** The value in percent, or undefined before the row's first grade. */
+  value: number | undefined;
+  /** No grade starts at this star, so the value is the one from the column to its left. */
+  carried: boolean;
+}
+
+/**
+ * A row's cells across the table's star columns: each column shows the
+ * value of the latest grade at or below its star.
+ *
+ * @param row - a pivoted row (only its `byStar` is read)
+ * @param stars - every column's star count, ascending
+ * @returns one cell per column, in column order
+ */
+export function starCells(row: Pick<BuffStarRow, "byStar">, stars: readonly number[]): StarCell[] {
+  let last: number | undefined;
+  return stars.map((s) => {
+    const own = row.byStar[s];
+    if (own !== undefined) {
+      last = own;
+      return { value: own, carried: false };
+    }
+    return { value: last, carried: last !== undefined };
+  });
 }
 
 /**

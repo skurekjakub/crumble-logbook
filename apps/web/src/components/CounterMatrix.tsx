@@ -10,10 +10,24 @@ export interface CounterEdge {
   confidence: "high" | "medium" | "low";
 }
 
-/** A deck the matrix names: its id and English name. */
+/** A deck the matrix names: its id, English name and Korean name. */
 export interface MatrixDeck {
   id: string;
   nameEn: string;
+  /** The Korean name, shown beneath the English; null when unknown. */
+  nameKr: string | null;
+}
+
+/** A team's name in a matrix heading: English, with the Korean beneath when known. */
+function TeamName({ id, deck }: { id: string; deck: MatrixDeck | undefined }) {
+  if (!deck) return <>{id}</>;
+  if (!deck.nameKr) return <>{deck.nameEn}</>;
+  return (
+    <span className="name-stack">
+      {deck.nameEn}
+      <span className="kr">{deck.nameKr}</span>
+    </span>
+  );
 }
 
 /** Props for {@link CounterMatrix}. */
@@ -41,14 +55,15 @@ function axis(
 
 /**
  * The counter matrix: one row per team that something beats, one column
- * per team that beats something. A cell holds the edge "row is beaten by
- * column" with its conditions, styled by its confidence and linking to
- * `href(edge)`; the
- * reverse matchup is a different cell, filled only by its own edge. A cell
+ * per team that beats something, each named in English with the Korean
+ * beneath. A cell holds the edges "row is beaten by column", each with its
+ * conditions, styled by its own confidence and linking to `href(edge)`; the
+ * reverse matchup is a different cell, filled only by its own edges. A cell
  * where a team meets itself is marked, and every other cell is empty.
  */
 export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
-  const name = (id: string) => decks.find((d) => d.id === id)?.nameEn ?? id;
+  const find = (id: string) => decks.find((d) => d.id === id);
+  const name = (id: string) => find(id)?.nameEn ?? id;
   const rows = axis(edges, decks, (e) => e.teamDeckId);
   const cols = axis(edges, decks, (e) => e.beatenByDeckId);
   return (
@@ -60,7 +75,7 @@ export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
             <th scope="col">Team ↓ · beaten by →</th>
             {cols.map((id) => (
               <th key={id} scope="col">
-                {name(id)}
+                <TeamName id={id} deck={find(id)} />
               </th>
             ))}
           </tr>
@@ -68,7 +83,9 @@ export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
         <tbody>
           {rows.map((team) => (
             <tr key={team}>
-              <th scope="row">{name(team)}</th>
+              <th scope="row">
+                <TeamName id={team} deck={find(team)} />
+              </th>
               {cols.map((by) => {
                 const cell = edges.filter((e) => e.teamDeckId === team && e.beatenByDeckId === by);
                 if (team === by) {
@@ -79,10 +96,11 @@ export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
                   );
                 }
                 return (
-                  <td key={by} className={cell[0] ? `ctr ${cell[0].confidence}` : "ctr"}>
+                  <td key={by} className="ctr">
                     {cell.map((e) => (
                       <a
                         key={e.slug}
+                        className={e.confidence}
                         href={href(e)}
                         title={e.conditions ?? undefined}
                         aria-label={`${name(team)} is beaten by ${name(by)}: ${e.confidence} confidence${e.conditions ? `. ${e.conditions}` : ""}`}

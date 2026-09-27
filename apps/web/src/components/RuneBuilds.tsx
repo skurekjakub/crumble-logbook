@@ -1,6 +1,6 @@
+import type { ReactNode } from "react";
 import type { SourceIndex } from "../lib/sources";
 import { CookieName } from "./CookieName";
-import type { Column } from "./DataTable";
 import { Pill } from "./Pill";
 import { SourceChips } from "./SourceChips";
 
@@ -16,71 +16,49 @@ export interface RuneBuildLike {
   sources: readonly string[];
 }
 
-/** A rune build's reason, with the disputed view beneath it when there is one. */
-export function RuneWhy({ build }: { build: Pick<RuneBuildLike, "why" | "disputed"> }) {
+/** Props for {@link RuneCard}. */
+export interface RuneCardProps {
+  build: RuneBuildLike;
+  /** Id → URL/title for the source chips. */
+  sources: SourceIndex;
+  /** The cookie name's heading level: 3 under a view's `<h2>`, 4 inside a titled section. */
+  headingLevel: 3 | 4;
+  /** When given, lists the build's decks by this name. */
+  deckName?: (id: string) => string;
+  /** Cited notes about this cookie, shown after the dispute. */
+  children?: ReactNode;
+}
+
+/**
+ * One cookie's rune build as a card: the reason first, as the card's main
+ * text, then the rune lines, any disputed view, the decks, extra notes and
+ * the sources.
+ */
+export function RuneCard({ build, sources, headingLevel, deckName, children }: RuneCardProps) {
+  const H = headingLevel === 3 ? "h3" : "h4";
   return (
-    <>
-      <div>{build.why}</div>
+    <article className="card rune-card">
+      <div className="card-head">
+        <H>
+          <CookieName kr={build.cookieKr} en={build.en} />
+        </H>
+        {build.disputed ? <Pill kind="disputed" /> : null}
+      </div>
+      <p className="rune-why">{build.why}</p>
+      <div className="rune-lines">
+        <span className="k">Runes</span>
+        <span>{build.lines}</span>
+      </div>
       {build.disputed ? (
         <div className="muted">
           <b>Disputed:</b> {build.disputed}
         </div>
       ) : null}
-    </>
-  );
-}
-
-/** A rune build inside a card: its lines, reason, dispute and sources. */
-export function RuneNote({ build, sources }: { build: RuneBuildLike; sources: SourceIndex }) {
-  return (
-    <div className="boss-note">
-      <div>
-        <b>{build.lines}</b>
-      </div>
-      <RuneWhy build={build} />
+      {deckName && build.decks.length ? (
+        <div className="rune-decks muted">{build.decks.map(deckName).join(", ")}</div>
+      ) : null}
+      {children}
       <SourceChips ids={build.sources} sources={sources} />
-    </div>
+    </article>
   );
-}
-
-/** Options for {@link runeBuildColumns}. */
-export interface RuneBuildColumnsOptions {
-  /** The reason column's heading. */
-  whyHeader: string;
-  /** When given, adds a Decks column listing each build's decks by this name. */
-  deckName?: (id: string) => string;
-  /** Id → URL/title for the source chips. */
-  sources: SourceIndex;
-}
-
-/**
- * The rune-build table's columns: the cookie (with a "disputed" pill), its
- * rune lines, the reason and any dispute, optionally the decks, and the
- * sources.
- *
- * @param options - the reason column's heading, the deck names, the source index
- * @returns the columns for `DataTable`
- */
-export function runeBuildColumns({
-  whyHeader,
-  deckName,
-  sources,
-}: RuneBuildColumnsOptions): Column<RuneBuildLike>[] {
-  return [
-    {
-      header: "Cookie",
-      cell: (r) => (
-        <>
-          <CookieName kr={r.cookieKr} en={r.en} />
-          {r.disputed ? <Pill kind="disputed" /> : null}
-        </>
-      ),
-    },
-    { header: "Rune lines", cell: (r) => <b>{r.lines}</b> },
-    { header: whyHeader, cell: (r) => <RuneWhy build={r} /> },
-    ...(deckName
-      ? [{ header: "Decks", cell: (r: RuneBuildLike) => r.decks.map(deckName).join(", ") }]
-      : []),
-    { header: "Sources", cell: (r) => <SourceChips ids={r.sources} sources={sources} /> },
-  ];
 }

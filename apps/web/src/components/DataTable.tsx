@@ -24,7 +24,9 @@ export interface TableFilter<T> {
 
 /** A select filter whose value the caller owns. */
 export interface TableSelect<T> {
-  /** Accessible name, and the label of the "all" option (value ""). */
+  /** The select's accessible name, e.g. "Deck". */
+  name: string;
+  /** The label of the "all" option (value ""), e.g. "All decks". */
   label: string;
   /** `[value, label]` pairs. */
   options: ReadonlyArray<readonly [value: string, label: string]>;
@@ -68,47 +70,74 @@ export function filterRows<T>(rows: readonly T[], query: string, text: (row: T) 
 }
 
 /**
+ * Keeps the rows both filters keep.
+ *
+ * @param rows - the rows to filter
+ * @param filter - the text filter, when there is one
+ * @param select - the select filter, when there is one; without a `test` it keeps every row
+ * @returns the kept rows, in input order
+ */
+export function applyFilters<T>(
+  rows: readonly T[],
+  filter: TableFilter<T> | undefined,
+  select: TableSelect<T> | undefined,
+): T[] {
+  const kept = filter ? filterRows(rows, filter.value, filter.text) : [...rows];
+  if (!select?.test || !select.value) return kept;
+  const { test, value } = select;
+  return kept.filter((r) => test(r, value));
+}
+
+/** Props for {@link TableTools}. */
+export interface TableToolsProps<T> {
+  filter?: TableFilter<T>;
+  select?: TableSelect<T>;
+}
+
+/** The search box and select above a filtered list; renders nothing without either. */
+export function TableTools<T>({ filter, select }: TableToolsProps<T>) {
+  if (!filter && !select) return null;
+  const placeholder = filter?.placeholder ?? "Filter";
+  return (
+    <div className="tools">
+      {filter && (
+        <input
+          type="search"
+          placeholder={placeholder}
+          aria-label={placeholder}
+          value={filter.value}
+          onChange={(e) => filter.onChange(e.target.value)}
+        />
+      )}
+      {select && (
+        <select
+          aria-label={select.name}
+          value={select.value}
+          onChange={(e) => select.onChange(e.target.value)}
+        >
+          <option value="">{select.label}</option>
+          {select.options.map(([v, l]) => (
+            <option key={v} value={v}>
+              {l}
+            </option>
+          ))}
+        </select>
+      )}
+    </div>
+  );
+}
+
+/**
  * A table with optional controlled text and select filters. With no rows it
  * shows `empty`; when the filters exclude every row it says "Nothing matches."
  */
 export function DataTable<T>({ columns, rows, rowKey, filter, select, empty }: DataTableProps<T>) {
-  let kept = filter ? filterRows(rows, filter.value, filter.text) : [...rows];
-  if (select?.test && select.value) {
-    const { test, value } = select;
-    kept = kept.filter((r) => test(r, value));
-  }
+  const kept = applyFilters(rows, filter, select);
   const message = rows.length === 0 ? (empty ?? "Nothing to show.") : "Nothing matches.";
-  const placeholder = filter?.placeholder ?? "Filter";
 
   return (
     <>
-      {(filter || select) && (
-        <div className="tools">
-          {filter && (
-            <input
-              type="search"
-              placeholder={placeholder}
-              aria-label={placeholder}
-              value={filter.value}
-              onChange={(e) => filter.onChange(e.target.value)}
-            />
-          )}
-          {select && (
-            <select
-              aria-label={select.label}
-              value={select.value}
-              onChange={(e) => select.onChange(e.target.value)}
-            >
-              <option value="">{select.label}</option>
-              {select.options.map(([v, l]) => (
-                <option key={v} value={v}>
-                  {l}
-                </option>
-              ))}
-            </select>
-          )}
-        </div>
-      )}
+      <TableTools filter={filter} select={select} />
       <div className="tablewrap">
         <table>
           <thead>

@@ -28,7 +28,7 @@ export interface ScatterProps<P extends ScatterPoint> {
   points: readonly P[];
   /** The point's fill, e.g. its deck's `var(--sN)` series colour. */
   color: (p: P) => string;
-  /** The tooltip line under the numbers, e.g. "Cherry deck · screenshot". */
+  /** The tooltip line under the numbers, and the end of the point's accessible name, e.g. "Cherry deck · screenshot". */
   label: (p: P) => string;
 }
 
@@ -77,7 +77,8 @@ function layout<P extends ScatterPoint & { powerG: number }>(points: readonly P[
 /**
  * Log–log scatter of damage against team power, with dashed 배 reference
  * lines and a tooltip on hover or keyboard focus. Solid dots are
- * screenshot-backed; faded dots are claims. Shows an empty state when no
+ * screenshot-backed; faded dots are claims. Each point is focusable and
+ * named by its damage, power, 배 and `label`. Shows an empty state when no
  * point has both damage and power.
  */
 export function Scatter<P extends ScatterPoint>({ points, color, label }: ScatterProps<P>) {
@@ -94,12 +95,13 @@ export function Scatter<P extends ScatterPoint>({ points, color, label }: Scatte
 
   return (
     <div className="chart">
+      {/* A group, not an image: an image's descendants are hidden from assistive tech, and the points are focusable. */}
       <svg
         viewBox={`0 0 ${W} ${H}`}
-        role="img"
+        role="group"
         aria-label="Posted raid scores: damage against team power"
       >
-        <g className="grid">
+        <g className="grid" aria-hidden="true">
           {yTicks.map((v) => (
             <line key={v} x1={M.l} x2={W - M.r} y1={Y(v)} y2={Y(v)} />
           ))}
@@ -135,6 +137,7 @@ export function Scatter<P extends ScatterPoint>({ points, color, label }: Scatte
         {placed.map(({ p, cx, cy }, i) => (
           <circle
             key={`dot${i}`}
+            aria-hidden="true"
             className={p.verified ? "dot" : "dot claimed"}
             cx={cx}
             cy={cy}
@@ -150,7 +153,8 @@ export function Scatter<P extends ScatterPoint>({ points, color, label }: Scatte
             cy={cy}
             r={13}
             tabIndex={0}
-            aria-label={`${formatG(p.damageG)} at ${formatG(p.powerG)}`}
+            role="img"
+            aria-label={`${formatG(p.damageG)} at ${formatG(p.powerG)} power, ${formatRatio(ratio(p))}배: ${label(p)}`}
             onMouseEnter={() => setActive(i)}
             onFocus={() => setActive(i)}
             onMouseLeave={() => setActive(null)}
