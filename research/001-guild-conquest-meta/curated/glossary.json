@@ -2751,16 +2751,13 @@
  },
  {
   "kr": "전투력",
-  "kr_short": [
-   "투력",
-   "전투력"
-  ],
-  "en": "Power",
+  "kr_short": [],
+  "en": "Power (combat power)",
   "kind": "stat",
   "element": "",
   "class": "",
   "rarity": "",
-  "note": "crumblehub EN UI (\"My Team Power\", \"Recommended Power\"); official EN not verified",
+  "note": "The in-game 전투력 label, shown per cookie, for the selected team (e.g. the conquest lobby) and for the whole account. Community shorthand is 투력. crumblehub EN UI (\"My Team Power\", \"Recommended Power\"); official EN not verified",
   "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78) ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js ; https://alkapa.gg/lab/crumble/option-consult (ko + /en)"
  },
  {
@@ -3293,16 +3290,40 @@
  },
  {
   "kr": "투력",
-  "kr_short": [
-   "전투력"
-  ],
-  "en": "Power (team power)",
+  "kr_short": [],
+  "en": "power (shorthand)",
   "kind": "term",
   "element": "",
   "class": "",
   "rarity": "",
-  "note": "see stat 전투력",
-  "source": "https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+  "note": "Community shorthand for 전투력 (the stat). Alone it usually means the team power the 배 multiple divides by; the prefix says which: 덱투 is the deck (team) power, 총투 the account total.",
+  "source": "community usage; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+ },
+ {
+  "kr": "덱투",
+  "kr_short": [
+   "덱 투력"
+  ],
+  "en": "deck power (team power)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Short for 덱 전투력: the 전투력 of the team you enter with. The number the 배 multiple divides damage by (e.g. dc:76235 \"덱투 650배정도\").",
+  "source": "community usage"
+ },
+ {
+  "kr": "총투",
+  "kr_short": [
+   "총 투력"
+  ],
+  "en": "account total power",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Short for 총 전투력: the account's total 전투력 over all cookies, the figure crumb.gg's power leaderboard shows (e.g. dc:76583 \"총투 21G\"). Not the team power the 배 multiple uses.",
+  "source": "community usage"
  },
  {
   "kr": "배",
