@@ -19,6 +19,8 @@ const CONQUEST = "001-guild-conquest-meta";
 const PVP = "002-pvp-meta";
 const conquestDir = join(repoRoot, "research", CONQUEST);
 const pvpDir = join(repoRoot, "research", PVP);
+/** Each test imports whole records, several times over; seconds, not milliseconds, under a busy suite. */
+const FULL_IMPORT = { timeout: 30_000 };
 
 /** Reads a curated file of record 002, parsed, with a test-asserted shape. */
 function pvp<T>(name: string): T {
@@ -76,7 +78,7 @@ function ownedContent(snapshot: Snapshot, slug: string): Record<string, string[]
   return result;
 }
 
-describe("importRecord on research record 002", () => {
+describe("importRecord on research record 002", FULL_IMPORT, () => {
   it("loads every deck, slot, counter, usage figure and rule into an empty database", () => {
     const store = testStore();
     const { counts } = importRecord(store, pvpDir);
@@ -160,7 +162,7 @@ describe("importRecord on research record 002", () => {
   });
 });
 
-describe("importing several records", () => {
+describe("importing several records", FULL_IMPORT, () => {
   it("adds record 002 to a database holding 001 without --replace, leaving every 001 row as it was", () => {
     const store = testStore();
     importRecord(store, conquestDir);
@@ -257,7 +259,7 @@ describe("importing several records", () => {
   });
 });
 
-describe("ids another record already loaded", () => {
+describe("ids another record already loaded", FULL_IMPORT, () => {
   let tmp: string | undefined;
   afterEach(() => {
     if (tmp) rmSync(tmp, { recursive: true, force: true });
@@ -413,7 +415,7 @@ describe("write order", () => {
   });
 });
 
-describe("shared buff values", () => {
+describe("shared buff values", FULL_IMPORT, () => {
   let tmp: string | undefined;
   afterEach(() => {
     if (tmp) rmSync(tmp, { recursive: true, force: true });
