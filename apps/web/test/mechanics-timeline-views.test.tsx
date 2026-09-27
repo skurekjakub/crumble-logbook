@@ -1,5 +1,6 @@
 import { screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import type { Mechanic, TimelineEvent } from "../src/api/types";
 import { renderRoute } from "./view-harness";
 
 const MECHANICS = [
@@ -17,12 +18,12 @@ const MECHANICS = [
     confidence: "low",
     sources: [],
   },
-] as const;
+] satisfies Mechanic[];
 
 const TIMELINE = [
   { id: 2, date: "2026-09-01", event: "Season 5 opens.", sources: ["nv:43653"] },
   { id: 1, date: "2026-08-13", event: "Patch: skill amp scales Milk's buff.", sources: [] },
-] as const;
+] satisfies TimelineEvent[];
 
 describe("mechanics view", () => {
   it("renders a card per mechanic with its confidence pill and sources", async () => {
@@ -31,12 +32,12 @@ describe("mechanics view", () => {
     expect(screen.getByText(/Confidence reflects how well each point is sourced/)).toHaveClass(
       "lede",
     );
-    const card = (await screen.findByRole("heading", { name: MECHANICS[0].title })).closest(
+    const card = (await screen.findByRole("heading", { name: MECHANICS[0]!.title })).closest(
       ".card",
     ) as HTMLElement;
     expect(card.parentElement).toHaveClass("grid", "g2");
     expect(within(card).getByText("high")).toHaveClass("pill", "high");
-    expect(within(card).getByText(MECHANICS[0].body)).toBeInTheDocument();
+    expect(within(card).getByText(MECHANICS[0]!.body)).toBeInTheDocument();
     expect(await within(card).findByRole("link", { name: "DC 76135" })).toHaveAttribute(
       "href",
       "https://example.test/dc/76135",
@@ -69,7 +70,7 @@ describe("timeline view", () => {
       "2026-08-13",
       "2026-09-01",
     ]);
-    expect(items[0]).toHaveTextContent(TIMELINE[1].event);
+    expect(items[0]).toHaveTextContent(TIMELINE[1]!.event);
     expect(await within(items[1]!).findByRole("link", { name: "Naver 43653" })).toBeVisible();
   });
 

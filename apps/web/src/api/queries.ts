@@ -1,12 +1,16 @@
 /**
  * One TanStack Query options factory per API resource. Use them with
- * `useQuery(decksQuery())` in components, or
+ * `useQuery(decksQuery(mode.scope))` in components, or
  * `context.queryClient.ensureQueryData(decksQuery())` in route loaders.
  *
  * Every `queryFn` goes through hono's `parseResponse`: it resolves to the
  * route's success body, typed from the server, and throws a `DetailedError`
  * (status plus error body) for any non-2xx response, which `ErrorBox`
  * describes.
+ *
+ * A list that holds research content takes an optional {@link ModeScope}:
+ * its params go on the request and its mode goes in the query key, so each
+ * mode's lists are cached apart. Without a scope the list covers every mode.
  */
 import { queryOptions } from "@tanstack/react-query";
 import type { InferRequestType } from "hono/client";
@@ -27,6 +31,29 @@ export type SourceSiteFilter = NonNullable<
 export type RankingBoardFilter = NonNullable<
   InferRequestType<typeof api.rankings.$get>["query"]["board"]
 >;
+
+/** A game mode, as research content is tagged with it. */
+export type GameMode = "guild_conquest" | "arena" | "rumble_arena";
+
+/**
+ * The list params every research-content endpoint accepts, read off
+ * `/api/mechanics` (a plain content type), so a mode can only send params
+ * the server declares.
+ */
+export type ModeParams = InferRequestType<typeof api.mechanics.$get>["query"];
+
+/** How one mode's views scope their list requests. */
+export interface ModeScope {
+  /** The mode; it keys the mode's cached lists. */
+  mode: GameMode;
+  /** The params every list request of the mode carries. */
+  params: ModeParams;
+}
+
+/** A list query key's scope part: the mode, or `null` for every mode. */
+function scopeKey(scope: ModeScope | undefined) {
+  return { mode: scope?.mode ?? null };
+}
 
 /** All research records, by slug. */
 export const recordsQuery = () =>
@@ -65,11 +92,14 @@ export const glossaryQuery = (kind?: GlossaryKindFilter) =>
     queryFn: () => parseResponse(api.glossary.$get({ query: { kind } })),
   });
 
-/** Decks in display order, with cookies, pets and ATK order resolved to English. */
-export const decksQuery = () =>
+/**
+ * Decks in display order, with cookies, pets and ATK order resolved to English.
+ * @param scope - the mode to list, when given
+ */
+export const decksQuery = (scope?: ModeScope) =>
   queryOptions({
-    queryKey: ["decks"],
-    queryFn: () => parseResponse(api.decks.$get({ query: {} })),
+    queryKey: ["decks", scopeKey(scope)],
+    queryFn: () => parseResponse(api.decks.$get({ query: { ...scope?.params } })),
   });
 
 /**
@@ -84,29 +114,34 @@ export const deckQuery = (id: string) =>
 
 /**
  * Scores sorted by damage, highest first, each with its 배 `ratio`.
+ * @param scope - the mode to list, when given
  * @param deck - restrict to one deck's slug
  */
-export const scoresQuery = (deck?: string) =>
+export const scoresQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
-    queryKey: ["scores", { deck: deck ?? null }],
-    queryFn: () => parseResponse(api.scores.$get({ query: { deck } })),
+    queryKey: ["scores", { ...scopeKey(scope), deck: deck ?? null }],
+    queryFn: () => parseResponse(api.scores.$get({ query: { ...scope?.params, deck } })),
   });
 
 /**
  * Rune builds, with each cookie resolved to English and the decks it applies to.
+ * @param scope - the mode to list, when given
  * @param deck - restrict to builds linked to one deck's slug
  */
-export const runeBuildsQuery = (deck?: string) =>
+export const runeBuildsQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
-    queryKey: ["rune-builds", { deck: deck ?? null }],
-    queryFn: () => parseResponse(api["rune-builds"].$get({ query: { deck } })),
+    queryKey: ["rune-builds", { ...scopeKey(scope), deck: deck ?? null }],
+    queryFn: () => parseResponse(api["rune-builds"].$get({ query: { ...scope?.params, deck } })),
   });
 
-/** Gear substat recommendations. */
-export const gearRecsQuery = () =>
+/**
+ * Gear substat recommendations.
+ * @param scope - the mode to list, when given
+ */
+export const gearRecsQuery = (scope?: ModeScope) =>
   queryOptions({
-    queryKey: ["gear-recs"],
-    queryFn: () => parseResponse(api["gear-recs"].$get({ query: {} })),
+    queryKey: ["gear-recs", scopeKey(scope)],
+    queryFn: () => parseResponse(api["gear-recs"].$get({ query: { ...scope?.params } })),
   });
 
 /**
@@ -130,39 +165,54 @@ export const buffValuesQuery = (cookie?: string) =>
     queryFn: () => parseResponse(api["buff-values"].$get({ query: { cookie } })),
   });
 
-/** Mechanics, each with a confidence level. */
-export const mechanicsQuery = () =>
+/**
+ * Mechanics, each with a confidence level.
+ * @param scope - the mode to list, when given
+ */
+export const mechanicsQuery = (scope?: ModeScope) =>
   queryOptions({
-    queryKey: ["mechanics"],
-    queryFn: () => parseResponse(api.mechanics.$get({ query: {} })),
+    queryKey: ["mechanics", scopeKey(scope)],
+    queryFn: () => parseResponse(api.mechanics.$get({ query: { ...scope?.params } })),
   });
 
-/** RNG factors and their mitigations. */
-export const rngFactorsQuery = () =>
+/**
+ * RNG factors and their mitigations.
+ * @param scope - the mode to list, when given
+ */
+export const rngFactorsQuery = (scope?: ModeScope) =>
   queryOptions({
-    queryKey: ["rng-factors"],
-    queryFn: () => parseResponse(api["rng-factors"].$get({ query: {} })),
+    queryKey: ["rng-factors", scopeKey(scope)],
+    queryFn: () => parseResponse(api["rng-factors"].$get({ query: { ...scope?.params } })),
   });
 
-/** Dated meta events. */
-export const timelineQuery = () =>
+/**
+ * Dated meta events.
+ * @param scope - the mode to list, when given
+ */
+export const timelineQuery = (scope?: ModeScope) =>
   queryOptions({
-    queryKey: ["timeline"],
-    queryFn: () => parseResponse(api.timeline.$get({ query: {} })),
+    queryKey: ["timeline", scopeKey(scope)],
+    queryFn: () => parseResponse(api.timeline.$get({ query: { ...scope?.params } })),
   });
 
-/** The overview's load-bearing takeaways. */
-export const takeawaysQuery = () =>
+/**
+ * The overview's load-bearing takeaways.
+ * @param scope - the mode to list, when given
+ */
+export const takeawaysQuery = (scope?: ModeScope) =>
   queryOptions({
-    queryKey: ["takeaways"],
-    queryFn: () => parseResponse(api.takeaways.$get({ query: {} })),
+    queryKey: ["takeaways", scopeKey(scope)],
+    queryFn: () => parseResponse(api.takeaways.$get({ query: { ...scope?.params } })),
   });
 
-/** "For your account" recommendations. */
-export const recommendationsQuery = () =>
+/**
+ * "For your account" recommendations.
+ * @param scope - the mode to list, when given
+ */
+export const recommendationsQuery = (scope?: ModeScope) =>
   queryOptions({
-    queryKey: ["recommendations"],
-    queryFn: () => parseResponse(api.recommendations.$get({ query: {} })),
+    queryKey: ["recommendations", scopeKey(scope)],
+    queryFn: () => parseResponse(api.recommendations.$get({ query: { ...scope?.params } })),
   });
 
 /**

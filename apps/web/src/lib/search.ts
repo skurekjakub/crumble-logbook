@@ -29,6 +29,22 @@ export function optionalInt(v: unknown): number | undefined {
 }
 
 /**
+ * Applies a patch to a view's search params, dropping every param the
+ * result leaves `undefined` or empty, so the URL never carries `?q=`.
+ *
+ * @param prev - the current search params
+ * @param patch - the params to set; `undefined` or `""` removes one
+ * @returns the new search params
+ */
+export function mergeSearch<S extends object>(prev: S, patch: Partial<S>): S {
+  const merged: Record<string, unknown> = { ...prev, ...patch };
+  for (const [key, value] of Object.entries(merged)) {
+    if (value === undefined || value === "") delete merged[key];
+  }
+  return merged as S;
+}
+
+/**
  * Reads a search param restricted to a fixed set of values.
  *
  * @param v - the decoded query value

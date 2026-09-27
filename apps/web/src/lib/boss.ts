@@ -2,10 +2,20 @@
  * Pure helpers for the boss screen: the fight track's scale, and the pivot of
  * per-grade buff values into star columns.
  */
-import type { BuffValue } from "../api/types";
 
-/** A Guild Conquest fight's length in seconds, used when no event states it. */
-export const FIGHT_SECONDS = 60;
+/** One skill grade's buff value; `/api/buff-values` rows fit as they are. */
+export interface BuffValueLike {
+  cookieKr: string;
+  en: string | null;
+  effectType: string;
+  fromStar: number;
+  valuePct: number;
+  maxStack: number | null;
+  /** What the value is a percentage of: `Fixed`, or the caster's ATK or HP. */
+  base: string;
+  scalesWithCasterAmp: boolean;
+  sources: readonly string[];
+}
 
 /**
  * Where a moment sits on the fight track, as a percentage of its width.
@@ -14,7 +24,7 @@ export const FIGHT_SECONDS = 60;
  * @param length - the fight's length in seconds
  * @returns 0 at the start, 100 at the end; times outside the fight clamp to an end
  */
-export function trackPercent(t: number, length: number = FIGHT_SECONDS): number {
+export function trackPercent(t: number, length: number): number {
   return Math.min(100, Math.max(0, (t / length) * 100));
 }
 
@@ -26,8 +36,20 @@ export function trackPercent(t: number, length: number = FIGHT_SECONDS): number 
  * @param length - the fight's length in seconds
  * @returns seconds left on the timer
  */
-export function secondsLeft(t: number, length: number = FIGHT_SECONDS): number {
+export function secondsLeft(t: number, length: number): number {
   return length - t;
+}
+
+/**
+ * When an event happens, in words: elapsed time and the in-game countdown.
+ *
+ * @param tElapsed - seconds since the fight began, or null for an event off the clock
+ * @param length - the fight's length in seconds
+ * @returns "43 s · 17 s left", or "Off the clock"
+ */
+export function whenLabel(tElapsed: number | null, length: number): string {
+  if (tElapsed == null) return "Off the clock";
+  return `${tElapsed} s · ${secondsLeft(tElapsed, length)} s left`;
 }
 
 /**
@@ -125,7 +147,7 @@ export interface BuffStarRow {
   cookieKr: string;
   en: string | null;
   effectType: string;
-  base: BuffValue["base"];
+  base: string;
   scalesWithCasterAmp: boolean;
   /** The highest grade's stack limit. */
   maxStack: number | null;
@@ -145,7 +167,7 @@ export interface BuffStarRow {
  * @param rows - buff values
  * @returns each distinct `fromStar`, ascending
  */
-export function buffStars(rows: readonly Pick<BuffValue, "fromStar">[]): number[] {
+export function buffStars(rows: readonly Pick<BuffValueLike, "fromStar">[]): number[] {
   return [...new Set(rows.map((r) => r.fromStar))].sort((a, b) => a - b);
 }
 
@@ -168,7 +190,7 @@ export function starLabel(star: number, stars: readonly number[]): string {
  * @param rows - buff values, as `/api/buff-values` returns them
  * @returns the table rows
  */
-export function pivotBuffs(rows: readonly BuffValue[]): BuffStarRow[] {
+export function pivotBuffs(rows: readonly BuffValueLike[]): BuffStarRow[] {
   const byKey = new Map<string, BuffStarRow>();
   for (const r of rows) {
     const key = `${r.cookieKr}|${r.effectType}`;

@@ -1,6 +1,6 @@
 import type { SourceIndex } from "../lib/sources";
-import { FIGHT_SECONDS, eventLabel, secondsLeft, staggerRows, trackPercent } from "../lib/boss";
-import { Pill } from "./Pill";
+import { eventLabel, secondsLeft, staggerRows, trackPercent, whenLabel } from "../lib/boss";
+import { ConfidencePill } from "./ConfidencePill";
 import { SourceChips } from "./SourceChips";
 
 /** One fight event; `/api/fight-events` rows fit as they are. */
@@ -21,7 +21,7 @@ export interface FightTimelineProps {
   /** Id → URL/title for the source chips. */
   sources: SourceIndex;
   /** The fight's length in seconds; the track spans 0 to this. */
-  length?: number;
+  length: number;
   /** Seconds between axis ticks. */
   tickEvery?: number;
 }
@@ -31,15 +31,6 @@ const MIN_GAP_S = 4;
 
 /** Whether an event is a claim nobody has verified. */
 const isClaim = (e: FightTimelineEvent) => e.confidence === "low";
-
-/**
- * When an event happens, as the list shows it: elapsed time and the in-game
- * countdown ("43 s · 17 s left"), or "Off the clock".
- */
-function when(e: FightTimelineEvent, length: number): string {
-  if (e.tElapsed == null) return "Off the clock";
-  return `${e.tElapsed} s · ${secondsLeft(e.tElapsed, length)} s left`;
-}
 
 /** One lane of the track: numbered markers placed by elapsed time, staggered where they crowd. */
 function Lane({
@@ -67,7 +58,7 @@ function Lane({
             data-event={e.event}
             className={`fe-mark${isClaim(e) ? " low" : ""}`}
             style={{ left: `${trackPercent(e.tElapsed, length)}%`, top: `${rows[i]! * 24}px` }}
-            title={`${n}. ${eventLabel(e.event)}, ${when(e, length)}${isClaim(e) ? " (unverified claim)" : ""}`}
+            title={`${n}. ${eventLabel(e.event)}, ${whenLabel(e.tElapsed, length)}${isClaim(e) ? " (unverified claim)" : ""}`}
           >
             {n}
           </span>
@@ -84,12 +75,7 @@ function Lane({
  * hatched lane and are labelled "unverified claim"; events with no time are
  * listed but not placed.
  */
-export function FightTimeline({
-  events,
-  sources,
-  length = FIGHT_SECONDS,
-  tickEvery = 10,
-}: FightTimelineProps) {
+export function FightTimeline({ events, sources, length, tickEvery = 10 }: FightTimelineProps) {
   const numbered = events.map((e, i) => ({ n: i + 1, e }));
   const timed = numbered.filter(
     (x): x is { n: number; e: FightTimelineEvent & { tElapsed: number } } => x.e.tElapsed != null,
@@ -121,9 +107,9 @@ export function FightTimeline({
           <li key={e.id} className={isClaim(e) ? "low" : undefined}>
             <div className="fe-head">
               <span className="fe-num">{n}</span>
-              <span className="fe-when">{when(e, length)}</span>
+              <span className="fe-when">{whenLabel(e.tElapsed, length)}</span>
               <b>{eventLabel(e.event)}</b>
-              {isClaim(e) ? <Pill kind="low">unverified claim</Pill> : <Pill kind={e.confidence} />}
+              <ConfidencePill confidence={e.confidence} />
             </div>
             <div>{e.detail}</div>
             <SourceChips ids={e.sources} sources={sources} />

@@ -1,10 +1,16 @@
-import { QueryClientProvider } from "@tanstack/react-query";
-import { createMemoryHistory, RouterProvider } from "@tanstack/react-router";
-import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { createAppRouter } from "../src/router";
+import type {
+  Deck,
+  GearRec,
+  Recommendation,
+  ResearchRecord,
+  RuneBuild,
+  Source,
+  Takeaway,
+} from "../src/api/types";
 import type { Canned } from "./helpers";
-import { stubApi, testQueryClient } from "./helpers";
+import { renderRoute } from "./view-harness";
 
 const RECORD = {
   slug: "001-guild-conquest-meta",
@@ -15,12 +21,12 @@ const RECORD = {
   seasonLabel: "S5 (live)",
   lede: "What Korean and global players run in Guild Conquest.",
   caveat: "Snapshot of 2026-09-27; Season 5 closes 2026-09-28.",
-};
+} satisfies ResearchRecord;
 
 const SOURCES = [
   { id: "dc:76135", site: "dc", url: "https://example.test/dc/76135", title: "1T" },
   { id: "nv:43653", site: "nv", url: "https://example.test/nv/43653", title: "Cherry" },
-];
+] satisfies Partial<Source>[];
 
 const TAKEAWAYS = [
   {
@@ -31,7 +37,7 @@ const TAKEAWAYS = [
     sources: ["nv:43653"],
   },
   { id: 2, position: 2, text: "Keep fillers at Lv.1.", detail: null, sources: ["dc:76135"] },
-];
+] satisfies Takeaway[];
 
 const RECOMMENDATIONS = [
   {
@@ -40,7 +46,7 @@ const RECOMMENDATIONS = [
     changes: ["Level Scorpion to Lv.10–45.", "Raise Candy Shade Pouch."],
     sources: ["dc:76135"],
   },
-];
+] satisfies Recommendation[];
 
 const DECKS = [
   {
@@ -120,7 +126,7 @@ const DECKS = [
     pets: [],
     notes: [],
   },
-];
+] satisfies Deck[];
 
 const RUNES = [
   {
@@ -153,7 +159,7 @@ const RUNES = [
     decks: ["meso"],
     sources: [],
   },
-];
+] satisfies RuneBuild[];
 
 const GEAR = [
   {
@@ -180,7 +186,7 @@ const GEAR = [
     why: "Move speed breaks the Cherry formation.",
     sources: ["nv:43653"],
   },
-];
+] satisfies GearRec[];
 
 const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
@@ -192,21 +198,9 @@ const API: Record<string, Canned> = {
   "/api/gear-recs": { body: GEAR },
 };
 
-/** Renders the whole app at `path` against the stubbed API, overriding some responses. */
-async function renderAt(path: string, overrides: Record<string, Canned> = {}) {
-  stubApi({ ...API, ...overrides });
-  const router = createAppRouter({
-    queryClient: testQueryClient(),
-    history: createMemoryHistory({ initialEntries: [path] }),
-  });
-  await router.load();
-  render(
-    <QueryClientProvider client={router.options.context.queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>,
-  );
-  return router;
-}
+/** Renders the whole app at `path` against this file's stubbed API, overriding some responses. */
+const renderAt = (path: string, overrides: Record<string, Canned> = {}) =>
+  renderRoute(path, { ...API, ...overrides });
 
 /** The view's tab panel. */
 const panel = () => within(screen.getByRole("tabpanel"));
@@ -377,6 +371,11 @@ describe("/conquest/runes", () => {
       expect(router.state.location.search).toEqual({ deck: "cherry", q: "pomegranate" }),
     );
     expect(cookies()).toEqual(["Pomegranate석류"]);
+  });
+
+  it("keeps a numeric text filter from the URL, which the router decodes as a number", async () => {
+    await renderAt("/conquest/runes?q=9");
+    expect(await panel().findByRole("searchbox")).toHaveValue("9");
   });
 
   it("shows the empty message with no rune builds", async () => {

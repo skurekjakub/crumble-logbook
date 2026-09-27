@@ -1,14 +1,16 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import type { Deck, Ranking, RngFactor, Score } from "../src/api/types";
 import type { Canned } from "./helpers";
 import { bodyRows, renderRoute } from "./view-harness";
 
 const DECKS = [
   { id: "cherry", nameEn: "Cherry deck" },
   { id: "meso", nameEn: "Melon Soda deck" },
-];
+] satisfies Partial<Deck>[];
 
-const score = (o: Record<string, unknown>) => ({
+const score = (o: Pick<Score, "id" | "damageG"> & Partial<Score>): Score => ({
+  powerG: null,
   deckId: null,
   verified: true,
   date: "2026-09-20",
@@ -35,7 +37,7 @@ const RNG = [
     mitigation: "Lv.1 fillers.",
     sources: ["nv:43653"],
   },
-];
+] satisfies RngFactor[];
 
 const SEASONS = [
   { board: "players", season: 4, count: 50, capturedAt: "2026-09-27" },
@@ -45,7 +47,9 @@ const SEASONS = [
   { board: "power", season: null, count: 500, capturedAt: "2026-09-27" },
 ];
 
-const ranking = (o: Record<string, unknown>) => ({
+const ranking = (
+  o: Pick<Ranking, "id" | "rank" | "name" | "valueG"> & Partial<Ranking>,
+): Ranking => ({
   season: 5,
   board: "players",
   guild: null,

@@ -1,6 +1,9 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { createMemoryHistory, RouterProvider } from "@tanstack/react-router";
 import { render } from "@testing-library/react";
+import type { Source } from "../src/api/types";
+import type { ModeSection } from "../src/app/modes";
+import { CONQUEST } from "../src/app/modes";
 import { createAppRouter } from "../src/router";
 import type { Canned } from "./helpers";
 import { stubApi, testQueryClient } from "./helpers";
@@ -43,22 +46,34 @@ export const VIEW_SOURCES = [
     summaryEn: null,
     capturePath: "research/001-guild-conquest-meta/evidence/12-crumbgg/s5.json",
   },
-];
+] satisfies Source[];
+
+/** Options for {@link renderRoute}. */
+export interface RenderOptions {
+  /** The mode whose research record is answered by default; Guild Conquest unless given. */
+  mode?: ModeSection;
+}
 
 /**
- * Renders the whole app at `path` against a stubbed API. The research
- * record and the unfiltered source list are answered unless `api`
+ * Renders the whole app at `path` against a stubbed API. The mode's
+ * research record and the unfiltered source list are answered unless `api`
  * overrides them.
  *
  * @param path - the URL to open, query string included
  * @param api - extra (or overriding) canned responses by request path
+ * @param options - the mode the default record belongs to
  * @returns the router, for asserting on its location
  */
-export async function renderRoute(path: string, api: Record<string, Canned> = {}) {
+export async function renderRoute(
+  path: string,
+  api: Record<string, Canned> = {},
+  { mode = CONQUEST }: RenderOptions = {},
+) {
+  const slug = mode.recordSlug;
   stubApi({
-    "/api/records/001-guild-conquest-meta": {
-      body: { slug: "001-guild-conquest-meta", lede: "Guild Conquest research." },
-    },
+    ...(slug
+      ? { [`/api/records/${slug}`]: { body: { slug, lede: `${mode.label} research.` } } }
+      : {}),
     "/api/sources": { body: VIEW_SOURCES },
     ...api,
   });

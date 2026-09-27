@@ -96,7 +96,7 @@ const isDrizzle = (edge: ImportEdge) => isPackage(edge.specifier, "drizzle-orm")
 const isHono = (edge: ImportEdge) =>
   isPackage(edge.specifier, "hono") || edge.specifier.startsWith("@hono/");
 
-/** The layering rules, from the PvP plan's step R1. */
+/** The layering rules: the PvP plan's step R1 set, plus downward-only rules per layer. */
 const RULES: Rule[] = [
   {
     name: "routes import only services, never repos, db or drizzle-orm",
@@ -146,6 +146,18 @@ const RULES: Rule[] = [
     name: "components stay props-only: no src/api import",
     covers: (file) => under(file, `${WEB}/components`),
     forbids: (edge) => under(edge.target, `${WEB}/api`),
+  },
+  {
+    name: "web lib/ stays pure: no src/api, app, views or routes import",
+    covers: (file) => under(file, `${WEB}/lib`),
+    forbids: (edge) =>
+      ["api", "app", "views", "routes"].some((dir) => under(edge.target, `${WEB}/${dir}`)),
+  },
+  {
+    name: "the web's api layer imports no app, views, components or routes",
+    covers: (file) => under(file, `${WEB}/api`),
+    forbids: (edge) =>
+      ["app", "views", "components", "routes"].some((dir) => under(edge.target, `${WEB}/${dir}`)),
   },
 ];
 

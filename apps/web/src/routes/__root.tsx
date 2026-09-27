@@ -56,10 +56,11 @@ function RootLayout() {
   const tab = section ? activeTab(section.tabs, pathname) : undefined;
   const stamp = section?.stamp ?? [];
   const slug = section?.recordSlug ?? null;
+  const scope = section?.kind === "mode" ? section.scope : undefined;
 
   const record = useQuery({ ...recordQuery(slug ?? ""), enabled: slug != null });
   const sources = useQuery({ ...sourcesQuery(), enabled: stamp.includes("sources") });
-  const decks = useQuery({ ...decksQuery(), enabled: stamp.includes("decks") });
+  const decks = useQuery({ ...decksQuery(scope), enabled: stamp.includes("decks") });
 
   const values: Record<StampStat, string | number | null | undefined> = {
     updated: record.data?.updatedAt,

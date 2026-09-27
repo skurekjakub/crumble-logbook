@@ -1,5 +1,6 @@
 import { screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import type { BuffValue, Deck, FightEvent, GearRec, Mechanic, RuneBuild } from "../src/api/types";
 import { bodyRows, renderRoute } from "./view-harness";
 
 const PATH = "/conquest/boss";
@@ -77,20 +78,20 @@ const FIGHT_EVENTS = [
     confidence: "low",
     sources: [],
   },
-] as const;
+] satisfies FightEvent[];
 
 /** One grade row per star for a cookie's effect. */
 function grades(
-  base: { id: number; cookieKr: string; en: string | null; effectType: string },
+  base: Pick<BuffValue, "id" | "cookieKr" | "en" | "effectType">,
   values: readonly number[],
-  extra: Partial<{ maxStack: number; base: string; scalesWithCasterAmp: boolean }> = {},
-) {
+  extra: Partial<Pick<BuffValue, "maxStack" | "base" | "scalesWithCasterAmp">> = {},
+): BuffValue[] {
   return [0, 1, 3, 5, 7, 9].map((star, i) => ({
     ...base,
     id: base.id * 10 + i,
     skillGrade: star,
     fromStar: star,
-    valuePct: values[i],
+    valuePct: values[i]!,
     maxStack: 1,
     base: "Fixed",
     scalesWithCasterAmp: true,
@@ -163,7 +164,7 @@ const MECHANICS = [
     confidence: "high",
     sources: [],
   },
-] as const;
+] satisfies Mechanic[];
 
 const RUNE_BUILDS = [
   {
@@ -196,7 +197,7 @@ const RUNE_BUILDS = [
     decks: ["meso"],
     sources: [],
   },
-] as const;
+] satisfies RuneBuild[];
 
 const DECKS = [
   {
@@ -232,7 +233,7 @@ const DECKS = [
     notes: [],
     sources: ["nv:43653"],
   },
-] as const;
+] satisfies Deck[];
 
 const GEAR = [
   {
@@ -251,7 +252,7 @@ const GEAR = [
     why: "Arena pick.",
     sources: [],
   },
-] as const;
+] satisfies GearRec[];
 
 const FULL = {
   "/api/fight-events?boss=pinata": { body: FIGHT_EVENTS },
