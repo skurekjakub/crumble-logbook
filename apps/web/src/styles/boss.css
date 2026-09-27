@@ -5,7 +5,8 @@
   gap: var(--sp-2);
   margin-top: var(--sp-3);
 }
-.boss-sec > h3 {
+.boss-sec > h3,
+.boss-sec > p {
   margin: 0;
 }
 .boss-sec h4 {
