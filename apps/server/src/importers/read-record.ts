@@ -81,8 +81,11 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
   };
   assertKnown("source", "sources");
   assertKnown("deck", "decks");
+  const context = {
+    deckModes: new Map((parsed.decks ?? []).map((deck) => [deck.id, deck.mode])),
+  };
   for (const [name, collection] of ORDERED) {
-    if (parsed[name] !== undefined) collection.check?.(files[name]!, parsed[name]);
+    if (parsed[name] !== undefined) collection.check?.(files[name]!, parsed[name], context);
   }
 }
 
@@ -98,7 +101,8 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
  * @returns the record's slug, its write steps in order, and warnings
  * @throws {ImportError} naming the file and row, if a file is missing or
  *   malformed, a row fails its schema, a row cites an unknown source or
- *   deck, or two ranking rows share a key
+ *   deck, a counter's mode isn't its decks' mode, or two ranking rows
+ *   share a key
  */
 export function readRecord(recordDir: string): RecordPlan {
   const manifest = readManifest(recordDir);
@@ -117,7 +121,7 @@ export function readRecord(recordDir: string): RecordPlan {
   const warnings: string[] = [];
   for (const [name, collection] of ORDERED) {
     if (parsed[name] === undefined) continue;
-    steps.push(...collection.prepare(parsed[name], context));
+    steps.push(...collection.prepare(parsed[name], { ...context, file: curated.files[name]! }));
     warnings.push(...(collection.warnings?.(parsed[name]) ?? []));
   }
   steps.push(rankings);

@@ -46,8 +46,9 @@ export interface ImportOptions {
  * @returns rows inserted per table, and non-fatal warnings
  * @throws {ImportError} naming the file and row, if a file is missing or
  *   malformed, a row fails its schema, a row cites an unknown source or
- *   deck, two ranking rows share a key, or a buff value conflicts with the
- *   one another record loaded
+ *   deck, a counter's mode isn't its decks' mode, two ranking rows share a
+ *   key, a deck id or counter slug is already loaded by another record, or
+ *   a buff value conflicts with the one another record loaded
  * @throws {ImportError} `"record <slug> is already loaded; pass --replace
  *   to load it again"` if the record owns rows and `replace` isn't set
  */

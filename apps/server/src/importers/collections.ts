@@ -7,7 +7,7 @@
  *
  * @module
  */
-import type { GlossaryRow } from "@crumble/schema";
+import type { GameMode, GlossaryRow } from "@crumble/schema";
 import { z } from "zod";
 import { ImportError } from "../errors";
 import type { ContentKey, ValuesOf } from "../registry";
@@ -56,8 +56,16 @@ export interface RowRefs {
   decks?: readonly string[];
 }
 
+/** What a collection's own checks can see of the record's other collections. */
+export interface CheckContext {
+  /** Each curated deck's game mode, by deck id. */
+  deckModes: ReadonlyMap<string, GameMode>;
+}
+
 /** What a collection's rows are mapped with, besides the rows themselves. */
 export interface PrepareContext {
+  /** The collection file's record-relative path, as errors name it. */
+  file: string;
   /** Absolute path to the record directory. */
   recordDir: string;
   /** The record's validated `import.json`. */
@@ -85,9 +93,12 @@ export interface Collection<Parsed> {
   refs(parsed: Parsed): RowRefs[];
   /**
    * Checks what the reference checks don't, after they pass.
+   * @param file - the file's record-relative path, as errors name it
+   * @param parsed - the validated content
+   * @param context - what the check can see of the other collections
    * @throws {ImportError} naming the file and the row
    */
-  check?(file: string, parsed: Parsed): void;
+  check?(file: string, parsed: Parsed, context: CheckContext): void;
   /** Lists non-fatal findings worth a human's attention. */
   warnings?(parsed: Parsed): string[];
   /**
@@ -273,6 +284,43 @@ function crossRecordGlossaryWarnings(entries: readonly GlossaryRow[], record: st
 }
 
 /**
+ * Throws if an id this record is about to write is already held by a row
+ * another record loaded. Called from a write step, after a replace has
+ * cleared the record's own rows, so any row still holding the id is
+ * another record's (or no record's).
+ *
+ * @param file - the collection file's record-relative path, as errors name it
+ * @param label - how the error names the id, e.g. `deck id`
+ * @param ids - the ids about to be written, in file order
+ * @param holderOf - the slug of the record owning the row that holds an
+ *   id, `null` for a row no record owns, or `undefined` if no row holds it
+ * @throws {ImportError} naming `file`, the id's row index and the holding
+ *   record, for the first held id
+ */
+function assertUnclaimed(
+  file: string,
+  label: string,
+  ids: readonly string[],
+  holderOf: (id: string) => string | null | undefined,
+): void {
+  ids.forEach((id, index) => {
+    const holder = holderOf(id);
+    if (holder === undefined) return;
+    throw new ImportError(
+      file,
+      index,
+      `${label} "${id}" is already loaded by record ${holder ?? "(none)"}`,
+    );
+  });
+}
+
+/** The counters collection's plain cited-row behaviour, before its own checks. */
+const counterRows = citedRows("counters", seedCounter, mapCounter, (edge) => [
+  edge.team,
+  edge.beaten_by,
+]);
+
+/**
  * Every curated collection, by its key in the curated manifest, in write
  * order: a collection's rows only reference rows written before them.
  */
@@ -376,10 +424,16 @@ export const COLLECTIONS = {
   decks: collection({
     parse: (file, raw) => parseRows(file, raw, seedDeck),
     refs: (decks) => decks.map((deck, index) => ({ row: index, sources: deck.sources })),
-    prepare: (decks) => {
+    prepare: (decks, { file }) => {
       const mapped = decks.map((seed, position) => ({ ...mapDeck(seed, position), seed }));
       return [
         (repos, { record }) => {
+          assertUnclaimed(
+            file,
+            "deck id",
+            decks.map((deck) => deck.id),
+            (id) => repos.decks.get(id)?.recordSlug,
+          );
           for (const { deck, cookies, pets, notes, seed } of mapped) {
             repos.decks.insert({ ...deck, recordSlug: record });
             repos.decks.replaceCookies(deck.id, cookies);
@@ -443,10 +497,35 @@ export const COLLECTIONS = {
     detail: takeaway.detail ?? null,
     mode: takeaway.mode,
   })),
-  counters: {
-    ...citedRows("counters", seedCounter, mapCounter, (edge) => [edge.team, edge.beaten_by]),
+  counters: collection({
+    ...counterRows,
     optional: true,
-  },
+    check: (file, edges, { deckModes }) => {
+      edges.forEach((edge, index) => {
+        for (const deck of [edge.team, edge.beaten_by]) {
+          const deckMode = deckModes.get(deck);
+          if (deckMode === undefined || deckMode === edge.mode) continue;
+          throw new ImportError(
+            file,
+            index,
+            `counter mode ${edge.mode} doesn't match deck ${deck}'s mode ${deckMode}`,
+          );
+        }
+      });
+    },
+    prepare: (edges, context) => [
+      (repos) => {
+        const holders = new Map(repos.counters.list().map((row) => [row.slug, row.recordSlug]));
+        assertUnclaimed(
+          context.file,
+          "counter slug",
+          edges.map((edge) => edge.id),
+          (slug) => holders.get(slug),
+        );
+      },
+      ...counterRows.prepare(edges, context),
+    ],
+  }),
   usage: { ...citedRows("usageStats", seedUsage, mapUsage), optional: true },
 };
 
