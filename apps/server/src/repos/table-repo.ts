@@ -15,7 +15,11 @@ type IdTable = SQLiteTable & { id: SQLiteColumn };
 export interface TableRepo<Row, Insert> {
   /** Returns every row, in the repo's configured order. */
   list(): Row[];
-  /** Returns the row with `id`, or `undefined` if there is none. */
+  /**
+   * Returns the row with `id`, or `undefined` if there is none.
+   * @param id - the row's primary key
+   * @returns the matching row, or `undefined` if `id` doesn't exist
+   */
   get(id: number): Row | undefined;
   /**
    * Inserts a row.
@@ -31,6 +35,7 @@ export interface TableRepo<Row, Insert> {
   update(id: number, patch: Partial<Insert>): Row | undefined;
   /**
    * Deletes the row with `id`.
+   * @param id - the row's primary key
    * @returns `true` if a row was deleted, `false` if `id` didn't exist
    */
   remove(id: number): boolean;

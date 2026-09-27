@@ -14,7 +14,11 @@ export interface SourcesRepo {
    * @param site - restrict the list to this site, when given
    */
   list(site?: SourceSite): SourceRow[];
-  /** Returns the source with `id`, or `undefined` if there is none. */
+  /**
+   * Returns the source with `id`, or `undefined` if there is none.
+   * @param id - the source's `<site>:<key>` id
+   * @returns the matching row, or `undefined` if `id` doesn't exist
+   */
   get(id: string): SourceRow | undefined;
   /**
    * Inserts a source.
@@ -28,6 +32,7 @@ export interface SourcesRepo {
   update(id: string, patch: Partial<SourceInsert>): SourceRow | undefined;
   /**
    * Deletes the source with `id`.
+   * @param id - the source's `<site>:<key>` id
    * @returns `true` if a row was deleted, `false` if `id` didn't exist
    */
   remove(id: string): boolean;

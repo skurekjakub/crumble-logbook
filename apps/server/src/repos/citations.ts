@@ -22,7 +22,11 @@ export interface CitationsRepo {
    * @throws if any `sourceIds` entry doesn't exist in `sources`
    */
   replace(entity: CitedEntity, entityId: string, sourceIds: string[]): void;
-  /** Deletes every citation for `(entity, entityId)`. */
+  /**
+   * Deletes every citation for `(entity, entityId)`.
+   * @param entity - the cited entity kind
+   * @param entityId - the specific entity's id
+   */
   removeAll(entity: CitedEntity, entityId: string): void;
   /** Returns how many citations reference `sourceId`, across every entity. */
   countForSource(sourceId: string): number;
