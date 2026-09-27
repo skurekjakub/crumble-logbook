@@ -36,6 +36,14 @@ export interface CitationsRepo {
   clear(): void;
   /** Returns every citation row. */
   all(): CitationRow[];
+  /**
+   * Inserts `rows` into `citations` as-is, preserving `id`. For restoring a
+   * snapshot.
+   * @param rows - full citation rows, including `id`; `[]` inserts nothing
+   * @throws if any row's `sourceId` doesn't exist, or its `id` or
+   *   (entity, entityId, sourceId) is already taken
+   */
+  insertRaw(rows: CitationRow[]): void;
 }
 
 /**
@@ -79,5 +87,8 @@ export function createCitationsRepo(db: Db): CitationsRepo {
       db.delete(citations).run();
     },
     all: () => db.select().from(citations).all(),
+    insertRaw: (rows) => {
+      if (rows.length > 0) db.insert(citations).values(rows).run();
+    },
   };
 }

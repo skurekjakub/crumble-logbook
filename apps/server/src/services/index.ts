@@ -18,6 +18,8 @@ import type { ContentService } from "./content";
 import { createContentService } from "./content";
 import type { DeckService } from "./decks";
 import { createDeckService } from "./decks";
+import type { ExportService } from "./export";
+import { createExportService } from "./export";
 import type { GlossaryService } from "./glossary";
 import { createGlossaryService } from "./glossary";
 import type { RankingsService } from "./rankings";
@@ -46,6 +48,7 @@ export interface Services {
   glossary: GlossaryService;
   rankings: RankingsService;
   records: RecordsService;
+  export: ExportService;
 }
 
 /**
@@ -86,5 +89,6 @@ export function createServices(store: Store): Services {
     glossary: createGlossaryService(store),
     rankings: createRankingsService(store),
     records: createRecordsService(store),
+    export: createExportService(store),
   };
 }

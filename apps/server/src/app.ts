@@ -16,6 +16,7 @@ import { Hono } from "hono";
 import { ConflictError, NotFoundError, UnknownRefsError } from "./errors";
 import { contentRouter } from "./routes/content";
 import { decksRouter } from "./routes/decks";
+import { exportRouter } from "./routes/export";
 import { glossaryRouter } from "./routes/glossary";
 import { rankingsRouter } from "./routes/rankings";
 import { recordsRouter } from "./routes/records";
@@ -71,6 +72,7 @@ export function createApp(services: Services) {
     .route("/glossary", glossaryRouter(services.glossary))
     .route("/rankings", rankingsRouter(services.rankings))
     .route("/records", recordsRouter(services.records))
+    .route("/export", exportRouter(services.export))
     .onError((err, c) => {
       if (err instanceof NotFoundError) {
         return c.json({ error: "not_found" as const, message: err.message }, 404);
