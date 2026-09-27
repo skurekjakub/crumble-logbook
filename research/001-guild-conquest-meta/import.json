@@ -1,0 +1,58 @@
+{
+  "record": {
+    "slug": "001-guild-conquest-meta",
+    "question": "There is a small, documented set of Guild Conquest teams that KR/Global top players use to reach ≥1T damage. For each one, the community sources name the cookie lineup, levels (including deliberate Lv.1 fillers), sugar runes, gear stats, pets and perks precisely enough that someone with every cookie could reproduce it.",
+    "status": "active",
+    "startedAt": "2026-09-27"
+  },
+  "curated": "curated",
+  "extractions": "evidence/08-extract",
+  "captures": [
+    { "site": "dc", "dir": "evidence/03-dc-posts", "file": "{id}.md" },
+    { "site": "dc", "dir": "evidence/11-dc-posts-extra", "file": "{id}.md" },
+    { "site": "dc", "dir": "evidence/16-top-players/dc", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/07-nv-posts", "file": "nv-{id}.md" },
+    { "site": "nv", "dir": "evidence/16-top-players/nv", "file": "nv-{id}.md" }
+  ],
+  "rankings": [
+    {
+      "file": "evidence/15-crumbgg/11-players.tsv",
+      "board": "players",
+      "capturedAt": "2026-09-27",
+      "source": "web:crumbgg:rankings-s{season}",
+      "columns": {
+        "season": "season",
+        "rank": "rank",
+        "name": "player",
+        "guild": "guild",
+        "value": "score_G",
+        "power": "power_G",
+        "ref": "crumb_player_id"
+      }
+    },
+    {
+      "file": "evidence/15-crumbgg/12-guilds.tsv",
+      "board": "guilds",
+      "capturedAt": "2026-09-27",
+      "source": "web:crumbgg:rankings-s{season}",
+      "columns": {
+        "season": "season",
+        "rank": "rank",
+        "name": "guild",
+        "value": "score_G"
+      }
+    },
+    {
+      "file": "evidence/15-crumbgg/13-power-top500.tsv",
+      "board": "power",
+      "capturedAt": "2026-09-27",
+      "source": "web:crumbgg:power-leaderboard",
+      "columns": {
+        "rank": "rank",
+        "name": "player",
+        "guild": "guild",
+        "value": "combat_power_G"
+      }
+    }
+  ]
+}

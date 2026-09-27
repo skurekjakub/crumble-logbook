@@ -8,8 +8,14 @@ export interface NameRef {
   en: string | null;
 }
 
-/** Collapses case and whitespace differences for glossary lookup keys. */
-function normalize(name: string): string {
+/**
+ * Collapses case and whitespace differences for glossary lookup keys: the
+ * key {@link createNameResolver} indexes and looks up a name under.
+ * @param name - a name as written
+ * @returns the trimmed, lower-cased name with whitespace runs collapsed to
+ *   one space
+ */
+export function normalizeName(name: string): string {
   return name.trim().toLowerCase().replace(/\s+/g, " ");
 }
 
@@ -27,9 +33,9 @@ function normalize(name: string): string {
 export function createNameResolver(entries: GlossaryRow[]): (name: string) => NameRef {
   const byKey = new Map<string, string | null>();
   for (const entry of entries) {
-    byKey.set(normalize(entry.kr), entry.en);
-    for (const shorthand of entry.shorthand) byKey.set(normalize(shorthand), entry.en);
-    if (entry.en) byKey.set(normalize(entry.en), entry.en);
+    byKey.set(normalizeName(entry.kr), entry.en);
+    for (const shorthand of entry.shorthand) byKey.set(normalizeName(shorthand), entry.en);
+    if (entry.en) byKey.set(normalizeName(entry.en), entry.en);
   }
-  return (name) => ({ kr: name, en: byKey.get(normalize(name)) ?? null });
+  return (name) => ({ kr: name, en: byKey.get(normalizeName(name)) ?? null });
 }

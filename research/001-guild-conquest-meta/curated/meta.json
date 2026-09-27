@@ -1,0 +1,24 @@
+{
+  "updated": "2026-09-27",
+  "season": "S5 (live)",
+  "lede": "What Korean and global players run in Guild Conquest (길드 토벌전), taken from DCInside, the official Naver cafe and crumb.gg. Every claim links to the post it came from.",
+  "caveat": "Snapshot of 2026-09-27; Season 5 closes 2026-09-28 12:00 KST, so its top scores can still move. The Season 5 leaders (2.3–3.2T) haven't published their teams. The decks here are the best documented ones, which reach 1T 999G at about 3G team power. The research record's STATE.md lists what's still open.",
+  "record": "Games/crumble/research/001-guild-conquest-meta/",
+  "footer": "Built from the research record's evidence captures.",
+  "gear_slot_names": {
+    "top-left": "Top-left · weapons (sword, bow, staff)",
+    "top-right": "Top-right · accessories (necklace, ring, brooch)",
+    "bottom-left": "Bottom-left · armour (helmet, armour, shield)",
+    "bottom-right": "Bottom-right · special (magic item, book, food)"
+  },
+  "you": {
+    "summary": "Your screenshot (1G power, Cherry-deck lineup, Octo Wasabi 19★ / Hot Doggie 20★ / Candy Shade Pouch 11★) matches the meta deck cookie-for-cookie. The Lv.1 fillers are already right.",
+    "changes": [
+      "Pomegranate: Lv.100 is fine. Dropping her to Lv.1 changes nothing but the displayed multiple.",
+      "Scorpion (the Lv.1 red fire cookie in row 2): try a few levels (Lv.10–45) so stray beams land on her rather than Dark Choco. Keep her ≥10% under your 6th cookie's ATK, checked in battle.",
+      "Candy Shade Pouch is at 11★ against 20★ in the top runs; it carries the lift resistance and HP.",
+      "Check the rune and gear tabs against your raid preset, especially Milk all ATK% and Brightseeker's total haste (target 40–50 in battle)."
+    ],
+    "sources": ["dc:76135", "dc:75400", "nv:43653"]
+  }
+}

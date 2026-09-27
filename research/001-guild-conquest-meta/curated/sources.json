@@ -1,0 +1,2333 @@
+{
+ "web:crumbgg:rankings-s1": {
+  "url": "https://crumb.gg/rankings",
+  "title": "길드 토벌전 개인 랭킹 시즌 1",
+  "title_en": "Guild Conquest player rankings, Season 1",
+  "date": null,
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:rankings-s2": {
+  "url": "https://crumb.gg/rankings",
+  "title": "길드 토벌전 개인 랭킹 시즌 2",
+  "title_en": "Guild Conquest player rankings, Season 2",
+  "date": null,
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:rankings-s3": {
+  "url": "https://crumb.gg/rankings",
+  "title": "길드 토벌전 개인 랭킹 시즌 3",
+  "title_en": "Guild Conquest player rankings, Season 3",
+  "date": null,
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:rankings-s4": {
+  "url": "https://crumb.gg/rankings",
+  "title": "길드 토벌전 개인 랭킹 시즌 4",
+  "title_en": "Guild Conquest player rankings, Season 4",
+  "date": null,
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:rankings-s5": {
+  "url": "https://crumb.gg/rankings",
+  "title": "길드 토벌전 개인 랭킹 시즌 5",
+  "title_en": "Guild Conquest player rankings, Season 5",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-날씨의아이": {
+  "url": "https://crumb.gg/lookup",
+  "title": "날씨의아이 (카페)",
+  "title_en": "crumb.gg Lookup: 날씨의아이",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-현이": {
+  "url": "https://crumb.gg/lookup",
+  "title": "현이 (카페)",
+  "title_en": "crumb.gg Lookup: 현이",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-검은반장": {
+  "url": "https://crumb.gg/lookup",
+  "title": "검은반장 (바삭젤리단)",
+  "title_en": "crumb.gg Lookup: 검은반장",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-타미": {
+  "url": "https://crumb.gg/lookup",
+  "title": "타미 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 타미",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-다함께차차차": {
+  "url": "https://crumb.gg/lookup",
+  "title": "다함께차차차 (카페)",
+  "title_en": "crumb.gg Lookup: 다함께차차차",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-燕之助": {
+  "url": "https://crumb.gg/lookup",
+  "title": "燕之助 (薑餅棉花妮妮樂園)",
+  "title_en": "crumb.gg Lookup: 燕之助",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-아나": {
+  "url": "https://crumb.gg/lookup",
+  "title": "아나 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 아나",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-노을": {
+  "url": "https://crumb.gg/lookup",
+  "title": "노을 (카페)",
+  "title_en": "crumb.gg Lookup: 노을",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-페즈": {
+  "url": "https://crumb.gg/lookup",
+  "title": "페즈 (카페)",
+  "title_en": "crumb.gg Lookup: 페즈",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-스타": {
+  "url": "https://crumb.gg/lookup",
+  "title": "스타 (카페)",
+  "title_en": "crumb.gg Lookup: 스타",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-딘딘": {
+  "url": "https://crumb.gg/lookup",
+  "title": "딘딘 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 딘딘",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-華夏戶籍防盜部隊": {
+  "url": "https://crumb.gg/lookup",
+  "title": "華夏戶籍防盜部隊 (小孩坐一桌)",
+  "title_en": "crumb.gg Lookup: 華夏戶籍防盜部隊",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-홍백련": {
+  "url": "https://crumb.gg/lookup",
+  "title": "홍백련 (품격)",
+  "title_en": "crumb.gg Lookup: 홍백련",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-뜨뜨뜨뜨": {
+  "url": "https://crumb.gg/lookup",
+  "title": "뜨뜨뜨뜨 (카페)",
+  "title_en": "crumb.gg Lookup: 뜨뜨뜨뜨",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-やなぎ": {
+  "url": "https://crumb.gg/lookup",
+  "title": "やなぎ (카페)",
+  "title_en": "crumb.gg Lookup: やなぎ",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-젱젱": {
+  "url": "https://crumb.gg/lookup",
+  "title": "젱젱 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 젱젱",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-솔라": {
+  "url": "https://crumb.gg/lookup",
+  "title": "솔라 (카페)",
+  "title_en": "crumb.gg Lookup: 솔라",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-준준이쿠키": {
+  "url": "https://crumb.gg/lookup",
+  "title": "준준이쿠키 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 준준이쿠키",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-슈퍼땅콩": {
+  "url": "https://crumb.gg/lookup",
+  "title": "슈퍼땅콩 (각성)",
+  "title_en": "crumb.gg Lookup: 슈퍼땅콩",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-Arsen": {
+  "url": "https://crumb.gg/lookup",
+  "title": "Arsen (방랑자)",
+  "title_en": "crumb.gg Lookup: Arsen",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-루키": {
+  "url": "https://crumb.gg/lookup",
+  "title": "루키 (방랑자)",
+  "title_en": "crumb.gg Lookup: 루키",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-초코": {
+  "url": "https://crumb.gg/lookup",
+  "title": "초코 (방랑자)",
+  "title_en": "crumb.gg Lookup: 초코",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-환상": {
+  "url": "https://crumb.gg/lookup",
+  "title": "환상 (카페)",
+  "title_en": "crumb.gg Lookup: 환상",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-newbiee": {
+  "url": "https://crumb.gg/lookup",
+  "title": "newbiee (카페)",
+  "title_en": "crumb.gg Lookup: newbiee",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-다크닉스": {
+  "url": "https://crumb.gg/lookup",
+  "title": "다크닉스 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 다크닉스",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-전투토끼": {
+  "url": "https://crumb.gg/lookup",
+  "title": "전투토끼 (월드)",
+  "title_en": "crumb.gg Lookup: 전투토끼",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-Malicious": {
+  "url": "https://crumb.gg/lookup",
+  "title": "Malicious (방랑자)",
+  "title_en": "crumb.gg Lookup: Malicious",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-똥에디": {
+  "url": "https://crumb.gg/lookup",
+  "title": "똥에디 (카페)",
+  "title_en": "crumb.gg Lookup: 똥에디",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-눈의": {
+  "url": "https://crumb.gg/lookup",
+  "title": "눈의 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 눈의",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-칠성": {
+  "url": "https://crumb.gg/lookup",
+  "title": "칠성 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 칠성",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-나비": {
+  "url": "https://crumb.gg/lookup",
+  "title": "나비 (카페)",
+  "title_en": "crumb.gg Lookup: 나비",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-댕댕": {
+  "url": "https://crumb.gg/lookup",
+  "title": "댕댕 (카페)",
+  "title_en": "crumb.gg Lookup: 댕댕",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-빵빵": {
+  "url": "https://crumb.gg/lookup",
+  "title": "빵빵 (월드)",
+  "title_en": "crumb.gg Lookup: 빵빵",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-히히서커스": {
+  "url": "https://crumb.gg/lookup",
+  "title": "히히서커스 (Carpediem)",
+  "title_en": "crumb.gg Lookup: 히히서커스",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-똑똑이아빠": {
+  "url": "https://crumb.gg/lookup",
+  "title": "똑똑이아빠 (카페)",
+  "title_en": "crumb.gg Lookup: 똑똑이아빠",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-노페": {
+  "url": "https://crumb.gg/lookup",
+  "title": "노페 (카페)",
+  "title_en": "crumb.gg Lookup: 노페",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-SCANDAL": {
+  "url": "https://crumb.gg/lookup",
+  "title": "SCANDAL (미르)",
+  "title_en": "crumb.gg Lookup: SCANDAL",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-Bishop": {
+  "url": "https://crumb.gg/lookup",
+  "title": "Bishop (카페)",
+  "title_en": "crumb.gg Lookup: Bishop",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-벼락맞은선인장": {
+  "url": "https://crumb.gg/lookup",
+  "title": "벼락맞은선인장 (카페)",
+  "title_en": "crumb.gg Lookup: 벼락맞은선인장",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-섬영": {
+  "url": "https://crumb.gg/lookup",
+  "title": "섬영 (판도라)",
+  "title_en": "crumb.gg Lookup: 섬영",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-푸키": {
+  "url": "https://crumb.gg/lookup",
+  "title": "푸키 (Eden)",
+  "title_en": "crumb.gg Lookup: 푸키",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-부스러기": {
+  "url": "https://crumb.gg/lookup",
+  "title": "부스러기 (방랑자)",
+  "title_en": "crumb.gg Lookup: 부스러기",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-군무원": {
+  "url": "https://crumb.gg/lookup",
+  "title": "군무원 (카페)",
+  "title_en": "crumb.gg Lookup: 군무원",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-八雲Shiro": {
+  "url": "https://crumb.gg/lookup",
+  "title": "八雲Shiro (幻想郷の人間の里)",
+  "title_en": "crumb.gg Lookup: 八雲Shiro",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-鮭魚soz": {
+  "url": "https://crumb.gg/lookup",
+  "title": "鮭魚soz (阿Seng餅乾集團)",
+  "title_en": "crumb.gg Lookup: 鮭魚soz",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-무드": {
+  "url": "https://crumb.gg/lookup",
+  "title": "무드 (월드)",
+  "title_en": "crumb.gg Lookup: 무드",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-Lineve": {
+  "url": "https://crumb.gg/lookup",
+  "title": "Lineve (Eden)",
+  "title_en": "crumb.gg Lookup: Lineve",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-군산": {
+  "url": "https://crumb.gg/lookup",
+  "title": "군산 (1TOP)",
+  "title_en": "crumb.gg Lookup: 군산",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-조봉순": {
+  "url": "https://crumb.gg/lookup",
+  "title": "조봉순 (판도라)",
+  "title_en": "crumb.gg Lookup: 조봉순",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:player-김개똥": {
+  "url": "https://crumb.gg/lookup",
+  "title": "김개똥 (월드)",
+  "title_en": "crumb.gg Lookup: 김개똥",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:power-leaderboard": {
+  "url": "https://crumb.gg/rankings (Power tab)",
+  "title": "전투력 랭킹",
+  "title_en": "Power leaderboard (top 500 by combat power)",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "web:crumbgg:patches": {
+  "url": "https://crumb.gg/patches",
+  "title": "패치 노트",
+  "title_en": "crumb.gg patch digest (global)",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:sim": {
+  "url": "https://crumb.gg/sim",
+  "title": "길드 토벌전 시뮬레이터",
+  "title_en": "Guild Conquest simulator",
+  "date": null,
+  "signal": "relevance 1/3"
+ },
+ "web:crumbgg:dps": {
+  "url": "https://crumb.gg/dps",
+  "title": "DPS 차트",
+  "title_en": "DPS chart (MV/s)",
+  "date": null,
+  "signal": "relevance 1/3"
+ },
+ "web:crumbgg:arena-stats": {
+  "url": "https://crumb.gg/rankings (Rumble Arena tab)",
+  "title": "와글와글 아레나 상위 100 덱 통계",
+  "title_en": "Rumble Arena top-100 team usage",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "web:crumbgg:api": {
+  "url": "https://crumb.gg",
+  "title": "",
+  "title_en": "crumb.gg JSON endpoints",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:17035": {
+  "url": "https://m.dcinside.com/board/projectcc/17035",
+  "title": "[📚정보] 전투력 보정 정리",
+  "title_en": "[Info] Summary of the combat-power correction",
+  "date": "2026-08-07",
+  "signal": "relevance 1/3"
+ },
+ "dc:31305": {
+  "url": "https://m.dcinside.com/board/projectcc/31305",
+  "title": "[📚정보] 스킬가속 정리",
+  "title_en": "[Info] Skill haste summary",
+  "date": "2026-08-14",
+  "signal": "relevance 2/3"
+ },
+ "dc:31349": {
+  "url": "https://m.dcinside.com/board/projectcc/31349",
+  "title": "[📚정보] 치명 관련 스탯 정리",
+  "title_en": "[Info] Crit-related stats summary",
+  "date": "2026-08-14",
+  "signal": "relevance 2/3"
+ },
+ "dc:32255": {
+  "url": "https://m.dcinside.com/board/projectcc/32255",
+  "title": "[📚정보] 보스별 덱 정리해봄 (+ 추가 임플란트 덱) (+ 수정 던전 덱)",
+  "title_en": "[Info] Per-boss decks (+ implant deck, + dungeon decks)",
+  "date": "2026-08-15",
+  "signal": "relevance 1/3"
+ },
+ "dc:45804": {
+  "url": "https://m.dcinside.com/board/projectcc/45804",
+  "title": "[📚정보] 딱히 알 필요는 없는 잡지식(+결론 한 줄 정리)",
+  "title_en": "[Info] Trivia you don't really need",
+  "date": "2026-08-27",
+  "signal": "relevance 0/3"
+ },
+ "dc:46452": {
+  "url": "https://m.dcinside.com/board/projectcc/46452",
+  "title": "[📢소식] [안내] 스킬 증폭 적용 방식 수정 및 슈가룬 재화 환급 안내",
+  "title_en": "[News] Official notice: skill amp application change + sugar rune refund",
+  "date": "2026-08-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:48412": {
+  "url": "https://m.dcinside.com/board/projectcc/48412",
+  "title": "[일반] 토벌전 피노+판다펫 필수임",
+  "title_en": "Guild Conquest: Pinot (Noir) + Panda pet are mandatory",
+  "date": "2026-08-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:48445": {
+  "url": "https://m.dcinside.com/board/projectcc/48445",
+  "title": "[일반] 뒷서버에서 놀다가 토벌전 개인랭킹보니까 무슨 고질라보는거같네",
+  "title_en": "Looking at the conquest personal ranking from a late server is like watching Godzilla",
+  "date": "2026-08-27",
+  "signal": "relevance 0/3"
+ },
+ "dc:51143": {
+  "url": "https://m.dcinside.com/board/projectcc/51143",
+  "title": "[📚정보] 본인 1~5덱 편성 공유(이걸로 더이상 보스별 덱 검색 안함)",
+  "title_en": "[Info] Sharing my decks 1-5 for stage bosses",
+  "date": "2026-08-28",
+  "signal": "relevance 1/3"
+ },
+ "dc:52401": {
+  "url": "https://m.dcinside.com/board/projectcc/52401",
+  "title": "[📚정보] 띄우기 저항 작동 방식 정리",
+  "title_en": "[Info] How lift (airborne) resistance works",
+  "date": "2026-08-29",
+  "signal": "relevance 3/3"
+ },
+ "dc:53921": {
+  "url": "https://m.dcinside.com/board/projectcc/53921",
+  "title": "[일반] 토벌덱 좃구리네 씨발새끼가",
+  "title_en": "Conquest deck sucks (rant)",
+  "date": "2026-08-30",
+  "signal": "relevance 0/3"
+ },
+ "dc:53977": {
+  "url": "https://m.dcinside.com/board/projectcc/53977",
+  "title": "[📚정보] 슈가룬 질문많길래 정리해봄",
+  "title_en": "[Info] Sugar rune guide (by role)",
+  "date": "2026-08-30",
+  "signal": "relevance 3/3"
+ },
+ "dc:54497": {
+  "url": "https://m.dcinside.com/board/projectcc/54497",
+  "title": "[일반] 토벌전 1위 떳노?!",
+  "title_en": "Got #1 in Guild Conquest?!",
+  "date": "2026-08-31",
+  "signal": "relevance 1/3"
+ },
+ "dc:55485": {
+  "url": "https://m.dcinside.com/board/projectcc/55485",
+  "title": "[📚정보] 치즈 우유 버프 정리",
+  "title_en": "[Info] Cheesecake vs Milk buff interaction",
+  "date": "2026-08-31",
+  "signal": "relevance 3/3"
+ },
+ "dc:58607": {
+  "url": "https://m.dcinside.com/board/projectcc/58607",
+  "title": "[일반] 토벌전 랜덤 아녓노?",
+  "title_en": "Wasn't conquest grouping random?",
+  "date": "2026-09-03",
+  "signal": "relevance 1/3"
+ },
+ "dc:58670": {
+  "url": "https://m.dcinside.com/board/projectcc/58670",
+  "title": "[일반] 우유 단장에서 치케 단장으로 바꾸니까 딜 오른다는 애 말을 믿노",
+  "title_en": "You believe the guy who says switching leader from Milk to Cheesecake raises damage?",
+  "date": "2026-09-03",
+  "signal": "relevance 1/3"
+ },
+ "dc:60340": {
+  "url": "https://m.dcinside.com/board/projectcc/60340",
+  "title": "[일반] 토벌 나뭔가 발견함",
+  "title_en": "Found something for conquest",
+  "date": "2026-09-06",
+  "signal": "relevance 3/3"
+ },
+ "dc:64661": {
+  "url": "https://m.dcinside.com/board/projectcc/64661",
+  "title": "[📚정보] 장비 플레이트 강화 수치 / 옵션표",
+  "title_en": "[Info] Gear plate enhancement values / option tables",
+  "date": "2026-09-11",
+  "signal": "relevance 2/3"
+ },
+ "dc:65772": {
+  "url": "https://m.dcinside.com/board/projectcc/65772",
+  "title": "[📚정보] 최종딜 계산기 만듦 이걸로 석류 버프 토론 종결 ㄱㄱ(오류 수정함)",
+  "title_en": "[Info] Made a final-damage calculator — settle the Pomegranate buff debate (errors fixed)",
+  "date": "2026-09-12",
+  "signal": "relevance 2/3"
+ },
+ "dc:66336": {
+  "url": "https://m.dcinside.com/board/projectcc/66336",
+  "title": "[일반] 토벌 빨간약 그냥 공개할게요",
+  "title_en": "I'll just reveal the conquest 'red pill'",
+  "date": "2026-09-13",
+  "signal": "relevance 1/3"
+ },
+ "dc:66636": {
+  "url": "https://m.dcinside.com/board/projectcc/66636",
+  "title": "[📚정보] 슈가룬 요약(토벌전 기준)",
+  "title_en": "[Info] Sugar rune summary (Guild Conquest basis)",
+  "date": "2026-09-13",
+  "signal": "relevance 3/3"
+ },
+ "dc:69368": {
+  "url": "https://m.dcinside.com/board/projectcc/69368",
+  "title": "[📚정보] 470배클럽 + faq",
+  "title_en": "[Info] 470x club + FAQ",
+  "date": "2026-09-17",
+  "signal": "relevance 3/3"
+ },
+ "dc:71135": {
+  "url": "https://m.dcinside.com/board/projectcc/71135",
+  "title": "[📚정보] 토벌 체리덱 460배 세팅(ai이미지 주의)",
+  "title_en": "[Info] Guild Conquest Cherry deck 460x setup (AI-made image warning)",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "dc:71105": {
+  "url": "https://m.dcinside.com/board/projectcc/71105",
+  "title": "[일반] 거의 600배",
+  "title_en": "Almost 600x",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "dc:67435": {
+  "url": "https://m.dcinside.com/board/projectcc/67435",
+  "title": "[📜공지] 갤길 [치트키] 토벌전 관련 공지",
+  "title_en": "[Notice] Gallery guild [치트키] Guild Conquest notice",
+  "date": "2026-09-15",
+  "signal": "relevance 1/3"
+ },
+ "dc:71827": {
+  "url": "https://m.dcinside.com/board/projectcc/71827",
+  "title": "[📜공지] [갤길] 토벌전 공지ㅇㅇㅇㅇㅇㅇ",
+  "title_en": "[Notice] [Gallery guild] Guild Conquest notice",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:70308": {
+  "url": "https://m.dcinside.com/board/projectcc/70308",
+  "title": "[📚정보] 168 이후 All In One 단일 덱 및 보스별 스위칭 공유",
+  "title_en": "[Info] Post-168 all-in-one deck and per-boss switches (story stages)",
+  "date": "2026-09-19",
+  "signal": "relevance 1/3"
+ },
+ "dc:70999": {
+  "url": "https://m.dcinside.com/board/projectcc/70999",
+  "title": "[일반] 토벌전 석류도 공격력 순서있는거임?",
+  "title_en": "Does Pomegranate also have an ATK-order position?",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "dc:71032": {
+  "url": "https://m.dcinside.com/board/projectcc/71032",
+  "title": "[일반] 토벌 이게 국룰임?",
+  "title_en": "Is this the standard raid setup?",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "dc:71044": {
+  "url": "https://m.dcinside.com/board/projectcc/71044",
+  "title": "[✋️질문] 뉴비 토벌 공격력순서 맞추라는거 질문좀",
+  "title_en": "Newbie question about the raid ATK order",
+  "date": "2026-09-20",
+  "signal": "relevance 1/3"
+ },
+ "dc:71056": {
+  "url": "https://m.dcinside.com/board/projectcc/71056",
+  "title": "[✋️질문] 토벌 체리덱",
+  "title_en": "Raid Cherry deck question",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "dc:71059": {
+  "url": "https://m.dcinside.com/board/projectcc/71059",
+  "title": "[일반] 토벌전 소년가장 뉴비 도와주실 고수님 구합니다ㅠ",
+  "title_en": "Newbie carrying his guild asks for raid help",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "dc:71060": {
+  "url": "https://m.dcinside.com/board/projectcc/71060",
+  "title": "[일반] 시커 5성 아래인 사람들 토벌 몇점까지 나오냐",
+  "title_en": "Sub-5★ Seeker users, what do you score?",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "dc:71140": {
+  "url": "https://m.dcinside.com/board/projectcc/71140",
+  "title": "[✋️질문] 토벌전 조언좀",
+  "title_en": "Raid advice please",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "dc:71187": {
+  "url": "https://m.dcinside.com/board/projectcc/71187",
+  "title": "[일반] 저거 길드토벌덱 90스테 뉴비도 1렙 해줘?",
+  "title_en": "Should a stage-90 newbie also use Lv.1 in the raid deck?",
+  "date": "2026-09-20",
+  "signal": "relevance 1/3"
+ },
+ "dc:71237": {
+  "url": "https://m.dcinside.com/board/projectcc/71237",
+  "title": "[✋️질문] 토벌 공략 보면서 해봐도",
+  "title_en": "Following the raid guide but...",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "dc:71266": {
+  "url": "https://m.dcinside.com/board/projectcc/71266",
+  "title": "[일반] 280-30 비겁 35퍼 명랑없이 해봄",
+  "title_en": "Cleared stage 280-30 (Cowardly Cookie) at 35% without 명랑",
+  "date": "2026-09-20",
+  "signal": "relevance 1/3"
+ },
+ "dc:71288": {
+  "url": "https://m.dcinside.com/board/projectcc/71288",
+  "title": "[일반] 토벌 메소덱 일렬은 되는데 전갈도 마카롱 풀로 받는 건 세계선이지?",
+  "title_en": "Melon Soda deck lines up, but Scorpion getting full Macaron buff is a lucky run?",
+  "date": "2026-09-20",
+  "signal": "relevance 1/3"
+ },
+ "dc:71352": {
+  "url": "https://m.dcinside.com/board/projectcc/71352",
+  "title": "[일반] 토벌 전갈메소덱 전갈 1렙줘도 빨대 가져가는건",
+  "title_en": "Scorpion steals the straw even at Lv.1 in the Scorpion/Melon Soda deck",
+  "date": "2026-09-21",
+  "signal": "relevance 1/3"
+ },
+ "dc:71374": {
+  "url": "https://m.dcinside.com/board/projectcc/71374",
+  "title": "[✋️질문] 토벌에서 시커가 무조건 피겨보다 공격력 높아야 함?",
+  "title_en": "Must Seeker have higher ATK than Figure?",
+  "date": "2026-09-21",
+  "signal": "relevance 1/3"
+ },
+ "dc:71381": {
+  "url": "https://m.dcinside.com/board/projectcc/71381",
+  "title": "[일반] 장비 피감보다 치저위주로 챙기니까 토벌때 못 버틸때가 많네",
+  "title_en": "Prioritising crit res over dmg reduction on gear makes me die in raid",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71393": {
+  "url": "https://m.dcinside.com/board/projectcc/71393",
+  "title": "[일반] 토벌 이게 200배 맞음?",
+  "title_en": "Is this 200x?",
+  "date": "2026-09-21",
+  "signal": "relevance 1/3"
+ },
+ "dc:71419": {
+  "url": "https://m.dcinside.com/board/projectcc/71419",
+  "title": "[일반] 토벌전 시커 2성이면 보통 몇배임?",
+  "title_en": "What multiple with a 2★ Seeker?",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71420": {
+  "url": "https://m.dcinside.com/board/projectcc/71420",
+  "title": "[✋️질문] 토벌에서 이속, 배치, 체리에 대해 잘 정리된 글 있음?",
+  "title_en": "Any good write-up on move speed, placement and Cherry?",
+  "date": "2026-09-21",
+  "signal": "relevance 1/3"
+ },
+ "dc:71434": {
+  "url": "https://m.dcinside.com/board/projectcc/71434",
+  "title": "[일반] 이번 토벌전은 200g로 마감.",
+  "title_en": "Finished this Guild Conquest at 200G",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71442": {
+  "url": "https://m.dcinside.com/board/projectcc/71442",
+  "title": "[일반] 난 투력이 낮은데 토벌딜 개쌔게치고 있는데 빡친다",
+  "title_en": "Meta complaint about guild-member complaint posts",
+  "date": "2026-09-21",
+  "signal": "relevance 0/3"
+ },
+ "dc:71457": {
+  "url": "https://m.dcinside.com/board/projectcc/71457",
+  "title": "[✋️질문] 토벌덱 대미지 안나오는건 무조건 장비 문제겠지?",
+  "title_en": "Low raid damage must be gear?",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71491": {
+  "url": "https://m.dcinside.com/board/projectcc/71491",
+  "title": "[일반] 토벌 시커 5성 미만 질문",
+  "title_en": "Raid with a Seeker below 5★",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71495": {
+  "url": "https://m.dcinside.com/board/projectcc/71495",
+  "title": "[일반] 념글 토벌공략 보고 돌렸는데 만족스럽게 갱신이 안되네",
+  "title_en": "Followed the popular raid guide but couldn't beat my record",
+  "date": "2026-09-21",
+  "signal": "relevance 1/3"
+ },
+ "dc:71583": {
+  "url": "https://m.dcinside.com/board/projectcc/71583",
+  "title": "[일반] 장비옵션 깡공이 무옵이라는 애들은 뭐임?",
+  "title_en": "Why do people call flat-ATK gear options worthless?",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71651": {
+  "url": "https://m.dcinside.com/board/projectcc/71651",
+  "title": "[✋️질문] 명중집중<스캠이면 토벌전 장비를 아레나랑 겸하는게 아니라",
+  "title_en": "If accuracy/focus is a scam, share raid gear with stages rather than arena?",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71840": {
+  "url": "https://m.dcinside.com/board/projectcc/71840",
+  "title": "[일반] 토벌장비 걍 스증이 맞지?",
+  "title_en": "Raid gear: skill amp, right?",
+  "date": "2026-09-21",
+  "signal": "relevance 1/3"
+ },
+ "dc:71939": {
+  "url": "https://m.dcinside.com/board/projectcc/71939",
+  "title": "[📜공지] [계란] 길드 토벌전 정산 09.21",
+  "title_en": "[Notice] [계란] guild Guild Conquest settlement 09.21",
+  "date": "2026-09-21",
+  "signal": "relevance 1/3"
+ },
+ "dc:71992": {
+  "url": "https://m.dcinside.com/board/projectcc/71992",
+  "title": "[✋️질문] 브시커 스가 2 먹냐?",
+  "title_en": "Is a +2 skill haste line on Bright Seeker worth keeping?",
+  "date": "2026-09-22",
+  "signal": "relevance 2/3"
+ },
+ "dc:72449": {
+  "url": "https://m.dcinside.com/board/projectcc/72449",
+  "title": "바리공주는 계수 까봐야 안다고 하는 이유가",
+  "title_en": "Why people say you have to see Princess Bari's coefficients to know",
+  "date": "2026-09-22",
+  "signal": "relevance 1/3"
+ },
+ "dc:72508": {
+  "url": "https://m.dcinside.com/board/projectcc/72508",
+  "title": "프리셋 개선 이걸로 끝일줄은 상상도 못했다",
+  "title_en": "Never imagined the preset improvement would end with just this",
+  "date": "2026-09-22",
+  "signal": "relevance 1/3"
+ },
+ "dc:72951": {
+  "url": "https://m.dcinside.com/board/projectcc/72951",
+  "title": "지금 시커 토벌아레나 스가 49.6인데 더올려?",
+  "title_en": "My Seeker's raid/arena skill haste is 49.6 — raise it more?",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:73082": {
+  "url": "https://m.dcinside.com/board/projectcc/73082",
+  "title": "바리공주 스킬계수 클뜯 떳다",
+  "title_en": "Princess Bari skill coefficient datamine is out",
+  "date": "2026-09-23",
+  "signal": "relevance 0/3"
+ },
+ "dc:73113": {
+  "url": "https://m.dcinside.com/board/projectcc/73113",
+  "title": "달토끼, 바리공주 스킬계수",
+  "title_en": "Moon Rabbit and Princess Bari skill coefficients (leak)",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:73273": {
+  "url": "https://m.dcinside.com/board/projectcc/73273",
+  "title": "시커 10성도 올스가야?",
+  "title_en": "Is 10★ Seeker also all skill haste?",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:73965": {
+  "url": "https://m.dcinside.com/board/projectcc/73965",
+  "title": "pvp랑 토벌이랑 장비 골자는 비슷함?",
+  "title_en": "Are PvP and raid gear basically the same?",
+  "date": "2026-09-23",
+  "signal": "relevance 1/3"
+ },
+ "dc:74082": {
+  "url": "https://m.dcinside.com/board/projectcc/74082",
+  "title": "아레나/토벌전 장비 추천",
+  "title_en": "Arena/raid gear recommendation",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:74249": {
+  "url": "https://m.dcinside.com/board/projectcc/74249",
+  "title": "아 시발 브시커 슈가룬 시발",
+  "title_en": "Ugh, Bright Seeker sugar rune",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:74323": {
+  "url": "https://m.dcinside.com/board/projectcc/74323",
+  "title": "토벌에서 치저 필요 없으면 방어력 장비 고르는게 나음?",
+  "title_en": "If crit res isn't needed in raid, should I pick DEF gear?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74350": {
+  "url": "https://m.dcinside.com/board/projectcc/74350",
+  "title": "토벌덱 저번주에 800M 이었는데",
+  "title_en": "My raid deck was 800M last week",
+  "date": "2026-09-24",
+  "signal": "relevance 1/3"
+ },
+ "dc:74672": {
+  "url": "https://m.dcinside.com/board/projectcc/74672",
+  "title": "각 프리셋당 옵션 정리글 있음?",
+  "title_en": "Is there a summary of options per preset?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74755": {
+  "url": "https://m.dcinside.com/board/projectcc/74755",
+  "title": "토벌펫 여전히 판다지??",
+  "title_en": "Raid pet is still Panda, right?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74767": {
+  "url": "https://m.dcinside.com/board/projectcc/74767",
+  "title": "토벌 체리덱에서",
+  "title_en": "In the raid Cherry deck",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74796": {
+  "url": "https://m.dcinside.com/board/projectcc/74796",
+  "title": "토벌 ㄹㅇ 왜케 안나옴",
+  "title_en": "Why is my raid score so low",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74811": {
+  "url": "https://m.dcinside.com/board/projectcc/74811",
+  "title": "뉴비 토벌전 17배 나오는데 이정도면 어떤수준임?",
+  "title_en": "Newbie getting 17x in raid — what level is that?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74829": {
+  "url": "https://m.dcinside.com/board/projectcc/74829",
+  "title": "토벌 기갱 263g",
+  "title_en": "Raid new record 263G",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:74928": {
+  "url": "https://m.dcinside.com/board/projectcc/74928",
+  "title": "브시커 슈가룬 어케해야댈지 고민중",
+  "title_en": "Deciding how to do Bright Seeker's sugar rune",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:74960": {
+  "url": "https://m.dcinside.com/board/projectcc/74960",
+  "title": "토벌전 30초꽝 못버티면 무슨 조합 들고가야해?",
+  "title_en": "What comp if I can't survive the 30-second slam?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74998": {
+  "url": "https://m.dcinside.com/board/projectcc/74998",
+  "title": "어제오늘 쌔빠지게 뚫어서 이면 도착햇는데",
+  "title_en": "Grinded through to the Other Side (이면)",
+  "date": "2026-09-24",
+  "signal": "relevance 1/3"
+ },
+ "dc:75029": {
+  "url": "https://m.dcinside.com/board/projectcc/75029",
+  "title": "장비 프리셋생기고 너무 어려운데 내 판단 맞는지 조언 부탁해!",
+  "title_en": "Gear presets are confusing — is my plan right?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:75038": {
+  "url": "https://m.dcinside.com/board/projectcc/75038",
+  "title": "토벌전 장비 프리셋 치확vs치피",
+  "title_en": "Raid gear preset: crit rate vs crit damage",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:75041": {
+  "url": "https://m.dcinside.com/board/projectcc/75041",
+  "title": "메소정전 토벌덱 전갈이 영원히 마카롱을 못받으면",
+  "title_en": "Melon Soda/Jungle Warrior raid deck: Scorpion never gets Macaron",
+  "date": "2026-09-24",
+  "signal": "relevance 1/3"
+ },
+ "dc:75081": {
+  "url": "https://m.dcinside.com/board/projectcc/75081",
+  "title": "바리 보니까 브시커는 걍 딜러1 이였네",
+  "title_en": "Seeing Bari, Bright Seeker was just 'dealer #1'",
+  "date": "2026-09-24",
+  "signal": "relevance 1/3"
+ },
+ "dc:75239": {
+  "url": "https://m.dcinside.com/board/projectcc/75239",
+  "title": "총투 14G면 토벌 얼마나 칠 수 있을것같냐",
+  "title_en": "With 14G total account power, how much raid damage?",
+  "date": "2026-09-25",
+  "signal": "relevance 1/3"
+ },
+ "dc:75287": {
+  "url": "https://m.dcinside.com/board/projectcc/75287",
+  "title": "토벌 메소덱 맞춰봤는데",
+  "title_en": "Tried the raid Melon Soda deck",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75400": {
+  "url": "https://m.dcinside.com/board/projectcc/75400",
+  "title": "체리덱 641배 찍었음",
+  "title_en": "Cherry deck hit 641x",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75460": {
+  "url": "https://m.dcinside.com/board/projectcc/75460",
+  "title": "토벌 시커 7성인데 슈가룬 올 스가 주는게 맞냐?",
+  "title_en": "Seeker 7★ for raid — all haste on sugar rune?",
+  "date": "2026-09-25",
+  "signal": "relevance 1/3"
+ },
+ "dc:75520": {
+  "url": "https://m.dcinside.com/board/projectcc/75520",
+  "title": "토벌 장비 골라주라 치확 치피때문에 고민임..",
+  "title_en": "Pick my raid gear — torn on crit rate vs crit dmg",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "dc:75542": {
+  "url": "https://m.dcinside.com/board/projectcc/75542",
+  "title": "내 장비 프리셋 목록",
+  "title_en": "My gear preset list",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "dc:75589": {
+  "url": "https://m.dcinside.com/board/projectcc/75589",
+  "title": "토벌 치확이 필요함?",
+  "title_en": "Is crit rate needed in raid?",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75606": {
+  "url": "https://m.dcinside.com/board/projectcc/75606",
+  "title": "토벌 장비추천좀",
+  "title_en": "Raid gear recommendation please",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "dc:75617": {
+  "url": "https://m.dcinside.com/board/projectcc/75617",
+  "title": "토벌 1T 넣는사람 팀투 몇임??",
+  "title_en": "What team power do 1T raiders have?",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "dc:75746": {
+  "url": "https://m.dcinside.com/board/projectcc/75746",
+  "title": "토벌 딜 기준 슈가룬 우선순위 누구임?",
+  "title_en": "For raid damage, whose sugar rune is top priority?",
+  "date": "2026-09-25",
+  "signal": "relevance 1/3"
+ },
+ "dc:75766": {
+  "url": "https://m.dcinside.com/board/projectcc/75766",
+  "title": "딱히 없는 것 같아서 메모해놓는 스테/아레나/토벌 장비 옵션 (조언요)",
+  "title_en": "Memo of stage/arena/raid gear substats (advice wanted)",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:75808": {
+  "url": "https://m.dcinside.com/board/projectcc/75808",
+  "title": "브시커 스킬가속 필수임?",
+  "title_en": "Is skill haste mandatory on Bright Seeker?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:75854": {
+  "url": "https://m.dcinside.com/board/projectcc/75854",
+  "title": "와 토벌 프리셋 신세계네 진짜",
+  "title_en": "Wow, a raid gear preset is a whole new world",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:75922": {
+  "url": "https://m.dcinside.com/board/projectcc/75922",
+  "title": "토벌기갱 439g",
+  "title_en": "Raid new record 439G",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:75934": {
+  "url": "https://m.dcinside.com/board/projectcc/75934",
+  "title": "토벌 브시커 스가 효율 좀 알려 주세여",
+  "title_en": "Tell me about Bright Seeker skill-haste efficiency in the raid",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:75961": {
+  "url": "https://m.dcinside.com/board/projectcc/75961",
+  "title": "토벌 체리덱 써도 시커가 자꾸 옆으로 빠지는데",
+  "title_en": "Even with the Cherry deck my Seeker keeps drifting to the side",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76049": {
+  "url": "https://m.dcinside.com/board/projectcc/76049",
+  "title": "시커 4성 토벌 점수 맥시멈 얼마임?",
+  "title_en": "What's the max raid score with a 4-star Seeker?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76124": {
+  "url": "https://m.dcinside.com/board/projectcc/76124",
+  "title": "토벌장비도 따로 맞춰야되나??",
+  "title_en": "Do I need a separate raid gear set too?",
+  "date": "2026-09-26",
+  "signal": "relevance 1/3"
+ },
+ "dc:76135": {
+  "url": "https://m.dcinside.com/board/projectcc/76135",
+  "title": "토벌 체리덱 700배",
+  "title_en": "Raid Cherry deck 700x",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:76142": {
+  "url": "https://m.dcinside.com/board/projectcc/76142",
+  "title": "토벌에서 치저가 필요한가?",
+  "title_en": "Is crit res needed in the raid?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76144": {
+  "url": "https://m.dcinside.com/board/projectcc/76144",
+  "title": "토벌 메소덱 판다쓰냐 주머니쓰냐",
+  "title_en": "Melon Soda raid deck: Panda or Pouch pet?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76153": {
+  "url": "https://m.dcinside.com/board/projectcc/76153",
+  "title": "아레나 장비로 스가 18정도 챙겼는데 더챙겨야대냐?",
+  "title_en": "Got ~18 haste from arena gear; need more?",
+  "date": "2026-09-26",
+  "signal": "relevance 1/3"
+ },
+ "dc:76157": {
+  "url": "https://m.dcinside.com/board/projectcc/76157",
+  "title": "토벌 체리 덱 이게 한계네",
+  "title_en": "Raid Cherry deck, this is my limit",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76160": {
+  "url": "https://m.dcinside.com/board/projectcc/76160",
+  "title": "토벌 시커 5성 달면 확 달라짐?",
+  "title_en": "Does 5-star Seeker change the raid a lot?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76191": {
+  "url": "https://m.dcinside.com/board/projectcc/76191",
+  "title": "토벌 왼쪽 위 장비 스증치확 vs 스증치피",
+  "title_en": "Raid top-left gear: amp+crit rate vs amp+crit dmg",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76202": {
+  "url": "https://m.dcinside.com/board/projectcc/76202",
+  "title": "토벌 100G 올라서 좋아했는데",
+  "title_en": "Was happy my raid went up 100G, but...",
+  "date": "2026-09-26",
+  "signal": "relevance 1/3"
+ },
+ "dc:76218": {
+  "url": "https://m.dcinside.com/board/projectcc/76218",
+  "title": "장비 우하단",
+  "title_en": "Bottom-right gear",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76343": {
+  "url": "https://m.dcinside.com/board/projectcc/76343",
+  "title": "토벌 기록용 420배",
+  "title_en": "Raid record: 420x",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76514": {
+  "url": "https://m.dcinside.com/board/projectcc/76514",
+  "title": "시커 스가 높을수록 체감 많이 큼? 토벌에서",
+  "title_en": "Does higher Seeker haste feel much better in raid?",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76520": {
+  "url": "https://m.dcinside.com/board/projectcc/76520",
+  "title": "씹통나무 들고있는데 길드 차이얼마나 큼?",
+  "title_en": "I'm carrying a dead-weight guild; how big is the guild difference?",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "dc:76545": {
+  "url": "https://m.dcinside.com/board/projectcc/76545",
+  "title": "토벌 400배 기록",
+  "title_en": "Raid 400x record",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76562": {
+  "url": "https://m.dcinside.com/board/projectcc/76562",
+  "title": "토벌 어케 그렇게 잘 침?",
+  "title_en": "How do you hit so hard in the raid?",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76583": {
+  "url": "https://m.dcinside.com/board/projectcc/76583",
+  "title": "토벌 기갱이 안돼",
+  "title_en": "Can't beat my raid record",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76599": {
+  "url": "https://m.dcinside.com/board/projectcc/76599",
+  "title": "시커 슈가룬 스증도 조금 챙겨도됨?",
+  "title_en": "Can I take some skill amp on Seeker's sugar runes?",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76605": {
+  "url": "https://m.dcinside.com/board/projectcc/76605",
+  "title": "토벌 세팅 질문 (스압)",
+  "title_en": "Raid setup question (long scroll)",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76652": {
+  "url": "https://m.dcinside.com/board/projectcc/76652",
+  "title": "시커 슈가룬 질문",
+  "title_en": "Seeker sugar rune question",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76716": {
+  "url": "https://m.dcinside.com/board/projectcc/76716",
+  "title": "토벌 기기차 있네",
+  "title_en": "The raid differs by device",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76721": {
+  "url": "https://m.dcinside.com/board/projectcc/76721",
+  "title": "토벌 신기록이다",
+  "title_en": "New raid record",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:75540": {
+  "url": "https://m.dcinside.com/board/projectcc/75540",
+  "title": "갠적으로 이덱이 스테 오토 제일 괜찮은듯",
+  "title_en": "Personally this deck is the best for stage auto",
+  "date": "2026-09-25",
+  "signal": "relevance 1/3"
+ },
+ "dc:74759": {
+  "url": "https://m.dcinside.com/board/projectcc/74759",
+  "title": "시커 5성 1t단 입갤",
+  "title_en": "Seeker 5★ joins the 1T club",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:76317": {
+  "url": "https://m.dcinside.com/board/projectcc/76317",
+  "title": "체리덱780배가능함님들ㄱㄱ",
+  "title_en": "Cherry deck 780x is possible",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:71216": {
+  "url": "https://m.dcinside.com/board/projectcc/71216",
+  "title": "체리덱601배인데",
+  "title_en": "Cherry deck 601x",
+  "date": "2026-09-20",
+  "signal": "relevance 1/3"
+ },
+ "dc:69200": {
+  "url": "https://m.dcinside.com/board/projectcc/69200",
+  "title": "토벌전 현시점 빌드 2개 소개한다",
+  "title_en": "Two current raid builds",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "dc:75176": {
+  "url": "https://m.dcinside.com/board/projectcc/75176",
+  "title": "1T 클럽 가입 완료",
+  "title_en": "Joined the 1T club",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:74815": {
+  "url": "https://m.dcinside.com/board/projectcc/74815",
+  "title": "체리덱 580배",
+  "title_en": "Cherry deck 580x",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:74758": {
+  "url": "https://m.dcinside.com/board/projectcc/74758",
+  "title": "체리덱 528배",
+  "title_en": "Cherry deck 528x",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:70645": {
+  "url": "https://m.dcinside.com/board/projectcc/70645",
+  "title": "450배 쳤는데 소소한 팁",
+  "title_en": "Hit 450x, small tips",
+  "date": "2026-09-19",
+  "signal": "relevance 3/3"
+ },
+ "dc:70638": {
+  "url": "https://m.dcinside.com/board/projectcc/70638",
+  "title": "900m 370배",
+  "title_en": "900M power, 370x",
+  "date": "2026-09-19",
+  "signal": "relevance 3/3"
+ },
+ "dc:69212": {
+  "url": "https://m.dcinside.com/board/projectcc/69212",
+  "title": "공증단 250배",
+  "title_en": "ATK-amp team 250x",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "dc:69707": {
+  "url": "https://m.dcinside.com/board/projectcc/69707",
+  "title": "이게 ㄹㅇ 고점같은데",
+  "title_en": "This is the real ceiling",
+  "date": "2026-09-18",
+  "signal": "relevance 3/3"
+ },
+ "dc:69375": {
+  "url": "https://m.dcinside.com/board/projectcc/69375",
+  "title": "토벌 용병3렙 100배 공략",
+  "title_en": "Raid guide: 100x with mercenary lv3",
+  "date": "2026-09-17",
+  "signal": "relevance 3/3"
+ },
+ "dc:70578": {
+  "url": "https://m.dcinside.com/board/projectcc/70578",
+  "title": "누가 정전 스가 줘보래서 줘봄",
+  "title_en": "Tried giving Jungle Warrior haste",
+  "date": "2026-09-19",
+  "signal": "relevance 3/3"
+ },
+ "dc:69357": {
+  "url": "https://m.dcinside.com/board/projectcc/69357",
+  "title": "토벌전 투력 300M대로 6G 내면 병신인건가?",
+  "title_en": "6G at 300M power — am I bad?",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "dc:75462": {
+  "url": "https://m.dcinside.com/board/projectcc/75462",
+  "title": "기갱했다요",
+  "title_en": "Renewed my record",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:70172": {
+  "url": "https://m.dcinside.com/board/projectcc/70172",
+  "title": "드디어 토벌 기갱했다 410배 후",
+  "title_en": "Finally renewed raid record, 410x",
+  "date": "2026-09-19",
+  "signal": "relevance 3/3"
+ },
+ "dc:76580": {
+  "url": "https://m.dcinside.com/board/projectcc/76580",
+  "title": "시커6성 1T클럽 가입햇다",
+  "title_en": "Joined 1T club with 6★ Seeker",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:69724": {
+  "url": "https://m.dcinside.com/board/projectcc/69724",
+  "title": "500배 클럽 좀있으면 갈듯",
+  "title_en": "Almost at the 500x club",
+  "date": "2026-09-18",
+  "signal": "relevance 3/3"
+ },
+ "dc:69832": {
+  "url": "https://m.dcinside.com/board/projectcc/69832",
+  "title": "내가 쓰는건 이거긴함",
+  "title_en": "This is what I use",
+  "date": "2026-09-18",
+  "signal": "relevance 3/3"
+ },
+ "dc:76022": {
+  "url": "https://m.dcinside.com/board/projectcc/76022",
+  "title": "400배까지는 쳤는데 1T치는 비법소스좀",
+  "title_en": "Hit 400x, what's the secret to 1T?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:70840": {
+  "url": "https://m.dcinside.com/board/projectcc/70840",
+  "title": "토벌 정전vs허브는 체방 구간마다 다 다름",
+  "title_en": "JW vs Herb depends on your HP/DEF bracket",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "dc:69685": {
+  "url": "https://m.dcinside.com/board/projectcc/69685",
+  "title": "본인 2g 다되가는데 토벌전 17초 1마리 버팀",
+  "title_en": "Nearly 2G and one cookie survives 17 s",
+  "date": "2026-09-18",
+  "signal": "relevance 2/3"
+ },
+ "dc:76419": {
+  "url": "https://m.dcinside.com/board/projectcc/76419",
+  "title": "토벌 이제 17초 이후로도 버티는데",
+  "title_en": "Now surviving past 17 s",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:69413": {
+  "url": "https://m.dcinside.com/board/projectcc/69413",
+  "title": "토벌 60배",
+  "title_en": "Raid 60x",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "dc:74818": {
+  "url": "https://m.dcinside.com/board/projectcc/74818",
+  "title": "이속 기록",
+  "title_en": "Move-speed record (rune screenshots)",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:53945": {
+  "url": "https://m.dcinside.com/board/projectcc/53945",
+  "title": "나도 덱 공유함",
+  "title_en": "Sharing my deck too",
+  "date": "2026-08-30",
+  "signal": "relevance 3/3"
+ },
+ "dc:59442": {
+  "url": "https://m.dcinside.com/board/projectcc/59442",
+  "title": "치케로또덱 내기준 고점터졌을때 전갈메소 vs 호밀메소 점수차",
+  "title_en": "Cheesecake lottery deck: Scorpion+Melon vs Rye+Melon peaks",
+  "date": "2026-09-04",
+  "signal": "relevance 3/3"
+ },
+ "dc:53669": {
+  "url": "https://m.dcinside.com/board/projectcc/53669",
+  "title": "토벌전 536G 실론 없이 48G 뽑음",
+  "title_en": "48G at 536M without 실론",
+  "date": "2026-08-30",
+  "signal": "relevance 2/3"
+ },
+ "dc:48559": {
+  "url": "https://m.dcinside.com/board/projectcc/48559",
+  "title": "토벌 한 50판 박아봤는데",
+  "title_en": "Ran ~50 raid attempts",
+  "date": "2026-08-27",
+  "signal": "relevance 1/3"
+ },
+ "dc:65758": {
+  "url": "https://m.dcinside.com/board/projectcc/65758",
+  "title": "기갱성공",
+  "title_en": "Record renewed",
+  "date": "2026-09-12",
+  "signal": "relevance 3/3"
+ },
+ "dc:64838": {
+  "url": "https://m.dcinside.com/board/projectcc/64838",
+  "title": "200g클럽",
+  "title_en": "200G club",
+  "date": "2026-09-11",
+  "signal": "relevance 3/3"
+ },
+ "dc:53986": {
+  "url": "https://m.dcinside.com/board/projectcc/53986",
+  "title": "실론X 토벌덱 이리저리 바꿔보다 결국 기존에 하던거로 돌아옴",
+  "title_en": "No-실론 deck: went back to the original",
+  "date": "2026-08-30",
+  "signal": "relevance 2/3"
+ },
+ "dc:62838": {
+  "url": "https://m.dcinside.com/board/projectcc/62838",
+  "title": "장비 선택 팁 준다",
+  "title_en": "Gear selection tips",
+  "date": "2026-09-09",
+  "signal": "relevance 1/3"
+ },
+ "dc:66407": {
+  "url": "https://m.dcinside.com/board/projectcc/66407",
+  "title": "토벌 덱 까긴뭘까 수정해서 캡쳐한거지 바보새끼들이냐",
+  "title_en": "'Raid deck leak' is edited screenshots",
+  "date": "2026-09-13",
+  "signal": "relevance 0/3"
+ },
+ "dc:59350": {
+  "url": "https://m.dcinside.com/board/projectcc/59350",
+  "title": "토벌 투력462M 106G",
+  "title_en": "106G at 462M",
+  "date": "2026-09-04",
+  "signal": "relevance 2/3"
+ },
+ "dc:62608": {
+  "url": "https://m.dcinside.com/board/projectcc/62608",
+  "title": "마카롱 공증안줘도 되는 이유가",
+  "title_en": "Why Macaron doesn't need ATK runes",
+  "date": "2026-09-09",
+  "signal": "relevance 3/3"
+ },
+ "dc:59298": {
+  "url": "https://m.dcinside.com/board/projectcc/59298",
+  "title": "토벌전 저점 보장덱으로 21g 나왔는데",
+  "title_en": "21G with a 'floor-guarantee' deck",
+  "date": "2026-09-04",
+  "signal": "relevance 2/3"
+ },
+ "dc:66143": {
+  "url": "https://m.dcinside.com/board/projectcc/66143",
+  "title": "사람들은 뭐 토벌전 점수가 수십에서 수백배 나온다는데",
+  "title_en": "Others get 10s–100s x, I get 14x",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:59825": {
+  "url": "https://m.dcinside.com/board/projectcc/59825",
+  "title": "토벌 내가쓰는덱",
+  "title_en": "My raid deck",
+  "date": "2026-09-05",
+  "signal": "relevance 2/3"
+ },
+ "dc:47632": {
+  "url": "https://m.dcinside.com/board/projectcc/47632",
+  "title": "노실론 피냐타 덱 공유함",
+  "title_en": "No-실론 Piñata deck",
+  "date": "2026-08-27",
+  "signal": "relevance 1/3"
+ },
+ "dc:58428": {
+  "url": "https://m.dcinside.com/board/projectcc/58428",
+  "title": "토벌 30g(시커5성)",
+  "title_en": "30G with 5★ Seeker",
+  "date": "2026-09-03",
+  "signal": "relevance 2/3"
+ },
+ "dc:66716": {
+  "url": "https://m.dcinside.com/board/projectcc/66716",
+  "title": "나 토벌 이 점수면 찾을 수 있는 세계선 다 찾은거임?",
+  "title_en": "Have I found every world-line at this score?",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:66556": {
+  "url": "https://m.dcinside.com/board/projectcc/66556",
+  "title": "슈가룬 추천기 화면 ㄱㅊ?",
+  "title_en": "Sugar-rune recommender (Excel) screenshot",
+  "date": "2026-09-13",
+  "signal": "relevance 3/3"
+ },
+ "dc:64844": {
+  "url": "https://m.dcinside.com/board/projectcc/64844",
+  "title": "이속 세팅 공유함",
+  "title_en": "Sharing my move-speed setup",
+  "date": "2026-09-11",
+  "signal": "relevance 3/3"
+ },
+ "dc:69331": {
+  "url": "https://m.dcinside.com/board/projectcc/69331",
+  "title": "400배",
+  "title_en": "400x",
+  "date": "2026-09-17",
+  "signal": "relevance 3/3"
+ },
+ "dc:60231": {
+  "url": "https://m.dcinside.com/board/projectcc/60231",
+  "title": "토벌전 750m으로 120G때린조합",
+  "title_en": "120G at 750M",
+  "date": "2026-09-06",
+  "signal": "relevance 2/3"
+ },
+ "dc:59829": {
+  "url": "https://m.dcinside.com/board/projectcc/59829",
+  "title": "토벌 허브",
+  "title_en": "Herb in raid",
+  "date": "2026-09-05",
+  "signal": "relevance 2/3"
+ },
+ "dc:66476": {
+  "url": "https://m.dcinside.com/board/projectcc/66476",
+  "title": "결국 최상위권조합도 문어말곤 다 갤에 올라왔던거네",
+  "title_en": "Even the top combo was already posted, except the octopus",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:66348": {
+  "url": "https://m.dcinside.com/board/projectcc/66348",
+  "title": "1등 길드인데 토벌전 꿀통은",
+  "title_en": "From the #1 guild: the raid secret",
+  "date": "2026-09-13",
+  "signal": "relevance 3/3"
+ },
+ "dc:66446": {
+  "url": "https://m.dcinside.com/board/projectcc/66446",
+  "title": "★★그러니까 꿀통 정리하면",
+  "title_en": "Summary of the 'honey pot' (top deck)",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:59818": {
+  "url": "https://m.dcinside.com/board/projectcc/59818",
+  "title": "공략대로 10판해봤는데",
+  "title_en": "Tried the guide for 10 runs",
+  "date": "2026-09-05",
+  "signal": "relevance 2/3"
+ },
+ "dc:58508": {
+  "url": "https://m.dcinside.com/board/projectcc/58508",
+  "title": "토벌전 용병단3 35G",
+  "title_en": "35G with mercenary lv3",
+  "date": "2026-09-03",
+  "signal": "relevance 2/3"
+ },
+ "dc:64957": {
+  "url": "https://m.dcinside.com/board/projectcc/64957",
+  "title": "이속 체감 ㄷㄷ 토벌 2배뻥됨",
+  "title_en": "Move speed doubled my raid score",
+  "date": "2026-09-11",
+  "signal": "relevance 3/3"
+ },
+ "dc:52639": {
+  "url": "https://m.dcinside.com/board/projectcc/52639",
+  "title": "지금껏 전갈에 석류빨대 안 꼽혀있었네",
+  "title_en": "Pomegranate never buffed my Scorpion",
+  "date": "2026-08-29",
+  "signal": "relevance 2/3"
+ },
+ "dc:66531": {
+  "url": "https://m.dcinside.com/board/projectcc/66531",
+  "title": "공순서 우(브/마) 치실피 인가",
+  "title_en": "Is ATK order Milk-(Seeker/Macaron)-Cheesecake-실론-피겨?",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:64839": {
+  "url": "https://m.dcinside.com/board/projectcc/64839",
+  "title": "길토 비법소스 찾은듯?",
+  "title_en": "Found the raid secret sauce?",
+  "date": "2026-09-11",
+  "signal": "relevance 3/3"
+ },
+ "dc:53804": {
+  "url": "https://m.dcinside.com/board/projectcc/53804",
+  "title": "허브는 다발시너지 2고 정전은 3이잖아",
+  "title_en": "Herb gives multi-synergy 2, JW 3",
+  "date": "2026-08-30",
+  "signal": "relevance 2/3"
+ },
+ "dc:53586": {
+  "url": "https://m.dcinside.com/board/projectcc/53586",
+  "title": "토벌전 덱 600M 56G",
+  "title_en": "600M, 56G",
+  "date": "2026-08-30",
+  "signal": "relevance 1/3"
+ },
+ "dc:66459": {
+  "url": "https://m.dcinside.com/board/projectcc/66459",
+  "title": "1등 토벌전 영상",
+  "title_en": "Rank-1 raid video",
+  "date": "2026-09-13",
+  "signal": "relevance 1/3"
+ },
+ "dc:66309": {
+  "url": "https://m.dcinside.com/board/projectcc/66309",
+  "title": "사실 토벌 600배 비밀이",
+  "title_en": "The 600x secret",
+  "date": "2026-09-13",
+  "signal": "relevance 0/3"
+ },
+ "dc:64671": {
+  "url": "https://m.dcinside.com/board/projectcc/64671",
+  "title": "토벌에서 렙낮추고 체리맛넣고 똥꼬쇼 하는 이유가 머임?",
+  "title_en": "Why level down and use Cherry?",
+  "date": "2026-09-11",
+  "signal": "relevance 2/3"
+ },
+ "dc:60521": {
+  "url": "https://m.dcinside.com/board/projectcc/60521",
+  "title": "토벌덱 공유",
+  "title_en": "Raid deck share",
+  "date": "2026-09-06",
+  "signal": "relevance 2/3"
+ },
+ "dc:59932": {
+  "url": "https://m.dcinside.com/board/projectcc/59932",
+  "title": "475M 112G",
+  "title_en": "112G at 475M",
+  "date": "2026-09-05",
+  "signal": "relevance 2/3"
+ },
+ "dc:60763": {
+  "url": "https://m.dcinside.com/board/projectcc/60763",
+  "title": "토벌전770m으로 150G",
+  "title_en": "150G at 770M",
+  "date": "2026-09-07",
+  "signal": "relevance 3/3"
+ },
+ "dc:59654": {
+  "url": "https://m.dcinside.com/board/projectcc/59654",
+  "title": "치케로또 무한 리트로 기록내는 애들 조심해라",
+  "title_en": "Beware infinite-retry cheesecake lottery",
+  "date": "2026-09-05",
+  "signal": "relevance 1/3"
+ },
+ "dc:60820": {
+  "url": "https://m.dcinside.com/board/projectcc/60820",
+  "title": "토벌 고점은 스가 인거 같다",
+  "title_en": "Raid ceiling is skill haste",
+  "date": "2026-09-07",
+  "signal": "relevance 2/3"
+ },
+ "dc:64932": {
+  "url": "https://m.dcinside.com/board/projectcc/64932",
+  "title": "시커 석류 빨대받으니까 스증버다 치확 치피가 좋다던데",
+  "title_en": "Seeker with straw: crit better than skill amp?",
+  "date": "2026-09-11",
+  "signal": "relevance 2/3"
+ },
+ "dc:66083": {
+  "url": "https://m.dcinside.com/board/projectcc/66083",
+  "title": "해보니까 150배까진 스가랑 이속 주는게 맞음",
+  "title_en": "Up to 150x, haste + move speed is right",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:53667": {
+  "url": "https://m.dcinside.com/board/projectcc/53667",
+  "title": "토벌전 30초 이후 쿠키가 사는 조건 생각해봄",
+  "title_en": "Conditions for surviving past 30 s",
+  "date": "2026-08-30",
+  "signal": "relevance 3/3"
+ },
+ "dc:55487": {
+  "url": "https://m.dcinside.com/board/projectcc/55487",
+  "title": "그니까 토벌딜뻥은 이거네",
+  "title_en": "So this is the raid damage spike",
+  "date": "2026-08-31",
+  "signal": "relevance 3/3"
+ },
+ "dc:66495": {
+  "url": "https://m.dcinside.com/board/projectcc/66495",
+  "title": "토벌기준 최대딜을 넣는 슈가룬 조합 찾고있음",
+  "title_en": "Searching the max-damage sugar-rune combination",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:74813": {
+  "url": "https://m.dcinside.com/board/projectcc/74813",
+  "title": "17초 이후에 피겨랑 2마리 더 사는데",
+  "title_en": "피겨 and two more survive past 17 s",
+  "date": "2026-09-24",
+  "signal": "relevance 1/3"
+ },
+ "dc:73149": {
+  "url": "https://m.dcinside.com/board/projectcc/73149",
+  "title": "배치만 어떻게 잘 되면 달토끼 넣고 17초생존 가능할듯",
+  "title_en": "Moon Rabbit might enable 17 s survival",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:66516": {
+  "url": "https://m.dcinside.com/board/projectcc/66516",
+  "title": "토벌전 500G 넘는거부터 슈가룬 최적화 지리는거같은데",
+  "title_en": "Above 500G it's all sugar-rune optimization",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "dc:65390": {
+  "url": "https://m.dcinside.com/board/projectcc/65390",
+  "title": "총투 2g로 토벌전 354g가 가능함..?",
+  "title_en": "354G with 2G total account power?",
+  "date": "2026-09-12",
+  "signal": "relevance 1/3"
+ },
+ "dc:59683": {
+  "url": "https://m.dcinside.com/board/projectcc/59683",
+  "title": "토벌 치케 리트 조건이",
+  "title_en": "Cheesecake retry condition",
+  "date": "2026-09-05",
+  "signal": "relevance 1/3"
+ },
+ "web:yt-IkY9i5s7SOA": {
+  "url": "https://www.youtube.com/shorts/IkY9i5s7SOA",
+  "title": "쿠키런 크럼블 길드 토벌전 1등 영상 827G",
+  "title_en": "Guild Conquest #1 video, 827G",
+  "date": "2026-09-13",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-ZjPH1YEbDnA": {
+  "url": "https://www.youtube.com/watch?v=ZjPH1YEbDnA",
+  "title": "[쿠키런 크럼블] 길드토벌전 600G 고득점 덱 공략 (슈가룬 세팅)",
+  "title_en": "Guild Conquest 600G high-score deck (Sugar Rune settings) - Noorimer",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-yeICL4cCLZU": {
+  "url": "https://www.youtube.com/watch?v=yeICL4cCLZU",
+  "title": "[쿠키런크럼블] 길드 토벌전 513G 공략 (가속)",
+  "title_en": "Guild Conquest 513G guide (Skill Haste) - 서신우",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-hnvT2o5cU20": {
+  "url": "https://www.youtube.com/watch?v=hnvT2o5cU20",
+  "title": "[쿠키런크럼블] 길드 토벌전 544G 공략 (와사비 공격력 조절)",
+  "title_en": "Guild Conquest 544G guide (Wasabi ATK adjustment) - 서신우",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-2dLEcthpVlM": {
+  "url": "https://www.youtube.com/watch?v=2dLEcthpVlM",
+  "title": "[쿠키런크럼블] 토벌에서 체리를 사용하는 이유 (버프를 주는 기준)",
+  "title_en": "Why Cherry is used in Guild Conquest (how buff targets are chosen) - 서신우",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-4B-82pmUooI": {
+  "url": "https://www.youtube.com/watch?v=4B-82pmUooI",
+  "title": "[쿠키런 크럼블] 플레이트 장비 가이드: 강화 우선순위 및 옵션 프리셋 총정리",
+  "title_en": "Plate gear guide: upgrade priority and option presets - Noorimer",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-UYa8E0YEho8": {
+  "url": "https://www.youtube.com/watch?v=UYa8E0YEho8",
+  "title": "[쿠키런 크럼블] 길드토벌전 345G 고득점 덱 공략 (슈가룬 세팅)",
+  "title_en": "Guild Conquest 345G deck + Sugar Rune settings - Noorimer",
+  "date": "2026-09-20",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-CDrrPsquK-o": {
+  "url": "https://www.youtube.com/watch?v=CDrrPsquK-o",
+  "title": "[쿠키런 크럼블] 길드토벌전 1700억 고득점 덱 공략 ft. 체리맛 쿠키",
+  "title_en": "Guild Conquest 170G deck ft. Cherry Cookie - Noorimer",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-HuI2hIlEmyI": {
+  "url": "https://www.youtube.com/watch?v=HuI2hIlEmyI",
+  "title": "[쿠키런 크럼블] 길드토벌전 고득점 덱 공략 ft. 치즈케이크맛 쿠키 운빨",
+  "title_en": "Guild Conquest high-score deck ft. Cheesecake Cookie (luck-based) - Noorimer",
+  "date": "2026-09-05",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-hvkq2ihQ93U": {
+  "url": "https://www.youtube.com/watch?v=hvkq2ihQ93U",
+  "title": "薑餅人放置大戰爭｜公會戰更新拚出434G傷害 牛奶&起司Buff機制說明 缽里公主餅乾版本",
+  "title_en": "PonPonLin (TW): 434G Guild Conquest, Milk & Cheesecake buff mechanics (Bari patch)",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-sfAN2GhTKBI": {
+  "url": "https://www.youtube.com/watch?v=sfAN2GhTKBI",
+  "title": "",
+  "title_en": "Guild Conquest Team & Tips - Score Higher!! (Samool)",
+  "date": "2026-09-03",
+  "signal": "relevance 1/3"
+ },
+ "web:yt-yB4RTjqmGlo": {
+  "url": "https://www.youtube.com/watch?v=yB4RTjqmGlo",
+  "title": "",
+  "title_en": "Cookie Run Crumble: NEW Guild Conquest Lineup! 72 BILLION Score! (EggZaMonkey EX)",
+  "date": "2026-09-26",
+  "signal": "relevance 1/3"
+ },
+ "web:yt-m7EeDeK1emI": {
+  "url": "https://www.youtube.com/watch?v=m7EeDeK1emI",
+  "title": "",
+  "title_en": "The BEST Teams to Maximise Your Damage in Guild Conquest (GoraxPlays)",
+  "date": "2026-08-30",
+  "signal": "relevance 1/3"
+ },
+ "web:cookieruncrumbles-guild-conquest": {
+  "url": "https://www.cookieruncrumbles.com/guides/cookie-run-crumble-guild-conquest-team-guide/",
+  "title": "",
+  "title_en": "CookieRun: Crumble Guild Conquest Guide: Fix Your Piñata Damage",
+  "date": "2026-09-01",
+  "signal": "relevance 1/3"
+ },
+ "web:cookieruncrumbles-gear-brightseeker-equipment": {
+  "url": "https://www.cookieruncrumbles.com/guides/cookie-run-crumble-gear-sugar-rune-stats-guide/",
+  "title": "",
+  "title_en": "cookieruncrumbles.com gear / Brightseeker / equipment-choice guides",
+  "date": "2026-08-22",
+  "signal": "relevance 1/3"
+ },
+ "web:allthingshow-guild-conquest": {
+  "url": "https://allthings.how/cookierun-crumble-guild-conquest-best-team-for-the-extra-stuffed-pinata/",
+  "title": "",
+  "title_en": "CookieRun: Crumble Guild Conquest - Best Team and Tips to Score Higher",
+  "date": "?",
+  "signal": "relevance 1/3"
+ },
+ "web:pocketgamer-8-27": {
+  "url": "https://www.pocketgamer.com/cookierun-crumble/co-op-guild-three-new-cookies/",
+  "title": "",
+  "title_en": "CookieRun: Crumble's first major update ... co-op Guild Raids",
+  "date": "2026-08-27",
+  "signal": "relevance 0/3"
+ },
+ "web:x-CRCrumbleEN-2092462127684706397": {
+  "url": "https://x.com/CRCrumbleEN/article/2092462127684706397",
+  "title": "",
+  "title_en": "[Patch] About the August 23 [sic] Update - official EN patch notes for 8/27",
+  "date": "2026-08-26",
+  "signal": "relevance 1/3"
+ },
+ "web:26586": {
+  "url": "https://cafe.naver.com/ccrumble/26586",
+  "title": "스킬 증폭 적용 방식 수정 및 슈가룬 재화 환급 안내",
+  "title_en": "Skill Amp application change and Sugar Rune refund",
+  "date": "2026-08-27",
+  "signal": "relevance 3/3"
+ },
+ "web:25737": {
+  "url": "https://cafe.naver.com/ccrumble/25737",
+  "title": "8월 27일(목) 업데이트 안내",
+  "title_en": "8/27 update notes",
+  "date": "2026-08-26",
+  "signal": "relevance 2/3"
+ },
+ "web:16132": {
+  "url": "https://cafe.naver.com/ccrumble/16132",
+  "title": "8월 13일(목) 업데이트 안내",
+  "title_en": "8/13 update notes",
+  "date": "2026-08-12",
+  "signal": "relevance 2/3"
+ },
+ "web:37730": {
+  "url": "https://cafe.naver.com/ccrumble/37730",
+  "title": "9월 10일(목) 업데이트 안내",
+  "title_en": "9/10 update notes",
+  "date": "2026-09-09",
+  "signal": "relevance 2/3"
+ },
+ "web:44477": {
+  "url": "https://cafe.naver.com/ccrumble/44477",
+  "title": "9월 23일(수) 업데이트 안내",
+  "title_en": "9/23 update notes",
+  "date": "2026-09-22",
+  "signal": "relevance 3/3"
+ },
+ "nv:25475": {
+  "url": "https://cafe.naver.com/ccrumble/25475",
+  "title": "8월 27일 업데이트 내용 확정된 소식 공개!! 피노누아맛 쿠키와 길드 토벌전, 브라이트시커 쿠키",
+  "title_en": "8/27 update confirmed: Pinot Noir Cookie, Guild Conquest, Bright Seeker Cookie",
+  "date": "2026-08-25",
+  "signal": "relevance 1/3"
+ },
+ "nv:26733": {
+  "url": "https://cafe.naver.com/ccrumble/26733",
+  "title": "내 맘대로 짜본 토벌덱",
+  "title_en": "A conquest deck I put together myself",
+  "date": "2026-08-27",
+  "signal": "relevance 2/3"
+ },
+ "nv:26982": {
+  "url": "https://cafe.naver.com/ccrumble/26982",
+  "title": "피노누아 끼고 임시 연발덱 ( 아레나, 토벌 전용 )",
+  "title_en": "Temporary multi-hit (연발) deck with Pinot Noir (arena and conquest only)",
+  "date": "2026-08-27",
+  "signal": "relevance 2/3"
+ },
+ "nv:27313": {
+  "url": "https://cafe.naver.com/ccrumble/27313",
+  "title": "내가 사용중인 길드 토벌전 덱 추천",
+  "title_en": "Recommending the guild conquest deck I use",
+  "date": "2026-08-27",
+  "signal": "relevance 2/3"
+ },
+ "nv:27449": {
+  "url": "https://cafe.naver.com/ccrumble/27449",
+  "title": "길드 토벌전 71억 공략 (영상)",
+  "title_en": "Guild conquest 7.1G guide (video)",
+  "date": "2026-08-27",
+  "signal": "relevance 2/3"
+ },
+ "nv:27682": {
+  "url": "https://cafe.naver.com/ccrumble/27682",
+  "title": "***토벌전*** 덱구성. 그대로 가서 쳐라.",
+  "title_en": "Conquest deck. Just copy it and hit.",
+  "date": "2026-08-27",
+  "signal": "relevance 2/3"
+ },
+ "nv:28835": {
+  "url": "https://cafe.naver.com/ccrumble/28835",
+  "title": "시커덱",
+  "title_en": "Seeker deck",
+  "date": "2026-08-28",
+  "signal": "relevance 2/3"
+ },
+ "nv:29318": {
+  "url": "https://cafe.naver.com/ccrumble/29318",
+  "title": "길드 토벌전 77억 공략 (영상)",
+  "title_en": "Guild conquest 7.7G guide (video)",
+  "date": "2026-08-28",
+  "signal": "relevance 1/3"
+ },
+ "nv:29690": {
+  "url": "https://cafe.naver.com/ccrumble/29690",
+  "title": "정글전사와 석류맛쿠키의 슈가룬 필수 세팅",
+  "title_en": "Mandatory sugar-rune setup for Jungle Warrior and Pomegranate",
+  "date": "2026-08-29",
+  "signal": "relevance 3/3"
+ },
+ "nv:30003": {
+  "url": "https://cafe.naver.com/ccrumble/30003",
+  "title": "길드 토벌전 실론없이 하기",
+  "title_en": "Guild conquest without Ceylon",
+  "date": "2026-08-29",
+  "signal": "relevance 3/3"
+ },
+ "nv:34553": {
+  "url": "https://cafe.naver.com/ccrumble/34553",
+  "title": "길드 토벌전 397억 공략",
+  "title_en": "Guild conquest 39.7G guide",
+  "date": "2026-09-03",
+  "signal": "relevance 2/3"
+ },
+ "nv:35279": {
+  "url": "https://cafe.naver.com/ccrumble/35279",
+  "title": "길드토벌전 추천덱, 실론나이트 ver.",
+  "title_en": "Recommended guild conquest deck, Ceylon Knight version",
+  "date": "2026-09-04",
+  "signal": "relevance 1/3"
+ },
+ "nv:36231": {
+  "url": "https://cafe.naver.com/ccrumble/36231",
+  "title": "길드 토벌전",
+  "title_en": "Guild conquest",
+  "date": "2026-09-06",
+  "signal": "relevance 3/3"
+ },
+ "nv:36558": {
+  "url": "https://cafe.naver.com/ccrumble/36558",
+  "title": "토벌전 치케 고점 로또덱 공유",
+  "title_en": "Sharing the Cheesecake high-ceiling lottery deck",
+  "date": "2026-09-07",
+  "signal": "relevance 3/3"
+ },
+ "nv:39345": {
+  "url": "https://cafe.naver.com/ccrumble/39345",
+  "title": "길드 토벌전 654억 공략",
+  "title_en": "Guild conquest 65.4G guide",
+  "date": "2026-09-11",
+  "signal": "relevance 1/3"
+ },
+ "nv:39733": {
+  "url": "https://cafe.naver.com/ccrumble/39733",
+  "title": "43-20 폭주단트럭 석류5성",
+  "title_en": "Stage 43-20 Rampage Truck with 5★ Pomegranate",
+  "date": "2026-09-11",
+  "signal": "relevance 0/3"
+ },
+ "nv:40660": {
+  "url": "https://cafe.naver.com/ccrumble/40660",
+  "title": "토벌덱",
+  "title_en": "Conquest deck",
+  "date": "2026-09-13",
+  "signal": "relevance 2/3"
+ },
+ "nv:42630": {
+  "url": "https://cafe.naver.com/ccrumble/42630",
+  "title": "길드 토벌전 957억 공략",
+  "title_en": "Guild conquest 95.7G guide",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "nv:43011": {
+  "url": "https://cafe.naver.com/ccrumble/43011",
+  "title": "본인의 투력: 670m 토벌전 200배이상 (허브덱 145G, 정전덱164G)",
+  "title_en": "My power 670M → 200x+ in conquest (Herb deck 145G, Jungle Warrior deck 164G)",
+  "date": "2026-09-18",
+  "signal": "relevance 3/3"
+ },
+ "nv:43017": {
+  "url": "https://cafe.naver.com/ccrumble/43017",
+  "title": "길드 토벌전 169G 공략",
+  "title_en": "Guild conquest 169G guide",
+  "date": "2026-09-18",
+  "signal": "relevance 2/3"
+ },
+ "nv:43653": {
+  "url": "https://cafe.naver.com/ccrumble/43653",
+  "title": "[토벌 공략] 체리덱",
+  "title_en": "[Conquest guide] Cherry deck",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "nv:44761": {
+  "url": "https://cafe.naver.com/ccrumble/44761",
+  "title": "브라이트 시커 쿠키 스킬가속 연구",
+  "title_en": "Bright Seeker Cookie skill haste research",
+  "date": "2026-09-22",
+  "signal": "relevance 3/3"
+ },
+ "nv:45362": {
+  "url": "https://cafe.naver.com/ccrumble/45362",
+  "title": "길드전 팁 부탁드립니다.",
+  "title_en": "Asking for guild raid tips",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "nv:45824": {
+  "url": "https://cafe.naver.com/ccrumble/45824",
+  "title": "길드 토벌전 513G 공략",
+  "title_en": "Guild conquest 513G guide",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "nv:46167": {
+  "url": "https://cafe.naver.com/ccrumble/46167",
+  "title": "토벌 브시커 스가 질문",
+  "title_en": "Question on Seeker skill haste for the raid",
+  "date": "2026-09-25",
+  "signal": "relevance 1/3"
+ },
+ "nv:46283": {
+  "url": "https://cafe.naver.com/ccrumble/46283",
+  "title": "길드 토벌전 544G 공략",
+  "title_en": "Guild conquest 544G guide",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "web:crumblehub-clear-decks-guild_raid": {
+  "url": "https://crumblehub.co/api/clear-decks?mode=guild_raid&sort=recommended&limit=50&roster=4",
+  "title": "크럼블 허브 유저 공유 덱 — 길드 토벌전 (GUILD_RAID)",
+  "title_en": "CrumbleHub community shared decks filtered to Guild Conquest",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:crumblehub-meta-decks": {
+  "url": "https://crumblehub.co/api/meta-decks",
+  "title": "크럼블 허브 메타 덱 (큐레이션)",
+  "title_en": "CrumbleHub curated meta decks",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "web:crumblehub-guides-stats": {
+  "url": "https://crumblehub.co/guides/stats",
+  "title": "전투 스탯 가이드 | 크럼블 허브",
+  "title_en": "Combat stat guide (CrumbleHub)",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:alkapa-option-consult": {
+  "url": "https://alkapa.gg/lab/crumble/option-consult",
+  "title": "쿠키런 크럼블 슈가룬 추천 | 쿠키별 옵션 우선순위 (KAPA LAB, 게임 1.4.002)",
+  "title_en": "Recommended sugar-rune options per cookie (alkapa)",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:alkapa-logic": {
+  "url": "https://alkapa.gg/lab/crumble/logic",
+  "title": "쿠키런: 크럼블 가이드 — 알아두면 좋은 전투 원리 (KAPA LAB, 게임 1.3.002 기준)",
+  "title_en": "Combat principles explainer (alkapa)",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:sugarpocket-catalog": {
+  "url": "https://cookieruncrumble.app/api/catalog/gameplay + /api/catalog/database",
+  "title": "슈가포켓 게임 데이터 카탈로그 (클라이언트 1.4.002 추출)",
+  "title_en": "Sugar Pocket datamined catalog (client 1.4.002)",
+  "date": "2026-09-23",
+  "signal": "relevance 3/3"
+ },
+ "web:crumblehelper-home": {
+  "url": "https://crumblehelper.com/",
+  "title": "쿠키런크럼블 최다시너지 * 조합 요청/공유 * 티어표 * 스텔라링크",
+  "title_en": "Crumble Helper synergy/team finder",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "web:cookieruncrumble-net-guild-raid-guide": {
+  "url": "https://cookieruncrumble.net/ko/blog/cookierun-crumble-guild-raid-guide",
+  "title": "쿠키런: 크럼블 길드 토벌전 공략 — 피냐타 보스, 보상 & 팀 구성",
+  "title_en": "Guild Conquest guide — Piñata boss, rewards & teams",
+  "date": "2026-08-27",
+  "signal": "relevance 1/3"
+ },
+ "web:crumbleguides-guild-conquest": {
+  "url": "https://crumbleguides.com/guides/cookie-run-crumble-guild-conquest",
+  "title": "",
+  "title_en": "Cookie Run: Crumble — Guild Conquest Guide",
+  "date": "2026-09-03",
+  "signal": "relevance 1/3"
+ },
+ "web:gamemeca-trees-1571": {
+  "url": "https://www.gamemeca.com/trees/view.php?seq=1571",
+  "title": "쿠키런: 크럼블 추천 조합",
+  "title_en": "Recommended teams (Gamemeca)",
+  "date": "2026-08-12",
+  "signal": "relevance 0/3"
+ },
+ "web:oslink-team-building-guide": {
+  "url": "https://www.oslink.io/blog/guide/cookierun-crumble-team-building-guide.html",
+  "title": "쿠키런: 크럼블 추천 덱 공략 - 콘텐츠별 최적 파티 조합과 쿠키 역할 정리",
+  "title_en": "OSLink team-building guide",
+  "date": "2026-07-31",
+  "signal": "relevance 0/3"
+ },
+ "web:crumbgg-join": {
+  "url": "https://crumb.gg/pub/live?board=guild_conquest_players + https://crumb.gg/pub/leaderboard + https://api.crumb.gg/api/rankings?kind=players",
+  "title": "",
+  "title_en": "crumb.gg public JSON: S5 conquest scores joined with account power and season history",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "web:crumbgg-arena": {
+  "url": "https://crumb.gg/pub/live?board=rumble_arena",
+  "title": "",
+  "title_en": "crumb.gg Rumble Arena teams of the same top players (ARENA mode, not conquest)",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "dc:76235": {
+  "url": "https://m.dcinside.com/board/projectcc/76235",
+  "title": "2T클럽에 가입",
+  "title_en": "Joined the 2T club",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:69856": {
+  "url": "https://m.dcinside.com/board/projectcc/69856",
+  "title": "토벌 17초 이후로도 버틸수있나 한번해봤는데",
+  "title_en": "Tried whether you can survive past 17 s",
+  "date": "2026-09-18",
+  "signal": "relevance 3/3"
+ },
+ "dc:74801": {
+  "url": "https://m.dcinside.com/board/projectcc/74801",
+  "title": "17초 이후 버티는 사람있음?",
+  "title_en": "Anyone surviving past 17 s?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:76530": {
+  "url": "https://m.dcinside.com/board/projectcc/76530",
+  "title": "토벌 덱 새로나왓음?",
+  "title_en": "Did a new raid deck come out?",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:75994": {
+  "url": "https://m.dcinside.com/board/projectcc/75994",
+  "title": "30초 이후에 마카롱 버프 못받았는데 기갱 ㄷㄷ",
+  "title_en": "New record even without Macaron buff after 30 s",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76333": {
+  "url": "https://m.dcinside.com/board/projectcc/76333",
+  "title": "5번정도 1.3T 나오면 이게 내 고점인거지?",
+  "title_en": "Hit 1.3T about five times — is that my ceiling?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:69824": {
+  "url": "https://m.dcinside.com/board/projectcc/69824",
+  "title": "토벌딜 꿀통 푼다",
+  "title_en": "Releasing the raid-damage honey pot",
+  "date": "2026-09-18",
+  "signal": "relevance 2/3"
+ },
+ "dc:69800": {
+  "url": "https://m.dcinside.com/board/projectcc/69800",
+  "title": "카페 길드 얘네",
+  "title_en": "This 카페 guild",
+  "date": "2026-09-18",
+  "signal": "relevance 1/3"
+ },
+ "dc:75685": {
+  "url": "https://m.dcinside.com/board/projectcc/75685",
+  "title": "토벌전 딜량 복사 진짜 있는거였구나",
+  "title_en": "So the raid damage 'copy' is real",
+  "date": "2026-09-25",
+  "signal": "relevance 1/3"
+ },
+ "dc:74992": {
+  "url": "https://m.dcinside.com/board/projectcc/74992",
+  "title": "와레나 1등 보아라 !!!!",
+  "title_en": "Look at the world-arena #1",
+  "date": "2026-09-24",
+  "signal": "relevance 0/3"
+ },
+ "dc:76751": {
+  "url": "https://m.dcinside.com/board/projectcc/76751",
+  "title": "호밀덱 계속 실험해봤는데 락이더 좋은거 같다",
+  "title_en": "Rye deck: Rockstar better",
+  "date": "2026-09-27",
+  "signal": "relevance 0/3"
+ },
+ "dc:75963": {
+  "url": "https://m.dcinside.com/board/projectcc/75963",
+  "title": "연구 이거 뚫는거 존나 크네",
+  "title_en": "Research HP +30% node is huge",
+  "date": "2026-09-26",
+  "signal": "relevance 1/3"
+ },
+ "dc:76608": {
+  "url": "https://m.dcinside.com/board/projectcc/76608",
+  "title": "체력 9m 넘으면 토벌 17초 안터짐?",
+  "title_en": "Above 9M HP, no 17 s wipe?",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "dc:74790": {
+  "url": "https://m.dcinside.com/board/projectcc/74790",
+  "title": "17초 슬슬 버티네",
+  "title_en": "Starting to survive 17 s",
+  "date": "2026-09-24",
+  "signal": "relevance 1/3"
+ },
+ "nv:45427": {
+  "url": "https://cafe.naver.com/ccrumble/45427",
+  "title": "Lv14 토벌8위 '' 각성 '' 마지막 한분 모십니다",
+  "title_en": "각성 guild recruiting (8th)",
+  "date": "2026-09-23",
+  "signal": "relevance 1/3"
+ },
+ "nv:44740": {
+  "url": "https://cafe.naver.com/ccrumble/44740",
+  "title": "토벌 시즌 전체 7위 마무리 \" 품격 \"",
+  "title_en": "품격 guild recruiting (7th)",
+  "date": "2026-09-22",
+  "signal": "relevance 1/3"
+ },
+ "web:crumbgg-s5": {
+  "url": "https://crumb.gg/rankings",
+  "title": "crumb.gg Guild Conquest rankings, Season 5 (live)",
+  "title_en": "Captured 2026-09-27 via agent-browser; raw snapshot in evidence/15-crumbgg/03-rankings-s5-players.txt and 04-player-1.txt",
+  "date": "2026-09-27",
+  "signal": "public game data"
+ }
+}
