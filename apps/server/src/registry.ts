@@ -4,9 +4,11 @@
  * services, the snapshot's tables, its restore order and counts, and the
  * importer's replace-clear order all come from this one declaration.
  *
- * Adding a cited content type is a table and its input schemas in
- * `@crumble/schema`, an entry here, a `.route()` line in `app.ts` (kept
- * explicit so the typed client keeps every route's types) and a view.
+ * Adding a cited content type is a table, its input schemas and its
+ * `CITED_ENTITY` value in `@crumble/schema`, an entry here, a `.route()`
+ * line in `app.ts` (kept explicit so the typed client keeps every route's
+ * types) and a view. `test/registry.test.ts` fails if the route or the
+ * entity is missing.
  *
  * This module is layer-neutral: it holds declarations only, and imports no
  * repo, service, route or drizzle query builder.
@@ -264,11 +266,6 @@ export type InsertOf<K extends TableKey> = InferInsertModel<Registry[K]["table"]
 /** A table the generic repo and content service handle. */
 export type ContentKey = {
   [K in TableKey]: Registry[K] extends { content: object } ? K : never;
-}[TableKey];
-
-/** A table served under a route. */
-export type MountedKey = {
-  [K in TableKey]: Registry[K] extends { path: string } ? K : never;
 }[TableKey];
 
 /** The column values a content type's create accepts: its input without `sources`. */

@@ -9,11 +9,9 @@
  * A mode-specific screen (the conquest boss screen) takes its own config
  * block from its mode.
  */
-import type { GameMode, ModeScope, RankingBoardFilter } from "../api/queries";
+import type { ModeScope, RankingBoardFilter } from "../api/queries";
 import type { GearRec } from "../api/types";
 import type { FileRoutesByTo } from "../routeTree.gen";
-
-export type { GameMode, ModeScope } from "../api/queries";
 
 /** A navigable app path, checked against the generated route tree. */
 export type AppPath = keyof FileRoutesByTo;
