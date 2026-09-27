@@ -2,8 +2,25 @@ import type { InferRequestType } from "hono/client";
 import { describe, expect, expectTypeOf, it } from "vitest";
 import type { api } from "../src/api/client";
 import type { GameMode } from "../src/api/queries";
-import { decksQuery, mechanicsQuery, recommendationsQuery, scoresQuery } from "../src/api/queries";
-import { activeTab, ARENA, CONQUEST, MODES, sectionForPath } from "../src/app/modes";
+import {
+  countersQuery,
+  decksQuery,
+  mechanicsQuery,
+  recommendationsQuery,
+  rulesQuery,
+  scoresQuery,
+  sourcesQuery,
+  usageQuery,
+} from "../src/api/queries";
+import {
+  activeTab,
+  ARENA,
+  CONQUEST,
+  MODES,
+  RUMBLE,
+  SHARED_SECTIONS,
+  sectionForPath,
+} from "../src/app/modes";
 import { stubApi } from "./helpers";
 
 describe("sectionForPath", () => {
@@ -42,6 +59,27 @@ describe("activeTab", () => {
 describe("MODES", () => {
   it("names the Guild Conquest research record", () => {
     expect(MODES.find((m) => m.id === "conquest")?.recordSlug).toBe("001-guild-conquest-meta");
+  });
+
+  it("files Arena and Rumble Arena under the PvP research record, each with its own screens", () => {
+    for (const mode of [ARENA, RUMBLE]) {
+      expect(mode.recordSlug, mode.id).toBe("002-pvp-meta");
+      expect(
+        mode.tabs.map((t) => t.to),
+        mode.id,
+      ).toEqual(
+        ["", "/teams", "/counters", "/usage", "/runes", "/gear", "/mechanics", "/timeline"].map(
+          (sub) => `${mode.to}${sub}`,
+        ),
+      );
+      expect(mode.rules, mode.id).not.toBeNull();
+    }
+    expect(CONQUEST.rules).toBeNull();
+  });
+
+  it("lists the research index among the shared sections, before Sources and Glossary", () => {
+    expect(SHARED_SECTIONS.map((s) => s.to)).toEqual(["/research", "/sources", "/glossary"]);
+    expect(sectionForPath("/research")?.id).toBe("research");
   });
 
   it("gives every mode its own API scope", () => {
@@ -94,6 +132,29 @@ describe("mode-scoped queries", () => {
     expect(await get(recommendationsQuery(CONQUEST.recordSlug))).toBe(
       "/api/recommendations?record=001-guild-conquest-meta",
     );
+    expect(await get(countersQuery(ARENA.scope))).toBe("/api/counters?mode=arena");
+    expect(await get(usageQuery(RUMBLE.scope))).toBe("/api/usage?mode=rumble_arena");
+    expect(await get(rulesQuery(RUMBLE.scope))).toBe(
+      "/api/mechanics?mode=rumble_arena&topic=rules",
+    );
+  });
+
+  it("scope the sources list to a record, and leave the unfiltered list for the chips", async () => {
+    const fetch = stubApi({});
+    const get = async (options: { queryFn?: unknown }) => {
+      await (options.queryFn as () => Promise<unknown>)().catch(() => undefined);
+      return String(fetch.mock.calls.at(-1)![0]).replace(/^https?:\/\/[^/]+/, "");
+    };
+    expect(await get(sourcesQuery({ record: "002-pvp-meta" }))).toBe(
+      "/api/sources?record=002-pvp-meta",
+    );
+    expect(await get(sourcesQuery())).toBe("/api/sources");
+    expect(sourcesQuery().queryKey).toEqual(["sources", { site: null, record: null }]);
+    expect(sourcesQuery({ record: "r" }).queryKey).not.toEqual(sourcesQuery().queryKey);
+  });
+
+  it("keep a mode's rules apart from its other mechanics in the cache", () => {
+    expect(rulesQuery(ARENA.scope).queryKey).not.toEqual(mechanicsQuery(ARENA.scope).queryKey);
   });
 
   it("key each mode's lists apart, and the unscoped list apart from both", () => {

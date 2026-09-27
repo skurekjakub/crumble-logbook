@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSourceIndex } from "../api/hooks";
-import { mechanicsQuery } from "../api/queries";
+import { mechanicsQuery, RULES_TOPIC } from "../api/queries";
 import type { ModeSection } from "../app/modes";
 import { EmptyState } from "../components/EmptyState";
 import { Pill } from "../components/Pill";
@@ -10,12 +10,16 @@ import { ViewHeader } from "../components/ViewHeader";
 
 /**
  * A mode's measured or datamined mechanics as cards, each with its
- * confidence pill and sources.
+ * confidence pill and sources. The mode's rules (topic {@link RULES_TOPIC})
+ * are left to its overview.
  *
  * @param mode - the mode whose mechanics and copy the view shows
  */
 export function MechanicsView({ mode }: { mode: ModeSection }) {
-  const mechanics = useQuery(mechanicsQuery(mode.scope));
+  const mechanics = useQuery({
+    ...mechanicsQuery(mode.scope),
+    select: (rows) => rows.filter((m) => m.topic !== RULES_TOPIC),
+  });
   const sources = useSourceIndex();
   return (
     <>

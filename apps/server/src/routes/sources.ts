@@ -1,18 +1,21 @@
-import { SOURCE_SITE, sourceId, sourceInput, sourcePatch } from "@crumble/schema";
+import { sourceId, sourceInput, sourcePatch } from "@crumble/schema";
 import { Hono } from "hono";
 import { z } from "zod";
+import { REGISTRY } from "../registry";
 import type { SourcesService } from "../services/sources";
+import { listQuery } from "./content";
 import { validate } from "./validate";
 
 /** A `:id` path parameter, validated as a `<site>:<key>` source id. */
 const idParam = z.object({ id: sourceId });
 
-/** Query params accepted by `GET /`: an optional site to filter by. */
-const listQuery = z.object({ site: z.enum(SOURCE_SITE).optional() });
+/** Query params accepted by `GET /`: the registry's list filters for sources. */
+const sourcesQuery = listQuery<typeof REGISTRY.sources>(REGISTRY.sources.filters);
 
 /**
- * Builds the CRUD router for `sources`: `GET /` (optionally filtered by
- * `?site`), `GET /:id`, `POST /` (201), `PATCH /:id`, `DELETE /:id` (204).
+ * Builds the CRUD router for `sources`: `GET /` (filtered by the registry's
+ * list filters for sources, `?site=` and `?record=`), `GET /:id`, `POST /`
+ * (201), `PATCH /:id`, `DELETE /:id` (204).
  * `:id` is a `<site>:<key>` string (e.g. `dc:76135`), sent URL-encoded
  * (`dc%3A76135`); Hono decodes path params before they reach `idParam`.
  *
@@ -21,10 +24,7 @@ const listQuery = z.object({ site: z.enum(SOURCE_SITE).optional() });
  */
 export function sourcesRouter(svc: SourcesService) {
   return new Hono()
-    .get("/", validate("query", listQuery), (c) => {
-      const { site } = c.req.valid("query");
-      return c.json(svc.list(site));
-    })
+    .get("/", validate("query", sourcesQuery), (c) => c.json(svc.list(c.req.valid("query"))))
     .get("/:id", validate("param", idParam), (c) => {
       const { id } = c.req.valid("param");
       return c.json(svc.get(id));

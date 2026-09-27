@@ -26,31 +26,36 @@ export function slotKind(level: string | null | undefined): "" | "max" | "filler
   return "";
 }
 
+/**
+ * One cookie's slot: level and star count, the English name, and the Korean
+ * name and note beneath. Stars show only when they're a plain number; free
+ * text ("?", "~7 (inferred …)") is left to the levels table.
+ */
+export function LineupSlot({ cookie: c, slotId }: { cookie: LineupCookie; slotId?: string }) {
+  const kind = slotKind(c.level);
+  const lv = c.level != null && c.level !== "" ? `Lv.${c.level}` : "";
+  const stars = c.stars && /^\d+$/.test(c.stars) ? ` · ${c.stars}★` : "";
+  const sub = [c.en ? c.cookieKr : "", c.note ?? ""].filter(Boolean).join(" · ");
+  return (
+    <div className={kind ? `slot ${kind}` : "slot"} title={c.note ?? ""} data-slot={slotId}>
+      <span className="lv">
+        {lv}
+        {stars}
+      </span>
+      <span className="nm">{c.en ?? c.cookieKr}</span>
+      <span className="sub">{sub}</span>
+    </div>
+  );
+}
+
 /** The team grid, laid out like the in-game formation screen (6 per row, 3 on phones). */
 export function Lineup({ cookies }: LineupProps) {
   if (!cookies.length) return null;
   return (
     <div className="lineup">
-      {cookies.map((c, i) => {
-        const kind = slotKind(c.level);
-        const lv = c.level != null && c.level !== "" ? `Lv.${c.level}` : "";
-        const stars = c.stars ? ` · ${c.stars}★` : "";
-        const sub = [c.en ? c.cookieKr : "", c.note ?? ""].filter(Boolean).join(" · ");
-        return (
-          <div
-            key={`${i}-${c.cookieKr}`}
-            className={kind ? `slot ${kind}` : "slot"}
-            title={c.note ?? ""}
-          >
-            <span className="lv">
-              {lv}
-              {stars}
-            </span>
-            <span className="nm">{c.en ?? c.cookieKr}</span>
-            <span className="sub">{sub}</span>
-          </div>
-        );
-      })}
+      {cookies.map((c, i) => (
+        <LineupSlot key={`${i}-${c.cookieKr}`} cookie={c} />
+      ))}
     </div>
   );
 }

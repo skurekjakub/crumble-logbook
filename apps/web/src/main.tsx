@@ -8,6 +8,7 @@ import "./styles/base.css";
 import "./styles/components.css";
 import "./styles/shell.css";
 import "./styles/boss.css";
+import "./styles/pvp.css";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000 } },

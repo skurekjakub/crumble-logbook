@@ -68,13 +68,16 @@ export const recordQuery = (slug: string) =>
   });
 
 /**
- * Sources, newest first. Feed the unfiltered list to `useSourceIndex` for chips.
- * @param site - restrict to one site
+ * Sources, newest first, each with the records it belongs to. Feed the
+ * unfiltered list to `useSourceIndex` for chips.
+ * @param filter - restrict to one site, and/or to the sources one research
+ *   record (by slug) owns or cites
  */
-export const sourcesQuery = (site?: SourceSiteFilter) =>
+export const sourcesQuery = (filter: { site?: SourceSiteFilter; record?: string } = {}) =>
   queryOptions({
-    queryKey: ["sources", { site: site ?? null }],
-    queryFn: () => parseResponse(api.sources.$get({ query: { site } })),
+    queryKey: ["sources", { site: filter.site ?? null, record: filter.record ?? null }],
+    queryFn: () =>
+      parseResponse(api.sources.$get({ query: { site: filter.site, record: filter.record } })),
   });
 
 /**
@@ -169,6 +172,41 @@ export const mechanicsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["mechanics", scopeKey(scope)],
     queryFn: () => parseResponse(api.mechanics.$get({ query: { mode: scope?.mode } })),
+  });
+
+/** The mechanics `topic` that marks a mode's rules (format, team size, seasons, buffs…). */
+export const RULES_TOPIC = "rules";
+
+/**
+ * A mode's rules: its mechanics filed under {@link RULES_TOPIC}.
+ * @param scope - the mode whose rules to list
+ */
+export const rulesQuery = (scope: ModeScope) =>
+  queryOptions({
+    queryKey: ["mechanics", { ...scopeKey(scope), topic: RULES_TOPIC }],
+    queryFn: () =>
+      parseResponse(api.mechanics.$get({ query: { mode: scope.mode, topic: RULES_TOPIC } })),
+  });
+
+/**
+ * Directed counter edges: each says which team is beaten by which, under
+ * what conditions, why, and how confidently.
+ * @param scope - the mode to list, when given
+ */
+export const countersQuery = (scope?: ModeScope) =>
+  queryOptions({
+    queryKey: ["counters", scopeKey(scope)],
+    queryFn: () => parseResponse(api.counters.$get({ query: { mode: scope?.mode } })),
+  });
+
+/**
+ * Usage figures, highest share first, each with its sample and capture date.
+ * @param scope - the mode to list, when given
+ */
+export const usageQuery = (scope?: ModeScope) =>
+  queryOptions({
+    queryKey: ["usage", scopeKey(scope)],
+    queryFn: () => parseResponse(api.usage.$get({ query: { mode: scope?.mode } })),
   });
 
 /**

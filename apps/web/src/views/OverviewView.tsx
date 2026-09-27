@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSourceIndex } from "../api/hooks";
-import { recommendationsQuery, recordQuery, takeawaysQuery } from "../api/queries";
-import type { Recommendation, Takeaway } from "../api/types";
-import type { ModeSection } from "../app/modes";
+import { recommendationsQuery, recordQuery, rulesQuery, takeawaysQuery } from "../api/queries";
+import type { Mechanic, Recommendation, Takeaway } from "../api/types";
+import type { ModeSection, RulesConfig } from "../app/modes";
+import { ConfidencePill } from "../components/ConfidencePill";
 import { EmptyState } from "../components/EmptyState";
+import { Kv } from "../components/Kv";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { ViewHeader } from "../components/ViewHeader";
@@ -50,8 +52,57 @@ function AccountCard({ rows, sources }: { rows: readonly Recommendation[]; sourc
   );
 }
 
+/** One rule's text, confidence (when below high) and sources. */
+function RuleBody({ rule, sources }: { rule: Mechanic; sources: SourceIndex }) {
+  return (
+    <>
+      <div>{rule.body}</div>
+      <div className="chips">
+        {rule.confidence === "high" ? null : <ConfidencePill confidence={rule.confidence} />}
+        <SourceChips ids={rule.sources} sources={sources} />
+      </div>
+    </>
+  );
+}
+
 /**
- * A mode's overview: its research record's caveat, the load-bearing
+ * A mode's rules: the row titled `config.highlight` as its own card (the
+ * season's buffs), then the rest as a card of title → rule. "No rules
+ * recorded yet." when there are none.
+ */
+function Rules({
+  rows,
+  config,
+  sources,
+}: {
+  rows: readonly Mechanic[];
+  config: RulesConfig;
+  sources: SourceIndex;
+}) {
+  if (!rows.length) return <EmptyState>No rules recorded yet.</EmptyState>;
+  const highlight = rows.find((r) => r.title === config.highlight);
+  const rest = rows.filter((r) => r !== highlight);
+  return (
+    <>
+      {highlight ? (
+        <div className="card buffs">
+          <h3>{highlight.title}</h3>
+          <RuleBody rule={highlight} sources={sources} />
+        </div>
+      ) : null}
+      {rest.length ? (
+        <div className="card">
+          <h3>{config.title}</h3>
+          <Kv rows={rest.map((r) => [r.title, <RuleBody rule={r} sources={sources} />] as const)} />
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+/**
+ * A mode's overview: its research record's caveats (the mode's own, then the
+ * record's), the mode's rules when it files them, the load-bearing
  * takeaways, and the recommendations for the reader's own account. Each
  * block loads on its own, so one failed resource doesn't blank the others.
  *
@@ -59,19 +110,32 @@ function AccountCard({ rows, sources }: { rows: readonly Recommendation[]; sourc
  */
 export function OverviewView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
-  // The root route reports a failed record; here the caveat is simply left out.
-  const caveat = useQuery({
+  // The root route reports a failed record; here the caveats are simply left out.
+  const caveats = useQuery({
     ...recordQuery(mode.recordSlug ?? ""),
-    select: (r) => r.caveat,
+    select: (r) =>
+      [r.modes.find((m) => m.mode === mode.scope.mode)?.caveat, r.caveat].filter(
+        (c): c is string => !!c,
+      ),
     enabled: mode.recordSlug != null,
   }).data;
+  const rules = useQuery({ ...rulesQuery(mode.scope), enabled: mode.rules != null });
   const takeaways = useQuery(takeawaysQuery(mode.scope));
   const recommendations = useQuery(recommendationsQuery(mode.recordSlug));
 
   return (
     <>
-      {caveat ? <div className="note">{caveat}</div> : null}
+      {caveats?.map((c) => (
+        <div className="note" key={c}>
+          {c}
+        </div>
+      ))}
       <ViewHeader title={mode.copy.overview?.title ?? "Overview"} lede={mode.copy.overview?.lede} />
+      {mode.rules ? (
+        <QueryResult query={rules} resource="rules">
+          {(rows) => <Rules rows={rows} config={mode.rules!} sources={sources} />}
+        </QueryResult>
+      ) : null}
       <QueryResult query={takeaways} resource="takeaways">
         {(rows) => <Takeaways rows={rows} sources={sources} />}
       </QueryResult>

@@ -1,0 +1,246 @@
+/* The PvP screens and the research index: season buffs, the formation grid, the
+   counter matrix and the usage bars. Colours come from tokens.css only. */
+
+/* Overview: the season's buffs, set apart from the rules card. */
+.card.buffs {
+  border-left: 4px solid var(--candy);
+  background: var(--candy-soft);
+  color: var(--candy-ink);
+}
+.card.buffs .chip {
+  background: var(--surface);
+}
+
+/* A card head's chips (a PvP deck's ceiling is a sentence) wrap instead of overflowing. */
+.card-head .chips {
+  min-width: 0;
+}
+.card-head .chip {
+  white-space: normal;
+}
+
+/* Formation: rows of columns, back line left. On phones each row becomes a
+   column (cells fill column-first), back line on top. */
+.formation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.formation-grid {
+  display: grid;
+  gap: 6px;
+}
+.formation-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 6px;
+}
+.slot.open {
+  background: transparent;
+  border: 1px dashed var(--line);
+}
+.formation-axis {
+  display: flex;
+  justify-content: space-between;
+}
+.formation-axis .back::before {
+  content: "← ";
+}
+.formation-axis .front::after {
+  content: " →";
+}
+@media (max-width: 620px) {
+  .formation-grid {
+    grid-auto-flow: column;
+    grid-template-rows: repeat(var(--formation-cols, 6), auto);
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  .formation-row {
+    display: contents;
+  }
+  .formation-grid .slot {
+    min-height: 0;
+  }
+  .formation-axis {
+    order: -1;
+  }
+  .formation-axis .back::before {
+    content: "↑ ";
+  }
+  .formation-axis .front::after {
+    content: " ↓";
+  }
+}
+
+/* Counters: a directed matrix whose cells are shaded by confidence. */
+table.matrix caption {
+  caption-side: top;
+  text-align: left;
+  padding: 10px 12px 0;
+}
+table.matrix th {
+  min-width: 7.5em;
+  max-width: 11em;
+}
+table.matrix tbody th {
+  font: 600 13px/1.3 var(--body);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+  background: var(--surface);
+}
+td.ctr {
+  min-width: 9em;
+  max-width: 16em;
+  font-size: 12px;
+  line-height: 1.35;
+}
+td.ctr a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--ink);
+  text-decoration: none;
+}
+td.ctr a:hover .cond {
+  text-decoration: underline;
+}
+td.ctr b {
+  font: 600 11px/1 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+td.ctr .cond {
+  color: var(--ink-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+td.ctr.high,
+.ctr-sw.high {
+  background: color-mix(in srgb, var(--good) 20%, var(--surface));
+  box-shadow: inset 3px 0 0 var(--good);
+}
+td.ctr.high b {
+  color: var(--good);
+}
+td.ctr.medium,
+.ctr-sw.medium {
+  background: color-mix(in srgb, var(--warn) 14%, var(--surface));
+  box-shadow: inset 3px 0 0 var(--warn);
+}
+td.ctr.medium b {
+  color: var(--warn);
+}
+td.ctr.low,
+.ctr-sw.low {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--surface) 0 7px,
+    color-mix(in srgb, var(--bad) 12%, var(--surface)) 7px 10px
+  );
+  box-shadow: inset 3px 0 0 var(--bad);
+}
+td.ctr.low b {
+  color: var(--bad);
+}
+td.ctr.self {
+  background: var(--surface-2);
+  color: var(--ink-3);
+  text-align: center;
+}
+.counter-list {
+  display: grid;
+  gap: 12px;
+}
+.counter-list > .card:target {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Usage: one horizontal bar per subject; the confirmed share is a solid segment inside. */
+ol.bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ol.bars li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.bar-head {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.bar-head .nm {
+  font-weight: 600;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.bar-val {
+  font: 13px/1.3 var(--mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.bar-detail {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.bar-track {
+  position: relative;
+  height: 10px;
+  border-radius: 4px;
+  background: var(--surface-2);
+}
+.bar-fill,
+.bar-confirmed {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 4px;
+}
+.bar-fill {
+  background: color-mix(in srgb, var(--accent) 45%, var(--surface));
+}
+.bar-confirmed {
+  background: var(--accent);
+}
+.bar-note {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  align-items: center;
+}
+.bar-sample {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.bar-sw {
+  background: color-mix(in srgb, var(--accent) 45%, var(--surface));
+}
+.bar-sw.confirmed {
+  background: var(--accent);
+}
+
+/* Research index: each covered mode with a link per screen. */
+.mode-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  align-items: baseline;
+}
+.mode-links + .mode-links {
+  margin-top: 8px;
+}
+.mode-link {
+  font-weight: 700;
+}

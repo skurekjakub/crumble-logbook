@@ -1,0 +1,157 @@
+import { useQuery } from "@tanstack/react-query";
+import { Fragment } from "react";
+import { useSourceIndex } from "../api/hooks";
+import { glossaryQuery, recordQuery, usageQuery } from "../api/queries";
+import type { UsageStat } from "../api/types";
+import type { ModeSection } from "../app/modes";
+import { CookieName } from "../components/CookieName";
+import { EmptyState } from "../components/EmptyState";
+import { QueryResult } from "../components/QueryResult";
+import { SourceChips } from "../components/SourceChips";
+import { UsageBars, UsageLegend } from "../components/UsageBars";
+import { ViewHeader } from "../components/ViewHeader";
+import type { SourceIndex } from "../lib/sources";
+
+/** Section heading per usage kind, in display order. */
+const KIND_LABELS: Readonly<Record<UsageStat["kind"], string>> = {
+  cookie: "Cookies",
+  core: "Cores",
+  pet: "Pets",
+  team: "Teams",
+};
+
+/** Usage rows that share a sample and capture date. */
+interface Sample {
+  sample: string;
+  capturedAt: string;
+  rows: UsageStat[];
+  /** Every source the rows cite, sorted. */
+  sources: string[];
+}
+
+/**
+ * Groups rows by sample and capture date, in first-seen order.
+ * @param rows - usage rows of one kind, in list order
+ */
+function samples(rows: readonly UsageStat[]): Sample[] {
+  const groups = new Map<string, Sample>();
+  for (const row of rows) {
+    const key = `${row.sample}\u0000${row.capturedAt}`;
+    const group = groups.get(key) ?? {
+      sample: row.sample,
+      capturedAt: row.capturedAt,
+      rows: [],
+      sources: [],
+    };
+    group.rows.push(row);
+    group.sources = [...new Set([...group.sources, ...row.sources])].sort();
+    groups.set(key, group);
+  }
+  return [...groups.values()];
+}
+
+/** Whether a row cites exactly the sources its sample group cites. */
+function citesGroup(row: UsageStat, group: Sample): boolean {
+  return (
+    row.sources.length === group.sources.length &&
+    row.sources.every((s) => group.sources.includes(s))
+  );
+}
+
+/** One sample's bars: the sample and capture date with its sources, then a bar per subject. */
+function SampleBars({
+  group,
+  en,
+  sources,
+}: {
+  group: Sample;
+  en: (kr: string) => string | null;
+  sources: SourceIndex;
+}) {
+  return (
+    <>
+      <div className="bar-sample">
+        <span>{group.sample}</span>
+        <span className="muted"> · captured {group.capturedAt}</span>{" "}
+        <SourceChips ids={group.sources} sources={sources} />
+      </div>
+      <UsageBars
+        bars={group.rows.map((r) => ({
+          key: r.id,
+          label: <CookieName kr={r.subject} en={r.en} />,
+          detail: r.members?.map((kr, i) => (
+            <Fragment key={`${i}-${kr}`}>
+              {i > 0 && " · "}
+              <CookieName kr={kr} en={en(kr)} inline />
+            </Fragment>
+          )),
+          pct: r.usagePct,
+          confirmedPct: r.confirmedPct,
+          note: r.note,
+          extra: citesGroup(r, group) ? null : <SourceChips ids={r.sources} sources={sources} />,
+        }))}
+      />
+    </>
+  );
+}
+
+/**
+ * A mode's usage figures: one card per kind (cookies, cores, pets, teams),
+ * each with a bar list per sample, its capture date and sources, and each
+ * figure's own caveat. The mode's caveat from its research record sits on
+ * top. Core members show in English where the glossary knows them. "No
+ * usage data recorded yet." when there are none.
+ *
+ * @param mode - the mode whose usage, record and copy the view shows
+ */
+export function UsageView({ mode }: { mode: ModeSection }) {
+  const sources = useSourceIndex();
+  const usage = useQuery(usageQuery(mode.scope));
+  const caveat = useQuery({
+    ...recordQuery(mode.recordSlug ?? ""),
+    select: (r) => r.modes.find((m) => m.mode === mode.scope.mode)?.caveat ?? null,
+    enabled: mode.recordSlug != null,
+  }).data;
+  const glossary = useQuery({
+    ...glossaryQuery(),
+    select: (entries) => new Map(entries.map((e) => [e.kr, e.en] as const)),
+  }).data;
+  const en = (kr: string) => glossary?.get(kr) ?? null;
+
+  return (
+    <>
+      {caveat ? <div className="note">{caveat}</div> : null}
+      <ViewHeader title={mode.copy.usage?.title ?? "Usage"} lede={mode.copy.usage?.lede} />
+      <QueryResult query={usage} resource="usage figures">
+        {(rows) =>
+          rows.length ? (
+            <>
+              {rows.some((r) => r.confirmedPct != null) ? <UsageLegend /> : null}
+              <div className="grid g2">
+                {(Object.keys(KIND_LABELS) as UsageStat["kind"][]).map((kind) => {
+                  const ofKind = rows.filter((r) => r.kind === kind);
+                  if (!ofKind.length) return null;
+                  return (
+                    <section className="card" key={kind}>
+                      <h3>{KIND_LABELS[kind]}</h3>
+                      {samples(ofKind).map((g) => (
+                        <SampleBars
+                          key={`${g.sample}-${g.capturedAt}`}
+                          group={g}
+                          en={en}
+                          sources={sources}
+                        />
+                      ))}
+                    </section>
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            <EmptyState>No usage data recorded yet.</EmptyState>
+          )
+        }
+      </QueryResult>
+    </>
+  );
+}

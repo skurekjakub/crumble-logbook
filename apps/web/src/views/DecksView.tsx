@@ -6,8 +6,10 @@ import type { Deck, DeckCookie } from "../api/types";
 import type { ModeSection } from "../app/modes";
 import { AtkOrder } from "../components/AtkOrder";
 import { CookieName } from "../components/CookieName";
+import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
+import { Formation, hasFormation } from "../components/Formation";
 import { Kv } from "../components/Kv";
 import { Lineup, LineupLegend } from "../components/Lineup";
 import { Pill } from "../components/Pill";
@@ -29,21 +31,28 @@ function levelText(c: Pick<DeckCookie, "level" | "levelRule">): string {
   return "–";
 }
 
-/** Per-cookie level requirements with the reason for each; nothing when no cookie has a reason. */
+/**
+ * Per-cookie level requirements with the reason for each, plus the slot and
+ * stars columns when any cookie has one; nothing when no cookie has a
+ * reason. Stars are free text ("?", "~7 (inferred …)") and show as stored.
+ */
 function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
   if (!cookies.some((c) => c.why)) return null;
+  const columns: Column<DeckCookie>[] = [
+    { header: "Cookie", cell: (c) => <CookieName kr={c.cookieKr} en={c.en} /> },
+    ...(cookies.some((c) => c.slot)
+      ? [{ header: "Slot", cell: (c: DeckCookie) => c.slot ?? "–", className: "n" }]
+      : []),
+    { header: "Level", cell: levelText, className: "n" },
+    ...(cookies.some((c) => c.stars)
+      ? [{ header: "Stars", cell: (c: DeckCookie) => c.stars || "–" }]
+      : []),
+    { header: "Why", cell: (c) => c.why },
+  ];
   return (
     <details className="levels" open>
       <summary className="label">Levels and why</summary>
-      <DataTable
-        rows={cookies}
-        rowKey={(c) => c.id}
-        columns={[
-          { header: "Cookie", cell: (c) => <CookieName kr={c.cookieKr} en={c.en} /> },
-          { header: "Level", cell: levelText, className: "n" },
-          { header: "Why", cell: (c) => c.why },
-        ]}
-      />
+      <DataTable rows={cookies} rowKey={(c) => c.id} columns={columns} />
     </details>
   );
 }
@@ -60,7 +69,7 @@ function bullets(items: readonly string[]) {
   );
 }
 
-/** One deck as a card: lineup, levels, ATK order, pets, perks, formation, swaps, RNG, unorthodox flags and sources. */
+/** One deck as a card: formation (or plain lineup when it has no slots), levels, ATK order, pets, perks, formation, swaps, RNG, unorthodox flags and sources. */
 function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceIndex }) {
   const notes = (kind: Deck["notes"][number]["kind"]) =>
     d.notes.filter((n) => n.kind === kind).map((n) => n.text);
@@ -93,7 +102,7 @@ function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceIndex }) {
           {d.ceilingText ? <span className="chip">ceiling {d.ceilingText}</span> : null}
         </div>
       </div>
-      <Lineup cookies={d.cookies} />
+      {hasFormation(d.cookies) ? <Formation cookies={d.cookies} /> : <Lineup cookies={d.cookies} />}
       <LevelTable cookies={d.cookies} />
       <Kv
         rows={[
