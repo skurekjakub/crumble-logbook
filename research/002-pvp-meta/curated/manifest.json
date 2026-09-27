@@ -1,0 +1,17 @@
+{
+  "collections": {
+    "meta": "meta.json",
+    "takeaways": "takeaways.json",
+    "decks": "decks.json",
+    "runes": "runes.json",
+    "gear": "gear.json",
+    "scores": "scores.json",
+    "rng": "rng.json",
+    "mechanics": "mechanics.json",
+    "timeline": "timeline.json",
+    "sources": "sources.json",
+    "glossary": "glossary.json",
+    "counters": "counters.json",
+    "usage": "usage.json"
+  }
+}

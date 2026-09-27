@@ -1,0 +1,21 @@
+[
+  { "mode": "arena", "date": "2026-08-03", "event": "Arena Season 1 is live. Official notice: the defense team's DMG reduction isn't applied this season; fixed from Season 2.", "sources": ["nv:7982"] },
+  { "mode": "arena", "date": "2026-08-12", "event": "Patch notes: Arena battles resume after a force-quit; a warning appears when refreshing opponents costs crystals.", "sources": ["nv:16132"] },
+  { "mode": "arena", "date": "2026-08-17", "event": "crumblehub's curated Arena meta decks: a 5★ Rye carry and a 5★ Espresso carry on a Wind Archer / Milky Way / Doughnut King core.", "sources": ["web:crumblehub-meta-decks-arena"] },
+  { "mode": "arena", "date": "2026-08-27", "event": "Patch: Champion 1–3 tiers from Arena Season 3, promotion by absolute rank, defense start positions no longer random. Pinot Noir's healing reduction ends the heal meta.", "sources": ["nv:25737", "nv:28011", "nv:28949"] },
+  { "mode": "arena", "date": "2026-09-09", "event": "Patch notes: continuous challenge (auto-repeat attacks) added to Arena.", "sources": ["nv:37730"] },
+  { "mode": "arena", "date": "2026-09-14", "event": "The Rye one-carry idea appears: Rye deals 2.47M and wins across a 3–4M power gap against multi-ranged decks.", "sources": ["dc:67269"] },
+  { "mode": "arena", "date": "2026-09-21", "event": "Pre-Bari peak: a server #1 runs the five-ranged deck at 14.58M and 3,911 trophies.", "sources": ["dc:71947"] },
+  { "mode": "rumble_arena", "date": "2026-09-21", "event": "Rumble Arena (와글와글 아레나) announced as a cross-server arena; official EN and TW teasers.", "sources": ["dc:71572", "web:yt-R93baYH9Mf8"] },
+  { "mode": "arena", "date": "2026-09-23", "event": "Patch 1.4.002: Princess Bari, Moon Rabbit (Persimmon) and the Skill Ready stat. An evasion deck finishes Arena Season 4 at Grand Master 2, 9th overall.", "sources": ["nv:44477", "dc:72977"] },
+  { "mode": "rumble_arena", "date": "2026-09-23", "event": "Rumble Arena Season 1 opens with the Charge +30% max HP and all +30% DR buff. On day 1 the top 3 all run Oven Wanderer.", "sources": ["nv:44477", "dc:73855", "dc:73908", "dc:74221", "web:crumbgg-rumble-live"] },
+  { "mode": "arena", "date": "2026-09-23", "event": "Official warning against pre-arranged win trading in Arena.", "sources": ["nv:45322"] },
+  { "mode": "arena", "date": "2026-09-24", "event": "The 'info-tab' Rye one-carry deck is posted (13.87M); a 1★-Bari Oven deck beats older decks at twice its power.", "sources": ["dc:74483", "dc:74285"] },
+  { "mode": "rumble_arena", "date": "2026-09-24", "event": "러너's F2P Rye deck (18.77M) beats a 27M Oven/Bari/Brightseeker team; a 2★-Bari charge deck wins with Bari doing 2.03M.", "sources": ["dc:74721", "dc:74463"] },
+  { "mode": "arena", "date": "2026-09-25", "event": "Rockstar replaces Grapevine in the Rye deck; a 13.27M Rye deck beats a 20.4M server #2 running Bari–Oven.", "sources": ["dc:75148"] },
+  { "mode": "rumble_arena", "date": "2026-09-25", "event": "ㄹㄹ노아 is #1 at 3,406 points (Champion 1) and gives his Bari and Ion runes: 피감 체력 스증 스가.", "sources": ["dc:75168"] },
+  { "mode": "arena", "date": "2026-09-26", "event": "A Chain deck (17.59M) beats a 17–18M Rye deck 3 times out of 3.", "sources": ["dc:75993", "dc:75982"] },
+  { "mode": "arena", "date": "2026-09-27", "event": "The top of at least one server drifts back to the Rye deck; Bari–Oven is described as the #1's tool.", "sources": ["dc:76853"] },
+  { "mode": "rumble_arena", "date": "2026-09-27", "event": "crumb.gg board: #1 凱凱の餅乾軍團 at 4095 runs the standard 12; ratings rose from 3311 (#1) and 2367 (#100) on 09-24 to 4089 and 2835.", "sources": ["web:crumbgg-rumble-live", "web:crumbgg-rumble-history"] },
+  { "mode": "rumble_arena", "date": "2026-10-08", "event": "Rumble Arena Season 1 ends at 12:00 KST (battles close 03:00 UTC); rewards pay out automatically.", "sources": ["dc:73855", "dc:75881", "web:crumbgg-rumble-live"] }
+]

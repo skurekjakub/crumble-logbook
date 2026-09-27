@@ -1,0 +1,222 @@
+[
+  {
+    "id": "rye-onecarry-vs-bari-oven",
+    "mode": "arena",
+    "team": "arena-rye-onecarry",
+    "beaten_by": "arena-bari-oven-cola",
+    "conditions": "Bari and Oven at 8–10★, or a clear spec lead. At similar power with Bari at 8★ or less the edge reverses (bari-oven-vs-rye-onecarry).",
+    "why": "The three chargers dash at the highest-ATK enemy (Milk, whose HP Passion Pay has cut by 20%) and do about 2M each within 3.5 s, before Herb, Grapevine and the shields cycle. Rye is the only damage, so losing her or Milk ends the fight. Regular Arena has no Rumble +30% DR to blunt the dive.",
+    "confidence": "medium",
+    "sources": ["dc:76712", "dc:75878", "dc:75761", "dc:74972", "dc:74846", "dc:75546", "dc:73569"]
+  },
+  {
+    "id": "bari-oven-vs-rye-onecarry",
+    "mode": "arena",
+    "team": "arena-bari-oven-cola",
+    "beaten_by": "arena-rye-onecarry",
+    "conditions": "Similar power, Bari at 8★ or less, Rockstar in the Rye deck's flex slot, and a merc Lv.4 captain on both sides. One regular-Arena screenshot: 13.27M beat a 20.4M server #2.",
+    "why": "If the opening dive doesn't kill, the Bari deck has no sustain. Three tanks with Armor Repair, Ion's and Rockstar's shields and Doughnut's polymorph absorb it, and Rye wins the long fight.",
+    "confidence": "medium",
+    "sources": ["dc:75148", "dc:75463", "dc:76368", "dc:75000", "dc:75546", "dc:75517", "dc:76853", "nv:45718"]
+  },
+  {
+    "id": "rye-onecarry-vs-crepe-espresso",
+    "mode": "arena",
+    "team": "arena-rye-onecarry",
+    "beaten_by": "arena-crepe-espresso",
+    "conditions": "Theory and anecdotes only: no formation screenshot or result exists.",
+    "why": "Crepe's knockback pushes the enemy Moon Rabbit before its debuff lands, and Espresso's black hole launches Rye out of the back line.",
+    "confidence": "low",
+    "sources": ["dc:75681", "dc:75724", "dc:75726", "dc:76368"]
+  },
+  {
+    "id": "crepe-espresso-vs-bari-oven",
+    "mode": "arena",
+    "team": "arena-crepe-espresso",
+    "beaten_by": "arena-bari-oven-cola",
+    "conditions": "Stated by the same posters who proposed Crepe–Espresso; no result shown.",
+    "why": "Bari's Soul Guidance gives the chargers push and lift immunity (official skill text), cancelling Crepe's and Espresso's displacement.",
+    "confidence": "low",
+    "sources": ["dc:75681", "dc:75724", "nv:44477"]
+  },
+  {
+    "id": "bari-oven-vs-crepe",
+    "mode": "arena",
+    "team": "arena-bari-oven-cola",
+    "beaten_by": "arena-crepe-espresso",
+    "conditions": "Bari under 5★, so Soul Guidance covers a single charger. Stated for 'any deck with Strawberry Crepe'; no mechanism given.",
+    "why": "Not explained in the source. Plausibly the unwrapped chargers get pushed out of the dive, but that is an inference.",
+    "confidence": "low",
+    "sources": ["nv:45312"]
+  },
+  {
+    "id": "rye-onecarry-vs-chain",
+    "mode": "arena",
+    "team": "arena-rye-onecarry",
+    "beaten_by": "arena-chain",
+    "conditions": "17.59M Chain defense against a 17–18M Rye deck with 1,100 accuracy: 3 losses of 3.",
+    "why": "Rye's first volley fires where she faces and was wasted on an isolated Schwarzwälder; the Chain deck's many sub-dealers take Rye's supports apart, and Rye is the only damage.",
+    "confidence": "medium",
+    "sources": ["dc:75993", "dc:75982"]
+  },
+  {
+    "id": "rye-seeker-vs-rye-onecarry",
+    "mode": "arena",
+    "team": "arena-rye-seeker",
+    "beaten_by": "arena-rye-onecarry",
+    "conditions": "The Brightseeker/Doughnut version lost to the Grapevine/Skating Queen version about 2M lower.",
+    "why": "The Grapevine version has a second healer for when the front-line Herb dies; Brightseeker's drones vanish when their target dies and she hits one target.",
+    "confidence": "medium",
+    "sources": ["dc:76602", "dc:76349", "dc:75148", "dc:76751"]
+  },
+  {
+    "id": "evasion-vs-accuracy-attack",
+    "mode": "arena",
+    "team": "arena-evasion",
+    "beaten_by": "arena-rye-onecarry",
+    "conditions": "Only when the attacker switches to a stage gear preset with accuracy lines. The edge is the gear, not the lineup: the evasion deck lost even to 7M teams with accuracy. Names are visible in regular Arena, so evasion defenders get remembered.",
+    "why": "Accuracy cancels evasion. Arena presets usually carry no accuracy lines because typical enemy evasion is only about 650; the evasion deck's roughly 1000 exploits exactly that.",
+    "confidence": "medium",
+    "sources": ["dc:69591", "dc:72977", "dc:73173", "dc:74043"]
+  },
+  {
+    "id": "five-ranged-vs-bari-oven",
+    "mode": "arena",
+    "team": "arena-five-ranged",
+    "beaten_by": "arena-bari-oven-cola",
+    "conditions": "Even at 1★ Bari and up to twice the power in launch week; a 5★ Bari deck one-shots 10★ Brightseeker decks 3–4M stronger.",
+    "why": "The chargers reach the back line and kill the ranged carries and Milk on contact.",
+    "confidence": "high",
+    "sources": ["dc:74285", "dc:73497", "dc:75322", "dc:74146"]
+  },
+  {
+    "id": "five-ranged-vs-rye-onecarry",
+    "mode": "arena",
+    "team": "arena-five-ranged",
+    "beaten_by": "arena-rye-onecarry",
+    "conditions": "Across a 3–4M power deficit (pre-Bari).",
+    "why": "Stacking every buff on one piercing carry beats spreading them over several ranged dealers.",
+    "confidence": "medium",
+    "sources": ["dc:67269", "dc:74792"]
+  },
+  {
+    "id": "wizard-vs-bari-oven",
+    "mode": "arena",
+    "team": "arena-wizard",
+    "beaten_by": "arena-bari-oven-cola",
+    "conditions": "Bari at 5★ or more with Oven Wanderer.",
+    "why": "The charge burst kills the Wizard deck before it stabilises; its author calls the matchup catastrophic.",
+    "confidence": "medium",
+    "sources": ["nv:45902"]
+  },
+  {
+    "id": "ranged-vs-standard-12",
+    "mode": "rumble_arena",
+    "team": "rumble-ranged",
+    "beaten_by": "rumble-standard-12",
+    "conditions": "Even with the ranged side 3–4M stronger; works with Bari at 2–3★.",
+    "why": "Buffed chargers with +30% HP reach the back-line carries first; Moon Rabbit on the charge side hits the front-line Espresso.",
+    "confidence": "high",
+    "sources": ["dc:74794", "dc:74463", "dc:75189", "dc:73955"]
+  },
+  {
+    "id": "ranged-vs-bari-lowstar",
+    "mode": "rumble_arena",
+    "team": "rumble-ranged",
+    "beaten_by": "rumble-bari-lowstar",
+    "conditions": "One win on video: 18.67M with a 1★ Bari against a 15.35M Rye/Brightseeker/Wind Archer/Milky Way deck.",
+    "why": "Bari (1.58M) and Oven (1.21M) out-damaged every ranged carry.",
+    "confidence": "medium",
+    "sources": ["web:yt-_D4EvaRYdJY"]
+  },
+  {
+    "id": "standard-12-vs-rye-anticharge",
+    "mode": "rumble_arena",
+    "team": "rumble-standard-12",
+    "beaten_by": "rumble-rye-anticharge",
+    "conditions": "Mid spec (Bari around 5★ or below) at similar power; wins reported up to +6M and once at −8M (18.77M over 27M). A single log shows a Rye defense holding against an all-10★ Bari–Oven–Cherry Cola attacker.",
+    "why": "Rumble's +30% DR lets the Hound/Ion/Moon Rabbit front and two healers survive the opening dive, then Rye out-damages. The same deck dies in 0.5 s to this archetype in regular Arena.",
+    "confidence": "medium",
+    "sources": ["dc:74721", "dc:74229", "dc:75553", "dc:76717", "dc:73857"]
+  },
+  {
+    "id": "rye-anticharge-vs-standard-12",
+    "mode": "rumble_arena",
+    "team": "rumble-rye-anticharge",
+    "beaten_by": "rumble-standard-12",
+    "conditions": "Whale top-end (SR cookies at 10★). On the 2026-09-27 board Rye is on 6 of the top 100 defenses, all ranked 30–100.",
+    "why": "Pomegranate-buffed divers kill the back line on contact, before the tanks and heals matter.",
+    "confidence": "medium",
+    "sources": ["dc:75553", "dc:75501", "dc:74463", "web:crumbgg-rumble-stats"]
+  },
+  {
+    "id": "standard-12-vs-bari-crepe-cola",
+    "mode": "rumble_arena",
+    "team": "rumble-standard-12",
+    "beaten_by": "rumble-bari-crepe-cola",
+    "conditions": "One player on day 1, winning at −2M against the then-#1 Bari–Oven deck.",
+    "why": "Crepe pushes the enemy front line together for Bari and Cherry Cola (disputed by a commenter).",
+    "confidence": "low",
+    "sources": ["dc:73857"]
+  },
+  {
+    "id": "bari-crepe-cola-vs-rye-anticharge",
+    "mode": "rumble_arena",
+    "team": "rumble-bari-crepe-cola",
+    "beaten_by": "rumble-rye-anticharge",
+    "conditions": "Lost to every Rye deck the player met, including a Brightseeker/Rye/Moon Rabbit/Ion deck 2M weaker.",
+    "why": "Moon Rabbit plus Ion hold the charge wave while Rye shoots.",
+    "confidence": "medium",
+    "sources": ["dc:73857"]
+  },
+  {
+    "id": "wizard-vs-standard-12",
+    "mode": "rumble_arena",
+    "team": "rumble-wizard",
+    "beaten_by": "rumble-standard-12",
+    "conditions": "Any early-sweep Bari deck.",
+    "why": "The Wizard deck is wiped in the opening seconds, before Wizard gets going.",
+    "confidence": "medium",
+    "sources": ["dc:74028"]
+  },
+  {
+    "id": "ranged-vs-wizard",
+    "mode": "rumble_arena",
+    "team": "rumble-ranged",
+    "beaten_by": "rumble-wizard",
+    "conditions": "Near-certain from equal power to +3M for the ranged side; larger gaps win if the Wizard deck survives 10 s. 12.28M beat 17–21M in the screenshots.",
+    "why": "Wizard's area damage out-damages the single ranged carries once the fight passes about 10 s.",
+    "confidence": "medium",
+    "sources": ["dc:74028"]
+  },
+  {
+    "id": "standard-12-vs-wizard",
+    "mode": "rumble_arena",
+    "team": "rumble-standard-12",
+    "beaten_by": "rumble-wizard",
+    "conditions": "Only when the Bari/Oven side is at mediocre spec; stated as a warning, not shown.",
+    "why": "Rumble's +30% DR blunts the charge burst, and a Rapid Fire deck that survives it wins.",
+    "confidence": "low",
+    "sources": ["nv:45502"]
+  },
+  {
+    "id": "rye-anticharge-vs-ranged",
+    "mode": "rumble_arena",
+    "team": "rumble-rye-anticharge",
+    "beaten_by": "rumble-ranged",
+    "conditions": "One player's attack rotation (Rye → Bari, Crepe–Espresso → Rye, Bari → Crepe–Espresso); no result shown.",
+    "why": "Not explained; in Arena the same idea rests on Crepe pushing Moon Rabbit and Espresso launching Rye.",
+    "confidence": "low",
+    "sources": ["dc:75153"]
+  },
+  {
+    "id": "standard-12-vs-evasion",
+    "mode": "rumble_arena",
+    "team": "rumble-standard-12",
+    "beaten_by": "rumble-evasion",
+    "conditions": "8.41M with 1,005 evasion beat 16.53M with 950 accuracy. Disputed: one commenter says evasion needs about +400 over accuracy to matter and credits Vampire.",
+    "why": "Attacks miss; Vampire lowers the top attacker's accuracy further. Names are hidden in Rumble, so opponents can't remember evasion defenders.",
+    "confidence": "low",
+    "sources": ["dc:74627", "dc:71672", "dc:75453"]
+  }
+]

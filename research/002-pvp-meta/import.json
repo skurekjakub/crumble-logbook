@@ -1,0 +1,16 @@
+{
+  "record": {
+    "slug": "002-pvp-meta",
+    "question": "For each PvP mode (regular Arena and Rumble Arena) there is a small documented set of top teams, and for each one the community sources name the lineup, formation, levels, stars, runes, gear, pets and the teams that beat it precisely enough that someone with every cookie could reproduce it and pick a counter.",
+    "status": "active",
+    "startedAt": "2026-09-27"
+  },
+  "curated": "curated",
+  "extractions": "evidence/08-extract",
+  "captures": [
+    { "site": "dc", "dir": "evidence/01-dc-arena/dc", "file": "{id}.md" },
+    { "site": "dc", "dir": "evidence/02-dc-rumble/dc", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/04-naver-global/nv", "file": "nv-{id}.md" }
+  ],
+  "rankings": []
+}
