@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSourceIndex } from "../api/hooks";
-import { mechanicsQuery, RULES_TOPIC } from "../api/queries";
+import { mechanicsQuery } from "../api/queries";
 import type { ModeSection } from "../app/modes";
+import { topicsShownElsewhere } from "../app/modes";
 import { EmptyState } from "../components/EmptyState";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
@@ -10,15 +11,16 @@ import { ViewHeader } from "../components/ViewHeader";
 
 /**
  * A mode's measured or datamined mechanics as cards, each with its
- * confidence pill and sources. The mode's rules (topic {@link RULES_TOPIC})
- * are left to its overview.
+ * confidence pill and sources. Topics the mode shows elsewhere (its rules,
+ * its boss's facts; see {@link topicsShownElsewhere}) are left out.
  *
  * @param mode - the mode whose mechanics and copy the view shows
  */
 export function MechanicsView({ mode }: { mode: ModeSection }) {
+  const hidden = topicsShownElsewhere(mode);
   const mechanics = useQuery({
     ...mechanicsQuery(mode.scope),
-    select: (rows) => rows.filter((m) => m.topic !== RULES_TOPIC),
+    select: (rows) => rows.filter((m) => m.topic == null || !hidden.has(m.topic)),
   });
   const sources = useSourceIndex();
   return (

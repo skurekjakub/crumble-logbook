@@ -1,10 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSourceIndex } from "../api/hooks";
 import { decksQuery, runeBuildsQuery } from "../api/queries";
+import type { RuneBuild } from "../api/types";
 import type { ModeSection } from "../app/modes";
-import { DataTable } from "../components/DataTable";
+import type { TableFilter, TableSelect } from "../components/DataTable";
+import { applyFilters, TableTools } from "../components/DataTable";
+import { EmptyState } from "../components/EmptyState";
+import { ErrorBox } from "../components/ErrorBox";
 import { QueryResult } from "../components/QueryResult";
-import { runeBuildColumns } from "../components/RuneBuilds";
+import { RuneCard } from "../components/RuneBuilds";
 import { ViewHeader } from "../components/ViewHeader";
 import { optionalText } from "../lib/search";
 
@@ -34,47 +38,67 @@ export interface RunesViewProps {
 }
 
 /**
- * The rune-builds table: per cookie its rune lines, the reason (with any
- * disputed view beneath it), the decks it applies to and its sources. The
+ * The rune builds as one card per cookie: the reason leads, then the rune
+ * lines, any disputed view, the decks it applies to and its sources. The
  * deck select and the text filter live in the URL as `?deck=` and `?q=`.
+ * A failed deck list is reported; the cards then name decks by id.
  */
 export function RunesView({ mode, search, onSearch }: RunesViewProps) {
   const { deck = "", q = "" } = search;
   const sources = useSourceIndex();
   const runes = useQuery(runeBuildsQuery(mode.scope));
-  const deckNames = useQuery({
+  const decks = useQuery({
     ...decksQuery(mode.scope),
-    select: (decks) => new Map(decks.map((d) => [d.id, d.nameEn])),
-  }).data;
-  const deckName = (id: string) => deckNames?.get(id) ?? id;
+    select: (list) => new Map(list.map((d) => [d.id, d.nameEn])),
+  });
+  const deckName = (id: string) => decks.data?.get(id) ?? id;
 
   return (
     <>
       <ViewHeader title={mode.copy.runes?.title ?? "Runes"} lede={mode.copy.runes?.lede} />
+      {decks.isError ? <ErrorBox resource="decks" error={decks.error} /> : null}
       <QueryResult query={runes} resource="rune builds">
-        {(rows) => (
-          <DataTable
-            columns={runeBuildColumns({ whyHeader: "Target / why", deckName, sources })}
-            rows={rows}
-            rowKey={(r) => r.id}
-            empty="No rune builds recorded yet."
-            filter={{
-              value: q,
-              onChange: (v) => onSearch({ q: v }),
-              text: (r) => `${JSON.stringify(r)} ${r.en ?? ""}`,
-              placeholder: "Filter by cookie or stat (e.g. 시커, haste)",
-            }}
-            select={{
-              label: "All decks",
-              options: [...new Set(rows.flatMap((r) => r.decks))].map(
-                (id) => [id, deckName(id)] as const,
-              ),
-              value: deck,
-              onChange: (v) => onSearch({ deck: v }),
-              test: (r, v) => r.decks.includes(v),
-            }}
-          />
-        )}
+        {(rows) => {
+          const filter: TableFilter<RuneBuild> = {
+            value: q,
+            onChange: (v) => onSearch({ q: v }),
+            text: (r) => `${JSON.stringify(r)} ${r.en ?? ""}`,
+            placeholder: "Filter by cookie or stat (e.g. 시커, haste)",
+          };
+          const select: TableSelect<RuneBuild> = {
+            name: "Deck",
+            label: "All decks",
+            options: [...new Set(rows.flatMap((r) => r.decks))].map(
+              (id) => [id, deckName(id)] as const,
+            ),
+            value: deck,
+            onChange: (v) => onSearch({ deck: v }),
+            test: (r, v) => r.decks.includes(v),
+          };
+          const kept = applyFilters(rows, filter, select);
+          return (
+            <>
+              <TableTools filter={filter} select={select} />
+              {kept.length ? (
+                <div className="grid g2">
+                  {kept.map((b) => (
+                    <RuneCard
+                      key={b.id}
+                      build={b}
+                      sources={sources}
+                      headingLevel={3}
+                      deckName={deckName}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <EmptyState>
+                  {rows.length ? "Nothing matches." : "No rune builds recorded yet."}
+                </EmptyState>
+              )}
+            </>
+          );
+        }}
       </QueryResult>
     </>
   );

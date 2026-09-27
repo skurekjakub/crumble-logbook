@@ -10,6 +10,7 @@
  * block from its mode.
  */
 import type { ModeScope, RankingBoardFilter } from "../api/queries";
+import { RULES_TOPIC } from "../api/queries";
 import type { GearRec } from "../api/types";
 import type { FileRoutesByTo } from "../routeTree.gen";
 
@@ -21,7 +22,7 @@ export type StampStat = "updated" | "season" | "sources" | "decks";
 
 /** A sub-tab within a section. */
 export interface SectionTab {
-  /** Unique within the section; the tab's DOM id is `tab-<section id>-<tab id>`. */
+  /** Unique within the section. */
   id: string;
   label: string;
   to: AppPath;
@@ -47,7 +48,7 @@ export type SharedView =
 
 /** What a top-level section has, whether a game mode or a shared page. */
 interface SectionBase {
-  /** The first path segment, and the tab's DOM id suffix (`tab-<id>`). */
+  /** The first path segment. */
   id: string;
   /** Tab label. */
   label: string;
@@ -66,18 +67,48 @@ interface SectionBase {
   tabs: readonly SectionTab[];
 }
 
+/** A boss fact shown in the boss screen's header list: its label and the mechanics topic it reads. */
+export interface BossFact {
+  label: string;
+  /** The mechanics topic whose row states the fact, with its confidence and sources. */
+  topic: string;
+}
+
+/** A lethal pattern's card on the boss screen. */
+export interface SurvivalCard {
+  /** The pattern's name, lower case; the title adds the countdown at `anchor` ("The 17 s …"). */
+  name: string;
+  /** The fight-event key whose time names the pattern. */
+  anchor: string;
+  /** The fight-event keys the card shows, `anchor` included. */
+  events: readonly string[];
+  /** The mechanics topic of what it takes to live through the pattern. */
+  topic: string;
+}
+
 /**
  * One boss's screen: which boss, which deck its checks read, the cookies
- * and pet its checklist and callouts name, and the fight-event keys it
- * reads. Research findings live in the API data, not here.
+ * and pet its checklist and callouts name, and the fight-event keys and
+ * mechanics topics it reads. Research findings live in the API data, not here.
  */
 export interface BossConfig {
   /** The boss id fight events are stored under. */
   id: string;
   kr: string;
   en: string;
-  element: string;
-  weakness: string;
+  /** The header list's facts, in order, each read from its mechanics topic. */
+  facts: readonly BossFact[];
+  /** The mechanics topics the screen's callouts read. */
+  topics: {
+    /** How a buff scales with the caster's skill amp; shown by the buff table. */
+    buffFormula: string;
+    /** How a debuff's application chance scales; shown by the buff table. */
+    debuffFormula: string;
+    /** The haste carry's breakpoint; shown on its rune card. */
+    haste: string;
+    /** The ATK-order pet's in-battle bonus; shown in the ATK-order check. */
+    atkPet: string;
+  };
   /** The screen's lede. */
   lede: string;
   /** The fight's length in seconds, when no fight event states it. */
@@ -96,10 +127,8 @@ export interface BossConfig {
   debufferKr: string;
   /** The fight-event key stating the fight's length. */
   lengthEvent: string;
-  /** The fight-event key describing how the fight ends. */
-  endEvent: string;
-  /** The survival cards: a lethal pattern, its fight-event keys, and the title its mechanics match. */
-  survival: readonly { title: string; events: readonly string[]; mechanic: RegExp }[];
+  /** The survival cards, in order. */
+  survival: readonly SurvivalCard[];
 }
 
 /** A mode's leaderboard: its heading, and a select label per board it shows. */
@@ -198,8 +227,17 @@ export const CONQUEST = {
     id: "pinata",
     kr: "지나치게 무거워진 피냐타",
     en: "Extra Stuffed Piñata",
-    element: "Dark",
-    weakness: "Light",
+    facts: [
+      { label: "Element", topic: "boss_element" },
+      { label: "Weak to", topic: "boss_weakness" },
+      { label: "Score", topic: "boss_score" },
+    ],
+    topics: {
+      buffFormula: "buff_formula",
+      debuffFormula: "debuff_formula",
+      haste: "haste_breakpoint",
+      atkPet: "atk_pet",
+    },
     lede: "The Guild Conquest boss on one page: when it hits, what it takes to live through it, what each buffer gives by star, and what to run.",
     fightSeconds: 60,
     deck: "cherry",
@@ -209,13 +247,18 @@ export const CONQUEST = {
     hasteKr: "브시커",
     debufferKr: "닼초",
     lengthEvent: "fight_length",
-    endEvent: "fight_ends",
     survival: [
-      { title: "The 30 s slam", events: ["slam_pattern", "mob_wave_hit"], mechanic: /slam/i },
       {
-        title: "The 17 s super-jump wipe",
+        name: "slam",
+        anchor: "slam_pattern",
+        events: ["slam_pattern", "mob_wave_hit"],
+        topic: "survival_slam",
+      },
+      {
+        name: "super-jump wipe",
+        anchor: "super_jump_wipe",
         events: ["chip_deaths_begin", "super_jump_wipe"],
-        mechanic: /wipe/i,
+        topic: "survival_wipe",
       },
     ],
   },
@@ -378,6 +421,18 @@ export const SHARED_SECTIONS: readonly SharedSection[] = [
 
 /** Every top-level section, modes first. */
 export const SECTIONS: readonly Section[] = [...MODES, ...SHARED_SECTIONS];
+
+/**
+ * The mechanics topics a mode shows somewhere other than its mechanics
+ * view: its rules (on the overview) and its boss's facts (in the boss
+ * screen's header list). The mechanics view leaves them out.
+ *
+ * @param mode - the mode
+ * @returns the topics
+ */
+export function topicsShownElsewhere(mode: ModeSection): ReadonlySet<string> {
+  return new Set([RULES_TOPIC, ...(mode.boss?.facts.map((f) => f.topic) ?? [])]);
+}
 
 /** Whether `pathname` is `to` or lies under it. */
 function isUnder(pathname: string, to: string): boolean {

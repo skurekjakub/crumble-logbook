@@ -82,7 +82,8 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
 /**
  * A mode's posted scores (scatter, RNG factor cards and a damage-ordered
  * table, narrowed by `?deck=`) and, when the mode has one, its leaderboard
- * (`?season=`, `?board=`).
+ * (`?season=`, `?board=`). A failed deck list is reported; the scores then
+ * show without deck names or colours.
  */
 export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
   const decks = useQuery(decksQuery(mode.scope));
@@ -94,9 +95,10 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
   return (
     <>
       <ViewHeader title={mode.copy.scores?.title ?? "Scores"} lede={mode.copy.scores?.lede} />
+      {decks.isError ? <ErrorBox resource="decks" error={decks.error} /> : null}
       <div className="tools">
         <select
-          aria-label="All decks"
+          aria-label="Deck"
           value={search.deck ?? ""}
           onChange={(e) => onSearch({ deck: e.target.value || undefined })}
         >

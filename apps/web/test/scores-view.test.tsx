@@ -108,7 +108,10 @@ describe("scores view", () => {
     expect(last![4]).toBe("claimed");
     expect(within(scoresTable()).getByText("Other")).toBeInTheDocument();
 
-    expect(screen.getByRole("img", { name: /damage against team power/ })).toBeInTheDocument();
+    expect(screen.getByRole("group", { name: /damage against team power/ })).toBeInTheDocument();
+    expect(
+      screen.getByRole("img", { name: "1.31T at 26G power, 50배: Cherry deck · screenshot" }),
+    ).toBeInTheDocument();
     const legend = document.querySelector(".legend-row")!;
     expect(legend).toHaveTextContent("Melon Soda deck");
     expect(legend).toHaveTextContent("Cherry deck");
@@ -133,7 +136,16 @@ describe("scores view", () => {
     await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(1));
     const dot = document.querySelector("circle.dot") as SVGCircleElement;
     expect(dot.style.fill).toBe("var(--s2)");
-    expect(screen.getByRole("combobox", { name: "All decks" })).toHaveValue("meso");
+    expect(screen.getByRole("combobox", { name: "Deck" })).toHaveValue("meso");
+  });
+
+  it("names the failed resource when decks fail, instead of silently losing names and colours", async () => {
+    await renderRoute("/conquest/scores", {
+      ...API,
+      "/api/decks?mode=guild_conquest": { status: 500, body: { error: "internal" } },
+    });
+    expect(await screen.findByRole("alert")).toHaveTextContent("Couldn't load decks");
+    await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(3));
   });
 
   it("filters by deck through the ?deck= search param", async () => {
@@ -141,7 +153,7 @@ describe("scores view", () => {
       ...API,
       "/api/scores?deck=cherry": { body: [SCORES[1]] },
     });
-    const select = await screen.findByRole("combobox", { name: "All decks" });
+    const select = await screen.findByRole("combobox", { name: "Deck" });
     await waitFor(() => expect(within(select).getAllByRole("option")).toHaveLength(3));
     fireEvent.change(select, { target: { value: "cherry" } });
     await waitFor(() => expect(router.state.location.search).toEqual({ deck: "cherry" }));

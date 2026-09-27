@@ -102,6 +102,7 @@ describe("DataTable", () => {
           rows={ROWS}
           rowKey={(r) => r.kr}
           select={{
+            name: "Kind",
             label: "All kinds",
             options: [
               ["cookie", "cookie"],
@@ -115,10 +116,12 @@ describe("DataTable", () => {
       );
     }
     render(<SelectHarness />);
-    fireEvent.change(screen.getByRole("combobox", { name: "All kinds" }), {
-      target: { value: "pet" },
-    });
+    const select = screen.getByRole("combobox", { name: "Kind" });
+    expect(within(select).getByRole("option", { name: "All kinds" })).toHaveValue("");
+    fireEvent.change(select, { target: { value: "pet" } });
     expect(bodyRows()).toEqual([["와사비문어", "Octo Wasabi", "pet"]]);
+    // The accessible name stays the control's label, not the selected option's text.
+    expect(screen.getByRole("combobox", { name: "Kind" })).toHaveValue("pet");
   });
 
   it("says nothing matches when the filter excludes every row", () => {

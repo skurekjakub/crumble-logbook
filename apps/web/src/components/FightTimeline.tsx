@@ -1,5 +1,7 @@
+import type { RefObject } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import { eventLabel, markerRows, secondsLeft, trackPercent, whenLabel } from "../lib/boss";
 import type { SourceIndex } from "../lib/sources";
-import { eventLabel, secondsLeft, staggerRows, trackPercent, whenLabel } from "../lib/boss";
 import { ConfidencePill } from "./ConfidencePill";
 import { SourceChips } from "./SourceChips";
 
@@ -26,13 +28,36 @@ export interface FightTimelineProps {
   tickEvery?: number;
 }
 
-/** Markers closer than this many seconds go on separate rows of a lane. */
-const MIN_GAP_S = 4;
+/** The space one marker needs on a row, in pixels: its 22 px minimum width plus a gap. */
+const MARKER_PX = 26;
+
+/** The track width assumed until the lane has been measured. */
+const DEFAULT_TRACK_PX = 640;
 
 /** Whether an event is a claim nobody has verified. */
 const isClaim = (e: FightTimelineEvent) => e.confidence === "low";
 
-/** One lane of the track: numbered markers placed by elapsed time, staggered where they crowd. */
+/**
+ * The rendered width of the element `ref` points to, kept current as it resizes.
+ *
+ * @returns the width in pixels, or null before the first measurement or where
+ *   the browser can't measure (no `ResizeObserver`, or a zero width)
+ */
+function useWidth(ref: RefObject<HTMLElement | null>): number | null {
+  const [width, setWidth] = useState<number | null>(null);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const measure = () => setWidth(el.clientWidth || null);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [ref]);
+  return width;
+}
+
+/** One lane of the track: numbered markers placed by elapsed time, staggered where they overlap on screen. */
 function Lane({
   label,
   items,
@@ -42,15 +67,19 @@ function Lane({
   items: { n: number; e: FightTimelineEvent & { tElapsed: number } }[];
   length: number;
 }) {
-  const rows = staggerRows(
+  const scale = useRef<HTMLDivElement>(null);
+  const width = useWidth(scale) ?? DEFAULT_TRACK_PX;
+  const rows = markerRows(
     items.map((i) => i.e.tElapsed),
-    MIN_GAP_S,
+    length,
+    width,
+    MARKER_PX,
   );
   const depth = Math.max(1, ...rows.map((r) => r + 1));
   return (
     <div className="fe-lane">
       <div className="fe-lane-label">{label}</div>
-      <div className="fe-scale" style={{ height: `${depth * 24}px` }}>
+      <div ref={scale} className="fe-scale" style={{ height: `${depth * 24}px` }}>
         {items.map(({ n, e }, i) => (
           <span
             key={e.id}

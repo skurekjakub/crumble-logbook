@@ -125,13 +125,14 @@ const MECHANICS = pair<Mechanic>(
     recordSlug: CONQUEST,
     sources: [],
   },
+  // No topic, so only the mode filter keeps it off the conquest view.
   {
     id: 2,
-    title: "PvP rule",
+    title: "PvP mechanic",
     body: "b",
     confidence: "high",
     mode: "arena",
-    topic: "rules",
+    topic: null,
     recordSlug: PVP,
     sources: [],
   },
@@ -178,8 +179,8 @@ const API: Record<string, Canned> = {
   ),
 };
 
-/** The view's tab panel. */
-const panel = () => within(screen.getByRole("tabpanel"));
+/** The view's main landmark. */
+const panel = () => within(screen.getByRole("main"));
 
 describe("Guild Conquest views never show PvP rows", () => {
   it.each([
@@ -187,7 +188,7 @@ describe("Guild Conquest views never show PvP rows", () => {
     ["/conquest/decks", "Cherry deck", "Rye PvP deck"],
     ["/conquest/runes", "Conquest runes", "PvP runes"],
     ["/conquest/gear", "Conquest gear", "PvP gear"],
-    ["/conquest/mechanics", "Conquest mechanic", "PvP rule"],
+    ["/conquest/mechanics", "Conquest mechanic", "PvP mechanic"],
     ["/conquest/timeline", "Conquest event.", "PvP event."],
   ])("%s", async (path, shown, hidden) => {
     await renderRoute(path, API);

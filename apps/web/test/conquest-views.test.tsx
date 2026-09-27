@@ -234,8 +234,8 @@ const API: Record<string, Canned> = {
 const renderAt = (path: string, overrides: Record<string, Canned> = {}) =>
   renderRoute(path, { ...API, ...overrides });
 
-/** The view's tab panel. */
-const panel = () => within(screen.getByRole("tabpanel"));
+/** The view's main landmark. */
+const panel = () => within(screen.getByRole("main"));
 
 describe("/conquest overview", () => {
   it("renders the caveat, takeaways in order with sources, and the account block", async () => {
@@ -361,24 +361,28 @@ describe("/conquest/decks", () => {
 });
 
 describe("/conquest/runes", () => {
-  /** The table's body rows as their cookie cell text. */
+  /** Each rune card's cookie heading text, in order. */
   const cookies = () =>
-    [...screen.getByRole("tabpanel").querySelectorAll("tbody tr")].map(
-      (tr) => tr.querySelector("td")!.textContent,
-    );
+    [...screen.getByRole("main").querySelectorAll(".rune-card h3")].map((h) => h.textContent);
 
-  it("renders each cookie's lines, why, disputed note, decks and sources", async () => {
+  it("renders one card per cookie: the reason first, then the lines, disputed note, decks and sources", async () => {
     await renderAt("/conquest/runes");
     const milk = (await panel().findByText("Milk's buff scales with her own ATK.")).closest(
-      "tr",
+      ".rune-card",
     ) as HTMLElement;
     const m = within(milk);
-    expect(m.getByText("All ATK%").tagName).toBe("B");
+    const why = m.getByText("Milk's buff scales with her own ATK.");
+    expect(why).toHaveClass("rune-why");
+    const lines = m.getByText("All ATK%");
+    expect(lines.closest(".rune-lines")).not.toBeNull();
+    expect(why.compareDocumentPosition(lines) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(m.getByText("disputed")).toHaveClass("pill", "disputed");
-    expect(m.getByText(/One commenter says skill amp is better on Milk\./)).toHaveClass("muted");
+    const disputed = m.getByText(/One commenter says skill amp is better on Milk\./);
+    expect(disputed).toHaveClass("muted");
+    expect(lines.compareDocumentPosition(disputed) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(await m.findByText("Cherry deck, Melon Soda deck")).toBeVisible();
     expect(m.getByRole("link", { name: "Naver 43653" })).toBeVisible();
-    expect(cookies()).toEqual(["Milk우유disputed", "Pomegranate석류", "메소"]);
+    expect(cookies()).toEqual(["Milk우유", "Pomegranate석류", "메소"]);
     expect(
       panel().getByText(/Disputed rows are where posters disagreed/, { selector: ".lede" }),
     ).toBeVisible();
@@ -387,18 +391,31 @@ describe("/conquest/runes", () => {
   it("narrows rows to one deck with ?deck=", async () => {
     await renderAt("/conquest/runes?deck=meso");
     await panel().findByText("Placement cookie.");
-    expect(cookies()).toEqual(["Milk우유disputed", "메소"]);
-    expect(panel().getByRole("combobox", { name: "All decks" })).toHaveValue("meso");
+    expect(cookies()).toEqual(["Milk우유", "메소"]);
+    expect(panel().getByRole("combobox", { name: "Deck" })).toHaveValue("meso");
+  });
+
+  it("says when the filters leave nothing", async () => {
+    await renderAt("/conquest/runes?q=zzz");
+    expect(await panel().findByText("Nothing matches.")).toHaveClass("empty");
+  });
+
+  it("names the failed resource when decks fail, instead of falling back to deck ids", async () => {
+    await renderAt("/conquest/runes", {
+      "/api/decks?mode=guild_conquest": { status: 500, body: { error: "x" } },
+    });
+    expect(await panel().findByRole("alert")).toHaveTextContent("Couldn't load decks");
+    expect(await panel().findByText("Placement cookie.")).toBeVisible();
   });
 
   it("writes the deck and text filters to the URL", async () => {
     const router = await renderAt("/conquest/runes");
     await panel().findByText("Placement cookie.");
-    fireEvent.change(panel().getByRole("combobox", { name: "All decks" }), {
+    fireEvent.change(panel().getByRole("combobox", { name: "Deck" }), {
       target: { value: "cherry" },
     });
     await waitFor(() => expect(router.state.location.search).toEqual({ deck: "cherry" }));
-    expect(cookies()).toEqual(["Milk우유disputed", "Pomegranate석류"]);
+    expect(cookies()).toEqual(["Milk우유", "Pomegranate석류"]);
 
     fireEvent.change(panel().getByRole("searchbox"), { target: { value: "pomegranate" } });
     await waitFor(() =>
@@ -414,7 +431,7 @@ describe("/conquest/runes", () => {
 
   it("shows the empty message with no rune builds", async () => {
     await renderAt("/conquest/runes", { "/api/rune-builds?mode=guild_conquest": { body: [] } });
-    expect(await panel().findByText("No rune builds recorded yet.")).toHaveClass("muted");
+    expect(await panel().findByText("No rune builds recorded yet.")).toHaveClass("empty");
   });
 });
 

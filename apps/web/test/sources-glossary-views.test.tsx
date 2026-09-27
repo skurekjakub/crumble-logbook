@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import type { GlossaryEntry } from "../src/api/types";
 import { bodyRows, renderRoute, VIEW_SOURCES } from "./view-harness";
 
-const panel = () => screen.getByRole("tabpanel");
+const panel = () => screen.getByRole("main");
 
 const entry = (o: Pick<GlossaryEntry, "kr"> & Partial<GlossaryEntry>): GlossaryEntry => ({
   shorthand: [],
@@ -50,7 +50,7 @@ describe("sources view", () => {
       "/api/sources?site=dc": { body: [VIEW_SOURCES[0]] },
     });
     await waitFor(() => expect(bodyRows(panel())).toHaveLength(3));
-    fireEvent.change(screen.getByRole("combobox", { name: "All sites" }), {
+    fireEvent.change(screen.getByRole("combobox", { name: "Site" }), {
       target: { value: "dc" },
     });
     await waitFor(() => expect(router.state.location.search).toEqual({ site: "dc" }));
@@ -100,7 +100,7 @@ describe("glossary view", () => {
       "/api/glossary?kind=stat": { body: [GLOSSARY[2]] },
     });
     await waitFor(() => expect(bodyRows(panel()).map((r) => r[0])).toEqual(["스킬 가속"]));
-    expect(screen.getByRole("combobox", { name: "All kinds" })).toHaveValue("stat");
+    expect(screen.getByRole("combobox", { name: "Kind" })).toHaveValue("stat");
   });
 
   it("shows an empty message with no entries", async () => {

@@ -20,13 +20,22 @@ import { EmptyState } from "../components/EmptyState";
 import { FightTimeline } from "../components/FightTimeline";
 import { GearBoard, generalGear } from "../components/GearBoard";
 import { Kv } from "../components/Kv";
-import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
-import { RuneNote, runeBuildColumns } from "../components/RuneBuilds";
+import { RuneCard } from "../components/RuneBuilds";
 import { SourceChips } from "../components/SourceChips";
 import { ViewHeader } from "../components/ViewHeader";
 import type { BuffStarRow } from "../lib/boss";
-import { buffStars, effectLabel, formatPct, pivotBuffs, starLabel, whenLabel } from "../lib/boss";
+import {
+  buffStars,
+  effectLabel,
+  effectName,
+  formatPct,
+  pivotBuffs,
+  starCells,
+  starLabel,
+  survivalTitle,
+  whenLabel,
+} from "../lib/boss";
 import type { SourceIndex } from "../lib/sources";
 
 /** A titled page section, exposed as a region named by its heading. */
@@ -39,9 +48,9 @@ function Section({ id, title, children }: { id: string; title: string; children:
   );
 }
 
-/** A cookie's English name without the trailing " Cookie", else its Korean name. */
-function shortName(ref: { kr: string; en: string | null }): string {
-  return ref.en?.replace(/ Cookie$/, "") ?? ref.kr;
+/** The mechanics filed under `topic`, in their stored order. */
+function byTopic(mechanics: readonly Mechanic[], topic: string): Mechanic[] {
+  return mechanics.filter((m) => m.topic === topic);
 }
 
 /** Props for {@link BossView}. */
@@ -53,25 +62,27 @@ export interface BossViewProps {
 }
 
 /**
- * A boss screen: the boss's facts, its fight on a 0–length track, what it
- * takes to survive its lethal patterns, the buffers' values by star, what to
- * run, and the ATK-order checklist. Each block renders its own query, so one
- * failed resource leaves the others in place.
+ * A boss screen: the boss's cited facts, its fight on a 0–length track,
+ * what it takes to survive its lethal patterns, the buffers' values by star,
+ * what to run, and the ATK-order checklist. Every research claim comes from
+ * the API data, selected by mechanics topic or fight-event key, with its
+ * confidence and sources. Each block renders its own query, so one failed
+ * resource leaves the others in place.
  */
 export function BossView({ mode, boss }: BossViewProps) {
   const sources = useSourceIndex();
   const fights = useQuery(fightEventsQuery(boss.id));
   const buffs = useQuery(buffValuesQuery());
+  const debufferBuffs = useQuery(buffValuesQuery(boss.debufferKr));
   const mechanics = useQuery(mechanicsQuery(mode.scope));
   const runes = useQuery(runeBuildsQuery(mode.scope));
   const decks = useQuery(decksQuery(mode.scope));
   const gear = useQuery(gearRecsQuery(mode.scope));
 
   const events = fights.data ?? [];
+  const mechs = mechanics.data ?? [];
   const lengthEvent = events.find((e) => e.event === boss.lengthEvent);
   const length = lengthEvent?.tElapsed ?? boss.fightSeconds;
-  const endEvent = events.find((e) => e.event === boss.endEvent);
-  const bossMechanic = mechanics.data?.find((m) => m.body.includes(boss.kr));
 
   return (
     <>
@@ -85,28 +96,22 @@ export function BossView({ mode, boss }: BossViewProps) {
       />
       <Kv
         rows={[
-          [
-            "Element",
-            <>
-              {boss.element} <SourceChips ids={bossMechanic?.sources} sources={sources} />
-            </>,
-          ],
-          ["Weak to", boss.weakness],
+          ...boss.facts.map(
+            (f) =>
+              [
+                f.label,
+                byTopic(mechs, f.topic).map((m) => <FactNote key={m.id} m={m} sources={sources} />),
+              ] as const,
+          ),
           [
             "Fight length",
             lengthEvent?.tElapsed != null ? (
-              <>
-                <span>{lengthEvent.tElapsed} s</span>{" "}
+              <div className={`boss-fact${lengthEvent.confidence === "low" ? " low" : ""}`}>
+                <span>{lengthEvent.tElapsed} s</span>
+                <ConfidencePill confidence={lengthEvent.confidence} />
                 <SourceChips ids={lengthEvent.sources} sources={sources} />
-              </>
+              </div>
             ) : null,
-          ],
-          [
-            "Score",
-            <>
-              Cumulative damage dealt before the timer runs out, kept even after a wipe.{" "}
-              <SourceChips ids={endEvent?.sources} sources={sources} />
-            </>,
           ],
         ]}
       />
@@ -130,11 +135,11 @@ export function BossView({ mode, boss }: BossViewProps) {
 
       <Section id="boss-survival" title="Survival">
         <QueryResult query={mechanics} resource="mechanics">
-          {(mechs) => (
+          {(list) => (
             <Survival
               boss={boss}
               events={events}
-              mechanics={mechs}
+              mechanics={list}
               length={length}
               sources={sources}
             />
@@ -144,7 +149,14 @@ export function BossView({ mode, boss }: BossViewProps) {
 
       <Section id="boss-buffs" title="Buffs by star">
         <QueryResult query={buffs} resource="buff values">
-          {(rows) => <BuffTable rows={rows} sources={sources} />}
+          {(rows) => (
+            <BuffTable
+              rows={rows}
+              buffFormula={byTopic(mechs, boss.topics.buffFormula)}
+              debuffFormula={byTopic(mechs, boss.topics.debuffFormula)}
+              sources={sources}
+            />
+          )}
         </QueryResult>
       </Section>
 
@@ -154,8 +166,8 @@ export function BossView({ mode, boss }: BossViewProps) {
             <WhatToRun
               boss={boss}
               builds={builds.filter((b) => b.decks.includes(boss.deck))}
-              mechanics={mechanics.data ?? []}
-              buffs={buffs.data ?? []}
+              haste={byTopic(mechs, boss.topics.haste)}
+              debufferBuffs={debufferBuffs.data ?? []}
               sources={sources}
             />
           )}
@@ -193,7 +205,7 @@ export function BossView({ mode, boss }: BossViewProps) {
               <AtkCheck
                 boss={boss}
                 deck={deck}
-                mechanics={mechanics.data ?? []}
+                petNotes={byTopic(mechs, boss.topics.atkPet)}
                 sources={sources}
               />
             ) : (
@@ -203,6 +215,17 @@ export function BossView({ mode, boss }: BossViewProps) {
         </QueryResult>
       </Section>
     </>
+  );
+}
+
+/** A mechanic's body as a one-line fact, with its confidence and sources; hatched when unverified. */
+function FactNote({ m, sources }: { m: Mechanic; sources: SourceIndex }) {
+  return (
+    <div className={`boss-fact${m.confidence === "low" ? " low" : ""}`}>
+      <span>{m.body}</span>
+      <ConfidencePill confidence={m.confidence} />
+      <SourceChips ids={m.sources} sources={sources} />
+    </div>
   );
 }
 
@@ -230,13 +253,13 @@ function EventNote({
   );
 }
 
-/** A mechanic inside a card: title, confidence, body and sources. */
+/** A mechanic inside a card: title, confidence, body and sources; hatched when unverified. */
 function MechanicNote({ m, sources }: { m: Mechanic; sources: SourceIndex }) {
   return (
-    <div className="boss-note">
+    <div className={`boss-note${m.confidence === "low" ? " low" : ""}`}>
       <div className="fe-head">
         <b>{m.title}</b>
-        <Pill kind={m.confidence} />
+        <ConfidencePill confidence={m.confidence} />
       </div>
       <div>{m.body}</div>
       <SourceChips ids={m.sources} sources={sources} />
@@ -245,8 +268,9 @@ function MechanicNote({ m, sources }: { m: Mechanic; sources: SourceIndex }) {
 }
 
 /**
- * One card per lethal pattern, built from its fight events and the survival
- * mechanics that name it. Patterns with neither are left out.
+ * One card per lethal pattern, built from its fight events and the
+ * mechanics filed under its topic, titled by the countdown at its anchor
+ * event. Patterns with neither are left out.
  */
 function Survival({
   boss,
@@ -263,16 +287,21 @@ function Survival({
 }) {
   const cards = boss.survival
     .map((s) => ({
-      ...s,
+      key: s.anchor,
+      title: survivalTitle(
+        s.name,
+        events.find((e) => e.event === s.anchor)?.tElapsed ?? null,
+        length,
+      ),
       evs: events.filter((e) => s.events.includes(e.event)),
-      mechs: mechanics.filter((m) => /surviv/i.test(m.title) && s.mechanic.test(m.title)),
+      mechs: byTopic(mechanics, s.topic),
     }))
     .filter((c) => c.evs.length || c.mechs.length);
   if (!cards.length) return <EmptyState>No survival data recorded yet.</EmptyState>;
   return (
     <div className="grid g2">
       {cards.map((c) => (
-        <div key={c.title} className="card">
+        <div key={c.key} className="card">
           <div className="card-head">
             <h4>{c.title}</h4>
           </div>
@@ -295,19 +324,29 @@ function joinNames(names: readonly string[]): string {
 }
 
 /**
- * The buffers' values as a cookie × star table, with notes on how the
- * values scale. Self-only buffs are marked and listed last; application
- * chances are marked as such.
+ * The buffers' values as a cookie × star table, with the cited formulas
+ * for how buffs and application chances scale. Self-only buffs are marked
+ * and listed last; application chances are marked as such; a value carried
+ * over from the column to its left is greyed.
  */
-function BuffTable({ rows, sources }: { rows: readonly BuffValue[]; sources: SourceIndex }) {
+function BuffTable({
+  rows,
+  buffFormula,
+  debuffFormula,
+  sources,
+}: {
+  rows: readonly BuffValue[];
+  buffFormula: readonly Mechanic[];
+  debuffFormula: readonly Mechanic[];
+  sources: SourceIndex;
+}) {
   if (!rows.length) return <EmptyState>No buff values recorded yet.</EmptyState>;
   const pivot = pivotBuffs(rows);
   const stars = buffStars(rows);
+  const cells = new Map(pivot.map((r) => [r.key, starCells(r, stars)]));
   const name = (r: BuffStarRow) => r.en ?? r.cookieKr;
-  const unique = (xs: string[]) => [...new Set(xs)];
   const ampScaled = pivot.some((r) => r.scalesWithCasterAmp);
-  const atkBased = unique(pivot.filter((r) => r.base === "CastersAttackPoint").map(name));
-  const chances = unique(pivot.filter((r) => r.chance).map(name));
+  const chances = [...new Set(pivot.filter((r) => r.chance).map(name))];
 
   const columns: Column<BuffStarRow>[] = [
     { header: "Cookie", cell: (r) => <CookieName kr={r.cookieKr} en={r.en} /> },
@@ -321,9 +360,18 @@ function BuffTable({ rows, sources }: { rows: readonly BuffValue[]; sources: Sou
         </>
       ),
     },
-    ...stars.map((s): Column<BuffStarRow> => ({
+    ...stars.map((s, i): Column<BuffStarRow> => ({
       header: starLabel(s, stars),
-      cell: (r) => formatPct(r.byStar[s]),
+      cell: (r) => {
+        const c = cells.get(r.key)![i]!;
+        return c.carried ? (
+          <span className="carried" title="Unchanged from the column to its left">
+            {formatPct(c.value)}
+          </span>
+        ) : (
+          formatPct(c.value)
+        );
+      },
       className: "n",
     })),
     {
@@ -336,24 +384,25 @@ function BuffTable({ rows, sources }: { rows: readonly BuffValue[]; sources: Sou
 
   return (
     <>
-      {ampScaled ? (
-        <p className="muted">
-          Each buff is worth value × (1 + the caster's skill amp): the caster's own skill amp, not
-          the receiver's, which is why buffers run skill amp.
-          {atkBased.length
-            ? ` Where the value is a share of the caster's ATK, the caster's ATK counts too, which is why ${joinNames(atkBased)} runs ATK%.`
-            : null}
-        </p>
-      ) : null}
+      {ampScaled
+        ? buffFormula.map((m) => <MechanicNote key={m.id} m={m} sources={sources} />)
+        : null}
       {chances.length ? (
-        <p className="muted">
-          {joinNames(chances.map((c) => `${c}'s`))} row is an application chance, not a buff size:
-          the chance scales with the caster's focus against the target's resist, not with skill amp.
-        </p>
+        <>
+          <p className="muted">
+            {chances.length === 1
+              ? `${chances[0]}'s row is an application chance, not a buff size.`
+              : `${joinNames(chances.map((c) => `${c}'s`))} rows are application chances, not buff sizes.`}
+          </p>
+          {debuffFormula.map((m) => (
+            <MechanicNote key={m.id} m={m} sources={sources} />
+          ))}
+        </>
       ) : null}
       <p className="muted">
-        Each column holds the value from that star count up to the next column. Rows marked "self
-        only" buff the caster alone.
+        Each column holds the value from that star count up to the next column. A greyed value is
+        unchanged from the column to its left; a dash means the effect has no value yet at that
+        star. Rows marked "self only" buff the caster alone.
       </p>
       <DataTable columns={columns} rows={pivot} rowKey={(r) => r.key} />
     </>
@@ -361,93 +410,62 @@ function BuffTable({ rows, sources }: { rows: readonly BuffValue[]; sources: Sou
 }
 
 /**
- * Rune guidance for the boss's deck: callouts for the haste carry's
- * breakpoint and the debuffer's focus question where the data has them,
- * then every cookie's rune lines with the reason and any dispute.
+ * Rune guidance for the boss's deck: one card per cookie, reason first,
+ * with the haste carry's breakpoint and the debuffer's base application
+ * chance on their cards where the data has them.
  */
 function WhatToRun({
   boss,
   builds,
-  mechanics,
-  buffs,
+  haste,
+  debufferBuffs,
   sources,
 }: {
   boss: BossConfig;
   builds: readonly RuneBuild[];
-  mechanics: readonly Mechanic[];
-  buffs: readonly BuffValue[];
+  haste: readonly Mechanic[];
+  debufferBuffs: readonly BuffValue[];
   sources: SourceIndex;
 }) {
   if (!builds.length) return <EmptyState>No rune builds recorded for this deck yet.</EmptyState>;
-  const seeker = builds.find((b) => b.cookieKr === boss.hasteKr);
-  const seekerMechs = seeker
-    ? mechanics.filter(
-        (m) =>
-          m.title.includes(shortName({ kr: seeker.cookieKr, en: seeker.en })) &&
-          /haste/i.test(m.title),
-      )
-    : [];
-  const choco = builds.find((b) => b.cookieKr === boss.debufferKr);
-  const chocoChance = choco
-    ? pivotBuffs(buffs).find((r) => r.chance && r.en === choco.en)
-    : undefined;
-
+  const chance = pivotBuffs(debufferBuffs).find((r) => r.chance);
   return (
-    <>
-      {seeker && seekerMechs.length ? (
-        <div className="grid g2">
-          <div className="card">
-            <div className="card-head">
-              <h4>Brightseeker's haste</h4>
-            </div>
-            {seekerMechs.map((m) => (
-              <MechanicNote key={m.id} m={m} sources={sources} />
-            ))}
-            <RuneNote build={seeker} sources={sources} />
-          </div>
-          {choco ? <ChocoCard b={choco} chance={chocoChance} sources={sources} /> : null}
-        </div>
-      ) : choco ? (
-        <div className="grid g2">
-          <ChocoCard b={choco} chance={chocoChance} sources={sources} />
-        </div>
-      ) : null}
-      <DataTable
-        columns={runeBuildColumns({ whyHeader: "Why", sources })}
-        rows={builds}
-        rowKey={(r) => r.id}
-      />
-    </>
+    <div className="grid g2">
+      {builds.map((b) => (
+        <RuneCard key={b.id} build={b} sources={sources} headingLevel={4}>
+          {b.cookieKr === boss.hasteKr
+            ? haste.map((m) => <MechanicNote key={m.id} m={m} sources={sources} />)
+            : null}
+          {b.cookieKr === boss.debufferKr && chance ? (
+            <ChanceNote chance={chance} sources={sources} />
+          ) : null}
+        </RuneCard>
+      ))}
+    </div>
   );
 }
 
-/** Dark Choco's card: her debuff's base application chance by star, and her rune build. */
-function ChocoCard({
-  b,
-  chance,
-  sources,
-}: {
-  b: RuneBuild;
-  chance: BuffStarRow | undefined;
-  sources: SourceIndex;
-}) {
-  const values = chance ? [...new Set(Object.values(chance.byStar))] : [];
+/** A debuff's base application chance by star, pointing to the chance formula in the buff section. */
+function ChanceNote({ chance, sources }: { chance: BuffStarRow; sources: SourceIndex }) {
+  const values = [...new Set(Object.values(chance.byStar))];
   return (
-    <div className="card">
-      <div className="card-head">
-        <h4>Dark Choco: haste or focus</h4>
+    <div className="boss-note">
+      <div>
+        {effectName(chance.effectType)} base application chance:{" "}
+        {values.length === 1 ? (
+          <>
+            <b>{formatPct(values[0])}</b> at every star.
+          </>
+        ) : (
+          <>
+            <b>{values.map(formatPct).join(" → ")}</b> by star.
+          </>
+        )}
       </div>
-      {chance ? (
-        <div className="boss-note">
-          <div>
-            DEF shred base application chance:{" "}
-            <b>{values.length === 1 ? formatPct(values[0]) : values.map(formatPct).join(" → ")}</b>{" "}
-            by star, scaled by her focus against the boss's resist.
-          </div>
-          <SourceChips ids={chance.sources} sources={sources} />
-        </div>
-      ) : null}
-      <RuneNote build={b} sources={sources} />
+      <div className="muted">
+        How focus and resist change it: see <a href="#boss-buffs">Buffs by star</a>.
+      </div>
+      <SourceChips ids={chance.sources} sources={sources} />
     </div>
   );
 }
@@ -455,17 +473,18 @@ function ChocoCard({
 /**
  * The deck's ATK-order chain and the in-battle checklist: the catcher sits
  * just under the last ranked cookie once the pet's bonus is added, every
- * ranked cookie sits above the catcher, and the check happens in battle.
+ * ranked cookie sits above the catcher, and the check happens in battle,
+ * with the pet's cited notes.
  */
 function AtkCheck({
   boss,
   deck,
-  mechanics,
+  petNotes,
   sources,
 }: {
   boss: BossConfig;
   deck: Deck;
-  mechanics: readonly Mechanic[];
+  petNotes: readonly Mechanic[];
   sources: SourceIndex;
 }) {
   const order = deck.atkOrder ?? [];
@@ -474,7 +493,6 @@ function AtkCheck({
   const last = order.at(-1);
   const pet = deck.pets.find((p) => p.kr === boss.atkPetKr);
   const petName = pet ? (pet.en ?? pet.kr) : "the pet";
-  const petMechs = pet?.en ? mechanics.filter((m) => m.title.includes(pet.en!)) : [];
 
   if (!order.length) return <EmptyState>No ATK order recorded for this deck yet.</EmptyState>;
   return (
@@ -496,11 +514,7 @@ function AtkCheck({
         ) : null}
         <li>
           Check the order in battle, not in the lobby.
-          {petMechs.map((m) => (
-            <div key={m.id} className="muted">
-              {m.body} <SourceChips ids={m.sources} sources={sources} />
-            </div>
-          ))}
+          {pet ? petNotes.map((m) => <FactNote key={m.id} m={m} sources={sources} />) : null}
         </li>
       </ul>
       <SourceChips ids={deck.sources} sources={sources} />

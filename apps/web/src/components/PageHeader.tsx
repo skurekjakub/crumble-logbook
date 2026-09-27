@@ -6,7 +6,7 @@ export interface PageHeaderProps {
   context: ReactNode;
   /** The `<h1>`. */
   title: string;
-  /** The lede under the title: text, or an error box in its place. */
+  /** The lede under the title: text (none when empty), or an error box in its place. */
   lede: ReactNode;
   /** Label → value figures for the stamp; rows with a null or empty value are dropped. */
   stats: ReadonlyArray<readonly [label: string, value: string | number | null | undefined]>;
@@ -23,7 +23,7 @@ export function PageHeader({ context, title, lede, stats }: PageHeaderProps) {
           {context != null && <> · {context}</>}
         </div>
         <h1>{title}</h1>
-        {typeof lede === "string" ? <p className="lede">{lede}</p> : lede}
+        {typeof lede !== "string" ? lede : lede.trim() ? <p className="lede">{lede}</p> : null}
       </div>
       <div className="stamp">
         {shown.map(([k, v]) => (

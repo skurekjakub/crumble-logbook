@@ -1,5 +1,5 @@
-/* Styles the base sheets don't cover: the mode tab strip, sub-tabs, and CookieName's stacked form.
-   tokens.css, base.css and components.css are kept unformatted (see .prettierignore). */
+/* Styles the base sheets don't cover: the mode tab strip, sub-tabs, CookieName's stacked form and
+   the rune cards. tokens.css, base.css and components.css are kept unformatted (see .prettierignore). */
 
 /* TabNav: mode tabs scroll away; the section sub-tabs below them stay sticky. */
 nav.tabs.modes {
@@ -14,7 +14,7 @@ nav.tabs .sep {
   margin-inline: 4px;
   background: var(--line);
 }
-nav.tabs.sub button {
+nav.tabs.sub a {
   font-size: 13px;
   padding: 7px 12px;
 }
@@ -27,4 +27,31 @@ nav.tabs.sub button {
 }
 .name-stack .kr {
   font-size: 0.85em;
+}
+
+/* RuneCard: the reason leads; the rune lines sit under it, smaller and labelled. */
+.rune-card .card-head > :is(h3, h4) {
+  margin: 0;
+}
+.rune-why {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.rune-lines {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  font: 500 13px/1.4 var(--mono);
+  color: var(--ink-2);
+}
+.rune-lines .k {
+  font: 600 11px/1.4 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+.rune-decks {
+  font-size: 13px;
 }
