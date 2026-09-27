@@ -9,6 +9,8 @@ import type { DecksRepo } from "./decks";
 import { createDecksRepo } from "./decks";
 import type { GlossaryRepo } from "./glossary";
 import { createGlossaryRepo } from "./glossary";
+import type { RuneBuildsRepo } from "./rune-builds";
+import { createRuneBuildsRepo } from "./rune-builds";
 import type { SourcesRepo } from "./sources";
 import { createSourcesRepo } from "./sources";
 import type { TableRepo } from "./table-repo";
@@ -20,6 +22,7 @@ export interface Repos {
   citations: CitationsRepo;
   decks: DecksRepo;
   glossary: GlossaryRepo;
+  runeBuilds: RuneBuildsRepo;
   mechanics: TableRepo<MechanicRow, InferInsertModel<typeof mechanics>>;
   rngFactors: TableRepo<RngFactorRow, InferInsertModel<typeof rngFactors>>;
   timeline: TableRepo<TimelineEventRow, InferInsertModel<typeof timeline>>;
@@ -40,6 +43,7 @@ export function createRepos(db: Db): Repos {
     citations: createCitationsRepo(db),
     decks: createDecksRepo(db),
     glossary: createGlossaryRepo(db),
+    runeBuilds: createRuneBuildsRepo(db),
     mechanics: createTableRepo(db, mechanics),
     rngFactors: createTableRepo(db, rngFactors),
     timeline: createTableRepo(db, timeline, [asc(timeline.date), asc(timeline.id)]),

@@ -18,6 +18,8 @@ import type { ContentService } from "./content";
 import { createContentService } from "./content";
 import type { DeckService } from "./decks";
 import { createDeckService } from "./decks";
+import type { RuneBuildService } from "./rune-builds";
+import { createRuneBuildService } from "./rune-builds";
 import type { ScoreService } from "./scores";
 import { createScoreService } from "./scores";
 
@@ -31,6 +33,7 @@ export interface Services {
   recommendations: ContentService<RecommendationRow, Values<RecommendationInput>>;
   scores: ScoreService;
   decks: DeckService;
+  runeBuilds: RuneBuildService;
 }
 
 /**
@@ -66,5 +69,6 @@ export function createServices(store: Store): Services {
     }),
     scores: createScoreService(store),
     decks: createDeckService(store),
+    runeBuilds: createRuneBuildService(store),
   };
 }
