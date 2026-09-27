@@ -1,6 +1,6 @@
 # crumble-logbook
 
-A local research tool for the Cookie Run: Crumble **Guild Conquest (길드 토벌전)** meta: what the top Korean and global players run against the Piñata raid boss, with every claim traced to the forum post, video or ranking page it came from.
+A local research tool for Cookie Run: Crumble: what top Korean and global players run in **Guild Conquest (길드 토벌전)** against the Piñata raid boss, and in PvP (**Arena** and **Rumble Arena**, 와글와글 아레나). Every claim is traced to the forum post, video or ranking page it came from.
 
 ## What's here
 
@@ -8,13 +8,13 @@ A local research tool for the Cookie Run: Crumble **Guild Conquest (길드 토�
 |---|---|
 | `research/` | Research records. Each has a `README.md` (question, verdict, sources), a `research-trail.md`, a `STATE.md` for picking the work back up, and `evidence/` with verbatim captures (DCInside and Naver cafe posts, comments, images, crumb.gg rankings, YouTube frames). A record the app can load also has `import.json` (what to import and from where) and `curated/` (the curated dataset). |
 | `packages/schema` | Drizzle tables, migrations and every Zod schema, shared by the server and the web app. |
-| `apps/server` | The data API: Hono over SQLite, layered `routes → services → repos`, plus the record importer and the snapshot CLIs. |
+| `apps/server` | The data API: Hono over SQLite, layered `routes → services → repos`, with one content-type registry, plus the record importer and the snapshot CLIs. |
+| `apps/web` | The web app: React + TanStack Router/Query, typed against the API through `hc<AppType>`. One section per game mode (driven by `src/app/modes.ts`), plus Research, Sources and Glossary. |
 | `data/` | `crumble.db` (local, gitignored) and `snapshot.json`, the committed, diffable dump of the database. |
-| `legacy/dashboard/` | The original vanilla-JS dashboard, kept until the web app replaces it. Serve it with `python -m http.server` from that folder. |
-| `docs/superpowers/` | The design spec (`specs/`) and the implementation plans (`plans/`). |
+| `tools/conquest-macro/` | An AutoHotkey v2 loop that retries the Guild Conquest fight; its README covers tuning. |
+| `docs/superpowers/` | The design specs (`specs/`) and the implementation plans (`plans/`). |
+| `OPEN-QUESTIONS.md` | Decisions waiting on the user. |
 | `.claude/` | Claude Code skills, hooks and settings used to run the research. |
-
-The web app (`apps/web`) is still to be built; see `docs/superpowers/plans/`.
 
 ## Development
 
@@ -24,6 +24,8 @@ Requires Node 24.18+ and pnpm 12.6.
 pnpm install
 pnpm verify        # typecheck → prettier check → vitest
 pnpm vitest run packages/schema   # one package's tests
+pnpm dev:server    # API on http://localhost:8787/api
+pnpm dev:web       # web app on http://localhost:5173, proxying /api (CRUMBLE_API overrides the target)
 ```
 
 ### The database
@@ -40,6 +42,11 @@ pnpm db:restore [file]                                 # load a snapshot (defaul
 ```
 
 `import:record` reads `research/<slug>/import.json`, validates every curated file and every reference before writing, and loads everything in one transaction. An error names the file and the row, and leaves the database untouched. Every row it writes belongs to the record (`recordSlug`). It refuses a record that is already loaded unless you pass `--replace`, which clears only that record's rows. Sources, glossary entries and buff values can be shared between records: the first record to load one keeps it, and a later record's differing version is reported as a warning (a differing buff value fails the import instead). It also warns about glossary names that more than one entry claims.
+
+Multi-record gotchas:
+- Import 001, then 002. Shared sources and glossary entries keep the first record's row, so the order decides which version the database holds. `data/snapshot.json` is always built from a fresh 001-then-002 import.
+- After a scoped `--replace`, id counters restart past the highest id left, so ids no longer match a fresh import.
+- Shared buff values belong to the record that loaded them first. Replacing that record clears them before it writes its own.
 
 After an import, the database is the source of truth. Commit `data/snapshot.json` after changing data, so the history stays diffable. To rebuild a database from it, point `CRUMBLE_DB` at a new file and run `pnpm db:restore`.
 
@@ -64,6 +71,17 @@ Every resource is under `/api` and speaks JSON. Validation failures are 400 with
 | `/api/export` | `GET` | The full snapshot, the same shape as `data/snapshot.json`. |
 
 **SQLite driver:** Node's built-in `node:sqlite`, through the `drizzle-orm/node-sqlite` driver in drizzle-orm 1.0 beta. It needs no native build, which matters on ARM64 Windows. Zod schemas come from `drizzle-orm/zod`, the 1.0 home of drizzle-zod. The fallbacks (`better-sqlite3`, `@libsql/client`) weren't needed. The spike, run 2026-09-27 on Node 24.18.0 ARM64, is kept as `packages/schema/test/driver.test.ts`.
+
+## Working notes
+
+- **Commits:** the `require-commit-format` hook blocks `git commit -m`. Write the message (subject, then a body with the problem, the justification and what was discarded) to a file and run `git commit -F <file>`.
+- **Gates:** run `pnpm verify`. The `prefer-verify-script` hook blocks chained gates and unscoped test runs. The rtk hook masks prettier's output, so an agent runs `rtk proxy pnpm verify`.
+- **Evidence scripts** (`research/*/evidence/*.py`): set `PYTHONIOENCODING=utf-8`.
+- **Names:** the KR↔EN glossary is `research/001-guild-conquest-meta/evidence/12-glossary.json` and each record's `curated/glossary.json`. Resolution is per record: 바궁 is Princess Bari in 001 and Wind Archer in 002.
+- **Next research steps:**
+  - Re-pull crumb.gg's final Season 5 boards after 2026-09-28 12:00 KST, as new evidence files.
+  - Write record 001's final README (the deep-research contract). The findings draft is §4 of the removed handoff file: `git show 5796114:HANDOFF.md`.
+  - Open research questions: the exact survival build for the 17 s wipe (about 9M HP and 45% DR per survivor); whether top players run Herb or other survival fillers.
 
 ## Sources and captures
 

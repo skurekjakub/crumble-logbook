@@ -1,8 +1,7 @@
 /**
- * Zod schemas for the curated dataset files (the legacy dashboard's
- * `data/*.json`, copied into a record's `curated/` directory). Field names
- * are the files' own snake_case names; `seed/map.ts` maps them onto table
- * rows. Every schema except the glossary's rejects unknown fields, so a
+ * Zod schemas for the curated dataset files in a record's `curated/`
+ * directory. Field names are the files' own snake_case names; `seed/map.ts`
+ * maps them onto table rows. Every schema except the glossary's rejects unknown fields, so a
  * field the importer doesn't map fails loudly instead of being dropped.
  *
  * @module

@@ -1,5 +1,5 @@
-/* Styles the legacy sheets don't cover: the mode tab strip, sub-tabs, and CookieName's stacked form.
-   tokens.css, base.css and components.css are verbatim copies of legacy/dashboard/styles. */
+/* Styles the base sheets don't cover: the mode tab strip, sub-tabs, and CookieName's stacked form.
+   tokens.css, base.css and components.css are kept unformatted (see .prettierignore). */
 
 /* TabNav: mode tabs scroll away; the section sub-tabs below them stay sticky. */
 nav.tabs.modes {
