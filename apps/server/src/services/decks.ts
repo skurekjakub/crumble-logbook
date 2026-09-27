@@ -64,9 +64,12 @@ export interface DeckService {
   /**
    * Deletes the deck with `id` and its citations. Its cookies, pets and
    * notes cascade; any score referencing it keeps its row with `deckId` set
-   * to `null` (both via the schema's foreign keys).
+   * to `null` (both via the schema's foreign keys). A deck a counter edge
+   * names is kept: delete or repoint the edges first.
    * @param id - the deck's slug id
    * @throws {NotFoundError} if `id` doesn't exist
+   * @throws {ConflictError} `"deck <id> is named by N counter edges"` if any
+   *   counter edge names `id` as its team or beaten-by deck
    */
   remove(id: string): void;
 }
@@ -160,6 +163,8 @@ export function createDeckService(store: Store): DeckService {
     remove: (id) =>
       store.transaction((repos) => {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);
+        const edges = repos.decks.counterEdges(id);
+        if (edges > 0) throw new ConflictError(`deck ${id} is named by ${edges} counter edges`);
         repos.citations.removeAll("deck", id);
         repos.decks.remove(id);
       }),
