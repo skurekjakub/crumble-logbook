@@ -12,6 +12,7 @@ A local research tool for Cookie Run: Crumble: what top Korean and global player
 | `apps/web` | The web app: React + TanStack Router/Query, typed against the API through `hc<AppType>`. One section per game mode (driven by `src/app/modes.ts`), plus Research, Sources and Glossary. |
 | `data/` | `crumble.db` (local, gitignored) and `snapshot.json`, the committed, diffable dump of the database. |
 | `tools/conquest-macro/` | An AutoHotkey v2 loop that retries the Guild Conquest fight; its README covers tuning. |
+| `tools/eslint-config/` | The ESLint flat config (a workspace package). It carries its own TypeScript 6.0, because typescript-eslint needs the JS compiler API, which the native TypeScript 7 behind `tsc` doesn't ship yet (expected in 7.1). |
 | `docs/superpowers/` | The design specs (`specs/`) and the implementation plans (`plans/`). |
 | `OPEN-QUESTIONS.md` | Decisions waiting on the user. |
 | `.claude/` | Claude Code skills, hooks and settings used to run the research. |
@@ -22,11 +23,17 @@ Requires Node 24.18+ and pnpm 12.6.
 
 ```sh
 pnpm install
-pnpm verify        # typecheck → prettier check → vitest
+pnpm dev           # the API and the web app together: http://localhost:5173
+pnpm verify        # typecheck → eslint → prettier check → vitest
+pnpm lint          # eslint alone (type-aware, about 45 s); pnpm lint:fix applies the safe fixes
 pnpm vitest run packages/schema   # one package's tests
 pnpm dev:server    # API on http://localhost:8787/api
 pnpm dev:web       # web app on http://localhost:5173, proxying /api (CRUMBLE_API overrides the target)
 ```
+
+The server creates and seeds its database from `data/snapshot.json` when the file doesn't exist yet, so a fresh clone runs with `pnpm install && pnpm dev`. Delete `data/crumble.db` to start again from the snapshot.
+
+ESLint runs typescript-eslint's strict type-checked rules, React's hook rules on the web app, and JSDoc on every function, method, class and interface method (see `AGENTS.md`). The config and the reason for each switched-off rule are in `tools/eslint-config/index.ts`.
 
 ### The database
 
@@ -80,6 +87,7 @@ Every resource is under `/api` and speaks JSON. Validation failures are 400 with
 - **Gates:** run `pnpm verify`. The `prefer-verify-script` hook blocks chained gates and unscoped test runs. The rtk hook masks prettier's output, so an agent runs `rtk proxy pnpm verify`.
 - **Evidence scripts** (`research/*/evidence/*.py`): set `PYTHONIOENCODING=utf-8`.
 - **Names:** the KR↔EN glossary is `research/001-guild-conquest-meta/evidence/12-glossary.json` and each record's `curated/glossary.json`. Resolution is per record: 바궁 is Princess Bari in 001 and Wind Archer in 002.
+- **Roadmap** (the user's, 2026-09-28): simulators for every game mode, starting with the Guild Conquest one specced in `docs/superpowers/specs/2026-09-27-conquest-simulator-design.md`; scrapers and easy ways to plug in more decks and research records; and more game modes, such as stage-pushing teams and the Golden Drop encounter, each with its own views, backend logic and simulator. The architecture audit against this roadmap is `docs/architecture/2026-09-28-audit.md`.
 - **Next research steps:**
   - Re-pull crumb.gg's final Season 5 boards after 2026-09-28 12:00 KST, as new evidence files.
   - Decide on scraping from the UI (spec success criterion 3): write plan 2 (jobs and scrapers) or descope it. See `OPEN-QUESTIONS.md`.
