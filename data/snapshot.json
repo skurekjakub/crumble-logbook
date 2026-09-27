@@ -14917,7 +14917,7 @@
     "id": 6,
     "deckId": "meso",
     "position": 2,
-    "petKr": "판다만두"
+    "petKr": "색동주머니"
    },
    {
     "id": 7,
@@ -15214,7 +15214,7 @@
     "deckId": "meso",
     "position": 0,
     "kind": "substitution",
-    "text": "Pet: either Panda Dumpling or Candy Shade Pouch. The deck's 1T run (about 1T at 1.6G, dc:74759) kept everything and swapped only to the new Candy Shade Pouch ('그대로 신규펫만'); its author found the pet's higher lift resistance shifted the alignment for the better at the old speeds. Others keep Panda because their speed values were tuned with it and the different lift resistance moves placement: 867G at 1.57G with Panda (dc:76144)."
+    "text": "Pet: Candy Shade Pouch, or Panda Dumpling. The deck's 1T run (about 1T at 1.6G, dc:74759) kept everything and swapped only to the new Candy Shade Pouch ('그대로 신규펫만'); its author found the pet's higher lift resistance shifted the alignment for the better at the old speeds. Others keep Panda because their speed values were tuned with it and the different lift resistance moves placement: 867G at 1.57G with Panda (dc:76144)."
    },
    {
     "id": 8,
@@ -35206,7 +35206,7 @@
     "confirmedPct": 70,
     "sample": "top 100 Rumble Arena defenses on crumb.gg, 2026-09-27 14:33Z",
     "capturedAt": "2026-09-27",
-    "note": "usage_pct is the upper bound (teams whose hidden slots could hold the missing members); confirmed_pct has every member revealed. Top 10: 5 confirmed.",
+    "note": "The bar is an upper bound: it counts teams whose hidden slots could hold the missing members. The confirmed share counts only teams with every member revealed. Top 10: 5 confirmed.",
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -35223,7 +35223,7 @@
     "confirmedPct": 52,
     "sample": "top 100 Rumble Arena defenses on crumb.gg, 2026-09-27 14:33Z",
     "capturedAt": "2026-09-27",
-    "note": "usage_pct is the upper bound; confirmed_pct has every member revealed. Top 10: 7 confirmed.",
+    "note": "The bar is an upper bound; the confirmed share has every member revealed. Top 10: 7 confirmed.",
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -35245,7 +35245,7 @@
     "confirmedPct": 34,
     "sample": "top 100 Rumble Arena defenses on crumb.gg, 2026-09-27 14:33Z",
     "capturedAt": "2026-09-27",
-    "note": "usage_pct is the upper bound; confirmed_pct has every member revealed. Top 10: 4 confirmed. Not a separate team: see the 'one team' mechanic.",
+    "note": "The bar is an upper bound; the confirmed share has every member revealed. Top 10: 4 confirmed. Not a separate team: see the 'one team' mechanic.",
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -35261,7 +35261,7 @@
     "confirmedPct": 34,
     "sample": "top 100 Rumble Arena defenses on crumb.gg, 2026-09-27 14:33Z",
     "capturedAt": "2026-09-27",
-    "note": "usage_pct is the upper bound; confirmed_pct has both revealed. Top 10: 4 confirmed. On 29 of the 34 confirmed, at least four support-core cookies also show.",
+    "note": "The bar is an upper bound; the confirmed share has both revealed. Top 10: 4 confirmed. On 29 of the 34 confirmed, at least four support-core cookies also show.",
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -35278,7 +35278,7 @@
     "confirmedPct": 24,
     "sample": "top 100 Rumble Arena defenses on crumb.gg, 2026-09-27 14:33Z",
     "capturedAt": "2026-09-27",
-    "note": "usage_pct is the upper bound; confirmed_pct has every member revealed. Top 10: 3 confirmed.",
+    "note": "The bar is an upper bound; the confirmed share has every member revealed. Top 10: 3 confirmed.",
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -35304,7 +35304,7 @@
     "confirmedPct": 12,
     "sample": "top 100 Rumble Arena defenses on crumb.gg, 2026-09-27 14:33Z",
     "capturedAt": "2026-09-27",
-    "note": "usage_pct counts teams whose revealed cookies all belong to the standard 12; confirmed_pct has all twelve revealed. Top 10: 1 confirmed (#1). Deck: rumble-standard-12.",
+    "note": "The bar counts teams whose revealed cookies all belong to the standard 12; the confirmed share has all twelve revealed. Top 10: 1 confirmed (#1). Deck: rumble-standard-12.",
     "recordSlug": "002-pvp-meta"
    },
    {
