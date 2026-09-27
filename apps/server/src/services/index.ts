@@ -16,6 +16,8 @@ import type {
 import type { Store } from "../repos";
 import type { ContentService } from "./content";
 import { createContentService } from "./content";
+import type { DeckService } from "./decks";
+import { createDeckService } from "./decks";
 import type { ScoreService } from "./scores";
 import { createScoreService } from "./scores";
 
@@ -28,6 +30,7 @@ export interface Services {
   gearRecs: ContentService<GearRecRow, Values<GearRecInput>>;
   recommendations: ContentService<RecommendationRow, Values<RecommendationInput>>;
   scores: ScoreService;
+  decks: DeckService;
 }
 
 /**
@@ -62,5 +65,6 @@ export function createServices(store: Store): Services {
       table: (repos) => repos.recommendations,
     }),
     scores: createScoreService(store),
+    decks: createDeckService(store),
   };
 }

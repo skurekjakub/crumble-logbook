@@ -1,23 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { createApp } from "../../src/app";
 import { createServices } from "../../src/services";
-import { addSource, testStore } from "../helpers";
+import { addSource, jsonBody, readJson, testStore } from "../helpers";
 
 /** A fresh app over its own in-memory store. */
 function setup() {
   const store = testStore();
   const app = createApp(createServices(store));
   return { app, store };
-}
-
-/** A JSON POST/PATCH request init. */
-function jsonBody(body: unknown): RequestInit {
-  return { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) };
-}
-
-/** Parses a response body as JSON with a caller-asserted shape, for test assertions only. */
-async function readJson<T>(res: Response): Promise<T> {
-  return (await res.json()) as T;
 }
 
 const validMechanic = { title: "Enrage timer", body: "Enrages at 30s.", confidence: "high" };
