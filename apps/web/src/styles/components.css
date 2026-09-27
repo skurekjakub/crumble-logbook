@@ -42,11 +42,13 @@ ol.take li > div{display:flex;flex-direction:column;gap:var(--sp-1);min-width:0}
 .order .step{background:var(--surface-2);padding:2px 7px;border-radius:var(--radius-s);font-weight:500}
 .order .arr{color:var(--ink-3)}
 
-/* decks view: level table, collapsed until asked for */
+/* decks view: level table; the level rule wraps, the reason gets the room */
 details.levels{display:flex;flex-direction:column;gap:var(--sp-2)}
 details.levels summary{cursor:pointer;padding-block:2px;width:fit-content}
 details.levels summary:hover{color:var(--ink)}
 details.levels .tablewrap{margin-top:var(--sp-2)}
+details.levels td.mono{width:22ch;font-size:var(--fs-xs)}
+details.levels td.wide{width:55%}
 
 /* kv.js */
 dl.kv{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:0;font-size:var(--fs-s)}
@@ -64,6 +66,30 @@ th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);verti
 th{font:600 var(--fs-xs)/1.3 var(--body);color:var(--ink-3);background:var(--surface-2);white-space:nowrap}
 tr:last-child td{border-bottom:none}
 td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (min-width:641px){td.wide{width:40%}}
+td > .chips{max-width:13em}
+td .chip{white-space:normal;overflow-wrap:break-word}
+/* Phones: a scrolling table pins its first column; a stacked table turns each row into a block, the
+   header kept for screen readers, narrow cells labelled inline and wide cells on lines of their own. */
+@media (max-width:640px){
+  table.scroll :is(th,td):first-child{position:sticky;left:0;z-index:1;background:var(--surface);box-shadow:inset -1px 0 0 var(--line)}
+  table.scroll th:first-child{background:var(--surface-2)}
+  table.stack,table.stack tbody{display:block}
+  table.stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  table.stack tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;padding:8px 10px;border-bottom:1px solid var(--line)}
+  table.stack tr:last-child{border-bottom:none}
+  table.stack td{display:block;padding:0;border:0;min-width:0}
+  table.stack td.wide{order:1;flex-basis:100%}
+  table.stack td[data-label]:not(:first-child):not(.wide)::before{content:attr(data-label) " ";font:600 var(--fs-2xs)/1 var(--body);color:var(--ink-3)}
+}
+
+/* sources view: a long source id wraps rather than widening its column; the title takes the room;
+   a capture path stays on one line, cut from the left so the file name shows */
+td.source-id a{display:inline-block;max-width:22ch;white-space:normal;overflow-wrap:anywhere}
+td.source-title,td.source-capture{width:auto}
+.capture{display:block;max-width:28ch;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;direction:rtl;text-align:left;font-size:var(--fs-2xs);color:var(--ink-3)}
+.capture > span{unicode-bidi:isolate}
+@media (max-width:640px){.capture{max-width:100%}}
 
 /* gearBoard.js */
 .gearboard{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2)}

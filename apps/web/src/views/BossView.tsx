@@ -23,6 +23,7 @@ import { Kv } from "../components/Kv";
 import { QueryResult } from "../components/QueryResult";
 import { RuneCard } from "../components/RuneBuilds";
 import { SourceChips } from "../components/SourceChips";
+import { TocLayout } from "../components/TocLayout";
 import { ViewHeader } from "../components/ViewHeader";
 import type { BuffStarRow } from "../lib/boss";
 import {
@@ -38,8 +39,26 @@ import {
 } from "../lib/boss";
 import type { SourceIndex } from "../lib/sources";
 
+/** The screen's sections, in page order: each heading's id and text. */
+const PARTS = {
+  timeline: { id: "boss-timeline", title: "Fight timeline" },
+  survival: { id: "boss-survival", title: "Survival" },
+  buffs: { id: "boss-buffs", title: "Buffs by star" },
+  run: { id: "boss-run", title: "What to run" },
+  atk: { id: "boss-atk", title: "ATK-order check" },
+} as const;
+
+/** The "On this page" list: one link per section. */
+const TOC = Object.values(PARTS).map((p) => ({ id: p.id, label: p.title }));
+
 /** A titled page section, exposed as a region named by its heading. */
-function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
+function Section({
+  part: { id, title },
+  children,
+}: {
+  part: { id: string; title: string };
+  children: ReactNode;
+}) {
   return (
     <section className="boss-sec" aria-labelledby={id}>
       <h3 id={id}>{title}</h3>
@@ -116,104 +135,107 @@ export function BossView({ mode, boss }: BossViewProps) {
         ]}
       />
 
-      <Section id="boss-timeline" title="Fight timeline">
-        <p className="muted">
-          Elapsed seconds along the track, the in-game countdown under them. Hatched marks are
-          unverified claims.
-        </p>
-        <QueryResult query={fights} resource="fight events">
-          {(rows) => {
-            const shown = rows.filter((e) => e.event !== boss.lengthEvent);
-            return shown.length ? (
-              <FightTimeline events={shown} sources={sources} length={length} />
-            ) : (
-              <EmptyState>No fight events recorded yet.</EmptyState>
-            );
-          }}
-        </QueryResult>
-      </Section>
+      <TocLayout items={TOC}>
+        <Section part={PARTS.timeline}>
+          <p className="muted">
+            Elapsed seconds along the track, the in-game countdown under them. Hatched marks are
+            unverified claims.
+          </p>
+          <QueryResult query={fights} resource="fight events">
+            {(rows) => {
+              const shown = rows.filter((e) => e.event !== boss.lengthEvent);
+              return shown.length ? (
+                <FightTimeline events={shown} sources={sources} length={length} />
+              ) : (
+                <EmptyState>No fight events recorded yet.</EmptyState>
+              );
+            }}
+          </QueryResult>
+        </Section>
 
-      <Section id="boss-survival" title="Survival">
-        <QueryResult query={mechanics} resource="mechanics">
-          {(list) => (
-            <Survival
-              boss={boss}
-              events={events}
-              mechanics={list}
-              length={length}
-              sources={sources}
-            />
-          )}
-        </QueryResult>
-      </Section>
-
-      <Section id="boss-buffs" title="Buffs by star">
-        <QueryResult query={buffs} resource="buff values">
-          {(rows) => (
-            <BuffTable
-              rows={rows}
-              buffFormula={byTopic(mechs, boss.topics.buffFormula)}
-              debuffFormula={byTopic(mechs, boss.topics.debuffFormula)}
-              sources={sources}
-            />
-          )}
-        </QueryResult>
-      </Section>
-
-      <Section id="boss-run" title="What to run">
-        <QueryResult query={runes} resource="rune builds">
-          {(builds) => (
-            <WhatToRun
-              boss={boss}
-              builds={builds.filter((b) => b.decks.includes(boss.deck))}
-              haste={byTopic(mechs, boss.topics.haste)}
-              debufferBuffs={debufferBuffs.data ?? []}
-              sources={sources}
-            />
-          )}
-        </QueryResult>
-        <QueryResult query={gear} resource="gear recommendations">
-          {(recs) => {
-            const shown = recs.filter((g) => g.context === boss.gearContext);
-            if (!shown.length) return null;
-            const general = generalGear(shown);
-            return (
-              <>
-                <h4>Gear</h4>
-                <GearBoard gear={shown} sources={sources} />
-                {general.length ? (
-                  <ul className="clean">
-                    {general.map((g) => (
-                      <li key={g.id}>
-                        <b>{g.substats}</b> {g.why ? <span className="muted">{g.why}</span> : null}{" "}
-                        <SourceChips ids={g.sources} sources={sources} />
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </>
-            );
-          }}
-        </QueryResult>
-      </Section>
-
-      <Section id="boss-atk" title="ATK-order check">
-        <QueryResult query={decks} resource="decks">
-          {(list) => {
-            const deck = list.find((d) => d.id === boss.deck);
-            return deck ? (
-              <AtkCheck
+        <Section part={PARTS.survival}>
+          <QueryResult query={mechanics} resource="mechanics">
+            {(list) => (
+              <Survival
                 boss={boss}
-                deck={deck}
-                petNotes={byTopic(mechs, boss.topics.atkPet)}
+                events={events}
+                mechanics={list}
+                length={length}
                 sources={sources}
               />
-            ) : (
-              <EmptyState>The Cherry deck isn't recorded yet.</EmptyState>
-            );
-          }}
-        </QueryResult>
-      </Section>
+            )}
+          </QueryResult>
+        </Section>
+
+        <Section part={PARTS.buffs}>
+          <QueryResult query={buffs} resource="buff values">
+            {(rows) => (
+              <BuffTable
+                rows={rows}
+                buffFormula={byTopic(mechs, boss.topics.buffFormula)}
+                debuffFormula={byTopic(mechs, boss.topics.debuffFormula)}
+                sources={sources}
+              />
+            )}
+          </QueryResult>
+        </Section>
+
+        <Section part={PARTS.run}>
+          <QueryResult query={runes} resource="rune builds">
+            {(builds) => (
+              <WhatToRun
+                boss={boss}
+                builds={builds.filter((b) => b.decks.includes(boss.deck))}
+                haste={byTopic(mechs, boss.topics.haste)}
+                debufferBuffs={debufferBuffs.data ?? []}
+                sources={sources}
+              />
+            )}
+          </QueryResult>
+          <QueryResult query={gear} resource="gear recommendations">
+            {(recs) => {
+              const shown = recs.filter((g) => g.context === boss.gearContext);
+              if (!shown.length) return null;
+              const general = generalGear(shown);
+              return (
+                <>
+                  <h4>Gear</h4>
+                  <GearBoard gear={shown} sources={sources} />
+                  {general.length ? (
+                    <ul className="clean">
+                      {general.map((g) => (
+                        <li key={g.id}>
+                          <b>{g.substats}</b>{" "}
+                          {g.why ? <span className="muted">{g.why}</span> : null}{" "}
+                          <SourceChips ids={g.sources} sources={sources} />
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </>
+              );
+            }}
+          </QueryResult>
+        </Section>
+
+        <Section part={PARTS.atk}>
+          <QueryResult query={decks} resource="decks">
+            {(list) => {
+              const deck = list.find((d) => d.id === boss.deck);
+              return deck ? (
+                <AtkCheck
+                  boss={boss}
+                  deck={deck}
+                  petNotes={byTopic(mechs, boss.topics.atkPet)}
+                  sources={sources}
+                />
+              ) : (
+                <EmptyState>The Cherry deck isn't recorded yet.</EmptyState>
+              );
+            }}
+          </QueryResult>
+        </Section>
+      </TocLayout>
     </>
   );
 }

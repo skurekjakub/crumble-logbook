@@ -55,7 +55,12 @@ export function RuneCard({ build, sources, headingLevel, deckName, children }: R
         </div>
       ) : null}
       {deckName && build.decks.length ? (
-        <div className="rune-decks muted">{build.decks.map(deckName).join(", ")}</div>
+        // One item per deck: a deck's own name can hold a comma ("Cherry deck, Herb version").
+        <ul className="rune-decks" aria-label="Decks">
+          {build.decks.map((id) => (
+            <li key={id}>{deckName(id)}</li>
+          ))}
+        </ul>
       ) : null}
       {children}
       <SourceChips ids={build.sources} sources={sources} />

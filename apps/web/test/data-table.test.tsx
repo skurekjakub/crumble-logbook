@@ -63,6 +63,18 @@ describe("DataTable", () => {
     expect(screen.getByText("pet")).toHaveClass("n");
   });
 
+  it("scrolls on a phone by default, and labels each cell with its column when stacked", () => {
+    const { unmount } = render(<DataTable columns={COLUMNS} rows={ROWS} rowKey={(r) => r.kr} />);
+    expect(screen.getByRole("table")).toHaveClass("scroll");
+    unmount();
+    render(<DataTable columns={COLUMNS} rows={ROWS} rowKey={(r) => r.kr} layout="stack" />);
+    expect(screen.getByRole("table")).toHaveClass("stack");
+    expect(screen.getAllByRole("columnheader")).toHaveLength(3);
+    expect(screen.getByText("Octo Wasabi")).toHaveAttribute("data-label", "English");
+    expect(screen.getByText("pet")).toHaveAttribute("data-label", "Kind");
+    expect(bodyRows()[2]).toEqual(["와사비문어", "Octo Wasabi", "pet"]);
+  });
+
   it("narrows rows as the filter changes", () => {
     render(<Harness />);
     const box = screen.getByRole("searchbox", { name: "Search Korean or English" });

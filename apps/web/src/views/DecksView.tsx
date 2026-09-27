@@ -15,6 +15,7 @@ import { Lineup, LineupLegend } from "../components/Lineup";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
+import { TocLayout } from "../components/TocLayout";
 import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
 
@@ -43,19 +44,22 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
     ...(cookies.some((c) => c.slot)
       ? [{ header: "Slot", cell: (c: DeckCookie) => c.slot ?? "–", className: "n" }]
       : []),
-    { header: "Level", cell: levelText, className: "n" },
+    { header: "Level", cell: levelText, className: "mono" },
     ...(cookies.some((c) => c.stars)
       ? [{ header: "Stars", cell: (c: DeckCookie) => c.stars || "–" }]
       : []),
-    { header: "Why", cell: (c) => c.why },
+    { header: "Why", cell: (c) => c.why, className: "wide" },
   ];
   return (
     <details className="levels" open>
       <summary className="label">Levels and why</summary>
-      <DataTable rows={cookies} rowKey={(c) => c.id} columns={columns} />
+      <DataTable rows={cookies} rowKey={(c) => c.id} columns={columns} layout="stack" />
     </details>
   );
 }
+
+/** A deck card's DOM id, which the "On this page" list links to. */
+const deckId = (d: Pick<Deck, "id">) => `deck-${d.id}`;
 
 /** A bullet list, or null when there are no items (so {@link Kv} drops the row). */
 function bullets(items: readonly string[]) {
@@ -89,7 +93,7 @@ function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceIndex }) {
     : null;
 
   return (
-    <article className="card" id={`deck-${d.id}`}>
+    <article className="card" id={deckId(d)}>
       <div className="card-head">
         <div>
           <h3>
@@ -126,7 +130,8 @@ function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceIndex }) {
 
 /**
  * A mode's decks, each as a card, under the mode's heading and the slot
- * legend; "No decks recorded yet." when there are none.
+ * legend, with an "On this page" list linking to each card; "No decks
+ * recorded yet." when there are none.
  *
  * @param mode - the mode whose decks and copy the view shows
  */
@@ -139,10 +144,12 @@ export function DecksView({ mode }: { mode: ModeSection }) {
         rows.length ? (
           <>
             <ViewHeader title={mode.copy.decks?.title ?? "Decks"} lede={mode.copy.decks?.lede} />
-            <LineupLegend />
-            {rows.map((d) => (
-              <DeckCard key={d.id} deck={d} sources={sources} />
-            ))}
+            <TocLayout items={rows.map((d) => ({ id: deckId(d), label: d.nameEn }))}>
+              <LineupLegend />
+              {rows.map((d) => (
+                <DeckCard key={d.id} deck={d} sources={sources} />
+              ))}
+            </TocLayout>
           </>
         ) : (
           <EmptyState>No decks recorded yet.</EmptyState>

@@ -401,6 +401,24 @@ describe("Piñata boss view", () => {
     expect(await within(score).findByRole("link", { name: "crumbgg:rankings-s5" })).toBeVisible();
   });
 
+  it("links every section from the On this page list, in page order", async () => {
+    await renderRoute(PATH, FULL);
+    const toc = await screen.findByRole("navigation", { name: "On this page" });
+    const links = within(toc).getAllByRole("link");
+    expect(links.map((a) => a.textContent)).toEqual([
+      "Fight timeline",
+      "Survival",
+      "Buffs by star",
+      "What to run",
+      "ATK-order check",
+    ]);
+    for (const a of links) {
+      const target = document.querySelector(a.getAttribute("href")!);
+      expect(target, a.textContent!).toHaveTextContent(a.textContent!);
+      expect(section(a.textContent!)).toContainElement(target as HTMLElement);
+    }
+  });
+
   it("states no element, weakness or scoring the data doesn't hold", async () => {
     await renderRoute(PATH, {
       ...FULL,

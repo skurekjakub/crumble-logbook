@@ -33,7 +33,7 @@ describe("sources view", () => {
     expect(rows.map((r) => r[0])).toEqual(["Naver 43653", "DC 76135", "crumbgg:rankings-s5"]);
     expect(rows[1]).toEqual([
       "DC 76135",
-      "1T 인증1T screenshot",
+      "1T 인증 1T screenshot",
       "2026-09-20",
       "3",
       "research/001-guild-conquest-meta/evidence/03-dc-posts/76135.md",

@@ -128,6 +128,27 @@ describe("scores view", () => {
     );
   });
 
+  it("links the chart, RNG factors, posted scores and leaderboard from the On this page list", async () => {
+    await renderRoute("/conquest/scores", API);
+    await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(3));
+    const toc = await screen.findByRole("navigation", { name: "On this page" });
+    await waitFor(() =>
+      expect(
+        within(toc)
+          .getAllByRole("link")
+          .map((a) => a.textContent),
+      ).toEqual(["Score chart", "RNG factors", "Posted scores", "crumb.gg leaderboard"]),
+    );
+    const target = (label: string) =>
+      document.querySelector(within(toc).getByRole("link", { name: label }).getAttribute("href")!);
+    expect(target("Score chart")).toContainElement(screen.getByRole("combobox", { name: "Deck" }));
+    expect(target("RNG factors")).toContainElement(
+      screen.getByRole("heading", { name: "Who Pomegranate's beams hit" }),
+    );
+    expect(target("Posted scores")).toBe(scoresTable());
+    expect(target("crumb.gg leaderboard")).toBe(rankingsRegion());
+  });
+
   it("colours each deck by its display order, whatever the filter", async () => {
     await renderRoute("/conquest/scores?deck=meso", {
       ...API,

@@ -685,7 +685,7 @@ describe("PvP builds, mechanics and timeline", () => {
     await renderAt("/arena/runes", ARENA);
     expect(await panel().findByText("Rank behind Milk for the first beam.")).toBeVisible();
     expect(
-      (await panel().findAllByText("Rye one-carry deck", { selector: ".rune-decks" })).length,
+      (await panel().findAllByText("Rye one-carry deck", { selector: ".rune-decks li" })).length,
     ).toBeGreaterThan(0);
   });
 
