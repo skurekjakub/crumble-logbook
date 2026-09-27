@@ -1071,6 +1071,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/16-top-players/dc/69856.md"
    },
    {
+    "id": "dc:70056",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/70056",
+    "title": "시발 기갱페이스였는데",
+    "titleEn": "Damn, it was on record pace (the author's 다발 2 / 다발 3 retry checklist is in the comments)",
+    "date": "2026-09-18",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "Milk dies at the 30 s slam after ~1000 attempts. In the comment thread the author gives concrete diagnostic checkpoints top players use to judge whether a run's positioning/buff-landing is good: whether Brightseeker and Macaron keep receiving every buff to the end, and elapsed-time deadlines for Pomegranate's beam-count upgrades.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/70056.md"
+   },
+   {
     "id": "dc:70123",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/70123",
@@ -8425,7 +8437,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Her ATK buff lands on Milk, which raises Milk's buff for everyone. With Tiger Lily, Pomegranate fires six beams, so Cheesecake is the sixth recipient. Levelling her down lets Pinot or Dark Choco, who get nothing from skill amp, steal that beam. Runes are all skill amp."
+    "why": "Her ATK buff lands on Milk, which raises Milk's buff for everyone, and her skill grants 다발 2, which takes Pomegranate from 3 beams to 5. When Pomegranate holds Tiger Lily's 다발 3 instead, she fires six, and Cheesecake is the sixth recipient. Levelling her down lets Pinot or Dark Choco, who get nothing from skill amp, steal that beam. Runes are all skill amp."
    },
    {
     "id": 7,
@@ -8455,7 +8467,7 @@
     "level": "1",
     "levelRule": null,
     "stars": null,
-    "why": "Kept Lv.1 so she never takes a beam. She's there for her multi-hit (다발) synergy: +3 lets Pomegranate fire 6 beams instead of 5. If the team wipes at the 30 s slam, swap her for Herb."
+    "why": "Kept Lv.1 so she never takes a beam. She's there for the 다발 3 her mount grants to nearby allies: Pomegranate holding it fires 6 beams instead of the 5 from Cheesecake's 다발 2. Pomegranate has to be near her when she mounts, so skill-haste runes let her mount before Pomegranate's second cast. If the team wipes at the 30 s slam, swap her for Herb (+2)."
    },
    {
     "id": 10,
@@ -24239,7 +24251,7 @@
    {
     "id": 1,
     "title": "Pomegranate's beams (빨대)",
-    "body": "Her skill gives +69% skill amp for 9 s through beams. The beam count scales with multi-hit (다발) synergy: 3 at the start, 5 with Herb, 6 with Tiger Lily. Beams go to the highest-ATK allies (ATK, not power) and never to herself. Her level and ATK don't change the buff.",
+    "body": "Her skill gives +69% skill amp for 9 s through beams. The beam count is 3 plus the Volley (다발) level she holds when she casts: 3 beams with none, 5 with 다발 2 (from Cheesecake or Herb), 6 with 다발 3 (from Tiger Lily). Levels don't add up; nobody reports more than 6. Volley is granted by ally skills, per the game's skill texts: Cheesecake's orbiting letters, Tiger Lily's mount (only to allies near her, so Pomegranate misses it when they stand apart) and Herb's heal. The top Cherry-deck player's retry checklist: Pomegranate on 다발 2 before 45 s left and on 다발 3 before 27 s left; a run that misses 다발 3 stays on 5 beams. Whether a later Cheesecake grant replaces a held 다발 3 is not in any source. Beams go to the highest-ATK allies (ATK, not power) and never to herself. Her level and ATK don't change the buff.",
     "confidence": "high"
    },
    {
@@ -26095,1175 +26107,1205 @@
    {
     "id": 144,
     "entity": "mechanic",
+    "entityId": "1",
+    "sourceId": "dc:53804"
+   },
+   {
+    "id": 145,
+    "entity": "mechanic",
+    "entityId": "1",
+    "sourceId": "dc:52639"
+   },
+   {
+    "id": 146,
+    "entity": "mechanic",
+    "entityId": "1",
+    "sourceId": "dc:70056"
+   },
+   {
+    "id": 147,
+    "entity": "mechanic",
+    "entityId": "1",
+    "sourceId": "dc:69724"
+   },
+   {
+    "id": 148,
+    "entity": "mechanic",
+    "entityId": "1",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 149,
+    "entity": "mechanic",
     "entityId": "2",
     "sourceId": "nv:36231"
    },
    {
-    "id": 145,
+    "id": 150,
     "entity": "mechanic",
     "entityId": "2",
     "sourceId": "dc:53977"
    },
    {
-    "id": 146,
+    "id": 151,
     "entity": "mechanic",
     "entityId": "2",
     "sourceId": "dc:71135"
    },
    {
-    "id": 147,
+    "id": 152,
     "entity": "mechanic",
     "entityId": "2",
     "sourceId": "dc:76142"
    },
    {
-    "id": 148,
+    "id": 153,
     "entity": "mechanic",
     "entityId": "3",
     "sourceId": "dc:55485"
    },
    {
-    "id": 149,
+    "id": 154,
     "entity": "mechanic",
     "entityId": "4",
     "sourceId": "dc:31349"
    },
    {
-    "id": 150,
+    "id": 155,
     "entity": "mechanic",
     "entityId": "4",
     "sourceId": "dc:75589"
    },
    {
-    "id": 151,
+    "id": 156,
     "entity": "mechanic",
     "entityId": "4",
     "sourceId": "dc:75854"
    },
    {
-    "id": 152,
+    "id": 157,
     "entity": "mechanic",
     "entityId": "5",
     "sourceId": "dc:31305"
    },
    {
-    "id": 153,
+    "id": 158,
     "entity": "mechanic",
     "entityId": "6",
     "sourceId": "nv:44761"
    },
    {
-    "id": 154,
+    "id": 159,
     "entity": "mechanic",
     "entityId": "6",
     "sourceId": "dc:75934"
    },
    {
-    "id": 155,
+    "id": 160,
     "entity": "mechanic",
     "entityId": "7",
     "sourceId": "dc:52401"
    },
    {
-    "id": 156,
+    "id": 161,
     "entity": "mechanic",
     "entityId": "7",
     "sourceId": "dc:75400"
    },
    {
-    "id": 157,
+    "id": 162,
     "entity": "mechanic",
     "entityId": "8",
     "sourceId": "dc:46452"
    },
    {
-    "id": 158,
-    "entity": "mechanic",
-    "entityId": "8",
-    "sourceId": "dc:71135"
-   },
-   {
-    "id": 159,
-    "entity": "mechanic",
-    "entityId": "9",
-    "sourceId": "dc:48412"
-   },
-   {
-    "id": 160,
-    "entity": "mechanic",
-    "entityId": "9",
-    "sourceId": "nv:43653"
-   },
-   {
-    "id": 161,
-    "entity": "mechanic",
-    "entityId": "9",
-    "sourceId": "nv:44761"
-   },
-   {
-    "id": 162,
-    "entity": "mechanic",
-    "entityId": "9",
-    "sourceId": "dc:71381"
-   },
-   {
     "id": 163,
     "entity": "mechanic",
-    "entityId": "10",
+    "entityId": "8",
     "sourceId": "dc:71135"
    },
    {
     "id": 164,
     "entity": "mechanic",
+    "entityId": "9",
+    "sourceId": "dc:48412"
+   },
+   {
+    "id": 165,
+    "entity": "mechanic",
+    "entityId": "9",
+    "sourceId": "nv:43653"
+   },
+   {
+    "id": 166,
+    "entity": "mechanic",
+    "entityId": "9",
+    "sourceId": "nv:44761"
+   },
+   {
+    "id": 167,
+    "entity": "mechanic",
+    "entityId": "9",
+    "sourceId": "dc:71381"
+   },
+   {
+    "id": 168,
+    "entity": "mechanic",
+    "entityId": "10",
+    "sourceId": "dc:71135"
+   },
+   {
+    "id": 169,
+    "entity": "mechanic",
     "entityId": "10",
     "sourceId": "dc:75400"
    },
    {
-    "id": 165,
+    "id": 170,
     "entity": "mechanic",
     "entityId": "10",
     "sourceId": "dc:76135"
    },
    {
-    "id": 166,
+    "id": 171,
     "entity": "mechanic",
     "entityId": "10",
     "sourceId": "web:yt-yeICL4cCLZU"
    },
    {
-    "id": 167,
+    "id": 172,
     "entity": "mechanic",
     "entityId": "11",
     "sourceId": "web:crumbgg:patches"
    },
    {
-    "id": 168,
+    "id": 173,
     "entity": "mechanic",
     "entityId": "11",
     "sourceId": "nv:27449"
    },
    {
-    "id": 169,
+    "id": 174,
     "entity": "mechanic",
     "entityId": "11",
     "sourceId": "nv:43653"
    },
    {
-    "id": 170,
+    "id": 175,
     "entity": "mechanic",
     "entityId": "11",
     "sourceId": "dc:75400"
    },
    {
-    "id": 171,
+    "id": 176,
     "entity": "mechanic",
     "entityId": "12",
     "sourceId": "dc:74801"
    },
    {
-    "id": 172,
+    "id": 177,
     "entity": "mechanic",
     "entityId": "12",
     "sourceId": "dc:69856"
    },
    {
-    "id": 173,
+    "id": 178,
     "entity": "mechanic",
     "entityId": "12",
     "sourceId": "dc:76583"
    },
    {
-    "id": 174,
+    "id": 179,
     "entity": "mechanic",
     "entityId": "13",
     "sourceId": "web:37730"
    },
    {
-    "id": 175,
+    "id": 180,
     "entity": "mechanic",
     "entityId": "13",
     "sourceId": "web:yt-yeICL4cCLZU"
    },
    {
-    "id": 176,
+    "id": 181,
     "entity": "mechanic",
     "entityId": "14",
     "sourceId": "web:16132"
    },
    {
-    "id": 177,
+    "id": 182,
     "entity": "mechanic",
     "entityId": "15",
     "sourceId": "dc:76333"
    },
    {
-    "id": 178,
+    "id": 183,
     "entity": "mechanic",
     "entityId": "16",
     "sourceId": "dc:69368"
    },
    {
-    "id": 179,
+    "id": 184,
     "entity": "mechanic",
     "entityId": "16",
     "sourceId": "dc:71237"
    },
    {
-    "id": 180,
+    "id": 185,
     "entity": "mechanic",
     "entityId": "16",
     "sourceId": "dc:74796"
    },
    {
-    "id": 181,
+    "id": 186,
     "entity": "mechanic",
     "entityId": "17",
     "sourceId": "dc:66636"
    },
    {
-    "id": 182,
+    "id": 187,
     "entity": "mechanic",
     "entityId": "17",
     "sourceId": "dc:71105"
    },
    {
-    "id": 183,
+    "id": 188,
     "entity": "mechanic",
     "entityId": "17",
     "sourceId": "dc:76652"
    },
    {
-    "id": 184,
+    "id": 189,
     "entity": "mechanic",
     "entityId": "18",
     "sourceId": "dc:64661"
    },
    {
-    "id": 185,
+    "id": 190,
     "entity": "mechanic",
     "entityId": "18",
     "sourceId": "nv:43011"
    },
    {
-    "id": 186,
+    "id": 191,
     "entity": "rng_factor",
     "entityId": "1",
     "sourceId": "dc:75400"
    },
    {
-    "id": 187,
+    "id": 192,
     "entity": "rng_factor",
     "entityId": "1",
     "sourceId": "dc:76135"
    },
    {
-    "id": 188,
+    "id": 193,
     "entity": "rng_factor",
     "entityId": "1",
     "sourceId": "nv:43011"
    },
    {
-    "id": 189,
+    "id": 194,
     "entity": "rng_factor",
     "entityId": "1",
     "sourceId": "dc:69368"
    },
    {
-    "id": 190,
+    "id": 195,
     "entity": "rng_factor",
     "entityId": "2",
     "sourceId": "dc:60340"
    },
    {
-    "id": 191,
+    "id": 196,
     "entity": "rng_factor",
     "entityId": "2",
     "sourceId": "dc:69368"
    },
    {
-    "id": 192,
+    "id": 197,
     "entity": "rng_factor",
     "entityId": "2",
     "sourceId": "dc:71105"
    },
    {
-    "id": 193,
+    "id": 198,
     "entity": "rng_factor",
     "entityId": "2",
     "sourceId": "dc:76716"
    },
    {
-    "id": 194,
+    "id": 199,
     "entity": "rng_factor",
     "entityId": "3",
     "sourceId": "dc:75922"
    },
    {
-    "id": 195,
+    "id": 200,
     "entity": "rng_factor",
     "entityId": "3",
     "sourceId": "dc:74829"
    },
    {
-    "id": 196,
+    "id": 201,
     "entity": "rng_factor",
     "entityId": "3",
     "sourceId": "dc:76545"
    },
    {
-    "id": 197,
+    "id": 202,
     "entity": "rng_factor",
     "entityId": "3",
     "sourceId": "dc:75400"
    },
    {
-    "id": 198,
+    "id": 203,
     "entity": "rng_factor",
     "entityId": "4",
     "sourceId": "nv:43653"
    },
    {
-    "id": 199,
+    "id": 204,
     "entity": "rng_factor",
     "entityId": "4",
     "sourceId": "nv:44761"
    },
    {
-    "id": 200,
+    "id": 205,
     "entity": "rng_factor",
     "entityId": "4",
     "sourceId": "nv:46283"
    },
    {
-    "id": 201,
+    "id": 206,
     "entity": "rng_factor",
     "entityId": "4",
     "sourceId": "dc:76583"
    },
    {
-    "id": 202,
+    "id": 207,
     "entity": "timeline_event",
     "entityId": "1",
     "sourceId": "web:16132"
    },
    {
-    "id": 203,
+    "id": 208,
     "entity": "timeline_event",
     "entityId": "2",
     "sourceId": "nv:25475"
    },
    {
-    "id": 204,
+    "id": 209,
     "entity": "timeline_event",
     "entityId": "2",
     "sourceId": "dc:46452"
    },
    {
-    "id": 205,
+    "id": 210,
     "entity": "timeline_event",
     "entityId": "2",
     "sourceId": "nv:26733"
    },
    {
-    "id": 206,
+    "id": 211,
     "entity": "timeline_event",
     "entityId": "3",
     "sourceId": "nv:27449"
    },
    {
-    "id": 207,
+    "id": 212,
     "entity": "timeline_event",
     "entityId": "3",
     "sourceId": "nv:27682"
    },
    {
-    "id": 208,
+    "id": 213,
     "entity": "timeline_event",
     "entityId": "4",
     "sourceId": "nv:29690"
    },
    {
-    "id": 209,
+    "id": 214,
     "entity": "timeline_event",
     "entityId": "5",
     "sourceId": "dc:55485"
    },
    {
-    "id": 210,
+    "id": 215,
     "entity": "timeline_event",
     "entityId": "6",
     "sourceId": "dc:60340"
    },
    {
-    "id": 211,
+    "id": 216,
     "entity": "timeline_event",
     "entityId": "7",
     "sourceId": "nv:36558"
    },
    {
-    "id": 212,
+    "id": 217,
     "entity": "timeline_event",
     "entityId": "8",
     "sourceId": "web:37730"
    },
    {
-    "id": 213,
+    "id": 218,
     "entity": "timeline_event",
     "entityId": "9",
     "sourceId": "web:yt-IkY9i5s7SOA"
    },
    {
-    "id": 214,
+    "id": 219,
     "entity": "timeline_event",
     "entityId": "10",
     "sourceId": "dc:69368"
    },
    {
-    "id": 215,
+    "id": 220,
     "entity": "timeline_event",
     "entityId": "11",
     "sourceId": "nv:43011"
    },
    {
-    "id": 216,
+    "id": 221,
     "entity": "timeline_event",
     "entityId": "12",
     "sourceId": "nv:43653"
    },
    {
-    "id": 217,
+    "id": 222,
     "entity": "timeline_event",
     "entityId": "12",
     "sourceId": "dc:71135"
    },
    {
-    "id": 218,
+    "id": 223,
     "entity": "timeline_event",
     "entityId": "13",
     "sourceId": "nv:44761"
    },
    {
-    "id": 219,
+    "id": 224,
     "entity": "timeline_event",
     "entityId": "14",
     "sourceId": "nv:45362"
    },
    {
-    "id": 220,
+    "id": 225,
     "entity": "timeline_event",
     "entityId": "14",
     "sourceId": "dc:75400"
    },
    {
-    "id": 221,
+    "id": 226,
     "entity": "timeline_event",
     "entityId": "14",
     "sourceId": "dc:73113"
    },
    {
-    "id": 222,
+    "id": 227,
     "entity": "timeline_event",
     "entityId": "15",
     "sourceId": "dc:75400"
    },
    {
-    "id": 223,
+    "id": 228,
     "entity": "timeline_event",
     "entityId": "15",
     "sourceId": "nv:46283"
    },
    {
-    "id": 224,
+    "id": 229,
     "entity": "timeline_event",
     "entityId": "16",
     "sourceId": "web:crumbgg-join"
    },
    {
-    "id": 225,
+    "id": 230,
     "entity": "timeline_event",
     "entityId": "16",
     "sourceId": "dc:74801"
    },
    {
-    "id": 226,
+    "id": 231,
     "entity": "timeline_event",
     "entityId": "17",
     "sourceId": "dc:75462"
    },
    {
-    "id": 227,
+    "id": 232,
     "entity": "timeline_event",
     "entityId": "18",
     "sourceId": "dc:76135"
    },
    {
-    "id": 228,
+    "id": 233,
     "entity": "timeline_event",
     "entityId": "19",
     "sourceId": "dc:76235"
    },
    {
-    "id": 229,
+    "id": 234,
     "entity": "timeline_event",
     "entityId": "20",
     "sourceId": "web:crumbgg-s5"
    },
    {
-    "id": 230,
+    "id": 235,
     "entity": "timeline_event",
     "entityId": "20",
     "sourceId": "web:crumbgg:rankings-s1"
    },
    {
-    "id": 231,
+    "id": 236,
     "entity": "timeline_event",
     "entityId": "20",
     "sourceId": "web:crumbgg:rankings-s4"
    },
    {
-    "id": 232,
+    "id": 237,
     "entity": "timeline_event",
     "entityId": "20",
     "sourceId": "web:crumbgg:rankings-s5"
    },
    {
-    "id": 233,
+    "id": 238,
     "entity": "takeaway",
     "entityId": "1",
     "sourceId": "nv:43653"
    },
    {
-    "id": 234,
+    "id": 239,
     "entity": "takeaway",
     "entityId": "1",
     "sourceId": "dc:76135"
    },
    {
-    "id": 235,
+    "id": 240,
     "entity": "takeaway",
     "entityId": "1",
     "sourceId": "dc:71135"
    },
    {
-    "id": 236,
+    "id": 241,
     "entity": "takeaway",
     "entityId": "2",
     "sourceId": "dc:75400"
    },
    {
-    "id": 237,
+    "id": 242,
     "entity": "takeaway",
     "entityId": "2",
     "sourceId": "dc:76135"
    },
    {
-    "id": 238,
+    "id": 243,
     "entity": "takeaway",
     "entityId": "2",
     "sourceId": "nv:42630"
    },
    {
-    "id": 239,
+    "id": 244,
     "entity": "takeaway",
     "entityId": "2",
     "sourceId": "nv:29690"
    },
    {
-    "id": 240,
+    "id": 245,
     "entity": "takeaway",
     "entityId": "3",
     "sourceId": "dc:76135"
    },
    {
-    "id": 241,
-    "entity": "takeaway",
-    "entityId": "4",
-    "sourceId": "nv:43653"
-   },
-   {
-    "id": 242,
-    "entity": "takeaway",
-    "entityId": "4",
-    "sourceId": "dc:71135"
-   },
-   {
-    "id": 243,
-    "entity": "takeaway",
-    "entityId": "4",
-    "sourceId": "nv:44761"
-   },
-   {
-    "id": 244,
-    "entity": "takeaway",
-    "entityId": "5",
-    "sourceId": "dc:75854"
-   },
-   {
-    "id": 245,
-    "entity": "takeaway",
-    "entityId": "5",
-    "sourceId": "dc:76218"
-   },
-   {
     "id": 246,
     "entity": "takeaway",
-    "entityId": "5",
+    "entityId": "4",
     "sourceId": "nv:43653"
    },
    {
     "id": 247,
     "entity": "takeaway",
-    "entityId": "6",
-    "sourceId": "dc:76235"
+    "entityId": "4",
+    "sourceId": "dc:71135"
    },
    {
     "id": 248,
     "entity": "takeaway",
-    "entityId": "6",
-    "sourceId": "dc:75462"
+    "entityId": "4",
+    "sourceId": "nv:44761"
    },
    {
     "id": 249,
     "entity": "takeaway",
-    "entityId": "6",
-    "sourceId": "dc:76583"
+    "entityId": "5",
+    "sourceId": "dc:75854"
    },
    {
     "id": 250,
     "entity": "takeaway",
-    "entityId": "6",
-    "sourceId": "dc:76333"
+    "entityId": "5",
+    "sourceId": "dc:76218"
    },
    {
     "id": 251,
     "entity": "takeaway",
-    "entityId": "6",
-    "sourceId": "dc:75176"
+    "entityId": "5",
+    "sourceId": "nv:43653"
    },
    {
     "id": 252,
     "entity": "takeaway",
     "entityId": "6",
-    "sourceId": "web:crumbgg-join"
+    "sourceId": "dc:76235"
    },
    {
     "id": 253,
+    "entity": "takeaway",
+    "entityId": "6",
+    "sourceId": "dc:75462"
+   },
+   {
+    "id": 254,
+    "entity": "takeaway",
+    "entityId": "6",
+    "sourceId": "dc:76583"
+   },
+   {
+    "id": 255,
+    "entity": "takeaway",
+    "entityId": "6",
+    "sourceId": "dc:76333"
+   },
+   {
+    "id": 256,
+    "entity": "takeaway",
+    "entityId": "6",
+    "sourceId": "dc:75176"
+   },
+   {
+    "id": 257,
+    "entity": "takeaway",
+    "entityId": "6",
+    "sourceId": "web:crumbgg-join"
+   },
+   {
+    "id": 258,
     "entity": "takeaway",
     "entityId": "7",
     "sourceId": "dc:74801"
    },
    {
-    "id": 254,
+    "id": 259,
     "entity": "takeaway",
     "entityId": "7",
     "sourceId": "dc:69856"
    },
    {
-    "id": 255,
+    "id": 260,
     "entity": "takeaway",
     "entityId": "7",
     "sourceId": "dc:76583"
    },
    {
-    "id": 256,
+    "id": 261,
     "entity": "takeaway",
     "entityId": "7",
     "sourceId": "web:yt-IkY9i5s7SOA"
    },
    {
-    "id": 257,
+    "id": 262,
     "entity": "takeaway",
     "entityId": "7",
     "sourceId": "web:crumbgg:rankings-s4"
    },
    {
-    "id": 258,
+    "id": 263,
     "entity": "takeaway",
     "entityId": "8",
     "sourceId": "web:crumbgg-join"
    },
    {
-    "id": 259,
+    "id": 264,
     "entity": "takeaway",
     "entityId": "8",
     "sourceId": "web:crumbgg:power-leaderboard"
    },
    {
-    "id": 260,
+    "id": 265,
     "entity": "takeaway",
     "entityId": "9",
     "sourceId": "dc:74815"
    },
    {
-    "id": 261,
+    "id": 266,
     "entity": "takeaway",
     "entityId": "9",
     "sourceId": "dc:75400"
    },
    {
-    "id": 262,
+    "id": 267,
     "entity": "takeaway",
     "entityId": "9",
     "sourceId": "dc:76545"
    },
    {
-    "id": 263,
+    "id": 268,
     "entity": "fight_event",
     "entityId": "1",
     "sourceId": "web:crumbgg:dps"
    },
    {
-    "id": 264,
+    "id": 269,
     "entity": "fight_event",
     "entityId": "1",
     "sourceId": "dc:71383"
    },
    {
-    "id": 265,
+    "id": 270,
     "entity": "fight_event",
     "entityId": "1",
     "sourceId": "dc:69724"
    },
    {
-    "id": 266,
+    "id": 271,
     "entity": "fight_event",
     "entityId": "2",
     "sourceId": "dc:72759"
    },
    {
-    "id": 267,
+    "id": 272,
     "entity": "fight_event",
     "entityId": "2",
     "sourceId": "dc:74804"
    },
    {
-    "id": 268,
+    "id": 273,
     "entity": "fight_event",
     "entityId": "3",
     "sourceId": "dc:71383"
    },
    {
-    "id": 269,
+    "id": 274,
     "entity": "fight_event",
     "entityId": "3",
     "sourceId": "dc:67285"
    },
    {
-    "id": 270,
+    "id": 275,
     "entity": "fight_event",
     "entityId": "4",
     "sourceId": "dc:71383"
    },
    {
-    "id": 271,
+    "id": 276,
     "entity": "fight_event",
     "entityId": "5",
     "sourceId": "dc:71383"
    },
    {
-    "id": 272,
+    "id": 277,
     "entity": "fight_event",
     "entityId": "6",
     "sourceId": "dc:71219"
    },
    {
-    "id": 273,
+    "id": 278,
     "entity": "fight_event",
     "entityId": "6",
     "sourceId": "dc:67659"
    },
    {
-    "id": 274,
+    "id": 279,
     "entity": "fight_event",
     "entityId": "6",
     "sourceId": "dc:53667"
    },
    {
-    "id": 275,
+    "id": 280,
     "entity": "fight_event",
     "entityId": "7",
     "sourceId": "dc:70607"
    },
    {
-    "id": 276,
+    "id": 281,
     "entity": "fight_event",
     "entityId": "7",
     "sourceId": "dc:70625"
    },
    {
-    "id": 277,
+    "id": 282,
     "entity": "fight_event",
     "entityId": "7",
     "sourceId": "dc:67659"
    },
    {
-    "id": 278,
+    "id": 283,
     "entity": "fight_event",
     "entityId": "7",
     "sourceId": "dc:75547"
    },
    {
-    "id": 279,
+    "id": 284,
     "entity": "fight_event",
     "entityId": "7",
     "sourceId": "dc:70832"
    },
    {
-    "id": 280,
+    "id": 285,
     "entity": "fight_event",
     "entityId": "7",
     "sourceId": "dc:70123"
    },
    {
-    "id": 281,
+    "id": 286,
     "entity": "fight_event",
     "entityId": "7",
     "sourceId": "dc:71219"
    },
    {
-    "id": 282,
+    "id": 287,
     "entity": "fight_event",
     "entityId": "8",
     "sourceId": "dc:71383"
    },
    {
-    "id": 283,
+    "id": 288,
     "entity": "fight_event",
     "entityId": "9",
     "sourceId": "dc:74793"
    },
    {
-    "id": 284,
+    "id": 289,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:69250"
    },
    {
-    "id": 285,
+    "id": 290,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:69358"
    },
    {
-    "id": 286,
+    "id": 291,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:71028"
    },
    {
-    "id": 287,
+    "id": 292,
     "entity": "fight_event",
     "entityId": "10",
     "sourceId": "dc:76583"
    },
    {
-    "id": 288,
+    "id": 293,
     "entity": "fight_event",
     "entityId": "11",
     "sourceId": "dc:71383"
    },
    {
-    "id": 289,
+    "id": 294,
     "entity": "fight_event",
     "entityId": "12",
     "sourceId": "dc:71383"
    },
    {
-    "id": 290,
+    "id": 295,
     "entity": "fight_event",
     "entityId": "13",
     "sourceId": "dc:69201"
    },
    {
-    "id": 291,
+    "id": 296,
     "entity": "fight_event",
     "entityId": "14",
     "sourceId": "dc:71383"
    },
    {
-    "id": 292,
+    "id": 297,
     "entity": "buff_value",
     "entityId": "1",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 293,
+    "id": 298,
     "entity": "buff_value",
     "entityId": "2",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 294,
+    "id": 299,
     "entity": "buff_value",
     "entityId": "3",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 295,
+    "id": 300,
     "entity": "buff_value",
     "entityId": "4",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 296,
+    "id": 301,
     "entity": "buff_value",
     "entityId": "5",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 297,
+    "id": 302,
     "entity": "buff_value",
     "entityId": "6",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 298,
+    "id": 303,
     "entity": "buff_value",
     "entityId": "7",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 299,
+    "id": 304,
     "entity": "buff_value",
     "entityId": "8",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 300,
+    "id": 305,
     "entity": "buff_value",
     "entityId": "9",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 301,
+    "id": 306,
     "entity": "buff_value",
     "entityId": "10",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 302,
+    "id": 307,
     "entity": "buff_value",
     "entityId": "11",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 303,
+    "id": 308,
     "entity": "buff_value",
     "entityId": "12",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 304,
+    "id": 309,
     "entity": "buff_value",
     "entityId": "13",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 305,
+    "id": 310,
     "entity": "buff_value",
     "entityId": "14",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 306,
+    "id": 311,
     "entity": "buff_value",
     "entityId": "15",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 307,
+    "id": 312,
     "entity": "buff_value",
     "entityId": "16",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 308,
+    "id": 313,
     "entity": "buff_value",
     "entityId": "17",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 309,
+    "id": 314,
     "entity": "buff_value",
     "entityId": "18",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 310,
+    "id": 315,
     "entity": "buff_value",
     "entityId": "19",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 311,
+    "id": 316,
     "entity": "buff_value",
     "entityId": "20",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 312,
+    "id": 317,
     "entity": "buff_value",
     "entityId": "21",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 313,
+    "id": 318,
     "entity": "buff_value",
     "entityId": "22",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 314,
+    "id": 319,
     "entity": "buff_value",
     "entityId": "23",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 315,
+    "id": 320,
     "entity": "buff_value",
     "entityId": "24",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 316,
+    "id": 321,
     "entity": "buff_value",
     "entityId": "25",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 317,
+    "id": 322,
     "entity": "buff_value",
     "entityId": "26",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 318,
+    "id": 323,
     "entity": "buff_value",
     "entityId": "27",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 319,
+    "id": 324,
     "entity": "buff_value",
     "entityId": "28",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 320,
+    "id": 325,
     "entity": "buff_value",
     "entityId": "29",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 321,
+    "id": 326,
     "entity": "buff_value",
     "entityId": "30",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 322,
+    "id": 327,
     "entity": "buff_value",
     "entityId": "31",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 323,
+    "id": 328,
     "entity": "buff_value",
     "entityId": "32",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 324,
+    "id": 329,
     "entity": "buff_value",
     "entityId": "33",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 325,
+    "id": 330,
     "entity": "buff_value",
     "entityId": "34",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 326,
+    "id": 331,
     "entity": "buff_value",
     "entityId": "35",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 327,
+    "id": 332,
     "entity": "buff_value",
     "entityId": "36",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 328,
+    "id": 333,
     "entity": "buff_value",
     "entityId": "37",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 329,
+    "id": 334,
     "entity": "buff_value",
     "entityId": "38",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 330,
+    "id": 335,
     "entity": "buff_value",
     "entityId": "39",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 331,
+    "id": 336,
     "entity": "buff_value",
     "entityId": "40",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 332,
+    "id": 337,
     "entity": "buff_value",
     "entityId": "41",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 333,
+    "id": 338,
     "entity": "buff_value",
     "entityId": "42",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 334,
+    "id": 339,
     "entity": "buff_value",
     "entityId": "43",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 335,
+    "id": 340,
     "entity": "buff_value",
     "entityId": "44",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 336,
+    "id": 341,
     "entity": "buff_value",
     "entityId": "45",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 337,
+    "id": 342,
     "entity": "buff_value",
     "entityId": "46",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 338,
+    "id": 343,
     "entity": "buff_value",
     "entityId": "47",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
-    "id": 339,
+    "id": 344,
     "entity": "buff_value",
     "entityId": "48",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
