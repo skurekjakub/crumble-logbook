@@ -4,21 +4,25 @@ import type { AnyFilters as Filters, ApiSpec } from "../registry";
 import type { CrudEndpoints } from "../services/content";
 import { validate } from "./validate";
 
-/** What the generic CRUD router reads from a registry entry. */
-export interface CrudRouteSpec {
-  /** The request schemas. */
-  api: ApiSpec;
-  /** The list filters `GET /` accepts, when the type declares any. */
+/** A registry entry's list filters, when it declares any. */
+export interface FilteredSpec {
+  /** The list filters `GET /` accepts. */
   filters?: Filters;
 }
 
+/** What the generic CRUD router reads from a registry entry. */
+export interface CrudRouteSpec extends FilteredSpec {
+  /** The request schemas. */
+  api: ApiSpec;
+}
+
 /** The zod shape of `S`'s list query: each declared filter's schema, optional. */
-type ListShape<S extends CrudRouteSpec> = S extends { filters: infer F extends Filters }
+type ListShape<S extends FilteredSpec> = S extends { filters: infer F extends Filters }
   ? { [K in keyof F]: z.ZodOptional<F[K]["schema"]> }
   : Record<never, never>;
 
 /** The list filter values `S`'s `GET /` passes on, by name. */
-export type FilterValues<S extends CrudRouteSpec> = S extends { filters: infer F extends Filters }
+export type FilterValues<S extends FilteredSpec> = S extends { filters: infer F extends Filters }
   ? { [K in keyof F]?: string }
   : Record<never, never>;
 
@@ -27,10 +31,11 @@ export type FilterValues<S extends CrudRouteSpec> = S extends { filters: infer F
  * every filter is an optional query param validated by its own schema;
  * other params are ignored.
  *
+ * @typeParam S - the registry entry whose filters these are
  * @param filters - the declared filters, by query param name
  * @returns the `z.object` schema
  */
-export function listQuery<S extends CrudRouteSpec>(
+export function listQuery<S extends FilteredSpec>(
   filters: S["filters"],
 ): z.ZodObject<ListShape<S>> {
   const declared: Filters = filters ?? {};

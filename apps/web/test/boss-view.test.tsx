@@ -296,19 +296,19 @@ const GEAR = [
 const FULL = {
   "/api/fight-events?boss=pinata": { body: FIGHT_EVENTS },
   "/api/buff-values": { body: BUFF_VALUES },
-  "/api/mechanics": { body: MECHANICS },
-  "/api/rune-builds": { body: RUNE_BUILDS },
-  "/api/decks": { body: DECKS },
-  "/api/gear-recs": { body: GEAR },
+  "/api/mechanics?mode=guild_conquest": { body: MECHANICS },
+  "/api/rune-builds?mode=guild_conquest": { body: RUNE_BUILDS },
+  "/api/decks?mode=guild_conquest": { body: DECKS },
+  "/api/gear-recs?mode=guild_conquest": { body: GEAR },
 };
 
 const EMPTY = {
   "/api/fight-events?boss=pinata": { body: [] },
   "/api/buff-values": { body: [] },
-  "/api/mechanics": { body: [] },
-  "/api/rune-builds": { body: [] },
-  "/api/decks": { body: [] },
-  "/api/gear-recs": { body: [] },
+  "/api/mechanics?mode=guild_conquest": { body: [] },
+  "/api/rune-builds?mode=guild_conquest": { body: [] },
+  "/api/decks?mode=guild_conquest": { body: [] },
+  "/api/gear-recs?mode=guild_conquest": { body: [] },
 };
 
 /** The page section labelled by the heading `name`. */

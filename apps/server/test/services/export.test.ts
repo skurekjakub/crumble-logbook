@@ -192,9 +192,8 @@ function seedEverything(store: Store): SeedIds {
     notes: [],
     sources: ["dc:1"],
   });
-  store.repos.tables.load("counters", [
+  services.counters.create(
     {
-      id: 1,
       slug: "cherry-onion-vs-rival",
       mode: "arena",
       teamDeckId: "cherry-onion",
@@ -202,12 +201,11 @@ function seedEverything(store: Store): SeedIds {
       conditions: null,
       why: "dives first",
       confidence: "low",
-      recordSlug: null,
     },
-  ]);
-  store.repos.tables.load("usageStats", [
+    ["dc:1"],
+  );
+  services.usageStats.create(
     {
-      id: 1,
       mode: "rumble_arena",
       kind: "team",
       subject: "Cherry Onion",
@@ -217,9 +215,9 @@ function seedEverything(store: Store): SeedIds {
       sample: "top 100",
       capturedAt: "2026-01-01",
       note: null,
-      recordSlug: null,
     },
-  ]);
+    ["web:2"],
+  );
 
   return { mechanicId: mechanic.id, scoreId: score.id, deckCookieId };
 }
@@ -261,7 +259,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       buffValues: 1,
       counters: 1,
       usageStats: 1,
-      citations: 12,
+      citations: 14,
     });
     for (const [table, rows] of Object.entries(first.tables)) {
       expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);
@@ -384,6 +382,18 @@ describe("exportSnapshot / restoreSnapshot", () => {
 
     expect(source.repos.rankings.list().map((r) => r.id)).toEqual([2, 1]);
     expect(snapshot.tables.rankings.map((r) => r.id)).toEqual([1, 2]);
+  });
+
+  it("restores a snapshot written before a table existed, leaving that table empty", () => {
+    const source = testStore();
+    seedEverything(source);
+    const { usageStats: _usageStats, ...older } = exportSnapshot(source).tables;
+
+    const target = testStore();
+    const counts = restoreSnapshot(target, { version: 1, tables: older as Snapshot["tables"] });
+    expect(counts.usageStats).toBe(0);
+    expect(counts.decks).toBe(2);
+    expect(exportSnapshot(target).tables.usageStats).toEqual([]);
   });
 
   it("restoring into a non-empty store throws ConflictError", () => {

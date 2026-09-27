@@ -66,7 +66,7 @@ export function OverviewView({ mode }: { mode: ModeSection }) {
     enabled: mode.recordSlug != null,
   }).data;
   const takeaways = useQuery(takeawaysQuery(mode.scope));
-  const recommendations = useQuery(recommendationsQuery(mode.scope));
+  const recommendations = useQuery(recommendationsQuery(mode.recordSlug));
 
   return (
     <>

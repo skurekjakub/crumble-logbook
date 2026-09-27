@@ -43,6 +43,50 @@ describe("records routes", () => {
     expect(data.question).toBe("How do top players reach 2-3T?");
   });
 
+  it("returns each record's mode and the modes it covers, each with its lede and caveat", async () => {
+    const { app, store } = setup();
+    store.repos.records.upsert({
+      slug: "002-pvp-meta",
+      question: "What wins PvP?",
+      status: "active",
+      startedAt: "2026-09-27",
+      updatedAt: "2026-09-27",
+      mode: "arena",
+    });
+    store.repos.records.replaceModes("002-pvp-meta", [
+      { mode: "rumble_arena", lede: "Rumble lede", caveat: null },
+      { mode: "arena", lede: "Arena lede", caveat: "Arena caveat" },
+    ]);
+
+    const data = await readJson<{ mode: string; modes: unknown[] }>(
+      await app.request("/api/records/002-pvp-meta"),
+    );
+    expect(data.mode).toBe("arena");
+    expect(data.modes).toEqual([
+      { mode: "arena", lede: "Arena lede", caveat: "Arena caveat" },
+      { mode: "rumble_arena", lede: "Rumble lede", caveat: null },
+    ]);
+  });
+
+  it("GET /?mode= lists the records filed under that mode", async () => {
+    const { app, store } = setup();
+    for (const [slug, mode] of [
+      ["001-guild-conquest-meta", "guild_conquest"],
+      ["002-pvp-meta", "arena"],
+    ] as const) {
+      store.repos.records.upsert({
+        slug,
+        question: "q",
+        status: "active",
+        startedAt: "2026-09-27",
+        updatedAt: "2026-09-27",
+        mode,
+      });
+    }
+    const data = await readJson<{ slug: string }[]>(await app.request("/api/records?mode=arena"));
+    expect(data.map((r) => r.slug)).toEqual(["002-pvp-meta"]);
+  });
+
   it("GET /:slug for an unknown slug returns 404", async () => {
     const { app } = setup();
     const res = await app.request("/api/records/missing");

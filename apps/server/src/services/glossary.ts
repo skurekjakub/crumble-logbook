@@ -1,7 +1,8 @@
-import type { GlossaryInput, GlossaryKind, GlossaryRow } from "@crumble/schema";
+import type { GameMode, GlossaryInput, GlossaryKind, GlossaryRow } from "@crumble/schema";
 import type { Store } from "../repos";
 import type { NameRef } from "./names";
 import { createNameResolver } from "./names";
+import { recordsCovering } from "./records";
 
 /**
  * The Korean-to-English glossary: lookups and the upsert that keeps it
@@ -16,9 +17,11 @@ export interface GlossaryService {
   /**
    * Resolves `name` against the current glossary.
    * @param name - a name as it appeared in source data, in Korean or English
+   * @param mode - when given, entries from the records covering this game
+   *   mode win a key that several entries claim
    * @returns a {@link NameRef}; `en` is `null` if `name` matches no entry
    */
-  resolve(name: string): NameRef;
+  resolve(name: string, mode?: GameMode): NameRef;
   /**
    * Inserts a glossary entry, or updates it in place if its `kr` already
    * exists.
@@ -35,7 +38,11 @@ export interface GlossaryService {
 export function createGlossaryService(store: Store): GlossaryService {
   return {
     list: (kind) => store.repos.glossary.list(kind),
-    resolve: (name) => createNameResolver(store.repos.glossary.list())(name),
+    resolve: (name, mode) => {
+      const repos = store.repos;
+      const records = mode ? recordsCovering(repos, mode) : [];
+      return createNameResolver(repos.glossary.list())(name, records);
+    },
     upsert: (input) => store.repos.glossary.upsert(input),
   };
 }

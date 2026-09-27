@@ -22,6 +22,7 @@ const RECORD = {
   lede: "What Korean and global players run in Guild Conquest.",
   caveat: "Snapshot of 2026-09-27; Season 5 closes 2026-09-28.",
   mode: "guild_conquest",
+  modes: [],
 } satisfies ResearchRecord;
 
 const SOURCES = [
@@ -222,11 +223,11 @@ const GEAR = [
 const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
   "/api/sources": { body: SOURCES },
-  "/api/decks": { body: DECKS },
-  "/api/takeaways": { body: TAKEAWAYS },
-  "/api/recommendations": { body: RECOMMENDATIONS },
-  "/api/rune-builds": { body: RUNES },
-  "/api/gear-recs": { body: GEAR },
+  "/api/decks?mode=guild_conquest": { body: DECKS },
+  "/api/takeaways?mode=guild_conquest": { body: TAKEAWAYS },
+  "/api/recommendations?record=001-guild-conquest-meta": { body: RECOMMENDATIONS },
+  "/api/rune-builds?mode=guild_conquest": { body: RUNES },
+  "/api/gear-recs?mode=guild_conquest": { body: GEAR },
 };
 
 /** Renders the whole app at `path` against this file's stubbed API, overriding some responses. */
@@ -266,15 +267,17 @@ describe("/conquest overview", () => {
 
   it("shows the legacy empty message with no takeaways and omits the account block", async () => {
     await renderAt("/conquest", {
-      "/api/takeaways": { body: [] },
-      "/api/recommendations": { body: [] },
+      "/api/takeaways?mode=guild_conquest": { body: [] },
+      "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
     });
     expect(await panel().findByText("No takeaways yet.")).toHaveClass("empty");
     expect(panel().queryByText("Your lineup against the meta")).toBeNull();
   });
 
   it("names the failed resource when takeaways fail, and still shows the account block", async () => {
-    await renderAt("/conquest", { "/api/takeaways": { status: 500, body: { error: "x" } } });
+    await renderAt("/conquest", {
+      "/api/takeaways?mode=guild_conquest": { status: 500, body: { error: "x" } },
+    });
     expect(await panel().findByRole("alert")).toHaveTextContent("Couldn't load takeaways");
     expect(await panel().findByText(RECOMMENDATIONS[0]!.summary)).toBeVisible();
   });
@@ -352,7 +355,7 @@ describe("/conquest/decks", () => {
   });
 
   it("shows the legacy empty message with no decks", async () => {
-    await renderAt("/conquest/decks", { "/api/decks": { body: [] } });
+    await renderAt("/conquest/decks", { "/api/decks?mode=guild_conquest": { body: [] } });
     expect(await panel().findByText("No decks recorded yet.")).toHaveClass("empty");
   });
 });
@@ -410,7 +413,7 @@ describe("/conquest/runes", () => {
   });
 
   it("shows the empty message with no rune builds", async () => {
-    await renderAt("/conquest/runes", { "/api/rune-builds": { body: [] } });
+    await renderAt("/conquest/runes", { "/api/rune-builds?mode=guild_conquest": { body: [] } });
     expect(await panel().findByText("No rune builds recorded yet.")).toHaveClass("muted");
   });
 });
@@ -436,7 +439,7 @@ describe("/conquest/gear", () => {
   });
 
   it("shows every slot's empty message and no general card with no gear", async () => {
-    await renderAt("/conquest/gear", { "/api/gear-recs": { body: [] } });
+    await renderAt("/conquest/gear", { "/api/gear-recs?mode=guild_conquest": { body: [] } });
     await waitFor(() => expect(panel().getAllByText("No data yet.")).toHaveLength(4));
     expect(panel().queryByText("General gear notes")).toBeNull();
   });

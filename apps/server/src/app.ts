@@ -39,6 +39,8 @@ export function createApp(services: Services) {
     .route(R.scores.path, crudRouter(endpoints(services.scores), R.scores))
     .route(R.fightEvents.path, crudRouter(endpoints(services.fightEvents), R.fightEvents))
     .route(R.buffValues.path, crudRouter(endpoints(services.buffValues), R.buffValues))
+    .route(R.counters.path, crudRouter(endpoints(services.counters), R.counters))
+    .route(R.usageStats.path, crudRouter(endpoints(services.usageStats), R.usageStats))
     .route(R.decks.path, crudRouter(services.decks, R.decks))
     .route(R.runeBuilds.path, crudRouter(services.runeBuilds, R.runeBuilds))
     .route(R.sources.path, sourcesRouter(services.sources))

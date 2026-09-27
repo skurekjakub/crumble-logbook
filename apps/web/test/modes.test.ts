@@ -1,6 +1,10 @@
-import { describe, expect, it } from "vitest";
-import { decksQuery, scoresQuery } from "../src/api/queries";
+import type { InferRequestType } from "hono/client";
+import { describe, expect, expectTypeOf, it } from "vitest";
+import type { api } from "../src/api/client";
+import type { GameMode } from "../src/api/queries";
+import { decksQuery, mechanicsQuery, recommendationsQuery, scoresQuery } from "../src/api/queries";
 import { activeTab, ARENA, CONQUEST, MODES, sectionForPath } from "../src/app/modes";
+import { stubApi } from "./helpers";
 
 describe("sectionForPath", () => {
   it("maps /conquest and its sub-paths to Guild Conquest", () => {
@@ -52,7 +56,46 @@ describe("MODES", () => {
   });
 });
 
+/** The `?mode=` param of a list request; a compile error when the endpoint has none. */
+type ModeOf<R extends { query: { mode?: unknown } }> = R["query"]["mode"];
+
 describe("mode-scoped queries", () => {
+  it("every mode-scoped endpoint accepts ?mode= typed as a game mode", () => {
+    type Mode = GameMode | undefined;
+    expectTypeOf<ModeOf<InferRequestType<typeof api.decks.$get>>>().toEqualTypeOf<Mode>();
+    expectTypeOf<
+      ModeOf<InferRequestType<(typeof api)["rune-builds"]["$get"]>>
+    >().toEqualTypeOf<Mode>();
+    expectTypeOf<
+      ModeOf<InferRequestType<(typeof api)["gear-recs"]["$get"]>>
+    >().toEqualTypeOf<Mode>();
+    expectTypeOf<ModeOf<InferRequestType<typeof api.mechanics.$get>>>().toEqualTypeOf<Mode>();
+    expectTypeOf<
+      ModeOf<InferRequestType<(typeof api)["rng-factors"]["$get"]>>
+    >().toEqualTypeOf<Mode>();
+    expectTypeOf<ModeOf<InferRequestType<typeof api.timeline.$get>>>().toEqualTypeOf<Mode>();
+    expectTypeOf<ModeOf<InferRequestType<typeof api.takeaways.$get>>>().toEqualTypeOf<Mode>();
+    expectTypeOf<ModeOf<InferRequestType<typeof api.counters.$get>>>().toEqualTypeOf<Mode>();
+    expectTypeOf<ModeOf<InferRequestType<typeof api.usage.$get>>>().toEqualTypeOf<Mode>();
+    expectTypeOf<ModeOf<InferRequestType<typeof api.records.$get>>>().toEqualTypeOf<Mode>();
+    expectTypeOf<GameMode>().toEqualTypeOf<"guild_conquest" | "arena" | "rumble_arena">();
+  });
+
+  it("send the mode's ?mode= on each list request, and nothing without a scope", async () => {
+    const fetch = stubApi({});
+    const get = async (options: { queryFn?: unknown }) => {
+      await (options.queryFn as () => Promise<unknown>)().catch(() => undefined);
+      const [input] = fetch.mock.calls.at(-1)!;
+      return String(input).replace(/^https?:\/\/[^/]+/, "");
+    };
+    expect(await get(decksQuery(CONQUEST.scope))).toBe("/api/decks?mode=guild_conquest");
+    expect(await get(mechanicsQuery(ARENA.scope))).toBe("/api/mechanics?mode=arena");
+    expect(await get(decksQuery())).toBe("/api/decks");
+    expect(await get(recommendationsQuery(CONQUEST.recordSlug))).toBe(
+      "/api/recommendations?record=001-guild-conquest-meta",
+    );
+  });
+
   it("key each mode's lists apart, and the unscoped list apart from both", () => {
     expect(decksQuery(CONQUEST.scope).queryKey).toEqual(["decks", { mode: "guild_conquest" }]);
     expect(decksQuery(ARENA.scope).queryKey).toEqual(["decks", { mode: "arena" }]);

@@ -1,5 +1,5 @@
-import type { ResearchRecordRow } from "@crumble/schema";
-import { researchRecords } from "@crumble/schema";
+import type { RecordModeRow, ResearchRecordRow } from "@crumble/schema";
+import { recordModes, researchRecords } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { asc, count, eq } from "drizzle-orm";
 import type { Db } from "../db/client";
@@ -7,7 +7,13 @@ import type { Db } from "../db/client";
 /** Insert/upsert payload for {@link RecordsRepo.upsert}. */
 export type RecordInsert = InferInsertModel<typeof researchRecords>;
 
-/** The research records (one row per investigated question), keyed by `slug`. */
+/** One mode a record covers, without the record it belongs to. */
+export type RecordModeInsert = Omit<RecordModeRow, "recordSlug">;
+
+/**
+ * The research records (one row per investigated question), keyed by
+ * `slug`, and the game modes each covers (`record_modes`).
+ */
 export interface RecordsRepo {
   /** Lists every research record, ordered by `slug`. */
   list(): ResearchRecordRow[];
@@ -25,6 +31,15 @@ export interface RecordsRepo {
   upsert(row: RecordInsert): ResearchRecordRow;
   /** Returns the number of research records. */
   count(): number;
+  /** Lists every record's covered modes, ordered by record slug then mode. */
+  modes(): RecordModeRow[];
+  /**
+   * Replaces the modes record `slug` covers with `modes`.
+   * @param slug - the record's slug
+   * @param modes - the modes, each with its lede and caveat; `[]` clears them
+   * @throws if `slug` isn't a research record, or a mode repeats
+   */
+  replaceModes(slug: string, modes: readonly RecordModeInsert[]): void;
 }
 
 /**
@@ -43,5 +58,19 @@ export function createRecordsRepo(db: Db): RecordsRepo {
         .returning()
         .get(),
     count: () => db.select({ n: count() }).from(researchRecords).get()!.n,
+    modes: () =>
+      db
+        .select()
+        .from(recordModes)
+        .orderBy(asc(recordModes.recordSlug), asc(recordModes.mode))
+        .all(),
+    replaceModes: (slug, modes) => {
+      db.delete(recordModes).where(eq(recordModes.recordSlug, slug)).run();
+      if (modes.length > 0) {
+        db.insert(recordModes)
+          .values(modes.map((mode) => ({ ...mode, recordSlug: slug })))
+          .run();
+      }
+    },
   };
 }

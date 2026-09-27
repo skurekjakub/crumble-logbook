@@ -5,7 +5,10 @@
 import type { InferResponseType } from "hono/client";
 import type { api } from "./client";
 
-/** A research record: slug, question, status, dates, season label, lede, caveat. */
+/**
+ * A research record: slug, question, status, dates, season label, lede,
+ * caveat, the mode it's filed under, and the modes it covers.
+ */
 export type ResearchRecord = InferResponseType<(typeof api.records)[":slug"]["$get"], 200>;
 
 /** A source: id, site, url, title, titleEn, date, relevance, note, summaryEn, capturePath. */
@@ -55,3 +58,15 @@ export type Recommendation = InferResponseType<typeof api.recommendations.$get, 
 
 /** A leaderboard row. */
 export type Ranking = InferResponseType<typeof api.rankings.$get, 200>[number];
+
+/** One game mode a {@link ResearchRecord} covers, with its lede and caveat. */
+export type RecordMode = ResearchRecord["modes"][number];
+
+/**
+ * A directed counter edge: `teamDeckId` is beaten by `beatenByDeckId`, under
+ * `conditions`, because of `why`, with a confidence and sources.
+ */
+export type Counter = InferResponseType<typeof api.counters.$get, 200>[number];
+
+/** A usage figure: a subject's share of a dated sample, with its `en` gloss and sources. */
+export type UsageStat = InferResponseType<typeof api.usage.$get, 200>[number];

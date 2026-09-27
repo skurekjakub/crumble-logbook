@@ -65,9 +65,9 @@ const ranking = (
 });
 
 const API: Record<string, Canned> = {
-  "/api/decks": { body: DECKS },
+  "/api/decks?mode=guild_conquest": { body: DECKS },
   "/api/scores": { body: SCORES },
-  "/api/rng-factors": { body: RNG },
+  "/api/rng-factors?mode=guild_conquest": { body: RNG },
   "/api/rankings/seasons": { body: SEASONS },
   "/api/rankings?season=5&board=players": {
     body: [
@@ -152,7 +152,7 @@ describe("scores view", () => {
     await renderRoute("/conquest/scores", {
       ...API,
       "/api/scores": { body: [] },
-      "/api/rng-factors": { body: [] },
+      "/api/rng-factors?mode=guild_conquest": { body: [] },
     });
     expect(await screen.findByText("No scores with both damage and power yet.")).toHaveClass(
       "empty",
