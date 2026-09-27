@@ -1,12 +1,6 @@
 import { zValidator } from "@hono/zod-validator";
 import type { ValidationTargets } from "hono";
-import { z } from "zod";
-
-/**
- * A positive integer `:id` path parameter, coerced from its string form.
- * Shared by every content and score route.
- */
-export const idParam = z.object({ id: z.coerce.number().int().positive() });
+import type { z } from "zod";
 
 /**
  * Wraps `@hono/zod-validator` so every route responds to a failed

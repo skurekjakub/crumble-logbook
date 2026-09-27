@@ -31,8 +31,6 @@ export interface GlossaryRepo {
   upsert(row: GlossaryInsert): GlossaryRow;
   /** Returns the number of glossary entries. */
   count(): number;
-  /** Deletes every glossary entry. */
-  clear(): void;
 }
 
 /**
@@ -54,8 +52,5 @@ export function createGlossaryRepo(db: Db): GlossaryRepo {
         .returning()
         .get(),
     count: () => db.select({ n: count() }).from(glossary).get()!.n,
-    clear: () => {
-      db.delete(glossary).run();
-    },
   };
 }

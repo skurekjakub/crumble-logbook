@@ -1,51 +1,92 @@
 import { Hono } from "hono";
-import type { z } from "zod";
-import type { ContentService } from "../services/content";
-import { idParam, validate } from "./validate";
+import { z } from "zod";
+import type { AnyFilters as Filters, ApiSpec } from "../registry";
+import type { CrudEndpoints } from "../services/content";
+import { validate } from "./validate";
+
+/** What the generic CRUD router reads from a registry entry. */
+export interface CrudRouteSpec {
+  /** The request schemas. */
+  api: ApiSpec;
+  /** The list filters `GET /` accepts, when the type declares any. */
+  filters?: Filters;
+}
+
+/** The zod shape of `S`'s list query: each declared filter's schema, optional. */
+type ListShape<S extends CrudRouteSpec> = S extends { filters: infer F extends Filters }
+  ? { [K in keyof F]: z.ZodOptional<F[K]["schema"]> }
+  : Record<never, never>;
+
+/** The list filter values `S`'s `GET /` passes on, by name. */
+export type FilterValues<S extends CrudRouteSpec> = S extends { filters: infer F extends Filters }
+  ? { [K in keyof F]?: string }
+  : Record<never, never>;
 
 /**
- * Builds the generic CRUD router for one cited-content service:
- * `GET /`, `GET /:id`, `POST /` (201), `PATCH /:id`, `DELETE /:id` (204).
+ * Builds the query schema of a list endpoint from its declared filters:
+ * every filter is an optional query param validated by its own schema;
+ * other params are ignored.
  *
- * The request body's `sources` field is split from the rest of the columns
- * before it reaches the service: `values` goes to `create`/`update`, and
- * `sources` goes alongside it. `Input`/`Patch` carry their validated output
- * shape in their own type parameter (rather than leaving it at `z.ZodType`'s
- * default `unknown`), which is what lets the `z.output<Input>` casts below
- * resolve to something more useful than `unknown`.
+ * @param filters - the declared filters, by query param name
+ * @returns the `z.object` schema
+ */
+export function listQuery<S extends CrudRouteSpec>(
+  filters: S["filters"],
+): z.ZodObject<ListShape<S>> {
+  const declared: Filters = filters ?? {};
+  return z.object(
+    Object.fromEntries(
+      Object.entries(declared).map(([name, filter]) => [name, filter.schema.optional()]),
+    ),
+  ) as unknown as z.ZodObject<ListShape<S>>;
+}
+
+/**
+ * Builds the CRUD router of one registered type: `GET /` (filtered by its
+ * declared list filters), `GET /:id`, `POST /` (201), `PATCH /:id` and
+ * `DELETE /:id` (204). The request body goes to the service whole,
+ * `sources` included; `:id` is parsed by the type's own id schema.
  *
- * @typeParam Row - the shape of a selected row
- * @typeParam Values - the column values `svc` accepts, without `sources`
- * @typeParam Input - the zod schema for a `POST` body
- * @typeParam Patch - the zod schema for a `PATCH` body
- * @param svc - the service the router delegates to
- * @param schemas - the create (`input`) and update (`patch`) body schemas
+ * @typeParam S - the type's registry entry
+ * @typeParam View - what the service returns
+ * @param svc - the endpoints the router delegates to
+ * @param spec - the type's registry entry: request schemas and list filters
  * @returns a Hono sub-app mountable with `.route()`
  */
-export function contentRouter<
-  Row extends { id: number },
-  Values extends object,
-  Input extends z.ZodType<Values & { sources: string[] }>,
-  Patch extends z.ZodType<Partial<Values> & { sources?: string[] }>,
->(svc: ContentService<Row, Values>, schemas: { input: Input; patch: Patch }) {
-  const { input, patch } = schemas;
+export function crudRouter<S extends CrudRouteSpec, View>(
+  svc: CrudEndpoints<
+    z.output<S["api"]["id"]>,
+    z.output<S["api"]["input"]>,
+    z.output<S["api"]["patch"]>,
+    View,
+    FilterValues<S>
+  >,
+  spec: S,
+) {
+  const query = listQuery<S>(spec.filters);
+  const param = z.object({ id: spec.api.id as S["api"]["id"] });
+  const input = spec.api.input as S["api"]["input"];
+  const patch = spec.api.patch as S["api"]["patch"];
   return new Hono()
-    .get("/", (c) => c.json(svc.list()))
-    .get("/:id", validate("param", idParam), (c) => {
-      const { id } = c.req.valid("param");
+    .get("/", validate("query", query), (c) => {
+      const filter = c.req.valid("query") as unknown as FilterValues<S>;
+      return c.json(svc.list(filter));
+    })
+    .get("/:id", validate("param", param), (c) => {
+      const { id } = c.req.valid("param") as { id: z.output<S["api"]["id"]> };
       return c.json(svc.get(id));
     })
     .post("/", validate("json", input), (c) => {
-      const { sources, ...values } = c.req.valid("json") as z.output<Input>;
-      return c.json(svc.create(values as Values, sources), 201);
+      const body = c.req.valid("json") as z.output<S["api"]["input"]>;
+      return c.json(svc.create(body), 201);
     })
-    .patch("/:id", validate("param", idParam), validate("json", patch), (c) => {
-      const { id } = c.req.valid("param");
-      const { sources, ...values } = c.req.valid("json") as z.output<Patch>;
-      return c.json(svc.update(id, values as unknown as Partial<Values>, sources));
+    .patch("/:id", validate("param", param), validate("json", patch), (c) => {
+      const { id } = c.req.valid("param") as { id: z.output<S["api"]["id"]> };
+      const body = c.req.valid("json") as z.output<S["api"]["patch"]>;
+      return c.json(svc.update(id, body));
     })
-    .delete("/:id", validate("param", idParam), (c) => {
-      const { id } = c.req.valid("param");
+    .delete("/:id", validate("param", param), (c) => {
+      const { id } = c.req.valid("param") as { id: z.output<S["api"]["id"]> };
       svc.remove(id);
       return c.body(null, 204);
     });

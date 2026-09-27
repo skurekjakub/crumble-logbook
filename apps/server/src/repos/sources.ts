@@ -45,8 +45,6 @@ export interface SourcesRepo {
   missing(ids: string[]): string[];
   /** Returns the number of sources. */
   count(): number;
-  /** Deletes every source. */
-  clear(): void;
 }
 
 /**
@@ -80,8 +78,5 @@ export function createSourcesRepo(db: Db): SourcesRepo {
       return ids.filter((id) => !found.has(id));
     },
     count: () => db.select({ n: count() }).from(sources).get()!.n,
-    clear: () => {
-      db.delete(sources).run();
-    },
   };
 }

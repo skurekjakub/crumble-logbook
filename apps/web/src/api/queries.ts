@@ -69,7 +69,7 @@ export const glossaryQuery = (kind?: GlossaryKindFilter) =>
 export const decksQuery = () =>
   queryOptions({
     queryKey: ["decks"],
-    queryFn: () => parseResponse(api.decks.$get()),
+    queryFn: () => parseResponse(api.decks.$get({ query: {} })),
   });
 
 /**
@@ -106,7 +106,7 @@ export const runeBuildsQuery = (deck?: string) =>
 export const gearRecsQuery = () =>
   queryOptions({
     queryKey: ["gear-recs"],
-    queryFn: () => parseResponse(api["gear-recs"].$get()),
+    queryFn: () => parseResponse(api["gear-recs"].$get({ query: {} })),
   });
 
 /**
@@ -134,35 +134,35 @@ export const buffValuesQuery = (cookie?: string) =>
 export const mechanicsQuery = () =>
   queryOptions({
     queryKey: ["mechanics"],
-    queryFn: () => parseResponse(api.mechanics.$get()),
+    queryFn: () => parseResponse(api.mechanics.$get({ query: {} })),
   });
 
 /** RNG factors and their mitigations. */
 export const rngFactorsQuery = () =>
   queryOptions({
     queryKey: ["rng-factors"],
-    queryFn: () => parseResponse(api["rng-factors"].$get()),
+    queryFn: () => parseResponse(api["rng-factors"].$get({ query: {} })),
   });
 
 /** Dated meta events. */
 export const timelineQuery = () =>
   queryOptions({
     queryKey: ["timeline"],
-    queryFn: () => parseResponse(api.timeline.$get()),
+    queryFn: () => parseResponse(api.timeline.$get({ query: {} })),
   });
 
 /** The overview's load-bearing takeaways. */
 export const takeawaysQuery = () =>
   queryOptions({
     queryKey: ["takeaways"],
-    queryFn: () => parseResponse(api.takeaways.$get()),
+    queryFn: () => parseResponse(api.takeaways.$get({ query: {} })),
   });
 
 /** "For your account" recommendations. */
 export const recommendationsQuery = () =>
   queryOptions({
     queryKey: ["recommendations"],
-    queryFn: () => parseResponse(api.recommendations.$get()),
+    queryFn: () => parseResponse(api.recommendations.$get({ query: {} })),
   });
 
 /**

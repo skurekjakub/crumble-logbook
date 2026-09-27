@@ -1,35 +1,22 @@
-import {
-  gearRecInput,
-  gearRecPatch,
-  mechanicInput,
-  mechanicPatch,
-  recommendationInput,
-  recommendationPatch,
-  rngFactorInput,
-  rngFactorPatch,
-  takeawayInput,
-  takeawayPatch,
-  timelineEventInput,
-  timelineEventPatch,
-} from "@crumble/schema";
 import { Hono } from "hono";
 import { ConflictError, NotFoundError, UnknownRefsError } from "./errors";
-import { buffValuesRouter } from "./routes/buff-values";
-import { contentRouter } from "./routes/content";
-import { decksRouter } from "./routes/decks";
+import { REGISTRY as R } from "./registry";
+import { crudRouter } from "./routes/content";
 import { exportRouter } from "./routes/export";
-import { fightEventsRouter } from "./routes/fight-events";
 import { glossaryRouter } from "./routes/glossary";
 import { rankingsRouter } from "./routes/rankings";
 import { recordsRouter } from "./routes/records";
-import { runeBuildsRouter } from "./routes/rune-builds";
-import { scoresRouter } from "./routes/scores";
 import { sourcesRouter } from "./routes/sources";
 import type { Services } from "./services";
+import { contentEndpoints as endpoints } from "./services/content";
 
 /**
- * Builds the server's Hono app: the cited-content, score and boss-data
- * routes under `/api`, and a shared error mapping.
+ * Builds the server's Hono app: every registered type's routes under
+ * `/api` at its registry path, the export, and a shared error mapping.
+ *
+ * The `.route()` calls stay spelled out, one per type, so `AppType` keeps
+ * each route's request and response types; `test/registry.test.ts` checks
+ * that every registered path is mounted.
  *
  * `NotFoundError` maps to 404, `UnknownRefsError` to 422, `ConflictError` to
  * 409; anything else is logged with `console.error` and maps to 500.
@@ -40,42 +27,24 @@ import type { Services } from "./services";
 export function createApp(services: Services) {
   return new Hono()
     .basePath("/api")
+    .route(R.mechanics.path, crudRouter(endpoints(services.mechanics), R.mechanics))
+    .route(R.rngFactors.path, crudRouter(endpoints(services.rngFactors), R.rngFactors))
+    .route(R.timeline.path, crudRouter(endpoints(services.timeline), R.timeline))
+    .route(R.takeaways.path, crudRouter(endpoints(services.takeaways), R.takeaways))
+    .route(R.gearRecs.path, crudRouter(endpoints(services.gearRecs), R.gearRecs))
     .route(
-      "/mechanics",
-      contentRouter(services.mechanics, { input: mechanicInput, patch: mechanicPatch }),
+      R.recommendations.path,
+      crudRouter(endpoints(services.recommendations), R.recommendations),
     )
-    .route(
-      "/rng-factors",
-      contentRouter(services.rngFactors, { input: rngFactorInput, patch: rngFactorPatch }),
-    )
-    .route(
-      "/timeline",
-      contentRouter(services.timeline, { input: timelineEventInput, patch: timelineEventPatch }),
-    )
-    .route(
-      "/takeaways",
-      contentRouter(services.takeaways, { input: takeawayInput, patch: takeawayPatch }),
-    )
-    .route(
-      "/gear-recs",
-      contentRouter(services.gearRecs, { input: gearRecInput, patch: gearRecPatch }),
-    )
-    .route(
-      "/recommendations",
-      contentRouter(services.recommendations, {
-        input: recommendationInput,
-        patch: recommendationPatch,
-      }),
-    )
-    .route("/scores", scoresRouter(services.scores))
-    .route("/fight-events", fightEventsRouter(services.fightEvents))
-    .route("/buff-values", buffValuesRouter(services.buffValues))
-    .route("/decks", decksRouter(services.decks))
-    .route("/rune-builds", runeBuildsRouter(services.runeBuilds))
-    .route("/sources", sourcesRouter(services.sources))
-    .route("/glossary", glossaryRouter(services.glossary))
-    .route("/rankings", rankingsRouter(services.rankings))
-    .route("/records", recordsRouter(services.records))
+    .route(R.scores.path, crudRouter(endpoints(services.scores), R.scores))
+    .route(R.fightEvents.path, crudRouter(endpoints(services.fightEvents), R.fightEvents))
+    .route(R.buffValues.path, crudRouter(endpoints(services.buffValues), R.buffValues))
+    .route(R.decks.path, crudRouter(services.decks, R.decks))
+    .route(R.runeBuilds.path, crudRouter(services.runeBuilds, R.runeBuilds))
+    .route(R.sources.path, sourcesRouter(services.sources))
+    .route(R.glossary.path, glossaryRouter(services.glossary))
+    .route(R.rankings.path, rankingsRouter(services.rankings))
+    .route(R.researchRecords.path, recordsRouter(services.records))
     .route("/export", exportRouter(services.export))
     .onError((err, c) => {
       if (err instanceof NotFoundError) {

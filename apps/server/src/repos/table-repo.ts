@@ -1,11 +1,34 @@
 import type { InferInsertModel, InferSelectModel, SQL } from "drizzle-orm";
-import { asc, count, eq } from "drizzle-orm";
+import { asc, count, desc, eq, sql } from "drizzle-orm";
 import type { SQLiteColumn, SQLiteTable } from "drizzle-orm/sqlite-core";
 import type { Db } from "../db/client";
+import type { OrderKey } from "../registry";
 import { resetIds } from "./sequence";
 
 /** A drizzle SQLite table with an integer `id` primary key column. */
 type IdTable = SQLiteTable & { id: SQLiteColumn };
+
+/**
+ * Translates a declared list order into drizzle `ORDER BY` terms.
+ *
+ * @param table - the table the columns belong to
+ * @param keys - the order, most significant first; a `nullsLast` key sorts
+ *   by `<column> is null` before the column itself
+ * @returns the terms, for {@link createTableRepo}'s `orderBy`
+ * @throws `Error` naming the column if `table` has no such column
+ */
+export function orderTerms<T extends SQLiteTable>(
+  table: T,
+  keys: readonly OrderKey<InferSelectModel<T>>[],
+): (SQL | SQLiteColumn)[] {
+  return keys.flatMap((key) => {
+    const { column, desc: descending, nullsLast } = typeof key === "string" ? { column: key } : key;
+    const col = (table as unknown as Record<string, SQLiteColumn | undefined>)[column];
+    if (!col) throw new Error(`table has no column "${column}"`);
+    const term = descending ? desc(col) : asc(col);
+    return nullsLast ? [sql`${col} is null`, term] : [term];
+  });
+}
 
 /**
  * Generic CRUD operations over a table with an integer `id` primary key.

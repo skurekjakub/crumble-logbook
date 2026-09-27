@@ -2,11 +2,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { z } from "zod";
 import { ImportError } from "../errors";
-import type { Repos, Store } from "../repos";
+import { TABLE_KEYS } from "../registry";
+import type { Store } from "../repos";
 import type { GlossaryInsert } from "../repos/glossary";
 import type { RankingInsert } from "../repos/rankings";
 import type { SourceInsert } from "../repos/sources";
-import { normalizeName } from "../services/names";
+import { lookupKeys } from "../services/names";
 import { readBuffValues, readFightEvents } from "./boss";
 import { findCapture } from "./captures";
 import { loadSummaries } from "./extractions";
@@ -247,10 +248,7 @@ function glossaryWarnings(entries: GlossaryInsert[]): string[] {
   const sorted = [...entries].sort((a, b) => (a.kr < b.kr ? -1 : a.kr > b.kr ? 1 : 0));
   const claims = new Map<string, GlossaryInsert[]>();
   for (const entry of sorted) {
-    const keys = new Set(
-      [entry.kr, ...(entry.shorthand ?? []), ...(entry.en ? [entry.en] : [])].map(normalizeName),
-    );
-    for (const key of keys) {
+    for (const key of lookupKeys(entry)) {
       const list = claims.get(key);
       if (list) list.push(entry);
       else claims.set(key, [entry]);
@@ -264,32 +262,6 @@ function glossaryWarnings(entries: GlossaryInsert[]): string[] {
     warnings.push(`glossary key "${key}" is claimed by ${who}; it resolves to "${winner.kr}"`);
   }
   return warnings;
-}
-
-/**
- * Every content table's repo, children before parents, so clearing them in
- * this order never trips a foreign key. `jobs` isn't content and is left
- * alone; deck children and rune deck links cascade with their parents.
- */
-function contentRepos(repos: Repos): Array<{ count(): number; clear(): void }> {
-  return [
-    repos.citations,
-    repos.fightEvents,
-    repos.buffValues,
-    repos.rankings,
-    repos.runeBuilds,
-    repos.scores,
-    repos.gearRecs,
-    repos.mechanics,
-    repos.rngFactors,
-    repos.timeline,
-    repos.takeaways,
-    repos.recommendations,
-    repos.decks,
-    repos.glossary,
-    repos.records,
-    repos.sources,
-  ];
 }
 
 /**
@@ -357,8 +329,7 @@ export function importRecord(
   // See `DeckService.create`'s implementation for why the inner return is
   // cast `as never` and the outer call `as ImportCounts`.
   const counts = store.transaction((repos) => {
-    const tables = contentRepos(repos);
-    if (tables.some((table) => table.count() > 0)) {
+    if (TABLE_KEYS.some((key) => repos.tables.count(key) > 0)) {
       if (!opts.replace) {
         throw new ImportError(
           "<db>",
@@ -366,7 +337,7 @@ export function importRecord(
           `database already has content; pass --replace to load record ${manifest.record.slug} over it`,
         );
       }
-      for (const table of tables) table.clear();
+      for (const key of [...TABLE_KEYS].reverse()) repos.tables.clear(key);
     }
 
     const n = {

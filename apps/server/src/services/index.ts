@@ -1,29 +1,12 @@
-import type {
-  GearRecInput,
-  GearRecRow,
-  MechanicInput,
-  MechanicRow,
-  RecommendationInput,
-  RecommendationRow,
-  RngFactorInput,
-  RngFactorRow,
-  TakeawayInput,
-  TakeawayRow,
-  TimelineEventInput,
-  TimelineEventRow,
-  Values,
-} from "@crumble/schema";
+import type { ContentKey } from "../registry";
+import { CONTENT_KEYS } from "../registry";
 import type { Store } from "../repos";
-import type { BuffValueService } from "./buff-values";
-import { createBuffValueService } from "./buff-values";
-import type { ContentService } from "./content";
-import { createContentService } from "./content";
+import type { RegisteredService } from "./content";
+import { registeredService } from "./content";
 import type { DeckService } from "./decks";
 import { createDeckService } from "./decks";
 import type { ExportService } from "./export";
 import { createExportService } from "./export";
-import type { FightEventService } from "./fight-events";
-import { createFightEventService } from "./fight-events";
 import type { GlossaryService } from "./glossary";
 import { createGlossaryService } from "./glossary";
 import type { RankingsService } from "./rankings";
@@ -37,17 +20,16 @@ import { createScoreService } from "./scores";
 import type { SourcesService } from "./sources";
 import { createSourcesService } from "./sources";
 
-/** Every content and score service the server exposes. Later tasks add keys. */
-export interface Services {
-  mechanics: ContentService<MechanicRow, Values<MechanicInput>>;
-  rngFactors: ContentService<RngFactorRow, Values<RngFactorInput>>;
-  timeline: ContentService<TimelineEventRow, Values<TimelineEventInput>>;
-  takeaways: ContentService<TakeawayRow, Values<TakeawayInput>>;
-  gearRecs: ContentService<GearRecRow, Values<GearRecInput>>;
-  recommendations: ContentService<RecommendationRow, Values<RecommendationInput>>;
+/**
+ * One content service per registered content type, built from its registry
+ * entry. Scores replace theirs with {@link ScoreService}, which adds the
+ * damage/power ratio.
+ */
+export type ContentServices = { [K in Exclude<ContentKey, "scores">]: RegisteredService<K> };
+
+/** Every service the server exposes. */
+export type Services = ContentServices & {
   scores: ScoreService;
-  fightEvents: FightEventService;
-  buffValues: BuffValueService;
   decks: DeckService;
   runeBuilds: RuneBuildService;
   sources: SourcesService;
@@ -55,7 +37,7 @@ export interface Services {
   rankings: RankingsService;
   records: RecordsService;
   export: ExportService;
-}
+};
 
 /**
  * Builds every service over a shared {@link Store}.
@@ -63,34 +45,12 @@ export interface Services {
  * @returns the service set
  */
 export function createServices(store: Store): Services {
+  const content = Object.fromEntries(
+    CONTENT_KEYS.map((key) => [key, registeredService(store, key)]),
+  ) as ContentServices;
   return {
-    mechanics: createContentService<MechanicRow, Values<MechanicInput>>(store, {
-      entity: "mechanic",
-      table: (repos) => repos.mechanics,
-    }),
-    rngFactors: createContentService<RngFactorRow, Values<RngFactorInput>>(store, {
-      entity: "rng_factor",
-      table: (repos) => repos.rngFactors,
-    }),
-    timeline: createContentService<TimelineEventRow, Values<TimelineEventInput>>(store, {
-      entity: "timeline_event",
-      table: (repos) => repos.timeline,
-    }),
-    takeaways: createContentService<TakeawayRow, Values<TakeawayInput>>(store, {
-      entity: "takeaway",
-      table: (repos) => repos.takeaways,
-    }),
-    gearRecs: createContentService<GearRecRow, Values<GearRecInput>>(store, {
-      entity: "gear_rec",
-      table: (repos) => repos.gearRecs,
-    }),
-    recommendations: createContentService<RecommendationRow, Values<RecommendationInput>>(store, {
-      entity: "recommendation",
-      table: (repos) => repos.recommendations,
-    }),
+    ...content,
     scores: createScoreService(store),
-    fightEvents: createFightEventService(store),
-    buffValues: createBuffValueService(store),
     decks: createDeckService(store),
     runeBuilds: createRuneBuildService(store),
     sources: createSourcesService(store),
