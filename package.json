@@ -1,0 +1,27 @@
+{
+  "name": "crumble-logbook",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": ">=24.18.0"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "pnpm typecheck && pnpm format:check && vitest run",
+    "dev:server": "pnpm --filter @crumble/server dev",
+    "import:record": "pnpm --filter @crumble/server import:record",
+    "db:export": "pnpm --filter @crumble/server db:export",
+    "db:restore": "pnpm --filter @crumble/server db:restore"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.0",
+    "prettier": "3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}

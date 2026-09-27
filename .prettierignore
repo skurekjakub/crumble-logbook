@@ -1,0 +1,8 @@
+research/
+legacy/
+docs/
+data/
+.claude/
+**/migrations/
+pnpm-lock.yaml
+*.md
