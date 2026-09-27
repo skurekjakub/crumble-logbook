@@ -54,7 +54,12 @@ const distinct = (ids: string[]) => new Set(ids).size;
 
 type Manifest = {
   fightEvents: { file: string; sourceAliases: Record<string, string> };
-  buffValues: { file: string; catalog: string; cookies: string[] };
+  buffValues: {
+    file: string;
+    catalog: string;
+    cookies: string[];
+    selfBuffs: Record<string, string[]>;
+  };
 };
 const manifest = recordJson<Manifest>("import.json");
 const encounter = recordJson<{
@@ -216,6 +221,26 @@ describe("importRecord on research record 001", () => {
         scalesWithCasterAmp: false,
       });
     }
+  });
+
+  it("targets exactly the manifest's self buffs at the caster, and every other row at the team", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    const self = store.repos.buffValues.list().filter((b) => b.target === "self");
+    expect(self.length).toBeGreaterThan(0);
+    for (const row of self) {
+      expect(manifest.buffValues.selfBuffs[row.cookieKr]).toContain(row.effectType);
+    }
+    const teaDef = store.repos.buffValues
+      .list()
+      .filter((b) => b.cookieKr === "실론나이트 쿠키" && b.effectType === "DefensePointMultiplier");
+    expect(teaDef.map((b) => b.target)).toEqual(teaDef.map(() => "self"));
+    expect(
+      store.repos.buffValues
+        .list()
+        .filter((b) => b.effectType === "BossDamageRateAddition")
+        .every((b) => b.target === "team"),
+    ).toBe(true);
   });
 
   it("stores fight events on the elapsed clock, converting the countdown-timed ones", () => {
@@ -444,6 +469,34 @@ describe("importRecord validation", () => {
     expect(() => importRecord(testStore(), dir)).toThrow(
       /skills-runes-1\.4\.002\.json \[다크초코 쿠키 grade 0\]: debuff effect "방어력이 감소합니다\." has no effect type/,
     );
+  });
+
+  it("rejects a self buff that matches no buff value, naming the manifest entry", () => {
+    const dir = tempRecord(null, () => {}, {
+      manifest: {
+        buffValues: { ...manifest.buffValues, selfBuffs: { "실론나이트 쿠키": ["NoSuchEffect"] } },
+      },
+      evidence: [manifest.buffValues.file, manifest.buffValues.catalog],
+    });
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(
+      /import\.json \[buffValues\.selfBuffs 실론나이트 쿠키\]: no buff value of "실론나이트 쿠키" has effect type NoSuchEffect/,
+    );
+    expectEmpty(store);
+  });
+
+  it("rejects two buff values with the same cookie, effect type and grade before writing", () => {
+    const dir = tempRecord(null, () => {}, {
+      manifest: {
+        buffValues: { ...manifest.buffValues, cookies: ["다크초코 쿠키", "다크초코 쿠키"] },
+      },
+      evidence: [manifest.buffValues.file, manifest.buffValues.catalog],
+    });
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(
+      /skills-runes-1\.4\.002\.json \[다크초코 쿠키 grade 0\]: duplicate buff value \(effect type DefensePointReductionChance\)/,
+    );
+    expectEmpty(store);
   });
 
   it("rejects a buff cookie that isn't a glossary kr", () => {

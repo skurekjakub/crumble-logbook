@@ -50,6 +50,10 @@ export type Confidence = (typeof CONFIDENCE)[number];
 export const BUFF_BASE = ["Fixed", "CastersAttackPoint", "CastersHealthPoint"] as const;
 export type BuffBase = (typeof BUFF_BASE)[number];
 
+/** Who a buff lands on: the caster's whole team, or the caster alone (`self`). */
+export const BUFF_TARGET = ["team", "self"] as const;
+export type BuffTarget = (typeof BUFF_TARGET)[number];
+
 /** Lifecycle status of a background job. */
 export const JOB_STATUS = ["queued", "running", "done", "failed", "cancelled"] as const;
 export type JobStatus = (typeof JOB_STATUS)[number];

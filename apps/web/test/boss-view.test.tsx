@@ -84,7 +84,7 @@ const FIGHT_EVENTS = [
 function grades(
   base: Pick<BuffValue, "id" | "cookieKr" | "en" | "effectType">,
   values: readonly number[],
-  extra: Partial<Pick<BuffValue, "maxStack" | "base" | "scalesWithCasterAmp">> = {},
+  extra: Partial<Pick<BuffValue, "maxStack" | "base" | "scalesWithCasterAmp" | "target">> = {},
 ): BuffValue[] {
   return [0, 1, 3, 5, 7, 9].map((star, i) => ({
     ...base,
@@ -95,6 +95,7 @@ function grades(
     maxStack: 1,
     base: "Fixed",
     scalesWithCasterAmp: true,
+    target: "team",
     sources: ["web:crumbgg:rankings-s5"],
     ...extra,
   }));
@@ -105,6 +106,7 @@ const BUFF_VALUES = [
   ...grades({ id: 1, ...TEA, effectType: "BossDamageRateAddition" }, [45, 50, 55, 60, 65, 70]),
   ...grades({ id: 2, ...TEA, effectType: "DefensePointMultiplier" }, [10, 20, 30, 40, 50, 60], {
     maxStack: 2,
+    target: "self",
   }),
   ...grades(
     {

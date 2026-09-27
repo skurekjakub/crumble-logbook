@@ -64,6 +64,34 @@ describe("buff-values routes", () => {
     expect(rows[1]!.sources).toEqual(["web:sugarpocket-bundle-1.4.002"]);
   });
 
+  it("POST defaults the target to the team, and keeps a self target", async () => {
+    const { app } = setup();
+    const team = await readJson<BuffValueView>(
+      await app.request("/api/buff-values", jsonBody(buff("실론나이트 쿠키", 9))),
+    );
+    expect(team.target).toBe("team");
+    const self = await app.request(
+      "/api/buff-values",
+      jsonBody({
+        ...buff("실론나이트 쿠키", 9),
+        effectType: "DefensePointMultiplier",
+        target: "self",
+      }),
+    );
+    expect(self.status).toBe(201);
+    expect((await readJson<BuffValueView>(self)).target).toBe("self");
+  });
+
+  it("POST of a second row for the same cookie, effect type and grade is a 409", async () => {
+    const { app } = setup();
+    expect(
+      (await app.request("/api/buff-values", jsonBody(buff("실론나이트 쿠키", 9)))).status,
+    ).toBe(201);
+    const res = await app.request("/api/buff-values", jsonBody(buff("실론나이트 쿠키", 9)));
+    expect(res.status).toBe(409);
+    expect(await readJson<unknown>(res)).toMatchObject({ error: "conflict" });
+  });
+
   it("POST with an unknown base is a 400", async () => {
     const { app } = setup();
     const res = await app.request(

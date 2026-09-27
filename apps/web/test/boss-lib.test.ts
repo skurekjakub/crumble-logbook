@@ -23,6 +23,7 @@ function buff(p: Partial<BuffValue> & Pick<BuffValue, "cookieKr" | "effectType">
     maxStack: 1,
     base: "Fixed",
     scalesWithCasterAmp: true,
+    target: "team",
     sources: [],
     en: null,
     ...p,
@@ -83,6 +84,7 @@ describe("buffs by star", () => {
       fromStar: 0,
       valuePct: 10,
       maxStack: 2,
+      target: "self",
       sources: ["web:sp"],
     }),
     buff({
@@ -116,6 +118,7 @@ describe("buffs by star", () => {
       fromStar: 9,
       valuePct: 60,
       maxStack: 2,
+      target: "self",
       sources: ["web:sp"],
     }),
     buff({
@@ -147,7 +150,7 @@ describe("buffs by star", () => {
     expect(boss.selfOnly).toBe(false);
   });
 
-  it("puts team buffs before self-only ones and marks Tea Knight's DEF buff as self-only", () => {
+  it("puts team buffs before self-only ones, marking a row self-only from its target", () => {
     const pivot = pivotBuffs(rows);
     expect(pivot.map((r) => r.effectType)).toEqual([
       "BossDamageRateAddition",

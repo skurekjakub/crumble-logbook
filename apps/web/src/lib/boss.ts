@@ -14,6 +14,8 @@ export interface BuffValueLike {
   /** What the value is a percentage of: `Fixed`, or the caster's ATK or HP. */
   base: string;
   scalesWithCasterAmp: boolean;
+  /** Who the effect lands on: `team`, or `self` for the caster alone. */
+  target: string;
   sources: readonly string[];
 }
 
@@ -82,23 +84,6 @@ export function eventLabel(event: string): string {
 }
 
 /**
- * Buffs that land on the caster only, keyed `<cookieKr>|<effectType>`. The
- * `buff_values` table has no target column; the Sugar Pocket capture names
- * this effect's skill asset `skill_c0532_s09_01_ selfbuff`.
- */
-const SELF_ONLY = new Set(["실론나이트 쿠키|DefensePointMultiplier"]);
-
-/**
- * Whether a buff lands on the caster alone rather than on the team.
- *
- * @param cookieKr - the caster's stored Korean name
- * @param effectType - the buff's effect type
- */
-export function isSelfOnly(cookieKr: string, effectType: string): boolean {
-  return SELF_ONLY.has(`${cookieKr}|${effectType}`);
-}
-
-/**
  * Whether an effect's value is an application chance (a debuff's base
  * chance to land) rather than the size of a buff.
  *
@@ -151,7 +136,7 @@ export interface BuffStarRow {
   scalesWithCasterAmp: boolean;
   /** The highest grade's stack limit. */
   maxStack: number | null;
-  /** The buff lands on the caster only (see {@link isSelfOnly}). */
+  /** The buff lands on the caster only (its `target` is `self`). */
   selfOnly: boolean;
   /** The value is an application chance (see {@link isChance}). */
   chance: boolean;
@@ -204,7 +189,7 @@ export function pivotBuffs(rows: readonly BuffValueLike[]): BuffStarRow[] {
         base: r.base,
         scalesWithCasterAmp: r.scalesWithCasterAmp,
         maxStack: r.maxStack,
-        selfOnly: isSelfOnly(r.cookieKr, r.effectType),
+        selfOnly: r.target === "self",
         chance: isChance(r.effectType),
         byStar: {},
         sources: [],

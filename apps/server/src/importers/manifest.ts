@@ -59,7 +59,8 @@ export type FightEventsSpec = z.output<typeof fightEventsSpec>;
  * found by name in the Sugar Pocket `catalog` and cited to `source`. A
  * debuff's effect type comes from `debuffEffects`, keyed by the debuff's
  * Korean `effect` text, since the capture only calls it a generic
- * `StatModifier`.
+ * `StatModifier`. `selfBuffs` lists, per cookie, the effect types that
+ * land on the caster alone (`target: self`); every other row is `team`.
  */
 const buffValuesSpec = z.strictObject({
   file: z.string().min(1),
@@ -67,6 +68,7 @@ const buffValuesSpec = z.strictObject({
   source: sourceId,
   cookies: z.array(z.string().min(1)).min(1),
   debuffEffects: z.record(z.string().min(1), z.string().min(1)).default({}),
+  selfBuffs: z.record(z.string().min(1), z.array(z.string().min(1)).min(1)).default({}),
 });
 /** The `buffValues` block of an {@link ImportManifest}. */
 export type BuffValuesSpec = z.output<typeof buffValuesSpec>;
