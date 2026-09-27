@@ -358,7 +358,7 @@ export const CONTENT_KEYS = TABLE_KEYS.filter(
  * @returns its entry
  */
 export function specOf(key: TableKey): TableSpec {
-  return REGISTRY[key] as TableSpec;
+  return REGISTRY[key];
 }
 
 /**

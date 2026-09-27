@@ -83,5 +83,5 @@ export function writeRecord(store: Store, plan: RecordPlan, replace: boolean): W
     const after = countAll(repos);
     const counts = Object.fromEntries(TABLE_KEYS.map((key) => [key, after[key] - before[key]]));
     return { counts, warnings } as never;
-  }) as WriteResult;
+  });
 }

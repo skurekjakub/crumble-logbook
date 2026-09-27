@@ -76,19 +76,19 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
   /** The `CitedEntity` this table's rows are cited under. */
   entity: CitedEntity;
   /** Selects this content's table repo out of `repos`. */
-  table(repos: Repos): TableRepo<Row, Values>;
+  table: (repos: Repos) => TableRepo<Row, Values>;
   /**
    * Validates cross-table references in `values` before a write, beyond
    * plain source citations (e.g. a score's `deckId`).
    * @throws to reject the write
    */
-  checkRefs?(repos: Repos, values: Partial<Values>): void;
+  checkRefs?: (repos: Repos, values: Partial<Values>) => void;
   /**
    * Validates a row as written (column defaults applied, a patch merged in)
    * against other tables, inside the write's transaction.
    * @throws to reject the write; the transaction rolls back
    */
-  checkRow?(repos: Repos, row: Row): void;
+  checkRow?: (repos: Repos, row: Row) => void;
   /** The list filters `list` applies, by name. */
   filters?: AnyFilters;
   /** A Korean-name column whose English gloss each view carries as `en`. */
@@ -163,7 +163,7 @@ export function createContentService<
         checkRow?.(repos, row);
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
-      }) as View,
+      }),
     update: (id, patch, sources) =>
       store.transaction((repos) => {
         if (sources) assertSourcesExist(repos, sources);
@@ -172,13 +172,13 @@ export function createContentService<
         // A patch with no columns (replacing only the citations) has
         // nothing for `UPDATE ... SET` to set, which drizzle rejects; read
         // the row back instead of writing an empty update.
-        const row = Object.keys(patch as object).length > 0 ? repo.update(id, patch) : repo.get(id);
+        const row = Object.keys(patch).length > 0 ? repo.update(id, patch) : repo.get(id);
         if (!row) throw new NotFoundError(entity, id);
         checkRow?.(repos, row);
         if (!sources) return withSources(repos, row) as never;
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
-      }) as View,
+      }),
     remove: (id) =>
       store.transaction((repos) => {
         const repo = table(repos);
@@ -224,7 +224,7 @@ export function registeredService<K extends ContentKey>(
   const refColumns = Object.keys(content?.refs ?? {});
   return createContentService<{ id: number }, Record<string, unknown>>(store, {
     entity: entity!,
-    table: (repos) => repos[key] as unknown as TableRepo<{ id: number }, Record<string, unknown>>,
+    table: (repos) => repos[key],
     filters,
     gloss: content?.gloss,
     checkRefs: (repos, values) => {

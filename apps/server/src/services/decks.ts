@@ -145,7 +145,7 @@ export function createDeckService(store: Store): DeckService {
         repos.decks.replaceNotes(row.id, notes);
         repos.citations.replace("deck", row.id, sources);
         return toViews(repos, [row])[0] as never;
-      }) as DeckView,
+      }),
     update: (id, patch) =>
       store.transaction((repos) => {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);
@@ -159,7 +159,7 @@ export function createDeckService(store: Store): DeckService {
         if (notes !== undefined) repos.decks.replaceNotes(id, notes);
         if (sources !== undefined) repos.citations.replace("deck", id, sources);
         return toViews(repos, [row])[0] as never;
-      }) as DeckView,
+      }),
     remove: (id) =>
       store.transaction((repos) => {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);

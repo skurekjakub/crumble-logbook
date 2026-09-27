@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync } from "node:fs";
-import { dirname, join, posix, relative, sep } from "node:path";
+import { join, posix, relative, sep } from "node:path";
 import { describe, expect, it } from "vitest";
 import { repoRoot } from "../src/config";
 

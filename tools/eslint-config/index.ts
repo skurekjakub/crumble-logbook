@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import jsdoc from "eslint-plugin-jsdoc";
 import reactHooks from "eslint-plugin-react-hooks";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
@@ -64,6 +65,45 @@ export function crumbleConfig(rootDir: string) {
       },
     },
 
+    // JSDoc on every function, method and class, TSDoc-style: a summary, `@param name - …` for each parameter,
+    // `@returns …` when it returns a value, `@throws …` when it throws. Types stay in TypeScript, not in tags.
+    jsdoc.configs["flat/recommended-typescript-error"],
+    {
+      settings: { jsdoc: { tagNamePreference: { template: "typeParam" } } },
+      rules: {
+        // `@typeParam` is TSDoc's name for a type parameter; `@module` heads a file's overview comment.
+        "jsdoc/check-tag-names": ["error", { definedTags: ["typeParam", "module"], typed: false }],
+        // `@throws {ConflictError} …` and `@throws whatever the inserts throw …` are both fine.
+        "jsdoc/require-throws-type": "off",
+        // Destructured props are documented on their interface, not as `@param props.x` lines.
+        "jsdoc/require-param": ["error", { checkDestructured: false }],
+        "jsdoc/check-param-names": ["error", { checkDestructured: false }],
+        "jsdoc/require-jsdoc": [
+          "error",
+          {
+            publicOnly: false,
+            require: {
+              FunctionDeclaration: true,
+              FunctionExpression: true,
+              ArrowFunctionExpression: true,
+              MethodDefinition: true,
+              ClassDeclaration: true,
+            },
+            contexts: [
+              "TSMethodSignature",
+              "TSPropertySignature > TSTypeAnnotation > TSFunctionType",
+            ],
+            checkConstructors: false,
+          },
+        ],
+        "jsdoc/require-description": ["error", { contexts: ["any"] }],
+        "jsdoc/require-throws": "error",
+        "jsdoc/require-hyphen-before-param-description": ["error", "always"],
+        "jsdoc/tag-lines": ["error", "any", { startLines: 1 }],
+        "jsdoc/no-blank-block-descriptions": "error",
+      },
+    },
+
     {
       files: ["apps/web/**/*.{ts,tsx}"],
       extends: [reactHooks.configs.flat["recommended-latest"]],
@@ -87,6 +127,12 @@ export function crumbleConfig(rootDir: string) {
         "@typescript-eslint/no-unsafe-return": "off",
         "@typescript-eslint/unbound-method": "off",
       },
+    },
+
+    {
+      // Test cases are named by their `it()` strings; helpers shared across test files still need JSDoc.
+      files: ["**/*.test.{ts,tsx}"],
+      rules: { "jsdoc/require-jsdoc": "off" },
     },
   );
 }

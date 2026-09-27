@@ -69,7 +69,7 @@ export function crudRouter<S extends CrudRouteSpec, View>(
   spec: S,
 ) {
   const query = listQuery<S>(spec.filters);
-  const param = z.object({ id: spec.api.id as S["api"]["id"] });
+  const param = z.object({ id: spec.api.id });
   const input = spec.api.input as S["api"]["input"];
   const patch = spec.api.patch as S["api"]["patch"];
   return new Hono()
