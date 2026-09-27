@@ -16,8 +16,8 @@ import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
-import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /**
  * A cookie's level requirement as the levels table shows it: the level rule
@@ -143,7 +143,7 @@ export function DecksView({ mode }: { mode: ModeSection }) {
       {(rows) =>
         rows.length ? (
           <>
-            <ViewHeader title={mode.copy.decks?.title ?? "Decks"} lede={mode.copy.decks?.lede} />
+            <ModeViewHeader mode={mode} view="decks" fallbackTitle="Decks" />
             <TocLayout items={rows.map((d) => ({ id: deckId(d), label: d.nameEn }))}>
               <LineupLegend />
               {rows.map((d) => (

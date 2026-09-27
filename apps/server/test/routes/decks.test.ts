@@ -124,4 +124,29 @@ describe("decks routes", () => {
     const get = await app.request("/api/decks/cherry");
     expect(get.status).toBe(404);
   });
+
+  it("DELETE of a deck a counter edge names returns 409 with the edge count, and keeps it", async () => {
+    const { app, store } = setup();
+    addSource(store, "dc:1");
+    await app.request("/api/decks", jsonBody(validDeck));
+    await app.request("/api/decks", jsonBody({ ...validDeck, id: "rye" }));
+    await app.request("/api/decks", jsonBody({ ...validDeck, id: "bari" }));
+    const edge = { why: "x", confidence: "medium", sources: ["dc:1"] };
+    await app.request(
+      "/api/counters",
+      jsonBody({ ...edge, slug: "cherry-vs-rye", teamDeckId: "cherry", beatenByDeckId: "rye" }),
+    );
+    await app.request(
+      "/api/counters",
+      jsonBody({ ...edge, slug: "bari-vs-cherry", teamDeckId: "bari", beatenByDeckId: "cherry" }),
+    );
+
+    const del = await app.request("/api/decks/cherry", { method: "DELETE" });
+    expect(del.status).toBe(409);
+    expect(await readJson<{ message: string }>(del)).toMatchObject({
+      error: "conflict",
+      message: "deck cherry is named by 2 counter edges",
+    });
+    expect((await app.request("/api/decks/cherry")).status).toBe(200);
+  });
 });

@@ -4,6 +4,7 @@ import {
   buffStars,
   effectLabel,
   eventLabel,
+  fightLength,
   formatPct,
   markerRows,
   pivotBuffs,
@@ -86,6 +87,18 @@ describe("fight track scale", () => {
     expect(survivalTitle("super-jump wipe", 43, FIGHT)).toBe("The 17 s super-jump wipe");
     expect(survivalTitle("super-jump wipe", 43, 90)).toBe("The 47 s super-jump wipe");
     expect(survivalTitle("slam", null, FIGHT)).toBe("Slam");
+  });
+
+  it("reads the fight's length off the event that states it, else the latest timed event", () => {
+    const at = (event: string, tElapsed: number | null) => ({ event, tElapsed });
+    expect(
+      fightLength([at("engage", 0), at("fight_length", 90), at("wipe", 43)], "fight_length"),
+    ).toBe(90);
+    expect(fightLength([at("engage", 0), at("wipe", 43), at("off", null)], "fight_length")).toBe(
+      43,
+    );
+    expect(fightLength([at("fight_length", null), at("wipe", 43)], "fight_length")).toBe(43);
+    expect(fightLength([], "fight_length")).toBe(0);
   });
 
   it("turns an event key into a sentence-case label", () => {

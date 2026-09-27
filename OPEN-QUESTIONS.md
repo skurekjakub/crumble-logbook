@@ -2,6 +2,14 @@
 
 Decisions waiting on the user. Each links to the design it blocks. Answer inline, or in a session, and delete the entry once it's settled.
 
+## Scraping from the UI (raised 2026-09-28)
+
+Spec: [`docs/superpowers/specs/2026-09-27-crumble-logbook-design.md`](docs/superpowers/specs/2026-09-27-crumble-logbook-design.md), success criterion 3 ("A DC, Naver or crumb.gg scrape can be triggered from the UI and its captures land in a record") and its Jobs section. It was never built: plan 2 (jobs and scrapers) was never written, no `/jobs` route exists, and the `jobs` table the migrations create is unused. Captures are still taken by the Python scripts under `research/*/evidence/` and by agent-browser sessions.
+
+1. **Build it or descope it?**
+   - Build: write plan 2 (the job runner, the DC, Naver and crumb.gg scrapers ported to TypeScript, `/jobs` routes and a jobs screen), then implement it.
+   - Descope: strike criterion 3 from the spec, keep capturing by script, and drop the `jobs` table in a migration.
+
 ## Guild Conquest simulator (deferred 2026-09-27)
 
 Spec: [`docs/superpowers/specs/2026-09-27-conquest-simulator-design.md`](docs/superpowers/specs/2026-09-27-conquest-simulator-design.md), §11. Nothing is implemented. The implementation plan (plan 5) gets written only after these are answered and the spec is approved.

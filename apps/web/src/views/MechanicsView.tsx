@@ -7,7 +7,7 @@ import { EmptyState } from "../components/EmptyState";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
-import { ViewHeader } from "../components/ViewHeader";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /**
  * A mode's measured or datamined mechanics as cards, each with its
@@ -25,10 +25,7 @@ export function MechanicsView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
   return (
     <>
-      <ViewHeader
-        title={mode.copy.mechanics?.title ?? "Mechanics"}
-        lede={mode.copy.mechanics?.lede}
-      />
+      <ModeViewHeader mode={mode} view="mechanics" fallbackTitle="Mechanics" />
       <QueryResult query={mechanics} resource="mechanics">
         {(items) =>
           items.length ? (

@@ -1,6 +1,6 @@
 # STATE: 001 Guild Conquest meta + crumble-logbook app
 
-> **Superseded** by `HANDOFF.md` at the repo root (2026-09-27 12:10 CEST). Kept as history; the vault paths below are pre-migration.
+> **Superseded** by this record's [`README.md`](README.md), the final write-up (2026-09-28). Kept as history; the vault paths below are pre-migration.
 
 Written 2026-09-27 (~13:30 CEST) before a context compaction. This is the working state for picking the job back up; it is not the final handoff. The user wants a proper "current state + timestamp" handoff at the **end** of the session, not now.
 

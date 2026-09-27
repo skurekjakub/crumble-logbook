@@ -5,9 +5,9 @@ import type {
   DeckPetRow,
   DeckRow,
 } from "@crumble/schema";
-import { deckCookies, deckNotes, deckPets, decks } from "@crumble/schema";
+import { counters, deckCookies, deckNotes, deckPets, decks } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
-import { asc, count, eq, inArray, max } from "drizzle-orm";
+import { asc, count, eq, inArray, max, or } from "drizzle-orm";
 import type { Db } from "../db/client";
 
 /** Insert payload for {@link DecksRepo.insert} and {@link DecksRepo.update}. */
@@ -105,6 +105,12 @@ export interface DecksRepo {
   replaceNotes(deckId: string, notes: DeckNoteInsert[]): void;
   /** Returns the number of decks. */
   count(): number;
+  /**
+   * Returns how many counter edges name the deck `id`, on either side
+   * (`teamDeckId` or `beatenByDeckId`).
+   * @param id - the deck's slug id
+   */
+  counterEdges(id: string): number;
   /** Returns every cookie slot across every deck, ordered by deck then `position`. */
   allCookies(): DeckCookieRow[];
 }
@@ -194,6 +200,12 @@ export function createDecksRepo(db: Db): DecksRepo {
       }
     },
     count: () => db.select({ n: count() }).from(decks).get()!.n,
+    counterEdges: (id) =>
+      db
+        .select({ n: count() })
+        .from(counters)
+        .where(or(eq(counters.teamDeckId, id), eq(counters.beatenByDeckId, id)))
+        .get()!.n,
     allCookies: () =>
       db
         .select()

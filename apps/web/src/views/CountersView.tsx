@@ -10,8 +10,8 @@ import { Kv } from "../components/Kv";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
-import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /** The name parts a counter heading shows for a deck. */
 type DeckName = Pick<Deck, "id" | "nameEn" | "nameKr">;
@@ -95,7 +95,7 @@ export function CountersView({ mode }: { mode: ModeSection }) {
 
   return (
     <>
-      <ViewHeader title={mode.copy.counters?.title ?? "Counters"} lede={mode.copy.counters?.lede} />
+      <ModeViewHeader mode={mode} view="counters" fallbackTitle="Counters" />
       <QueryResult query={counters} resource="counters">
         {(edges) =>
           edges.length ? (

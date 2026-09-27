@@ -61,11 +61,11 @@
     ],
     "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론", "치케"],
     "atk_order_note": "Scorpion sits exactly 7th, ahead of Melon Soda and Dark Choco.",
-    "pets": ["핫도그", "와사비문어", "판다만두"],
+    "pets": ["핫도그", "와사비문어", "색동주머니"],
     "perks": "열정페이 + 초고속승진 on Milk.",
     "formation": "Move speed only from sugar runes, on Brightseeker, Pinot and Melon Soda. None on gear. The target is a single line (일렬).",
     "substitutions": [
-      "Pet: either Panda Dumpling or Candy Shade Pouch. The deck's 1T run (about 1T at 1.6G, dc:74759) kept everything and swapped only to the new Candy Shade Pouch ('그대로 신규펫만'); its author found the pet's higher lift resistance shifted the alignment for the better at the old speeds. Others keep Panda because their speed values were tuned with it and the different lift resistance moves placement: 867G at 1.57G with Panda (dc:76144).",
+      "Pet: Candy Shade Pouch, or Panda Dumpling. The deck's 1T run (about 1T at 1.6G, dc:74759) kept everything and swapped only to the new Candy Shade Pouch ('그대로 신규펫만'); its author found the pet's higher lift resistance shifted the alignment for the better at the old speeds. Others keep Panda because their speed values were tuned with it and the different lift resistance moves placement: 867G at 1.57G with Panda (dc:76144).",
       "Lazy variant: Tiger Lily in Herb's slot with speed only on Pinot and Melon Soda. It aligns well but breaks the multi-hit chain, so damage is lower."
     ],
     "rng": "The source player gets a good alignment in about 3 of 4 runs. A 0.03 speed difference can stop the line forming at all. The same setup aligned on one device and not on another (Galaxy vs Lenovo tablet).",

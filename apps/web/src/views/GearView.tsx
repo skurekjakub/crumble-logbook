@@ -5,7 +5,7 @@ import type { ModeSection } from "../app/modes";
 import { GearBoard, generalGear } from "../components/GearBoard";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
-import { ViewHeader } from "../components/ViewHeader";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /**
  * A mode's gear substats laid out like the equipment screen, each with its
@@ -19,7 +19,7 @@ export function GearView({ mode }: { mode: ModeSection }) {
   const gear = useQuery(gearRecsQuery(mode.scope));
   return (
     <>
-      <ViewHeader title={mode.copy.gear?.title ?? "Gear"} lede={mode.copy.gear?.lede} />
+      <ModeViewHeader mode={mode} view="gear" fallbackTitle="Gear" />
       <QueryResult query={gear} resource="gear recommendations">
         {(rows) => {
           const general = generalGear(rows);

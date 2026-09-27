@@ -186,7 +186,6 @@ function seedEverything(store: Store): SeedIds {
     id: "rival",
     nameEn: "Rival",
     status: "alt",
-    mode: "arena",
     cookies: [{ cookieKr: "체리 쿠키", level: "1", levelRule: null, stars: null, why: "x" }],
     pets: [],
     notes: [],
@@ -195,7 +194,7 @@ function seedEverything(store: Store): SeedIds {
   services.counters.create(
     {
       slug: "cherry-onion-vs-rival",
-      mode: "arena",
+      mode: "guild_conquest",
       teamDeckId: "cherry-onion",
       beatenByDeckId: "rival",
       conditions: null,

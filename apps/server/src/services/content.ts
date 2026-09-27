@@ -1,11 +1,12 @@
-import type { CitedEntity } from "@crumble/schema";
-import { NotFoundError, UnknownRefsError } from "../errors";
+import type { CitedEntity, GameMode } from "@crumble/schema";
+import { ConflictError, NotFoundError, UnknownRefsError } from "../errors";
 import type { AnyFilters, ContentKey, FiltersOf, Registry, RowOf, ValuesOf } from "../registry";
 import { specOf } from "../registry";
 import type { Repos, Store } from "../repos";
 import type { TableRepo } from "../repos/table-repo";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
+import { deckModeMismatch } from "./deck-modes";
 import { applyFilters, filtersNeedGlossary } from "./filters";
 import type { NameResolver } from "./names";
 import { createNameResolver, recordsOf } from "./names";
@@ -45,6 +46,8 @@ export interface ContentService<
    * @param sources - the source ids that back the row
    * @throws {UnknownRefsError} if any `sources` id, or any id a declared
    *   reference column holds, doesn't exist; no row is written
+   * @throws whatever `spec.checkRow` throws for the written row; no row is
+   *   kept
    */
   create(values: Values, sources: string[]): View;
   /**
@@ -56,6 +59,8 @@ export interface ContentService<
    * @throws {NotFoundError} if `id` doesn't exist
    * @throws {UnknownRefsError} if any `sources` id, or a referenced id,
    *   doesn't exist
+   * @throws whatever `spec.checkRow` throws for the updated row; the row
+   *   is left as it was
    */
   update(id: number, patch: Partial<Values>, sources?: string[]): View;
   /**
@@ -78,6 +83,12 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
    * @throws to reject the write
    */
   checkRefs?(repos: Repos, values: Partial<Values>): void;
+  /**
+   * Validates a row as written (column defaults applied, a patch merged in)
+   * against other tables, inside the write's transaction.
+   * @throws to reject the write; the transaction rolls back
+   */
+  checkRow?(repos: Repos, row: Row): void;
   /** The list filters `list` applies, by name. */
   filters?: AnyFilters;
   /** A Korean-name column whose English gloss each view carries as `en`. */
@@ -88,8 +99,8 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
  * Builds a {@link ContentService} over one cited-content table.
  *
  * Every write runs inside `store.transaction`: it checks the cited sources
- * exist, runs `spec.checkRefs`, writes the row, then replaces its
- * citations. `update` only touches citations when `sources` is given. A
+ * exist, runs `spec.checkRefs`, writes the row, runs `spec.checkRow` on it,
+ * then replaces its citations. `update` only touches citations when `sources` is given. A
  * view is the row, then `sources`, then `en` when `spec.gloss` names a
  * column, glossed with the row's own record's entries first.
  *
@@ -103,7 +114,7 @@ export function createContentService<
   View = Cited<Row>,
   Filter extends object = Record<never, never>,
 >(store: Store, spec: ContentServiceSpec<Row, Values>): ContentService<Row, Values, View, Filter> {
-  const { entity, table, checkRefs, filters, gloss } = spec;
+  const { entity, table, checkRefs, checkRow, filters, gloss } = spec;
   const usesGlossary = gloss !== undefined || filtersNeedGlossary(filters);
 
   const resolver = (repos: Repos) =>
@@ -149,6 +160,7 @@ export function createContentService<
         assertSourcesExist(repos, sources);
         checkRefs?.(repos, values);
         const row = table(repos).insert(values);
+        checkRow?.(repos, row);
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
       }) as View,
@@ -162,6 +174,7 @@ export function createContentService<
         // the row back instead of writing an empty update.
         const row = Object.keys(patch as object).length > 0 ? repo.update(id, patch) : repo.get(id);
         if (!row) throw new NotFoundError(entity, id);
+        checkRow?.(repos, row);
         if (!sources) return withSources(repos, row) as never;
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
@@ -194,7 +207,10 @@ export type RegisteredService<K extends ContentKey> = ContentService<
 /**
  * Builds the {@link ContentService} of a registered content type from its
  * registry entry: its entity, table repo, list filters, glossed column,
- * and reference columns (each id checked to exist before a write).
+ * and reference columns (each id checked to exist before a write). A row
+ * with a `mode` column must name only decks of its own mode, as written
+ * (so an omitted `mode` is checked as its column default); a mismatch
+ * throws {@link ConflictError} and nothing is written.
  *
  * @param store - the store to persist through
  * @param key - the type's registry key
@@ -217,6 +233,16 @@ export function registeredService<K extends ContentKey>(
         if (typeof id === "string" && !repos.decks.exists(id)) {
           throw new UnknownRefsError("decks", [id]);
         }
+      }
+    },
+    checkRow: (repos, row) => {
+      const { mode } = row as { mode?: GameMode };
+      if (mode === undefined) return;
+      for (const column of refColumns) {
+        const id = (row as Record<string, unknown>)[column];
+        if (typeof id !== "string") continue;
+        const mismatch = deckModeMismatch(entity!, mode, id, repos.decks.get(id)?.mode);
+        if (mismatch) throw new ConflictError(mismatch);
       }
     },
   }) as unknown as RegisteredService<K>;

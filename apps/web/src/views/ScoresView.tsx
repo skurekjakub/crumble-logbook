@@ -27,6 +27,7 @@ import { formatG, formatRatio, ratio } from "../lib/format";
 import { boardSeasons, latestCapture } from "../lib/rankings";
 import { optionalInt, optionalKey, optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
+import { ModeViewHeader } from "./ModeViewHeader";
 
 /** The scores view's search params: a deck for the scores, a season and board for the leaderboard. */
 export interface ScoresSearch {
@@ -110,7 +111,7 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
 
   return (
     <>
-      <ViewHeader title={mode.copy.scores?.title ?? "Scores"} lede={mode.copy.scores?.lede} />
+      <ModeViewHeader mode={mode} view="scores" fallbackTitle="Scores" />
       {decks.isError ? <ErrorBox resource="decks" error={decks.error} /> : null}
       <TocLayout items={toc}>
         <div className="tools" id={PARTS.chart}>
