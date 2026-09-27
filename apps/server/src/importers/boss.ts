@@ -5,14 +5,7 @@ import { ImportError } from "../errors";
 import { parseFile, readJson } from "./files";
 import type { BuffValuesSpec, FightEventsSpec } from "./manifest";
 import { formatIssues } from "./manifest";
-
-/** Column values ready to insert, with the source ids the row cites. */
-export interface CitedValues<V> {
-  /** The row's column values. */
-  values: V;
-  /** The curated source ids the row cites, deduplicated. */
-  sources: string[];
-}
+import type { CitedValues } from "./steps";
 
 /** One entry of an extraction's `encounter.timeline`. */
 const timelineEntry = z.strictObject({

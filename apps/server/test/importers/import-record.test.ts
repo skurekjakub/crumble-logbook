@@ -14,6 +14,7 @@ import { repoRoot } from "../../src/config";
 import { ImportError } from "../../src/errors";
 import { importRecord } from "../../src/importers/import-record";
 import type { Store } from "../../src/repos";
+import { createServices } from "../../src/services";
 import { exportSnapshot } from "../../src/services/export";
 import { testStore } from "../helpers";
 
@@ -468,17 +469,51 @@ describe("importRecord validation", () => {
     );
     expectEmpty(store);
   });
+});
 
-  it("a failed replace import leaves the prior data untouched", () => {
-    const players = rankingSpec("11-players.tsv");
-    const dir = tempRecord(null, () => {}, {
-      manifest: { rankings: [players, players] },
-      evidence: [players.file],
-    });
+describe("importRecord rollback", () => {
+  /**
+   * Wraps `store` so every transaction's buff-value inserts throw, the last
+   * write of a record 001 import: the replace has cleared every table and
+   * rewritten the rest by then. Records how many buff values the
+   * transaction saw at the failing insert.
+   */
+  function failingOnBuffInsert(store: Store) {
+    const seen: number[] = [];
+    const failing: Store = {
+      repos: store.repos,
+      transaction: (work) =>
+        store.transaction((repos) =>
+          work({
+            ...repos,
+            buffValues: {
+              ...repos.buffValues,
+              insert: () => {
+                seen.push(repos.buffValues.count());
+                throw new Error("buff insert failed");
+              },
+            },
+          }),
+        ),
+    };
+    return { failing, seen };
+  }
+
+  it("a replace that fails inside its transaction, after the clear, keeps the prior rows and id counters", () => {
     const store = testStore();
     importRecord(store, recordDir);
+    // Drop the highest-id score, so its id is in `sqlite_sequence` but in no
+    // row: only an intact counter makes the next score skip past it.
+    const last = Math.max(...store.repos.scores.list().map((score) => score.id));
+    createServices(store).scores.remove(last);
     const before = exportSnapshot(store);
-    expect(() => importRecord(store, dir, { replace: true })).toThrow();
+
+    const { failing, seen } = failingOnBuffInsert(store);
+    expect(() => importRecord(failing, recordDir, { replace: true })).toThrow("buff insert failed");
+    expect(seen).toEqual([0]);
+
     expect(exportSnapshot(store)).toEqual(before);
+    const next = store.repos.scores.insert({ damageG: 1, verified: false });
+    expect(next.id).toBe(last + 1);
   });
 });
