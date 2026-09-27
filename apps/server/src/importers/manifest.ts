@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { RANKING_BOARD, RECORD_STATUS, isoDate, sourceId } from "@crumble/schema";
+import { GAME_MODE, RANKING_BOARD, RECORD_STATUS, isoDate, sourceId } from "@crumble/schema";
 import { z } from "zod";
 import { ImportError } from "../errors";
 import type { RankingInsert } from "../repos/rankings";
@@ -74,11 +74,13 @@ const buffValuesSpec = z.strictObject({
 export type BuffValuesSpec = z.output<typeof buffValuesSpec>;
 
 /**
- * Schema of a research record's `import.json`: the record row to create,
- * where the curated dataset and the extractions live, how to find each
- * source's evidence capture, which ranking TSVs to load, and, optionally,
- * the fight timeline and the buff capture. Every path is relative to the
- * record directory.
+ * Schema of a research record's `import.json`: the record row to create
+ * (`mode`, when given, is the game mode it's filed under), where the
+ * curated dataset and the extractions live, how to find each source's
+ * evidence capture, which ranking TSVs to load, and, optionally, the fight
+ * timeline and the buff capture. Every path is relative to the record
+ * directory; a capture rule's `dir` may climb into another record's
+ * evidence (`../<slug>/evidence/...`).
  */
 export const importManifest = z.strictObject({
   record: z.strictObject({
@@ -86,6 +88,7 @@ export const importManifest = z.strictObject({
     question: z.string().min(1),
     status: z.enum(RECORD_STATUS),
     startedAt: isoDate,
+    mode: z.enum(GAME_MODE).optional(),
   }),
   curated: z.string().min(1),
   extractions: z.string().min(1),

@@ -10,8 +10,10 @@
 import {
   CONFIDENCE,
   DECK_STATUS,
+  GAME_MODE,
   GEAR_CONTEXT,
   GLOSSARY_KIND,
+  USAGE_KIND,
   deckSlug,
   isoDate,
   sourceId,
@@ -21,10 +23,20 @@ import { z } from "zod";
 /** The source ids a curated row cites: at least one. */
 const cited = z.array(z.string()).min(1);
 
-/** One cookie slot of a curated deck. Needs a `level` or a `level_rule` (or both). */
+/** The game mode a curated row is about; `guild_conquest` when the row doesn't say. */
+const mode = z.enum(GAME_MODE).default("guild_conquest");
+
+/** A percentage, 0-100. */
+const percent = z.number().min(0).max(100);
+
+/**
+ * One cookie slot of a curated deck. Needs a `level` or a `level_rule` (or
+ * both); `slot` is its formation position as displayed, when known.
+ */
 export const seedDeckCookie = z
   .strictObject({
     kr: z.string().min(1),
+    slot: z.string().min(1).optional(),
     level: z.string().min(1).optional(),
     level_rule: z.string().min(1).optional(),
     stars: z.string().min(1).optional(),
@@ -40,6 +52,7 @@ export type SeedDeckCookie = z.output<typeof seedDeckCookie>;
 /** One entry of `decks.json`. */
 export const seedDeck = z.strictObject({
   id: deckSlug,
+  mode,
   name_en: z.string().min(1),
   name_kr: z.string().optional(),
   status: z.enum(DECK_STATUS),
@@ -61,6 +74,7 @@ export type SeedDeck = z.output<typeof seedDeck>;
 
 /** One entry of `runes.json`: a cookie's rune lines and the decks they apply to. */
 export const seedRune = z.strictObject({
+  mode,
   cookie: z.string().min(1),
   lines: z.string().min(1),
   why: z.string().min(1),
@@ -73,6 +87,7 @@ export type SeedRune = z.output<typeof seedRune>;
 
 /** One entry of `gear.json`. `slot` is a dashed name such as `top-left`. */
 export const seedGear = z.strictObject({
+  mode,
   slot: z.string().min(1),
   substats: z.string().min(1),
   why: z.string().min(1),
@@ -97,8 +112,10 @@ export const seedScore = z.strictObject({
 /** Output of {@link seedScore}. */
 export type SeedScore = z.output<typeof seedScore>;
 
-/** One entry of `mechanics.json`. */
+/** One entry of `mechanics.json`, or one rule of `meta.json`'s `modes`. */
 export const seedMechanic = z.strictObject({
+  mode,
+  topic: z.string().min(1).optional(),
   title: z.string().min(1),
   body: z.string().min(1),
   confidence: z.enum(CONFIDENCE),
@@ -109,6 +126,7 @@ export type SeedMechanic = z.output<typeof seedMechanic>;
 
 /** One entry of `rng.json`. */
 export const seedRng = z.strictObject({
+  mode,
   factor: z.string().min(1),
   effect: z.string().min(1),
   mitigation: z.string().optional(),
@@ -119,6 +137,7 @@ export type SeedRng = z.output<typeof seedRng>;
 
 /** One entry of `timeline.json`. */
 export const seedTimeline = z.strictObject({
+  mode,
   date: isoDate,
   event: z.string().min(1),
   sources: cited,
@@ -128,6 +147,7 @@ export type SeedTimeline = z.output<typeof seedTimeline>;
 
 /** One entry of `takeaways.json`; the array order is the ranking. */
 export const seedTakeaway = z.strictObject({
+  mode,
   text: z.string().min(1),
   detail: z.string().optional(),
   sources: cited,
@@ -136,9 +156,64 @@ export const seedTakeaway = z.strictObject({
 export type SeedTakeaway = z.output<typeof seedTakeaway>;
 
 /**
+ * One entry of `counters.json`: a directed edge, `team` is beaten by
+ * `beaten_by` (both deck ids), under `conditions`, because of `why`. `id`
+ * becomes the edge's slug.
+ */
+export const seedCounter = z.strictObject({
+  id: deckSlug,
+  mode,
+  team: deckSlug,
+  beaten_by: deckSlug,
+  conditions: z.string().min(1).optional(),
+  why: z.string().min(1),
+  confidence: z.enum(CONFIDENCE),
+  sources: cited,
+});
+/** Output of {@link seedCounter}. */
+export type SeedCounter = z.output<typeof seedCounter>;
+
+/**
+ * One entry of `usage.json`: `subject`'s share of `sample`, captured
+ * `captured_at`. `members` lists a core's or team's cookies;
+ * `confirmed_pct`, when known, can't exceed `usage_pct`.
+ */
+export const seedUsage = z
+  .strictObject({
+    mode,
+    kind: z.enum(USAGE_KIND),
+    subject: z.string().min(1),
+    members: z.array(z.string().min(1)).nullish(),
+    usage_pct: percent,
+    confirmed_pct: percent.nullish(),
+    sample: z.string().min(1),
+    captured_at: isoDate,
+    note: z.string().min(1).nullish(),
+    sources: cited,
+  })
+  .refine((u) => u.confirmed_pct == null || u.confirmed_pct <= u.usage_pct, {
+    message: "confirmed_pct can't exceed usage_pct",
+    path: ["confirmed_pct"],
+  });
+/** Output of {@link seedUsage}. */
+export type SeedUsage = z.output<typeof seedUsage>;
+
+/**
+ * One mode block of `meta.json`'s `modes`: the mode's header copy and its
+ * rules. A rule's `mode`, when it states one, must be the block's.
+ */
+const seedMetaMode = z.strictObject({
+  lede: z.string().min(1).optional(),
+  caveat: z.string().min(1).optional(),
+  rules: z.array(seedMechanic.extend({ mode: z.enum(GAME_MODE).optional() })).default([]),
+});
+
+/**
  * `meta.json`: the record's header copy plus the "for your account"
- * recommendation (`you`). `record`, `footer` and `gear_slot_names` are
- * dashboard UI copy; they're accepted but not imported.
+ * recommendation (`you`), and, for a record covering several game modes,
+ * each mode's copy and rules (`modes`). `record`, `footer`,
+ * `gear_slot_names` and `formation_slots` are dashboard UI copy; they're
+ * accepted but not imported.
  */
 export const seedMeta = z.strictObject({
   updated: isoDate,
@@ -148,11 +223,13 @@ export const seedMeta = z.strictObject({
   record: z.string().optional(),
   footer: z.string().optional(),
   gear_slot_names: z.record(z.string(), z.string()).optional(),
+  formation_slots: z.string().optional(),
   you: z.strictObject({
     summary: z.string().min(1),
     changes: z.array(z.string().min(1)).min(1),
     sources: cited,
   }),
+  modes: z.partialRecord(z.enum(GAME_MODE), seedMetaMode).optional(),
 });
 /** Output of {@link seedMeta}. */
 export type SeedMeta = z.output<typeof seedMeta>;

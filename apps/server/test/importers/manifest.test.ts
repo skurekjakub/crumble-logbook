@@ -56,6 +56,13 @@ describe("importManifest", () => {
     expect(importManifest.safeParse({ ...valid, rankings: [spec] }).success).toBe(true);
   });
 
+  it("accepts an optional record mode, and rejects an unknown one", () => {
+    const withMode = (mode: string) => ({ ...valid, record: { ...valid.record, mode } });
+    expect(importManifest.parse(withMode("arena")).record.mode).toBe("arena");
+    expect(importManifest.parse(valid).record.mode).toBeUndefined();
+    expect(importManifest.safeParse(withMode("raid")).success).toBe(false);
+  });
+
   it("rejects an unknown board, capture site or record status", () => {
     const badBoard = { ...valid, rankings: [{ ...valid.rankings[0], board: "arena" }] };
     const badSite = { ...valid, captures: [{ site: "web", dir: "d", file: "{id}.md" }] };

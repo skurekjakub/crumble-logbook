@@ -1,9 +1,9 @@
-import { count, getTableColumns } from "drizzle-orm";
+import { and, count, eq, getTableColumns, isNotNull, notInArray } from "drizzle-orm";
 import type { SQLiteColumn, SQLiteTable } from "drizzle-orm/sqlite-core";
 import { getTableConfig } from "drizzle-orm/sqlite-core";
 import type { Db } from "../db/client";
 import type { RowOf, TableKey } from "../registry";
-import { REGISTRY } from "../registry";
+import { recordColumnOf, REGISTRY } from "../registry";
 import { resetIds } from "./sequence";
 
 /** Rows per multi-row insert, well under SQLite's bound-parameter limit for any registered table. */
@@ -41,6 +41,37 @@ export interface TablesRepo {
    * @throws if a row of another table still references one of its rows
    */
   clear(key: TableKey): void;
+  /**
+   * Returns the number of rows of `key` that research record `slug` owns.
+   * @param key - the table's snapshot name
+   * @param slug - the record's slug
+   * @throws `Error` if no record owns `key`'s rows (see `recordColumnOf`)
+   */
+  countOwned(key: TableKey, slug: string): number;
+  /**
+   * Returns the primary keys, as strings, of the rows of `key` that record
+   * `slug` owns: the entity ids its citations are stored under.
+   * @param key - the table's snapshot name; its primary key is one column
+   * @param slug - the record's slug
+   * @throws `Error` if no record owns `key`'s rows
+   */
+  ownedIds(key: TableKey, slug: string): string[];
+  /**
+   * Deletes the rows of `key` that record `slug` owns, except those a row
+   * of another table still references through a foreign key that neither
+   * cascades nor nulls. Rows that cascade from a deleted row go with it.
+   * @param key - the table's snapshot name
+   * @param slug - the record's slug
+   * @returns the number of rows deleted
+   * @throws `Error` if no record owns `key`'s rows
+   */
+  clearOwned(key: TableKey, slug: string): number;
+  /**
+   * Restarts the id counter of `key`, so its next insert gets one past the
+   * highest id left (1 when the table is empty).
+   * @param key - the table's snapshot name
+   */
+  restartIds(key: TableKey): void;
 }
 
 /**
@@ -80,11 +111,45 @@ function compareBy(key: readonly string[]) {
 }
 
 /**
+ * Returns the column of `table` named by its JS key.
+ * @throws `Error` naming the column if `table` has none by that name
+ */
+function columnOf(table: SQLiteTable, name: string): SQLiteColumn {
+  const column = (getTableColumns(table) as Record<string, SQLiteColumn>)[name];
+  if (!column) throw new Error(`table has no column "${name}"`);
+  return column;
+}
+
+/**
+ * Lists the registered foreign keys into `table` that block deleting a
+ * referenced row: those that neither cascade nor set the reference to
+ * null or its default.
+ * @returns each key's referencing column and table, and the referenced column
+ */
+function blockingReferences(table: SQLiteTable) {
+  return Object.values(REGISTRY).flatMap(({ table: other }) =>
+    getTableConfig(other as SQLiteTable).foreignKeys.flatMap((fk) => {
+      const ref = fk.reference();
+      const releases = ["cascade", "set null", "set default"].includes(fk.onDelete ?? "");
+      if (ref.foreignTable !== table || releases) return [];
+      return [
+        { from: ref.columns[0]!, fromTable: other as SQLiteTable, to: ref.foreignColumns[0]! },
+      ];
+    }),
+  );
+}
+
+/**
  * Builds a {@link TablesRepo}.
  * @param db - database or transaction handle
  */
 export function createTablesRepo(db: Db): TablesRepo {
   const tableOf = (key: TableKey) => REGISTRY[key].table as SQLiteTable;
+  const ownerOf = (key: TableKey) => {
+    const column = recordColumnOf(key);
+    if (!column) throw new Error(`no record owns the rows of ${key}`);
+    return columnOf(tableOf(key), column);
+  };
   return {
     dump: (key) => {
       const table = tableOf(key);
@@ -105,5 +170,35 @@ export function createTablesRepo(db: Db): TablesRepo {
       db.delete(table).run();
       resetIds(db, table);
     },
+    countOwned: (key, slug) =>
+      db
+        .select({ n: count() })
+        .from(tableOf(key))
+        .where(eq(ownerOf(key), slug))
+        .get()!.n,
+    ownedIds: (key, slug) => {
+      const table = tableOf(key);
+      const id = columnOf(table, primaryKey(table)[0]!);
+      return db
+        .select({ id })
+        .from(table)
+        .where(eq(ownerOf(key), slug))
+        .all()
+        .map((row) => String(row.id));
+    },
+    clearOwned: (key, slug) => {
+      const table = tableOf(key);
+      const kept = blockingReferences(table).map(({ from, fromTable, to }) =>
+        // A NULL in a NOT IN list makes the test NULL for every row, deleting nothing.
+        notInArray(to, db.select({ ref: from }).from(fromTable).where(isNotNull(from))),
+      );
+      const owner = ownerOf(key);
+      return db
+        .delete(table)
+        .where(and(eq(owner, slug), ...kept))
+        .returning({ owner })
+        .all().length;
+    },
+    restartIds: (key) => resetIds(db, tableOf(key)),
   };
 }

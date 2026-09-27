@@ -17,7 +17,8 @@ import { parseTsv } from "./tsv";
  * @param recordDir - absolute path to the record directory
  * @param manifest - the record's `import.json`
  * @param sourceIds - every curated source id
- * @returns a step inserting every TSV's rows, TSV by TSV, in file order
+ * @returns a step inserting every TSV's rows, TSV by TSV, in file order,
+ *   owned by the record being written
  * @throws {ImportError} naming the TSV (and line) of the first failure
  */
 export function readRankings(
@@ -59,7 +60,9 @@ export function readRankings(
       return row;
     });
   });
-  return (repos) => {
-    for (const rows of batches) repos.rankings.insertMany(rows);
+  return (repos, { record }) => {
+    for (const rows of batches) {
+      repos.rankings.insertMany(rows.map((row) => ({ ...row, recordSlug: record })));
+    }
   };
 }

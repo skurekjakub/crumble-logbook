@@ -1,12 +1,28 @@
-import type { GearSlot, SourceSite } from "@crumble/schema";
-import { GEAR_SLOT, SOURCE_SITE, scores } from "@crumble/schema";
+import type {
+  Confidence,
+  CounterInput,
+  GameMode,
+  GearSlot,
+  SourceSite,
+  UsageStatInput,
+  Values,
+} from "@crumble/schema";
+import { GAME_MODE, GEAR_SLOT, SOURCE_SITE, scores } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import type { DeckCookieInsert, DeckInsert, DeckNoteInsert } from "../../repos/decks";
 import type { GlossaryInsert } from "../../repos/glossary";
-import type { RecordInsert } from "../../repos/records";
+import type { RecordInsert, RecordModeInsert } from "../../repos/records";
 import type { SourceInsert } from "../../repos/sources";
 import type { ManifestRecord } from "../manifest";
-import type { SeedDeck, SeedGlossaryEntry, SeedMeta, SeedScore, SeedSource } from "./schema";
+import type {
+  SeedCounter,
+  SeedDeck,
+  SeedGlossaryEntry,
+  SeedMeta,
+  SeedScore,
+  SeedSource,
+  SeedUsage,
+} from "./schema";
 
 /** Insert payload for `scores`, as {@link mapScore} produces it. */
 export type ScoreInsert = Omit<InferInsertModel<typeof scores>, "id">;
@@ -19,10 +35,28 @@ export interface MappedDeck {
   notes: DeckNoteInsert[];
 }
 
-/** The research record row and the cited "for your account" recommendation a `meta.json` yields. */
+/** A mechanic writeup ready to insert, with its sources. */
+export interface MappedMechanic {
+  values: {
+    title: string;
+    body: string;
+    confidence: Confidence;
+    mode: GameMode;
+    topic: string | null;
+  };
+  sources: string[];
+}
+
+/**
+ * What a `meta.json` yields: the research record row, the modes it covers,
+ * the cited "for your account" recommendation, and each mode's rules as
+ * mechanics.
+ */
 export interface MappedMeta {
   record: RecordInsert;
+  modes: RecordModeInsert[];
   recommendation: { summary: string; changes: string[]; sources: string[] };
+  rules: MappedMechanic[];
 }
 
 const RELEVANCE = /^relevance (\d)\/3$/;
@@ -86,9 +120,9 @@ export function mapGlossary(e: SeedGlossaryEntry): GlossaryInsert {
  * @param d - the curated deck
  * @param position - the deck's display position (its index in the file)
  * @returns the deck row (`ceiling` becomes `ceilingText`; absent optional
- *   fields become `null`), its cookie slots, its pets, and its notes:
- *   `substitutions` as `substitution` notes followed by `unorthodox` as
- *   `unorthodox` notes
+ *   fields become `null`), its cookie slots (with their formation `slot`,
+ *   or `null`), its pets, and its notes: `substitutions` as `substitution`
+ *   notes followed by `unorthodox` as `unorthodox` notes
  */
 export function mapDeck(d: SeedDeck, position: number): MappedDeck {
   return {
@@ -105,6 +139,7 @@ export function mapDeck(d: SeedDeck, position: number): MappedDeck {
       rng: d.rng ?? null,
       atkOrder: d.atk_order ?? null,
       atkOrderNote: d.atk_order_note ?? null,
+      mode: d.mode,
     },
     cookies: d.cookies.map((c) => ({
       cookieKr: c.kr,
@@ -112,6 +147,7 @@ export function mapDeck(d: SeedDeck, position: number): MappedDeck {
       levelRule: c.level_rule ?? null,
       stars: c.stars ?? null,
       why: c.why,
+      slot: c.slot ?? null,
     })),
     pets: d.pets ?? [],
     notes: [
@@ -155,29 +191,89 @@ export function mapScore(s: SeedScore): ScoreInsert {
 }
 
 /**
+ * Maps a curated counter onto a `counters` row.
+ *
+ * @param c - the curated counter
+ * @returns the row: `id` becomes `slug`, `team`/`beaten_by` become
+ *   `teamDeckId`/`beatenByDeckId`, absent `conditions` becomes `null`
+ */
+export function mapCounter(c: SeedCounter): Values<CounterInput> {
+  return {
+    slug: c.id,
+    mode: c.mode,
+    teamDeckId: c.team,
+    beatenByDeckId: c.beaten_by,
+    conditions: c.conditions ?? null,
+    why: c.why,
+    confidence: c.confidence,
+  };
+}
+
+/**
+ * Maps a curated usage figure onto a `usage_stats` row.
+ *
+ * @param u - the curated figure
+ * @returns the row, snake_case fields camel-cased; absent `members`,
+ *   `confirmed_pct` and `note` become `null`
+ */
+export function mapUsage(u: SeedUsage): Values<UsageStatInput> {
+  return {
+    mode: u.mode,
+    kind: u.kind,
+    subject: u.subject,
+    members: u.members ?? null,
+    usagePct: u.usage_pct,
+    confirmedPct: u.confirmed_pct ?? null,
+    sample: u.sample,
+    capturedAt: u.captured_at,
+    note: u.note ?? null,
+  };
+}
+
+/**
  * Maps a curated `meta.json` and the manifest's record block onto the
- * research record row and the recommendation.
+ * research record row, its covered modes, the recommendation and the
+ * modes' rules.
  *
  * @param meta - the curated meta
  * @param record - the manifest's `record` block (slug, question, status,
- *   start date)
+ *   start date, optional mode)
  * @returns the record row (`updated` becomes `updatedAt`, `season` becomes
- *   `seasonLabel`, plus `lede` and `caveat`) and `you` as the
- *   recommendation with its sources
+ *   `seasonLabel`, plus `lede` and `caveat`; `mode` is the manifest's,
+ *   else the first `GAME_MODE` that `modes` lists, else `guild_conquest`),
+ *   one covered mode per `modes` block in `GAME_MODE` order, `you` as the
+ *   recommendation with its sources, and every block's rules as mechanics
+ *   of the block's mode with topic `rules` unless the rule names another
  */
 export function mapMeta(meta: SeedMeta, record: ManifestRecord): MappedMeta {
+  const blocks = GAME_MODE.flatMap((mode) => {
+    const block = meta.modes?.[mode];
+    return block ? [{ mode, block }] : [];
+  });
   return {
     record: {
       ...record,
+      mode: record.mode ?? blocks[0]?.mode ?? "guild_conquest",
       updatedAt: meta.updated,
       seasonLabel: meta.season,
       lede: meta.lede ?? null,
       caveat: meta.caveat ?? null,
     },
+    modes: blocks.map(({ mode, block }) => ({
+      mode,
+      lede: block.lede ?? null,
+      caveat: block.caveat ?? null,
+    })),
     recommendation: {
       summary: meta.you.summary,
       changes: meta.you.changes,
       sources: meta.you.sources,
     },
+    rules: blocks.flatMap(({ mode, block }) =>
+      block.rules.map(({ sources, topic, title, body, confidence }) => ({
+        values: { title, body, confidence, mode, topic: topic ?? "rules" },
+        sources,
+      })),
+    ),
   };
 }

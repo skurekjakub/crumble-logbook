@@ -1,6 +1,6 @@
 import { join } from "node:path";
 import { ImportError } from "../errors";
-import { readBuffValues, readFightEvents } from "./boss";
+import { insertBuffValues, readBuffValues, readFightEvents } from "./boss";
 import type { Collection, CollectionName, ParsedCollections, RowRefs } from "./collections";
 import { COLLECTIONS, curatedManifest } from "./collections";
 import { loadSummaries } from "./extractions";
@@ -129,8 +129,8 @@ export function readRecord(recordDir: string): RecordPlan {
   if (manifest.buffValues) {
     const glossaryKrs = new Set((parsed.glossary ?? []).map((entry) => entry.kr));
     steps.push(
-      insertCited(
-        "buffValues",
+      insertBuffValues(
+        manifest.buffValues.file,
         readBuffValues(recordDir, manifest.buffValues, sourceIds, glossaryKrs),
       ),
     );

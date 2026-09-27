@@ -266,19 +266,28 @@ describe("mapDeck", () => {
       rng: "Beam targets.",
       atkOrder: ["우유", "브시커"],
       atkOrderNote: "Milk first.",
+      mode: "guild_conquest",
     });
   });
 
   it("maps cookies with a level or a level rule, and pets in order", () => {
     const { cookies, pets } = mapDeck(cherry, 0);
     expect(cookies).toEqual([
-      { cookieKr: "우유", level: "100", levelRule: null, stars: null, why: "ATK #1 on purpose." },
+      {
+        cookieKr: "우유",
+        level: "100",
+        levelRule: null,
+        stars: null,
+        why: "ATK #1 on purpose.",
+        slot: null,
+      },
       {
         cookieKr: "브시커",
         level: null,
         levelRule: "Lv.100, or as high as possible while ATK < Milk",
         stars: null,
         why: "The carry.",
+        slot: null,
       },
     ]);
     expect(pets).toEqual(["와사비문어", "핫도그", "색동주머니"]);
@@ -367,7 +376,7 @@ describe("mapScore", () => {
 });
 
 describe("mapMeta", () => {
-  const meta = seedMeta.parse({
+  const metaInput = {
     updated: "2026-09-27",
     season: "S5 (live)",
     lede: "What players run.",
@@ -380,7 +389,8 @@ describe("mapMeta", () => {
       changes: ["Pomegranate: Lv.100 is fine."],
       sources: ["dc:76135", "nv:43653"],
     },
-  });
+  };
+  const meta = seedMeta.parse(metaInput);
   const record = {
     slug: "001-guild-conquest-meta",
     question: "Is there a documented set of teams?",
@@ -398,7 +408,32 @@ describe("mapMeta", () => {
       seasonLabel: "S5 (live)",
       lede: "What players run.",
       caveat: "Snapshot of 2026-09-27.",
+      mode: "guild_conquest",
     });
+    expect(mapMeta(meta, record).modes).toEqual([]);
+    expect(mapMeta(meta, record).rules).toEqual([]);
+  });
+
+  it("files a record under its first covered mode, and maps each mode's rules", () => {
+    const rule = { title: "Format", body: "b", confidence: "high", sources: ["dc:1"] };
+    const pvp = seedMeta.parse({
+      ...metaInput,
+      modes: {
+        rumble_arena: { lede: "Rumble", rules: [rule] },
+        arena: { caveat: "Arena caveat", rules: [{ ...rule, mode: "arena", topic: "rules" }] },
+      },
+    });
+    const mapped = mapMeta(pvp, record);
+    expect(mapped.record.mode).toBe("arena");
+    expect(mapMeta(pvp, { ...record, mode: "rumble_arena" }).record.mode).toBe("rumble_arena");
+    expect(mapped.modes).toEqual([
+      { mode: "arena", lede: null, caveat: "Arena caveat" },
+      { mode: "rumble_arena", lede: "Rumble", caveat: null },
+    ]);
+    expect(mapped.rules.map((r) => [r.values.mode, r.values.topic, r.sources])).toEqual([
+      ["arena", "rules", ["dc:1"]],
+      ["rumble_arena", "rules", ["dc:1"]],
+    ]);
   });
 
   it("maps you to the recommendation", () => {

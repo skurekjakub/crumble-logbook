@@ -159,6 +159,11 @@ export interface TableSpec<T extends SQLiteTable = SQLiteTable> {
   api?: ApiSpec;
   /** Present when the generic table repo and content service handle it. */
   content?: ContentSpec<InferSelectModel<T>>;
+  /**
+   * The column naming the research record that owns a row, when it isn't
+   * `recordSlug` (see {@link recordColumnOf}).
+   */
+  record?: ColumnOf<InferSelectModel<T>>;
 }
 
 /** The `?mode=` filter every table with a `mode` column gets: the column equals a `GAME_MODE`. */
@@ -206,7 +211,7 @@ const nonEmpty = z.string().min(1);
  */
 export const REGISTRY = {
   sources: entry(sources, { path: "/sources" }),
-  researchRecords: entry(researchRecords, { path: "/records" }),
+  researchRecords: entry(researchRecords, { path: "/records", record: "slug" }),
   recordModes: entry(recordModes, {}),
   glossary: entry(glossary, { path: "/glossary" }),
   decks: entry(decks, {
@@ -347,4 +352,21 @@ export const CONTENT_KEYS = TABLE_KEYS.filter(
  */
 export function specOf(key: TableKey): TableSpec {
   return REGISTRY[key] as TableSpec;
+}
+
+/**
+ * The column naming the research record that owns a row of `key`: the
+ * entry's declared `record` column, else `recordSlug` when the table has
+ * one. A record's re-import clears the rows it owns.
+ *
+ * @param key - a table's snapshot name
+ * @returns the column's JS name, or `undefined` for a table whose rows no
+ *   record owns directly (child rows, citations)
+ */
+export function recordColumnOf(key: TableKey): string | undefined {
+  const { record, table } = specOf(key);
+  if (record) return record;
+  return (table as unknown as Record<string, unknown>).recordSlug !== undefined
+    ? "recordSlug"
+    : undefined;
 }

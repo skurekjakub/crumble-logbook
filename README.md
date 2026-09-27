@@ -31,14 +31,15 @@ pnpm vitest run packages/schema   # one package's tests
 The server reads `data/crumble.db`, or the file `CRUMBLE_DB` names (an absolute path; the scripts run from `apps/server`). `PORT` overrides the default port, 8787.
 
 ```sh
-pnpm import:record 001-guild-conquest-meta             # load a research record into an empty database
-pnpm import:record 001-guild-conquest-meta --replace   # clear the content tables and load it again
+pnpm import:record 001-guild-conquest-meta             # load a research record next to any others
+pnpm import:record 002-pvp-meta                        # records load side by side
+pnpm import:record 001-guild-conquest-meta --replace   # clear that record's rows and load it again
 pnpm dev:server                                        # serve the API on http://localhost:8787/api (watch mode)
 pnpm db:export                                         # write data/snapshot.json from the database
 pnpm db:restore [file]                                 # load a snapshot (default data/snapshot.json) into an empty database
 ```
 
-`import:record` reads `research/<slug>/import.json`, validates every curated file and every reference before writing, and loads everything in one transaction. An error names the file and the row, and leaves the database untouched. It refuses a database that already has content unless you pass `--replace`, and it prints warnings, such as glossary names that more than one entry claims.
+`import:record` reads `research/<slug>/import.json`, validates every curated file and every reference before writing, and loads everything in one transaction. An error names the file and the row, and leaves the database untouched. Every row it writes belongs to the record (`recordSlug`). It refuses a record that is already loaded unless you pass `--replace`, which clears only that record's rows. Sources, glossary entries and buff values can be shared between records: the first record to load one keeps it, and a later record's differing version is reported as a warning (a differing buff value fails the import instead). It also warns about glossary names that more than one entry claims.
 
 After an import, the database is the source of truth. Commit `data/snapshot.json` after changing data, so the history stays diffable. To rebuild a database from it, point `CRUMBLE_DB` at a new file and run `pnpm db:restore`.
 
