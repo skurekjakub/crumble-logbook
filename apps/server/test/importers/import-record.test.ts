@@ -269,9 +269,10 @@ describe("importRecord on research record 001", () => {
     ).toEqual(["dc:69250", "dc:69358", "dc:71028", "dc:76583"]);
   });
 
-  it("warns about glossary keys that more than one entry claims", () => {
+  it("claims 전투력 and 투력 once each, so neither glossary key is contested", () => {
     const { warnings } = importRecord(testStore(), recordDir);
-    expect(warnings.some((w) => w.includes('"투력"') && w.includes("전투력"))).toBe(true);
+    const contested = warnings.filter((w) => w.startsWith("glossary key "));
+    expect(contested.some((w) => w.includes('"투력"') || w.includes('"전투력"'))).toBe(false);
   });
 });
 
@@ -420,6 +421,19 @@ describe("importRecord validation", () => {
     expect(counts.scores).toBe(0);
     expect(counts.counters).toBe(0);
     expect(counts.usageStats).toBe(0);
+  });
+
+  it("warns about a glossary key that more than one entry claims, naming the winner", () => {
+    const dir = tempRecord("glossary.json", (rows) => {
+      const power = rows.find((r) => r.kr === "전투력")!;
+      rows.push({ ...power, kr: "투력 (copy)", kr_short: ["전투력"], en: "copy" });
+    });
+    const { warnings } = importRecord(testStore(), dir);
+    expect(warnings).toContainEqual(
+      expect.stringMatching(
+        /^glossary key "전투력" is claimed by .*"투력 \(copy\)".*; it resolves to/,
+      ),
+    );
   });
 
   it("rejects a counter whose decks aren't curated decks, naming the file and row", () => {
