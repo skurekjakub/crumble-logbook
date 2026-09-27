@@ -28,6 +28,8 @@ const API: Record<string, Canned> = {
   "/api/records/001-guild-conquest-meta": { body: RECORD },
   "/api/sources": { body: SOURCES },
   "/api/decks": { body: DECKS },
+  "/api/takeaways": { body: [] },
+  "/api/recommendations": { body: [] },
 };
 
 /** Renders the whole app at `path` against the stubbed API. */
