@@ -184,6 +184,38 @@ export const recommendationSelect = createSelectSchema(t.recommendations, {
 /** A row selected from `recommendations`. */
 export type RecommendationRow = typeof t.recommendations.$inferSelect;
 
+/**
+ * Insert schema for `fight_events`. `boss`, `event` and `detail` must be
+ * non-empty; `tElapsed`, when present, must be non-negative.
+ */
+export const fightEventInsert = createInsertSchema(t.fightEvents, {
+  boss: (s) => s.min(1),
+  tElapsed: (s) => s.nonnegative().nullish(),
+  event: (s) => s.min(1),
+  detail: (s) => s.min(1),
+});
+/** Select schema for `fight_events`, mirroring the stored row shape. */
+export const fightEventSelect = createSelectSchema(t.fightEvents);
+/** A row selected from `fight_events`. */
+export type FightEventRow = typeof t.fightEvents.$inferSelect;
+
+/**
+ * Insert schema for `buff_values`. `cookieKr` and `effectType` must be
+ * non-empty; `skillGrade` and `fromStar` are integers 0-10; `maxStack`,
+ * when present, is a positive integer.
+ */
+export const buffValueInsert = createInsertSchema(t.buffValues, {
+  cookieKr: (s) => s.min(1),
+  effectType: (s) => s.min(1),
+  skillGrade: (s) => s.int().min(0).max(10),
+  fromStar: (s) => s.int().min(0).max(10),
+  maxStack: (s) => s.int().positive().nullish(),
+});
+/** Select schema for `buff_values`, mirroring the stored row shape. */
+export const buffValueSelect = createSelectSchema(t.buffValues);
+/** A row selected from `buff_values`. */
+export type BuffValueRow = typeof t.buffValues.$inferSelect;
+
 /** Insert schema for `citations`. */
 export const citationInsert = createInsertSchema(t.citations);
 /** Select schema for `citations`, mirroring the stored row shape. */

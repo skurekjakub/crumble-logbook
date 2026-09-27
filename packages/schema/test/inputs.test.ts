@@ -97,6 +97,69 @@ describe("timelineEventInput", () => {
   });
 });
 
+describe("fightEventInput", () => {
+  const event = {
+    boss: "pinata",
+    tElapsed: 30,
+    event: "slam_pattern",
+    detail: "The 30 s slam.",
+    confidence: "high",
+    sources: ["dc:1"],
+  };
+
+  it("accepts a null tElapsed", () => {
+    expect(inputs.fightEventInput.safeParse({ ...event, tElapsed: null }).success).toBe(true);
+  });
+
+  it("rejects a negative tElapsed and an unknown confidence", () => {
+    expect(inputs.fightEventInput.safeParse({ ...event, tElapsed: -1 }).success).toBe(false);
+    expect(inputs.fightEventInput.safeParse({ ...event, confidence: "certain" }).success).toBe(
+      false,
+    );
+  });
+
+  it("requires sources", () => {
+    const { sources: _dropped, ...rest } = event;
+    expect(inputs.fightEventInput.safeParse(rest).success).toBe(false);
+  });
+});
+
+describe("fightEventPatch", () => {
+  it("parses {} to {}", () => {
+    expect(inputs.fightEventPatch.parse({})).toEqual({});
+  });
+});
+
+describe("buffValueInput", () => {
+  const buff = {
+    cookieKr: "실론나이트 쿠키",
+    effectType: "BossDamageRateAddition",
+    skillGrade: 9,
+    fromStar: 9,
+    valuePct: 70,
+    maxStack: 1,
+    base: "Fixed",
+    scalesWithCasterAmp: true,
+    sources: ["web:sugarpocket-bundle-1.4.002"],
+  };
+
+  it("accepts a buff and a null maxStack", () => {
+    expect(inputs.buffValueInput.safeParse(buff).success).toBe(true);
+    expect(inputs.buffValueInput.safeParse({ ...buff, maxStack: null }).success).toBe(true);
+  });
+
+  it("rejects a fractional grade or star and a star above 10", () => {
+    expect(inputs.buffValueInput.safeParse({ ...buff, skillGrade: 1.5 }).success).toBe(false);
+    expect(inputs.buffValueInput.safeParse({ ...buff, fromStar: 11 }).success).toBe(false);
+  });
+});
+
+describe("buffValuePatch", () => {
+  it("parses {} to {}", () => {
+    expect(inputs.buffValuePatch.parse({})).toEqual({});
+  });
+});
+
 describe("sourceInput", () => {
   it("has no site key in its shape", () => {
     expect(inputs.sourceInput.shape).not.toHaveProperty("site");

@@ -1,6 +1,7 @@
 import { eq } from "drizzle-orm";
 import { describe, expect, it } from "vitest";
 import {
+  BUFF_BASE,
   CITED_ENTITY,
   CONFIDENCE,
   DECK_NOTE_KIND,
@@ -250,6 +251,32 @@ describe("enum columns", () => {
     }
     expect(
       schemas.mechanicInsert.safeParse({ title: "t", body: "b", confidence: "bogus" }).success,
+    ).toBe(false);
+  });
+
+  it("buff base: every member inserts and round-trips; a non-member is rejected", () => {
+    const db = createTestDb();
+    const buff = {
+      effectType: "AttackPointAddition",
+      skillGrade: 0,
+      fromStar: 0,
+      valuePct: 6,
+      maxStack: 10,
+      scalesWithCasterAmp: true,
+    };
+    for (const base of BUFF_BASE) {
+      const values = schemas.buffValueInsert.parse({ ...buff, cookieKr: `kr-${base}`, base });
+      db.insert(tables.buffValues).values(values).run();
+      const selected = db
+        .select()
+        .from(tables.buffValues)
+        .where(eq(tables.buffValues.cookieKr, `kr-${base}`))
+        .get();
+      expect(selected?.base).toBe(base);
+    }
+    expect(
+      schemas.buffValueInsert.safeParse({ ...buff, cookieKr: "kr", base: "CastersDefense" })
+        .success,
     ).toBe(false);
   });
 

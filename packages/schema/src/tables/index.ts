@@ -8,5 +8,6 @@ export * from "./scores";
 export * from "./rankings";
 export * from "./findings";
 export * from "./recommendations";
+export * from "./boss";
 export * from "./citations";
 export * from "./jobs";

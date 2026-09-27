@@ -1,9 +1,11 @@
 import { z } from "zod";
 import {
+  buffValueInsert,
   deckCookieInsert,
   deckInsert,
   deckNoteInsert,
   deckSlug,
+  fightEventInsert,
   gearRecInsert,
   glossaryInsert,
   mechanicInsert,
@@ -133,6 +135,32 @@ export const scorePatch = scoreInsert
   .extend({ sources: sourceIds.optional() });
 /** Output of {@link scorePatch}. */
 export type ScorePatch = z.output<typeof scorePatch>;
+
+/** Input for creating a fight event, with the sources that support it. */
+export const fightEventInput = fightEventInsert.omit({ id: true }).extend({ sources: sourceIds });
+/** Output of {@link fightEventInput}. */
+export type FightEventInput = z.output<typeof fightEventInput>;
+
+/** Patch for updating a fight event. `sources`, if given, must be non-empty. */
+export const fightEventPatch = fightEventInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
+/** Output of {@link fightEventPatch}. */
+export type FightEventPatch = z.output<typeof fightEventPatch>;
+
+/** Input for creating a buff value, with the sources that support it. */
+export const buffValueInput = buffValueInsert.omit({ id: true }).extend({ sources: sourceIds });
+/** Output of {@link buffValueInput}. */
+export type BuffValueInput = z.output<typeof buffValueInput>;
+
+/** Patch for updating a buff value. `sources`, if given, must be non-empty. */
+export const buffValuePatch = buffValueInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
+/** Output of {@link buffValuePatch}. */
+export type BuffValuePatch = z.output<typeof buffValuePatch>;
 
 /**
  * Input for a single deck cookie slot. `id`, `deckId` and `position` are

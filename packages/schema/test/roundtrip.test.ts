@@ -260,6 +260,54 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
 
     roundtrip(
       db,
+      tables.fightEvents,
+      schemas.fightEventInsert,
+      schemas.fightEventSelect,
+      {
+        boss: "pinata",
+        tElapsed: 43,
+        event: "super_jump_wipe",
+        detail: "The 17 s super-jump.",
+        confidence: "high",
+      },
+      (fe) => eq(fe.event, "super_jump_wipe"),
+    );
+
+    roundtrip(
+      db,
+      tables.fightEvents,
+      schemas.fightEventInsert,
+      schemas.fightEventSelect,
+      {
+        boss: "pinata",
+        tElapsed: null,
+        event: "unresolved_stage",
+        detail: "Never reached inside the fight.",
+        confidence: "low",
+      },
+      (fe) => eq(fe.event, "unresolved_stage"),
+    );
+
+    roundtrip(
+      db,
+      tables.buffValues,
+      schemas.buffValueInsert,
+      schemas.buffValueSelect,
+      {
+        cookieKr: "실론나이트 쿠키",
+        effectType: "BossDamageRateAddition",
+        skillGrade: 9,
+        fromStar: 9,
+        valuePct: 70,
+        maxStack: 1,
+        base: "Fixed",
+        scalesWithCasterAmp: true,
+      },
+      (bv) => eq(bv.cookieKr, "실론나이트 쿠키"),
+    );
+
+    roundtrip(
+      db,
       tables.citations,
       schemas.citationInsert,
       schemas.citationSelect,
