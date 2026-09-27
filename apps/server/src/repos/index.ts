@@ -1,5 +1,21 @@
-import type { GearRecRow, MechanicRow, RecommendationRow, RngFactorRow, ScoreRow, TakeawayRow, TimelineEventRow } from "@crumble/schema";
-import { gearRecs, mechanics, recommendations, rngFactors, scores, takeaways, timeline } from "@crumble/schema";
+import type {
+  GearRecRow,
+  MechanicRow,
+  RecommendationRow,
+  RngFactorRow,
+  ScoreRow,
+  TakeawayRow,
+  TimelineEventRow,
+} from "@crumble/schema";
+import {
+  gearRecs,
+  mechanics,
+  recommendations,
+  rngFactors,
+  scores,
+  takeaways,
+  timeline,
+} from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { asc } from "drizzle-orm";
 import type { Db } from "../db/client";
@@ -9,6 +25,10 @@ import type { DecksRepo } from "./decks";
 import { createDecksRepo } from "./decks";
 import type { GlossaryRepo } from "./glossary";
 import { createGlossaryRepo } from "./glossary";
+import type { RankingsRepo } from "./rankings";
+import { createRankingsRepo } from "./rankings";
+import type { RecordsRepo } from "./records";
+import { createRecordsRepo } from "./records";
 import type { RuneBuildsRepo } from "./rune-builds";
 import { createRuneBuildsRepo } from "./rune-builds";
 import type { SourcesRepo } from "./sources";
@@ -23,6 +43,8 @@ export interface Repos {
   decks: DecksRepo;
   glossary: GlossaryRepo;
   runeBuilds: RuneBuildsRepo;
+  rankings: RankingsRepo;
+  records: RecordsRepo;
   mechanics: TableRepo<MechanicRow, InferInsertModel<typeof mechanics>>;
   rngFactors: TableRepo<RngFactorRow, InferInsertModel<typeof rngFactors>>;
   timeline: TableRepo<TimelineEventRow, InferInsertModel<typeof timeline>>;
@@ -44,6 +66,8 @@ export function createRepos(db: Db): Repos {
     decks: createDecksRepo(db),
     glossary: createGlossaryRepo(db),
     runeBuilds: createRuneBuildsRepo(db),
+    rankings: createRankingsRepo(db),
+    records: createRecordsRepo(db),
     mechanics: createTableRepo(db, mechanics),
     rngFactors: createTableRepo(db, rngFactors),
     timeline: createTableRepo(db, timeline, [asc(timeline.date), asc(timeline.id)]),

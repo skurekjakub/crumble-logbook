@@ -18,10 +18,18 @@ import type { ContentService } from "./content";
 import { createContentService } from "./content";
 import type { DeckService } from "./decks";
 import { createDeckService } from "./decks";
+import type { GlossaryService } from "./glossary";
+import { createGlossaryService } from "./glossary";
+import type { RankingsService } from "./rankings";
+import { createRankingsService } from "./rankings";
+import type { RecordsService } from "./records";
+import { createRecordsService } from "./records";
 import type { RuneBuildService } from "./rune-builds";
 import { createRuneBuildService } from "./rune-builds";
 import type { ScoreService } from "./scores";
 import { createScoreService } from "./scores";
+import type { SourcesService } from "./sources";
+import { createSourcesService } from "./sources";
 
 /** Every content and score service the server exposes. Later tasks add keys. */
 export interface Services {
@@ -34,6 +42,10 @@ export interface Services {
   scores: ScoreService;
   decks: DeckService;
   runeBuilds: RuneBuildService;
+  sources: SourcesService;
+  glossary: GlossaryService;
+  rankings: RankingsService;
+  records: RecordsService;
 }
 
 /**
@@ -70,5 +82,9 @@ export function createServices(store: Store): Services {
     scores: createScoreService(store),
     decks: createDeckService(store),
     runeBuilds: createRuneBuildService(store),
+    sources: createSourcesService(store),
+    glossary: createGlossaryService(store),
+    rankings: createRankingsService(store),
+    records: createRecordsService(store),
   };
 }

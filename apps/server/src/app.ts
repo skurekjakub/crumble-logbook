@@ -16,8 +16,12 @@ import { Hono } from "hono";
 import { ConflictError, NotFoundError, UnknownRefsError } from "./errors";
 import { contentRouter } from "./routes/content";
 import { decksRouter } from "./routes/decks";
+import { glossaryRouter } from "./routes/glossary";
+import { rankingsRouter } from "./routes/rankings";
+import { recordsRouter } from "./routes/records";
 import { runeBuildsRouter } from "./routes/rune-builds";
 import { scoresRouter } from "./routes/scores";
+import { sourcesRouter } from "./routes/sources";
 import type { Services } from "./services";
 
 /**
@@ -33,18 +37,40 @@ import type { Services } from "./services";
 export function createApp(services: Services) {
   return new Hono()
     .basePath("/api")
-    .route("/mechanics", contentRouter(services.mechanics, { input: mechanicInput, patch: mechanicPatch }))
-    .route("/rng-factors", contentRouter(services.rngFactors, { input: rngFactorInput, patch: rngFactorPatch }))
-    .route("/timeline", contentRouter(services.timeline, { input: timelineEventInput, patch: timelineEventPatch }))
-    .route("/takeaways", contentRouter(services.takeaways, { input: takeawayInput, patch: takeawayPatch }))
-    .route("/gear-recs", contentRouter(services.gearRecs, { input: gearRecInput, patch: gearRecPatch }))
+    .route(
+      "/mechanics",
+      contentRouter(services.mechanics, { input: mechanicInput, patch: mechanicPatch }),
+    )
+    .route(
+      "/rng-factors",
+      contentRouter(services.rngFactors, { input: rngFactorInput, patch: rngFactorPatch }),
+    )
+    .route(
+      "/timeline",
+      contentRouter(services.timeline, { input: timelineEventInput, patch: timelineEventPatch }),
+    )
+    .route(
+      "/takeaways",
+      contentRouter(services.takeaways, { input: takeawayInput, patch: takeawayPatch }),
+    )
+    .route(
+      "/gear-recs",
+      contentRouter(services.gearRecs, { input: gearRecInput, patch: gearRecPatch }),
+    )
     .route(
       "/recommendations",
-      contentRouter(services.recommendations, { input: recommendationInput, patch: recommendationPatch }),
+      contentRouter(services.recommendations, {
+        input: recommendationInput,
+        patch: recommendationPatch,
+      }),
     )
     .route("/scores", scoresRouter(services.scores))
     .route("/decks", decksRouter(services.decks))
     .route("/rune-builds", runeBuildsRouter(services.runeBuilds))
+    .route("/sources", sourcesRouter(services.sources))
+    .route("/glossary", glossaryRouter(services.glossary))
+    .route("/rankings", rankingsRouter(services.rankings))
+    .route("/records", recordsRouter(services.records))
     .onError((err, c) => {
       if (err instanceof NotFoundError) {
         return c.json({ error: "not_found" as const, message: err.message }, 404);
