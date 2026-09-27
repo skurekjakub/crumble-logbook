@@ -168,6 +168,10 @@ Open research questions worth a future record:
   `node --input-type=module -e "import {readFileSync} from 'node:fs'; import {validate} from './src/data/schema.js'; const m=JSON.parse(readFileSync('data/manifest.json','utf8')); const d={}; for (const [k,f] of Object.entries(m.collections)) d[k]=JSON.parse(readFileSync('data/'+f,'utf8')); const p=validate(d); console.log(p.length?p.join('\n'):'dataset clean')"`
 - **Commits:** the `require-commit-format` hook blocks `git commit` with a single `-m`. Write the message to a file and use `git commit -F <file>`: a subject, then a body with the problem, the justification, and what was discarded.
 - **Other hooks** (`.claude/hooks/`): `prefer-verify-script` blocks chained quality gates (it expects an `npm run verify`-style script, which is worth adding as `pnpm verify`). `remind-rules` injects rules from the blog repo. Adapt them if they get in the way, and tell the user.
+- **Multi-record imports:**
+  - Import 001, then 002. A source or glossary entry both records carry keeps the first record's row, so the order decides which version the database holds.
+  - After a scoped `--replace`, id counters restart past the highest id left. Replacing 001 while 002 is loaded gives 001's rows ids above 002's, so the ids no longer match a fresh 001-then-002 import (`data/snapshot.json` is always built from a fresh one).
+  - Shared buff values belong to the record that loaded them first; a later record carrying identical values skips them. Replacing the owner clears them before it rewrites its own, so if its new version drops them they're gone until the other record is re-imported.
 - **Python:** set `PYTHONIOENCODING=utf-8` when running the evidence scripts. bs4 is installed.
 - **Evidence files are never edited after capture.** A later measurement is a new numbered file.
 - **Glossary gotchas:**
