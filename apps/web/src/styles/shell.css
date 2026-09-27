@@ -1,0 +1,30 @@
+/* Styles the legacy sheets don't cover: the mode tab strip, sub-tabs, and CookieName's stacked form.
+   tokens.css, base.css and components.css are verbatim copies of legacy/dashboard/styles. */
+
+/* TabNav: mode tabs scroll away; the section sub-tabs below them stay sticky. */
+nav.tabs.modes {
+  position: static;
+  margin-bottom: 0;
+  padding-bottom: 4px;
+}
+nav.tabs .sep {
+  flex: none;
+  align-self: stretch;
+  width: 1px;
+  margin-inline: 4px;
+  background: var(--line);
+}
+nav.tabs.sub button {
+  font-size: 13px;
+  padding: 7px 12px;
+}
+
+/* CookieName: English over Korean. */
+.name-stack {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.name-stack .kr {
+  font-size: 0.85em;
+}

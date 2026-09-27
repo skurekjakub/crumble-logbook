@@ -13,6 +13,7 @@
     "format:check": "prettier --check .",
     "verify": "pnpm typecheck && pnpm format:check && vitest run",
     "dev:server": "pnpm --filter @crumble/server dev",
+    "dev:web": "pnpm --filter @crumble/web dev",
     "import:record": "pnpm --filter @crumble/server import:record",
     "db:export": "pnpm --filter @crumble/server db:export",
     "db:restore": "pnpm --filter @crumble/server db:restore"
