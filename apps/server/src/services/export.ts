@@ -118,6 +118,22 @@ export function exportSnapshot(store: Store): Snapshot {
 }
 
 /**
+ * Guards `pnpm db:export` against silently overwriting the committed
+ * `data/snapshot.json` with nothing, e.g. because `CRUMBLE_DB` pointed at a
+ * missing or freshly-migrated database (`openDb` creates and migrates a
+ * database file that doesn't exist yet, rather than failing).
+ *
+ * @param snapshot - the snapshot about to be written
+ * @throws {ConflictError} if every table in `snapshot.tables` is empty
+ */
+export function assertSnapshotNonEmpty(snapshot: Snapshot): void {
+  const everyTableEmpty = Object.values(snapshot.tables).every((rows) => rows.length === 0);
+  if (everyTableEmpty) {
+    throw new ConflictError("snapshot is entirely empty; refusing to export (check CRUMBLE_DB)");
+  }
+}
+
+/**
  * Every repo with a `count()`/`clear()`, used to test the whole database for
  * emptiness before a restore. Deck children (`deck_cookies`/`deck_pets`/
  * `deck_notes`) and `rune_build_decks` aren't listed separately: their rows
