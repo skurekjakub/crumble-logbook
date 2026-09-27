@@ -1,0 +1,32 @@
+{
+  "batch": "a-first",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "76135",
+      "title_en": "1T 312G at 1.8G",
+      "relevance": 3,
+      "summary_en": "Cherry deck run at 1.8G team power."
+    },
+    {
+      "source": "naver",
+      "id": "nv-43653",
+      "title_en": "[Conquest guide] Cherry deck",
+      "relevance": 3,
+      "summary_en": "The Cherry deck guide."
+    },
+    {
+      "source": "other",
+      "id": "crumbgg-s5",
+      "title_en": "crumb.gg Season 5 rankings",
+      "relevance": 2,
+      "summary_en": ""
+    },
+    {
+      "source": "dc",
+      "id": "70000",
+      "title_en": "No summary at all",
+      "relevance": 1
+    }
+  ]
+}

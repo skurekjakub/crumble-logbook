@@ -1,0 +1,20 @@
+{
+  "batch": "b-second",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "76135",
+      "summary_en": "A later summary of the same post."
+    },
+    {
+      "source": "other",
+      "id": "crumbgg-s5",
+      "summary_en": "Season 5 player rankings."
+    },
+    {
+      "source": "dc",
+      "id": 71135,
+      "summary_en": "A post whose id is a number."
+    }
+  ]
+}
