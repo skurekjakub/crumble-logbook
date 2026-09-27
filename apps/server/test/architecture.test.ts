@@ -121,6 +121,21 @@ const RULES: Rule[] = [
       isHono(edge),
   },
   {
+    name: "registry.ts imports only @crumble/schema, zod and drizzle-orm types",
+    covers: (file) => file === `${SERVER}/registry.ts`,
+    forbids: (edge) =>
+      !(
+        isPackage(edge.specifier, "@crumble/schema") ||
+        isPackage(edge.specifier, "zod") ||
+        (isDrizzle(edge) && edge.typeOnly)
+      ),
+  },
+  {
+    name: "importers/ import no routes or hono",
+    covers: (file) => under(file, `${SERVER}/importers`),
+    forbids: (edge) => under(edge.target, `${SERVER}/routes`) || isHono(edge),
+  },
+  {
     name: "only repos/ and db/ import drizzle-orm values",
     covers: (file) =>
       under(file, SERVER) && !under(file, `${SERVER}/repos`) && !under(file, `${SERVER}/db`),
@@ -201,6 +216,26 @@ describe("architecture", () => {
     expect(violations([fake(true)])).toEqual([]);
     expect(violations([fake(false)])).toHaveLength(2);
     expect(violations([fake(true, `${SERVER}/routes/x.ts`)])).toHaveLength(1);
+  });
+
+  it("keeps registry.ts declarative and importers/ off the HTTP layer", () => {
+    const fake = (file: string, specifier: string, typeOnly = false): ImportEdge => ({
+      file,
+      specifier,
+      target: specifier.startsWith(".")
+        ? posix.normalize(posix.join(posix.dirname(file), specifier))
+        : specifier,
+      typeOnly,
+    });
+    const registry = `${SERVER}/registry.ts`;
+    expect(violations([fake(registry, "@crumble/schema"), fake(registry, "zod")])).toEqual([]);
+    expect(violations([fake(registry, "drizzle-orm/sqlite-core", true)])).toEqual([]);
+    expect(violations([fake(registry, "./repos")])).toHaveLength(1);
+    expect(violations([fake(registry, "./services/names", true)])).toHaveLength(1);
+    const importer = `${SERVER}/importers/x.ts`;
+    expect(violations([fake(importer, "../routes/content", true)])).toHaveLength(1);
+    expect(violations([fake(importer, "hono")])).toHaveLength(1);
+    expect(violations([fake(importer, "../services/names")])).toEqual([]);
   });
 
   it("reads import type, inline type specifiers, multi-line clauses and re-exports", () => {
