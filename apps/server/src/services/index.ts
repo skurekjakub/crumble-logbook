@@ -14,12 +14,16 @@ import type {
   Values,
 } from "@crumble/schema";
 import type { Store } from "../repos";
+import type { BuffValueService } from "./buff-values";
+import { createBuffValueService } from "./buff-values";
 import type { ContentService } from "./content";
 import { createContentService } from "./content";
 import type { DeckService } from "./decks";
 import { createDeckService } from "./decks";
 import type { ExportService } from "./export";
 import { createExportService } from "./export";
+import type { FightEventService } from "./fight-events";
+import { createFightEventService } from "./fight-events";
 import type { GlossaryService } from "./glossary";
 import { createGlossaryService } from "./glossary";
 import type { RankingsService } from "./rankings";
@@ -42,6 +46,8 @@ export interface Services {
   gearRecs: ContentService<GearRecRow, Values<GearRecInput>>;
   recommendations: ContentService<RecommendationRow, Values<RecommendationInput>>;
   scores: ScoreService;
+  fightEvents: FightEventService;
+  buffValues: BuffValueService;
   decks: DeckService;
   runeBuilds: RuneBuildService;
   sources: SourcesService;
@@ -83,6 +89,8 @@ export function createServices(store: Store): Services {
       table: (repos) => repos.recommendations,
     }),
     scores: createScoreService(store),
+    fightEvents: createFightEventService(store),
+    buffValues: createBuffValueService(store),
     decks: createDeckService(store),
     runeBuilds: createRuneBuildService(store),
     sources: createSourcesService(store),

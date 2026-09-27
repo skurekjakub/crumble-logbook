@@ -831,6 +831,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/11-dc-posts-extra/66716.md"
    },
    {
+    "id": "dc:67285",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/67285",
+    "title": "[일반] 길드토벌전보스 클뜯 해봤는데",
+    "titleEn": "I datamined the Guild Conquest boss",
+    "date": "2026-09-14",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "First pass at a boss datamine: the boss's damage reduction (피감) runs through 6 stages, 10/20/30/50/90/99%, so the OP reasons the first 12 s should carry maximum damage. A commenter notes the per-stage score multiplier also differs and most of a run's score still lands mid-fight. Superseded/refined by the same author's dc:71383.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/67285.md"
+   },
+   {
     "id": "dc:67435",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/67435",
@@ -841,6 +853,18 @@
     "note": null,
     "summaryEn": "Guild master of gallery guild 치트키 (68th overall, 1T 543G, 3rd Guild Conquest season) sets an expectation of ~10x total account power in raid damage and names seven members to be kicked. No mandated setup; comments give benchmarks (guild average ~20x total power, 10–15x at ~1G total) and the tip that swapping accuracy/focus gear for skill amp/haste can double score.",
     "capturePath": "research/001-guild-conquest-meta/evidence/03-dc-posts/67435.md"
+   },
+   {
+    "id": "dc:67659",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/67659",
+    "title": "[일반] 방체 연구 어느정도 해야 토벌전 30초버텨짐?",
+    "titleEn": "How much DEF/HP research to survive the 30 s?",
+    "date": "2026-09-15",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "OP already survives the 30 s slam but the team then dies to mob self-destructs. A commenter gives a concrete threshold: with a crit-res/DR gear preset, front row ~5M HP and back row ~mid-3M HP guarantees reaching 17 s.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/67659.md"
    },
    {
     "id": "dc:69200",
@@ -855,6 +879,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/11-dc-posts-extra/69200.md"
    },
    {
+    "id": "dc:69201",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/69201",
+    "title": "[일반] 100배도 안뽑히는데 어케하노",
+    "titleEn": "Can't even pull 100x, what do I do",
+    "date": "2026-09-17",
+    "relevance": 2,
+    "note": null,
+    "summaryEn": "Confirms the fight doesn't require surviving to a checkpoint to score: a commenter reports a full wipe still scoring over 100x, since damage already dealt before death still counts. Score is framed as run-to-run RNG requiring many retries (매크로).",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/69201.md"
+   },
+   {
     "id": "dc:69212",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/69212",
@@ -865,6 +901,18 @@
     "note": null,
     "summaryEn": "Author settles on ATK-amp runes (250x) rather than swapping ATK/skill-amp for raid; notes skill-amp setup still scores higher. Nobody had survived 17 s at 9/17 even heavy spenders (max ~3G power).",
     "capturePath": "research/001-guild-conquest-meta/evidence/11-dc-posts-extra/69212.md"
+   },
+   {
+    "id": "dc:69250",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/69250",
+    "title": "[일반] 17초에 안죽으려면 투력 몇정도임?",
+    "titleEn": "How much power to not die at 17s?",
+    "date": "2026-09-17",
+    "relevance": 2,
+    "note": null,
+    "summaryEn": "As of 9/17, even accounts at 2.2G team power still die at the 17 s super-jump — confirms that on this date nobody (including high-power accounts) had cracked survival yet.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/69250.md"
    },
    {
     "id": "dc:69331",
@@ -889,6 +937,18 @@
     "note": null,
     "summaryEn": "Low-power calibration thread: 6G at ~300M with no lv4 mercenary; replies: 250M → 10G with infinite retries and no ATK-order; 280M → 16G; 'should be 15–20G even without surviving 30 s'; 400M with mercenary lv3 → 45G with 1–2 surviving 30 s.",
     "capturePath": "research/001-guild-conquest-meta/evidence/11-dc-posts-extra/69357.md"
+   },
+   {
+    "id": "dc:69358",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/69358",
+    "title": "[일반] 토벌전 17초",
+    "titleEn": "Guild Conquest 17s",
+    "date": "2026-09-17",
+    "relevance": 1,
+    "note": null,
+    "summaryEn": "OP at 900M deck power asks who is surviving past 17s; no replies. Corroborates that survival was still considered a high-spec-only feat in mid-September.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/69358.md"
    },
    {
     "id": "dc:69368",
@@ -1011,6 +1071,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/16-top-players/dc/69856.md"
    },
    {
+    "id": "dc:70123",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/70123",
+    "title": "[일반] 300m따리 토벌",
+    "titleEn": "Guild Conquest at 300M power",
+    "date": "2026-09-19",
+    "relevance": 1,
+    "note": null,
+    "summaryEn": "At 300M power, at most 5-6 of 12 cookies survive the 30 s slam and Milk dies to it every time; scores land around 7-20G depending on ATK-order/rune choices.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/70123.md"
+   },
+   {
     "id": "dc:70172",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/70172",
@@ -1047,6 +1119,30 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/11-dc-posts-extra/70578.md"
    },
    {
+    "id": "dc:70607",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/70607",
+    "title": "[일반] 토벌 30초에 자꾸 다 죽음",
+    "titleEn": "Guild Conquest: everyone keeps dying at 30s",
+    "date": "2026-09-19",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "Active thread on the 30 s slam threshold: commenters converge on roughly 3-4M HP as the survival floor ('anything below one-shots'), mercenary Lv4 as a prerequisite, and report run-to-run variance at fixed power (two failures then a 30s-clear that jumped score ~2x, followed by ten more failures at the same build).",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/70607.md"
+   },
+   {
+    "id": "dc:70625",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/70625",
+    "title": "[일반] 1렙 준 애들은 30초 쿵찍에 무조건 뒤지네",
+    "titleEn": "Lv.1 fillers always die to the 30s slam",
+    "date": "2026-09-19",
+    "relevance": 2,
+    "note": null,
+    "summaryEn": "Commenters give row-specific HP thresholds for the 30 s slam: back row ~3.5M, front row ~4.5M as the floor.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/70625.md"
+   },
+   {
     "id": "dc:70638",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/70638",
@@ -1071,6 +1167,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/11-dc-posts-extra/70645.md"
    },
    {
+    "id": "dc:70832",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/70832",
+    "title": "[✋️질문] 토벌 우유 질문",
+    "titleEn": "Question about Milk in Guild Conquest",
+    "date": "2026-09-20",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "OP's Milk dies specifically to the 30s slam ('30초 내려찍기') while Lv.1 fillers survive, apparently because Milk is busy healing others during that window and receives no heal herself, leaving the team without her ATK buff from 28s down to the 17s wipe.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/70832.md"
+   },
+   {
     "id": "dc:70840",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/70840",
@@ -1093,6 +1201,18 @@
     "note": null,
     "summaryEn": "Q&A: Pomegranate's own ATK doesn't matter; the ATK ranking exists for receiving Pomegranate's buff.",
     "capturePath": "research/001-guild-conquest-meta/evidence/03-dc-posts/70999.md"
+   },
+   {
+    "id": "dc:71028",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/71028",
+    "title": "[일반] 허브 17초에 죽는데 닥 정전임?",
+    "titleEn": "Herb dies at 17s, is it Dark Choco or Jungle Warrior?",
+    "date": "2026-09-20",
+    "relevance": 1,
+    "note": null,
+    "summaryEn": "Reconfirms that as of 9/20 dying at 17s is still the norm ('아직은 다 17초에 죽을걸'); a commenter notes Jungle Warrior can be swapped out for Herb once the 30 s window is secured.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/71028.md"
    },
    {
     "id": "dc:71032",
@@ -1215,6 +1335,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/11-dc-posts-extra/71216.md"
    },
    {
+    "id": "dc:71219",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/71219",
+    "title": "[일반] 토벌 27~30초 버티는 체방이 어느정도임?",
+    "titleEn": "How much HP/DEF to survive the 27-30s window?",
+    "date": "2026-09-20",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "Screenshots (not re-transcribed in text) plus body text show a distinct sub-event at 27s: a Lv.1 Dark Choco dies to the 30s slam itself, but a Lv.100 (fully built) Dark Choco instead dies to a mob/add wave ('쫄') at 27s remaining — a separate, later hit from the slam. A commenter's own Dark Choco read DEF 301 / HP 3.79M at Lv.1.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/71219.md"
+   },
+   {
     "id": "dc:71237",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/71237",
@@ -1285,6 +1417,18 @@
     "note": null,
     "summaryEn": "Replies: crit resistance doesn't apply in Guild Conquest; for stages and raid it's a junk stat. Image is an unrelated meme (zebra in an alley).",
     "capturePath": "research/001-guild-conquest-meta/evidence/03-dc-posts/71381.md"
+   },
+   {
+    "id": "dc:71383",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/71383",
+    "title": "[일반] 토벌전 보스 시간 지날수록 피감 늘어남",
+    "titleEn": "The Guild Conquest boss's damage reduction rises over time",
+    "date": "2026-09-21",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "The same author as dc:67285/67299 posts a refined datamine: boss damage reduction runs through 6 stages (10/30/50/70/90/99%) starting at 0% at fight start, upgrading first at 10s elapsed then every 12s after; boss ATK (offense stat) also jumps by orders of magnitude at each of the same stage boundaries. The 99% stage is never reached because the fight is only 60s long. This is the single most load-bearing (if unverified) post for the fight's difficulty curve.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/71383.md"
    },
    {
     "id": "dc:71393",
@@ -1479,6 +1623,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/03-dc-posts/72508.md"
    },
    {
+    "id": "dc:72759",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/72759",
+    "title": "[일반] 크럼블 우유 무조건 앞으로 보내는 법 깨달았다",
+    "titleEn": "Found a way to always push Milk to the front",
+    "date": "2026-09-22",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "Removing every backline support/healer (Herb, Rockstar, Lime, Angel, bird-pet-cookie etc, or setting their power to Lv.1 so they can't spawn) forces Milk to charge all the way to melee contact with the boss, because nothing is left behind her to stop the advance. Confirms formation resolves as a straight run-in that stops on first blocking ally/collision, not a scripted stop point; over-optimizing it can wipe the team too early, capping score.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/72759.md"
+   },
+   {
     "id": "dc:72951",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/72951",
@@ -1671,6 +1827,18 @@
     "capturePath": "research/001-guild-conquest-meta/evidence/16-top-players/dc/74790.md"
    },
    {
+    "id": "dc:74793",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/74793",
+    "title": "[일반] 18초에 애들 죽는데 렙업 시켜야함?",
+    "titleEn": "Cookies start dying at 18s, should I level them?",
+    "date": "2026-09-24",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "Reports that the wipe isn't an instant simultaneous kill exactly at 17s: cookies start getting picked off individually from ~19s remaining, with the last ones going down at the 17s mark. Screenshot (transcribed) shows a mid-fight frame: damage counter 112,876,676,987, a small '18.767' readout near the boss, several dead-cookie portraits (greyed with an hourglass badge) still shown in the bottom bar alongside living ones — dead cookies remain visible in the UI with a distinct 'downed' icon rather than disappearing.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/74793.md"
+   },
+   {
     "id": "dc:74796",
     "site": "dc",
     "url": "https://m.dcinside.com/board/projectcc/74796",
@@ -1693,6 +1861,18 @@
     "note": null,
     "summaryEn": "One reply gives the minimum condition for surviving the 17 s wipe as 9M HP and 45% damage reduction. Another says it is possible but not a damage gain yet.",
     "capturePath": "research/001-guild-conquest-meta/evidence/16-top-players/dc/74801.md"
+   },
+   {
+    "id": "dc:74804",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/74804",
+    "title": "[일반] 석류 씨발련아",
+    "titleEn": "Damn you, Pomegranate",
+    "date": "2026-09-24",
+    "relevance": 2,
+    "note": null,
+    "summaryEn": "OP complains Pomegranate (a pure buffer who should stay at the back) keeps charging forward and wrecking the formation; a commenter's fix is to strip all move-speed stats and rebuild as a full Cherry-deck.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/74804.md"
    },
    {
     "id": "dc:74811",
@@ -1957,6 +2137,18 @@
     "note": null,
     "summaryEn": "Preset names (image): '35%(명중집중)' for stage, '아레나(전투+치감)', '토벌전(스가세팅)', '쓰레기통' (dump for auto-sell by power), and a joke empty slot. Commenter afrehh runs 5: 스테(뻥툴), 토벌, 아레나1(정석), 아레나2(회피), 아레나3(명중) because arena is rock-paper-scissors.",
     "capturePath": "research/001-guild-conquest-meta/evidence/03-dc-posts/75542.md"
+   },
+   {
+    "id": "dc:75547",
+    "site": "dc",
+    "url": "https://m.dcinside.com/board/projectcc/75547",
+    "title": "[✋️질문] 토벌 투력 몇쯤돼야 30초에 안뒤짐?",
+    "titleEn": "What power is needed to not die at 30s?",
+    "date": "2026-09-25",
+    "relevance": 3,
+    "note": null,
+    "summaryEn": "Gives a rough power-to-30s-survival curve from two independent commenters: ~400M power survives with 1-2 cookies, ~600M survives with the whole team, ~1.5G power comfortably never dies at 30s.",
+    "capturePath": "research/001-guild-conquest-meta/evidence/18-kr-encounter/dc/75547.md"
    },
    {
     "id": "dc:75589",
@@ -3816,6 +4008,18 @@
     "relevance": 0,
     "note": null,
     "summaryEn": "News article on the 8/27 update (Brightseeker, Pinot Noir, Tea Knight, Guild Conquest). No tech.",
+    "capturePath": null
+   },
+   {
+    "id": "web:sugarpocket-bundle-1.4.002",
+    "site": "web",
+    "url": "https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js",
+    "title": "슈가포켓 번들 내장 스킬·룬 데이터 (클라이언트 1.4.002)",
+    "titleEn": "Sugar Pocket bundle's embedded skill and rune dataset (client 1.4.002)",
+    "date": "2026-09-27",
+    "relevance": null,
+    "note": "Per-grade buff and debuff values from the bundle's JSON.parse literal, plus the stat, skill-damage, buff and debuff-chance formulas from its code; capture, sha256 and quoted formulas in evidence/19-sugarpocket/",
+    "summaryEn": null,
     "capturePath": null
    },
    {
@@ -24337,6 +24541,650 @@
     ]
    }
   ],
+  "fightEvents": [
+   {
+    "id": 1,
+    "boss": "pinata",
+    "tElapsed": 60,
+    "event": "fight_length",
+    "detail": "Guild Conquest fight lasts 60 s total, confirmed independently by crumb.gg's DPS chart page ('Fight length 60 s', evidence/15-crumbgg/32-dps-read.txt) and by a datamine poster ('토벌전이 60초', dc:71383). The in-run HUD timer counts down from 60 to 0 (dc:69724, prior evidence); '17초' and '30초' in community shorthand are both remaining-time marks, i.e. elapsed 43 s and elapsed 30 s respectively.",
+    "confidence": "high"
+   },
+   {
+    "id": 2,
+    "boss": "pinata",
+    "tElapsed": 0,
+    "event": "engage",
+    "detail": "Team runs in from starting positions and collides into a line; there is no scripted stop point; a cookie keeps advancing until physically blocked by an ally or the boss, so leftover move-speed stats or missing backline units change where the line settles (dc:72759, dc:74804; prior evidence dc:60340, dc:64839).",
+    "confidence": "high"
+   },
+   {
+    "id": 3,
+    "boss": "pinata",
+    "tElapsed": 0,
+    "event": "boss_defense_phase_0",
+    "detail": "Per an unverified single-author datamine (dc:67285, refined in dc:71383): boss damage reduction is 0% and boss ATK is at its base value (5000) for the first 10 s. This is the highest-damage-efficiency window of the fight, before the boss starts scaling up its own mitigation and offense.",
+    "confidence": "low"
+   },
+   {
+    "id": 4,
+    "boss": "pinata",
+    "tElapsed": 10,
+    "event": "boss_defense_phase_1",
+    "detail": "Datamine claim: boss DR steps to 10% and boss ATK jumps to 505,000 at 10 s elapsed. DEF stays fixed at 2000 throughout (matches the independent DEF figure in dc:67299 by the same author).",
+    "confidence": "low"
+   },
+   {
+    "id": 5,
+    "boss": "pinata",
+    "tElapsed": 22,
+    "event": "boss_defense_phase_2",
+    "detail": "Datamine claim: DR steps to 30%, boss ATK to 2,500,500.",
+    "confidence": "low"
+   },
+   {
+    "id": 6,
+    "boss": "pinata",
+    "tElapsed": 33,
+    "event": "mob_wave_hit",
+    "detail": "A distinct sub-event around 27 s remaining, separate from the 30 s slam: thrown mobs ('쫄') self-destruct near the front line. A fully-built (Lv.100) Dark Choco was reported dying to this specifically, while a Lv.1 Dark Choco instead died to the 30 s slam itself (dc:71219); matches the '3 bomb mobs thrown at the front line' step of the previously-recorded 30 s sequence (dc:53667, prior evidence).",
+    "confidence": "medium"
+   },
+   {
+    "id": 7,
+    "boss": "pinata",
+    "tElapsed": 30,
+    "event": "slam_pattern",
+    "detail": "The '30 s slam' ('30초 쿵'/'30초 내려찍기'/'부랄찢기'): the boss's first major team-wide hit. Prior evidence (dc:53667) describes the full sequence as gift-bomb -> ground pounds -> 3 bomb-mobs thrown at the front line -> jump. This batch adds concrete HP survival floors (~3-4M HP generally, front row ~4.5M / back row ~3.5M as a more granular split) and a team-power curve (~400M power = 1-2 survivors, ~600M = full survival, ~1.5G = never dies here). It is RNG-sensitive even at fixed power/build (one account cleared it on a 3rd retry after 2 failures at identical build). Milk is disproportionately likely to die here because she is healing others during this window without being healed herself, which then removes her ATK buff for the remainder of the fight.",
+    "confidence": "high"
+   },
+   {
+    "id": 8,
+    "boss": "pinata",
+    "tElapsed": 34,
+    "event": "boss_defense_phase_3",
+    "detail": "Datamine claim: DR steps to 50%, boss ATK to 12,500,500. This bracket covers the 30 s slam window through the run-up to the 17 s wipe.",
+    "confidence": "low"
+   },
+   {
+    "id": 9,
+    "boss": "pinata",
+    "tElapsed": 41,
+    "event": "chip_deaths_begin",
+    "detail": "Cookies begin dying individually starting around 19 s remaining (elapsed ~41 s) — the wipe is a taper, not a single simultaneous kill. Dead cookies remain visible in the formation UI with a greyed portrait and an hourglass badge rather than disappearing; no evidence of in-run revival was found (searches for '부활' turned up only unrelated gacha-cookie discussion).",
+    "confidence": "medium"
+   },
+   {
+    "id": 10,
+    "boss": "pinata",
+    "tElapsed": 43,
+    "event": "super_jump_wipe",
+    "detail": "The '17 s super-jump' (elapsed 43 s): historically a certain full-team wipe ('확정전멸') for every publicly documented run through at least late September, including runs at 2.2G team power (dc:69250) and the #1 guild's own 827G video (prior evidence). The first credible survival reports appear only at very high account power (~21G, dc:76583, prior evidence), and only for 4 of 12 cookies (Macaron/Brightseeker/Pomegranate/Skating Queen), who then keep dealing damage until about 8 s remain. This remains a timing correlation with the Season 5 score jump, not a shown, replicated build.",
+    "confidence": "high"
+   },
+   {
+    "id": 11,
+    "boss": "pinata",
+    "tElapsed": 46,
+    "event": "boss_defense_phase_4",
+    "detail": "Datamine claim: DR steps to 70%, boss ATK to 250,005,000.",
+    "confidence": "low"
+   },
+   {
+    "id": 12,
+    "boss": "pinata",
+    "tElapsed": 58,
+    "event": "boss_defense_phase_5",
+    "detail": "Datamine claim: DR steps to 90%, boss ATK to 750,005,000, for the final ~2 s of the fight.",
+    "confidence": "low"
+   },
+   {
+    "id": 13,
+    "boss": "pinata",
+    "tElapsed": 60,
+    "event": "fight_ends",
+    "detail": "The 60 s timer, not a team wipe, ends the fight and locks the score. A team that wipes completely well before 60 s still keeps whatever damage it dealt before dying (a full wipe at the 30 s slam still scored >100x in one report) — there is no bonus or penalty tied to surviving to the buzzer beyond the extra damage window that survival buys.",
+    "confidence": "medium"
+   },
+   {
+    "id": 14,
+    "boss": "pinata",
+    "tElapsed": null,
+    "event": "unresolved_final_dr_stage",
+    "detail": "The datamine's implied 7th stage (99% DR, boss ATK 1,562,505,000, which would start at elapsed 70 s) is never reached inside a 60 s fight. The original poster has no explanation for why the data table extends past the fight's own time limit — flagged as an open question for a client datamine (is there an unused 'overtime' mode, or is this a leftover/placeholder stage).",
+    "confidence": "low"
+   }
+  ],
+  "buffValues": [
+   {
+    "id": 1,
+    "cookieKr": "석류맛 쿠키",
+    "effectType": "AbilityAmplifyAddition",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 46.5,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 2,
+    "cookieKr": "석류맛 쿠키",
+    "effectType": "AbilityAmplifyAddition",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 51,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 3,
+    "cookieKr": "석류맛 쿠키",
+    "effectType": "AbilityAmplifyAddition",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 55.5,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 4,
+    "cookieKr": "석류맛 쿠키",
+    "effectType": "AbilityAmplifyAddition",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 60,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 5,
+    "cookieKr": "석류맛 쿠키",
+    "effectType": "AbilityAmplifyAddition",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 64.5,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 6,
+    "cookieKr": "석류맛 쿠키",
+    "effectType": "AbilityAmplifyAddition",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 69,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 7,
+    "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "effectType": "AttackPointAddition",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 6,
+    "maxStack": 10,
+    "base": "CastersAttackPoint",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 8,
+    "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "effectType": "AttackPointAddition",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 6.8,
+    "maxStack": 10,
+    "base": "CastersAttackPoint",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 9,
+    "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "effectType": "AttackPointAddition",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 7.6,
+    "maxStack": 10,
+    "base": "CastersAttackPoint",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 10,
+    "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "effectType": "AttackPointAddition",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 8.4,
+    "maxStack": 10,
+    "base": "CastersAttackPoint",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 11,
+    "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "effectType": "AttackPointAddition",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 9.2,
+    "maxStack": 10,
+    "base": "CastersAttackPoint",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 12,
+    "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "effectType": "AttackPointAddition",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 10,
+    "maxStack": 10,
+    "base": "CastersAttackPoint",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 13,
+    "cookieKr": "마카롱맛 쿠키",
+    "effectType": "CriticalRateAddition",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 7,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 14,
+    "cookieKr": "마카롱맛 쿠키",
+    "effectType": "CriticalRateAddition",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 8,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 15,
+    "cookieKr": "마카롱맛 쿠키",
+    "effectType": "CriticalRateAddition",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 9,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 16,
+    "cookieKr": "마카롱맛 쿠키",
+    "effectType": "CriticalRateAddition",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 10,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 17,
+    "cookieKr": "마카롱맛 쿠키",
+    "effectType": "CriticalRateAddition",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 11,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 18,
+    "cookieKr": "마카롱맛 쿠키",
+    "effectType": "CriticalRateAddition",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 12,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 19,
+    "cookieKr": "피겨여왕맛 쿠키",
+    "effectType": "CriticalDamageRateAddition",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 40,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 20,
+    "cookieKr": "피겨여왕맛 쿠키",
+    "effectType": "CriticalDamageRateAddition",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 45,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 21,
+    "cookieKr": "피겨여왕맛 쿠키",
+    "effectType": "CriticalDamageRateAddition",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 50,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 22,
+    "cookieKr": "피겨여왕맛 쿠키",
+    "effectType": "CriticalDamageRateAddition",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 55,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 23,
+    "cookieKr": "피겨여왕맛 쿠키",
+    "effectType": "CriticalDamageRateAddition",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 60,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 24,
+    "cookieKr": "피겨여왕맛 쿠키",
+    "effectType": "CriticalDamageRateAddition",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 65,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 25,
+    "cookieKr": "치즈케이크맛 쿠키",
+    "effectType": "AttackPointMultiplier",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 40,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 26,
+    "cookieKr": "치즈케이크맛 쿠키",
+    "effectType": "AttackPointMultiplier",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 44,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 27,
+    "cookieKr": "치즈케이크맛 쿠키",
+    "effectType": "AttackPointMultiplier",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 48,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 28,
+    "cookieKr": "치즈케이크맛 쿠키",
+    "effectType": "AttackPointMultiplier",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 52,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 29,
+    "cookieKr": "치즈케이크맛 쿠키",
+    "effectType": "AttackPointMultiplier",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 56,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 30,
+    "cookieKr": "치즈케이크맛 쿠키",
+    "effectType": "AttackPointMultiplier",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 60,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 31,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "DefensePointMultiplier",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 10,
+    "maxStack": 2,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 32,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "BossDamageRateAddition",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 45,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 33,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "DefensePointMultiplier",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 20,
+    "maxStack": 2,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 34,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "BossDamageRateAddition",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 50,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 35,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "DefensePointMultiplier",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 30,
+    "maxStack": 2,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 36,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "BossDamageRateAddition",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 55,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 37,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "DefensePointMultiplier",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 40,
+    "maxStack": 2,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 38,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "BossDamageRateAddition",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 60,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 39,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "DefensePointMultiplier",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 50,
+    "maxStack": 2,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 40,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "BossDamageRateAddition",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 65,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 41,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "DefensePointMultiplier",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 60,
+    "maxStack": 2,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 42,
+    "cookieKr": "실론나이트 쿠키",
+    "effectType": "BossDamageRateAddition",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 70,
+    "maxStack": 1,
+    "base": "Fixed",
+    "scalesWithCasterAmp": true
+   },
+   {
+    "id": 43,
+    "cookieKr": "다크초코 쿠키",
+    "effectType": "DefensePointReductionChance",
+    "skillGrade": 0,
+    "fromStar": 0,
+    "valuePct": 20,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": false
+   },
+   {
+    "id": 44,
+    "cookieKr": "다크초코 쿠키",
+    "effectType": "DefensePointReductionChance",
+    "skillGrade": 1,
+    "fromStar": 1,
+    "valuePct": 20,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": false
+   },
+   {
+    "id": 45,
+    "cookieKr": "다크초코 쿠키",
+    "effectType": "DefensePointReductionChance",
+    "skillGrade": 3,
+    "fromStar": 3,
+    "valuePct": 20,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": false
+   },
+   {
+    "id": 46,
+    "cookieKr": "다크초코 쿠키",
+    "effectType": "DefensePointReductionChance",
+    "skillGrade": 5,
+    "fromStar": 5,
+    "valuePct": 20,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": false
+   },
+   {
+    "id": 47,
+    "cookieKr": "다크초코 쿠키",
+    "effectType": "DefensePointReductionChance",
+    "skillGrade": 7,
+    "fromStar": 7,
+    "valuePct": 20,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": false
+   },
+   {
+    "id": 48,
+    "cookieKr": "다크초코 쿠키",
+    "effectType": "DefensePointReductionChance",
+    "skillGrade": 9,
+    "fromStar": 9,
+    "valuePct": 20,
+    "maxStack": 10,
+    "base": "Fixed",
+    "scalesWithCasterAmp": false
+   }
+  ],
   "citations": [
    {
     "id": 1,
@@ -25909,6 +26757,468 @@
     "entity": "takeaway",
     "entityId": "9",
     "sourceId": "dc:76545"
+   },
+   {
+    "id": 263,
+    "entity": "fight_event",
+    "entityId": "1",
+    "sourceId": "web:crumbgg:dps"
+   },
+   {
+    "id": 264,
+    "entity": "fight_event",
+    "entityId": "1",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 265,
+    "entity": "fight_event",
+    "entityId": "1",
+    "sourceId": "dc:69724"
+   },
+   {
+    "id": 266,
+    "entity": "fight_event",
+    "entityId": "2",
+    "sourceId": "dc:72759"
+   },
+   {
+    "id": 267,
+    "entity": "fight_event",
+    "entityId": "2",
+    "sourceId": "dc:74804"
+   },
+   {
+    "id": 268,
+    "entity": "fight_event",
+    "entityId": "3",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 269,
+    "entity": "fight_event",
+    "entityId": "3",
+    "sourceId": "dc:67285"
+   },
+   {
+    "id": 270,
+    "entity": "fight_event",
+    "entityId": "4",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 271,
+    "entity": "fight_event",
+    "entityId": "5",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 272,
+    "entity": "fight_event",
+    "entityId": "6",
+    "sourceId": "dc:71219"
+   },
+   {
+    "id": 273,
+    "entity": "fight_event",
+    "entityId": "6",
+    "sourceId": "dc:67659"
+   },
+   {
+    "id": 274,
+    "entity": "fight_event",
+    "entityId": "6",
+    "sourceId": "dc:53667"
+   },
+   {
+    "id": 275,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:70607"
+   },
+   {
+    "id": 276,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:70625"
+   },
+   {
+    "id": 277,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:67659"
+   },
+   {
+    "id": 278,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:75547"
+   },
+   {
+    "id": 279,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:70832"
+   },
+   {
+    "id": 280,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:70123"
+   },
+   {
+    "id": 281,
+    "entity": "fight_event",
+    "entityId": "7",
+    "sourceId": "dc:71219"
+   },
+   {
+    "id": 282,
+    "entity": "fight_event",
+    "entityId": "8",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 283,
+    "entity": "fight_event",
+    "entityId": "9",
+    "sourceId": "dc:74793"
+   },
+   {
+    "id": 284,
+    "entity": "fight_event",
+    "entityId": "10",
+    "sourceId": "dc:69250"
+   },
+   {
+    "id": 285,
+    "entity": "fight_event",
+    "entityId": "10",
+    "sourceId": "dc:69358"
+   },
+   {
+    "id": 286,
+    "entity": "fight_event",
+    "entityId": "10",
+    "sourceId": "dc:71028"
+   },
+   {
+    "id": 287,
+    "entity": "fight_event",
+    "entityId": "10",
+    "sourceId": "dc:76583"
+   },
+   {
+    "id": 288,
+    "entity": "fight_event",
+    "entityId": "11",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 289,
+    "entity": "fight_event",
+    "entityId": "12",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 290,
+    "entity": "fight_event",
+    "entityId": "13",
+    "sourceId": "dc:69201"
+   },
+   {
+    "id": 291,
+    "entity": "fight_event",
+    "entityId": "14",
+    "sourceId": "dc:71383"
+   },
+   {
+    "id": 292,
+    "entity": "buff_value",
+    "entityId": "1",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 293,
+    "entity": "buff_value",
+    "entityId": "2",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 294,
+    "entity": "buff_value",
+    "entityId": "3",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 295,
+    "entity": "buff_value",
+    "entityId": "4",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 296,
+    "entity": "buff_value",
+    "entityId": "5",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 297,
+    "entity": "buff_value",
+    "entityId": "6",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 298,
+    "entity": "buff_value",
+    "entityId": "7",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 299,
+    "entity": "buff_value",
+    "entityId": "8",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 300,
+    "entity": "buff_value",
+    "entityId": "9",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 301,
+    "entity": "buff_value",
+    "entityId": "10",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 302,
+    "entity": "buff_value",
+    "entityId": "11",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 303,
+    "entity": "buff_value",
+    "entityId": "12",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 304,
+    "entity": "buff_value",
+    "entityId": "13",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 305,
+    "entity": "buff_value",
+    "entityId": "14",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 306,
+    "entity": "buff_value",
+    "entityId": "15",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 307,
+    "entity": "buff_value",
+    "entityId": "16",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 308,
+    "entity": "buff_value",
+    "entityId": "17",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 309,
+    "entity": "buff_value",
+    "entityId": "18",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 310,
+    "entity": "buff_value",
+    "entityId": "19",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 311,
+    "entity": "buff_value",
+    "entityId": "20",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 312,
+    "entity": "buff_value",
+    "entityId": "21",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 313,
+    "entity": "buff_value",
+    "entityId": "22",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 314,
+    "entity": "buff_value",
+    "entityId": "23",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 315,
+    "entity": "buff_value",
+    "entityId": "24",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 316,
+    "entity": "buff_value",
+    "entityId": "25",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 317,
+    "entity": "buff_value",
+    "entityId": "26",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 318,
+    "entity": "buff_value",
+    "entityId": "27",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 319,
+    "entity": "buff_value",
+    "entityId": "28",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 320,
+    "entity": "buff_value",
+    "entityId": "29",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 321,
+    "entity": "buff_value",
+    "entityId": "30",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 322,
+    "entity": "buff_value",
+    "entityId": "31",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 323,
+    "entity": "buff_value",
+    "entityId": "32",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 324,
+    "entity": "buff_value",
+    "entityId": "33",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 325,
+    "entity": "buff_value",
+    "entityId": "34",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 326,
+    "entity": "buff_value",
+    "entityId": "35",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 327,
+    "entity": "buff_value",
+    "entityId": "36",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 328,
+    "entity": "buff_value",
+    "entityId": "37",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 329,
+    "entity": "buff_value",
+    "entityId": "38",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 330,
+    "entity": "buff_value",
+    "entityId": "39",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 331,
+    "entity": "buff_value",
+    "entityId": "40",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 332,
+    "entity": "buff_value",
+    "entityId": "41",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 333,
+    "entity": "buff_value",
+    "entityId": "42",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 334,
+    "entity": "buff_value",
+    "entityId": "43",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 335,
+    "entity": "buff_value",
+    "entityId": "44",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 336,
+    "entity": "buff_value",
+    "entityId": "45",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 337,
+    "entity": "buff_value",
+    "entityId": "46",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 338,
+    "entity": "buff_value",
+    "entityId": "47",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 339,
+    "entity": "buff_value",
+    "entityId": "48",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
    }
   ]
  }

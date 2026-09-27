@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { RANKING_BOARD, RECORD_STATUS, isoDate } from "@crumble/schema";
+import { RANKING_BOARD, RECORD_STATUS, isoDate, sourceId } from "@crumble/schema";
 import { z } from "zod";
 import { ImportError } from "../errors";
 import type { RankingInsert } from "../repos/rankings";
@@ -32,10 +32,51 @@ const rankingSpec = z.strictObject({
 export type RankingSpec = z.output<typeof rankingSpec>;
 
 /**
+ * The fight timeline to load into `fight_events`: an extraction JSON whose
+ * `encounter.timeline` entries carry `t_seconds`, `event`, `detail`,
+ * `sources` and `confidence`.
+ *
+ * An entry's `t_seconds` is seconds elapsed since the fight started, except
+ * for the events named in `countdown`: those are timed by the in-game HUD,
+ * which counts down from `fightSeconds`, and the `countdown` value (seconds
+ * remaining) replaces the entry's `t_seconds`, becoming `fightSeconds −
+ * value` elapsed. A `null` `t_seconds` stays `null`. `sourceAliases` maps a
+ * source id as the extraction writes it onto a curated source id.
+ */
+const fightEventsSpec = z.strictObject({
+  file: z.string().min(1),
+  boss: z.string().min(1),
+  fightSeconds: z.number().positive(),
+  countdown: z.record(z.string().min(1), z.number().nonnegative()).default({}),
+  sourceAliases: z.record(z.string().min(1), sourceId).default({}),
+});
+/** The `fightEvents` block of an {@link ImportManifest}. */
+export type FightEventsSpec = z.output<typeof fightEventsSpec>;
+
+/**
+ * The buff capture to load into `buff_values`: every buff and debuff, at
+ * every skill grade, of each cookie in `cookies` (each a glossary `kr`),
+ * found by name in the Sugar Pocket `catalog` and cited to `source`. A
+ * debuff's effect type comes from `debuffEffects`, keyed by the debuff's
+ * Korean `effect` text, since the capture only calls it a generic
+ * `StatModifier`.
+ */
+const buffValuesSpec = z.strictObject({
+  file: z.string().min(1),
+  catalog: z.string().min(1),
+  source: sourceId,
+  cookies: z.array(z.string().min(1)).min(1),
+  debuffEffects: z.record(z.string().min(1), z.string().min(1)).default({}),
+});
+/** The `buffValues` block of an {@link ImportManifest}. */
+export type BuffValuesSpec = z.output<typeof buffValuesSpec>;
+
+/**
  * Schema of a research record's `import.json`: the record row to create,
  * where the curated dataset and the extractions live, how to find each
- * source's evidence capture, and which ranking TSVs to load. Every path is
- * relative to the record directory.
+ * source's evidence capture, which ranking TSVs to load, and, optionally,
+ * the fight timeline and the buff capture. Every path is relative to the
+ * record directory.
  */
 export const importManifest = z.strictObject({
   record: z.strictObject({
@@ -54,6 +95,8 @@ export const importManifest = z.strictObject({
     }),
   ),
   rankings: z.array(rankingSpec),
+  fightEvents: fightEventsSpec.optional(),
+  buffValues: buffValuesSpec.optional(),
 });
 /** Output of {@link importManifest}. */
 export type ImportManifest = z.output<typeof importManifest>;

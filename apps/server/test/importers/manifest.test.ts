@@ -65,6 +65,43 @@ describe("importManifest", () => {
     expect(importManifest.safeParse(badStatus).success).toBe(false);
   });
 
+  it("accepts optional fight event and buff value inputs, defaulting their maps to {}", () => {
+    const parsed = importManifest.parse({
+      ...valid,
+      fightEvents: {
+        file: "evidence/08-extract/kr-encounter.json",
+        boss: "pinata",
+        fightSeconds: 60,
+      },
+      buffValues: {
+        file: "evidence/19-sugarpocket/skills-runes-1.4.002.json",
+        catalog: "evidence/12-glossary-src/catalog.json",
+        source: "web:sugarpocket-bundle-1.4.002",
+        cookies: ["실론나이트 쿠키"],
+      },
+    });
+    expect(parsed.fightEvents).toMatchObject({ countdown: {}, sourceAliases: {} });
+    expect(parsed.buffValues?.debuffEffects).toEqual({});
+    expect(importManifest.parse(valid).fightEvents).toBeUndefined();
+  });
+
+  it("rejects a buff value source or a fight event alias target that isn't a source id", () => {
+    const buffValues = {
+      file: "f.json",
+      catalog: "c.json",
+      source: "sugarpocket",
+      cookies: ["실론나이트 쿠키"],
+    };
+    const fightEvents = {
+      file: "f.json",
+      boss: "pinata",
+      fightSeconds: 60,
+      sourceAliases: { "top-players:1": "1" },
+    };
+    expect(importManifest.safeParse({ ...valid, buffValues }).success).toBe(false);
+    expect(importManifest.safeParse({ ...valid, fightEvents }).success).toBe(false);
+  });
+
   it("requires a capture file pattern with an {id} placeholder", () => {
     const noId = { ...valid, captures: [{ site: "dc", dir: "d", file: "post.md" }] };
     expect(importManifest.safeParse(noId).success).toBe(false);

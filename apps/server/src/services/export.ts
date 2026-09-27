@@ -1,9 +1,11 @@
 import type {
+  BuffValueRow,
   CitationRow,
   DeckCookieRow,
   DeckNoteRow,
   DeckPetRow,
   DeckRow,
+  FightEventRow,
   GearRecRow,
   GlossaryRow,
   MechanicRow,
@@ -44,6 +46,8 @@ export interface SnapshotTables {
   timeline: TimelineEventRow[];
   takeaways: TakeawayRow[];
   recommendations: RecommendationRow[];
+  fightEvents: FightEventRow[];
+  buffValues: BuffValueRow[];
   citations: CitationRow[];
 }
 
@@ -112,6 +116,8 @@ export function exportSnapshot(store: Store): Snapshot {
       timeline: repos.timeline.list().sort(byNumId),
       takeaways: repos.takeaways.list().sort(byNumId),
       recommendations: repos.recommendations.list().sort(byNumId),
+      fightEvents: repos.fightEvents.list().sort(byNumId),
+      buffValues: repos.buffValues.list().sort(byNumId),
       citations: repos.citations.all().sort(byNumId),
     },
   };
@@ -156,6 +162,8 @@ function everyRepo(repos: Repos) {
     repos.gearRecs,
     repos.recommendations,
     repos.scores,
+    repos.fightEvents,
+    repos.buffValues,
   ];
 }
 
@@ -220,6 +228,8 @@ export function restoreSnapshot(
     for (const row of tables.timeline) repos.timeline.insert(row);
     for (const row of tables.takeaways) repos.takeaways.insert(row);
     for (const row of tables.recommendations) repos.recommendations.insert(row);
+    for (const row of tables.fightEvents) repos.fightEvents.insert(row);
+    for (const row of tables.buffValues) repos.buffValues.insert(row);
     repos.citations.insertRaw(tables.citations);
 
     const counts: Record<keyof Snapshot["tables"], number> = {
@@ -240,6 +250,8 @@ export function restoreSnapshot(
       timeline: tables.timeline.length,
       takeaways: tables.takeaways.length,
       recommendations: tables.recommendations.length,
+      fightEvents: tables.fightEvents.length,
+      buffValues: tables.buffValues.length,
       citations: tables.citations.length,
     };
     return counts as never;

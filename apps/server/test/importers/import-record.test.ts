@@ -43,8 +43,35 @@ const glossary = curated<unknown[]>("glossary.json");
 const sources = curated<Record<string, unknown>>("sources.json");
 const meta = curated<{ lede: string; you: Cited }>("meta.json");
 
+/** Reads a JSON file of record 001 by its record-relative path, with a test-asserted shape. */
+function recordJson<T>(path: string): T {
+  return JSON.parse(readFileSync(join(recordDir, path), "utf-8")) as T;
+}
+
 const sum = (ns: number[]) => ns.reduce((a, b) => a + b, 0);
 const distinct = (ids: string[]) => new Set(ids).size;
+
+type Manifest = {
+  fightEvents: { file: string; sourceAliases: Record<string, string> };
+  buffValues: { file: string; catalog: string; cookies: string[] };
+};
+const manifest = recordJson<Manifest>("import.json");
+const encounter = recordJson<{
+  encounter: { timeline: Array<Cited & { event: string; t_seconds: number | null }> };
+}>(manifest.fightEvents.file);
+const fightTimeline = encounter.encounter.timeline;
+const catalog = recordJson<{ cookies: Array<{ gameId: number; name: { ko: string } }> }>(
+  manifest.buffValues.catalog,
+);
+const buffCapture = recordJson<{
+  recommendations: Record<string, { grades: Record<string, { buffs: []; debuffs: [] }> }>;
+}>(manifest.buffValues.file);
+const buffRowsPerCookie = manifest.buffValues.cookies.map((kr) => {
+  const gameId = catalog.cookies.find((c) => c.name.ko === kr)!.gameId;
+  const grades = Object.values(buffCapture.recommendations[String(gameId)]!.grades);
+  return sum(grades.map((g) => g.buffs.length + g.debuffs.length));
+});
+const alias = (id: string) => manifest.fightEvents.sourceAliases[id] ?? id;
 
 /** Data lines (every non-blank line after the header) of an evidence TSV. */
 function tsvDataLines(file: string): number {
@@ -84,7 +111,13 @@ const expectedCounts = {
   timeline: timeline.length,
   takeaways: takeaways.length,
   recommendations: 1,
-  citations: sum(citedRows.map((r) => distinct(r.sources))) + distinct(meta.you.sources),
+  fightEvents: fightTimeline.length,
+  buffValues: sum(buffRowsPerCookie),
+  citations:
+    sum(citedRows.map((r) => distinct(r.sources))) +
+    distinct(meta.you.sources) +
+    sum(fightTimeline.map((e) => distinct(e.sources.map(alias)))) +
+    sum(buffRowsPerCookie),
 };
 
 /** Row counts per table, read back from the database through a full snapshot. */
@@ -133,6 +166,80 @@ describe("importRecord on research record 001", () => {
     expect(record?.question).toMatch(/^There is a small, documented set of Guild Conquest teams/);
   });
 
+  it("stores Tea Knight's grade-9 boss-damage buff as 70% BossDamageRateAddition from 9 stars", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    const row = store.repos.buffValues
+      .list()
+      .find(
+        (b) =>
+          b.cookieKr === "실론나이트 쿠키" &&
+          b.skillGrade === 9 &&
+          b.effectType === "BossDamageRateAddition",
+      );
+    expect(row).toMatchObject({
+      fromStar: 9,
+      valuePct: 70,
+      maxStack: 1,
+      base: "Fixed",
+      scalesWithCasterAmp: true,
+    });
+    expect(store.repos.citations.sourcesFor("buff_value", [String(row!.id)])).toEqual(
+      new Map([[String(row!.id), ["web:sugarpocket-bundle-1.4.002"]]]),
+    );
+  });
+
+  it("maps each skill grade to the first star that reaches it, and stores Dark Choco's debuff as its application chance", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    const rows = store.repos.buffValues.list();
+    const pomegranate = rows.filter((b) => b.cookieKr === "석류맛 쿠키");
+    expect(pomegranate.map((b) => [b.skillGrade, b.fromStar])).toEqual([
+      [0, 0],
+      [1, 1],
+      [3, 3],
+      [5, 5],
+      [7, 7],
+      [9, 9],
+    ]);
+    const milk = rows.find(
+      (b) => b.cookieKr === "바삭튼튼 소아과 의사 우유맛 쿠키" && b.skillGrade === 9,
+    );
+    expect(milk).toMatchObject({ valuePct: 10, base: "CastersAttackPoint", maxStack: 10 });
+    const darkChoco = rows.filter((b) => b.cookieKr === "다크초코 쿠키");
+    expect(darkChoco).toHaveLength(6);
+    for (const row of darkChoco) {
+      expect(row).toMatchObject({
+        effectType: "DefensePointReductionChance",
+        valuePct: 20,
+        scalesWithCasterAmp: false,
+      });
+    }
+  });
+
+  it("stores fight events on the elapsed clock, converting the countdown-timed ones", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    const events = store.repos.fightEvents.list();
+    const at = (event: string) => events.find((e) => e.event === event)?.tElapsed;
+    expect(events.every((e) => e.boss === "pinata")).toBe(true);
+    expect(at("engage")).toBe(0);
+    expect(at("slam_pattern")).toBe(30);
+    expect(at("mob_wave_hit")).toBe(33);
+    expect(at("chip_deaths_begin")).toBe(41);
+    expect(at("super_jump_wipe")).toBe(43);
+    expect(at("unresolved_final_dr_stage")).toBeNull();
+  });
+
+  it("cites each fight event's own sources, through the manifest's aliases", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    const wipe = store.repos.fightEvents.list().find((e) => e.event === "super_jump_wipe")!;
+    expect(
+      store.repos.citations.sourcesFor("fight_event", [String(wipe.id)]).get(String(wipe.id)),
+    ).toEqual(["dc:69250", "dc:69358", "dc:71028", "dc:76583"]);
+  });
+
   it("warns about glossary keys that more than one entry claims", () => {
     const { warnings } = importRecord(testStore(), recordDir);
     expect(warnings.some((w) => w.includes('"투력"') && w.includes("전투력"))).toBe(true);
@@ -158,6 +265,48 @@ describe("importRecord guards", () => {
     expect(second.counts).toEqual(first.counts);
     expect(tableCounts(store)).toEqual(expectedCounts);
   });
+
+  it("refuses a database whose only content is a fight event, and replace clears it", () => {
+    const store = testStore();
+    store.repos.fightEvents.insert({
+      boss: "stray",
+      tElapsed: 1,
+      event: "stray",
+      detail: "not from the record",
+      confidence: "low",
+    });
+    expect(() => importRecord(store, recordDir)).toThrow(/database already has content/);
+    importRecord(store, recordDir, { replace: true });
+    expect(store.repos.fightEvents.list().some((e) => e.boss === "stray")).toBe(false);
+    expect(tableCounts(store)).toEqual(expectedCounts);
+  });
+
+  it("replace clears buff values added outside the import", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    store.repos.buffValues.insert({
+      cookieKr: "stray",
+      effectType: "Stray",
+      skillGrade: 0,
+      fromStar: 0,
+      valuePct: 1,
+      maxStack: null,
+      base: "Fixed",
+      scalesWithCasterAmp: true,
+    });
+    importRecord(store, recordDir, { replace: true });
+    expect(store.repos.buffValues.list().some((b) => b.cookieKr === "stray")).toBe(false);
+    expect(tableCounts(store)).toEqual(expectedCounts);
+  });
+
+  it("a replace import over a populated database exports the same snapshot as a fresh import, ids included", () => {
+    const fresh = testStore();
+    importRecord(fresh, recordDir);
+    const replaced = testStore();
+    importRecord(replaced, recordDir);
+    importRecord(replaced, recordDir, { replace: true });
+    expect(exportSnapshot(replaced)).toEqual(exportSnapshot(fresh));
+  });
 });
 
 describe("importRecord validation", () => {
@@ -169,29 +318,51 @@ describe("importRecord validation", () => {
 
   /**
    * Builds a throwaway record from record 001's curated files, with one
-   * collection rewritten, no captures and no rankings.
+   * collection (`file`, unless `null`) rewritten by `mutate`. The manifest
+   * has no captures, rankings, fight events or buff values, unless
+   * `opts.manifest` sets them; `opts.evidence` lists record-relative files
+   * to copy over from record 001.
    */
   function tempRecord(
-    file: string,
+    file: string | null,
     mutate: (rows: Array<Record<string, unknown>>) => void,
+    opts: { manifest?: Record<string, unknown>; evidence?: string[] } = {},
   ): string {
     tmp = mkdtempSync(join(tmpdir(), "crumble-record-"));
     cpSync(join(recordDir, "curated"), join(tmp, "curated"), { recursive: true });
     mkdirSync(join(tmp, "extract"));
-    const manifest = JSON.parse(readFileSync(join(recordDir, "import.json"), "utf-8")) as Record<
-      string,
-      unknown
-    >;
+    for (const path of opts.evidence ?? []) {
+      cpSync(join(recordDir, path), join(tmp, path), { recursive: true });
+    }
+    const base = recordJson<Record<string, unknown>>("import.json");
     writeFileSync(
       join(tmp, "import.json"),
-      JSON.stringify({ ...manifest, extractions: "extract", captures: [], rankings: [] }),
+      JSON.stringify({
+        ...base,
+        extractions: "extract",
+        captures: [],
+        rankings: [],
+        fightEvents: undefined,
+        buffValues: undefined,
+        ...opts.manifest,
+      }),
     );
-    const path = join(tmp, "curated", file);
-    const rows = JSON.parse(readFileSync(path, "utf-8")) as Array<Record<string, unknown>>;
-    mutate(rows);
-    writeFileSync(path, JSON.stringify(rows));
+    if (file !== null) editJson(tmp, join("curated", file), mutate);
     return tmp;
   }
+
+  /** Rewrites the JSON file at the record-relative `path` of `dir` with `mutate`. */
+  function editJson<T>(dir: string, path: string, mutate: (value: T) => void): void {
+    const value = JSON.parse(readFileSync(join(dir, path), "utf-8")) as T;
+    mutate(value);
+    writeFileSync(join(dir, path), JSON.stringify(value));
+  }
+
+  const rankingSpecs = recordJson<{ rankings: Array<Record<string, unknown> & { file: string }> }>(
+    "import.json",
+  ).rankings;
+  /** Record 001's manifest entry for the ranking TSV whose path ends in `file`. */
+  const rankingSpec = (file: string) => rankingSpecs.find((spec) => spec.file.endsWith(file))!;
 
   /** Every table's row count is zero. */
   function expectEmpty(store: Store): void {
@@ -235,5 +406,79 @@ describe("importRecord validation", () => {
     const store = testStore();
     expect(() => importRecord(store, dir)).toThrow(/mechanics\.json \[2\]: confidence: /);
     expectEmpty(store);
+  });
+
+  it("rejects a fight event citing a source that isn't curated, naming the file and row, and writes nothing", () => {
+    const dir = tempRecord(null, () => {}, {
+      manifest: { fightEvents: manifest.fightEvents },
+      evidence: [manifest.fightEvents.file],
+    });
+    editJson<typeof encounter>(dir, manifest.fightEvents.file, (file) => {
+      file.encounter.timeline[4]!.sources = ["dc:0"];
+    });
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(
+      /kr-encounter\.json \[timeline 4\]: unknown source ids: dc:0/,
+    );
+    expectEmpty(store);
+  });
+
+  it("rejects a countdown entry naming an event the timeline doesn't have", () => {
+    const dir = tempRecord(null, () => {}, {
+      manifest: {
+        fightEvents: { ...manifest.fightEvents, countdown: { no_such_event: 10 } },
+      },
+      evidence: [manifest.fightEvents.file],
+    });
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      /countdown names event "no_such_event", which the timeline doesn't have/,
+    );
+  });
+
+  it("rejects a debuff whose effect has no effect type in the manifest", () => {
+    const dir = tempRecord(null, () => {}, {
+      manifest: { buffValues: { ...manifest.buffValues, debuffEffects: {} } },
+      evidence: [manifest.buffValues.file, manifest.buffValues.catalog],
+    });
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      /skills-runes-1\.4\.002\.json \[다크초코 쿠키 grade 0\]: debuff effect "방어력이 감소합니다\." has no effect type/,
+    );
+  });
+
+  it("rejects a buff cookie that isn't a glossary kr", () => {
+    const dir = tempRecord(null, () => {}, {
+      manifest: { buffValues: { ...manifest.buffValues, cookies: ["실론"] } },
+      evidence: [manifest.buffValues.file, manifest.buffValues.catalog],
+    });
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      /import\.json \[buffValues\.cookies 0\]: "실론" isn't a glossary kr/,
+    );
+  });
+
+  it("rejects two ranking rows with the same board, season, rank and capture date, a null season included", () => {
+    const power = rankingSpec("13-power-top500.tsv");
+    const dir = tempRecord(null, () => {}, {
+      manifest: { rankings: [power, power] },
+      evidence: [power.file],
+    });
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(ImportError);
+    expect(() => importRecord(store, dir)).toThrow(
+      /13-power-top500\.tsv \[line 2\]: duplicate ranking \(board power, season null, rank 1, captured 2026-09-27\), first seen at evidence\/15-crumbgg\/13-power-top500\.tsv line 2/,
+    );
+    expectEmpty(store);
+  });
+
+  it("a failed replace import leaves the prior data untouched", () => {
+    const players = rankingSpec("11-players.tsv");
+    const dir = tempRecord(null, () => {}, {
+      manifest: { rankings: [players, players] },
+      evidence: [players.file],
+    });
+    const store = testStore();
+    importRecord(store, recordDir);
+    const before = exportSnapshot(store);
+    expect(() => importRecord(store, dir, { replace: true })).toThrow();
+    expect(exportSnapshot(store)).toEqual(before);
   });
 });

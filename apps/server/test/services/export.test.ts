@@ -151,6 +151,23 @@ function seedEverything(store: Store): SeedIds {
   services.timeline.create({ date: "2026-01-01", event: "patch" }, ["dc:1"]);
   services.takeaways.create({ position: 1, text: "do X", detail: null }, ["dc:1"]);
   services.recommendations.create({ summary: "buff X", changes: ["increase atk"] }, ["dc:1"]);
+  services.fightEvents.create(
+    { boss: "pinata", tElapsed: 30, event: "slam", detail: "30 s slam", confidence: "high" },
+    ["dc:1"],
+  );
+  services.buffValues.create(
+    {
+      cookieKr: "체리 쿠키",
+      effectType: "AttackPointAddition",
+      skillGrade: 9,
+      fromStar: 9,
+      valuePct: 10,
+      maxStack: 10,
+      base: "CastersAttackPoint",
+      scalesWithCasterAmp: true,
+    },
+    ["web:2"],
+  );
 
   return { mechanicId: mechanic.id, scoreId: score.id, deckCookieId };
 }
@@ -187,8 +204,13 @@ describe("exportSnapshot / restoreSnapshot", () => {
       timeline: 1,
       takeaways: 1,
       recommendations: 1,
-      citations: 9,
+      fightEvents: 1,
+      buffValues: 1,
+      citations: 11,
     });
+    for (const [table, rows] of Object.entries(first.tables)) {
+      expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);
+    }
 
     // The specific, gapped ids survived restore rather than being
     // reassigned by a fresh autoincrement counter.
