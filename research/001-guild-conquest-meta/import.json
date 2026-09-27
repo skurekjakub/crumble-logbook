@@ -12,6 +12,7 @@
     { "site": "dc", "dir": "evidence/11-dc-posts-extra", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/16-top-players/dc", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/18-kr-encounter/dc", "file": "{id}.md" },
+    { "site": "dc", "dir": "evidence/21-author-awkward2637", "file": "{id}.md" },
     { "site": "nv", "dir": "evidence/07-nv-posts", "file": "nv-{id}.md" },
     { "site": "nv", "dir": "evidence/16-top-players/nv", "file": "nv-{id}.md" }
   ],
