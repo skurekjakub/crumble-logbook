@@ -1,0 +1,896 @@
+{
+  "batch": "dc-arena",
+  "mode_scope": "arena",
+  "note": "Regular Arena (일반 아레나 / 일레나 / 서버 아레나) on DCInside projectcc, captured 2026-09-27. Captures: research/002-pvp-meta/evidence/01-dc-arena/dc/<id>.md, images in dc/img/. All dates 2026. Posts read but left out as off-topic or joke-only: 75560, 54919, 76065 (mostly a Bari review for stages, one line on Arena), 70321 (server-merge rant), 75495, 76504 (no answer). Screenshots with S0xxx server tags and +100/+125/+175 medal rewards are Rumble Arena (와글와글 아레나), not regular Arena; they are marked mode rumble_arena where used. Formation screens show two rows of six; this file records them as 'top row' and 'bottom row' as displayed, left to right, because no post states which row is the front. Star counts are shown as '?' where the card art cannot be read reliably.",
+  "posts": [
+    {
+      "source": "dc", "id": "74483", "url": "https://m.dcinside.com/board/projectcc/74483", "date": "2026-09-24",
+      "title_kr": "걍 무과금들은 이 덱 써라", "title_en": "F2P players, just use this deck", "relevance": 3, "mode": "both",
+      "summary_en": "The reference 'Rye one-carry' (호밀 원툴) deck that the gallery's 정보 tab links and everyone later calls 정보탭 호밀덱. Preset named 아레나/토벌, 13.87M power. Poster says it defends very well; perks 피감 (Armor Repair) + 열정페이. The defense-log screenshot is from Rumble Arena (S-server tags, +125 medals).",
+      "teams": [{
+        "name": "Rye one-carry, Grapevine + Skating Queen version (정보탭 호밀덱)", "mode": "arena",
+        "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "support: crit rate buff + Range synergy, marches forward", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "top row 2", "role": "support: healing reduction on enemies, lift RES + Rapid Fire synergy to allies", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "support: Skill AMP beam (빨대) + Projectile Speed synergy", "note": "beam target decided by ATK order"},
+          {"kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "100", "stars": "?", "position": "top row 4", "role": "backup healer, Rapid Fire synergy", "note": "the slot most often swapped (Rockstar, Espresso, Seeker)"},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "top row 5", "role": "tank, knock-up, DR to nearby allies; Range synergy lines up Macaron", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "healer, Volley synergy", "note": "often dies first"},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "bottom row 1", "role": "sole main DPS (piercing dual pistols)", "note": "given ATK runes so it is 3rd in ATK order and gets Pomegranate's first beam"},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "bottom row 2", "role": "support: ATK buff + Volley synergy", "note": ""},
+          {"kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "bottom row 3", "role": "crit DMG ice field + Chain synergy", "note": "debated in Arena"},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "bottom row 4", "role": "main healer + ATK buff, captain (flag icon)", "note": "highest ATK on the team"},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "bottom row 5", "role": "tank: shields to low-HP allies, then team shield", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "bottom row 6", "role": "tank: ATK-down and crit-rate-down on nearby enemies", "note": ""}
+        ],
+        "pets": ["갓난갓방울 (Holy Baby Drop) ★20", "전지멜로우 (Chargemellow, 연타펫) ★17", "핫도그도그 (Hot Doggie) ★20"],
+        "perks": "방어구 수리 특약 (Armor Repair, +10% DR with 3+ tanks) + 열정페이 (Passion Pay)",
+        "formation": "top: Macaron, Pinot Noir, Pomegranate, Grapevine, Hound, Herb / bottom: Rye, Cheesecake, Skating Queen, Milk, Ion, Moon Rabbit",
+        "why": "Three tanks turn on Armor Repair; three healers plus Ion shields survive the opening burst; Macaron, Cheesecake, Milk, Pomegranate and Skating Queen stack onto one piercing carry.",
+        "unorthodox": ["Skating Queen in an Arena deck", "only one real damage dealer"]
+      }],
+      "counters": [],
+      "builds": [],
+      "mechanics": [],
+      "rules": [], "results": [], "disagreements": ["Commenters ask whether Hound can be dropped now, and suggest Seeker or Espresso in the Grapevine slot."],
+      "quotes": [{"kr": "방어 ㅆㅅㅌㅊ로 잘 막음", "en": "It defends extremely well."}, {"kr": "피감에 열정페이", "en": "(Perks:) DMG Reduction and Passion Pay."}]
+    },
+    {
+      "source": "dc", "id": "76602", "url": "https://m.dcinside.com/board/projectcc/76602", "date": "2026-09-27",
+      "title_kr": "깔개들한테는 아레나 이덱이 제일 좋은듯", "title_en": "For low spenders this Arena deck is best", "relevance": 3, "mode": "arena",
+      "summary_en": "Poster used the Brightseeker/Donut/Crepe Rye deck (13.33M) and kept losing to the Grapevine/Skating Queen Rye deck 2M lower, so switched to it (13.19M). It now beats the common 15-16M 'Rapid Fire deck' (연타덱) too. Commenters say Rockstar beats Grapevine in that slot.",
+      "teams": [
+        {"name": "Rye deck, Brightseeker + Donut + Crepe version (lost)", "mode": "arena",
+         "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "top row 2", "role": "DPS", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "top row 3", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "top row 4", "role": "support", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "top row 5", "role": "tank", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "top row 6", "role": "healer", "note": ""},
+          {"kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "bottom row 1", "role": "DPS (drones)", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "?", "stars": "?", "position": "bottom row 2", "role": "polymorph beam", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "bottom row 3", "role": "support", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "bottom row 4", "role": "healer", "note": ""},
+          {"kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "bottom row 5", "role": "tank, knockback", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "bottom row 6", "role": "tank/debuff", "note": ""}
+         ],
+         "pets": ["갓난갓방울 ★20", "핫도그도그 ★20", "전지멜로우 ★18"], "perks": "", "formation": "as listed; 13.33M", "why": "", "unorthodox": []},
+        {"name": "Rye one-carry, Grapevine + Skating Queen version (switched to)", "mode": "arena",
+         "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "top row 2", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "top row 3", "role": "support", "note": ""},
+          {"kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "?", "stars": "?", "position": "top row 4", "role": "healer", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "top row 5", "role": "tank", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "top row 6", "role": "healer", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "bottom row 1", "role": "DPS", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "bottom row 2", "role": "support", "note": ""},
+          {"kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "bottom row 3", "role": "support", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "bottom row 4", "role": "healer", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "bottom row 5", "role": "tank", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "bottom row 6", "role": "tank/debuff", "note": ""}
+         ],
+         "pets": ["갓난갓방울 ★20", "핫도그도그 ★20", "전지멜로우 ★18"], "perks": "", "formation": "as listed; 13.19M", "why": "Beats the 연타덱 (Seeker Rye) variant at lower power.", "unorthodox": []}
+      ],
+      "counters": [
+        {"team": "Rye deck, Brightseeker/Donut/Crepe version", "beaten_by": "Rye deck, Grapevine/Skating Queen version", "mode": "arena", "why": "Poster lost to it at 2M less power; after switching it beats 15-16M 연타덱.", "conditions": "power gap about 2M in the loser's favour"}
+      ],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "15,16m 일반적인 연타덱까지 잘잡음 연타덱 카운터인가봐", "en": "It even beats ordinary 15-16M Rapid Fire decks; seems to counter them."}, {"kr": "락스타가 ㄹㅇ 떡벽임", "en": "Rockstar is a real wall."}]
+    },
+    {
+      "source": "dc", "id": "75148", "url": "https://m.dcinside.com/board/projectcc/75148", "date": "2026-09-25",
+      "title_kr": "아레나 포도 대신에 락스타도 ㄱㅊ한거같은데?", "title_en": "Rockstar instead of Grapevine seems fine in Arena", "relevance": 3, "mode": "both",
+      "summary_en": "Tests the Rye deck with Rockstar in the Grapevine slot. Rockstar's recent skill-ready (스킬준비) buff makes its shield land during Bari's first dive. Screenshots: Rumble attack at 13.27M vs 16.72M Bari–Oven, and three regular Arena (시즌5 아레나) fights, including a win at 13.27M against the server's #2 (20.4M) running Brightseeker/Oven/Bari/Cherry Cola, where Rye did 2.21M damage. Long thread on why Regular Arena Bari burst is harder to survive than Rumble.",
+      "teams": [{
+        "name": "Rye one-carry, Donut + Rockstar version", "mode": "both",
+        "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "100", "stars": "?", "position": "top row 2", "role": "polymorph beam, sub-DPS", "note": "649K damage in the Arena win; polymorph keeps Rye alive"},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "support", "note": ""},
+          {"kr": "락스타맛 쿠키", "en": "Rockstar Cookie", "level": "100", "stars": "?", "position": "top row 4", "role": "shield + Pierce synergy", "note": "replaces Grapevine; runes: whatever of HP/Skill AMP/Skill Haste/DR rolls, poster reached 8 skill haste from runes"},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "top row 5", "role": "tank", "note": "Rye in line with Hound receives Macaron's buff"},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "healer", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "bottom row 1", "role": "main DPS", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "bottom row 2", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "bottom row 3", "role": "support", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "bottom row 4", "role": "healer, captain", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "bottom row 5", "role": "tank", "note": "preferred over Crepe now: skill-ready buff, and Bari's push immunity blunts Crepe"},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "bottom row 6", "role": "tank/debuff", "note": ""}
+        ],
+        "pets": ["갓난갓방울 ★20", "핫도그도그 ★20", "전지멜로우 ★15 (later swapped to a DR pet)"],
+        "perks": "DR 10% (Armor Repair) tried; 올2퍼 (General Perks) untested",
+        "formation": "top: Macaron, Donut, Cheesecake, Rockstar, Hound, Herb / bottom: Rye, Pinot Noir, Pomegranate, Milk, Ion, Moon Rabbit (13.27M)",
+        "why": "Grapevine's heal comes too late against Bari–Oven; Rockstar's shield comes during Bari's first attack. Skating Queen tried: fast after its buff but dies wandering. Crepe tried: Bari grants push immunity, so Crepe's knockback matters less.",
+        "unorthodox": ["Rockstar (SR) in a top Arena team"]
+      }],
+      "counters": [
+        {"team": "Bari–Oven–Cherry Cola (+Brightseeker) deck, 20.4M, server #2", "beaten_by": "Rye deck, Rockstar version, 13.27M", "mode": "arena", "why": "Rye alone dealt 2.21M; Donut polymorph and Rockstar/Ion shields absorbed the dive.", "conditions": "one screenshot; the opponent's Pinot Noir was Lv.77"},
+        {"team": "Rye deck (any version)", "beaten_by": "Bari–Oven deck at similar or higher power", "mode": "arena", "why": "In regular Arena there is no Rumble +30% DR, so the dive deletes the team in one go.", "conditions": "one commenter at similar power; large power gaps"}
+      ],
+      "builds": [{"cookie": "락스타맛 쿠키", "mode": "arena", "sugar_runes": "HP / Skill AMP / Skill Haste / DR, whichever rolls; 8 Skill Haste from runes", "gear": "right side all Skill Haste", "why": "Shield must come out before Bari's first hit."}],
+      "mechanics": ["Rumble Arena gives +30% DR (피감30%); regular Arena does not, so Bari burst is deadlier in regular Arena.", "Macaron's buff reaches Rye when Rye is in line with Hound (Range synergy sets Macaron's march line).", "Brightseeker's drones vanish when their target dies, and her beam is single-target, so she is judged worse than piercing Rye for Arena."],
+      "rules": [], "results": [{"team": "Rye deck, Rockstar version", "win_rate": "", "usage": "", "power": "13.27M", "note": "beat 20.4M server #2 Bari–Oven in regular Arena; beat 8★ Seeker twice"}],
+      "disagreements": ["One commenter: in regular Arena at similar power the Rye deck still dies in one hit to Bari–Oven. Another: after swapping Grapevine for Rockstar it no longer dies to Bari."],
+      "quotes": [{"kr": "락스타도 이번에 스킬준비 버프 받은게 바리공주 첫방 버티게 해주는데 꽤 큰 의미가 있는듯", "en": "Rockstar's new skill-ready buff lets you survive Bari's first hit, which matters a lot."}, {"kr": "와레나는 피감30%가 달려있고 서버아레나는 없어서 차이가 좀 있긴 함", "en": "Rumble has 30% DR attached and server Arena doesn't, so there is a difference."}]
+    },
+    {
+      "source": "dc", "id": "76751", "url": "https://m.dcinside.com/board/projectcc/76751", "date": "2026-09-27",
+      "title_kr": "호밀덱 계속 실험해봤는데 락이더 좋은거 같다", "title_en": "Kept testing the Rye deck: Rockstar is better", "relevance": 3, "mode": "both",
+      "summary_en": "Timing test: Grapevine's skill cycles in 5.5s, Rockstar's in 5s including skill-ready. Grapevine often fails to heal before cookies die at the start; Rockstar with 3-4 skill-haste lines holds through Bari's timing. Formation at 8.74M. Defense-log screenshots are Rumble. Commenters argue about Skating Queen and whether Seeker is worth it.",
+      "teams": [{
+        "name": "Rye one-carry, Rockstar + Skating Queen version", "mode": "both",
+        "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "top row 2", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "top row 3", "role": "support", "note": ""},
+          {"kr": "락스타맛 쿠키", "en": "Rockstar Cookie", "level": "?", "stars": "?", "position": "top row 4", "role": "shield", "note": "3-4 skill haste lines"},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "top row 5", "role": "tank", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "top row 6", "role": "healer", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "bottom row 1", "role": "DPS", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "bottom row 2", "role": "support", "note": "tested removing it: team died more, so kept"},
+          {"kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "bottom row 3", "role": "crit DMG field", "note": "poster: with Armor Repair + Health Insurance, surviving one cycle beats adding a dealer"},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "bottom row 4", "role": "healer", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "bottom row 5", "role": "tank", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "bottom row 6", "role": "tank/debuff", "note": ""}
+        ],
+        "pets": ["갓난갓방울 ★19", "전지멜로우 ★19", "핫도그도그 ★17"],
+        "perks": "방어구 수리 특약 + 의료보험 (Health Insurance)",
+        "formation": "top: Macaron, Pinot Noir, Pomegranate, Rockstar, Hound, Herb / bottom: Rye, Cheesecake, Skating Queen, Milk, Ion, Moon Rabbit (8.74M)",
+        "why": "Rockstar's faster shield covers the opening; Skating Queen for crit damage.",
+        "unorthodox": ["Health Insurance instead of Passion Pay"]
+      }],
+      "counters": [], "builds": [{"cookie": "락스타맛 쿠키", "mode": "arena", "sugar_runes": "3-4 Skill Haste lines", "gear": "", "why": "Hold through Bari's timing."}],
+      "mechanics": ["Grapevine cooldown 5.5s vs Rockstar about 5s including skill-ready (measured by poster)."],
+      "rules": [], "results": [],
+      "disagreements": ["Several say Skating Queen is pointless and a dealer or another healer is better; the poster says one survived cycle beats an extra dealer.", "Seeker in Arena: poster says her shots are hard to land and the fight ends before her final explosion."],
+      "quotes": [{"kr": "포넝 쿨 5.5 락스타 스준포함 5초", "en": "Grapevine cooldown 5.5, Rockstar 5 seconds including skill-ready."}, {"kr": "바리덱은 애초에 쿠키들 초살막는게 포인트라 치케나 피겨빼고 락스타 넣는게 좋지않나", "en": "Against Bari the point is stopping instant kills, so drop Cheesecake or Skating for Rockstar?"}]
+    },
+    {
+      "source": "dc", "id": "76349", "url": "https://m.dcinside.com/board/projectcc/76349", "date": "2026-09-26",
+      "title_kr": "호밀덱에 넝쿨 피겨 빼고 시커 도넛 넣는게 더 센가?", "title_en": "Is Seeker + Donut stronger than Grapevine + Skating in the Rye deck?", "relevance": 3, "mode": "arena",
+      "summary_en": "Formation of the Seeker/Donut Rye version at 16.56M. Replies: surprisingly the Grapevine version is stronger, because against Bari or Rye decks the front-line Herb often dies first and Grapevine is backup healing. Seeker makes the deck weaker; only Skating↔Donut and Grapevine↔Rockstar are worth swapping.",
+      "teams": [{
+        "name": "Rye deck, Brightseeker + Donut version", "mode": "arena",
+        "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "top row 2", "role": "DPS", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "top row 4", "role": "support", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "top row 5", "role": "tank", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "healer", "note": ""},
+          {"kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "bottom row 1", "role": "DPS", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "100", "stars": "?", "position": "bottom row 2", "role": "polymorph", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "bottom row 3", "role": "support", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "bottom row 4", "role": "healer, captain", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "bottom row 5", "role": "tank", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "bottom row 6", "role": "tank/debuff", "note": ""}
+        ],
+        "pets": ["핫도그도그 ★20", "전지멜로우 ★20", "갓난갓방울 ★20"], "perks": "", "formation": "16.56M", "why": "", "unorthodox": []
+      }],
+      "counters": [], "builds": [],
+      "mechanics": ["Against Bari and Rye decks the Herb in the line that gets hit first tends to die first, so a second healer (Grapevine) matters."],
+      "rules": [], "results": [], "disagreements": ["Seeker/Donut vs Grapevine/Skating: one user prefers Seeker/Donut (75773); others say Grapevine/Skating is stronger and Seeker weakens the deck."],
+      "quotes": [{"kr": "정말신기하게도 넝쿨포도가 더쎔", "en": "Strangely, the Grapevine version is stronger."}, {"kr": "시커 이새기 들어가면 오히려 약해짐 피겨<->도넛 포도<->락스타 정도만 바꿀만 한듯", "en": "Adding Seeker actually makes it weaker; only Skating↔Donut and Grapevine↔Rockstar are worth swapping."}]
+    },
+    {
+      "source": "dc", "id": "75773", "url": "https://m.dcinside.com/board/projectcc/75773", "date": "2026-09-26",
+      "title_kr": "그래서 호밀덱 무슨버전이 제일 좋음?", "title_en": "So which Rye deck version is best?", "relevance": 2, "mode": "arena",
+      "summary_en": "Lists the circulating Rye deck versions: Grapevine+Skating, Seeker+Donut, Donut+Rockstar. Three replies pick Seeker+Donut, one adds that below 5★ Seeker the Grapevine+Skating version is better.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": ["Seeker+Donut favoured here, against 76349 and 76751."],
+      "quotes": [{"kr": "시커 5성 안돼면 걍 피겨포도가 나을듯", "en": "If Seeker isn't 5★, the Skating/Grapevine version is probably better."}]
+    },
+    {
+      "source": "dc", "id": "75072", "url": "https://m.dcinside.com/board/projectcc/75072", "date": "2026-09-24",
+      "title_kr": "아레나 호밀덱 이거 맞냐", "title_en": "Is this the Arena Rye deck?", "relevance": 2, "mode": "arena",
+      "summary_en": "Confirms the Seeker version lineup: Macaron, Rye, Pinot Noir, Brightseeker, Donut, Moon Rabbit, Ion, Hound, Pomegranate, Milk, Cheesecake, Herb. Pets: Holy Baby Drop, King Choco Drop, Chargemellow; one user runs Hot Doggie instead of Chargemellow with 4 ATK lines on Rye.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "호밀맛 쿠키", "mode": "arena", "sugar_runes": "4 ATK% (공증) lines per one user", "gear": "", "why": "Put Rye high in ATK order for Pomegranate's beam."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "라인업 맞고 시커말고 넝쿨 버전도 있음 펫은 갓방울 왕방울 연타펫", "en": "Lineup's right; there's also a Grapevine version without Seeker. Pets: Holy Baby Drop, King Choco Drop, Rapid Fire pet."}]
+    },
+    {
+      "source": "dc", "id": "74746", "url": "https://m.dcinside.com/board/projectcc/74746", "date": "2026-09-24",
+      "title_kr": "정보탭 호밀덱 ㄹㅇ좋네", "title_en": "The info-tab Rye deck is really good", "relevance": 2, "mode": "arena",
+      "summary_en": "Result screen: Rye 2.26M damage, Seeker 324K, Moon Rabbit 262K; the opponent Rye/Grapevine deck's Rye did only 172K. Comments: give Rye ATK runes so it gets Pomegranate's opening beam; poster gives some ATK so Rye comes after Milk and Seeker in ATK order; SR runes suffice. Cheesecake can be swapped for Crepe.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "호밀맛 쿠키", "mode": "arena", "sugar_runes": "some ATK% (공증) lines, SR is enough", "gear": "", "why": "ATK order Milk > Seeker > Rye so Pomegranate's first beam (빨대) goes to Rye."}],
+      "mechanics": ["Pomegranate's beam target follows the ATK ranking; players tune ATK runes to steer it (시작 빨대)."],
+      "rules": [], "results": [{"team": "Rye deck (Seeker version)", "win_rate": "", "usage": "", "power": "", "note": "Rye 2,263,716 damage in one win"}],
+      "disagreements": [], "quotes": [{"kr": "우유시커 다음으로오게 공증몇개줌 sr로도되던데", "en": "I gave a few ATK lines so it comes after Milk and Seeker; SR runes were enough."}]
+    },
+    {
+      "source": "dc", "id": "71947", "url": "https://m.dcinside.com/board/projectcc/71947", "date": "2026-09-21",
+      "title_kr": "아레나 1등 이기는 방법 질문...", "title_en": "How do I beat my server's Arena #1?", "relevance": 3, "mode": "arena",
+      "summary_en": "Pre-Bari meta. Server #1 (14.58M, 3,911 trophies) runs Wind Archer, Macaron, Milky Way, Brightseeker, Rye, Donut, Pinot Noir, Cheesecake, Pomegranate, Milk, Hound, Herb with pets Chargemellow, Holy Baby Drop, King Choco Drop. Poster's 16.6M deck (Macaron, Rye, Pinot, Pomegranate, Hound, Crepe, Seeker, Donut, Cheesecake, Milk, Ion Lv94, Herb) keeps losing. Advice: gear crit rate over crit damage because opponents run crit RES; drop Seeker/Herb for Bari and Espresso (5 ranged); swap the Rapid Fire pet for a DR pet.",
+      "teams": [
+        {"name": "Server #1 five-ranged deck (pre-Bari)", "mode": "arena",
+         "cookies": [
+          {"kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "100", "stars": "?", "position": "slot 1", "role": "DPS", "note": ""},
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "slot 2", "role": "support", "note": ""},
+          {"kr": "밀키웨이맛 쿠키", "en": "Milky Way Cookie", "level": "100", "stars": "?", "position": "slot 3", "role": "DPS", "note": ""},
+          {"kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "slot 4", "role": "DPS", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "slot 5", "role": "DPS", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "100", "stars": "?", "position": "slot 6", "role": "polymorph", "note": "focus 1-2 lines (~800) so polymorph lands"},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "slot 7", "role": "support", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "slot 8", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "slot 9", "role": "support", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "slot 10 (captain)", "role": "healer", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "slot 11", "role": "tank", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "slot 12", "role": "healer", "note": ""}
+         ],
+         "pets": ["전지멜로우 ★20", "갓난갓방울 ★20", "근엄한 초코왕방울 ★16"], "perks": "", "formation": "defense-log order, not the formation grid; 14.58M", "why": "Five ranged dealers for 탄약비 전액 지원 (+15 skill haste for 5+ ranged).", "unorthodox": []}
+      ],
+      "counters": [],
+      "builds": [{"cookie": "general", "mode": "arena", "sugar_runes": "Ion: HP, crit RES, DR, Skill Haste. Macaron: Skill AMP + Skill Haste. Rye: ATK + Skill AMP.", "gear": "6 Skill Haste lines; weapons Skill AMP + crit RATE (not crit DMG); crit RES and DR low row; drop RES", "why": "Opponents stack crit RES, so crit DMG is wasted when crits don't land."}],
+      "mechanics": ["Donut King's polymorph can land on several cookies at once if the attacker has some Focus (~800); one line of RES was not enough to stop it."],
+      "rules": [], "results": [{"team": "Server #1 deck", "win_rate": "", "usage": "", "power": "14.58M", "note": "3,911 trophies"}],
+      "disagreements": [], "quotes": [{"kr": "상대도 치저피감 보통낄텐데 치명이안터지면 치피가 뭔 의미가있노", "en": "Opponents usually run crit RES and DR; if crits don't land, what's crit DMG for?"}]
+    },
+    {
+      "source": "dc", "id": "75598", "url": "https://m.dcinside.com/board/projectcc/75598", "date": "2026-09-25",
+      "title_kr": "아레나 이덱 줘패고싶은데 방법좀 아시는분(제발)", "title_en": "How do I beat this Arena deck?", "relevance": 3, "mode": "arena",
+      "summary_en": "Screenshot of a Bari–Oven–Cherry Cola defense that keeps beating the poster at equal power; its pets are Holy Baby Drop, Hot Doggie, King Choco Drop, all max. The key difference spotted: the opponent's Milk captain is merc level 4, unlocking Armor Repair (DR 10%) and Passion Pay. Advice: Rye + Rockstar in theory; if still marginal, swap Choco Drop for Icy Birdie.",
+      "teams": [{
+        "name": "Bari–Oven–Cherry Cola deck (바리오방체콜)", "mode": "arena",
+        "cookies": [
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "healer", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "top row 2", "role": "tank", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "top row 3", "role": "healer + ATK buff, captain Lv4", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "top row 4", "role": "support", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "top row 5", "role": "support", "note": ""},
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "support", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "bottom row 1", "role": "tank/debuff", "note": ""},
+          {"kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "bottom row 2", "role": "charge DPS, dashes to highest-ATK enemy", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "bottom row 3", "role": "tank", "note": ""},
+          {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "100", "stars": "?", "position": "bottom row 4", "role": "charge DPS + aura (DR, lift/push immunity, damage) on charge allies", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "bottom row 5", "role": "support", "note": ""},
+          {"kr": "오븐방랑자 쿠키", "en": "Oven Wanderer Cookie", "level": "100", "stars": "?", "position": "bottom row 6", "role": "charge DPS, dashes to highest-ATK enemy", "note": ""}
+        ],
+        "pets": ["갓난갓방울 (max)", "핫도그도그 (max)", "근엄한 초코왕방울 (max)"],
+        "perks": "Captain (Milk) Lv4: 방어구 수리 특약 (DR 10%) + 열정페이",
+        "formation": "top: Herb, Ion, Milk, Pomegranate, Pinot Noir, Macaron / bottom: Moon Rabbit, Cherry Cola, Hound, Bari, Cheesecake, Oven Wanderer",
+        "why": "Three chargers wrapped in Bari's aura dive the highest-ATK target (usually Milk) together; three tanks enable Armor Repair.",
+        "unorthodox": []
+      }],
+      "counters": [{"team": "Bari–Oven–Cherry Cola deck", "beaten_by": "Rye + Rockstar deck (theory)", "mode": "arena", "why": "Heard in theory only", "conditions": "match the merc level-4 perks first"}],
+      "builds": [], "mechanics": ["Merc captain level 4 unlocks Armor Repair and Passion Pay; a level-3 squad is at a real disadvantage in Arena."],
+      "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "방어구 수리 특약(피감10) 열정페이", "en": "Armor Repair (DR 10) and Passion Pay."}, {"kr": "해보고 애매하다싶으면 초코방울 빼고 얼음새 ㄱㄱ", "en": "If it's still close, drop the Choco Drop for Icy Birdie."}]
+    },
+    {
+      "source": "dc", "id": "75546", "url": "https://m.dcinside.com/board/projectcc/75546", "date": "2026-09-25",
+      "title_kr": "바리덱 단순히 체퍼30때문에 쌘건 아닌데", "title_en": "The Bari deck isn't strong just because of 30% HP", "relevance": 3, "mode": "arena",
+      "summary_en": "Cherry Cola, Oven and Bari dive together and delete an equal-power team in about 3.5 seconds, around 2M damage each. One side says a defensive deck that survives one tick wins; another says Ion and Rockstar shields after their skill-ready buff sometimes stop the instant kill, making it a luck contest of Ion/Rockstar/Donut procs. One user says at similar spec the Rye one-carry deck crushes it.",
+      "teams": [],
+      "counters": [
+        {"team": "Bari–Oven–Cherry Cola deck", "beaten_by": "decks whose Ion/Rockstar shields land before the dive", "mode": "arena", "why": "If the three-charger dive doesn't kill instantly, the Bari deck loses the long fight.", "conditions": "RNG on shield/polymorph timing"},
+        {"team": "Bari–Oven–Cherry Cola deck", "beaten_by": "Rye one-carry deck", "mode": "arena", "why": "", "conditions": "similar spec, per one commenter"}
+      ],
+      "builds": [], "mechanics": ["The Bari–Oven–Cherry Cola dive does about 2M per cookie within about 3.5s at equal power."],
+      "rules": [], "results": [], "disagreements": ["Whether a defensive deck can survive the dive: '100-200th rank' user says yes, others say the damage is too high."],
+      "quotes": [{"kr": "체콜이랑 오방 바리 3명 뛰어들면 동투력인데 한큐에 다 터짐", "en": "When Cherry Cola, Oven and Bari jump in, an equal-power team pops in one go."}, {"kr": "이온 락스타 + 도넛 스킬 확률 운빨 싸움임", "en": "It's a luck fight over Ion, Rockstar and Donut skill timing."}]
+    },
+    {
+      "source": "dc", "id": "75501", "url": "https://m.dcinside.com/board/projectcc/75501", "date": "2026-09-25",
+      "title_kr": "근데 호밀덱이 바리덱 잡는단건 어디서 나온 말임", "title_en": "Where did 'Rye beats Bari' come from?", "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "Poster's defense logs (Rumble: S-server tags, +125 medals) show his Bari–Oven–Cherry Cola deck holding against several Rye decks of similar or higher power. Replies: the Oven's fire at the start ends it; others say it's settings, and they have seen Rye beat 7★ Bari.",
+      "teams": [],
+      "counters": [{"team": "Rye one-carry deck", "beaten_by": "Bari–Oven–Cherry Cola deck", "mode": "rumble_arena", "why": "Dive kills before sustain starts", "conditions": "similar power; poster's Bari 7★"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": ["'It's just setting differences' vs 'nobody at similar power broke through'."],
+      "quotes": [{"kr": "결국 세팅 차이인데 호밀 바리 차이 말하는건 의미가 없음", "en": "It's settings; arguing Rye vs Bari is meaningless."}]
+    },
+    {
+      "source": "dc", "id": "75463", "url": "https://m.dcinside.com/board/projectcc/75463", "date": "2026-09-25",
+      "title_kr": "근데 바리덱 같은 체급 호밀덱한테 그냥 개썰리던데", "title_en": "Bari decks get shredded by same-power Rye decks", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster wiped all the 5★ Bari decks on his server with Rye. One reply says they have never lost to the same weight class after switching to Bari. Another notes regular Arena has no charger buff (Rumble does).",
+      "teams": [], "counters": [{"team": "Bari deck with 5★ Bari", "beaten_by": "Rye one-carry deck", "mode": "arena", "why": "", "conditions": "same power"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": ["Rye beats same-power 5★ Bari vs 'never lost to same power with Bari'."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76853", "url": "https://m.dcinside.com/board/projectcc/76853", "date": "2026-09-27",
+      "title_kr": "우리섭 아레나 결국 오방바리 버렸네", "title_en": "My server's Arena finally dropped Oven–Bari", "relevance": 3, "mode": "arena",
+      "summary_en": "Except #1, the top of the poster's server went back to the Rye deck. Replies: Bari–Oven needs very high spec, is bad for mid spenders; even Bari 7★ + Oven 9★ players use Rye; in Arena it's the #1's tool for farming weaker players or locking in the top.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [],
+      "results": [{"team": "Rye one-carry deck", "win_rate": "", "usage": "most of the top of one server except #1", "power": "", "note": "2026-09-27, one server"}],
+      "disagreements": [],
+      "quotes": [{"kr": "바리오방덱은 스팩이 엄청 좋아야 좋은 덱이라 어정쩡한 중소과금은 ㄹㅇ 별로임", "en": "Bari–Oven is only good with a huge spec; bad for mid spenders."}, {"kr": "바리7 오방9성도 결국 호밀덱 씀", "en": "Even Bari 7★ / Oven 9★ ends up on the Rye deck."}]
+    },
+    {
+      "source": "dc", "id": "76712", "url": "https://m.dcinside.com/board/projectcc/76712", "date": "2026-09-27",
+      "title_kr": "와레나 말고 일반 아레나에서도 바리오방덱", "title_en": "Bari–Oven in regular Arena, not just Rumble?", "relevance": 3, "mode": "both",
+      "summary_en": "Poster (Bari 7★, Oven 8★) finds Bari–Oven underwhelming at the top. Replies: one player in a #1 fight uses Rye in Rumble and Bari–Oven in regular Arena and says his rival's Rye can't hold once he hit Bari 10★; from Bari 5★ up regular Arena favours Bari; 'it's gear difference'; good for grinding weaker teams quickly.",
+      "teams": [],
+      "counters": [{"team": "Rye one-carry deck", "beaten_by": "Bari–Oven deck with Bari 10★", "mode": "arena", "why": "", "conditions": "top-of-server spec"}],
+      "builds": [], "mechanics": ["Several users run different decks per mode: Rye in Rumble (where +30% DR helps it survive), Bari–Oven in regular Arena."],
+      "rules": [], "results": [], "disagreements": ["Bari 7★/Oven 8★ is 'meh' at the top vs 'from 5★ Bari it's the performance pick in regular Arena'."],
+      "quotes": [{"kr": "바리 5성 이상부터는 일레나가 오히려 성능픽임", "en": "From Bari 5★ up it's actually the performance pick in regular Arena."}, {"kr": "바리10성찍고와서 호밀덱으로 누워도 절대못버티더라", "en": "Once he got Bari to 10★, I couldn't hold with the Rye deck at all."}]
+    },
+    {
+      "source": "dc", "id": "75878", "url": "https://m.dcinside.com/board/projectcc/75878", "date": "2026-09-26",
+      "title_kr": "바리덱 뭘로 파훼해야되냐", "title_en": "How do I break the Bari deck?", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster wins under half against Bari with Rye. Replies: nothing in the Rye deck beats a 10★ Bari deck; the answer is not to attack it.",
+      "teams": [], "counters": [{"team": "Rye one-carry deck", "beaten_by": "Bari deck with Bari 10★", "mode": "arena", "why": "", "conditions": "10★ Bari"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [{"team": "Rye vs Bari", "win_rate": "under 50% (poster)", "usage": "", "power": "", "note": ""}],
+      "disagreements": [], "quotes": [{"kr": "바리10성덱은 호밀덱으로 뭘해도안되더라", "en": "Nothing works against a 10★ Bari deck with Rye."}]
+    },
+    {
+      "source": "dc", "id": "75761", "url": "https://m.dcinside.com/board/projectcc/75761", "date": "2026-09-25",
+      "title_kr": "동투력일때 호밀덱이 썰리면 문제있는거지?", "title_en": "If Rye loses at equal power, is something wrong?", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster runs the 74483 deck at 19-20M and gets sliced by Bari at equal power before heals and shields go off. Replies: Bari and Oven star levels matter; gear difference; the Rye deck needs 6 skill-haste lines; 'whoever loses Milk or Bari first loses'; with Seeker added Rye's position suffers.",
+      "teams": [], "counters": [{"team": "Rye one-carry deck", "beaten_by": "Bari–Oven deck", "mode": "arena", "why": "One-shot before heals/shields", "conditions": "equal power 19-20M; high Bari/Oven stars"}],
+      "builds": [{"cookie": "Rye deck", "mode": "arena", "sugar_runes": "", "gear": "6 Skill Haste lines mandatory", "why": "Heals and shields must come out before the dive."}],
+      "mechanics": ["Whoever loses their Milk or their Bari first loses the fight."],
+      "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "우유랑 바리 중에 먼저 뒤지는 쪽이 짐", "en": "Whichever of Milk or Bari dies first, that side loses."}]
+    },
+    {
+      "source": "dc", "id": "76736", "url": "https://m.dcinside.com/board/projectcc/76736", "date": "2026-09-27",
+      "title_kr": "게이들아 호밀덱 카운터는 뭐임?", "title_en": "What counters the Rye deck?", "relevance": 2, "mode": "arena",
+      "summary_en": "A Bari deck user can't pass 2,000 points because of Rye decks. Answers: run Rye yourself (wins if the opponent hasn't set merc perks), or a much stronger Bari–Oven that one-shots Rye.",
+      "teams": [], "counters": [{"team": "Rye one-carry deck", "beaten_by": "Rye one-carry deck with merc perks set, or a much stronger Bari–Oven", "mode": "arena", "why": "Mirror is decided by perks; Bari needs enough burst to kill before sustain.", "conditions": ""}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "같은 호밀덱 가자 상대 복지 세팅 안했으면 이김", "en": "Go Rye too; you win if the opponent didn't set perks."}]
+    },
+    {
+      "source": "dc", "id": "76717", "url": "https://m.dcinside.com/board/projectcc/76717", "date": "2026-09-27",
+      "title_kr": "올 10성 바리덱 방어성공", "title_en": "Defended against an all-10★ Bari deck", "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "Rye deck defended against an anonymous 2000+ trophy attacker with an all-10★ Bari–Oven–Cherry Cola team (Macaron, Rye, Pinot, Cheesecake, Pomegranate, Bari, Milk, Hound, Ion, Cherry Cola, Herb, Moon Rabbit; pets Hot Doggie, King Choco Drop, Holy Baby Drop). The 익명의 도전자 card and +175 medals mark this as Rumble Arena.",
+      "teams": [], "counters": [{"team": "All-10★ Bari–Oven–Cherry Cola", "beaten_by": "Rye deck (defense)", "mode": "rumble_arena", "why": "unknown to the poster", "conditions": "single log"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76368", "url": "https://m.dcinside.com/board/projectcc/76368", "date": "2026-09-27",
+      "title_kr": "우리섭 1등 바리8성 찍고 맨날 내 호황한테 개쳐맞더니", "title_en": "Our #1 got Bari 8★ and still lost to my Rye", "relevance": 2, "mode": "arena",
+      "summary_en": "Server #1 with Bari 8★ kept losing to the poster's Rye deck and switched to Rye. Poster plans to beat him with Crepe–Espresso.",
+      "teams": [], "counters": [
+        {"team": "Bari deck with Bari 8★", "beaten_by": "Rye one-carry deck", "mode": "arena", "why": "", "conditions": "similar power (the two keep pace)"},
+        {"team": "Rye one-carry deck", "beaten_by": "Crepe–Espresso deck", "mode": "arena", "why": "", "conditions": "poster's plan"}
+      ],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "바리덱구린듯 ㄹㅇ양학용", "en": "Bari deck seems bad; really for farming weaker players."}]
+    },
+    {
+      "source": "dc", "id": "75681", "url": "https://m.dcinside.com/board/projectcc/75681", "date": "2026-09-25",
+      "title_kr": "아레나 유행 반영 빠르네 ㅋㅋㅋ", "title_en": "Arena copies trends fast", "relevance": 3, "mode": "arena",
+      "summary_en": "After the poster hit people with the Rye one-carry deck, they copied it within a meal. Reply lays out a rock-paper-scissors: counter Rye with Crepe + Espresso (Crepe counters Moon Rabbit's 떡방아 by knocking back, Espresso's black hole launches Rye from behind); if they copy Crepe–Espresso, counter with Bari. Another server's top ranks run Bari–Oven–Cherry Cola.",
+      "teams": [],
+      "counters": [
+        {"team": "Rye one-carry deck", "beaten_by": "Rye deck with Crepe + Espresso added (딸크에소)", "mode": "arena", "why": "Crepe's knockback pushes Moon Rabbit away before its debuff; Espresso's black hole launches Rye.", "conditions": ""},
+        {"team": "Crepe–Espresso deck", "beaten_by": "Bari deck", "mode": "arena", "why": "Bari's aura gives chargers push/lift immunity, cancelling Crepe and Espresso's displacement.", "conditions": ""}
+      ],
+      "builds": [], "mechanics": ["Knockback/launch interrupts: Crepe pushes, Espresso's black hole launches; Bari's aura gives push and lift immunity to charge-type allies."],
+      "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "딸크가 떡방아 카운터치고 에소가 뒤에서 호밀 날려버림", "en": "Crepe counters the rice-cake pound and Espresso launches Rye from behind."}, {"kr": "서버 애들이 딸크에소마저 따라하면 바리덱으로 카운터쳐서 조져라", "en": "If they copy Crepe–Espresso too, counter with the Bari deck."}]
+    },
+    {
+      "source": "dc", "id": "75724", "url": "https://m.dcinside.com/board/projectcc/75724", "date": "2026-09-25",
+      "title_kr": "바리덱을 잡는 호밀덱을 잡는 카운터덱 있을까..?", "title_en": "A counter to the Rye deck that beats Bari?", "relevance": 2, "mode": "arena",
+      "summary_en": "Answer: Crepe–Espresso beats the Rye deck but is weak to charge decks.",
+      "teams": [], "counters": [{"team": "Rye one-carry deck", "beaten_by": "Crepe–Espresso deck", "mode": "arena", "why": "", "conditions": "Crepe–Espresso loses to charge decks"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "딸크에소덱이 호밀덱 개패는데 돌격덱한테 쥐약임", "en": "Crepe–Espresso beats Rye badly but is poison against charge decks."}]
+    },
+    {
+      "source": "dc", "id": "75726", "url": "https://m.dcinside.com/board/projectcc/75726", "date": "2026-09-25",
+      "title_kr": "딸크에소가 호밀 잡는다고?", "title_en": "Crepe–Espresso beats Rye?", "relevance": 2, "mode": "arena",
+      "summary_en": "Doubt: one Moon Rabbit ground-slam cripples Espresso. Answer: if Crepe pushes first, the debuff doesn't land; put Moon Rabbit in the Crepe–Espresso deck too, push in, avoid Milk being debuffed, and the buffs roll.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Moon Rabbit's debuff can be avoided by knocking it back before it transforms."],
+      "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "첫타에 디버프 안걸리고 딸크가 밀면 디버프 안들어옴", "en": "If Crepe pushes before the first hit, the debuff doesn't land."}]
+    },
+    {
+      "source": "dc", "id": "75738", "url": "https://m.dcinside.com/board/projectcc/75738", "date": "2026-09-25",
+      "title_kr": "아니 그래서 딸크에소덱이 뭔데", "title_en": "So what is the Crepe–Espresso deck?", "relevance": 2, "mode": "arena",
+      "summary_en": "Only a guessed lineup: Milk, Pomegranate, Macaron, Crepe, Espresso, Moon Rabbit, Ion, Donut, Herb, Hound, then Rye and Cheesecake.",
+      "teams": [{"name": "Crepe–Espresso deck (guessed by a commenter)", "mode": "arena",
+        "cookies": [
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "?", "role": "healer", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "?", "role": "support", "note": ""},
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "support", "note": ""},
+          {"kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "tank, knockback", "note": ""},
+          {"kr": "에스프레소맛 쿠키", "en": "Espresso Cookie", "level": "?", "stars": "?", "position": "?", "role": "DPS, black-hole launch", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "?", "role": "tank/debuff", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "?", "role": "tank", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "?", "stars": "?", "position": "?", "role": "polymorph", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "?", "role": "healer", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "?", "role": "tank", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "DPS", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "?", "role": "support", "note": ""}
+        ], "pets": [], "perks": "", "formation": "unknown", "why": "", "unorthodox": []}],
+      "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": [], "quotes": [{"kr": "걍 대충봐도 우유 석류 마카롱 딸크 에소 달토끼 이온 도넛 허브 들개 들어가겠구만 나머지 2개는 모르겠고", "en": "At a glance: Milk, Pomegranate, Macaron, Crepe, Espresso, Moon Rabbit, Ion, Donut, Herb, Hound; not sure about the last two."}]
+    },
+    {
+      "source": "dc", "id": "75000", "url": "https://m.dcinside.com/board/projectcc/75000", "date": "2026-09-24",
+      "title_kr": "아레나 바리덱 유행하는데 카운터없음?", "title_en": "Bari deck is trending; any counter?", "relevance": 2, "mode": "arena",
+      "summary_en": "Answers: Rye one-carry deck. One suggests a Rapid Fire deck with Donut King and Adventurer so Oven can't do anything. One says Bari decks are oddly weak to 3-tank Rye.",
+      "teams": [], "counters": [{"team": "Bari deck", "beaten_by": "3-tank Rye one-carry deck", "mode": "arena", "why": "", "conditions": ""}, {"team": "Bari deck", "beaten_by": "Rapid Fire deck with Donut King + Adventurer (theory)", "mode": "arena", "why": "Oven neutralised", "conditions": "theory"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "3탱 호밀덱한테 약하더라 신기하게", "en": "Strangely weak to the 3-tank Rye deck."}]
+    },
+    {
+      "source": "dc", "id": "74846", "url": "https://m.dcinside.com/board/projectcc/74846", "date": "2026-09-24",
+      "title_kr": "정보에있는호밀덱 바리 체콜에 쥐약이네", "title_en": "The info-tab Rye deck is weak to Bari + Cherry Cola", "relevance": 2, "mode": "arena",
+      "summary_en": "The info-tab Rye deck can't beat Bari + Cherry Cola. Replies: Grapevine instead of Seeker is stronger; in regular Arena few use Bari so it's fine.",
+      "teams": [], "counters": [{"team": "Rye one-carry deck", "beaten_by": "Bari + Cherry Cola deck", "mode": "arena", "why": "", "conditions": ""}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "74972", "url": "https://m.dcinside.com/board/projectcc/74972", "date": "2026-09-24",
+      "title_kr": "아레나 호밀덱 카운터 뭐임?", "title_en": "What counters the Arena Rye deck?", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster loses to Rye even with Bari and Moon Rabbit. Answers: a stronger Rye; a deck with Cherry Cola, Bari and Oven wins when it deletes Rye in one go.",
+      "teams": [], "counters": [{"team": "Rye one-carry deck", "beaten_by": "Cherry Cola + Bari + Oven deck", "mode": "arena", "why": "Rye dies in one burst; the deck has no other damage.", "conditions": "burst must kill Rye at once"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "체리바리 오방까지 넣은덱 쓸때 호밀 한번에 날아가면 지더라", "en": "Against a Cherry Cola–Bari–Oven deck, it loses when Rye goes down in one hit."}]
+    },
+    {
+      "source": "dc", "id": "75993", "url": "https://m.dcinside.com/board/projectcc/75993", "date": "2026-09-26",
+      "title_kr": "다시붙어봣다", "title_en": "Fought it again", "relevance": 3, "mode": "arena",
+      "summary_en": "Poster's 17-18M Rye one-carry deck lost 3 of 3 to the chain/skeleton deck of 75982 despite 1,100 accuracy. Analysis in comments: Rye's first skill jumps toward the lone Schwarzwälder top-left and wastes itself there; the opponent's many sub-dealers (Schwarzwälder, Dr. Bones) take Rye's supports apart; a textbook counter.",
+      "teams": [], "counters": [{"team": "Rye one-carry deck", "beaten_by": "Chain deck with Vampire, Twizzly, Dr. Bones, Schwarzwälder (75982)", "mode": "arena", "why": "Schwarzwälder soaks Rye's first skill; many sub-dealers kill Rye's supports; Rye is the only damage.", "conditions": "17-18M vs 17.59M, 3 losses of 3"}],
+      "builds": [], "mechanics": ["Rye's skill fires at the enemy it faces; an isolated decoy (here Schwarzwälder) can absorb its first volley.", "A one-carry deck is fragile to teams with spread damage."],
+      "rules": [], "results": [], "disagreements": ["Whether RES would help; whether accuracy was the problem (poster had 1,100)."],
+      "quotes": [{"kr": "찰스가 호밀스킬 혼자 다흡수하고쥭네", "en": "Schwarzwälder absorbs all of Rye's skill by himself and dies."}, {"kr": "그냥 딜이 호밀 원툴인데 쟤넨 서브딜이 많아서 파츠 먼저 분해당하고 지는 것 같음", "en": "Your damage is Rye alone; they have lots of sub-damage, so your parts get dismantled first."}]
+    },
+    {
+      "source": "dc", "id": "75982", "url": "https://m.dcinside.com/board/projectcc/75982", "date": "2026-09-26",
+      "title_kr": "이덱은 누가 발명햇냐", "title_en": "Who invented this deck?", "relevance": 3, "mode": "arena",
+      "summary_en": "Photo of the 17.59M defense deck that beat the poster: a Chain (연쇄) deck with Vampire, Twizzly Gummy, Dr. Bones, Schwarzwälder, Skating Queen (grants Chain synergy) and an evasion pet. Battle stats (75966): Vampire 1.78M, Pinot 979K, Twizzly 832K, Hound 620K, Ion 498K.",
+      "teams": [{"name": "Chain / 'skeleton' deck (연쇄덱, 해골덱)", "mode": "arena",
+        "cookies": [
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "top row 1", "role": "tank", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "top row 2 (captain)", "role": "healer", "note": ""},
+          {"kr": "찰스", "en": "Schwarzwälder", "level": "100", "stars": "?", "position": "top row 3", "role": "tank, jump + stun", "note": "decoy that eats Rye's first skill"},
+          {"kr": "뱀파이어맛 쿠키", "en": "Vampire Cookie", "level": "100", "stars": "?", "position": "top row 4", "role": "main DPS; bat form hits highest-ATK enemy and lowers its accuracy", "note": "top damage 1.78M"},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "top row 5", "role": "support", "note": ""},
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "support", "note": ""},
+          {"kr": "닥터 뼈다귀 쿠키", "en": "Dr. Bones Cookie", "level": "100", "stars": "?", "position": "bottom row 1", "role": "chain shock + stun, heal", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "90", "stars": "?", "position": "bottom row 2", "role": "tank", "note": ""},
+          {"kr": "트위즐젤리맛 쿠키", "en": "Twizzly Gummy Cookie", "level": "100", "stars": "?", "position": "bottom row 3", "role": "chain DPS", "note": ""},
+          {"kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "bottom row 4", "role": "grants Chain synergy + crit DMG", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "bottom row 5", "role": "support", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "bottom row 6", "role": "chain shadow shots, healing reduction", "note": "979K damage"}
+        ],
+        "pets": ["핫도그도그 ★20", "? (evasion-type pet per comments) ★20", "치즈뭉치 고양이 (Fluffy Cheese Cat, Chain pet) ★20"],
+        "perks": "", "formation": "as photographed on the 상대 방어팀 card; 17.59M", "why": "Chain synergy (Pinot, Vampire, Dr. Bones, Twizzly, Skating Queen) plus the Chain pet; several sub-dealers spread damage.", "unorthodox": ["Schwarzwälder and Dr. Bones in Arena"]}],
+      "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": ["Commenters guess it is an evasion deck; others say Vampire just worked well."], "quotes": [{"kr": "명중 1100인데도 그냥 개쳐발렷다", "en": "Got destroyed even with 1,100 accuracy."}]
+    },
+    {
+      "source": "dc", "id": "72977", "url": "https://m.dcinside.com/board/projectcc/72977", "date": "2026-09-23",
+      "title_kr": "회피덱으로 첫 그마2 등반 후 마무리", "title_en": "Reached Grand Master 2 with an evasion deck", "relevance": 3, "mode": "arena",
+      "summary_en": "Season 4 Arena: an 11.13M evasion deck (preset 아레나 회피) climbed from Elite Master 1 to Grand Master 2, finishing 9th overall; poster ~120th in total power, Bari and Seeker only 5★. Pets: Mango Toucan Lv20 (raw evasion under 1000 so Cheese Drop went back in on another build), Holy Baby Drop, Chargemellow (Crepe and Rye are Rapid Fire). Gear low row evasion+crit RES and evasion+skill haste; upper left Skill AMP, upper right Focus + Skill Haste. Loses to stage-gear decks with accuracy; works while the server doesn't know it.",
+      "teams": [{"name": "Evasion deck (회피덱)", "mode": "arena",
+        "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "100", "stars": "?", "position": "top row 2", "role": "polymorph", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "support", "note": ""},
+          {"kr": "뱀파이어맛 쿠키", "en": "Vampire Cookie", "level": "97", "stars": "?", "position": "top row 4", "role": "DPS + accuracy-down on highest-ATK enemy", "note": "2-3 evasion rune lines"},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "top row 5 (captain)", "role": "healer", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "top row 6", "role": "tank", "note": "2-3 evasion rune lines"},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "bottom row 1", "role": "DPS", "note": "slot for Seeker if owned"},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "bottom row 2", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "bottom row 3", "role": "support", "note": ""},
+          {"kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "bottom row 4", "role": "support (Volley)", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "bottom row 5", "role": "tank", "note": "2-3 evasion rune lines"},
+          {"kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "100", "stars": "?", "position": "bottom row 6", "role": "tank, knockback, Rapid Fire", "note": ""}
+        ],
+        "pets": ["망고부리새 (Mango Toucan, evasion rate) ★20", "갓난갓방울 ★20", "전지멜로우 ★19"], "perks": "",
+        "formation": "top: Macaron, Donut, Cheesecake, Vampire, Milk, Ion / bottom: Rye, Pinot Noir, Pomegranate, Lime, Hound, Crepe (11.13M)",
+        "why": "Opponents on arena gear have little accuracy, so evasion near 1000 makes them miss; Vampire lowers the top attacker's accuracy further.",
+        "unorthodox": ["Lime Cookie", "evasion gear instead of crit RES/DR"]}],
+      "counters": [{"team": "Evasion deck", "beaten_by": "stage-preset decks with accuracy lines", "mode": "arena", "why": "Accuracy cancels evasion", "conditions": ""}],
+      "builds": [{"cookie": "Evasion deck", "mode": "arena", "sugar_runes": "Ion, Hound, Vampire: 2-3 evasion lines", "gear": "upper left Skill AMP (+crit); upper right Focus + Skill Haste; lower row Evasion + crit RES and Evasion + Skill Haste; 6 Skill Haste lines required; plates left side +15, right side +12-13", "why": "Evasion ~1000 target; Focus for Vampire's accuracy-down and Donut's polymorph."}],
+      "mechanics": ["Raw evasion around 1000 needed; watch at 0.5x to see MISS."],
+      "rules": ["Grand Master 2 first promotion pays 6,000 diamonds; GM2 condition: 3,000 trophies and top 5 overall."],
+      "results": [{"team": "Evasion deck", "win_rate": "", "usage": "", "power": "11.13M", "note": "reached GM2, 9th overall, season 4 (ended ~2026-09-23)"}],
+      "disagreements": [], "quotes": [{"kr": "스테덱한테 털리는 약팔이가 맞긴한데", "en": "It is a gimmick that loses to stage decks, true."}, {"kr": "회피스가 6개는 필수같음", "en": "Six evasion/skill-haste pieces seem mandatory."}]
+    },
+    {
+      "source": "dc", "id": "69591", "url": "https://m.dcinside.com/board/projectcc/69591", "date": "2026-09-18",
+      "title_kr": "회피덱으로 그마 찍튀 성공", "title_en": "Touched Grand Master with an evasion deck", "relevance": 3, "mode": "arena",
+      "summary_en": "Same player, earlier: 9.69M evasion deck, same lineup as 72977 (Pinot Noir, Pomegranate, Lime, Hound, Crepe in the bottom row). Pets Mango Toucan 20, Holy Baby Drop 20, Hot Doggie 18. Picked targets under 10M, sometimes beats 11M, but loses to 7M decks with accuracy. Evasion runes only on Ion, Hound, Vampire (2-3 lines); gear evasion+crit RES and evasion+skill haste; upper right Focus + Skill Haste. Evasion ~1000 without max plates.",
+      "teams": [], "counters": [{"team": "Evasion deck", "beaten_by": "any deck with some accuracy gear", "mode": "arena", "why": "", "conditions": "even at 7M vs 9.69M"}],
+      "builds": [{"cookie": "뱀파이어맛 쿠키", "mode": "arena", "sugar_runes": "Skill Haste 1 line (aiming for 3), evasion", "gear": "", "why": "Focus on the upper right gear for Vampire's accuracy-down and Donut."}],
+      "mechanics": ["Evasion decks can beat higher-power opponents, which normal arena decks rarely do."],
+      "rules": ["GM3 first promotion pays 4,000 diamonds."], "results": [{"team": "Evasion deck", "win_rate": "", "usage": "", "power": "9.69M", "note": "reached GM3"}],
+      "disagreements": [], "quotes": [{"kr": "랭커 아레나 덱은 투력 이하는 확실히 잡아도 그 이상은 못잡는 느낌인데 회피덱은 그 이상을 잡을 때가 있다", "en": "Ranker decks reliably beat lower power but not higher; the evasion deck sometimes beats higher."}]
+    },
+    {
+      "source": "dc", "id": "74043", "url": "https://m.dcinside.com/board/projectcc/74043", "date": "2026-09-23",
+      "title_kr": "복숭아 넣은 회슝좍덱 써본 후기", "title_en": "Review: evasion (회슝좍) deck with Peach", "relevance": 3, "mode": "both",
+      "summary_en": "16.51M evasion deck built around Bari with Peach and Vampire, evasion ~900 in dungeon. Beat a 21.43M team (Rumble screen): Bari 3.54M, Cherry Cola 758K, Peach 312K. Against unprepared decks the power gap is meaningless; against stage-gear high-power defense or accuracy-built decks it struggles. Peach doesn't always go forward; if Vampire dies early it collapses.",
+      "teams": [{"name": "Bari evasion deck (회슝좍) with Peach", "mode": "both",
+        "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "top row 2", "role": "support", "note": ""},
+          {"kr": "뱀파이어맛 쿠키", "en": "Vampire Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "DPS/accuracy-down", "note": ""},
+          {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "100", "stars": "?", "position": "top row 4", "role": "charge DPS + aura", "note": "3.54M damage"},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "top row 5", "role": "healer", "note": ""},
+          {"kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "charge DPS", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "100", "stars": "?", "position": "bottom row 1", "role": "polymorph", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "bottom row 2", "role": "support", "note": ""},
+          {"kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "bottom row 3", "role": "support", "note": ""},
+          {"kr": "복숭아맛 쿠키", "en": "Peach Cookie", "level": "100", "stars": "?", "position": "bottom row 4", "role": "charge, gains evasion rate after dash (aggro sponge)", "note": "runes not yet built"},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "bottom row 5", "role": "tank", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "bottom row 6", "role": "tank/debuff", "note": ""}
+        ],
+        "pets": ["망고부리새 ★20", "달걀머리새 (Eggbeak, charge-type DR) ★20", "핫도그도그 ★20"], "perks": "",
+        "formation": "top: Macaron, Pinot Noir, Vampire, Bari, Milk, Cherry Cola / bottom: Donut, Pomegranate, Skating Queen, Peach, Ion, Moon Rabbit (16.51M)",
+        "why": "Bari's aura on Cherry Cola and Peach plus evasion stats; Eggbeak adds charge DR.", "unorthodox": ["Peach Cookie"]}],
+      "counters": [{"team": "Bari evasion deck", "beaten_by": "stage-gear high-power or accuracy-built decks", "mode": "arena", "why": "accuracy", "conditions": ""}],
+      "builds": [], "mechanics": [], "rules": [], "results": [{"team": "Bari evasion deck", "win_rate": "", "usage": "", "power": "16.51M", "note": "beat 21.43M"}],
+      "disagreements": [], "quotes": [{"kr": "상대가 회슝좍에 대비가 안된 덱이면 투력차이가 무의미한 수준", "en": "If the opponent isn't prepared for evasion, power gaps stop mattering."}]
+    },
+    {
+      "source": "dc", "id": "73879", "url": "https://m.dcinside.com/board/projectcc/73879", "date": "2026-09-23",
+      "title_kr": "사탄의 혈육 회슝좍", "title_en": "Satan's own evasion deck", "relevance": 2, "mode": "arena",
+      "summary_en": "Battle stats of a Bari 10★ evasion deck: Bari 1.60M, Cherry Cola 728K, Brightseeker 679K, Vampire 193K, Moon Rabbit, Donut, Pinot, Skating Queen; and Cherry Cola 1.93M / Bari 1.43M in another. All day of MISS.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [],
+      "results": [{"team": "Bari evasion deck (Bari 10★)", "win_rate": "", "usage": "", "power": "", "note": "Bari + Cherry Cola top damage"}],
+      "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75201", "url": "https://m.dcinside.com/board/projectcc/75201", "date": "2026-09-25",
+      "title_kr": "보급형 회슝좍 방어확률 꽤괜인듯", "title_en": "Budget evasion deck defends quite well", "relevance": 2, "mode": "arena",
+      "summary_en": "6.8M budget evasion defense on a small server, with a 10M defense success. Lineup: Macaron, Donut, Pomegranate, Milk, Ion, Herb, Rye, Pinot Noir, Vampire, Hound, Crepe, Moon Rabbit (the image shows Moon Rabbit). Pets Hot Doggie, Icy Birdie, Cheese Drop. Wishlist with 5★ Bari: Macaron, Bari, Vampire, Cherry Cola, Peach, Pomegranate, Milk, Ion, Herb, Pinot, Crepe, Moon Rabbit.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [{"team": "Budget evasion deck", "win_rate": "", "usage": "", "power": "6.8M", "note": "one defense vs 10M"}], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "73173", "url": "https://m.dcinside.com/board/projectcc/73173", "date": "2026-09-23",
+      "title_kr": "상대가 회피피감을 넣으면", "title_en": "If the opponent runs evasion + DR", "relevance": 2, "mode": "both",
+      "summary_en": "If defenders run evasion, attackers can switch to stage gear (with accuracy). It becomes rock-paper-scissors, but you can't see the opponent's gear before attacking. In Rumble names are hidden, so you can't remember who runs evasion.",
+      "teams": [], "counters": [{"team": "Evasion defense", "beaten_by": "attacking with the stage preset (accuracy)", "mode": "arena", "why": "", "conditions": "must know the defender is evasion; names visible in regular Arena, hidden in Rumble"}],
+      "builds": [], "mechanics": ["Opponent gear isn't visible before a fight; in regular Arena names are visible so you can remember evasion defenders."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "73569", "url": "https://m.dcinside.com/board/projectcc/73569", "date": "2026-09-23",
+      "title_kr": "떡토끼 10성 + 바리 3성으로 랭킹 1위상대로 퍼펙트승리", "title_en": "Moon Rabbit 10★ + Bari 3★: perfect win over rank #1", "relevance": 3, "mode": "arena",
+      "summary_en": "Launch-day report: server #1 (all cookies 10★) beaten flawlessly. Moon Rabbit 10★ (runes Focus, Skill Haste, HP, DR at SR+) hit the enemy Milk with its ATK-down and crit-rate-down, crippling Milk's buff and Seeker's drones; 10★ Cherry Cola and Bari tore the 10★ Milk apart. Gear: the usual Skill Haste/Skill AMP/evasion arena set. Pets Eggbeak, a tank-evasion pet (+18%: Breadog), Holy Baby Drop. Passion Pay had lowered the enemy Milk's HP.",
+      "teams": [{"name": "Moon Rabbit 10★ + Bari + Cherry Cola", "mode": "arena", "cookies": [
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "10", "position": "?", "role": "tank/debuff on enemy Milk", "note": "runes Focus, Skill Haste, HP, DR"},
+          {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "?", "stars": "3", "position": "?", "role": "charge DPS + aura", "note": ""},
+          {"kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "?", "stars": "10", "position": "?", "role": "charge DPS", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "?", "role": "healer", "note": "healed through Bari-buffed damage"}
+        ], "pets": ["달걀머리새 (Eggbeak)", "식빵아지 (Breadog, tank evasion rate; poster says 18%)", "갓난갓방울"], "perks": "", "formation": "not shown", "why": "Moon Rabbit's debuff lands on the enemy Milk and ruins its ATK buff; Bari-wrapped chargers dive the Milk.", "unorthodox": []}],
+      "counters": [{"team": "All-10★ Seeker/Milk deck (server #1)", "beaten_by": "Moon Rabbit 10★ + Bari 3★ + Cherry Cola 10★", "mode": "arena", "why": "Moon Rabbit ATK/crit-down on Milk; dive kills Milk; Passion Pay had cut Milk's HP by 20%.", "conditions": "single fight on launch day; a reply says play 30 games before concluding"}],
+      "builds": [{"cookie": "감감술래 놀이 달토끼맛 쿠키", "mode": "arena", "sugar_runes": "Focus, Skill Haste, HP, DR (SR or better)", "gear": "", "why": "Land the debuff (Focus) quickly (Skill Haste) and survive."}],
+      "mechanics": ["Passion Pay (+20% ATK, -20% max HP on highest-ATK ally) usually lands on Milk, making Milk the soft target."],
+      "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "달토끼가 우유 공깍하면 우유 버프 개떡락하겠구나 달토끼 진짜 필수네", "en": "If Moon Rabbit cuts Milk's ATK, Milk's buff tanks; Moon Rabbit really is essential."}]
+    },
+    {
+      "source": "dc", "id": "73113", "url": "https://m.dcinside.com/board/projectcc/73113", "date": "2026-09-23",
+      "title_kr": "달토끼, 바리공주 스킬계수", "title_en": "Moon Rabbit and Princess Bari skill coefficients (datamine)", "relevance": 3, "mode": "both",
+      "summary_en": "Datamined (rough) values: Bari 9★ grants 40% DR; Moon Rabbit 9★ ATK -50%, crit reduction 130%, radius ~4.2. The poster says it's a quick read. Commenters conclude crit damage stats are now nearly worthless and Arena will be ruled by 9★ Bari.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Bari 9★ aura: 40% DR to self and charge-type allies (datamine, unverified).", "Moon Rabbit 9★: ATK -50%, crit -130%, radius ~4.2 (datamine, unverified)."],
+      "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "바리공주 9성 : 피감 40% 달토끼 9성 : 공감 50% 치명감소 130% 범위 4.2?", "en": "Bari 9★: DR 40%. Moon Rabbit 9★: ATK -50%, crit -130%, radius 4.2?"}]
+    },
+    {
+      "source": "dc", "id": "72449", "url": "https://m.dcinside.com/board/projectcc/72449", "date": "2026-09-22",
+      "title_kr": "바리공주는 계수 까봐야 안다고 하는 이유가", "title_en": "Why Bari's value depends on her coefficients", "relevance": 2, "mode": "both",
+      "summary_en": "Pre-release analysis: Bari's aura also deals periodic damage around each wrapped charger; a leak says it scales on the buffed cookie's ATK, not Bari's. Her dash is slow and wrecks formations.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Bari's aura deals periodic area damage around every charge-type ally it wraps; per leak the damage uses the wrapped cookie's ATK. 76065 repeats this."],
+      "rules": [], "results": [], "disagreements": ["Whether the aura damage uses Bari's ATK or the wrapped cookie's ATK."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75636", "url": "https://m.dcinside.com/board/projectcc/75636", "date": "2026-09-25",
+      "title_kr": "바리 슈가룬 뭐줌?", "title_en": "What sugar runes for Bari?", "relevance": 2, "mode": "both",
+      "summary_en": "Advice: Skill Haste + DR; about 45 skill haste keeps the aura up permanently. Skill AMP doesn't raise the DR buff but may raise aura damage; alternatively ATK so Bari catches Pomegranate's beam.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "바리공주맛 쿠키", "mode": "both", "sugar_runes": "Skill Haste + DR; ~45 Skill Haste for permanent aura uptime (alt: ATK to catch Pomegranate)", "gear": "", "why": "Aura uptime; Skill AMP doesn't scale the DR part."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": ["Skill AMP vs Skill Haste+DR vs ATK on Bari."], "quotes": [{"kr": "스가 45 맞춰야 대충 항시유지됨", "en": "You need about 45 Skill Haste to keep it up permanently."}]
+    },
+    {
+      "source": "dc", "id": "76389", "url": "https://m.dcinside.com/board/projectcc/76389", "date": "2026-09-27",
+      "title_kr": "뭔짓해도 호밀덱 못이기겠는데", "title_en": "Can't beat the Rye deck no matter what", "relevance": 2, "mode": "arena",
+      "summary_en": "Oven Wanderer rune sheet with HP-amp lines and two DR lines. Replies: all ATK% may be fine because Bari's aura damage scales on the buffed cookie's ATK; the Oven deck loses if it doesn't kill at the start, so give damage stats; stacking HP beyond 1-2 lines is worse than DR.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "오븐방랑자 쿠키", "mode": "arena", "sugar_runes": "damage lines (ATK%/Skill AMP) rather than HP amp; 1-2 HP lines max, DR better beyond that", "gear": "", "why": "Bari aura damage scales on Oven's ATK; the deck must kill in the opening."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "올공증 나쁘지 않을수도. 바리버프가 대상자에 공격력비례라", "en": "All ATK% might be fine, since Bari's buff scales with the target's ATK."}]
+    },
+    {
+      "source": "dc", "id": "76298", "url": "https://m.dcinside.com/board/projectcc/76298", "date": "2026-09-26",
+      "title_kr": "달토끼 << 이새끼 생각보다 아레나 쓰레기임", "title_en": "Moon Rabbit is worse in Arena than expected", "relevance": 2, "mode": "arena",
+      "summary_en": "Claim: Moon Rabbit only debuffs the front line, and outside Bari decks there are no dealers there. Replies: it's mandatory insurance, without it Oven kills in 2s; strong spenders punch through it anyway.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Moon Rabbit's debuff hits enemies around it, i.e. the front line; per 75736 it rarely reaches Macaron's position."],
+      "rules": [], "results": [], "disagreements": ["Moon Rabbit is bad (front-line only) vs mandatory insurance against Oven."],
+      "quotes": [{"kr": "달토끼는 걍 필수 보험임 걔 없이 오방 만나면 2초컷 나옴", "en": "Moon Rabbit is mandatory insurance; without it Oven kills you in 2 seconds."}]
+    },
+    {
+      "source": "dc", "id": "76313", "url": "https://m.dcinside.com/board/projectcc/76313", "date": "2026-09-26",
+      "title_kr": "아레나 달토대신에 락스타 별로임?", "title_en": "Rockstar instead of Moon Rabbit?", "relevance": 1, "mode": "arena",
+      "summary_en": "8★+ Bari punches through anyway; answer: run both Moon Rabbit and Rockstar.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "흠 둘다 쓰는게 정배긴함", "en": "Using both is the standard."}]
+    },
+    {
+      "source": "dc", "id": "75736", "url": "https://m.dcinside.com/board/projectcc/75736", "date": "2026-09-25",
+      "title_kr": "아레나 치케투입+피노누아 있는데 허브 계륵아님?", "title_en": "With Cheesecake and Pinot Noir, is Herb dead weight?", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster's 12.92M 'bullet-cut' deck (Macaron, Oven, Cheesecake, Bari, Hound, Cherry Cola, Brightseeker, Pinot, Pomegranate, Milk, Ion, Moon Rabbit; pets King Choco Drop 20, Hot Doggie 19, Holy Baby 19) asks about replacing Herb with a back-line ranged dealer. Replies: without Herb, Milk can't self-heal and dies alone; running Milk + Herb + Ion is what stops the one-shot.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Milk can't heal itself; Herb is needed to keep Milk alive. Ion's shields ignore healing reduction."],
+      "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "우유 허브 이온 3개 돌리는게 한방에 안터지고 이기는데 허브빼면 터져뒤지드라", "en": "Running Milk, Herb and Ion together survives the burst and wins; without Herb it pops."}]
+    },
+    {
+      "source": "dc", "id": "75807", "url": "https://m.dcinside.com/board/projectcc/75807", "date": "2026-09-26",
+      "title_kr": "아레나 들개자리에 감감쓰면됨?", "title_en": "Moon Rabbit in Hound's slot?", "relevance": 2, "mode": "arena",
+      "summary_en": "Hound gives Range synergy, which aligns Macaron's march; Milky Way ruins Macaron's alignment and must go. Standard tank trio: Hound, Ion, Moon Rabbit.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Hound's Range synergy lines up Macaron's march; Milky Way monopolises/ruins Macaron's alignment (also 68046).", "Standard tank trio: Hound, Ion, Moon Rabbit."],
+      "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "들개는 범위 시너지라 마카롱 정렬맞추는게 의미가있음", "en": "Hound gives Range synergy, which matters for lining up Macaron."}]
+    },
+    {
+      "source": "dc", "id": "76330", "url": "https://m.dcinside.com/board/projectcc/76330", "date": "2026-09-26",
+      "title_kr": "아레나 들개 필수인가??", "title_en": "Is Hound mandatory in Arena?", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster loses without Hound. Reply: compare which direction Macaron's skill goes; without Hound it fires badly.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Without Hound, Macaron's skill goes in a bad direction."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75766", "url": "https://m.dcinside.com/board/projectcc/75766", "date": "2026-09-26",
+      "title_kr": "딱히 없는 것 같아서 메모해놓는 스테/아레나/토벌 장비 옵션 (조언요)", "title_en": "Gear substats for stage / Arena / Conquest", "relevance": 3, "mode": "arena",
+      "summary_en": "Gear guide (5 recommends). Arena: weapons Skill AMP + crit rate or crit DMG; armour DR+HP or DR+crit RES (DR+crit RES the norm); accessories Skill Haste + Skill AMP; specials Skill Haste + DR or crit RES. Top comment gives the Arena grid: upper-left Skill AMP+crit rate, upper-right Skill Haste+Skill AMP, lower-left crit RES+DR, lower-right Skill Haste+crit RES.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "all (arena gear preset)", "mode": "arena", "sugar_runes": "", "gear": "upper-left (weapons): Skill AMP + crit rate; upper-right (accessories): Skill Haste + Skill AMP; lower-left (armour): crit RES + DR; lower-right (special): Skill Haste + crit RES", "why": "Skill Haste on all six right-side pieces; crit RES and DR because Arena damage crits."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": ["Armour DR+HP vs DR+crit RES."], "quotes": [{"kr": "[아레나] 좌상단 : 스증치확 / 우상단 : 스가스증 / 좌하단 : 치저피감 / 우하단 : 스가치저", "en": "[Arena] upper-left Skill AMP + crit rate / upper-right Skill Haste + Skill AMP / lower-left crit RES + DR / lower-right Skill Haste + crit RES."}]
+    },
+    {
+      "source": "dc", "id": "76242", "url": "https://m.dcinside.com/board/projectcc/76242", "date": "2026-09-26",
+      "title_kr": "아레나는 무조건 스가임?", "title_en": "Is Skill Haste mandatory in Arena?", "relevance": 2, "mode": "arena",
+      "summary_en": "Choosing between an Eternal necklace with crit RES 25.43% / Focus +111 / Skill Haste +3.40 and one with crit RES 26.06% / crit rate 9.38% / Skill AMP 5.62%. Consensus: never drop Skill Haste; the six right-side pieces are all Skill Haste. Dissent: Bari decks drop skill haste; make a separate preset.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "general", "mode": "arena", "sugar_runes": "", "gear": "All 6 right-side pieces carry Skill Haste", "why": "Healing/shield cycles."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": ["Bari decks reportedly drop Skill Haste (dive decks care less about cycles)."],
+      "quotes": [{"kr": "ㅇㅇ오른쪽 6개무조건 스가", "en": "Yes, the right six are Skill Haste, no exceptions."}, {"kr": "바리 쓰면 스가 갖다버림", "en": "With Bari you throw Skill Haste away."}]
+    },
+    {
+      "source": "dc", "id": "76269", "url": "https://m.dcinside.com/board/projectcc/76269", "date": "2026-09-26",
+      "title_kr": "아레나 치확 치피 차이 유의미함?", "title_en": "Crit rate vs crit DMG in Arena?", "relevance": 2, "mode": "arena",
+      "summary_en": "Weapon choice: +21.39% crit rate / +8% Skill AMP vs +9.01% Skill AMP / +16.23% crit DMG. Answers split: take higher Skill AMP; crit rate always in Arena. One user claims crit rate over 100% overflows into stronger crits (official, up to 300%?) and crit RES cancels crit rate, so crit rate is the pick.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "general", "mode": "arena", "sugar_runes": "", "gear": "Weapon: crit rate over crit DMG (majority); some prefer highest Skill AMP", "why": "Crit RES reduces crit chance; crit DMG does nothing without crits."}],
+      "mechanics": ["Claim (low confidence): crit rate above 100% becomes 'strong crits', said to be official; crit RES subtracts from crit rate."],
+      "rules": [], "results": [], "disagreements": ["Crit rate vs Skill AMP priority."], "quotes": [{"kr": "치확=100%를 오버해서 강한치명타가터짐", "en": "Crit rate over 100% triggers strong crits."}]
+    },
+    {
+      "source": "dc", "id": "75569", "url": "https://m.dcinside.com/board/projectcc/75569", "date": "2026-09-25",
+      "title_kr": "아레나 치확치피 vs 치피스증", "title_en": "Crit rate+DMG vs crit DMG+Skill AMP", "relevance": 2, "mode": "arena",
+      "summary_en": "Nothing beats Skill AMP; crit rate+Skill AMP best; in Arena think about Moon Rabbit (crit rate reduction), so crit rate for Arena and crit DMG for Conquest.",
+      "teams": [], "counters": [], "builds": [{"cookie": "general", "mode": "arena", "sugar_runes": "", "gear": "Weapon: Skill AMP + crit rate", "why": "Moon Rabbit's crit reduction makes crit rate the constraint in Arena."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "아레나는 달토끼 생각해야지", "en": "In Arena you have to account for Moon Rabbit."}]
+    },
+    {
+      "source": "dc", "id": "76474", "url": "https://m.dcinside.com/board/projectcc/76474", "date": "2026-09-27",
+      "title_kr": "다들 아레나 프리셋에 치저 몇개 씀?", "title_en": "How many crit RES pieces in your Arena preset?", "relevance": 2, "mode": "arena",
+      "summary_en": "Of the six lower-row pieces: one says all 6 crit RES since people still run crit decks and Moon Rabbit can't reach back lines; a known Rye player uses 4.",
+      "teams": [], "counters": [], "builds": [{"cookie": "general", "mode": "arena", "sugar_runes": "", "gear": "4-6 crit RES pieces in the lower row", "why": "Most damage still crits; Moon Rabbit's crit-down doesn't reach back lines."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": ["4 vs 6 crit RES pieces."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "74327", "url": "https://m.dcinside.com/board/projectcc/74327", "date": "2026-09-24",
+      "title_kr": "아레나 치저보다 피감이 좋음?", "title_en": "DR better than crit RES in Arena?", "relevance": 2, "mode": "arena",
+      "summary_en": "In-battle Milk stat panels: poster's Milk crit RES 83.55% / DR 24.68% / Skill AMP 140% / Skill Haste 22; opponent's Milk (whom he keeps losing to) crit RES 60.83% / DR 38.37% / Skill AMP 145.5% / Skill Haste 20.4 / crit DMG 84.7%. Reply: DR.",
+      "teams": [], "counters": [],
+      "builds": [{"cookie": "바삭튼튼 소아과 의사 우유맛 쿠키", "mode": "arena", "sugar_runes": "", "gear": "Observed in battle: crit RES 60.83%, DR 38.37%, Skill AMP 145.50%, Skill Haste 20.4, crit DMG 84.70% (winning side, 5.83M team)", "why": "Past a point DR beats more crit RES."}],
+      "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "71166", "url": "https://m.dcinside.com/board/projectcc/71166", "date": "2026-09-20",
+      "title_kr": "지금 아레나 장비에 치저 하나도 없는데", "title_en": "No crit RES on my Arena gear", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster's arena set: weapons Skill AMP/crit DMG, armour DR/HP, top accessories Skill Haste/Skill AMP, lower accessories Skill Haste/DR. Replies: for Arena crit RES beats HP; one runs crit RES on everything except one DR piece. Commenters call the poster's set a Conquest set.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Crit RES is useless in Conquest but valuable in Arena; this is the main reason to keep separate Arena and Conquest presets."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75812", "url": "https://m.dcinside.com/board/projectcc/75812", "date": "2026-09-26",
+      "title_kr": "아레나 명중안챙겨도 할만하네", "title_en": "Arena is fine without accuracy", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster removed the one accuracy line and barely sees MISS; enemy evasion is around 650.",
+      "teams": [], "counters": [], "builds": [{"cookie": "general", "mode": "arena", "sugar_runes": "", "gear": "No accuracy needed", "why": "Typical enemy evasion ~650."}],
+      "mechanics": ["Typical Arena evasion is about 650 unless the defender runs an evasion build (~900-1000)."], "rules": [], "results": [], "disagreements": ["Evasion-deck posts (69591, 72977) show accuracy matters against them."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75253", "url": "https://m.dcinside.com/board/projectcc/75253", "date": "2026-09-25",
+      "title_kr": "아레나장비 스증도 중요하구나", "title_en": "Skill AMP matters on Arena gear", "relevance": 2, "mode": "arena",
+      "summary_en": "Poster won 10 of 10 against someone, dropped two Skill AMP lines for power, and immediately lost. Reply: Skill AMP is the top stat in this game because it also scales buffs.",
+      "teams": [], "counters": [], "builds": [{"cookie": "general", "mode": "arena", "sugar_runes": "", "gear": "keep Skill AMP", "why": "Skill AMP scales buffs as well as damage."}],
+      "mechanics": ["Skill AMP increases buff amounts too (per commenter)."], "rules": [], "results": [{"team": "", "win_rate": "10/10 before, loss after removing 2 Skill AMP lines", "usage": "", "power": "", "note": "anecdote"}], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75680", "url": "https://m.dcinside.com/board/projectcc/75680", "date": "2026-09-25",
+      "title_kr": "아레나 프리셋이 더 잘미네 ㅋㅋㅋㅋ", "title_en": "The Arena preset clears stages better", "relevance": 1, "mode": "arena",
+      "summary_en": "At stage 290 the arena preset (1G 900M, Skill AMP/Skill Haste) clears better than the stage preset (2G 100M, accuracy/focus). Many agree 6 Skill Haste beats accuracy/focus at the 35% power cut.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Arena presets show lower power because Skill Haste/crit RES lines add little displayed power; matchmaking and the displayed power understate arena-geared teams."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "72836", "url": "https://m.dcinside.com/board/projectcc/72836", "date": "2026-09-23",
+      "title_kr": "아레나 펫이나 딱히 바꿀건없나?", "title_en": "Anything to change in my Arena pets?", "relevance": 2, "mode": "arena",
+      "summary_en": "13.69M pre-Bari five-ranged deck (Wind Archer, Brightseeker, Donut, Cheesecake, Milk, Ion, Macaron, Rye, Pinot, Pomegranate, Hound, Crepe) with Hot Doggie, Holy Baby Drop, King Choco Drop. Advice: the Rapid Fire pet is good, try swapping it with Choco Drop; perks Passion Pay + DR; Passion Pay's -20% HP hurts in Arena so General Perks (+1% all) or HP 5% work; Rapid Promotion is poor in Arena because Milk warms up slowly.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Passion Pay's -20% max HP is felt in Arena.", "Rapid Promotion (+7% ATK to top-ATK ally) is weak in Arena: Milk warms up slowly."],
+      "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "아레나는 체력 20퍼 까이는게 은근 체감 커서 올2퍼나 체력 5퍼 끼면 될듯", "en": "Losing 20% HP is noticeable in Arena, so take the all-stat perk or HP 5%."}]
+    },
+    {
+      "source": "dc", "id": "72838", "url": "https://m.dcinside.com/board/projectcc/72838", "date": "2026-09-23",
+      "title_kr": "아레나 방어피감10 vs 열정페이 승진", "title_en": "Arena: DR 10 vs Passion Pay / Promotion", "relevance": 2, "mode": "arena",
+      "summary_en": "Answer: runs Ion, Crepe, Hound as three tanks with Armor Repair (DR 10), plus Passion Pay.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Armor Repair requires 3+ tank-type cookies."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76808", "url": "https://m.dcinside.com/board/projectcc/76808", "date": "2026-09-27",
+      "title_kr": "니네 아레나 복지 뭐쓰냐", "title_en": "Which Arena perks?", "relevance": 1, "mode": "arena",
+      "summary_en": "Options given: Passion Pay + DR 10% or Passion Pay + Rapid Promotion. One keeps DR 10% even in stages because of Arena (merc perks apply to both).",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Merc perks apply to defense too (72627 title asks; 76808 implies perks are account-wide, not per mode)."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75900", "url": "https://m.dcinside.com/board/projectcc/75900", "date": "2026-09-26",
+      "title_kr": "아레나 펫 뭐써??", "title_en": "Which Arena pets?", "relevance": 2, "mode": "arena",
+      "summary_en": "Holy Baby Drop, King Choco Drop, Hot Doggie, Icy Birdie are the usual picks.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [{"team": "pets", "win_rate": "", "usage": "갓방울, 초코왕방울, 핫도그, 얼음새 most used", "power": "", "note": ""}], "disagreements": [], "quotes": [{"kr": "갓방울 초코왕방울 핫도그 얼음새정도 쓰는편임", "en": "Usually Holy Baby Drop, King Choco Drop, Hot Doggie, Icy Birdie."}]
+    },
+    {
+      "source": "dc", "id": "70980", "url": "https://m.dcinside.com/board/projectcc/70980", "date": "2026-09-20",
+      "title_kr": "아레나덱 괜찮은 거 없나", "title_en": "Any good Arena deck?", "relevance": 2, "mode": "arena",
+      "summary_en": "Pre-Bari: poster notes you lose when Milk runs forward to heal. Reply shares a 5-ranged 'spear' deck: Princess(?)/바궁 (Wind Archer), Macaron, Seeker, Rye, Donut, Milky Way, Pinot, Cheesecake, Pomegranate, Espresso, Milk, Hound; pets Holy Baby Drop, Hot Doggie, Icy Birdie (or King Choco); perks Passion Pay + All Ammo Provided (5 ranged). Pomegranate buff to Espresso and Wind Archer. Milk goes front; you win by killing their Milk first or polymorphing it.",
+      "teams": [{"name": "Five-ranged 'spear' deck (5사격 죽창덱), pre-Bari", "mode": "arena", "cookies": [
+          {"kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "?", "stars": "?", "position": "?", "role": "DPS", "note": "written 바궁"},
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "support", "note": ""},
+          {"kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "?", "role": "DPS", "note": ""},
+          {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "DPS", "note": ""},
+          {"kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "?", "stars": "?", "position": "?", "role": "polymorph", "note": ""},
+          {"kr": "밀키웨이맛 쿠키", "en": "Milky Way Cookie", "level": "?", "stars": "?", "position": "?", "role": "DPS", "note": "written 메소 (unclear)"},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "?", "role": "support", "note": ""},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "?", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "?", "role": "support", "note": ""},
+          {"kr": "에스프레소맛 쿠키", "en": "Espresso Cookie", "level": "?", "stars": "?", "position": "?", "role": "DPS", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "front line", "role": "healer", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "?", "role": "tank", "note": ""}
+        ], "pets": ["갓난갓방울", "핫도그도그", "얼음과자새 (or 근엄한 초코왕방울)"], "perks": "열정페이 + 탄약비 전액 지원 (All Ammo Provided)", "formation": "not shown", "why": "Kill or polymorph the enemy Milk before yours dies.", "unorthodox": ["'메소' is ambiguous (Milky Way per context)"]}],
+      "counters": [], "builds": [], "mechanics": ["Milk running forward to heal and dying loses the fight."], "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "내 우유가 터지기 전에 상대 우유를 터트리거나 도넛빔으로 ㅄ 만들면 이겨서 괜찮음", "en": "You win if you pop their Milk or polymorph it with Donut before yours pops."}]
+    },
+    {
+      "source": "dc", "id": "67269", "url": "https://m.dcinside.com/board/projectcc/67269", "date": "2026-09-14",
+      "title_kr": "호황 지리노", "title_en": "Rye (호황) is insane", "relevance": 2, "mode": "arena",
+      "summary_en": "Early Rye one-carry wins across a 3-4M power gap: Rye 2.47M damage vs an opponent with Rye, Wind Archer, Milky Way, Crepe, Seeker. Poster's lineup included Ion Lv97, Macaron, Hound, Dark Choco, Pinot, Donut, Grapevine. 'Arena is Rye's best these days'; ATK rune on Rye for the straw.",
+      "teams": [], "counters": [{"team": "Multi-ranged deck (Rye, Wind Archer, Milky Way, Seeker)", "beaten_by": "Rye one-carry deck", "mode": "arena", "why": "", "conditions": "3-4M power deficit"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [{"team": "Rye one-carry", "win_rate": "", "usage": "", "power": "", "note": "Rye 2,466,300 damage"}], "disagreements": [], "quotes": [{"kr": "3~4m차이 씹어먹노", "en": "Chews through a 3-4M gap."}]
+    },
+    {
+      "source": "dc", "id": "74285", "url": "https://m.dcinside.com/board/projectcc/74285", "date": "2026-09-24",
+      "title_kr": "아레나 오방덱 좋긴하다", "title_en": "The Arena Oven deck is good", "relevance": 2, "mode": "arena",
+      "summary_en": "6.14M Bari–Oven deck with Bari 1★ beats older decks at up to double power. Formation top: Macaron, Pinot Noir, Pomegranate, Milk, Ion, Herb; bottom: Oven Wanderer, Cheesecake, Bari, Hound, Cherry Cola, Moon Rabbit. Pets Holy Baby Drop 20, Hot Doggie 17, Icy Birdie 18. Oven runes Skill AMP, ATK%, DR for now.",
+      "teams": [{"name": "Bari–Oven–Cherry Cola deck (budget)", "mode": "arena", "cookies": [
+          {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+          {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "top row 2", "role": "support", "note": ""},
+          {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "support", "note": ""},
+          {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "top row 4 (captain)", "role": "healer", "note": ""},
+          {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "top row 5", "role": "tank", "note": ""},
+          {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "healer", "note": ""},
+          {"kr": "오븐방랑자 쿠키", "en": "Oven Wanderer Cookie", "level": "100", "stars": "?", "position": "bottom row 1", "role": "charge DPS", "note": "runes Skill AMP / ATK% / DR"},
+          {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "99", "stars": "?", "position": "bottom row 2", "role": "support", "note": ""},
+          {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "100", "stars": "1", "position": "bottom row 3", "role": "charge + aura", "note": ""},
+          {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "bottom row 4", "role": "tank", "note": ""},
+          {"kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "99", "stars": "?", "position": "bottom row 5", "role": "charge DPS", "note": ""},
+          {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "99", "stars": "?", "position": "bottom row 6", "role": "tank/debuff", "note": ""}
+        ], "pets": ["갓난갓방울 ★20", "핫도그도그 ★17", "얼음과자새 ★18"], "perks": "", "formation": "6.14M", "why": "", "unorthodox": ["Bari at 1★"]}],
+      "counters": [{"team": "pre-Bari decks (five-ranged etc.)", "beaten_by": "Bari–Oven–Cherry Cola deck", "mode": "arena", "why": "", "conditions": "even at half the power, launch week"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "73497", "url": "https://m.dcinside.com/board/projectcc/73497", "date": "2026-09-23",
+      "title_kr": "바리오방덱 참고만 ㄱㄱ", "title_en": "Bari–Oven deck, for reference", "relevance": 2, "mode": "arena",
+      "summary_en": "Regular Arena season 5 win, 14.2M vs 15.17M: Bari 2.09M, Oven 1.93M, Crepe 655K, Pinot 183K. Lineup: Macaron, Pinot, Pomegranate, Bari, Ion, Herb / Oven, Cheesecake, Donut?, Milk, Crepe, Moon Rabbit (from the bottom bar). The opponent was a Milky Way/Wind Archer/Seeker ranged deck.",
+      "teams": [], "counters": [{"team": "Ranged deck (Milky Way, Wind Archer, Brightseeker, Donut)", "beaten_by": "Bari–Oven deck with Crepe", "mode": "arena", "why": "", "conditions": "14.2M vs 15.17M"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [{"team": "Bari–Oven + Crepe", "win_rate": "", "usage": "", "power": "14.2M", "note": "Bari 2,092,527, Oven 1,933,764"}], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76100", "url": "https://m.dcinside.com/board/projectcc/76100", "date": "2026-09-26",
+      "title_kr": "일반 아레나 깔개들은 방덱 열어놓는게 서로 좋다", "title_en": "Low-ranked players: leave your defense open", "relevance": 2, "mode": "arena",
+      "summary_en": "Deliberately weak defense (850K: five cookies incl. Lv.1s) while attacking with a 5.96M team; 16th overall at Elite Master 1 (2,405 points). A loss on defense costs at most -5, a revenge win gives back more; weaker players climbing past you become revenge targets. Top-3 on the server at 3,007/2,804/2,739.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Losing a defense to a lower player costs up to -5 points; the attacker gains +15 to +25; hitting a higher player back via revenge gives more than the loss."],
+      "rules": ["Elite Master 1 → promotion condition 3,000 trophies and top 30 overall; promotion pays 4,000 diamonds.", "Defense log has a 'revenge' (복수) button to attack whoever hit you."],
+      "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "70973", "url": "https://m.dcinside.com/board/projectcc/70973", "date": "2026-09-20",
+      "title_kr": "우리 섭 1등이 비겁 상대할 때 오방 좋다는데", "title_en": "Our #1 says Oven is good (vs Cowardly boss) and in Arena", "relevance": 1, "mode": "arena",
+      "summary_en": "Server #1 put Oven Wanderer in his Arena deck to pull Espresso's skill away. Mostly about the Cowardly Cookie boss.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Claim: Oven dives in and draws enemy skills such as Espresso's (aggro sponge)."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "67619", "url": "https://m.dcinside.com/board/projectcc/67619", "date": "2026-09-15",
+      "title_kr": "만년서버2등ㅂㅅㅅㄲ인 저의 아레나 덱에 조언부탁드립니다", "title_en": "Perpetual #2: advice on my Arena deck", "relevance": 2, "mode": "arena",
+      "summary_en": "8.3M five-ranged deck with Milky Way. Advice: Milky Way only belongs in a five-ranged deck; drop Herb and add Espresso; drop Milky Way for Oven, which draws Wind Archer's ultimate (nearest enemy) and Donut's polymorph (highest HP) if it has the most HP (claim); without merc level 4, Milky Way and Ion aren't worth it, Cheesecake and Crepe are better.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Claim (low confidence): Wind Archer's ultimate targets the nearest enemy; Donut's polymorph targets the highest-HP enemy, so a high-HP Oven can soak both."],
+      "rules": [], "results": [], "disagreements": ["Oven decoy theory is dismissed by another commenter as an 'Oven addict'."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "68046", "url": "https://m.dcinside.com/board/projectcc/68046", "date": "2026-09-15",
+      "title_kr": "나만 쓰는 아레나 덱", "title_en": "My unique Arena deck", "relevance": 1, "mode": "arena",
+      "summary_en": "8.51M attack team with Lemon, Rye and Wind Archer as dealers (Lemon gets Pomegranate's beam via Projectile Speed synergy), Skating Queen, Milky Way, Pinot, Pomegranate, Milk, Cheesecake, Donut, Macaron, Hound. Pets Holy Baby, Hot Doggie, Icy Birdie. Reply: Milky Way hogs Macaron.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Pomegranate grants Projectile Speed synergy; Lemon (Projectile Speed) locks onto Pomegranate's beam."], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "69421", "url": "https://m.dcinside.com/board/projectcc/69421", "date": "2026-09-17",
+      "title_kr": "TSSR 안쓰는 아레나덱 이거 어떰?", "title_en": "An Arena deck with no TSSR", "relevance": 2, "mode": "arena",
+      "summary_en": "8.55M no-TSSR deck (Macaron, Donut, Cheesecake, Grapevine, Milk, Crepe / Rye, Pinot, Pomegranate, Espresso, Hound, Herb); pets Holy Baby 20, Icy Birdie 18, Chargemellow 16. 12-hour defense log is almost all wins against Wind Archer/Macaron/Seeker/Rye decks; normal win rate 50-60%; GM3 to Master 1. Rye and Espresso need 5★; Skill Haste 3.4 on six lines; ATK order Milk–Espresso–Macaron–Rye.",
+      "teams": [], "counters": [], "builds": [{"cookie": "deck", "mode": "arena", "sugar_runes": "", "gear": "6 lines of Skill Haste 3.4", "why": ""}], "mechanics": [],
+      "rules": [], "results": [{"team": "No-TSSR Rye/Espresso deck", "win_rate": "50-60% defense (poster estimate)", "usage": "", "power": "8.55M", "note": "GM3-Master1"}], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "73838", "url": "https://m.dcinside.com/board/projectcc/73838", "date": "2026-09-23",
+      "title_kr": "아레나 장비는 무조건 닥 스증스가임?", "title_en": "Arena gear is always Skill AMP + Skill Haste?", "relevance": 1, "mode": "arena",
+      "summary_en": "Replies: crit DMG is good, crit rate less so, swap if the power gap is big; another says Arena is always 6 Skill Haste.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": ["Crit rate vs crit DMG again (see 76269, 75569)."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76095", "url": "https://m.dcinside.com/board/projectcc/76095", "date": "2026-09-26",
+      "title_kr": "명중집중 ㅈㄴ 중요한 것 같은데 왜 스캠이라는거임", "title_en": "Accuracy/focus seems important; why call it a scam?", "relevance": 1, "mode": "arena",
+      "summary_en": "Stage-focused; notes accuracy/focus are not effective Arena stats.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "아레나 유효옵이 아니기도하고", "en": "They're also not useful Arena stats."}]
+    },
+    {
+      "source": "dc", "id": "76534", "url": "https://m.dcinside.com/board/projectcc/76534", "date": "2026-09-27",
+      "title_kr": "지금 아레나 1티어덱이 머임?", "title_en": "What's the tier-1 Arena deck now?", "relevance": 2, "mode": "arena",
+      "summary_en": "Answer: the Bari deck and the Rye one-carry deck are the two tops.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [{"team": "Bari deck; Rye one-carry deck", "win_rate": "", "usage": "the two tops (one reply)", "power": "", "note": "2026-09-27"}], "disagreements": [], "quotes": [{"kr": "바리덱 호밀몰빵덱 투톱인거 같아요", "en": "Bari deck and Rye all-in deck are the two tops."}]
+    },
+    {
+      "source": "dc", "id": "76556", "url": "https://m.dcinside.com/board/projectcc/76556", "date": "2026-09-27",
+      "title_kr": "아레나 좀 재밌어졌네", "title_en": "Arena got more interesting", "relevance": 1, "mode": "arena",
+      "summary_en": "Arena moved from one tier-1 deck and raw power to matchups. Reply: not that much yet.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "73777", "url": "https://m.dcinside.com/board/projectcc/73777", "date": "2026-09-23",
+      "title_kr": "지금 아레나는 연타호밀덱이 1티어야?", "title_en": "Is the Rapid Fire Rye deck tier 1?", "relevance": 1, "mode": "arena",
+      "summary_en": "Reply: it's rock-paper-scissors, there is no tier 1.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{"kr": "가위바위보라 1티어 그런거없음", "en": "It's rock-paper-scissors; no tier 1."}]
+    },
+    {
+      "source": "dc", "id": "72014", "url": "https://m.dcinside.com/board/projectcc/72014", "date": "2026-09-22",
+      "title_kr": "아레나 딸크한테 공증주고 석류 첫턴에 받게 해본 사람 있음?", "title_en": "Anyone give Crepe ATK so it gets Pomegranate's first beam?", "relevance": 1, "mode": "arena",
+      "summary_en": "Idea: with the Rapid Fire pet and Pinot's synergy, Crepe's skill hits the front line for ~900%; beam it with Pomegranate and pair with Rye to melt the front on turn one. A reply says they've been losing to exactly this; Crepe needs move speed and skill haste.",
+      "teams": [], "counters": [], "builds": [{"cookie": "딸기크레페맛 쿠키", "mode": "arena", "sugar_runes": "ATK% (to take Pomegranate's beam), move speed 2 lines, Skill Haste", "gear": "", "why": "Front-line burst on the opening."}], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "76408", "url": "https://m.dcinside.com/board/projectcc/76408", "date": "2026-09-27",
+      "title_kr": "근데 호밀 스가 유효임?", "title_en": "Is Skill Haste useful on Rye?", "relevance": 1, "mode": "arena",
+      "summary_en": "Answer: yes.",
+      "teams": [], "counters": [], "builds": [{"cookie": "호밀맛 쿠키", "mode": "arena", "sugar_runes": "Skill Haste is effective", "gear": "", "why": ""}], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "74792", "url": "https://m.dcinside.com/board/projectcc/74792", "date": "2026-09-24",
+      "title_kr": "호밀이 좋긴좋네", "title_en": "Rye really is good", "relevance": 1, "mode": "arena",
+      "summary_en": "Removing Wind Archer and Seeker for a Rye single carry gives a much better win rate.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": [
+    {"kr": "호밀 원툴덱 / 호밀몰빵덱 / 호황", "en": "Rye one-carry deck (호황 = 'Rye emperor', nickname)", "kind": "term", "confidence": "high", "evidence": "dc:74483, dc:75910, dc:76368"},
+    {"kr": "바리오방(덱) / 바리오방체콜", "en": "Bari–Oven Wanderer (–Cherry Cola) dive deck", "kind": "term", "confidence": "high", "evidence": "dc:75598, dc:76853"},
+    {"kr": "딸크에소", "en": "Strawberry Crepe + Espresso counter deck", "kind": "term", "confidence": "high", "evidence": "dc:75681, dc:75724"},
+    {"kr": "회피덱 / 회슝좍", "en": "evasion deck (회슝좍 = mocking nickname for it)", "kind": "term", "confidence": "high", "evidence": "dc:72977, dc:74043"},
+    {"kr": "빨대", "en": "'straw': Pomegranate's Skill AMP beam, which feeds one ally", "kind": "term", "confidence": "high", "evidence": "dc:74746, dc:75982"},
+    {"kr": "공순", "en": "ATK order (ranking of allies by ATK, which decides who gets beams/perks)", "kind": "term", "confidence": "high", "evidence": "dc:71947, dc:69421"},
+    {"kr": "일레나 / 일반 아레나 / 서버 아레나", "en": "regular (per-server) Arena", "kind": "term", "confidence": "high", "evidence": "dc:75148, dc:76712"},
+    {"kr": "스준 (스킬준비)", "en": "Skill Ready stat (shortens time to first skill)", "kind": "stat", "confidence": "high", "evidence": "dc:74327 stat panel 스킬준비; dc:75148"},
+    {"kr": "떡토끼 / 달토 / 감감", "en": "Moon Rabbit Cookie's Pampered with Persimmon (shorthands)", "kind": "cookie", "confidence": "high", "evidence": "dc:73569, dc:76313, dc:75807"},
+    {"kr": "오방", "en": "Oven Wanderer Cookie", "kind": "cookie", "confidence": "high", "evidence": "dc:75148 (오방바리) with battle stats naming 오븐방랑자"},
+    {"kr": "바궁", "en": "Wind Archer Cookie (바람궁수)", "kind": "cookie", "confidence": "high", "evidence": "dc:71947, dc:70980"},
+    {"kr": "딸크", "en": "Strawberry Crepe Cookie", "kind": "cookie", "confidence": "high", "evidence": "dc:75148, dc:72014"},
+    {"kr": "에소", "en": "Espresso Cookie", "kind": "cookie", "confidence": "high", "evidence": "dc:75681"},
+    {"kr": "포넝 / 넝쿨 / 포도", "en": "Grapevine Cookie", "kind": "cookie", "confidence": "high", "evidence": "dc:76751, dc:76349"},
+    {"kr": "치케", "en": "Cheesecake Cookie", "kind": "cookie", "confidence": "high", "evidence": "dc:75072"},
+    {"kr": "체콜", "en": "Cherry Cola Cookie", "kind": "cookie", "confidence": "high", "evidence": "dc:75546"},
+    {"kr": "도넛 (아레나 문맥)", "en": "Space Doughnut's Royal Excellence (Donut King)", "kind": "cookie", "confidence": "high", "evidence": "battle stats dc:75148-10"},
+    {"kr": "갓방울", "en": "Holy Baby Drop (갓난갓방울)", "kind": "pet", "confidence": "high", "evidence": "dc:75598, dc:75900"},
+    {"kr": "왕방울 / 초코왕방울", "en": "Majestic King Choco Drop", "kind": "pet", "confidence": "high", "evidence": "dc:75072, dc:75900"},
+    {"kr": "연타펫 / 전지", "en": "Chargemellow (Rapid Fire pet)", "kind": "pet", "confidence": "high", "evidence": "dc:72977, dc:75072"},
+    {"kr": "얼음새 / 얼음조각새", "en": "Icy Birdie (얼음과자새, ally DR)", "kind": "pet", "confidence": "high", "evidence": "dc:75598, dc:75201"},
+    {"kr": "큰부리새", "en": "Mango Toucan (망고부리새, ally evasion rate)", "kind": "pet", "confidence": "low", "evidence": "dc:72977 text vs pet shown"},
+    {"kr": "4대보험 퇴직금별도", "en": "joke answer (Korean job-ad perks), not a game perk", "kind": "term", "confidence": "high", "evidence": "dc:76582, dc:76808"}
+  ]
+}
