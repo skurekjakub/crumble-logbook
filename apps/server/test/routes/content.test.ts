@@ -23,7 +23,10 @@ describe("content routes (mechanics)", () => {
 
   it("POST with an unknown source returns 422", async () => {
     const { app } = setup();
-    const res = await app.request("/api/mechanics", jsonBody({ ...validMechanic, sources: ["dc:missing"] }));
+    const res = await app.request(
+      "/api/mechanics",
+      jsonBody({ ...validMechanic, sources: ["dc:missing"] }),
+    );
     expect(res.status).toBe(422);
     const data = await readJson<unknown>(res);
     expect(data).toMatchObject({ error: "unknown_refs", kind: "sources", ids: ["dc:missing"] });
@@ -44,7 +47,10 @@ describe("content routes (mechanics)", () => {
   it("POST creates and returns 201 with sources", async () => {
     const { app, store } = setup();
     addSource(store, "dc:1");
-    const res = await app.request("/api/mechanics", jsonBody({ ...validMechanic, sources: ["dc:1"] }));
+    const res = await app.request(
+      "/api/mechanics",
+      jsonBody({ ...validMechanic, sources: ["dc:1"] }),
+    );
     expect(res.status).toBe(201);
     const data = await readJson<{ sources: string[] }>(res);
     expect(data.sources).toEqual(["dc:1"]);

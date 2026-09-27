@@ -68,8 +68,11 @@ export function createRuneBuildsRepo(db: Db): RuneBuildsRepo {
     list: () => db.select().from(runeBuilds).orderBy(asc(runeBuilds.id)).all(),
     get: (id) => db.select().from(runeBuilds).where(eq(runeBuilds.id, id)).get(),
     insert: (row) => db.insert(runeBuilds).values(row).returning().get(),
-    update: (id, patch) => db.update(runeBuilds).set(patch).where(eq(runeBuilds.id, id)).returning().get(),
-    remove: (id) => db.delete(runeBuilds).where(eq(runeBuilds.id, id)).returning({ id: runeBuilds.id }).all().length > 0,
+    update: (id, patch) =>
+      db.update(runeBuilds).set(patch).where(eq(runeBuilds.id, id)).returning().get(),
+    remove: (id) =>
+      db.delete(runeBuilds).where(eq(runeBuilds.id, id)).returning({ id: runeBuilds.id }).all()
+        .length > 0,
     decksFor: (ids) => {
       const result = new Map<number, string[]>();
       if (ids.length === 0) return result;
@@ -100,6 +103,10 @@ export function createRuneBuildsRepo(db: Db): RuneBuildsRepo {
       db.delete(runeBuilds).run();
     },
     allLinks: () =>
-      db.select().from(runeBuildDecks).orderBy(asc(runeBuildDecks.runeBuildId), asc(runeBuildDecks.deckId)).all(),
+      db
+        .select()
+        .from(runeBuildDecks)
+        .orderBy(asc(runeBuildDecks.runeBuildId), asc(runeBuildDecks.deckId))
+        .all(),
   };
 }

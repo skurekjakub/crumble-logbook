@@ -28,7 +28,11 @@ export function addSource(store: Store, id: string): void {
 
 /** A JSON POST/PATCH request init, for use with `app.request`. */
 export function jsonBody(body: unknown): RequestInit {
-  return { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) };
+  return {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(body),
+  };
 }
 
 /** Parses a response body as JSON with a caller-asserted shape, for test assertions only. */

@@ -119,7 +119,10 @@ export function createRuneBuildService(store: Store): RuneBuildService {
         const { decks, sources, ...values } = patch;
         if (sources !== undefined) assertSourcesExist(repos, sources);
         if (decks !== undefined) assertDecksExist(repos, decks);
-        const row = Object.keys(values).length > 0 ? repos.runeBuilds.update(id, values) : repos.runeBuilds.get(id);
+        const row =
+          Object.keys(values).length > 0
+            ? repos.runeBuilds.update(id, values)
+            : repos.runeBuilds.get(id);
         if (!row) throw new NotFoundError("rune_build", id);
         if (decks !== undefined) repos.runeBuilds.replaceDecks(id, decks);
         if (sources !== undefined) repos.citations.replace("rune_build", String(id), sources);

@@ -21,14 +21,23 @@ describe("enum columns", () => {
   it("source site: every member inserts and round-trips; a non-member is rejected", () => {
     const db = createTestDb();
     for (const site of SOURCE_SITE) {
-      const values = schemas.sourceInsert.parse({ id: `${site}:seed`, site, url: "https://example.com" });
+      const values = schemas.sourceInsert.parse({
+        id: `${site}:seed`,
+        site,
+        url: "https://example.com",
+      });
       db.insert(tables.sources).values(values).run();
-      const selected = db.select().from(tables.sources).where(eq(tables.sources.id, `${site}:seed`)).get();
+      const selected = db
+        .select()
+        .from(tables.sources)
+        .where(eq(tables.sources.id, `${site}:seed`))
+        .get();
       expect(selected?.site).toBe(site);
     }
-    expect(schemas.sourceInsert.safeParse({ id: "dc:1", site: "bogus", url: "https://example.com" }).success).toBe(
-      false,
-    );
+    expect(
+      schemas.sourceInsert.safeParse({ id: "dc:1", site: "bogus", url: "https://example.com" })
+        .success,
+    ).toBe(false);
   });
 
   it("record status: every member inserts and round-trips; a non-member is rejected", () => {
@@ -65,7 +74,11 @@ describe("enum columns", () => {
     for (const kind of GLOSSARY_KIND) {
       const values = schemas.glossaryInsert.parse({ kr: `kr-${kind}`, kind });
       db.insert(tables.glossary).values(values).run();
-      const selected = db.select().from(tables.glossary).where(eq(tables.glossary.kr, `kr-${kind}`)).get();
+      const selected = db
+        .select()
+        .from(tables.glossary)
+        .where(eq(tables.glossary.kr, `kr-${kind}`))
+        .get();
       expect(selected?.kind).toBe(kind);
     }
     expect(schemas.glossaryInsert.safeParse({ kr: "kr-bogus", kind: "bogus" }).success).toBe(false);
@@ -74,19 +87,38 @@ describe("enum columns", () => {
   it("deck status: every member inserts and round-trips; a non-member is rejected", () => {
     const db = createTestDb();
     for (const status of DECK_STATUS) {
-      const values = schemas.deckInsert.parse({ id: `deck-${status}`, position: 1, nameEn: "Deck", status });
+      const values = schemas.deckInsert.parse({
+        id: `deck-${status}`,
+        position: 1,
+        nameEn: "Deck",
+        status,
+      });
       db.insert(tables.decks).values(values).run();
-      const selected = db.select().from(tables.decks).where(eq(tables.decks.id, `deck-${status}`)).get();
+      const selected = db
+        .select()
+        .from(tables.decks)
+        .where(eq(tables.decks.id, `deck-${status}`))
+        .get();
       expect(selected?.status).toBe(status);
     }
     expect(
-      schemas.deckInsert.safeParse({ id: "deck-bogus", position: 1, nameEn: "Deck", status: "bogus" }).success,
+      schemas.deckInsert.safeParse({
+        id: "deck-bogus",
+        position: 1,
+        nameEn: "Deck",
+        status: "bogus",
+      }).success,
     ).toBe(false);
   });
 
   it("deck note kind: every member inserts and round-trips; a non-member is rejected", () => {
     const db = createTestDb();
-    const deck = schemas.deckInsert.parse({ id: "note-host", position: 1, nameEn: "Host", status: "meta" });
+    const deck = schemas.deckInsert.parse({
+      id: "note-host",
+      position: 1,
+      nameEn: "Host",
+      status: "meta",
+    });
     db.insert(tables.decks).values(deck).run();
     for (const kind of DECK_NOTE_KIND) {
       const values = schemas.deckNoteInsert.parse({
@@ -96,11 +128,20 @@ describe("enum columns", () => {
         text: `note-${kind}`,
       });
       db.insert(tables.deckNotes).values(values).run();
-      const selected = db.select().from(tables.deckNotes).where(eq(tables.deckNotes.text, `note-${kind}`)).get();
+      const selected = db
+        .select()
+        .from(tables.deckNotes)
+        .where(eq(tables.deckNotes.text, `note-${kind}`))
+        .get();
       expect(selected?.kind).toBe(kind);
     }
     expect(
-      schemas.deckNoteInsert.safeParse({ deckId: "note-host", position: 1, kind: "bogus", text: "x" }).success,
+      schemas.deckNoteInsert.safeParse({
+        deckId: "note-host",
+        position: 1,
+        kind: "bogus",
+        text: "x",
+      }).success,
     ).toBe(false);
   });
 
@@ -122,7 +163,8 @@ describe("enum columns", () => {
       expect(selected?.slot).toBe(slot);
     }
     expect(
-      schemas.gearRecInsert.safeParse({ slot: "bogus", substats: "s", context: "raid", why: "w" }).success,
+      schemas.gearRecInsert.safeParse({ slot: "bogus", substats: "s", context: "raid", why: "w" })
+        .success,
     ).toBe(false);
   });
 
@@ -144,13 +186,22 @@ describe("enum columns", () => {
       expect(selected?.context).toBe(context);
     }
     expect(
-      schemas.gearRecInsert.safeParse({ slot: "general", substats: "s", context: "bogus", why: "w" }).success,
+      schemas.gearRecInsert.safeParse({
+        slot: "general",
+        substats: "s",
+        context: "bogus",
+        why: "w",
+      }).success,
     ).toBe(false);
   });
 
   it("ranking board: every member inserts and round-trips; a non-member is rejected", () => {
     const db = createTestDb();
-    const source = schemas.sourceInsert.parse({ id: "dc:board-source", site: "dc", url: "https://example.com" });
+    const source = schemas.sourceInsert.parse({
+      id: "dc:board-source",
+      site: "dc",
+      url: "https://example.com",
+    });
     db.insert(tables.sources).values(source).run();
     for (const board of RANKING_BOARD) {
       const values = schemas.rankingInsert.parse({
@@ -184,7 +235,11 @@ describe("enum columns", () => {
   it("confidence: every member inserts and round-trips; a non-member is rejected", () => {
     const db = createTestDb();
     for (const confidence of CONFIDENCE) {
-      const values = schemas.mechanicInsert.parse({ title: `title-${confidence}`, body: "body", confidence });
+      const values = schemas.mechanicInsert.parse({
+        title: `title-${confidence}`,
+        body: "body",
+        confidence,
+      });
       db.insert(tables.mechanics).values(values).run();
       const selected = db
         .select()
@@ -193,7 +248,9 @@ describe("enum columns", () => {
         .get();
       expect(selected?.confidence).toBe(confidence);
     }
-    expect(schemas.mechanicInsert.safeParse({ title: "t", body: "b", confidence: "bogus" }).success).toBe(false);
+    expect(
+      schemas.mechanicInsert.safeParse({ title: "t", body: "b", confidence: "bogus" }).success,
+    ).toBe(false);
   });
 
   it("job status: every member inserts and round-trips; a non-member is rejected", () => {
@@ -206,18 +263,30 @@ describe("enum columns", () => {
         createdAt: "2026-01-01T00:00:00Z",
       });
       db.insert(tables.jobs).values(values).run();
-      const selected = db.select().from(tables.jobs).where(eq(tables.jobs.kind, `kind-${status}`)).get();
+      const selected = db
+        .select()
+        .from(tables.jobs)
+        .where(eq(tables.jobs.kind, `kind-${status}`))
+        .get();
       expect(selected?.status).toBe(status);
     }
     expect(
-      schemas.jobInsert.safeParse({ kind: "k", params: {}, status: "bogus", createdAt: "2026-01-01T00:00:00Z" })
-        .success,
+      schemas.jobInsert.safeParse({
+        kind: "k",
+        params: {},
+        status: "bogus",
+        createdAt: "2026-01-01T00:00:00Z",
+      }).success,
     ).toBe(false);
   });
 
   it("cited entity: every member inserts and round-trips; a non-member is rejected", () => {
     const db = createTestDb();
-    const source = schemas.sourceInsert.parse({ id: "dc:cite-source", site: "dc", url: "https://example.com" });
+    const source = schemas.sourceInsert.parse({
+      id: "dc:cite-source",
+      site: "dc",
+      url: "https://example.com",
+    });
     db.insert(tables.sources).values(source).run();
     for (const entity of CITED_ENTITY) {
       const values = schemas.citationInsert.parse({
@@ -234,19 +303,34 @@ describe("enum columns", () => {
       expect(selected?.entity).toBe(entity);
     }
     expect(
-      schemas.citationInsert.safeParse({ entity: "bogus", entityId: "x", sourceId: "dc:cite-source" }).success,
+      schemas.citationInsert.safeParse({
+        entity: "bogus",
+        entityId: "x",
+        sourceId: "dc:cite-source",
+      }).success,
     ).toBe(false);
   });
 
   it("sourceInsert rejects a malformed date, accepts a null date, and rejects a malformed id", () => {
     expect(
-      schemas.sourceInsert.safeParse({ id: "dc:1", site: "dc", url: "https://example.com", date: "?" }).success,
+      schemas.sourceInsert.safeParse({
+        id: "dc:1",
+        site: "dc",
+        url: "https://example.com",
+        date: "?",
+      }).success,
     ).toBe(false);
     expect(
-      schemas.sourceInsert.safeParse({ id: "dc:1", site: "dc", url: "https://example.com", date: null }).success,
+      schemas.sourceInsert.safeParse({
+        id: "dc:1",
+        site: "dc",
+        url: "https://example.com",
+        date: null,
+      }).success,
     ).toBe(true);
-    expect(schemas.sourceInsert.safeParse({ id: "76135", site: "dc", url: "https://example.com" }).success).toBe(
-      false,
-    );
+    expect(
+      schemas.sourceInsert.safeParse({ id: "76135", site: "dc", url: "https://example.com" })
+        .success,
+    ).toBe(false);
   });
 });

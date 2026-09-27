@@ -37,7 +37,9 @@ export const deckCookies = sqliteTable(
     stars: text("stars"),
     why: text("why").notNull(),
   },
-  (t) => [check("deck_cookies_level_or_rule", sql`${t.level} is not null or ${t.levelRule} is not null`)],
+  (t) => [
+    check("deck_cookies_level_or_rule", sql`${t.level} is not null or ${t.levelRule} is not null`),
+  ],
 );
 
 /** A pet slot within a deck's lineup, in placement order. */

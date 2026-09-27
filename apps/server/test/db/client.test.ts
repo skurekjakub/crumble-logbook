@@ -38,7 +38,10 @@ describe("openDb", () => {
   it("enforces foreign keys: a citation referencing an unknown source throws", () => {
     const db = openDb(":memory:");
     expect(() =>
-      db.insert(citations).values({ entity: "deck", entityId: "deck-a", sourceId: "dc:missing" }).run(),
+      db
+        .insert(citations)
+        .values({ entity: "deck", entityId: "deck-a", sourceId: "dc:missing" })
+        .run(),
     ).toThrow();
   });
 });

@@ -1,4 +1,10 @@
-import type { DeckCookieRow, DeckNoteKind, DeckNoteRow, DeckPetRow, DeckRow } from "@crumble/schema";
+import type {
+  DeckCookieRow,
+  DeckNoteKind,
+  DeckNoteRow,
+  DeckPetRow,
+  DeckRow,
+} from "@crumble/schema";
 import { deckCookies, deckNotes, deckPets, decks } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { asc, count, eq, inArray, max } from "drizzle-orm";
@@ -8,7 +14,10 @@ import type { Db } from "../db/client";
 export type DeckInsert = InferInsertModel<typeof decks>;
 
 /** A single cookie slot, without the `id`/`deckId`/`position` the repo assigns. */
-export type DeckCookieInsert = Omit<InferInsertModel<typeof deckCookies>, "id" | "deckId" | "position">;
+export type DeckCookieInsert = Omit<
+  InferInsertModel<typeof deckCookies>,
+  "id" | "deckId" | "position"
+>;
 
 /** A single note, without the `id`/`deckId`/`position` the repo assigns. */
 export type DeckNoteInsert = { kind: DeckNoteKind; text: string };
@@ -135,19 +144,29 @@ export function createDecksRepo(db: Db): DecksRepo {
   return {
     list: () => db.select().from(decks).orderBy(asc(decks.position), asc(decks.id)).all(),
     get: (id) => db.select().from(decks).where(eq(decks.id, id)).get(),
-    exists: (id) => db.select({ id: decks.id }).from(decks).where(eq(decks.id, id)).get() !== undefined,
+    exists: (id) =>
+      db.select({ id: decks.id }).from(decks).where(eq(decks.id, id)).get() !== undefined,
     missing: (ids) => {
       if (ids.length === 0) return [];
       const found = new Set(
-        db.select({ id: decks.id }).from(decks).where(inArray(decks.id, ids)).all().map((r) => r.id),
+        db
+          .select({ id: decks.id })
+          .from(decks)
+          .where(inArray(decks.id, ids))
+          .all()
+          .map((r) => r.id),
       );
       return ids.filter((id) => !found.has(id));
     },
     insert: (row) => db.insert(decks).values(row).returning().get(),
     update: (id, patch) => db.update(decks).set(patch).where(eq(decks.id, id)).returning().get(),
-    remove: (id) => db.delete(decks).where(eq(decks.id, id)).returning({ id: decks.id }).all().length > 0,
+    remove: (id) =>
+      db.delete(decks).where(eq(decks.id, id)).returning({ id: decks.id }).all().length > 0,
     nextPosition: () => {
-      const row = db.select({ max: max(decks.position) }).from(decks).get();
+      const row = db
+        .select({ max: max(decks.position) })
+        .from(decks)
+        .get();
       return row?.max == null ? 0 : row.max + 1;
     },
     cookies: (deckIds) => {
@@ -205,9 +224,16 @@ export function createDecksRepo(db: Db): DecksRepo {
     clear: () => {
       db.delete(decks).run();
     },
-    allCookies: () => db.select().from(deckCookies).orderBy(asc(deckCookies.deckId), asc(deckCookies.position)).all(),
-    allPets: () => db.select().from(deckPets).orderBy(asc(deckPets.deckId), asc(deckPets.position)).all(),
-    allNotes: () => db.select().from(deckNotes).orderBy(asc(deckNotes.deckId), asc(deckNotes.position)).all(),
+    allCookies: () =>
+      db
+        .select()
+        .from(deckCookies)
+        .orderBy(asc(deckCookies.deckId), asc(deckCookies.position))
+        .all(),
+    allPets: () =>
+      db.select().from(deckPets).orderBy(asc(deckPets.deckId), asc(deckPets.position)).all(),
+    allNotes: () =>
+      db.select().from(deckNotes).orderBy(asc(deckNotes.deckId), asc(deckNotes.position)).all(),
     insertRawCookies: (rows) => {
       if (rows.length > 0) db.insert(deckCookies).values(rows).run();
     },

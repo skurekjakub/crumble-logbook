@@ -27,7 +27,10 @@ export function validate<Target extends keyof ValidationTargets, Schema extends 
       return c.json(
         {
           error: "validation" as const,
-          issues: result.error.issues.map((issue) => ({ path: issue.path.map(String), message: issue.message })),
+          issues: result.error.issues.map((issue) => ({
+            path: issue.path.map(String),
+            message: issue.message,
+          })),
         },
         400,
       );

@@ -45,7 +45,10 @@ export const mechanicInput = mechanicInsert.omit({ id: true }).extend({ sources:
 export type MechanicInput = z.output<typeof mechanicInput>;
 
 /** Patch for updating a mechanic writeup. `sources`, if given, must be non-empty. */
-export const mechanicPatch = mechanicInsert.omit({ id: true }).partial().extend({ sources: sourceIds.optional() });
+export const mechanicPatch = mechanicInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
 /** Output of {@link mechanicPatch}. */
 export type MechanicPatch = z.output<typeof mechanicPatch>;
 
@@ -63,7 +66,9 @@ export const rngFactorPatch = rngFactorInsert
 export type RngFactorPatch = z.output<typeof rngFactorPatch>;
 
 /** Input for creating a timeline event, with the sources that support it. */
-export const timelineEventInput = timelineEventInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const timelineEventInput = timelineEventInsert
+  .omit({ id: true })
+  .extend({ sources: sourceIds });
 /** Output of {@link timelineEventInput}. */
 export type TimelineEventInput = z.output<typeof timelineEventInput>;
 
@@ -81,7 +86,10 @@ export const takeawayInput = takeawayInsert.omit({ id: true }).extend({ sources:
 export type TakeawayInput = z.output<typeof takeawayInput>;
 
 /** Patch for updating a takeaway. `sources`, if given, must be non-empty. */
-export const takeawayPatch = takeawayInsert.omit({ id: true }).partial().extend({ sources: sourceIds.optional() });
+export const takeawayPatch = takeawayInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
 /** Output of {@link takeawayPatch}. */
 export type TakeawayPatch = z.output<typeof takeawayPatch>;
 
@@ -91,12 +99,17 @@ export const gearRecInput = gearRecInsert.omit({ id: true }).extend({ sources: s
 export type GearRecInput = z.output<typeof gearRecInput>;
 
 /** Patch for updating a gear recommendation. `sources`, if given, must be non-empty. */
-export const gearRecPatch = gearRecInsert.omit({ id: true }).partial().extend({ sources: sourceIds.optional() });
+export const gearRecPatch = gearRecInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
 /** Output of {@link gearRecPatch}. */
 export type GearRecPatch = z.output<typeof gearRecPatch>;
 
 /** Input for creating a recommendation, with the sources that support it. */
-export const recommendationInput = recommendationInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const recommendationInput = recommendationInsert
+  .omit({ id: true })
+  .extend({ sources: sourceIds });
 /** Output of {@link recommendationInput}. */
 export type RecommendationInput = z.output<typeof recommendationInput>;
 
@@ -114,7 +127,10 @@ export const scoreInput = scoreInsert.omit({ id: true }).extend({ sources: sourc
 export type ScoreInput = z.output<typeof scoreInput>;
 
 /** Patch for updating a score. `sources`, if given, must be non-empty. */
-export const scorePatch = scoreInsert.omit({ id: true }).partial().extend({ sources: sourceIds.optional() });
+export const scorePatch = scoreInsert
+  .omit({ id: true })
+  .partial()
+  .extend({ sources: sourceIds.optional() });
 /** Output of {@link scorePatch}. */
 export type ScorePatch = z.output<typeof scorePatch>;
 

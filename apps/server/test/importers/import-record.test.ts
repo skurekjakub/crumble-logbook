@@ -25,17 +25,13 @@ function curated<T>(name: string): T {
 }
 
 type Cited = { sources: string[] };
-const decks =
-  curated<
-    Array<
-      Cited & {
-        cookies: unknown[];
-        pets?: string[];
-        substitutions?: string[];
-        unorthodox?: string[];
-      }
-    >
-  >("decks.json");
+type CuratedDeck = Cited & {
+  cookies: unknown[];
+  pets?: string[];
+  substitutions?: string[];
+  unorthodox?: string[];
+};
+const decks = curated<CuratedDeck[]>("decks.json");
 const runes = curated<Array<Cited & { decks: string[] }>>("runes.json");
 const gear = curated<Cited[]>("gear.json");
 const scores = curated<Cited[]>("scores.json");

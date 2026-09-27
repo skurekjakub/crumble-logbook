@@ -22,7 +22,13 @@ export const DECK_NOTE_KIND = ["substitution", "unorthodox"] as const;
 export type DeckNoteKind = (typeof DECK_NOTE_KIND)[number];
 
 /** Gear slot a recommendation applies to. */
-export const GEAR_SLOT = ["top_left", "top_right", "bottom_left", "bottom_right", "general"] as const;
+export const GEAR_SLOT = [
+  "top_left",
+  "top_right",
+  "bottom_left",
+  "bottom_right",
+  "general",
+] as const;
 export type GearSlot = (typeof GEAR_SLOT)[number];
 
 /** Game mode a gear recommendation is for. */

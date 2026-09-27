@@ -26,7 +26,12 @@ const baseDeck: DeckInput = {
 
 /** Adds the glossary entry that resolves `baseDeck`'s one cookie to English. */
 function seedGlossary(store: Store): void {
-  store.repos.glossary.upsert({ kr: "체리 쿠키", shorthand: [], en: "Cherry Cookie", kind: "cookie" });
+  store.repos.glossary.upsert({
+    kr: "체리 쿠키",
+    shorthand: [],
+    en: "Cherry Cookie",
+    kind: "cookie",
+  });
 }
 
 describe("createDeckService", () => {

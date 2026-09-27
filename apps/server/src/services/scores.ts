@@ -67,7 +67,10 @@ export function createScoreService(store: Store): ScoreService {
     },
   });
 
-  const withRatio = (row: Cited<ScoreRow>): ScoreView => ({ ...row, ratio: ratio(row.damageG, row.powerG) });
+  const withRatio = (row: Cited<ScoreRow>): ScoreView => ({
+    ...row,
+    ratio: ratio(row.damageG, row.powerG),
+  });
 
   return {
     list: (filter) =>

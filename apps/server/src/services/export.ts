@@ -185,7 +185,10 @@ function groupRuneBuildDecks(rows: RuneBuildDeckRow[]): Map<number, string[]> {
  *   violation from a row referencing an id that doesn't exist), after
  *   rolling back every write this call made
  */
-export function restoreSnapshot(store: Store, snapshot: Snapshot): Record<keyof Snapshot["tables"], number> {
+export function restoreSnapshot(
+  store: Store,
+  snapshot: Snapshot,
+): Record<keyof Snapshot["tables"], number> {
   if (snapshot.version !== 1) {
     throw new ConflictError(`unsupported snapshot version: ${String(snapshot.version)}`);
   }

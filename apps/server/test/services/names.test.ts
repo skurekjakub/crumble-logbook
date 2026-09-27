@@ -32,7 +32,10 @@ describe("createNameResolver", () => {
 
   it("resolves the English name case-insensitively, keeping kr as written", () => {
     const resolve = createNameResolver([skatingQueen]);
-    expect(resolve("skating queen cookie")).toEqual({ kr: "skating queen cookie", en: "Skating Queen Cookie" });
+    expect(resolve("skating queen cookie")).toEqual({
+      kr: "skating queen cookie",
+      en: "Skating Queen Cookie",
+    });
   });
 
   it("returns en null for a name that matches nothing", () => {

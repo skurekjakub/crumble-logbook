@@ -26,7 +26,11 @@ describe("deckCookieInput", () => {
   });
 
   it("rejects an empty why", () => {
-    const result = inputs.deckCookieInput.safeParse({ cookieKr: "브시커", levelRule: "max", why: "" });
+    const result = inputs.deckCookieInput.safeParse({
+      cookieKr: "브시커",
+      levelRule: "max",
+      why: "",
+    });
     expect(result.success).toBe(false);
   });
 });
@@ -84,7 +88,11 @@ describe("scoreInput", () => {
 
 describe("timelineEventInput", () => {
   it("rejects a non-ISO date", () => {
-    const result = inputs.timelineEventInput.safeParse({ date: "9/10", event: "x", sources: ["dc:1"] });
+    const result = inputs.timelineEventInput.safeParse({
+      date: "9/10",
+      event: "x",
+      sources: ["dc:1"],
+    });
     expect(result.success).toBe(false);
   });
 });

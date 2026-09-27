@@ -8,7 +8,12 @@ import { addSource, testStore } from "../helpers";
 
 /** Inserts a minimal deck row directly, for use as a rune build's linked deck in tests. */
 function addDeck(store: Store, id: string): void {
-  store.repos.decks.insert({ id, position: store.repos.decks.nextPosition(), nameEn: id, status: "meta" });
+  store.repos.decks.insert({
+    id,
+    position: store.repos.decks.nextPosition(),
+    nameEn: id,
+    status: "meta",
+  });
 }
 
 /** A valid rune build input citing `dc:1` and linked to the `cherry` deck. */
@@ -26,7 +31,12 @@ describe("createRuneBuildService", () => {
     const store = testStore();
     addSource(store, "dc:1");
     addDeck(store, "cherry");
-    store.repos.glossary.upsert({ kr: "체리 쿠키", shorthand: [], en: "Cherry Cookie", kind: "cookie" });
+    store.repos.glossary.upsert({
+      kr: "체리 쿠키",
+      shorthand: [],
+      en: "Cherry Cookie",
+      kind: "cookie",
+    });
     const svc = createRuneBuildService(store);
 
     const created = svc.create(baseInput);

@@ -13,7 +13,12 @@ function setup() {
 
 /** Inserts a minimal deck row directly, for use as a rune build's linked deck in tests. */
 function addDeck(store: Store, id: string): void {
-  store.repos.decks.insert({ id, position: store.repos.decks.nextPosition(), nameEn: id, status: "meta" });
+  store.repos.decks.insert({
+    id,
+    position: store.repos.decks.nextPosition(),
+    nameEn: id,
+    status: "meta",
+  });
 }
 
 const validRuneBuild = {

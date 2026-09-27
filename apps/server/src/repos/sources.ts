@@ -63,8 +63,10 @@ export function createSourcesRepo(db: Db): SourcesRepo {
     },
     get: (id) => db.select().from(sources).where(eq(sources.id, id)).get(),
     insert: (row) => db.insert(sources).values(row).returning().get(),
-    update: (id, patch) => db.update(sources).set(patch).where(eq(sources.id, id)).returning().get(),
-    remove: (id) => db.delete(sources).where(eq(sources.id, id)).returning({ id: sources.id }).all().length > 0,
+    update: (id, patch) =>
+      db.update(sources).set(patch).where(eq(sources.id, id)).returning().get(),
+    remove: (id) =>
+      db.delete(sources).where(eq(sources.id, id)).returning({ id: sources.id }).all().length > 0,
     missing: (ids) => {
       if (ids.length === 0) return [];
       const found = new Set(

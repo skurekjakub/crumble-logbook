@@ -14,7 +14,11 @@ describe("createTableRepo", () => {
 
   it("insert returns the row with its assigned id", () => {
     const repo = createTableRepo(db, mechanics);
-    const row = repo.insert({ title: "Boss enrage timer", body: "Enrages at 30s.", confidence: "high" });
+    const row = repo.insert({
+      title: "Boss enrage timer",
+      body: "Enrages at 30s.",
+      confidence: "high",
+    });
     expect(row.id).toBeTypeOf("number");
     expect(row).toMatchObject({ title: "Boss enrage timer", confidence: "high" });
   });
@@ -26,7 +30,11 @@ describe("createTableRepo", () => {
 
   it("remove returns true, then false for the same id", () => {
     const repo = createTableRepo(db, mechanics);
-    const row = repo.insert({ title: "Shield stacking", body: "Absorbs before defense.", confidence: "medium" });
+    const row = repo.insert({
+      title: "Shield stacking",
+      body: "Absorbs before defense.",
+      confidence: "medium",
+    });
     expect(repo.remove(row.id)).toBe(true);
     expect(repo.remove(row.id)).toBe(false);
   });

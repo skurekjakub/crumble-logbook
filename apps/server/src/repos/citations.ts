@@ -69,7 +69,9 @@ export function createCitationsRepo(db: Db): CitationsRepo {
       return result;
     },
     replace: (entity, entityId, sourceIds) => {
-      db.delete(citations).where(and(eq(citations.entity, entity), eq(citations.entityId, entityId))).run();
+      db.delete(citations)
+        .where(and(eq(citations.entity, entity), eq(citations.entityId, entityId)))
+        .run();
       const distinct = [...new Set(sourceIds)];
       if (distinct.length > 0) {
         db.insert(citations)
@@ -78,7 +80,9 @@ export function createCitationsRepo(db: Db): CitationsRepo {
       }
     },
     removeAll: (entity, entityId) => {
-      db.delete(citations).where(and(eq(citations.entity, entity), eq(citations.entityId, entityId))).run();
+      db.delete(citations)
+        .where(and(eq(citations.entity, entity), eq(citations.entityId, entityId)))
+        .run();
     },
     countForSource: (sourceId) =>
       db.select({ n: count() }).from(citations).where(eq(citations.sourceId, sourceId)).get()!.n,

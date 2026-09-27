@@ -84,18 +84,37 @@ function seedEverything(store: Store): SeedIds {
     sources: ["dc:1"],
   });
 
-  services.gearRecs.create({ slot: "top_left", substats: "ATK%/ATK%/ATK Flat", context: "raid", why: "dmg" }, [
-    "dc:1",
-  ]);
+  services.gearRecs.create(
+    { slot: "top_left", substats: "ATK%/ATK%/ATK Flat", context: "raid", why: "dmg" },
+    ["dc:1"],
+  );
 
   // A first score is created then deleted (and its citation with it), so
   // the surviving score's id and citation both skip past `1`.
   const droppedScore = services.scores.create(
-    { deckId: "cherry-onion", verified: false, date: null, season: null, player: null, note: null, damageG: 1, powerG: null },
+    {
+      deckId: "cherry-onion",
+      verified: false,
+      date: null,
+      season: null,
+      player: null,
+      note: null,
+      damageG: 1,
+      powerG: null,
+    },
     ["dc:1"],
   );
   const score = services.scores.create(
-    { deckId: "cherry-onion", verified: true, date: "2026-01-01", season: 1, player: "me", note: null, damageG: 50, powerG: 10 },
+    {
+      deckId: "cherry-onion",
+      verified: true,
+      date: "2026-01-01",
+      season: 1,
+      player: "me",
+      note: null,
+      damageG: 50,
+      powerG: 10,
+    },
     ["dc:1"],
   );
   services.scores.remove(droppedScore.id);
@@ -116,15 +135,19 @@ function seedEverything(store: Store): SeedIds {
   ]);
 
   // Same drop-then-keep pattern as `score`, for a second table.
-  const droppedMechanic = services.mechanics.create({ title: "dropped", body: "will be deleted", confidence: "low" }, [
-    "dc:1",
-  ]);
-  const mechanic = services.mechanics.create({ title: "Enrage timer", body: "Enrages at 30s.", confidence: "high" }, [
-    "dc:1",
-  ]);
+  const droppedMechanic = services.mechanics.create(
+    { title: "dropped", body: "will be deleted", confidence: "low" },
+    ["dc:1"],
+  );
+  const mechanic = services.mechanics.create(
+    { title: "Enrage timer", body: "Enrages at 30s.", confidence: "high" },
+    ["dc:1"],
+  );
   services.mechanics.remove(droppedMechanic.id);
 
-  services.rngFactors.create({ factor: "crit", effect: "varies damage", mitigation: null }, ["dc:1"]);
+  services.rngFactors.create({ factor: "crit", effect: "varies damage", mitigation: null }, [
+    "dc:1",
+  ]);
   services.timeline.create({ date: "2026-01-01", event: "patch" }, ["dc:1"]);
   services.takeaways.create({ position: 1, text: "do X", detail: null }, ["dc:1"]);
   services.recommendations.create({ summary: "buff X", changes: ["increase atk"] }, ["dc:1"]);
@@ -171,15 +194,17 @@ describe("exportSnapshot / restoreSnapshot", () => {
     // reassigned by a fresh autoincrement counter.
     const restoredMechanic = target.repos.mechanics.get(ids.mechanicId);
     expect(restoredMechanic?.title).toBe("Enrage timer");
-    expect(target.repos.citations.sourcesFor("mechanic", [String(ids.mechanicId)]).get(String(ids.mechanicId))).toEqual([
-      "dc:1",
-    ]);
+    expect(
+      target.repos.citations
+        .sourcesFor("mechanic", [String(ids.mechanicId)])
+        .get(String(ids.mechanicId)),
+    ).toEqual(["dc:1"]);
 
     const restoredScore = target.repos.scores.get(ids.scoreId);
     expect(restoredScore?.damageG).toBe(50);
-    expect(target.repos.citations.sourcesFor("score", [String(ids.scoreId)]).get(String(ids.scoreId))).toEqual([
-      "dc:1",
-    ]);
+    expect(
+      target.repos.citations.sourcesFor("score", [String(ids.scoreId)]).get(String(ids.scoreId)),
+    ).toEqual(["dc:1"]);
 
     const restoredCookie = target.repos.decks.allCookies().find((c) => c.id === ids.deckCookieId);
     expect(restoredCookie?.level).toBe("70");
@@ -231,10 +256,32 @@ describe("exportSnapshot / restoreSnapshot", () => {
     // Two rankings inserted rank-2-then-rank-1, so the rankings repo's
     // rank-ordered list is the reverse of insertion (id) order.
     source.repos.rankings.insertMany([
-      { season: 1, board: "players", rank: 2, name: "b", guild: null, valueG: 1, powerG: null, ref: null, capturedAt: "t", sourceId: "dc:1" },
+      {
+        season: 1,
+        board: "players",
+        rank: 2,
+        name: "b",
+        guild: null,
+        valueG: 1,
+        powerG: null,
+        ref: null,
+        capturedAt: "t",
+        sourceId: "dc:1",
+      },
     ]);
     source.repos.rankings.insertMany([
-      { season: 1, board: "players", rank: 1, name: "a", guild: null, valueG: 2, powerG: null, ref: null, capturedAt: "t", sourceId: "dc:1" },
+      {
+        season: 1,
+        board: "players",
+        rank: 1,
+        name: "a",
+        guild: null,
+        valueG: 2,
+        powerG: null,
+        ref: null,
+        capturedAt: "t",
+        sourceId: "dc:1",
+      },
     ]);
 
     const snapshot = exportSnapshot(source);

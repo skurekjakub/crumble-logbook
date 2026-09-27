@@ -20,5 +20,12 @@ export const rankings = sqliteTable(
       .notNull()
       .references(() => sources.id),
   },
-  (t) => [uniqueIndex("rankings_board_season_rank_captured_at_uq").on(t.board, t.season, t.rank, t.capturedAt)],
+  (t) => [
+    uniqueIndex("rankings_board_season_rank_captured_at_uq").on(
+      t.board,
+      t.season,
+      t.rank,
+      t.capturedAt,
+    ),
+  ],
 );

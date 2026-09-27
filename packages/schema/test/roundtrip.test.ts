@@ -102,7 +102,13 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
       tables.deckCookies,
       schemas.deckCookieInsert,
       schemas.deckCookieSelect,
-      { deckId: deck.id, position: 1, cookieKr: "불꽃정령맛", level: "60", why: "primary burn dealer" },
+      {
+        deckId: deck.id,
+        position: 1,
+        cookieKr: "불꽃정령맛",
+        level: "60",
+        why: "primary burn dealer",
+      },
       (dc) => eq(dc.deckId, deck.id),
     );
 
@@ -120,7 +126,12 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
       tables.deckNotes,
       schemas.deckNoteInsert,
       schemas.deckNoteSelect,
-      { deckId: deck.id, position: 1, kind: "substitution", text: "swap in a shielder if no cleanse" },
+      {
+        deckId: deck.id,
+        position: 1,
+        kind: "substitution",
+        text: "swap in a shielder if no cleanse",
+      },
       (dn) => eq(dn.deckId, deck.id),
     );
 
@@ -147,7 +158,12 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
       tables.gearRecs,
       schemas.gearRecInsert,
       schemas.gearRecSelect,
-      { slot: "top_left", substats: "crit damage / crit rate", context: "raid", why: "best burst substats" },
+      {
+        slot: "top_left",
+        substats: "crit damage / crit rate",
+        context: "raid",
+        why: "best burst substats",
+      },
       (gr) => eq(gr.substats, "crit damage / crit rate"),
     );
 
@@ -194,7 +210,11 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
       tables.mechanics,
       schemas.mechanicInsert,
       schemas.mechanicSelect,
-      { title: "Shield stacking", body: "Shields absorb before defense buffs apply.", confidence: "high" },
+      {
+        title: "Shield stacking",
+        body: "Shields absorb before defense buffs apply.",
+        confidence: "high",
+      },
       (m) => eq(m.title, "Shield stacking"),
     );
 
@@ -203,7 +223,11 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
       tables.rngFactors,
       schemas.rngFactorInsert,
       schemas.rngFactorSelect,
-      { factor: "crit chance variance", effect: "damage swings roughly ±10%", mitigation: "stack crit rate to the soft cap" },
+      {
+        factor: "crit chance variance",
+        effect: "damage swings roughly ±10%",
+        mitigation: "stack crit rate to the soft cap",
+      },
       (rf) => eq(rf.factor, "crit chance variance"),
     );
 
@@ -248,7 +272,12 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
       tables.jobs,
       schemas.jobInsert,
       schemas.jobSelect,
-      { kind: "import:record", params: { recordSlug: "gc-meta" }, status: "queued", createdAt: "2026-01-01T00:00:00Z" },
+      {
+        kind: "import:record",
+        params: { recordSlug: "gc-meta" },
+        status: "queued",
+        createdAt: "2026-01-01T00:00:00Z",
+      },
       (j) => eq(j.kind, "import:record"),
     );
   });
@@ -257,7 +286,9 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
 describe("deck_cookies_level_or_rule CHECK constraint", () => {
   it("rejects a deck cookie with neither level nor levelRule", () => {
     const db = createTestDb();
-    db.insert(tables.decks).values({ id: "check-deck", position: 1, nameEn: "Check Deck", status: "meta" }).run();
+    db.insert(tables.decks)
+      .values({ id: "check-deck", position: 1, nameEn: "Check Deck", status: "meta" })
+      .run();
     expect(() =>
       db
         .insert(tables.deckCookies)
@@ -268,10 +299,18 @@ describe("deck_cookies_level_or_rule CHECK constraint", () => {
 
   it("accepts a deck cookie with only levelRule set", () => {
     const db = createTestDb();
-    db.insert(tables.decks).values({ id: "check-deck-2", position: 1, nameEn: "Check Deck 2", status: "meta" }).run();
+    db.insert(tables.decks)
+      .values({ id: "check-deck-2", position: 1, nameEn: "Check Deck 2", status: "meta" })
+      .run();
     const inserted = db
       .insert(tables.deckCookies)
-      .values({ deckId: "check-deck-2", position: 1, cookieKr: "쿠키", levelRule: "max", why: "rule only" })
+      .values({
+        deckId: "check-deck-2",
+        position: 1,
+        cookieKr: "쿠키",
+        levelRule: "max",
+        why: "rule only",
+      })
       .returning()
       .get();
     expect(inserted.levelRule).toBe("max");

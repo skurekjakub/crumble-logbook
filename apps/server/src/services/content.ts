@@ -124,7 +124,8 @@ export function createContentService<Row extends { id: number }, Values>(
         const row = Object.keys(patch as object).length > 0 ? repo.update(id, patch) : repo.get(id);
         if (!row) throw new NotFoundError(entity, id);
         if (sources) repos.citations.replace(entity, String(row.id), sources);
-        const finalSources = sources ?? repos.citations.sourcesFor(entity, [String(row.id)]).get(String(row.id)) ?? [];
+        const finalSources =
+          sources ?? repos.citations.sourcesFor(entity, [String(row.id)]).get(String(row.id)) ?? [];
         return { ...row, sources: finalSources } as never;
       }) as Cited<Row>,
     remove: (id) =>

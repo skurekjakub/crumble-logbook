@@ -61,9 +61,19 @@ export function createTableRepo<T extends IdTable>(
   type Row = InferSelectModel<T>;
   const base = table as SQLiteTable;
   return {
-    list: () => db.select().from(base).orderBy(...orderBy).all() as Row[],
+    list: () =>
+      db
+        .select()
+        .from(base)
+        .orderBy(...orderBy)
+        .all() as Row[],
     get: (id) => db.select().from(base).where(eq(table.id, id)).get() as Row | undefined,
-    insert: (values) => db.insert(base).values(values as InferInsertModel<SQLiteTable>).returning().get() as Row,
+    insert: (values) =>
+      db
+        .insert(base)
+        .values(values as InferInsertModel<SQLiteTable>)
+        .returning()
+        .get() as Row,
     update: (id, patch) =>
       db
         .update(base)
@@ -71,7 +81,8 @@ export function createTableRepo<T extends IdTable>(
         .where(eq(table.id, id))
         .returning()
         .get() as Row | undefined,
-    remove: (id) => db.delete(base).where(eq(table.id, id)).returning({ id: table.id }).all().length > 0,
+    remove: (id) =>
+      db.delete(base).where(eq(table.id, id)).returning({ id: table.id }).all().length > 0,
     count: () => db.select({ n: count() }).from(base).get()!.n,
     clear: () => {
       db.delete(base).run();

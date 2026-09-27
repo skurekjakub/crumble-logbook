@@ -62,8 +62,8 @@ describe("createScoreService", () => {
     addSource(store, "dc:1");
     const svc = createScoreService(store);
 
-    expect(() => svc.create({ ...base, damageG: 1, powerG: 1, deckId: "missing-deck" }, ["dc:1"])).toThrow(
-      UnknownRefsError,
-    );
+    expect(() =>
+      svc.create({ ...base, damageG: 1, powerG: 1, deckId: "missing-deck" }, ["dc:1"]),
+    ).toThrow(UnknownRefsError);
   });
 });

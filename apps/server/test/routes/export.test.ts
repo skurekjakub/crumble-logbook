@@ -8,7 +8,12 @@ describe("export routes", () => {
   it("GET / returns the store's snapshot", async () => {
     const store = testStore();
     addSource(store, "dc:1");
-    store.repos.glossary.upsert({ kr: "체리 쿠키", shorthand: [], en: "Cherry Cookie", kind: "cookie" });
+    store.repos.glossary.upsert({
+      kr: "체리 쿠키",
+      shorthand: [],
+      en: "Cherry Cookie",
+      kind: "cookie",
+    });
     const app = createApp(createServices(store));
 
     const res = await app.request("/api/export");

@@ -16,7 +16,15 @@ function setup() {
   return { app, store };
 }
 
-const baseScore = { powerG: 1, deckId: null, verified: false, date: null, season: null, player: null, note: null };
+const baseScore = {
+  powerG: 1,
+  deckId: null,
+  verified: false,
+  date: null,
+  season: null,
+  player: null,
+  note: null,
+};
 
 describe("scores routes", () => {
   it("GET /api/scores includes ratio", async () => {
@@ -37,7 +45,10 @@ describe("scores routes", () => {
     const { app, store } = setup();
     addSource(store, "dc:1");
 
-    await app.request("/api/scores", jsonBody({ ...baseScore, damageG: 1, deckId: "cherry", sources: ["dc:1"] }));
+    await app.request(
+      "/api/scores",
+      jsonBody({ ...baseScore, damageG: 1, deckId: "cherry", sources: ["dc:1"] }),
+    );
     await app.request("/api/scores", jsonBody({ ...baseScore, damageG: 2, sources: ["dc:1"] }));
 
     const res = await app.request("/api/scores?deck=cherry");

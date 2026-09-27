@@ -115,10 +115,14 @@ export function createDeckService(store: Store): DeckService {
     // can't infer its type parameter through its own conditional return type.
     create: (input) =>
       store.transaction((repos) => {
-        if (repos.decks.exists(input.id)) throw new ConflictError(`deck already exists: ${input.id}`);
+        if (repos.decks.exists(input.id))
+          throw new ConflictError(`deck already exists: ${input.id}`);
         assertSourcesExist(repos, input.sources);
         const { cookies, pets, notes, sources, position, ...values } = input;
-        const row = repos.decks.insert({ ...values, position: position ?? repos.decks.nextPosition() });
+        const row = repos.decks.insert({
+          ...values,
+          position: position ?? repos.decks.nextPosition(),
+        });
         repos.decks.replaceCookies(row.id, cookies);
         repos.decks.replacePets(row.id, pets);
         repos.decks.replaceNotes(row.id, notes);
@@ -130,7 +134,8 @@ export function createDeckService(store: Store): DeckService {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);
         const { cookies, pets, notes, sources, ...values } = patch;
         if (sources !== undefined) assertSourcesExist(repos, sources);
-        const row = Object.keys(values).length > 0 ? repos.decks.update(id, values) : repos.decks.get(id);
+        const row =
+          Object.keys(values).length > 0 ? repos.decks.update(id, values) : repos.decks.get(id);
         if (!row) throw new NotFoundError("deck", id);
         if (cookies !== undefined) repos.decks.replaceCookies(id, cookies);
         if (pets !== undefined) repos.decks.replacePets(id, pets);
