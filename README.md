@@ -6,12 +6,15 @@ A local research tool for the Cookie Run: Crumble **Guild Conquest (길드 토�
 
 | Path | What it holds |
 |---|---|
-| `research/` | Research records. Each has a `README.md` (question, verdict, sources), a `research-trail.md`, a `STATE.md` for picking the work back up, and `evidence/` with verbatim captures (DCInside and Naver cafe posts, comments, images, crumb.gg rankings, YouTube frames). |
-| `legacy/dashboard/` | The original vanilla-JS dashboard. Its `data/*.json` is the seed the new app imports. Serve it with `python -m http.server` from that folder. |
-| `docs/superpowers/specs/` | The design for the React + Hono rewrite. |
+| `research/` | Research records. Each has a `README.md` (question, verdict, sources), a `research-trail.md`, a `STATE.md` for picking the work back up, and `evidence/` with verbatim captures (DCInside and Naver cafe posts, comments, images, crumb.gg rankings, YouTube frames). A record the app can load also has `import.json` (what to import and from where) and `curated/` (the curated dataset). |
+| `packages/schema` | Drizzle tables, migrations and every Zod schema, shared by the server and the web app. |
+| `apps/server` | The data API: Hono over SQLite, layered `routes → services → repos`, plus the record importer and the snapshot CLIs. |
+| `data/` | `crumble.db` (local, gitignored) and `snapshot.json`, the committed, diffable dump of the database. |
+| `legacy/dashboard/` | The original vanilla-JS dashboard, kept until the web app replaces it. Serve it with `python -m http.server` from that folder. |
+| `docs/superpowers/` | The design spec (`specs/`) and the implementation plans (`plans/`). |
 | `.claude/` | Claude Code skills, hooks and settings used to run the research. |
 
-The app itself (`packages/schema`, `apps/server`, `apps/web`) is being built from the spec in `docs/superpowers/specs/`.
+The web app (`apps/web`) is still to be built; see `docs/superpowers/plans/`.
 
 ## Development
 
@@ -22,6 +25,38 @@ pnpm install
 pnpm verify        # typecheck → prettier check → vitest
 pnpm vitest run packages/schema   # one package's tests
 ```
+
+### The database
+
+The server reads `data/crumble.db`, or the file `CRUMBLE_DB` names (an absolute path; the scripts run from `apps/server`). `PORT` overrides the default port, 8787.
+
+```sh
+pnpm import:record 001-guild-conquest-meta             # load a research record into an empty database
+pnpm import:record 001-guild-conquest-meta --replace   # clear the content tables and load it again
+pnpm dev:server                                        # serve the API on http://localhost:8787/api (watch mode)
+pnpm db:export                                         # write data/snapshot.json from the database
+pnpm db:restore [file]                                 # load a snapshot (default data/snapshot.json) into an empty database
+```
+
+`import:record` reads `research/<slug>/import.json`, validates every curated file and every reference before writing, and loads everything in one transaction. An error names the file and the row, and leaves the database untouched. It refuses a database that already has content unless you pass `--replace`, and it prints warnings, such as glossary names that more than one entry claims.
+
+After an import, the database is the source of truth. Commit `data/snapshot.json` after changing data, so the history stays diffable. To rebuild a database from it, point `CRUMBLE_DB` at a new file and run `pnpm db:restore`.
+
+### API
+
+Every resource is under `/api` and speaks JSON. Validation failures are 400 with every Zod issue and its path, unknown ids are 404, an unknown cited source or deck is 422 naming the ids, and conflicts (such as deleting a source that rows still cite) are 409. Content rows carry `sources`, the ids of the sources they cite; creating one needs at least one.
+
+| Resource | Verbs | Notes |
+|---|---|---|
+| `/api/decks` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | `:id` is a slug. Cookie and pet names come back with their glossary English (`en`, `null` if unresolved). |
+| `/api/rune-builds` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | `?deck=` filters by linked deck. |
+| `/api/scores` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Sorted by damage. `ratio` (배, damage ÷ power) is computed on read, never stored. `?deck=` filters. |
+| `/api/gear-recs`, `/api/mechanics`, `/api/rng-factors`, `/api/timeline`, `/api/takeaways`, `/api/recommendations` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Generic cited content. |
+| `/api/sources` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | `?site=dc\|nv\|web`. The site comes from the id prefix. |
+| `/api/glossary` | `GET`, `GET /resolve?name=`, `POST` | `?kind=` filters. `POST` upserts by `kr`. |
+| `/api/rankings` | `GET`, `GET /seasons` | `?season=` and `?board=players\|guilds\|power`. |
+| `/api/records` | `GET`, `GET /:slug` | Research records. |
+| `/api/export` | `GET` | The full snapshot, the same shape as `data/snapshot.json`. |
 
 **SQLite driver:** Node's built-in `node:sqlite`, through the `drizzle-orm/node-sqlite` driver in drizzle-orm 1.0 beta. It needs no native build, which matters on ARM64 Windows. Zod schemas come from `drizzle-orm/zod`, the 1.0 home of drizzle-zod. The fallbacks (`better-sqlite3`, `@libsql/client`) weren't needed. The spike, run 2026-09-27 on Node 24.18.0 ARM64, is kept as `packages/schema/test/driver.test.ts`.
 

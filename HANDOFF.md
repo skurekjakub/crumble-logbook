@@ -9,7 +9,7 @@ The user plays Cookie Run: Crumble on a whale account (every cookie built) and w
 There are two tracks:
 
 1. **Research.** Record `research/001-guild-conquest-meta/`: forum and ranking captures, subagent extractions, findings. Its data was already shown in a vanilla-JS dashboard, now in `legacy/dashboard/`.
-2. **App rewrite.** A pnpm workspace: `packages/schema` (Drizzle + drizzle-zod), `apps/server` (Hono + SQLite + scraper jobs + importers), `apps/web` (Vite + React + TS strict + TanStack Query/Router, Hono RPC client). The approved design is `docs/superpowers/specs/2026-09-27-crumble-logbook-design.md`. **No app code exists yet.**
+2. **App rewrite.** A pnpm workspace: `packages/schema` (Drizzle + drizzle-zod), `apps/server` (Hono + SQLite + scraper jobs + importers), `apps/web` (Vite + React + TS strict + TanStack Query/Router, Hono RPC client). The approved design is `docs/superpowers/specs/2026-09-27-crumble-logbook-design.md`. **Plan 1 (data core) is done:** `packages/schema` and `apps/server` exist, and record 001 loads into SQLite and is served at `/api`. `apps/web`, the scraper jobs and the ported Python scrapers don't exist yet.
 
 ## 2. Rules the user set (don't relitigate)
 
@@ -41,12 +41,20 @@ There are two tracks:
   - The vault copy is no longer the source of truth.
 - **Secret review of everything committed:** no credentials. Scan hits in `14-global/yt*/` are base64 blobs in anonymously fetched YouTube HTML.
 - **The initial migration commit is pushed** to `github.com/skurekjakub/crumble-logbook` (check with `git log` / `gh repo view`).
+- **Plan 1, data core** (`docs/superpowers/plans/2026-09-27-data-core.md`), on branch `feat/data-core`:
+  - `packages/schema`: Drizzle tables, migrations, Zod schemas.
+  - `apps/server`: the Hono API over `node:sqlite` (resources listed in the root `README.md`), `pnpm import:record`, `pnpm db:export` / `db:restore`, `pnpm dev:server`.
+  - Record 001's curated dataset is copied into `research/001-guild-conquest-meta/curated/` (blob-identical to `legacy/dashboard/data/`), and `import.json` next to it drives the import.
+  - `data/snapshot.json` is the committed dump of a fresh import of record 001. `data/crumble.db` is local and gitignored; rebuild it with `pnpm import:record 001-guild-conquest-meta` or `pnpm db:restore`.
+  - The import warns that the glossary keys 전투력 and 투력 are each claimed by two entries (Power, Power (team power)); both resolve to 투력's gloss. Fix the curated glossary if that matters.
+- **Plan 3, web app** is written: `docs/superpowers/plans/2026-09-27-web-app.md`.
 
 ### Not done (in order)
-1. The implementation plan: `superpowers:writing-plans` on the spec.
-2. The implementation: `superpowers:subagent-driven-development`.
-3. The research record's final `README.md`.
-4. Re-pulling crumb.gg after Season 5 closes.
+1. The Opus review of plan 1's final batch (importer, snapshot, `main.ts`), then merging `feat/data-core`.
+2. Plan 3, the web app, from its Batch B. It ends by deleting `legacy/`.
+3. Plan 2, jobs and scrapers: not written yet. Scope is in §6.1 item 6.
+4. The research record's final `README.md`.
+5. Re-pulling crumb.gg after Season 5 closes.
 
 ## 4. Research findings (the load-bearing ones)
 
@@ -100,7 +108,10 @@ Source ids: `dc:NNNNN` = `m.dcinside.com/board/projectcc/NNNNN`; `nv:NNNNN` = Na
 | `research/001-guild-conquest-meta/research-trail.md` | Web search rounds with syntheses |
 | `research/001-guild-conquest-meta/STATE.md` | Superseded by this file; kept as history |
 | `…/evidence/` | Numbered captures. `03-dc-posts/`, `11-dc-posts-extra/` and `16-top-players/dc/` hold DC posts + comments + images. `07-nv-posts/` holds Naver articles. `12-glossary.json` has KR↔EN names. `13-sites/` holds other sites. `14-global/` has patch notes, YouTube and EN sites. `15-crumbgg/` has rankings TSVs and raw `api/` JSON. |
-| `…/evidence/08-extract/` | Subagent extractions (schema in `BRIEF.md`). These, plus the dashboard seed, are what `import:record` loads. |
+| `…/evidence/08-extract/` | Subagent extractions (schema in `BRIEF.md`). `import:record` takes each source's English summary from here. |
+| `research/001-guild-conquest-meta/curated/`, `import.json` | The curated dataset `import:record` loads, and the manifest saying where the record's extractions, captures and ranking TSVs are |
+| `apps/server/`, `packages/schema/` | The data API and its schemas; the root `README.md` lists the commands and resources |
+| `data/snapshot.json` | Committed dump of the database; `data/crumble.db` is local |
 | `…/evidence/*.py` | `dc_scrape.py` (list/fetch; queries take a `name:`/`subject:`/`memo:`/`comment:` prefix), `nv_scrape.py` (public cafe API), `digest.py` (per-facet digest), `build_sources.py` (→ `sources.json`) |
 | `legacy/dashboard/` | Old SPA: `src/` is split into data, domain, ui and views layers; `styles/` has the tokens and a validated palette; `data/` is the import seed. Serve it with `python -m http.server 8765` from that folder. |
 | `docs/superpowers/specs/` | The approved design spec |
@@ -108,10 +119,10 @@ Source ids: `dc:NNNNN` = `m.dcinside.com/board/projectcc/NNNNN`; `nv:NNNNN` = Na
 
 ## 6. What to do next
 
-### 6.1 Write the plan
-Invoke `superpowers:writing-plans` on `docs/superpowers/specs/2026-09-27-crumble-logbook-design.md`. Save it to `docs/superpowers/plans/`. The user must review the plan and pick the execution method before any code is written.
+### 6.1 The plans
+Plans live in `docs/superpowers/plans/`. Plan 1 (data core) is done and plan 3 (web app) is written. Plan 2 (jobs + scrapers) still has to be written with `superpowers:writing-plans`, and the user reviews it and picks the execution method before any of its code is written.
 
-Tasks the plan should start with:
+The original task list, which the plans split up (items 1–5 are done):
 1. **Spike:** `node:sqlite` via Drizzle on Node 24.18 ARM64. Fallbacks, in order: `better-sqlite3` (only if an ARM64 prebuild installs), then `@libsql/client`. Record the winner in the README.
 2. Workspace scaffold: pnpm 12.6.0 is installed globally, TS strict, Vitest.
 3. `packages/schema`: tables per the spec's data model, drizzle-zod schemas, round-trip tests.
