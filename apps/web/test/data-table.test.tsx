@@ -29,7 +29,7 @@ function bodyRows(): string[][] {
   const body = screen.getAllByRole("rowgroup")[1]!;
   return within(body)
     .getAllByRole("row")
-    .map((tr) => [...tr.querySelectorAll("td")].map((td) => td.textContent ?? ""));
+    .map((tr) => [...tr.querySelectorAll("td")].map((td) => td.textContent));
 }
 
 function Harness({ initial = "" }: { initial?: string }) {

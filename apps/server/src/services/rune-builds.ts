@@ -120,7 +120,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
         repos.runeBuilds.replaceDecks(row.id, decks);
         repos.citations.replace("rune_build", String(row.id), sources);
         return toViews(repos, [row])[0] as never;
-      }) as RuneBuildView,
+      }),
     update: (id, patch) =>
       store.transaction((repos) => {
         if (!repos.runeBuilds.get(id)) throw new NotFoundError("rune_build", id);
@@ -135,7 +135,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
         if (decks !== undefined) repos.runeBuilds.replaceDecks(id, decks);
         if (sources !== undefined) repos.citations.replace("rune_build", String(id), sources);
         return toViews(repos, [row])[0] as never;
-      }) as RuneBuildView,
+      }),
     remove: (id) =>
       store.transaction((repos) => {
         if (!repos.runeBuilds.get(id)) throw new NotFoundError("rune_build", id);

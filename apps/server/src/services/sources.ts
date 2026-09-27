@@ -112,7 +112,7 @@ export function createSourcesService(store: Store): SourcesService {
           throw new ConflictError(`source already exists: ${input.id}`);
         const site = input.id.split(":")[0] as SourceSite;
         return repos.sources.insert({ ...input, site }) as never;
-      }) as SourceRow,
+      }),
     update: (id, patch) =>
       store.transaction((repos) => {
         if (!repos.sources.get(id)) throw new NotFoundError("source", id);
@@ -120,7 +120,7 @@ export function createSourcesService(store: Store): SourcesService {
           Object.keys(patch).length > 0 ? repos.sources.update(id, patch) : repos.sources.get(id);
         if (!row) throw new NotFoundError("source", id);
         return row as never;
-      }) as SourceRow,
+      }),
     remove: (id) =>
       store.transaction((repos) => {
         if (!repos.sources.get(id)) throw new NotFoundError("source", id);

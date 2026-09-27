@@ -370,7 +370,9 @@ const WRITES: Record<string, TableKey> = {
  */
 function loggingWrites(store: Store): { store: Store; order: TableKey[] } {
   const order: TableKey[] = [];
-  const log = (table: TableKey) => void (order.includes(table) || order.push(table));
+  const log = (table: TableKey) => {
+    if (!order.includes(table)) order.push(table);
+  };
   const wrap = (repos: Repos): Repos =>
     Object.fromEntries(
       Object.entries(repos).map(([name, repo]) => [

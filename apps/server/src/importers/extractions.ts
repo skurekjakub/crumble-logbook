@@ -16,7 +16,8 @@ interface ExtractionPost {
  */
 function postSourceId(post: ExtractionPost): string {
   const prefix = post.source === "dc" ? "dc:" : post.source === "naver" ? "nv:" : "web:";
-  return prefix + String(post.id ?? "").replaceAll("nv-", "");
+  const id = typeof post.id === "string" || typeof post.id === "number" ? String(post.id) : "";
+  return prefix + id.replaceAll("nv-", "");
 }
 
 /**

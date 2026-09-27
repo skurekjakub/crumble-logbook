@@ -12,19 +12,31 @@ export type Canned = { status?: number; body: unknown };
  * @returns the mock, for asserting on calls
  */
 export function stubApi(routes: Record<string, Canned>) {
-  const mock = vi.fn(async (input: RequestInfo | URL) => {
-    const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
-    const path = url.replace(/^https?:\/\/[^/]+/, "");
+  const mock = vi.fn((input: RequestInfo | URL) => {
+    const path = requestPath(input);
     const canned = routes[path] ?? { status: 404, body: { error: "not_found", message: path } };
     const status = canned.status ?? 200;
-    return new Response(JSON.stringify(canned.body), {
-      status,
-      statusText: status === 200 ? "OK" : "Error",
-      headers: { "content-type": "application/json" },
-    });
+    return Promise.resolve(
+      new Response(JSON.stringify(canned.body), {
+        status,
+        statusText: status === 200 ? "OK" : "Error",
+        headers: { "content-type": "application/json" },
+      }),
+    );
   });
   vi.stubGlobal("fetch", mock);
   return mock;
+}
+
+/**
+ * The path and query of a fetch input, without the origin.
+ *
+ * @param input - what `fetch` was called with
+ * @returns e.g. `/api/decks?mode=arena`
+ */
+export function requestPath(input: RequestInfo | URL): string {
+  const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
+  return url.replace(/^https?:\/\/[^/]+/, "");
 }
 
 /** A query client that never retries, so failed queries settle at once in tests. */

@@ -108,6 +108,6 @@ export async function renderRoute(
  */
 export function bodyRows(root: ParentNode): string[][] {
   return [...root.querySelectorAll("tbody tr")].map((tr) =>
-    [...tr.querySelectorAll("td")].map((td) => td.textContent ?? ""),
+    [...tr.querySelectorAll("td")].map((td) => td.textContent),
   );
 }

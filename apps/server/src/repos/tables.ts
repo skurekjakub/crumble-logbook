@@ -1,4 +1,4 @@
-import { and, count, eq, getTableColumns, isNotNull, notInArray } from "drizzle-orm";
+import { and, count, eq, getColumns, isNotNull, notInArray } from "drizzle-orm";
 import type { SQLiteColumn, SQLiteTable } from "drizzle-orm/sqlite-core";
 import { getTableConfig } from "drizzle-orm/sqlite-core";
 import type { Db } from "../db/client";
@@ -88,7 +88,7 @@ export interface TablesRepo {
  * @returns the single primary-key column, or a composite key's columns
  */
 function primaryKey(table: SQLiteTable): string[] {
-  const columns = Object.entries(getTableColumns(table)) as Array<[string, SQLiteColumn]>;
+  const columns = Object.entries(getColumns(table)) as Array<[string, SQLiteColumn]>;
   const keyOf = (column: SQLiteColumn) => columns.find(([, c]) => c === column)![0];
   const composite = getTableConfig(table).primaryKeys[0];
   if (composite) return composite.columns.map(keyOf);
@@ -123,7 +123,7 @@ function compareBy(key: readonly string[]) {
  * @throws `Error` naming the column if `table` has none by that name
  */
 function columnOf(table: SQLiteTable, name: string): SQLiteColumn {
-  const column = (getTableColumns(table) as Record<string, SQLiteColumn>)[name];
+  const column = (getColumns(table) as Record<string, SQLiteColumn>)[name];
   if (!column) throw new Error(`table has no column "${name}"`);
   return column;
 }
@@ -140,9 +140,7 @@ function blockingReferences(table: SQLiteTable) {
       const ref = fk.reference();
       const releases = ["cascade", "set null", "set default"].includes(fk.onDelete ?? "");
       if (ref.foreignTable !== table || releases) return [];
-      return [
-        { from: ref.columns[0]!, fromTable: other as SQLiteTable, to: ref.foreignColumns[0]! },
-      ];
+      return [{ from: ref.columns[0]!, fromTable: other, to: ref.foreignColumns[0]! }];
     }),
   );
 }
@@ -168,7 +166,7 @@ export function createTablesRepo(db: Db): TablesRepo {
       const table = tableOf(key);
       for (let start = 0; start < rows.length; start += LOAD_CHUNK) {
         db.insert(table)
-          .values(rows.slice(start, start + LOAD_CHUNK) as never[])
+          .values(rows.slice(start, start + LOAD_CHUNK))
           .run();
       }
     },

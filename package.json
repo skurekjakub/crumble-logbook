@@ -7,11 +7,14 @@
     "node": ">=24.18.0"
   },
   "scripts": {
-    "typecheck": "pnpm -r typecheck",
+    "typecheck": "pnpm -r typecheck && tsc -p .",
     "test": "vitest run",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify": "pnpm typecheck && pnpm format:check && vitest run",
+    "lint": "eslint --max-warnings 0 .",
+    "lint:fix": "eslint --fix .",
+    "verify": "pnpm typecheck && pnpm lint && pnpm format:check && vitest run",
+    "dev": "pnpm --parallel --filter @crumble/server --filter @crumble/web dev",
     "dev:server": "pnpm --filter @crumble/server dev",
     "dev:web": "pnpm --filter @crumble/web dev",
     "import:record": "pnpm --filter @crumble/server import:record",
@@ -19,7 +22,10 @@
     "db:restore": "pnpm --filter @crumble/server db:restore"
   },
   "devDependencies": {
+    "@crumble/eslint-config": "workspace:*",
     "@types/node": "^24.19.0",
+    "eslint": "10.11.0",
+    "jiti": "2.7.0",
     "prettier": "3.9.9",
     "tsx": "4.23.15",
     "typescript": "7.0.2",

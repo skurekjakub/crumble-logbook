@@ -73,8 +73,10 @@ export function assertSnapshotNonEmpty(snapshot: Snapshot): void {
  *   rolling back every write this call made
  */
 export function restoreSnapshot(store: Store, snapshot: Snapshot): TableCounts {
-  if (snapshot.version !== 1) {
-    throw new ConflictError(`unsupported snapshot version: ${String(snapshot.version)}`);
+  // The snapshot arrives as parsed JSON, so its version is only claimed by the type.
+  const version: unknown = snapshot.version;
+  if (version !== 1) {
+    throw new ConflictError(`unsupported snapshot version: ${JSON.stringify(version)}`);
   }
   const tables = Object.fromEntries(
     TABLE_KEYS.map((key) => [key, (snapshot.tables as Partial<SnapshotTables>)[key] ?? []]),
@@ -88,7 +90,7 @@ export function restoreSnapshot(store: Store, snapshot: Snapshot): TableCounts {
     }
     for (const key of TABLE_KEYS) repos.tables.load(key, tables[key]);
     return Object.fromEntries(TABLE_KEYS.map((key) => [key, tables[key].length])) as never;
-  }) as TableCounts;
+  });
 }
 
 /** Read-only access to a full snapshot of the current database, for the export route. */

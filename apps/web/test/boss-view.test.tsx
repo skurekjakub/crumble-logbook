@@ -414,8 +414,8 @@ describe("Piñata boss view", () => {
     ]);
     for (const a of links) {
       const target = document.querySelector(a.getAttribute("href")!);
-      expect(target, a.textContent!).toHaveTextContent(a.textContent!);
-      expect(section(a.textContent!)).toContainElement(target as HTMLElement);
+      expect(target, a.textContent).toHaveTextContent(a.textContent);
+      expect(section(a.textContent)).toContainElement(target as HTMLElement);
     }
   });
 
@@ -599,12 +599,12 @@ describe("Piñata boss view", () => {
     const buffs = await screen.findByRole("region", { name: "Buffs by star" });
     const table = await within(buffs).findByRole("table");
     const trs = [...table.querySelectorAll("tbody tr")] as HTMLElement[];
-    const def = trs.find((tr) => tr.textContent!.includes("DEF %"))!;
+    const def = trs.find((tr) => tr.textContent.includes("DEF %"))!;
     expect(within(def).getByText("self only")).toBeVisible();
     expect(trs.at(-1)).toBe(def);
-    const team = trs.find((tr) => tr.textContent!.includes("Boss DMG"))!;
+    const team = trs.find((tr) => tr.textContent.includes("Boss DMG"))!;
     expect(within(team).queryByText("self only")).toBeNull();
-    const shred = trs.find((tr) => tr.textContent!.includes("DEF shred"))!;
+    const shred = trs.find((tr) => tr.textContent.includes("DEF shred"))!;
     expect(within(shred).getByText("chance")).toBeVisible();
     expect(buffs).toHaveTextContent(
       /미확인 쿠키's and Dark Choco Cookie's rows are application chances, not buff sizes/,

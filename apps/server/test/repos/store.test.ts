@@ -44,8 +44,8 @@ describe("Store.transaction", () => {
     // time. Wrapped in a never-called function so tsc still checks the
     // `@ts-expect-error` below without opening a real transaction.
     function neverCalled() {
-      // @ts-expect-error an async callback isn't assignable to Store.transaction's work parameter
-      store.transaction(async () => 1);
+      // @ts-expect-error a promise-returning callback isn't assignable to Store.transaction's work parameter
+      void store.transaction(() => Promise.resolve(1));
     }
 
     expect(neverCalled).toBeTypeOf("function");

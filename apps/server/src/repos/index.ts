@@ -111,7 +111,7 @@ export function createStore(db: Db): Store {
     // public parameter type above (not this cast) is what actually rejects
     // an async `work`.
     transaction<T>(work: (repos: Repos) => T extends Promise<unknown> ? never : T): T {
-      return db.transaction((tx) => work(createRepos(tx)) as never) as T;
+      return db.transaction((tx) => work(createRepos(tx)) as never);
     },
   };
 }

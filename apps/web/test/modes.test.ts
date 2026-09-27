@@ -21,7 +21,7 @@ import {
   SHARED_SECTIONS,
   sectionForPath,
 } from "../src/app/modes";
-import { stubApi } from "./helpers";
+import { requestPath, stubApi } from "./helpers";
 
 describe("sectionForPath", () => {
   it("maps /conquest and its sub-paths to Guild Conquest", () => {
@@ -123,8 +123,7 @@ describe("mode-scoped queries", () => {
     const fetch = stubApi({});
     const get = async (options: { queryFn?: unknown }) => {
       await (options.queryFn as () => Promise<unknown>)().catch(() => undefined);
-      const [input] = fetch.mock.calls.at(-1)!;
-      return String(input).replace(/^https?:\/\/[^/]+/, "");
+      return requestPath(fetch.mock.calls.at(-1)![0]);
     };
     expect(await get(decksQuery(CONQUEST.scope))).toBe("/api/decks?mode=guild_conquest");
     expect(await get(mechanicsQuery(ARENA.scope))).toBe("/api/mechanics?mode=arena");
@@ -143,7 +142,7 @@ describe("mode-scoped queries", () => {
     const fetch = stubApi({});
     const get = async (options: { queryFn?: unknown }) => {
       await (options.queryFn as () => Promise<unknown>)().catch(() => undefined);
-      return String(fetch.mock.calls.at(-1)![0]).replace(/^https?:\/\/[^/]+/, "");
+      return requestPath(fetch.mock.calls.at(-1)![0]);
     };
     expect(await get(sourcesQuery({ record: "002-pvp-meta" }))).toBe(
       "/api/sources?record=002-pvp-meta",

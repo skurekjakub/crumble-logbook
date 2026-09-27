@@ -10,7 +10,7 @@ import { ViewHeader } from "../components/ViewHeader";
 
 /** Orders events by date, oldest first; same-date events keep their id order. */
 function byDate(a: TimelineEvent, b: TimelineEvent): number {
-  return String(a.date).localeCompare(String(b.date)) || a.id - b.id;
+  return a.date.localeCompare(b.date) || a.id - b.id;
 }
 
 /**

@@ -37,11 +37,10 @@ export function optionalInt(v: unknown): number | undefined {
  * @returns the new search params
  */
 export function mergeSearch<S extends object>(prev: S, patch: Partial<S>): S {
-  const merged: Record<string, unknown> = { ...prev, ...patch };
-  for (const [key, value] of Object.entries(merged)) {
-    if (value === undefined || value === "") delete merged[key];
-  }
-  return merged as S;
+  const merged = Object.entries({ ...prev, ...patch }).filter(
+    ([, value]) => value !== undefined && value !== "",
+  );
+  return Object.fromEntries(merged) as S;
 }
 
 /**
