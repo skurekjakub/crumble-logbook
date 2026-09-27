@@ -9,11 +9,18 @@ import { EmptyState } from "../components/EmptyState";
 import { Kv } from "../components/Kv";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
+import { TocLayout } from "../components/TocLayout";
 import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
 
 /** The name parts a counter heading shows for a deck. */
 type DeckName = Pick<Deck, "id" | "nameEn" | "nameKr">;
+
+/** The view's sections, in page order, which its "On this page" list links to. */
+const TOC = [
+  { id: "counters-matrix", label: "Matrix" },
+  { id: "counters-edges", label: "Every edge" },
+] as const;
 
 /** A counter edge's DOM id, which its matrix cell links to. */
 const edgeId = (edge: Pick<Counter, "slug">) => `counter-${edge.slug}`;
@@ -74,7 +81,8 @@ function byMatrixOrder(order: ReadonlyMap<string, number>) {
 /**
  * A mode's counters: the directed matrix (row = the team, column = the team
  * that beats it) with its confidence legend, then every edge as a card the
- * matrix cells link to. "No counters recorded yet." when there are none.
+ * matrix cells link to, with an "On this page" list linking to each part.
+ * "No counters recorded yet." when there are none.
  *
  * @param mode - the mode whose counters, decks and copy the view shows
  */
@@ -91,16 +99,18 @@ export function CountersView({ mode }: { mode: ModeSection }) {
       <QueryResult query={counters} resource="counters">
         {(edges) =>
           edges.length ? (
-            <>
-              <CounterMatrix edges={edges} decks={decks} href={(e) => `#${edgeId(e)}`} />
-              <CounterLegend />
-              <h3>Every edge</h3>
+            <TocLayout items={TOC}>
+              <div className="grid" id={TOC[0].id}>
+                <CounterMatrix edges={edges} decks={decks} href={(e) => `#${edgeId(e)}`} />
+                <CounterLegend />
+              </div>
+              <h3 id={TOC[1].id}>Every edge</h3>
               <div className="counter-list">
                 {[...edges].sort(byMatrixOrder(order)).map((e) => (
                   <CounterCard key={e.id} edge={e} deck={deck} sources={sources} />
                 ))}
               </div>
-            </>
+            </TocLayout>
           ) : (
             <EmptyState>No counters recorded yet.</EmptyState>
           )

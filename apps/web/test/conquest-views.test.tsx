@@ -354,6 +354,19 @@ describe("/conquest/decks", () => {
     expect(card).not.toHaveTextContent("ceiling");
   });
 
+  it("links each deck's card from the On this page list, in deck order", async () => {
+    await renderAt("/conquest/decks");
+    const toc = await panel().findByRole("navigation", { name: "On this page" });
+    const links = within(toc).getAllByRole("link");
+    expect(links.map((a) => [a.textContent, a.getAttribute("href")])).toEqual([
+      ["Cherry deck", "#deck-cherry"],
+      ["Melon Soda deck", "#deck-meso"],
+    ]);
+    for (const a of links) {
+      expect(document.querySelector(a.getAttribute("href")!)).toHaveClass("card");
+    }
+  });
+
   it("shows the legacy empty message with no decks", async () => {
     await renderAt("/conquest/decks", { "/api/decks?mode=guild_conquest": { body: [] } });
     expect(await panel().findByText("No decks recorded yet.")).toHaveClass("empty");
@@ -380,12 +393,37 @@ describe("/conquest/runes", () => {
     const disputed = m.getByText(/One commenter says skill amp is better on Milk\./);
     expect(disputed).toHaveClass("muted");
     expect(lines.compareDocumentPosition(disputed) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-    expect(await m.findByText("Cherry deck, Melon Soda deck")).toBeVisible();
+    const decks = await m.findByRole("list", { name: "Decks" });
+    expect(
+      within(decks)
+        .getAllByRole("listitem")
+        .map((li) => li.textContent),
+    ).toEqual(["Cherry deck", "Melon Soda deck"]);
     expect(m.getByRole("link", { name: "Naver 43653" })).toBeVisible();
     expect(cookies()).toEqual(["Milk우유", "Pomegranate석류", "메소"]);
     expect(
       panel().getByText(/Disputed rows are where posters disagreed/, { selector: ".lede" }),
     ).toBeVisible();
+  });
+
+  it("keeps a deck whose name holds a comma apart from the other decks", async () => {
+    await renderAt("/conquest/runes", {
+      "/api/decks?mode=guild_conquest": {
+        body: [...DECKS, { ...DECKS[0]!, id: "herb", nameEn: "Cherry deck, Herb version" }],
+      },
+      "/api/rune-builds?mode=guild_conquest": {
+        body: [{ ...RUNES[1]!, decks: ["cherry", "herb"] }],
+      },
+    });
+    const card = (await panel().findByText(RUNES[1]!.why)).closest(".rune-card") as HTMLElement;
+    const decks = within(card).getByRole("list", { name: "Decks" });
+    await waitFor(() =>
+      expect(
+        within(decks)
+          .getAllByRole("listitem")
+          .map((li) => li.textContent),
+      ).toEqual(["Cherry deck", "Cherry deck, Herb version"]),
+    );
   });
 
   it("narrows rows to one deck with ?deck=", async () => {

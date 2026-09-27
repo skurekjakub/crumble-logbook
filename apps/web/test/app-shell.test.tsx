@@ -1,5 +1,5 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type { Deck, ResearchRecord, Source } from "../src/api/types";
 import type { Canned } from "./helpers";
 import { renderRoute } from "./view-harness";
@@ -36,6 +36,11 @@ const API: Record<string, Canned> = {
 /** Renders the whole app at `path` against this file's stubbed API. */
 const renderAt = (path: string, api: Record<string, Canned> = API) => renderRoute(path, api);
 
+/** The navigation's top-level section links, in order. */
+const sectionLinks = (nav: HTMLElement) => [
+  ...nav.querySelectorAll<HTMLAnchorElement>("a.nav-section-link"),
+];
+
 /** The stamp's label → value pairs. */
 function stamp(): Record<string, string> {
   const el = document.querySelector(".stamp")!;
@@ -68,35 +73,78 @@ describe("app shell", () => {
     );
   });
 
-  it("shows mode links, shared sections and the Guild Conquest section links, marking the current ones", async () => {
+  it("lists every section with its Korean name and nests the current section's pages, marking the current ones", async () => {
     await renderAt("/conquest/decks");
-    const modes = screen.getByRole("navigation", { name: "Game modes and shared sections" });
-    expect(
-      within(modes)
-        .getAllByRole("link")
-        .map((t) => t.textContent),
-    ).toEqual(["Guild Conquest", "Arena", "Rumble Arena", "Research", "Sources", "Glossary"]);
-    const conquest = within(modes).getByRole("link", { name: "Guild Conquest" });
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    expect(sectionLinks(nav).map((a) => a.textContent)).toEqual([
+      "Guild Conquest 길드 토벌전",
+      "Arena 아레나",
+      "Rumble Arena 와글와글 아레나",
+      "Research",
+      "Sources",
+      "Glossary",
+    ]);
+    const conquest = within(nav).getByRole("link", { name: "Guild Conquest 길드 토벌전" });
     expect(conquest).toHaveAttribute("href", "/conquest");
     expect(conquest).toHaveAttribute("aria-current", "true");
-    expect(within(modes).getByRole("link", { name: "Arena" })).not.toHaveAttribute("aria-current");
-    const sub = screen.getByRole("navigation", { name: "Guild Conquest sections" });
-    const decks = within(sub).getByRole("link", { name: "Decks" });
+    expect(within(nav).getByRole("link", { name: "Arena 아레나" })).not.toHaveAttribute(
+      "aria-current",
+    );
+    const pages = within(nav).getByRole("list", { name: "Guild Conquest sections" });
+    const decks = within(pages).getByRole("link", { name: "Decks" });
     expect(decks).toHaveAttribute("href", "/conquest/decks");
     expect(decks).toHaveAttribute("aria-current", "page");
-    expect(within(sub).getByRole("link", { name: "Overview" })).not.toHaveAttribute("aria-current");
+    expect(within(pages).getByRole("link", { name: "Overview" })).not.toHaveAttribute(
+      "aria-current",
+    );
+    expect(within(nav).getAllByRole("link", { current: "page" })).toEqual([decks]);
+    expect(screen.queryByRole("list", { name: "Arena sections" })).toBeNull();
     expect(screen.queryByRole("tab")).toBeNull();
     expect(screen.queryByRole("tabpanel")).toBeNull();
     expect(screen.getByRole("main")).toBeInTheDocument();
   });
 
-  it("marks a mode link as the current page on the mode's landing page", async () => {
+  it("marks a mode link and its overview as the current page on the mode's landing page", async () => {
     await renderAt("/conquest");
-    const modes = screen.getByRole("navigation", { name: "Game modes and shared sections" });
-    expect(within(modes).getByRole("link", { name: "Guild Conquest" })).toHaveAttribute(
-      "aria-current",
-      "page",
-    );
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    expect(
+      within(nav)
+        .getAllByRole("link", { current: "page" })
+        .map((a) => a.textContent),
+    ).toEqual(["Guild Conquest 길드 토벌전", "Overview"]);
+  });
+
+  it("opens the navigation from the phone's menu button, which names where the reader is", async () => {
+    await renderAt("/conquest/boss");
+    const menu = screen.getByRole("button", { name: "Menu: Guild Conquest / Piñata" });
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    expect(nav).toHaveAttribute("id", "site-nav");
+    expect(nav).toHaveAttribute("popover", "auto");
+    expect(menu).toHaveAttribute("popovertarget", "site-nav");
+  });
+
+  it("keeps the phone drawer open after a mode link, so one of its pages can be picked, and closes it after a page link", async () => {
+    const router = await renderAt("/conquest/decks");
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    const hidePopover = vi.fn();
+    // jsdom has no popover API; stand in for an open drawer.
+    Object.assign(nav, { hidePopover, matches: (s: string) => s === ":popover-open" });
+    fireEvent.click(within(nav).getByRole("link", { name: "Arena 아레나" }));
+    await waitFor(() => expect(router.state.location.pathname).toBe("/arena"));
+    expect(hidePopover).not.toHaveBeenCalled();
+    const arena = await within(nav).findByRole("list", { name: "Arena sections" });
+    fireEvent.click(within(arena).getByRole("link", { name: "Gear" }));
+    expect(hidePopover).toHaveBeenCalledTimes(1);
+    fireEvent.click(within(nav).getByRole("link", { name: "Sources" }));
+    expect(hidePopover).toHaveBeenCalledTimes(2);
+  });
+
+  it("shows the record's lede on a mode's landing page only", async () => {
+    const router = await renderAt("/conquest");
+    expect(await screen.findByText(RECORD.lede)).toHaveClass("lede");
+    await router.navigate({ to: "/conquest/decks" });
+    await waitFor(() => expect(document.querySelector("header.top .lede")).toBeNull());
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Piñata Raid Logbook");
   });
 
   it("redirects / to /conquest", async () => {
@@ -106,29 +154,33 @@ describe("app shell", () => {
 
   it("navigates when a link is clicked", async () => {
     const router = await renderAt("/conquest");
-    fireEvent.click(screen.getByRole("link", { name: "Arena" }));
+    fireEvent.click(screen.getByRole("link", { name: "Arena 아레나" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/arena"));
-    expect(await screen.findByRole("navigation", { name: "Arena sections" })).toBeVisible();
-    expect(screen.queryByRole("navigation", { name: "Guild Conquest sections" })).toBeNull();
+    expect(await screen.findByRole("list", { name: "Arena sections" })).toBeVisible();
+    expect(screen.queryByRole("list", { name: "Guild Conquest sections" })).toBeNull();
   });
 
-  it("keeps the app working when the research record fails to load", async () => {
-    await renderAt("/conquest", {
+  it("keeps the app working when the research record fails to load, reporting it on every page", async () => {
+    const router = await renderAt("/conquest", {
       ...API,
       "/api/records/001-guild-conquest-meta": { status: 500, body: { error: "internal" } },
     });
     expect(await screen.findByRole("alert")).toHaveTextContent("Couldn't load research record");
-    expect(
-      screen.getByRole("navigation", { name: "Game modes and shared sections" }),
-    ).toBeVisible();
+    expect(screen.getByRole("navigation", { name: "Logbook" })).toBeVisible();
     expect(screen.getByRole("main")).toBeInTheDocument();
+    await router.navigate({ to: "/conquest/gear" });
+    await waitFor(() => expect(router.state.location.pathname).toBe("/conquest/gear"));
+    expect(document.querySelector("header.top [role=alert]")).toHaveTextContent(
+      "Couldn't load research record",
+    );
   });
 
   it("shows the generic chrome on a shared section, with no empty lede", async () => {
     await renderAt("/sources");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Crumble Logbook");
     expect(screen.getByRole("link", { name: "Sources" })).toHaveAttribute("aria-current", "page");
-    expect(screen.queryByRole("navigation", { name: "Guild Conquest sections" })).toBeNull();
+    expect(screen.queryByRole("list", { name: "Guild Conquest sections" })).toBeNull();
+    expect(screen.getByRole("button", { name: "Menu: Sources" })).toBeInTheDocument();
     expect(document.querySelector("header.top .lede")).toBeNull();
   });
 });

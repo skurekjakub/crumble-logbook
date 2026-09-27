@@ -370,9 +370,11 @@ describe("PvP chrome", () => {
     expect(document.querySelector("header.top .label")).toHaveTextContent("와글와글 아레나");
   });
 
-  it("shows each PvP mode's sub-tabs", async () => {
+  it("lists each PvP mode's pages under it in the navigation", async () => {
     await renderAt("/arena/counters", ARENA);
-    const sub = screen.getByRole("navigation", { name: "Arena sections" });
+    const sub = within(screen.getByRole("navigation", { name: "Logbook" })).getByRole("list", {
+      name: "Arena sections",
+    });
     expect(
       within(sub)
         .getAllByRole("link")
@@ -683,7 +685,7 @@ describe("PvP builds, mechanics and timeline", () => {
     await renderAt("/arena/runes", ARENA);
     expect(await panel().findByText("Rank behind Milk for the first beam.")).toBeVisible();
     expect(
-      (await panel().findAllByText("Rye one-carry deck", { selector: ".rune-decks" })).length,
+      (await panel().findAllByText("Rye one-carry deck", { selector: ".rune-decks li" })).length,
     ).toBeGreaterThan(0);
   });
 

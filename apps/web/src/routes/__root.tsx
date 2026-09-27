@@ -7,11 +7,15 @@ import { activeTab, SECTIONS, sectionForPath } from "../app/modes";
 import type { RouterContext } from "../app/router-context";
 import { ErrorBox } from "../components/ErrorBox";
 import { PageHeader } from "../components/PageHeader";
-import { TabNav } from "../components/TabNav";
+import { SideNav } from "../components/SideNav";
+import { TopBar } from "../components/TopBar";
 
 export const Route = createRootRouteWithContext<RouterContext>()({
   component: RootLayout,
 });
+
+/** The navigation's element id, which the phone's menu button opens it by. */
+const NAV_ID = "site-nav";
 
 /** Stamp labels, per stat. */
 const STAT_LABEL: Record<StampStat, string> = {
@@ -31,10 +35,11 @@ function headerContext(section: Section | undefined): ReactNode {
 }
 
 /**
- * The app chrome: header (from the active mode's research record, with the
- * record's own lede for that mode when it has one, and figures scoped to
- * the record and mode), the mode and shared-section links, the active
- * section's links, the view in the main landmark, and the footer.
+ * The app chrome: the phone's top bar, the logbook navigation (every
+ * section, the active section's pages beneath it), the header (from the
+ * active mode's research record, with the record's own lede for that mode
+ * on the section's landing page, and figures scoped to the record and
+ * mode), the view in the main landmark, and the footer.
  */
 function RootLayout() {
   const pathname = useLocation({ select: (l) => l.pathname });
@@ -65,53 +70,60 @@ function RootLayout() {
   );
 
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  const landing = section != null && path === section.to;
 
   return (
     <div className="wrap">
-      <PageHeader
-        context={headerContext(section)}
-        title={section?.title ?? "Crumble Logbook"}
-        lede={lede}
-        stats={stamp.map((s) => [STAT_LABEL[s], values[s]] as const)}
+      <TopBar
+        navId={NAV_ID}
+        trail={[section?.label ?? "Crumble Logbook", ...(tab ? [tab.label] : [])]}
       />
-      <TabNav
-        className="modes"
-        label="Game modes and shared sections"
-        items={SECTIONS.map((s, i) => ({
+      <SideNav
+        id={NAV_ID}
+        label="Logbook"
+        sections={SECTIONS.map((s, i) => ({
           id: s.id,
           label: s.label,
+          labelKr: s.labelKr,
           to: s.to,
-          current: s.id !== section?.id ? null : path === s.to ? "page" : "section",
+          current: s.id !== section?.id ? null : landing ? "page" : "section",
           startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",
+          hasPages: s.tabs.length > 0,
+          pages:
+            s.id === section?.id
+              ? s.tabs.map((t) => ({
+                  id: t.id,
+                  label: t.label,
+                  to: t.to,
+                  current: t.id === tab?.id,
+                }))
+              : [],
         }))}
       />
-      {section && section.tabs.length > 0 && (
-        <TabNav
-          className="sub"
-          label={`${section.label} sections`}
-          items={section.tabs.map((t) => ({
-            id: t.id,
-            label: t.label,
-            to: t.to,
-            current: t.id === tab?.id ? "page" : null,
-          }))}
+      <div className="page">
+        <PageHeader
+          context={headerContext(section)}
+          title={section?.title ?? "Crumble Logbook"}
+          // The record's lede introduces a section, so it shows on the landing page only; a failure shows everywhere.
+          lede={landing || record.isError ? lede : ""}
+          stats={stamp.map((s) => [STAT_LABEL[s], values[s]] as const)}
         />
-      )}
-      <main>
-        <section className="panel">
-          <Outlet />
-        </section>
-      </main>
-      <footer>
-        {slug ? (
-          <>
-            Built from the research record's evidence captures. Research record:{" "}
-            <span className="mono">research/{slug}/</span>.
-          </>
-        ) : (
-          "Built from the research records' evidence captures."
-        )}
-      </footer>
+        <main>
+          <section className="panel">
+            <Outlet />
+          </section>
+        </main>
+        <footer>
+          {slug ? (
+            <>
+              Built from the research record's evidence captures. Research record:{" "}
+              <span className="mono">research/{slug}/</span>.
+            </>
+          ) : (
+            "Built from the research records' evidence captures."
+          )}
+        </footer>
+      </div>
     </div>
   );
 }

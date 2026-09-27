@@ -45,22 +45,32 @@ const COLUMNS: Column<Source>[] = [
         {sourceLabel(s.id)}
       </a>
     ),
-    className: "n",
+    className: "n source-id",
   },
   {
     header: "Title",
     cell: (s) => (
       <>
         {s.title ?? ""}
-        {s.titleEn && <div className="muted">{s.titleEn}</div>}
+        {s.titleEn && <span className="muted"> {s.titleEn}</span>}
       </>
     ),
+    className: "wide source-title",
   },
   { header: "Date", cell: (s) => s.date ?? "", className: "n" },
   { header: "Relevance", cell: (s) => s.relevance ?? "", className: "n" },
   {
     header: "Capture",
-    cell: (s) => s.capturePath && <span className="mono">{s.capturePath}</span>,
+    // Truncated from the left, so the file name stays in view; the full path is the tooltip.
+    cell: (s) =>
+      s.capturePath && (
+        <span className="capture" title={s.capturePath}>
+          <span className="mono" dir="ltr">
+            {s.capturePath}
+          </span>
+        </span>
+      ),
+    className: "wide source-capture",
   },
 ];
 
@@ -101,6 +111,7 @@ export function SourcesView({ search: { site, q }, onSearch }: SourcesViewProps)
               onChange: (v) => onSearch({ site: optionalKey(v, SITE_LABELS) }),
             }}
             empty={site ? "No sources from this site." : "No sources recorded yet."}
+            layout="stack"
           />
         )}
       </QueryResult>

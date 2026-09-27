@@ -8,6 +8,7 @@ import { CookieName } from "../components/CookieName";
 import { EmptyState } from "../components/EmptyState";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
+import { TocLayout } from "../components/TocLayout";
 import { UsageBars, UsageLegend } from "../components/UsageBars";
 import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
@@ -19,6 +20,9 @@ const KIND_LABELS: Readonly<Record<UsageStat["kind"], string>> = {
   pet: "Pets",
   team: "Teams",
 };
+
+/** A kind's card id, which the "On this page" list links to. */
+const kindId = (kind: UsageStat["kind"]) => `usage-${kind}`;
 
 /** Usage rows that share a sample and capture date. */
 interface Sample {
@@ -98,8 +102,8 @@ function SampleBars({
 /**
  * A mode's usage figures: one card per kind (cookies, cores, pets, teams),
  * each with a bar list per sample, its capture date and sources, and each
- * figure's own caveat. The mode's caveat from its research record sits on
- * top. Core members show in English where the glossary knows them. "No
+ * figure's own caveat, with an "On this page" list of the kinds shown. The
+ * mode's caveat from its research record sits on top. Core members show in English where the glossary knows them. "No
  * usage data recorded yet." when there are none.
  *
  * @param mode - the mode whose usage, record and copy the view shows
@@ -123,16 +127,19 @@ export function UsageView({ mode }: { mode: ModeSection }) {
       {caveat ? <div className="note">{caveat}</div> : null}
       <ViewHeader title={mode.copy.usage?.title ?? "Usage"} lede={mode.copy.usage?.lede} />
       <QueryResult query={usage} resource="usage figures">
-        {(rows) =>
-          rows.length ? (
-            <>
+        {(rows) => {
+          if (!rows.length) return <EmptyState>No usage data recorded yet.</EmptyState>;
+          const kinds = (Object.keys(KIND_LABELS) as UsageStat["kind"][]).filter((kind) =>
+            rows.some((r) => r.kind === kind),
+          );
+          return (
+            <TocLayout items={kinds.map((k) => ({ id: kindId(k), label: KIND_LABELS[k] }))}>
               {rows.some((r) => r.confirmedPct != null) ? <UsageLegend /> : null}
               <div className="grid g2">
-                {(Object.keys(KIND_LABELS) as UsageStat["kind"][]).map((kind) => {
+                {kinds.map((kind) => {
                   const ofKind = rows.filter((r) => r.kind === kind);
-                  if (!ofKind.length) return null;
                   return (
-                    <section className="card" key={kind}>
+                    <section className="card" key={kind} id={kindId(kind)}>
                       <h3>{KIND_LABELS[kind]}</h3>
                       {samples(ofKind).map((g) => (
                         <SampleBars
@@ -146,11 +153,9 @@ export function UsageView({ mode }: { mode: ModeSection }) {
                   );
                 })}
               </div>
-            </>
-          ) : (
-            <EmptyState>No usage data recorded yet.</EmptyState>
-          )
-        }
+            </TocLayout>
+          );
+        }}
       </QueryResult>
     </>
   );

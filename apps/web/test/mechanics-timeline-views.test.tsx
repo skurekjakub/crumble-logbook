@@ -114,7 +114,7 @@ describe("timeline view", () => {
     });
     expect(await screen.findByRole("heading", { name: "How the meta moved" })).toBeVisible();
     expect(screen.getByText(/oldest first/)).toHaveClass("lede");
-    const list = await screen.findByRole("list");
+    const list = await within(screen.getByRole("main")).findByRole("list");
     expect(list).toHaveClass("tl");
     const items = within(list).getAllByRole("listitem");
     expect(items.map((li) => li.querySelector(".d")!.textContent)).toEqual([

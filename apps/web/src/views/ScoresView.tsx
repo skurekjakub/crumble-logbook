@@ -19,6 +19,7 @@ import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { Scatter } from "../components/Scatter";
 import { SourceChips } from "../components/SourceChips";
+import { TocLayout } from "../components/TocLayout";
 import { ViewHeader } from "../components/ViewHeader";
 import type { DeckSeries } from "../lib/deck-series";
 import { deckSeries } from "../lib/deck-series";
@@ -57,6 +58,14 @@ export interface ScoresViewProps {
   onSearch: (patch: ScoresSearch) => void;
 }
 
+/** The ids of the view's sections, which its "On this page" list links to. */
+const PARTS = {
+  chart: "scores-chart",
+  rng: "scores-rng",
+  table: "scores-table",
+  leaderboard: "scores-leaderboard",
+} as const;
+
 /** Scores sorted by damage, highest first, without mutating the input. */
 function byDamage(scores: readonly Score[]): Score[] {
   return [...scores].sort((a, b) => b.damageG - a.damageG);
@@ -73,7 +82,7 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
       header: "Evidence",
       cell: (s) => (s.verified ? <Pill kind="verified">screenshot</Pill> : <Pill kind="claimed" />),
     },
-    { header: "Notes", cell: (s) => s.note ?? "" },
+    { header: "Notes", cell: (s) => s.note ?? "", className: "wide" },
     { header: "Date", cell: (s) => s.date ?? "", className: "n" },
     { header: "Source", cell: (s) => <SourceChips ids={s.sources} sources={sources} /> },
   ];
@@ -82,8 +91,9 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
 /**
  * A mode's posted scores (scatter, RNG factor cards and a damage-ordered
  * table, narrowed by `?deck=`) and, when the mode has one, its leaderboard
- * (`?season=`, `?board=`). A failed deck list is reported; the scores then
- * show without deck names or colours.
+ * (`?season=`, `?board=`), with an "On this page" list of those parts. A
+ * failed deck list is reported; the scores then show without deck names or
+ * colours.
  */
 export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
   const decks = useQuery(decksQuery(mode.scope));
@@ -91,62 +101,71 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
   const rng = useQuery(rngFactorsQuery(mode.scope));
   const sources = useSourceIndex();
   const series = useMemo(() => deckSeries(decks.data ?? []), [decks.data]);
+  const toc = [
+    { id: PARTS.chart, label: "Score chart" },
+    ...(rng.data?.length ? [{ id: PARTS.rng, label: "RNG factors" }] : []),
+    ...(scores.data ? [{ id: PARTS.table, label: "Posted scores" }] : []),
+    ...(mode.leaderboard ? [{ id: PARTS.leaderboard, label: mode.leaderboard.title }] : []),
+  ];
 
   return (
     <>
       <ViewHeader title={mode.copy.scores?.title ?? "Scores"} lede={mode.copy.scores?.lede} />
       {decks.isError ? <ErrorBox resource="decks" error={decks.error} /> : null}
-      <div className="tools">
-        <select
-          aria-label="Deck"
-          value={search.deck ?? ""}
-          onChange={(e) => onSearch({ deck: e.target.value || undefined })}
-        >
-          <option value="">All decks</option>
-          {decks.data?.map((d) => (
-            <option key={d.id} value={d.id}>
-              {d.nameEn}
-            </option>
-          ))}
-        </select>
-      </div>
-      <QueryResult query={scores} resource="scores">
-        {(rows) => <ScoreChart scores={rows} series={series} />}
-      </QueryResult>
-      <QueryResult query={rng} resource="RNG factors">
-        {(factors) =>
-          factors.length > 0 && (
-            <div className="grid g3">
-              {factors.map((r) => (
-                <div key={r.id} className="card">
-                  <h3>{r.factor}</h3>
-                  <div>{r.effect}</div>
-                  {r.mitigation && <div className="flag">{r.mitigation}</div>}
-                  <SourceChips ids={r.sources} sources={sources} />
-                </div>
-              ))}
-            </div>
-          )
-        }
-      </QueryResult>
-      {scores.data && (
-        <div className="grid" role="region" aria-label="Posted scores">
-          <DataTable
-            columns={scoreColumns(series, sources)}
-            rows={byDamage(scores.data)}
-            rowKey={(s) => s.id}
-          />
+      <TocLayout items={toc}>
+        <div className="tools" id={PARTS.chart}>
+          <select
+            aria-label="Deck"
+            value={search.deck ?? ""}
+            onChange={(e) => onSearch({ deck: e.target.value || undefined })}
+          >
+            <option value="">All decks</option>
+            {decks.data?.map((d) => (
+              <option key={d.id} value={d.id}>
+                {d.nameEn}
+              </option>
+            ))}
+          </select>
         </div>
-      )}
-      {mode.leaderboard ? (
-        <Leaderboard
-          config={mode.leaderboard}
-          search={search}
-          onBoard={(board) => onSearch({ board, season: undefined })}
-          onSeason={(season) => onSearch({ season })}
-          sources={sources}
-        />
-      ) : null}
+        <QueryResult query={scores} resource="scores">
+          {(rows) => <ScoreChart scores={rows} series={series} />}
+        </QueryResult>
+        <QueryResult query={rng} resource="RNG factors">
+          {(factors) =>
+            factors.length > 0 && (
+              <div className="grid g3" id={PARTS.rng}>
+                {factors.map((r) => (
+                  <div key={r.id} className="card">
+                    <h3>{r.factor}</h3>
+                    <div>{r.effect}</div>
+                    {r.mitigation && <div className="flag">{r.mitigation}</div>}
+                    <SourceChips ids={r.sources} sources={sources} />
+                  </div>
+                ))}
+              </div>
+            )
+          }
+        </QueryResult>
+        {scores.data && (
+          <div className="grid" role="region" aria-label="Posted scores" id={PARTS.table}>
+            <DataTable
+              columns={scoreColumns(series, sources)}
+              rows={byDamage(scores.data)}
+              rowKey={(s) => s.id}
+              layout="stack"
+            />
+          </div>
+        )}
+        {mode.leaderboard ? (
+          <Leaderboard
+            config={mode.leaderboard}
+            search={search}
+            onBoard={(board) => onSearch({ board, season: undefined })}
+            onSeason={(season) => onSearch({ season })}
+            sources={sources}
+          />
+        ) : null}
+      </TocLayout>
     </>
   );
 }
@@ -256,7 +275,7 @@ function Leaderboard({ config, search, onBoard, onSeason, sources }: Leaderboard
     );
 
   return (
-    <div className="grid" role="region" aria-label={config.title}>
+    <div className="grid" role="region" aria-label={config.title} id={PARTS.leaderboard}>
       <ViewHeader title={config.title} lede={config.lede} />
       <div className="tools">
         <select

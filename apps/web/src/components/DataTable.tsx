@@ -6,7 +6,11 @@ export interface Column<T> {
   header: ReactNode;
   /** Renders the row's cell. */
   cell: (row: T) => ReactNode;
-  /** Class for the column's `<td>`s; `"n"` sets mono, tabular, no-wrap numbers. */
+  /**
+   * Class for the column's `<td>`s; `"n"` sets mono, tabular, no-wrap
+   * numbers, and `"wide"` gives the cell a line of its own when a stacked
+   * table reflows on a phone.
+   */
   className?: string;
 }
 
@@ -53,6 +57,12 @@ export interface DataTableProps<T> {
   select?: TableSelect<T>;
   /** Message when `rows` is empty; defaults to "Nothing to show." */
   empty?: ReactNode;
+  /**
+   * How the table fits a phone: `scroll` (the default) scrolls sideways
+   * inside its box with the first column pinned; `stack` reflows each row
+   * into a block whose cells carry their column's name.
+   */
+  layout?: "scroll" | "stack";
 }
 
 /**
@@ -131,7 +141,15 @@ export function TableTools<T>({ filter, select }: TableToolsProps<T>) {
  * A table with optional controlled text and select filters. With no rows it
  * shows `empty`; when the filters exclude every row it says "Nothing matches."
  */
-export function DataTable<T>({ columns, rows, rowKey, filter, select, empty }: DataTableProps<T>) {
+export function DataTable<T>({
+  columns,
+  rows,
+  rowKey,
+  filter,
+  select,
+  empty,
+  layout = "scroll",
+}: DataTableProps<T>) {
   const kept = applyFilters(rows, filter, select);
   const message = rows.length === 0 ? (empty ?? "Nothing to show.") : "Nothing matches.";
 
@@ -139,7 +157,7 @@ export function DataTable<T>({ columns, rows, rowKey, filter, select, empty }: D
     <>
       <TableTools filter={filter} select={select} />
       <div className="tablewrap">
-        <table>
+        <table className={layout}>
           <thead>
             <tr>
               {columns.map((c, i) => (
@@ -152,7 +170,11 @@ export function DataTable<T>({ columns, rows, rowKey, filter, select, empty }: D
               kept.map((row, i) => (
                 <tr key={rowKey(row, i)}>
                   {columns.map((c, j) => (
-                    <td key={j} className={c.className}>
+                    <td
+                      key={j}
+                      className={c.className}
+                      data-label={typeof c.header === "string" ? c.header : undefined}
+                    >
                       {c.cell(row)}
                     </td>
                   ))}

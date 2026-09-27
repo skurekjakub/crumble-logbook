@@ -52,7 +52,7 @@ const card = async (slug: string) =>
 describe("/research", () => {
   it("sits among the shared sections with the generic chrome", async () => {
     await renderRoute("/research", API);
-    const modes = screen.getByRole("navigation", { name: "Game modes and shared sections" });
+    const modes = screen.getByRole("navigation", { name: "Logbook" });
     expect(within(modes).getByRole("link", { name: "Research" })).toHaveAttribute(
       "aria-current",
       "page",
