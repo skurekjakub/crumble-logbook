@@ -2329,5 +2329,124 @@
   "title_en": "Captured 2026-09-27 via agent-browser; raw snapshot in evidence/15-crumbgg/03-rankings-s5-players.txt and 04-player-1.txt",
   "date": "2026-09-27",
   "signal": "public game data"
+ },
+ "web:sugarpocket-bundle-1.4.002": {
+  "url": "https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js",
+  "title": "슈가포켓 번들 내장 스킬·룬 데이터 (클라이언트 1.4.002)",
+  "title_en": "Sugar Pocket bundle's embedded skill and rune dataset (client 1.4.002)",
+  "date": "2026-09-27",
+  "signal": "Per-grade buff and debuff values from the bundle's JSON.parse literal, plus the stat, skill-damage, buff and debuff-chance formulas from its code; capture, sha256 and quoted formulas in evidence/19-sugarpocket/"
+ },
+ "dc:67285": {
+  "url": "https://m.dcinside.com/board/projectcc/67285",
+  "title": "[일반] 길드토벌전보스 클뜯 해봤는데",
+  "title_en": "I datamined the Guild Conquest boss",
+  "date": "2026-09-14",
+  "signal": "relevance 3/3"
+ },
+ "dc:67659": {
+  "url": "https://m.dcinside.com/board/projectcc/67659",
+  "title": "[일반] 방체 연구 어느정도 해야 토벌전 30초버텨짐?",
+  "title_en": "How much DEF/HP research to survive the 30 s?",
+  "date": "2026-09-15",
+  "signal": "relevance 3/3"
+ },
+ "dc:69201": {
+  "url": "https://m.dcinside.com/board/projectcc/69201",
+  "title": "[일반] 100배도 안뽑히는데 어케하노",
+  "title_en": "Can't even pull 100x, what do I do",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "dc:69250": {
+  "url": "https://m.dcinside.com/board/projectcc/69250",
+  "title": "[일반] 17초에 안죽으려면 투력 몇정도임?",
+  "title_en": "How much power to not die at 17s?",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "dc:69358": {
+  "url": "https://m.dcinside.com/board/projectcc/69358",
+  "title": "[일반] 토벌전 17초",
+  "title_en": "Guild Conquest 17s",
+  "date": "2026-09-17",
+  "signal": "relevance 1/3"
+ },
+ "dc:70123": {
+  "url": "https://m.dcinside.com/board/projectcc/70123",
+  "title": "[일반] 300m따리 토벌",
+  "title_en": "Guild Conquest at 300M power",
+  "date": "2026-09-19",
+  "signal": "relevance 1/3"
+ },
+ "dc:70607": {
+  "url": "https://m.dcinside.com/board/projectcc/70607",
+  "title": "[일반] 토벌 30초에 자꾸 다 죽음",
+  "title_en": "Guild Conquest: everyone keeps dying at 30s",
+  "date": "2026-09-19",
+  "signal": "relevance 3/3"
+ },
+ "dc:70625": {
+  "url": "https://m.dcinside.com/board/projectcc/70625",
+  "title": "[일반] 1렙 준 애들은 30초 쿵찍에 무조건 뒤지네",
+  "title_en": "Lv.1 fillers always die to the 30s slam",
+  "date": "2026-09-19",
+  "signal": "relevance 2/3"
+ },
+ "dc:70832": {
+  "url": "https://m.dcinside.com/board/projectcc/70832",
+  "title": "[✋️질문] 토벌 우유 질문",
+  "title_en": "Question about Milk in Guild Conquest",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "dc:71028": {
+  "url": "https://m.dcinside.com/board/projectcc/71028",
+  "title": "[일반] 허브 17초에 죽는데 닥 정전임?",
+  "title_en": "Herb dies at 17s, is it Dark Choco or Jungle Warrior?",
+  "date": "2026-09-20",
+  "signal": "relevance 1/3"
+ },
+ "dc:71219": {
+  "url": "https://m.dcinside.com/board/projectcc/71219",
+  "title": "[일반] 토벌 27~30초 버티는 체방이 어느정도임?",
+  "title_en": "How much HP/DEF to survive the 27-30s window?",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "dc:71383": {
+  "url": "https://m.dcinside.com/board/projectcc/71383",
+  "title": "[일반] 토벌전 보스 시간 지날수록 피감 늘어남",
+  "title_en": "The Guild Conquest boss's damage reduction rises over time",
+  "date": "2026-09-21",
+  "signal": "relevance 3/3"
+ },
+ "dc:72759": {
+  "url": "https://m.dcinside.com/board/projectcc/72759",
+  "title": "[일반] 크럼블 우유 무조건 앞으로 보내는 법 깨달았다",
+  "title_en": "Found a way to always push Milk to the front",
+  "date": "2026-09-22",
+  "signal": "relevance 3/3"
+ },
+ "dc:74793": {
+  "url": "https://m.dcinside.com/board/projectcc/74793",
+  "title": "[일반] 18초에 애들 죽는데 렙업 시켜야함?",
+  "title_en": "Cookies start dying at 18s, should I level them?",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:74804": {
+  "url": "https://m.dcinside.com/board/projectcc/74804",
+  "title": "[일반] 석류 씨발련아",
+  "title_en": "Damn you, Pomegranate",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:75547": {
+  "url": "https://m.dcinside.com/board/projectcc/75547",
+  "title": "[✋️질문] 토벌 투력 몇쯤돼야 30초에 안뒤짐?",
+  "title_en": "What power is needed to not die at 30s?",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
  }
 }

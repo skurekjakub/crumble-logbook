@@ -43,6 +43,13 @@ export type RankingBoard = (typeof RANKING_BOARD)[number];
 export const CONFIDENCE = ["high", "medium", "low"] as const;
 export type Confidence = (typeof CONFIDENCE)[number];
 
+/**
+ * What a buff's value is a fraction of: a fixed amount, or the caster's
+ * ATK or HP. Mirrors the game data's `base` field.
+ */
+export const BUFF_BASE = ["Fixed", "CastersAttackPoint", "CastersHealthPoint"] as const;
+export type BuffBase = (typeof BUFF_BASE)[number];
+
 /** Lifecycle status of a background job. */
 export const JOB_STATUS = ["queued", "running", "done", "failed", "cancelled"] as const;
 export type JobStatus = (typeof JOB_STATUS)[number];
@@ -58,5 +65,7 @@ export const CITED_ENTITY = [
   "timeline_event",
   "takeaway",
   "recommendation",
+  "fight_event",
+  "buff_value",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];

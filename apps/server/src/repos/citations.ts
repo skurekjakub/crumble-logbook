@@ -2,6 +2,7 @@ import type { CitationRow, CitedEntity } from "@crumble/schema";
 import { citations } from "@crumble/schema";
 import { and, count, eq, inArray } from "drizzle-orm";
 import type { Db } from "../db/client";
+import { resetIds } from "./sequence";
 
 /** Links from cited entities (decks, mechanics, …) to the sources that back them. */
 export interface CitationsRepo {
@@ -32,7 +33,7 @@ export interface CitationsRepo {
   countForSource(sourceId: string): number;
   /** Returns the total number of citations. */
   count(): number;
-  /** Deletes every citation. */
+  /** Deletes every citation and resets the citation id counter. */
   clear(): void;
   /** Returns every citation row. */
   all(): CitationRow[];
@@ -89,6 +90,7 @@ export function createCitationsRepo(db: Db): CitationsRepo {
     count: () => db.select({ n: count() }).from(citations).get()!.n,
     clear: () => {
       db.delete(citations).run();
+      resetIds(db, citations);
     },
     all: () => db.select().from(citations).all(),
     insertRaw: (rows) => {

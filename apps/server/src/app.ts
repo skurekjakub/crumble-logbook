@@ -14,9 +14,11 @@ import {
 } from "@crumble/schema";
 import { Hono } from "hono";
 import { ConflictError, NotFoundError, UnknownRefsError } from "./errors";
+import { buffValuesRouter } from "./routes/buff-values";
 import { contentRouter } from "./routes/content";
 import { decksRouter } from "./routes/decks";
 import { exportRouter } from "./routes/export";
+import { fightEventsRouter } from "./routes/fight-events";
 import { glossaryRouter } from "./routes/glossary";
 import { rankingsRouter } from "./routes/rankings";
 import { recordsRouter } from "./routes/records";
@@ -26,8 +28,8 @@ import { sourcesRouter } from "./routes/sources";
 import type { Services } from "./services";
 
 /**
- * Builds the server's Hono app: the cited-content and score routes under
- * `/api`, and a shared error mapping.
+ * Builds the server's Hono app: the cited-content, score and boss-data
+ * routes under `/api`, and a shared error mapping.
  *
  * `NotFoundError` maps to 404, `UnknownRefsError` to 422, `ConflictError` to
  * 409; anything else is logged with `console.error` and maps to 500.
@@ -66,6 +68,8 @@ export function createApp(services: Services) {
       }),
     )
     .route("/scores", scoresRouter(services.scores))
+    .route("/fight-events", fightEventsRouter(services.fightEvents))
+    .route("/buff-values", buffValuesRouter(services.buffValues))
     .route("/decks", decksRouter(services.decks))
     .route("/rune-builds", runeBuildsRouter(services.runeBuilds))
     .route("/sources", sourcesRouter(services.sources))

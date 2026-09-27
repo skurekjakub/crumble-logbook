@@ -7,8 +7,10 @@ import type { GlossaryInsert } from "../repos/glossary";
 import type { RankingInsert } from "../repos/rankings";
 import type { SourceInsert } from "../repos/sources";
 import { normalizeName } from "../services/names";
+import { readBuffValues, readFightEvents } from "./boss";
 import { findCapture } from "./captures";
 import { loadSummaries } from "./extractions";
+import { parseFile, readJson } from "./files";
 import type { ImportManifest } from "./manifest";
 import { formatIssues, mapRankingRow, readManifest } from "./manifest";
 import { mapDeck, mapGearSlot, mapGlossary, mapMeta, mapScore, mapSource } from "./seed/map";
@@ -83,32 +85,6 @@ type CuratedFiles = Record<keyof Curated, string>;
 interface RankingBatch {
   file: string;
   rows: RankingInsert[];
-}
-
-/**
- * Reads a JSON file of the record.
- * @param recordDir - absolute path to the record directory
- * @param file - the file's path relative to `recordDir`, as errors name it
- * @throws {ImportError} if the file is missing or isn't valid JSON
- */
-function readJson(recordDir: string, file: string): unknown {
-  const path = join(recordDir, file);
-  if (!existsSync(path)) throw new ImportError(file, null, "file not found");
-  try {
-    return JSON.parse(readFileSync(path, "utf-8"));
-  } catch (err) {
-    throw new ImportError(file, null, (err as Error).message);
-  }
-}
-
-/**
- * Validates a whole-file value with `schema`.
- * @throws {ImportError} naming `file` and every issue's path
- */
-function parseFile<S extends z.ZodType>(file: string, raw: unknown, schema: S): z.output<S> {
-  const result = schema.safeParse(raw);
-  if (!result.success) throw new ImportError(file, null, formatIssues(result.error));
-  return result.data;
 }
 
 /**
@@ -212,7 +188,10 @@ function checkRefs(data: Curated, files: CuratedFiles): void {
 
 /**
  * Parses and maps every ranking TSV the manifest lists, checking each row's
- * source id against the curated sources.
+ * source id against the curated sources, and that no two rows, across every
+ * TSV, share a `(board, season, rank, capturedAt)` key. A `null` season
+ * counts as a value here, unlike in the table's unique index, where two
+ * `null`s never collide.
  * @throws {ImportError} naming the TSV (and line) of the first failure
  */
 function readRankings(
@@ -220,6 +199,7 @@ function readRankings(
   manifest: ImportManifest,
   sourceIds: Set<string>,
 ): RankingBatch[] {
+  const seen = new Map<string, string>();
   return manifest.rankings.map((spec) => {
     const path = join(recordDir, spec.file);
     if (!existsSync(path)) throw new ImportError(spec.file, null, "file not found");
@@ -240,6 +220,16 @@ function readRankings(
       if (!sourceIds.has(row.sourceId)) {
         throw new ImportError(spec.file, line, `unknown source ids: ${row.sourceId}`);
       }
+      const key = `board ${row.board}, season ${row.season ?? "null"}, rank ${row.rank}, captured ${row.capturedAt}`;
+      const first = seen.get(key);
+      if (first !== undefined) {
+        throw new ImportError(
+          spec.file,
+          line,
+          `duplicate ranking (${key}), first seen at ${first}`,
+        );
+      }
+      seen.set(key, `${spec.file} ${line}`);
       return row;
     });
     return { file: spec.file, rows };
@@ -284,6 +274,8 @@ function glossaryWarnings(entries: GlossaryInsert[]): string[] {
 function contentRepos(repos: Repos): Array<{ count(): number; clear(): void }> {
   return [
     repos.citations,
+    repos.fightEvents,
+    repos.buffValues,
     repos.rankings,
     repos.runeBuilds,
     repos.scores,
@@ -304,8 +296,9 @@ function contentRepos(repos: Repos): Array<{ count(): number; clear(): void }> {
  * Loads a research record into the database: its curated dataset (sources,
  * glossary, the record row and its recommendation, decks, rune builds,
  * gear, scores, mechanics, RNG factors, timeline and takeaways, each with
- * its citations) and its ranking TSVs. Sources get their English summary
- * from the record's extractions and, for `dc`/`nv` ids, the path of their
+ * its citations), its ranking TSVs, and, when the manifest names them, its
+ * fight timeline and buff capture. Sources get their English summary from
+ * the record's extractions and, for `dc`/`nv` ids, the path of their
  * evidence capture.
  *
  * Everything is read and checked before anything is written, and every
@@ -315,11 +308,13 @@ function contentRepos(repos: Repos): Array<{ count(): number; clear(): void }> {
  * @param store - the store to load into
  * @param recordDir - absolute path to the record directory (the one
  *   holding `import.json`)
- * @param opts - `replace: true` clears every content table first
+ * @param opts - `replace: true` clears every content table first and
+ *   resets its id counter, so the result matches a fresh import, ids
+ *   included
  * @returns rows written per table, and non-fatal warnings
  * @throws {ImportError} naming the file and row, if a file is missing or
- *   malformed, a row fails its schema, or a row cites an unknown source or
- *   deck
+ *   malformed, a row fails its schema, a row cites an unknown source or
+ *   deck, or two ranking rows share a key
  * @throws {ImportError} `"database already has content; pass --replace to
  *   load record <slug> over it"` if any content table has rows and
  *   `replace` isn't set
@@ -347,6 +342,17 @@ export function importRecord(
   const glossary = data.glossary.map(mapGlossary);
   const { record, recommendation } = mapMeta(data.meta, manifest.record);
   const warnings = glossaryWarnings(glossary);
+  const fightEvents = manifest.fightEvents
+    ? readFightEvents(recordDir, manifest.fightEvents, sourceIds)
+    : [];
+  const buffValues = manifest.buffValues
+    ? readBuffValues(
+        recordDir,
+        manifest.buffValues,
+        sourceIds,
+        new Set(glossary.map((entry) => entry.kr)),
+      )
+    : [];
 
   // See `DeckService.create`'s implementation for why the inner return is
   // cast `as never` and the outer call `as ImportCounts`.
@@ -381,6 +387,8 @@ export function importRecord(
       timeline: 0,
       takeaways: 0,
       recommendations: 0,
+      fightEvents: 0,
+      buffValues: 0,
       citations: 0,
     };
 
@@ -476,6 +484,18 @@ export function importRecord(
 
     for (const batch of rankings) repos.rankings.insertMany(batch.rows);
     n.rankings = rankings.reduce((total, batch) => total + batch.rows.length, 0);
+
+    for (const { values, sources: cited } of fightEvents) {
+      const row = repos.fightEvents.insert(values);
+      repos.citations.replace("fight_event", String(row.id), cited);
+    }
+    n.fightEvents = fightEvents.length;
+
+    for (const { values, sources: cited } of buffValues) {
+      const row = repos.buffValues.insert(values);
+      repos.citations.replace("buff_value", String(row.id), cited);
+    }
+    n.buffValues = buffValues.length;
 
     n.citations = repos.citations.count();
     return n as never;

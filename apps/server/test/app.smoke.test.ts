@@ -5,9 +5,11 @@ import { repoRoot } from "../src/config";
 import { importRecord } from "../src/importers/import-record";
 import type { Store } from "../src/repos";
 import { createServices } from "../src/services";
+import type { BuffValueView } from "../src/services/buff-values";
 import type { DeckView } from "../src/services/decks";
 import type { Snapshot } from "../src/services/export";
 import { exportSnapshot, restoreSnapshot } from "../src/services/export";
+import type { FightEventView } from "../src/services/fight-events";
 import type { ScoreView } from "../src/services/scores";
 import { readJson, testStore } from "./helpers";
 
@@ -44,6 +46,25 @@ describe("the API over imported record 001", () => {
     const top = scores.find((s) => s.verified && s.deckId === "cherry");
     expect(Math.floor(top!.damageG)).toBe(1999);
     expect(top!.ratio).toBe(Math.round(top!.damageG / top!.powerG!));
+  });
+
+  it("serves the Piñata's fight events in elapsed-time order, untimed ones last", async () => {
+    const res = await app.request("/api/fight-events?boss=pinata");
+    expect(res.status).toBe(200);
+    const events = await readJson<FightEventView[]>(res);
+    expect(events.length).toBeGreaterThan(0);
+    const timed = events.filter((e) => e.tElapsed !== null).map((e) => e.tElapsed!);
+    expect(timed).toEqual([...timed].sort((a, b) => a - b));
+    expect(events.slice(timed.length).every((e) => e.tElapsed === null)).toBe(true);
+    expect(events.every((e) => e.sources.length > 0)).toBe(true);
+  });
+
+  it("serves Tea Knight's buff values with the cookie's English name", async () => {
+    const res = await app.request(`/api/buff-values?cookie=${encodeURIComponent("실론")}`);
+    expect(res.status).toBe(200);
+    const buffs = await readJson<BuffValueView[]>(res);
+    expect(buffs.length).toBeGreaterThan(0);
+    expect(buffs.every((b) => b.en === "Tea Knight Cookie")).toBe(true);
   });
 
   it("serves an export that restores into a fresh database unchanged", async () => {

@@ -1,4 +1,6 @@
 import type {
+  BuffValueRow,
+  FightEventRow,
   GearRecRow,
   MechanicRow,
   RecommendationRow,
@@ -8,6 +10,8 @@ import type {
   TimelineEventRow,
 } from "@crumble/schema";
 import {
+  buffValues,
+  fightEvents,
   gearRecs,
   mechanics,
   recommendations,
@@ -17,7 +21,7 @@ import {
   timeline,
 } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
-import { asc } from "drizzle-orm";
+import { asc, sql } from "drizzle-orm";
 import type { Db } from "../db/client";
 import type { CitationsRepo } from "./citations";
 import { createCitationsRepo } from "./citations";
@@ -52,6 +56,10 @@ export interface Repos {
   gearRecs: TableRepo<GearRecRow, InferInsertModel<typeof gearRecs>>;
   recommendations: TableRepo<RecommendationRow, InferInsertModel<typeof recommendations>>;
   scores: TableRepo<ScoreRow, InferInsertModel<typeof scores>>;
+  /** Fight events, in elapsed-time order; events with no time come last. */
+  fightEvents: TableRepo<FightEventRow, InferInsertModel<typeof fightEvents>>;
+  /** Buff values, ordered by cookie, effect type, then skill grade. */
+  buffValues: TableRepo<BuffValueRow, InferInsertModel<typeof buffValues>>;
 }
 
 /**
@@ -75,6 +83,17 @@ export function createRepos(db: Db): Repos {
     gearRecs: createTableRepo(db, gearRecs),
     recommendations: createTableRepo(db, recommendations),
     scores: createTableRepo(db, scores),
+    fightEvents: createTableRepo(db, fightEvents, [
+      sql`${fightEvents.tElapsed} is null`,
+      asc(fightEvents.tElapsed),
+      asc(fightEvents.id),
+    ]),
+    buffValues: createTableRepo(db, buffValues, [
+      asc(buffValues.cookieKr),
+      asc(buffValues.effectType),
+      asc(buffValues.skillGrade),
+      asc(buffValues.id),
+    ]),
   };
 }
 

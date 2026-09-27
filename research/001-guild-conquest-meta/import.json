@@ -11,6 +11,7 @@
     { "site": "dc", "dir": "evidence/03-dc-posts", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/11-dc-posts-extra", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/16-top-players/dc", "file": "{id}.md" },
+    { "site": "dc", "dir": "evidence/18-kr-encounter/dc", "file": "{id}.md" },
     { "site": "nv", "dir": "evidence/07-nv-posts", "file": "nv-{id}.md" },
     { "site": "nv", "dir": "evidence/16-top-players/nv", "file": "nv-{id}.md" }
   ],
@@ -54,5 +55,27 @@
         "value": "combat_power_G"
       }
     }
-  ]
+  ],
+  "fightEvents": {
+    "file": "evidence/08-extract/kr-encounter.json",
+    "boss": "pinata",
+    "fightSeconds": 60,
+    "countdown": { "mob_wave_hit": 27, "chip_deaths_begin": 19 },
+    "sourceAliases": { "top-players:76583": "dc:76583" }
+  },
+  "buffValues": {
+    "file": "evidence/19-sugarpocket/skills-runes-1.4.002.json",
+    "catalog": "evidence/12-glossary-src/cookieruncrumble_app_api_catalog_gameplay.json",
+    "source": "web:sugarpocket-bundle-1.4.002",
+    "cookies": [
+      "석류맛 쿠키",
+      "바삭튼튼 소아과 의사 우유맛 쿠키",
+      "마카롱맛 쿠키",
+      "피겨여왕맛 쿠키",
+      "치즈케이크맛 쿠키",
+      "실론나이트 쿠키",
+      "다크초코 쿠키"
+    ],
+    "debuffEffects": { "방어력이 감소합니다.": "DefensePointReductionChance" }
+  }
 }

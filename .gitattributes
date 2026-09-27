@@ -1,1 +1,4 @@
 * text=auto eol=lf
+
+# Captures whose README records a sha256 keep their exact bytes.
+research/001-guild-conquest-meta/evidence/19-sugarpocket/*.json -text

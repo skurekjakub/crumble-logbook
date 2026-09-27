@@ -3,8 +3,9 @@
  * <slug> [--replace]`, where `<slug>` names a directory under `research/`.
  * Prints the rows written per table and any warnings. Without `--replace`
  * it refuses a database that already has content. Exits 1 with the
- * `ImportError` message (file, row and reason) on a failed import, or with
- * a usage line when no slug is given; nothing is written in either case.
+ * `ImportError` message (file, row and reason) on a failed import, with
+ * `import failed: <message>` and no stack trace on any other error, or with
+ * a usage line when no slug is given; nothing is written in any case.
  */
 import { join } from "node:path";
 import { dbPath, researchDir } from "../config";
@@ -28,7 +29,7 @@ try {
   for (const [table, count] of Object.entries(counts)) console.log(`${table}: ${count}`);
   for (const warning of warnings) console.warn(`warning: ${warning}`);
 } catch (err) {
-  if (!(err instanceof ImportError)) throw err;
-  console.error(err.message);
+  if (err instanceof ImportError) console.error(err.message);
+  else console.error(`import failed: ${err instanceof Error ? err.message : String(err)}`);
   process.exit(1);
 }

@@ -9,6 +9,7 @@ import { deckCookies, deckNotes, deckPets, decks } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { asc, count, eq, inArray, max } from "drizzle-orm";
 import type { Db } from "../db/client";
+import { resetIds } from "./sequence";
 
 /** Insert payload for {@link DecksRepo.insert} and {@link DecksRepo.update}. */
 export type DeckInsert = InferInsertModel<typeof decks>;
@@ -105,7 +106,10 @@ export interface DecksRepo {
   replaceNotes(deckId: string, notes: DeckNoteInsert[]): void;
   /** Returns the number of decks. */
   count(): number;
-  /** Deletes every deck, and (via cascade) every cookie, pet and note. */
+  /**
+   * Deletes every deck, and (via cascade) every cookie, pet and note, and
+   * resets the cookie, pet and note id counters.
+   */
   clear(): void;
   /** Returns every cookie slot across every deck, ordered by deck then `position`; for export. */
   allCookies(): DeckCookieRow[];
@@ -223,6 +227,7 @@ export function createDecksRepo(db: Db): DecksRepo {
     count: () => db.select({ n: count() }).from(decks).get()!.n,
     clear: () => {
       db.delete(decks).run();
+      resetIds(db, deckCookies, deckPets, deckNotes);
     },
     allCookies: () =>
       db
