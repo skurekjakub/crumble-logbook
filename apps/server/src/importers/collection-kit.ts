@@ -39,8 +39,6 @@ export interface ParseContext {
 export interface CheckContext {
   /** Each curated deck's game mode, by deck id. */
   deckModes: ReadonlyMap<string, GameMode>;
-  /** The record's curated power brackets; empty when it has none. */
-  powerBrackets: ReadonlyArray<{ minRatioPct: number; damagePct: number }>;
 }
 
 /** What a collection's rows are mapped with, besides the rows themselves. */

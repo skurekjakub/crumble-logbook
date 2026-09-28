@@ -112,10 +112,6 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
   assertKnown("deck", "decks");
   const context: CheckContext = {
     deckModes: new Map((parsed.decks ?? []).map((deck) => [deck.id, deck.mode])),
-    powerBrackets: (parsed.powerBrackets?.brackets ?? []).map((b) => ({
-      minRatioPct: b.min_ratio_pct,
-      damagePct: b.damage_pct,
-    })),
   };
   for (const [name, collection] of ORDERED) {
     if (parsed[name] !== undefined) collection.check?.(files[name]!, parsed[name], context);

@@ -234,6 +234,24 @@ describe("the stage collections' checks", FULL_IMPORT, () => {
     expect(() => importRecord(testStore(), dir)).toThrow(/stage-chapters\.json.*power_for_35/);
   });
 
+  it("checks the entry powers of a record without a brackets file against the stored brackets", () => {
+    const withoutBrackets = {
+      "manifest.json": (file: Record<string, unknown>) => {
+        delete (file.collections as Record<string, string>).powerBrackets;
+      },
+    };
+    expect(() => importRecord(testStore(), stageCopy("907-stage-copy", withoutBrackets))).toThrow(
+      /stage-chapters\.json \[0\]: power_for_\d+: no power bracket keeps \d+%/,
+    );
+    const store = testStore();
+    importRecord(store, stageCopy("908-stage-copy"));
+    const { counts } = importRecord(
+      store,
+      stageCopy("909-stage-copy", { ...ownDecks("-e"), ...withoutBrackets }),
+    );
+    expect(counts).toMatchObject({ stageClears: clears.length, powerBrackets: 0 });
+  });
+
   it("fails a zone slot or a clear that names a deck of another mode", () => {
     const dir = stageCopy("901-stage-copy", {
       "decks.json": (file) => {

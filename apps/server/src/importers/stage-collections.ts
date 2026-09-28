@@ -25,7 +25,7 @@ import type { CheckContext, RowRefs } from "./collection-kit";
 import { collection } from "./collection-kit";
 import { parseFile } from "./files";
 import { insertGameFacts } from "./shared-facts";
-import type { CitedValues } from "./steps";
+import type { CitedValues, WriteStep } from "./steps";
 import { insertCited } from "./steps";
 
 /** The source ids a curated row or file cites: at least one. */
@@ -58,7 +58,9 @@ export type SeedPowerBrackets = z.output<typeof seedPowerBrackets>;
  * `stage-chapters.json`: one row per chapter, by its last stage, citing the
  * file's `sources`. `power_for_N` is the least team power in the bracket
  * that keeps N% of damage, and is checked, not stored: the app derives it
- * from `recommended_power` and the power brackets.
+ * from `recommended_power` and the power brackets. The check reads the
+ * stored brackets, so a record without `power-brackets.json` is checked
+ * against the ones another record loaded.
  */
 export const seedStageChapters = z.strictObject({
   ...header,
@@ -229,40 +231,53 @@ function assertDistinct(file: string, what: string, values: readonly number[]): 
   });
 }
 
+/** A row's `power_for_N` fields, to check against its recommended power. */
+interface EntryPowers {
+  /** The row, as errors name it. */
+  row: string | number;
+  /** The row's recommended power. */
+  recommended: number;
+  /** `power_for_N` values, by N. */
+  entries: Readonly<Record<number, number>>;
+}
+
 /**
- * Checks a row's `power_for_N` fields against its recommended power and
- * the record's power brackets: each must be the entry power of the bracket
- * that keeps N% of damage.
+ * A step checking rows' `power_for_N` fields against the power brackets
+ * stored when it runs (the record's own, written before it, or those
+ * another record loaded): each must be the entry power of the bracket that
+ * keeps N% of damage at the row's recommended power. It writes nothing.
  *
  * @param file - the file, as errors name it
- * @param row - the row, as errors name it
- * @param recommended - the row's recommended power
- * @param entries - `power_for_N` values, by N
- * @param context - the record's power brackets
- * @throws {ImportError} naming the file and row, if the record has no bracket
- *   keeping N%, or a value isn't that bracket's entry power
+ * @param rows - the rows' entry powers
+ * @returns the step
+ * @throws {ImportError} (from the step) naming the file and row, if no
+ *   stored bracket keeps N%, or a value isn't that bracket's entry power;
+ *   the import then writes nothing
  */
-function checkEntryPowers(
-  file: string,
-  row: string | number,
-  recommended: number,
-  entries: Readonly<Record<number, number>>,
-  { powerBrackets }: CheckContext,
-): void {
-  for (const [damage, value] of Object.entries(entries)) {
-    const bracket = powerBrackets.find((b) => b.damagePct === Number(damage));
-    if (!bracket) {
-      throw new ImportError(file, row, `power_for_${damage}: no power bracket keeps ${damage}%`);
+function checkEntryPowers(file: string, rows: readonly EntryPowers[]): WriteStep {
+  return (repos) => {
+    const brackets = repos.powerBrackets.list();
+    for (const { row, recommended, entries } of rows) {
+      for (const [damage, value] of Object.entries(entries)) {
+        const bracket = brackets.find((b) => b.damagePct === Number(damage));
+        if (!bracket) {
+          throw new ImportError(
+            file,
+            row,
+            `power_for_${damage}: no power bracket keeps ${damage}%`,
+          );
+        }
+        const expected = entryPower(recommended, bracket.minRatioPct);
+        if (value !== expected) {
+          throw new ImportError(
+            file,
+            row,
+            `power_for_${damage} is ${value}; ${bracket.minRatioPct}% of ${recommended} is ${expected}`,
+          );
+        }
+      }
     }
-    const expected = entryPower(recommended, bracket.minRatioPct);
-    if (value !== expected) {
-      throw new ImportError(
-        file,
-        row,
-        `power_for_${damage} is ${value}; ${bracket.minRatioPct}% of ${recommended} is ${expected}`,
-      );
-    }
-  }
+  };
 }
 
 /**
@@ -342,7 +357,7 @@ export const STAGE_COLLECTIONS = {
     /** @inheritdoc */
     refs: ({ sources }): RowRefs[] => [{ row: "sources", sources }],
     /** @inheritdoc */
-    check: (file, { chapters }, context) => {
+    check: (file, { chapters }) => {
       assertDistinct(
         file,
         "chapter",
@@ -355,8 +370,6 @@ export const STAGE_COLLECTIONS = {
         if (stageOf(c.last_stage).chapter !== c.chapter) {
           throw new ImportError(file, index, `last_stage ${c.last_stage} isn't in the chapter`);
         }
-        const entries = { 55: c.power_for_55, 35: c.power_for_35, 15: c.power_for_15 };
-        checkEntryPowers(file, index, c.recommended_power, entries, context);
       });
     },
     /** @inheritdoc */
@@ -373,6 +386,14 @@ export const STAGE_COLLECTIONS = {
         focusReq: c.focus_req,
       }));
       return [
+        checkEntryPowers(
+          file,
+          chapters.map((c, index) => ({
+            row: index,
+            recommended: c.recommended_power,
+            entries: { 55: c.power_for_55, 35: c.power_for_35, 15: c.power_for_15 },
+          })),
+        ),
         insertGameFacts(
           {
             key: "stageChapters",
@@ -405,7 +426,7 @@ export const STAGE_COLLECTIONS = {
       ...(unlock ? [{ row: "unlock", sources: unlock.sources }] : []),
     ],
     /** @inheritdoc */
-    check: (file, { groups, seasons, levels }, context) => {
+    check: (file, { groups, seasons, levels }) => {
       assertDistinct(
         file,
         "level",
@@ -421,15 +442,19 @@ export const STAGE_COLLECTIONS = {
           throw new ImportError(file, `seasons ${index}`, `unknown groupId ${s.groupId}`);
         }
       });
-      levels.forEach((l, index) => {
-        const entries = { 35: l.power_for_35, 15: l.power_for_15 };
-        checkEntryPowers(file, `levels ${index}`, l.recommended_power, entries, context);
-      });
     },
     /** @inheritdoc */
     prepare: ({ groups, seasons, levels, sources, unlock }, { file }) => {
       const group = new Map(groups.map((g) => [g.id, g]));
       return [
+        checkEntryPowers(
+          file,
+          levels.map((l, index) => ({
+            row: `levels ${index}`,
+            recommended: l.recommended_power,
+            entries: { 35: l.power_for_35, 15: l.power_for_15 },
+          })),
+        ),
         insertGameFacts(
           {
             key: "riftLevels",
