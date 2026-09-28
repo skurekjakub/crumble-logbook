@@ -1,0 +1,807 @@
+{
+ "about": "Cookie level curve from the game data (ATK, DEF and HP % are equal at every level). exp_for_level is the EXP needed to reach the level from the one before.",
+ "source": "research/001-guild-conquest-meta/evidence/12-glossary-src/cookieruncrumble_app_api_catalog_gameplay.json",
+ "game_version": "1.4.002",
+ "levels": [
+  {
+   "level": 1,
+   "exp_for_level": 0,
+   "exp_cumulative": 0,
+   "stat_pct": 0,
+   "stat_pct_gain": 0.0,
+   "stat_pct_gain_per_million_exp": null
+  },
+  {
+   "level": 2,
+   "exp_for_level": 500,
+   "exp_cumulative": 500,
+   "stat_pct": 6.91,
+   "stat_pct_gain": 6.91,
+   "stat_pct_gain_per_million_exp": 13820.0
+  },
+  {
+   "level": 3,
+   "exp_for_level": 532,
+   "exp_cumulative": 1032,
+   "stat_pct": 13.98,
+   "stat_pct_gain": 7.07,
+   "stat_pct_gain_per_million_exp": 13289.474
+  },
+  {
+   "level": 4,
+   "exp_for_level": 566,
+   "exp_cumulative": 1598,
+   "stat_pct": 21.22,
+   "stat_pct_gain": 7.24,
+   "stat_pct_gain_per_million_exp": 12791.519
+  },
+  {
+   "level": 5,
+   "exp_for_level": 603,
+   "exp_cumulative": 2201,
+   "stat_pct": 28.63,
+   "stat_pct_gain": 7.41,
+   "stat_pct_gain_per_million_exp": 12288.557
+  },
+  {
+   "level": 6,
+   "exp_for_level": 642,
+   "exp_cumulative": 2843,
+   "stat_pct": 36.22,
+   "stat_pct_gain": 7.59,
+   "stat_pct_gain_per_million_exp": 11822.43
+  },
+  {
+   "level": 7,
+   "exp_for_level": 684,
+   "exp_cumulative": 3527,
+   "stat_pct": 43.98,
+   "stat_pct_gain": 7.76,
+   "stat_pct_gain_per_million_exp": 11345.029
+  },
+  {
+   "level": 8,
+   "exp_for_level": 730,
+   "exp_cumulative": 4257,
+   "stat_pct": 51.93,
+   "stat_pct_gain": 7.95,
+   "stat_pct_gain_per_million_exp": 10890.411
+  },
+  {
+   "level": 9,
+   "exp_for_level": 779,
+   "exp_cumulative": 5036,
+   "stat_pct": 60.07,
+   "stat_pct_gain": 8.14,
+   "stat_pct_gain_per_million_exp": 10449.294
+  },
+  {
+   "level": 10,
+   "exp_for_level": 832,
+   "exp_cumulative": 5868,
+   "stat_pct": 68.39,
+   "stat_pct_gain": 8.32,
+   "stat_pct_gain_per_million_exp": 10000.0
+  },
+  {
+   "level": 11,
+   "exp_for_level": 889,
+   "exp_cumulative": 6757,
+   "stat_pct": 76.92,
+   "stat_pct_gain": 8.53,
+   "stat_pct_gain_per_million_exp": 9595.051
+  },
+  {
+   "level": 12,
+   "exp_for_level": 951,
+   "exp_cumulative": 7708,
+   "stat_pct": 85.64,
+   "stat_pct_gain": 8.72,
+   "stat_pct_gain_per_million_exp": 9169.295
+  },
+  {
+   "level": 13,
+   "exp_for_level": 1018,
+   "exp_cumulative": 8726,
+   "stat_pct": 94.57,
+   "stat_pct_gain": 8.93,
+   "stat_pct_gain_per_million_exp": 8772.102
+  },
+  {
+   "level": 14,
+   "exp_for_level": 1091,
+   "exp_cumulative": 9817,
+   "stat_pct": 103.71,
+   "stat_pct_gain": 9.14,
+   "stat_pct_gain_per_million_exp": 8377.635
+  },
+  {
+   "level": 15,
+   "exp_for_level": 1170,
+   "exp_cumulative": 10987,
+   "stat_pct": 113.07,
+   "stat_pct_gain": 9.36,
+   "stat_pct_gain_per_million_exp": 8000.0
+  },
+  {
+   "level": 16,
+   "exp_for_level": 1255,
+   "exp_cumulative": 12242,
+   "stat_pct": 122.65,
+   "stat_pct_gain": 9.58,
+   "stat_pct_gain_per_million_exp": 7633.466
+  },
+  {
+   "level": 17,
+   "exp_for_level": 1347,
+   "exp_cumulative": 13589,
+   "stat_pct": 132.45,
+   "stat_pct_gain": 9.8,
+   "stat_pct_gain_per_million_exp": 7275.427
+  },
+  {
+   "level": 18,
+   "exp_for_level": 1447,
+   "exp_cumulative": 15036,
+   "stat_pct": 142.48,
+   "stat_pct_gain": 10.03,
+   "stat_pct_gain_per_million_exp": 6931.583
+  },
+  {
+   "level": 19,
+   "exp_for_level": 1556,
+   "exp_cumulative": 16592,
+   "stat_pct": 152.75,
+   "stat_pct_gain": 10.27,
+   "stat_pct_gain_per_million_exp": 6600.257
+  },
+  {
+   "level": 20,
+   "exp_for_level": 1674,
+   "exp_cumulative": 18266,
+   "stat_pct": 163.27,
+   "stat_pct_gain": 10.52,
+   "stat_pct_gain_per_million_exp": 6284.349
+  },
+  {
+   "level": 21,
+   "exp_for_level": 1802,
+   "exp_cumulative": 20068,
+   "stat_pct": 174.03,
+   "stat_pct_gain": 10.76,
+   "stat_pct_gain_per_million_exp": 5971.143
+  },
+  {
+   "level": 22,
+   "exp_for_level": 1942,
+   "exp_cumulative": 22010,
+   "stat_pct": 185.04,
+   "stat_pct_gain": 11.01,
+   "stat_pct_gain_per_million_exp": 5669.413
+  },
+  {
+   "level": 23,
+   "exp_for_level": 2094,
+   "exp_cumulative": 24104,
+   "stat_pct": 196.32,
+   "stat_pct_gain": 11.28,
+   "stat_pct_gain_per_million_exp": 5386.819
+  },
+  {
+   "level": 24,
+   "exp_for_level": 2260,
+   "exp_cumulative": 26364,
+   "stat_pct": 207.86,
+   "stat_pct_gain": 11.54,
+   "stat_pct_gain_per_million_exp": 5106.195
+  },
+  {
+   "level": 25,
+   "exp_for_level": 2441,
+   "exp_cumulative": 28805,
+   "stat_pct": 219.67,
+   "stat_pct_gain": 11.81,
+   "stat_pct_gain_per_million_exp": 4838.181
+  },
+  {
+   "level": 26,
+   "exp_for_level": 2639,
+   "exp_cumulative": 31444,
+   "stat_pct": 231.77,
+   "stat_pct_gain": 12.1,
+   "stat_pct_gain_per_million_exp": 4585.07
+  },
+  {
+   "level": 27,
+   "exp_for_level": 2855,
+   "exp_cumulative": 34299,
+   "stat_pct": 244.14,
+   "stat_pct_gain": 12.37,
+   "stat_pct_gain_per_million_exp": 4332.75
+  },
+  {
+   "level": 28,
+   "exp_for_level": 3091,
+   "exp_cumulative": 37390,
+   "stat_pct": 256.81,
+   "stat_pct_gain": 12.67,
+   "stat_pct_gain_per_million_exp": 4098.997
+  },
+  {
+   "level": 29,
+   "exp_for_level": 3349,
+   "exp_cumulative": 40739,
+   "stat_pct": 269.78,
+   "stat_pct_gain": 12.97,
+   "stat_pct_gain_per_million_exp": 3872.798
+  },
+  {
+   "level": 30,
+   "exp_for_level": 3632,
+   "exp_cumulative": 44371,
+   "stat_pct": 283.05,
+   "stat_pct_gain": 13.27,
+   "stat_pct_gain_per_million_exp": 3653.634
+  },
+  {
+   "level": 31,
+   "exp_for_level": 3942,
+   "exp_cumulative": 48313,
+   "stat_pct": 296.64,
+   "stat_pct_gain": 13.59,
+   "stat_pct_gain_per_million_exp": 3447.489
+  },
+  {
+   "level": 32,
+   "exp_for_level": 4282,
+   "exp_cumulative": 52595,
+   "stat_pct": 310.55,
+   "stat_pct_gain": 13.91,
+   "stat_pct_gain_per_million_exp": 3248.482
+  },
+  {
+   "level": 33,
+   "exp_for_level": 4655,
+   "exp_cumulative": 57250,
+   "stat_pct": 324.79,
+   "stat_pct_gain": 14.24,
+   "stat_pct_gain_per_million_exp": 3059.076
+  },
+  {
+   "level": 34,
+   "exp_for_level": 5065,
+   "exp_cumulative": 62315,
+   "stat_pct": 339.36,
+   "stat_pct_gain": 14.57,
+   "stat_pct_gain_per_million_exp": 2876.604
+  },
+  {
+   "level": 35,
+   "exp_for_level": 5516,
+   "exp_cumulative": 67831,
+   "stat_pct": 354.27,
+   "stat_pct_gain": 14.91,
+   "stat_pct_gain_per_million_exp": 2703.046
+  },
+  {
+   "level": 36,
+   "exp_for_level": 6012,
+   "exp_cumulative": 73843,
+   "stat_pct": 369.54,
+   "stat_pct_gain": 15.27,
+   "stat_pct_gain_per_million_exp": 2539.92
+  },
+  {
+   "level": 37,
+   "exp_for_level": 6558,
+   "exp_cumulative": 80401,
+   "stat_pct": 385.17,
+   "stat_pct_gain": 15.63,
+   "stat_pct_gain_per_million_exp": 2383.349
+  },
+  {
+   "level": 38,
+   "exp_for_level": 7160,
+   "exp_cumulative": 87561,
+   "stat_pct": 401.16,
+   "stat_pct_gain": 15.99,
+   "stat_pct_gain_per_million_exp": 2233.24
+  },
+  {
+   "level": 39,
+   "exp_for_level": 7824,
+   "exp_cumulative": 95385,
+   "stat_pct": 417.54,
+   "stat_pct_gain": 16.38,
+   "stat_pct_gain_per_million_exp": 2093.558
+  },
+  {
+   "level": 40,
+   "exp_for_level": 8557,
+   "exp_cumulative": 103942,
+   "stat_pct": 434.3,
+   "stat_pct_gain": 16.76,
+   "stat_pct_gain_per_million_exp": 1958.63
+  },
+  {
+   "level": 41,
+   "exp_for_level": 9367,
+   "exp_cumulative": 113309,
+   "stat_pct": 451.45,
+   "stat_pct_gain": 17.15,
+   "stat_pct_gain_per_million_exp": 1830.896
+  },
+  {
+   "level": 42,
+   "exp_for_level": 10263,
+   "exp_cumulative": 123572,
+   "stat_pct": 469.01,
+   "stat_pct_gain": 17.56,
+   "stat_pct_gain_per_million_exp": 1711.001
+  },
+  {
+   "level": 43,
+   "exp_for_level": 11256,
+   "exp_cumulative": 134828,
+   "stat_pct": 486.98,
+   "stat_pct_gain": 17.97,
+   "stat_pct_gain_per_million_exp": 1596.482
+  },
+  {
+   "level": 44,
+   "exp_for_level": 12356,
+   "exp_cumulative": 147184,
+   "stat_pct": 505.38,
+   "stat_pct_gain": 18.4,
+   "stat_pct_gain_per_million_exp": 1489.155
+  },
+  {
+   "level": 45,
+   "exp_for_level": 13576,
+   "exp_cumulative": 160760,
+   "stat_pct": 524.21,
+   "stat_pct_gain": 18.83,
+   "stat_pct_gain_per_million_exp": 1387.006
+  },
+  {
+   "level": 46,
+   "exp_for_level": 14931,
+   "exp_cumulative": 175691,
+   "stat_pct": 543.49,
+   "stat_pct_gain": 19.28,
+   "stat_pct_gain_per_million_exp": 1291.273
+  },
+  {
+   "level": 47,
+   "exp_for_level": 16437,
+   "exp_cumulative": 192128,
+   "stat_pct": 563.22,
+   "stat_pct_gain": 19.73,
+   "stat_pct_gain_per_million_exp": 1200.341
+  },
+  {
+   "level": 48,
+   "exp_for_level": 18112,
+   "exp_cumulative": 210240,
+   "stat_pct": 583.42,
+   "stat_pct_gain": 20.2,
+   "stat_pct_gain_per_million_exp": 1115.283
+  },
+  {
+   "level": 49,
+   "exp_for_level": 19977,
+   "exp_cumulative": 230217,
+   "stat_pct": 604.09,
+   "stat_pct_gain": 20.67,
+   "stat_pct_gain_per_million_exp": 1034.69
+  },
+  {
+   "level": 50,
+   "exp_for_level": 22056,
+   "exp_cumulative": 252273,
+   "stat_pct": 625.25,
+   "stat_pct_gain": 21.16,
+   "stat_pct_gain_per_million_exp": 959.376
+  },
+  {
+   "level": 51,
+   "exp_for_level": 24375,
+   "exp_cumulative": 276648,
+   "stat_pct": 646.91,
+   "stat_pct_gain": 21.66,
+   "stat_pct_gain_per_million_exp": 888.615
+  },
+  {
+   "level": 52,
+   "exp_for_level": 26965,
+   "exp_cumulative": 303613,
+   "stat_pct": 669.08,
+   "stat_pct_gain": 22.17,
+   "stat_pct_gain_per_million_exp": 822.177
+  },
+  {
+   "level": 53,
+   "exp_for_level": 29861,
+   "exp_cumulative": 333474,
+   "stat_pct": 691.77,
+   "stat_pct_gain": 22.69,
+   "stat_pct_gain_per_million_exp": 759.854
+  },
+  {
+   "level": 54,
+   "exp_for_level": 33102,
+   "exp_cumulative": 366576,
+   "stat_pct": 715,
+   "stat_pct_gain": 23.23,
+   "stat_pct_gain_per_million_exp": 701.77
+  },
+  {
+   "level": 55,
+   "exp_for_level": 36732,
+   "exp_cumulative": 403308,
+   "stat_pct": 738.78,
+   "stat_pct_gain": 23.78,
+   "stat_pct_gain_per_million_exp": 647.392
+  },
+  {
+   "level": 56,
+   "exp_for_level": 40803,
+   "exp_cumulative": 444111,
+   "stat_pct": 763.12,
+   "stat_pct_gain": 24.34,
+   "stat_pct_gain_per_million_exp": 596.525
+  },
+  {
+   "level": 57,
+   "exp_for_level": 45373,
+   "exp_cumulative": 489484,
+   "stat_pct": 788.03,
+   "stat_pct_gain": 24.91,
+   "stat_pct_gain_per_million_exp": 549.005
+  },
+  {
+   "level": 58,
+   "exp_for_level": 50508,
+   "exp_cumulative": 539992,
+   "stat_pct": 813.53,
+   "stat_pct_gain": 25.5,
+   "stat_pct_gain_per_million_exp": 504.871
+  },
+  {
+   "level": 59,
+   "exp_for_level": 56285,
+   "exp_cumulative": 596277,
+   "stat_pct": 839.63,
+   "stat_pct_gain": 26.1,
+   "stat_pct_gain_per_million_exp": 463.711
+  },
+  {
+   "level": 60,
+   "exp_for_level": 62790,
+   "exp_cumulative": 659067,
+   "stat_pct": 866.34,
+   "stat_pct_gain": 26.71,
+   "stat_pct_gain_per_million_exp": 425.386
+  },
+  {
+   "level": 61,
+   "exp_for_level": 70124,
+   "exp_cumulative": 729191,
+   "stat_pct": 893.69,
+   "stat_pct_gain": 27.35,
+   "stat_pct_gain_per_million_exp": 390.023
+  },
+  {
+   "level": 62,
+   "exp_for_level": 78401,
+   "exp_cumulative": 807592,
+   "stat_pct": 921.68,
+   "stat_pct_gain": 27.99,
+   "stat_pct_gain_per_million_exp": 357.011
+  },
+  {
+   "level": 63,
+   "exp_for_level": 87753,
+   "exp_cumulative": 895345,
+   "stat_pct": 950.33,
+   "stat_pct_gain": 28.65,
+   "stat_pct_gain_per_million_exp": 326.485
+  },
+  {
+   "level": 64,
+   "exp_for_level": 98331,
+   "exp_cumulative": 993676,
+   "stat_pct": 979.66,
+   "stat_pct_gain": 29.33,
+   "stat_pct_gain_per_million_exp": 298.278
+  },
+  {
+   "level": 65,
+   "exp_for_level": 110310,
+   "exp_cumulative": 1103986,
+   "stat_pct": 1009.68,
+   "stat_pct_gain": 30.02,
+   "stat_pct_gain_per_million_exp": 272.142
+  },
+  {
+   "level": 66,
+   "exp_for_level": 123891,
+   "exp_cumulative": 1227877,
+   "stat_pct": 1040.41,
+   "stat_pct_gain": 30.73,
+   "stat_pct_gain_per_million_exp": 248.041
+  },
+  {
+   "level": 67,
+   "exp_for_level": 139306,
+   "exp_cumulative": 1367183,
+   "stat_pct": 1071.86,
+   "stat_pct_gain": 31.45,
+   "stat_pct_gain_per_million_exp": 225.762
+  },
+  {
+   "level": 68,
+   "exp_for_level": 156822,
+   "exp_cumulative": 1524005,
+   "stat_pct": 1104.06,
+   "stat_pct_gain": 32.2,
+   "stat_pct_gain_per_million_exp": 205.328
+  },
+  {
+   "level": 69,
+   "exp_for_level": 176750,
+   "exp_cumulative": 1700755,
+   "stat_pct": 1137.01,
+   "stat_pct_gain": 32.95,
+   "stat_pct_gain_per_million_exp": 186.421
+  },
+  {
+   "level": 70,
+   "exp_for_level": 199449,
+   "exp_cumulative": 1900204,
+   "stat_pct": 1170.75,
+   "stat_pct_gain": 33.74,
+   "stat_pct_gain_per_million_exp": 169.166
+  },
+  {
+   "level": 71,
+   "exp_for_level": 225335,
+   "exp_cumulative": 2125539,
+   "stat_pct": 1205.27,
+   "stat_pct_gain": 34.52,
+   "stat_pct_gain_per_million_exp": 153.194
+  },
+  {
+   "level": 72,
+   "exp_for_level": 254892,
+   "exp_cumulative": 2380431,
+   "stat_pct": 1240.61,
+   "stat_pct_gain": 35.34,
+   "stat_pct_gain_per_million_exp": 138.647
+  },
+  {
+   "level": 73,
+   "exp_for_level": 288682,
+   "exp_cumulative": 2669113,
+   "stat_pct": 1276.79,
+   "stat_pct_gain": 36.18,
+   "stat_pct_gain_per_million_exp": 125.328
+  },
+  {
+   "level": 74,
+   "exp_for_level": 327358,
+   "exp_cumulative": 2996471,
+   "stat_pct": 1313.82,
+   "stat_pct_gain": 37.03,
+   "stat_pct_gain_per_million_exp": 113.118
+  },
+  {
+   "level": 75,
+   "exp_for_level": 371683,
+   "exp_cumulative": 3368154,
+   "stat_pct": 1351.72,
+   "stat_pct_gain": 37.9,
+   "stat_pct_gain_per_million_exp": 101.969
+  },
+  {
+   "level": 76,
+   "exp_for_level": 422546,
+   "exp_cumulative": 3790700,
+   "stat_pct": 1390.52,
+   "stat_pct_gain": 38.8,
+   "stat_pct_gain_per_million_exp": 91.824
+  },
+  {
+   "level": 77,
+   "exp_for_level": 480986,
+   "exp_cumulative": 4271686,
+   "stat_pct": 1430.23,
+   "stat_pct_gain": 39.71,
+   "stat_pct_gain_per_million_exp": 82.56
+  },
+  {
+   "level": 78,
+   "exp_for_level": 548218,
+   "exp_cumulative": 4819904,
+   "stat_pct": 1470.88,
+   "stat_pct_gain": 40.65,
+   "stat_pct_gain_per_million_exp": 74.149
+  },
+  {
+   "level": 79,
+   "exp_for_level": 625666,
+   "exp_cumulative": 5445570,
+   "stat_pct": 1512.49,
+   "stat_pct_gain": 41.61,
+   "stat_pct_gain_per_million_exp": 66.505
+  },
+  {
+   "level": 80,
+   "exp_for_level": 714999,
+   "exp_cumulative": 6160569,
+   "stat_pct": 1555.08,
+   "stat_pct_gain": 42.59,
+   "stat_pct_gain_per_million_exp": 59.567
+  },
+  {
+   "level": 81,
+   "exp_for_level": 818179,
+   "exp_cumulative": 6978748,
+   "stat_pct": 1598.67,
+   "stat_pct_gain": 43.59,
+   "stat_pct_gain_per_million_exp": 53.277
+  },
+  {
+   "level": 82,
+   "exp_for_level": 937511,
+   "exp_cumulative": 7916259,
+   "stat_pct": 1643.29,
+   "stat_pct_gain": 44.62,
+   "stat_pct_gain_per_million_exp": 47.594
+  },
+  {
+   "level": 83,
+   "exp_for_level": 1075712,
+   "exp_cumulative": 8991971,
+   "stat_pct": 1688.97,
+   "stat_pct_gain": 45.68,
+   "stat_pct_gain_per_million_exp": 42.465
+  },
+  {
+   "level": 84,
+   "exp_for_level": 1235984,
+   "exp_cumulative": 10227955,
+   "stat_pct": 1735.72,
+   "stat_pct_gain": 46.75,
+   "stat_pct_gain_per_million_exp": 37.824
+  },
+  {
+   "level": 85,
+   "exp_for_level": 1422109,
+   "exp_cumulative": 11650064,
+   "stat_pct": 1783.57,
+   "stat_pct_gain": 47.85,
+   "stat_pct_gain_per_million_exp": 33.647
+  },
+  {
+   "level": 86,
+   "exp_for_level": 1638559,
+   "exp_cumulative": 13288623,
+   "stat_pct": 1832.56,
+   "stat_pct_gain": 48.99,
+   "stat_pct_gain_per_million_exp": 29.898
+  },
+  {
+   "level": 87,
+   "exp_for_level": 1890630,
+   "exp_cumulative": 15179253,
+   "stat_pct": 1882.7,
+   "stat_pct_gain": 50.14,
+   "stat_pct_gain_per_million_exp": 26.52
+  },
+  {
+   "level": 88,
+   "exp_for_level": 2184603,
+   "exp_cumulative": 17363856,
+   "stat_pct": 1934.02,
+   "stat_pct_gain": 51.32,
+   "stat_pct_gain_per_million_exp": 23.492
+  },
+  {
+   "level": 89,
+   "exp_for_level": 2527937,
+   "exp_cumulative": 19891793,
+   "stat_pct": 1986.55,
+   "stat_pct_gain": 52.53,
+   "stat_pct_gain_per_million_exp": 20.78
+  },
+  {
+   "level": 90,
+   "exp_for_level": 2929502,
+   "exp_cumulative": 22821295,
+   "stat_pct": 2040.32,
+   "stat_pct_gain": 53.77,
+   "stat_pct_gain_per_million_exp": 18.355
+  },
+  {
+   "level": 91,
+   "exp_for_level": 3399865,
+   "exp_cumulative": 26221160,
+   "stat_pct": 2095.37,
+   "stat_pct_gain": 55.05,
+   "stat_pct_gain_per_million_exp": 16.192
+  },
+  {
+   "level": 92,
+   "exp_for_level": 3951630,
+   "exp_cumulative": 30172790,
+   "stat_pct": 2151.7,
+   "stat_pct_gain": 56.33,
+   "stat_pct_gain_per_million_exp": 14.255
+  },
+  {
+   "level": 93,
+   "exp_for_level": 4599853,
+   "exp_cumulative": 34772643,
+   "stat_pct": 2209.37,
+   "stat_pct_gain": 57.67,
+   "stat_pct_gain_per_million_exp": 12.537
+  },
+  {
+   "level": 94,
+   "exp_for_level": 5362550,
+   "exp_cumulative": 40135193,
+   "stat_pct": 2268.4,
+   "stat_pct_gain": 59.03,
+   "stat_pct_gain_per_million_exp": 11.008
+  },
+  {
+   "level": 95,
+   "exp_for_level": 6261308,
+   "exp_cumulative": 46396501,
+   "stat_pct": 2328.82,
+   "stat_pct_gain": 60.42,
+   "stat_pct_gain_per_million_exp": 9.65
+  },
+  {
+   "level": 96,
+   "exp_for_level": 7322033,
+   "exp_cumulative": 53718534,
+   "stat_pct": 2390.67,
+   "stat_pct_gain": 61.85,
+   "stat_pct_gain_per_million_exp": 8.447
+  },
+  {
+   "level": 97,
+   "exp_for_level": 8575866,
+   "exp_cumulative": 62294400,
+   "stat_pct": 2453.97,
+   "stat_pct_gain": 63.3,
+   "stat_pct_gain_per_million_exp": 7.381
+  },
+  {
+   "level": 98,
+   "exp_for_level": 10060296,
+   "exp_cumulative": 72354696,
+   "stat_pct": 2518.77,
+   "stat_pct_gain": 64.8,
+   "stat_pct_gain_per_million_exp": 6.441
+  },
+  {
+   "level": 99,
+   "exp_for_level": 11820527,
+   "exp_cumulative": 84175223,
+   "stat_pct": 2585.1,
+   "stat_pct_gain": 66.33,
+   "stat_pct_gain_per_million_exp": 5.611
+  },
+  {
+   "level": 100,
+   "exp_for_level": 13911155,
+   "exp_cumulative": 98086378,
+   "stat_pct": 2652.99,
+   "stat_pct_gain": 67.89,
+   "stat_pct_gain_per_million_exp": 4.88
+  }
+ ]
+}

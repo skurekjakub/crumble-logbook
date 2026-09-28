@@ -1,0 +1,42 @@
+{
+ "about": "Plating (플레이트 강화) odds and costs per attempt. Levels 0→1 to 19→20 are transcribed from the table image of dc:53079 (서릿발, 2026-08-30, evidence/02-dc/dc/img/53079-1.jpg, local only), which states the in-game odds window; a value in parentheses in the image is the odds when Syrup Metal is not used for decline protection, and the plain value is with protection. Levels 20→21 to 24→25 are from the official notice reposted as dc:72150 (2026-09-22) for update 1.4.002 of 2026-09-23. The 19→20 row is also quoted in yt:_Tv-pqZliTg. Blank cells in the image are null.",
+ "transcribed": "2026-09-28",
+ "columns": ["from", "to", "great_success_pct", "success_pct", "maintain_pct", "maintain_pct_without_syrup", "decline_pct", "decline_pct_without_syrup", "shatter_pct", "shatter_pct_without_mitigation", "main_stat_gain_pct", "sub_stat_gain_pct", "chocosteel", "syrup_metal", "expected_chocosteel", "expected_syrup", "cumulative_expected_chocosteel", "cumulative_expected_syrup"],
+ "rows_dc53079": [
+  [0, 1, 10, 90, 0, null, 0, null, 0, null, 3, 0, 1, 0, 1, 0, 1, 0],
+  [1, 2, 10, 85, 5, null, 0, null, 0, null, 3, 0, 2, 0, 3, 0, 3, 0],
+  [2, 3, 10, 80, 10, null, 0, null, 0, null, 3, 0, 3, 0, 4, 0, 6, 0],
+  [3, 4, 10, 75, 15, null, 0, null, 0, null, 3, 0, 4, 0, 5, 0, 11, 0],
+  [4, 5, 5, 50, 45, null, 0, null, 0, null, 3, 30, 5, 0, 10, 0, 19, 0],
+  [5, 6, 3, 50, 47, null, 0, null, 0, null, 6, 0, 6, 0, 12, 0, 29, 0],
+  [6, 7, 3, 45, 52, null, 0, null, 0, null, 6, 0, 7, 0, 15, 0, 43, 0],
+  [7, 8, 3, 43, 54, null, 0, null, 0, null, 6, 0, 8, 0, 18, 0, 59, 0],
+  [8, 9, 3, 40, 57, null, 0, null, 0, null, 6, 0, 9, 0, 21, 0, 79, 0],
+  [9, 10, 1.5, 30, 68.5, null, 0, null, 0, null, 6, 40, 10, 0, 32, 0, 109, 0],
+  [10, 11, 1, 25, 74, 64, 0, 10, 0, null, 12, 0, 11, 1, 43, 4, 149, 4],
+  [11, 12, 1, 24, 75, 62, 0, 13, 0, null, 12, 0, 12, 2, 48, 8, 195, 12],
+  [12, 13, 1, 23, 76, 62, 0, 14, 0, null, 12, 0, 13, 2, 55, 9, 247, 20],
+  [13, 14, 0.5, 20, 79.5, 63.5, 0, 16, 0, null, 12, 0, 14, 2, 69, 10, 313, 29],
+  [14, 15, 0.5, 14, 85.5, 65.5, 0, 20, 0, null, 12, 60, 15, 2, 104, 13, 414, 43],
+  [15, 16, 0.5, 12, 85, 58.5, 0, 24, 2.5, 5, 19, 0, 17, 5, 136, 40, 603, 89],
+  [16, 17, 0.5, 10, 86.5, 55.5, 0, 28, 3, 6, 19, 0, 18, null, null, null, null, null],
+  [17, 18, 0.3, 8, 88.2, 52.7, 0, 32, 3.5, 7, 19, 0, 19, null, null, null, null, null],
+  [18, 19, 0.2, 6, 89.8, 49.8, 0, 36, 4, 8, 19, 0, 20, null, null, null, null, null],
+  [19, 20, 0.1, 2, 92.9, 48.9, 0, 39, 5, 10, 19, 70, 25, 9, null, null, null, null]
+ ],
+ "rows_official_1_4_002": [
+  {"from": 20, "to": 21, "great_success_pct": 0.1, "success_pct": 2, "maintain_pct": 44.9, "decline_pct": 42, "shatter_pct": 11},
+  {"from": 21, "to": 22, "great_success_pct": 0.1, "success_pct": 2, "maintain_pct": 42.9, "decline_pct": 43, "shatter_pct": 12},
+  {"from": 22, "to": 23, "great_success_pct": 0.1, "success_pct": 2, "maintain_pct": 40.9, "decline_pct": 44, "shatter_pct": 13},
+  {"from": 23, "to": 24, "great_success_pct": 0.1, "success_pct": 2, "maintain_pct": 38.9, "decline_pct": 45, "shatter_pct": 14},
+  {"from": 24, "to": 25, "great_success_pct": 0.1, "success_pct": 2, "maintain_pct": 36.9, "decline_pct": 46, "shatter_pct": 15}
+ ],
+ "official_notes_1_4_002": [
+  "A shatter (박살) now drops the plate 2 levels instead of back to 10.",
+  "A shattered plate can be restored to its level before the shatter with Syrup Metal; the Chocosteel and Syrup Metal of that attempt are not refunded.",
+  "Restore cost in Syrup Metal by level: 15: 20, 16: 20, 17: 30, 18: 40, 19: 50, 20: 60, 21: 65, 22: 70, 23: 75, 24: 80.",
+  "The 100% material refund on a great success moves to the 24→25 attempt.",
+  "Players whose plates had shattered before the update got the level back and the materials spent since, by mail, claimable until 2026-10-21."
+ ],
+ "sources": ["dc:53079", "dc:72150", "web:yt-_Tv-pqZliTg"]
+}

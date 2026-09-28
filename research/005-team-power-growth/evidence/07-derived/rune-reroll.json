@@ -1,0 +1,38 @@
+{
+ "about": "Rune Crystals per Sugar Rune reroll (세공) by the number of locked lines, from the game data.",
+ "source": "research/001-guild-conquest-meta/evidence/12-glossary-src/cookieruncrumble_app_api_catalog_database.json",
+ "costs": [
+  {
+   "locked_lines": 0,
+   "rune_crystals": 20
+  },
+  {
+   "locked_lines": 1,
+   "rune_crystals": 40
+  },
+  {
+   "locked_lines": 2,
+   "rune_crystals": 80
+  },
+  {
+   "locked_lines": 3,
+   "rune_crystals": 120
+  },
+  {
+   "locked_lines": 4,
+   "rune_crystals": 180
+  },
+  {
+   "locked_lines": 5,
+   "rune_crystals": 240
+  },
+  {
+   "locked_lines": 6,
+   "rune_crystals": 300
+  },
+  {
+   "locked_lines": 7,
+   "rune_crystals": 400
+  }
+ ]
+}
