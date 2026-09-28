@@ -1,6 +1,8 @@
 # Obsolete Lifecycle Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+>
+> **Execution (decided 2026-09-28):** one Opus agent runs the whole plan on `main` with superpowers:executing-plans, committing per task with the plan's gates, then one Opus review of the result, then one fix agent if the review finds anything, then push. No per-task reviewer.
 
 **Goal:** A recommendation (deck, rune build, gear rec, counter edge) can be marked obsolete in a record's curated files with a dated, cited reason; the importer validates and stores it, the API returns it with a `?current=` filter, and every list page shows current rows as today with the obsolete ones in a collapsed, dated section at the end.
 

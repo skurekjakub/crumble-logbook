@@ -1,6 +1,8 @@
 # Refresh-Meta Skill Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. The skill itself is authored with **REQUIRED SUB-SKILL: superpowers:writing-skills**, whose RED-GREEN-REFACTOR cycle Tasks 3 to 6 follow.
+>
+> **Execution (decided 2026-09-28):** one Opus agent runs the whole plan on `main`, after the obsolete-lifecycle plan has landed, then one Opus review of the result, then one fix agent if the review finds anything, then push. No per-task reviewer. The acceptance round is the first real refresh and its data is merged.
 
 **Goal:** A project skill, `.claude/skills/refresh-meta/`, that turns "refresh" into a dated round inside every existing research record: rescraped, re-curated, obsolete-marked, cited, re-imported and reviewed, with a changelog per record.
 
@@ -277,7 +279,9 @@ writing-skills' iron law: no skill without a failing test first. Run the scenari
 **Files:**
 - Create: `.superpowers/refresh/skill-tests/baseline.md` (scratch, gitignored)
 
-- [ ] **Step 1: Dispatch the full baseline round**
+- [ ] **Step 1: Dropped (2026-09-28): the full baseline round**
+
+Not run: the user cut it for cost, since its captures would be thrown away. The pressure scenarios in Step 3 are the baseline, and the acceptance round (the last task) is the real run, scored with Step 2's checks. The prompt is kept for reference:
 
 One subagent: `subagent_type: "general-purpose"`, `model: "opus"`, `isolation: "worktree"`. Prompt, verbatim:
 
@@ -293,7 +297,7 @@ your worktree.
 
 Let it run to the end.
 
-- [ ] **Step 2: Score it**
+- [ ] **Step 2: The scoring checks (not run here; the acceptance round is scored with them)**
 
 In the worktree the agent used (the Agent result names it and its branch), run each as its own command:
 
@@ -315,7 +319,7 @@ Also note: captures outside `evidence/r<date>/`; a README whose history was over
 
 - [ ] **Step 3: Run the pressure scenarios, without the skill**
 
-Each scenario is a single-shot subagent (`subagent_type: "general-purpose"`, `model: "opus"`), run 5 times, each prompt being the scenario text followed by:
+Each scenario is a single-shot subagent (`subagent_type: "general-purpose"`, `model: "opus"`), run once, each prompt being the scenario text followed by:
 
 ```
 Answer with the exact commands and file edits you would make, in order, then one
@@ -332,9 +336,7 @@ paragraph on why. Don't run anything.
 
 - [ ] **Step 4: Write the baseline log**
 
-Write `.superpowers/refresh/skill-tests/baseline.md` with the Write tool: per check and scenario, pass or fail per run, and for each failure the agent's reason quoted verbatim from its answer or report. Group the failures by kind (a rule skipped under pressure, a wrong-shaped output, an element left out), since writing-skills' "Match the Form to the Failure" picks the guidance's form by kind.
-
-Then remove the baseline worktree without merging it (its captures are discarded): `git worktree remove --force <worktree>`; if it leaves files behind, in PowerShell `Remove-Item -LiteralPath "\\?\<absolute worktree path>" -Recurse -Force`; then `git branch -D <branch>`.
+Write `.superpowers/refresh/skill-tests/baseline.md` with the Write tool: per scenario, pass or fail, and for each failure the agent's reason quoted verbatim from its answer. Group the failures by kind (a rule skipped under pressure, a wrong-shaped output, an element left out), since writing-skills' "Match the Form to the Failure" picks the guidance's form by kind.
 
 No commit: this task writes scratch only.
 
@@ -537,7 +539,7 @@ The skill isn't deployed until Task 5 has watched it pass.
 
 - [ ] **Step 1: Rerun the pressure scenarios with the skill**
 
-Run S1 to S7 again, 5 times each, the prompt prefixed with:
+Run every scenario again, once each, the prompt prefixed with:
 
 ```
 This repo has a project skill for this task. Read .claude/skills/refresh-meta/SKILL.md and
@@ -548,11 +550,11 @@ Log each run in `.superpowers/refresh/skill-tests/green.md` as `baseline.md` doe
 
 - [ ] **Step 2: Close each loophole, and rerun**
 
-For each failure: find the agent's reasoning, add the counter in the form its kind needs (a rationalization row and red flag for a skipped rule; a recipe step or template slot for a wrong shape or a missing element), and rerun that scenario 5 times. Repeat until every scenario passes in every run and the runs converge on the same shape.
+For each failure: find the agent's reasoning, add the counter in the form its kind needs (a rationalization row and red flag for a skipped rule; a recipe step or template slot for a wrong shape or a missing element), and rerun that scenario once. Repeat until every scenario passes.
 
-- [ ] **Step 3: Rerun the full round with the skill**
+- [ ] **Step 3: Dropped (2026-09-28): the full round with the skill**
 
-Dispatch Task 3 Step 1's subagent again (Opus, worktree), its prompt prefixed with the line from Step 1. Score it with Task 3 Step 2's checks. It must pass every check; a failure goes back through Step 2. Then remove the worktree without merging, as Task 3 Step 4 does.
+Not run: the acceptance round is that run, on real data that gets merged, scored with Task 3 Step 2's checks.
 
 - [ ] **Step 4: Commit the skill**
 
@@ -594,7 +596,7 @@ The deep-research skill's "Repo specifics" section still sends agents to the ret
 
 - [ ] **Step 1: RED, the retrieval test**
 
-Dispatch a single-shot subagent (Opus), 5 times:
+Dispatch a single-shot subagent (Opus), once:
 
 ```
 Read .claude/skills/deep-research/SKILL.md. You are starting research record 006 in this
@@ -644,7 +646,7 @@ community, and the steps map as follows.
 
 - [ ] **Step 3: GREEN, rerun the retrieval test**
 
-Rerun Step 1's prompt 5 times. Passes when every run names the `pnpm capture` commands, the ledger line in the same commit with `pnpm capture log` for other captures, and `refresh-meta` for record 001. Otherwise tighten the section and rerun.
+Rerun Step 1's prompt once. Passes when the run names the `pnpm capture` commands, the ledger line in the same commit with `pnpm capture log` for other captures, and `refresh-meta` for record 001. Otherwise tighten the section and rerun.
 
 - [ ] **Step 4: Name the skill in the README**
 
