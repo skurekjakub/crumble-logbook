@@ -990,3 +990,6 @@
 {"path": "evidence/03-sites/SOURCES.md", "url": null, "captured_at": "2026-09-28T07:51:02+02:00", "tool": "manual", "sha256": "4ff359da8d6a09c1a21b593c3968e8b8123a7c1d527f5222b167b928f796b8d3"}
 {"path": "evidence/06-derived/compare_crumbgg.py", "url": null, "captured_at": "2026-09-28T07:49:01+02:00", "tool": "manual", "sha256": "7db35a6d22b1c8d6b5ae4655c7770d4ef64044dbf9211b4f555cc97c4e0e54f3"}
 {"path": "evidence/build_sources.py", "url": null, "captured_at": "2026-09-28T07:50:08+02:00", "tool": "manual", "sha256": "8eba812ec7d9bc4fdf4848385b948db7690bb10d75b9dc7e7c87a7acc7179964"}
+{"path": "evidence/08-extract/naver-a.json", "url": null, "captured_at": "2026-09-28T08:10:42+02:00", "tool": "manual", "sha256": "6f2b705d38d2b5f51da1965a0e2faa0078916f93399720cf63a5b4e7f3c678fd"}
+{"path": "evidence/08-extract/naver-b.json", "url": null, "captured_at": "2026-09-28T08:01:50+02:00", "tool": "manual", "sha256": "38a7e52eba24ff9fa84b61f4b2988c70642200eb152559f67081a881914392e9"}
+{"path": "evidence/08-extract/youtube-frames.json", "url": null, "captured_at": "2026-09-28T08:08:42+02:00", "tool": "manual", "sha256": "2f00ef9415e6b7d44c22ace172c81156c459402ecc8af0ed5b7bbea07083defd"}

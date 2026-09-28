@@ -639,37 +639,170 @@
  "nv:1162": {
   "url": "https://cafe.naver.com/ccrumble/1162",
   "title": "콘텐츠 난이도 및 밸런스 개선 안내",
-  "title_en": null,
+  "title_en": "Notice: content difficulty and balance improvement",
   "date": "2026-07-30",
-  "signal": "captured in an earlier record"
+  "signal": "relevance 2/3"
  },
  "nv:1922": {
   "url": "https://cafe.naver.com/ccrumble/1922",
   "title": "난이도 밸런스 재조정 진행 및 사과 보상 안내 (7/30 22:40 내용 추가)",
-  "title_en": null,
+  "title_en": "Notice: difficulty re-adjustment and apology rewards",
   "date": "2026-07-30",
-  "signal": "captured in an earlier record"
+  "signal": "relevance 2/3"
  },
  "nv:25737": {
   "url": "https://cafe.naver.com/ccrumble/25737",
   "title": "8월 27일(목) 업데이트 안내",
-  "title_en": null,
+  "title_en": "Aug 27 update notes",
   "date": "2026-08-26",
-  "signal": "captured in an earlier record"
+  "signal": "relevance 2/3"
+ },
+ "nv:31252": {
+  "url": "https://cafe.naver.com/ccrumble/31252",
+  "title": "216-30 원펀맨급 비겁 허리꺾어잡은 덱 공유",
+  "title_en": "216-30 Coward cleared: deck share",
+  "date": "2026-08-31",
+  "signal": "relevance 3/3"
+ },
+ "nv:32190": {
+  "url": "https://cafe.naver.com/ccrumble/32190",
+  "title": "200스테이지까지 민 스테이지 덱 구성",
+  "title_en": "Stage deck that pushed to 200",
+  "date": "2026-08-31",
+  "signal": "relevance 3/3"
+ },
+ "nv:32484": {
+  "url": "https://cafe.naver.com/ccrumble/32484",
+  "title": "모르는사람들이 많은거같아서 장비 프리셋 제가하는방법 알려드림(슈가룬꿀팁추가)*사진추가 / 우유공증에대한 개인적인견해 추가(26.09.23)",
+  "title_en": "How I set gear presets (stage / arena / single-boss)",
+  "date": "2026-08-31",
+  "signal": "relevance 3/3"
+ },
+ "nv:34395": {
+  "url": "https://cafe.naver.com/ccrumble/34395",
+  "title": "227~248 35% 클리어 덱 공유 (+일부 내용 추가)",
+  "title_en": "Decks that cleared 227–248 at 35%",
+  "date": "2026-09-03",
+  "signal": "relevance 3/3"
+ },
+ "nv:34626": {
+  "url": "https://cafe.naver.com/ccrumble/34626",
+  "title": "226-30 쿨링민트 35퍼 클리어 영상 (596M)",
+  "title_en": "226-30 Cool Mint cleared at 35% (596M)",
+  "date": "2026-09-03",
+  "signal": "relevance 3/3"
+ },
+ "nv:34705": {
+  "url": "https://cafe.naver.com/ccrumble/34705",
+  "title": "[TIP] 장비 심화 가이드",
+  "title_en": "[TIP] Advanced gear guide",
+  "date": "2026-09-03",
+  "signal": "relevance 3/3"
+ },
+ "nv:35278": {
+  "url": "https://cafe.naver.com/ccrumble/35278",
+  "title": "35% 투력컷 비겁이를 쉽게 잡아보자 (21630 378m)",
+  "title_en": "Easy Coward at the 35% cut (216-30 at 378M)",
+  "date": "2026-09-04",
+  "signal": "relevance 3/3"
  },
  "nv:37730": {
   "url": "https://cafe.naver.com/ccrumble/37730",
   "title": "9월 10일(목) 업데이트 안내",
-  "title_en": null,
+  "title_en": "Sep 10 update notes",
   "date": "2026-09-09",
-  "signal": "captured in an earlier record"
+  "signal": "relevance 2/3"
+ },
+ "nv:41892": {
+  "url": "https://cafe.naver.com/ccrumble/41892",
+  "title": "232-30 507.5m",
+  "title_en": "232-30 at 507.5M",
+  "date": "2026-09-15",
+  "signal": "relevance 3/3"
+ },
+ "nv:42152": {
+  "url": "https://cafe.naver.com/ccrumble/42152",
+  "title": "오랜만에 스테이지 덱 공유합니다(에스프레소 밀키웨이 사격덱 전용)",
+  "title_en": "Stage decks: Espresso + Milky Way ranged decks",
+  "date": "2026-09-16",
+  "signal": "relevance 3/3"
+ },
+ "nv:42188": {
+  "url": "https://cafe.naver.com/ccrumble/42188",
+  "title": "235-10 540.2m",
+  "title_en": "235-10 at 540.2M",
+  "date": "2026-09-16",
+  "signal": "relevance 3/3"
+ },
+ "nv:42898": {
+  "url": "https://cafe.naver.com/ccrumble/42898",
+  "title": "독수리 두마리 투력 35% 5사격덱 (노전갈)",
+  "title_en": "Two eagles at 35% power: 5-ranged deck (no Scorpion)",
+  "date": "2026-09-18",
+  "signal": "relevance 3/3"
+ },
+ "nv:44131": {
+  "url": "https://cafe.naver.com/ccrumble/44131",
+  "title": "비겁이 명쿠 안쓰는 NEW(?)덱 35% 최소투력컷. Ex)264-30",
+  "title_en": "New Coward deck without GingerBright at the 35% minimum power cut, e.g. 264-30",
+  "date": "2026-09-21",
+  "signal": "relevance 3/3"
  },
  "nv:44477": {
   "url": "https://cafe.naver.com/ccrumble/44477",
   "title": "9월 23일(수) 업데이트 안내 (9/23 12:05 내용 추가)",
-  "title_en": null,
+  "title_en": "Sept 23 update notes",
   "date": "2026-09-22",
-  "signal": "captured in an earlier record"
+  "signal": "relevance 3/3"
+ },
+ "nv:44742": {
+  "url": "https://cafe.naver.com/ccrumble/44742",
+  "title": "스테 15퍼 클",
+  "title_en": "Stage clear at 15%",
+  "date": "2026-09-22",
+  "signal": "relevance 3/3"
+ },
+ "nv:44815": {
+  "url": "https://cafe.naver.com/ccrumble/44815",
+  "title": "너프전 248-30 801.5m 35% + 169~248 덱 정리&장비",
+  "title_en": "Pre-nerf 248-30 at 801.5M 35% + 169-248 deck sheet and gear",
+  "date": "2026-09-22",
+  "signal": "relevance 3/3"
+ },
+ "nv:46202": {
+  "url": "https://cafe.naver.com/ccrumble/46202",
+  "title": "스테이지 덱 및 컨트롤 공략",
+  "title_en": "Stage decks and control guide",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "nv:46209": {
+  "url": "https://cafe.naver.com/ccrumble/46209",
+  "title": "스테 완화 후 확실한 35퍼 비겁이 덱",
+  "title_en": "Reliable post-relief 35% Coward deck",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "nv:46312": {
+  "url": "https://cafe.naver.com/ccrumble/46312",
+  "title": "콘텐츠별 장비 옵션 세팅 정리",
+  "title_en": "Gear substat setup by content",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "nv:46348": {
+  "url": "https://cafe.naver.com/ccrumble/46348",
+  "title": "스테이지 기본 덱 공략",
+  "title_en": "Basic stage deck guide",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "nv:46887": {
+  "url": "https://cafe.naver.com/ccrumble/46887",
+  "title": "264-30 비겁이 클리어덱",
+  "title_en": "264-30 Coward clear deck",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
  },
  "web:alkapa-stage-check": {
   "url": "https://alkapa.gg/lab/crumble/stage-check",
@@ -779,9 +912,9 @@
  "web:yt-RLuI96lGgGg": {
   "url": "https://www.youtube.com/watch?v=RLuI96lGgGg",
   "title": "쿠키런 크럼블 169~248 스테이지 투력 35% 보스 공략 정리 영상",
-  "title_en": "Stages 169–248: boss guide at 35% power",
+  "title_en": "Cookie Run Crumble stages 169–248 at 35% power: boss strategy roundup",
   "date": "2026-09-18",
-  "signal": "relevance 2/3"
+  "signal": "relevance 3/3"
  },
  "web:yt-_d_7z1UD2p8": {
   "url": "https://www.youtube.com/watch?v=_d_7z1UD2p8",
