@@ -17,12 +17,14 @@ export type RecordView = ResearchRecordRow & { modes: Omit<RecordModeRow, "recor
 export interface RecordsService {
   /**
    * Lists every research record, ordered by `slug`.
+   *
    * @param filter - the registry's list filters for records, each applied
    *   when given: `mode` keeps the records filed under that mode
    */
   list(filter?: FiltersOf<"researchRecords">): RecordView[];
   /**
    * Returns the record with `slug`.
+   *
    * @param slug - the record's slug
    * @throws {NotFoundError} if `slug` doesn't exist
    */
@@ -49,11 +51,19 @@ export function recordsCovering(repos: Repos, mode: GameMode): string[] {
 
 /**
  * Builds the views of `rows`, attaching each record's modes.
+ *
  * @param repos - the repos to read the modes from
  * @param rows - the record rows
+ * @returns one view per row, in `rows` order, its modes in `GAME_MODE` order
  */
 function toViews(repos: Repos, rows: ResearchRecordRow[]): RecordView[] {
   const modes = repos.records.modes();
+  /**
+   * Returns a mode's position in `GAME_MODE`.
+   *
+   * @param mode - the mode
+   * @returns its index
+   */
   const rank = (mode: GameMode) => GAME_MODE.indexOf(mode);
   return rows.map((row) => ({
     ...row,
@@ -66,10 +76,13 @@ function toViews(repos: Repos, rows: ResearchRecordRow[]): RecordView[] {
 
 /**
  * Builds a {@link RecordsService} over `store`.
+ *
  * @param store - the store to read through
+ * @returns the service
  */
 export function createRecordsService(store: Store): RecordsService {
   return {
+    /** @inheritdoc */
     list: (filter) => {
       const repos = store.repos;
       return applyFilters(
@@ -78,6 +91,7 @@ export function createRecordsService(store: Store): RecordsService {
         filter,
       );
     },
+    /** @inheritdoc */
     get: (slug) => {
       const repos = store.repos;
       const row = repos.records.get(slug);

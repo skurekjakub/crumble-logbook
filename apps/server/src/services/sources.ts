@@ -23,6 +23,7 @@ export type SourceView = SourceRow & { citedBy: number };
 export interface SourcesService {
   /**
    * Lists sources, dated newest first with null dates last, then by `id`.
+   *
    * @param filter - the registry's list filters for sources, each applied
    *   when given: `site` keeps one site's sources, `record` those the record
    *   owns or cites
@@ -30,23 +31,27 @@ export interface SourcesService {
   list(filter?: FiltersOf<"sources">): SourceListView[];
   /**
    * Returns the source with `id`, with its citing-row count.
+   *
    * @param id - the source's `<site>:<key>` id
    * @throws {NotFoundError} if `id` doesn't exist
    */
   get(id: string): SourceView;
   /**
    * Inserts a source, deriving `site` from `input.id`'s prefix.
+   *
    * @throws {ConflictError} if `input.id` already exists
    */
   create(input: SourceInput): SourceRow;
   /**
    * Updates the source with `id`, merging in `patch`.
+   *
    * @param id - the source's `<site>:<key>` id
    * @throws {NotFoundError} if `id` doesn't exist
    */
   update(id: string, patch: SourcePatch): SourceRow;
   /**
    * Deletes the source with `id`.
+   *
    * @param id - the source's `<site>:<key>` id
    * @throws {NotFoundError} if `id` doesn't exist
    * @throws {ConflictError} `"source <id> is cited by N rows"` if any
@@ -55,7 +60,13 @@ export interface SourcesService {
   remove(id: string): void;
 }
 
-/** Returns how many citation and ranking rows reference `id`, combined. */
+/**
+ * Returns how many citation and ranking rows reference `id`, combined.
+ *
+ * @param repos - the repos to count through
+ * @param id - the source's `<site>:<key>` id
+ * @returns the combined count
+ */
 function citedByCount(repos: Repos, id: string): number {
   return repos.citations.countForSource(id) + repos.rankings.countForSource(id);
 }
@@ -86,10 +97,13 @@ function citingRecords(repos: Repos): Map<string, Set<string>> {
 
 /**
  * Builds a {@link SourcesService} over `store`.
+ *
  * @param store - the store to persist through
+ * @returns the service
  */
 export function createSourcesService(store: Store): SourcesService {
   return {
+    /** @inheritdoc */
     list: (filter) => {
       const repos = store.repos;
       const citing = citingRecords(repos);
@@ -100,12 +114,14 @@ export function createSourcesService(store: Store): SourcesService {
       });
       return applyFilters(views, REGISTRY.sources.filters, filter);
     },
+    /** @inheritdoc */
     get: (id) => {
       const repos = store.repos;
       const row = repos.sources.get(id);
       if (!row) throw new NotFoundError("source", id);
       return { ...row, citedBy: citedByCount(repos, id) };
     },
+    /** @inheritdoc */
     create: (input) =>
       store.transaction((repos) => {
         if (repos.sources.get(input.id))
@@ -113,6 +129,7 @@ export function createSourcesService(store: Store): SourcesService {
         const site = input.id.split(":")[0] as SourceSite;
         return repos.sources.insert({ ...input, site }) as never;
       }),
+    /** @inheritdoc */
     update: (id, patch) =>
       store.transaction((repos) => {
         if (!repos.sources.get(id)) throw new NotFoundError("source", id);
@@ -121,6 +138,7 @@ export function createSourcesService(store: Store): SourcesService {
         if (!row) throw new NotFoundError("source", id);
         return row as never;
       }),
+    /** @inheritdoc */
     remove: (id) =>
       store.transaction((repos) => {
         if (!repos.sources.get(id)) throw new NotFoundError("source", id);

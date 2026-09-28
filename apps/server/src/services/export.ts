@@ -101,8 +101,13 @@ export interface ExportService {
 
 /**
  * Builds an {@link ExportService} over `store`.
+ *
  * @param store - the store to snapshot
+ * @returns the service
  */
 export function createExportService(store: Store): ExportService {
-  return { run: () => exportSnapshot(store) };
+  return {
+    /** @inheritdoc */
+    run: () => exportSnapshot(store),
+  };
 }

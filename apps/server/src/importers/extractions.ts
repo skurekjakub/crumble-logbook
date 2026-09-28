@@ -13,6 +13,9 @@ interface ExtractionPost {
  * Derives a post's source id the way the record's `evidence/digest.py`
  * `sid()` does: `dc` → `dc:`, `naver` → `nv:`, anything else → `web:`, with
  * every `nv-` removed from the post id (Python's `str.replace` semantics).
+ *
+ * @param post - the extraction post
+ * @returns the source id; its key part is empty when the post has no string or numeric `id`
  */
 function postSourceId(post: ExtractionPost): string {
   const prefix = post.source === "dc" ? "dc:" : post.source === "naver" ? "nv:" : "web:";

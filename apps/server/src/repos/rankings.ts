@@ -31,17 +31,20 @@ export interface RankingSeason {
 export interface RankingsRepo {
   /**
    * Lists rankings ordered by board, then season, then rank.
+   *
    * @param filter - restrict by `season` and/or `board`, when given
    */
   list(filter?: RankingsFilter): RankingRow[];
   /**
    * Summarizes each board+season combination using only its latest capture
    * (the row group with the greatest `capturedAt`).
+   *
    * @returns one entry per board+season, unordered
    */
   seasons(): RankingSeason[];
   /**
    * Inserts every row in `rows`.
+   *
    * @param rows - the ranking rows to insert; `[]` inserts nothing
    * @returns the inserted rows, in `rows`' order
    * @throws if any row violates the board+season+rank+capturedAt unique
@@ -56,10 +59,13 @@ export interface RankingsRepo {
 
 /**
  * Builds a {@link RankingsRepo}.
+ *
  * @param db - database or transaction handle
+ * @returns the repo
  */
 export function createRankingsRepo(db: Db): RankingsRepo {
   return {
+    /** @inheritdoc */
     list: (filter) => {
       const conditions = [];
       if (filter?.season !== undefined) conditions.push(eq(rankings.season, filter.season));
@@ -69,6 +75,7 @@ export function createRankingsRepo(db: Db): RankingsRepo {
         .orderBy(asc(rankings.board), asc(rankings.season), asc(rankings.rank))
         .all();
     },
+    /** @inheritdoc */
     seasons: () => {
       const groups = db
         .select({
@@ -98,12 +105,15 @@ export function createRankingsRepo(db: Db): RankingsRepo {
       }
       return [...latest.values()];
     },
+    /** @inheritdoc */
     insertMany: (rows) => {
       if (rows.length === 0) return [];
       return db.insert(rankings).values(rows).returning().all();
     },
+    /** @inheritdoc */
     countForSource: (sourceId) =>
       db.select({ n: count() }).from(rankings).where(eq(rankings.sourceId, sourceId)).get()!.n,
+    /** @inheritdoc */
     count: () => db.select({ n: count() }).from(rankings).get()!.n,
   };
 }

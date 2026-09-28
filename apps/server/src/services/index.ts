@@ -41,6 +41,7 @@ export type Services = ContentServices & {
 
 /**
  * Builds every service over a shared {@link Store}.
+ *
  * @param store - the store services persist through
  * @returns the service set
  */

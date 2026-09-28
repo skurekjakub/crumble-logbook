@@ -11,6 +11,7 @@ const ID_CHUNK = 500;
 export interface CitationsRepo {
   /**
    * Groups the sources cited by each of `entityIds` for `entity`.
+   *
    * @param entity - the cited entity kind
    * @param entityIds - entity ids to look up
    * @returns a map from entity id to its sorted, deduplicated source ids;
@@ -20,6 +21,7 @@ export interface CitationsRepo {
   sourcesFor(entity: CitedEntity, entityIds: string[]): Map<string, string[]>;
   /**
    * Replaces every citation for `(entity, entityId)` with `sourceIds`.
+   *
    * @param entity - the cited entity kind
    * @param entityId - the specific entity's id
    * @param sourceIds - the sources to cite; duplicates are removed
@@ -28,12 +30,14 @@ export interface CitationsRepo {
   replace(entity: CitedEntity, entityId: string, sourceIds: string[]): void;
   /**
    * Deletes every citation for `(entity, entityId)`.
+   *
    * @param entity - the cited entity kind
    * @param entityId - the specific entity's id
    */
   removeAll(entity: CitedEntity, entityId: string): void;
   /**
    * Deletes every citation of each of `entityIds` for `entity`.
+   *
    * @param entity - the cited entity kind
    * @param entityIds - the entities' ids; `[]` deletes nothing
    */
@@ -50,10 +54,13 @@ export interface CitationsRepo {
 
 /**
  * Builds a {@link CitationsRepo}.
+ *
  * @param db - database or transaction handle
+ * @returns the repo
  */
 export function createCitationsRepo(db: Db): CitationsRepo {
   return {
+    /** @inheritdoc */
     sourcesFor: (entity, entityIds) => {
       const result = new Map<string, string[]>();
       if (entityIds.length === 0) return result;
@@ -70,6 +77,7 @@ export function createCitationsRepo(db: Db): CitationsRepo {
       for (const list of result.values()) list.sort();
       return result;
     },
+    /** @inheritdoc */
     replace: (entity, entityId, sourceIds) => {
       db.delete(citations)
         .where(and(eq(citations.entity, entity), eq(citations.entityId, entityId)))
@@ -81,11 +89,13 @@ export function createCitationsRepo(db: Db): CitationsRepo {
           .run();
       }
     },
+    /** @inheritdoc */
     removeAll: (entity, entityId) => {
       db.delete(citations)
         .where(and(eq(citations.entity, entity), eq(citations.entityId, entityId)))
         .run();
     },
+    /** @inheritdoc */
     removeFor: (entity, entityIds) => {
       for (let start = 0; start < entityIds.length; start += ID_CHUNK) {
         const ids = entityIds.slice(start, start + ID_CHUNK);
@@ -94,13 +104,17 @@ export function createCitationsRepo(db: Db): CitationsRepo {
           .run();
       }
     },
+    /** @inheritdoc */
     countForSource: (sourceId) =>
       db.select({ n: count() }).from(citations).where(eq(citations.sourceId, sourceId)).get()!.n,
+    /** @inheritdoc */
     count: () => db.select({ n: count() }).from(citations).get()!.n,
+    /** @inheritdoc */
     clear: () => {
       db.delete(citations).run();
       resetIds(db, citations);
     },
+    /** @inheritdoc */
     all: () => db.select().from(citations).all(),
   };
 }

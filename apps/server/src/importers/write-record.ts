@@ -25,6 +25,9 @@ const OWNED_KEYS = TABLE_KEYS.filter((key) => recordColumnOf(key) !== undefined)
  * decks) go with their parents. A shared row that another record's rows
  * still reference, such as a source they cite, stays, still owned by
  * `slug`.
+ *
+ * @param repos - the write's repos
+ * @param slug - the record's slug
  */
 function clearRecord(repos: Repos, slug: string): void {
   for (const key of [...OWNED_KEYS].reverse()) {
@@ -35,7 +38,12 @@ function clearRecord(repos: Repos, slug: string): void {
   for (const key of TABLE_KEYS) repos.tables.restartIds(key);
 }
 
-/** Every registered table's row count. */
+/**
+ * Counts the rows of every registered table.
+ *
+ * @param repos - the repos to count through
+ * @returns each table's row count
+ */
 function countAll(repos: Repos): ImportCounts {
   return Object.fromEntries(
     TABLE_KEYS.map((key) => [key, repos.tables.count(key)]),
@@ -78,7 +86,16 @@ export function writeRecord(store: Store, plan: RecordPlan, replace: boolean): W
     }
     const before = countAll(repos);
     const warnings: string[] = [];
-    const context = { record: slug, warn: (message: string) => void warnings.push(message) };
+    const context = {
+      record: slug,
+      /**
+       * Collects a step's warning.
+       *
+       * @param message - the warning
+       * @returns nothing
+       */
+      warn: (message: string) => void warnings.push(message),
+    };
     for (const step of plan.steps) step(repos, context);
     const after = countAll(repos);
     const counts = Object.fromEntries(TABLE_KEYS.map((key) => [key, after[key] - before[key]]));

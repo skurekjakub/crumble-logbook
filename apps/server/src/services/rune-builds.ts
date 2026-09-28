@@ -24,6 +24,7 @@ export type RuneBuildView = Cited<RuneBuildRow> & { en: string | null; decks: st
 export interface RuneBuildService {
   /**
    * Returns every rune build view, ordered by `id`.
+   *
    * @param filter - the registry's list filters, each applied when given:
    *   `deck` keeps the rune builds linked to that deck, `mode` those of
    *   that game mode
@@ -31,12 +32,14 @@ export interface RuneBuildService {
   list(filter?: FiltersOf<"runeBuilds">): RuneBuildView[];
   /**
    * Returns the rune build view for `id`.
+   *
    * @param id - the rune build's numeric id
    * @throws {NotFoundError} if `id` doesn't exist
    */
   get(id: number): RuneBuildView;
   /**
    * Inserts a rune build with its deck links and citations.
+   *
    * @param input - the rune build, the decks it applies to, and its sources
    * @throws {UnknownRefsError} if any cited source id doesn't exist
    *   (`"sources"`), or any linked deck id doesn't exist (`"decks"`)
@@ -57,6 +60,7 @@ export interface RuneBuildService {
   update(id: number, patch: RuneBuildPatch): RuneBuildView;
   /**
    * Deletes the rune build with `id`, its deck links and its citations.
+   *
    * @param id - the rune build's numeric id
    * @throws {NotFoundError} if `id` doesn't exist
    */
@@ -65,6 +69,7 @@ export interface RuneBuildService {
 
 /**
  * Verifies that every id in `deckIds` is a known deck.
+ *
  * @param repos - repos to check against
  * @param deckIds - candidate deck ids
  * @throws {UnknownRefsError} naming every id in `deckIds` that doesn't
@@ -77,9 +82,18 @@ function assertDecksExist(repos: Repos, deckIds: string[]): void {
 
 /**
  * Builds a {@link RuneBuildService} over `store`.
+ *
  * @param store - the store to persist through
+ * @returns the service
  */
 export function createRuneBuildService(store: Store): RuneBuildService {
+  /**
+   * Builds the views of `rows`, with their decks, citations and English cookie names.
+   *
+   * @param repos - the repos to read decks, citations and the glossary from
+   * @param rows - the rune build rows
+   * @returns one view per row, in `rows` order
+   */
   const toViews = (repos: Repos, rows: RuneBuildRow[]): RuneBuildView[] => {
     const ids = rows.map((row) => row.id);
     const resolve = createNameResolver(repos.glossary.list());
@@ -94,6 +108,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
   };
 
   return {
+    /** @inheritdoc */
     list: (filter) => {
       const repos = store.repos;
       return applyFilters(
@@ -102,6 +117,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
         filter,
       );
     },
+    /** @inheritdoc */
     get: (id) => {
       const repos = store.repos;
       const row = repos.runeBuilds.get(id);
@@ -111,6 +127,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
     // See `DeckService.create`'s implementation for why the inner return is
     // cast `as never` and the outer call `as RuneBuildView`: `Store.transaction`
     // can't infer its type parameter through its own conditional return type.
+    /** @inheritdoc */
     create: (input) =>
       store.transaction((repos) => {
         assertSourcesExist(repos, input.sources);
@@ -121,6 +138,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
         repos.citations.replace("rune_build", String(row.id), sources);
         return toViews(repos, [row])[0] as never;
       }),
+    /** @inheritdoc */
     update: (id, patch) =>
       store.transaction((repos) => {
         if (!repos.runeBuilds.get(id)) throw new NotFoundError("rune_build", id);
@@ -136,6 +154,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
         if (sources !== undefined) repos.citations.replace("rune_build", String(id), sources);
         return toViews(repos, [row])[0] as never;
       }),
+    /** @inheritdoc */
     remove: (id) =>
       store.transaction((repos) => {
         if (!repos.runeBuilds.get(id)) throw new NotFoundError("rune_build", id);

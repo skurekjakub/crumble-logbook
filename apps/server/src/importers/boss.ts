@@ -168,6 +168,13 @@ export function readBuffValues(
   }
   const { recommendations } = parseFile(spec.file, readJson(recordDir, spec.file), captureFile);
   const { cookies } = parseFile(spec.catalog, readJson(recordDir, spec.catalog), catalogFile);
+  /**
+   * Reports whether a cookie's effect is listed as a self-buff in `spec.selfBuffs`.
+   *
+   * @param kr - the cookie's Korean name
+   * @param effectType - the effect's type
+   * @returns `true` if the effect targets the cookie itself
+   */
   const isSelf = (kr: string, effectType: string) =>
     spec.selfBuffs[kr]?.includes(effectType) ?? false;
 
@@ -294,6 +301,12 @@ export function insertBuffValues(
   file: string,
   rows: ReadonlyArray<CitedValues<Values<BuffValueInput>>>,
 ): WriteStep {
+  /**
+   * Builds the identity key of a buff value row.
+   *
+   * @param v - the row's cookie, effect type and skill grade
+   * @returns `<cookieKr>|<effectType>|<skillGrade>`
+   */
   const key = (v: Pick<Values<BuffValueInput>, "cookieKr" | "effectType" | "skillGrade">) =>
     `${v.cookieKr}|${v.effectType}|${v.skillGrade}`;
   return (repos, { record }) => {

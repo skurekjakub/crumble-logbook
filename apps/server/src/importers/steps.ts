@@ -18,6 +18,7 @@ export interface WriteContext {
   /**
    * Records a non-fatal finding about the database as the step found it,
    * such as a shared row another record already loaded.
+   *
    * @param message - the finding, for a human
    */
   warn(message: string): void;

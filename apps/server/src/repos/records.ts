@@ -19,12 +19,14 @@ export interface RecordsRepo {
   list(): ResearchRecordRow[];
   /**
    * Returns the record with `slug`, or `undefined` if there is none.
+   *
    * @param slug - the record's slug
    */
   get(slug: string): ResearchRecordRow | undefined;
   /**
    * Inserts a research record, or updates it in place if its `slug` already
    * exists.
+   *
    * @param row - the record to write
    * @returns the written row
    */
@@ -35,6 +37,7 @@ export interface RecordsRepo {
   modes(): RecordModeRow[];
   /**
    * Replaces the modes record `slug` covers with `modes`.
+   *
    * @param slug - the record's slug
    * @param modes - the modes, each with its lede and caveat; `[]` clears them
    * @throws if `slug` isn't a research record, or a mode repeats
@@ -44,12 +47,17 @@ export interface RecordsRepo {
 
 /**
  * Builds a {@link RecordsRepo}.
+ *
  * @param db - database or transaction handle
+ * @returns the repo
  */
 export function createRecordsRepo(db: Db): RecordsRepo {
   return {
+    /** @inheritdoc */
     list: () => db.select().from(researchRecords).orderBy(asc(researchRecords.slug)).all(),
+    /** @inheritdoc */
     get: (slug) => db.select().from(researchRecords).where(eq(researchRecords.slug, slug)).get(),
+    /** @inheritdoc */
     upsert: (row) =>
       db
         .insert(researchRecords)
@@ -57,13 +65,16 @@ export function createRecordsRepo(db: Db): RecordsRepo {
         .onConflictDoUpdate({ target: researchRecords.slug, set: row })
         .returning()
         .get(),
+    /** @inheritdoc */
     count: () => db.select({ n: count() }).from(researchRecords).get()!.n,
+    /** @inheritdoc */
     modes: () =>
       db
         .select()
         .from(recordModes)
         .orderBy(asc(recordModes.recordSlug), asc(recordModes.mode))
         .all(),
+    /** @inheritdoc */
     replaceModes: (slug, modes) => {
       db.delete(recordModes).where(eq(recordModes.recordSlug, slug)).run();
       if (modes.length > 0) {

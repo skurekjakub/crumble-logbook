@@ -37,19 +37,32 @@ export type ScoreService = ContentService<
 
 /**
  * Builds a {@link ScoreService} over `store`.
+ *
  * @param store - the store to persist through
+ * @returns the service
  */
 export function createScoreService(store: Store): ScoreService {
   const content = registeredService(store, "scores");
+  /**
+   * Attaches a score's damage/power ratio.
+   *
+   * @param row - the score with its sources
+   * @returns the score's view
+   */
   const withRatio = (row: Cited<ScoreRow>): ScoreView => ({
     ...row,
     ratio: ratio(row.damageG, row.powerG),
   });
   return {
+    /** @inheritdoc */
     list: (filter) => content.list(filter).map(withRatio),
+    /** @inheritdoc */
     get: (id) => withRatio(content.get(id)),
+    /** @inheritdoc */
     create: (values, sources) => withRatio(content.create(values, sources)),
+    /** @inheritdoc */
     update: (id, patch, sources) => withRatio(content.update(id, patch, sources)),
+    /** @inheritdoc */
     remove: (id) => content.remove(id),
   };
 }

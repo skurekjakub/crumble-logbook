@@ -31,18 +31,21 @@ export type DeckView = Omit<Cited<DeckRow>, "atkOrder"> & {
 export interface DeckService {
   /**
    * Returns every deck view, ordered by `position` then `id`.
+   *
    * @param filter - the registry's list filters for decks (`mode`), each
    *   applied when given
    */
   list(filter?: FiltersOf<"decks">): DeckView[];
   /**
    * Returns the deck view for `id`.
+   *
    * @param id - the deck's slug id
    * @throws {NotFoundError} if `id` doesn't exist
    */
   get(id: string): DeckView;
   /**
    * Inserts a deck with its cookies, pets, notes and citations.
+   *
    * @param input - the deck and its children; `position` defaults to the
    *   next free position when omitted
    * @throws {ConflictError} if `input.id` already exists
@@ -66,6 +69,7 @@ export interface DeckService {
    * notes cascade; any score referencing it keeps its row with `deckId` set
    * to `null` (both via the schema's foreign keys). A deck a counter edge
    * names is kept: delete or repoint the edges first.
+   *
    * @param id - the deck's slug id
    * @throws {NotFoundError} if `id` doesn't exist
    * @throws {ConflictError} `"deck <id> is named by N counter edges"` if any
@@ -74,7 +78,12 @@ export interface DeckService {
   remove(id: string): void;
 }
 
-/** Groups rows with a `deckId` field by that field, preserving each group's row order. */
+/**
+ * Groups rows with a `deckId` field by that field, preserving each group's row order.
+ *
+ * @param rows - the rows to group
+ * @returns deck id → that deck's rows
+ */
 function groupByDeckId<T extends { deckId: string }>(rows: T[]): Map<string, T[]> {
   const result = new Map<string, T[]>();
   for (const row of rows) {
@@ -87,9 +96,18 @@ function groupByDeckId<T extends { deckId: string }>(rows: T[]): Map<string, T[]
 
 /**
  * Builds a {@link DeckService} over `store`.
+ *
  * @param store - the store to persist through
+ * @returns the service
  */
 export function createDeckService(store: Store): DeckService {
+  /**
+   * Builds the views of `rows`, with their slots, notes, citations and English names.
+   *
+   * @param repos - the repos to read children, citations and the glossary from
+   * @param rows - the deck rows
+   * @returns one view per row, in `rows` order
+   */
   const toViews = (repos: Repos, rows: DeckRow[]): DeckView[] => {
     const ids = rows.map((row) => row.id);
     const resolve = createNameResolver(repos.glossary.list());
@@ -117,10 +135,12 @@ export function createDeckService(store: Store): DeckService {
   };
 
   return {
+    /** @inheritdoc */
     list: (filter) => {
       const repos = store.repos;
       return applyFilters(toViews(repos, repos.decks.list()), REGISTRY.decks.filters, filter);
     },
+    /** @inheritdoc */
     get: (id) => {
       const repos = store.repos;
       const row = repos.decks.get(id);
@@ -130,6 +150,7 @@ export function createDeckService(store: Store): DeckService {
     // See `ContentService.create`'s implementation for why the inner return
     // is cast `as never` and the outer call `as DeckView`: `Store.transaction`
     // can't infer its type parameter through its own conditional return type.
+    /** @inheritdoc */
     create: (input) =>
       store.transaction((repos) => {
         if (repos.decks.exists(input.id))
@@ -146,6 +167,7 @@ export function createDeckService(store: Store): DeckService {
         repos.citations.replace("deck", row.id, sources);
         return toViews(repos, [row])[0] as never;
       }),
+    /** @inheritdoc */
     update: (id, patch) =>
       store.transaction((repos) => {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);
@@ -160,6 +182,7 @@ export function createDeckService(store: Store): DeckService {
         if (sources !== undefined) repos.citations.replace("deck", id, sources);
         return toViews(repos, [row])[0] as never;
       }),
+    /** @inheritdoc */
     remove: (id) =>
       store.transaction((repos) => {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);

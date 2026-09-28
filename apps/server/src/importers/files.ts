@@ -6,6 +6,7 @@ import { formatIssues } from "./manifest";
 
 /**
  * Reads a JSON file of a record.
+ *
  * @param recordDir - absolute path to the record directory
  * @param file - the file's path relative to `recordDir`, as errors name it
  * @returns the parsed value
@@ -23,6 +24,7 @@ export function readJson(recordDir: string, file: string): unknown {
 
 /**
  * Validates a whole-file value with `schema`.
+ *
  * @param file - the file's record-relative path, as errors name it
  * @param raw - the parsed file
  * @param schema - the schema the file must satisfy

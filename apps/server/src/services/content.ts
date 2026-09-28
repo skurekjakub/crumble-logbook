@@ -30,18 +30,21 @@ export interface ContentService<
 > {
   /**
    * Returns every view, in the table's list order.
+   *
    * @param filter - the list filter values to apply, when given; an absent
    *   value doesn't filter
    */
   list(filter?: Filter): View[];
   /**
    * Returns the view of the row with `id`.
+   *
    * @param id - the row's primary key
    * @throws {NotFoundError} if `id` doesn't exist
    */
   get(id: number): View;
   /**
    * Inserts a row and cites it.
+   *
    * @param values - the column values
    * @param sources - the source ids that back the row
    * @throws {UnknownRefsError} if any `sources` id, or any id a declared
@@ -52,6 +55,7 @@ export interface ContentService<
   create(values: Values, sources: string[]): View;
   /**
    * Updates the row with `id`, merging in `patch`.
+   *
    * @param id - the row's primary key
    * @param patch - the column values to merge in
    * @param sources - when given, replaces the row's citations; when
@@ -65,6 +69,7 @@ export interface ContentService<
   update(id: number, patch: Partial<Values>, sources?: string[]): View;
   /**
    * Deletes the row with `id` and its citations.
+   *
    * @param id - the row's primary key
    * @throws {NotFoundError} if `id` doesn't exist
    */
@@ -80,12 +85,14 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
   /**
    * Validates cross-table references in `values` before a write, beyond
    * plain source citations (e.g. a score's `deckId`).
+   *
    * @throws to reject the write
    */
   checkRefs?: (repos: Repos, values: Partial<Values>) => void;
   /**
    * Validates a row as written (column defaults applied, a patch merged in)
    * against other tables, inside the write's transaction.
+   *
    * @throws to reject the write; the transaction rolls back
    */
   checkRow?: (repos: Repos, row: Row) => void;
@@ -117,8 +124,22 @@ export function createContentService<
   const { entity, table, checkRefs, checkRow, filters, gloss } = spec;
   const usesGlossary = gloss !== undefined || filtersNeedGlossary(filters);
 
+  /**
+   * Builds the name resolver views are glossed with.
+   *
+   * @param repos - the repos to read the glossary from
+   * @returns the resolver, or `undefined` when neither `gloss` nor a filter needs the glossary
+   */
   const resolver = (repos: Repos) =>
     usesGlossary ? createNameResolver(repos.glossary.list()) : undefined;
+  /**
+   * Builds a row's view.
+   *
+   * @param row - the row
+   * @param sources - the row's cited source ids
+   * @param resolve - the glossary resolver; without one, the view has no `en`
+   * @returns the row with `sources`, and `en` when `gloss` names a column
+   */
   const toView = (row: Row, sources: string[], resolve?: NameResolver): View =>
     (gloss !== undefined && resolve
       ? {
@@ -127,12 +148,20 @@ export function createContentService<
           en: resolve(String((row as Record<string, unknown>)[gloss]), recordsOf(row)).en,
         }
       : { ...row, sources }) as View;
+  /**
+   * Builds a row's view with its stored citations.
+   *
+   * @param repos - the repos to read citations and the glossary from
+   * @param row - the row
+   * @returns the row's view
+   */
   const withSources = (repos: Repos, row: Row): View => {
     const sources = repos.citations.sourcesFor(entity, [String(row.id)]).get(String(row.id)) ?? [];
     return toView(row, sources, resolver(repos));
   };
 
   return {
+    /** @inheritdoc */
     list: (filter) => {
       const repos = store.repos;
       const rows = table(repos).list();
@@ -144,6 +173,7 @@ export function createContentService<
       const views = rows.map((row) => toView(row, sourcesById.get(String(row.id)) ?? [], resolve));
       return applyFilters(views, filters, filter as Record<string, string | undefined>, resolve);
     },
+    /** @inheritdoc */
     get: (id) => {
       const repos = store.repos;
       const row = table(repos).get(id);
@@ -155,6 +185,7 @@ export function createContentService<
     // generic inside this function — the same naked-generic limitation
     // documented on `Store.transaction` itself. The inner `as never` and
     // outer `as View` restore the real, still-synchronous, return type.
+    /** @inheritdoc */
     create: (values, sources) =>
       store.transaction((repos) => {
         assertSourcesExist(repos, sources);
@@ -164,6 +195,7 @@ export function createContentService<
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
       }),
+    /** @inheritdoc */
     update: (id, patch, sources) =>
       store.transaction((repos) => {
         if (sources) assertSourcesExist(repos, sources);
@@ -179,6 +211,7 @@ export function createContentService<
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
       }),
+    /** @inheritdoc */
     remove: (id) =>
       store.transaction((repos) => {
         const repo = table(repos);
@@ -224,9 +257,17 @@ export function registeredService<K extends ContentKey>(
   const refColumns = Object.keys(content?.refs ?? {});
   return createContentService<{ id: number }, Record<string, unknown>>(store, {
     entity: entity!,
+    /** @inheritdoc */
     table: (repos) => repos[key],
     filters,
     gloss: content?.gloss,
+    /**
+     * Checks that every deck id a reference column holds exists.
+     *
+     * @param repos - the write's repos
+     * @param values - the values being written
+     * @throws {UnknownRefsError} naming the first deck id that doesn't exist
+     */
     checkRefs: (repos, values) => {
       for (const column of refColumns) {
         const id = values[column];
@@ -235,6 +276,13 @@ export function registeredService<K extends ContentKey>(
         }
       }
     },
+    /**
+     * Checks that every deck a moded row references is of the row's mode.
+     *
+     * @param repos - the write's repos
+     * @param row - the row as written
+     * @throws {ConflictError} describing the first deck of another mode
+     */
     checkRow: (repos, row) => {
       const { mode } = row as { mode?: GameMode };
       if (mode === undefined) return;
@@ -263,6 +311,7 @@ export interface CrudEndpoints<Id, Input, Patch, View, Filter> {
   list(filter?: Filter): View[];
   /**
    * Returns the view for `id`.
+   *
    * @throws {NotFoundError} if `id` doesn't exist
    */
   get(id: Id): View;
@@ -270,11 +319,13 @@ export interface CrudEndpoints<Id, Input, Patch, View, Filter> {
   create(input: Input): View;
   /**
    * Updates the row (or aggregate) with `id` from `patch`.
+   *
    * @throws {NotFoundError} if `id` doesn't exist
    */
   update(id: Id, patch: Patch): View;
   /**
    * Deletes the row (or aggregate) with `id`.
+   *
    * @throws {NotFoundError} if `id` doesn't exist
    */
   remove(id: Id): void;
@@ -297,10 +348,15 @@ export function contentEndpoints<Row, Values, View, Filter extends object>(
   Filter
 > {
   return {
+    /** @inheritdoc */
     list: (filter) => svc.list(filter),
+    /** @inheritdoc */
     get: (id) => svc.get(id),
+    /** @inheritdoc */
     create: ({ sources, ...values }) => svc.create(values as Values, sources),
+    /** @inheritdoc */
     update: (id, { sources, ...values }) => svc.update(id, values as Partial<Values>, sources),
+    /** @inheritdoc */
     remove: (id) => svc.remove(id),
   };
 }

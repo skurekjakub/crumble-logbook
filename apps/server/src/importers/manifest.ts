@@ -111,7 +111,9 @@ export type ManifestRecord = ImportManifest["record"];
 
 /**
  * Formats every issue of a Zod error as `path: message`, joined by `; `.
+ *
  * @param error - the Zod error to format
+ * @returns the formatted issues; a root-level issue's path reads `(root)`
  */
 export function formatIssues(error: z.ZodError): string {
   return error.issues
@@ -143,6 +145,10 @@ export function readManifest(recordDir: string): ImportManifest {
 
 /**
  * Returns the cell of `row` under `column`.
+ *
+ * @param row - the row, keyed by header cell
+ * @param column - the header cell to read
+ * @returns the cell's text
  * @throws if the row has no such column
  */
 function cell(row: Record<string, string>, column: string): string {
@@ -154,6 +160,11 @@ function cell(row: Record<string, string>, column: string): string {
 /**
  * Returns the cell under `column` parsed as a number, or `null` for an
  * empty cell or an absent (unmapped) column.
+ *
+ * @param row - the row, keyed by header cell
+ * @param column - the header cell to read, if mapped
+ * @returns the number, or `null`
+ * @throws if the row has no such column
  * @throws if the cell isn't empty and doesn't parse as a number
  */
 function optionalNumber(row: Record<string, string>, column: string | undefined): number | null {
@@ -167,6 +178,11 @@ function optionalNumber(row: Record<string, string>, column: string | undefined)
 
 /**
  * Returns the cell under `column` parsed as a number.
+ *
+ * @param row - the row, keyed by header cell
+ * @param column - the header cell to read
+ * @returns the number
+ * @throws if the row has no such column
  * @throws if the cell is empty or doesn't parse as a number
  */
 function requiredNumber(row: Record<string, string>, column: string): number {
@@ -178,6 +194,11 @@ function requiredNumber(row: Record<string, string>, column: string): number {
 /**
  * Returns the cell under `column`, or `null` for an empty cell or an
  * absent (unmapped) column.
+ *
+ * @param row - the row, keyed by header cell
+ * @param column - the header cell to read, if mapped
+ * @returns the text, or `null`
+ * @throws if the row has no such column
  */
 function optionalText(row: Record<string, string>, column: string | undefined): string | null {
   if (column === undefined) return null;

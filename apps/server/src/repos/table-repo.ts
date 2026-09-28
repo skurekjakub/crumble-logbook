@@ -42,12 +42,14 @@ export interface TableRepo<Row, Insert> {
   list(): Row[];
   /**
    * Returns the row with `id`, or `undefined` if there is none.
+   *
    * @param id - the row's primary key
    * @returns the matching row, or `undefined` if `id` doesn't exist
    */
   get(id: number): Row | undefined;
   /**
    * Inserts a row.
+   *
    * @throws {ConflictError} if `values` duplicates a unique index's columns
    * @throws if `values` violates another constraint (a foreign key, or a
    *   NOT NULL column)
@@ -55,6 +57,7 @@ export interface TableRepo<Row, Insert> {
   insert(values: Insert): Row;
   /**
    * Updates the row with `id`, merging in `patch`.
+   *
    * @returns the updated row, or `undefined` if `id` doesn't exist
    * @throws {ConflictError} if the patch duplicates a unique index's columns
    * @throws if the patch violates another constraint
@@ -62,6 +65,7 @@ export interface TableRepo<Row, Insert> {
   update(id: number, patch: Partial<Insert>): Row | undefined;
   /**
    * Deletes the row with `id`.
+   *
    * @param id - the row's primary key
    * @returns `true` if a row was deleted, `false` if `id` didn't exist
    */
@@ -110,13 +114,16 @@ export function createTableRepo<T extends IdTable>(
   type Row = InferSelectModel<T>;
   const base = table as SQLiteTable;
   return {
+    /** @inheritdoc */
     list: () =>
       db
         .select()
         .from(base)
         .orderBy(...orderBy)
         .all() as Row[],
+    /** @inheritdoc */
     get: (id) => db.select().from(base).where(eq(table.id, id)).get() as Row | undefined,
+    /** @inheritdoc */
     insert: (values) =>
       asConflict(
         () =>
@@ -126,6 +133,7 @@ export function createTableRepo<T extends IdTable>(
             .returning()
             .get() as Row,
       ),
+    /** @inheritdoc */
     update: (id, patch) =>
       asConflict(
         () =>
@@ -136,9 +144,12 @@ export function createTableRepo<T extends IdTable>(
             .returning()
             .get() as Row | undefined,
       ),
+    /** @inheritdoc */
     remove: (id) =>
       db.delete(base).where(eq(table.id, id)).returning({ id: table.id }).all().length > 0,
+    /** @inheritdoc */
     count: () => db.select({ n: count() }).from(base).get()!.n,
+    /** @inheritdoc */
     clear: () => {
       db.delete(base).run();
       resetIds(db, base);

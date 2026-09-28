@@ -6,6 +6,7 @@ import type { Store } from "../repos";
 export interface RankingsService {
   /**
    * Lists rankings ordered by board, then season, then rank.
+   *
    * @param filter - restrict by `season` and/or `board`, when given
    */
   list(filter?: RankingsFilter): RankingRow[];
@@ -15,11 +16,15 @@ export interface RankingsService {
 
 /**
  * Builds a {@link RankingsService} over `store`.
+ *
  * @param store - the store to read through
+ * @returns the service
  */
 export function createRankingsService(store: Store): RankingsService {
   return {
+    /** @inheritdoc */
     list: (filter) => store.repos.rankings.list(filter),
+    /** @inheritdoc */
     seasons: () => store.repos.rankings.seasons(),
   };
 }

@@ -16,28 +16,33 @@ export interface RuneBuildsRepo {
   list(): RuneBuildRow[];
   /**
    * Returns the rune build with `id`, or `undefined` if there is none.
+   *
    * @param id - the rune build's numeric id
    */
   get(id: number): RuneBuildRow | undefined;
   /**
    * Inserts a rune build.
+   *
    * @throws if a NOT NULL column is missing
    */
   insert(row: RuneBuildInsert): RuneBuildRow;
   /**
    * Updates the rune build with `id`, merging in `patch`.
+   *
    * @returns the updated row, or `undefined` if `id` doesn't exist
    */
   update(id: number, patch: Partial<RuneBuildInsert>): RuneBuildRow | undefined;
   /**
    * Deletes the rune build with `id`. Its deck links cascade (enforced by
    * the schema's foreign key, not by this method).
+   *
    * @param id - the rune build's numeric id
    * @returns `true` if a row was deleted, `false` if `id` didn't exist
    */
   remove(id: number): boolean;
   /**
    * Groups the deck ids linked to each of `ids`.
+   *
    * @param ids - rune build ids to look up
    * @returns a map from rune build id to its sorted deck ids; ids with no
    *   linked decks are absent from the map; `ids` of `[]` returns an empty
@@ -46,6 +51,7 @@ export interface RuneBuildsRepo {
   decksFor(ids: number[]): Map<number, string[]>;
   /**
    * Replaces every deck link of `id` with `deckIds`.
+   *
    * @param id - the rune build to replace links for
    * @param deckIds - the decks to link; duplicates are removed
    * @throws if any `deckIds` entry doesn't exist in `decks`
@@ -57,18 +63,26 @@ export interface RuneBuildsRepo {
 
 /**
  * Builds a {@link RuneBuildsRepo}.
+ *
  * @param db - database or transaction handle
+ * @returns the repo
  */
 export function createRuneBuildsRepo(db: Db): RuneBuildsRepo {
   return {
+    /** @inheritdoc */
     list: () => db.select().from(runeBuilds).orderBy(asc(runeBuilds.id)).all(),
+    /** @inheritdoc */
     get: (id) => db.select().from(runeBuilds).where(eq(runeBuilds.id, id)).get(),
+    /** @inheritdoc */
     insert: (row) => db.insert(runeBuilds).values(row).returning().get(),
+    /** @inheritdoc */
     update: (id, patch) =>
       db.update(runeBuilds).set(patch).where(eq(runeBuilds.id, id)).returning().get(),
+    /** @inheritdoc */
     remove: (id) =>
       db.delete(runeBuilds).where(eq(runeBuilds.id, id)).returning({ id: runeBuilds.id }).all()
         .length > 0,
+    /** @inheritdoc */
     decksFor: (ids) => {
       const result = new Map<number, string[]>();
       if (ids.length === 0) return result;
@@ -85,6 +99,7 @@ export function createRuneBuildsRepo(db: Db): RuneBuildsRepo {
       for (const list of result.values()) list.sort();
       return result;
     },
+    /** @inheritdoc */
     replaceDecks: (id, deckIds) => {
       db.delete(runeBuildDecks).where(eq(runeBuildDecks.runeBuildId, id)).run();
       const distinct = [...new Set(deckIds)];
@@ -94,6 +109,7 @@ export function createRuneBuildsRepo(db: Db): RuneBuildsRepo {
           .run();
       }
     },
+    /** @inheritdoc */
     count: () => db.select({ n: count() }).from(runeBuilds).get()!.n,
   };
 }

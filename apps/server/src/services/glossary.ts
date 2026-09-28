@@ -11,11 +11,13 @@ import { recordsCovering } from "./records";
 export interface GlossaryService {
   /**
    * Lists glossary entries ordered by `kr`.
+   *
    * @param kind - restrict the list to this kind, when given
    */
   list(kind?: GlossaryKind): GlossaryRow[];
   /**
    * Resolves `name` against the current glossary.
+   *
    * @param name - a name as it appeared in source data, in Korean or English
    * @param mode - when given, entries from the records covering this game
    *   mode win a key that several entries claim
@@ -25,6 +27,7 @@ export interface GlossaryService {
   /**
    * Inserts a glossary entry, or updates it in place if its `kr` already
    * exists.
+   *
    * @param input - the entry to write
    * @returns the written row
    */
@@ -33,16 +36,21 @@ export interface GlossaryService {
 
 /**
  * Builds a {@link GlossaryService} over `store`.
+ *
  * @param store - the store to persist through
+ * @returns the service
  */
 export function createGlossaryService(store: Store): GlossaryService {
   return {
+    /** @inheritdoc */
     list: (kind) => store.repos.glossary.list(kind),
+    /** @inheritdoc */
     resolve: (name, mode) => {
       const repos = store.repos;
       const records = mode ? recordsCovering(repos, mode) : [];
       return createNameResolver(repos.glossary.list())(name, records);
     },
+    /** @inheritdoc */
     upsert: (input) => store.repos.glossary.upsert(input),
   };
 }

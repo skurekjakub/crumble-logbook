@@ -32,6 +32,10 @@ const ORDERED = Object.entries(COLLECTIONS) as Array<[CollectionName, Collection
 /**
  * Reads and validates every collection the curated directory's
  * `manifest.json` lists.
+ *
+ * @param recordDir - absolute path to the research record directory
+ * @param curatedDir - the curated directory, relative to `recordDir`
+ * @returns each listed collection's parsed content and file path
  * @throws {ImportError} naming the file (and row) of the first failure
  */
 function readCollections(recordDir: string, curatedDir: string): CuratedFiles {
@@ -59,6 +63,8 @@ function readCollections(recordDir: string, curatedDir: string): CuratedFiles {
  * Checks, before anything is written, that every cited source id is a
  * curated source and every linked deck is a curated deck, then runs each
  * collection's own checks.
+ *
+ * @param curated - every listed collection's parsed content and file path
  * @throws {ImportError} naming the file and row of the first bad reference
  */
 function checkCollections({ parsed, files }: CuratedFiles): void {
@@ -71,6 +77,13 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
       ? []
       : collection.refs(parsed[name]).map((ref) => ({ file: files[name]!, ref })),
   );
+  /**
+   * Checks that every id the rows reference under `key` is curated.
+   *
+   * @param kind - how the error names the ids
+   * @param key - which reference list to check
+   * @throws {ImportError} naming the file and row of the first unknown id
+   */
   const assertKnown = (kind: "source" | "deck", key: keyof RowRefs & keyof typeof known) => {
     for (const { file, ref } of refs) {
       const unknown = [...new Set((ref[key] ?? []).filter((id) => !known[key].has(id)))];

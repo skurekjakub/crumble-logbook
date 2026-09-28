@@ -30,6 +30,7 @@ export type NameResolver = (name: string, records?: readonly string[]) => NameRe
 /**
  * Collapses case and whitespace differences for glossary lookup keys: the
  * key {@link createNameResolver} indexes and looks up a name under.
+ *
  * @param name - a name as written
  * @returns the trimmed, lower-cased name with whitespace runs collapsed to
  *   one space
@@ -83,6 +84,7 @@ export function createNameResolver(entries: readonly LookupEntry[]): NameResolve
 /**
  * The records a row's names resolve against first: the record that loaded
  * it, if any.
+ *
  * @param row - a row, or view, that may carry a `recordSlug`
  * @returns `[recordSlug]`, or `[]` for a row no record owns
  */

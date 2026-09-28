@@ -41,7 +41,9 @@ export type Repos = ContentRepos & {
 
 /**
  * Builds the generic repo of every registered content type.
+ *
  * @param db - database or transaction handle
+ * @returns the content repos, keyed by content type
  */
 function createContentRepos(db: Db): ContentRepos {
   return Object.fromEntries(
@@ -58,6 +60,7 @@ function createContentRepos(db: Db): ContentRepos {
 
 /**
  * Builds every repo over a shared database or transaction handle.
+ *
  * @param db - database or transaction handle
  * @returns the repo set
  */
@@ -99,7 +102,9 @@ export interface Store {
 
 /**
  * Builds a {@link Store} over `db`.
+ *
  * @param db - the database to persist to
+ * @returns the store
  */
 export function createStore(db: Db): Store {
   return {
@@ -110,6 +115,7 @@ export function createStore(db: Db): Store {
     // outer result is cast back to `T` to restore the real return type. The
     // public parameter type above (not this cast) is what actually rejects
     // an async `work`.
+    /** @inheritdoc */
     transaction<T>(work: (repos: Repos) => T extends Promise<unknown> ? never : T): T {
       return db.transaction((tx) => work(createRepos(tx)) as never);
     },
