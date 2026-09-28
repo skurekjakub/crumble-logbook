@@ -10,7 +10,8 @@ import side plugs into R3's pluggable manifest blocks.
 - The scrapers move to TypeScript, so the whole repo is one stack.
 - Replaces the design spec's success criterion 3 ("a scrape can be triggered from the UI") with: every file under a
   record's `evidence/` has a line in that record's capture ledger giving its URL, capture time, tool and hash, and a
-  test fails when one is missing or a file's bytes changed.
+  test fails when one is missing or a file's bytes changed. Captured media is local-only (below), so its absence on a
+  clone is not a failure.
 
 ## The ledger
 
@@ -33,14 +34,20 @@ The Zod schema for a line lives in `packages/schema` (shared by the capture pack
 ledger file is the only file under `evidence/` that is appended to after creation; everything else stays immutable,
 and the hashes now enforce that.
 
+Captured media (images, video frames, video) is gitignored under `research/` and exists only on the machine that
+captured it. It still gets a ledger line, so the trail records what was captured and when, and its hash is checked
+wherever the file is present. A fresh clone has the lines but not the files, and that is not a failure. The media
+extensions live in one exported constant in `ledger.ts`, kept in step with `.gitignore`.
+
 ## `packages/capture` (new workspace package, `@crumble/capture`)
 
 Pure I/O: HTTP, HTML parsing, files and the ledger. It imports `@crumble/schema` for the line schema and nothing from
 `apps/*` (an architecture-test rule).
 
 - `ledger.ts`: `readLedger(recordDir)`, `appendCapture(recordDir, file, meta)` (hashes the file it was given and
-  appends one line; refuses a path already in the ledger), `verifyLedger(recordDir)` (every evidence file has exactly
-  one line, every line's file exists, every hash matches).
+  appends one line; refuses a path already in the ledger), `verifyLedger(recordDir)` (every evidence file on disk has
+  exactly one line; every line's file exists, except that a missing media file is allowed; every present file's hash
+  matches).
 - `http.ts`: the shared client the Python scrapers each re-implemented: mobile UA, referer, retries with backoff,
   polite delay.
 - Scrapers, each a port with the same commands and output format as its Python original, so new captures read like
@@ -92,7 +99,8 @@ Record 003's lane already writes ledger lines by hand as it captures; backfill s
 ## Rules added to AGENTS.md
 
 - Every file written under `evidence/` gets a ledger line in the same commit: the TypeScript scrapers append it
-  themselves; any other capture uses `pnpm capture log`.
+  themselves; any other capture uses `pnpm capture log`. Gitignored media gets its line too; the line is committed
+  and the file stays local.
 - `pnpm verify` runs the ledger check (a vitest suite over every record), so a missing line or an edited capture fails
   the gate.
 
@@ -100,7 +108,8 @@ Record 003's lane already writes ledger lines by hand as it captures; backfill s
 
 - Scrapers are tested against saved HTML/JSON fixtures (no live network in tests): list-page and post-page parsing,
   comment parsing, image naming, the Markdown output format byte-for-byte against a Python-produced capture.
-- Ledger: append, duplicate refusal, hash mismatch, missing line, orphan line.
+- Ledger: append, duplicate refusal, hash mismatch, missing line, orphan line, a missing media file passes, a present
+  media file with a changed hash fails, the media extensions match `.gitignore`.
 - Backfill: header parsing, image inheritance, git fallback, refusal when a ledger exists.
 - Importer: a ledger block imports, a bad line fails with file and line number, `verifyLedger` failure fails the import.
 - Snapshot: 001 then 002 then 003 regenerates it; the change is the new `captures` rows only.
