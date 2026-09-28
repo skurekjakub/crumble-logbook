@@ -99,7 +99,7 @@ The user wants to simulate the Guild Conquest encounter (지나치게 무거워�
 12. **Curated data to fix later** (not evidence, so it can change):
     - M:"Sugar rune slots and rolls" lists only the ★6/★8/★10 unlocks; SP has 8 slots from ★0.
     - The Candy Shade Pouch HP conflict (SYNTHESIS 7.5% vs mechanics 12.5%) and Octo Wasabi's 8% vs 10% are pet tiers (row 19).
-13. **Record number.** NOTES proposes `research/002-combat-formula/`, but 002 is `002-pvp-meta` and 003 is `003-stage-pushing-meta`. The simulator record is `004-conquest-sim`.
+13. **Record number.** NOTES proposes `research/002-combat-formula/`, but 002 is `002-pvp-meta`. The simulator record takes the next free number when S0 starts (`NNN-conquest-sim`); records are numbered in the order they begin.
 
 ## 5. The model (revised)
 
@@ -446,7 +446,7 @@ A uniform ATK scale alone must not move it.
 
 | Stage | Delivers | Done when |
 |---|---|---|
-| **S0: research** | Record `research/004-conquest-sim/`: question, method, the §9 checks as findings. A new capture of the bundle functions `Ne`, `Pn` and `Hn` with offsets (19-sugarpocket stays unedited). `curated/synergy-grants.json` in record 001. | Every id in `synergy-grants.json` resolves. |
+| **S0: research** | Record `research/NNN-conquest-sim/`: question, method, the §9 checks as findings. A new capture of the bundle functions `Ne`, `Pn` and `Hn` with offsets (19-sugarpocket stays unedited). `curated/synergy-grants.json` in record 001. | Every id in `synergy-grants.json` resolves. |
 | **S1: game data** | The tables of §7.2, the migration, the importer `gameData` block, the routes via the registry, and the importer and route tests | Record 001 imports; `/api/cookie-stats` etc. serve; the snapshot round-trips. |
 | **S2: engine v1** | `packages/sim`: formulas, kits for the Cherry, Herb and Melon Soda deck cookies plus the generic kit, luck draws, the death schedule, flat/ramp, Monte Carlo, marginals, calibrate, the architecture rules | AC1–AC3 and AC5 green. |
 | **S3: service and route** | `services/game-data.ts`, `services/sim.ts`, `routes/sim.ts`, the cache, the 422 mapping, the source-id test | Route tests pass with `app.request` on fixture data. |
@@ -485,7 +485,7 @@ These are only the questions whose answers change the design.
 - `apps/server/src/routes/sim.ts`
 - `apps/web/src/routes/conquest/sim.tsx`, `apps/web/src/views/SimView.tsx`, `apps/web/src/app/team-draft.ts`, `apps/web/src/lib/sim.ts`
 - `apps/web/src/components/{TeamBuilder,SlotEditor,AssumptionPanel,Histogram,ContributionBars,MarginalTable}.tsx`
-- `research/004-conquest-sim/`
+- `research/NNN-conquest-sim/`
 - `research/001-guild-conquest-meta/curated/synergy-grants.json`
 - a new numbered evidence capture of the bundle functions
 
