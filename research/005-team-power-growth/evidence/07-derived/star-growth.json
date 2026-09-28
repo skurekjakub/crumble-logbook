@@ -1,0 +1,696 @@
+{
+ "about": "Star (성급) growth from the game data, one example cookie per rarity grade; star 0 is owning the cookie. copies are duplicate copies of the cookie (the star-0 copy excluded).",
+ "source": "research/001-guild-conquest-meta/evidence/12-glossary-src/cookieruncrumble_app_api_catalog_gameplay.json",
+ "grades": {
+  "SSR": {
+   "example_cookie": "Skating Queen Cookie",
+   "stars": [
+    {
+     "star": 0,
+     "copies_for_star": 0,
+     "copies_cumulative": 0,
+     "atk_hp_pct": 0,
+     "def_pct": 0,
+     "accuracy_focus_evasion_res": 0,
+     "crit_rate_pct": 0,
+     "skill_step": 0
+    },
+    {
+     "star": 1,
+     "copies_for_star": 1,
+     "copies_cumulative": 1,
+     "atk_hp_pct": 9,
+     "def_pct": 2,
+     "accuracy_focus_evasion_res": 2,
+     "crit_rate_pct": 0.5,
+     "skill_step": 1
+    },
+    {
+     "star": 2,
+     "copies_for_star": 2,
+     "copies_cumulative": 3,
+     "atk_hp_pct": 18.81,
+     "def_pct": 4,
+     "accuracy_focus_evasion_res": 4,
+     "crit_rate_pct": 1,
+     "skill_step": 1
+    },
+    {
+     "star": 3,
+     "copies_for_star": 2,
+     "copies_cumulative": 5,
+     "atk_hp_pct": 29.5,
+     "def_pct": 6,
+     "accuracy_focus_evasion_res": 6,
+     "crit_rate_pct": 1.5,
+     "skill_step": 2
+    },
+    {
+     "star": 4,
+     "copies_for_star": 3,
+     "copies_cumulative": 8,
+     "atk_hp_pct": 41.16,
+     "def_pct": 8,
+     "accuracy_focus_evasion_res": 8,
+     "crit_rate_pct": 2,
+     "skill_step": 2
+    },
+    {
+     "star": 5,
+     "copies_for_star": 5,
+     "copies_cumulative": 13,
+     "atk_hp_pct": 53.86,
+     "def_pct": 10,
+     "accuracy_focus_evasion_res": 10,
+     "crit_rate_pct": 2.5,
+     "skill_step": 3
+    },
+    {
+     "star": 6,
+     "copies_for_star": 7,
+     "copies_cumulative": 20,
+     "atk_hp_pct": 67.71,
+     "def_pct": 12,
+     "accuracy_focus_evasion_res": 12,
+     "crit_rate_pct": 3,
+     "skill_step": 3
+    },
+    {
+     "star": 7,
+     "copies_for_star": 9,
+     "copies_cumulative": 29,
+     "atk_hp_pct": 82.8,
+     "def_pct": 14,
+     "accuracy_focus_evasion_res": 14,
+     "crit_rate_pct": 3.5,
+     "skill_step": 4
+    },
+    {
+     "star": 8,
+     "copies_for_star": 10,
+     "copies_cumulative": 39,
+     "atk_hp_pct": 99.26,
+     "def_pct": 16,
+     "accuracy_focus_evasion_res": 16,
+     "crit_rate_pct": 4,
+     "skill_step": 4
+    },
+    {
+     "star": 9,
+     "copies_for_star": 12,
+     "copies_cumulative": 51,
+     "atk_hp_pct": 117.19,
+     "def_pct": 18,
+     "accuracy_focus_evasion_res": 18,
+     "crit_rate_pct": 4.5,
+     "skill_step": 5
+    },
+    {
+     "star": 10,
+     "copies_for_star": 15,
+     "copies_cumulative": 66,
+     "atk_hp_pct": 136.74,
+     "def_pct": 20,
+     "accuracy_focus_evasion_res": 20,
+     "crit_rate_pct": 5,
+     "skill_step": 5
+    }
+   ]
+  },
+  "TSSR": {
+   "example_cookie": "Wind Archer Cookie",
+   "stars": [
+    {
+     "star": 0,
+     "copies_for_star": 0,
+     "copies_cumulative": 0,
+     "atk_hp_pct": 0,
+     "def_pct": 0,
+     "accuracy_focus_evasion_res": 0,
+     "crit_rate_pct": 0,
+     "skill_step": 0
+    },
+    {
+     "star": 1,
+     "copies_for_star": 1,
+     "copies_cumulative": 1,
+     "atk_hp_pct": 10,
+     "def_pct": 2,
+     "accuracy_focus_evasion_res": 2,
+     "crit_rate_pct": 0.5,
+     "skill_step": 1
+    },
+    {
+     "star": 2,
+     "copies_for_star": 2,
+     "copies_cumulative": 3,
+     "atk_hp_pct": 21,
+     "def_pct": 4,
+     "accuracy_focus_evasion_res": 4,
+     "crit_rate_pct": 1,
+     "skill_step": 1
+    },
+    {
+     "star": 3,
+     "copies_for_star": 3,
+     "copies_cumulative": 6,
+     "atk_hp_pct": 33.1,
+     "def_pct": 6,
+     "accuracy_focus_evasion_res": 6,
+     "crit_rate_pct": 1.5,
+     "skill_step": 2
+    },
+    {
+     "star": 4,
+     "copies_for_star": 4,
+     "copies_cumulative": 10,
+     "atk_hp_pct": 46.41,
+     "def_pct": 8,
+     "accuracy_focus_evasion_res": 8,
+     "crit_rate_pct": 2,
+     "skill_step": 2
+    },
+    {
+     "star": 5,
+     "copies_for_star": 5,
+     "copies_cumulative": 15,
+     "atk_hp_pct": 61.05,
+     "def_pct": 10,
+     "accuracy_focus_evasion_res": 10,
+     "crit_rate_pct": 2.5,
+     "skill_step": 3
+    },
+    {
+     "star": 6,
+     "copies_for_star": 6,
+     "copies_cumulative": 21,
+     "atk_hp_pct": 77.16,
+     "def_pct": 12,
+     "accuracy_focus_evasion_res": 12,
+     "crit_rate_pct": 3,
+     "skill_step": 3
+    },
+    {
+     "star": 7,
+     "copies_for_star": 7,
+     "copies_cumulative": 28,
+     "atk_hp_pct": 94.87,
+     "def_pct": 14,
+     "accuracy_focus_evasion_res": 14,
+     "crit_rate_pct": 3.5,
+     "skill_step": 4
+    },
+    {
+     "star": 8,
+     "copies_for_star": 8,
+     "copies_cumulative": 36,
+     "atk_hp_pct": 114.36,
+     "def_pct": 16,
+     "accuracy_focus_evasion_res": 16,
+     "crit_rate_pct": 4,
+     "skill_step": 4
+    },
+    {
+     "star": 9,
+     "copies_for_star": 9,
+     "copies_cumulative": 45,
+     "atk_hp_pct": 135.79,
+     "def_pct": 18,
+     "accuracy_focus_evasion_res": 18,
+     "crit_rate_pct": 4.5,
+     "skill_step": 5
+    },
+    {
+     "star": 10,
+     "copies_for_star": 10,
+     "copies_cumulative": 55,
+     "atk_hp_pct": 159.37,
+     "def_pct": 20,
+     "accuracy_focus_evasion_res": 20,
+     "crit_rate_pct": 5,
+     "skill_step": 5
+    }
+   ]
+  },
+  "C": {
+   "example_cookie": "Sugar Gnome",
+   "stars": [
+    {
+     "star": 0,
+     "copies_for_star": 0,
+     "copies_cumulative": 0,
+     "atk_hp_pct": 0,
+     "def_pct": 0,
+     "accuracy_focus_evasion_res": 0,
+     "crit_rate_pct": 0,
+     "skill_step": 0
+    },
+    {
+     "star": 1,
+     "copies_for_star": 10,
+     "copies_cumulative": 10,
+     "atk_hp_pct": 5,
+     "def_pct": 2,
+     "accuracy_focus_evasion_res": 2,
+     "crit_rate_pct": 0.5,
+     "skill_step": 1
+    },
+    {
+     "star": 2,
+     "copies_for_star": 50,
+     "copies_cumulative": 60,
+     "atk_hp_pct": 10.25,
+     "def_pct": 4,
+     "accuracy_focus_evasion_res": 4,
+     "crit_rate_pct": 1,
+     "skill_step": 1
+    },
+    {
+     "star": 3,
+     "copies_for_star": 100,
+     "copies_cumulative": 160,
+     "atk_hp_pct": 15.76,
+     "def_pct": 6,
+     "accuracy_focus_evasion_res": 6,
+     "crit_rate_pct": 1.5,
+     "skill_step": 2
+    },
+    {
+     "star": 4,
+     "copies_for_star": 200,
+     "copies_cumulative": 360,
+     "atk_hp_pct": 21.55,
+     "def_pct": 8,
+     "accuracy_focus_evasion_res": 8,
+     "crit_rate_pct": 2,
+     "skill_step": 2
+    },
+    {
+     "star": 5,
+     "copies_for_star": 300,
+     "copies_cumulative": 660,
+     "atk_hp_pct": 27.63,
+     "def_pct": 10,
+     "accuracy_focus_evasion_res": 10,
+     "crit_rate_pct": 2.5,
+     "skill_step": 3
+    },
+    {
+     "star": 6,
+     "copies_for_star": 400,
+     "copies_cumulative": 1060,
+     "atk_hp_pct": 34.01,
+     "def_pct": 12,
+     "accuracy_focus_evasion_res": 12,
+     "crit_rate_pct": 3,
+     "skill_step": 3
+    },
+    {
+     "star": 7,
+     "copies_for_star": 500,
+     "copies_cumulative": 1560,
+     "atk_hp_pct": 40.71,
+     "def_pct": 14,
+     "accuracy_focus_evasion_res": 14,
+     "crit_rate_pct": 3.5,
+     "skill_step": 4
+    },
+    {
+     "star": 8,
+     "copies_for_star": 800,
+     "copies_cumulative": 2360,
+     "atk_hp_pct": 47.75,
+     "def_pct": 16,
+     "accuracy_focus_evasion_res": 16,
+     "crit_rate_pct": 4,
+     "skill_step": 4
+    },
+    {
+     "star": 9,
+     "copies_for_star": 1000,
+     "copies_cumulative": 3360,
+     "atk_hp_pct": 55.13,
+     "def_pct": 18,
+     "accuracy_focus_evasion_res": 18,
+     "crit_rate_pct": 4.5,
+     "skill_step": 5
+    },
+    {
+     "star": 10,
+     "copies_for_star": 1500,
+     "copies_cumulative": 4860,
+     "atk_hp_pct": 62.89,
+     "def_pct": 20,
+     "accuracy_focus_evasion_res": 20,
+     "crit_rate_pct": 5,
+     "skill_step": 5
+    }
+   ]
+  },
+  "U": {
+   "example_cookie": "Adventurer Cookie",
+   "stars": [
+    {
+     "star": 0,
+     "copies_for_star": 0,
+     "copies_cumulative": 0,
+     "atk_hp_pct": 0,
+     "def_pct": 0,
+     "accuracy_focus_evasion_res": 0,
+     "crit_rate_pct": 0,
+     "skill_step": 0
+    },
+    {
+     "star": 1,
+     "copies_for_star": 8,
+     "copies_cumulative": 8,
+     "atk_hp_pct": 6,
+     "def_pct": 2,
+     "accuracy_focus_evasion_res": 2,
+     "crit_rate_pct": 0.5,
+     "skill_step": 1
+    },
+    {
+     "star": 2,
+     "copies_for_star": 15,
+     "copies_cumulative": 23,
+     "atk_hp_pct": 12.36,
+     "def_pct": 4,
+     "accuracy_focus_evasion_res": 4,
+     "crit_rate_pct": 1,
+     "skill_step": 1
+    },
+    {
+     "star": 3,
+     "copies_for_star": 30,
+     "copies_cumulative": 53,
+     "atk_hp_pct": 19.1,
+     "def_pct": 6,
+     "accuracy_focus_evasion_res": 6,
+     "crit_rate_pct": 1.5,
+     "skill_step": 2
+    },
+    {
+     "star": 4,
+     "copies_for_star": 50,
+     "copies_cumulative": 103,
+     "atk_hp_pct": 26.25,
+     "def_pct": 8,
+     "accuracy_focus_evasion_res": 8,
+     "crit_rate_pct": 2,
+     "skill_step": 2
+    },
+    {
+     "star": 5,
+     "copies_for_star": 100,
+     "copies_cumulative": 203,
+     "atk_hp_pct": 33.82,
+     "def_pct": 10,
+     "accuracy_focus_evasion_res": 10,
+     "crit_rate_pct": 2.5,
+     "skill_step": 3
+    },
+    {
+     "star": 6,
+     "copies_for_star": 200,
+     "copies_cumulative": 403,
+     "atk_hp_pct": 41.85,
+     "def_pct": 12,
+     "accuracy_focus_evasion_res": 12,
+     "crit_rate_pct": 3,
+     "skill_step": 3
+    },
+    {
+     "star": 7,
+     "copies_for_star": 300,
+     "copies_cumulative": 703,
+     "atk_hp_pct": 50.36,
+     "def_pct": 14,
+     "accuracy_focus_evasion_res": 14,
+     "crit_rate_pct": 3.5,
+     "skill_step": 4
+    },
+    {
+     "star": 8,
+     "copies_for_star": 500,
+     "copies_cumulative": 1203,
+     "atk_hp_pct": 59.38,
+     "def_pct": 16,
+     "accuracy_focus_evasion_res": 16,
+     "crit_rate_pct": 4,
+     "skill_step": 4
+    },
+    {
+     "star": 9,
+     "copies_for_star": 800,
+     "copies_cumulative": 2003,
+     "atk_hp_pct": 68.95,
+     "def_pct": 18,
+     "accuracy_focus_evasion_res": 18,
+     "crit_rate_pct": 4.5,
+     "skill_step": 5
+    },
+    {
+     "star": 10,
+     "copies_for_star": 1000,
+     "copies_cumulative": 3003,
+     "atk_hp_pct": 79.08,
+     "def_pct": 20,
+     "accuracy_focus_evasion_res": 20,
+     "crit_rate_pct": 5,
+     "skill_step": 5
+    }
+   ]
+  },
+  "R": {
+   "example_cookie": "Bear Jelly Worker",
+   "stars": [
+    {
+     "star": 0,
+     "copies_for_star": 0,
+     "copies_cumulative": 0,
+     "atk_hp_pct": 0,
+     "def_pct": 0,
+     "accuracy_focus_evasion_res": 0,
+     "crit_rate_pct": 0,
+     "skill_step": 0
+    },
+    {
+     "star": 1,
+     "copies_for_star": 5,
+     "copies_cumulative": 5,
+     "atk_hp_pct": 7,
+     "def_pct": 2,
+     "accuracy_focus_evasion_res": 2,
+     "crit_rate_pct": 0.5,
+     "skill_step": 1
+    },
+    {
+     "star": 2,
+     "copies_for_star": 10,
+     "copies_cumulative": 15,
+     "atk_hp_pct": 14.49,
+     "def_pct": 4,
+     "accuracy_focus_evasion_res": 4,
+     "crit_rate_pct": 1,
+     "skill_step": 1
+    },
+    {
+     "star": 3,
+     "copies_for_star": 25,
+     "copies_cumulative": 40,
+     "atk_hp_pct": 22.5,
+     "def_pct": 6,
+     "accuracy_focus_evasion_res": 6,
+     "crit_rate_pct": 1.5,
+     "skill_step": 2
+    },
+    {
+     "star": 4,
+     "copies_for_star": 40,
+     "copies_cumulative": 80,
+     "atk_hp_pct": 31.08,
+     "def_pct": 8,
+     "accuracy_focus_evasion_res": 8,
+     "crit_rate_pct": 2,
+     "skill_step": 2
+    },
+    {
+     "star": 5,
+     "copies_for_star": 80,
+     "copies_cumulative": 160,
+     "atk_hp_pct": 40.26,
+     "def_pct": 10,
+     "accuracy_focus_evasion_res": 10,
+     "crit_rate_pct": 2.5,
+     "skill_step": 3
+    },
+    {
+     "star": 6,
+     "copies_for_star": 140,
+     "copies_cumulative": 300,
+     "atk_hp_pct": 50.07,
+     "def_pct": 12,
+     "accuracy_focus_evasion_res": 12,
+     "crit_rate_pct": 3,
+     "skill_step": 3
+    },
+    {
+     "star": 7,
+     "copies_for_star": 200,
+     "copies_cumulative": 500,
+     "atk_hp_pct": 60.58,
+     "def_pct": 14,
+     "accuracy_focus_evasion_res": 14,
+     "crit_rate_pct": 3.5,
+     "skill_step": 4
+    },
+    {
+     "star": 8,
+     "copies_for_star": 300,
+     "copies_cumulative": 800,
+     "atk_hp_pct": 71.82,
+     "def_pct": 16,
+     "accuracy_focus_evasion_res": 16,
+     "crit_rate_pct": 4,
+     "skill_step": 4
+    },
+    {
+     "star": 9,
+     "copies_for_star": 500,
+     "copies_cumulative": 1300,
+     "atk_hp_pct": 83.85,
+     "def_pct": 18,
+     "accuracy_focus_evasion_res": 18,
+     "crit_rate_pct": 4.5,
+     "skill_step": 5
+    },
+    {
+     "star": 10,
+     "copies_for_star": 800,
+     "copies_cumulative": 2100,
+     "atk_hp_pct": 96.72,
+     "def_pct": 20,
+     "accuracy_focus_evasion_res": 20,
+     "crit_rate_pct": 5,
+     "skill_step": 5
+    }
+   ]
+  },
+  "SR": {
+   "example_cookie": "Witchberry Cookie",
+   "stars": [
+    {
+     "star": 0,
+     "copies_for_star": 0,
+     "copies_cumulative": 0,
+     "atk_hp_pct": 0,
+     "def_pct": 0,
+     "accuracy_focus_evasion_res": 0,
+     "crit_rate_pct": 0,
+     "skill_step": 0
+    },
+    {
+     "star": 1,
+     "copies_for_star": 5,
+     "copies_cumulative": 5,
+     "atk_hp_pct": 8,
+     "def_pct": 2,
+     "accuracy_focus_evasion_res": 2,
+     "crit_rate_pct": 0.5,
+     "skill_step": 1
+    },
+    {
+     "star": 2,
+     "copies_for_star": 10,
+     "copies_cumulative": 15,
+     "atk_hp_pct": 16.64,
+     "def_pct": 4,
+     "accuracy_focus_evasion_res": 4,
+     "crit_rate_pct": 1,
+     "skill_step": 1
+    },
+    {
+     "star": 3,
+     "copies_for_star": 20,
+     "copies_cumulative": 35,
+     "atk_hp_pct": 25.97,
+     "def_pct": 6,
+     "accuracy_focus_evasion_res": 6,
+     "crit_rate_pct": 1.5,
+     "skill_step": 2
+    },
+    {
+     "star": 4,
+     "copies_for_star": 30,
+     "copies_cumulative": 65,
+     "atk_hp_pct": 36.05,
+     "def_pct": 8,
+     "accuracy_focus_evasion_res": 8,
+     "crit_rate_pct": 2,
+     "skill_step": 2
+    },
+    {
+     "star": 5,
+     "copies_for_star": 50,
+     "copies_cumulative": 115,
+     "atk_hp_pct": 46.93,
+     "def_pct": 10,
+     "accuracy_focus_evasion_res": 10,
+     "crit_rate_pct": 2.5,
+     "skill_step": 3
+    },
+    {
+     "star": 6,
+     "copies_for_star": 70,
+     "copies_cumulative": 185,
+     "atk_hp_pct": 58.69,
+     "def_pct": 12,
+     "accuracy_focus_evasion_res": 12,
+     "crit_rate_pct": 3,
+     "skill_step": 3
+    },
+    {
+     "star": 7,
+     "copies_for_star": 100,
+     "copies_cumulative": 285,
+     "atk_hp_pct": 71.38,
+     "def_pct": 14,
+     "accuracy_focus_evasion_res": 14,
+     "crit_rate_pct": 3.5,
+     "skill_step": 4
+    },
+    {
+     "star": 8,
+     "copies_for_star": 150,
+     "copies_cumulative": 435,
+     "atk_hp_pct": 85.09,
+     "def_pct": 16,
+     "accuracy_focus_evasion_res": 16,
+     "crit_rate_pct": 4,
+     "skill_step": 4
+    },
+    {
+     "star": 9,
+     "copies_for_star": 200,
+     "copies_cumulative": 635,
+     "atk_hp_pct": 99.9,
+     "def_pct": 18,
+     "accuracy_focus_evasion_res": 18,
+     "crit_rate_pct": 4.5,
+     "skill_step": 5
+    },
+    {
+     "star": 10,
+     "copies_for_star": 300,
+     "copies_cumulative": 935,
+     "atk_hp_pct": 115.89,
+     "def_pct": 20,
+     "accuracy_focus_evasion_res": 20,
+     "crit_rate_pct": 5,
+     "skill_step": 5
+    }
+   ]
+  }
+ }
+}

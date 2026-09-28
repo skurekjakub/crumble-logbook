@@ -1,0 +1,2 @@
+# Captures keep their exact bytes, so the sha256 in captures.jsonl matches a checkout.
+* -text

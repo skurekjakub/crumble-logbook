@@ -1,0 +1,188 @@
+{
+ "about": "Plating (플레이트 강화) amplification per level from the game data: mainRate and subRate divided by 100 give percent. Sub-stats step up only at every fifth level.",
+ "source": "research/001-guild-conquest-meta/evidence/12-glossary-src/cookieruncrumble_app_api_catalog_gameplay.json",
+ "levels": [
+  {
+   "level": 0,
+   "main_pct": 0.0,
+   "main_gain": 0.0,
+   "sub_pct": 0.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 1,
+   "main_pct": 3.0,
+   "main_gain": 3.0,
+   "sub_pct": 0.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 2,
+   "main_pct": 6.0,
+   "main_gain": 3.0,
+   "sub_pct": 0.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 3,
+   "main_pct": 9.0,
+   "main_gain": 3.0,
+   "sub_pct": 0.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 4,
+   "main_pct": 12.0,
+   "main_gain": 3.0,
+   "sub_pct": 0.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 5,
+   "main_pct": 15.0,
+   "main_gain": 3.0,
+   "sub_pct": 30.0,
+   "sub_gain": 30.0
+  },
+  {
+   "level": 6,
+   "main_pct": 21.0,
+   "main_gain": 6.0,
+   "sub_pct": 30.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 7,
+   "main_pct": 27.0,
+   "main_gain": 6.0,
+   "sub_pct": 30.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 8,
+   "main_pct": 33.0,
+   "main_gain": 6.0,
+   "sub_pct": 30.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 9,
+   "main_pct": 39.0,
+   "main_gain": 6.0,
+   "sub_pct": 30.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 10,
+   "main_pct": 45.0,
+   "main_gain": 6.0,
+   "sub_pct": 70.0,
+   "sub_gain": 40.0
+  },
+  {
+   "level": 11,
+   "main_pct": 57.0,
+   "main_gain": 12.0,
+   "sub_pct": 70.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 12,
+   "main_pct": 69.0,
+   "main_gain": 12.0,
+   "sub_pct": 70.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 13,
+   "main_pct": 81.0,
+   "main_gain": 12.0,
+   "sub_pct": 70.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 14,
+   "main_pct": 93.0,
+   "main_gain": 12.0,
+   "sub_pct": 70.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 15,
+   "main_pct": 105.0,
+   "main_gain": 12.0,
+   "sub_pct": 130.0,
+   "sub_gain": 60.0
+  },
+  {
+   "level": 16,
+   "main_pct": 123.0,
+   "main_gain": 18.0,
+   "sub_pct": 130.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 17,
+   "main_pct": 141.0,
+   "main_gain": 18.0,
+   "sub_pct": 130.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 18,
+   "main_pct": 159.0,
+   "main_gain": 18.0,
+   "sub_pct": 130.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 19,
+   "main_pct": 177.0,
+   "main_gain": 18.0,
+   "sub_pct": 130.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 20,
+   "main_pct": 200.0,
+   "main_gain": 23.0,
+   "sub_pct": 200.0,
+   "sub_gain": 70.0
+  },
+  {
+   "level": 21,
+   "main_pct": 223.0,
+   "main_gain": 23.0,
+   "sub_pct": 200.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 22,
+   "main_pct": 246.0,
+   "main_gain": 23.0,
+   "sub_pct": 200.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 23,
+   "main_pct": 269.0,
+   "main_gain": 23.0,
+   "sub_pct": 200.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 24,
+   "main_pct": 292.0,
+   "main_gain": 23.0,
+   "sub_pct": 200.0,
+   "sub_gain": 0.0
+  },
+  {
+   "level": 25,
+   "main_pct": 315.0,
+   "main_gain": 23.0,
+   "sub_pct": 280.0,
+   "sub_gain": 80.0
+  }
+ ]
+}

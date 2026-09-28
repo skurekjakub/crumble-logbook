@@ -1,0 +1,619 @@
+{
+ "about": "crumblehub's package value table as rendered on 2026-09-28: package contents converted to Crystals at the site's rates, divided by the KRW price. 100% is the plain Crystal pack (375 Crystals for 1,500 KRW, 0.25 per KRW). Rank is null for the pinned memberships and for excluded packages. A Crystal value is not team power: it prices gacha currency and growth materials at the site's exchange rates.",
+ "rates": "1 Cookie pull 200, 1 Pet pull 100, Light of Knowledge / Wisp 0.5, Chocosteel 200, Syrup Metal 500, Guild Medal 1.25, SSR Cookie 180 pulls, SSR Pet 100 pulls, TSSR Cookie 18,000 Light of Knowledge, Lucky Dough 3.75, Rune Crystal 1.25, Stellar Point 2.5 Crystals",
+ "source": "research/005-team-power-growth/evidence/04-sites/crumblehub_home_efficiency_rendered_en.txt",
+ "packages": [
+  {
+   "rank": null,
+   "name_en": "Special Sugarcoating Membership",
+   "price_krw": 55000,
+   "membership_30_days": true,
+   "crystals_per_krw": 5.4091,
+   "value_pct_of_crystal_pack": 2164,
+   "crystals_total": 297500
+  },
+  {
+   "rank": null,
+   "name_en": "Permanent Growth Sugarcoating Membership",
+   "price_krw": 33000,
+   "membership_30_days": true,
+   "crystals_per_krw": 0.75,
+   "value_pct_of_crystal_pack": 300,
+   "crystals_total": 24750
+  },
+  {
+   "rank": null,
+   "name_en": "Happy Chuseok! Lucky Dough Party Pack",
+   "price_krw": 35000,
+   "membership_30_days": false,
+   "crystals_per_krw": null,
+   "value_pct_of_crystal_pack": null,
+   "crystals_total": null
+  },
+  {
+   "rank": 1,
+   "name_en": "Nameless Cake Hound 3★ Package",
+   "price_krw": 12000,
+   "membership_30_days": false,
+   "crystals_per_krw": 45.25,
+   "value_pct_of_crystal_pack": 18100,
+   "crystals_total": 543000
+  },
+  {
+   "rank": 2,
+   "name_en": "Monthly Reward Sugarcoating Membership",
+   "price_krw": 7500,
+   "membership_30_days": false,
+   "crystals_per_krw": 40.2667,
+   "value_pct_of_crystal_pack": 16107,
+   "crystals_total": 302000
+  },
+  {
+   "rank": 3,
+   "name_en": "Monthly Gacha Sugarcoating Membership",
+   "price_krw": 15000,
+   "membership_30_days": false,
+   "crystals_per_krw": 36.2667,
+   "value_pct_of_crystal_pack": 14507,
+   "crystals_total": 544000
+  },
+  {
+   "rank": 4,
+   "name_en": "Nameless Cake Hound Acquisition Pack",
+   "price_krw": 1500,
+   "membership_30_days": false,
+   "crystals_per_krw": 24.0,
+   "value_pct_of_crystal_pack": 9600,
+   "crystals_total": 36000
+  },
+  {
+   "rank": 5,
+   "name_en": "Majestic King Choco Drop Pack",
+   "price_krw": 20000,
+   "membership_30_days": false,
+   "crystals_per_krw": 12.3,
+   "value_pct_of_crystal_pack": 4920,
+   "crystals_total": 246000
+  },
+  {
+   "rank": 6,
+   "name_en": "Dark Choco Cookie 2★ Pack",
+   "price_krw": 12000,
+   "membership_30_days": false,
+   "crystals_per_krw": 9.3854,
+   "value_pct_of_crystal_pack": 3754,
+   "crystals_total": 112625
+  },
+  {
+   "rank": 7,
+   "name_en": "4★ Strawberry Shortcake Cookie Pack",
+   "price_krw": 20000,
+   "membership_30_days": false,
+   "crystals_per_krw": 9.1813,
+   "value_pct_of_crystal_pack": 3673,
+   "crystals_total": 183626
+  },
+  {
+   "rank": 8,
+   "name_en": "Pinot Noir Cookie 2★ Pack",
+   "price_krw": 19000,
+   "membership_30_days": false,
+   "crystals_per_krw": 5.9737,
+   "value_pct_of_crystal_pack": 2389,
+   "crystals_total": 113500
+  },
+  {
+   "rank": 9,
+   "name_en": "Tea Knight Cookie 2★ Pack",
+   "price_krw": 19000,
+   "membership_30_days": false,
+   "crystals_per_krw": 5.9737,
+   "value_pct_of_crystal_pack": 2389,
+   "crystals_total": 113500
+  },
+  {
+   "rank": 10,
+   "name_en": "Cherry Cola Cookie 2★ Pack",
+   "price_krw": 19000,
+   "membership_30_days": false,
+   "crystals_per_krw": 5.9737,
+   "value_pct_of_crystal_pack": 2389,
+   "crystals_total": 113500
+  },
+  {
+   "rank": 11,
+   "name_en": "Special Majestic King Choco Drop Pack",
+   "price_krw": 55000,
+   "membership_30_days": false,
+   "crystals_per_krw": 5.8909,
+   "value_pct_of_crystal_pack": 2356,
+   "crystals_total": 324000
+  },
+  {
+   "rank": 12,
+   "name_en": "Milky Way Cookie 2★ Pack",
+   "price_krw": 19000,
+   "membership_30_days": false,
+   "crystals_per_krw": 5.8158,
+   "value_pct_of_crystal_pack": 2326,
+   "crystals_total": 110500
+  },
+  {
+   "rank": 13,
+   "name_en": "5-Day Check-in Pack",
+   "price_krw": 9900,
+   "membership_30_days": false,
+   "crystals_per_krw": 4.5707,
+   "value_pct_of_crystal_pack": 1828,
+   "crystals_total": 45250
+  },
+  {
+   "rank": 14,
+   "name_en": "Special Cookie Cutter Pack",
+   "price_krw": 6000,
+   "membership_30_days": false,
+   "crystals_per_krw": 4.5,
+   "value_pct_of_crystal_pack": 1800,
+   "crystals_total": 27000
+  },
+  {
+   "rank": 15,
+   "name_en": "Sweet Blessing Lv.1 Package",
+   "price_krw": 7500,
+   "membership_30_days": false,
+   "crystals_per_krw": 3.65,
+   "value_pct_of_crystal_pack": 1460,
+   "crystals_total": 27375
+  },
+  {
+   "rank": 16,
+   "name_en": "Even the Crumble Crew Can Buy This! Ultra Value Pack Vol.",
+   "price_krw": 212000,
+   "membership_30_days": false,
+   "crystals_per_krw": 3.5,
+   "value_pct_of_crystal_pack": 1400,
+   "crystals_total": 742000
+  },
+  {
+   "rank": 17,
+   "name_en": "Gather 'Round, Cookies! Cookie Gacha Pack",
+   "price_krw": 22000,
+   "membership_30_days": false,
+   "crystals_per_krw": 3.0,
+   "value_pct_of_crystal_pack": 1200,
+   "crystals_total": 66000
+  },
+  {
+   "rank": 18,
+   "name_en": "Special Thanks! Plating Pack",
+   "price_krw": 9900,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.9293,
+   "value_pct_of_crystal_pack": 1172,
+   "crystals_total": 29000
+  },
+  {
+   "rank": 19,
+   "name_en": "Sweet Blessing Lv.2 Package",
+   "price_krw": 15000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.7833,
+   "value_pct_of_crystal_pack": 1113,
+   "crystals_total": 41750
+  },
+  {
+   "rank": 20,
+   "name_en": "Wind Archer Cookie 5★ Promotion Pack",
+   "price_krw": 55000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.6159,
+   "value_pct_of_crystal_pack": 1046,
+   "crystals_total": 143874
+  },
+  {
+   "rank": 21,
+   "name_en": "Level Pass Stage",
+   "price_krw": 11500,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.5,
+   "value_pct_of_crystal_pack": 1000,
+   "crystals_total": 28750
+  },
+  {
+   "rank": 22,
+   "name_en": "Level Pass Stage",
+   "price_krw": 23000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.5,
+   "value_pct_of_crystal_pack": 1000,
+   "crystals_total": 57500
+  },
+  {
+   "rank": 23,
+   "name_en": "Chuseok 5-Day Check-in Pack",
+   "price_krw": 17000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.3897,
+   "value_pct_of_crystal_pack": 956,
+   "crystals_total": 40625
+  },
+  {
+   "rank": 24,
+   "name_en": "Guaranteed Pet Pack",
+   "price_krw": 12000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.3333,
+   "value_pct_of_crystal_pack": 933,
+   "crystals_total": 28000
+  },
+  {
+   "rank": 25,
+   "name_en": "Sweet Blessing Lv.5 Package",
+   "price_krw": 45000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.2778,
+   "value_pct_of_crystal_pack": 911,
+   "crystals_total": 102501
+  },
+  {
+   "rank": 26,
+   "name_en": "Sweet Blessing Lv.3 Package",
+   "price_krw": 27000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.2361,
+   "value_pct_of_crystal_pack": 894,
+   "crystals_total": 60375
+  },
+  {
+   "rank": 27,
+   "name_en": "Sweet Blessing Lv.4 Package",
+   "price_krw": 37000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.1757,
+   "value_pct_of_crystal_pack": 870,
+   "crystals_total": 80501
+  },
+  {
+   "rank": 28,
+   "name_en": "Dimensional Rift Challenge Pack Vol.",
+   "price_krw": 119000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.1579,
+   "value_pct_of_crystal_pack": 863,
+   "crystals_total": 256790
+  },
+  {
+   "rank": 29,
+   "name_en": "Space Gnome's Favorite! Stellar Link Pack Vol.",
+   "price_krw": 279000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.1329,
+   "value_pct_of_crystal_pack": 853,
+   "crystals_total": 595079
+  },
+  {
+   "rank": 30,
+   "name_en": "Even the Crumble Crew Can Buy This! Ultra Value Pack Vol.",
+   "price_krw": 11500,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.0,
+   "value_pct_of_crystal_pack": 800,
+   "crystals_total": 23000
+  },
+  {
+   "rank": 31,
+   "name_en": "Special Adventure Supply Pack",
+   "price_krw": 50000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.0,
+   "value_pct_of_crystal_pack": 800,
+   "crystals_total": 100000
+  },
+  {
+   "rank": 32,
+   "name_en": "Moon Rabbit Cookie's Pampered with Persimmon Pick-up Pack Vol.",
+   "price_krw": 230000,
+   "membership_30_days": false,
+   "crystals_per_krw": 2.0,
+   "value_pct_of_crystal_pack": 800,
+   "crystals_total": 460000
+  },
+  {
+   "rank": 33,
+   "name_en": "Moon Rabbit Cookie's Pampered with Persimmon Pick-up Pack Vol.",
+   "price_krw": 112000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.9167,
+   "value_pct_of_crystal_pack": 767,
+   "crystals_total": 214670
+  },
+  {
+   "rank": 34,
+   "name_en": "Gather 'Round, Pets! Pet Gacha Pack",
+   "price_krw": 19000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.8947,
+   "value_pct_of_crystal_pack": 758,
+   "crystals_total": 35999
+  },
+  {
+   "rank": 35,
+   "name_en": "Sugar Rune Additional Support Pack",
+   "price_krw": 9900,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.7929,
+   "value_pct_of_crystal_pack": 717,
+   "crystals_total": 17750
+  },
+  {
+   "rank": 36,
+   "name_en": "Dimensional Rift Challenge Pack Vol.",
+   "price_krw": 250000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.7,
+   "value_pct_of_crystal_pack": 680,
+   "crystals_total": 425000
+  },
+  {
+   "rank": 37,
+   "name_en": "Keep on Rollin' Rune Crystal Pack Vol.",
+   "price_krw": 275000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.6433,
+   "value_pct_of_crystal_pack": 657,
+   "crystals_total": 451908
+  },
+  {
+   "rank": 38,
+   "name_en": "Luck Incoming! Candy Shade Pouch Pick-up Pack",
+   "price_krw": 14000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.6429,
+   "value_pct_of_crystal_pack": 657,
+   "crystals_total": 23001
+  },
+  {
+   "rank": 39,
+   "name_en": "How suspicous... Dimensional Rift Reveal Pack",
+   "price_krw": 7500,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.6,
+   "value_pct_of_crystal_pack": 640,
+   "crystals_total": 12000
+  },
+  {
+   "rank": 40,
+   "name_en": "Join the Fray! Rumble Arena Support Pack Vol.",
+   "price_krw": 19900,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.5152,
+   "value_pct_of_crystal_pack": 606,
+   "crystals_total": 30152
+  },
+  {
+   "rank": 41,
+   "name_en": "King Choco Drop's Special Comprehensive Support Pack",
+   "price_krw": 55000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.5045,
+   "value_pct_of_crystal_pack": 602,
+   "crystals_total": 82748
+  },
+  {
+   "rank": 42,
+   "name_en": "Holy Golden Drop's Radiant Blessing Pack",
+   "price_krw": 75000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.5033,
+   "value_pct_of_crystal_pack": 601,
+   "crystals_total": 112748
+  },
+  {
+   "rank": 43,
+   "name_en": "Space Gnome's Favorite! Stellar Link Pack Vol.",
+   "price_krw": 132000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.5,
+   "value_pct_of_crystal_pack": 600,
+   "crystals_total": 198000
+  },
+  {
+   "rank": 44,
+   "name_en": "Level Pass Stage",
+   "price_krw": 37500,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.5,
+   "value_pct_of_crystal_pack": 600,
+   "crystals_total": 56250
+  },
+  {
+   "rank": 45,
+   "name_en": "Mega Deal Crystal Pack",
+   "price_krw": 35000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.4286,
+   "value_pct_of_crystal_pack": 571,
+   "crystals_total": 50001
+  },
+  {
+   "rank": 46,
+   "name_en": "Promotion Pass Stage",
+   "price_krw": 11500,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.3333,
+   "value_pct_of_crystal_pack": 533,
+   "crystals_total": 15333
+  },
+  {
+   "rank": 47,
+   "name_en": "Keep on Rollin' Rune Crystal Pack Vol.",
+   "price_krw": 137000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.2297,
+   "value_pct_of_crystal_pack": 492,
+   "crystals_total": 168469
+  },
+  {
+   "rank": 48,
+   "name_en": "Join the Fray! Rumble Arena Support Pack Vol.",
+   "price_krw": 223000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.2174,
+   "value_pct_of_crystal_pack": 487,
+   "crystals_total": 271480
+  },
+  {
+   "rank": 49,
+   "name_en": "Promotion Pass Stage",
+   "price_krw": 23000,
+   "membership_30_days": false,
+   "crystals_per_krw": 1.0,
+   "value_pct_of_crystal_pack": 400,
+   "crystals_total": 23000
+  },
+  {
+   "rank": 50,
+   "name_en": "Wind Archer Cookie Acquisition Pack",
+   "price_krw": 17000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.8824,
+   "value_pct_of_crystal_pack": 353,
+   "crystals_total": 15001
+  },
+  {
+   "rank": 51,
+   "name_en": "Wisp of Guidance Support Pack Vol.",
+   "price_krw": 245000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.8,
+   "value_pct_of_crystal_pack": 320,
+   "crystals_total": 196000
+  },
+  {
+   "rank": 52,
+   "name_en": "Princess Bari Cookie Rush Pack Vol.",
+   "price_krw": 220000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.7875,
+   "value_pct_of_crystal_pack": 315,
+   "crystals_total": 173250
+  },
+  {
+   "rank": 53,
+   "name_en": "Princess Bari Cookie's Here! Welcome Pack",
+   "price_krw": 6000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.6667,
+   "value_pct_of_crystal_pack": 267,
+   "crystals_total": 4000
+  },
+  {
+   "rank": 54,
+   "name_en": "Weekly Speed-up Pack",
+   "price_krw": 9900,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.6061,
+   "value_pct_of_crystal_pack": 242,
+   "crystals_total": 6000
+  },
+  {
+   "rank": 55,
+   "name_en": "Wisp of Guidance Support Pack Vol.",
+   "price_krw": 132000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.5938,
+   "value_pct_of_crystal_pack": 238,
+   "crystals_total": 78382
+  },
+  {
+   "rank": 56,
+   "name_en": "Promotion Pass Stage",
+   "price_krw": 37500,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.5333,
+   "value_pct_of_crystal_pack": 213,
+   "crystals_total": 19999
+  },
+  {
+   "rank": 57,
+   "name_en": "Princess Bari Cookie Rush Pack Vol.",
+   "price_krw": 112000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.5,
+   "value_pct_of_crystal_pack": 200,
+   "crystals_total": 56000
+  },
+  {
+   "rank": 58,
+   "name_en": "Wisp of Guidance Pack",
+   "price_krw": 212000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.5,
+   "value_pct_of_crystal_pack": 200,
+   "crystals_total": 106000
+  },
+  {
+   "rank": 59,
+   "name_en": "Wisp of Guidance Pack",
+   "price_krw": 323000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.4783,
+   "value_pct_of_crystal_pack": 191,
+   "crystals_total": 154491
+  },
+  {
+   "rank": 60,
+   "name_en": "Wisp of Guidance Pack",
+   "price_krw": 441000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.4299,
+   "value_pct_of_crystal_pack": 172,
+   "crystals_total": 189586
+  },
+  {
+   "rank": 61,
+   "name_en": "Wisp of Guidance Pack",
+   "price_krw": 560000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.4271,
+   "value_pct_of_crystal_pack": 171,
+   "crystals_total": 239176
+  },
+  {
+   "rank": 62,
+   "name_en": "3x Legendary Gear Set Pack",
+   "price_krw": 25000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.315,
+   "value_pct_of_crystal_pack": 126,
+   "crystals_total": 7875
+  },
+  {
+   "rank": 63,
+   "name_en": "Reach new heights! Dungeon Challenger Pack",
+   "price_krw": 20000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.2625,
+   "value_pct_of_crystal_pack": 105,
+   "crystals_total": 5250
+  },
+  {
+   "rank": 64,
+   "name_en": "Wisp of Guidance Pack",
+   "price_krw": 16000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.25,
+   "value_pct_of_crystal_pack": 100,
+   "crystals_total": 4000
+  },
+  {
+   "rank": 65,
+   "name_en": "Happy Chuseok! Rune Crystal Vein Pack",
+   "price_krw": 40000,
+   "membership_30_days": false,
+   "crystals_per_krw": 0.15,
+   "value_pct_of_crystal_pack": 60,
+   "crystals_total": 6000
+  }
+ ]
+}

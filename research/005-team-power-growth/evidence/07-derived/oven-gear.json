@@ -1,0 +1,658 @@
+{
+ "about": "Oven level → gear level range and the chance of each rarity per draw, from the game data. Gear power follows level as well as rarity.",
+ "source": "research/001-guild-conquest-meta/evidence/12-glossary-src/cookieruncrumble_app_api_catalog_database.json",
+ "levels": [
+  {
+   "oven_level": 1,
+   "gear_level_min": 1,
+   "gear_level_max": 2,
+   "rarity_pct": {
+    "Normal": 100.0
+   }
+  },
+  {
+   "oven_level": 2,
+   "gear_level_min": 3,
+   "gear_level_max": 6,
+   "rarity_pct": {
+    "Normal": 68.4,
+    "Advanced": 22.0,
+    "Fine": 8.4,
+    "Magic": 1.2
+   }
+  },
+  {
+   "oven_level": 3,
+   "gear_level_min": 5,
+   "gear_level_max": 9,
+   "rarity_pct": {
+    "Normal": 64.0,
+    "Advanced": 24.0,
+    "Fine": 10.0,
+    "Magic": 2.0
+   }
+  },
+  {
+   "oven_level": 4,
+   "gear_level_min": 7,
+   "gear_level_max": 12,
+   "rarity_pct": {
+    "Normal": 60.0,
+    "Advanced": 25.0,
+    "Fine": 12.5,
+    "Magic": 2.4,
+    "Epic": 0.1
+   }
+  },
+  {
+   "oven_level": 5,
+   "gear_level_min": 10,
+   "gear_level_max": 15,
+   "rarity_pct": {
+    "Normal": 55.5,
+    "Advanced": 27.0,
+    "Fine": 14.5,
+    "Magic": 2.8,
+    "Epic": 0.2
+   }
+  },
+  {
+   "oven_level": 6,
+   "gear_level_min": 13,
+   "gear_level_max": 18,
+   "rarity_pct": {
+    "Normal": 52.0,
+    "Advanced": 29.3,
+    "Fine": 15.2,
+    "Magic": 3.2,
+    "Epic": 0.3
+   }
+  },
+  {
+   "oven_level": 7,
+   "gear_level_min": 16,
+   "gear_level_max": 21,
+   "rarity_pct": {
+    "Normal": 48.0,
+    "Advanced": 32.0,
+    "Fine": 16.0,
+    "Magic": 3.6,
+    "Epic": 0.4
+   }
+  },
+  {
+   "oven_level": 8,
+   "gear_level_min": 19,
+   "gear_level_max": 24,
+   "rarity_pct": {
+    "Normal": 38.0,
+    "Advanced": 36.0,
+    "Fine": 21.5,
+    "Magic": 4.0,
+    "Epic": 0.5
+   }
+  },
+  {
+   "oven_level": 9,
+   "gear_level_min": 22,
+   "gear_level_max": 27,
+   "rarity_pct": {
+    "Normal": 30.0,
+    "Advanced": 40.0,
+    "Fine": 24.42,
+    "Magic": 4.9,
+    "Epic": 0.6,
+    "Special": 0.08
+   }
+  },
+  {
+   "oven_level": 10,
+   "gear_level_min": 25,
+   "gear_level_max": 30,
+   "rarity_pct": {
+    "Normal": 23.9,
+    "Advanced": 41.0,
+    "Fine": 28.28,
+    "Magic": 6.0,
+    "Epic": 0.7,
+    "Special": 0.12
+   }
+  },
+  {
+   "oven_level": 11,
+   "gear_level_min": 28,
+   "gear_level_max": 33,
+   "rarity_pct": {
+    "Normal": 12.0,
+    "Advanced": 40.0,
+    "Fine": 39.0,
+    "Magic": 8.03,
+    "Epic": 0.8,
+    "Special": 0.16,
+    "SuperEpic": 0.01
+   }
+  },
+  {
+   "oven_level": 12,
+   "gear_level_min": 31,
+   "gear_level_max": 36,
+   "rarity_pct": {
+    "Normal": 7.0,
+    "Advanced": 34.0,
+    "Fine": 48.9,
+    "Magic": 9.0,
+    "Epic": 0.9,
+    "Special": 0.18,
+    "SuperEpic": 0.02
+   }
+  },
+  {
+   "oven_level": 13,
+   "gear_level_min": 34,
+   "gear_level_max": 39,
+   "rarity_pct": {
+    "Normal": 3.06,
+    "Advanced": 27.0,
+    "Fine": 56.0,
+    "Magic": 12.67,
+    "Epic": 1.0,
+    "Special": 0.24,
+    "SuperEpic": 0.03
+   }
+  },
+  {
+   "oven_level": 14,
+   "gear_level_min": 37,
+   "gear_level_max": 42,
+   "rarity_pct": {
+    "Advanced": 25.0,
+    "Fine": 59.13,
+    "Magic": 14.05,
+    "Epic": 1.5,
+    "Special": 0.28,
+    "SuperEpic": 0.04
+   }
+  },
+  {
+   "oven_level": 15,
+   "gear_level_min": 40,
+   "gear_level_max": 45,
+   "rarity_pct": {
+    "Advanced": 20.0,
+    "Fine": 61.65,
+    "Magic": 16.0,
+    "Epic": 2.0,
+    "Special": 0.3,
+    "SuperEpic": 0.05
+   }
+  },
+  {
+   "oven_level": 16,
+   "gear_level_min": 43,
+   "gear_level_max": 48,
+   "rarity_pct": {
+    "Advanced": 12.0,
+    "Fine": 67.2,
+    "Magic": 17.88,
+    "Epic": 2.5,
+    "Special": 0.35,
+    "SuperEpic": 0.06,
+    "Unique": 0.01
+   }
+  },
+  {
+   "oven_level": 17,
+   "gear_level_min": 46,
+   "gear_level_max": 51,
+   "rarity_pct": {
+    "Advanced": 6.0,
+    "Fine": 72.0,
+    "Magic": 18.49,
+    "Epic": 3.0,
+    "Special": 0.4,
+    "SuperEpic": 0.09,
+    "Unique": 0.02
+   }
+  },
+  {
+   "oven_level": 18,
+   "gear_level_min": 49,
+   "gear_level_max": 54,
+   "rarity_pct": {
+    "Advanced": 2.0,
+    "Fine": 68.0,
+    "Magic": 25.57,
+    "Epic": 3.8,
+    "Special": 0.5,
+    "SuperEpic": 0.1,
+    "Unique": 0.03
+   }
+  },
+  {
+   "oven_level": 19,
+   "gear_level_min": 52,
+   "gear_level_max": 57,
+   "rarity_pct": {
+    "Fine": 63.84,
+    "Magic": 30.0,
+    "Epic": 5.0,
+    "Special": 1.0,
+    "SuperEpic": 0.12,
+    "Unique": 0.04
+   }
+  },
+  {
+   "oven_level": 20,
+   "gear_level_min": 55,
+   "gear_level_max": 60,
+   "rarity_pct": {
+    "Fine": 55.68,
+    "Magic": 35.0,
+    "Epic": 7.63,
+    "Special": 1.5,
+    "SuperEpic": 0.14,
+    "Unique": 0.05
+   }
+  },
+  {
+   "oven_level": 21,
+   "gear_level_min": 58,
+   "gear_level_max": 63,
+   "rarity_pct": {
+    "Fine": 47.75,
+    "Magic": 40.0,
+    "Epic": 10.04,
+    "Special": 2.0,
+    "SuperEpic": 0.15,
+    "Unique": 0.06
+   }
+  },
+  {
+   "oven_level": 22,
+   "gear_level_min": 61,
+   "gear_level_max": 66,
+   "rarity_pct": {
+    "Fine": 39.5,
+    "Magic": 45.0,
+    "Epic": 12.73,
+    "Special": 2.5,
+    "SuperEpic": 0.2,
+    "Unique": 0.07
+   }
+  },
+  {
+   "oven_level": 23,
+   "gear_level_min": 64,
+   "gear_level_max": 69,
+   "rarity_pct": {
+    "Fine": 31.07,
+    "Magic": 49.6,
+    "Epic": 16.0,
+    "Special": 3.0,
+    "SuperEpic": 0.25,
+    "Unique": 0.08
+   }
+  },
+  {
+   "oven_level": 24,
+   "gear_level_min": 67,
+   "gear_level_max": 72,
+   "rarity_pct": {
+    "Fine": 20.0,
+    "Magic": 54.0,
+    "Epic": 22.0,
+    "Special": 3.61,
+    "SuperEpic": 0.3,
+    "Unique": 0.09
+   }
+  },
+  {
+   "oven_level": 25,
+   "gear_level_min": 70,
+   "gear_level_max": 75,
+   "rarity_pct": {
+    "Fine": 14.0,
+    "Magic": 58.0,
+    "Epic": 23.5,
+    "Special": 4.04,
+    "SuperEpic": 0.35,
+    "Unique": 0.1,
+    "Legendary": 0.01
+   }
+  },
+  {
+   "oven_level": 26,
+   "gear_level_min": 73,
+   "gear_level_max": 78,
+   "rarity_pct": {
+    "Fine": 8.07,
+    "Magic": 62.0,
+    "Epic": 24.8,
+    "Special": 4.5,
+    "SuperEpic": 0.505,
+    "Unique": 0.11,
+    "Legendary": 0.015
+   }
+  },
+  {
+   "oven_level": 27,
+   "gear_level_min": 76,
+   "gear_level_max": 81,
+   "rarity_pct": {
+    "Fine": 1.0,
+    "Magic": 65.05,
+    "Epic": 28.2,
+    "Special": 5.0,
+    "SuperEpic": 0.61,
+    "Unique": 0.12,
+    "Legendary": 0.02
+   }
+  },
+  {
+   "oven_level": 28,
+   "gear_level_min": 79,
+   "gear_level_max": 84,
+   "rarity_pct": {
+    "Fine": 0.5,
+    "Magic": 66.52,
+    "Epic": 26.1,
+    "Special": 6.0,
+    "SuperEpic": 0.715,
+    "Unique": 0.14,
+    "Legendary": 0.025
+   }
+  },
+  {
+   "oven_level": 29,
+   "gear_level_min": 82,
+   "gear_level_max": 87,
+   "rarity_pct": {
+    "Magic": 61.59,
+    "Epic": 30.4,
+    "Special": 7.0,
+    "SuperEpic": 0.82,
+    "Unique": 0.16,
+    "Legendary": 0.03
+   }
+  },
+  {
+   "oven_level": 30,
+   "gear_level_min": 85,
+   "gear_level_max": 90,
+   "rarity_pct": {
+    "Magic": 57.72,
+    "Epic": 33.14,
+    "Special": 8.0,
+    "SuperEpic": 0.925,
+    "Unique": 0.18,
+    "Legendary": 0.035
+   }
+  },
+  {
+   "oven_level": 31,
+   "gear_level_min": 88,
+   "gear_level_max": 93,
+   "rarity_pct": {
+    "Magic": 52.72,
+    "Epic": 37.5,
+    "Special": 8.5,
+    "SuperEpic": 1.038,
+    "Unique": 0.2,
+    "Legendary": 0.04,
+    "Eternal": 0.002
+   }
+  },
+  {
+   "oven_level": 32,
+   "gear_level_min": 91,
+   "gear_level_max": 96,
+   "rarity_pct": {
+    "Magic": 47.06,
+    "Epic": 42.0,
+    "Special": 9.4,
+    "SuperEpic": 1.251,
+    "Unique": 0.24,
+    "Legendary": 0.045,
+    "Eternal": 0.004
+   }
+  },
+  {
+   "oven_level": 33,
+   "gear_level_min": 94,
+   "gear_level_max": 99,
+   "rarity_pct": {
+    "Magic": 43.06,
+    "Epic": 45.12,
+    "Special": 10.0,
+    "SuperEpic": 1.4,
+    "Unique": 0.364,
+    "Legendary": 0.05,
+    "Eternal": 0.006
+   }
+  },
+  {
+   "oven_level": 34,
+   "gear_level_min": 97,
+   "gear_level_max": 102,
+   "rarity_pct": {
+    "Magic": 38.6,
+    "Epic": 43.8,
+    "Special": 15.44,
+    "SuperEpic": 1.67,
+    "Unique": 0.427,
+    "Legendary": 0.055,
+    "Eternal": 0.008
+   }
+  },
+  {
+   "oven_level": 35,
+   "gear_level_min": 100,
+   "gear_level_max": 105,
+   "rarity_pct": {
+    "Magic": 30.9,
+    "Epic": 38.0,
+    "Special": 28.0,
+    "SuperEpic": 2.53,
+    "Unique": 0.5,
+    "Legendary": 0.06,
+    "Eternal": 0.01
+   }
+  },
+  {
+   "oven_level": 36,
+   "gear_level_min": 103,
+   "gear_level_max": 108,
+   "rarity_pct": {
+    "Magic": 24.8,
+    "Epic": 34.0,
+    "Special": 37.51,
+    "SuperEpic": 3.0,
+    "Unique": 0.612,
+    "Legendary": 0.065,
+    "Eternal": 0.013
+   }
+  },
+  {
+   "oven_level": 37,
+   "gear_level_min": 106,
+   "gear_level_max": 111,
+   "rarity_pct": {
+    "Magic": 20.5,
+    "Epic": 31.0,
+    "Special": 43.29,
+    "SuperEpic": 4.0,
+    "Unique": 1.124,
+    "Legendary": 0.07,
+    "Eternal": 0.016
+   }
+  },
+  {
+   "oven_level": 38,
+   "gear_level_min": 109,
+   "gear_level_max": 114,
+   "rarity_pct": {
+    "Magic": 16.5,
+    "Epic": 26.4,
+    "Special": 50.0,
+    "SuperEpic": 5.37,
+    "Unique": 1.636,
+    "Legendary": 0.075,
+    "Eternal": 0.019
+   }
+  },
+  {
+   "oven_level": 39,
+   "gear_level_min": 112,
+   "gear_level_max": 117,
+   "rarity_pct": {
+    "Magic": 12.86,
+    "Epic": 24.26,
+    "Special": 53.0,
+    "SuperEpic": 7.63,
+    "Unique": 2.148,
+    "Legendary": 0.08,
+    "Eternal": 0.022
+   }
+  },
+  {
+   "oven_level": 40,
+   "gear_level_min": 115,
+   "gear_level_max": 120,
+   "rarity_pct": {
+    "Magic": 10.3,
+    "Epic": 20.0,
+    "Special": 56.89,
+    "SuperEpic": 10.04,
+    "Unique": 2.66,
+    "Legendary": 0.085,
+    "Eternal": 0.025
+   }
+  },
+  {
+   "oven_level": 41,
+   "gear_level_min": 118,
+   "gear_level_max": 123,
+   "rarity_pct": {
+    "Magic": 7.0,
+    "Epic": 16.84,
+    "Special": 60.0,
+    "SuperEpic": 12.87,
+    "Unique": 3.172,
+    "Legendary": 0.09,
+    "Eternal": 0.028
+   }
+  },
+  {
+   "oven_level": 42,
+   "gear_level_min": 121,
+   "gear_level_max": 126,
+   "rarity_pct": {
+    "Magic": 2.5,
+    "Epic": 12.0,
+    "Special": 65.08,
+    "SuperEpic": 16.5,
+    "Unique": 3.794,
+    "Legendary": 0.095,
+    "Eternal": 0.031
+   }
+  },
+  {
+   "oven_level": 43,
+   "gear_level_min": 124,
+   "gear_level_max": 129,
+   "rarity_pct": {
+    "Epic": 8.0,
+    "Special": 62.0,
+    "SuperEpic": 25.6,
+    "Unique": 4.266,
+    "Legendary": 0.1,
+    "Eternal": 0.034
+   }
+  },
+  {
+   "oven_level": 44,
+   "gear_level_min": 127,
+   "gear_level_max": 132,
+   "rarity_pct": {
+    "Epic": 2.0,
+    "Special": 63.0,
+    "SuperEpic": 30.15,
+    "Unique": 4.708,
+    "Legendary": 0.105,
+    "Eternal": 0.037
+   }
+  },
+  {
+   "oven_level": 45,
+   "gear_level_min": 130,
+   "gear_level_max": 135,
+   "rarity_pct": {
+    "Special": 59.0,
+    "SuperEpic": 35.63,
+    "Unique": 5.22,
+    "Legendary": 0.11,
+    "Eternal": 0.04
+   }
+  },
+  {
+   "oven_level": 46,
+   "gear_level_min": 133,
+   "gear_level_max": 138,
+   "rarity_pct": {
+    "Special": 55.61,
+    "SuperEpic": 38.0,
+    "Unique": 6.232,
+    "Legendary": 0.115,
+    "Eternal": 0.043
+   }
+  },
+  {
+   "oven_level": 47,
+   "gear_level_min": 136,
+   "gear_level_max": 141,
+   "rarity_pct": {
+    "Special": 50.59,
+    "SuperEpic": 42.0,
+    "Unique": 7.244,
+    "Legendary": 0.12,
+    "Eternal": 0.046
+   }
+  },
+  {
+   "oven_level": 48,
+   "gear_level_min": 139,
+   "gear_level_max": 144,
+   "rarity_pct": {
+    "Special": 42.0,
+    "SuperEpic": 49.57,
+    "Unique": 8.256,
+    "Legendary": 0.125,
+    "Eternal": 0.049
+   }
+  },
+  {
+   "oven_level": 49,
+   "gear_level_min": 142,
+   "gear_level_max": 147,
+   "rarity_pct": {
+    "Special": 38.0,
+    "SuperEpic": 53.05,
+    "Unique": 8.758,
+    "Legendary": 0.14,
+    "Eternal": 0.052
+   }
+  },
+  {
+   "oven_level": 50,
+   "gear_level_min": 145,
+   "gear_level_max": 150,
+   "rarity_pct": {
+    "Special": 30.13,
+    "SuperEpic": 60.0,
+    "Unique": 9.655,
+    "Legendary": 0.16,
+    "Eternal": 0.055
+   }
+  }
+ ]
+}

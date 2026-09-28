@@ -1,0 +1,417 @@
+{
+ "about": "Team power → the last main stage (in stage order) whose bracket is at least N% of damage, and the first stage that falls below it with the power that stage needs. Stage recommended power is game data 1.4.002 after the 2026-09-23 easing, from record 003. Recommended power rises almost monotonically, so 'last stage in order' is the reach.",
+ "source": "research/003-stage-pushing-meta/evidence/06-derived/stage-table.json",
+ "rows": [
+  {
+   "team_power": 1000000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "227-22",
+    "100": "235-4",
+    "75": "244-7",
+    "55": "255-29",
+    "35": "272-15",
+    "15": "300-22"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "227-23",
+     "power_needed": 1000817479
+    },
+    "100": {
+     "stage": "235-5",
+     "power_needed": 1000078690
+    },
+    "75": {
+     "stage": "244-8",
+     "power_needed": 1000233298
+    },
+    "55": {
+     "stage": "255-30",
+     "power_needed": 1000466850
+    },
+    "35": {
+     "stage": "272-16",
+     "power_needed": 1000701054
+    },
+    "15": {
+     "stage": "300-23",
+     "power_needed": 1000350465
+    }
+   }
+  },
+  {
+   "team_power": 1500000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "244-7",
+    "100": "251-20",
+    "75": "260-23",
+    "55": "272-15",
+    "35": "288-30",
+    "15": "317-8"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "244-8",
+     "power_needed": 1500349946
+    },
+    "100": {
+     "stage": "251-21",
+     "power_needed": 1500469204
+    },
+    "75": {
+     "stage": "260-24",
+     "power_needed": 1500701170
+    },
+    "55": {
+     "stage": "272-16",
+     "power_needed": 1501051580
+    },
+    "35": {
+     "stage": "289-1",
+     "power_needed": 1500175410
+    },
+    "15": {
+     "stage": "317-9",
+     "power_needed": 1500876963
+    }
+   }
+  },
+  {
+   "team_power": 2000000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "255-29",
+    "100": "263-12",
+    "75": "272-15",
+    "55": "284-6",
+    "35": "300-22",
+    "15": "328-29"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "255-30",
+     "power_needed": 2000933700
+    },
+    "100": {
+     "stage": "263-13",
+     "power_needed": 2001092748
+    },
+    "75": {
+     "stage": "272-16",
+     "power_needed": 2001402107
+    },
+    "55": {
+     "stage": "284-7",
+     "power_needed": 2000232688
+    },
+    "35": {
+     "stage": "300-23",
+     "power_needed": 2000700931
+    },
+    "15": {
+     "stage": "328-30",
+     "power_needed": 2000959712
+    }
+   }
+  },
+  {
+   "team_power": 2200000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "259-25",
+    "100": "267-8",
+    "75": "276-11",
+    "55": "288-3",
+    "35": "304-19",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "259-26",
+     "power_needed": 2200083206
+    },
+    "100": {
+     "stage": "267-9",
+     "power_needed": 2200258083
+    },
+    "75": {
+     "stage": "276-12",
+     "power_needed": 2200598233
+    },
+    "55": {
+     "stage": "288-4",
+     "power_needed": 2201112068
+    },
+    "35": {
+     "stage": "304-20",
+     "power_needed": 2201627336
+    },
+    "15": null
+   }
+  },
+  {
+   "team_power": 2400000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "263-12",
+    "100": "270-25",
+    "75": "279-28",
+    "55": "291-19",
+    "35": "308-5",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "263-13",
+     "power_needed": 2401311298
+    },
+    "100": {
+     "stage": "270-26",
+     "power_needed": 2401502170
+    },
+    "75": {
+     "stage": "279-29",
+     "power_needed": 2401873430
+    },
+    "55": {
+     "stage": "291-20",
+     "power_needed": 2400470016
+    },
+    "35": {
+     "stage": "308-6",
+     "power_needed": 2401031952
+    },
+    "15": null
+   }
+  },
+  {
+   "team_power": 2600000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "266-20",
+    "100": "274-3",
+    "75": "283-5",
+    "55": "294-27",
+    "35": "311-13",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "266-21",
+     "power_needed": 2601721307
+    },
+    "100": {
+     "stage": "274-4",
+     "power_needed": 2601928109
+    },
+    "75": {
+     "stage": "283-6",
+     "power_needed": 2600202670
+    },
+    "55": {
+     "stage": "294-28",
+     "power_needed": 2600809813
+    },
+    "35": {
+     "stage": "311-14",
+     "power_needed": 2601418647
+    },
+    "15": null
+   }
+  },
+  {
+   "team_power": 2800000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "269-20",
+    "100": "277-3",
+    "75": "286-6",
+    "55": "297-28",
+    "35": "314-13",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "269-21",
+     "power_needed": 2800472174
+    },
+    "100": {
+     "stage": "277-4",
+     "power_needed": 2800694774
+    },
+    "75": {
+     "stage": "286-7",
+     "power_needed": 2801127748
+    },
+    "55": {
+     "stage": "297-29",
+     "power_needed": 2801781807
+    },
+    "35": {
+     "stage": "314-14",
+     "power_needed": 2800146394
+    },
+    "15": null
+   }
+  },
+  {
+   "team_power": 3000000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "272-15",
+    "100": "279-28",
+    "75": "288-30",
+    "55": "300-22",
+    "35": "317-8",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "272-16",
+     "power_needed": 3002103161
+    },
+    "100": {
+     "stage": "279-29",
+     "power_needed": 3002341788
+    },
+    "75": {
+     "stage": "289-1",
+     "power_needed": 3000350820
+    },
+    "55": {
+     "stage": "300-23",
+     "power_needed": 3001051396
+    },
+    "35": {
+     "stage": "317-9",
+     "power_needed": 3001753925
+    },
+    "15": null
+   }
+  },
+  {
+   "team_power": 3500000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "278-23",
+    "100": "286-6",
+    "75": "295-9",
+    "55": "307-1",
+    "35": "323-16",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "278-24",
+     "power_needed": 3501131392
+    },
+    "100": {
+     "stage": "286-7",
+     "power_needed": 3501409685
+    },
+    "75": {
+     "stage": "295-10",
+     "power_needed": 3501950986
+    },
+    "55": {
+     "stage": "307-2",
+     "power_needed": 3502768686
+    },
+    "35": {
+     "stage": "323-17",
+     "power_needed": 3500724104
+    },
+    "15": null
+   }
+  },
+  {
+   "team_power": 4000000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "284-6",
+    "100": "291-19",
+    "75": "300-22",
+    "55": "312-14",
+    "35": "328-29",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "284-7",
+     "power_needed": 4000465376
+    },
+    "100": {
+     "stage": "291-20",
+     "power_needed": 4000783360
+    },
+    "75": {
+     "stage": "300-23",
+     "power_needed": 4001401862
+    },
+    "55": {
+     "stage": "312-15",
+     "power_needed": 4002336182
+    },
+    "35": {
+     "stage": "328-30",
+     "power_needed": 4001919424
+    },
+    "15": null
+   }
+  },
+  {
+   "team_power": 5000000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "293-9",
+    "100": "300-22",
+    "75": "309-25",
+    "55": "321-17",
+    "35": "328-30",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "293-10",
+     "power_needed": 5001354786
+    },
+    "100": {
+     "stage": "300-23",
+     "power_needed": 5001752327
+    },
+    "75": {
+     "stage": "309-26",
+     "power_needed": 5002525574
+    },
+    "55": {
+     "stage": "321-18",
+     "power_needed": 5003693656
+    },
+    "35": null,
+    "15": null
+   }
+  },
+  {
+   "team_power": 6000000000.0,
+   "last_stage_in_bracket_or_better": {
+    "120": "300-22",
+    "100": "308-5",
+    "75": "317-8",
+    "55": "328-29",
+    "35": "328-30",
+    "15": "328-30"
+   },
+   "first_stage_below_bracket": {
+    "120": {
+     "stage": "300-23",
+     "power_needed": 6002102792
+    },
+    "100": {
+     "stage": "308-6",
+     "power_needed": 6002579880
+    },
+    "75": {
+     "stage": "317-9",
+     "power_needed": 6003507850
+    },
+    "55": {
+     "stage": "328-30",
+     "power_needed": 6002879136
+    },
+    "35": null,
+    "15": null
+   }
+  }
+ ]
+}

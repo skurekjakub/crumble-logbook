@@ -1,0 +1,1564 @@
+{
+ "about": "Collection entries from the game data. Boosts are flat additions (AttackPointAddition and so on) to cookies of the listed roles or elements; the raw values are kept as the data states them, and their unit is not documented by the source.",
+ "source": "research/001-guild-conquest-meta/evidence/12-glossary-src/cookieruncrumble_app_api_catalog_database.json",
+ "entries": [
+  {
+   "type": "Cookie",
+   "name_ko": "모험의 동반자",
+   "name_en": "Unlikely Companions",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 230000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Grass"
+     ],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 230000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "최소 10년 차 이상",
+   "name_en": "At Least 10 Years of Experience",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 30000,
+     "last": 150000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 180000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "베리 베리 러블리 베리",
+   "name_en": "Very Berry Lovely Berry",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 230000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "전투에 참전한 디저트 생명체",
+   "name_en": "No Longer NPC",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Fire"
+     ],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "엄마가 같아요",
+   "name_en": "Ugh, Yes... We're Related",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "열혈 청년들",
+   "name_en": "Passionate Youth",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Fire"
+     ],
+     "first": 30000,
+     "last": 220000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 180000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "쿠키로 끝나지 않는 친구들",
+   "name_en": "DessertRun?",
+   "members": 4,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 230000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "두 번째 악동의 밤",
+   "name_en": "Night of Tricksters Returns",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Fire"
+     ],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 180000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "쿠키런 스토어의 쿠폴리탄 괴담",
+   "name_en": "Don't Let Onion Cookie Know",
+   "members": 1,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 180000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "허브향 나는 미담",
+   "name_en": "Heartwarming Herbs",
+   "members": 1,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "그것은 사랑일까?",
+   "name_en": "The Honorable? Knight",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 180000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 30000,
+     "last": 220000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "귀요미 쿠키들",
+   "name_en": "Cuteness Rules the World",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "자극이 부족해!",
+   "name_en": "Dopamine Addiction",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Grass"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "절친한 데뷔 동기",
+   "name_en": "Best Friends from Day 1",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Fire"
+     ],
+     "first": 50000,
+     "last": 360000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "불안했던 어둠조",
+   "name_en": "Unstable Cookies of Darkness",
+   "members": 4,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Dark"
+     ],
+     "first": 50000,
+     "last": 360000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 230000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Dark"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "시트러스 사총사 근데 하나가 부족한",
+   "name_en": "The Citrus Dream Team (-1)",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 360000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "모두 용감한 쿠키",
+   "name_en": "Across the Ginger-Verse",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Fire"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "나를 기분좋게 만드는 것",
+   "name_en": "So Bright, Gotta Wear Shades",
+   "members": 1,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "쿠키런의 인기 쿠키들",
+   "name_en": "The IT Cookies",
+   "members": 4,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Grass"
+     ],
+     "first": 50000,
+     "last": 430000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "닥터 닥터",
+   "name_en": "Doctor Doctor",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Grass"
+     ],
+     "first": 50000,
+     "last": 360000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "어둠을 쫓는 바람",
+   "name_en": "Wind That Chases Darkness",
+   "members": 1,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "가족 같은 친구",
+   "name_en": "As Good As Family",
+   "members": 1,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "비가역적 관계",
+   "name_en": "The Irreversible",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 180000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Dark"
+     ],
+     "first": 30000,
+     "last": 220000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "도시의 티타임",
+   "name_en": "Tea Time in the City",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 180000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 230000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "4박자에 담은 Rhyme & Flow",
+   "name_en": "Cookies Got Rhymes (We Don't)",
+   "members": 5,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 120000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Fire"
+     ],
+     "first": 50000,
+     "last": 360000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Attacker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 30000,
+     "last": 220000,
+     "steps": 11
+    },
+    {
+     "type": "HealthPointAddition",
+     "roles": [
+      "Supporter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "친구이자 라이벌",
+   "name_en": "Friends and Rivals",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 340000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Dark"
+     ],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Cookie",
+   "name_ko": "둘이 닮았다?",
+   "name_en": "Are You Related?",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 290000,
+     "steps": 11
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Fire"
+     ],
+     "first": 50000,
+     "last": 360000,
+     "steps": 11
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "1번에 올만하죠?",
+   "name_en": "First for a Reason",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 220000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 30000,
+     "last": 280000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "아기들",
+   "name_en": "Fresh Baked Pets",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "뭉치뭉치 복슬복슬",
+   "name_en": "Extra Fluff",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 220000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "든든한 도우미",
+   "name_en": "Pets Can Do Anything",
+   "members": 5,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 430000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 670000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "HealthPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "공통점을 찾아볼까요?",
+   "name_en": "What Do They Have in Common?",
+   "members": 5,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 330000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 30000,
+     "last": 410000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 330000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "HealthPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 430000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "포크를 치워주세요",
+   "name_en": "Forkphobic",
+   "members": 4,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 330000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 670000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "반짝반짝 영롱해",
+   "name_en": "Ooh... Sparkly",
+   "members": 2,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 330000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "크럼블 챌린지: 몸에 좋아요",
+   "name_en": "Crumble Challenge: Good for You",
+   "members": 5,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 20000,
+     "last": 220000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 670000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    },
+    {
+     "type": "HealthPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "동글동글한 머리",
+   "name_en": "Extra Round",
+   "members": 4,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 670000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "물가에서 함께해",
+   "name_en": "Splish-Splash",
+   "members": 3,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 430000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 670000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "빵 냄새 가득한 모험",
+   "name_en": "Get That Bread",
+   "members": 4,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 430000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "달콤한 향기, 다정한 파트너",
+   "name_en": "Sweet Treats, Sweeter Partners",
+   "members": 5,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 30000,
+     "last": 430000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 30000,
+     "last": 410000,
+     "steps": 21
+    },
+    {
+     "type": "HealthPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "날아날아 하늘로",
+   "name_en": "Flying Sky-High",
+   "members": 5,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    },
+    {
+     "type": "HealthPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    }
+   ]
+  },
+  {
+   "type": "Pet",
+   "name_ko": "펫계의 양대 산맥",
+   "name_en": "Like Cats and Dogs",
+   "members": 5,
+   "boosts": [
+    {
+     "type": "AttackPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    },
+    {
+     "type": "AttackPointAddition",
+     "roles": [],
+     "elements": [
+      "Water"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [
+      "Shooter"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 640000,
+     "steps": 21
+    },
+    {
+     "type": "DefensePointAddition",
+     "roles": [],
+     "elements": [
+      "Light"
+     ],
+     "first": 50000,
+     "last": 800000,
+     "steps": 21
+    },
+    {
+     "type": "HealthPointAddition",
+     "roles": [
+      "Tanker"
+     ],
+     "elements": [],
+     "first": 40000,
+     "last": 540000,
+     "steps": 21
+    }
+   ]
+  }
+ ]
+}
