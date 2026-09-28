@@ -1,7 +1,8 @@
 /**
  * The team-power mode's curated collections: each file's schema, its
  * checks and its mapping onto the team-power tables. Every row is one the
- * record owns, cited to its own sources. Rows name each other by slug; a
+ * record owns, cited to its own sources and to the ones it names inside
+ * (a posted gain's, a curve row's). Rows name each other by slug; a
  * write step checks every slug named against the rows stored when it runs
  * (the record's own, written before it, or another record's).
  *
@@ -467,7 +468,7 @@ export const TEAM_POWER_COLLECTIONS = {
             patchNotes: orNull(source.patch_notes),
             confidence: source.confidence,
           },
-          sources: source.sources,
+          sources: unionOf([source, ...source.posted_gains]),
         })),
       ),
     ],
@@ -740,7 +741,7 @@ export const TEAM_POWER_COLLECTIONS = {
             note: curve.note ?? null,
             evidence: curve.evidence ?? null,
           },
-          sources: curve.sources,
+          sources: [...new Set([...curve.sources, ...(curve.row_sources ?? []).flat()])],
         })),
       ),
     ],

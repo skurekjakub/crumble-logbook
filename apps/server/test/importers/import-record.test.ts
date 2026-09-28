@@ -499,7 +499,10 @@ describe("importRecord validation", () => {
       const { decks: _d, runes: _r, gear: _g, rng: _n, scores: _s, ...rest } = m.collections;
       m.collections = rest;
     });
-    const { counts } = importRecord(testStore(), dir);
+    const { counts, warnings } = importRecord(testStore(), dir);
+    expect(warnings).toContain(
+      "curated/manifest.json lists no decks, though mode guild_conquest has lineups; list decks.json if the record has one",
+    );
     expect(counts.decks).toBe(0);
     expect(counts.runeBuilds).toBe(0);
     expect(counts.gearRecs).toBe(0);

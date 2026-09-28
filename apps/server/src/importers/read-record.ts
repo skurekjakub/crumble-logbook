@@ -1,4 +1,5 @@
 import { join } from "node:path";
+import type { GameMode } from "@crumble/schema";
 import type { z } from "zod";
 import { ImportError } from "../errors";
 import type {
@@ -31,6 +32,32 @@ export interface RecordPlan {
 interface CuratedFiles {
   parsed: Partial<ParsedCollections>;
   files: Partial<Record<CollectionName, string>>;
+}
+
+/**
+ * The game modes whose research has no lineups: a record filed only under
+ * these may leave `decks` out of its curated manifest without a warning.
+ */
+export const MODES_WITHOUT_DECKS: readonly GameMode[] = ["team_power"];
+
+/**
+ * The warning for a record whose curated manifest lists no decks though a
+ * mode it covers has lineups.
+ *
+ * @param parsed - every listed collection's parsed content
+ * @param mode - the record's mode from `import.json`, when it states one
+ * @returns the warning, or `undefined` when the record lists decks or
+ *   covers only modes without lineups
+ */
+export function missingDecksWarning(
+  parsed: Partial<ParsedCollections>,
+  mode: GameMode | undefined,
+): string | undefined {
+  if (parsed.decks !== undefined) return undefined;
+  const modes = mode ? [mode] : (Object.keys(parsed.meta?.modes ?? {}) as GameMode[]);
+  const withDecks = modes.filter((m) => !MODES_WITHOUT_DECKS.includes(m));
+  if (withDecks.length === 0) return undefined;
+  return `curated/manifest.json lists no decks, though mode ${withDecks.join(", ")} has lineups; list decks.json if the record has one`;
 }
 
 /** The collections in write order, typed for generic iteration. */
@@ -149,7 +176,8 @@ export function readRecord(recordDir: string): RecordPlan {
   };
 
   const steps: WriteStep[] = [];
-  const warnings: string[] = [];
+  const decksWarning = missingDecksWarning(parsed, manifest.record.mode);
+  const warnings: string[] = decksWarning ? [decksWarning] : [];
   for (const [name, collection] of ORDERED) {
     if (parsed[name] === undefined) continue;
     steps.push(...collection.prepare(parsed[name], { ...context, file: curated.files[name]! }));

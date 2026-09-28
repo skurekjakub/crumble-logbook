@@ -246,7 +246,8 @@ export interface ContentSpec<Row> {
   links?: { readonly [C in ColumnOf<Row>]?: LinkTarget };
   /**
    * The source ids a row names inside its columns (a posted gain's
-   * sources, say), which must exist before a write, as its own citations do.
+   * sources, say): they must exist before a write, and the row is cited
+   * to them as to its own sources, so a source it names can't be deleted.
    *
    * @param values - the values being written; a patch's may lack the columns
    * @returns the source ids
@@ -267,7 +268,8 @@ export interface ContentSpec<Row> {
   unique?: readonly ColumnOf<Row>[];
   /**
    * Checks a row as written (a patch merged in) against rules its columns
-   * and the rows it links to must keep.
+   * and the rows it links to must keep. It runs again when a row it links
+   * to is updated.
    *
    * @param row - the written row
    * @param linked - finds a row the written row names by slug

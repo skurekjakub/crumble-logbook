@@ -5,6 +5,7 @@ import type {
   ContentKey,
   FiltersOf,
   LinkTarget,
+  LinkedRow,
   Registry,
   RowOf,
   ValuesOf,
@@ -107,12 +108,21 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
    */
   checkRow?: (repos: Repos, row: Row) => void;
   /**
-   * Validates that a row may stop being what it was, inside the write's
-   * transaction: before a delete (`after` undefined) and after an update.
+   * Validates that a row may change or go, given the rows that depend on
+   * it, inside the write's transaction: before a delete (`after`
+   * undefined) and after an update.
    *
    * @throws to reject the write; the transaction rolls back
    */
   checkDetach?: (repos: Repos, before: Row, after: Row | undefined) => void;
+  /**
+   * The source ids a row names inside its columns. The row is cited to
+   * them as well as to its own `sources`.
+   *
+   * @param row - the row
+   * @returns the source ids
+   */
+  innerSources?: (row: Row) => string[];
   /**
    * Columns read from a row's other columns, set on the row after every
    * write, before `checkRow` runs.
@@ -132,9 +142,14 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
  *
  * Every write runs inside `store.transaction`: it checks the cited sources
  * exist, runs `spec.checkRefs`, writes the row, sets its `spec.derive`
- * columns, runs `spec.checkRow` on it, then replaces its citations. `update` only touches citations when `sources` is given. A
- * view is the row, then `sources`, then `en` when `spec.gloss` names a
- * column, glossed with the row's own record's entries first.
+ * columns, runs `spec.checkRow` on it, then replaces its citations: its
+ * own `sources` and the ones `spec.innerSources` reads from the row. An
+ * `update` without `sources` keeps the row's citations, trading the inner
+ * sources the row named before for the ones it names now (a source it
+ * cited both itself and inside a list it no longer names goes with the
+ * list). A view is the row, then `sources` (its citations), then `en`
+ * when `spec.gloss` names a column, glossed with the row's own record's
+ * entries first.
  *
  * @param store - the store to persist through
  * @param spec - the table and entity this service manages
@@ -148,6 +163,28 @@ export function createContentService<
 >(store: Store, spec: ContentServiceSpec<Row, Values>): ContentService<Row, Values, View, Filter> {
   const { entity, table, checkRefs, checkRow, checkDetach, derive, filters, gloss } = spec;
   const usesGlossary = gloss !== undefined || filtersNeedGlossary(filters);
+
+  /**
+   * The sources a row names inside its columns.
+   *
+   * @param row - the row
+   * @returns the source ids, `[]` for a type that names none
+   */
+  const inner = (row: Row): string[] => spec.innerSources?.(row) ?? [];
+
+  /**
+   * A written row's citations: its own sources and the ones it names inside.
+   *
+   * @param repos - the write's repos
+   * @param row - the written row
+   * @param own - the row's own sources
+   * @returns the citations stored: the own sources first, then the inner ones
+   */
+  const cite = (repos: Repos, row: Row, own: readonly string[]): string[] => {
+    const all = [...new Set([...own, ...inner(row)])];
+    repos.citations.replace(entity, String(row.id), all);
+    return all;
+  };
 
   /**
    * Sets a written row's derived columns, when `derive` names any whose
@@ -235,8 +272,7 @@ export function createContentService<
         const repo = table(repos);
         const row = withDerived(repo, repo.insert(values));
         checkRow?.(repos, row);
-        repos.citations.replace(entity, String(row.id), sources);
-        return toView(row, sources, resolver(repos)) as never;
+        return toView(row, cite(repos, row, sources), resolver(repos)) as never;
       }),
     /** @inheritdoc */
     update: (id, patch, sources) =>
@@ -254,9 +290,12 @@ export function createContentService<
         const row = withDerived(repo, written);
         checkRow?.(repos, row);
         checkDetach?.(repos, before, row);
-        if (!sources) return withSources(repos, row) as never;
-        repos.citations.replace(entity, String(row.id), sources);
-        return toView(row, sources, resolver(repos)) as never;
+        if (sources) return toView(row, cite(repos, row, sources), resolver(repos)) as never;
+        if (!spec.innerSources) return withSources(repos, row) as never;
+        const cited = repos.citations.sourcesFor(entity, [String(id)]).get(String(id)) ?? [];
+        const dropped = new Set(inner(before));
+        const own = cited.filter((source) => !dropped.has(source));
+        return toView(row, cite(repos, row, own), resolver(repos)) as never;
       }),
     /** @inheritdoc */
     remove: (id) =>
@@ -299,6 +338,17 @@ function slugsIn(value: unknown): string[] {
 }
 
 /**
+ * Finds rows by slug in the repos of a write, for a registry `check`.
+ *
+ * @param repos - the write's repos
+ * @returns the lookup
+ */
+function linkedIn(repos: Repos): LinkedRow {
+  return (target, slug) =>
+    (repos[target].list() as Array<Record<string, unknown>>).find((r) => r.slug === slug);
+}
+
+/**
  * The content types and columns that name rows of `target` by slug.
  *
  * @param target - a content type
@@ -324,8 +374,11 @@ function linksTo(target: ContentKey): Array<{ key: ContentKey; column: string }>
  * failing throws {@link ConflictError} and nothing is written. The
  * entry's `content.derive` columns are set on every write. Every slug a
  * `content.links` column names, and every source `content.innerSources`
- * reads from the values, must exist ({@link UnknownRefsError} otherwise);
- * a row another type's link names can't be deleted or change its slug
+ * reads from the values, must exist ({@link UnknownRefsError} otherwise),
+ * and the row is cited to those sources too. A row another type's link
+ * names can't be deleted or change its slug, and an update that would
+ * leave a naming row breaking its own `content.check` is refused, so a
+ * rule that reads a linked row holds whichever row is written
  * ({@link ConflictError}).
  *
  * @param store - the store to persist through
@@ -367,32 +420,37 @@ export function registeredService<K extends ContentKey>(
       if (inner.length > 0) assertSourcesExist(repos, [...new Set(inner)]);
     },
     /** @inheritdoc */
+    innerSources: (row) => content?.innerSources?.(row) ?? [],
+    /** @inheritdoc */
     checkDetach: (repos, before, after) => {
-      if (namedBy.length === 0 || (after && after.slug === before.slug)) return;
+      const slug = String(before.slug);
+      const moved = !after || after.slug !== before.slug;
       for (const { key: other, column } of namedBy) {
-        const row = (repos[other].list() as AnyRow[]).find((r) =>
-          slugsIn(r[column]).includes(String(before.slug)),
+        const naming = (repos[other].list() as AnyRow[]).filter((r) =>
+          slugsIn(r[column]).includes(slug),
         );
-        if (row) {
+        const otherEntity = specOf(other).entity!;
+        if (moved && naming.length > 0) {
           const what = after ? "change its slug" : "be deleted";
           throw new ConflictError(
-            `${entity!} ${String(before.slug)} can't ${what}: ${specOf(other).entity!} ${row.id} names it`,
+            `${entity!} ${slug} can't ${what}: ${otherEntity} ${naming[0]!.id} names it`,
           );
+        }
+        // Updated in place: the rows naming it must still keep their own rules.
+        const content = specOf(other).content;
+        for (const row of naming) {
+          const problem = content?.check?.(row, linkedIn(repos));
+          if (problem) {
+            throw new ConflictError(
+              `${entity!} ${slug} can't change so: ${otherEntity} ${row.id} names it, and ${problem}`,
+            );
+          }
         }
       }
     },
     /** @inheritdoc */
     checkRow: (repos, row) => {
-      /**
-       * Finds the row of a linked content type with a slug.
-       *
-       * @param target - the linked content type
-       * @param slug - the slug
-       * @returns the row, or `undefined` when none has it
-       */
-      const linked = (target: LinkTarget, slug: string) =>
-        (repos[target].list() as AnyRow[]).find((r) => r.slug === slug);
-      const problem = content?.check?.(row, linked);
+      const problem = content?.check?.(row, linkedIn(repos));
       if (problem) throw new ConflictError(`${entity!} ${row.id}: ${problem}`);
       if (unique.length > 0) {
         const others = repos[key].list() as readonly AnyRow[];

@@ -242,4 +242,116 @@ describe("team-power routes", () => {
     );
     expect(res.status).toBe(400);
   });
+
+  it("refuses a patch that leaves a curve out of shape or a step naming both targets, with 409", async () => {
+    const app = await setup();
+    const curve = await readJson<{ id: number }>(
+      await app.request(
+        "/api/growth-curves",
+        jsonBody({
+          slug: "c",
+          powerSource: "plating",
+          title: "t",
+          columns: ["from"],
+          rows: [[0]],
+          sources: ["dc:1"],
+        }),
+      ),
+    );
+    const ragged = await patch(app, `/api/growth-curves/${curve.id}`, { rows: [[0, 1]] });
+    expect(ragged.status).toBe(409);
+    await app.request(
+      "/api/packages",
+      jsonBody({
+        slug: "plate-pack",
+        nameKr: "k",
+        nameEn: "e",
+        priceKrw: 9900,
+        usdSource: "not listed",
+        kind: "repeatable",
+        feeds: ["plating"],
+        verdict: "v",
+        tier: "medium",
+        sources: ["dc:1"],
+      }),
+    );
+    const step = await readJson<{ id: number }>(
+      await app.request(
+        "/api/spending-steps",
+        jsonBody({
+          orderSlug: "endgame",
+          route: "free",
+          position: 0,
+          powerSource: "plating",
+          basis: "community",
+          sources: ["dc:1"],
+        }),
+      ),
+    );
+    const both = await patch(app, `/api/spending-steps/${step.id}`, { packageSlug: "plate-pack" });
+    expect(both.status).toBe(409);
+  });
+
+  it("refuses a patch that turns the data point of a posted planner step claimed, or takes its change away", async () => {
+    const app = await setup();
+    await app.request("/api/planner-steps", jsonBody(plannerStep({ dataPoint: "plate-step" })));
+    const points = await readJson<Array<{ id: number; slug: string }>>(
+      await app.request("/api/power-data-points"),
+    );
+    const plate = points.find((p) => p.slug === "plate-step")!;
+    const claimed = await patch(app, `/api/power-data-points/${plate.id}`, { kind: "claimed" });
+    expect(claimed.status).toBe(409);
+    expect(await readJson(claimed)).toMatchObject({
+      message: expect.stringMatching(/plate-step can't change so: planner_step \d+ names it/),
+    });
+    const noChange = await patch(app, `/api/power-data-points/${plate.id}`, { deltaPct: null });
+    expect(noChange.status).toBe(409);
+    const kept = await readJson<{ kind: string; deltaPct: number }>(
+      await app.request(`/api/power-data-points/${plate.id}`),
+    );
+    expect(kept).toMatchObject({ kind: "posted", deltaPct: 1.6 });
+    expect((await patch(app, `/api/power-data-points/${plate.id}`, { note: "m" })).status).toBe(
+      200,
+    );
+  });
+
+  it("cites the sources a row names inside it, so they can't be deleted and show among its sources", async () => {
+    const app = await setup();
+    for (const id of ["dc:2", "dc:3"]) {
+      await app.request("/api/sources", jsonBody({ id, url: `https://example.test/${id}` }));
+    }
+    const created = await app.request(
+      "/api/growth-curves",
+      jsonBody({
+        slug: "c",
+        powerSource: "plating",
+        title: "t",
+        columns: ["from"],
+        rows: [[0]],
+        rowSources: [["dc:2"]],
+        sources: ["dc:1"],
+      }),
+    );
+    const curve = await readJson<{ id: number; sources: string[] }>(created);
+    expect(curve.sources).toEqual(["dc:1", "dc:2"]);
+    expect((await app.request("/api/sources/dc:2", { method: "DELETE" })).status).toBe(409);
+    const moved = await readJson<{ sources: string[] }>(
+      await patch(app, `/api/growth-curves/${curve.id}`, { rowSources: [["dc:3"]] }),
+    );
+    expect(moved.sources).toEqual(["dc:1", "dc:3"]);
+    expect((await app.request("/api/sources/dc:2", { method: "DELETE" })).status).toBe(204);
+    const gain = {
+      account: "a",
+      before: null,
+      after: null,
+      delta: null,
+      cost: null,
+      kind: "posted",
+      sources: ["dc:3"],
+    };
+    const stellar = await readJson<{ sources: string[] }>(
+      await app.request("/api/power-sources", jsonBody(source("stellar", { postedGains: [gain] }))),
+    );
+    expect(stellar.sources).toEqual(["dc:1", "dc:3"]);
+  });
 });

@@ -1,6 +1,6 @@
 import { ImportError } from "../errors";
-import type { ContentKey, TableKey } from "../registry";
-import { TABLE_KEYS, recordColumnOf, specOf } from "../registry";
+import type { ContentKey, LinkTarget, TableKey } from "../registry";
+import { CONTENT_KEYS, TABLE_KEYS, recordColumnOf, specOf } from "../registry";
 import type { Repos, Store } from "../repos";
 import type { FactRef } from "../repos/fact-claims";
 import type { TableRepo } from "../repos/table-repo";
@@ -69,6 +69,37 @@ function clearRecord(repos: Repos, slug: string): void {
 }
 
 /**
+ * Checks that every slug a stored row names through a registry link is a
+ * stored row's slug, so a `--replace` that drops a row another record's
+ * row still names fails instead of stranding the link.
+ *
+ * @param repos - the write's repos
+ * @param record - the record being written, as the error names it
+ * @throws {ImportError} naming the first row whose link names a missing slug
+ */
+function assertLinksResolve(repos: Repos, record: string): void {
+  for (const key of CONTENT_KEYS) {
+    const { content, entity } = specOf(key);
+    for (const [column, target] of Object.entries(content?.links ?? {})) {
+      const slugs = new Set(
+        (repos[target as LinkTarget].list() as Array<{ slug: unknown }>).map((r) => r.slug),
+      );
+      for (const row of repos[key].list() as Array<{ id: number; recordSlug: string | null }>) {
+        const named = (row as unknown as Record<string, unknown>)[column];
+        const list = (Array.isArray(named) ? named : named == null ? [] : [named]) as string[];
+        const missing = list.find((slug) => !slugs.has(slug));
+        if (missing === undefined) continue;
+        throw new ImportError(
+          "<db>",
+          null,
+          `${entity!} ${row.id} of record ${row.recordSlug ?? "(none)"} names ${missing} in ${column}, which record ${record} no longer loads; load that row again or change the naming row first`,
+        );
+      }
+    }
+  }
+}
+
+/**
  * Counts the rows of every registered table.
  *
  * @param repos - the repos to count through
@@ -95,6 +126,9 @@ function countAll(repos: Repos): ImportCounts {
  * @throws {ImportError} `"record <slug> is already loaded; pass --replace to
  *   load it again"` if any table has a row the record owns and `replace`
  *   isn't set
+ * @throws {ImportError} naming a stored row whose slug link names a row
+ *   that no longer exists after the write (a `--replace` that dropped a row
+ *   another record names), after rolling back every write
  * @throws whatever a step throws (a constraint violation, or a conflict
  *   with a row another record loaded), after rolling back every write, the
  *   clears and the id counter resets included
@@ -121,6 +155,7 @@ export function writeRecord(store: Store, plan: RecordPlan, replace: boolean): W
       warn: (message: string) => void warnings.push(message),
     };
     for (const step of plan.steps) step(repos, context);
+    assertLinksResolve(repos, slug);
     const after = countAll(repos);
     const counts = Object.fromEntries(TABLE_KEYS.map((key) => [key, after[key] - before[key]]));
     return { counts, warnings } as never;

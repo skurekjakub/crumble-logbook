@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { repoRoot } from "../../src/config";
 import { importRecord } from "../../src/importers/import-record";
+import { writeRecord } from "../../src/importers/write-record";
 import { createServices } from "../../src/services";
 import { exportSnapshot } from "../../src/services/export";
 import { testStore } from "../helpers";
@@ -159,6 +160,19 @@ describe("importRecord on research record 005", FULL_IMPORT, () => {
     importRecord(store, recordDir, { replace: true });
     expect(exportSnapshot(store)).toEqual(first);
   });
+
+  it("cites a power source and a curve to the sources they name inside, and warns about no decks", () => {
+    const store = testStore();
+    const { warnings } = importRecord(store, recordDir);
+    const services = createServices(store);
+    const stellar = services.powerSources.list().find((s) => s.slug === "stellar_link")!;
+    for (const gain of stellar.postedGains) {
+      for (const id of gain.sources) expect(stellar.sources).toContain(id);
+    }
+    const shapes = services.growthCurves.list().find((c) => c.slug === "stellar-shapes")!;
+    for (const id of shapes.rowSources!.flat()) expect(shapes.sources).toContain(id);
+    expect(warnings.some((w) => w.includes("lists no decks"))).toBe(false);
+  });
 });
 
 describe("importRecord's team-power checks", () => {
@@ -217,5 +231,58 @@ describe("importRecord's team-power checks", () => {
     const store = testStore();
     importRecord(store, recordCopy("t-first"));
     expect(() => importRecord(store, recordCopy("t-second"))).toThrow(/power source id/);
+  });
+
+  it("drops a row the record no longer lists on --replace, with its citations", () => {
+    const store = testStore();
+    importRecord(store, recordCopy("t-drop"));
+    // A package no spending step names, so the record stays whole without it.
+    const dropped = "permanent-growth";
+    const dir = recordCopy("t-drop", {
+      "packages.json": (f) => {
+        f.packages = rowsOf(f, "packages").filter((p) => p.id !== dropped);
+      },
+    });
+    importRecord(store, dir, { replace: true });
+    const slugs = createServices(store)
+      .packages.list()
+      .map((p) => p.slug);
+    expect(slugs).not.toContain(dropped);
+    expect(slugs).toHaveLength(packages.packages.length - 1);
+    const ids = new Set(store.repos.packages.list().map((p) => String(p.id)));
+    const cited = store.repos.citations.all().filter((c) => c.entity === "package");
+    expect(cited.every((c) => ids.has(c.entityId))).toBe(true);
+  });
+
+  it("refuses a --replace that leaves another record's row naming a slug it no longer loads", () => {
+    const store = testStore();
+    store.repos.sources.insert({ id: "dc:1", site: "dc", url: "https://example.test/1" });
+    store.repos.powerSources.insert({
+      slug: "x",
+      nameEn: "X",
+      nameKr: "k",
+      raises: "r",
+      appliesIn: ["stage"],
+      materials: [{ name: "m", free: "f", paid: "p", note: null }],
+      costType: "free",
+      cap: "c",
+      postedGains: [],
+      efficiency: { early: "e", mid: "m", late: "l", at22g: "a" },
+      bracketEffect: "b",
+      confidence: "high",
+      recordSlug: "a",
+    });
+    store.repos.powerDataPoints.insert({
+      slug: "p",
+      kind: "posted",
+      powerSource: "x",
+      date: "2026-09-28",
+      note: "n",
+      recordSlug: "b",
+    });
+    expect(() => writeRecord(store, { slug: "a", steps: [], warnings: [] }, true)).toThrow(
+      /power_data_point \d+ of record b names x in powerSource, which record a no longer loads/,
+    );
+    expect(store.repos.powerSources.count()).toBe(1);
   });
 });
