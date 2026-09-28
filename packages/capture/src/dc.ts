@@ -5,8 +5,8 @@
  *
  * @module
  */
-import type { CaptureContext } from "./context";
-import { exists, logCapture, writeBytes, writeText } from "./context";
+import type { CaptureContext, StagedFile } from "./context";
+import { commitStaged, exists, isCaptured, logCapture, stageText, writeText } from "./context";
 import { getText, parseHtml } from "./html";
 import { HttpClient, imageExt, MOBILE_UA } from "./http";
 import type { HttpOptions } from "./http";
@@ -331,14 +331,19 @@ export function renderPost(post: PostCapture): string {
 /**
  * Saves each post as `<outdir>/<no>.md` (title, author line, capture time,
  * body text, comments) and its images as `<outdir>/img/<no>-<k>.<ext>`,
- * each file with its ledger line. A post whose Markdown already exists is
- * skipped; a post page that won't load is reported and skipped.
+ * each file with its ledger line. A post is fetched whole (page, images,
+ * comments) before any of its files is written (see {@link commitStaged}),
+ * so a run cut short leaves each post either written or not. A post
+ * already captured is skipped, and a rerun keeps the images an earlier run
+ * captured; a post page that won't load is reported and skipped.
  *
  * @param context - the run
  * @param outdir - the record-relative folder, under `evidence/`
  * @param nos - the post numbers
  * @returns the record-relative paths written, in order
- * @throws {LedgerError} if a file it writes already has a ledger line
+ * @throws {LedgerError} naming the file, with nothing of its post written,
+ *   when a file of the post differs from its ledger line, has a line but
+ *   is missing, or is on disk without a line
  */
 export async function dcFetch(
   context: CaptureContext,
@@ -348,11 +353,12 @@ export async function dcFetch(
   const written: string[] = [];
   for (const no of nos) {
     const path = `${outdir}/${no}.md`;
-    if (exists(context, path)) continue;
+    if (isCaptured(context, path)) continue;
     const url = `${BOARD_URL}/${no}`;
     const page = await context.http.get(url);
     if (!page) continue;
     const post = parsePost(await page.text());
+    const staged: StagedFile[] = [];
     const saved: Array<string | null> = [];
     for (const [index, src] of post.images.entries()) {
       const image = await context.http.get(src, { headers: { Referer: url } });
@@ -361,10 +367,8 @@ export async function dcFetch(
         continue;
       }
       const name = `${no}-${index + 1}.${imageExt(image)}`;
-      const imagePath = `${outdir}/img/${name}`;
-      writeBytes(context, imagePath, new Uint8Array(await image.arrayBuffer()));
-      logCapture(context, imagePath, src, context.now());
-      written.push(imagePath);
+      const bytes = new Uint8Array(await image.arrayBuffer());
+      staged.push({ path: `${outdir}/img/${name}`, bytes, url: src, at: context.now() });
       saved.push(name);
     }
     let text = post.text;
@@ -374,21 +378,17 @@ export async function dcFetch(
     });
     const comments = await fetchComments(context, no, post.csrf);
     const at = context.now();
-    writeText(
-      context,
-      path,
-      renderPost({
-        no,
-        url,
-        title: post.title,
-        info: post.info,
-        captured: headerStamp(at, context.offsetAt),
-        text,
-        comments,
-      }),
-    );
-    logCapture(context, path, url, at);
-    written.push(path);
+    const markdown = renderPost({
+      no,
+      url,
+      title: post.title,
+      info: post.info,
+      captured: headerStamp(at, context.offsetAt),
+      text,
+      comments,
+    });
+    staged.push(stageText(path, markdown, url, at));
+    written.push(...commitStaged(context, staged));
     context.log(`saved ${no} (${saved.length} img, ${comments.length} comments)`);
     await context.http.pause();
   }

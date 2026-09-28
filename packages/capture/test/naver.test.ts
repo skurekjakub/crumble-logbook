@@ -1,10 +1,10 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { readLedger, verifyLedger } from "../src/ledger";
 import { listUrl, nvFetch, nvList, parseComments, renderRefused } from "../src/naver";
 import type { SeenRequest } from "./helpers";
-import { fakeFetch, fixture, testContext } from "./helpers";
+import { brokenBody, fakeFetch, fixture, testContext } from "./helpers";
 
 const API = "https://apis.naver.com/cafe-web/cafe-articleapi";
 
@@ -70,6 +70,23 @@ describe("naver articles", () => {
       url: "https://cafe.naver.com/ccrumble/41983",
       tool: "capture:naver",
     });
+    expect(verifyLedger(context.recordDir)).toEqual([]);
+  });
+
+  it("writes nothing of an article whose fetch fails partway, and a rerun captures it whole", async () => {
+    const api = naverApi("41983");
+    let images = 0;
+    const { context } = testContext(
+      (url, init) =>
+        /pstatic\.net/.test(url) && ++images === 2 ? Promise.resolve(brokenBody()) : api(url, init),
+      "capture:naver",
+    );
+    await expect(nvFetch(context, "evidence/nv", ["41983"])).rejects.toThrow(/connection reset/);
+    expect(readLedger(context.recordDir)).toEqual([]);
+    expect(existsSync(join(context.recordDir, "evidence/nv"))).toBe(false);
+
+    const rerun = { ...context, http: testContext(api, "capture:naver").context.http };
+    expect(await nvFetch(rerun, "evidence/nv", ["41983"])).toHaveLength(3);
     expect(verifyLedger(context.recordDir)).toEqual([]);
   });
 

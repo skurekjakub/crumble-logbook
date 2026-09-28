@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
@@ -11,9 +11,9 @@ import {
   parsePost,
   pyQuote,
 } from "../src/dc";
-import { readLedger, verifyLedger } from "../src/ledger";
+import { LEDGER_FILE, readLedger, verifyLedger } from "../src/ledger";
 import type { SeenRequest } from "./helpers";
-import { fakeFetch, fixture, testContext } from "./helpers";
+import { brokenBody, fakeFetch, fixture, testContext } from "./helpers";
 
 /**
  * Builds the fake DC site for one post: its page, its comment answer, and
@@ -157,6 +157,55 @@ describe("dc posts", () => {
     expect(lines[0]!.url).toMatch(/^https:\/\/dcimg3\.dcinside\.co\.kr\/viewimage\.php\?id=/);
     expect(lines[2]!.url).toBe("https://m.dcinside.com/board/projectcc/73497");
     expect(verifyLedger(context.recordDir)).toEqual([]);
+  });
+
+  it("writes nothing of a post whose fetch fails partway, and a rerun captures it whole", async () => {
+    const site = dcSite("73497");
+    let images = 0;
+    const { context } = testContext(
+      (url, init) =>
+        /viewimage/.test(url) && ++images === 2 ? Promise.resolve(brokenBody()) : site(url, init),
+      "capture:dc",
+    );
+    await expect(dcFetch(context, "evidence/dc", ["73497"])).rejects.toThrow(/connection reset/);
+    expect(readLedger(context.recordDir)).toEqual([]);
+    expect(existsSync(join(context.recordDir, "evidence/dc"))).toBe(false);
+
+    const rerun = { ...context, http: testContext(site, "capture:dc").context.http };
+    expect(await dcFetch(rerun, "evidence/dc", ["73497"])).toHaveLength(3);
+    expect(verifyLedger(context.recordDir)).toEqual([]);
+  });
+
+  it("keeps the images an interrupted run captured, and refuses to touch one that changed", async () => {
+    const { context } = testContext(dcSite("73497"), "capture:dc");
+    await dcFetch(context, "evidence/dc", ["73497"]);
+    const ledger = join(context.recordDir, LEDGER_FILE);
+    const [first, second] = readFileSync(ledger, "utf-8").split("\n");
+    writeFileSync(ledger, `${first}\n${second}\n`);
+    rmSync(join(context.recordDir, "evidence/dc/73497.md"));
+
+    expect(await dcFetch(context, "evidence/dc", ["73497"])).toEqual(["evidence/dc/73497.md"]);
+    expect(readLedger(context.recordDir).map((e) => e.line.path)).toEqual([
+      "evidence/dc/img/73497-1.jpg",
+      "evidence/dc/img/73497-2.jpg",
+      "evidence/dc/73497.md",
+    ]);
+    expect(verifyLedger(context.recordDir)).toEqual([]);
+
+    writeFileSync(ledger, `${first}\n${second}\n`);
+    rmSync(join(context.recordDir, "evidence/dc/73497.md"));
+    const image = join(context.recordDir, "evidence/dc/img/73497-1.jpg");
+    writeFileSync(image, "edited");
+    await expect(dcFetch(context, "evidence/dc", ["73497"])).rejects.toThrow(
+      /evidence\/dc\/img\/73497-1\.jpg differs from its ledger line/,
+    );
+    expect(readFileSync(image, "utf-8")).toBe("edited");
+    expect(existsSync(join(context.recordDir, "evidence/dc/73497.md"))).toBe(false);
+
+    writeFileSync(join(context.recordDir, "evidence/dc/73497.md"), "stray");
+    await expect(dcFetch(context, "evidence/dc", ["73497"])).rejects.toThrow(
+      /evidence\/dc\/73497\.md is on disk without a ledger line/,
+    );
   });
 
   it("marks an image that won't download, and skips a post already captured", async () => {

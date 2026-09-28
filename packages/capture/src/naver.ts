@@ -6,8 +6,8 @@
  *
  * @module
  */
-import type { CaptureContext } from "./context";
-import { exists, logCapture, writeBytes, writeText } from "./context";
+import type { CaptureContext, StagedFile } from "./context";
+import { commitStaged, exists, isCaptured, logCapture, stageText, writeText } from "./context";
 import { getText, parseHtml } from "./html";
 import type { HttpOptions } from "./http";
 import { HttpClient, imageExt, MOBILE_UA } from "./http";
@@ -243,15 +243,20 @@ export function renderRefused(aid: string, url: string, body: unknown): string {
 /**
  * Saves each article as `<outdir>/nv-<id>.md` (subject, author, dates, body
  * text, comments) and its images as `<outdir>/img/nv-<id>-<k>.<ext>`, each
- * file with its ledger line. An article whose Markdown exists is skipped;
- * one that won't load is reported and skipped; one the API refuses is
- * written with the refusal instead of a body.
+ * file with its ledger line. An article is fetched whole (article, images,
+ * comments) before any of its files is written (see {@link commitStaged}),
+ * so a run cut short leaves each article either written or not. An
+ * article already captured is skipped, and a rerun keeps the images an
+ * earlier run captured; one that won't load is reported and skipped; one
+ * the API refuses is written with the refusal instead of a body.
  *
  * @param context - the run
  * @param outdir - the record-relative folder, under `evidence/`
  * @param ids - the article ids
  * @returns the record-relative paths written, in order
- * @throws {LedgerError} if a file it writes already has a ledger line
+ * @throws {LedgerError} naming the file, with nothing of its article
+ *   written, when a file of the article differs from its ledger line, has
+ *   a line but is missing, or is on disk without a line
  */
 export async function nvFetch(
   context: CaptureContext,
@@ -261,7 +266,7 @@ export async function nvFetch(
   const written: string[] = [];
   for (const aid of ids) {
     const path = `${outdir}/nv-${aid}.md`;
-    if (exists(context, path)) continue;
+    if (isCaptured(context, path)) continue;
     const url = `https://cafe.naver.com/ccrumble/${aid}`;
     const apiUrl = `${ARTICLE_API}/v2.1/cafes/${CAFE}/articles/${aid}?useCafeId=true`;
     let body: Record<string, unknown>;
@@ -273,13 +278,12 @@ export async function nvFetch(
     }
     const article = dig(body, "result", "article") as Record<string, unknown> | undefined;
     if (!article) {
-      const at = context.now();
-      writeText(context, path, renderRefused(aid, url, body));
-      logCapture(context, path, url, at);
-      written.push(path);
+      const refused = stageText(path, renderRefused(aid, url, body), url, context.now());
+      written.push(...commitStaged(context, [refused]));
       continue;
     }
     const $ = parseHtml(pyStr(pyGet(article, "contentHtml", "")));
+    const staged: StagedFile[] = [];
     let saved = 0;
     for (const img of $("img").toArray()) {
       const node = $(img);
@@ -298,31 +302,25 @@ export async function nvFetch(
       }
       saved += 1;
       const name = `nv-${aid}-${saved}.${imageExt(image)}`;
-      const imagePath = `${outdir}/img/${name}`;
-      writeBytes(context, imagePath, new Uint8Array(await image.arrayBuffer()));
-      logCapture(context, imagePath, src, context.now());
-      written.push(imagePath);
+      const bytes = new Uint8Array(await image.arrayBuffer());
+      staged.push({ path: `${outdir}/img/${name}`, bytes, url: src, at: context.now() });
       node.replaceWith(`\n![[${name}]]\n`);
     }
     $("br").replaceWith("\n");
     const text = getText($.root()[0]!, "\n").replace(/\n{3,}/g, "\n\n");
     const comments = await fetchComments(context, aid);
     const at = context.now();
-    writeText(
-      context,
-      path,
-      renderArticle({
-        subject: pyGet(article, "subject"),
-        url,
-        author: pyGet(pyGet(article, "writer", {}), "nick"),
-        written: localMinute(new Date(Number(pyGet(article, "writeDate", 0))), context.offsetAt),
-        captured: headerStamp(at, context.offsetAt),
-        text,
-        comments,
-      }),
-    );
-    logCapture(context, path, url, at);
-    written.push(path);
+    const markdown = renderArticle({
+      subject: pyGet(article, "subject"),
+      url,
+      author: pyGet(pyGet(article, "writer", {}), "nick"),
+      written: localMinute(new Date(Number(pyGet(article, "writeDate", 0))), context.offsetAt),
+      captured: headerStamp(at, context.offsetAt),
+      text,
+      comments,
+    });
+    staged.push(stageText(path, markdown, url, at));
+    written.push(...commitStaged(context, staged));
     context.log(`saved ${aid} (${saved} img, ${comments.length} comments)`);
     await context.http.pause();
   }

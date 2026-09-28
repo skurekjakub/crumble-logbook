@@ -86,6 +86,21 @@ export function fakeFetch(
   };
 }
 
+/**
+ * Builds a 200 image response whose body fails while it's read, as a
+ * connection reset mid-download does.
+ *
+ * @returns the response
+ */
+export function brokenBody(): Response {
+  const body = new ReadableStream<Uint8Array>({
+    start: (controller) => {
+      controller.error(new Error("connection reset"));
+    },
+  });
+  return new Response(body, { headers: { "content-type": "image/jpeg" } });
+}
+
 /** A clock fixed at 2026-09-27T14:45:36Z, shown at +02:00 as the Python captures were. */
 export const FIXED_NOW = new Date("2026-09-27T14:45:36Z");
 
