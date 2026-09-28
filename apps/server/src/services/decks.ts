@@ -1,4 +1,5 @@
 import type { DeckCookieRow, DeckInput, DeckNoteKind, DeckPatch, DeckRow } from "@crumble/schema";
+import { OBSOLESCENCE, obsolescenceKey } from "@crumble/schema";
 import { ConflictError, NotFoundError } from "../errors";
 import type { FiltersOf } from "../registry";
 import { REGISTRY } from "../registry";
@@ -15,13 +16,15 @@ import { createNameResolver, recordsOf } from "./names";
  * English gloss alongside their stored Korean name (the deck's own record's
  * glossary entries first), `atkOrder` is resolved from a raw name list to
  * {@link NameRef}s (or stays `null`), and the row carries its citing
- * sources.
+ * sources, and the sources that say why it became obsolete
+ * (`obsoleteSources`, empty while it is current).
  */
 export type DeckView = Omit<Cited<DeckRow>, "atkOrder"> & {
   cookies: Array<Omit<DeckCookieRow, "deckId"> & { en: string | null }>;
   pets: NameRef[];
   notes: Array<{ kind: DeckNoteKind; text: string }>;
   atkOrder: NameRef[] | null;
+  obsoleteSources: string[];
 };
 
 /**
@@ -72,12 +75,15 @@ export interface DeckService {
    * Deletes the deck with `id` and its citations. Its cookies, pets and
    * notes cascade; any score referencing it keeps its row with `deckId` set
    * to `null` (both via the schema's foreign keys). A deck a counter edge
-   * names is kept: delete or repoint the edges first.
+   * names is kept: delete or repoint the edges first. Its obsolete reason's
+   * citations go with it.
    *
    * @param id - the deck's slug id
    * @throws {NotFoundError} if `id` doesn't exist
    * @throws {ConflictError} `"deck <id> is named by N counter edges"` if any
    *   counter edge names `id` as its team or beaten-by deck
+   * @throws {ConflictError} `"deck <id> is named as the successor of <ids>"`
+   *   if another deck names it as `supersededBy`
    */
   remove(id: string): void;
 }
@@ -119,11 +125,16 @@ export function createDeckService(store: Store): DeckService {
     const petsByDeck = groupByDeckId(repos.decks.pets(ids));
     const notesByDeck = groupByDeckId(repos.decks.notes(ids));
     const sourcesById = repos.citations.sourcesFor("deck", ids);
+    const reasonsById = repos.citations.sourcesFor(
+      OBSOLESCENCE,
+      ids.map((id) => obsolescenceKey("deck", id)),
+    );
     return rows.map((row) => {
       const records = recordsOf(row);
       return {
         ...row,
         sources: sourcesById.get(row.id) ?? [],
+        obsoleteSources: reasonsById.get(obsolescenceKey("deck", row.id)) ?? [],
         atkOrder: row.atkOrder ? row.atkOrder.map((name) => resolve(name, records)) : null,
         cookies: (cookiesByDeck.get(row.id) ?? []).map(({ deckId: _deckId, ...cookie }) => ({
           ...cookie,
@@ -196,7 +207,14 @@ export function createDeckService(store: Store): DeckService {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);
         const edges = repos.decks.counterEdges(id);
         if (edges > 0) throw new ConflictError(`deck ${id} is named by ${edges} counter edges`);
+        const superseded = repos.decks.supersededDecks(id);
+        if (superseded.length > 0) {
+          throw new ConflictError(
+            `deck ${id} is named as the successor of ${superseded.join(", ")}`,
+          );
+        }
         repos.citations.removeAll("deck", id);
+        repos.citations.removeAll(OBSOLESCENCE, obsolescenceKey("deck", id));
         repos.decks.remove(id);
       }),
   };

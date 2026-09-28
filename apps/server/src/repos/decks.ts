@@ -124,6 +124,13 @@ export interface DecksRepo {
    * @param id - the deck's slug id
    */
   counterEdges(id: string): number;
+  /**
+   * Returns the ids of the decks that name `id` as the deck that superseded them.
+   *
+   * @param id - the deck's slug id
+   * @returns their ids, sorted; `[]` when none does
+   */
+  supersededDecks(id: string): string[];
   /** Returns every cookie slot across every deck, ordered by deck then `position`. */
   allCookies(): DeckCookieRow[];
 }
@@ -237,6 +244,15 @@ export function createDecksRepo(db: Db): DecksRepo {
         .from(counters)
         .where(or(eq(counters.teamDeckId, id), eq(counters.beatenByDeckId, id)))
         .get()!.n,
+    /** @inheritdoc */
+    supersededDecks: (id) =>
+      db
+        .select({ id: decks.id })
+        .from(decks)
+        .where(eq(decks.supersededBy, id))
+        .orderBy(asc(decks.id))
+        .all()
+        .map((row) => row.id),
     /** @inheritdoc */
     allCookies: () =>
       db

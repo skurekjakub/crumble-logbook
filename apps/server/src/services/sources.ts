@@ -1,4 +1,5 @@
 import type { CitedEntity, SourceInput, SourcePatch, SourceRow, SourceSite } from "@crumble/schema";
+import { OBSOLESCENCE, parseObsolescenceKey } from "@crumble/schema";
 import { ConflictError, NotFoundError } from "../errors";
 import type { FiltersOf } from "../registry";
 import { recordColumnOf, REGISTRY, specOf, TABLE_KEYS } from "../registry";
@@ -79,7 +80,8 @@ function citedByCount(repos: Repos, id: string): number {
 
 /**
  * Maps each cited source to the records whose rows cite it, across every
- * registered cited table whose rows a record owns.
+ * registered cited table whose rows a record owns. A source cited for an
+ * obsolete row's reason counts for the row's record.
  *
  * @param repos - the repos to read
  * @returns source id → the citing records' slugs; sources no owned row cites are absent
@@ -92,7 +94,9 @@ function citingRecords(repos: Repos): Map<string, Set<string>> {
   }
   const bySource = new Map<string, Set<string>>();
   for (const { entity, entityId, sourceId } of repos.citations.all()) {
-    const record = owners.get(entity)?.get(entityId);
+    const target =
+      entity === OBSOLESCENCE ? parseObsolescenceKey(entityId) : { entity, id: entityId };
+    const record = target && owners.get(target.entity)?.get(target.id);
     if (!record) continue;
     const records = bySource.get(sourceId) ?? new Set<string>();
     records.add(record);

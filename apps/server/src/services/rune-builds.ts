@@ -1,4 +1,5 @@
 import type { RuneBuildInput, RuneBuildPatch, RuneBuildRow } from "@crumble/schema";
+import { OBSOLESCENCE, obsolescenceKey } from "@crumble/schema";
 import { NotFoundError, UnknownRefsError } from "../errors";
 import type { FiltersOf } from "../registry";
 import { REGISTRY } from "../registry";
@@ -11,10 +12,15 @@ import { createNameResolver, recordsOf } from "./names";
 /**
  * A rune build as returned to callers: its cookie carries a resolved English
  * gloss alongside its stored Korean name (the build's own record's glossary
- * entries first), and it lists the decks it applies to (by id, not resolved
- * further).
+ * entries first), it lists the decks it applies to (by id, not resolved
+ * further), and the sources that say why it became obsolete, empty while
+ * it is current.
  */
-export type RuneBuildView = Cited<RuneBuildRow> & { en: string | null; decks: string[] };
+export type RuneBuildView = Cited<RuneBuildRow> & {
+  en: string | null;
+  decks: string[];
+  obsoleteSources: string[];
+};
 
 /**
  * CRUD over the rune build aggregate: the rune build row, its m:n links to
@@ -59,7 +65,8 @@ export interface RuneBuildService {
    */
   update(id: number, patch: RuneBuildPatch): RuneBuildView;
   /**
-   * Deletes the rune build with `id`, its deck links and its citations.
+   * Deletes the rune build with `id`, its deck links and its citations,
+   * its obsolete reason's among them.
    *
    * @param id - the rune build's numeric id
    * @throws {NotFoundError} if `id` doesn't exist
@@ -99,9 +106,14 @@ export function createRuneBuildService(store: Store): RuneBuildService {
     const resolve = createNameResolver(repos.glossary.list());
     const decksById = repos.runeBuilds.decksFor(ids);
     const sourcesById = repos.citations.sourcesFor("rune_build", ids.map(String));
+    const reasonsById = repos.citations.sourcesFor(
+      OBSOLESCENCE,
+      ids.map((id) => obsolescenceKey("rune_build", id)),
+    );
     return rows.map((row) => ({
       ...row,
       sources: sourcesById.get(String(row.id)) ?? [],
+      obsoleteSources: reasonsById.get(obsolescenceKey("rune_build", row.id)) ?? [],
       en: resolve(row.cookieKr, recordsOf(row)).en,
       decks: decksById.get(row.id) ?? [],
     }));
@@ -159,6 +171,7 @@ export function createRuneBuildService(store: Store): RuneBuildService {
       store.transaction((repos) => {
         if (!repos.runeBuilds.get(id)) throw new NotFoundError("rune_build", id);
         repos.citations.removeAll("rune_build", String(id));
+        repos.citations.removeAll(OBSOLESCENCE, obsolescenceKey("rune_build", id));
         repos.runeBuilds.remove(id);
       }),
   };

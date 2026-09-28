@@ -2,7 +2,11 @@ import { QueryClient } from "@tanstack/react-query";
 import { vi } from "vitest";
 
 /** The lifecycle fields of a current recommendation row, spread into fixtures. */
-export const CURRENT = { obsoleteSince: null, obsoleteReason: null };
+export const CURRENT = {
+  obsoleteSince: null,
+  obsoleteReason: null,
+  obsoleteSources: [] as string[],
+};
 
 /** The lifecycle fields of a current deck, spread into fixtures. */
 export const CURRENT_DECK = { ...CURRENT, supersededBy: null };

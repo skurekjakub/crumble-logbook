@@ -1,4 +1,5 @@
-import type { CitedEntity, GameMode } from "@crumble/schema";
+import type { CitedEntity, GameMode, ObsoleteEntity } from "@crumble/schema";
+import { OBSOLESCENCE, isObsoleteEntity, obsolescenceKey } from "@crumble/schema";
 import { ConflictError, NotFoundError, UnknownRefsError } from "../errors";
 import type {
   AnyFilters,
@@ -135,6 +136,8 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
   filters?: AnyFilters;
   /** A Korean-name column whose English gloss each view carries as `en`. */
   gloss?: string;
+  /** The table's entity when its rows carry the obsolete lifecycle: views then carry `obsoleteSources`. */
+  lifecycle?: ObsoleteEntity | undefined;
 }
 
 /**
@@ -147,9 +150,11 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
  * `update` without `sources` keeps the row's citations, trading the inner
  * sources the row named before for the ones it names now (a source it
  * cited both itself and inside a list it no longer names goes with the
- * list). A view is the row, then `sources` (its citations), then `en`
- * when `spec.gloss` names a column, glossed with the row's own record's
- * entries first.
+ * list). A view is the row, then `sources` (its citations), then
+ * `obsoleteSources` (the sources of its obsolete reason) when
+ * `spec.lifecycle` names its entity, then `en` when `spec.gloss` names a
+ * column, glossed with the row's own record's entries first. Deleting a
+ * row deletes its obsolete reason's citations with it.
  *
  * @param store - the store to persist through
  * @param spec - the table and entity this service manages
@@ -161,7 +166,8 @@ export function createContentService<
   View = Cited<Row>,
   Filter extends object = Record<never, never>,
 >(store: Store, spec: ContentServiceSpec<Row, Values>): ContentService<Row, Values, View, Filter> {
-  const { entity, table, checkRefs, checkRow, checkDetach, derive, filters, gloss } = spec;
+  const { entity, table, checkRefs, checkRow, checkDetach, derive, filters, gloss, lifecycle } =
+    spec;
   const usesGlossary = gloss !== undefined || filtersNeedGlossary(filters);
 
   /**
@@ -212,21 +218,40 @@ export function createContentService<
   const resolver = (repos: Repos) =>
     usesGlossary ? createNameResolver(repos.glossary.list()) : undefined;
   /**
+   * Reads the sources that say why each of `rows` became obsolete.
+   *
+   * @param repos - the repos to read citations from
+   * @param rows - the rows
+   * @returns each row's id → its reason's sources; empty for a table without the lifecycle
+   */
+  const reasonsOf = (repos: Repos, rows: readonly Row[]): Map<number, string[]> => {
+    if (lifecycle === undefined) return new Map();
+    const cited = repos.citations.sourcesFor(
+      OBSOLESCENCE,
+      rows.map((row) => obsolescenceKey(lifecycle, row.id)),
+    );
+    return new Map(
+      rows.map((row) => [row.id, cited.get(obsolescenceKey(lifecycle, row.id)) ?? []]),
+    );
+  };
+  /**
    * Builds a row's view.
    *
    * @param row - the row
    * @param sources - the row's cited source ids
+   * @param reasons - the sources of the row's obsolete reason
    * @param resolve - the glossary resolver; without one, the view has no `en`
-   * @returns the row with `sources`, and `en` when `gloss` names a column
+   * @returns the row with `sources`, `obsoleteSources` when the table has
+   *   the obsolete lifecycle, and `en` when `gloss` names a column
    */
-  const toView = (row: Row, sources: string[], resolve?: NameResolver): View =>
-    (gloss !== undefined && resolve
-      ? {
-          ...row,
-          sources,
-          en: resolve(String((row as Record<string, unknown>)[gloss]), recordsOf(row)).en,
-        }
-      : { ...row, sources }) as View;
+  const toView = (row: Row, sources: string[], reasons: string[], resolve?: NameResolver): View => {
+    const view: Record<string, unknown> = { ...row, sources };
+    if (lifecycle !== undefined) view.obsoleteSources = reasons;
+    if (gloss !== undefined && resolve) {
+      view.en = resolve(String((row as Record<string, unknown>)[gloss]), recordsOf(row)).en;
+    }
+    return view as View;
+  };
   /**
    * Builds a row's view with its stored citations.
    *
@@ -236,7 +261,7 @@ export function createContentService<
    */
   const withSources = (repos: Repos, row: Row): View => {
     const sources = repos.citations.sourcesFor(entity, [String(row.id)]).get(String(row.id)) ?? [];
-    return toView(row, sources, resolver(repos));
+    return toView(row, sources, reasonsOf(repos, [row]).get(row.id) ?? [], resolver(repos));
   };
 
   return {
@@ -249,7 +274,10 @@ export function createContentService<
         rows.map((row) => String(row.id)),
       );
       const resolve = resolver(repos);
-      const views = rows.map((row) => toView(row, sourcesById.get(String(row.id)) ?? [], resolve));
+      const reasons = reasonsOf(repos, rows);
+      const views = rows.map((row) =>
+        toView(row, sourcesById.get(String(row.id)) ?? [], reasons.get(row.id) ?? [], resolve),
+      );
       return applyFilters(views, filters, filter as Record<string, string | undefined>, resolve);
     },
     /** @inheritdoc */
@@ -272,7 +300,7 @@ export function createContentService<
         const repo = table(repos);
         const row = withDerived(repo, repo.insert(values));
         checkRow?.(repos, row);
-        return toView(row, cite(repos, row, sources), resolver(repos)) as never;
+        return toView(row, cite(repos, row, sources), [], resolver(repos)) as never;
       }),
     /** @inheritdoc */
     update: (id, patch, sources) =>
@@ -290,12 +318,15 @@ export function createContentService<
         const row = withDerived(repo, written);
         checkRow?.(repos, row);
         checkDetach?.(repos, before, row);
-        if (sources) return toView(row, cite(repos, row, sources), resolver(repos)) as never;
+        const reasons = reasonsOf(repos, [row]).get(row.id) ?? [];
+        if (sources) {
+          return toView(row, cite(repos, row, sources), reasons, resolver(repos)) as never;
+        }
         if (!spec.innerSources) return withSources(repos, row) as never;
         const cited = repos.citations.sourcesFor(entity, [String(id)]).get(String(id)) ?? [];
         const dropped = new Set(inner(before));
         const own = cited.filter((source) => !dropped.has(source));
-        return toView(row, cite(repos, row, own), resolver(repos)) as never;
+        return toView(row, cite(repos, row, own), reasons, resolver(repos)) as never;
       }),
     /** @inheritdoc */
     remove: (id) =>
@@ -305,6 +336,9 @@ export function createContentService<
         if (!row) throw new NotFoundError(entity, id);
         checkDetach?.(repos, row, undefined);
         repos.citations.removeAll(entity, String(id));
+        if (lifecycle !== undefined) {
+          repos.citations.removeAll(OBSOLESCENCE, obsolescenceKey(lifecycle, id));
+        }
         repos.factClaims.removeFor({ entity, entityId: String(id) });
         repo.remove(id);
       }),
@@ -313,10 +347,12 @@ export function createContentService<
 
 /**
  * What a registered content type's reads and writes return: the row, its
- * `sources`, and `en` when the type glosses a name column.
+ * `sources`, `obsoleteSources` when the type has the obsolete lifecycle,
+ * and `en` when the type glosses a name column.
  */
 export type ContentView<K extends ContentKey> = Cited<RowOf<K>> &
-  (Registry[K]["content"] extends { gloss: string } ? { en: string | null } : unknown);
+  (Registry[K]["content"] extends { gloss: string } ? { en: string | null } : unknown) &
+  (RowOf<K> extends { obsoleteSince: string | null } ? { obsoleteSources: string[] } : unknown);
 
 /** The service of the registered content type `K`. */
 export type RegisteredService<K extends ContentKey> = ContentService<
@@ -401,6 +437,7 @@ export function registeredService<K extends ContentKey>(
     table: (repos) => repos[key],
     filters,
     gloss: content?.gloss,
+    lifecycle: entity !== undefined && isObsoleteEntity(entity) ? entity : undefined,
     /** @inheritdoc */
     derive: (row) => content?.derive?.(row) ?? {},
     /** @inheritdoc */
