@@ -24,7 +24,7 @@ Each record keeps `research/<slug>/evidence/captures.jsonl`, append-only, one JS
 | Field | Meaning |
 |---|---|
 | `path` | Relative to the record folder. Unique within the ledger. |
-| `url` | The page or endpoint the bytes came from; `null` for derived files (digests, extracts, scripts). |
+| `url` | The page or endpoint the bytes came from; `null` for derived files (digests, extracts, scripts). A YouTube watch digest (`pnpm capture youtube watch`) records its watch URL: it carries top comments fetched with it that no other capture holds, as the backfilled `ytv.py` digests' header URLs do. |
 | `captured_at` | ISO 8601 with offset. |
 | `tool` | `agent-browser`, `curl`, `yt-dlp`, `capture:<scraper>` (the TypeScript scrapers), `python:<script>` (the retired Python scrapers), `manual`, or `unknown` (backfill only). |
 | `sha256` | Hex digest of the file's bytes as checked out. `.gitattributes` forces LF for text, so the bytes are the same on every platform. A file written with CRLF is hashed as git stores it: its LF form where git's attributes normalise it, its raw bytes under `-text` (`git hash-object` decides). |

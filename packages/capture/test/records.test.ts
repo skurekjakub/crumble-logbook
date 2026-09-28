@@ -1,7 +1,7 @@
-import { existsSync, readdirSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { describeProblem, hasLedger, verifyLedger } from "../src/ledger";
+import { describeProblem, hasLedger, LEDGER_FILE, verifyLedger } from "../src/ledger";
 import { researchDir } from "../src/paths";
 
 /**
@@ -24,6 +24,19 @@ describe("every record's capture ledger", () => {
       .map((entry) => entry.name);
     expect(withEvidence.length).toBeGreaterThan(0);
     expect(records).toEqual(withEvidence);
+  });
+
+  it("names the ledger in every importable record's manifest, so an import verifies it", () => {
+    const manifests = records.filter((record) =>
+      existsSync(join(researchDir, record, "import.json")),
+    );
+    expect(manifests.length).toBeGreaterThan(0);
+    for (const record of manifests) {
+      const manifest = JSON.parse(
+        readFileSync(join(researchDir, record, "import.json"), "utf-8"),
+      ) as { ledger?: unknown };
+      expect(manifest.ledger, record).toEqual({ file: LEDGER_FILE });
+    }
   });
 
   for (const record of records) {

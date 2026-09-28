@@ -92,7 +92,7 @@ Every cited id is in `curated/sources.json` with its URL. The ones that settled 
 - `research-trail.md`: the web rounds.
 - `import.json`: the importer manifest (record mode `stage`).
 - `curated/`: the dataset; `manifest.json` lists the importable collections, and `stage-chapters.json`, `rift-levels.json`, `stage-zones.json`, `stage-clears.json`, `rift-bosses.json` are the stage-mode tables.
-- `evidence/captures.jsonl`: one line per evidence file (path, url, time, tool, sha256); the newest line for a path is its current hash.
+- `evidence/captures.jsonl`: one line per evidence file (path, url, time, tool, sha256), written when the file is captured and never rewritten; a path has exactly one line, and a second one fails `pnpm verify`. New captures get their line from `pnpm capture` (a scraper, or `pnpm capture log`).
 - `evidence/01-repo-grounding/report.md`: what records 001/002 already held, quoted with file:line.
 - `evidence/02-dc/`: DCInside search listings (`01-list-stage.tsv`, `02-list-targeted.tsv`) and posts with comments (`dc/`).
 - `evidence/03-sites/`: crumblehub, Sugar Pocket, alkapa, the power-correction sheet and press pages; `SOURCES.md` describes each.
@@ -100,4 +100,4 @@ Every cited id is in `curated/sources.json` with its URL. The ones that settled 
 - `evidence/05-youtube/`: video metadata and Korean captions; `frames/` (local only) holds stills from yt:RLuI96lGgGg.
 - `evidence/06-derived/`: tables derived from the captures by the scripts beside them.
 - `evidence/08-extract/`: per-lane extractions in the shape of `BRIEF.md`.
-- `evidence/*.py`: `ledger_backfill.py` (the ledger), `digest.py` (facet digests of the extractions), `build_sources.py` (`curated/sources.json`).
+- `evidence/*.py`: `ledger_backfill.py` (wrote the ledger's first lines; retired, since a rerun would repeat paths), `digest.py` (facet digests of the extractions), `build_sources.py` (`curated/sources.json`).

@@ -2,6 +2,8 @@
 
 Date: 2026-09-27 · Status: approved in conversation, awaiting written-spec review
 
+> **Partly replaced (2026-09-28).** Scraping moved out of the server: the [capture-ledger design](2026-09-28-capture-ledger-design.md) replaces everything here about scraper jobs. Each replaced passage below is marked *Replaced* and kept as the record of the original design.
+
 ## Intent
 
 A local tool for researching the Cookie Run: Crumble **Guild Conquest (길드 토벌전)** meta. It replaces the vanilla-JS "Piñata Raid Logbook" dashboard (`Games/crumble/dashboard` in the Obsidian vault), which doesn't scale as research records and data sources grow.
@@ -11,7 +13,7 @@ A local tool for researching the Cookie Run: Crumble **Guild Conquest (길드 �
 - A real backend.
 - Drizzle + Zod for well-defined schemas.
 - Local only.
-- The backend owns a data API and scraper jobs.
+- The backend owns a data API and scraper jobs. *(Replaced: scrapers run as `pnpm capture` scripts, never from the server or the UI; see the capture-ledger design.)*
 - All TypeScript, with the Python scrapers ported.
 - Its own repo under `C:\Users\skure\repositories`, public on GitHub under `skurekjakub`.
 - Everything migrates, including raw evidence captures and the vault's `.claude` folder (skills, hooks, settings).
@@ -24,7 +26,7 @@ A local tool for researching the Cookie Run: Crumble **Guild Conquest (길드 �
 **Success means:**
 1. Everything the current dashboard shows is served from the database and rendered by the React app.
 2. Record `001-guild-conquest-meta` imports end to end without anything being re-typed.
-3. A DC, Naver or crumb.gg scrape can be triggered from the UI and its captures land in a record.
+3. A DC, Naver or crumb.gg scrape can be triggered from the UI and its captures land in a record. *(Replaced: every file under a record's `evidence/` has a line in its capture ledger giving its URL, capture time, tool and hash, and a test fails when one is missing or a file's bytes changed; see the capture-ledger design.)*
 4. Every content row is traceable to at least one cited source.
 5. Adding a new content type means a table, a schema, a route and a view, with no cross-cutting edits.
 
@@ -35,7 +37,7 @@ A local tool for researching the Cookie Run: Crumble **Guild Conquest (길드 �
 ```
 crumble-logbook/
   packages/schema/     Drizzle tables → drizzle-zod schemas → exported TS types (single source of truth)
-  apps/server/         Hono API · Drizzle over SQLite · job runner · scrapers · importers
+  apps/server/         Hono API · Drizzle over SQLite · job runner · scrapers · importers   (job runner and scrapers: replaced, see the capture-ledger design)
   apps/web/            Vite + React + TanStack Query + TanStack Router
   research/            research records moved from the vault (README, research-trail, evidence/, STATE.md)
   .claude/             migrated from the vault: skills, hooks, settings (secret-reviewed before first push)
@@ -62,8 +64,8 @@ Layered. Each layer only calls the one below it.
 | services | `src/services/` | Domain rules: damage ÷ power, name resolution via glossary, citation requirement, ATK-order helpers |
 | repos | `src/repos/` | One module per aggregate; the only layer that touches Drizzle |
 | db | `src/db/` | Drizzle client, drizzle-kit migrations, in-memory factory for tests |
-| jobs | `src/jobs/` | Runner plus one module per job kind |
-| scrapers | `src/scrapers/` | DC (mobile), Naver (public JSON API), crumb.gg (agent-browser CLI) |
+| jobs | `src/jobs/` | Runner plus one module per job kind. *Replaced: no job runner; see the capture-ledger design.* |
+| scrapers | `src/scrapers/` | DC (mobile), Naver (public JSON API), crumb.gg (agent-browser CLI). *Replaced: the scrapers live in `packages/capture`.* |
 | importers | `src/importers/` | Research-record and dashboard-JSON importers |
 
 **SQLite driver.** Prefer Node's built-in `node:sqlite` through Drizzle, to avoid native builds on Windows ARM64. The first plan task is a spike that proves the Drizzle adapter works on this machine. Fallbacks in order: `better-sqlite3` (if an ARM64 prebuild installs), then `@libsql/client`. Whichever passes gets recorded in the README.
@@ -91,7 +93,7 @@ Drizzle tables in `packages/schema`. `drizzle-zod` derives the select and insert
 | `timeline` | dated events | `date`, `event` |
 | `takeaways` | headline findings | `text`, `detail`, `position` |
 | `citations` | any row ↔ source | `entity` enum (one per content table), `entity_id`, `source_id` |
-| `jobs` | scraper and import runs | `kind`, `params` (JSON), `status` enum (queued, running, done, failed, cancelled), `log` (JSON lines), `error`, `created_at`, `started_at`, `finished_at` |
+| `jobs` | scraper and import runs. *Replaced: a migration drops it and adds `captures`, the loaded capture ledgers; see the capture-ledger design.* | `kind`, `params` (JSON), `status` enum (queued, running, done, failed, cancelled), `log` (JSON lines), `error`, `created_at`, `started_at`, `finished_at` |
 
 Rules:
 - Every content row has ≥1 citation. Services enforce this on write, and the importer enforces it on import.
@@ -102,10 +104,12 @@ Rules:
 
 - `GET` list and detail for every content type. `GET /decks/:id` returns cookies, pets, notes and citations. `GET /rankings?season=&board=`.
 - `POST` / `PATCH` / `DELETE` for content types. The body is the drizzle-zod insert schema plus `sources: string[]` (min 1). This is how research agents add findings.
-- `POST /jobs {kind, params}`, where params is validated by that kind's schema. Also `GET /jobs`, `GET /jobs/:id` (with its log), and `POST /jobs/:id/cancel`.
+- `POST /jobs {kind, params}`, where params is validated by that kind's schema. Also `GET /jobs`, `GET /jobs/:id` (with its log), and `POST /jobs/:id/cancel`. *(Replaced: no `/jobs` routes; the read-only `GET /api/captures` serves the capture ledgers. See the capture-ledger design.)*
 - `GET /export` returns the full dataset as JSON, which is also committed as `data/snapshot.json` for diffable history.
 
 ### Jobs
+
+> **Replaced** by the [capture-ledger design](2026-09-28-capture-ledger-design.md): scrapers are `pnpm capture` scripts in `packages/capture`, and the record importer is the `pnpm import:record` CLI. The section is kept as the original design.
 
 - An in-process runner with concurrency 1, since the scrapers share one browser and the forums rate-limit. Jobs are persisted in `jobs`, so a restart marks orphaned `running` jobs as `failed`.
 - A job kind is a module `{ kind, params: ZodSchema, run(ctx) }`, where `ctx` = `{ log, repos, signal, recordDir }`.
@@ -121,12 +125,12 @@ Rules:
 - A validation failure returns 400 with every Zod issue and its path.
 - An unknown id returns 404.
 - A citation to an unknown source returns 422 naming the ids.
-- A job failure stores the error and log and sets status `failed`. The server stays up.
+- A job failure stores the error and log and sets status `failed`. The server stays up. *(Replaced with the jobs.)*
 - The importer is all-or-nothing per record: one transaction, and the error names the file and row.
 
 ## Web (`apps/web`)
 
-- Vite + React + TypeScript (strict), TanStack Query for server state, and TanStack Router for typed routes. Routes mirror today's tabs (`/`, `/decks`, `/runes`, `/gear`, `/scores`, `/mechanics`, `/timeline`, `/sources`, `/glossary`) plus `/jobs`.
+- Vite + React + TypeScript (strict), TanStack Query for server state, and TanStack Router for typed routes. Routes mirror today's tabs (`/`, `/decks`, `/runes`, `/gear`, `/scores`, `/mechanics`, `/timeline`, `/sources`, `/glossary`) plus `/jobs`. *(Replaced: no `/jobs` view; Research has a Captures page per record. See the capture-ledger design.)*
 - Components ported from the current dashboard as typed React components: source chips, pill, lineup grid with the "Levels and why" table, ATK-order chain, filterable table, gear board, and the log-log score scatter with 배 reference lines.
 - The current `tokens.css`, `base.css` and `components.css` carry over: light and dark themes, and the validated chart palette.
 - The API is called only through the Hono RPC client (`hc<AppType>`), so request and response types come from the server.
