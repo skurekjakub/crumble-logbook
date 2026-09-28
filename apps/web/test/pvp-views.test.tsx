@@ -638,6 +638,57 @@ describe("PvP counters", () => {
     return { columns, rows };
   }
 
+  it("leaves obsolete teams and edges out of the matrix and lists the edges in the Obsolete section", async () => {
+    const retiredEdge = {
+      ...COUNTERS[0]!,
+      id: 7,
+      slug: "ranged-vs-rye",
+      teamDeckId: "ranged",
+      beatenByDeckId: "rye",
+      conditions: null,
+      obsoleteSince: "2026-10-12",
+      obsoleteReason: "The ranged deck is gone.",
+      obsoleteSources: ["dc:75148"],
+    } satisfies Counter;
+    const strandedEdge = {
+      ...COUNTERS[1]!,
+      id: 8,
+      slug: "bari-vs-ranged",
+      teamDeckId: "bari",
+      beatenByDeckId: "ranged",
+    } satisfies Counter;
+    await renderAt("/arena/counters", ARENA, {
+      "/api/decks?mode=arena": { body: [...DECKS, RANGED] },
+      "/api/counters?mode=arena": { body: [...COUNTERS, retiredEdge, strandedEdge] },
+    });
+    await panel().findByRole("table", { name: /beaten by/i });
+    expect(matrix().columns).toEqual([
+      "Rye one-carry deck",
+      "Bari–Oven deck",
+      "Crepe–Espresso deck",
+    ]);
+    expect([...document.querySelectorAll(".counter-list > [id]")].map((el) => el.id)).toEqual([
+      "counter-rye-vs-bari",
+      "counter-bari-vs-crepe",
+      "counter-crepe-vs-rye",
+    ]);
+    const section = document.querySelector("details.obsolete")!;
+    expect(section.querySelector("summary")).toHaveTextContent("latest 2026-10-12");
+    const retired = section.querySelector("#counter-ranged-vs-rye")!;
+    expect(within(retired as HTMLElement).getByRole("note", { hidden: true })).toHaveTextContent(
+      "Obsolete since 2026-10-12: The ranged deck is gone.",
+    );
+    const stranded = section.querySelector("#counter-bari-vs-ranged")!;
+    expect(within(stranded as HTMLElement).getByRole("note", { hidden: true })).toHaveTextContent(
+      "Obsolete since 2026-10-12: Five-ranged deck is obsolete: The patch cut ranged damage.",
+    );
+    const toc = panel().getByRole("navigation", { name: "On this page" });
+    expect(within(toc).getByRole("link", { name: "Obsolete" })).toHaveAttribute(
+      "href",
+      "#counters-obsolete",
+    );
+  });
+
   it("puts the beaten team on the row and its counter on the column, never mirrored", async () => {
     await renderAt("/arena/counters", ARENA);
     await panel().findByRole("table", { name: /beaten by/i });
