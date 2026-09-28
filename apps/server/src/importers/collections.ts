@@ -53,7 +53,7 @@ import {
   writeShared,
 } from "./shared";
 import { STAGE_COLLECTIONS } from "./stage-collections";
-import { insertCited } from "./steps";
+import { citeObsolescence, insertCited, lifecycleColumns } from "./steps";
 import { TEAM_POWER_COLLECTIONS } from "./team-power-collections";
 
 export type {
@@ -200,7 +200,24 @@ export const COLLECTIONS = {
     /** @inheritdoc */
     parse: (file, raw, { mode }) => parseModedRows(file, raw, seedDeck, mode),
     /** @inheritdoc */
-    refs: (decks) => decks.map((deck, index) => ({ row: index, sources: deck.sources })),
+    refs: (decks) =>
+      decks.map((deck, index) => ({
+        row: index,
+        sources: [...deck.sources, ...(deck.obsolete?.sources ?? [])],
+        decks: deck.obsolete?.superseded_by ? [deck.obsolete.superseded_by] : [],
+      })),
+    /** @inheritdoc */
+    check: (file, decks, { deckModes }) => {
+      decks.forEach((deck, index) => {
+        const successor = deck.obsolete?.superseded_by;
+        if (successor === undefined) return;
+        if (successor === deck.id) {
+          throw new ImportError(file, index, `deck ${deck.id} can't supersede itself`);
+        }
+        const mismatch = deckModeMismatch("deck", deck.mode, successor, deckModes.get(successor));
+        if (mismatch) throw new ImportError(file, index, mismatch);
+      });
+    },
     /** @inheritdoc */
     prepare: (decks, { file }) => {
       const mapped = decks.map((seed, position) => ({ ...mapDeck(seed, position), seed }));
@@ -213,11 +230,17 @@ export const COLLECTIONS = {
             (id) => repos.decks.get(id)?.recordSlug,
           );
           for (const { deck, cookies, pets, notes, seed } of mapped) {
-            repos.decks.insert({ ...deck, recordSlug: record });
+            repos.decks.insert({
+              ...deck,
+              ...lifecycleColumns(seed.obsolete),
+              supersededBy: seed.obsolete?.superseded_by ?? null,
+              recordSlug: record,
+            });
             repos.decks.replaceCookies(deck.id, cookies);
             repos.decks.replacePets(deck.id, pets);
             repos.decks.replaceNotes(deck.id, notes);
             repos.citations.replace("deck", deck.id, seed.sources);
+            citeObsolescence(repos, "deck", deck.id, seed.obsolete);
           }
         },
       ];
@@ -229,7 +252,11 @@ export const COLLECTIONS = {
     parse: (file, raw, { mode }) => parseModedRows(file, raw, seedRune, mode),
     /** @inheritdoc */
     refs: (runes) =>
-      runes.map((rune, index) => ({ row: index, sources: rune.sources, decks: rune.decks })),
+      runes.map((rune, index) => ({
+        row: index,
+        sources: [...rune.sources, ...(rune.obsolete?.sources ?? [])],
+        decks: rune.decks,
+      })),
     /** @inheritdoc */
     prepare: (runes) => [
       (repos, { record }) => {
@@ -241,9 +268,11 @@ export const COLLECTIONS = {
             disputed: rune.disputed ?? null,
             mode: rune.mode,
             recordSlug: record,
+            ...lifecycleColumns(rune.obsolete),
           });
           repos.runeBuilds.replaceDecks(row.id, rune.decks);
           repos.citations.replace("rune_build", String(row.id), rune.sources);
+          citeObsolescence(repos, "rune_build", row.id, rune.obsolete);
         }
       },
     ],
@@ -298,11 +327,18 @@ export const COLLECTIONS = {
   counters: collection({
     ...counterRows,
     optional: true,
-    check: (file, edges, { deckModes }) => {
+    check: (file, edges, { deckModes, obsoleteDecks }) => {
       edges.forEach((edge, index) => {
         for (const deck of [edge.team, edge.beaten_by]) {
           const mismatch = deckModeMismatch("counter", edge.mode, deck, deckModes.get(deck));
           if (mismatch) throw new ImportError(file, index, mismatch);
+          if (edge.obsolete === undefined && obsoleteDecks.has(deck)) {
+            throw new ImportError(
+              file,
+              index,
+              `counter ${edge.id} names obsolete deck ${deck}; mark the counter obsolete too`,
+            );
+          }
         }
       });
     },

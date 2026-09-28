@@ -14,7 +14,7 @@ import { deckModeMismatch } from "../services/deck-modes";
 import { formatIssues } from "./files";
 import type { ImportManifest } from "./manifest";
 import type { Moded } from "./seed/schema";
-import type { WriteStep } from "./steps";
+import type { ObsoleteValues, WriteStep } from "./steps";
 import { insertCited } from "./steps";
 
 /** What one row of a collection references, checked before anything is written. */
@@ -40,6 +40,8 @@ export interface ParseContext {
 export interface CheckContext {
   /** Each curated deck's game mode, by deck id. */
   deckModes: ReadonlyMap<string, GameMode>;
+  /** The ids of the curated decks marked obsolete. */
+  obsoleteDecks: ReadonlySet<string>;
 }
 
 /** What a collection's rows are mapped with, besides the rows themselves. */
@@ -193,7 +195,8 @@ export function modedRows<S extends z.ZodType<{ mode?: GameMode | undefined }>>(
 
 /**
  * Declares an array collection of a registered content type whose rows
- * each cite their own `sources` and map onto one row of the type.
+ * each cite their own `sources` and map onto one row of the type. A row's
+ * `obsolete` block, when it has one, is checked and written with it.
  *
  * @param key - the content type's registry key
  * @param parse - validates the file into its rows (see {@link modedRows})
@@ -201,7 +204,10 @@ export function modedRows<S extends z.ZodType<{ mode?: GameMode | undefined }>>(
  * @param decks - the deck ids a row links to, when rows reference decks
  * @returns the collection
  */
-export function citedRows<K extends ContentKey, Row extends { sources: string[] }>(
+export function citedRows<
+  K extends ContentKey,
+  Row extends { sources: string[]; obsolete?: ObsoleteValues | undefined },
+>(
   key: K,
   parse: (file: string, raw: unknown, context: ParseContext) => Row[],
   map: (row: Row, index: number) => ValuesOf<K>,
@@ -211,12 +217,20 @@ export function citedRows<K extends ContentKey, Row extends { sources: string[] 
     parse,
     /** @inheritdoc */
     refs: (rows) =>
-      rows.map((row, index) => ({ row: index, sources: row.sources, decks: decks?.(row) })),
+      rows.map((row, index) => ({
+        row: index,
+        sources: [...row.sources, ...(row.obsolete?.sources ?? [])],
+        decks: decks?.(row),
+      })),
     /** @inheritdoc */
     prepare: (rows) => [
       insertCited(
         key,
-        rows.map((row, index) => ({ values: map(row, index), sources: row.sources })),
+        rows.map((row, index) => ({
+          values: map(row, index),
+          sources: row.sources,
+          obsolete: row.obsolete,
+        })),
       ),
     ],
   });

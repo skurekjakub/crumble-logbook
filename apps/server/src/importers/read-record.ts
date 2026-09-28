@@ -139,6 +139,9 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
   assertKnown("deck", "decks");
   const context: CheckContext = {
     deckModes: new Map((parsed.decks ?? []).map((deck) => [deck.id, deck.mode])),
+    obsoleteDecks: new Set(
+      (parsed.decks ?? []).filter((deck) => deck.obsolete !== undefined).map((deck) => deck.id),
+    ),
   };
   for (const [name, collection] of ORDERED) {
     if (parsed[name] !== undefined) collection.check?.(files[name]!, parsed[name], context);

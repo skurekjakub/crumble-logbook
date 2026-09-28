@@ -1,3 +1,4 @@
+import { OBSOLESCENCE, isObsoleteEntity, obsolescenceKey } from "@crumble/schema";
 import { ImportError } from "../errors";
 import type { ContentKey, LinkTarget, TableKey } from "../registry";
 import { CONTENT_KEYS, TABLE_KEYS, recordColumnOf, specOf } from "../registry";
@@ -52,7 +53,8 @@ function settleFacts(repos: Repos, facts: readonly FactRef[]): void {
  * still reference, such as a source they cite, stays, still owned by
  * `slug`. The record's claims to game facts go too: a fact no other record
  * claims is deleted, and one another record claims keeps only that
- * record's citations.
+ * record's citations. The citations of an obsolete row's reason go with
+ * the row.
  *
  * @param repos - the write's repos
  * @param slug - the record's slug
@@ -61,7 +63,14 @@ function clearRecord(repos: Repos, slug: string): void {
   const claimed = repos.factClaims.claimedBy(slug);
   for (const key of [...OWNED_KEYS].reverse()) {
     const { entity } = specOf(key);
-    if (entity) repos.citations.removeFor(entity, repos.tables.ownedIds(key, slug));
+    const owned = repos.tables.ownedIds(key, slug);
+    if (entity) repos.citations.removeFor(entity, owned);
+    if (entity && isObsoleteEntity(entity)) {
+      repos.citations.removeFor(
+        OBSOLESCENCE,
+        owned.map((id) => obsolescenceKey(entity, id)),
+      );
+    }
     repos.tables.clearOwned(key, slug);
   }
   settleFacts(repos, claimed);

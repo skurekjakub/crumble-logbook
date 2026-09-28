@@ -43,6 +43,22 @@ export type Moded<T extends { mode?: GameMode | undefined }> = Omit<T, "mode"> &
 const percent = z.number().min(0).max(100);
 
 /**
+ * A recommendation's `obsolete` block: since when it is no longer current
+ * (the date of the patch that displaced it, else the round's), why, and the
+ * sources that say so. A row without the block is current.
+ */
+export const seedObsolete = z.strictObject({
+  since: isoDate,
+  reason: z.string().min(1),
+  sources: cited,
+});
+/** Output of {@link seedObsolete}. */
+export type SeedObsolete = z.output<typeof seedObsolete>;
+
+/** A deck's `obsolete` block: {@link seedObsolete}, plus the deck that superseded it, when one did. */
+export const seedDeckObsolete = seedObsolete.extend({ superseded_by: deckSlug.optional() });
+
+/**
  * One cookie slot of a curated deck. Needs a `level` or a `level_rule` (or
  * both); `slot` is its formation position as displayed, when known.
  */
@@ -62,7 +78,7 @@ export const seedDeckCookie = z
 /** Output of {@link seedDeckCookie}. */
 export type SeedDeckCookie = z.output<typeof seedDeckCookie>;
 
-/** One entry of `decks.json`. */
+/** One entry of `decks.json`. `obsolete`, when present, marks it obsolete. */
 export const seedDeck = z.strictObject({
   id: deckSlug,
   mode,
@@ -80,12 +96,16 @@ export const seedDeck = z.strictObject({
   substitutions: z.array(z.string().min(1)).optional(),
   rng: z.string().optional(),
   unorthodox: z.array(z.string().min(1)).optional(),
+  obsolete: seedDeckObsolete.optional(),
   sources: cited,
 });
 /** Output of {@link seedDeck}, with its mode resolved. */
 export type SeedDeck = Moded<z.output<typeof seedDeck>>;
 
-/** One entry of `runes.json`: a cookie's rune lines and the decks they apply to. */
+/**
+ * One entry of `runes.json`: a cookie's rune lines and the decks they apply
+ * to. `obsolete`, when present, marks it obsolete.
+ */
 export const seedRune = z.strictObject({
   mode,
   cookie: z.string().min(1),
@@ -93,18 +113,23 @@ export const seedRune = z.strictObject({
   why: z.string().min(1),
   decks: z.array(z.string()).default([]),
   disputed: z.string().optional(),
+  obsolete: seedObsolete.optional(),
   sources: cited,
 });
 /** Output of {@link seedRune}, with its mode resolved. */
 export type SeedRune = Moded<z.output<typeof seedRune>>;
 
-/** One entry of `gear.json`. `slot` is a dashed name such as `top-left`. */
+/**
+ * One entry of `gear.json`. `slot` is a dashed name such as `top-left`.
+ * `obsolete`, when present, marks it obsolete.
+ */
 export const seedGear = z.strictObject({
   mode,
   slot: z.string().min(1),
   substats: z.string().min(1),
   why: z.string().min(1),
   context: z.enum(GEAR_CONTEXT),
+  obsolete: seedObsolete.optional(),
   sources: cited,
 });
 /** Output of {@link seedGear}, with its mode resolved. */
@@ -175,7 +200,7 @@ export type SeedTakeaway = Moded<z.output<typeof seedTakeaway>>;
 /**
  * One entry of `counters.json`: a directed edge, `team` is beaten by
  * `beaten_by` (both deck ids), under `conditions`, because of `why`. `id`
- * becomes the edge's slug.
+ * becomes the edge's slug. `obsolete`, when present, marks it obsolete.
  */
 export const seedCounter = z.strictObject({
   id: deckSlug,
@@ -185,6 +210,7 @@ export const seedCounter = z.strictObject({
   conditions: z.string().min(1).optional(),
   why: z.string().min(1),
   confidence: z.enum(CONFIDENCE),
+  obsolete: seedObsolete.optional(),
   sources: cited,
 });
 /** Output of {@link seedCounter}, with its mode resolved. */
