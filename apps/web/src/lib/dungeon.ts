@@ -7,6 +7,10 @@
  * @module
  */
 import type { ExclusionClass, ExclusionStatus } from "@crumble/schema";
+import { formatPower } from "./stage";
+
+/** One G, the unit scores and total powers are stored in. */
+const GIGA = 1e9;
 
 /** A label per kind of reason a cookie is kept out of the first wave. */
 export const EXCLUSION_KINDS: Readonly<Record<ExclusionClass, string>> = {
@@ -24,15 +28,16 @@ export const EXCLUSION_STATUSES: Readonly<Record<ExclusionStatus, string>> = {
 };
 
 /**
- * Prints a value in G to four significant figures, as the runs board
- * shows scores and total powers: `379.3G`, `15.58G`, `0.575G`.
+ * Prints a score or a total power held in G with the stage pages'
+ * formatter ({@link formatPower}): two decimals at most, trailing zeros
+ * dropped, and the unit the value reaches (`379.31G`, `10.1G`, `575M`).
  *
  * @param g - a value in G
  * @returns the text, or "–" for null or undefined
  */
 export function formatDungeonG(g: number | null | undefined): string {
   if (g == null) return "–";
-  return `${Number(g.toPrecision(4))}G`;
+  return formatPower(Math.round(g * GIGA));
 }
 
 /**

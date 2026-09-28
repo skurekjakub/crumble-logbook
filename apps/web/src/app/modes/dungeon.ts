@@ -56,7 +56,7 @@ export const DUNGEON = {
     },
     mechanics: {
       title: "Mechanics",
-      lede: "What players measured or inferred about deployment, the beam, the buffs, the formation and the boss. Confidence reflects how well each point is sourced. The mode's rules are on its overview.",
+      lede: "What players measured or inferred about how the dungeon plays. Confidence reflects how well each point is sourced. The mode's rules are on its overview.",
     },
     timeline: {
       title: "How the scores moved",

@@ -549,9 +549,10 @@ describe("/conquest/gear", () => {
     expect(within(general).getByRole("link", { name: "Naver 43653" })).toBeVisible();
   });
 
-  it("shows every slot's empty message and no general card with no gear", async () => {
+  it("says there's no gear, with no board and no general card, when there is none", async () => {
     await renderAt("/conquest/gear", { "/api/gear-recs?mode=guild_conquest": { body: [] } });
-    await waitFor(() => expect(panel().getAllByText("No data yet.")).toHaveLength(4));
+    expect(await panel().findByText("No gear recorded yet.")).toHaveClass("empty");
+    expect(panel().queryByText("No data yet.")).toBeNull();
     expect(panel().queryByText("General gear notes")).toBeNull();
   });
 });

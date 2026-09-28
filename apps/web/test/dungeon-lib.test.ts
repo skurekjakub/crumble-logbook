@@ -1,13 +1,18 @@
 import { describe, expect, it } from "vitest";
 import { formatDungeonG, keptExclusions, ordinal, scorePerPower } from "../src/lib/dungeon";
+import { formatPower } from "../src/lib/stage";
 
 describe("Crumble Dungeon arithmetic", () => {
-  it("prints scores and total powers to four significant figures", () => {
-    expect(formatDungeonG(379.313)).toBe("379.3G");
+  it("prints scores and total powers in G as the stage pages print power", () => {
+    expect(formatDungeonG(379.313)).toBe("379.31G");
     expect(formatDungeonG(15.579)).toBe("15.58G");
-    expect(formatDungeonG(0.575)).toBe("0.575G");
+    expect(formatDungeonG(10.102)).toBe("10.1G");
+    expect(formatDungeonG(0.575)).toBe("575M");
     expect(formatDungeonG(350)).toBe("350G");
     expect(formatDungeonG(null)).toBe("–");
+    for (const g of [379.313, 10.102, 4.847, 0.575]) {
+      expect(formatDungeonG(g)).toBe(formatPower(Math.round(g * 1e9)));
+    }
   });
 
   it("divides score by total power only when the power is known and positive", () => {

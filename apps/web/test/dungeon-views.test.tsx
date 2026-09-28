@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import type {
   Deck,
   DungeonExclusion,
+  GearRec,
   DungeonLineup,
   DungeonRun,
   GlossaryEntry,
@@ -246,7 +247,31 @@ const RNG: RngFactor[] = [
   },
 ];
 
+const GEAR: GearRec[] = [
+  {
+    id: 1,
+    mode: "crumble_dungeon",
+    slot: "general",
+    substats: "Arena-style preset",
+    context: "arena",
+    why: "Damage and cast rate.",
+    recordSlug: SLUG,
+    sources: ["dc:77306"],
+  },
+  {
+    id: 2,
+    mode: "crumble_dungeon",
+    slot: "general",
+    substats: "One move-speed line",
+    context: "raid",
+    why: "Milk arrives sooner.",
+    recordSlug: SLUG,
+    sources: ["dc:77306"],
+  },
+];
+
 const API: Record<string, Canned> = {
+  "/api/gear-recs?mode=crumble_dungeon": { body: GEAR },
   [`/api/records/${SLUG}`]: { body: RECORD },
   "/api/sources": { body: SOURCES },
   [`/api/sources?record=${SLUG}`]: { body: SOURCES },
@@ -298,15 +323,29 @@ describe("the Crumble Dungeon section", () => {
   });
 });
 
+describe("the gear page", () => {
+  it("shows each general note with its preset's context, and no empty equipment board", async () => {
+    await renderDungeon("/dungeon/gear");
+    const card = (await screen.findByRole("heading", { name: "General gear notes" })).closest(
+      ".card",
+    ) as HTMLElement;
+    const move = within(card).getByText("One move-speed line").parentElement!;
+    expect(within(move).getByText("raid")).toHaveClass("chip");
+    expect(within(card).getByText("arena")).toHaveClass("chip");
+    expect(document.querySelector(".gearboard")).toBeNull();
+    expect(screen.queryByText("No data yet.")).toBeNull();
+  });
+});
+
 describe("the runs board", () => {
   it("ranks the shown runs by score, never by score ÷ power, and lists the text-only claims apart", async () => {
     await renderDungeon("/dungeon/runs");
     const ranked = await screen.findByRole("region", { name: "Ranked runs" });
     await waitFor(() => expect(bodyRows(ranked)).toHaveLength(3));
     expect(bodyRows(ranked).map((r) => [r[0], r[1]])).toEqual([
-      ["1", "379.3G"],
-      ["2", "244.7G"],
-      ["3", "219.5G"],
+      ["1", "379.31G"],
+      ["2", "244.69G"],
+      ["3", "219.53G"],
     ]);
     // The second run has the higher score ÷ power; it still ranks below the first.
     expect(bodyRows(ranked)[0]![3]).toBe("24.3×");
