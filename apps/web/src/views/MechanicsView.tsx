@@ -21,12 +21,6 @@ export function MechanicsView({ mode }: { mode: ModeSection }) {
   const hidden = topicsShownElsewhere(mode);
   const mechanics = useQuery({
     ...mechanicsQuery(mode.scope),
-    /**
-     * Drops the mechanics whose topic the mode shows elsewhere.
-     *
-     * @param rows - the mode's mechanics
-     * @returns the rest, in list order
-     */
     select: (rows) => rows.filter((m) => m.topic == null || !hidden.has(m.topic)),
   });
   const sources = useSourceIndex();

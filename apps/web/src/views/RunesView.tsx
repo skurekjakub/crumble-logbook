@@ -53,12 +53,6 @@ export function RunesView({ mode, search, onSearch }: RunesViewProps) {
   const runes = useQuery(runeBuildsQuery(mode.scope));
   const decks = useQuery({
     ...decksQuery(mode.scope),
-    /**
-     * Indexes the decks' English names by id.
-     *
-     * @param list - the decks
-     * @returns deck id → English name
-     */
     select: (list) => new Map(list.map((d) => [d.id, d.nameEn])),
   });
   /**
@@ -77,19 +71,7 @@ export function RunesView({ mode, search, onSearch }: RunesViewProps) {
         {(rows) => {
           const filter: TableFilter<RuneBuild> = {
             value: q,
-            /**
-             * Writes the query to `?q=`.
-             *
-             * @param v - the new query
-             * @returns nothing
-             */
             onChange: (v) => onSearch({ q: v }),
-            /**
-             * Builds a build's searchable text.
-             *
-             * @param r - the rune build
-             * @returns every field of the build, and its English cookie name
-             */
             text: (r) => `${JSON.stringify(r)} ${r.en ?? ""}`,
             placeholder: "Filter by cookie or stat (e.g. 시커, haste)",
           };
@@ -100,20 +82,7 @@ export function RunesView({ mode, search, onSearch }: RunesViewProps) {
               (id) => [id, deckName(id)] as const,
             ),
             value: deck,
-            /**
-             * Writes the deck to `?deck=`.
-             *
-             * @param v - the selected deck id, or "" for all
-             * @returns nothing
-             */
             onChange: (v) => onSearch({ deck: v }),
-            /**
-             * Keeps a build linked to the selected deck.
-             *
-             * @param r - the rune build
-             * @param v - the selected deck id
-             * @returns `true` if the build applies to the deck
-             */
             test: (r, v) => r.decks.includes(v),
           };
           const kept = applyFilters(rows, filter, select);

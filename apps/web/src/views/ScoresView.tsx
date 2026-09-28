@@ -89,87 +89,39 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
   return [
     {
       header: "Damage",
-      /**
-       * Renders the score's damage.
-       *
-       * @param s - the score
-       * @returns the damage, in billions
-       */
       cell: (s) => formatG(s.damageG),
       className: "n",
     },
     {
       header: "Power",
-      /**
-       * Renders the team power.
-       *
-       * @param s - the score
-       * @returns the power, in billions
-       */
       cell: (s) => formatG(s.powerG),
       className: "n",
     },
     {
       header: "배",
-      /**
-       * Renders the score's damage ÷ power.
-       *
-       * @param s - the score
-       * @returns the ratio
-       */
       cell: (s) => formatRatio(ratio(s)),
       className: "n",
     },
     {
       header: "Deck",
-      /**
-       * Renders the score's deck.
-       *
-       * @param s - the score
-       * @returns the deck's name
-       */
       cell: (s) => series.name(s.deckId),
     },
     {
       header: "Evidence",
-      /**
-       * Renders whether a screenshot backs the score.
-       *
-       * @param s - the score
-       * @returns a "screenshot" or "claimed" pill
-       */
       cell: (s) => (s.verified ? <Pill kind="verified">screenshot</Pill> : <Pill kind="claimed" />),
     },
     {
       header: "Notes",
-      /**
-       * Renders the score's note.
-       *
-       * @param s - the score
-       * @returns the note, or empty
-       */
       cell: (s) => s.note ?? "",
       className: "wide",
     },
     {
       header: "Date",
-      /**
-       * Renders the score's date.
-       *
-       * @param s - the score
-       * @returns the date, or empty
-       */
       cell: (s) => s.date ?? "",
       className: "n",
     },
     {
       header: "Source",
-      /**
-       * Renders the score's sources.
-       *
-       * @param s - the score
-       * @returns the source chips
-       */
       cell: (s) => <SourceChips ids={s.sources} sources={sources} />,
     },
   ];
@@ -320,23 +272,11 @@ function rankingColumns(board: RankingBoardFilter, sources: SourceIndex): Column
   return [
     {
       header: "Rank",
-      /**
-       * Renders the row's rank.
-       *
-       * @param r - the row
-       * @returns the rank
-       */
       cell: (r) => r.rank,
       className: "n",
     },
     {
       header: board === "guilds" ? "Guild" : "Player",
-      /**
-       * Renders the row's guild or player name.
-       *
-       * @param r - the row
-       * @returns the name
-       */
       cell: (r) => r.name,
     },
     ...(board === "guilds"
@@ -344,23 +284,11 @@ function rankingColumns(board: RankingBoardFilter, sources: SourceIndex): Column
       : [
           {
             header: "Guild",
-            /**
-             * Renders the player's guild.
-             *
-             * @param r - the row
-             * @returns the guild, or empty
-             */
             cell: (r: Ranking) => r.guild ?? "",
           },
         ]),
     {
       header: board === "power" ? "Power" : "Damage",
-      /**
-       * Renders the row's ranked value.
-       *
-       * @param r - the row
-       * @returns the value, in billions
-       */
       cell: (r) => formatG(r.valueG),
       className: "n",
     },
@@ -368,12 +296,6 @@ function rankingColumns(board: RankingBoardFilter, sources: SourceIndex): Column
       ? [
           {
             header: "Power",
-            /**
-             * Renders the player's team power.
-             *
-             * @param r - the row
-             * @returns the power, in billions
-             */
             cell: (r: Ranking) => formatG(r.powerG),
             className: "n",
           },
@@ -381,12 +303,6 @@ function rankingColumns(board: RankingBoardFilter, sources: SourceIndex): Column
       : []),
     {
       header: "Source",
-      /**
-       * Renders the row's source.
-       *
-       * @param r - the row
-       * @returns the source chip
-       */
       cell: (r) => <SourceChips ids={[r.sourceId]} sources={sources} />,
     },
   ];

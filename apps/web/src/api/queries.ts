@@ -63,11 +63,6 @@ function scopeKey(scope: ModeScope | undefined) {
 export const recordsQuery = () =>
   queryOptions({
     queryKey: ["records"],
-    /**
-     * Fetches every research record.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.records.$get({ query: {} })),
   });
 
@@ -80,11 +75,6 @@ export const recordsQuery = () =>
 export const recordQuery = (slug: string) =>
   queryOptions({
     queryKey: ["records", slug],
-    /**
-     * Fetches the record.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.records[":slug"].$get({ param: { slug } })),
   });
 
@@ -99,11 +89,6 @@ export const recordQuery = (slug: string) =>
 export const sourcesQuery = (filter: { site?: SourceSiteFilter; record?: string } = {}) =>
   queryOptions({
     queryKey: ["sources", { site: filter.site ?? null, record: filter.record ?? null }],
-    /**
-     * Fetches the filtered sources.
-     *
-     * @returns the response's success body
-     */
     queryFn: () =>
       parseResponse(api.sources.$get({ query: { site: filter.site, record: filter.record } })),
   });
@@ -117,11 +102,6 @@ export const sourcesQuery = (filter: { site?: SourceSiteFilter; record?: string 
 export const glossaryQuery = (kind?: GlossaryKindFilter) =>
   queryOptions({
     queryKey: ["glossary", { kind: kind ?? null }],
-    /**
-     * Fetches the glossary entries.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.glossary.$get({ query: { kind } })),
   });
 
@@ -134,11 +114,6 @@ export const glossaryQuery = (kind?: GlossaryKindFilter) =>
 export const decksQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["decks", scopeKey(scope)],
-    /**
-     * Fetches the decks.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.decks.$get({ query: { mode: scope?.mode } })),
   });
 
@@ -151,11 +126,6 @@ export const decksQuery = (scope?: ModeScope) =>
 export const deckQuery = (id: string) =>
   queryOptions({
     queryKey: ["decks", id],
-    /**
-     * Fetches the deck.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.decks[":id"].$get({ param: { id } })),
   });
 
@@ -170,11 +140,6 @@ export const deckQuery = (id: string) =>
 export const scoresQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
     queryKey: ["scores", { ...scopeKey(scope), deck: deck ?? null }],
-    /**
-     * Fetches the scores.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.scores.$get({ query: { deck } })),
   });
 
@@ -188,11 +153,6 @@ export const scoresQuery = (scope?: ModeScope, deck?: string) =>
 export const runeBuildsQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
     queryKey: ["rune-builds", { ...scopeKey(scope), deck: deck ?? null }],
-    /**
-     * Fetches the rune builds.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api["rune-builds"].$get({ query: { mode: scope?.mode, deck } })),
   });
 
@@ -205,11 +165,6 @@ export const runeBuildsQuery = (scope?: ModeScope, deck?: string) =>
 export const gearRecsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["gear-recs", scopeKey(scope)],
-    /**
-     * Fetches the gear recommendations.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api["gear-recs"].$get({ query: { mode: scope?.mode } })),
   });
 
@@ -222,11 +177,6 @@ export const gearRecsQuery = (scope?: ModeScope) =>
 export const fightEventsQuery = (boss: string) =>
   queryOptions({
     queryKey: ["fight-events", { boss }],
-    /**
-     * Fetches the boss's fight events.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api["fight-events"].$get({ query: { boss } })),
   });
 
@@ -240,11 +190,6 @@ export const fightEventsQuery = (boss: string) =>
 export const buffValuesQuery = (cookie?: string) =>
   queryOptions({
     queryKey: ["buff-values", { cookie: cookie ?? null }],
-    /**
-     * Fetches the buff values.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api["buff-values"].$get({ query: { cookie } })),
   });
 
@@ -257,11 +202,6 @@ export const buffValuesQuery = (cookie?: string) =>
 export const mechanicsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["mechanics", scopeKey(scope)],
-    /**
-     * Fetches the mechanics.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.mechanics.$get({ query: { mode: scope?.mode } })),
   });
 
@@ -277,11 +217,6 @@ export const RULES_TOPIC = "rules";
 export const rulesQuery = (scope: ModeScope) =>
   queryOptions({
     queryKey: ["mechanics", { ...scopeKey(scope), topic: RULES_TOPIC }],
-    /**
-     * Fetches the mode's rules.
-     *
-     * @returns the response's success body
-     */
     queryFn: () =>
       parseResponse(api.mechanics.$get({ query: { mode: scope.mode, topic: RULES_TOPIC } })),
   });
@@ -296,11 +231,6 @@ export const rulesQuery = (scope: ModeScope) =>
 export const countersQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["counters", scopeKey(scope)],
-    /**
-     * Fetches the counter edges.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.counters.$get({ query: { mode: scope?.mode } })),
   });
 
@@ -313,11 +243,6 @@ export const countersQuery = (scope?: ModeScope) =>
 export const usageQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["usage", scopeKey(scope)],
-    /**
-     * Fetches the usage figures.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.usage.$get({ query: { mode: scope?.mode } })),
   });
 
@@ -330,11 +255,6 @@ export const usageQuery = (scope?: ModeScope) =>
 export const rngFactorsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["rng-factors", scopeKey(scope)],
-    /**
-     * Fetches the RNG factors.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api["rng-factors"].$get({ query: { mode: scope?.mode } })),
   });
 
@@ -347,11 +267,6 @@ export const rngFactorsQuery = (scope?: ModeScope) =>
 export const timelineQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["timeline", scopeKey(scope)],
-    /**
-     * Fetches the timeline events.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.timeline.$get({ query: { mode: scope?.mode } })),
   });
 
@@ -364,11 +279,6 @@ export const timelineQuery = (scope?: ModeScope) =>
 export const takeawaysQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["takeaways", scopeKey(scope)],
-    /**
-     * Fetches the takeaways.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.takeaways.$get({ query: { mode: scope?.mode } })),
   });
 
@@ -383,11 +293,6 @@ export const takeawaysQuery = (scope?: ModeScope) =>
 export const recommendationsQuery = (record?: string | null) =>
   queryOptions({
     queryKey: ["recommendations", { record: record ?? null }],
-    /**
-     * Fetches the recommendations.
-     *
-     * @returns the response's success body
-     */
     queryFn: () =>
       parseResponse(api.recommendations.$get({ query: { record: record ?? undefined } })),
   });
@@ -401,11 +306,6 @@ export const recommendationsQuery = (record?: string | null) =>
 export const rankingsQuery = (filter: { season?: number; board?: RankingBoardFilter } = {}) =>
   queryOptions({
     queryKey: ["rankings", { season: filter.season ?? null, board: filter.board ?? null }],
-    /**
-     * Fetches the leaderboard rows.
-     *
-     * @returns the response's success body
-     */
     queryFn: () =>
       parseResponse(
         api.rankings.$get({
@@ -425,10 +325,5 @@ export const rankingsQuery = (filter: { season?: number; board?: RankingBoardFil
 export const rankingSeasonsQuery = () =>
   queryOptions({
     queryKey: ["rankings", "seasons"],
-    /**
-     * Fetches the leaderboard seasons.
-     *
-     * @returns the response's success body
-     */
     queryFn: () => parseResponse(api.rankings.seasons.$get()),
   });

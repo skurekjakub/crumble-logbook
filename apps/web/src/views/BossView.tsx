@@ -421,22 +421,10 @@ function BuffTable({
   const columns: Column<BuffStarRow>[] = [
     {
       header: "Cookie",
-      /**
-       * Renders the row's cookie name.
-       *
-       * @param r - the row
-       * @returns the name
-       */
       cell: (r) => <CookieName kr={r.cookieKr} en={r.en} />,
     },
     {
       header: "Effect",
-      /**
-       * Renders the row's effect, marked when self-only or a chance.
-       *
-       * @param r - the row
-       * @returns the effect label and its marks
-       */
       cell: (r) => (
         <>
           {effectLabel(r.effectType, r.base)}
@@ -447,12 +435,6 @@ function BuffTable({
     },
     ...stars.map((s, i): Column<BuffStarRow> => ({
       header: starLabel(s, stars),
-      /**
-       * Renders the row's value at this star column, greyed when carried over.
-       *
-       * @param r - the row
-       * @returns the value
-       */
       cell: (r) => {
         const c = cells.get(r.key)![i]!;
         return c.carried ? (
@@ -467,23 +449,11 @@ function BuffTable({
     })),
     {
       header: "Stacks",
-      /**
-       * Renders the row's stack limit.
-       *
-       * @param r - the row
-       * @returns `×N` when the effect stacks, else empty
-       */
       cell: (r) => (r.maxStack != null && r.maxStack > 1 ? `×${r.maxStack}` : ""),
       className: "n",
     },
     {
       header: "Sources",
-      /**
-       * Renders the row's sources.
-       *
-       * @param r - the row
-       * @returns the source chips
-       */
       cell: (r) => <SourceChips ids={r.sources} sources={sources} />,
     },
   ];

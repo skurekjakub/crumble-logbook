@@ -26,18 +26,7 @@ export function createAppRouter({ queryClient, history }: AppRouterOptions) {
     context: { queryClient },
     ...(history ? { history } : {}),
     scrollRestoration: true,
-    /**
-     * Renders a view's render error in the panel.
-     *
-     * @param props - the thrown error
-     * @returns the error box
-     */
     defaultErrorComponent: ({ error }) => <ErrorBox resource="this view" error={error} />,
-    /**
-     * Renders an unknown path's empty state in the panel.
-     *
-     * @returns the empty state
-     */
     defaultNotFoundComponent: () => (
       <EmptyState>Nothing lives at this address. Pick a section above.</EmptyState>
     ),

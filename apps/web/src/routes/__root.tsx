@@ -48,12 +48,6 @@ function headerContext(section: Section | undefined): ReactNode {
  */
 function RootLayout() {
   const pathname = useLocation({
-    /**
-     * Reads the path out of the location.
-     *
-     * @param l - the current location
-     * @returns its pathname
-     */
     select: (l) => l.pathname,
   });
   const section = sectionForPath(pathname);

@@ -23,31 +23,9 @@ export const nameList = z.array(z.string().min(1));
  * 0-3.
  */
 export const sourceInsert = createInsertSchema(t.sources, {
-  /**
-   * Types `id` as a source id.
-   *
-   * @returns the {@link sourceId} schema
-   */
   id: () => sourceId,
-  /**
-   * Requires a non-empty `url`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   url: (s) => s.min(1),
-  /**
-   * Types `date` as an optional ISO date.
-   *
-   * @returns the optional {@link isoDate} schema
-   */
   date: () => isoDate.nullish(),
-  /**
-   * Limits `relevance` to an optional integer 0-3.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   relevance: (s) => s.int().min(0).max(3).nullish(),
 });
 /** Select schema for `sources`, mirroring the stored row shape. */
@@ -74,39 +52,13 @@ export type RecordModeRow = typeof t.recordModes.$inferSelect;
  * `extra` are optional on insert (both have a runtime default).
  */
 export const glossaryInsert = createInsertSchema(t.glossary, {
-  /**
-   * Requires a non-empty `kr`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   kr: (s) => s.min(1),
-  /**
-   * Types `shorthand` as an optional name list.
-   *
-   * @returns the optional {@link nameList} schema
-   */
   shorthand: () => nameList.optional(),
-  /**
-   * Types `extra` as an optional string-keyed record.
-   *
-   * @returns the optional record schema
-   */
   extra: () => z.record(z.string(), z.unknown()).optional(),
 });
 /** Select schema for `glossary`, with `shorthand`/`extra` typed precisely. */
 export const glossarySelect = createSelectSchema(t.glossary, {
-  /**
-   * Types `shorthand` as a name list.
-   *
-   * @returns the {@link nameList} schema
-   */
   shorthand: () => nameList,
-  /**
-   * Types `extra` as a string-keyed record.
-   *
-   * @returns the record schema
-   */
   extra: () => z.record(z.string(), z.unknown()),
 });
 /** A row selected from `glossary`. */
@@ -117,33 +69,12 @@ export type GlossaryRow = typeof t.glossary.$inferSelect;
  * non-empty; `atkOrder`, when present, may be `null` or a name list.
  */
 export const deckInsert = createInsertSchema(t.decks, {
-  /**
-   * Types `id` as a deck slug.
-   *
-   * @returns the {@link deckSlug} schema
-   */
   id: () => deckSlug,
-  /**
-   * Requires a non-empty `nameEn`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   nameEn: (s) => s.min(1),
-  /**
-   * Types `atkOrder` as an optional, nullable name list.
-   *
-   * @returns the nullish {@link nameList} schema
-   */
   atkOrder: () => nameList.nullish(),
 });
 /** Select schema for `decks`, with `atkOrder` typed precisely. */
 export const deckSelect = createSelectSchema(t.decks, {
-  /**
-   * Types `atkOrder` as a nullable name list.
-   *
-   * @returns the nullable {@link nameList} schema
-   */
   atkOrder: () => nameList.nullable(),
 });
 /** A row selected from `decks`. */
@@ -151,19 +82,7 @@ export type DeckRow = typeof t.decks.$inferSelect;
 
 /** Insert schema for `deck_cookies`. `cookieKr` and `why` must be non-empty. */
 export const deckCookieInsert = createInsertSchema(t.deckCookies, {
-  /**
-   * Requires a non-empty `cookieKr`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   cookieKr: (s) => s.min(1),
-  /**
-   * Requires a non-empty `why`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   why: (s) => s.min(1),
 });
 /** Select schema for `deck_cookies`, mirroring the stored row shape. */
@@ -212,32 +131,9 @@ export type GearRecRow = typeof t.gearRecs.$inferSelect;
  * `season`, when present, must be a positive integer.
  */
 export const scoreInsert = createInsertSchema(t.scores, {
-  /**
-   * Requires a positive `damageG`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   damageG: (s) => s.positive(),
-  /**
-   * Requires `powerG`, when present, to be positive.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   powerG: (s) => s.positive().nullish(),
-  /**
-   * Types `date` as an optional ISO date.
-   *
-   * @returns the optional {@link isoDate} schema
-   */
   date: () => isoDate.nullish(),
-  /**
-   * Requires `season`, when present, to be a positive integer.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   season: (s) => s.int().positive().nullish(),
 });
 /** Select schema for `scores`, mirroring the stored row shape. */
@@ -247,12 +143,6 @@ export type ScoreRow = typeof t.scores.$inferSelect;
 
 /** Insert schema for `rankings`. `capturedAt` must be non-empty. */
 export const rankingInsert = createInsertSchema(t.rankings, {
-  /**
-   * Requires a non-empty `capturedAt`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   capturedAt: (s) => s.min(1),
 });
 /** Select schema for `rankings`, mirroring the stored row shape. */
@@ -276,11 +166,6 @@ export type RngFactorRow = typeof t.rngFactors.$inferSelect;
 
 /** Insert schema for `timeline`. `date` must be `YYYY-MM-DD`. */
 export const timelineEventInsert = createInsertSchema(t.timeline, {
-  /**
-   * Types `date` as an ISO date.
-   *
-   * @returns the {@link isoDate} schema
-   */
   date: () => isoDate,
 });
 /** Select schema for `timeline`, mirroring the stored row shape. */
@@ -297,20 +182,10 @@ export type TakeawayRow = typeof t.takeaways.$inferSelect;
 
 /** Insert schema for `recommendations`. `changes` must have at least one entry. */
 export const recommendationInsert = createInsertSchema(t.recommendations, {
-  /**
-   * Types `changes` as a name list with at least one entry.
-   *
-   * @returns the non-empty {@link nameList} schema
-   */
   changes: () => nameList.min(1),
 });
 /** Select schema for `recommendations`, with `changes` typed precisely. */
 export const recommendationSelect = createSelectSchema(t.recommendations, {
-  /**
-   * Types `changes` as a name list with at least one entry.
-   *
-   * @returns the non-empty {@link nameList} schema
-   */
   changes: () => nameList.min(1),
 });
 /** A row selected from `recommendations`. */
@@ -321,33 +196,9 @@ export type RecommendationRow = typeof t.recommendations.$inferSelect;
  * non-empty; `tElapsed`, when present, must be non-negative.
  */
 export const fightEventInsert = createInsertSchema(t.fightEvents, {
-  /**
-   * Requires a non-empty `boss`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   boss: (s) => s.min(1),
-  /**
-   * Requires `tElapsed`, when present, to be non-negative.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   tElapsed: (s) => s.nonnegative().nullish(),
-  /**
-   * Requires a non-empty `event`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   event: (s) => s.min(1),
-  /**
-   * Requires a non-empty `detail`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   detail: (s) => s.min(1),
 });
 /** Select schema for `fight_events`, mirroring the stored row shape. */
@@ -361,40 +212,10 @@ export type FightEventRow = typeof t.fightEvents.$inferSelect;
  * when present, is a positive integer.
  */
 export const buffValueInsert = createInsertSchema(t.buffValues, {
-  /**
-   * Requires a non-empty `cookieKr`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   cookieKr: (s) => s.min(1),
-  /**
-   * Requires a non-empty `effectType`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   effectType: (s) => s.min(1),
-  /**
-   * Limits `skillGrade` to an integer 0-10.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   skillGrade: (s) => s.int().min(0).max(10),
-  /**
-   * Limits `fromStar` to an integer 0-10.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   fromStar: (s) => s.int().min(0).max(10),
-  /**
-   * Requires `maxStack`, when present, to be a positive integer.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   maxStack: (s) => s.int().positive().nullish(),
 });
 /** Select schema for `buff_values`, mirroring the stored row shape. */
@@ -407,30 +228,9 @@ export type BuffValueRow = typeof t.buffValues.$inferSelect;
  * slugs; `why` must be non-empty.
  */
 export const counterInsert = createInsertSchema(t.counters, {
-  /**
-   * Types `slug` as a lowercase slug.
-   *
-   * @returns the {@link deckSlug} schema
-   */
   slug: () => deckSlug,
-  /**
-   * Types `teamDeckId` as a deck slug.
-   *
-   * @returns the {@link deckSlug} schema
-   */
   teamDeckId: () => deckSlug,
-  /**
-   * Types `beatenByDeckId` as a deck slug.
-   *
-   * @returns the {@link deckSlug} schema
-   */
   beatenByDeckId: () => deckSlug,
-  /**
-   * Requires a non-empty `why`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   why: (s) => s.min(1),
 });
 /** Select schema for `counters`, mirroring the stored row shape. */
@@ -448,52 +248,15 @@ const percent = z.number().min(0).max(100);
  * or a name list.
  */
 export const usageStatInsert = createInsertSchema(t.usageStats, {
-  /**
-   * Requires a non-empty `subject`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   subject: (s) => s.min(1),
-  /**
-   * Types `members` as an optional, nullable name list.
-   *
-   * @returns the nullish {@link nameList} schema
-   */
   members: () => nameList.nullish(),
-  /**
-   * Types `usagePct` as a percentage.
-   *
-   * @returns the percentage schema
-   */
   usagePct: () => percent,
-  /**
-   * Types `confirmedPct` as an optional percentage.
-   *
-   * @returns the nullish percentage schema
-   */
   confirmedPct: () => percent.nullish(),
-  /**
-   * Requires a non-empty `sample`.
-   *
-   * @param s - the column's generated schema
-   * @returns `s`, refined
-   */
   sample: (s) => s.min(1),
-  /**
-   * Types `capturedAt` as an ISO date.
-   *
-   * @returns the {@link isoDate} schema
-   */
   capturedAt: () => isoDate,
 });
 /** Select schema for `usage_stats`, with `members` typed precisely. */
 export const usageStatSelect = createSelectSchema(t.usageStats, {
-  /**
-   * Types `members` as a nullable name list.
-   *
-   * @returns the nullable {@link nameList} schema
-   */
   members: () => nameList.nullable(),
 });
 /** A row selected from `usage_stats`. */
@@ -511,32 +274,12 @@ export type CitationRow = typeof t.citations.$inferSelect;
  * `log` is optional on insert (it has a runtime default).
  */
 export const jobInsert = createInsertSchema(t.jobs, {
-  /**
-   * Accepts any value for `params`.
-   *
-   * @returns an `unknown` schema
-   */
   params: () => z.unknown(),
-  /**
-   * Types `log` as an optional list of strings.
-   *
-   * @returns the optional string-array schema
-   */
   log: () => z.array(z.string()).optional(),
 });
 /** Select schema for `jobs`, with `params`/`log` typed precisely. */
 export const jobSelect = createSelectSchema(t.jobs, {
-  /**
-   * Accepts any value for `params`.
-   *
-   * @returns an `unknown` schema
-   */
   params: () => z.unknown(),
-  /**
-   * Types `log` as a list of strings.
-   *
-   * @returns the string-array schema
-   */
   log: () => z.array(z.string()),
 });
 /** A row selected from `jobs`. */

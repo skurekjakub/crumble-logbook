@@ -91,12 +91,6 @@ export function ResearchView() {
   const records = useQuery(recordsQuery());
   const counts = useQuery({
     ...sourcesQuery(),
-    /**
-     * Counts each record's sources.
-     *
-     * @param rows - every source, with the records it belongs to
-     * @returns record slug → source count
-     */
     select: (rows) => {
       const n = new Map<string, number>();
       for (const s of rows) for (const r of s.records) n.set(r, (n.get(r) ?? 0) + 1);

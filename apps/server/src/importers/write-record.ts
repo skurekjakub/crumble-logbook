@@ -88,12 +88,6 @@ export function writeRecord(store: Store, plan: RecordPlan, replace: boolean): W
     const warnings: string[] = [];
     const context = {
       record: slug,
-      /**
-       * Collects a step's warning.
-       *
-       * @param message - the warning
-       * @returns nothing
-       */
       warn: (message: string) => void warnings.push(message),
     };
     for (const step of plan.steps) step(repos, context);

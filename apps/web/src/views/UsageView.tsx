@@ -133,23 +133,11 @@ export function UsageView({ mode }: { mode: ModeSection }) {
   const usage = useQuery(usageQuery(mode.scope));
   const caveat = useQuery({
     ...recordQuery(mode.recordSlug ?? ""),
-    /**
-     * Picks the record's caveat for this mode.
-     *
-     * @param r - the research record
-     * @returns the caveat, or null
-     */
     select: (r) => r.modes.find((m) => m.mode === mode.scope.mode)?.caveat ?? null,
     enabled: mode.recordSlug != null,
   }).data;
   const glossary = useQuery({
     ...glossaryQuery(),
-    /**
-     * Indexes the glossary's English names by Korean term.
-     *
-     * @param entries - the glossary entries
-     * @returns Korean term → English name
-     */
     select: (entries) => new Map(entries.map((e) => [e.kr, e.en] as const)),
   }).data;
   /**

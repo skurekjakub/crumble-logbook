@@ -45,24 +45,12 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
   const columns: Column<DeckCookie>[] = [
     {
       header: "Cookie",
-      /**
-       * Renders the cookie's name.
-       *
-       * @param c - the cookie
-       * @returns the name
-       */
       cell: (c) => <CookieName kr={c.cookieKr} en={c.en} />,
     },
     ...(cookies.some((c) => c.slot)
       ? [
           {
             header: "Slot",
-            /**
-             * Renders the cookie's formation slot.
-             *
-             * @param c - the cookie
-             * @returns the slot, or "–"
-             */
             cell: (c: DeckCookie) => c.slot ?? "–",
             className: "n",
           },
@@ -73,24 +61,12 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
       ? [
           {
             header: "Stars",
-            /**
-             * Renders the cookie's stars as stored.
-             *
-             * @param c - the cookie
-             * @returns the stars, or "–"
-             */
             cell: (c: DeckCookie) => c.stars || "–",
           },
         ]
       : []),
     {
       header: "Why",
-      /**
-       * Renders the reason for the cookie's level.
-       *
-       * @param c - the cookie
-       * @returns the reason
-       */
       cell: (c) => c.why,
       className: "wide",
     },

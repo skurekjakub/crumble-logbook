@@ -345,14 +345,6 @@ export const COLLECTIONS = {
     parse: (file, raw) => parseFile(file, raw, seedSources),
     /** @inheritdoc */
     refs: () => [],
-    /**
-     * Maps each source, with its extraction summary and its capture path, to
-     * a step that writes it as a row records can share.
-     *
-     * @param sources - the validated sources file, by source id
-     * @param context - the record directory, manifest and summaries
-     * @returns the write step
-     */
     prepare: (sources, { recordDir, manifest, summaries }) => {
       const rows: SourceInsert[] = Object.entries(sources).map(([id, entry]) => {
         const row = mapSource(id, entry);
@@ -389,13 +381,6 @@ export const COLLECTIONS = {
     parse: (file, raw) => parseRows(file, raw, seedGlossaryEntry),
     /** @inheritdoc */
     refs: () => [],
-    /**
-     * Rejects an entry whose `kr` an earlier entry already has.
-     *
-     * @param file - the file's record-relative path, as errors name it
-     * @param entries - the validated entries
-     * @throws {ImportError} naming `file` and the index of the first repeated `kr`
-     */
     check: (file, entries) => {
       const seen = new Set<string>();
       entries.forEach((entry, index) => {
@@ -403,20 +388,7 @@ export const COLLECTIONS = {
         seen.add(entry.kr);
       });
     },
-    /**
-     * Lists the lookup keys more than one of the file's entries claims.
-     *
-     * @param entries - the validated entries
-     * @returns one warning per contested key (see {@link glossaryWarnings})
-     */
     warnings: (entries) => glossaryWarnings(entries.map(mapGlossary)),
-    /**
-     * Maps the entries to a step that writes each as a row records can
-     * share, then warns about keys another record's entries also claim.
-     *
-     * @param entries - the validated entries
-     * @returns the write step
-     */
     prepare: (entries) => {
       const rows = entries.map(mapGlossary);
       return [
@@ -426,9 +398,10 @@ export const COLLECTIONS = {
              * Upserts the entry.
              *
              * @param owned - the entry, owned by the record
-             * @returns nothing
              */
-            const write = (owned: GlossaryInsert) => void repos.glossary.upsert(owned);
+            const write = (owned: GlossaryInsert) => {
+              repos.glossary.upsert(owned);
+            };
             const label = `glossary entry "${row.kr}"`;
             writeShared(repos.glossary.get(row.kr), row, context, write, label, GLOSSARY_FIELDS);
           }
@@ -455,13 +428,6 @@ export const COLLECTIONS = {
         })),
       ),
     ],
-    /**
-     * Rejects a rule whose own `mode` differs from the mode block it sits in.
-     *
-     * @param file - the file's record-relative path, as errors name it
-     * @param meta - the validated meta file
-     * @throws {ImportError} naming `file` and the first mismatched rule
-     */
     check: (file, meta) => {
       for (const [mode, block] of Object.entries(meta.modes ?? {})) {
         block.rules.forEach((rule, index) => {
@@ -475,14 +441,6 @@ export const COLLECTIONS = {
         });
       }
     },
-    /**
-     * Maps the meta file to steps that write the research record and its
-     * modes, its recommendation and its mechanics rules.
-     *
-     * @param meta - the validated meta file
-     * @param context - the record's manifest, which names the record
-     * @returns the write steps
-     */
     prepare: (meta, { manifest }) => {
       const { record, modes, recommendation, rules } = mapMeta(meta, manifest.record);
       const { sources, ...values } = recommendation;
@@ -501,15 +459,6 @@ export const COLLECTIONS = {
     parse: (file, raw) => parseRows(file, raw, seedDeck),
     /** @inheritdoc */
     refs: (decks) => decks.map((deck, index) => ({ row: index, sources: deck.sources })),
-    /**
-     * Maps the decks to a step that writes each deck, its slots, notes and
-     * citations, owned by the record.
-     *
-     * @param decks - the validated decks, positioned by file order
-     * @param context - the collection file's path, as errors name it
-     * @returns the write step, which throws {@link ImportError} if another
-     *   record already holds a deck id
-     */
     prepare: (decks, { file }) => {
       const mapped = decks.map((seed, position) => ({ ...mapDeck(seed, position), seed }));
       return [
@@ -537,13 +486,6 @@ export const COLLECTIONS = {
     /** @inheritdoc */
     refs: (runes) =>
       runes.map((rune, index) => ({ row: index, sources: rune.sources, decks: rune.decks })),
-    /**
-     * Maps the rune builds to a step that writes each build, its decks and
-     * its citations, owned by the record.
-     *
-     * @param runes - the validated rune builds
-     * @returns the write step
-     */
     prepare: (runes) => [
       (repos, { record }) => {
         for (const rune of runes) {
@@ -595,14 +537,6 @@ export const COLLECTIONS = {
   counters: collection({
     ...counterRows,
     optional: true,
-    /**
-     * Rejects an edge naming a deck of another mode than its own.
-     *
-     * @param file - the file's record-relative path, as errors name it
-     * @param edges - the validated counter edges
-     * @param context - each curated deck's mode
-     * @throws {ImportError} naming `file`, the edge's index and the mismatch
-     */
     check: (file, edges, { deckModes }) => {
       edges.forEach((edge, index) => {
         for (const deck of [edge.team, edge.beaten_by]) {
@@ -611,15 +545,6 @@ export const COLLECTIONS = {
         }
       });
     },
-    /**
-     * Maps the edges to a step that checks no other record holds an edge's
-     * slug, then the plain cited-row inserts.
-     *
-     * @param edges - the validated counter edges
-     * @param context - the collection file's path and the record's context
-     * @returns the write steps; the first throws {@link ImportError} if
-     *   another record already holds a slug
-     */
     prepare: (edges, context) => [
       (repos) => {
         const holders = new Map(repos.counters.list().map((row) => [row.slug, row.recordSlug]));

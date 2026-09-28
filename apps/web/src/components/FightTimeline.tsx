@@ -54,12 +54,10 @@ function useWidth(ref: RefObject<HTMLElement | null>): number | null {
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el || typeof ResizeObserver === "undefined") return;
-    /**
-     * Stores the element's current width, or null for a zero width.
-     *
-     * @returns nothing
-     */
-    const measure = () => setWidth(el.clientWidth || null);
+    /** Stores the element's current width, or null for a zero width. */
+    const measure = () => {
+      setWidth(el.clientWidth || null);
+    };
     measure();
     const observer = new ResizeObserver(measure);
     observer.observe(el);

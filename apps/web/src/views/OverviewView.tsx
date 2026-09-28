@@ -132,12 +132,6 @@ export function OverviewView({ mode }: { mode: ModeSection }) {
   // The root route reports a failed record; here the caveats are simply left out.
   const caveats = useQuery({
     ...recordQuery(mode.recordSlug ?? ""),
-    /**
-     * Picks the record's caveats: the mode's own, then the record's.
-     *
-     * @param r - the research record
-     * @returns the non-empty caveats
-     */
     select: (r) =>
       [r.modes.find((m) => m.mode === mode.scope.mode)?.caveat, r.caveat].filter(
         (c): c is string => !!c,

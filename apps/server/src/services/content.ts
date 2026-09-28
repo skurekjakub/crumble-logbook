@@ -261,13 +261,6 @@ export function registeredService<K extends ContentKey>(
     table: (repos) => repos[key],
     filters,
     gloss: content?.gloss,
-    /**
-     * Checks that every deck id a reference column holds exists.
-     *
-     * @param repos - the write's repos
-     * @param values - the values being written
-     * @throws {UnknownRefsError} naming the first deck id that doesn't exist
-     */
     checkRefs: (repos, values) => {
       for (const column of refColumns) {
         const id = values[column];
@@ -276,13 +269,6 @@ export function registeredService<K extends ContentKey>(
         }
       }
     },
-    /**
-     * Checks that every deck a moded row references is of the row's mode.
-     *
-     * @param repos - the write's repos
-     * @param row - the row as written
-     * @throws {ConflictError} describing the first deck of another mode
-     */
     checkRow: (repos, row) => {
       const { mode } = row as { mode?: GameMode };
       if (mode === undefined) return;
