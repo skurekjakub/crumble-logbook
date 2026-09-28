@@ -1,39 +1,20 @@
 /**
- * The power gate's arithmetic: reading and printing team power, a team's
- * damage bracket at a stage, the least power that enters a bracket, and how
- * far a team pushes while it stays in one. Pure; the bracket table and the
- * recommended powers come from the API.
+ * The power gate's arithmetic: printing team power, a team's damage
+ * bracket at a stage, and how far a team pushes while it stays in one.
+ * Reading a typed power and a bracket's entry power are the server's own
+ * (`@crumble/schema/power`), re-exported here. Pure; the bracket table
+ * and the recommended powers come from the API.
  *
  * @module
  */
+import { entryPower } from "@crumble/schema/power";
+
+export { entryPower, parsePower } from "@crumble/schema/power";
 
 /** A bracket of the power gate: from `minRatioPct`% of recommended power, `damagePct`% of damage is kept. */
 export interface Bracket {
   minRatioPct: number;
   damagePct: number;
-}
-
-/** The value of each power unit the game prints. */
-const UNITS: Readonly<Record<string, number>> = { t: 1e12, g: 1e9, m: 1e6, k: 1e3 };
-
-/**
- * Reads a team power as typed or as the game prints it: `2.2G`, `971.8M`,
- * `4G 3M 599K` (the parts add up), or a plain number with or without
- * thousands separators.
- *
- * @param text - the typed power
- * @returns the power, or null when the text isn't a positive power
- */
-export function parsePower(text: string): number | null {
-  const trimmed = text.trim().replaceAll(",", "");
-  if (trimmed === "") return null;
-  if (/^\d+(\.\d+)?$/.test(trimmed)) return Number(trimmed) > 0 ? Number(trimmed) : null;
-  const parts = [...trimmed.matchAll(/(\d+(?:\.\d+)?)\s*([tgmk])/gi)];
-  if (parts.length === 0 || parts.map((p) => p[0]).join("") !== trimmed.replace(/\s+/g, "")) {
-    return null;
-  }
-  const total = parts.reduce((sum, p) => sum + Number(p[1]) * UNITS[p[2]!.toLowerCase()]!, 0);
-  return total > 0 ? Math.round(total) : null;
 }
 
 /**
@@ -59,18 +40,6 @@ export function formatPower(power: number): string {
   if (power >= 1e6) return `${trimZeros((power / 1e6).toFixed(1))}M`;
   if (power >= 1e3) return `${trimZeros((power / 1e3).toFixed(2))}K`;
   return String(power);
-}
-
-/**
- * The least team power in a bracket at a stage: `minRatioPct`% of its
- * recommended power, rounded up to a whole power.
- *
- * @param recommended - the stage's or Rift level's recommended power
- * @param minRatioPct - the bracket's lower bound, in percent of recommended power
- * @returns the entry power
- */
-export function entryPower(recommended: number, minRatioPct: number): number {
-  return Math.ceil((recommended * minRatioPct) / 100);
 }
 
 /**

@@ -12,7 +12,9 @@ import {
   CLEAR_RESULT,
   STAGE_ERA,
   deckSlug,
+  entryPower,
   isoDate,
+  postedPowerG,
 } from "@crumble/schema";
 import { z } from "zod";
 import { ImportError } from "../errors";
@@ -188,32 +190,6 @@ export const seedRiftBosses = z.strictObject({
 });
 /** Output of {@link seedRiftBosses}. */
 export type SeedRiftBosses = z.output<typeof seedRiftBosses>;
-
-/**
- * The least team power at `ratioPct`% of `recommended`, as the game
- * rounds it: up to the next whole power.
- *
- * @param recommended - a stage's or level's recommended power
- * @param ratioPct - the bracket's lower bound, in percent of recommended power
- * @returns the entry power
- */
-export function entryPower(recommended: number, ratioPct: number): number {
-  return Math.ceil((recommended * ratioPct) / 100);
-}
-
-/**
- * Reads a posted team power as billions: the first figure followed by `G`
- * or `M`, so `1.17G (1,169.78M)` is 1.17 and `971.8M (971M 839K)` 0.9718.
- *
- * @param posted - the power as the post gives it
- * @returns the power in G, or `null` when the text has no such figure
- */
-export function powerInG(posted: string): number | null {
-  const match = /(\d[\d,]*(?:\.\d+)?)\s*([GM])/.exec(posted);
-  if (!match) return null;
-  const value = Number(match[1]!.replaceAll(",", ""));
-  return match[2] === "G" ? value : Number((value / 1000).toPrecision(12));
-}
 
 /**
  * Splits a `<chapter>-<stage>` label.
@@ -556,7 +532,7 @@ export const STAGE_COLLECTIONS = {
             bossKr: clear.boss_kr,
             era: clear.era,
             teamPower: clear.team_power,
-            powerG: powerInG(clear.team_power),
+            powerG: postedPowerG(clear.team_power),
             recommendedPower: clear.recommended_power ?? null,
             bracket: clear.bracket,
             result: clear.result,

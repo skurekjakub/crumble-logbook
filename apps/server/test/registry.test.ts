@@ -322,6 +322,7 @@ const SEEDS: Record<SeededKey, Seed> = {
         bossKr: "b",
         era: "post-easing",
         teamPower: "1G",
+        powerG: 1,
         bracket: 35,
         result: "clear",
         evidence: "text",

@@ -1,12 +1,12 @@
 import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { postedPowerG } from "@crumble/schema";
 import { afterEach, describe, expect, it } from "vitest";
 import { createApp } from "../../src/app";
 import { repoRoot } from "../../src/config";
 import { ImportError } from "../../src/errors";
 import { importRecord } from "../../src/importers/import-record";
-import { entryPower, powerInG } from "../../src/importers/stage-collections";
 import { createServices } from "../../src/services";
 import { readJson, testStore } from "../helpers";
 
@@ -326,18 +326,13 @@ describe("--replace and the game facts a record lists", FULL_IMPORT, () => {
   });
 });
 
-describe("entryPower and powerInG", () => {
-  it("rounds an entry power up to the next whole power", () => {
-    expect(entryPower(10258, 40)).toBe(4104);
-    expect(entryPower(1600, 20)).toBe(320);
-  });
-
-  it("reads the first G or M figure of a posted power as billions", () => {
-    expect(powerInG("4.00G (4G 3M 599K)")).toBe(4);
-    expect(powerInG("1.17G (1,169.78M)")).toBe(1.17);
-    expect(powerInG("971.8M (971M 839K)")).toBe(0.9718);
-    expect(powerInG("about 4.03G ('딱투')")).toBe(4.03);
-    expect(powerInG("just over 3G")).toBe(3);
-    expect(powerInG("no figure")).toBeNull();
+describe("a clear's powerG", FULL_IMPORT, () => {
+  it("is the shared reading of its posted power, the exact breakdown over the headline", () => {
+    const store = testStore();
+    importRecord(store, stageCopy("920-stage-copy"));
+    const rows = store.repos.stageClears.list();
+    for (const row of rows) expect(row.powerG, row.teamPower).toBe(postedPowerG(row.teamPower));
+    const exact = rows.find((r) => r.teamPower === "4.00G (4G 3M 599K)");
+    expect(exact!.powerG).toBe(4.003599);
   });
 });

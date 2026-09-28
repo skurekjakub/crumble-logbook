@@ -29,7 +29,6 @@ const clear = {
   bossKr: "비겁한 쿠키",
   era: "post-easing",
   teamPower: "4.00G",
-  powerG: 4,
   bracket: 35,
   result: "clear",
   evidence: "screenshot",
@@ -68,6 +67,30 @@ describe("stage routes", () => {
     );
     expect(slot.status).toBe(409);
     expect(store.repos.stageZoneSlots.count()).toBe(0);
+  });
+
+  it("POST and PATCH /api/stage-clears read powerG from the posted power, never from the body", async () => {
+    const { app } = setup();
+    const res = await app.request(
+      "/api/stage-clears",
+      jsonBody({ ...clear, teamPower: "4.00G (4G 3M 599K)", powerG: 99 }),
+    );
+    expect(res.status).toBe(201);
+    const { id, powerG } = await readJson<{ id: number; powerG: number }>(res);
+    expect(powerG).toBe(4.003599);
+    const patched = await app.request(`/api/stage-clears/${id}`, {
+      method: "PATCH",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ teamPower: "971.8M" }),
+    });
+    expect(patched.status).toBe(200);
+    expect((await readJson<{ powerG: number }>(patched)).powerG).toBe(0.9718);
+    const untouched = await app.request(`/api/stage-clears/${id}`, {
+      method: "PATCH",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ note: "n", powerG: 7 }),
+    });
+    expect((await readJson<{ powerG: number }>(untouched)).powerG).toBe(0.9718);
   });
 
   it("GET /api/stage-chapters lists chapters in chapter order", async () => {

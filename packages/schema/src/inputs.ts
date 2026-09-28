@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { postedPowerG } from "./power";
 import {
   buffValueInsert,
   counterInsert,
@@ -242,13 +243,26 @@ export const stageZoneSlotPatch = stageZoneSlot.patch;
 /** Output of {@link stageZoneSlotPatch}. */
 export type StageZoneSlotPatch = z.output<typeof stageZoneSlotPatch>;
 
-const stageClear = citedInputs(stageClearInsert);
-/** Input for creating a documented stage attempt, with the sources that show it. */
-export const stageClearInput = stageClear.input;
+const stageClear = citedInputs(stageClearInsert.omit({ powerG: true }));
+/**
+ * Input for creating a documented stage attempt, with the sources that
+ * show it. `powerG` isn't accepted: it is read from `teamPower` (see
+ * `postedPowerG`).
+ */
+export const stageClearInput = stageClear.input.transform((clear) => ({
+  ...clear,
+  powerG: postedPowerG(clear.teamPower),
+}));
 /** Output of {@link stageClearInput}. */
 export type StageClearInput = z.output<typeof stageClearInput>;
-/** Patch for updating a documented stage attempt. `sources`, if given, must be non-empty. */
-export const stageClearPatch = stageClear.patch;
+/**
+ * Patch for updating a documented stage attempt. `sources`, if given, must
+ * be non-empty. `powerG` isn't accepted: a patch that sets `teamPower`
+ * sets it too, read from the new text.
+ */
+export const stageClearPatch = stageClear.patch.transform((patch) =>
+  patch.teamPower === undefined ? patch : { ...patch, powerG: postedPowerG(patch.teamPower) },
+);
 /** Output of {@link stageClearPatch}. */
 export type StageClearPatch = z.output<typeof stageClearPatch>;
 

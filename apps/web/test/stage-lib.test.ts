@@ -1,3 +1,7 @@
+import {
+  entryPower as sharedEntryPower,
+  parsePower as sharedParsePower,
+} from "@crumble/schema/power";
 import { describe, expect, it } from "vitest";
 import {
   bracketAt,
@@ -22,21 +26,15 @@ const BRACKETS = [
   { minRatioPct: 120, damagePct: 120 },
 ];
 
-describe("parsePower", () => {
-  it("reads the game's units, their sums and plain numbers", () => {
-    expect(parsePower("2.2G")).toBe(2_200_000_000);
-    expect(parsePower("971.8m")).toBe(971_800_000);
-    expect(parsePower("4G 3M 599K")).toBe(4_003_599_000);
-    expect(parsePower("1,169,780,000")).toBe(1_169_780_000);
-    expect(parsePower(" 10258 ")).toBe(10258);
+describe("parsePower and entryPower", () => {
+  it("are the server's own, not a copy", () => {
+    expect(parsePower).toBe(sharedParsePower);
+    expect(entryPower).toBe(sharedEntryPower);
   });
 
-  it("refuses text that isn't a positive power", () => {
-    expect(parsePower("")).toBeNull();
-    expect(parsePower("abc")).toBeNull();
-    expect(parsePower("2.2X")).toBeNull();
-    expect(parsePower("0")).toBeNull();
-    expect(parsePower("2G and change")).toBeNull();
+  it("read a power typed with its unit set apart, as the game shows it", () => {
+    expect(parsePower("4 G")).toBe(4_000_000_000);
+    expect(parsePower("4G 4G")).toBeNull();
   });
 });
 
