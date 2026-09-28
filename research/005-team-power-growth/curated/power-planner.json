@@ -18,12 +18,12 @@
  "from_2_2g": {
   "rule_of_thumb": "Near 2.2G each +0.2G (about +9%) moves the 35% reach about three to four chapters and the 55% reach about three; the 15% bracket already covers every main stage from 2.0G. 328-30 at 35% needs 4.00G (+82%); at 55%, 6.00G.",
   "what_a_step_buys": [
-   {"source": "stellar_link", "posted_gain": "+10% (2G → 2.2G, dc:77329)", "inferred_reach_35": "about 304-19 → 308 (+3–4 chapters)"},
-   {"source": "guild_lab", "posted_gain": "~+20% (claim, dc:76461)", "inferred_reach_35": "about 304-19 → 311 (+7 chapters)"},
-   {"source": "plating", "posted_gain": "+1.5% for one 14→15 step at 1.6G (dc:75684)", "inferred_reach_35": "about half a chapter"},
-   {"source": "lineup", "posted_gain": "a padded stage preset usually shows more than the conquest preset (record 003)", "inferred_reach_35": "depends on gear owned"}
+   {"source": "stellar_link", "posted_gain": "+10% (2G → 2.2G, dc:77329); free pulls reach 8-3, points past it need paid pulls (dc:76290)", "inferred_reach_35": "about 304-19 → 308 (+3–4 chapters)"},
+   {"source": "guild_lab", "posted_gain": "none in team power: one unmeasured claim of ~+20% account total power (dc:76461)", "inferred_reach_35": "not derived"},
+   {"source": "plating", "posted_gain": "about +1.5% for one 14→15 step at 1.6G (dc:75684, approximate)", "inferred_reach_35": "about half a chapter"},
+   {"source": "lineup", "posted_gain": "none: record 003's pushers say a padded stage preset shows more than the conquest preset, unmeasured", "inferred_reach_35": "not derived"}
   ],
   "rift": "The Dimensional Rift opens after 328-30 and is a 35% fight at every level against Rift-inflated power (record 003); its own Dimensional Energy is the power source there (curated/power-sources.json, rift_energy)."
  },
- "sources": ["dc:77329", "dc:76461", "dc:75684", "web:crumblehub-stages", "web:crumblehub-stage-tool"]
+ "sources": ["dc:77329", "dc:76290", "dc:76461", "dc:75684", "web:crumblehub-stages", "web:crumblehub-stage-tool"]
 }

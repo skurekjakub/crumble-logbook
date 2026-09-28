@@ -20,3 +20,9 @@ Spec: [`docs/superpowers/specs/2026-09-27-conquest-simulator-design.md`](docs/su
 
    Each changes the input form (lobby vs combat values) and adds a calibration target.
 4. **Survival scope.** Is "what is surviving the 17 s wipe worth" enough for v1, with "what it takes to survive" (HP/DEF/DR) in v2? Or do you want the survival model in v1?
+
+## Team power growth (record 005, 2026-09-28)
+
+Record: [`research/005-team-power-growth/`](research/005-team-power-growth/README.md). The guild lab is the one power source with no table anywhere; the only size is one unmeasured reply claiming a research-13 guild adds ~+20% to account total power (dc:76461).
+
+1. **Can you read your guild's research?** Your guild's research level and the stat lines it grants (the guild research screen), and, if you ever switch guilds, your team power before and after. That would size the guild lab in team power and let the planner count it.

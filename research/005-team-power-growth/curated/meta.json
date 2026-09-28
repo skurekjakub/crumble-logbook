@@ -6,16 +6,16 @@
  "record": "research/005-team-power-growth/",
  "footer": "Built from the research record's evidence captures.",
  "you": {
-  "summary": "At about 2.2G your stage preset reaches 55% to 288-3 and 35% to 304-19, and every +0.2G moves the 35% line about three to four chapters; 328-30 at 35% needs 4.00G. The free levers that move a 2.2G team fastest are the guild (a research-13 guild is claimed at about +20%), a pure-power stage preset, and the next Stellar Link points on constellation 8 (+10% for one step at 2G). Paid, the best power per KRW is Stellar Points for the newest constellation and keeping the weekly key set and the Crumble Pass going; plating and TSSR stars are the whale lane and buy little power per KRW past 15 and 5★.",
+  "summary": "At about 2.2G your stage preset reaches 55% to 288-3 and 35% to 304-19, and every +0.2G moves the 35% line about three to four chapters; 328-30 at 35% needs 4.00G. The only posted gain that moved a 2G team a whole step is Stellar Link: the third point of constellation 8 took a player from 2.0G to 2.2G (+10%). Free pulls reach 8-3; the points past it need paid pulls. The guild (a claimed +20% of account total power, unmeasured) and a padded stage preset (unmeasured) are free to check. Plating near 15 gave about +1.5% a step; it and Stellar can't be compared per won from the evidence. The paid order is the community's: keep the weekly key set and the Crumble Pass going.",
   "changes": [
-   "Confirm your guild's research level; if it is well below the top guilds' 13–14, a stronger guild is the largest free step on record (unverified claim).",
-   "Keep a separate stage preset rolled for displayed power (crit resistance and other padding lines, SSR rune lines that add power) and swap to it when a bracket line is within a few %.",
-   "Open the next constellation-8 points (cookie stars) and shape them: one step was worth +10% at 2G, about 304-19 → 308 at 35%.",
-   "Put Gnome Lab stones into HP 30% and the ATK nodes; the 2G → 4G player credits research most.",
+   "Confirm your guild's research level; the only figure for a stronger guild is one unmeasured claim of ~+20% account total power.",
+   "Keep a separate stage preset rolled for displayed power (crit resistance and other padding lines, SSR rune lines that add power) and swap to it when a bracket line is within a few % (record 003's practice; unmeasured).",
+   "Open and shape constellation-8 points up to 8-3: one step was worth +10% at 2G, about 304-19 → 308 at 35%. Past 8-3 the points need about 45 cookie stars from paid pulls.",
+   "Put Gnome Lab stones into HP 30% and the lower ATK nodes before ATK 30% (~50M stones); the 2G → 4G player credits research most.",
    "Plate the sword and bow toward 20 with Syrup for protection and restores; expect 2% per try at 19→20.",
-   "Buy Stellar Points before plating packs or TSSR stars if spending; don't chase 100% (95% is the practical end)."
+   "If spending on Stellar Points, use them to shape points that are open; don't chase 100% (95% is the practical end)."
   ],
-  "sources": ["dc:77329", "dc:76461", "dc:67596", "dc:76290", "dc:76272", "dc:75684", "dc:50913", "web:crumblehub-stages"]
+  "sources": ["dc:77329", "dc:76461", "dc:67596", "dc:76290", "dc:76272", "dc:75684", "dc:76620", "dc:50913", "web:crumblehub-stages"]
  },
  "modes": {
   "team_power": {

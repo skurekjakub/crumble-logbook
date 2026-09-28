@@ -1,6 +1,6 @@
 # Research trail — 005 team power growth
 
-The web rounds (iterative-research: three rounds of three WebSearch queries), run 2026-09-28. Search results are leads, not findings: every claim that reached the README was captured into `evidence/` first. The DCInside, Naver cafe and YouTube searches ran through the capture tools and are listed in `evidence/02-dc/*.tsv`, `evidence/03-naver/01-nv-guide-menu9.tsv` and `evidence/05-youtube/ytq-*.html`.
+The web rounds (iterative-research), run 2026-09-28. Search results are leads, not findings: every claim that reached the README was captured into `evidence/` first. The DCInside, Naver cafe and YouTube searches ran through the capture tools and are listed in `evidence/02-dc/*.tsv`, `evidence/03-naver/01-nv-guide-menu9.tsv` and `evidence/05-youtube/ytq-*.html`.
 
 ## Before the rounds: what the repo already gave
 
@@ -16,7 +16,7 @@ Queries:
 - Cookie Run Crumble how to increase combat power guide breakthrough stellar link gnome lab
 - 쿠키런 크럼블 패키지 가격 효율 과금 추천
 
-Synthesis: the KR query surfaced DC threads asking the same question (dc:23689, dc:17489) and generic guide sites; the English one surfaced global guide sites (cookieruncrumbles.com, cookierun-crumble.wiki) that restate the systems (Resolve, Fame, Gnome Laboratory, Stellar Link) with no numbers; the spending query surfaced crumblehub's spending guide with KRW budget tiers and its package value table (Crystal value per KRW), plus a DC "package value roundup" (dc:1905, which no longer loads; the gallery manager's later series dc:68116–68148 does). Strongest lead: crumblehub's `/api/efficiency` and the gallery's own threads for before/after numbers. Gap: USD prices and any measured power gain per system.
+Synthesis: the KR query surfaced DC threads asking the same question (dc:23689, dc:17489) and generic guide sites; the English one surfaced global guide sites (cookieruncrumbles.com, cookierun-crumble.wiki) that restate the growth systems with no numbers; the spending query surfaced crumblehub's spending guide with KRW budget tiers and its package value table (Crystal value per KRW), plus a DC "package value roundup" (dc:1905, which no longer loads; the gallery manager's later series dc:68116–68148 does). Strongest lead: crumblehub's `/api/efficiency` and the gallery's own threads for before/after numbers. Gap: USD prices and any measured power gain per system.
 
 ## Round 2 — deepen
 
@@ -41,7 +41,7 @@ Synthesis: the first query surfaced the App Store product page, whose top in-app
 - The plating odds table for 0→20 is an image in dc:53079, transcribed into `evidence/08-extract/plate-rates.json`; 20→25 and the restore costs come from the official notice reposted as dc:72150.
 - crumb.gg's current patch digest (`evidence/04-sites/data-patches.json`) gave the Resolve, Fame, Gnome Lab and plating cap changes by date.
 - Sugar Pocket's catalog API now answers 403 to plain requests; record 001's copies of the same game version serve.
-- English subtitles hit YouTube's 429 limit after one video (`6DFlOgeXLds`); the other global videos are cited by title only or not at all.
+- English subtitles hit YouTube's 429 limit; only `6DFlOgeXLds` has an English track in the record, and the other global videos are cited by title only or not at all.
 
 ## Final takeaways (each verified against a capture before use)
 

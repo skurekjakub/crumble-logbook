@@ -19,7 +19,7 @@
    [24, 2, 0.1, 46, 15, null, null, 23, 80, null, null]
   ],
   "restore_syrup_by_level": {"15": 20, "16": 20, "17": 30, "18": 40, "19": 50, "20": 60, "21": 65, "22": 70, "23": 75, "24": 80},
-  "note": "Odds up to 19→20 are from the table of 2026-08-30; from 2026-09-23 a shatter drops 2 levels (not to 10) and can be restored. Main-stat gain per level from 20 on (23%) is from the game data's rate table; sub-stats step at 5/10/15/20/25. Free Chocosteel: 24 a day from idle (yt:l9086mj7hwA), so the expected 104 for 14→15 is about 4 days of idle drops (inferred).",
+  "note": "Odds up to 19→20 are from the table of 2026-08-30; from 2026-09-23 a shatter drops 2 levels (not to 10) and can be restored. Main-stat gain per level from 20 on (23%) is from the game data's rate table; sub-stats step at 5/10/15/20/25. Free Chocosteel: 24 a day from idle (web:yt-l9086mj7hwA), so the expected 104 for 14→15 is about 4 days of idle drops (inferred).",
   "sources": ["dc:53079", "dc:72150", "web:sugarpocket-catalog", "web:yt-l9086mj7hwA"]
  },
  "stellar_link": {

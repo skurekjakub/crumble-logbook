@@ -565,3 +565,4 @@
 {"path":"evidence/08-extract/youtube.json","url":null,"captured_at":"2026-09-28T16:43:23+02:00","tool":"manual","sha256":"be7b11a37f74e23251230ea7bf285aadfc8ad8d7a07794f6197710905def1c5c"}
 {"path":"evidence/08-extract/sites.json","url":null,"captured_at":"2026-09-28T16:44:12+02:00","tool":"manual","sha256":"52d15fa343cdf290c81cd254362923e3d0d8e395c7dc5ba535de295c7ccbe2f8"}
 {"path":"evidence/build_sources.py","url":null,"captured_at":"2026-09-28T17:10:15+02:00","tool":"manual","sha256":"2248dda94afc08383cb560752f6ff581e8e11259569dab0611f936e3042335fe"}
+{"path":"evidence/build_sources_2.py","url":null,"captured_at":"2026-09-28T17:48:21+02:00","tool":"manual","sha256":"3bdfde2ed62bc8801816c30fe97b484c84d3ba50982b2c6415b325ddce3702bf"}
