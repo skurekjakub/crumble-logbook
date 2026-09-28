@@ -6,6 +6,7 @@
  *
  * @module
  */
+import type { GameMode } from "@crumble/schema";
 import {
   CONFIDENCE,
   DECK_STATUS,
@@ -22,8 +23,21 @@ import { z } from "zod";
 /** The source ids a curated row cites: at least one. */
 const cited = z.array(z.string()).min(1);
 
-/** The game mode a curated row is about; `guild_conquest` when the row doesn't say. */
-const mode = z.enum(GAME_MODE).default("guild_conquest");
+/**
+ * The game mode a curated row is about. A row that doesn't state one is
+ * filed under the record's mode (`import.json`'s `record.mode`); the import
+ * fails, naming the file and row, when neither states it.
+ */
+const mode = z.enum(GAME_MODE).optional();
+
+/**
+ * A curated row with its game mode resolved: its own, or the record's.
+ *
+ * @typeParam T - the row as its schema outputs it
+ */
+export type Moded<T extends { mode?: GameMode | undefined }> = Omit<T, "mode"> & {
+  mode: GameMode;
+};
 
 /** A percentage, 0-100. */
 const percent = z.number().min(0).max(100);
@@ -68,8 +82,8 @@ export const seedDeck = z.strictObject({
   unorthodox: z.array(z.string().min(1)).optional(),
   sources: cited,
 });
-/** Output of {@link seedDeck}. */
-export type SeedDeck = z.output<typeof seedDeck>;
+/** Output of {@link seedDeck}, with its mode resolved. */
+export type SeedDeck = Moded<z.output<typeof seedDeck>>;
 
 /** One entry of `runes.json`: a cookie's rune lines and the decks they apply to. */
 export const seedRune = z.strictObject({
@@ -81,8 +95,8 @@ export const seedRune = z.strictObject({
   disputed: z.string().optional(),
   sources: cited,
 });
-/** Output of {@link seedRune}. */
-export type SeedRune = z.output<typeof seedRune>;
+/** Output of {@link seedRune}, with its mode resolved. */
+export type SeedRune = Moded<z.output<typeof seedRune>>;
 
 /** One entry of `gear.json`. `slot` is a dashed name such as `top-left`. */
 export const seedGear = z.strictObject({
@@ -93,8 +107,8 @@ export const seedGear = z.strictObject({
   context: z.enum(GEAR_CONTEXT),
   sources: cited,
 });
-/** Output of {@link seedGear}. */
-export type SeedGear = z.output<typeof seedGear>;
+/** Output of {@link seedGear}, with its mode resolved. */
+export type SeedGear = Moded<z.output<typeof seedGear>>;
 
 /** One entry of `scores.json`, in billions (G). `power_g` and `deck` may be `null`. */
 export const seedScore = z.strictObject({
@@ -120,8 +134,8 @@ export const seedMechanic = z.strictObject({
   confidence: z.enum(CONFIDENCE),
   sources: cited,
 });
-/** Output of {@link seedMechanic}. */
-export type SeedMechanic = z.output<typeof seedMechanic>;
+/** Output of {@link seedMechanic}, with its mode resolved. */
+export type SeedMechanic = Moded<z.output<typeof seedMechanic>>;
 
 /** One entry of `rng.json`. */
 export const seedRng = z.strictObject({
@@ -131,8 +145,8 @@ export const seedRng = z.strictObject({
   mitigation: z.string().optional(),
   sources: cited,
 });
-/** Output of {@link seedRng}. */
-export type SeedRng = z.output<typeof seedRng>;
+/** Output of {@link seedRng}, with its mode resolved. */
+export type SeedRng = Moded<z.output<typeof seedRng>>;
 
 /** One entry of `timeline.json`. */
 export const seedTimeline = z.strictObject({
@@ -141,8 +155,8 @@ export const seedTimeline = z.strictObject({
   event: z.string().min(1),
   sources: cited,
 });
-/** Output of {@link seedTimeline}. */
-export type SeedTimeline = z.output<typeof seedTimeline>;
+/** Output of {@link seedTimeline}, with its mode resolved. */
+export type SeedTimeline = Moded<z.output<typeof seedTimeline>>;
 
 /** One entry of `takeaways.json`; the array order is the ranking. */
 export const seedTakeaway = z.strictObject({
@@ -151,8 +165,8 @@ export const seedTakeaway = z.strictObject({
   detail: z.string().optional(),
   sources: cited,
 });
-/** Output of {@link seedTakeaway}. */
-export type SeedTakeaway = z.output<typeof seedTakeaway>;
+/** Output of {@link seedTakeaway}, with its mode resolved. */
+export type SeedTakeaway = Moded<z.output<typeof seedTakeaway>>;
 
 /**
  * One entry of `counters.json`: a directed edge, `team` is beaten by
@@ -169,8 +183,8 @@ export const seedCounter = z.strictObject({
   confidence: z.enum(CONFIDENCE),
   sources: cited,
 });
-/** Output of {@link seedCounter}. */
-export type SeedCounter = z.output<typeof seedCounter>;
+/** Output of {@link seedCounter}, with its mode resolved. */
+export type SeedCounter = Moded<z.output<typeof seedCounter>>;
 
 /**
  * One entry of `usage.json`: `subject`'s share of `sample`, captured
@@ -194,8 +208,8 @@ export const seedUsage = z
     message: "confirmed_pct can't exceed usage_pct",
     path: ["confirmed_pct"],
   });
-/** Output of {@link seedUsage}. */
-export type SeedUsage = z.output<typeof seedUsage>;
+/** Output of {@link seedUsage}, with its mode resolved. */
+export type SeedUsage = Moded<z.output<typeof seedUsage>>;
 
 /**
  * One mode block of `meta.json`'s `modes`: the mode's header copy and its
@@ -204,7 +218,7 @@ export type SeedUsage = z.output<typeof seedUsage>;
 const seedMetaMode = z.strictObject({
   lede: z.string().min(1).optional(),
   caveat: z.string().min(1).optional(),
-  rules: z.array(seedMechanic.extend({ mode: z.enum(GAME_MODE).optional() })).default([]),
+  rules: z.array(seedMechanic).default([]),
 });
 
 /**

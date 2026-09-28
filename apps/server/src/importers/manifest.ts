@@ -8,7 +8,8 @@ import { formatIssues } from "./files";
 
 /**
  * Schema of a research record's `import.json`: the record row to create
- * (`mode`, when given, is the game mode it's filed under), where the
+ * (`mode`, when given, is the game mode it's filed under, and the mode of
+ * every curated row that states none), where the
  * curated dataset and the extractions live, how to find each source's
  * evidence capture, and one field per extra block (see `EXTRAS` in
  * `extras.ts`: the ranking TSVs, and, optionally, the fight timeline and

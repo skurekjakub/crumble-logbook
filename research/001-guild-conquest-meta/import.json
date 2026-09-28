@@ -3,7 +3,8 @@
     "slug": "001-guild-conquest-meta",
     "question": "There is a small, documented set of Guild Conquest teams that KR/Global top players use to reach ≥1T damage. For each one, the community sources name the cookie lineup, levels (including deliberate Lv.1 fillers), sugar runes, gear stats, pets and perks precisely enough that someone with every cookie could reproduce it.",
     "status": "active",
-    "startedAt": "2026-09-27"
+    "startedAt": "2026-09-27",
+    "mode": "guild_conquest"
   },
   "curated": "curated",
   "extractions": "evidence/08-extract",

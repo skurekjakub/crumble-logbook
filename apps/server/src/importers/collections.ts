@@ -28,6 +28,7 @@ import {
   mapSource,
   mapUsage,
 } from "./seed/map";
+import type { Moded } from "./seed/schema";
 import {
   seedCounter,
   seedDeck,
@@ -54,6 +55,15 @@ export interface RowRefs {
   sources?: readonly string[];
   /** The deck ids the row links to. */
   decks?: readonly string[];
+}
+
+/** What a collection's file is validated with, besides the file itself. */
+export interface ParseContext {
+  /**
+   * The record's game mode, from `import.json`'s `record.mode`: a row that
+   * states no mode is filed under it. `undefined` when the record states none.
+   */
+  mode: GameMode | undefined;
 }
 
 /** What a collection's own checks can see of the record's other collections. */
@@ -87,9 +97,10 @@ export interface Collection<Parsed> {
    *
    * @param file - the file's record-relative path, as errors name it
    * @param raw - the parsed JSON
+   * @param context - the record's mode, for rows that state none
    * @throws {ImportError} naming the file (and the row) of the first failure
    */
-  parse(file: string, raw: unknown): Parsed;
+  parse(file: string, raw: unknown, context: ParseContext): Parsed;
   /** Lists every row's source and deck references. */
   refs(parsed: Parsed): RowRefs[];
   /**
@@ -140,24 +151,65 @@ function parseRows<S extends z.ZodType>(file: string, raw: unknown, schema: S): 
 }
 
 /**
+ * Validates every row of an array file whose rows may state a game mode,
+ * filing a row that states none under the record's mode.
+ *
+ * @param file - the file's record-relative path, as errors name it
+ * @param raw - the parsed JSON
+ * @param schema - the schema of one row
+ * @param mode - the record's mode, or `undefined` when the record states none
+ * @returns the validated rows, in file order, each with its mode
+ * @throws {ImportError} as {@link parseRows} does, or naming `file` and the
+ *   index of the first row that states no mode when the record states none
+ */
+function parseModedRows<S extends z.ZodType<{ mode?: GameMode | undefined }>>(
+  file: string,
+  raw: unknown,
+  schema: S,
+  mode: GameMode | undefined,
+): Array<Moded<z.output<S>>> {
+  return parseRows(file, raw, schema).map((row, index) => {
+    const resolved = row.mode ?? mode;
+    if (resolved === undefined) {
+      throw new ImportError(
+        file,
+        index,
+        "the row states no mode, and import.json's record has none to file it under",
+      );
+    }
+    return { ...row, mode: resolved };
+  });
+}
+
+/**
+ * A collection's `parse` for an array file of rows that may state a game mode.
+ *
+ * @param schema - the schema of one row
+ * @returns the parse function: see {@link parseModedRows}
+ */
+function modedRows<S extends z.ZodType<{ mode?: GameMode | undefined }>>(schema: S) {
+  return (file: string, raw: unknown, { mode }: ParseContext) =>
+    parseModedRows(file, raw, schema, mode);
+}
+
+/**
  * Declares an array collection of a registered content type whose rows
  * each cite their own `sources` and map onto one row of the type.
  *
  * @param key - the content type's registry key
- * @param schema - the schema of one row of the file
+ * @param parse - validates the file into its rows (see {@link modedRows})
  * @param map - maps a validated row, and its index, onto the type's column values
  * @param decks - the deck ids a row links to, when rows reference decks
  * @returns the collection
  */
-function citedRows<K extends ContentKey, S extends z.ZodType<{ sources: string[] }>>(
+function citedRows<K extends ContentKey, Row extends { sources: string[] }>(
   key: K,
-  schema: S,
-  map: (row: z.output<S>, index: number) => ValuesOf<K>,
-  decks?: (row: z.output<S>) => readonly string[],
-): Collection<Array<z.output<S>>> {
+  parse: (file: string, raw: unknown, context: ParseContext) => Row[],
+  map: (row: Row, index: number) => ValuesOf<K>,
+  decks?: (row: Row) => readonly string[],
+): Collection<Row[]> {
   return collection({
-    /** @inheritdoc */
-    parse: (file, raw) => parseRows(file, raw, schema),
+    parse,
     /** @inheritdoc */
     refs: (rows) =>
       rows.map((row, index) => ({ row: index, sources: row.sources, decks: decks?.(row) })),
@@ -329,7 +381,7 @@ function assertUnclaimed(
 }
 
 /** The counters collection's plain cited-row behaviour, before its own checks. */
-const counterRows = citedRows("counters", seedCounter, mapCounter, (edge) => [
+const counterRows = citedRows("counters", modedRows(seedCounter), mapCounter, (edge) => [
   edge.team,
   edge.beaten_by,
 ]);
@@ -454,8 +506,7 @@ export const COLLECTIONS = {
     },
   }),
   decks: collection({
-    /** @inheritdoc */
-    parse: (file, raw) => parseRows(file, raw, seedDeck),
+    parse: (file, raw, { mode }) => parseModedRows(file, raw, seedDeck, mode),
     /** @inheritdoc */
     refs: (decks) => decks.map((deck, index) => ({ row: index, sources: deck.sources })),
     prepare: (decks, { file }) => {
@@ -480,8 +531,7 @@ export const COLLECTIONS = {
     },
   }),
   runes: collection({
-    /** @inheritdoc */
-    parse: (file, raw) => parseRows(file, raw, seedRune),
+    parse: (file, raw, { mode }) => parseModedRows(file, raw, seedRune, mode),
     /** @inheritdoc */
     refs: (runes) =>
       runes.map((rune, index) => ({ row: index, sources: rune.sources, decks: rune.decks })),
@@ -502,7 +552,7 @@ export const COLLECTIONS = {
       },
     ],
   }),
-  gear: citedRows("gearRecs", seedGear, (gear) => ({
+  gear: citedRows("gearRecs", modedRows(seedGear), (gear) => ({
     slot: mapGearSlot(gear.slot),
     substats: gear.substats,
     context: gear.context,
@@ -510,24 +560,31 @@ export const COLLECTIONS = {
     mode: gear.mode,
   })),
   scores: {
-    ...citedRows("scores", seedScore, mapScore, (score) =>
-      score.deck === null ? [] : [score.deck],
+    ...citedRows(
+      "scores",
+      (file, raw) => parseRows(file, raw, seedScore),
+      mapScore,
+      (score) => (score.deck === null ? [] : [score.deck]),
     ),
     optional: true,
   },
-  mechanics: citedRows("mechanics", seedMechanic, ({ sources: _sources, ...values }) => values),
-  rng: citedRows("rngFactors", seedRng, (factor) => ({
+  mechanics: citedRows(
+    "mechanics",
+    modedRows(seedMechanic),
+    ({ sources: _sources, ...values }) => values,
+  ),
+  rng: citedRows("rngFactors", modedRows(seedRng), (factor) => ({
     factor: factor.factor,
     effect: factor.effect,
     mitigation: factor.mitigation ?? null,
     mode: factor.mode,
   })),
-  timeline: citedRows("timeline", seedTimeline, (event) => ({
+  timeline: citedRows("timeline", modedRows(seedTimeline), (event) => ({
     date: event.date,
     event: event.event,
     mode: event.mode,
   })),
-  takeaways: citedRows("takeaways", seedTakeaway, (takeaway, position) => ({
+  takeaways: citedRows("takeaways", modedRows(seedTakeaway), (takeaway, position) => ({
     position,
     text: takeaway.text,
     detail: takeaway.detail ?? null,
@@ -557,7 +614,7 @@ export const COLLECTIONS = {
       ...counterRows.prepare(edges, context),
     ],
   }),
-  usage: { ...citedRows("usageStats", seedUsage, mapUsage), optional: true },
+  usage: { ...citedRows("usageStats", modedRows(seedUsage), mapUsage), optional: true },
 };
 
 /** The curated collections by manifest key. */

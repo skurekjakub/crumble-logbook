@@ -7,6 +7,7 @@ import {
   mapScore,
   mapSource,
 } from "../../src/importers/seed/map";
+import type { SeedDeck } from "../../src/importers/seed/schema";
 import {
   seedDeck,
   seedGear,
@@ -21,7 +22,19 @@ import {
   seedTimeline,
 } from "../../src/importers/seed/schema";
 
-const cherry = seedDeck.parse({
+/**
+ * Validates a curated deck and files it under Guild Conquest when it states
+ * no mode, as the import does for a record whose `import.json` says so.
+ *
+ * @param raw - the curated deck
+ * @returns the deck, with its mode resolved
+ */
+function conquestDeck(raw: unknown): SeedDeck {
+  const deck = seedDeck.parse(raw);
+  return { ...deck, mode: deck.mode ?? "guild_conquest" };
+}
+
+const cherry = conquestDeck({
   id: "cherry",
   name_en: "Cherry deck",
   name_kr: "체리덱",
@@ -302,7 +315,7 @@ describe("mapDeck", () => {
   });
 
   it("maps absent optional fields to null or empty lists", () => {
-    const minimal = seedDeck.parse({
+    const minimal = conquestDeck({
       id: "lottery",
       name_en: "Lottery",
       status: "niche",

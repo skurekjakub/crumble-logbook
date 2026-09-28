@@ -1,7 +1,13 @@
 import { join } from "node:path";
 import type { z } from "zod";
 import { ImportError } from "../errors";
-import type { Collection, CollectionName, ParsedCollections, RowRefs } from "./collections";
+import type {
+  Collection,
+  CollectionName,
+  ParseContext,
+  ParsedCollections,
+  RowRefs,
+} from "./collections";
 import { COLLECTIONS, curatedManifest } from "./collections";
 import type { Extra, ExtraContext, ExtraName } from "./extras";
 import { EXTRAS } from "./extras";
@@ -38,10 +44,15 @@ const ORDERED_EXTRAS = Object.entries(EXTRAS) as unknown as Array<[ExtraName, Ex
  *
  * @param recordDir - absolute path to the research record directory
  * @param curatedDir - the curated directory, relative to `recordDir`
+ * @param context - the record's mode, for rows that state none
  * @returns each listed collection's parsed content and file path
  * @throws {ImportError} naming the file (and row) of the first failure
  */
-function readCollections(recordDir: string, curatedDir: string): CuratedFiles {
+function readCollections(
+  recordDir: string,
+  curatedDir: string,
+  context: ParseContext,
+): CuratedFiles {
   const manifestFile = `${curatedDir}/manifest.json`;
   const { collections } = parseFile(
     manifestFile,
@@ -57,6 +68,7 @@ function readCollections(recordDir: string, curatedDir: string): CuratedFiles {
     (result.parsed as Record<string, unknown>)[name] = collection.parse(
       file,
       readJson(recordDir, file),
+      context,
     );
   }
   return result;
@@ -121,7 +133,7 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
  */
 export function readRecord(recordDir: string): RecordPlan {
   const manifest = readManifest(recordDir);
-  const curated = readCollections(recordDir, manifest.curated);
+  const curated = readCollections(recordDir, manifest.curated, { mode: manifest.record.mode });
   checkCollections(curated);
   const { parsed } = curated;
   const extraContext: ExtraContext = {

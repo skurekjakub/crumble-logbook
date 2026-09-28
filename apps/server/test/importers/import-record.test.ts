@@ -553,6 +553,36 @@ describe("importRecord validation", () => {
     );
   });
 
+  it("files a row that states no mode under the record's mode, and keeps a row's own mode", () => {
+    const base = recordJson<{ record: Record<string, unknown> }>("import.json");
+    const dir = tempRecord(
+      "takeaways.json",
+      (rows) => {
+        rows[0]!.mode = "rumble_arena";
+      },
+      { manifest: { record: { ...base.record, mode: "arena" } } },
+    );
+    const store = testStore();
+    importRecord(store, dir);
+    expect(new Set(store.repos.decks.list().map((d) => d.mode))).toEqual(new Set(["arena"]));
+    const takeaways = store.repos.takeaways.list();
+    expect(takeaways.find((t) => t.position === 0)?.mode).toBe("rumble_arena");
+    expect(takeaways.filter((t) => t.position > 0).every((t) => t.mode === "arena")).toBe(true);
+  });
+
+  it("rejects a row that states no mode when the record states none, naming the file and row", () => {
+    const base = recordJson<{ record: Record<string, unknown> }>("import.json");
+    const dir = tempRecord(null, () => {}, {
+      manifest: { record: { ...base.record, mode: undefined } },
+    });
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(ImportError);
+    expect(() => importRecord(store, dir)).toThrow(
+      /decks\.json \[0\]: the row states no mode, and import\.json's record has none/,
+    );
+    expectEmpty(store);
+  });
+
   it("rejects a cited source id that isn't curated, naming the file and row, and writes nothing", () => {
     const dir = tempRecord("scores.json", (rows) => {
       rows[3]!.sources = ["dc:0"];
