@@ -65,7 +65,7 @@ export function crumbleConfig(rootDir: string) {
       },
     },
 
-    // JSDoc on every function, method and class, TSDoc-style: a summary, `@param name - …` for each parameter,
+    // JSDoc on every named function, method and class, TSDoc-style: a summary, `@param name - …` for each parameter,
     // `@returns …` when it returns a value, `@throws …` when it throws. Types stay in TypeScript, not in tags.
     jsdoc.configs["flat/recommended-typescript-error"],
     {
@@ -78,18 +78,25 @@ export function crumbleConfig(rootDir: string) {
         // Destructured props are documented on their interface, not as `@param props.x` lines.
         "jsdoc/require-param": ["error", { checkDestructured: false }],
         "jsdoc/check-param-names": ["error", { checkDestructured: false }],
+        // Named functions need JSDoc: declarations, arrows and function expressions bound to a const or
+        // exported, class and object-literal methods, and interface methods. Inline callbacks (a column's
+        // `cell`, a `queryFn`, a `.map` arrow) are read in place and need none.
         "jsdoc/require-jsdoc": [
           "error",
           {
             publicOnly: false,
             require: {
               FunctionDeclaration: true,
-              FunctionExpression: true,
-              ArrowFunctionExpression: true,
+              FunctionExpression: false,
+              ArrowFunctionExpression: false,
               MethodDefinition: true,
               ClassDeclaration: true,
             },
             contexts: [
+              "VariableDeclarator > ArrowFunctionExpression",
+              "VariableDeclarator > FunctionExpression",
+              "ExportDefaultDeclaration > ArrowFunctionExpression",
+              "Property[method=true] > FunctionExpression",
               "TSMethodSignature",
               "TSPropertySignature > TSTypeAnnotation > TSFunctionType",
             ],
