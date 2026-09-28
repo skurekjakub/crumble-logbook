@@ -1,0 +1,14 @@
+{
+ "about": "The power gate's damage brackets, game data 1.4.002: a team keeps damage_pct% of its final damage in the highest bracket whose min_ratio_pct is at or below team power / recommended power x 100. Stepwise, no interpolation; the same table gates main stages and Dimensional Rift levels. Copied from evidence/06-derived/brackets.json (crumblehub's stage tool) and checked against crumb.gg's stages.json in evidence/06-derived/crumbgg-comparison.json, which lists no step under 10%.",
+ "measured": "2026-09-28",
+ "brackets": [
+  { "min_ratio_pct": 0, "damage_pct": 1, "label": "10% 미만", "sources": ["web:crumblehub-stage-tool"] },
+  { "min_ratio_pct": 10, "damage_pct": 5, "label": "10% 이상", "sources": ["web:crumblehub-stage-tool", "web:crumbgg-stages"] },
+  { "min_ratio_pct": 20, "damage_pct": 15, "label": "20% 이상", "sources": ["web:crumblehub-stage-tool", "web:crumbgg-stages"] },
+  { "min_ratio_pct": 40, "damage_pct": 35, "label": "40% 이상", "sources": ["web:crumblehub-stage-tool", "web:crumbgg-stages"] },
+  { "min_ratio_pct": 60, "damage_pct": 55, "label": "60% 이상", "sources": ["web:crumblehub-stage-tool", "web:crumbgg-stages"] },
+  { "min_ratio_pct": 80, "damage_pct": 75, "label": "80% 이상", "sources": ["web:crumblehub-stage-tool", "web:crumbgg-stages"] },
+  { "min_ratio_pct": 100, "damage_pct": 100, "label": "100% 이상", "sources": ["web:crumblehub-stage-tool", "web:crumbgg-stages"] },
+  { "min_ratio_pct": 120, "damage_pct": 120, "label": "120% 이상", "sources": ["web:crumblehub-stage-tool", "web:crumbgg-stages"] }
+ ]
+}

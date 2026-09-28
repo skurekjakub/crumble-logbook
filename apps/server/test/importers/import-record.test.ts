@@ -146,6 +146,13 @@ const expectedCounts = {
   buffValues: sum(buffRowsPerCookie),
   counters: 0,
   usageStats: 0,
+  powerBrackets: 0,
+  stageChapters: 0,
+  riftLevels: 0,
+  riftSeasons: 0,
+  stageZoneSlots: 0,
+  stageClears: 0,
+  riftBosses: 0,
   citations:
     sum(citedRows.map((r) => distinct(r.sources))) +
     distinct(meta.you.sources) +

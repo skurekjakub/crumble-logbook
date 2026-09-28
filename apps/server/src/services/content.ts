@@ -242,8 +242,9 @@ export type RegisteredService<K extends ContentKey> = ContentService<
  * registry entry: its entity, table repo, list filters, glossed column,
  * and reference columns (each id checked to exist before a write). A row
  * with a `mode` column must name only decks of its own mode, as written
- * (so an omitted `mode` is checked as its column default); a mismatch
- * throws {@link ConflictError} and nothing is written.
+ * (so an omitted `mode` is checked as its column default), and a row of a
+ * type the registry files under one mode (`content.mode`) only decks of
+ * that mode; a mismatch throws {@link ConflictError} and nothing is written.
  *
  * @param store - the store to persist through
  * @param key - the type's registry key
@@ -272,7 +273,7 @@ export function registeredService<K extends ContentKey>(
     },
     /** @inheritdoc */
     checkRow: (repos, row) => {
-      const { mode } = row as { mode?: GameMode };
+      const mode = (row as { mode?: GameMode }).mode ?? content?.mode;
       if (mode === undefined) return;
       for (const column of refColumns) {
         const id = (row as Record<string, unknown>)[column];

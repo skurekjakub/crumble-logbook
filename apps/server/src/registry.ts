@@ -17,8 +17,9 @@
  *
  * @module
  */
-import type { CitedEntity, Values } from "@crumble/schema";
+import type { CitedEntity, GameMode, Values } from "@crumble/schema";
 import {
+  CLEAR_RESULT,
   GAME_MODE,
   SOURCE_SITE,
   USAGE_KIND,
@@ -47,12 +48,24 @@ import {
   mechanicInput,
   mechanicPatch,
   mechanics,
+  powerBracketInput,
+  powerBracketPatch,
+  powerBrackets,
   rankings,
   recommendationInput,
   recommendationPatch,
   recommendations,
   recordModes,
   researchRecords,
+  riftBossInput,
+  riftBossPatch,
+  riftBosses,
+  riftLevelInput,
+  riftLevelPatch,
+  riftLevels,
+  riftSeasonInput,
+  riftSeasonPatch,
+  riftSeasons,
   rngFactorInput,
   rngFactorPatch,
   rngFactors,
@@ -64,6 +77,15 @@ import {
   scorePatch,
   scores,
   sources,
+  stageChapterInput,
+  stageChapterPatch,
+  stageChapters,
+  stageClearInput,
+  stageClearPatch,
+  stageClears,
+  stageZoneSlotInput,
+  stageZoneSlotPatch,
+  stageZoneSlots,
   takeawayInput,
   takeawayPatch,
   takeaways,
@@ -145,6 +167,12 @@ export interface ContentSpec<Row> {
   refs?: { readonly [C in ColumnOf<Row>]?: "decks" };
   /** A Korean-name column whose English gloss every view carries as `en`. */
   gloss?: ColumnOf<Row>;
+  /**
+   * The game mode every row is about, for a table with no `mode` column
+   * that belongs to one mode: a deck its reference columns name must be of
+   * this mode.
+   */
+  mode?: GameMode;
 }
 
 /** One registered table. */
@@ -316,6 +344,63 @@ export const REGISTRY = {
     filters: { kind: { schema: z.enum(USAGE_KIND), match: { equals: "kind" } } },
     api: { id: rowId, input: usageStatInput, patch: usageStatPatch },
     content: { order: [{ column: "usagePct", desc: true }, "id"], gloss: "subject" },
+  }),
+  powerBrackets: entry(powerBrackets, {
+    path: "/power-brackets",
+    entity: "power_bracket",
+    api: { id: rowId, input: powerBracketInput, patch: powerBracketPatch },
+    content: { order: ["minRatioPct"] },
+  }),
+  stageChapters: entry(stageChapters, {
+    path: "/stage-chapters",
+    entity: "stage_chapter",
+    api: { id: rowId, input: stageChapterInput, patch: stageChapterPatch },
+    content: { order: ["chapter"] },
+  }),
+  riftLevels: entry(riftLevels, {
+    path: "/rift-levels",
+    entity: "rift_level",
+    api: { id: rowId, input: riftLevelInput, patch: riftLevelPatch },
+    content: { order: ["level"] },
+  }),
+  riftSeasons: entry(riftSeasons, {
+    path: "/rift-seasons",
+    entity: "rift_season",
+    api: { id: rowId, input: riftSeasonInput, patch: riftSeasonPatch },
+    content: { order: ["season"] },
+  }),
+  stageZoneSlots: entry(stageZoneSlots, {
+    path: "/stage-zone-slots",
+    entity: "stage_zone_slot",
+    filters: { deck: { schema: deckSlug, match: { equals: "deckId" } } },
+    api: { id: rowId, input: stageZoneSlotInput, patch: stageZoneSlotPatch },
+    content: { order: ["zoneIndex", "position", "id"], refs: { deckId: "decks" }, mode: "stage" },
+  }),
+  stageClears: entry(stageClears, {
+    path: "/stage-clears",
+    entity: "stage_clear",
+    filters: {
+      result: { schema: z.enum(CLEAR_RESULT), match: { equals: "result" } },
+      deck: { schema: deckSlug, match: { equals: "deckId" } },
+    },
+    api: { id: rowId, input: stageClearInput, patch: stageClearPatch },
+    content: {
+      order: [
+        { column: "chapter", desc: true },
+        { column: "stageNo", desc: true },
+        { column: "powerG", nullsLast: true },
+        "id",
+      ],
+      refs: { deckId: "decks" },
+      gloss: "bossKr",
+      mode: "stage",
+    },
+  }),
+  riftBosses: entry(riftBosses, {
+    path: "/rift-bosses",
+    entity: "rift_boss",
+    api: { id: rowId, input: riftBossInput, patch: riftBossPatch },
+    content: { order: ["level", "id"] },
   }),
   citations: entry(citations, {}),
 };

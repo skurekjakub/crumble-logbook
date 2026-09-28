@@ -1,6 +1,6 @@
 # crumble-logbook
 
-A local research tool for Cookie Run: Crumble: what top Korean and global players run in **Guild Conquest (길드 토벌전)** against the Piñata raid boss, and in PvP (**Arena** and **Rumble Arena**, 와글와글 아레나). Every claim is traced to the forum post, video or ranking page it came from.
+A local research tool for Cookie Run: Crumble: what top Korean and global players run in **Guild Conquest (길드 토벌전)** against the Piñata raid boss, in PvP (**Arena** and **Rumble Arena**, 와글와글 아레나), and to push **main stages and the Dimensional Rift** under-powered. Every claim is traced to the forum post, video or ranking page it came from.
 
 ## What's here
 
@@ -43,6 +43,7 @@ The server reads `data/crumble.db`, or the file `CRUMBLE_DB` names (an absolute 
 ```sh
 pnpm import:record 001-guild-conquest-meta             # load a research record next to any others
 pnpm import:record 002-pvp-meta                        # records load side by side
+pnpm import:record 003-stage-pushing-meta              # then the stage-pushing record
 pnpm import:record 001-guild-conquest-meta --replace   # clear that record's rows and load it again
 pnpm dev:server                                        # serve the API on http://localhost:8787/api (watch mode)
 pnpm db:export                                         # write data/snapshot.json from the database
@@ -51,8 +52,10 @@ pnpm db:restore [file]                                 # load a snapshot (defaul
 
 `import:record` reads `research/<slug>/import.json`, validates every curated file and every reference (and, when the manifest has a `ledger` block, the capture ledger against the evidence on disk) before writing, and loads everything in one transaction. An error names the file and the row, and leaves the database untouched. Every row it writes belongs to the record (`recordSlug`). It refuses a record that is already loaded unless you pass `--replace`, which clears only that record's rows. Sources, glossary entries and buff values can be shared between records: the first record to load one keeps it, and a later record's differing version is reported as a warning (a differing buff value fails the import instead). It also warns about glossary names that more than one entry claims.
 
+Game facts (the tables `packages/schema/src/tables/stage.ts` marks as such) are owned by no record: they have no `recordSlug`, so `--replace` never clears them. A record that loads a fact already stored must agree with it: an identical fact is skipped, a differing one fails the import.
+
 Multi-record gotchas:
-- Import 001, then 002. Shared sources and glossary entries keep the first record's row, so the order decides which version the database holds. `data/snapshot.json` is always built from a fresh 001-then-002 import.
+- Import 001, then 002, then 003. Shared sources and glossary entries keep the first record's row, so the order decides which version the database holds. `data/snapshot.json` is always built from a fresh import of 001, then 002, then 003 into an empty database (point `CRUMBLE_DB` at a new file), followed by `pnpm db:export`.
 - After a scoped `--replace`, id counters restart past the highest id left, so ids no longer match a fresh import.
 - Shared buff values belong to the record that loaded them first. Replacing that record clears them before it writes its own.
 
@@ -62,7 +65,7 @@ After an import, the database is the source of truth. Commit `data/snapshot.json
 
 ### API
 
-Every resource is under `/api` and speaks JSON. Validation failures are 400 with every Zod issue and its path, unknown ids are 404, an unknown cited source or deck is 422 naming the ids, and conflicts are 409: deleting a source that rows still cite or a deck that a counter edge names, or a row whose `mode` isn't the mode of a deck it names. Content rows carry `sources`, the ids of the sources they cite; creating one needs at least one. Every list whose rows have a game mode takes `?mode=guild_conquest|arena|rumble_arena`. Names are glossed with the glossary entries of the row's own research record first.
+Every resource is under `/api` and speaks JSON. Validation failures are 400 with every Zod issue and its path, unknown ids are 404, an unknown cited source or deck is 422 naming the ids, and conflicts are 409: deleting a source that rows still cite or a deck that a counter edge names, or a row whose `mode` isn't the mode of a deck it names. Content rows carry `sources`, the ids of the sources they cite; creating one needs at least one. Every list whose rows have a game mode takes `?mode=guild_conquest|arena|rumble_arena|stage`. The stage tables belong to the stage mode alone, so they have no `mode` column, and the decks their rows name must be stage decks (409 otherwise). Names are glossed with the glossary entries of the row's own research record first.
 
 | Resource | Verbs | Notes |
 |---|---|---|
@@ -74,6 +77,10 @@ Every resource is under `/api` and speaks JSON. Validation failures are 400 with
 | `/api/fight-events` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | A boss fight's timeline. `tElapsed` is seconds since the fight started (the HUD counts down; remaining = fight length − `tElapsed`), `null` for an event with no time in the fight. Sorted by `tElapsed`, untimed last. `?boss=` filters. |
 | `/api/buff-values` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Buff (and debuff) values per cookie and skill grade, with `fromStar` and the cookie's glossary English (`en`). `?cookie=` takes the Korean name, a shorthand or the English name. |
 | `/api/gear-recs`, `/api/mechanics`, `/api/rng-factors`, `/api/timeline`, `/api/takeaways`, `/api/recommendations` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Generic cited content. Mechanics take `?topic=` (a mode's rules are `rules`); recommendations take `?record=<slug>`. |
+| `/api/power-brackets`, `/api/stage-chapters`, `/api/rift-levels`, `/api/rift-seasons` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Stage game facts, owned by no record. A power bracket says a team with `minRatioPct`% of a stage's recommended power keeps `damagePct`% of its damage. A bracket's entry power at a stage or Rift level is derived from the two, never stored. |
+| `/api/stage-zone-slots` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | What to bring per boss slot of each zone layout, in zone then slot order, with the deck the plan starts from. `?deck=` filters. |
+| `/api/stage-clears` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Documented stage attempts, ranked by stage reached, then lowest power first, never by a ratio. `teamPower` is as posted; `powerG` is its figure in G. The boss comes back with its glossary English (`en`). `?result=clear\|fail` and `?deck=` filter. |
+| `/api/rift-bosses` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | The boss players report per Rift level. |
 | `/api/sources` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | `?site=dc\|nv\|web`; `?record=<slug>` keeps the sources a record owns or cites. The site comes from the id prefix. Each listed source carries `records`: the record that loaded it and every record whose rows cite it. Each source also carries `capture` (`capturedAt`, `tool`, `approx`), its evidence capture's ledger line, or `null`. |
 | `/api/captures` | `GET` | The loaded records' capture ledgers, by record then path. `?record=<slug>` and `?path=<record-relative path>` filter. Read-only: the ledger file is the source. |
 | `/api/glossary` | `GET`, `GET /resolve?name=&mode=`, `POST` | `?kind=` filters. `POST` upserts by `kr`. `resolve` with a `mode` prefers the entries of the records covering that mode. |

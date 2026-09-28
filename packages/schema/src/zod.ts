@@ -263,6 +263,120 @@ export const usageStatSelect = createSelectSchema(t.usageStats, {
 /** A row selected from `usage_stats`. */
 export type UsageStatRow = typeof t.usageStats.$inferSelect;
 
+/** A positive whole number, for chapters, levels and team power. */
+const positiveInt = z.number().int().positive();
+
+/**
+ * Insert schema for `power_brackets`. `minRatioPct` is a non-negative
+ * integer percent; `damagePct` a positive one; `label` non-empty.
+ */
+export const powerBracketInsert = createInsertSchema(t.powerBrackets, {
+  minRatioPct: (s) => s.int().nonnegative(),
+  damagePct: (s) => s.int().positive(),
+  label: (s) => s.min(1),
+});
+/** Select schema for `power_brackets`, mirroring the stored row shape. */
+export const powerBracketSelect = createSelectSchema(t.powerBrackets);
+/** A row selected from `power_brackets`. */
+export type PowerBracketRow = typeof t.powerBrackets.$inferSelect;
+
+/**
+ * Insert schema for `stage_chapters`. `chapter` and `recommendedPower` are
+ * positive integers; `zoneIndex` is 1-8; the names are non-empty; the
+ * accuracy and focus requirements are positive.
+ */
+export const stageChapterInsert = createInsertSchema(t.stageChapters, {
+  chapter: () => positiveInt,
+  zoneIndex: (s) => s.int().min(1).max(8),
+  zone: (s) => s.min(1),
+  lastStage: (s) => s.regex(/^\d+-\d+$/, "expected <chapter>-<stage>"),
+  bossKr: (s) => s.min(1),
+  recommendedPower: () => positiveInt,
+  accuracyReq: (s) => s.positive(),
+  focusReq: (s) => s.positive(),
+});
+/** Select schema for `stage_chapters`, mirroring the stored row shape. */
+export const stageChapterSelect = createSelectSchema(t.stageChapters);
+/** A row selected from `stage_chapters`. */
+export type StageChapterRow = typeof t.stageChapters.$inferSelect;
+
+/** Insert schema for `rift_levels`. `level` and `recommendedPower` are positive integers. */
+export const riftLevelInsert = createInsertSchema(t.riftLevels, {
+  level: () => positiveInt,
+  recommendedPower: () => positiveInt,
+});
+/** Select schema for `rift_levels`, mirroring the stored row shape. */
+export const riftLevelSelect = createSelectSchema(t.riftLevels);
+/** A row selected from `rift_levels`. */
+export type RiftLevelRow = typeof t.riftLevels.$inferSelect;
+
+/**
+ * Insert schema for `rift_seasons`. `season` and both levels are positive
+ * integers; both instants are ISO 8601 date-times.
+ */
+export const riftSeasonInsert = createInsertSchema(t.riftSeasons, {
+  season: () => positiveInt,
+  firstLevel: () => positiveInt,
+  lastLevel: () => positiveInt,
+  startsAt: () => z.iso.datetime(),
+  endsAt: () => z.iso.datetime(),
+});
+/** Select schema for `rift_seasons`, mirroring the stored row shape. */
+export const riftSeasonSelect = createSelectSchema(t.riftSeasons);
+/** A row selected from `rift_seasons`. */
+export type RiftSeasonRow = typeof t.riftSeasons.$inferSelect;
+
+/**
+ * Insert schema for `stage_zone_slots`. `zoneIndex` is 1-8; `position` a
+ * non-negative integer; the names, `stage` and `plan` are non-empty;
+ * `deckId`, when present, is a lowercase slug.
+ */
+export const stageZoneSlotInsert = createInsertSchema(t.stageZoneSlots, {
+  zoneIndex: (s) => s.int().min(1).max(8),
+  zoneKr: (s) => s.min(1),
+  zoneEn: (s) => s.min(1),
+  position: (s) => s.int().nonnegative(),
+  stage: (s) => s.min(1),
+  bossKr: (s) => s.min(1),
+  plan: (s) => s.min(1),
+  deckId: () => deckSlug.nullish(),
+});
+/** Select schema for `stage_zone_slots`, mirroring the stored row shape. */
+export const stageZoneSlotSelect = createSelectSchema(t.stageZoneSlots);
+/** A row selected from `stage_zone_slots`. */
+export type StageZoneSlotRow = typeof t.stageZoneSlots.$inferSelect;
+
+/**
+ * Insert schema for `stage_clears`. `chapter`, `stageNo` and `bracket` are
+ * positive integers; `teamPower` is non-empty; `powerG`, when present, is
+ * positive; `recommendedPower`, when present, a positive integer;
+ * `deckId`, when present, a lowercase slug.
+ */
+export const stageClearInsert = createInsertSchema(t.stageClears, {
+  chapter: () => positiveInt,
+  stageNo: () => positiveInt,
+  bossKr: (s) => s.min(1),
+  teamPower: (s) => s.min(1),
+  powerG: (s) => s.positive().nullish(),
+  recommendedPower: () => positiveInt.nullish(),
+  bracket: (s) => s.int().positive(),
+  deckId: () => deckSlug.nullish(),
+});
+/** Select schema for `stage_clears`, mirroring the stored row shape. */
+export const stageClearSelect = createSelectSchema(t.stageClears);
+/** A row selected from `stage_clears`. */
+export type StageClearRow = typeof t.stageClears.$inferSelect;
+
+/** Insert schema for `rift_bosses`. `level` is a positive integer; `bossKr` non-empty. */
+export const riftBossInsert = createInsertSchema(t.riftBosses, {
+  level: () => positiveInt,
+  bossKr: (s) => s.min(1),
+});
+/** Select schema for `rift_bosses`, mirroring the stored row shape. */
+export const riftBossSelect = createSelectSchema(t.riftBosses);
+/** A row selected from `rift_bosses`. */
+export type RiftBossRow = typeof t.riftBosses.$inferSelect;
+
 /** Insert schema for `citations`. */
 export const citationInsert = createInsertSchema(t.citations);
 /** Select schema for `citations`, mirroring the stored row shape. */

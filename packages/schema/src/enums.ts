@@ -41,11 +41,31 @@ export type RankingBoard = (typeof RANKING_BOARD)[number];
 
 /**
  * Game mode research content is about: Guild Conquest (길드 토벌전), regular
- * Arena (아레나) or Rumble Arena (와글와글 아레나). The first is the default of
- * every `mode` column.
+ * Arena (아레나), Rumble Arena (와글와글 아레나), or stage pushing (main
+ * stages and the Dimensional Rift). The first is the default of every
+ * `mode` column.
  */
-export const GAME_MODE = ["guild_conquest", "arena", "rumble_arena"] as const;
+export const GAME_MODE = ["guild_conquest", "arena", "rumble_arena", "stage"] as const;
 export type GameMode = (typeof GAME_MODE)[number];
+
+/**
+ * Which side of the 2026-09-23 stage easing a stage clear was made on: the
+ * easing lowered recommended power and enemy stats from 169-1 to 328-30.
+ */
+export const STAGE_ERA = ["pre-easing", "post-easing"] as const;
+export type StageEra = (typeof STAGE_ERA)[number];
+
+/** How a documented stage attempt ended. */
+export const CLEAR_RESULT = ["clear", "fail"] as const;
+export type ClearResult = (typeof CLEAR_RESULT)[number];
+
+/** Whether a stage attempt was played by hand or on auto. */
+export const CLEAR_PLAY = ["manual", "auto"] as const;
+export type ClearPlay = (typeof CLEAR_PLAY)[number];
+
+/** What backs a documented stage attempt: a screenshot of the result or formation, or text alone. */
+export const CLEAR_EVIDENCE = ["screenshot", "text"] as const;
+export type ClearEvidence = (typeof CLEAR_EVIDENCE)[number];
 
 /**
  * What a usage figure counts: one cookie, a group of cookies that appear
@@ -93,5 +113,12 @@ export const CITED_ENTITY = [
   "buff_value",
   "counter",
   "usage_stat",
+  "power_bracket",
+  "stage_chapter",
+  "rift_level",
+  "rift_season",
+  "stage_zone_slot",
+  "stage_clear",
+  "rift_boss",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];

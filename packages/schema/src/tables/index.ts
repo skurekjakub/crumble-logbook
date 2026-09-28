@@ -11,5 +11,6 @@ export * from "./recommendations";
 export * from "./boss";
 export * from "./counters";
 export * from "./usage";
+export * from "./stage";
 export * from "./citations";
 export * from "./captures";

@@ -11,12 +11,19 @@ import {
   glossaryInsert,
   mechanicInsert,
   nameList,
+  powerBracketInsert,
   recommendationInsert,
+  riftBossInsert,
+  riftLevelInsert,
+  riftSeasonInsert,
   rngFactorInsert,
   runeBuildInsert,
   scoreInsert,
   sourceId,
   sourceInsert,
+  stageChapterInsert,
+  stageClearInsert,
+  stageZoneSlotInsert,
   takeawayInsert,
   timelineEventInsert,
   usageStatInsert,
@@ -184,6 +191,76 @@ export type UsageStatInput = z.output<typeof usageStatInput>;
 export const usageStatPatch = usageStat.patch;
 /** Output of {@link usageStatPatch}. */
 export type UsageStatPatch = z.output<typeof usageStatPatch>;
+
+const powerBracket = citedInputs(powerBracketInsert);
+/** Input for creating a power-gate bracket, with the sources that state it. */
+export const powerBracketInput = powerBracket.input;
+/** Output of {@link powerBracketInput}. */
+export type PowerBracketInput = z.output<typeof powerBracketInput>;
+/** Patch for updating a power-gate bracket. `sources`, if given, must be non-empty. */
+export const powerBracketPatch = powerBracket.patch;
+/** Output of {@link powerBracketPatch}. */
+export type PowerBracketPatch = z.output<typeof powerBracketPatch>;
+
+const stageChapter = citedInputs(stageChapterInsert);
+/** Input for creating a stage chapter, with the sources that state it. */
+export const stageChapterInput = stageChapter.input;
+/** Output of {@link stageChapterInput}. */
+export type StageChapterInput = z.output<typeof stageChapterInput>;
+/** Patch for updating a stage chapter. `sources`, if given, must be non-empty. */
+export const stageChapterPatch = stageChapter.patch;
+/** Output of {@link stageChapterPatch}. */
+export type StageChapterPatch = z.output<typeof stageChapterPatch>;
+
+const riftLevel = citedInputs(riftLevelInsert);
+/** Input for creating a Rift level, with the sources that state it. */
+export const riftLevelInput = riftLevel.input;
+/** Output of {@link riftLevelInput}. */
+export type RiftLevelInput = z.output<typeof riftLevelInput>;
+/** Patch for updating a Rift level. `sources`, if given, must be non-empty. */
+export const riftLevelPatch = riftLevel.patch;
+/** Output of {@link riftLevelPatch}. */
+export type RiftLevelPatch = z.output<typeof riftLevelPatch>;
+
+const riftSeason = citedInputs(riftSeasonInsert);
+/** Input for creating a Rift season, with the sources that state it. */
+export const riftSeasonInput = riftSeason.input;
+/** Output of {@link riftSeasonInput}. */
+export type RiftSeasonInput = z.output<typeof riftSeasonInput>;
+/** Patch for updating a Rift season. `sources`, if given, must be non-empty. */
+export const riftSeasonPatch = riftSeason.patch;
+/** Output of {@link riftSeasonPatch}. */
+export type RiftSeasonPatch = z.output<typeof riftSeasonPatch>;
+
+const stageZoneSlot = citedInputs(stageZoneSlotInsert);
+/** Input for creating a zone's boss-slot plan, with the sources that support it. */
+export const stageZoneSlotInput = stageZoneSlot.input;
+/** Output of {@link stageZoneSlotInput}. */
+export type StageZoneSlotInput = z.output<typeof stageZoneSlotInput>;
+/** Patch for updating a zone's boss-slot plan. `sources`, if given, must be non-empty. */
+export const stageZoneSlotPatch = stageZoneSlot.patch;
+/** Output of {@link stageZoneSlotPatch}. */
+export type StageZoneSlotPatch = z.output<typeof stageZoneSlotPatch>;
+
+const stageClear = citedInputs(stageClearInsert);
+/** Input for creating a documented stage attempt, with the sources that show it. */
+export const stageClearInput = stageClear.input;
+/** Output of {@link stageClearInput}. */
+export type StageClearInput = z.output<typeof stageClearInput>;
+/** Patch for updating a documented stage attempt. `sources`, if given, must be non-empty. */
+export const stageClearPatch = stageClear.patch;
+/** Output of {@link stageClearPatch}. */
+export type StageClearPatch = z.output<typeof stageClearPatch>;
+
+const riftBoss = citedInputs(riftBossInsert);
+/** Input for creating a reported Rift boss, with the sources that report it. */
+export const riftBossInput = riftBoss.input;
+/** Output of {@link riftBossInput}. */
+export type RiftBossInput = z.output<typeof riftBossInput>;
+/** Patch for updating a reported Rift boss. `sources`, if given, must be non-empty. */
+export const riftBossPatch = riftBoss.patch;
+/** Output of {@link riftBossPatch}. */
+export type RiftBossPatch = z.output<typeof riftBossPatch>;
 
 /**
  * Input for a single deck cookie slot. `id`, `deckId` and `position` are

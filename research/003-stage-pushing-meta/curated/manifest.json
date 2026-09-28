@@ -10,6 +10,12 @@
     "timeline": "timeline.json",
     "sources": "sources.json",
     "glossary": "glossary.json",
-    "usage": "usage.json"
+    "usage": "usage.json",
+    "powerBrackets": "power-brackets.json",
+    "stageChapters": "stage-chapters.json",
+    "riftLevels": "rift-levels.json",
+    "stageZones": "stage-zones.json",
+    "stageClears": "stage-clears.json",
+    "riftBosses": "rift-bosses.json"
   }
 }

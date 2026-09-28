@@ -2,6 +2,7 @@ import { join } from "node:path";
 import type { z } from "zod";
 import { ImportError } from "../errors";
 import type {
+  CheckContext,
   Collection,
   CollectionName,
   ParseContext,
@@ -109,8 +110,12 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
   };
   assertKnown("source", "sources");
   assertKnown("deck", "decks");
-  const context = {
+  const context: CheckContext = {
     deckModes: new Map((parsed.decks ?? []).map((deck) => [deck.id, deck.mode])),
+    powerBrackets: (parsed.powerBrackets?.brackets ?? []).map((b) => ({
+      minRatioPct: b.min_ratio_pct,
+      damagePct: b.damage_pct,
+    })),
   };
   for (const [name, collection] of ORDERED) {
     if (parsed[name] !== undefined) collection.check?.(files[name]!, parsed[name], context);

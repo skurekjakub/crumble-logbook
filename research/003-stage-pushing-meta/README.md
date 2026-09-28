@@ -64,7 +64,7 @@ For the app lane; this record changed nothing outside its folder.
 
 - `packages/schema/src/enums.ts:47` `GAME_MODE`: add `"stage"` (import.json's `record.mode` is `"stage"`, every curated row states `mode: "stage"`). `GEAR_CONTEXT` already has `"stage"`.
 - `apps/web/src/app/modes.ts` (now under `app/modes/` per commit 29688f5): a stage section.
-- New collections for the table-shaped curated files, with their seed schemas in `apps/server/src/importers/seed/schema.ts` and tables in `packages/schema`: `stage-chapters.json` (chapter rows), `rift-levels.json` (level rows plus season groups), `stage-zones.json` (zone × boss slot × plan × deck id), `stage-clears.json` (clears with stage, boss, power, bracket, result, play, evidence, deck id, sources), `rift-bosses.json`. Not in `curated/manifest.json` yet, since the importer rejects unknown collection keys.
+- New collections for the table-shaped curated files, with their seed schemas in `apps/server/src/importers/seed/schema.ts` and tables in `packages/schema`: `stage-chapters.json` (chapter rows), `rift-levels.json` (level rows plus season groups), `stage-zones.json` (zone × boss slot × plan × deck id), `stage-clears.json` (clears with stage, boss, power, bracket, result, play, evidence, deck id, sources), `rift-bosses.json`. Since imported: `curated/manifest.json` lists them, and the importer loads them as the stage tables.
 - A calculator view: team power in, bracket per stage out (the reach presets at 75%/55%/35% in crumblehub's tool code are the model).
 
 ## Side findings
@@ -91,7 +91,7 @@ Every cited id is in `curated/sources.json` with its URL. The ones that settled 
 
 - `research-trail.md`: the web rounds.
 - `import.json`: the importer manifest (record mode `stage`).
-- `curated/`: the dataset; `manifest.json` lists the importable collections, and `stage-chapters.json`, `rift-levels.json`, `stage-zones.json`, `stage-clears.json`, `rift-bosses.json` are the stage-mode tables.
+- `curated/`: the dataset; `manifest.json` lists every collection the app imports, the stage-mode tables among them. `power-brackets.json` copies the bracket table from `evidence/06-derived/brackets.json` with its sources, for the app's bracket calculator.
 - `evidence/captures.jsonl`: one line per evidence file (path, url, time, tool, sha256), written when the file is captured and never rewritten; a path has exactly one line, and a second one fails `pnpm verify`. New captures get their line from `pnpm capture` (a scraper, or `pnpm capture log`).
 - `evidence/01-repo-grounding/report.md`: what records 001/002 already held, quoted with file:line.
 - `evidence/02-dc/`: DCInside search listings (`01-list-stage.tsv`, `02-list-targeted.tsv`) and posts with comments (`dc/`).

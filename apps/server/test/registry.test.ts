@@ -37,7 +37,9 @@ type SeededKey =
   | "researchRecords"
   | "counters"
   | "usageStats"
-  | "captures";
+  | "captures"
+  | "stageZoneSlots"
+  | "stageClears";
 
 /**
  * Creates one valid row of a type, with `over` applied on top.
@@ -78,6 +80,11 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
     },
   },
   usageStats: { kind: { match: { kind: "core" }, other: { kind: "pet" }, value: "core" } },
+  stageZoneSlots: { deck: { match: { deckId: "s1" }, other: { deckId: "s2" }, value: "s1" } },
+  stageClears: {
+    result: { match: { result: "fail" }, other: {}, value: "fail" },
+    deck: { match: { deckId: "s1" }, other: { deckId: "s2" }, value: "s1" },
+  },
   captures: {
     record: { match: { recordSlug: "r1" }, other: { recordSlug: "r2" }, value: "r1" },
     path: {
@@ -101,6 +108,20 @@ function ensureDecks(store: Store, services: Services): void {
   for (const id of ["d1", "d2", "d3"]) {
     if (store.repos.decks.exists(id)) continue;
     services.decks.create({ ...deckBase, id, nameEn: id });
+  }
+}
+
+/**
+ * Creates the stage decks `s1` and `s2` that stage seeds reference, once per store.
+ *
+ * @param store - the store to check for existing decks
+ * @param services - the services to create the decks through
+ */
+function ensureStageDecks(store: Store, services: Services): void {
+  cite(store);
+  for (const id of ["s1", "s2"]) {
+    if (store.repos.decks.exists(id)) continue;
+    services.decks.create({ ...deckBase, id, nameEn: id, mode: "stage" });
   }
 }
 
@@ -273,6 +294,41 @@ const SEEDS: Record<SeededKey, Seed> = {
       },
     ]);
     const row = store.repos.captures.list().find((c) => c.path === (over.path ?? path))!;
+    return ["id", row.id];
+  },
+  stageZoneSlots: (store, services, over) => {
+    ensureStageDecks(store, services);
+    const row = services.stageZoneSlots.create(
+      {
+        zoneIndex: 1,
+        zoneKr: "초원",
+        zoneEn: "Grassland",
+        position: ++serial,
+        stage: "-10",
+        bossKr: "b",
+        plan: "p",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  stageClears: (store, services, over) => {
+    ensureStageDecks(store, services);
+    const row = services.stageClears.create(
+      {
+        chapter: 1,
+        stageNo: ++serial,
+        bossKr: "b",
+        era: "post-easing",
+        teamPower: "1G",
+        bracket: 35,
+        result: "clear",
+        evidence: "text",
+        ...over,
+      },
+      cite(store),
+    );
     return ["id", row.id];
   },
   usageStats: (store, services, over) => {

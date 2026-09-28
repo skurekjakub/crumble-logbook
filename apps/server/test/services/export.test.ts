@@ -231,6 +231,77 @@ function seedEverything(store: Store): SeedIds {
     ["web:2"],
   );
 
+  services.powerBrackets.create({ minRatioPct: 40, damagePct: 35, label: "40% 이상" }, ["web:2"]);
+  services.stageChapters.create(
+    {
+      chapter: 328,
+      zoneIndex: 8,
+      zone: "설원지대 (snowfield)",
+      lastStage: "328-30",
+      bossKr: "비겁한 쿠키",
+      bossEn: "GingerCraven",
+      recommendedPower: 10004798560,
+      accuracyReq: 1203.5,
+      focusReq: 1079,
+    },
+    ["web:2"],
+  );
+  services.riftLevels.create({ level: 1, recommendedPower: 12000000000 }, ["web:2"]);
+  services.riftSeasons.create(
+    {
+      season: 1,
+      firstLevel: 1,
+      lastLevel: 100,
+      startsAt: "2026-09-23T02:30:00.000Z",
+      endsAt: "2026-10-08T03:00:00.000Z",
+    },
+    ["web:2"],
+  );
+  services.decks.create({
+    id: "stage-deck",
+    mode: "stage",
+    nameEn: "Stage deck",
+    status: "meta",
+    cookies: [{ cookieKr: "체리 쿠키", level: "100", levelRule: null, stars: null, why: "x" }],
+    pets: [],
+    notes: [],
+    sources: ["dc:1"],
+  });
+  services.stageZoneSlots.create(
+    {
+      zoneIndex: 8,
+      zoneKr: "설원지대",
+      zoneEn: "Snowfield",
+      position: 0,
+      stage: "-30",
+      bossKr: "비겁한 쿠키",
+      bossEn: "GingerCraven",
+      plan: "The GingerCraven deck.",
+      deckId: "stage-deck",
+      bracketNote: "35%",
+    },
+    ["dc:1"],
+  );
+  services.stageClears.create(
+    {
+      chapter: 328,
+      stageNo: 30,
+      bossKr: "비겁한 쿠키",
+      era: "post-easing",
+      teamPower: "4.00G",
+      powerG: 4,
+      recommendedPower: 10004798560,
+      bracket: 35,
+      result: "clear",
+      play: "manual",
+      evidence: "screenshot",
+      deckId: "stage-deck",
+      note: null,
+    },
+    ["dc:1"],
+  );
+  services.riftBosses.create({ level: 5, bossKr: "비겁한 쿠키", bossEn: "GingerCraven" }, ["dc:1"]);
+
   return { mechanicId: mechanic.id, scoreId: score.id, deckCookieId };
 }
 
@@ -254,8 +325,8 @@ describe("exportSnapshot / restoreSnapshot", () => {
       recordModes: 1,
       captures: 1,
       glossary: 1,
-      decks: 2,
-      deckCookies: 2,
+      decks: 3,
+      deckCookies: 3,
       deckPets: 1,
       deckNotes: 1,
       runeBuilds: 1,
@@ -272,7 +343,14 @@ describe("exportSnapshot / restoreSnapshot", () => {
       buffValues: 1,
       counters: 1,
       usageStats: 1,
-      citations: 14,
+      powerBrackets: 1,
+      stageChapters: 1,
+      riftLevels: 1,
+      riftSeasons: 1,
+      stageZoneSlots: 1,
+      stageClears: 1,
+      riftBosses: 1,
+      citations: 22,
     });
     for (const [table, rows] of Object.entries(first.tables)) {
       expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);
@@ -405,7 +483,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
     const target = testStore();
     const counts = restoreSnapshot(target, { version: 1, tables: older as Snapshot["tables"] });
     expect(counts.usageStats).toBe(0);
-    expect(counts.decks).toBe(2);
+    expect(counts.decks).toBe(3);
     expect(exportSnapshot(target).tables.usageStats).toEqual([]);
   });
 
