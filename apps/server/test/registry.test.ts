@@ -36,7 +36,8 @@ type SeededKey =
   | "buffValues"
   | "researchRecords"
   | "counters"
-  | "usageStats";
+  | "usageStats"
+  | "captures";
 
 /**
  * Creates one valid row of a type, with `over` applied on top.
@@ -77,6 +78,14 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
     },
   },
   usageStats: { kind: { match: { kind: "core" }, other: { kind: "pet" }, value: "core" } },
+  captures: {
+    record: { match: { recordSlug: "r1" }, other: { recordSlug: "r2" }, value: "r1" },
+    path: {
+      match: { path: "evidence/a.md" },
+      other: { path: "evidence/b.md" },
+      value: "evidence/a.md",
+    },
+  },
 };
 
 let serial = 0;
@@ -248,6 +257,22 @@ const SEEDS: Record<SeededKey, Seed> = {
       },
       cite(store),
     );
+    return ["id", row.id];
+  },
+  captures: (store, _services, over) => {
+    const path = `evidence/${++serial}.md`;
+    store.repos.captures.insertMany([
+      {
+        recordSlug: "r0",
+        path,
+        url: null,
+        capturedAt: "2026-01-01T00:00:00+00:00",
+        tool: "manual",
+        sha256: "0".repeat(64),
+        ...over,
+      },
+    ]);
+    const row = store.repos.captures.list().find((c) => c.path === (over.path ?? path))!;
     return ["id", row.id];
   },
   usageStats: (store, services, over) => {

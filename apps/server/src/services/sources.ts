@@ -3,17 +3,23 @@ import { ConflictError, NotFoundError } from "../errors";
 import type { FiltersOf } from "../registry";
 import { recordColumnOf, REGISTRY, specOf, TABLE_KEYS } from "../registry";
 import type { Repos, Store } from "../repos";
+import type { CaptureStamp } from "./captures";
+import { captureStamps } from "./captures";
 import { applyFilters } from "./filters";
 
 /**
- * A source as listed: its row, plus the research records it belongs to,
- * sorted: the record that owns the row and every record whose own rows
- * cite it.
+ * A source as listed: its row, the research records it belongs to, sorted
+ * (the record that owns the row and every record whose own rows cite it),
+ * and its evidence capture's ledger stamp, `null` when it has no capture
+ * or the capture has no ledger line loaded.
  */
-export type SourceListView = SourceRow & { records: string[] };
+export type SourceListView = SourceRow & { records: string[]; capture: CaptureStamp | null };
 
-/** A source row with the number of rows (citations and rankings) that reference it. */
-export type SourceView = SourceRow & { citedBy: number };
+/**
+ * A source row with the number of rows (citations and rankings) that
+ * reference it, and its capture's ledger stamp.
+ */
+export type SourceView = SourceRow & { citedBy: number; capture: CaptureStamp | null };
 
 /**
  * CRUD over `sources`: what everything else cites. `site` is never accepted
@@ -107,10 +113,12 @@ export function createSourcesService(store: Store): SourcesService {
     list: (filter) => {
       const repos = store.repos;
       const citing = citingRecords(repos);
+      const stamps = captureStamps(repos);
       const views = repos.sources.list().map((row) => {
         const records = new Set(citing.get(row.id));
         if (row.recordSlug) records.add(row.recordSlug);
-        return { ...row, records: [...records].sort() };
+        const capture = (row.capturePath && stamps.get(row.capturePath)) || null;
+        return { ...row, records: [...records].sort(), capture };
       });
       return applyFilters(views, REGISTRY.sources.filters, filter);
     },
@@ -119,7 +127,8 @@ export function createSourcesService(store: Store): SourcesService {
       const repos = store.repos;
       const row = repos.sources.get(id);
       if (!row) throw new NotFoundError("source", id);
-      return { ...row, citedBy: citedByCount(repos, id) };
+      const capture = (row.capturePath && captureStamps(repos).get(row.capturePath)) || null;
+      return { ...row, citedBy: citedByCount(repos, id), capture };
     },
     /** @inheritdoc */
     create: (input) =>

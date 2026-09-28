@@ -220,7 +220,13 @@ export const REGISTRY = {
   }),
   researchRecords: entry(researchRecords, { path: "/records", record: "slug" }),
   recordModes: entry(recordModes, {}),
-  captures: entry(captures, {}),
+  captures: entry(captures, {
+    path: "/captures",
+    filters: {
+      record: { schema: nonEmpty, match: { equals: "recordSlug" } },
+      path: { schema: nonEmpty, match: { equals: "path" } },
+    },
+  }),
   glossary: entry(glossary, { path: "/glossary" }),
   decks: entry(decks, {
     path: "/decks",

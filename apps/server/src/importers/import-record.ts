@@ -27,7 +27,7 @@ export interface ImportOptions {
  * Loads a research record into the database, next to any other records:
  * its curated collections (see `collections.ts`), each row with its
  * citations, its ranking TSVs, and, when the manifest names them, its
- * fight timeline and buff capture. Sources get their English summary from
+ * fight timeline, buff capture and capture ledger. Sources get their English summary from
  * the record's extractions and, for `dc`/`nv` ids, the path of their
  * evidence capture. Every row it writes is owned by the record. Sources,
  * glossary entries and buff values can be shared: the first record to load
@@ -47,8 +47,9 @@ export interface ImportOptions {
  * @throws {ImportError} naming the file and row, if a file is missing or
  *   malformed, a row fails its schema, a row cites an unknown source or
  *   deck, a counter's mode isn't its decks' mode, two ranking rows share a
- *   key, a deck id or counter slug is already loaded by another record, or
- *   a buff value conflicts with the one another record loaded
+ *   key, a deck id or counter slug is already loaded by another record, a
+ *   buff value conflicts with the one another record loaded, or the capture
+ *   ledger has a bad line or disagrees with the evidence on disk
  * @throws {ImportError} `"record <slug> is already loaded; pass --replace
  *   to load it again"` if the record owns rows and `replace` isn't set
  */

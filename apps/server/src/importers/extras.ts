@@ -1,7 +1,8 @@
 /**
  * The extra blocks a record's `import.json` may carry besides its curated
  * collections: captures that aren't curated JSON (leaderboard TSVs, a fight
- * timeline, a buff capture), each with its own schema and reader. A new
+ * timeline, a buff capture) and the capture ledger, each with its own
+ * schema and reader. A new
  * capture type is an entry here; the manifest schema and the reader pick
  * it up.
  *
@@ -10,6 +11,7 @@
 import { z } from "zod";
 import { buffValuesSpec, insertBuffValues, readBuffValues } from "./buff-values";
 import { fightEventsSpec, readFightEvents } from "./fight-events";
+import { insertCaptures, ledgerSpec, readCaptures } from "./ledger";
 import { rankingSpec, readRankings } from "./rankings";
 import type { WriteStep } from "./steps";
 import { insertCited } from "./steps";
@@ -74,6 +76,10 @@ export const EXTRAS = {
     read: (spec, { recordDir, sourceIds, glossaryKrs }) => [
       insertBuffValues(spec.file, readBuffValues(recordDir, spec, sourceIds, glossaryKrs)),
     ],
+  }),
+  ledger: extra({
+    schema: ledgerSpec.optional(),
+    read: (_spec, { recordDir }) => [insertCaptures(readCaptures(recordDir))],
   }),
 };
 

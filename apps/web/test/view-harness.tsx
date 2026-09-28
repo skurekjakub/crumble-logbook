@@ -23,6 +23,11 @@ export const VIEW_SOURCES = [
     capturePath: "research/001-guild-conquest-meta/evidence/03-dc-posts/76135.md",
     recordSlug: null,
     records: ["001-guild-conquest-meta"],
+    capture: {
+      capturedAt: "2026-09-27T10:39:53+02:00",
+      tool: "python:dc_scrape",
+      approx: "header",
+    },
   },
   {
     id: "nv:43653",
@@ -37,6 +42,7 @@ export const VIEW_SOURCES = [
     capturePath: null,
     recordSlug: null,
     records: ["001-guild-conquest-meta"],
+    capture: null,
   },
   {
     id: "web:crumbgg:rankings-s5",
@@ -51,6 +57,7 @@ export const VIEW_SOURCES = [
     capturePath: "research/001-guild-conquest-meta/evidence/12-crumbgg/s5.json",
     recordSlug: null,
     records: ["001-guild-conquest-meta"],
+    capture: { capturedAt: "2026-09-27T14:34:16+02:00", tool: "curl", approx: null },
   },
 ] satisfies Source[];
 

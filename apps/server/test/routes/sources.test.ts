@@ -36,6 +36,73 @@ describe("sources routes", () => {
     expect(res.status).toBe(409);
   });
 
+  it("gives each source its capture's ledger time and tool, joined on its capture path", async () => {
+    const { app, store } = setup();
+    store.repos.sources.insert({
+      id: "dc:1",
+      site: "dc",
+      url: "https://example.test/dc1",
+      capturePath: "research/r1/evidence/dc/1.md",
+    });
+    store.repos.sources.insert({ id: "dc:2", site: "dc", url: "https://example.test/dc2" });
+    store.repos.sources.insert({
+      id: "dc:3",
+      site: "dc",
+      url: "https://example.test/dc3",
+      capturePath: "research/r1/evidence/dc/3.md",
+    });
+    store.repos.captures.insertMany([
+      {
+        recordSlug: "r1",
+        path: "evidence/dc/1.md",
+        url: "https://example.test/dc1",
+        capturedAt: "2026-09-27T10:39:53+02:00",
+        approx: "header",
+        tool: "python:dc_scrape",
+        sha256: "0".repeat(64),
+      },
+    ]);
+    const list = await readJson<Array<{ id: string; capture: unknown }>>(
+      await app.request("/api/sources"),
+    );
+    const stamp = {
+      capturedAt: "2026-09-27T10:39:53+02:00",
+      tool: "python:dc_scrape",
+      approx: "header",
+    };
+    expect(Object.fromEntries(list.map((s) => [s.id, s.capture]))).toEqual({
+      "dc:1": stamp,
+      "dc:2": null,
+      "dc:3": null,
+    });
+    const one = await readJson<{ capture: unknown }>(await app.request("/api/sources/dc%3A1"));
+    expect(one.capture).toEqual(stamp);
+  });
+
+  it("GET /api/captures filters by record and path", async () => {
+    const { app, store } = setup();
+    const row = {
+      url: null,
+      capturedAt: "2026-09-27T10:39:53+02:00",
+      tool: "manual",
+      sha256: "0".repeat(64),
+    };
+    store.repos.captures.insertMany([
+      { ...row, recordSlug: "r1", path: "evidence/b.md" },
+      { ...row, recordSlug: "r1", path: "evidence/a.md" },
+      { ...row, recordSlug: "r2", path: "evidence/a.md" },
+    ]);
+    const paths = async (query: string) =>
+      (
+        await readJson<Array<{ recordSlug: string; path: string }>>(
+          await app.request(`/api/captures${query}`),
+        )
+      ).map((c) => `${c.recordSlug}/${c.path}`);
+    expect(await paths("")).toEqual(["r1/evidence/a.md", "r1/evidence/b.md", "r2/evidence/a.md"]);
+    expect(await paths("?record=r1")).toEqual(["r1/evidence/a.md", "r1/evidence/b.md"]);
+    expect(await paths("?path=evidence/a.md&record=r2")).toEqual(["r2/evidence/a.md"]);
+  });
+
   it("GET /:id with a URL-encoded colon resolves to the decoded id, with citedBy", async () => {
     const { app, store } = setup();
     store.repos.sources.insert({ id: "dc:76135", site: "dc", url: "https://example.test/dc76135" });

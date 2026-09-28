@@ -115,7 +115,9 @@ const expectedCounts = {
   sources: Object.keys(sources).length,
   researchRecords: 1,
   recordModes: 0,
-  captures: 0,
+  captures: readFileSync(join(recordDir, "evidence", "captures.jsonl"), "utf-8")
+    .trimEnd()
+    .split("\n").length,
   glossary: glossary.length,
   decks: decks.length,
   deckCookies: sum(decks.map((d) => d.cookies.length)),
@@ -383,7 +385,7 @@ describe("importRecord validation", () => {
   /**
    * Builds a throwaway record from record 001's curated files, with one
    * collection (`file`, unless `null`) rewritten by `mutate`. The manifest
-   * has no captures, rankings, fight events or buff values, unless
+   * has no captures, rankings, fight events, buff values or ledger, unless
    * `opts.manifest` sets them; `opts.evidence` lists record-relative files
    * to copy over from record 001.
    *
@@ -413,6 +415,7 @@ describe("importRecord validation", () => {
         rankings: [],
         fightEvents: undefined,
         buffValues: undefined,
+        ledger: undefined,
         ...opts.manifest,
       }),
     );

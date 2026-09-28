@@ -342,6 +342,7 @@ describe("ids another record already loaded", FULL_IMPORT, () => {
         rankings: [],
         fightEvents: undefined,
         buffValues: undefined,
+        ledger: undefined,
       }),
     );
     return tmp;
@@ -503,6 +504,7 @@ describe("shared buff values", FULL_IMPORT, () => {
         rankings: [],
         fightEvents: undefined,
         buffValues: { ...buffs, ...buffValues },
+        ledger: undefined,
       }),
     );
     return tmp;

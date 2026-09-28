@@ -193,6 +193,9 @@ importers:
 
   apps/server:
     dependencies:
+      '@crumble/capture':
+        specifier: workspace:*
+        version: link:../../packages/capture
       '@crumble/schema':
         specifier: workspace:*
         version: link:../../packages/schema

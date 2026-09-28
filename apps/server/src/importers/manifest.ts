@@ -12,8 +12,8 @@ import { formatIssues } from "./files";
  * every curated row that states none), where the
  * curated dataset and the extractions live, how to find each source's
  * evidence capture, and one field per extra block (see `EXTRAS` in
- * `extras.ts`: the ranking TSVs, and, optionally, the fight timeline and
- * the buff capture). Every path is relative to the record directory; a
+ * `extras.ts`: the ranking TSVs, and, optionally, the fight timeline, the
+ * buff capture and the capture ledger). Every path is relative to the record directory; a
  * capture rule's `dir` may climb into another record's evidence
  * (`../<slug>/evidence/...`). An unknown key fails, at the top level as in
  * every block.

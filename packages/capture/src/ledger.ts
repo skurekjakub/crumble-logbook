@@ -13,7 +13,7 @@
  * @module
  */
 import { createHash } from "node:crypto";
-import { appendFileSync, existsSync, readdirSync, readFileSync } from "node:fs";
+import { appendFileSync, existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { extname, join, relative, sep } from "node:path";
 import type { CaptureApprox, CaptureLine } from "@crumble/schema";
 import { captureLine } from "@crumble/schema";
@@ -58,14 +58,14 @@ export class LedgerError extends Error {
    *
    * @param file - the ledger's path, as the message names it
    * @param line - the 1-based ledger line at fault, or `null`
-   * @param message - what went wrong
+   * @param detail - what went wrong
    */
   constructor(
     readonly file: string,
     readonly line: number | null,
-    message: string,
+    readonly detail: string,
   ) {
-    super(`${file}${line == null ? "" : ` [line ${line}]`}: ${message}`);
+    super(`${file}${line == null ? "" : ` [line ${line}]`}: ${detail}`);
     this.name = "LedgerError";
   }
 }
@@ -148,13 +148,47 @@ export function sha256File(file: string): string {
  * @throws if the file can't be read
  */
 export function matchesHash(file: string, sha256: string): boolean {
+  return fileHashes(file).includes(sha256);
+}
+
+/** A file's hashes as last computed, with the size and mtime they were computed at. */
+interface HashedFile {
+  size: number;
+  mtimeMs: number;
+  hashes: readonly string[];
+}
+
+/**
+ * Hashes already computed in this process, by absolute path. An import
+ * verifies a record's whole ledger, and a process (a test run above all)
+ * may import the same record many times.
+ */
+const HASHED = new Map<string, HashedFile>();
+
+/**
+ * Computes the hashes {@link matchesHash} accepts for a file: its bytes',
+ * and for a text file holding CRLF, its LF form's. Reuses the last result
+ * while the file's size and mtime are unchanged.
+ *
+ * @param file - absolute path of the file
+ * @returns one or two lowercase hex SHA-256 digests
+ * @throws if the file can't be read
+ */
+function fileHashes(file: string): readonly string[] {
+  const { size, mtimeMs } = statSync(file);
+  const known = HASHED.get(file);
+  if (known?.size === size && known.mtimeMs === mtimeMs) return known.hashes;
   const bytes = readFileSync(file);
-  if (createHash("sha256").update(bytes).digest("hex") === sha256) return true;
-  if (isMedia(file) || bytes.includes(0)) return false;
-  const text = bytes.toString("latin1");
-  if (!text.includes("\r\n")) return false;
-  const lf = Buffer.from(text.replaceAll("\r\n", "\n"), "latin1");
-  return createHash("sha256").update(lf).digest("hex") === sha256;
+  const hashes = [createHash("sha256").update(bytes).digest("hex")];
+  if (!isMedia(file) && !bytes.includes(0)) {
+    const text = bytes.toString("latin1");
+    if (text.includes("\r\n")) {
+      const lf = Buffer.from(text.replaceAll("\r\n", "\n"), "latin1");
+      hashes.push(createHash("sha256").update(lf).digest("hex"));
+    }
+  }
+  HASHED.set(file, { size, mtimeMs, hashes });
+  return hashes;
 }
 
 /**

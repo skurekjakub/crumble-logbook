@@ -16,6 +16,7 @@
     "db:restore": "tsx src/cli/restore.ts"
   },
   "dependencies": {
+    "@crumble/capture": "workspace:*",
     "@crumble/schema": "workspace:*",
     "@hono/node-server": "^2.1.1",
     "@hono/zod-validator": "^0.9.1",

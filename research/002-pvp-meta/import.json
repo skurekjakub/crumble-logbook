@@ -12,5 +12,6 @@
     { "site": "dc", "dir": "evidence/02-dc-rumble/dc", "file": "{id}.md" },
     { "site": "nv", "dir": "evidence/04-naver-global/nv", "file": "nv-{id}.md" }
   ],
-  "rankings": []
+  "rankings": [],
+  "ledger": { "file": "evidence/captures.jsonl" }
 }
