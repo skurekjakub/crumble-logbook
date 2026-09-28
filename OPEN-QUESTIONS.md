@@ -10,9 +10,7 @@ Audit: [`docs/architecture/2026-09-28-audit.md`](docs/architecture/2026-09-28-au
 
 Spec: [`docs/superpowers/specs/2026-09-27-crumble-logbook-design.md`](docs/superpowers/specs/2026-09-27-crumble-logbook-design.md), success criterion 3 ("A DC, Naver or crumb.gg scrape can be triggered from the UI and its captures land in a record") and its Jobs section. It was never built: plan 2 (jobs and scrapers) was never written, no `/jobs` route exists, and the `jobs` table the migrations create is unused. Captures are still taken by the Python scripts under `research/*/evidence/` and by agent-browser sessions.
 
-1. **Build it or descope it?**
-   - Build: write plan 2 (the job runner, the DC, Naver and crumb.gg scrapers ported to TypeScript, `/jobs` routes and a jobs screen), then implement it.
-   - Descope: strike criterion 3 from the spec, keep capturing by script, and drop the `jobs` table in a migration.
+**Decided 2026-09-28:** scraping stays out of the UI (scripts and agent-browser keep capturing), on the condition that an audit trail records what was scraped and when. The design that meets it, approved the same day with the scrapers ported to TypeScript, is [`docs/superpowers/specs/2026-09-28-capture-ledger-design.md`](docs/superpowers/specs/2026-09-28-capture-ledger-design.md); it replaces criterion 3. Delete this entry when it ships.
 
 ## Guild Conquest simulator (deferred 2026-09-27)
 
