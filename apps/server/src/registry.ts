@@ -25,6 +25,7 @@ import {
   buffValueInput,
   buffValuePatch,
   buffValues,
+  captures,
   citations,
   counterInput,
   counterPatch,
@@ -207,8 +208,7 @@ const nonEmpty = z.string().min(1);
 
 /**
  * Every durable table, keyed by its snapshot name, in foreign-key-safe
- * insert order: a table only references tables above it. `jobs` holds
- * transient job state and isn't registered.
+ * insert order: a table only references tables above it.
  */
 export const REGISTRY = {
   sources: entry(sources, {
@@ -220,6 +220,7 @@ export const REGISTRY = {
   }),
   researchRecords: entry(researchRecords, { path: "/records", record: "slug" }),
   recordModes: entry(recordModes, {}),
+  captures: entry(captures, {}),
   glossary: entry(glossary, { path: "/glossary" }),
   decks: entry(decks, {
     path: "/decks",

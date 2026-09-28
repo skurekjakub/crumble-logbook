@@ -115,6 +115,7 @@ const expectedCounts = {
   sources: Object.keys(sources).length,
   researchRecords: 1,
   recordModes: 0,
+  captures: 0,
   glossary: glossary.length,
   decks: decks.length,
   deckCookies: sum(decks.map((d) => d.cookies.length)),

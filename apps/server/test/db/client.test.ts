@@ -22,7 +22,7 @@ const EXPECTED_TABLES = [
   "timeline",
   "recommendations",
   "citations",
-  "jobs",
+  "captures",
 ];
 
 describe("openDb", () => {
@@ -33,6 +33,12 @@ describe("openDb", () => {
     for (const table of EXPECTED_TABLES) {
       expect(names).toContain(table);
     }
+  });
+
+  it("drops the unused jobs table", () => {
+    const db = openDb(":memory:");
+    const rows = db.all<{ name: string }>(sql`select name from sqlite_master where type = 'table'`);
+    expect(rows.map((r) => r.name)).not.toContain("jobs");
   });
 
   it("enforces foreign keys: a citation referencing an unknown source throws", () => {

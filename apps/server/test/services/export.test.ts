@@ -12,9 +12,9 @@ import { addSource, testStore } from "../helpers";
 
 /**
  * Tables the migrations create that a snapshot deliberately leaves out:
- * transient job state, SQLite's id counters, and drizzle's migration log.
+ * SQLite's id counters and drizzle's migration log.
  */
-const NOT_SNAPSHOTTED = ["jobs", "sqlite_sequence", "__drizzle_migrations"];
+const NOT_SNAPSHOTTED = ["sqlite_sequence", "__drizzle_migrations"];
 
 /** The ids the round-trip test asserts survive restore, gaps and all. */
 interface SeedIds {
@@ -183,6 +183,18 @@ function seedEverything(store: Store): SeedIds {
   store.repos.tables.load("recordModes", [
     { recordSlug: "kr-levers", mode: "arena", lede: "Arena lede", caveat: null },
   ]);
+  store.repos.tables.load("captures", [
+    {
+      id: 1,
+      recordSlug: "kr-levers",
+      path: "evidence/03-dc-posts/1.md",
+      url: "https://m.dcinside.com/board/projectcc/1",
+      capturedAt: "2026-01-01T10:00:00+02:00",
+      approx: "header",
+      tool: "python:dc_scrape",
+      sha256: "0".repeat(64),
+    },
+  ]);
   services.decks.create({
     id: "rival",
     nameEn: "Rival",
@@ -240,6 +252,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       sources: 2,
       researchRecords: 1,
       recordModes: 1,
+      captures: 1,
       glossary: 1,
       decks: 2,
       deckCookies: 2,

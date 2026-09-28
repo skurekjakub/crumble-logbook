@@ -69,9 +69,14 @@ export type BuffBase = (typeof BUFF_BASE)[number];
 export const BUFF_TARGET = ["team", "self"] as const;
 export type BuffTarget = (typeof BUFF_TARGET)[number];
 
-/** Lifecycle status of a background job. */
-export const JOB_STATUS = ["queued", "running", "done", "failed", "cancelled"] as const;
-export type JobStatus = (typeof JOB_STATUS)[number];
+/**
+ * How a backfilled capture-ledger line knows its capture time: from the
+ * capture's own `captured:` header line (`header`), from the post an image
+ * belongs to (`post`), or only from the file's first commit (`git`). A line
+ * written at capture time has none.
+ */
+export const CAPTURE_APPROX = ["header", "post", "git"] as const;
+export type CaptureApprox = (typeof CAPTURE_APPROX)[number];
 
 /** Entities that carry citations; `citations.entity` takes one of these. */
 export const CITED_ENTITY = [

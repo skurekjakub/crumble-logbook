@@ -378,16 +378,19 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
 
     roundtrip(
       db,
-      tables.jobs,
-      schemas.jobInsert,
-      schemas.jobSelect,
+      tables.captures,
+      schemas.captureInsert,
+      schemas.captureSelect,
       {
-        kind: "import:record",
-        params: { recordSlug: "gc-meta" },
-        status: "queued",
-        createdAt: "2026-01-01T00:00:00Z",
+        recordSlug: "gc-meta",
+        path: "evidence/03-dc-posts/17035.md",
+        url: "https://m.dcinside.com/board/projectcc/17035",
+        capturedAt: "2026-09-27T10:39:53+02:00",
+        approx: "header",
+        tool: "python:dc_scrape",
+        sha256: "a".repeat(64),
       },
-      (j) => eq(j.kind, "import:record"),
+      (c) => eq(c.path, "evidence/03-dc-posts/17035.md"),
     );
   });
 });

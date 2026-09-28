@@ -1,5 +1,6 @@
 import { createInsertSchema, createSelectSchema } from "drizzle-orm/zod";
 import { z } from "zod";
+import { captureTool, evidencePath, isoDateTime, sha256Hex } from "./ledger";
 import * as t from "./tables";
 
 /**
@@ -270,17 +271,19 @@ export const citationSelect = createSelectSchema(t.citations);
 export type CitationRow = typeof t.citations.$inferSelect;
 
 /**
- * Insert schema for `jobs`. `params` accepts any JSON-serializable value;
- * `log` is optional on insert (it has a runtime default).
+ * Insert schema for `captures`. `path` is record-relative under
+ * `evidence/`; `capturedAt` is ISO 8601 with an offset; `tool` is a
+ * {@link captureTool}; `sha256` is a lowercase hex digest.
  */
-export const jobInsert = createInsertSchema(t.jobs, {
-  params: () => z.unknown(),
-  log: () => z.array(z.string()).optional(),
+export const captureInsert = createInsertSchema(t.captures, {
+  recordSlug: (s) => s.min(1),
+  path: () => evidencePath,
+  url: (s) => s.min(1).nullish(),
+  capturedAt: () => isoDateTime,
+  tool: () => captureTool,
+  sha256: () => sha256Hex,
 });
-/** Select schema for `jobs`, with `params`/`log` typed precisely. */
-export const jobSelect = createSelectSchema(t.jobs, {
-  params: () => z.unknown(),
-  log: () => z.array(z.string()),
-});
-/** A row selected from `jobs`. */
-export type JobRow = typeof t.jobs.$inferSelect;
+/** Select schema for `captures`, mirroring the stored row shape. */
+export const captureSelect = createSelectSchema(t.captures);
+/** A row selected from `captures`. */
+export type CaptureRow = typeof t.captures.$inferSelect;

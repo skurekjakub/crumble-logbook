@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { describe, expect, it } from "vitest";
 import {
   BUFF_BASE,
+  CAPTURE_APPROX,
   CITED_ENTITY,
   CONFIDENCE,
   DECK_NOTE_KIND,
@@ -10,7 +11,6 @@ import {
   GEAR_CONTEXT,
   GEAR_SLOT,
   GLOSSARY_KIND,
-  JOB_STATUS,
   RANKING_BOARD,
   RECORD_STATUS,
   SOURCE_SITE,
@@ -282,30 +282,31 @@ describe("enum columns", () => {
     ).toBe(false);
   });
 
-  it("job status: every member inserts and round-trips; a non-member is rejected", () => {
+  it("capture approx: every member inserts and round-trips; a non-member is rejected", () => {
     const db = createTestDb();
-    for (const status of JOB_STATUS) {
-      const values = schemas.jobInsert.parse({
-        kind: `kind-${status}`,
-        params: {},
-        status,
-        createdAt: "2026-01-01T00:00:00Z",
+    const capture = {
+      recordSlug: "r1",
+      capturedAt: "2026-01-01T00:00:00+02:00",
+      tool: "unknown",
+      sha256: "0".repeat(64),
+    };
+    for (const approx of CAPTURE_APPROX) {
+      const values = schemas.captureInsert.parse({
+        ...capture,
+        path: `evidence/${approx}.md`,
+        approx,
       });
-      db.insert(tables.jobs).values(values).run();
+      db.insert(tables.captures).values(values).run();
       const selected = db
         .select()
-        .from(tables.jobs)
-        .where(eq(tables.jobs.kind, `kind-${status}`))
+        .from(tables.captures)
+        .where(eq(tables.captures.path, `evidence/${approx}.md`))
         .get();
-      expect(selected?.status).toBe(status);
+      expect(selected?.approx).toBe(approx);
     }
     expect(
-      schemas.jobInsert.safeParse({
-        kind: "k",
-        params: {},
-        status: "bogus",
-        createdAt: "2026-01-01T00:00:00Z",
-      }).success,
+      schemas.captureInsert.safeParse({ ...capture, path: "evidence/x.md", approx: "mtime" })
+        .success,
     ).toBe(false);
   });
 

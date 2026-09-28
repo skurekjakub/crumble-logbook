@@ -5,8 +5,7 @@ import type { Store } from "../repos";
 
 /**
  * Every table a {@link Snapshot} captures, keyed by its registry name, in
- * the registry's foreign-key-safe insert order. `jobs` (transient
- * background-job state) isn't registered, so it's never captured.
+ * the registry's foreign-key-safe insert order.
  */
 export type SnapshotTables = { [K in TableKey]: RowOf<K>[] };
 
