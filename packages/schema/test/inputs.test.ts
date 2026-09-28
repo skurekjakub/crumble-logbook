@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import type { z } from "zod";
 import * as inputs from "../src/inputs";
 
 describe("sourceIds", () => {
@@ -6,6 +7,37 @@ describe("sourceIds", () => {
     const result = inputs.sourceIds.safeParse([]);
     expect(result.success).toBe(false);
     expect(result.error?.issues[0]?.message).toBe("cite at least one source");
+  });
+});
+
+describe("cited inputs and patches", () => {
+  const cited = [
+    "mechanic",
+    "rngFactor",
+    "timelineEvent",
+    "takeaway",
+    "gearRec",
+    "recommendation",
+    "score",
+    "fightEvent",
+    "buffValue",
+    "counter",
+    "usageStat",
+  ] as const;
+  const schema = (name: string) => (inputs as unknown as Record<string, z.ZodObject>)[name]!;
+
+  it.each(cited)("%sInput takes no id and needs a source", (name) => {
+    const input = schema(`${name}Input`);
+    expect(input.shape).not.toHaveProperty("id");
+    expect(input.shape).toHaveProperty("sources");
+    expect(input.safeParse({ sources: [] }).success).toBe(false);
+  });
+
+  it.each(cited)("%sPatch parses {} to {} and rejects empty sources", (name) => {
+    const patch = schema(`${name}Patch`);
+    expect(patch.shape).not.toHaveProperty("id");
+    expect(patch.parse({})).toEqual({});
+    expect(patch.safeParse({ sources: [] }).success).toBe(false);
   });
 });
 

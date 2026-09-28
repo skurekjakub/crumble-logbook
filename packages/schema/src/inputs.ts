@@ -26,6 +26,30 @@ import {
 export const sourceIds = z.array(sourceId).min(1, "cite at least one source");
 
 /**
+ * The create input and the patch of a cited content type, from its table's
+ * insert schema. The input drops the server-assigned `id` and requires the
+ * `sources` the row cites; the patch makes every field optional, `sources`
+ * included, and still rejects an empty `sources`.
+ *
+ * @typeParam Shape - the insert schema's fields, `id` among them
+ * @typeParam Config - the insert schema's object config
+ * @param insert - the table's insert schema
+ * @returns `input` and `patch`
+ */
+function citedInputs<
+  Shape extends z.core.$ZodShape & { id: z.core.$ZodType },
+  Config extends z.core.$ZodObjectConfig,
+>(insert: z.ZodObject<Shape, Config>) {
+  // zod's `omit` checks the mask against the shape's keys, which a generic shape can't resolve.
+  const idOnly = { id: true } as { id: true } & Record<Exclude<"id", keyof Shape>, never>;
+  const fields = insert.omit(idOnly);
+  return {
+    input: fields.extend({ sources: sourceIds }),
+    patch: fields.partial().extend({ sources: sourceIds.optional() }),
+  };
+}
+
+/**
  * Input for creating a source. `site` is derived server-side from the id
  * prefix (`dc:`/`nv:`/`web:`), so it isn't accepted from the client.
  */
@@ -43,161 +67,121 @@ export const glossaryInput = glossaryInsert;
 /** Output of {@link glossaryInput}. */
 export type GlossaryInput = z.output<typeof glossaryInput>;
 
+const mechanic = citedInputs(mechanicInsert);
 /** Input for creating a mechanic writeup, with the sources that support it. */
-export const mechanicInput = mechanicInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const mechanicInput = mechanic.input;
 /** Output of {@link mechanicInput}. */
 export type MechanicInput = z.output<typeof mechanicInput>;
-
 /** Patch for updating a mechanic writeup. `sources`, if given, must be non-empty. */
-export const mechanicPatch = mechanicInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const mechanicPatch = mechanic.patch;
 /** Output of {@link mechanicPatch}. */
 export type MechanicPatch = z.output<typeof mechanicPatch>;
 
+const rngFactor = citedInputs(rngFactorInsert);
 /** Input for creating an RNG factor writeup, with the sources that support it. */
-export const rngFactorInput = rngFactorInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const rngFactorInput = rngFactor.input;
 /** Output of {@link rngFactorInput}. */
 export type RngFactorInput = z.output<typeof rngFactorInput>;
-
 /** Patch for updating an RNG factor writeup. `sources`, if given, must be non-empty. */
-export const rngFactorPatch = rngFactorInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const rngFactorPatch = rngFactor.patch;
 /** Output of {@link rngFactorPatch}. */
 export type RngFactorPatch = z.output<typeof rngFactorPatch>;
 
+const timelineEvent = citedInputs(timelineEventInsert);
 /** Input for creating a timeline event, with the sources that support it. */
-export const timelineEventInput = timelineEventInsert
-  .omit({ id: true })
-  .extend({ sources: sourceIds });
+export const timelineEventInput = timelineEvent.input;
 /** Output of {@link timelineEventInput}. */
 export type TimelineEventInput = z.output<typeof timelineEventInput>;
-
 /** Patch for updating a timeline event. `sources`, if given, must be non-empty. */
-export const timelineEventPatch = timelineEventInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const timelineEventPatch = timelineEvent.patch;
 /** Output of {@link timelineEventPatch}. */
 export type TimelineEventPatch = z.output<typeof timelineEventPatch>;
 
+const takeaway = citedInputs(takeawayInsert);
 /** Input for creating a takeaway, with the sources that support it. */
-export const takeawayInput = takeawayInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const takeawayInput = takeaway.input;
 /** Output of {@link takeawayInput}. */
 export type TakeawayInput = z.output<typeof takeawayInput>;
-
 /** Patch for updating a takeaway. `sources`, if given, must be non-empty. */
-export const takeawayPatch = takeawayInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const takeawayPatch = takeaway.patch;
 /** Output of {@link takeawayPatch}. */
 export type TakeawayPatch = z.output<typeof takeawayPatch>;
 
+const gearRec = citedInputs(gearRecInsert);
 /** Input for creating a gear recommendation, with the sources that support it. */
-export const gearRecInput = gearRecInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const gearRecInput = gearRec.input;
 /** Output of {@link gearRecInput}. */
 export type GearRecInput = z.output<typeof gearRecInput>;
-
 /** Patch for updating a gear recommendation. `sources`, if given, must be non-empty. */
-export const gearRecPatch = gearRecInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const gearRecPatch = gearRec.patch;
 /** Output of {@link gearRecPatch}. */
 export type GearRecPatch = z.output<typeof gearRecPatch>;
 
+const recommendation = citedInputs(recommendationInsert);
 /** Input for creating a recommendation, with the sources that support it. */
-export const recommendationInput = recommendationInsert
-  .omit({ id: true })
-  .extend({ sources: sourceIds });
+export const recommendationInput = recommendation.input;
 /** Output of {@link recommendationInput}. */
 export type RecommendationInput = z.output<typeof recommendationInput>;
-
 /** Patch for updating a recommendation. `sources`, if given, must be non-empty. */
-export const recommendationPatch = recommendationInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const recommendationPatch = recommendation.patch;
 /** Output of {@link recommendationPatch}. */
 export type RecommendationPatch = z.output<typeof recommendationPatch>;
 
+const score = citedInputs(scoreInsert);
 /** Input for creating a score, with the sources that support it. */
-export const scoreInput = scoreInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const scoreInput = score.input;
 /** Output of {@link scoreInput}. */
 export type ScoreInput = z.output<typeof scoreInput>;
-
 /** Patch for updating a score. `sources`, if given, must be non-empty. */
-export const scorePatch = scoreInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const scorePatch = score.patch;
 /** Output of {@link scorePatch}. */
 export type ScorePatch = z.output<typeof scorePatch>;
 
+const fightEvent = citedInputs(fightEventInsert);
 /** Input for creating a fight event, with the sources that support it. */
-export const fightEventInput = fightEventInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const fightEventInput = fightEvent.input;
 /** Output of {@link fightEventInput}. */
 export type FightEventInput = z.output<typeof fightEventInput>;
-
 /** Patch for updating a fight event. `sources`, if given, must be non-empty. */
-export const fightEventPatch = fightEventInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const fightEventPatch = fightEvent.patch;
 /** Output of {@link fightEventPatch}. */
 export type FightEventPatch = z.output<typeof fightEventPatch>;
 
+const buffValue = citedInputs(buffValueInsert);
 /** Input for creating a buff value, with the sources that support it. */
-export const buffValueInput = buffValueInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const buffValueInput = buffValue.input;
 /** Output of {@link buffValueInput}. */
 export type BuffValueInput = z.output<typeof buffValueInput>;
-
 /** Patch for updating a buff value. `sources`, if given, must be non-empty. */
-export const buffValuePatch = buffValueInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const buffValuePatch = buffValue.patch;
 /** Output of {@link buffValuePatch}. */
 export type BuffValuePatch = z.output<typeof buffValuePatch>;
 
+const counter = citedInputs(counterInsert);
 /**
  * Input for creating a counter edge, with the sources that support it. A
  * deck can't counter itself: `teamDeckId` and `beatenByDeckId` must differ.
  * The omit runs before the refine because zod 4 rejects `.omit()` on an
  * already-refined object.
  */
-export const counterInput = counterInsert
-  .omit({ id: true })
-  .extend({ sources: sourceIds })
-  .refine((c) => c.teamDeckId !== c.beatenByDeckId, {
-    message: "a deck can't be its own counter",
-    path: ["beatenByDeckId"],
-  });
+export const counterInput = counter.input.refine((c) => c.teamDeckId !== c.beatenByDeckId, {
+  message: "a deck can't be its own counter",
+  path: ["beatenByDeckId"],
+});
 /** Output of {@link counterInput}. */
 export type CounterInput = z.output<typeof counterInput>;
-
 /** Patch for updating a counter edge. `sources`, if given, must be non-empty. */
-export const counterPatch = counterInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const counterPatch = counter.patch;
 /** Output of {@link counterPatch}. */
 export type CounterPatch = z.output<typeof counterPatch>;
 
+const usageStat = citedInputs(usageStatInsert);
 /** Input for creating a usage figure, with the sources that support it. */
-export const usageStatInput = usageStatInsert.omit({ id: true }).extend({ sources: sourceIds });
+export const usageStatInput = usageStat.input;
 /** Output of {@link usageStatInput}. */
 export type UsageStatInput = z.output<typeof usageStatInput>;
-
 /** Patch for updating a usage figure. `sources`, if given, must be non-empty. */
-export const usageStatPatch = usageStatInsert
-  .omit({ id: true })
-  .partial()
-  .extend({ sources: sourceIds.optional() });
+export const usageStatPatch = usageStat.patch;
 /** Output of {@link usageStatPatch}. */
 export type UsageStatPatch = z.output<typeof usageStatPatch>;
 
