@@ -2,6 +2,10 @@
 
 Decisions waiting on the user. Each links to the design it blocks. Answer inline, or in a session, and delete the entry once it's settled.
 
+## Architecture for the roadmap (raised 2026-09-28)
+
+Audit: [`docs/architecture/2026-09-28-audit.md`](docs/architecture/2026-09-28-audit.md), §5. Its "do now" refactors (§3) don't wait on these; the questions set the shape of the later steps: mode routing, who owns game facts, the sim API shape, results for non-damage modes, porting or wrapping the scrapers, what stage pushing and Golden Drop are as data, a mechanical file-size rule, and source sites for crumb.gg and YouTube.
+
 ## Scraping from the UI (raised 2026-09-28)
 
 Spec: [`docs/superpowers/specs/2026-09-27-crumble-logbook-design.md`](docs/superpowers/specs/2026-09-27-crumble-logbook-design.md), success criterion 3 ("A DC, Naver or crumb.gg scrape can be triggered from the UI and its captures land in a record") and its Jobs section. It was never built: plan 2 (jobs and scrapers) was never written, no `/jobs` route exists, and the `jobs` table the migrations create is unused. Captures are still taken by the Python scripts under `research/*/evidence/` and by agent-browser sessions.
