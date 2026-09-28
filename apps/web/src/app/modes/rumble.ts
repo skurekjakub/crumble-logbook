@@ -3,6 +3,7 @@
  *
  * @module
  */
+import { modeLink } from "./links";
 import { PVP_COPY, pvpTabs } from "./pvp-shared";
 import type { ModeSection } from "./types";
 
@@ -14,10 +15,11 @@ export const RUMBLE = {
   labelKr: "와글와글 아레나",
   title: "Rumble Arena Logbook",
   to: "/rumble",
+  link: modeLink("rumble"),
   recordSlug: "002-pvp-meta",
   lede: null,
   stamp: ["updated", "sources", "decks"],
-  tabs: pvpTabs("/rumble"),
+  tabs: pvpTabs("rumble"),
   scope: { mode: "rumble_arena" },
   placeholder: null,
   copy: {

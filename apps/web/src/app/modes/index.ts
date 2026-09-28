@@ -5,10 +5,11 @@
  * header, mode tabs and sub-tabs from this module alone.
  *
  * A view that serves several modes takes a {@link ModeSection} and reads
- * its scope and copy from it; each mode mounts it at its own static route.
- * A mode-specific screen (the conquest boss screen) takes its own config
- * block from its mode. Each mode's section lives in its own file here; a new
- * mode is a new file, added to {@link MODES}.
+ * its scope and copy from it; the shared route files under `routes/$mode/`
+ * mount it for every mode whose tabs list the page. A mode-specific screen
+ * (the conquest boss screen) takes its own config block from its mode.
+ * Each mode's section lives in its own file here; a new mode is a new
+ * file, added to {@link MODES}.
  *
  * @module
  */
@@ -20,6 +21,7 @@ import { SHARED_SECTIONS } from "./shared";
 import type { ModeSection, Section, SectionTab } from "./types";
 
 export type * from "./types";
+export { modeLink, modePath, modeTab } from "./links";
 export { ARENA, CONQUEST, RUMBLE, SHARED_SECTIONS };
 
 /** Game modes, in tab order. */
@@ -27,6 +29,28 @@ export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE];
 
 /** Every top-level section, modes first. */
 export const SECTIONS: readonly Section[] = [...MODES, ...SHARED_SECTIONS];
+
+/**
+ * The game mode whose first path segment is `id`.
+ *
+ * @param id - a path segment, e.g. `arena`
+ * @returns the mode's section, or undefined when no mode has that id
+ */
+export function modeById(id: string): ModeSection | undefined {
+  return MODES.find((m) => m.id === id);
+}
+
+/**
+ * The tab of a section at exactly `pathname`.
+ *
+ * @param section - the section
+ * @param pathname - a location pathname; a trailing slash is ignored
+ * @returns the tab, or undefined when none is at that path
+ */
+export function tabAt(section: Section, pathname: string): SectionTab | undefined {
+  const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  return section.tabs.find((t) => t.to === path);
+}
 
 /**
  * The mechanics topics a mode shows somewhere other than its mechanics

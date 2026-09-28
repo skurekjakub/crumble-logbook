@@ -3,6 +3,7 @@
  *
  * @module
  */
+import { modeLink, modeTab } from "./links";
 import type { ModeSection } from "./types";
 
 /** Guild Conquest (길드 토벌전): the Piñata raid. */
@@ -13,18 +14,19 @@ export const CONQUEST = {
   labelKr: "길드 토벌전",
   title: "Piñata Raid Logbook",
   to: "/conquest",
+  link: modeLink("conquest"),
   recordSlug: "001-guild-conquest-meta",
   lede: null,
   stamp: ["updated", "season", "sources", "decks"],
   tabs: [
-    { id: "overview", label: "Overview", to: "/conquest" },
-    { id: "decks", label: "Decks", to: "/conquest/decks" },
-    { id: "runes", label: "Sugar runes", to: "/conquest/runes" },
-    { id: "gear", label: "Gear", to: "/conquest/gear" },
-    { id: "scores", label: "Scores & RNG", to: "/conquest/scores" },
-    { id: "mechanics", label: "Mechanics", to: "/conquest/mechanics" },
-    { id: "timeline", label: "Timeline", to: "/conquest/timeline" },
-    { id: "boss", label: "Piñata", to: "/conquest/boss" },
+    modeTab("conquest", "overview", "Overview", "/$mode"),
+    modeTab("conquest", "decks", "Decks", "/$mode/decks"),
+    modeTab("conquest", "runes", "Sugar runes", "/$mode/runes"),
+    modeTab("conquest", "gear", "Gear", "/$mode/gear"),
+    modeTab("conquest", "scores", "Scores & RNG", "/$mode/scores"),
+    modeTab("conquest", "mechanics", "Mechanics", "/$mode/mechanics"),
+    modeTab("conquest", "timeline", "Timeline", "/$mode/timeline"),
+    modeTab("conquest", "boss", "Piñata", "/$mode/boss"),
   ],
   scope: { mode: "guild_conquest" },
   placeholder: null,

@@ -12,14 +12,18 @@ import {
   sourcesQuery,
   usageQuery,
 } from "../src/api/queries";
+import type { ModeRoutePath } from "../src/app/modes";
 import {
   activeTab,
   ARENA,
   CONQUEST,
   MODES,
+  modeById,
+  modePath,
   RUMBLE,
   SHARED_SECTIONS,
   sectionForPath,
+  tabAt,
 } from "../src/app/modes";
 import { requestPath, stubApi } from "./helpers";
 
@@ -53,6 +57,30 @@ describe("activeTab", () => {
   it("picks the longest matching tab", () => {
     expect(activeTab(tabs, "/conquest/decks")?.to).toBe("/conquest/decks");
     expect(activeTab(tabs, "/conquest/scores/")?.to).toBe("/conquest/scores");
+  });
+});
+
+describe("modeById and tabAt", () => {
+  it("find a mode by its path segment, and nothing for another segment", () => {
+    expect(modeById("arena")).toBe(ARENA);
+    expect(modeById("research")).toBeUndefined();
+  });
+
+  it("find a tab at exactly a path, ignoring a trailing slash", () => {
+    expect(tabAt(ARENA, "/arena/teams/")?.id).toBe("teams");
+    expect(tabAt(ARENA, "/arena")?.id).toBe("overview");
+    expect(tabAt(ARENA, "/arena/scores")).toBeUndefined();
+    expect(tabAt(CONQUEST, "/conquest/scores")?.id).toBe("scores");
+  });
+
+  it("link every tab to its route with the mode's id, at the tab's own path", () => {
+    for (const mode of MODES) {
+      expect(mode.link, mode.id).toEqual({ to: "/$mode", params: { mode: mode.id } });
+      for (const tab of mode.tabs) {
+        expect(tab.link.params, tab.to).toEqual({ mode: mode.id });
+        expect(modePath(mode.id, tab.link.to as ModeRoutePath), tab.to).toBe(tab.to);
+      }
+    }
   });
 });
 

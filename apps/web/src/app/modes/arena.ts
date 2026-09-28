@@ -3,6 +3,7 @@
  *
  * @module
  */
+import { modeLink } from "./links";
 import { PVP_COPY, pvpTabs } from "./pvp-shared";
 import type { ModeSection } from "./types";
 
@@ -14,10 +15,11 @@ export const ARENA = {
   labelKr: "아레나",
   title: "Arena Logbook",
   to: "/arena",
+  link: modeLink("arena"),
   recordSlug: "002-pvp-meta",
   lede: null,
   stamp: ["updated", "sources", "decks"],
-  tabs: pvpTabs("/arena"),
+  tabs: pvpTabs("arena"),
   scope: { mode: "arena" },
   placeholder: null,
   copy: {

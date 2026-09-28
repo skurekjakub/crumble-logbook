@@ -8,8 +8,24 @@ import type { ModeScope, RankingBoardFilter } from "../../api/queries";
 import type { GearRec } from "../../api/types";
 import type { FileRoutesByTo } from "../../routeTree.gen";
 
-/** A navigable app path, checked against the generated route tree. */
-export type AppPath = keyof FileRoutesByTo;
+/** A route path of the generated route tree, e.g. `/$mode/teams` or `/sources`. */
+export type RoutePath = keyof FileRoutesByTo;
+
+/** A route path under a game mode: `/$mode` itself or one of its pages. */
+export type ModeRoutePath = Extract<RoutePath, "/$mode" | `/$mode/${string}`>;
+
+/** A route path outside any mode that takes no params. */
+export type SharedRoutePath = Exclude<RoutePath, `${string}$${string}`>;
+
+/** A concrete app path, as the address bar shows it, e.g. `/arena/teams`. */
+export type AppPath = `/${string}`;
+
+/**
+ * Where a link goes, checked against the generated route tree: a page
+ * under a mode with the mode's id as its `$mode` param, or a shared page.
+ */
+export type LinkTarget =
+  { to: ModeRoutePath; params: { mode: string } } | { to: SharedRoutePath; params?: undefined };
 
 /** A figure the header's stamp can show. */
 export type StampStat = "updated" | "season" | "sources" | "decks";
@@ -19,7 +35,10 @@ export interface SectionTab {
   /** Unique within the section. */
   id: string;
   label: string;
+  /** The tab's concrete path. */
   to: AppPath;
+  /** The tab's route, for a link. */
+  link: LinkTarget;
 }
 
 /**
@@ -55,7 +74,10 @@ interface SectionBase {
   labelKr: string | null;
   /** The header's `<h1>`. */
   title: string;
+  /** The section's concrete path: `/<id>`. */
   to: AppPath;
+  /** The section's landing route, for a link. */
+  link: LinkTarget;
   /** The research record whose lede, season and update date fill the header; null for none. */
   recordSlug: string | null;
   /** Header lede when there's no record, or the record has none. */

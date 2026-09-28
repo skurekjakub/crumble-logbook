@@ -30,13 +30,13 @@ function coveredModes(record: ResearchRecord): ModeSection[] {
 function ModeLinks({ mode }: { mode: ModeSection }) {
   return (
     <div className="mode-links">
-      <Link to={mode.to} className="mode-link">
+      <Link {...mode.link} className="mode-link">
         {mode.label}
       </Link>{" "}
       {mode.labelKr ? <span className="kr">{mode.labelKr}</span> : null}
       <div className="chips">
         {mode.tabs.map((t) => (
-          <Link key={t.id} to={t.to} className="chip">
+          <Link key={t.id} {...t.link} className="chip">
             {t.label}
           </Link>
         ))}

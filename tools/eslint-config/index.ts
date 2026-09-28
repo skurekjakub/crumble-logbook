@@ -42,10 +42,15 @@ export function crumbleConfig(rootDir: string) {
         "@typescript-eslint/no-generated-empty-object-type": "off",
         // Single-use type parameters carry inference through the registry and view helpers.
         "@typescript-eslint/no-unnecessary-type-parameters": "off",
-        // TanStack Router's `redirect()` is thrown by design.
+        // TanStack Router's `redirect()` and `notFound()` are thrown by design.
         "@typescript-eslint/only-throw-error": [
           "error",
-          { allow: [{ from: "package", package: "@tanstack/router-core", name: "Redirect" }] },
+          {
+            allow: [
+              { from: "package", package: "@tanstack/router-core", name: "Redirect" },
+              { from: "package", package: "@tanstack/router-core", name: "NotFoundError" },
+            ],
+          },
         ],
         // Template literals with numbers are how the views format stats; the rule's default only allows strings.
         "@typescript-eslint/restrict-template-expressions": ["error", { allowNumber: true }],

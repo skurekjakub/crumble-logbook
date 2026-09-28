@@ -1,13 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import type { MouseEvent } from "react";
-import type { AppPath } from "../app/modes";
+import type { LinkTarget } from "../app/modes";
 
 /** One page link under the current section of a {@link SideNav}. */
 export interface NavPage {
   /** Unique within the section; the React key. */
   id: string;
   label: string;
-  to: AppPath;
+  link: LinkTarget;
   /** Whether this is the page shown. */
   current: boolean;
 }
@@ -19,7 +19,7 @@ export interface NavSection {
   label: string;
   /** Korean name shown beneath the label; null for none. */
   labelKr: string | null;
-  to: AppPath;
+  link: LinkTarget;
   /**
    * `page` when the section's own landing page is shown, `section` when one
    * of its other pages is, null otherwise.
@@ -82,7 +82,7 @@ export function SideNav({ id, label, sections }: SideNavProps) {
         {sections.map((s) => (
           <li key={s.id} className={s.startsGroup ? "nav-section group" : "nav-section"}>
             <Link
-              to={s.to}
+              {...s.link}
               className="nav-section-link"
               data-keep-open={s.hasPages ? "" : undefined}
               // Link forces aria-current="page" on an active match; exact matching keeps that to the page itself.
@@ -104,7 +104,7 @@ export function SideNav({ id, label, sections }: SideNavProps) {
                 {s.pages.map((p) => (
                   <li key={p.id}>
                     <Link
-                      to={p.to}
+                      {...p.link}
                       activeOptions={{ exact: true, includeSearch: false, includeHash: false }}
                       aria-current={p.current ? "page" : undefined}
                     >

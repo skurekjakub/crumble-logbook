@@ -4,7 +4,8 @@
  *
  * @module
  */
-import type { SharedView, ViewCopy } from "./types";
+import { modeTab } from "./links";
+import type { SectionTab, SharedView, ViewCopy } from "./types";
 
 /** The PvP views' copy that doesn't depend on the mode. */
 export const PVP_COPY = {
@@ -35,20 +36,20 @@ export const PVP_COPY = {
 } as const satisfies Partial<Record<SharedView, ViewCopy>>;
 
 /**
- * A PvP mode's sub-tabs, under its path.
+ * A PvP mode's sub-tabs.
  *
- * @param to - the mode's path
+ * @param mode - the mode's id, its first path segment
  * @returns the tabs, overview first
  */
-export function pvpTabs<const P extends "/arena" | "/rumble">(to: P) {
+export function pvpTabs(mode: "arena" | "rumble"): SectionTab[] {
   return [
-    { id: "overview", label: "Overview", to },
-    { id: "teams", label: "Teams", to: `${to}/teams` },
-    { id: "counters", label: "Counters", to: `${to}/counters` },
-    { id: "usage", label: "Usage", to: `${to}/usage` },
-    { id: "runes", label: "Sugar runes", to: `${to}/runes` },
-    { id: "gear", label: "Gear", to: `${to}/gear` },
-    { id: "mechanics", label: "Mechanics", to: `${to}/mechanics` },
-    { id: "timeline", label: "Timeline", to: `${to}/timeline` },
-  ] as const;
+    modeTab(mode, "overview", "Overview", "/$mode"),
+    modeTab(mode, "teams", "Teams", "/$mode/teams"),
+    modeTab(mode, "counters", "Counters", "/$mode/counters"),
+    modeTab(mode, "usage", "Usage", "/$mode/usage"),
+    modeTab(mode, "runes", "Sugar runes", "/$mode/runes"),
+    modeTab(mode, "gear", "Gear", "/$mode/gear"),
+    modeTab(mode, "mechanics", "Mechanics", "/$mode/mechanics"),
+    modeTab(mode, "timeline", "Timeline", "/$mode/timeline"),
+  ];
 }

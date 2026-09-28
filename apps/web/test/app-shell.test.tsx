@@ -1,8 +1,12 @@
-import { fireEvent, screen, waitFor, within } from "@testing-library/react";
+import { cleanup, fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import type { Deck, ResearchRecord, Source } from "../src/api/types";
+import { MODES } from "../src/app/modes";
 import type { Canned } from "./helpers";
 import { renderRoute } from "./view-harness";
+
+/** The router's not-found state, as the panel shows it. */
+const NOT_FOUND = "Nothing lives at this address. Pick a section above.";
 
 const RECORD = {
   slug: "001-guild-conquest-meta",
@@ -157,9 +161,33 @@ describe("app shell", () => {
   it("shows the record's lede on a mode's landing page only", async () => {
     const router = await renderAt("/conquest");
     expect(await screen.findByText(RECORD.lede)).toHaveClass("lede");
-    await router.navigate({ to: "/conquest/decks" });
+    await router.navigate({ to: "/$mode/decks", params: { mode: "conquest" } });
     await waitFor(() => expect(document.querySelector("header.top .lede")).toBeNull());
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Piñata Raid Logbook");
+  });
+
+  it("serves every mode's every tab at its own URL, and a mode's own copy on it", async () => {
+    for (const mode of MODES) {
+      for (const tab of mode.tabs) {
+        const router = await renderRoute(tab.to, {}, { mode });
+        expect(router.state.location.pathname, tab.to).toBe(tab.to);
+        expect(screen.queryByText(NOT_FOUND), tab.to).toBeNull();
+        const nav = screen.getByRole("navigation", { name: "Logbook" });
+        const pages = within(nav).getByRole("list", { name: `${mode.label} sections` });
+        expect(within(pages).getByRole("link", { current: "page" }), tab.to).toHaveTextContent(
+          tab.label,
+        );
+        cleanup();
+      }
+    }
+  });
+
+  it("answers not found for a page the mode doesn't have, and for an unknown mode", async () => {
+    for (const path of ["/arena/scores", "/arena/boss", "/conquest/teams", "/nowhere"]) {
+      await renderAt(path);
+      expect(await screen.findByText(NOT_FOUND), path).toBeVisible();
+      cleanup();
+    }
   });
 
   it("redirects / to /conquest", async () => {
@@ -183,7 +211,7 @@ describe("app shell", () => {
     expect(await screen.findByRole("alert")).toHaveTextContent("Couldn't load research record");
     expect(screen.getByRole("navigation", { name: "Logbook" })).toBeVisible();
     expect(screen.getByRole("main")).toBeInTheDocument();
-    await router.navigate({ to: "/conquest/gear" });
+    await router.navigate({ to: "/$mode/gear", params: { mode: "conquest" } });
     await waitFor(() => expect(router.state.location.pathname).toBe("/conquest/gear"));
     expect(document.querySelector("header.top [role=alert]")).toHaveTextContent(
       "Couldn't load research record",

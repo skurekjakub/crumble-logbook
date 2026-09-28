@@ -92,7 +92,7 @@ function RootLayout() {
           id: s.id,
           label: s.label,
           labelKr: s.labelKr,
-          to: s.to,
+          link: s.link,
           current: s.id !== section?.id ? null : landing ? "page" : "section",
           startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",
           hasPages: s.tabs.length > 0,
@@ -101,7 +101,7 @@ function RootLayout() {
               ? s.tabs.map((t) => ({
                   id: t.id,
                   label: t.label,
-                  to: t.to,
+                  link: t.link,
                   current: t.id === tab?.id,
                 }))
               : [],
