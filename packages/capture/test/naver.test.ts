@@ -101,7 +101,7 @@ describe("naver articles", () => {
     expect(written).toBe(
       '# 1\n\n- url: https://cafe.naver.com/ccrumble/1\n\n(refused: {"result": {"errorCode": "0004", "reason": "\\uba64\\ubc84 \\uacf5\\uac1c"}})\n',
     );
-    expect(renderRefused("1", "u", { a: "x".repeat(500) })).toHaveLength(
+    expect(renderRefused("1", "u", JSON.stringify({ a: "x".repeat(500) }))).toHaveLength(
       "# 1\n\n- url: u\n\n(refused: ".length + 400 + ")\n".length,
     );
   });

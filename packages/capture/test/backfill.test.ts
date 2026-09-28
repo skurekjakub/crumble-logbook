@@ -230,9 +230,12 @@ describe("backfill", () => {
     put(repo, "research/r/evidence/sub/b 한.json", "b");
     git(["add", "."]);
     git(["commit", "-q", "--no-verify", "-m", "b"], "2026-09-28T09:30:00+02:00");
+    git(["mv", "research/r/evidence/a.md", "research/r/evidence/c.md"]);
+    git(["commit", "-q", "--no-verify", "-m", "c"], "2026-09-28T11:00:00+02:00");
     const times = gitCommitTimes(join(repo, "research", "r"));
     expect(Object.fromEntries(times)).toEqual({
       "evidence/a.md": "2026-09-27T10:00:00+02:00",
+      "evidence/c.md": "2026-09-28T11:00:00+02:00",
       "evidence/sub/b 한.json": "2026-09-28T09:30:00+02:00",
     });
   });

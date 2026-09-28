@@ -52,15 +52,34 @@ export const MEDIA_EXTENSIONS = [
 ] as const;
 
 /**
- * Local by-products the ledger never lists, matched by a path segment:
- * Python bytecode and OS folder metadata. `.gitignore` excludes them too.
+ * Local by-products the ledger never lists, matched by any path segment,
+ * a file's or a folder's: the non-media file patterns `.gitignore`
+ * excludes everywhere. Git never stores them, so a line for one would be
+ * missing on every clone; keep this list in step with `.gitignore`.
  */
 export const IGNORED_SEGMENTS: readonly RegExp[] = [
-  /^__pycache__$/,
+  /\.db$/,
+  /\.db-(journal|wal|shm)$/,
+  /^\.env$/,
+  /^\.env\./,
+  /\.tsbuildinfo$/,
   /\.pyc$/,
   /^\.DS_Store$/,
   /^Thumbs\.db$/,
   /^desktop\.ini$/,
+];
+
+/**
+ * Local folders the ledger never lists anything under, matched by a
+ * folder's path segment: the folder patterns `.gitignore` excludes
+ * everywhere. Keep this list in step with `.gitignore`.
+ */
+export const IGNORED_FOLDERS: readonly RegExp[] = [
+  /^node_modules$/,
+  /^dist$/,
+  /^coverage$/,
+  /^\.vite$/,
+  /^__pycache__$/,
 ];
 
 /** A ledger that can't be read, a refused append, or a failed verification. */
@@ -131,10 +150,15 @@ export function isMedia(path: string): boolean {
  * Reports whether a record-relative path is a local by-product the ledger skips.
  *
  * @param path - a `/`-separated path
- * @returns `true` if any of its segments matches {@link IGNORED_SEGMENTS}
+ * @returns `true` if any of its segments matches {@link IGNORED_SEGMENTS},
+ *   or any of its folders {@link IGNORED_FOLDERS}
  */
 export function isIgnored(path: string): boolean {
-  return path.split("/").some((segment) => IGNORED_SEGMENTS.some((re) => re.test(segment)));
+  const segments = path.split("/");
+  return (
+    segments.some((segment) => IGNORED_SEGMENTS.some((re) => re.test(segment))) ||
+    segments.slice(0, -1).some((segment) => IGNORED_FOLDERS.some((re) => re.test(segment)))
+  );
 }
 
 /**

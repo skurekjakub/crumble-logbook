@@ -10,8 +10,7 @@ import type { CaptureContext } from "./context";
 import { exists, logCapture, writeText } from "./context";
 import type { HttpOptions } from "./http";
 import { DESKTOP_UA, HttpClient } from "./http";
-import { pyQuote } from "./dc";
-import { pyGet, pyRepr, pyStr } from "./text";
+import { pyGet, pyQuote, pyRepr, pyStr } from "./text";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 

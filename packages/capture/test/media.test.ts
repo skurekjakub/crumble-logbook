@@ -1,5 +1,69 @@
+import { mkdirSync, readdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { frameName, framesArgs, sheetArgs, showinfoTimes, subsArgs, ytDlpArgs } from "../src/media";
+import { readLedger, verifyLedger } from "../src/ledger";
+import type { YtDlp } from "../src/media";
+import {
+  downloadVideos,
+  frameName,
+  framesArgs,
+  sheetArgs,
+  showinfoTimes,
+  subsArgs,
+  ytDlpArgs,
+} from "../src/media";
+import { fakeFetch, testContext } from "./helpers";
+
+/**
+ * Builds a stand-in for yt-dlp that writes the files it's given under the
+ * output template's name, then fails if told to.
+ *
+ * @param exts - the extensions to write, e.g. `mp4` or `mp4.part`
+ * @param fail - whether to exit non-zero after writing
+ * @returns the stand-in and the argument lists it was called with
+ */
+function fakeYtDlp(exts: string[], fail = false): { ytDlp: YtDlp; calls: string[][] } {
+  const calls: string[][] = [];
+  return {
+    calls,
+    ytDlp: (args) => {
+      calls.push([...args]);
+      const template = args[args.indexOf("-o") + 1]!;
+      for (const ext of exts) writeFileSync(template.replace("%(ext)s", ext), ext);
+      if (fail) throw new Error("yt-dlp exited 1");
+    },
+  };
+}
+
+describe("yt-dlp downloads", () => {
+  it("downloads over a failed run's leftovers, clears them, and logs only the finished file", () => {
+    const { context } = testContext(fakeFetch([]), "capture:youtube");
+    const dir = join(context.recordDir, "evidence/yt");
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, "abc.mp4.part"), "partial");
+    writeFileSync(join(dir, "abc.f137.mp4"), "stream");
+    const { ytDlp } = fakeYtDlp(["mp4", "mp4.ytdl"]);
+    expect(downloadVideos(context, "evidence/yt", ["abc"], ytDlp)).toEqual(["evidence/yt/abc.mp4"]);
+    expect(readdirSync(dir)).toEqual(["abc.mp4"]);
+    expect(readLedger(context.recordDir)[0]!.line).toMatchObject({
+      url: "https://www.youtube.com/watch?v=abc",
+      tool: "yt-dlp",
+    });
+    expect(verifyLedger(context.recordDir)).toEqual([]);
+
+    const again = fakeYtDlp(["mp4"]);
+    expect(downloadVideos(context, "evidence/yt", ["abc"], again.ytDlp)).toEqual([]);
+    expect(again.calls).toEqual([]);
+  });
+
+  it("leaves nothing behind when yt-dlp fails", () => {
+    const { context } = testContext(fakeFetch([]), "capture:youtube");
+    const { ytDlp } = fakeYtDlp(["mp4.part", "webm"], true);
+    expect(() => downloadVideos(context, "evidence/yt", ["abc"], ytDlp)).toThrow(/exited 1/);
+    expect(readdirSync(join(context.recordDir, "evidence/yt"))).toEqual([]);
+    expect(readLedger(context.recordDir)).toEqual([]);
+  });
+});
 
 describe("yt-dlp and ffmpeg wrappers", () => {
   it("names frames as frames.py did", () => {

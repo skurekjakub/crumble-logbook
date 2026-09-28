@@ -72,12 +72,50 @@ export function ytDlpArgs(url: string, outTemplate: string): string[] {
 }
 
 /**
+ * Runs `yt-dlp` to completion.
+ *
+ * @param args - its arguments
+ * @throws if it can't start or exits non-zero
+ */
+export type YtDlp = (args: readonly string[]) => void;
+
+/**
+ * Runs the `yt-dlp` on `PATH`.
+ *
+ * @param args - its arguments
+ * @throws if it can't start or exits non-zero
+ */
+const runYtDlp: YtDlp = (args) => {
+  runOk("yt-dlp", args);
+};
+
+/**
+ * Reports whether a file name is a finished download of a video:
+ * `<id>.<ext>`, as the output template names it, and not one of yt-dlp's
+ * leftovers (`.part`, `.ytdl`, a `.fNNN.` format stream, a `.temp.` merge).
+ *
+ * @param vid - the video id
+ * @param name - the file name
+ * @returns `true` for a finished download
+ */
+function isFinished(vid: string, name: string): boolean {
+  if (!name.startsWith(`${vid}.`)) return false;
+  const ext = name.slice(vid.length + 1);
+  return /^[A-Za-z0-9]+$/.test(ext) && ext !== "part" && ext !== "ytdl";
+}
+
+/**
  * Downloads each video with `yt-dlp` as `<outdir>/<id>.<ext>`, each file
- * with a ledger line (tool `yt-dlp`). A video with a file already there is skipped.
+ * with a ledger line (tool `yt-dlp`). A video with a finished download
+ * already there is skipped; leftovers of an earlier failed run don't
+ * count. A failed run deletes every file under the video's name, and a
+ * successful one the leftovers beside its download, so nothing is left
+ * without a ledger line.
  *
  * @param context - the run
  * @param outdir - the record-relative folder, under `evidence/`
  * @param vids - the video ids
+ * @param ytDlp - runs yt-dlp; the one on `PATH` unless a test passes another
  * @returns the record-relative paths written
  * @throws if `yt-dlp` fails or a ledger line can't be written
  */
@@ -85,6 +123,7 @@ export function downloadVideos(
   context: CaptureContext,
   outdir: string,
   vids: readonly string[],
+  ytDlp: YtDlp = runYtDlp,
 ): string[] {
   const dir = join(context.recordDir, outdir);
   mkdirSync(dir, { recursive: true });
@@ -96,13 +135,21 @@ export function downloadVideos(
      * @returns their names
      */
     const files = () => readdirSync(dir).filter((name) => name.startsWith(`${vid}.`));
-    if (files().length > 0) {
+    if (files().some((name) => isFinished(vid, name))) {
       context.log(`skip ${vid}: already downloaded`);
       continue;
     }
     const url = `https://www.youtube.com/watch?v=${vid}`;
     const at = context.now();
-    runOk("yt-dlp", ytDlpArgs(url, join(dir, `${vid}.%(ext)s`)));
+    try {
+      ytDlp(ytDlpArgs(url, join(dir, `${vid}.%(ext)s`)));
+    } catch (err) {
+      for (const name of files()) rmSync(join(dir, name), { force: true });
+      throw err;
+    }
+    for (const name of files()) {
+      if (!isFinished(vid, name)) rmSync(join(dir, name), { force: true });
+    }
     for (const name of files()) {
       const path = `${outdir}/${name}`;
       appendAs(context, path, url, at, "yt-dlp");

@@ -29,8 +29,9 @@ import {
 } from "./ledger";
 import { isoFromHeader } from "./time";
 
-/** The retired Python scrapers' tools, as backfilled lines name them. */
+/** The retired DC scraper's tool, as backfilled lines name it. */
 export const DC_TOOL = "python:dc_scrape";
+/** The retired Naver scraper's tool, as backfilled lines name it. */
 export const NV_TOOL = "python:nv_scrape";
 
 /** What a capture's header lines say. */
@@ -106,7 +107,8 @@ export function siblingUrl(recordDir: string, path: string): string | null {
 export type CommitTimes = (recordDir: string) => Map<string, string>;
 
 /**
- * Reads every evidence file's first-add time from git, in one `git log`.
+ * Reads every evidence file's first-add time from git, in one `git log`. A
+ * file moved to its current path is dated by the commit that moved it.
  *
  * @param recordDir - absolute path of the record folder, inside a git work tree
  * @returns record-relative path → first add's author time
@@ -129,8 +131,10 @@ export const gitCommitTimes: CommitTimes = (recordDir) => {
     return result.stdout;
   };
   const prefix = git(["rev-parse", "--show-prefix"]).trim();
+  // --no-renames: with rename detection a moved file shows as R, never A, and would have no time.
   const out = git([
     "log",
+    "--no-renames",
     "--diff-filter=A",
     "--format=%x01%aI",
     "--name-only",

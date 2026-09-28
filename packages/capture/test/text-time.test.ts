@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { getText, parseHtml } from "../src/html";
-import { pyCollapse, pyJsonDumps, pyRepr, pyStrip, toLf } from "../src/text";
+import { pyCollapse, pyJsonRedump, pyQuote, pyRepr, pyStrip, toLf } from "../src/text";
 import { headerStamp, isoFromHeader, isoLocal, localDate, localMinute } from "../src/time";
 
 describe("python-compatible text", () => {
@@ -16,11 +16,30 @@ describe("python-compatible text", () => {
     expect(pyRepr([{ tuple: ["ko", "asr"] }])).toBe("[('ko', 'asr')]");
     expect(pyRepr("it's")).toBe('"it\'s"');
     expect(pyRepr(null)).toBe("None");
-    expect(pyJsonDumps({ a: [1, "é"], b: null, c: true })).toBe(
+    expect(pyJsonRedump('{"a":[1,"é"],"b":null,"c":true}')).toBe(
       '{"a": [1, "\\u00e9"], "b": null, "c": true}',
     );
-    expect(pyJsonDumps("😀")).toBe('"\\ud83d\\ude00"');
+    expect(pyJsonRedump('"😀"')).toBe('"\\ud83d\\ude00"');
+    expect(() => pyJsonRedump('{"a": 1,}')).toThrow(SyntaxError);
+    expect(() => pyJsonRedump(`"a${String.fromCharCode(1)}"`)).toThrow(SyntaxError);
     expect(toLf("a\r\nb\rc\n")).toBe("a\nb\rc\n");
+  });
+
+  it("keeps json.dumps's key order and number forms, which a parsed object loses", () => {
+    // Expected output printed by Python 3.12's json.dumps(json.loads(...)).
+    expect(
+      pyJsonRedump(
+        '{"b": 1, "10": 1.0, "a": [1e16, 0.00001, -0, 1.5e300, 123456789012345678, 1E2, -0.0, 2.50], "b": 2}',
+      ),
+    ).toBe(
+      '{"b": 2, "10": 1.0, "a": [1e+16, 1e-05, 0, 1.5e+300, 123456789012345678, 100.0, -0.0, 2.5]}',
+    );
+    expect(pyJsonRedump("[0.0001, 123.456, 1e15]")).toBe("[0.0001, 123.456, 1000000000000000.0]");
+  });
+
+  it("quotes URLs as urllib.parse.quote does", () => {
+    expect(pyQuote("a b/c~d")).toBe("a%20b/c~d");
+    expect(pyQuote("아")).toBe("%EC%95%84");
   });
 
   it("collects text as BeautifulSoup's get_text(strip=True) does", () => {

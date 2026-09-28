@@ -11,7 +11,7 @@ import { getText, parseHtml } from "./html";
 import { HttpClient, imageExt, MOBILE_UA } from "./http";
 import type { HttpOptions } from "./http";
 import { headerStamp } from "./time";
-import { pyCollapse } from "./text";
+import { pyCollapse, pyQuote } from "./text";
 
 /** The gallery id. */
 export const GALL = "projectcc";
@@ -87,24 +87,6 @@ export function listPageUrl(query: string, page: number): string {
 }
 
 /**
- * Percent-encodes a string as Python's `urllib.parse.quote` (and
- * `requests.utils.quote`) does: UTF-8, keeping letters, digits, `_.-~` and `/`.
- *
- * @param text - the string
- * @returns it percent-encoded, with uppercase hex
- */
-export function pyQuote(text: string): string {
-  let out = "";
-  for (const byte of new TextEncoder().encode(text)) {
-    const ch = String.fromCharCode(byte);
-    out += /[A-Za-z0-9_.\-~/]/.test(ch)
-      ? ch
-      : `%${byte.toString(16).toUpperCase().padStart(2, "0")}`;
-  }
-  return out;
-}
-
-/**
  * Reads the posts of one listing page.
  *
  * @param html - the page's markup
@@ -154,7 +136,9 @@ export function listTsv(rows: ReadonlyArray<ListRow & { query: string }>): strin
 /**
  * Searches the gallery for each query, page by page until a page comes back
  * empty, and writes one TSV row per post (a post several queries find lists
- * them all), with its ledger line.
+ * them all), with its ledger line. The line's URL is the query's first
+ * page, or the board's URL for several queries, which the TSV's `query`
+ * column names.
  *
  * @param context - the run
  * @param out - the TSV's record-relative path
@@ -188,10 +172,7 @@ export async function dcList(
   }
   const at = context.now();
   writeText(context, out, listTsv([...seen.values()]));
-  const url =
-    queries.length === 1
-      ? listPageUrl(queries[0]!, 1)
-      : `${BOARD_URL} (search listing; queries in the file's query column)`;
+  const url = queries.length === 1 ? listPageUrl(queries[0]!, 1) : BOARD_URL;
   logCapture(context, out, url, at);
   context.log(`wrote ${seen.size} rows to ${out}`);
   return seen.size;

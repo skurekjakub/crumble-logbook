@@ -2,6 +2,7 @@ import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  BOARD_URL,
   dcFetch,
   dcList,
   listPageUrl,
@@ -9,7 +10,6 @@ import {
   parseComments,
   parseListPage,
   parsePost,
-  pyQuote,
 } from "../src/dc";
 import { LEDGER_FILE, readLedger, verifyLedger } from "../src/ledger";
 import type { SeenRequest } from "./helpers";
@@ -51,7 +51,6 @@ describe("dc listing", () => {
     expect(listPageUrl("@recommend", 3)).toBe(
       "https://m.dcinside.com/board/projectcc?recommend=1&page=3",
     );
-    expect(pyQuote("a b/c~d")).toBe("a%20b/c~d");
   });
 
   it("reads every post of a saved listing page", () => {
@@ -83,6 +82,7 @@ describe("dc listing", () => {
     const [entry] = readLedger(context.recordDir);
     expect(entry!.line).toMatchObject({
       path: "evidence/01/list.tsv",
+      url: BOARD_URL,
       tool: "capture:dc",
       captured_at: "2026-09-27T16:45:36+02:00",
     });

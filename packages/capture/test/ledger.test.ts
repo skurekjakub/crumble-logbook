@@ -204,8 +204,24 @@ describe("the ledger", () => {
       .sort();
     expect([...MEDIA_EXTENSIONS].sort()).toEqual(ignoredMedia);
     for (const ext of MEDIA_EXTENSIONS) expect(isMedia(`a${ext.toUpperCase()}`)).toBe(true);
-    for (const pattern of ["__pycache__/", "*.pyc", ".DS_Store", "Thumbs.db", "desktop.ini"]) {
-      expect(gitignore, pattern).toContain(pattern);
+  });
+
+  it("skips every file .gitignore excludes outside research/, so no line names a file git never stores", () => {
+    const patterns = readFileSync(join(findRepoRoot(import.meta.dirname), ".gitignore"), "utf-8")
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => line !== "" && !line.startsWith("#") && !line.startsWith("research/"));
+    const floating = patterns.filter((line) => !line.slice(0, -1).includes("/"));
+    expect(floating.length).toBeGreaterThan(0);
+    for (const pattern of floating) {
+      const name = pattern.replace(/\/$/, "").replaceAll("*", "x");
+      if (pattern.endsWith("/")) {
+        expect(isIgnored(`evidence/sub/${name}/f.md`), pattern).toBe(true);
+        expect(isIgnored(`evidence/sub/${name}`), pattern).toBe(false);
+      } else {
+        expect(isIgnored(`evidence/sub/${name}`), pattern).toBe(true);
+      }
     }
+    expect(isIgnored("evidence/notes.md")).toBe(false);
   });
 });

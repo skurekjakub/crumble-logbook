@@ -2,8 +2,8 @@
  * Text handling with Python's semantics, so the ports write what the
  * retired Python scrapers wrote: Python's whitespace set (which differs
  * from JavaScript's `\s` and `trim()`), `repr()` of the values the
- * YouTube digest prints, and newline normalisation for text written to
- * `evidence/`.
+ * YouTube digest prints, `json.dumps`, URL quoting, and newline
+ * normalisation for text written to `evidence/`.
  *
  * @module
  */
@@ -128,20 +128,141 @@ function pyJsonString(text: string): string {
 }
 
 /**
- * Serialises parsed JSON as Python's `json.dumps(value)` with its defaults:
- * `", "` and `": "` separators, keys in their order, non-ASCII escaped.
+ * Formats a float as Python's `repr()` (and so `json.dumps`) does: the
+ * shortest digits that round-trip, in positional notation with at least
+ * one digit after the point, or in `e` notation with a two-digit exponent
+ * when the exponent is below -4 or 16 and above.
  *
- * @param value - parsed JSON
- * @returns the serialisation
+ * @param x - the float
+ * @returns e.g. `1.0`, `0.0001`, `1e-05`, `1e+16`; `Infinity` or `-Infinity` when not finite
  */
-export function pyJsonDumps(value: unknown): string {
-  if (value === null || value === undefined) return "null";
-  if (typeof value === "string") return pyJsonString(value);
-  if (typeof value === "number") return Number.isFinite(value) ? String(value) : "NaN";
-  if (typeof value === "boolean") return value ? "true" : "false";
-  if (Array.isArray(value)) return `[${value.map(pyJsonDumps).join(", ")}]`;
-  const entries = Object.entries(value as Record<string, unknown>);
-  return `{${entries.map(([k, v]) => `${pyJsonString(k)}: ${pyJsonDumps(v)}`).join(", ")}}`;
+function pyFloatRepr(x: number): string {
+  if (!Number.isFinite(x)) return x > 0 ? "Infinity" : "-Infinity";
+  if (x === 0) return Object.is(x, -0) ? "-0.0" : "0.0";
+  const sign = x < 0 ? "-" : "";
+  const [mantissa, exponent] = Math.abs(x).toExponential().split("e") as [string, string];
+  const digits = mantissa.replace(".", "");
+  const exp = Number(exponent);
+  if (exp < -4 || exp >= 16) {
+    const rest = digits.length > 1 ? `.${digits.slice(1)}` : "";
+    const power = String(Math.abs(exp)).padStart(2, "0");
+    return `${sign}${digits[0]!}${rest}e${exp < 0 ? "-" : "+"}${power}`;
+  }
+  if (exp < 0) return `${sign}0.${"0".repeat(-exp - 1)}${digits}`;
+  const whole = digits.slice(0, exp + 1).padEnd(exp + 1, "0");
+  return `${sign}${whole}.${digits.slice(exp + 1) || "0"}`;
+}
+
+/** JSON whitespace, from the current position. */
+const JSON_SPACE = /[ \t\n\r]*/y;
+/** A JSON string token's extent, escapes included; `JSON.parse` then checks its content. */
+const JSON_STRING = /"(?:[^"\\]|\\.)*"/y;
+/** A JSON literal or number token. */
+const JSON_SCALAR = /true|false|null|-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/y;
+
+/**
+ * Re-serialises JSON text as Python's `json.dumps(json.loads(text))`
+ * prints it with its defaults: `", "` and `": "` separators, keys in the
+ * text's order (a repeated key keeps its first place and its last value),
+ * integers exactly as written, floats as Python's `repr`, and every
+ * character outside printable ASCII escaped. Works from the text, since
+ * parsed JavaScript objects put integer-like keys first and lose `1.0`.
+ *
+ * @param text - JSON text
+ * @returns the serialisation
+ * @throws {SyntaxError} if the text isn't JSON
+ */
+export function pyJsonRedump(text: string): string {
+  let at = 0;
+  /**
+   * Matches a sticky token pattern at the current position and moves past it.
+   *
+   * @param re - a sticky pattern
+   * @returns the token, or `null` when it doesn't match here
+   */
+  const take = (re: RegExp): string | null => {
+    re.lastIndex = at;
+    const match = re.exec(text);
+    if (!match) return null;
+    at = re.lastIndex;
+    return match[0];
+  };
+  /**
+   * Fails at the current position.
+   *
+   * @throws {SyntaxError} always
+   */
+  const fail = (): never => {
+    throw new SyntaxError(`invalid JSON at offset ${at}`);
+  };
+  /**
+   * Consumes one character if it's the one expected.
+   *
+   * @param ch - the character
+   * @returns `true` if it was there
+   */
+  const eat = (ch: string): boolean => {
+    take(JSON_SPACE);
+    if (text[at] !== ch) return false;
+    at += 1;
+    return true;
+  };
+  /**
+   * Reads and re-serialises one JSON value at the current position.
+   *
+   * @returns its serialisation
+   * @throws {SyntaxError} if the text there isn't a JSON value
+   */
+  const value = (): string => {
+    if (eat("{")) {
+      const members = new Map<string, string>();
+      if (eat("}")) return "{}";
+      do {
+        take(JSON_SPACE);
+        const key = take(JSON_STRING) ?? fail();
+        if (!eat(":")) fail();
+        members.set(JSON.parse(key) as string, value());
+      } while (eat(","));
+      if (!eat("}")) fail();
+      return `{${[...members].map(([k, v]) => `${pyJsonString(k)}: ${v}`).join(", ")}}`;
+    }
+    if (eat("[")) {
+      const items: string[] = [];
+      if (eat("]")) return "[]";
+      do items.push(value());
+      while (eat(","));
+      if (!eat("]")) fail();
+      return `[${items.join(", ")}]`;
+    }
+    take(JSON_SPACE);
+    const string = take(JSON_STRING);
+    if (string !== null) return pyJsonString(JSON.parse(string) as string);
+    const scalar = take(JSON_SCALAR) ?? fail();
+    if (scalar === "true" || scalar === "false" || scalar === "null") return scalar;
+    return /[.eE]/.test(scalar) ? pyFloatRepr(Number(scalar)) : BigInt(scalar).toString();
+  };
+  const out = value();
+  take(JSON_SPACE);
+  if (at !== text.length) fail();
+  return out;
+}
+
+/**
+ * Percent-encodes a string as Python's `urllib.parse.quote` (and
+ * `requests.utils.quote`) does: UTF-8, keeping letters, digits, `_.-~` and `/`.
+ *
+ * @param text - the string
+ * @returns it percent-encoded, with uppercase hex
+ */
+export function pyQuote(text: string): string {
+  let out = "";
+  for (const byte of new TextEncoder().encode(text)) {
+    const ch = String.fromCharCode(byte);
+    out += /[A-Za-z0-9_.\-~/]/.test(ch)
+      ? ch
+      : `%${byte.toString(16).toUpperCase().padStart(2, "0")}`;
+  }
+  return out;
 }
 
 /**

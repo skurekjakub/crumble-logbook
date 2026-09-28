@@ -12,7 +12,7 @@ import { getText, parseHtml } from "./html";
 import type { HttpOptions } from "./http";
 import { HttpClient, imageExt, MOBILE_UA } from "./http";
 import { headerStamp, localDate, localMinute } from "./time";
-import { pyGet, pyJsonDumps, pyStr } from "./text";
+import { pyGet, pyJsonRedump, pyStr } from "./text";
 
 /** The cafe's numeric id. */
 export const CAFE = 31688486;
@@ -233,11 +233,12 @@ export function renderArticle(article: ArticleCapture): string {
  *
  * @param aid - the article id
  * @param url - its cafe URL
- * @param body - the API's parsed answer
+ * @param body - the API's answer, as JSON text
  * @returns the Markdown, the answer cut to 400 characters of Python's `json.dumps`
+ * @throws {SyntaxError} if the answer isn't JSON
  */
-export function renderRefused(aid: string, url: string, body: unknown): string {
-  return `# ${aid}\n\n- url: ${url}\n\n(refused: ${pyJsonDumps(body).slice(0, 400)})\n`;
+export function renderRefused(aid: string, url: string, body: string): string {
+  return `# ${aid}\n\n- url: ${url}\n\n(refused: ${pyJsonRedump(body).slice(0, 400)})\n`;
 }
 
 /**
@@ -269,16 +270,18 @@ export async function nvFetch(
     if (isCaptured(context, path)) continue;
     const url = `https://cafe.naver.com/ccrumble/${aid}`;
     const apiUrl = `${ARTICLE_API}/v2.1/cafes/${CAFE}/articles/${aid}?useCafeId=true`;
+    let raw: string;
     let body: Record<string, unknown>;
     try {
-      body = await json(await context.http.send(apiUrl));
+      raw = await (await context.http.send(apiUrl)).text();
+      body = JSON.parse(raw) as Record<string, unknown>;
     } catch (err) {
       context.log(`ERR ${aid} ${(err as Error).message}`);
       continue;
     }
     const article = dig(body, "result", "article") as Record<string, unknown> | undefined;
     if (!article) {
-      const refused = stageText(path, renderRefused(aid, url, body), url, context.now());
+      const refused = stageText(path, renderRefused(aid, url, raw), url, context.now());
       written.push(...commitStaged(context, [refused]));
       continue;
     }
