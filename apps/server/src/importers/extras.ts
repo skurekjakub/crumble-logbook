@@ -77,7 +77,7 @@ export const EXTRAS = {
 };
 
 /** The extra blocks by manifest key. */
-export type Extras = typeof EXTRAS;
+type Extras = typeof EXTRAS;
 
 /** An extra block's key in `import.json`. */
 export type ExtraName = keyof Extras;

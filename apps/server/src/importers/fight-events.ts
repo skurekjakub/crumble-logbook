@@ -31,7 +31,7 @@ export const fightEventsSpec = z.strictObject({
   sourceAliases: z.record(z.string().min(1), sourceId).default({}),
 });
 /** The `fightEvents` block of an `import.json`. */
-export type FightEventsSpec = z.output<typeof fightEventsSpec>;
+type FightEventsSpec = z.output<typeof fightEventsSpec>;
 
 /** One entry of an extraction's `encounter.timeline`. */
 const timelineEntry = z.strictObject({
