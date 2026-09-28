@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, posix, relative, sep } from "node:path";
 import { describe, expect, it } from "vitest";
 import { repoRoot } from "../src/config";
@@ -28,8 +28,13 @@ interface Rule {
   forbids(edge: ImportEdge): boolean;
 }
 
-/** The source roots the rules cover, repo-relative. */
-const ROOTS = ["apps/server/src", "apps/web/src", "packages/schema/src"];
+const SERVER = "apps/server/src";
+const WEB = "apps/web/src";
+const SCHEMA = "packages/schema/src";
+const SIM = "packages/sim/src";
+
+/** The source roots the rules cover, repo-relative; the sim package's once it exists. */
+const ROOTS = [SERVER, WEB, SCHEMA, ...(existsSync(join(repoRoot, SIM)) ? [SIM] : [])];
 
 /**
  * Lists every `.ts`/`.tsx` file under `dir`, repo-relative with forward slashes.
@@ -105,13 +110,38 @@ const under = (path: string, dir: string) => path === dir || path.startsWith(`${
 const isPackage = (specifier: string, pkg: string) =>
   specifier === pkg || specifier.startsWith(`${pkg}/`);
 
-const SERVER = "apps/server/src";
-const WEB = "apps/web/src";
-const SCHEMA = "packages/schema/src";
-
 const isDrizzle = (edge: ImportEdge) => isPackage(edge.specifier, "drizzle-orm");
 const isHono = (edge: ImportEdge) =>
   isPackage(edge.specifier, "hono") || edge.specifier.startsWith("@hono/");
+const isSim = (edge: ImportEdge) => isPackage(edge.specifier, "@crumble/sim");
+
+/** The server files, besides their own folder, that importers may import values from. */
+const IMPORTER_DEPENDENCIES = [
+  "errors",
+  "registry",
+  "config",
+  "services/names",
+  "services/deck-modes",
+].map((path) => `${SERVER}/${path}`);
+
+/**
+ * Reports whether an importer may make `edge`: its own files, the schema
+ * package, zod, node builtins, drizzle-orm and repos types, and the shared
+ * server files in {@link IMPORTER_DEPENDENCIES}.
+ *
+ * @param edge - an import of a file under `importers/`
+ * @returns `true` if the import is allowed
+ */
+function importerMayImport(edge: ImportEdge): boolean {
+  return (
+    under(edge.target, `${SERVER}/importers`) ||
+    isPackage(edge.specifier, "@crumble/schema") ||
+    isPackage(edge.specifier, "zod") ||
+    edge.specifier.startsWith("node:") ||
+    ((isDrizzle(edge) || under(edge.target, `${SERVER}/repos`)) && edge.typeOnly) ||
+    IMPORTER_DEPENDENCIES.includes(edge.target)
+  );
+}
 
 /** The layering rules: the PvP plan's step R1 set, plus downward-only rules per layer. */
 const RULES: Rule[] = [
@@ -148,9 +178,48 @@ const RULES: Rule[] = [
       ),
   },
   {
-    name: "importers/ import no routes or hono",
+    name: "importers/ import only what importerMayImport allows",
     covers: (file) => under(file, `${SERVER}/importers`),
-    forbids: (edge) => under(edge.target, `${SERVER}/routes`) || isHono(edge),
+    forbids: (edge) => !importerMayImport(edge),
+  },
+  {
+    name: "cli/ is a composition root: it imports anything below routes, and nothing of the HTTP layer",
+    covers: (file) => under(file, `${SERVER}/cli`),
+    forbids: (edge) =>
+      under(edge.target, `${SERVER}/routes`) ||
+      edge.target === `${SERVER}/app` ||
+      edge.target === `${SERVER}/main` ||
+      isHono(edge),
+  },
+  {
+    name: "nothing imports cli/",
+    covers: (file) => under(file, SERVER) && !under(file, `${SERVER}/cli`),
+    forbids: (edge) => under(edge.target, `${SERVER}/cli`),
+  },
+  {
+    name: "packages/sim is pure: it imports only zod and its own files",
+    covers: (file) => under(file, SIM),
+    forbids: (edge) => !(isPackage(edge.specifier, "zod") || under(edge.target, SIM)),
+  },
+  {
+    name: "only server services import @crumble/sim values (routes may import its input schemas; repos and db nothing)",
+    covers: (file) => under(file, SERVER) && !under(file, `${SERVER}/services`),
+    forbids: (edge) => {
+      if (!isSim(edge)) return false;
+      if (under(edge.file, `${SERVER}/repos`) || under(edge.file, `${SERVER}/db`)) return true;
+      if (edge.typeOnly) return false;
+      return !(under(edge.file, `${SERVER}/routes`) && edge.specifier === "@crumble/sim/input");
+    },
+  },
+  {
+    name: "the web imports nothing from @crumble/sim",
+    covers: (file) => under(file, WEB),
+    forbids: isSim,
+  },
+  {
+    name: "packages/schema imports nothing from @crumble/sim",
+    covers: (file) => under(file, SCHEMA),
+    forbids: isSim,
   },
   {
     name: "only repos/ and db/ import drizzle-orm values",
@@ -209,6 +278,25 @@ function violations(edges: ImportEdge[]): string[] {
 
 const edges = ROOTS.flatMap(sourceFiles).flatMap(importsOf);
 
+/**
+ * Builds the edge an import statement in `file` would make, for testing a rule.
+ *
+ * @param file - the importing file, repo-relative
+ * @param specifier - the module specifier as written
+ * @param typeOnly - whether the import brings in types only
+ * @returns the edge, with a relative specifier resolved against `file`
+ */
+function fake(file: string, specifier: string, typeOnly = false): ImportEdge {
+  return {
+    file,
+    specifier,
+    target: specifier.startsWith(".")
+      ? posix.normalize(posix.join(posix.dirname(file), specifier))
+      : specifier,
+    typeOnly,
+  };
+}
+
 describe("architecture", () => {
   it("scans every source root and finds their imports", () => {
     for (const root of ROOTS) {
@@ -224,26 +312,13 @@ describe("architecture", () => {
   });
 
   it("tells type-only imports apart from value imports", () => {
-    const fake = (typeOnly: boolean, file = `${SERVER}/services/x.ts`): ImportEdge => ({
-      file,
-      specifier: "drizzle-orm",
-      target: "drizzle-orm",
-      typeOnly,
-    });
-    expect(violations([fake(true)])).toEqual([]);
-    expect(violations([fake(false)])).toHaveLength(2);
-    expect(violations([fake(true, `${SERVER}/routes/x.ts`)])).toHaveLength(1);
+    const service = `${SERVER}/services/x.ts`;
+    expect(violations([fake(service, "drizzle-orm", true)])).toEqual([]);
+    expect(violations([fake(service, "drizzle-orm")])).toHaveLength(2);
+    expect(violations([fake(`${SERVER}/routes/x.ts`, "drizzle-orm", true)])).toHaveLength(1);
   });
 
   it("keeps registry.ts declarative and importers/ off the HTTP layer", () => {
-    const fake = (file: string, specifier: string, typeOnly = false): ImportEdge => ({
-      file,
-      specifier,
-      target: specifier.startsWith(".")
-        ? posix.normalize(posix.join(posix.dirname(file), specifier))
-        : specifier,
-      typeOnly,
-    });
     const registry = `${SERVER}/registry.ts`;
     expect(violations([fake(registry, "@crumble/schema"), fake(registry, "zod")])).toEqual([]);
     expect(violations([fake(registry, "drizzle-orm/sqlite-core", true)])).toEqual([]);
@@ -253,6 +328,64 @@ describe("architecture", () => {
     expect(violations([fake(importer, "../routes/content", true)])).toHaveLength(1);
     expect(violations([fake(importer, "hono")])).toHaveLength(1);
     expect(violations([fake(importer, "../services/names")])).toEqual([]);
+  });
+
+  it("lets importers/ import only what the allow-list names", () => {
+    const importer = `${SERVER}/importers/seed/x.ts`;
+    const allowed = [
+      fake(importer, "./map"),
+      fake(importer, "../steps"),
+      fake(importer, "@crumble/schema"),
+      fake(importer, "zod"),
+      fake(importer, "node:fs"),
+      fake(importer, "drizzle-orm", true),
+      fake(importer, "../../repos", true),
+      fake(importer, "../../repos/glossary", true),
+      fake(importer, "../../errors"),
+      fake(importer, "../../registry"),
+      fake(importer, "../../config"),
+      fake(importer, "../../services/names"),
+      fake(importer, "../../services/deck-modes"),
+    ];
+    expect(violations(allowed)).toEqual([]);
+    for (const forbidden of [
+      fake(importer, "../../repos"),
+      fake(importer, "../../services/content"),
+      fake(importer, "../../db/client", true),
+      fake(importer, "../../app", true),
+      fake(importer, "../../cli/export"),
+      fake(importer, "left-pad"),
+    ]) {
+      expect(violations([forbidden]).length, forbidden.specifier).toBeGreaterThan(0);
+    }
+  });
+
+  it("treats cli/ as a composition root that nothing else imports", () => {
+    const cli = `${SERVER}/cli/x.ts`;
+    const below = ["../db/client", "../repos", "../services/export", "../importers/import-record"];
+    expect(violations(below.map((specifier) => fake(cli, specifier)))).toEqual([]);
+    for (const specifier of ["../routes/content", "../app", "../main", "hono"]) {
+      expect(violations([fake(cli, specifier)]), specifier).toHaveLength(1);
+    }
+    expect(violations([fake(`${SERVER}/services/x.ts`, "../cli/export", true)])).toHaveLength(1);
+  });
+
+  it("keeps packages/sim pure and its values in the server's services", () => {
+    const sim = `${SIM}/kernel/x.ts`;
+    expect(violations([fake(sim, "zod"), fake(sim, "../formulas/damage")])).toEqual([]);
+    expect(violations([fake(sim, "node:fs")])).toHaveLength(1);
+    expect(violations([fake(sim, "@crumble/schema", true)])).toHaveLength(1);
+
+    expect(violations([fake(`${SERVER}/services/sim.ts`, "@crumble/sim")])).toEqual([]);
+    const route = `${SERVER}/routes/sim.ts`;
+    expect(
+      violations([fake(route, "@crumble/sim/input"), fake(route, "@crumble/sim", true)]),
+    ).toEqual([]);
+    expect(violations([fake(route, "@crumble/sim")])).toHaveLength(1);
+    expect(violations([fake(`${SERVER}/repos/x.ts`, "@crumble/sim", true)])).toHaveLength(1);
+    expect(violations([fake(`${SERVER}/db/x.ts`, "@crumble/sim/input", true)])).toHaveLength(1);
+    expect(violations([fake(`${WEB}/views/x.tsx`, "@crumble/sim", true)])).toHaveLength(1);
+    expect(violations([fake(`${SCHEMA}/x.ts`, "@crumble/sim", true)])).toHaveLength(1);
   });
 
   it("reads import type, inline type specifiers, multi-line clauses and re-exports", () => {
