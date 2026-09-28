@@ -73,6 +73,35 @@ describe("Crumble Dungeon routes", () => {
     expect((await readJson<{ standing: string }>(note)).standing).toBe("claim");
   });
 
+  it("makes a run posted on the claim board a claim, whatever its evidence, on POST and on PATCH", async () => {
+    const { app } = setup();
+    const res = await app.request("/api/dungeon-runs", jsonBody({ ...run, board: "claim" }));
+    const created = await readJson<{ id: number; standing: string }>(res);
+    expect(created.standing).toBe("claim");
+    const shown = await patch(app, `/api/dungeon-runs/${created.id}`, { board: "run" });
+    expect((await readJson<{ standing: string }>(shown)).standing).toBe("verified");
+    const claimed = await patch(app, `/api/dungeon-runs/${created.id}`, { board: "claim" });
+    expect((await readJson<{ standing: string }>(claimed)).standing).toBe("claim");
+  });
+
+  it("refuses an empty text where the importer refuses one", async () => {
+    const { app, store } = setup();
+    for (const field of ["player", "server", "atkOrder", "perks", "preset", "note"]) {
+      const res = await app.request("/api/dungeon-runs", jsonBody({ ...run, [field]: "" }));
+      expect(res.status, field).toBe(400);
+    }
+    expect(store.repos.dungeonRuns.count()).toBe(0);
+  });
+
+  it("PATCH /api/dungeon-runs naming an arena deck returns 409 and leaves the run as it was", async () => {
+    const { app } = setup();
+    const res = await app.request("/api/dungeon-runs", jsonBody({ ...run, deckId: "milk-beam" }));
+    const { id } = await readJson<{ id: number }>(res);
+    expect((await patch(app, `/api/dungeon-runs/${id}`, { deckId: "rye" })).status).toBe(409);
+    const kept = await readJson<{ deckId: string }>(await app.request(`/api/dungeon-runs/${id}`));
+    expect(kept.deckId).toBe("milk-beam");
+  });
+
   it("GET /api/dungeon-runs ranks shown scores by score, then text-only claims by score, never by score ÷ power", async () => {
     const { app } = setup();
     const rows = [
@@ -148,5 +177,73 @@ describe("Crumble Dungeon routes", () => {
       await app.request("/api/dungeon-exclusions?kind=charger"),
     );
     expect(listed.map((r) => r.en)).toEqual(["Oven Wanderer Cookie"]);
+  });
+
+  it("refuses a second exclusion of the same cookie, by POST or by PATCH, with 409", async () => {
+    const { app, store } = setup();
+    const exclusion = { kind: "charger", why: "w", status: "excluded", sources: ["dc:1"] };
+    const oven = { ...exclusion, cookieKr: "오븐방랑자 쿠키" };
+    expect((await app.request("/api/dungeon-exclusions", jsonBody(oven))).status).toBe(201);
+    const again = await app.request("/api/dungeon-exclusions", jsonBody(oven));
+    expect(again.status).toBe(409);
+    expect((await readJson<{ message: string }>(again)).message).toMatch(
+      /^dungeon_exclusion 1 already has cookieKr 오븐방랑자 쿠키/,
+    );
+    const mint = await app.request(
+      "/api/dungeon-exclusions",
+      jsonBody({ ...exclusion, cookieKr: "쿨링민트맛 쿠키" }),
+    );
+    const { id } = await readJson<{ id: number }>(mint);
+    expect(
+      (await patch(app, `/api/dungeon-exclusions/${id}`, { cookieKr: "오븐방랑자 쿠키" })).status,
+    ).toBe(409);
+    expect(store.repos.dungeonExclusions.list().map((e) => e.cookieKr)).toEqual([
+      "오븐방랑자 쿠키",
+      "쿨링민트맛 쿠키",
+    ]);
+  });
+});
+
+describe("the lineup rule through the API", () => {
+  const lineup = {
+    slug: "l",
+    author: "a",
+    date: "2026-09-28",
+    complete: false,
+    first40: ["마카롱맛 쿠키", "전갈맛 쿠키"],
+    excluded: ["오븐방랑자 쿠키"],
+    atkOrder: ["마카롱맛 쿠키"],
+    levelRule: "r",
+    sources: ["dc:1"],
+  };
+
+  it("POST refuses, with 400, the lineups the importer refuses", async () => {
+    const { app, store } = setup();
+    for (const [bad, message] of [
+      [{ atkOrder: ["오븐방랑자 쿠키"] }, "atk_order names 오븐방랑자 쿠키, not in first40"],
+      [{ excluded: ["마카롱맛 쿠키"] }, "마카롱맛 쿠키 is both in first40 and excluded"],
+    ] as const) {
+      const res = await app.request("/api/dungeon-lineups", jsonBody({ ...lineup, ...bad }));
+      expect(res.status, message).toBe(400);
+      const body = await readJson<{ issues: Array<{ message: string }> }>(res);
+      expect(body.issues.map((i) => i.message)).toContain(message);
+    }
+    expect(store.repos.dungeonLineups.count()).toBe(0);
+  });
+
+  it("PATCH refuses, with 409, a change that makes the lists disagree, and keeps the lineup", async () => {
+    const { app } = setup();
+    const res = await app.request("/api/dungeon-lineups", jsonBody(lineup));
+    expect(res.status).toBe(201);
+    const { id } = await readJson<{ id: number }>(res);
+    const patched = await patch(app, `/api/dungeon-lineups/${id}`, { first40: ["전갈맛 쿠키"] });
+    expect(patched.status).toBe(409);
+    expect((await readJson<{ message: string }>(patched)).message).toBe(
+      `dungeon_lineup ${id}: atk_order names 마카롱맛 쿠키, not in first40`,
+    );
+    const kept = await readJson<{ first40: string[] }>(
+      await app.request(`/api/dungeon-lineups/${id}`),
+    );
+    expect(kept.first40).toEqual(lineup.first40);
   });
 });

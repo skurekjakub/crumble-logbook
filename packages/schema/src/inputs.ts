@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { RunEvidence, RunStanding } from "./enums";
+import { lineupProblem, runStanding } from "./dungeon";
 import { postedPowerG } from "./power";
 import {
   buffValueInsert,
@@ -291,43 +291,38 @@ export const riftBossPatch = riftBoss.patch;
 /** Output of {@link riftBossPatch}. */
 export type RiftBossPatch = z.output<typeof riftBossPatch>;
 
-/**
- * Whether a Crumble Dungeon score with this evidence is shown or only
- * claimed: a screenshot or a video shows it; text alone claims it.
- *
- * @param evidence - what backs the score
- * @returns `verified` for a screenshot or video, `claim` for text
- */
-export function runStanding(evidence: RunEvidence): RunStanding {
-  return evidence === "text" ? "claim" : "verified";
-}
-
 const dungeonRun = citedInputs(dungeonRunInsert.omit({ standing: true }));
 /**
  * Input for creating a documented Crumble Dungeon score, with the sources
- * that show it. `standing` isn't accepted: it is read from `evidence` (see
- * {@link runStanding}).
+ * that show it. `standing` isn't accepted: it is read from `evidence` and
+ * `board` (see {@link runStanding}).
  */
 export const dungeonRunInput = dungeonRun.input.transform((run) => ({
   ...run,
-  standing: runStanding(run.evidence),
+  standing: runStanding(run),
 }));
 /** Output of {@link dungeonRunInput}. */
 export type DungeonRunInput = z.output<typeof dungeonRunInput>;
 /**
  * Patch for updating a documented Crumble Dungeon score. `sources`, if
- * given, must be non-empty. `standing` isn't accepted: a patch that sets
- * `evidence` sets it too.
+ * given, must be non-empty. `standing` isn't accepted: the server reads it
+ * again from the updated row's `evidence` and `board`.
  */
-export const dungeonRunPatch = dungeonRun.patch.transform((patch) =>
-  patch.evidence === undefined ? patch : { ...patch, standing: runStanding(patch.evidence) },
-);
+export const dungeonRunPatch = dungeonRun.patch;
 /** Output of {@link dungeonRunPatch}. */
 export type DungeonRunPatch = z.output<typeof dungeonRunPatch>;
 
 const dungeonLineup = citedInputs(dungeonLineupInsert);
-/** Input for creating a published Crumble Dungeon lineup, with the sources that publish it. */
-export const dungeonLineupInput = dungeonLineup.input;
+/**
+ * Input for creating a published Crumble Dungeon lineup, with the sources
+ * that publish it. Its lists must agree (see {@link lineupProblem}).
+ * `citedInputs` omits before this refine: zod 4 rejects `.omit()` on a
+ * refined object.
+ */
+export const dungeonLineupInput = dungeonLineup.input.superRefine((lineup, ctx) => {
+  const problem = lineupProblem(lineup);
+  if (problem) ctx.addIssue({ code: "custom", message: problem });
+});
 /** Output of {@link dungeonLineupInput}. */
 export type DungeonLineupInput = z.output<typeof dungeonLineupInput>;
 /** Patch for updating a published Crumble Dungeon lineup. `sources`, if given, must be non-empty. */

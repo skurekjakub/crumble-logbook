@@ -153,4 +153,86 @@ describe("decks routes", () => {
     });
     expect((await app.request("/api/decks/cherry")).status).toBe(200);
   });
+
+  it("PATCH of a deck's mode returns 409 while a counter, stage or dungeon row names it under the old mode", async () => {
+    const { app, store } = setup();
+    addSource(store, "dc:1");
+    /**
+     * Sends a mode change for a deck.
+     *
+     * @param id - the deck
+     * @param mode - its new mode
+     * @returns the response
+     */
+    const setMode = (id: string, mode: string) =>
+      app.request(`/api/decks/${id}`, {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ mode }),
+      });
+    await app.request("/api/decks", jsonBody({ ...validDeck, id: "rye", mode: "arena" }));
+    await app.request("/api/decks", jsonBody({ ...validDeck, id: "bari", mode: "arena" }));
+    await app.request(
+      "/api/counters",
+      jsonBody({
+        slug: "rye-vs-bari",
+        mode: "arena",
+        teamDeckId: "rye",
+        beatenByDeckId: "bari",
+        why: "x",
+        confidence: "low",
+        sources: ["dc:1"],
+      }),
+    );
+    await app.request("/api/decks", jsonBody({ ...validDeck, id: "charge", mode: "stage" }));
+    await app.request(
+      "/api/stage-clears",
+      jsonBody({
+        chapter: 328,
+        stageNo: 30,
+        bossKr: "b",
+        era: "post-easing",
+        teamPower: "4G",
+        bracket: 35,
+        result: "clear",
+        evidence: "screenshot",
+        deckId: "charge",
+        sources: ["dc:1"],
+      }),
+    );
+    await app.request(
+      "/api/decks",
+      jsonBody({ ...validDeck, id: "milk", mode: "crumble_dungeon" }),
+    );
+    await app.request(
+      "/api/dungeon-runs",
+      jsonBody({
+        slug: "run-a",
+        date: "2026-09-28",
+        scoreG: 1,
+        board: "run",
+        evidence: "screenshot",
+        deckId: "milk",
+        sources: ["dc:1"],
+      }),
+    );
+
+    for (const [id, mode, entity] of [
+      ["rye", "guild_conquest", "counter"],
+      ["charge", "arena", "stage_clear"],
+      ["milk", "stage", "dungeon_run"],
+    ] as const) {
+      const res = await setMode(id, mode);
+      expect(res.status, id).toBe(409);
+      expect((await readJson<{ message: string }>(res)).message, id).toMatch(
+        new RegExp(`^deck ${id} can't become ${mode}: ${entity} \\d+ names it`),
+      );
+    }
+    expect((await readJson<{ mode: string }>(await app.request("/api/decks/milk"))).mode).toBe(
+      "crumble_dungeon",
+    );
+    await app.request("/api/decks", jsonBody({ ...validDeck, id: "free", mode: "arena" }));
+    expect((await setMode("free", "stage")).status).toBe(200);
+    expect((await setMode("milk", "crumble_dungeon")).status).toBe(200);
+  });
 });

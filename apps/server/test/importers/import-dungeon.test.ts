@@ -4,7 +4,6 @@ import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { createApp } from "../../src/app";
 import { repoRoot } from "../../src/config";
-import { ImportError } from "../../src/errors";
 import { importRecord } from "../../src/importers/import-record";
 import { createServices } from "../../src/services";
 import { readJson, testStore } from "../helpers";
@@ -26,9 +25,33 @@ function curated<T>(name: string): T {
   return JSON.parse(readFileSync(join(dungeonDir, "curated", name), "utf-8")) as T;
 }
 
-const runs = curated<Array<{ id: string; evidence: string; score_g: number }>>("dungeon-runs.json");
-const lineups = curated<Array<{ id: string; first40: string[] }>>("dungeon-lineups.json");
-const exclusions = curated<Row[]>("dungeon-exclusions.json");
+const runs =
+  curated<Array<{ id: string; evidence: string; board: string; score_g: number }>>(
+    "dungeon-runs.json",
+  );
+const lineups =
+  curated<Array<{ id: string; first40: string[]; excluded: string[]; atk_order: string[] }>>(
+    "dungeon-lineups.json",
+  );
+const exclusions = curated<Array<{ kr: string }>>("dungeon-exclusions.json");
+
+/** Every cookie name record 004's lineups and exclusions give, which record 001's glossary holds. */
+const COOKIES = new Set([
+  ...lineups.flatMap((l) => [...l.first40, ...l.excluded, ...l.atk_order]),
+  ...exclusions.map((e) => e.kr),
+]);
+
+/**
+ * Builds an in-memory store whose glossary knows every cookie record 004
+ * names, as record 001's glossary does in the real import order.
+ *
+ * @returns the store
+ */
+function dungeonStore() {
+  const store = testStore();
+  for (const kr of COOKIES) store.repos.glossary.upsert({ kr, en: null, kind: "cookie" });
+  return store;
+}
 
 let tmp: string | undefined;
 afterEach(() => {
@@ -74,7 +97,7 @@ function dungeonCopy(slug: string, edit: Record<string, (rows: Row[]) => void> =
 
 describe("importRecord on research record 004", FULL_IMPORT, () => {
   it("files the record under crumble_dungeon and loads every dungeon table with its citations", () => {
-    const store = testStore();
+    const store = dungeonStore();
     const { counts, warnings } = importRecord(store, dungeonDir);
     expect(counts).toMatchObject({
       researchRecords: 1,
@@ -103,14 +126,14 @@ describe("importRecord on research record 004", FULL_IMPORT, () => {
     for (const id of long) expect(warnings.some((w) => w.includes(id))).toBe(true);
   });
 
-  it("ranks the runs a screenshot or video shows by score, above every text-only claim", async () => {
-    const store = testStore();
+  it("ranks the runs a screenshot or video shows by score, above every claim", async () => {
+    const store = dungeonStore();
     importRecord(store, dungeonCopy("904-dungeon-copy"));
     const app = createApp(createServices(store));
     const rows = await readJson<Array<{ slug: string; scoreG: number; standing: string }>>(
       await app.request("/api/dungeon-runs"),
     );
-    const shown = runs.filter((r) => r.evidence !== "text");
+    const shown = runs.filter((r) => r.evidence !== "text" && r.board !== "claim");
     expect(rows.slice(0, shown.length).every((r) => r.standing === "verified")).toBe(true);
     expect(rows.slice(shown.length).every((r) => r.standing === "claim")).toBe(true);
     for (const group of [rows.slice(0, shown.length), rows.slice(shown.length)]) {
@@ -118,20 +141,60 @@ describe("importRecord on research record 004", FULL_IMPORT, () => {
       expect(scores).toEqual([...scores].sort((a, b) => b - a));
     }
     expect(rows[0]!.slug).toBe("run-sminoff-379g");
-    const claims = runs.filter((r) => r.evidence === "text").map((r) => r.id);
+    const claims = runs.filter((r) => !shown.includes(r)).map((r) => r.id);
     expect(rows.slice(shown.length).map((r) => r.slug)).toEqual(
       expect.arrayContaining(claims) as unknown,
     );
   });
 
+  it("makes a run posted on the claim board a claim, whatever its evidence", () => {
+    const store = dungeonStore();
+    const screenshotClaim = (rows: Row[]) => {
+      rows[0]!.board = "claim";
+    };
+    importRecord(store, dungeonCopy("909-dungeon-copy", { "dungeon-runs.json": screenshotClaim }));
+    const first = store.repos.dungeonRuns.list().find((r) => r.slug === runs[0]!.id);
+    expect(first).toMatchObject({ evidence: "screenshot", board: "claim", standing: "claim" });
+  });
+
   it("reloads the dungeon tables as they were under --replace", () => {
-    const store = testStore();
+    const store = dungeonStore();
     const dir = dungeonCopy("905-dungeon-copy");
     importRecord(store, dir);
     const keys = ["dungeonRuns", "dungeonLineups", "dungeonExclusions", "citations"] as const;
     const before = keys.map((key) => store.repos.tables.dump(key));
     importRecord(store, dir, { replace: true });
     expect(keys.map((key) => store.repos.tables.dump(key))).toEqual(before);
+  });
+
+  it("drops the rows a record no longer lists under --replace, with their citations", () => {
+    const store = dungeonStore();
+    importRecord(store, dungeonCopy("910-dungeon-copy"));
+    const dropped = runs[0]!.id;
+    const withoutFirst = (rows: Row[]) => {
+      rows.shift();
+    };
+    importRecord(
+      store,
+      dungeonCopy("910-dungeon-copy", {
+        "dungeon-runs.json": withoutFirst,
+        "dungeon-lineups.json": withoutFirst,
+        "dungeon-exclusions.json": withoutFirst,
+      }),
+      { replace: true },
+    );
+    expect(store.repos.dungeonRuns.count()).toBe(runs.length - 1);
+    expect(store.repos.dungeonRuns.list().some((r) => r.slug === dropped)).toBe(false);
+    expect(store.repos.dungeonLineups.count()).toBe(lineups.length - 1);
+    expect(store.repos.dungeonLineups.list().some((l) => l.slug === lineups[0]!.id)).toBe(false);
+    expect(store.repos.dungeonExclusions.count()).toBe(exclusions.length - 1);
+    expect(store.repos.dungeonExclusions.list().some((e) => e.cookieKr === exclusions[0]!.kr)).toBe(
+      false,
+    );
+    const runIds = new Set(store.repos.dungeonRuns.list().map((r) => String(r.id)));
+    const cited = store.repos.tables.dump("citations").filter((c) => c.entity === "dungeon_run");
+    expect(cited.every((c) => runIds.has(c.entityId))).toBe(true);
+    expect(new Set(cited.map((c) => c.entityId)).size).toBe(runs.length - 1);
   });
 });
 
@@ -141,7 +204,7 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
       for (const deck of rows) if (deck.id === "dungeon-milk-scorpion-figure") deck.mode = "arena";
     };
     expect(() =>
-      importRecord(testStore(), dungeonCopy("900-dungeon-copy", { "decks.json": toArena })),
+      importRecord(dungeonStore(), dungeonCopy("900-dungeon-copy", { "decks.json": toArena })),
     ).toThrow(
       /dungeon-runs\.json \[0\]: dungeon_run mode crumble_dungeon doesn't match deck dungeon-milk-scorpion-figure's mode arena/,
     );
@@ -153,7 +216,7 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
     };
     expect(() =>
       importRecord(
-        testStore(),
+        dungeonStore(),
         dungeonCopy("901-dungeon-copy", { "decks.json": lineupDeck, "dungeon-runs.json": noRuns }),
       ),
     ).toThrow(/dungeon-lineups\.json \[0\]: dungeon_lineup mode crumble_dungeon/);
@@ -165,7 +228,7 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
     };
     expect(() =>
       importRecord(
-        testStore(),
+        dungeonStore(),
         dungeonCopy("902-dungeon-copy", { "dungeon-lineups.json": outside }),
       ),
     ).toThrow(/dungeon-lineups\.json \[0\]: atk_order names 오븐방랑자 쿠키, not in first40/);
@@ -173,8 +236,36 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
       (rows[0]!.excluded as string[]).push("마카롱맛 쿠키");
     };
     expect(() =>
-      importRecord(testStore(), dungeonCopy("903-dungeon-copy", { "dungeon-lineups.json": both })),
+      importRecord(
+        dungeonStore(),
+        dungeonCopy("903-dungeon-copy", { "dungeon-lineups.json": both }),
+      ),
     ).toThrow(/마카롱맛 쿠키 is both in first40 and excluded/);
+  });
+
+  it("fails a lineup or exclusion naming a cookie no glossary entry has, and writes nothing", () => {
+    const misspelt = (rows: Row[]) => {
+      (rows[0]!.first40 as string[]).push("이온맛쿠키로봇");
+    };
+    const store = dungeonStore();
+    expect(() =>
+      importRecord(store, dungeonCopy("911-dungeon-copy", { "dungeon-lineups.json": misspelt })),
+    ).toThrow(/dungeon-lineups\.json \[0\]: 이온맛쿠키로봇 is no glossary entry's Korean name/);
+    expect(store.repos.dungeonRuns.count()).toBe(0);
+    const unknown = (rows: Row[]) => {
+      rows[0]!.kr = "오븐 방랑자 쿠키";
+    };
+    expect(() =>
+      importRecord(
+        dungeonStore(),
+        dungeonCopy("912-dungeon-copy", { "dungeon-exclusions.json": unknown }),
+      ),
+    ).toThrow(
+      /dungeon-exclusions\.json \[0\]: 오븐 방랑자 쿠키 is no glossary entry's Korean name/,
+    );
+    expect(() => importRecord(testStore(), dungeonCopy("913-dungeon-copy"))).toThrow(
+      /is no glossary entry's Korean name/,
+    );
   });
 
   it("fails a repeated run id, and a run id another record already loaded", () => {
@@ -182,9 +273,12 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
       rows[1]!.id = rows[0]!.id;
     };
     expect(() =>
-      importRecord(testStore(), dungeonCopy("906-dungeon-copy", { "dungeon-runs.json": repeat })),
-    ).toThrow(ImportError);
-    const store = testStore();
+      importRecord(
+        dungeonStore(),
+        dungeonCopy("906-dungeon-copy", { "dungeon-runs.json": repeat }),
+      ),
+    ).toThrow(`curated/dungeon-runs.json [1]: duplicate id "${runs[0]!.id}"`);
+    const store = dungeonStore();
     importRecord(store, dungeonCopy("907-dungeon-copy"));
     const ownDecks = (rows: Row[]) => {
       for (const deck of rows) deck.id = `${String(deck.id)}-b`;

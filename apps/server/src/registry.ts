@@ -61,6 +61,7 @@ import {
   gearRecPatch,
   gearRecs,
   glossary,
+  lineupProblem,
   mechanicInput,
   mechanicPatch,
   mechanics,
@@ -88,6 +89,7 @@ import {
   rngFactorInput,
   rngFactorPatch,
   rngFactors,
+  runStanding,
   runeBuildDecks,
   runeBuildInput,
   runeBuildPatch,
@@ -195,6 +197,27 @@ export interface ContentSpec<Row> {
    * this mode.
    */
   mode?: GameMode;
+  /**
+   * Columns no two rows may share, `null` counting as a value: a write
+   * that would repeat another row's values in all of them is refused.
+   */
+  unique?: readonly ColumnOf<Row>[];
+  /**
+   * Checks a row as written (a patch merged in) against rules the row's
+   * own columns must keep.
+   *
+   * @param row - the written row
+   * @returns what is wrong with it, or `undefined` when it keeps them
+   */
+  check?(row: Row): string | undefined;
+  /**
+   * Columns read from a row's other columns: after every write the row
+   * is updated to the values this returns.
+   *
+   * @param row - the written row
+   * @returns the derived columns' values
+   */
+  derive?(row: Row): Partial<Row>;
 }
 
 /** One registered table. */
@@ -446,10 +469,11 @@ export const REGISTRY = {
     api: { id: rowId, input: dungeonRunInput, patch: dungeonRunPatch },
     content: {
       // Scores a screenshot or video shows first, highest score first; then
-      // the text-only claims, in the same order. Never by score ÷ power.
+      // the claims, in the same order. Never by score ÷ power.
       order: [{ column: "standing", rank: RUN_STANDING }, { column: "scoreG", desc: true }, "id"],
       refs: { deckId: "decks" },
       mode: "crumble_dungeon",
+      derive: (run) => ({ standing: runStanding(run) }),
     },
   }),
   dungeonLineups: entry(dungeonLineups, {
@@ -461,6 +485,7 @@ export const REGISTRY = {
       order: [{ column: "date", desc: true }, "id"],
       refs: { deckId: "decks" },
       mode: "crumble_dungeon",
+      check: lineupProblem,
     },
   }),
   dungeonExclusions: entry(dungeonExclusions, {
@@ -471,7 +496,8 @@ export const REGISTRY = {
       status: { schema: z.enum(EXCLUSION_STATUS), match: { equals: "status" } },
     },
     api: { id: rowId, input: dungeonExclusionInput, patch: dungeonExclusionPatch },
-    content: { gloss: "cookieKr" },
+    // One exclusion per cookie within a record; rows no record owns share `null`.
+    content: { gloss: "cookieKr", unique: ["cookieKr", "recordSlug"] },
   }),
   citations: entry(citations, {}),
   factClaims: entry(factClaims, {}),

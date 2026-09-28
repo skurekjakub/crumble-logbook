@@ -5,6 +5,7 @@ import { REGISTRY } from "../registry";
 import type { Repos, Store } from "../repos";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
+import { deckModeChangeConflict } from "./deck-modes";
 import { applyFilters } from "./filters";
 import type { NameRef } from "./names";
 import { createNameResolver, recordsOf } from "./names";
@@ -62,6 +63,9 @@ export interface DeckService {
    * @param patch - the fields and children to change
    * @throws {NotFoundError} if `id` doesn't exist
    * @throws {UnknownRefsError} if any cited source id doesn't exist
+   * @throws {ConflictError} if `patch.mode` would leave a mode-bound row
+   *   (a counter edge, a stage or dungeon row) naming a deck of another
+   *   mode; nothing is written
    */
   update(id: string, patch: DeckPatch): DeckView;
   /**
@@ -173,6 +177,10 @@ export function createDeckService(store: Store): DeckService {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);
         const { cookies, pets, notes, sources, ...values } = patch;
         if (sources !== undefined) assertSourcesExist(repos, sources);
+        if (values.mode !== undefined) {
+          const conflict = deckModeChangeConflict(repos, id, values.mode);
+          if (conflict) throw new ConflictError(conflict);
+        }
         const row =
           Object.keys(values).length > 0 ? repos.decks.update(id, values) : repos.decks.get(id);
         if (!row) throw new NotFoundError("deck", id);

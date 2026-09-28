@@ -393,11 +393,17 @@ export type RiftBossRow = typeof t.riftBosses.$inferSelect;
  * `YYYY-MM-DD`; `scoreG` is positive and `totalPowerG`, when present, too;
  * `serverRank`, when present, is a positive integer; `timeLeftS` and
  * `cookiesLeft`, when present, are non-negative; `deckId`, when present, a
- * lowercase slug.
+ * lowercase slug; every other text, when present, is non-empty.
  */
 export const dungeonRunInsert = createInsertSchema(t.dungeonRuns, {
   slug: () => deckSlug,
   date: () => isoDate,
+  player: (s) => s.min(1).nullish(),
+  server: (s) => s.min(1).nullish(),
+  atkOrder: (s) => s.min(1).nullish(),
+  perks: (s) => s.min(1).nullish(),
+  preset: (s) => s.min(1).nullish(),
+  note: (s) => s.min(1).nullish(),
   scoreG: (s) => s.positive(),
   totalPowerG: (s) => s.positive().nullish(),
   serverRank: () => positiveInt.nullish(),

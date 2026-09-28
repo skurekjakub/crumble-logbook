@@ -1,4 +1,4 @@
-import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { integer, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 import {
   DUNGEON_BOARD,
   EXCLUSION_CLASS,
@@ -72,13 +72,18 @@ export const dungeonLineups = sqliteTable("dungeon_lineups", {
 /**
  * A cookie players keep out of Crumble Dungeon's first 40 (`cookieKr`),
  * the kind of reason (`kind`), the reason itself (`why`) and where the
- * exclusion stands (`status`).
+ * exclusion stands (`status`). A record lists a cookie once; SQLite lets
+ * rows no record owns repeat one, which the API refuses instead.
  */
-export const dungeonExclusions = sqliteTable("dungeon_exclusions", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  cookieKr: text("cookie_kr").notNull(),
-  kind: text("kind", { enum: EXCLUSION_CLASS }).notNull(),
-  why: text("why").notNull(),
-  status: text("status", { enum: EXCLUSION_STATUS }).notNull(),
-  recordSlug: recordSlugColumn(),
-});
+export const dungeonExclusions = sqliteTable(
+  "dungeon_exclusions",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    cookieKr: text("cookie_kr").notNull(),
+    kind: text("kind", { enum: EXCLUSION_CLASS }).notNull(),
+    why: text("why").notNull(),
+    status: text("status", { enum: EXCLUSION_STATUS }).notNull(),
+    recordSlug: recordSlugColumn(),
+  },
+  (t) => [uniqueIndex("dungeon_exclusions_cookie_record_uq").on(t.cookieKr, t.recordSlug)],
+);

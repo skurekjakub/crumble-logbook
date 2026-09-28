@@ -1,88 +1,90 @@
 /**
  * The Crumble Dungeon mode's curated collections: each file's schema, its
  * checks and its mapping onto the dungeon tables. Every row is one the
- * record owns, cited to its own sources.
+ * record owns, cited to its own sources. The seed schemas take each
+ * field's rule from the table's insert schema, so a row the importer
+ * accepts is one the API would.
  *
  * @module
  */
 import {
-  DUNGEON_BOARD,
-  EXCLUSION_CLASS,
-  EXCLUSION_STATUS,
-  RUN_EVIDENCE,
-  deckSlug,
-  isoDate,
+  dungeonExclusionInsert,
+  dungeonLineupInsert,
+  dungeonRunInsert,
+  lineupProblem,
   runStanding,
 } from "@crumble/schema";
 import { z } from "zod";
 import { ImportError } from "../errors";
+import type { Repos } from "../repos";
 import type { RowRefs } from "./collection-kit";
 import { checkDeckModes, collection, parseRows } from "./collection-kit";
 import { assertUnclaimed } from "./shared";
+import type { WriteStep } from "./steps";
 import { insertCited } from "./steps";
 
 /** The source ids a curated row cites: at least one. */
 const cited = z.array(z.string()).min(1);
 
-/** A list of Korean cookie names. */
-const names = z.array(z.string().min(1));
-
 /** How many cookies deploy first: a lineup naming another number gets a warning. */
 export const FIRST_WAVE = 40;
 
+const run = dungeonRunInsert.shape;
 /**
  * One entry of `dungeon-runs.json`: a documented score in G, the total
  * power the screen shows (the whole collection's) and what the post says
  * about the run. `id` becomes the run's slug.
  */
 export const seedDungeonRun = z.strictObject({
-  id: deckSlug,
-  date: isoDate,
-  player: z.string().min(1).nullish(),
-  server: z.string().min(1).nullish(),
-  score_g: z.number().positive(),
-  total_power_g: z.number().positive().nullish(),
-  board: z.enum(DUNGEON_BOARD),
-  server_rank: z.number().int().positive().nullish(),
-  time_left_s: z.number().nonnegative().nullish(),
-  cookies_left: z.number().int().nonnegative().nullish(),
-  evidence: z.enum(RUN_EVIDENCE),
-  deck: deckSlug.nullish(),
-  atk_order: z.string().min(1).nullish(),
-  perks: z.string().min(1).nullish(),
-  preset: z.string().min(1).nullish(),
-  note: z.string().min(1).nullish(),
+  id: run.slug,
+  date: run.date,
+  player: run.player,
+  server: run.server,
+  score_g: run.scoreG,
+  total_power_g: run.totalPowerG,
+  board: run.board,
+  server_rank: run.serverRank,
+  time_left_s: run.timeLeftS,
+  cookies_left: run.cookiesLeft,
+  evidence: run.evidence,
+  deck: run.deckId,
+  atk_order: run.atkOrder,
+  perks: run.perks,
+  preset: run.preset,
+  note: run.note,
   sources: cited,
 });
 /** Output of {@link seedDungeonRun}. */
 export type SeedDungeonRun = z.output<typeof seedDungeonRun>;
 
+const lineup = dungeonLineupInsert.shape;
 /**
  * One entry of `dungeon-lineups.json`: a published first 40 in the
  * author's order, what the author leaves out, the ATK order from the top
  * and the level rule. `id` becomes the lineup's slug.
  */
 export const seedDungeonLineup = z.strictObject({
-  id: deckSlug,
-  author: z.string().min(1),
-  date: isoDate,
-  deck: deckSlug.nullish(),
-  complete: z.boolean(),
-  first40: names.min(1),
-  excluded: names,
-  atk_order: names,
-  level_rule: z.string().min(1),
+  id: lineup.slug,
+  author: lineup.author,
+  date: lineup.date,
+  deck: lineup.deckId,
+  complete: lineup.complete,
+  first40: lineup.first40,
+  excluded: lineup.excluded,
+  atk_order: lineup.atkOrder,
+  level_rule: lineup.levelRule,
   sources: cited,
 });
 /** Output of {@link seedDungeonLineup}. */
 export type SeedDungeonLineup = z.output<typeof seedDungeonLineup>;
 
+const exclusion = dungeonExclusionInsert.shape;
 /** One entry of `dungeon-exclusions.json`: a cookie kept out of the first 40, and why. */
 export const seedDungeonExclusion = z.strictObject({
-  kr: z.string().min(1),
-  class: z.enum(EXCLUSION_CLASS),
-  why: z.string().min(1),
-  status: z.enum(EXCLUSION_STATUS),
+  kr: exclusion.cookieKr,
+  class: exclusion.kind,
+  why: exclusion.why,
+  status: exclusion.status,
   sources: cited,
 });
 /** Output of {@link seedDungeonExclusion}. */
@@ -105,22 +107,27 @@ function assertDistinct(file: string, what: string, values: readonly string[]): 
 }
 
 /**
- * Checks one lineup's lists against each other: no cookie is both in the
- * first 40 and left out, and every cookie of the ATK order is in the first 40.
+ * A step checking that every cookie name the rows give is a glossary
+ * entry's Korean name, as the glossary stands when it runs (this record's
+ * entries are written before it, another record's before this import). It
+ * writes nothing.
  *
  * @param file - the file, as errors name it
- * @param index - the lineup's index, as errors name it
- * @param lineup - the lineup
- * @throws {ImportError} naming the file, the lineup and the first cookie out of place
+ * @param rows - each row's cookie names, by the row as errors name it
+ * @returns the step
+ * @throws {ImportError} (from the step) naming the file, the row and the
+ *   first name no glossary entry has; the import then writes nothing
  */
-function checkLineup(file: string, index: number, lineup: SeedDungeonLineup): void {
-  const first = new Set(lineup.first40);
-  for (const kr of lineup.excluded) {
-    if (first.has(kr)) throw new ImportError(file, index, `${kr} is both in first40 and excluded`);
-  }
-  for (const kr of lineup.atk_order) {
-    if (!first.has(kr)) throw new ImportError(file, index, `atk_order names ${kr}, not in first40`);
-  }
+function checkNames(file: string, rows: ReadonlyArray<readonly string[]>): WriteStep {
+  return (repos: Repos) => {
+    rows.forEach((names, index) => {
+      for (const kr of names) {
+        if (!repos.glossary.get(kr)) {
+          throw new ImportError(file, index, `${kr} is no glossary entry's Korean name`);
+        }
+      }
+    });
+  };
 }
 
 /** The Crumble Dungeon mode's collections, by their key in the curated manifest; every one is optional. */
@@ -177,7 +184,7 @@ export const DUNGEON_COLLECTIONS = {
             timeLeftS: run.time_left_s ?? null,
             cookiesLeft: run.cookies_left ?? null,
             evidence: run.evidence,
-            standing: runStanding(run.evidence),
+            standing: runStanding(run),
             deckId: run.deck ?? null,
             atkOrder: run.atk_order ?? null,
             perks: run.perks ?? null,
@@ -207,7 +214,10 @@ export const DUNGEON_COLLECTIONS = {
         "id",
         lineups.map((lineup) => lineup.id),
       );
-      lineups.forEach((lineup, index) => checkLineup(file, index, lineup));
+      lineups.forEach((lineup, index) => {
+        const problem = lineupProblem({ ...lineup, atkOrder: lineup.atk_order });
+        if (problem) throw new ImportError(file, index, problem);
+      });
       checkDeckModes(
         file,
         "dungeon_lineup",
@@ -226,6 +236,10 @@ export const DUNGEON_COLLECTIONS = {
         ),
     /** @inheritdoc */
     prepare: (lineups, { file }) => [
+      checkNames(
+        file,
+        lineups.map((lineup) => [...lineup.first40, ...lineup.excluded, ...lineup.atk_order]),
+      ),
       (repos) => {
         const holders = new Map(
           repos.dungeonLineups.list().map((row) => [row.slug, row.recordSlug]),
@@ -272,7 +286,11 @@ export const DUNGEON_COLLECTIONS = {
       );
     },
     /** @inheritdoc */
-    prepare: (exclusions) => [
+    prepare: (exclusions, { file }) => [
+      checkNames(
+        file,
+        exclusions.map((exclusion) => [exclusion.kr]),
+      ),
       insertCited(
         "dungeonExclusions",
         exclusions.map((exclusion) => ({

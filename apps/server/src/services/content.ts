@@ -97,6 +97,14 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
    * @throws to reject the write; the transaction rolls back
    */
   checkRow?: (repos: Repos, row: Row) => void;
+  /**
+   * Columns read from a row's other columns, set on the row after every
+   * write, before `checkRow` runs.
+   *
+   * @param row - the written row
+   * @returns the derived columns' values
+   */
+  derive?: (row: Row) => Partial<Row>;
   /** The list filters `list` applies, by name. */
   filters?: AnyFilters;
   /** A Korean-name column whose English gloss each view carries as `en`. */
@@ -107,8 +115,8 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
  * Builds a {@link ContentService} over one cited-content table.
  *
  * Every write runs inside `store.transaction`: it checks the cited sources
- * exist, runs `spec.checkRefs`, writes the row, runs `spec.checkRow` on it,
- * then replaces its citations. `update` only touches citations when `sources` is given. A
+ * exist, runs `spec.checkRefs`, writes the row, sets its `spec.derive`
+ * columns, runs `spec.checkRow` on it, then replaces its citations. `update` only touches citations when `sources` is given. A
  * view is the row, then `sources`, then `en` when `spec.gloss` names a
  * column, glossed with the row's own record's entries first.
  *
@@ -122,8 +130,25 @@ export function createContentService<
   View = Cited<Row>,
   Filter extends object = Record<never, never>,
 >(store: Store, spec: ContentServiceSpec<Row, Values>): ContentService<Row, Values, View, Filter> {
-  const { entity, table, checkRefs, checkRow, filters, gloss } = spec;
+  const { entity, table, checkRefs, checkRow, derive, filters, gloss } = spec;
   const usesGlossary = gloss !== undefined || filtersNeedGlossary(filters);
+
+  /**
+   * Sets a written row's derived columns, when `derive` names any whose
+   * values differ.
+   *
+   * @param repo - the table's repo, in the write's transaction
+   * @param row - the written row
+   * @returns the row with its derived columns
+   */
+  const withDerived = (repo: TableRepo<Row, Values>, row: Row): Row => {
+    if (!derive) return row;
+    const derived = derive(row);
+    const stale = Object.entries(derived).some(
+      ([column, value]) => (row as Record<string, unknown>)[column] !== value,
+    );
+    return stale ? (repo.update(row.id, derived as Partial<Values>) ?? row) : row;
+  };
 
   /**
    * Builds the name resolver views are glossed with.
@@ -191,7 +216,8 @@ export function createContentService<
       store.transaction((repos) => {
         assertSourcesExist(repos, sources);
         checkRefs?.(repos, values);
-        const row = table(repos).insert(values);
+        const repo = table(repos);
+        const row = withDerived(repo, repo.insert(values));
         checkRow?.(repos, row);
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
@@ -205,8 +231,9 @@ export function createContentService<
         // A patch with no columns (replacing only the citations) has
         // nothing for `UPDATE ... SET` to set, which drizzle rejects; read
         // the row back instead of writing an empty update.
-        const row = Object.keys(patch).length > 0 ? repo.update(id, patch) : repo.get(id);
-        if (!row) throw new NotFoundError(entity, id);
+        const written = Object.keys(patch).length > 0 ? repo.update(id, patch) : repo.get(id);
+        if (!written) throw new NotFoundError(entity, id);
+        const row = withDerived(repo, written);
         checkRow?.(repos, row);
         if (!sources) return withSources(repos, row) as never;
         repos.citations.replace(entity, String(row.id), sources);
@@ -246,7 +273,10 @@ export type RegisteredService<K extends ContentKey> = ContentService<
  * with a `mode` column must name only decks of its own mode, as written
  * (so an omitted `mode` is checked as its column default), and a row of a
  * type the registry files under one mode (`content.mode`) only decks of
- * that mode; a mismatch throws {@link ConflictError} and nothing is written.
+ * that mode. A written row must also keep the entry's `content.check`, and
+ * share its `content.unique` columns with no other row. Any of these
+ * failing throws {@link ConflictError} and nothing is written. The
+ * entry's `content.derive` columns are set on every write.
  *
  * @param store - the store to persist through
  * @param key - the type's registry key
@@ -258,12 +288,16 @@ export function registeredService<K extends ContentKey>(
 ): RegisteredService<K> {
   const { entity, content, filters } = specOf(key);
   const refColumns = Object.keys(content?.refs ?? {});
-  return createContentService<{ id: number }, Record<string, unknown>>(store, {
+  const unique: readonly string[] = content?.unique ?? [];
+  type AnyRow = { id: number } & Record<string, unknown>;
+  return createContentService<AnyRow, Record<string, unknown>>(store, {
     entity: entity!,
     /** @inheritdoc */
     table: (repos) => repos[key],
     filters,
     gloss: content?.gloss,
+    /** @inheritdoc */
+    derive: (row) => content?.derive?.(row) ?? {},
     /** @inheritdoc */
     checkRefs: (repos, values) => {
       for (const column of refColumns) {
@@ -275,10 +309,22 @@ export function registeredService<K extends ContentKey>(
     },
     /** @inheritdoc */
     checkRow: (repos, row) => {
+      const problem = content?.check?.(row);
+      if (problem) throw new ConflictError(`${entity!} ${row.id}: ${problem}`);
+      if (unique.length > 0) {
+        const others = repos[key].list() as readonly AnyRow[];
+        const twin = others.find(
+          (other) => other.id !== row.id && unique.every((column) => other[column] === row[column]),
+        );
+        if (twin) {
+          const values = unique.map((column) => `${column} ${String(row[column])}`).join(", ");
+          throw new ConflictError(`${entity!} ${twin.id} already has ${values}`);
+        }
+      }
       const mode = (row as { mode?: GameMode }).mode ?? content?.mode;
       if (mode === undefined) return;
       for (const column of refColumns) {
-        const id = (row as Record<string, unknown>)[column];
+        const id = row[column];
         if (typeof id !== "string") continue;
         const mismatch = deckModeMismatch(entity!, mode, id, repos.decks.get(id)?.mode);
         if (mismatch) throw new ConflictError(mismatch);

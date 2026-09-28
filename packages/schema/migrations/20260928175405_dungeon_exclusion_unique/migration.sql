@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `dungeon_exclusions_cookie_record_uq` ON `dungeon_exclusions` (`cookie_kr`,`record_slug`);
