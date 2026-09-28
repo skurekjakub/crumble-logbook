@@ -19,7 +19,8 @@ export const Route = createFileRoute("/$mode/scores")({
  */
 function Scores() {
   const { mode } = Route.useRouteContext();
-  const onSearch = useSearchPatch<ScoresSearch>();
-  const search = scoresSearchFor(mode)(Route.useSearch());
+  const read = scoresSearchFor(mode);
+  const onSearch = useSearchPatch<ScoresSearch>(read);
+  const search = read(Route.useSearch());
   return <ScoresView mode={mode} search={search} onSearch={onSearch} />;
 }

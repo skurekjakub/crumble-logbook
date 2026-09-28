@@ -77,6 +77,7 @@ export const STAGE = {
       title: "Zones and boss slots",
       lede: "Chapters cycle through the zone layouts below; from chapter 169 each layout's boss slots are fixed. Each slot says what to bring and how low a bracket it has been cleared at.",
       topic: "zones",
+      fixedFrom: 169,
     },
     clears: {
       title: "Clears",

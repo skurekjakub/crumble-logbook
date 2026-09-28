@@ -349,7 +349,8 @@ describe("the zone board", () => {
   it("shows each zone's slots with the plan, a link to the deck's card and the sources", async () => {
     await renderStage("/stage/zones");
     const zone = (await screen.findByRole("heading", { name: /Ruined City/ })).closest("section")!;
-    expect(zone).toHaveTextContent("Chapters 3, 11, 19, … every 8th chapter.");
+    expect(zone).toHaveTextContent("Chapters 171, 179, 187, … every 8th chapter (fixed from 169).");
+    expect(zone).not.toHaveTextContent("Chapters 3,");
     expect(zone).toHaveTextContent("The GingerCraven deck with damage-reduction perks.");
     expect(zone).toHaveTextContent("35%; fails at 15%");
     expect(await within(zone).findByRole("link", { name: "Charge deck" })).toHaveAttribute(

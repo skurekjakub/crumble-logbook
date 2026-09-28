@@ -181,6 +181,17 @@ describe("scores view", () => {
     await waitFor(() => expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["1.31T"]));
   });
 
+  it("drops unusable search params from the URL when a filter changes", async () => {
+    const router = await renderRoute("/conquest/scores?board=junk&season=x", {
+      ...API,
+      "/api/scores?deck=cherry": { body: [SCORES[1]] },
+    });
+    const select = await screen.findByRole("combobox", { name: "Deck" });
+    await waitFor(() => expect(within(select).getAllByRole("option")).toHaveLength(3));
+    fireEvent.change(select, { target: { value: "cherry" } });
+    await waitFor(() => expect(router.state.location.search).toEqual({ deck: "cherry" }));
+  });
+
   it("shows the legacy empty messages with no scores or RNG factors", async () => {
     await renderRoute("/conquest/scores", {
       ...API,

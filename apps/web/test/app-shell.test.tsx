@@ -183,6 +183,23 @@ describe("app shell", () => {
     }
   }, 15_000);
 
+  it("serves a mode's page at a mixed-case path, as the router matches a static segment", async () => {
+    for (const [path, id] of [
+      ["/Arena/teams", "arena"],
+      ["/arena/Teams", "arena"],
+      ["/STAGE/Clears", "stage"],
+    ] as const) {
+      const mode = MODES.find((m) => m.id === id)!;
+      await renderRoute(path, {}, { mode });
+      expect(
+        await screen.findByRole("list", { name: `${mode.label} sections` }),
+        path,
+      ).toBeVisible();
+      expect(screen.queryByText(NOT_FOUND), path).toBeNull();
+      cleanup();
+    }
+  });
+
   it("answers not found for a page the mode doesn't have, and for an unknown mode", async () => {
     for (const path of ["/arena/scores", "/arena/boss", "/conquest/teams", "/nowhere"]) {
       await renderAt(path);

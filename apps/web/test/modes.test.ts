@@ -71,6 +71,7 @@ describe("modeById and tabAt", () => {
     expect(tabAt(ARENA, "/arena/teams/")?.id).toBe("teams");
     expect(tabAt(ARENA, "/arena")?.id).toBe("overview");
     expect(tabAt(ARENA, "/arena/scores")).toBeUndefined();
+    expect(tabAt(ARENA, "/Arena/Teams")?.id).toBe("teams");
     expect(tabAt(CONQUEST, "/conquest/scores")?.id).toBe("scores");
   });
 

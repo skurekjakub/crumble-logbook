@@ -42,14 +42,16 @@ export function modeById(id: string): ModeSection | undefined {
 }
 
 /**
- * The tab of a section at exactly `pathname`.
+ * The tab of a section at exactly `pathname`, in any case, as the router
+ * matches a static segment.
  *
  * @param section - the section
- * @param pathname - a location pathname; a trailing slash is ignored
+ * @param pathname - a location pathname; a trailing slash and letter case are ignored
  * @returns the tab, or undefined when none is at that path
  */
 export function tabAt(section: Section, pathname: string): SectionTab | undefined {
-  const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  const lower = pathname.toLowerCase();
+  const path = lower.length > 1 ? lower.replace(/\/+$/, "") : lower;
   return section.tabs.find((t) => t.to === path);
 }
 
@@ -66,14 +68,16 @@ export function topicsShownElsewhere(mode: ModeSection): ReadonlySet<string> {
 }
 
 /**
- * Reports whether `pathname` is `to` or lies under it.
+ * Reports whether `pathname` is `to` or lies under it, in any case, as the
+ * router matches a static segment.
  *
  * @param pathname - the current path
- * @param to - a route path
+ * @param to - a route path, lower case
  * @returns `true` if `pathname` is `to` or inside it
  */
 function isUnder(pathname: string, to: string): boolean {
-  return pathname === to || pathname.startsWith(`${to}/`);
+  const path = pathname.toLowerCase();
+  return path === to || path.startsWith(`${to}/`);
 }
 
 /**

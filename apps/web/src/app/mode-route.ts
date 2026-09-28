@@ -11,14 +11,15 @@ import type { ModeSection, StageConfig } from "./modes";
 import { modeById, tabAt } from "./modes";
 
 /**
- * Resolves the `$mode` path segment to its game mode's section.
+ * Resolves the `$mode` path segment to its game mode's section, in any
+ * case, as the router matches a static segment.
  *
- * @param id - the segment, e.g. `arena`
+ * @param id - the segment, e.g. `arena` or `Arena`
  * @returns the mode's section, for the route context
  * @throws the router's not-found error when no mode has that id
  */
 export function resolveMode(id: string): { mode: ModeSection } {
-  const mode = modeById(id);
+  const mode = modeById(id.toLowerCase());
   if (!mode) throw notFound();
   return { mode };
 }

@@ -46,14 +46,17 @@ function zonesOf(slots: readonly StageZoneSlot[]): Zone[] {
 }
 
 /**
- * The first chapters a zone layout comes back in: chapter c is in zone
- * ((c − 1) mod 8) + 1.
+ * The chapters whose boss slots a zone layout fixes: the zone's chapters
+ * from `fixedFrom` on (chapter c is in zone ((c − 1) mod 8) + 1), as the
+ * first few and then every 8th.
  *
  * @param zoneIndex - the zone, 1-8
- * @returns the zone's first chapters, as text
+ * @param fixedFrom - the first chapter whose slots the layouts fix
+ * @returns the chapters, as text
  */
-function chaptersOf(zoneIndex: number): string {
-  return `${[0, 1, 2].map((n) => zoneIndex + 8 * n).join(", ")}, … every 8th chapter`;
+function chaptersOf(zoneIndex: number, fixedFrom: number): string {
+  const first = fixedFrom + ((zoneIndex - 1 - ((fixedFrom - 1) % 8) + 8) % 8);
+  return `${[0, 1, 2].map((n) => first + 8 * n).join(", ")}, … every 8th chapter (fixed from ${fixedFrom})`;
 }
 
 /**
@@ -69,16 +72,18 @@ const zoneId = (zone: Pick<Zone, "zoneIndex">) => `zone-${zone.zoneIndex}`;
  * boss, the plan, the deck it starts from (linking to the deck's card), how
  * low a bracket the slot has been cleared at, and sources.
  *
- * @param props - the zone, the stage mode's id, deck names by id and the source index
+ * @param props - the zone, the first chapter the layouts fix, the stage mode's id, deck names by id and the source index
  * @returns the card
  */
 function ZoneCard({
   zone,
+  fixedFrom,
   mode,
   decks,
   sources,
 }: {
   zone: Zone;
+  fixedFrom: number;
   mode: string;
   decks: ReadonlyMap<string, string>;
   sources: SourceIndex;
@@ -106,7 +111,7 @@ function ZoneCard({
       <h3>
         {zone.zoneIndex}. {zone.zoneEn} <span className="kr">{zone.zoneKr}</span>
       </h3>
-      <p className="muted">Chapters {chaptersOf(zone.zoneIndex)}.</p>
+      <p className="muted">Chapters {chaptersOf(zone.zoneIndex, fixedFrom)}.</p>
       <DataTable columns={columns} rows={zone.slots} rowKey={(s) => s.id} layout="stack" />
     </section>
   );
@@ -141,6 +146,7 @@ export function StageZonesView({ mode, stage }: { mode: ModeSection; stage: Stag
                 <ZoneCard
                   key={zone.zoneIndex}
                   zone={zone}
+                  fixedFrom={stage.zones.fixedFrom}
                   mode={mode.id}
                   decks={decks}
                   sources={sources}

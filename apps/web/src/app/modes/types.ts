@@ -199,13 +199,19 @@ export interface StageConfig {
   /** The bracket calculator: team power in, bracket per chapter out. */
   brackets: ViewCopy;
   /** The zone layouts and what to bring per boss slot. */
-  zones: ViewCopy;
+  zones: ZonesConfig;
   /** The documented clears and failures. */
   clears: ViewCopy;
   /** The Dimensional Rift page. */
   rift: RiftConfig;
   /** Kept-damage percentages, highest first, whose furthest stage the calculator names. */
   reach: readonly number[];
+}
+
+/** The zone board: its copy, and the first chapter whose boss slots the zone layouts fix. */
+export interface ZonesConfig extends ViewCopy {
+  /** The first chapter from which every chapter of a zone has its layout's boss slots. */
+  fixedFrom: number;
 }
 
 /**
