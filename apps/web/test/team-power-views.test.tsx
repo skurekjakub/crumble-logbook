@@ -485,13 +485,15 @@ describe("the team power section", () => {
     const grid = await screen.findByRole("region", { name: /Cost against efficiency, near 2.2G/ });
     const rows = gridRows(grid);
     const medium = rows.find((r) => r[0] === "Medium")!;
-    expect(medium[3]).toBe("Plating");
+    expect(medium[3]).toBe("Plating Posted");
     const ungraded = rows.find((r) => r[0] === "Not graded or unmeasured")!;
-    expect(ungraded[1]).toContain("Guild Lab");
-    expect(ungraded[3]).toBe("Stellar Link");
+    expect(ungraded[1]).toBe("Guild LabLineup padding");
+    expect(ungraded[3]).toBe("Stellar Link Posted");
     fireEvent.click(screen.getByRole("button", { name: "Early" }));
     const early = await screen.findByRole("region", { name: /Cost against efficiency, early/ });
-    expect(gridRows(early).find((r) => r[0] === "High")![3]).toBe("Stellar LinkPlating");
+    expect(gridRows(early).find((r) => r[0] === "High")![3]).toBe(
+      "Stellar Link PostedPlating Posted",
+    );
     expect(document.getElementById("ps-plating")).not.toBeNull();
   });
 
@@ -524,7 +526,7 @@ describe("the team power section", () => {
       expect.arrayContaining([
         "2.42G",
         "– (no change)",
-        "308-30 (+1 chapter)",
+        "308-30 (+1 chapter; the next, 308-30, was +9.1% away)",
         "312-30 (no change)",
       ]),
     );
@@ -532,6 +534,113 @@ describe("the team power section", () => {
     const claimRow = buys.querySelectorAll("tbody tr")[1]!;
     expect(claimRow.querySelector(".gain-figure")).toBeNull();
     expect(rows[2]).toEqual(expect.arrayContaining(["304-30 (no change)"]));
+  });
+
+  it("marks an approximate figure and credits a crossing to the gap it closes, at record 003's real chapter powers", async () => {
+    const approximate = POINTS.map((p) =>
+      p.slug === "plate-14-15"
+        ? { ...p, approximate: true, note: "midpoint used; doesn't say team or total power" }
+        : p,
+    );
+    await renderRoute(
+      "/team-power/planner?power=2.2G",
+      {
+        ...API,
+        "/api/power-data-points": { body: approximate },
+        "/api/stage-chapters": {
+          body: [
+            chapter(303, 5.49e9),
+            chapter(304, 5.54925e9),
+            chapter(305, 5.7e9),
+            chapter(306, 5.9e9),
+            chapter(307, 6.05e9),
+            chapter(308, 6.1215e9),
+          ],
+        },
+      },
+      { mode: TEAM_POWER },
+    );
+    const standing = await screen.findByRole("region", { name: "Where you stand" });
+    expect(standing).toHaveTextContent(
+      "next, 304-30 at 2.22G (+0.9%): any gain of that much or more crosses it",
+    );
+    const buys = await screen.findByRole("region", { name: "What the next gains buy" });
+    const plating = buys.querySelectorAll("tbody tr")[2]!;
+    const cells = [...plating.querySelectorAll("td")].map((td) => td.textContent);
+    expect(plating.querySelector(".gain-figure")).toHaveTextContent("≈ +1.6%");
+    expect(plating).toHaveTextContent("The figure: midpoint used; doesn't say team or total power");
+    expect(cells).toContain("≈ 2.24G");
+    expect(cells).toContain("304-30 (+1 chapter; the next, 304-30, was +0.9% away)");
+    const stellar = [...buys.querySelectorAll("tbody tr")[0]!.querySelectorAll("td")].map(
+      (td) => td.textContent,
+    );
+    expect(stellar).toContain("2.42G");
+    expect(stellar).toContain("307-30 (+4 chapters; the next, 304-30, was +0.9% away)");
+  });
+
+  it("titles the overview's account card for this section", async () => {
+    await renderRoute(
+      "/team-power",
+      {
+        ...API,
+        [`/api/recommendations?record=${SLUG}`]: {
+          body: [
+            {
+              id: 1,
+              summary: "At about 2.2G your preset reaches 304-19.",
+              changes: ["Check the guild."],
+              recordSlug: SLUG,
+              sources: CITE,
+            },
+          ],
+        },
+      },
+      { mode: TEAM_POWER },
+    );
+    expect(await screen.findByRole("heading", { name: "For your account" })).toBeVisible();
+    expect(screen.queryByText("Your lineup against the meta")).toBeNull();
+  });
+
+  it("leaves a figure with no before and after, such as a bundled gain, out of the numbers block", async () => {
+    const bundled = point(9, "newbie-doubling", {
+      powerSource: "stellar_link",
+      deltaPct: 100,
+      cost: "Stellar, Resolve and gear together",
+    });
+    await renderRoute(
+      "/team-power/power-sources",
+      { ...API, "/api/power-data-points": { body: [...POINTS, bundled] } },
+      { mode: TEAM_POWER },
+    );
+    const numbers = await screen.findByRole("region", { name: "Where the record has numbers" });
+    expect(numbers).not.toHaveTextContent("Stellar, Resolve and gear together");
+    expect(numbers).toHaveTextContent("+10% (2G → 2.2G)");
+    const grid = screen.getByRole("region", { name: /Cost against efficiency/ });
+    expect(within(grid).getAllByText("Posted").length).toBeGreaterThan(1);
+  });
+
+  it("drops an unknown order or power source from the URL", async () => {
+    const router = await renderAt("/team-power/spending?order=bogus");
+    await screen.findByText("Check the guild's research level.");
+    await waitFor(() => expect(router.state.location.search).toEqual({}));
+    cleanup();
+    const curves = await renderAt("/team-power/curves?source=bogus");
+    await waitFor(() => expect(curves.state.location.search).toEqual({}));
+    expect(await screen.findByRole("region", { name: "Plating odds by level" })).toBeVisible();
+  });
+
+  it("filters packages and data points by every figure their rows show", async () => {
+    await renderAt("/team-power/packages?q=%243.99");
+    await screen.findByText("Key Set");
+    expect(screen.queryByText("Stellar Pack")).toBeNull();
+    cleanup();
+    await renderAt("/team-power/packages?q=Medium%20spender");
+    await screen.findByText("Stellar Pack");
+    expect(screen.queryByText("Key Set")).toBeNull();
+    cleanup();
+    await renderAt("/team-power/data-points?q=2.2G");
+    await screen.findByText("note stellar8-triangle-2g");
+    expect(screen.queryByText("note plate-14-15")).toBeNull();
   });
 
   it("lists packages with KRW and USD, marking an inferred tier, and filters by spender", async () => {

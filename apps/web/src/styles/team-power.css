@@ -1,7 +1,5 @@
-/* The team-power screens: the basis marks, the routes' step lists, the cost and efficiency
-   grid, and the order switch. Colours come from tokens.css only. A mark's fill says how a
-   figure is known: solid for a player's own measurement, hatched for a claim, dashed for
-   what nobody measured (or the record inferred), an outline for the community's order. */
+/* The team-power screens. Colours come from tokens.css only. A basis mark's fill says how a
+   figure is known; only a solid mark stands for a player's own measurement. */
 
 .basis {
   display: inline-flex;
@@ -165,6 +163,13 @@ dl.kv dd.chosen,
 dl.kv dt.chosen {
   color: var(--ink);
   font-weight: 600;
+}
+
+/* A planner reach cell names the gap a crossing closes; above phone width it gets the room. */
+@media (min-width: 641px) {
+  td.reach-cell {
+    min-width: 11rem;
+  }
 }
 
 .callout {

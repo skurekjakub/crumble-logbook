@@ -1,8 +1,6 @@
 /**
- * The team-power screens' arithmetic and wording: an efficiency note's
- * grade, the gain the planner may multiply by, stage reach before and
- * after a gain, and prices. Pure; the rows come from the API. Reach reads
- * the power gate through `lib/stage.ts`.
+ * The team-power screens' arithmetic and wording. Pure; the rows come from
+ * the API. Reach reads the power gate through `lib/stage.ts`.
  *
  * @module
  */
@@ -79,6 +77,22 @@ export interface GainSource {
   slug: string;
   kind: DataPointKind;
   deltaPct: number | null;
+}
+
+/**
+ * The data point a step takes its posted gain from, when the planner may
+ * multiply by it (see {@link postedGainPct}).
+ *
+ * @param step - the planner step
+ * @param points - the data points
+ * @returns the data point, or undefined when the step has no posted gain
+ */
+export function postedGainPoint<P extends GainSource>(
+  step: GainStep,
+  points: readonly P[],
+): P | undefined {
+  if (postedGainPct(step, points) === null) return undefined;
+  return points.find((p) => p.slug === step.dataPoint);
 }
 
 /**
@@ -197,12 +211,40 @@ export function usdPrice(pack: UsdPriced): { text: string; inferred: boolean } |
 }
 
 /**
- * Prints a change in percent with its sign: `+10%`, `+1.6%`.
+ * Prints a change in percent with its sign: `+10%`, `+1.6%`, and `≈ +1.6%`
+ * for a figure given loosely.
  *
  * @param pct - the change
+ * @param approximate - whether the figure is given loosely
  * @returns the text
  */
-export function formatPct(pct: number): string {
+export function formatPct(pct: number, approximate = false): string {
   const rounded = Math.round(pct * 10) / 10;
-  return `${rounded >= 0 ? "+" : ""}${rounded}%`;
+  return `${approximate ? "≈ " : ""}${rounded >= 0 ? "+" : ""}${rounded}%`;
+}
+
+/**
+ * The words for what a gain buys at one bracket: the furthest chapter
+ * after it, how many chapters it moves, and, when it moves, how far away
+ * the next chapter was, since a gain larger than that gap crosses it
+ * whatever the step is.
+ *
+ * @param before - the reach before the gain
+ * @param after - the furthest chapter after it
+ * @param moved - how many chapters it moves
+ * @param power - the power before the gain
+ * @returns the text
+ */
+export function reachGained<C extends ReachChapter>(
+  before: Reach<C>,
+  after: C | undefined,
+  moved: number,
+  power: number,
+): string {
+  const stage = after?.lastStage ?? "–";
+  if (moved === 0) return `${stage} (no change)`;
+  const chapters = `+${moved} chapter${moved === 1 ? "" : "s"}`;
+  if (!before.next || before.nextPower === undefined) return `${stage} (${chapters})`;
+  const gap = formatPct((before.nextPower / power - 1) * 100);
+  return `${stage} (${chapters}; the next, ${before.next.lastStage}, was ${gap} away)`;
 }

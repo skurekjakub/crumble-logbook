@@ -16,7 +16,14 @@ import { ViewHeader } from "../components/ViewHeader";
 import type { SourceIndex } from "../lib/sources";
 import { formatPower, parsePower } from "../lib/stage";
 import type { Reach } from "../lib/team-power";
-import { chaptersGained, formatPct, postedGainPct, reachAt } from "../lib/team-power";
+import {
+  chaptersGained,
+  formatPct,
+  postedGainPct,
+  postedGainPoint,
+  reachAt,
+  reachGained,
+} from "../lib/team-power";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
 import { PowerSourceLink } from "./TeamPowerParts";
@@ -72,7 +79,8 @@ function Standing({
                 <span className="muted">
                   {" "}
                   · next, {reach.next.lastStage} at {formatPower(reach.nextPower)} (
-                  {formatPct((reach.nextPower / power - 1) * 100)})
+                  {formatPct((reach.nextPower / power - 1) * 100)}): any gain of that much or more
+                  crosses it
                 </span>
               ) : null}
             </li>
@@ -80,6 +88,26 @@ function Standing({
         })}
       </ul>
     </section>
+  );
+}
+
+/**
+ * A planner step's gain: the posted figure it multiplies by (≈ when the
+ * post gives it loosely) with that figure's note, then the record's words.
+ *
+ * @param props - the step and the lists
+ * @returns the gain
+ */
+export function StepGain({ step, data }: { step: PlannerStep; data: TeamPowerData }) {
+  const point = postedGainPoint(step, data.points);
+  return (
+    <>
+      {point?.deltaPct == null ? null : (
+        <span className="gain-figure">{formatPct(point.deltaPct, point.approximate)}</span>
+      )}
+      <span className="muted">{step.gain}</span>
+      {point ? <div className="basis-note">The figure: {point.note}</div> : null}
+    </>
   );
 }
 
@@ -116,6 +144,13 @@ function StepsBuy({
     const pct = postedGainPct(step, data.points);
     return pct === null || power === null ? null : Math.round(power * (1 + pct / 100));
   };
+  /**
+   * Whether the figure a step multiplies by is given loosely.
+   *
+   * @param step - the planner step
+   * @returns true for an approximate posted figure
+   */
+  const loose = (step: PlannerStep) => postedGainPoint(step, data.points)?.approximate ?? false;
   const columns: Column<PlannerStep>[] = [
     {
       header: "Step",
@@ -124,22 +159,15 @@ function StepsBuy({
     { header: "Basis", cell: (s) => <BasisMark basis={s.basis} /> },
     {
       header: "Gain",
-      cell: (s) => {
-        const pct = postedGainPct(s, data.points);
-        return (
-          <>
-            {pct === null ? null : <span className="gain-figure">{formatPct(pct)}</span>}
-            <span className="muted">{s.gain}</span>
-          </>
-        );
-      },
+      cell: (s) => <StepGain step={s} data={data} />,
       className: "wide",
     },
     {
       header: "New power",
       cell: (s) => {
         const next = after(s);
-        return next === null ? "not derived" : formatPower(next);
+        if (next === null) return "not derived";
+        return `${loose(s) ? "≈ " : ""}${formatPower(next)}`;
       },
       className: "n",
     },
@@ -148,13 +176,12 @@ function StepsBuy({
       cell: (s) => {
         const next = after(s);
         if (next === null || power === null) return <span className="muted">not derived</span>;
-        const before = reachAt(chapters, bracket, power).reached;
+        const before = reachAt(chapters, bracket, power);
         const reached = reachAt(chapters, bracket, next).reached;
-        const moved = chaptersGained(chapters, before, reached);
-        const gained = moved === 0 ? "no change" : `+${moved} chapter${moved === 1 ? "" : "s"}`;
-        return `${reached?.lastStage ?? "–"} (${gained})`;
+        const moved = chaptersGained(chapters, before.reached, reached);
+        return reachGained(before, reached, moved, power);
       },
-      className: "n",
+      className: "reach-cell",
     })),
     {
       header: "The record's reach",

@@ -36,6 +36,7 @@ export const ARENA = {
   boss: null,
   leaderboard: null,
   rules: { title: "How Arena works", highlight: "Season buffs" },
+  accountTitle: "Your lineup against the meta",
   stage: null,
   dungeon: null,
   teamPower: null,

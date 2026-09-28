@@ -67,6 +67,7 @@ export const STAGE = {
   boss: null,
   leaderboard: null,
   rules: { title: "How stages work", highlight: null },
+  accountTitle: "Your lineup against the meta",
   stage: {
     brackets: {
       title: "Bracket calculator",

@@ -37,14 +37,22 @@ function Takeaways({ rows, sources }: { rows: readonly Takeaway[]; sources: Sour
 /**
  * The "for your account" card: each recommendation's summary, changes and sources; nothing when there are none.
  *
- * @param props - the recommendations and the source index
+ * @param props - the card's heading, the recommendations and the source index
  * @returns the card, or null
  */
-function AccountCard({ rows, sources }: { rows: readonly Recommendation[]; sources: SourceIndex }) {
+function AccountCard({
+  title,
+  rows,
+  sources,
+}: {
+  title: string;
+  rows: readonly Recommendation[];
+  sources: SourceIndex;
+}) {
   if (!rows.length) return null;
   return (
     <div className="card">
-      <h3>Your lineup against the meta</h3>
+      <h3>{title}</h3>
       {rows.map((r) => (
         <div key={r.id}>
           <div>{r.summary}</div>
@@ -161,7 +169,7 @@ export function OverviewView({ mode }: { mode: ModeSection }) {
         {(rows) => <Takeaways rows={rows} sources={sources} />}
       </QueryResult>
       <QueryResult query={recommendations} resource="recommendations">
-        {(rows) => <AccountCard rows={rows} sources={sources} />}
+        {(rows) => <AccountCard title={mode.accountTitle} rows={rows} sources={sources} />}
       </QueryResult>
     </>
   );

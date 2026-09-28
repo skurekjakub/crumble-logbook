@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 import type { PowerSource, ShopPackage } from "../api/types";
 import type { ModeSection } from "../app/modes";
 import { modeLink } from "../app/modes";
@@ -72,6 +73,25 @@ export function PackageLink({ mode, slug, packages, withKr = false }: PackageLin
       {withKr && pack ? <span className="kr"> {pack.nameKr}</span> : null}
     </>
   );
+}
+
+/**
+ * Drops a search param naming a value the loaded lists don't have, so the
+ * URL never keeps a filter the page can't apply.
+ *
+ * @param value - the param's value, when the URL gives one
+ * @param known - the values the page can apply, or undefined while they load
+ * @param drop - removes the param from the URL
+ */
+export function useDropUnknown(
+  value: string | undefined,
+  known: readonly string[] | undefined,
+  drop: () => void,
+): void {
+  const unknown = value !== undefined && known !== undefined && !known.includes(value);
+  useEffect(() => {
+    if (unknown) drop();
+  }, [unknown, drop]);
 }
 
 /** Props for {@link Switch}. */

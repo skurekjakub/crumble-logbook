@@ -11,7 +11,7 @@ import { sourceLabel } from "../lib/sources";
 import { KIND_LABELS, formatPct } from "../lib/team-power";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
-import { PowerSourceLink } from "./TeamPowerParts";
+import { PowerSourceLink, useDropUnknown } from "./TeamPowerParts";
 import { SourceChips } from "../components/SourceChips";
 
 /** The data points page's search params: a kind, a power source and a text filter. */
@@ -47,6 +47,17 @@ export function beforeAfter(p: Pick<PowerDataPoint, "beforeG" | "afterG">): stri
   return `${p.beforeG === null ? "" : `${formatG(p.beforeG)} `}→ ${p.afterG === null ? "?" : formatG(p.afterG)}`;
 }
 
+/**
+ * A figure's change as its column shows it: `+10%`, `≈ +1.6%` for a figure
+ * given loosely, a dash for none.
+ *
+ * @param p - the data point
+ * @returns the text
+ */
+export function changeText(p: Pick<PowerDataPoint, "deltaPct" | "approximate">): string {
+  return p.deltaPct === null ? "–" : formatPct(p.deltaPct, p.approximate);
+}
+
 /** Props for {@link PowerDataPointsView}. */
 export interface PowerDataPointsViewProps {
   /** The team-power mode. */
@@ -77,6 +88,8 @@ export function PowerDataPointsView({
   const index = useSourceIndex();
   const state = useTeamPowerData();
   const { title, lede } = teamPower.dataPoints;
+  const known = state.status === "ready" ? state.data.sources.map((s) => s.slug) : undefined;
+  useDropUnknown(search.source, known, () => onSearch({ source: undefined }));
   /**
    * The data points' table columns.
    *
@@ -91,11 +104,7 @@ export function PowerDataPointsView({
     },
     { header: "How known", cell: (p) => <BasisMark basis={p.kind} /> },
     { header: "Before → after", cell: beforeAfter, className: "n" },
-    {
-      header: "Change",
-      cell: (p) => (p.deltaPct === null ? "–" : formatPct(p.deltaPct)),
-      className: "n",
-    },
+    { header: "Change", cell: changeText, className: "n" },
     { header: "What it took", cell: (p) => p.cost ?? "–" },
     { header: "Note", cell: (p) => p.note, className: "wide" },
     { header: "Sources", cell: (p) => <SourceChips ids={p.sources} sources={index} /> },
@@ -122,6 +131,9 @@ export function PowerDataPointsView({
                 [
                   p.date,
                   data.sources.find((s) => s.slug === p.powerSource)?.nameEn ?? p.powerSource,
+                  KIND_LABELS[p.kind],
+                  beforeAfter(p),
+                  changeText(p),
                   p.cost ?? "",
                   p.note,
                   ...p.sources.map(sourceLabel),

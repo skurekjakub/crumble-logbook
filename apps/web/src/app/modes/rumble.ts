@@ -36,6 +36,7 @@ export const RUMBLE = {
   boss: null,
   leaderboard: null,
   rules: { title: "How Rumble Arena works", highlight: "Season buffs" },
+  accountTitle: "Your lineup against the meta",
   stage: null,
   dungeon: null,
   teamPower: null,

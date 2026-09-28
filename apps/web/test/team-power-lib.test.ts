@@ -6,6 +6,7 @@ import {
   formatPct,
   postedGainPct,
   reachAt,
+  reachGained,
   usdPrice,
 } from "../src/lib/team-power";
 import { columnLabel } from "../src/views/GrowthCurvesView";
@@ -69,6 +70,17 @@ describe("reachAt and chaptersGained", () => {
     expect(all.nextPower).toBeUndefined();
   });
 
+  it("says how far the next chapter was when a gain moves the reach, and nothing more when it doesn't", () => {
+    const before = reachAt(CHAPTERS, B35, 100);
+    expect(reachGained(before, CHAPTERS[2], 1, 100)).toBe(
+      "3-30 (+1 chapter; the next, 3-30, was +20% away)",
+    );
+    expect(reachGained(before, CHAPTERS[1], 0, 100)).toBe("2-30 (no change)");
+    expect(reachGained(reachAt(CHAPTERS, B35, 30), CHAPTERS[0], 1, 30)).toBe(
+      "1-30 (+1 chapter; the next, 1-30, was +33.3% away)",
+    );
+  });
+
   it("counts the chapters a gain moves the reach by", () => {
     expect(chaptersGained(CHAPTERS, CHAPTERS[0], CHAPTERS[2])).toBe(2);
     expect(chaptersGained(CHAPTERS, undefined, CHAPTERS[0])).toBe(1);
@@ -101,5 +113,6 @@ describe("prices and changes", () => {
     expect(formatPct(1.6)).toBe("+1.6%");
     expect(formatPct(13.333)).toBe("+13.3%");
     expect(formatPct(-2)).toBe("-2%");
+    expect(formatPct(1.6, true)).toBe("≈ +1.6%");
   });
 });

@@ -20,6 +20,7 @@ import {
   PLACES,
   efficiencyGrade,
   formatPct,
+  postedGainPct,
 } from "../lib/team-power";
 import { formatG } from "../lib/format";
 import type { TeamPowerData } from "./TeamPowerData";
@@ -47,6 +48,18 @@ export function validatePowerSourcesSearch(search: Record<string, unknown>): Pow
   return { stage: optionalKey(search.stage, STAGES) };
 }
 
+/**
+ * The power sources the planner has a posted gain for.
+ *
+ * @param data - the lists
+ * @returns their slugs, in the planner's order
+ */
+function measuredSources(data: TeamPowerData): ReadonlySet<string> {
+  return new Set(
+    data.planner.filter((s) => postedGainPct(s, data.points) !== null).map((s) => s.powerSource),
+  );
+}
+
 /** Labels per efficiency grade. */
 const GRADE_LABELS: Readonly<Record<EfficiencyGrade, string>> = {
   high: "High",
@@ -59,19 +72,23 @@ const GRADE_LABELS: Readonly<Record<EfficiencyGrade, string>> = {
  * The grid of cost against efficiency: cost types across, the record's
  * grades at the chosen stage down, and a last row for the power sources
  * whose note there leads with no grade. Each cell links to its sources'
- * cards.
+ * cards; a source the planner has a posted gain for carries the posted
+ * mark, so a grade backed by a measurement stands apart from one that isn't.
  *
- * @param props - the mode, the power sources and the stage graded at
+ * @param props - the mode, the power sources, the stage graded at, and
+ *   the slugs of the sources with a posted gain
  * @returns the card
  */
 function EfficiencyGrid({
   mode,
   sources,
   stage,
+  measured,
 }: {
   mode: ModeSection;
   sources: readonly PowerSource[];
   stage: EfficiencyStage;
+  measured: ReadonlySet<string>;
 }) {
   const rows: ReadonlyArray<readonly [EfficiencyGrade | null, string]> = [
     ...EFFICIENCY_GRADES.map((g) => [g, GRADE_LABELS[g]] as const),
@@ -94,6 +111,12 @@ function EfficiencyGrid({
         {inCell.map((s) => (
           <li key={s.slug}>
             <PowerSourceLink mode={mode} slug={s.slug} sources={sources} />
+            {measured.has(s.slug) ? (
+              <>
+                {" "}
+                <span className="mark posted">Posted</span>
+              </>
+            ) : null}
           </li>
         ))}
       </ul>
@@ -128,15 +151,22 @@ function EfficiencyGrid({
           </tbody>
         </table>
       </div>
+      <p className="muted">
+        <span className="mark posted">Posted</span> the record has a player's own before-and-after
+        gain for the power source, which the planner multiplies. A grade without it is the record's
+        judgement from costs and the community's word.
+      </p>
     </section>
   );
 }
 
 /**
  * The figures behind the power sources the planner may multiply by: each
- * one's posted changes and the record's own arithmetic on its cost, side
- * by side, with the record's note near 2.2G under each. Nothing here is
- * divided by a cost.
+ * one's measured changes (a power before and after) and the record's own
+ * arithmetic on its cost, each marked with how it is known (≈ when given
+ * loosely), with the record's note near 2.2G under each. A figure with no
+ * before and after, such as a gain several sources made together, is left
+ * to the Data points page. Nothing here is divided by a cost.
  *
  * @param props - the mode, the lists and the source index
  * @returns the section, or null when no planner step has a posted gain
@@ -150,9 +180,7 @@ function WithNumbers({
   data: TeamPowerData;
   index: SourceIndex;
 }) {
-  const measured = [
-    ...new Set(data.planner.filter((s) => s.basis === "posted").map((s) => s.powerSource)),
-  ];
+  const measured = [...measuredSources(data)];
   if (!measured.length) return null;
   const columns: Column<PowerDataPoint>[] = [
     { header: "How known", cell: (p) => <BasisMark basis={p.kind} /> },
@@ -161,7 +189,7 @@ function WithNumbers({
       cell: (p) =>
         p.deltaPct === null
           ? "–"
-          : `${formatPct(p.deltaPct)}${p.beforeG !== null && p.afterG !== null ? ` (${formatG(p.beforeG)} → ${formatG(p.afterG)})` : ""}`,
+          : `${formatPct(p.deltaPct, p.approximate)}${p.beforeG !== null && p.afterG !== null ? ` (${formatG(p.beforeG)} → ${formatG(p.afterG)})` : ""}`,
       className: "n",
     },
     { header: "What it took", cell: (p) => p.cost ?? "–", className: "wide" },
@@ -179,7 +207,9 @@ function WithNumbers({
         {measured.map((slug) => {
           const source = data.sources.find((s) => s.slug === slug);
           const points = data.points.filter(
-            (p) => p.powerSource === slug && (p.deltaPct !== null || p.kind === "inferred"),
+            (p) =>
+              p.powerSource === slug &&
+              ((p.beforeG !== null && p.afterG !== null) || p.kind === "inferred"),
           );
           return (
             <section key={slug} className="card">
@@ -355,7 +385,12 @@ export function PowerSourcesView({ mode, teamPower, search, onSearch }: PowerSou
             <EmptyState>No power sources recorded yet.</EmptyState>
           ) : (
             <>
-              <EfficiencyGrid mode={mode} sources={data.sources} stage={stage} />
+              <EfficiencyGrid
+                mode={mode}
+                sources={data.sources}
+                stage={stage}
+                measured={measuredSources(data)}
+              />
               <WithNumbers mode={mode} data={data} index={index} />
               <h3>Every power source</h3>
               {data.sources.map((s) => (

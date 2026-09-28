@@ -66,6 +66,7 @@ export const DUNGEON = {
   boss: null,
   leaderboard: null,
   rules: { title: "How Crumble Dungeon works", highlight: null },
+  accountTitle: "Your lineup against the meta",
   stage: null,
   dungeon: {
     runs: {

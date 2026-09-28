@@ -1,7 +1,6 @@
 /**
  * The team-power section: its tabs, view copy, rules card and the
- * team-power screens (routes, cost and efficiency, spending order,
- * planner, packages, curves, data points).
+ * team-power screens' config.
  *
  * @module
  */
@@ -51,6 +50,7 @@ export const TEAM_POWER = {
   boss: null,
   leaderboard: null,
   rules: { title: "What team power decides", highlight: null },
+  accountTitle: "For your account",
   stage: null,
   dungeon: null,
   teamPower: {
@@ -60,7 +60,7 @@ export const TEAM_POWER = {
     },
     powerSources: {
       title: "Cost and efficiency",
-      lede: "Every power source by what it costs and how much power it gives for that cost, at the account stage you pick. The grades are the record's: high is several percent of team power for a cost met within days, medium about 1% per a few days' income or about ₩10,000, low well under that or gated by luck or large sums, none no displayed power. A note that doesn't lead with a grade isn't graded.",
+      lede: "Every power source by what it costs and how much power it gives for that cost, at the account stage you pick. The grades are the record's: high is a posted or inferred gain of several percent of team power for a cost met within days, medium about 1% per a few days' income or about ₩10,000, low well under that or gated by luck or large sums, none no displayed power. Most grades rest on neither a posted nor an inferred gain; the grid marks the ones that do. A note that doesn't lead with a grade isn't graded.",
     },
     spending: {
       title: "Spending order",

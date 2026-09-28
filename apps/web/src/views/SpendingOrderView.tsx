@@ -9,7 +9,7 @@ import { optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
-import { PackageLink, PowerSourceLink, Switch } from "./TeamPowerParts";
+import { PackageLink, PowerSourceLink, Switch, useDropUnknown } from "./TeamPowerParts";
 
 /** The spending order page's search params: the order shown, by slug. */
 export interface SpendingSearch {
@@ -101,6 +101,11 @@ export function SpendingOrderView({ mode, teamPower, search, onSearch }: Spendin
   const index = useSourceIndex();
   const state = useTeamPowerData();
   const { title, lede } = teamPower.spending;
+  const known =
+    state.status === "ready"
+      ? state.data.orders.filter((o) => o.kind === "stage").map((o) => o.slug)
+      : undefined;
+  useDropUnknown(search.order, known, () => onSearch({ order: undefined }));
   return (
     <>
       <ViewHeader title={title} lede={lede} />

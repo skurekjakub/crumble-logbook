@@ -187,6 +187,8 @@ export interface ModeSection extends SectionBase {
   leaderboard: LeaderboardConfig | null;
   /** The overview's rules card, for a mode whose record files its rules as mechanics. */
   rules: RulesConfig | null;
+  /** The heading of the overview's card holding the record's advice for the reader's account. */
+  accountTitle: string;
   /** The stage-pushing screens, for the stage mode. */
   stage: StageConfig | null;
   /** The Crumble Dungeon screens, for the Crumble Dungeon mode. */

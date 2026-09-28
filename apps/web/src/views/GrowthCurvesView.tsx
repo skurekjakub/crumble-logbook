@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useSourceIndex } from "../api/hooks";
 import type { GrowthCurve } from "../api/types";
 import type { ModeSection, TeamPowerConfig } from "../app/modes";
@@ -9,7 +10,7 @@ import { optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
-import { PowerSourceLink } from "./TeamPowerParts";
+import { PowerSourceLink, useDropUnknown } from "./TeamPowerParts";
 
 /** The curves page's search params: the power source shown, by slug. */
 export interface CurvesSearch {
@@ -43,6 +44,18 @@ export function columnLabel(column: string): string {
 }
 
 /**
+ * What to search the record's captures for to find a curve's evidence: the
+ * name of the first file the curve names.
+ *
+ * @param evidence - the curve's evidence, one or more record-relative paths
+ * @returns the file name
+ */
+export function evidenceQuery(evidence: string): string {
+  const first = evidence.split(",")[0]!.trim();
+  return first.slice(first.lastIndexOf("/") + 1);
+}
+
+/**
  * Prints a curve cell: a number with thousands separators, a text as it
  * is, nothing as a dash.
  *
@@ -56,8 +69,8 @@ function cellText(cell: GrowthCurve["rows"][number][number]): string {
 
 /**
  * One curve: its title and power source, its table (with each row's
- * sources where the record cites rows apart), its note, the evidence file
- * it condenses and its sources.
+ * sources where the record cites rows apart), its note, a link to the
+ * record's captures filtered to the evidence it condenses, and its sources.
  *
  * @param props - the curve, the mode, the lists and the source index
  * @returns the card
@@ -108,9 +121,16 @@ function CurveCard({
         </table>
       </div>
       {curve.note ? <p className="muted">{curve.note}</p> : null}
-      {curve.evidence ? (
+      {curve.evidence && mode.recordSlug ? (
         <div className="label">
-          Condensed from <span className="mono">{curve.evidence}</span>
+          Condensed from{" "}
+          <Link
+            to="/research/$slug/captures"
+            params={{ slug: mode.recordSlug }}
+            search={{ q: evidenceQuery(curve.evidence) }}
+          >
+            the record's evidence
+          </Link>
         </div>
       ) : null}
       <SourceChips ids={curve.sources} sources={index} />
@@ -141,6 +161,8 @@ export function GrowthCurvesView({ mode, teamPower, search, onSearch }: GrowthCu
   const index = useSourceIndex();
   const state = useTeamPowerData();
   const { title, lede } = teamPower.curves;
+  const known = state.status === "ready" ? state.data.sources.map((s) => s.slug) : undefined;
+  useDropUnknown(search.source, known, () => onSearch({ source: undefined }));
   return (
     <>
       <ViewHeader title={title} lede={lede} />
@@ -169,7 +191,9 @@ export function GrowthCurvesView({ mode, teamPower, search, onSearch }: GrowthCu
                   <CurveCard key={c.id} curve={c} mode={mode} data={data} index={index} />
                 ))
               ) : (
-                <EmptyState>No curves recorded yet.</EmptyState>
+                <EmptyState>
+                  {search.source ? "No curves for this power source." : "No curves recorded yet."}
+                </EmptyState>
               )}
             </>
           );

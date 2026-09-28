@@ -7,6 +7,7 @@ import { SourceChips } from "../components/SourceChips";
 import { ViewHeader } from "../components/ViewHeader";
 import { optionalKey, optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
+import { sourceLabel } from "../lib/sources";
 import { formatKrw, formatUsd, usdPrice } from "../lib/team-power";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
@@ -37,20 +38,46 @@ export function validatePackagesSearch(search: Record<string, unknown>): Package
 }
 
 /**
+ * The texts a package's price shows: KRW; USD as a store lists it, as its
+ * price tier (≈) or "USD not listed"; and where the USD figure comes from.
+ *
+ * @param pack - the package
+ * @returns the texts
+ */
+function priceTexts(pack: ShopPackage): { krw: string; usd: string; from: string } {
+  return {
+    krw: formatKrw(pack.priceKrw),
+    usd: usdPrice(pack)?.text ?? "USD not listed",
+    from: pack.usdSource,
+  };
+}
+
+/**
+ * A package's Crystal value as its column shows it.
+ *
+ * @param pack - the package
+ * @returns the text, a dash when it has none
+ */
+function crystalText(pack: ShopPackage): string {
+  if (pack.crystalValuePct === null) return "–";
+  const basis = pack.crystalValueBasis ? ` over ${pack.crystalValueBasis}` : "";
+  return `${pack.crystalValuePct.toLocaleString("en-US")}%${basis}`;
+}
+
+/**
  * A package's price: KRW, then USD as a store lists it or as its price
- * tier (≈), or "USD not listed".
+ * tier (≈), or "USD not listed", and under it where the USD figure comes from.
  *
  * @param props - the package
  * @returns the price
  */
 function Price({ pack }: { pack: ShopPackage }) {
-  const usd = usdPrice(pack);
+  const { krw, usd, from } = priceTexts(pack);
   return (
     <>
-      <div>{formatKrw(pack.priceKrw)}</div>
-      <div className={usd?.inferred === false ? undefined : "muted"} title={pack.usdSource}>
-        {usd ? usd.text : "USD not listed"}
-      </div>
+      <div>{krw}</div>
+      <div className={usdPrice(pack)?.inferred === false ? undefined : "muted"}>{usd}</div>
+      <div className="basis-note">{from}</div>
     </>
   );
 }
@@ -77,7 +104,7 @@ function packageColumns(
         </>
       ),
     },
-    { header: "Price", cell: (p) => <Price pack={p} />, className: "n" },
+    { header: "Price", cell: (p) => <Price pack={p} /> },
     { header: "Kind", cell: (p) => p.kind },
     {
       header: "Feeds",
@@ -90,14 +117,7 @@ function packageColumns(
         )),
     },
     { header: "Spender", cell: (p) => TIERS[p.tier] },
-    {
-      header: "Crystal value (not team power)",
-      cell: (p) =>
-        p.crystalValuePct === null
-          ? "–"
-          : `${p.crystalValuePct.toLocaleString("en-US")}%${p.crystalValueBasis ? ` over ${p.crystalValueBasis}` : ""}`,
-      className: "n",
-    },
+    { header: "Crystal value (not team power)", cell: crystalText, className: "n" },
     {
       header: "Verdict",
       cell: (p) => (
@@ -113,8 +133,8 @@ function packageColumns(
 }
 
 /**
- * The text a package row's filter matches: its names, kind, what it feeds,
- * its verdict and contents.
+ * The text a package row's filter matches: everything its cells show, from
+ * the same helpers they use.
  *
  * @param p - the package
  * @param data - the lists, to name what it feeds
@@ -122,7 +142,21 @@ function packageColumns(
  */
 function packageText(p: ShopPackage, data: TeamPowerData): string {
   const feeds = p.feeds.map((slug) => data.sources.find((s) => s.slug === slug)?.nameEn ?? slug);
-  return [p.nameEn, p.nameKr, p.kind, ...feeds, p.verdict, p.contents ?? ""].join(" ");
+  const { krw, usd, from } = priceTexts(p);
+  return [
+    p.nameEn,
+    p.nameKr,
+    krw,
+    usd,
+    from,
+    p.kind,
+    ...feeds,
+    TIERS[p.tier],
+    crystalText(p),
+    p.contents ?? "",
+    p.verdict,
+    ...p.sources.map(sourceLabel),
+  ].join(" ");
 }
 
 /** Props for {@link PackagesView}. */

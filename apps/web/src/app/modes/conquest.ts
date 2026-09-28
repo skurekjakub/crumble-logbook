@@ -106,6 +106,7 @@ export const CONQUEST = {
     boards: { players: "Players", guilds: "Guilds", power: "Power" },
   },
   rules: null,
+  accountTitle: "Your lineup against the meta",
   stage: null,
   dungeon: null,
   teamPower: null,

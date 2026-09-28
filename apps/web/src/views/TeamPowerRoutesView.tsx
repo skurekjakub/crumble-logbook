@@ -7,15 +7,16 @@ import { SourceChips } from "../components/SourceChips";
 import { ViewHeader } from "../components/ViewHeader";
 import { formatG } from "../lib/format";
 import type { SourceIndex } from "../lib/sources";
-import { COST_TYPES, formatKrw, formatPct, postedGainPct, usdPrice } from "../lib/team-power";
+import { COST_TYPES, formatKrw, formatPct, postedGainPoint, usdPrice } from "../lib/team-power";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
 import { PackageLink, PowerSourceLink } from "./TeamPowerParts";
 
 /**
  * A power source step's gain: the planner step the record ties to the
- * power source, with the posted change and powers when it has them, and
- * the record's words; "No posted gain" when the record ties none.
+ * power source, with the posted change (≈ when the post gives it loosely),
+ * the powers and the figure's note when it has a posted gain, and the
+ * record's words; "No posted gain" when the record ties none.
  *
  * @param props - the power source's slug, the lists and the source index
  * @returns the gain
@@ -31,18 +32,20 @@ export function SourceGain({
 }) {
   const step = data.planner.find((s) => s.powerSource === slug);
   if (!step) return <span className="muted">No posted gain</span>;
-  const pct = postedGainPct(step, data.points);
-  const point = data.points.find((p) => p.slug === step.dataPoint);
+  const point = postedGainPoint(step, data.points);
   return (
     <span>
-      {pct === null ? null : <span className="gain-figure">{formatPct(pct)}</span>}
-      {pct !== null && point?.beforeG != null && point.afterG != null ? (
+      {point?.deltaPct == null ? null : (
+        <span className="gain-figure">{formatPct(point.deltaPct, point.approximate)}</span>
+      )}
+      {point?.beforeG != null && point.afterG != null ? (
         <span className="gain-figure">
           ({formatG(point.beforeG)} → {formatG(point.afterG)})
         </span>
       ) : null}
-      <span className={pct === null ? undefined : "muted"}>{step.gain}</span>{" "}
+      <span className={point ? "muted" : undefined}>{step.gain}</span>{" "}
       <SourceChips ids={step.sources} sources={index} />
+      {point ? <span className="basis-note"> The figure: {point.note}</span> : null}
     </span>
   );
 }
