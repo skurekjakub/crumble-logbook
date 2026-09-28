@@ -1,0 +1,29 @@
+{
+ "about": "Planner data: for a team power, the last main stage (in order) still inside each damage bracket, and what a power gain buys. Stage recommended power is game data 1.4.002 after the 2026-09-23 easing (record 003, evidence/06-derived/stage-table.json); the table is derived in evidence/07-derived/bracket-reach.json. Brackets: damage kept 55% from 60% of recommended power, 35% from 40%, 15% from 20% (record 003). The user's team is near 2.2G.",
+ "measured": "2026-09-28",
+ "rows": [
+  {"team_power_g": 1.0, "reach_55": "255-29", "reach_35": "272-15", "reach_15": "300-22"},
+  {"team_power_g": 1.5, "reach_55": "272-15", "reach_35": "288-30", "reach_15": "317-8"},
+  {"team_power_g": 2.0, "reach_55": "284-6", "reach_35": "300-22", "reach_15": "328-29"},
+  {"team_power_g": 2.2, "reach_55": "288-3", "reach_35": "304-19", "reach_15": "328-30"},
+  {"team_power_g": 2.4, "reach_55": "291-19", "reach_35": "308-5", "reach_15": "328-30"},
+  {"team_power_g": 2.6, "reach_55": "294-27", "reach_35": "311-13", "reach_15": "328-30"},
+  {"team_power_g": 2.8, "reach_55": "297-28", "reach_35": "314-13", "reach_15": "328-30"},
+  {"team_power_g": 3.0, "reach_55": "300-22", "reach_35": "317-8", "reach_15": "328-30"},
+  {"team_power_g": 3.5, "reach_55": "307-1", "reach_35": "323-16", "reach_15": "328-30"},
+  {"team_power_g": 4.0, "reach_55": "312-14", "reach_35": "328-29", "reach_15": "328-30"},
+  {"team_power_g": 5.0, "reach_55": "321-17", "reach_35": "328-30", "reach_15": "328-30"},
+  {"team_power_g": 6.0, "reach_55": "328-29", "reach_35": "328-30", "reach_15": "328-30"}
+ ],
+ "from_2_2g": {
+  "rule_of_thumb": "Near 2.2G each +0.2G (about +9%) moves the 35% reach about three to four chapters and the 55% reach about three; the 15% bracket already covers every main stage from 2.0G. 328-30 at 35% needs 4.00G (+82%); at 55%, 6.00G.",
+  "what_a_step_buys": [
+   {"source": "stellar_link", "posted_gain": "+10% (2G → 2.2G, dc:77329)", "inferred_reach_35": "about 304-19 → 308 (+3–4 chapters)"},
+   {"source": "guild_lab", "posted_gain": "~+20% (claim, dc:76461)", "inferred_reach_35": "about 304-19 → 311 (+7 chapters)"},
+   {"source": "plating", "posted_gain": "+1.5% for one 14→15 step at 1.6G (dc:75684)", "inferred_reach_35": "about half a chapter"},
+   {"source": "lineup", "posted_gain": "a padded stage preset usually shows more than the conquest preset (record 003)", "inferred_reach_35": "depends on gear owned"}
+  ],
+  "rift": "The Dimensional Rift opens after 328-30 and is a 35% fight at every level against Rift-inflated power (record 003); its own Dimensional Energy is the power source there (curated/power-sources.json, rift_energy)."
+ },
+ "sources": ["dc:77329", "dc:76461", "dc:75684", "web:crumblehub-stages", "web:crumblehub-stage-tool"]
+}

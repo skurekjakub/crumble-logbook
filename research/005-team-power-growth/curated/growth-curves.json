@@ -1,0 +1,101 @@
+{
+ "about": "Cost and diminishing-return curves for the power sources, condensed from game data (record 001's Sugar Pocket catalogs, game 1.4.002, tabulated in evidence/07-derived/) and from posted tables (plating odds dc:53079 and the official 1.4.002 notice dc:72150; Stellar shapes nv:43444, nv:5693, dc:55570, dc:56417; TSSR star costs dc:50913). Full rows are in the evidence files named per curve.",
+ "measured": "2026-09-28",
+ "plating": {
+  "evidence": "evidence/08-extract/plate-rates.json, evidence/07-derived/plate-curve.json",
+  "columns": ["from", "success_pct", "great_success_pct", "decline_pct_unprotected", "shatter_pct_unprotected", "chocosteel", "syrup_for_protection", "main_stat_gain_pct", "sub_stat_gain_pct", "cum_expected_chocosteel", "cum_expected_syrup"],
+  "rows": [
+   [0, 90, 10, 0, 0, 1, 0, 3, 0, 1, 0],
+   [4, 50, 5, 0, 0, 5, 0, 3, 30, 19, 0],
+   [5, 50, 3, 0, 0, 6, 0, 6, 0, 29, 0],
+   [9, 30, 1.5, 0, 0, 10, 0, 6, 40, 109, 0],
+   [10, 25, 1, 10, 0, 11, 1, 12, 0, 149, 4],
+   [12, 23, 1, 14, 0, 13, 2, 12, 0, 247, 20],
+   [14, 14, 0.5, 20, 0, 15, 2, 12, 60, 414, 43],
+   [15, 12, 0.5, 24, 5, 17, 5, 19, 0, 603, 89],
+   [17, 8, 0.3, 32, 7, 19, null, 19, 0, null, null],
+   [19, 2, 0.1, 39, 10, 25, 9, 19, 70, null, null],
+   [20, 2, 0.1, 42, 11, null, null, 23, 0, null, null],
+   [24, 2, 0.1, 46, 15, null, null, 23, 80, null, null]
+  ],
+  "restore_syrup_by_level": {"15": 20, "16": 20, "17": 30, "18": 40, "19": 50, "20": 60, "21": 65, "22": 70, "23": 75, "24": 80},
+  "note": "Odds up to 19→20 are from the table of 2026-08-30; from 2026-09-23 a shatter drops 2 levels (not to 10) and can be restored. Main-stat gain per level from 20 on (23%) is from the game data's rate table; sub-stats step at 5/10/15/20/25. Free Chocosteel: 24 a day from idle (yt:l9086mj7hwA), so the expected 104 for 14→15 is about 4 days of idle drops (inferred).",
+  "sources": ["dc:53079", "dc:72150", "web:sugarpocket-catalog", "web:yt-l9086mj7hwA"]
+ },
+ "stellar_link": {
+  "roll_cost_sp_by_locks": {"0": 10, "1": 10, "2": 30, "3": 60, "4": 100, "5": 150, "6": 220},
+  "shapes": [
+   {"points": 3, "target": "max triangle", "chance": "1.82% per unlocked roll", "expected_sp": 550, "sources": ["nv:5693", "nv:43444"]},
+   {"points": 6, "target": "regular hexagon (~86%)", "chance": "", "expected_sp": null, "note": "86% clears every stage (nv:5693)", "sources": ["nv:5693", "dc:70036"]},
+   {"points": 8, "target": "octagon 91%", "chance": "4/30 per roll after 6 locks", "expected_sp": 1900, "sources": ["dc:55570", "nv:43444", "dc:68586"]},
+   {"points": 10, "target": "95%", "chance": "1/24 per roll with 6 consecutive locked", "expected_sp": "5,280–7,900", "sources": ["dc:56417", "nv:43444", "dc:72592"]},
+   {"points": 12, "target": "100%", "chance": "1/720 per roll with 6 locked", "expected_sp": "150,000–400,000", "sources": ["nv:43697", "dc:73840", "web:yt-mL9MSX3QD94"]}
+  ],
+  "amplification_by_constellation": [
+   {"constellation": 1, "area_pct": 96, "atk_amp_pct": 19.2, "sources": ["web:yt-y-bxOrnjIeU"]},
+   {"constellation": 2, "area_pct": 96, "atk_amp_pct": 22.8, "sources": ["web:yt-y-bxOrnjIeU"]},
+   {"constellation": 2, "area_pct": 100, "atk_amp_pct": 30, "sources": ["nv:5693"]},
+   {"constellation": 3, "area_pct": 96, "atk_amp_pct": 38.4, "sources": ["web:yt-y-bxOrnjIeU"]},
+   {"constellation": 3, "area_pct": 88, "atk_amp_pct": 35, "sources": ["nv:5693"]},
+   {"constellation": 4, "area_pct": 96, "atk_amp_pct": 48, "sources": ["nv:5693"]}
+  ],
+  "targets_by_spend": {"f2p": "70%", "light": "high 80s", "medium": "low 90s", "whale": "96%"},
+  "sp_price": "8.67 KRW (dc:68116) or 2.5 Crystals ≈ 10 KRW (web:crumblehub-efficiency); Vol.1 pack 32,000 KRW for 12,000 SP (2.7 KRW/SP incl. other items)",
+  "sources": ["web:sugarpocket-stella", "nv:5693", "nv:43444", "dc:55570", "dc:56417", "dc:68586", "web:yt-5XXDHBHnISU", "web:crumblehub-api-efficiency"]
+ },
+ "tssr_pickup_cost_krw": {
+  "rows": [[0, 167, 33400], [1, 180, 36000], [2, 360, 72000], [3, 668, 133600], [4, 1002, 200400], [5, 1440, 288800], [6, 1980, 396000], [7, 2520, 504000], [8, 3240, 648000], [9, 4140, 828000], [10, 4860, 972000]],
+  "columns": ["star", "expected_pulls", "expected_krw"],
+  "note": "200 KRW a pull after the event's free pulls; packages trim about 10,000 KRW (dc:50913). Posted in August for Brightseeker; later posts put Bari 8★ at ~600,000 and a TSSR copy at 20,000–30,000 KRW.",
+  "sources": ["dc:50913", "dc:73162", "dc:74685", "dc:77246"]
+ },
+ "cookie_level": {
+  "evidence": "evidence/07-derived/level-curve.json",
+  "checkpoints": [
+   {"level": 30, "stat_pct": 283.05, "exp_cumulative": 44371},
+   {"level": 50, "stat_pct": 625.25, "exp_cumulative": 252273},
+   {"level": 70, "stat_pct": 1170.75, "exp_cumulative": 1900204},
+   {"level": 80, "stat_pct": 1555.08, "exp_cumulative": 6160569},
+   {"level": 90, "stat_pct": 2040.32, "exp_cumulative": 22821295},
+   {"level": 100, "stat_pct": 2652.99, "exp_cumulative": 98086378}
+  ],
+  "note": "Levels 91–100 take about 77% of the EXP to 100 for +30% relative stats (inferred).",
+  "sources": ["web:sugarpocket-catalog"]
+ },
+ "cookie_stars": {
+  "evidence": "evidence/07-derived/star-growth.json",
+  "ssr": {"copies_to_10": 66, "atk_hp_pct_at_5": 53.86, "atk_hp_pct_at_10": 136.74},
+  "tssr": {"copies_to_10": 55, "atk_hp_pct_at_5": 61.05, "atk_hp_pct_at_10": 159.37},
+  "sources": ["web:sugarpocket-catalog"]
+ },
+ "oven": {
+  "evidence": "evidence/07-derived/oven-gear.json",
+  "rule": "gear level range = oven×3−5 to oven×3",
+  "checkpoints": [
+   {"oven": 10, "gear_level": "25–30", "best_rarity_pct": "Special 0.12%"},
+   {"oven": 20, "gear_level": "55–60", "best_rarity_pct": "Unique 0.05%"},
+   {"oven": 25, "gear_level": "70–75", "best_rarity_pct": "Legendary 0.01%"},
+   {"oven": 31, "gear_level": "88–93", "best_rarity_pct": "Eternal 0.002%"},
+   {"oven": 37, "gear_level": "106–111", "best_rarity_pct": "Eternal 0.016%"},
+   {"oven": 50, "gear_level": "145–150", "best_rarity_pct": "Eternal 0.055%"}
+  ],
+  "sources": ["web:sugarpocket-catalog", "nv:30148", "dc:77460"]
+ },
+ "resolve": {
+  "per_level": "+1 ATK/DEF and +10 HP to every cookie up to level 100; +2 and +20 after 101 (from 2026-08-13)",
+  "caps": [{"date": "2026-08-27", "cap": 1000}, {"date": "2026-09-10", "cap": 1500}],
+  "account_snapshots": [
+   {"stage_or_power": "stage 31", "resolve": 104}, {"stage_or_power": "stage 43", "resolve": 209}, {"stage_or_power": "stage 56", "resolve": 300}, {"stage_or_power": "stage 168", "resolve": 775}, {"stage_or_power": "stage 176, 150M", "resolve": 606}, {"stage_or_power": "~1G", "resolve": "765–840"}, {"stage_or_power": "3.1G", "resolve": 950}, {"stage_or_power": "3.6G", "resolve": 960}, {"stage_or_power": "4G", "resolve": 997}
+  ],
+  "sources": ["web:crumbgg-patches-20260928", "nv:35880", "nv:39795", "nv:41301", "dc:76008", "dc:76139", "dc:69704", "dc:77104", "dc:76171", "dc:76272"]
+ },
+ "gnome_lab": {
+  "costs": [{"node": "newest nodes (September)", "research_stones": "1.6M"}, {"node": "steps near HP 30%", "research_stones": "2.9M"}, {"node": "research ~100 nodes", "research_stones": "5–6M"}, {"node": "ATK 30%", "research_stones": "~50M"}, {"node": "special research ATK amp", "special_stones": 50}],
+  "caps": [{"date": "2026-09-10", "research": "90-2", "special": 16}, {"date": "2026-09-23", "research": "110-2", "special": 19}],
+  "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928"]
+ },
+ "sugar_runes": {
+  "reroll_rune_crystals_by_locked_lines": {"0": 20, "1": 40, "2": 80, "3": 120, "4": 180, "5": 240, "6": 300, "7": 400},
+  "sources": ["web:sugarpocket-catalog"]
+ }
+}

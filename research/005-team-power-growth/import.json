@@ -1,0 +1,17 @@
+{
+  "record": {
+    "slug": "005-team-power-growth",
+    "question": "The community sources name every system that adds displayed team power in Cookie Run: Crumble, and give a cost and a power gain precise enough to rank the systems by power per unit of cost for a free and a paying player, and to say which moves a 2.2G team across the next stage-bracket line soonest.",
+    "status": "active",
+    "startedAt": "2026-09-28",
+    "mode": "team_power"
+  },
+  "curated": "curated",
+  "extractions": "evidence/08-extract",
+  "captures": [
+    { "site": "dc", "dir": "evidence/02-dc/dc", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/03-naver/nv", "file": "nv-{id}.md" }
+  ],
+  "rankings": [],
+  "ledger": { "file": "evidence/captures.jsonl" }
+}

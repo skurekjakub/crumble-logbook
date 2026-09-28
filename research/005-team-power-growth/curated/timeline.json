@@ -1,0 +1,8 @@
+[
+ { "mode": "team_power", "date": "2026-07-30", "event": "Global launch; main stages to 168-30.", "sources": ["web:crumbgg-patches-20260928"] },
+ { "mode": "team_power", "date": "2026-08-13", "event": "Resolve after level 101 gives +2 ATK/DEF and +20 HP per level (was +1 and +10); auto oven opening up to 20 by oven level.", "sources": ["web:crumbgg-patches-20260928"] },
+ { "mode": "team_power", "date": "2026-08-27", "event": "Stages to 248-30, Resolve to 1,000, Guild Conquest; quest rewards past 168 cut by up to 97% without a note (apology 08-28, partial restore 08-31).", "sources": ["web:crumbgg-patches-20260928", "web:yt-_Tv-pqZliTg"] },
+ { "mode": "team_power", "date": "2026-09-10", "event": "Stages to 328-30; Gnome Lab to 90-2 (special 16), Fame to 360, Resolve to 1,500; daily dungeons to 570.", "sources": ["web:crumbgg-patches-20260928"] },
+ { "mode": "team_power", "date": "2026-09-17", "event": "Mileage shop overhaul: more items, about 100,000 mileage a week to buy out.", "sources": ["web:yt-pDNtwVLg-6c"] },
+ { "mode": "team_power", "date": "2026-09-23", "event": "Update 1.4.002: plating to 25, shatter drops 2 levels and can be restored with Syrup, past shatters compensated; Gnome Lab to 110-2 (special 19); stages 169-1 to 328-30 eased (328-30 15.61G → 10.00G); the Dimensional Rift opens.", "sources": ["dc:72150", "web:crumbgg-patches-20260928"] }
+]

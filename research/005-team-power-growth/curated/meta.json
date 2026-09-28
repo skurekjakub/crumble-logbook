@@ -1,0 +1,31 @@
+{
+ "updated": "2026-09-28",
+ "season": "Game 1.4.002 (2026-09-23): plating to 25 with shatter restore, Gnome Lab to 110-2, the stage easing and the Dimensional Rift",
+ "lede": "What raises the team power (전투력) Cookie Run: Crumble shows for a lineup, what each source costs free and paid, how much power it gave players who posted before/after numbers, and the order to spend in at each account stage. Power matters because stages and the Dimensional Rift cut damage in steps below a stage's recommended power (record 003).",
+ "caveat": "Snapshot of 2026-09-28. Posted gains are few and from DCInside: the game has no public power formula, and the guild lab's +20% is a single unmeasured claim. KR prices are from the KR shop and the KR App Store; USD prices only where the US App Store lists the same package. Crystal values rank package contents, not team power.",
+ "record": "research/005-team-power-growth/",
+ "footer": "Built from the research record's evidence captures.",
+ "you": {
+  "summary": "At about 2.2G your stage preset reaches 55% to 288-3 and 35% to 304-19, and every +0.2G moves the 35% line about three to four chapters; 328-30 at 35% needs 4.00G. The free levers that move a 2.2G team fastest are the guild (a research-13 guild is claimed at about +20%), a pure-power stage preset, and the next Stellar Link points on constellation 8 (+10% for one step at 2G). Paid, the best power per KRW is Stellar Points for the newest constellation and keeping the weekly key set and the Crumble Pass going; plating and TSSR stars are the whale lane and buy little power per KRW past 15 and 5★.",
+  "changes": [
+   "Confirm your guild's research level; if it is well below the top guilds' 13–14, a stronger guild is the largest free step on record (unverified claim).",
+   "Keep a separate stage preset rolled for displayed power (crit resistance and other padding lines, SSR rune lines that add power) and swap to it when a bracket line is within a few %.",
+   "Open the next constellation-8 points (cookie stars) and shape them: one step was worth +10% at 2G, about 304-19 → 308 at 35%.",
+   "Put Gnome Lab stones into HP 30% and the ATK nodes; the 2G → 4G player credits research most.",
+   "Plate the sword and bow toward 20 with Syrup for protection and restores; expect 2% per try at 19→20.",
+   "Buy Stellar Points before plating packs or TSSR stars if spending; don't chase 100% (95% is the practical end)."
+  ],
+  "sources": ["dc:77329", "dc:76461", "dc:67596", "dc:76290", "dc:76272", "dc:75684", "dc:50913", "web:crumblehub-stages"]
+ },
+ "modes": {
+  "team_power": {
+   "lede": "Team power growth: every system that raises displayed team power, with its cost, cap, posted gains and the spending order by account stage.",
+   "caveat": "Displayed power weights stats unevenly (attack types and missing stats count more), so power is a gate for stages and the Rift, not a measure of strength in Arena or Guild Conquest.",
+   "rules": [
+    {"mode": "team_power", "topic": "rules", "title": "Where team power counts", "body": "Only stages and the Dimensional Rift compare team power with a recommended power (the damage brackets of record 003); in Arena and Guild Conquest the number decides nothing and options matter instead.", "confidence": "high", "sources": ["nv:41221", "nv:33130", "web:crumblehub-stages"]},
+    {"mode": "team_power", "topic": "rules", "title": "Team power versus account total", "body": "Team power (팀투, 덱투, 파티투력) is the lineup's figure the gate uses; the account total (총투) sums every cookie and is what crumb.gg's combat power board shows (10.6G–33.4G for the top 500 on 2026-09-28).", "confidence": "high", "sources": ["web:yt-njY-LhKqAtM", "web:crumbgg-leaderboard"]},
+    {"mode": "team_power", "topic": "rules", "title": "Arena excludes some sources", "body": "Arena applies cookie level and promotion, pet holding effects, the collection, gear, plating and sugar runes, but not Resolve, Stellar Link, the Gnome Lab, the guild lab or Fame.", "confidence": "high", "sources": ["web:sugarpocket-guides", "nv:33130", "nv:23817", "dc:71810"]}
+   ]
+  }
+ }
+}
