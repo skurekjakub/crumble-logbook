@@ -255,11 +255,21 @@ const API: Record<string, Canned> = {
   "/api/mechanics?mode=guild_conquest": { body: MECHANICS },
 };
 
-/** Renders the whole app at `path` against this file's stubbed API, overriding some responses. */
+/**
+ * Renders the whole app at `path` against this file's stubbed API, overriding some responses.
+ *
+ * @param path - the URL to open
+ * @param overrides - canned responses that replace this file's, by request path
+ * @returns the router
+ */
 const renderAt = (path: string, overrides: Record<string, Canned> = {}) =>
   renderRoute(path, { ...API, ...overrides });
 
-/** The view's main landmark. */
+/**
+ * Queries within the view's main landmark.
+ *
+ * @returns queries bound to the landmark
+ */
 const panel = () => within(screen.getByRole("main"));
 
 describe("/conquest overview", () => {
@@ -411,7 +421,11 @@ describe("/conquest/decks", () => {
 });
 
 describe("/conquest/runes", () => {
-  /** Each rune card's cookie heading text, in order. */
+  /**
+   * Reads each rune card's cookie heading text, in order.
+   *
+   * @returns the headings' texts
+   */
   const cookies = () =>
     [...screen.getByRole("main").querySelectorAll(".rune-card h3")].map((h) => h.textContent);
 

@@ -15,7 +15,13 @@ import { renderRoute, VIEW_SOURCES } from "./view-harness";
 const CONQUEST = "001-guild-conquest-meta";
 const PVP = "002-pvp-meta";
 
-/** One conquest row and one PvP row of a list, by the field the view shows. */
+/**
+ * Pairs one conquest row and one PvP row of a list, by the field the view shows.
+ *
+ * @param conquest - the conquest row
+ * @param pvp - the PvP row
+ * @returns the conquest row, and both rows as a list
+ */
 function pair<T>(conquest: T, pvp: T) {
   return { conquest, both: [conquest, pvp] };
 }
@@ -179,7 +185,11 @@ const API: Record<string, Canned> = {
   ),
 };
 
-/** The view's main landmark. */
+/**
+ * Queries within the view's main landmark.
+ *
+ * @returns queries bound to the landmark
+ */
 const panel = () => within(screen.getByRole("main"));
 
 describe("Guild Conquest views never show PvP rows", () => {

@@ -24,7 +24,11 @@ const COLUMNS: Column<Entry>[] = [
 
 const text = (r: Entry) => `${r.kr} ${r.en ?? ""}`;
 
-/** Renders the rows of the table body as arrays of cell text. */
+/**
+ * Reads the rows of the table body as arrays of cell text.
+ *
+ * @returns one array of cell texts per body row
+ */
 function bodyRows(): string[][] {
   const body = screen.getAllByRole("rowgroup")[1]!;
   return within(body)

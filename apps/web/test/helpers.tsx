@@ -39,7 +39,11 @@ export function requestPath(input: RequestInfo | URL): string {
   return url.replace(/^https?:\/\/[^/]+/, "");
 }
 
-/** A query client that never retries, so failed queries settle at once in tests. */
+/**
+ * Builds a query client that never retries, so failed queries settle at once in tests.
+ *
+ * @returns the client
+ */
 export function testQueryClient() {
   return new QueryClient({ defaultOptions: { queries: { retry: false } } });
 }

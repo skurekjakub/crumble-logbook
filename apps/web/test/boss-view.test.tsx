@@ -88,7 +88,14 @@ const FIGHT_EVENTS = [
   },
 ] satisfies FightEvent[];
 
-/** One grade row per star for a cookie's effect. */
+/**
+ * Builds one grade row per star for a cookie's effect.
+ *
+ * @param base - the row's id seed, cookie and effect type
+ * @param values - the value at each star, in star order
+ * @param extra - fields every row shares
+ * @returns the rows, in star order
+ */
 function grades(
   base: Pick<BuffValue, "id" | "cookieKr" | "en" | "effectType">,
   values: readonly number[],
@@ -146,7 +153,12 @@ const BUFF_VALUES = [
   ...CHOCO_CHANCE,
 ];
 
-/** A conquest mechanic with defaults for the fields a test doesn't care about. */
+/**
+ * Builds a conquest mechanic with defaults for the fields a test doesn't care about.
+ *
+ * @param m - the mechanic's identifying fields and any overrides
+ * @returns the mechanic
+ */
 function mechanic(
   m: Pick<Mechanic, "id" | "title" | "body" | "confidence" | "topic"> & Partial<Mechanic>,
 ): Mechanic {
@@ -350,7 +362,12 @@ const GEAR = [
   },
 ] satisfies GearRec[];
 
-/** The buff-values request for one cookie, as the client encodes it. */
+/**
+ * Builds the buff-values request for one cookie, as the client encodes it.
+ *
+ * @param cookie - the cookie's name
+ * @returns the request path
+ */
 const buffsOf = (cookie: string) => `/api/buff-values?cookie=${encodeURIComponent(cookie)}`;
 
 const FULL = {
@@ -373,7 +390,12 @@ const EMPTY = {
   "/api/gear-recs?mode=guild_conquest": { body: [] },
 };
 
-/** The page section labelled by the heading `name`. */
+/**
+ * Finds the page section labelled by the heading `name`.
+ *
+ * @param name - the section's heading
+ * @returns the section
+ */
 const section = (name: string) => screen.getByRole("region", { name });
 
 describe("Piñata boss view", () => {

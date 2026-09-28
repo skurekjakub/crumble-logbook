@@ -61,7 +61,16 @@ const PVP_SOURCES = [
   },
 ] satisfies Source[];
 
-/** A deck cookie with the fields the fixtures don't vary filled in. */
+/**
+ * Builds a deck cookie with the fields the fixtures don't vary filled in.
+ *
+ * @param id - the slot's id, also its position
+ * @param cookieKr - the cookie's Korean name
+ * @param en - its English name, or null
+ * @param slot - its formation slot, or null
+ * @param extra - fields to override
+ * @returns the cookie
+ */
 function cookie(
   id: number,
   cookieKr: string,
@@ -83,7 +92,15 @@ function cookie(
   };
 }
 
-/** A PvP deck with the fields the fixtures don't vary filled in. */
+/**
+ * Builds a PvP deck with the fields the fixtures don't vary filled in.
+ *
+ * @param id - the deck's slug id
+ * @param position - its display position
+ * @param nameEn - its English name
+ * @param over - fields to override
+ * @returns the deck
+ */
 function deck(id: string, position: number, nameEn: string, over: Partial<Deck> = {}): Deck {
   return {
     id,
@@ -165,7 +182,15 @@ const COUNTERS = [
   },
 ] satisfies Counter[];
 
-/** A rules row. */
+/**
+ * Builds a rules row.
+ *
+ * @param id - the row's id
+ * @param mode - the mode it belongs to
+ * @param title - the rule's title
+ * @param body - the rule's text
+ * @returns the mechanic, filed under the rules topic
+ */
 function rule(id: number, mode: Mechanic["mode"], title: string, body: string): Mechanic {
   return {
     id,
@@ -221,7 +246,13 @@ const TAKEAWAYS = [
   },
 ] satisfies Takeaway[];
 
-/** A Rumble usage row with the sample fields filled in. */
+/**
+ * Builds a Rumble usage row with the sample fields filled in.
+ *
+ * @param id - the row's id
+ * @param over - fields to override
+ * @returns the row
+ */
 function usage(id: number, over: Partial<UsageStat>): UsageStat {
   return {
     id,
@@ -309,7 +340,12 @@ const TIMELINE = [
   },
 ] satisfies TimelineEvent[];
 
-/** The canned API every PvP test starts from, for `mode`. */
+/**
+ * Builds the canned API every PvP test starts from, for `mode`.
+ *
+ * @param mode - the PvP mode
+ * @returns the canned responses, by request path
+ */
 function api(mode: ModeSection): Record<string, Canned> {
   const m = mode.scope.mode;
   return {
@@ -332,14 +368,29 @@ function api(mode: ModeSection): Record<string, Canned> {
   };
 }
 
-/** Renders the app at `path` in `mode`, with this file's API plus `overrides`. */
+/**
+ * Renders the app at `path` in `mode`, with this file's API plus `overrides`.
+ *
+ * @param path - the URL to open
+ * @param mode - the PvP mode
+ * @param overrides - canned responses that replace this file's, by request path
+ * @returns the router
+ */
 const renderAt = (path: string, mode: ModeSection, overrides: Record<string, Canned> = {}) =>
   renderRoute(path, { ...api(mode), ...overrides }, { mode });
 
-/** The view's main landmark. */
+/**
+ * Queries within the view's main landmark.
+ *
+ * @returns queries bound to the landmark
+ */
 const panel = () => within(screen.getByRole("main"));
 
-/** The stamp's label → value pairs. */
+/**
+ * Reads the stamp's label → value pairs.
+ *
+ * @returns the pairs, by label
+ */
 function stamp(): Record<string, string> {
   const el = document.querySelector(".stamp")!;
   return Object.fromEntries(
@@ -439,7 +490,12 @@ describe("PvP overview", () => {
 });
 
 describe("PvP teams", () => {
-  /** The card of the deck whose heading matches `name`. */
+  /**
+   * Finds the card of the deck whose heading matches `name`.
+   *
+   * @param name - matches the deck's heading
+   * @returns the card
+   */
   const card = async (name: RegExp) =>
     (await panel().findByRole("heading", { name })).closest("article") as HTMLElement;
 
@@ -496,10 +552,19 @@ describe("PvP teams", () => {
 });
 
 describe("PvP counters", () => {
-  /** A matrix heading's English name, without the Korean beneath it. */
+  /**
+   * Reads a matrix heading's English name, without the Korean beneath it.
+   *
+   * @param th - the heading cell
+   * @returns the English name
+   */
   const english = (th: Element) => (th.querySelector(".name-stack")?.firstChild ?? th).textContent;
 
-  /** The matrix's column headings and each row's heading and cell texts. */
+  /**
+   * Reads the matrix's column headings, and each row's heading and cells.
+   *
+   * @returns the column names, and each row's team name and cells
+   */
   function matrix() {
     const table = screen.getByRole("table", { name: /beaten by/i });
     const columns = [...table.querySelectorAll("thead th")].slice(1).map(english);
@@ -629,7 +694,12 @@ describe("PvP counters", () => {
 });
 
 describe("PvP usage", () => {
-  /** The card of the usage section headed `name`. */
+  /**
+   * Finds the card of the usage section headed `name`.
+   *
+   * @param name - the section's heading
+   * @returns the card
+   */
   const section = async (name: string) =>
     (await panel().findByRole("heading", { name })).closest(".card") as HTMLElement;
 

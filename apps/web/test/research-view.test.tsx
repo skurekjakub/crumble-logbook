@@ -45,7 +45,12 @@ const API: Record<string, Canned> = {
   "/api/sources": { body: SOURCES },
 };
 
-/** The card of the record whose slug is `slug`. */
+/**
+ * Finds the card of the record whose slug is `slug`.
+ *
+ * @param slug - the record's slug
+ * @returns the card
+ */
 const card = async (slug: string) =>
   (await screen.findByText(slug)).closest("article") as HTMLElement;
 

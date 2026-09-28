@@ -33,15 +33,30 @@ const API: Record<string, Canned> = {
   "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
 };
 
-/** Renders the whole app at `path` against this file's stubbed API. */
+/**
+ * Renders the whole app at `path` against this file's stubbed API.
+ *
+ * @param path - the URL to open
+ * @param api - the canned responses, by request path
+ * @returns the router
+ */
 const renderAt = (path: string, api: Record<string, Canned> = API) => renderRoute(path, api);
 
-/** The navigation's top-level section links, in order. */
+/**
+ * Lists the navigation's top-level section links, in order.
+ *
+ * @param nav - the navigation landmark
+ * @returns the links
+ */
 const sectionLinks = (nav: HTMLElement) => [
   ...nav.querySelectorAll<HTMLAnchorElement>("a.nav-section-link"),
 ];
 
-/** The stamp's label → value pairs. */
+/**
+ * Reads the stamp's label → value pairs.
+ *
+ * @returns the pairs, by label
+ */
 function stamp(): Record<string, string> {
   const el = document.querySelector(".stamp")!;
   return Object.fromEntries(

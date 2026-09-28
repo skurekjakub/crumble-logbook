@@ -17,7 +17,12 @@ import {
   whenLabel,
 } from "../src/lib/boss";
 
-/** A buff row with defaults for the fields a test doesn't care about. */
+/**
+ * Builds a buff row with defaults for the fields a test doesn't care about.
+ *
+ * @param p - the cookie, the effect type and any fields to override
+ * @returns the row
+ */
 function buff(p: Partial<BuffValue> & Pick<BuffValue, "cookieKr" | "effectType">): BuffValue {
   return {
     id: 0,
