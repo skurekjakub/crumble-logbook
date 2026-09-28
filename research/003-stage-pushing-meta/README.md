@@ -2,7 +2,7 @@
 
 Status: active (started 2026-09-28; captured and curated 2026-09-28)
 
-Measured on 2026-09-28 from `main`: the power gate and every stage's recommended power, accuracy and focus requirement from crumblehub's copy of game data 1.4.002; clears, teams and builds from DCInside's 쿠키런 크럼블 gallery, the official Naver cafe and KR YouTube (the top-ranked player ND러너 among them). The research changed no code. The curated dataset is ready to import as a `stage` mode once the app has one (see "What would change").
+Measured on 2026-09-28 from `main`: the power gate and every stage's recommended power, accuracy and focus requirement from crumblehub's copy of game data 1.4.002; clears, teams and builds from DCInside's 쿠키런 크럼블 gallery, the official Naver cafe and KR YouTube (the top-ranked player ND러너 among them). The research changed no code. The curated dataset imports as the app's `stage` mode (`pnpm import:record 003-stage-pushing-meta`; see "What would change").
 
 ## Question
 
@@ -91,7 +91,7 @@ Every cited id is in `curated/sources.json` with its URL. The ones that settled 
 
 - `research-trail.md`: the web rounds.
 - `import.json`: the importer manifest (record mode `stage`).
-- `curated/`: the dataset; `manifest.json` lists every collection the app imports, the stage-mode tables among them. `power-brackets.json` copies the bracket table from `evidence/06-derived/brackets.json` with its sources, for the app's bracket calculator.
+- `curated/`: the dataset; `manifest.json` lists every collection the app imports, the stage-mode tables among them. `power-brackets.json` copies the bracket table from `evidence/06-derived/brackets.json` with its sources, for the app's bracket calculator. For the app's clears ranking and Rift page, `stage-clears.json` also states whether this README accepts each attempt (`standing`) and a boss's English where the stage tables lack it, `rift-levels.json` the stage that opens the Rift with its sources, and `mechanics.json` the further topics a mechanic bears on (`also_topics`); the `about` of the clears and Rift files says where their additions come from.
 - `evidence/captures.jsonl`: one line per evidence file (path, url, time, tool, sha256), written when the file is captured and never rewritten; a path has exactly one line, and a second one fails `pnpm verify`. New captures get their line from `pnpm capture` (a scraper, or `pnpm capture log`).
 - `evidence/01-repo-grounding/report.md`: what records 001/002 already held, quoted with file:line.
 - `evidence/02-dc/`: DCInside search listings (`01-list-stage.tsv`, `02-list-targeted.tsv`) and posts with comments (`dc/`).
