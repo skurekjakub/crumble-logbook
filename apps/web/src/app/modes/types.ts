@@ -1,0 +1,170 @@
+/**
+ * The shapes of the app's sections: a game mode's section with its view copy
+ * and mode-specific screen blocks, and a shared section outside any mode.
+ *
+ * @module
+ */
+import type { ModeScope, RankingBoardFilter } from "../../api/queries";
+import type { GearRec } from "../../api/types";
+import type { FileRoutesByTo } from "../../routeTree.gen";
+
+/** A navigable app path, checked against the generated route tree. */
+export type AppPath = keyof FileRoutesByTo;
+
+/** A figure the header's stamp can show. */
+export type StampStat = "updated" | "season" | "sources" | "decks";
+
+/** A sub-tab within a section. */
+export interface SectionTab {
+  /** Unique within the section. */
+  id: string;
+  label: string;
+  to: AppPath;
+}
+
+/**
+ * A view's heading and the lede under it. Copy is plain UI text: a research
+ * claim the view needs to state goes in a mechanics row, named by `topic`.
+ */
+export interface ViewCopy {
+  title: string;
+  lede: string;
+  /** The mechanics topic whose cited rows the view shows under its lede, when it has one. */
+  topic?: string;
+}
+
+/** The views several modes share, by name. */
+export type SharedView =
+  | "overview"
+  | "decks"
+  | "runes"
+  | "gear"
+  | "scores"
+  | "mechanics"
+  | "timeline"
+  | "counters"
+  | "usage";
+
+/** What a top-level section has, whether a game mode or a shared page. */
+interface SectionBase {
+  /** The first path segment. */
+  id: string;
+  /** Tab label. */
+  label: string;
+  /** Korean name shown in the header label instead of `label`, when known. */
+  labelKr: string | null;
+  /** The header's `<h1>`. */
+  title: string;
+  to: AppPath;
+  /** The research record whose lede, season and update date fill the header; null for none. */
+  recordSlug: string | null;
+  /** Header lede when there's no record, or the record has none. */
+  lede: string | null;
+  /** Figures shown in the header stamp, in order. */
+  stamp: readonly StampStat[];
+  /** Sub-tabs, in order; the first is the section's landing page. Empty for none. */
+  tabs: readonly SectionTab[];
+}
+
+/** A boss fact shown in the boss screen's header list: its label and the mechanics topic it reads. */
+export interface BossFact {
+  label: string;
+  /** The mechanics topic whose row states the fact, with its confidence and sources. */
+  topic: string;
+}
+
+/** A lethal pattern's card on the boss screen. */
+export interface SurvivalCard {
+  /** The pattern's name, lower case; the title adds the countdown at `anchor` ("The 17 s …"). */
+  name: string;
+  /** The fight-event key whose time names the pattern. */
+  anchor: string;
+  /** The fight-event keys the card shows, `anchor` included. */
+  events: readonly string[];
+  /** The mechanics topic of what it takes to live through the pattern. */
+  topic: string;
+}
+
+/**
+ * One boss's screen: which boss, which deck its checks read, the cookies
+ * and pet its checklist and callouts name, and the fight-event keys and
+ * mechanics topics it reads. Research findings live in the API data, not here.
+ */
+export interface BossConfig {
+  /** The boss id fight events are stored under. */
+  id: string;
+  /** The boss's Korean name, as the game shows it. */
+  kr: string;
+  /** The screen's heading: a UI label, not a claim about the English client's name (that's a fact topic). */
+  name: string;
+  /** The header list's facts, in order, each read from its mechanics topic. */
+  facts: readonly BossFact[];
+  /** The mechanics topics the screen's callouts read. */
+  topics: {
+    /** How a buff scales with the caster's skill amp; shown by the buff table. */
+    buffFormula: string;
+    /** How a debuff's application chance scales; shown by the buff table. */
+    debuffFormula: string;
+    /** The haste carry's breakpoint; shown on its rune card. */
+    haste: string;
+    /** The ATK-order pet's in-battle bonus; shown in the ATK-order check. */
+    atkPet: string;
+  };
+  /** The screen's lede. */
+  lede: string;
+  /** The deck whose runes and ATK order the screen checks. */
+  deck: string;
+  /** The gear context the screen shows. */
+  gearContext: GearRec["context"];
+  /** The cookie levelled to catch a stray beam just below the ranked buffers. */
+  catcherKr: string;
+  /** The pet whose ATK bonus applies only in battle. */
+  atkPetKr: string;
+  /** The carry whose haste breakpoint gets a callout (rune-build shorthand). */
+  hasteKr: string;
+  /** The debuffer whose application chance gets a callout (rune-build shorthand). */
+  debufferKr: string;
+  /** The fight-event key stating the fight's length; without it, the track ends at the latest timed event. */
+  lengthEvent: string;
+  /** The survival cards, in order. */
+  survival: readonly SurvivalCard[];
+}
+
+/** A mode's leaderboard: its heading, and a select label per board it shows. */
+export interface LeaderboardConfig extends ViewCopy {
+  /** Select label per board; the first is the default. */
+  boards: Readonly<Record<RankingBoardFilter, string>>;
+}
+
+/** A mode's rules card on its overview: the mode's `rules` mechanics. */
+export interface RulesConfig {
+  /** The card's heading. */
+  title: string;
+  /** The title of the rules row shown apart, above the card, as the season's buffs. */
+  highlight: string;
+}
+
+/** A game mode's section. */
+export interface ModeSection extends SectionBase {
+  kind: "mode";
+  /** How the mode's views scope their API requests. */
+  scope: ModeScope;
+  /** What the mode's landing page says while it has no screens; null once it has. */
+  placeholder: string | null;
+  /** Each shared view's heading and lede for this mode. */
+  copy: Partial<Record<SharedView, ViewCopy>>;
+  /** The mode's boss screen, when it has one. */
+  boss: BossConfig | null;
+  /** The mode's leaderboard on the scores view, when it has one. */
+  leaderboard: LeaderboardConfig | null;
+  /** The overview's rules card, for a mode whose record files its rules as mechanics. */
+  rules: RulesConfig | null;
+}
+
+/** A section shared by every mode. */
+export interface SharedSection extends SectionBase {
+  kind: "shared";
+}
+
+/** A top-level section: a game mode or a shared page. */
+export type Section = ModeSection | SharedSection;

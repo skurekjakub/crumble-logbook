@@ -1,0 +1,46 @@
+/**
+ * The sections outside any game mode.
+ *
+ * @module
+ */
+import type { SharedSection } from "./types";
+
+/** Sections shared by every mode, in tab order after the modes. */
+export const SHARED_SECTIONS: readonly SharedSection[] = [
+  {
+    id: "research",
+    kind: "shared",
+    label: "Research",
+    labelKr: null,
+    title: "Crumble Logbook",
+    to: "/research",
+    recordSlug: null,
+    lede: null,
+    stamp: [],
+    tabs: [],
+  },
+  {
+    id: "sources",
+    kind: "shared",
+    label: "Sources",
+    labelKr: null,
+    title: "Crumble Logbook",
+    to: "/sources",
+    recordSlug: null,
+    lede: null,
+    stamp: ["sources"],
+    tabs: [],
+  },
+  {
+    id: "glossary",
+    kind: "shared",
+    label: "Glossary",
+    labelKr: null,
+    title: "Crumble Logbook",
+    to: "/glossary",
+    recordSlug: null,
+    lede: null,
+    stamp: [],
+    tabs: [],
+  },
+];
