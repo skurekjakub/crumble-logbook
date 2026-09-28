@@ -3,6 +3,7 @@ import { GAME_MODE } from "../enums";
 
 /**
  * Builds a `mode` column: the game mode a row is about.
+ *
  * @returns a NOT NULL `GAME_MODE` column defaulting to `guild_conquest`
  */
 export function modeColumn() {
@@ -12,6 +13,7 @@ export function modeColumn() {
 /**
  * Builds a `record_slug` column: the research record whose import wrote the
  * row, which a record's re-import (`--replace`) clears and rewrites.
+ *
  * @returns a nullable text column; `null` marks a row no import owns, such
  *   as one written through the API
  */
