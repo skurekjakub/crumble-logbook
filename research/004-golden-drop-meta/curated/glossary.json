@@ -1,0 +1,13 @@
+[
+ {"kr": "크럼블 던전", "kr_short": ["크던", "크럼블던전", "크던전", "황금갓방울 던전"], "en": "Crumble Dungeon (the daily score attack against the Holy Golden Drop)", "kind": "term", "note": "The mode the user calls the Golden Drop attack stage. Found under Dungeon → Challenge Dungeon (도전 던전).", "sources": ["web:sugarpocket-catalog", "dc:62042", "web:yt-XeD4c3AuQAs"]},
+ {"kr": "황금갓방울", "kr_short": ["황금 갓방울"], "en": "Holy Golden Drop (Crumble Dungeon's boss)", "kind": "term", "note": "Not the pet 갓난갓방울 (Holy Baby Drop), which the gallery shortens to 갓방울, nor the pet 황금방울 (Gold Drop).", "sources": ["web:sugarpocket-catalog", "nv:46592"]},
+ {"kr": "도전 던전", "kr_short": [], "en": "Challenge Dungeon (the Dungeon menu tab holding Crumble Dungeon, beside Daily Dungeon)", "kind": "term", "sources": ["dc:67621", "dc:69414"]},
+ {"kr": "크럼블 던전 입장 열쇠", "kr_short": ["크던 열쇠", "크럼블 열쇠", "크럼블던전 열쇠"], "en": "Crumble Dungeon Key (one per run)", "kind": "term", "sources": ["web:sugarpocket-catalog", "dc:77321"]},
+ {"kr": "선봉 40", "kr_short": ["40마리", "선발 40", "출전 40", "선봉"], "en": "The first 40: the highest-power cookies that deploy first in Crumble Dungeon", "kind": "term", "sources": ["dc:62042", "nv:43444", "web:yt-XeD4c3AuQAs"]},
+ {"kr": "석류빔", "kr_short": ["성류빔", "붉은빔"], "en": "Pomegranate's Skill AMP beam (also 빨대)", "kind": "term", "note": "Record 002 glosses the same beam as 빨대.", "sources": ["web:yt-UF6zcIkbh_8", "web:yt-XeD4c3AuQAs"]},
+ {"kr": "렙따", "kr_short": ["렙다운", "레벨 다운"], "en": "Levelling a cookie down (to reorder ATK or drop it out of the first 40)", "kind": "term", "sources": ["dc:62042", "dc:71275"]},
+ {"kr": "세계선", "kr_short": [], "en": "'World line': a lucky run setup where Milk arrives on time", "kind": "term", "sources": ["dc:71218", "dc:72724", "dc:71956"]},
+ {"kr": "공순서", "kr_short": ["공순위", "공격력 순위"], "en": "ATK order (the ranking that routes the beam and ATK-targeted perks)", "kind": "term", "note": "Written as initials, e.g. 우브전피마치 = Milk, Brightseeker, Scorpion, Figure, Macaron, Cheesecake.", "sources": ["dc:69414", "dc:67621", "dc:72051"]},
+ {"kr": "황금빛 광채", "kr_short": [], "en": "The title for holding the weekly Crumble Dungeon top 100 (literally 'golden radiance'; its official English name was not captured)", "kind": "term", "sources": ["nv:43444", "web:sugarpocket-catalog"]},
+ {"kr": "오늘의 랭킹", "kr_short": ["일일 랭킹", "일간랭킹"], "en": "Today's ranking (Crumble Dungeon's daily board)", "kind": "term", "sources": ["nv:16132", "dc:67615"]}
+]

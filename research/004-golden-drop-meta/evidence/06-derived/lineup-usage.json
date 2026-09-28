@@ -1,0 +1,750 @@
+{
+ "generated_from": "evidence/08-extract/lineups.json",
+ "since": "2026-09-10",
+ "full_lineups": [
+  "baengguk-2026-09-24",
+  "gni-2026-09-13",
+  "ndrunner-2026-09-18",
+  "yeondu-2026-09-21"
+ ],
+ "exclusion_lineups": [
+  "gni-2026-09-13",
+  "ndrunner-2026-09-18"
+ ],
+ "cookies": [
+  {
+   "kr": "다크초코 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "닥터 와사비 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "도넛행성 에일리언 도넛킹",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "락스타맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "마카롱맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "메론소다맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "밀키웨이맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "바람궁수 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "브라이트시커 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "석류맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "슈크림맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "에스프레소맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "오렌지맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "위치베리맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "이름 모를 케이크 들개",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "전갈맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "체리맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "치약초코 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "트위즐젤리맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "팝콘맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "팬케이크맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "포도넝쿨맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "피겨여왕맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "피노누아맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "허브맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "호밀맛 쿠키",
+   "kept_pct": 100.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "딸기크레페맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "라일락맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "라임맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "뱀파이어맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "악마맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "에일리언 도넛",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "연금술사맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "정글전사 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "천사맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "치어리더맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "치즈케이크맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "커피맛 쿠키",
+   "kept_pct": 75.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "닌자맛 쿠키",
+   "kept_pct": 50.0,
+   "kept_in": [
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "다크체리맛 쿠키",
+   "kept_pct": 50.0,
+   "kept_in": [
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "닥터 뼈다귀 쿠키",
+   "kept_pct": 50.0,
+   "kept_in": [
+    "baengguk-2026-09-24",
+    "gni-2026-09-13"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "마법사맛 쿠키",
+   "kept_pct": 50.0,
+   "kept_in": [
+    "ndrunner-2026-09-18",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "양파맛 쿠키",
+   "kept_pct": 50.0,
+   "kept_in": [
+    "gni-2026-09-13",
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "감감술래 놀이 달토끼맛 쿠키",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "baengguk-2026-09-24"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "명랑한 쿠키",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "블루베리 새",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "gni-2026-09-13"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "실론나이트 쿠키",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "ndrunner-2026-09-18"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "용사맛 쿠키",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "ndrunner-2026-09-18"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "일꾼 곰젤리",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "탐험가맛 쿠키",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "홍고추맛 쿠키",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "yeondu-2026-09-21"
+   ],
+   "excluded_pct": 0.0,
+   "excluded_in": []
+  },
+  {
+   "kr": "이온맛 쿠키로봇",
+   "kept_pct": 25.0,
+   "kept_in": [
+    "baengguk-2026-09-24"
+   ],
+   "excluded_pct": 50.0,
+   "excluded_in": [
+    "gni-2026-09-13"
+   ]
+  },
+  {
+   "kr": "독버섯맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 50.0,
+   "excluded_in": [
+    "gni-2026-09-13"
+   ]
+  },
+  {
+   "kr": "보더맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 50.0,
+   "excluded_in": [
+    "gni-2026-09-13"
+   ]
+  },
+  {
+   "kr": "복숭아맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 50.0,
+   "excluded_in": [
+    "gni-2026-09-13"
+   ]
+  },
+  {
+   "kr": "찰스",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 50.0,
+   "excluded_in": [
+    "gni-2026-09-13"
+   ]
+  },
+  {
+   "kr": "체리콜라맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 50.0,
+   "excluded_in": [
+    "gni-2026-09-13"
+   ]
+  },
+  {
+   "kr": "감초맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "딸기쇼트케이크맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "레몬맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "마들렌맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "블랙베리맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "오븐방랑자 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "좀비맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "코코아맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "쿨링민트맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  },
+  {
+   "kr": "크림소다맛 쿠키",
+   "kept_pct": 0.0,
+   "kept_in": [],
+   "excluded_pct": 100.0,
+   "excluded_in": [
+    "gni-2026-09-13",
+    "ndrunner-2026-09-18"
+   ]
+  }
+ ]
+}

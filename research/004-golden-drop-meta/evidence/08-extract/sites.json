@@ -1,0 +1,18 @@
+{
+  "lane": "sites",
+  "note": "Guide sites and datamined data on Crumble Dungeon, read 2026-09-28 from evidence/03-sites/ and, for the Sugar Pocket catalog, record 001's capture.",
+  "posts": [
+    {"source": "web", "id": "eoggg-crumble", "url": "https://eog.gg/games/cookierun-crumble/", "date": "2026-08-14", "title_en": "EOG CookieRun: Crumble hub: Crumble Dungeon sections", "relevance": 3,
+     "summary_en": "Global guild EOG. The Dungeon throws the whole collection at the Holy Golden Drop, scores total damage, and deploys the top 40 by combat power first; lower the levels of unwanted cookies below the 40th-place cutoff (no need for Lv.1). Controlled test on one account, 2026-08-13: 403,708,109 with a 10-star Oven Wanderer and Cool Mint deployed, 574,531,356 with both benched (+42%); a younger account showed no change. Heals and shields go to the lowest-HP ally, so divers soak the sustain; supports follow divers forward, out of the ranged dealers' range. Pomegranate's beam is read as choosing by synergy match first, which EOG flags as unconfirmed. Its simulator section: no controls; attack range sets a cookie's slot and move speed its arrival; an arena-wide shockwave throws the team back four times; the boss raises its own damage reduction three times (EOG's reading of game data: stacks to five, one application per source), so a run is decided in its first thirteen seconds; damage spent on adds scores nothing. Pets' passive effects and Collection bonuses apply to every cookie.",
+     "mechanics": ["Top 40 by combat power deploy first (EOG, 2026-08-14).", "Boss damage reduction rises during the fight (EOG model).", "Adds' damage doesn't score (EOG model)."], "quotes": [{"kr": "", "en": "With both benched it scored 574,531,356."}]},
+    {"source": "web", "id": "crumbleguides-dungeon", "url": "https://crumbleguides.com/guides/cookie-run-crumble-dungeon", "date": "2026-07-25", "title_en": "Crumble Guides: Crumble Dungeon mode guide", "relevance": 1,
+     "summary_en": "Pre-launch page: Crumble Dungeon is the marquee PvE boss mode, the entire squad against the giant Holy Golden Drop, a score-attack challenge; scoring, rewards and mechanics are not yet documented on the page.",
+     "mechanics": [], "quotes": []},
+    {"source": "web", "id": "crumbgg-patches-data", "url": "https://crumb.gg/data/patches.json", "date": "2026-09-28", "title_en": "crumb.gg patch digest (data file)", "relevance": 2,
+     "summary_en": "Crumble Dungeon lines: 2026-08-13 'Crumble Dungeon daily rank rewards now at 12:00 PM (KST)'; 2026-09-10 fix 'Cookies could be controlled by hand in Crumble Dungeon and Guild Conquest.' No Crumble Dungeon change on 2026-09-23 (1.4.002).",
+     "mechanics": [], "quotes": []},
+    {"source": "web", "id": "sugarpocket-catalog", "url": "https://cookieruncrumble.app/api/catalog/gameplay + /api/catalog/database", "date": "2026-09-23", "title_en": "Sugar Pocket datamined catalog (client 1.4.002), record 001's capture", "relevance": 2,
+     "summary_en": "Items tied to the mode: the Crumble Dungeon Key ('your ticket to meet the Holy Golden Drop'), a score patch, a profile icon for 1,000,000,000,000 points, a title for 1,000,000,000,000,000 points, and a title for holding the weekly top 100 until the weekly ranking closes.",
+     "mechanics": ["Entry costs a Crumble Dungeon Key."], "quotes": [{"kr": "크럼블 던전 입장 시 필요한 열쇠이다.", "en": "A key used to enter the Crumble Dungeon."}]}
+  ]
+}

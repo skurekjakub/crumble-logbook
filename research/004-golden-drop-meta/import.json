@@ -1,0 +1,17 @@
+{
+  "record": {
+    "slug": "004-golden-drop-meta",
+    "question": "The Golden Drop encounter is Crumble Dungeon, a scored mode with documented rules, and players post scores with the lineup, levels, runes, gear and perks behind them precisely enough that the top-scoring builds can be named and reproduced by someone with every cookie.",
+    "status": "active",
+    "startedAt": "2026-09-28",
+    "mode": "crumble_dungeon"
+  },
+  "curated": "curated",
+  "extractions": "evidence/08-extract",
+  "captures": [
+    { "site": "dc", "dir": "evidence/02-dc/dc", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/04-naver/nv", "file": "nv-{id}.md" }
+  ],
+  "rankings": [],
+  "ledger": { "file": "evidence/captures.jsonl" }
+}
