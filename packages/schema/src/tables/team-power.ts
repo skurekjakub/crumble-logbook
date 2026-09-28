@@ -12,12 +12,9 @@ import type { PowerPlace } from "../enums";
 import { recordSlugColumn } from "./columns";
 
 /*
- * The team-power tables: what raises the power the game shows for a
- * lineup, what it costs, the figures players posted, the packages that
- * sell it, the orders to spend in, the cost curves, and what the planner
- * may multiply. Every row is a research finding a record owns. Rows name
- * each other by `slug`: a power source, a data point, a package or a
- * spending order.
+ * The team-power tables: research findings about what raises the power the
+ * game shows for a lineup, and at what cost. Every row is one a record
+ * owns. Rows name each other by `slug`.
  */
 
 /** One material a power source consumes, and where a free and a paying player get it. */
@@ -96,13 +93,16 @@ export const powerSources = sqliteTable("power_sources", {
  * snapshot, for the power source `powerSource` (a slug). Power is in G as
  * posted (`beforeG`, `afterG`), `deltaPct` the change in percent; any of
  * them `null` when the post gives none. `kind` says how the figure is
- * known; `cost` what it took and `note` what else the record says. `slug`
- * is its curated id.
+ * known, and `approximate` that the post gives it loosely (a range's
+ * midpoint, a question, an unclear kind of power; `note` says which);
+ * `cost` is what it took and `note` what else the record says. `slug` is
+ * its curated id.
  */
 export const powerDataPoints = sqliteTable("power_data_points", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   slug: text("slug").notNull().unique(),
   kind: text("kind", { enum: DATA_POINT_KIND }).notNull(),
+  approximate: integer("approximate", { mode: "boolean" }).notNull().default(false),
   powerSource: text("power_source").notNull(),
   date: text("date").notNull(),
   beforeG: real("before_g"),

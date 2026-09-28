@@ -1,0 +1,1 @@
+ALTER TABLE `power_data_points` ADD `approximate` integer DEFAULT false NOT NULL;

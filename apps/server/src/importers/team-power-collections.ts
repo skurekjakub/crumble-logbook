@@ -118,6 +118,7 @@ export const seedPowerDataPoints = z.strictObject({
     z.strictObject({
       id: rowSlug,
       kind: z.enum(DATA_POINT_KIND),
+      approximate: z.boolean().optional(),
       system: rowSlug,
       date: isoDate,
       before_g: z.number().positive().nullable(),
@@ -510,6 +511,7 @@ export const TEAM_POWER_COLLECTIONS = {
           values: {
             slug: row.id,
             kind: row.kind,
+            approximate: row.approximate ?? false,
             powerSource: row.system,
             date: row.date,
             beforeG: row.before_g,

@@ -26,7 +26,7 @@
     "early": "high: rolls at 10 SP to 60–70% on the open constellations; don't lock (nv:5693)",
     "mid": "high: the hexagon at 6 points and the octagon (91%, ~1,900 SP) at 8 (dc:55570, nv:43444)",
     "late": "high while new points open (+10–13% per step posted, dc:77329, dc:68732), but the points come from cookie stars; low for pushing an old constellation past 95%",
-    "at_2_2g": "Up to 8-3 the points come from free pulls (dc:76290) and one such step was worth +10% at 2G, about 3–4 chapters of 35% reach (inferred from curated/power-planner.json). Past 8-3 the points need paid pulls: 8-3 → 8-6 is about 45 cookie stars, on the order of ₩2.3–4.2M at the TSSR pickup rate of dc:50913 (inferred upper bound; SSR stars cost less, unpriced), for a gain no one posted. Once points are open, Stellar Points are the cheapest way to add area. Not comparable per won with plating from the record's evidence."
+    "at_2_2g": "Up to 8-3 the points come from free pulls (dc:76290) and one such step was worth +10% at 2G, about 3–4 chapters of 35% reach (inferred from record 003's stage table, as the Planner page reads it). Past 8-3 the points need paid pulls: 8-3 → 8-6 is about 45 cookie stars, on the order of ₩2.3–4.2M at the TSSR pickup rate of dc:50913 (inferred upper bound; SSR stars cost less, unpriced), for a gain no one posted. Once points are open, Stellar Points are the cheapest way to add area. Not comparable per won with plating from the record's evidence."
    },
    "bracket_effect": "Moves every bracket line at once; the only posted single step that moved a 2G account a full 0.2G.",
    "spend_order": "Roll unlocked to ~70% early; shape later constellations first; hexagon at 6, octagon at 8, 95% at 10; F2P 70%, light 80s, mid low 90s, whale 96 (web:yt-5XXDHBHnISU, web:yt-mL9MSX3QD94).",
@@ -113,7 +113,7 @@
    ],
    "cost_type": "mixed",
    "cap": "25 since 1.4.002 (was 20)",
-   "diminishing": "Success falls from 90% at 0→1 to 14% at 14→15, 2% at 19→20 and every step to 25 (curated/growth-curves.json). Expected cost to 15 is about 414 Chocosteel and 43 Syrup per slot (dc:53079). From 15 a shatter drops 2 levels (restore 20–80 Syrup).",
+   "diminishing": "Success falls from 90% at 0→1 to 14% at 14→15, 2% at 19→20 and every step to 25 (the Curves page). Expected cost to 15 is about 414 Chocosteel and 43 Syrup per slot (dc:53079). From 15 a shatter drops 2 levels (restore 20–80 Syrup).",
    "posted_gains": [
     {"account": "'1G 600M' (team or total not stated)", "before": "", "after": "", "delta": "about +8M per level (posed as a question, ~0.5%); 14→15 +20–30M (~1.5%)", "cost": "14→15 ≈ 104 Chocosteel + 13 Syrup expected", "kind": "posted gain (approximate), cost from the table", "sources": ["dc:75684", "dc:53079"]},
     {"account": "server top 3", "before": "", "after": "", "delta": "+200–300M each (no time span given)", "cost": "the poster guessed at plating great successes", "kind": "posted figure, guessed cause", "sources": ["dc:72479"]},
@@ -265,7 +265,7 @@
    "name_kr": "도감",
    "raises": "Flat ATK/DEF/HP to cookies of given roles or elements per collection entry, stepped by the members' progress; claim rewards include Crystals.",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
-   "materials": [{"name": "owning and promoting the entry's cookies or pets", "free": "pulls", "paid": "pulls", "note": "players complain that new cookies are not added to the collection (nv:37730 comments; the gallery titles in evidence/02-dc/02-list-systems.tsv)"}],
+   "materials": [{"name": "owning and promoting the entry's cookies or pets", "free": "pulls", "paid": "pulls", "note": "players complain that new cookies are not added to the collection (nv:37730 comments; the DCInside gallery's post titles, captured by this record)"}],
    "cost_type": "free",
    "cap": "per entry, 11 steps in the data (unit undocumented)",
    "diminishing": "fixed by the data",

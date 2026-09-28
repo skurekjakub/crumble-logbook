@@ -118,6 +118,7 @@ function point(id: number, slug: string, over: Partial<PowerDataPoint>): PowerDa
     id,
     slug,
     kind: "posted",
+    approximate: false,
     powerSource: "plating",
     date: "2026-09-25",
     beforeG: null,

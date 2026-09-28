@@ -26,3 +26,6 @@ Spec: [`docs/superpowers/specs/2026-09-27-conquest-simulator-design.md`](docs/su
 Record: [`research/005-team-power-growth/`](research/005-team-power-growth/README.md). The guild lab is the one power source with no table anywhere; the only size is one unmeasured reply claiming a research-13 guild adds ~+20% to account total power (dc:76461).
 
 1. **Can you read your guild's research?** Your guild's research level and the stat lines it grants (the guild research screen), and, if you ever switch guilds, your team power before and after. That would size the guild lab in team power and let the planner count it.
+2. **Who owns a power source's slug when a later record researches it again?** A power source's slug, such as `plating`, is unique across records, so a slug names one row wherever rows link to it. A later record that lists `plating` fails its import ("already loaded by record 005").
+   - Keep it: a later record updates the power source by replacing record 005, or through the API.
+   - Or let a later record take over a slug: its row replaces 005's and the links follow it, at the cost of 005 no longer owning what it researched.

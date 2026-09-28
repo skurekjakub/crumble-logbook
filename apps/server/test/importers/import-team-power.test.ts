@@ -173,6 +173,26 @@ describe("importRecord on research record 005", FULL_IMPORT, () => {
     for (const id of shapes.rowSources!.flat()) expect(shapes.sources).toContain(id);
     expect(warnings.some((w) => w.includes("lists no decks"))).toBe(false);
   });
+
+  it("marks posted only the steps whose own gain was measured, and no package step", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    const steps = createServices(store).spendingSteps.list();
+    expect(steps.filter((s) => s.packageSlug !== null && s.basis === "posted")).toEqual([]);
+    const plating = steps.find((s) => s.orderSlug === "endgame" && s.powerSource === "plating")!;
+    expect(plating).toMatchObject({
+      basis: "community",
+      basisNote: expect.stringMatching(/posted gain near 15/),
+    });
+  });
+
+  it("flags the figures a post gives loosely as approximate, and no others by default", () => {
+    const store = testStore();
+    importRecord(store, recordDir);
+    const points = createServices(store).powerDataPoints.list();
+    expect(points.find((p) => p.slug === "plate-14-15-1.6g")?.approximate).toBe(true);
+    expect(points.find((p) => p.slug === "stellar8-triangle-2g")?.approximate).toBe(false);
+  });
 });
 
 describe("importRecord's team-power checks", () => {
