@@ -145,6 +145,14 @@ const DECKS = [
   deck("crepe", 3, "Crepe–Espresso deck", { status: "niche" }),
 ] satisfies Deck[];
 
+const RANGED = deck("ranged", 4, "Five-ranged deck", {
+  status: "legacy",
+  obsoleteSince: "2026-10-12",
+  obsoleteReason: "The patch cut ranged damage.",
+  obsoleteSources: ["dc:75148"],
+  supersededBy: "rye",
+});
+
 const COUNTERS = [
   {
     ...CURRENT,
@@ -557,6 +565,52 @@ describe("PvP teams", () => {
   it("shows the empty message with no teams", async () => {
     await renderAt("/arena/teams", ARENA, { "/api/decks?mode=arena": { body: [] } });
     expect(await panel().findByText("No decks recorded yet.")).toHaveClass("empty");
+  });
+});
+
+describe("PvP teams, obsolete", () => {
+  const withRanged = { "/api/decks?mode=arena": { body: [...DECKS, RANGED] } };
+
+  it("lists the current teams, then a collapsed, dated Obsolete section with the obsolete team's full card under its notice", async () => {
+    await renderAt("/arena/teams", ARENA, withRanged);
+    const section = (await panel().findByText("Obsolete", { selector: "summary .label" })).closest(
+      "details",
+    )!;
+    expect(section).not.toHaveAttribute("open");
+    expect(section.querySelector("summary")).toHaveTextContent("latest 2026-10-12");
+    const card = section.querySelector("article#deck-ranged")!;
+    expect(card).toHaveTextContent("Five-ranged deck");
+    const notice = within(card as HTMLElement).getByRole("note", { hidden: true });
+    expect(notice).toHaveTextContent(
+      "Obsolete since 2026-10-12: The patch cut ranged damage. Superseded by Rye one-carry deck.",
+    );
+    expect(
+      within(notice).getByRole("link", { name: "Rye one-carry deck", hidden: true }),
+    ).toHaveAttribute("href", "#deck-rye");
+    expect(within(card as HTMLElement).getByText("legacy")).toHaveClass("pill", "legacy");
+    const outside = [...document.querySelectorAll("main article.card")].filter(
+      (a) => !section.contains(a),
+    );
+    expect(outside.map((a) => a.id)).toEqual(["deck-rye", "deck-bari", "deck-crepe"]);
+    const toc = panel().getByRole("navigation", { name: "On this page" });
+    expect(within(toc).getByRole("link", { name: "Obsolete" })).toHaveAttribute(
+      "href",
+      "#decks-obsolete",
+    );
+  });
+
+  it("opens the Obsolete section when the address names an obsolete team's card", async () => {
+    await renderAt("/arena/teams#deck-ranged", ARENA, withRanged);
+    const section = (await panel().findByText("Obsolete", { selector: "summary .label" })).closest(
+      "details",
+    )!;
+    expect(section).toHaveAttribute("open");
+  });
+
+  it("says so when every team is obsolete", async () => {
+    await renderAt("/arena/teams", ARENA, { "/api/decks?mode=arena": { body: [RANGED] } });
+    expect(await panel().findByText("No current decks.")).toHaveClass("empty");
+    expect(document.querySelector("details.obsolete article#deck-ranged")).not.toBeNull();
   });
 });
 

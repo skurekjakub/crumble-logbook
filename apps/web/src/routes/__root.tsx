@@ -9,6 +9,7 @@ import { ErrorBox } from "../components/ErrorBox";
 import { PageHeader } from "../components/PageHeader";
 import { SideNav } from "../components/SideNav";
 import { TopBar } from "../components/TopBar";
+import { isCurrent } from "../lib/obsolete";
 
 export const Route = createRootRouteWithContext<RouterContext>()({
   component: RootLayout,
@@ -67,7 +68,7 @@ function RootLayout() {
     updated: record.data?.updatedAt,
     season: record.data?.seasonLabel,
     sources: sources.data?.length,
-    decks: decks.data?.length,
+    decks: decks.data?.filter(isCurrent).length,
   };
   const modeLede = record.data?.modes.find((m) => m.mode === scope?.mode)?.lede;
   const lede = record.isError ? (

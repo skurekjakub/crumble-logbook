@@ -7,6 +7,7 @@ import { DataTable } from "../components/DataTable";
 import { Formation, hasFormation } from "../components/Formation";
 import { Kv } from "../components/Kv";
 import { Lineup } from "../components/Lineup";
+import { ObsoleteNotice } from "../components/ObsoleteNotice";
 import { Pill } from "../components/Pill";
 import { SourceChips } from "../components/SourceChips";
 import type { SourceIndex } from "../lib/sources";
@@ -97,12 +98,24 @@ function bullets(items: readonly string[]) {
 }
 
 /**
- * One deck as a card: formation (or plain lineup when it has no slots), levels, ATK order, pets, perks, formation, swaps, RNG, unorthodox flags and sources.
+ * One deck as a card: formation (or plain lineup when it has no slots),
+ * levels, ATK order, pets, perks, formation, swaps, RNG, unorthodox flags
+ * and sources. An obsolete deck's card renders in full, headed with its
+ * obsolete notice and a link to the deck that superseded it.
  *
- * @param props - the deck and the source index
+ * @param props - the deck, the source index, and a namer for the successor
  * @returns the card
  */
-export function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceIndex }) {
+export function DeckCard({
+  deck: d,
+  sources,
+  deckName,
+}: {
+  deck: Deck;
+  sources: SourceIndex;
+  /** Names a deck by id, for the successor in an obsolete deck's notice; the id when absent. */
+  deckName?: (id: string) => string;
+}) {
   /**
    * Lists the texts of the deck's notes of one kind.
    *
@@ -128,6 +141,21 @@ export function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceInde
 
   return (
     <article className="card" id={deckId(d)}>
+      {d.obsoleteSince ? (
+        <ObsoleteNotice
+          since={d.obsoleteSince}
+          reason={d.obsoleteReason}
+          sources={d.obsoleteSources}
+          sourceIndex={sources}
+          superseded={
+            d.supersededBy ? (
+              <a href={`#${deckId({ id: d.supersededBy })}`}>
+                {deckName?.(d.supersededBy) ?? d.supersededBy}
+              </a>
+            ) : null
+          }
+        />
+      ) : null}
       <div className="card-head">
         <div>
           <h3>

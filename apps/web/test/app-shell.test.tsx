@@ -92,6 +92,16 @@ describe("app shell", () => {
     );
   });
 
+  it("counts only the current decks in the header", async () => {
+    await renderAt("/conquest", {
+      ...API,
+      "/api/decks?mode=guild_conquest": {
+        body: [...DECKS.slice(0, 2), { id: "herb", obsoleteSince: "2026-10-12" }],
+      },
+    });
+    await waitFor(() => expect(stamp().Decks).toBe("2"));
+  });
+
   it("lists every section with its Korean name and nests the current section's pages, marking the current ones", async () => {
     await renderAt("/conquest/decks");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
