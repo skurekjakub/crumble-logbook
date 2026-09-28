@@ -12,6 +12,8 @@ import { localOffset } from "./time";
 try {
   process.exitCode = await runCli(process.argv.slice(2), {
     researchDir,
+    // `pnpm capture` runs this script in packages/capture; INIT_CWD is where pnpm was invoked.
+    cwd: process.env.INIT_CWD ?? process.cwd(),
     out: (line) => console.log(line),
     err: (line) => console.error(line),
     now: () => new Date(),

@@ -9,11 +9,18 @@ import { fakeFetch, fixture, FIXED_NOW } from "./helpers";
 
 /**
  * Builds a CLI environment over a temp `research/` folder holding one
- * record, `r1`, with one evidence file.
+ * record, `r1`, with one evidence file; relative paths resolve against
+ * the `research/` folder.
  *
- * @returns the environment and what it printed
+ * @returns the environment, what it printed, the record and the `research/` folder
  */
-function env(): { env: CliEnv; out: string[]; err: string[]; record: string } {
+function env(): {
+  env: CliEnv;
+  out: string[];
+  err: string[];
+  record: string;
+  researchDir: string;
+} {
   const researchDir = mkdtempSync(join(tmpdir(), "crumble-cli-"));
   const record = join(researchDir, "r1");
   mkdirSync(join(record, "evidence"), { recursive: true });
@@ -23,6 +30,7 @@ function env(): { env: CliEnv; out: string[]; err: string[]; record: string } {
   return {
     env: {
       researchDir,
+      cwd: researchDir,
       out: (l) => void out.push(l),
       err: (l) => void err.push(l),
       now: () => FIXED_NOW,
@@ -32,6 +40,7 @@ function env(): { env: CliEnv; out: string[]; err: string[]; record: string } {
     out,
     err,
     record,
+    researchDir,
   };
 }
 
@@ -82,6 +91,28 @@ describe("pnpm capture", () => {
     expect(err).toContain("r1: evidence/late.md has no ledger line");
   });
 
+  it("verify reports an unreadable ledger as its record's failure and checks the others", async () => {
+    const { env: e, out, err, researchDir } = env();
+    await runCli(
+      ["log", "r1", "evidence/page.html", "--url", "https://x.test", "--tool", "curl"],
+      e,
+    );
+    mkdirSync(join(researchDir, "r0", "evidence"), { recursive: true });
+    writeFileSync(join(researchDir, "r0", "evidence", "captures.jsonl"), "{not json\n");
+    out.length = 0;
+    expect(await runCli(["verify"], e)).toBe(1);
+    expect(out).toEqual(["r0: FAILED", "r1: ok"]);
+    expect(err).toEqual([expect.stringMatching(/^r0: evidence\/captures\.jsonl \[line 1\]: /)]);
+  });
+
+  it("backfill resolves a relative --from against the folder pnpm ran in", async () => {
+    const { env: e, researchDir } = env();
+    mkdirSync(join(researchDir, "elsewhere", "r1"), { recursive: true });
+    e.cwd = join(researchDir, "elsewhere");
+    await expect(runCli(["backfill", "r1", "--from", "r1"], e)).rejects.toThrow(/git/);
+    await expect(runCli(["backfill", "r1", "--from", "nope"], e)).rejects.toThrow(UsageError);
+  });
+
   it("backfill writes a ledger from git times, and refuses a second run", async () => {
     const { env: e, out } = env();
     await expect(runCli(["backfill", "r1"], e)).rejects.toThrow(/git|no commit/);
@@ -110,6 +141,8 @@ describe("pnpm capture", () => {
     for (const argv of [
       ["log", "r1", "curated/x.json", "--url", "u", "--tool", "curl"],
       ["log", "r1", "evidence/../import.json", "--url", "u", "--tool", "curl"],
+      ["log", "r1", "evidence//page.html", "--url", "u", "--tool", "curl"],
+      ["dc", "fetch", "r1", "evidence/./dc", "1"],
       ["log", "r1", "evidence/page.html"],
       ["verify", "nope"],
       ["dc", "fetch", "r1", "evidence/dc"],

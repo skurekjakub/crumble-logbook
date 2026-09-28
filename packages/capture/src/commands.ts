@@ -7,12 +7,14 @@
  */
 import { existsSync, readdirSync } from "node:fs";
 import { isAbsolute, join, resolve } from "node:path";
+import { evidencePath } from "@crumble/schema";
 import type { CaptureContext } from "./context";
 import { backfill } from "./backfill";
 import { crumbggCapture, crumbggClient, ENDPOINTS } from "./crumbgg";
 import { dcClient, dcFetch, dcList } from "./dc";
 import type { HttpClient, HttpOptions } from "./http";
-import { appendCapture, describeProblem, hasLedger, verifyLedger } from "./ledger";
+import type { LedgerProblem } from "./ledger";
+import { appendCapture, describeProblem, hasLedger, LedgerError, verifyLedger } from "./ledger";
 import { contactSheets, downloadVideos, extractFrames, subtitleSheets } from "./media";
 import { naverClient, nvFetch, nvList } from "./naver";
 import type { OffsetAt } from "./time";
@@ -23,6 +25,8 @@ import { youtubeClient, youtubeSearch, youtubeWatch } from "./youtube";
 export interface CliEnv {
   /** Absolute path of the `research/` folder. */
   researchDir: string;
+  /** The folder a relative path given on the command line resolves against: where `pnpm` was run. */
+  cwd: string;
   /**
    * Prints a result line.
    *
@@ -94,17 +98,20 @@ function recordDir(env: CliEnv, record: string | undefined): string {
 }
 
 /**
- * Checks that a path argument is record-relative under `evidence/`.
+ * Checks that a path argument is record-relative under `evidence/`, in the
+ * form a ledger line's path takes (see `evidencePath`), or is `evidence`
+ * itself.
  *
- * @param path - the argument
+ * @param path - the argument; `\` separators read as `/`
  * @param what - how the error names it
  * @returns the path, trailing slashes removed
- * @throws {UsageError} if it's missing or outside `evidence/`
+ * @throws {UsageError} if it's missing, outside `evidence/`, or has an
+ *   empty, `.` or `..` segment
  */
 function evidenceArg(path: string | undefined, what: string): string {
   if (!path) throw new UsageError(`missing <${what}>`);
   const clean = path.replaceAll("\\", "/").replace(/\/+$/, "");
-  if (!/^evidence(\/|$)/.test(clean) || clean.split("/").includes("..")) {
+  if (clean !== "evidence" && !evidencePath.safeParse(clean).success) {
     throw new UsageError(`<${what}> must be record-relative under evidence/: ${path}`);
   }
   return clean;
@@ -177,11 +184,13 @@ function options(args: string[], names: readonly string[]) {
 }
 
 /**
- * Runs `verify` over one record or every record with a ledger.
+ * Runs `verify` over one record or every record with a ledger. A ledger
+ * that can't be read fails its record and the others are still checked.
  *
  * @param env - the environment
  * @param record - the record, or `undefined` for every record
  * @returns `0` when every ledger holds, `1` otherwise
+ * @throws {UsageError} if the named record has no folder
  */
 function verify(env: CliEnv, record: string | undefined): number {
   const dirs = record
@@ -198,7 +207,16 @@ function verify(env: CliEnv, record: string | undefined): number {
       failed = true;
       continue;
     }
-    const problems = verifyLedger(dir);
+    let problems: LedgerProblem[];
+    try {
+      problems = verifyLedger(dir);
+    } catch (err) {
+      if (!(err instanceof LedgerError)) throw err;
+      env.err(`${name}: ${err.message}`);
+      env.out(`${name}: FAILED`);
+      failed = true;
+      continue;
+    }
     for (const problem of problems) env.err(`${name}: ${describeProblem(problem)}`);
     env.out(`${name}: ${problems.length === 0 ? "ok" : "FAILED"}`);
     failed ||= problems.length > 0;
@@ -284,7 +302,7 @@ export async function runCli(argv: readonly string[], env: CliEnv): Promise<numb
     case "backfill": {
       const { found, rest: positional } = options(rest, ["from"]);
       const dir = recordDir(env, positional[0]);
-      const from = found.from === undefined ? undefined : resolve(found.from);
+      const from = found.from === undefined ? undefined : resolve(env.cwd, found.from);
       if (from !== undefined && (!isAbsolute(from) || !existsSync(from))) {
         throw new UsageError(`--from: no folder ${found.from}`);
       }
