@@ -1,0 +1,16 @@
+/* The Crumble Dungeon screens: a lineup's first wave, in columns, with the cookies the
+   exclusions list names flagged. Colours come from tokens.css only. */
+
+ol.wave {
+  columns: 16rem auto;
+  column-gap: var(--sp-5);
+  margin: var(--sp-2) 0 0;
+  padding-left: 2.5em;
+}
+ol.wave li {
+  break-inside: avoid;
+}
+ol.wave li.flagged {
+  color: var(--bad);
+  font-weight: 600;
+}

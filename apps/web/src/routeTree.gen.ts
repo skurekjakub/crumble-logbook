@@ -20,10 +20,13 @@ import { Route as ModeBracketsRouteImport } from './routes/$mode/brackets'
 import { Route as ModeClearsRouteImport } from './routes/$mode/clears'
 import { Route as ModeCountersRouteImport } from './routes/$mode/counters'
 import { Route as ModeDecksRouteImport } from './routes/$mode/decks'
+import { Route as ModeExclusionsRouteImport } from './routes/$mode/exclusions'
 import { Route as ModeGearRouteImport } from './routes/$mode/gear'
+import { Route as ModeLineupsRouteImport } from './routes/$mode/lineups'
 import { Route as ModeMechanicsRouteImport } from './routes/$mode/mechanics'
 import { Route as ModeRiftRouteImport } from './routes/$mode/rift'
 import { Route as ModeRunesRouteImport } from './routes/$mode/runes'
+import { Route as ModeRunsRouteImport } from './routes/$mode/runs'
 import { Route as ModeScoresRouteImport } from './routes/$mode/scores'
 import { Route as ModeTeamsRouteImport } from './routes/$mode/teams'
 import { Route as ModeTimelineRouteImport } from './routes/$mode/timeline'
@@ -86,9 +89,19 @@ const ModeDecksRoute = ModeDecksRouteImport.update({
   path: '/decks',
   getParentRoute: () => ModeRoute,
 } as any)
+const ModeExclusionsRoute = ModeExclusionsRouteImport.update({
+  id: '/exclusions',
+  path: '/exclusions',
+  getParentRoute: () => ModeRoute,
+} as any)
 const ModeGearRoute = ModeGearRouteImport.update({
   id: '/gear',
   path: '/gear',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeLineupsRoute = ModeLineupsRouteImport.update({
+  id: '/lineups',
+  path: '/lineups',
   getParentRoute: () => ModeRoute,
 } as any)
 const ModeMechanicsRoute = ModeMechanicsRouteImport.update({
@@ -104,6 +117,11 @@ const ModeRiftRoute = ModeRiftRouteImport.update({
 const ModeRunesRoute = ModeRunesRouteImport.update({
   id: '/runes',
   path: '/runes',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeRunsRoute = ModeRunsRouteImport.update({
+  id: '/runs',
+  path: '/runs',
   getParentRoute: () => ModeRoute,
 } as any)
 const ModeScoresRoute = ModeScoresRouteImport.update({
@@ -148,10 +166,13 @@ export interface FileRoutesByFullPath {
   '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
   '/$mode/decks': typeof ModeDecksRoute
+  '/$mode/exclusions': typeof ModeExclusionsRoute
   '/$mode/gear': typeof ModeGearRoute
+  '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
   '/$mode/rift': typeof ModeRiftRoute
   '/$mode/runes': typeof ModeRunesRoute
+  '/$mode/runs': typeof ModeRunsRoute
   '/$mode/scores': typeof ModeScoresRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
@@ -170,10 +191,13 @@ export interface FileRoutesByTo {
   '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
   '/$mode/decks': typeof ModeDecksRoute
+  '/$mode/exclusions': typeof ModeExclusionsRoute
   '/$mode/gear': typeof ModeGearRoute
+  '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
   '/$mode/rift': typeof ModeRiftRoute
   '/$mode/runes': typeof ModeRunesRoute
+  '/$mode/runs': typeof ModeRunsRoute
   '/$mode/scores': typeof ModeScoresRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
@@ -194,10 +218,13 @@ export interface FileRoutesById {
   '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
   '/$mode/decks': typeof ModeDecksRoute
+  '/$mode/exclusions': typeof ModeExclusionsRoute
   '/$mode/gear': typeof ModeGearRoute
+  '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
   '/$mode/rift': typeof ModeRiftRoute
   '/$mode/runes': typeof ModeRunesRoute
+  '/$mode/runs': typeof ModeRunsRoute
   '/$mode/scores': typeof ModeScoresRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
@@ -219,10 +246,13 @@ export interface FileRouteTypes {
     | '/$mode/clears'
     | '/$mode/counters'
     | '/$mode/decks'
+    | '/$mode/exclusions'
     | '/$mode/gear'
+    | '/$mode/lineups'
     | '/$mode/mechanics'
     | '/$mode/rift'
     | '/$mode/runes'
+    | '/$mode/runs'
     | '/$mode/scores'
     | '/$mode/teams'
     | '/$mode/timeline'
@@ -241,10 +271,13 @@ export interface FileRouteTypes {
     | '/$mode/clears'
     | '/$mode/counters'
     | '/$mode/decks'
+    | '/$mode/exclusions'
     | '/$mode/gear'
+    | '/$mode/lineups'
     | '/$mode/mechanics'
     | '/$mode/rift'
     | '/$mode/runes'
+    | '/$mode/runs'
     | '/$mode/scores'
     | '/$mode/teams'
     | '/$mode/timeline'
@@ -264,10 +297,13 @@ export interface FileRouteTypes {
     | '/$mode/clears'
     | '/$mode/counters'
     | '/$mode/decks'
+    | '/$mode/exclusions'
     | '/$mode/gear'
+    | '/$mode/lineups'
     | '/$mode/mechanics'
     | '/$mode/rift'
     | '/$mode/runes'
+    | '/$mode/runs'
     | '/$mode/scores'
     | '/$mode/teams'
     | '/$mode/timeline'
@@ -365,11 +401,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeDecksRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/exclusions': {
+      id: '/$mode/exclusions'
+      path: '/exclusions'
+      fullPath: '/$mode/exclusions'
+      preLoaderRoute: typeof ModeExclusionsRouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/$mode/gear': {
       id: '/$mode/gear'
       path: '/gear'
       fullPath: '/$mode/gear'
       preLoaderRoute: typeof ModeGearRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/lineups': {
+      id: '/$mode/lineups'
+      path: '/lineups'
+      fullPath: '/$mode/lineups'
+      preLoaderRoute: typeof ModeLineupsRouteImport
       parentRoute: typeof ModeRoute
     }
     '/$mode/mechanics': {
@@ -391,6 +441,13 @@ declare module '@tanstack/react-router' {
       path: '/runes'
       fullPath: '/$mode/runes'
       preLoaderRoute: typeof ModeRunesRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/runs': {
+      id: '/$mode/runs'
+      path: '/runs'
+      fullPath: '/$mode/runs'
+      preLoaderRoute: typeof ModeRunsRouteImport
       parentRoute: typeof ModeRoute
     }
     '/$mode/scores': {
@@ -444,10 +501,13 @@ interface ModeRouteChildren {
   ModeClearsRoute: typeof ModeClearsRoute
   ModeCountersRoute: typeof ModeCountersRoute
   ModeDecksRoute: typeof ModeDecksRoute
+  ModeExclusionsRoute: typeof ModeExclusionsRoute
   ModeGearRoute: typeof ModeGearRoute
+  ModeLineupsRoute: typeof ModeLineupsRoute
   ModeMechanicsRoute: typeof ModeMechanicsRoute
   ModeRiftRoute: typeof ModeRiftRoute
   ModeRunesRoute: typeof ModeRunesRoute
+  ModeRunsRoute: typeof ModeRunsRoute
   ModeScoresRoute: typeof ModeScoresRoute
   ModeTeamsRoute: typeof ModeTeamsRoute
   ModeTimelineRoute: typeof ModeTimelineRoute
@@ -462,10 +522,13 @@ const ModeRouteChildren: ModeRouteChildren = {
   ModeClearsRoute: ModeClearsRoute,
   ModeCountersRoute: ModeCountersRoute,
   ModeDecksRoute: ModeDecksRoute,
+  ModeExclusionsRoute: ModeExclusionsRoute,
   ModeGearRoute: ModeGearRoute,
+  ModeLineupsRoute: ModeLineupsRoute,
   ModeMechanicsRoute: ModeMechanicsRoute,
   ModeRiftRoute: ModeRiftRoute,
   ModeRunesRoute: ModeRunesRoute,
+  ModeRunsRoute: ModeRunsRoute,
   ModeScoresRoute: ModeScoresRoute,
   ModeTeamsRoute: ModeTeamsRoute,
   ModeTimelineRoute: ModeTimelineRoute,

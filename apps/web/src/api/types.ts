@@ -103,3 +103,18 @@ export type StageZoneSlot = InferResponseType<
 
 /** A documented stage attempt, with the boss's `en` gloss and sources. */
 export type StageClear = InferResponseType<(typeof api)["stage-clears"]["$get"], 200>[number];
+
+/**
+ * A documented Crumble Dungeon score: score and total power in G, what
+ * showed it, what backs it and whether that shows it (`standing`), with sources.
+ */
+export type DungeonRun = InferResponseType<(typeof api)["dungeon-runs"]["$get"], 200>[number];
+
+/** A published Crumble Dungeon lineup: its first wave, exclusions, ATK order and level rule, with sources. */
+export type DungeonLineup = InferResponseType<(typeof api)["dungeon-lineups"]["$get"], 200>[number];
+
+/** A cookie kept out of Crumble Dungeon's first wave, with its `en` gloss, reason, status and sources. */
+export type DungeonExclusion = InferResponseType<
+  (typeof api)["dungeon-exclusions"]["$get"],
+  200
+>[number];

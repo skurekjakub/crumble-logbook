@@ -17,6 +17,7 @@ import {
   activeTab,
   ARENA,
   CONQUEST,
+  DUNGEON,
   MODES,
   modeById,
   modePath,
@@ -126,7 +127,29 @@ describe("MODES", () => {
       ].map((sub) => `/stage${sub}`),
     );
     expect(STAGE.stage.reach).toContain(35);
-    for (const mode of [CONQUEST, ARENA, RUMBLE]) expect(mode.stage, mode.id).toBeNull();
+    for (const mode of [CONQUEST, ARENA, RUMBLE, DUNGEON]) expect(mode.stage, mode.id).toBeNull();
+  });
+
+  it("files the Crumble Dungeon section under record 004, with the shared pages and the dungeon screens", () => {
+    expect(DUNGEON.recordSlug).toBe("004-golden-drop-meta");
+    expect(DUNGEON.scope.mode).toBe("crumble_dungeon");
+    expect(DUNGEON.tabs.map((t) => t.to)).toEqual(
+      [
+        "",
+        "/runs",
+        "/teams",
+        "/lineups",
+        "/exclusions",
+        "/usage",
+        "/runes",
+        "/gear",
+        "/mechanics",
+        "/timeline",
+      ].map((sub) => `/dungeon${sub}`),
+    );
+    expect(DUNGEON.dungeon.firstWave).toBe(40);
+    expect(DUNGEON.rules).not.toBeNull();
+    for (const mode of [CONQUEST, ARENA, RUMBLE, STAGE]) expect(mode.dungeon, mode.id).toBeNull();
   });
 
   it("lists the research index among the shared sections, before Sources and Glossary", () => {

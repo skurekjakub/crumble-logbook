@@ -16,6 +16,7 @@
 import { RULES_TOPIC } from "../../api/queries";
 import { ARENA } from "./arena";
 import { CONQUEST } from "./conquest";
+import { DUNGEON } from "./dungeon";
 import { RUMBLE } from "./rumble";
 import { SHARED_SECTIONS } from "./shared";
 import { STAGE } from "./stage";
@@ -23,10 +24,10 @@ import type { ModeSection, Section, SectionTab } from "./types";
 
 export type * from "./types";
 export { modeLink, modePath, modeTab } from "./links";
-export { ARENA, CONQUEST, RUMBLE, SHARED_SECTIONS, STAGE };
+export { ARENA, CONQUEST, DUNGEON, RUMBLE, SHARED_SECTIONS, STAGE };
 
 /** Game modes, in tab order. */
-export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE, STAGE];
+export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE, STAGE, DUNGEON];
 
 /** Every top-level section, modes first. */
 export const SECTIONS: readonly Section[] = [...MODES, ...SHARED_SECTIONS];

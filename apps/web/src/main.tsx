@@ -10,6 +10,7 @@ import "./styles/shell.css";
 import "./styles/boss.css";
 import "./styles/pvp.css";
 import "./styles/stage.css";
+import "./styles/dungeon.css";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000 } },

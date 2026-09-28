@@ -401,6 +401,41 @@ export const stageClearsQuery = () =>
   });
 
 /**
+ * Documented Crumble Dungeon scores: the ones a screenshot or video shows,
+ * highest score first, then the text-only claims in the same order.
+ *
+ * @returns the query options
+ */
+export const dungeonRunsQuery = () =>
+  queryOptions({
+    queryKey: ["dungeon-runs"],
+    queryFn: () => parseResponse(api["dungeon-runs"].$get({ query: {} })),
+  });
+
+/**
+ * Published Crumble Dungeon lineups, newest first.
+ *
+ * @returns the query options
+ */
+export const dungeonLineupsQuery = () =>
+  queryOptions({
+    queryKey: ["dungeon-lineups"],
+    queryFn: () => parseResponse(api["dungeon-lineups"].$get({ query: {} })),
+  });
+
+/**
+ * The cookies kept out of Crumble Dungeon's first wave, each with its
+ * glossary English, reason and status.
+ *
+ * @returns the query options
+ */
+export const dungeonExclusionsQuery = () =>
+  queryOptions({
+    queryKey: ["dungeon-exclusions"],
+    queryFn: () => parseResponse(api["dungeon-exclusions"].$get({ query: {} })),
+  });
+
+/**
  * Leaderboard rows in rank order.
  *
  * @param filter - restrict to one season and/or board

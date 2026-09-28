@@ -189,6 +189,23 @@ export interface ModeSection extends SectionBase {
   rules: RulesConfig | null;
   /** The stage-pushing screens, for the stage mode. */
   stage: StageConfig | null;
+  /** The Crumble Dungeon screens, for the Crumble Dungeon mode. */
+  dungeon: DungeonConfig | null;
+}
+
+/**
+ * The Crumble Dungeon screens: each one's heading, lede and mechanics
+ * topic, and how many cookies deploy first.
+ */
+export interface DungeonConfig {
+  /** The documented scores, ranked by score. */
+  runs: ViewCopy;
+  /** The published lineups: the first 40, the ATK order, the level rule and what each leaves out. */
+  lineups: ViewCopy;
+  /** The cookies kept out of the first 40, with the reason and where it stands. */
+  exclusions: ViewCopy;
+  /** How many of the highest-power cookies deploy at once. */
+  firstWave: number;
 }
 
 /**

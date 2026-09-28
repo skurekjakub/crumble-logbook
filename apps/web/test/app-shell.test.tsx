@@ -100,6 +100,7 @@ describe("app shell", () => {
       "Arena 아레나",
       "Rumble Arena 와글와글 아레나",
       "Stage 스테이지",
+      "Crumble Dungeon 크럼블 던전",
       "Research",
       "Sources",
       "Glossary",
@@ -201,7 +202,14 @@ describe("app shell", () => {
   });
 
   it("answers not found for a page the mode doesn't have, and for an unknown mode", async () => {
-    for (const path of ["/arena/scores", "/arena/boss", "/conquest/teams", "/nowhere"]) {
+    for (const path of [
+      "/arena/scores",
+      "/arena/boss",
+      "/conquest/teams",
+      "/stage/runs",
+      "/dungeon/clears",
+      "/nowhere",
+    ]) {
       await renderAt(path);
       expect(await screen.findByText(NOT_FOUND), path).toBeVisible();
       cleanup();

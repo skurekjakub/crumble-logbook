@@ -7,7 +7,7 @@
  * @module
  */
 import { notFound } from "@tanstack/react-router";
-import type { ModeSection, StageConfig } from "./modes";
+import type { DungeonConfig, ModeSection, StageConfig } from "./modes";
 import { modeById, tabAt } from "./modes";
 
 /**
@@ -50,4 +50,19 @@ export function requireStage(mode: ModeSection, pathname: string): { stage: Stag
   requireTab(mode, pathname);
   if (!mode.stage) throw notFound();
   return { stage: mode.stage };
+}
+
+/**
+ * Refuses a Crumble Dungeon page for a mode without the dungeon screens,
+ * or that doesn't list the page among its tabs.
+ *
+ * @param mode - the mode, from the route context
+ * @param pathname - the requested path
+ * @returns the mode's dungeon config, for the route context
+ * @throws the router's not-found error for any other mode or page
+ */
+export function requireDungeon(mode: ModeSection, pathname: string): { dungeon: DungeonConfig } {
+  requireTab(mode, pathname);
+  if (!mode.dungeon) throw notFound();
+  return { dungeon: mode.dungeon };
 }
