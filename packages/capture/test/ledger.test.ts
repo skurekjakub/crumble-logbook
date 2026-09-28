@@ -1,0 +1,152 @@
+import { appendFileSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { dirname, join } from "node:path";
+import { describe, expect, it } from "vitest";
+import {
+  appendCapture,
+  describeProblem,
+  isIgnored,
+  isMedia,
+  LEDGER_FILE,
+  LedgerError,
+  listEvidence,
+  MEDIA_EXTENSIONS,
+  readLedger,
+  sha256File,
+  verifyLedger,
+} from "../src/ledger";
+import { findRepoRoot } from "../src/paths";
+
+const META = {
+  url: "https://example.test/1",
+  capturedAt: "2026-09-28T08:00:00+02:00",
+  tool: "curl",
+};
+
+/**
+ * Creates an empty record folder in the temp directory.
+ *
+ * @returns its absolute path
+ */
+function record(): string {
+  return mkdtempSync(join(tmpdir(), "crumble-ledger-"));
+}
+
+/**
+ * Writes a file under a record, creating its folders.
+ *
+ * @param dir - the record folder
+ * @param path - the record-relative path
+ * @param content - the file's content
+ */
+function put(dir: string, path: string, content: string | Uint8Array = "x"): void {
+  mkdirSync(dirname(join(dir, path)), { recursive: true });
+  writeFileSync(join(dir, path), content);
+}
+
+describe("the ledger", () => {
+  it("appends a hashed line per file, in the ledger's key order", () => {
+    const dir = record();
+    put(dir, "evidence/a.md", "hello\n");
+    const line = appendCapture(dir, "evidence/a.md", META);
+    expect(Object.keys(line)).toEqual(["path", "url", "captured_at", "tool", "sha256"]);
+    expect(line.sha256).toBe(sha256File(join(dir, "evidence/a.md")));
+    expect(readFileSync(join(dir, LEDGER_FILE), "utf-8")).toBe(`${JSON.stringify(line)}\n`);
+    expect(readLedger(dir)).toEqual([{ line, lineNo: 1 }]);
+    expect(verifyLedger(dir)).toEqual([]);
+  });
+
+  it("refuses a path already in the ledger, a missing file and an invalid line", () => {
+    const dir = record();
+    put(dir, "evidence/a.md");
+    appendCapture(dir, "evidence/a.md", META);
+    expect(() => appendCapture(dir, "evidence/a.md", META)).toThrow(/already has a ledger line/);
+    expect(() => appendCapture(dir, "evidence/b.md", META)).toThrow(/file not found/);
+    put(dir, "evidence/c.md");
+    expect(() => appendCapture(dir, "evidence/c.md", { ...META, tool: "wget" })).toThrow(
+      LedgerError,
+    );
+    expect(readLedger(dir)).toHaveLength(1);
+  });
+
+  it("fails a line that isn't JSON or breaks the schema, naming its line number", () => {
+    const dir = record();
+    put(dir, "evidence/a.md");
+    appendCapture(dir, "evidence/a.md", META);
+    appendFileSync(join(dir, LEDGER_FILE), "\n{not json}\n");
+    expect(() => readLedger(dir)).toThrow(/\[line 3\]/);
+    writeFileSync(join(dir, LEDGER_FILE), '{"path":"evidence/a.md"}\r\n');
+    expect(() => readLedger(dir)).toThrow(/\[line 1\].*url/);
+  });
+
+  it("reports a hash mismatch, a missing line, an orphan line and a duplicate", () => {
+    const dir = record();
+    put(dir, "evidence/a.md", "one");
+    put(dir, "evidence/b.md", "two");
+    appendCapture(dir, "evidence/a.md", META);
+    appendCapture(dir, "evidence/b.md", META);
+    put(dir, "evidence/a.md", "edited");
+    put(dir, "evidence/new.md");
+    const orphan = { ...readLedger(dir)[1]!.line, path: "evidence/gone.md" };
+    const dup = readLedger(dir)[1]!.line;
+    appendFileSync(join(dir, LEDGER_FILE), `${JSON.stringify(orphan)}\n${JSON.stringify(dup)}\n`);
+    const problems = verifyLedger(dir);
+    expect(problems).toEqual([
+      { kind: "hash-mismatch", path: "evidence/a.md", lineNo: 1 },
+      { kind: "duplicate", path: "evidence/b.md", lineNo: 4 },
+      { kind: "missing-file", path: "evidence/gone.md", lineNo: 3 },
+      { kind: "missing-line", path: "evidence/new.md", lineNo: null },
+    ]);
+    expect(describeProblem(problems[0]!)).toBe(
+      "evidence/a.md (line 1) differs from its ledger hash",
+    );
+  });
+
+  it("passes a missing media file, and fails a present media file whose bytes changed", () => {
+    const dir = record();
+    put(dir, "evidence/img/a.png", new Uint8Array([1, 2, 3]));
+    put(dir, "evidence/img/b.JPG", new Uint8Array([4]));
+    appendCapture(dir, "evidence/img/a.png", META);
+    appendCapture(dir, "evidence/img/b.JPG", META);
+    const lines = readFileSync(join(dir, LEDGER_FILE), "utf-8");
+    const fresh = record();
+    put(fresh, LEDGER_FILE, lines);
+    expect(verifyLedger(fresh)).toEqual([]);
+    put(fresh, "evidence/img/a.png", new Uint8Array([9]));
+    expect(verifyLedger(fresh)).toEqual([
+      { kind: "hash-mismatch", path: "evidence/img/a.png", lineNo: 1 },
+    ]);
+  });
+
+  it("lists evidence without the ledger and local by-products", () => {
+    const dir = record();
+    for (const path of [
+      "evidence/a.md",
+      "evidence/__pycache__/digest.cpython-313.pyc",
+      "evidence/x.pyc",
+      "evidence/sub/Thumbs.db",
+      "evidence/sub/b.json",
+      LEDGER_FILE,
+    ]) {
+      put(dir, path);
+    }
+    put(dir, "curated/decks.json");
+    expect(listEvidence(dir)).toEqual(["evidence/a.md", "evidence/sub/b.json"]);
+    expect(isIgnored("evidence/.DS_Store")).toBe(true);
+  });
+
+  it("keeps the media extensions and the ignored by-products in step with .gitignore", () => {
+    const gitignore = readFileSync(join(findRepoRoot(import.meta.dirname), ".gitignore"), "utf-8")
+      .split("\n")
+      .map((line) => line.trim());
+    const ignoredMedia = gitignore
+      .filter((line) => line.startsWith("research/**/*."))
+      .map((line) => line.slice("research/**/*".length))
+      .sort();
+    expect([...MEDIA_EXTENSIONS].sort()).toEqual(ignoredMedia);
+    for (const ext of MEDIA_EXTENSIONS) expect(isMedia(`a${ext.toUpperCase()}`)).toBe(true);
+    for (const pattern of ["__pycache__/", "*.pyc", ".DS_Store", "Thumbs.db", "desktop.ini"]) {
+      expect(gitignore, pattern).toContain(pattern);
+    }
+  });
+});

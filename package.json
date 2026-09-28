@@ -19,7 +19,8 @@
     "dev:web": "pnpm --filter @crumble/web dev",
     "import:record": "pnpm --filter @crumble/server import:record",
     "db:export": "pnpm --filter @crumble/server db:export",
-    "db:restore": "pnpm --filter @crumble/server db:restore"
+    "db:restore": "pnpm --filter @crumble/server db:restore",
+    "capture": "pnpm --filter @crumble/capture capture"
   },
   "devDependencies": {
     "@crumble/eslint-config": "workspace:*",

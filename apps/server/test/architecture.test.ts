@@ -32,9 +32,10 @@ const SERVER = "apps/server/src";
 const WEB = "apps/web/src";
 const SCHEMA = "packages/schema/src";
 const SIM = "packages/sim/src";
+const CAPTURE = "packages/capture/src";
 
 /** The source roots the rules cover, repo-relative; the sim package's once it exists. */
-const ROOTS = [SERVER, WEB, SCHEMA, ...(existsSync(join(repoRoot, SIM)) ? [SIM] : [])];
+const ROOTS = [SERVER, WEB, SCHEMA, CAPTURE, ...(existsSync(join(repoRoot, SIM)) ? [SIM] : [])];
 
 /**
  * Lists every `.ts`/`.tsx` file under `dir`, repo-relative with forward slashes.
@@ -136,6 +137,7 @@ function importerMayImport(edge: ImportEdge): boolean {
   return (
     under(edge.target, `${SERVER}/importers`) ||
     isPackage(edge.specifier, "@crumble/schema") ||
+    edge.specifier === "@crumble/capture/ledger" ||
     isPackage(edge.specifier, "zod") ||
     edge.specifier.startsWith("node:") ||
     ((isDrizzle(edge) || under(edge.target, `${SERVER}/repos`)) && edge.typeOnly) ||
@@ -195,6 +197,25 @@ const RULES: Rule[] = [
     name: "nothing imports cli/",
     covers: (file) => under(file, SERVER) && !under(file, `${SERVER}/cli`),
     forbids: (edge) => under(edge.target, `${SERVER}/cli`),
+  },
+  {
+    name: "packages/capture is pure I/O: its own files, @crumble/schema, zod, cheerio, domhandler and node builtins",
+    covers: (file) => under(file, CAPTURE),
+    forbids: (edge) =>
+      !(
+        under(edge.target, CAPTURE) ||
+        ["@crumble/schema", "zod", "cheerio", "domhandler"].some((pkg) =>
+          isPackage(edge.specifier, pkg),
+        ) ||
+        edge.specifier.startsWith("node:")
+      ),
+  },
+  {
+    name: "only the importers use @crumble/capture, and only its ledger",
+    covers: (file) => !under(file, CAPTURE),
+    forbids: (edge) =>
+      isPackage(edge.specifier, "@crumble/capture") &&
+      !(under(edge.file, `${SERVER}/importers`) && edge.specifier === "@crumble/capture/ledger"),
   },
   {
     name: "packages/sim is pure: it imports only zod and its own files",
@@ -368,6 +389,30 @@ describe("architecture", () => {
       expect(violations([fake(cli, specifier)]), specifier).toHaveLength(1);
     }
     expect(violations([fake(`${SERVER}/services/x.ts`, "../cli/export", true)])).toHaveLength(1);
+  });
+
+  it("keeps packages/capture to pure I/O, and its ledger the importers' only way in", () => {
+    const capture = `${CAPTURE}/dc.ts`;
+    const allowed = ["./html", "@crumble/schema", "zod", "cheerio", "domhandler", "node:fs"];
+    expect(violations(allowed.map((s) => fake(capture, s)))).toEqual([]);
+    for (const specifier of [
+      "../../../apps/server/src/repos",
+      "@crumble/server",
+      "drizzle-orm",
+      "hono",
+    ]) {
+      expect(violations([fake(capture, specifier, true)]).length, specifier).toBeGreaterThan(0);
+    }
+    expect(violations([fake(`${SERVER}/importers/ledger.ts`, "@crumble/capture/ledger")])).toEqual(
+      [],
+    );
+    expect(
+      violations([fake(`${SERVER}/importers/ledger.ts`, "@crumble/capture")]).length,
+    ).toBeGreaterThan(0);
+    expect(violations([fake(`${SERVER}/services/x.ts`, "@crumble/capture/ledger")])).toHaveLength(
+      1,
+    );
+    expect(violations([fake(`${WEB}/views/x.tsx`, "@crumble/capture", true)])).toHaveLength(1);
   });
 
   it("keeps packages/sim pure and its values in the server's services", () => {

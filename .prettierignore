@@ -1,4 +1,6 @@
 research/
+# verbatim captures, kept byte for byte
+packages/capture/test/fixtures/
 docs/
 data/
 .claude/

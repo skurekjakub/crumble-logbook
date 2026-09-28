@@ -119,7 +119,12 @@ export function crumbleConfig(rootDir: string) {
 
     {
       // CLI scripts and the server entry report to the terminal.
-      files: ["apps/server/src/cli/**", "apps/server/src/main.ts", "apps/server/src/app.ts"],
+      files: [
+        "apps/server/src/cli/**",
+        "apps/server/src/main.ts",
+        "apps/server/src/app.ts",
+        "packages/capture/src/cli.ts",
+      ],
       rules: { "no-console": "off" },
     },
 
