@@ -161,8 +161,8 @@ const counter = citedInputs(counterInsert);
 /**
  * Input for creating a counter edge, with the sources that support it. A
  * deck can't counter itself: `teamDeckId` and `beatenByDeckId` must differ.
- * The omit runs before the refine because zod 4 rejects `.omit()` on an
- * already-refined object.
+ * `citedInputs` omits before this refine: zod 4 rejects `.omit()` on a
+ * refined object.
  */
 export const counterInput = counter.input.refine((c) => c.teamDeckId !== c.beatenByDeckId, {
   message: "a deck can't be its own counter",
