@@ -9,8 +9,9 @@
  * line in `app.ts` (kept explicit so the typed client keeps every route's
  * types) and a view. `test/registry.test.ts` fails if the route or the
  * entity is missing, or if a declared list filter doesn't narrow its list.
- * A table with a `mode` column gets the `?mode=` list filter without
- * declaring it.
+ * A table with a `mode` column gets the `?mode=` list filter, and a table
+ * with the obsolete lifecycle (an `obsoleteSince` column) the `?current=`
+ * filter, without declaring them.
  *
  * This module is layer-neutral: it holds declarations only, and imports no
  * repo, service, route or drizzle query builder.
@@ -176,13 +177,16 @@ export type OrderKey<Row> =
  *   stored name, a glossary shorthand or the English gloss (case- and
  *   whitespace-insensitive);
  * - `includes`: the view's array field (e.g. a rune build's `decks`)
- *   contains the value.
+ *   contains the value;
+ * - `isNull`: the value `true` keeps the views whose column is null, and
+ *   `false` those whose column isn't.
  */
 export type FilterMatch<Row> =
   | { equals: ColumnOf<Row> }
   | { anyOf: readonly ColumnOf<Row>[] }
   | { sameName: ColumnOf<Row> }
-  | { includes: string };
+  | { includes: string }
+  | { isNull: ColumnOf<Row> };
 
 /** A declared list filter: the query param's schema, and how its value matches a view. */
 export interface ListFilter<Row> {
@@ -201,7 +205,11 @@ export interface AnyListFilter {
   schema: z.ZodType<string>;
   /** How a validated value selects views. */
   match:
-    { equals: string } | { anyOf: readonly string[] } | { sameName: string } | { includes: string };
+    | { equals: string }
+    | { anyOf: readonly string[] }
+    | { sameName: string }
+    | { includes: string }
+    | { isNull: string };
 }
 
 /** Declared list filters of any row shape, by query param name. */
@@ -311,31 +319,48 @@ export interface TableSpec<T extends SQLiteTable = SQLiteTable> {
 const modeFilter = { schema: z.enum(GAME_MODE), match: { equals: "mode" } } as const;
 
 /**
- * A registry entry: the declared spec and its table, plus the derived
- * `mode` filter when the table has a `mode` column.
+ * The `?current=` filter every table with the obsolete lifecycle gets:
+ * `true` keeps the current rows, `false` the obsolete ones.
  */
-type Entry<T extends SQLiteTable, S> = S & { table: T } & ("mode" extends ColumnOf<
-    InferSelectModel<T>
-  >
+const currentFilter = {
+  schema: z.enum(["true", "false"]),
+  match: { isNull: "obsoleteSince" },
+} as const;
+
+/** A column of the rows of `T`. */
+type Columns<T extends SQLiteTable> = ColumnOf<InferSelectModel<T>>;
+
+/**
+ * A registry entry: the declared spec and its table, plus the derived
+ * `mode` filter when the table has a `mode` column and the derived
+ * `current` filter when it has the obsolete lifecycle.
+ */
+type Entry<T extends SQLiteTable, S> = S & { table: T } & ("mode" extends Columns<T>
     ? { filters: { mode: typeof modeFilter } }
-    : unknown);
+    : unknown) &
+  ("obsoleteSince" extends Columns<T> ? { filters: { current: typeof currentFilter } } : unknown);
 
 /**
  * Declares one registry entry, keeping its literal types (the route path
  * above all) for the typed client. A table with a `mode` column gets the
- * `mode` list filter without declaring it.
+ * `mode` list filter, and one with an `obsoleteSince` column the `current`
+ * filter, without declaring them.
  *
  * @param table - the drizzle table
- * @param spec - everything else about it; a `filters.mode` it declares is
- *   replaced by the derived one
+ * @param spec - everything else about it; a `filters.mode` or
+ *   `filters.current` it declares is replaced by the derived one
  * @returns the entry
  */
 function entry<T extends SQLiteTable, const S extends Omit<TableSpec<T>, "table">>(
   table: T,
   spec: S,
 ): Entry<T, S> {
-  const hasMode = (table as unknown as Record<string, unknown>).mode !== undefined;
-  const filters = hasMode ? { ...spec.filters, mode: modeFilter } : spec.filters;
+  const columns = table as unknown as Record<string, unknown>;
+  const derived = {
+    ...(columns.mode !== undefined ? { mode: modeFilter } : {}),
+    ...(columns.obsoleteSince !== undefined ? { current: currentFilter } : {}),
+  };
+  const filters = Object.keys(derived).length > 0 ? { ...spec.filters, ...derived } : spec.filters;
   return { ...spec, table, ...(filters ? { filters } : {}) } as Entry<T, S>;
 }
 

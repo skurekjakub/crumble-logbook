@@ -41,6 +41,10 @@ function matcher<View>(
     return (view) => match.anyOf.some((column) => field(view, column) === value);
   if ("includes" in match)
     return (view) => (field(view, match.includes) as unknown[]).includes(value);
+  if ("isNull" in match) {
+    const wanted = value === "true";
+    return (view) => (field(view, match.isNull) == null) === wanted;
+  }
   if (!resolve) throw new Error(`filter "${name}" matches names and needs the glossary`);
   const key = normalizeName(value);
   const en = resolve(value).en;

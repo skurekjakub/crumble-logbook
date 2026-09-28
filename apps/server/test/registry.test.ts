@@ -1,5 +1,5 @@
 import type { GameMode, SourceSite } from "@crumble/schema";
-import { CITED_ENTITY, OBSOLESCENCE } from "@crumble/schema";
+import { CITED_ENTITY, OBSOLESCENCE, OBSOLETE_ENTITIES } from "@crumble/schema";
 import { getTableConfig } from "drizzle-orm/sqlite-core";
 import type { hc } from "hono/client";
 import { describe, expect, expectTypeOf, it } from "vitest";
@@ -67,6 +67,13 @@ interface FilterCase {
 
 /** The case every derived `?mode=` filter runs. */
 const MODE_CASE: FilterCase = { match: { mode: "arena" }, other: {}, value: "arena" };
+
+/** The case every derived `?current=` filter runs: a current row, and one obsolete since a date. */
+const CURRENT_CASE: FilterCase = {
+  match: {},
+  other: { obsoleteSince: "2026-10-12", obsoleteReason: "r" },
+  value: "true",
+};
 
 /** The case of every declared filter other than `mode`, by table and filter name. */
 const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
@@ -646,6 +653,30 @@ describe("the content-type registry", () => {
     expect(REGISTRY.decks.filters.mode.schema.safeParse("raid").success).toBe(false);
   });
 
+  it("gives every table with an obsolete_since column a ?current= filter on it, and no other table one", () => {
+    for (const key of TABLE_KEYS) {
+      const { table, filters } = specOf(key);
+      const lifecycle = Object.values(getTableConfig(table).columns).some(
+        (c) => c.name === "obsolete_since",
+      );
+      if (lifecycle) expect(filters?.current?.match, key).toEqual({ isNull: "obsoleteSince" });
+      else expect(filters?.current, key).toBeUndefined();
+    }
+    expect(REGISTRY.decks.filters.current.schema.safeParse("true").success).toBe(true);
+    expect(REGISTRY.decks.filters.current.schema.safeParse("yes").success).toBe(false);
+  });
+
+  it("gives the obsolete lifecycle to the tables whose entity OBSOLETE_ENTITIES names, and to no other", () => {
+    const withLifecycle = TABLE_KEYS.filter((key) =>
+      Object.values(getTableConfig(specOf(key).table).columns).some(
+        (c) => c.name === "obsolete_since",
+      ),
+    );
+    expect(withLifecycle.map((key) => specOf(key).entity).sort()).toEqual(
+      [...OBSOLETE_ENTITIES].sort(),
+    );
+  });
+
   it("serves every declared list filter: each one narrows GET <path> to the matching row", async () => {
     const filtered = TABLE_KEYS.filter(
       (key) => specOf(key).path && Object.keys(specOf(key).filters ?? {}).length > 0,
@@ -655,7 +686,9 @@ describe("the content-type registry", () => {
       const seed = SEEDS[key as SeededKey];
       expect(seed, `${key} needs a seed in SEEDS`).toBeDefined();
       for (const name of Object.keys(specOf(key).filters!)) {
-        const probe = FILTER_CASES[key]?.[name] ?? (name === "mode" ? MODE_CASE : undefined);
+        const probe =
+          FILTER_CASES[key]?.[name] ??
+          (name === "mode" ? MODE_CASE : name === "current" ? CURRENT_CASE : undefined);
         expect(probe, `${key}?${name}= needs a case in FILTER_CASES`).toBeDefined();
         const store = testStore();
         const services = createServices(store);
@@ -674,7 +707,7 @@ describe("the content-type registry", () => {
         ).toEqual([wanted]);
       }
     }
-  }, 10_000);
+  }, 30_000);
 
   it("lists tables in foreign-key-safe order: every referenced table comes first", () => {
     const position = new Map(TABLE_KEYS.map((key, index) => [REGISTRY[key].table, index] as const));
