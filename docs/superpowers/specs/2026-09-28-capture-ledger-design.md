@@ -1,7 +1,7 @@
 # Capture ledger and TypeScript scrapers — design
 
-Status: approved in session 2026-09-28. Implementation waits for the refactor lane (audit R1–R8), because the
-import side plugs into R3's pluggable manifest blocks.
+Status: approved in session 2026-09-28; implemented 2026-09-28. The README's Captures section is the user-facing
+guide.
 
 ## Decisions (the user's, 2026-09-28)
 

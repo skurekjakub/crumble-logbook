@@ -6,6 +6,8 @@ Research tool for Cookie Run: Crumble: Guild Conquest (길드 토벌전) and PvP
 
 - Design specs: `docs/superpowers/specs/`. Plans: `docs/superpowers/plans/`.
 - Research records: `research/NNN-slug/`. Evidence captures are never edited after capture; a later measurement is a new numbered file.
+- Every file written under `evidence/` gets a line in the record's capture ledger (`evidence/captures.jsonl`) in the same commit: the TypeScript scrapers (`pnpm capture …`) append it themselves; any other capture uses `pnpm capture log`. Gitignored media gets its line too; the line is committed and the file stays local.
+- `pnpm verify` runs the ledger check (a vitest suite over every record), so a missing line or an edited capture fails the gate.
 
 ## Key directives
 
