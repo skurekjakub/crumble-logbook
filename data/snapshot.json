@@ -68406,6 +68406,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68415,6 +68416,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68424,6 +68426,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68433,6 +68436,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68442,6 +68446,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68451,6 +68456,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "haste_breakpoint",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68460,6 +68466,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68469,6 +68476,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68478,6 +68486,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68487,6 +68496,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "atk_pet",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68496,6 +68506,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68505,6 +68516,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "survival_wipe",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68514,6 +68526,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68523,6 +68536,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68532,6 +68546,7 @@
     "confidence": "low",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68541,6 +68556,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "survival_slam",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68550,6 +68566,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68559,6 +68576,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68568,6 +68586,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": "boss_element",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68577,6 +68596,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": "boss_weakness",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68586,6 +68606,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "boss_score",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68595,6 +68616,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "buff_formula",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68604,6 +68626,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "debuff_formula",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68613,6 +68636,7 @@
     "confidence": "medium",
     "mode": "guild_conquest",
     "topic": "boss_name",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68622,6 +68646,7 @@
     "confidence": "high",
     "mode": "guild_conquest",
     "topic": "filler_levels",
+    "alsoTopics": [],
     "recordSlug": "001-guild-conquest-meta"
    },
    {
@@ -68631,6 +68656,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68640,6 +68666,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68649,6 +68676,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68658,6 +68686,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68667,6 +68696,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68676,6 +68706,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68685,6 +68716,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68694,6 +68726,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68703,6 +68736,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68712,6 +68746,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68721,6 +68756,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68730,6 +68766,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68739,6 +68776,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68748,6 +68786,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68757,6 +68796,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68766,6 +68806,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68775,6 +68816,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68784,6 +68826,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68793,6 +68836,7 @@
     "confidence": "low",
     "mode": "rumble_arena",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68802,6 +68846,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68811,6 +68856,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68820,6 +68866,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68829,6 +68876,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68838,6 +68886,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68847,6 +68896,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68856,6 +68906,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68865,6 +68916,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68874,6 +68926,7 @@
     "confidence": "low",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68883,6 +68936,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68892,6 +68946,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68901,6 +68956,7 @@
     "confidence": "medium",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68910,6 +68966,7 @@
     "confidence": "high",
     "mode": "arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68919,6 +68976,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68928,6 +68986,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68937,6 +68996,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68946,6 +69006,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68955,6 +69016,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68964,6 +69026,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68973,6 +69036,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68982,6 +69046,7 @@
     "confidence": "low",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -68991,6 +69056,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -69000,6 +69066,7 @@
     "confidence": "high",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -69009,6 +69076,7 @@
     "confidence": "medium",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -69018,6 +69086,7 @@
     "confidence": "low",
     "mode": "rumble_arena",
     "topic": null,
+    "alsoTopics": [],
     "recordSlug": "002-pvp-meta"
    },
    {
@@ -69027,6 +69096,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69036,6 +69106,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69045,6 +69116,7 @@
     "confidence": "medium",
     "mode": "stage",
     "topic": "rules",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69054,6 +69126,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "power-gate",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69063,6 +69136,9 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "power-gate",
+    "alsoTopics": [
+     "rift"
+    ],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69072,6 +69148,9 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "power-gate",
+    "alsoTopics": [
+     "rift"
+    ],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69081,6 +69160,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "accuracy-focus",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69090,6 +69170,9 @@
     "confidence": "medium",
     "mode": "stage",
     "topic": "accuracy-focus",
+    "alsoTopics": [
+     "rift"
+    ],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69099,6 +69182,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "easing",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69108,6 +69192,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "zones",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69117,6 +69202,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "bosses",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69126,6 +69212,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "bosses",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69135,6 +69222,7 @@
     "confidence": "medium",
     "mode": "stage",
     "topic": "bosses",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69144,6 +69232,7 @@
     "confidence": "medium",
     "mode": "stage",
     "topic": "brackets-practice",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69153,6 +69242,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "brackets-practice",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69162,6 +69252,7 @@
     "confidence": "medium",
     "mode": "stage",
     "topic": "idle",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69171,6 +69262,7 @@
     "confidence": "high",
     "mode": "stage",
     "topic": "rift",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69180,6 +69272,7 @@
     "confidence": "medium",
     "mode": "stage",
     "topic": "rift",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    },
    {
@@ -69189,6 +69282,7 @@
     "confidence": "medium",
     "mode": "stage",
     "topic": "rift",
+    "alsoTopics": [],
     "recordSlug": "003-stage-pushing-meta"
    }
   ],

@@ -162,7 +162,7 @@ const BUFF_VALUES = [
 function mechanic(
   m: Pick<Mechanic, "id" | "title" | "body" | "confidence" | "topic"> & Partial<Mechanic>,
 ): Mechanic {
-  return { mode: "guild_conquest", recordSlug: null, sources: [], ...m };
+  return { mode: "guild_conquest", recordSlug: null, sources: [], alsoTopics: [], ...m };
 }
 
 /** Titles here deliberately don't name what the screen shows them as: the view selects by topic. */

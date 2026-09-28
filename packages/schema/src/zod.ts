@@ -151,10 +151,12 @@ export const rankingSelect = createSelectSchema(t.rankings);
 /** A row selected from `rankings`. */
 export type RankingRow = typeof t.rankings.$inferSelect;
 
-/** Insert schema for `mechanics`. */
-export const mechanicInsert = createInsertSchema(t.mechanics);
-/** Select schema for `mechanics`, mirroring the stored row shape. */
-export const mechanicSelect = createSelectSchema(t.mechanics);
+/** Insert schema for `mechanics`. `alsoTopics`, when given, is a list of non-empty topics. */
+export const mechanicInsert = createInsertSchema(t.mechanics, {
+  alsoTopics: () => nameList.optional(),
+});
+/** Select schema for `mechanics`, with `alsoTopics` typed precisely. */
+export const mechanicSelect = createSelectSchema(t.mechanics, { alsoTopics: () => nameList });
 /** A row selected from `mechanics`. */
 export type MechanicRow = typeof t.mechanics.$inferSelect;
 

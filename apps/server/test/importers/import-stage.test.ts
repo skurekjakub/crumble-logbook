@@ -147,6 +147,10 @@ describe("importRecord on research record 003", FULL_IMPORT, () => {
     expect(services.stageZoneSlots.list().map((s) => s.deckId)).toEqual(
       slots.map((s) => s.deck ?? null),
     );
+    const alsoRift = services.mechanics.list().filter((m) => m.alsoTopics.includes("rift"));
+    expect(new Set(alsoRift.map((m) => m.topic))).toEqual(
+      new Set(["power-gate", "accuracy-focus"]),
+    );
     const pack = services.stageClears.list().find((c) => c.bossKr === "케이크 들개떼");
     expect(pack?.bossEn).toBe("Cake Hound Pack");
     expect(services.riftUnlocks.list()).toMatchObject([

@@ -48,7 +48,10 @@ export interface SectionTab {
 export interface ViewCopy {
   title: string;
   lede: string;
-  /** The mechanics topic whose cited rows the view shows under its lede, when it has one. */
+  /**
+   * The mechanics topic whose cited rows the view shows under its lede,
+   * when it has one: rows filed under it, or under it among their `alsoTopics`.
+   */
   topic?: string;
 }
 
@@ -213,7 +216,11 @@ export interface StageConfig {
 export interface RiftConfig extends ViewCopy {
   /** The ids of the decks played in the Rift. */
   decks: readonly string[];
-  /** A takeaway, timeline event, RNG factor or rune build mentioning any of these is about the Rift. */
+  /**
+   * A finding whose text mentions any of these is about the Rift, for the
+   * record's rows that carry no topic (see `RiftFindings`); a mechanic is
+   * about the Rift when it is filed under the Rift's topic.
+   */
   mentions: readonly string[];
 }
 

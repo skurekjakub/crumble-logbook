@@ -44,6 +44,7 @@ export interface MappedMechanic {
     confidence: Confidence;
     mode: GameMode;
     topic: string | null;
+    alsoTopics: string[];
   };
   sources: string[];
 }
@@ -281,8 +282,15 @@ export function mapMeta(meta: SeedMeta, record: ManifestRecord): MappedMeta {
       sources: meta.you.sources,
     },
     rules: blocks.flatMap(({ mode, block }) =>
-      block.rules.map(({ sources, topic, title, body, confidence }) => ({
-        values: { title, body, confidence, mode, topic: topic ?? "rules" },
+      block.rules.map(({ sources, topic, also_topics: alsoTopics, title, body, confidence }) => ({
+        values: {
+          title,
+          body,
+          confidence,
+          mode,
+          topic: topic ?? "rules",
+          alsoTopics: alsoTopics ?? [],
+        },
         sources,
       })),
     ),

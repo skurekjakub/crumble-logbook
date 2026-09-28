@@ -5,6 +5,8 @@ import { modeColumn, recordSlugColumn } from "./columns";
 /**
  * A game mechanic writeup with an assigned confidence level. `topic` groups
  * writeups of one kind, e.g. `rules` for a mode's rules; `null` for none.
+ * `alsoTopics` files it under further topics it bears on, e.g. a power-gate
+ * point that holds in the Rift too.
  */
 export const mechanics = sqliteTable("mechanics", {
   id: integer("id").primaryKey({ autoIncrement: true }),
@@ -13,6 +15,7 @@ export const mechanics = sqliteTable("mechanics", {
   confidence: text("confidence", { enum: CONFIDENCE }).notNull(),
   mode: modeColumn(),
   topic: text("topic"),
+  alsoTopics: text("also_topics", { mode: "json" }).$type<string[]>().notNull().default([]),
   recordSlug: recordSlugColumn(),
 });
 

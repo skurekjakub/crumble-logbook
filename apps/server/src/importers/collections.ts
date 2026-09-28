@@ -262,7 +262,10 @@ export const COLLECTIONS = {
   mechanics: citedRows(
     "mechanics",
     modedRows(seedMechanic),
-    ({ sources: _sources, ...values }) => values,
+    ({ sources: _sources, also_topics: alsoTopics, ...values }) => ({
+      ...values,
+      alsoTopics: alsoTopics ?? [],
+    }),
   ),
   rng: citedRows("rngFactors", modedRows(seedRng), (factor) => ({
     factor: factor.factor,

@@ -1,0 +1,1 @@
+ALTER TABLE `mechanics` ADD `also_topics` text DEFAULT '[]' NOT NULL;

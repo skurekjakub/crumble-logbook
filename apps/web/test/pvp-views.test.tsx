@@ -199,6 +199,7 @@ function rule(id: number, mode: Mechanic["mode"], title: string, body: string): 
     confidence: "high",
     mode,
     topic: "rules",
+    alsoTopics: [],
     recordSlug: SLUG,
     sources: ["dc:75148"],
   };
@@ -228,6 +229,7 @@ const MECHANICS = [
     confidence: "medium",
     mode: "arena",
     topic: null,
+    alsoTopics: [],
     recordSlug: SLUG,
     sources: ["dc:75148"],
   },

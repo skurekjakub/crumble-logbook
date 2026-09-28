@@ -7,11 +7,7 @@ import {
   riftLevelsQuery,
   riftSeasonsQuery,
   riftUnlocksQuery,
-  rngFactorsQuery,
-  runeBuildsQuery,
   stageChaptersQuery,
-  takeawaysQuery,
-  timelineQuery,
 } from "../api/queries";
 import type {
   PowerBracket,
@@ -21,7 +17,7 @@ import type {
   RiftUnlock,
   StageChapter,
 } from "../api/types";
-import type { ModeSection, RiftConfig, StageConfig } from "../app/modes";
+import type { ModeSection, StageConfig } from "../app/modes";
 import { CookieName } from "../components/CookieName";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
@@ -37,13 +33,13 @@ import {
   bracketAt,
   entryPower,
   formatPower,
-  mentionsAny,
   nextBracket,
   parsePower,
   seasonAt,
 } from "../lib/stage";
 import { DeckCard } from "./DeckCard";
 import { CopyHeader } from "./ModeViewHeader";
+import { RiftFindings } from "./RiftFindings";
 import type { PowerSearch } from "./StageBracketsView";
 import { validatePowerSearch } from "./StageBracketsView";
 
@@ -319,88 +315,6 @@ function Levels({
 }
 
 /**
- * The record's other findings about the Rift: takeaways, dated events, RNG
- * factors and rune lines whose text mentions it, each with its sources.
- *
- * @param props - the stage mode, the Rift config and the source index
- * @returns the card, or null when none mention the Rift
- */
-function Findings({
-  mode,
-  rift,
-  sources,
-}: {
-  mode: ModeSection;
-  rift: RiftConfig;
-  sources: SourceIndex;
-}) {
-  /**
-   * Tells whether a row's text mentions the Rift.
-   *
-   * @param text - a row's text
-   * @returns `true` if the row is about the Rift
-   */
-  const about = (text: string) => mentionsAny(text, rift.mentions);
-  const takeaways = useQuery(takeawaysQuery(mode.scope)).data ?? [];
-  const timeline = useQuery(timelineQuery(mode.scope)).data ?? [];
-  const rng = useQuery(rngFactorsQuery(mode.scope)).data ?? [];
-  const runes = useQuery(runeBuildsQuery(mode.scope)).data ?? [];
-  const items = [
-    ...takeaways
-      .filter((t) => about(`${t.text} ${t.detail ?? ""}`))
-      .map((t) => ({
-        key: `t${t.id}`,
-        label: "Finding",
-        text: t.text,
-        detail: t.detail,
-        sources: t.sources,
-      })),
-    ...timeline
-      .filter((e) => about(e.event))
-      .map((e) => ({
-        key: `e${e.id}`,
-        label: e.date,
-        text: e.event,
-        detail: null,
-        sources: e.sources,
-      })),
-    ...rng
-      .filter((f) => about(`${f.factor} ${f.effect} ${f.mitigation ?? ""}`))
-      .map((f) => ({
-        key: `r${f.id}`,
-        label: "Luck",
-        text: `${f.factor}: ${f.effect}`,
-        detail: f.mitigation,
-        sources: f.sources,
-      })),
-    ...runes
-      .filter((r) => about(`${r.lines} ${r.why}`) || r.decks.some((d) => rift.decks.includes(d)))
-      .map((r) => ({
-        key: `u${r.id}`,
-        label: `Runes: ${r.en ?? r.cookieKr}`,
-        text: r.lines,
-        detail: r.why,
-        sources: r.sources,
-      })),
-  ];
-  if (!items.length) return null;
-  return (
-    <section className="card" id={PARTS.findings}>
-      <h3>Elsewhere in the record</h3>
-      <ul className="clean rift-findings">
-        {items.map((item) => (
-          <li key={item.key}>
-            <span className="label">{item.label}</span> {item.text}
-            {item.detail ? <div className="muted">{item.detail}</div> : null}
-            <SourceChips ids={item.sources} sources={sources} />
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
-/**
  * The Dimensional Rift page: the Rift's rules and caveats (the copy's
  * mechanics topic), where it opens, its seasons, every level of the chosen
  * season with its bracket entry powers, the reported boss and, with a
@@ -510,7 +424,7 @@ export function RiftView({ mode, stage, search, onSearch, now = new Date() }: Ri
             }
           </QueryResult>
         </section>
-        <Findings mode={mode} rift={stage.rift} sources={sources} />
+        <RiftFindings mode={mode} rift={stage.rift} sources={sources} id={PARTS.findings} />
       </TocLayout>
     </>
   );

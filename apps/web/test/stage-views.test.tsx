@@ -2,7 +2,9 @@ import { cleanup, fireEvent, screen, waitFor, within } from "@testing-library/re
 import { describe, expect, it } from "vitest";
 import type {
   Deck,
+  Mechanic,
   PowerBracket,
+  Recommendation,
   ResearchRecord,
   RiftBoss,
   RiftLevel,
@@ -455,6 +457,73 @@ describe("the Dimensional Rift page", () => {
     await waitFor(() => expect(bodyRows(levels)).toHaveLength(1));
     expect(bodyRows(levels)[0]![0]).toBe("3");
     expect(bodyRows(levels)[0]).toContain("5%15% at 6G");
+  });
+
+  it("gathers the Rift facts the record keeps elsewhere: mechanics filed under the Rift too, account advice, clear notes and other decks' whys", async () => {
+    /**
+     * Builds a stage mechanic.
+     *
+     * @param id - its id
+     * @param topic - the topic it is filed under
+     * @param alsoTopics - further topics it is filed under
+     * @param body - its text
+     * @returns the mechanic
+     */
+    const mechanic = (id: number, topic: string, alsoTopics: string[], body: string) =>
+      ({
+        id,
+        title: `m${id}`,
+        body,
+        confidence: "high",
+        mode: "stage",
+        topic,
+        alsoTopics,
+        recordSlug: SLUG,
+        sources: ["dc:76835"],
+      }) satisfies Mechanic;
+    const charge = DECKS[0]!;
+    const api: Record<string, Canned> = {
+      ...API,
+      "/api/mechanics?mode=stage": {
+        body: [
+          mechanic(1, "rift", [], "Rift rules: boss-only."),
+          mechanic(2, "accuracy-focus", ["rift"], "In the Rift, every miss costs more."),
+          mechanic(3, "power-gate", [], "The table also gates the daily dungeons and the Rift."),
+        ],
+      },
+      [`/api/recommendations?record=${SLUG}`]: {
+        body: [
+          {
+            id: 1,
+            summary: "Push at 35%.",
+            changes: ["Reach 328-30 early: the Rift's 차원의 힘 compounds.", "Pad power."],
+            recordSlug: SLUG,
+            sources: ["dc:76835"],
+          },
+        ] satisfies Recommendation[],
+      },
+      "/api/stage-clears": { body: [{ ...CLEARS[0]!, note: "Entered the Rift after." }] },
+      "/api/decks?mode=stage": {
+        body: [
+          {
+            ...charge,
+            cookies: [...charge.cookies, { ...charge.cookies[0]!, id: 2, why: "His Rift deck." }],
+          },
+          DECKS[1]!,
+        ],
+      },
+    };
+    await renderRoute("/stage/rift", api, { mode: STAGE });
+    expect(await screen.findByText("In the Rift, every miss costs more.")).toBeVisible();
+    expect(screen.queryByText("The table also gates the daily dungeons and the Rift.")).toBeNull();
+    const findings = (
+      await screen.findByRole("heading", { name: "Elsewhere in the record" })
+    ).closest("section")!;
+    await waitFor(() => expect(findings).toHaveTextContent("the Rift's 차원의 힘 compounds"));
+    expect(findings).not.toHaveTextContent("Pad power.");
+    await waitFor(() => expect(findings).toHaveTextContent("Clear 328-30 Entered the Rift after."));
+    expect(findings).toHaveTextContent("Deck: Charge deck Scorpion Cookie: His Rift deck.");
+    expect(findings).not.toHaveTextContent("Deck: Rift shred deck");
   });
 
   it("shows the Rift decks with their cookies and the record's other Rift findings", async () => {

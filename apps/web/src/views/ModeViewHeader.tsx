@@ -9,8 +9,9 @@ import { SourceChips } from "../components/SourceChips";
 import { ViewHeader } from "../components/ViewHeader";
 
 /**
- * The mode's mechanics filed under `topic`, each as a note with its body,
- * confidence and sources; nothing when none are filed under it.
+ * The mode's mechanics filed under `topic`, as their topic or one of their
+ * further topics (`alsoTopics`), each as a note with its body, confidence
+ * and sources; nothing when none are filed under it.
  *
  * @param props - the mode's scope and the mechanics topic
  * @returns the notes, inside the mechanics query's loading and error states
@@ -22,7 +23,7 @@ export function TopicNotes({ scope, topic }: { scope: ModeScope; topic: string }
     <QueryResult query={mechanics} resource="mechanics">
       {(rows) =>
         rows
-          .filter((m) => m.topic === topic)
+          .filter((m) => m.topic === topic || m.alsoTopics.includes(topic))
           .map((m) => (
             <div key={m.id} className="note">
               {m.body} <ConfidencePill confidence={m.confidence} />{" "}

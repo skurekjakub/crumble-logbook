@@ -125,10 +125,14 @@ export const seedScore = z.strictObject({
 /** Output of {@link seedScore}. */
 export type SeedScore = z.output<typeof seedScore>;
 
-/** One entry of `mechanics.json`, or one rule of `meta.json`'s `modes`. */
+/**
+ * One entry of `mechanics.json`, or one rule of `meta.json`'s `modes`.
+ * `also_topics` files it under further topics it bears on.
+ */
 export const seedMechanic = z.strictObject({
   mode,
   topic: z.string().min(1).optional(),
+  also_topics: z.array(z.string().min(1)).optional(),
   title: z.string().min(1),
   body: z.string().min(1),
   confidence: z.enum(CONFIDENCE),
