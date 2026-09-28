@@ -17,6 +17,8 @@ import { appendFileSync, existsSync, readdirSync, readFileSync, statSync } from 
 import { extname, join, relative, sep } from "node:path";
 import type { CaptureApprox, CaptureLine } from "@crumble/schema";
 import { captureLine } from "@crumble/schema";
+import { HashCache } from "./hash-cache";
+import { REPO_ROOT } from "./paths";
 
 /** The ledger's path, relative to the record folder. */
 export const LEDGER_FILE = "evidence/captures.jsonl";
@@ -151,33 +153,32 @@ export function matchesHash(file: string, sha256: string): boolean {
   return fileHashes(file).includes(sha256);
 }
 
-/** A file's hashes as last computed, with the size and mtime they were computed at. */
-interface HashedFile {
-  size: number;
-  mtimeMs: number;
-  hashes: readonly string[];
-}
-
 /**
- * Hashes already computed in this process, by absolute path. An import
- * verifies a record's whole ledger, and a process (a test run above all)
- * may import the same record many times.
+ * The hash cache every verification shares. Its file sits under the
+ * checkout's gitignored `node_modules/.cache/`, and keeps the hashes of
+ * files inside the checkout: every process that verifies a record (each
+ * test worker, each import, `pnpm capture verify`) rehashes only the files
+ * whose size or mtime changed since one of them last did.
  */
-const HASHED = new Map<string, HashedFile>();
+export const HASH_CACHE = new HashCache(
+  join(REPO_ROOT, "node_modules", ".cache", "crumble-capture", "hashes.json"),
+  REPO_ROOT,
+);
 
 /**
  * Computes the hashes {@link matchesHash} accepts for a file: its bytes',
- * and for a text file holding CRLF, its LF form's. Reuses the last result
- * while the file's size and mtime are unchanged.
+ * and for a text file holding CRLF, its LF form's. Reuses a cached result
+ * while the file's size and mtime are the ones it was computed at.
  *
  * @param file - absolute path of the file
+ * @param cache - the cache to read and fill
  * @returns one or two lowercase hex SHA-256 digests
  * @throws if the file can't be read
  */
-function fileHashes(file: string): readonly string[] {
+export function fileHashes(file: string, cache: HashCache = HASH_CACHE): readonly string[] {
   const { size, mtimeMs } = statSync(file);
-  const known = HASHED.get(file);
-  if (known?.size === size && known.mtimeMs === mtimeMs) return known.hashes;
+  const known = cache.lookup(file, size, mtimeMs);
+  if (known) return known;
   const bytes = readFileSync(file);
   const hashes = [createHash("sha256").update(bytes).digest("hex")];
   if (!isMedia(file) && !bytes.includes(0)) {
@@ -187,7 +188,7 @@ function fileHashes(file: string): readonly string[] {
       hashes.push(createHash("sha256").update(lf).digest("hex"));
     }
   }
-  HASHED.set(file, { size, mtimeMs, hashes });
+  cache.store(file, { size, mtimeMs, hashes });
   return hashes;
 }
 
@@ -311,13 +312,15 @@ export function toLine(path: string, sha256: string, meta: CaptureMeta): Capture
  * disk has exactly one line, every line's file exists (a missing media
  * file is allowed: media stays on the machine that captured it), and every
  * present file's bytes match its line's hash (see {@link matchesHash}). A
- * path with several lines is hashed against its last.
+ * path with several lines is hashed against its last. The hashes computed
+ * go into the cache, and the cache is saved before returning.
  *
  * @param recordDir - absolute path of the record folder
+ * @param cache - the hash cache to read, fill and save
  * @returns every problem found, in path order; `[]` when the ledger holds
  * @throws {LedgerError} if the ledger can't be read (see {@link readLedger})
  */
-export function verifyLedger(recordDir: string): LedgerProblem[] {
+export function verifyLedger(recordDir: string, cache: HashCache = HASH_CACHE): LedgerProblem[] {
   const entries = readLedger(recordDir);
   const problems: LedgerProblem[] = [];
   const last = new Map<string, LedgerEntry>();
@@ -335,8 +338,11 @@ export function verifyLedger(recordDir: string): LedgerProblem[] {
       if (!isMedia(path)) problems.push({ kind: "missing-file", path, lineNo });
       continue;
     }
-    if (!matchesHash(full, line.sha256)) problems.push({ kind: "hash-mismatch", path, lineNo });
+    if (!fileHashes(full, cache).includes(line.sha256)) {
+      problems.push({ kind: "hash-mismatch", path, lineNo });
+    }
   }
+  cache.save();
   return problems.sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
 }
 

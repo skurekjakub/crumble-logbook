@@ -24,5 +24,8 @@ export function findRepoRoot(start: string): string {
   }
 }
 
+/** Absolute path of the checkout this package lives in. */
+export const REPO_ROOT = findRepoRoot(dirname(fileURLToPath(import.meta.url)));
+
 /** Absolute path of the repo's `research/` folder. */
-export const researchDir = join(findRepoRoot(dirname(fileURLToPath(import.meta.url))), "research");
+export const researchDir = join(REPO_ROOT, "research");

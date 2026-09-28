@@ -19,8 +19,13 @@ const CONQUEST = "001-guild-conquest-meta";
 const PVP = "002-pvp-meta";
 const conquestDir = join(repoRoot, "research", CONQUEST);
 const pvpDir = join(repoRoot, "research", PVP);
-/** Each test imports whole records, several times over; seconds, not milliseconds, under a busy suite. */
-const FULL_IMPORT = { timeout: 30_000 };
+/**
+ * Each test imports whole records, several times over, and an import
+ * verifies the record's capture ledger: with a cold hash cache that reads
+ * and hashes every present evidence file, local media included, while
+ * other test workers do the same.
+ */
+const FULL_IMPORT = { timeout: 180_000 };
 
 /**
  * Reads a curated file of record 002, parsed, with a test-asserted shape.
@@ -433,7 +438,7 @@ function loggingWrites(store: Store): { store: Store; order: TableKey[] } {
   };
 }
 
-describe("write order", () => {
+describe("write order", FULL_IMPORT, () => {
   it("writes every table after the tables its foreign keys reference", () => {
     const { store, order } = loggingWrites(testStore());
     importRecord(store, conquestDir);

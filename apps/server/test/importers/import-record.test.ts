@@ -19,6 +19,12 @@ import { exportSnapshot } from "../../src/services/export";
 import { testStore } from "../helpers";
 
 const recordDir = join(repoRoot, "research", "001-guild-conquest-meta");
+/**
+ * Importing record 001 verifies its capture ledger, which with a cold hash
+ * cache reads and hashes every present evidence file, local media included,
+ * while other test workers do the same.
+ */
+const WHOLE_RECORD = { timeout: 180_000 };
 
 /**
  * Reads a curated file of record 001, parsed, with a test-asserted shape.
@@ -159,7 +165,7 @@ function tableCounts(store: Store): Record<string, number> {
   );
 }
 
-describe("importRecord on research record 001", () => {
+describe("importRecord on research record 001", WHOLE_RECORD, () => {
   it("loads every curated row, ranking and citation", () => {
     const store = testStore();
     const { counts } = importRecord(store, recordDir);
@@ -299,7 +305,7 @@ describe("importRecord on research record 001", () => {
   });
 });
 
-describe("importRecord guards", () => {
+describe("importRecord guards", WHOLE_RECORD, () => {
   it("refuses a second import without replace and leaves the database unchanged", () => {
     const store = testStore();
     importRecord(store, recordDir);
@@ -735,7 +741,7 @@ describe("importRecord validation", () => {
   });
 });
 
-describe("importRecord rollback", () => {
+describe("importRecord rollback", WHOLE_RECORD, () => {
   /**
    * Wraps `store` so every transaction's buff-value inserts throw, the last
    * write of a record 001 import: the replace has cleared every table and

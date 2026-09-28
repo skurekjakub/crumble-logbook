@@ -16,11 +16,13 @@ import { readJson, testStore } from "./helpers";
 let store: Store;
 let app: ReturnType<typeof createApp>;
 
+// The import verifies record 001's capture ledger: with a cold hash cache, every present
+// evidence file, local media included, is read and hashed while other test workers do the same.
 beforeAll(() => {
   store = testStore();
   importRecord(store, join(repoRoot, "research", "001-guild-conquest-meta"));
   app = createApp(createServices(store));
-});
+}, 180_000);
 
 describe("the API over imported record 001", () => {
   it("serves the decks with cherry first, every cookie carrying a level or rule and a why", async () => {
