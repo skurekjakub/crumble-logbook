@@ -5,9 +5,11 @@ import type { GameMode } from "../src/api/queries";
 import {
   countersQuery,
   decksQuery,
+  gearRecsQuery,
   mechanicsQuery,
   recommendationsQuery,
   rulesQuery,
+  runeBuildsQuery,
   scoresQuery,
   sourcesQuery,
   usageQuery,
@@ -238,6 +240,21 @@ describe("mode-scoped queries", () => {
     expect(await get(usageQuery(RUMBLE.scope))).toBe("/api/usage?mode=rumble_arena");
     expect(await get(rulesQuery(RUMBLE.scope))).toBe(
       "/api/mechanics?mode=rumble_arena&topic=rules",
+    );
+    expect(await get(decksQuery(CONQUEST.scope, { current: true }))).toBe(
+      "/api/decks?mode=guild_conquest&current=true",
+    );
+    expect(await get(runeBuildsQuery(CONQUEST.scope, undefined, { current: true }))).toBe(
+      "/api/rune-builds?mode=guild_conquest&current=true",
+    );
+    expect(await get(gearRecsQuery(ARENA.scope, { current: true }))).toBe(
+      "/api/gear-recs?mode=arena&current=true",
+    );
+    expect(await get(countersQuery(ARENA.scope, { current: true }))).toBe(
+      "/api/counters?mode=arena&current=true",
+    );
+    expect(decksQuery(ARENA.scope).queryKey).not.toEqual(
+      decksQuery(ARENA.scope, { current: true }).queryKey,
     );
   });
 

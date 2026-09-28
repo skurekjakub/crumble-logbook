@@ -1,0 +1,23 @@
+/* The obsolete lifecycle: the collapsed section that ends a list page, and
+   the notice that heads an obsolete item. Colours come from tokens.css only. */
+details.obsolete {
+  margin-top: var(--sp-5);
+  border-top: 1px solid var(--line);
+  padding-top: var(--sp-3);
+}
+details.obsolete > summary {
+  cursor: pointer;
+  width: fit-content;
+}
+details.obsolete .obsolete-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+.obsolete-notice {
+  border-left: 3px solid var(--warn);
+  padding: 2px 0 2px var(--sp-3);
+  color: var(--ink-2);
+  font-size: var(--fs-s);
+}

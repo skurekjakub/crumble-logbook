@@ -55,6 +55,23 @@ function scopeKey(scope: ModeScope | undefined) {
   return { mode: scope?.mode ?? null };
 }
 
+/** Options of a list whose rows carry the obsolete lifecycle. */
+export interface LifecycleOptions {
+  /** Asks for the current rows only (`?current=true`); every row otherwise. */
+  current?: boolean;
+}
+
+/**
+ * Builds a list query key's lifecycle part, so a list of current rows is
+ * cached apart from the full list.
+ *
+ * @param options - the list's lifecycle options
+ * @returns `{ current: true }` for a list of current rows; `{}` for every row
+ */
+function lifecycleKey(options: LifecycleOptions) {
+  return options.current ? { current: true } : {};
+}
+
 /**
  * All research records, by slug.
  *
@@ -121,12 +138,18 @@ export const glossaryQuery = (kind?: GlossaryKindFilter) =>
  * Decks in display order, with cookies, pets and ATK order resolved to English.
  *
  * @param scope - the mode to list, when given
+ * @param options - `current: true` asks for the current rows only
  * @returns the query options
  */
-export const decksQuery = (scope?: ModeScope) =>
+export const decksQuery = (scope?: ModeScope, options: LifecycleOptions = {}) =>
   queryOptions({
-    queryKey: ["decks", scopeKey(scope)],
-    queryFn: () => parseResponse(api.decks.$get({ query: { mode: scope?.mode } })),
+    queryKey: ["decks", { ...scopeKey(scope), ...lifecycleKey(options) }],
+    queryFn: () =>
+      parseResponse(
+        api.decks.$get({
+          query: { mode: scope?.mode, current: options.current ? "true" : undefined },
+        }),
+      ),
   });
 
 /**
@@ -160,24 +183,36 @@ export const scoresQuery = (scope?: ModeScope, deck?: string) =>
  *
  * @param scope - the mode to list, when given
  * @param deck - restrict to builds linked to one deck's slug
+ * @param options - `current: true` asks for the current rows only
  * @returns the query options
  */
-export const runeBuildsQuery = (scope?: ModeScope, deck?: string) =>
+export const runeBuildsQuery = (scope?: ModeScope, deck?: string, options: LifecycleOptions = {}) =>
   queryOptions({
-    queryKey: ["rune-builds", { ...scopeKey(scope), deck: deck ?? null }],
-    queryFn: () => parseResponse(api["rune-builds"].$get({ query: { mode: scope?.mode, deck } })),
+    queryKey: ["rune-builds", { ...scopeKey(scope), deck: deck ?? null, ...lifecycleKey(options) }],
+    queryFn: () =>
+      parseResponse(
+        api["rune-builds"].$get({
+          query: { mode: scope?.mode, deck, current: options.current ? "true" : undefined },
+        }),
+      ),
   });
 
 /**
  * Gear substat recommendations.
  *
  * @param scope - the mode to list, when given
+ * @param options - `current: true` asks for the current rows only
  * @returns the query options
  */
-export const gearRecsQuery = (scope?: ModeScope) =>
+export const gearRecsQuery = (scope?: ModeScope, options: LifecycleOptions = {}) =>
   queryOptions({
-    queryKey: ["gear-recs", scopeKey(scope)],
-    queryFn: () => parseResponse(api["gear-recs"].$get({ query: { mode: scope?.mode } })),
+    queryKey: ["gear-recs", { ...scopeKey(scope), ...lifecycleKey(options) }],
+    queryFn: () =>
+      parseResponse(
+        api["gear-recs"].$get({
+          query: { mode: scope?.mode, current: options.current ? "true" : undefined },
+        }),
+      ),
   });
 
 /**
@@ -238,12 +273,18 @@ export const rulesQuery = (scope: ModeScope) =>
  * what conditions, why, and how confidently.
  *
  * @param scope - the mode to list, when given
+ * @param options - `current: true` asks for the current rows only
  * @returns the query options
  */
-export const countersQuery = (scope?: ModeScope) =>
+export const countersQuery = (scope?: ModeScope, options: LifecycleOptions = {}) =>
   queryOptions({
-    queryKey: ["counters", scopeKey(scope)],
-    queryFn: () => parseResponse(api.counters.$get({ query: { mode: scope?.mode } })),
+    queryKey: ["counters", { ...scopeKey(scope), ...lifecycleKey(options) }],
+    queryFn: () =>
+      parseResponse(
+        api.counters.$get({
+          query: { mode: scope?.mode, current: options.current ? "true" : undefined },
+        }),
+      ),
   });
 
 /**

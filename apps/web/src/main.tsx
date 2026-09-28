@@ -11,6 +11,7 @@ import "./styles/boss.css";
 import "./styles/pvp.css";
 import "./styles/stage.css";
 import "./styles/dungeon.css";
+import "./styles/obsolete.css";
 import "./styles/team-power.css";
 
 const queryClient = new QueryClient({
