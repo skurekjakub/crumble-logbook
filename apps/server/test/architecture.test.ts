@@ -31,7 +31,12 @@ interface Rule {
 /** The source roots the rules cover, repo-relative. */
 const ROOTS = ["apps/server/src", "apps/web/src", "packages/schema/src"];
 
-/** Lists every `.ts`/`.tsx` file under `dir`, repo-relative with forward slashes. */
+/**
+ * Lists every `.ts`/`.tsx` file under `dir`, repo-relative with forward slashes.
+ *
+ * @param dir - the directory, repo-relative
+ * @returns the files' paths
+ */
 function sourceFiles(dir: string): string[] {
   return readdirSync(join(repoRoot, dir), { withFileTypes: true, recursive: true })
     .filter((entry) => entry.isFile() && /\.tsx?$/.test(entry.name))
@@ -81,10 +86,22 @@ function importsOf(file: string): ImportEdge[] {
   return edges;
 }
 
-/** Whether `path` is `dir` or lies under it. */
+/**
+ * Reports whether `path` is `dir` or lies under it.
+ *
+ * @param path - a repo-relative path
+ * @param dir - a repo-relative directory
+ * @returns `true` if `path` is `dir` or inside it
+ */
 const under = (path: string, dir: string) => path === dir || path.startsWith(`${dir}/`);
 
-/** Whether `specifier` is `pkg` or one of its subpaths. */
+/**
+ * Reports whether `specifier` is `pkg` or one of its subpaths.
+ *
+ * @param specifier - an import specifier
+ * @param pkg - a package name
+ * @returns `true` if `specifier` imports from `pkg`
+ */
 const isPackage = (specifier: string, pkg: string) =>
   specifier === pkg || specifier.startsWith(`${pkg}/`);
 

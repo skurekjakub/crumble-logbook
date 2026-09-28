@@ -40,6 +40,7 @@ type SeededKey =
 
 /**
  * Creates one valid row of a type, with `over` applied on top.
+ *
  * @returns the view field that identifies the row, and its value
  */
 type Seed = (store: Store, services: Services, over: Record<string, unknown>) => [string, unknown];
@@ -80,7 +81,12 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
 
 let serial = 0;
 
-/** Creates the decks `d1`–`d3` that seeds reference, once per store. */
+/**
+ * Creates the decks `d1`–`d3` that seeds reference, once per store.
+ *
+ * @param store - the store to check for existing decks
+ * @param services - the services to create the decks through
+ */
 function ensureDecks(store: Store, services: Services): void {
   cite(store);
   for (const id of ["d1", "d2", "d3"]) {
@@ -92,6 +98,9 @@ function ensureDecks(store: Store, services: Services): void {
 /**
  * Creates two decks of `mode`, for a row that must name decks of its own
  * mode (a counter edge).
+ *
+ * @param services - the services to create the decks through
+ * @param mode - the decks' game mode
  * @returns the two decks' ids
  */
 function modeDecks(services: Services, mode: GameMode): [string, string] {
@@ -100,7 +109,12 @@ function modeDecks(services: Services, mode: GameMode): [string, string] {
   return ids;
 }
 
-/** A source every seeded row cites, added once per store. */
+/**
+ * Adds the source every seeded row cites, once per store.
+ *
+ * @param store - the store to add it to
+ * @returns the source ids to cite
+ */
 function cite(store: Store): string[] {
   if (store.repos.sources.missing(["dc:1"]).length > 0) addSource(store, "dc:1");
   return ["dc:1"];
@@ -252,7 +266,11 @@ const SEEDS: Record<SeededKey, Seed> = {
   },
 };
 
-/** The routes the app serves, as `METHOD /path`. */
+/**
+ * Lists the routes the app serves.
+ *
+ * @returns each route as `METHOD /path`
+ */
 function mountedRoutes(): Set<string> {
   const app = createApp(createServices(testStore()));
   return new Set(app.routes.map((route) => `${route.method} ${route.path}`));

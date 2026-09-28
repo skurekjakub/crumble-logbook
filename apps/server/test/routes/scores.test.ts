@@ -7,7 +7,11 @@ import type { Store } from "../../src/repos";
 import { createServices } from "../../src/services";
 import { addSource, jsonBody, readJson } from "../helpers";
 
-/** A fresh app over its own in-memory store, with a `cherry` deck already inserted. */
+/**
+ * Builds a fresh app over its own in-memory store, with a `cherry` deck already inserted.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const db = openDb(":memory:");
   const store: Store = createStore(db);

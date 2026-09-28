@@ -3,7 +3,11 @@ import { createApp } from "../../src/app";
 import { createServices } from "../../src/services";
 import { readJson, testStore } from "../helpers";
 
-/** A fresh app over its own in-memory store, with a source rankings can cite. */
+/**
+ * Builds a fresh app over its own in-memory store, with a source rankings can cite.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   store.repos.sources.insert({

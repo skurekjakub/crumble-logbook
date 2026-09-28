@@ -3,7 +3,11 @@ import { createApp } from "../../src/app";
 import { createServices } from "../../src/services";
 import { jsonBody, readJson, testStore } from "../helpers";
 
-/** A fresh app over its own in-memory store. */
+/**
+ * Builds a fresh app over its own in-memory store.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   const app = createApp(createServices(store));

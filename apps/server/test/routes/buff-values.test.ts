@@ -4,7 +4,11 @@ import { createServices } from "../../src/services";
 import type { BuffValueView } from "../../src/services/buff-values";
 import { addSource, jsonBody, readJson, testStore } from "../helpers";
 
-/** A fresh app with a glossary entry for Tea Knight and a source to cite. */
+/**
+ * Builds a fresh app with a glossary entry for Tea Knight and a source to cite.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   addSource(store, "web:sugarpocket-bundle-1.4.002");
@@ -18,7 +22,13 @@ function setup() {
   return { app: createApp(services), store };
 }
 
-/** A buff value POST body for `cookieKr` at `skillGrade`. */
+/**
+ * Builds a buff value POST body for `cookieKr` at `skillGrade`.
+ *
+ * @param cookieKr - the cookie's Korean name
+ * @param skillGrade - the skill grade, also used as `fromStar`
+ * @returns the body
+ */
 function buff(cookieKr: string, skillGrade: number) {
   return {
     cookieKr,

@@ -4,7 +4,11 @@ import type { Store } from "../../src/repos";
 import { createServices } from "../../src/services";
 import { addSource, jsonBody, readJson, testStore } from "../helpers";
 
-/** A fresh app over its own in-memory store, with a source and three arena decks. */
+/**
+ * Builds a fresh app over its own in-memory store, with a source and three arena decks.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   addSource(store, "dc:1");
@@ -13,7 +17,12 @@ function setup() {
   return { app: createApp(services), store };
 }
 
-/** Inserts a minimal arena deck. */
+/**
+ * Inserts a minimal arena deck.
+ *
+ * @param store - the store to insert into
+ * @param id - the deck's slug id, also its English name
+ */
 function addDeck(store: Store, id: string): void {
   store.repos.decks.insert({ id, position: 0, nameEn: id, status: "meta", mode: "arena" });
 }

@@ -6,7 +6,12 @@ import { createDeckService } from "../../src/services/decks";
 import { createRuneBuildService } from "../../src/services/rune-builds";
 import { addSource, testStore } from "../helpers";
 
-/** Inserts a minimal deck row directly, for use as a rune build's linked deck in tests. */
+/**
+ * Inserts a minimal deck row directly, for use as a rune build's linked deck in tests.
+ *
+ * @param store - the store to insert into
+ * @param id - the deck's slug id
+ */
 function addDeck(store: Store, id: string): void {
   store.repos.decks.insert({
     id,

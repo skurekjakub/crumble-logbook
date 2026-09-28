@@ -4,14 +4,25 @@ import { createServices } from "../../src/services";
 import type { FightEventView } from "../../src/services/fight-events";
 import { addSource, jsonBody, readJson, testStore } from "../helpers";
 
-/** A fresh app over its own in-memory store, with source `dc:1` to cite. */
+/**
+ * Builds a fresh app over its own in-memory store, with source `dc:1` to cite.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   addSource(store, "dc:1");
   return { app: createApp(createServices(store)), store };
 }
 
-/** A fight event POST body at `tElapsed` for `boss`. */
+/**
+ * Builds a fight event POST body at `tElapsed` for `boss`.
+ *
+ * @param boss - the boss
+ * @param tElapsed - seconds into the fight, or `null` if untimed
+ * @param name - the event, also the stem of its detail
+ * @returns the body
+ */
 function event(boss: string, tElapsed: number | null, name: string) {
   return {
     boss,

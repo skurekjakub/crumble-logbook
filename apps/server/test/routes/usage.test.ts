@@ -3,14 +3,23 @@ import { createApp } from "../../src/app";
 import { createServices } from "../../src/services";
 import { addSource, jsonBody, readJson, testStore } from "../helpers";
 
-/** A fresh app over its own in-memory store, with one source. */
+/**
+ * Builds a fresh app over its own in-memory store, with a source to cite.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   addSource(store, "web:1");
   return { app: createApp(createServices(store)), store };
 }
 
-/** A usage figure with defaults for the fields a test doesn't care about. */
+/**
+ * Builds a usage figure with defaults for the fields a test doesn't care about.
+ *
+ * @param o - the fields to override
+ * @returns the figure's POST body
+ */
 const figure = (o: Record<string, unknown>) => ({
   mode: "rumble_arena",
   kind: "cookie",

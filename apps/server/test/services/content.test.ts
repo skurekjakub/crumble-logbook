@@ -5,7 +5,12 @@ import type { Store } from "../../src/repos";
 import { createContentService } from "../../src/services/content";
 import { addSource, testStore } from "../helpers";
 
-/** Builds a `ContentService` over `mechanics`, the stand-in table for these tests. */
+/**
+ * Builds a `ContentService` over `mechanics`, the stand-in table for these tests.
+ *
+ * @param store - the store to persist through
+ * @returns the service
+ */
 function mechanicsService(store: Store) {
   return createContentService<MechanicRow, Values<MechanicInput>>(store, {
     entity: "mechanic",

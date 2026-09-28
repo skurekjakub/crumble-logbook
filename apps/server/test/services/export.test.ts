@@ -38,6 +38,7 @@ interface SeedIds {
  * ids — instead of preserving the exported ones — is caught rather than
  * masked by every id coincidentally starting at `1`.
  *
+ * @param store - the store to seed
  * @returns the ids the round-trip test checks are preserved exactly
  */
 function seedEverything(store: Store): SeedIds {

@@ -14,7 +14,11 @@ const rules: CaptureRule[] = [
 let root: string;
 let recordDir: string;
 
-/** Creates an empty file at `path` relative to the record directory, with its parents. */
+/**
+ * Creates an empty file at `path` relative to the record directory, with its parents.
+ *
+ * @param path - the file's record-relative path
+ */
 function touch(path: string): void {
   const full = join(recordDir, path);
   mkdirSync(join(full, ".."), { recursive: true });

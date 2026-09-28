@@ -22,7 +22,12 @@ const pvpDir = join(repoRoot, "research", PVP);
 /** Each test imports whole records, several times over; seconds, not milliseconds, under a busy suite. */
 const FULL_IMPORT = { timeout: 30_000 };
 
-/** Reads a curated file of record 002, parsed, with a test-asserted shape. */
+/**
+ * Reads a curated file of record 002, parsed, with a test-asserted shape.
+ *
+ * @param name - the file's name in the curated directory
+ * @returns the parsed file, unchecked
+ */
 function pvp<T>(name: string): T {
   return JSON.parse(readFileSync(join(pvpDir, "curated", name), "utf-8")) as T;
 }
@@ -48,12 +53,24 @@ const conquestSources = JSON.parse(
 const rules = Object.values(meta.modes).flatMap((m) => m.rules);
 const shared = Object.keys(sources).filter((id) => id in conquestSources);
 
-/** Every row of `table` in `snapshot`, keyed by its JSON, for set comparisons. */
+/**
+ * Collects every row of `table` in `snapshot`, keyed by its JSON, for set comparisons.
+ *
+ * @param snapshot - the snapshot
+ * @param table - the table's registry name
+ * @returns each row's JSON
+ */
 function rowSet(snapshot: Snapshot, table: TableKey): Set<string> {
   return new Set((snapshot.tables[table] as unknown[]).map((row) => JSON.stringify(row)));
 }
 
-/** The rows of `before` that `after` no longer has, per table; empty when every row survived. */
+/**
+ * Counts the rows of `before` that `after` no longer has, per table.
+ *
+ * @param before - the earlier snapshot
+ * @param after - the later snapshot
+ * @returns lost row counts by table; empty when every row survived
+ */
 function lostRows(before: Snapshot, after: Snapshot): Record<string, number> {
   const lost: Record<string, number> = {};
   for (const key of TABLE_KEYS) {
@@ -64,7 +81,13 @@ function lostRows(before: Snapshot, after: Snapshot): Record<string, number> {
   return lost;
 }
 
-/** The rows of `snapshot` a record owns, per table with an owner column, without their ids. */
+/**
+ * Collects the rows of `snapshot` a record owns, per table with an owner column, without their ids.
+ *
+ * @param snapshot - the snapshot
+ * @param slug - the record's slug
+ * @returns each owned row's JSON, by table
+ */
 function ownedContent(snapshot: Snapshot, slug: string): Record<string, string[]> {
   const result: Record<string, string[]> = {};
   for (const key of TABLE_KEYS) {
@@ -271,7 +294,12 @@ describe("ids another record already loaded", FULL_IMPORT, () => {
   ) as Record<string, unknown> & { record: object };
   const cite = Object.keys(conquestSources)[0]!;
 
-  /** A curated deck of mode arena with `id`, citing a record 001 source. */
+  /**
+   * Builds a curated deck of mode arena with `id`, citing a record 001 source.
+   *
+   * @param id - the deck's slug id
+   * @returns the curated deck entry
+   */
   const deck = (id: string) => ({
     id,
     mode: "arena",
@@ -284,6 +312,10 @@ describe("ids another record already loaded", FULL_IMPORT, () => {
   /**
    * Builds a record `003-clash` from record 001's sources, glossary and
    * meta, with `decks` and `counters` as its only other content.
+   *
+   * @param decks - the curated decks file's entries
+   * @param counters - the curated counters file's entries
+   * @returns the record's temporary directory
    */
   function clashRecord(decks: object[], counters: object[]): string {
     tmp = mkdtempSync(join(tmpdir(), "crumble-clash-"));
@@ -367,6 +399,9 @@ const WRITES: Record<string, TableKey> = {
 /**
  * Wraps `store` so every write through a transaction's repos is logged,
  * once per table, in the order tables are first written.
+ *
+ * @param store - the store to wrap
+ * @returns the wrapping store, and the tables in first-write order
  */
 function loggingWrites(store: Store): { store: Store; order: TableKey[] } {
   const order: TableKey[] = [];
@@ -433,6 +468,10 @@ describe("shared buff values", FULL_IMPORT, () => {
    * Builds a record `slug` that carries record 001's sources, glossary and
    * buff capture and nothing else, with `buffValues` overriding the
    * manifest's buff block.
+   *
+   * @param slug - the record's slug
+   * @param buffValues - fields to override in the manifest's buff block
+   * @returns the record's temporary directory
    */
   function buffRecord(slug: string, buffValues: Partial<Manifest["buffValues"]> = {}): string {
     tmp = mkdtempSync(join(tmpdir(), "crumble-buffs-"));

@@ -3,7 +3,11 @@ import { createApp } from "../../src/app";
 import { createServices } from "../../src/services";
 import { jsonBody, readJson, testStore } from "../helpers";
 
-/** A fresh app over its own in-memory store. */
+/**
+ * Builds a fresh app over its own in-memory store.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   const app = createApp(createServices(store));
@@ -65,6 +69,8 @@ describe("sources routes", () => {
      * Seeds three sources: dc:1 owned by r1 and cited by nothing; dc:2 owned
      * by no record and cited by r2's mechanic; dc:3 owned by r1 and cited by
      * r2's deck. nv:1 is owned by nobody and cited by a row no record owns.
+     *
+     * @returns the app
      */
     function seedRecords() {
       const { app, store } = setup();

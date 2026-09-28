@@ -4,14 +4,23 @@ import type { Store } from "../../src/repos";
 import { createServices } from "../../src/services";
 import { addSource, jsonBody, readJson, testStore } from "../helpers";
 
-/** A fresh app over its own in-memory store. */
+/**
+ * Builds a fresh app over its own in-memory store.
+ *
+ * @returns the app and its store
+ */
 function setup() {
   const store = testStore();
   const app = createApp(createServices(store));
   return { app, store };
 }
 
-/** Inserts a minimal deck row directly, for use as a rune build's linked deck in tests. */
+/**
+ * Inserts a minimal deck row directly, for use as a rune build's linked deck in tests.
+ *
+ * @param store - the store to insert into
+ * @param id - the deck's slug id
+ */
 function addDeck(store: Store, id: string): void {
   store.repos.decks.insert({
     id,

@@ -26,7 +26,13 @@ export function addSource(store: Store, id: string): void {
   store.repos.sources.insert({ id, site, url: `https://example.test/${id}` });
 }
 
-/** A JSON POST/PATCH request init, for use with `app.request`. */
+/**
+ * Builds a JSON POST/PATCH request init, for use with `app.request`.
+ *
+ * @param body - the value to send, serialized as JSON
+ * @returns a `POST` request init with a JSON content type; override
+ *   `method` for a `PATCH`
+ */
 export function jsonBody(body: unknown): RequestInit {
   return {
     method: "POST",
@@ -35,7 +41,12 @@ export function jsonBody(body: unknown): RequestInit {
   };
 }
 
-/** Parses a response body as JSON with a caller-asserted shape, for test assertions only. */
+/**
+ * Parses a response body as JSON with a caller-asserted shape, for test assertions only.
+ *
+ * @param res - the response
+ * @returns the parsed body, unchecked
+ */
 export async function readJson<T>(res: Response): Promise<T> {
   return (await res.json()) as T;
 }

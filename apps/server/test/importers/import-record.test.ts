@@ -20,7 +20,12 @@ import { testStore } from "../helpers";
 
 const recordDir = join(repoRoot, "research", "001-guild-conquest-meta");
 
-/** Reads a curated file of record 001, parsed, with a test-asserted shape. */
+/**
+ * Reads a curated file of record 001, parsed, with a test-asserted shape.
+ *
+ * @param name - the file's name in the curated directory
+ * @returns the parsed file, unchecked
+ */
 function curated<T>(name: string): T {
   return JSON.parse(readFileSync(join(recordDir, "curated", name), "utf-8")) as T;
 }
@@ -44,7 +49,12 @@ const glossary = curated<unknown[]>("glossary.json");
 const sources = curated<Record<string, unknown>>("sources.json");
 const meta = curated<{ lede: string; you: Cited }>("meta.json");
 
-/** Reads a JSON file of record 001 by its record-relative path, with a test-asserted shape. */
+/**
+ * Reads a JSON file of record 001 by its record-relative path, with a test-asserted shape.
+ *
+ * @param path - the file's record-relative path
+ * @returns the parsed file, unchecked
+ */
 function recordJson<T>(path: string): T {
   return JSON.parse(readFileSync(join(recordDir, path), "utf-8")) as T;
 }
@@ -79,7 +89,12 @@ const buffRowsPerCookie = manifest.buffValues.cookies.map((kr) => {
 });
 const alias = (id: string) => manifest.fightEvents.sourceAliases[id] ?? id;
 
-/** Data lines (every non-blank line after the header) of an evidence TSV. */
+/**
+ * Counts the data lines (every non-blank line after the header) of an evidence TSV.
+ *
+ * @param file - the TSV's name in the crumb.gg evidence directory
+ * @returns the number of data lines
+ */
 function tsvDataLines(file: string): number {
   const text = readFileSync(join(recordDir, "evidence", "15-crumbgg", file), "utf-8");
   return text.split(/\r?\n/).filter((line) => line.trim() !== "").length - 1;
@@ -129,7 +144,12 @@ const expectedCounts = {
     sum(buffRowsPerCookie),
 };
 
-/** Row counts per table, read back from the database through a full snapshot. */
+/**
+ * Reads the row count of every table back from the database, through a full snapshot.
+ *
+ * @param store - the store to read
+ * @returns row counts, by table
+ */
 function tableCounts(store: Store): Record<string, number> {
   return Object.fromEntries(
     Object.entries(exportSnapshot(store).tables).map(([k, rows]) => [k, rows.length]),
@@ -365,6 +385,11 @@ describe("importRecord validation", () => {
    * has no captures, rankings, fight events or buff values, unless
    * `opts.manifest` sets them; `opts.evidence` lists record-relative files
    * to copy over from record 001.
+   *
+   * @param file - the curated collection file to rewrite, or `null` for none
+   * @param mutate - rewrites the collection's rows in place
+   * @param opts - manifest overrides and evidence files to copy
+   * @returns the record's temporary directory
    */
   function tempRecord(
     file: string | null,
@@ -394,7 +419,13 @@ describe("importRecord validation", () => {
     return tmp;
   }
 
-  /** Rewrites the JSON file at the record-relative `path` of `dir` with `mutate`. */
+  /**
+   * Rewrites the JSON file at the record-relative `path` of `dir` with `mutate`.
+   *
+   * @param dir - the record directory
+   * @param path - the file's record-relative path
+   * @param mutate - edits the parsed file in place
+   */
   function editJson<T>(dir: string, path: string, mutate: (value: T) => void): void {
     const value = JSON.parse(readFileSync(join(dir, path), "utf-8")) as T;
     mutate(value);
@@ -404,10 +435,19 @@ describe("importRecord validation", () => {
   const rankingSpecs = recordJson<{ rankings: Array<Record<string, unknown> & { file: string }> }>(
     "import.json",
   ).rankings;
-  /** Record 001's manifest entry for the ranking TSV whose path ends in `file`. */
+  /**
+   * Finds record 001's manifest entry for the ranking TSV whose path ends in `file`.
+   *
+   * @param file - the end of the TSV's path
+   * @returns the ranking spec
+   */
   const rankingSpec = (file: string) => rankingSpecs.find((spec) => spec.file.endsWith(file))!;
 
-  /** Every table's row count is zero. */
+  /**
+   * Asserts that every table's row count is zero.
+   *
+   * @param store - the store to check
+   */
   function expectEmpty(store: Store): void {
     expect(Object.values(tableCounts(store)).every((n) => n === 0)).toBe(true);
   }
@@ -648,6 +688,9 @@ describe("importRecord rollback", () => {
    * write of a record 001 import: the replace has cleared every table and
    * rewritten the rest by then. Records how many buff values the
    * transaction saw at the failing insert.
+   *
+   * @param store - the store to wrap
+   * @returns the failing store, and the buff-value counts seen at each failed insert
    */
   function failingOnBuffInsert(store: Store) {
     const seen: number[] = [];

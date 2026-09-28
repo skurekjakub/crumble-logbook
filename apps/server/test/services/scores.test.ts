@@ -7,7 +7,11 @@ import type { Store } from "../../src/repos";
 import { createScoreService, ratio } from "../../src/services/scores";
 import { addSource, testStore } from "../helpers";
 
-/** A fresh store with a `cherry` deck already inserted, for `deckId` references. */
+/**
+ * Builds a fresh store with a `cherry` deck already inserted, for `deckId` references.
+ *
+ * @returns the store
+ */
 function storeWithCherryDeck(): Store {
   const db = openDb(":memory:");
   const store = createStore(db);
