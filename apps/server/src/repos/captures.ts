@@ -1,7 +1,7 @@
 import type { CaptureRow } from "@crumble/schema";
 import { captures } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
-import { asc } from "drizzle-orm";
+import { and, asc, eq } from "drizzle-orm";
 import type { Db } from "../db/client";
 
 /** Insert payload for {@link CapturesRepo.insertMany}. */
@@ -15,6 +15,14 @@ export interface CapturesRepo {
    * @returns the rows
    */
   list(): CaptureRow[];
+  /**
+   * Returns one record's capture of one path.
+   *
+   * @param recordSlug - the record's slug
+   * @param path - the capture's record-relative path, e.g. `evidence/dc/1.md`
+   * @returns the row, or `undefined` when the record's ledger doesn't list the path
+   */
+  byPath(recordSlug: string, path: string): CaptureRow | undefined;
   /**
    * Inserts every row in `rows`.
    *
@@ -35,6 +43,13 @@ export function createCapturesRepo(db: Db): CapturesRepo {
     /** @inheritdoc */
     list: () =>
       db.select().from(captures).orderBy(asc(captures.recordSlug), asc(captures.path)).all(),
+    /** @inheritdoc */
+    byPath: (recordSlug, path) =>
+      db
+        .select()
+        .from(captures)
+        .where(and(eq(captures.recordSlug, recordSlug), eq(captures.path, path)))
+        .get(),
     /** @inheritdoc */
     insertMany: (rows) => {
       if (rows.length > 0) db.insert(captures).values(rows).run();

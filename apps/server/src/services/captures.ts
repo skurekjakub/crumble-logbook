@@ -44,6 +44,21 @@ export function captureStamps(repos: Repos): Map<string, CaptureStamp> {
 }
 
 /**
+ * Looks up the capture a source's `capturePath` names.
+ *
+ * @param repos - the repos to read
+ * @param capturePath - a repo-relative path, `research/<record>/<path>`
+ * @returns the capture's stamp, or `null` when the path isn't a record's or
+ *   its record's ledger doesn't list it
+ */
+export function captureStamp(repos: Repos, capturePath: string): CaptureStamp | null {
+  const match = /^research\/([^/]+)\/(.+)$/.exec(capturePath);
+  if (!match) return null;
+  const row = repos.captures.byPath(match[1]!, match[2]!);
+  return row ? { capturedAt: row.capturedAt, tool: row.tool, approx: row.approx } : null;
+}
+
+/**
  * Builds a {@link CapturesService} over `store`.
  *
  * @param store - the store to read through

@@ -4,7 +4,7 @@ import type { FiltersOf } from "../registry";
 import { recordColumnOf, REGISTRY, specOf, TABLE_KEYS } from "../registry";
 import type { Repos, Store } from "../repos";
 import type { CaptureStamp } from "./captures";
-import { captureStamps } from "./captures";
+import { captureStamp, captureStamps } from "./captures";
 import { applyFilters } from "./filters";
 
 /**
@@ -127,7 +127,7 @@ export function createSourcesService(store: Store): SourcesService {
       const repos = store.repos;
       const row = repos.sources.get(id);
       if (!row) throw new NotFoundError("source", id);
-      const capture = (row.capturePath && captureStamps(repos).get(row.capturePath)) || null;
+      const capture = row.capturePath ? captureStamp(repos, row.capturePath) : null;
       return { ...row, citedBy: citedByCount(repos, id), capture };
     },
     /** @inheritdoc */
