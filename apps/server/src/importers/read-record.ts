@@ -128,8 +128,8 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
  * @returns the record's slug, its write steps in order, and warnings
  * @throws {ImportError} naming the file and row, if a file is missing or
  *   malformed, a row fails its schema, a row cites an unknown source or
- *   deck, a counter's mode isn't its decks' mode, or two ranking rows
- *   share a key
+ *   deck, a counter's mode isn't its decks' mode, two ranking rows share
+ *   a key, or neither `import.json` nor `meta.json` names the record's mode
  */
 export function readRecord(recordDir: string): RecordPlan {
   const manifest = readManifest(recordDir);
