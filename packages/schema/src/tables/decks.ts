@@ -1,9 +1,15 @@
 import { sql } from "drizzle-orm";
 import { check, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { DECK_NOTE_KIND, DECK_STATUS } from "../enums";
-import { modeColumn, recordSlugColumn } from "./columns";
+import { modeColumn, obsoleteColumns, recordSlugColumn } from "./columns";
 
-/** A deck: a named cookie/pet lineup for one game mode, with a meta tier and formation notes. */
+/**
+ * A deck: a named cookie/pet lineup for one game mode, with a meta tier and
+ * formation notes. An obsolete deck keeps its `status`; `supersededBy` names
+ * the deck that displaced it, when one did. It has no foreign key: the
+ * importer checks it names a curated deck of the same mode, and the deck
+ * service refuses to delete a deck another names.
+ */
 export const decks = sqliteTable("decks", {
   id: text("id").primaryKey(),
   position: integer("position").notNull(),
@@ -19,6 +25,8 @@ export const decks = sqliteTable("decks", {
   atkOrderNote: text("atk_order_note"),
   mode: modeColumn(),
   recordSlug: recordSlugColumn(),
+  ...obsoleteColumns(),
+  supersededBy: text("superseded_by"),
 });
 
 /**

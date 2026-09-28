@@ -11,6 +11,7 @@ import type {
   Takeaway,
 } from "../src/api/types";
 import type { Canned } from "./helpers";
+import { CURRENT, CURRENT_DECK } from "./helpers";
 import { renderRoute } from "./view-harness";
 
 const RECORD = {
@@ -64,6 +65,7 @@ const RECOMMENDATIONS = [
 
 const DECKS = [
   {
+    ...CURRENT_DECK,
     id: "cherry",
     position: 1,
     mode: "guild_conquest",
@@ -128,6 +130,7 @@ const DECKS = [
     ],
   },
   {
+    ...CURRENT_DECK,
     id: "meso",
     position: 2,
     mode: "guild_conquest",
@@ -151,6 +154,7 @@ const DECKS = [
 
 const RUNES = [
   {
+    ...CURRENT,
     id: 1,
     cookieKr: "우유",
     en: "Milk",
@@ -163,6 +167,7 @@ const RUNES = [
     sources: ["nv:43653"],
   },
   {
+    ...CURRENT,
     id: 2,
     cookieKr: "석류",
     en: "Pomegranate",
@@ -175,6 +180,7 @@ const RUNES = [
     sources: ["dc:76135"],
   },
   {
+    ...CURRENT,
     id: 3,
     cookieKr: "메소",
     en: null,
@@ -190,6 +196,7 @@ const RUNES = [
 
 const GEAR = [
   {
+    ...CURRENT,
     id: 1,
     mode: "guild_conquest",
     recordSlug: null,
@@ -200,6 +207,7 @@ const GEAR = [
     sources: ["dc:76135"],
   },
   {
+    ...CURRENT,
     id: 2,
     mode: "guild_conquest",
     recordSlug: null,
@@ -210,6 +218,7 @@ const GEAR = [
     sources: [],
   },
   {
+    ...CURRENT,
     id: 3,
     mode: "guild_conquest",
     recordSlug: null,

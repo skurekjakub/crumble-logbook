@@ -1,5 +1,5 @@
 import { integer, primaryKey, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { modeColumn, recordSlugColumn } from "./columns";
+import { modeColumn, obsoleteColumns, recordSlugColumn } from "./columns";
 import { decks } from "./decks";
 
 /** A rune line recommendation for a cookie in one game mode, independent of any single deck. */
@@ -11,6 +11,7 @@ export const runeBuilds = sqliteTable("rune_builds", {
   disputed: text("disputed"),
   mode: modeColumn(),
   recordSlug: recordSlugColumn(),
+  ...obsoleteColumns(),
 });
 
 /** Join table linking a rune build to the decks it applies to. */

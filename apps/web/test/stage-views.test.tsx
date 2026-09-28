@@ -17,6 +17,7 @@ import type {
 } from "../src/api/types";
 import { STAGE } from "../src/app/modes";
 import type { Canned } from "./helpers";
+import { CURRENT_DECK } from "./helpers";
 import { bodyRows, renderRoute, VIEW_SOURCES } from "./view-harness";
 
 const SLUG = "003-stage-pushing-meta";
@@ -92,6 +93,7 @@ const CHAPTERS = [chapter(1, 1_000_000_000), chapter(2, 4_000_000_000), chapter(
  */
 function deck(id: string, nameEn: string): Deck {
   return {
+    ...CURRENT_DECK,
     id,
     position: 0,
     mode: "stage",

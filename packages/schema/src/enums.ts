@@ -202,7 +202,11 @@ export type BuffTarget = (typeof BUFF_TARGET)[number];
 export const CAPTURE_APPROX = ["header", "post", "git"] as const;
 export type CaptureApprox = (typeof CAPTURE_APPROX)[number];
 
-/** Entities that carry citations; `citations.entity` takes one of these. */
+/**
+ * Entities that carry citations; `citations.entity` takes one of these.
+ * `obsolescence` cites why a recommendation became obsolete: its entity id
+ * is the row's `obsolescenceKey` (see `obsolete.ts`), not a row of its own.
+ */
 export const CITED_ENTITY = [
   "deck",
   "rune_build",
@@ -236,5 +240,6 @@ export const CITED_ENTITY = [
   "spending_step",
   "growth_curve",
   "planner_step",
+  "obsolescence",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];

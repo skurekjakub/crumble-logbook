@@ -20,3 +20,18 @@ export function modeColumn() {
 export function recordSlugColumn() {
   return text("record_slug");
 }
+
+/**
+ * Builds the obsolete lifecycle's columns: since when a recommendation is
+ * no longer current, and why. Both are `null` while it is current; a
+ * record's import sets both together, and cites the reason under
+ * `obsolescence`.
+ *
+ * @returns `obsoleteSince` (an ISO date) and `obsoleteReason` (text), both nullable
+ */
+export function obsoleteColumns() {
+  return {
+    obsoleteSince: text("obsolete_since"),
+    obsoleteReason: text("obsolete_reason"),
+  };
+}

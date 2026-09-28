@@ -633,6 +633,33 @@ describe("exportSnapshot / restoreSnapshot", () => {
     expect(exportSnapshot(target).tables.usageStats).toEqual([]);
   });
 
+  it("restores a snapshot that predates the obsolete lifecycle, every row current", () => {
+    const source = testStore();
+    addSource(source, "dc:1");
+    createServices(source).decks.create({
+      id: "rye",
+      nameEn: "Rye",
+      status: "meta",
+      cookies: [{ cookieKr: "호밀", level: "1", levelRule: null, stars: null, why: "w" }],
+      pets: [],
+      notes: [],
+      sources: ["dc:1"],
+    });
+    const snapshot = exportSnapshot(source);
+    for (const row of snapshot.tables.decks as Array<Record<string, unknown>>) {
+      delete row.obsoleteSince;
+      delete row.obsoleteReason;
+      delete row.supersededBy;
+    }
+    const target = testStore();
+    restoreSnapshot(target, snapshot);
+    expect(target.repos.decks.get("rye")).toMatchObject({
+      obsoleteSince: null,
+      obsoleteReason: null,
+      supersededBy: null,
+    });
+  });
+
   it("restoring into a non-empty store throws ConflictError", () => {
     const source = testStore();
     seedEverything(source);

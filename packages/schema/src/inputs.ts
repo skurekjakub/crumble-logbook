@@ -48,6 +48,13 @@ import {
 export const sourceIds = z.array(sourceId).min(1, "cite at least one source");
 
 /**
+ * The obsolete lifecycle's columns, which only a record's import writes:
+ * the API's inputs leave them out, so a reason is never stored without the
+ * citations the import gives it.
+ */
+const LIFECYCLE = { obsoleteSince: true, obsoleteReason: true } as const;
+
+/**
  * The create input and the patch of a cited content type, from its table's
  * insert schema. The input drops the server-assigned `id` and requires the
  * `sources` the row cites; the patch makes every field optional, `sources`
@@ -129,12 +136,18 @@ export const takeawayPatch = takeaway.patch;
 /** Output of {@link takeawayPatch}. */
 export type TakeawayPatch = z.output<typeof takeawayPatch>;
 
-const gearRec = citedInputs(gearRecInsert);
-/** Input for creating a gear recommendation, with the sources that support it. */
+const gearRec = citedInputs(gearRecInsert.omit(LIFECYCLE));
+/**
+ * Input for creating a gear recommendation, with the sources that support
+ * it. The obsolete lifecycle isn't accepted: a record's import sets it.
+ */
 export const gearRecInput = gearRec.input;
 /** Output of {@link gearRecInput}. */
 export type GearRecInput = z.output<typeof gearRecInput>;
-/** Patch for updating a gear recommendation. `sources`, if given, must be non-empty. */
+/**
+ * Patch for updating a gear recommendation. `sources`, if given, must be
+ * non-empty. The obsolete lifecycle isn't accepted: a record's import sets it.
+ */
 export const gearRecPatch = gearRec.patch;
 /** Output of {@link gearRecPatch}. */
 export type GearRecPatch = z.output<typeof gearRecPatch>;
@@ -179,12 +192,13 @@ export const buffValuePatch = buffValue.patch;
 /** Output of {@link buffValuePatch}. */
 export type BuffValuePatch = z.output<typeof buffValuePatch>;
 
-const counter = citedInputs(counterInsert);
+const counter = citedInputs(counterInsert.omit(LIFECYCLE));
 /**
  * Input for creating a counter edge, with the sources that support it. A
  * deck can't counter itself: `teamDeckId` and `beatenByDeckId` must differ.
  * `citedInputs` omits before this refine: zod 4 rejects `.omit()` on a
- * refined object.
+ * refined object. The obsolete lifecycle isn't accepted: a record's import
+ * sets it.
  */
 export const counterInput = counter.input.refine((c) => c.teamDeckId !== c.beatenByDeckId, {
   message: "a deck can't be its own counter",
@@ -192,7 +206,10 @@ export const counterInput = counter.input.refine((c) => c.teamDeckId !== c.beate
 });
 /** Output of {@link counterInput}. */
 export type CounterInput = z.output<typeof counterInput>;
-/** Patch for updating a counter edge. `sources`, if given, must be non-empty. */
+/**
+ * Patch for updating a counter edge. `sources`, if given, must be
+ * non-empty. The obsolete lifecycle isn't accepted: a record's import sets it.
+ */
 export const counterPatch = counter.patch;
 /** Output of {@link counterPatch}. */
 export type CounterPatch = z.output<typeof counterPatch>;
@@ -471,19 +488,22 @@ export type DeckNoteInput = z.output<typeof deckNoteInput>;
  * The deck fields shared, unmodified, by {@link deckInput} and
  * {@link deckPatch}. Carries no `.default()`s, so `.partial()`-ing it (for
  * the patch) never injects a default value into a payload that omitted the
- * field.
+ * field. The obsolete lifecycle and `supersededBy` are left out.
  */
-const deckFields = deckInsert.omit({ id: true, position: true }).extend({
-  position: z.number().int().min(0).optional(),
-  cookies: z.array(deckCookieInput).min(1),
-  pets: nameList,
-  notes: z.array(deckNoteInput),
-  sources: sourceIds,
-});
+const deckFields = deckInsert
+  .omit({ id: true, position: true, ...LIFECYCLE, supersededBy: true })
+  .extend({
+    position: z.number().int().min(0).optional(),
+    cookies: z.array(deckCookieInput).min(1),
+    pets: nameList,
+    notes: z.array(deckNoteInput),
+    sources: sourceIds,
+  });
 
 /**
  * Input for creating a deck. `id` must be a lowercase slug; `pets` and
- * `notes` default to `[]` when omitted.
+ * `notes` default to `[]` when omitted. The obsolete lifecycle isn't
+ * accepted: a record's import sets it.
  */
 export const deckInput = deckFields.extend({
   id: deckSlug,
@@ -493,25 +513,33 @@ export const deckInput = deckFields.extend({
 /** Output of {@link deckInput}. */
 export type DeckInput = z.output<typeof deckInput>;
 
-/** Patch for updating a deck. Every field is optional; omitted fields stay unset. */
+/**
+ * Patch for updating a deck. Every field is optional; omitted fields stay
+ * unset. The obsolete lifecycle isn't accepted: a record's import sets it.
+ */
 export const deckPatch = deckFields.partial();
 /** Output of {@link deckPatch}. */
 export type DeckPatch = z.output<typeof deckPatch>;
 
 /**
  * Input for creating a rune build: the decks it applies to and the sources
- * that support it. `decks` defaults to `[]` when omitted.
+ * that support it. `decks` defaults to `[]` when omitted. The obsolete
+ * lifecycle isn't accepted: a record's import sets it.
  */
-export const runeBuildInput = runeBuildInsert.omit({ id: true }).extend({
+export const runeBuildInput = runeBuildInsert.omit({ id: true, ...LIFECYCLE }).extend({
   decks: z.array(deckSlug).default([]),
   sources: sourceIds,
 });
 /** Output of {@link runeBuildInput}. */
 export type RuneBuildInput = z.output<typeof runeBuildInput>;
 
-/** Patch for updating a rune build. Every field, including `decks` and `sources`, is optional. */
+/**
+ * Patch for updating a rune build. Every field, including `decks` and
+ * `sources`, is optional. The obsolete lifecycle isn't accepted: a
+ * record's import sets it.
+ */
 export const runeBuildPatch = runeBuildInsert
-  .omit({ id: true })
+  .omit({ id: true, ...LIFECYCLE })
   .extend({ decks: z.array(deckSlug), sources: sourceIds })
   .partial();
 /** Output of {@link runeBuildPatch}. */

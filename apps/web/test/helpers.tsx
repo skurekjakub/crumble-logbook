@@ -1,6 +1,12 @@
 import { QueryClient } from "@tanstack/react-query";
 import { vi } from "vitest";
 
+/** The lifecycle fields of a current recommendation row, spread into fixtures. */
+export const CURRENT = { obsoleteSince: null, obsoleteReason: null };
+
+/** The lifecycle fields of a current deck, spread into fixtures. */
+export const CURRENT_DECK = { ...CURRENT, supersededBy: null };
+
 /** A canned API response: a JSON body, optionally with a non-200 status. */
 export type Canned = { status?: number; body: unknown };
 

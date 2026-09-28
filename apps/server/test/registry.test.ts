@@ -1,5 +1,5 @@
 import type { GameMode, SourceSite } from "@crumble/schema";
-import { CITED_ENTITY } from "@crumble/schema";
+import { CITED_ENTITY, OBSOLESCENCE } from "@crumble/schema";
 import { getTableConfig } from "drizzle-orm/sqlite-core";
 import type { hc } from "hono/client";
 import { describe, expect, expectTypeOf, it } from "vitest";
@@ -612,9 +612,9 @@ describe("the content-type registry", () => {
     expectTypeOf<ClientRoutes>().toHaveProperty("counters");
   });
 
-  it("registers every cited entity exactly once, and only cited entities", () => {
+  it("registers every cited entity exactly once, but obsolescence, which cites other tables' rows", () => {
     const entities = TABLE_KEYS.flatMap((key) => specOf(key).entity ?? []);
-    expect([...entities].sort()).toEqual([...CITED_ENTITY].sort());
+    expect([...entities].sort()).toEqual(CITED_ENTITY.filter((e) => e !== OBSOLESCENCE).sort());
   });
 
   it("gives every content type a path, an entity and request schemas", () => {

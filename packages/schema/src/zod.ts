@@ -68,12 +68,16 @@ export type GlossaryRow = typeof t.glossary.$inferSelect;
 
 /**
  * Insert schema for `decks`. `id` must be a lowercase slug; `nameEn` must be
- * non-empty; `atkOrder`, when present, may be `null` or a name list.
+ * non-empty; `atkOrder`, when present, may be `null` or a name list;
+ * `obsoleteSince`, when present, must be `YYYY-MM-DD`; `supersededBy`, when
+ * present, a lowercase slug.
  */
 export const deckInsert = createInsertSchema(t.decks, {
   id: () => deckSlug,
   nameEn: (s) => s.min(1),
   atkOrder: () => nameList.nullish(),
+  obsoleteSince: () => isoDate.nullish(),
+  supersededBy: () => deckSlug.nullish(),
 });
 /** Select schema for `decks`, with `atkOrder` typed precisely. */
 export const deckSelect = createSelectSchema(t.decks, {
@@ -106,8 +110,10 @@ export const deckNoteSelect = createSelectSchema(t.deckNotes);
 /** A row selected from `deck_notes`. */
 export type DeckNoteRow = typeof t.deckNotes.$inferSelect;
 
-/** Insert schema for `rune_builds`. */
-export const runeBuildInsert = createInsertSchema(t.runeBuilds);
+/** Insert schema for `rune_builds`. `obsoleteSince`, when present, must be `YYYY-MM-DD`. */
+export const runeBuildInsert = createInsertSchema(t.runeBuilds, {
+  obsoleteSince: () => isoDate.nullish(),
+});
 /** Select schema for `rune_builds`, mirroring the stored row shape. */
 export const runeBuildSelect = createSelectSchema(t.runeBuilds);
 /** A row selected from `rune_builds`. */
@@ -120,8 +126,10 @@ export const runeBuildDeckSelect = createSelectSchema(t.runeBuildDecks);
 /** A row selected from `rune_build_decks`. */
 export type RuneBuildDeckRow = typeof t.runeBuildDecks.$inferSelect;
 
-/** Insert schema for `gear_recs`. */
-export const gearRecInsert = createInsertSchema(t.gearRecs);
+/** Insert schema for `gear_recs`. `obsoleteSince`, when present, must be `YYYY-MM-DD`. */
+export const gearRecInsert = createInsertSchema(t.gearRecs, {
+  obsoleteSince: () => isoDate.nullish(),
+});
 /** Select schema for `gear_recs`, mirroring the stored row shape. */
 export const gearRecSelect = createSelectSchema(t.gearRecs);
 /** A row selected from `gear_recs`. */
@@ -229,13 +237,15 @@ export type BuffValueRow = typeof t.buffValues.$inferSelect;
 
 /**
  * Insert schema for `counters`. `slug` and both deck ids must be lowercase
- * slugs; `why` must be non-empty.
+ * slugs; `why` must be non-empty; `obsoleteSince`, when present, must be
+ * `YYYY-MM-DD`.
  */
 export const counterInsert = createInsertSchema(t.counters, {
   slug: () => deckSlug,
   teamDeckId: () => deckSlug,
   beatenByDeckId: () => deckSlug,
   why: (s) => s.min(1),
+  obsoleteSince: () => isoDate.nullish(),
 });
 /** Select schema for `counters`, mirroring the stored row shape. */
 export const counterSelect = createSelectSchema(t.counters);

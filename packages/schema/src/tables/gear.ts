@@ -1,6 +1,6 @@
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { GEAR_CONTEXT, GEAR_SLOT } from "../enums";
-import { modeColumn, recordSlugColumn } from "./columns";
+import { modeColumn, obsoleteColumns, recordSlugColumn } from "./columns";
 
 /**
  * A gear substat recommendation for a slot. `context` is the in-game gear
@@ -14,4 +14,5 @@ export const gearRecs = sqliteTable("gear_recs", {
   why: text("why").notNull(),
   mode: modeColumn(),
   recordSlug: recordSlugColumn(),
+  ...obsoleteColumns(),
 });

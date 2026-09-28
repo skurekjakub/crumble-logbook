@@ -17,6 +17,7 @@ import type {
 import type { ModeSection } from "../src/app/modes";
 import { ARENA, RUMBLE } from "../src/app/modes";
 import type { Canned } from "./helpers";
+import { CURRENT, CURRENT_DECK } from "./helpers";
 import { renderRoute, VIEW_SOURCES } from "./view-harness";
 
 const SLUG = "002-pvp-meta";
@@ -103,6 +104,7 @@ function cookie(
  */
 function deck(id: string, position: number, nameEn: string, over: Partial<Deck> = {}): Deck {
   return {
+    ...CURRENT_DECK,
     id,
     position,
     mode: "arena",
@@ -145,6 +147,7 @@ const DECKS = [
 
 const COUNTERS = [
   {
+    ...CURRENT,
     id: 1,
     slug: "rye-vs-bari",
     mode: "arena",
@@ -157,6 +160,7 @@ const COUNTERS = [
     sources: ["dc:75148"],
   },
   {
+    ...CURRENT,
     id: 2,
     slug: "bari-vs-crepe",
     mode: "arena",
@@ -169,6 +173,7 @@ const COUNTERS = [
     sources: [],
   },
   {
+    ...CURRENT,
     id: 3,
     slug: "crepe-vs-rye",
     mode: "arena",
@@ -305,6 +310,7 @@ const GLOSSARY = [
 
 const RUNES = [
   {
+    ...CURRENT,
     id: 1,
     cookieKr: "호밀",
     en: "Rye",
@@ -320,6 +326,7 @@ const RUNES = [
 
 const GEAR = [
   {
+    ...CURRENT,
     id: 1,
     mode: "arena",
     recordSlug: SLUG,

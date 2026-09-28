@@ -1,6 +1,6 @@
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { CONFIDENCE } from "../enums";
-import { modeColumn, recordSlugColumn } from "./columns";
+import { modeColumn, obsoleteColumns, recordSlugColumn } from "./columns";
 import { decks } from "./decks";
 
 /**
@@ -23,4 +23,5 @@ export const counters = sqliteTable("counters", {
   why: text("why").notNull(),
   confidence: text("confidence", { enum: CONFIDENCE }).notNull(),
   recordSlug: recordSlugColumn(),
+  ...obsoleteColumns(),
 });

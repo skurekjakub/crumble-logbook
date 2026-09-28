@@ -1,6 +1,7 @@
 import { screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import type { BuffValue, Deck, FightEvent, GearRec, Mechanic, RuneBuild } from "../src/api/types";
+import { CURRENT, CURRENT_DECK } from "./helpers";
 import { bodyRows, renderRoute } from "./view-harness";
 
 const PATH = "/conquest/boss";
@@ -263,6 +264,7 @@ const MECHANICS = [
 
 const RUNE_BUILDS = [
   {
+    ...CURRENT,
     id: 2,
     cookieKr: "브시커",
     en: "Brightseeker Cookie",
@@ -275,6 +277,7 @@ const RUNE_BUILDS = [
     sources: ["dc:76135"],
   },
   {
+    ...CURRENT,
     id: 9,
     cookieKr: "닼초",
     en: "Dark Choco Cookie",
@@ -287,6 +290,7 @@ const RUNE_BUILDS = [
     sources: [],
   },
   {
+    ...CURRENT,
     id: 12,
     cookieKr: "메소",
     en: "Melon Soda Cookie",
@@ -302,6 +306,7 @@ const RUNE_BUILDS = [
 
 const DECKS = [
   {
+    ...CURRENT_DECK,
     id: "cherry",
     position: 0,
     mode: "guild_conquest",
@@ -341,6 +346,7 @@ const DECKS = [
 
 const GEAR = [
   {
+    ...CURRENT,
     id: 4,
     mode: "guild_conquest",
     recordSlug: null,
@@ -351,6 +357,7 @@ const GEAR = [
     sources: [],
   },
   {
+    ...CURRENT,
     id: 2,
     mode: "guild_conquest",
     recordSlug: null,

@@ -14,6 +14,7 @@ import type {
 } from "../src/api/types";
 import { DUNGEON } from "../src/app/modes";
 import type { Canned } from "./helpers";
+import { CURRENT, CURRENT_DECK } from "./helpers";
 import { bodyRows, renderRoute, VIEW_SOURCES } from "./view-harness";
 
 const SLUG = "004-golden-drop-meta";
@@ -76,6 +77,7 @@ const GLOSSARY = [
 ];
 
 const DECK: Deck = {
+  ...CURRENT_DECK,
   id: "dungeon-milk-scorpion-figure",
   position: 0,
   mode: "crumble_dungeon",
@@ -249,6 +251,7 @@ const RNG: RngFactor[] = [
 
 const GEAR: GearRec[] = [
   {
+    ...CURRENT,
     id: 1,
     mode: "crumble_dungeon",
     slot: "general",
@@ -259,6 +262,7 @@ const GEAR: GearRec[] = [
     sources: ["dc:77306"],
   },
   {
+    ...CURRENT,
     id: 2,
     mode: "crumble_dungeon",
     slot: "general",

@@ -58833,7 +58833,10 @@
     ],
     "atkOrderNote": "Only Milk's rank is fixed (ATK #1 for Passion Pay). Pomegranate's beam then goes to the next-highest ATK, usually a charger.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "arena-chain",
@@ -58849,7 +58852,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "arena-crepe-espresso",
@@ -58865,7 +58871,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "arena-evasion",
@@ -58881,7 +58890,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "arena-five-ranged",
@@ -58897,7 +58909,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "arena-rye-onecarry",
@@ -58917,7 +58932,10 @@
     ],
     "atkOrderNote": "Milk › Rye ≥ Pomegranate, so Pomegranate's beam lands on Rye. Count pet, perk and captain ATK% when checking, and check in battle. Supports can be levelled down to hold the order.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "arena-rye-seeker",
@@ -58937,7 +58955,10 @@
     ],
     "atkOrderNote": "dc:74746's poster gives Rye just enough ATK to sit behind Milk and Brightseeker.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "cheesecake-recipient",
@@ -58953,7 +58974,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "cherry",
@@ -58976,7 +59000,10 @@
     ],
     "atkOrderNote": "Order by 공격력 (ATK), not 전투력 (power). Pomegranate is outside the order. If Macaron still has ATK runes it becomes Milk › Brightseeker › Macaron › Skating Queen › Tea Knight › Cheesecake.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "dungeon-gni-cheesecake",
@@ -58999,7 +59026,10 @@
     ],
     "atkOrderNote": "Sixth: Macaron, Rye or Cheesecake; pets' ATK bonuses count toward the order.",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "dungeon-macaron-figure-beam",
@@ -59019,7 +59049,10 @@
     ],
     "atkOrderNote": "Milk gets the beam from its synergy; Macaron and Figure are ATK #1 and #2 among the rest. A simpler alternative is letting Milk and the main dealers take the beam (UF6zcIkbh_8).",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "dungeon-milk-scorpion-figure",
@@ -59042,7 +59075,10 @@
     ],
     "atkOrderNote": "Only the top six ATK ranks matter; filler levels are free as long as those ranks hold and the excluded cookies stay out (dc:77306).",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "dungeon-milk-seeker-scorpion",
@@ -59065,7 +59101,10 @@
     ],
     "atkOrderNote": "The other 34 are lowered only until their power stays above the cookies left out (VART).",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "dungeon-no-cheesecake-0907",
@@ -59081,7 +59120,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "herb",
@@ -59103,7 +59145,10 @@
     ],
     "atkOrderNote": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "lottery",
@@ -59126,7 +59171,10 @@
     ],
     "atkOrderNote": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "meso",
@@ -59149,7 +59197,10 @@
     ],
     "atkOrderNote": "Scorpion sits exactly 7th, ahead of Melon Soda and Dark Choco.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rift-shred",
@@ -59165,7 +59216,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rumble-bari-crepe-cola",
@@ -59181,7 +59235,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rumble-bari-lowstar",
@@ -59199,7 +59256,10 @@
     ],
     "atkOrderNote": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rumble-evasion",
@@ -59215,7 +59275,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rumble-ranged",
@@ -59231,7 +59294,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rumble-rye-anticharge",
@@ -59251,7 +59317,10 @@
     ],
     "atkOrderNote": "Milk › Rye ≥ Pomegranate; Hound must also out-ATK any Milky Way so Macaron's buff routes to Rye (dc:75189).",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rumble-standard-12",
@@ -59269,7 +59338,10 @@
     ],
     "atkOrderNote": "Milk ATK #1. Routing Pomegranate's beam onto Bari instead of Cherry Cola means stripping Cherry Cola's ATK; at 5★ posters give up on it.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "rumble-wizard",
@@ -59291,7 +59363,10 @@
     ],
     "atkOrderNote": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "stage-aoe-rapidfire",
@@ -59307,7 +59382,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "stage-bari-cola-charge",
@@ -59323,7 +59401,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "stage-bari-coward-328",
@@ -59339,7 +59420,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "stage-coward-35",
@@ -59355,7 +59439,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "stage-seeker-allinone",
@@ -59371,7 +59458,10 @@
     "atkOrder": null,
     "atkOrderNote": "Milk must be ATK #1 (captain, perk and pet ATK% count).",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    },
    {
     "id": "stage-witch-idle",
@@ -59387,7 +59477,10 @@
     "atkOrder": null,
     "atkOrderNote": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null,
+    "supersededBy": null
    }
   ],
   "deckCookies": [
@@ -64565,7 +64658,9 @@
     "why": "Milk's buff scales with her own ATK, and she has to stay ATK #1 for 열정페이/초고속승진. Even SSR skill-amp lines get rerolled to ATK%. ATK% runes are basically Milk-only.",
     "disputed": "One commenter says skill amp is better on Milk; every guide author says all ATK. The 1T 999G run had six SSR ATK% lines, all minimum rolls, for 1.27M ATK.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 2,
@@ -64574,7 +64669,9 @@
     "why": "More haste keeps more of her 6 drones up in a fight that ends at 17 s. The study puts the breakpoint near 40 total haste; top posters run 44.6–49.6. Gear already supplies about 27, so runes add roughly 15–22.",
     "disputed": "At 58.6 haste, 1–2 drones peeled off onto adds (dc:75934). If your team dies at the 30 s slam, the model says skill amp beats haste. Some run 4 haste + 2 skill amp once 10★; the 1.62T run did exactly that (dc:75462).",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 3,
@@ -64583,7 +64680,9 @@
     "why": "Ranks into Pomegranate's beams on base ATK alone, so no ATK lines are needed.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 4,
@@ -64592,7 +64691,9 @@
     "why": "Early guides used ATK% to hold her rank; current guides reroll to skill amp and let levels handle the order.",
     "disputed": "alkapa.gg's raid tag recommends ATK% for Macaron, Skating Queen and Cheesecake. Every forum guide from 9/17 on says skill amp.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 5,
@@ -64601,7 +64702,9 @@
     "why": "Her ATK buff on Milk grows with skill amp. Haste is wasted because gear already provides it.",
     "disputed": "A couple of commenters heard haste is better; no data was posted.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 6,
@@ -64610,7 +64713,9 @@
     "why": "Buffer. The older optimizer gave her just enough ATK% to rank into the beams; with level tuning that's unnecessary.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 7,
@@ -64619,7 +64724,9 @@
     "why": "She can't receive her own buff, so skill amp is the only stat that raises her beam's value.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 8,
@@ -64628,7 +64735,9 @@
     "why": "Sub-damage when she catches a stray beam.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 9,
@@ -64637,7 +64746,9 @@
     "why": "Her DEF shred isn't amplified by skill amp since 8/27, so haste to reapply it faster.",
     "disputed": "One commenter argues focus raises her debuff proc chance; the Cherry-deck author says the boss has low resistance.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 10,
@@ -64646,7 +64757,9 @@
     "why": "Her lift-resistance buff should stay up. In the Melon Soda deck she's a positioning knob.",
     "disputed": "Some advise one move-speed line on Pinot even in the Cherry deck; the Cherry-deck authors say zero move speed.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 11,
@@ -64655,7 +64768,9 @@
     "why": "Her multi-hit synergy needs to be up when Pomegranate casts. Without 2–3 haste lines she's weak.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 12,
@@ -64664,7 +64779,9 @@
     "why": "Placement cookie in the Melon Soda deck.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 13,
@@ -64673,7 +64790,9 @@
     "why": "Formation only.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 14,
@@ -64682,7 +64801,9 @@
     "why": "Survival filler.",
     "disputed": null,
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 15,
@@ -64691,7 +64812,9 @@
     "why": "Milk must hold ATK #1 so Passion Pay and the captain bonuses land on her, and her buffs scale with her own ATK. Her rank counts pet, perk and captain ATK% too.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 16,
@@ -64700,7 +64823,9 @@
     "why": "The ATK% puts Rye right behind Milk so she takes Pomegranate's first beam. Skill Haste is confirmed useful.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 17,
@@ -64709,7 +64834,9 @@
     "why": "She can't receive her own beam; Skill AMP is what raises its value.",
     "disputed": "Sugar Pocket's mode-agnostic list only suggests Skill Haste.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 18,
@@ -64718,7 +64845,9 @@
     "why": "Her ATK buff onto Milk grows with Skill AMP.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 19,
@@ -64727,7 +64856,9 @@
     "why": "Crit-damage buffer; Skill AMP raises the buff.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 20,
@@ -64736,7 +64867,9 @@
     "why": "Her crit buff grows with Skill AMP; ATK% only to keep the ATK order (꿀빵 runs 2 ATK + 4 Skill AMP).",
     "disputed": "One Arena guide runs Skill AMP + Skill Haste; Rumble posters run ATK% on Macaron to route buffs.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 21,
@@ -64745,7 +64878,9 @@
     "why": "Survive the opening and cycle shields faster.",
     "disputed": "Sugar Pocket makes HP the priority because her shields scale on her max HP; a commenter on Seo Sinwoo's video says not HP.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 22,
@@ -64754,7 +64889,9 @@
     "why": "Front tank that has to live through the dive.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 23,
@@ -64763,7 +64900,9 @@
     "why": "Survival so her healing reduction stays up.",
     "disputed": "올렐레오로리 and Sugar Pocket give her Focus to land the debuff.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 24,
@@ -64772,7 +64911,9 @@
     "why": "Land the ATK/crit debuff quickly and survive at the front.",
     "disputed": "EN commenters run full DR because she kept getting one-shot.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 25,
@@ -64781,7 +64922,9 @@
     "why": "Skill AMP doesn't raise the DR part of Soul Guidance; uptime does.",
     "disputed": "Alternatives: ATK so Bari catches Pomegranate's beam, or Skill AMP for the aura damage (community list: Skill AMP, Haste, DR).",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 26,
@@ -64790,7 +64933,9 @@
     "why": "Per a leak the aura damage scales on the wrapped cookie's ATK, and the deck loses if it doesn't kill in the opening.",
     "disputed": "Rumble builds run Oven fully defensive (see the rumble_arena row).",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 27,
@@ -64799,7 +64944,9 @@
     "why": "Community consensus list; no measured build posted.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 28,
@@ -64808,7 +64955,9 @@
     "why": "The shield has to come out before Bari's first hit.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 29,
@@ -64817,7 +64966,9 @@
     "why": "Her heals scale on ATK.",
     "disputed": "The community list says Skill AMP, Haste, DR.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 30,
@@ -64826,7 +64977,9 @@
     "why": "Front damage in the heal-tank variant of the Rye deck.",
     "disputed": "Alternatives: Haste 2 / Skill AMP 3 / DR 1; or ATK% + 2 move-speed lines + Haste to take Pomegranate's first beam and nuke the front on turn one.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 31,
@@ -64835,7 +64988,9 @@
     "why": "Only worth it at 5★+.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 32,
@@ -64844,7 +64999,9 @@
     "why": "About 1000 team evasion; Focus on gear lands her accuracy-down.",
     "disputed": null,
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 33,
@@ -64853,7 +65010,9 @@
     "why": "ATK #1 for Passion Pay; the rest of the build is on screen in Seo Sinwoo's Rumble video.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 34,
@@ -64862,7 +65021,9 @@
     "why": "Given by the then-#1 player when asked for his Bari and Ion runes; no reason stated.",
     "disputed": "ATK-heavy if you want Pomegranate's beam on Bari (you must also strip Cherry Cola's ATK); at 5★ posters give up on that.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 35,
@@ -64871,7 +65032,9 @@
     "why": "Same answer from the then-#1 player; Seo Sinwoo runs Skill Haste, DEF% and DR.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 36,
@@ -64880,7 +65043,9 @@
     "why": "With haste it runs in alone before the buffs land; the Charge buff and Bari supply the damage.",
     "disputed": "Regular-Arena posters give Oven damage lines because the aura damage scales on its ATK.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 37,
@@ -64889,7 +65054,9 @@
     "why": "Milk › Rye ≥ Pomegranate routing; Seo Sinwoo's Rye: ATK% 4.7/4.2/4.7, crit DMG 5.8/7.0, Haste +5.",
     "disputed": "In the Wizard deck, where Rye is only ATK #4, the author runs Skill AMP > crit DMG > crit rate with no ATK%.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 38,
@@ -64898,7 +65065,9 @@
     "why": "With Pomegranate's beam she holds about 300 crit even under Moon Rabbit.",
     "disputed": "Seo Sinwoo runs all Skill AMP; the Rye-deck posters run ATK%.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 39,
@@ -64907,7 +65076,9 @@
     "why": "Beam value.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 40,
@@ -64916,7 +65087,9 @@
     "why": "ATK buff value.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 41,
@@ -64925,7 +65098,9 @@
     "why": "Survival; a commenter asks why HP rather than DR.",
     "disputed": "Sugar Pocket suggests Focus to land her debuff.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 42,
@@ -64934,7 +65109,9 @@
     "why": "Front tank.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 43,
@@ -64943,7 +65120,9 @@
     "why": "Debuff uptime at the front.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 44,
@@ -64952,7 +65131,9 @@
     "why": "Drone uptime; only at 5★+.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 45,
@@ -64961,7 +65142,9 @@
     "why": "The carry of the Rapid Fire deck.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 46,
@@ -64970,7 +65153,9 @@
     "why": "Moon Rabbit makes crit RES less useful than DR; evasion stacked above the enemy's accuracy.",
     "disputed": null,
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 47,
@@ -64979,7 +65164,9 @@
     "why": "Milk is captain and must hold ATK #1 so Passion Pay (열정페이) and the ATK-targeted perks land on it; its buffs scale with its own ATK.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 48,
@@ -64988,7 +65175,9 @@
     "why": "It dies easily; two DR lines are enough for a 15% push without Skill AMP. Too much ATK% steals ATK-targeted buffs from Milk.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 49,
@@ -64997,7 +65186,9 @@
     "why": "The beam's strength is its Skill AMP; its target is set by the team's ATK order, not by Pomegranate's own lines.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 50,
@@ -65006,7 +65197,9 @@
     "why": "In ND러너's pre-easing Cherry Cola deck, ATK% puts Macaron in line for Pomegranate's beam.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 51,
@@ -65015,7 +65208,9 @@
     "why": "A damage dealer in the Cherry Cola decks.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 52,
@@ -65024,7 +65219,9 @@
     "why": "It stands at the front and dies easily.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 53,
@@ -65033,7 +65230,9 @@
     "why": "Its DEF shred is a debuff: below the stage's focus requirement it doesn't land ('an empty-can Dark Choco'), and in the Rift 1,023 focus wasn't enough to stack shred alone.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 54,
@@ -65042,7 +65241,9 @@
     "why": "ND러너 follows the conquest trend for Brightseeker on stages too.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 55,
@@ -65051,7 +65252,9 @@
     "why": "One side says Bari's skill needs ATK%; the other that Soul Guidance damage is based on the receiving ally, though ATK% still helps it take Pomegranate's beam.",
     "disputed": "해태 (ATK% required) vs 캔디빈 (damage based on the receiver).",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 56,
@@ -65060,7 +65263,9 @@
     "why": "Survival floor in ND러너's pre-easing auto deck.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 57,
@@ -65069,7 +65274,9 @@
     "why": "The bracket reads displayed power; a crit-resist line adds about 3–4M, 30–66M over a team, which can be the difference at a bracket line. Re-roll to Skill AMP and the rest after reaching the Rift.",
     "disputed": null,
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 58,
@@ -65078,7 +65285,9 @@
     "why": "Passion Pay and Rapid Promotion follow the highest ATK; if Milk isn't first they land elsewhere.",
     "disputed": null,
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 59,
@@ -65087,7 +65296,9 @@
     "why": "Most players run Skill AMP on Macaron everywhere; putting it high in ATK then means levelling the dealers down further. ND러너 gave it ATK runes to hold ATK #1 after Milk.",
     "disputed": "스미노프TFT switched Macaron from Skill AMP to ATK and felt no gain (dc:62042); ND러너 and 그니 use ATK when it is a beam target.",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 60,
@@ -65096,7 +65307,9 @@
     "why": "One ATK% line keeps it in the beam ranks without stealing Milk's first place.",
     "disputed": null,
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 61,
@@ -65105,7 +65318,9 @@
     "why": "Past 50 Skill Haste it attacks with six drones; its haste also decides whether Rapid Promotion is worth a perk slot.",
     "disputed": null,
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 62,
@@ -65114,7 +65329,9 @@
     "why": "그니 puts Macaron or Cheesecake sixth only when their ATK runes are set.",
     "disputed": null,
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 63,
@@ -65123,7 +65340,9 @@
     "why": "Cookies used only here still add damage; the 379G author calls it a quiet gain for a record push.",
     "disputed": null,
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    }
   ],
   "runeBuildDecks": [
@@ -65748,7 +65967,9 @@
     "context": "raid",
     "why": "Macaron already pushes crit rate past 300%, and above 100% effective crit rate, crit dmg is worth more per point. Target at +15: skill amp 9%+, crit dmg 20%+. Pick the piece with more skill amp over the one with higher displayed power.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 2,
@@ -65757,7 +65978,9 @@
     "context": "arena",
     "why": "In arena, enemy crit resistance eats crit rate, so crit rate is the arena pick. Several raid players run the arena set and lose damage.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 3,
@@ -65766,7 +65989,9 @@
     "context": "raid",
     "why": "The only slot group that rolls both of the raid's key stats. Max haste roll is +4.6 at plate +15.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 4,
@@ -65775,7 +66000,9 @@
     "context": "raid",
     "why": "Crit resistance does nothing against the raid boss. Survive the 30 s slam and reach the 17 s wipe.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 5,
@@ -65784,7 +66011,9 @@
     "context": "raid",
     "why": "Skill amp can't roll here. This group is the only one with both haste and damage reduction.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 6,
@@ -65793,7 +66022,9 @@
     "context": "raid",
     "why": "Each piece has a fixed option pool, so 6 of each is the ceiling across 12 pieces.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 7,
@@ -65802,7 +66033,9 @@
     "context": "raid",
     "why": "Move speed breaks the Cherry formation. The boss has low evasion and resistance, so accuracy and focus (stage stats) are dead lines.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 8,
@@ -65811,7 +66044,9 @@
     "context": "raid",
     "why": "Gear presets let raid gear stop doubling as arena gear. Posters describe the switch as a big jump.",
     "mode": "guild_conquest",
-    "recordSlug": "001-guild-conquest-meta"
+    "recordSlug": "001-guild-conquest-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 9,
@@ -65820,7 +66055,9 @@
     "context": "arena",
     "why": "Opponents stack crit RES and Moon Rabbit cuts crit rate, so crit damage often never procs; crit rate is the Arena pick and crit damage the Guild Conquest one. Skill AMP stays first: it scales buffs too. One Accuracy line here is optional.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 10,
@@ -65829,7 +66066,9 @@
     "context": "arena",
     "why": "Every right-side piece carries Skill Haste; this group also rolls Skill AMP.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 11,
@@ -65838,7 +66077,9 @@
     "context": "arena",
     "why": "Most Arena damage crits. Run crit RES on 4–6 of the lower pieces; past about 60% crit RES, DR is worth more (a winning Milk had 60.8% crit RES and 38.4% DR against 83.6% and 24.7% on the losing side). DR + HP is the minority choice; stacking HP is worse than DR.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 12,
@@ -65847,7 +66088,9 @@
     "context": "arena",
     "why": "Keeps the sixth Skill Haste line while adding survival.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 13,
@@ -65856,7 +66099,9 @@
     "context": "arena",
     "why": "Whoever casts first wins, so heal and shield decks treat six Skill Haste lines as non-negotiable. Bari dive decks reportedly drop some.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 14,
@@ -65865,7 +66110,9 @@
     "context": "arena",
     "why": "Typical enemy evasion is about 650, so accuracy is dead weight outside evasion matchups; accuracy and focus are stage stats that inflate power (뻥투력).",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 15,
@@ -65874,7 +66121,9 @@
     "context": "arena",
     "why": "Crit RES is useless in Guild Conquest and Skill Haste/crit RES lines show little power, so an arena preset looks weaker than it is. Every mode has its own preset slot. Noorimer (Season 3 #2) is the exception: one set for everything.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 16,
@@ -65883,7 +66132,9 @@
     "context": "arena",
     "why": "For the evasion deck only: about 1000 evasion, six Skill Haste pieces, and Focus to land Vampire's accuracy-down and Doughnut's polymorph.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 17,
@@ -65892,7 +66143,9 @@
     "context": "stage",
     "why": "Accuracy cancels evasion; the evasion deck lost even to 7M attackers with accuracy.",
     "mode": "arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 18,
@@ -65901,7 +66154,9 @@
     "context": "arena",
     "why": "Players who forgot to switch kept losing to equal-power opponents.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 19,
@@ -65910,7 +66165,9 @@
     "context": "arena",
     "why": "The same Arena & Rumble guide applies the six-haste rule to both modes.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 20,
@@ -65919,7 +66176,9 @@
     "context": "arena",
     "why": "RES lowers the chance of receiving Moon Rabbit's debuff, which is on most Season 1 defenses; DR is worth more than crit RES against a crit-cutting Moon Rabbit.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 21,
@@ -65928,7 +66187,9 @@
     "context": "arena",
     "why": "Cross-server opponents can't scout it. Worked on an 8.41M Rye deck and on a charge deck; its margin over typical 1,000–1,050 accuracy is disputed.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 22,
@@ -65937,7 +66198,9 @@
     "context": "stage",
     "why": "An observation, not a guide; a reply guesses it is to beat evasion defenders.",
     "mode": "rumble_arena",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 23,
@@ -65946,7 +66209,9 @@
     "context": "stage",
     "why": "Stage damage is set by the bracket, and the bracket by displayed power, so the stage preset is rolled for power ('순수 뻥투'), weapons and plates first. Crit resist and crit damage lines inflate power the most; DEF is treated as no option. When two pieces are within a few million, take the one with Skill AMP, Skill Haste or damage reduction. Since the easing, pushers past stage 300 rank power over Skill Haste over accuracy.",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 24,
@@ -65955,7 +66220,9 @@
     "context": "stage",
     "why": "Gear power is weighted toward balanced stats: a duplicate stat adds little displayed power and a missing one adds a lot, so an accuracy/focus-heavy set lowers team power and can drop the bracket. Focus only matters once accuracy lands (a miss is a 0% debuff chance). One guide's split: accuracy/focus-heavy gear for a 35% attempt, combat gear with a little accuracy/focus at 55%.",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 25,
@@ -65964,7 +66231,9 @@
     "context": "stage",
     "why": "Each stage has accuracy and focus requirements (accuracy tops out at 1,203.5). After the easing 900 accuracy is called enough to 328; ND러너 keeps about 1,000 past 300 and calls 1,300 wasted. Swap to an accuracy piece without hesitation when it also gives more power. Before the easing 35% pushers needed 1,000–1,100+.",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 26,
@@ -65973,7 +66242,9 @@
     "context": "stage",
     "why": "Weapons: Skill AMP is the must-have line, then crit; stage enemies have no crit resistance, so one guide prefers crit rate over crit damage. Accuracy or focus goes here when the stage requirement isn't met.",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 27,
@@ -65982,7 +66253,9 @@
     "context": "stage",
     "why": "Stage mobs don't crit, so crit resist does nothing in the fight (월린, 쿠키키키), but it inflates displayed power and so can lift the bracket (레벅's preset guide). Keep it only when the bracket line is what's missing.",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 28,
@@ -65991,7 +66264,9 @@
     "context": "stage",
     "why": "Accessories carry Skill AMP and Skill Haste; about three Skill Haste lines across the set keeps the heal and buff rotation turning. One 240-30 GingerCraven clear needed 20+ Skill Haste from gear.",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 29,
@@ -66000,7 +66275,9 @@
     "context": "stage",
     "why": "Armour is taken for power. When the front line dies (GingerCraven's burst before the easing), damage reduction and HP replace crit resist and evasion.",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 30,
@@ -66009,7 +66286,9 @@
     "context": "stage",
     "why": "Two stage presets are common: an arena-like set (all Skill Haste lines) pushes smoothest on auto, and a 'power' set is equipped only when the team sits just under a bracket line. One commenter measured the arena set only about 200M below a stage set with two accuracy lines (crit resist inflates both); another couldn't reach 35% on the arena set. A 15% clear at 301-27 used a preset named 뻥투 (inflated power).",
     "mode": "stage",
-    "recordSlug": "003-stage-pushing-meta"
+    "recordSlug": "003-stage-pushing-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 31,
@@ -66018,7 +66297,9 @@
     "context": "arena",
     "why": "The boss is not gated by accuracy the way stages are, so the lines go to damage and cast rate; most top posts reuse their arena preset.",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 32,
@@ -66027,7 +66308,9 @@
     "context": "raid",
     "why": "Milk arrives sooner; one poster went from 50-60G to 75.4G on a move-speed preset that showed less power, and others report Milk coming out at once.",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 33,
@@ -66036,7 +66319,9 @@
     "context": "raid",
     "why": "서신우 saw no misses on his Conquest preset and fights on it; 섬영's weekly best was set on a preset labelled 토벌.",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 34,
@@ -66045,7 +66330,9 @@
     "context": "stage",
     "why": "뱅국's guide picks gear for power; the other guides trade displayed power for damage lines, and the move-speed case shows lower power scoring higher.",
     "mode": "crumble_dungeon",
-    "recordSlug": "004-golden-drop-meta"
+    "recordSlug": "004-golden-drop-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    }
   ],
   "scores": [
@@ -84994,7 +85281,9 @@
     "conditions": "Bari and Oven at 8–10★, or a clear spec lead. At similar power with Bari at 8★ or less the edge reverses (bari-oven-vs-rye-onecarry).",
     "why": "The three chargers dash at the highest-ATK enemy (Milk, whose HP Passion Pay has cut by 20%) and do about 2M each within 3.5 s, before Herb, Grapevine and the shields cycle. Rye is the only damage, so losing her or Milk ends the fight. Regular Arena has no Rumble +30% DR to blunt the dive.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 2,
@@ -85005,7 +85294,9 @@
     "conditions": "Similar power, Bari at 8★ or less, Rockstar in the Rye deck's flex slot, and a merc Lv.4 captain on both sides. One regular-Arena screenshot: 13.27M beat a 20.4M server #2.",
     "why": "If the opening dive doesn't kill, the Bari deck has no sustain. Three tanks with Armor Repair, Ion's and Rockstar's shields and Doughnut's polymorph absorb it, and Rye wins the long fight.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 3,
@@ -85016,7 +85307,9 @@
     "conditions": "Theory and anecdotes only: no formation screenshot or result exists.",
     "why": "Crepe's knockback pushes the enemy Moon Rabbit before its debuff lands, and Espresso's black hole launches Rye out of the back line.",
     "confidence": "low",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 4,
@@ -85027,7 +85320,9 @@
     "conditions": "Stated by the same posters who proposed Crepe–Espresso; no result shown.",
     "why": "Bari's Soul Guidance gives the chargers push and lift immunity (official skill text), cancelling Crepe's and Espresso's displacement.",
     "confidence": "low",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 5,
@@ -85038,7 +85333,9 @@
     "conditions": "Bari under 5★, so Soul Guidance covers a single charger. Stated for 'any deck with Strawberry Crepe'; no mechanism given.",
     "why": "Not explained in the source. Plausibly the unwrapped chargers get pushed out of the dive, but that is an inference.",
     "confidence": "low",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 6,
@@ -85049,7 +85346,9 @@
     "conditions": "17.59M Chain defense against a 17–18M Rye deck with 1,100 accuracy: 3 losses of 3.",
     "why": "Rye's first volley fires where she faces and was wasted on an isolated Schwarzwälder; the Chain deck's many sub-dealers take Rye's supports apart, and Rye is the only damage.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 7,
@@ -85060,7 +85359,9 @@
     "conditions": "The Brightseeker/Doughnut version lost to the Grapevine/Skating Queen version about 2M lower.",
     "why": "The Grapevine version has a second healer for when the front-line Herb dies; Brightseeker's drones vanish when their target dies and she hits one target.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 8,
@@ -85071,7 +85372,9 @@
     "conditions": "Only when the attacker switches to a stage gear preset with accuracy lines. The edge is the gear, not the lineup: the evasion deck lost even to 7M teams with accuracy. Names are visible in regular Arena, so evasion defenders get remembered.",
     "why": "Accuracy cancels evasion. Arena presets usually carry no accuracy lines because typical enemy evasion is only about 650; the evasion deck's roughly 1000 exploits exactly that.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 9,
@@ -85082,7 +85385,9 @@
     "conditions": "Even at 1★ Bari and up to twice the power in launch week; a 5★ Bari deck one-shots 10★ Brightseeker decks 3–4M stronger.",
     "why": "The chargers reach the back line and kill the ranged carries and Milk on contact.",
     "confidence": "high",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 10,
@@ -85093,7 +85398,9 @@
     "conditions": "Across a 3–4M power deficit (pre-Bari).",
     "why": "Stacking every buff on one piercing carry beats spreading them over several ranged dealers.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 11,
@@ -85104,7 +85411,9 @@
     "conditions": "Even with the ranged side 3–4M stronger; works with Bari at 2–3★.",
     "why": "Buffed chargers with +30% HP reach the back-line carries first; Moon Rabbit on the charge side hits the front-line Espresso.",
     "confidence": "high",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 12,
@@ -85115,7 +85424,9 @@
     "conditions": "One win on video: 18.67M with a 1★ Bari against a 15.35M Rye/Brightseeker/Wind Archer/Milky Way deck.",
     "why": "Bari (1.58M) and Oven (1.21M) out-damaged every ranged carry.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 13,
@@ -85126,7 +85437,9 @@
     "conditions": "Mid spec (Bari around 5★ or below) at similar power; wins reported up to +6M and once at −8M (18.77M over 27M). A single log shows a Rye defense holding against an all-10★ Bari–Oven–Cherry Cola attacker.",
     "why": "Rumble's +30% DR lets the Hound/Ion/Moon Rabbit front and two healers survive the opening dive, then Rye out-damages. The same deck dies in 0.5 s to this archetype in regular Arena.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 14,
@@ -85137,7 +85450,9 @@
     "conditions": "Whale top-end (SR cookies at 10★). On the 2026-09-27 board Rye is on 6 of the top 100 defenses, all ranked 30–100.",
     "why": "Pomegranate-buffed divers kill the back line on contact, before the tanks and heals matter.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 15,
@@ -85148,7 +85463,9 @@
     "conditions": "One player on day 1, winning at −2M against the then-#1 Bari–Oven deck.",
     "why": "Crepe pushes the enemy front line together for Bari and Cherry Cola (disputed by a commenter).",
     "confidence": "low",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 16,
@@ -85159,7 +85476,9 @@
     "conditions": "Lost to every Rye deck the player met, including a Brightseeker/Rye/Moon Rabbit/Ion deck 2M weaker.",
     "why": "Moon Rabbit plus Ion hold the charge wave while Rye shoots.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 17,
@@ -85170,7 +85489,9 @@
     "conditions": "Any early-sweep Bari deck; the author calls it catastrophic once Bari is 5★ or more with Oven Wanderer. Stated from about 100 fights, no loss shown.",
     "why": "The charge burst wipes the Wizard deck in the opening seconds, before Wizard gets going.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 18,
@@ -85181,7 +85502,9 @@
     "conditions": "Near-certain from equal power to +3M for the ranged side; larger gaps win if the Wizard deck survives 10 s. 12.28M beat 17–21M in the screenshots.",
     "why": "Wizard's area damage out-damages the single ranged carries once the fight passes about 10 s.",
     "confidence": "medium",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 19,
@@ -85192,7 +85515,9 @@
     "conditions": "Only when the Bari/Oven side is at mediocre spec; stated as a warning, not shown.",
     "why": "Rumble's +30% DR blunts the charge burst, and a Rapid Fire deck that survives it wins.",
     "confidence": "low",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 20,
@@ -85203,7 +85528,9 @@
     "conditions": "One player's attack rotation (Rye → Bari, Crepe–Espresso → Rye, Bari → Crepe–Espresso); no result shown.",
     "why": "Not explained; in Arena the same idea rests on Crepe pushing Moon Rabbit and Espresso launching Rye.",
     "confidence": "low",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    },
    {
     "id": 21,
@@ -85214,7 +85541,9 @@
     "conditions": "8.41M with 1,005 evasion beat 16.53M with 950 accuracy. Disputed: one commenter says evasion needs about +400 over accuracy to matter and credits Vampire.",
     "why": "Attacks miss; Vampire lowers the top attacker's accuracy further. Names are hidden in Rumble, so opponents can't remember evasion defenders.",
     "confidence": "low",
-    "recordSlug": "002-pvp-meta"
+    "recordSlug": "002-pvp-meta",
+    "obsoleteSince": null,
+    "obsoleteReason": null
    }
   ],
   "usageStats": [

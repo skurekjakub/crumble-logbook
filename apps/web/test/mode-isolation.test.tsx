@@ -10,6 +10,7 @@ import type {
   TimelineEvent,
 } from "../src/api/types";
 import type { Canned } from "./helpers";
+import { CURRENT, CURRENT_DECK } from "./helpers";
 import { renderRoute, VIEW_SOURCES } from "./view-harness";
 
 const CONQUEST = "001-guild-conquest-meta";
@@ -27,6 +28,7 @@ function pair<T>(conquest: T, pvp: T) {
 }
 
 const deckBase: Omit<Deck, "id" | "mode" | "nameEn"> = {
+  ...CURRENT_DECK,
   position: 1,
   recordSlug: CONQUEST,
   nameKr: null,
@@ -72,6 +74,7 @@ const TAKEAWAYS = pair<Takeaway>(
 
 const RUNES = pair<RuneBuild>(
   {
+    ...CURRENT,
     id: 1,
     cookieKr: "우유",
     en: "Milk",
@@ -84,6 +87,7 @@ const RUNES = pair<RuneBuild>(
     sources: [],
   },
   {
+    ...CURRENT,
     id: 2,
     cookieKr: "호밀",
     en: "Rye",
@@ -99,6 +103,7 @@ const RUNES = pair<RuneBuild>(
 
 const GEAR = pair<GearRec>(
   {
+    ...CURRENT,
     id: 1,
     mode: "guild_conquest",
     recordSlug: CONQUEST,
@@ -109,6 +114,7 @@ const GEAR = pair<GearRec>(
     sources: [],
   },
   {
+    ...CURRENT,
     id: 2,
     mode: "arena",
     recordSlug: PVP,
