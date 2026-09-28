@@ -11,6 +11,14 @@ ol.wave {
 ol.wave li {
   break-inside: avoid;
 }
+/* A run's build carries a glossed ATK chain; above phone width its column is wide enough
+   for the chain to wrap between names, not inside them. */
+@media (min-width: 641px) {
+  td.run-build {
+    min-width: 20rem;
+  }
+}
+
 ol.wave li.flagged {
   color: var(--bad);
   font-weight: 600;

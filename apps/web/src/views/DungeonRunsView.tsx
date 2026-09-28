@@ -287,7 +287,7 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                   </>
                 );
               },
-              className: "wide",
+              className: "wide run-build",
             },
             { header: "Note", cell: (r) => r.note ?? "", className: "wide" },
             { header: "Sources", cell: (r) => <SourceChips ids={r.sources} sources={sources} /> },
