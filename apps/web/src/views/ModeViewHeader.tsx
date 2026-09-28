@@ -11,6 +11,9 @@ import { ViewHeader } from "../components/ViewHeader";
 /**
  * The mode's mechanics filed under `topic`, each as a note with its body,
  * confidence and sources; nothing when none are filed under it.
+ *
+ * @param props - the mode's scope and the mechanics topic
+ * @returns the notes, inside the mechanics query's loading and error states
  */
 function TopicNotes({ scope, topic }: { scope: ModeScope; topic: string }) {
   const sources = useSourceIndex();
@@ -44,6 +47,9 @@ export interface ModeViewHeaderProps {
 /**
  * A mode view's heading and lede from the mode's copy, followed by the
  * cited mechanics of the copy's `topic` when it names one.
+ *
+ * @param props - the mode, the view's copy key, and the title to use when the copy has none
+ * @returns the header
  */
 export function ModeViewHeader({ mode, view, fallbackTitle }: ModeViewHeaderProps) {
   const copy = mode.copy[view];

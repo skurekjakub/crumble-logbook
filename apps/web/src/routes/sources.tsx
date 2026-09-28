@@ -8,7 +8,11 @@ export const Route = createFileRoute("/sources")({
   component: Sources,
 });
 
-/** Every cited source, with the site and title filters in the URL. */
+/**
+ * Every cited source, with the site and title filters in the URL.
+ *
+ * @returns the view
+ */
 function Sources() {
   const onSearch = useSearchPatch<SourcesSearch>();
   return <SourcesView search={Route.useSearch()} onSearch={onSearch} />;

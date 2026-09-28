@@ -21,7 +21,12 @@ function coveredModes(record: ResearchRecord): ModeSection[] {
   return MODES.filter((m) => covered.has(m.scope.mode));
 }
 
-/** A mode's name linking to its landing page, then a link per screen. */
+/**
+ * A mode's name linking to its landing page, then a link per screen.
+ *
+ * @param props - the mode
+ * @returns the links
+ */
 function ModeLinks({ mode }: { mode: ModeSection }) {
   return (
     <div className="mode-links">
@@ -40,7 +45,12 @@ function ModeLinks({ mode }: { mode: ModeSection }) {
   );
 }
 
-/** One record as a card: slug, question, status, dates, lede, source count and its modes' screens. */
+/**
+ * One record as a card: slug, question, status, dates, lede, source count and its modes' screens.
+ *
+ * @param props - the record, and its source count once known
+ * @returns the card
+ */
 function RecordCard({ record, sources }: { record: ResearchRecord; sources: number | undefined }) {
   const modes = coveredModes(record);
   return (
@@ -74,11 +84,19 @@ function RecordCard({ record, sources }: { record: ResearchRecord; sources: numb
  * The research index: every research record with its slug, question,
  * status, dates, source count, and links to the screens of each mode it
  * covers. "No research records yet." when there are none.
+ *
+ * @returns the research index
  */
 export function ResearchView() {
   const records = useQuery(recordsQuery());
   const counts = useQuery({
     ...sourcesQuery(),
+    /**
+     * Counts each record's sources.
+     *
+     * @param rows - every source, with the records it belongs to
+     * @returns record slug → source count
+     */
     select: (rows) => {
       const n = new Map<string, number>();
       for (const s of rows) for (const r of s.records) n.set(r, (n.get(r) ?? 0) + 1);

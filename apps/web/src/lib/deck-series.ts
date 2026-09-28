@@ -11,12 +11,14 @@ export interface SeriesDeck {
 export interface DeckSeries {
   /**
    * The deck's English name.
+   *
    * @param id - a deck id, or null for a score with no deck
    * @returns the name; the id itself for an unknown deck, "Other" for null
    */
   name(id: string | null): string;
   /**
    * The deck's series colour, stable per deck whatever the view filters.
+   *
    * @param id - a deck id, or null for a score with no deck
    * @returns a `var(--sN)` reference by display order; `var(--s0)` past the
    *   series slots, for an unknown deck, or for null
@@ -33,7 +35,9 @@ export interface DeckSeries {
 export function deckSeries(decks: readonly SeriesDeck[]): DeckSeries {
   const order = new Map(decks.map((d, i) => [d.id, { i, name: d.nameEn }]));
   return {
+    /** @inheritdoc */
     name: (id) => (id == null ? "Other" : (order.get(id)?.name ?? id)),
+    /** @inheritdoc */
     color: (id) => {
       const i = id == null ? undefined : order.get(id)?.i;
       return i != null && i < SERIES_SLOTS ? `var(--s${i + 1})` : "var(--s0)";

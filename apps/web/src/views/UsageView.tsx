@@ -21,7 +21,12 @@ const KIND_LABELS: Readonly<Record<UsageStat["kind"], string>> = {
   team: "Teams",
 };
 
-/** A kind's card id, which the "On this page" list links to. */
+/**
+ * Builds a kind's card id, which the "On this page" list links to.
+ *
+ * @param kind - the usage kind
+ * @returns `usage-<kind>`
+ */
 const kindId = (kind: UsageStat["kind"]) => `usage-${kind}`;
 
 /** Usage rows that share a sample and capture date. */
@@ -35,7 +40,9 @@ interface Sample {
 
 /**
  * Groups rows by sample and capture date, in first-seen order.
+ *
  * @param rows - usage rows of one kind, in list order
+ * @returns the groups, each with its rows in list order and every source they cite
  */
 function samples(rows: readonly UsageStat[]): Sample[] {
   const groups = new Map<string, Sample>();
@@ -54,7 +61,13 @@ function samples(rows: readonly UsageStat[]): Sample[] {
   return [...groups.values()];
 }
 
-/** Whether a row cites exactly the sources its sample group cites. */
+/**
+ * Reports whether a row cites exactly the sources its sample group cites.
+ *
+ * @param row - the usage row
+ * @param group - the row's sample group
+ * @returns `true` if the row's sources match the group's
+ */
 function citesGroup(row: UsageStat, group: Sample): boolean {
   return (
     row.sources.length === group.sources.length &&
@@ -62,13 +75,19 @@ function citesGroup(row: UsageStat, group: Sample): boolean {
   );
 }
 
-/** One sample's bars: the sample and capture date with its sources, then a bar per subject. */
+/**
+ * One sample's bars: the sample and capture date with its sources, then a bar per subject.
+ *
+ * @param props - the sample group, the English namer and the source index
+ * @returns the sample line and its bars
+ */
 function SampleBars({
   group,
   en,
   sources,
 }: {
   group: Sample;
+  /** Names a Korean term in English, or null when the glossary doesn't know it. */
   en: (kr: string) => string | null;
   sources: SourceIndex;
 }) {
@@ -107,19 +126,38 @@ function SampleBars({
  * usage data recorded yet." when there are none.
  *
  * @param mode - the mode whose usage, record and copy the view shows
+ * @returns the usage view
  */
 export function UsageView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
   const usage = useQuery(usageQuery(mode.scope));
   const caveat = useQuery({
     ...recordQuery(mode.recordSlug ?? ""),
+    /**
+     * Picks the record's caveat for this mode.
+     *
+     * @param r - the research record
+     * @returns the caveat, or null
+     */
     select: (r) => r.modes.find((m) => m.mode === mode.scope.mode)?.caveat ?? null,
     enabled: mode.recordSlug != null,
   }).data;
   const glossary = useQuery({
     ...glossaryQuery(),
+    /**
+     * Indexes the glossary's English names by Korean term.
+     *
+     * @param entries - the glossary entries
+     * @returns Korean term → English name
+     */
     select: (entries) => new Map(entries.map((e) => [e.kr, e.en] as const)),
   }).data;
+  /**
+   * Names a Korean term in English.
+   *
+   * @param kr - the Korean term
+   * @returns the English name, or null when unknown or the glossary hasn't loaded
+   */
   const en = (kr: string) => glossary?.get(kr) ?? null;
 
   return (

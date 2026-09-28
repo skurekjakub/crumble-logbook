@@ -9,7 +9,11 @@ export const Route = createFileRoute("/arena/runes")({
   component: ArenaRunes,
 });
 
-/** The Arena rune builds, with the deck and text filters in the URL. */
+/**
+ * The Arena rune builds, with the deck and text filters in the URL.
+ *
+ * @returns the view
+ */
 function ArenaRunes() {
   const onSearch = useSearchPatch<RunesSearch>();
   return <RunesView mode={ARENA} search={Route.useSearch()} onSearch={onSearch} />;

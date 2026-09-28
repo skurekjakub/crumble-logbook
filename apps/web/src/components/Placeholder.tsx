@@ -8,7 +8,12 @@ export interface PlaceholderProps {
   note?: string;
 }
 
-/** A titled empty state for a route whose view isn't built yet. */
+/**
+ * A titled empty state for a route whose view isn't built yet.
+ *
+ * @param props - the view's name and what will be there
+ * @returns the heading and the empty state
+ */
 export function Placeholder({
   title,
   note = "This view hasn't been built yet.",

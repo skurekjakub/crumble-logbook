@@ -12,7 +12,12 @@ export interface PageHeaderProps {
   stats: ReadonlyArray<readonly [label: string, value: string | number | null | undefined]>;
 }
 
-/** The page header: game label, title, lede, and the stat stamp on the right. */
+/**
+ * The page header: game label, title, lede, and the stat stamp on the right.
+ *
+ * @param props - the label's context, the title, the lede and the stats
+ * @returns the header
+ */
 export function PageHeader({ context, title, lede, stats }: PageHeaderProps) {
   const shown = stats.filter(([, v]) => v != null && v !== "");
   return (

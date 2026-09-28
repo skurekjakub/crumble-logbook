@@ -13,6 +13,7 @@ import { ModeViewHeader } from "./ModeViewHeader";
  * With no data every slot says "No data yet."
  *
  * @param mode - the mode whose gear and copy the view shows
+ * @returns the gear view
  */
 export function GearView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();

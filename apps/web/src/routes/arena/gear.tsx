@@ -3,5 +3,10 @@ import { ARENA } from "../../app/modes";
 import { GearView } from "../../views/GearView";
 
 export const Route = createFileRoute("/arena/gear")({
+  /**
+   * Renders the Arena gear view.
+   *
+   * @returns the view
+   */
   component: () => <GearView mode={ARENA} />,
 });

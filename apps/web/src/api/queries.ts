@@ -45,132 +45,223 @@ export interface ModeScope {
   mode: GameMode;
 }
 
-/** A list query key's scope part: the mode, or `null` for every mode. */
+/**
+ * Builds a list query key's scope part.
+ *
+ * @param scope - the mode scope, when the list has one
+ * @returns `{ mode }`, with `null` for every mode
+ */
 function scopeKey(scope: ModeScope | undefined) {
   return { mode: scope?.mode ?? null };
 }
 
-/** All research records, by slug. */
+/**
+ * All research records, by slug.
+ *
+ * @returns the query options
+ */
 export const recordsQuery = () =>
   queryOptions({
     queryKey: ["records"],
+    /**
+     * Fetches every research record.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.records.$get({ query: {} })),
   });
 
 /**
  * One research record: the header's lede, caveat, season label and update date.
+ *
  * @param slug - the record's slug, e.g. `001-guild-conquest-meta`
+ * @returns the query options
  */
 export const recordQuery = (slug: string) =>
   queryOptions({
     queryKey: ["records", slug],
+    /**
+     * Fetches the record.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.records[":slug"].$get({ param: { slug } })),
   });
 
 /**
  * Sources, newest first, each with the records it belongs to. Feed the
  * unfiltered list to `useSourceIndex` for chips.
+ *
  * @param filter - restrict to one site, and/or to the sources one research
  *   record (by slug) owns or cites
+ * @returns the query options
  */
 export const sourcesQuery = (filter: { site?: SourceSiteFilter; record?: string } = {}) =>
   queryOptions({
     queryKey: ["sources", { site: filter.site ?? null, record: filter.record ?? null }],
+    /**
+     * Fetches the filtered sources.
+     *
+     * @returns the response's success body
+     */
     queryFn: () =>
       parseResponse(api.sources.$get({ query: { site: filter.site, record: filter.record } })),
   });
 
 /**
  * Glossary entries, ordered by Korean name.
+ *
  * @param kind - restrict to one kind
+ * @returns the query options
  */
 export const glossaryQuery = (kind?: GlossaryKindFilter) =>
   queryOptions({
     queryKey: ["glossary", { kind: kind ?? null }],
+    /**
+     * Fetches the glossary entries.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.glossary.$get({ query: { kind } })),
   });
 
 /**
  * Decks in display order, with cookies, pets and ATK order resolved to English.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const decksQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["decks", scopeKey(scope)],
+    /**
+     * Fetches the decks.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.decks.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
  * One deck.
+ *
  * @param id - the deck's slug, e.g. `cherry`
+ * @returns the query options
  */
 export const deckQuery = (id: string) =>
   queryOptions({
     queryKey: ["decks", id],
+    /**
+     * Fetches the deck.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.decks[":id"].$get({ param: { id } })),
   });
 
 /**
  * Scores sorted by damage, highest first, each with its 배 `ratio`. Scores
  * carry no mode, so the scope only keys the cache.
+ *
  * @param scope - the mode the list is shown in, when given
  * @param deck - restrict to one deck's slug
+ * @returns the query options
  */
 export const scoresQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
     queryKey: ["scores", { ...scopeKey(scope), deck: deck ?? null }],
+    /**
+     * Fetches the scores.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.scores.$get({ query: { deck } })),
   });
 
 /**
  * Rune builds, with each cookie resolved to English and the decks it applies to.
+ *
  * @param scope - the mode to list, when given
  * @param deck - restrict to builds linked to one deck's slug
+ * @returns the query options
  */
 export const runeBuildsQuery = (scope?: ModeScope, deck?: string) =>
   queryOptions({
     queryKey: ["rune-builds", { ...scopeKey(scope), deck: deck ?? null }],
+    /**
+     * Fetches the rune builds.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api["rune-builds"].$get({ query: { mode: scope?.mode, deck } })),
   });
 
 /**
  * Gear substat recommendations.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const gearRecsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["gear-recs", scopeKey(scope)],
+    /**
+     * Fetches the gear recommendations.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api["gear-recs"].$get({ query: { mode: scope?.mode } })),
   });
 
 /**
  * A boss's fight events in elapsed-time order; events with no time come last.
+ *
  * @param boss - the boss id, e.g. `pinata`
+ * @returns the query options
  */
 export const fightEventsQuery = (boss: string) =>
   queryOptions({
     queryKey: ["fight-events", { boss }],
+    /**
+     * Fetches the boss's fight events.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api["fight-events"].$get({ query: { boss } })),
   });
 
 /**
  * Skill buff and debuff values per cookie and skill grade, ordered by cookie,
  * effect type, then grade.
+ *
  * @param cookie - restrict to one cookie (Korean name, shorthand or English)
+ * @returns the query options
  */
 export const buffValuesQuery = (cookie?: string) =>
   queryOptions({
     queryKey: ["buff-values", { cookie: cookie ?? null }],
+    /**
+     * Fetches the buff values.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api["buff-values"].$get({ query: { cookie } })),
   });
 
 /**
  * Mechanics, each with a confidence level.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const mechanicsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["mechanics", scopeKey(scope)],
+    /**
+     * Fetches the mechanics.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.mechanics.$get({ query: { mode: scope?.mode } })),
   });
 
@@ -179,11 +270,18 @@ export const RULES_TOPIC = "rules";
 
 /**
  * A mode's rules: its mechanics filed under {@link RULES_TOPIC}.
+ *
  * @param scope - the mode whose rules to list
+ * @returns the query options
  */
 export const rulesQuery = (scope: ModeScope) =>
   queryOptions({
     queryKey: ["mechanics", { ...scopeKey(scope), topic: RULES_TOPIC }],
+    /**
+     * Fetches the mode's rules.
+     *
+     * @returns the response's success body
+     */
     queryFn: () =>
       parseResponse(api.mechanics.$get({ query: { mode: scope.mode, topic: RULES_TOPIC } })),
   });
@@ -191,74 +289,123 @@ export const rulesQuery = (scope: ModeScope) =>
 /**
  * Directed counter edges: each says which team is beaten by which, under
  * what conditions, why, and how confidently.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const countersQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["counters", scopeKey(scope)],
+    /**
+     * Fetches the counter edges.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.counters.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
  * Usage figures, highest share first, each with its sample and capture date.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const usageQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["usage", scopeKey(scope)],
+    /**
+     * Fetches the usage figures.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.usage.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
  * RNG factors and their mitigations.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const rngFactorsQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["rng-factors", scopeKey(scope)],
+    /**
+     * Fetches the RNG factors.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api["rng-factors"].$get({ query: { mode: scope?.mode } })),
   });
 
 /**
  * Dated meta events.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const timelineQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["timeline", scopeKey(scope)],
+    /**
+     * Fetches the timeline events.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.timeline.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
  * The overview's load-bearing takeaways.
+ *
  * @param scope - the mode to list, when given
+ * @returns the query options
  */
 export const takeawaysQuery = (scope?: ModeScope) =>
   queryOptions({
     queryKey: ["takeaways", scopeKey(scope)],
+    /**
+     * Fetches the takeaways.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.takeaways.$get({ query: { mode: scope?.mode } })),
   });
 
 /**
  * "For your account" recommendations, which belong to a research record
  * rather than a mode.
+ *
  * @param record - the record whose recommendations to list; null or
  *   omitted for every record's
+ * @returns the query options
  */
 export const recommendationsQuery = (record?: string | null) =>
   queryOptions({
     queryKey: ["recommendations", { record: record ?? null }],
+    /**
+     * Fetches the recommendations.
+     *
+     * @returns the response's success body
+     */
     queryFn: () =>
       parseResponse(api.recommendations.$get({ query: { record: record ?? undefined } })),
   });
 
 /**
  * Leaderboard rows in rank order.
+ *
  * @param filter - restrict to one season and/or board
+ * @returns the query options
  */
 export const rankingsQuery = (filter: { season?: number; board?: RankingBoardFilter } = {}) =>
   queryOptions({
     queryKey: ["rankings", { season: filter.season ?? null, board: filter.board ?? null }],
+    /**
+     * Fetches the leaderboard rows.
+     *
+     * @returns the response's success body
+     */
     queryFn: () =>
       parseResponse(
         api.rankings.$get({
@@ -270,9 +417,18 @@ export const rankingsQuery = (filter: { season?: number; board?: RankingBoardFil
       ),
   });
 
-/** Each board and season's latest leaderboard capture. */
+/**
+ * Each board and season's latest leaderboard capture.
+ *
+ * @returns the query options
+ */
 export const rankingSeasonsQuery = () =>
   queryOptions({
     queryKey: ["rankings", "seasons"],
+    /**
+     * Fetches the leaderboard seasons.
+     *
+     * @returns the response's success body
+     */
     queryFn: () => parseResponse(api.rankings.seasons.$get()),
   });

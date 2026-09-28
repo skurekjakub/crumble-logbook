@@ -12,6 +12,9 @@ export interface SourceChipsProps {
 /**
  * Source ids as chips. Ids found in `sources` link to their URL in a new
  * tab with the title as a tooltip; the rest render as plain chips.
+ *
+ * @param props - the source ids and the source index
+ * @returns the chips, or null when there are no ids
  */
 export function SourceChips({ ids, sources }: SourceChipsProps) {
   if (!ids?.length) return null;

@@ -3,7 +3,12 @@
  * damage ÷ team power, shown for comparison only and never used to rank.
  */
 
-/** Drops trailing zeros and a trailing decimal point: "2.00" → "2", "1.30" → "1.3". */
+/**
+ * Drops trailing zeros and a trailing decimal point: "2.00" → "2", "1.30" → "1.3".
+ *
+ * @param s - a formatted decimal number
+ * @returns the trimmed text
+ */
 function trimZeros(s: string): string {
   return s.replace(/\.?0+$/, "");
 }

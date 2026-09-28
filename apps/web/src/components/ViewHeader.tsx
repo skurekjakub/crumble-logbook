@@ -8,7 +8,12 @@ export interface ViewHeaderProps {
   lede?: ReactNode;
 }
 
-/** A view's heading and lede, at the top of its panel. */
+/**
+ * A view's heading and lede, at the top of its panel.
+ *
+ * @param props - the heading and the optional lede
+ * @returns the header
+ */
 export function ViewHeader({ title, lede }: ViewHeaderProps) {
   return (
     <div>

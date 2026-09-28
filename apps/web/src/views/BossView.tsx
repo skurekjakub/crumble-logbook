@@ -52,7 +52,12 @@ const PARTS = {
 /** The "On this page" list: one link per section. */
 const TOC = Object.values(PARTS).map((p) => ({ id: p.id, label: p.title }));
 
-/** A titled page section, exposed as a region named by its heading. */
+/**
+ * A titled page section, exposed as a region named by its heading.
+ *
+ * @param props - the section's heading id and text, and its content
+ * @returns the section
+ */
 function Section({
   part: { id, title },
   children,
@@ -68,7 +73,13 @@ function Section({
   );
 }
 
-/** The mechanics filed under `topic`, in their stored order. */
+/**
+ * Selects the mechanics filed under `topic`, in their stored order.
+ *
+ * @param mechanics - the mechanics
+ * @param topic - the topic to keep
+ * @returns the matching mechanics
+ */
 function byTopic(mechanics: readonly Mechanic[], topic: string): Mechanic[] {
   return mechanics.filter((m) => m.topic === topic);
 }
@@ -89,6 +100,9 @@ export interface BossViewProps {
  * the API data, selected by mechanics topic or fight-event key, with its
  * confidence and sources. Each block renders its own query, so one failed
  * resource leaves the others in place.
+ *
+ * @param props - the mode and the boss screen's config
+ * @returns the boss screen
  */
 export function BossView({ mode, boss }: BossViewProps) {
   const sources = useSourceIndex();
@@ -242,7 +256,12 @@ export function BossView({ mode, boss }: BossViewProps) {
   );
 }
 
-/** A mechanic's body as a one-line fact, with its confidence and sources; hatched when unverified. */
+/**
+ * A mechanic's body as a one-line fact, with its confidence and sources; hatched when unverified.
+ *
+ * @param props - the mechanic and the source index
+ * @returns the fact
+ */
 function FactNote({ m, sources }: { m: Mechanic; sources: SourceIndex }) {
   return (
     <div className={`boss-fact${m.confidence === "low" ? " low" : ""}`}>
@@ -253,7 +272,12 @@ function FactNote({ m, sources }: { m: Mechanic; sources: SourceIndex }) {
   );
 }
 
-/** A fight event inside a card: when it happens, its confidence, detail and sources. */
+/**
+ * A fight event inside a card: when it happens, its confidence, detail and sources.
+ *
+ * @param props - the event, the fight's length in seconds, and the source index
+ * @returns the note
+ */
 function EventNote({
   e,
   length,
@@ -277,7 +301,12 @@ function EventNote({
   );
 }
 
-/** A mechanic inside a card: title, confidence, body and sources; hatched when unverified. */
+/**
+ * A mechanic inside a card: title, confidence, body and sources; hatched when unverified.
+ *
+ * @param props - the mechanic and the source index
+ * @returns the note
+ */
 function MechanicNote({ m, sources }: { m: Mechanic; sources: SourceIndex }) {
   return (
     <div className={`boss-note${m.confidence === "low" ? " low" : ""}`}>
@@ -295,6 +324,9 @@ function MechanicNote({ m, sources }: { m: Mechanic; sources: SourceIndex }) {
  * One card per lethal pattern, built from its fight events and the
  * mechanics filed under its topic, titled by the countdown at its anchor
  * event. Patterns with neither are left out.
+ *
+ * @param props - the boss config, its fight events and mechanics, the fight's length, and the source index
+ * @returns the cards, or an empty state when no pattern has data
  */
 function Survival({
   boss,
@@ -341,7 +373,12 @@ function Survival({
   );
 }
 
-/** Names joined for prose: "A", "A and B", "A, B and C". */
+/**
+ * Joins names for prose: "A", "A and B", "A, B and C".
+ *
+ * @param names - the names, in order
+ * @returns the joined text; empty for no names
+ */
 function joinNames(names: readonly string[]): string {
   if (names.length < 2) return names.join("");
   return `${names.slice(0, -1).join(", ")} and ${names.at(-1)}`;
@@ -352,6 +389,9 @@ function joinNames(names: readonly string[]): string {
  * for how buffs and application chances scale. Self-only buffs are marked
  * and listed last; application chances are marked as such; a value carried
  * over from the column to its left is greyed.
+ *
+ * @param props - the buff values, the buff and debuff formula mechanics, and the source index
+ * @returns the formulas and the table, or an empty state when there are no values
  */
 function BuffTable({
   rows,
@@ -368,14 +408,35 @@ function BuffTable({
   const pivot = pivotBuffs(rows);
   const stars = buffStars(rows);
   const cells = new Map(pivot.map((r) => [r.key, starCells(r, stars)]));
+  /**
+   * Names a row's cookie.
+   *
+   * @param r - the row
+   * @returns the English name, or the Korean when unknown
+   */
   const name = (r: BuffStarRow) => r.en ?? r.cookieKr;
   const ampScaled = pivot.some((r) => r.scalesWithCasterAmp);
   const chances = [...new Set(pivot.filter((r) => r.chance).map(name))];
 
   const columns: Column<BuffStarRow>[] = [
-    { header: "Cookie", cell: (r) => <CookieName kr={r.cookieKr} en={r.en} /> },
+    {
+      header: "Cookie",
+      /**
+       * Renders the row's cookie name.
+       *
+       * @param r - the row
+       * @returns the name
+       */
+      cell: (r) => <CookieName kr={r.cookieKr} en={r.en} />,
+    },
     {
       header: "Effect",
+      /**
+       * Renders the row's effect, marked when self-only or a chance.
+       *
+       * @param r - the row
+       * @returns the effect label and its marks
+       */
       cell: (r) => (
         <>
           {effectLabel(r.effectType, r.base)}
@@ -386,6 +447,12 @@ function BuffTable({
     },
     ...stars.map((s, i): Column<BuffStarRow> => ({
       header: starLabel(s, stars),
+      /**
+       * Renders the row's value at this star column, greyed when carried over.
+       *
+       * @param r - the row
+       * @returns the value
+       */
       cell: (r) => {
         const c = cells.get(r.key)![i]!;
         return c.carried ? (
@@ -400,10 +467,25 @@ function BuffTable({
     })),
     {
       header: "Stacks",
+      /**
+       * Renders the row's stack limit.
+       *
+       * @param r - the row
+       * @returns `×N` when the effect stacks, else empty
+       */
       cell: (r) => (r.maxStack != null && r.maxStack > 1 ? `×${r.maxStack}` : ""),
       className: "n",
     },
-    { header: "Sources", cell: (r) => <SourceChips ids={r.sources} sources={sources} /> },
+    {
+      header: "Sources",
+      /**
+       * Renders the row's sources.
+       *
+       * @param r - the row
+       * @returns the source chips
+       */
+      cell: (r) => <SourceChips ids={r.sources} sources={sources} />,
+    },
   ];
 
   return (
@@ -437,6 +519,9 @@ function BuffTable({
  * Rune guidance for the boss's deck: one card per cookie, reason first,
  * with the haste carry's breakpoint and the debuffer's base application
  * chance on their cards where the data has them.
+ *
+ * @param props - the boss config, the deck's rune builds, the haste mechanics, the debuffer's buff values, and the source index
+ * @returns the cards, or an empty state when the deck has no builds
  */
 function WhatToRun({
   boss,
@@ -469,7 +554,12 @@ function WhatToRun({
   );
 }
 
-/** A debuff's base application chance by star, pointing to the chance formula in the buff section. */
+/**
+ * A debuff's base application chance by star, pointing to the chance formula in the buff section.
+ *
+ * @param props - the debuff's star row and the source index
+ * @returns the note
+ */
 function ChanceNote({ chance, sources }: { chance: BuffStarRow; sources: SourceIndex }) {
   const values = [...new Set(Object.values(chance.byStar))];
   return (
@@ -499,6 +589,9 @@ function ChanceNote({ chance, sources }: { chance: BuffStarRow; sources: SourceI
  * just under the last ranked cookie once the pet's bonus is added, every
  * ranked cookie sits above the catcher, and the check happens in battle,
  * with the pet's cited notes.
+ *
+ * @param props - the boss config, the deck, the pet's notes, and the source index
+ * @returns the chain and the checklist, or an empty state when the deck has no ATK order
  */
 function AtkCheck({
   boss,

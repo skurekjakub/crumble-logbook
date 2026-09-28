@@ -17,6 +17,9 @@ export interface QueryResultProps<T> {
  * Renders a query's three states: "Loading …" while pending, an
  * {@link ErrorBox} naming `resource` on failure, and `children(data)` once
  * loaded. Takes the query result as a prop; it does no fetching itself.
+ *
+ * @param props - the query result, the resource's name, and the render function for its data
+ * @returns the loading state, the error box, or the rendered data
  */
 export function QueryResult<T>({ query, resource, children }: QueryResultProps<T>) {
   if (query.isPending) return <EmptyState>Loading {resource}…</EmptyState>;

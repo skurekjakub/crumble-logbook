@@ -11,6 +11,9 @@ export interface CookieNameProps {
 /**
  * A cookie or pet name: English with the Korean beneath it, or the Korean
  * alone when `en` is null.
+ *
+ * @param props - the Korean and English names, and whether to render inline
+ * @returns the name
  */
 export function CookieName({ kr, en, inline = false }: CookieNameProps) {
   if (!en) return <>{kr}</>;

@@ -33,6 +33,9 @@ export interface RuneCardProps {
  * One cookie's rune build as a card: the reason first, as the card's main
  * text, then the rune lines, any disputed view, the decks, extra notes and
  * the sources.
+ *
+ * @param props - the build, the source index, the heading level, the deck namer and extra notes
+ * @returns the card
  */
 export function RuneCard({ build, sources, headingLevel, deckName, children }: RuneCardProps) {
   const H = headingLevel === 3 ? "h3" : "h4";

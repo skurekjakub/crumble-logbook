@@ -9,7 +9,11 @@ export const Route = createFileRoute("/rumble/runes")({
   component: RumbleRunes,
 });
 
-/** The Rumble Arena rune builds, with the deck and text filters in the URL. */
+/**
+ * The Rumble Arena rune builds, with the deck and text filters in the URL.
+ *
+ * @returns the view
+ */
 function RumbleRunes() {
   const onSearch = useSearchPatch<RunesSearch>();
   return <RunesView mode={RUMBLE} search={Route.useSearch()} onSearch={onSearch} />;

@@ -8,7 +8,13 @@ import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { ModeViewHeader } from "./ModeViewHeader";
 
-/** Orders events by date, oldest first; same-date events keep their id order. */
+/**
+ * Orders events by date, oldest first; same-date events keep their id order.
+ *
+ * @param a - an event
+ * @param b - another event
+ * @returns negative, zero or positive, as for `Array.prototype.sort`
+ */
 function byDate(a: TimelineEvent, b: TimelineEvent): number {
   return a.date.localeCompare(b.date) || a.id - b.id;
 }
@@ -18,6 +24,7 @@ function byDate(a: TimelineEvent, b: TimelineEvent): number {
  * followed), oldest first, with sources.
  *
  * @param mode - the mode whose timeline and copy the view shows
+ * @returns the timeline view
  */
 export function TimelineView({ mode }: { mode: ModeSection }) {
   const timeline = useQuery(timelineQuery(mode.scope));

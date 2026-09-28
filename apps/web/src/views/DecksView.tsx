@@ -36,19 +36,64 @@ function levelText(c: Pick<DeckCookie, "level" | "levelRule">): string {
  * Per-cookie level requirements with the reason for each, plus the slot and
  * stars columns when any cookie has one; nothing when no cookie has a
  * reason. Stars are free text ("?", "~7 (inferred …)") and show as stored.
+ *
+ * @param props - the deck's cookies
+ * @returns the collapsible table, or null
  */
 function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
   if (!cookies.some((c) => c.why)) return null;
   const columns: Column<DeckCookie>[] = [
-    { header: "Cookie", cell: (c) => <CookieName kr={c.cookieKr} en={c.en} /> },
+    {
+      header: "Cookie",
+      /**
+       * Renders the cookie's name.
+       *
+       * @param c - the cookie
+       * @returns the name
+       */
+      cell: (c) => <CookieName kr={c.cookieKr} en={c.en} />,
+    },
     ...(cookies.some((c) => c.slot)
-      ? [{ header: "Slot", cell: (c: DeckCookie) => c.slot ?? "–", className: "n" }]
+      ? [
+          {
+            header: "Slot",
+            /**
+             * Renders the cookie's formation slot.
+             *
+             * @param c - the cookie
+             * @returns the slot, or "–"
+             */
+            cell: (c: DeckCookie) => c.slot ?? "–",
+            className: "n",
+          },
+        ]
       : []),
     { header: "Level", cell: levelText, className: "mono" },
     ...(cookies.some((c) => c.stars)
-      ? [{ header: "Stars", cell: (c: DeckCookie) => c.stars || "–" }]
+      ? [
+          {
+            header: "Stars",
+            /**
+             * Renders the cookie's stars as stored.
+             *
+             * @param c - the cookie
+             * @returns the stars, or "–"
+             */
+            cell: (c: DeckCookie) => c.stars || "–",
+          },
+        ]
       : []),
-    { header: "Why", cell: (c) => c.why, className: "wide" },
+    {
+      header: "Why",
+      /**
+       * Renders the reason for the cookie's level.
+       *
+       * @param c - the cookie
+       * @returns the reason
+       */
+      cell: (c) => c.why,
+      className: "wide",
+    },
   ];
   return (
     <details className="levels" open>
@@ -58,10 +103,20 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
   );
 }
 
-/** A deck card's DOM id, which the "On this page" list links to. */
+/**
+ * Builds a deck card's DOM id, which the "On this page" list links to.
+ *
+ * @param d - the deck
+ * @returns `deck-<id>`
+ */
 const deckId = (d: Pick<Deck, "id">) => `deck-${d.id}`;
 
-/** A bullet list, or null when there are no items (so {@link Kv} drops the row). */
+/**
+ * Renders a bullet list, or null when there are no items (so {@link Kv} drops the row).
+ *
+ * @param items - the list's lines
+ * @returns the list, or null
+ */
 function bullets(items: readonly string[]) {
   if (!items.length) return null;
   return (
@@ -73,8 +128,19 @@ function bullets(items: readonly string[]) {
   );
 }
 
-/** One deck as a card: formation (or plain lineup when it has no slots), levels, ATK order, pets, perks, formation, swaps, RNG, unorthodox flags and sources. */
+/**
+ * One deck as a card: formation (or plain lineup when it has no slots), levels, ATK order, pets, perks, formation, swaps, RNG, unorthodox flags and sources.
+ *
+ * @param props - the deck and the source index
+ * @returns the card
+ */
 function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceIndex }) {
+  /**
+   * Lists the texts of the deck's notes of one kind.
+   *
+   * @param kind - the note kind
+   * @returns the notes' texts, in display order
+   */
   const notes = (kind: Deck["notes"][number]["kind"]) =>
     d.notes.filter((n) => n.kind === kind).map((n) => n.text);
   const atkOrder = d.atkOrder?.length ? (
@@ -134,6 +200,7 @@ function DeckCard({ deck: d, sources }: { deck: Deck; sources: SourceIndex }) {
  * recorded yet." when there are none.
  *
  * @param mode - the mode whose decks and copy the view shows
+ * @returns the decks view
  */
 export function DecksView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();

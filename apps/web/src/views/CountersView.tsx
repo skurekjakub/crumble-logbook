@@ -22,10 +22,20 @@ const TOC = [
   { id: "counters-edges", label: "Every edge" },
 ] as const;
 
-/** A counter edge's DOM id, which its matrix cell links to. */
+/**
+ * Builds a counter edge's DOM id, which its matrix cell links to.
+ *
+ * @param edge - the edge
+ * @returns `counter-<slug>`
+ */
 const edgeId = (edge: Pick<Counter, "slug">) => `counter-${edge.slug}`;
 
-/** A deck's English name with its Korean name beside it, or its id when the deck isn't listed. */
+/**
+ * A deck's English name with its Korean name beside it, or its id when the deck isn't listed.
+ *
+ * @param props - the deck, when listed, and its id
+ * @returns the label
+ */
 function DeckLabel({ deck, id }: { deck: DeckName | undefined; id: string }) {
   if (!deck) return <>{id}</>;
   return (
@@ -35,13 +45,19 @@ function DeckLabel({ deck, id }: { deck: DeckName | undefined; id: string }) {
   );
 }
 
-/** One edge as a card: "team is beaten by team", its conditions, mechanism, confidence and sources. */
+/**
+ * One edge as a card: "team is beaten by team", its conditions, mechanism, confidence and sources.
+ *
+ * @param props - the edge, the deck lookup and the source index
+ * @returns the card
+ */
 function CounterCard({
   edge,
   deck,
   sources,
 }: {
   edge: Counter;
+  /** Finds a listed deck by id. */
   deck: (id: string) => DeckName | undefined;
   sources: SourceIndex;
 }) {
@@ -69,8 +85,17 @@ function CounterCard({
 /**
  * Orders edges as the matrix reads: by the beaten team's deck order, then
  * by the counter's; decks not listed come last.
+ *
+ * @param order - each listed deck's display position, by id
+ * @returns a comparator for counter edges, ties broken by id
  */
 function byMatrixOrder(order: ReadonlyMap<string, number>) {
+  /**
+   * Returns a deck's display position.
+   *
+   * @param id - the deck's id
+   * @returns its position; past every listed deck when it isn't listed
+   */
   const rank = (id: string) => order.get(id) ?? Number.MAX_SAFE_INTEGER;
   return (a: Counter, b: Counter) =>
     rank(a.teamDeckId) - rank(b.teamDeckId) ||
@@ -85,11 +110,18 @@ function byMatrixOrder(order: ReadonlyMap<string, number>) {
  * "No counters recorded yet." when there are none.
  *
  * @param mode - the mode whose counters, decks and copy the view shows
+ * @returns the counters view
  */
 export function CountersView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
   const counters = useQuery(countersQuery(mode.scope));
   const decks = useQuery(decksQuery(mode.scope)).data ?? [];
+  /**
+   * Finds a listed deck by id.
+   *
+   * @param id - the deck's id
+   * @returns the deck, or `undefined` if it isn't listed
+   */
   const deck = (id: string) => decks.find((d) => d.id === id);
   const order = new Map(decks.map((d, i) => [d.id, i] as const));
 

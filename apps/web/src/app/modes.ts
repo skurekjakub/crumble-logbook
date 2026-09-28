@@ -306,6 +306,7 @@ const PVP_COPY = {
 
 /**
  * A PvP mode's sub-tabs, under its path.
+ *
  * @param to - the mode's path
  * @returns the tabs, overview first
  */
@@ -440,7 +441,13 @@ export function topicsShownElsewhere(mode: ModeSection): ReadonlySet<string> {
   return new Set([RULES_TOPIC, ...(mode.boss?.facts.map((f) => f.topic) ?? [])]);
 }
 
-/** Whether `pathname` is `to` or lies under it. */
+/**
+ * Reports whether `pathname` is `to` or lies under it.
+ *
+ * @param pathname - the current path
+ * @param to - a route path
+ * @returns `true` if `pathname` is `to` or inside it
+ */
 function isUnder(pathname: string, to: string): boolean {
   return pathname === to || pathname.startsWith(`${to}/`);
 }

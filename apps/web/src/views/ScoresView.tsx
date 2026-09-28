@@ -38,6 +38,7 @@ export interface ScoresSearch {
 
 /**
  * Builds the search-param reader of a mode's scores view.
+ *
  * @param mode - the mode; its leaderboard's boards are the `?board=` values it keeps
  * @returns the reader: the deck, season and board, each dropped when unusable
  */
@@ -67,25 +68,110 @@ const PARTS = {
   leaderboard: "scores-leaderboard",
 } as const;
 
-/** Scores sorted by damage, highest first, without mutating the input. */
+/**
+ * Sorts scores by damage, highest first, without mutating the input.
+ *
+ * @param scores - the scores
+ * @returns a sorted copy
+ */
 function byDamage(scores: readonly Score[]): Score[] {
   return [...scores].sort((a, b) => b.damageG - a.damageG);
 }
 
-/** The scores table's columns; deck names come from `series`. */
+/**
+ * Builds the scores table's columns.
+ *
+ * @param series - names each score's deck
+ * @param sources - the source index for the chips
+ * @returns the columns, in display order
+ */
 function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[] {
   return [
-    { header: "Damage", cell: (s) => formatG(s.damageG), className: "n" },
-    { header: "Power", cell: (s) => formatG(s.powerG), className: "n" },
-    { header: "배", cell: (s) => formatRatio(ratio(s)), className: "n" },
-    { header: "Deck", cell: (s) => series.name(s.deckId) },
+    {
+      header: "Damage",
+      /**
+       * Renders the score's damage.
+       *
+       * @param s - the score
+       * @returns the damage, in billions
+       */
+      cell: (s) => formatG(s.damageG),
+      className: "n",
+    },
+    {
+      header: "Power",
+      /**
+       * Renders the team power.
+       *
+       * @param s - the score
+       * @returns the power, in billions
+       */
+      cell: (s) => formatG(s.powerG),
+      className: "n",
+    },
+    {
+      header: "배",
+      /**
+       * Renders the score's damage ÷ power.
+       *
+       * @param s - the score
+       * @returns the ratio
+       */
+      cell: (s) => formatRatio(ratio(s)),
+      className: "n",
+    },
+    {
+      header: "Deck",
+      /**
+       * Renders the score's deck.
+       *
+       * @param s - the score
+       * @returns the deck's name
+       */
+      cell: (s) => series.name(s.deckId),
+    },
     {
       header: "Evidence",
+      /**
+       * Renders whether a screenshot backs the score.
+       *
+       * @param s - the score
+       * @returns a "screenshot" or "claimed" pill
+       */
       cell: (s) => (s.verified ? <Pill kind="verified">screenshot</Pill> : <Pill kind="claimed" />),
     },
-    { header: "Notes", cell: (s) => s.note ?? "", className: "wide" },
-    { header: "Date", cell: (s) => s.date ?? "", className: "n" },
-    { header: "Source", cell: (s) => <SourceChips ids={s.sources} sources={sources} /> },
+    {
+      header: "Notes",
+      /**
+       * Renders the score's note.
+       *
+       * @param s - the score
+       * @returns the note, or empty
+       */
+      cell: (s) => s.note ?? "",
+      className: "wide",
+    },
+    {
+      header: "Date",
+      /**
+       * Renders the score's date.
+       *
+       * @param s - the score
+       * @returns the date, or empty
+       */
+      cell: (s) => s.date ?? "",
+      className: "n",
+    },
+    {
+      header: "Source",
+      /**
+       * Renders the score's sources.
+       *
+       * @param s - the score
+       * @returns the source chips
+       */
+      cell: (s) => <SourceChips ids={s.sources} sources={sources} />,
+    },
   ];
 }
 
@@ -95,6 +181,9 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
  * (`?season=`, `?board=`), with an "On this page" list of those parts. A
  * failed deck list is reported; the scores then show without deck names or
  * colours.
+ *
+ * @param props - the mode, the search params and their setter
+ * @returns the scores view
  */
 export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
   const decks = useQuery(decksQuery(mode.scope));
@@ -177,7 +266,12 @@ interface ScoreChartProps {
   series: DeckSeries;
 }
 
-/** The damage–power scatter in a card, with a legend of the decks it plots. */
+/**
+ * The damage–power scatter in a card, with a legend of the decks it plots.
+ *
+ * @param props - the scores and the deck series
+ * @returns the card
+ */
 function ScoreChart({ scores, series }: ScoreChartProps) {
   const plotted = scores.filter((s) => s.damageG > 0 && s.powerG != null && s.powerG > 0);
   const used = [...new Set(plotted.map((s) => s.deckId))];
@@ -208,26 +302,93 @@ function ScoreChart({ scores, series }: ScoreChartProps) {
 interface LeaderboardProps {
   config: LeaderboardConfig;
   search: ScoresSearch;
+  /** Switches the leaderboard to `board`. */
   onBoard: (board: RankingBoardFilter) => void;
+  /** Switches the leaderboard to `season`. */
   onSeason: (season: number) => void;
   sources: SourceIndex;
 }
 
-/** The leaderboard table's columns for `board`: guilds have no guild column, only players carry team power. */
+/**
+ * Builds the leaderboard table's columns for `board`: guilds have no guild column, only players carry team power.
+ *
+ * @param board - the leaderboard board
+ * @param sources - the source index for the chips
+ * @returns the columns, in display order
+ */
 function rankingColumns(board: RankingBoardFilter, sources: SourceIndex): Column<Ranking>[] {
   return [
-    { header: "Rank", cell: (r) => r.rank, className: "n" },
-    { header: board === "guilds" ? "Guild" : "Player", cell: (r) => r.name },
-    ...(board === "guilds" ? [] : [{ header: "Guild", cell: (r: Ranking) => r.guild ?? "" }]),
+    {
+      header: "Rank",
+      /**
+       * Renders the row's rank.
+       *
+       * @param r - the row
+       * @returns the rank
+       */
+      cell: (r) => r.rank,
+      className: "n",
+    },
+    {
+      header: board === "guilds" ? "Guild" : "Player",
+      /**
+       * Renders the row's guild or player name.
+       *
+       * @param r - the row
+       * @returns the name
+       */
+      cell: (r) => r.name,
+    },
+    ...(board === "guilds"
+      ? []
+      : [
+          {
+            header: "Guild",
+            /**
+             * Renders the player's guild.
+             *
+             * @param r - the row
+             * @returns the guild, or empty
+             */
+            cell: (r: Ranking) => r.guild ?? "",
+          },
+        ]),
     {
       header: board === "power" ? "Power" : "Damage",
+      /**
+       * Renders the row's ranked value.
+       *
+       * @param r - the row
+       * @returns the value, in billions
+       */
       cell: (r) => formatG(r.valueG),
       className: "n",
     },
     ...(board === "players"
-      ? [{ header: "Power", cell: (r: Ranking) => formatG(r.powerG), className: "n" }]
+      ? [
+          {
+            header: "Power",
+            /**
+             * Renders the player's team power.
+             *
+             * @param r - the row
+             * @returns the power, in billions
+             */
+            cell: (r: Ranking) => formatG(r.powerG),
+            className: "n",
+          },
+        ]
       : []),
-    { header: "Source", cell: (r) => <SourceChips ids={[r.sourceId]} sources={sources} /> },
+    {
+      header: "Source",
+      /**
+       * Renders the row's source.
+       *
+       * @param r - the row
+       * @returns the source chip
+       */
+      cell: (r) => <SourceChips ids={[r.sourceId]} sources={sources} />,
+    },
   ];
 }
 
@@ -236,6 +397,9 @@ function rankingColumns(board: RankingBoardFilter, sources: SourceIndex): Column
  * `?season=` it shows the board's latest captured season; a board without
  * seasons (power) shows its seasonless capture. The first of the config's
  * boards is the default.
+ *
+ * @param props - the leaderboard config, the search params, the board and season setters, and the source index
+ * @returns the leaderboard section
  */
 function Leaderboard({ config, search, onBoard, onSeason, sources }: LeaderboardProps) {
   const defaultBoard = Object.keys(config.boards)[0] as RankingBoardFilter;

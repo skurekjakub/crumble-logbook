@@ -9,6 +9,9 @@ export interface AtkOrderProps {
 /**
  * The ATK-order chain ("Milk › Brightseeker › …"): the order that steers
  * Pomegranate's buff. Unresolved names show in Korean.
+ *
+ * @param props - the order to show
+ * @returns the chain
  */
 export function AtkOrder({ order }: AtkOrderProps) {
   return (

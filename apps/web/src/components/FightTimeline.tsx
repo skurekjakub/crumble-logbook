@@ -34,12 +34,18 @@ const MARKER_PX = 26;
 /** The track width assumed until the lane has been measured. */
 const DEFAULT_TRACK_PX = 640;
 
-/** Whether an event is a claim nobody has verified. */
+/**
+ * Reports whether an event is a claim nobody has verified.
+ *
+ * @param e - the event
+ * @returns `true` for a low-confidence event
+ */
 const isClaim = (e: FightTimelineEvent) => e.confidence === "low";
 
 /**
  * The rendered width of the element `ref` points to, kept current as it resizes.
  *
+ * @param ref - the element to measure
  * @returns the width in pixels, or null before the first measurement or where
  *   the browser can't measure (no `ResizeObserver`, or a zero width)
  */
@@ -48,6 +54,11 @@ function useWidth(ref: RefObject<HTMLElement | null>): number | null {
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el || typeof ResizeObserver === "undefined") return;
+    /**
+     * Stores the element's current width, or null for a zero width.
+     *
+     * @returns nothing
+     */
     const measure = () => setWidth(el.clientWidth || null);
     measure();
     const observer = new ResizeObserver(measure);
@@ -57,7 +68,12 @@ function useWidth(ref: RefObject<HTMLElement | null>): number | null {
   return width;
 }
 
-/** One lane of the track: numbered markers placed by elapsed time, staggered where they overlap on screen. */
+/**
+ * One lane of the track: numbered markers placed by elapsed time, staggered where they overlap on screen.
+ *
+ * @param props - the lane's label, its numbered timed events, and the fight's length in seconds
+ * @returns the lane
+ */
 function Lane({
   label,
   items,
@@ -103,6 +119,9 @@ function Lane({
  * with their details and sources. Low-confidence events sit in their own
  * hatched lane and are labelled "unverified claim"; events with no time are
  * listed but not placed.
+ *
+ * @param props - the events, the source index, the fight's length and the tick spacing
+ * @returns the track and the event list
  */
 export function FightTimeline({ events, sources, length, tickEvery = 10 }: FightTimelineProps) {
   const numbered = events.map((e, i) => ({ n: i + 1, e }));

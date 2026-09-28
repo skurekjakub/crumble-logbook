@@ -36,6 +36,9 @@ export function describeError(error: unknown): string {
 /**
  * The red error box naming the resource that failed. It replaces only the
  * failed part of a page, so sibling content keeps rendering.
+ *
+ * @param props - the failed resource's name and the error
+ * @returns the error box
  */
 export function ErrorBox({ resource, error }: ErrorBoxProps) {
   return (

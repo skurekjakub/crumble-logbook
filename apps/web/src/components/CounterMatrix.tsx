@@ -18,7 +18,12 @@ export interface MatrixDeck {
   nameKr: string | null;
 }
 
-/** A team's name in a matrix heading: English, with the Korean beneath when known. */
+/**
+ * A team's name in a matrix heading: English, with the Korean beneath when known.
+ *
+ * @param props - the team's deck id, and its deck when listed
+ * @returns the name; the bare id when the deck isn't listed
+ */
 function TeamName({ id, deck }: { id: string; deck: MatrixDeck | undefined }) {
   if (!deck) return <>{id}</>;
   if (!deck.nameKr) return <>{deck.nameEn}</>;
@@ -40,8 +45,13 @@ export interface CounterMatrixProps {
 }
 
 /**
- * The ids `pick` returns across `edges`, in deck display order, then any
- * ids the deck list lacks in first-seen order.
+ * Lists the ids `pick` returns across `edges`, in deck display order, then
+ * any ids the deck list lacks in first-seen order.
+ *
+ * @param edges - the counter edges
+ * @param decks - the decks, in display order
+ * @param pick - reads one side of an edge
+ * @returns the axis's deck ids, each once
  */
 function axis(
   edges: readonly CounterEdge[],
@@ -60,9 +70,24 @@ function axis(
  * conditions, styled by its own confidence and linking to `href(edge)`; the
  * reverse matchup is a different cell, filled only by its own edges. A cell
  * where a team meets itself is marked, and every other cell is empty.
+ *
+ * @param props - the edges, the decks naming the axes, and each cell's link
+ * @returns the matrix table
  */
 export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
+  /**
+   * Finds a listed deck by id.
+   *
+   * @param id - the deck's id
+   * @returns the deck, or `undefined` if it isn't listed
+   */
   const find = (id: string) => decks.find((d) => d.id === id);
+  /**
+   * Names a deck in English.
+   *
+   * @param id - the deck's id
+   * @returns its English name, or the id when it isn't listed
+   */
   const name = (id: string) => find(id)?.nameEn ?? id;
   const rows = axis(edges, decks, (e) => e.teamDeckId);
   const cols = axis(edges, decks, (e) => e.beatenByDeckId);
@@ -120,7 +145,11 @@ export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
   );
 }
 
-/** The key to the matrix's cell styles, one per confidence level. */
+/**
+ * The key to the matrix's cell styles, one per confidence level.
+ *
+ * @returns the legend row
+ */
 export function CounterLegend() {
   return (
     <div className="legend-row">

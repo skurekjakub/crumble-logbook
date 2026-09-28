@@ -30,6 +30,9 @@ export function slotKind(level: string | null | undefined): "" | "max" | "filler
  * One cookie's slot: level and star count, the English name, and the Korean
  * name and note beneath. Stars show only when they're a plain number; free
  * text ("?", "~7 (inferred …)") is left to the levels table.
+ *
+ * @param props - the cookie, and the slot element's id when it needs one
+ * @returns the slot
  */
 export function LineupSlot({ cookie: c, slotId }: { cookie: LineupCookie; slotId?: string }) {
   const kind = slotKind(c.level);
@@ -48,7 +51,12 @@ export function LineupSlot({ cookie: c, slotId }: { cookie: LineupCookie; slotId
   );
 }
 
-/** The team grid, laid out like the in-game formation screen (6 per row, 3 on phones). */
+/**
+ * The team grid, laid out like the in-game formation screen (6 per row, 3 on phones).
+ *
+ * @param props - the slots, in formation order
+ * @returns the grid, or null for an empty team
+ */
 export function Lineup({ cookies }: LineupProps) {
   if (!cookies.length) return null;
   return (
@@ -60,7 +68,11 @@ export function Lineup({ cookies }: LineupProps) {
   );
 }
 
-/** The legend for the {@link Lineup} slot styles: Lv.100 carry or buffer, Lv.1 filler. */
+/**
+ * The legend for the {@link Lineup} slot styles: Lv.100 carry or buffer, Lv.1 filler.
+ *
+ * @returns the legend row
+ */
 export function LineupLegend() {
   return (
     <div className="legend-row">

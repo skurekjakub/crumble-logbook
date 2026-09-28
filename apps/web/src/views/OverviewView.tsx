@@ -11,7 +11,12 @@ import { SourceChips } from "../components/SourceChips";
 import type { SourceIndex } from "../lib/sources";
 import { ModeViewHeader } from "./ModeViewHeader";
 
-/** The numbered takeaways, each with its detail and sources; "No takeaways yet." when there are none. */
+/**
+ * The numbered takeaways, each with its detail and sources; "No takeaways yet." when there are none.
+ *
+ * @param props - the takeaways and the source index
+ * @returns the list, or the empty state
+ */
 function Takeaways({ rows, sources }: { rows: readonly Takeaway[]; sources: SourceIndex }) {
   if (!rows.length) return <EmptyState>No takeaways yet.</EmptyState>;
   return (
@@ -29,7 +34,12 @@ function Takeaways({ rows, sources }: { rows: readonly Takeaway[]; sources: Sour
   );
 }
 
-/** The "for your account" card: each recommendation's summary, changes and sources; nothing when there are none. */
+/**
+ * The "for your account" card: each recommendation's summary, changes and sources; nothing when there are none.
+ *
+ * @param props - the recommendations and the source index
+ * @returns the card, or null
+ */
 function AccountCard({ rows, sources }: { rows: readonly Recommendation[]; sources: SourceIndex }) {
   if (!rows.length) return null;
   return (
@@ -52,7 +62,12 @@ function AccountCard({ rows, sources }: { rows: readonly Recommendation[]; sourc
   );
 }
 
-/** One rule's text, confidence (when below high) and sources. */
+/**
+ * One rule's text, confidence (when below high) and sources.
+ *
+ * @param props - the rule and the source index
+ * @returns the rule's body
+ */
 function RuleBody({ rule, sources }: { rule: Mechanic; sources: SourceIndex }) {
   return (
     <>
@@ -69,6 +84,9 @@ function RuleBody({ rule, sources }: { rule: Mechanic; sources: SourceIndex }) {
  * A mode's rules: the row titled `config.highlight` as its own card (the
  * season's buffs), then the rest as a card of title → rule. "No rules
  * recorded yet." when there are none.
+ *
+ * @param props - the rules, the mode's rules config and the source index
+ * @returns the rule cards, or the empty state
  */
 function Rules({
   rows,
@@ -107,12 +125,19 @@ function Rules({
  * block loads on its own, so one failed resource doesn't blank the others.
  *
  * @param mode - the mode whose record, lists and copy the view shows
+ * @returns the overview
  */
 export function OverviewView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
   // The root route reports a failed record; here the caveats are simply left out.
   const caveats = useQuery({
     ...recordQuery(mode.recordSlug ?? ""),
+    /**
+     * Picks the record's caveats: the mode's own, then the record's.
+     *
+     * @param r - the research record
+     * @returns the non-empty caveats
+     */
     select: (r) =>
       [r.modes.find((m) => m.mode === mode.scope.mode)?.caveat, r.caveat].filter(
         (c): c is string => !!c,

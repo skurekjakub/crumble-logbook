@@ -8,7 +8,11 @@ export const Route = createFileRoute("/glossary")({
   component: Glossary,
 });
 
-/** The glossary, with the kind and name filters in the URL. */
+/**
+ * The glossary, with the kind and name filters in the URL.
+ *
+ * @returns the view
+ */
 function Glossary() {
   const onSearch = useSearchPatch<GlossarySearch>();
   return <GlossaryView search={Route.useSearch()} onSearch={onSearch} />;

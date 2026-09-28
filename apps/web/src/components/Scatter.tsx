@@ -46,6 +46,10 @@ interface Placed<P> {
  * Lays out the chart: log-scale axes padded around the data, ticks every
  * half decade of power and every decade of damage, and each iso line
  * clipped to the plot box.
+ *
+ * @param points - the plottable points; at least one
+ * @returns the value-to-SVG scales `X` and `Y`, the tick values, and each
+ *   iso line's ratio and end powers
  */
 function layout<P extends ScatterPoint & { powerG: number }>(points: readonly P[]) {
   const xs = points.map((p) => lg(p.powerG));
@@ -54,7 +58,19 @@ function layout<P extends ScatterPoint & { powerG: number }>(points: readonly P[
   const x1 = Math.ceil(Math.max(...xs) * 2) / 2 + 0.25;
   const y0 = Math.floor(Math.min(...ys)) - 0.1;
   const y1 = Math.ceil(Math.max(...ys) + 0.05);
+  /**
+   * Maps a team power onto the plot's x axis.
+   *
+   * @param v - power, in billions
+   * @returns the SVG x coordinate
+   */
   const X = (v: number) => M.l + ((lg(v) - x0) / (x1 - x0)) * (W - M.l - M.r);
+  /**
+   * Maps a damage onto the plot's y axis.
+   *
+   * @param v - damage, in billions
+   * @returns the SVG y coordinate
+   */
   const Y = (v: number) => H - M.b - ((lg(v) - y0) / (y1 - y0)) * (H - M.t - M.b);
 
   const xTicks: number[] = [];
@@ -80,6 +96,9 @@ function layout<P extends ScatterPoint & { powerG: number }>(points: readonly P[
  * screenshot-backed; faded dots are claims. Each point is focusable and
  * named by its damage, power, 배 and `label`. Shows an empty state when no
  * point has both damage and power.
+ *
+ * @param props - the points, and each point's colour and label
+ * @returns the chart and its tooltip, or the empty state
  */
 export function Scatter<P extends ScatterPoint>({ points, color, label }: ScatterProps<P>) {
   const [active, setActive] = useState<number | null>(null);

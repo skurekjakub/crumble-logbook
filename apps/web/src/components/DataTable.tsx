@@ -104,7 +104,12 @@ export interface TableToolsProps<T> {
   select?: TableSelect<T>;
 }
 
-/** The search box and select above a filtered list; renders nothing without either. */
+/**
+ * The search box and select above a filtered list; renders nothing without either.
+ *
+ * @param props - the text filter and the select, each optional
+ * @returns the tools row, or null
+ */
 export function TableTools<T>({ filter, select }: TableToolsProps<T>) {
   if (!filter && !select) return null;
   const placeholder = filter?.placeholder ?? "Filter";
@@ -140,6 +145,9 @@ export function TableTools<T>({ filter, select }: TableToolsProps<T>) {
 /**
  * A table with optional controlled text and select filters. With no rows it
  * shows `empty`; when the filters exclude every row it says "Nothing matches."
+ *
+ * @param props - the columns, rows, filters, empty state and phone layout
+ * @returns the tools and the table, or the empty state
  */
 export function DataTable<T>({
   columns,

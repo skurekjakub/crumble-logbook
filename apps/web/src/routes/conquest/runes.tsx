@@ -9,7 +9,11 @@ export const Route = createFileRoute("/conquest/runes")({
   component: ConquestRunes,
 });
 
-/** The Guild Conquest rune builds, with the deck and text filters in the URL. */
+/**
+ * The Guild Conquest rune builds, with the deck and text filters in the URL.
+ *
+ * @returns the view
+ */
 function ConquestRunes() {
   const onSearch = useSearchPatch<RunesSearch>();
   return <RunesView mode={CONQUEST} search={Route.useSearch()} onSearch={onSearch} />;

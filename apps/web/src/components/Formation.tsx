@@ -20,6 +20,7 @@ export interface FormationProps {
  * {@link Formation} has anything to lay out.
  *
  * @param cookies - a team's cookies
+ * @returns `true` if at least one cookie has a readable slot
  */
 export function hasFormation(cookies: readonly FormationCookie[]): boolean {
   return formationGrid(cookies, (c) => c.slot).rows.length > 0;
@@ -32,6 +33,9 @@ export function hasFormation(cookies: readonly FormationCookie[]): boolean {
  * top. Cookies
  * without a readable slot follow as a plain lineup. Renders nothing when no
  * cookie has a slot.
+ *
+ * @param props - the team's cookies
+ * @returns the formation grid and any unplaced lineup, or null
  */
 export function Formation({ cookies }: FormationProps) {
   const { rows, unplaced } = formationGrid(cookies, (c) => c.slot);

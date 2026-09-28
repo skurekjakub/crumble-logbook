@@ -9,7 +9,11 @@ export const Route = createFileRoute("/conquest/scores")({
   component: ConquestScores,
 });
 
-/** The Guild Conquest scores and leaderboard, with the deck, season and board in the URL. */
+/**
+ * The Guild Conquest scores and leaderboard, with the deck, season and board in the URL.
+ *
+ * @returns the view
+ */
 function ConquestScores() {
   const onSearch = useSearchPatch<ScoresSearch>();
   return <ScoresView mode={CONQUEST} search={Route.useSearch()} onSearch={onSearch} />;

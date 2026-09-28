@@ -141,6 +141,7 @@ export function eventLabel(event: string): string {
  * chance to land) rather than the size of a buff.
  *
  * @param effectType - the stored effect type
+ * @returns `true` for a chance
  */
 export function isChance(effectType: string): boolean {
   return effectType.endsWith("Chance");
@@ -168,6 +169,7 @@ const BASE_NAMES: Readonly<Record<string, string>> = {
  * An effect type's display name, e.g. "Boss DMG +" or "DEF shred".
  *
  * @param effectType - the stored effect type; an unknown one is returned as is
+ * @returns the display name
  */
 export function effectName(effectType: string): string {
   return EFFECT_NAMES[effectType] ?? effectType;
@@ -228,6 +230,7 @@ export function buffStars(rows: readonly Pick<BuffValueLike, "fromStar">[]): num
  *
  * @param star - the column's star count
  * @param stars - every column's star count, ascending
+ * @returns the heading
  */
 export function starLabel(star: number, stars: readonly number[]): string {
   return star === stars.at(-1) ? `${star}★+` : `${star}★`;

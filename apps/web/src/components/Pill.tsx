@@ -21,7 +21,12 @@ export interface PillProps {
   children?: ReactNode;
 }
 
-/** A status pill, e.g. a deck tier, a confidence level, or screenshot/claimed evidence. */
+/**
+ * A status pill, e.g. a deck tier, a confidence level, or screenshot/claimed evidence.
+ *
+ * @param props - the pill's kind and text
+ * @returns the pill, or null without a kind
+ */
 export function Pill({ kind, children }: PillProps) {
   if (!kind) return null;
   return <span className={`pill ${kind}`}>{children ?? kind}</span>;

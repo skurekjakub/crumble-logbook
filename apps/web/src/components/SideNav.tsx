@@ -49,6 +49,8 @@ export interface SideNavProps {
  * Hides the nav's popover after a link inside it is followed, unless the
  * link is marked `data-keep-open`. Does nothing where the popover isn't
  * open (the desktop sidebar) or the browser has no popover API.
+ *
+ * @param e - the click on the nav
  */
 function closeAfterFollow(e: MouseEvent<HTMLElement>) {
   const nav = e.currentTarget;
@@ -65,6 +67,9 @@ function closeAfterFollow(e: MouseEvent<HTMLElement>) {
  *
  * On a wide screen the stylesheet shows it as a sticky sidebar; on a phone
  * it's a popover drawer opened by a button with `popoverTarget={id}`.
+ *
+ * @param props - the element id, the landmark's name and the sections
+ * @returns the navigation landmark
  */
 export function SideNav({ id, label, sections }: SideNavProps) {
   return (

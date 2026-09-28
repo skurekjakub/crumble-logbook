@@ -28,6 +28,9 @@ const STAT_LABEL: Record<StampStat, string> = {
 /**
  * The header label's suffix: a mode's Korean name, or its English label
  * when that's unknown. Shared sections have none.
+ *
+ * @param section - the active section, if any
+ * @returns the suffix, or null outside a mode
  */
 function headerContext(section: Section | undefined): ReactNode {
   if (section?.kind !== "mode") return null;
@@ -40,9 +43,19 @@ function headerContext(section: Section | undefined): ReactNode {
  * active mode's research record, with the record's own lede for that mode
  * on the section's landing page, and figures scoped to the record and
  * mode), the view in the main landmark, and the footer.
+ *
+ * @returns the app chrome around the current view
  */
 function RootLayout() {
-  const pathname = useLocation({ select: (l) => l.pathname });
+  const pathname = useLocation({
+    /**
+     * Reads the path out of the location.
+     *
+     * @param l - the current location
+     * @returns its pathname
+     */
+    select: (l) => l.pathname,
+  });
   const section = sectionForPath(pathname);
   const tab = section ? activeTab(section.tabs, pathname) : undefined;
   const stamp = section?.stamp ?? [];

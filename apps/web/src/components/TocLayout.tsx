@@ -19,6 +19,9 @@ export interface TocLayoutProps {
  * A page body with an "On this page" list of links to its sections: a
  * sticky rail beside the body on a wide screen, a wrapped row of links above
  * it otherwise. With fewer than two items the body renders alone.
+ *
+ * @param props - the table of contents and the page body
+ * @returns the body with its contents list
  */
 export function TocLayout({ items, children }: TocLayoutProps) {
   if (items.length < 2) return <>{children}</>;

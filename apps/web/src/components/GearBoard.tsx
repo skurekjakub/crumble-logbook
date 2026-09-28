@@ -47,7 +47,12 @@ export function generalGear<G extends GearEntry>(gear: readonly G[]): G[] {
   return gear.filter((g) => !(GEAR_SLOTS as readonly string[]).includes(g.slot));
 }
 
-/** The 2×2 gear board with each slot's substat recommendations; empty slots say "No data yet." */
+/**
+ * The 2×2 gear board with each slot's substat recommendations; empty slots say "No data yet."
+ *
+ * @param props - the gear recommendations, the source index, and optional slot names
+ * @returns the board
+ */
 export function GearBoard({ gear, sources, slotNames }: GearBoardProps) {
   return (
     <div className="gearboard">

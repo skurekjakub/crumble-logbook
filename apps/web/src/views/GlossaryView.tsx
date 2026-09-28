@@ -25,6 +25,7 @@ export interface GlossarySearch {
 
 /**
  * Reads the glossary's search params.
+ *
  * @param search - the router's decoded query values
  * @returns the kind and name search, each dropped when unusable
  */
@@ -33,13 +34,47 @@ export function validateGlossarySearch(search: Record<string, unknown>): Glossar
 }
 
 const COLUMNS: Column<GlossaryEntry>[] = [
-  { header: "Korean", cell: (g) => g.kr },
-  { header: "Shorthand", cell: (g) => g.shorthand.join(", ") },
+  {
+    header: "Korean",
+    /**
+     * Renders the entry's Korean term.
+     *
+     * @param g - the entry
+     * @returns the term
+     */
+    cell: (g) => g.kr,
+  },
+  {
+    header: "Shorthand",
+    /**
+     * Renders the entry's forum shorthand.
+     *
+     * @param g - the entry
+     * @returns the shorthand forms, comma-separated
+     */
+    cell: (g) => g.shorthand.join(", "),
+  },
   {
     header: "English",
+    /**
+     * Renders the entry's English name, or its Korean term muted when there is none.
+     *
+     * @param g - the entry
+     * @returns the name
+     */
     cell: (g) => g.en ?? <span className="muted">{g.kr}</span>,
   },
-  { header: "Kind", cell: (g) => KIND_LABELS[g.kind], className: "n" },
+  {
+    header: "Kind",
+    /**
+     * Renders the entry's kind.
+     *
+     * @param g - the entry
+     * @returns the kind's label
+     */
+    cell: (g) => KIND_LABELS[g.kind],
+    className: "n",
+  },
 ];
 
 /** Props for {@link GlossaryView}. */
@@ -50,7 +85,12 @@ export interface GlossaryViewProps {
   onSearch: (patch: GlossarySearch) => void;
 }
 
-/** Korean names and forum shorthand mapped to English, filterable by kind (`?kind=`) and name (`?q=`). */
+/**
+ * Korean names and forum shorthand mapped to English, filterable by kind (`?kind=`) and name (`?q=`).
+ *
+ * @param props - the search params and their setter
+ * @returns the glossary view
+ */
 export function GlossaryView({ search: { kind, q }, onSearch }: GlossaryViewProps) {
   const glossary = useQuery(glossaryQuery(kind));
   return (
@@ -67,7 +107,19 @@ export function GlossaryView({ search: { kind, q }, onSearch }: GlossaryViewProp
             rowKey={(g) => g.kr}
             filter={{
               value: q ?? "",
+              /**
+               * Writes the query to `?q=`.
+               *
+               * @param v - the new query
+               * @returns nothing
+               */
               onChange: (v) => onSearch({ q: v }),
+              /**
+               * Builds an entry's searchable text.
+               *
+               * @param g - the entry
+               * @returns its Korean term, shorthand and English name
+               */
               text: (g) => [g.kr, ...g.shorthand, g.en ?? ""].join(" "),
               placeholder: "Search Korean or English",
             }}
@@ -76,6 +128,12 @@ export function GlossaryView({ search: { kind, q }, onSearch }: GlossaryViewProp
               label: "All kinds",
               options: Object.entries(KIND_LABELS),
               value: kind ?? "",
+              /**
+               * Writes the kind to `?kind=`, dropping an unknown one.
+               *
+               * @param v - the selected kind, or "" for all
+               * @returns nothing
+               */
               onChange: (v) => onSearch({ kind: optionalKey(v, KIND_LABELS) }),
             }}
             empty={kind ? "No glossary entries of this kind." : "No glossary entries yet."}

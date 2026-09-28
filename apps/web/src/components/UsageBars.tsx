@@ -25,7 +25,9 @@ export interface UsageBarsProps {
 
 /**
  * Formats a share for display: "97%", "64.5%".
+ *
  * @param pct - a share, 0–100
+ * @returns the share rounded to one decimal, with a `%` sign
  */
 export function formatPct(pct: number): string {
   return `${Math.round(pct * 10) / 10}%`;
@@ -35,6 +37,9 @@ export function formatPct(pct: number): string {
  * A list of horizontal bars, one per subject, each with its share as text.
  * A confirmed share draws as a solid segment inside the bar, and is stated
  * in words beside the share.
+ *
+ * @param props - the bars, in display order
+ * @returns the list
  */
 export function UsageBars({ bars }: UsageBarsProps) {
   return (
@@ -77,7 +82,11 @@ export function UsageBars({ bars }: UsageBarsProps) {
   );
 }
 
-/** The key to a {@link UsageBars} list's two fills. */
+/**
+ * The key to a {@link UsageBars} list's fills.
+ *
+ * @returns the legend row
+ */
 export function UsageLegend() {
   return (
     <div className="legend-row">
