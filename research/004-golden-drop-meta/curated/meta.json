@@ -10,7 +10,7 @@
   "changes": [
    "Captain Milk; perks Passion Pay plus Rapid Promotion (or Like A Family) at mercenary Lv.4.",
    "Set the ATK order first (Milk, then Scorpion or Brightseeker, Figure, Macaron, Melon Soda or Cheesecake) by lowering dealers' levels; the rest of the 40 only need to stay above the excluded cookies in power.",
-   "Level the cookies in dungeon-exclusions.json to Lv.1, Bari included.",
+   "Level every cookie on the Exclusions page to Lv.1, Bari included.",
    "Use the arena-style preset (Skill Haste, Skill AMP, crit, damage reduction; no accuracy or focus), and try one move-speed line if Milk arrives late.",
    "Run at least once a day: the daily board pays only on days with a run, and the weekly board keeps only the best."
   ],

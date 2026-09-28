@@ -33,7 +33,7 @@ const run = dungeonRunInsert.shape;
 /**
  * One entry of `dungeon-runs.json`: a documented score in G, the total
  * power the screen shows (the whole collection's) and what the post says
- * about the run. `id` becomes the run's slug.
+ * about the run, its ATK order as Korean names. `id` becomes the run's slug.
  */
 export const seedDungeonRun = z.strictObject({
   id: run.slug,
@@ -49,6 +49,7 @@ export const seedDungeonRun = z.strictObject({
   evidence: run.evidence,
   deck: run.deckId,
   atk_order: run.atkOrder,
+  atk_order_note: run.atkOrderNote,
   perks: run.perks,
   preset: run.preset,
   note: run.note,
@@ -160,6 +161,10 @@ export const DUNGEON_COLLECTIONS = {
     },
     /** @inheritdoc */
     prepare: (runs, { file }) => [
+      checkNames(
+        file,
+        runs.map((run) => run.atk_order ?? []),
+      ),
       (repos) => {
         const holders = new Map(repos.dungeonRuns.list().map((row) => [row.slug, row.recordSlug]));
         assertUnclaimed(
@@ -187,6 +192,7 @@ export const DUNGEON_COLLECTIONS = {
             standing: runStanding(run),
             deckId: run.deck ?? null,
             atkOrder: run.atk_order ?? null,
+            atkOrderNote: run.atk_order_note ?? null,
             perks: run.perks ?? null,
             preset: run.preset ?? null,
             note: run.note ?? null,

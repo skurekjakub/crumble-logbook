@@ -89,7 +89,7 @@ Every cited id is in `curated/sources.json` with its URL. The ones that settled 
 
 - `research-trail.md`: the search rounds.
 - `import.json`: the importer manifest (record mode `crumble_dungeon`).
-- `curated/`: the dataset; `manifest.json` lists every collection, the dungeon tables among them.
+- `curated/`: the dataset; `manifest.json` lists every collection, the dungeon tables among them. Corrected for the app on 2026-09-28, after its review: a run's `atk_order` is a list of Korean names (the app glosses them; `atk_order_note` keeps what the post adds), 전치's run is the highest score per power among runs with a published lineup (the anonymous 244.7G run is higher, at about 37x), the page texts name the app's Runs, Lineups and Exclusions pages instead of curated files, 그니's formation breakers are named in the deck note instead of pointing at `evidence/08-extract/lineups.json`, and `takeaways.json` carries the Recommendation's open choices and the steelman's answers, so the Overview shows them.
 - `evidence/captures.jsonl`: one line per evidence file (path, url, time, tool, sha256).
 - `evidence/01-repo-grounding/repo-quotes.md`: what the repo already held, quoted with file:line.
 - `evidence/02-dc/`: DCInside search listings (`01-list-dungeon.tsv`, `02-list-terms.tsv`, `03-list-round3.tsv`) and posts with comments (`dc/`; images local only).

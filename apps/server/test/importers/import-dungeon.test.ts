@@ -25,18 +25,24 @@ function curated<T>(name: string): T {
   return JSON.parse(readFileSync(join(dungeonDir, "curated", name), "utf-8")) as T;
 }
 
-const runs =
-  curated<Array<{ id: string; evidence: string; board: string; score_g: number }>>(
-    "dungeon-runs.json",
-  );
+const runs = curated<
+  Array<{
+    id: string;
+    evidence: string;
+    board: string;
+    score_g: number;
+    atk_order: string[] | null;
+  }>
+>("dungeon-runs.json");
 const lineups =
   curated<Array<{ id: string; first40: string[]; excluded: string[]; atk_order: string[] }>>(
     "dungeon-lineups.json",
   );
 const exclusions = curated<Array<{ kr: string }>>("dungeon-exclusions.json");
 
-/** Every cookie name record 004's lineups and exclusions give, which record 001's glossary holds. */
+/** Every cookie name record 004's dungeon files give, which record 001's glossary holds. */
 const COOKIES = new Set([
+  ...runs.flatMap((r) => r.atk_order ?? []),
   ...lineups.flatMap((l) => [...l.first40, ...l.excluded, ...l.atk_order]),
   ...exclusions.map((e) => e.kr),
 ]);
@@ -117,8 +123,11 @@ describe("importRecord on research record 004", FULL_IMPORT, () => {
       evidence: "screenshot",
       standing: "verified",
       deckId: "dungeon-milk-scorpion-figure",
+      atkOrder: runs[0]!.atk_order,
+      atkOrderNote: null,
       sources: ["dc:77306"],
     });
+    expect(top!.atkOrder![0]).toBe("바삭튼튼 소아과 의사 우유맛 쿠키");
     const ndrunner = services.dungeonLineups.list().find((l) => l.slug === "ndrunner-2026-09-18");
     expect(ndrunner?.first40).toEqual(lineups.find((l) => l.id === "ndrunner-2026-09-18")!.first40);
     expect(ndrunner?.deckId).toBe("dungeon-macaron-figure-beam");
@@ -263,6 +272,15 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
     ).toThrow(
       /dungeon-exclusions\.json \[0\]: 오븐 방랑자 쿠키 is no glossary entry's Korean name/,
     );
+    const misspeltOrder = (rows: Row[]) => {
+      rows[0]!.atk_order = ["전갈 쿠키"];
+    };
+    expect(() =>
+      importRecord(
+        dungeonStore(),
+        dungeonCopy("914-dungeon-copy", { "dungeon-runs.json": misspeltOrder }),
+      ),
+    ).toThrow(/dungeon-runs\.json \[0\]: 전갈 쿠키 is no glossary entry's Korean name/);
     expect(() => importRecord(testStore(), dungeonCopy("913-dungeon-copy"))).toThrow(
       /is no glossary entry's Korean name/,
     );

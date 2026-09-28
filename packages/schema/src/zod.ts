@@ -393,14 +393,16 @@ export type RiftBossRow = typeof t.riftBosses.$inferSelect;
  * `YYYY-MM-DD`; `scoreG` is positive and `totalPowerG`, when present, too;
  * `serverRank`, when present, is a positive integer; `timeLeftS` and
  * `cookiesLeft`, when present, are non-negative; `deckId`, when present, a
- * lowercase slug; every other text, when present, is non-empty.
+ * lowercase slug; `atkOrder`, when present, a non-empty name list; every
+ * other text, when present, is non-empty.
  */
 export const dungeonRunInsert = createInsertSchema(t.dungeonRuns, {
   slug: () => deckSlug,
   date: () => isoDate,
   player: (s) => s.min(1).nullish(),
   server: (s) => s.min(1).nullish(),
-  atkOrder: (s) => s.min(1).nullish(),
+  atkOrder: () => nameList.min(1).nullish(),
+  atkOrderNote: (s) => s.min(1).nullish(),
   perks: (s) => s.min(1).nullish(),
   preset: (s) => s.min(1).nullish(),
   note: (s) => s.min(1).nullish(),
@@ -411,8 +413,10 @@ export const dungeonRunInsert = createInsertSchema(t.dungeonRuns, {
   cookiesLeft: (s) => s.int().nonnegative().nullish(),
   deckId: () => deckSlug.nullish(),
 });
-/** Select schema for `dungeon_runs`, mirroring the stored row shape. */
-export const dungeonRunSelect = createSelectSchema(t.dungeonRuns);
+/** Select schema for `dungeon_runs`, with `atkOrder` typed precisely. */
+export const dungeonRunSelect = createSelectSchema(t.dungeonRuns, {
+  atkOrder: () => nameList.nullable(),
+});
 /** A row selected from `dungeon_runs`. */
 export type DungeonRunRow = typeof t.dungeonRuns.$inferSelect;
 

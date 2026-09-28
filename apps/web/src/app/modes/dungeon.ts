@@ -70,7 +70,7 @@ export const DUNGEON = {
   dungeon: {
     runs: {
       title: "Runs",
-      lede: "Documented scores, ranked by score. The runs a screenshot or video shows are ranked; scores stated only in text follow as claims. Total power is the whole collection's power the result screen shows, not a team's power. Score ÷ total power is only a normaliser for comparing accounts; it ranks nothing.",
+      lede: "Documented scores, ranked by score. The runs a screenshot or video shows are ranked; scores stated only in text or posted as claims follow as claims. Total power is the whole collection's power the result screen shows, not a team's power. Score ÷ total power is only a normaliser for comparing accounts; it ranks nothing.",
     },
     lineups: {
       title: "Published lineups",

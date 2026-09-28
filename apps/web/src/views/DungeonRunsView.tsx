@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { useSourceIndex } from "../api/hooks";
-import { decksQuery, dungeonRunsQuery, rngFactorsQuery } from "../api/queries";
+import { decksQuery, dungeonRunsQuery, glossaryQuery, rngFactorsQuery } from "../api/queries";
 import type { DungeonRun, RngFactor } from "../api/types";
 import type { DungeonConfig, ModeSection } from "../app/modes";
 import { modeLink } from "../app/modes";
+import { AtkOrder } from "../components/AtkOrder";
 import type { Column, TableFilter, TableSelect } from "../components/DataTable";
 import { applyFilters, DataTable, TableTools } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
@@ -14,6 +15,7 @@ import { SourceChips } from "../components/SourceChips";
 import { formatDungeonG, ordinal, scorePerPower } from "../lib/dungeon";
 import { optionalKey, optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
+import { sourceLabel } from "../lib/sources";
 import { deckId } from "./DeckCard";
 import { CopyHeader } from "./ModeViewHeader";
 
@@ -53,8 +55,8 @@ const GROUPS: readonly RunGroup[] = [
   },
   {
     id: "runs-claimed",
-    title: "Text-only claims",
-    lede: "Scores stated without a screen; listed by score, not ranked.",
+    title: "Claims",
+    lede: "Scores stated only in text, or posted as claims; listed by score, not ranked.",
     standing: "claim",
   },
 ];
@@ -117,17 +119,62 @@ function RunSpread({ rows, sources }: { rows: readonly RngFactor[]; sources: Sou
   );
 }
 
+/** The texts a runs-board row shows, cell by cell; `""` where the row shows nothing. */
+type ShownRun = Readonly<
+  Record<
+    | "rank"
+    | "score"
+    | "totalPower"
+    | "perPower"
+    | "timeLeft"
+    | "cookiesLeft"
+    | "board"
+    | "place"
+    | "server"
+    | "evidence"
+    | "player"
+    | "deck"
+    | "perks"
+    | "preset",
+    string
+  >
+>;
+
 /**
- * The documented Crumble Dungeon scores: the runs a screenshot or video
- * shows, ranked by score, then, under their own heading, the scores text
- * alone claims. Every row shows its rank (ranked runs only, among all of
- * them), the score, the collection's total power, score ÷ total power as
- * a normaliser, time and cookies left, the board it was shown on with the
- * server and its place there, the evidence, the player and date, the
- * build (the deck, linking to its Teams card, the ATK order, perks and
- * preset), a note and sources. The board, evidence and a text filter
- * live in the URL and apply to both groups; the text filter matches the
- * player, server, deck, build and note. The mode's RNG factors follow.
+ * The texts a runs-board row shows, which its cells print and its text
+ * filter matches.
+ *
+ * @param r - the run
+ * @param rank - its place among the ranked runs, or undefined for a claim
+ * @param deck - the name its deck shows under, or null without a deck
+ * @returns the texts, by cell
+ */
+function showRun(r: DungeonRun, rank: number | undefined, deck: string | null): ShownRun {
+  const perPower = scorePerPower(r.scoreG, r.totalPowerG);
+  return {
+    rank: rank === undefined ? "–" : String(rank),
+    score: formatDungeonG(r.scoreG),
+    totalPower: formatDungeonG(r.totalPowerG),
+    perPower: perPower == null ? "–" : `${perPower}×`,
+    timeLeft: r.timeLeftS == null ? "–" : `${r.timeLeftS} s`,
+    cookiesLeft: r.cookiesLeft == null ? "–" : String(r.cookiesLeft),
+    board: BOARDS[r.board],
+    place: r.serverRank == null ? "" : `${ordinal(r.serverRank)} on the server`,
+    server: r.server ? `Server: ${r.server}` : "",
+    evidence: EVIDENCE[r.evidence],
+    player: r.player ?? "anonymous",
+    deck: deck ?? "",
+    perks: r.perks ? `Perks: ${r.perks}` : "",
+    preset: r.preset ? `Preset: ${r.preset}` : "",
+  };
+}
+
+/**
+ * The runs board: the documented Crumble Dungeon scores a screenshot or
+ * video shows, ranked by score, then the claims under their own heading,
+ * with the columns `columns` declares and the mode's RNG factors after
+ * them. The board, evidence and text filters live in the URL and apply to
+ * both groups; the text filter matches what a row shows.
  *
  * @param props - the mode, its dungeon config, the search params and their setter
  * @returns the runs board
@@ -140,6 +187,10 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
     ...decksQuery(mode.scope),
     select: (list) => new Map(list.map((d) => [d.id, d.nameEn] as const)),
   }).data;
+  const glossary = useQuery({
+    ...glossaryQuery(),
+    select: (entries) => new Map(entries.map((e) => [e.kr, e.en] as const)),
+  }).data;
   /**
    * The deck name a row shows.
    *
@@ -147,6 +198,14 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
    * @returns the deck's English name (its id before the decks load), or null without a deck
    */
   const deckOf = (r: DungeonRun) => (r.deckId ? (decks?.get(r.deckId) ?? r.deckId) : null);
+  /**
+   * A run's ATK order as the chain shows it: each Korean name with its glossary English.
+   *
+   * @param r - the run
+   * @returns the names, top first; empty when the post gives no order
+   */
+  const orderOf = (r: DungeonRun) =>
+    (r.atkOrder ?? []).map((kr) => ({ kr, en: glossary?.get(kr) ?? null }));
 
   return (
     <>
@@ -157,47 +216,46 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
           const rank = new Map(
             rows.filter((r) => r.standing === "verified").map((r, i) => [r.id, i + 1] as const),
           );
+          /**
+           * The texts a row shows.
+           *
+           * @param r - the run
+           * @returns them, by cell
+           */
+          const shown = (r: DungeonRun) => showRun(r, rank.get(r.id), deckOf(r));
           const columns: Column<DungeonRun>[] = [
-            { header: "Rank", cell: (r) => rank.get(r.id) ?? "–", className: "n" },
-            { header: "Score", cell: (r) => formatDungeonG(r.scoreG), className: "n" },
+            { header: "Rank", cell: (r) => shown(r).rank, className: "n" },
+            { header: "Score", cell: (r) => shown(r).score, className: "n" },
             {
               header: "Total power (collection)",
-              cell: (r) => formatDungeonG(r.totalPowerG),
+              cell: (r) => shown(r).totalPower,
               className: "n",
             },
             {
               header: "Score ÷ power (normaliser)",
-              cell: (r) => {
-                const x = scorePerPower(r.scoreG, r.totalPowerG);
-                return x == null ? "–" : `${x}×`;
-              },
+              cell: (r) => shown(r).perPower,
               className: "n",
             },
-            {
-              header: "Time left",
-              cell: (r) => (r.timeLeftS == null ? "–" : `${r.timeLeftS} s`),
-              className: "n",
-            },
-            {
-              header: "Cookies left",
-              cell: (r) => (r.cookiesLeft == null ? "–" : r.cookiesLeft),
-              className: "n",
-            },
+            { header: "Time left", cell: (r) => shown(r).timeLeft, className: "n" },
+            { header: "Cookies left", cell: (r) => shown(r).cookiesLeft, className: "n" },
             {
               header: "Board",
-              cell: (r) => (
-                <>
-                  {BOARDS[r.board]}
-                  {r.serverRank != null ? <div>{ordinal(r.serverRank)} on the server</div> : null}
-                  {r.server ? <div className="muted">Server: {r.server}</div> : null}
-                </>
-              ),
+              cell: (r) => {
+                const s = shown(r);
+                return (
+                  <>
+                    {s.board}
+                    {s.place ? <div>{s.place}</div> : null}
+                    {s.server ? <div className="muted">{s.server}</div> : null}
+                  </>
+                );
+              },
             },
             {
               header: "Evidence",
               cell: (r) => (
                 <Pill kind={r.standing === "verified" ? "verified" : "claimed"}>
-                  {EVIDENCE[r.evidence]}
+                  {shown(r).evidence}
                 </Pill>
               ),
             },
@@ -205,25 +263,30 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
               header: "Player",
               cell: (r) => (
                 <>
-                  {r.player ?? "anonymous"}
+                  {shown(r).player}
                   <div className="muted">{r.date}</div>
                 </>
               ),
             },
             {
               header: "Build",
-              cell: (r) => (
-                <>
-                  {r.deckId ? (
-                    <Link {...modeLink(mode.id, "/$mode/teams")} hash={deckId({ id: r.deckId })}>
-                      {deckOf(r)}
-                    </Link>
-                  ) : null}
-                  {r.atkOrder ? <div>ATK order: {r.atkOrder}</div> : null}
-                  {r.perks ? <div className="muted">Perks: {r.perks}</div> : null}
-                  {r.preset ? <div className="muted">Preset: {r.preset}</div> : null}
-                </>
-              ),
+              cell: (r) => {
+                const s = shown(r);
+                const order = orderOf(r);
+                return (
+                  <>
+                    {r.deckId ? (
+                      <Link {...modeLink(mode.id, "/$mode/teams")} hash={deckId({ id: r.deckId })}>
+                        {s.deck}
+                      </Link>
+                    ) : null}
+                    {order.length ? <AtkOrder order={order} /> : null}
+                    {r.atkOrderNote ? <div className="muted">{r.atkOrderNote}</div> : null}
+                    {s.perks ? <div className="muted">{s.perks}</div> : null}
+                    {s.preset ? <div className="muted">{s.preset}</div> : null}
+                  </>
+                );
+              },
               className: "wide",
             },
             { header: "Note", cell: (r) => r.note ?? "", className: "wide" },
@@ -234,15 +297,14 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
             onChange: (q) => onSearch({ q }),
             text: (r) =>
               [
-                r.player ?? "",
-                r.server ?? "",
-                deckOf(r) ?? "",
-                r.atkOrder ?? "",
-                r.perks ?? "",
-                r.preset ?? "",
+                ...Object.values(shown(r)),
+                r.date,
+                ...orderOf(r).flatMap((c) => [c.kr, c.en ?? ""]),
+                r.atkOrderNote ?? "",
                 r.note ?? "",
+                ...r.sources.map(sourceLabel),
               ].join(" "),
-            placeholder: "Filter by player, server, deck, build or note",
+            placeholder: "Filter by anything a run shows",
           };
           const select: TableSelect<DungeonRun> = {
             name: "Board",

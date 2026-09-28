@@ -43,7 +43,7 @@
   "name_kr": "우브전피마치",
   "status": "meta",
   "ceiling": "325.9G at 10.10G total power, server 1st, 0.000 s left (전치, 2026-09-27, screenshot); 221.4G at 9.23G (VART, 2026-09-26, video); VART claims 250G with a swap for Espresso.",
-  "summary": "The same Milk-captain rules with Brightseeker second in ATK and Cheesecake sixth, so the beam reaches Brightseeker and Cheesecake's ATK buff reaches Milk. 전치 ran it from 105.2G at 3.74G (weekly best, 2026-09-17) to 325.9G at 10.10G, the highest score per power documented. VART lowers the other 34 only until they stay above the excluded cookies.",
+  "summary": "The same Milk-captain rules with Brightseeker second in ATK and Cheesecake sixth, so the beam reaches Brightseeker and Cheesecake's ATK buff reaches Milk. 전치 ran it from 105.2G at 3.74G (weekly best, 2026-09-17) to 325.9G at 10.10G, the highest score per power among runs with a published lineup. VART lowers the other 34 only until they stay above the excluded cookies.",
   "cookies": [
    {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain with ATK #1: Passion Pay and Rapid Promotion land on it and its stacking ATK buff covers the formation."},
    {"kr": "브라이트시커 쿠키", "level_rule": "ATK #2", "why": "Beam target and main ranged dealer; its Skill Haste decides whether Rapid Promotion is worth taking (dc:76916)."},
@@ -123,7 +123,7 @@
   "atk_order_note": "Milk gets the beam from its synergy; Macaron and Figure are ATK #1 and #2 among the rest. A simpler alternative is letting Milk and the main dealers take the beam (UF6zcIkbh_8).",
   "perks": "Milk captain; Passion Pay + Like A Family at mercenary Lv.4; Rapid Promotion at Lv.3; General Perks below that.",
   "substitutions": [
-   "The cookies set to Lv.1 are in dungeon-lineups.json (ndrunner-2026-09-18) and, with reasons, dungeon-exclusions.json."
+   "The cookies set to Lv.1 are under ND러너's 2026-09-18 list on the Lineups page and, with reasons, on the Exclusions page."
   ],
   "rng": "Runs differ by billions; a normal run is about 170G, a poor one about 150G, so every ticket is spent chasing the record.",
   "unorthodox": [
@@ -154,7 +154,7 @@
   "atk_order_note": "Sixth: Macaron, Rye or Cheesecake; pets' ATK bonuses count toward the order.",
   "perks": "Not stated.",
   "substitutions": [
-   "The author's formation breakers, to drop if they misbehave, are in evidence/08-extract/lineups.json (gni-2026-09-13, optional_exclude)."
+   "The author's formation breakers, to drop if they misbehave: 다크체리맛 쿠키, 일꾼 곰젤리, 공주맛 쿠키, 홍고추맛 쿠키, 딸기맛 쿠키, 용감한 쿠키, 명랑한 쿠키, 설탕노움, 실론나이트 쿠키, 요거트베리맛 쿠키, 용사맛 쿠키, 근육맛 쿠키, 라일락맛 쿠키, 마법사맛 쿠키, 닌자맛 쿠키 and 악마맛 쿠키 (transcribed from the video)."
   ],
   "sources": ["web:yt-_mvTZSI8hY8", "web:yt-NByK6TGHOKA"]
  },

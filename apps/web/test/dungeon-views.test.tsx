@@ -147,6 +147,7 @@ function run(id: number, slug: string, scoreG: number, over: Partial<DungeonRun>
     standing: "verified",
     deckId: null,
     atkOrder: null,
+    atkOrderNote: null,
     perks: null,
     preset: null,
     note: null,
@@ -163,7 +164,8 @@ const RUNS = [
     serverRank: 1,
     timeLeftS: 0,
     deckId: DECK.id,
-    atkOrder: "Milk, Scorpion, Figure",
+    atkOrder: [MILK, SCORPION],
+    atkOrderNote: "The post puts Scorpion second.",
     server: "a server in the 100s",
   }),
   run(2, "run-efficient", 244.687, { totalPowerG: 6.623, timeLeftS: 2, cookiesLeft: 0 }),
@@ -309,7 +311,7 @@ describe("the runs board", () => {
     // The second run has the higher score ÷ power; it still ranks below the first.
     expect(bodyRows(ranked)[0]![3]).toBe("24.3×");
     expect(bodyRows(ranked)[1]![3]).toBe("36.9×");
-    const claims = screen.getByRole("region", { name: "Text-only claims" });
+    const claims = screen.getByRole("region", { name: "Claims" });
     expect(bodyRows(claims)).toHaveLength(1);
     expect(bodyRows(claims)[0]![0]).toBe("–");
     expect(bodyRows(claims)[0]![1]).toBe("350G");
@@ -330,7 +332,12 @@ describe("the runs board", () => {
     expect(top![6]).toContain("1st on the server");
     expect(top![6]).toContain("Server: a server in the 100s");
     expect(top![7]).toBe("Screenshot");
-    expect(top![9]).toContain("ATK order: Milk, Scorpion, Figure");
+    await waitFor(() =>
+      expect(within(ranked).getAllByRole("row")[1]!.querySelector(".order")).toHaveTextContent(
+        "Milk Cookie›Scorpion Cookie",
+      ),
+    );
+    expect(top![9]).toContain("The post puts Scorpion second.");
     expect(efficient![5]).toBe("0");
     expect(weekly![6]).toContain("Weekly best");
     expect(weekly![7]).toBe("Video");
@@ -342,7 +349,7 @@ describe("the runs board", () => {
 
   it("filters by board and evidence from the URL, and puts a picked filter in the URL", async () => {
     await renderDungeon("/dungeon/runs?evidence=text");
-    const claims = await screen.findByRole("region", { name: "Text-only claims" });
+    const claims = await screen.findByRole("region", { name: "Claims" });
     expect(bodyRows(claims)).toHaveLength(1);
     expect(screen.queryByRole("region", { name: "Ranked runs" })).toBeNull();
     cleanup();
@@ -354,6 +361,22 @@ describe("the runs board", () => {
     const ranked = await screen.findByRole("region", { name: "Ranked runs" });
     await waitFor(() => expect(bodyRows(ranked)).toHaveLength(1));
     expect(bodyRows(ranked)[0]![0]).toBe("3");
+  });
+
+  it("filters by the text a row shows: the anonymous label, the date, and a cookie's glossary English", async () => {
+    for (const [q, slugs] of [
+      ["anonymous", ["run-claim"]],
+      ["2026-09-28", RUNS.map((r) => r.slug)],
+      ["Scorpion Cookie", ["run-top"]],
+      ["DC 72084", ["run-claim"]],
+      ["36.9×", ["run-efficient"]],
+    ] as const) {
+      await renderDungeon(`/dungeon/runs?q=${encodeURIComponent(q)}`);
+      await waitFor(() =>
+        expect([...document.querySelectorAll("tbody tr")].length, q).toBe(slugs.length),
+      );
+      cleanup();
+    }
   });
 });
 

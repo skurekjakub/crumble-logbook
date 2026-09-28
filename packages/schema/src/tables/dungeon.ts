@@ -22,8 +22,9 @@ import { decks } from "./decks";
  * `serverRank` its place on that server's board, `timeLeftS` and
  * `cookiesLeft` what the result screen shows when the run ended, and
  * `standing` whether a screenshot or video shows it (read from `evidence`,
- * never given). `atkOrder`, `perks` and `preset` are as the post states
- * them; `slug` is the run's curated id.
+ * never given). `atkOrder` is the ATK order from the top as Korean names,
+ * `atkOrderNote` what the post adds to it; `perks` and `preset` are as the
+ * post states them; `slug` is the run's curated id.
  */
 export const dungeonRuns = sqliteTable("dungeon_runs", {
   id: integer("id").primaryKey({ autoIncrement: true }),
@@ -40,7 +41,8 @@ export const dungeonRuns = sqliteTable("dungeon_runs", {
   evidence: text("evidence", { enum: RUN_EVIDENCE }).notNull(),
   standing: text("standing", { enum: RUN_STANDING }).notNull(),
   deckId: text("deck_id").references(() => decks.id, { onDelete: "set null" }),
-  atkOrder: text("atk_order"),
+  atkOrder: text("atk_order", { mode: "json" }).$type<string[]>(),
+  atkOrderNote: text("atk_order_note"),
   perks: text("perks"),
   preset: text("preset"),
   note: text("note"),
