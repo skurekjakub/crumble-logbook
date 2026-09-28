@@ -7,8 +7,11 @@ import type { TableFilter, TableSelect } from "../components/DataTable";
 import { applyFilters, TableTools } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
 import { ErrorBox } from "../components/ErrorBox";
+import { ObsoleteNotice } from "../components/ObsoleteNotice";
+import { ObsoleteSection } from "../components/ObsoleteSection";
 import { QueryResult } from "../components/QueryResult";
 import { RuneCard } from "../components/RuneBuilds";
+import { splitObsolete } from "../lib/obsolete";
 import { optionalText } from "../lib/search";
 import { ModeViewHeader } from "./ModeViewHeader";
 
@@ -43,6 +46,8 @@ export interface RunesViewProps {
  * lines, any disputed view, the decks it applies to and its sources. The
  * deck select and the text filter live in the URL as `?deck=` and `?q=`.
  * A failed deck list is reported; the cards then name decks by id.
+ * Obsolete builds that pass the filters end the page in the collapsed
+ * Obsolete section, each card under its notice.
  *
  * @param props - the mode, the search params and their setter
  * @returns the runes view
@@ -86,12 +91,13 @@ export function RunesView({ mode, search, onSearch }: RunesViewProps) {
             test: (r, v) => r.decks.includes(v),
           };
           const kept = applyFilters(rows, filter, select);
+          const { current, obsolete } = splitObsolete(kept);
           return (
             <>
               <TableTools filter={filter} select={select} />
-              {kept.length ? (
+              {current.length ? (
                 <div className="grid g2">
-                  {kept.map((b) => (
+                  {current.map((b) => (
                     <RuneCard
                       key={b.id}
                       build={b}
@@ -103,9 +109,26 @@ export function RunesView({ mode, search, onSearch }: RunesViewProps) {
                 </div>
               ) : (
                 <EmptyState>
-                  {rows.length ? "Nothing matches." : "No rune builds recorded yet."}
+                  {rows.length === 0
+                    ? "No rune builds recorded yet."
+                    : kept.length === 0
+                      ? "Nothing matches."
+                      : "No current rune builds."}
                 </EmptyState>
               )}
+              <ObsoleteSection id="runes-obsolete" latest={obsolete[0]?.obsoleteSince ?? null}>
+                {obsolete.map((b) => (
+                  <div key={b.id} className="obsolete-item">
+                    <ObsoleteNotice
+                      since={b.obsoleteSince!}
+                      reason={b.obsoleteReason}
+                      sources={b.obsoleteSources}
+                      sourceIndex={sources}
+                    />
+                    <RuneCard build={b} sources={sources} headingLevel={3} deckName={deckName} />
+                  </div>
+                ))}
+              </ObsoleteSection>
             </>
           );
         }}

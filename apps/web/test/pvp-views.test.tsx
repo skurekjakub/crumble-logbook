@@ -840,3 +840,62 @@ describe("PvP builds, mechanics and timeline", () => {
     expect(await panel().findByText("Rumble Arena opens.")).toBeVisible();
   });
 });
+
+describe("PvP runes and gear, obsolete", () => {
+  const retired = {
+    obsoleteSince: "2026-10-12",
+    obsoleteReason: "The patch changed the rune's stat.",
+    obsoleteSources: ["dc:75148"],
+  };
+  const oldRune = { ...RUNES[0]!, id: 90, lines: "CRIT ×5", ...retired };
+  const oldGear = { ...GEAR[0]!, id: 91, substats: "HP only", ...retired };
+
+  it("keeps an obsolete rune build out of the cards and lists it in the Obsolete section under its notice", async () => {
+    await renderAt("/arena/runes", ARENA, {
+      "/api/rune-builds?mode=arena": { body: [...RUNES, oldRune] },
+    });
+    const section = (await panel().findByText("Obsolete", { selector: "summary .label" })).closest(
+      "details",
+    )!;
+    expect(section.querySelector("summary")).toHaveTextContent("latest 2026-10-12");
+    expect(within(section).getByRole("note", { hidden: true })).toHaveTextContent(
+      "Obsolete since 2026-10-12: The patch changed the rune's stat.",
+    );
+    expect(section).toHaveTextContent("CRIT ×5");
+    const outside = [...document.querySelectorAll("main .rune-card")].filter(
+      (c) => !section.contains(c),
+    );
+    expect(outside).toHaveLength(RUNES.length);
+    expect(outside.some((c) => c.textContent.includes("CRIT ×5"))).toBe(false);
+  });
+
+  it("keeps an obsolete gear rec off the board and lists it in the Obsolete section under its notice", async () => {
+    await renderAt("/arena/gear", ARENA, {
+      "/api/gear-recs?mode=arena": { body: [...GEAR, oldGear] },
+    });
+    const section = (await panel().findByText("Obsolete", { selector: "summary .label" })).closest(
+      "details",
+    )!;
+    expect(section).toHaveTextContent("HP only");
+    expect(within(section).getByRole("note", { hidden: true })).toHaveTextContent(
+      "Obsolete since 2026-10-12",
+    );
+    expect(document.querySelector(".gearboard")).toHaveTextContent(
+      "Skill haste on every right-side piece",
+    );
+    expect(document.querySelector(".gearboard")).not.toHaveTextContent("HP only");
+  });
+
+  it("says so when every gear rec is obsolete", async () => {
+    await renderAt("/arena/gear", ARENA, { "/api/gear-recs?mode=arena": { body: [oldGear] } });
+    expect(await panel().findByText("No current gear.")).toHaveClass("empty");
+    expect(document.querySelector(".gearboard")).toBeNull();
+    expect(document.querySelector("details.obsolete")).toHaveTextContent("HP only");
+  });
+
+  it("shows no Obsolete section when nothing is obsolete", async () => {
+    await renderAt("/arena/gear", ARENA);
+    await waitFor(() => expect(document.querySelector(".gearboard")).not.toBeNull());
+    expect(document.querySelector("details.obsolete")).toBeNull();
+  });
+});
