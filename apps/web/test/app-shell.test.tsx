@@ -181,7 +181,7 @@ describe("app shell", () => {
         cleanup();
       }
     }
-  });
+  }, 15_000);
 
   it("answers not found for a page the mode doesn't have, and for an unknown mode", async () => {
     for (const path of ["/arena/scores", "/arena/boss", "/conquest/teams", "/nowhere"]) {

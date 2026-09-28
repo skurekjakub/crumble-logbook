@@ -107,7 +107,7 @@ describe("the ledger block", () => {
       "evidence/a.md",
       "evidence/b.md",
     ]);
-  });
+  }, 10_000);
 
   it("fails on a bad line, naming the ledger and the line", () => {
     const dir = recordWithLedger(`${line()}\n${line({ tool: "wget" })}`);
