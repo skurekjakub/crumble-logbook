@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import { beforeAll, describe, expect, it } from "vitest";
+import { beforeAll, describe, expect, it, vi } from "vitest";
 import { createApp } from "../src/app";
 import { repoRoot } from "../src/config";
 import { importRecord } from "../src/importers/import-record";
@@ -65,6 +65,54 @@ describe("the API over imported record 001", () => {
     const buffs = await readJson<BuffValueView[]>(res);
     expect(buffs.length).toBeGreaterThan(0);
     expect(buffs.every((b) => b.en === "Tea Knight Cookie")).toBe(true);
+  });
+
+  it("answers an unknown id with 404 and a not_found body", async () => {
+    const res = await app.request("/api/decks/no-such-deck");
+    expect(res.status).toBe(404);
+    expect(await res.json()).toEqual({
+      error: "not_found",
+      message: "deck not found: no-such-deck",
+    });
+  });
+
+  it("answers an unknown cited source with 422 and an unknown_refs body naming the ids", async () => {
+    const res = await app.request("/api/mechanics", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ title: "t", body: "b", confidence: "low", sources: ["dc:0"] }),
+    });
+    expect(res.status).toBe(422);
+    expect(await res.json()).toEqual({ error: "unknown_refs", kind: "sources", ids: ["dc:0"] });
+  });
+
+  it("answers a conflict with 409 and a conflict body", async () => {
+    const cited = (await readJson<ScoreView[]>(await app.request("/api/scores")))[0]!.sources[0]!;
+    const res = await app.request(`/api/sources/${encodeURIComponent(cited)}`, {
+      method: "DELETE",
+    });
+    expect(res.status).toBe(409);
+    const body = await readJson<{ error: string; message: string }>(res);
+    expect(Object.keys(body)).toEqual(["error", "message"]);
+    expect(body.error).toBe("conflict");
+  });
+
+  it("answers an unexpected error with 500 and an internal body, logging it", async () => {
+    const services = createServices(store);
+    const failing = createApp({
+      ...services,
+      export: {
+        run: () => {
+          throw new Error("boom");
+        },
+      },
+    });
+    const log = vi.spyOn(console, "error").mockImplementation(() => {});
+    const res = await failing.request("/api/export");
+    expect(res.status).toBe(500);
+    expect(await res.json()).toEqual({ error: "internal" });
+    expect(log).toHaveBeenCalledOnce();
+    log.mockRestore();
   });
 
   it("serves an export that restores into a fresh database unchanged", async () => {

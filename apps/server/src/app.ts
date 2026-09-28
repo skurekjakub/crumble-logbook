@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { ConflictError, NotFoundError, UnknownRefsError } from "./errors";
+import { httpStatus } from "./errors";
 import { REGISTRY as R } from "./registry";
 import { crudRouter } from "./routes/content";
 import { exportRouter } from "./routes/export";
@@ -18,8 +18,8 @@ import { contentEndpoints as endpoints } from "./services/content";
  * each route's request and response types; `test/registry.test.ts` checks
  * that every registered path is mounted.
  *
- * `NotFoundError` maps to 404, `UnknownRefsError` to 422, `ConflictError` to
- * 409; anything else is logged with `console.error` and maps to 500.
+ * An error `httpStatus` knows answers with its status and body; anything
+ * else is logged with `console.error` and answers 500.
  *
  * @param services - the service set every route delegates to
  * @returns the assembled Hono app
@@ -49,15 +49,8 @@ export function createApp(services: Services) {
     .route(R.researchRecords.path, recordsRouter(services.records))
     .route("/export", exportRouter(services.export))
     .onError((err, c) => {
-      if (err instanceof NotFoundError) {
-        return c.json({ error: "not_found" as const, message: err.message }, 404);
-      }
-      if (err instanceof UnknownRefsError) {
-        return c.json({ error: "unknown_refs" as const, kind: err.kind, ids: err.ids }, 422);
-      }
-      if (err instanceof ConflictError) {
-        return c.json({ error: "conflict" as const, message: err.message }, 409);
-      }
+      const known = httpStatus(err);
+      if (known) return c.json(known.body, known.status);
       console.error(err);
       return c.json({ error: "internal" as const }, 500);
     });

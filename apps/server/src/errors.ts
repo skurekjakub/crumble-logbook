@@ -46,6 +46,72 @@ export class ConflictError extends Error {
   }
 }
 
+/** An error's HTTP answer: its status and JSON body. */
+export interface HttpError {
+  /** The response status. */
+  status: 404 | 409 | 422;
+  /** The JSON body; its `error` names the failure for the client. */
+  body: { error: string } & Record<string, unknown>;
+}
+
+/** How one error class answers over HTTP. */
+interface HttpMapping<E extends Error> {
+  /** The error class. */
+  type: new (...args: never[]) => E;
+  /**
+   * Builds the answer for an error of the class.
+   *
+   * @param err - the error
+   * @returns its status and body
+   */
+  answer(err: E): HttpError;
+}
+
+/**
+ * Declares an error class's HTTP answer, inferring the error type.
+ *
+ * @param mapping - the class and its answer
+ * @returns the same mapping, widened for the table
+ */
+function httpMapping<E extends Error>(mapping: HttpMapping<E>): HttpMapping<Error> {
+  // `answer` is a method, so its parameter is checked bivariantly: an `E` answer widens to `Error`.
+  return mapping;
+}
+
+/**
+ * Every error class the API answers with a client-error status, checked in
+ * order. A new error class that the API should answer is a row here.
+ */
+const HTTP_ERRORS: readonly HttpMapping<Error>[] = [
+  httpMapping({
+    type: NotFoundError,
+    answer: (err) => ({ status: 404, body: { error: "not_found", message: err.message } }),
+  }),
+  httpMapping({
+    type: UnknownRefsError,
+    answer: (err) => ({
+      status: 422,
+      body: { error: "unknown_refs", kind: err.kind, ids: err.ids },
+    }),
+  }),
+  httpMapping({
+    type: ConflictError,
+    answer: (err) => ({ status: 409, body: { error: "conflict", message: err.message } }),
+  }),
+];
+
+/**
+ * The HTTP answer for an error the API expects, from {@link HTTP_ERRORS}.
+ *
+ * @param err - whatever a route threw
+ * @returns the status and JSON body, or `undefined` for any other error
+ *   (the caller answers 500)
+ */
+export function httpStatus(err: unknown): HttpError | undefined {
+  const mapping = HTTP_ERRORS.find(({ type }) => err instanceof type);
+  return mapping?.answer(err as Error);
+}
+
 /** Thrown when importing external data fails for one row of a file. */
 export class ImportError extends Error {
   /**
