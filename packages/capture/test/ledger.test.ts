@@ -91,6 +91,21 @@ describe("the ledger", () => {
     expect(() => readLedger(dir)).toThrow(/\[line 1\].*url/);
   });
 
+  it("appends after a last line saved without its newline, and reads past a byte-order mark", () => {
+    const dir = record();
+    put(dir, "evidence/a.md", "a");
+    put(dir, "evidence/b.md", "b");
+    const first = appendCapture(dir, "evidence/a.md", META);
+    const bom = String.fromCharCode(0xfeff);
+    writeFileSync(join(dir, LEDGER_FILE), `${bom}${JSON.stringify(first)}`);
+    appendCapture(dir, "evidence/b.md", META);
+    expect(readLedger(dir).map((e) => [e.line.path, e.lineNo])).toEqual([
+      ["evidence/a.md", 1],
+      ["evidence/b.md", 2],
+    ]);
+    expect(verifyLedger(dir)).toEqual([]);
+  });
+
   it("reports a hash mismatch, a missing line, an orphan line and a duplicate", () => {
     const dir = record();
     put(dir, "evidence/a.md", "one");

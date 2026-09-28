@@ -13,7 +13,16 @@
  * @module
  */
 import { createHash } from "node:crypto";
-import { appendFileSync, existsSync, readdirSync, readFileSync, statSync } from "node:fs";
+import {
+  appendFileSync,
+  closeSync,
+  existsSync,
+  openSync,
+  readdirSync,
+  readFileSync,
+  readSync,
+  statSync,
+} from "node:fs";
 import { extname, join, relative, sep } from "node:path";
 import type { CaptureApprox, CaptureLine } from "@crumble/schema";
 import { captureLine } from "@crumble/schema";
@@ -254,7 +263,7 @@ export function hasLedger(recordDir: string): boolean {
 
 /**
  * Reads and validates a record's ledger. Blank lines are skipped; a CRLF
- * line ending reads like LF.
+ * line ending reads like LF, and a leading UTF-8 byte-order mark is dropped.
  *
  * @param recordDir - absolute path of the record folder
  * @returns every line in file order, with its line number; `[]` when the
@@ -266,26 +275,25 @@ export function readLedger(recordDir: string): LedgerEntry[] {
   const file = join(recordDir, LEDGER_FILE);
   if (!existsSync(file)) return [];
   const entries: LedgerEntry[] = [];
-  readFileSync(file, "utf-8")
-    .split("\n")
-    .forEach((text, index) => {
-      const lineNo = index + 1;
-      if (text.trim() === "") return;
-      let raw: unknown;
-      try {
-        raw = JSON.parse(text);
-      } catch (err) {
-        throw new LedgerError(LEDGER_FILE, lineNo, (err as Error).message);
-      }
-      const result = captureLine.safeParse(raw);
-      if (!result.success) {
-        const issues = result.error.issues
-          .map((issue) => `${issue.path.join(".") || "(root)"}: ${issue.message}`)
-          .join("; ");
-        throw new LedgerError(LEDGER_FILE, lineNo, issues);
-      }
-      entries.push({ line: result.data, lineNo });
-    });
+  const text = readFileSync(file, "utf-8");
+  (text.charCodeAt(0) === 0xfeff ? text.slice(1) : text).split("\n").forEach((text, index) => {
+    const lineNo = index + 1;
+    if (text.trim() === "") return;
+    let raw: unknown;
+    try {
+      raw = JSON.parse(text);
+    } catch (err) {
+      throw new LedgerError(LEDGER_FILE, lineNo, (err as Error).message);
+    }
+    const result = captureLine.safeParse(raw);
+    if (!result.success) {
+      const issues = result.error.issues
+        .map((issue) => `${issue.path.join(".") || "(root)"}: ${issue.message}`)
+        .join("; ");
+      throw new LedgerError(LEDGER_FILE, lineNo, issues);
+    }
+    entries.push({ line: result.data, lineNo });
+  });
   return entries;
 }
 
@@ -310,8 +318,32 @@ export function appendCapture(recordDir: string, path: string, meta: CaptureMeta
     throw new LedgerError(LEDGER_FILE, listed.lineNo, `${path} already has a ledger line`);
   }
   const line = toLine(path, storedSha256(recordDir, path), meta);
-  appendFileSync(join(recordDir, LEDGER_FILE), `${JSON.stringify(line)}\n`);
+  const ledger = join(recordDir, LEDGER_FILE);
+  const newline = endsOpen(ledger) ? "\n" : "";
+  appendFileSync(ledger, `${newline}${JSON.stringify(line)}\n`);
   return line;
+}
+
+/**
+ * Reports whether a file's last line lacks its newline, as a ledger saved
+ * by an editor or joined by a script can.
+ *
+ * @param file - absolute path of the file
+ * @returns `true` if the file exists, isn't empty, and its last byte isn't `\n`
+ * @throws if the file exists but can't be read
+ */
+function endsOpen(file: string): boolean {
+  if (!existsSync(file)) return false;
+  const { size } = statSync(file);
+  if (size === 0) return false;
+  const last = Buffer.alloc(1);
+  const fd = openSync(file, "r");
+  try {
+    readSync(fd, last, 0, 1, size - 1);
+  } finally {
+    closeSync(fd);
+  }
+  return last[0] !== 0x0a;
 }
 
 /**
