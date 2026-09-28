@@ -1,0 +1,52 @@
+{
+ "about": "The eight zones main-stage chapters cycle through (zone_index = ((chapter - 1) mod 8) + 1) and what to bring for each boss slot. The boss slots are exact from chapter 169 on (evidence/06-derived/zone-cycle.json, from crumblehub's 1.4.002 data); the plan per boss is the community's (sources per row). bracket_note says how low a bracket the slot has been cleared at.",
+ "measured": "2026-09-28",
+ "zones": [
+  { "zone_index": 1, "zone_kr": "초원", "zone_en": "Grassland",
+    "slots": [
+      { "stage": "-10", "boss_kr": "초코 왕방울", "boss_en": "King Choco Drop", "plan": "Launch boss: swap the third pet to Panda Dumpling.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["web:yt-tZJ5wzhcUA8", "web:yt-RLuI96lGgGg"] },
+      { "stage": "-20", "boss_kr": "뿔꿈틀이", "boss_en": "Jelly Worm", "plan": "General deck.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["web:yt-RLuI96lGgGg"] },
+      { "stage": "-30", "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint Cookie", "plan": "Launch boss: Panda Dumpling in the third pet slot; fight in the 7 or 11 o'clock corner. Cleared on auto at 35% (266-30 at 1.17G).", "deck": "stage-bari-cola-charge", "bracket_note": "35% (auto)", "sources": ["dc:75540", "dc:70308", "web:yt-tZJ5wzhcUA8"] },
+      { "stage": "mob stages", "boss_kr": "케이크 들개떼 ×9–10", "boss_en": "Cake Hound Pack", "plan": "Ten-enemy stages: area or rapid-fire deck.", "deck": "stage-aoe-rapidfire", "bracket_note": "15% viable on mob stages", "sources": ["dc:72776", "web:crumblehub-stage-boss-index"] }
+    ] },
+  { "zone_index": 2, "zone_kr": "해변", "zone_en": "Beach",
+    "slots": [
+      { "stage": "-10/-20", "boss_kr": "망고스틴 해적 물폭탄광", "boss_en": "Mangosteen Water Bomber", "plan": "General deck.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["web:crumblehub-stage-boss-index"] },
+      { "stage": "-30", "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint Cookie", "plan": "As in the grassland: Panda Dumpling, corner fight.", "deck": "stage-bari-cola-charge", "bracket_note": "35% (226-30 at 428M before the easing)", "sources": ["dc:67229", "dc:72776"] },
+      { "stage": "mob stages", "boss_kr": "두리안 해적 추종자 ×6–10", "boss_en": "Durianeer Fanfruit", "plan": "Area or rapid-fire deck.", "deck": "stage-aoe-rapidfire", "bracket_note": "15% viable on mob stages", "sources": ["dc:72776"] }
+    ] },
+  { "zone_index": 3, "zone_kr": "폐허 도시", "zone_en": "Ruined City",
+    "slots": [
+      { "stage": "-10", "boss_kr": "폭주단 바이커 ×3", "boss_en": "Rowdy Biker ×3", "plan": "Swap Rye for Scorpion; three fast targets reward single-target burst. Before the easing some took them at 55%; 35% clears exist (243-10 at 688M, 259-10 in 15 s at 1.28G).", "deck": "stage-coward", "bracket_note": "35%; a wall at 15%", "sources": ["dc:70308", "dc:71293", "dc:68319", "dc:67268"] },
+      { "stage": "-20", "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "plan": "Swap Strawberry Crepe for Ion and add Icy Birdie; kite in circles at 7 or 9 o'clock until the first heal (about 26 s), then let go.", "deck": "stage-coward", "bracket_note": "35%", "sources": ["dc:70308", "dc:72776"] },
+      { "stage": "-30", "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "plan": "The GingerCraven deck with damage-reduction perks and pets. 35% is the floor: 15% attempts fail.", "deck": "stage-coward", "bracket_note": "35% (328-30 at 4.00G); fails at 15%", "sources": ["dc:72776", "dc:76835", "dc:71892", "dc:77154"] }
+    ] },
+  { "zone_index": 4, "zone_kr": "사막", "zone_en": "Desert",
+    "slots": [
+      { "stage": "-10", "boss_kr": "생크림콘 독수리 ×2", "boss_en": "Cream Eagle ×2", "plan": "Scorpion and Licorice in for single-target damage.", "deck": "stage-bari-cola-charge", "bracket_note": "35%; reported a wall at 15%", "sources": ["dc:72776", "dc:67268"] },
+      { "stage": "-20/-30", "boss_kr": "은행강도 돌격대", "boss_en": "Ginkgoblin Stormer", "plan": "General deck.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["web:crumblehub-stage-boss-index"] }
+    ] },
+  { "zone_index": 5, "zone_kr": "버섯지대", "zone_en": "Mushroom Zone",
+    "slots": [
+      { "stage": "-10", "boss_kr": "독뿔버섯 ×10", "boss_en": "Poison Shroomer ×10", "plan": "A ten-enemy pack: area or rapid-fire deck. A 15% attempt stalled here.", "deck": "stage-aoe-rapidfire", "bracket_note": "35%; 15% stalled", "sources": ["dc:75752", "web:crumblehub-stage-boss-index"] },
+      { "stage": "-20/-30", "boss_kr": "오염된 그루터기 정령", "boss_en": "Tainted Ent", "plan": "Launch boss: Panda Dumpling; Scorpion, Cherry Cola and Pinot Noir in (the same swap covers the plaza's Werehound Princess).", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["dc:72776", "dc:70308"] }
+    ] },
+  { "zone_index": 6, "zone_kr": "광장", "zone_en": "Plaza",
+    "slots": [
+      { "stage": "-10 to -15", "boss_kr": "레드베리 암살자 ×5–10", "boss_en": "Redberry Assassin pack", "plan": "The hardest slot after the easing. Swap two melee cookies for Jungle Warrior or Tiger Lily and Rye and lure the pack to the 6 o'clock stairs, or bring the area rapid-fire deck. Padding power to reach 35% beats a 15% attempt here.", "deck": "stage-aoe-rapidfire", "bracket_note": "35%; fails at 15%", "sources": ["web:yt-tZJ5wzhcUA8", "web:yt-1AyEMtaE-s4", "dc:76859", "dc:75871"] },
+      { "stage": "-20", "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "plan": "Launch boss: Panda Dumpling.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["dc:70308", "dc:72776"] },
+      { "stage": "-30", "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint Cookie", "plan": "Panda Dumpling, corner fight.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["dc:70308"] }
+    ] },
+  { "zone_index": 7, "zone_kr": "용암지대", "zone_en": "Lava Zone",
+    "slots": [
+      { "stage": "-10 to -15", "boss_kr": "용암 와플 도마뱀 ×3–10", "boss_en": "Magma Waffle Lizard pack", "plan": "The easiest pack: cleared at 15% (271-11 at 971.8M).", "deck": "stage-aoe-rapidfire", "bracket_note": "15% documented", "sources": ["dc:75752"] },
+      { "stage": "-20/-30", "boss_kr": "용암 슈가 와플 도마뱀", "boss_en": "Magma Sugar Waffle Lizard", "plan": "General deck.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["web:yt-RLuI96lGgGg"] }
+    ] },
+  { "zone_index": 8, "zone_kr": "설원지대", "zone_en": "Snowfield",
+    "slots": [
+      { "stage": "-10", "boss_kr": "아이스콘 듀얼 나이트 ×10", "boss_en": "Ice Cone Lancer ×10", "plan": "Ten-enemy pack: area or rapid-fire deck.", "deck": "stage-aoe-rapidfire", "bracket_note": "35%", "sources": ["dc:76859", "web:crumblehub-stage-boss-index"] },
+      { "stage": "-20", "boss_kr": "얼음 사탕골렘", "boss_en": "Ice Candy Golem", "plan": "General deck.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["web:yt-RLuI96lGgGg"] },
+      { "stage": "-30", "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "plan": "The GingerCraven deck, as in the ruined city. 328-30 is this slot.", "deck": "stage-coward", "bracket_note": "35% (328-30 at 4.00G); fails at 15%", "sources": ["dc:76835", "dc:75241", "dc:72776"] }
+    ] }
+ ]
+}

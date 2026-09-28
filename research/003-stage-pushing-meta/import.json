@@ -1,0 +1,16 @@
+{
+  "record": {
+    "slug": "003-stage-pushing-meta",
+    "question": "For stage pushing (main stages and the Dimensional Rift past 328-30) there is a small documented set of teams, levels, runes, gear and pets that players use to clear the hardest stages at the lowest power, stated precisely enough to reproduce, including how play differs by stage type and what the recommended-power gate does to damage, in particular at the 35% and 15% damage brackets.",
+    "status": "active",
+    "startedAt": "2026-09-28",
+    "mode": "stage"
+  },
+  "curated": "curated",
+  "extractions": "evidence/08-extract",
+  "captures": [
+    { "site": "dc", "dir": "evidence/02-dc/dc", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/04-naver/nv", "file": "nv-{id}.md" }
+  ],
+  "rankings": []
+}

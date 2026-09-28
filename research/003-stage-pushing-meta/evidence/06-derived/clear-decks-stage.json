@@ -26,6 +26,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [],
@@ -58,6 +59,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -93,6 +95,7 @@
     "전지멜로우",
     "색동 주머니"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -128,6 +131,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -163,6 +167,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -195,6 +200,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -227,6 +233,7 @@
     "색동 주머니",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -262,6 +269,7 @@
     "색동 주머니",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -297,6 +305,7 @@
     "갓난갓방울",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -332,6 +341,7 @@
     "갓난갓방울",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -367,6 +377,7 @@
     "갓난갓방울",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -402,6 +413,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -437,6 +449,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -472,6 +485,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -507,6 +521,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -542,6 +557,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -577,6 +593,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -612,6 +629,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -647,6 +665,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -682,6 +701,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -717,6 +737,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -747,11 +768,8 @@
     "마카롱맛 쿠키",
     "감초맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -782,11 +800,8 @@
     "마카롱맛 쿠키",
     "감초맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -822,6 +837,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -857,6 +873,7 @@
     "핫도그도그",
     "어린쥐"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -891,6 +908,7 @@
     "핫도그도그",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -926,6 +944,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -958,6 +977,7 @@
     "핫도그도그",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -993,6 +1013,7 @@
     "핫도그도그",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1028,6 +1049,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1063,6 +1085,7 @@
     "전지멜로우",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1098,6 +1121,7 @@
     "얼음과자새",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1133,6 +1157,7 @@
     "얼음과자새",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1168,6 +1193,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1203,6 +1229,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -1235,6 +1262,7 @@
     "얼음과자새",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1270,6 +1298,7 @@
     "와사비 문어",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1297,14 +1326,14 @@
     "이름 모를 케이크 들개",
     "쿨링민트맛 쿠키",
     "딸기크레페맛 쿠키",
-    "허브맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "허브맛 쿠키"
    ],
    "pets": [
     "전지멜로우",
     "얼음과자새",
     "판다만두"
    ],
+   "empty_cookie_slots": 1,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1340,6 +1369,7 @@
     "근엄한 초코왕방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1375,6 +1405,7 @@
     "전지멜로우",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1410,6 +1441,7 @@
     "갓난갓방울",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1444,6 +1476,7 @@
     "갓난갓방울",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1478,6 +1511,7 @@
     "근엄한 초코왕방울",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -1510,6 +1544,7 @@
     "판다만두",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -1542,6 +1577,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 10,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1576,6 +1612,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 10,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1610,6 +1647,7 @@
     "갓난갓방울",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -1642,6 +1680,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1676,6 +1715,7 @@
     "얼음과자새",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1710,6 +1750,7 @@
     "얼음과자새",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 2,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1744,6 +1785,7 @@
     "얼음과자새",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1778,6 +1820,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1812,6 +1855,7 @@
     "갓난갓방울",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1847,6 +1891,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1882,6 +1927,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1916,6 +1962,7 @@
     "핫도그도그",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1950,6 +1997,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -1984,6 +2032,7 @@
     "앵앵베리버드",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2018,6 +2067,7 @@
     "핫도그도그",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 2,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2052,6 +2102,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2087,6 +2138,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2119,6 +2171,7 @@
     "핫도그도그",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 10,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2153,6 +2206,7 @@
     "와사비 문어",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 1,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2187,6 +2241,7 @@
     "갓난갓방울",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2219,6 +2274,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2253,6 +2309,7 @@
     "갓난갓방울",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2287,6 +2344,7 @@
     "전지멜로우",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2321,6 +2379,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2355,6 +2414,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2390,6 +2450,7 @@
     "앵앵베리버드",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 8,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2424,6 +2485,7 @@
     "근엄한 초코왕방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2458,6 +2520,7 @@
     "갓난갓방울",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2490,6 +2553,7 @@
     "갓난갓방울",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2522,6 +2586,7 @@
     "전지멜로우",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2556,6 +2621,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2590,6 +2656,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2622,6 +2689,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 2,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2656,6 +2724,7 @@
     "핫도그도그",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 9,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2690,6 +2759,7 @@
     "갓난갓방울",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2722,6 +2792,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2756,6 +2827,7 @@
     "갓난갓방울",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2790,6 +2862,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2822,6 +2895,7 @@
     "갓난갓방울",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2854,6 +2928,7 @@
     "와사비 문어",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2886,6 +2961,7 @@
     "치즈뭉치 고양이",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -2921,6 +2997,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2953,6 +3030,7 @@
     "갓난갓방울",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -2985,6 +3063,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3017,6 +3096,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3049,6 +3129,7 @@
     "갓난갓방울",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3084,6 +3165,7 @@
     "핫도그도그",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 10,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3118,6 +3200,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3150,6 +3233,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 2,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3184,6 +3268,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 6,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3218,6 +3303,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3250,6 +3336,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3282,6 +3369,7 @@
     "인삼이라지",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3314,6 +3402,7 @@
     "핫도그도그",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3346,6 +3435,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3378,6 +3468,7 @@
     "전지멜로우",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 5,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3412,6 +3503,7 @@
     "갓난갓방울",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3446,6 +3538,7 @@
     "핫도그도그",
     "뽀글방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 1,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3480,6 +3573,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3512,6 +3606,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3547,6 +3642,7 @@
     "판다만두",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3579,6 +3675,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3611,6 +3708,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3645,6 +3743,7 @@
     "갓난갓방울",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 2,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3679,6 +3778,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3711,6 +3811,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3743,6 +3844,7 @@
     "얼음과자새",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3775,6 +3877,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3807,6 +3910,7 @@
     "앵앵베리버드",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3839,6 +3943,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3871,6 +3976,7 @@
     "핫도그도그",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [
@@ -3905,6 +4011,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3937,6 +4044,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -3969,6 +4077,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4001,6 +4110,7 @@
     "근엄한 초코왕방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4033,6 +4143,7 @@
     "전지멜로우",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 4,
    "merc_band_level": 4,
    "perk_ids": [
@@ -4067,6 +4178,7 @@
     "핫도그도그",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 1,
    "merc_band_level": 4,
    "perk_ids": [
@@ -4101,6 +4213,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4133,6 +4246,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4165,6 +4279,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4197,6 +4312,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4229,6 +4345,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4261,6 +4378,7 @@
     "핫도그도그",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4293,6 +4411,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4325,6 +4444,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4357,6 +4477,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4389,6 +4510,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4421,6 +4543,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4453,6 +4576,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4485,6 +4609,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4517,6 +4642,7 @@
     "핫도그도그",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4549,6 +4675,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4581,6 +4708,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4613,6 +4741,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4645,6 +4774,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4677,6 +4807,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4709,6 +4840,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4741,6 +4873,7 @@
     "핫도그도그",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4773,6 +4906,7 @@
     "핫도그도그",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4805,6 +4939,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4837,6 +4972,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4869,6 +5005,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4901,6 +5038,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4933,6 +5071,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4965,6 +5104,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -4997,6 +5137,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5029,6 +5170,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5061,6 +5203,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5093,6 +5236,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5125,6 +5269,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 1,
    "merc_band_level": 4,
    "perk_ids": [
@@ -5159,6 +5304,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5191,6 +5337,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5223,6 +5370,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5255,6 +5403,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5287,6 +5436,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5319,6 +5469,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5351,6 +5502,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5383,6 +5535,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5415,6 +5568,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5447,6 +5601,7 @@
     "핫도그도그",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5471,14 +5626,10 @@
     "정글전사 쿠키",
     "허브맛 쿠키",
     "포도넝쿨맛 쿠키",
-    "치즈케이크맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "치즈케이크맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 1,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5511,6 +5662,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5543,6 +5695,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5575,6 +5728,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5607,6 +5761,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5639,6 +5794,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5671,6 +5827,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5703,6 +5860,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5735,6 +5893,7 @@
     "핫도그도그",
     "토끼사과"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5767,6 +5926,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5799,6 +5959,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5831,6 +5992,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5863,6 +6025,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5895,6 +6058,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5927,6 +6091,7 @@
     "핫도그도그",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5959,6 +6124,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -5986,11 +6152,8 @@
     "블루베리 새",
     "다크초코 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6023,6 +6186,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6055,6 +6219,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6087,6 +6252,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6119,6 +6285,7 @@
     "사바나나 사자",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6151,6 +6318,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6183,6 +6351,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6215,6 +6384,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6247,6 +6417,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6279,6 +6450,7 @@
     "와사비 문어",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6311,6 +6483,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6343,6 +6516,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6375,6 +6549,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6407,6 +6582,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6439,6 +6615,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6471,6 +6648,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6503,6 +6681,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6535,6 +6714,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6567,6 +6747,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6599,6 +6780,7 @@
     "핫도그도그",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6631,6 +6813,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6663,6 +6846,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6695,6 +6879,7 @@
     "사바나나 사자",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6727,6 +6912,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6759,6 +6945,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6791,6 +6978,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6823,6 +7011,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6855,6 +7044,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6887,6 +7077,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6919,6 +7110,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6951,6 +7143,7 @@
     "크림티즈",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -6983,6 +7176,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7015,6 +7209,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7047,6 +7242,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7079,6 +7275,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7111,6 +7308,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7143,6 +7341,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7175,6 +7374,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7207,6 +7407,7 @@
     "얼음과자새",
     "털뭉치 멍뭉이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7239,6 +7440,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7271,6 +7473,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7303,6 +7506,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7335,6 +7539,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7367,6 +7572,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7399,6 +7605,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7431,6 +7638,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7463,6 +7671,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7495,6 +7704,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7527,6 +7737,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7559,6 +7770,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7591,6 +7803,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7623,6 +7836,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7655,6 +7869,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7687,6 +7902,7 @@
     "와사비 문어",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7719,6 +7935,7 @@
     "새콤달곰",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7751,6 +7968,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7783,6 +8001,7 @@
     "새콤달곰",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7815,6 +8034,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7847,6 +8067,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7879,6 +8100,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7911,6 +8133,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7943,6 +8166,7 @@
     "사바나나 사자",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -7975,6 +8199,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8007,6 +8232,7 @@
     "사바나나 사자",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8039,6 +8265,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8071,6 +8298,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8103,6 +8331,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8135,6 +8364,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8167,6 +8397,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8199,6 +8430,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8231,6 +8463,7 @@
     "황금방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8263,6 +8496,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8295,6 +8529,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8327,6 +8562,7 @@
     "황금방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8359,6 +8595,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8391,6 +8628,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [
@@ -8425,6 +8663,7 @@
     "와사비 문어",
     "약과 찹사리"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8457,6 +8696,7 @@
     "와사비 문어",
     "약과 찹사리"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8489,6 +8729,7 @@
     "와사비 문어",
     "약과 찹사리"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8521,6 +8762,7 @@
     "키위새",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8553,6 +8795,7 @@
     "핫도그도그",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8585,6 +8828,7 @@
     "사바나나 사자",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8617,6 +8861,7 @@
     "황금방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8640,15 +8885,10 @@
     "보더맛 쿠키",
     "용감한 쿠키",
     "딸기맛 쿠키",
-    "양파맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "양파맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 2,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8681,6 +8921,7 @@
     "키위새",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8713,6 +8954,7 @@
     "황금방울",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8745,6 +8987,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8777,6 +9020,7 @@
     "핫도그도그",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8809,6 +9053,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8841,6 +9086,7 @@
     "근엄한 초코왕방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8873,6 +9119,7 @@
     "키위새",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8905,6 +9152,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 0,
    "merc_band_level": 4,
    "perk_ids": [
@@ -8939,6 +9187,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -8971,6 +9220,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9003,6 +9253,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9035,6 +9286,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9067,6 +9319,7 @@
     "핫도그도그",
     "뽀글방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9099,6 +9352,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9131,6 +9385,7 @@
     "핫도그도그",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9163,6 +9418,7 @@
     "와사비 문어",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9195,6 +9451,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9227,6 +9484,7 @@
     "갓난갓방울",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9259,6 +9517,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9291,6 +9550,7 @@
     "크림티즈",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9323,6 +9583,7 @@
     "뭉치유니콘",
     "꼬마유령"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9355,6 +9616,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9387,6 +9649,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9419,6 +9682,7 @@
     "핫도그도그",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9451,6 +9715,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9483,6 +9748,7 @@
     "갓난갓방울",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9515,6 +9781,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9547,6 +9814,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9579,6 +9847,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9611,6 +9880,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 1,
    "merc_band_level": 4,
    "perk_ids": [
@@ -9645,6 +9915,7 @@
     "핫도그도그",
     "토끼사과"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9677,6 +9948,7 @@
     "근엄한 초코왕방울",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9709,6 +9981,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9741,6 +10014,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9773,6 +10047,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9805,6 +10080,7 @@
     "새콤달곰",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9837,6 +10113,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9869,6 +10146,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9901,6 +10179,7 @@
     "루돌프벨",
     "식빵아지"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9933,6 +10212,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9965,6 +10245,7 @@
     "핫도그도그",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -9997,6 +10278,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10029,6 +10311,7 @@
     "핫도그도그",
     "꽃개구리"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10061,6 +10344,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10093,6 +10377,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10120,11 +10405,8 @@
     "슈크림맛 쿠키",
     "이온맛 쿠키로봇"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10152,11 +10434,8 @@
     "메론소다맛 쿠키",
     "딸기쇼트케이크맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10189,6 +10468,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10221,6 +10501,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10253,6 +10534,7 @@
     "뽀글방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10285,6 +10567,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10317,6 +10600,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10349,6 +10633,7 @@
     "황금방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10381,6 +10666,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10413,6 +10699,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10445,6 +10732,7 @@
     "크림티즈",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10477,6 +10765,7 @@
     "핫도그도그",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10509,6 +10798,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10541,6 +10831,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10573,6 +10864,7 @@
     "핫도그도그",
     "찹쌀 하프물범"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10605,6 +10897,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10637,6 +10930,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10669,6 +10963,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10701,6 +10996,7 @@
     "망고부리새",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10725,14 +11021,14 @@
     "허브맛 쿠키",
     "위치베리맛 쿠키",
     "마카롱맛 쿠키",
-    "악마맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "악마맛 쿠키"
    ],
    "pets": [
     "핫도그도그",
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 1,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10765,6 +11061,7 @@
     "핫도그도그",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10797,6 +11094,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10829,6 +11127,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10861,6 +11160,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10893,6 +11193,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10925,6 +11226,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10957,6 +11259,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -10989,6 +11292,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11021,6 +11325,7 @@
     "치즈뭉치 고양이",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11048,11 +11353,8 @@
     "메론소다맛 쿠키",
     "딸기쇼트케이크맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11085,6 +11387,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11117,6 +11420,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11149,6 +11453,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11181,6 +11486,7 @@
     "핫도그도그",
     "토끼사과"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11213,6 +11519,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11245,6 +11552,7 @@
     "핫도그도그",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11277,6 +11585,7 @@
     "핫도그도그",
     "전지멜로우"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11309,6 +11618,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11341,6 +11651,7 @@
     "핫도그도그",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11373,6 +11684,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11405,6 +11717,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11437,6 +11750,7 @@
     "새콤달곰",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11469,6 +11783,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11501,6 +11816,7 @@
     "핫도그도그",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11525,14 +11841,10 @@
     "마카롱맛 쿠키",
     "라임맛 쿠키",
     "감초맛 쿠키",
-    "치즈케이크맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "치즈케이크맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 1,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11565,6 +11877,7 @@
     "새콤달곰",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11597,6 +11910,7 @@
     "새콤달곰",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11629,6 +11943,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11661,6 +11976,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11693,6 +12009,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11725,6 +12042,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11757,6 +12075,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11789,6 +12108,7 @@
     "근엄한 초코왕방울",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11821,6 +12141,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11848,11 +12169,8 @@
     "치즈케이크맛 쿠키",
     "다크초코 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11885,6 +12203,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11917,6 +12236,7 @@
     "핫도그도그",
     "토끼사과"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11946,9 +12266,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "근엄한 초코왕방울",
-    "무한바퀴"
+    "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -11981,6 +12301,7 @@
     "핫도그도그",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12013,6 +12334,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12042,9 +12364,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12077,6 +12399,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12109,6 +12432,7 @@
     "핫도그도그",
     "어린쥐"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12141,6 +12465,7 @@
     "갓난갓방울",
     "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12173,6 +12498,7 @@
     "와사비 문어",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12200,11 +12526,8 @@
     "이름 모를 케이크 들개",
     "허브맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12234,9 +12557,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "키위새",
-    "무한바퀴"
+    "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12261,14 +12584,14 @@
     "포도넝쿨맛 쿠키",
     "치즈케이크맛 쿠키",
     "악마맛 쿠키",
-    "명랑한 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "명랑한 쿠키"
    ],
    "pets": [
     "갓난갓방울",
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 1,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12301,6 +12624,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12330,9 +12654,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "키위새",
-    "무한바퀴"
+    "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12365,6 +12689,7 @@
     "키위새",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12397,6 +12722,7 @@
     "와사비 문어",
     "사바나나 사자"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12429,6 +12755,7 @@
     "황금방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12458,9 +12785,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "와사비 문어",
-    "무한바퀴"
+    "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12490,9 +12817,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12522,9 +12849,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "새콤달곰",
-    "무한바퀴"
+    "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12557,6 +12884,7 @@
     "와사비 문어",
     "사바나나 사자"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12586,9 +12914,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "와사비 문어",
-    "무한바퀴"
+    "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12618,9 +12946,9 @@
    ],
    "pets": [
     "핫도그도그",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12653,6 +12981,7 @@
     "와사비 문어",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12682,9 +13011,9 @@
    ],
    "pets": [
     "근엄한 초코왕방울",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12714,9 +13043,9 @@
    ],
    "pets": [
     "황금방울",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12749,6 +13078,7 @@
     "황금방울",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12781,6 +13111,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12810,9 +13141,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12845,6 +13176,7 @@
     "갓난갓방울",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12877,6 +13209,7 @@
     "사바나나 사자",
     "근엄한 초코왕방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12904,11 +13237,8 @@
     "딸기쇼트케이크맛 쿠키",
     "에스프레소맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12941,6 +13271,7 @@
     "새콤달곰",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -12970,9 +13301,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13002,9 +13333,9 @@
    ],
    "pets": [
     "핫도그도그",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13034,9 +13365,9 @@
    ],
    "pets": [
     "핫도그도그",
-    "와사비 문어",
-    "무한바퀴"
+    "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13069,6 +13400,7 @@
     "치즈뭉치 고양이",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13098,9 +13430,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13130,9 +13462,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "사바나나 사자",
-    "무한바퀴"
+    "사바나나 사자"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13162,9 +13494,9 @@
    ],
    "pets": [
     "키위새",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13194,9 +13526,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13224,11 +13556,8 @@
     "위치베리맛 쿠키",
     "다크체리맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13258,9 +13587,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13290,9 +13619,9 @@
    ],
    "pets": [
     "와사비 문어",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13322,9 +13651,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "토끼사과",
-    "무한바퀴"
+    "토끼사과"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13354,9 +13683,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "사바나나 사자",
-    "무한바퀴"
+    "사바나나 사자"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13389,6 +13718,7 @@
     "핫도그도그",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13418,9 +13748,9 @@
    ],
    "pets": [
     "황금방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13450,9 +13780,9 @@
    ],
    "pets": [
     "와사비 문어",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13482,9 +13812,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "치즈뭉치 고양이",
-    "무한바퀴"
+    "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13517,6 +13847,7 @@
     "새콤달곰",
     "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13546,9 +13877,9 @@
    ],
    "pets": [
     "키위새",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13581,6 +13912,7 @@
     "와사비 문어",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13610,9 +13942,9 @@
    ],
    "pets": [
     "와사비 문어",
-    "키위새",
-    "무한바퀴"
+    "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13642,9 +13974,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "새콤달곰",
-    "무한바퀴"
+    "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13672,11 +14004,8 @@
     "다크초코 쿠키",
     "허브맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": 0,
    "merc_band_level": 4,
    "perk_ids": [
@@ -13708,9 +14037,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "초코방울",
-    "무한바퀴"
+    "초코방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13743,6 +14072,7 @@
     "전지멜로우",
     "털뭉치 멍뭉이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13772,9 +14102,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "키위새",
-    "무한바퀴"
+    "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13807,6 +14137,7 @@
     "핫도그도그",
     "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13834,11 +14165,8 @@
     "석류맛 쿠키",
     "전갈맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13868,9 +14196,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13903,6 +14231,7 @@
     "근엄한 초코왕방울",
     "털뭉치 멍뭉이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13932,9 +14261,9 @@
    ],
    "pets": [
     "핫도그도그",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13964,9 +14293,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "키위새",
-    "무한바퀴"
+    "키위새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -13999,6 +14328,7 @@
     "치즈뭉치 고양이",
     "토끼사과"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14028,9 +14358,9 @@
    ],
    "pets": [
     "와사비 문어",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14060,9 +14390,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "크림티즈",
-    "무한바퀴"
+    "크림티즈"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14092,9 +14422,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "크림티즈",
-    "무한바퀴"
+    "크림티즈"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14124,9 +14454,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "크림티즈",
-    "무한바퀴"
+    "크림티즈"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14156,9 +14486,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14191,6 +14521,7 @@
     "근엄한 초코왕방울",
     "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14220,9 +14551,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14252,9 +14583,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14284,9 +14615,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14316,9 +14647,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14348,9 +14679,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14380,9 +14711,9 @@
    ],
    "pets": [
     "와사비 문어",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14410,11 +14741,8 @@
     "석류맛 쿠키",
     "마카롱맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14447,6 +14775,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14476,9 +14805,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "새콤달곰",
-    "무한바퀴"
+    "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14508,9 +14837,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14540,9 +14869,9 @@
    ],
    "pets": [
     "전지멜로우",
-    "와사비 문어",
-    "무한바퀴"
+    "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [],
@@ -14572,9 +14901,9 @@
    ],
    "pets": [
     "황금방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14604,9 +14933,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14639,6 +14968,7 @@
     "치즈뭉치 고양이",
     "어린니"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14668,9 +14998,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "크림티즈",
-    "무한바퀴"
+    "크림티즈"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14700,9 +15030,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "털뭉치 멍뭉이",
-    "무한바퀴"
+    "털뭉치 멍뭉이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14732,9 +15062,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "와사비 문어",
-    "무한바퀴"
+    "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14764,9 +15094,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "새콤달곰",
-    "무한바퀴"
+    "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14796,9 +15126,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14828,9 +15158,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14863,6 +15193,7 @@
     "망고부리새",
     "뽀글방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14895,6 +15226,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14927,6 +15259,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -14956,9 +15289,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "인삼이라지",
-    "무한바퀴"
+    "인삼이라지"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 10,
    "merc_band_level": 4,
    "perk_ids": [
@@ -14990,9 +15323,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15022,9 +15355,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15054,9 +15387,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15086,9 +15419,9 @@
    ],
    "pets": [
     "치즈뭉치 고양이",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15118,9 +15451,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "치즈뭉치 고양이",
-    "무한바퀴"
+    "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15145,14 +15478,14 @@
     "에스프레소맛 쿠키",
     "호밀맛 쿠키",
     "쿨링민트맛 쿠키",
-    "커피맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "커피맛 쿠키"
    ],
    "pets": [
     "갓난갓방울",
     "황금방울",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 1,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15185,6 +15518,7 @@
     "치즈뭉치 고양이",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15217,6 +15551,7 @@
     "키위새",
     "얼음과자새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15246,9 +15581,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "앵앵베리버드",
-    "무한바퀴"
+    "앵앵베리버드"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15278,9 +15613,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "망고부리새",
-    "무한바퀴"
+    "망고부리새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15310,9 +15645,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15337,14 +15672,13 @@
     "마카롱맛 쿠키",
     "치즈케이크맛 쿠키",
     "악마맛 쿠키",
-    "전갈맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "전갈맛 쿠키"
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 1,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15377,6 +15711,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 3,
    "merc_band_level": 4,
    "perk_ids": [
@@ -15409,9 +15744,9 @@
    ],
    "pets": [
     "핫도그도그",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15441,9 +15776,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "약과 찹사리",
-    "무한바퀴"
+    "약과 찹사리"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15473,9 +15808,9 @@
    ],
    "pets": [
     "황금방울",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15505,9 +15840,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "새콤달곰",
-    "무한바퀴"
+    "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15537,9 +15872,9 @@
    ],
    "pets": [
     "사바나나 사자",
-    "털뭉치 멍뭉이",
-    "무한바퀴"
+    "털뭉치 멍뭉이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15569,9 +15904,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "와사비 문어",
-    "무한바퀴"
+    "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15601,9 +15936,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15633,9 +15968,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15665,9 +16000,9 @@
    ],
    "pets": [
     "치즈뭉치 고양이",
-    "사바나나 사자",
-    "무한바퀴"
+    "사바나나 사자"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15700,6 +16035,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15732,6 +16068,7 @@
     "갓난갓방울",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15759,11 +16096,8 @@
     "딸기쇼트케이크맛 쿠키",
     "에스프레소맛 쿠키"
    ],
-   "pets": [
-    "무한바퀴",
-    "무한바퀴",
-    "무한바퀴"
-   ],
+   "pets": [],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15796,6 +16130,7 @@
     "봉봉버드",
     "달걀머리새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15825,9 +16160,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "새콤달곰",
-    "무한바퀴"
+    "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15857,9 +16192,9 @@
    ],
    "pets": [
     "새콤달곰",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15889,9 +16224,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "치즈뭉치 고양이",
-    "무한바퀴"
+    "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15921,9 +16256,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15953,9 +16288,9 @@
    ],
    "pets": [
     "치즈뭉치 고양이",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -15985,9 +16320,9 @@
    ],
    "pets": [
     "황금방울",
-    "새콤달곰",
-    "무한바퀴"
+    "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16020,6 +16355,7 @@
     "마시멜로 햄찌",
     "망고부리새"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16049,9 +16385,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "치즈뭉치 고양이",
-    "무한바퀴"
+    "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16081,9 +16417,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "치즈뭉치 고양이",
-    "무한바퀴"
+    "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16116,6 +16452,7 @@
     "치즈뭉치 고양이",
     "갓난갓방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16145,9 +16482,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "치즈뭉치 고양이",
-    "무한바퀴"
+    "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16177,9 +16514,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16209,9 +16546,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "털뭉치 멍뭉이",
-    "무한바퀴"
+    "털뭉치 멍뭉이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16241,9 +16578,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "털뭉치 멍뭉이",
-    "무한바퀴"
+    "털뭉치 멍뭉이"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16276,6 +16613,7 @@
     "근엄한 초코왕방울",
     "마시멜로 햄찌"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16308,6 +16646,7 @@
     "핫도그도그",
     "황금방울"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16337,9 +16676,9 @@
    ],
    "pets": [
     "갓난갓방울",
-    "와사비 문어",
-    "무한바퀴"
+    "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16363,15 +16702,13 @@
     "크림소다맛 쿠키",
     "석류맛 쿠키",
     "트위즐젤리맛 쿠키",
-    "마카롱맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "마카롱맛 쿠키"
    ],
    "pets": [
     "갓난갓방울",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 2,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16395,15 +16732,13 @@
     "마카롱맛 쿠키",
     "트위즐젤리맛 쿠키",
     "라임맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키",
-    "정글전사 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "정글전사 쿠키"
    ],
    "pets": [
     "갓난갓방울",
-    "핫도그도그",
-    "무한바퀴"
+    "핫도그도그"
    ],
+   "empty_cookie_slots": 2,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16427,15 +16762,13 @@
     "허브맛 쿠키",
     "마카롱맛 쿠키",
     "락스타맛 쿠키",
-    "악마맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "악마맛 쿠키"
    ],
    "pets": [
     "갓난갓방울",
-    "사바나나 사자",
-    "무한바퀴"
+    "사바나나 사자"
    ],
+   "empty_cookie_slots": 2,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16468,6 +16801,7 @@
     "핫도그도그",
     "와사비 문어"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16491,15 +16825,13 @@
     "트위즐젤리맛 쿠키",
     "석류맛 쿠키",
     "치약초코 쿠키",
-    "전갈맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "전갈맛 쿠키"
    ],
    "pets": [
     "새콤달곰",
-    "갓난갓방울",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 2,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16532,6 +16864,7 @@
     "약과 찹사리",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16555,15 +16888,13 @@
     "찰스",
     "치약초코 쿠키",
     "딸기크레페맛 쿠키",
-    "딸기쇼트케이크맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "딸기쇼트케이크맛 쿠키"
    ],
    "pets": [
     "갓난갓방울",
-    "황금방울",
-    "무한바퀴"
+    "황금방울"
    ],
+   "empty_cookie_slots": 2,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16587,15 +16918,13 @@
     "전갈맛 쿠키",
     "크림소다맛 쿠키",
     "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "딸기크레페맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "딸기크레페맛 쿠키"
    ],
    "pets": [
     "갓난갓방울",
-    "치즈뭉치 고양이",
-    "무한바퀴"
+    "치즈뭉치 고양이"
    ],
+   "empty_cookie_slots": 2,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16620,14 +16949,12 @@
     "메론소다맛 쿠키",
     "딸기쇼트케이크맛 쿠키",
     "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "석류맛 쿠키",
-    "감감술래 놀이 달토끼맛 쿠키"
+    "석류맛 쿠키"
    ],
    "pets": [
-    "갓난갓방울",
-    "무한바퀴",
-    "무한바퀴"
+    "갓난갓방울"
    ],
+   "empty_cookie_slots": 1,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16660,6 +16987,7 @@
     "전지멜로우",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16692,6 +17020,7 @@
     "핫도그도그",
     "판다만두"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -16727,6 +17056,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -16762,6 +17092,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": 7,
    "merc_band_level": 4,
    "perk_ids": [
@@ -16797,6 +17128,7 @@
     "와사비 문어",
     "핫도그도그"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],
@@ -16829,6 +17161,7 @@
     "핫도그도그",
     "새콤달곰"
    ],
+   "empty_cookie_slots": 0,
    "captain_slot": -1,
    "merc_band_level": 0,
    "perk_ids": [],

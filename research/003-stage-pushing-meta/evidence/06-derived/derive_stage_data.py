@@ -53,6 +53,11 @@ def entry_power(recommended, ratio_pct):
     return (recommended * ratio_pct + 99) // 100
 
 
+def name_at(names, i):
+    """Name at codex index i, or "#i" when the codex is shorter than the id."""
+    return names[i] if i < len(names) else f"#{i}"
+
+
 def main():
     js = open(os.path.join(SITES, "crumblehub_assets_StageBossIndex-C8_ZZo3q.js"), encoding="utf-8").read()
     table = re.search(r"var A=(\[\{ratio:0.*?\}\]),j=", js).group(1)
@@ -114,8 +119,10 @@ def main():
             ch, _, st = d["stage"].partition("-")
             decks.append({"stage": d["stage"], "order": (int(ch) - 1) * 30 + int(st), "deck_name": d["deckName"],
                           "nickname": d["nickname"],
-                          "cookies": [cookie_names[i] if i < len(cookie_names) else f"#{i}" for i in d["cookies"]],
-                          "pets": [pet_names[i] if i < len(pet_names) else f"#{i}" for i in d["pets"]],
+                          # -1 marks an empty slot; left unguarded it would index the last codex entry.
+                          "cookies": [name_at(cookie_names, i) for i in d["cookies"] if i >= 0],
+                          "pets": [name_at(pet_names, i) for i in d["pets"] if i >= 0],
+                          "empty_cookie_slots": sum(1 for i in d["cookies"] if i < 0),
                           "captain_slot": d["captainSlot"], "merc_band_level": d["mercenaryBandLevel"],
                           "perk_ids": d["mercenaryBandPerkIds"], "recommendations": d["recommendations"],
                           "oppositions": d["oppositions"], "created_at": d["createdAt"],

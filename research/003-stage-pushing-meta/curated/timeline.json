@@ -1,0 +1,14 @@
+[
+  { "mode": "stage", "date": "2026-07-30", "event": "Launch week: an easing of content difficulty is announced, then partly reversed the same day because stages had become easier than intended; stages get harder again after the fix.", "sources": ["nv:1162", "nv:1922"] },
+  { "mode": "stage", "date": "2026-08-07", "event": "The power gate becomes public: a gallery post publishes crumblehub's bracket table (99% of recommended power → 75% final damage, 100% → 100%, capped at 120%).", "sources": ["dc:17035"] },
+  { "mode": "stage", "date": "2026-08-08", "event": "A community sheet lists the entry power of every bracket (1% to 120%) for stages 1-1 to 100-30.", "sources": ["dc:17487", "web:gsheet-power-correction"] },
+  { "mode": "stage", "date": "2026-08-27", "event": "Main stages extended to 248-30.", "sources": ["nv:25737"] },
+  { "mode": "stage", "date": "2026-09-10", "event": "Update 1.3.002: main stages extended to 328-30 (80 new chapters) and daily dungeons to 570.", "sources": ["nv:37730", "web:crumbgg-patches"] },
+  { "mode": "stage", "date": "2026-09-22", "event": "Last documented pre-easing 35% clears: 248-30 GingerCraven at 801.5M and 243-30 at 693.5M, from one pusher's series.", "sources": ["dc:72776"] },
+  { "mode": "stage", "date": "2026-09-23", "event": "Update 1.4.002: main stages 169-1 to 328-30 eased (recommended power, enemy ATK and HP down by up to 36%; 328-30 from 15.61G to 10.00G), bosses of 169-1 to 248-30 rebalanced, the Dimensional Rift (차원의 이면) opens for players who cleared 328-30 (season 1 to 2026-10-08) with the Rift-only pet 무한바퀴, daily dungeons to 770, and a new stat, 스킬준비.", "sources": ["nv:44477", "web:crumbgg-patches", "web:pocketgamer-2026-09-23"] },
+  { "mode": "stage", "date": "2026-09-24", "event": "First players reach the Rift; the top player ND러너 enters third across all servers. Clears of 328-30 reported at 4.2G, the 35% line.", "sources": ["web:yt-_d_7z1UD2p8", "dc:74998", "dc:74856"] },
+  { "mode": "stage", "date": "2026-09-25", "event": "26 players are in the Rift across all servers; the leader is at level 7.", "sources": ["dc:75248"] },
+  { "mode": "stage", "date": "2026-09-27", "event": "First screenshot-documented 15% clears past 300 (301-27 and 301-28 at 2.05G, manual, Brightseeker–Bari–Cherry Cola).", "sources": ["dc:76814", "dc:76825"] },
+  { "mode": "stage", "date": "2026-09-28", "event": "The Rift's leader is at level 19; one guild holds most of the top ranks.", "sources": ["dc:77015"] },
+  { "mode": "stage", "date": "2026-10-08", "event": "Rift season 1 ends (scheduled); seasons from 2026-10-08 use levels 101–200, whose recommended power restarts at 16.7G.", "sources": ["web:crumblehub-stages"] }
+]

@@ -1,0 +1,1451 @@
+{
+ "about": "Dimensional Rift (차원의 이면) levels with recommended power and the 35%/15% entry powers, game data 1.4.002. Season 1 (2026-09-23 to 2026-10-08) runs levels 1-100; later seasons use 101-200. Inside the Rift, displayed team power is inflated by the 차원의 힘 level (see mechanics.json), so compare these numbers with the power shown in the Rift.",
+ "measured": "2026-09-28",
+ "sources": [
+  "web:crumblehub-stages"
+ ],
+ "groups": [
+  {
+   "id": 1209515545,
+   "firstStage": 1,
+   "lastStage": 100
+  },
+  {
+   "id": 1403276063,
+   "firstStage": 101,
+   "lastStage": 200
+  }
+ ],
+ "seasons": [
+  {
+   "order": 1,
+   "groupId": 1209515545,
+   "startsAt": "2026-09-23T02:30:00.000Z",
+   "endsAt": "2026-10-08T03:00:00.000Z"
+  },
+  {
+   "order": 2,
+   "groupId": 1403276063,
+   "startsAt": "2026-10-08T04:30:00.000Z",
+   "endsAt": "2026-10-22T03:00:00.000Z"
+  },
+  {
+   "order": 3,
+   "groupId": 1403276063,
+   "startsAt": "2026-10-22T04:30:00.000Z",
+   "endsAt": "2026-11-05T03:00:00.000Z"
+  },
+  {
+   "order": 4,
+   "groupId": 1403276063,
+   "startsAt": "2026-11-05T04:30:00.000Z",
+   "endsAt": "2026-11-19T03:00:00.000Z"
+  },
+  {
+   "order": 5,
+   "groupId": 1403276063,
+   "startsAt": "2026-11-19T07:00:00.000Z",
+   "endsAt": "2026-12-03T03:00:00.000Z"
+  },
+  {
+   "order": 6,
+   "groupId": 1403276063,
+   "startsAt": "2026-12-03T07:00:00.000Z",
+   "endsAt": "2026-12-17T03:00:00.000Z"
+  },
+  {
+   "order": 7,
+   "groupId": 1403276063,
+   "startsAt": "2026-12-17T07:00:00.000Z",
+   "endsAt": "2026-12-31T03:00:00.000Z"
+  },
+  {
+   "order": 8,
+   "groupId": 1403276063,
+   "startsAt": "2026-12-31T07:00:00.000Z",
+   "endsAt": "2027-01-14T03:00:00.000Z"
+  },
+  {
+   "order": 9,
+   "groupId": 1403276063,
+   "startsAt": "2027-01-14T07:00:00.000Z",
+   "endsAt": "2027-01-28T03:00:00.000Z"
+  },
+  {
+   "order": 10,
+   "groupId": 1403276063,
+   "startsAt": "2027-01-28T07:00:00.000Z",
+   "endsAt": "2027-02-11T03:00:00.000Z"
+  },
+  {
+   "order": 11,
+   "groupId": 1403276063,
+   "startsAt": "2027-02-11T07:00:00.000Z",
+   "endsAt": "2027-02-25T03:00:00.000Z"
+  },
+  {
+   "order": 12,
+   "groupId": 1403276063,
+   "startsAt": "2027-02-25T07:00:00.000Z",
+   "endsAt": "2027-03-11T03:00:00.000Z"
+  },
+  {
+   "order": 13,
+   "groupId": 1403276063,
+   "startsAt": "2027-03-11T07:00:00.000Z",
+   "endsAt": "2027-03-25T03:00:00.000Z"
+  },
+  {
+   "order": 14,
+   "groupId": 1403276063,
+   "startsAt": "2027-03-25T07:00:00.000Z",
+   "endsAt": "2027-04-08T03:00:00.000Z"
+  },
+  {
+   "order": 15,
+   "groupId": 1403276063,
+   "startsAt": "2027-04-08T07:00:00.000Z",
+   "endsAt": "2027-04-22T03:00:00.000Z"
+  },
+  {
+   "order": 16,
+   "groupId": 1403276063,
+   "startsAt": "2027-04-22T07:00:00.000Z",
+   "endsAt": "2027-05-06T03:00:00.000Z"
+  },
+  {
+   "order": 17,
+   "groupId": 1403276063,
+   "startsAt": "2027-05-06T07:00:00.000Z",
+   "endsAt": "2027-05-20T03:00:00.000Z"
+  },
+  {
+   "order": 18,
+   "groupId": 1403276063,
+   "startsAt": "2027-05-20T07:00:00.000Z",
+   "endsAt": "2027-06-03T03:00:00.000Z"
+  },
+  {
+   "order": 19,
+   "groupId": 1403276063,
+   "startsAt": "2027-06-03T07:00:00.000Z",
+   "endsAt": "2027-06-17T03:00:00.000Z"
+  },
+  {
+   "order": 20,
+   "groupId": 1403276063,
+   "startsAt": "2027-06-17T07:00:00.000Z",
+   "endsAt": "2027-07-01T03:00:00.000Z"
+  },
+  {
+   "order": 21,
+   "groupId": 1403276063,
+   "startsAt": "2027-07-01T07:00:00.000Z",
+   "endsAt": "2027-07-15T03:00:00.000Z"
+  },
+  {
+   "order": 22,
+   "groupId": 1403276063,
+   "startsAt": "2027-07-15T07:00:00.000Z",
+   "endsAt": "2027-07-29T03:00:00.000Z"
+  },
+  {
+   "order": 23,
+   "groupId": 1403276063,
+   "startsAt": "2027-07-29T07:00:00.000Z",
+   "endsAt": "2027-08-12T03:00:00.000Z"
+  },
+  {
+   "order": 24,
+   "groupId": 1403276063,
+   "startsAt": "2027-08-12T07:00:00.000Z",
+   "endsAt": "2027-08-26T03:00:00.000Z"
+  },
+  {
+   "order": 25,
+   "groupId": 1403276063,
+   "startsAt": "2027-08-26T07:00:00.000Z",
+   "endsAt": "2027-09-09T03:00:00.000Z"
+  },
+  {
+   "order": 26,
+   "groupId": 1403276063,
+   "startsAt": "2027-09-09T07:00:00.000Z",
+   "endsAt": "2027-09-23T03:00:00.000Z"
+  },
+  {
+   "order": 27,
+   "groupId": 1403276063,
+   "startsAt": "2027-09-23T07:00:00.000Z",
+   "endsAt": "2027-10-07T03:00:00.000Z"
+  },
+  {
+   "order": 28,
+   "groupId": 1403276063,
+   "startsAt": "2027-10-07T07:00:00.000Z",
+   "endsAt": "2027-10-21T03:00:00.000Z"
+  },
+  {
+   "order": 29,
+   "groupId": 1403276063,
+   "startsAt": "2027-10-21T07:00:00.000Z",
+   "endsAt": "2027-11-04T03:00:00.000Z"
+  },
+  {
+   "order": 30,
+   "groupId": 1403276063,
+   "startsAt": "2027-11-04T07:00:00.000Z",
+   "endsAt": "2027-11-18T03:00:00.000Z"
+  },
+  {
+   "order": 31,
+   "groupId": 1403276063,
+   "startsAt": "2027-11-18T07:00:00.000Z",
+   "endsAt": "2027-12-02T03:00:00.000Z"
+  },
+  {
+   "order": 32,
+   "groupId": 1403276063,
+   "startsAt": "2027-12-02T07:00:00.000Z",
+   "endsAt": "2027-12-16T03:00:00.000Z"
+  },
+  {
+   "order": 33,
+   "groupId": 1403276063,
+   "startsAt": "2027-12-16T07:00:00.000Z",
+   "endsAt": "2027-12-30T03:00:00.000Z"
+  },
+  {
+   "order": 34,
+   "groupId": 1403276063,
+   "startsAt": "2027-12-30T07:00:00.000Z",
+   "endsAt": "2028-01-13T03:00:00.000Z"
+  },
+  {
+   "order": 35,
+   "groupId": 1403276063,
+   "startsAt": "2028-01-13T07:00:00.000Z",
+   "endsAt": "2028-01-27T03:00:00.000Z"
+  },
+  {
+   "order": 36,
+   "groupId": 1403276063,
+   "startsAt": "2028-01-27T07:00:00.000Z",
+   "endsAt": "2028-02-10T03:00:00.000Z"
+  },
+  {
+   "order": 37,
+   "groupId": 1403276063,
+   "startsAt": "2028-02-10T07:00:00.000Z",
+   "endsAt": "2028-02-24T03:00:00.000Z"
+  },
+  {
+   "order": 38,
+   "groupId": 1403276063,
+   "startsAt": "2028-02-24T07:00:00.000Z",
+   "endsAt": "2028-03-09T03:00:00.000Z"
+  }
+ ],
+ "levels": [
+  {
+   "level": 1,
+   "recommended_power": 10004798560,
+   "power_for_35": 4001919424,
+   "power_for_15": 2000959712
+  },
+  {
+   "level": 2,
+   "recommended_power": 12919167834,
+   "power_for_35": 5167667134,
+   "power_for_15": 2583833567
+  },
+  {
+   "level": 3,
+   "recommended_power": 15972585564,
+   "power_for_35": 6389034226,
+   "power_for_15": 3194517113
+  },
+  {
+   "level": 4,
+   "recommended_power": 19438391006,
+   "power_for_35": 7775356403,
+   "power_for_15": 3887678202
+  },
+  {
+   "level": 5,
+   "recommended_power": 23805240582,
+   "power_for_35": 9522096233,
+   "power_for_15": 4761048117
+  },
+  {
+   "level": 6,
+   "recommended_power": 28240662352,
+   "power_for_35": 11296264941,
+   "power_for_15": 5648132471
+  },
+  {
+   "level": 7,
+   "recommended_power": 31941744070,
+   "power_for_35": 12776697628,
+   "power_for_15": 6388348814
+  },
+  {
+   "level": 8,
+   "recommended_power": 37244770714,
+   "power_for_35": 14897908286,
+   "power_for_15": 7448954143
+  },
+  {
+   "level": 9,
+   "recommended_power": 42283114065,
+   "power_for_35": 16913245626,
+   "power_for_15": 8456622813
+  },
+  {
+   "level": 10,
+   "recommended_power": 46897561017,
+   "power_for_35": 18759024407,
+   "power_for_15": 9379512204
+  },
+  {
+   "level": 11,
+   "recommended_power": 53635610953,
+   "power_for_35": 21454244382,
+   "power_for_15": 10727122191
+  },
+  {
+   "level": 12,
+   "recommended_power": 58909174145,
+   "power_for_35": 23563669658,
+   "power_for_15": 11781834829
+  },
+  {
+   "level": 13,
+   "recommended_power": 64429477412,
+   "power_for_35": 25771790965,
+   "power_for_15": 12885895483
+  },
+  {
+   "level": 14,
+   "recommended_power": 72667110973,
+   "power_for_35": 29066844390,
+   "power_for_15": 14533422195
+  },
+  {
+   "level": 15,
+   "recommended_power": 78894911744,
+   "power_for_35": 31557964698,
+   "power_for_15": 15778982349
+  },
+  {
+   "level": 16,
+   "recommended_power": 85380460343,
+   "power_for_35": 34152184138,
+   "power_for_15": 17076092069
+  },
+  {
+   "level": 17,
+   "recommended_power": 93598521876,
+   "power_for_35": 37439408751,
+   "power_for_15": 18719704376
+  },
+  {
+   "level": 18,
+   "recommended_power": 102496304864,
+   "power_for_35": 40998521946,
+   "power_for_15": 20499260973
+  },
+  {
+   "level": 19,
+   "recommended_power": 110005849382,
+   "power_for_35": 44002339753,
+   "power_for_15": 22001169877
+  },
+  {
+   "level": 20,
+   "recommended_power": 117784489370,
+   "power_for_35": 47113795748,
+   "power_for_15": 23556897874
+  },
+  {
+   "level": 21,
+   "recommended_power": 127783801912,
+   "power_for_35": 51113520765,
+   "power_for_15": 25556760383
+  },
+  {
+   "level": 22,
+   "recommended_power": 136231277014,
+   "power_for_35": 54492510806,
+   "power_for_15": 27246255403
+  },
+  {
+   "level": 23,
+   "recommended_power": 144953661199,
+   "power_for_35": 57981464480,
+   "power_for_15": 28990732240
+  },
+  {
+   "level": 24,
+   "recommended_power": 153951453303,
+   "power_for_35": 61580581322,
+   "power_for_15": 30790290661
+  },
+  {
+   "level": 25,
+   "recommended_power": 163225131373,
+   "power_for_35": 65290052550,
+   "power_for_15": 32645026275
+  },
+  {
+   "level": 26,
+   "recommended_power": 175728789732,
+   "power_for_35": 70291515893,
+   "power_for_15": 35145757947
+  },
+  {
+   "level": 27,
+   "recommended_power": 188516583368,
+   "power_for_35": 75406633348,
+   "power_for_15": 37703316674
+  },
+  {
+   "level": 28,
+   "recommended_power": 198947880764,
+   "power_for_35": 79579152306,
+   "power_for_15": 39789576153
+  },
+  {
+   "level": 29,
+   "recommended_power": 209665791519,
+   "power_for_35": 83866316608,
+   "power_for_15": 41933158304
+  },
+  {
+   "level": 30,
+   "recommended_power": 220670724222,
+   "power_for_35": 88268289689,
+   "power_for_15": 44134144845
+  },
+  {
+   "level": 31,
+   "recommended_power": 231963073923,
+   "power_for_35": 92785229570,
+   "power_for_15": 46392614785
+  },
+  {
+   "level": 32,
+   "recommended_power": 243543223024,
+   "power_for_35": 97417289210,
+   "power_for_15": 48708644605
+  },
+  {
+   "level": 33,
+   "recommended_power": 255411542090,
+   "power_for_35": 102164616836,
+   "power_for_15": 51082308418
+  },
+  {
+   "level": 34,
+   "recommended_power": 267568390574,
+   "power_for_35": 107027356230,
+   "power_for_15": 53513678115
+  },
+  {
+   "level": 35,
+   "recommended_power": 280014117495,
+   "power_for_35": 112005646998,
+   "power_for_15": 56002823499
+  },
+  {
+   "level": 36,
+   "recommended_power": 292749062041,
+   "power_for_35": 117099624817,
+   "power_for_15": 58549812409
+  },
+  {
+   "level": 37,
+   "recommended_power": 305773554127,
+   "power_for_35": 122309421651,
+   "power_for_15": 61154710826
+  },
+  {
+   "level": 38,
+   "recommended_power": 323746379060,
+   "power_for_35": 129498551624,
+   "power_for_15": 64749275812
+  },
+  {
+   "level": 39,
+   "recommended_power": 337549538367,
+   "power_for_35": 135019815347,
+   "power_for_15": 67509907674
+  },
+  {
+   "level": 40,
+   "recommended_power": 351647425148,
+   "power_for_35": 140658970060,
+   "power_for_15": 70329485030
+  },
+  {
+   "level": 41,
+   "recommended_power": 366040341294,
+   "power_for_35": 146416136518,
+   "power_for_15": 73208068259
+  },
+  {
+   "level": 42,
+   "recommended_power": 380728581509,
+   "power_for_35": 152291432604,
+   "power_for_15": 76145716302
+  },
+  {
+   "level": 43,
+   "recommended_power": 395712433650,
+   "power_for_35": 158284973460,
+   "power_for_15": 79142486730
+  },
+  {
+   "level": 44,
+   "recommended_power": 417785898456,
+   "power_for_35": 167114359383,
+   "power_for_15": 83557179692
+  },
+  {
+   "level": 45,
+   "recommended_power": 433619282792,
+   "power_for_35": 173447713117,
+   "power_for_15": 86723856559
+  },
+  {
+   "level": 46,
+   "recommended_power": 449754004796,
+   "power_for_35": 179901601919,
+   "power_for_15": 89950800960
+  },
+  {
+   "level": 47,
+   "recommended_power": 466190332312,
+   "power_for_35": 186476132925,
+   "power_for_15": 93238066463
+  },
+  {
+   "level": 48,
+   "recommended_power": 482928527651,
+   "power_for_35": 193171411061,
+   "power_for_15": 96585705531
+  },
+  {
+   "level": 49,
+   "recommended_power": 499968847829,
+   "power_for_35": 199987539132,
+   "power_for_15": 99993769566
+  },
+  {
+   "level": 50,
+   "recommended_power": 517311544783,
+   "power_for_35": 206924617914,
+   "power_for_15": 103462308957
+  },
+  {
+   "level": 51,
+   "recommended_power": 534956865569,
+   "power_for_35": 213982746228,
+   "power_for_15": 106991373114
+  },
+  {
+   "level": 52,
+   "recommended_power": 552905052561,
+   "power_for_35": 221162021025,
+   "power_for_15": 110581010513
+  },
+  {
+   "level": 53,
+   "recommended_power": 571156343626,
+   "power_for_35": 228462537451,
+   "power_for_15": 114231268726
+  },
+  {
+   "level": 54,
+   "recommended_power": 589710972296,
+   "power_for_35": 235884388919,
+   "power_for_15": 117942194460
+  },
+  {
+   "level": 55,
+   "recommended_power": 608569167926,
+   "power_for_35": 243427667171,
+   "power_for_15": 121713833586
+  },
+  {
+   "level": 56,
+   "recommended_power": 627731155848,
+   "power_for_35": 251092462340,
+   "power_for_15": 125546231170
+  },
+  {
+   "level": 57,
+   "recommended_power": 647197157509,
+   "power_for_35": 258878863004,
+   "power_for_15": 129439431502
+  },
+  {
+   "level": 58,
+   "recommended_power": 666967390614,
+   "power_for_35": 266786956246,
+   "power_for_15": 133393478123
+  },
+  {
+   "level": 59,
+   "recommended_power": 687042069245,
+   "power_for_35": 274816827698,
+   "power_for_15": 137408413849
+  },
+  {
+   "level": 60,
+   "recommended_power": 717456251361,
+   "power_for_35": 286982500545,
+   "power_for_15": 143491250273
+  },
+  {
+   "level": 61,
+   "recommended_power": 738433856957,
+   "power_for_35": 295373542783,
+   "power_for_15": 147686771392
+  },
+  {
+   "level": 62,
+   "recommended_power": 759720857215,
+   "power_for_35": 303888342886,
+   "power_for_15": 151944171443
+  },
+  {
+   "level": 63,
+   "recommended_power": 781317455744,
+   "power_for_35": 312526982298,
+   "power_for_15": 156263491149
+  },
+  {
+   "level": 64,
+   "recommended_power": 803223853045,
+   "power_for_35": 321289541218,
+   "power_for_15": 160644770609
+  },
+  {
+   "level": 65,
+   "recommended_power": 825440246601,
+   "power_for_35": 330176098641,
+   "power_for_15": 165088049321
+  },
+  {
+   "level": 66,
+   "recommended_power": 847966830966,
+   "power_for_35": 339186732387,
+   "power_for_15": 169593366194
+  },
+  {
+   "level": 67,
+   "recommended_power": 870803797862,
+   "power_for_35": 348321519145,
+   "power_for_15": 174160759573
+  },
+  {
+   "level": 68,
+   "recommended_power": 893951336248,
+   "power_for_35": 357580534500,
+   "power_for_15": 178790267250
+  },
+  {
+   "level": 69,
+   "recommended_power": 917409632414,
+   "power_for_35": 366963852966,
+   "power_for_15": 183481926483
+  },
+  {
+   "level": 70,
+   "recommended_power": 941178870048,
+   "power_for_35": 376471548020,
+   "power_for_15": 188235774010
+  },
+  {
+   "level": 71,
+   "recommended_power": 965259230309,
+   "power_for_35": 386103692124,
+   "power_for_15": 193051846062
+  },
+  {
+   "level": 72,
+   "recommended_power": 989650891903,
+   "power_for_35": 395860356762,
+   "power_for_15": 197930178381
+  },
+  {
+   "level": 73,
+   "recommended_power": 1014354031142,
+   "power_for_35": 405741612457,
+   "power_for_15": 202870806229
+  },
+  {
+   "level": 74,
+   "recommended_power": 1039368822014,
+   "power_for_35": 415747528806,
+   "power_for_15": 207873764403
+  },
+  {
+   "level": 75,
+   "recommended_power": 1064695436240,
+   "power_for_35": 425878174496,
+   "power_for_15": 212939087248
+  },
+  {
+   "level": 76,
+   "recommended_power": 1090334043338,
+   "power_for_35": 436133617336,
+   "power_for_15": 218066808668
+  },
+  {
+   "level": 77,
+   "recommended_power": 1116284810673,
+   "power_for_35": 446513924270,
+   "power_for_15": 223256962135
+  },
+  {
+   "level": 78,
+   "recommended_power": 1142547903518,
+   "power_for_35": 457019161408,
+   "power_for_15": 228509580704
+  },
+  {
+   "level": 79,
+   "recommended_power": 1169123485103,
+   "power_for_35": 467649394042,
+   "power_for_15": 233824697021
+  },
+  {
+   "level": 80,
+   "recommended_power": 1196011716665,
+   "power_for_35": 478404686666,
+   "power_for_15": 239202343333
+  },
+  {
+   "level": 81,
+   "recommended_power": 1223212757497,
+   "power_for_35": 489285102999,
+   "power_for_15": 244642551500
+  },
+  {
+   "level": 82,
+   "recommended_power": 1250726764998,
+   "power_for_35": 500290706000,
+   "power_for_15": 250145353000
+  },
+  {
+   "level": 83,
+   "recommended_power": 1278553894712,
+   "power_for_35": 511421557885,
+   "power_for_15": 255710778943
+  },
+  {
+   "level": 84,
+   "recommended_power": 1306694300378,
+   "power_for_35": 522677720152,
+   "power_for_15": 261338860076
+  },
+  {
+   "level": 85,
+   "recommended_power": 1335148133964,
+   "power_for_35": 534059253586,
+   "power_for_15": 267029626793
+  },
+  {
+   "level": 86,
+   "recommended_power": 1363915545716,
+   "power_for_35": 545566218287,
+   "power_for_15": 272783109144
+  },
+  {
+   "level": 87,
+   "recommended_power": 1392996684190,
+   "power_for_35": 557198673676,
+   "power_for_15": 278599336838
+  },
+  {
+   "level": 88,
+   "recommended_power": 1422391696295,
+   "power_for_35": 568956678518,
+   "power_for_15": 284478339259
+  },
+  {
+   "level": 89,
+   "recommended_power": 1452100727326,
+   "power_for_35": 580840290931,
+   "power_for_15": 290420145466
+  },
+  {
+   "level": 90,
+   "recommended_power": 1482123920999,
+   "power_for_35": 592849568400,
+   "power_for_15": 296424784200
+  },
+  {
+   "level": 91,
+   "recommended_power": 1512461419489,
+   "power_for_35": 604984567796,
+   "power_for_15": 302492283898
+  },
+  {
+   "level": 92,
+   "recommended_power": 1543113363457,
+   "power_for_35": 617245345383,
+   "power_for_15": 308622672692
+  },
+  {
+   "level": 93,
+   "recommended_power": 1574079892089,
+   "power_for_35": 629631956836,
+   "power_for_15": 314815978418
+  },
+  {
+   "level": 94,
+   "recommended_power": 1605361143119,
+   "power_for_35": 642144457248,
+   "power_for_15": 321072228624
+  },
+  {
+   "level": 95,
+   "recommended_power": 1636957252864,
+   "power_for_35": 654782901146,
+   "power_for_15": 327391450573
+  },
+  {
+   "level": 96,
+   "recommended_power": 1668868356254,
+   "power_for_35": 667547342502,
+   "power_for_15": 333773671251
+  },
+  {
+   "level": 97,
+   "recommended_power": 1701094586856,
+   "power_for_35": 680437834743,
+   "power_for_15": 340218917372
+  },
+  {
+   "level": 98,
+   "recommended_power": 1733636076902,
+   "power_for_35": 693454430761,
+   "power_for_15": 346727215381
+  },
+  {
+   "level": 99,
+   "recommended_power": 1766492957319,
+   "power_for_35": 706597182928,
+   "power_for_15": 353298591464
+  },
+  {
+   "level": 100,
+   "recommended_power": 1799665357751,
+   "power_for_35": 719866143101,
+   "power_for_15": 359933071551
+  },
+  {
+   "level": 101,
+   "recommended_power": 16716893064,
+   "power_for_35": 6686757226,
+   "power_for_15": 3343378613
+  },
+  {
+   "level": 102,
+   "recommended_power": 21586476316,
+   "power_for_35": 8634590527,
+   "power_for_15": 4317295264
+  },
+  {
+   "level": 103,
+   "recommended_power": 26688393899,
+   "power_for_35": 10675357560,
+   "power_for_15": 5337678780
+  },
+  {
+   "level": 104,
+   "recommended_power": 32479364960,
+   "power_for_35": 12991745984,
+   "power_for_15": 6495872992
+  },
+  {
+   "level": 105,
+   "recommended_power": 39775879423,
+   "power_for_35": 15910351770,
+   "power_for_15": 7955175885
+  },
+  {
+   "level": 106,
+   "recommended_power": 47186970310,
+   "power_for_35": 18874788124,
+   "power_for_15": 9437394062
+  },
+  {
+   "level": 107,
+   "recommended_power": 53371061567,
+   "power_for_35": 21348424627,
+   "power_for_15": 10674212314
+  },
+  {
+   "level": 108,
+   "recommended_power": 62231822610,
+   "power_for_35": 24892729044,
+   "power_for_15": 12446364522
+  },
+  {
+   "level": 109,
+   "recommended_power": 70650327642,
+   "power_for_35": 28260131057,
+   "power_for_15": 14130065529
+  },
+  {
+   "level": 110,
+   "recommended_power": 78360549469,
+   "power_for_35": 31344219788,
+   "power_for_15": 15672109894
+  },
+  {
+   "level": 111,
+   "recommended_power": 89619073025,
+   "power_for_35": 35847629210,
+   "power_for_15": 17923814605
+  },
+  {
+   "level": 112,
+   "recommended_power": 98430603954,
+   "power_for_35": 39372241582,
+   "power_for_15": 19686120791
+  },
+  {
+   "level": 113,
+   "recommended_power": 107654409793,
+   "power_for_35": 43061763918,
+   "power_for_15": 21530881959
+  },
+  {
+   "level": 114,
+   "recommended_power": 121418568914,
+   "power_for_35": 48567427566,
+   "power_for_15": 24283713783
+  },
+  {
+   "level": 115,
+   "recommended_power": 131824523505,
+   "power_for_35": 52729809402,
+   "power_for_15": 26364904701
+  },
+  {
+   "level": 116,
+   "recommended_power": 142661145727,
+   "power_for_35": 57064458291,
+   "power_for_15": 28532229146
+  },
+  {
+   "level": 117,
+   "recommended_power": 156392602188,
+   "power_for_35": 62557040876,
+   "power_for_15": 31278520438
+  },
+  {
+   "level": 118,
+   "recommended_power": 171259796748,
+   "power_for_35": 68503918700,
+   "power_for_15": 34251959350
+  },
+  {
+   "level": 119,
+   "recommended_power": 183807400973,
+   "power_for_35": 73522960390,
+   "power_for_15": 36761480195
+  },
+  {
+   "level": 120,
+   "recommended_power": 196804633459,
+   "power_for_35": 78721853384,
+   "power_for_15": 39360926692
+  },
+  {
+   "level": 121,
+   "recommended_power": 213512360003,
+   "power_for_35": 85404944002,
+   "power_for_15": 42702472001
+  },
+  {
+   "level": 122,
+   "recommended_power": 227627140734,
+   "power_for_35": 91050856294,
+   "power_for_15": 45525428147
+  },
+  {
+   "level": 123,
+   "recommended_power": 242201263623,
+   "power_for_35": 96880505450,
+   "power_for_15": 48440252725
+  },
+  {
+   "level": 124,
+   "recommended_power": 257235562167,
+   "power_for_35": 102894224867,
+   "power_for_15": 51447112434
+  },
+  {
+   "level": 125,
+   "recommended_power": 272730835128,
+   "power_for_35": 109092334052,
+   "power_for_15": 54546167026
+  },
+  {
+   "level": 126,
+   "recommended_power": 293623041849,
+   "power_for_35": 117449216740,
+   "power_for_15": 58724608370
+  },
+  {
+   "level": 127,
+   "recommended_power": 314990006656,
+   "power_for_35": 125996002663,
+   "power_for_15": 62998001332
+  },
+  {
+   "level": 128,
+   "recommended_power": 332419531304,
+   "power_for_35": 132967812522,
+   "power_for_15": 66483906261
+  },
+  {
+   "level": 129,
+   "recommended_power": 350327954636,
+   "power_for_35": 140131181855,
+   "power_for_15": 70065590928
+  },
+  {
+   "level": 130,
+   "recommended_power": 368715959358,
+   "power_for_35": 147486383744,
+   "power_for_15": 73743191872
+  },
+  {
+   "level": 131,
+   "recommended_power": 387584205557,
+   "power_for_35": 155033682223,
+   "power_for_15": 77516841112
+  },
+  {
+   "level": 132,
+   "recommended_power": 406933332182,
+   "power_for_35": 162773332873,
+   "power_for_15": 81386666437
+  },
+  {
+   "level": 133,
+   "recommended_power": 426763958403,
+   "power_for_35": 170705583362,
+   "power_for_15": 85352791681
+  },
+  {
+   "level": 134,
+   "recommended_power": 447076684831,
+   "power_for_35": 178830673933,
+   "power_for_15": 89415336967
+  },
+  {
+   "level": 135,
+   "recommended_power": 467872094634,
+   "power_for_35": 187148837854,
+   "power_for_15": 93574418927
+  },
+  {
+   "level": 136,
+   "recommended_power": 489150754556,
+   "power_for_35": 195660301823,
+   "power_for_15": 97830150912
+  },
+  {
+   "level": 137,
+   "recommended_power": 510913215850,
+   "power_for_35": 204365286340,
+   "power_for_15": 102182643170
+  },
+  {
+   "level": 138,
+   "recommended_power": 540943784748,
+   "power_for_35": 216377513900,
+   "power_for_15": 108188756950
+  },
+  {
+   "level": 139,
+   "recommended_power": 564007311385,
+   "power_for_35": 225602924554,
+   "power_for_15": 112801462277
+  },
+  {
+   "level": 140,
+   "recommended_power": 587563294479,
+   "power_for_35": 235025317792,
+   "power_for_15": 117512658896
+  },
+  {
+   "level": 141,
+   "recommended_power": 611612238460,
+   "power_for_35": 244644895384,
+   "power_for_15": 122322447692
+  },
+  {
+   "level": 142,
+   "recommended_power": 636154635741,
+   "power_for_35": 254461854297,
+   "power_for_15": 127230927149
+  },
+  {
+   "level": 143,
+   "recommended_power": 661190967299,
+   "power_for_35": 264476386920,
+   "power_for_15": 132238193460
+  },
+  {
+   "level": 144,
+   "recommended_power": 698073244190,
+   "power_for_35": 279229297676,
+   "power_for_15": 139614648838
+  },
+  {
+   "level": 145,
+   "recommended_power": 724529048493,
+   "power_for_35": 289811619398,
+   "power_for_15": 144905809699
+  },
+  {
+   "level": 146,
+   "recommended_power": 751488354146,
+   "power_for_35": 300595341659,
+   "power_for_15": 150297670830
+  },
+  {
+   "level": 147,
+   "recommended_power": 778951608682,
+   "power_for_35": 311580643473,
+   "power_for_15": 155790321737
+  },
+  {
+   "level": 148,
+   "recommended_power": 806919250399,
+   "power_for_35": 322767700160,
+   "power_for_15": 161383850080
+  },
+  {
+   "level": 149,
+   "recommended_power": 835391708739,
+   "power_for_35": 334156683496,
+   "power_for_15": 167078341748
+  },
+  {
+   "level": 150,
+   "recommended_power": 864369404660,
+   "power_for_35": 345747761864,
+   "power_for_15": 172873880932
+  },
+  {
+   "level": 151,
+   "recommended_power": 893852750966,
+   "power_for_35": 357541100387,
+   "power_for_15": 178770550194
+  },
+  {
+   "level": 152,
+   "recommended_power": 923842152636,
+   "power_for_35": 369536861055,
+   "power_for_15": 184768430528
+  },
+  {
+   "level": 153,
+   "recommended_power": 954338007120,
+   "power_for_35": 381735202848,
+   "power_for_15": 190867601424
+  },
+  {
+   "level": 154,
+   "recommended_power": 985340704621,
+   "power_for_35": 394136281849,
+   "power_for_15": 197068140925
+  },
+  {
+   "level": 155,
+   "recommended_power": 1016850628368,
+   "power_for_35": 406740251348,
+   "power_for_15": 203370125674
+  },
+  {
+   "level": 156,
+   "recommended_power": 1048868154864,
+   "power_for_35": 419547261946,
+   "power_for_15": 209773630973
+  },
+  {
+   "level": 157,
+   "recommended_power": 1081393654125,
+   "power_for_35": 432557461650,
+   "power_for_15": 216278730825
+  },
+  {
+   "level": 158,
+   "recommended_power": 1114427489907,
+   "power_for_35": 445770995963,
+   "power_for_15": 222885497982
+  },
+  {
+   "level": 159,
+   "recommended_power": 1147970019920,
+   "power_for_35": 459188007968,
+   "power_for_15": 229594003984
+  },
+  {
+   "level": 160,
+   "recommended_power": 1198788697280,
+   "power_for_35": 479515478912,
+   "power_for_15": 239757739456
+  },
+  {
+   "level": 161,
+   "recommended_power": 1233839916692,
+   "power_for_35": 493535966677,
+   "power_for_15": 246767983339
+  },
+  {
+   "level": 162,
+   "recommended_power": 1269408099782,
+   "power_for_35": 507763239913,
+   "power_for_15": 253881619957
+  },
+  {
+   "level": 163,
+   "recommended_power": 1305493586762,
+   "power_for_35": 522197434705,
+   "power_for_15": 261098717353
+  },
+  {
+   "level": 164,
+   "recommended_power": 1342096712643,
+   "power_for_35": 536838685058,
+   "power_for_15": 268419342529
+  },
+  {
+   "level": 165,
+   "recommended_power": 1379217807397,
+   "power_for_35": 551687122959,
+   "power_for_15": 275843561480
+  },
+  {
+   "level": 166,
+   "recommended_power": 1416857196105,
+   "power_for_35": 566742878442,
+   "power_for_15": 283371439221
+  },
+  {
+   "level": 167,
+   "recommended_power": 1455015199108,
+   "power_for_35": 582006079644,
+   "power_for_15": 291003039822
+  },
+  {
+   "level": 168,
+   "recommended_power": 1493692132141,
+   "power_for_35": 597476852857,
+   "power_for_15": 298738426429
+  },
+  {
+   "level": 169,
+   "recommended_power": 1532888306469,
+   "power_for_35": 613155322588,
+   "power_for_15": 306577661294
+  },
+  {
+   "level": 170,
+   "recommended_power": 1572604029015,
+   "power_for_35": 629041611606,
+   "power_for_15": 314520805803
+  },
+  {
+   "level": 171,
+   "recommended_power": 1612839602478,
+   "power_for_35": 645135840992,
+   "power_for_15": 322567920496
+  },
+  {
+   "level": 172,
+   "recommended_power": 1653595325452,
+   "power_for_35": 661438130181,
+   "power_for_15": 330719065091
+  },
+  {
+   "level": 173,
+   "recommended_power": 1694871492537,
+   "power_for_35": 677948597015,
+   "power_for_15": 338974298508
+  },
+  {
+   "level": 174,
+   "recommended_power": 1736668394446,
+   "power_for_35": 694667357779,
+   "power_for_15": 347333678890
+  },
+  {
+   "level": 175,
+   "recommended_power": 1778986318107,
+   "power_for_35": 711594527243,
+   "power_for_15": 355797263622
+  },
+  {
+   "level": 176,
+   "recommended_power": 1821825546762,
+   "power_for_35": 728730218705,
+   "power_for_15": 364365109353
+  },
+  {
+   "level": 177,
+   "recommended_power": 1865186360064,
+   "power_for_35": 746074544026,
+   "power_for_15": 373037272013
+  },
+  {
+   "level": 178,
+   "recommended_power": 1909069034162,
+   "power_for_35": 763627613665,
+   "power_for_15": 381813806833
+  },
+  {
+   "level": 179,
+   "recommended_power": 1953473841796,
+   "power_for_35": 781389536719,
+   "power_for_15": 390694768360
+  },
+  {
+   "level": 180,
+   "recommended_power": 1998401052374,
+   "power_for_35": 799360420950,
+   "power_for_15": 399680210475
+  },
+  {
+   "level": 181,
+   "recommended_power": 2043850932060,
+   "power_for_35": 817540372824,
+   "power_for_15": 408770186412
+  },
+  {
+   "level": 182,
+   "recommended_power": 2089823743847,
+   "power_for_35": 835929497539,
+   "power_for_15": 417964748770
+  },
+  {
+   "level": 183,
+   "recommended_power": 2136319747633,
+   "power_for_35": 854527899054,
+   "power_for_15": 427263949527
+  },
+  {
+   "level": 184,
+   "recommended_power": 2183339200296,
+   "power_for_35": 873335680119,
+   "power_for_15": 436667840060
+  },
+  {
+   "level": 185,
+   "recommended_power": 2230882355760,
+   "power_for_35": 892352942304,
+   "power_for_15": 446176471152
+  },
+  {
+   "level": 186,
+   "recommended_power": 2278949465068,
+   "power_for_35": 911579786028,
+   "power_for_15": 455789893014
+  },
+  {
+   "level": 187,
+   "recommended_power": 2327540776442,
+   "power_for_35": 931016310577,
+   "power_for_15": 465508155289
+  },
+  {
+   "level": 188,
+   "recommended_power": 2376656535349,
+   "power_for_35": 950662614140,
+   "power_for_15": 475331307070
+  },
+  {
+   "level": 189,
+   "recommended_power": 2426296984560,
+   "power_for_35": 970518793824,
+   "power_for_15": 485259396912
+  },
+  {
+   "level": 190,
+   "recommended_power": 2476462364210,
+   "power_for_35": 990584945684,
+   "power_for_15": 495292472842
+  },
+  {
+   "level": 191,
+   "recommended_power": 2527152911856,
+   "power_for_35": 1010861164743,
+   "power_for_15": 505430582372
+  },
+  {
+   "level": 192,
+   "recommended_power": 2578368862528,
+   "power_for_35": 1031347545012,
+   "power_for_15": 515673772506
+  },
+  {
+   "level": 193,
+   "recommended_power": 2630110448788,
+   "power_for_35": 1052044179516,
+   "power_for_15": 526022089758
+  },
+  {
+   "level": 194,
+   "recommended_power": 2682377900776,
+   "power_for_35": 1072951160311,
+   "power_for_15": 536475580156
+  },
+  {
+   "level": 195,
+   "recommended_power": 2735171446263,
+   "power_for_35": 1094068578506,
+   "power_for_15": 547034289253
+  },
+  {
+   "level": 196,
+   "recommended_power": 2788491310699,
+   "power_for_35": 1115396524280,
+   "power_for_15": 557698262140
+  },
+  {
+   "level": 197,
+   "recommended_power": 2842337717260,
+   "power_for_35": 1136935086904,
+   "power_for_15": 568467543452
+  },
+  {
+   "level": 198,
+   "recommended_power": 2896710886895,
+   "power_for_35": 1158684354758,
+   "power_for_15": 579342177379
+  },
+  {
+   "level": 199,
+   "recommended_power": 2951611038363,
+   "power_for_35": 1180644415346,
+   "power_for_15": 590322207673
+  },
+  {
+   "level": 200,
+   "recommended_power": 3007038388287,
+   "power_for_35": 1202815355315,
+   "power_for_15": 601407677658
+  }
+ ]
+}

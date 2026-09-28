@@ -1,0 +1,807 @@
+{
+ "dc:17035": {
+  "url": "https://m.dcinside.com/board/projectcc/17035",
+  "title": "[📚정보] 전투력 보정 정리",
+  "title_en": null,
+  "date": "2026-08-07",
+  "signal": "captured in an earlier record"
+ },
+ "dc:17487": {
+  "url": "https://m.dcinside.com/board/projectcc/17487",
+  "title": "[📚정보] 전투력 보정 시트표",
+  "title_en": "[Info] Power-correction sheet table",
+  "date": "2026-08-08",
+  "signal": "relevance 3/3"
+ },
+ "dc:50007": {
+  "url": "https://m.dcinside.com/board/projectcc/50007",
+  "title": "[📚정보] 스테이지 권투력이 얼마나 가파르게 늘어나는지 알아보자...",
+  "title_en": "[Info] How steeply stage recommended power rises",
+  "date": "2026-08-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:67229": {
+  "url": "https://m.dcinside.com/board/projectcc/67229",
+  "title": "[일반] 226-30 428m / 227-30 463m 35%",
+  "title_en": "226-30 at 428M / 227-30 at 463M, 35% bracket",
+  "date": "2026-09-14",
+  "signal": "relevance 3/3"
+ },
+ "dc:67268": {
+  "url": "https://m.dcinside.com/board/projectcc/67268",
+  "title": "[일반] 15퍼도 잡몹 스테는 가능하다더라",
+  "title_en": "Apparently 15% works on mob stages",
+  "date": "2026-09-14",
+  "signal": "relevance 2/3"
+ },
+ "dc:67422": {
+  "url": "https://m.dcinside.com/board/projectcc/67422",
+  "title": "[일반] 24030 35퍼 클덱",
+  "title_en": "240-30 35% clear deck",
+  "date": "2026-09-15",
+  "signal": "relevance 3/3"
+ },
+ "dc:67452": {
+  "url": "https://m.dcinside.com/board/projectcc/67452",
+  "title": "[일반] 비겁이랑 쿨민 나오는 스테이지 주기 있어요?",
+  "title_en": "Is there a cycle to when 비겁이 and 쿨민 appear?",
+  "date": "2026-09-15",
+  "signal": "relevance 2/3"
+ },
+ "dc:67596": {
+  "url": "https://m.dcinside.com/board/projectcc/67596",
+  "title": "[일반] 씨발 ㅋㅋ 15프로컷됐노",
+  "title_en": "Dropped to the 15% cut",
+  "date": "2026-09-15",
+  "signal": "relevance 2/3"
+ },
+ "dc:67929": {
+  "url": "https://m.dcinside.com/board/projectcc/67929",
+  "title": "[✋️질문] 장비 추천옵",
+  "title_en": "[Q] Recommended gear options",
+  "date": "2026-09-15",
+  "signal": "relevance 2/3"
+ },
+ "dc:67953": {
+  "url": "https://m.dcinside.com/board/projectcc/67953",
+  "title": "[일반] 243-30 비쿠 35% 클덱 919M",
+  "title_en": "243-30 Cowardly Cookie 35% clear deck at 919M",
+  "date": "2026-09-15",
+  "signal": "relevance 3/3"
+ },
+ "dc:68239": {
+  "url": "https://m.dcinside.com/board/projectcc/68239",
+  "title": "[일반] 비응신 같은 조합으로 55 맞춰서 비겁이 깸",
+  "title_en": "Cleared 비겁이 by reaching 55% with a silly combo",
+  "date": "2026-09-16",
+  "signal": "relevance 3/3"
+ },
+ "dc:68319": {
+  "url": "https://m.dcinside.com/board/projectcc/68319",
+  "title": "[일반] 쥐토바이 35% 15초컷",
+  "title_en": "Biker at 35% in 15 seconds",
+  "date": "2026-09-16",
+  "signal": "relevance 3/3"
+ },
+ "dc:68327": {
+  "url": "https://m.dcinside.com/board/projectcc/68327",
+  "title": "[일반] 248-30 비쿠 35% 클덱 1G",
+  "title_en": "248-30 Cowardly Cookie 35% clear deck at 1G",
+  "date": "2026-09-16",
+  "signal": "relevance 3/3"
+ },
+ "dc:68396": {
+  "url": "https://m.dcinside.com/board/projectcc/68396",
+  "title": "[✋️질문] 치케 마카롱 넣고 35% vs 바궁 방랑자 넣고 55%",
+  "title_en": "치케+마카롱 at 35% vs 바궁+방랑자 at 55%",
+  "date": "2026-09-16",
+  "signal": "relevance 2/3"
+ },
+ "dc:68467": {
+  "url": "https://m.dcinside.com/board/projectcc/68467",
+  "title": "[일반] 259-30 35퍼 비겁이 클덱",
+  "title_en": "259-30 비겁이 35% clear deck",
+  "date": "2026-09-16",
+  "signal": "relevance 3/3"
+ },
+ "dc:68764": {
+  "url": "https://m.dcinside.com/board/projectcc/68764",
+  "title": "[일반] 명집 안 챙기는 애들 궁금한 점",
+  "title_en": "A question for those who skip accuracy/focus",
+  "date": "2026-09-17",
+  "signal": "relevance 3/3"
+ },
+ "dc:68826": {
+  "url": "https://m.dcinside.com/board/projectcc/68826",
+  "title": "[일반] 35%단은 명집 쓰긴해야겠다",
+  "title_en": "The 35% crew really does need accuracy/focus",
+  "date": "2026-09-17",
+  "signal": "relevance 3/3"
+ },
+ "dc:68878": {
+  "url": "https://m.dcinside.com/board/projectcc/68878",
+  "title": "[✋️질문] 스테이지 명중집중 어느정도로 하면 되는지 딱 정리좀",
+  "title_en": "How much accuracy/focus for stages, exactly?",
+  "date": "2026-09-17",
+  "signal": "relevance 3/3"
+ },
+ "dc:68911": {
+  "url": "https://m.dcinside.com/board/projectcc/68911",
+  "title": "[📚정보] 내 기준 암살자 가장 잘잡는 조합",
+  "title_en": "[Info] My best combination for the Assassin",
+  "date": "2026-09-17",
+  "signal": "relevance 3/3"
+ },
+ "dc:68917": {
+  "url": "https://m.dcinside.com/board/projectcc/68917",
+  "title": "[일반] 스테이지에서도 스킬가속은 중요함..",
+  "title_en": "Skill haste matters on stages too",
+  "date": "2026-09-17",
+  "signal": "relevance 2/3"
+ },
+ "dc:69663": {
+  "url": "https://m.dcinside.com/board/projectcc/69663",
+  "title": "[일반] 명중 낮으니까 스테이지 미는속도가 느랴지는구나",
+  "title_en": "Low accuracy slows stage pushing",
+  "date": "2026-09-18",
+  "signal": "relevance 2/3"
+ },
+ "dc:69985": {
+  "url": "https://m.dcinside.com/board/projectcc/69985",
+  "title": "[일반] 35% 잡스테에서 다들 이렇게하지?",
+  "title_en": "Everyone does this on 35% mob stages, right?",
+  "date": "2026-09-18",
+  "signal": "relevance 2/3"
+ },
+ "dc:70007": {
+  "url": "https://m.dcinside.com/board/projectcc/70007",
+  "title": "[일반] 집중은 모르겠는데 명중은 스캠아님",
+  "title_en": "Not sure about Focus, but Accuracy is not a scam",
+  "date": "2026-09-18",
+  "signal": "relevance 2/3"
+ },
+ "dc:70308": {
+  "url": "https://m.dcinside.com/board/projectcc/70308",
+  "title": "[📚정보] 168 이후 All In One 단일 덱 및 보스별 스위칭 공유",
+  "title_en": "Post-168 All-In-One single deck and per-boss switching",
+  "date": "2026-09-19",
+  "signal": "relevance 3/3"
+ },
+ "dc:71137": {
+  "url": "https://m.dcinside.com/board/projectcc/71137",
+  "title": "[일반] 264-30 비겁 딱 35% 자동으로 깸",
+  "title_en": "264-30 Coward cleared on auto at exactly 35%",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "dc:71293": {
+  "url": "https://m.dcinside.com/board/projectcc/71293",
+  "title": "[일반] 243-10 688.4m 35%",
+  "title_en": "243-10 at 688.4M, 35%",
+  "date": "2026-09-20",
+  "signal": "relevance 3/3"
+ },
+ "dc:71369": {
+  "url": "https://m.dcinside.com/board/projectcc/71369",
+  "title": "[일반] 243-30 693.5m 35%",
+  "title_en": "243-30 at 693.5M, 35%",
+  "date": "2026-09-21",
+  "signal": "relevance 3/3"
+ },
+ "dc:71651": {
+  "url": "https://m.dcinside.com/board/projectcc/71651",
+  "title": "[✋️질문] 명중집중<스캠이면 토벌전 장비를 아레나랑 겸하는게 아니라",
+  "title_en": "If Accuracy/Focus are a scam, share conquest gear with stages, not arena?",
+  "date": "2026-09-21",
+  "signal": "relevance 2/3"
+ },
+ "dc:71892": {
+  "url": "https://m.dcinside.com/board/projectcc/71892",
+  "title": "[일반] 15퍼 비겁이 개빡이네",
+  "title_en": "Coward at 15% is brutal",
+  "date": "2026-09-21",
+  "signal": "relevance 3/3"
+ },
+ "dc:72024": {
+  "url": "https://m.dcinside.com/board/projectcc/72024",
+  "title": "[일반] 219-30 348m 35% 비겁이 컷",
+  "title_en": "219-30 Coward cut at 348M, 35%",
+  "date": "2026-09-22",
+  "signal": "relevance 3/3"
+ },
+ "dc:72747": {
+  "url": "https://m.dcinside.com/board/projectcc/72747",
+  "title": "[일반] 비겁 35%로 미는 사람들 진짜 대단하네",
+  "title_en": "People pushing Coward at 35% are amazing",
+  "date": "2026-09-22",
+  "signal": "relevance 2/3"
+ },
+ "dc:72763": {
+  "url": "https://m.dcinside.com/board/projectcc/72763",
+  "title": "[일반] 스테이지 미는 도중에 아레나장비로 바꾸면 바로 안바뀌네?",
+  "title_en": null,
+  "date": "2026-09-22",
+  "signal": "captured in an earlier record"
+ },
+ "dc:72776": {
+  "url": "https://m.dcinside.com/board/projectcc/72776",
+  "title": "[📚정보] 너프전 248-30 801.5m 35% + 169~248 덱 정리&장비",
+  "title_en": "Pre-nerf 248-30 at 801.5M, 35% + 169-248 deck summary & gear",
+  "date": "2026-09-22",
+  "signal": "relevance 3/3"
+ },
+ "dc:72916": {
+  "url": "https://m.dcinside.com/board/projectcc/72916",
+  "title": "[일반] 얘들아 근데 마카롱은 스테이지에서 왜 끌고다니는거야?????",
+  "title_en": "Why carry Macaron in stages?",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:73102": {
+  "url": "https://m.dcinside.com/board/projectcc/73102",
+  "title": "[일반] 스테 너프 권투력, 공격력, 체력 배율만 내려감",
+  "title_en": "Stage nerf: only recommended power, ATK and HP multipliers went down",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:73207": {
+  "url": "https://m.dcinside.com/board/projectcc/73207",
+  "title": "[일반] 시발 328이 4g컷이네",
+  "title_en": "328 is a 4G cut",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:73636": {
+  "url": "https://m.dcinside.com/board/projectcc/73636",
+  "title": "[📚정보] 변경된 권장 전투력 및 신규 컨텐츠 전투력 반영",
+  "title_en": "Changed recommended power and new-content power added (calculator)",
+  "date": "2026-09-23",
+  "signal": "relevance 3/3"
+ },
+ "dc:73646": {
+  "url": "https://m.dcinside.com/board/projectcc/73646",
+  "title": "[일반] 이면 100단계 권장전투력 ㅋㅋ",
+  "title_en": "Rift level 100 recommended power lol",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:73663": {
+  "url": "https://m.dcinside.com/board/projectcc/73663",
+  "title": "[일반] 권투력 이사이트 반영됐네",
+  "title_en": "Recommended power updated on this site",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "dc:74845": {
+  "url": "https://m.dcinside.com/board/projectcc/74845",
+  "title": "[일반] 바리 스테 쓰는 애들 말이 다 다르노",
+  "title_en": "Everyone using Bari in stages says something different",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:74856": {
+  "url": "https://m.dcinside.com/board/projectcc/74856",
+  "title": "[일반] 328 다 깬 놈 없냐",
+  "title_en": "Has anyone cleared 328?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:74914": {
+  "url": "https://m.dcinside.com/board/projectcc/74914",
+  "title": "[일반] 아레나 프리셋이 스테 젤 잘밀린다...",
+  "title_en": "The arena preset pushes stages best...",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:74998": {
+  "url": "https://m.dcinside.com/board/projectcc/74998",
+  "title": "[일반] 어제오늘 쌔빠지게 뚫어서 이면 도착햇는데",
+  "title_en": "Grinded yesterday and today and reached the Rift",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:75056": {
+  "url": "https://m.dcinside.com/board/projectcc/75056",
+  "title": "[📚정보] 뉴비를 위한 공략집 1편 [스테이지편]",
+  "title_en": "Newbie guide part 1 [Stages]",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "dc:75063": {
+  "url": "https://m.dcinside.com/board/projectcc/75063",
+  "title": "[일반] 이면가려면 15%로 비겁이 깨야하네?",
+  "title_en": "To reach the Rift you have to beat Cowardly at 15%?",
+  "date": "2026-09-24",
+  "signal": "relevance 2/3"
+ },
+ "dc:75151": {
+  "url": "https://m.dcinside.com/board/projectcc/75151",
+  "title": "[일반] 차원의 이면 전섭 11등으로 진입",
+  "title_en": "Entered the Dimensional Rift 11th across all servers",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75227": {
+  "url": "https://m.dcinside.com/board/projectcc/75227",
+  "title": "[일반] 아레나셋으로 스테돌면 35퍼도 자동으로 돌아가네",
+  "title_en": "With the arena set, 35% stages run on auto too",
+  "date": "2026-09-25",
+  "signal": "relevance 1/3"
+ },
+ "dc:75241": {
+  "url": "https://m.dcinside.com/board/projectcc/75241",
+  "title": "[일반] 차원의 이면 후기",
+  "title_en": "Dimensional Rift review",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75248": {
+  "url": "https://m.dcinside.com/board/projectcc/75248",
+  "title": "[일반] 현재 차원의 이면 총원 26명",
+  "title_en": "Currently 26 people in the Dimensional Rift",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "dc:75365": {
+  "url": "https://m.dcinside.com/board/projectcc/75365",
+  "title": "[✋️질문] 35%단 스테밀 때 복지 열정페이+초고속승진 써?",
+  "title_en": "Perks for 35% stage pushing: Passion Pay + Rapid Promotion?",
+  "date": "2026-09-25",
+  "signal": "relevance 2/3"
+ },
+ "dc:75381": {
+  "url": "https://m.dcinside.com/board/projectcc/75381",
+  "title": "[일반] 스테 35퍼로 밀거면 명중 1200까진 해주는게맞음?",
+  "title_en": "For 35% stages, should accuracy go to 1200?",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75540": {
+  "url": "https://m.dcinside.com/board/projectcc/75540",
+  "title": "[📚정보] 갠적으로 이덱이 스테 오토 제일 괜찮은듯",
+  "title_en": "Personally this deck is the best for stage auto",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75601": {
+  "url": "https://m.dcinside.com/board/projectcc/75601",
+  "title": "[✋️질문] 바리 스테 구리다는거 바없찐들 연막이냐?",
+  "title_en": "Is 'Bari is bad in stages' a smokescreen by people without Bari?",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75615": {
+  "url": "https://m.dcinside.com/board/projectcc/75615",
+  "title": "[일반] 이면 9단 씹",
+  "title_en": "Rift level 9 sucks",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75655": {
+  "url": "https://m.dcinside.com/board/projectcc/75655",
+  "title": "[일반] 바리 스테덱 국룰 나왓음?",
+  "title_en": "Is there a standard Bari stage deck yet?",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75752": {
+  "url": "https://m.dcinside.com/board/projectcc/75752",
+  "title": "[일반] 15퍼 밀리는건 뭐지요",
+  "title_en": "Why is 15% pushing?",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ },
+ "dc:75766": {
+  "url": "https://m.dcinside.com/board/projectcc/75766",
+  "title": "[📚정보] 딱히 없는 것 같아서 메모해놓는 스테/아레나/토벌 장비 옵션 (조언요)",
+  "title_en": "Notes on stage/arena/conquest gear substats (advice welcome)",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:75871": {
+  "url": "https://m.dcinside.com/board/projectcc/75871",
+  "title": "[일반] 스테 15% 뚫긴했는데",
+  "title_en": "I did break through a stage at 15%",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:75975": {
+  "url": "https://m.dcinside.com/board/projectcc/75975",
+  "title": "[📚정보] 스테덱은 바리+체콜 같이쓸거 아니면 체콜 비추함",
+  "title_en": "Don't use Cherry Cola in stage decks unless paired with Bari",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:76089": {
+  "url": "https://m.dcinside.com/board/projectcc/76089",
+  "title": "[일반] 15퍼단은 실존한다",
+  "title_en": "The 15% tier exists",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76174": {
+  "url": "https://m.dcinside.com/board/projectcc/76174",
+  "title": "[일반] 이면9팁좀주라",
+  "title_en": "Tips for Rift 9?",
+  "date": "2026-09-26",
+  "signal": "relevance 2/3"
+ },
+ "dc:76238": {
+  "url": "https://m.dcinside.com/board/projectcc/76238",
+  "title": "[✋️질문] 35%로 밀거면 명중 챙겨야 됨?",
+  "title_en": "Do I need accuracy to push at 35%?",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:76290": {
+  "url": "https://m.dcinside.com/board/projectcc/76290",
+  "title": "[일반] 328-30 35%권투가 4g네 ㅅㅂㅋㅋ",
+  "title_en": "The 35% power line for 328-30 is 4G",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:76297": {
+  "url": "https://m.dcinside.com/board/projectcc/76297",
+  "title": "[일반] 328 허브도 뺴버렸다",
+  "title_en": "Dropped Herb too at 328",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:76321": {
+  "url": "https://m.dcinside.com/board/projectcc/76321",
+  "title": "[일반] 이면 15단 개빡",
+  "title_en": "Rift level 15 is brutal",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "dc:76454": {
+  "url": "https://m.dcinside.com/board/projectcc/76454",
+  "title": "[✋️질문] 328-30",
+  "title_en": "328-30",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76525": {
+  "url": "https://m.dcinside.com/board/projectcc/76525",
+  "title": "[일반] 차원은 권투컷 없나?",
+  "title_en": "Does the Rift have no power cut?",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76569": {
+  "url": "https://m.dcinside.com/board/projectcc/76569",
+  "title": "[✋️질문] 이면도 권투잇나?",
+  "title_en": "Does the Rift have recommended power too?",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76586": {
+  "url": "https://m.dcinside.com/board/projectcc/76586",
+  "title": "[일반] 이면3 망치 뭐로 잡음?",
+  "title_en": "What kills the Hammer at Rift 3?",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76678": {
+  "url": "https://m.dcinside.com/board/projectcc/76678",
+  "title": "[일반] 이면보스는 35퍼 이런거없고 순수렙업으로깨는거?",
+  "title_en": "Rift bosses: no 35% brackets, just level up?",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76705": {
+  "url": "https://m.dcinside.com/board/projectcc/76705",
+  "title": "[일반] 스테이지 장비는 프리셋 바꿔주면 바로바로 바뀌는거 맞음??",
+  "title_en": null,
+  "date": "2026-09-27",
+  "signal": "captured in an earlier record"
+ },
+ "dc:76752": {
+  "url": "https://m.dcinside.com/board/projectcc/76752",
+  "title": "[일반] 스테덱 걍 탱빼는게 좋네",
+  "title_en": "Better to just drop tanks from the stage deck",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76768": {
+  "url": "https://m.dcinside.com/board/projectcc/76768",
+  "title": "[일반] 중간부 스테 35% 등반자는 허브->락스타 쓰셈",
+  "title_en": "Mid-stage 35% climbers: swap Herb for Rockstar",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76779": {
+  "url": "https://m.dcinside.com/board/projectcc/76779",
+  "title": "[일반] 바리5성이상은 15퍼 밀림?",
+  "title_en": "Can Bari 5-star+ push at 15%?",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76794": {
+  "url": "https://m.dcinside.com/board/projectcc/76794",
+  "title": "[일반] 걍 위치 락스타가 방치덱 고트임 ㄹㅇ",
+  "title_en": "Witchberry + Rockstar is the GOAT idle deck",
+  "date": "2026-09-27",
+  "signal": "relevance 1/3"
+ },
+ "dc:76797": {
+  "url": "https://m.dcinside.com/board/projectcc/76797",
+  "title": "[일반] 312-30 35% 클덱",
+  "title_en": "312-30 35% clear deck",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76805": {
+  "url": "https://m.dcinside.com/board/projectcc/76805",
+  "title": "[일반] 이거 스테장비에도 스가섞어야하는거같은데 맞음?",
+  "title_en": "Should stage gear mix in Skill Haste?",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76814": {
+  "url": "https://m.dcinside.com/board/projectcc/76814",
+  "title": "[일반] 15퍼 간당간당하게 밀리긴하네",
+  "title_en": "15% does push, barely",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76825": {
+  "url": "https://m.dcinside.com/board/projectcc/76825",
+  "title": "[일반] 시커바리체콜은 15퍼를 찢어",
+  "title_en": "Seeker-Bari-Cola rips through 15%",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76835": {
+  "url": "https://m.dcinside.com/board/projectcc/76835",
+  "title": "[일반] 이면 드가자 ㅋㅋ",
+  "title_en": "Into the Rift we go",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76859": {
+  "url": "https://m.dcinside.com/board/projectcc/76859",
+  "title": "[📚정보] 내가 쓰는 35% 반 오토덱",
+  "title_en": "My 35% semi-auto deck",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "dc:76862": {
+  "url": "https://m.dcinside.com/board/projectcc/76862",
+  "title": "[일반] 아니 케이크 들개때 도와줘 이면 6단계",
+  "title_en": "Help with the cake hounds, Rift level 6",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "dc:76988": {
+  "url": "https://m.dcinside.com/board/projectcc/76988",
+  "title": "[일반] 270지 이상분들 스테셋 질문점",
+  "title_en": "Question for 270+ players: stage gear set",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:77013": {
+  "url": "https://m.dcinside.com/board/projectcc/77013",
+  "title": "[일반] 15퍼로 미는 거 가능함?",
+  "title_en": "Is pushing at 15% possible?",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "dc:77015": {
+  "url": "https://m.dcinside.com/board/projectcc/77015",
+  "title": "[일반] 차원 투력 요구량 개미쳤네",
+  "title_en": "Rift power requirements are insane",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:77080": {
+  "url": "https://m.dcinside.com/board/projectcc/77080",
+  "title": "[일반] 300스테부터 15프로로 가능성있냐 얘들아?",
+  "title_en": "Any chance at 15% from stage 300?",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "dc:77090": {
+  "url": "https://m.dcinside.com/board/projectcc/77090",
+  "title": "[일반] 이면던전 패널티",
+  "title_en": "Rift dungeon penalty",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "dc:77114": {
+  "url": "https://m.dcinside.com/board/projectcc/77114",
+  "title": "[일반] 이면은 걍 차원의힘 존버메타네",
+  "title_en": "The Rift is just a wait-for-Dimensional-Power meta",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:77124": {
+  "url": "https://m.dcinside.com/board/projectcc/77124",
+  "title": "[일반] ㅂㅅ겜 이면은 퀘안깨짐",
+  "title_en": "The 'summon a boss' quest doesn't complete in the Rift",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "dc:77126": {
+  "url": "https://m.dcinside.com/board/projectcc/77126",
+  "title": "[일반] 찻집에서 본 35% 덱 괜찮은듯",
+  "title_en": "The 35% deck I saw in the tea house is good",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:77154": {
+  "url": "https://m.dcinside.com/board/projectcc/77154",
+  "title": "[일반] 와 비겁이 15퍼로 잡을뻔했네",
+  "title_en": "Almost fought 비겁이 at 15%",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "nv:1162": {
+  "url": "https://cafe.naver.com/ccrumble/1162",
+  "title": "콘텐츠 난이도 및 밸런스 개선 안내",
+  "title_en": null,
+  "date": "2026-07-30",
+  "signal": "captured in an earlier record"
+ },
+ "nv:1922": {
+  "url": "https://cafe.naver.com/ccrumble/1922",
+  "title": "난이도 밸런스 재조정 진행 및 사과 보상 안내 (7/30 22:40 내용 추가)",
+  "title_en": null,
+  "date": "2026-07-30",
+  "signal": "captured in an earlier record"
+ },
+ "nv:25737": {
+  "url": "https://cafe.naver.com/ccrumble/25737",
+  "title": "8월 27일(목) 업데이트 안내",
+  "title_en": null,
+  "date": "2026-08-26",
+  "signal": "captured in an earlier record"
+ },
+ "nv:37730": {
+  "url": "https://cafe.naver.com/ccrumble/37730",
+  "title": "9월 10일(목) 업데이트 안내",
+  "title_en": null,
+  "date": "2026-09-09",
+  "signal": "captured in an earlier record"
+ },
+ "nv:44477": {
+  "url": "https://cafe.naver.com/ccrumble/44477",
+  "title": "9월 23일(수) 업데이트 안내 (9/23 12:05 내용 추가)",
+  "title_en": null,
+  "date": "2026-09-22",
+  "signal": "captured in an earlier record"
+ },
+ "web:alkapa-stage-check": {
+  "url": "https://alkapa.gg/lab/crumble/stage-check",
+  "title": "스테이지 계산 (KAPA LAB)",
+  "title_en": "alkapa's stage and Rift calculator (power, accuracy, focus)",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg-patches": {
+  "url": "https://crumb.gg/patches",
+  "title": "crumb.gg patch digest",
+  "title_en": "crumb.gg's patch digest (record 001, evidence/15-crumbgg/33-patches-read.txt): the 9/23 easing lowered recommended power, enemy ATK and HP from ~0% at 169-1 to 30% at 248-30 and 36% at the end; 328-30 went from 15.61B to 10.00B",
+  "date": "2026-09-23",
+  "signal": "relevance 3/3"
+ },
+ "web:crumblehub-clear-decks-stage": {
+  "url": "https://crumblehub.co/api/clear-decks?mode=stage",
+  "title": "유저 공유 스테이지 클리어 덱 (크럼블 허브)",
+  "title_en": "User-shared stage clear decks (crumblehub), all pages",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "web:crumblehub-formulas": {
+  "url": "https://crumblehub.co/assets/formulas-B0zZ21YN.js",
+  "title": "데미지 공식 코드 (크럼블 허브)",
+  "title_en": "crumblehub's damage formula: the power penalty is the last multiplier",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "web:crumblehub-stage-boss-index": {
+  "url": "https://crumblehub.co/data/stage-boss-index-v2.json",
+  "title": "스테이지 보스 색인 (크럼블 허브)",
+  "title_en": "Every main stage's boss, boss count and recommended power (crumblehub, generated 2026-09-23)",
+  "date": "2026-09-23",
+  "signal": "relevance 3/3"
+ },
+ "web:crumblehub-stage-guide": {
+  "url": "https://crumblehub.co/guides/stage",
+  "title": "스테이지 가이드 (크럼블 허브)",
+  "title_en": "crumblehub's stage guide: park at the highest clear; 55% and 35% as practical targets",
+  "date": "2026-08-20",
+  "signal": "relevance 2/3"
+ },
+ "web:crumblehub-stage-tool": {
+  "url": "https://crumblehub.co/assets/StageBossIndex-C8_ZZo3q.js",
+  "title": "스테이지 도구 코드 (크럼블 허브)",
+  "title_en": "crumblehub's stage tool code: the bracket table and its reach presets",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "web:crumblehub-stages": {
+  "url": "https://crumblehub.co/stages",
+  "title": "스테이지 정보: 권장 스탯·전투력 보정 (크럼블 허브)",
+  "title_en": "Stage information: recommended power, accuracy/focus requirement and the power-damage brackets, game data 1.4.002 (crumblehub)",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "web:gsheet-power-correction": {
+  "url": "https://docs.google.com/spreadsheets/d/1wqIKXyt-btnhiLZuw9bEbzevL2XULE3qVljavcOU63w",
+  "title": "Power correction sheet (dc:17487 link)",
+  "title_en": "Community sheet of bracket entry powers per stage, 1-1 to 100-30",
+  "date": "2026-08-08",
+  "signal": "relevance 2/3"
+ },
+ "web:pocketgamer-2026-09-23": {
+  "url": "https://www.pocketgamer.com/cookierun-crumble/new-update-sept-2026/",
+  "title": "CookieRun: Crumble sees you take on all bosses in its Dimensional Rift mode",
+  "title_en": "Pocket Gamer on the 2026-09-23 update: the Dimensional Rift",
+  "date": "2026-09-23",
+  "signal": "relevance 2/3"
+ },
+ "web:sugarpocket-stages": {
+  "url": "https://cookieruncrumble.app/stages/",
+  "title": "스테이지 공략 (슈가포켓)",
+  "title_en": "Sugar Pocket's stage page: the same bracket table worked for 1-1, 8-30, 328-30",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-1AyEMtaE-s4": {
+  "url": "https://www.youtube.com/watch?v=1AyEMtaE-s4",
+  "title": "쿠키런 크럼블 차원의 이면 16단계 도전",
+  "title_en": "Cookie Run Crumble Dimensional Rift level 16 attempt",
+  "date": "2026-09-27",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-BDuQ279mbP4": {
+  "url": "https://www.youtube.com/watch?v=BDuQ279mbP4",
+  "title": "쿠키런 크럼블 차원의 이면 11단계 도전",
+  "title_en": "Cookie Run Crumble Dimensional Rift level 11 attempt",
+  "date": "2026-09-26",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-DMvAmT9Cfqg": {
+  "url": "https://www.youtube.com/watch?v=DMvAmT9Cfqg",
+  "title": "쿠키런 크럼블 체리콜라 \"방치덱\" 스테이지 \"자동 클리어\" 최고조합 성능 미쳤습니다 ㄷㄷ",
+  "title_en": "Cherry Cola idle deck: best auto-clear stage team",
+  "date": "2026-09-11",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-RLuI96lGgGg": {
+  "url": "https://www.youtube.com/watch?v=RLuI96lGgGg",
+  "title": "쿠키런 크럼블 169~248 스테이지 투력 35% 보스 공략 정리 영상",
+  "title_en": "Stages 169–248: boss guide at 35% power",
+  "date": "2026-09-18",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-_d_7z1UD2p8": {
+  "url": "https://www.youtube.com/watch?v=_d_7z1UD2p8",
+  "title": "쿠키런 크럼블 차원의 이면 리뷰 신세계네요 ㄷㄷ",
+  "title_en": "Cookie Run Crumble Dimensional Rift review: a whole new world",
+  "date": "2026-09-24",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-gEmz1YGzdNI": {
+  "url": "https://www.youtube.com/watch?v=gEmz1YGzdNI",
+  "title": "[쿠키런크럼블] 300지 이상에서도 가능한 일반 스테이지 방치덱 공략",
+  "title_en": "Idle deck for normal stages that works even past 300",
+  "date": "2026-09-27",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-sso1aeHJS_c": {
+  "url": "https://www.youtube.com/watch?v=sso1aeHJS_c",
+  "title": "손 댈 필요도 없다? 방치형 스테이지덱 추천! [쿠키런 키우기 / 쿠키런 크럼블]",
+  "title_en": "No hands needed: idle stage deck recommendation",
+  "date": "2026-09-12",
+  "signal": "relevance 2/3"
+ },
+ "web:yt-tZJ5wzhcUA8": {
+  "url": "https://www.youtube.com/watch?v=tZJ5wzhcUA8",
+  "title": "쿠키런 크럼블 최신 스테이지 최고 조합 바리공주 기준",
+  "title_en": "Cookie Run Crumble latest best stage team, Princess Bari edition",
+  "date": "2026-09-25",
+  "signal": "relevance 3/3"
+ }
+}

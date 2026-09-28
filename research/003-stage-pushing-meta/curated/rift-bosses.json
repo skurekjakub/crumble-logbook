@@ -1,0 +1,13 @@
+{
+ "about": "Dimensional Rift levels whose boss players have reported, season 1. The game data behind rift-levels.json carries recommended power only; bosses come from posts and one calculator screenshot. Each level is one boss fight, with adds from both sides.",
+ "measured": "2026-09-28",
+ "levels": [
+  { "level": 3, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "note": "Brightseeker + Scorpion recommended; hardest boss at 15% per one pusher.", "sources": ["dc:76586", "dc:77015"] },
+  { "level": 4, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "note": "Dark Choco and Devil for shred; about five tries, then level 차원의 힘.", "sources": ["dc:77114", "dc:77015"] },
+  { "level": 5, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "note": "Needs the 35% bracket.", "sources": ["dc:76569", "dc:77015"] },
+  { "level": 6, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "sources": ["dc:76862"] },
+  { "level": 9, "boss_kr": "폭주단 트럭 ×3", "boss_en": "Rowdy Truck ×3", "note": "A 10.15G player (3rd on the ranking then) was stuck here.", "sources": ["dc:75615", "dc:76174"] },
+  { "level": 15, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "sources": ["dc:76321"] },
+  { "level": 100, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "note": "alkapa screenshot: recommended about 1,800G, enemy evasion 13,118, resistance 12,660, 30 s limit.", "sources": ["dc:73646"] }
+ ]
+}
