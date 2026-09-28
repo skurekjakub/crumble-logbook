@@ -246,6 +246,7 @@ export const COLLECTIONS = {
     parse: (file, raw) => parseFile(file, raw, seedSources),
     /** @inheritdoc */
     refs: () => [],
+    /** @inheritdoc */
     prepare: (sources, { recordDir, manifest, summaries }) => {
       const rows: SourceInsert[] = Object.entries(sources).map(([id, entry]) => {
         const row = mapSource(id, entry);
@@ -282,6 +283,7 @@ export const COLLECTIONS = {
     parse: (file, raw) => parseRows(file, raw, seedGlossaryEntry),
     /** @inheritdoc */
     refs: () => [],
+    /** @inheritdoc */
     check: (file, entries) => {
       const seen = new Set<string>();
       entries.forEach((entry, index) => {
@@ -289,7 +291,9 @@ export const COLLECTIONS = {
         seen.add(entry.kr);
       });
     },
+    /** @inheritdoc */
     warnings: (entries) => glossaryWarnings(entries.map(mapGlossary)),
+    /** @inheritdoc */
     prepare: (entries) => {
       const rows = entries.map(mapGlossary);
       return [
@@ -329,6 +333,7 @@ export const COLLECTIONS = {
         })),
       ),
     ],
+    /** @inheritdoc */
     check: (file, meta) => {
       for (const [mode, block] of Object.entries(meta.modes ?? {})) {
         block.rules.forEach((rule, index) => {
@@ -342,6 +347,7 @@ export const COLLECTIONS = {
         });
       }
     },
+    /** @inheritdoc */
     prepare: (meta, { manifest }) => {
       const { record, modes, recommendation, rules } = mapMeta(meta, manifest.record);
       const { sources, ...values } = recommendation;
@@ -356,9 +362,11 @@ export const COLLECTIONS = {
     },
   }),
   decks: collection({
+    /** @inheritdoc */
     parse: (file, raw, { mode }) => parseModedRows(file, raw, seedDeck, mode),
     /** @inheritdoc */
     refs: (decks) => decks.map((deck, index) => ({ row: index, sources: deck.sources })),
+    /** @inheritdoc */
     prepare: (decks, { file }) => {
       const mapped = decks.map((seed, position) => ({ ...mapDeck(seed, position), seed }));
       return [
@@ -381,10 +389,12 @@ export const COLLECTIONS = {
     },
   }),
   runes: collection({
+    /** @inheritdoc */
     parse: (file, raw, { mode }) => parseModedRows(file, raw, seedRune, mode),
     /** @inheritdoc */
     refs: (runes) =>
       runes.map((rune, index) => ({ row: index, sources: rune.sources, decks: rune.decks })),
+    /** @inheritdoc */
     prepare: (runes) => [
       (repos, { record }) => {
         for (const rune of runes) {

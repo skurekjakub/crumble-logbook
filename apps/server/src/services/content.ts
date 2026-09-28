@@ -261,6 +261,7 @@ export function registeredService<K extends ContentKey>(
     table: (repos) => repos[key],
     filters,
     gloss: content?.gloss,
+    /** @inheritdoc */
     checkRefs: (repos, values) => {
       for (const column of refColumns) {
         const id = values[column];
@@ -269,6 +270,7 @@ export function registeredService<K extends ContentKey>(
         }
       }
     },
+    /** @inheritdoc */
     checkRow: (repos, row) => {
       const { mode } = row as { mode?: GameMode };
       if (mode === undefined) return;
