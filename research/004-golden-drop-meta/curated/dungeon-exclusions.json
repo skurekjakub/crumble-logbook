@@ -1,0 +1,21 @@
+[
+ {"kr": "오븐방랑자 쿠키", "class": "charger", "why": "Charges the highest-ATK enemy and runs around the boss, pulling aggro, Milk and the supports away from the ranged dealers; EOG measured +42% on one account with it and Cool Mint benched.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8", "web:eoggg-crumble", "web:yt-NByK6TGHOKA"]},
+ {"kr": "쿨링민트맛 쿠키", "class": "summoner", "why": "Its summons spread the formation so range-limited buffs miss.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-UF6zcIkbh_8", "web:eoggg-crumble"]},
+ {"kr": "감초맛 쿠키", "class": "summoner", "why": "Summoner; same formation problem as Cool Mint.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "크림소다맛 쿠키", "class": "projectile-speed", "why": "Receives the Projectile Speed synergy, which Pomegranate's beam prefers over ATK, so it would take the beam from Milk's chosen targets.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "마들렌맛 쿠키", "class": "projectile-speed", "why": "Projectile Speed recipient: intercepts the beam.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "딸기쇼트케이크맛 쿠키", "class": "projectile-speed", "why": "Projectile Speed recipient: intercepts the beam.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "레몬맛 쿠키", "class": "projectile-speed", "why": "Projectile Speed recipient: intercepts the beam.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "블랙베리맛 쿠키", "class": "projectile-speed", "why": "Projectile Speed recipient: intercepts the beam.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "코코아맛 쿠키", "class": "projectile-speed", "why": "Projectile Speed recipient: intercepts the beam.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "좀비맛 쿠키", "class": "projectile-speed", "why": "Projectile Speed recipient: intercepts the beam.", "status": "excluded", "sources": ["web:yt-XeD4c3AuQAs", "web:yt-_mvTZSI8hY8"]},
+ {"kr": "체리콜라맛 쿠키", "class": "charger", "why": "Dashes ahead and drags Milk after it.", "status": "excluded", "sources": ["web:yt-_mvTZSI8hY8", "web:yt-F9BzQ4DAbWg"]},
+ {"kr": "바리공주맛 쿠키", "class": "charger", "why": "Released 2026-09-23. Milk runs to heal her; the 379G author says she must never be used and that she cost him nearly everything above 100G.", "status": "excluded", "sources": ["dc:77306", "dc:72051", "web:yt-F9BzQ4DAbWg"]},
+ {"kr": "복숭아맛 쿠키", "class": "charger", "why": "Throws herself forward and the healers follow.", "status": "excluded", "sources": ["web:yt-_mvTZSI8hY8", "web:eoggg-crumble"]},
+ {"kr": "찰스", "class": "charger", "why": "Leaps in and stays in the boss's face; drags the formation like Oven Wanderer.", "status": "excluded", "sources": ["web:yt-_mvTZSI8hY8", "web:yt-F9BzQ4DAbWg", "web:eoggg-crumble"]},
+ {"kr": "이온맛 쿠키로봇", "class": "charger", "why": "Charges in and shields the lowest-HP ally, soaking sustain; one poster reports it helped by accident, and 뱅국 keeps it.", "status": "disputed", "sources": ["web:yt-_mvTZSI8hY8", "web:eoggg-crumble", "dc:62406", "nv:45597"]},
+ {"kr": "독버섯맛 쿠키", "class": "charger", "why": "Charger; weakest evidence of the group.", "status": "excluded", "sources": ["web:yt-_mvTZSI8hY8", "web:eoggg-crumble"]},
+ {"kr": "보더맛 쿠키", "class": "charger", "why": "Charger observed once running off.", "status": "excluded", "sources": ["web:yt-_mvTZSI8hY8", "web:eoggg-crumble"]},
+ {"kr": "치즈케이크맛 쿠키", "class": "buff-overwrite", "why": "Until the 9/10 update its ATK buff replaced Milk's stacked ATK buff, which restarted; since then the stronger stacked buff applies and the top lineups keep it, sixth in ATK in the 325.9G run.", "status": "patched", "sources": ["web:yt-UF6zcIkbh_8", "dc:62042", "nv:37730", "dc:71275", "dc:69414", "web:yt-4v2xDWV13fg"]},
+ {"kr": "라임맛 쿠키", "class": "buff-overwrite", "why": "Left out in the 9/9 guide for overwriting Macaron's stacked buff; back in by 9/22.", "status": "patched", "sources": ["dc:62042", "dc:61849", "dc:72051"]}
+]

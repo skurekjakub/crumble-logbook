@@ -1,0 +1,12 @@
+{
+  "lane": "web",
+  "note": "Global web pages found through the agent-browser search round of 2026-09-28 (evidence/07-web/01 and 03), read from evidence/07-web/.",
+  "posts": [
+    {"source": "web", "id": "cookierunwiki-crumble-dungeon", "url": "https://cookierun.wiki/w/Crumble_Dungeon", "date": "2026-09-28", "title_kr": "Crumble Dungeon - Cookie Run Wiki", "title_en": "Cookie Run Wiki: Crumble Dungeon", "relevance": 3,
+     "summary_en": "Community wiki (global). Crumble Dungeon is a Challenge Dungeon where all obtained Cookies battle the Holy Golden Drop; entry up to 3 times daily with Crumble Dungeon Keys; the squad has up to a minute to deal damage for score. The boss squashes the floor to knock Cookies back, strikes them with lightning, and summons Golden Soldier Drops. Milestone rewards run from 400,000 to 1,000,000,000,000 points; the weekly and daily ranking tables match the in-game screens in dc:67615.",
+     "mechanics": ["Fight length up to one minute.", "Up to 3 entries a day.", "Boss: knockback slam, lightning, summoned soldier drops."], "quotes": [{"kr": "", "en": "The Cookie squad has up to a minute to deal damage for score and compete with other players."}]},
+    {"source": "web", "id": "cookieruncrumbles-dungeon-milk", "url": "https://www.cookieruncrumbles.com/guides/cookie-run-crumble-dungeon-milk-buff-guide/", "date": "2026-09-08", "title_kr": "CookieRun: Crumble Dungeon Guide | Milk Buff Setup for 50G", "title_en": "Crumble Guide (English): Crumble Dungeon Milk buff setup for 50G", "relevance": 2,
+     "summary_en": "English guide dated 2026-09-08 restating the ND러너 50G method (about 52G): 40 cookies enter by individual combat power; keep a compact formation because buffs have ranges; Oven Wanderer and summoners disturb it; Milk as leader with Passion Pay and Rapid Promotion, top ATK including the leader's +10%; Pomegranate appeared to prioritise Projectile Speed recipients, then ATK, so those recipients go to Lv.1; Cheesecake to Lv.1 because a later Cheesecake buff erases Milk's stacks; two beam plans (Macaron and Skating Queen, or the damage dealers).",
+     "mechanics": [], "quotes": []}
+  ]
+}

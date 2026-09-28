@@ -1,0 +1,180 @@
+[
+ {
+  "id": "dungeon-milk-scorpion-figure",
+  "mode": "crumble_dungeon",
+  "name_en": "Milk–Scorpion–Figure beam lineup (스미노프TFT)",
+  "name_kr": "크럼블던전 우유 전갈 피겨 조합",
+  "status": "meta",
+  "ceiling": "379.3G at 15.58G total power, server 1st, 0.000 s left (2026-09-28, screenshot); 159.6G at 8.57G (2026-09-22) and 43.2G at 3.51G (2026-09-09) with the same rules.",
+  "summary": "The highest documented score. Captain Milk holds the top ATK so Passion Pay and Rapid Promotion land on it, and its stacking ATK buff reaches the packed formation; Pomegranate's beam is routed down the ATK order to Scorpion and Figure, which the author calls the key target. Supports stay at Lv.70 or below so Milk reaches the centre early, and every cookie that would steal the beam, charge off or summon is levelled out of the top 40. Lime and Cheesecake joined by 2026-09-22, after the 9/10 update let the stronger stacked buff win. The 40 themselves are posted only as roster screenshots.",
+  "cookies": [
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and heart of the lineup: holds ATK #1 so Passion Pay and Rapid Promotion go to it, takes Pomegranate's beam through its Projectile Speed synergy, and its stacking ATK buff covers every cookie in range once it reaches the centre."},
+   {"kr": "석류맛 쿠키", "level_rule": "In the top 40 by power; kept at Lv.70 in the 9/9 guide", "why": "Its Skill AMP beam (빨대) goes to Milk, then down the ATK order, which is why every other level in the lineup is set."},
+   {"kr": "전갈맛 쿠키", "level_rule": "ATK #2: levelled down until only Milk's ATK is higher", "why": "Main single-target dealer and the first beam target after Milk."},
+   {"kr": "피겨여왕맛 쿠키", "level_rule": "ATK #3", "why": "Buffer the author calls the most important beam target; with one ATK% rune line it holds its rank. Stays near the boss and spreads the buffs it receives."},
+   {"kr": "브라이트시커 쿠키", "level_rule": "ATK #4", "why": "Ranged dealer that keeps firing at the boss from the back line; hard to push out of the top 40."},
+   {"kr": "마카롱맛 쿠키", "level_rule": "ATK #5; runs Skill AMP runes, so the dealers below it are levelled down", "why": "Crit-rate buffer; the author finds keeping it in the top six ATK ranks a meaningful gain."},
+   {"kr": "메론소다맛 쿠키", "level_rule": "ATK #6", "why": "Ranged dealer that fills the last beam-relevant rank."},
+   {"kr": "치즈케이크맛 쿠키", "level_rule": "In the top 40, below ATK #6 (6th not yet tried)", "why": "Added by 9/22: after the 9/10 update the stronger stacked buff wins, so its ATK buff no longer erases Milk's stacks."},
+   {"kr": "라임맛 쿠키", "level_rule": "Support: Lv.70 or lower", "why": "Added by 9/22; the 9/9 guide had left it out because it overwrote Macaron's stacked buff."},
+   {"kr": "홍고추맛 쿠키", "level_rule": "In the top 40", "why": "Charges in and gets hit at once, so Milk runs forward to heal and settles in the centre at about 53 s, buffing early."},
+   {"kr": "다크체리맛 쿠키", "level_rule": "In the top 40", "why": "Same job as Red Pepper: an early body in front that draws Milk forward."},
+   {"kr": "닥터 와사비 쿠키", "level_rule": "In the top 40", "why": "Filler that is not a Projectile Speed recipient, so it can't intercept the beam."}
+  ],
+  "atk_order": ["바삭튼튼 소아과 의사 우유맛 쿠키", "전갈맛 쿠키", "피겨여왕맛 쿠키", "브라이트시커 쿠키", "마카롱맛 쿠키", "메론소다맛 쿠키"],
+  "atk_order_note": "Only the top six ATK ranks matter; filler levels are free as long as those ranks hold and the excluded cookies stay out (dc:77306).",
+  "perks": "Milk captain; Passion Pay + Rapid Promotion at mercenary Lv.4, Rapid Promotion alone at Lv.3.",
+  "substitutions": [
+   "Moon Rabbit may go in or out without effect (dc:72051, dc:77306).",
+   "Strawberry Crepe left out: it runs back and forth like Oven Wanderer (dc:62042).",
+   "If Milk still arrives late, shift support levels a little until it doesn't (dc:62042)."
+  ],
+  "rng": "Milk's arrival time decides the run; the author retunes levels when it lags.",
+  "unorthodox": [
+   "Supports capped at Lv.70 (Macaron and Milk excepted) so Milk leaves the back line early.",
+   "About 1,000 sugar-rune crafts spent on minor dealers for damage lines, only for the dungeon."
+  ],
+  "sources": ["dc:62042", "dc:72051", "dc:77306", "dc:68305", "nv:43444"]
+ },
+ {
+  "id": "dungeon-milk-seeker-scorpion",
+  "mode": "crumble_dungeon",
+  "name_en": "Milk–Brightseeker–Scorpion order with Cheesecake 6th (전치, VART)",
+  "name_kr": "우브전피마치",
+  "status": "meta",
+  "ceiling": "325.9G at 10.10G total power, server 1st, 0.000 s left (전치, 2026-09-27, screenshot); 221.4G at 9.23G (VART, 2026-09-26, video); VART claims 250G with a swap for Espresso.",
+  "summary": "The same Milk-captain rules with Brightseeker second in ATK and Cheesecake sixth, so the beam reaches Brightseeker and Cheesecake's ATK buff reaches Milk. 전치 ran it from 105.2G at 3.74G (weekly best, 2026-09-17) to 325.9G at 10.10G, the highest score per power documented. VART lowers the other 34 only until they stay above the excluded cookies.",
+  "cookies": [
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain with ATK #1: Passion Pay and Rapid Promotion land on it and its stacking ATK buff covers the formation."},
+   {"kr": "브라이트시커 쿠키", "level_rule": "ATK #2", "why": "Beam target and main ranged dealer; its Skill Haste decides whether Rapid Promotion is worth taking (dc:76916)."},
+   {"kr": "전갈맛 쿠키", "level_rule": "ATK #3", "why": "Second dealer on the beam."},
+   {"kr": "피겨여왕맛 쿠키", "level_rule": "ATK #4", "why": "Buffer that stays near the boss; keeps a beam-relevant rank."},
+   {"kr": "마카롱맛 쿠키", "level_rule": "ATK #5", "why": "Crit-rate buffer in the beam ranks."},
+   {"kr": "치즈케이크맛 쿠키", "level_rule": "ATK #6", "why": "Its ATK buff on Milk raises damage once the 9/10 update let the stronger stacked buff win."},
+   {"kr": "석류맛 쿠키", "level_rule": "In the top 40; lowered if Milk doesn't come out at once (VART)", "why": "Beam source; VART found lowering it made Milk come out immediately."},
+   {"kr": "다크초코 쿠키", "level_rule": "In the top 40", "why": "DEF-shred debuff on the boss (needs focus)."},
+   {"kr": "악마맛 쿠키", "level_rule": "In the top 40", "why": "Second DEF shred, added on the reading that it no longer overlaps Dark Choco's (dc:69414)."},
+   {"kr": "커피맛 쿠키", "level_rule": "In the top 40", "why": "Named by 전치 among his 40 (dc:76916)."},
+   {"kr": "에스프레소맛 쿠키", "level_rule": "In the top 40, or swapped out (VART's 250G claim)", "why": "Dealer in most published lineups; VART reports a higher score after swapping it for another cookie."}
+  ],
+  "atk_order": ["바삭튼튼 소아과 의사 우유맛 쿠키", "브라이트시커 쿠키", "전갈맛 쿠키", "피겨여왕맛 쿠키", "마카롱맛 쿠키", "치즈케이크맛 쿠키"],
+  "atk_order_note": "The other 34 are lowered only until their power stays above the cookies left out (VART).",
+  "perks": "Milk captain; Passion Pay + Rapid Promotion.",
+  "substitutions": [
+   "Swapping Scorpion and Brightseeker in the ATK order is reported to score higher by another poster (dc:71956)."
+  ],
+  "rng": "Milk must come out at once; changing Scorpion's runes broke VART's arrival again.",
+  "unorthodox": [
+   "Two DEF-shred debuffers (Dark Choco and Devil) kept together."
+  ],
+  "sources": ["dc:69414", "dc:76916", "web:yt-4v2xDWV13fg"]
+ },
+ {
+  "id": "dungeon-macaron-figure-beam",
+  "mode": "crumble_dungeon",
+  "name_en": "ND러너 180G lineup: Macaron and Figure on the beam",
+  "name_kr": "황금갓방울 크럼블던전 1800억 조합",
+  "status": "alt",
+  "ceiling": "Record in the high 180s G at 14.14G total power; the run shown ends at 174.7G (2026-09-18, video; the record itself is stated, not shown).",
+  "summary": "The most complete published list: all 40 cookies named, and the cookies to set to Lv.1. After Milk (which takes the beam through its synergy regardless of rank), Macaron and Figure are set as ATK #1 and #2 so the beam goes to buffers rather than dealers; the dealers are levelled below them. Passion Pay plus Like A Family at mercenary Lv.4.",
+  "cookies": [
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "Kept at its current level; the highest ATK counting the captain's +10%", "why": "Captain; top ATK counting the captain's +10% so Passion Pay lands; beam through its Projectile Speed synergy."},
+   {"kr": "마카롱맛 쿠키", "level": "100", "why": "Beam target (ATK #1 after Milk); the author gave it ATK runes to hold the rank."},
+   {"kr": "피겨여왕맛 쿠키", "level": "100", "why": "Beam target (ATK #2 after Milk)."},
+   {"kr": "전갈맛 쿠키", "level_rule": "Levelled below Macaron and Figure in ATK", "why": "Main dealer, kept off the beam in this setting."},
+   {"kr": "브라이트시커 쿠키", "level_rule": "Levelled below Macaron and Figure in ATK", "why": "Ranged dealer."},
+   {"kr": "석류맛 쿠키", "level": "100", "why": "Beam source."},
+   {"kr": "정글전사 쿠키", "level_rule": "In the top 40, below Figure in ATK", "why": "Dealer that stays with the formation."},
+   {"kr": "허브맛 쿠키", "level_rule": "In the top 40", "why": "Healer."},
+   {"kr": "에스프레소맛 쿠키", "level_rule": "In the top 40, below Figure in ATK", "why": "Ranged dealer."},
+   {"kr": "바람궁수 쿠키", "level_rule": "In the top 40, below Figure in ATK", "why": "Ranged dealer."},
+   {"kr": "딸기크레페맛 쿠키", "level_rule": "In the top 40", "why": "Support in the formation."},
+   {"kr": "슈크림맛 쿠키", "level_rule": "In the top 40", "why": "Ranged dealer."},
+   {"kr": "밀키웨이맛 쿠키", "level_rule": "In the top 40", "why": "Ranged dealer."},
+   {"kr": "포도넝쿨맛 쿠키", "level_rule": "In the top 40", "why": "Support body that doesn't break formation."},
+   {"kr": "트위즐젤리맛 쿠키", "level_rule": "In the top 40", "why": "Dealer body."},
+   {"kr": "다크초코 쿠키", "level_rule": "In the top 40", "why": "DEF-shred debuff on the boss."},
+   {"kr": "치약초코 쿠키", "level_rule": "In the top 40", "why": "Filler body in the 40."},
+   {"kr": "도넛행성 에일리언 도넛킹", "level_rule": "In the top 40", "why": "SSR dealer body."},
+   {"kr": "메론소다맛 쿠키", "level_rule": "In the top 40", "why": "Ranged dealer."},
+   {"kr": "피노누아맛 쿠키", "level_rule": "In the top 40", "why": "Filler body in the 40."},
+   {"kr": "이름 모를 케이크 들개", "level_rule": "In the top 40", "why": "Front-line body."},
+   {"kr": "호밀맛 쿠키", "level_rule": "In the top 40", "why": "Ranged dealer."},
+   {"kr": "팝콘맛 쿠키", "level_rule": "In the top 40", "why": "Filler body."},
+   {"kr": "닥터 와사비 쿠키", "level_rule": "In the top 40", "why": "Filler body, not a Projectile Speed recipient."},
+   {"kr": "팬케이크맛 쿠키", "level_rule": "In the top 40", "why": "Filler body."},
+   {"kr": "오렌지맛 쿠키", "level_rule": "In the top 40", "why": "Filler body."},
+   {"kr": "실론나이트 쿠키", "level_rule": "In the top 40", "why": "Filler body; its boss-damage buff works only in Guild Conquest (dc:53239)."},
+   {"kr": "위치베리맛 쿠키", "level_rule": "In the top 40", "why": "Ranged dealer."},
+   {"kr": "라임맛 쿠키", "level_rule": "In the top 40", "why": "Support body."},
+   {"kr": "락스타맛 쿠키", "level_rule": "In the top 40", "why": "Support body."},
+   {"kr": "에일리언 도넛", "level_rule": "In the top 40", "why": "R-grade filler body."},
+   {"kr": "다크체리맛 쿠키", "level_rule": "In the top 40", "why": "Front-line body that draws Milk forward."},
+   {"kr": "체리맛 쿠키", "level_rule": "In the top 40", "why": "Ranged filler."},
+   {"kr": "용사맛 쿠키", "level_rule": "In the top 40", "why": "Low-rarity filler body."},
+   {"kr": "연금술사맛 쿠키", "level_rule": "In the top 40", "why": "Provider of Projectile Speed, not a recipient, so it doesn't steal the beam."},
+   {"kr": "악마맛 쿠키", "level_rule": "In the top 40", "why": "DEF-shred debuff."},
+   {"kr": "라일락맛 쿠키", "level_rule": "In the top 40", "why": "Low-rarity filler body."},
+   {"kr": "치즈케이크맛 쿠키", "level_rule": "In the top 40 (38th)", "why": "Back in the list after the 9/10 buff fix; the 9/7 list had it at Lv.1."},
+   {"kr": "마법사맛 쿠키", "level_rule": "In the top 40", "why": "Low-rarity filler body."},
+   {"kr": "닌자맛 쿠키", "level_rule": "In the top 40", "why": "Low-rarity filler body."}
+  ],
+  "atk_order": ["바삭튼튼 소아과 의사 우유맛 쿠키", "마카롱맛 쿠키", "피겨여왕맛 쿠키"],
+  "atk_order_note": "Milk gets the beam from its synergy; Macaron and Figure are ATK #1 and #2 among the rest. A simpler alternative is letting Milk and the main dealers take the beam (UF6zcIkbh_8).",
+  "perks": "Milk captain; Passion Pay + Like A Family at mercenary Lv.4; Rapid Promotion at Lv.3; General Perks below that.",
+  "substitutions": [
+   "The cookies set to Lv.1 are in dungeon-lineups.json (ndrunner-2026-09-18) and, with reasons, dungeon-exclusions.json."
+  ],
+  "rng": "Runs differ by billions; a normal run is about 170G, a poor one about 150G, so every ticket is spent chasing the record.",
+  "unorthodox": [
+   "Beam deliberately given to buffers instead of dealers."
+  ],
+  "sources": ["web:yt-XeD4c3AuQAs", "web:yt-UF6zcIkbh_8"]
+ },
+ {
+  "id": "dungeon-gni-cheesecake",
+  "mode": "crumble_dungeon",
+  "name_en": "그니 high-ceiling lineup with Cheesecake",
+  "name_kr": "크럼블 던전 고득점 고점 조합",
+  "status": "alt",
+  "summary": "Published 2026-09-13 with the full 40, a confirmed exclusion list and a list of formation breakers to drop at will. ATK order Milk, Scorpion, Figure, Brightseeker, Melon Soda, then Macaron, Rye or Cheesecake. The author warns the Cheesecake version swings more between runs. No score is printed with it.",
+  "cookies": [
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "ATK #1", "why": "Captain with ATK #1."},
+   {"kr": "전갈맛 쿠키", "level_rule": "ATK #2", "why": "Main dealer on the beam."},
+   {"kr": "피겨여왕맛 쿠키", "level_rule": "ATK #3", "why": "Buffer on the beam; watch that the boss's jump attack doesn't push it off to one side."},
+   {"kr": "브라이트시커 쿠키", "level_rule": "ATK #4", "why": "Ranged dealer; past 50 Skill Haste it fields six drones."},
+   {"kr": "메론소다맛 쿠키", "level_rule": "ATK #5", "why": "Ranged dealer."},
+   {"kr": "마카롱맛 쿠키", "level_rule": "ATK #6 if it runs ATK runes, else below", "why": "Crit-rate buffer."},
+   {"kr": "치즈케이크맛 쿠키", "level_rule": "ATK #6 if it runs ATK runes, else in the 40", "why": "ATK buff on Milk: the high-ceiling, high-variance choice."},
+   {"kr": "호밀맛 쿠키", "level_rule": "ATK #6 alternative", "why": "Dealer that can hold the sixth rank."},
+   {"kr": "석류맛 쿠키", "level_rule": "In the top 40", "why": "Beam source."},
+   {"kr": "뱀파이어맛 쿠키", "level_rule": "In the top 40", "why": "Charger that still works here, unlike the others, because it stays by the boss."}
+  ],
+  "atk_order": ["바삭튼튼 소아과 의사 우유맛 쿠키", "전갈맛 쿠키", "피겨여왕맛 쿠키", "브라이트시커 쿠키", "메론소다맛 쿠키", "마카롱맛 쿠키"],
+  "atk_order_note": "Sixth: Macaron, Rye or Cheesecake; pets' ATK bonuses count toward the order.",
+  "perks": "Not stated.",
+  "substitutions": [
+   "The author's formation breakers, to drop if they misbehave, are in evidence/08-extract/lineups.json (gni-2026-09-13, optional_exclude)."
+  ],
+  "sources": ["web:yt-_mvTZSI8hY8", "web:yt-NByK6TGHOKA"]
+ },
+ {
+  "id": "dungeon-no-cheesecake-0907",
+  "mode": "crumble_dungeon",
+  "name_en": "Pre-9/10 lineup without Cheesecake (ND러너 50G)",
+  "name_kr": "황금갓방울 던전 50G 조합",
+  "status": "legacy",
+  "ceiling": "50G+ ('520억 이상'), 2026-09-07 (text).",
+  "summary": "The lineup before the 9/10 update: Cheesecake set to Lv.1 because its ATK buff replaced Milk's stacked ATK buff, which then restarted from one stack. Otherwise the same 40 as ND러너's later list with Cheerleader, Coffee and Adventurer in the slots Knight, Alchemist and Cheesecake later took.",
+  "cookies": [
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "ATK #1 counting the captain's +10%", "why": "Captain with the top ATK counting the captain's +10%."},
+   {"kr": "피겨여왕맛 쿠키", "level_rule": "Beam target: ATK rank just below Milk", "why": "Recommended beam target in the pinned list."},
+   {"kr": "전갈맛 쿠키", "level_rule": "Beam target", "why": "Recommended beam target in the pinned list."},
+   {"kr": "마카롱맛 쿠키", "level_rule": "In the top 40", "why": "Buffer; the captions offer it as a beam target when its ATK allows."},
+   {"kr": "석류맛 쿠키", "level_rule": "In the top 40", "why": "Beam source."},
+   {"kr": "치즈케이크맛 쿠키", "level": "1", "why": "Kept out: before 9/10 its ATK buff erased Milk's stacked ATK buff."}
+  ],
+  "perks": "Milk captain; Passion Pay + Rapid Promotion.",
+  "sources": ["web:yt-UF6zcIkbh_8", "dc:61849", "dc:62042", "web:cookieruncrumbles-dungeon-milk"]
+ }
+]
