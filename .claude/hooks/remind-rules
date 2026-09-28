@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Injects a short, periodic reminder of the project's highest-priority rules.
 # Wired on UserPromptSubmit and on PostToolUse for the tools the rules govern;
-# emits at most once per REMIND_INTERVAL_SECONDS (default 180) so the rules stay
-# live inside long autonomous turns without flooding context.
+# emits at most once per REMIND_INTERVAL_SECONDS (default 300) per agent, so the
+# rules stay live inside long autonomous turns without flooding context.
 #
 # Customize per repo: edit the REMINDERS array below. Keep entries terse — a
 # single line each, prioritized by impact. The goal is one-glance reinforcement,
@@ -21,12 +21,22 @@ event=$(printf '%s' "$payload" | jq -r '.hook_event_name // empty' 2>/dev/null |
 
 # Throttle on wall clock, not turn count: a single autonomous turn can run for
 # many minutes of tool calls without a UserPromptSubmit ever firing.
-# State is the last emit timestamp, per-repo (keyed by cwd) so concurrent repos
-# throttle independently.
-REMIND_INTERVAL_SECONDS="${REMIND_INTERVAL_SECONDS:-180}"
-state_dir="${HOME}/.claude"
-state_file="${state_dir}/.remind-rules-last-$(printf '%s' "$PWD" | cksum | cut -d' ' -f1)"
+# Keyed by session and subagent, never by cwd: the cwd changes with every `cd`
+# and worktree, and each new one would open a fresh window. Per-agent keys give
+# every running agent its own reminder.
+REMIND_INTERVAL_SECONDS="${REMIND_INTERVAL_SECONDS:-300}"
+session=$(printf '%s' "$payload" | jq -r '.session_id // empty' 2>/dev/null || true)
+agent=$(printf '%s' "$payload" | jq -r '.agent_id // empty' 2>/dev/null || true)
+key=$(printf '%s|%s' "${session:-$PWD}" "${agent:-main}" | cksum | cut -d' ' -f1)
+state_dir="${HOME}/.claude/remind-rules"
+state_file="${state_dir}/last-${key}"
+lock_dir="${state_dir}/lock-${key}"
 mkdir -p "$state_dir"
+
+# Parallel tool calls fire this hook concurrently; without a lock they all read
+# the old timestamp and all emit. mkdir is atomic, so the loser just skips.
+mkdir "$lock_dir" 2>/dev/null || exit 0
+trap 'rmdir "$lock_dir" 2>/dev/null || true' EXIT
 now=$(date +%s)
 last=$(cat "$state_file" 2>/dev/null || echo 0)
 case "$last" in ''|*[!0-9]*) last=0 ;; esac
@@ -34,6 +44,9 @@ if [ $((now - last)) -lt "$REMIND_INTERVAL_SECONDS" ]; then
     exit 0
 fi
 printf '%s' "$now" > "$state_file"
+
+# Sessions end without telling the hook; drop state older than a day.
+find "$state_dir" -maxdepth 1 -name 'last-*' -mmin +1440 -delete 2>/dev/null || true
 
 REMINDERS=(
     "NO COUNTING OR ENUMERATING IN PROSE — never write how many of something the repo has (\"three doors\", \"the same four stages\") or type a roster into a sentence. Point at the folder or file that holds the list. Thresholds in a rule and dated measurements in a record are fine. AGENTS.md § Key directives."
