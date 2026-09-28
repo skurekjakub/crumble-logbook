@@ -1,4 +1,5 @@
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -14,6 +15,7 @@ import {
   siblingUrl,
 } from "../src/backfill";
 import { hasLedger, readLedger, verifyLedger } from "../src/ledger";
+import { gitRecord } from "./helpers";
 
 const DC_POST = `# [일반] 제목
 
@@ -166,6 +168,23 @@ describe("backfill", () => {
     expect(() => backfill(dir, { from, commitTimes: allCommitted })).toThrow(
       /already has a ledger/,
     );
+  });
+
+  it("hashes a CRLF text file as git stores it", () => {
+    const dir = gitRecord();
+    put(dir, "evidence/a.md", "one\r\ntwo\r\n");
+    put(dir, "evidence/raw/b.csv", "x\r\ny\r\n");
+    const lines = backfillLines(dir, {
+      commitTimes: () =>
+        new Map([
+          ["evidence/a.md", GIT_TIME],
+          ["evidence/raw/b.csv", GIT_TIME],
+        ]),
+    });
+    expect(lines.map((l) => l.sha256)).toEqual([
+      createHash("sha256").update("one\ntwo\n").digest("hex"),
+      createHash("sha256").update("x\r\ny\r\n").digest("hex"),
+    ]);
   });
 
   it("fails a file neither a header nor a commit dates", () => {

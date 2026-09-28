@@ -1,4 +1,5 @@
-import { mkdtempSync, readFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type { CaptureContext } from "../src/context";
@@ -26,6 +27,22 @@ export function fixture(path: string): string {
  */
 export function fixtureBytes(path: string): Uint8Array {
   return new Uint8Array(readFileSync(join(FIXTURES, path)));
+}
+
+/**
+ * Creates a record folder at the root of a new git work tree whose
+ * attributes are the repo's (`* text=auto eol=lf`) plus `-text` for
+ * `evidence/raw/`, as record 003 keeps its captures' bytes.
+ *
+ * @returns the record folder's absolute path
+ * @throws if git can't create the work tree
+ */
+export function gitRecord(): string {
+  const dir = mkdtempSync(join(tmpdir(), "crumble-git-record-"));
+  const init = spawnSync("git", ["-C", dir, "init", "-q"], { encoding: "utf-8" });
+  if (init.status !== 0) throw new Error(`git init failed: ${init.stderr}`);
+  writeFileSync(join(dir, ".gitattributes"), "* text=auto eol=lf\nevidence/raw/** -text\n");
+  return dir;
 }
 
 /** One canned answer: a body and, optionally, a status and headers. */

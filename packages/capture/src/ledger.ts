@@ -17,6 +17,7 @@ import { appendFileSync, existsSync, readdirSync, readFileSync, statSync } from 
 import { extname, join, relative, sep } from "node:path";
 import type { CaptureApprox, CaptureLine } from "@crumble/schema";
 import { captureLine } from "@crumble/schema";
+import { blobId, gitStoredBlobId } from "./git";
 import { HashCache } from "./hash-cache";
 import { REPO_ROOT } from "./paths";
 
@@ -139,6 +140,37 @@ export function sha256File(file: string): string {
 }
 
 /**
+ * Hashes the bytes git stores for an evidence file, which are the bytes
+ * every checkout holds: a text file written with CRLF (by a Windows tool,
+ * say) is hashed in its LF form when git's attributes normalise it on
+ * commit (`text`, or `text=auto` on content git reads as text), and as is
+ * when they keep it byte for byte (`-text`). Media, which git never
+ * stores, a file without CRLF, and a file outside a git work tree are
+ * hashed as they are.
+ *
+ * @param recordDir - absolute path of the record folder
+ * @param path - the file's record-relative path
+ * @returns its lowercase hex SHA-256, as a ledger line records it
+ * @throws {LedgerError} if git would store bytes that are neither the
+ *   file's nor its LF form (a clean filter, say)
+ * @throws if the file can't be read or git can't hash it
+ */
+export function storedSha256(recordDir: string, path: string): string {
+  const bytes = readFileSync(join(recordDir, path));
+  const raw = createHash("sha256").update(bytes).digest("hex");
+  if (isMedia(path) || !bytes.includes("\r\n")) return raw;
+  const stored = gitStoredBlobId(recordDir, path);
+  if (stored === null || stored === blobId(bytes, stored.length)) return raw;
+  const lf = Buffer.from(bytes.toString("latin1").replaceAll("\r\n", "\n"), "latin1");
+  if (stored === blobId(lf, stored.length)) return createHash("sha256").update(lf).digest("hex");
+  throw new LedgerError(
+    LEDGER_FILE,
+    null,
+    `${path}: git stores bytes that are neither the file's nor its LF form; can't hash what a checkout holds`,
+  );
+}
+
+/**
  * Reports whether a file's bytes match a ledger hash. A text file (not
  * media, no NUL byte) also matches with its CRLF line endings read as LF:
  * a working tree written on Windows before `.gitattributes` normalised it
@@ -258,15 +290,17 @@ export function readLedger(recordDir: string): LedgerEntry[] {
 }
 
 /**
- * Hashes a captured file and appends its line to the record's ledger,
- * creating the ledger when it's the first.
+ * Hashes a captured file as git stores it (see {@link storedSha256}) and
+ * appends its line to the record's ledger, creating the ledger when it's
+ * the first.
  *
  * @param recordDir - absolute path of the record folder
  * @param path - the file's record-relative path, under `evidence/`
  * @param meta - its URL, capture time, tool and, for a backfill, `approx`
  * @returns the line appended
  * @throws {LedgerError} if the path already has a line, the file doesn't
- *   exist, or the line fails the line schema
+ *   exist, the line fails the line schema, or git stores the file in a
+ *   form the ledger can't hash
  */
 export function appendCapture(recordDir: string, path: string, meta: CaptureMeta): CaptureLine {
   const full = join(recordDir, path);
@@ -275,7 +309,7 @@ export function appendCapture(recordDir: string, path: string, meta: CaptureMeta
   if (listed) {
     throw new LedgerError(LEDGER_FILE, listed.lineNo, `${path} already has a ledger line`);
   }
-  const line = toLine(path, sha256File(full), meta);
+  const line = toLine(path, storedSha256(recordDir, path), meta);
   appendFileSync(join(recordDir, LEDGER_FILE), `${JSON.stringify(line)}\n`);
   return line;
 }

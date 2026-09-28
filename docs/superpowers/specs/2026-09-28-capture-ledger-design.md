@@ -27,7 +27,7 @@ Each record keeps `research/<slug>/evidence/captures.jsonl`, append-only, one JS
 | `url` | The page or endpoint the bytes came from; `null` for derived files (digests, extracts, scripts). |
 | `captured_at` | ISO 8601 with offset. |
 | `tool` | `agent-browser`, `curl`, `yt-dlp`, `capture:<scraper>` (the TypeScript scrapers), `python:<script>` (the retired Python scrapers), `manual`, or `unknown` (backfill only). |
-| `sha256` | Hex digest of the file's bytes as checked out. `.gitattributes` forces LF for text, so the bytes are the same on every platform. |
+| `sha256` | Hex digest of the file's bytes as checked out. `.gitattributes` forces LF for text, so the bytes are the same on every platform. A file written with CRLF is hashed as git stores it: its LF form where git's attributes normalise it, its raw bytes under `-text` (`git hash-object` decides). |
 | `approx` | Optional, backfill only: `"header"` when the time came from the capture's own `captured:` line, `"post"` when an image inherits its post's time, `"git"` when only the first commit's time is known. |
 
 The Zod schema for a line lives in `packages/schema` (shared by the capture package and the server importer). The

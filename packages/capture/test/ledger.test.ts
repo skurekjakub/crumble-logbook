@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { appendFileSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -16,12 +17,23 @@ import {
   verifyLedger,
 } from "../src/ledger";
 import { findRepoRoot } from "../src/paths";
+import { gitRecord } from "./helpers";
 
 const META = {
   url: "https://example.test/1",
   capturedAt: "2026-09-28T08:00:00+02:00",
   tool: "curl",
 };
+
+/**
+ * Hashes a string's UTF-8 bytes.
+ *
+ * @param text - the string
+ * @returns its lowercase hex SHA-256
+ */
+function sha(text: string): string {
+  return createHash("sha256").update(text).digest("hex");
+}
 
 /**
  * Creates an empty record folder in the temp directory.
@@ -131,6 +143,23 @@ describe("the ledger", () => {
     ]);
     put(dir, "evidence/a.md", "one\r\nthree\r\n");
     expect(verifyLedger(dir).map((p) => p.path)).toEqual(["evidence/a.md", "evidence/b.png"]);
+  });
+
+  it("hashes a CRLF text file as git stores it, so its LF checkout verifies, and keeps -text bytes", () => {
+    const dir = gitRecord();
+    put(dir, "evidence/a.md", "one\r\ntwo\r\n");
+    put(dir, "evidence/raw/b.csv", "x\r\ny\r\n");
+    put(dir, "evidence/c.txt", "lone\rcr\r\n");
+    expect(appendCapture(dir, "evidence/a.md", META).sha256).toBe(sha("one\ntwo\n"));
+    expect(appendCapture(dir, "evidence/raw/b.csv", META).sha256).toBe(sha("x\r\ny\r\n"));
+    expect(appendCapture(dir, "evidence/c.txt", META).sha256).toBe(sha("lone\rcr\r\n"));
+    expect(verifyLedger(dir)).toEqual([]);
+    put(dir, "evidence/a.md", "one\ntwo\n");
+    expect(verifyLedger(dir)).toEqual([]);
+
+    const plain = record();
+    put(plain, "evidence/a.md", "one\r\ntwo\r\n");
+    expect(appendCapture(plain, "evidence/a.md", META).sha256).toBe(sha("one\r\ntwo\r\n"));
   });
 
   it("lists evidence without the ledger and local by-products", () => {

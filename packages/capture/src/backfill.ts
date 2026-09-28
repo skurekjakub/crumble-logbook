@@ -24,7 +24,7 @@ import {
   LEDGER_FILE,
   LedgerError,
   listEvidence,
-  sha256File,
+  storedSha256,
   toLine,
 } from "./ledger";
 import { isoFromHeader } from "./time";
@@ -180,12 +180,19 @@ export function backfillLines(recordDir: string, options: BackfillOptions = {}):
     ? listEvidence(options.from).filter((path) => !here.has(path) && isMedia(path))
     : [];
   /**
+   * Finds the copy of the record that holds a record-relative path.
+   *
+   * @param path - the path
+   * @returns that copy's record folder
+   */
+  const home = (path: string) => (here.has(path) ? recordDir : options.from!);
+  /**
    * Resolves a record-relative path to the copy that holds it.
    *
    * @param path - the path
    * @returns its absolute path
    */
-  const locate = (path: string) => join(here.has(path) ? recordDir : options.from!, path);
+  const locate = (path: string) => join(home(path), path);
   const paths = [...here, ...elsewhere].sort();
   const commitTimes = (options.commitTimes ?? gitCommitTimes)(recordDir);
 
@@ -210,7 +217,7 @@ export function backfillLines(recordDir: string, options: BackfillOptions = {}):
 
   return paths.map((path) => {
     const meta = metas.get(path) ?? inherited.get(path) ?? fallback(recordDir, path, locate(path));
-    return toLine(path, sha256File(locate(path)), meta);
+    return toLine(path, storedSha256(home(path), path), meta);
   });
 
   /**
