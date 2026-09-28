@@ -302,6 +302,49 @@ function seedEverything(store: Store): SeedIds {
     ["dc:1"],
   );
   services.riftBosses.create({ level: 5, bossKr: "비겁한 쿠키", bossEn: "GingerCraven" }, ["dc:1"]);
+  services.decks.create({
+    id: "dungeon-deck",
+    mode: "crumble_dungeon",
+    nameEn: "Dungeon deck",
+    status: "meta",
+    cookies: [{ cookieKr: "체리 쿠키", level: "100", levelRule: null, stars: null, why: "x" }],
+    pets: [],
+    notes: [],
+    sources: ["dc:1"],
+  });
+  services.dungeonRuns.create(
+    {
+      slug: "run-a",
+      date: "2026-09-28",
+      scoreG: 379.3,
+      totalPowerG: 15.58,
+      board: "run",
+      serverRank: 1,
+      timeLeftS: 0,
+      evidence: "screenshot",
+      standing: "verified",
+      deckId: "dungeon-deck",
+    },
+    ["dc:1"],
+  );
+  services.dungeonLineups.create(
+    {
+      slug: "lineup-a",
+      author: "a",
+      date: "2026-09-18",
+      deckId: "dungeon-deck",
+      complete: true,
+      first40: ["체리 쿠키"],
+      excluded: ["오븐방랑자 쿠키"],
+      atkOrder: ["체리 쿠키"],
+      levelRule: "Lv.1 for the excluded",
+    },
+    ["dc:1"],
+  );
+  services.dungeonExclusions.create(
+    { cookieKr: "오븐방랑자 쿠키", kind: "charger", why: "w", status: "excluded" },
+    ["dc:1"],
+  );
   const [bracket] = store.repos.powerBrackets.list();
   store.repos.factClaims.add(
     { entity: "power_bracket", entityId: String(bracket!.id) },
@@ -332,8 +375,8 @@ describe("exportSnapshot / restoreSnapshot", () => {
       recordModes: 1,
       captures: 1,
       glossary: 1,
-      decks: 3,
-      deckCookies: 3,
+      decks: 4,
+      deckCookies: 4,
       deckPets: 1,
       deckNotes: 1,
       runeBuilds: 1,
@@ -358,7 +401,10 @@ describe("exportSnapshot / restoreSnapshot", () => {
       stageZoneSlots: 1,
       stageClears: 1,
       riftBosses: 1,
-      citations: 23,
+      dungeonRuns: 1,
+      dungeonLineups: 1,
+      dungeonExclusions: 1,
+      citations: 27,
       factClaims: 1,
     });
     for (const [table, rows] of Object.entries(first.tables)) {
@@ -492,7 +538,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
     const target = testStore();
     const counts = restoreSnapshot(target, { version: 1, tables: older as Snapshot["tables"] });
     expect(counts.usageStats).toBe(0);
-    expect(counts.decks).toBe(3);
+    expect(counts.decks).toBe(4);
     expect(exportSnapshot(target).tables.usageStats).toEqual([]);
   });
 

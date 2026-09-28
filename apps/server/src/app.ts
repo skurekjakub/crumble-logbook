@@ -50,6 +50,12 @@ export function createApp(services: Services) {
     .route(R.stageZoneSlots.path, crudRouter(endpoints(services.stageZoneSlots), R.stageZoneSlots))
     .route(R.stageClears.path, crudRouter(endpoints(services.stageClears), R.stageClears))
     .route(R.riftBosses.path, crudRouter(endpoints(services.riftBosses), R.riftBosses))
+    .route(R.dungeonRuns.path, crudRouter(endpoints(services.dungeonRuns), R.dungeonRuns))
+    .route(R.dungeonLineups.path, crudRouter(endpoints(services.dungeonLineups), R.dungeonLineups))
+    .route(
+      R.dungeonExclusions.path,
+      crudRouter(endpoints(services.dungeonExclusions), R.dungeonExclusions),
+    )
     .route(R.decks.path, crudRouter(services.decks, R.decks))
     .route(R.runeBuilds.path, crudRouter(services.runeBuilds, R.runeBuilds))
     .route(R.sources.path, sourcesRouter(services.sources))

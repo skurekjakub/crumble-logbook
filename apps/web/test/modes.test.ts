@@ -168,7 +168,9 @@ describe("mode-scoped queries", () => {
     expectTypeOf<ModeOf<InferRequestType<typeof api.counters.$get>>>().toEqualTypeOf<Mode>();
     expectTypeOf<ModeOf<InferRequestType<typeof api.usage.$get>>>().toEqualTypeOf<Mode>();
     expectTypeOf<ModeOf<InferRequestType<typeof api.records.$get>>>().toEqualTypeOf<Mode>();
-    expectTypeOf<GameMode>().toEqualTypeOf<"guild_conquest" | "arena" | "rumble_arena" | "stage">();
+    expectTypeOf<GameMode>().toEqualTypeOf<
+      "guild_conquest" | "arena" | "rumble_arena" | "stage" | "crumble_dungeon"
+    >();
   });
 
   it("send the mode's ?mode= on each list request, and nothing without a scope", async () => {

@@ -39,7 +39,10 @@ type SeededKey =
   | "usageStats"
   | "captures"
   | "stageZoneSlots"
-  | "stageClears";
+  | "stageClears"
+  | "dungeonRuns"
+  | "dungeonLineups"
+  | "dungeonExclusions";
 
 /**
  * Creates one valid row of a type, with `over` applied on top.
@@ -85,6 +88,16 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
     result: { match: { result: "fail" }, other: {}, value: "fail" },
     deck: { match: { deckId: "s1" }, other: { deckId: "s2" }, value: "s1" },
   },
+  dungeonRuns: {
+    board: { match: { board: "weekly-best" }, other: {}, value: "weekly-best" },
+    evidence: { match: { evidence: "video" }, other: {}, value: "video" },
+    deck: { match: { deckId: "g1" }, other: { deckId: "g2" }, value: "g1" },
+  },
+  dungeonLineups: { deck: { match: { deckId: "g1" }, other: { deckId: "g2" }, value: "g1" } },
+  dungeonExclusions: {
+    kind: { match: { kind: "summoner" }, other: {}, value: "summoner" },
+    status: { match: { status: "patched" }, other: {}, value: "patched" },
+  },
   captures: {
     record: { match: { recordSlug: "r1" }, other: { recordSlug: "r2" }, value: "r1" },
     path: {
@@ -122,6 +135,20 @@ function ensureStageDecks(store: Store, services: Services): void {
   for (const id of ["s1", "s2"]) {
     if (store.repos.decks.exists(id)) continue;
     services.decks.create({ ...deckBase, id, nameEn: id, mode: "stage" });
+  }
+}
+
+/**
+ * Creates the Crumble Dungeon decks `g1` and `g2` that dungeon seeds reference, once per store.
+ *
+ * @param store - the store to check for existing decks
+ * @param services - the services to create the decks through
+ */
+function ensureDungeonDecks(store: Store, services: Services): void {
+  cite(store);
+  for (const id of ["g1", "g2"]) {
+    if (store.repos.decks.exists(id)) continue;
+    services.decks.create({ ...deckBase, id, nameEn: id, mode: "crumble_dungeon" });
   }
 }
 
@@ -328,6 +355,47 @@ const SEEDS: Record<SeededKey, Seed> = {
         evidence: "text",
         ...over,
       },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  dungeonRuns: (store, services, over) => {
+    ensureDungeonDecks(store, services);
+    const row = services.dungeonRuns.create(
+      {
+        slug: `run-${++serial}`,
+        date: "2026-09-28",
+        scoreG: serial,
+        board: "run",
+        evidence: "screenshot",
+        standing: "verified",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  dungeonLineups: (store, services, over) => {
+    ensureDungeonDecks(store, services);
+    const row = services.dungeonLineups.create(
+      {
+        slug: `lineup-${++serial}`,
+        author: "a",
+        date: "2026-09-28",
+        complete: true,
+        first40: ["c"],
+        excluded: [],
+        atkOrder: [],
+        levelRule: "r",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  dungeonExclusions: (store, services, over) => {
+    const row = services.dungeonExclusions.create(
+      { cookieKr: `c${++serial}`, kind: "charger", why: "w", status: "excluded", ...over },
       cite(store),
     );
     return ["id", row.id];

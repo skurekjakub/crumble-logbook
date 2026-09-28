@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { RunEvidence, RunStanding } from "./enums";
 import { postedPowerG } from "./power";
 import {
   buffValueInsert,
@@ -7,6 +8,9 @@ import {
   deckInsert,
   deckNoteInsert,
   deckSlug,
+  dungeonExclusionInsert,
+  dungeonLineupInsert,
+  dungeonRunInsert,
   fightEventInsert,
   gearRecInsert,
   glossaryInsert,
@@ -286,6 +290,60 @@ export type RiftBossInput = z.output<typeof riftBossInput>;
 export const riftBossPatch = riftBoss.patch;
 /** Output of {@link riftBossPatch}. */
 export type RiftBossPatch = z.output<typeof riftBossPatch>;
+
+/**
+ * Whether a Crumble Dungeon score with this evidence is shown or only
+ * claimed: a screenshot or a video shows it; text alone claims it.
+ *
+ * @param evidence - what backs the score
+ * @returns `verified` for a screenshot or video, `claim` for text
+ */
+export function runStanding(evidence: RunEvidence): RunStanding {
+  return evidence === "text" ? "claim" : "verified";
+}
+
+const dungeonRun = citedInputs(dungeonRunInsert.omit({ standing: true }));
+/**
+ * Input for creating a documented Crumble Dungeon score, with the sources
+ * that show it. `standing` isn't accepted: it is read from `evidence` (see
+ * {@link runStanding}).
+ */
+export const dungeonRunInput = dungeonRun.input.transform((run) => ({
+  ...run,
+  standing: runStanding(run.evidence),
+}));
+/** Output of {@link dungeonRunInput}. */
+export type DungeonRunInput = z.output<typeof dungeonRunInput>;
+/**
+ * Patch for updating a documented Crumble Dungeon score. `sources`, if
+ * given, must be non-empty. `standing` isn't accepted: a patch that sets
+ * `evidence` sets it too.
+ */
+export const dungeonRunPatch = dungeonRun.patch.transform((patch) =>
+  patch.evidence === undefined ? patch : { ...patch, standing: runStanding(patch.evidence) },
+);
+/** Output of {@link dungeonRunPatch}. */
+export type DungeonRunPatch = z.output<typeof dungeonRunPatch>;
+
+const dungeonLineup = citedInputs(dungeonLineupInsert);
+/** Input for creating a published Crumble Dungeon lineup, with the sources that publish it. */
+export const dungeonLineupInput = dungeonLineup.input;
+/** Output of {@link dungeonLineupInput}. */
+export type DungeonLineupInput = z.output<typeof dungeonLineupInput>;
+/** Patch for updating a published Crumble Dungeon lineup. `sources`, if given, must be non-empty. */
+export const dungeonLineupPatch = dungeonLineup.patch;
+/** Output of {@link dungeonLineupPatch}. */
+export type DungeonLineupPatch = z.output<typeof dungeonLineupPatch>;
+
+const dungeonExclusion = citedInputs(dungeonExclusionInsert);
+/** Input for creating a Crumble Dungeon exclusion, with the sources that give its reason. */
+export const dungeonExclusionInput = dungeonExclusion.input;
+/** Output of {@link dungeonExclusionInput}. */
+export type DungeonExclusionInput = z.output<typeof dungeonExclusionInput>;
+/** Patch for updating a Crumble Dungeon exclusion. `sources`, if given, must be non-empty. */
+export const dungeonExclusionPatch = dungeonExclusion.patch;
+/** Output of {@link dungeonExclusionPatch}. */
+export type DungeonExclusionPatch = z.output<typeof dungeonExclusionPatch>;
 
 /**
  * Input for a single deck cookie slot. `id`, `deckId` and `position` are

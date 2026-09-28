@@ -2,7 +2,8 @@
  * The curated collections an import reads: how each collection file is
  * validated, what its rows reference, and how its rows are mapped into
  * write steps. A new curated collection is an entry here (or in a file
- * whose collections this one spreads in, such as `stage-collections.ts`)
+ * whose collections this one spreads in, such as `stage-collections.ts`
+ * or `dungeon-collections.ts`)
  * plus its file in the record's `curated/manifest.json`; the reader and
  * the writer need no edits.
  *
@@ -14,6 +15,7 @@ import type { GlossaryInsert } from "../repos/glossary";
 import type { SourceInsert } from "../repos/sources";
 import { deckModeMismatch } from "../services/deck-modes";
 import { findCapture } from "./captures";
+import { DUNGEON_COLLECTIONS } from "./dungeon-collections";
 import type { Collection } from "./collection-kit";
 import { citedRows, collection, modedRows, parseModedRows, parseRows } from "./collection-kit";
 import { parseFile } from "./files";
@@ -310,6 +312,7 @@ export const COLLECTIONS = {
   }),
   usage: { ...citedRows("usageStats", modedRows(seedUsage), mapUsage), optional: true },
   ...STAGE_COLLECTIONS,
+  ...DUNGEON_COLLECTIONS,
 };
 
 /** The curated collections by manifest key. */

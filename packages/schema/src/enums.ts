@@ -41,12 +41,61 @@ export type RankingBoard = (typeof RANKING_BOARD)[number];
 
 /**
  * Game mode research content is about: Guild Conquest (길드 토벌전), regular
- * Arena (아레나), Rumble Arena (와글와글 아레나), or stage pushing (main
- * stages and the Dimensional Rift). The first is the default of every
- * `mode` column.
+ * Arena (아레나), Rumble Arena (와글와글 아레나), stage pushing (main
+ * stages and the Dimensional Rift), or Crumble Dungeon (크럼블 던전, the
+ * score attack against the Holy Golden Drop). The first is the default of
+ * every `mode` column.
  */
-export const GAME_MODE = ["guild_conquest", "arena", "rumble_arena", "stage"] as const;
+export const GAME_MODE = [
+  "guild_conquest",
+  "arena",
+  "rumble_arena",
+  "stage",
+  "crumble_dungeon",
+] as const;
 export type GameMode = (typeof GAME_MODE)[number];
+
+/**
+ * What a documented Crumble Dungeon score was shown on: the result screen
+ * of one run (`run`), a weekly board's entry for the week's best run
+ * (`weekly-best`), or a claim naming a score without showing it (`claim`).
+ */
+export const DUNGEON_BOARD = ["run", "weekly-best", "claim"] as const;
+export type DungeonBoard = (typeof DUNGEON_BOARD)[number];
+
+/** What backs a documented Crumble Dungeon score: a screenshot, a video, or text alone. */
+export const RUN_EVIDENCE = ["screenshot", "video", "text"] as const;
+export type RunEvidence = (typeof RUN_EVIDENCE)[number];
+
+/**
+ * Whether a documented Crumble Dungeon score is shown or only claimed:
+ * `verified` when a screenshot or video shows it, `claim` when text alone
+ * states it. Read from the evidence on every write, never given.
+ */
+export const RUN_STANDING = ["verified", "claim"] as const;
+export type RunStanding = (typeof RUN_STANDING)[number];
+
+/**
+ * Why a cookie is kept out of Crumble Dungeon's first 40: it charges off
+ * and drags the healers after it (`charger`), its summons spread the
+ * formation (`summoner`), it takes Pomegranate's beam through the
+ * Projectile Speed synergy (`projectile-speed`), or its buff overwrites a
+ * stacked one (`buff-overwrite`).
+ */
+export const EXCLUSION_CLASS = [
+  "charger",
+  "summoner",
+  "projectile-speed",
+  "buff-overwrite",
+] as const;
+export type ExclusionClass = (typeof EXCLUSION_CLASS)[number];
+
+/**
+ * Where an exclusion stands: players keep the cookie out (`excluded`),
+ * they disagree (`disputed`), or a patch removed the reason (`patched`).
+ */
+export const EXCLUSION_STATUS = ["excluded", "disputed", "patched"] as const;
+export type ExclusionStatus = (typeof EXCLUSION_STATUS)[number];
 
 /**
  * Which side of the 2026-09-23 stage easing a stage clear was made on: the
@@ -130,5 +179,8 @@ export const CITED_ENTITY = [
   "stage_zone_slot",
   "stage_clear",
   "rift_boss",
+  "dungeon_run",
+  "dungeon_lineup",
+  "dungeon_exclusion",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];

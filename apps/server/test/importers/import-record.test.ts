@@ -154,6 +154,9 @@ const expectedCounts = {
   stageZoneSlots: 0,
   stageClears: 0,
   riftBosses: 0,
+  dungeonRuns: 0,
+  dungeonLineups: 0,
+  dungeonExclusions: 0,
   citations:
     sum(citedRows.map((r) => distinct(r.sources))) +
     distinct(meta.you.sources) +

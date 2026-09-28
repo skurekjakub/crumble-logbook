@@ -2,7 +2,7 @@
 
 Status: active (started 2026-09-28; captured and curated 2026-09-28)
 
-Measured on 2026-09-28 from branch `worktree-agent-afa0d04ad74569023` (off `main` at `cac2374`): the mode's rules from the official Naver cafe patch notes, the Cookie Run Wiki, Sugar Pocket's datamined catalog and in-game screenshots; scores and lineups from DCInside's 쿠키런 크럼블 gallery, the Naver cafe, KR YouTube (ND러너, 그니, VART, 서신우) and EOG's global hub. The research changed no code. The curated dataset is ready to import as a `crumble_dungeon` mode once the app has one (see "What would change").
+Measured on 2026-09-28 from branch `worktree-agent-afa0d04ad74569023` (off `main` at `cac2374`): the mode's rules from the official Naver cafe patch notes, the Cookie Run Wiki, Sugar Pocket's datamined catalog and in-game screenshots; scores and lineups from DCInside's 쿠키런 크럼블 gallery, the Naver cafe, KR YouTube (ND러너, 그니, VART, 서신우) and EOG's global hub. The research changed no code. The curated dataset imports as the app's `crumble_dungeon` mode (`pnpm import:record 004-golden-drop-meta`, after records 001 to 003; see "What would change"); a run's `standing` there is read from its evidence (a screenshot or video shows it; text alone claims it).
 
 ## Question
 
@@ -67,7 +67,7 @@ For the app lane; this record changed nothing outside its folder. The full list 
 
 ## Side findings
 
-- **The frames wrapper fails on ffmpeg 9.** `pnpm capture youtube frames` passes `-vsync`, which ffmpeg 9.0.2 rejects ("Unrecognized option 'vsync'"); frames here were cut with ffmpeg directly and logged as manual captures. Follow-up for the user: switch the wrapper to `-fps_mode` (`packages/capture/src/media.ts`, `framesArgs`). Not filed as a follow-up file: this session was limited to the record folder.
+- **The frames wrapper failed on ffmpeg 9.** `pnpm capture youtube frames` passed `-vsync`, which ffmpeg 9.0.2 rejects ("Unrecognized option 'vsync'"); frames here were cut with ffmpeg directly and logged as manual captures. The wrapper now passes `-fps_mode` (`packages/capture/src/media.ts`, `framesArgs`).
 - **Sugar Pocket's catalog now refuses curl** (403, "Catalog access denied."), kept as captured in `evidence/03-sites/cookieruncrumble_app_api_catalog_database.json`; record 001's copy is cited instead. Follow-up: any future catalog refresh needs another route.
 - **Entries per day are unsettled:** three per the wiki and the newbie guide, a counter out of 5 on September lobbies. Consciously left open.
 - **One capture is empty:** `evidence/04-naver/nv/img/nv-46592-1.jpg` has 0 bytes; the post's second image carries the score.

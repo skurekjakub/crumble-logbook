@@ -388,6 +388,63 @@ export const riftBossSelect = createSelectSchema(t.riftBosses);
 /** A row selected from `rift_bosses`. */
 export type RiftBossRow = typeof t.riftBosses.$inferSelect;
 
+/**
+ * Insert schema for `dungeon_runs`. `slug` is a lowercase slug; `date` is
+ * `YYYY-MM-DD`; `scoreG` is positive and `totalPowerG`, when present, too;
+ * `serverRank`, when present, is a positive integer; `timeLeftS` and
+ * `cookiesLeft`, when present, are non-negative; `deckId`, when present, a
+ * lowercase slug.
+ */
+export const dungeonRunInsert = createInsertSchema(t.dungeonRuns, {
+  slug: () => deckSlug,
+  date: () => isoDate,
+  scoreG: (s) => s.positive(),
+  totalPowerG: (s) => s.positive().nullish(),
+  serverRank: () => positiveInt.nullish(),
+  timeLeftS: (s) => s.nonnegative().nullish(),
+  cookiesLeft: (s) => s.int().nonnegative().nullish(),
+  deckId: () => deckSlug.nullish(),
+});
+/** Select schema for `dungeon_runs`, mirroring the stored row shape. */
+export const dungeonRunSelect = createSelectSchema(t.dungeonRuns);
+/** A row selected from `dungeon_runs`. */
+export type DungeonRunRow = typeof t.dungeonRuns.$inferSelect;
+
+/**
+ * Insert schema for `dungeon_lineups`. `slug` is a lowercase slug; `date`
+ * is `YYYY-MM-DD`; `author` and `levelRule` are non-empty; `first40` has at
+ * least one name; `excluded` and `atkOrder` are name lists, maybe empty;
+ * `deckId`, when present, a lowercase slug.
+ */
+export const dungeonLineupInsert = createInsertSchema(t.dungeonLineups, {
+  slug: () => deckSlug,
+  author: (s) => s.min(1),
+  date: () => isoDate,
+  deckId: () => deckSlug.nullish(),
+  first40: () => nameList.min(1),
+  excluded: () => nameList,
+  atkOrder: () => nameList,
+  levelRule: (s) => s.min(1),
+});
+/** Select schema for `dungeon_lineups`, with the name lists typed precisely. */
+export const dungeonLineupSelect = createSelectSchema(t.dungeonLineups, {
+  first40: () => nameList,
+  excluded: () => nameList,
+  atkOrder: () => nameList,
+});
+/** A row selected from `dungeon_lineups`. */
+export type DungeonLineupRow = typeof t.dungeonLineups.$inferSelect;
+
+/** Insert schema for `dungeon_exclusions`. `cookieKr` and `why` are non-empty. */
+export const dungeonExclusionInsert = createInsertSchema(t.dungeonExclusions, {
+  cookieKr: (s) => s.min(1),
+  why: (s) => s.min(1),
+});
+/** Select schema for `dungeon_exclusions`, mirroring the stored row shape. */
+export const dungeonExclusionSelect = createSelectSchema(t.dungeonExclusions);
+/** A row selected from `dungeon_exclusions`. */
+export type DungeonExclusionRow = typeof t.dungeonExclusions.$inferSelect;
+
 /** Insert schema for `citations`. */
 export const citationInsert = createInsertSchema(t.citations);
 /** Select schema for `citations`, mirroring the stored row shape. */

@@ -20,9 +20,8 @@ import {
 import { z } from "zod";
 import { ImportError } from "../errors";
 import type { ValuesOf } from "../registry";
-import { deckModeMismatch } from "../services/deck-modes";
-import type { CheckContext, RowRefs } from "./collection-kit";
-import { collection } from "./collection-kit";
+import type { RowRefs } from "./collection-kit";
+import { checkDeckModes, collection } from "./collection-kit";
 import { parseFile } from "./files";
 import { insertGameFacts } from "./shared-facts";
 import type { CitedValues, WriteStep } from "./steps";
@@ -281,28 +280,6 @@ function checkEntryPowers(file: string, rows: readonly EntryPowers[]): WriteStep
 }
 
 /**
- * Checks that every deck a stage row names is a stage deck.
- *
- * @param file - the file, as errors name it
- * @param entity - what the rows are, as the mismatch names it
- * @param decks - each row's deck, by the row as errors name it
- * @param context - the curated decks' modes
- * @throws {ImportError} naming the file and row of the first deck of another mode
- */
-function checkStageDecks(
-  file: string,
-  entity: string,
-  decks: ReadonlyArray<readonly [row: string | number, deck: string | undefined]>,
-  { deckModes }: CheckContext,
-): void {
-  for (const [row, deck] of decks) {
-    if (deck === undefined) continue;
-    const mismatch = deckModeMismatch(entity, "stage", deck, deckModes.get(deck));
-    if (mismatch) throw new ImportError(file, row, mismatch);
-  }
-}
-
-/**
  * Cites every row to the same sources.
  *
  * @param rows - the rows' column values
@@ -526,7 +503,7 @@ export const STAGE_COLLECTIONS = {
           (slot, index) => [`zone ${zone.zone_index} slot ${index}`, slot.deck] as const,
         ),
       );
-      checkStageDecks(file, "stage_zone_slot", decks, context);
+      checkDeckModes(file, "stage_zone_slot", "stage", decks, context);
     },
     /** @inheritdoc */
     prepare: ({ zones }) => [
@@ -565,9 +542,10 @@ export const STAGE_COLLECTIONS = {
       })),
     /** @inheritdoc */
     check: (file, { clears }, context) => {
-      checkStageDecks(
+      checkDeckModes(
         file,
         "stage_clear",
+        "stage",
         clears.map((clear, index) => [index, clear.deck] as const),
         context,
       );

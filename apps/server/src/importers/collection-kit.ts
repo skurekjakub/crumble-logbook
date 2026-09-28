@@ -10,6 +10,7 @@ import type { GameMode } from "@crumble/schema";
 import type { z } from "zod";
 import { ImportError } from "../errors";
 import type { ContentKey, ValuesOf } from "../registry";
+import { deckModeMismatch } from "../services/deck-modes";
 import { formatIssues } from "./files";
 import type { ImportManifest } from "./manifest";
 import type { Moded } from "./seed/schema";
@@ -98,6 +99,31 @@ export interface Collection<Parsed> {
  */
 export function collection<Parsed>(collection: Collection<Parsed>): Collection<Parsed> {
   return collection;
+}
+
+/**
+ * Checks that every deck the rows of a one-mode collection name is a deck
+ * of that mode.
+ *
+ * @param file - the file, as errors name it
+ * @param entity - what the rows are, as the mismatch names it
+ * @param mode - the mode the collection belongs to
+ * @param decks - each row's deck, by the row as errors name it
+ * @param context - the curated decks' modes
+ * @throws {ImportError} naming the file and row of the first deck of another mode
+ */
+export function checkDeckModes(
+  file: string,
+  entity: string,
+  mode: GameMode,
+  decks: ReadonlyArray<readonly [row: string | number, deck: string | undefined]>,
+  { deckModes }: CheckContext,
+): void {
+  for (const [row, deck] of decks) {
+    if (deck === undefined) continue;
+    const mismatch = deckModeMismatch(entity, mode, deck, deckModes.get(deck));
+    if (mismatch) throw new ImportError(file, row, mismatch);
+  }
 }
 
 /**

@@ -12,6 +12,7 @@ export * from "./boss";
 export * from "./counters";
 export * from "./usage";
 export * from "./stage";
+export * from "./dungeon";
 export * from "./citations";
 export * from "./fact-claims";
 export * from "./captures";
