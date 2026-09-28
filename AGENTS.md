@@ -7,6 +7,10 @@ Research tool for Cookie Run: Crumble: Guild Conquest (길드 토벌전) and PvP
 - Design specs: `docs/superpowers/specs/`. Plans: `docs/superpowers/plans/`.
 - Research records: `research/NNN-slug/`. Evidence captures are never edited after capture; a later measurement is a new numbered file.
 
+## Key directives
+
+- No enumerating and no gratuitous counting, in docs, comments, commit messages and replies to the user. Don't write how many of something there is ("three agents", "the same four stages", "nine questions, five need you") and don't type a roster into a sentence; point at the file or folder that holds the list. A count stays only when the number is the point: a threshold in a rule, a dated measurement in a record, a test or damage figure.
+
 ## Rules the user set (don't relitigate)
 
 - Rank by damage, never by 배 (damage ÷ team power). 배 is only a normaliser.
