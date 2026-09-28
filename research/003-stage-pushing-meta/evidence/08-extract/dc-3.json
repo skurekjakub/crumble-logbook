@@ -1,0 +1,809 @@
+{
+  "batch": "dc-3",
+  "posts": [
+    {
+      "source": "dc", "id": "dc:70007", "url": "https://m.dcinside.com/board/projectcc/70007", "date": "2026-09-18",
+      "title_kr": "집중은 모르겠는데 명중은 스캠아님", "title_en": "Not sure about Focus, but Accuracy is not a scam", "relevance": 2, "scope": "stage",
+      "summary_en": "Player cleared 248-30 at 802M against a 35% power cut of 801M and says he always clears right at the power cut. Around chapter 260 he dropped one Accuracy line for +18M power and suffered at 쫄쿨민, so he restored it; he runs 1140 Accuracy and says +15M power is not worth even one chapter. Screenshot: 1G 503M 519K team repeating 273-1 at 축복 Lv.7, plus a calculator table for chapter 273 (15% at 742M 299K, 35% at 1G 485M).",
+      "clears": [
+        { "stage": "248-30", "boss": "", "team_power": "802M", "recommended_power": "~2.0G (derived: 35% cut 801M = 40%)", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "author: 투력컷801에 802로 클리어" },
+        { "stage": "273-1", "boss": "", "team_power": "1G 503M 519K", "recommended_power": "~3.71G (derived: table 35% column 1G 485M)", "bracket": "35", "result": "clear", "play": "auto", "retries": "", "team": "", "note": "screenshot shows 273-1 cleared, repeating 273-1, Auto on; calculator table 273-1: 1% 371M 150K, 5% 371M 150K, 15% 742M 299K, 35% 1G 485M; 273-2 35% 1G 486M; 273-3 35% 1G 488M" }
+      ],
+      "teams": [
+        { "name": "70007 273-1 lineup (battle bar)", "scope": "stage", "for": "273-1 at 35%", "cookies": [
+          { "kr": "?", "en": null, "level": "100", "stars": "5", "position": "bar slot 1-12", "role": "?", "note": "all twelve cookies in the battle bar show Lv.100; individual cookies not identified from the small icons" } ],
+          "pets": ["?"], "perks": "", "captain": "?", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [
+        { "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "keeps Accuracy (명중) lines; one Accuracy line ≈ 15-18M power", "thresholds": "Accuracy 1140 held; comment: 명중 760 still pushing", "why": "dropping Accuracy for power caused misses on 쫄쿨민; 15M power does not move a chapter" }
+      ],
+      "mechanics": [
+        "Author clears at the exact 35% cut ('매번 딱 투력클').",
+        "One Accuracy line swapped for power ≈ +15M to +18M team power around chapter 260-270.",
+        "Comment: Focus (집중) looks like a scam - Dark Choco's DEF shred proc does not seem affected by Focus."
+      ],
+      "rift": [], "stage_types": ["쫄쿨민 (Cool Mint stage) punished lower Accuracy"],
+      "disagreements": ["Comment: 명중 760 and still pushing stages fine, vs author's 1140 Accuracy stance."],
+      "quotes": [
+        { "kr": "나 248-30도 투력컷801에 802로 클리어하고", "en": "I cleared 248-30 at 802 with the power cut at 801" },
+        { "kr": "15m올라봤자 챕터1개도 못미는데 그냥 명중 챙기고 고생 안할래", "en": "+15M doesn't push even one chapter, so I'll keep Accuracy and not suffer" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:70074", "url": "https://m.dcinside.com/board/projectcc/70074", "date": "2026-09-18",
+      "title_kr": "248이후 35% 스테 밀때 이 조합 맞나?", "title_en": "Is this the right team for pushing 35% stages after 248?", "relevance": 2, "scope": "stage",
+      "summary_en": "A 35% pusher past 248 (currently at 254) lists perks 방어구 수리 특약 + 열정페이 with 우유 as captain and a twelve-cookie deck. Only 레드베리 (Redberry assassin) runs off to 11 o'clock and gets fought there.",
+      "clears": [ { "stage": "254-?", "boss": "", "team_power": "", "recommended_power": "", "bracket": "35", "result": "?", "play": "?", "retries": "", "team": "70074 248+ 35% deck", "note": "in progress at 254" } ],
+      "teams": [
+        { "name": "70074 248+ 35% deck", "scope": "stage", "for": "248+ stages at 35%", "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "브시커", "en": "Brightseeker Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "메론소다", "en": "Melon Soda Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "할배", "en": null, "level": "", "stars": "", "position": "", "role": "", "note": "'grandpa'; unidentified, likely 피노누아 (the deck otherwise matches dc:72776's 평상시 deck minus 피노누아)" },
+          { "kr": "치즈케이크", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" } ],
+          "pets": [], "perks": "방어구 수리 특약 + 열정페이", "captain": "우유", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["레드베리 (Redberry assassin) flees to 11 o'clock and the team fights it there."],
+      "disagreements": [],
+      "quotes": [ { "kr": "레드베리때만 11시로 튀었다가 싸우는중", "en": "Only on Redberry it bolts to 11 o'clock and then we fight" } ]
+    },
+    {
+      "source": "dc", "id": "dc:70139", "url": "https://m.dcinside.com/board/projectcc/70139", "date": "2026-09-19",
+      "title_kr": "나도 35% 248-30 깼다", "title_en": "I cleared 248-30 at 35% too", "relevance": 2, "scope": "stage",
+      "summary_en": "248-30 cleared at 35% by dropping Tiger Lily (정전) for three dealers: Scorpion, Brightseeker and Cherry Cola. The full deck in the comments keeps the 3-tank perk (3탱복지) and uses 갓방울, 초코왕방울 and a DMG-reduction pet.",
+      "clears": [ { "stage": "248-30", "boss": "", "team_power": "", "recommended_power": "", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "70139 248-30 3-dealer deck", "note": "" } ],
+      "teams": [
+        { "name": "70139 248-30 3-dealer deck", "scope": "stage", "for": "248-30 at 35%", "cookies": [
+          { "kr": "브시", "en": "Brightseeker Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "라임", "en": "Lime Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "", "role": "tank", "note": "" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "", "stars": "", "position": "", "role": "tank", "note": "" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" } ],
+          "pets": ["갓방울", "초코왕방울", "피감펫 (the DMG-reduction pet; 초코왕방울 may be it)"], "perks": "3탱복지 (3-tank perk)", "captain": "", "formation": "", "why": "정전 out, three dealers (전갈, 시커, 체콜) in", "substitutions": ["정전 → 체콜 as third dealer"], "unorthodox": ["No Tiger Lily; Cherry Cola in while still keeping the 3-tank perk"] }
+      ],
+      "builds": [], "mechanics": ["Commenter assumed adding Cherry Cola means giving up the 3-tank perk; the author keeps it (3 tanks still in)."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "정전 빼고 전갈 시커 체콜 3딜 박는 게 은근 좋네", "en": "Dropping Tiger Lily and slotting three dealers - Scorpion, Seeker, Cherry Cola - is surprisingly good" } ]
+    },
+    {
+      "source": "dc", "id": "dc:70191", "url": "https://m.dcinside.com/board/projectcc/70191", "date": "2026-09-19",
+      "title_kr": "최대한 35% 템포 따라가보려 했는데", "title_en": "Tried to keep up the 35% tempo", "relevance": 1, "scope": "stage",
+      "summary_en": "Player gives up pushing at 35% because it needs play morning, evening and dawn; switching to idle play.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["35% pushing needs frequent attention; the alternative is idling (방치형)."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "방치형으로 전환하겠다", "en": "I'm switching to idle mode" } ]
+    },
+    {
+      "source": "dc", "id": "dc:70204", "url": "https://m.dcinside.com/board/projectcc/70204", "date": "2026-09-19",
+      "title_kr": "곧 용병단 4렙가는데 스테이지 복지조합 보통 뭐야?", "title_en": "Hitting mercenary Lv.4 soon - usual stage perk combo?", "relevance": 1, "scope": "stage",
+      "summary_en": "Answer: 열정페이 + 초고속승진 for stages; if it hurts too much, the defensive DMG-reduction perk.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Stage perks: 열정페이 + 초고속승진; swap to the defensive 피감 perk when taking too much damage."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "열정페이 초고속승진", "en": "Passion Pay + Rapid Promotion" }, { "kr": "너무 아프면 방어형 피감", "en": "If it hurts too much, the defensive DMG-reduction one" } ]
+    },
+    {
+      "source": "dc", "id": "dc:70219", "url": "https://m.dcinside.com/board/projectcc/70219", "date": "2026-09-19",
+      "title_kr": "스테이지나 토벌에는 치저 무의미 아님??", "title_en": "Isn't CRIT RES meaningless in stages and conquest?", "relevance": 1, "scope": "stage",
+      "summary_en": "Asks whether bosses crit at all; the gnome lab offers CRIT RES too. Reply: keep separate gear presets for stage, arena and conquest.",
+      "clears": [], "teams": [], "builds": [ { "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "separate presets for stage / arena / conquest", "thresholds": "", "why": "CRIT RES likely useless against bosses" } ],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "그래서 프리셋 스테용 아레나용 토벌용 하는게 베스트임", "en": "So separate presets for stage, arena and conquest is best" } ]
+    },
+    {
+      "source": "dc", "id": "dc:70308", "url": "https://m.dcinside.com/board/projectcc/70308", "date": "2026-09-19",
+      "title_kr": "168 이후 All In One 단일 덱 및 보스별 스위칭 공유", "title_en": "Post-168 All-In-One single deck and per-boss switching", "relevance": 3, "scope": "stage",
+      "summary_en": "Guide by 그드득: one All-In-One deck (850.32M) clears everything past 168 except a few bosses, with Milk as captain on Passion Pay and a second perk chosen by pain (Armor Repair when it hurts, Rapid Promotion otherwise), fixed pets 갓방울 + 핫도그 and a third pet switched by boss. Per-boss swaps: Coward (Rye→Scorpion, Strawberry→Ion, try at 55%), Rider Gang bikers x3 (Rye→Scorpion, 55%), truck (Strawberry→Ion + Icy Birdie, kite until first heal ~26s), airborne bosses incl. Cool Mint (Panda Dumpling pet). At 35% everything pushes except bikers x3 and Coward; Milk must have the highest ATK so the ATK perks land on it (author lowers Skating Queen and Cherry Cola 1-2 levels).",
+      "clears": [
+        { "stage": "168+ general", "boss": "쿨링민트 / 폭주단 트럭 / 망치공주 etc.", "team_power": "", "recommended_power": "", "bracket": "35", "result": "clear", "play": "auto", "retries": "10-20", "team": "70308 All In One", "note": "'풀오토 10~20트 박으면 알아서 깨지는 수준'" },
+        { "stage": "?", "boss": "비겁한 쿠키", "team_power": "828.13M (screenshot)", "recommended_power": "", "bracket": "55", "result": "clear", "play": "?", "retries": "<20", "team": "70308 비겁한 쿠키 swap", "note": "author tunes power to 55% and clears within 20 tries; older linked post: with 명랑 debuff deck always within 10 tries, 55% very easy, 35% doable if 명랑 debuff and 20 stacks line up" },
+        { "stage": "?", "boss": "폭주단 바이커 3마리", "team_power": "862.36M (screenshot)", "recommended_power": "", "bracket": "55", "result": "clear", "play": "?", "retries": "10-20", "team": "70308 폭주단 바이커 swap", "note": "35% possible only if all three bikers' third movement bunches up (2 hours of trying)" },
+        { "stage": "?", "boss": "폭주단 트럭", "team_power": "816.1M (screenshot)", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual then auto", "retries": "", "team": "70308 폭주단 트럭 swap", "note": "spin around at 9 or 7 o'clock until first heal (~26s in-game) then let go" }
+      ],
+      "teams": [
+        { "name": "70308 All In One", "scope": "stage", "for": "all stages after 168 except 폭주단 바이커 x3 and 비겁한 쿠키 at 35%", "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "top row 1", "role": "", "note": "identified from image" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "top row 2", "role": "dealer", "note": "'딜누수가 적어서 좋음' (little damage leakage)" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "top row 3", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "top row 4", "role": "captain / buffer", "note": "must have the highest ATK on the team" },
+          { "kr": "딸기맛 (author) / 딸크 (commenter)", "en": "Strawberry Crepe Cookie (likely; cone-hat pink cookie in image)", "level": "?", "stars": "?", "position": "top row 5", "role": "", "note": "power inflation and damage (author keeps it for bikers)" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "top row 6", "role": "healer", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "bottom row 1", "role": "dealer", "note": "comment: Brightseeker cleans up Redberry which melts the front line" },
+          { "kr": "피노누아", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "bottom row 2", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "lowered 1-2 steps", "stars": "?", "position": "bottom row 3", "role": "buffer", "note": "levelled down so Milk has top ATK" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "bottom row 4", "role": "tank", "note": "needed for the Armor Repair perk" },
+          { "kr": "체리콜라", "en": "Cherry Cola Cookie", "level": "lowered 1-2 steps", "stars": "?", "position": "bottom row 5", "role": "", "note": "levelled down so Milk has top ATK" },
+          { "kr": "다크초코", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "bottom row 6", "role": "", "note": "" } ],
+          "pets": ["핫도그 (17★)", "갓방울 (20★)", "전지 (16★) - third slot, swapped per boss"], "perks": "열정페이 fixed + 방어구 특약 (when it hurts) or 초고속승진 (when it doesn't)", "captain": "우유", "formation": "power 850.32M (screenshot)",
+          "why": "One deck for everything; Milk captain + Passion Pay requires Milk to be the highest-ATK cookie.",
+          "substitutions": ["commenter: 들개 → 치케 for normal 35% stages (lose Armor Repair perk); author: rest irreplaceable", "commenter: 딸크 → 치케 gives enough damage for bikers at 35%"],
+          "unorthodox": ["Skating Queen and Cherry Cola deliberately 1-2 levels lower so Milk holds top ATK for Passion Pay / Rapid Promotion"] },
+        { "name": "70308 비겁한 쿠키 swap", "scope": "stage", "for": "비겁한 쿠키 at 55%", "cookies": [
+          { "kr": "전갈맛", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "top row 2 (replaces 호밀)", "role": "dealer", "note": "" },
+          { "kr": "이온맛", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "top row 5 (replaces 딸기)", "role": "tank", "note": "" } ],
+          "pets": ["핫도그 17", "갓방울 20", "얼음과자새 18"], "perks": "열정페이 + 방어구 특약", "captain": "우유", "formation": "rest as All In One; 828.13M", "why": "keeps power (defence) well; better to meet 55% than to add 명랑한 쿠키 and retry forever at 35%",
+          "substitutions": ["commenter: 피노 → 포도 (heal, same Rapid Fire synergy) - author tried, went back to 피노 for power", "commenter: with 비겁 use 라임 not 마카롱 or it bursts when it goes back"], "unorthodox": [] },
+        { "name": "70308 폭주단 바이커 swap", "scope": "stage", "for": "폭주단 바이커 3마리 at 55%", "cookies": [
+          { "kr": "전갈맛", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "replaces 호밀", "role": "dealer", "note": "" },
+          { "kr": "딸기맛", "en": "Strawberry Crepe Cookie (likely)", "level": "?", "stars": "?", "position": "kept", "role": "", "note": "kept for power inflation and damage; not painful enough for Ion" } ],
+          "pets": ["핫도그 17", "갓방울 20", "얼음과자새 18"], "perks": "열정페이 + 방어구 특약", "captain": "우유", "formation": "862.36M", "why": "maximise power to sit at 55%", "substitutions": [], "unorthodox": [] },
+        { "name": "70308 폭주단 트럭 swap", "scope": "stage", "for": "폭주단 트럭", "cookies": [
+          { "kr": "이온맛", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "replaces 딸기", "role": "tank", "note": "healing slightly short, so Ion + Icy Birdie" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "kept", "role": "dealer", "note": "" } ],
+          "pets": ["핫도그 17", "갓방울 20", "얼음과자새 18"], "perks": "열정페이 + 방어구 특약", "captain": "우유", "formation": "816.1M", "why": "", "substitutions": [], "unorthodox": [] },
+        { "name": "70308 airborne-boss swap", "scope": "stage", "for": "airborne bosses: 쿨링민트, 망치공주, 그루터기 etc.", "cookies": [], "pets": ["핫도그 17", "갓방울 20", "판다만두 16"], "perks": "열정페이 + 초고속승진 (방어구 특약 if it hurts)", "captain": "우유", "formation": "All In One deck, pet change only", "why": "Panda Dumpling solves airborne bosses", "substitutions": ["commenter: drop 핫도그 (its Skill AMP is minor) rather than the battery pet when switching"], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": [
+        "열정페이 (ATK +20% to the highest-ATK ally, Max HP −20%) and 초고속 승진 (ATK +7% to the highest-ATK ally) - hence Milk must top the ATK stat (commenters ask whether the captain +10% counts; unanswered).",
+        "Author pushes at 35% for ~2h a day; when 비겁 isn't reachable he quits and waits for power to reach 55%, then continues at 35%.",
+        "If cookies die before the first heal, delay engaging the boss slightly; 그루터기 clears on full auto but step back then re-engage if dying before first heal.",
+        "Cool Mint: full auto recommended; 9/7 o'clock positioning not recommended (contradicts dc:72776's 7 o'clock tip).",
+        "Older linked guide: 비겁 deck puts 명랑한 쿠키 debuff on at contact and stops playing once Scorpion reaches 18 stacks."
+      ],
+      "rift": [],
+      "stage_types": ["Airborne bosses (쿨링민트, 망치공주, 그루터기): swap third pet to 판다만두.", "Painful bosses (폭주단 트럭, 비겁한 쿠키): 얼음과자새 or 초코왕방울 as third pet + Armor Repair perk."],
+      "disagreements": [
+        "Author: 35% cannot do bikers x3 and Coward, use 55%; others in this batch (dc:71015, dc:71137, dc:71369, dc:72776) clear 비겁 at 35%.",
+        "Commenter: 피노 → 포도 more stable for 비겁 (heal); author: at 55% power matters more, keeps 피노.",
+        "Commenter: 딸크 → 치케 gives 35% damage for bikers; author prefers his deck after testing."
+      ],
+      "quotes": [
+        { "kr": "전투력 35% 상태에서도 전부 밀립니다. (35%로 안 되는 보스는 '폭주단 바이커 3마리', '비겁한 쿠키' 딱 2개뿐)", "en": "Everything pushes even at 35% power (only 'Rider Gang bikers x3' and 'Coward Cookie' don't)" },
+        { "kr": "괜히 명랑한 쿠키 넣어서 전투력 깎인 채(35%) 무한 트라이하는 것보다, 55% 전투력 맞추고 이 덱으로 20트 안에 잡는 걸 추천", "en": "Rather than adding GingerBright, losing power and retrying forever at 35%, meet 55% and kill it within 20 tries with this deck" },
+        { "kr": "우유맛 쿠키의 공격력이 무조건 1등이 되도록 세팅해야 합니다.", "en": "Milk Cookie must be set up to have the highest ATK, no exceptions" },
+        { "kr": "시작하자마자 9시든 7시든 빙글빙글 돌려주면서, 첫 힐이 발동되는 시간(인게임 기준 약 26초 쯤)까지 무빙 치다가 손 놓아주면 클리어됩니다.", "en": "(Truck) From the start circle around at 9 or 7 o'clock, keep moving until the first heal (~26s in-game), then let go and it clears" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:70437", "url": "https://m.dcinside.com/board/projectcc/70437", "date": "2026-09-19",
+      "title_kr": "아니 ㅅㅂ 328-30 명중 요구치 1200 밖에 안되네?", "title_en": "328-30 only needs 1200 Accuracy?", "relevance": 2, "scope": "stage",
+      "summary_en": "Player stacked Accuracy/Focus to 1500 Accuracy expecting the new stages to demand more, but 328-30's Accuracy requirement is only 1200.",
+      "clears": [], "teams": [], "builds": [ { "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "328-30 Accuracy requirement 1200", "why": "" } ],
+      "mechanics": ["Accuracy requirement at 328-30 = 1200 (similar to 248-30's 1203 in dc:72776), so the requirement barely rises across the new stages."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "328-30 명중 요구치 1200 밖에 안되네?", "en": "328-30's Accuracy requirement is only 1200?" } ]
+    },
+    {
+      "source": "dc", "id": "dc:70557", "url": "https://m.dcinside.com/board/projectcc/70557", "date": "2026-09-19",
+      "title_kr": "근데 무한바퀴 시간지기랑 세트메뉴아님?", "title_en": "Isn't Continuum Cog a set with the Timekeeper?", "relevance": 0, "scope": "rift",
+      "summary_en": "Banter about the 무한바퀴 pet arriving without its owner cookie.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:70577", "url": "https://m.dcinside.com/board/projectcc/70577", "date": "2026-09-19",
+      "title_kr": "무한바퀴 암만봐도 스가펫인데 20성기준 얼마 주려나", "title_en": "Continuum Cog looks like a Skill Haste pet", "relevance": 1, "scope": "rift",
+      "summary_en": "Speculation that 무한바퀴 is a Skill Haste pet; a commenter relays a leak that it is SSR, not Skill Haste, and a pet exclusive to a new infinite stage-challenge mode arriving next week.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Leak (unverified): 무한바퀴 is SSR, not a Skill Haste pet; used only in a new infinite stage-challenge mode arriving in the next patch."], "stage_types": [], "disagreements": ["아르곤: TSSR time pet ⇒ Skill Haste; leaker: SSR and not Skill Haste."],
+      "quotes": [ { "kr": "다음 주 패치 때 신규 컨텐츠로 무한 스테이지 도전 모드(약간 쿠킹덤의 오류탐험대 느낌인 듯?)가 나오는데 거기서 사용하는 컨텐츠 전용 펫?", "en": "Next week's patch adds an infinite stage-challenge mode (like Kingdom's error expedition?) and it's a pet exclusive to that content?" } ]
+    },
+    {
+      "source": "dc", "id": "dc:70634", "url": "https://m.dcinside.com/board/projectcc/70634", "date": "2026-09-19",
+      "title_kr": "보정 15%로 비겁이 잡은 사례가 있긴 하냐...", "title_en": "Has anyone killed Coward at 15%?", "relevance": 2, "scope": "stage",
+      "summary_en": "Stuck at 280-30 (Coward) at 15% even after maxing power. Commenters: nobody has, 15% would be hacking; even at 35% a good run ends with ~3s left. One says it was possible before the control rework (clumping) - he killed it at 35% with 15s left back then.",
+      "clears": [ { "stage": "280-30", "boss": "비겁한 쿠키", "team_power": "", "recommended_power": "", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "max power still only 15%" } ],
+      "teams": [], "builds": [],
+      "mechanics": ["15% on Coward considered impossible (half damage vs 35%).", "Formerly possible when DEF shred scaled with Skill AMP, and before the control rework removed clumping (뭉치기)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "35퍼도 잘쳐야 3초 언저리 남는데 딜 반토막으로 어케잡음", "en": "Even at 35% a good run leaves ~3 seconds; how do you kill it with half the damage" },
+        { "kr": "예전에 컨트롤 뭉치기 될때는 가능했음. 35%에서 15초 남기고 내가 잡았어서.", "en": "It was possible when control-clumping worked; I killed it at 35% with 15s left" },
+        { "kr": "예전에 방깍 스증적용됬을때나 가능햇음", "en": "Only possible back when DEF shred scaled with Skill AMP" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:70867", "url": "https://m.dcinside.com/board/projectcc/70867", "date": "2026-09-20",
+      "title_kr": "후반 스테이지 미는애있냐 케이크들개 꿀팁좀", "title_en": "Tips for cake hounds in late stages?", "relevance": 1, "scope": "stage",
+      "summary_en": "At 281 the cake hound packs have huge HP; even all-AoE plus Cheesecake lacks damage. Reply: use Twizzly; multi-mob is the easiest.",
+      "clears": [ { "stage": "281-?", "boss": "케이크 들개떼", "team_power": "", "recommended_power": "", "bracket": "?", "result": "fail", "play": "?", "retries": "", "team": "", "note": "" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["Cake hound packs (multi-mob): AoE (범위) + Cheesecake; Twizzly Gummy suggested."],
+      "disagreements": ["나나리: multi-mob stages are the easiest; OP: tried everything, still short."],
+      "quotes": [ { "kr": "트위즐 쓰셈", "en": "Use Twizzly" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71015", "url": "https://m.dcinside.com/board/projectcc/71015", "date": "2026-09-20",
+      "title_kr": "235-30 비겁이 35% 체콜덱", "title_en": "235-30 Coward at 35% - Cherry Cola deck", "relevance": 3, "scope": "stage",
+      "summary_en": "Formation screenshot (711.48M) of a Cherry Cola deck that clears 235-30 Coward at 35% with endless retries; includes GingerBright (명랑한 쿠키) and no Macaron. Perks 열정페이 + 초고속 승진 with Milk captain (Veteran Mercenaries Lv.4). A commenter cleared after removing Macaron as shown.",
+      "clears": [ { "stage": "235-30", "boss": "비겁한 쿠키", "team_power": "711.48M (formation)", "recommended_power": "", "bracket": "35", "result": "clear", "play": "?", "retries": "무한리트 (endless)", "team": "71015 체콜덱", "note": "commenter: gave up after many retries, removed 마카롱 per this post and cleared" } ],
+      "teams": [
+        { "name": "71015 체콜덱", "scope": "stage", "for": "비겁한 쿠키 at 35%", "cookies": [
+          { "kr": "브라이트시커", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "top row 1", "role": "dealer", "note": "" },
+          { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "top row 2", "role": "", "note": "golden butterfly-winged cookie, possibly 치즈케이크 (low confidence)" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "top row 3", "role": "", "note": "" },
+          { "kr": "라임", "en": "Lime Cookie", "level": "?", "stars": "?", "position": "top row 4", "role": "", "note": "identified from image (green)" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "top row 5", "role": "tank", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "top row 6", "role": "healer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "bottom row 1", "role": "dealer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "bottom row 2", "role": "", "note": "" },
+          { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "bottom row 3", "role": "", "note": "purple-haired cookie with grapes, possibly 포도넝쿨 (low confidence)" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "bottom row 4", "role": "captain", "note": "" },
+          { "kr": "체리콜라", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "bottom row 5", "role": "dealer", "note": "" },
+          { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "?", "stars": "?", "position": "bottom row 6", "role": "debuffer", "note": "identified from image (small gingerbread with lollipop)" } ],
+          "pets": ["갓방울 (20★)", "핫도그 (20★)", "얼음과자새 (18★)"], "perks": "열정페이 + 초고속 승진", "captain": "우유", "formation": "711.48M; the cookie list below shows twelve cookies 편성중, all Lv.100 5★ (several ascended pink stars)", "why": "",
+          "substitutions": [], "unorthodox": ["명랑한 쿠키 (GingerBright) used against 비겁 despite its power cost"] }
+      ],
+      "builds": [],
+      "mechanics": ["Veteran Mercenaries (베테랑 용병단) Lv.4: one more perk slot, 거대화 광속질주, third pet slot, captain ATK/DEF/Max HP +10% (screenshot)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "무한리트 박아라..", "en": "Just retry endlessly.." }, { "kr": "리트 좆나 박다가 포기했는데 이거 보고 마카롱 빼니까 깨졌음", "en": "I gave up after tons of retries, saw this, removed Macaron and cleared" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71037", "url": "https://m.dcinside.com/board/projectcc/71037", "date": "2026-09-20",
+      "title_kr": "300챕은 15% 로 등반해야할수준이네", "title_en": "Chapter 300 needs 15% climbing", "relevance": 1, "scope": "stage",
+      "summary_en": "Pre-easing: the 35% cut around chapter 300 is 3G. Replies: push 300 after updates; one is parked at 301.",
+      "clears": [ { "stage": "300-?", "boss": "", "team_power": "", "recommended_power": "~7.5G (derived: 35% cut 3G)", "bracket": "15", "result": "?", "play": "?", "retries": "", "team": "", "note": "35% cut quoted as 3G" } ],
+      "teams": [], "builds": [], "mechanics": ["Parking (주차) at 301 while collecting chest rewards."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "35% 컷도 3g 나 되네", "en": "Even the 35% cut is 3G" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71100", "url": "https://m.dcinside.com/board/projectcc/71100", "date": "2026-09-20",
+      "title_kr": "287에서 막혔다.. 15%는 진짜 몸비틀어도안되네", "title_en": "Stuck at 287 - 15% won't work however hard you try", "relevance": 1, "scope": "stage",
+      "summary_en": "Pre-easing, player stuck at chapter 287 at 15%.",
+      "clears": [ { "stage": "287-?", "boss": "", "team_power": "", "recommended_power": "", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "15%는 진짜 몸비틀어도안되네", "en": "15% really doesn't work no matter what" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71137", "url": "https://m.dcinside.com/board/projectcc/71137", "date": "2026-09-20",
+      "title_kr": "264-30 비겁 딱 35% 자동으로 깸", "title_en": "264-30 Coward cleared on auto at exactly 35%", "relevance": 3, "scope": "stage",
+      "summary_en": "After ~30 min of manual tries, the player set boss infinite retry and left; auto cleared 264-30 Coward at 1G 211M (35% cut 1G 208M, recommended 3G 20M). Screenshots show the team (Lv.100, one Lv.97) and the calculator thresholds; preset named '명중 집중'.",
+      "clears": [ { "stage": "264-30", "boss": "비겁한 쿠키 (1마리)", "team_power": "1G 211M (at clear; 1G 216M 732K in screenshot after gnome research)", "recommended_power": "3G 20M", "bracket": "35", "result": "clear", "play": "auto", "retries": "~30 min manual, then infinite boss retry on auto", "team": "71137 264-30 team", "note": "Calculator thresholds 264-30: 1% ≤301M 994K; 5% ≥301M 994K; 15% ≥603M 988K; 35% ≥1G 208M; 55% ≥1G 812M; 75% ≥2G 416M; 100% ≥3G 20M; 120% ≥3G 624M. Author: Scorpion poison didn't even reach 10 stacks." } ],
+      "teams": [
+        { "name": "71137 264-30 team", "scope": "stage", "for": "비겁한 쿠키 at 35%", "cookies": [
+          { "kr": "브라이트시커", "en": "Brightseeker Cookie", "level": "100", "stars": "5", "position": "bar 1", "role": "dealer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "100", "stars": "5", "position": "bar 2", "role": "dealer", "note": "" },
+          { "kr": "?", "en": null, "level": "100", "stars": "5", "position": "bar 3", "role": "", "note": "golden cookie, same as dc:71015 top row 2 (possibly 치즈케이크)" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "5", "position": "bar 4", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "100", "stars": "5", "position": "bar 5", "role": "", "note": "" },
+          { "kr": "?", "en": null, "level": "100", "stars": "5", "position": "bar 6", "role": "", "note": "purple-haired, possibly 포도넝쿨" },
+          { "kr": "라임", "en": "Lime Cookie", "level": "100", "stars": "5", "position": "bar 7", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5", "position": "bar 8", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "97", "stars": "5", "position": "bar 9", "role": "tank", "note": "" },
+          { "kr": "체리콜라", "en": "Cherry Cola Cookie", "level": "100", "stars": "5", "position": "bar 10", "role": "dealer", "note": "comment: 체콜은 신이야" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "100", "stars": "5", "position": "bar 11", "role": "healer", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco Cookie", "level": "100", "stars": "5", "position": "bar 12", "role": "", "note": "" } ],
+          "pets": ["얼음과자새", "갓방울", "핫도그"], "perks": "", "captain": "우유", "formation": "gear preset '명중 집중'; oven Lv.34; 축복 Lv.5", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": ["Auto (보스 무한 트라이 / 자동 소환 예약) can clear a 35% Coward that manual play couldn't: 'auto plays better than me'."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "보스 무한 트라이 만들어 놓고 밥먹으러갔다 왔는데 깨놨다", "en": "Set boss infinite retry, went to eat, came back and it had cleared" }, { "kr": "자동이 나보다 컨 잘한다", "en": "Auto controls better than I do" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71293", "url": "https://m.dcinside.com/board/projectcc/71293", "date": "2026-09-20",
+      "title_kr": "243-10 688.4m 35%", "title_en": "243-10 at 688.4M, 35%", "relevance": 3, "scope": "stage",
+      "summary_en": "ㅇㄹ clears 243-10 (Rider Gang biker) at 688M 402K and 35%, same setup as at 235: perks ATK20 + 7 (열정페이 + 초고속승진), core 석류 - 우유 피겨 마카롱 / 체콜 쿨민, pets 갓방울 핫도그 전지. Detailed play: kill Dark Choco on hit 1 if possible, let front line take hit 2, move back line in on hit 3; then heal + Cool Mint + Cherry Cola skills line up; a 2-1 biker split is fine if they stay on one screen, and how well Witchberry feeds Macaron decides the damage.",
+      "clears": [ { "stage": "243-10", "boss": "폭주단 바이커", "team_power": "688M 402K", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "71293 243-10 biker team", "note": "result screen shows 2.300 left on the timer" } ],
+      "teams": [
+        { "name": "71293 243-10 biker team", "scope": "stage", "for": "폭주단 바이커 3형제 (3-10 stages) at 35%", "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "bar 1", "role": "buffer", "note": "" },
+          { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "bar 2", "role": "", "note": "golden cookie (possibly 치케 per dc:72776 sheet)" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "bar 3", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "bar 4", "role": "buffer", "note": "" },
+          { "kr": "위치베리", "en": "Witchberry Cookie", "level": "100", "stars": "?", "position": "bar 5 (?)", "role": "dealer", "note": "named in comment ('마카롱을 위치베리가 얼마나 잘 먹냐')" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "bar 6", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "bar 7", "role": "tank", "note": "" },
+          { "kr": "쿨민", "en": "Cool Mint Cookie", "level": "100", "stars": "?", "position": "bar 8 (?)", "role": "", "note": "갈갈이 skill part of burst window" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "?", "role": "dealer", "note": "체리시 skill part of burst window" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "bar 11", "role": "healer", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "mentioned in play notes" } ],
+          "pets": ["갓방울", "핫도그", "전지"], "perks": "공20 + 7 (열정페이 + 초고속승진)", "captain": "우유", "formation": "same as 235; text core '석류 - 우우 피겨 마카롱 / 체콜 쿨민'", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": ["Biker fight: bikers split 2-1; a split is survivable if everyone stays on one screen, too far apart and travel time kills the DPS."],
+      "rift": [],
+      "stage_types": ["Bikers: 1st hit - kill Dark Choco if it survives (better positioning); 2nd hit - let the front line take a little; 3rd hit - put the back line in; next turn heal + Cool Mint + Cherry Cola skills land together."],
+      "disagreements": [],
+      "quotes": [ { "kr": "찢어지고 딜을 박을때 마카롱을 위치베리가 얼마나 잘 먹냐 따라서 딜이 어라? 싶을 정도로 들어갈 때 있음. 이게 클리어 조건", "en": "When they split and you burst, depending on how well Witchberry picks up Macaron's buff the damage can surprise you. That is the clear condition" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71369", "url": "https://m.dcinside.com/board/projectcc/71369", "date": "2026-09-21",
+      "title_kr": "243-30 693.5m 35%", "title_en": "243-30 at 693.5M, 35%", "relevance": 3, "scope": "stage",
+      "summary_en": "ㅇㄹ clears 243-30 Coward at 693M 568K and 35% with ~1.6s left, same as 240-30: perks DMG-reduction + HP, core 석류 - 우유 피겨 라임 / 마카롱 전갈, pets 갓방울 핫도그 얼음새.",
+      "clears": [ { "stage": "243-30", "boss": "비겁한 쿠키", "team_power": "693M 568K", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "71369 243-30 Coward team", "note": "timer shows 1.633 left; same deck as 240-30" } ],
+      "teams": [
+        { "name": "71369 243-30 Coward team", "scope": "stage", "for": "비겁한 쿠키 at 35%", "cookies": [
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "라임", "en": "Lime Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "얼음새"], "perks": "피감 + 체력", "captain": "우유", "formation": "rest of deck per dc:72776 비겁 sheet; result screen hides the bar", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "240 - 30 이랑 동일.", "en": "Same as 240-30." } ]
+    },
+    {
+      "source": "dc", "id": "dc:71385", "url": "https://m.dcinside.com/board/projectcc/71385", "date": "2026-09-21",
+      "title_kr": "283-30 비겁에서 35%안돼서 강제 졸업", "title_en": "Forced to stop at 283-30 Coward - can't reach 35%", "relevance": 2, "scope": "stage",
+      "summary_en": "Even mixing power fillers into the Coward deck, the player can't exceed 1G 960M, short of 35% at 283-30; waiting for Wednesday's update.",
+      "clears": [ { "stage": "283-30", "boss": "비겁한 쿠키", "team_power": "<1G 960M", "recommended_power": ">4.9G (derived: 35% cut above 1G 960M)", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "power fillers mixed into the Coward deck" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "기존 비겁잡는덱에 투력용 이거저거 섞어도 ㅅㅂ1g 960m을 넘기기힘드네", "en": "Even mixing power fillers into my Coward deck, hard to exceed 1G 960M" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71512", "url": "https://m.dcinside.com/board/projectcc/71512", "date": "2026-09-21",
+      "title_kr": "축6 절반 35%단 스테 근황", "title_en": "Blessing 6.5, 35%-bracket stage status", "relevance": 2, "scope": "stage",
+      "summary_en": "35%-bracket pusher at 275-8 with 1G 856M 539K (축복 Lv.6), dreading the plaza map. A commenter at 1.8G is at 272.",
+      "clears": [ { "stage": "275-8", "boss": "", "team_power": "1G 856M 539K", "recommended_power": "", "bracket": "35", "result": "?", "play": "?", "retries": "", "team": "", "note": "commenter: 1.8G at 272" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["광장맵 (plaza map) feared as the hardest map."], "disagreements": [],
+      "quotes": [ { "kr": "광장맵 나오기 전인데 손발이 부들부들 떨린다", "en": "The plaza map hasn't come yet and my hands are already shaking" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71651", "url": "https://m.dcinside.com/board/projectcc/71651", "date": "2026-09-21",
+      "title_kr": "명중집중<스캠이면 토벌전 장비를 아레나랑 겸하는게 아니라", "title_en": "If Accuracy/Focus are a scam, share conquest gear with stages, not arena?", "relevance": 2, "scope": "both",
+      "summary_en": "Proposes sharing one gear set between conquest and stages: weapons Skill AMP + crit, accessories Skill AMP + crit / DMG reduction + Skill Haste, armour CRIT RES + DMG reduction. Comments argue CRIT RES is dead in stages but kept on armour because it raises power more than flat stats; a long-time bottom-of-35% pusher says CRIT RES / DMG red / Skill Haste / Accuracy-Focus is all you need, Skill Haste above Accuracy/Focus for heal rotation.",
+      "clears": [], "teams": [],
+      "builds": [
+        { "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "weapon (sword/bow/staff): Skill AMP + crit; accessory: Skill AMP + crit / DMG reduction + Skill Haste; armour: CRIT RES + DMG reduction fixed", "thresholds": "", "why": "proposal to share with conquest" },
+        { "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "priority: CRIT RES / DMG reduction / Skill Haste / Accuracy-Focus", "thresholds": "", "why": "ㅇㅇ 3 (bottom-of-35% pusher): Skill Haste matters more than Accuracy/Focus because heal rotation is critical; buffer cookies already supply crit/Skill AMP/ATK" }
+      ],
+      "mechanics": ["CRIT RES on armour is a power (투력) stat: flat DEF/HP subs drop team power sharply, so CRIT RES is chosen for power even though bosses may not crit."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["One: CRIT RES is a dead option in stages, drops it despite power loss; other: CRIT RES chosen because flat DEF/HP aren't worth the power loss.", "Stage gear shared with conquest may drop power below the cut (flat power stats) vs substitutes cost little power."],
+      "quotes": [ { "kr": "치저/피감/스가/명집  이것만 챙기면 되겠더라. 특히 명집보다도 스가가 더중요함 힐돌리는게 너무 필요해서", "en": "CRIT RES / DMG reduction / Skill Haste / Accuracy-Focus is all you need; Skill Haste more than Accuracy/Focus because you really need heals rolling" }, { "kr": "스테이지 겸이면 방어구 치저는 필수같음 깡스탯 들어가니 투력 박살나네", "en": "If shared with stages armour CRIT RES seems mandatory; flat stats wreck your power" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71682", "url": "https://m.dcinside.com/board/projectcc/71682", "date": "2026-09-21",
+      "title_kr": "아 비겁이덱 쓰니까 15퍼 되네 ㅅㅂ", "title_en": "Using the Coward deck drops me to 15%", "relevance": 1, "scope": "stage",
+      "summary_en": "Switching to the Coward deck costs enough power to fall to the 15% bracket; stuck until the midnight reset.",
+      "clears": [ { "stage": "?", "boss": "비겁한 쿠키", "team_power": "", "recommended_power": "", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "the swap costs power" } ],
+      "teams": [], "builds": [], "mechanics": ["Boss-specific swaps can drop team power into a lower bracket."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:71750", "url": "https://m.dcinside.com/board/projectcc/71750", "date": "2026-09-21",
+      "title_kr": "248이후로도 몹한마리 나오는건 15%도 가능은 하네", "title_en": "After 248, single-mob stages work even at 15%", "relevance": 2, "scope": "stage",
+      "summary_en": "람짱 cleared a post-248 single broken-robot stage at 15% by keeping dealers stacked so Macaron's full buff lands; the following nine-mob stage is impossible at 15%.",
+      "clears": [ { "stage": ">248 (?)", "boss": "고장 로봇 (1)", "team_power": "", "recommended_power": "", "bracket": "15", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "dealers kept together for Macaron full buff" }, { "stage": ">248 (?)", "boss": "9 mobs", "team_power": "", "recommended_power": "", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "'절대 못깨고'" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["Single-mob stages are 15%-viable; multi-mob (9 mobs) are not."], "disagreements": [],
+      "quotes": [ { "kr": "딜러들 잘붙여서 마카룽 풀버프 받으니깨지긴하네", "en": "Keep the dealers together so they get Macaron's full buff and it clears" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71835", "url": "https://m.dcinside.com/board/projectcc/71835", "date": "2026-09-21",
+      "title_kr": "권투력 15퍼로 등반하는사람있음?", "title_en": "Anyone climbing at 15% of recommended?", "relevance": 2, "scope": "stage",
+      "summary_en": "35% pushes smoothly but damage bottoms out at 15%. Consensus: 15% doesn't push; only single-mob stages; 'even with every trick only half HP goes'. One commenter stops below 55% past 168.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["15% ≈ 'hacking'; only single-mob stages fall.", "Some players stop pushing once below 55% after 168."],
+      "rift": [], "stage_types": ["15%: single-mob stages only."], "disagreements": ["ㅇㅇ 1: stops below 55% after 168 vs many pushing at 35%."],
+      "quotes": [ { "kr": "35%로 밀고있는데 15%는 절대 안밀림 뭔쌩쑈를해도 반피밖에 안까짐", "en": "Pushing at 35% but 15% never works; whatever stunt you pull only half its HP goes" }, { "kr": "안밀려 15%는 단일 잡몹 이런것만 잡을 수 있음", "en": "Doesn't push; 15% only kills single mobs" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71865", "url": "https://m.dcinside.com/board/projectcc/71865", "date": "2026-09-21",
+      "title_kr": "설마 차원의 문에서 밀치기 면역+돌격형 이속이 중요해지나", "title_en": "Will push immunity + charger move speed matter in the Rift?", "relevance": 1, "scope": "rift",
+      "summary_en": "Pre-release speculation that the Rift is time-attack (faster clear = better reward), which would explain Princess Bari's kit; reply: infinite retries make that unlikely to matter.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Speculation (pre-release): time-attack rewards; counter: infinite retries."], "stage_types": [], "disagreements": ["화이트초코맛쿠키: speed matters; 캔디애플: infinite retry makes it moot."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:71873", "url": "https://m.dcinside.com/board/projectcc/71873", "date": "2026-09-21",
+      "title_kr": "281지 인데 여기부터 권투력 미쳤네", "title_en": "Recommended power goes crazy from 281", "relevance": 1, "scope": "stage",
+      "summary_en": "Pre-easing: recommended power spikes from chapter 281; 15% is hopeless.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Recommended power spikes at chapter 281 (pre-easing)."], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "15퍼 ㅈㅈ", "en": "15% - gg" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71888", "url": "https://m.dcinside.com/board/projectcc/71888", "date": "2026-09-21",
+      "title_kr": "우리섭1위 15%로 미는데 핵임?", "title_en": "Our server #1 pushes at 15% - hacking?", "relevance": 1, "scope": "stage",
+      "summary_en": "Server #1 pushing stage 300 at 15%. Replies split: 99% hacking vs top guilds already push at 15%; one frames it as 'after 248, 35% became 55% and 15% became 35%'; 15% works on some maps but Redberry assassin blocks.",
+      "clears": [ { "stage": "300-?", "boss": "", "team_power": "", "recommended_power": "", "bracket": "15", "result": "?", "play": "?", "retries": "", "team": "", "note": "second-hand report" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["15% maps exist; 레드베리 암살자 stages block."],
+      "disagreements": ["'99% hack' vs 'top all-server guilds already push at 15%'."],
+      "quotes": [ { "kr": "248이후부터 35퍼가 55돼고 15퍼가 35퍼 된 셈이라던데", "en": "They say after 248, 35% effectively became 55% and 15% became 35%" }, { "kr": "15는 밀수 있는 맵이 있고 레드베리 암살자 이런거 나오면 막힘", "en": "Some maps can be pushed at 15%; Redberry assassin and the like block you" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71892", "url": "https://m.dcinside.com/board/projectcc/71892", "date": "2026-09-21",
+      "title_kr": "15퍼 비겁이 개빡이네", "title_en": "Coward at 15% is brutal", "relevance": 3, "scope": "stage",
+      "summary_en": "An hour of retries on 256-30 Coward at 15% with 980M 464K: best is 41% boss HP left; with manual play maybe low 20s. Idea: take the deck that is 55% elsewhere and squeeze to the top of 15%. ㅇㄹ: impossible since the control rework; before it, feeding Macaron was easy and he did 35% in 14s.",
+      "clears": [ { "stage": "256-30", "boss": "비겁한 쿠키", "team_power": "980M 464K", "recommended_power": "", "bracket": "15", "result": "fail", "play": "auto", "retries": "1 hour", "team": "71892 15% attempt", "note": "best: boss at 41% HP; screenshot shows 비겁한 쿠키 41%, player Lv.171, 축복 Lv.6, preset '스킬가속셋'" } ],
+      "teams": [
+        { "name": "71892 15% attempt", "scope": "stage", "for": "256-30 비겁 at 15%", "cookies": [
+          { "kr": "브라이트시커", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "bar 2", "role": "", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "bar 3", "role": "", "note": "" },
+          { "kr": "?", "en": null, "level": "95", "stars": "?", "position": "bar 4", "role": "", "note": "" },
+          { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "bar 5", "role": "", "note": "golden cookie" },
+          { "kr": "?", "en": null, "level": "92", "stars": "?", "position": "bar 6", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "bar 8", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "95", "stars": "?", "position": "bar 9", "role": "tank", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "bar 10", "role": "", "note": "" } ],
+          "pets": ["?"], "perks": "", "captain": "우유", "formation": "bar slots 1 and 7 greyed (dead); last two slots show '+' (empty)", "why": "", "substitutions": [], "unorthodox": ["Two empty team slots visible"] }
+      ],
+      "builds": [ { "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "preset named '스킬가속셋' (Skill Haste set)", "thresholds": "", "why": "" } ],
+      "mechanics": ["The control rework (조작감 개편) removed the Macaron-feeding technique that made 35% Coward fast (14s)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "1시간 리트해서 41%가 최대임", "en": "An hour of retries and 41% is my best" }, { "kr": "조작감 개편 이후로 불가능함. 개편전에나 마카롱 먹이기 쉬워서 35%를 14초컷낸거지.", "en": "Impossible since the control rework. Before it, feeding Macaron was easy, which is how 35% was done with 14 seconds" } ]
+    },
+    {
+      "source": "dc", "id": "dc:71934", "url": "https://m.dcinside.com/board/projectcc/71934", "date": "2026-09-21",
+      "title_kr": "55%로 밀다가 35%로 미니까 왜 이렇게 딱딱해", "title_en": "Going from 55% to 35% feels so tanky", "relevance": 1, "scope": "stage",
+      "summary_en": "Dropping from 55% to 35% feels like double boss HP; a reply says final damage is actually halved (it is 35/55 ≈ 0.64).",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["55% → 35% bracket: final damage ×0.64 (commenter says 'halved')."], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "실제로 최종뎀 반토막이 맞음", "en": "Final damage really is halved" } ]
+    },
+    {
+      "source": "dc", "id": "dc:72024", "url": "https://m.dcinside.com/board/projectcc/72024", "date": "2026-09-22",
+      "title_kr": "219-30 348m 35% 비겁이 컷", "title_en": "219-30 Coward cut at 348M, 35%", "relevance": 3, "scope": "stage",
+      "summary_en": "TTO cleared 219-30 Coward at 348M, just above the 35% line; next stages fall to 15%. Screenshot: 348M 180K on 220-1, player Lv.154, oven Lv.27, plates ~Lv.75-81. Tip: once 18+ bleed stacks are up and fear lands, a window appears where remaining time and boss HP bar line up.",
+      "clears": [ { "stage": "219-30", "boss": "비겁한 쿠키", "team_power": "348M (348M 180K in screenshot)", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "barely 35%; next stages are 15% for him" } ],
+      "teams": [], "builds": [],
+      "mechanics": ["Coward: 18+ bleed (출혈) stacks + fear (공포) timing decide the clear."],
+      "rift": [], "stage_types": [], "disagreements": ["Commenter with similar power and oven level says damage is nowhere near."],
+      "quotes": [ { "kr": "출혈 18스택 이상 걸고 공포걸릴때 남은시간이랑 체력바 비슷해지는순간 있는데 그럴때 깰 각 나옴", "en": "Get 18+ bleed stacks; when fear hits there is a moment when remaining time and the HP bar match - that's your clear window" } ]
+    },
+    {
+      "source": "dc", "id": "dc:72094", "url": "https://m.dcinside.com/board/projectcc/72094", "date": "2026-09-22",
+      "title_kr": "한번 55퍼 보정맛보면", "title_en": "Once you taste 55%", "relevance": 0, "scope": "stage",
+      "summary_en": "Meme: after 55% you can't go back to 35%.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:72216", "url": "https://m.dcinside.com/board/projectcc/72216", "date": "2026-09-22",
+      "title_kr": "차원의이면 < 메인스테이지 모두 클리어시라는데", "title_en": "Rift requires clearing all main stages", "relevance": 1, "scope": "both",
+      "summary_en": "Rift entry requires clearing all main stages (328). Speculation that the easing lowers recommended power since the notice lists specific bosses before 248 but only 'lowered' after 248.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Pre-patch reading: 169-248 get specific boss changes, 248+ 'just lowered'."], "rift": ["Entry: all main stages cleared (328-30)."], "stage_types": [], "disagreements": ["구와왁: easing may not change recommended power; 언담: probably lowers it."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:72246", "url": "https://m.dcinside.com/board/projectcc/72246", "date": "2026-09-22",
+      "title_kr": "이면 내는건 스테확장 더이상 없다는거임?", "title_en": "Does the Rift mean no more stage expansion?", "relevance": 1, "scope": "rift",
+      "summary_en": "Speculation about Rift-only progression, seasons and future stage expansions.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Speculation: Rift growth is Rift-only and seasonal."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:72375", "url": "https://m.dcinside.com/board/projectcc/72375", "date": "2026-09-22",
+      "title_kr": "잠깐 스테 328까지 늘어나는 거 다깨야 차원의 이면 가능하다고?", "title_en": "Need to clear all the way to 328 for the Rift?", "relevance": 2, "scope": "both",
+      "summary_en": "Screenshot of the patch notice: main stages 169-1~328-30 difficulty eased; 169-1~248-30 specific boss rebalance: 쿨링민트맛 쿠키, 폭주단 바이커, 폭주단 트럭, 비겁한 쿠키, 생크림콘 독수리, 오염된 그루터기 정령, 레드베리 암살자, 초코크림늑대 망치공주. Poster is at 238-12 with 1G 236M 135K (축복 Lv.6), 90 stages short.",
+      "clears": [ { "stage": "238-12", "boss": "", "team_power": "1G 236M 135K", "recommended_power": "", "bracket": "?", "result": "?", "play": "auto", "retries": "", "team": "", "note": "screenshot, pre-easing" } ],
+      "teams": [], "builds": [],
+      "mechanics": ["2026-09-23 notice: 169-1~328-30 difficulty eased; 169-1~248-30 boss balance adjusted for 쿨링민트맛 쿠키 / 폭주단 바이커 / 폭주단 트럭 / 비겁한 쿠키 / 생크림콘 독수리 / 오염된 그루터기 정령 / 레드베리 암살자 / 초코크림늑대 망치공주."],
+      "rift": ["Rift requires clearing main stages to 328-30."], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "메인 스테이지 169-1~328-30 구간 난이도 완화", "en": "Main stages 169-1~328-30: difficulty eased" }, { "kr": "메인 스테이지 169-1~248-30 구간 일부 보스 밸런스 조정", "en": "Main stages 169-1~248-30: some bosses rebalanced" } ]
+    },
+    {
+      "source": "dc", "id": "dc:72379", "url": "https://m.dcinside.com/board/projectcc/72379", "date": "2026-09-22",
+      "title_kr": "무한바퀴는 레전인데 ssr이고", "title_en": "Continuum Cog is legendary yet SSR", "relevance": 0, "scope": "rift",
+      "summary_en": "Rarity banter about 무한바퀴 and Princess Bari.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:72636", "url": "https://m.dcinside.com/board/projectcc/72636", "date": "2026-09-22",
+      "title_kr": "근데 차원의 이면이 메인스테 다 뚫어야 열리는거잖아", "title_en": "The Rift needs every main stage cleared", "relevance": 1, "scope": "rift",
+      "summary_en": "Players far from 328 (e.g. at 220) ask whether they'll ever reach the Rift; replies: the easing is meant to let them climb; the Rift is a whale playground.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Seen as whale-only content at launch."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:72679", "url": "https://m.dcinside.com/board/projectcc/72679", "date": "2026-09-22",
+      "title_kr": "뭐야 스테이지 난이도 완화 왜하는건데", "title_en": "Why the stage difficulty easing?", "relevance": 1, "scope": "stage",
+      "summary_en": "A player who cleared the hard way complains; one reply predicts Coward and the bikers (쥐돌이) stay hard even after the nerf.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "비겁이 쥐돌이는 하향 해도 어려울 것 같음", "en": "Coward and the rat bikers will still be hard even after the nerf" } ]
+    },
+    {
+      "source": "dc", "id": "dc:72747", "url": "https://m.dcinside.com/board/projectcc/72747", "date": "2026-09-22",
+      "title_kr": "비겁 35%로 미는 사람들 진짜 대단하네", "title_en": "People pushing Coward at 35% are amazing", "relevance": 2, "scope": "stage",
+      "summary_en": "OP gets Coward to 10% but fear + wave combos wipe the team. Reply: conquest gear + Accuracy pet makes it easy - 3x Skill AMP/CRIT DMG, 3x Skill AMP/Skill Haste, 3x DMG red/HP, 3x DMG red/Skill Haste with 앵그리버드; a power-inflation stage set dies on the first hit. ㅇㄹ: DMG red + HP doubled is big; with gear done even the truck can be face-tanked after dodging the first charge. Context: 243 Coward with +15 plates.",
+      "clears": [ { "stage": "?", "boss": "비겁한 쿠키", "team_power": "", "recommended_power": "", "bracket": "35", "result": "fail", "play": "manual", "retries": "", "team": "", "note": "OP: down to 10% HP then wiped" } ],
+      "teams": [],
+      "builds": [ { "cookie": "team (12 gear slots)", "scope": "stage", "sugar_runes": "", "gear": "Skill AMP/CRIT DMG x3, Skill AMP/Skill Haste x3, DMG reduction/HP x3, DMG reduction/Skill Haste x3; Accuracy/Focus dropped", "thresholds": "context: 243 Coward with plates +15", "why": "survive fear + wave bursts; Accuracy pet (앵그리버드) replaces Accuracy lines" } ],
+      "mechanics": ["Gear, not cookie choice, decides survival against Coward's fear + waves.", "An Accuracy pet can replace Accuracy/Focus lines (claimed 'rarely misses').", "ㅇㄹ: after tomorrow's nerf this may not matter."],
+      "rift": [], "stage_types": ["Truck: with finished gear, dodge the first charge then trade damage."],
+      "disagreements": ["Survival gear (DMG red/HP) vs power-inflation stage set (뻥투력용 스테셋) that dies on the first hit."],
+      "quotes": [ { "kr": "스증치피 3개 스증스가 3개 피감체력3개 피감스가 3개 끼고 앵그리버드 끼니까 걍 대충 해도 폭사 안당하고 쉽게 깨짐", "en": "With 3 Skill AMP/CRIT DMG, 3 Skill AMP/Skill Haste, 3 DMG red/HP, 3 DMG red/Skill Haste and Angrybird, you don't get burst down and it clears easily" }, { "kr": "나도 뻥투력용 스테셋으로 비겁이 만나면 첫타에 다 터짐", "en": "With my power-inflation stage set, everyone dies on Coward's first hit" } ]
+    },
+    {
+      "source": "dc", "id": "dc:72776", "url": "https://m.dcinside.com/board/projectcc/72776", "date": "2026-09-22",
+      "title_kr": "너프전 248-30 801.5m 35% + 169~248 덱 정리&장비", "title_en": "Pre-nerf 248-30 at 801.5M, 35% + 169-248 deck summary & gear", "relevance": 3, "scope": "stage",
+      "summary_en": "ㅇㄹ's pre-nerf series of 35% clears (179-30 143.198M ... 248-30 801.5M) plus a spreadsheet of per-boss decks for 169-248, where 8 maps repeat ('8개맵 재탕') and bosses are keyed by map-stage. Fixed buffers/sustain, flexible dealer line; 감초 (Licorice) swapped for 이온 later for power. Gear subs on the 248-30 preset: Skill AMP 6 lines, Accuracy 4-5, Focus 3-4, Skill Haste 3-5, HP 3, DMG reduction 3 for Accuracy 1203 / Focus 1020. Suggests post-nerf, swapping HP for CRIT RES to raise power may push further.",
+      "clears": [
+        { "stage": "179-30", "boss": "비겁한 쿠키 (inferred: map 3 -30)", "team_power": "143.198M", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "series list" },
+        { "stage": "219-10", "boss": "폭주단 바이커 (inferred: map 3 -10)", "team_power": "377.7M", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "72776 3-10 바이커 3형제", "note": "series list" },
+        { "stage": "226-30", "boss": "쿨민 (inferred: map 2 -30)", "team_power": "428M", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "72776 쿨민", "note": "series list" },
+        { "stage": "227-30", "boss": "비겁한 쿠키 (inferred: map 3 -30)", "team_power": "463M", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "72776 비겁", "note": "series list" },
+        { "stage": "243-10", "boss": "폭주단 바이커", "team_power": "688.4M", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "72776 3-10 바이커 3형제", "note": "dc:71293" },
+        { "stage": "243-30", "boss": "비겁한 쿠키", "team_power": "693.5M", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "72776 비겁", "note": "dc:71369" },
+        { "stage": "248-30", "boss": "비겁한 쿠키", "team_power": "801.5M (801M 544K in screenshot)", "recommended_power": "~2.0G (derived from dc:70007's 801M 35% cut)", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "72776 비겁", "note": "timer 1.800 left; two bar slots greyed (dead)" }
+      ],
+      "teams": [
+        { "name": "72776 248-30 clear (screenshot bar)", "scope": "stage", "for": "248-30 비겁 at 35%", "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "bar 1", "role": "buffer", "note": "" },
+          { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "bar 2", "role": "", "note": "greyed/dead (sheet suggests 브시커)" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "bar 3", "role": "dealer", "note": "" },
+          { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "bar 4", "role": "", "note": "greyed/dead (sheet suggests 치케)" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "bar 5", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "bar 6", "role": "", "note": "" },
+          { "kr": "라임", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "bar 7", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "bar 8", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "bar 9", "role": "tank", "note": "" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "97", "stars": "?", "position": "bar 10", "role": "tank", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "bar 11", "role": "healer", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "bar 12", "role": "", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "얼음새"], "perks": "피감 + 체력", "captain": "우유", "formation": "text: 석류 - 우유 피겨 전갈 / 마카롱 라임", "why": "", "substitutions": [], "unorthodox": [] },
+        { "name": "72776 평상시 (default)", "scope": "stage", "for": "ordinary stages 169-248", "cookies": [
+          { "kr": "브시커", "en": "Brightseeker Cookie", "level": "", "stars": "", "position": "", "role": "dealer (fixed)", "note": "" },
+          { "kr": "메론소다", "en": "Melon Soda Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "written 닼조" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "dealer (fixed)", "note": "" },
+          { "kr": "위치베리", "en": "Witchberry Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain / buffer", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "얼음새 (판다만두 for airborne bosses)"], "perks": "sheet header: 복지 공20 / 체력5 / 피감10", "captain": "우유", "formation": "", "why": "buffers and sustain fixed; dealer line flexes with power", "substitutions": ["airborne bosses: 얼음새 ↔ 판다만두"], "unorthodox": [] },
+        { "name": "72776 10人 (10-mob stages)", "scope": "stage", "for": "10-mob stages: 들개떼 (1-3,7,9,11,19,29), 해적 추종자 (2-2,5,29), 용접봇 (3-4,13,22), 독뿔버섯 (5-10), 암살자 10인 (6-2,10,12,18), 아이스콘 듀얼나이트 (8-2,5,10,12,23,26) - all tagged '35% 보스'", "cookies": [
+          { "kr": "호밀", "en": "Rye Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "위치베리", "en": "Witchberry Cookie", "level": "", "stars": "", "position": "", "role": "dealer (fixed for 10人)", "note": "" },
+          { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "", "stars": "", "position": "", "role": "dealer (fixed for 10人)", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "메론소다", "en": "Melon Soda Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "트위즐", "en": "Twizzly Gummy Cookie", "level": "", "stars": "", "position": "", "role": "dealer (fixed for 10人)", "note": "" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "전지"], "perks": "", "captain": "우유", "formation": "", "why": "위치베리 트위즐 딸크 fixed for multi-mob", "substitutions": [], "unorthodox": [] },
+        { "name": "72776 3-10 바이커 3형제", "scope": "stage", "for": "폭주단 바이커 3형제 (map 3 stage 10), 35% boss", "cookies": [
+          { "kr": "감조", "en": "Licorice Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "written 감조; can be replaced by 이온" },
+          { "kr": "쿨민", "en": "Cool Mint Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "위치베리", "en": "Witchberry Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "전지"], "perks": "", "captain": "우유", "formation": "", "why": "1st hit Dark Choco, 2nd hit Licorice summons, 3rd hit dealers spread in the middle; right after the 3rd, push the main body right to lure bikers left", "substitutions": ["감초 → 이온 acceptable"], "unorthodox": [] },
+        { "name": "72776 4-10 독수리", "scope": "stage", "for": "생크림콘 독수리 (map 4 stage 10), 35% boss", "cookies": [
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "감조", "en": "Licorice Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "summons as bait" },
+          { "kr": "위치베리", "en": "Witchberry Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "메론소다", "en": "Melon Soda Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": [], "perks": "", "captain": "우유", "formation": "", "why": "Licorice summons as bait + long-range kiting", "substitutions": [], "unorthodox": [] },
+        { "name": "72776 5-20/30 그루터기 정령 + 망치", "scope": "stage", "for": "오염된 그루터기 정령 (map 5 stages 20, 30) and 망치공주 (6-20), 35% boss", "cookies": [
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "감조", "en": "Licorice Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "replaceable by 이온" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": [], "perks": "", "captain": "우유", "formation": "", "why": "boss's first hit taken by Dark Choco alone; wrap the boss around the 2.5th hit", "substitutions": ["all 감초 → 이온 = keep 3 tanks for the DMG-reduction perk"], "unorthodox": [] },
+        { "name": "72776 3-20 폭주단 트럭", "scope": "stage", "for": "폭주단 트럭 (map 3 stage 20), 35% boss", "cookies": [
+          { "kr": "브시커", "en": "Brightseeker Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "얼음새"], "perks": "", "captain": "우유", "formation": "", "why": "dodge the double charge twice; with finished gear, pile everyone into 7 o'clock and trade, keeping Milk's buff and Skating Queen's field", "substitutions": ["if dealers can't handle truck/Cool Mint/Coward, 명랑한 쿠키 (명쿠) instead of 브시커"], "unorthodox": [] },
+        { "name": "72776 쿨민", "scope": "stage", "for": "쿨링민트 (maps 1, 2, 6 stage 30), 35% boss", "cookies": [
+          { "kr": "브시커", "en": "Brightseeker Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "swapped for 라임 on Coward" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "판다만두"], "perks": "", "captain": "우유", "formation": "same deck as truck", "why": "push into 7 o'clock; map 1 has no adds so park at the bottom to feed Macaron; maps 2 and 6 pull diagonally away from the boss to bait jumps while keeping buffs", "substitutions": [], "unorthodox": [] },
+        { "name": "72776 비겁", "scope": "stage", "for": "비겁한 쿠키 (maps 3, 8 stage 30), 35% boss", "cookies": [
+          { "kr": "브시커", "en": "Brightseeker Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "stick to the boss" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "", "stars": "", "position": "", "role": "captain", "note": "" },
+          { "kr": "라임", "en": "Lime Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "replaces 피노 vs the Cool Mint deck" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "", "stars": "", "position": "", "role": "dealer", "note": "poison 6-8-8 → 20 stacks by turn 3" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "닼조", "en": "Dark Choco Cookie", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+          { "kr": "들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "", "stars": "", "position": "", "role": "sustain", "note": "" } ],
+          "pets": ["갓방울", "핫도그", "얼음새"], "perks": "피감 + 체력", "captain": "우유", "formation": "", "why": "Brightseeker on the boss; Scorpion poison 6, 8, 8 → 20 stacks by turn 3; fear afterwards is luck", "substitutions": ["피노 ↔ 라임 vs Cool Mint deck", "명쿠 instead of 브시커 if damage can't cope"], "unorthodox": [] }
+      ],
+      "builds": [
+        { "cookie": "team (248-30 preset)", "scope": "stage", "sugar_runes": "", "gear": "sub lines: Skill AMP 6, Accuracy 4-5, Focus 3-4, Skill Haste 3-5, HP 3, DMG reduction 3", "thresholds": "248-30: Accuracy 1203, Focus 1020", "why": "stat list for the setup: ATK, HP, DEF, CRIT%, CRIT DMG, DMG reduction, Accuracy, Focus" }
+      ],
+      "mechanics": [
+        "Chapters cycle through 8 maps ('8개맵 재탕'); bosses are keyed map-stage (e.g. 3-10 bikers, 3-20 truck, 3-30 and 8-30 Coward, 1/2/6-30 Cool Mint, 4-10 eagle, 5-20/30 stump spirit, 6-20 hammer). Every clear in this batch fits map = ((chapter − 1) mod 8) + 1 (derived, not stated).",
+        "Late in 169-248, 이온 used more than 감초 because of recommended power (Ion adds more power).",
+        "3-tank lineup keeps the DMG-reduction perk (all 감초 → 이온).",
+        "Post-nerf idea: if boss damage drops a lot, swap HP lines for CRIT RES to raise power and push more stages."
+      ],
+      "rift": [],
+      "stage_types": [
+        "Truck: dodge the double charge twice; with finished subs, stack at 7 o'clock and trade while standing in Milk's buff and Skating Queen's field.",
+        "Cool Mint: 7 o'clock; map 1 no adds - bottom to feed Macaron; maps 2 and 6 - diagonal away from the boss to bait jumps.",
+        "Coward: Brightseeker on the boss, Scorpion poison 6/8/8 = 20 by turn 3, then fear is luck.",
+        "Multi-mob (10人): Witchberry, Twizzly, Strawberry Crepe fixed."
+      ],
+      "disagreements": ["Cool Mint positioning: 7 o'clock (ㅇㄹ) vs full auto, no 9/7 o'clock (그드득, dc:70308)."],
+      "quotes": [
+        { "kr": "버퍼와 유지력을 위한 쿠키들은 고정이라 보면 되고 딜러 라인만 투력에 따라서 좀 왔다갔다 가능한데.", "en": "Buffer and sustain cookies are fixed; only the dealer line shifts with power." },
+        { "kr": "후반부로 갈수록 권장 투력 때문에 감초 대신에 이온을 더 많이 기용했음.", "en": "Further in, I used Ion over Licorice more because of recommended power." },
+        { "kr": "비겁이는 브시커를 보스에 붙이고 전갈 독 6 8 8 뭍혀서 3턴에 20 만드는 느낌으로. 그 후 공포는 운", "en": "Coward: Brightseeker on the boss, Scorpion poison 6, 8, 8 to make 20 by turn 3. After that, the fear is luck" },
+        { "kr": "보스쪽 딜량이 많이 줄을 경우 체력 빼고 치저넣어서 투력 넣는게 더 많이 스테를 밀는 전략일 수도", "en": "If boss damage drops a lot, removing HP for CRIT RES to add power may push more stages" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:72916", "url": "https://m.dcinside.com/board/projectcc/72916", "date": "2026-09-23",
+      "title_kr": "얘들아 근데 마카롱은 스테이지에서 왜 끌고다니는거야?????", "title_en": "Why carry Macaron in stages?", "relevance": 2, "scope": "both",
+      "summary_en": "Question: crit is 100% at 150-160% crit rate, why Macaron? Answers: crit rate over 100% becomes extra hits; 언담 claims 300% crit + 300% crit damage = 900% damage.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["CRIT% above 100% converts into additional hits (per in-game description, per commenter).", "Claim (언담): 300% CRIT% × 300% CRIT DMG = 900% damage."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "인게임에서 치명확률 설명 읽어보면 알 수 있는데 100% 넘어가면 추가타 개념으로 들어감", "en": "Read the in-game CRIT% description: above 100% it works as extra hits" }, { "kr": "치명300퍼 치피300퍼면 데미지가 900퍼 들어감", "en": "300% crit rate and 300% crit damage = 900% damage" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73008", "url": "https://m.dcinside.com/board/projectcc/73008", "date": "2026-09-23",
+      "title_kr": "니들이면 패치후에 뭐부터 강화하냐", "title_en": "What would you upgrade first after the patch?", "relevance": 1, "scope": "stage",
+      "summary_en": "Plates: weapon +10 Lv.102, bow +19 Lv.101, key +10 Lv.100. Reply: the bow, for Skill AMP; OP expects a +20 bow to push Accuracy above 1000 even without Accuracy lines.",
+      "clears": [], "teams": [], "builds": [ { "cookie": "plates", "scope": "both", "sugar_runes": "", "gear": "plate bow +19 → +20 first", "thresholds": "OP: bow +20 ⇒ Accuracy >1000 without Accuracy lines", "why": "Skill AMP inflation" } ],
+      "mechanics": ["Plate enhancement cap raised (25강 unlocked per dc:73905)."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:73102", "url": "https://m.dcinside.com/board/projectcc/73102", "date": "2026-09-23",
+      "title_kr": "스테 너프 권투력, 공격력, 체력 배율만 내려감", "title_en": "Stage nerf: only recommended power, ATK and HP multipliers went down", "relevance": 2, "scope": "stage",
+      "summary_en": "First report after the 2026-09-23 easing: recommended power, enemy ATK multiplier and HP multiplier were lowered (nothing else). Commenters: recommended power is everything.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["2026-09-23 easing lowered recommended power, enemy ATK multiplier and enemy HP multiplier (초코초코케이크)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "스테 너프 권투력, 공격력, 체력 배율만 내려감", "en": "Stage nerf: only recommended power, ATK and HP multipliers went down" }, { "kr": "권투력이 전부인데 뭘", "en": "Recommended power is everything anyway" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73207", "url": "https://m.dcinside.com/board/projectcc/73207", "date": "2026-09-23",
+      "title_kr": "시발 328이 4g컷이네", "title_en": "328 is a 4G cut", "relevance": 2, "scope": "both",
+      "summary_en": "After the easing, 328 (the Rift gate) needs 4G at the 35% cut; poster is over 1G short. Commenters expect spec-ups from plates and Stellar.",
+      "clears": [ { "stage": "328-30", "boss": "", "team_power": "~3G (OP is 1G+ short)", "recommended_power": "~10G (derived: 35% cut 4G)", "bracket": "15", "result": "?", "play": "?", "retries": "", "team": "", "note": "post-easing; 35% cut ≈ 4G" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": ["Rift entry (328-30) needs ~4G for the 35% bracket post-easing."], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "시발 328이 4g컷이네", "en": "Damn, 328 is a 4G cut" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73210", "url": "https://m.dcinside.com/board/projectcc/73210", "date": "2026-09-23",
+      "title_kr": "보통 스테가 35% ~ 15%까지 미니까", "title_en": "Stages are usually pushed at 35%-15%", "relevance": 1, "scope": "stage",
+      "summary_en": "Claim that stages are designed to be pushed at 35-15%; reply: 15% isn't meant to be pushed.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": ["OP: stages are pushed at 35-15%; Xpeng: 15% isn't pushable."], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:73636", "url": "https://m.dcinside.com/board/projectcc/73636", "date": "2026-09-23",
+      "title_kr": "변경된 권장 전투력 및 신규 컨텐츠 전투력 반영", "title_en": "Changed recommended power and new-content power added (calculator)", "relevance": 3, "scope": "both",
+      "summary_en": "alkapa.gg stage calculator updated for the new recommended powers and the Rift. Screenshot: 248-30 (Coward) at 1100M is now 55% (−45% damage from power shortfall), next target 75% at 1,123.43M; Accuracy for 100% hit rate 1,203. Commenters: 'I'm at 55% now, the cut crashed'.",
+      "clears": [ { "stage": "248-30", "boss": "비겁한 쿠키", "team_power": "1,100M (calculator input)", "recommended_power": "~1,404M (derived: 75% target 1,123.43M ÷ 0.8)", "bracket": "55", "result": "?", "play": "?", "retries": "", "team": "", "note": "post-easing; pre-easing 35% cut was 801M (≈2.0G recommended), so recommended power fell ≈30%" } ],
+      "teams": [], "builds": [ { "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "248-30 Accuracy for 100% hit: 1,203 (unchanged vs dc:72776)", "why": "" } ],
+      "mechanics": ["Post-easing 248-30 recommended ≈1.40G vs ≈2.0G before (derived).", "Accuracy requirement at 248-30 stays 1,203 after the easing.", "Calculator reports damage loss from power shortfall ('전투력 부족으로 피해 45% 감소' at 55%)."],
+      "rift": ["alkapa.gg calculator gained a 차원의 이면 tab."], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "지금 55퍼였네 컷 개떡락했노", "en": "I'm at 55% now, the cut crashed" }, { "kr": "진심 떡너프됐네", "en": "Seriously nerfed hard" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73646", "url": "https://m.dcinside.com/board/projectcc/73646", "date": "2026-09-23",
+      "title_kr": "이면 100단계 권장전투력 ㅋㅋ", "title_en": "Rift level 100 recommended power lol", "relevance": 2, "scope": "rift",
+      "summary_en": "alkapa calculator: Rift level 100 recommended power 17,996.65억 (≈1,800G), enemy evasion 13,118, enemy resistance 12,660, 30s time limit, opponent 비겁한 쿠키 ×1, season 1, levels 1-100, entry after 328-30. ㅇㄹ: post-update stages crashed, 4G ends the last stage.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["ㅇㄹ: after the update, 4G reaches the final stage."],
+      "rift": ["Rift level 100: recommended 17,996.65억 (~1,799.7G); enemy evasion 13,118; enemy resistance 12,660; battle limit 30s; opponent 비겁한 쿠키 ×1; season 1 · 100 levels; entry after 328-30 clear (alkapa.gg screenshot)."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "업뎃 되서 보고오니 스테 개떡락했네 ㅋㅋ 4G면 막스테 끝이네", "en": "After the update the stages crashed lol, 4G finishes the last stage" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73663", "url": "https://m.dcinside.com/board/projectcc/73663", "date": "2026-09-23",
+      "title_kr": "권투력 이사이트 반영됐네", "title_en": "Recommended power updated on this site", "relevance": 2, "scope": "stage",
+      "summary_en": "Yesterday the poster's 55% reach ended at chapter 257; after the easing 55% reaches 273, and 258 was actually at 75%.",
+      "clears": [ { "stage": "258-?", "boss": "", "team_power": "", "recommended_power": "", "bracket": "75", "result": "clear", "play": "auto", "retries": "", "team": "", "note": "post-easing; pre-easing 55% reach was chapter 257, now 273" } ],
+      "teams": [], "builds": [], "mechanics": ["Easing shifted one player's 55% reach from chapter 257 to 273 (≈16 chapters)."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [ { "kr": "내가어제257지까지가 55%였는데 지금은 55%로 273지까지되네", "en": "Yesterday 55% took me to 257; now 55% goes to 273" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73686", "url": "https://m.dcinside.com/board/projectcc/73686", "date": "2026-09-23",
+      "title_kr": "이거 스테이지얼마나 너프된거임??", "title_en": "How much were stages nerfed?", "relevance": 1, "scope": "stage",
+      "summary_en": "Guesses: 20-30% nerf, or 'nerfed to 1-168 level'; crumblehub (허브) not yet updated.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Guesses: ~20-30% nerf; another says like the 1-168 range."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:73714", "url": "https://m.dcinside.com/board/projectcc/73714", "date": "2026-09-23",
+      "title_kr": "권장 투력은 그대로고 난이도만 하향조정 한거임?", "title_en": "Recommended power the same, only difficulty lowered?", "relevance": 2, "scope": "stage",
+      "summary_en": "언담: both were lowered; at 35% it pushes straight through.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Both recommended power and difficulty lowered; 35% now pushes continuously (언담)."], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "둘다 하향임 35퍼인데 쭈욱밀림", "en": "Both lowered; I'm at 35% and it pushes straight through" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73763", "url": "https://m.dcinside.com/board/projectcc/73763", "date": "2026-09-23",
+      "title_kr": "권투력 사이트에 명중 집중 입력하는칸 있던데", "title_en": "Where to find Accuracy/Focus for the calculator", "relevance": 1, "scope": "stage",
+      "summary_en": "Accuracy and Focus are shown by tapping a cookie in the list under the stage screen.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Per-cookie Accuracy/Focus visible by tapping a cookie in the stage-screen list."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:73769", "url": "https://m.dcinside.com/board/projectcc/73769", "date": "2026-09-23",
+      "title_kr": "차원의 이면 << 이건 좆뉴비는 평생 못 하는 컨텐츠임?", "title_en": "Will new players ever reach the Rift?", "relevance": 1, "scope": "rift",
+      "summary_en": "Discussion of whether stage expansion will pause to let players reach the Rift; low spenders estimated a week out.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Estimate: low spenders need about another week to reach 328."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:73788", "url": "https://m.dcinside.com/board/projectcc/73788", "date": "2026-09-23",
+      "title_kr": "328-30 35%도 4g인데 이거 최신화 된거지?", "title_en": "328-30 at 35% is 4G - is that up to date?", "relevance": 1, "scope": "both",
+      "summary_en": "Post-easing 328-30 35% cut quoted as 4G; asks whether 15% pushing is the way into the Rift.",
+      "clears": [ { "stage": "328-30", "boss": "", "team_power": "", "recommended_power": "~10G (derived: 35% cut 4G)", "bracket": "?", "result": "?", "play": "?", "retries": "", "team": "", "note": "" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:73905", "url": "https://m.dcinside.com/board/projectcc/73905", "date": "2026-09-23",
+      "title_kr": "328 4g요?", "title_en": "328 at 4G?", "relevance": 1, "scope": "both",
+      "summary_en": "Is 4G possible? Replies: plate +25 is unlocked so yes; someone already has 4G.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Plate enhancement up to +25 unlocked with the 2026-09-23 patch."], "rift": [], "stage_types": [], "disagreements": [], "quotes": [ { "kr": "25강 풀렸으니 쌉가눙하제", "en": "+25 is unlocked, so totally possible" } ]
+    },
+    {
+      "source": "dc", "id": "dc:73952", "url": "https://m.dcinside.com/board/projectcc/73952", "date": "2026-09-23",
+      "title_kr": "292가면 다시 35%단되네", "title_en": "At 292 you're back to the 35% bracket", "relevance": 2, "scope": "stage",
+      "summary_en": "Post-easing, one player falls to 35% at chapter 292 and 15% at 308 (their power not stated).",
+      "clears": [ { "stage": "292-?", "boss": "", "team_power": "", "recommended_power": "", "bracket": "35", "result": "?", "play": "?", "retries": "", "team": "", "note": "post-easing" }, { "stage": "308-?", "boss": "", "team_power": "", "recommended_power": "", "bracket": "15", "result": "?", "play": "?", "retries": "", "team": "", "note": "post-easing" } ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": [
+    { "kr": "쥐돌이", "en": "'rat-boy': nickname for 폭주단 바이커 (rat bikers)", "kind": "boss", "confidence": "high", "evidence": "dc:70308 comment '비겁이랑 쥐돌이때문에 55%로' where the guide names bikers and Coward as the only non-35% bosses; dc:72679" },
+    { "kr": "폭주단 바이커", "en": "Rider Gang bikers (boss; 3 bikers, '바이커 3형제')", "kind": "boss", "confidence": "low", "evidence": "dc:70308, dc:71293 result screen, dc:72776 sheet 3-10" },
+    { "kr": "폭주단 트럭", "en": "Rider Gang truck (boss)", "kind": "boss", "confidence": "low", "evidence": "dc:70308, dc:72776 sheet 3-20" },
+    { "kr": "생크림콘 독수리", "en": "Whipped-cream-cone eagle (boss, 독수리)", "kind": "boss", "confidence": "low", "evidence": "dc:72375 notice; dc:72776 sheet 4-10 독수리" },
+    { "kr": "오염된 그루터기 정령", "en": "Corrupted stump spirit (boss, 그루터기)", "kind": "boss", "confidence": "low", "evidence": "dc:72375 notice; dc:72776 sheet 5-20, 30" },
+    { "kr": "레드베리 암살자", "en": "Redberry assassin (boss)", "kind": "boss", "confidence": "low", "evidence": "dc:72375 notice; dc:70074; dc:71888" },
+    { "kr": "초코크림늑대 망치공주", "en": "Choco-cream-wolf hammer princess (boss, 망치공주)", "kind": "boss", "confidence": "low", "evidence": "dc:72375 notice; dc:72776 sheet 6-20 망치" },
+    { "kr": "들개떼", "en": "cake hound pack (10-mob stage)", "kind": "boss", "confidence": "low", "evidence": "dc:72776 sheet '들개떼 10마리'; dc:70867 케이크들개" },
+    { "kr": "해적 추종자", "en": "pirate followers (10-mob stage)", "kind": "boss", "confidence": "low", "evidence": "dc:72776 sheet" },
+    { "kr": "용접봇", "en": "welding bots (10-mob stage)", "kind": "boss", "confidence": "low", "evidence": "dc:72776 sheet" },
+    { "kr": "독뿔버섯", "en": "poison horn mushrooms (10-mob stage)", "kind": "boss", "confidence": "low", "evidence": "dc:72776 sheet" },
+    { "kr": "아이스콘 듀얼나이트", "en": "ice-cone dual knights (10-mob stage)", "kind": "boss", "confidence": "low", "evidence": "dc:72776 sheet" },
+    { "kr": "고장 로봇", "en": "broken robot (single-mob stage)", "kind": "boss", "confidence": "low", "evidence": "dc:71750" },
+    { "kr": "쫄쿨민", "en": "Cool Mint stage with adds (쫄 = minions), low confidence", "kind": "boss", "confidence": "low", "evidence": "dc:70007" },
+    { "kr": "명쿠", "en": "GingerBright (명랑한 쿠키, shorthand)", "kind": "cookie", "confidence": "high", "evidence": "dc:72776 sheet '브시커 대신 명쿠'; dc:70308 명랑쿠키 debuff" },
+    { "kr": "감조", "en": "Licorice Cookie (감초, spelling in dc:72776 sheet)", "kind": "cookie", "confidence": "high", "evidence": "dc:72776 sheet cells vs body text '감초 대신에 이온'" },
+    { "kr": "닼조", "en": "Dark Choco Cookie (spelling of 닼초)", "kind": "cookie", "confidence": "high", "evidence": "dc:72776 sheet" },
+    { "kr": "할배", "en": "'grandpa' - unidentified cookie, likely 피노누아", "kind": "cookie", "confidence": "low", "evidence": "dc:70074 deck otherwise matches dc:72776 평상시 deck minus 피노누아" },
+    { "kr": "딸기맛", "en": "used by 그드득 (dc:70308) for the deck's Strawberry Crepe slot; commenters say 딸크", "kind": "cookie", "confidence": "low", "evidence": "dc:70308 image shows cone-hat pink cookie; comment '딸크 자리에 치케'" },
+    { "kr": "트위즐", "en": "Twizzly Gummy Cookie (shorthand)", "kind": "cookie", "confidence": "high", "evidence": "dc:70867, dc:72776" },
+    { "kr": "얼음새", "en": "Icy Birdie (얼음과자새, pet shorthand)", "kind": "pet", "confidence": "high", "evidence": "dc:71369, dc:72776" },
+    { "kr": "앵그리버드", "en": "Accuracy pet, probably 앵앵베리버드 (Berry Angrybeak)", "kind": "pet", "confidence": "low", "evidence": "dc:72747 '명중펫 ... 앵그리버드'" },
+    { "kr": "피감펫", "en": "DMG-reduction pet (probably 초코왕방울)", "kind": "pet", "confidence": "low", "evidence": "dc:70139" },
+    { "kr": "3탱복지", "en": "3-tank perk: the DMG-reduction mercenary perk that needs three tanks in the team", "kind": "term", "confidence": "low", "evidence": "dc:70139; dc:72776 '3탱 유지로 피감 복지'" },
+    { "kr": "방어구 특약", "en": "Armor Repair perk (방어구 수리 특약) shorthand; needs 들개 (tank) per dc:70308", "kind": "term", "confidence": "high", "evidence": "dc:70308, dc:70074" },
+    { "kr": "35%단", "en": "the 35% bracket (pushing at 40-59% of recommended power)", "kind": "term", "confidence": "high", "evidence": "dc:71512, dc:73952" },
+    { "kr": "투력컷", "en": "power cut: team power threshold for a bracket", "kind": "term", "confidence": "high", "evidence": "dc:70007" },
+    { "kr": "권투력", "en": "recommended power (권장 전투력)", "kind": "term", "confidence": "high", "evidence": "dc:71835, dc:73102" },
+    { "kr": "에어본 보스", "en": "airborne bosses (쿨링민트, 망치공주, 그루터기) - counter with 판다만두 pet", "kind": "term", "confidence": "high", "evidence": "dc:70308, dc:72776" },
+    { "kr": "10人", "en": "10-mob stage deck (multi-mob)", "kind": "term", "confidence": "high", "evidence": "dc:72776 sheet" },
+    { "kr": "8개맵 재탕", "en": "the 8 stage maps repeat across chapters; bosses keyed map-stage", "kind": "term", "confidence": "high", "evidence": "dc:72776 sheet header" },
+    { "kr": "광장맵", "en": "plaza map (feared late-stage map)", "kind": "term", "confidence": "low", "evidence": "dc:71512" },
+    { "kr": "뻥투력용 스테셋", "en": "power-inflation stage gear set", "kind": "term", "confidence": "high", "evidence": "dc:72747" },
+    { "kr": "명집", "en": "Accuracy + Focus (명중 집중)", "kind": "stat", "confidence": "high", "evidence": "dc:70437, dc:71651" },
+    { "kr": "출혈", "en": "Bleed (stacking DoT on Coward; 18+ stacks)", "kind": "term", "confidence": "low", "evidence": "dc:72024" },
+    { "kr": "공포", "en": "Fear (Coward Cookie's control)", "kind": "term", "confidence": "low", "evidence": "dc:72024, dc:72747, dc:72776" },
+    { "kr": "조작감 개편", "en": "control-feel rework (removed clumping/Macaron-feeding techniques)", "kind": "term", "confidence": "low", "evidence": "dc:71892, dc:70634" },
+    { "kr": "축복", "en": "Blessing level (account progression shown top-right, e.g. 축복 Lv.6)", "kind": "term", "confidence": "low", "evidence": "screenshots dc:71512, dc:71892" },
+    { "kr": "적 회피 / 적 저항", "en": "enemy Evasion / enemy Resistance (Rift level stats, countered by Accuracy / Focus)", "kind": "stat", "confidence": "low", "evidence": "dc:73646 alkapa screenshot" },
+    { "kr": "주차", "en": "parking: staying on a stage to farm", "kind": "term", "confidence": "high", "evidence": "dc:71037 '301주차중'" }
+  ]
+}

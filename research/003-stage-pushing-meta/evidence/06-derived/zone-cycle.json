@@ -1,0 +1,1526 @@
+{
+ "rule": "zone_index = ((chapter - 1) mod 8) + 1",
+ "source": "stage-table.json (crumblehub game data 1.4.002)",
+ "zones": [
+  {
+   "zone_index": 1,
+   "zone": "초원 (grassland)",
+   "chapters_from_169_matching": 20,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 20,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "뿔꿈틀이",
+     "boss_en": "Jelly Worm",
+     "boss_count": 1
+    },
+    {
+     "stage": 2,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 2
+    },
+    {
+     "stage": 3,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 9
+    },
+    {
+     "stage": 4,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 6
+    },
+    {
+     "stage": 5,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 3
+    },
+    {
+     "stage": 6,
+     "boss": "딸기꼬리 초코전갈",
+     "boss_en": "Berrytail Choco Scorpion",
+     "boss_count": 1
+    },
+    {
+     "stage": 7,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 9
+    },
+    {
+     "stage": 8,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 3
+    },
+    {
+     "stage": 9,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 9
+    },
+    {
+     "stage": 10,
+     "boss": "초코 왕방울",
+     "boss_en": "King Choco Drop",
+     "boss_count": 1
+    },
+    {
+     "stage": 11,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 10
+    },
+    {
+     "stage": 12,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 2
+    },
+    {
+     "stage": 13,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 2
+    },
+    {
+     "stage": 14,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 6
+    },
+    {
+     "stage": 15,
+     "boss": "딸기꼬리 초코전갈",
+     "boss_en": "Berrytail Choco Scorpion",
+     "boss_count": 3
+    },
+    {
+     "stage": 16,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 2
+    },
+    {
+     "stage": 18,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 3
+    },
+    {
+     "stage": 19,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 10
+    },
+    {
+     "stage": 20,
+     "boss": "뿔꿈틀이",
+     "boss_en": "Jelly Worm",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "딸기꼬리 초코전갈",
+     "boss_en": "Berrytail Choco Scorpion",
+     "boss_count": 1
+    },
+    {
+     "stage": 23,
+     "boss": "딸기꼬리 초코전갈",
+     "boss_en": "Berrytail Choco Scorpion",
+     "boss_count": 3
+    },
+    {
+     "stage": 24,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 2
+    },
+    {
+     "stage": 25,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "생크림 케이크 늑대",
+     "boss_en": "Cream Cake Wolf",
+     "boss_count": 2
+    },
+    {
+     "stage": 27,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 6
+    },
+    {
+     "stage": 28,
+     "boss": "딸기꼬리 초코전갈",
+     "boss_en": "Berrytail Choco Scorpion",
+     "boss_count": 1
+    },
+    {
+     "stage": 29,
+     "boss": "케이크 들개떼",
+     "boss_en": "Cake Hound Pack",
+     "boss_count": 10
+    },
+    {
+     "stage": 30,
+     "boss": "쿨링민트맛 쿠키",
+     "boss_en": "Cool Mint Cookie",
+     "boss_count": 1
+    }
+   ]
+  },
+  {
+   "zone_index": 2,
+   "zone": "해변 (beach)",
+   "chapters_from_169_matching": 20,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 20,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "두리안 해적 견습선원",
+     "boss_en": "Durianeer Deckfruit",
+     "boss_count": 3
+    },
+    {
+     "stage": 2,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 10
+    },
+    {
+     "stage": 3,
+     "boss": "두리안 해적 견습선원",
+     "boss_en": "Durianeer Deckfruit",
+     "boss_count": 3
+    },
+    {
+     "stage": 4,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 5,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 10
+    },
+    {
+     "stage": 6,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 7,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 8,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 6
+    },
+    {
+     "stage": 9,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 6
+    },
+    {
+     "stage": 10,
+     "boss": "망고스틴 해적 물폭탄광",
+     "boss_en": "Mangosteen Water Bomber",
+     "boss_count": 1
+    },
+    {
+     "stage": 11,
+     "boss": "두리안 해적 견습선원",
+     "boss_en": "Durianeer Deckfruit",
+     "boss_count": 2
+    },
+    {
+     "stage": 12,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 6
+    },
+    {
+     "stage": 13,
+     "boss": "두리안 해적 견습선원",
+     "boss_en": "Durianeer Deckfruit",
+     "boss_count": 2
+    },
+    {
+     "stage": 14,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 15,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 16,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 18,
+     "boss": "두리안 해적 견습선원",
+     "boss_en": "Durianeer Deckfruit",
+     "boss_count": 2
+    },
+    {
+     "stage": 19,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 6
+    },
+    {
+     "stage": 20,
+     "boss": "망고스틴 해적 물폭탄광",
+     "boss_en": "Mangosteen Water Bomber",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 23,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 6
+    },
+    {
+     "stage": 24,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 25,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 6
+    },
+    {
+     "stage": 27,
+     "boss": "블루베리 크림 소라게",
+     "boss_en": "Blueberry Cream Hermit Crab",
+     "boss_count": 2
+    },
+    {
+     "stage": 28,
+     "boss": "두리안 해적 견습선원",
+     "boss_en": "Durianeer Deckfruit",
+     "boss_count": 3
+    },
+    {
+     "stage": 29,
+     "boss": "두리안 해적 추종자",
+     "boss_en": "Durianeer Fanfruit",
+     "boss_count": 10
+    },
+    {
+     "stage": 30,
+     "boss": "쿨링민트맛 쿠키",
+     "boss_en": "Cool Mint Cookie",
+     "boss_count": 1
+    }
+   ]
+  },
+  {
+   "zone_index": 3,
+   "zone": "폐허 도시 (ruined city)",
+   "chapters_from_169_matching": 20,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 20,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 2,
+     "boss": "폭주단 바이커",
+     "boss_en": "Rowdy Biker",
+     "boss_count": 1
+    },
+    {
+     "stage": 3,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 4,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 10
+    },
+    {
+     "stage": 5,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 6,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 7,
+     "boss": "고장 난 수거봇",
+     "boss_en": "Broken Collection Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 8,
+     "boss": "폭주단 바이커",
+     "boss_en": "Rowdy Biker",
+     "boss_count": 1
+    },
+    {
+     "stage": 9,
+     "boss": "고장 난 수거봇",
+     "boss_en": "Broken Collection Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 10,
+     "boss": "폭주단 바이커",
+     "boss_en": "Rowdy Biker",
+     "boss_count": 3
+    },
+    {
+     "stage": 11,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 6
+    },
+    {
+     "stage": 12,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 5
+    },
+    {
+     "stage": 13,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 10
+    },
+    {
+     "stage": 14,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 15,
+     "boss": "폭주단 바이커",
+     "boss_en": "Rowdy Biker",
+     "boss_count": 1
+    },
+    {
+     "stage": 16,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 18,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 19,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 20,
+     "boss": "폭주단 트럭",
+     "boss_en": "Rowdy Truck",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 10
+    },
+    {
+     "stage": 23,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 5
+    },
+    {
+     "stage": 24,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 6
+    },
+    {
+     "stage": 25,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "고장 난 수거봇",
+     "boss_en": "Broken Collection Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 27,
+     "boss": "고장 난 청소봇",
+     "boss_en": "Broken Cleaning Bot",
+     "boss_count": 2
+    },
+    {
+     "stage": 28,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 6
+    },
+    {
+     "stage": 29,
+     "boss": "고장 난 용접봇",
+     "boss_en": "Broken Welding Bot",
+     "boss_count": 5
+    },
+    {
+     "stage": 30,
+     "boss": "비겁한 쿠키",
+     "boss_en": "GingerCraven",
+     "boss_count": 1
+    }
+   ]
+  },
+  {
+   "zone_index": 4,
+   "zone": "사막 (desert)",
+   "chapters_from_169_matching": 20,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 20,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 2
+    },
+    {
+     "stage": 2,
+     "boss": "선인장 거미",
+     "boss_en": "Spactus",
+     "boss_count": 3
+    },
+    {
+     "stage": 3,
+     "boss": "선인장 거미",
+     "boss_en": "Spactus",
+     "boss_count": 3
+    },
+    {
+     "stage": 4,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 2
+    },
+    {
+     "stage": 5,
+     "boss": "선인장 거미",
+     "boss_en": "Spactus",
+     "boss_count": 3
+    },
+    {
+     "stage": 6,
+     "boss": "선인장 거미",
+     "boss_en": "Spactus",
+     "boss_count": 3
+    },
+    {
+     "stage": 7,
+     "boss": "생크림콘 독수리",
+     "boss_en": "Cream Eagle",
+     "boss_count": 1
+    },
+    {
+     "stage": 8,
+     "boss": "선인장 거미",
+     "boss_en": "Spactus",
+     "boss_count": 3
+    },
+    {
+     "stage": 9,
+     "boss": "은행강도 저격수",
+     "boss_en": "Ginkgoblin Sharpshooter",
+     "boss_count": 2
+    },
+    {
+     "stage": 10,
+     "boss": "생크림콘 독수리",
+     "boss_en": "Cream Eagle",
+     "boss_count": 2
+    },
+    {
+     "stage": 11,
+     "boss": "은행강도 저격수",
+     "boss_en": "Ginkgoblin Sharpshooter",
+     "boss_count": 3
+    },
+    {
+     "stage": 12,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 2
+    },
+    {
+     "stage": 13,
+     "boss": "생크림콘 독수리",
+     "boss_en": "Cream Eagle",
+     "boss_count": 1
+    },
+    {
+     "stage": 14,
+     "boss": "은행강도 저격수",
+     "boss_en": "Ginkgoblin Sharpshooter",
+     "boss_count": 2
+    },
+    {
+     "stage": 15,
+     "boss": "은행강도 저격수",
+     "boss_en": "Ginkgoblin Sharpshooter",
+     "boss_count": 3
+    },
+    {
+     "stage": 16,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "생크림콘 독수리",
+     "boss_en": "Cream Eagle",
+     "boss_count": 1
+    },
+    {
+     "stage": 18,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 3
+    },
+    {
+     "stage": 19,
+     "boss": "선인장 거미",
+     "boss_en": "Spactus",
+     "boss_count": 3
+    },
+    {
+     "stage": 20,
+     "boss": "은행강도 돌격대",
+     "boss_en": "Ginkgoblin Stormer",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 2
+    },
+    {
+     "stage": 23,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 2
+    },
+    {
+     "stage": 24,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 3
+    },
+    {
+     "stage": 25,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 3
+    },
+    {
+     "stage": 27,
+     "boss": "은행강도 저격수",
+     "boss_en": "Ginkgoblin Sharpshooter",
+     "boss_count": 2
+    },
+    {
+     "stage": 28,
+     "boss": "은행강도 폭탄광",
+     "boss_en": "Ginkgoblin Bomber",
+     "boss_count": 2
+    },
+    {
+     "stage": 29,
+     "boss": "은행강도 저격수",
+     "boss_en": "Ginkgoblin Sharpshooter",
+     "boss_count": 3
+    },
+    {
+     "stage": 30,
+     "boss": "은행강도 돌격대",
+     "boss_en": "Ginkgoblin Stormer",
+     "boss_count": 1
+    }
+   ]
+  },
+  {
+   "zone_index": 5,
+   "zone": "버섯지대 (mushroom zone)",
+   "chapters_from_169_matching": 20,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 20,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 2,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 4
+    },
+    {
+     "stage": 3,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 4,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 5
+    },
+    {
+     "stage": 5,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 4
+    },
+    {
+     "stage": 6,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 5
+    },
+    {
+     "stage": 7,
+     "boss": "오염된 석류 까마귀",
+     "boss_en": "Tainted Pomegranate Crow",
+     "boss_count": 3
+    },
+    {
+     "stage": 8,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 6
+    },
+    {
+     "stage": 9,
+     "boss": "오염된 석류 까마귀",
+     "boss_en": "Tainted Pomegranate Crow",
+     "boss_count": 3
+    },
+    {
+     "stage": 10,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 10
+    },
+    {
+     "stage": 11,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 12,
+     "boss": "오염된 석류 까마귀",
+     "boss_en": "Tainted Pomegranate Crow",
+     "boss_count": 3
+    },
+    {
+     "stage": 13,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 14,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 15,
+     "boss": "오염된 석류 까마귀",
+     "boss_en": "Tainted Pomegranate Crow",
+     "boss_count": 5
+    },
+    {
+     "stage": 16,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 6
+    },
+    {
+     "stage": 18,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 19,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 5
+    },
+    {
+     "stage": 20,
+     "boss": "오염된 그루터기 정령",
+     "boss_en": "Tainted Ent",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "오염된 석류 까마귀",
+     "boss_en": "Tainted Pomegranate Crow",
+     "boss_count": 5
+    },
+    {
+     "stage": 23,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 24,
+     "boss": "오염된 석류 까마귀",
+     "boss_en": "Tainted Pomegranate Crow",
+     "boss_count": 5
+    },
+    {
+     "stage": 25,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 27,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 4
+    },
+    {
+     "stage": 28,
+     "boss": "석류 풍뎅이",
+     "boss_en": "Pomegranate Beetle",
+     "boss_count": 2
+    },
+    {
+     "stage": 29,
+     "boss": "독뿔버섯",
+     "boss_en": "Poison Shroomer",
+     "boss_count": 6
+    },
+    {
+     "stage": 30,
+     "boss": "오염된 그루터기 정령",
+     "boss_en": "Tainted Ent",
+     "boss_count": 1
+    }
+   ]
+  },
+  {
+   "zone_index": 6,
+   "zone": "광장 (plaza)",
+   "chapters_from_169_matching": 20,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 20,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "젤리 왕꿀벌",
+     "boss_en": "Queen Jelly Bee",
+     "boss_count": 3
+    },
+    {
+     "stage": 2,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 12
+    },
+    {
+     "stage": 3,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 5
+    },
+    {
+     "stage": 4,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 5,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 6,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 6
+    },
+    {
+     "stage": 7,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 8,
+     "boss": "젤리 왕꿀벌",
+     "boss_en": "Queen Jelly Bee",
+     "boss_count": 3
+    },
+    {
+     "stage": 9,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 10,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 10
+    },
+    {
+     "stage": 11,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 5
+    },
+    {
+     "stage": 12,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 12
+    },
+    {
+     "stage": 13,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 14,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 15,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 5
+    },
+    {
+     "stage": 16,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 18,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 12
+    },
+    {
+     "stage": 19,
+     "boss": "젤리 왕꿀벌",
+     "boss_en": "Queen Jelly Bee",
+     "boss_count": 1
+    },
+    {
+     "stage": 20,
+     "boss": "초코크림 늑대 망치공주",
+     "boss_en": "Choco Werehound Princess",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 23,
+     "boss": "젤리 왕꿀벌",
+     "boss_en": "Queen Jelly Bee",
+     "boss_count": 1
+    },
+    {
+     "stage": 24,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 6
+    },
+    {
+     "stage": 25,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "레드베리 암살자",
+     "boss_en": "Redberry Assassin",
+     "boss_count": 6
+    },
+    {
+     "stage": 27,
+     "boss": "젤리 왕꿀벌",
+     "boss_en": "Queen Jelly Bee",
+     "boss_count": 3
+    },
+    {
+     "stage": 28,
+     "boss": "식쿠식물",
+     "boss_en": "Cookievorous Plant",
+     "boss_count": 2
+    },
+    {
+     "stage": 29,
+     "boss": "젤리 왕꿀벌",
+     "boss_en": "Queen Jelly Bee",
+     "boss_count": 1
+    },
+    {
+     "stage": 30,
+     "boss": "쿨링민트맛 쿠키",
+     "boss_en": "Cool Mint Cookie",
+     "boss_count": 1
+    }
+   ]
+  },
+  {
+   "zone_index": 7,
+   "zone": "용암지대 (lava zone)",
+   "chapters_from_169_matching": 20,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 20,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "협곡 용암바람 원혼",
+     "boss_en": "Valley Magmastorm Ghost",
+     "boss_count": 2
+    },
+    {
+     "stage": 2,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 3
+    },
+    {
+     "stage": 3,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 2
+    },
+    {
+     "stage": 4,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 5
+    },
+    {
+     "stage": 5,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 2
+    },
+    {
+     "stage": 6,
+     "boss": "협곡 용암바람 원혼",
+     "boss_en": "Valley Magmastorm Ghost",
+     "boss_count": 2
+    },
+    {
+     "stage": 7,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 2
+    },
+    {
+     "stage": 8,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 3
+    },
+    {
+     "stage": 9,
+     "boss": "협곡 용암바람 원혼",
+     "boss_en": "Valley Magmastorm Ghost",
+     "boss_count": 2
+    },
+    {
+     "stage": 10,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 10
+    },
+    {
+     "stage": 11,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 5
+    },
+    {
+     "stage": 12,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 6
+    },
+    {
+     "stage": 13,
+     "boss": "협곡 용암바람 원혼",
+     "boss_en": "Valley Magmastorm Ghost",
+     "boss_count": 1
+    },
+    {
+     "stage": 14,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 2
+    },
+    {
+     "stage": 15,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 3
+    },
+    {
+     "stage": 16,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 3
+    },
+    {
+     "stage": 18,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 5
+    },
+    {
+     "stage": 19,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 3
+    },
+    {
+     "stage": 20,
+     "boss": "용암 슈가 와플 도마뱀",
+     "boss_en": "Magma Sugar Waffle Lizard",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 2
+    },
+    {
+     "stage": 23,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 3
+    },
+    {
+     "stage": 24,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 6
+    },
+    {
+     "stage": 25,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "협곡 용암바람 원혼",
+     "boss_en": "Valley Magmastorm Ghost",
+     "boss_count": 1
+    },
+    {
+     "stage": 27,
+     "boss": "용암 와플 도마뱀",
+     "boss_en": "Magma Waffle Lizard",
+     "boss_count": 6
+    },
+    {
+     "stage": 28,
+     "boss": "협곡 용암 도마뱀",
+     "boss_en": "Magma Lizard",
+     "boss_count": 2
+    },
+    {
+     "stage": 29,
+     "boss": "협곡 용암바람 원혼",
+     "boss_en": "Valley Magmastorm Ghost",
+     "boss_count": 1
+    },
+    {
+     "stage": 30,
+     "boss": "용암 슈가 와플 도마뱀",
+     "boss_en": "Magma Sugar Waffle Lizard",
+     "boss_count": 1
+    }
+   ]
+  },
+  {
+   "zone_index": 8,
+   "zone": "설원지대 (snowfield)",
+   "chapters_from_169_matching": 12,
+   "chapters_from_169_total": 20,
+   "chapters_all_matching": 12,
+   "chapters_all_total": 41,
+   "stages": [
+    {
+     "stage": 1,
+     "boss": "스노우볼 설인",
+     "boss_en": "Angry Snowman",
+     "boss_count": 2
+    },
+    {
+     "stage": 2,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 10
+    },
+    {
+     "stage": 3,
+     "boss": "스노우볼 설인",
+     "boss_en": "Angry Snowman",
+     "boss_count": 2
+    },
+    {
+     "stage": 4,
+     "boss": "구름요거트 클리오네",
+     "boss_en": "Cloud Yogurt Clione",
+     "boss_count": 2
+    },
+    {
+     "stage": 5,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 10
+    },
+    {
+     "stage": 6,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 6
+    },
+    {
+     "stage": 7,
+     "boss": "구름요거트 클리오네",
+     "boss_en": "Cloud Yogurt Clione",
+     "boss_count": 2
+    },
+    {
+     "stage": 8,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 6
+    },
+    {
+     "stage": 9,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 5
+    },
+    {
+     "stage": 10,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 10
+    },
+    {
+     "stage": 11,
+     "boss": "스노우볼 설인",
+     "boss_en": "Angry Snowman",
+     "boss_count": 2
+    },
+    {
+     "stage": 12,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 10
+    },
+    {
+     "stage": 13,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 6
+    },
+    {
+     "stage": 14,
+     "boss": "구름요거트 클리오네",
+     "boss_en": "Cloud Yogurt Clione",
+     "boss_count": 3
+    },
+    {
+     "stage": 15,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 5
+    },
+    {
+     "stage": 16,
+     "boss": "스노우볼 설인",
+     "boss_en": "Angry Snowman",
+     "boss_count": 1
+    },
+    {
+     "stage": 17,
+     "boss": "구름요거트 클리오네",
+     "boss_en": "Cloud Yogurt Clione",
+     "boss_count": 3
+    },
+    {
+     "stage": 18,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 3
+    },
+    {
+     "stage": 19,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 5
+    },
+    {
+     "stage": 20,
+     "boss": "얼음 사탕골렘",
+     "boss_en": "Ice Candy Golem",
+     "boss_count": 1
+    },
+    {
+     "stage": 21,
+     "boss": "스노우볼 설인",
+     "boss_en": "Angry Snowman",
+     "boss_count": 1
+    },
+    {
+     "stage": 22,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 3
+    },
+    {
+     "stage": 23,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 10
+    },
+    {
+     "stage": 24,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 6
+    },
+    {
+     "stage": 25,
+     "boss": "스노우볼 설인",
+     "boss_en": "Angry Snowman",
+     "boss_count": 1
+    },
+    {
+     "stage": 26,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 10
+    },
+    {
+     "stage": 27,
+     "boss": "구름요거트 클리오네",
+     "boss_en": "Cloud Yogurt Clione",
+     "boss_count": 2
+    },
+    {
+     "stage": 28,
+     "boss": "아이스콘 듀얼 나이트",
+     "boss_en": "Ice Cone Lancer",
+     "boss_count": 3
+    },
+    {
+     "stage": 29,
+     "boss": "구름요거트 클리오네",
+     "boss_en": "Cloud Yogurt Clione",
+     "boss_count": 3
+    },
+    {
+     "stage": 30,
+     "boss": "비겁한 쿠키",
+     "boss_en": "GingerCraven",
+     "boss_count": 1
+    }
+   ]
+  }
+ ]
+}

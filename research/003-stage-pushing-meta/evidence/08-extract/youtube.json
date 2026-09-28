@@ -1,0 +1,772 @@
+{
+  "batch": "youtube",
+  "notes": [
+    "Source: research/003-stage-pushing-meta/evidence/05-youtube/ (yt-dlp info.json + Korean auto-captions). Captions are auto-generated and noisy; cookie names are normalised only where context is unambiguous, otherwise kept as heard and marked '(caption, unsure)'.",
+    "Team rosters and sugar-rune screens in these videos are shown on screen and mostly not spoken. Only what the narration names is recorded here; cookies not named are left out rather than guessed.",
+    "ND러너 is a top player (crumb.gg combat-power leaderboard rank 2 as 'ND러너YouTube', about 30G account power on 2026-09-28). He was the third player on all servers to enter the Dimensional Rift. His statements on the Rift and on power are first-hand from the top of the ladder and are weighted accordingly. Note that his own on-stream power figures (for example 4G real / 6G shown on 2026-09-24, about 5G real / 22G shown on 2026-09-26) are Rift-inflated, which likely explains the ~30G crumb.gg figure.",
+    "Shorthand in captions: 정갈 = 전갈 (Scorpion), 성류 = 석류 (Pomegranate), 피결/피겨 = Skating Queen, 딸크 = Strawberry Crepe, 딸쇼 = Strawberry Shortcake, 닥초/닼초 = Dark Choco, 체콜 = Cherry Cola, 이혼/이온 = Ion Cookie Robot, 호미/홈밀/코밀 = 호밀 (Rye), 바람수/바람공수 = 바람궁수 (Wind Archer), 시커/부시커/브커 = Brightseeker, 밀키 = Milky Way, 우유 = Milk (Pediatrician), 5분 랩 = 오븐 레벨 (Oven level). 바궁/바공 means Wind Archer in videos from before Princess Bari's release (2026-09-23) and in ND러너's power-inflation advice; 바리/바리공주 means Princess Bari."
+  ],
+  "posts": [
+    {
+      "source": "youtube",
+      "id": "yt:_d_7z1UD2p8",
+      "url": "https://www.youtube.com/watch?v=_d_7z1UD2p8",
+      "date": "2026-09-24",
+      "title_kr": "쿠키런 크럼블 차원의 이면 리뷰 신세계네요 ㄷㄷ",
+      "title_en": "Cookie Run Crumble Dimensional Rift review: a whole new world",
+      "channel": "ND러너",
+      "view_count": 21292,
+      "duration_s": 10586,
+      "relevance": 3,
+      "scope": "both",
+      "summary_en": "ND러너's livestream review of the Dimensional Rift right after he cleared 328-30 (Coward Cookie as the final boss) and became the third player on all servers to enter. He explains how the Rift works: per-level rewards, a level-1 pet, daily and season rankings, and the 차원의 힘 level that grows over idle time and inflates power (4G real shown as 6G). He also covers his stage presets, why GingerBright should not be used, how to handle Redberry, and stage accuracy targets. His first Rift attempts against Cool Mint with adds show debuffs failing for lack of focus, and he concludes that raw power decides the Rift too.",
+      "clears": [
+        { "stage": "328-30", "boss": "비겁한 쿠키 (Coward Cookie), final boss", "team_power": "about 4G real (says 사지 = 4G outside the Rift, 육지 = 6G inside)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "ND stage preset 5 (general)", "note": "Cleared the whole story to 328-30 'very fast, within a day' after the 2026-09-23 relief. Entered the Rift third on all servers." },
+        { "stage": "Rift level 1", "boss": "?", "team_power": "6G shown (Rift-inflated)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "Level 1 cleared off stream. On stream he fights level 2 (Cool Mint plus adds from the start) and reviews rather than pushes." }
+      ],
+      "teams": [
+        { "name": "ND stage preset 5 (general, 'brainless')", "scope": "stage", "for": "Every main stage and boss except launch bosses and Redberry, post-2026-09-23 relief", "cookies": [
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer (charge)", "note": "Keep it in; do not swap it out for Ion." },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "New on 2026-09-23; he trialled it on his F2P account and on client accounts." },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "First slot to give up for Ion or Herb." },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "Dies first. If it melts at the start, replace it (Ion)." }
+          ], "pets": ["fixed set on screen, not named"], "perks": "초고속 승진 + 열정페이", "captain": "우유 (Milk), implied by perk discussion", "formation": "", "why": "After the relief Herb is no longer needed and the deck survives, so every slot goes to damage. 'It's not a race to play safe; if it hurts, retry.'", "substitutions": ["Ion for Strawberry Crepe (or for Bari) if cookies die", "Herb for Strawberry Crepe if still dying", "If adds pull aggro and the boss won't die, drag the team onto the boss manually"], "unorthodox": ["No healer (Herb dropped) after the relief"] },
+        { "name": "ND launch-boss preset 4", "scope": "stage", "for": "Launch (띄우기) bosses: 망치공주, 쿨링민트, 그루터기, 초코왕방울", "cookies": [], "pets": ["판다만두 (Panda Dumpling), even at low level"], "perks": "", "captain": "", "formation": "Fight Cool Mint in the 7 or 11 o'clock corner (구석몰이), not in the open", "why": "The new pet's Lift RES percentage is far higher and it has more HP, so it wins even at Lv.1.", "substitutions": [], "unorthodox": [] },
+        { "name": "ND Redberry variant", "scope": "stage", "for": "레드베리 암살자 (Redberry Assassin), which uses a wipe (전멸) and runs away when touched", "cookies": [
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Replaces one of the two melee cookies." },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "ranged dealer", "note": "Replaces the other melee cookie." }
+          ], "pets": [], "perks": "", "captain": "", "formation": "Lure toward 6 or 7 o'clock from the start. Stop at the bottom of the 6 o'clock stairs and fight once the mobs stand at the top of the stairs.", "why": "Melee cookies make Redberry flee. 'Those two are poison here.'", "substitutions": [], "unorthodox": [] },
+        { "name": "ND Coward deck", "scope": "stage", "for": "비겁한 쿠키 (Coward Cookie)", "cookies": [
+            { "kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "?", "stars": "?", "position": "?", "role": "power filler", "note": "Included only to raise team power when damage isn't landing. Cherry Cola can take this slot." }
+          ], "pets": [], "perks": "", "captain": "", "formation": "", "why": "The power gate: higher team power means more damage. Never GingerBright at higher stages.", "substitutions": ["Cherry Cola instead of Wind Archer"], "unorthodox": ["Wind Archer as a pure power-inflation slot"] }
+      ],
+      "builds": [
+        { "cookie": "gear (stage preset)", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "Accuracy (명중) for stages 200–300: minimum 900, 900–1000. Stages 300+: caption says '1에서 100 사이', likely 1000–1100 (caption, unsure). More than that is not needed.", "why": "Check your accuracy on any cookie's stat page (it moved to the right side in a patch)." },
+        { "cookie": "Sugar-rune timing", "scope": "stage", "sugar_runes": "Start rune crafting when you first stall; the common first wall is 29-30.", "gear": "", "thresholds": "", "why": "" }
+      ],
+      "mechanics": [
+        "Relief of 2026-09-23: map difficulty was nerfed and stages got much easier. The final Coward at 328-30 'isn't that strong'. Herb is no longer needed.",
+        "The first wall most players hit is 29-30.",
+        "Raw power decides fights where damage doesn't land: '깡전투력이 답' (raw power is the answer) in the Rift too.",
+        "Moon Rabbit (달토끼) is unnecessary on stages. Use it only if you genuinely can't survive; retrying is better than playing defensively.",
+        "Pushing stages early matters more than anything: idle-box rewards give resources money can't buy. 'Stage is the main content; go all in.'",
+        "Implant Tower (out of scope): the stage decks work there too, but you must hug the boss manually; players who leave it idle time out."
+      ],
+      "rift": [
+        "Unlock: clear main stage 328-30. After the final Coward the story ends and a portal to 차원의 이면 opens. Content is split into seasons (시즌 1).",
+        "Level-1 clear reward: a pet, heard as '시간지기' (he also names '무한바퀴' and says 'you must get this'). Effect: ally boss damage +50% inside the Rift. Holding effect: Charge-type evasion +3. Level 10: a profile frame. Every level has its own reward.",
+        "Rankings: a server ranking plus an all-server ranking. The Rift appears to be all-server (integrated). There is an entry-order list with timestamps; ND entered third, and eight to nine players had entered on the first night. Rewards: daily ranking (1일 정산) and season ranking, plus a participation reward. The top 10 receive rewards.",
+        "Inside the Rift the idle reward per minute increases (only the per-minute count; other rewards are the same).",
+        "차원의 힘 level: accumulates per minute while you are in the Rift, levels up and strengthens a buff that inflates power. ND showed 6G inside versus 4G outside. His first read: early entrants have a big advantage, 'the real idle game starts here'.",
+        "Structure: the boss comes with adds from both sides from the start (Cool Mint plus mobs). 'Nasty structure.'",
+        "First attempts: Cherry Cola needed for damage. Dark Choco's shred debuff didn't land because of too little focus (집중 부족). Rye to sustain. A pouch pet (복주머니; likely 색동 주머니, caption, unsure) was considered. Judge a clear by how fast HP drops in the first seconds."
+      ],
+      "stage_types": [
+        "Launch bosses (망치, 쿨링민트, 그루터기, 초코왕방울): swap to the Panda Dumpling pet preset.",
+        "Cool Mint: fight in the 7 or 11 o'clock corner. Adds pull aggro and split damage.",
+        "Redberry Assassin: the one place the generic deck fails. Swap two melee cookies for Tiger Lily + Rye and lure to the 6 o'clock stairs.",
+        "Coward: generic deck plus a high-power filler. No GingerBright."
+      ],
+      "disagreements": [
+        "GingerBright (명랑한 쿠키) on Coward: ND says it is acceptable only for complete beginners. At higher stages it lowers team power and therefore damage, and 'makes clearable stages unclearable even for high-spec users'. This contradicts guide makers who build a GingerBright deck for Coward (서신우 2026-08-16, 꽝라멩 2026-09-06).",
+        "Early-entrant advantage in the Rift: on 2026-09-24 ND says the first entrants 'win unconditionally'. On 2026-09-26 (yt:BDuQ279mbP4) he softens this: late entrants can overtake if they climb fast."
+      ],
+      "quotes": [
+        { "kr": "[10:24] 최종 스테이지가 328- 마지막 스테이지가 328- 30. 거기에 도달하면 ... 그 끔찍한 그 악랄한 비겁한 쿠키가 여기서도 맞이하고 있습니다", "en": "The final stage is 328-30, and the awful Coward Cookie waits there too." },
+        { "kr": "[10:58] 맵 라인도가 너프됐기 때문에 상당히 그래도 이전보다 진짜 정말 쉬워졌고", "en": "The map difficulty was nerfed, so it really got much easier than before." },
+        { "kr": "[17:12] 1레벨 깨면은 아까 본 것처럼 시간 지기를 얻을 수 있습니다. 얘는 아군 보스피의 50% 증가. 차원의 이면에서 그리고 보위 효과로는 돌격형 회피 증가플 3", "en": "Clear level 1 and you get the (heard) 'Timekeeper' pet: ally boss damage +50% in the Rift, holding effect Charge-type evasion +3." },
+        { "kr": "[18:16] 여기서만 육지고요. 여기 육지인데 여기서 가면 다시 사지로 바뀌거든요. 차원의 이면에서만 뻥튀이 됩니다", "en": "It's 6G only here; leave and it goes back to 4G. Power is inflated only inside the Rift." },
+        { "kr": "[20:55] 차원의 힘 레벨이 분당 요거 개수가 차는 거구나 ... 레벨업 해 가지고 세져 요게 버프가 세지고", "en": "So the 차원의 힘 level fills per minute, levels up, and the buff gets stronger." },
+        { "kr": "[32:06] 디포 왜 안 걸리냐? ... 아 집중 부족 집중", "en": "Why won't the debuff land? Ah, not enough focus." },
+        { "kr": "[41:09] 야 이거 깡전투력 높여서 한 수밖에 역시 이런 거는 무조건 깡전투력이 답이긴 하네", "en": "The only way is to raise raw power; for this, raw power is always the answer." },
+        { "kr": "[1:43:12] 명랑한 쿠키 쓰면은 오히려 깰 수 있는 것도 고스팩 유저가 깰 수 있는 것도 못 깨게 만드는 진짜 극악의 난이도로 만들 수 있는", "en": "Using GingerBright makes even stages a high-spec user could clear unclearable." },
+        { "kr": "[1:44:15] 레드베리는 툭 건들면 무조건 전멸로 도망가요 ... 정글 전사와 호밀로 바꿔 줍니다", "en": "Touch Redberry and it always runs off with its wipe; swap in Tiger Lily and Rye." },
+        { "kr": "[1:52:41] 제일 많이 막히는 데가 첫 건문이 29- 30", "en": "The place most people first get stuck is 29-30." },
+        { "kr": "[2:31:35] 200에서 300 사이는 900. 최소 900 900에서 1000 사이. 300 이상은 1에서 100 사이", "en": "Stages 200–300: accuracy 900 minimum, 900–1000. 300+: (caption) '1 to 100', likely 1000–1100." },
+        { "kr": "[2:27:19] 진짜 게임은 진짜 스테이지만큼은 올인해야 돼요. 진짜 스테이지가 메인이야", "en": "In this game you must go all in on stages. Stage is the main content." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:BDuQ279mbP4",
+      "url": "https://www.youtube.com/watch?v=BDuQ279mbP4",
+      "date": "2026-09-26",
+      "title_kr": "쿠키런 크럼블 차원의 이면 11단계 도전",
+      "title_en": "Cookie Run Crumble Dimensional Rift level 11 attempt",
+      "channel": "ND러너",
+      "view_count": 22772,
+      "duration_s": 18909,
+      "relevance": 3,
+      "scope": "both",
+      "summary_en": "A five-hour stream: ND러너 pushes Rift level 11 and reviews viewer accounts. Rift facts: the 차원의 힘 buff grows with time, so his shown power is 22G against about 5G real (about 4.5x). There is a power cut, there are per-level, daily and season rewards and a level-20 extra, and bosses repeat in fixed patterns. Debuffs and accuracy fail often, so he raised focus. On stages he gives accuracy/focus targets by stage band, says pushing at 35% works fine after the relief (except Redberry), advises not to look at the bracket at all, and ranks gear by power first.",
+      "clears": [
+        { "stage": "Rift level 11", "boss": "? (Hammer Princess and a poison-weak boss discussed)", "team_power": "22G shown (about 5G real, Rift buff about 4.5x)", "recommended_power": "?", "bracket": "?", "result": "?", "play": "manual", "retries": "many", "team": "ND Rift trial deck", "note": "At [31:08] he says 'this will definitely clear' after changes; no explicit clear line in captions." },
+        { "stage": "248-30", "boss": "?", "team_power": "under 1G", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "", "note": "[2:28:41] recalled: 'at 248-30 I wasn't even at 1G'. Date not given (before the relief)." },
+        { "stage": "35% band (general)", "boss": "all except Redberry", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "ND stage preset 5", "note": "[55:52] 'At 35% it pushes fine, don't worry; the only one I still hate at 35% is Redberry Assassin.'" },
+        { "stage": "258-8 (viewer account)", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "viewer's deck", "note": "Viewer stuck because they left it on auto. ND: 'hug it and it pushes right away'." }
+      ],
+      "teams": [
+        { "name": "ND stage preset 5, advice given to viewers", "scope": "stage", "for": "General stages after the relief", "cookies": [], "pets": ["three pets. When a launch boss appears (쿨링민트, 망치, 그루터기, 왕초코방울), swap the middle pet for Panda Dumpling."], "perks": "초고속 승진", "captain": "", "formation": "", "why": "No Herb needed; if you still can't survive, use Ion instead of Strawberry Crepe rather than Herb. If damage is short, hug the boss manually.", "substitutions": ["Ion for 딸크 (Strawberry Crepe) if dying", "Redberry: take out '빨간 닌자' (caption, unsure) and one other; add 호밀 + 정글전사"], "unorthodox": [] },
+        { "name": "ND Rift trial deck (level 11)", "scope": "rift", "for": "Rift level 11 and nearby levels", "cookies": [
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "?", "role": "poison dealer", "note": "'The core here was Scorpion'. One boss melted to poison, not physical damage." },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Brought in only once the clear angle shows. Used with a tool/item ('도구', caption, unsure) to melt Hammer Princess." },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "?", "role": "DEF shred", "note": "Replaces an attacker only if its shred lands reliably." },
+            { "kr": "바공 (Wind Archer, caption context)", "en": "Wind Archer Cookie", "level": "?", "stars": "?", "position": "?", "role": "power filler", "note": "[42:16] 'must be in, because it raises power'." },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "For the Macaron buff." }
+          ], "pets": ["와사비 문어 (Octo Wasabi): he remembers clearing this boss with it", "핫도그도그 (Hot Doggie) considered"], "perks": "", "captain": "", "formation": "", "why": "Without Herb the Volley (다발) synergy has to come from another slot.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [
+        { "cookie": "gear (stage preset)", "scope": "stage", "sugar_runes": "", "gear": "Stages are power-based, so pick gear by power. If power is close, prefer Skill AMP, Skill Haste, DMG Reduction. Crit damage and crit resist lines inflate power a lot. DEF: treat it as 'no option'.", "thresholds": "[02:45] about 1000 accuracy, 1000–1100; higher is wasted. [1:52:41] 200-stage band: accuracy/focus high-800s minimum. 300+: high-900s minimum. [5:10:06] Before 300: 900+. 300+: minimum '1에서 150' (caption, likely 1000–1050 or 1100–1150, unsure). Very high-spec players clear 300+ at 900 with some misses.", "why": "Misses also stop debuffs from applying, which is very noticeable in the Rift." },
+        { "cookie": "gear (Rift)", "scope": "rift", "sugar_runes": "", "gear": "He kept accuracy around 1000 and raised focus further because debuffs weren't landing.", "thresholds": "Accuracy ~1000; focus higher", "why": "'Dark Choco feels like an empty can' when focus is short. Viewer question: can you drop accuracy/focus gear once the Rift buff raises them? He considered swapping to Skill Haste." },
+        { "cookie": "다크초코 쿠키", "scope": "both", "sugar_runes": "Skill Haste plus some focus. Needs no amplification.", "gear": "", "thresholds": "", "why": "[3:18:25] 'Drop Dark Choco's focus and the debuff doesn't go in at all; it becomes an empty-can Dark.'" },
+        { "cookie": "gear (arena / conquest, for contrast)", "scope": "stage", "sugar_runes": "", "gear": "Arena: Skill Haste, Skill AMP, DMG Reduction, crit resist. Conquest: Skill AMP, Skill Haste, DMG Reduction plus crit damage/rate; accuracy/focus not needed at all.", "thresholds": "", "why": "Given as the contrast to the power-first stage preset." },
+        { "cookie": "석류/우유 (sugar-rune power targeting)", "scope": "stage", "sugar_runes": "Don't lower cookie levels to steer Pomegranate's beam target; maximise power instead.", "gear": "", "thresholds": "", "why": "[44:31] The beam target may move around anyway, and it doesn't block clears. Buff targeting goes by ATK, not power." }
+      ],
+      "mechanics": [
+        "[58:50] Advice on the bracket: don't look at it. ND never checks the 55% cut, because knowing you're below it stops you from even trying. After the relief even 15% might be clearable somehow.",
+        "Stages: 'stage is purely power'. If gear lines are close, look at options; otherwise take the higher-power item.",
+        "Power growth: the fastest route is gear from Oven levels. Each Oven level-up gives about +300m minimum once the gear is farmed ([3:42:25]). Fame (명성) gives about 18–19m per level at his level and is unbounded. Research: finish HP (체력) and step up one node at a time.",
+        "Coward is easy once lab HP research is done. Players who find Coward hard haven't researched HP yet; with HP, Redberry feels harder than Coward.",
+        "Don't use sweep (소탕) on daily dungeons: 'throwing money away'.",
+        "Evasion experiment: ND plans an all-evasion test. He argues high-stage bosses like the eagle (독수리) always hit the same target, so one or two evasion lines may become useful for stages later.",
+        "Focus vs focus rate: the displayed value converts into a skill success chance against the stage's value; crumblehub has a calculator where you enter power, stage and focus."
+      ],
+      "rift": [
+        "[03:28] The Rift has a time-based buff that keeps rising, so specs look like they jump day to day. 'That's not real growth.'",
+        "[22:50] '투력이 22주 됐잖아요. 원래는 제 실제로는 5주인데 ... 4.5배 거의': shown power 22G versus about 5G real because of the 차원의 힘 buff. Even low-power players get inflated, so entering early is good.",
+        "[10:56] Correction: entering first isn't everything. On day one first entrants had the edge, but late entrants can overtake if they can climb fast.",
+        "[47:29] '투력컷이 존재하는 거 같아요': a power cut seems to exist; past a certain power the difficulty changes sharply.",
+        "[48:16] Rewards per level cleared, profile and pet rewards, a daily settlement (ranks 1–3 and more) and a season settlement. An extra reward at level 20.",
+        "[15:20] Bosses repeat in the same patterns ('무한 반복'). Save or screenshot what worked; pre-planned players will push fast. At [4:19:19] he says there are only about four boss types.",
+        "[14:44] He expects the next update to add stages while the Rift range stays the same.",
+        "[3:21:02] The Rift isn't a 'too hard, give up' place: the buff makes it steadily easier and the reward competition pushes people.",
+        "Misses and failed debuffs are much more noticeable in the Rift; he raised focus and considered dropping debuff cookies entirely ([24:24])."
+      ],
+      "stage_types": [
+        "Launch bosses (쿨링민트, 망치, 그루터기, 왕초코방울): middle pet to Panda Dumpling.",
+        "Redberry (the cookie that blinks and vanishes): remove the melee pair and add Rye + Tiger Lily.",
+        "Bosses in general: if damage is short, drag the team onto the boss manually; many stuck viewers had simply left it on auto."
+      ],
+      "disagreements": [
+        "Accuracy targets: ND's own target is 1000–1100 for 300+, but he reports a common community view that very high-spec players clear 300+ at 900 with misses.",
+        "Early-entrant advantage in the Rift: he reverses his 2026-09-24 claim (yt:_d_7z1UD2p8) that first entrants always win."
+      ],
+      "quotes": [
+        { "kr": "[02:45] 천 정도면은 돼요. 천 너무 높으면은 저는 손해라고 생각해서네 1천 정도 1에서 1 100 사이 너무 높은 거는 추천드리지는 않아요", "en": "About 1000 is enough; too high is a loss. Around 1000–1100; I don't recommend higher." },
+        { "kr": "[22:50] 저도 지금 투력이 22주 됐잖아요. 원래는 제 실제로는 5주인데 저 버프로 인해서 뻥튀이 돼서 ... 4.5배 거의", "en": "My power is shown as 22G, but really it's about 5G; the buff inflates it almost 4.5x." },
+        { "kr": "[47:29] 투력컷이 존재하는 거 같아요. 딱 특정 트럭 넘으면은 난이도가 확 확실히 존재합니다", "en": "There seems to be a power cut: past a specific power, the difficulty clearly changes." },
+        { "kr": "[55:52] 잘 밀려요. 여러분들 걱정 그렇게 안 하셔도 될 정도 아, 근데 유일하게 내가 극혐하는 데가 35%인데도 불구하고 그 암살자 레드 레드베리", "en": "It pushes fine, don't worry. The only place I still hate, even at 35%, is Redberry Assassin." },
+        { "kr": "[58:50] 35% 여러분들 그 보면서 자꾸 그 의식하면서 게임하니까 ... 그거를 아예 보지 말고 게임을 하세요 ... 그 55퍼컷 진짜 아예 안 봐요", "en": "You keep watching the 35% and give up before trying. Don't look at it at all. I never look at the 55% cut." },
+        { "kr": "[1:00:22] 15파워도 뭐 어떻게든 깰 수도 있고 ... 이번에 그 상향됐잖아요. 아 하향됐잖아요", "en": "Maybe even 15% can be cleared somehow, since difficulty was lowered this time." },
+        { "kr": "[1:52:41] 200스테이지 기준 최소 어 명중 집중 800 후반 준비 300 이상에서는 어 최소 명집중 900 후반", "en": "200-stage band: accuracy/focus high-800s minimum; 300+: high-900s minimum." },
+        { "kr": "[1:55:35] 스테이지 그냥 전투력 기준이니까 전투력으로 그냥 하시고", "en": "Stages are purely power-based, so just go by power." },
+        { "kr": "[3:04:30] 방어력은요. 그냥 아예 없는 옵션이라 생각하시면 돼요", "en": "Treat DEF as a non-existent option." },
+        { "kr": "[3:18:25] 다크 초코 집중 버리면 집중 디버프 뒤에 아예 들어가질 않습니다 ... 그냥 깡통 다크가 돼요", "en": "Drop Dark Choco's focus and its debuff never lands; it becomes an empty-can Dark Choco." },
+        { "kr": "[5:11:08] 진짜 그것 때문에 길이 진짜 너무 안 들어가는 경우가 그냥 이면에서 너무 체감이 많이 됩니다. 다크 초코가 깡통 같은 느낌이에요", "en": "Because of misses the damage just doesn't go in; you feel it a lot in the Rift. Dark Choco feels like an empty can." },
+        { "kr": "[3:42:25] 장비 1렙 잘되면 일단 300m은 무조건 올라요", "en": "One gear (Oven) level, farmed well, gives at least +300m." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:1AyEMtaE-s4",
+      "url": "https://www.youtube.com/watch?v=1AyEMtaE-s4",
+      "date": "2026-09-27",
+      "title_kr": "쿠키런 크럼블 차원의 이면 16단계 도전",
+      "title_en": "Cookie Run Crumble Dimensional Rift level 16 attempt",
+      "channel": "ND러너",
+      "view_count": 13932,
+      "duration_s": 12130,
+      "relevance": 3,
+      "scope": "both",
+      "summary_en": "ND러너 pushes Rift level 16 and reviews accounts. Key claims: every Rift level is tuned like a 35% bracket fight and is designed to become clearable as the time-based buff stacks. Auto never clears and you must build your own decks; the Rift entrance has a Charge buff; the level-20 reward is a pet pass. On stages: 318-18 (Redberry zone) is the last big wall before 328-30, and he gives positioning tips. If damage doesn't land (for example on 318-30 Coward) you are below the 35% bracket: inflate team power with the TSSR Wind Archer and by keeping power-heavy SSR rune lines until you reach the Rift.",
+      "clears": [
+        { "stage": "Rift level 16", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "?", "play": "manual", "retries": "many", "team": "ND Rift trial deck", "note": "At [23:20] 'it's not uncrackable; the angle is visible now'. No explicit clear line." },
+        { "stage": "318-30 (viewer account)", "boss": "비겁한 쿠키 (Coward Cookie)", "team_power": "? (viewer, inflated by about 50–66m)", "recommended_power": "?", "bracket": "below 35 before the fix", "result": "clear", "play": "manual", "retries": "1", "team": "viewer deck plus TSSR 바궁 (Wind Archer) for power", "note": "'Damage isn't landing, so you're not at 35% yet.' After raising power: 'one-click fix, retry right away'." },
+        { "stage": "318-18 (viewer account)", "boss": "레드베리 암살자 (Redberry zone)", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "?", "play": "manual", "retries": "many", "team": "viewer deck (Pinot Noir kept)", "note": "ND: the last and biggest wall before 328, 'after this there's nothing hard'. He himself spent hundreds of runs here." }
+      ],
+      "teams": [
+        { "name": "ND Rift trial deck (level 16)", "scope": "rift", "for": "Rift level 16", "cookies": [
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "'Strawberry Crepe is a must.'" },
+            { "kr": "에스프레소맛 쿠키", "en": "Espresso Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "[21:07] Picked over Scorpion for this level." },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "[18:49] shown ('다리봉주' = 바리공주, caption)." }
+          ], "pets": ["와사비 문어 (Octo Wasabi; '팬문어', caption) is clearly better in the Rift"], "perks": "", "captain": "", "formation": "Pull the boss slightly toward 6 o'clock rather than fighting it head-on.", "why": "'Heavily affected by pets.' Rapid-fire (연타) synergy is too costly to drop. A cookie that splits damage onto adds is useless.", "substitutions": [], "unorthodox": [] },
+        { "name": "318-18 Redberry advice", "scope": "stage", "for": "318-18 Redberry zone", "cookies": [
+            { "kr": "바궁 (Wind Archer)", "en": "Wind Archer Cookie", "level": "?", "stars": "?", "position": "?", "role": "power filler", "note": "ND recommended it: 'the higher the power, the better the damage lands'." },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Needed for the ice-spot burst point." },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Keep it. Viewers suggest removing it, but ND tested that and says it is a detour, because it carries a lot of power." }
+          ], "pets": [], "perks": "", "captain": "", "formation": "Come down and hold the 'golden spot' where HP drops fast. Alternatively drag the mobs down to the ice and burst with Scorpion or Tiger Lily. With a maximised-power rapid-fire deck, go straight at them when they cast the wipe and melt them one by one.", "why": "'This zone depends heavily on position.' Herb can be dropped without deaths.", "substitutions": ["Drop Herb"], "unorthodox": [] }
+      ],
+      "builds": [
+        { "cookie": "gear (stage)", "scope": "stage", "sugar_runes": "", "gear": "If an item with accuracy gives more power, swap to it without hesitation. Gear becomes worthless at the next Oven level-up anyway.", "thresholds": "[33:14] Normal stages 900–1000. 300+: at least 1000 (some say the 900s are fine). [40:37] Before 300: about 900 is enough. After entering the Rift: about 1000+, not more, since the Rift correction raises it. [1:12:48] 1300 is far too high. [3:00:14] 1000–1100 is enough; some clear lower.", "why": "'Oven level is king' (5분랩이 곧 깡패)." },
+        { "cookie": "sugar runes (while pushing to the Rift)", "scope": "stage", "sugar_runes": "Keep any SSR line that raises power, even an unwanted option (e.g. crit resist gives about +3–4m per line), until you reach the Rift. Summed over the team that is about 30–66m. Re-roll to the proper Skill AMP etc. after arrival.", "gear": "", "thresholds": "", "why": "[1:45:30] 'In this game power is simply your team's attack; it's what makes damage land.'" },
+        { "cookie": "브라이트시커 쿠키", "scope": "stage", "sugar_runes": "Skill Haste throughout (the current conquest trend).", "gear": "", "thresholds": "", "why": "" }
+      ],
+      "mechanics": [
+        "[2:18:13] If damage isn't going in, 'you're not at 35% right now'. That symptom means the bracket is too low; fix it with power.",
+        "[2:19:33] Two power-inflation tricks for walls: force in the TSSR Wind Archer even if it breaks synergy (high-rarity cookies carry high base stats), and keep power-inflating SSR sugar-rune lines. A viewer gained 50–66m this way and passed.",
+        "[2:27:05] Stuck on every Coward = lab HP research not done. Two more HP steps make a big difference.",
+        "[2:52:24] Time-overs: remove the healer and go fully offensive, or control manually. With a decent spec you won't stall before about 170–200.",
+        "Power sources: Oven level (gear jumps by G units at Oven 34–37; Eternal gear from Oven 31, Legendary until about 34), lab research (up to 70m per node late), Fame (about 15m per level early, unbounded), Stellar Link.",
+        "[37:01] Some boss rooms mix real bosses (HP bar drops) with fake ones that never lose HP (e.g. crows with poison mushrooms). Ignore the fakes, push through them to the real ones and poison those with Scorpion. Players who fight the front mushrooms time out. Scope is ambiguous (stage or Rift)."
+      ],
+      "rift": [
+        "[1:50:35] '이면은 그냥 매 단계가 다 35%라고 보시면 돼요': treat every Rift level as a 35% bracket fight. It looks designed so that once enough correction buff stacks over time, it becomes clearable.",
+        "[10:03] Players used to 온몸 비틀기 (squeezing everything out) will find it manageable. Auto never clears, there is no guide, and you must build decks yourself.",
+        "[3:02:22] The Rift entrance has its own Charge (돌격) buff, so Charge decks are common there.",
+        "[26:23] The level-20 clear reward is a pet ('무한받기 패시', caption; likely the 무한바퀴 / Continuum Cog pet). ND is saving resources to level it.",
+        "[41:12] Accuracy/focus inside the Rift: misses are frequent, so about 1000+. Don't overdo it; the Rift correction also raises accuracy and focus (his high focus reading was mostly correction, not gear).",
+        "[2:59:36] Lucky boxes (행운의 상자) don't increase the Rift counts. [3:01:00] Rift per-minute rewards seem to be calculated separately.",
+        "[3:01:39] Later servers are at a disadvantage in the Rift race.",
+        "[25:45] He aims for the top 10, since the settlement reward is based on top 10.",
+        "[3:13:05] At high Rift levels damage taken spikes, which is why people say it hurts."
+      ],
+      "stage_types": [
+        "318-18 Redberry zone: positional; golden spots where the wipe is followed by a burst window.",
+        "318-30 and other Coward stages: a power check; add power fillers, and research HP if the team dies.",
+        "Mixed real/fake boss rooms: focus the real boss."
+      ],
+      "disagreements": [
+        "Removing Pinot Noir for 318-18: viewers suggested it; ND says it is a detour because Pinot carries much of the team power.",
+        "Accuracy: ND wants at least 1000 for 300+; others say the 900s are fine ([33:46] 'there is some difference of opinion')."
+      ],
+      "quotes": [
+        { "kr": "[1:50:35] 이면은 그냥 매 단계가 다 35%라고 보시면 돼요. 정말 그 모든 단계가 컨셉이 35%로 잡혀 있는 거 같아요", "en": "Treat every level of the Rift as 35%; every level seems designed around the 35% concept." },
+        { "kr": "[1:51:05] 보정 그 버프가 그 쌓이는 시간 지나서 ... 좀 쉬워지면은 이제 클리어해라 막 이런 구조로 만들어진 거 같아서", "en": "It seems built so that after the correction buff stacks over time and it gets easier, you clear it." },
+        { "kr": "[10:33] 자동으로는 절대 안 깨지니까 덱은 여러분들이 평소에 짜보고", "en": "It never clears on auto, so you need to be someone who builds decks yourself." },
+        { "kr": "[2:18:13] 이렇게 딜이 안 들어가는 상태면은 아 35%가 지금 안 아닌 상태예요", "en": "If damage isn't going in like this, you're not at 35% right now." },
+        { "kr": "[2:19:33] 딜이 안 박히면은 전투력 누려주는 방법 쓰면은 되거든요. 조합을 깨서라도. 근데 그 바궁을 TSSR 등급을 조합을 깨서라도 강제로 집어넣는 방법", "en": "If damage doesn't land, raise power, even by breaking the synergy: force in the TSSR Wind Archer." },
+        { "kr": "[1:45:30] 이 게임은 전투력이 곧 아군 어 아군의 공격력 그냥 시너지 용이라고 생각하시고 딜 박히는 용이라 생각하시고", "en": "In this game power is effectively your team's attack; think of it as what makes damage land." },
+        { "kr": "[1:31:27] 마지막 제일 제일 곱이에요. 이거 뒤에 아무것도 없습니다", "en": "(318-18) This is the last and biggest hump; after it there's nothing." },
+        { "kr": "[3:02:22] 돌격 버프가 있어서 돌격대기 많아요. 여기 보면은 들어 입구에 돌격 버프가 따로 있거든요", "en": "There's a Charge buff, so many use Charge decks; the entrance has a separate Charge buff." },
+        { "kr": "[41:43] 1천 이상 너무 뭐 과도하게 많이 할 필요는 어차피 보정으로 올라가니까", "en": "1000+ is enough; no need to overdo it, since the correction raises it anyway." },
+        { "kr": "[1:14:54] 게임은 5분랩이 곧 깡패고", "en": "In this game Oven level is king." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:tZJ5wzhcUA8",
+      "url": "https://www.youtube.com/watch?v=tZJ5wzhcUA8",
+      "date": "2026-09-25",
+      "title_kr": "쿠키런 크럼블 최신 스테이지 최고 조합 바리공주 기준",
+      "title_en": "Cookie Run Crumble latest best stage team, Princess Bari edition",
+      "channel": "ND러너",
+      "view_count": 45536,
+      "duration_s": 368,
+      "relevance": 3,
+      "scope": "stage",
+      "summary_en": "An edited version of the stage recommendation ND러너 recorded on stream on 2026-09-24. Three presets are enough to push the whole story to 328-30 after the relief: a generic preset 5 for everything, a Panda Dumpling preset for launch bosses, and a Coward preset that uses Wind Archer purely to raise power. There is also a Redberry swap (Tiger Lily + Rye). He argues hard against GingerBright because it lowers team power and damage. The rosters are on screen, not spoken.",
+      "clears": [],
+      "teams": [
+        { "name": "ND preset 5 (generic)", "scope": "stage", "for": "Every boss and stage except launch bosses and Redberry", "cookies": [
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Keep it." },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Swap slot for Ion or Herb." },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "New." }
+          ], "pets": ["on screen"], "perks": "", "captain": "", "formation": "", "why": "'Brainless' deck that is fine against any boss on average.", "substitutions": ["이온 (Ion) for Strawberry Crepe if cookies die", "허브 (Herb) as a second healer instead of Strawberry Crepe"], "unorthodox": [] },
+        { "name": "ND preset 4 (Panda)", "scope": "stage", "for": "망치 boss, 쿨링민트 and every launching (띄우기) boss", "cookies": [], "pets": ["판다만두 (Panda Dumpling): even Lv.1 beats alternatives on Lift RES and has more HP"], "perks": "", "captain": "", "formation": "Cool Mint: corner-herd to 7 or 11 o'clock instead of fighting in the open.", "why": "Lift RES.", "substitutions": [], "unorthodox": [] },
+        { "name": "ND Coward preset", "scope": "stage", "for": "비겁한 쿠키", "cookies": [
+            { "kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "?", "stars": "?", "position": "?", "role": "power filler", "note": "Used 'to forcibly raise power when damage doesn't land'. Cherry Cola is fine instead." }
+          ], "pets": [], "perks": "", "captain": "", "formation": "", "why": "Higher power is recommended for anyone whose damage isn't landing.", "substitutions": ["체리콜라 in the Wind Archer slot"], "unorthodox": ["Low-performance, high-rarity cookie used only for team power"] },
+        { "name": "ND Redberry swap", "scope": "stage", "for": "레드베리 암살자", "cookies": [
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "'코밀' in the caption." }
+          ], "pets": [], "perks": "", "captain": "", "formation": "Lure toward 6 or 7 o'clock from the start. Stop just below the 6 o'clock stairs and fight when the mobs are on top of the stairs.", "why": "Redberry flees with a wipe when touched; two cookies (melee) must come out.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": [
+        "After the relief, incoming damage is lower than people expect.",
+        "GingerBright lowers team power, and so damage. Acceptable only for beginners in the very early game."
+      ],
+      "rift": ["Finishing the story unlocks the Dimensional Rift, so reaching the end fast with a good stage deck matters."],
+      "stage_types": [
+        "Launch bosses: Panda pet preset.",
+        "Cool Mint: 7/11 o'clock corner.",
+        "Coward: power filler.",
+        "Redberry: Tiger Lily + Rye, positional lure."
+      ],
+      "disagreements": ["GingerBright for Coward: ND against, while comment sections push 'the F2P hope is GingerBright'. See yt:glWD1kbs9Vs and yt:rs8e12WqhdU for the pro side."],
+      "quotes": [
+        { "kr": "[01:02] 얘가 훨씬 더 좋습니다. 띄우기 저항 자체가 말도 안되기 훨씬 더 높아요", "en": "This one (Panda) is far better; its Lift RES is absurdly higher." },
+        { "kr": "[02:04] 바람 공수를 제가 굳이 넣은 이유는 ... 딜이 안 박히는 경우 전투력을 강제로 높여 주는 용도로 바람수를 쓴 경우입니다", "en": "I put in Wind Archer to forcibly raise power when damage doesn't land." },
+        { "kr": "[03:05] 굳이 아프지도 않아진 시점에 얘를 쓰면 전투력도 아군 전체적으로 낮아지거든요. 딜도 낮아져요", "en": "Now that it doesn't even hurt, using GingerBright lowers the whole team's power, and damage with it." },
+        { "kr": "[04:07] 레드베리는 툭 건들면 무조건 전멸로 도망가요 ... 정글 전사와 코밀로 바꿔 줍니다", "en": "Touch Redberry and it flees with its wipe; swap to Tiger Lily and Rye." },
+        { "kr": "[05:10] 5번 무지성으로는 나머지 전부. 그리고 이제 띄우는 거는 요패. 각각 대응시키는 것만 세 개만 해 주면 ... 쭉쭉 다 밀 수 있습니다", "en": "Preset 5 for everything else, the pet preset for launchers; just those three and you push everything." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:HyRdA_cEVcA",
+      "url": "https://www.youtube.com/watch?v=HyRdA_cEVcA",
+      "date": "2026-09-20",
+      "title_kr": "쿠키런 크럼블 \"전투력\" 차이로 고통 받는 분들?? 이건 꼭 알고가세요",
+      "title_en": "Suffering from power gaps? Know this",
+      "channel": "ND러너",
+      "view_count": 22671,
+      "duration_s": 369,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "ND러너 explains the power correction (보정) system: it is not a nerf; team damage scales with the displayed power. That is why GingerBright on Coward backfires: a low-rarity cookie drags team power down, which acts like a whole-team ATK debuff. Arena applies only some growth sources, so power doesn't predict arena wins, but on stages power is honest and decides progress.",
+      "clears": [],
+      "teams": [],
+      "builds": [
+        { "cookie": "gear (general)", "scope": "both", "sugar_runes": "", "gear": "Always-good options on any server: Skill AMP, Skill Haste, DMG Reduction. Next: crit rate and crit damage. Server-dependent: focus and accuracy.", "thresholds": "", "why": "Gear options change power a lot, so equal power doesn't mean equal strength." }
+      ],
+      "mechanics": [
+        "Correction (보정) system: not a nerf to cookies. 'The higher the power shown on screen, the higher the whole team's damage.'",
+        "GingerBright on Coward reduces enemy ATK but, being low-grade, lowers team power and so has the same effect as a whole-team ATK reduction. ND doesn't recommend it.",
+        "Ways to raise power: Stellar Link (biggest), breakthrough, Fame, gnome research, gear enhancement, sugar runes.",
+        "Arena applies only part of growth (level-up, promotion, holding effects, collection, gear, plate enhancement, sugar runes), so a lower-power opponent can win. On stages, 'power is the spec itself', and it is rare to have high power and still fail to push."
+      ],
+      "rift": [],
+      "stage_types": [],
+      "disagreements": ["GingerBright on Coward: ND against (power loss) versus guide makers for (ATK-down debuff)."],
+      "quotes": [
+        { "kr": "[00:32] 보정 시스템이란 너프되는게 아닙니다 ... 전투력이 높을수록 쿠키들의 딜이 비례에서 높아지는 현상이라고 보시면 됩니다", "en": "The correction system isn't a nerf; the higher your power, the more your cookies' damage rises in proportion." },
+        { "kr": "[01:03] 얘를 넣는 순간 대체적으로 팀의 전체적인 전투력이 크게 다운되기 때문에 공격력이 다운되는 효과가 생깁니다", "en": "The moment you add GingerBright, overall team power drops a lot, which works like an ATK reduction." },
+        { "kr": "[05:09] 스테이지에서만큼은 전투력이 곧 그냥 스펙 자체다. 전투력이 높아야지만 그거에 비례해서 스테이지를 밀 수 있습니다. 정직합니다", "en": "On stages power is the spec itself; you push stages in proportion to your power. It's honest." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:DMvAmT9Cfqg",
+      "url": "https://www.youtube.com/watch?v=DMvAmT9Cfqg",
+      "date": "2026-09-11",
+      "title_kr": "쿠키런 크럼블 체리콜라 \"방치덱\" 스테이지 \"자동 클리어\" 최고조합 성능 미쳤습니다 ㄷㄷ",
+      "title_en": "Cherry Cola idle deck: best auto-clear stage team",
+      "channel": "ND러너",
+      "view_count": 82676,
+      "duration_s": 421,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "ND러너's pre-relief auto stage deck built around the new Cherry Cola with Pinot Noir in a rapid-fire (연타) deck. He says it pulls ahead of better-spec players on his server. The video gives Coward adjustments (swap Chargemellow for a damage-reduction pet; Ion if the backline dies) and Cool Mint handling (hug or corner-herd to 7 o'clock). Rye is preferred over Melon Soda for auto because Melon's missiles scatter at range. Per-cookie sugar runes are covered too, including one DMG Reduction line and avoiding too much ATK AMP so perks keep targeting Milk.",
+      "clears": [],
+      "teams": [
+        { "name": "ND Cherry Cola rapid-fire auto deck (pre-relief)", "scope": "stage", "for": "Story stages on auto; weak into Coward", "cookies": [
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Dies easily." },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "ranged dealer", "note": "Chosen over Melon Soda: fewer hits but better aim at range, so it clears more reliably on auto." },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie (Pediatrician)", "level": "?", "stars": "?", "position": "?", "role": "captain / buffer", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Slot to reinforce if the backline dies." },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "?", "role": "healer", "note": "Dies easily." },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Does not need 5★." },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "?", "role": "debuffer", "note": "" }
+          ], "pets": ["전지멜로우 (Chargemellow)", "an ally-ATK-up pet (unnamed)"], "perks": "열정페이 / 초고속 승진 mentioned as ATK-targeted perks", "captain": "우유 (Milk)", "formation": "", "why": "Rapid-fire synergy. Cherry Cola is 'quite good in story'.", "substitutions": ["Coward: Chargemellow → a DMG-reduction pet; the ATK-up pet → 왕초코 (King Choco Drop, for spenders)", "Backline dying: Ion (이혼 in the caption) in the Strawberry Crepe slot", "Hammer launch stages: swap only the pet to a Lift RES pet"], "unorthodox": ["Scorpion deliberately excluded: 'I tried it; it's better without it'"] }
+      ],
+      "builds": [
+        { "cookie": "체리콜라맛 쿠키", "scope": "stage", "sugar_runes": "DMG Reduction ×2, then Skill AMP. A few ATK AMP lines are OK.", "gear": "", "thresholds": "", "why": "It dies easily. Too much ATK AMP can steal ATK-targeted buffs." },
+        { "cookie": "마카롱맛 쿠키", "scope": "stage", "sugar_runes": "Mostly ATK AMP", "gear": "", "thresholds": "", "why": "So it is the Pomegranate beam target." },
+        { "cookie": "호밀맛 쿠키", "scope": "stage", "sugar_runes": "ATK AMP mixed", "gear": "", "thresholds": "", "why": "" },
+        { "cookie": "석류맛 쿠키", "scope": "stage", "sugar_runes": "All Skill AMP; one Skill Haste line is fine", "gear": "", "thresholds": "", "why": "" },
+        { "cookie": "우유 (Milk)", "scope": "stage", "sugar_runes": "All ATK plus one line of Skill AMP or Skill Haste", "gear": "", "thresholds": "", "why": "Captain; ATK-targeted perks (열정페이, 초고속 승진) must land on the intended cookie." },
+        { "cookie": "딸기크레페맛 쿠키", "scope": "stage", "sugar_runes": "Skill AMP over Skill Haste", "gear": "", "thresholds": "", "why": "" },
+        { "cookie": "허브맛 쿠키", "scope": "stage", "sugar_runes": "Mix in DMG Reduction", "gear": "", "thresholds": "", "why": "Dies easily." },
+        { "cookie": "다크초코 쿠키", "scope": "stage", "sugar_runes": "Skill Haste mixed with focus", "gear": "", "thresholds": "", "why": "" },
+        { "cookie": "all", "scope": "stage", "sugar_runes": "Keep one DMG Reduction line per cookie.", "gear": "", "thresholds": "", "why": "Survival." }
+      ],
+      "mechanics": [
+        "Avoid heavy ATK AMP on non-captain cookies: as promotions rise, ATK-targeted perks (열정페이, 초고속 승진) may miss the intended target if another cookie's ATK is higher.",
+        "Melon Soda must hug the boss to hit; at range its missiles scatter. Rye has fewer hits but better aim, so it suits auto."
+      ],
+      "rift": [],
+      "stage_types": [
+        "Coward: weakest matchup. Use the DMG-reduction pet and Ion.",
+        "Cool Mint: adds pull aggro and split damage. Hug the boss manually or corner-herd to 7 o'clock.",
+        "Hammer launch stages: Lift RES pet."
+      ],
+      "disagreements": [],
+      "quotes": [
+        { "kr": "[01:02] 서버 내에서는네 번째 정도, 다섯 번째 정도 스펜인데 그럼에도 불구하고이 조합으로만 빠르게 지금 치고 나갈 수 있는", "en": "I'm only about the fourth or fifth spec on the server, yet with this team I'm pushing ahead fast." },
+        { "kr": "[02:03] 보스한테 여러분들이 수동컨을 해 줘서 붙어 버리거나 ... 7시 같은데 이렇게 구성모리 하는 거", "en": "Manually hug the boss, or corner-herd it at 7 o'clock." },
+        { "kr": "[04:06] 0점이 더 잘 잡혀서 호밀이 저는 더 좋다고 생각하고", "en": "Rye's aim is better zeroed, so I prefer it." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:glWD1kbs9Vs",
+      "url": "https://www.youtube.com/watch?v=glWD1kbs9Vs",
+      "date": "2026-08-16",
+      "title_kr": "[쿠키런크럼블] 쿨민? 비겁? 영상 하나로 끝내는 모든 스테이지 공략!",
+      "title_en": "Cool Mint? Coward? Every stage in one guide",
+      "channel": "서신우",
+      "view_count": 20196,
+      "duration_s": 592,
+      "relevance": 3,
+      "scope": "stage",
+      "summary_en": "서신우's pre-relief all-stage guide (covering up to 168, before Princess Bari). Five decks (Witch, Devil, GingerBright, Biker, Licorice) and a per-map walkthrough of the eight repeating maps with difficulty ranks and boss tactics (Cool Mint, Coward, Bikers, Truck, Charles, spirits). Power advice: when stuck, check recommended power; once you're in the 35% bracket, spec up with gold and idle rewards. Kingdom Cool Mint, the hardest boss, is clearable exactly at 55% if everything goes right. Here 바궁 means Wind Archer.",
+      "clears": [
+        { "stage": "왕국 x-30 (Kingdom map)", "boss": "쿨링민트 (Cool Mint)", "team_power": "?", "recommended_power": "?", "bracket": "55", "result": "clear", "play": "manual", "retries": "retry on a bad first tornado", "team": "악마덱 or 명랑덱", "note": "'If you succeed at all of it, it clears exactly at 55% of recommended power; each failure raises the requirement.'" }
+      ],
+      "teams": [
+        { "name": "위치덱 (Witch deck)", "scope": "stage", "for": "Most story stages on idle", "cookies": [
+            { "kr": "위치베리맛 쿠키", "en": "Witchberry Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "'위치' in the caption." }
+          ], "pets": ["곰 (caption; a bear pet, unsure); 황금 (likely 황금방울 Gold Drop) if you lack it"], "perks": "", "captain": "", "formation": "", "why": "Most areas are easy enough to idle.", "substitutions": ["Short on slots: drop the Volley (다발) synergy, or add 팬 (Pancake?)/핫도그 in that order (caption, unsure)"], "unorthodox": [] },
+        { "name": "악마덱 (Devil deck)", "scope": "stage", "for": "Solo bosses and painful ones (폭파광); ND-style Cool Mint/Coward early", "cookies": [
+            { "kr": "악마맛 쿠키", "en": "Devil Cookie", "level": "?", "stars": "?", "position": "?", "role": "debuffer", "note": "Taken for the shred (반각, likely 방깎 = DEF shred) on its skill." },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "Swap for 치약 (Toothpaste) if survival is hard." }
+          ], "pets": [], "perks": "", "captain": "", "formation": "", "why": "Dark Choco can replace Devil only at 5★ and with runes set.", "substitutions": ["치약초코 for Macaron", "다크초코 for Devil at 5★+"], "unorthodox": [] },
+        { "name": "명랑덱 (GingerBright deck)", "scope": "stage", "for": "Coward, and later Cool Mint when the Devil deck gets wiped by tornadoes", "cookies": [
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "?", "stars": "?", "position": "?", "role": "ATK-down debuffer", "note": "Survival deck: apply the ATK-down to the boss and endure." }
+          ], "pets": ["초코 pet (paid; recommended purchase)", "키위 (Kiwi Bird) if you lack it"], "perks": "", "captain": "", "formation": "", "why": "At higher stages just enduring isn't enough; ATK-down on the boss is needed.", "substitutions": [], "unorthodox": [] },
+        { "name": "바이커덱 (Biker deck)", "scope": "stage", "for": "도시 x-10 bikers (three mobs)", "cookies": [], "pets": ["초코 pet, or 곰 if survival is fine"], "perks": "", "captain": "", "formation": "", "why": "", "substitutions": [], "unorthodox": [] },
+        { "name": "감초덱 (Licorice deck)", "scope": "stage", "for": "숲 x-20 / x-30 spirit bosses", "cookies": [
+            { "kr": "감초맛 쿠키", "en": "Licorice Cookie", "level": "?", "stars": "?", "position": "?", "role": "summoner", "note": "The boss hits the summons, which keeps the team alive." }
+          ], "pets": [], "perks": "", "captain": "", "formation": "Stay still after entry; moving loses damage. Retry only if the frontline dies.", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [
+        { "cookie": "all (general)", "scope": "stage", "sugar_runes": "Dealers: obvious damage lines. Healers: Skill Haste/AMP. Debuffers: about two lines of focus (집중). Low-grade cookies (e.g. GingerBright): HP/DMG Reduction survival lines.", "gear": "Accuracy/focus: at Special grade and below take them if the stat rises. Consider options from Unique grade up. Some skip them and push with spec.", "thresholds": "", "why": "Focus is the debuff-related stat." }
+      ],
+      "mechanics": [
+        "[01:00] When stuck, look at the recommended power. Once you're in the 35% bracket, use gold and idle rewards to spec up.",
+        "Oven Wanderer: high grade, bad performance; tower/daily only. Never use it instead of Wind Archer.",
+        "Scorpion (정갈) is 'the best cookie in the game' and irreplaceable, as are Pomegranate and Milk. Wind Archer (바공) is good but replaceable by a same-synergy dealer or healer.",
+        "The maps cycle 들판 → 해변 → 도시 → 사막 → 숲 → 왕국 → 용암 → 설원 with rising difficulty. Difficulty order (hardest first): 왕국, 도시, 설원, 해변, 들판, 숲, 사막, 용암."
+      ],
+      "rift": [],
+      "stage_types": [
+        "들판 x-30 Cool Mint: move to the lower-left diagonal and release when it jumps. Whether cookies stay or scatter is luck. Devil deck at low stages, GingerBright deck when survival fails. Choco-type bosses: Devil deck.",
+        "해변: the same as 들판, but the frontline Herb may die on mob maps; let it, or add a survival pet at the back.",
+        "도시 x-10 Bikers: all three must die. If they run in different directions you time out, so reroll until they move together downward. 도시 x-20 Truck: Devil deck; move opposite to dodge the first charge, then stand still and it comes to you. 도시 x-30 Coward: GingerBright deck; hit it on first contact to apply ATK-down, keep Scorpion on it as it moves, aim for about 50% HP at the fear phase, retry if cookies die at the first contact or fear return.",
+        "사막: a farming map. Eagle or 폭파광: Devil deck for single, Biker deck for groups.",
+        "숲 x-20/30 spirits: Licorice deck, stand still.",
+        "왕국 x-20 Charles: Devil deck. Hold in place, stick Scorpion to the boss at its 2nd/3rd auto for max early stacks. 왕국 x-30 Cool Mint: the hardest boss; stay in place (retry if the first tornado scatters you); refresh Scorpion poison before each tornado, keep Devil's shred up, and heal well or die at the third tornado; late adds must not steal the poison. Clears exactly at 55%.",
+        "용암: the easiest, auto. Devil deck only if x-20/x-30 time out.",
+        "설원: x-20 Devil deck. x-30 Coward: GingerBright deck."
+      ],
+      "disagreements": ["GingerBright deck for Coward and late Cool Mint (서신우) versus ND러너's no-GingerBright stance (yt:HyRdA_cEVcA, yt:tZJ5wzhcUA8). Note that this guide predates the 2026-09-23 relief."],
+      "quotes": [
+        { "kr": "[01:00] 진행을 하다가 막혔을 때 권장 전투력을 보면서 35% 구간이 되면 그때 골드 잠수 보상 같은 걸 이용하여 스펙업을 하시면 되고", "en": "When stuck, watch the recommended power; once you're in the 35% band, use gold and idle rewards to spec up." },
+        { "kr": "[00:30] 정갈은 현재 존재하는 모든 쿠키 중에서 가장 좋은 쿠키이기 때문에 대체 자체가 불가능합니다", "en": "Scorpion is the best of all existing cookies, so it can't be replaced." },
+        { "kr": "[08:11] 이걸 전부 성공하면 권장 전투력 55%가 딱 될 때 클리어가 가능하며 실패하면 그만큼 점점 높아지게 됩니다", "en": "Succeed at all of it and you can clear exactly at 55% of recommended power; each failure raises what you need." },
+        { "kr": "[05:37] 밑으로 세 마리가 같이 움직이는 세 개선이 나올 때까지 돌리셔야 합니다", "en": "(Bikers) Keep retrying until you get the run where all three move down together." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:gEmz1YGzdNI",
+      "url": "https://www.youtube.com/watch?v=gEmz1YGzdNI",
+      "date": "2026-09-27",
+      "title_kr": "[쿠키런크럼블] 300지 이상에서도 가능한 일반 스테이지 방치덱 공략",
+      "title_en": "Idle deck for normal stages that works even past 300",
+      "channel": "서신우",
+      "view_count": 5216,
+      "duration_s": 347,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "서신우 iterates an idle (auto) deck for normal multi-mob stages past 300. The base Bari deck fails on idle because Milk follows Bari forward and the backline loses Milk's buff. Bari goes out for Witchberry; Melon Soda goes out (it needs hugging); Dark Choco tested lower. Adding the Pierce (관통) synergy, Rockstar beat Strawberry Shortcake. For bosses swap Rockstar and Witchberry for Herb and Scorpion and hug; Cool Mint and Coward still use the old dedicated decks.",
+      "clears": [],
+      "teams": [
+        { "name": "서신우 idle deck (300+ normal stages)", "scope": "stage", "for": "Normal multi-mob stages on auto, 300+", "cookies": [
+            { "kr": "위치베리맛 쿠키", "en": "Witchberry Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Replaces Bari." },
+            { "kr": "락스타맛 쿠키", "en": "Rockstar Cookie", "level": "?", "stars": "?", "position": "?", "role": "Pierce synergy", "note": "Tested better than Strawberry Shortcake." },
+            { "kr": "우유 (Milk)", "en": "Milk Cookie (Pediatrician)", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "The buff must reach the backline." }
+          ], "pets": [], "perks": "Mercenaries below Lv.4: use the all-team 2% perk (caption, unsure)", "captain": "", "formation": "", "why": "Idle-only: remove cookies whose damage depends on manual hugging.", "substitutions": ["Bosses: Herb + Scorpion in place of Rockstar + Witchberry, and hug"], "unorthodox": ["Ranged (사격형) at four; a fifth would enable the ammo perk (탄약 복지), but no fifth damage-adding option fit"] }
+      ],
+      "builds": [],
+      "mechanics": [
+        "On auto, Milk follows Bari forward, so the backline stops receiving Milk's buff. Manual play hides this.",
+        "Melon Soda, like Scorpion, needs to hug the target, so it is worthless on idle."
+      ],
+      "rift": [],
+      "stage_types": [
+        "Multi-mob normal stages: the idle deck.",
+        "Bosses: swap to Herb + Scorpion and hug.",
+        "Cool Mint and Coward: the old dedicated decks.",
+        "Chapter list: bikers need manual control ('바이커 수동')."
+      ],
+      "disagreements": ["서신우 opens by saying Crumble 'is not an idle game' but builds one because viewers keep asking."],
+      "quotes": [
+        { "kr": "[00:46] 바리를 따라 우유가 따라가서 뒷라인이 우유의 버프를 받지 못하고 있고 수동컨이었을 때는 문제가 없었는데", "en": "Milk follows Bari, so the backline doesn't get Milk's buff; with manual control this wasn't a problem." },
+        { "kr": "[03:27] 해당 덱은 다수를 상대하는 방치용 덱기에 보스가 나오면 별로여서 그럴 때는 락스타 위치 자리에 허브 전가를 넣고 붙으시면", "en": "It's an idle deck for crowds and weak on bosses; for bosses put Herb and Scorpion in the Rockstar/Witchberry slots and hug." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:-e7-3-JrWmk",
+      "url": "https://www.youtube.com/watch?v=-e7-3-JrWmk",
+      "date": "2026-09-23",
+      "title_kr": "[쿠키런크럼블] 스테이지 방치덱 공략",
+      "title_en": "Stage idle deck guide",
+      "channel": "서신우",
+      "view_count": 22432,
+      "duration_s": 141,
+      "relevance": 1,
+      "scope": "stage",
+      "summary_en": "Metadata only; no captions were downloaded. Per the chapters, 서신우 presents an idle stage deck (team, mercenary perks, pros, cons, boss fights, sugar runes, auto control) on relief day, 2026-09-23. The roster is on screen and not extracted here.",
+      "clears": [],
+      "teams": [],
+      "builds": [],
+      "mechanics": [],
+      "rift": [],
+      "stage_types": ["Chapters: 조합, 용병단, 장점, 단점, 보스전, 슈가룬, 자동컨."],
+      "disagreements": [],
+      "quotes": []
+    },
+    {
+      "source": "youtube",
+      "id": "yt:LPGGVUm6p7U",
+      "url": "https://www.youtube.com/watch?v=LPGGVUm6p7U",
+      "date": "2026-09-04",
+      "title_kr": "[쿠키런크럼블] 베테랑 용병단의 연타덱 최신 공략",
+      "title_en": "Veteran Mercenaries rapid-fire deck, latest",
+      "channel": "서신우",
+      "view_count": 13492,
+      "duration_s": 88,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "A short update of the rapid-fire (연타) stage deck for Veteran-mercenary players, before Bari. Strawberry Crepe is the default since most stages need little shred. On single bosses switch to Dark Choco, and Milky Way to Scorpion. Brightseeker below 5★ → Scorpion or Wind Archer. Pets: Panda for airborne stages, a Choco pet or Icy Birdie for survival. Captain Milk. If Scorpion is the highest-ATK cookie, switch the Like-A-Family perk to Passion Pay.",
+      "clears": [],
+      "teams": [
+        { "name": "서신우 rapid-fire deck (Veteran mercenaries)", "scope": "stage", "for": "General stages; swaps for single bosses", "cookies": [
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Default; swap to Dark Choco on single bosses." },
+            { "kr": "밀키웨이맛 쿠키", "en": "Milky Way Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Swap to Scorpion on single bosses." },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "5★ assumed", "position": "?", "role": "dealer", "note": "Below 5★: Scorpion or 바공 (Wind Archer, pre-Bari)." }
+          ], "pets": ["핫도그 (Hot Doggie) by default", "판다 (Panda Dumpling) on airborne stages", "초코 or 얼음과자 (Icy Birdie) for survival"], "perks": "가족 같은 용병단 → 열정페이 if Scorpion is the highest ATK", "captain": "우유 (Milk)", "formation": "", "why": "Most stages need little shred (반각).", "substitutions": ["Dark Choco for Strawberry Crepe", "Scorpion for Milky Way"], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": ["Passion Pay (열정페이) targets the highest-ATK ally, so the perk choice depends on which cookie has the most ATK."],
+      "rift": [],
+      "stage_types": ["Single bosses: add shred and Scorpion.", "Airborne (에어본) stages: Panda pet."],
+      "disagreements": [],
+      "quotes": [
+        { "kr": "[00:00] 대부분의 스테이지들은 반각이 별로 필요가 없어서 딸크를 사용하는데 단일 보스 같은 곳에서 막히시는 분들은 닥초로 바꾸시고", "en": "Most stages barely need shred, so I use Strawberry Crepe; if you're stuck on single bosses, switch to Dark Choco." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:n9Ow31R9Vys",
+      "url": "https://www.youtube.com/watch?v=n9Ow31R9Vys",
+      "date": "2026-09-24",
+      "title_kr": "쿠키런 크럼블 스테이지 덱 오토 최신 공략 조합(300 스테 이상도 가능)",
+      "title_en": "Latest auto stage deck (works past 300)",
+      "channel": "VART",
+      "view_count": 18790,
+      "duration_s": 87,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "VART's F2P auto stage deck as of the 2026-09-23 update. Stage difficulty dropped a lot and VART is at stage 278 on auto. The narration lists a cookie pool and pets. It is too long for one team, so it probably covers the main deck plus alternatives shown on screen. After the update, Cool Mint and hammer stages clear easily on auto. The captions read like machine-translated narration.",
+      "clears": [
+        { "stage": "278", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "auto", "retries": "", "team": "VART auto deck", "note": "'Currently progressing at stage 278' after the update." }
+      ],
+      "teams": [
+        { "name": "VART auto deck (2026-09-23 update)", "scope": "stage", "for": "Main stages on auto, 300+", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "비트 (caption, unsure)", "en": null, "level": "?", "stars": "?", "position": "?", "role": "", "note": "Heard as '비트'." },
+            { "kr": "우유 (Milk)", "en": "Milk Cookie (Pediatrician)", "level": "?", "stars": "?", "position": "?", "role": "captain", "note": "" },
+            { "kr": "야생딸기 (caption, unsure)", "en": null, "level": "?", "stars": "?", "position": "?", "role": "", "note": "Heard as '야생딸기'." },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "" }
+          ], "pets": ["곰젤리 (caption, unsure)", "핫도그 (Hot Doggie)", "홀리 윙스 (caption, unsure)"], "perks": "열정페이 + 초고속 승진 (caption: '열정과 홍보')", "captain": "우유 (Milk)", "formation": "", "why": "F2P auto push.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": ["2026-09-23 update: stage difficulty greatly lowered; Cool Mint and hammer stages clear easily and on auto."],
+      "rift": [],
+      "stage_types": ["Cool Mint and hammer bosses on auto after the relief."],
+      "disagreements": [],
+      "quotes": [
+        { "kr": "[00:02] 스테이지 난이도가 크게 낮아졌습니다. 최신 업데이트로 더욱 쉬워졌습니다. 9월 23일 수요일", "en": "Stage difficulty dropped a lot; the latest update (Wed 23 Sep) made it easier." },
+        { "kr": "[00:33] 현재 278단계를 진행 중입니다. 이후 업데이트, 비트, 쿨민트와 같은 단계, 망치 등 다른 작업도 완료할 수 있습니다. 쉽고 자동으로", "en": "I'm on stage 278; after the update, stages like Cool Mint and hammer can be cleared easily and on auto." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:oZmB_l0yMU4",
+      "url": "https://www.youtube.com/watch?v=oZmB_l0yMU4",
+      "date": "2026-09-26",
+      "title_kr": "바리공주 성능 뭐임?;; 돌격덱 스테이지덱으로 강추! [쿠키런 키우기 / 쿠키런 크럼블]",
+      "title_en": "Princess Bari is wild: charge deck strongly recommended for stages",
+      "channel": "꽝라멩",
+      "view_count": 7857,
+      "duration_s": 70,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "꽝라멩 recommends a Princess Bari charge (돌격) deck as a true idle stage deck. If Brightseeker is 5★+, it replaces Cool Mint (preferred, for rapid-fire synergy) or Strawberry Crepe. The third pet slot rotates 색동 주머니 or 핫도그 by boss. Weakness: the AI sometimes has Bari and Cherry Cola hit filler adds instead of the boss. Low-star Bari still beat the rapid-fire deck for them, given well-enhanced charge parts.",
+      "clears": [],
+      "teams": [
+        { "name": "꽝라멩 Bari charge deck", "scope": "stage", "for": "Idle stage pushing", "cookies": [
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "?", "stars": "low (the video asks whether low stars work: yes, depending on enhancement)", "position": "?", "role": "charge dealer", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "?", "role": "charge dealer", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "First out for a 5★ Brightseeker." },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "", "note": "Alternative drop for Brightseeker." }
+          ], "pets": ["third slot: 색동 주머니 (Candy Shade Pouch) or 핫도그 (Hot Doggie) by boss"], "perks": "", "captain": "", "formation": "", "why": "True idle.", "substitutions": ["브라이트시커 (5★+) for Cool Mint or Strawberry Crepe"], "unorthodox": ["Cool Mint (a player cookie) in a charge deck"] }
+      ],
+      "builds": [],
+      "mechanics": ["AI weakness: charge cookies sometimes target the stage's filler adds (잡몹) instead of the boss."],
+      "rift": [],
+      "stage_types": ["Boss stages: rotate the third pet by boss trait."],
+      "disagreements": [],
+      "quotes": [
+        { "kr": "[00:30] 바리 공주와 체리콜라가 보스는 안 때리고 스테이지 딜보충용으로 추가된 잠몹을 때릴 때가 있습니다", "en": "Bari and Cherry Cola sometimes hit the filler adds instead of the boss." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:rs8e12WqhdU",
+      "url": "https://www.youtube.com/watch?v=rs8e12WqhdU",
+      "date": "2026-09-06",
+      "title_kr": "비겁이 공략 종결! 클리어각 보는 방법까지 [쿠키런 키우기 / 쿠키런 크럼블]",
+      "title_en": "The final Coward guide, including how to read a clear",
+      "channel": "꽝라멩",
+      "view_count": 10439,
+      "duration_s": 146,
+      "relevance": 3,
+      "scope": "stage",
+      "summary_en": "꽝라멩's pre-relief Coward Cookie (비겁이) guide for players up to stage 190 and before mercenary Lv.4. The deck swaps Ion and Rye out for Scorpion and Skating Queen, because past 190 damage, not defence, was the bottleneck. The control technique is built around Scorpion's attack rhythm, and the video gives clear signals: debuff on first contact, all alive before fear, about 20 Scorpion stacks and boss at 50–55% HP at the fear phase.",
+      "clears": [],
+      "teams": [
+        { "name": "꽝라멩 Coward deck", "scope": "stage", "for": "비겁한 쿠키 (Coward), up to about 190, mercenary below Lv.4", "cookies": [
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "?", "role": "main dealer", "note": "The deck funnels buffs to it." },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "'피결' in the caption." },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "?", "stars": "?", "position": "?", "role": "ATK-down debuffer", "note": "The debuff must land at first contact." },
+            { "kr": "우유 (Milk)", "en": "Milk Cookie (Pediatrician)", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "?", "stars": "?", "position": "?", "role": "summons pull aggro", "note": "" },
+            { "kr": "들키 (caption, unsure)", "en": null, "level": "?", "stars": "?", "position": "?", "role": "debuffer", "note": "Named with GingerBright as a debuff source." }
+          ], "pets": [], "perks": "on screen", "captain": "on screen", "formation": "", "why": "Past 190 defence can be solved by infinite retries, but damage can't, so Ion and Rye went out and the deck funnels into Scorpion.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": [
+        "Scorpion attacks in threes: hit 1, a short pause, then hits 2 and 3 back to back. You can move right after hit 1, but not between hits 2 and 3.",
+        "Control: hit the boss immediately on contact so GingerBright's debuff lands before the heal (otherwise cookies die). Follow the moving boss and overlap Scorpion with it; re-stick after each 2–3 combo.",
+        "Clear signals: the debuff lands at the first contact; everyone is alive before the boss's fear; at fear time, about 20 Scorpion stacks and boss HP around 50–55%.",
+        "Overlapping the boss's floor attack while moving hurts a lot; in practice move on Scorpion's rhythm and hope.",
+        "'With time and more power it becomes easy anyway.'"
+      ],
+      "rift": [],
+      "stage_types": ["Coward: a mobile boss with fear and floor attacks; manual play."],
+      "disagreements": ["Uses GingerBright on Coward, which ND러너 advises against at higher stages."],
+      "quotes": [
+        { "kr": "[00:00] 190스테이지 이후부터 방어가 부족한 부분은 무한 트라이로 해결할 수 있었는데 딜이 부족한 부분은 어찌할 방법이 없더라고요", "en": "After stage 190, missing defence can be solved with endless retries, but missing damage can't." },
+        { "kr": "[01:32] 비거비가 공포를 쓸 때쯤 정갈 스택이 20스택, 비거비의 체력이 50에서 55% 정도면 클리어 가능성이 보인다고", "en": "When Coward casts fear, if Scorpion has about 20 stacks and the boss is at 50–55% HP, a clear is possible." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:sso1aeHJS_c",
+      "url": "https://www.youtube.com/watch?v=sso1aeHJS_c",
+      "date": "2026-09-12",
+      "title_kr": "손 댈 필요도 없다? 방치형 스테이지덱 추천! [쿠키런 키우기 / 쿠키런 크럼블]",
+      "title_en": "No hands needed: idle stage deck recommendation",
+      "channel": "꽝라멩",
+      "view_count": 15076,
+      "duration_s": 102,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "꽝라멩's pre-relief idle stage setup: a general deck, an airborne-boss variant (Pinot in, Panda Dumpling pet instead of Icy Birdie) and a Coward deck. Milk is runed for ATK so it receives Passion Pay. Cake Hound keeps Strawberry Crepe and Cool Mint alive; scatter-shot cookies are excluded so idle play has no damage loss. Chargemellow is justified because Macaron, Rye, Strawberry Crepe and Herb all benefit from rapid-fire. A 2★ Brightseeker works, and the Milk/Cheesecake buff-overlap bug was fixed.",
+      "clears": [],
+      "teams": [
+        { "name": "꽝라멩 general idle deck", "scope": "stage", "for": "General stages on idle", "cookies": [
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "?", "role": "survival support", "note": "Keeps Strawberry Crepe and Cool Mint alive so the frontline holds." },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "vulnerability buffer", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "dealer", "note": "Swap to Scorpion with manual control if damage is short." },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "?", "role": "healer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "2★", "position": "?", "role": "dealer", "note": "Low stars work." },
+            { "kr": "우유 (Milk)", "en": "Milk Cookie (Pediatrician)", "level": "?", "stars": "?", "position": "?", "role": "buffer", "note": "ATK runes so it gets Passion Pay." },
+            { "kr": "포드쿨 (caption, unsure)", "en": null, "level": "?", "stars": "?", "position": "?", "role": "", "note": "Swapped for Pinot Noir in the airborne variant." }
+          ], "pets": ["전지멜로우 (Chargemellow)", "얼음과자새 (Icy Birdie)"], "perks": "열정페이 (same across all three decks)", "captain": "same across decks (on screen)", "formation": "", "why": "Exclude cookies that scatter attacks so idle play loses no damage.", "substitutions": ["Airborne bosses: 피노누아 for '포드쿨' (unsure) and 판다만두 for Icy Birdie", "Short on damage: 전갈 for Rye, with manual control"], "unorthodox": ["Cake Hound as a frontline sustain piece"] }
+      ],
+      "builds": [
+        { "cookie": "우유 (Milk)", "scope": "stage", "sugar_runes": "ATK", "gear": "", "thresholds": "", "why": "To receive Passion Pay (열정페이)." }
+      ],
+      "mechanics": ["Milk and Cheesecake buff overlap: Cheesecake's used to take priority (a bug), now fixed, so both can be used together."],
+      "rift": [],
+      "stage_types": ["Airborne bosses: Panda Dumpling pet plus Pinot.", "Coward: a dedicated deck."],
+      "disagreements": [],
+      "quotes": [
+        { "kr": "[01:01] 연타 시너지를 받는 쿠키를 확인해 보면 마카롱, 호밀, 딸기 크래페, 허브인데요", "en": "The cookies that benefit from rapid-fire synergy are Macaron, Rye, Strawberry Crepe and Herb." }
+      ]
+    },
+    {
+      "source": "youtube",
+      "id": "yt:RLuI96lGgGg",
+      "url": "https://www.youtube.com/watch?v=RLuI96lGgGg",
+      "date": "2026-09-18",
+      "title_kr": "쿠키런 크럼블 169~248 스테이지 투력 35% 보스 공략 정리 영상",
+      "title_en": "Stages 169–248: boss guide at 35% power",
+      "channel": "그니",
+      "view_count": 6485,
+      "duration_s": 1208,
+      "relevance": 2,
+      "scope": "stage",
+      "summary_en": "그니's pre-relief boss-by-boss guide for stages 169–248 played at the 35% power bracket, directly on target for the user. No captions exist (the video has no speech track captions), so the teams and positioning shown on screen are not extracted. The chapter list gives the per-map boss roster and shows that each map has a general stage deck, a separate multi-mob deck on some maps, and two Coward decks. It ends with a stage gear introduction. This is worth a visual pass.",
+      "clears": [],
+      "teams": [],
+      "builds": [],
+      "mechanics": ["Title claims these bosses are clearable at 35% power (40–59% of recommended) in stages 169–248, before the 2026-09-23 relief."],
+      "rift": [],
+      "stage_types": [
+        "초원: general stage deck; 뿔 꿈틀이 boss; 초코왕방울 boss; 케이크 들개떼; 쿨링민트맛 쿠키.",
+        "해변: general deck plus a group-mob deck; 두리안 해적 무리; 쿨링민트맛 쿠키.",
+        "폐허 도시: general deck; 바이커 3인방; 폭주단 트럭; 비겁한 쿠키 (two decks).",
+        "사막: general deck; 생크림콘 독수리.",
+        "버섯지대: general deck plus a group-mob deck; 오염된 그루터기 정령.",
+        "광장: general deck; 레드베리 암살자; 망치공주; 쿨링민트맛 쿠키.",
+        "용암지대: general deck; 용암 와플 도마뱀 무리; 용암 슈가 와플 도마뱀.",
+        "설원지대: general deck; 아이스콘 듀얼 나이트; 설인 2마리 + 얼음 사탕골렘; 비겁한 쿠키 (two decks).",
+        "Outro: stage gear introduction (19:30)."
+      ],
+      "disagreements": [],
+      "quotes": []
+    }
+  ],
+  "glossary": [
+    { "kr": "차원의 힘", "en": "Dimensional Power (Rift buff level)", "kind": "term", "confidence": "high", "evidence": "yt:_d_7z1UD2p8 [18:46]–[20:55]: a level that fills per minute inside the Rift and inflates power/stats; yt:BDuQ279mbP4 [22:50] 22G shown vs about 5G real." },
+    { "kr": "시간지기", "en": "Timekeeper (as heard; Rift level-1 pet reward)", "kind": "pet", "confidence": "low", "evidence": "yt:_d_7z1UD2p8 [13:04], [17:12]: level-1 reward pet, +50% boss damage in the Rift, holding effect Charge evasion +3. May be the same pet as 무한바퀴 (Continuum Cog), which ND also names; unclear from captions." },
+    { "kr": "1일 정산", "en": "daily settlement (Rift daily ranking reward)", "kind": "term", "confidence": "high", "evidence": "yt:_d_7z1UD2p8 [1:22:52]; yt:BDuQ279mbP4 [48:16]" },
+    { "kr": "깡투력 / 깡전투력", "en": "raw power", "kind": "term", "confidence": "high", "evidence": "yt:_d_7z1UD2p8 [41:09]" },
+    { "kr": "온몸 비틀기", "en": "squeezing out everything (tryhard pushing at a low bracket)", "kind": "term", "confidence": "high", "evidence": "yt:1AyEMtaE-s4 [10:03]; yt:BDuQ279mbP4 [15:55]" },
+    { "kr": "무지성덱", "en": "brainless all-purpose deck", "kind": "term", "confidence": "high", "evidence": "yt:tZJ5wzhcUA8 [00:31], [05:10]" },
+    { "kr": "구석몰이", "en": "corner-herding (fight the boss in a map corner, e.g. 7 or 11 o'clock)", "kind": "term", "confidence": "high", "evidence": "Heard as '구성모리' in yt:DMvAmT9Cfqg [02:03] and yt:tZJ5wzhcUA8 [01:33]." },
+    { "kr": "명집", "en": "accuracy + focus (명중 + 집중)", "kind": "stat", "confidence": "high", "evidence": "yt:BDuQ279mbP4 [25:01], [1:52:41]" },
+    { "kr": "반각 / 반깎", "en": "likely 방깎 = DEF shred debuff (caption spelling)", "kind": "term", "confidence": "low", "evidence": "Attributed to Devil and Dark Choco skills in yt:glWD1kbs9Vs [02:33], yt:LPGGVUm6p7U [00:00], yt:BDuQ279mbP4 [41:06]." },
+    { "kr": "공깎", "en": "ATK-down debuff (GingerBright's)", "kind": "term", "confidence": "low", "evidence": "Heard as '공가끌/공각을끌' in yt:glWD1kbs9Vs [03:35], [06:07]." },
+    { "kr": "오븐 레벨 (caption '5분 랩', '오분')", "en": "Oven level (sets the gear tier; biggest power jumps)", "kind": "term", "confidence": "high", "evidence": "yt:1AyEMtaE-s4 [56:26], [1:14:54]; yt:BDuQ279mbP4 [20:07] clarifies '오븐 레벨'." },
+    { "kr": "정갈", "en": "Scorpion Cookie (caption spelling of 전갈)", "kind": "cookie", "confidence": "high", "evidence": "Poison stacks and 20-stack clear signal in yt:rs8e12WqhdU; 'Scorpion' said directly in yt:BDuQ279mbP4 [38:59]." },
+    { "kr": "성류", "en": "Pomegranate Cookie (caption spelling of 석류; 성류빔 = Pomegranate beam)", "kind": "cookie", "confidence": "high", "evidence": "yt:DMvAmT9Cfqg [04:36]; yt:BDuQ279mbP4 [44:31]" },
+    { "kr": "피결", "en": "Skating Queen Cookie (caption spelling of 피겨)", "kind": "cookie", "confidence": "high", "evidence": "yt:rs8e12WqhdU [00:00]" },
+    { "kr": "딸크", "en": "Strawberry Crepe Cookie", "kind": "cookie", "confidence": "high", "evidence": "yt:LPGGVUm6p7U, yt:BDuQ279mbP4 [2:22:41]" },
+    { "kr": "딸쇼", "en": "Strawberry Shortcake Cookie", "kind": "cookie", "confidence": "high", "evidence": "yt:gEmz1YGzdNI [02:57]" },
+    { "kr": "닥초 / 닼초", "en": "Dark Choco Cookie", "kind": "cookie", "confidence": "high", "evidence": "yt:LPGGVUm6p7U, yt:gEmz1YGzdNI chapter '닼초 추가'" },
+    { "kr": "체콜", "en": "Cherry Cola Cookie", "kind": "cookie", "confidence": "high", "evidence": "yt:_d_7z1UD2p8 [30:44]" },
+    { "kr": "위치", "en": "Witchberry Cookie (shorthand)", "kind": "cookie", "confidence": "high", "evidence": "yt:glWD1kbs9Vs chapter '위치덱'; yt:gEmz1YGzdNI" },
+    { "kr": "밀키", "en": "Milky Way Cookie (shorthand)", "kind": "cookie", "confidence": "high", "evidence": "yt:LPGGVUm6p7U; yt:glWD1kbs9Vs [01:32]" },
+    { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician (shorthand)", "kind": "cookie", "confidence": "high", "evidence": "Captain and buffer across all decks" },
+    { "kr": "호미 / 홈밀 / 코밀", "en": "Rye Cookie (caption spellings of 호밀)", "kind": "cookie", "confidence": "high", "evidence": "yt:DMvAmT9Cfqg [03:36]; yt:tZJ5wzhcUA8 [04:07]" },
+    { "kr": "이혼", "en": "Ion Cookie Robot (caption spelling of 이온)", "kind": "cookie", "confidence": "high", "evidence": "yt:tZJ5wzhcUA8 [01:33]" },
+    { "kr": "바람수 / 바람공수", "en": "Wind Archer Cookie (caption spelling of 바람궁수)", "kind": "cookie", "confidence": "high", "evidence": "yt:tZJ5wzhcUA8 [02:04]; the full name 바람궁수 is said in yt:_d_7z1UD2p8 [1:40:04]" },
+    { "kr": "바궁 / 바공 (before 2026-09-23 and in ND러너's power advice)", "en": "Wind Archer Cookie", "kind": "cookie", "confidence": "low", "evidence": "yt:glWD1kbs9Vs (2026-08-16, before Bari) pairs 바공 with Oven Wanderer as a high-grade cookie; yt:1AyEMtaE-s4 [2:19:33] calls 바궁 a TSSR used for power. The 002 glossary maps 바공 to Princess Bari, which holds only after Bari's release." },
+    { "kr": "다리봉주", "en": "Princess Bari (caption mis-hearing)", "kind": "cookie", "confidence": "low", "evidence": "yt:1AyEMtaE-s4 [18:49]" },
+    { "kr": "비겁이 / 비겁비 / 비거비 / 빅업이", "en": "Cowardly Cookie (stage boss)", "kind": "boss", "confidence": "high", "evidence": "All videos; final boss of 328-30." },
+    { "kr": "쿨민 / 쿨미 / 쿨", "en": "Cool Mint Cookie (stage boss)", "kind": "boss", "confidence": "high", "evidence": "yt:glWD1kbs9Vs" },
+    { "kr": "레드베리 암살자", "en": "Redberry Assassin (stage boss; flees with a wipe when touched)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg chapter; yt:tZJ5wzhcUA8 [04:07]; 318-18 is a Redberry zone (yt:1AyEMtaE-s4 [1:22:05])" },
+    { "kr": "망치공주", "en": "Hammer Princess (stage boss; launches/airborne)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg chapter 12:22" },
+    { "kr": "바이커 3인방", "en": "Biker trio (three-mob boss, 도시/폐허 도시 x-10)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg; yt:glWD1kbs9Vs [05:37]" },
+    { "kr": "폭주단 트럭", "en": "Biker-gang Truck (charging boss, 도시 x-20)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg; yt:glWD1kbs9Vs [05:37]" },
+    { "kr": "생크림콘 독수리", "en": "Whipped-cream-cone Eagle (desert boss; always hits the same target)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg; yt:BDuQ279mbP4 [1:43:06]" },
+    { "kr": "오염된 그루터기 정령", "en": "Polluted Stump Spirit (forest boss; launches)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg; yt:BDuQ279mbP4 [2:23:48]" },
+    { "kr": "뿔 꿈틀이", "en": "Horned Wiggler (grassland boss)", "kind": "boss", "confidence": "low", "evidence": "yt:RLuI96lGgGg chapter" },
+    { "kr": "초코왕방울 (boss)", "en": "King Choco Drop (grassland boss; hops/launches)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg; yt:BDuQ279mbP4 [2:24:21]" },
+    { "kr": "케이크 들개떼", "en": "Cake Hound pack (grassland boss)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg" },
+    { "kr": "두리안 해적 무리", "en": "Durian Pirate crew (beach boss)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg" },
+    { "kr": "용암 와플 도마뱀 무리 / 용암 슈가 와플 도마뱀", "en": "Lava Waffle Lizard pack / Lava Sugar Waffle Lizard (lava bosses)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg" },
+    { "kr": "아이스콘 듀얼 나이트", "en": "Icecone Dual Knight (snowfield boss)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg" },
+    { "kr": "설인 2마리 / 얼음 사탕골렘", "en": "Two Yetis / Ice Candy Golem (snowfield boss)", "kind": "boss", "confidence": "high", "evidence": "yt:RLuI96lGgGg" },
+    { "kr": "찰스 (boss)", "en": "Schwarzwälder (Kingdom x-20 stage boss)", "kind": "boss", "confidence": "low", "evidence": "yt:glWD1kbs9Vs [07:08]; name reused from the 001 glossary" },
+    { "kr": "폭파광", "en": "Demolition maniac (as heard; painful solo boss)", "kind": "boss", "confidence": "low", "evidence": "yt:glWD1kbs9Vs [02:33], [06:38]" },
+    { "kr": "팬문어 / 문어", "en": "Octo Wasabi (와사비 문어, pet)", "kind": "pet", "confidence": "high", "evidence": "yt:1AyEMtaE-s4 [31:54]–[32:44] confirms '와사비 문어'" },
+    { "kr": "판다 / 판다만두", "en": "Panda Dumpling (Lift RES pet for launch bosses)", "kind": "pet", "confidence": "high", "evidence": "yt:tZJ5wzhcUA8 [01:02]" },
+    { "kr": "복주머니", "en": "likely 색동 주머니 (Candy Shade Pouch)", "kind": "pet", "confidence": "low", "evidence": "yt:_d_7z1UD2p8 [34:06]" },
+    { "kr": "왕초코", "en": "likely 근엄한 초코왕방울 (Majestic King Choco Drop) pet", "kind": "pet", "confidence": "low", "evidence": "yt:DMvAmT9Cfqg [01:33]: a spender option replacing the ally-ATK-up pet" },
+    { "kr": "홀리 윙스", "en": "? (VART pet as heard)", "kind": "pet", "confidence": "low", "evidence": "yt:n9Ow31R9Vys [00:02]" },
+    { "kr": "곰젤리 / 곰 (pet)", "en": "? (bear pet as heard)", "kind": "pet", "confidence": "low", "evidence": "yt:n9Ow31R9Vys; yt:glWD1kbs9Vs [02:33] ('곰 없으면 황금')" }
+  ]
+}

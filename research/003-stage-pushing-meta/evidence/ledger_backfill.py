@@ -7,7 +7,9 @@ The scrapers this record reuses unedited (record 001's dc_scrape.py and nv_scrap
 and the extraction lanes don't write the ledger themselves; this fills it in afterwards.
 url and captured_at come from the capture's own `- url:` / `- captured:` header when it has one
 (an image takes its post's), else the source named by the folder, else null and the file's
-modification time. Lines already in the ledger are never rewritten.
+modification time. Lines already in the ledger are never rewritten: a listed file whose bytes
+changed (a revised SOURCES.md or script, never a capture) gets a new line, and the newest line
+for a path is its current hash.
 """
 import datetime, hashlib, json, os, re
 
@@ -55,25 +57,35 @@ def describe(rel):
 
 
 def main():
-    known = set()
+    """Append ledger lines for unlisted files, and for listed files whose bytes changed."""
+    latest = {}
     if os.path.exists(LEDGER):
         for line in open(LEDGER, encoding="utf-8"):
             if line.strip():
-                known.add(json.loads(line)["path"])
+                row = json.loads(line)
+                latest[row["path"]] = row
     rows = []
     for root, _, files in os.walk(HERE):
         for f in sorted(files):
             full = os.path.join(root, f)
             rel = os.path.relpath(full, HERE).replace(os.sep, "/")
             path = f"evidence/{rel}"
-            if rel == "captures.jsonl" or path in known:
+            if rel == "captures.jsonl":
+                continue
+            data = open(full, "rb").read()
+            sha = hashlib.sha256(data).hexdigest()
+            if path in latest:
+                if latest[path]["sha256"] == sha:
+                    continue
+                # A revised working document (SOURCES.md, a script): the newest line wins.
+                prev = latest[path]
+                stamp = datetime.datetime.fromtimestamp(os.path.getmtime(full)).astimezone().isoformat(timespec="seconds")
+                rows.append({"path": path, "url": prev["url"], "captured_at": stamp, "tool": prev["tool"], "sha256": sha})
                 continue
             url, stamp, tool = describe(rel)
             if stamp is None:
                 stamp = datetime.datetime.fromtimestamp(os.path.getmtime(full)).astimezone().isoformat(timespec="seconds")
-            data = open(full, "rb").read()
-            rows.append({"path": path, "url": url, "captured_at": stamp, "tool": tool,
-                         "sha256": hashlib.sha256(data).hexdigest()})
+            rows.append({"path": path, "url": url, "captured_at": stamp, "tool": tool, "sha256": sha})
     with open(LEDGER, "a", encoding="utf-8") as out:
         for r in sorted(rows, key=lambda r: r["path"]):
             out.write(json.dumps(r, ensure_ascii=False) + "\n")

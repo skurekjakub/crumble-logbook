@@ -16,6 +16,7 @@ Structured stage data from community sites, plus the press coverage of the 2026-
 | `press_pocketgamer_2026-09.html` | Pocket Gamer, 2026-09-23: the Dimensional Rift is a boss-only challenge for players who cleared every main stage, with stat levelling and season rewards; daily dungeons to 770. |
 | `press_zdnet_20260923112635.html` | ZDNet Korea, 2026-09-23: the update opens 차원의 이면 as end content for players who cleared the final stage. It doesn't mention the stage difficulty easing; the patch note (nv:44477) does. |
 | `press_inven_321382.html` | Inven, 2026-09-23: the same announcement (second attempt; the first timed out). |
+| `gsheet_dc17487_power-correction_gid1647676469.csv` | The Google sheet linked from dc:17487 (전투력 보정 시트표, 2026-08-08), exported as CSV: stages 1-1 to 100-30 with the power that enters each bracket (1%, 5%, 15%, 35%, 55%, 75%, 100%, 120%). An independent, English-language copy of the bracket table ("-Nubkie"); its 1-1 to 100-30 powers equal crumblehub's current ones. |
 | `cookieruncrumbles_gear-sugar-rune-guide.html` | An English SEO guide site's gear and rune guide; kept as the example of what global guides say (generic, no stage brackets). |
 
 ## Tried and not kept

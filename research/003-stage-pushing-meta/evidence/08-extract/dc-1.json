@@ -1,0 +1,1026 @@
+{
+  "batch": "dc-1",
+  "notes": "DCInside projectcc posts no >= 76000 (76044..77154), dated 2026-09-26..2026-09-28. Cookie identities in formation screenshots are read from the art, not from labels; each team entry says how a cookie was identified. Cross-post elimination (text names vs. screenshots of the same deck) gives: pink hair + red hat = 마카롱; priest in green stole = 피노누아 (confirmed by the in-game stat panel in 76631); red dress = 석류; doctor with pink bear = 우유 (소아과 의사); small green leaf cookie = 허브; black armoured knight = 다크초코 (76798 removes 다크초코 and it disappears); red/black twin-tail girl = 체리콜라 (76798 adds 체콜 and it appears); white-haired girl with blue-flame bow = 바리공주 (absent in 76834 whose author says 바리 is only 3-star); red scorpion-tail hair = 전갈; orange fox-eared girl = 달토끼 (77139 text); wheat-feather hat gunslinger = 호밀; green goggles cookie = 메론소다 (76211 text); orange flower + teal hood = 정글전사 (medium); red-haired man with wine glass = 뱀파이어 (medium); pink/blue jester = 트위즐젤리 (medium); white hair + red greatsword = 오븐방랑자 (medium); purple witch = 위치베리 (medium); orange wizard hat = 마법사 (77139 text). Three recurring cookies are only resolved as the set {브라이트시커, 치즈케이크, 피겨여왕}: light-element archer with heart hat (most likely 브라이트시커, the rear-line ranged dealer), gold-faced water-element support in blue dress with trident (most likely 치즈케이크, the buffer; 76286 has it while a commenter says that deck has no 브시커), and golden fluffy light-element charger (most likely 피겨여왕). These three carry confidence 'low' below. A floating staff sprite seen in 76286/76859-1/77139 is taken to be the trident cookie mid-animation.",
+  "posts": [
+    {
+      "source": "dc", "id": "dc:76044", "url": "https://m.dcinside.com/board/projectcc/76044", "date": "2026-09-26",
+      "title_kr": "이면 간놈중에 15퍼단 없냐", "title_en": "Did nobody reach the Rift on the 15% tier?", "relevance": 1, "scope": "both",
+      "summary_en": "Asks whether anyone reached the Rift (i.e. cleared 328-30) at the 15% bracket, or whether 4G is really required. No answers.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["Community figure: 328-30 needs about 4G team power to be in the 35% bracket."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "진짜 4g 넘겨야된다고??", "en": "You really have to get over 4G??" }]
+    },
+    {
+      "source": "dc", "id": "dc:76053", "url": "https://m.dcinside.com/board/projectcc/76053", "date": "2026-09-26",
+      "title_kr": "갑자기 스테미는거 ㅈㄴ느려져서 뭔가했더니 15퍼로 밀고있었네 ㅋㅋ", "title_en": "Stage pushing suddenly got slow, turns out I was pushing at 15%", "relevance": 2, "scope": "stage",
+      "summary_en": "Early account (all cookies Lv.66, 축복 Lv.6, server rank 1st) at stage 62-14 with 12M 598K team power; the crumblehub table beside it puts the 35% entry for 62-14 at 12M 625K, so the player was 27K short and in the 15% bracket. With 시커, 전갈, 바리, 체콜, 쿨민 all in, the boss (젤리 왕꿀벌, 21% HP left in the screenshot) still dies.",
+      "clears": [{ "stage": "62-14", "boss": "젤리 왕꿀벌", "team_power": "12M 598K", "recommended_power": "? (crumblehub: 15% >= 6M 313K, 35% >= 12M 625K, 55% >= 18M 938K, so ~31.6M)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "76053 early 15% team", "note": "Screenshot shows boss at 21% mid-fight; text says it does die ('잡긴 잡노'). Bracket from crumblehub table in the same screenshot." }],
+      "teams": [{ "name": "76053 early 15% team", "scope": "stage", "for": "early stages (62-x) at 15%",
+        "cookies": [
+          { "kr": "시커", "en": "Brightseeker Cookie", "level": "66", "stars": "?", "position": "?", "role": "dealer", "note": "named in text; all visible cards Lv.66" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "66", "stars": "?", "position": "?", "role": "dealer", "note": "named in text" },
+          { "kr": "바리", "en": "Princess Bari Cookie", "level": "66", "stars": "?", "position": "?", "role": "?", "note": "named in text" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "66", "stars": "?", "position": "?", "role": "?", "note": "named in text" },
+          { "kr": "쿨민", "en": "Cool Mint Cookie", "level": "66", "stars": "?", "position": "?", "role": "?", "note": "named in text" }
+        ],
+        "pets": ["?"], "perks": "", "captain": "", "formation": "12 cookies Lv.66; only five named", "why": "stack every damage cookie to kill at 15%", "substitutions": [], "unorthodox": [] }],
+      "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "preset named 스증스가 (Skill AMP / Skill Haste)", "thresholds": "", "why": "" }],
+      "mechanics": ["crumblehub stage table note (in screenshot): the 1% column is the maximum power that stays in that band; other columns are the minimum power to enter each damage-correction band; correction rises in steps, not continuously with power."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "근데 시커 전갈 바리 체콜 쿨민 다붙여서 때리니까 잡긴 잡노", "en": "But with Seeker, Scorpion, Bari, Cherry Cola and Cool Mint all on it, it does go down" }]
+    },
+    {
+      "source": "dc", "id": "dc:76066", "url": "https://m.dcinside.com/board/projectcc/76066", "date": "2026-09-26",
+      "title_kr": "토벌 렙따 기준 900M 이면", "title_en": "Conquest score at 900M level-bonus team power", "relevance": 0, "scope": "stage",
+      "summary_en": "Off-topic: Guild Conquest score (310G at ~900M; top guild members seen at 500x). Not stage pushing.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76089", "url": "https://m.dcinside.com/board/projectcc/76089", "date": "2026-09-26",
+      "title_kr": "15퍼단은 실존한다", "title_en": "The 15% tier exists", "relevance": 2, "scope": "stage",
+      "summary_en": "Claims stages past 300 go through fine at the 15% bracket. The only reply asks whether it is with 바리+체콜.",
+      "clears": [{ "stage": "300+", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "", "note": "claim, no screenshot" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "300이후스테이지인데 15퍼 잘만 뚫린다 ㅇㅇ", "en": "Past stage 300 and 15% goes through just fine" },
+        { "kr": "바리체콜로?", "en": "With Bari + Cherry Cola?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:76140", "url": "https://m.dcinside.com/board/projectcc/76140", "date": "2026-09-26",
+      "title_kr": "애들아 스테덱 무지성으로 투력만 올릴때", "title_en": "When you just pump power for the stage deck", "relevance": 1, "scope": "stage",
+      "summary_en": "Player at stage 325 asks which gear stats raise displayed power most, ignoring accuracy/focus. Answer: the power score values most whatever option you are currently weakest in; DEF% seems undervalued (diminishing returns). Links an older guide (post 56391).",
+      "clears": [], "teams": [],
+      "builds": [{ "cookie": "stage preset", "scope": "stage", "sugar_runes": "", "gear": "pure power ('뻥투') preset: pick whatever raises the number", "thresholds": "", "why": "power score weights your currently weakest stat highest" }],
+      "mechanics": ["Gear power score depends on current stats: the option you are shortest on is scored highest (reply by ㅇㅇ)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "스테이지 말고 지금 스텟에서 제일 부족한 옵션을 투력 높게 쳐줌", "en": "Not the stage; it scores highest whichever option your current stats lack most" }]
+    },
+    {
+      "source": "dc", "id": "dc:76174", "url": "https://m.dcinside.com/board/projectcc/76174", "date": "2026-09-26",
+      "title_kr": "이면9팁좀주라", "title_en": "Tips for Rift 9?", "relevance": 2, "scope": "rift",
+      "summary_en": "Rift level 9 is three trucks (트럭). The poster says about 25 people rank above them. One tip: drag the fight toward 7 o'clock or 11 o'clock and deal damage; with luck it dies.",
+      "clears": [{ "stage": "Rift 9", "boss": "트럭 x3", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "fail", "play": "manual", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift 9 = three trucks.", "Positioning tip (무과금): pull the boss slowly toward 7 or 11 o'clock and fight there.", "Asker ranks ~26th in the Rift ranking at Rift 8-9 on 2026-09-26."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "7시나 11시 쪽으로 살살 끌고 가서 딜하면 운빨 좋을때 잡힘", "en": "Drag it gently toward 7 or 11 o'clock and hit it; it dies when you're lucky" }]
+    },
+    {
+      "source": "dc", "id": "dc:76211", "url": "https://m.dcinside.com/board/projectcc/76211", "date": "2026-09-26",
+      "title_kr": "스테 현메타 뭐야?", "title_en": "What's the current stage meta?", "relevance": 2, "scope": "stage",
+      "summary_en": "404.65M stage deck; the player swapped 호밀 for 메소 (Melon Soda) to stay above the 55% power cut, and uses the new pet against CC bosses. Replies: for auto, drop 체콜 for 전갈 and drop 허브 for 호밀.",
+      "clears": [],
+      "teams": [{ "name": "76211 55% deck (404.65M)", "scope": "stage", "for": "55% bracket, mid stages",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "5", "position": "front row 1", "role": "?", "note": "art" },
+          { "kr": "메소", "en": "Melon Soda Cookie", "level": "?", "stars": "?", "position": "front row 2", "role": "dealer", "note": "art (green goggles) + text; used instead of 호밀 for power" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "front row 3", "role": "buffer", "note": "art" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "front row 4", "role": "healer", "note": "art" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "front row 5", "role": "?", "note": "art" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "front row 6", "role": "tank", "note": "art" },
+          { "kr": "?", "en": "probably Brightseeker Cookie", "level": "?", "stars": "?", "position": "back row 1", "role": "ranged dealer", "note": "heart-hat archer; low confidence" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "back row 2", "role": "?", "note": "art" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "?", "stars": "?", "position": "back row 3", "role": "support", "note": "gold cookie with trident; low confidence" },
+          { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "back row 4", "role": "?", "note": "pink-haired; medium confidence" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "back row 5", "role": "healer", "note": "art" },
+          { "kr": "달토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "back row 6", "role": "?", "note": "art" }
+        ],
+        "pets": ["? yellow pet Lv.20", "? orange/red pet Lv.19", "? unicorn-like pet Lv.20 (text: new pet used vs CC bosses)"], "perks": "", "captain": "", "formation": "roster shows many Lv.100 5-star cards; team power 404.65M", "why": "메소 in for 호밀 to stay over the 55% power cut",
+        "substitutions": ["메소 for 호밀 (power)", "reply: 전갈 for 체콜 if you want auto", "reply: 호밀 for 허브"], "unorthodox": ["picking a cookie for its power contribution to hold a bracket"] }],
+      "builds": [], "mechanics": ["Swapping a cookie for a higher-power one to stay above a bracket threshold (55%)."],
+      "rift": [], "stage_types": ["New pet used specifically against crowd-control bosses."], "disagreements": [],
+      "quotes": [
+        { "kr": "호밀쓰다가 55퍼 투력컷때매 메소 잠깐 쓰고있음", "en": "Was using Rye, using Melon Soda for now because of the 55% power cut" },
+        { "kr": "일단 오토로 하고싶으면 체콜 빼고 전갈 넣는게 조을듯", "en": "If you want auto, drop Cherry Cola for Scorpion" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:76221", "url": "https://m.dcinside.com/board/projectcc/76221", "date": "2026-09-26",
+      "title_kr": "이면 3단계 머임?", "title_en": "What is Rift level 3?", "relevance": 1, "scope": "rift",
+      "summary_en": "Rift level 3 boss takes no damage for the poster. Replies note the 328 boss is 비겁이.",
+      "clears": [{ "stage": "Rift 3", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "fail", "play": "?", "retries": "", "team": "", "note": "boss HP not moving" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": ["Rift 3 boss HP barely moves for fresh entrants."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "얘 피가 안 닳는데??", "en": "Its HP isn't going down??" }]
+    },
+    {
+      "source": "dc", "id": "dc:76225", "url": "https://m.dcinside.com/board/projectcc/76225", "date": "2026-09-26",
+      "title_kr": "이면 뚫으면 뻥투되는거 토벌도 적용됨?", "title_en": "Does the Rift power boost apply to Conquest too?", "relevance": 2, "scope": "rift",
+      "summary_en": "Question whether the large power increase from Rift progress applies to Conquest or other modes. Answers: Rift only.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["The stat/power boost from Rift levels applies only inside the Rift, not to Conquest or other modes (손성전 and others)."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이면전용이다.", "en": "It's Rift-only." }, { "kr": "적용안되서 애들 현타오는중", "en": "It doesn't apply, so people are disillusioned" }]
+    },
+    {
+      "source": "dc", "id": "dc:76238", "url": "https://m.dcinside.com/board/projectcc/76238", "date": "2026-09-26",
+      "title_kr": "35%로 밀거면 명중 챙겨야 됨?", "title_en": "Do I need accuracy to push at 35%?", "relevance": 3, "scope": "stage",
+      "summary_en": "Player moving from 55% to 35% with 940 accuracy feels damage is low. Replies give accuracy data points: ~1000 is fine; 600 (arena set) pushes fine at 35%; 700 fine; one player at 명중1050/집중1070 with 5 Skill Haste lines pushed to just before 15%. Consensus: accuracy optional at 35%, needed at 15%; without accuracy + Skill AMP/Haste on the stage set, the arena set is better.",
+      "clears": [],
+      "teams": [],
+      "builds": [
+        { "cookie": "stage preset", "scope": "stage", "sugar_runes": "스가 5 lines", "gear": "", "thresholds": "명중 1050, 집중 1070 (pushed to the edge of 15%)", "why": "ㅇㅇ 1's own set" },
+        { "cookie": "arena preset", "scope": "stage", "sugar_runes": "", "gear": "arena set", "thresholds": "명중 600 pushes fine at 35%", "why": "if the stage set lacks accuracy + Skill AMP/Haste, the arena set is better" }
+      ],
+      "mechanics": ["Accuracy: ~1000 comfortable, 700 and even 600 reported fine at 35%; at 15% accuracy must be built (ㅇㄹ)."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["Accuracy at 35%: ㅇㅇ says ~1000 needed ('1000언저리면 할만함'); others push fine at 600-700; ㅇㅇ 3 says power no longer matters, just add a line of accuracy."],
+      "quotes": [
+        { "kr": "35%면 없어도 되고 15%는 챙겨야함", "en": "At 35% you can skip it; at 15% you need it" },
+        { "kr": "명1050 집 1070으로 지금 15퍼 코앞까지 밀긴했음 스가는 5줄", "en": "With 1050 accuracy / 1070 focus I pushed right up to 15%; 5 lines of Skill Haste" },
+        { "kr": "명중+스증스가 챙겨진거 아니면 걍 아레나셋이 더 낫더라", "en": "Unless you have accuracy + Skill AMP/Haste, the arena set is just better" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:76263", "url": "https://m.dcinside.com/board/projectcc/76263", "date": "2026-09-26",
+      "title_kr": "35%단 치케 버렸다", "title_en": "35% tier: dropped Cheesecake", "relevance": 2, "scope": "stage",
+      "summary_en": "Player removed 치케 (Cheesecake) from the stage team because keeping it would drop team power into the 15% bracket. Implies 치케 contributes little power relative to the slot it takes.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["Cookie choice is constrained by the power bracket: a low-power buffer can cost the 35% bracket."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "안버리면 15%단 된다", "en": "If I don't drop it I become 15% tier" }]
+    },
+    {
+      "source": "dc", "id": "dc:76267", "url": "https://m.dcinside.com/board/projectcc/76267", "date": "2026-09-26",
+      "title_kr": "각자 시골섭 이장들 이면 들어감?", "title_en": "Have your small-server leaders entered the Rift?", "relevance": 1, "scope": "rift",
+      "summary_en": "Server-leader power comparisons: mid-400s server leader 3.5G; a mid-300s server leader 3.99G (asks if that is Rift-inflated); one server leader has 20G total with #2-3 at 13G; 600s server leader 500M; a high-double-digit server's #1 is at stage 300 with 2.5G. Several leaders entered the Rift by 2026-09-25/26.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift entry happened on the 25th for at least one server leader; a 160s server has one entrant."],
+      "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76286", "url": "https://m.dcinside.com/board/projectcc/76286", "date": "2026-09-26",
+      "title_kr": "요즘 스테덱 1티어 뭐임?", "title_en": "What's the tier-1 stage deck now?", "relevance": 2, "scope": "stage",
+      "summary_en": "96.89M stage deck with 명랑 (GingerBright), 악마, 위치베리. Replies ridicule it as an 'opening-day deck': no 체콜, no 브시커; why 명랑 when you have 달토끼; people do use 달토끼, 바리 and 체콜 now.",
+      "clears": [],
+      "teams": [{ "name": "76286 outdated deck (96.89M)", "scope": "stage", "for": "early stages",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front 1", "role": "?", "note": "art" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "front 2", "role": "?", "note": "art" },
+          { "kr": "악마", "en": "Devil Cookie", "level": "?", "stars": "?", "position": "front 3", "role": "?", "note": "art, medium" },
+          { "kr": "위치베리", "en": "Witchberry Cookie", "level": "?", "stars": "?", "position": "front 4", "role": "?", "note": "art, medium" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "front 5", "role": "healer", "note": "art" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "front 6", "role": "healer", "note": "art" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "back 1", "role": "dealer", "note": "art" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "back 2", "role": "buffer", "note": "art" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "?", "stars": "?", "position": "back 3", "role": "?", "note": "shown as a floating staff sprite; low" },
+          { "kr": "?", "en": "probably Tiger Lily Cookie (정글전사)", "level": "?", "stars": "?", "position": "back 4", "role": "?", "note": "orange flower, teal hood; medium" },
+          { "kr": "?", "en": "?", "level": "?", "stars": "?", "position": "back 5", "role": "?", "note": "white/red hair, red eyes; unidentified" },
+          { "kr": "명랑", "en": "GingerBright", "level": "?", "stars": "?", "position": "back 6", "role": "?", "note": "lollipop girl; named in a reply" }
+        ],
+        "pets": ["? yellow Lv.13", "? green Lv.14", "? orange/red Lv.10"], "perks": "", "captain": "", "formation": "", "why": "never got stuck with it",
+        "substitutions": ["reply: 달토끼 instead of 명랑"], "unorthodox": ["명랑 in a stage deck, called outdated"] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "체콜도 없고 브시커도 없고 뭔 오픈시절 덱을 쓰고있누", "en": "No Cherry Cola, no Brightseeker, why are you using a launch-era deck" }]
+    },
+    {
+      "source": "dc", "id": "dc:76290", "url": "https://m.dcinside.com/board/projectcc/76290", "date": "2026-09-26",
+      "title_kr": "328-30 35%권투가 4g네 ㅅㅂㅋㅋ", "title_en": "The 35% power line for 328-30 is 4G", "relevance": 3, "scope": "stage",
+      "summary_en": "Confirms the 35% bracket at 328-30 needs 4G team power. A 4G player (oven Lv.36) explains how: gear levels with oven, steady research, Bari 5-star, Stellar 8 with 6 pieces, and a stage preset rolled purely for displayed power. Claims that after the easing even 비겁이 survives with a bad deck, so build a pure-power deck. Plates top out at +18 on two pieces for them; +20 is impractical; inflated power is mostly research.",
+      "clears": [{ "stage": "328-30", "boss": "비겁한 쿠키", "team_power": "4G (35% threshold)", "recommended_power": "~10G implied by 35% = 4G", "bracket": "35", "result": "?", "play": "?", "retries": "", "team": "", "note": "threshold statement" }],
+      "teams": [],
+      "builds": [{ "cookie": "stage preset", "scope": "stage", "sugar_runes": "", "gear": "roll the stage preset purely for power ('순수 뻥투'); plates also for power, weapon first", "thresholds": "35% at 328-30 = 4G", "why": "after the easing, 비겁이 is survivable with any deck, so power (bracket) matters more than accuracy/focus" }],
+      "mechanics": ["Power sources named: oven level (raises gear level), research (largest: '뻥투는 순전히 연구빨'), fame, Stellar Link pieces, cookie stars (Bari 5-star).", "Plate +18 is the practical max; +20 gives a big jump but is not feasible.", "Daily arena #1 reward (acceleration tickets) speeds research."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["Two players at the same oven level 36 differ by 2G; attributed to research acceleration and Stellar Link pieces bought with cash."],
+      "quotes": [
+        { "kr": "그나마 최선은 스테 프리셋을 진짜 순수 뻥투로만 뽑아  그럼 많이 오름", "en": "The best you can do is roll the stage preset purely for inflated power; it goes up a lot" },
+        { "kr": "어차피 스테 난이도 개허벌되서 비겁도 개병신덱 들고가도 버텨짐  순수 뻥투덱 만들어서 밀어라", "en": "Stage difficulty got so loose that you survive even 비겁이 with a garbage deck; build a pure-power deck and push" },
+        { "kr": "뻥투는 순전히 연구빨임", "en": "Inflated power is purely research" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:76297", "url": "https://m.dcinside.com/board/projectcc/76297", "date": "2026-09-26",
+      "title_kr": "328 허브도 뺴버렸다", "title_en": "Dropped Herb too at 328", "relevance": 3, "scope": "stage",
+      "summary_en": "At stage 328-9 with 3G 950M 450K team power (축복 Lv.8, server 1st), the player removed 허브 to raise power toward the 4G line for 328-30, but says 마카롱 and 치케 can never be dropped because damage won't land without them. Replies: cut 치케 too; one says 328 is easier than 327.",
+      "clears": [{ "stage": "328-9", "boss": "(mob wave)", "team_power": "3G 950M 450K", "recommended_power": "?", "bracket": "?", "result": "?", "play": "auto", "retries": "", "team": "76297 328 no-healer team", "note": "mid-fight screenshot; auto-summon on" }],
+      "teams": [{ "name": "76297 328 no-healer team", "scope": "stage", "for": "chapter 328 up to 비겁이",
+        "cookies": [
+          { "kr": "?", "en": "?", "level": "100", "stars": "5", "position": "1", "role": "ranged", "note": "grass-element green leaf archer; unidentified" },
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "5", "position": "2", "role": "?", "note": "must keep (text)" },
+          { "kr": "?", "en": "probably Brightseeker Cookie", "level": "100", "stars": "5", "position": "3", "role": "ranged", "note": "light archer; low" },
+          { "kr": "메소", "en": "Melon Soda Cookie", "level": "100", "stars": "5", "position": "4", "role": "ranged", "note": "art; medium" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "100", "stars": "5", "position": "5", "role": "?", "note": "art" },
+          { "kr": "?", "en": "probably Skating Queen Cookie", "level": "100", "stars": "5", "position": "6", "role": "charge", "note": "golden cookie; low" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "5", "position": "7", "role": "buffer", "note": "art" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "100", "stars": "5", "position": "8", "role": "support", "note": "water/bell card; must keep 치케 per text; low" },
+          { "kr": "트위즐", "en": "Twizzly Gummy Cookie", "level": "100", "stars": "5", "position": "9", "role": "ranged", "note": "art; medium" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5", "position": "10", "role": "healer", "note": "captain banner on this card" },
+          { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "100", "stars": "5", "position": "11", "role": "tank", "note": "light/shield pink card; medium" },
+          { "kr": "?", "en": "?", "level": "100", "stars": "5", "position": "12", "role": "tank", "note": "dark/shield card, cut off" }
+        ],
+        "pets": ["?"], "perks": "", "captain": "우유 (banner on card)", "formation": "", "why": "herb removed to gain power; 마카롱 + 치케 needed for damage to land",
+        "substitutions": ["허브 removed"], "unorthodox": ["only one healer (우유) at 328"] }],
+      "builds": [], "mechanics": ["Dropping a healer to gain team power toward the bracket line."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["Replies say cut 치케 as well; author says 마카롱/치케 are essential for damage."],
+      "quotes": [{ "kr": "마카롱 치케 없으면 딜을 못박아서 애네둘은 절대 못빼", "en": "Without Macaron and Cheesecake the damage doesn't land, so those two can never go" }, { "kr": "328이 327보다 쉽던데?", "en": "328 was easier than 327, no?" }]
+    },
+    {
+      "source": "dc", "id": "dc:76321", "url": "https://m.dcinside.com/board/projectcc/76321", "date": "2026-09-26",
+      "title_kr": "이면 15단 개빡", "title_en": "Rift level 15 is brutal", "relevance": 3, "scope": "rift",
+      "summary_en": "Rift-ranked 4th player (profile Lv.189, 축복 Lv.10) at Rift level 15 vs 비겁한 쿠키 (boss at 100%) with a displayed team power of 19G 683M 889K. 돌파력 at 1095 with ATK and HP breakthrough Lv.316 MAX. Explains the Rift has its own level that raises stats, which is why displayed power jumps.",
+      "clears": [{ "stage": "Rift 15", "boss": "비겁한 쿠키", "team_power": "19G 683M 889K (Rift-inflated)", "recommended_power": "?", "bracket": "?", "result": "fail", "play": "?", "retries": "", "team": "", "note": "rank 4th; boss 100% in screenshot" }],
+      "teams": [], "builds": [],
+      "mechanics": ["돌파력 (breakthrough) 1095 단계: ATK Lv.316 +632 MAX, DEF Lv.0, HP Lv.316 +6,320 MAX; next level costs 1.45T gold."],
+      "rift": ["Rift level 15 boss is 비겁한 쿠키.", "Rift has its own level (차원의 힘); raising it raises stats, and the displayed power reflects it (19.68G for a top-4 player on 2026-09-26).", "Top-4 ranked player was at Rift 15 on 2026-09-26."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이면 렙이라는게 따로 생김 렙 올리면 능력치오름", "en": "There's a separate Rift level; raising it raises your stats" }, { "kr": "5단계 비겁인데 클덱 펫조합좀 알려주세요", "en": "Rift 5 is 비겁이, please share a clear deck and pet combo" }]
+    },
+    {
+      "source": "dc", "id": "dc:76339", "url": "https://m.dcinside.com/board/projectcc/76339", "date": "2026-09-26",
+      "title_kr": "지금 328-17인데 잠와서 미칠거같다", "title_en": "At 328-17 and dying of sleepiness", "relevance": 1, "scope": "rift",
+      "summary_en": "Chatter. One replier (축복 9) went straight into the Rift and cleared up to level 2 before sleeping; says you must clear at least one Rift level because rewards differ by 2x; Rift rewards include a pet, title and profile, no package.",
+      "clears": [{ "stage": "Rift 1-2", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "", "note": "replier, 축복 9" }],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Clearing at least one Rift level doubles the reward (claim).", "Rift rewards: pet, title, profile."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "하난 잡아야지 보상이 2배차이야!!!", "en": "Kill at least one, the reward differs by 2x!!!" }, { "kr": "펫이랑 칭호랑 프로필 줘", "en": "It gives a pet, a title and a profile" }]
+    },
+    {
+      "source": "dc", "id": "dc:76347", "url": "https://m.dcinside.com/board/projectcc/76347", "date": "2026-09-26",
+      "title_kr": "35퍼용 스테덱도 연타씀?", "title_en": "Do 35% stage decks use Rapid Fire too?", "relevance": 3, "scope": "stage",
+      "summary_en": "Player around stage 280 finds 호밀/메소 weak and asks about 정전/전갈. Answers: 체콜 + 딸크; swap decks per boss at 35%; one full list: 마카롱 시커 전갈 호밀 피노 치케 석류 피겨 트위즐 우유 허브 달토끼 with pets 갓방울 핫도그 색동 or 앵앵베리버드 on the arena set; the Rapid Fire deck was the Pinot-release era, now it's 체콜 바리.",
+      "clears": [],
+      "teams": [{ "name": "76347 35% list", "scope": "stage", "for": "35% bracket around stage 280",
+        "cookies": [
+          { "kr": "카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "시커", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "트위즐", "en": "Twizzly Gummy Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "달토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "", "role": "", "note": "" }
+        ],
+        "pets": ["갓방울", "핫도그", "색동 or 앵앵베리버드"], "perks": "", "captain": "", "formation": "", "why": "", "substitutions": ["ㅇㅇ 1: 체콜 + 딸크"], "unorthodox": ["uses the arena gear set for stages"] }],
+      "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "arena set", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": [],
+      "stage_types": ["At 35%, switch decks per boss."],
+      "disagreements": ["Rapid Fire (연타) deck vs 체콜/바리: one says 연타 was the Pinot-launch meta and now it's 체콜 바리."],
+      "quotes": [{ "kr": "35퍼면 보스별로 덱 갈아가면서 써야제", "en": "At 35% you swap decks per boss" }, { "kr": "연타덱은 피노 막 나왔을때 쓰던거고  지금은 체콜 바리", "en": "Rapid Fire deck was what we used when Pinot came out; now it's Cherry Cola + Bari" }]
+    },
+    {
+      "source": "dc", "id": "dc:76372", "url": "https://m.dcinside.com/board/projectcc/76372", "date": "2026-09-27",
+      "title_kr": "이면들어가면 10g이렇게 팀투뻥튀기되던데", "title_en": "Team power balloons to ~10G after entering the Rift", "relevance": 2, "scope": "rift",
+      "summary_en": "Asks whether the ~10G power seen inside the Rift applies to arena/conquest. Answer: Rift only.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift-level power inflation (e.g. to ~10G) applies only in the Rift."],
+      "stage_types": [], "disagreements": [], "quotes": [{ "kr": "이면에만", "en": "Rift only" }]
+    },
+    {
+      "source": "dc", "id": "dc:76386", "url": "https://m.dcinside.com/board/projectcc/76386", "date": "2026-09-27",
+      "title_kr": "328-30 이후론 보상고정인거임?", "title_en": "Are rewards fixed after 328-30?", "relevance": 1, "scope": "stage",
+      "summary_en": "After 328-30, idle/luck rewards stop growing and there are no stage quests; cutters come from daily dungeons.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["Past 328-30 stage rewards are fixed; cutter (커터) supply moves to daily dungeons."],
+      "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76415", "url": "https://m.dcinside.com/board/projectcc/76415", "date": "2026-09-27",
+      "title_kr": "328가서 한번에 까면 무슨일이 일어날까", "title_en": "What happens if I open these all at once at 328", "relevance": 1, "scope": "stage",
+      "summary_en": "Player hoarding 3,939 keyed chests plus many timed gold/XP boxes, 돌파력 806; plans to open them at 328. A replier says 돌파력 max is 1500. The poster says stages never blocked so the boxes piled up; passed 300 yesterday and will use them each time they hit the 35% cut.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["돌파력 cap reported as 1500.", "Saving idle-time boxes to open when blocked at a bracket threshold (35% cut)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이제 막힐때마다 35퍼컷 되게 쓰게", "en": "Now I'll use them whenever I'm blocked, to reach the 35% cut" }]
+    },
+    {
+      "source": "dc", "id": "dc:76447", "url": "https://m.dcinside.com/board/projectcc/76447", "date": "2026-09-27",
+      "title_kr": "328빨리간애랑 늦게간애랑 차이많이날려나?", "title_en": "Big gap between early and late 328 arrivals?", "relevance": 2, "scope": "rift",
+      "summary_en": "Idle reward snowballs regardless. ㅇㄹ: the Rift can't be pushed except by earning 차원의 힘 through idling. Follow-up asks whether the Rift has no 35%-style brackets, only levelling.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift progress depends on 차원의 힘 earned while idling (ㅇㄹ)."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이면은 방치로 차원의 힘 얻는거 아니면 못 밀어서", "en": "You can't push the Rift except by getting Dimensional Power from idling" }]
+    },
+    {
+      "source": "dc", "id": "dc:76454", "url": "https://m.dcinside.com/board/projectcc/76454", "date": "2026-09-27",
+      "title_kr": "328-30", "title_en": "328-30", "relevance": 3, "scope": "stage",
+      "summary_en": "Player reached 4G at 328-30 but damage won't land with low accuracy/focus. Reply: no, use the deck you used for 비겁이; they cleared at 3.9G with 마카롱 브시커 전갈 치케 석류 피겨 바리 정글 우유 체콜 닼초 토끼. Another at 328-26 can't clear with a pure-power deck.",
+      "clears": [
+        { "stage": "328-30", "boss": "비겁한 쿠키", "team_power": "3.9G", "recommended_power": "? (community: 35% = 4G)", "bracket": "? (15 if 35% line is 4G)", "result": "clear", "play": "?", "retries": "", "team": "76454 비겁 deck", "note": "replier's claim, no screenshot" },
+        { "stage": "328-26", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "fail", "play": "?", "retries": "", "team": "", "note": "pure-power (뻥투) deck fails" }
+      ],
+      "teams": [{ "name": "76454 비겁 deck", "scope": "stage", "for": "328-30 비겁한 쿠키",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "브시커", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "바리", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "정글", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "정글전사" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "", "role": "", "note": "presumably 달토끼" }
+        ],
+        "pets": ["?"], "perks": "", "captain": "", "formation": "", "why": "the deck that killed 비겁이 before", "substitutions": [], "unorthodox": [] }],
+      "builds": [], "mechanics": ["Low accuracy/focus is not the blocker at 328-30 per replier; the right 비겁 deck is."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["Pure-power deck: 76290 says it works; a replier at 328-26 says 뻥투 deck won't clear."],
+      "quotes": [{ "kr": "아뇨 비겁이 잡던 덱으로 잡으면 잡혀요 저도 3.9G로 밈", "en": "No, use the deck that killed 비겁이 and it dies; I pushed it at 3.9G too" }]
+    },
+    {
+      "source": "dc", "id": "dc:76508", "url": "https://m.dcinside.com/board/projectcc/76508", "date": "2026-09-27",
+      "title_kr": "스텔라8 열고 우유 9성이면 운 없냐?", "title_en": "Stellar 8 open with Milk at 9 stars, unlucky?", "relevance": 0, "scope": "stage",
+      "summary_en": "Off-topic gacha luck comparison (Stellar Link 8 vs Milk/Pomegranate star counts).",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76523", "url": "https://m.dcinside.com/board/projectcc/76523", "date": "2026-09-27",
+      "title_kr": "328-30 왔는데 투력 존나 모자르네", "title_en": "Reached 328-30 but way short on power", "relevance": 2, "scope": "stage",
+      "summary_en": "With the old 비겁 deck the player is 100M short of the 328-30 line. Advice (나나리): put in 바궁 and 오방 (for power); 비겁이 is killed by twisting it with Scorpion damage anyway.",
+      "clears": [{ "stage": "328-30", "boss": "비겁한 쿠키", "team_power": "~100M under the line", "recommended_power": "?", "bracket": "? (below 35)", "result": "fail", "play": "?", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["비겁이: Scorpion (전갈) damage carries the kill, so filler slots can go to high-power cookies (바람궁수, 오븐방랑자)."],
+      "disagreements": [],
+      "quotes": [{ "kr": "바궁오방껴", "en": "Slot in Wind Archer and Oven Wanderer" }, { "kr": "비겁은 어차피 전갈 딜로 비틀어서잡는거니까", "en": "비겁이 is wrung out with Scorpion's damage anyway" }]
+    },
+    {
+      "source": "dc", "id": "dc:76525", "url": "https://m.dcinside.com/board/projectcc/76525", "date": "2026-09-27",
+      "title_kr": "차원은 권투컷 없나?", "title_en": "Does the Rift have no power cut?", "relevance": 3, "scope": "rift",
+      "summary_en": "나나리 sees crumblehub list the Rift at 10G and asks whether there is a power cut. Replies: multiply by 0.35 / take 40% of hub's figure for the 35% line; ~'match it and hit, it's completely different'. 나나리 decides to wait for 차원의 힘.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["crumblehub lists a Rift recommended power (10G seen by 나나리).", "Commenters: the power gate applies in the Rift; the 35% line is 40% of the hub figure ('허브에서40%하면 투력35%').", "Being above the line makes a large damage difference ('한번 맞춰보고 때려봐 확달라')."],
+      "stage_types": [],
+      "disagreements": ["ㅇㅇ 1 says multiply by 0.35; ㅇㅇ 2 says 40% of the hub figure gives the 35% bracket (the latter matches the bracket table)."],
+      "quotes": [{ "kr": "허브에서40%하면 투력35%인거같더라", "en": "40% of the hub figure seems to give the 35% power bracket" }, { "kr": "한번 맞춰보고 때려봐 확달라", "en": "Match it once and hit it, it's dramatically different" }]
+    },
+    {
+      "source": "dc", "id": "dc:76537", "url": "https://m.dcinside.com/board/projectcc/76537", "date": "2026-09-27",
+      "title_kr": "위치베리 치케 호밀없이 328을 가라고요?", "title_en": "Reach 328 without Witchberry, Cheesecake and Rye?", "relevance": 2, "scope": "stage",
+      "summary_en": "언담 loves 위치베리 against single and multiple targets but has no 바리. Others: without 치케 damage drops too much; with 바리 체콜 시커 there's no room for more dealers; with Bari 5-star and Stellar 6 pieces you can keep 치케 and still hit 35%; or just exceed 4G with 치케 in.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["Bari 5-star + Stellar Link 6 pieces cited as the power that lets 치케 stay at 35% near 328."],
+      "rift": [], "stage_types": ["위치베리 is good against both single and multi targets (언담)."],
+      "disagreements": ["Whether 치케 can be dropped: several say damage falls too far without it."],
+      "quotes": [{ "kr": "바리5성찍고 스텔라 6조각여니까 치케넣고도 35나오긴함", "en": "With Bari at 5 stars and 6 Stellar pieces open, I still get 35% with Cheesecake in" }]
+    },
+    {
+      "source": "dc", "id": "dc:76546", "url": "https://m.dcinside.com/board/projectcc/76546", "date": "2026-09-27",
+      "title_kr": "이면 스텟뻥되는거 어디적용임", "title_en": "Where does the Rift stat boost apply?", "relevance": 1, "scope": "rift",
+      "summary_en": "Rift stat inflation applies only in the Rift (not conquest, arena).",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift stat boost: Rift only ('이면에서 이면으로')."],
+      "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76550", "url": "https://m.dcinside.com/board/projectcc/76550", "date": "2026-09-27",
+      "title_kr": "스테 연쇄덱", "title_en": "Stage Chain deck", "relevance": 3, "scope": "stage",
+      "summary_en": "티티's Chain (연쇄) stage deck at 2.62G: with the chain pet it shreds stages with 3+ mobs at 35%; move to the middle of the mobs. For 1-2 mob stages it sometimes needs retries, so switch to the Rapid-Fire Scorpion deck. 뱀파 runs its arena set (Crit%, Crit RES, Skill Haste, Evasion); 트위즐 has no runes. Semi-auto: occasionally passes a stage on its own.",
+      "clears": [],
+      "teams": [{ "name": "76550 chain deck (2.62G)", "scope": "stage", "for": "multi-mob stages (3+) at 35%",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front 1", "role": "?", "note": "art" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "front 2", "role": "?", "note": "art" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "front 3", "role": "buffer", "note": "art" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "?", "stars": "?", "position": "front 4", "role": "support", "note": "gold cookie with trident; low" },
+          { "kr": "바리", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "front 5", "role": "?", "note": "art" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "front 6", "role": "?", "note": "art" },
+          { "kr": "오방", "en": "Oven Wanderer Cookie", "level": "?", "stars": "?", "position": "back 1", "role": "?", "note": "text ('오방이 하루종일 스테이트'), art medium" },
+          { "kr": "?", "en": "probably Skating Queen Cookie", "level": "?", "stars": "?", "position": "back 2", "role": "charge", "note": "golden fluffy; low" },
+          { "kr": "뱀파", "en": "Vampire Cookie", "level": "?", "stars": "?", "position": "back 3", "role": "dealer", "note": "text; runes 치확 치저 스가 회피 (arena set)" },
+          { "kr": "트위즐", "en": "Twizzly Gummy Cookie", "level": "?", "stars": "?", "position": "back 4", "role": "?", "note": "text; no sugar runes" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "back 5", "role": "healer", "note": "art" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "back 6", "role": "healer", "note": "art" }
+        ],
+        "pets": ["? yellow lion-like pet Lv.19 (the chain pet per text, unidentified)", "? orange/red pet Lv.20", "? yellow pet Lv.20"], "perks": "", "captain": "", "formation": "move to the centre of the mob pack at the start",
+        "why": "chain pet + Oven Wanderer infinite skating clears packs",
+        "substitutions": ["1-2 mob stages: switch to the Rapid-Fire Scorpion deck (연타전갈덱)"], "unorthodox": ["트위즐 with no sugar runes", "Vampire in stages"] }],
+      "builds": [{ "cookie": "뱀파", "scope": "stage", "sugar_runes": "치확 치저 스가 회피", "gear": "arena set as-is", "thresholds": "", "why": "does more damage than expected" }],
+      "mechanics": ["Chain pet only adds Oven Wanderer skating +2 (commenter) vs '무한스킬이라 의미없음' (infinite skill, so +2 cap doesn't matter) (티티)."],
+      "rift": [],
+      "stage_types": ["3+ mob stages: chain deck at 35%.", "1-2 mob stages: Rapid-Fire Scorpion deck."],
+      "disagreements": ["Commenter: chain pet only gives Oven Wanderer +2 skating, meaningful only for big packs; 티티: skill is effectively infinite so it doesn't matter."],
+      "quotes": [{ "kr": "연쇄펫끼면 35퍼에서 3마리이상은 씹어먹음", "en": "With the chain pet it chews through 3+ mobs at 35%" }, { "kr": "난 연타덱 오토 아예안되던데 얘는 가끔 하나씩 그냥 넘어감", "en": "Rapid Fire deck never works on auto for me; this one occasionally passes a stage on its own" }]
+    },
+    {
+      "source": "dc", "id": "dc:76569", "url": "https://m.dcinside.com/board/projectcc/76569", "date": "2026-09-27",
+      "title_kr": "이면도 권투잇나?", "title_en": "Does the Rift have recommended power too?", "relevance": 2, "scope": "rift",
+      "summary_en": "At Rift 5, 비겁이 takes no damage at all. Asks where the Rift recommended power is; answer: crumblehub has a Rift tab beside stage, daily dungeon and tower.",
+      "clears": [{ "stage": "Rift 5", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "fail", "play": "?", "retries": "", "team": "", "note": "no damage" }],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift 5 boss is 비겁한 쿠키.", "crumblehub has a Rift recommended-power table (tab next to stage / daily dungeon / tower)."],
+      "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76579", "url": "https://m.dcinside.com/board/projectcc/76579", "date": "2026-09-27",
+      "title_kr": "이면 뻥투는 왜 만든거임", "title_en": "Why does Rift power inflation exist", "relevance": 1, "scope": "rift",
+      "summary_en": "Rift-only power exists to differentiate the Rift ranking; 나나리: arriving early in the Rift is an advantage.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift power serves the Rift ranking.", "Early Rift arrival is advantageous (나나리) since 차원의 힘 accrues over time."],
+      "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76586", "url": "https://m.dcinside.com/board/projectcc/76586", "date": "2026-09-27",
+      "title_kr": "이면3 망치 뭐로 잡음?", "title_en": "What kills the Hammer at Rift 3?", "relevance": 2, "scope": "rift",
+      "summary_en": "Rift 3 boss is 망치 (Hammer Princess); HP won't move. Replies: wait for 차원의 힘, or the well-known Seeker-Scorpion deck.",
+      "clears": [{ "stage": "Rift 3", "boss": "망치공주", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "fail", "play": "?", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift 3 boss = 망치공주.", "Seeker + Scorpion deck recommended for Rift 3."],
+      "stage_types": [], "disagreements": [], "quotes": [{ "kr": "차원의힘존버ㄱㄱ", "en": "Just wait for Dimensional Power" }]
+    },
+    {
+      "source": "dc", "id": "dc:76614", "url": "https://m.dcinside.com/board/projectcc/76614", "date": "2026-09-27",
+      "title_kr": "35퍼 일반 스테 오토로 안밀어지는데 정상임?", "title_en": "Normal stages at 35% won't clear on auto, is that normal?", "relevance": 3, "scope": "stage",
+      "summary_en": "At 35%, normal stages need 2-3 s of moving forward at the start or auto fails, with 마카롱 시커 호밀 피노 치케 석류 피겨 우유 딸크 체콜 허브 닼초. Replies disagree: one says auto doesn't work at 35%; another at stage 315 says no stage has failed on auto since the easing and that 체콜 is the reason auto fails; use 위치베리.",
+      "clears": [],
+      "teams": [{ "name": "76614 35% deck", "scope": "stage", "for": "35% normal stages",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "시커", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "reply blames it for auto failures" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" }
+        ],
+        "pets": ["?"], "perks": "", "captain": "", "formation": "", "why": "", "substitutions": ["위치베리 for 체콜 (reply)"], "unorthodox": [] }],
+      "builds": [],
+      "mechanics": ["Since the 2026-09-23 easing, a 35% player at stage 315 reports every stage clearing on auto (reply)."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["Auto at 35%: ㅇㅇ 1 says it doesn't work; ㅇㅇ 2 (stage 315) says auto always works post-easing unless the deck is bad (체콜)."],
+      "quotes": [{ "kr": "315지나는중인데 스테완화패치이후에 자동으로 안된판이없음 체콜쓰니 당연히 안되지... 위치베리 ㄱ", "en": "Passing 315, and since the stage-easing patch no stage has failed on auto; of course it fails with Cherry Cola... go Witchberry" }]
+    },
+    {
+      "source": "dc", "id": "dc:76623", "url": "https://m.dcinside.com/board/projectcc/76623", "date": "2026-09-27",
+      "title_kr": "호밀< 스테에서 공3등 놓고 써봐", "title_en": "Try Rye in stages at 3rd in ATK order", "relevance": 1, "scope": "stage",
+      "summary_en": "러유: Rye placed 3rd (공3등, likely ATK order) pushes stages very well, but its power is low. Reply adds ATK AMP to it.",
+      "clears": [], "teams": [],
+      "builds": [{ "cookie": "호밀", "scope": "stage", "sugar_runes": "공증 (ATK AMP) some", "gear": "", "thresholds": "", "why": "compensate low power" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "진짜 스테 존나존나 잘밀음 근데 투력이 낮은게 흠임", "en": "Pushes stages really well, but low power is the downside" }]
+    },
+    {
+      "source": "dc", "id": "dc:76631", "url": "https://m.dcinside.com/board/projectcc/76631", "date": "2026-09-27",
+      "title_kr": "스테이지 명중 vs 깡투", "title_en": "Stages: accuracy vs raw power", "relevance": 3, "scope": "stage",
+      "summary_en": "Player at 197-21 (boss 석류 풍뎅이) with Pinot Noir showing 877.81 accuracy, 654.77 focus, Boss DMG 52%, element DMG 67.5%, asks whether a Magma Pendulum roll with focus +108 should replace one with accuracy +91 (power 16.79M vs 15.93M). Replies: 800s accuracy pushed to 248; go raw power; or check if 50% power has slack, then take accuracy.",
+      "clears": [{ "stage": "197-21", "boss": "석류 풍뎅이", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "?", "play": "?", "retries": "", "team": "", "note": "boss 98% in screenshot; team cards Lv.91-100" }],
+      "teams": [],
+      "builds": [{ "cookie": "피노누아", "scope": "stage", "sugar_runes": "", "gear": "Magma Pendulum (unique) Lv.74: Crit RES 13.94%, Crit% +6.05%, Accuracy +91.63 (15.93M) vs Lv.75: Crit RES 14.21%, Focus +108.32, Crit DMG +5.45% (16.79M)", "thresholds": "accuracy 877.81 at stage ~200", "why": "accuracy vs power tradeoff" }],
+      "mechanics": ["Accuracy in the 800s was enough to reach 248 (ㅇㅇ 1)."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["Accuracy vs raw power: 나나리 says raw power; 맞말은유동이 says check the 50% (sic) power margin first, take accuracy if comfortable."],
+      "quotes": [{ "kr": "명중 800대로 248까지 밀었었음 800대도 충분함", "en": "I pushed to 248 with 800-something accuracy; 800s is enough" }]
+    },
+    {
+      "source": "dc", "id": "dc:76678", "url": "https://m.dcinside.com/board/projectcc/76678", "date": "2026-09-27",
+      "title_kr": "이면보스는 35퍼 이런거없고 순수렙업으로깨는거?", "title_en": "Rift bosses: no 35% brackets, just level up?", "relevance": 2, "scope": "rift",
+      "summary_en": "Asks whether the Rift has no brackets and is cleared purely by levelling, since no damage lands. Reply: brackets certainly exist.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Reply: the power-gate brackets do apply in the Rift ('당연히 있음')."],
+      "stage_types": [], "disagreements": ["Rift bracket existence: asker assumes none; reply says yes (see also 77090 which claims none)."],
+      "quotes": [{ "kr": "당연히 있음", "en": "Of course they exist" }]
+    },
+    {
+      "source": "dc", "id": "dc:76752", "url": "https://m.dcinside.com/board/projectcc/76752", "date": "2026-09-27",
+      "title_kr": "스테덱 걍 탱빼는게 좋네", "title_en": "Better to just drop tanks from the stage deck", "relevance": 2, "scope": "stage",
+      "summary_en": "After the easing, failures are mostly from insufficient damage, so dropping tanks helps.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["Post-easing, stage failures are mostly DPS checks rather than survival."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이젠 딜부족으로 못깨는 상황이 훨 많은듯", "en": "Now it's far more often failing from lack of damage" }]
+    },
+    {
+      "source": "dc", "id": "dc:76768", "url": "https://m.dcinside.com/board/projectcc/76768", "date": "2026-09-27",
+      "title_kr": "중간부 스테 35% 등반자는 허브->락스타 쓰셈", "title_en": "Mid-stage 35% climbers: swap Herb for Rockstar", "relevance": 3, "scope": "stage",
+      "summary_en": "Before stage 300, stages don't hurt except big packs. If playing manually, skip the Rapid-Fire deck and use 브시 전갈 정전 치케 with 락스타 instead of 허브: less healing but the Pierce synergy keeps 치케's buff applying reliably. Also good in the Rapid-Fire deck. 언담: if 35% has slack, add 위치베리 (replacing 전갈, 정전, 체콜 etc.) and she kills everything.",
+      "clears": [],
+      "teams": [{ "name": "76768 manual 35% core", "scope": "stage", "for": "stages < 300 at 35%, manual",
+        "cookies": [
+          { "kr": "브시", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+          { "kr": "정전", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+          { "kr": "락스타", "en": "Rockstar Cookie", "level": "?", "stars": "?", "position": "", "role": "healer/Pierce synergy", "note": "replaces 허브" }
+        ],
+        "pets": [], "perks": "", "captain": "", "formation": "", "why": "Pierce (관통) synergy makes 치케's buff land reliably; slight heal loss is fine below 300",
+        "substitutions": ["허브 -> 락스타", "위치베리 in for 전갈/정전/체콜 if the 35% margin is comfortable (언담)"], "unorthodox": ["Rockstar as healer in stages"] }],
+      "builds": [], "mechanics": ["Pierce synergy stabilises 치케's buff application."],
+      "rift": [], "stage_types": ["Below 300, only large packs deal meaningful damage."],
+      "disagreements": [],
+      "quotes": [{ "kr": "허브 -> 락스타 바꾸면 힐량은 좀 줄긴하는데 관통시너지로 치케 버프가 안정적으로 들어감", "en": "Herb -> Rockstar cuts some healing but the Pierce synergy makes Cheesecake's buff land reliably" }, { "kr": "35퍼 널널하면 위치베리까지넣으면 혼자 다죽여줌", "en": "If you have 35% with room to spare, add Witchberry and she kills everything alone" }]
+    },
+    {
+      "source": "dc", "id": "dc:76779", "url": "https://m.dcinside.com/board/projectcc/76779", "date": "2026-09-27",
+      "title_kr": "바리5성이상은 15퍼 밀림?", "title_en": "Can Bari 5-star+ push at 15%?", "relevance": 3, "scope": "stage",
+      "summary_en": "Mixed answers. No; Bari 5-star can't even push 35%; borderline, maybe at 10-star. One witness: Bari 9-star + 체콜 10-star pushed 325-328 at 15% on the conquest gear set, team power just over 3G when killing the final 비겁이.",
+      "clears": [{ "stage": "325-x to 328-30", "boss": "비겁한 쿠키 (final)", "team_power": "just over 3G", "recommended_power": "? (community: 35% at 328-30 = 4G)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "", "note": "Bari 9-star, Cherry Cola 10-star, conquest (토벌) gear set; claim, no screenshot" }],
+      "teams": [], "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "토벌셋 (conquest set)", "thresholds": "", "why": "" }],
+      "mechanics": ["Rumour: use a Skill AMP / Skill Haste preset (스증스가셋) to push 15%."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["15% with Bari: ㅇㅇ says no; 백수는영어로프리텐더 (Bari 5-star) can't even do 35%; ㅇㅇ says borderline, maybe at 10-star; ㅇㅇ (Bari 9-star, Cola 10-star) did 325-328 at 15%."],
+      "quotes": [{ "kr": "밀림 내가 산 증인임 ㅇㅇ.. 근데 바리 9성이긴함 체콜도 10성이고 325~328 15퍼로 밀었음 토벌셋인데 대충 마지막에 비겁이 잡을때 팀투 3g 살짝 넘더라", "en": "It pushes, I'm living proof... though Bari is 9-star and Cola 10-star; I pushed 325-328 at 15% on the conquest set, team power a bit over 3G when I killed the last 비겁이" }]
+    },
+    {
+      "source": "dc", "id": "dc:76782", "url": "https://m.dcinside.com/board/projectcc/76782", "date": "2026-09-27",
+      "title_kr": "이상하게 빡세서 보니 15% 되있네;", "title_en": "Oddly hard, turns out I'm at 15%", "relevance": 2, "scope": "stage",
+      "summary_en": "Player discovered via the calculator they'd been at 15% for several stages and still clearing. Reply: yes it pushes; blow through with a 바리 체콜 시커 Skill AMP/Haste deck and escape.",
+      "clears": [{ "stage": "?", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "", "note": "several stages at 15% unnoticed" }],
+      "teams": [], "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "스증 스가", "gear": "", "thresholds": "", "why": "15% push with 바리 체콜 시커" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "밀림 바리체콜시커 스증스가덱으로 훅훅 밀고 얼른 탈출해라", "en": "It pushes; rush through with a Bari-Cola-Seeker Skill AMP/Haste deck and get out quickly" }]
+    },
+    {
+      "source": "dc", "id": "dc:76794", "url": "https://m.dcinside.com/board/projectcc/76794", "date": "2026-09-27",
+      "title_kr": "걍 위치 락스타가 방치덱 고트임 ㄹㅇ", "title_en": "Witchberry + Rockstar is the GOAT idle deck", "relevance": 1, "scope": "stage",
+      "summary_en": "Claims 5 hours of idle with no blocks using 위치베리 + 락스타; no deck shown. A reply notes it was said at 120% recommended power.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [],
+      "disagreements": ["Commenters doubt it without a deck; one points out it's at 120% power."],
+      "quotes": [{ "kr": "권장투력 120%의 말이었습니다", "en": "Those were the words of someone at 120% recommended power" }]
+    },
+    {
+      "source": "dc", "id": "dc:76797", "url": "https://m.dcinside.com/board/projectcc/76797", "date": "2026-09-27",
+      "title_kr": "312-30 35% 클덱", "title_en": "312-30 35% clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "Clear deck for 312-30 at 35% with team power 2.74G on the '스테이지' preset: Bari + Cherry Cola core. Reply: Bari-Cola is the famous combo that even breaks 15%.",
+      "clears": [{ "stage": "312-30", "boss": "?", "team_power": "2.74G", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "76797 312-30 Bari-Cola deck", "note": "power from formation screen" }],
+      "teams": [{ "name": "76797 312-30 Bari-Cola deck", "scope": "stage", "for": "312-30 at 35%",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "5", "position": "front 1", "role": "?", "note": "art" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "100", "stars": "5", "position": "front 2", "role": "dealer", "note": "art" },
+          { "kr": "?", "en": "probably Skating Queen Cookie", "level": "100", "stars": "5", "position": "front 3", "role": "charge", "note": "golden fluffy; low" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "100", "stars": "5", "position": "front 4", "role": "support", "note": "gold, blue dress, trident; low" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5", "position": "front 5", "role": "healer", "note": "captain banner on its roster card" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "100", "stars": "5", "position": "front 6", "role": "tank", "note": "art" },
+          { "kr": "?", "en": "probably Brightseeker Cookie", "level": "100", "stars": "5", "position": "back 1", "role": "ranged", "note": "heart-hat archer; low" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "100", "stars": "5", "position": "back 2", "role": "?", "note": "art" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "5", "position": "back 3", "role": "buffer", "note": "art" },
+          { "kr": "바리", "en": "Princess Bari Cookie", "level": "100", "stars": "?", "position": "back 4", "role": "?", "note": "text + art" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "back 5", "role": "?", "note": "text + art" },
+          { "kr": "달토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "back 6", "role": "?", "note": "art" }
+        ],
+        "pets": ["? yellow pet Lv.20", "? green cactus-like pet Lv.20", "? orange/red pet Lv.20 (likely 핫도그도그)"], "perks": "", "captain": "우유 (banner)", "formation": "roster cards all Lv.100; one card shows 2 stars (not in team)", "why": "Bari + Cherry Cola value", "substitutions": [], "unorthodox": [] }],
+      "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "preset named 스테이지", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "바리체콜은 유우명한 15퍼도 뚫는 명기임", "en": "Bari-Cola is the famous masterpiece that breaks even 15%" }]
+    },
+    {
+      "source": "dc", "id": "dc:76798", "url": "https://m.dcinside.com/board/projectcc/76798", "date": "2026-09-27",
+      "title_kr": "스테덱에 다크초코 빼니까 더 잘밀리네", "title_en": "Stage deck pushes better without Dark Choco", "relevance": 3, "scope": "stage",
+      "summary_en": "290.33M stage deck: replacing 다크초코 with 체콜 suddenly pushed after many failed tries; focus is ~50 short. Replies: replace 호밀 with 바리; or 바리 for 호밀, 닼초 for 딸크, and switch the battery pet to wasabi.",
+      "clears": [],
+      "teams": [{ "name": "76798 290M deck", "scope": "stage", "for": "early-mid stages",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front 1", "role": "?", "note": "art" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "front 2", "role": "dealer", "note": "text + art (wheat hat)" },
+          { "kr": "?", "en": "probably Skating Queen Cookie", "level": "?", "stars": "?", "position": "front 3", "role": "charge", "note": "low" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "?", "stars": "?", "position": "front 4", "role": "support", "note": "low" },
+          { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "front 5", "role": "?", "note": "text + art (pink), medium" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "front 6", "role": "healer", "note": "art" },
+          { "kr": "?", "en": "probably Brightseeker Cookie", "level": "?", "stars": "?", "position": "back 1", "role": "ranged", "note": "low" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "back 2", "role": "?", "note": "art" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "back 3", "role": "buffer", "note": "art" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "back 4", "role": "healer", "note": "art" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "back 5", "role": "?", "note": "replaced 다크초코" },
+          { "kr": "달토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "back 6", "role": "?", "note": "art" }
+        ],
+        "pets": ["? pink/lightning pet Lv.20 (likely 전지멜로우 = '건전지')", "? orange/red pet Lv.17", "? yellow pet Lv.18"], "perks": "", "captain": "", "formation": "roster: Lv.97-100 main cookies; several Lv.1 and Lv.40 fillers", "why": "",
+        "substitutions": ["다크초코 -> 체콜 (author)", "호밀 -> 바리 (reply)", "딸크 -> 닼초, 건전지 pet -> 와사비 (reply)"], "unorthodox": ["no dedicated tank after dropping 다크초코"] }],
+      "builds": [], "mechanics": ["Focus ~50 short of the stage requirement; still pushes after adding Cherry Cola."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "호밀 자리에 바리 넣고 딸크 자리에 닼초 넣고 건전지 와사비로 바꿔보세", "en": "Put Bari in Rye's slot, Dark Choco in Strawberry Crepe's, and swap the battery pet to Wasabi" }]
+    },
+    {
+      "source": "dc", "id": "dc:76805", "url": "https://m.dcinside.com/board/projectcc/76805", "date": "2026-09-27",
+      "title_kr": "이거 스테장비에도 스가섞어야하는거같은데 맞음?", "title_en": "Should stage gear mix in Skill Haste?", "relevance": 3, "scope": "stage",
+      "summary_en": "Player with 0 Skill Haste lines on stage gear finds it hard. Replies: after 300 just take inflated power; 언담: Skill Haste beats accuracy but power beats Skill Haste, since pushing with haste leaves you short on power; one runs stage gear 스가5 명중2 집중2 and pushes fine up to the 35% limit but power is too low.",
+      "clears": [], "teams": [],
+      "builds": [
+        { "cookie": "stage preset", "scope": "stage", "sugar_runes": "", "gear": "스가 5 lines, 명중 2, 집중 2", "thresholds": "", "why": "pushes to the 35% limit but power too low (ㅇㅇ 1)" },
+        { "cookie": "stage preset", "scope": "stage", "sugar_runes": "", "gear": "pure power after stage 300", "thresholds": "", "why": "신성한바티칸" }
+      ],
+      "mechanics": ["Priority per 언담: power > Skill Haste > accuracy on stage gear."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "명중보다 스가가 더 좋은데 스가보다는 투력이 더 좋음. 스가로 밀다보면 투력 아쉬워서 못함", "en": "Skill Haste beats accuracy, but power beats Skill Haste. Pushing on haste, you end up short on power" }, { "kr": "300지나면 그냥 뻥투먹어야함", "en": "After 300 you just take inflated power" }]
+    },
+    {
+      "source": "dc", "id": "dc:76814", "url": "https://m.dcinside.com/board/projectcc/76814", "date": "2026-09-27",
+      "title_kr": "15퍼 간당간당하게 밀리긴하네", "title_en": "15% does push, barely", "relevance": 3, "scope": "stage",
+      "summary_en": "우우웅12 cleared 301-27 (boss 독벌버섯, 0.000% HP) at the 15% bracket with 2G 52M 679K team power on a preset named '뻥투' (oven Lv.36, all cookies Lv.100 5-star, 축복 Lv.7, server 4th). Feels like the old pre-easing 35%. Keeps 치케 (without it gets blocked after 1-2 stages). Also killed 301-28's boss with a trap mob attached: circle clockwise upward, release when boss and sub-boss overlap. Suggests swapping the 색동 pet for 와사비.",
+      "clears": [
+        { "stage": "301-27", "boss": "독벌버섯 (reading uncertain)", "team_power": "2G 52M 679K", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "bracket from title; screenshot boss HP 0.000%, gear preset '뻥투'" },
+        { "stage": "301-28", "boss": "boss + trap mob (함정몹)", "team_power": "~2.05G", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "circle clockwise upward; release when boss and sub-boss overlap" }
+      ],
+      "teams": [{ "name": "76814 15% team", "scope": "stage", "for": "301-x at 15%",
+        "cookies": [
+          { "kr": "?", "en": "12 cookies, all Lv.100 5-star, battle bar too small to identify all", "level": "100", "stars": "5", "position": "", "role": "", "note": "includes 치케 per text; 우유 with captain banner visible" }
+        ],
+        "pets": ["색동 (per reply; suggests 와사비 instead)"], "perks": "", "captain": "", "formation": "", "why": "", "substitutions": ["색동 -> 와사비 pet"], "unorthodox": [] }],
+      "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "preset named 뻥투 (power); plates +15..+17, gear Lv.99-108", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": [],
+      "stage_types": ["Trap-mob + boss stages: lead the boss clockwise upward and stop when boss and sub-boss overlap so AoE hits both."],
+      "disagreements": [],
+      "quotes": [{ "kr": "예전35퍼 똥꼬쇼느낌남", "en": "Feels like the old 35% struggle" }, { "kr": "시계방향 위로 쭉 돌아서 보스, 서브보스 겹칠때 손떼고 잡아야함", "en": "Go clockwise up around, and when the boss and sub-boss overlap, let go and kill" }]
+    },
+    {
+      "source": "dc", "id": "dc:76819", "url": "https://m.dcinside.com/board/projectcc/76819", "date": "2026-09-27",
+      "title_kr": "팀투 1.51에 418이면 ㅁㅌㅊ임?", "title_en": "Team power 1.51 with 418, how's that?", "relevance": 0, "scope": "stage",
+      "summary_en": "Unclear one-liner (1.51G team power and '418', probably a score); no context.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76825", "url": "https://m.dcinside.com/board/projectcc/76825", "date": "2026-09-27",
+      "title_kr": "시커바리체콜은 15퍼를 찢어", "title_en": "Seeker-Bari-Cola rips through 15%", "relevance": 3, "scope": "stage",
+      "summary_en": "우우웅12: Brightseeker + Bari + Cherry Cola tears through the 15% bracket, but needs manual control (a reply prefers raising power and auto Rapid-Fire). Cherry Cola runes: two lines of DMG Reduction 5.7, the rest junk, no Skill AMP; still pulls its weight. Works even with dummy mobs.",
+      "clears": [{ "stage": "301-x", "boss": "?", "team_power": "~2.05G", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "same player as 76814" }],
+      "teams": [{ "name": "76825 시커바리체콜", "scope": "stage", "for": "15% bracket", "cookies": [
+        { "kr": "시커", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "", "role": "dealer", "note": "" },
+        { "kr": "바리", "en": "Princess Bari Cookie", "level": "100", "stars": "?", "position": "", "role": "?", "note": "" },
+        { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "", "role": "?", "note": "runes 피감 5.7 x2" }
+      ], "pets": [], "perks": "", "captain": "", "formation": "", "why": "", "substitutions": [], "unorthodox": ["Cherry Cola with DMG Reduction runes only"] }],
+      "builds": [{ "cookie": "체콜", "scope": "stage", "sugar_runes": "피감 5.7 x2, rest junk", "gear": "", "thresholds": "", "why": "works fine without Skill AMP" }],
+      "mechanics": [], "rift": [], "stage_types": ["Dummy mobs (더미몹) present: still pushes (우우웅12)."],
+      "disagreements": ["Manual 15% vs raising power and auto: one reply prefers power + auto Rapid-Fire; 우우웅12 agrees that's right."],
+      "quotes": [{ "kr": "대신 손컨 해줘야 해서 귀찮음 그냥 전투력 올려서 오토연타덱으로 밀게", "en": "But it needs manual control, annoying; I'll just raise power and push with auto Rapid-Fire" }]
+    },
+    {
+      "source": "dc", "id": "dc:76834", "url": "https://m.dcinside.com/board/projectcc/76834", "date": "2026-09-27",
+      "title_kr": "272 35% 비겁이 어째깨냐?", "title_en": "How to beat 비겁이 at 272 on 35%?", "relevance": 3, "scope": "stage",
+      "summary_en": "1.3G deck on the arena preset struggles with 비겁이 at stage 272 (35%): Scorpion's leap timing is off. Bari is only 3-star so unused. Replies: lacking accuracy/focus is why; use stage gear even at 35%, damage is weak now so you can tank hits. With Skill Haste 5 lines: at start step forward so Scorpion's first hit fires, then hold the cursor and drag onto 비겁이 when it moves to sync the cycle; the arena deck's timing suits 비겁이.",
+      "clears": [{ "stage": "272-30", "boss": "비겁한 쿠키", "team_power": "1.3G", "recommended_power": "?", "bracket": "35", "result": "fail", "play": "manual", "retries": "", "team": "76834 272 arena-preset deck", "note": "stage given as 272; boss 비겁이" }],
+      "teams": [{ "name": "76834 272 arena-preset deck", "scope": "stage", "for": "비겁이 at 35%",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "5", "position": "front 1", "role": "?", "note": "art" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "100", "stars": "5", "position": "front 2", "role": "dealer", "note": "art + text" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "5", "position": "front 3", "role": "buffer", "note": "art" },
+          { "kr": "?", "en": "probably Tiger Lily Cookie", "level": "100", "stars": "5", "position": "front 4", "role": "?", "note": "medium" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "100", "stars": "5", "position": "front 5", "role": "?", "note": "art" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "100", "stars": "5", "position": "front 6", "role": "tank", "note": "art" },
+          { "kr": "?", "en": "probably Brightseeker Cookie", "level": "100", "stars": "5", "position": "back 1", "role": "ranged", "note": "low" },
+          { "kr": "?", "en": "probably Skating Queen Cookie", "level": "100", "stars": "5", "position": "back 2", "role": "charge", "note": "low" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "100", "stars": "5", "position": "back 3", "role": "support", "note": "low" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5", "position": "back 4", "role": "healer", "note": "captain banner on roster card" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "100", "stars": "5", "position": "back 5", "role": "healer", "note": "art" },
+          { "kr": "달토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "5", "position": "back 6", "role": "?", "note": "art" }
+        ],
+        "pets": ["? yellow pet Lv.20", "? green cactus-like pet Lv.19", "? orange/red pet Lv.19"], "perks": "", "captain": "우유 (banner)", "formation": "roster shows several Lv.1 fillers not in team", "why": "Bari only 3-star",
+        "substitutions": ["no 바리 (3-star)"], "unorthodox": [] }],
+      "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "스가 5 lines (reply's baseline)", "gear": "arena (일반) preset; replies say use stage gear for accuracy/focus", "thresholds": "", "why": "" }],
+      "mechanics": ["비겁이 fails at 35% attributed to missing accuracy/focus (reply)."],
+      "rift": [],
+      "stage_types": ["비겁이 manual: step forward at start so Scorpion fires its first hit, then grab the cursor and stick to 비겁이 whenever it moves; the arena deck's skill timing fits 비겁이."],
+      "disagreements": [],
+      "quotes": [{ "kr": "시작하자마자 살짝앞으로가서 전갈 1타 쓰게하고 커서 잡고 비겁이 이동할때 갖다 붙이면 사이클 맞던데 스가 5줄기준임", "en": "Move slightly forward right at the start so Scorpion uses its first hit, then grab the cursor and stick to 비겁이 when it moves; the cycle lines up (with 5 Skill Haste lines)" }]
+    },
+    {
+      "source": "dc", "id": "dc:76835", "url": "https://m.dcinside.com/board/projectcc/76835", "date": "2026-09-27",
+      "title_kr": "이면 드가자 ㅋㅋ", "title_en": "Into the Rift we go", "relevance": 3, "scope": "both",
+      "summary_en": "카린 (profile Lv.186, server 1st, 축복 Lv.7, oven Lv.37) clears 328-30 against 비겁한 쿠키 (0.000% HP) with 4G 3M 599K team power on 프리셋 1, all 12 cookies Lv.100; 'all stages cleared' banner, then the Dimensional Rift opens; at Rift 1 the 차원의 힘 bar shows Lv.1 0/30 and displayed power is unchanged at 4G 3M 599K. Replies deny the rumour that entering the Rift lowers rewards.",
+      "clears": [
+        { "stage": "328-30", "boss": "비겁한 쿠키", "team_power": "4G 3M 599K", "recommended_power": "? (community: 35% line = 4G)", "bracket": "35 (inferred; ~40.0% if rec is 10G)", "result": "clear", "play": "?", "retries": "", "team": "76835 카린 328-30 team", "note": "boss 0.000%; buff counters 12 and 10 visible" },
+        { "stage": "Rift 1", "boss": "(mobs; cake hounds visible)", "team_power": "4G 3M 599K", "recommended_power": "?", "bracket": "?", "result": "?", "play": "auto", "retries": "", "team": "76835 카린 328-30 team", "note": "차원의 힘 Lv.1 0/30; 'Rift level 1 repeating'" }
+      ],
+      "teams": [{ "name": "76835 카린 328-30 team", "scope": "both", "for": "328-30 비겁이 and Rift entry",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "5", "position": "1", "role": "?", "note": "battle bar" },
+          { "kr": "?", "en": "probably Brightseeker Cookie", "level": "100", "stars": "5", "position": "2", "role": "ranged", "note": "low" },
+          { "kr": "?", "en": "probably Oven Wanderer Cookie", "level": "100", "stars": "5", "position": "3", "role": "?", "note": "white hair, fire element; low" },
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "100", "stars": "5", "position": "4", "role": "dealer", "note": "battle bar; medium" },
+          { "kr": "?", "en": "probably Skating Queen Cookie", "level": "100", "stars": "5", "position": "5", "role": "charge", "note": "low" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "5", "position": "6", "role": "buffer", "note": "medium" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "100", "stars": "5", "position": "7", "role": "support", "note": "low" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5", "position": "8", "role": "healer", "note": "captain banner" },
+          { "kr": "바리", "en": "Princess Bari Cookie", "level": "100", "stars": "5", "position": "9", "role": "?", "note": "white hair, water element; medium" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "100", "stars": "5", "position": "10", "role": "healer", "note": "medium" },
+          { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "100", "stars": "5", "position": "11", "role": "?", "note": "dark element red/black; medium" },
+          { "kr": "달토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "5", "position": "12", "role": "?", "note": "medium" }
+        ],
+        "pets": ["? hot-dog pet (likely 핫도그도그)", "? yellow pet", "? green cactus-like pet"], "perks": "", "captain": "우유 (banner)", "formation": "gear Lv.103-111, plates +15..+21", "why": "", "substitutions": [], "unorthodox": [] }],
+      "builds": [{ "cookie": "team", "scope": "both", "sugar_runes": "", "gear": "프리셋 1; gear Lv.103-111; weapon plate +21", "thresholds": "", "why": "" }],
+      "mechanics": ["Clearing 328-30 shows '모든 스테이지 클리어!' and opens 차원의 이면 as a new feature."],
+      "rift": ["Rift opens right after 328-30; 차원의 힘 starts at Lv.1 with 0/30 progress.", "At 차원의 힘 Lv.1 displayed team power equals the stage power (no Rift inflation yet).", "Entering the Rift does not lower rewards (reply, rumour denied)."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이면 들어가면 보상 떨어진다는거 진짜임? / ㄴㄴ", "en": "Is it true rewards drop when you enter the Rift? / No" }]
+    },
+    {
+      "source": "dc", "id": "dc:76843", "url": "https://m.dcinside.com/board/projectcc/76843", "date": "2026-09-27",
+      "title_kr": "328 다음은 이제 쭉 이면임?", "title_en": "After 328 is it Rift from now on?", "relevance": 1, "scope": "rift",
+      "summary_en": "언담: when new stages are added you get kicked out of the Rift. Others joke about 'three-sided/four-sided' next.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Claim (언담): when stages are added, Rift players are kicked back to stages."],
+      "stage_types": [], "disagreements": [], "quotes": [{ "kr": "스테추가하면 이면에서 강퇴당함", "en": "When stages are added you get kicked out of the Rift" }]
+    },
+    {
+      "source": "dc", "id": "dc:76844", "url": "https://m.dcinside.com/board/projectcc/76844", "date": "2026-09-27",
+      "title_kr": "이면 들어오고나니까 재미 확떨어지네", "title_en": "Fun dropped after entering the Rift", "relevance": 1, "scope": "rift",
+      "summary_en": "The Rift feels like a pure idle game; the grind is over but no dopamine.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Rift perceived as idle-driven."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:76859", "url": "https://m.dcinside.com/board/projectcc/76859", "date": "2026-09-27",
+      "title_kr": "내가 쓰는 35% 반 오토덱", "title_en": "My 35% semi-auto deck", "relevance": 3, "scope": "stage",
+      "summary_en": "그드득 (profile Lv.177, rank 6th, 축복 Lv.4) at 288-19 (boss 아이스콘 듀얼 나이트) with 1G 770M 193K. The crumblehub calculator shows 35% bracket at 47.7% of recommended power (rec ~3G 714M; 40% line 1G 486M; 60% line 2G 229M), accuracy requirement 1,203.5 and focus requirement 1,092.4. Main deck (1.77G) with one pet slot switched between 오색 (for lifting bosses: 쿨민, 그루터기, 늑대공주) and 핫도그 (all-in-one); clears 9 of 10 stages. Problem bosses: plant cookie (dies on contact; micro until 우유's buff/heal is up, then auto) and 레드베리 암살자 5/10-pack: go to 7 o'clock; at the bottom of 35% damage is short, so switch to a second AoE Rapid-Fire deck (1.74G) and overlap the boss. 쿨민 and 비겁이 die within 5 full-auto tries.",
+      "clears": [
+        { "stage": "288-19", "boss": "아이스콘 듀얼 나이트", "team_power": "1G 770M 193K", "recommended_power": "3G 714M (crumblehub 100% line)", "bracket": "35", "result": "?", "play": "auto", "retries": "", "team": "76859 main semi-auto deck", "note": "boss at 58% in screenshot; ratio 47.7%" },
+        { "stage": "286-x", "boss": "레드베리 암살자", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "76859 AoE Rapid-Fire deck", "note": "commenter ㅇㅇ 1 cleared using this deck" }
+      ],
+      "teams": [
+        { "name": "76859 main semi-auto deck", "scope": "stage", "for": "most 35% stages; single bosses; 쿨민, 비겁이 full auto within 5 tries",
+          "cookies": [
+            { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front 1", "role": "?", "note": "art" },
+            { "kr": "호밀", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "front 2", "role": "rear-line dealer", "note": "art + comment" },
+            { "kr": "?", "en": "probably Skating Queen Cookie", "level": "?", "stars": "?", "position": "front 3", "role": "charge", "note": "low" },
+            { "kr": "?", "en": "probably Cheesecake Cookie", "level": "?", "stars": "?", "position": "front 4", "role": "support", "note": "staff sprite; low" },
+            { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "front 5", "role": "?", "note": "pink; medium" },
+            { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "front 6", "role": "healer", "note": "art" },
+            { "kr": "브시커", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "back 1", "role": "rear-line dealer", "note": "named in comment; slot inferred" },
+            { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "back 2", "role": "?", "note": "art" },
+            { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "back 3", "role": "buffer", "note": "art" },
+            { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "back 4", "role": "healer/buffer", "note": "comment: 체콜 pulls 우유 forward so rear dealers miss its buff on auto" },
+            { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "back 5", "role": "?", "note": "art + comment" },
+            { "kr": "닼초", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "back 6", "role": "tank", "note": "art + comment ('달토끼 버리고 닼초')" }
+          ],
+          "pets": ["? yellow pet Lv.20", "? pink/lightning pet Lv.18 (likely 전지멜로우)", "? red/white pet Lv.14 (the swap slot: 오색 for lift bosses, 핫도그 all-in-one)"], "perks": "", "captain": "", "formation": "overlap the boss at the start, then let go",
+          "why": "all-round; 오색 pet vs bosses that lift (쿨민, 그루터기, 늑대공주)",
+          "substitutions": ["pet 오색 <-> 핫도그 by boss", "comment: replace 호밀 with 바리, or 체콜 with 달토끼 (3 tanks) or 위치베리", "comment: 메소 hits harder than 호밀 if you overlap the boss at start; author: 전갈 better than 메소"],
+          "unorthodox": ["닼초 instead of 달토끼 so 체콜 keeps aggro"] },
+        { "name": "76859 AoE Rapid-Fire deck", "scope": "stage", "for": "레드베리 암살자 packs (5/10) at the bottom of 35%",
+          "cookies": [
+            { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front 1", "role": "?", "note": "art" },
+            { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "front 2", "role": "?", "note": "art" },
+            { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "front 3", "role": "buffer", "note": "art" },
+            { "kr": "?", "en": "probably Cheesecake Cookie", "level": "?", "stars": "?", "position": "front 4", "role": "support", "note": "low" },
+            { "kr": "바리", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "front 5", "role": "?", "note": "art" },
+            { "kr": "체콜", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "front 6", "role": "?", "note": "art" },
+            { "kr": "오방", "en": "Oven Wanderer Cookie", "level": "?", "stars": "?", "position": "back 1", "role": "?", "note": "medium" },
+            { "kr": "?", "en": "probably Skating Queen Cookie", "level": "?", "stars": "?", "position": "back 2", "role": "charge", "note": "low" },
+            { "kr": "뱀파", "en": "Vampire Cookie", "level": "?", "stars": "?", "position": "back 3", "role": "dealer", "note": "medium" },
+            { "kr": "트위즐", "en": "Twizzly Gummy Cookie", "level": "?", "stars": "?", "position": "back 4", "role": "?", "note": "medium" },
+            { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "back 5", "role": "healer", "note": "art" },
+            { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "back 6", "role": "healer", "note": "art" }
+          ],
+          "pets": ["? yellow pet Lv.20", "? orange/red pet Lv.19 (likely 핫도그도그)", "? yellow lion-like pet Lv.20"], "perks": "", "captain": "", "formation": "go to 7 o'clock, overlap the boss, let go; 2-3 retries", "why": "wide-area Rapid Fire handles 5/10-assassin packs",
+          "substitutions": [], "unorthodox": ["same 12 as the 76550 chain deck"] }
+      ],
+      "builds": [{ "cookie": "stage requirement", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "288-19: accuracy requirement 1,203.5; focus requirement 1,092.4 (crumblehub)", "why": "" }],
+      "mechanics": [
+        "crumblehub calculator for 288-19 (rec ~3G 714M): 10% >= 371M 381K, 20% >= 742M 762K, 40% >= 1G 486M, 60% >= 2G 229M, 80% >= 2G 972M, 100% >= 3G 714M, 120% >= 4G 457M.",
+        "Calculator clear estimate at 1.77G: easy 267-15 (75%+), normal 279-7 (55%+), hard 295-23 (35%+).",
+        "Just-dropped-from-55% power handles 레드베리 packs; power at the bottom edge of 35% lacks damage.",
+        "Boss 'infinite retry' auto-summon: most bosses fall within 5 tries."
+      ],
+      "rift": [],
+      "stage_types": [
+        "Lift/knock-up bosses (쿨민, 그루터기, 늑대공주): use the 오색 pet.",
+        "Plant cookie boss (식물쿠키): contact kills; micro until 우유's buff/heal cycles, then auto.",
+        "레드베리 암살자 5/10-packs: go to 7 o'clock; AoE Rapid-Fire deck.",
+        "Single bosses end with 10-13 s left even with 호밀; multi-boss stages are the real wall."
+      ],
+      "disagreements": ["Commenter: 체콜 drags 우유 forward so 브시커/호밀 miss the buff and auto suffers; use 바리 for 호밀 or 달토끼/위치베리 for 체콜. 그드득: tried both; overlapping the boss at start works fine.", "메소 vs 호밀: commenter says 메소 stronger when melee-overlapping; 그드득 says 전갈 is better than 메소 if short on damage."],
+      "quotes": [
+        { "kr": "전투력 비율 47.7%로 55%보다 35%밑으로 떨어지는게 더 가까워짐", "en": "At a 47.7% power ratio, I'm now closer to dropping below 35% than reaching 55%" },
+        { "kr": "쿨민, 비겁이는 그냥 풀오토 무지성 트라이 5트안에 깨짐", "en": "Cool Mint and 비겁이 just die within 5 mindless full-auto tries" },
+        { "kr": "55%에서 바로 내려온 투력의 경우 문제 없으나 35% 문고리 잡고있는 투력은 딜이 존나 모자름", "en": "If you just dropped from 55% it's fine, but at power barely hanging onto 35% the damage is badly short" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:76862", "url": "https://m.dcinside.com/board/projectcc/76862", "date": "2026-09-27",
+      "title_kr": "아니 케이크 들개때 도와줘 이면 6단계", "title_en": "Help with the cake hounds, Rift level 6", "relevance": 2, "scope": "rift",
+      "summary_en": "Rift 6 is 케이크 들개떼 (cake hound pack). With an Oven Wanderer deck the poster gets it to ~10% while above the 35% power cut; switched decks and cleared immediately.",
+      "clears": [{ "stage": "Rift 6", "boss": "케이크 들개떼", "team_power": "?", "recommended_power": "?", "bracket": "35+", "result": "clear", "play": "?", "retries": "", "team": "", "note": "오방 deck failed (~10% left); another deck cleared" }],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift 6 = 케이크 들개떼.", "The poster refers to a 35% power cut in the Rift, i.e. the bracket applies."],
+      "stage_types": [], "disagreements": [], "quotes": [{ "kr": "오방덱쓰고 한 10퍼 보는데 투력컷은 35퍼 넘고", "en": "With the Oven Wanderer deck I see about 10% left, and I'm over the 35% power cut" }]
+    },
+    {
+      "source": "dc", "id": "dc:76988", "url": "https://m.dcinside.com/board/projectcc/76988", "date": "2026-09-28",
+      "title_kr": "270지 이상분들 스테셋 질문점", "title_en": "Question for 270+ players: stage gear set", "relevance": 3, "scope": "stage",
+      "summary_en": "Asks Skill Haste lines and accuracy/focus on stage gear (asker at 1000/1000). Answers: 러유 0 Skill Haste, accuracy ~1000, focus ~1200, can't resist inflated power; at 294, 4 Skill AMP + 4 Skill Haste with 1100 accuracy/focus pushes fine; accuracy 1200+ and focus 1100+ lasts to the last stage.",
+      "clears": [{ "stage": "294", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "", "note": "4 스증 4 스가, 명집 1100" }],
+      "teams": [],
+      "builds": [
+        { "cookie": "stage preset", "scope": "stage", "sugar_runes": "스가 0", "gear": "power-focused", "thresholds": "명중 ~1000, 집중 ~1200", "why": "러유" },
+        { "cookie": "stage preset", "scope": "stage", "sugar_runes": "스증 4, 스가 4", "gear": "", "thresholds": "명중/집중 1100", "why": "pushing at 294" },
+        { "cookie": "stage preset", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "명중 1200+, 집중 1100+ lasts to the final stage", "why": "ㅇㅇ 1" }
+      ],
+      "mechanics": ["Skill Haste is very good for pushing at 35%, but holding 35% at all forces dropping Skill Haste for power (asker)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "명중1200이상 집중1100이상 맞춰두면 막스테까지 쓸수 있음", "en": "Set accuracy 1200+ and focus 1100+ and you can use it up to the last stage" }]
+    },
+    {
+      "source": "dc", "id": "dc:77013", "url": "https://m.dcinside.com/board/projectcc/77013", "date": "2026-09-28",
+      "title_kr": "15퍼로 미는 거 가능함?", "title_en": "Is pushing at 15% possible?", "relevance": 2, "scope": "stage",
+      "summary_en": "Someone claims to have pushed 320-328 at 15%; poster suspects cheating. Replies: impossible (갓갓.: last map is snowfield with a high-HP big yeti); possible on some ordinary boss stages but never the -10/-20/-30 bosses; another says Bari-Cola can do it.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Chapter 328 (snowfield) has a very high-HP large yeti."],
+      "disagreements": ["320-328 at 15%: 갓갓. and others say impossible, especially -10/-20/-30 boss stages; ㅇㅇ says Bari-Cola can do it (compare 76779 claim of 325-328 at 15% at ~3G)."],
+      "quotes": [{ "kr": "일반 잡보스는 가능한 구간이 있긴한데 10 20 30 이런애들은 개호구 아니고선 절대 못 잡음", "en": "Ordinary mob bosses are possible in places, but the -10/-20/-30 ones you'll never kill unless they're pushovers" }]
+    },
+    {
+      "source": "dc", "id": "dc:77015", "url": "https://m.dcinside.com/board/projectcc/77015", "date": "2026-09-28",
+      "title_kr": "차원 투력 요구량 개미쳤네", "title_en": "Rift power requirements are insane", "relevance": 3, "scope": "rift",
+      "summary_en": "Rift power requirement is huge; the Rift gives 3 fragments per minute for Rift-only spec-up; the #1 is at Rift 19, and the top of the ranking is almost all one guild; top guilds share Rift decks privately. Tips from commenters: a Scorpion 20-stack + DEF shred 10 deck can force maps that look impossible; 비겁이 is the one that needs 35%, with max DEF shred the rest clears at 15%; 망치공주 is the hardest at 15%. For 트럭 (Rift 4): keep the deck, swap 주머니 pet for 핫도그, drag to 7 o'clock or go 9 o'clock and keep backing onto the ice; if 5 tries reach 20-30% there is hope, else park and level. Another guild puts 닼초 and 악마 in for the truck.",
+      "clears": [
+        { "stage": "Rift 3", "boss": "망치공주", "team_power": "?", "recommended_power": "?", "bracket": "15?", "result": "clear", "play": "manual", "retries": "several", "team": "", "note": "갓갓. with the Scorpion 20-stack/DEF-shred deck, no healer so 우유 sometimes dies" },
+        { "stage": "Rift 4", "boss": "폭주단 트럭", "team_power": "?", "recommended_power": "?", "bracket": "15?", "result": "fail", "play": "manual", "retries": "", "team": "", "note": "갓갓. still trying (see 77046: at 15%)" }
+      ],
+      "teams": [{ "name": "77015 Rift shred deck (described)", "scope": "rift", "for": "Rift 3 망치공주, Rift 4 트럭",
+        "cookies": [
+          { "kr": "전갈", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "20 stacks" },
+          { "kr": "닼초", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "", "role": "DEF shred", "note": "not alone: other shredders needed" },
+          { "kr": "악마", "en": "Devil Cookie", "level": "?", "stars": "?", "position": "", "role": "?", "note": "another guild adds it for 트럭" },
+          { "kr": "정전", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "", "role": "?", "note": "shouldn't be removed" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "healer", "note": "dies sometimes with no second healer" }
+        ],
+        "pets": ["핫도그 (replacing 주머니 for 트럭)", "방울 (갓갓.'s own try)"], "perks": "", "captain": "", "formation": "7 o'clock drag, or 9 o'clock while backing onto the ice",
+        "why": "stack Scorpion to 20 and DEF shred to 10 to force damage", "substitutions": ["주머니 -> 핫도그 pet for 트럭"], "unorthodox": ["no healer besides 우유"] }],
+      "builds": [{ "cookie": "닼초", "scope": "rift", "sugar_runes": "", "gear": "", "thresholds": "focus 1023 not enough to stack DEF shred alone (갓갓.)", "why": "" }],
+      "mechanics": ["DEF shred stacks (방깍 10) and Scorpion 20 stacks are the damage enablers under the gate."],
+      "rift": [
+        "Rift yields 3 fragments per minute (idle) used for Rift-only spec-up.",
+        "Rift #1 on 2026-09-28 was at level 19; top ranks dominated by one guild; top guilds share Rift decks privately.",
+        "Brackets apply in the Rift: 비겁이 needs 35%; with max DEF shred other Rift bosses clear at 15%; 망치공주 is hardest at 15%.",
+        "Rift 4 트럭: 5 tries; if 20-30% HP comes off keep trying, else park and level 차원의 힘."
+      ],
+      "stage_types": ["Truck boss: pull to 7 o'clock, or 9 o'clock and keep backing onto the ice."],
+      "disagreements": [],
+      "quotes": [
+        { "kr": "비겁이는 35%맞추는게 제일중요 방깎 최대한 넣으면 나머지는15%로 다 깨짐 망치공주 이새끼가 15%에선 제일빡셈", "en": "For 비겁이, hitting 35% matters most; with max DEF shred everything else clears at 15%; 망치공주 is the hardest at 15%" },
+        { "kr": "1분당 조각3개주는거로 스팩업해야하는대", "en": "You have to spec up with the 3 fragments it gives per minute" },
+        { "kr": "5트정도해서 2-30퍼 보이면 희망 아니면 방치해서 레벨업 행", "en": "Try ~5 times; if you see 20-30% there's hope, otherwise idle and level up" }
+      ]
+    },
+    {
+      "source": "dc", "id": "dc:77046", "url": "https://m.dcinside.com/board/projectcc/77046", "date": "2026-09-28",
+      "title_kr": "이면 비겁이팁잇냐", "title_en": "Tips for Rift 비겁이?", "relevance": 2, "scope": "rift",
+      "summary_en": "Rift 비겁이 is the hardest to clear at 35%. 갓갓. is attempting the truck at 15%; reply heard 비겁이 at 15% is nearly impossible.",
+      "clears": [{ "stage": "Rift 5", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "fail", "play": "?", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift 비겁이 at 15% is 'nearly impossible' (hearsay); players attempt Rift 4 truck at 15%."],
+      "stage_types": [], "disagreements": [], "quotes": [{ "kr": "비겁이15는 ㅂ거의불갸능하다 들음", "en": "Heard 비겁이 at 15 is nearly impossible" }]
+    },
+    {
+      "source": "dc", "id": "dc:77074", "url": "https://m.dcinside.com/board/projectcc/77074", "date": "2026-09-28",
+      "title_kr": "이면 300등 정도로 진입이면", "title_en": "Entering the Rift around rank 300", "relevance": 1, "scope": "rift",
+      "summary_en": "Player at 327 asks whether entering the Rift around rank 300 is upper-middle.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Rift ranking positions ~300 on entry around 2026-09-28."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "dc:77080", "url": "https://m.dcinside.com/board/projectcc/77080", "date": "2026-09-28",
+      "title_kr": "300스테부터 15프로로 가능성있냐 얘들아?", "title_en": "Any chance at 15% from stage 300?", "relevance": 2, "scope": "stage",
+      "summary_en": "About to hit 15% at 300+. Replies split: works on single-mob stages but otherwise impossible (clearing at 15% = hacking); 언담: players using both Bari and Seeker force it; another: yes it goes through at 15%.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["15% viable on single-mob stages only (one reply)."],
+      "disagreements": ["15% past 300: ㅇㅇ says only single-mob stages, otherwise impossible; 언담 says Bari+Seeker users force it; ㅇㅇ says it goes through."],
+      "quotes": [{ "kr": "바리시커 둘다쓰는애들은 억지로 뚫더라", "en": "People using both Bari and Seeker force their way through" }]
+    },
+    {
+      "source": "dc", "id": "dc:77090", "url": "https://m.dcinside.com/board/projectcc/77090", "date": "2026-09-28",
+      "title_kr": "이면던전 패널티", "title_en": "Rift dungeon penalty", "relevance": 2, "scope": "rift",
+      "summary_en": "Poster feels no 35/15/55% power penalty in the Rift at all. No replies.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Claim: no noticeable bracket penalty in the Rift (unconfirmed; contradicts 76525/76678/76862/77015)."],
+      "stage_types": [], "disagreements": ["Rift bracket existence: this poster feels none; 76525, 76678, 76862, 77015 say brackets apply."],
+      "quotes": [{ "kr": "35% 15% 55% 이런거 없는거같은데 맞음..? 체감이 아얘없는데?", "en": "Seems there's no 35/15/55% thing, right? I can't feel it at all" }]
+    },
+    {
+      "source": "dc", "id": "dc:77091", "url": "https://m.dcinside.com/board/projectcc/77091", "date": "2026-09-28",
+      "title_kr": "이면 가려면 328스테를 뚫어야한다고?", "title_en": "You have to clear 328 to reach the Rift?", "relevance": 1, "scope": "both",
+      "summary_en": "Player 50 stages short; reply: 35% needs 4G.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["328-30 at 35% needs 4G (repeated)."], "rift": ["Rift requires clearing 328-30."], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "35프로 4g필요함", "en": "35% needs 4G" }]
+    },
+    {
+      "source": "dc", "id": "dc:77114", "url": "https://m.dcinside.com/board/projectcc/77114", "date": "2026-09-28",
+      "title_kr": "이면은 걍 차원의힘 존버메타네", "title_en": "The Rift is just a wait-for-Dimensional-Power meta", "relevance": 3, "scope": "rift",
+      "summary_en": "카린 (same player as 76835; Rift rank 180th, 축복 Lv.7) cleared Rift 4 폭주단 트럭 (0.000% HP) with displayed team power 8G 46M 895K, up from 4G 3M 599K at Rift entry. Says each 차원의 힘 level-up clears one more Rift level. 나나리: retry; everything but 비겁이 clears.",
+      "clears": [{ "stage": "Rift 4", "boss": "폭주단 트럭", "team_power": "8G 46M 895K (Rift-inflated)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "76835 카린 328-30 team", "note": "same 12 cookies as 76835 in the battle bar; oven Lv.37; preset 1" }],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Rift 4 boss = 폭주단 트럭.", "Displayed power doubled from 4.0G (Rift entry, 차원의 힘 Lv.1) to 8.05G by 차원의 힘 Lv.4 (see 77124).", "Each 차원의 힘 level lets you clear roughly one more Rift level (poster); 나나리: with retries everything but 비겁이 clears."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "차힘 올라갈때마다 하나씩 깨노", "en": "Each time Dimensional Power goes up, I clear one more" }, { "kr": "리트박아봐 비겁빼곤 깨짐", "en": "Keep retrying, everything but 비겁이 goes down" }]
+    },
+    {
+      "source": "dc", "id": "dc:77124", "url": "https://m.dcinside.com/board/projectcc/77124", "date": "2026-09-28",
+      "title_kr": "ㅂㅅ겜 이면은 퀘안깨짐", "title_en": "The 'summon a boss' quest doesn't complete in the Rift", "relevance": 2, "scope": "rift",
+      "summary_en": "카린 at 차원의 힘 Lv.4 (222/2,040), repeating Rift level 5, 8G 46M 895K, rank 180th: the daily 'summon a boss in stages' quest doesn't count Rift boss summons. Reply: Rift-only spec power rises 1-2G per level.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["차원의 힘 Lv.4 needs 2,040 to level (Lv.1 needed 30).", "Rift power rises ~1-2G per 차원의 힘 level (reply).", "Stage boss-summon quest does not progress from Rift boss summons."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "저거 레벨올라갈때마다 1 2g씩 오름", "en": "It goes up 1-2G every level" }]
+    },
+    {
+      "source": "dc", "id": "dc:77126", "url": "https://m.dcinside.com/board/projectcc/77126", "date": "2026-09-28",
+      "title_kr": "찻집에서 본 35% 덱 괜찮은듯", "title_en": "The 35% deck I saw in the tea house is good", "relevance": 3, "scope": "stage",
+      "summary_en": "35% deck: 마카롱 브시 호밀 피노 치케 석류 피겨 위치 우유 딸크 허브 떡토끼 with pets 갓난갓방울, 핫도그도그, 연타펫; park maps push easily; mostly auto, some (레드베리) need early manual.",
+      "clears": [],
+      "teams": [{ "name": "77126 35% 위치 deck", "scope": "stage", "for": "35% bracket incl. park maps",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "브시", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "치케", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "피겨", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "위치", "en": "Witchberry Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "'Goat'" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "딸크", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+          { "kr": "떡토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "", "role": "", "note": "" }
+        ],
+        "pets": ["갓난갓방울", "핫도그도그", "연타펫 (전지멜로우)"], "perks": "", "captain": "", "formation": "", "why": "위치베리 carries; park maps easy", "substitutions": [], "unorthodox": [] }],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["레드베리 stages need early manual control even with this deck."],
+      "disagreements": [], "quotes": [{ "kr": "오토 대부분 되는데 가끔안되면 초반손컨해줘야함 레드베리같은애들", "en": "Mostly auto, but sometimes you need early manual control, like 레드베리" }]
+    },
+    {
+      "source": "dc", "id": "dc:77139", "url": "https://m.dcinside.com/board/projectcc/77139", "date": "2026-09-28",
+      "title_kr": "내가 쓰는 스테이지 오토덱", "title_en": "My stage auto deck", "relevance": 3, "scope": "stage",
+      "summary_en": "1.66G auto deck at stage 268-270 with 마법사 (Wizard) replacing a dealer: fully hands-off except 비겁이 and 쿨민. 달토끼 replaced 딸크 because 딸크 sometimes died on auto (이온 also suggested). Mercenary perks: ATK AMP for low-HP cookies + ATK AMP at HP cost. Wizard runes: whatever ATK AMP/Skill AMP/Crit DMG rolled. A reply notes 1.66G at 270 is overpowered for that stage anyway.",
+      "clears": [{ "stage": "268-270", "boss": "?", "team_power": "1.66G", "recommended_power": "?", "bracket": "? (reply: power is high for 270)", "result": "clear", "play": "auto", "retries": "", "team": "77139 Wizard auto deck", "note": "" }],
+      "teams": [{ "name": "77139 Wizard auto deck", "scope": "stage", "for": "auto pushing ~270 except 비겁이, 쿨민",
+        "cookies": [
+          { "kr": "마카롱", "en": "Macaron Cookie", "level": "100", "stars": "5", "position": "front 1", "role": "?", "note": "art" },
+          { "kr": "마법사", "en": "Wizard Cookie", "level": "100", "stars": "?", "position": "front 2", "role": "dealer", "note": "text + art" },
+          { "kr": "피노", "en": "Pinot Noir Cookie", "level": "100", "stars": "5", "position": "front 3", "role": "?", "note": "art" },
+          { "kr": "석류", "en": "Pomegranate Cookie", "level": "100", "stars": "5", "position": "front 4", "role": "buffer", "note": "art" },
+          { "kr": "위치베리", "en": "Witchberry Cookie", "level": "100", "stars": "?", "position": "front 5", "role": "dealer", "note": "art, medium" },
+          { "kr": "허브", "en": "Herb Cookie", "level": "100", "stars": "5", "position": "front 6", "role": "healer", "note": "art" },
+          { "kr": "?", "en": "probably Brightseeker Cookie", "level": "100", "stars": "5", "position": "back 1", "role": "ranged", "note": "low" },
+          { "kr": "호밀", "en": "Rye Cookie", "level": "100", "stars": "5", "position": "back 2", "role": "dealer", "note": "art" },
+          { "kr": "?", "en": "probably Skating Queen Cookie", "level": "100", "stars": "5", "position": "back 3", "role": "charge", "note": "low" },
+          { "kr": "?", "en": "probably Cheesecake Cookie", "level": "100", "stars": "5", "position": "back 4", "role": "support", "note": "staff sprite; low" },
+          { "kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5", "position": "back 5", "role": "healer", "note": "captain banner on roster card" },
+          { "kr": "달토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "5", "position": "back 6", "role": "tank", "note": "text: replaced 딸크" }
+        ],
+        "pets": ["? yellow pet Lv.20", "? orange/red pet Lv.20 (likely 핫도그도그)", "? pink/lightning pet Lv.20 (likely 전지멜로우)"], "perks": "ATK AMP for low-HP cookies + ATK AMP that costs HP", "captain": "우유 (banner)", "formation": "", "why": "Wizard does strong damage; hands-off",
+        "substitutions": ["딸크 -> 달토끼 (딸크 died on auto)", "이온 also OK"], "unorthodox": ["Wizard Cookie (not used in arena) as a stage dealer"] }],
+      "builds": [{ "cookie": "마법사", "scope": "stage", "sugar_runes": "공증 / 스증 / 치피 as rolled", "gear": "", "thresholds": "", "why": "not used in arena, runes not optimised, still works" }],
+      "mechanics": [], "rift": [], "stage_types": ["비겁이 and 쿨민 need attention; others auto."],
+      "disagreements": ["Reply: at 1.66G, stage 270 should be trivial with anything."],
+      "quotes": [{ "kr": "마법사 좋다는 소리 듣고 바꿔봤는데 진짜 ㄹㅇ 딸깍임 비겁이랑 쿨민 나올때빼고는 그냥 내비 두면 됨", "en": "Heard Wizard was good and tried it; truly one-click; except when 비겁이 and Cool Mint show up you can leave it" }]
+    },
+    {
+      "source": "dc", "id": "dc:77154", "url": "https://m.dcinside.com/board/projectcc/77154", "date": "2026-09-28",
+      "title_kr": "와 비겁이 15퍼로 잡을뻔했네", "title_en": "Almost fought 비겁이 at 15%", "relevance": 3, "scope": "stage",
+      "summary_en": "언담 switched to their 비겁이 deck for manual play; after several tries the boss was oddly tanky and never went past 20% damage, so they removed tanks and added dealers; then noticed power was at 15%. Raised to 35% and cleared on the first try.",
+      "clears": [
+        { "stage": "?", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "fail", "play": "manual", "retries": "several", "team": "", "note": "only ~20% HP removed" },
+        { "stage": "?", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "0 (first try)", "team": "", "note": "" }
+      ],
+      "teams": [], "builds": [],
+      "mechanics": ["Measured-by-player: 15% vs 35% against 비겁이 — ~20% HP at 15% vs one-shot clear at 35%."],
+      "rift": [], "stage_types": ["비겁이: keep the 35% bracket; 15% is not viable."],
+      "disagreements": ["Contrasts with 76779 (claims 비겁이 at 328-30 cleared at 15%, ~3G)."],
+      "quotes": [{ "kr": "투력보니깐 15프로였노 ㅋㅋ 35프로 맞추고 원트컷", "en": "Checked power and it was 15% lol; set it to 35% and cleared first try" }]
+    }
+  ],
+  "glossary": [
+    { "kr": "메소", "en": "Melon Soda Cookie (메론소다맛 쿠키)", "kind": "cookie", "confidence": "low", "evidence": "76211: '호밀쓰다가 ... 메소 잠깐 쓰고있음'; the only unexplained cookie in that 404.65M screenshot is the green goggles cookie" },
+    { "kr": "오방", "en": "Oven Wanderer Cookie (오븐방랑자)", "kind": "cookie", "confidence": "high", "evidence": "76550 '오방이 하루종일 스테이트타는게'; 002 glossary 바리오방" },
+    { "kr": "닼초", "en": "Dark Choco Cookie", "kind": "cookie", "confidence": "high", "evidence": "76798 title 다크초코 vs reply 닼초" },
+    { "kr": "딸크", "en": "Strawberry Crepe Cookie", "kind": "cookie", "confidence": "high", "evidence": "002 glossary 딸크에소" },
+    { "kr": "치케", "en": "Cheesecake Cookie", "kind": "cookie", "confidence": "high", "evidence": "치즈케이크맛 쿠키 shorthand" },
+    { "kr": "위치", "en": "Witchberry Cookie", "kind": "cookie", "confidence": "high", "evidence": "76537/76768 위치베리; 77126 위치" },
+    { "kr": "명랑이", "en": "GingerBright (명랑한 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "76286" },
+    { "kr": "뱀파", "en": "Vampire Cookie", "kind": "cookie", "confidence": "high", "evidence": "76550" },
+    { "kr": "정글", "en": "Tiger Lily Cookie (정글전사)", "kind": "cookie", "confidence": "high", "evidence": "76454 deck list alongside 정전 usage elsewhere" },
+    { "kr": "토끼", "en": "Moon Rabbit Cookie's Pampered with Persimmon (달토끼)", "kind": "cookie", "confidence": "low", "evidence": "76454 deck list" },
+    { "kr": "석류 풍뎅이", "en": "Pomegranate Beetle (literal; boss)", "kind": "boss", "confidence": "low", "evidence": "76631 boss bar at 197-21" },
+    { "kr": "젤리 왕꿀벌", "en": "Jelly King Bee (literal; boss)", "kind": "boss", "confidence": "low", "evidence": "76053 boss bar at 62-14" },
+    { "kr": "아이스콘 듀얼 나이트", "en": "Icecone Dual Knight (literal; boss)", "kind": "boss", "confidence": "low", "evidence": "76859 boss bar at 288-19" },
+    { "kr": "독벌버섯", "en": "Poison-bee mushroom (literal; boss; reading of the name uncertain)", "kind": "boss", "confidence": "low", "evidence": "76814 boss bar at 301-27" },
+    { "kr": "폭주단 트럭", "en": "Rampage Gang Truck (literal; boss; the '트럭')", "kind": "boss", "confidence": "high", "evidence": "77114 Rift 4 boss bar" },
+    { "kr": "망치공주", "en": "Hammer Princess (literal; boss)", "kind": "boss", "confidence": "low", "evidence": "76586, 77015 (Rift 3)" },
+    { "kr": "케이크 들개떼", "en": "Cake hound pack (boss)", "kind": "boss", "confidence": "low", "evidence": "76862 (Rift 6); cake hound mobs visible in 76835 Rift 1" },
+    { "kr": "식물쿠키", "en": "plant cookie (boss nickname, unidentified)", "kind": "boss", "confidence": "low", "evidence": "76859" },
+    { "kr": "늑대공주", "en": "Wolf Princess (boss nickname)", "kind": "boss", "confidence": "low", "evidence": "76859: lift boss alongside 쿨민, 그루터기" },
+    { "kr": "대형설인", "en": "large yeti (high-HP mob/boss on the chapter-328 snowfield)", "kind": "boss", "confidence": "low", "evidence": "77013" },
+    { "kr": "함정몹", "en": "trap mob (attached to a boss)", "kind": "term", "confidence": "low", "evidence": "76814" },
+    { "kr": "더미몹", "en": "dummy mob", "kind": "term", "confidence": "low", "evidence": "76825" },
+    { "kr": "차원의 힘 / 차힘", "en": "Dimensional Power (Rift-only level)", "kind": "term", "confidence": "high", "evidence": "76835/77124 screenshots: '차원의 힘 Lv.1 0/30', 'Lv.4 222/2,040'" },
+    { "kr": "조각", "en": "fragments (Rift idle currency, 3 per minute)", "kind": "term", "confidence": "low", "evidence": "77015" },
+    { "kr": "돌파력", "en": "Breakthrough (ATK/DEF/HP level track)", "kind": "term", "confidence": "high", "evidence": "76321 screenshot: 돌파력 1095 단계; 76415" },
+    { "kr": "축복", "en": "Blessing level (profile)", "kind": "term", "confidence": "low", "evidence": "screenshots show 축복 Lv.4-10" },
+    { "kr": "깡투", "en": "raw power (vs accuracy)", "kind": "term", "confidence": "high", "evidence": "76631" },
+    { "kr": "명집", "en": "accuracy + focus", "kind": "stat", "confidence": "high", "evidence": "76290, 76834, 76988" },
+    { "kr": "방깍", "en": "DEF shred (방어력 감소 stacks)", "kind": "stat", "confidence": "high", "evidence": "77015 '방깍10'" },
+    { "kr": "권투컷 / 투력컷", "en": "recommended-power bracket threshold", "kind": "term", "confidence": "high", "evidence": "76525, 76211" },
+    { "kr": "스테셋 / 스테 프리셋", "en": "stage gear preset", "kind": "term", "confidence": "high", "evidence": "76988, 76290" },
+    { "kr": "아레나셋", "en": "arena gear preset used for stages", "kind": "term", "confidence": "high", "evidence": "76238, 76347" },
+    { "kr": "토벌셋", "en": "Guild Conquest gear preset", "kind": "term", "confidence": "high", "evidence": "76779" },
+    { "kr": "반 오토", "en": "semi-auto (brief manual start, then auto)", "kind": "term", "confidence": "high", "evidence": "76859" },
+    { "kr": "손컨", "en": "manual control", "kind": "term", "confidence": "high", "evidence": "76825, 77154" },
+    { "kr": "오색 (펫)", "en": "pet nickname, possibly 색동 주머니 (Candy Shade Pouch)", "kind": "pet", "confidence": "low", "evidence": "76859 '펫만 오색>핫도그 스위칭'" },
+    { "kr": "주머니 (펫)", "en": "색동 주머니 (Candy Shade Pouch)", "kind": "pet", "confidence": "low", "evidence": "77015 '주머니빼고 핫도그넣고'" },
+    { "kr": "색동", "en": "색동 주머니 (Candy Shade Pouch)", "kind": "pet", "confidence": "high", "evidence": "76347, 76814" },
+    { "kr": "건전지", "en": "전지멜로우 (Chargemellow), the Rapid Fire pet", "kind": "pet", "confidence": "low", "evidence": "76798 reply '건전지 와사비로 바꿔보세'" },
+    { "kr": "와사비 (펫)", "en": "와사비 문어 (Octo Wasabi)", "kind": "pet", "confidence": "low", "evidence": "76798, 76814" },
+    { "kr": "연쇄펫", "en": "Chain pet (unidentified; yellow lion-like icon in 76550)", "kind": "pet", "confidence": "low", "evidence": "76550" },
+    { "kr": "이장", "en": "server top player (village chief)", "kind": "term", "confidence": "high", "evidence": "76267" },
+    { "kr": "찻집", "en": "tea house (likely a community/guide site nickname)", "kind": "term", "confidence": "low", "evidence": "77126" }
+  ]
+}
