@@ -17,8 +17,8 @@ Spec: [`docs/superpowers/specs/2026-09-27-conquest-simulator-design.md`](docs/su
    - No: v1 is relative-only, with no G predictions and no ATK% marginals.
    - Context: on 2026-09-27 you declined logging your runs in the app. Without a run log, calibration rests on your stated 700G median / 900G best at 2.2G, plus the documented community runs. That's workable but looser. A one-time stat-screen entry alone would still pin the scale.
 2. **May that data be committed?** The repo is public.
-   - Yes: it becomes record 003 evidence, and the calibration is reproducible from the repo.
-   - No: it stays in the browser and a gitignored local file, and record 003 holds only the method.
+   - Yes: it becomes the evidence of its own calibration record, and the calibration is reproducible from the repo.
+   - No: it stays in the browser and a gitignored local file, and the calibration record holds only the method.
 3. **What does the game show you?**
    - An in-battle stat view: where does "45 haste in combat" come from?
    - A running damage total during the fight.

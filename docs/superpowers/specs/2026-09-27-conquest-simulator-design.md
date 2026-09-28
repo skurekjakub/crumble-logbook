@@ -99,7 +99,7 @@ The user wants to simulate the Guild Conquest encounter (지나치게 무거워�
 12. **Curated data to fix later** (not evidence, so it can change):
     - M:"Sugar rune slots and rolls" lists only the ★6/★8/★10 unlocks; SP has 8 slots from ★0.
     - The Candy Shade Pouch HP conflict (SYNTHESIS 7.5% vs mechanics 12.5%) and Octo Wasabi's 8% vs 10% are pet tiers (row 19).
-13. **Record number.** NOTES proposes `research/002-combat-formula/`, but 002 is `002-pvp-meta`. The simulator record is `003-conquest-sim`.
+13. **Record number.** NOTES proposes `research/002-combat-formula/`, but 002 is `002-pvp-meta` and 003 is `003-stage-pushing-meta`. The simulator record is `004-conquest-sim`.
 
 ## 5. The model (revised)
 
@@ -446,7 +446,7 @@ A uniform ATK scale alone must not move it.
 
 | Stage | Delivers | Done when |
 |---|---|---|
-| **S0: research** | Record `research/003-conquest-sim/`: question, method, the §9 checks as findings. A new capture of the bundle functions `Ne`, `Pn` and `Hn` with offsets (19-sugarpocket stays unedited). `curated/synergy-grants.json` in record 001. | Every id in `synergy-grants.json` resolves. |
+| **S0: research** | Record `research/004-conquest-sim/`: question, method, the §9 checks as findings. A new capture of the bundle functions `Ne`, `Pn` and `Hn` with offsets (19-sugarpocket stays unedited). `curated/synergy-grants.json` in record 001. | Every id in `synergy-grants.json` resolves. |
 | **S1: game data** | The tables of §7.2, the migration, the importer `gameData` block, the routes via the registry, and the importer and route tests | Record 001 imports; `/api/cookie-stats` etc. serve; the snapshot round-trips. |
 | **S2: engine v1** | `packages/sim`: formulas, kits for the Cherry, Herb and Melon Soda deck cookies plus the generic kit, luck draws, the death schedule, flat/ramp, Monte Carlo, marginals, calibrate, the architecture rules | AC1–AC3 and AC5 green. |
 | **S3: service and route** | `services/game-data.ts`, `services/sim.ts`, `routes/sim.ts`, the cache, the 422 mapping, the source-id test | Route tests pass with `app.request` on fixture data. |
@@ -465,8 +465,8 @@ These are only the questions whose answers change the design.
    - If yes, v1 is calibrated to your account.
    - If not, v1 becomes relative-only: no G predictions, and no ATK% marginals.
 2. **May that data be committed?** The repo is public.
-   - If yes, it becomes record 003 evidence, and the calibration is reproducible from the repo.
-   - If not, it stays in the browser and in a gitignored local file, and record 003 holds only the method.
+   - If yes, it becomes the evidence of its own calibration record, and the calibration is reproducible from the repo.
+   - If not, it stays in the browser and in a gitignored local file, and the calibration record holds only the method.
 3. **What does the game show you?**
    - An in-battle stat view: where does "45 haste in combat" come from?
    - A running damage total during the fight.
@@ -485,7 +485,7 @@ These are only the questions whose answers change the design.
 - `apps/server/src/routes/sim.ts`
 - `apps/web/src/routes/conquest/sim.tsx`, `apps/web/src/views/SimView.tsx`, `apps/web/src/app/team-draft.ts`, `apps/web/src/lib/sim.ts`
 - `apps/web/src/components/{TeamBuilder,SlotEditor,AssumptionPanel,Histogram,ContributionBars,MarginalTable}.tsx`
-- `research/003-conquest-sim/`
+- `research/004-conquest-sim/`
 - `research/001-guild-conquest-meta/curated/synergy-grants.json`
 - a new numbered evidence capture of the bundle functions
 
