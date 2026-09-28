@@ -46,6 +46,7 @@ pnpm import:record 002-pvp-meta                        # records load side by si
 pnpm import:record 003-stage-pushing-meta              # then the stage-pushing record
 pnpm import:record 004-golden-drop-meta                # then the Crumble Dungeon record
 pnpm import:record 001-guild-conquest-meta --replace   # clear that record's rows and load it again
+pnpm dev:reseed                                        # delete data/crumble.db, then pnpm dev reseeds it from the snapshot
 pnpm dev:server                                        # serve the API on http://localhost:8787/api (watch mode)
 pnpm db:export                                         # write data/snapshot.json from the database
 pnpm db:restore [file]                                 # load a snapshot (default data/snapshot.json) into an empty database

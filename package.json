@@ -15,6 +15,7 @@
     "lint:fix": "eslint --fix .",
     "verify": "pnpm typecheck && pnpm lint && pnpm format:check && vitest run",
     "dev": "pnpm --parallel --filter @crumble/server --filter @crumble/web dev",
+    "dev:reseed": "node -e \"for (const f of ['crumble.db', 'crumble.db-wal', 'crumble.db-shm']) require('fs').rmSync('data/' + f, { force: true })\" && pnpm dev",
     "dev:server": "pnpm --filter @crumble/server dev",
     "dev:web": "pnpm --filter @crumble/web dev",
     "import:record": "pnpm --filter @crumble/server import:record",
