@@ -213,7 +213,8 @@ export function framesArgs(spec: FramesSpec, outPattern: string): string[] {
     spec.video,
     "-vf",
     `fps=1/${spec.step},select='eq(n\\,0)+gt(scene\\,${score})',showinfo`,
-    "-vsync",
+    // ffmpeg 9 rejects `-vsync`; `-fps_mode` replaced it in ffmpeg 5.1.
+    "-fps_mode",
     "vfr",
     "-q:v",
     "3",
@@ -413,7 +414,7 @@ export function subsArgs(spec: SubsSpec, outPattern: string): string[] {
     spec.video,
     "-vf",
     `fps=1/${spec.step},${crop},select='eq(n\\,0)+gt(scene\\,${(8 / 255).toFixed(4)})',scale=900:-1,tile=1x14`,
-    "-vsync",
+    "-fps_mode",
     "vfr",
     "-start_number",
     "0",

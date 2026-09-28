@@ -107,4 +107,15 @@ describe("yt-dlp and ffmpeg wrappers", () => {
       /^fps=1\/0\.5,crop=iw-0:80:0:600,select=.*,scale=900:-1,tile=1x14$/,
     );
   });
+
+  it("sets a variable frame rate with -fps_mode, which ffmpeg 9 accepts, never -vsync", () => {
+    const frames = framesArgs({ video: "v.mp4", t0: 0, t1: 5, step: 1, threshold: 6 }, "f.jpg");
+    const subs = subsArgs({ video: "v.mp4", y0: 0, y1: 10, step: 1 }, "s.jpg");
+    for (const args of [frames, subs]) {
+      expect(args).not.toContain("-vsync");
+      expect(args[args.indexOf("-fps_mode") + 1]).toBe("vfr");
+      expect(args.indexOf("-fps_mode")).toBeLessThan(args.length - 1);
+      expect(args.at(-1)).toMatch(/\.jpg$/);
+    }
+  });
 });
