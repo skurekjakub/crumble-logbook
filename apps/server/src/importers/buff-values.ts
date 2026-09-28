@@ -1,98 +1,37 @@
-import type { BuffValueInput, FightEventInput, Values } from "@crumble/schema";
-import { BUFF_BASE, CONFIDENCE } from "@crumble/schema";
+/**
+ * The `buffValues` block of a record's `import.json`: every buff and debuff
+ * of the listed cookies, at every skill grade, read from a Sugar Pocket
+ * capture onto `buff_values` rows, loaded as shared game facts.
+ *
+ * @module
+ */
+import type { BuffValueInput, Values } from "@crumble/schema";
+import { BUFF_BASE, sourceId } from "@crumble/schema";
 import { z } from "zod";
 import { ImportError } from "../errors";
-import { parseFile, readJson } from "./files";
-import type { BuffValuesSpec, FightEventsSpec } from "./manifest";
-import { formatIssues } from "./manifest";
+import { formatIssues, parseFile, readJson } from "./files";
+import { insertSharedFacts } from "./shared-facts";
 import type { CitedValues, WriteStep } from "./steps";
 
-/** One entry of an extraction's `encounter.timeline`. */
-const timelineEntry = z.strictObject({
-  t_seconds: z.number().nullable(),
-  event: z.string().min(1),
-  detail: z.string().min(1),
-  sources: z.array(z.string().min(1)).min(1),
-  confidence: z.enum(CONFIDENCE),
-});
-
-/** The part of an encounter extraction the fight timeline import reads. */
-const encounterFile = z.object({
-  encounter: z.object({ timeline: z.array(timelineEntry) }),
-});
-
 /**
- * Reads the fight timeline a manifest names and maps it onto `fight_events`
- * rows, on the elapsed clock (see the manifest's `fightEvents` block for
- * how `countdown` converts HUD-timed events).
- *
- * @param recordDir - absolute path to the record directory
- * @param spec - the manifest's `fightEvents` block
- * @param sourceIds - every curated source id
- * @returns one row per timeline entry, in file order, citing the entry's
- *   sources after `spec.sourceAliases` is applied
- * @throws {ImportError} naming `spec.file` if it's missing or malformed; if
- *   a `countdown` key names no timeline event, or more than one; or, naming
- *   the timeline row, if an elapsed time falls outside the fight or a
- *   source id isn't curated
+ * The buff capture to load into `buff_values`: every buff and debuff, at
+ * every skill grade, of each cookie in `cookies` (each a glossary `kr`),
+ * found by name in the Sugar Pocket `catalog` and cited to `source`. A
+ * debuff's effect type comes from `debuffEffects`, keyed by the debuff's
+ * Korean `effect` text, since the capture only calls it a generic
+ * `StatModifier`. `selfBuffs` lists, per cookie, the effect types that
+ * land on the caster alone (`target: self`); every other row is `team`.
  */
-export function readFightEvents(
-  recordDir: string,
-  spec: FightEventsSpec,
-  sourceIds: Set<string>,
-): Array<CitedValues<Values<FightEventInput>>> {
-  const { timeline } = parseFile(
-    spec.file,
-    readJson(recordDir, spec.file),
-    encounterFile,
-  ).encounter;
-
-  for (const event of Object.keys(spec.countdown)) {
-    const matches = timeline.filter((entry) => entry.event === event).length;
-    if (matches === 0) {
-      throw new ImportError(
-        spec.file,
-        null,
-        `countdown names event "${event}", which the timeline doesn't have`,
-      );
-    }
-    if (matches > 1) {
-      throw new ImportError(
-        spec.file,
-        null,
-        `countdown names event "${event}", which the timeline has ${matches} times`,
-      );
-    }
-  }
-
-  return timeline.map((entry, index) => {
-    const row = `timeline ${index}`;
-    const remaining = spec.countdown[entry.event];
-    const tElapsed = remaining === undefined ? entry.t_seconds : spec.fightSeconds - remaining;
-    if (tElapsed !== null && (tElapsed < 0 || tElapsed > spec.fightSeconds)) {
-      throw new ImportError(
-        spec.file,
-        row,
-        `elapsed time ${tElapsed} s is outside the ${spec.fightSeconds} s fight`,
-      );
-    }
-    const sources = [...new Set(entry.sources.map((id) => spec.sourceAliases[id] ?? id))];
-    const unknown = sources.filter((id) => !sourceIds.has(id));
-    if (unknown.length > 0) {
-      throw new ImportError(spec.file, row, `unknown source ids: ${unknown.join(", ")}`);
-    }
-    return {
-      values: {
-        boss: spec.boss,
-        tElapsed,
-        event: entry.event,
-        detail: entry.detail,
-        confidence: entry.confidence,
-      },
-      sources,
-    };
-  });
-}
+export const buffValuesSpec = z.strictObject({
+  file: z.string().min(1),
+  catalog: z.string().min(1),
+  source: sourceId,
+  cookies: z.array(z.string().min(1)).min(1),
+  debuffEffects: z.record(z.string().min(1), z.string().min(1)).default({}),
+  selfBuffs: z.record(z.string().min(1), z.array(z.string().min(1)).min(1)).default({}),
+});
+/** The `buffValues` block of an `import.json`. */
+export type BuffValuesSpec = z.output<typeof buffValuesSpec>;
 
 /** One buff of a skill grade in the Sugar Pocket capture. */
 const captureBuff = z.object({
@@ -160,8 +99,8 @@ const catalogFile = z.object({
 export function readBuffValues(
   recordDir: string,
   spec: BuffValuesSpec,
-  sourceIds: Set<string>,
-  glossaryKrs: Set<string>,
+  sourceIds: ReadonlySet<string>,
+  glossaryKrs: ReadonlySet<string>,
 ): Array<CitedValues<Values<BuffValueInput>>> {
   if (!sourceIds.has(spec.source)) {
     throw new ImportError("import.json", "buffValues.source", `unknown source ids: ${spec.source}`);
@@ -274,21 +213,10 @@ export function readBuffValues(
   return rows;
 }
 
-/** The buff value fields two records' versions of one row must agree on. */
-const BUFF_FACTS = [
-  "fromStar",
-  "valuePct",
-  "maxStack",
-  "base",
-  "scalesWithCasterAmp",
-  "target",
-] as const satisfies readonly (keyof Values<BuffValueInput>)[];
-
 /**
- * A step writing buff values as shared game facts: a row whose cookie,
- * effect type and grade no record has loaded is inserted, owned by the
- * record being written and cited to its sources; a row another record
- * already loaded is skipped when identical.
+ * A step writing buff values as shared game facts (see
+ * {@link insertSharedFacts}): a buff value is identified by its cookie,
+ * effect type and skill grade.
  *
  * @param file - the buff capture's record-relative path, as errors name it
  * @param rows - the rows, as {@link readBuffValues} returns them
@@ -301,29 +229,18 @@ export function insertBuffValues(
   file: string,
   rows: ReadonlyArray<CitedValues<Values<BuffValueInput>>>,
 ): WriteStep {
-  /**
-   * Builds the identity key of a buff value row.
-   *
-   * @param v - the row's cookie, effect type and skill grade
-   * @returns `<cookieKr>|<effectType>|<skillGrade>`
-   */
-  const key = (v: Pick<Values<BuffValueInput>, "cookieKr" | "effectType" | "skillGrade">) =>
-    `${v.cookieKr}|${v.effectType}|${v.skillGrade}`;
-  return (repos, { record }) => {
-    const loaded = new Map(repos.buffValues.list().map((row) => [key(row), row]));
-    for (const { values, sources } of rows) {
-      const existing = loaded.get(key(values));
-      if (existing) {
-        const incoming = { target: "team", ...values };
-        if (BUFF_FACTS.every((field) => existing[field] === (incoming[field] ?? null))) continue;
-        throw new ImportError(
-          file,
-          `${values.cookieKr} grade ${values.skillGrade}`,
-          `buff value (effect type ${values.effectType}) conflicts with the one record ${existing.recordSlug ?? "(none)"} loaded`,
-        );
-      }
-      const row = repos.buffValues.insert({ ...values, recordSlug: record });
-      repos.citations.replace("buff_value", String(row.id), [...sources]);
-    }
-  };
+  return insertSharedFacts(
+    {
+      key: "buffValues",
+      file,
+      identity: ["cookieKr", "effectType", "skillGrade"],
+      facts: ["fromStar", "valuePct", "maxStack", "base", "scalesWithCasterAmp", "target"],
+      defaults: { target: "team" },
+      describe: (values) => ({
+        row: `${values.cookieKr} grade ${values.skillGrade}`,
+        what: `buff value (effect type ${values.effectType})`,
+      }),
+    },
+    rows,
+  );
 }

@@ -16,9 +16,8 @@ import type { SourceInsert } from "../repos/sources";
 import { deckModeMismatch } from "../services/deck-modes";
 import { lookupKeys } from "../services/names";
 import { findCapture } from "./captures";
-import { parseFile } from "./files";
+import { formatIssues, parseFile } from "./files";
 import type { ImportManifest } from "./manifest";
-import { formatIssues } from "./manifest";
 import {
   mapCounter,
   mapDeck,

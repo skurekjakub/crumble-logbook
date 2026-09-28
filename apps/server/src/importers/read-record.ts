@@ -1,20 +1,20 @@
 import { join } from "node:path";
+import type { z } from "zod";
 import { ImportError } from "../errors";
-import { insertBuffValues, readBuffValues, readFightEvents } from "./boss";
 import type { Collection, CollectionName, ParsedCollections, RowRefs } from "./collections";
 import { COLLECTIONS, curatedManifest } from "./collections";
+import type { Extra, ExtraContext, ExtraName } from "./extras";
+import { EXTRAS } from "./extras";
 import { loadSummaries } from "./extractions";
 import { parseFile, readJson } from "./files";
 import { readManifest } from "./manifest";
-import { readRankings } from "./rankings";
 import type { WriteStep } from "./steps";
-import { insertCited } from "./steps";
 
 /** A research record read, validated and mapped: everything its import writes, in order. */
 export interface RecordPlan {
   /** The record's slug, from its `import.json`. */
   slug: string;
-  /** The writes, in order: the curated collections, then the rankings, fight events and buffs. */
+  /** The writes, in order: the curated collections, then each extra block the manifest carries. */
   steps: WriteStep[];
   /** Non-fatal findings, such as contested glossary lookup keys. */
   warnings: string[];
@@ -28,6 +28,9 @@ interface CuratedFiles {
 
 /** The collections in write order, typed for generic iteration. */
 const ORDERED = Object.entries(COLLECTIONS) as Array<[CollectionName, Collection<unknown>]>;
+
+/** The extra blocks in write order, typed for generic iteration. */
+const ORDERED_EXTRAS = Object.entries(EXTRAS) as unknown as Array<[ExtraName, Extra<z.ZodType>]>;
 
 /**
  * Reads and validates every collection the curated directory's
@@ -104,10 +107,9 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
 
 /**
  * Reads a research record without writing anything: its `import.json`, its
- * curated collections, its ranking TSVs, its extractions' summaries and,
- * when the manifest names them, its fight timeline and buff capture. Every
- * file is validated and every reference checked, and every row is mapped
- * into a write step.
+ * curated collections, its extractions' summaries and every extra block
+ * the manifest carries (see `EXTRAS`). Every file is validated and every
+ * reference checked, and every row is mapped into a write step.
  *
  * @param recordDir - absolute path to the record directory (the one
  *   holding `import.json`)
@@ -122,8 +124,11 @@ export function readRecord(recordDir: string): RecordPlan {
   const curated = readCollections(recordDir, manifest.curated);
   checkCollections(curated);
   const { parsed } = curated;
-  const sourceIds = new Set(Object.keys(parsed.sources ?? {}));
-  const rankings = readRankings(recordDir, manifest, sourceIds);
+  const extraContext: ExtraContext = {
+    recordDir,
+    sourceIds: new Set(Object.keys(parsed.sources ?? {})),
+    glossaryKrs: new Set((parsed.glossary ?? []).map((entry) => entry.kr)),
+  };
   const context = {
     recordDir,
     manifest,
@@ -137,20 +142,9 @@ export function readRecord(recordDir: string): RecordPlan {
     steps.push(...collection.prepare(parsed[name], { ...context, file: curated.files[name]! }));
     warnings.push(...(collection.warnings?.(parsed[name]) ?? []));
   }
-  steps.push(rankings);
-  if (manifest.fightEvents) {
-    steps.push(
-      insertCited("fightEvents", readFightEvents(recordDir, manifest.fightEvents, sourceIds)),
-    );
-  }
-  if (manifest.buffValues) {
-    const glossaryKrs = new Set((parsed.glossary ?? []).map((entry) => entry.kr));
-    steps.push(
-      insertBuffValues(
-        manifest.buffValues.file,
-        readBuffValues(recordDir, manifest.buffValues, sourceIds, glossaryKrs),
-      ),
-    );
+  for (const [name, block] of ORDERED_EXTRAS) {
+    const spec = manifest[name];
+    if (spec !== undefined) steps.push(...block.read(spec, extraContext));
   }
   return { slug: manifest.record.slug, steps, warnings };
 }

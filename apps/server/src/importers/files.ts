@@ -2,7 +2,18 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { z } from "zod";
 import { ImportError } from "../errors";
-import { formatIssues } from "./manifest";
+
+/**
+ * Formats every issue of a Zod error as `path: message`, joined by `; `.
+ *
+ * @param error - the Zod error to format
+ * @returns the formatted issues; a root-level issue's path reads `(root)`
+ */
+export function formatIssues(error: z.ZodError): string {
+  return error.issues
+    .map((issue) => `${issue.path.length > 0 ? issue.path.join(".") : "(root)"}: ${issue.message}`)
+    .join("; ");
+}
 
 /**
  * Reads a JSON file of a record.

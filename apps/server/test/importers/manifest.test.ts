@@ -3,8 +3,9 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { ImportError } from "../../src/errors";
-import type { RankingSpec } from "../../src/importers/manifest";
-import { importManifest, mapRankingRow, readManifest } from "../../src/importers/manifest";
+import { importManifest, readManifest } from "../../src/importers/manifest";
+import type { RankingSpec } from "../../src/importers/rankings";
+import { mapRankingRow } from "../../src/importers/rankings";
 import { parseTsv } from "../../src/importers/tsv";
 
 const valid = {
@@ -112,6 +113,21 @@ describe("importManifest", () => {
   it("requires a capture file pattern with an {id} placeholder", () => {
     const noId = { ...valid, captures: [{ site: "dc", dir: "d", file: "post.md" }] };
     expect(importManifest.safeParse(noId).success).toBe(false);
+  });
+
+  it("rejects an unknown top-level key, such as a misspelled extra block", () => {
+    const result = importManifest.safeParse({ ...valid, fightEvent: { file: "f.json" } });
+    expect(result.success).toBe(false);
+    expect(result.error?.issues[0]).toMatchObject({
+      code: "unrecognized_keys",
+      keys: ["fightEvent"],
+    });
+  });
+
+  it("still requires the rankings block, which may be empty", () => {
+    const { rankings: _rankings, ...noRankings } = valid;
+    expect(importManifest.safeParse(noRankings).success).toBe(false);
+    expect(importManifest.safeParse({ ...valid, rankings: [] }).success).toBe(true);
   });
 });
 
