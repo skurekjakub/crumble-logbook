@@ -46,8 +46,10 @@ WEB = {
                                    "Pocket Gamer on the 2026-09-23 update: the Dimensional Rift", "2026-09-23", "relevance 2/3"),
     "web:zdnet-2026-09-23": ("https://zdnet.co.kr/view/?no=20260923112635", "데브시스터즈, '쿠키런: 킹덤·크럼블' 추석 업데이트",
                              "ZDNet Korea on the 2026-09-23 update", "2026-09-23", "relevance 1/3"),
-    "web:crumbgg-patches": ("https://crumb.gg/patches", "crumb.gg patch digest",
-                            "crumb.gg's patch digest (record 001, evidence/15-crumbgg/33-patches-read.txt): the 9/23 easing lowered recommended power, enemy ATK and HP from ~0% at 169-1 to 30% at 248-30 and 36% at the end; 328-30 went from 15.61B to 10.00B", "2026-09-23", "relevance 3/3"),
+    "web:crumbgg-stages": ("https://crumb.gg/data/stages.json", "crumb.gg stage data (client 1.4.002)",
+                           "crumb.gg's datamined stage data: the damage-bracket table and every stage's recommended power; identical to crumblehub's (evidence/06-derived/crumbgg-comparison.json)", "2026-09-23", "relevance 3/3"),
+    "web:crumbgg-patches": ("https://crumb.gg/data/patches.json?v=5", "crumb.gg patch digest",
+                            "crumb.gg's patch digest (evidence/03-sites/crumbgg_data_patches_v5.json): the 9/23 easing lowered recommended power, enemy ATK and HP from ~0% at 169-1 to 30% at 248-30 and 36% at the end; 328-30 went from 15.61B to 10.00B", "2026-09-23", "relevance 3/3"),
 }
 
 

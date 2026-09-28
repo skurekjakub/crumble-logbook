@@ -679,9 +679,16 @@
   "signal": "relevance 2/3"
  },
  "web:crumbgg-patches": {
-  "url": "https://crumb.gg/patches",
+  "url": "https://crumb.gg/data/patches.json?v=5",
   "title": "crumb.gg patch digest",
-  "title_en": "crumb.gg's patch digest (record 001, evidence/15-crumbgg/33-patches-read.txt): the 9/23 easing lowered recommended power, enemy ATK and HP from ~0% at 169-1 to 30% at 248-30 and 36% at the end; 328-30 went from 15.61B to 10.00B",
+  "title_en": "crumb.gg's patch digest (evidence/03-sites/crumbgg_data_patches_v5.json): the 9/23 easing lowered recommended power, enemy ATK and HP from ~0% at 169-1 to 30% at 248-30 and 36% at the end; 328-30 went from 15.61B to 10.00B",
+  "date": "2026-09-23",
+  "signal": "relevance 3/3"
+ },
+ "web:crumbgg-stages": {
+  "url": "https://crumb.gg/data/stages.json",
+  "title": "crumb.gg stage data (client 1.4.002)",
+  "title_en": "crumb.gg's datamined stage data: the damage-bracket table and every stage's recommended power; identical to crumblehub's (evidence/06-derived/crumbgg-comparison.json)",
   "date": "2026-09-23",
   "signal": "relevance 3/3"
  },

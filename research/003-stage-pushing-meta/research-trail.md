@@ -36,6 +36,10 @@ Queries:
 
 Synthesis: Reddit has nothing on high stages; the global community is not where the late stages are pushed. The 2026-09-23 update is confirmed by press (Pocket Gamer, ZDNet Korea, Inven): the Dimensional Rift is a boss-only challenge for players who cleared every main stage, with a Dimensional Energy Level (차원의 힘) that raises stats, season rewards, and Dimension Fragments traded for a pet. The official patch note (nv:44477) is the primary source; it alone states the stage difficulty easing for 169-1 to 328-30 and the boss rebalance for 169-1 to 248-30. The press articles corroborate the date.
 
+## After the rounds
+
+A lead passed in by the coordinator, not found by the rounds: crumb.gg publishes its own datamined stage file (`/data/stages.json`) and patch digest (`/data/patches.json?v=5`). Both captured; the brackets and all recommended powers match crumblehub's exactly (`evidence/06-derived/crumbgg-comparison.json`).
+
 ## Final takeaways (each verified against a capture before use)
 
 - The bracket table, the 35%/15% entry points and the boss-damage exemption: crumblehub (`evidence/03-sites`).

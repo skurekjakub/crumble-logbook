@@ -17,9 +17,11 @@ Structured stage data from community sites, plus the press coverage of the 2026-
 | `press_zdnet_20260923112635.html` | ZDNet Korea, 2026-09-23: the update opens 차원의 이면 as end content for players who cleared the final stage. It doesn't mention the stage difficulty easing; the patch note (nv:44477) does. |
 | `press_inven_321382.html` | Inven, 2026-09-23: the same announcement (second attempt; the first timed out). |
 | `gsheet_dc17487_power-correction_gid1647676469.csv` | The Google sheet linked from dc:17487 (전투력 보정 시트표, 2026-08-08), exported as CSV: stages 1-1 to 100-30 with the power that enters each bracket (1%, 5%, 15%, 35%, 55%, 75%, 100%, 120%). An independent, English-language copy of the bracket table ("-Nubkie"); its 1-1 to 100-30 powers equal crumblehub's current ones. |
+| `crumbgg_data_stages.json` | crumb.gg's datamined stage data (client 1.4.002, made 2026-09-23): `dmg` bracket steps, `cp` recommended power per stage (`per` 30), and `acc`/`foc` requirement steps. Compared with crumblehub in `../06-derived/crumbgg-comparison.json`: same steps, same power for every stage. |
+| `crumbgg_data_patches_v5.json` | crumb.gg's patch digest data, including the 2026-09-23 update (the Rift, the easing, 328-30 from 15.61B to 10.00B). |
 | `cookieruncrumbles_gear-sugar-rune-guide.html` | An English SEO guide site's gear and rune guide; kept as the example of what global guides say (generic, no stage brackets). |
 
 ## Tried and not kept
 
-- crumb.gg: `/pub/live?board=` with `stage`, `stages`, `dimension`, `dimension_rift`, `rift`, `daily_dungeon`, `implant_tower`, `tower` all return 404 `{"error":"not found"}` (2026-09-28). Its client code knows only the Rumble Arena and Guild Conquest boards and the combat-power leaderboard, so no public stage or Rift ranking exists there.
+- crumb.gg (rankings): `/pub/live?board=` with `stage`, `stages`, `dimension`, `dimension_rift`, `rift`, `daily_dungeon`, `implant_tower`, `tower` all return 404 `{"error":"not found"}` (2026-09-28). Its client code knows only the Rumble Arena and Guild Conquest boards and the combat-power leaderboard, so no public stage or Rift ranking exists there.
 - crumblehub `/api/clear-decks` with `mode=` `stages`, `story`, `dimension`, `dimension_rift`, `rift`, `dimensional_rift`, `daily`, `dailyDungeon`, `tower`: `{"error":"Invalid mode"}`. `daily_dungeon` and `implant_tower` exist but are out of scope. No Rift mode.
