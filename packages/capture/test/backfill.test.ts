@@ -106,6 +106,9 @@ describe("backfill", () => {
       tool: DC_TOOL,
     });
     expect(readHeader(NV_POST).tool).toBe(NV_TOOL);
+    expect(
+      readHeader('# 1\n\n- url: https://cafe.naver.com/ccrumble/1\n\n(refused: {"result": {}})\n'),
+    ).toEqual({ url: "https://cafe.naver.com/ccrumble/1", capturedAt: null, tool: NV_TOOL });
     expect(readHeader("- url: https://x.test\n- captured: 2026-09-27T08:00:00Z\n")).toEqual({
       url: "https://x.test",
       capturedAt: "2026-09-27T08:00:00+00:00",

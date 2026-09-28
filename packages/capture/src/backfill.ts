@@ -7,8 +7,9 @@
  * - an image a post embeds (`![[name]]`, saved under the post's `img/`)
  *   takes the post's URL, time and tool (`approx: "post"`);
  * - anything else takes its first commit's author time (`approx: "git"`),
- *   and a URL from its own `- url:` header or from a row of a sibling
- *   `README.md` or `SOURCES.md` that names it, else `null`.
+ *   a URL from its own `- url:` header or from a row of a sibling
+ *   `README.md` or `SOURCES.md` that names it (else `null`), and the
+ *   scraper its header shows (a refused Naver article), else `unknown`.
  *
  * @module
  */
@@ -54,7 +55,10 @@ export function readHeader(text: string): CaptureHeader {
   let tool: string | null = null;
   if (url?.startsWith("https://m.dcinside.com/board/") && /^- author\/date: /m.test(head)) {
     tool = DC_TOOL;
-  } else if (url?.startsWith("https://cafe.naver.com/") && /^- written: /m.test(head)) {
+  } else if (
+    url?.startsWith("https://cafe.naver.com/") &&
+    (/^- written: /m.test(head) || /^\(refused: /m.test(head))
+  ) {
     tool = NV_TOOL;
   }
   return { url, capturedAt: stamp ? isoFromHeader(stamp) : null, tool };
@@ -221,9 +225,9 @@ export function backfillLines(recordDir: string, options: BackfillOptions = {}):
   function fallback(dir: string, path: string, full: string): CaptureMeta {
     const capturedAt = commitTimes.get(path);
     if (!capturedAt) throw new LedgerError(LEDGER_FILE, null, `${path}: no commit adds it`);
-    const url =
-      (isMedia(path) ? null : readHeader(readFileSync(full, "utf-8")).url) ?? siblingUrl(dir, path);
-    return { url, capturedAt, tool: "unknown", approx: "git" };
+    const header = isMedia(path) ? null : readHeader(readFileSync(full, "utf-8"));
+    const url = header?.url ?? siblingUrl(dir, path);
+    return { url, capturedAt, tool: header?.tool ?? "unknown", approx: "git" };
   }
 }
 

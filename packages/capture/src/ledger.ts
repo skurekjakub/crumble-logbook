@@ -137,6 +137,27 @@ export function sha256File(file: string): string {
 }
 
 /**
+ * Reports whether a file's bytes match a ledger hash. A text file (not
+ * media, no NUL byte) also matches with its CRLF line endings read as LF:
+ * a working tree written on Windows before `.gitattributes` normalised it
+ * holds CRLF where every checkout, and the ledger, has LF.
+ *
+ * @param file - absolute path of the file
+ * @param sha256 - the ledger's hash
+ * @returns `true` if the bytes, or their LF form, hash to `sha256`
+ * @throws if the file can't be read
+ */
+export function matchesHash(file: string, sha256: string): boolean {
+  const bytes = readFileSync(file);
+  if (createHash("sha256").update(bytes).digest("hex") === sha256) return true;
+  if (isMedia(file) || bytes.includes(0)) return false;
+  const text = bytes.toString("latin1");
+  if (!text.includes("\r\n")) return false;
+  const lf = Buffer.from(text.replaceAll("\r\n", "\n"), "latin1");
+  return createHash("sha256").update(lf).digest("hex") === sha256;
+}
+
+/**
  * Lists every file under a record's `evidence/` folder that the ledger
  * should cover: everything but the ledger itself and local by-products.
  *
@@ -255,8 +276,8 @@ export function toLine(path: string, sha256: string, meta: CaptureMeta): Capture
  * Checks a record's evidence against its ledger: every evidence file on
  * disk has exactly one line, every line's file exists (a missing media
  * file is allowed: media stays on the machine that captured it), and every
- * present file's bytes match its line's hash. A path with several lines is
- * hashed against its last.
+ * present file's bytes match its line's hash (see {@link matchesHash}). A
+ * path with several lines is hashed against its last.
  *
  * @param recordDir - absolute path of the record folder
  * @returns every problem found, in path order; `[]` when the ledger holds
@@ -280,7 +301,7 @@ export function verifyLedger(recordDir: string): LedgerProblem[] {
       if (!isMedia(path)) problems.push({ kind: "missing-file", path, lineNo });
       continue;
     }
-    if (sha256File(full) !== line.sha256) problems.push({ kind: "hash-mismatch", path, lineNo });
+    if (!matchesHash(full, line.sha256)) problems.push({ kind: "hash-mismatch", path, lineNo });
   }
   return problems.sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
 }

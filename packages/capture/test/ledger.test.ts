@@ -118,6 +118,21 @@ describe("the ledger", () => {
     ]);
   });
 
+  it("matches a text file written with CRLF against its LF hash, but not media or a real edit", () => {
+    const dir = record();
+    put(dir, "evidence/a.md", "one\ntwo\n");
+    put(dir, "evidence/b.png", "x\ny\n");
+    appendCapture(dir, "evidence/a.md", META);
+    appendCapture(dir, "evidence/b.png", META);
+    put(dir, "evidence/a.md", "one\r\ntwo\r\n");
+    put(dir, "evidence/b.png", "x\r\ny\r\n");
+    expect(verifyLedger(dir)).toEqual([
+      { kind: "hash-mismatch", path: "evidence/b.png", lineNo: 2 },
+    ]);
+    put(dir, "evidence/a.md", "one\r\nthree\r\n");
+    expect(verifyLedger(dir).map((p) => p.path)).toEqual(["evidence/a.md", "evidence/b.png"]);
+  });
+
   it("lists evidence without the ledger and local by-products", () => {
     const dir = record();
     for (const path of [
