@@ -56,6 +56,17 @@ export function createApp(services: Services) {
       R.dungeonExclusions.path,
       crudRouter(endpoints(services.dungeonExclusions), R.dungeonExclusions),
     )
+    .route(R.powerSources.path, crudRouter(endpoints(services.powerSources), R.powerSources))
+    .route(
+      R.powerDataPoints.path,
+      crudRouter(endpoints(services.powerDataPoints), R.powerDataPoints),
+    )
+    .route(R.packages.path, crudRouter(endpoints(services.packages), R.packages))
+    .route(R.priceTiers.path, crudRouter(endpoints(services.priceTiers), R.priceTiers))
+    .route(R.spendingOrders.path, crudRouter(endpoints(services.spendingOrders), R.spendingOrders))
+    .route(R.spendingSteps.path, crudRouter(endpoints(services.spendingSteps), R.spendingSteps))
+    .route(R.growthCurves.path, crudRouter(endpoints(services.growthCurves), R.growthCurves))
+    .route(R.plannerSteps.path, crudRouter(endpoints(services.plannerSteps), R.plannerSteps))
     .route(R.decks.path, crudRouter(services.decks, R.decks))
     .route(R.runeBuilds.path, crudRouter(services.runeBuilds, R.runeBuilds))
     .route(R.sources.path, sourcesRouter(services.sources))

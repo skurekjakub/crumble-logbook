@@ -42,7 +42,14 @@ type SeededKey =
   | "stageClears"
   | "dungeonRuns"
   | "dungeonLineups"
-  | "dungeonExclusions";
+  | "dungeonExclusions"
+  | "powerSources"
+  | "powerDataPoints"
+  | "packages"
+  | "spendingOrders"
+  | "spendingSteps"
+  | "growthCurves"
+  | "plannerSteps";
 
 /**
  * Creates one valid row of a type, with `over` applied on top.
@@ -98,6 +105,26 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
     kind: { match: { kind: "summoner" }, other: {}, value: "summoner" },
     status: { match: { status: "patched" }, other: {}, value: "patched" },
   },
+  powerSources: {
+    cost: { match: { costType: "paid" }, other: {}, value: "paid" },
+    place: { match: { appliesIn: ["arena"] }, other: {}, value: "arena" },
+  },
+  powerDataPoints: {
+    kind: { match: { kind: "claimed" }, other: {}, value: "claimed" },
+    powerSource: { match: { powerSource: "p2" }, other: {}, value: "p2" },
+  },
+  packages: {
+    tier: { match: { tier: "whale" }, other: {}, value: "whale" },
+    feeds: { match: { feeds: ["p1"] }, other: {}, value: "p1" },
+  },
+  spendingOrders: { kind: { match: { kind: "ranked" }, other: {}, value: "ranked" } },
+  spendingSteps: {
+    order: { match: { orderSlug: "o2" }, other: {}, value: "o2" },
+    route: { match: { route: "paid" }, other: {}, value: "paid" },
+    basis: { match: { basis: "claimed" }, other: {}, value: "claimed" },
+  },
+  growthCurves: { powerSource: { match: { powerSource: "p2" }, other: {}, value: "p2" } },
+  plannerSteps: { basis: { match: { basis: "unmeasured" }, other: {}, value: "unmeasured" } },
   captures: {
     record: { match: { recordSlug: "r1" }, other: { recordSlug: "r2" }, value: "r1" },
     path: {
@@ -149,6 +176,47 @@ function ensureDungeonDecks(store: Store, services: Services): void {
   for (const id of ["g1", "g2"]) {
     if (store.repos.decks.exists(id)) continue;
     services.decks.create({ ...deckBase, id, nameEn: id, mode: "crumble_dungeon" });
+  }
+}
+
+/**
+ * A power source's column values, with `over` applied on top.
+ *
+ * @param slug - its slug
+ * @param over - values to set instead
+ * @returns the values
+ */
+function powerSourceValues(slug: string, over: Record<string, unknown> = {}) {
+  return {
+    slug,
+    nameEn: slug,
+    nameKr: "k",
+    raises: "r",
+    appliesIn: ["stage" as const],
+    materials: [{ name: "m", free: "f", paid: "p", note: null }],
+    costType: "free" as const,
+    cap: "c",
+    postedGains: [],
+    efficiency: { early: "e", mid: "m", late: "l", at22g: "a" },
+    bracketEffect: "b",
+    confidence: "high" as const,
+    ...over,
+  };
+}
+
+/**
+ * Creates the power sources `p1` and `p2` and the spending orders `o1` and
+ * `o2` that team-power seeds name, once per store.
+ *
+ * @param store - the store to check for existing rows
+ * @param services - the services to create the rows through
+ */
+function ensureTeamPower(store: Store, services: Services): void {
+  const sources = cite(store);
+  if (store.repos.powerSources.count() > 0) return;
+  for (const slug of ["p1", "p2"]) services.powerSources.create(powerSourceValues(slug), sources);
+  for (const [position, slug] of ["o1", "o2"].entries()) {
+    services.spendingOrders.create({ slug, kind: "stage", label: slug, position }, sources);
   }
 }
 
@@ -396,6 +464,99 @@ const SEEDS: Record<SeededKey, Seed> = {
   dungeonExclusions: (store, services, over) => {
     const row = services.dungeonExclusions.create(
       { cookieKr: `c${++serial}`, kind: "charger", why: "w", status: "excluded", ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  powerSources: (store, services, over) => {
+    const row = services.powerSources.create(
+      powerSourceValues(`ps-${++serial}`, over),
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  powerDataPoints: (store, services, over) => {
+    ensureTeamPower(store, services);
+    const row = services.powerDataPoints.create(
+      {
+        slug: `dp-${++serial}`,
+        kind: "posted",
+        powerSource: "p1",
+        date: "2026-09-28",
+        note: "n",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  packages: (store, services, over) => {
+    ensureTeamPower(store, services);
+    const row = services.packages.create(
+      {
+        slug: `pk-${++serial}`,
+        nameKr: "k",
+        nameEn: "e",
+        priceKrw: 1000,
+        usdSource: "not listed",
+        kind: "one-off",
+        feeds: [],
+        verdict: "v",
+        tier: "light",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  spendingOrders: (store, services, over) => {
+    const row = services.spendingOrders.create(
+      { slug: `so-${++serial}`, kind: "stage", label: "l", position: serial, ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  spendingSteps: (store, services, over) => {
+    ensureTeamPower(store, services);
+    const row = services.spendingSteps.create(
+      {
+        orderSlug: "o1",
+        route: "free",
+        position: ++serial,
+        powerSource: "p1",
+        basis: "community",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  growthCurves: (store, services, over) => {
+    ensureTeamPower(store, services);
+    const row = services.growthCurves.create(
+      {
+        slug: `gc-${++serial}`,
+        powerSource: "p1",
+        title: "t",
+        columns: ["a"],
+        rows: [[1]],
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  plannerSteps: (store, services, over) => {
+    ensureTeamPower(store, services);
+    const row = services.plannerSteps.create(
+      {
+        position: ++serial,
+        powerSource: "p1",
+        basis: "community",
+        gain: "g",
+        reach: "r",
+        ...over,
+      },
       cite(store),
     );
     return ["id", row.id];

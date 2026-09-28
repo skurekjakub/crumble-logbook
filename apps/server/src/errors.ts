@@ -12,20 +12,24 @@ export class NotFoundError extends Error {
   }
 }
 
-/** Thrown when an input references source or deck ids that don't exist. */
+/**
+ * Thrown when an input references ids that don't exist: source ids, deck
+ * ids, or the slugs of rows of another content type.
+ */
 export class UnknownRefsError extends Error {
-  /** Which kind of id was referenced, `"sources"` or `"decks"`. */
-  readonly kind: "sources" | "decks";
+  /** Which kind of id was referenced: `"sources"`, `"decks"`, or a content type's registry key. */
+  readonly kind: string;
   /** The referenced ids that don't exist. */
   readonly ids: string[];
 
   /**
    * Builds the error, with message `unknown <kind>: <ids>`.
    *
-   * @param kind - which kind of id was referenced, `"sources"` or `"decks"`
+   * @param kind - which kind of id was referenced: `"sources"`, `"decks"`,
+   *   or the registry key of the content type whose slugs were named
    * @param ids - the referenced ids that don't exist
    */
-  constructor(kind: "sources" | "decks", ids: string[]) {
+  constructor(kind: string, ids: string[]) {
     super(`unknown ${kind}: ${ids.join(", ")}`);
     this.name = "UnknownRefsError";
     this.kind = kind;

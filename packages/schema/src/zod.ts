@@ -1,5 +1,6 @@
 import { createInsertSchema, createSelectSchema } from "drizzle-orm/zod";
 import { z } from "zod";
+import { POWER_PLACE } from "./enums";
 import { captureTool, evidencePath, isoDateTime, sha256Hex } from "./ledger";
 import * as t from "./tables";
 
@@ -454,6 +455,204 @@ export const dungeonExclusionInsert = createInsertSchema(t.dungeonExclusions, {
 export const dungeonExclusionSelect = createSelectSchema(t.dungeonExclusions);
 /** A row selected from `dungeon_exclusions`. */
 export type DungeonExclusionRow = typeof t.dungeonExclusions.$inferSelect;
+
+/** A curated id another row names a row by: lowercase words joined by `-` or `_`, dots allowed. */
+export const rowSlug = z
+  .string()
+  .regex(/^[a-z0-9]+([._-][a-z0-9]+)*$/, "expected a lowercase slug (a-z, 0-9, . _ -)");
+
+/** A text that is never empty. */
+const text = z.string().min(1);
+
+/** One material a power source consumes; `note` is `null` when the record adds nothing. */
+export const powerMaterial = z.strictObject({
+  name: text,
+  free: text,
+  paid: text,
+  note: text.nullable(),
+});
+
+/** One gain a power source's record lists, with the sources that post it. */
+export const postedGain = z.strictObject({
+  account: text,
+  before: text.nullable(),
+  after: text.nullable(),
+  delta: text.nullable(),
+  cost: text.nullable(),
+  kind: text,
+  sources: z.array(sourceId).min(1),
+});
+
+/** A power source's efficiency note at each account stage the record grades. */
+export const powerEfficiency = z.strictObject({ early: text, mid: text, late: text, at22g: text });
+
+/** One cell of a growth curve's table. */
+export const curveCell = z.union([z.string(), z.number(), z.null()]);
+
+/**
+ * Insert schema for `power_sources`. `slug` is a lowercase slug; the texts
+ * are non-empty; `appliesIn` lists at least one place, each once;
+ * `materials` at least one material; the optional texts, when present,
+ * are non-empty.
+ */
+export const powerSourceInsert = createInsertSchema(t.powerSources, {
+  slug: () => rowSlug,
+  nameEn: (s) => s.min(1),
+  nameKr: (s) => s.min(1),
+  raises: (s) => s.min(1),
+  appliesIn: () =>
+    z
+      .array(z.enum(POWER_PLACE))
+      .min(1)
+      .refine((places) => new Set(places).size === places.length, "a place is listed twice"),
+  materials: () => z.array(powerMaterial).min(1),
+  costPerRoll: (s) => s.min(1).nullish(),
+  cap: (s) => s.min(1),
+  diminishing: (s) => s.min(1).nullish(),
+  postedGains: () => z.array(postedGain),
+  efficiency: () => powerEfficiency,
+  bracketEffect: (s) => s.min(1),
+  spendOrder: (s) => s.min(1).nullish(),
+  patchNotes: (s) => s.min(1).nullish(),
+});
+/** Select schema for `power_sources`, with the JSON columns typed precisely. */
+export const powerSourceSelect = createSelectSchema(t.powerSources, {
+  appliesIn: () => z.array(z.enum(POWER_PLACE)),
+  materials: () => z.array(powerMaterial),
+  postedGains: () => z.array(postedGain),
+  efficiency: () => powerEfficiency,
+});
+/** A row selected from `power_sources`. */
+export type PowerSourceRow = typeof t.powerSources.$inferSelect;
+
+/**
+ * Insert schema for `power_data_points`. `slug` and `powerSource` are
+ * lowercase slugs; `date` is `YYYY-MM-DD`; the powers, when present, are
+ * positive; `cost`, when present, and `note` are non-empty.
+ */
+export const powerDataPointInsert = createInsertSchema(t.powerDataPoints, {
+  slug: () => rowSlug,
+  powerSource: () => rowSlug,
+  date: () => isoDate,
+  beforeG: (s) => s.positive().nullish(),
+  afterG: (s) => s.positive().nullish(),
+  cost: (s) => s.min(1).nullish(),
+  note: (s) => s.min(1),
+});
+/** Select schema for `power_data_points`, mirroring the stored row shape. */
+export const powerDataPointSelect = createSelectSchema(t.powerDataPoints);
+/** A row selected from `power_data_points`. */
+export type PowerDataPointRow = typeof t.powerDataPoints.$inferSelect;
+
+/**
+ * Insert schema for `packages`. `slug` is a lowercase slug; `priceKrw` a
+ * positive integer; the USD figures and the Crystal value, when present,
+ * are positive; `feeds` lists power-source slugs; the texts are non-empty.
+ */
+export const packageInsert = createInsertSchema(t.packages, {
+  slug: () => rowSlug,
+  nameKr: (s) => s.min(1),
+  nameEn: (s) => s.min(1),
+  priceKrw: () => positiveInt,
+  priceUsd: (s) => s.positive().nullish(),
+  usdTier: (s) => s.positive().nullish(),
+  usdSource: (s) => s.min(1),
+  kind: (s) => s.min(1),
+  feeds: () => z.array(rowSlug),
+  crystalValuePct: (s) => s.positive().nullish(),
+  crystalValueBasis: (s) => s.min(1).nullish(),
+  contents: (s) => s.min(1).nullish(),
+  verdict: (s) => s.min(1),
+});
+/** Select schema for `packages`, with `feeds` typed precisely. */
+export const packageSelect = createSelectSchema(t.packages, { feeds: () => z.array(rowSlug) });
+/** A row selected from `packages`. */
+export type PackageRow = typeof t.packages.$inferSelect;
+
+/** Insert schema for `price_tiers`. `krw` is a positive integer, `usd` positive, `pairedBy` non-empty. */
+export const priceTierInsert = createInsertSchema(t.priceTiers, {
+  krw: () => positiveInt,
+  usd: (s) => s.positive(),
+  pairedBy: (s) => s.min(1),
+});
+/** Select schema for `price_tiers`, mirroring the stored row shape. */
+export const priceTierSelect = createSelectSchema(t.priceTiers);
+/** A row selected from `price_tiers`. */
+export type PriceTierRow = typeof t.priceTiers.$inferSelect;
+
+/**
+ * Insert schema for `spending_orders`. `slug` is a lowercase slug; `label`
+ * and `note` (when present) non-empty; `position` a non-negative integer.
+ */
+export const spendingOrderInsert = createInsertSchema(t.spendingOrders, {
+  slug: () => rowSlug,
+  label: (s) => s.min(1),
+  note: (s) => s.min(1).nullish(),
+  position: (s) => s.int().nonnegative(),
+});
+/** Select schema for `spending_orders`, mirroring the stored row shape. */
+export const spendingOrderSelect = createSelectSchema(t.spendingOrders);
+/** A row selected from `spending_orders`. */
+export type SpendingOrderRow = typeof t.spendingOrders.$inferSelect;
+
+/**
+ * Insert schema for `spending_steps`. The slugs are lowercase slugs;
+ * `position` a non-negative integer; the texts, when present, non-empty.
+ */
+export const spendingStepInsert = createInsertSchema(t.spendingSteps, {
+  orderSlug: () => rowSlug,
+  position: (s) => s.int().nonnegative(),
+  step: (s) => s.min(1).nullish(),
+  powerSource: () => rowSlug.nullish(),
+  packageSlug: () => rowSlug.nullish(),
+  basisNote: (s) => s.min(1).nullish(),
+  why: (s) => s.min(1).nullish(),
+});
+/** Select schema for `spending_steps`, mirroring the stored row shape. */
+export const spendingStepSelect = createSelectSchema(t.spendingSteps);
+/** A row selected from `spending_steps`. */
+export type SpendingStepRow = typeof t.spendingSteps.$inferSelect;
+
+/**
+ * Insert schema for `growth_curves`. The slugs are lowercase slugs; `title`
+ * non-empty; `columns` at least one name; `rows` at least one row of
+ * cells; `rowSources`, when present, lists of source ids; `note` and
+ * `evidence`, when present, non-empty.
+ */
+export const growthCurveInsert = createInsertSchema(t.growthCurves, {
+  slug: () => rowSlug,
+  powerSource: () => rowSlug,
+  title: (s) => s.min(1),
+  columns: () => nameList.min(1),
+  rows: () => z.array(z.array(curveCell)).min(1),
+  rowSources: () => z.array(z.array(sourceId)).nullish(),
+  note: (s) => s.min(1).nullish(),
+  evidence: (s) => s.min(1).nullish(),
+});
+/** Select schema for `growth_curves`, with the JSON columns typed precisely. */
+export const growthCurveSelect = createSelectSchema(t.growthCurves, {
+  columns: () => nameList,
+  rows: () => z.array(z.array(curveCell)),
+  rowSources: () => z.array(z.array(sourceId)).nullable(),
+});
+/** A row selected from `growth_curves`. */
+export type GrowthCurveRow = typeof t.growthCurves.$inferSelect;
+
+/**
+ * Insert schema for `planner_steps`. `position` is a non-negative integer;
+ * the slugs are lowercase slugs; `gain` and `reach` non-empty.
+ */
+export const plannerStepInsert = createInsertSchema(t.plannerSteps, {
+  position: (s) => s.int().nonnegative(),
+  powerSource: () => rowSlug,
+  dataPoint: () => rowSlug.nullish(),
+  gain: (s) => s.min(1),
+  reach: (s) => s.min(1),
+});
+/** Select schema for `planner_steps`, mirroring the stored row shape. */
+export const plannerStepSelect = createSelectSchema(t.plannerSteps);
+/** A row selected from `planner_steps`. */
+export type PlannerStepRow = typeof t.plannerSteps.$inferSelect;
 
 /** Insert schema for `citations`. */
 export const citationInsert = createInsertSchema(t.citations);

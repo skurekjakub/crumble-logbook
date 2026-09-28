@@ -13,6 +13,7 @@ export * from "./counters";
 export * from "./usage";
 export * from "./stage";
 export * from "./dungeon";
+export * from "./team-power";
 export * from "./citations";
 export * from "./fact-claims";
 export * from "./captures";

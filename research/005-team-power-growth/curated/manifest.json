@@ -5,6 +5,12 @@
     "mechanics": "mechanics.json",
     "timeline": "timeline.json",
     "sources": "sources.json",
-    "glossary": "glossary.json"
+    "glossary": "glossary.json",
+    "powerSources": "power-sources.json",
+    "powerDataPoints": "power-datapoints.json",
+    "packages": "packages.json",
+    "spendingOrders": "spending-orders.json",
+    "growthCurves": "growth-curves.json",
+    "plannerSteps": "power-planner.json"
   }
 }

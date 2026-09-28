@@ -1,7 +1,16 @@
 import { z } from "zod";
 import { lineupProblem, runStanding } from "./dungeon";
 import { postedPowerG } from "./power";
+import { growthCurveProblem, spendingStepProblem } from "./team-power";
 import {
+  growthCurveInsert,
+  packageInsert,
+  plannerStepInsert,
+  powerDataPointInsert,
+  powerSourceInsert,
+  priceTierInsert,
+  spendingOrderInsert,
+  spendingStepInsert,
   buffValueInsert,
   counterInsert,
   deckCookieInsert,
@@ -339,6 +348,103 @@ export type DungeonExclusionInput = z.output<typeof dungeonExclusionInput>;
 export const dungeonExclusionPatch = dungeonExclusion.patch;
 /** Output of {@link dungeonExclusionPatch}. */
 export type DungeonExclusionPatch = z.output<typeof dungeonExclusionPatch>;
+
+const powerSource = citedInputs(powerSourceInsert);
+/** Input for creating a power source, with the sources that describe it. */
+export const powerSourceInput = powerSource.input;
+/** Output of {@link powerSourceInput}. */
+export type PowerSourceInput = z.output<typeof powerSourceInput>;
+/** Patch for updating a power source. `sources`, if given, must be non-empty. */
+export const powerSourcePatch = powerSource.patch;
+/** Output of {@link powerSourcePatch}. */
+export type PowerSourcePatch = z.output<typeof powerSourcePatch>;
+
+const powerDataPoint = citedInputs(powerDataPointInsert);
+/** Input for creating a team-power data point, with the sources that post it. */
+export const powerDataPointInput = powerDataPoint.input;
+/** Output of {@link powerDataPointInput}. */
+export type PowerDataPointInput = z.output<typeof powerDataPointInput>;
+/** Patch for updating a team-power data point. `sources`, if given, must be non-empty. */
+export const powerDataPointPatch = powerDataPoint.patch;
+/** Output of {@link powerDataPointPatch}. */
+export type PowerDataPointPatch = z.output<typeof powerDataPointPatch>;
+
+const shopPackage = citedInputs(packageInsert);
+/** Input for creating a shop package, with the sources that price it. */
+export const packageInput = shopPackage.input;
+/** Output of {@link packageInput}. */
+export type PackageInput = z.output<typeof packageInput>;
+/** Patch for updating a shop package. `sources`, if given, must be non-empty. */
+export const packagePatch = shopPackage.patch;
+/** Output of {@link packagePatch}. */
+export type PackagePatch = z.output<typeof packagePatch>;
+
+const priceTier = citedInputs(priceTierInsert);
+/** Input for creating a KRW-to-USD price tier, with the sources that pair it. */
+export const priceTierInput = priceTier.input;
+/** Output of {@link priceTierInput}. */
+export type PriceTierInput = z.output<typeof priceTierInput>;
+/** Patch for updating a price tier. `sources`, if given, must be non-empty. */
+export const priceTierPatch = priceTier.patch;
+/** Output of {@link priceTierPatch}. */
+export type PriceTierPatch = z.output<typeof priceTierPatch>;
+
+const spendingOrder = citedInputs(spendingOrderInsert);
+/** Input for creating a spending order, with the sources behind it. */
+export const spendingOrderInput = spendingOrder.input;
+/** Output of {@link spendingOrderInput}. */
+export type SpendingOrderInput = z.output<typeof spendingOrderInput>;
+/** Patch for updating a spending order. `sources`, if given, must be non-empty. */
+export const spendingOrderPatch = spendingOrder.patch;
+/** Output of {@link spendingOrderPatch}. */
+export type SpendingOrderPatch = z.output<typeof spendingOrderPatch>;
+
+const spendingStep = citedInputs(spendingStepInsert);
+/**
+ * Input for creating a spending step, with the sources behind it. It names
+ * a power source or a package (see {@link spendingStepProblem}).
+ * `citedInputs` omits before this refine: zod 4 rejects `.omit()` on a
+ * refined object.
+ */
+export const spendingStepInput = spendingStep.input.superRefine((step, ctx) => {
+  const problem = spendingStepProblem({
+    powerSource: step.powerSource ?? null,
+    packageSlug: step.packageSlug ?? null,
+  });
+  if (problem) ctx.addIssue({ code: "custom", message: problem, path: ["powerSource"] });
+});
+/** Output of {@link spendingStepInput}. */
+export type SpendingStepInput = z.output<typeof spendingStepInput>;
+/** Patch for updating a spending step. `sources`, if given, must be non-empty. */
+export const spendingStepPatch = spendingStep.patch;
+/** Output of {@link spendingStepPatch}. */
+export type SpendingStepPatch = z.output<typeof spendingStepPatch>;
+
+const growthCurve = citedInputs(growthCurveInsert);
+/**
+ * Input for creating a growth curve, with the sources it condenses. Its
+ * table must be whole (see {@link growthCurveProblem}).
+ */
+export const growthCurveInput = growthCurve.input.superRefine((curve, ctx) => {
+  const problem = growthCurveProblem({ ...curve, rowSources: curve.rowSources ?? null });
+  if (problem) ctx.addIssue({ code: "custom", message: problem, path: ["rows"] });
+});
+/** Output of {@link growthCurveInput}. */
+export type GrowthCurveInput = z.output<typeof growthCurveInput>;
+/** Patch for updating a growth curve. `sources`, if given, must be non-empty. */
+export const growthCurvePatch = growthCurve.patch;
+/** Output of {@link growthCurvePatch}. */
+export type GrowthCurvePatch = z.output<typeof growthCurvePatch>;
+
+const plannerStep = citedInputs(plannerStepInsert);
+/** Input for creating a planner step, with the sources of its gain and reach. */
+export const plannerStepInput = plannerStep.input;
+/** Output of {@link plannerStepInput}. */
+export type PlannerStepInput = z.output<typeof plannerStepInput>;
+/** Patch for updating a planner step. `sources`, if given, must be non-empty. */
+export const plannerStepPatch = plannerStep.patch;
+/** Output of {@link plannerStepPatch}. */
+export type PlannerStepPatch = z.output<typeof plannerStepPatch>;
 
 /**
  * Input for a single deck cookie slot. `id`, `deckId` and `position` are

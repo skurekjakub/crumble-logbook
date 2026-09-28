@@ -42,9 +42,10 @@ export type RankingBoard = (typeof RANKING_BOARD)[number];
 /**
  * Game mode research content is about: Guild Conquest (길드 토벌전), regular
  * Arena (아레나), Rumble Arena (와글와글 아레나), stage pushing (main
- * stages and the Dimensional Rift), or Crumble Dungeon (크럼블 던전, the
- * score attack against the Holy Golden Drop). The first is the default of
- * every `mode` column.
+ * stages and the Dimensional Rift), Crumble Dungeon (크럼블 던전, the
+ * score attack against the Holy Golden Drop), or team power growth
+ * (전투력: what raises the power the game shows for a lineup, and at what
+ * cost). The first is the default of every `mode` column.
  */
 export const GAME_MODE = [
   "guild_conquest",
@@ -52,8 +53,53 @@ export const GAME_MODE = [
   "rumble_arena",
   "stage",
   "crumble_dungeon",
+  "team_power",
 ] as const;
 export type GameMode = (typeof GAME_MODE)[number];
+
+/** Where a power source's power counts: main stages, the Dimensional Rift, Arena, Guild Conquest. */
+export const POWER_PLACE = ["stage", "rift", "arena", "conquest"] as const;
+export type PowerPlace = (typeof POWER_PLACE)[number];
+
+/**
+ * What a power source's materials cost: nothing (`free`), time a free
+ * player waits out (`time_gated`), money (`paid`), or free and paid
+ * routes to the same materials (`mixed`).
+ */
+export const COST_TYPE = ["free", "time_gated", "paid", "mixed"] as const;
+export type CostType = (typeof COST_TYPE)[number];
+
+/**
+ * How a team-power figure is known: a player's own before/after figure
+ * (`posted`), a figure stated without a measurement (`claimed`), or a
+ * research record's arithmetic on posted or game-data figures (`inferred`).
+ */
+export const DATA_POINT_KIND = ["posted", "claimed", "inferred"] as const;
+export type DataPointKind = (typeof DATA_POINT_KIND)[number];
+
+/** The spender a package suits: a light, medium or heavy (`whale`) spender, or none. */
+export const PACKAGE_TIER = ["light", "medium", "whale", "none"] as const;
+export type PackageTier = (typeof PACKAGE_TIER)[number];
+
+/** Which route a spending step is on: a free player's or a paying one's. */
+export const SPEND_ROUTE = ["free", "paid"] as const;
+export type SpendRoute = (typeof SPEND_ROUTE)[number];
+
+/**
+ * What a ranked step's place rests on: a posted team-power gain
+ * (`posted`), a figure stated without a measurement (`claimed`), a gain
+ * nobody measured (`unmeasured`), or the community's stated order alone
+ * (`community`).
+ */
+export const STEP_BASIS = ["posted", "claimed", "unmeasured", "community"] as const;
+export type StepBasis = (typeof STEP_BASIS)[number];
+
+/**
+ * What a spending order covers: one account stage (`stage`), or one
+ * account's ranking of every power source and package (`ranked`).
+ */
+export const SPENDING_ORDER_KIND = ["stage", "ranked"] as const;
+export type SpendingOrderKind = (typeof SPENDING_ORDER_KIND)[number];
 
 /**
  * What a documented Crumble Dungeon score was shown on: the result screen
@@ -182,5 +228,13 @@ export const CITED_ENTITY = [
   "dungeon_run",
   "dungeon_lineup",
   "dungeon_exclusion",
+  "power_source",
+  "power_data_point",
+  "package",
+  "price_tier",
+  "spending_order",
+  "spending_step",
+  "growth_curve",
+  "planner_step",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];

@@ -5,3 +5,4 @@ export * from "./inputs";
 export * from "./ledger";
 export * from "./power";
 export * from "./dungeon";
+export * from "./team-power";

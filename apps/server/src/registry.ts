@@ -17,18 +17,52 @@
  *
  * @module
  */
-import type { CitedEntity, GameMode, Values } from "@crumble/schema";
+import type { CitedEntity, GainPoint, GameMode, Values } from "@crumble/schema";
 import {
   CLEAR_RESULT,
   CLEAR_STANDING,
+  COST_TYPE,
+  DATA_POINT_KIND,
   DUNGEON_BOARD,
   EXCLUSION_CLASS,
   EXCLUSION_STATUS,
   GAME_MODE,
+  PACKAGE_TIER,
+  POWER_PLACE,
   RUN_EVIDENCE,
   RUN_STANDING,
   SOURCE_SITE,
+  SPENDING_ORDER_KIND,
+  SPEND_ROUTE,
+  STEP_BASIS,
   USAGE_KIND,
+  growthCurveInput,
+  growthCurvePatch,
+  growthCurveProblem,
+  growthCurves,
+  packageInput,
+  packagePatch,
+  packages,
+  plannerStepInput,
+  plannerStepPatch,
+  plannerStepProblem,
+  plannerSteps,
+  powerDataPointInput,
+  powerDataPointPatch,
+  powerDataPoints,
+  powerSourceInput,
+  powerSourcePatch,
+  powerSources,
+  priceTierInput,
+  priceTierPatch,
+  priceTiers,
+  spendingOrderInput,
+  spendingOrderPatch,
+  spendingOrders,
+  spendingStepInput,
+  spendingStepPatch,
+  spendingStepProblem,
+  spendingSteps,
   buffValueInput,
   buffValuePatch,
   buffValues,
@@ -183,12 +217,41 @@ export interface ApiSpec {
   patch: z.ZodType;
 }
 
+/** The content types other rows name by their `slug` column (see {@link ContentSpec.links}). */
+export type LinkTarget = "powerSources" | "powerDataPoints" | "packages" | "spendingOrders";
+
+/**
+ * Finds the row of a content type other rows name by its `slug`.
+ *
+ * @param target - the content type
+ * @param slug - the row's slug
+ * @returns the row, or `undefined` when none has that slug
+ */
+export type LinkedRow = (
+  target: LinkTarget,
+  slug: string,
+) => Readonly<Record<string, unknown>> | undefined;
+
 /** How the generic repo and content service handle a cited table with an integer `id`. */
 export interface ContentSpec<Row> {
   /** List order; defaults to ascending `id`. */
   order?: readonly OrderKey<Row>[];
   /** Columns holding the id of another aggregate, checked to exist before every write. */
   refs?: { readonly [C in ColumnOf<Row>]?: "decks" };
+  /**
+   * Columns naming rows of another content type by its `slug`, as one slug
+   * or a list of them: every slug named must exist before a write, and a
+   * row that another row names can't be deleted or change its slug.
+   */
+  links?: { readonly [C in ColumnOf<Row>]?: LinkTarget };
+  /**
+   * The source ids a row names inside its columns (a posted gain's
+   * sources, say), which must exist before a write, as its own citations do.
+   *
+   * @param values - the values being written; a patch's may lack the columns
+   * @returns the source ids
+   */
+  innerSources?(values: Partial<Row>): string[];
   /** A Korean-name column whose English gloss every view carries as `en`. */
   gloss?: ColumnOf<Row>;
   /**
@@ -203,13 +266,14 @@ export interface ContentSpec<Row> {
    */
   unique?: readonly ColumnOf<Row>[];
   /**
-   * Checks a row as written (a patch merged in) against rules the row's
-   * own columns must keep.
+   * Checks a row as written (a patch merged in) against rules its columns
+   * and the rows it links to must keep.
    *
    * @param row - the written row
+   * @param linked - finds a row the written row names by slug
    * @returns what is wrong with it, or `undefined` when it keeps them
    */
-  check?(row: Row): string | undefined;
+  check?(row: Row, linked: LinkedRow): string | undefined;
   /**
    * Columns read from a row's other columns: after every write the row
    * is updated to the values this returns.
@@ -498,6 +562,94 @@ export const REGISTRY = {
     api: { id: rowId, input: dungeonExclusionInput, patch: dungeonExclusionPatch },
     // One exclusion per cookie within a record; rows no record owns share `null`.
     content: { gloss: "cookieKr", unique: ["cookieKr", "recordSlug"] },
+  }),
+  powerSources: entry(powerSources, {
+    path: "/power-sources",
+    entity: "power_source",
+    filters: {
+      cost: { schema: z.enum(COST_TYPE), match: { equals: "costType" } },
+      place: { schema: z.enum(POWER_PLACE), match: { includes: "appliesIn" } },
+    },
+    api: { id: rowId, input: powerSourceInput, patch: powerSourcePatch },
+    content: {
+      innerSources: (row) => row.postedGains?.flatMap((gain) => gain.sources) ?? [],
+    },
+  }),
+  powerDataPoints: entry(powerDataPoints, {
+    path: "/power-data-points",
+    entity: "power_data_point",
+    filters: {
+      kind: { schema: z.enum(DATA_POINT_KIND), match: { equals: "kind" } },
+      powerSource: { schema: nonEmpty, match: { equals: "powerSource" } },
+    },
+    api: { id: rowId, input: powerDataPointInput, patch: powerDataPointPatch },
+    content: { links: { powerSource: "powerSources" } },
+  }),
+  packages: entry(packages, {
+    path: "/packages",
+    entity: "package",
+    filters: {
+      tier: { schema: z.enum(PACKAGE_TIER), match: { equals: "tier" } },
+      feeds: { schema: nonEmpty, match: { includes: "feeds" } },
+    },
+    api: { id: rowId, input: packageInput, patch: packagePatch },
+    content: { links: { feeds: "powerSources" } },
+  }),
+  priceTiers: entry(priceTiers, {
+    path: "/price-tiers",
+    entity: "price_tier",
+    api: { id: rowId, input: priceTierInput, patch: priceTierPatch },
+    content: { order: ["krw", "id"] },
+  }),
+  spendingOrders: entry(spendingOrders, {
+    path: "/spending-orders",
+    entity: "spending_order",
+    filters: { kind: { schema: z.enum(SPENDING_ORDER_KIND), match: { equals: "kind" } } },
+    api: { id: rowId, input: spendingOrderInput, patch: spendingOrderPatch },
+    content: { order: ["position", "id"] },
+  }),
+  spendingSteps: entry(spendingSteps, {
+    path: "/spending-steps",
+    entity: "spending_step",
+    filters: {
+      order: { schema: nonEmpty, match: { equals: "orderSlug" } },
+      route: { schema: z.enum(SPEND_ROUTE), match: { equals: "route" } },
+      basis: { schema: z.enum(STEP_BASIS), match: { equals: "basis" } },
+    },
+    api: { id: rowId, input: spendingStepInput, patch: spendingStepPatch },
+    content: {
+      order: [{ column: "route", rank: SPEND_ROUTE }, "position", "id"],
+      links: { orderSlug: "spendingOrders", powerSource: "powerSources", packageSlug: "packages" },
+      check: spendingStepProblem,
+    },
+  }),
+  growthCurves: entry(growthCurves, {
+    path: "/growth-curves",
+    entity: "growth_curve",
+    filters: { powerSource: { schema: nonEmpty, match: { equals: "powerSource" } } },
+    api: { id: rowId, input: growthCurveInput, patch: growthCurvePatch },
+    content: {
+      links: { powerSource: "powerSources" },
+      innerSources: (row) => row.rowSources?.flat() ?? [],
+      check: growthCurveProblem,
+    },
+  }),
+  plannerSteps: entry(plannerSteps, {
+    path: "/planner-steps",
+    entity: "planner_step",
+    filters: { basis: { schema: z.enum(STEP_BASIS), match: { equals: "basis" } } },
+    api: { id: rowId, input: plannerStepInput, patch: plannerStepPatch },
+    content: {
+      order: ["position", "id"],
+      links: { powerSource: "powerSources", dataPoint: "powerDataPoints" },
+      check: (step, linked) =>
+        plannerStepProblem(
+          step,
+          step.dataPoint === null
+            ? undefined
+            : (linked("powerDataPoints", step.dataPoint) as GainPoint | undefined),
+        ),
+    },
   }),
   citations: entry(citations, {}),
   factClaims: entry(factClaims, {}),

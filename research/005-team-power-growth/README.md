@@ -2,7 +2,7 @@
 
 Status: active (started 2026-09-28; captured and curated 2026-09-28; corrected after the Opus review on 2026-09-28)
 
-Measured on 2026-09-28 from the worktree lane `worktree-agent-a088760dcf93fccb3` (base `12ecfb9`), against the community sources and store pages listed under Sources and captured in `evidence/`, plus the game data (1.4.002) that record 001 captured. The research changed no code. The curated dataset still needs app work before it imports: a `team_power` mode and the manifest changes in "What would change".
+Measured on 2026-09-28 from the worktree lane `worktree-agent-a088760dcf93fccb3` (base `12ecfb9`), against the community sources and store pages listed under Sources and captured in `evidence/`, plus the game data (1.4.002) that record 001 captured. The research changed no code. The curated dataset imports as the app's `team_power` mode (`pnpm import:record 005-team-power-growth`, after records 001 to 004); the app's Team power section shows it.
 
 ## Question
 
@@ -56,7 +56,7 @@ As a falsifiable statement: the community sources name every system that adds di
 
 ## What would change (a map)
 
-For the app lane; this record changed nothing outside its folder and `OPEN-QUESTIONS.md`. The app's needs are written up in `.superpowers/sdd/2026-09-27-pvp/r005-report.md` (local, gitignored).
+For the app lane; this record changed nothing outside its folder and `OPEN-QUESTIONS.md`. The app's needs are written up in `.superpowers/sdd/2026-09-27-pvp/r005-report.md` (local, gitignored). The app build on 2026-09-28 did what follows: the mode exists, the curated manifest leaves out the collections this record doesn't have (they became optional, so no empty files), and every table-shaped curated file imports into its own table. The cross-record capture warnings remain, as expected.
 
 - `packages/schema/src/enums.ts:47` `GAME_MODE`: add `"team_power"` (import.json's `record.mode`; every curated row states `mode: "team_power"`).
 - `apps/server/src/importers/collections.ts:496` `curatedManifest` requires every collection not marked optional, so this record's manifest also needs empty `decks`, `runes`, `gear` and `rng` files, or those collections become optional for modes with no decks. The review's scratch import succeeded with empty files.
@@ -96,7 +96,7 @@ Every cited id is in `curated/sources.json` with its URL; YouTube ids are writte
 
 - `research-trail.md`: the web rounds.
 - `import.json`: the importer manifest (record mode `team_power`).
-- `curated/`: the dataset; `manifest.json` lists the importable collections, and the other files are the team-power tables named in "What would change".
+- `curated/`: the dataset; `manifest.json` lists every collection the app imports, the team-power tables named in "What would change" among them. Changed for the app on 2026-09-28, with no value dropped: every step in `spending-orders.json` states its `basis` as data (`posted`, `claimed`, `unmeasured` or `community`; the record's wording moved to `basis_note`, and a step with none is `community`, as the file's `about` says of the whole order), and the ranked order near 2.2G has an id, a label and a basis per entry; `growth-curves.json` holds each curve as a table (`columns`, `rows`, and `row_sources` where rows were cited apart); `power-planner.json`'s `what_a_step_buys` names each step's data point, basis and sources; the price tiers in `packages.json` cite the App Store captures that pair them, which they lacked.
 - `evidence/captures.jsonl`: one line per evidence file (path, url, time, tool, sha256).
 - `evidence/01-repo-grounding/repo-grounding.md`: what records 001–003 already held, with locators.
 - `evidence/02-dc/`: DCInside search listings (`*.tsv`) and posts with comments (`dc/`; images local only).

@@ -345,6 +345,89 @@ function seedEverything(store: Store): SeedIds {
     { cookieKr: "오븐방랑자 쿠키", kind: "charger", why: "w", status: "excluded" },
     ["dc:1"],
   );
+  services.powerSources.create(
+    {
+      slug: "plating",
+      nameEn: "Plating",
+      nameKr: "플레이트 강화",
+      raises: "Gear main stats",
+      appliesIn: ["stage", "arena"],
+      materials: [{ name: "Chocosteel", free: "idle", paid: "packs", note: null }],
+      costType: "mixed",
+      cap: "25",
+      postedGains: [
+        {
+          account: "1.6G",
+          before: null,
+          after: null,
+          delta: "+1.5%",
+          cost: null,
+          kind: "posted",
+          sources: ["dc:1"],
+        },
+      ],
+      efficiency: { early: "high", mid: "medium", late: "low", at22g: "medium" },
+      bracketEffect: "Small",
+      confidence: "high",
+    },
+    ["dc:1"],
+  );
+  services.powerDataPoints.create(
+    {
+      slug: "plate-step",
+      kind: "posted",
+      powerSource: "plating",
+      date: "2026-09-25",
+      beforeG: 1.6,
+      afterG: 1.625,
+      deltaPct: 1.6,
+      note: "n",
+    },
+    ["dc:1"],
+  );
+  services.packages.create(
+    {
+      slug: "plate-pack",
+      nameKr: "플레이트 패키지",
+      nameEn: "Plating pack",
+      priceKrw: 9900,
+      usdSource: "not listed",
+      kind: "repeatable",
+      feeds: ["plating"],
+      verdict: "v",
+      tier: "medium",
+    },
+    ["dc:1"],
+  );
+  services.priceTiers.create({ krw: 6000, usd: 3.99, pairedBy: "a pack" }, ["dc:1"]);
+  services.spendingOrders.create({ slug: "endgame", kind: "stage", label: "2G", position: 0 }, [
+    "dc:1",
+  ]);
+  services.spendingSteps.create(
+    {
+      orderSlug: "endgame",
+      route: "paid",
+      position: 0,
+      packageSlug: "plate-pack",
+      basis: "posted",
+    },
+    ["dc:1"],
+  );
+  services.growthCurves.create(
+    { slug: "plate-odds", powerSource: "plating", title: "t", columns: ["from"], rows: [[0]] },
+    ["dc:1"],
+  );
+  services.plannerSteps.create(
+    {
+      position: 0,
+      powerSource: "plating",
+      dataPoint: "plate-step",
+      basis: "posted",
+      gain: "g",
+      reach: "r",
+    },
+    ["dc:1"],
+  );
   const [bracket] = store.repos.powerBrackets.list();
   store.repos.factClaims.add(
     { entity: "power_bracket", entityId: String(bracket!.id) },
@@ -404,7 +487,15 @@ describe("exportSnapshot / restoreSnapshot", () => {
       dungeonRuns: 1,
       dungeonLineups: 1,
       dungeonExclusions: 1,
-      citations: 27,
+      powerSources: 1,
+      powerDataPoints: 1,
+      packages: 1,
+      priceTiers: 1,
+      spendingOrders: 1,
+      spendingSteps: 1,
+      growthCurves: 1,
+      plannerSteps: 1,
+      citations: 35,
       factClaims: 1,
     });
     for (const [table, rows] of Object.entries(first.tables)) {

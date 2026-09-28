@@ -1,7 +1,15 @@
 import type { CitedEntity, GameMode } from "@crumble/schema";
 import { ConflictError, NotFoundError, UnknownRefsError } from "../errors";
-import type { AnyFilters, ContentKey, FiltersOf, Registry, RowOf, ValuesOf } from "../registry";
-import { specOf } from "../registry";
+import type {
+  AnyFilters,
+  ContentKey,
+  FiltersOf,
+  LinkTarget,
+  Registry,
+  RowOf,
+  ValuesOf,
+} from "../registry";
+import { CONTENT_KEYS, specOf } from "../registry";
 import type { Repos, Store } from "../repos";
 import type { TableRepo } from "../repos/table-repo";
 import { assertSourcesExist } from "./citations";
@@ -63,8 +71,8 @@ export interface ContentService<
    * @throws {NotFoundError} if `id` doesn't exist
    * @throws {UnknownRefsError} if any `sources` id, or a referenced id,
    *   doesn't exist
-   * @throws whatever `spec.checkRow` throws for the updated row; the row
-   *   is left as it was
+   * @throws whatever `spec.checkRow` or `spec.checkDetach` throws for the
+   *   updated row; the row is left as it was
    */
   update(id: number, patch: Partial<Values>, sources?: string[]): View;
   /**
@@ -73,6 +81,7 @@ export interface ContentService<
    *
    * @param id - the row's primary key
    * @throws {NotFoundError} if `id` doesn't exist
+   * @throws whatever `spec.checkDetach` throws for the row; nothing is deleted
    */
   remove(id: number): void;
 }
@@ -97,6 +106,13 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
    * @throws to reject the write; the transaction rolls back
    */
   checkRow?: (repos: Repos, row: Row) => void;
+  /**
+   * Validates that a row may stop being what it was, inside the write's
+   * transaction: before a delete (`after` undefined) and after an update.
+   *
+   * @throws to reject the write; the transaction rolls back
+   */
+  checkDetach?: (repos: Repos, before: Row, after: Row | undefined) => void;
   /**
    * Columns read from a row's other columns, set on the row after every
    * write, before `checkRow` runs.
@@ -130,7 +146,7 @@ export function createContentService<
   View = Cited<Row>,
   Filter extends object = Record<never, never>,
 >(store: Store, spec: ContentServiceSpec<Row, Values>): ContentService<Row, Values, View, Filter> {
-  const { entity, table, checkRefs, checkRow, derive, filters, gloss } = spec;
+  const { entity, table, checkRefs, checkRow, checkDetach, derive, filters, gloss } = spec;
   const usesGlossary = gloss !== undefined || filtersNeedGlossary(filters);
 
   /**
@@ -228,13 +244,16 @@ export function createContentService<
         if (sources) assertSourcesExist(repos, sources);
         checkRefs?.(repos, patch);
         const repo = table(repos);
+        const before = repo.get(id);
+        if (!before) throw new NotFoundError(entity, id);
         // A patch with no columns (replacing only the citations) has
-        // nothing for `UPDATE ... SET` to set, which drizzle rejects; read
-        // the row back instead of writing an empty update.
-        const written = Object.keys(patch).length > 0 ? repo.update(id, patch) : repo.get(id);
+        // nothing for `UPDATE ... SET` to set, which drizzle rejects; keep
+        // the row as it was instead of writing an empty update.
+        const written = Object.keys(patch).length > 0 ? repo.update(id, patch) : before;
         if (!written) throw new NotFoundError(entity, id);
         const row = withDerived(repo, written);
         checkRow?.(repos, row);
+        checkDetach?.(repos, before, row);
         if (!sources) return withSources(repos, row) as never;
         repos.citations.replace(entity, String(row.id), sources);
         return toView(row, sources, resolver(repos)) as never;
@@ -243,7 +262,9 @@ export function createContentService<
     remove: (id) =>
       store.transaction((repos) => {
         const repo = table(repos);
-        if (!repo.get(id)) throw new NotFoundError(entity, id);
+        const row = repo.get(id);
+        if (!row) throw new NotFoundError(entity, id);
+        checkDetach?.(repos, row, undefined);
         repos.citations.removeAll(entity, String(id));
         repos.factClaims.removeFor({ entity, entityId: String(id) });
         repo.remove(id);
@@ -267,6 +288,31 @@ export type RegisteredService<K extends ContentKey> = ContentService<
 >;
 
 /**
+ * The slugs a link column holds: its one slug, its list of them, or none.
+ *
+ * @param value - the column's value
+ * @returns the slugs
+ */
+function slugsIn(value: unknown): string[] {
+  if (typeof value === "string") return [value];
+  return Array.isArray(value) ? value.filter((v): v is string => typeof v === "string") : [];
+}
+
+/**
+ * The content types and columns that name rows of `target` by slug.
+ *
+ * @param target - a content type
+ * @returns each naming type's key and link column
+ */
+function linksTo(target: ContentKey): Array<{ key: ContentKey; column: string }> {
+  return CONTENT_KEYS.flatMap((key) =>
+    Object.entries(specOf(key).content?.links ?? {})
+      .filter(([, linkTarget]) => linkTarget === target)
+      .map(([column]) => ({ key, column })),
+  );
+}
+
+/**
  * Builds the {@link ContentService} of a registered content type from its
  * registry entry: its entity, table repo, list filters, glossed column,
  * and reference columns (each id checked to exist before a write). A row
@@ -276,7 +322,11 @@ export type RegisteredService<K extends ContentKey> = ContentService<
  * that mode. A written row must also keep the entry's `content.check`, and
  * share its `content.unique` columns with no other row. Any of these
  * failing throws {@link ConflictError} and nothing is written. The
- * entry's `content.derive` columns are set on every write.
+ * entry's `content.derive` columns are set on every write. Every slug a
+ * `content.links` column names, and every source `content.innerSources`
+ * reads from the values, must exist ({@link UnknownRefsError} otherwise);
+ * a row another type's link names can't be deleted or change its slug
+ * ({@link ConflictError}).
  *
  * @param store - the store to persist through
  * @param key - the type's registry key
@@ -288,7 +338,9 @@ export function registeredService<K extends ContentKey>(
 ): RegisteredService<K> {
   const { entity, content, filters } = specOf(key);
   const refColumns = Object.keys(content?.refs ?? {});
+  const links = Object.entries(content?.links ?? {}) as Array<[string, LinkTarget]>;
   const unique: readonly string[] = content?.unique ?? [];
+  const namedBy = linksTo(key);
   type AnyRow = { id: number } & Record<string, unknown>;
   return createContentService<AnyRow, Record<string, unknown>>(store, {
     entity: entity!,
@@ -306,10 +358,41 @@ export function registeredService<K extends ContentKey>(
           throw new UnknownRefsError("decks", [id]);
         }
       }
+      for (const [column, target] of links) {
+        const slugs = new Set((repos[target].list() as AnyRow[]).map((row) => row.slug));
+        const missing = slugsIn(values[column]).filter((slug) => !slugs.has(slug));
+        if (missing.length > 0) throw new UnknownRefsError(target, [...new Set(missing)]);
+      }
+      const inner = content?.innerSources?.(values) ?? [];
+      if (inner.length > 0) assertSourcesExist(repos, [...new Set(inner)]);
+    },
+    /** @inheritdoc */
+    checkDetach: (repos, before, after) => {
+      if (namedBy.length === 0 || (after && after.slug === before.slug)) return;
+      for (const { key: other, column } of namedBy) {
+        const row = (repos[other].list() as AnyRow[]).find((r) =>
+          slugsIn(r[column]).includes(String(before.slug)),
+        );
+        if (row) {
+          const what = after ? "change its slug" : "be deleted";
+          throw new ConflictError(
+            `${entity!} ${String(before.slug)} can't ${what}: ${specOf(other).entity!} ${row.id} names it`,
+          );
+        }
+      }
     },
     /** @inheritdoc */
     checkRow: (repos, row) => {
-      const problem = content?.check?.(row);
+      /**
+       * Finds the row of a linked content type with a slug.
+       *
+       * @param target - the linked content type
+       * @param slug - the slug
+       * @returns the row, or `undefined` when none has it
+       */
+      const linked = (target: LinkTarget, slug: string) =>
+        (repos[target].list() as AnyRow[]).find((r) => r.slug === slug);
+      const problem = content?.check?.(row, linked);
       if (problem) throw new ConflictError(`${entity!} ${row.id}: ${problem}`);
       if (unique.length > 0) {
         const others = repos[key].list() as readonly AnyRow[];

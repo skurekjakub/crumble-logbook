@@ -2,12 +2,12 @@
  "about": "Paid routes to team power: the packages the sources discuss, with KRW prices (KR shop, crumblehub's spending plan and value table, the KR App Store), USD prices where the US App Store lists the same package, what each feeds (power source ids from power-sources.json), crumblehub's Crystal value (% of the plain Crystal pack; not team power), and the community verdict. 'usd_tier' is inferred from matching KRW price tiers on the two App Store listings (₩6,000 = $3.99, ₩7,500 = $4.99, ₩12,000 = $7.99, ₩19,000 = $11.99, ₩20,000 = $12.99, ₩45,000 = $29.99) and is marked as such. Prices as of 2026-09-28; the shop rotates.",
  "measured": "2026-09-28",
  "price_tiers": [
-  {"krw": 6000, "usd": 3.99, "paired_by": "Princess Bari Welcome Pack; Daily Dungeon Key Set Pack"},
-  {"krw": 7500, "usd": 4.99, "paired_by": "Crumble Pass; Ad Removal Sugar Coating Pass"},
-  {"krw": 12000, "usd": 7.99, "paired_by": "Princess Bari Rush Pack Vol.1"},
-  {"krw": 19000, "usd": 11.99, "paired_by": "Surprise Wisp Pack"},
-  {"krw": 20000, "usd": 12.99, "paired_by": "Princess Bari Rush Pack Vol.2"},
-  {"krw": 45000, "usd": 29.99, "paired_by": "Wisp of Guidance Pack Vol.2"}
+  {"krw": 6000, "usd": 3.99, "paired_by": "Princess Bari Welcome Pack; Daily Dungeon Key Set Pack", "sources": ["web:appstore-us", "web:appstore-kr"]},
+  {"krw": 7500, "usd": 4.99, "paired_by": "Crumble Pass; Ad Removal Sugar Coating Pass", "sources": ["web:appstore-us", "web:appstore-kr"]},
+  {"krw": 12000, "usd": 7.99, "paired_by": "Princess Bari Rush Pack Vol.1", "sources": ["web:appstore-us", "web:appstore-kr"]},
+  {"krw": 19000, "usd": 11.99, "paired_by": "Surprise Wisp Pack", "sources": ["web:appstore-us", "web:appstore-kr"]},
+  {"krw": 20000, "usd": 12.99, "paired_by": "Princess Bari Rush Pack Vol.2", "sources": ["web:appstore-us", "web:appstore-kr"]},
+  {"krw": 45000, "usd": 29.99, "paired_by": "Wisp of Guidance Pack Vol.2", "sources": ["web:appstore-us", "web:appstore-kr"]}
  ],
  "packages": [
   {"id": "ad-removal", "name_kr": "광고 영구 제거권 (광고 제거 슈가코팅 멤버십)", "name_en": "Ad Removal Sugar Coating Pass", "price_krw": 7500, "price_usd": 4.99, "usd_source": "listed", "kind": "permanent", "feeds": ["gear_oven", "resolve", "gnome_lab"], "crystal_value_pct": null, "verdict": "Universal first purchase: claims every ad reward (extra daily dungeon runs, shop ad items, ad boxes) without watching; a 5,000 KRW store coupon can bring it to 2,500 KRW on Galaxy Store (KR).", "tier": "light", "sources": ["web:crumblehub-spending", "web:appstore-us", "web:appstore-kr", "dc:70230", "nv:43692", "web:pocketgamer-best-packs", "web:yt-Ba81bn9B2oA", "web:yt-l4I2DCv7d0k"]},

@@ -192,7 +192,7 @@ describe("mode-scoped queries", () => {
     expectTypeOf<ModeOf<InferRequestType<typeof api.usage.$get>>>().toEqualTypeOf<Mode>();
     expectTypeOf<ModeOf<InferRequestType<typeof api.records.$get>>>().toEqualTypeOf<Mode>();
     expectTypeOf<GameMode>().toEqualTypeOf<
-      "guild_conquest" | "arena" | "rumble_arena" | "stage" | "crumble_dungeon"
+      "guild_conquest" | "arena" | "rumble_arena" | "stage" | "crumble_dungeon" | "team_power"
     >();
   });
 

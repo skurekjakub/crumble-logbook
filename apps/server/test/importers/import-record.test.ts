@@ -157,6 +157,14 @@ const expectedCounts = {
   dungeonRuns: 0,
   dungeonLineups: 0,
   dungeonExclusions: 0,
+  powerSources: 0,
+  powerDataPoints: 0,
+  packages: 0,
+  priceTiers: 0,
+  spendingOrders: 0,
+  spendingSteps: 0,
+  growthCurves: 0,
+  plannerSteps: 0,
   citations:
     sum(citedRows.map((r) => distinct(r.sources))) +
     distinct(meta.you.sources) +
