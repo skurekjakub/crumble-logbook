@@ -1,6 +1,6 @@
 import type { RefObject } from "react";
 import { useLayoutEffect, useRef, useState } from "react";
-import { eventLabel, markerRows, secondsLeft, trackPercent, whenLabel } from "../lib/boss";
+import { eventLabel, markerRows, secondsLeft, trackPercent, whenLabel } from "../lib/fight-track";
 import type { SourceIndex } from "../lib/sources";
 import { ConfidencePill } from "./ConfidencePill";
 import { SourceChips } from "./SourceChips";
