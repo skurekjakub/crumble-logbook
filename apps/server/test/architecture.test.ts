@@ -114,7 +114,8 @@ const isPackage = (specifier: string, pkg: string) =>
 const isDrizzle = (edge: ImportEdge) => isPackage(edge.specifier, "drizzle-orm");
 const isHono = (edge: ImportEdge) =>
   isPackage(edge.specifier, "hono") || edge.specifier.startsWith("@hono/");
-const isSim = (edge: ImportEdge) => isPackage(edge.specifier, "@crumble/sim");
+const isSim = (edge: ImportEdge) =>
+  isPackage(edge.specifier, "@crumble/sim") || under(edge.target, SIM);
 
 /** The server files, besides their own folder, that importers may import values from. */
 const IMPORTER_DEPENDENCIES = [
@@ -431,6 +432,15 @@ describe("architecture", () => {
     expect(violations([fake(`${SERVER}/db/x.ts`, "@crumble/sim/input", true)])).toHaveLength(1);
     expect(violations([fake(`${WEB}/views/x.tsx`, "@crumble/sim", true)])).toHaveLength(1);
     expect(violations([fake(`${SCHEMA}/x.ts`, "@crumble/sim", true)])).toHaveLength(1);
+  });
+
+  it("catches a relative path into packages/sim/src as it catches @crumble/sim", () => {
+    const sim = "../../../../packages/sim/src/index";
+    expect(violations([fake(`${SERVER}/services/x.ts`, sim)])).toEqual([]);
+    expect(violations([fake(`${SERVER}/routes/x.ts`, sim)])).toHaveLength(1);
+    expect(violations([fake(`${SERVER}/repos/x.ts`, sim, true)])).toHaveLength(1);
+    expect(violations([fake(`${WEB}/views/x.tsx`, sim, true)])).toHaveLength(1);
+    expect(violations([fake(`${SCHEMA}/x.ts`, "../../sim/src/index", true)])).toHaveLength(1);
   });
 
   it("reads import type, inline type specifiers, multi-line clauses and re-exports", () => {

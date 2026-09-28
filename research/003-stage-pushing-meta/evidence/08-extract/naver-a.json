@@ -1,0 +1,943 @@
+{
+  "batch": "naver-a",
+  "notes": "Naver cafe ccrumble captures nv-43034..nv-46887 plus the nv-35274 refusal. Cookie names in image-only teams were read from portraits using the sprite legend already used in record 002/003 extracts (doctor with pink bear = 우유, red frills = 석류, pink round hat = 마카롱, white blob robot = 이온, golden fluffy = 치즈케이크, purple-hair blue-tutu = 피겨여왕 (a yellow staff-like sprite in the same slot is 피겨 mid-animation), teal hood + orange flower = 정글전사, green hair holding lime = 라임, brown girl with lollipop = 명랑한 쿠키, black armoured knight = 다크초코, red/black gothic twin-tail = 체리콜라, pink star-cream hair = 딸기크레페, pink/teal jester = 트위즐젤리, purple witch hat = 위치베리, purple witch with grapes = 포도넝쿨, priest in green stole = 피노누아, green goggles = 메론소다, feathered hat = 호밀, meat-headband + orb staff = 브라이트시커, white fox with blue blade = 바리공주, white hair red greatsword = 오븐방랑자, blonde bunny = 감감술래 달토끼, small white/red beast = 이름 모를 케이크 들개). Star counts use the 5-icon rule (pink icons = stars above 5). Pet icons: yellow bun = 갓난갓방울, sausage = 핫도그도그, green cucumber = 와사비 문어 ('오이'), white bird = 얼음과자새, lightning pink = 전지멜로우, panda = 판다만두.",
+  "posts": [
+    {
+      "source": "naver", "id": "nv:43034", "url": "https://cafe.naver.com/ccrumble/43034", "date": "2026-09-18",
+      "title_kr": "235-10 폭주단 바이커", "title_en": "235-10 Biker Gang Biker", "relevance": 3, "scope": "stage",
+      "summary_en": "Pre-relief 35% deck and move script for the three-biker boss (쥐토바이) at 235-10: Armor Repair perk + Passion Pay, Milk captain, 734.31M team. Licorice's summoned minion soaks while Dark Choco dies; wait on Herb's heal field and only push the cookies in once the three bikers bunch together. A commenter used it to clear 211-10.",
+      "clears": [
+        { "stage": "235-10", "boss": "폭주단 바이커 (3형제)", "team_power": "734.31M", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "43034 biker deck", "note": "Power from the formation screenshot." },
+        { "stage": "211-10", "boss": "폭주단 바이커", "team_power": "?", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "43034 biker deck", "note": "Commenter 오짱." }
+      ],
+      "teams": [
+        { "name": "43034 biker deck", "scope": "stage", "for": "폭주단 바이커 3형제 at 35%",
+          "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "front row 1", "role": "buffer", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "front row 2", "role": "dps", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "?", "stars": "?", "position": "front row 3", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "front row 4", "role": "buffer/field", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "front row 5", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "front row 6", "role": "healer", "note": "heal field the team waits on" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back row 1", "role": "dps", "note": "" },
+            { "kr": "감초", "en": "Licorice", "level": "?", "stars": "?", "position": "back row 2", "role": "summoner/tank", "note": "minion (감초 쫄) soaks the opener" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "back row 3", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "back row 4", "role": "buffer", "note": "captain" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "back row 5", "role": "dps", "note": "author: substitute with 호밀 or a front cookie such as 쿨민" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "back row 6", "role": "tank", "note": "expected to die to the first hit" }
+          ],
+          "pets": ["갓난갓방울 (20)", "핫도그도그 (19)", "와사비 문어 (18)"], "perks": "방어구 수리 특약 + 열정페이", "captain": "우유", "formation": "2x6", "why": "Licorice minion + Dark Choco absorb the bikers' opening hits; Herb field keeps the rest alive until the bikers converge.",
+          "substitutions": ["체리콜라 -> 호밀 or a front-line cookie such as 쿨링민트"], "unorthodox": ["Armor Repair perk (방수특) instead of a damage perk"] }
+      ],
+      "builds": [], "mechanics": ["Don't move cookies before the rat bikers move (쥐돌이 움직이기 전에 쿠키들 움직이지X)."], "rift": [],
+      "stage_types": ["Biker trio: stall until the three gather in one place, then commit everyone."], "disagreements": [],
+      "quotes": [{ "kr": "3인방 한 곳에 모이면 그때 움직여서 쿠키들 들이밀기", "en": "When the trio gathers in one spot, move and shove the cookies in." }]
+    },
+    {
+      "source": "naver", "id": "nv:43092", "url": "https://cafe.naver.com/ccrumble/43092", "date": "2026-09-18",
+      "title_kr": "238 스테이지 레드베리 암살자 조합 공략 (영상O)", "title_en": "Stage 238 Redberry Assassin team guide (with video)", "relevance": 3, "scope": "stage",
+      "summary_en": "Five-shooter deck for the Redberry Assassin pack at chapter 238 at 822.74M with All Ammo Provided (5 ranged -> ranged Skill Haste +15) and Passion Pay, Brightseeker (10-star per a commenter) as captain. Movement script: run toward 7 o'clock, release at ~25 s, tuck Skating Queen into the corner once her fields are down, and collapse on the assassin at ~30% HP.",
+      "clears": [{ "stage": "238-?", "boss": "레드베리 암살자", "team_power": "822.74M", "recommended_power": "", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "43092 redberry 5-shooter", "note": "Barely cleared; stats 돌파 784, 명성 106, 명중 1194, 집중 748." }],
+      "teams": [
+        { "name": "43092 redberry 5-shooter", "scope": "stage", "for": "레드베리 암살자 (many bosses)",
+          "cookies": [
+            { "kr": "? (green scarf archer, grass shooter; likely 바람궁수)", "en": null, "level": "100", "stars": "?", "position": "front 1", "role": "dps", "note": "portrait only" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "10 (MAX; commenter says 10성)", "position": "front 2", "role": "dps", "note": "captain in this preset" },
+            { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "front 3", "role": "buffer", "note": "" },
+            { "kr": "위치베리", "en": "Witchberry", "level": "100", "stars": "?", "position": "front 4", "role": "dps", "note": "" },
+            { "kr": "트위즐젤리", "en": "Twizzly Gummy", "level": "100", "stars": "?", "position": "front 5", "role": "dps", "note": "pink/teal jester sprite" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "front 6", "role": "tank", "note": "" },
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "back 1", "role": "buffer", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "MAX", "position": "back 2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "back 3", "role": "field", "note": "tuck into a corner after fields are laid" },
+            { "kr": "? (brown cloaked, swirl hair)", "en": null, "level": "?", "stars": "?", "position": "back 4", "role": "?", "note": "author's usual deck includes 밀키(웨이); unconfirmed" },
+            { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "back 5", "role": "buffer", "note": "author: make Milk captain if it has the highest ATK" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "back 6", "role": "healer", "note": "" }
+          ],
+          "pets": ["갓난갓방울 (20)", "핫도그도그 (20)", "전지멜로우 (20)"], "perks": "탄약비 전액 지원 + 열정페이", "captain": "브라이트시커", "formation": "2x6", "why": "Five shooters trigger the All Ammo perk (ranged Skill Haste +15).",
+          "substitutions": ["General stage deck: 치즈, 밀키, 체리콜라 swapped as needed; captain 우유 with 열정페이 + 수석 용병단 or 의료보험"], "unorthodox": ["Brightseeker captain instead of Milk"] }
+      ],
+      "builds": [], "mechanics": ["Author's stats at clear: 돌파 784, 명성 106, 명중 1194, 집중 748."], "rift": [],
+      "stage_types": ["Redberry Assassin: run to 7 o'clock, release at ~25 s so attacks start ~24.5 s; isolated Skating Queen dies; at ~30% boss HP push everyone onto it."], "disagreements": [],
+      "quotes": [{ "kr": "피 30퍼정도 남았을땐 레드베리한테 쿠키들 붙여서 줘 패기", "en": "When about 30% HP is left, stick the cookies on Redberry and beat it down." }]
+    },
+    {
+      "source": "naver", "id": "nv:43594", "url": "https://cafe.naver.com/ccrumble/43594", "date": "2026-09-20",
+      "title_kr": "방치형인데 손컨+리트 해야되니깐 슬슬 질리기 시작하네 에휴", "title_en": "It's an idle game but you need manual control + retries, getting tired", "relevance": 1, "scope": "stage",
+      "summary_en": "Complaint that pre-relief stages demand manual control and retries; comments ask for auto boss retry and curse the rat bikers.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Pre-relief (before 2026-09-23) stage pushing needed manual play and retries."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "자동 보스 리트라도 만들어라", "en": "At least add auto boss retry." }]
+    },
+    {
+      "source": "naver", "id": "nv:43680", "url": "https://cafe.naver.com/ccrumble/43680", "date": "2026-09-20",
+      "title_kr": "스테이지 덱 (~248 + 이후)", "title_en": "Stage decks (up to 248 and beyond)", "relevance": 3, "scope": "stage",
+      "summary_en": "Three stage presets (all 1.16-1.21G, Milk captain, Passion Pay + Rapid Promotion, ATK/DEF/HP 2% level-3 perk): a general climbing deck, an assassin/many-boss deck, and a lift-resist deck for Stump, Hammer Princess, Cool Mint and Ice Golem. Each has boss-specific movement instructions.",
+      "clears": [{ "stage": "214-?", "boss": "레드베리 암살자", "team_power": "?", "recommended_power": "", "bracket": "?", "result": "clear", "play": "manual", "retries": "3", "team": "43680 deck 2 assassin", "note": "Commenter 희설탕 cleared on the 3rd try with the assassin tip." }],
+      "teams": [
+        { "name": "43680 deck 1 general", "scope": "stage", "for": "general stage climbing", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "front 2", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "front 3", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "front 4", "role": "buffer", "note": "captain" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "front 5", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "front 6", "role": "healer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back 1", "role": "dps", "note": "" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "?", "stars": "?", "position": "back 2", "role": "dps", "note": "swap with 피노누아 by situation; author: catches mobs better than 호밀" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "back 3", "role": "field", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "back 4", "role": "tank", "note": "" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "back 5", "role": "dps", "note": "commenter: jumps around alone; author: not a problem" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울 (20)", "전지멜로우 (18)", "핫도그도그 (19)"], "perks": "Lv4: 열정페이 + 초고속 승진; Lv3: 공방체 2%", "captain": "우유", "formation": "2x6 (preset 3 'PVE 전용', 1.21G)", "why": "Generic climbing deck.", "substitutions": ["메론소다 <-> 피노누아"], "unorthodox": [] },
+        { "name": "43680 deck 2 assassin", "scope": "stage", "for": "레드베리 암살자 and other many-boss stages", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "?", "stars": "?", "position": "front 2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "front 3", "role": "field", "note": "" },
+            { "kr": "트위즐젤리", "en": "Twizzly Gummy", "level": "?", "stars": "?", "position": "front 4", "role": "dps", "note": "key: keep alive" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "front 5", "role": "tank", "note": "" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "front 6", "role": "dps", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back 1", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "back 2", "role": "buffer", "note": "" },
+            { "kr": "위치베리", "en": "Witchberry", "level": "?", "stars": "?", "position": "back 3", "role": "dps", "note": "key: keep alive" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "back 4", "role": "buffer", "note": "captain" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "back 5", "role": "tank", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울 (20)", "전지멜로우 (18)", "핫도그도그 (19)"], "perks": "열정페이 + 초고속 승진; Lv3 공방체 2%", "captain": "우유", "formation": "2x6 (preset 2, 1.21G)", "why": "Twizzly + Witchberry multi-target damage for multi-boss waves.", "substitutions": [], "unorthodox": [] },
+        { "name": "43680 deck 3 lift-resist", "scope": "stage", "for": "그루터기, 망치공주, 쿨링민트, 얼음골렘", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "front 2", "role": "dps", "note": "needs 15 stacks by its 4th skill vs Hammer Princess" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "front 3", "role": "buffer (lift resist)", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "front 4", "role": "field", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "front 5", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "front 6", "role": "healer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back 1", "role": "dps", "note": "commenter asks if 2-star is usable (unanswered)" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "?", "stars": "?", "position": "back 2", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "back 3", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "back 4", "role": "buffer", "note": "captain" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "back 5", "role": "tank", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울 (20)", "판다만두 (17)", "전지멜로우 (18)"], "perks": "열정페이 + 초고속 승진; Lv3 공방체 2%", "captain": "우유", "formation": "2x6 (preset 5 'PVE 전용', 1.16G)", "why": "Pinot Noir + Panda pet lift resistance against knock-up bosses.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": ["용병단 Lv3 perk used: ATK/DEF/HP +2%."], "rift": [],
+      "stage_types": [
+        "Assassin (plaza map): go down to 7 o'clock, wait for Milk's cooldown, then squeeze in between mobs when it's up; keep Twizzly and Witchberry alive.",
+        "Stump (그루터기): use one skill, retreat to 9 o'clock, fight when Milk's cooldown is back.",
+        "Hammer Princess: charge in or retreat to 7 o'clock; Scorpion must reach 15 stacks by its 4th skill; keep Milk's ATK buff on the dealers.",
+        "Cool Mint: go to 7 o'clock, gather, then after Cool Mint's skill move a little to spread into a horizontal line; keep Milk, Scorpion and Brightseeker next to Cool Mint."
+      ], "disagreements": [],
+      "quotes": [{ "kr": "그루터기/망치공주/쿨민/얼음골렘 위 네 보스에서까지 다 사용하는 만능 띄우기저항덱입니다", "en": "An all-round lift-resist deck used against Stump, Hammer Princess, Cool Mint and Ice Golem." }]
+    },
+    {
+      "source": "naver", "id": "nv:43683", "url": "https://cafe.naver.com/ccrumble/43683", "date": "2026-09-20",
+      "title_kr": "스테이지 5사격복지 덱", "title_en": "Stage deck with the 5-ranged perk", "relevance": 2, "scope": "stage",
+      "summary_en": "Screenshot-only 'final setting' five-shooter stage deck at 1.22G; author says it's better than expected.",
+      "clears": [],
+      "teams": [{ "name": "43683 five-shooter", "scope": "stage", "for": "general stages with 탄약비 전액 지원", "cookies": [
+          { "kr": "? (green scarf archer, likely 바람궁수)", "en": null, "level": "?", "stars": "?", "position": "front 1", "role": "dps", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "front 2", "role": "dps", "note": "" },
+          { "kr": "메론소다", "en": "Melon Soda", "level": "?", "stars": "?", "position": "front 3", "role": "dps", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "front 4", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "front 5", "role": "buffer", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "front 6", "role": "healer", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back 1", "role": "dps", "note": "" },
+          { "kr": "호밀", "en": "Rye", "level": "?", "stars": "?", "position": "back 2", "role": "dps", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "back 3", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "back 4", "role": "field", "note": "" },
+          { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "back 5", "role": "tank", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+        ], "pets": ["전지멜로우 (18)", "와사비 문어 (20)", "갓난갓방울 (20)"], "perks": "탄약비 전액 지원 (5사격) + ?", "captain": "?", "formation": "preset 4 '최종세팅', 1.22G", "why": "Five shooters for the ranged Skill Haste +15 perk.", "substitutions": [], "unorthodox": ["No Macaron/Cheesecake buffers"] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:43780", "url": "https://cafe.naver.com/ccrumble/43780", "date": "2026-09-20",
+      "title_kr": "243 - 10 쥐토바이 688.4m 35%", "title_en": "243-10 rat bikers at 688.4M, 35%", "relevance": 3, "scope": "stage",
+      "summary_en": "Pre-relief 35% clear of the biker trio at 243-10 with 688.4M, the same deck used for 235. Perks ATK 20% + 7; Pomegranate beams Milk, Skating Queen, Macaron, then Cherry Cola / Cool Mint; Witchberry beat Scorpion and Brightseeker as sub-DPS because its 1.5-row position lets it eat Macaron's buff. A commenter at 800M dies with it; the author blames HP/DMG-reduction gear and suggests waiting for the next-day nerf.",
+      "clears": [{ "stage": "243-10", "boss": "폭주단 바이커 (쥐토바이)", "team_power": "688M 402K", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "43780 biker deck", "note": "Result screenshot 'Crispy Clear'. Works even if the trio splits 2/1." }],
+      "teams": [{ "name": "43780 biker deck", "scope": "stage", "for": "폭주단 바이커 (235-10, 243-10)", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "must end up buffing dealers" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "beam order 우유 피겨 마카롱 / 체콜 쿨민" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "", "role": "field", "note": "" },
+          { "kr": "위치베리", "en": "Witchberry", "level": "100", "stars": "?", "position": "1.5 row", "role": "sub-dps", "note": "chosen over Scorpion/Brightseeker" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "captain" },
+          { "kr": "체리콜라", "en": "Cherry Cola", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+          { "kr": "쿨링민트", "en": "Cool Mint", "level": "100", "stars": "?", "position": "", "role": "dps/front", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "", "role": "healer", "note": "" },
+          { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "", "role": "", "note": "remaining slots not identifiable in the clear bar" }
+        ], "pets": ["갓난갓방울", "핫도그도그", "전지멜로우"], "perks": "공20 + 7 (열정페이 + 초고속 승진)", "captain": "우유", "formation": "", "why": "Witchberry's opening position catches Macaron's buff, raising damage potential.", "substitutions": ["If Cherry Cola or Cool Mint is 3rd in ATK, test and adjust levels so Macaron's buff lands right"], "unorthodox": [] }],
+      "builds": [], "mechanics": ["Opening: let hit 1 kill Dark Choco, hit 2 land on the front row, hit 3 on the back row (author reply).", "Gear with HP and DMG reduction matters for survival pre-relief (author)."], "rift": [],
+      "stage_types": ["Biker trio clear works even when they split 2/1, harder if far apart."], "disagreements": ["800M commenter dies with the deck; author attributes it to gear (HP/피감)."],
+      "quotes": [{ "kr": "위치 포지셔닝이 1.5열 자리라 그런지 마카롱을 잘먹는거 같음", "en": "Maybe because Witchberry sits at row 1.5, it seems to get Macaron's buff well." }]
+    },
+    {
+      "source": "naver", "id": "nv:43815", "url": "https://cafe.naver.com/ccrumble/43815", "date": "2026-09-20",
+      "title_kr": "251-30 (1G63M) 비겁", "title_en": "251-30 Coward at 1G63M", "relevance": 3, "scope": "stage",
+      "summary_en": "Pre-relief Coward clear at 251-30 with 1G 63M; screenshot is the next stage (252-1) with Milk captain, Passion Pay + Rapid Promotion. Tip: easy if Cheesecake doesn't die.",
+      "clears": [{ "stage": "251-30", "boss": "비겁한 쿠키", "team_power": "1G 63M 327K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "43815 coward", "note": "Power from 252-1 screenshot right after." }],
+      "teams": [{ "name": "43815 coward", "scope": "stage", "for": "비겁한 쿠키", "cookies": [
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "must not die" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "", "role": "field", "note": "" },
+          { "kr": "정글전사", "en": "Tiger Lily", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+          { "kr": "라임", "en": "Lime", "level": "100", "stars": "?", "position": "", "role": "healer", "note": "green-hair water/grass portrait, medium confidence" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "captain" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "", "role": "tank", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "", "role": "healer", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "100", "stars": "?", "position": "", "role": "tank", "note": "" },
+          { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "?", "position": "", "role": "debuffer", "note": "" }
+        ], "pets": ["갓난갓방울", "와사비 문어", "핫도그도그"], "perks": "열정페이 + 초고속 승진", "captain": "우유", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": ["Coward: kite around (비비시면서) and keep Cheesecake alive."], "disagreements": [],
+      "quotes": [{ "kr": "비비시면서 치케안죽으면 클각 쉽습니다.", "en": "Circle around, and if Cheesecake doesn't die the clear is easy." }]
+    },
+    {
+      "source": "naver", "id": "nv:43883", "url": "https://cafe.naver.com/ccrumble/43883", "date": "2026-09-21",
+      "title_kr": "224-30 비겁이 클리어덱", "title_en": "224-30 Coward clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "First of 폼생's series of Coward clear decks (same 12 across 224-30 to 264-30): 781.04M, Health Insurance + Passion Pay, Milk captain, 4-star Brightseeker and Lv.95 GingerBright. Stats 돌파력 778, 명성 99.",
+      "clears": [{ "stage": "224-30", "boss": "비겁한 쿠키", "team_power": "781.04M", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "폼생 coward deck", "note": "돌파력 778, 명성 99" }],
+      "teams": [{ "name": "폼생 coward deck", "scope": "stage", "for": "비겁한 쿠키 224-30..264-30", "cookies": [
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "4", "position": "front 1", "role": "dps", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "front 2", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "front 3", "role": "field", "note": "" },
+          { "kr": "라임", "en": "Lime", "level": "100", "stars": "?", "position": "front 4", "role": "healer", "note": "" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "front 5", "role": "tank", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "front 6", "role": "healer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "back 1", "role": "dps", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "back 2", "role": "buffer", "note": "" },
+          { "kr": "정글전사", "en": "Tiger Lily", "level": "100", "stars": "?", "position": "back 3", "role": "dps", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "back 4", "role": "buffer", "note": "captain" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "back 5", "role": "tank", "note": "" },
+          { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "95", "stars": "MAX", "position": "back 6", "role": "debuffer", "note": "Lv.95 at 224, Lv.97 by 232; replaced by 달토끼 at 256-30" }
+        ], "pets": ["와사비 문어 (20)", "갓난갓방울 (20)", "얼음과자새 (19)"], "perks": "의료보험 + 열정페이", "captain": "우유", "formation": "preset 5", "why": "Survival-heavy (Lime, Herb, Ion, Hound, Health Insurance, Icy Birdie) Coward deck.", "substitutions": ["명랑한 쿠키 -> 달토끼 (from 256-30)", "명랑한 쿠키 -> 다크초코 swap seen at 264-30"], "unorthodox": ["No Macaron", "Health Insurance perk"] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:43907", "url": "https://cafe.naver.com/ccrumble/43907", "date": "2026-09-21",
+      "title_kr": "195-30 비겁이 클리어덱 공유 250M", "title_en": "195-30 Coward clear deck at 250M", "relevance": 3, "scope": "stage",
+      "summary_en": "Low-power Coward clear at 195-30 with 250M 413K (pre-relief), under-levelled roster (Lv.95-100) with Milk captain and a 'stage' preset.",
+      "clears": [{ "stage": "195-30", "boss": "비겁한 쿠키", "team_power": "250M 413K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "명두부 coward", "note": "Several cookies dead at clear." }],
+      "teams": [{ "name": "명두부 coward", "scope": "stage", "for": "비겁한 쿠키 195-208", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "95-100", "stars": "?", "position": "", "role": "dps", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "95", "stars": "?", "position": "", "role": "buffer", "note": "from 200-30 bar" },
+          { "kr": "석류", "en": "Pomegranate", "level": "95-100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "95", "stars": "?", "position": "", "role": "field", "note": "" },
+          { "kr": "정글전사", "en": "Tiger Lily", "level": "95", "stars": "?", "position": "", "role": "dps", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "captain" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "95", "stars": "?", "position": "", "role": "tank", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "97", "stars": "?", "position": "", "role": "healer", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "85-95", "stars": "?", "position": "", "role": "tank", "note": "" },
+          { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "95", "stars": "?", "position": "", "role": "debuffer", "note": "seen in 208-30 bar" }
+        ], "pets": ["갓난갓방울", "얼음과자새", "핫도그도그"], "perks": "?", "captain": "우유", "formation": "", "why": "", "substitutions": [], "unorthodox": ["Sub-100 levels across the roster"] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:43924", "url": "https://cafe.naver.com/ccrumble/43924", "date": "2026-09-21",
+      "title_kr": "200-30 비겁이 클리어덱 공유 285M", "title_en": "200-30 Coward clear deck at 285M", "relevance": 3, "scope": "stage",
+      "summary_en": "Same author and deck as 195-30; clear at 200-30 with 285M 91K, 11 of 12 cookies alive. A commenter cleared at 344M in 4 tries.",
+      "clears": [
+        { "stage": "200-30", "boss": "비겁한 쿠키", "team_power": "285M 91K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "명두부 coward", "note": "" },
+        { "stage": "200-30", "boss": "비겁한 쿠키", "team_power": "344M", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "4", "team": "명두부 coward", "note": "Commenter 아이러브로드리." }
+      ], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:43926", "url": "https://cafe.naver.com/ccrumble/43926", "date": "2026-09-21",
+      "title_kr": "203-30 비겁이 클리어덱 공유 322M", "title_en": "203-30 Coward clear deck at 322M", "relevance": 2, "scope": "stage",
+      "summary_en": "Same author's 203-30 Coward clear at 322M 253K; only the Cake Hound survived. The equipped gear preset reads '아레나' (arena), not stage.",
+      "clears": [{ "stage": "203-30", "boss": "비겁한 쿠키", "team_power": "322M 253K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "명두부 coward", "note": "Only 들개 (Lv.95) alive; gear preset 아레나." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:44131", "url": "https://cafe.naver.com/ccrumble/44131", "date": "2026-09-21",
+      "title_kr": "비겁이 명쿠 안쓰는 NEW(?)덱 35% 최소투력컷. Ex)264-30", "title_en": "New Coward deck without GingerBright at the 35% minimum power cut, e.g. 264-30", "relevance": 3, "scope": "stage",
+      "summary_en": "Coward clear at 264-30 right at the 35% floor: crumblehub shows recommended 3G 20M, 35% from 1G 208M; the author cleared at 1G 231M (40.8%). Claims this no-GingerBright deck beats the earlier Macaron/Tiger Lily 35% decks; the key is nobody dying to Coward's first skill. Uses an accuracy pet because accuracy is short.",
+      "clears": [{ "stage": "264-30", "boss": "비겁한 쿠키", "team_power": "1G 231M 382K", "recommended_power": "3G 20M", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "44131 no-GingerBright coward", "note": "40.8% of recommended. Survivors at clear: 전갈, 들개, 이온, 다크초코." }],
+      "teams": [{ "name": "44131 no-GingerBright coward", "scope": "stage", "for": "비겁한 쿠키 at 35% floor", "cookies": [
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "slot 2", "role": "dps", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "slot 7", "role": "buffer", "note": "captain banner" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "slot 8", "role": "tank", "note": "" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "slot 9", "role": "tank", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "100", "stars": "?", "position": "slot 12", "role": "tank", "note": "" },
+          { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "other slots", "role": "", "note": "dead at clear, not identifiable" }
+        ], "pets": ["? (accuracy pet)", "핫도그도그", "와사비 문어"], "perks": "?", "captain": "우유", "formation": "", "why": "Better than Macaron or Tiger Lily 35% decks; survive Coward's first skill.", "substitutions": ["If accuracy isn't short, 갓방울 instead of the accuracy pet"], "unorthodox": ["No GingerBright"] }],
+      "builds": [], "mechanics": ["crumblehub calc for 264-30: 1% up to 301M 994K, 5% from 301M 994K, 15% from 603M 988K, 35% from 1G 208M (1G 209M+ per author); next bracket needs 1G 812M."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "첫턴 비겁이 스킬에만 아무도 안죽으면 깰수있는듯", "en": "As long as nobody dies to Coward's first-turn skill, it seems clearable." }]
+    },
+    {
+      "source": "naver", "id": "nv:44241", "url": "https://cafe.naver.com/ccrumble/44241", "date": "2026-09-21",
+      "title_kr": "211-30 비겁  396m 5초남기고 클리어", "title_en": "211-30 Coward at 396M, cleared with 5 s left", "relevance": 3, "scope": "stage",
+      "summary_en": "Coward clear at 211-30 with 396M 387K with 5 s left; all 12 alive, gear preset '스테이지명중집중'. A commenter reused it at 240-30.",
+      "clears": [
+        { "stage": "211-30", "boss": "비겁한 쿠키", "team_power": "396M 387K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "44241 coward", "note": "5 s left" },
+        { "stage": "240-30", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "44241 coward", "note": "Commenter 참치의협곡생활" }
+      ],
+      "teams": [{ "name": "44241 coward", "scope": "stage", "for": "비겁한 쿠키", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "99", "stars": "?", "position": "1", "role": "buffer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "2", "role": "dps", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "3", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "4", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "5", "role": "field", "note": "" },
+          { "kr": "정글전사", "en": "Tiger Lily", "level": "100", "stars": "?", "position": "6", "role": "dps", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "7", "role": "buffer", "note": "captain" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "8", "role": "tank", "note": "" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "9", "role": "tank", "note": "" },
+          { "kr": "? (water, eyepatch)", "en": null, "level": "100", "stars": "?", "position": "10", "role": "?", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "11", "role": "healer", "note": "" },
+          { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "99", "stars": "?", "position": "12", "role": "debuffer", "note": "" }
+        ], "pets": ["와사비 문어", "얼음과자새", "갓난갓방울"], "perks": "?", "captain": "우유", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }],
+      "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "preset named 스테이지명중집중 (stage accuracy/focus)", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:44353", "url": "https://cafe.naver.com/ccrumble/44353", "date": "2026-09-22",
+      "title_kr": "내가쓰는 연타관통덱 (독뿔버섯 다수잡몹) 35%", "title_en": "My rapid-fire/pierce deck (Poison Horn Mushroom, many mobs) 35%", "relevance": 3, "scope": "stage",
+      "summary_en": "1.51G rapid-fire + pierce deck for multi-mob stages like the Poison Horn Mushroom pack at 35%, captain perks Rapid Promotion + Passion Pay. A commenter says the same deck clears everything except Coward and Cool Mint, with some manual control.",
+      "clears": [],
+      "teams": [{ "name": "44353 rapid-pierce", "scope": "stage", "for": "독뿔버섯 and multi-mob stages at 35%", "cookies": [
+          { "kr": "? (green scarf archer, likely 바람궁수)", "en": null, "level": "?", "stars": "?", "position": "front 1", "role": "dps (pierce)", "note": "" },
+          { "kr": "호밀", "en": "Rye", "level": "?", "stars": "?", "position": "front 2", "role": "dps (rapid)", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "?", "stars": "?", "position": "front 3", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "front 4", "role": "field", "note": "" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "front 5", "role": "tank", "note": "sprite lying down; medium confidence" },
+          { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "front 6", "role": "tank", "note": "" },
+          { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "back 1", "role": "buffer", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "back 2", "role": "buffer (rapid-fire)", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "back 3", "role": "buffer", "note": "" },
+          { "kr": "위치베리", "en": "Witchberry", "level": "?", "stars": "?", "position": "back 4", "role": "dps", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "back 5", "role": "buffer", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "back 6", "role": "healer", "note": "" }
+        ], "pets": ["전지멜로우 (20)", "갓난갓방울 (20)", "핫도그도그 (20)"], "perks": "초고속 승진 + 열정페이", "captain": "?", "formation": "preset 3, 1.51G", "why": "Rapid-fire + pierce clears mob packs.", "substitutions": [], "unorthodox": [] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": ["Also good on maps with 마오카이 (tree-like mobs, per author)."], "disagreements": [],
+      "quotes": [{ "kr": "비겁, 쿨민 제외하고 이거 하나로 다 밀려요", "en": "Except Coward and Cool Mint, this one deck pushes everything." }]
+    },
+    {
+      "source": "naver", "id": "nv:44419", "url": "https://cafe.naver.com/ccrumble/44419", "date": "2026-09-22",
+      "title_kr": "9월 23일(수) 점검 사전 안내 (9/23 15:00 점검 완료)", "title_en": "Sept 23 maintenance notice (completed 15:00)", "relevance": 1, "scope": "both",
+      "summary_en": "Official maintenance notice: 2026-09-23 11:00-15:00 KST, the patch that brought the stage relief and the Dimensional Rift. Banner image not read.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Relief patch went live 2026-09-23 15:00 KST."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:44477", "url": "https://cafe.naver.com/ccrumble/44477", "date": "2026-09-22",
+      "title_kr": "9월 23일(수) 업데이트 안내 (9/23 12:05 내용 추가)", "title_en": "Sept 23 update notes", "relevance": 3, "scope": "both",
+      "summary_en": "Official 9/23 patch notes: main-stage difficulty relief for 169-1..328-30 and boss balance changes for 169-1..248-30 (Cool Mint, Biker Gang Biker, Biker Gang Truck, Coward, Whipped Cream Cone Eagle, Contaminated Stump Spirit, Redberry Assassin, Choco Cream Wolf Hammer Princess); the Dimensional Rift opens for players who finished the main stages; Continuum Cog pet boosts boss damage in the Rift; new Skill Ready stat; gear presets usable with oven gear. Numbers for the relief are not given. Images/GIFs not read.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "Main stage 169-1~328-30 difficulty eased; 169-1~248-30 some bosses rebalanced: 쿨링민트맛 쿠키 / 폭주단 바이커 / 폭주단 트럭 / 비겁한 쿠키 / 생크림콘 독수리 / 오염된 그루터기 정령 / 레드베리 암살자 / 초코크림늑대 망치공주. No numbers published.",
+        "Skill Ready (스킬준비): % cut to the time until the first skill only; computed on the Skill-Haste-shortened cycle. Already-instant cookies show 100% (감초, 석류, 마카롱, 치즈케이크, 정글전사, 이름 모를 케이크 들개, 탐험가, 브라이트시커, 피노누아, 실론나이트). +25%: 독버섯, 코코아, 양파, 피겨여왕. +50%: 오븐방랑자, 크림소다, 이온, 오렌지, 락스타, 딸기쇼트케이크.",
+        "Gear presets can now be switched even with oven gear equipped; oven auto-open substat picks raised to 5.",
+        "New pet 색동주머니: lift resistance + max HP to allies. New cookies 바리공주 (TSSR fire charge; grants DMG reduction and lift/push immunity to itself and charge allies) and 감감술래 놀이 달토끼 (SSR grass tank; lowers enemy ATK and crit rate)."
+      ],
+      "rift": [
+        "차원의 이면 is seasonal per update; requires the last main stage cleared.",
+        "Own growth stat 차원의 힘 levels raise stats; normal-monster phase is skipped, so you fight the next level's boss immediately.",
+        "Clears give a season-only profile frame; 차원의 조각 fragments buy the exclusive pet and rewards in its shop.",
+        "무한바퀴 (SSR pet, Rift shop only): raises allies' boss damage in the Rift."
+      ],
+      "stage_types": [], "disagreements": ["Commenter 쿠쿠루핑퐁 objects to more difficulty relief ('what about people who climbed the hard way'); 월린 says the Rift replaces adding more stages."],
+      "quotes": [{ "kr": "메인 스테이지 169-1~328-30 구간 난이도 완화", "en": "Main stage 169-1 to 328-30 difficulty eased." }, { "kr": "무한바퀴 펫은 차원의 이면에서 아군의 보스피해를 증가시키는SSR 펫입니다.", "en": "Continuum Cog is an SSR pet that raises allies' boss damage in the Dimensional Rift." }]
+    },
+    {
+      "source": "naver", "id": "nv:44535", "url": "https://cafe.naver.com/ccrumble/44535", "date": "2026-09-22",
+      "title_kr": "206-30 쿨링민트 클리어덱 공유 337M", "title_en": "206-30 Cool Mint clear deck at 337M", "relevance": 3, "scope": "stage",
+      "summary_en": "Pre-relief Cool Mint clear at 206-30 with 337M 318K (돌파력 720, 명성 83, 연구소 62) using a Pinot Noir + Panda pet lift-resist line.",
+      "clears": [{ "stage": "206-30", "boss": "쿨링민트", "team_power": "337M 318K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "44535 cool mint", "note": "all 12 alive" }],
+      "teams": [{ "name": "44535 cool mint", "scope": "stage", "for": "쿨링민트", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "1", "role": "buffer", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "position": "2", "role": "dps", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "3", "role": "dps", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir", "level": "91", "stars": "?", "position": "4", "role": "buffer (lift resist)", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "5", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "6", "role": "field", "note": "" },
+          { "kr": "포도넝쿨", "en": "Grapevine", "level": "90", "stars": "?", "position": "7", "role": "healer", "note": "purple-hair grass portrait; medium confidence" },
+          { "kr": "정글전사", "en": "Tiger Lily", "level": "95", "stars": "?", "position": "8", "role": "dps", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "9", "role": "buffer", "note": "captain" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "95", "stars": "?", "position": "10", "role": "tank", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "97", "stars": "?", "position": "11", "role": "healer", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "91", "stars": "?", "position": "12", "role": "tank", "note": "" }
+        ], "pets": ["판다만두", "와사비 문어", "핫도그도그"], "perks": "?", "captain": "우유", "formation": "", "why": "Lift resistance (Pinot + Panda) against Cool Mint's airborne.", "substitutions": [], "unorthodox": [] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:44634", "url": "https://cafe.naver.com/ccrumble/44634", "date": "2026-09-22",
+      "title_kr": "227-30 비겁이 601M 클리어", "title_en": "227-30 Coward cleared at 601M", "relevance": 3, "scope": "stage",
+      "summary_en": "Pre-relief Coward clear at 227-30 with 601M, Brightseeker as captain with Rapid Promotion + Passion Pay (author: make a 5-star Brightseeker the captain). 명성 93, 돌파 750; after a gear cleanup accuracy 850, focus 1050. Sugar-rune work on Ion, 'Nameless' (들개) and Herb went into HP and DMG reduction. Has cleared every Coward since 200 with this deck.",
+      "clears": [{ "stage": "227-30", "boss": "비겁한 쿠키", "team_power": "601M 395K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "44634 seeker-captain coward", "note": "Screenshot at 228-1 right after; power 17M higher than at clear per author." }],
+      "teams": [{ "name": "44634 seeker-captain coward", "scope": "stage", "for": "비겁한 쿠키 200+", "cookies": [
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "5 (recommended)", "position": "", "role": "dps", "note": "captain" },
+          { "kr": "이온", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "runes HP/피감" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "runes HP/피감" },
+          { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "", "role": "healer", "note": "runes HP/피감" },
+          { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "", "role": "", "note": "rest not listed; battle shows 정글전사, 라임, 명랑? sprites unclear" }
+        ], "pets": ["?"], "perks": "초고속 승진 + 열정페이", "captain": "브라이트시커", "formation": "", "why": "Captain ATK bonus on the main dealer.", "substitutions": [], "unorthodox": ["Brightseeker captain"] }],
+      "builds": [{ "cookie": "이온, 이름 모를 케이크 들개, 허브", "scope": "stage", "sugar_runes": "체력 + 피감", "gear": "", "thresholds": "명중 850, 집중 1050 after gear cleanup", "why": "Survive Coward" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "시커5성이면 용병단장 시커 추천 합니다", "en": "If your Seeker is 5-star, I recommend making it the captain." }]
+    },
+    {
+      "source": "naver", "id": "nv:44660", "url": "https://cafe.naver.com/ccrumble/44660", "date": "2026-09-22",
+      "title_kr": "208-30 비겁이 클리어덱 공유 337M", "title_en": "208-30 Coward clear deck at 337M", "relevance": 3, "scope": "stage",
+      "summary_en": "명두부's 208-30 Coward clear at 337M 213K (돌파력 721, 명성 83, 연구소 62); GingerBright in the last slot, Macaron/Brightseeker dead at clear.",
+      "clears": [{ "stage": "208-30", "boss": "비겁한 쿠키", "team_power": "337M 213K", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "명두부 coward", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:44709", "url": "https://cafe.naver.com/ccrumble/44709", "date": "2026-09-22",
+      "title_kr": "235-30 비겁이 클리어덱", "title_en": "235-30 Coward clear deck", "relevance": 2, "scope": "stage",
+      "summary_en": "Coward cleared first try at 235-30 with 돌파 792, 명성 105. Images not read (session limits), so team and power are unknown.",
+      "clears": [{ "stage": "235-30", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "0", "team": "", "note": "images unread" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:44736", "url": "https://cafe.naver.com/ccrumble/44736", "date": "2026-09-22",
+      "title_kr": "259-30 비겁이 클리어 덱", "title_en": "259-30 Coward clear deck", "relevance": 2, "scope": "stage",
+      "summary_en": "Coward clear at 259-30 with 돌파력 825. Image not read (session limits).",
+      "clears": [{ "stage": "259-30", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "", "note": "image unread" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:44742", "url": "https://cafe.naver.com/ccrumble/44742", "date": "2026-09-22",
+      "title_kr": "스테 15퍼 클", "title_en": "Stage clear at 15%", "relevance": 3, "scope": "stage",
+      "summary_en": "Pre-relief 15%-bracket stage clear 'for fun' on a single-boss stage; on a 6-boss stage, carrying the Armor Repair perk by mistake, she got the boss down to 2% and thinks Rapid Promotion would have cleared it. Images (the clear and the 6-boss attempt) not read, so stage and power are unknown.",
+      "clears": [
+        { "stage": "?", "boss": "single boss", "team_power": "?", "recommended_power": "", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "", "note": "images unread" },
+        { "stage": "?", "boss": "6 bosses", "team_power": "?", "recommended_power": "", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "boss at 2% with 방수특; author expects 초고속 승진 would clear" }
+      ],
+      "teams": [], "builds": [], "mechanics": ["15% bracket clears are possible pre-relief on single-boss stages."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "6마리 나오는 스테도 실수로 방수특 들고 2퍼까지 깐 걸로 보아 승진이었으면 클리어 했을 거라 예상합니당", "en": "Even the 6-boss stage went down to 2% with Armor Repair taken by mistake, so with Promotion I expect it would have cleared." }]
+    },
+    {
+      "source": "naver", "id": "nv:44778", "url": "https://cafe.naver.com/ccrumble/44778", "date": "2026-09-22",
+      "title_kr": "레드베리 암살자, 식쿠 (248 이후 스테이지)", "title_en": "Redberry Assassin and 식쿠 (stages after 248)", "relevance": 3, "scope": "stage",
+      "summary_en": "Author 카카쿠: at 35% single bosses are easy but Redberry packs are hard. For Redberry, circling near the spawn then committing works better than gathering at 11 or 5 o'clock; for 식쿠, circle once and go in when Herb's cooldown lines up. The 식쿠 screenshot shows 262-27 at 1G 156M with Passion Pay + Health Insurance. The two Redberry images were not read.",
+      "clears": [{ "stage": "262-27", "boss": "식쿠 (projectile boss)", "team_power": "1G 156M 218K", "recommended_power": "", "bracket": "?", "result": "?", "play": "manual", "retries": "", "team": "44778 식쿠 deck", "note": "in-battle screenshot" }],
+      "teams": [{ "name": "44778 식쿠 deck", "scope": "stage", "for": "식쿠 after 248", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "1", "role": "buffer", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "position": "2", "role": "dps", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "3", "role": "buffer", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "4", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "5", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "6", "role": "field", "note": "" },
+          { "kr": "위치베리", "en": "Witchberry", "level": "100", "stars": "?", "position": "7", "role": "dps", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "8", "role": "buffer", "note": "captain" },
+          { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "100", "stars": "?", "position": "9", "role": "tank", "note": "" },
+          { "kr": "? (water, dark hair eyepatch)", "en": null, "level": "100", "stars": "?", "position": "10", "role": "?", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "11", "role": "healer", "note": "" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "100", "stars": "?", "position": "12", "role": "tank", "note": "" }
+        ], "pets": ["?"], "perks": "열정페이 + 의료보험", "captain": "우유", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["35%: single bosses easy, Redberry packs hard.", "Redberry: circle near spawn then fight head-on, rather than gathering at 11 or 5 o'clock.", "식쿠: circle once, go in on Herb's cooldown."],
+      "disagreements": ["Contrasts with 46202 (go to the bottom-left and edge in slowly) and 43092 (run to 7 o'clock)."],
+      "quotes": [{ "kr": "35프로로 단일 보스는 쉬운데 레드베리처럼 떼거지는 정말 힘드네요", "en": "At 35% single bosses are easy, but packs like Redberry are really hard." }]
+    },
+    {
+      "source": "naver", "id": "nv:44815", "url": "https://cafe.naver.com/ccrumble/44815", "date": "2026-09-22",
+      "title_kr": "너프전 248-30 801.5m 35% + 169~248 덱 정리&장비", "title_en": "Pre-nerf 248-30 at 801.5M 35% + 169-248 deck sheet and gear", "relevance": 3, "scope": "stage",
+      "summary_en": "월린's pre-relief 35% Coward clear at 248-30 (801M 544K, 2026-09-22 22:49) plus a full sheet of per-boss decks for the recycled 8-map cycle 169-248, gear substat line counts (248-30: accuracy 1203, focus 1020) and his Lv.100 Scorpion stat panel. Perks DMG reduction + HP; stage mobs have no crit so he never built crit resistance, but suggests swapping HP for crit res to raise power post-nerf.",
+      "clears": [{ "stage": "248-30", "boss": "비겁한 쿠키", "team_power": "801M 544K", "recommended_power": "", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "월린 coward (sheet)", "note": "Leaderboard entry 7th, 2026-09-22 22:49:35. Two slots dead." }],
+      "teams": [
+        { "name": "월린 normal", "scope": "stage", "for": "평상시 (general)", "cookies": [
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "9", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "위치베리", "en": "Witchberry", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "captain" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "row2", "role": "healer", "note": "" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "얼음과자새 (airborne bosses: 판다만두)"], "perks": "공20 체력5 피감10", "captain": "우유", "formation": "", "why": "Buffers and sustain fixed; only the dealer line moves with power. Brightseeker + Scorpion fixed normally.", "substitutions": ["Airborne bosses: 얼음새 <-> 판다만두"], "unorthodox": [] },
+        { "name": "월린 10-mob", "scope": "stage", "for": "10人 mob stages (들개떼, 해적 추종자, 용접봇, 독뿔버섯, 암살자, 아이스콘 듀얼나이트)", "cookies": [
+            { "kr": "호밀", "en": "Rye", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "위치베리", "en": "Witchberry", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "fixed" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "", "stars": "", "position": "row1", "role": "tank/dps", "note": "fixed" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "트위즐젤리", "en": "Twizzly Gummy", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "fixed" },
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "captain" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "row2", "role": "healer", "note": "" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "전지멜로우"], "perks": "", "captain": "우유", "formation": "", "why": "Witchberry, Twizzly, Strawberry Crepe fixed for packs.", "substitutions": [], "unorthodox": [] },
+        { "name": "월린 bikers", "scope": "stage", "for": "cycle map 3-10 바이커 3형제 (35%)", "cookies": [
+            { "kr": "감초", "en": "Licorice", "level": "", "stars": "", "position": "row1", "role": "summoner", "note": "can be replaced by 이온" },
+            { "kr": "쿨링민트", "en": "Cool Mint", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "위치베리", "en": "Witchberry", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "row2", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "row2", "role": "healer", "note": "" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "전지멜로우"], "perks": "", "captain": "우유", "formation": "", "why": "Hit 1 on Dark Choco, hit 2 on Licorice minion, hit 3 spread from the centre; right after hit 3 push the main body right to lure the bikers left.", "substitutions": ["감초 -> 이온"], "unorthodox": [] },
+        { "name": "월린 eagle", "scope": "stage", "for": "cycle map 4-10 독수리 (35%)", "cookies": [
+            { "kr": "전갈", "en": "Scorpion", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "감초", "en": "Licorice", "level": "", "stars": "", "position": "row1", "role": "summoner", "note": "minion body-blocks" },
+            { "kr": "위치베리", "en": "Witchberry", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "호밀", "en": "Rye", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "captain" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "row2", "role": "healer", "note": "" }
+          ], "pets": [], "perks": "", "captain": "우유", "formation": "", "why": "Licorice minions tank + ranged kiting.", "substitutions": [], "unorthodox": [] },
+        { "name": "월린 stump", "scope": "stage", "for": "cycle map 5-20, 5-30 그루터기 정령 (35%) + 망치", "cookies": [
+            { "kr": "전갈", "en": "Scorpion", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "감초", "en": "Licorice", "level": "", "stars": "", "position": "row2", "role": "summoner", "note": "" },
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "row2", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "row2", "role": "healer", "note": "" }
+          ], "pets": [], "perks": "", "captain": "우유", "formation": "", "why": "Boss hit 1 on Dark Choco alone, surround the boss around hit 2.5. Every Licorice can be Ion to keep 3 tanks for the DMG-reduction perk.", "substitutions": ["감초 -> 이온 (3 tanks for 피감 복지)"], "unorthodox": [] },
+        { "name": "월린 truck/coolmint", "scope": "stage", "for": "cycle map 3-20 폭주단 트럭 and 1,2,6-30 쿨민 (35%)", "cookies": [
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "" },
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "이온", "en": "Ion Cookie Robot", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "", "stars": "", "position": "row2", "role": "dps", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "row2", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "row2", "role": "healer", "note": "" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "얼음과자새 (truck) / 판다만두 (cool mint)"], "perks": "", "captain": "우유", "formation": "", "why": "Truck: dodge the double charge twice. Cool Mint: 7 o'clock; map 1 has no mobs so shove to the bottom for easy Macaron buff; maps 2 and 6 pull diagonally away to bait jumps while keeping buffs.", "substitutions": [], "unorthodox": [] },
+        { "name": "월린 coward (sheet)", "scope": "stage", "for": "cycle map 3-30, 8-30 비겁 (35%)", "cookies": [
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "", "stars": "", "position": "row1", "role": "dps", "note": "stick on the boss; swap for 명쿠 if damage can't be handled" },
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "row1", "role": "buffer", "note": "captain" },
+            { "kr": "라임", "en": "Lime", "level": "", "stars": "", "position": "row1", "role": "healer", "note": "replaces 피노누아 from the Cool Mint deck" },
+            { "kr": "이온", "en": "Ion Cookie Robot", "level": "", "stars": "", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "9", "position": "row2", "role": "dps", "note": "poison 6/8/8 stacks, 20 by turn 3" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "row2", "role": "tank", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "row2", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "row2", "role": "healer", "note": "" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "얼음과자새"], "perks": "피감 + 체력", "captain": "우유", "formation": "", "why": "Same core as the Cool Mint/Truck deck; Pinot <-> Lime. After Scorpion stacks, the fear is luck.", "substitutions": ["브시커 -> 명랑한 쿠키 when Truck/Cool Mint/Coward damage can't be tanked"], "unorthodox": [] }
+      ],
+      "builds": [
+        { "cookie": "team (248-30 preset)", "scope": "stage", "sugar_runes": "", "gear": "스증 6줄, 명중 4~5줄, 집중 3~4줄, 스가 3~5줄, 체력 3줄, 피해감소 3줄", "thresholds": "명중 1203, 집중 1020 at 248-30 (accuracy overshoot; would drop a line)", "why": "No crit res: stage mobs have no crit." },
+        { "cookie": "전갈 (Lv.100, 9-star)", "scope": "stage", "sugar_runes": "", "gear": "stat panel: 공격력 447K, 방어력 256K, 체력 5M 779K, 치명확률 175.93%, 치명저항 47.76%, 치명피해 156.09%, 피해감소 23.12%, 이동속도 3.5, 보스피해 72.00%, 속성피해 91.40%, 명중 1300.76, 회피 539.76, 집중 1133.67", "thresholds": "", "why": "" }
+      ],
+      "mechanics": [
+        "169-248 is 8 maps recycled; sheet indexes stages as map-stage (e.g. 3-10 bikers, 4-10 eagle, 5-20/30 stump, 6-20 hammer, 3-20 truck, 1/2/6-30 cool mint, 3/8-30 coward).",
+        "Every boss and mob stage in the sheet is marked '35% 보스'.",
+        "Mob stages (all 10-unit waves): 1-3,7,9,11,19,29 들개떼; 2-2,5,29 해적 추종자; 3-4,13,22 용접봇; 5-10 독뿔버섯; 6-2,10,12,18 암살자; 8-2,5,10,12,23,26 아이스콘 듀얼나이트.",
+        "Later in the range he used Ion instead of Licorice more because of recommended power.",
+        "Post-nerf idea: if boss damage drops a lot, take crit resistance instead of HP to raise power and push further."
+      ],
+      "rift": [], "stage_types": ["Truck: after gear is set, pile into 7 o'clock and trade, keeping Milk buff and Skating field.", "Coward: Brightseeker glued to boss, Scorpion poison 6-8-8 -> 20 by turn 3."],
+      "disagreements": ["Crit resistance: 월린 skips it for stages (mobs don't crit); 46312 (쿠키키키) also says crit res is arena-only."],
+      "quotes": [{ "kr": "몹이 치확이 없으니깐요.", "en": "Because mobs have no crit chance." }, { "kr": "모든 감초는 이온으로 대체 가능 = 3탱 유지로 피감 복지", "en": "Every Licorice can be swapped for Ion = keep 3 tanks for the DMG-reduction perk." }]
+    },
+    {
+      "source": "naver", "id": "nv:45166", "url": "https://cafe.naver.com/ccrumble/45166", "date": "2026-09-23",
+      "title_kr": "9월 23일(수) 확인된 현상 안내 (9/23 21:33 내용 추가)", "title_en": "Sept 23 known issues", "relevance": 2, "scope": "both",
+      "summary_en": "Official known issues after the 9/23 patch: the main-stage Cool Mint boss used only basic attacks, no skills (a 'sandbag for two weeks' per a comment). A commenter asks whether Rift stages giving lower rewards than normal stages is intended. Banner image not read.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Bug (2026-09-23): main-stage boss 쿨링민트맛 쿠키 never uses skills, only basic attacks."],
+      "rift": ["Commenter: 차원 스테이지 rewards are lower than normal stages (asked if intended; unanswered)."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "메인 스테이지에 배치된 보스 쿨링민트맛 쿠키가 전투 중 스킬을 사용하지 않고 일반 공격만 진행하는 현상", "en": "The Cool Mint boss in main stages uses no skills in battle, only basic attacks." }]
+    },
+    {
+      "source": "naver", "id": "nv:45173", "url": "https://cafe.naver.com/ccrumble/45173", "date": "2026-09-23",
+      "title_kr": "232-30 비겁이 클리어덱", "title_en": "232-30 Coward clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "폼생's Coward deck at 232-30: 906.33M, 돌파력 785, 명성 102, Health Insurance + Passion Pay, Milk captain; GingerBright now Lv.97.",
+      "clears": [{ "stage": "232-30", "boss": "비겁한 쿠키", "team_power": "906.33M", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "폼생 coward deck", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:45336", "url": "https://cafe.naver.com/ccrumble/45336", "date": "2026-09-23",
+      "title_kr": "현재 스테이지 난이도 완화 (crumblehub.co 사이트 업뎃전 15%까지 클리어가능)", "title_en": "Stage relief: clearable down to crumblehub's (pre-update) 15% recommended power", "relevance": 3, "scope": "stage",
+      "summary_en": "Right after the 9/23 relief, stages are clearable at the power crumblehub (not yet updated) lists for the 15% bracket, even on auto. Screenshot: 268-10 Whipped Cream Cone Eagle being auto-farmed at 969M 450K with Lv.1 fillers (Macaron, Pinot Noir, Pomegranate, Skating Queen, Strawberry Crepe, Herb, Dark Choco at Lv.1).",
+      "clears": [{ "stage": "268-10", "boss": "생크림콘 독수리", "team_power": "969M 450K", "recommended_power": "", "bracket": "15 (by pre-relief crumblehub numbers)", "result": "?", "play": "auto", "retries": "", "team": "45336 Lv1-filler auto", "note": "Chat line: '지금 투력으로도 여기구간 밀림 오토로'." }],
+      "teams": [{ "name": "45336 Lv1-filler auto", "scope": "stage", "for": "post-relief auto pushing", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "1", "stars": "?", "position": "1", "role": "buffer", "note": "Lv.1 filler" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "position": "2", "role": "dps", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "3", "role": "dps", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "?", "position": "4", "role": "buffer", "note": "Lv.1" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "5", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "1", "stars": "?", "position": "6", "role": "buffer", "note": "Lv.1" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "1", "stars": "?", "position": "7", "role": "buffer", "note": "Lv.1" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "8", "role": "buffer", "note": "captain" },
+          { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "9", "role": "tank", "note": "" },
+          { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "1", "stars": "?", "position": "10", "role": "tank", "note": "Lv.1" },
+          { "kr": "허브", "en": "Herb", "level": "1", "stars": "?", "position": "11", "role": "healer", "note": "Lv.1" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "1", "stars": "?", "position": "12", "role": "tank", "note": "Lv.1" }
+        ], "pets": ["?"], "perks": "?", "captain": "우유", "formation": "preset '스테이지'", "why": "Not stated by the author.", "substitutions": [], "unorthodox": ["Seven Lv.1 cookies in a pushing team"] }],
+      "builds": [], "mechanics": ["Post-relief (9/23): clears possible at pre-relief 15% recommended power, on auto."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "현재 crumblehub.co에서 확인되는 15%권장투력까지는 클리어 가능한것같음", "en": "It seems clearable down to the 15% recommended power currently shown on crumblehub.co." }]
+    },
+    {
+      "source": "naver", "id": "nv:45451", "url": "https://cafe.naver.com/ccrumble/45451", "date": "2026-09-23",
+      "title_kr": "스테이지 방치덱 공략", "title_en": "Stage idle-deck guide", "relevance": 2, "scope": "stage",
+      "summary_en": "서신우's post-relief idle deck (YouTube video, not captured): Oven Wanderer in for fast boss summoning; once boss retries start, swap Wanderer for Cherry Cola, and when stages start needing retries go back to the rapid-fire deck. Works with 1-star Bari; without Seeker use Cherry Cola. Image shows a 6-star Oven Wanderer.",
+      "clears": [], "teams": [{ "name": "서신우 idle (Bari)", "scope": "stage", "for": "post-relief idle climbing", "cookies": [
+          { "kr": "오븐방랑자", "en": "Oven Wanderer", "level": "?", "stars": "6", "position": "", "role": "dps (fast mob clear)", "note": "swap to 체리콜라 once boss retries start" },
+          { "kr": "바리공주", "en": "Princess Bari", "level": "?", "stars": "any (1-star OK)", "position": "", "role": "dps", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "no Seeker -> 체리콜라" }
+        ], "pets": [], "perks": "", "captain": "", "formation": "", "why": "Speed the pre-boss mob phase and leave the boss on idle.", "substitutions": ["브시커 -> 체리콜라", "오븐방랑자 -> 체리콜라 when boss retries start", "no Bari -> old rapid-fire deck"], "unorthodox": [] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": ["After the relief, mob phases take longer than bosses in the early zone."],
+      "disagreements": ["Commenter 웨스트포인트: back-line dealers don't get buffs properly, so it can't idle bosses."], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:45932", "url": "https://cafe.naver.com/ccrumble/45932", "date": "2026-09-24",
+      "title_kr": "240-30 비겁이 클리어덱", "title_en": "240-30 Coward clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "폼생's Coward deck at 240-30 post-relief: 969.32M, 돌파력 793, 명성 103. Second image not read.",
+      "clears": [{ "stage": "240-30", "boss": "비겁한 쿠키", "team_power": "969.32M", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "폼생 coward deck", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:46107", "url": "https://cafe.naver.com/ccrumble/46107", "date": "2026-09-25",
+      "title_kr": "243-30 비겁이 클리어덱", "title_en": "243-30 Coward clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "폼생's Coward deck at 243-30: 1.05G, 돌파력 803, 명성 103; same 12 (GingerBright Lv.100 now).",
+      "clears": [{ "stage": "243-30", "boss": "비겁한 쿠키", "team_power": "1.05G", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "폼생 coward deck", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:46202", "url": "https://cafe.naver.com/ccrumble/46202", "date": "2026-09-25",
+      "title_kr": "스테이지 덱 및 컨트롤 공략", "title_en": "Stage decks and control guide", "relevance": 3, "scope": "stage",
+      "summary_en": "쿠키키키's compiled guide (sources: DC and 서신우): presets for lift bosses (Hammer/Cool Mint), Coward, <=3 bosses, >3 bosses, Stump, Redberry Assassin, auto-hunt, and Bari decks at 35% and 55%, plus per-boss movement tips. Key 35% advice: for Coward at a 35% cut, swap GingerBright->Pinot and Grapevine->Brightseeker to reach 55% power and clear within ~20 tries rather than retrying endlessly at 35%. Post-9/23: replace Cake Hound (or GingerBright) with Moon Rabbit and Panda with Candy Shade Pouch.",
+      "clears": [],
+      "teams": [
+        { "name": "46202 lift bosses", "scope": "stage", "for": "망치공주, 쿨링민트 (띄우기)", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "front 2", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "front 3", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "front 4", "role": "buffer", "note": "ATK rank 1 counting pet/perk/captain ATK" },
+            { "kr": "이온", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "front 5", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "front 6", "role": "healer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back 1", "role": "dps", "note": "low damage -> 메론소다; low heal -> 라임" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "back 2", "role": "buffer (lift resist)", "note": "more heal needed -> 포도넝쿨" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "back 3", "role": "buffer", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "back 4", "role": "tank", "note": "9/23: replace with 달토끼" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "back 5", "role": "dps", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울 (19)", "얼음과자새 (18)", "판다만두 (15) -> 색동주머니"], "perks": "", "captain": "우유", "formation": "373.05M screenshot", "why": "", "substitutions": ["들개 -> 달토끼", "판다 -> 색동주머니", "얼음새 -> 초코왕방울", "브시커 -> 메론 (damage) or 라임 (heal)", "피노 -> 포도 (more heal)"], "unorthodox": [] },
+        { "name": "46202 coward", "scope": "stage", "for": "비겁한 쿠키", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "front 2", "role": "buffer", "note": "" },
+            { "kr": "포도넝쿨", "en": "Grapevine", "level": "?", "stars": "?", "position": "front 3", "role": "healer", "note": "at a 35% cut -> 브라이트시커" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "front 4", "role": "tank", "note": "" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "front 5", "role": "dps", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "front 6", "role": "tank", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "back 1", "role": "dps", "note": "8 stacks before fear, ~15 after" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "back 2", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "back 3", "role": "buffer", "note": "" },
+            { "kr": "이온", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "back 4", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "back 5", "role": "healer", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "?", "stars": "?", "position": "back 6", "role": "debuffer", "note": "9/23: -> 달토끼; at a 35% cut -> 피노누아" }
+          ], "pets": ["와사비 문어 (17)", "갓난갓방울 (19)", "얼음과자새 (18)"], "perks": "", "captain": "우유", "formation": "preset 2, 346.82M", "why": "", "substitutions": ["명랑 -> 달토끼 (9/23)", "At 35%: 명랑 -> 피노, 포도 -> 브시커 to reach the 55% bracket"], "unorthodox": [] },
+        { "name": "46202 <=3 bosses", "scope": "stage", "for": "3인 이하 보스", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "이온", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "", "role": "healer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "-> 달토끼" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "" }
+          ], "pets": ["핫도그도그 (17)", "갓난갓방울 (19)", "와사비 문어 (17)"], "perks": "", "captain": "우유", "formation": "373.05M", "why": "", "substitutions": [], "unorthodox": [] },
+        { "name": "46202 >3 bosses", "scope": "stage", "for": "3인 초과 보스", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "호밀", "en": "Rye", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "-> 달토끼" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "Seeker >=5-star -> Seeker instead" },
+            { "kr": "? (white-haired, black captain hat, light shooter)", "en": null, "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "", "role": "healer", "note": "" }
+          ], "pets": ["갓난갓방울 (19)", "핫도그도그 (17)", "전지멜로우 (16)"], "perks": "", "captain": "우유", "formation": "369.35M", "why": "", "substitutions": ["Brightseeker >=5-star: 체리콜라 -> 브시커; <5-star: use 체리콜라"], "unorthodox": [] },
+        { "name": "46202 stump", "scope": "stage", "for": "그루터기", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "-> 달토끼" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "", "role": "healer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "호밀", "en": "Rye", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "이온", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울 (19)", "? green leaf pet (18)", "핫도그도그 (17)"], "perks": "", "captain": "우유", "formation": "370.21M", "why": "", "substitutions": ["If it fails, add 감초"], "unorthodox": [] },
+        { "name": "46202 redberry", "scope": "stage", "for": "레드베리 암살자", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "호밀", "en": "Rye", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "팬케이크", "en": "Pancake", "level": "100", "stars": "?", "position": "", "role": "?", "note": "portrait brown grass; name from text '팬케이크 -> 악마'" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "-> 포도넝쿨 possible" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "", "role": "", "note": "dead/greyed slot" },
+            { "kr": "위치베리", "en": "Witchberry", "level": "100", "stars": "?", "position": "", "role": "dps", "note": "medium confidence" },
+            { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "captain" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "100", "stars": "?", "position": "", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "전지멜로우 (연타)"], "perks": "열정페이 + 초고속 승진", "captain": "우유", "formation": "", "why": "", "substitutions": ["팬케이크 -> 악마", "피노 -> 포도넝쿨"], "unorthodox": [] },
+        { "name": "46202 auto-hunt", "scope": "stage", "for": "post-relief idle climbing", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "오븐방랑자", "en": "Oven Wanderer", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "메론소다", "en": "Melon Soda", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "바리공주", "en": "Princess Bari", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "?", "stars": "?", "position": "", "role": "healer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "호밀", "en": "Rye", "level": "?", "stars": "?", "position": "", "role": "dps", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "우유", "en": "Milk", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "감감술래 놀이 달토끼", "en": "Moon Rabbit (Pampered with Persimmon)", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "high recommended power -> high-power 들개" }
+          ], "pets": ["갓난갓방울 (20)", "전지멜로우 (20)", "핫도그도그 (19)"], "perks": "Lv4 크런치 모드 + 열정페이 (below Lv4: all-stat 2%)", "captain": "우유", "formation": "2.09G", "why": "Auto may hit mobs instead of the boss on boss+mob stages (Bari, Wanderer).", "substitutions": ["달토끼 -> 들개 (higher power) when recommended power is high"], "unorthodox": ["Crunch Mode perk"] },
+        { "name": "46202 Bari 35%", "scope": "stage", "for": "35% bracket, single bosses", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "", "stars": "", "position": "", "role": "dps", "note": "" },
+            { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+            { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+            { "kr": "바리공주", "en": "Princess Bari", "level": "", "stars": "5 (assumed)", "position": "", "role": "dps", "note": "manually overlap with the boss" },
+            { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "", "role": "buffer", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "", "stars": "", "position": "", "role": "tank", "note": "" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "", "stars": "", "position": "", "role": "tank", "note": "" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "", "stars": "", "position": "", "role": "dps", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "", "role": "healer", "note": "" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울", "전지멜로우 (연타)", "범위 펫"], "perks": "", "captain": "", "formation": "", "why": "Higher damage ceiling than the old decks but needs manual control; rapid-fire synergy from the pet only.", "substitutions": ["Bari below 5-star: not recommended (author)"], "unorthodox": [] },
+        { "name": "46202 Bari 55%", "scope": "stage", "for": "55% bracket", "cookies": [
+            { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+            { "kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "MAX", "position": "front 2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "front 3", "role": "buffer", "note": "ATK order 5th" },
+            { "kr": "우유", "en": "Milk", "level": "100", "stars": "MAX", "position": "front 4", "role": "buffer", "note": "ATK order 1st; captain" },
+            { "kr": "체리콜라", "en": "Cherry Cola", "level": "100", "stars": "?", "position": "front 5", "role": "dps", "note": "ATK order 4th" },
+            { "kr": "다크초코", "en": "Dark Choco", "level": "100", "stars": "?", "position": "front 6", "role": "tank", "note": "" },
+            { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "MAX", "position": "back 1", "role": "dps", "note": "ATK order 2nd" },
+            { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "back 2", "role": "buffer", "note": "" },
+            { "kr": "바리공주", "en": "Princess Bari", "level": "100", "stars": "5", "position": "back 3", "role": "dps", "note": "ATK order 3rd" },
+            { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "100", "stars": "?", "position": "back 4", "role": "tank", "note": "" },
+            { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "back 5", "role": "healer", "note": "" },
+            { "kr": "감감술래 놀이 달토끼", "en": "Moon Rabbit (Pampered with Persimmon)", "level": "100", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+          ], "pets": ["갓난갓방울 (19)", "전지멜로우 (20)", "핫도그도그 (19)"], "perks": "", "captain": "우유", "formation": "preset 1, 1.06G", "why": "ATK order 우유-시커-바리-체콜-피겨 for Pomegranate/Macaron targeting.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "우유", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "ATK rank 1 after pet, perk and captain ATK are counted (not the displayed ATK)", "why": "Buff targeting by highest ATK" }],
+      "mechanics": ["At a 35% cut for Coward, reaching 55% and clearing within 20 tries beats infinite retries at 35%.", "Preset names can serve as a memo (e.g. '1망쿨 2비 3인이하 4다인5그루')."],
+      "rift": [],
+      "stage_types": [
+        "Hammer: go right; keep Scorpion on the left and the rest on the right so Scorpion isn't hit; retry.",
+        "Coward: ~8 Scorpion stacks before the fear; after fear check ~15 stacks else retry; stay still while scattered, then re-engage dodging its skill.",
+        "Cool Mint: spin the cookies at the start so they bunch, rather than the far-left corner.",
+        "Truck: dodge left once, down once, then auto (hugging the left corner dodges automatically).",
+        "Stump: small step left then right to engage; add Licorice if needed.",
+        "Redberry Assassin: go bottom-left, don't auto yet; move slowly toward the assassins when the rear ones attack.",
+        "Bikers: nudge so all three go one way; going into the centre scatters them and wastes time.",
+        "Projectile bosses (식쿠, 독수리): map objects block one projectile.",
+        "Survival: if cookies die at the start, step left and wait for Herb's cooldown."
+      ],
+      "disagreements": [],
+      "quotes": [{ "kr": "전투력이 깎인 상태로(35%) 무한 트라이하는 것보다, 55% 전투력을 맞추고 해당 덱으로 20트 안에 잡는 것이 낫습니다.", "en": "Rather than trying forever at the 35% cut, it's better to hit 55% power and kill it within 20 tries with that deck." }]
+    },
+    {
+      "source": "naver", "id": "nv:46209", "url": "https://cafe.naver.com/ccrumble/46209", "date": "2026-09-25",
+      "title_kr": "스테 완화 후 확실한 35퍼 비겁이 덱", "title_en": "Reliable post-relief 35% Coward deck", "relevance": 3, "scope": "stage",
+      "summary_en": "Post-relief 35% Coward deck cleared first try: 280-30 at 1G 660M vs recommended 3G 80M (53.9%, 35% bracket); still works at 291-30. Passion Pay must land on Milk; Health Insurance, or Rapid Promotion if survival is comfortable. crumblehub panel shows 280-30 needs accuracy 1,203.5 (theirs 900 -> 74.8% hit) and focus 1,079. A commenter cleared 240 first try with it.",
+      "clears": [
+        { "stage": "280-30", "boss": "비겁한 쿠키", "team_power": "1G 660M 85K", "recommended_power": "3G 80M", "bracket": "35", "result": "clear", "play": "?", "retries": "0", "team": "46209 post-relief coward", "note": "53.9% of recommended; next bracket at 1G 848M" },
+        { "stage": "291-30", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "46209 post-relief coward", "note": "author addendum" },
+        { "stage": "240-30", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "0", "team": "46209 post-relief coward", "note": "commenter" }
+      ],
+      "teams": [{ "name": "46209 post-relief coward", "scope": "stage", "for": "비겁한 쿠키 at 35%", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "MAX", "position": "front 1", "role": "buffer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "front 2", "role": "dps", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "front 3", "role": "buffer", "note": "" },
+          { "kr": "포도넝쿨", "en": "Grapevine", "level": "100", "stars": "?", "position": "front 4", "role": "healer", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "front 5", "role": "buffer", "note": "captain; must receive Passion Pay" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "front 6", "role": "healer", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "position": "back 1", "role": "dps", "note": "" },
+          { "kr": "호밀", "en": "Rye", "level": "100", "stars": "?", "position": "back 2", "role": "dps", "note": "stats: boss dmg 76%, element dmg 98.2%, accuracy 914.39, evasion 779.29, focus 1126.03, skill ready 0%" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "?", "position": "back 3", "role": "buffer", "note": "" },
+          { "kr": "정글전사", "en": "Tiger Lily", "level": "100", "stars": "?", "position": "back 4", "role": "dps", "note": "" },
+          { "kr": "체리콜라", "en": "Cherry Cola", "level": "100", "stars": "?", "position": "back 5", "role": "dps", "note": "" },
+          { "kr": "감감술래 놀이 달토끼", "en": "Moon Rabbit (Pampered with Persimmon)", "level": "100", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+        ], "pets": ["와사비 문어 (20)", "전지멜로우 (19)", "갓난갓방울 (20)"], "perks": "열정페이 + 의료보험 (초고속 승진 if survival is comfortable)", "captain": "우유", "formation": "preset 2, 1.66G; gear preset '스테'", "why": "", "substitutions": ["의료보험 -> 초고속 승진"], "unorthodox": ["No Cheesecake, no Ion/Dark Choco"] }],
+      "builds": [],
+      "mechanics": ["crumblehub stage panel (280-30): final damage correction 35% at 40%+ bracket; accuracy requirement 1,203.5 (900 gives 74.8% hit chance); focus requirement 1,079 for debuff application (0% shown)."],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "열정페이 우유가 받아야함", "en": "Milk has to be the one getting Passion Pay." }]
+    },
+    {
+      "source": "naver", "id": "nv:46259", "url": "https://cafe.naver.com/ccrumble/46259", "date": "",
+      "title_kr": "", "title_en": "Members-only post (capture refused)", "relevance": 0, "scope": "stage",
+      "summary_en": "Capture refused (login required); no content.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:35274", "url": "https://cafe.naver.com/ccrumble/35274", "date": "",
+      "title_kr": "", "title_en": "Members-only post (capture refused)", "relevance": 0, "scope": "stage",
+      "summary_en": "Capture refused (login required); no content.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:46312", "url": "https://cafe.naver.com/ccrumble/46312", "date": "2026-09-26",
+      "title_kr": "콘텐츠별 장비 옵션 세팅 정리", "title_en": "Gear substat setup by content", "relevance": 3, "scope": "stage",
+      "summary_en": "쿠키키키's gear guide. Stage: without oven options, aim for accuracy and focus ~900-1,000 each, then pick the highest-power gear; crit rate over crit damage (enemies have no crit resistance); crit resistance is low value, take DMG reduction. Skill Haste need not be chased for stages. Arena and conquest layouts are given for contrast.",
+      "clears": [], "teams": [],
+      "builds": [
+        { "cookie": "all (stage preset)", "scope": "stage", "sugar_runes": "", "gear": "명중 and 집중 first, then highest-power pieces; 치확 > 치피; 피감 over 치저", "thresholds": "명중 900~1,000, 집중 900~1,000", "why": "Enemy monsters have no crit resistance; crit res is inefficient in stages." },
+        { "cookie": "all (arena preset)", "scope": "arena", "sugar_runes": "", "gear": "top-left 스증/치확·치피; bottom-left 피감/치저; top-right 스가/스증; bottom-right 스가/치피·피감; 스가 x6 required; 1 line of 명중 if needed; no 집중", "thresholds": "", "why": "Contrast with stage build." },
+        { "cookie": "all (conquest preset)", "scope": "conquest", "sugar_runes": "", "gear": "A: 스증 + 치확/치피; B: 스가 + 스증; C: 피감 + other; D: 스가 + 피감; no 명중/집중", "thresholds": "", "why": "Contrast." }
+      ],
+      "mechanics": ["Gear substats appear in fixed positions per slot letter (author reply)."], "rift": [], "stage_types": [],
+      "disagreements": ["Conquest: 레벅 argues move speed on bottom-right beats DMG reduction since everyone dies ~17 s; 밀키유입뉴비 says top players use 피감+체력 / 피감+스가 to survive the 17 s slam."],
+      "quotes": [{ "kr": "스테이지에서는 우선 명중과 집중을 900~1,000 정도 확보하는 것이 중요하며, 해당 수치를 충분히 확보했다면 스킬 가속보다는 전투력이 높은 장비를 우선적으로 사용하셔도 괜찮습니다.", "en": "In stages, first secure ~900-1,000 accuracy and focus; once you have that, prefer higher-power gear over Skill Haste." }]
+    },
+    {
+      "source": "naver", "id": "nv:46348", "url": "https://cafe.naver.com/ccrumble/46348", "date": "2026-09-26",
+      "title_kr": "스테이지 기본 덱 공략", "title_en": "Basic stage deck guide", "relevance": 3, "scope": "stage",
+      "summary_en": "Buffer-core template: Macaron, Milk, Pomegranate, Skating Queen, Cheesecake fixed; Herb only healer post-relief; Moon Rabbit (ATK down) and Dark Choco (DEF down) front; 4 flex slots per boss. Milk captain with Passion Pay + Rapid Promotion, Milk sugar runes all ATK to stay highest ATK. At 1G 300M smooth to 270, climbing 274 (screenshot 274-1 at 1G 385M).",
+      "clears": [{ "stage": "270", "boss": "various", "team_power": "1G 300M", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "46348 base", "note": "Screenshot: 274-1 at 1G 385M 227K, 두리안 해적 견습선원 (?) boss at 96%." }],
+      "teams": [{ "name": "46348 base", "scope": "stage", "for": "all stages; flex slots per boss", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "", "stars": "", "position": "fixed", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "", "stars": "", "position": "fixed", "role": "buffer", "note": "captain; runes all ATK" },
+          { "kr": "석류", "en": "Pomegranate", "level": "", "stars": "", "position": "fixed", "role": "buffer", "note": "" },
+          { "kr": "피겨여왕", "en": "Skating Queen", "level": "", "stars": "", "position": "fixed", "role": "buffer", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "", "stars": "", "position": "fixed", "role": "buffer", "note": "" },
+          { "kr": "허브", "en": "Herb", "level": "", "stars": "", "position": "fixed", "role": "healer", "note": "Lime no longer needed post-relief" },
+          { "kr": "감감술래 놀이 달토끼", "en": "Moon Rabbit (Pampered with Persimmon)", "level": "", "stars": "", "position": "front", "role": "ATK-down tank", "note": "Grapevine dropped since Moon Rabbit" },
+          { "kr": "다크초코", "en": "Dark Choco", "level": "", "stars": "", "position": "front", "role": "DEF-down tank", "note": "" }
+        ], "pets": ["갓방울 + 핫도그 + 오이 (지속)", "갓방울 + 핫도그 + 전지 (연타)", "갓방울 + 전지 + 색동 (띄우기 저항 + 체력)"], "perks": "열정페이 + 초고속 승진", "captain": "우유",
+        "formation": "", "why": "Crumble depends heavily on buffers.",
+        "substitutions": ["Coward: 시커, 전갈, 정전, 체콜", "Cool Mint: 피노, 시커, 전갈, 정전", "Rapid-fire: 피노, 메소, 호밀, 시커 or 피노, 메소, 딸크, 시커", "Many bosses: 피노, 메소, 딸크, 트위즐", "Flex pool: 시커 (5-star+ only as fixed dealer), 전갈 (single boss must), 정글전사 (with 전갈), 체리콜라 (lotto damage), 피노누아 (with 전지 for rapid-fire or 색동 for lift resist), 메론소다/호밀/딸기크레페 (rapid-fire), 트위즐 (many bosses)"], "unorthodox": [] }],
+      "builds": [{ "cookie": "우유", "scope": "stage", "sugar_runes": "공격력 (all ATK) mandatory", "gear": "", "thresholds": "", "why": "Keep highest ATK for Passion Pay/buff targeting" }, { "cookie": "트위즐젤리", "scope": "stage", "sugar_runes": "스가, 스증, 공증, 치피 as they come", "gear": "", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "크럼블은 다른게임과 달리 버퍼 의존도가 굉장히 높은 게임입니다.", "en": "Unlike other games, Crumble depends very heavily on buffers." }]
+    },
+    {
+      "source": "naver", "id": "nv:46395", "url": "https://cafe.naver.com/ccrumble/46395", "date": "2026-09-26",
+      "title_kr": "248-30 비겁이 클리어덱", "title_en": "248-30 Coward clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "폼생's Coward deck at 248-30 post-relief: 1.17G, 돌파력 814, 명성 103.",
+      "clears": [{ "stage": "248-30", "boss": "비겁한 쿠키", "team_power": "1.17G", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "폼생 coward deck", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:46533", "url": "https://cafe.naver.com/ccrumble/46533", "date": "2026-09-26",
+      "title_kr": "256-30 비겁이 클리어덱", "title_en": "256-30 Coward clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "폼생's Coward deck at 256-30: 1.26G, 돌파력 815, 명성 104; swapped GingerBright for the higher Moon Rabbit to clear. Pets now 핫도그 20, 갓방울 20, 얼음새 19.",
+      "clears": [{ "stage": "256-30", "boss": "비겁한 쿠키", "team_power": "1.26G", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "폼생 coward deck", "note": "명랑 -> 달토끼" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "명량 상위 달토끼로 바꿔서 비겁이 클리어", "en": "Cleared Coward after swapping GingerBright for its upgrade, Moon Rabbit." }]
+    },
+    {
+      "source": "naver", "id": "nv:46799", "url": "https://cafe.naver.com/ccrumble/46799", "date": "2026-09-27",
+      "title_kr": "251-30 비겁이", "title_en": "251-30 Coward", "relevance": 3, "scope": "stage",
+      "summary_en": "Post-relief Coward deck that clears 251-30 'stably' at 837.14M: Milk captain, Passion Pay + Rapid Promotion; tanky with stable damage.",
+      "clears": [{ "stage": "251-30", "boss": "비겁한 쿠키", "team_power": "837.14M", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "46799 coward", "note": "" }],
+      "teams": [{ "name": "46799 coward", "scope": "stage", "for": "비겁한 쿠키 post-relief", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+          { "kr": "전갈", "en": "Scorpion", "level": "100", "stars": "?", "position": "front 2", "role": "dps", "note": "" },
+          { "kr": "메론소다", "en": "Melon Soda", "level": "100", "stars": "?", "position": "front 3", "role": "dps", "note": "" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "front 4", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "front 5", "role": "buffer", "note": "captain" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "front 6", "role": "healer", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "4", "position": "back 1", "role": "dps", "note": "" },
+          { "kr": "호밀", "en": "Rye", "level": "100", "stars": "?", "position": "back 2", "role": "dps", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "back 3", "role": "buffer", "note": "" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "back 4", "role": "buffer", "note": "" },
+          { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "100", "stars": "?", "position": "back 5", "role": "tank", "note": "" },
+          { "kr": "감감술래 놀이 달토끼", "en": "Moon Rabbit (Pampered with Persimmon)", "level": "100", "stars": "?", "position": "back 6", "role": "tank", "note": "" }
+        ], "pets": ["핫도그도그 (20)", "갓난갓방울 (20)", "전지멜로우 (18)"], "perks": "열정페이 + 초고속 승진", "captain": "우유", "formation": "preset 5", "why": "Tanky with stable damage.", "substitutions": [], "unorthodox": ["Rapid-fire style (Melon Soda, Rye, Pinot + Chargemellow) against a single boss"] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:46809", "url": "https://cafe.naver.com/ccrumble/46809", "date": "2026-09-27",
+      "title_kr": "300지 이상까지 가능한 모든 스테이지 조합 공략", "title_en": "All stage combos that work to 300+", "relevance": 1, "scope": "stage",
+      "summary_en": "Link to 서신우's YouTube video (not captured); the only readable image is a 7-star Moon Rabbit portrait (first image is 0 bytes).",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:46871", "url": "https://cafe.naver.com/ccrumble/46871", "date": "2026-09-27",
+      "title_kr": "스테이지덱(5사격) -홍대병 예능덱", "title_en": "Five-shooter stage deck (hipster fun deck)", "relevance": 3, "scope": "stage",
+      "summary_en": "At 2.77-3.09G, a five-shooter deck (Passion Pay + 5-ranged Skill Haste perk) built because Milk kept walking over to heal Dark Choco; Devil replaces Dark Choco. Gear preset: no raw power, Skill Haste gear from arena/conquest. Squirrel and Devil got focus. Pushed 304 to 305; for Coward, Scorpion takes the Squirrel slot. Squirrel later scrapped; a commenter suggests Twizzly for mob stages.",
+      "clears": [{ "stage": "304 -> 305", "boss": "various", "team_power": "2.77G-3.09G", "recommended_power": "", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "46871 five-shooter", "note": "" }],
+      "teams": [{ "name": "46871 five-shooter", "scope": "stage", "for": "300+ stages", "cookies": [
+          { "kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+          { "kr": "호밀", "en": "Rye", "level": "100", "stars": "?", "position": "front 2", "role": "dps", "note": "" },
+          { "kr": "다람쥐 (squirrel-hood cookie)", "en": null, "level": "100", "stars": "?", "position": "front 3", "role": "dps (shooter)", "note": "focus built; later scrapped for 마법사 / suggested 트위즐; Coward: 전갈" },
+          { "kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "?", "position": "front 4", "role": "buffer", "note": "" },
+          { "kr": "악마", "en": "Devil", "level": "100", "stars": "?", "position": "front 5", "role": "front", "note": "replaces 다크초코; focus built" },
+          { "kr": "딸기크레페", "en": "Strawberry Crepe", "level": "100", "stars": "?", "position": "front 6", "role": "tank", "note": "" },
+          { "kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "position": "back 1", "role": "dps", "note": "" },
+          { "kr": "메론소다", "en": "Melon Soda", "level": "100", "stars": "?", "position": "back 2", "role": "dps", "note": "" },
+          { "kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "back 3", "role": "buffer", "note": "airborne-boss version; otherwise 피겨" },
+          { "kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "position": "back 4", "role": "buffer", "note": "" },
+          { "kr": "우유", "en": "Milk", "level": "100", "stars": "?", "position": "back 5", "role": "buffer", "note": "captain" },
+          { "kr": "허브", "en": "Herb", "level": "100", "stars": "?", "position": "back 6", "role": "healer", "note": "" }
+        ], "pets": ["? red/white creature (15)", "전지멜로우 (19)", "갓난갓방울 (20)"], "perks": "열정페이 + 탄약비 전액 지원 (5사격 스가)", "captain": "우유", "formation": "preset 3 '스테', 3.09G; alt preset 2 (2.77G) with 피겨 instead of 피노 and 핫도그 pet", "why": "Milk kept going to heal Dark Choco; replace Dark Choco.", "substitutions": ["다람쥐 -> 전갈 (Coward)", "다람쥐 -> 마법사 / 트위즐"], "unorthodox": ["Devil instead of Dark Choco", "Squirrel cookie as shooter"] }],
+      "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "no raw-power pieces; Skill Haste gear from arena or conquest preset", "thresholds": "", "why": "Five-shooter Skill Haste deck" }],
+      "mechanics": [], "rift": [], "stage_types": ["Mob-heavy stages: Twizzly (commenter)."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:46880", "url": "https://cafe.naver.com/ccrumble/46880", "date": "2026-09-27",
+      "title_kr": "300지 이상에서도 가능한 일반 스테이지 방치덱 공략", "title_en": "Idle deck for normal stages that works past 300", "relevance": 2, "scope": "stage",
+      "summary_en": "서신우's idle deck video (not captured); where bosses kill anything that gets close (e.g. 폭파광), put Grapevine in Pinot's slot. Image: an 8-star Witchberry portrait in the formation.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["폭파광 (Bomber) boss: kills cookies that stick to it; 피노 -> 포도."], "disagreements": [], "quotes": [{ "kr": "폭파광처럼 이걸로는 붙어도 죽는다 하는 곳은 피노 자리에 포도를 넣으시면 됩니다", "en": "Where even sticking to it gets you killed, like the Bomber, put Grapevine in Pinot's slot." }]
+    },
+    {
+      "source": "naver", "id": "nv:46887", "url": "https://cafe.naver.com/ccrumble/46887", "date": "2026-09-27",
+      "title_kr": "264-30 비겁이 클리어덱", "title_en": "264-30 Coward clear deck", "relevance": 3, "scope": "stage",
+      "summary_en": "폼생's Coward deck at 264-30: battle screenshot at 1G 384M (formation 1.38G), 돌파력 828, 명성 105, Rapid Promotion + Passion Pay now, gear preset '스테 (명중 집중)'. Dark Choco replaces Ion; GingerBright back instead of Moon Rabbit (a commenter asks why).",
+      "clears": [{ "stage": "264-30", "boss": "비겁한 쿠키", "team_power": "1G 384M 179K", "recommended_power": "3G 20M (from nv:44131)", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "폼생 coward deck", "note": "~46% of recommended; formation shows 1.38G" }],
+      "teams": [], "builds": [{ "cookie": "team", "scope": "stage", "sugar_runes": "", "gear": "preset '스테 (명중 집중)'", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": [
+    { "kr": "쥐토바이 / 쥐돌이 / 바이커 3형제", "en": "Biker Gang Biker trio (폭주단 바이커)", "kind": "boss", "confidence": "high", "evidence": "nv:43780 title '쥐토바이' with result screen '폭주단 바이커'; nv:44815 '바이커 3형제'." },
+    { "kr": "생크림콘 독수리", "en": "Whipped Cream Cone Eagle (literal)", "kind": "boss", "confidence": "high", "evidence": "nv:45336 screenshot boss name at 268-10; 9/23 patch list." },
+    { "kr": "오염된 그루터기 정령", "en": "Contaminated Stump Spirit (literal)", "kind": "boss", "confidence": "high", "evidence": "nv:44477 patch notes." },
+    { "kr": "초코크림늑대 망치공주", "en": "Choco Cream Wolf Hammer Princess (literal)", "kind": "boss", "confidence": "high", "evidence": "nv:44477 patch notes." },
+    { "kr": "폭주단 트럭", "en": "Biker Gang Truck (literal)", "kind": "boss", "confidence": "high", "evidence": "nv:44477, nv:44815." },
+    { "kr": "식쿠", "en": "projectile boss shorthand (unexpanded)", "kind": "boss", "confidence": "low", "evidence": "nv:44778, nv:46202 group it with the eagle as a projectile boss." },
+    { "kr": "폭파광", "en": "Bomber (literal 'blast maniac') boss", "kind": "boss", "confidence": "low", "evidence": "nv:46880." },
+    { "kr": "해적 추종자 / 용접봇 / 독뿔버섯 / 아이스콘 듀얼나이트 / 들개떼 / 암살자 10인", "en": "10-unit mob-wave stages (pirate followers, welding bots, poison horn mushrooms, ice-cone dual knights, hound pack, assassins)", "kind": "boss", "confidence": "high", "evidence": "nv:44815 sheet." },
+    { "kr": "얼음골렘", "en": "Ice Golem (literal)", "kind": "boss", "confidence": "high", "evidence": "nv:43680." },
+    { "kr": "명쿠 / 명량 / 명랑", "en": "GingerBright (명랑한 쿠키) shorthand", "kind": "cookie", "confidence": "high", "evidence": "nv:44131 title, nv:46533 '명량 상위 달토끼', lollipop sprite in 폼생 decks." },
+    { "kr": "오이", "en": "Octo Wasabi / Wasabi Octopus pet (green cucumber icon; Duration synergy)", "kind": "pet", "confidence": "high", "evidence": "nv:46348 '오이(지속)'; green cucumber pet icon in many formations." },
+    { "kr": "전지", "en": "Chargemellow pet (Rapid Fire)", "kind": "pet", "confidence": "high", "evidence": "nv:46348 '전지(연타)'." },
+    { "kr": "색동", "en": "Candy Shade Pouch pet (lift resist + HP)", "kind": "pet", "confidence": "high", "evidence": "nv:46348, nv:46202." },
+    { "kr": "방수특", "en": "Armor Repair perk (방어구 수리 특약)", "kind": "term", "confidence": "high", "evidence": "nv:43034, nv:44742." },
+    { "kr": "5사격 / 5사격 복지 / 5사격스가", "en": "All Ammo Provided perk (5+ ranged -> ranged Skill Haste +15)", "kind": "term", "confidence": "high", "evidence": "nv:43092 perk card; nv:43683, nv:46871." },
+    { "kr": "공방체 2퍼", "en": "Lv3 squad perk: ATK/DEF/HP +2%", "kind": "term", "confidence": "high", "evidence": "nv:43680; nv:46202 '전체 2%'." },
+    { "kr": "크런치 모드", "en": "Crunch Mode perk", "kind": "term", "confidence": "high", "evidence": "nv:46202 auto-hunt deck." },
+    { "kr": "주차 / 리트 / 원트원클", "en": "park / retry / first-try clear", "kind": "term", "confidence": "high", "evidence": "nv:43594, nv:46209 comment." },
+    { "kr": "다인 / 3인 이하 / 3인 초과", "en": "multi-boss stages; <=3 bosses; >3 bosses", "kind": "term", "confidence": "high", "evidence": "nv:46202 preset names." },
+    { "kr": "망쿨", "en": "Hammer Princess + Cool Mint (lift bosses) preset shorthand", "kind": "term", "confidence": "high", "evidence": "nv:46202 preset memo '1망쿨 2비 3인이하 4다인5그루'." },
+    { "kr": "다람쥐", "en": "squirrel-hood shooter cookie (unconfirmed full name)", "kind": "cookie", "confidence": "low", "evidence": "nv:46871 text + brown squirrel-hood sprite." },
+    { "kr": "악마", "en": "Devil Cookie (악마맛 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "nv:46871 text + red devil sprite; nv:46202 '팬케이크 -> 악마'." },
+    { "kr": "최종 데미지 보정", "en": "final damage correction (crumblehub label for the power-gate bracket)", "kind": "term", "confidence": "high", "evidence": "nv:44131, nv:46209 crumblehub screenshots." },
+    { "kr": "명중 요구치 / 집중 요구치", "en": "accuracy requirement / focus requirement per stage (crumblehub)", "kind": "stat", "confidence": "high", "evidence": "nv:46209: 280-30 명중 요구치 1,203.5, 집중 요구치 1,079." }
+  ]
+}

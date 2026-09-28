@@ -587,6 +587,25 @@ describe("importRecord validation", () => {
     expectEmpty(store);
   });
 
+  it("rejects a record with no mode when meta.json has no modes block, even if every row states one", () => {
+    const base = recordJson<{ record: Record<string, unknown> }>("import.json");
+    const dir = tempRecord(null, () => {}, {
+      manifest: { record: { ...base.record, mode: undefined } },
+    });
+    const moded = ["takeaways", "decks", "runes", "gear", "rng", "mechanics", "timeline"];
+    for (const name of moded) {
+      editJson<Array<Record<string, unknown>>>(dir, `curated/${name}.json`, (rows) => {
+        for (const row of rows) row.mode ??= "arena";
+      });
+    }
+    const store = testStore();
+    expect(() => importRecord(store, dir)).toThrow(ImportError);
+    expect(() => importRecord(store, dir)).toThrow(
+      /import\.json \[record\.mode\]: the record states no mode, and meta\.json has no modes block/,
+    );
+    expectEmpty(store);
+  });
+
   it("rejects a cited source id that isn't curated, naming the file and row, and writes nothing", () => {
     const dir = tempRecord("scores.json", (rows) => {
       rows[3]!.sources = ["dc:0"];

@@ -31,7 +31,7 @@ export const buffValuesSpec = z.strictObject({
   selfBuffs: z.record(z.string().min(1), z.array(z.string().min(1)).min(1)).default({}),
 });
 /** The `buffValues` block of an `import.json`. */
-export type BuffValuesSpec = z.output<typeof buffValuesSpec>;
+type BuffValuesSpec = z.output<typeof buffValuesSpec>;
 
 /** One buff of a skill grade in the Sugar Pocket capture. */
 const captureBuff = z.object({

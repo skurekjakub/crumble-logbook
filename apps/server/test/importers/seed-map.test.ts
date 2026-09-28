@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { ImportError } from "../../src/errors";
 import {
   mapDeck,
   mapGearSlot,
@@ -404,12 +405,13 @@ describe("mapMeta", () => {
     },
   };
   const meta = seedMeta.parse(metaInput);
-  const record = {
+  const modeless = {
     slug: "001-guild-conquest-meta",
     question: "Is there a documented set of teams?",
     status: "active" as const,
     startedAt: "2026-09-27",
   };
+  const record = { ...modeless, mode: "guild_conquest" as const };
 
   it("builds the research record from the manifest record and the meta", () => {
     expect(mapMeta(meta, record).record).toEqual({
@@ -436,9 +438,9 @@ describe("mapMeta", () => {
         arena: { caveat: "Arena caveat", rules: [{ ...rule, mode: "arena", topic: "rules" }] },
       },
     });
-    const mapped = mapMeta(pvp, record);
+    const mapped = mapMeta(pvp, modeless);
     expect(mapped.record.mode).toBe("arena");
-    expect(mapMeta(pvp, { ...record, mode: "rumble_arena" }).record.mode).toBe("rumble_arena");
+    expect(mapMeta(pvp, { ...modeless, mode: "rumble_arena" }).record.mode).toBe("rumble_arena");
     expect(mapped.modes).toEqual([
       { mode: "arena", lede: null, caveat: "Arena caveat" },
       { mode: "rumble_arena", lede: "Rumble", caveat: null },
@@ -447,6 +449,13 @@ describe("mapMeta", () => {
       ["arena", "rules", ["dc:1"]],
       ["rumble_arena", "rules", ["dc:1"]],
     ]);
+  });
+
+  it("rejects a record with no mode when the meta has no modes block, naming import.json", () => {
+    expect(() => mapMeta(meta, modeless)).toThrow(ImportError);
+    expect(() => mapMeta(meta, modeless)).toThrow(
+      /import\.json \[record\.mode\]: the record states no mode, and meta\.json has no modes block/,
+    );
   });
 
   it("maps you to the recommendation", () => {

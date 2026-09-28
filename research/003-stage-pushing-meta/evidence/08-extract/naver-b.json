@@ -1,0 +1,1122 @@
+{
+  "batch": "naver-b",
+  "posts": [
+    {
+      "source": "naver", "id": "nv:1162", "url": "https://cafe.naver.com/ccrumble/1162", "date": "2026-07-30",
+      "title_kr": "콘텐츠 난이도 및 밸런스 개선 안내", "title_en": "Notice: content difficulty and balance improvement",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Official notice (2026-07-30 09:05 KST): the team found stage difficulty set higher than intended and applied a difficulty relief, with apology rewards and a raised 7-day attendance event. This is the first of three same-day difficulty changes.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-07-30 09:05 KST: official difficulty relief ('난이도 개선 작업을 진행하였습니다') because some content segments were harder than intended.",
+        "Commenter (아아앗뜨): stage 3-10 went from impossible to cleared in a second after the relief."
+      ],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "콘텐츠의 구간에서 의도했던 밸런스보다 높게 잡힌 난이도로 진행에 어려움을 겪고 계신 점을 확인하였습니다.", "en": "We confirmed that some content segments were set to a higher difficulty than the intended balance, making progress hard." }]
+    },
+    {
+      "source": "naver", "id": "nv:1922", "url": "https://cafe.naver.com/ccrumble/1922", "date": "2026-07-30",
+      "title_kr": "난이도 밸런스 재조정 진행 및 사과 보상 안내 (7/30 22:40 내용 추가)", "title_en": "Notice: difficulty re-adjustment and apology rewards",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Official notice (2026-07-30 15:30 KST): the morning relief made content too easy, so difficulty was raised again at 2026-07-30 23:00 KST. Players who pushed far during the eased window would find stages suddenly harder. Comments report teams wiped by field mobs and progress fully stuck after the re-raise.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-07-30 23:00 KST: difficulty raised back ('일부 완화되었던 난이도를 적정 수준으로 재조정') after the 09:05 relief was judged excessive.",
+        "Notice: players who advanced many stages under the eased difficulty will find each stage harder after the patch.",
+        "Comments after the re-raise: teams wiped by field mobs (잡몹), not only bosses; no stage-select, so players were stuck; stage rankings effectively 'parked' (스테이지 랭킹 다 주차)."
+      ],
+      "rift": [], "stage_types": [], "disagreements": ["Some commenters (로쿠띵, 크마왕) preferred the eased difficulty; others (바람) said the eased version was too easy."],
+      "quotes": [{ "kr": "기존 완화된 난이도에서 많은 스테이지를 진행하셨던 분들의 경우 ... 갑자기 전투가 다소 어려워지는 등의 경험이 발생 할 수 있습니다.", "en": "Those who progressed many stages under the eased difficulty may find battles suddenly harder." }]
+    },
+    {
+      "source": "naver", "id": "nv:2444", "url": "https://cafe.naver.com/ccrumble/2444", "date": "2026-07-30",
+      "title_kr": "난이도 조정에 따른 불편에 대해 진심으로 사과드립니다.", "title_en": "Apology for the inconvenience from the difficulty adjustment",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Official apology (2026-07-30 18:12 KST, title timestamp) that the re-raise made combat far harder than intended; an overall re-adjustment was scheduled for 2026-07-31 01:30–02:00 KST, aimed at restoring step-by-step stage progression with growth. Comments mention the stage count at the time (168) and hard bosses (32-30, the biker rats).",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-07-31 01:30–02:00 KST: overall difficulty re-adjustment ('전반적인 난이도 재조정') after the 7/30 re-raise was judged too high.",
+        "Commenter 이병: 168 stages existed at that time ('168스테에'); the biker rats (바이크 쥐) boss moves constantly, making clears luck-dependent rather than idle.",
+        "Commenters: 32-30 boss too hard; 15-1 hard for event rewards."
+      ],
+      "rift": [], "stage_types": ["Commenter 이병: boss stages with mobs plus a moving boss (the biker rats) need manual control; cookie AI charges into mobs."], "disagreements": [],
+      "quotes": [{ "kr": "밸런스 수정 이후 게임 전반의 전투 난이도가 의도했던 수준보다 과도하게 높게 설정되었음을 확인하였습니다.", "en": "After the balance change, overall combat difficulty was set excessively higher than intended." }]
+    },
+    {
+      "source": "naver", "id": "nv:16132", "url": "https://cafe.naver.com/ccrumble/16132", "date": "2026-08-12",
+      "title_kr": "8월 13일(목) 업데이트 안내 (8/13 17:00 수정)", "title_en": "Aug 13 update notes",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Patch notes for 2026-08-13: Cool Mint (SSR, water charge) and the Rune Crystal dungeon. No stage extension. Stage-relevant: bulk-clear for guide quests over 30 stages of backlog, breakthrough (돌파력) stat gains doubled past level 101, decimal display of accuracy/evasion/focus/resistance/skill haste, and skill amp now applying to summons.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-08-13: no main-stage extension. Guide quests can be bulk-cleared when more than 30 stages' worth is unclaimed.",
+        "2026-08-13: breakthrough (돌파력) past step 101: ATK/DEF per level 1 -> 2, HP per level 10 -> 20.",
+        "2026-08-13: accuracy (명중), evasion, focus (집중), resistance and skill haste now display decimals (the actual values were already fractional).",
+        "2026-08-13: skill amp now applies to summons (higher skill amp -> summon ATK/DEF/HP up); Licorice skeleton ATK ratio relabelled (0-promo 20.7% -> 58.0%, same real damage).",
+        "Comments: players at the stage cap asked for more stages; many asked for a boss restart button; complaints about the biker (바이커) boss pattern."
+      ],
+      "rift": [], "stage_types": [], "disagreements": ["Commenter 엉덩방아: the biker boss is meant to stop progress for a while; others want it changed."],
+      "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:25737", "url": "https://cafe.naver.com/ccrumble/25737", "date": "2026-08-26",
+      "title_kr": "8월 27일(목) 업데이트 안내", "title_en": "Aug 27 update notes",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Patch notes for 2026-08-27: main stages extended to 248-30 and the breakthrough cap to step 1000; Brightseeker (TSSR light ranged), Pinot Noir (SSR dark support), Chargemellow pet, Guild Conquest and Tea Knight. Boss fights gained give-up and retry buttons, and manual control now moves all cookies together.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-08-27: main stages extended to 248-30 (from 168-30).",
+        "2026-08-27: breakthrough (돌파력) max step raised to 1000.",
+        "2026-08-27: boss fights get give-up (포기하기) and retry (다시하기) buttons.",
+        "2026-08-27: manual control now moves all cookies together instead of following the shortest-range cookie.",
+        "2026-08-27: cookie-talk popups disabled at boss start; dragging over top-of-screen buttons still controls cookies.",
+        "2026-08-27: chicken-bot collab monsters summonable in main stages with event tickets.",
+        "2026-08-27 bug fix: when buffs/debuffs on the same stat overlap, the stronger one now correctly takes priority.",
+        "Comment 그겅: stages extended without lifting the 10-star cap."
+      ],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "메인 스테이지가 248-30까지 추가 확장됩니다.", "en": "Main stages are extended to 248-30." }]
+    },
+    {
+      "source": "naver", "id": "nv:28717", "url": "https://cafe.naver.com/ccrumble/28717", "date": "2026-08-28",
+      "title_kr": "신규 스테이지 퀘스트 보상 관련 향후 대응 방향 안내", "title_en": "Notice: response plan on new-stage quest rewards",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Official apology that quest rewards for the new 169-1+ stages felt poor; extra quests were promised plus apology rewards (2026-08-28 18:00 KST). Comments say the power requirement between stages was raised sharply with the extension while rewards fell.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-08-28: 169-1+ stages' quest rewards acknowledged as too low; new quests to be added.",
+        "Commenter 세링: the power cut (전투력컷) was raised a lot with the new stages.",
+        "Commenter 옵윤: from 169 the power hurdle between stages is wider than before.",
+        "Commenters 신쿤/딸피: from 169-1 rewards came per 5 bosses, thinning to one per 30 stages higher up.",
+        "Commenter 티팀: Cool Mint was nerfed without notice."
+      ],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "기존보다 스테이지 진입 시의 전투력 허들 간격이 더욱 넓어졌음에도 불구하고", "en": "even though the power-hurdle gap on entering stages became wider than before" }]
+    },
+    {
+      "source": "naver", "id": "nv:31505", "url": "https://cafe.naver.com/ccrumble/31505", "date": "2026-08-31",
+      "title_kr": "신규 스테이지 퀘스트 보상 개편 및 향후 적용 계획 안내", "title_en": "Notice: new-stage quest reward revamp",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Official revamp of 169-1+ stage quest rewards, applied after the 2026-08-31 emergency maintenance with retroactive mail. Quest count went from 2,196 to 4,889 and new reward types (rune crystals, research stones, cookie EXP) were added. Commenters still called it a large cut versus pre-169 rewards.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-08-31: 169-1+ quest total 2,196 -> 4,889; advanced cookie cutters 3,660 -> 8,110; advanced pet tickets 3,660 -> 7,950; lucky dough 5,490 -> 12,225; crystals 36,600 -> 82,600; coins 73,200 -> 9,033,200; new: rune crystals 10,320, 1-minute speedups 2,100, cookie EXP 13,824,000, basic research stones 209,600, choco-gang 160.",
+        "2026-08-31: retroactive grant by mail for players already past 169-1."
+      ],
+      "rift": [], "stage_types": [], "disagreements": ["Commenter x3500: still about a 66% cut versus the old per-stage rewards; commenter 아르리: old rewards gave ~24,000 cutters by stage 80."],
+      "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:37730", "url": "https://cafe.naver.com/ccrumble/37730", "date": "2026-09-09",
+      "title_kr": "9월 10일(목) 업데이트 안내", "title_en": "Sep 10 update notes",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Patch notes for 2026-09-10: main stages extended to 328-30 and the five daily dungeons to 570; higher stage quest rewards including 1-hour auto-hunt rewards; research 90-2, fame 360, breakthrough 1,500. Boss HP bar now shows decimals so sub-0.5% HP no longer reads 0%. Comments say accuracy/focus cuts were raised and misses are heavy without them.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "2026-09-10: main stages extended to 328-30.",
+        "2026-09-10: new stage quest rewards scaled up; new rewards: 1-hour auto-hunt rewards (coin, cookie EXP, basic research stone, rune crystal, lucky dough).",
+        "2026-09-10: Gnome lab basic research to 90-2, special to 16; fame max 360; breakthrough (돌파력) max 1,500.",
+        "2026-09-10: boss HP bar shows decimals; previously <0.5% remaining HP rounded to 0%, confusing whether the fight had ended.",
+        "2026-09-10 bug fix: identical buffs stacking now compare final stacked value so the strongest applies.",
+        "Commenter 로즈렌: accuracy/focus cuts (명중집중 컷) were raised; without accuracy and focus you miss a lot; 'stage relief' still needed because auto does not work.",
+        "Commenters: same mobs and bosses reused as stages rise; call for gentler stage difficulty."
+      ],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "명중집중 컷 높여놓고 이젠 명중집중 다 안끼면 미스작살남", "en": "They raised the accuracy/focus cut; now if you don't stack accuracy and focus you miss constantly." }]
+    },
+    {
+      "source": "naver", "id": "nv:27702", "url": "https://cafe.naver.com/ccrumble/27702", "date": "2026-08-27",
+      "title_kr": "스테이지 무난한덱. 막히면 덱체인지 (추가)", "title_en": "Solid stage deck; switch decks when stuck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Three deck screenshots: a default deck, a swap deck for drill/fear bosses or when cookies die, and a deck for stumps, the hammer princess and the snow golem that clears on idle. Images could not be viewed (tool returned no media), so the rosters are not transcribed.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [], "rift": [],
+      "stage_types": ["Separate deck for drill/fear (공포) bosses; separate auto deck for 그루터기 (stump), 망치 (hammer princess), 눈골렘 (snow golem)."],
+      "disagreements": [],
+      "quotes": [{ "kr": "브시커 5성 기준 밀키 빼면 괜찮아요", "en": "With a 5-star Brightseeker, drop Milky Way for it." }]
+    },
+    {
+      "source": "naver", "id": "nv:28771", "url": "https://cafe.naver.com/ccrumble/28771", "date": "2026-08-28",
+      "title_kr": "스테이지 정리 (조금씩 의견 받고 수정할 예정) 비겁/쿨링민트/망치공주/그루터기", "title_en": "Stage summary: Coward / Cool Mint / Hammer Princess / Stump",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "Deck guide by 곰은사람을찢어 written at 168-30 (author at 170 by comments): a base auto deck, a CC-boss deck, a Cool Mint deck and a Coward deck, with Pancake as armour shred after the Dark Choco bug fix. The Coward play is: stall the first skills with Hound and Icy Birdie, short moves to stay on the boss, deal damage only on Skating Queen's ice, and hands off during fear. Only one crumblehub image (the first Coward model) could be viewed.",
+      "clears": [
+        { "stage": "202-30", "boss": "쿨링민트", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "Cool Mint deck", "note": "Commenter 악림 cleared with this deck; Ion and Wind Archer clearing Cool Mint's adds were key." },
+        { "stage": "192-30", "boss": "비겁이", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "Coward first model", "note": "Commenter 전종서: swapped Pancake for Dark Choco (8-star); Brightseeker 2-star still dealt good damage; 10-star Cool Mint did too little so swapped to Skating Queen." }
+      ],
+      "teams": [
+        { "name": "Coward first model (비겁이 전용 초기 모델)", "scope": "stage", "for": "비겁한 쿠키 boss (≤168 at writing)",
+          "cookies": [
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "author did not own it yet; used Milky Way in its place" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "?", "stars": "10 (text)", "position": "", "role": "dealer", "note": "used because author's Cool Mint is 10-star with perfect runes; Ion is the default" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer (poison stacks)", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "", "role": "skill-amp buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "ATK buff / heal", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "front, soaks first skills", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "crit buff", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "", "role": "volley synergy", "note": "" },
+            { "kr": "팬케이크맛 쿠키", "en": "Pancake Cookie", "level": "?", "stars": "?", "position": "", "role": "DEF shred", "note": "author's Dark Choco is only 8-star" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "", "role": "heal", "note": "" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "?", "stars": "?", "position": "", "role": "heal", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "?", "stars": "?", "position": "", "role": "ATK reduction", "note": "" }
+          ],
+          "pets": ["갓난갓방울", "와사비 문어", "핫도그도그"], "perks": "", "captain": "", "formation": "crumblehub card image dated 2026-08-28",
+          "why": "Coward hits hard early; sustain plus Skating Queen's ice zone is where damage goes in.",
+          "substitutions": ["Cool Mint -> Ion if Cool Mint is weak", "Brightseeker -> Milky Way", "Low HP: pet -> 초코왕방울 or 얼음과자새"], "unorthodox": ["Pancake over Dark Choco for DEF shred"] },
+        { "name": "Coward second model", "scope": "stage", "for": "비겁한 쿠키", "cookies": [
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "", "role": "shield sustain", "note": "text" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "?", "stars": "?", "position": "", "role": "heal + crit buff", "note": "text" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "", "role": "heal", "note": "text" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "tank until first skills", "note": "text" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "", "role": "ice zone to deal damage on", "note": "text" }
+          ], "pets": ["얼음과자새"], "perks": "", "captain": "", "formation": "image not viewable", "why": "Hound and Icy Birdie hold until Ion/Lime/Herb cast first skills; then their sustain allows short repeated moves onto Coward.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": ["Dark Choco had a bug that was fixed before 2026-08-28 (author considered Pancake after it).", "Comment (곰은사람을찢어): after the 8/27 update the Cake Hound lost value."],
+      "rift": [],
+      "stage_types": [
+        "Base stages: Skating Queen almost fixed when no CC; Rockstar/Lime/Grapevine when sustain is short (desert, ruins, lava); Cheesecake when damage is short.",
+        "CC bosses (망치공주, 그루터기, 설인, 왕방울 - high HP, not recommended): the standard auto deck; after 8/27 Rockstar/Grapevine replace Hound.",
+        "Second CC deck: duration-synergy based, Scorpion main so it must be walked onto stumps/yeti; die instantly if Herb or Cool Mint focus you, control only on contact.",
+        "Cool Mint: Wind Archer for the fountain map's many adds; Brightseeker's skills scatter onto adds so it is unsuitable against Cool Mint; Milky Way for adds, DEF shred (Dark Choco/Pancake), sustain (Herb/Grapevine/Hound or Ion).",
+        "Cool Mint (comment): pushing it into a corner gets everyone killed by two Cool Mint skills at higher stages; Scorpion should fill stacks fast then kite."
+      ],
+      "disagreements": ["Comment CHesed suggested Strawberry Crepe to push adds and corner Cool Mint; author abandoned cornering because two skills wipe the team at higher stages."],
+      "quotes": [{ "kr": "공포 이후엔 쿠키들이 스킬을 써줄 때 까지 손을 대지 않습니다", "en": "After the fear, don't touch anything until the cookies have used their skills." }]
+    },
+    {
+      "source": "naver", "id": "nv:29309", "url": "https://cafe.naver.com/ccrumble/29309", "date": "2026-08-28",
+      "title_kr": "영상 하나로 끝내는 모든 스테이지 최신 공략 (영상)", "title_en": "All stages in one video (video)",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Video link post by 서신우 (the stage-ranking #1 per nv-42520). The body is only a video thumbnail; the first image is empty and the second is a thumbnail.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:29977", "url": "https://cafe.naver.com/ccrumble/29977", "date": "2026-08-29",
+      "title_kr": "시커 & 피노 들어간 스테이지덱 추천", "title_en": "Stage deck with Brightseeker and Pinot Noir",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "An auto deck at 237.06M (author at stage 184) used for every boss except the hammer princess, Coward and Cool Mint. Licorice replaced Dark Choco up front because its summons soak hits. For Coward, swap the slime pet for the Wasabi Octopus.",
+      "clears": [],
+      "teams": [
+        { "name": "Seeker + Pinot auto deck", "scope": "stage", "for": "all bosses except 망치, 비겁, 쿨민 (~stage 184)",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "94", "stars": "?", "position": "front", "role": "crit buff", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "97", "stars": "?", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "94", "stars": "?", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "94", "stars": "?", "position": "front", "role": "skill-amp buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "ATK buff/heal", "note": "captain (banner)" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "95", "stars": "?", "position": "front", "role": "dealer/tank", "note": "sprite and grid card; Crepe runes: skill amp, DMG reduction, HP (comment)" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "95", "stars": "3 (text)", "position": "back", "role": "dealer", "note": "" },
+            { "kr": "감초맛 쿠키", "en": "Licorice Cookie", "level": "94", "stars": "?", "position": "back", "role": "summons as bullet sponges", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "96", "stars": "MAX", "position": "back", "role": "support", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "94", "stars": "?", "position": "back", "role": "crit DMG buff", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "93", "stars": "?", "position": "back", "role": "tank", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "93", "stars": "?", "position": "back", "role": "heal", "note": "" }
+          ],
+          "pets": ["갓난갓방울 (18★)", "와사비 문어 (14★)", "전지멜로우 (7★)"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 237.06M",
+          "why": "Auto clears; if auto stalls, manually close in a little at the start.",
+          "substitutions": ["For Coward: pet slime -> 와사비 문어 (author lacks HP)", "Commenter: Licorice in place of Dark Choco up front; summons soak hits"], "unorthodox": ["Licorice as front-line summon sponge"] }
+      ],
+      "builds": [{ "cookie": "딸기크레페맛 쿠키", "scope": "stage", "sugar_runes": "스증, 피감, 체력", "gear": "", "thresholds": "", "why": "author's comment" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": ["Commenter ero선인: Cool Mint clears on auto without changing the deck."], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:30499", "url": "https://cafe.naver.com/ccrumble/30499", "date": "2026-08-30",
+      "title_kr": "보스 유형별 스테이지 정리 (쿨민 잠수함 패치 이후 시점)", "title_en": "Stages by boss type (after the Cool Mint stealth nerf)",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "After Cool Mint was nerfed, 곰은사람을찢어 rebuilt decks without depending on it: a general deck for normal stages and multi-boss fights (Macaron casts toward Milky Way, so steer or replace Milky Way with Brightseeker), and a Scorpion high-ceiling deck for single bosses and twin yetis. Pet guidance: Chargemellow normally; Kiwi Bird, Icy Birdie or King Choco Drop against hard-hitting bosses; Panda Dumpling and a DEF-shred cookie instead of Skating Queen against launch bosses.",
+      "clears": [],
+      "teams": [
+        { "name": "General / multi-boss deck", "scope": "stage", "for": "normal stages and 2+ bosses",
+          "cookies": [
+            { "kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+            { "kr": "밀키웨이맛 쿠키", "en": "Milky Way Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "Macaron casts toward it; replace with Brightseeker when grown" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "", "role": "skill-amp buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "ATK buff/heal", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "", "role": "heal", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "crit buff", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "", "role": "support", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "", "role": "crit DMG buff", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "" }
+          ],
+          "pets": ["갓난갓방울", "전지멜로우", "핫도그도그"], "perks": "", "captain": "", "formation": "crumblehub card image, 11 cookies, slot 12 open",
+          "why": "Open slot for DEF shred or sustain as the stage needs.",
+          "substitutions": ["DEF shred: 다크초코 / 팬케이크 / 악마", "Sustain heal: 치약초코 / 라임 / 닥터뼈다구 / 포도넝쿨 / 천사; shield: 이온 / 락스타", "Other: 브라이트시커 (dealer), 딸기크레페 (dealer-tank), 감초 (tank), 오렌지 (crit rate), 치즈케이크 (ATK amp), 명랑 (ATK reduction)"],
+          "unorthodox": [] },
+        { "name": "Single-boss Scorpion deck", "scope": "stage", "for": "single boss (+ twin yetis)",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "crit buff", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "", "role": "support", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "", "role": "crit DMG buff", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "", "role": "ATK buff/heal", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "nerfed but good with Scorpion; drop it if yours is weak" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "", "role": "main dealer", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "?", "stars": "?", "position": "", "role": "dealer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "", "role": "skill-amp buffer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "", "role": "volley synergy", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "", "role": "tank", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "", "role": "heal", "note": "" }
+          ],
+          "pets": ["갓난갓방울", "핫도그도그", "(empty; 와사비 문어 suggested)"], "perks": "", "captain": "", "formation": "crumblehub card image",
+          "why": "General deck with Wind Archer/Milky Way swapped for Tiger Lily/Scorpion plus Cool Mint.",
+          "substitutions": ["Weak Cool Mint -> DEF shred or sustain cookie", "Pets: 전지멜로우 normally; 키위새/얼음과자/왕방울 vs hard hitters; launch (띄우는) bosses: drop Skating Queen for a DEF-shred cookie and use 판다만두"], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": ["Cool Mint was stealth-nerfed around 2026-08-28/30 ('쿨민 잠수함 패치').", "Macaron casts its buff toward Milky Way (links cafe post 29088 on buff targeting); manual control needed so all cookies get skills."],
+      "rift": [],
+      "stage_types": ["Ranged multi-bosses: dodge skills by moving, then close in; the bomber (폭파광) needs two 'dodge the dung' moves before closing in.", "Launch bosses: Panda Dumpling pet, DEF-shred cookie instead of Skating Queen."],
+      "disagreements": [],
+      "quotes": [{ "kr": "마카롱이 밀키방향으로 스킬쓴다는 점", "en": "Macaron casts its skill in Milky Way's direction." }]
+    },
+    {
+      "source": "naver", "id": "nv:30567", "url": "https://cafe.naver.com/ccrumble/30567", "date": "2026-08-30",
+      "title_kr": "전투력 보정 35%구간을 위한 비겁한 쿠키 덱", "title_en": "Coward deck for the 35% power-adjust bracket",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "A Coward deck at 57.39M that cleared 128-30, 130-30 and 136-30 in the 35% bracket; Scorpion must be kept on the boss to reach about 15 stacks. It is credited to 별이꽁's 80-30 guide (cafe post 19286). The formation screenshot shows several Lv.1 cookies, Scorpion as captain among them.",
+      "clears": [
+        { "stage": "128-30", "boss": "비겁이", "team_power": "~57.39M (formation)", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "35% Coward deck", "note": "" },
+        { "stage": "130-30", "boss": "비겁이", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "35% Coward deck", "note": "" },
+        { "stage": "136-30", "boss": "비겁이", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "35% Coward deck", "note": "added later" },
+        { "stage": "80-30", "boss": "비겁이", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "35% Coward deck", "note": "commenter 셔츠맛; also Glare" }
+      ],
+      "teams": [
+        { "name": "35% Coward deck", "scope": "stage", "for": "비겁한 쿠키 at the 35% bracket (80-30 to 136-30)",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "93", "stars": "?", "position": "front", "role": "crit buff", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "93", "stars": "?", "position": "front", "role": "skill-amp buffer", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "93", "stars": "?", "position": "front", "role": "crit DMG buff", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "1", "stars": "?", "position": "front", "role": "volley synergy", "note": "Lv.1 in grid" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "94", "stars": "?", "position": "front", "role": "ATK buff/heal", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "1", "stars": "?", "position": "front", "role": "heal", "note": "Lv.1 in grid (green ^^ 48/100)" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "1", "stars": "?", "position": "back", "role": "main dealer (poison stacks)", "note": "captain banner on a Lv.1 fire ranged card" },
+            { "kr": "악마맛 쿠키", "en": "Devil Cookie", "level": "1", "stars": "?", "position": "back", "role": "DEF shred", "note": "sprite id, low confidence" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "1", "stars": "?", "position": "back", "role": "heal", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "1", "stars": "?", "position": "back", "role": "heal + crit", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "1", "stars": "?", "position": "back", "role": "tank", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "1", "stars": "?", "position": "back", "role": "ATK reduction", "note": "hide it behind Coward" }
+          ],
+          "pets": ["핫도그도그 (13★)", "갓난갓방울 (20★)", "와사비 문어 (14★)"], "perks": "", "captain": "전갈맛 쿠키 (banner)", "formation": "team power 57.39M; levels read from the card grid, many Lv.1",
+          "why": "Scorpion stacks poison; keep GingerBright's ATK-down on Coward; keep everyone alive.",
+          "substitutions": [], "unorthodox": ["Many cookies at Lv.1 in the formation grid, including the captain Scorpion (as displayed)"] }
+      ],
+      "builds": [], "mechanics": ["Scorpion needs ~15 stacks on Coward for a 35% clear."], "rift": [],
+      "stage_types": ["Coward (source guide): Scorpion jump 1 -> move, jump 3 -> move, jump 3 -> move; pray poison lands; keep GingerBright behind Coward."],
+      "disagreements": [], "quotes": [{ "kr": "전갈 잘 붙여서 15스텍 정도는 쌓아줘야 가능해요", "en": "Keep Scorpion on the boss and build about 15 stacks, or it won't work." }]
+    },
+    {
+      "source": "naver", "id": "nv:30676", "url": "https://cafe.naver.com/ccrumble/30676", "date": "2026-08-30",
+      "title_kr": "손컨 없이 편하게 스테이지 자동 날먹덱", "title_en": "Easy auto stage deck, no manual control",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "An auto deck at 147.49M said to clear all bosses on auto with a little manual help where needed. A commenter notes that anything is easy before stage 168.",
+      "clears": [],
+      "teams": [
+        { "name": "Auto deck 147M", "scope": "stage", "for": "all bosses on auto (pre-168)",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "90", "stars": "?", "position": "front", "role": "crit buff", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "front", "role": "dealer", "note": "captain (banner)" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "95", "stars": "?", "position": "front", "role": "buffer", "note": "" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "85", "stars": "?", "position": "front", "role": "heal", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "ATK buff/heal", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "90", "stars": "?", "position": "front", "role": "heal", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "98", "stars": "2", "position": "back", "role": "dealer", "note": "substitute Rye or Melon Soda if not owned" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "92", "stars": "?", "position": "back", "role": "support", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "91", "stars": "?", "position": "back", "role": "crit DMG buff", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "85", "stars": "?", "position": "back", "role": "volley", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "90", "stars": "?", "position": "back", "role": "tank", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "88", "stars": "?", "position": "back", "role": "DEF shred", "note": "" }
+          ],
+          "pets": ["갓난갓방울 (20★)", "와사비 문어 (15★)", "핫도그도그 (14★)"], "perks": "", "captain": "전갈맛 쿠키", "formation": "team power 147.49M",
+          "why": "", "substitutions": ["No TSSR Brightseeker -> 호밀 or 메론소다"], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "168 스테전까진 뭘해도 쉽져", "en": "Before stage 168 anything works." }]
+    },
+    {
+      "source": "naver", "id": "nv:31207", "url": "https://cafe.naver.com/ccrumble/31207", "date": "2026-08-31",
+      "title_kr": "모든 스테이지 조합 공략 (시커 버전)", "title_en": "All-stage team guide (Brightseeker version)",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Video guide by 서신우; the image shows a 5-star Brightseeker (about 250k KRW spent). In comments he gives his fallback ladder when short on power at 214-30 Cool Mint (asker needs 449M), ending with parking until the next day.",
+      "clears": [],
+      "teams": [],
+      "builds": [],
+      "mechanics": ["When power is short: swap to dealers that add more team power; for Cool Mint, knock yourself right at the end of the tornado and split the hits so healers can be dropped; replace Grapevine with Pinot Noir; add a dealer in Lime's slot; if survival then fails, spend idle rewards or bag coins to grow, otherwise wait until the next day (park)."],
+      "rift": [],
+      "stage_types": ["Cool Mint: at tornado end bounce right and retry to split hits."],
+      "disagreements": [],
+      "quotes": [{ "kr": "그것까지 사용하고도 안 되면 현재 한계가 거기라는 거니 다음 날 하는 식으로 진행합니다.", "en": "If it still fails after that, that's your current limit, so try again the next day." }]
+    },
+    {
+      "source": "naver", "id": "nv:31252", "url": "https://cafe.naver.com/ccrumble/31252", "date": "2026-08-31",
+      "title_kr": "216-30 원펀맨급 비겁 허리꺾어잡은 덱 공유", "title_en": "216-30 Coward cleared: deck share",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "The crumblehub screenshot for 216-30 (Coward, 1 boss) gives recommended power 792M and bracket cutoffs: 15% ≥158M, 35% ≥317M, 55% ≥475M, 75% ≥634M, 100% ≥792M, 120% ≥951M. The author (477M at 217-1) cleared at the 55% cut and recommends hitting it; Scorpion accuracy 932.12 and focus 789.34. A commenter pushing at 35% finds 210+ a wall; the author was then stuck at 224-30 at 35%.",
+      "clears": [
+        { "stage": "216-30", "boss": "비겁한 쿠키", "team_power": "477M 614K (profile at 217-1)", "recommended_power": "792M", "bracket": "55", "result": "clear", "play": "manual", "retries": "", "team": "216-30 Coward deck", "note": "477/792 = 60%; author recommends matching the 55% cut" },
+        { "stage": "224-30", "boss": "비겁이", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "fail", "play": "manual", "retries": "", "team": "", "note": "author stuck; 'only with luck at 35%'" }
+      ],
+      "teams": [
+        { "name": "216-30 Coward deck", "scope": "stage", "for": "비겁한 쿠키 216-30",
+          "cookies": [
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "", "role": "main dealer", "note": "명중 932.12, 회피 521.16, 집중 789.34" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "100", "stars": "?", "position": "", "role": "dealer", "note": "from cookie bar" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "ice zone", "note": "damage on her field" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "?", "position": "", "role": "fast stacks", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "", "role": "heal/crit", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "ATK buff", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "", "role": "tank", "note": "" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "", "role": "shield", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "heal", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "", "role": "DEF shred", "note": "runes half focus, half skill haste; 0 skill haste on gear" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "?", "position": "", "role": "ATK reduction", "note": "" }
+          ],
+          "pets": ["와사비 문어", "갓난갓방울", "(DMG reduction pet)"], "perks": "", "captain": "?", "formation": "cookie bar read from 217-1 screenshot; preset 스테이지",
+          "why": "Deal damage on Skating Queen's field; Tiger Lily for fast Scorpion stacks.",
+          "substitutions": ["Author's 224-30 suggestion: 시커 전갈 석류 피겨 정글 라임 우유 들개 이온 허브 닼초 + pets 핫도그 갓방울 와사비; perks 방어구 수리 특약 + 지원(체력 5%)"], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "다크초코 쿠키", "scope": "stage", "sugar_runes": "집중 / 스가 half and half", "gear": "", "thresholds": "", "why": "debuff needs focus" }],
+      "mechanics": ["crumblehub 216-30: recommended power 792M; brackets <10% 1% (≤79.2M), ≥10% 5% (≥79.2M), ≥20% 15% (≥158M), ≥40% 35% (≥317M), ≥60% 55% (≥475M), ≥80% 75% (≥634M), ≥100% 100% (≥792M), ≥120% 120% (≥951M)."],
+      "rift": [],
+      "stage_types": ["Coward: deal damage inside Skating Queen's field; stack Scorpion fast with Tiger Lily."],
+      "disagreements": [],
+      "quotes": [{ "kr": "210 이후부터는 진짜 너무 벽인데 35% 트라이 클각 가능하다고 보시나요?", "en": "(commenter 신흥점) From 210 on it's a real wall — do you think 35% attempts can clear?" }, { "kr": "전갈 20스텍 풀로 박고 공포 나올때까지 보스피를 30프로도 못 까네요.", "en": "Even with full 20 Scorpion stacks I can't take 30% of the boss's HP before fear." }]
+    },
+    {
+      "source": "naver", "id": "nv:32190", "url": "https://cafe.naver.com/ccrumble/32190", "date": "2026-08-31",
+      "title_kr": "200스테이지까지 민 스테이지 덱 구성", "title_en": "Stage deck that pushed to 200",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "A nine-cookie base plus three dealers. The key is Pomegranate's buff order: its skill goes first to the projectile-speed receiver (Milk), then by highest ATK, reaching five cookies once Herb adds volley +2. Tune levels and runes so Milk, Skating Queen, Macaron and two dealers are the top-ATK cookies. For Coward and Cool Mint, drop Pinot Noir, Licorice and one dealer for Ion, GingerBright and Grapevine.",
+      "clears": [],
+      "teams": [
+        { "name": "Base 9 + 3 dealers", "scope": "stage", "for": "general pushing to 200",
+          "cookies": [
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100 (comment: all 12 at 100 now)", "stars": "?", "position": "", "role": "skill-amp buffer", "note": "its ATK need not be tuned" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "ATK buff/heal", "note": "captain; highest ATK; runes all ATK amp" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "crit DMG buff", "note": "runes 1 skill amp, 2 skill haste, 3 DMG reduction" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "crit buff", "note": "must stay above the non-target cookies in ATK" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "heal, volley +2 to Pomegranate", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "", "role": "tank", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "", "role": "DEF shred; melee front", "note": "dies early; still the best melee option" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "", "role": "support", "note": "" },
+            { "kr": "감초맛 쿠키", "en": "Licorice Cookie", "level": "100", "stars": "?", "position": "", "role": "summons draw airborne aggro and soak big hits", "note": "runes skill amp, skill haste, DMG reduction" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "", "role": "dealer 1", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "", "role": "dealer 2", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "", "role": "dealer 3", "note": "ATK set below Macaron" }
+          ],
+          "pets": ["갓난갓방울", "와사비 문어", "핫도그도그 (or 전지멜로우 with 2+ rapid-fire dealers)"], "perks": "열정페이 (ATK 7% perk first per text; switch to HP perk if damage isn't survivable)", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+          "formation": "crumblehub cards show the 9-cookie base",
+          "why": "A buffed Skating Queen and Macaron lifting one dealer beats four dealers each receiving Pomegranate.",
+          "substitutions": ["Dealer options: 메론소다, 딸기크레페, 바람궁수, 위치베리, 쿨링민트; no 5-star Seeker -> Melon Soda or Crepe", "Coward/Cool Mint: remove Pinot, Licorice, one dealer; add Ion, GingerBright, Grapevine (and Tiger Lily); pets 얼음과자새 or 왕방울 if damage too heavy", "Macaron -> Lime (heal + crit buff, wider)", "Stuck at 120-11: add Tiger Lily if Herb isn't 5-star"],
+          "unorthodox": ["Levelling non-target cookies down to control Pomegranate's buff targets"] }
+      ],
+      "builds": [
+        { "cookie": "바삭튼튼 소아과 의사 우유맛 쿠키", "scope": "stage", "sugar_runes": "공증 as much as possible", "gear": "", "thresholds": "", "why": "Milk must be highest-ATK for the passion-pay perk" },
+        { "cookie": "dealers", "scope": "stage", "sugar_runes": "스증 max, then 치확/치피", "gear": "", "thresholds": "", "why": "with Milk's buff ATK amp is inefficient on dealers" },
+        { "cookie": "정글전사 쿠키", "scope": "stage", "sugar_runes": "스가, 피감", "gear": "", "thresholds": "", "why": "skill haste so Tiger Lily casts before Pomegranate (both 10s CD) to give volley" },
+        { "cookie": "명랑한 쿠키", "scope": "stage", "sugar_runes": "1 피감, 2 집중", "gear": "", "thresholds": "", "why": "" }
+      ],
+      "mechanics": ["Pomegranate fires 3 regardless of stars; volley synergy raises the count; Herb's skill gives volley +2 so from its second skill it fires 5.", "Pomegranate priority: projectile-speed (탄속) receiver first (Milk), then highest ATK at the moment of cast; Milk's ATK buff can let others steal the buff.", "Volley drop-off on Scorpion is a duration issue: needs Milk's and Wasabi Octopus's duration synergy."],
+      "rift": [],
+      "stage_types": ["Coward and Cool Mint use nearly the same deck; survive first, damage is enough with buffed Scorpion.", "Hammer/stump bosses: Licorice summons pull airborne aggro."],
+      "disagreements": [], "quotes": [{ "kr": "석류버프를 딜러 4명이 받는 것보다 석류버프를 받은 피겨여왕, 마카롱의 버프를 받는 딜러 1명이 더 셉니다.", "en": "One dealer buffed by a Pomegranate-buffed Skating Queen and Macaron beats four dealers each taking Pomegranate's buff." }]
+    },
+    {
+      "source": "naver", "id": "nv:32484", "url": "https://cafe.naver.com/ccrumble/32484", "date": "2026-08-31",
+      "title_kr": "모르는사람들이 많은거같아서 장비 프리셋 제가하는방법 알려드림(슈가룬꿀팁추가)*사진추가 / 우유공증에대한 개인적인견해 추가(26.09.23)", "title_en": "How I set gear presets (stage / arena / single-boss)",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "Gear-preset guide by 레벅, updated 2026-09-23. The stage preset takes crit resistance (치저) for inflated power (뻥투력), which raises the bracket. Weapon gets skill amp + crit DMG; other slots skill amp, skill haste, DMG reduction, crit resistance; armour crit resistance + HP or DMG reduction. After a nerf, accuracy and focus of about 900 each is enough for stages; if they're too high, drop them for high-power gear. The auto-open filter screenshot checks crit DMG, crit resistance, skill amp, DMG reduction and skill haste.",
+      "clears": [], "teams": [],
+      "builds": [
+        { "cookie": "all (stage preset)", "scope": "stage", "sugar_runes": "", "gear": "Weapon: 스증 + 치피. Accessories: 스증/스가, 치저/스가. Armour: 치저 + 체력 or 피감 (* slots swappable). Auto-open filter: 치명피해, 치명저항, 스킬증폭, 피해감소, 스킬가속 (9/23: 스증, 스가, 치피, 피감, 명중).", "thresholds": "명중 and 집중 about 900+ each is enough for stages after the nerf", "why": "치저 inflates power (뻥투력), raising the power-adjust bracket; stage damage multiplier depends on power" },
+        { "cookie": "all (arena preset)", "scope": "arena", "sugar_runes": "", "gear": "Weapon 스증 + 치피; accessories 스가 + 스증 (or 스가 + 치피); armour 피감 + 체력", "thresholds": "", "why": "Inflated power is useless in arena; HP beats crit resistance with HP pets" },
+        { "cookie": "all (single big boss)", "scope": "conquest", "sugar_runes": "", "gear": "Weapon 치피 + 스증; accessories 스증 + 스가 and 스가 + 이속; armour 피감 + HP", "thresholds": "", "why": "Move speed cuts run-in and post-airborne return time in timed boss fights" },
+        { "cookie": "dealers/supports", "scope": "both", "sugar_runes": "스증 first (multiplicative with ATK and crit DMG); cookies whose skills don't scale with skill amp: 집중 + 스가", "gear": "", "thresholds": "", "why": "Skill amp has no other source besides gear and Pomegranate" }
+      ],
+      "mechanics": [
+        "Inflated power (뻥투력) from crit resistance counts only for the stage power adjustment; elsewhere substat priority matters more (author comment).",
+        "Low team power makes stages hard because of the stage power adjustment (author reply).",
+        "As of the 2026-09-23 edit: stages were nerfed so that ~900 accuracy and ~900 focus each suffice; if they're too high, uncheck them and pick high-power gear to raise the adjustment.",
+        "9/23 preset update noted in the header."
+      ],
+      "rift": [], "stage_types": [],
+      "disagreements": [
+        "Milk runes: author 레벅 argues ATK amp and skill amp at ~1:1 (lab already gives 350%+ ATK amp by lab 79 / guild lab 13); commenters 차나리, Thiss and '가방은 항상 두개' (at stage 290) insist on all-ATK-amp Milk so it wins the passion-pay +20% ATK perk and because Pomegranate already gives 200%+ skill amp.",
+        "Arena: author says HP over crit resistance and evasion is useless; others use crit resistance."
+      ],
+      "quotes": [
+        { "kr": "치명저항을 꼭 넣어야합니다 왜냐하면 뻥투력이 확올라서 투력컷이 올라갑니다", "en": "You must include crit resistance, because it inflates power and raises your power cut." },
+        { "kr": "스테는 명집중 각 900이상정도로만 유지해도 스테이지는 충분히 잘 밀수있게 너프가되었습니다.", "en": "Stages were nerfed so keeping accuracy and focus at about 900+ each is enough to push well." },
+        { "kr": "현직 290스테입니다.", "en": "(commenter) I'm currently at stage 290." }
+      ]
+    },
+    {
+      "source": "naver", "id": "nv:33662", "url": "https://cafe.naver.com/ccrumble/33662", "date": "2026-09-02",
+      "title_kr": "초보를 위한 스테이지 초고속팁", "title_en": "Fast stage tip for beginners",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Tip: with Scorpion most stages clear on auto; against blocking bosses (Coward, Cool Mint, the rat bikers), move Scorpion right in front of the boss's face to stack fast. Images could not be viewed.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Coward, Cool Mint, rat biker (쥐토바이): position Scorpion at the boss's face to stack fast."],
+      "disagreements": ["Commenter: 'a beginner writing for beginners'."], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:33734", "url": "https://cafe.naver.com/ccrumble/33734", "date": "2026-09-02",
+      "title_kr": "업데이트 이후 스테이지/보스별 덱 2종", "title_en": "Two post-update stage decks",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "A field/general rapid-fire deck (pickup pet 10★+ needed), which auto-clears the hammer princess, stumps and the gang, sometimes even Cool Mint; the gang's first hits can kill Herb, so parking there is manual. A combined Cool Mint and Coward deck at 330.5M: park Cool Mint in the left corner and stick to Coward. Scorpion was left out of the first deck because it needs parking next to bosses.",
+      "clears": [],
+      "teams": [
+        { "name": "Cool Mint & Coward deck", "scope": "stage", "for": "쿨링민트 and 비겁한 쿠키",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front", "role": "crit buff", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "?", "stars": "?", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "?", "stars": "?", "position": "front", "role": "heal", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "front", "role": "ATK buff/heal", "note": "captain (comment)" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "front", "role": "heal", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "3 (comment)", "position": "back", "role": "dealer", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "back", "role": "dealer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "back", "role": "buffer", "note": "" },
+            { "kr": "락스타맛 쿠키", "en": "Rockstar Cookie", "level": "?", "stars": "?", "position": "back", "role": "shield", "note": "sprite id" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "back", "role": "tank", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "?", "stars": "?", "position": "back", "role": "ATK reduction", "note": "" }
+          ],
+          "pets": ["새콤달곰 (20★)", "갓난갓방울 (20★)", "핫도그도그 (18★)"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 330.5M",
+          "why": "One deck for both control bosses.", "substitutions": ["Brightseeker -> Milky Way should be fine (many dealers)"], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Cool Mint: park in the left corner. Coward: stick to the boss.", "Gang (폭주단): Herb can eat all three basic hits at the start; park manually."],
+      "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:34156", "url": "https://cafe.naver.com/ccrumble/34156", "date": "2026-09-03",
+      "title_kr": "230스테까지 민 각 보스별 덱(망치공주/비겁이/쥐돌이/쿨링민트/폭주단트럭), 방치덱", "title_en": "Per-boss decks to stage 230, plus idle deck",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "Per-boss decks from 꿀빵 (at 230), all Lv.100 at 641–690M, with Brightseeker only 2★. Tips: for the gang truck, run down toward 7 o'clock; for Cool Mint, use the hammer deck and move to the far bottom-left; for the rats, move directly below the three rats at start and retry unless they bunch. Perk: DMG-reduction Health Insurance (Lv4 mercs).",
+      "clears": [],
+      "teams": [
+        { "name": "Hammer princess deck (also Cool Mint)", "scope": "stage", "for": "망치공주, 쿨링민트",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "2", "position": "back", "role": "dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "back", "role": "lift resistance", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "back", "role": "", "note": "captain" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" }
+          ],
+          "pets": ["갓난갓방울 (20★)", "얼음과자새 (19★)", "판다만두 (16★)"], "perks": "의료보험 (피감)", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 671.13M", "why": "Panda + Pinot vs launches", "substitutions": [], "unorthodox": [] },
+        { "name": "Coward deck", "scope": "stage", "for": "비겁한 쿠키",
+          "cookies": [
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "2", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "", "note": "captain" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" }
+          ],
+          "pets": ["갓난갓방울 (20★)", "와사비 문어 (18★)", "얼음과자새 (19★)"], "perks": "의료보험", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 641.09M", "why": "", "substitutions": [], "unorthodox": ["Brightseeker at only 2★ still fielded"] },
+        { "name": "Rat (쥐돌이) deck", "scope": "stage", "for": "쥐돌이 / rat bikers",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "front", "role": "", "note": "red-haired cookie in black coat; fire, bell icon in grid" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "", "note": "captain" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "2", "position": "back", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" }
+          ],
+          "pets": ["갓난갓방울 (20★)", "와사비 문어 (18★)", "얼음과자새 (19★)"], "perks": "의료보험", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 671.69M; pets corrected by author after a panda mix-up", "why": "", "substitutions": [], "unorthodox": [] },
+        { "name": "General / idle deck", "scope": "stage", "for": "misc bosses, all-in-one",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "back", "role": "", "note": "captain" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" }
+          ],
+          "pets": ["핫도그도그 (20★)", "전지멜로우 (13★)", "갓난갓방울 (20★)"], "perks": "의료보험", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 689.53M", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Gang truck (폭주단 트럭): run straight toward 7 o'clock.", "Cool Mint: hammer deck, move to the far bottom-left.", "Rats (쥐돌이): at start move directly below the three rats; if they bunch after moving it works, if they scatter, retry."],
+      "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:34395", "url": "https://cafe.naver.com/ccrumble/34395", "date": "2026-09-03",
+      "title_kr": "227~248 35% 클리어 덱 공유 (+일부 내용 추가)", "title_en": "Decks that cleared 227–248 at 35%",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "김냥냥 cleared 227 to 248 in the 35% bracket, including 248-30 Coward at 855M. Perks: Passion Pay on Milk (semi-fixed) plus Armor Repair or Rapid Promotion; pets: Holy Baby Drop fixed plus a situational pair. Decks: base 1–2 mob, base multi-mob (assassins, poison mushrooms, cake hounds), Coward (ATK order Milk > Scorpion, Skating Queen > Macaron, Seeker), and boss-specific screenshots. A 35% Coward needs about an hour of retries: full Scorpion stacks, buffs and Dark Choco's DEF shred must all land.",
+      "clears": [
+        { "stage": "248-30", "boss": "비겁한 쿠키", "team_power": "855M 123K", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "~1 hour typical at 35% (author comment)", "team": "35% Coward deck", "note": "CRISPY CLEAR screenshot, account Lv.169; cookies Lv100 except 들개 92, 이온 94, 다크초코 96" },
+        { "stage": "242-30", "boss": "쿨링민트맛 쿠키", "team_power": "725M 666K", "recommended_power": "?", "bracket": "35", "result": "?", "play": "manual", "retries": "attempt 4 shown", "team": "Cool Mint deck", "note": "screenshot mid-fight, 0% boss HP shown" },
+        { "stage": "230-30", "boss": "쿨링민트", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "Base 1–2 mob deck", "note": "commenter jdpjdp; Crepe cleared the adds" },
+        { "stage": "216-10", "boss": "삼토바이 (three rat bikers)", "team_power": "429M", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "commenter 우앙구욷" },
+        { "stage": "224-30", "boss": "비겁이", "team_power": "551M", "recommended_power": "?", "bracket": "35", "result": "fail", "play": "manual", "retries": "", "team": "", "note": "commenter 왕복이 struggling; author: 35 Coward needs heavy retries" }
+      ],
+      "teams": [
+        { "name": "Base 1–2 mob deck", "scope": "stage", "for": "stages with 1–2 bosses", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "clears adds instantly" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "위치베리맛 쿠키", "en": "Witchberry Cookie", "level": "?", "stars": "?", "position": "front", "role": "dealer", "note": "sprite id (witch hat)" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "many 1–2 mob bosses carry CC (yeti, 마오카이, candy golem, mint, hammer)" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" }
+          ], "pets": ["갓난갓방울 (20★)", "핫도그도그 (19★)", "전지멜로우 (16★)"], "perks": "열정페이 (우유) + 방어구 수리 특약 or 초고속 승진", "captain": "", "formation": "preset 3, team power 667.13M",
+          "why": "", "substitutions": ["Launch stages (yeti etc.): 핫도그 or 전지 -> 판다만두", "Eagle/마오카이 needing Licorice summon tanks: 딸크 -> 감초", "Need to survive: 딸크 -> 이온", "호밀, 메소, 포도 also usable"], "unorthodox": [] },
+        { "name": "Base multi-mob deck", "scope": "stage", "for": "assassins, poison-horn mushrooms, cake hounds (many mobs)", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "front", "role": "gives rapid-fire immediately to Macaron/Rye/Crepe", "note": "better than Grapevine here" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "?", "stars": "?", "position": "front", "role": "", "note": "sprite id" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "트위즐젤리맛 쿠키", "en": "Twizzly Gummy Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "sprite id" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "?", "stars": "?", "position": "back", "role": "", "note": "" }
+          ], "pets": ["갓난갓방울 (20★)", "핫도그도그 (19★)", "전지멜로우 (16★)"], "perks": "열정페이 + 방어구 수리 특약", "captain": "", "formation": "preset 5, team power 673.04M",
+          "why": "Split damage to keep the front alive, fight in the centre.", "substitutions": ["Short on damage: 들개 -> 위치베리; 방수특 -> 초고속 승진", "CC multi-mobs (poison-horn mushroom): add Wind Archer and bunch on the left"], "unorthodox": [] },
+        { "name": "35% Coward deck", "scope": "stage", "for": "비겁한 쿠키 at 35% (to 248-30)", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "front", "role": "ATK rank 4–5", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "front", "role": "ATK rank 2–3", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "front", "role": "ATK rank 2–3", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "ATK rank 1", "note": "captain (banner on cookie bar)" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "94", "stars": "?", "position": "front", "role": "shield", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "96", "stars": "?", "position": "front", "role": "DEF shred", "note": "runes: SSR skill haste + DMG reduction + focus; focus up to SR" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "back", "role": "ATK rank 4–5", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "100", "stars": "?", "position": "back", "role": "survival", "note": "preferred over Tiger Lily" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "92", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "?", "position": "back", "role": "ATK reduction", "note": "" }
+          ], "pets": ["얼음과자새 (19★)", "갓난갓방울 (20★)", "근엄한 초코왕방울 (10★)"], "perks": "열정페이 (우유) + 방어구 수리 특약 or 초고속 승진", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "preset 1, team power 649.13M; 248-30 cleared at 855M",
+          "why": "Few dealers, so tune ATK order for buff routing.", "substitutions": ["포도 <-> 정전 (Tiger Lily) possible", "No King Choco Drop -> 얼음과자새"], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "다크초코 쿠키", "scope": "stage", "sugar_runes": "SSR skill haste + DMG reduction + focus (focus at SR)", "gear": "", "thresholds": "", "why": "35% Coward needs the DEF shred to land" }],
+      "mechanics": [
+        "A 35% Coward clear needs full Scorpion stacks plus buffs plus Dark Choco's DEF shred all landing; plan on an hour of retries.",
+        "Commenter jdpjdp: every stage has a recommended power; below it your damage only lands at 35%.",
+        "Wind Archer's DPS is poor under 8 mobs; usable at 8+."
+      ],
+      "rift": [],
+      "stage_types": [
+        "Coward: approach, land GingerBright's ATK-down, follow its movement stacking Scorpion, move after the motion ends, no input until fear, after fear cast Scorpion to refresh stack time, then reposition where Macaron/Milk/Skating Queen buffs reach.",
+        "Biker gang (폭주단 바이커): split hits to keep Dark Choco alive running right; back line takes the 2nd hit; pull left so the middle takes the 3rd and bunch; then pray the rats move well.",
+        "Plant-eater (식쿠식물): close in a little, then stick after Licorice's summons.",
+        "No-CC multi-mobs (hounds, assassins, durian): spread damage to keep the front alive, fight in the centre. CC multi-mobs (poison-horn mushroom): Wind Archer, bunch on the left.",
+        "Spiders: drop Crepe for Twizzly and gather them onto Skating Queen's field.",
+        "Hammer: plant deck plus Panda and Pinot."
+      ],
+      "disagreements": [],
+      "quotes": [{ "kr": "35 비겁이는 한시간은 리트 할 생각 하셔야돼요ㅠㅠ 전갈 풀스택+버프+닼초방깎 다 맞아야 가능해서", "en": "For Coward at 35%, expect an hour of retries: full Scorpion stacks, buffs and Dark Choco's shred all have to land." }]
+    },
+    {
+      "source": "naver", "id": "nv:34626", "url": "https://cafe.naver.com/ccrumble/34626", "date": "2026-09-03",
+      "title_kr": "226-30 쿨링민트 35퍼 클리어 영상 (596M)", "title_en": "226-30 Cool Mint cleared at 35% (596M)",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "Cool Mint 226-30 was cleared at 596M in the 35% bracket; the 55% cut is 635M. Brightseeker was lowered to Lv.98 so the ATK top 3 is Milk, Scorpion, Skating Queen. Play: stick to the boss at start; after Cool Mint's first burst, spin the joystick a full circle to regroup; once stacks are nearly full, let Seeker and Scorpion take Milk and Skating Queen buffs. Five tries after the level change, three hours in total.",
+      "clears": [
+        { "stage": "226-30", "boss": "쿨링민트", "team_power": "596M", "recommended_power": "? (post: 55% cut = 635M, which implies ~1.06G)", "bracket": "35", "result": "clear", "play": "manual", "retries": "~3 hours of deck changes; 5 tries after lowering Seeker's level", "team": "", "note": "" },
+        { "stage": "234-30", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "3", "team": "", "note": "commenter 린가드응 using this method" }
+      ],
+      "teams": [],
+      "builds": [],
+      "mechanics": ["Lowering a dealer's level (Seeker to 98) to fix the ATK order Milk > Scorpion > Skating Queen for buff routing."],
+      "rift": [],
+      "stage_types": ["Cool Mint: move to the far end at start, take the drill, then spin the joystick a full circle to bunch; repeat; commenters call it a cheat code."],
+      "disagreements": [], "quotes": [{ "kr": "쿨링민트한테 한번 펑 터지고 나면 조이스틱을 한바퀴 빙글 돌려서 캐릭터들 모아줍니다", "en": "After Cool Mint bursts once, spin the joystick a full circle to gather your cookies." }]
+    },
+    {
+      "source": "naver", "id": "nv:34705", "url": "https://cafe.naver.com/ccrumble/34705", "date": "2026-09-03",
+      "title_kr": "[TIP] 장비 심화 가이드", "title_en": "[TIP] Advanced gear guide",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "Gear-power weighting: gear power is designed around balanced stats, so duplicate stats add little and filling a missing stat adds a lot; heavy accuracy/focus gear lowers team power and hurts the power adjustment. Focus only matters if accuracy lands first (a miss means 0% debuff chance). Recommendation by bracket: 35% attempt = accuracy/focus-heavy gear; 55% = combat gear with a little accuracy/focus; 75%+ = any options. Images could not be viewed.",
+      "clears": [], "teams": [],
+      "builds": [
+        { "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "35% attempts: accuracy/focus-focused set (lower power but fewer retries). 55% attempts: combat set (balanced options, higher power) with a little accuracy/focus. 75%+: pick wanted options.", "thresholds": "", "why": "Power weighting per stat: balanced stats raise power; accuracy/focus-heavy lowers it" }
+      ],
+      "mechanics": [
+        "Same item gives different power depending on current stats (e.g. necklace focus -> skill amp raised a sword's power ~300k); overstacking a stat can reduce power.",
+        "Miss = 0% debuff chance; on hit, skill chance plus focus vs resistance applies. The official answer declined to give the focus/resistance formula.",
+        "Commenter reply: hit chance appears to combine own accuracy + accuracy% against enemy evasion + evasion%."
+      ],
+      "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "35퍼 트라이 = 명/집중 위주 세팅 55퍼 트라이 = 명/집중 살짝 챙긴 전투용 세팅 75퍼 이상 트라이 = 원하는 옵션 챙기기", "en": "35% attempt = accuracy/focus set; 55% attempt = combat set with a little accuracy/focus; 75%+ = whatever options you want." }]
+    },
+    {
+      "source": "naver", "id": "nv:35222", "url": "https://cafe.naver.com/ccrumble/35222", "date": "2026-09-04",
+      "title_kr": "[비쿠] 비겁한 쿠키 전 구간 통용 클리어영상", "title_en": "[Coward] clear video usable at every stage",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Video of a Coward movement pattern said to work at every stage: approach and stop, move up, move down, then move right or diagonally right onto the boss. Before fear, cross slightly to the far side of the boss. Pets: Hot Doggie, Holy Baby Drop, Icy Birdie or anything.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Coward: front-stop -> up -> down -> right/diagonal-right onto the boss; before fear, cross slightly to the opposite side of Coward."],
+      "disagreements": [], "quotes": [{ "kr": "첫 무빙만 따라하시면 나머지는 클리어가 따라옵니다.", "en": "Copy the first movement and the clear follows." }]
+    },
+    {
+      "source": "naver", "id": "nv:35274", "url": "https://cafe.naver.com/ccrumble/35274", "date": "",
+      "title_kr": "", "title_en": "Members-only post (login required; not captured)",
+      "relevance": 0, "scope": "stage",
+      "summary_en": "Refused: login required (errorCode 0004).",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:35278", "url": "https://cafe.naver.com/ccrumble/35278", "date": "2026-09-04",
+      "title_kr": "35% 투력컷 비겁이를 쉽게 잡아보자 (21630 378m)", "title_en": "Easy Coward at the 35% cut (216-30 at 378M)",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "216-30 and 211-30 Coward were cleared at 378M in the 35% bracket; 216-30's recommended power is 792M (per nv-31252), so 378M is 47.7%. ATK order: Milk, Scorpion, Skating Queen, Brightseeker, with Lime 4th–5th ideally. Perk: support HP up (Passion Pay at Lv4 mercs); pets Holy Baby Drop, King Choco Drop, Wasabi Octopus; a 5★ Seeker is recommended. The post gives a detailed fire-breath sequence.",
+      "clears": [
+        { "stage": "216-30", "boss": "비겁한 쿠키", "team_power": "378M 362K", "recommended_power": "792M (crumblehub, nv-31252)", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "378M Coward deck", "note": "CRISPY CLEAR screenshot; account Lv.152 육스스; preset 토벌+아레나" },
+        { "stage": "211-30", "boss": "비겁한 쿠키", "team_power": "~378M", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "378M Coward deck", "note": "" }
+      ],
+      "teams": [
+        { "name": "378M Coward deck", "scope": "stage", "for": "비겁한 쿠키 at 35%", "cookies": [
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "", "role": "dealer, ATK rank 4", "note": "5★ recommended" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "", "role": "ATK rank 2; 10 stacks before first fire", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "96", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "ATK rank 3; ice field", "note": "" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "98", "stars": "?", "position": "", "role": "", "note": "sprite id" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "96", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "", "role": "ATK rank 4–5 ideal", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "ATK rank 1", "note": "captain (banner)" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "96", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "?", "position": "", "role": "ATK reduction; must land or retry", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "first bar slot greyed (dead); Macaron -> Ion also good" }
+          ], "pets": ["갓난갓방울", "근엄한 초코왕방울", "와사비 문어"], "perks": "지원 체력 증가 (Lv4: 열정페이)", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "cookie bar from the clear screenshot",
+          "why": "", "substitutions": ["마카롱 -> 이온"], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Coward at 35%: drag right at once so GingerBright and the boss touch; after ~0.5s release and drag right again; if GingerBright's ATK-down misses, retry. When the boss dashes, move only as far as needed for Scorpion's 10 stacks and stop before the first fire. Survive the 2nd fire and the 3rd–4th are usually fine. After the first fire, only drag to regroup; get dealers onto the ice field and stay still. Near the end of the 4th fire, centre the boss and split cookies left/right so fear sends them opposite ways. If that fails, don't force damage in the 5th fire; dodge, then stick. Briefly releasing the drag lets skills fire."],
+      "disagreements": [], "quotes": [{ "kr": "명량 공깎 안묻으면 리트", "en": "If GingerBright's ATK-down doesn't land, retry." }]
+    },
+    {
+      "source": "naver", "id": "nv:40831", "url": "https://cafe.naver.com/ccrumble/40831", "date": "2026-09-14",
+      "title_kr": "무과금 184-30 비겁이 클리어덱 공유 191M", "title_en": "F2P 184-30 Coward clear deck, 191M",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "An F2P player cleared 184-30 Coward at ~191M (screenshot at 185-1: 191M 887K), with breakthrough 642, fame 74, lab 56. Commenters cleared with it; the key is every cookie surviving Coward's first attack, then Skating Queen's field and Dark Choco's skill landing.",
+      "clears": [{ "stage": "184-30", "boss": "비겁이", "team_power": "191M 887K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "F2P Coward deck (명두부)", "note": "F2P; 돌파 642, 명성 74, 연구소 56" }],
+      "teams": [
+        { "name": "F2P Coward deck (명두부)", "scope": "stage", "for": "비겁이 184–192", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "99", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "?", "en": null, "level": "91", "stars": "?", "position": "", "role": "", "note": "light-element support icon; yellow sprite, unidentified" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "90", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "90", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "90", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "90", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "90", "stars": "?", "position": "", "role": "DEF shred", "note": "must survive" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "90", "stars": "?", "position": "", "role": "ATK reduction", "note": "must survive" }
+          ], "pets": ["핫도그도그", "얼음과자새", "갓난갓방울"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "cookie bar read from stage screenshot (preset 두부 베스트)",
+          "why": "", "substitutions": ["Commenter 혼랑: drop Dark Choco for Grapevine when cookies melt"], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Coward: all cookies surviving the first hit matters most; then pray Skating Queen's field and Dark Choco's skill land."],
+      "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:41015", "url": "https://cafe.naver.com/ccrumble/41015", "date": "2026-09-14",
+      "title_kr": "무과금 187-30 비겁이 클리어덱 공유 198M", "title_en": "F2P 187-30 Coward clear deck, 198M",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "The same F2P deck (명두부) cleared 187-30 Coward at ~198M (188-1 screenshot: 198M 981K; breakthrough 644, fame 75, lab 58). Commenters cleared 211, 264 and 192-30 at 324M with it. If Dark Choco or GingerBright dies, retry.",
+      "clears": [
+        { "stage": "187-30", "boss": "비겁이", "team_power": "198M 981K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "F2P Coward deck (명두부)", "note": "preset 아레나 shown" },
+        { "stage": "?", "boss": "비겁이", "team_power": "281M", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "1", "team": "F2P Coward deck (명두부)", "note": "commenter 아이러브로드리" },
+        { "stage": "192-30", "boss": "비겁이", "team_power": "324M", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "1", "team": "F2P Coward deck (명두부)", "note": "commenter 아이러브로드리" },
+        { "stage": "264-?", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "", "note": "commenter 논리적인고구마 '264 클리어' (also 211)" }
+      ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Coward: if Dark Choco or GingerBright dies, retry; Skating Queen is the key."],
+      "disagreements": [], "quotes": [{ "kr": "닼초랑명랑둘중에 하나라도죽으면 리트해야됩니다!", "en": "If either Dark Choco or GingerBright dies, retry." }]
+    },
+    {
+      "source": "naver", "id": "nv:41131", "url": "https://cafe.naver.com/ccrumble/41131", "date": "2026-09-14",
+      "title_kr": "176-30 비겁이덱 (노컨)", "title_en": "176-30 Coward deck (no control)",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "After dozens of retries, 176-30 Coward cleared on its own while the player was away (auto). Deck at 198.68M with Milk captain; pets King Choco Drop, Holy Baby Drop, Icy Birdie.",
+      "clears": [{ "stage": "176-30", "boss": "비겁이", "team_power": "198.68M (formation)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "auto", "retries": "dozens before", "team": "176 no-control deck", "note": "" }],
+      "teams": [
+        { "name": "176 no-control deck", "scope": "stage", "for": "비겁이", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "94", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "93", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "99", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "", "note": "captain" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "90", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "?", "en": null, "level": "94", "stars": "?", "position": "front", "role": "", "note": "pink-haired dark-dress cookie; water support in grid" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "94", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "94", "stars": "MAX", "position": "back", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "94", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "94", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "94", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "98", "stars": "?", "position": "back", "role": "", "note": "" }
+          ], "pets": ["근엄한 초코왕방울 (10★)", "갓난갓방울 (17★)", "얼음과자새 (17★)"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 198.68M",
+          "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:41639", "url": "https://cafe.naver.com/ccrumble/41639", "date": "2026-09-15",
+      "title_kr": "224-30 비겁이 클리어 덱 / 550M 용병단 3렙", "title_en": "224-30 Coward clear deck / 550M, mercs Lv3",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "224-30 Coward was cleared at 550M with mercs at Lv3 after half a day of retries (attempt 3 shown). Captain Brightseeker (or Scorpion if Seeker's stars are low), perk Health Insurance or General Perks; fame 101, lab 72, Stellar all 93%+. Needs 20 Scorpion stacks before fear. A commenter got the 35% adjustment with this deck and cleared in one try, and another cleared 248 with it.",
+      "clears": [
+        { "stage": "224-30", "boss": "비겁한 쿠키", "team_power": "550M 734K", "recommended_power": "?", "bracket": "35 (commenter got 35% with this deck)", "result": "clear", "play": "manual", "retries": "half a day", "team": "224 Coward deck (Seeker captain)", "note": "account Lv.159, mercs Lv3" },
+        { "stage": "248-?", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "224 Coward deck (Seeker captain)", "note": "commenter 논리적인고구마 '248됴 클리어'" }
+      ],
+      "teams": [
+        { "name": "224 Coward deck (Seeker captain)", "scope": "stage", "for": "비겁한 쿠키 ~224", "cookies": [
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "MAX", "position": "front", "role": "dealer", "note": "captain" },
+            { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "front", "role": "", "note": "yellow fluffy sprite, light element (350/500 shards)" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "back", "role": "20 stacks before fear", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "MAX", "position": "back", "role": "", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "MAX", "position": "back", "role": "", "note": "may die around Coward's 2nd attack" }
+          ], "pets": ["갓난갓방울 (20★)", "와사비 문어 (19★)", "얼음과자새 (18★)"], "perks": "의료보험 (or 종합 복지 패키지)", "captain": "브라이트시커 쿠키", "formation": "team power 550.73M",
+          "why": "", "substitutions": ["Low-star Seeker: Scorpion as captain"], "unorthodox": ["Brightseeker as captain instead of Milk"] }
+      ],
+      "builds": [], "mechanics": ["Commenter 논리적인고구마: when crit (치케) procs well it clears even played roughly."], "rift": [],
+      "stage_types": ["Coward: stick at once; stack Scorpion without deaths (GingerBright dying around the 2nd attack is OK); 20 stacks before fear; many team deaths after fear, so retry; after returning, stick to the boss."],
+      "disagreements": [], "quotes": [{ "kr": "공포 전까지 20스텍 쌓여 있어야 성공 확률이 올라가요", "en": "You need 20 stacks before fear for a good success rate." }]
+    },
+    {
+      "source": "naver", "id": "nv:41824", "url": "https://cafe.naver.com/ccrumble/41824", "date": "2026-09-15",
+      "title_kr": "221스테이지 연타덱 / 221-20, 221-30 그루터기", "title_en": "Stage 221 rapid-fire deck / 221-20, 221-30 stump",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Stage 221 rapid-fire deck (screenshot at 221-30, 548M 121K) and a stump deck for 221-20/221-30 (images 2 and 3 not viewed).",
+      "clears": [{ "stage": "221-30", "boss": "그루터기", "team_power": "548M 121K", "recommended_power": "?", "bracket": "?", "result": "?", "play": "auto", "retries": "", "team": "221 rapid-fire deck", "note": "screenshot shows 220-30 clear quest done" }],
+      "teams": [
+        { "name": "221 rapid-fire deck", "scope": "stage", "for": "stage 221 field", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "99", "stars": "?", "position": "", "role": "", "note": "" }
+          ], "pets": ["전지멜로우", "핫도그도그", "갓난갓방울"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "cookie bar from stage screenshot", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:41892", "url": "https://cafe.naver.com/ccrumble/41892", "date": "2026-09-15",
+      "title_kr": "232-30 507.5m", "title_en": "232-30 at 507.5M",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "232-30 Coward was cleared at 507M 547K with the gear preset '명중집중피감' (accuracy 1263, focus 1182); perks DMG reduction + HP. Pomegranate's beam goes to Milk > Scorpion > Skating Queen > Macaron; Hound and Dark Choco stay below Macaron even at Lv100. The author says with the crit mechanic back, the 35% bracket looks clearable.",
+      "clears": [{ "stage": "232-30", "boss": "비겁한 쿠키", "team_power": "507M 547K", "recommended_power": "?", "bracket": "35 (author: '35% 각')", "result": "clear", "play": "manual", "retries": "attempt 1 shown", "team": "232 Coward deck", "note": "gear preset 명중집중피감; 명중 1263, 집중 1182" }],
+      "teams": [
+        { "name": "232 Coward deck", "scope": "stage", "for": "비겁한 쿠키 at 35%", "cookies": [
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "", "role": "ATK rank 2", "note": "" },
+            { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "", "role": "", "note": "yellow light-element sprite" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "beam to Milk > Scorpion > Skating Queen > Macaron", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "ATK rank 3", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "ATK rank 1", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "97", "stars": "?", "position": "", "role": "", "note": "below Macaron in ATK" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "97", "stars": "?", "position": "", "role": "", "note": "below Macaron in ATK" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "", "role": "ATK rank 4", "note": "first bar slot greyed" }
+          ], "pets": ["핫도그도그", "얼음과자새", "갓난갓방울"], "perks": "피감 + 체력", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "cookie bar from stage screenshot",
+          "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "preset 명중집중피감", "thresholds": "명중 1263, 집중 1182", "why": "" }],
+      "mechanics": ["Author: the crit (치케) mechanic came back, which makes 35% look doable."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "치케 메커니즘 돌아오고 35% 각 잘 보이더라구여.", "en": "With the crit mechanic back, the 35% clear looks doable." }]
+    },
+    {
+      "source": "naver", "id": "nv:42016", "url": "https://cafe.naver.com/ccrumble/42016", "date": "2026-09-16",
+      "title_kr": "200-30 비겁이덱(이후 비겁이는 이걸로 다 깨는 중)", "title_en": "200-30 Coward deck (clearing every Coward since)",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "After 100+ retries, adding Brightseeker (Scorpion + Seeker) cleared 200-30 Coward at once; deck power 294.03M. Accuracy 888, focus 822, breakthrough 708, fame 76, lab 63-1. If GingerBright dies, treat it as a fail.",
+      "clears": [{ "stage": "200-30", "boss": "비겁이", "team_power": "294.03M (formation)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "100+ before adding Seeker", "team": "200 Coward deck", "note": "명중 888, 집중 822" }],
+      "teams": [
+        { "name": "200 Coward deck", "scope": "stage", "for": "비겁이 200+", "cookies": [
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "96", "stars": "?", "position": "front", "role": "dealer", "note": "" },
+            { "kr": "?", "en": null, "level": "97", "stars": "?", "position": "front", "role": "", "note": "yellow fluffy light sprite (125/500)" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "97", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "96", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "", "note": "captain" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "96", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "97", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "96", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "96", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "97", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "97", "stars": "MAX", "position": "back", "role": "", "note": "if it dies, restart" }
+          ], "pets": ["핫도그도그 (19★)", "갓난갓방울 (18★)", "얼음과자새 (18★)"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "team power 294.03M",
+          "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:42152", "url": "https://cafe.naver.com/ccrumble/42152", "date": "2026-09-16",
+      "title_kr": "오랜만에 스테이지 덱 공유합니다(에스프레소 밀키웨이 사격덱 전용)", "title_en": "Stage decks: Espresso + Milky Way ranged decks",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "Synergy-routing guide by 곰은사람을찢어. Givers cast on receivers first, then the highest-ATK receiver, then the highest-ATK cookie. Make Espresso the top range-synergy receiver so Macaron casts on it from the deck centre and every dealer (Brightseeker especially) gets Macaron's buff; lower Milky Way's level. Three ranged decks, all captained by Brightseeker with Ammo Provided + Passion Pay: a volley deck for single bosses, a Twizzly deck for 2+ bosses and a Pinot deck for CC resistance. Lowering many dealers to route Pomegranate onto Macaron drops deck power below the 55% adjustment, so he tunes against Skating Queen's ATK instead.",
+      "clears": [],
+      "teams": [
+        { "name": "Volley ranged deck (single)", "scope": "stage", "for": "single boss", "cookies": [
+            { "kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "밀키웨이맛 쿠키", "en": "Milky Way Cookie", "level": "lowered below Espresso", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "?", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "?", "stars": "?", "position": "", "role": "volley so Pomegranate hits 8", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "below Macaron", "stars": "?", "position": "", "role": "power filler", "note": "used for its power; alternatives 치케, 체콜, 들개, 다크초코" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "range synergy giver", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "", "role": "main dealer", "note": "captain" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "에스프레소맛 쿠키", "en": "Espresso Cookie", "level": "100", "stars": "?", "position": "", "role": "top-ATK range receiver", "note": "runes 스가/스증/치피" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" }
+          ], "pets": ["갓난갓방울", "와사비 문어", "핫도그도그"], "perks": "탄약비 전액 지원 + 열정페이", "captain": "브라이트시커 쿠키", "formation": "crumblehub; 4 active synergies, 11 applied",
+          "why": "Pomegranate's second skill reaches 8 cookies with Tiger Lily; only one non-target cookie needs ATK below Macaron.", "substitutions": ["Captain Seeker: ATK order Seeker > Milk > Skating Queen; with Milk captain: Milk > Seeker > Skating Queen"], "unorthodox": ["Cool Mint used purely for team power, levelled below Macaron"] },
+        { "name": "Twizzly ranged deck (2+ bosses)", "scope": "stage", "for": "2+ bosses", "cookies": [
+            { "kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "밀키웨이맛 쿠키", "en": "Milky Way Cookie", "level": "93–95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "에스프레소맛 쿠키", "en": "Espresso Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "93–95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "captain" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "트위즐젤리맛 쿠키", "en": "Twizzly Gummy Cookie", "level": "93–95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "93–95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" }
+          ], "pets": ["갓난갓방울", "와사비 문어", "핫도그도그"], "perks": "탄약비 전액 지원 + 열정페이", "captain": "브라이트시커 쿠키", "formation": "crumblehub; 5 active synergies, 10 applied",
+          "why": "Without Tiger Lily, Pomegranate's second skill hits 5; lower Twizzly/Milky/Mint/Hound below Skating Queen's ATK. Kills mobs fastest.", "substitutions": [], "unorthodox": [] },
+        { "name": "Pinot ranged deck (CC resistance)", "scope": "stage", "for": "CC bosses", "cookies": [
+            { "kr": "바람궁수 쿠키", "en": "Wind Archer Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "밀키웨이맛 쿠키", "en": "Milky Way Cookie", "level": "93–95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "93–95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "에스프레소맛 쿠키", "en": "Espresso Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "93–95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "captain" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "93–95", "stars": "?", "position": "", "role": "lift resistance", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "판다만두"], "perks": "탄약비 전액 지원 + 열정페이", "captain": "브라이트시커 쿠키", "formation": "crumblehub; 6 active synergies, 11 applied", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": [
+        "Synergy givers target receivers first; among several receivers, the highest ATK; with none, the highest-ATK cookie in the deck.",
+        "Pomegranate gives projectile-speed synergy: Milk first, then others by ATK.",
+        "Tuning so Macaron also receives Pomegranate would drop deck power below the 55% power adjustment (author reply).",
+        "If your Seeker is weaker than your Wind Archer, this doesn't apply; with a 6★ Seeker, make Milk ATK #1 and captain instead."
+      ],
+      "rift": [], "stage_types": ["The Twizzly deck kills mobs fastest; Coward and Cool Mint get their own presets."],
+      "disagreements": [], "quotes": [{ "kr": "정글전사 안쓰고 마카롱까지 석류스킬을 받게 하려면 덱 전투력 자체가 많이 떨어져서 전투력 보정이 55퍼가 안나오더라구요", "en": "Getting Pomegranate onto Macaron without Tiger Lily drops deck power so far that the adjustment falls below 55%." }]
+    },
+    {
+      "source": "naver", "id": "nv:42177", "url": "https://cafe.naver.com/ccrumble/42177", "date": "2026-09-16",
+      "title_kr": "무과금 192-30 비겁이 클리어덱 공유 219M", "title_en": "F2P 192-30 Coward clear deck, 219M",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "The F2P deck (명두부) cleared 192-30 Coward on the third try at ~219M (193-1 screenshot: 219M 598K), with breakthrough 659, fame 77, lab 61.",
+      "clears": [{ "stage": "192-30", "boss": "비겁이", "team_power": "219M 598K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "3", "team": "F2P Coward deck (명두부)", "note": "preset 스테이지" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:42188", "url": "https://cafe.naver.com/ccrumble/42188", "date": "2026-09-16",
+      "title_kr": "235-10 540.2m", "title_en": "235-10 at 540.2M",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "235-10 Biker Gang (폭주단 바이커) was cleared at 540M 273K (CRISPY CLEAR). Pets Holy Baby Drop, Hot Doggie, Chargemellow; perks ATK 20% (Passion Pay) and ATK 7%; Pomegranate targets Milk, Skating Queen, Cool Mint, Macaron, Cherry Cola. A commenter who couldn't clear at 884M was told the boss's damage is the problem: drop crit resistance, evasion and resistance from gear, and raise power if at 55%.",
+      "clears": [
+        { "stage": "235-10", "boss": "폭주단 바이커", "team_power": "540M 273K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "235-10 biker deck", "note": "" },
+        { "stage": "235-10", "boss": "폭주단 바이커", "team_power": "just over the 55% cut", "recommended_power": "?", "bracket": "55", "result": "clear", "play": "manual", "retries": "10 minutes", "team": "235-10 biker deck", "note": "commenter 백곰맛쿠키" },
+        { "stage": "235-10", "boss": "폭주단 바이커", "team_power": "884M", "recommended_power": "?", "bracket": "?", "result": "fail", "play": "manual", "retries": "", "team": "", "note": "commenter 지민정" }
+      ],
+      "teams": [
+        { "name": "235-10 biker deck", "scope": "stage", "for": "폭주단 바이커", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "Pomegranate target", "note": "" },
+            { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "", "role": "", "note": "yellow light sprite" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "Pomegranate target", "note": "" },
+            { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "", "role": "", "note": "dark ranged sprite" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "Pomegranate target", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "99", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "95", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint Cookie", "level": "100", "stars": "?", "position": "", "role": "Pomegranate target", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "", "role": "Pomegranate target", "note": "text '체'" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "", "role": "", "note": "last bar slot greyed (dead)" }
+          ], "pets": ["갓난갓방울", "핫도그도그", "전지멜로우"], "perks": "공 20 (열정페이) + 공 7", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "cookie bar from clear screenshot",
+          "why": "", "substitutions": [], "unorthodox": ["Cherry Cola and Cool Mint as the chargers receiving Pomegranate"] }
+      ],
+      "builds": [{ "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "remove crit resistance, evasion and resistance for stability against the biker's hits (author reply)", "thresholds": "", "why": "most decks have the damage; the boss's hits are the problem" }],
+      "mechanics": [], "rift": [], "stage_types": ["Biker gang: survival against its damage decides the clear; at the 55% bracket raise power."],
+      "disagreements": [], "quotes": [{ "kr": "대부분 딜은 되는데 보스딜이 아파서 그럴꺼에요. 장비에서 치저 회피 저항 이런거 빼는게 훨 안정적입니다.", "en": "Most have enough damage; the boss's hits hurt. Removing crit res, evasion and resistance from gear is far more stable." }]
+    },
+    {
+      "source": "naver", "id": "nv:42192", "url": "https://cafe.naver.com/ccrumble/42192", "date": "2026-09-16",
+      "title_kr": "211-30 437.25m 비겁한 쿠키 클리어덱", "title_en": "211-30 Coward clear deck at 437.25M",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "211-30 Coward was cleared at a 437.25M deck (breakthrough 705, fame 88) after 30 minutes of retries. Perks Armor Repair + General Perks Lv2. Go deeper at the start because of Coward's movement; retry if anyone dies early.",
+      "clears": [{ "stage": "211-30", "boss": "비겁한 쿠키", "team_power": "437.25M (formation)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "30 minutes", "team": "211 Coward deck", "note": "" }],
+      "teams": [
+        { "name": "211 Coward deck", "scope": "stage", "for": "비겁한 쿠키", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "98", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "99", "stars": "?", "position": "front", "role": "", "note": "captain (banner)" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "95", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "94", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "95", "stars": "?", "position": "front", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "96", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "95", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine Cookie", "level": "94", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "95", "stars": "?", "position": "back", "role": "", "note": "" },
+            { "kr": "?", "en": null, "level": "95", "stars": "?", "position": "back", "role": "", "note": "pink-haired dark cookie; water support" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "95", "stars": "?", "position": "back", "role": "", "note": "" }
+          ], "pets": ["갓난갓방울 (19★)", "? strawberry-looking pet (15★)", "얼음과자새 (18★)"], "perks": "방어구 수리 특약 + 종합 복지 패키지 Lv2", "captain": "전갈맛 쿠키", "formation": "preset 5, team power 437.25M",
+          "why": "", "substitutions": [], "unorthodox": ["Scorpion as captain"] }
+      ],
+      "builds": [], "mechanics": [], "rift": [],
+      "stage_types": ["Coward: move further in at the start because of its movement; if anyone dies early, retry; pray for its movement."],
+      "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:42227", "url": "https://cafe.naver.com/ccrumble/42227", "date": "2026-09-16",
+      "title_kr": "219-30 비겁이 477M", "title_en": "219-30 Coward at 477M",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "219-30 Coward at 477M 340K (attempt 4 shown; commenters cleared Coward with it). All cookies Lv100, with Milk as captain.",
+      "clears": [{ "stage": "219-30", "boss": "비겁한 쿠키", "team_power": "477M 340K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "4+", "team": "219 Coward deck", "note": "title implies clear; screenshot is attempt 4 mid-fight" }],
+      "teams": [
+        { "name": "219 Coward deck", "scope": "stage", "for": "비겁한 쿠키", "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "", "role": "", "note": "yellow light sprite" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "라임맛 쿠키", "en": "Lime Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "", "role": "", "note": "captain" },
+            { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "", "role": "", "note": "" },
+            { "kr": "명랑한 쿠키", "en": "GingerBright", "level": "100", "stars": "?", "position": "", "role": "", "note": "" }
+          ], "pets": ["와사비 문어", "얼음과자새", "갓난갓방울"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "cookie bar from stage screenshot", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:42520", "url": "https://cafe.naver.com/ccrumble/42520", "date": "2026-09-17",
+      "title_kr": "248지까지 클리어한 모든 스테이지 통합본 공략", "title_en": "Combined guide for every stage cleared to 248",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Video guide by 서신우. The image is the stage ranking at 2026-09-15 09:21:29: #1 서신우 253-22, #2 용팔이 253-21, #3 쿠키 251-29.",
+      "clears": [{ "stage": "253-22", "boss": "", "team_power": "?", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "", "note": "stage ranking #1 on 2026-09-15" }],
+      "teams": [], "builds": [], "mechanics": ["Stage ranking top on 2026-09-15: 253-22 / 253-21 / 251-29 (five days after 328-30 opened)."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:42665", "url": "https://cafe.naver.com/ccrumble/42665", "date": "2026-09-17",
+      "title_kr": "248-30 구스테 돌파 기록용", "title_en": "248-30 old-stage cap cleared (record)",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "Record of passing 248-30 (the old cap); the screenshot shows 249-1 at 939M 419K with the player 1st on the server rank badge. Dark Choco: accuracy 1022, focus 962; breakthrough 806.",
+      "clears": [{ "stage": "248-30", "boss": "?", "team_power": "939M 419K (at 249-1)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "", "note": "248-30 clear quest 1/1 shown; 다크초코 명중 1022 집중 962; 돌파 806" }],
+      "teams": [], "builds": [{ "cookie": "다크초코 쿠키", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "명중 1022, 집중 962", "why": "" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "nv:42898", "url": "https://cafe.naver.com/ccrumble/42898", "date": "2026-09-18",
+      "title_kr": "독수리 두마리 투력 35% 5사격덱 (노전갈)", "title_en": "Two eagles at 35% power: 5-ranged deck (no Scorpion)",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "A two-eagle stage in the 35% bracket with a 5-ranged deck and no Scorpion (screenshot at 236-11, 773M 119K). Hide behind the rock at start to dodge the eagles, then keep a medium distance, backing off when they dive in. Witchberry replaces Scorpion to keep range; Pancake can replace Melon Soda for longer range. Perks: Passion Pay + Ammo Provided (5+ ranged -> ranged skill haste +15).",
+      "clears": [{ "stage": "236-? (screenshot 236-11)", "boss": "독수리 x2", "team_power": "773M 119K", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "" }],
+      "teams": [],
+      "builds": [],
+      "mechanics": ["Perk 탄약비 전액 지원: with 5+ ranged cookies, ranged allies get skill haste +15.", "Perk 열정페이: highest-ATK ally ATK +20%, max HP −20%.", "Mercs Lv4 (베테랑 용병단): +1 perk slot, 3rd pet slot, captain ATK/DEF/HP +10%."],
+      "rift": [],
+      "stage_types": ["Eagles: pull back behind the rock to dodge their attack; when they enter your group, step back; keep a medium distance; too close and their damage is too high, hence Witchberry over Scorpion."],
+      "disagreements": [], "quotes": [{ "kr": "너무 붙으면 독수리 딜이 너무 아파서 일부러 거리유지 하려고 전갈대신 위치베리 채용", "en": "Too close and the eagles hurt too much, so Witchberry replaces Scorpion to keep distance." }]
+    },
+    {
+      "source": "naver", "id": "nv:42900", "url": "https://cafe.naver.com/ccrumble/42900", "date": "2026-09-18",
+      "title_kr": "독거미 세마리 투력35%", "title_en": "Three poison spiders at 35% power",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "A three-spider stage in the 35% bracket; deck power 784.46M, all Lv.100, pets Chargemellow 16★, Holy Baby Drop 20★, Hot Doggie 19★; perks Passion Pay + Armor Repair (mercs Lv4). Play: step right, take one hit, lure the spiders to the far 9 o'clock edge, then leave it idle.",
+      "clears": [{ "stage": "?", "boss": "독거미 x3", "team_power": "784.46M (formation)", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual then idle", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [],
+      "mechanics": ["Perk 방어구 수리 특약: with 3+ defense-type cookies, ally DMG reduction +10%."],
+      "rift": [],
+      "stage_types": ["Spiders: go slightly right, take a hit, lure them to the far 9 o'clock edge, then idle."],
+      "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": [
+    { "kr": "폭주단 바이커", "en": "Biker Gang (rat bikers boss)", "kind": "boss", "confidence": "low", "evidence": "nv-42188 clear screen boss name; nv-34395 control tips" },
+    { "kr": "쥐돌이", "en": "rat (the rat-biker boss trio)", "kind": "boss", "confidence": "low", "evidence": "nv-34156 쥐돌이덱: three rats move; also 쥐토바이/삼토바이" },
+    { "kr": "삼토바이", "en": "three rat bikers (slang)", "kind": "boss", "confidence": "low", "evidence": "nv-34395 comment '216-10 삼토바이 429M'" },
+    { "kr": "폭주단 트럭", "en": "Gang truck boss", "kind": "boss", "confidence": "low", "evidence": "nv-34156 '폭주단 트럭은 7시 방향으로'" },
+    { "kr": "마오카이", "en": "corrupted stump spirit (forest 20/30 boss, slang from LoL)", "kind": "boss", "confidence": "low", "evidence": "nv-34395: '오염된 그루터기 정령 ... 숲 맵에 나오는 20/30단계 보스'" },
+    { "kr": "식쿠식물", "en": "cookie-eating plant boss", "kind": "boss", "confidence": "low", "evidence": "nv-34395 deck heading" },
+    { "kr": "라즈베리 암살자", "en": "Raspberry assassin (multi-mob stage)", "kind": "boss", "confidence": "low", "evidence": "nv-34395" },
+    { "kr": "독뿔버섯", "en": "poison-horn mushroom (CC multi-mob)", "kind": "boss", "confidence": "low", "evidence": "nv-34395" },
+    { "kr": "설인", "en": "Yeti (launch boss; also twin yetis)", "kind": "boss", "confidence": "low", "evidence": "nv-28771, nv-30499" },
+    { "kr": "사탕골렘", "en": "Candy golem", "kind": "boss", "confidence": "low", "evidence": "nv-34395 comment" },
+    { "kr": "눈골렘", "en": "Snow golem", "kind": "boss", "confidence": "low", "evidence": "nv-27702" },
+    { "kr": "폭파광", "en": "Bomber (ranged boss)", "kind": "boss", "confidence": "low", "evidence": "nv-30499" },
+    { "kr": "독수리", "en": "Eagle", "kind": "boss", "confidence": "low", "evidence": "nv-42898" },
+    { "kr": "독거미", "en": "Poison spider", "kind": "boss", "confidence": "low", "evidence": "nv-42900" },
+    { "kr": "명량 / 명랑 / 명쿠", "en": "GingerBright (명랑한 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "nv-28771 crumblehub card '명랑한 쿠키' (ATK reduction); posts write 명량/명랑" },
+    { "kr": "닼초 / 닥초", "en": "Dark Choco Cookie", "kind": "cookie", "confidence": "high", "evidence": "nv-31252, nv-34395" },
+    { "kr": "딸크", "en": "Strawberry Crepe Cookie", "kind": "cookie", "confidence": "high", "evidence": "nv-34395 deck text vs formation" },
+    { "kr": "메소", "en": "Melon Soda Cookie", "kind": "cookie", "confidence": "low", "evidence": "nv-34395 '호밀,메소,포도'" },
+    { "kr": "치케", "en": "Cheesecake Cookie (or crit mechanic; ambiguous)", "kind": "cookie", "confidence": "low", "evidence": "nv-42152 lists 치케 among power fillers; nv-41892 '치케 메커니즘'" },
+    { "kr": "체콜", "en": "Cherry Cola Cookie", "kind": "cookie", "confidence": "high", "evidence": "nv-42152 filler list" },
+    { "kr": "방수특", "en": "Armor Repair perk (방어구 수리 특약)", "kind": "term", "confidence": "high", "evidence": "nv-34395 perks line; card text in nv-42900" },
+    { "kr": "공깎 / 방깎", "en": "ATK down / DEF down (debuff)", "kind": "term", "confidence": "high", "evidence": "nv-30499, nv-35278" },
+    { "kr": "주차", "en": "park (stop pushing and farm at the current stage; also 'park' a boss in a corner)", "kind": "term", "confidence": "low", "evidence": "nv-33734 '쿨링 왼쪽 구석 주차'; nv-1922 '랭킹 다 주차'" },
+    { "kr": "투력컷", "en": "power cut (bracket threshold)", "kind": "term", "confidence": "high", "evidence": "nv-31252, nv-35278" },
+    { "kr": "노컨", "en": "no control (auto)", "kind": "term", "confidence": "high", "evidence": "nv-41131" },
+    { "kr": "구스테", "en": "old stages (pre-9/10 cap 248-30)", "kind": "term", "confidence": "low", "evidence": "nv-42665 title" },
+    { "kr": "탄약비 전액 지원", "en": "All Ammo Provided (5+ ranged: ranged skill haste +15)", "kind": "term", "confidence": "high", "evidence": "card text in nv-42898-2" },
+    { "kr": "크크크 치킨봇", "en": "chicken-bot collab monsters (summoned in main stages)", "kind": "term", "confidence": "high", "evidence": "nv-25737" }
+  ]
+}

@@ -9,6 +9,7 @@ import type {
 } from "@crumble/schema";
 import { GAME_MODE, GEAR_SLOT, SOURCE_SITE, scores } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
+import { ImportError } from "../../errors";
 import type { DeckCookieInsert, DeckInsert, DeckNoteInsert } from "../../repos/decks";
 import type { GlossaryInsert } from "../../repos/glossary";
 import type { RecordInsert, RecordModeInsert } from "../../repos/records";
@@ -240,20 +241,30 @@ export function mapUsage(u: SeedUsage): Values<UsageStatInput> {
  *   start date, optional mode)
  * @returns the record row (`updated` becomes `updatedAt`, `season` becomes
  *   `seasonLabel`, plus `lede` and `caveat`; `mode` is the manifest's,
- *   else the first `GAME_MODE` that `modes` lists, else `guild_conquest`),
- *   one covered mode per `modes` block in `GAME_MODE` order, `you` as the
- *   recommendation with its sources, and every block's rules as mechanics
- *   of the block's mode with topic `rules` unless the rule names another
+ *   else the first `GAME_MODE` that `modes` lists), one covered mode per
+ *   `modes` block in `GAME_MODE` order, `you` as the recommendation with
+ *   its sources, and every block's rules as mechanics of the block's mode
+ *   with topic `rules` unless the rule names another
+ * @throws {ImportError} naming `import.json`'s `record.mode` when the
+ *   manifest states no mode and `meta` has no `modes` block to take one from
  */
 export function mapMeta(meta: SeedMeta, record: ManifestRecord): MappedMeta {
   const blocks = GAME_MODE.flatMap((mode) => {
     const block = meta.modes?.[mode];
     return block ? [{ mode, block }] : [];
   });
+  const mode = record.mode ?? blocks[0]?.mode;
+  if (mode === undefined) {
+    throw new ImportError(
+      "import.json",
+      "record.mode",
+      "the record states no mode, and meta.json has no modes block to file it under",
+    );
+  }
   return {
     record: {
       ...record,
-      mode: record.mode ?? blocks[0]?.mode ?? "guild_conquest",
+      mode,
       updatedAt: meta.updated,
       seasonLabel: meta.season,
       lede: meta.lede ?? null,

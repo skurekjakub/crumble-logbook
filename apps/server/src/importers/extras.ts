@@ -1,10 +1,8 @@
 /**
  * The extra blocks a record's `import.json` may carry besides its curated
- * collections: captures that aren't curated JSON (leaderboard TSVs, a fight
- * timeline, a buff capture) and the capture ledger, each with its own
- * schema and reader. A new
- * capture type is an entry here; the manifest schema and the reader pick
- * it up.
+ * collections: captures that aren't curated JSON, each with its own schema
+ * and reader. A new capture type is an entry here; the manifest schema and
+ * the reader pick it up.
  *
  * @module
  */
@@ -84,7 +82,7 @@ export const EXTRAS = {
 };
 
 /** The extra blocks by manifest key. */
-export type Extras = typeof EXTRAS;
+type Extras = typeof EXTRAS;
 
 /** An extra block's key in `import.json`. */
 export type ExtraName = keyof Extras;
