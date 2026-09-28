@@ -101,6 +101,7 @@ describe("app shell", () => {
       "Rumble Arena 와글와글 아레나",
       "Stage 스테이지",
       "Crumble Dungeon 크럼블 던전",
+      "Team power 팀투",
       "Research",
       "Sources",
       "Glossary",
@@ -208,6 +209,8 @@ describe("app shell", () => {
       "/conquest/teams",
       "/stage/runs",
       "/dungeon/clears",
+      "/stage/planner",
+      "/team-power/teams",
       "/nowhere",
     ]) {
       await renderAt(path);

@@ -7,7 +7,7 @@
  * @module
  */
 import { notFound } from "@tanstack/react-router";
-import type { DungeonConfig, ModeSection, StageConfig } from "./modes";
+import type { DungeonConfig, ModeSection, StageConfig, TeamPowerConfig } from "./modes";
 import { modeById, tabAt } from "./modes";
 
 /**
@@ -65,4 +65,22 @@ export function requireDungeon(mode: ModeSection, pathname: string): { dungeon: 
   requireTab(mode, pathname);
   if (!mode.dungeon) throw notFound();
   return { dungeon: mode.dungeon };
+}
+
+/**
+ * Refuses a team-power page for a mode without the team-power screens, or
+ * that doesn't list the page among its tabs.
+ *
+ * @param mode - the mode, from the route context
+ * @param pathname - the requested path
+ * @returns the mode's team-power config, for the route context
+ * @throws the router's not-found error for any other mode or page
+ */
+export function requireTeamPower(
+  mode: ModeSection,
+  pathname: string,
+): { teamPower: TeamPowerConfig } {
+  requireTab(mode, pathname);
+  if (!mode.teamPower) throw notFound();
+  return { teamPower: mode.teamPower };
 }

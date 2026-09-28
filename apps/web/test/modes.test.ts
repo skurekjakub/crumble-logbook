@@ -26,6 +26,7 @@ import {
   sectionForPath,
   STAGE,
   tabAt,
+  TEAM_POWER,
 } from "../src/app/modes";
 import { requestPath, stubApi } from "./helpers";
 
@@ -150,6 +151,31 @@ describe("MODES", () => {
     expect(DUNGEON.dungeon.firstWave).toBe(40);
     expect(DUNGEON.rules).not.toBeNull();
     for (const mode of [CONQUEST, ARENA, RUMBLE, STAGE]) expect(mode.dungeon, mode.id).toBeNull();
+  });
+
+  it("files the team power section under record 005, with the shared pages and the team-power screens", () => {
+    expect(TEAM_POWER.recordSlug).toBe("005-team-power-growth");
+    expect(TEAM_POWER.scope.mode).toBe("team_power");
+    expect(TEAM_POWER.labelKr).toBe("팀투");
+    expect(TEAM_POWER.tabs.map((t) => t.to)).toEqual(
+      [
+        "",
+        "/routes",
+        "/power-sources",
+        "/spending",
+        "/planner",
+        "/packages",
+        "/curves",
+        "/data-points",
+        "/mechanics",
+        "/timeline",
+      ].map((sub) => `/team-power${sub}`),
+    );
+    expect(TEAM_POWER.teamPower.reach).toEqual([55, 35, 15]);
+    expect(TEAM_POWER.rules).not.toBeNull();
+    for (const mode of [CONQUEST, ARENA, RUMBLE, STAGE, DUNGEON]) {
+      expect(mode.teamPower, mode.id).toBeNull();
+    }
   });
 
   it("lists the research index among the shared sections, before Sources and Glossary", () => {

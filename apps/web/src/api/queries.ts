@@ -436,6 +436,94 @@ export const dungeonExclusionsQuery = () =>
   });
 
 /**
+ * Every system that raises displayed team power, in the record's order.
+ *
+ * @returns the query options
+ */
+export const powerSourcesQuery = () =>
+  queryOptions({
+    queryKey: ["power-sources"],
+    queryFn: () => parseResponse(api["power-sources"].$get({ query: {} })),
+  });
+
+/**
+ * Every team-power figure the records found, in their order.
+ *
+ * @returns the query options
+ */
+export const powerDataPointsQuery = () =>
+  queryOptions({
+    queryKey: ["power-data-points"],
+    queryFn: () => parseResponse(api["power-data-points"].$get({ query: {} })),
+  });
+
+/**
+ * The shop packages, in the record's order.
+ *
+ * @returns the query options
+ */
+export const packagesQuery = () =>
+  queryOptions({
+    queryKey: ["packages"],
+    queryFn: () => parseResponse(api.packages.$get({ query: {} })),
+  });
+
+/**
+ * The KRW prices and the USD prices the stores pair them with, cheapest first.
+ *
+ * @returns the query options
+ */
+export const priceTiersQuery = () =>
+  queryOptions({
+    queryKey: ["price-tiers"],
+    queryFn: () => parseResponse(api["price-tiers"].$get({ query: {} })),
+  });
+
+/**
+ * The spending orders, in their order: the account stages and the ranked ones.
+ *
+ * @returns the query options
+ */
+export const spendingOrdersQuery = () =>
+  queryOptions({
+    queryKey: ["spending-orders"],
+    queryFn: () => parseResponse(api["spending-orders"].$get({ query: {} })),
+  });
+
+/**
+ * Every spending step, free route first, each route by position.
+ *
+ * @returns the query options
+ */
+export const spendingStepsQuery = () =>
+  queryOptions({
+    queryKey: ["spending-steps"],
+    queryFn: () => parseResponse(api["spending-steps"].$get({ query: {} })),
+  });
+
+/**
+ * The power sources' cost and return curves, as tables.
+ *
+ * @returns the query options
+ */
+export const growthCurvesQuery = () =>
+  queryOptions({
+    queryKey: ["growth-curves"],
+    queryFn: () => parseResponse(api["growth-curves"].$get({ query: {} })),
+  });
+
+/**
+ * The steps the power planner weighs, in their order.
+ *
+ * @returns the query options
+ */
+export const plannerStepsQuery = () =>
+  queryOptions({
+    queryKey: ["planner-steps"],
+    queryFn: () => parseResponse(api["planner-steps"].$get({ query: {} })),
+  });
+
+/**
  * Leaderboard rows in rank order.
  *
  * @param filter - restrict to one season and/or board

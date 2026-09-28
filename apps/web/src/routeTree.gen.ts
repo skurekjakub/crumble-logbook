@@ -19,15 +19,22 @@ import { Route as ModeBossRouteImport } from './routes/$mode/boss'
 import { Route as ModeBracketsRouteImport } from './routes/$mode/brackets'
 import { Route as ModeClearsRouteImport } from './routes/$mode/clears'
 import { Route as ModeCountersRouteImport } from './routes/$mode/counters'
+import { Route as ModeCurvesRouteImport } from './routes/$mode/curves'
+import { Route as ModeDataPointsRouteImport } from './routes/$mode/data-points'
 import { Route as ModeDecksRouteImport } from './routes/$mode/decks'
 import { Route as ModeExclusionsRouteImport } from './routes/$mode/exclusions'
 import { Route as ModeGearRouteImport } from './routes/$mode/gear'
 import { Route as ModeLineupsRouteImport } from './routes/$mode/lineups'
 import { Route as ModeMechanicsRouteImport } from './routes/$mode/mechanics'
+import { Route as ModePackagesRouteImport } from './routes/$mode/packages'
+import { Route as ModePlannerRouteImport } from './routes/$mode/planner'
+import { Route as ModePowerSourcesRouteImport } from './routes/$mode/power-sources'
 import { Route as ModeRiftRouteImport } from './routes/$mode/rift'
+import { Route as ModeRoutesRouteImport } from './routes/$mode/routes'
 import { Route as ModeRunesRouteImport } from './routes/$mode/runes'
 import { Route as ModeRunsRouteImport } from './routes/$mode/runs'
 import { Route as ModeScoresRouteImport } from './routes/$mode/scores'
+import { Route as ModeSpendingRouteImport } from './routes/$mode/spending'
 import { Route as ModeTeamsRouteImport } from './routes/$mode/teams'
 import { Route as ModeTimelineRouteImport } from './routes/$mode/timeline'
 import { Route as ModeUsageRouteImport } from './routes/$mode/usage'
@@ -84,6 +91,16 @@ const ModeCountersRoute = ModeCountersRouteImport.update({
   path: '/counters',
   getParentRoute: () => ModeRoute,
 } as any)
+const ModeCurvesRoute = ModeCurvesRouteImport.update({
+  id: '/curves',
+  path: '/curves',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeDataPointsRoute = ModeDataPointsRouteImport.update({
+  id: '/data-points',
+  path: '/data-points',
+  getParentRoute: () => ModeRoute,
+} as any)
 const ModeDecksRoute = ModeDecksRouteImport.update({
   id: '/decks',
   path: '/decks',
@@ -109,9 +126,29 @@ const ModeMechanicsRoute = ModeMechanicsRouteImport.update({
   path: '/mechanics',
   getParentRoute: () => ModeRoute,
 } as any)
+const ModePackagesRoute = ModePackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModePlannerRoute = ModePlannerRouteImport.update({
+  id: '/planner',
+  path: '/planner',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModePowerSourcesRoute = ModePowerSourcesRouteImport.update({
+  id: '/power-sources',
+  path: '/power-sources',
+  getParentRoute: () => ModeRoute,
+} as any)
 const ModeRiftRoute = ModeRiftRouteImport.update({
   id: '/rift',
   path: '/rift',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeRoutesRoute = ModeRoutesRouteImport.update({
+  id: '/routes',
+  path: '/routes',
   getParentRoute: () => ModeRoute,
 } as any)
 const ModeRunesRoute = ModeRunesRouteImport.update({
@@ -127,6 +164,11 @@ const ModeRunsRoute = ModeRunsRouteImport.update({
 const ModeScoresRoute = ModeScoresRouteImport.update({
   id: '/scores',
   path: '/scores',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeSpendingRoute = ModeSpendingRouteImport.update({
+  id: '/spending',
+  path: '/spending',
   getParentRoute: () => ModeRoute,
 } as any)
 const ModeTeamsRoute = ModeTeamsRouteImport.update({
@@ -165,15 +207,22 @@ export interface FileRoutesByFullPath {
   '/$mode/brackets': typeof ModeBracketsRoute
   '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
+  '/$mode/curves': typeof ModeCurvesRoute
+  '/$mode/data-points': typeof ModeDataPointsRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/exclusions': typeof ModeExclusionsRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/packages': typeof ModePackagesRoute
+  '/$mode/planner': typeof ModePlannerRoute
+  '/$mode/power-sources': typeof ModePowerSourcesRoute
   '/$mode/rift': typeof ModeRiftRoute
+  '/$mode/routes': typeof ModeRoutesRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/runs': typeof ModeRunsRoute
   '/$mode/scores': typeof ModeScoresRoute
+  '/$mode/spending': typeof ModeSpendingRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
   '/$mode/usage': typeof ModeUsageRoute
@@ -190,15 +239,22 @@ export interface FileRoutesByTo {
   '/$mode/brackets': typeof ModeBracketsRoute
   '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
+  '/$mode/curves': typeof ModeCurvesRoute
+  '/$mode/data-points': typeof ModeDataPointsRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/exclusions': typeof ModeExclusionsRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/packages': typeof ModePackagesRoute
+  '/$mode/planner': typeof ModePlannerRoute
+  '/$mode/power-sources': typeof ModePowerSourcesRoute
   '/$mode/rift': typeof ModeRiftRoute
+  '/$mode/routes': typeof ModeRoutesRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/runs': typeof ModeRunsRoute
   '/$mode/scores': typeof ModeScoresRoute
+  '/$mode/spending': typeof ModeSpendingRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
   '/$mode/usage': typeof ModeUsageRoute
@@ -217,15 +273,22 @@ export interface FileRoutesById {
   '/$mode/brackets': typeof ModeBracketsRoute
   '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
+  '/$mode/curves': typeof ModeCurvesRoute
+  '/$mode/data-points': typeof ModeDataPointsRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/exclusions': typeof ModeExclusionsRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/packages': typeof ModePackagesRoute
+  '/$mode/planner': typeof ModePlannerRoute
+  '/$mode/power-sources': typeof ModePowerSourcesRoute
   '/$mode/rift': typeof ModeRiftRoute
+  '/$mode/routes': typeof ModeRoutesRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/runs': typeof ModeRunsRoute
   '/$mode/scores': typeof ModeScoresRoute
+  '/$mode/spending': typeof ModeSpendingRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
   '/$mode/usage': typeof ModeUsageRoute
@@ -245,15 +308,22 @@ export interface FileRouteTypes {
     | '/$mode/brackets'
     | '/$mode/clears'
     | '/$mode/counters'
+    | '/$mode/curves'
+    | '/$mode/data-points'
     | '/$mode/decks'
     | '/$mode/exclusions'
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
+    | '/$mode/packages'
+    | '/$mode/planner'
+    | '/$mode/power-sources'
     | '/$mode/rift'
+    | '/$mode/routes'
     | '/$mode/runes'
     | '/$mode/runs'
     | '/$mode/scores'
+    | '/$mode/spending'
     | '/$mode/teams'
     | '/$mode/timeline'
     | '/$mode/usage'
@@ -270,15 +340,22 @@ export interface FileRouteTypes {
     | '/$mode/brackets'
     | '/$mode/clears'
     | '/$mode/counters'
+    | '/$mode/curves'
+    | '/$mode/data-points'
     | '/$mode/decks'
     | '/$mode/exclusions'
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
+    | '/$mode/packages'
+    | '/$mode/planner'
+    | '/$mode/power-sources'
     | '/$mode/rift'
+    | '/$mode/routes'
     | '/$mode/runes'
     | '/$mode/runs'
     | '/$mode/scores'
+    | '/$mode/spending'
     | '/$mode/teams'
     | '/$mode/timeline'
     | '/$mode/usage'
@@ -296,15 +373,22 @@ export interface FileRouteTypes {
     | '/$mode/brackets'
     | '/$mode/clears'
     | '/$mode/counters'
+    | '/$mode/curves'
+    | '/$mode/data-points'
     | '/$mode/decks'
     | '/$mode/exclusions'
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
+    | '/$mode/packages'
+    | '/$mode/planner'
+    | '/$mode/power-sources'
     | '/$mode/rift'
+    | '/$mode/routes'
     | '/$mode/runes'
     | '/$mode/runs'
     | '/$mode/scores'
+    | '/$mode/spending'
     | '/$mode/teams'
     | '/$mode/timeline'
     | '/$mode/usage'
@@ -394,6 +478,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeCountersRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/curves': {
+      id: '/$mode/curves'
+      path: '/curves'
+      fullPath: '/$mode/curves'
+      preLoaderRoute: typeof ModeCurvesRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/data-points': {
+      id: '/$mode/data-points'
+      path: '/data-points'
+      fullPath: '/$mode/data-points'
+      preLoaderRoute: typeof ModeDataPointsRouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/$mode/decks': {
       id: '/$mode/decks'
       path: '/decks'
@@ -429,11 +527,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeMechanicsRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/packages': {
+      id: '/$mode/packages'
+      path: '/packages'
+      fullPath: '/$mode/packages'
+      preLoaderRoute: typeof ModePackagesRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/planner': {
+      id: '/$mode/planner'
+      path: '/planner'
+      fullPath: '/$mode/planner'
+      preLoaderRoute: typeof ModePlannerRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/power-sources': {
+      id: '/$mode/power-sources'
+      path: '/power-sources'
+      fullPath: '/$mode/power-sources'
+      preLoaderRoute: typeof ModePowerSourcesRouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/$mode/rift': {
       id: '/$mode/rift'
       path: '/rift'
       fullPath: '/$mode/rift'
       preLoaderRoute: typeof ModeRiftRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/routes': {
+      id: '/$mode/routes'
+      path: '/routes'
+      fullPath: '/$mode/routes'
+      preLoaderRoute: typeof ModeRoutesRouteImport
       parentRoute: typeof ModeRoute
     }
     '/$mode/runes': {
@@ -455,6 +581,13 @@ declare module '@tanstack/react-router' {
       path: '/scores'
       fullPath: '/$mode/scores'
       preLoaderRoute: typeof ModeScoresRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/spending': {
+      id: '/$mode/spending'
+      path: '/spending'
+      fullPath: '/$mode/spending'
+      preLoaderRoute: typeof ModeSpendingRouteImport
       parentRoute: typeof ModeRoute
     }
     '/$mode/teams': {
@@ -500,15 +633,22 @@ interface ModeRouteChildren {
   ModeBracketsRoute: typeof ModeBracketsRoute
   ModeClearsRoute: typeof ModeClearsRoute
   ModeCountersRoute: typeof ModeCountersRoute
+  ModeCurvesRoute: typeof ModeCurvesRoute
+  ModeDataPointsRoute: typeof ModeDataPointsRoute
   ModeDecksRoute: typeof ModeDecksRoute
   ModeExclusionsRoute: typeof ModeExclusionsRoute
   ModeGearRoute: typeof ModeGearRoute
   ModeLineupsRoute: typeof ModeLineupsRoute
   ModeMechanicsRoute: typeof ModeMechanicsRoute
+  ModePackagesRoute: typeof ModePackagesRoute
+  ModePlannerRoute: typeof ModePlannerRoute
+  ModePowerSourcesRoute: typeof ModePowerSourcesRoute
   ModeRiftRoute: typeof ModeRiftRoute
+  ModeRoutesRoute: typeof ModeRoutesRoute
   ModeRunesRoute: typeof ModeRunesRoute
   ModeRunsRoute: typeof ModeRunsRoute
   ModeScoresRoute: typeof ModeScoresRoute
+  ModeSpendingRoute: typeof ModeSpendingRoute
   ModeTeamsRoute: typeof ModeTeamsRoute
   ModeTimelineRoute: typeof ModeTimelineRoute
   ModeUsageRoute: typeof ModeUsageRoute
@@ -521,15 +661,22 @@ const ModeRouteChildren: ModeRouteChildren = {
   ModeBracketsRoute: ModeBracketsRoute,
   ModeClearsRoute: ModeClearsRoute,
   ModeCountersRoute: ModeCountersRoute,
+  ModeCurvesRoute: ModeCurvesRoute,
+  ModeDataPointsRoute: ModeDataPointsRoute,
   ModeDecksRoute: ModeDecksRoute,
   ModeExclusionsRoute: ModeExclusionsRoute,
   ModeGearRoute: ModeGearRoute,
   ModeLineupsRoute: ModeLineupsRoute,
   ModeMechanicsRoute: ModeMechanicsRoute,
+  ModePackagesRoute: ModePackagesRoute,
+  ModePlannerRoute: ModePlannerRoute,
+  ModePowerSourcesRoute: ModePowerSourcesRoute,
   ModeRiftRoute: ModeRiftRoute,
+  ModeRoutesRoute: ModeRoutesRoute,
   ModeRunesRoute: ModeRunesRoute,
   ModeRunsRoute: ModeRunsRoute,
   ModeScoresRoute: ModeScoresRoute,
+  ModeSpendingRoute: ModeSpendingRoute,
   ModeTeamsRoute: ModeTeamsRoute,
   ModeTimelineRoute: ModeTimelineRoute,
   ModeUsageRoute: ModeUsageRoute,

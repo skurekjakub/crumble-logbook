@@ -1,0 +1,172 @@
+/* The team-power screens: the basis marks, the routes' step lists, the cost and efficiency
+   grid, and the order switch. Colours come from tokens.css only. A mark's fill says how a
+   figure is known: solid for a player's own measurement, hatched for a claim, dashed for
+   what nobody measured (or the record inferred), an outline for the community's order. */
+
+.basis {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px var(--sp-2);
+}
+.basis-note {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.mark {
+  display: inline-flex;
+  align-items: center;
+  font: 600 var(--fs-2xs) / 1 var(--body);
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.mark.posted {
+  background: var(--good);
+  border-color: var(--good);
+  color: var(--surface);
+}
+.mark.claimed {
+  color: var(--warn);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--surface) 0 4px,
+    color-mix(in srgb, var(--warn) 22%, var(--surface)) 4px 7px
+  );
+}
+.mark.unmeasured,
+.mark.inferred {
+  color: var(--ink-3);
+  border-style: dashed;
+}
+.mark.community {
+  color: var(--accent);
+}
+
+/* Routes: two columns of numbered steps, stacked below the shell's breakpoint. */
+.routes {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+}
+ol.steps {
+  counter-reset: step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+ol.steps > li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4) var(--sp-3) var(--sp-3);
+}
+ol.steps > li + li {
+  border-top: 1px solid var(--line);
+}
+ol.steps > li::before {
+  content: counter(step);
+  font: 400 var(--fs-l) / 1.25 var(--display);
+  color: var(--candy);
+  text-align: center;
+}
+ol.steps > li > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  min-width: 0;
+}
+.step-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px var(--sp-3);
+}
+.step-head .name {
+  font-weight: 700;
+}
+dl.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px var(--sp-3);
+  margin: 0;
+  font-size: var(--fs-s);
+}
+dl.facts dt {
+  color: var(--ink-3);
+  font: 600 var(--fs-xs) / 1.6 var(--body);
+}
+dl.facts dd {
+  margin: 0;
+  min-width: 0;
+}
+.gain-figure {
+  font: 600 var(--fs-m) / 1.2 var(--mono);
+  font-variant-numeric: tabular-nums;
+  margin-right: var(--sp-2);
+}
+
+/* The order switch: one button per account stage, the chosen one filled. */
+.switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+}
+.switch button {
+  font: 500 var(--fs-s) / 1.2 var(--body);
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.switch button:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+.switch button[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* The cost and efficiency grid: grades down, cost types across. */
+table.grid-cost td {
+  min-width: 9rem;
+}
+table.grid-cost th[scope="row"] {
+  background: var(--surface-2);
+  white-space: nowrap;
+}
+table.grid-cost tr.ungraded th,
+table.grid-cost tr.ungraded td {
+  border-top: 2px solid var(--line);
+  color: var(--ink-2);
+}
+ul.names {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* A power source's efficiency at the chosen stage stands out from the others. */
+dl.kv dd.chosen,
+dl.kv dt.chosen {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.callout {
+  border-left: 4px solid var(--candy);
+}

@@ -191,6 +191,34 @@ export interface ModeSection extends SectionBase {
   stage: StageConfig | null;
   /** The Crumble Dungeon screens, for the Crumble Dungeon mode. */
   dungeon: DungeonConfig | null;
+  /** The team-power screens, for the team power mode. */
+  teamPower: TeamPowerConfig | null;
+}
+
+/**
+ * The team-power screens: each one's heading, lede and mechanics topic,
+ * the spending order the reader lands on, and the damage shares the
+ * planner reports a reach for.
+ */
+export interface TeamPowerConfig {
+  /** The free and paid routes: the ranked orders, step by step. */
+  routes: ViewCopy;
+  /** Every power source on cost and efficiency. */
+  powerSources: ViewCopy;
+  /** The spending order per account stage. */
+  spending: ViewCopy;
+  /** The slug of the spending order shown first: the reader's own account stage. */
+  defaultOrder: string;
+  /** Team power in, stage reach and what the next gains buy out. */
+  planner: ViewCopy;
+  /** Kept-damage percentages, highest first, whose furthest stage the planner names. */
+  reach: readonly number[];
+  /** The shop packages with their prices. */
+  packages: ViewCopy;
+  /** The cost and return curves. */
+  curves: ViewCopy;
+  /** Every team-power figure the record found. */
+  dataPoints: ViewCopy;
 }
 
 /**

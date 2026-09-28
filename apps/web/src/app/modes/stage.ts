@@ -94,4 +94,5 @@ export const STAGE = {
     reach: [100, 75, 55, 35, 15],
   },
   dungeon: null,
+  teamPower: null,
 } as const satisfies ModeSection;

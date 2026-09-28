@@ -20,14 +20,15 @@ import { DUNGEON } from "./dungeon";
 import { RUMBLE } from "./rumble";
 import { SHARED_SECTIONS } from "./shared";
 import { STAGE } from "./stage";
+import { TEAM_POWER } from "./team-power";
 import type { ModeSection, Section, SectionTab } from "./types";
 
 export type * from "./types";
 export { modeLink, modePath, modeTab } from "./links";
-export { ARENA, CONQUEST, DUNGEON, RUMBLE, SHARED_SECTIONS, STAGE };
+export { ARENA, CONQUEST, DUNGEON, RUMBLE, SHARED_SECTIONS, STAGE, TEAM_POWER };
 
 /** Game modes, in tab order. */
-export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE, STAGE, DUNGEON];
+export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE, STAGE, DUNGEON, TEAM_POWER];
 
 /** Every top-level section, modes first. */
 export const SECTIONS: readonly Section[] = [...MODES, ...SHARED_SECTIONS];

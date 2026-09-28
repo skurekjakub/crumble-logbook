@@ -38,4 +38,5 @@ export const ARENA = {
   rules: { title: "How Arena works", highlight: "Season buffs" },
   stage: null,
   dungeon: null,
+  teamPower: null,
 } as const satisfies ModeSection;

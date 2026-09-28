@@ -113,6 +113,37 @@ export type DungeonRun = InferResponseType<(typeof api)["dungeon-runs"]["$get"],
 /** A published Crumble Dungeon lineup: its first wave, exclusions, ATK order and level rule, with sources. */
 export type DungeonLineup = InferResponseType<(typeof api)["dungeon-lineups"]["$get"], 200>[number];
 
+/**
+ * A system that raises displayed team power: what it raises, where it
+ * counts, its materials and cost type, cap, posted gains, efficiency by
+ * account stage and sources.
+ */
+export type PowerSource = InferResponseType<(typeof api)["power-sources"]["$get"], 200>[number];
+
+/** A team-power figure: how it is known, the power before and after, the change, cost and sources. */
+export type PowerDataPoint = InferResponseType<
+  (typeof api)["power-data-points"]["$get"],
+  200
+>[number];
+
+/** A shop package: its prices, what it feeds, its Crystal value, verdict, spender tier and sources. */
+export type ShopPackage = InferResponseType<typeof api.packages.$get, 200>[number];
+
+/** A KRW price and the USD price the stores pair it with. */
+export type PriceTier = InferResponseType<(typeof api)["price-tiers"]["$get"], 200>[number];
+
+/** A spending order: an account stage's or a ranked one, with its label, note and sources. */
+export type SpendingOrder = InferResponseType<(typeof api)["spending-orders"]["$get"], 200>[number];
+
+/** A step of a spending order: its route, place, target, basis, why and sources. */
+export type SpendingStep = InferResponseType<(typeof api)["spending-steps"]["$get"], 200>[number];
+
+/** A power source's cost or return curve, as a table with its sources. */
+export type GrowthCurve = InferResponseType<(typeof api)["growth-curves"]["$get"], 200>[number];
+
+/** A step the power planner weighs: its power source, the data point of its gain, and its basis. */
+export type PlannerStep = InferResponseType<(typeof api)["planner-steps"]["$get"], 200>[number];
+
 /** A cookie kept out of Crumble Dungeon's first wave, with its `en` gloss, reason, status and sources. */
 export type DungeonExclusion = InferResponseType<
   (typeof api)["dungeon-exclusions"]["$get"],
