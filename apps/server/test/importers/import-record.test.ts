@@ -485,6 +485,28 @@ describe("importRecord validation", () => {
     expect(counts.usageStats).toBe(0);
   });
 
+  it("accepts a curated manifest with no decks, runes, gear or RNG, for a mode without decks", () => {
+    const dir = tempRecord(null, () => {});
+    editJson<{ collections: Record<string, string> }>(dir, "curated/manifest.json", (m) => {
+      const { decks: _d, runes: _r, gear: _g, rng: _n, scores: _s, ...rest } = m.collections;
+      m.collections = rest;
+    });
+    const { counts } = importRecord(testStore(), dir);
+    expect(counts.decks).toBe(0);
+    expect(counts.runeBuilds).toBe(0);
+    expect(counts.gearRecs).toBe(0);
+    expect(counts.rngFactors).toBe(0);
+    expect(counts.mechanics).toBeGreaterThan(0);
+  });
+
+  it("still checks deck references when the manifest leaves the decks out", () => {
+    const dir = tempRecord(null, () => {});
+    editJson<{ collections: Record<string, string> }>(dir, "curated/manifest.json", (m) => {
+      delete m.collections.decks;
+    });
+    expect(() => importRecord(testStore(), dir)).toThrow(/unknown deck ids/);
+  });
+
   it("warns about a glossary key that more than one entry claims, naming the winner", () => {
     const dir = tempRecord("glossary.json", (rows) => {
       const power = rows.find((r) => r.kr === "전투력")!;

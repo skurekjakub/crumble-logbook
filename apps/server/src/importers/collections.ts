@@ -195,6 +195,7 @@ export const COLLECTIONS = {
     },
   }),
   decks: collection({
+    optional: true,
     /** @inheritdoc */
     parse: (file, raw, { mode }) => parseModedRows(file, raw, seedDeck, mode),
     /** @inheritdoc */
@@ -222,6 +223,7 @@ export const COLLECTIONS = {
     },
   }),
   runes: collection({
+    optional: true,
     /** @inheritdoc */
     parse: (file, raw, { mode }) => parseModedRows(file, raw, seedRune, mode),
     /** @inheritdoc */
@@ -245,13 +247,16 @@ export const COLLECTIONS = {
       },
     ],
   }),
-  gear: citedRows("gearRecs", modedRows(seedGear), (gear) => ({
-    slot: mapGearSlot(gear.slot),
-    substats: gear.substats,
-    context: gear.context,
-    why: gear.why,
-    mode: gear.mode,
-  })),
+  gear: {
+    ...citedRows("gearRecs", modedRows(seedGear), (gear) => ({
+      slot: mapGearSlot(gear.slot),
+      substats: gear.substats,
+      context: gear.context,
+      why: gear.why,
+      mode: gear.mode,
+    })),
+    optional: true,
+  },
   scores: {
     ...citedRows(
       "scores",
@@ -269,12 +274,15 @@ export const COLLECTIONS = {
       alsoTopics: alsoTopics ?? [],
     }),
   ),
-  rng: citedRows("rngFactors", modedRows(seedRng), (factor) => ({
-    factor: factor.factor,
-    effect: factor.effect,
-    mitigation: factor.mitigation ?? null,
-    mode: factor.mode,
-  })),
+  rng: {
+    ...citedRows("rngFactors", modedRows(seedRng), (factor) => ({
+      factor: factor.factor,
+      effect: factor.effect,
+      mitigation: factor.mitigation ?? null,
+      mode: factor.mode,
+    })),
+    optional: true,
+  },
   timeline: citedRows("timeline", modedRows(seedTimeline), (event) => ({
     date: event.date,
     event: event.event,
