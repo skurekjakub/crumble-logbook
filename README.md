@@ -9,7 +9,7 @@ A local research tool for Cookie Run: Crumble: what top Korean and global player
 | `research/` | Research records. Each has a `README.md` (question, verdict, sources) and `evidence/` with verbatim captures (DCInside and Naver cafe posts, comments, images, crumb.gg rankings, YouTube frames). A record may also keep a `research-trail.md` (its web search rounds) and a `STATE.md` (working state between sessions); record 001 has both, its `STATE.md` now superseded by its README. A record the app can load also has `import.json` (what to import and from where) and `curated/` (the curated dataset). |
 | `packages/schema` | Drizzle tables, migrations and every Zod schema, shared by the server and the web app. |
 | `apps/server` | The data API: Hono over SQLite, layered `routes → services → repos`, with one content-type registry, plus the record importer and the snapshot CLIs. |
-| `apps/web` | The web app: React + TanStack Router/Query, typed against the API through `hc<AppType>`. One section per game mode (driven by `src/app/modes.ts`), plus Research, Sources and Glossary. |
+| `apps/web` | The web app: React + TanStack Router/Query, typed against the API through `hc<AppType>`. One section per game mode (driven by `src/app/modes/`, a file per mode), plus Research, Sources and Glossary. |
 | `data/` | `crumble.db` (local, gitignored) and `snapshot.json`, the committed, diffable dump of the database. |
 | `tools/conquest-macro/` | An AutoHotkey v2 loop that retries the Guild Conquest fight; its README covers tuning. |
 | `tools/eslint-config/` | The ESLint flat config (a workspace package). It carries its own TypeScript 6.0, because typescript-eslint needs the JS compiler API, which the native TypeScript 7 behind `tsc` doesn't ship yet (expected in 7.1). |

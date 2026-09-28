@@ -23,7 +23,7 @@ The user wants to simulate the Guild Conquest encounter (지나치게 무거워�
   - Layers run routes → services → repos → db, enforced by `apps/server/test/architecture.test.ts`.
   - Content types are registered once in `apps/server/src/registry.ts`.
   - The web gets types only through `hc<AppType>`.
-  - Components are props-only, and `apps/web/src/app/modes.ts` drives the views.
+  - Components are props-only, and `apps/web/src/app/modes/` drives the views.
 - **Local only**, single user.
 
 ## 3. Sources and how this spec cites them
@@ -492,6 +492,6 @@ These are only the questions whose answers change the design.
 **Changed**
 - `apps/server/src/registry.ts`, `apps/server/src/app.ts`, `apps/server/src/services/index.ts`, `apps/server/src/importers/manifest.ts`, `apps/server/test/architecture.test.ts`
 - `packages/schema/src/enums.ts`
-- `apps/web/src/app/modes.ts`, `apps/web/src/api/queries.ts`, `apps/web/src/api/types.ts`
+- `apps/web/src/app/modes/conquest.ts`, `apps/web/src/api/queries.ts`, `apps/web/src/api/types.ts`
 - `apps/web/src/components/FightTimeline.tsx` (the `lanes` prop)
 - `research/001-guild-conquest-meta/import.json`, `research/001-guild-conquest-meta/curated/manifest.json`
