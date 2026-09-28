@@ -37,6 +37,7 @@ import { Route as RumbleRunesRouteImport } from './routes/rumble/runes'
 import { Route as RumbleTeamsRouteImport } from './routes/rumble/teams'
 import { Route as RumbleTimelineRouteImport } from './routes/rumble/timeline'
 import { Route as RumbleUsageRouteImport } from './routes/rumble/usage'
+import { Route as ResearchSlugCapturesRouteImport } from './routes/research_.$slug.captures'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -178,6 +179,11 @@ const RumbleUsageRoute = RumbleUsageRouteImport.update({
   path: '/rumble/usage',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResearchSlugCapturesRoute = ResearchSlugCapturesRouteImport.update({
+  id: '/research_/$slug/captures',
+  path: '/research/$slug/captures',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -208,6 +214,7 @@ export interface FileRoutesByFullPath {
   '/arena/': typeof ArenaIndexRoute
   '/conquest/': typeof ConquestIndexRoute
   '/rumble/': typeof RumbleIndexRoute
+  '/research/$slug/captures': typeof ResearchSlugCapturesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -238,6 +245,7 @@ export interface FileRoutesByTo {
   '/arena': typeof ArenaIndexRoute
   '/conquest': typeof ConquestIndexRoute
   '/rumble': typeof RumbleIndexRoute
+  '/research/$slug/captures': typeof ResearchSlugCapturesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -269,6 +277,7 @@ export interface FileRoutesById {
   '/arena/': typeof ArenaIndexRoute
   '/conquest/': typeof ConquestIndexRoute
   '/rumble/': typeof RumbleIndexRoute
+  '/research_/$slug/captures': typeof ResearchSlugCapturesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -301,6 +310,7 @@ export interface FileRouteTypes {
     | '/arena/'
     | '/conquest/'
     | '/rumble/'
+    | '/research/$slug/captures'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -331,6 +341,7 @@ export interface FileRouteTypes {
     | '/arena'
     | '/conquest'
     | '/rumble'
+    | '/research/$slug/captures'
   id:
     | '__root__'
     | '/'
@@ -361,6 +372,7 @@ export interface FileRouteTypes {
     | '/arena/'
     | '/conquest/'
     | '/rumble/'
+    | '/research_/$slug/captures'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -392,6 +404,7 @@ export interface RootRouteChildren {
   ArenaIndexRoute: typeof ArenaIndexRoute
   ConquestIndexRoute: typeof ConquestIndexRoute
   RumbleIndexRoute: typeof RumbleIndexRoute
+  ResearchSlugCapturesRoute: typeof ResearchSlugCapturesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -592,6 +605,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RumbleUsageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/research_/$slug/captures': {
+      id: '/research_/$slug/captures'
+      path: '/research/$slug/captures'
+      fullPath: '/research/$slug/captures'
+      preLoaderRoute: typeof ResearchSlugCapturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -624,6 +644,7 @@ const rootRouteChildren: RootRouteChildren = {
   ArenaIndexRoute: ArenaIndexRoute,
   ConquestIndexRoute: ConquestIndexRoute,
   RumbleIndexRoute: RumbleIndexRoute,
+  ResearchSlugCapturesRoute: ResearchSlugCapturesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -11,8 +11,14 @@ import type { api } from "./client";
  */
 export type ResearchRecord = InferResponseType<(typeof api.records)[":slug"]["$get"], 200>;
 
-/** A source: id, site, url, title, titleEn, date, relevance, note, summaryEn, capturePath. */
+/**
+ * A source: id, site, url, title, titleEn, date, relevance, note, summaryEn,
+ * capturePath, the records it belongs to, and its capture's ledger stamp.
+ */
 export type Source = InferResponseType<typeof api.sources.$get, 200>[number];
+
+/** One capture-ledger line of a loaded record: path, URL, time, tool, approximation and hash. */
+export type Capture = InferResponseType<typeof api.captures.$get, 200>[number];
 
 /** A glossary entry: kr, shorthand, en, kind and game attributes. */
 export type GlossaryEntry = InferResponseType<typeof api.glossary.$get, 200>[number];

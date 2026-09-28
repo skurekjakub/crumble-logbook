@@ -91,6 +91,16 @@ td.source-title,td.source-capture{width:auto}
 .capture > span{unicode-bidi:isolate}
 @media (max-width:640px){.capture{max-width:100%}}
 
+/* capture stamps: the time, then the tool on its own line; ≈ marks a backfilled time and explains itself on hover.
+   A capture URL is cut at the end, its full form in the tooltip */
+.capture-stamp{font-size:var(--fs-2xs)}
+.capture-stamp .approx{text-decoration:none;cursor:help;margin-right:.25em;color:var(--ink-3)}
+.capture-stamp .tool{display:block}
+td.capture-tool,td.capture-time{white-space:nowrap}
+td.capture-tool .mono{font-size:var(--fs-2xs)}
+.capture-url{display:inline-block;max-width:32ch;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;vertical-align:bottom;font-size:var(--fs-2xs)}
+@media (max-width:640px){.capture-url{max-width:100%}}
+
 /* gearBoard.js */
 .gearboard{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2)}
 @media (max-width:520px){.gearboard{grid-template-columns:1fr}}

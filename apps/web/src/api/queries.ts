@@ -94,6 +94,18 @@ export const sourcesQuery = (filter: { site?: SourceSiteFilter; record?: string 
   });
 
 /**
+ * One research record's capture ledger, ordered by path.
+ *
+ * @param record - the record's slug
+ * @returns the query options
+ */
+export const capturesQuery = (record: string) =>
+  queryOptions({
+    queryKey: ["captures", { record }],
+    queryFn: () => parseResponse(api.captures.$get({ query: { record } })),
+  });
+
+/**
  * Glossary entries, ordered by Korean name.
  *
  * @param kind - restrict to one kind

@@ -95,6 +95,13 @@ describe("/research", () => {
     expect(conquest.queryByRole("link", { name: "Arena" })).toBeNull();
   });
 
+  it("links each record to its capture ledger", async () => {
+    await renderRoute("/research", API);
+    expect(
+      within(await card("002-pvp-meta")).getByRole("link", { name: "Capture ledger" }),
+    ).toHaveAttribute("href", "/research/002-pvp-meta/captures");
+  });
+
   it("navigates to a mode's screens from its link", async () => {
     const router = await renderRoute("/research", {
       ...API,

@@ -55,6 +55,8 @@ export interface DataTableProps<T> {
   filter?: TableFilter<T>;
   /** Shows a select next to the search box. */
   select?: TableSelect<T>;
+  /** Further selects after `select`; a row must pass every one. */
+  selects?: ReadonlyArray<TableSelect<T>>;
   /** Message when `rows` is empty; defaults to "Nothing to show." */
   empty?: ReactNode;
   /**
@@ -80,38 +82,46 @@ export function filterRows<T>(rows: readonly T[], query: string, text: (row: T) 
 }
 
 /**
- * Keeps the rows both filters keep.
+ * Keeps the rows every filter keeps.
  *
  * @param rows - the rows to filter
  * @param filter - the text filter, when there is one
  * @param select - the select filter, when there is one; without a `test` it keeps every row
+ * @param selects - further select filters, each applied like `select`
  * @returns the kept rows, in input order
  */
 export function applyFilters<T>(
   rows: readonly T[],
   filter: TableFilter<T> | undefined,
   select: TableSelect<T> | undefined,
+  selects: ReadonlyArray<TableSelect<T>> = [],
 ): T[] {
-  const kept = filter ? filterRows(rows, filter.value, filter.text) : [...rows];
-  if (!select?.test || !select.value) return kept;
-  const { test, value } = select;
-  return kept.filter((r) => test(r, value));
+  let kept = filter ? filterRows(rows, filter.value, filter.text) : [...rows];
+  for (const s of [...(select ? [select] : []), ...selects]) {
+    if (!s.test || !s.value) continue;
+    const { test, value } = s;
+    kept = kept.filter((r) => test(r, value));
+  }
+  return kept;
 }
 
 /** Props for {@link TableTools}. */
 export interface TableToolsProps<T> {
   filter?: TableFilter<T>;
   select?: TableSelect<T>;
+  /** Further selects after `select`. */
+  selects?: ReadonlyArray<TableSelect<T>>;
 }
 
 /**
- * The search box and select above a filtered list; renders nothing without either.
+ * The search box and selects above a filtered list; renders nothing without any.
  *
- * @param props - the text filter and the select, each optional
+ * @param props - the text filter and the selects, each optional
  * @returns the tools row, or null
  */
-export function TableTools<T>({ filter, select }: TableToolsProps<T>) {
-  if (!filter && !select) return null;
+export function TableTools<T>({ filter, select, selects = [] }: TableToolsProps<T>) {
+  const allSelects = [...(select ? [select] : []), ...selects];
+  if (!filter && allSelects.length === 0) return null;
   const placeholder = filter?.placeholder ?? "Filter";
   return (
     <div className="tools">
@@ -124,20 +134,21 @@ export function TableTools<T>({ filter, select }: TableToolsProps<T>) {
           onChange={(e) => filter.onChange(e.target.value)}
         />
       )}
-      {select && (
+      {allSelects.map((s) => (
         <select
-          aria-label={select.name}
-          value={select.value}
-          onChange={(e) => select.onChange(e.target.value)}
+          key={s.name}
+          aria-label={s.name}
+          value={s.value}
+          onChange={(e) => s.onChange(e.target.value)}
         >
-          <option value="">{select.label}</option>
-          {select.options.map(([v, l]) => (
+          <option value="">{s.label}</option>
+          {s.options.map(([v, l]) => (
             <option key={v} value={v}>
               {l}
             </option>
           ))}
         </select>
-      )}
+      ))}
     </div>
   );
 }
@@ -155,15 +166,16 @@ export function DataTable<T>({
   rowKey,
   filter,
   select,
+  selects,
   empty,
   layout = "scroll",
 }: DataTableProps<T>) {
-  const kept = applyFilters(rows, filter, select);
+  const kept = applyFilters(rows, filter, select, selects);
   const message = rows.length === 0 ? (empty ?? "Nothing to show.") : "Nothing matches.";
 
   return (
     <>
-      <TableTools filter={filter} select={select} />
+      <TableTools filter={filter} select={select} selects={selects} />
       <div className="tablewrap">
         <table className={layout}>
           <thead>

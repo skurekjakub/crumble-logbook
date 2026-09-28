@@ -48,6 +48,39 @@ function Harness({ initial = "" }: { initial?: string }) {
   );
 }
 
+describe("selects", () => {
+  it("renders every select and keeps the rows that pass them all", () => {
+    render(
+      <DataTable
+        columns={COLUMNS}
+        rows={ROWS}
+        rowKey={(r) => r.kr}
+        select={{
+          name: "Kind",
+          label: "All kinds",
+          options: [["cookie", "Cookie"]],
+          value: "cookie",
+          onChange: () => {},
+          test: (r, v) => r.kind === v,
+        }}
+        selects={[
+          {
+            name: "Named",
+            label: "Any name",
+            options: [["M", "Starts with M"]],
+            value: "M",
+            onChange: () => {},
+            test: (r, v) => (r.en ?? "").startsWith(v),
+          },
+        ]}
+      />,
+    );
+    expect(screen.getByRole("combobox", { name: "Kind" })).toHaveValue("cookie");
+    expect(screen.getByRole("combobox", { name: "Named" })).toHaveValue("M");
+    expect(bodyRows()).toEqual([["우유", "Milk", "cookie"]]);
+  });
+});
+
 describe("filterRows", () => {
   it("matches case-insensitively on the trimmed query", () => {
     expect(filterRows(ROWS, "  MIL ", text).map((r) => r.en)).toEqual(["Milk"]);

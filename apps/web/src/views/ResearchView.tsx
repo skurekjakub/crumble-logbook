@@ -74,6 +74,12 @@ function RecordCard({ record, sources }: { record: ResearchRecord; sources: numb
           ],
           ["Screens", modes.length ? modes.map((m) => <ModeLinks key={m.id} mode={m} />) : null],
           ["Folder", <span className="mono">research/{record.slug}/</span>],
+          [
+            "Evidence",
+            <Link to="/research/$slug/captures" params={{ slug: record.slug }}>
+              Capture ledger
+            </Link>,
+          ],
         ]}
       />
     </article>

@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import type { SourceSiteFilter } from "../api/queries";
 import { sourcesQuery } from "../api/queries";
 import type { Source } from "../api/types";
+import { CaptureStamp } from "../components/CaptureStamp";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { QueryResult } from "../components/QueryResult";
@@ -87,6 +88,18 @@ const COLUMNS: Column<Source>[] = [
       ),
     className: "wide source-capture",
   },
+  {
+    header: "Captured",
+    cell: (s) =>
+      s.capture && (
+        <CaptureStamp
+          capturedAt={s.capture.capturedAt}
+          tool={s.capture.tool}
+          approx={s.capture.approx}
+        />
+      ),
+    className: "source-captured",
+  },
 ];
 
 /** Props for {@link SourcesView}. */
@@ -109,7 +122,7 @@ export function SourcesView({ search: { site, q }, onSearch }: SourcesViewProps)
     <>
       <ViewHeader
         title="Sources"
-        lede="Every post this logbook cites. Raw captures are in the research record's evidence folder."
+        lede="Every post this logbook cites, with when and by what its capture was taken (≈ marks a time backfilled after the fact). Raw captures are in the research record's evidence folder."
       />
       <QueryResult query={sources} resource="sources">
         {(rows) => (

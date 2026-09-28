@@ -37,12 +37,22 @@ describe("sources view", () => {
       "2026-09-20",
       "3",
       "research/001-guild-conquest-meta/evidence/03-dc-posts/76135.md",
+      "≈2026-09-27 10:39 +02:00 python:dc_scrape",
     ]);
+    expect(rows[0]!.at(-1)).toBe("");
+    expect(rows[2]!.at(-1)).toBe("2026-09-27 14:34 +02:00 curl");
     expect(screen.getByRole("link", { name: "DC 76135" })).toHaveAttribute(
       "href",
       "https://example.test/dc/76135",
     );
     expect(screen.getByText(/03-dc-posts\/76135\.md/)).toHaveClass("mono");
+  });
+
+  it("marks a backfilled capture time as approximate, saying why", async () => {
+    await renderRoute("/sources");
+    const marker = await screen.findByTitle(/from the capture's own header/);
+    expect(marker).toHaveTextContent("≈");
+    expect(screen.getAllByTitle(/^Approximate/)).toHaveLength(1);
   });
 
   it("narrows to one site through ?site=", async () => {
