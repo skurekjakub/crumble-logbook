@@ -356,6 +356,18 @@ export const riftSeasonsQuery = () =>
   });
 
 /**
+ * What opens the Dimensional Rift: the main stage whose clear unlocks it,
+ * with its sources; empty when no record states it.
+ *
+ * @returns the query options
+ */
+export const riftUnlocksQuery = () =>
+  queryOptions({
+    queryKey: ["rift-unlocks"],
+    queryFn: () => parseResponse(api["rift-unlocks"].$get({ query: {} })),
+  });
+
+/**
  * The boss players report per Rift level, lowest level first.
  *
  * @returns the query options

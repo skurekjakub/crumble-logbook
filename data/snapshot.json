@@ -77378,6 +77378,12 @@
     "endsAt": "2028-03-09T03:00:00.000Z"
    }
   ],
+  "riftUnlocks": [
+   {
+    "id": 1,
+    "stage": "328-30"
+   }
+  ],
   "stageZoneSlots": [
    {
     "id": 1,
@@ -91950,528 +91956,540 @@
    },
    {
     "id": 2282,
+    "entity": "rift_unlock",
+    "entityId": "1",
+    "sourceId": "nv:44477"
+   },
+   {
+    "id": 2283,
+    "entity": "rift_unlock",
+    "entityId": "1",
+    "sourceId": "nv:37730"
+   },
+   {
+    "id": 2284,
     "entity": "stage_zone_slot",
     "entityId": "1",
     "sourceId": "web:yt-tZJ5wzhcUA8"
    },
    {
-    "id": 2283,
+    "id": 2285,
     "entity": "stage_zone_slot",
     "entityId": "1",
     "sourceId": "web:yt-RLuI96lGgGg"
    },
    {
-    "id": 2284,
+    "id": 2286,
     "entity": "stage_zone_slot",
     "entityId": "2",
     "sourceId": "web:yt-RLuI96lGgGg"
-   },
-   {
-    "id": 2285,
-    "entity": "stage_zone_slot",
-    "entityId": "3",
-    "sourceId": "dc:75540"
-   },
-   {
-    "id": 2286,
-    "entity": "stage_zone_slot",
-    "entityId": "3",
-    "sourceId": "dc:70308"
    },
    {
     "id": 2287,
     "entity": "stage_zone_slot",
     "entityId": "3",
-    "sourceId": "web:yt-tZJ5wzhcUA8"
+    "sourceId": "dc:75540"
    },
    {
     "id": 2288,
+    "entity": "stage_zone_slot",
+    "entityId": "3",
+    "sourceId": "dc:70308"
+   },
+   {
+    "id": 2289,
+    "entity": "stage_zone_slot",
+    "entityId": "3",
+    "sourceId": "web:yt-tZJ5wzhcUA8"
+   },
+   {
+    "id": 2290,
     "entity": "stage_zone_slot",
     "entityId": "4",
     "sourceId": "dc:72776"
    },
    {
-    "id": 2289,
+    "id": 2291,
     "entity": "stage_zone_slot",
     "entityId": "4",
     "sourceId": "web:crumblehub-stage-boss-index"
    },
    {
-    "id": 2290,
+    "id": 2292,
     "entity": "stage_zone_slot",
     "entityId": "5",
     "sourceId": "web:crumblehub-stage-boss-index"
    },
    {
-    "id": 2291,
+    "id": 2293,
     "entity": "stage_zone_slot",
     "entityId": "6",
     "sourceId": "dc:67229"
    },
    {
-    "id": 2292,
+    "id": 2294,
     "entity": "stage_zone_slot",
     "entityId": "6",
     "sourceId": "dc:72776"
    },
    {
-    "id": 2293,
+    "id": 2295,
     "entity": "stage_zone_slot",
     "entityId": "7",
     "sourceId": "dc:72776"
-   },
-   {
-    "id": 2294,
-    "entity": "stage_zone_slot",
-    "entityId": "8",
-    "sourceId": "dc:70308"
-   },
-   {
-    "id": 2295,
-    "entity": "stage_zone_slot",
-    "entityId": "8",
-    "sourceId": "dc:71293"
    },
    {
     "id": 2296,
     "entity": "stage_zone_slot",
     "entityId": "8",
-    "sourceId": "dc:68319"
+    "sourceId": "dc:70308"
    },
    {
     "id": 2297,
     "entity": "stage_zone_slot",
     "entityId": "8",
-    "sourceId": "dc:67268"
+    "sourceId": "dc:71293"
    },
    {
     "id": 2298,
+    "entity": "stage_zone_slot",
+    "entityId": "8",
+    "sourceId": "dc:68319"
+   },
+   {
+    "id": 2299,
+    "entity": "stage_zone_slot",
+    "entityId": "8",
+    "sourceId": "dc:67268"
+   },
+   {
+    "id": 2300,
     "entity": "stage_zone_slot",
     "entityId": "9",
     "sourceId": "dc:70308"
    },
    {
-    "id": 2299,
+    "id": 2301,
     "entity": "stage_zone_slot",
     "entityId": "9",
     "sourceId": "dc:72776"
-   },
-   {
-    "id": 2300,
-    "entity": "stage_zone_slot",
-    "entityId": "10",
-    "sourceId": "dc:72776"
-   },
-   {
-    "id": 2301,
-    "entity": "stage_zone_slot",
-    "entityId": "10",
-    "sourceId": "dc:76835"
    },
    {
     "id": 2302,
     "entity": "stage_zone_slot",
     "entityId": "10",
-    "sourceId": "dc:71892"
+    "sourceId": "dc:72776"
    },
    {
     "id": 2303,
     "entity": "stage_zone_slot",
     "entityId": "10",
-    "sourceId": "dc:77154"
+    "sourceId": "dc:76835"
    },
    {
     "id": 2304,
+    "entity": "stage_zone_slot",
+    "entityId": "10",
+    "sourceId": "dc:71892"
+   },
+   {
+    "id": 2305,
+    "entity": "stage_zone_slot",
+    "entityId": "10",
+    "sourceId": "dc:77154"
+   },
+   {
+    "id": 2306,
     "entity": "stage_zone_slot",
     "entityId": "11",
     "sourceId": "dc:72776"
    },
    {
-    "id": 2305,
+    "id": 2307,
     "entity": "stage_zone_slot",
     "entityId": "11",
     "sourceId": "dc:67268"
    },
    {
-    "id": 2306,
-    "entity": "stage_zone_slot",
-    "entityId": "12",
-    "sourceId": "web:crumblehub-stage-boss-index"
-   },
-   {
-    "id": 2307,
-    "entity": "stage_zone_slot",
-    "entityId": "13",
-    "sourceId": "dc:75752"
-   },
-   {
     "id": 2308,
     "entity": "stage_zone_slot",
-    "entityId": "13",
+    "entityId": "12",
     "sourceId": "web:crumblehub-stage-boss-index"
    },
    {
     "id": 2309,
     "entity": "stage_zone_slot",
-    "entityId": "14",
-    "sourceId": "dc:72776"
+    "entityId": "13",
+    "sourceId": "dc:75752"
    },
    {
     "id": 2310,
     "entity": "stage_zone_slot",
-    "entityId": "14",
-    "sourceId": "dc:70308"
+    "entityId": "13",
+    "sourceId": "web:crumblehub-stage-boss-index"
    },
    {
     "id": 2311,
     "entity": "stage_zone_slot",
-    "entityId": "15",
-    "sourceId": "web:yt-tZJ5wzhcUA8"
+    "entityId": "14",
+    "sourceId": "dc:72776"
    },
    {
     "id": 2312,
     "entity": "stage_zone_slot",
-    "entityId": "15",
-    "sourceId": "web:yt-1AyEMtaE-s4"
+    "entityId": "14",
+    "sourceId": "dc:70308"
    },
    {
     "id": 2313,
     "entity": "stage_zone_slot",
     "entityId": "15",
-    "sourceId": "dc:76859"
+    "sourceId": "web:yt-tZJ5wzhcUA8"
    },
    {
     "id": 2314,
     "entity": "stage_zone_slot",
     "entityId": "15",
-    "sourceId": "dc:75871"
+    "sourceId": "web:yt-1AyEMtaE-s4"
    },
    {
     "id": 2315,
     "entity": "stage_zone_slot",
-    "entityId": "16",
-    "sourceId": "dc:70308"
+    "entityId": "15",
+    "sourceId": "dc:76859"
    },
    {
     "id": 2316,
     "entity": "stage_zone_slot",
-    "entityId": "16",
-    "sourceId": "dc:72776"
+    "entityId": "15",
+    "sourceId": "dc:75871"
    },
    {
     "id": 2317,
     "entity": "stage_zone_slot",
-    "entityId": "17",
+    "entityId": "16",
     "sourceId": "dc:70308"
    },
    {
     "id": 2318,
     "entity": "stage_zone_slot",
+    "entityId": "16",
+    "sourceId": "dc:72776"
+   },
+   {
+    "id": 2319,
+    "entity": "stage_zone_slot",
+    "entityId": "17",
+    "sourceId": "dc:70308"
+   },
+   {
+    "id": 2320,
+    "entity": "stage_zone_slot",
     "entityId": "18",
     "sourceId": "dc:75752"
    },
    {
-    "id": 2319,
+    "id": 2321,
     "entity": "stage_zone_slot",
     "entityId": "19",
     "sourceId": "web:yt-RLuI96lGgGg"
    },
    {
-    "id": 2320,
+    "id": 2322,
     "entity": "stage_zone_slot",
     "entityId": "20",
     "sourceId": "dc:76859"
    },
    {
-    "id": 2321,
+    "id": 2323,
     "entity": "stage_zone_slot",
     "entityId": "20",
     "sourceId": "web:crumblehub-stage-boss-index"
    },
    {
-    "id": 2322,
+    "id": 2324,
     "entity": "stage_zone_slot",
     "entityId": "21",
     "sourceId": "web:yt-RLuI96lGgGg"
    },
    {
-    "id": 2323,
+    "id": 2325,
     "entity": "stage_zone_slot",
     "entityId": "22",
     "sourceId": "dc:76835"
    },
    {
-    "id": 2324,
+    "id": 2326,
     "entity": "stage_zone_slot",
     "entityId": "22",
     "sourceId": "dc:75241"
    },
    {
-    "id": 2325,
+    "id": 2327,
     "entity": "stage_zone_slot",
     "entityId": "22",
     "sourceId": "dc:72776"
    },
    {
-    "id": 2326,
+    "id": 2328,
     "entity": "stage_clear",
     "entityId": "1",
     "sourceId": "dc:76835"
    },
    {
-    "id": 2327,
+    "id": 2329,
     "entity": "stage_clear",
     "entityId": "2",
     "sourceId": "dc:75241"
    },
    {
-    "id": 2328,
+    "id": 2330,
     "entity": "stage_clear",
     "entityId": "3",
     "sourceId": "dc:75151"
    },
    {
-    "id": 2329,
+    "id": 2331,
     "entity": "stage_clear",
     "entityId": "4",
     "sourceId": "dc:76779"
    },
    {
-    "id": 2330,
+    "id": 2332,
     "entity": "stage_clear",
     "entityId": "5",
     "sourceId": "dc:76797"
    },
    {
-    "id": 2331,
-    "entity": "stage_clear",
-    "entityId": "6",
-    "sourceId": "dc:76814"
-   },
-   {
-    "id": 2332,
-    "entity": "stage_clear",
-    "entityId": "6",
-    "sourceId": "dc:76825"
-   },
-   {
     "id": 2333,
     "entity": "stage_clear",
-    "entityId": "7",
+    "entityId": "6",
     "sourceId": "dc:76814"
    },
    {
     "id": 2334,
     "entity": "stage_clear",
-    "entityId": "7",
+    "entityId": "6",
     "sourceId": "dc:76825"
    },
    {
     "id": 2335,
     "entity": "stage_clear",
+    "entityId": "7",
+    "sourceId": "dc:76814"
+   },
+   {
+    "id": 2336,
+    "entity": "stage_clear",
+    "entityId": "7",
+    "sourceId": "dc:76825"
+   },
+   {
+    "id": 2337,
+    "entity": "stage_clear",
     "entityId": "8",
     "sourceId": "dc:76859"
    },
    {
-    "id": 2336,
+    "id": 2338,
     "entity": "stage_clear",
     "entityId": "9",
     "sourceId": "nv:46209"
    },
    {
-    "id": 2337,
+    "id": 2339,
     "entity": "stage_clear",
     "entityId": "10",
     "sourceId": "nv:46887"
    },
    {
-    "id": 2338,
+    "id": 2340,
     "entity": "stage_clear",
     "entityId": "11",
     "sourceId": "dc:75752"
    },
    {
-    "id": 2339,
+    "id": 2341,
     "entity": "stage_clear",
     "entityId": "12",
     "sourceId": "dc:75540"
    },
    {
-    "id": 2340,
+    "id": 2342,
     "entity": "stage_clear",
     "entityId": "12",
     "sourceId": "dc:75975"
    },
    {
-    "id": 2341,
+    "id": 2343,
     "entity": "stage_clear",
     "entityId": "13",
     "sourceId": "nv:44742"
    },
    {
-    "id": 2342,
+    "id": 2344,
     "entity": "stage_clear",
     "entityId": "14",
     "sourceId": "dc:71892"
    },
    {
-    "id": 2343,
+    "id": 2345,
     "entity": "stage_clear",
     "entityId": "15",
     "sourceId": "dc:71137"
    },
    {
-    "id": 2344,
+    "id": 2346,
     "entity": "stage_clear",
     "entityId": "16",
     "sourceId": "nv:44131"
    },
    {
-    "id": 2345,
+    "id": 2347,
     "entity": "stage_clear",
     "entityId": "17",
     "sourceId": "dc:68319"
    },
    {
-    "id": 2346,
+    "id": 2348,
     "entity": "stage_clear",
     "entityId": "18",
     "sourceId": "nv:34395"
    },
    {
-    "id": 2347,
+    "id": 2349,
     "entity": "stage_clear",
     "entityId": "19",
     "sourceId": "nv:42898"
    },
    {
-    "id": 2348,
+    "id": 2350,
     "entity": "stage_clear",
     "entityId": "20",
     "sourceId": "nv:42188"
    },
    {
-    "id": 2349,
+    "id": 2351,
     "entity": "stage_clear",
     "entityId": "21",
     "sourceId": "nv:41892"
    },
    {
-    "id": 2350,
+    "id": 2352,
     "entity": "stage_clear",
     "entityId": "22",
     "sourceId": "nv:34626"
    },
    {
-    "id": 2351,
+    "id": 2353,
     "entity": "stage_clear",
     "entityId": "23",
     "sourceId": "nv:35278"
    },
    {
-    "id": 2352,
+    "id": 2354,
     "entity": "stage_clear",
     "entityId": "23",
     "sourceId": "nv:31252"
    },
    {
-    "id": 2353,
+    "id": 2355,
     "entity": "stage_clear",
     "entityId": "24",
     "sourceId": "dc:72776"
    },
    {
-    "id": 2354,
+    "id": 2356,
     "entity": "stage_clear",
     "entityId": "24",
     "sourceId": "dc:70007"
    },
    {
-    "id": 2355,
+    "id": 2357,
     "entity": "stage_clear",
     "entityId": "25",
     "sourceId": "dc:71369"
    },
    {
-    "id": 2356,
+    "id": 2358,
     "entity": "stage_clear",
     "entityId": "25",
     "sourceId": "dc:72776"
    },
    {
-    "id": 2357,
+    "id": 2359,
     "entity": "stage_clear",
     "entityId": "26",
     "sourceId": "dc:71293"
    },
    {
-    "id": 2358,
+    "id": 2360,
     "entity": "stage_clear",
     "entityId": "27",
     "sourceId": "dc:72024"
    },
    {
-    "id": 2359,
+    "id": 2361,
     "entity": "rift_boss",
     "entityId": "1",
     "sourceId": "dc:76586"
    },
    {
-    "id": 2360,
+    "id": 2362,
     "entity": "rift_boss",
     "entityId": "1",
     "sourceId": "dc:77015"
    },
    {
-    "id": 2361,
+    "id": 2363,
     "entity": "rift_boss",
     "entityId": "2",
     "sourceId": "dc:77114"
    },
    {
-    "id": 2362,
+    "id": 2364,
     "entity": "rift_boss",
     "entityId": "2",
     "sourceId": "dc:77015"
    },
    {
-    "id": 2363,
+    "id": 2365,
     "entity": "rift_boss",
     "entityId": "3",
     "sourceId": "dc:76569"
    },
    {
-    "id": 2364,
+    "id": 2366,
     "entity": "rift_boss",
     "entityId": "3",
     "sourceId": "dc:77015"
    },
    {
-    "id": 2365,
+    "id": 2367,
     "entity": "rift_boss",
     "entityId": "4",
     "sourceId": "dc:76862"
    },
    {
-    "id": 2366,
+    "id": 2368,
     "entity": "rift_boss",
     "entityId": "5",
     "sourceId": "dc:75615"
    },
    {
-    "id": 2367,
+    "id": 2369,
     "entity": "rift_boss",
     "entityId": "5",
     "sourceId": "dc:76174"
    },
    {
-    "id": 2368,
+    "id": 2370,
     "entity": "rift_boss",
     "entityId": "6",
     "sourceId": "dc:76321"
    },
    {
-    "id": 2369,
+    "id": 2371,
     "entity": "rift_boss",
     "entityId": "7",
     "sourceId": "dc:73646"
@@ -98840,6 +98858,20 @@
     "entityId": "38",
     "recordSlug": "003-stage-pushing-meta",
     "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 910,
+    "entity": "rift_unlock",
+    "entityId": "1",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "nv:44477"
+   },
+   {
+    "id": 911,
+    "entity": "rift_unlock",
+    "entityId": "1",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "nv:37730"
    }
   ]
  }

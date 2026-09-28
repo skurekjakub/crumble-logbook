@@ -326,6 +326,15 @@ export const riftSeasonSelect = createSelectSchema(t.riftSeasons);
 /** A row selected from `rift_seasons`. */
 export type RiftSeasonRow = typeof t.riftSeasons.$inferSelect;
 
+/** Insert schema for `rift_unlocks`. `stage` is a `<chapter>-<stage>` label. */
+export const riftUnlockInsert = createInsertSchema(t.riftUnlocks, {
+  stage: (s) => s.regex(/^\d+-\d+$/, "expected <chapter>-<stage>"),
+});
+/** Select schema for `rift_unlocks`, mirroring the stored row shape. */
+export const riftUnlockSelect = createSelectSchema(t.riftUnlocks);
+/** A row selected from `rift_unlocks`. */
+export type RiftUnlockRow = typeof t.riftUnlocks.$inferSelect;
+
 /**
  * Insert schema for `stage_zone_slots`. `zoneIndex` is 1-8; `position` a
  * non-negative integer; the names, `stage` and `plan` are non-empty;

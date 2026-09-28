@@ -1,9 +1,10 @@
 {
- "about": "Dimensional Rift (차원의 이면) levels with recommended power and the 35%/15% entry powers, game data 1.4.002. Season 1 (2026-09-23 to 2026-10-08) runs levels 1-100; later seasons use 101-200. Inside the Rift, displayed team power is inflated by the 차원의 힘 level (see mechanics.json), so compare these numbers with the power shown in the Rift.",
+ "about": "Dimensional Rift (차원의 이면) levels with recommended power and the 35%/15% entry powers, game data 1.4.002. Season 1 (2026-09-23 to 2026-10-08) runs levels 1-100; later seasons use 101-200. Inside the Rift, displayed team power is inflated by the 차원의 힘 level (see mechanics.json), so compare these numbers with the power shown in the Rift. unlock: the main stage whose clear opens the Rift; the 1.4.002 patch note (nv:44477) opens it to players who cleared the main stages to the last one, and the 2026-09-10 patch note (nv:37730) makes that 328-30.",
  "measured": "2026-09-28",
  "sources": [
   "web:crumblehub-stages"
  ],
+ "unlock": { "stage": "328-30", "sources": ["nv:44477", "nv:37730"] },
  "groups": [
   {
    "id": 1209515545,

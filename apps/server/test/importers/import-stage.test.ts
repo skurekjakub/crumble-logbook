@@ -149,12 +149,21 @@ describe("importRecord on research record 003", FULL_IMPORT, () => {
     );
     const pack = services.stageClears.list().find((c) => c.bossKr === "케이크 들개떼");
     expect(pack?.bossEn).toBe("Cake Hound Pack");
+    expect(services.riftUnlocks.list()).toMatchObject([
+      { stage: "328-30", sources: ["nv:37730", "nv:44477"] },
+    ]);
   });
 
   it("loads the game facts owned by no record, and a --replace reloads them as they were, once", () => {
     const store = testStore();
     importRecord(store, stageDir);
-    const facts = ["powerBrackets", "stageChapters", "riftLevels", "riftSeasons"] as const;
+    const facts = [
+      "powerBrackets",
+      "stageChapters",
+      "riftLevels",
+      "riftSeasons",
+      "riftUnlocks",
+    ] as const;
     const before = facts.map((key) => store.repos.tables.dump(key));
     for (const rows of before) {
       expect(rows.every((row) => !("recordSlug" in row))).toBe(true);
@@ -231,6 +240,20 @@ describe("the stage collections' checks", FULL_IMPORT, () => {
     });
     expect(() => importRecord(testStore(), dir)).toThrow(
       /stage-zones\.json.*stage_zone_slot mode stage doesn't match deck stage-aoe-rapidfire's mode arena/,
+    );
+  });
+
+  it("holds one Rift unlock: another record naming a different stage conflicts with it", () => {
+    const store = testStore();
+    importRecord(store, stageCopy("905-stage-copy"));
+    const moved = stageCopy("906-stage-copy", {
+      ...ownDecks("-d"),
+      "rift-levels.json": (file) => {
+        (file.unlock as { stage: string }).stage = "336-30";
+      },
+    });
+    expect(() => importRecord(store, moved)).toThrow(
+      /rift-levels\.json \[unlock\]: Rift unlock 336-30 conflicts with the stored game fact/,
     );
   });
 

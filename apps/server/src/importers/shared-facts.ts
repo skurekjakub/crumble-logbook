@@ -17,7 +17,10 @@ export interface SharedFacts<K extends ContentKey> {
   key: K;
   /** The capture's record-relative path, as a conflict error names it. */
   file: string;
-  /** The fields that identify a fact: rows equal on all of them describe the same thing. */
+  /**
+   * The fields that identify a fact: rows equal on all of them describe the
+   * same thing. None, for a table that holds a single fact.
+   */
   identity: readonly (keyof ValuesOf<K>)[];
   /** The fields two records' versions of one fact must agree on. */
   facts: readonly (keyof ValuesOf<K>)[];

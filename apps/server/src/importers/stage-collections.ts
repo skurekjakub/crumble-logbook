@@ -87,12 +87,19 @@ export type SeedStageChapters = z.output<typeof seedStageChapters>;
 
 /**
  * `rift-levels.json`: the Rift's level groups, the seasons that run them,
- * and each level's recommended power, citing the file's `sources`.
- * `power_for_N` is checked, not stored, as in `stage-chapters.json`.
+ * and each level's recommended power, citing the file's `sources`, and
+ * the main stage whose clear opens the Rift (`unlock`), with its own
+ * sources. `power_for_N` is checked, not stored, as in `stage-chapters.json`.
  */
 export const seedRiftLevels = z.strictObject({
   ...header,
   sources: cited,
+  unlock: z
+    .strictObject({
+      stage: z.string().regex(/^\d+-\d+$/, "expected <chapter>-<stage>"),
+      sources: cited,
+    })
+    .optional(),
   groups: z
     .array(
       z.strictObject({ id: z.number().int(), firstStage: positiveInt, lastStage: positiveInt }),
@@ -393,7 +400,10 @@ export const STAGE_COLLECTIONS = {
     /** @inheritdoc */
     parse: (file, raw) => parseFile(file, raw, seedRiftLevels),
     /** @inheritdoc */
-    refs: ({ sources }): RowRefs[] => [{ row: "sources", sources }],
+    refs: ({ sources, unlock }): RowRefs[] => [
+      { row: "sources", sources },
+      ...(unlock ? [{ row: "unlock", sources: unlock.sources }] : []),
+    ],
     /** @inheritdoc */
     check: (file, { groups, seasons, levels }, context) => {
       assertDistinct(
@@ -417,7 +427,7 @@ export const STAGE_COLLECTIONS = {
       });
     },
     /** @inheritdoc */
-    prepare: ({ groups, seasons, levels, sources }, { file }) => {
+    prepare: ({ groups, seasons, levels, sources, unlock }, { file }) => {
       const group = new Map(groups.map((g) => [g.id, g]));
       return [
         insertGameFacts(
@@ -451,6 +461,17 @@ export const STAGE_COLLECTIONS = {
             })),
             sources,
           ),
+        ),
+        // One unlock at most, so every stored one is the same fact.
+        insertGameFacts(
+          {
+            key: "riftUnlocks",
+            file,
+            identity: [],
+            facts: ["stage"],
+            describe: (v) => ({ row: "unlock", what: `Rift unlock ${v.stage}` }),
+          },
+          unlock ? [{ values: { stage: unlock.stage }, sources: unlock.sources }] : [],
         ),
       ];
     },

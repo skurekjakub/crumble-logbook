@@ -263,6 +263,7 @@ const API: Record<string, Canned> = {
   "/api/rift-levels": { body: LEVELS },
   "/api/rift-seasons": { body: SEASONS },
   "/api/rift-bosses": { body: BOSSES },
+  "/api/rift-unlocks": { body: [{ id: 1, stage: "2-30", sources: ["nv:44477"] }] },
   "/api/takeaways?mode=stage": { body: TAKEAWAYS },
   "/api/timeline?mode=stage": { body: [] },
   "/api/rng-factors?mode=stage": { body: [] },
@@ -436,11 +437,16 @@ describe("the Dimensional Rift page", () => {
     expect(levels).toHaveTextContent("Dark Choco and Devil for shred.");
   });
 
-  it("names where the Rift opens, from the last chapter", async () => {
+  it("names where the Rift opens from the stored unlock, cited to its own sources, whatever the last chapter", async () => {
     await renderStage("/stage/rift");
     const entry = (await screen.findByRole("heading", { name: "Getting in" })).closest("section")!;
-    expect(entry).toHaveTextContent("after clearing 3-30");
-    expect(entry).toHaveTextContent("10G recommended, the 35% bracket from 4G");
+    await waitFor(() => expect(entry).toHaveTextContent("The Rift opens after clearing 2-30."));
+    expect(entry).not.toHaveTextContent("3-30");
+    expect(entry).toHaveTextContent("4G recommended, the 35% bracket from 1.6G");
+    const [rule, gate] = [...entry.querySelectorAll("p")];
+    expect(within(rule!).getByText("Naver 44477")).toBeVisible();
+    expect(within(rule!).queryByText("crumblehub-stages")).toBeNull();
+    expect(within(gate!).getByText("crumblehub-stages")).toBeVisible();
   });
 
   it("lists every season's levels on request, and places a typed power on them", async () => {

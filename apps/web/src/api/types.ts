@@ -89,6 +89,9 @@ export type RiftLevel = InferResponseType<(typeof api)["rift-levels"]["$get"], 2
 /** A Dimensional Rift season: the levels it runs, its dates and sources. */
 export type RiftSeason = InferResponseType<(typeof api)["rift-seasons"]["$get"], 200>[number];
 
+/** The main stage whose clear opens the Dimensional Rift, with its sources. */
+export type RiftUnlock = InferResponseType<(typeof api)["rift-unlocks"]["$get"], 200>[number];
+
 /** The boss players report at a Rift level, with a note and sources. */
 export type RiftBoss = InferResponseType<(typeof api)["rift-bosses"]["$get"], 200>[number];
 

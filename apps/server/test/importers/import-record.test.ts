@@ -150,6 +150,7 @@ const expectedCounts = {
   stageChapters: 0,
   riftLevels: 0,
   riftSeasons: 0,
+  riftUnlocks: 0,
   stageZoneSlots: 0,
   stageClears: 0,
   riftBosses: 0,

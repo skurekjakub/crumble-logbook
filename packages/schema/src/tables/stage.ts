@@ -4,11 +4,12 @@ import { recordSlugColumn } from "./columns";
 import { decks } from "./decks";
 
 /*
- * The stage-pushing tables. Power brackets, stage chapters, Rift levels and
- * Rift seasons are game facts: no research record owns them (they have no
- * `record_slug`), so a record's re-import never clears them, and a record
- * that loads a fact already stored must agree with it. Zone slots, clears
- * and Rift bosses are research findings a record owns.
+ * The stage-pushing tables. Power brackets, stage chapters, Rift levels,
+ * Rift seasons and the Rift's unlock are game facts: no research record
+ * owns them (they have no `record_slug`); the records that list one claim
+ * it (`fact_claims`), and a record that loads a fact already stored must
+ * agree with it. Zone slots, clears and Rift bosses are research findings
+ * a record owns.
  */
 
 /**
@@ -75,6 +76,20 @@ export const riftSeasons = sqliteTable(
     endsAt: text("ends_at").notNull(),
   },
   (t) => [uniqueIndex("rift_seasons_season_uq").on(t.season)],
+);
+
+/**
+ * What opens the Dimensional Rift: clearing the main stage `stage`
+ * (`<chapter>-<stage>`). One row; a record that loads a different one
+ * conflicts with it.
+ */
+export const riftUnlocks = sqliteTable(
+  "rift_unlocks",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    stage: text("stage").notNull(),
+  },
+  (t) => [uniqueIndex("rift_unlocks_stage_uq").on(t.stage)],
 );
 
 /**

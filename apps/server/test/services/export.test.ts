@@ -257,6 +257,7 @@ function seedEverything(store: Store): SeedIds {
     },
     ["web:2"],
   );
+  services.riftUnlocks.create({ stage: "328-30" }, ["dc:1"]);
   services.decks.create({
     id: "stage-deck",
     mode: "stage",
@@ -353,10 +354,11 @@ describe("exportSnapshot / restoreSnapshot", () => {
       stageChapters: 1,
       riftLevels: 1,
       riftSeasons: 1,
+      riftUnlocks: 1,
       stageZoneSlots: 1,
       stageClears: 1,
       riftBosses: 1,
-      citations: 22,
+      citations: 23,
       factClaims: 1,
     });
     for (const [table, rows] of Object.entries(first.tables)) {

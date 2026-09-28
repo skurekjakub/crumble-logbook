@@ -6,13 +6,21 @@ import {
   riftBossesQuery,
   riftLevelsQuery,
   riftSeasonsQuery,
+  riftUnlocksQuery,
   rngFactorsQuery,
   runeBuildsQuery,
   stageChaptersQuery,
   takeawaysQuery,
   timelineQuery,
 } from "../api/queries";
-import type { PowerBracket, RiftBoss, RiftLevel, RiftSeason } from "../api/types";
+import type {
+  PowerBracket,
+  RiftBoss,
+  RiftLevel,
+  RiftSeason,
+  RiftUnlock,
+  StageChapter,
+} from "../api/types";
 import type { ModeSection, RiftConfig, StageConfig } from "../app/modes";
 import { CookieName } from "../components/CookieName";
 import type { Column } from "../components/DataTable";
@@ -86,42 +94,48 @@ const PARTS = {
 const day = (iso: string) => iso.slice(0, 10);
 
 /**
- * Where the Rift opens: the last main stage, its boss, and the power its
- * 35% bracket takes, from the stage chapters.
+ * Where the Rift opens: the stored unlock, cited to its own sources, then,
+ * when a stage chapter ends at that stage, its boss, recommended power and
+ * the power its 35% bracket takes, cited to the chapter's sources.
  *
- * @param props - the stage chapters, the brackets and the source index
- * @returns the card, or null without chapters
+ * @param props - the stored unlock (none when no record states it), the stage chapters, the brackets and the source index
+ * @returns the card
  */
 function Entry({
+  unlocks,
   chapters,
   brackets,
   sources,
 }: {
-  chapters: ReadonlyArray<{
-    lastStage: string;
-    bossKr: string;
-    bossEn: string | null;
-    recommendedPower: number;
-    sources: string[];
-  }>;
+  unlocks: readonly RiftUnlock[];
+  chapters: readonly StageChapter[];
   brackets: readonly PowerBracket[];
   sources: SourceIndex;
 }) {
-  const last = chapters.at(-1);
-  if (!last) return null;
+  const unlock = unlocks[0];
+  const gate = unlock && chapters.find((c) => c.lastStage === unlock.stage);
   const at35 = brackets.find((b) => b.damagePct === 35);
   return (
     <section className="card" id={PARTS.entry}>
       <h3>Getting in</h3>
-      <p>
-        The Rift opens after clearing <b>{last.lastStage}</b> (
-        <CookieName kr={last.bossKr} en={last.bossEn} inline />
-        ): {formatPower(last.recommendedPower)} recommended
-        {at35
-          ? `, the 35% bracket from ${formatPower(entryPower(last.recommendedPower, at35.minRatioPct))}`
-          : ""}
-        . <SourceChips ids={last.sources} sources={sources} />
-      </p>
+      {unlock ? (
+        <p>
+          The Rift opens after clearing <b>{unlock.stage}</b>.{" "}
+          <SourceChips ids={unlock.sources} sources={sources} />
+        </p>
+      ) : (
+        <p className="muted">No record states what opens the Rift.</p>
+      )}
+      {gate ? (
+        <p>
+          {gate.lastStage} (<CookieName kr={gate.bossKr} en={gate.bossEn} inline />
+          ): {formatPower(gate.recommendedPower)} recommended
+          {at35
+            ? `, the 35% bracket from ${formatPower(entryPower(gate.recommendedPower, at35.minRatioPct))}`
+            : ""}
+          . <SourceChips ids={gate.sources} sources={sources} />
+        </p>
+      ) : null}
     </section>
   );
 }
@@ -401,6 +415,7 @@ export function RiftView({ mode, stage, search, onSearch, now = new Date() }: Ri
   const sources = useSourceIndex();
   const brackets = useQuery(powerBracketsQuery());
   const chapters = useQuery(stageChaptersQuery());
+  const unlocks = useQuery(riftUnlocksQuery());
   const levels = useQuery(riftLevelsQuery());
   const seasons = useQuery(riftSeasonsQuery());
   const bosses = useQuery(riftBossesQuery());
@@ -425,7 +440,18 @@ export function RiftView({ mode, stage, search, onSearch, now = new Date() }: Ri
         <QueryResult query={brackets} resource="power brackets">
           {(table) => (
             <QueryResult query={chapters} resource="stage chapters">
-              {(rows) => <Entry chapters={rows} brackets={table} sources={sources} />}
+              {(rows) => (
+                <QueryResult query={unlocks} resource="the Rift's unlock">
+                  {(unlockRows) => (
+                    <Entry
+                      unlocks={unlockRows}
+                      chapters={rows}
+                      brackets={table}
+                      sources={sources}
+                    />
+                  )}
+                </QueryResult>
+              )}
             </QueryResult>
           )}
         </QueryResult>

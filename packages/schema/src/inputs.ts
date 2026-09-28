@@ -17,6 +17,7 @@ import {
   riftBossInsert,
   riftLevelInsert,
   riftSeasonInsert,
+  riftUnlockInsert,
   rngFactorInsert,
   runeBuildInsert,
   scoreInsert,
@@ -232,6 +233,16 @@ export type RiftSeasonInput = z.output<typeof riftSeasonInput>;
 export const riftSeasonPatch = riftSeason.patch;
 /** Output of {@link riftSeasonPatch}. */
 export type RiftSeasonPatch = z.output<typeof riftSeasonPatch>;
+
+const riftUnlock = citedInputs(riftUnlockInsert);
+/** Input for creating the Rift's unlock, with the sources that state it. */
+export const riftUnlockInput = riftUnlock.input;
+/** Output of {@link riftUnlockInput}. */
+export type RiftUnlockInput = z.output<typeof riftUnlockInput>;
+/** Patch for updating the Rift's unlock. `sources`, if given, must be non-empty. */
+export const riftUnlockPatch = riftUnlock.patch;
+/** Output of {@link riftUnlockPatch}. */
+export type RiftUnlockPatch = z.output<typeof riftUnlockPatch>;
 
 const stageZoneSlot = citedInputs(stageZoneSlotInsert);
 /** Input for creating a zone's boss-slot plan, with the sources that support it. */

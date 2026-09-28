@@ -126,6 +126,7 @@ export const CITED_ENTITY = [
   "stage_chapter",
   "rift_level",
   "rift_season",
+  "rift_unlock",
   "stage_zone_slot",
   "stage_clear",
   "rift_boss",

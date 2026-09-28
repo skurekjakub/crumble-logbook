@@ -68,6 +68,9 @@ import {
   riftSeasonInput,
   riftSeasonPatch,
   riftSeasons,
+  riftUnlockInput,
+  riftUnlockPatch,
+  riftUnlocks,
   rngFactorInput,
   rngFactorPatch,
   rngFactors,
@@ -373,6 +376,12 @@ export const REGISTRY = {
     entity: "rift_season",
     api: { id: rowId, input: riftSeasonInput, patch: riftSeasonPatch },
     content: { order: ["season"] },
+  }),
+  riftUnlocks: entry(riftUnlocks, {
+    path: "/rift-unlocks",
+    entity: "rift_unlock",
+    api: { id: rowId, input: riftUnlockInput, patch: riftUnlockPatch },
+    content: {},
   }),
   stageZoneSlots: entry(stageZoneSlots, {
     path: "/stage-zone-slots",

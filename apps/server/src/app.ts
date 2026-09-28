@@ -46,6 +46,7 @@ export function createApp(services: Services) {
     .route(R.stageChapters.path, crudRouter(endpoints(services.stageChapters), R.stageChapters))
     .route(R.riftLevels.path, crudRouter(endpoints(services.riftLevels), R.riftLevels))
     .route(R.riftSeasons.path, crudRouter(endpoints(services.riftSeasons), R.riftSeasons))
+    .route(R.riftUnlocks.path, crudRouter(endpoints(services.riftUnlocks), R.riftUnlocks))
     .route(R.stageZoneSlots.path, crudRouter(endpoints(services.stageZoneSlots), R.stageZoneSlots))
     .route(R.stageClears.path, crudRouter(endpoints(services.stageClears), R.stageClears))
     .route(R.riftBosses.path, crudRouter(endpoints(services.riftBosses), R.riftBosses))
