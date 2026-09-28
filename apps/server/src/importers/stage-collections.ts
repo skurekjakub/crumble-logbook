@@ -152,7 +152,8 @@ export type SeedStageZones = z.output<typeof seedStageZones>;
 /**
  * `stage-clears.json`: documented attempts, each at a `<chapter>-<stage>`
  * label, with the team power as posted, whether the record accepts it
- * (`standing`) and its sources. `play` is `?` when the post doesn't say.
+ * (`standing`) and its sources. `play` is `?` when the post doesn't say;
+ * `boss_en` names the boss in English where the stage tables don't.
  */
 export const seedStageClears = z.strictObject({
   ...header,
@@ -160,6 +161,7 @@ export const seedStageClears = z.strictObject({
     z.strictObject({
       stage: z.string().regex(/^\d+-\d+$/, "expected <chapter>-<stage>"),
       boss_kr: z.string().min(1),
+      boss_en: z.string().min(1).optional(),
       era: z.enum(STAGE_ERA),
       team_power: z.string().min(1),
       recommended_power: positiveInt.optional(),
@@ -532,6 +534,7 @@ export const STAGE_COLLECTIONS = {
           values: {
             ...stageOf(clear.stage),
             bossKr: clear.boss_kr,
+            bossEn: clear.boss_en ?? null,
             era: clear.era,
             teamPower: clear.team_power,
             powerG: postedPowerG(clear.team_power),

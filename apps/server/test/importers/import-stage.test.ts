@@ -147,6 +147,8 @@ describe("importRecord on research record 003", FULL_IMPORT, () => {
     expect(services.stageZoneSlots.list().map((s) => s.deckId)).toEqual(
       slots.map((s) => s.deck ?? null),
     );
+    const pack = services.stageClears.list().find((c) => c.bossKr === "케이크 들개떼");
+    expect(pack?.bossEn).toBe("Cake Hound Pack");
   });
 
   it("loads the game facts owned by no record, and a --replace reloads them as they were, once", () => {

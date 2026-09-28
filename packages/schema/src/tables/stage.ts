@@ -99,7 +99,8 @@ export const stageZoneSlots = sqliteTable("stage_zone_slots", {
 });
 
 /**
- * One documented stage attempt at `<chapter>-<stageNo>`: the team power as
+ * One documented stage attempt at `<chapter>-<stageNo>`, against `bossKr`
+ * (`bossEn` when the record names it in English): the team power as
  * posted (`teamPower`, verbatim) and read as billions (`powerG`, `null`
  * when the post gives no figure), the stage's recommended power when the
  * post is from after the easing, the damage bracket (`bracket`, the kept
@@ -113,6 +114,7 @@ export const stageClears = sqliteTable("stage_clears", {
   chapter: integer("chapter").notNull(),
   stageNo: integer("stage_no").notNull(),
   bossKr: text("boss_kr").notNull(),
+  bossEn: text("boss_en"),
   era: text("era", { enum: STAGE_ERA }).notNull(),
   teamPower: text("team_power").notNull(),
   powerG: real("power_g"),

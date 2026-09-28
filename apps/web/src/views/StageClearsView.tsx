@@ -119,9 +119,11 @@ export interface StageClearsViewProps {
  * rejected ones. Every row shows the stage and boss, era, team power as
  * posted (with the stage's recommended power when known), bracket,
  * result, how it was played, what backs it, the deck, a note and sources.
- * A boss is named in English as the stage tables name it, else as the
- * glossary does. The result, era and a text filter live in the URL and
- * apply to every group.
+ * A boss is named in English as its row names it, else as the stage
+ * tables do, else as the glossary does. The result, era and a text filter
+ * live in the URL and apply to every group; the text filter matches the
+ * names a row shows (stage, boss in Korean and English, deck), its team
+ * power and its note.
  *
  * @param props - the stage mode, its stage config, the search params and their setter
  * @returns the clears view
@@ -138,12 +140,24 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
   const bossNames = new Map(
     [...chapters, ...slots].flatMap((b) => (b.bossEn ? [[b.bossKr, b.bossEn] as const] : [])),
   );
+  /**
+   * The English a row shows for its boss: the row's own, else the stage
+   * tables', else the glossary's.
+   *
+   * @param c - the attempt
+   * @returns the English name, or null when none is known
+   */
+  const bossEnOf = (c: StageClear) => c.bossEn ?? bossNames.get(c.bossKr) ?? c.en;
+  /**
+   * The deck name a row shows.
+   *
+   * @param c - the attempt
+   * @returns the deck's English name (its id before the decks load), or null without a deck
+   */
+  const deckOf = (c: StageClear) => (c.deckId ? (decks?.get(c.deckId) ?? c.deckId) : null);
   const columns: Column<StageClear>[] = [
     { header: "Stage", cell: (c) => `${c.chapter}-${c.stageNo}`, className: "n" },
-    {
-      header: "Boss",
-      cell: (c) => <CookieName kr={c.bossKr} en={bossNames.get(c.bossKr) ?? c.en} />,
-    },
+    { header: "Boss", cell: (c) => <CookieName kr={c.bossKr} en={bossEnOf(c)} /> },
     { header: "Era", cell: (c) => ERAS[c.era] },
     {
       header: "Team power",
@@ -168,7 +182,7 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
         <Pill kind={c.evidence === "screenshot" ? "verified" : "claimed"}>{c.evidence}</Pill>
       ),
     },
-    { header: "Deck", cell: (c) => (c.deckId ? (decks?.get(c.deckId) ?? c.deckId) : "–") },
+    { header: "Deck", cell: (c) => deckOf(c) ?? "–" },
     { header: "Note", cell: (c) => c.note ?? "", className: "wide" },
     { header: "Sources", cell: (c) => <SourceChips ids={c.sources} sources={sources} /> },
   ];
@@ -176,8 +190,15 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
     value: search.q ?? "",
     onChange: (q) => onSearch({ q }),
     text: (c) =>
-      [`${c.chapter}-${c.stageNo}`, c.bossKr, c.en ?? "", c.teamPower, c.note ?? ""].join(" "),
-    placeholder: "Filter by stage, boss or note",
+      [
+        `${c.chapter}-${c.stageNo}`,
+        c.bossKr,
+        bossEnOf(c) ?? "",
+        c.teamPower,
+        deckOf(c) ?? "",
+        c.note ?? "",
+      ].join(" "),
+    placeholder: "Filter by stage, boss, deck or note",
   };
   const select: TableSelect<StageClear> = {
     name: "Result",

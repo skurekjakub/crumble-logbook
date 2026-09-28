@@ -1,0 +1,1 @@
+ALTER TABLE `stage_clears` ADD `boss_en` text;

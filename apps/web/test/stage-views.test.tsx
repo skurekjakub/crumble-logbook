@@ -1,4 +1,4 @@
-import { fireEvent, screen, waitFor, within } from "@testing-library/react";
+import { cleanup, fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import type {
   Deck,
@@ -165,6 +165,7 @@ function clear(
     chapter: 328,
     stageNo,
     bossKr: "비겁한 쿠키",
+    bossEn: null,
     en: "Cowardly Cookie",
     era,
     teamPower: `${id}.00G`,
@@ -385,6 +386,35 @@ describe("the clears list", () => {
     await renderStage("/stage/clears");
     await waitFor(() => expect(bodyRows(document)[0]![1]).toContain("GingerCraven"));
     expect(bodyRows(document)[0]![1]).not.toContain("Cowardly Cookie");
+  });
+
+  it("filters by the boss's English and the deck the rows show", async () => {
+    await renderStage("/stage/clears?q=GingerCraven");
+    await waitFor(() => expect(bodyRows(document)).toHaveLength(CLEARS.length));
+    cleanup();
+    await renderStage("/stage/clears?q=Charge%20deck");
+    await waitFor(() => expect(bodyRows(document)).toHaveLength(CLEARS.length));
+    cleanup();
+    await renderStage("/stage/clears?q=Cowardly");
+    expect(await screen.findByText("Nothing matches.")).toBeVisible();
+  });
+
+  it("names a boss by its row's own English over a glossary gloss", async () => {
+    const pack = {
+      ...clear(5, 4, "fail", "pre-easing"),
+      chapter: 289,
+      bossKr: "케이크 들개떼",
+      bossEn: "Cake Hound Pack",
+      en: "Cake Hound Pack (grassland mob stages; Rift level 6)",
+    };
+    await renderRoute(
+      "/stage/clears?q=hound",
+      { ...API, "/api/stage-clears": { body: [pack] } },
+      { mode: STAGE },
+    );
+    await waitFor(() => expect(bodyRows(document)).toHaveLength(1));
+    expect(bodyRows(document)[0]![1]).toContain("Cake Hound Pack");
+    expect(bodyRows(document)[0]![1]).not.toContain("grassland");
   });
 
   it("filters by result from the URL", async () => {
