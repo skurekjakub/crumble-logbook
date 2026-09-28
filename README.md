@@ -32,7 +32,7 @@ pnpm dev:server    # API on http://localhost:8787/api
 pnpm dev:web       # web app on http://localhost:5173, proxying /api (CRUMBLE_API overrides the target)
 ```
 
-The server creates and seeds its database from `data/snapshot.json` when the file doesn't exist yet, so a fresh clone runs with `pnpm install && pnpm dev`. Delete `data/crumble.db` to start again from the snapshot.
+The server creates and seeds its database from `data/snapshot.json` when the file doesn't exist yet, so a fresh clone runs with `pnpm install && pnpm dev`. Delete `data/crumble.db` to start again from the snapshot. When the file exists, the server compares it with the snapshot on startup and logs a warning naming the records and tables that differ: after a pull that brought newer records, delete `data/crumble.db` to reseed; after an import of your own, run `pnpm db:export`. It only warns: it never reseeds or deletes the database itself.
 
 ESLint runs typescript-eslint's strict type-checked rules, React's hook rules on the web app, and JSDoc on every function, method, class and interface method (see `AGENTS.md`). The config and the reason for each switched-off rule are in `tools/eslint-config/index.ts`.
 
