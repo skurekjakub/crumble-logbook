@@ -1,9 +1,8 @@
 /**
  * The extra blocks a record's `import.json` may carry besides its curated
- * collections: captures that aren't curated JSON (leaderboard TSVs, a fight
- * timeline, a buff capture), each with its own schema and reader. A new
- * capture type is an entry here; the manifest schema and the reader pick
- * it up.
+ * collections: captures that aren't curated JSON, each with its own schema
+ * and reader. A new capture type is an entry here; the manifest schema and
+ * the reader pick it up.
  *
  * @module
  */
