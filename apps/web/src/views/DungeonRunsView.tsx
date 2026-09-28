@@ -189,7 +189,7 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                 <>
                   {BOARDS[r.board]}
                   {r.serverRank != null ? <div>{ordinal(r.serverRank)} on the server</div> : null}
-                  {r.server ? <div className="muted">Server {r.server}</div> : null}
+                  {r.server ? <div className="muted">Server: {r.server}</div> : null}
                 </>
               ),
             },

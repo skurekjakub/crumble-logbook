@@ -49,7 +49,7 @@ export interface DungeonExclusionsViewProps {
 }
 
 /**
- * Links to the published lineups, each by author and date.
+ * Links to the published lineups, each by author and date, one per line.
  *
  * @param props - the mode, for the links, and the lineups
  * @returns the links, or "–" when there are none
@@ -57,16 +57,15 @@ export interface DungeonExclusionsViewProps {
 function LineupLinks({ mode, lineups }: { mode: ModeSection; lineups: readonly DungeonLineup[] }) {
   if (!lineups.length) return <>–</>;
   return (
-    <>
-      {lineups.map((l, i) => (
-        <span key={l.id}>
-          {i > 0 && " · "}
+    <ul className="clean">
+      {lineups.map((l) => (
+        <li key={l.id}>
           <Link {...modeLink(mode.id, "/$mode/lineups")} hash={lineupId(l)}>
             {l.author} {l.date}
           </Link>
-        </span>
+        </li>
       ))}
-    </>
+    </ul>
   );
 }
 

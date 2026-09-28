@@ -328,7 +328,7 @@ describe("the runs board", () => {
     expect(top![4]).toBe("0 s");
     expect(top![6]).toContain("Run result");
     expect(top![6]).toContain("1st on the server");
-    expect(top![6]).toContain("Server a server in the 100s");
+    expect(top![6]).toContain("Server: a server in the 100s");
     expect(top![7]).toBe("Screenshot");
     expect(top![9]).toContain("ATK order: Milk, Scorpion, Figure");
     expect(efficient![5]).toBe("0");

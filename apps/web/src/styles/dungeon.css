@@ -3,7 +3,8 @@
 
 ol.wave {
   columns: 16rem auto;
-  column-gap: var(--sp-5);
+  /* Wide enough for the next column's outside markers ("29.") to sit in the gap. */
+  column-gap: calc(var(--sp-5) + 2.5em);
   margin: var(--sp-2) 0 0;
   padding-left: 2.5em;
 }
