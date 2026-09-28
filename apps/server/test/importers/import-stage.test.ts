@@ -36,7 +36,9 @@ const rift = curated<{ sources: string[]; levels: unknown[]; seasons: unknown[] 
 const zones = curated<{ zones: Array<{ slots: Array<Cited & { deck?: string }> }> }>(
   "stage-zones.json",
 );
-const clears = curated<{ clears: Array<Cited & { stage: string }> }>("stage-clears.json").clears;
+const clears = curated<{
+  clears: Array<Cited & { stage: string; result: string; standing: string }>;
+}>("stage-clears.json").clears;
 const riftBosses = curated<{ levels: Cited[] }>("rift-bosses.json").levels;
 
 let tmp: string | undefined;
@@ -162,17 +164,43 @@ describe("importRecord on research record 003", FULL_IMPORT, () => {
     expect(store.repos.stageClears.count()).toBe(clears.length);
   });
 
-  it("serves clears by stage reached, then lower power first, with the boss glossed", async () => {
+  it("ranks the clears the record accepts by stage reached, then lower power, above every other attempt", async () => {
     const store = testStore();
     importRecord(store, stageDir);
     const app = createApp(createServices(store));
-    const rows = await readJson<Array<{ chapter: number; stageNo: number; powerG: number | null }>>(
-      await app.request("/api/stage-clears"),
+    type Row = {
+      chapter: number;
+      stageNo: number;
+      powerG: number | null;
+      result: string;
+      standing: string;
+      sources: string[];
+    };
+    const rows = await readJson<Row[]>(await app.request("/api/stage-clears"));
+    const group = (r: Row) =>
+      r.standing === "accepted"
+        ? r.result === "clear"
+          ? 0
+          : 1
+        : r.standing === "unverified"
+          ? 2
+          : 3;
+    const groups = rows.map(group);
+    expect(groups).toEqual([...groups].sort((a, b) => a - b));
+    const ranked = rows.filter((r) => group(r) === 0);
+    expect(ranked.length).toBe(
+      clears.filter((c) => c.standing === "accepted" && c.result === "clear").length,
     );
-    const reached = rows.map((r) => r.chapter * 100 + r.stageNo);
-    expect(reached).toEqual([...reached].sort((a, b) => b - a));
-    const top = rows.filter((r) => r.chapter === 328 && r.stageNo === 30).map((r) => r.powerG);
-    expect(top).toEqual([...top].sort((a, b) => a! - b!));
+    for (const [above, below] of ranked.slice(1).map((r, i) => [ranked[i]!, r] as const)) {
+      const reached = (r: Row) => r.chapter * 100 + r.stageNo;
+      expect(reached(above)).toBeGreaterThanOrEqual(reached(below));
+      if (reached(above) === reached(below))
+        expect(above.powerG!).toBeLessThanOrEqual(below.powerG!);
+    }
+    expect(rows[0]).toMatchObject({ chapter: 328, stageNo: 30, standing: "accepted" });
+    expect(rows[0]!.sources).toEqual(["dc:76835"]);
+    const rejected = rows.find((r) => r.sources.includes("dc:76779"))!;
+    expect(rows.indexOf(rejected)).toBe(rows.length - 1);
     const fails = await readJson<unknown[]>(await app.request("/api/stage-clears?result=fail"));
     expect(fails.length).toBeGreaterThan(0);
     expect(fails.length).toBeLessThan(rows.length);

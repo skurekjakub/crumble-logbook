@@ -80,7 +80,7 @@ export const STAGE = {
     },
     clears: {
       title: "Clears",
-      lede: "Documented clears and failures at the low brackets, furthest stage first and, at one stage, lowest power first. Team power is as posted; before the 2026-09-23 easing, recommended power was higher from 169-1 to 328-30.",
+      lede: "Documented attempts at the low brackets. The clears the record accepts are ranked furthest stage first and, at one stage, lowest power first; failures and the claims it leaves unverified or rejects follow, each under its own heading. Team power is as posted; before the 2026-09-23 easing, recommended power was higher from 169-1 to 328-30.",
       topic: "brackets-practice",
     },
     rift: {

@@ -9,8 +9,9 @@ import {
 import type { StageClear } from "../api/types";
 import type { ModeSection, StageConfig } from "../app/modes";
 import { CookieName } from "../components/CookieName";
-import type { Column } from "../components/DataTable";
-import { DataTable } from "../components/DataTable";
+import type { Column, TableFilter, TableSelect } from "../components/DataTable";
+import { applyFilters, DataTable, TableTools } from "../components/DataTable";
+import { EmptyState } from "../components/EmptyState";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
@@ -29,6 +30,54 @@ const ERAS: Readonly<Record<StageClear["era"], string>> = {
   "post-easing": "After the easing",
   "pre-easing": "Before the easing",
 };
+
+/** One heading the attempts are shown under. */
+interface ClearGroup {
+  /** The section's DOM id. */
+  id: string;
+  /** Its heading. */
+  title: string;
+  /** What its rows are. */
+  lede: string;
+  /**
+   * Tells whether an attempt belongs under the heading.
+   *
+   * @param c - the attempt
+   * @returns `true` if it does
+   */
+  test(c: StageClear): boolean;
+}
+
+/**
+ * The groups the attempts are shown in, in order: each takes the rows its
+ * `test` keeps, in the API's order. Only the first is a ranking.
+ */
+const GROUPS: readonly ClearGroup[] = [
+  {
+    id: "clears-ranked",
+    title: "Ranked clears",
+    lede: "Clears the record accepts, furthest stage first and, at one stage, lowest power first.",
+    test: (c) => c.standing === "accepted" && c.result === "clear",
+  },
+  {
+    id: "clears-failed",
+    title: "Failures",
+    lede: "Attempts the record accepts that didn't clear.",
+    test: (c) => c.standing === "accepted" && c.result === "fail",
+  },
+  {
+    id: "clears-unverified",
+    title: "Unverified claims",
+    lede: "Claimed without a screenshot; the record neither rests on them nor rejects them.",
+    test: (c) => c.standing === "unverified",
+  },
+  {
+    id: "clears-rejected",
+    title: "Rejected claims",
+    lede: "Claims the record argues against.",
+    test: (c) => c.standing === "rejected",
+  },
+];
 
 /** The clears view's search params: a result, an era and a text filter. */
 export interface ClearsSearch {
@@ -64,12 +113,15 @@ export interface StageClearsViewProps {
 }
 
 /**
- * The documented stage clears and failures, furthest stage first and, at
- * one stage, lowest power first: stage and boss, era, team power as posted
- * (with the stage's recommended power when known), bracket, result, how it
- * was played, what backs it, the deck, a note and sources. A boss is
- * named in English as the stage tables name it, else as the glossary does.
- * The result, era and a text filter live in the URL.
+ * The documented stage attempts: the clears the record accepts, ranked
+ * furthest stage first and, at one stage, lowest power first; then, each
+ * under its own heading, the failures, the unverified claims and the
+ * rejected ones. Every row shows the stage and boss, era, team power as
+ * posted (with the stage's recommended power when known), bracket,
+ * result, how it was played, what backs it, the deck, a note and sources.
+ * A boss is named in English as the stage tables name it, else as the
+ * glossary does. The result, era and a text filter live in the URL and
+ * apply to every group.
  *
  * @param props - the stage mode, its stage config, the search params and their setter
  * @returns the clears view
@@ -120,46 +172,63 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
     { header: "Note", cell: (c) => c.note ?? "", className: "wide" },
     { header: "Sources", cell: (c) => <SourceChips ids={c.sources} sources={sources} /> },
   ];
+  const filter: TableFilter<StageClear> = {
+    value: search.q ?? "",
+    onChange: (q) => onSearch({ q }),
+    text: (c) =>
+      [`${c.chapter}-${c.stageNo}`, c.bossKr, c.en ?? "", c.teamPower, c.note ?? ""].join(" "),
+    placeholder: "Filter by stage, boss or note",
+  };
+  const select: TableSelect<StageClear> = {
+    name: "Result",
+    label: "Any result",
+    options: Object.entries(RESULTS),
+    value: search.result ?? "",
+    onChange: (value) => onSearch({ result: optionalKey(value, RESULTS) }),
+    test: (c, value) => c.result === value,
+  };
+  const selects: TableSelect<StageClear>[] = [
+    {
+      name: "Era",
+      label: "Either era",
+      options: Object.entries(ERAS),
+      value: search.era ?? "",
+      onChange: (value) => onSearch({ era: optionalKey(value, ERAS) }),
+      test: (c, value) => c.era === value,
+    },
+  ];
   return (
     <>
       <CopyHeader scope={mode.scope} copy={stage.clears} fallbackTitle="Clears" />
       <QueryResult query={clears} resource="stage clears">
-        {(rows) => (
-          <DataTable
-            columns={columns}
-            rows={rows}
-            rowKey={(c) => c.id}
-            layout="stack"
-            empty="No clears recorded yet."
-            filter={{
-              value: search.q ?? "",
-              onChange: (q) => onSearch({ q }),
-              text: (c) =>
-                [`${c.chapter}-${c.stageNo}`, c.bossKr, c.en ?? "", c.teamPower, c.note ?? ""].join(
-                  " ",
-                ),
-              placeholder: "Filter by stage, boss or note",
-            }}
-            select={{
-              name: "Result",
-              label: "Any result",
-              options: Object.entries(RESULTS),
-              value: search.result ?? "",
-              onChange: (value) => onSearch({ result: optionalKey(value, RESULTS) }),
-              test: (c, value) => c.result === value,
-            }}
-            selects={[
-              {
-                name: "Era",
-                label: "Either era",
-                options: Object.entries(ERAS),
-                value: search.era ?? "",
-                onChange: (value) => onSearch({ era: optionalKey(value, ERAS) }),
-                test: (c, value) => c.era === value,
-              },
-            ]}
-          />
-        )}
+        {(rows) => {
+          if (!rows.length) return <EmptyState>No clears recorded yet.</EmptyState>;
+          const kept = applyFilters(rows, filter, select, selects);
+          const groups = GROUPS.map((g) => ({ ...g, rows: kept.filter((c) => g.test(c)) })).filter(
+            (g) => g.rows.length > 0,
+          );
+          return (
+            <>
+              <TableTools filter={filter} select={select} selects={selects} />
+              {groups.length ? (
+                groups.map((g) => (
+                  <section key={g.id} id={g.id} aria-labelledby={`${g.id}-title`}>
+                    <h3 id={`${g.id}-title`}>{g.title}</h3>
+                    <p className="muted">{g.lede}</p>
+                    <DataTable
+                      columns={columns}
+                      rows={g.rows}
+                      rowKey={(c) => c.id}
+                      layout="stack"
+                    />
+                  </section>
+                ))
+              ) : (
+                <EmptyState>Nothing matches.</EmptyState>
+              )}
+            </>
+          );
+        }}
       </QueryResult>
     </>
   );

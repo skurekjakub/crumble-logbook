@@ -1,0 +1,1 @@
+ALTER TABLE `stage_clears` ADD `standing` text DEFAULT 'unverified' NOT NULL;

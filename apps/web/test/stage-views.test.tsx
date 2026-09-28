@@ -150,6 +150,7 @@ const SLOTS: StageZoneSlot[] = [
  * @param stageNo - the stage within chapter 328
  * @param result - how it ended
  * @param era - before or after the easing
+ * @param standing - whether the record accepts it
  * @returns the attempt
  */
 function clear(
@@ -157,6 +158,7 @@ function clear(
   stageNo: number,
   result: StageClear["result"],
   era: StageClear["era"],
+  standing: StageClear["standing"] = "accepted",
 ): StageClear {
   return {
     id,
@@ -172,6 +174,7 @@ function clear(
     result,
     play: null,
     evidence: "screenshot",
+    standing,
     deckId: "stage-charge",
     note: `note ${id}`,
     recordSlug: SLUG,
@@ -179,7 +182,12 @@ function clear(
   };
 }
 
-const CLEARS = [clear(4, 30, "clear", "post-easing"), clear(2, 20, "fail", "pre-easing")];
+/** In the API's order: the ranked clear, then an accepted failure, then a rejected claim. */
+const CLEARS = [
+  clear(4, 30, "clear", "post-easing"),
+  clear(2, 20, "fail", "pre-easing"),
+  clear(3, 30, "clear", "post-easing", "rejected"),
+];
 
 const SEASONS: RiftSeason[] = [
   {
@@ -352,8 +360,25 @@ describe("the clears list", () => {
   it("lists attempts in the API's order, furthest stage first", async () => {
     await renderStage("/stage/clears");
     await waitFor(() => expect(bodyRows(document)).toHaveLength(CLEARS.length));
-    expect(bodyRows(document).map((r) => r[0])).toEqual(["328-30", "328-20"]);
+    expect(bodyRows(document).map((r) => r[0])).toEqual(["328-30", "328-20", "328-30"]);
     expect(bodyRows(document)[0]).toContain("Cleared");
+  });
+
+  it("ranks only the clears the record accepts, and shows the rest under their own headings", async () => {
+    await renderStage("/stage/clears");
+    const ranked = await screen.findByRole("region", { name: "Ranked clears" });
+    await waitFor(() => expect(bodyRows(ranked)).toHaveLength(1));
+    expect(bodyRows(ranked)[0]![3]).toMatch(/^4\.00G/);
+    const failures = screen.getByRole("region", { name: "Failures" });
+    expect(bodyRows(failures)[0]).toContain("Failed");
+    expect(bodyRows(failures)[0]).toContain("DC 76835");
+    const rejected = screen.getByRole("region", { name: "Rejected claims" });
+    expect(bodyRows(rejected)[0]![3]).toMatch(/^3\.00G/);
+    expect(bodyRows(rejected)[0]).toContain("Cleared");
+    expect(screen.queryByRole("region", { name: "Unverified claims" })).toBeNull();
+    const order = [...document.querySelectorAll("h3")].map((h) => h.textContent);
+    expect(order.indexOf("Ranked clears")).toBeLessThan(order.indexOf("Failures"));
+    expect(order.indexOf("Failures")).toBeLessThan(order.indexOf("Rejected claims"));
   });
 
   it("names a boss in English as the stage tables do, over another record's glossary", async () => {

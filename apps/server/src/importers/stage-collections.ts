@@ -10,6 +10,7 @@ import {
   CLEAR_EVIDENCE,
   CLEAR_PLAY,
   CLEAR_RESULT,
+  CLEAR_STANDING,
   STAGE_ERA,
   deckSlug,
   entryPower,
@@ -150,8 +151,8 @@ export type SeedStageZones = z.output<typeof seedStageZones>;
 
 /**
  * `stage-clears.json`: documented attempts, each at a `<chapter>-<stage>`
- * label, with the team power as posted and its sources. `play` is `?` when
- * the post doesn't say.
+ * label, with the team power as posted, whether the record accepts it
+ * (`standing`) and its sources. `play` is `?` when the post doesn't say.
  */
 export const seedStageClears = z.strictObject({
   ...header,
@@ -166,6 +167,7 @@ export const seedStageClears = z.strictObject({
       result: z.enum(CLEAR_RESULT),
       play: z.union([z.enum(CLEAR_PLAY), z.literal("?")]),
       evidence: z.enum(CLEAR_EVIDENCE),
+      standing: z.enum(CLEAR_STANDING),
       deck: deckSlug.optional(),
       note: z.string().min(1).optional(),
       sources: cited,
@@ -538,6 +540,7 @@ export const STAGE_COLLECTIONS = {
             result: clear.result,
             play: clear.play === "?" ? null : clear.play,
             evidence: clear.evidence,
+            standing: clear.standing,
             deckId: clear.deck ?? null,
             note: clear.note ?? null,
           },

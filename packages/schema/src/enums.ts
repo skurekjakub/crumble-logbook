@@ -63,6 +63,15 @@ export type ClearResult = (typeof CLEAR_RESULT)[number];
 export const CLEAR_PLAY = ["manual", "auto"] as const;
 export type ClearPlay = (typeof CLEAR_PLAY)[number];
 
+/**
+ * Whether a research record accepts a documented stage attempt as shown:
+ * `accepted` when the record rests on it, `rejected` when the record
+ * argues against it, `unverified` when it is only claimed and the record
+ * neither rests on it nor rejects it.
+ */
+export const CLEAR_STANDING = ["accepted", "unverified", "rejected"] as const;
+export type ClearStanding = (typeof CLEAR_STANDING)[number];
+
 /** What backs a documented stage attempt: a screenshot of the result or formation, or text alone. */
 export const CLEAR_EVIDENCE = ["screenshot", "text"] as const;
 export type ClearEvidence = (typeof CLEAR_EVIDENCE)[number];

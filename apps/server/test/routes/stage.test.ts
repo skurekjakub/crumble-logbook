@@ -36,12 +36,13 @@ const clear = {
 };
 
 describe("stage routes", () => {
-  it("POST /api/stage-clears with a stage deck returns 201 with its sources", async () => {
+  it("POST /api/stage-clears with a stage deck returns 201 with its sources, unverified until curated", async () => {
     const { app } = setup();
     const res = await app.request("/api/stage-clears", jsonBody({ ...clear, deckId: "charge" }));
     expect(res.status).toBe(201);
     expect(await readJson<{ deckId: string; sources: string[] }>(res)).toMatchObject({
       deckId: "charge",
+      standing: "unverified",
       sources: ["dc:1"],
     });
   });

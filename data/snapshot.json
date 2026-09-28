@@ -77702,6 +77702,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": "stage-bari-coward-328",
     "note": "카린; Milk captain, all cookies Lv.100 5★ on the bar; entered the Rift after.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77719,6 +77720,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "text",
+    "standing": "unverified",
     "deckId": null,
     "note": "건소이.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77736,6 +77738,7 @@
     "result": "clear",
     "play": null,
     "evidence": "text",
+    "standing": "unverified",
     "deckId": null,
     "note": "Pushed every normal stage exactly at the 35% line.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77753,6 +77756,7 @@
     "result": "clear",
     "play": null,
     "evidence": "text",
+    "standing": "rejected",
     "deckId": null,
     "note": "Claim with Bari 9★ and Cherry Cola 10★ on the conquest gear set; no screenshot.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77770,6 +77774,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": "stage-bari-cola-charge",
     "note": "Bari + Cherry Cola deck with Scorpion; 40M above the 35% line.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77787,6 +77792,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "text",
+    "standing": "unverified",
     "deckId": "stage-bari-cola-charge",
     "note": "Circle clockwise upward; release when the boss and the sub-boss overlap.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77804,6 +77810,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": "stage-bari-cola-charge",
     "note": "4.4M under the 35% line; gear preset 뻥투 (inflated power); Brightseeker, Bari and Cherry Cola.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77821,6 +77828,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "그드득: semi-auto main deck with a pet slot switched per boss.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77838,6 +77846,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "First try, at 53.9% of recommended; accuracy requirement 1,203.5 against the team's 900 (74.8% hits), focus 1,079. The same deck cleared 291-30.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77855,6 +77864,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "폼생's Coward series; 66.6% of the post-easing recommended power, so the 55% bracket (the extraction assumed the pre-easing 3G 20M).",
     "recordSlug": "003-stage-pushing-meta"
@@ -77872,6 +77882,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "0.6M under the 35% line; 명중 950, 2 Skill Haste lines; also cleared 271-12.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77889,6 +77900,7 @@
     "result": "clear",
     "play": "auto",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": "stage-seeker-allinone",
     "note": "연어사's auto deck with Pinot Noir at Lv.75; zero Skill Haste lines on gear.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77906,6 +77918,7 @@
     "result": "fail",
     "play": "auto",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "Boss pack at 2% when time ran out; 2M under that stage's 35% line (2G 245M, crumblehub table in the same post), conquest gear preset, Armor Repair perk by mistake. The poster also reports an unshown 15% clear of a single-boss stage.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77923,6 +77936,7 @@
     "result": "fail",
     "play": "auto",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "Boss left at 41% after an hour of retries.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77940,6 +77954,7 @@
     "result": "clear",
     "play": "auto",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "30 min manual, then unattended boss retry on auto; 3M above the line (recommended then 3G 20M).",
     "recordSlug": "003-stage-pushing-meta"
@@ -77957,6 +77972,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "40.8% of the then-recommended 3G 20M: 23M over the line, with an accuracy pet; a Coward deck without GingerBright.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77974,6 +77990,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "15 s left.",
     "recordSlug": "003-stage-pushing-meta"
@@ -77991,6 +78008,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "김냥냥 cleared 227 to 248 at 35%; Milk captain on Passion Pay, ATK order Milk > Scorpion, Skating Queen > Macaron, Brightseeker.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78008,6 +78026,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "Five-ranged deck with Witchberry for Scorpion; hide behind the rock, keep medium distance; Passion Pay + Ammo Provided.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78025,6 +78044,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "Pets Gold Drop Jr., Hot Doggie, Chargemellow; Passion Pay + ATK 7% perks.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78042,6 +78062,7 @@
     "result": "clear",
     "play": null,
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "Gear preset 명중집중피감 (accuracy 1263, focus 1182); DR + HP perks.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78059,6 +78080,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "Brightseeker lowered to Lv.98 so ATK top 3 is Milk, Scorpion, Skating Queen; 55% line was 635M.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78076,6 +78098,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "text",
+    "standing": "accepted",
     "deckId": null,
     "note": "47.7% of the 792M recommended power then; ATK order Milk, Scorpion, Skating Queen, Brightseeker, Lime 4th–5th.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78093,6 +78116,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": "stage-coward-35",
     "note": "ㅇㄹ; 1.8 s left, two cookies dead. The 35% line was 801M.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78110,6 +78134,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": "stage-coward-35",
     "note": "1.6 s left.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78127,6 +78152,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "2.3 s left; 열정페이 + 초고속승진.",
     "recordSlug": "003-stage-pushing-meta"
@@ -78144,6 +78170,7 @@
     "result": "clear",
     "play": "manual",
     "evidence": "screenshot",
+    "standing": "accepted",
     "deckId": null,
     "note": "Barely inside 35%.",
     "recordSlug": "003-stage-pushing-meta"

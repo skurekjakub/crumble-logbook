@@ -20,6 +20,7 @@
 import type { CitedEntity, GameMode, Values } from "@crumble/schema";
 import {
   CLEAR_RESULT,
+  CLEAR_STANDING,
   GAME_MODE,
   SOURCE_SITE,
   USAGE_KIND,
@@ -106,10 +107,13 @@ export type ColumnOf<Row> = Extract<keyof Row, string>;
 
 /**
  * One key of a list order: a column, ascending, or a column with its
- * direction and whether `null`s sort after every value.
+ * direction, whether `null`s sort after every value, and `rank`, the
+ * column's values in the order they sort (a value it doesn't list sorts
+ * after them all).
  */
 export type OrderKey<Row> =
-  ColumnOf<Row> | { column: ColumnOf<Row>; desc?: boolean; nullsLast?: boolean };
+  | ColumnOf<Row>
+  | { column: ColumnOf<Row>; desc?: boolean; nullsLast?: boolean; rank?: readonly string[] };
 
 /**
  * How a list filter matches a view:
@@ -386,7 +390,12 @@ export const REGISTRY = {
     },
     api: { id: rowId, input: stageClearInput, patch: stageClearPatch },
     content: {
+      // The ranked list first: accepted clears, furthest stage first, then
+      // lowest power; then accepted failures, then unverified and rejected
+      // attempts, each in the same order.
       order: [
+        { column: "standing", rank: CLEAR_STANDING },
+        { column: "result", rank: CLEAR_RESULT },
         { column: "chapter", desc: true },
         { column: "stageNo", desc: true },
         { column: "powerG", nullsLast: true },

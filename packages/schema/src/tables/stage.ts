@@ -1,5 +1,5 @@
 import { integer, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
-import { CLEAR_EVIDENCE, CLEAR_PLAY, CLEAR_RESULT, STAGE_ERA } from "../enums";
+import { CLEAR_EVIDENCE, CLEAR_PLAY, CLEAR_RESULT, CLEAR_STANDING, STAGE_ERA } from "../enums";
 import { recordSlugColumn } from "./columns";
 import { decks } from "./decks";
 
@@ -104,7 +104,9 @@ export const stageZoneSlots = sqliteTable("stage_zone_slots", {
  * when the post gives no figure), the stage's recommended power when the
  * post is from after the easing, the damage bracket (`bracket`, the kept
  * damage %), how it ended, how it was played (`null` when unknown), what
- * backs it, and the deck when the lineup matches one.
+ * backs it, whether the record accepts it (`standing`; a row written
+ * through the API starts `unverified`), and the deck when the lineup
+ * matches one.
  */
 export const stageClears = sqliteTable("stage_clears", {
   id: integer("id").primaryKey({ autoIncrement: true }),
@@ -119,6 +121,7 @@ export const stageClears = sqliteTable("stage_clears", {
   result: text("result", { enum: CLEAR_RESULT }).notNull(),
   play: text("play", { enum: CLEAR_PLAY }),
   evidence: text("evidence", { enum: CLEAR_EVIDENCE }).notNull(),
+  standing: text("standing", { enum: CLEAR_STANDING }).notNull().default("unverified"),
   deckId: text("deck_id").references(() => decks.id, { onDelete: "set null" }),
   note: text("note"),
   recordSlug: recordSlugColumn(),

@@ -14,7 +14,8 @@ type IdTable = SQLiteTable & { id: SQLiteColumn };
  *
  * @param table - the table the columns belong to
  * @param keys - the order, most significant first; a `nullsLast` key sorts
- *   by `<column> is null` before the column itself
+ *   by `<column> is null` before the column itself, and a `rank` key by
+ *   the value's place in `rank` instead of the value
  * @returns the terms, for {@link createTableRepo}'s `orderBy`
  * @throws `Error` naming the column if `table` has no such column
  */
@@ -23,10 +24,21 @@ export function orderTerms<T extends SQLiteTable>(
   keys: readonly OrderKey<InferSelectModel<T>>[],
 ): (SQL | SQLiteColumn)[] {
   return keys.flatMap((key) => {
-    const { column, desc: descending, nullsLast } = typeof key === "string" ? { column: key } : key;
+    const {
+      column,
+      desc: descending,
+      nullsLast,
+      rank,
+    } = typeof key === "string" ? { column: key } : key;
     const col = (table as unknown as Record<string, SQLiteColumn | undefined>)[column];
     if (!col) throw new Error(`table has no column "${column}"`);
-    const term = descending ? desc(col) : asc(col);
+    const ranked = rank
+      ? sql`case ${col} ${sql.join(
+          rank.map((value, index) => sql`when ${value} then ${index}`),
+          sql` `,
+        )} else ${rank.length} end`
+      : col;
+    const term = descending ? desc(ranked) : asc(ranked);
     return nullsLast ? [sql`${col} is null`, term] : [term];
   });
 }
