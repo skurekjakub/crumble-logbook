@@ -1,0 +1,46 @@
+{
+ "source": "crumblehub.co stage tool, assets/StageBossIndex-C8_ZZo3q.js (game data 1.4.002)",
+ "rule": "final damage = base damage x damage_pct/100 for the highest bracket whose min_ratio_pct <= team power / recommended power x 100; stepwise, no interpolation",
+ "brackets": [
+  {
+   "min_ratio_pct": 0,
+   "damage_pct": 1,
+   "label": "10% 미만"
+  },
+  {
+   "min_ratio_pct": 10,
+   "damage_pct": 5,
+   "label": "10% 이상"
+  },
+  {
+   "min_ratio_pct": 20,
+   "damage_pct": 15,
+   "label": "20% 이상"
+  },
+  {
+   "min_ratio_pct": 40,
+   "damage_pct": 35,
+   "label": "40% 이상"
+  },
+  {
+   "min_ratio_pct": 60,
+   "damage_pct": 55,
+   "label": "60% 이상"
+  },
+  {
+   "min_ratio_pct": 80,
+   "damage_pct": 75,
+   "label": "80% 이상"
+  },
+  {
+   "min_ratio_pct": 100,
+   "damage_pct": 100,
+   "label": "100% 이상"
+  },
+  {
+   "min_ratio_pct": 120,
+   "damage_pct": 120,
+   "label": "120% 이상"
+  }
+ ]
+}
