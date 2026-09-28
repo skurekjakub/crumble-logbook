@@ -9,6 +9,7 @@ import "./styles/components.css";
 import "./styles/shell.css";
 import "./styles/boss.css";
 import "./styles/pvp.css";
+import "./styles/stage.css";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000 } },

@@ -1,0 +1,52 @@
+/* The stage-pushing screens: the power field, the reach card, attempt results and the
+   Rift's findings list. Colours come from tokens.css only. */
+
+.power-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sp-2) var(--sp-3);
+  margin: var(--sp-4) 0;
+}
+.power-field label {
+  font-weight: 600;
+}
+.power-field input {
+  font: var(--fs-m) var(--mono);
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--ink);
+  width: 14ch;
+}
+.power-field input[aria-invalid="true"] {
+  border-color: var(--bad);
+}
+.power-field .hint {
+  font-size: var(--fs-s);
+  color: var(--ink-3);
+}
+.power-field .hint.bad {
+  color: var(--bad);
+}
+
+.card.reach {
+  border-left: 4px solid var(--accent);
+}
+.card.reach li + li {
+  margin-top: var(--sp-1);
+}
+
+.result.clear {
+  color: var(--good);
+  font-weight: 600;
+}
+.result.fail {
+  color: var(--bad);
+  font-weight: 600;
+}
+
+.rift-findings li + li {
+  margin-top: var(--sp-3);
+}

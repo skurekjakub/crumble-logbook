@@ -16,15 +16,19 @@ import { Route as ResearchRouteImport } from './routes/research'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as ModeIndexRouteImport } from './routes/$mode/index'
 import { Route as ModeBossRouteImport } from './routes/$mode/boss'
+import { Route as ModeBracketsRouteImport } from './routes/$mode/brackets'
+import { Route as ModeClearsRouteImport } from './routes/$mode/clears'
 import { Route as ModeCountersRouteImport } from './routes/$mode/counters'
 import { Route as ModeDecksRouteImport } from './routes/$mode/decks'
 import { Route as ModeGearRouteImport } from './routes/$mode/gear'
 import { Route as ModeMechanicsRouteImport } from './routes/$mode/mechanics'
+import { Route as ModeRiftRouteImport } from './routes/$mode/rift'
 import { Route as ModeRunesRouteImport } from './routes/$mode/runes'
 import { Route as ModeScoresRouteImport } from './routes/$mode/scores'
 import { Route as ModeTeamsRouteImport } from './routes/$mode/teams'
 import { Route as ModeTimelineRouteImport } from './routes/$mode/timeline'
 import { Route as ModeUsageRouteImport } from './routes/$mode/usage'
+import { Route as ModeZonesRouteImport } from './routes/$mode/zones'
 import { Route as ResearchSlugCapturesRouteImport } from './routes/research_.$slug.captures'
 
 const IndexRoute = IndexRouteImport.update({
@@ -62,6 +66,16 @@ const ModeBossRoute = ModeBossRouteImport.update({
   path: '/boss',
   getParentRoute: () => ModeRoute,
 } as any)
+const ModeBracketsRoute = ModeBracketsRouteImport.update({
+  id: '/brackets',
+  path: '/brackets',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeClearsRoute = ModeClearsRouteImport.update({
+  id: '/clears',
+  path: '/clears',
+  getParentRoute: () => ModeRoute,
+} as any)
 const ModeCountersRoute = ModeCountersRouteImport.update({
   id: '/counters',
   path: '/counters',
@@ -80,6 +94,11 @@ const ModeGearRoute = ModeGearRouteImport.update({
 const ModeMechanicsRoute = ModeMechanicsRouteImport.update({
   id: '/mechanics',
   path: '/mechanics',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeRiftRoute = ModeRiftRouteImport.update({
+  id: '/rift',
+  path: '/rift',
   getParentRoute: () => ModeRoute,
 } as any)
 const ModeRunesRoute = ModeRunesRouteImport.update({
@@ -107,6 +126,11 @@ const ModeUsageRoute = ModeUsageRouteImport.update({
   path: '/usage',
   getParentRoute: () => ModeRoute,
 } as any)
+const ModeZonesRoute = ModeZonesRouteImport.update({
+  id: '/zones',
+  path: '/zones',
+  getParentRoute: () => ModeRoute,
+} as any)
 const ResearchSlugCapturesRoute = ResearchSlugCapturesRouteImport.update({
   id: '/research_/$slug/captures',
   path: '/research/$slug/captures',
@@ -120,15 +144,19 @@ export interface FileRoutesByFullPath {
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
   '/$mode/boss': typeof ModeBossRoute
+  '/$mode/brackets': typeof ModeBracketsRoute
+  '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/rift': typeof ModeRiftRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/scores': typeof ModeScoresRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
   '/$mode/usage': typeof ModeUsageRoute
+  '/$mode/zones': typeof ModeZonesRoute
   '/$mode/': typeof ModeIndexRoute
   '/research/$slug/captures': typeof ResearchSlugCapturesRoute
 }
@@ -138,15 +166,19 @@ export interface FileRoutesByTo {
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
   '/$mode/boss': typeof ModeBossRoute
+  '/$mode/brackets': typeof ModeBracketsRoute
+  '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/rift': typeof ModeRiftRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/scores': typeof ModeScoresRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
   '/$mode/usage': typeof ModeUsageRoute
+  '/$mode/zones': typeof ModeZonesRoute
   '/$mode': typeof ModeIndexRoute
   '/research/$slug/captures': typeof ResearchSlugCapturesRoute
 }
@@ -158,15 +190,19 @@ export interface FileRoutesById {
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
   '/$mode/boss': typeof ModeBossRoute
+  '/$mode/brackets': typeof ModeBracketsRoute
+  '/$mode/clears': typeof ModeClearsRoute
   '/$mode/counters': typeof ModeCountersRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/rift': typeof ModeRiftRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/scores': typeof ModeScoresRoute
   '/$mode/teams': typeof ModeTeamsRoute
   '/$mode/timeline': typeof ModeTimelineRoute
   '/$mode/usage': typeof ModeUsageRoute
+  '/$mode/zones': typeof ModeZonesRoute
   '/$mode/': typeof ModeIndexRoute
   '/research_/$slug/captures': typeof ResearchSlugCapturesRoute
 }
@@ -179,15 +215,19 @@ export interface FileRouteTypes {
     | '/research'
     | '/sources'
     | '/$mode/boss'
+    | '/$mode/brackets'
+    | '/$mode/clears'
     | '/$mode/counters'
     | '/$mode/decks'
     | '/$mode/gear'
     | '/$mode/mechanics'
+    | '/$mode/rift'
     | '/$mode/runes'
     | '/$mode/scores'
     | '/$mode/teams'
     | '/$mode/timeline'
     | '/$mode/usage'
+    | '/$mode/zones'
     | '/$mode/'
     | '/research/$slug/captures'
   fileRoutesByTo: FileRoutesByTo
@@ -197,15 +237,19 @@ export interface FileRouteTypes {
     | '/research'
     | '/sources'
     | '/$mode/boss'
+    | '/$mode/brackets'
+    | '/$mode/clears'
     | '/$mode/counters'
     | '/$mode/decks'
     | '/$mode/gear'
     | '/$mode/mechanics'
+    | '/$mode/rift'
     | '/$mode/runes'
     | '/$mode/scores'
     | '/$mode/teams'
     | '/$mode/timeline'
     | '/$mode/usage'
+    | '/$mode/zones'
     | '/$mode'
     | '/research/$slug/captures'
   id:
@@ -216,15 +260,19 @@ export interface FileRouteTypes {
     | '/research'
     | '/sources'
     | '/$mode/boss'
+    | '/$mode/brackets'
+    | '/$mode/clears'
     | '/$mode/counters'
     | '/$mode/decks'
     | '/$mode/gear'
     | '/$mode/mechanics'
+    | '/$mode/rift'
     | '/$mode/runes'
     | '/$mode/scores'
     | '/$mode/teams'
     | '/$mode/timeline'
     | '/$mode/usage'
+    | '/$mode/zones'
     | '/$mode/'
     | '/research_/$slug/captures'
   fileRoutesById: FileRoutesById
@@ -289,6 +337,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeBossRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/brackets': {
+      id: '/$mode/brackets'
+      path: '/brackets'
+      fullPath: '/$mode/brackets'
+      preLoaderRoute: typeof ModeBracketsRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/clears': {
+      id: '/$mode/clears'
+      path: '/clears'
+      fullPath: '/$mode/clears'
+      preLoaderRoute: typeof ModeClearsRouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/$mode/counters': {
       id: '/$mode/counters'
       path: '/counters'
@@ -315,6 +377,13 @@ declare module '@tanstack/react-router' {
       path: '/mechanics'
       fullPath: '/$mode/mechanics'
       preLoaderRoute: typeof ModeMechanicsRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/rift': {
+      id: '/$mode/rift'
+      path: '/rift'
+      fullPath: '/$mode/rift'
+      preLoaderRoute: typeof ModeRiftRouteImport
       parentRoute: typeof ModeRoute
     }
     '/$mode/runes': {
@@ -352,6 +421,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeUsageRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/zones': {
+      id: '/$mode/zones'
+      path: '/zones'
+      fullPath: '/$mode/zones'
+      preLoaderRoute: typeof ModeZonesRouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/research_/$slug/captures': {
       id: '/research_/$slug/captures'
       path: '/research/$slug/captures'
@@ -364,29 +440,37 @@ declare module '@tanstack/react-router' {
 
 interface ModeRouteChildren {
   ModeBossRoute: typeof ModeBossRoute
+  ModeBracketsRoute: typeof ModeBracketsRoute
+  ModeClearsRoute: typeof ModeClearsRoute
   ModeCountersRoute: typeof ModeCountersRoute
   ModeDecksRoute: typeof ModeDecksRoute
   ModeGearRoute: typeof ModeGearRoute
   ModeMechanicsRoute: typeof ModeMechanicsRoute
+  ModeRiftRoute: typeof ModeRiftRoute
   ModeRunesRoute: typeof ModeRunesRoute
   ModeScoresRoute: typeof ModeScoresRoute
   ModeTeamsRoute: typeof ModeTeamsRoute
   ModeTimelineRoute: typeof ModeTimelineRoute
   ModeUsageRoute: typeof ModeUsageRoute
+  ModeZonesRoute: typeof ModeZonesRoute
   ModeIndexRoute: typeof ModeIndexRoute
 }
 
 const ModeRouteChildren: ModeRouteChildren = {
   ModeBossRoute: ModeBossRoute,
+  ModeBracketsRoute: ModeBracketsRoute,
+  ModeClearsRoute: ModeClearsRoute,
   ModeCountersRoute: ModeCountersRoute,
   ModeDecksRoute: ModeDecksRoute,
   ModeGearRoute: ModeGearRoute,
   ModeMechanicsRoute: ModeMechanicsRoute,
+  ModeRiftRoute: ModeRiftRoute,
   ModeRunesRoute: ModeRunesRoute,
   ModeScoresRoute: ModeScoresRoute,
   ModeTeamsRoute: ModeTeamsRoute,
   ModeTimelineRoute: ModeTimelineRoute,
   ModeUsageRoute: ModeUsageRoute,
+  ModeZonesRoute: ModeZonesRoute,
   ModeIndexRoute: ModeIndexRoute,
 }
 

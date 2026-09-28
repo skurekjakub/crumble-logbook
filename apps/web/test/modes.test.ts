@@ -23,6 +23,7 @@ import {
   RUMBLE,
   SHARED_SECTIONS,
   sectionForPath,
+  STAGE,
   tabAt,
 } from "../src/app/modes";
 import { requestPath, stubApi } from "./helpers";
@@ -103,6 +104,28 @@ describe("MODES", () => {
       expect(mode.rules, mode.id).not.toBeNull();
     }
     expect(CONQUEST.rules).toBeNull();
+  });
+
+  it("files the stage section under record 003, with the shared pages and the stage screens", () => {
+    expect(STAGE.recordSlug).toBe("003-stage-pushing-meta");
+    expect(STAGE.scope.mode).toBe("stage");
+    expect(STAGE.tabs.map((t) => t.to)).toEqual(
+      [
+        "",
+        "/brackets",
+        "/teams",
+        "/zones",
+        "/clears",
+        "/rift",
+        "/usage",
+        "/runes",
+        "/gear",
+        "/mechanics",
+        "/timeline",
+      ].map((sub) => `/stage${sub}`),
+    );
+    expect(STAGE.stage.reach).toContain(35);
+    for (const mode of [CONQUEST, ARENA, RUMBLE]) expect(mode.stage, mode.id).toBeNull();
   });
 
   it("lists the research index among the shared sections, before Sources and Glossary", () => {

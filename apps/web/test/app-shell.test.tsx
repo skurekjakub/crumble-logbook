@@ -99,6 +99,7 @@ describe("app shell", () => {
       "Guild Conquest 길드 토벌전",
       "Arena 아레나",
       "Rumble Arena 와글와글 아레나",
+      "Stage 스테이지",
       "Research",
       "Sources",
       "Glossary",

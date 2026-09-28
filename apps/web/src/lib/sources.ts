@@ -38,5 +38,16 @@ export function indexSources(
   return new Map(rows.map((r) => [r.id, { url: r.url, title: r.title ?? null }]));
 }
 
+/**
+ * Every source some rows cite, for rows that share their sources, such as
+ * a table's rows loaded from one file.
+ *
+ * @param rows - rows with sources
+ * @returns the distinct source ids, sorted
+ */
+export function citedBy(rows: ReadonlyArray<{ sources: readonly string[] }>): string[] {
+  return [...new Set(rows.flatMap((r) => r.sources))].sort();
+}
+
 /** An index with no sources, for use before `/api/sources` has loaded. */
 export const EMPTY_SOURCES: SourceIndex = new Map();

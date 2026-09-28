@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useSourceIndex } from "../api/hooks";
 import { mechanicsQuery } from "../api/queries";
 import type { ModeScope } from "../api/queries";
-import type { ModeSection, SharedView } from "../app/modes";
+import type { ModeSection, SharedView, ViewCopy } from "../app/modes";
 import { ConfidencePill } from "../components/ConfidencePill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
@@ -15,7 +15,7 @@ import { ViewHeader } from "../components/ViewHeader";
  * @param props - the mode's scope and the mechanics topic
  * @returns the notes, inside the mechanics query's loading and error states
  */
-function TopicNotes({ scope, topic }: { scope: ModeScope; topic: string }) {
+export function TopicNotes({ scope, topic }: { scope: ModeScope; topic: string }) {
   const sources = useSourceIndex();
   const mechanics = useQuery(mechanicsQuery(scope));
   return (
@@ -52,11 +52,32 @@ export interface ModeViewHeaderProps {
  * @returns the header
  */
 export function ModeViewHeader({ mode, view, fallbackTitle }: ModeViewHeaderProps) {
-  const copy = mode.copy[view];
+  return <CopyHeader scope={mode.scope} copy={mode.copy[view]} fallbackTitle={fallbackTitle} />;
+}
+
+/** Props for {@link CopyHeader}. */
+export interface CopyHeaderProps {
+  /** The mode whose mechanics the copy's `topic` names. */
+  scope: ModeScope;
+  /** The view's heading, lede and topic, when the mode has copy for it. */
+  copy: ViewCopy | undefined;
+  /** The heading when there's no copy. */
+  fallbackTitle: string;
+}
+
+/**
+ * A view's heading and lede from its copy, followed by the mode's cited
+ * mechanics of the copy's `topic` when it names one: the header of a view
+ * whose copy isn't a shared view's, such as a mode-specific screen.
+ *
+ * @param props - the mode's scope, the view's copy, and the title to use without copy
+ * @returns the header
+ */
+export function CopyHeader({ scope, copy, fallbackTitle }: CopyHeaderProps) {
   return (
     <>
       <ViewHeader title={copy?.title ?? fallbackTitle} lede={copy?.lede} />
-      {copy?.topic ? <TopicNotes scope={mode.scope} topic={copy.topic} /> : null}
+      {copy?.topic ? <TopicNotes scope={scope} topic={copy.topic} /> : null}
     </>
   );
 }

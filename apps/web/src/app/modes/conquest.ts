@@ -106,4 +106,5 @@ export const CONQUEST = {
     boards: { players: "Players", guilds: "Guilds", power: "Power" },
   },
   rules: null,
+  stage: null,
 } as const satisfies ModeSection;

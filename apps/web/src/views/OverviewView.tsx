@@ -81,8 +81,9 @@ function RuleBody({ rule, sources }: { rule: Mechanic; sources: SourceIndex }) {
 }
 
 /**
- * A mode's rules: the row titled `config.highlight` as its own card (the
- * season's buffs), then the rest as a card of title → rule. "No rules
+ * A mode's rules: the row titled `config.highlight`, when the config names
+ * one, as its own card (the season's buffs), then the rest as a card of
+ * title → rule. "No rules
  * recorded yet." when there are none.
  *
  * @param props - the rules, the mode's rules config and the source index
@@ -98,7 +99,8 @@ function Rules({
   sources: SourceIndex;
 }) {
   if (!rows.length) return <EmptyState>No rules recorded yet.</EmptyState>;
-  const highlight = rows.find((r) => r.title === config.highlight);
+  const highlight =
+    config.highlight === null ? undefined : rows.find((r) => r.title === config.highlight);
   const rest = rows.filter((r) => r !== highlight);
   return (
     <>

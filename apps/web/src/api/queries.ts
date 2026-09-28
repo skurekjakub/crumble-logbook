@@ -310,6 +310,85 @@ export const recommendationsQuery = (record?: string | null) =>
   });
 
 /**
+ * The power gate's brackets, lowest first: a team with `minRatioPct`% of
+ * recommended power keeps `damagePct`% of its damage.
+ *
+ * @returns the query options
+ */
+export const powerBracketsQuery = () =>
+  queryOptions({
+    queryKey: ["power-brackets"],
+    queryFn: () => parseResponse(api["power-brackets"].$get({ query: {} })),
+  });
+
+/**
+ * Main-stage chapters in order, each by its last stage: boss, recommended
+ * power, and accuracy and focus requirements.
+ *
+ * @returns the query options
+ */
+export const stageChaptersQuery = () =>
+  queryOptions({
+    queryKey: ["stage-chapters"],
+    queryFn: () => parseResponse(api["stage-chapters"].$get({ query: {} })),
+  });
+
+/**
+ * Dimensional Rift levels in order, each with its recommended power.
+ *
+ * @returns the query options
+ */
+export const riftLevelsQuery = () =>
+  queryOptions({
+    queryKey: ["rift-levels"],
+    queryFn: () => parseResponse(api["rift-levels"].$get({ query: {} })),
+  });
+
+/**
+ * Dimensional Rift seasons in order, each with the levels it runs and its dates.
+ *
+ * @returns the query options
+ */
+export const riftSeasonsQuery = () =>
+  queryOptions({
+    queryKey: ["rift-seasons"],
+    queryFn: () => parseResponse(api["rift-seasons"].$get({ query: {} })),
+  });
+
+/**
+ * The boss players report per Rift level, lowest level first.
+ *
+ * @returns the query options
+ */
+export const riftBossesQuery = () =>
+  queryOptions({
+    queryKey: ["rift-bosses"],
+    queryFn: () => parseResponse(api["rift-bosses"].$get({ query: {} })),
+  });
+
+/**
+ * What to bring per boss slot of each zone layout, in zone then slot order.
+ *
+ * @returns the query options
+ */
+export const stageZoneSlotsQuery = () =>
+  queryOptions({
+    queryKey: ["stage-zone-slots"],
+    queryFn: () => parseResponse(api["stage-zone-slots"].$get({ query: {} })),
+  });
+
+/**
+ * Documented stage attempts, furthest stage first, then lowest power first.
+ *
+ * @returns the query options
+ */
+export const stageClearsQuery = () =>
+  queryOptions({
+    queryKey: ["stage-clears"],
+    queryFn: () => parseResponse(api["stage-clears"].$get({ query: {} })),
+  });
+
+/**
  * Leaderboard rows in rank order.
  *
  * @param filter - restrict to one season and/or board

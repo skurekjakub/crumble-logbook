@@ -162,8 +162,11 @@ export interface LeaderboardConfig extends ViewCopy {
 export interface RulesConfig {
   /** The card's heading. */
   title: string;
-  /** The title of the rules row shown apart, above the card, as the season's buffs. */
-  highlight: string;
+  /**
+   * The title of the rules row shown apart, above the card, as the season's
+   * buffs; null for a mode with none.
+   */
+  highlight: string | null;
 }
 
 /** A game mode's section. */
@@ -181,6 +184,37 @@ export interface ModeSection extends SectionBase {
   leaderboard: LeaderboardConfig | null;
   /** The overview's rules card, for a mode whose record files its rules as mechanics. */
   rules: RulesConfig | null;
+  /** The stage-pushing screens, for the stage mode. */
+  stage: StageConfig | null;
+}
+
+/**
+ * The stage-pushing screens: each one's heading, lede and mechanics topic,
+ * and the damage shares the bracket calculator reports a reach for.
+ */
+export interface StageConfig {
+  /** The bracket calculator: team power in, bracket per chapter out. */
+  brackets: ViewCopy;
+  /** The zone layouts and what to bring per boss slot. */
+  zones: ViewCopy;
+  /** The documented clears and failures. */
+  clears: ViewCopy;
+  /** The Dimensional Rift page. */
+  rift: RiftConfig;
+  /** Kept-damage percentages, highest first, whose furthest stage the calculator names. */
+  reach: readonly number[];
+}
+
+/**
+ * The Dimensional Rift page: its copy (the `topic` names the Rift's rules
+ * and caveats), the decks it shows, and the words that mark the record's
+ * other findings as being about the Rift.
+ */
+export interface RiftConfig extends ViewCopy {
+  /** The ids of the decks played in the Rift. */
+  decks: readonly string[];
+  /** A takeaway, timeline event, RNG factor or rune build mentioning any of these is about the Rift. */
+  mentions: readonly string[];
 }
 
 /** A section shared by every mode. */

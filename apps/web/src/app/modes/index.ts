@@ -18,14 +18,15 @@ import { ARENA } from "./arena";
 import { CONQUEST } from "./conquest";
 import { RUMBLE } from "./rumble";
 import { SHARED_SECTIONS } from "./shared";
+import { STAGE } from "./stage";
 import type { ModeSection, Section, SectionTab } from "./types";
 
 export type * from "./types";
 export { modeLink, modePath, modeTab } from "./links";
-export { ARENA, CONQUEST, RUMBLE, SHARED_SECTIONS };
+export { ARENA, CONQUEST, RUMBLE, SHARED_SECTIONS, STAGE };
 
 /** Game modes, in tab order. */
-export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE];
+export const MODES: readonly ModeSection[] = [CONQUEST, ARENA, RUMBLE, STAGE];
 
 /** Every top-level section, modes first. */
 export const SECTIONS: readonly Section[] = [...MODES, ...SHARED_SECTIONS];

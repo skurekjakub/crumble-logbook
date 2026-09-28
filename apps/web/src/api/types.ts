@@ -76,3 +76,27 @@ export type Counter = InferResponseType<typeof api.counters.$get, 200>[number];
 
 /** A usage figure: a subject's share of a dated sample, with its `en` gloss and sources. */
 export type UsageStat = InferResponseType<typeof api.usage.$get, 200>[number];
+
+/** A power-gate bracket: `minRatioPct`% of recommended power keeps `damagePct`% of damage; with sources. */
+export type PowerBracket = InferResponseType<(typeof api)["power-brackets"]["$get"], 200>[number];
+
+/** A main-stage chapter, by its last stage: boss, recommended power, requirements and sources. */
+export type StageChapter = InferResponseType<(typeof api)["stage-chapters"]["$get"], 200>[number];
+
+/** A Dimensional Rift level with its recommended power and sources. */
+export type RiftLevel = InferResponseType<(typeof api)["rift-levels"]["$get"], 200>[number];
+
+/** A Dimensional Rift season: the levels it runs, its dates and sources. */
+export type RiftSeason = InferResponseType<(typeof api)["rift-seasons"]["$get"], 200>[number];
+
+/** The boss players report at a Rift level, with a note and sources. */
+export type RiftBoss = InferResponseType<(typeof api)["rift-bosses"]["$get"], 200>[number];
+
+/** One boss slot of a zone layout: the plan, its deck, how low a bracket it was cleared at, and sources. */
+export type StageZoneSlot = InferResponseType<
+  (typeof api)["stage-zone-slots"]["$get"],
+  200
+>[number];
+
+/** A documented stage attempt, with the boss's `en` gloss and sources. */
+export type StageClear = InferResponseType<(typeof api)["stage-clears"]["$get"], 200>[number];

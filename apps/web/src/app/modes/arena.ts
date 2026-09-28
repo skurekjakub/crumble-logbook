@@ -36,4 +36,5 @@ export const ARENA = {
   boss: null,
   leaderboard: null,
   rules: { title: "How Arena works", highlight: "Season buffs" },
+  stage: null,
 } as const satisfies ModeSection;

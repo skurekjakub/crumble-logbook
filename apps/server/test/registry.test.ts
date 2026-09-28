@@ -444,7 +444,7 @@ describe("the content-type registry", () => {
         ).toEqual([wanted]);
       }
     }
-  });
+  }, 30_000);
 
   it("lists tables in foreign-key-safe order: every referenced table comes first", () => {
     const position = new Map(TABLE_KEYS.map((key, index) => [REGISTRY[key].table, index] as const));

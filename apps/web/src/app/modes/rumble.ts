@@ -36,4 +36,5 @@ export const RUMBLE = {
   boss: null,
   leaderboard: null,
   rules: { title: "How Rumble Arena works", highlight: "Season buffs" },
+  stage: null,
 } as const satisfies ModeSection;
