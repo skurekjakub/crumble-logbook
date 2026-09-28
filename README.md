@@ -32,7 +32,7 @@ pnpm dev:server    # API on http://localhost:8787/api
 pnpm dev:web       # web app on http://localhost:5173, proxying /api (CRUMBLE_API overrides the target)
 ```
 
-The server creates and seeds its database from `data/snapshot.json` when the file doesn't exist yet, so a fresh clone runs with `pnpm install && pnpm dev`. Delete `data/crumble.db` to start again from the snapshot. When the file exists, the server compares it with the snapshot on startup and logs a warning naming the records and tables that differ: after a pull that brought newer records, delete `data/crumble.db` to reseed; after an import of your own, run `pnpm db:export`. It only warns: it never reseeds or deletes the database itself.
+The server creates and seeds its database from `data/snapshot.json` when the file doesn't exist yet, so a fresh clone runs with `pnpm install && pnpm dev`. Delete `data/crumble.db` to start again from the snapshot. When the file exists, the server compares it with the snapshot on startup and logs a warning naming the records and tables that differ: after a pull that brought newer records, delete `data/crumble.db` to reseed; after changing a record's data, rebuild the snapshot from a fresh database (see [The database](#the-database)) rather than exporting this one. It only warns: it never reseeds or deletes the database itself.
 
 ESLint runs typescript-eslint's strict type-checked rules, React's hook rules on the web app, and JSDoc on every function, method, class and interface method (see `AGENTS.md`). The config and the reason for each switched-off rule are in `tools/eslint-config/index.ts`.
 
@@ -52,7 +52,7 @@ pnpm db:restore [file]                                 # load a snapshot (defaul
 
 `import:record` reads `research/<slug>/import.json`, validates every curated file and every reference (and, when the manifest has a `ledger` block, the capture ledger against the evidence on disk) before writing, and loads everything in one transaction. An error names the file and the row, and leaves the database untouched. Every row it writes belongs to the record (`recordSlug`). It refuses a record that is already loaded unless you pass `--replace`, which clears only that record's rows. Sources, glossary entries and buff values can be shared between records: the first record to load one keeps it, and a later record's differing version is reported as a warning (a differing buff value fails the import instead). It also warns about glossary names that more than one entry claims.
 
-Game facts (the tables `packages/schema/src/tables/stage.ts` marks as such) are owned by no record: they have no `recordSlug`, so `--replace` never clears them. A record that loads a fact already stored must agree with it: an identical fact is skipped, a differing one fails the import.
+Game facts (the tables `packages/schema/src/tables/stage.ts` marks as such) are owned by no record: they have no `recordSlug`. Instead, each record that lists a fact claims it (`fact_claims`, one row per source the record cites for it), and the fact is cited to every source its claims cite. A record that loads a fact already stored must agree with it: an identical fact isn't written twice, only claimed; a differing one fails the import. `--replace` drops the record's claims before loading it again, so it refreshes the sources the record gives a fact, and a fact the record no longer lists is deleted once no other record claims it. A fact written through the API is claimed by no record, and an import leaves it alone unless a record claims it, which then sets its citations.
 
 Multi-record gotchas:
 - Import 001, then 002, then 003. Shared sources and glossary entries keep the first record's row, so the order decides which version the database holds. `data/snapshot.json` is always built from a fresh import of 001, then 002, then 003 into an empty database (point `CRUMBLE_DB` at a new file), followed by `pnpm db:export`.
@@ -61,7 +61,7 @@ Multi-record gotchas:
 
 A row created through the API (`POST`) gets `recordSlug` null: no record owns it, so a `?record=` filter doesn't list it on its own account, its names are glossed without a record's preference, and `--replace` never clears it. To keep such a row with a record, add it to the record's `curated/` files and re-import.
 
-After an import, the database is the source of truth. Commit `data/snapshot.json` after changing data, so the history stays diffable. To rebuild a database from it, point `CRUMBLE_DB` at a new file and run `pnpm db:restore`.
+Commit `data/snapshot.json` after changing a record's data, so the history stays diffable, and build it as above, from a fresh import into an empty database: a database that `--replace` or the API changed holds ids and rows a fresh import wouldn't make, so exporting it would commit them. To rebuild a database from the snapshot, point `CRUMBLE_DB` at a new file and run `pnpm db:restore`.
 
 ### API
 

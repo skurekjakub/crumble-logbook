@@ -301,6 +301,12 @@ function seedEverything(store: Store): SeedIds {
     ["dc:1"],
   );
   services.riftBosses.create({ level: 5, bossKr: "비겁한 쿠키", bossEn: "GingerCraven" }, ["dc:1"]);
+  const [bracket] = store.repos.powerBrackets.list();
+  store.repos.factClaims.add(
+    { entity: "power_bracket", entityId: String(bracket!.id) },
+    "kr-levers",
+    ["dc:1"],
+  );
 
   return { mechanicId: mechanic.id, scoreId: score.id, deckCookieId };
 }
@@ -351,6 +357,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       stageClears: 1,
       riftBosses: 1,
       citations: 22,
+      factClaims: 1,
     });
     for (const [table, rows] of Object.entries(first.tables)) {
       expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);

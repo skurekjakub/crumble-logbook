@@ -92422,6 +92422,6371 @@
     "entityId": "7",
     "sourceId": "dc:73646"
    }
+  ],
+  "factClaims": [
+   {
+    "id": 1,
+    "entity": "power_bracket",
+    "entityId": "1",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 2,
+    "entity": "power_bracket",
+    "entityId": "2",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 3,
+    "entity": "power_bracket",
+    "entityId": "2",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumbgg-stages"
+   },
+   {
+    "id": 4,
+    "entity": "power_bracket",
+    "entityId": "3",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 5,
+    "entity": "power_bracket",
+    "entityId": "3",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumbgg-stages"
+   },
+   {
+    "id": 6,
+    "entity": "power_bracket",
+    "entityId": "4",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 7,
+    "entity": "power_bracket",
+    "entityId": "4",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumbgg-stages"
+   },
+   {
+    "id": 8,
+    "entity": "power_bracket",
+    "entityId": "5",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 9,
+    "entity": "power_bracket",
+    "entityId": "5",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumbgg-stages"
+   },
+   {
+    "id": 10,
+    "entity": "power_bracket",
+    "entityId": "6",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 11,
+    "entity": "power_bracket",
+    "entityId": "6",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumbgg-stages"
+   },
+   {
+    "id": 12,
+    "entity": "power_bracket",
+    "entityId": "7",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 13,
+    "entity": "power_bracket",
+    "entityId": "7",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumbgg-stages"
+   },
+   {
+    "id": 14,
+    "entity": "power_bracket",
+    "entityId": "8",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-tool"
+   },
+   {
+    "id": 15,
+    "entity": "power_bracket",
+    "entityId": "8",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumbgg-stages"
+   },
+   {
+    "id": 16,
+    "entity": "stage_chapter",
+    "entityId": "1",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 17,
+    "entity": "stage_chapter",
+    "entityId": "1",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 18,
+    "entity": "stage_chapter",
+    "entityId": "2",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 19,
+    "entity": "stage_chapter",
+    "entityId": "2",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 20,
+    "entity": "stage_chapter",
+    "entityId": "3",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 21,
+    "entity": "stage_chapter",
+    "entityId": "3",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 22,
+    "entity": "stage_chapter",
+    "entityId": "4",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 23,
+    "entity": "stage_chapter",
+    "entityId": "4",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 24,
+    "entity": "stage_chapter",
+    "entityId": "5",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 25,
+    "entity": "stage_chapter",
+    "entityId": "5",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 26,
+    "entity": "stage_chapter",
+    "entityId": "6",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 27,
+    "entity": "stage_chapter",
+    "entityId": "6",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 28,
+    "entity": "stage_chapter",
+    "entityId": "7",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 29,
+    "entity": "stage_chapter",
+    "entityId": "7",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 30,
+    "entity": "stage_chapter",
+    "entityId": "8",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 31,
+    "entity": "stage_chapter",
+    "entityId": "8",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 32,
+    "entity": "stage_chapter",
+    "entityId": "9",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 33,
+    "entity": "stage_chapter",
+    "entityId": "9",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 34,
+    "entity": "stage_chapter",
+    "entityId": "10",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 35,
+    "entity": "stage_chapter",
+    "entityId": "10",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 36,
+    "entity": "stage_chapter",
+    "entityId": "11",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 37,
+    "entity": "stage_chapter",
+    "entityId": "11",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 38,
+    "entity": "stage_chapter",
+    "entityId": "12",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 39,
+    "entity": "stage_chapter",
+    "entityId": "12",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 40,
+    "entity": "stage_chapter",
+    "entityId": "13",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 41,
+    "entity": "stage_chapter",
+    "entityId": "13",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 42,
+    "entity": "stage_chapter",
+    "entityId": "14",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 43,
+    "entity": "stage_chapter",
+    "entityId": "14",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 44,
+    "entity": "stage_chapter",
+    "entityId": "15",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 45,
+    "entity": "stage_chapter",
+    "entityId": "15",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 46,
+    "entity": "stage_chapter",
+    "entityId": "16",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 47,
+    "entity": "stage_chapter",
+    "entityId": "16",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 48,
+    "entity": "stage_chapter",
+    "entityId": "17",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 49,
+    "entity": "stage_chapter",
+    "entityId": "17",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 50,
+    "entity": "stage_chapter",
+    "entityId": "18",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 51,
+    "entity": "stage_chapter",
+    "entityId": "18",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 52,
+    "entity": "stage_chapter",
+    "entityId": "19",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 53,
+    "entity": "stage_chapter",
+    "entityId": "19",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 54,
+    "entity": "stage_chapter",
+    "entityId": "20",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 55,
+    "entity": "stage_chapter",
+    "entityId": "20",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 56,
+    "entity": "stage_chapter",
+    "entityId": "21",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 57,
+    "entity": "stage_chapter",
+    "entityId": "21",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 58,
+    "entity": "stage_chapter",
+    "entityId": "22",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 59,
+    "entity": "stage_chapter",
+    "entityId": "22",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 60,
+    "entity": "stage_chapter",
+    "entityId": "23",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 61,
+    "entity": "stage_chapter",
+    "entityId": "23",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 62,
+    "entity": "stage_chapter",
+    "entityId": "24",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 63,
+    "entity": "stage_chapter",
+    "entityId": "24",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 64,
+    "entity": "stage_chapter",
+    "entityId": "25",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 65,
+    "entity": "stage_chapter",
+    "entityId": "25",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 66,
+    "entity": "stage_chapter",
+    "entityId": "26",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 67,
+    "entity": "stage_chapter",
+    "entityId": "26",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 68,
+    "entity": "stage_chapter",
+    "entityId": "27",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 69,
+    "entity": "stage_chapter",
+    "entityId": "27",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 70,
+    "entity": "stage_chapter",
+    "entityId": "28",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 71,
+    "entity": "stage_chapter",
+    "entityId": "28",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 72,
+    "entity": "stage_chapter",
+    "entityId": "29",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 73,
+    "entity": "stage_chapter",
+    "entityId": "29",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 74,
+    "entity": "stage_chapter",
+    "entityId": "30",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 75,
+    "entity": "stage_chapter",
+    "entityId": "30",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 76,
+    "entity": "stage_chapter",
+    "entityId": "31",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 77,
+    "entity": "stage_chapter",
+    "entityId": "31",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 78,
+    "entity": "stage_chapter",
+    "entityId": "32",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 79,
+    "entity": "stage_chapter",
+    "entityId": "32",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 80,
+    "entity": "stage_chapter",
+    "entityId": "33",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 81,
+    "entity": "stage_chapter",
+    "entityId": "33",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 82,
+    "entity": "stage_chapter",
+    "entityId": "34",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 83,
+    "entity": "stage_chapter",
+    "entityId": "34",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 84,
+    "entity": "stage_chapter",
+    "entityId": "35",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 85,
+    "entity": "stage_chapter",
+    "entityId": "35",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 86,
+    "entity": "stage_chapter",
+    "entityId": "36",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 87,
+    "entity": "stage_chapter",
+    "entityId": "36",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 88,
+    "entity": "stage_chapter",
+    "entityId": "37",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 89,
+    "entity": "stage_chapter",
+    "entityId": "37",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 90,
+    "entity": "stage_chapter",
+    "entityId": "38",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 91,
+    "entity": "stage_chapter",
+    "entityId": "38",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 92,
+    "entity": "stage_chapter",
+    "entityId": "39",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 93,
+    "entity": "stage_chapter",
+    "entityId": "39",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 94,
+    "entity": "stage_chapter",
+    "entityId": "40",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 95,
+    "entity": "stage_chapter",
+    "entityId": "40",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 96,
+    "entity": "stage_chapter",
+    "entityId": "41",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 97,
+    "entity": "stage_chapter",
+    "entityId": "41",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 98,
+    "entity": "stage_chapter",
+    "entityId": "42",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 99,
+    "entity": "stage_chapter",
+    "entityId": "42",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 100,
+    "entity": "stage_chapter",
+    "entityId": "43",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 101,
+    "entity": "stage_chapter",
+    "entityId": "43",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 102,
+    "entity": "stage_chapter",
+    "entityId": "44",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 103,
+    "entity": "stage_chapter",
+    "entityId": "44",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 104,
+    "entity": "stage_chapter",
+    "entityId": "45",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 105,
+    "entity": "stage_chapter",
+    "entityId": "45",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 106,
+    "entity": "stage_chapter",
+    "entityId": "46",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 107,
+    "entity": "stage_chapter",
+    "entityId": "46",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 108,
+    "entity": "stage_chapter",
+    "entityId": "47",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 109,
+    "entity": "stage_chapter",
+    "entityId": "47",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 110,
+    "entity": "stage_chapter",
+    "entityId": "48",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 111,
+    "entity": "stage_chapter",
+    "entityId": "48",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 112,
+    "entity": "stage_chapter",
+    "entityId": "49",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 113,
+    "entity": "stage_chapter",
+    "entityId": "49",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 114,
+    "entity": "stage_chapter",
+    "entityId": "50",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 115,
+    "entity": "stage_chapter",
+    "entityId": "50",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 116,
+    "entity": "stage_chapter",
+    "entityId": "51",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 117,
+    "entity": "stage_chapter",
+    "entityId": "51",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 118,
+    "entity": "stage_chapter",
+    "entityId": "52",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 119,
+    "entity": "stage_chapter",
+    "entityId": "52",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 120,
+    "entity": "stage_chapter",
+    "entityId": "53",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 121,
+    "entity": "stage_chapter",
+    "entityId": "53",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 122,
+    "entity": "stage_chapter",
+    "entityId": "54",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 123,
+    "entity": "stage_chapter",
+    "entityId": "54",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 124,
+    "entity": "stage_chapter",
+    "entityId": "55",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 125,
+    "entity": "stage_chapter",
+    "entityId": "55",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 126,
+    "entity": "stage_chapter",
+    "entityId": "56",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 127,
+    "entity": "stage_chapter",
+    "entityId": "56",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 128,
+    "entity": "stage_chapter",
+    "entityId": "57",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 129,
+    "entity": "stage_chapter",
+    "entityId": "57",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 130,
+    "entity": "stage_chapter",
+    "entityId": "58",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 131,
+    "entity": "stage_chapter",
+    "entityId": "58",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 132,
+    "entity": "stage_chapter",
+    "entityId": "59",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 133,
+    "entity": "stage_chapter",
+    "entityId": "59",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 134,
+    "entity": "stage_chapter",
+    "entityId": "60",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 135,
+    "entity": "stage_chapter",
+    "entityId": "60",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 136,
+    "entity": "stage_chapter",
+    "entityId": "61",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 137,
+    "entity": "stage_chapter",
+    "entityId": "61",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 138,
+    "entity": "stage_chapter",
+    "entityId": "62",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 139,
+    "entity": "stage_chapter",
+    "entityId": "62",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 140,
+    "entity": "stage_chapter",
+    "entityId": "63",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 141,
+    "entity": "stage_chapter",
+    "entityId": "63",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 142,
+    "entity": "stage_chapter",
+    "entityId": "64",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 143,
+    "entity": "stage_chapter",
+    "entityId": "64",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 144,
+    "entity": "stage_chapter",
+    "entityId": "65",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 145,
+    "entity": "stage_chapter",
+    "entityId": "65",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 146,
+    "entity": "stage_chapter",
+    "entityId": "66",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 147,
+    "entity": "stage_chapter",
+    "entityId": "66",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 148,
+    "entity": "stage_chapter",
+    "entityId": "67",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 149,
+    "entity": "stage_chapter",
+    "entityId": "67",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 150,
+    "entity": "stage_chapter",
+    "entityId": "68",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 151,
+    "entity": "stage_chapter",
+    "entityId": "68",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 152,
+    "entity": "stage_chapter",
+    "entityId": "69",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 153,
+    "entity": "stage_chapter",
+    "entityId": "69",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 154,
+    "entity": "stage_chapter",
+    "entityId": "70",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 155,
+    "entity": "stage_chapter",
+    "entityId": "70",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 156,
+    "entity": "stage_chapter",
+    "entityId": "71",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 157,
+    "entity": "stage_chapter",
+    "entityId": "71",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 158,
+    "entity": "stage_chapter",
+    "entityId": "72",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 159,
+    "entity": "stage_chapter",
+    "entityId": "72",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 160,
+    "entity": "stage_chapter",
+    "entityId": "73",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 161,
+    "entity": "stage_chapter",
+    "entityId": "73",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 162,
+    "entity": "stage_chapter",
+    "entityId": "74",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 163,
+    "entity": "stage_chapter",
+    "entityId": "74",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 164,
+    "entity": "stage_chapter",
+    "entityId": "75",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 165,
+    "entity": "stage_chapter",
+    "entityId": "75",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 166,
+    "entity": "stage_chapter",
+    "entityId": "76",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 167,
+    "entity": "stage_chapter",
+    "entityId": "76",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 168,
+    "entity": "stage_chapter",
+    "entityId": "77",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 169,
+    "entity": "stage_chapter",
+    "entityId": "77",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 170,
+    "entity": "stage_chapter",
+    "entityId": "78",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 171,
+    "entity": "stage_chapter",
+    "entityId": "78",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 172,
+    "entity": "stage_chapter",
+    "entityId": "79",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 173,
+    "entity": "stage_chapter",
+    "entityId": "79",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 174,
+    "entity": "stage_chapter",
+    "entityId": "80",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 175,
+    "entity": "stage_chapter",
+    "entityId": "80",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 176,
+    "entity": "stage_chapter",
+    "entityId": "81",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 177,
+    "entity": "stage_chapter",
+    "entityId": "81",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 178,
+    "entity": "stage_chapter",
+    "entityId": "82",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 179,
+    "entity": "stage_chapter",
+    "entityId": "82",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 180,
+    "entity": "stage_chapter",
+    "entityId": "83",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 181,
+    "entity": "stage_chapter",
+    "entityId": "83",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 182,
+    "entity": "stage_chapter",
+    "entityId": "84",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 183,
+    "entity": "stage_chapter",
+    "entityId": "84",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 184,
+    "entity": "stage_chapter",
+    "entityId": "85",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 185,
+    "entity": "stage_chapter",
+    "entityId": "85",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 186,
+    "entity": "stage_chapter",
+    "entityId": "86",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 187,
+    "entity": "stage_chapter",
+    "entityId": "86",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 188,
+    "entity": "stage_chapter",
+    "entityId": "87",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 189,
+    "entity": "stage_chapter",
+    "entityId": "87",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 190,
+    "entity": "stage_chapter",
+    "entityId": "88",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 191,
+    "entity": "stage_chapter",
+    "entityId": "88",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 192,
+    "entity": "stage_chapter",
+    "entityId": "89",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 193,
+    "entity": "stage_chapter",
+    "entityId": "89",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 194,
+    "entity": "stage_chapter",
+    "entityId": "90",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 195,
+    "entity": "stage_chapter",
+    "entityId": "90",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 196,
+    "entity": "stage_chapter",
+    "entityId": "91",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 197,
+    "entity": "stage_chapter",
+    "entityId": "91",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 198,
+    "entity": "stage_chapter",
+    "entityId": "92",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 199,
+    "entity": "stage_chapter",
+    "entityId": "92",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 200,
+    "entity": "stage_chapter",
+    "entityId": "93",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 201,
+    "entity": "stage_chapter",
+    "entityId": "93",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 202,
+    "entity": "stage_chapter",
+    "entityId": "94",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 203,
+    "entity": "stage_chapter",
+    "entityId": "94",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 204,
+    "entity": "stage_chapter",
+    "entityId": "95",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 205,
+    "entity": "stage_chapter",
+    "entityId": "95",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 206,
+    "entity": "stage_chapter",
+    "entityId": "96",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 207,
+    "entity": "stage_chapter",
+    "entityId": "96",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 208,
+    "entity": "stage_chapter",
+    "entityId": "97",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 209,
+    "entity": "stage_chapter",
+    "entityId": "97",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 210,
+    "entity": "stage_chapter",
+    "entityId": "98",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 211,
+    "entity": "stage_chapter",
+    "entityId": "98",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 212,
+    "entity": "stage_chapter",
+    "entityId": "99",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 213,
+    "entity": "stage_chapter",
+    "entityId": "99",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 214,
+    "entity": "stage_chapter",
+    "entityId": "100",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 215,
+    "entity": "stage_chapter",
+    "entityId": "100",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 216,
+    "entity": "stage_chapter",
+    "entityId": "101",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 217,
+    "entity": "stage_chapter",
+    "entityId": "101",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 218,
+    "entity": "stage_chapter",
+    "entityId": "102",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 219,
+    "entity": "stage_chapter",
+    "entityId": "102",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 220,
+    "entity": "stage_chapter",
+    "entityId": "103",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 221,
+    "entity": "stage_chapter",
+    "entityId": "103",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 222,
+    "entity": "stage_chapter",
+    "entityId": "104",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 223,
+    "entity": "stage_chapter",
+    "entityId": "104",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 224,
+    "entity": "stage_chapter",
+    "entityId": "105",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 225,
+    "entity": "stage_chapter",
+    "entityId": "105",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 226,
+    "entity": "stage_chapter",
+    "entityId": "106",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 227,
+    "entity": "stage_chapter",
+    "entityId": "106",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 228,
+    "entity": "stage_chapter",
+    "entityId": "107",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 229,
+    "entity": "stage_chapter",
+    "entityId": "107",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 230,
+    "entity": "stage_chapter",
+    "entityId": "108",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 231,
+    "entity": "stage_chapter",
+    "entityId": "108",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 232,
+    "entity": "stage_chapter",
+    "entityId": "109",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 233,
+    "entity": "stage_chapter",
+    "entityId": "109",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 234,
+    "entity": "stage_chapter",
+    "entityId": "110",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 235,
+    "entity": "stage_chapter",
+    "entityId": "110",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 236,
+    "entity": "stage_chapter",
+    "entityId": "111",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 237,
+    "entity": "stage_chapter",
+    "entityId": "111",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 238,
+    "entity": "stage_chapter",
+    "entityId": "112",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 239,
+    "entity": "stage_chapter",
+    "entityId": "112",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 240,
+    "entity": "stage_chapter",
+    "entityId": "113",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 241,
+    "entity": "stage_chapter",
+    "entityId": "113",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 242,
+    "entity": "stage_chapter",
+    "entityId": "114",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 243,
+    "entity": "stage_chapter",
+    "entityId": "114",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 244,
+    "entity": "stage_chapter",
+    "entityId": "115",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 245,
+    "entity": "stage_chapter",
+    "entityId": "115",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 246,
+    "entity": "stage_chapter",
+    "entityId": "116",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 247,
+    "entity": "stage_chapter",
+    "entityId": "116",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 248,
+    "entity": "stage_chapter",
+    "entityId": "117",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 249,
+    "entity": "stage_chapter",
+    "entityId": "117",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 250,
+    "entity": "stage_chapter",
+    "entityId": "118",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 251,
+    "entity": "stage_chapter",
+    "entityId": "118",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 252,
+    "entity": "stage_chapter",
+    "entityId": "119",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 253,
+    "entity": "stage_chapter",
+    "entityId": "119",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 254,
+    "entity": "stage_chapter",
+    "entityId": "120",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 255,
+    "entity": "stage_chapter",
+    "entityId": "120",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 256,
+    "entity": "stage_chapter",
+    "entityId": "121",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 257,
+    "entity": "stage_chapter",
+    "entityId": "121",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 258,
+    "entity": "stage_chapter",
+    "entityId": "122",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 259,
+    "entity": "stage_chapter",
+    "entityId": "122",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 260,
+    "entity": "stage_chapter",
+    "entityId": "123",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 261,
+    "entity": "stage_chapter",
+    "entityId": "123",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 262,
+    "entity": "stage_chapter",
+    "entityId": "124",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 263,
+    "entity": "stage_chapter",
+    "entityId": "124",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 264,
+    "entity": "stage_chapter",
+    "entityId": "125",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 265,
+    "entity": "stage_chapter",
+    "entityId": "125",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 266,
+    "entity": "stage_chapter",
+    "entityId": "126",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 267,
+    "entity": "stage_chapter",
+    "entityId": "126",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 268,
+    "entity": "stage_chapter",
+    "entityId": "127",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 269,
+    "entity": "stage_chapter",
+    "entityId": "127",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 270,
+    "entity": "stage_chapter",
+    "entityId": "128",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 271,
+    "entity": "stage_chapter",
+    "entityId": "128",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 272,
+    "entity": "stage_chapter",
+    "entityId": "129",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 273,
+    "entity": "stage_chapter",
+    "entityId": "129",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 274,
+    "entity": "stage_chapter",
+    "entityId": "130",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 275,
+    "entity": "stage_chapter",
+    "entityId": "130",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 276,
+    "entity": "stage_chapter",
+    "entityId": "131",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 277,
+    "entity": "stage_chapter",
+    "entityId": "131",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 278,
+    "entity": "stage_chapter",
+    "entityId": "132",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 279,
+    "entity": "stage_chapter",
+    "entityId": "132",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 280,
+    "entity": "stage_chapter",
+    "entityId": "133",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 281,
+    "entity": "stage_chapter",
+    "entityId": "133",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 282,
+    "entity": "stage_chapter",
+    "entityId": "134",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 283,
+    "entity": "stage_chapter",
+    "entityId": "134",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 284,
+    "entity": "stage_chapter",
+    "entityId": "135",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 285,
+    "entity": "stage_chapter",
+    "entityId": "135",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 286,
+    "entity": "stage_chapter",
+    "entityId": "136",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 287,
+    "entity": "stage_chapter",
+    "entityId": "136",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 288,
+    "entity": "stage_chapter",
+    "entityId": "137",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 289,
+    "entity": "stage_chapter",
+    "entityId": "137",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 290,
+    "entity": "stage_chapter",
+    "entityId": "138",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 291,
+    "entity": "stage_chapter",
+    "entityId": "138",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 292,
+    "entity": "stage_chapter",
+    "entityId": "139",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 293,
+    "entity": "stage_chapter",
+    "entityId": "139",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 294,
+    "entity": "stage_chapter",
+    "entityId": "140",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 295,
+    "entity": "stage_chapter",
+    "entityId": "140",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 296,
+    "entity": "stage_chapter",
+    "entityId": "141",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 297,
+    "entity": "stage_chapter",
+    "entityId": "141",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 298,
+    "entity": "stage_chapter",
+    "entityId": "142",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 299,
+    "entity": "stage_chapter",
+    "entityId": "142",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 300,
+    "entity": "stage_chapter",
+    "entityId": "143",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 301,
+    "entity": "stage_chapter",
+    "entityId": "143",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 302,
+    "entity": "stage_chapter",
+    "entityId": "144",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 303,
+    "entity": "stage_chapter",
+    "entityId": "144",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 304,
+    "entity": "stage_chapter",
+    "entityId": "145",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 305,
+    "entity": "stage_chapter",
+    "entityId": "145",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 306,
+    "entity": "stage_chapter",
+    "entityId": "146",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 307,
+    "entity": "stage_chapter",
+    "entityId": "146",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 308,
+    "entity": "stage_chapter",
+    "entityId": "147",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 309,
+    "entity": "stage_chapter",
+    "entityId": "147",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 310,
+    "entity": "stage_chapter",
+    "entityId": "148",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 311,
+    "entity": "stage_chapter",
+    "entityId": "148",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 312,
+    "entity": "stage_chapter",
+    "entityId": "149",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 313,
+    "entity": "stage_chapter",
+    "entityId": "149",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 314,
+    "entity": "stage_chapter",
+    "entityId": "150",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 315,
+    "entity": "stage_chapter",
+    "entityId": "150",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 316,
+    "entity": "stage_chapter",
+    "entityId": "151",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 317,
+    "entity": "stage_chapter",
+    "entityId": "151",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 318,
+    "entity": "stage_chapter",
+    "entityId": "152",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 319,
+    "entity": "stage_chapter",
+    "entityId": "152",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 320,
+    "entity": "stage_chapter",
+    "entityId": "153",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 321,
+    "entity": "stage_chapter",
+    "entityId": "153",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 322,
+    "entity": "stage_chapter",
+    "entityId": "154",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 323,
+    "entity": "stage_chapter",
+    "entityId": "154",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 324,
+    "entity": "stage_chapter",
+    "entityId": "155",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 325,
+    "entity": "stage_chapter",
+    "entityId": "155",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 326,
+    "entity": "stage_chapter",
+    "entityId": "156",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 327,
+    "entity": "stage_chapter",
+    "entityId": "156",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 328,
+    "entity": "stage_chapter",
+    "entityId": "157",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 329,
+    "entity": "stage_chapter",
+    "entityId": "157",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 330,
+    "entity": "stage_chapter",
+    "entityId": "158",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 331,
+    "entity": "stage_chapter",
+    "entityId": "158",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 332,
+    "entity": "stage_chapter",
+    "entityId": "159",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 333,
+    "entity": "stage_chapter",
+    "entityId": "159",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 334,
+    "entity": "stage_chapter",
+    "entityId": "160",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 335,
+    "entity": "stage_chapter",
+    "entityId": "160",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 336,
+    "entity": "stage_chapter",
+    "entityId": "161",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 337,
+    "entity": "stage_chapter",
+    "entityId": "161",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 338,
+    "entity": "stage_chapter",
+    "entityId": "162",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 339,
+    "entity": "stage_chapter",
+    "entityId": "162",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 340,
+    "entity": "stage_chapter",
+    "entityId": "163",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 341,
+    "entity": "stage_chapter",
+    "entityId": "163",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 342,
+    "entity": "stage_chapter",
+    "entityId": "164",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 343,
+    "entity": "stage_chapter",
+    "entityId": "164",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 344,
+    "entity": "stage_chapter",
+    "entityId": "165",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 345,
+    "entity": "stage_chapter",
+    "entityId": "165",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 346,
+    "entity": "stage_chapter",
+    "entityId": "166",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 347,
+    "entity": "stage_chapter",
+    "entityId": "166",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 348,
+    "entity": "stage_chapter",
+    "entityId": "167",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 349,
+    "entity": "stage_chapter",
+    "entityId": "167",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 350,
+    "entity": "stage_chapter",
+    "entityId": "168",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 351,
+    "entity": "stage_chapter",
+    "entityId": "168",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 352,
+    "entity": "stage_chapter",
+    "entityId": "169",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 353,
+    "entity": "stage_chapter",
+    "entityId": "169",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 354,
+    "entity": "stage_chapter",
+    "entityId": "170",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 355,
+    "entity": "stage_chapter",
+    "entityId": "170",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 356,
+    "entity": "stage_chapter",
+    "entityId": "171",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 357,
+    "entity": "stage_chapter",
+    "entityId": "171",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 358,
+    "entity": "stage_chapter",
+    "entityId": "172",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 359,
+    "entity": "stage_chapter",
+    "entityId": "172",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 360,
+    "entity": "stage_chapter",
+    "entityId": "173",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 361,
+    "entity": "stage_chapter",
+    "entityId": "173",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 362,
+    "entity": "stage_chapter",
+    "entityId": "174",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 363,
+    "entity": "stage_chapter",
+    "entityId": "174",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 364,
+    "entity": "stage_chapter",
+    "entityId": "175",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 365,
+    "entity": "stage_chapter",
+    "entityId": "175",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 366,
+    "entity": "stage_chapter",
+    "entityId": "176",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 367,
+    "entity": "stage_chapter",
+    "entityId": "176",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 368,
+    "entity": "stage_chapter",
+    "entityId": "177",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 369,
+    "entity": "stage_chapter",
+    "entityId": "177",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 370,
+    "entity": "stage_chapter",
+    "entityId": "178",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 371,
+    "entity": "stage_chapter",
+    "entityId": "178",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 372,
+    "entity": "stage_chapter",
+    "entityId": "179",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 373,
+    "entity": "stage_chapter",
+    "entityId": "179",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 374,
+    "entity": "stage_chapter",
+    "entityId": "180",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 375,
+    "entity": "stage_chapter",
+    "entityId": "180",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 376,
+    "entity": "stage_chapter",
+    "entityId": "181",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 377,
+    "entity": "stage_chapter",
+    "entityId": "181",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 378,
+    "entity": "stage_chapter",
+    "entityId": "182",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 379,
+    "entity": "stage_chapter",
+    "entityId": "182",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 380,
+    "entity": "stage_chapter",
+    "entityId": "183",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 381,
+    "entity": "stage_chapter",
+    "entityId": "183",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 382,
+    "entity": "stage_chapter",
+    "entityId": "184",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 383,
+    "entity": "stage_chapter",
+    "entityId": "184",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 384,
+    "entity": "stage_chapter",
+    "entityId": "185",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 385,
+    "entity": "stage_chapter",
+    "entityId": "185",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 386,
+    "entity": "stage_chapter",
+    "entityId": "186",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 387,
+    "entity": "stage_chapter",
+    "entityId": "186",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 388,
+    "entity": "stage_chapter",
+    "entityId": "187",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 389,
+    "entity": "stage_chapter",
+    "entityId": "187",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 390,
+    "entity": "stage_chapter",
+    "entityId": "188",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 391,
+    "entity": "stage_chapter",
+    "entityId": "188",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 392,
+    "entity": "stage_chapter",
+    "entityId": "189",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 393,
+    "entity": "stage_chapter",
+    "entityId": "189",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 394,
+    "entity": "stage_chapter",
+    "entityId": "190",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 395,
+    "entity": "stage_chapter",
+    "entityId": "190",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 396,
+    "entity": "stage_chapter",
+    "entityId": "191",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 397,
+    "entity": "stage_chapter",
+    "entityId": "191",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 398,
+    "entity": "stage_chapter",
+    "entityId": "192",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 399,
+    "entity": "stage_chapter",
+    "entityId": "192",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 400,
+    "entity": "stage_chapter",
+    "entityId": "193",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 401,
+    "entity": "stage_chapter",
+    "entityId": "193",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 402,
+    "entity": "stage_chapter",
+    "entityId": "194",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 403,
+    "entity": "stage_chapter",
+    "entityId": "194",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 404,
+    "entity": "stage_chapter",
+    "entityId": "195",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 405,
+    "entity": "stage_chapter",
+    "entityId": "195",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 406,
+    "entity": "stage_chapter",
+    "entityId": "196",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 407,
+    "entity": "stage_chapter",
+    "entityId": "196",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 408,
+    "entity": "stage_chapter",
+    "entityId": "197",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 409,
+    "entity": "stage_chapter",
+    "entityId": "197",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 410,
+    "entity": "stage_chapter",
+    "entityId": "198",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 411,
+    "entity": "stage_chapter",
+    "entityId": "198",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 412,
+    "entity": "stage_chapter",
+    "entityId": "199",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 413,
+    "entity": "stage_chapter",
+    "entityId": "199",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 414,
+    "entity": "stage_chapter",
+    "entityId": "200",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 415,
+    "entity": "stage_chapter",
+    "entityId": "200",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 416,
+    "entity": "stage_chapter",
+    "entityId": "201",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 417,
+    "entity": "stage_chapter",
+    "entityId": "201",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 418,
+    "entity": "stage_chapter",
+    "entityId": "202",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 419,
+    "entity": "stage_chapter",
+    "entityId": "202",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 420,
+    "entity": "stage_chapter",
+    "entityId": "203",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 421,
+    "entity": "stage_chapter",
+    "entityId": "203",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 422,
+    "entity": "stage_chapter",
+    "entityId": "204",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 423,
+    "entity": "stage_chapter",
+    "entityId": "204",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 424,
+    "entity": "stage_chapter",
+    "entityId": "205",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 425,
+    "entity": "stage_chapter",
+    "entityId": "205",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 426,
+    "entity": "stage_chapter",
+    "entityId": "206",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 427,
+    "entity": "stage_chapter",
+    "entityId": "206",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 428,
+    "entity": "stage_chapter",
+    "entityId": "207",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 429,
+    "entity": "stage_chapter",
+    "entityId": "207",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 430,
+    "entity": "stage_chapter",
+    "entityId": "208",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 431,
+    "entity": "stage_chapter",
+    "entityId": "208",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 432,
+    "entity": "stage_chapter",
+    "entityId": "209",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 433,
+    "entity": "stage_chapter",
+    "entityId": "209",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 434,
+    "entity": "stage_chapter",
+    "entityId": "210",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 435,
+    "entity": "stage_chapter",
+    "entityId": "210",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 436,
+    "entity": "stage_chapter",
+    "entityId": "211",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 437,
+    "entity": "stage_chapter",
+    "entityId": "211",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 438,
+    "entity": "stage_chapter",
+    "entityId": "212",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 439,
+    "entity": "stage_chapter",
+    "entityId": "212",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 440,
+    "entity": "stage_chapter",
+    "entityId": "213",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 441,
+    "entity": "stage_chapter",
+    "entityId": "213",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 442,
+    "entity": "stage_chapter",
+    "entityId": "214",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 443,
+    "entity": "stage_chapter",
+    "entityId": "214",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 444,
+    "entity": "stage_chapter",
+    "entityId": "215",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 445,
+    "entity": "stage_chapter",
+    "entityId": "215",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 446,
+    "entity": "stage_chapter",
+    "entityId": "216",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 447,
+    "entity": "stage_chapter",
+    "entityId": "216",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 448,
+    "entity": "stage_chapter",
+    "entityId": "217",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 449,
+    "entity": "stage_chapter",
+    "entityId": "217",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 450,
+    "entity": "stage_chapter",
+    "entityId": "218",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 451,
+    "entity": "stage_chapter",
+    "entityId": "218",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 452,
+    "entity": "stage_chapter",
+    "entityId": "219",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 453,
+    "entity": "stage_chapter",
+    "entityId": "219",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 454,
+    "entity": "stage_chapter",
+    "entityId": "220",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 455,
+    "entity": "stage_chapter",
+    "entityId": "220",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 456,
+    "entity": "stage_chapter",
+    "entityId": "221",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 457,
+    "entity": "stage_chapter",
+    "entityId": "221",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 458,
+    "entity": "stage_chapter",
+    "entityId": "222",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 459,
+    "entity": "stage_chapter",
+    "entityId": "222",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 460,
+    "entity": "stage_chapter",
+    "entityId": "223",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 461,
+    "entity": "stage_chapter",
+    "entityId": "223",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 462,
+    "entity": "stage_chapter",
+    "entityId": "224",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 463,
+    "entity": "stage_chapter",
+    "entityId": "224",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 464,
+    "entity": "stage_chapter",
+    "entityId": "225",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 465,
+    "entity": "stage_chapter",
+    "entityId": "225",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 466,
+    "entity": "stage_chapter",
+    "entityId": "226",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 467,
+    "entity": "stage_chapter",
+    "entityId": "226",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 468,
+    "entity": "stage_chapter",
+    "entityId": "227",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 469,
+    "entity": "stage_chapter",
+    "entityId": "227",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 470,
+    "entity": "stage_chapter",
+    "entityId": "228",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 471,
+    "entity": "stage_chapter",
+    "entityId": "228",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 472,
+    "entity": "stage_chapter",
+    "entityId": "229",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 473,
+    "entity": "stage_chapter",
+    "entityId": "229",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 474,
+    "entity": "stage_chapter",
+    "entityId": "230",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 475,
+    "entity": "stage_chapter",
+    "entityId": "230",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 476,
+    "entity": "stage_chapter",
+    "entityId": "231",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 477,
+    "entity": "stage_chapter",
+    "entityId": "231",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 478,
+    "entity": "stage_chapter",
+    "entityId": "232",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 479,
+    "entity": "stage_chapter",
+    "entityId": "232",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 480,
+    "entity": "stage_chapter",
+    "entityId": "233",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 481,
+    "entity": "stage_chapter",
+    "entityId": "233",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 482,
+    "entity": "stage_chapter",
+    "entityId": "234",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 483,
+    "entity": "stage_chapter",
+    "entityId": "234",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 484,
+    "entity": "stage_chapter",
+    "entityId": "235",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 485,
+    "entity": "stage_chapter",
+    "entityId": "235",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 486,
+    "entity": "stage_chapter",
+    "entityId": "236",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 487,
+    "entity": "stage_chapter",
+    "entityId": "236",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 488,
+    "entity": "stage_chapter",
+    "entityId": "237",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 489,
+    "entity": "stage_chapter",
+    "entityId": "237",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 490,
+    "entity": "stage_chapter",
+    "entityId": "238",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 491,
+    "entity": "stage_chapter",
+    "entityId": "238",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 492,
+    "entity": "stage_chapter",
+    "entityId": "239",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 493,
+    "entity": "stage_chapter",
+    "entityId": "239",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 494,
+    "entity": "stage_chapter",
+    "entityId": "240",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 495,
+    "entity": "stage_chapter",
+    "entityId": "240",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 496,
+    "entity": "stage_chapter",
+    "entityId": "241",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 497,
+    "entity": "stage_chapter",
+    "entityId": "241",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 498,
+    "entity": "stage_chapter",
+    "entityId": "242",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 499,
+    "entity": "stage_chapter",
+    "entityId": "242",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 500,
+    "entity": "stage_chapter",
+    "entityId": "243",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 501,
+    "entity": "stage_chapter",
+    "entityId": "243",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 502,
+    "entity": "stage_chapter",
+    "entityId": "244",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 503,
+    "entity": "stage_chapter",
+    "entityId": "244",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 504,
+    "entity": "stage_chapter",
+    "entityId": "245",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 505,
+    "entity": "stage_chapter",
+    "entityId": "245",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 506,
+    "entity": "stage_chapter",
+    "entityId": "246",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 507,
+    "entity": "stage_chapter",
+    "entityId": "246",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 508,
+    "entity": "stage_chapter",
+    "entityId": "247",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 509,
+    "entity": "stage_chapter",
+    "entityId": "247",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 510,
+    "entity": "stage_chapter",
+    "entityId": "248",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 511,
+    "entity": "stage_chapter",
+    "entityId": "248",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 512,
+    "entity": "stage_chapter",
+    "entityId": "249",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 513,
+    "entity": "stage_chapter",
+    "entityId": "249",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 514,
+    "entity": "stage_chapter",
+    "entityId": "250",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 515,
+    "entity": "stage_chapter",
+    "entityId": "250",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 516,
+    "entity": "stage_chapter",
+    "entityId": "251",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 517,
+    "entity": "stage_chapter",
+    "entityId": "251",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 518,
+    "entity": "stage_chapter",
+    "entityId": "252",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 519,
+    "entity": "stage_chapter",
+    "entityId": "252",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 520,
+    "entity": "stage_chapter",
+    "entityId": "253",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 521,
+    "entity": "stage_chapter",
+    "entityId": "253",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 522,
+    "entity": "stage_chapter",
+    "entityId": "254",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 523,
+    "entity": "stage_chapter",
+    "entityId": "254",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 524,
+    "entity": "stage_chapter",
+    "entityId": "255",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 525,
+    "entity": "stage_chapter",
+    "entityId": "255",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 526,
+    "entity": "stage_chapter",
+    "entityId": "256",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 527,
+    "entity": "stage_chapter",
+    "entityId": "256",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 528,
+    "entity": "stage_chapter",
+    "entityId": "257",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 529,
+    "entity": "stage_chapter",
+    "entityId": "257",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 530,
+    "entity": "stage_chapter",
+    "entityId": "258",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 531,
+    "entity": "stage_chapter",
+    "entityId": "258",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 532,
+    "entity": "stage_chapter",
+    "entityId": "259",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 533,
+    "entity": "stage_chapter",
+    "entityId": "259",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 534,
+    "entity": "stage_chapter",
+    "entityId": "260",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 535,
+    "entity": "stage_chapter",
+    "entityId": "260",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 536,
+    "entity": "stage_chapter",
+    "entityId": "261",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 537,
+    "entity": "stage_chapter",
+    "entityId": "261",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 538,
+    "entity": "stage_chapter",
+    "entityId": "262",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 539,
+    "entity": "stage_chapter",
+    "entityId": "262",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 540,
+    "entity": "stage_chapter",
+    "entityId": "263",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 541,
+    "entity": "stage_chapter",
+    "entityId": "263",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 542,
+    "entity": "stage_chapter",
+    "entityId": "264",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 543,
+    "entity": "stage_chapter",
+    "entityId": "264",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 544,
+    "entity": "stage_chapter",
+    "entityId": "265",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 545,
+    "entity": "stage_chapter",
+    "entityId": "265",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 546,
+    "entity": "stage_chapter",
+    "entityId": "266",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 547,
+    "entity": "stage_chapter",
+    "entityId": "266",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 548,
+    "entity": "stage_chapter",
+    "entityId": "267",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 549,
+    "entity": "stage_chapter",
+    "entityId": "267",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 550,
+    "entity": "stage_chapter",
+    "entityId": "268",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 551,
+    "entity": "stage_chapter",
+    "entityId": "268",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 552,
+    "entity": "stage_chapter",
+    "entityId": "269",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 553,
+    "entity": "stage_chapter",
+    "entityId": "269",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 554,
+    "entity": "stage_chapter",
+    "entityId": "270",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 555,
+    "entity": "stage_chapter",
+    "entityId": "270",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 556,
+    "entity": "stage_chapter",
+    "entityId": "271",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 557,
+    "entity": "stage_chapter",
+    "entityId": "271",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 558,
+    "entity": "stage_chapter",
+    "entityId": "272",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 559,
+    "entity": "stage_chapter",
+    "entityId": "272",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 560,
+    "entity": "stage_chapter",
+    "entityId": "273",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 561,
+    "entity": "stage_chapter",
+    "entityId": "273",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 562,
+    "entity": "stage_chapter",
+    "entityId": "274",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 563,
+    "entity": "stage_chapter",
+    "entityId": "274",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 564,
+    "entity": "stage_chapter",
+    "entityId": "275",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 565,
+    "entity": "stage_chapter",
+    "entityId": "275",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 566,
+    "entity": "stage_chapter",
+    "entityId": "276",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 567,
+    "entity": "stage_chapter",
+    "entityId": "276",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 568,
+    "entity": "stage_chapter",
+    "entityId": "277",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 569,
+    "entity": "stage_chapter",
+    "entityId": "277",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 570,
+    "entity": "stage_chapter",
+    "entityId": "278",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 571,
+    "entity": "stage_chapter",
+    "entityId": "278",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 572,
+    "entity": "stage_chapter",
+    "entityId": "279",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 573,
+    "entity": "stage_chapter",
+    "entityId": "279",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 574,
+    "entity": "stage_chapter",
+    "entityId": "280",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 575,
+    "entity": "stage_chapter",
+    "entityId": "280",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 576,
+    "entity": "stage_chapter",
+    "entityId": "281",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 577,
+    "entity": "stage_chapter",
+    "entityId": "281",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 578,
+    "entity": "stage_chapter",
+    "entityId": "282",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 579,
+    "entity": "stage_chapter",
+    "entityId": "282",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 580,
+    "entity": "stage_chapter",
+    "entityId": "283",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 581,
+    "entity": "stage_chapter",
+    "entityId": "283",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 582,
+    "entity": "stage_chapter",
+    "entityId": "284",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 583,
+    "entity": "stage_chapter",
+    "entityId": "284",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 584,
+    "entity": "stage_chapter",
+    "entityId": "285",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 585,
+    "entity": "stage_chapter",
+    "entityId": "285",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 586,
+    "entity": "stage_chapter",
+    "entityId": "286",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 587,
+    "entity": "stage_chapter",
+    "entityId": "286",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 588,
+    "entity": "stage_chapter",
+    "entityId": "287",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 589,
+    "entity": "stage_chapter",
+    "entityId": "287",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 590,
+    "entity": "stage_chapter",
+    "entityId": "288",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 591,
+    "entity": "stage_chapter",
+    "entityId": "288",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 592,
+    "entity": "stage_chapter",
+    "entityId": "289",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 593,
+    "entity": "stage_chapter",
+    "entityId": "289",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 594,
+    "entity": "stage_chapter",
+    "entityId": "290",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 595,
+    "entity": "stage_chapter",
+    "entityId": "290",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 596,
+    "entity": "stage_chapter",
+    "entityId": "291",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 597,
+    "entity": "stage_chapter",
+    "entityId": "291",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 598,
+    "entity": "stage_chapter",
+    "entityId": "292",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 599,
+    "entity": "stage_chapter",
+    "entityId": "292",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 600,
+    "entity": "stage_chapter",
+    "entityId": "293",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 601,
+    "entity": "stage_chapter",
+    "entityId": "293",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 602,
+    "entity": "stage_chapter",
+    "entityId": "294",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 603,
+    "entity": "stage_chapter",
+    "entityId": "294",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 604,
+    "entity": "stage_chapter",
+    "entityId": "295",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 605,
+    "entity": "stage_chapter",
+    "entityId": "295",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 606,
+    "entity": "stage_chapter",
+    "entityId": "296",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 607,
+    "entity": "stage_chapter",
+    "entityId": "296",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 608,
+    "entity": "stage_chapter",
+    "entityId": "297",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 609,
+    "entity": "stage_chapter",
+    "entityId": "297",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 610,
+    "entity": "stage_chapter",
+    "entityId": "298",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 611,
+    "entity": "stage_chapter",
+    "entityId": "298",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 612,
+    "entity": "stage_chapter",
+    "entityId": "299",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 613,
+    "entity": "stage_chapter",
+    "entityId": "299",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 614,
+    "entity": "stage_chapter",
+    "entityId": "300",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 615,
+    "entity": "stage_chapter",
+    "entityId": "300",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 616,
+    "entity": "stage_chapter",
+    "entityId": "301",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 617,
+    "entity": "stage_chapter",
+    "entityId": "301",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 618,
+    "entity": "stage_chapter",
+    "entityId": "302",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 619,
+    "entity": "stage_chapter",
+    "entityId": "302",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 620,
+    "entity": "stage_chapter",
+    "entityId": "303",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 621,
+    "entity": "stage_chapter",
+    "entityId": "303",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 622,
+    "entity": "stage_chapter",
+    "entityId": "304",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 623,
+    "entity": "stage_chapter",
+    "entityId": "304",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 624,
+    "entity": "stage_chapter",
+    "entityId": "305",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 625,
+    "entity": "stage_chapter",
+    "entityId": "305",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 626,
+    "entity": "stage_chapter",
+    "entityId": "306",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 627,
+    "entity": "stage_chapter",
+    "entityId": "306",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 628,
+    "entity": "stage_chapter",
+    "entityId": "307",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 629,
+    "entity": "stage_chapter",
+    "entityId": "307",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 630,
+    "entity": "stage_chapter",
+    "entityId": "308",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 631,
+    "entity": "stage_chapter",
+    "entityId": "308",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 632,
+    "entity": "stage_chapter",
+    "entityId": "309",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 633,
+    "entity": "stage_chapter",
+    "entityId": "309",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 634,
+    "entity": "stage_chapter",
+    "entityId": "310",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 635,
+    "entity": "stage_chapter",
+    "entityId": "310",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 636,
+    "entity": "stage_chapter",
+    "entityId": "311",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 637,
+    "entity": "stage_chapter",
+    "entityId": "311",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 638,
+    "entity": "stage_chapter",
+    "entityId": "312",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 639,
+    "entity": "stage_chapter",
+    "entityId": "312",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 640,
+    "entity": "stage_chapter",
+    "entityId": "313",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 641,
+    "entity": "stage_chapter",
+    "entityId": "313",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 642,
+    "entity": "stage_chapter",
+    "entityId": "314",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 643,
+    "entity": "stage_chapter",
+    "entityId": "314",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 644,
+    "entity": "stage_chapter",
+    "entityId": "315",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 645,
+    "entity": "stage_chapter",
+    "entityId": "315",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 646,
+    "entity": "stage_chapter",
+    "entityId": "316",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 647,
+    "entity": "stage_chapter",
+    "entityId": "316",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 648,
+    "entity": "stage_chapter",
+    "entityId": "317",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 649,
+    "entity": "stage_chapter",
+    "entityId": "317",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 650,
+    "entity": "stage_chapter",
+    "entityId": "318",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 651,
+    "entity": "stage_chapter",
+    "entityId": "318",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 652,
+    "entity": "stage_chapter",
+    "entityId": "319",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 653,
+    "entity": "stage_chapter",
+    "entityId": "319",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 654,
+    "entity": "stage_chapter",
+    "entityId": "320",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 655,
+    "entity": "stage_chapter",
+    "entityId": "320",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 656,
+    "entity": "stage_chapter",
+    "entityId": "321",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 657,
+    "entity": "stage_chapter",
+    "entityId": "321",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 658,
+    "entity": "stage_chapter",
+    "entityId": "322",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 659,
+    "entity": "stage_chapter",
+    "entityId": "322",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 660,
+    "entity": "stage_chapter",
+    "entityId": "323",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 661,
+    "entity": "stage_chapter",
+    "entityId": "323",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 662,
+    "entity": "stage_chapter",
+    "entityId": "324",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 663,
+    "entity": "stage_chapter",
+    "entityId": "324",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 664,
+    "entity": "stage_chapter",
+    "entityId": "325",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 665,
+    "entity": "stage_chapter",
+    "entityId": "325",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 666,
+    "entity": "stage_chapter",
+    "entityId": "326",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 667,
+    "entity": "stage_chapter",
+    "entityId": "326",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 668,
+    "entity": "stage_chapter",
+    "entityId": "327",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 669,
+    "entity": "stage_chapter",
+    "entityId": "327",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 670,
+    "entity": "stage_chapter",
+    "entityId": "328",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 671,
+    "entity": "stage_chapter",
+    "entityId": "328",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stage-boss-index"
+   },
+   {
+    "id": 672,
+    "entity": "rift_level",
+    "entityId": "1",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 673,
+    "entity": "rift_level",
+    "entityId": "2",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 674,
+    "entity": "rift_level",
+    "entityId": "3",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 675,
+    "entity": "rift_level",
+    "entityId": "4",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 676,
+    "entity": "rift_level",
+    "entityId": "5",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 677,
+    "entity": "rift_level",
+    "entityId": "6",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 678,
+    "entity": "rift_level",
+    "entityId": "7",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 679,
+    "entity": "rift_level",
+    "entityId": "8",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 680,
+    "entity": "rift_level",
+    "entityId": "9",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 681,
+    "entity": "rift_level",
+    "entityId": "10",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 682,
+    "entity": "rift_level",
+    "entityId": "11",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 683,
+    "entity": "rift_level",
+    "entityId": "12",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 684,
+    "entity": "rift_level",
+    "entityId": "13",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 685,
+    "entity": "rift_level",
+    "entityId": "14",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 686,
+    "entity": "rift_level",
+    "entityId": "15",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 687,
+    "entity": "rift_level",
+    "entityId": "16",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 688,
+    "entity": "rift_level",
+    "entityId": "17",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 689,
+    "entity": "rift_level",
+    "entityId": "18",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 690,
+    "entity": "rift_level",
+    "entityId": "19",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 691,
+    "entity": "rift_level",
+    "entityId": "20",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 692,
+    "entity": "rift_level",
+    "entityId": "21",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 693,
+    "entity": "rift_level",
+    "entityId": "22",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 694,
+    "entity": "rift_level",
+    "entityId": "23",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 695,
+    "entity": "rift_level",
+    "entityId": "24",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 696,
+    "entity": "rift_level",
+    "entityId": "25",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 697,
+    "entity": "rift_level",
+    "entityId": "26",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 698,
+    "entity": "rift_level",
+    "entityId": "27",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 699,
+    "entity": "rift_level",
+    "entityId": "28",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 700,
+    "entity": "rift_level",
+    "entityId": "29",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 701,
+    "entity": "rift_level",
+    "entityId": "30",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 702,
+    "entity": "rift_level",
+    "entityId": "31",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 703,
+    "entity": "rift_level",
+    "entityId": "32",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 704,
+    "entity": "rift_level",
+    "entityId": "33",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 705,
+    "entity": "rift_level",
+    "entityId": "34",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 706,
+    "entity": "rift_level",
+    "entityId": "35",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 707,
+    "entity": "rift_level",
+    "entityId": "36",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 708,
+    "entity": "rift_level",
+    "entityId": "37",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 709,
+    "entity": "rift_level",
+    "entityId": "38",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 710,
+    "entity": "rift_level",
+    "entityId": "39",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 711,
+    "entity": "rift_level",
+    "entityId": "40",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 712,
+    "entity": "rift_level",
+    "entityId": "41",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 713,
+    "entity": "rift_level",
+    "entityId": "42",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 714,
+    "entity": "rift_level",
+    "entityId": "43",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 715,
+    "entity": "rift_level",
+    "entityId": "44",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 716,
+    "entity": "rift_level",
+    "entityId": "45",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 717,
+    "entity": "rift_level",
+    "entityId": "46",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 718,
+    "entity": "rift_level",
+    "entityId": "47",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 719,
+    "entity": "rift_level",
+    "entityId": "48",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 720,
+    "entity": "rift_level",
+    "entityId": "49",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 721,
+    "entity": "rift_level",
+    "entityId": "50",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 722,
+    "entity": "rift_level",
+    "entityId": "51",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 723,
+    "entity": "rift_level",
+    "entityId": "52",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 724,
+    "entity": "rift_level",
+    "entityId": "53",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 725,
+    "entity": "rift_level",
+    "entityId": "54",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 726,
+    "entity": "rift_level",
+    "entityId": "55",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 727,
+    "entity": "rift_level",
+    "entityId": "56",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 728,
+    "entity": "rift_level",
+    "entityId": "57",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 729,
+    "entity": "rift_level",
+    "entityId": "58",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 730,
+    "entity": "rift_level",
+    "entityId": "59",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 731,
+    "entity": "rift_level",
+    "entityId": "60",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 732,
+    "entity": "rift_level",
+    "entityId": "61",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 733,
+    "entity": "rift_level",
+    "entityId": "62",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 734,
+    "entity": "rift_level",
+    "entityId": "63",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 735,
+    "entity": "rift_level",
+    "entityId": "64",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 736,
+    "entity": "rift_level",
+    "entityId": "65",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 737,
+    "entity": "rift_level",
+    "entityId": "66",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 738,
+    "entity": "rift_level",
+    "entityId": "67",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 739,
+    "entity": "rift_level",
+    "entityId": "68",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 740,
+    "entity": "rift_level",
+    "entityId": "69",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 741,
+    "entity": "rift_level",
+    "entityId": "70",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 742,
+    "entity": "rift_level",
+    "entityId": "71",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 743,
+    "entity": "rift_level",
+    "entityId": "72",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 744,
+    "entity": "rift_level",
+    "entityId": "73",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 745,
+    "entity": "rift_level",
+    "entityId": "74",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 746,
+    "entity": "rift_level",
+    "entityId": "75",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 747,
+    "entity": "rift_level",
+    "entityId": "76",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 748,
+    "entity": "rift_level",
+    "entityId": "77",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 749,
+    "entity": "rift_level",
+    "entityId": "78",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 750,
+    "entity": "rift_level",
+    "entityId": "79",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 751,
+    "entity": "rift_level",
+    "entityId": "80",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 752,
+    "entity": "rift_level",
+    "entityId": "81",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 753,
+    "entity": "rift_level",
+    "entityId": "82",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 754,
+    "entity": "rift_level",
+    "entityId": "83",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 755,
+    "entity": "rift_level",
+    "entityId": "84",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 756,
+    "entity": "rift_level",
+    "entityId": "85",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 757,
+    "entity": "rift_level",
+    "entityId": "86",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 758,
+    "entity": "rift_level",
+    "entityId": "87",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 759,
+    "entity": "rift_level",
+    "entityId": "88",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 760,
+    "entity": "rift_level",
+    "entityId": "89",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 761,
+    "entity": "rift_level",
+    "entityId": "90",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 762,
+    "entity": "rift_level",
+    "entityId": "91",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 763,
+    "entity": "rift_level",
+    "entityId": "92",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 764,
+    "entity": "rift_level",
+    "entityId": "93",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 765,
+    "entity": "rift_level",
+    "entityId": "94",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 766,
+    "entity": "rift_level",
+    "entityId": "95",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 767,
+    "entity": "rift_level",
+    "entityId": "96",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 768,
+    "entity": "rift_level",
+    "entityId": "97",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 769,
+    "entity": "rift_level",
+    "entityId": "98",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 770,
+    "entity": "rift_level",
+    "entityId": "99",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 771,
+    "entity": "rift_level",
+    "entityId": "100",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 772,
+    "entity": "rift_level",
+    "entityId": "101",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 773,
+    "entity": "rift_level",
+    "entityId": "102",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 774,
+    "entity": "rift_level",
+    "entityId": "103",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 775,
+    "entity": "rift_level",
+    "entityId": "104",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 776,
+    "entity": "rift_level",
+    "entityId": "105",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 777,
+    "entity": "rift_level",
+    "entityId": "106",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 778,
+    "entity": "rift_level",
+    "entityId": "107",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 779,
+    "entity": "rift_level",
+    "entityId": "108",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 780,
+    "entity": "rift_level",
+    "entityId": "109",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 781,
+    "entity": "rift_level",
+    "entityId": "110",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 782,
+    "entity": "rift_level",
+    "entityId": "111",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 783,
+    "entity": "rift_level",
+    "entityId": "112",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 784,
+    "entity": "rift_level",
+    "entityId": "113",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 785,
+    "entity": "rift_level",
+    "entityId": "114",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 786,
+    "entity": "rift_level",
+    "entityId": "115",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 787,
+    "entity": "rift_level",
+    "entityId": "116",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 788,
+    "entity": "rift_level",
+    "entityId": "117",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 789,
+    "entity": "rift_level",
+    "entityId": "118",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 790,
+    "entity": "rift_level",
+    "entityId": "119",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 791,
+    "entity": "rift_level",
+    "entityId": "120",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 792,
+    "entity": "rift_level",
+    "entityId": "121",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 793,
+    "entity": "rift_level",
+    "entityId": "122",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 794,
+    "entity": "rift_level",
+    "entityId": "123",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 795,
+    "entity": "rift_level",
+    "entityId": "124",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 796,
+    "entity": "rift_level",
+    "entityId": "125",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 797,
+    "entity": "rift_level",
+    "entityId": "126",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 798,
+    "entity": "rift_level",
+    "entityId": "127",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 799,
+    "entity": "rift_level",
+    "entityId": "128",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 800,
+    "entity": "rift_level",
+    "entityId": "129",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 801,
+    "entity": "rift_level",
+    "entityId": "130",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 802,
+    "entity": "rift_level",
+    "entityId": "131",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 803,
+    "entity": "rift_level",
+    "entityId": "132",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 804,
+    "entity": "rift_level",
+    "entityId": "133",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 805,
+    "entity": "rift_level",
+    "entityId": "134",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 806,
+    "entity": "rift_level",
+    "entityId": "135",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 807,
+    "entity": "rift_level",
+    "entityId": "136",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 808,
+    "entity": "rift_level",
+    "entityId": "137",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 809,
+    "entity": "rift_level",
+    "entityId": "138",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 810,
+    "entity": "rift_level",
+    "entityId": "139",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 811,
+    "entity": "rift_level",
+    "entityId": "140",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 812,
+    "entity": "rift_level",
+    "entityId": "141",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 813,
+    "entity": "rift_level",
+    "entityId": "142",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 814,
+    "entity": "rift_level",
+    "entityId": "143",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 815,
+    "entity": "rift_level",
+    "entityId": "144",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 816,
+    "entity": "rift_level",
+    "entityId": "145",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 817,
+    "entity": "rift_level",
+    "entityId": "146",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 818,
+    "entity": "rift_level",
+    "entityId": "147",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 819,
+    "entity": "rift_level",
+    "entityId": "148",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 820,
+    "entity": "rift_level",
+    "entityId": "149",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 821,
+    "entity": "rift_level",
+    "entityId": "150",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 822,
+    "entity": "rift_level",
+    "entityId": "151",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 823,
+    "entity": "rift_level",
+    "entityId": "152",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 824,
+    "entity": "rift_level",
+    "entityId": "153",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 825,
+    "entity": "rift_level",
+    "entityId": "154",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 826,
+    "entity": "rift_level",
+    "entityId": "155",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 827,
+    "entity": "rift_level",
+    "entityId": "156",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 828,
+    "entity": "rift_level",
+    "entityId": "157",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 829,
+    "entity": "rift_level",
+    "entityId": "158",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 830,
+    "entity": "rift_level",
+    "entityId": "159",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 831,
+    "entity": "rift_level",
+    "entityId": "160",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 832,
+    "entity": "rift_level",
+    "entityId": "161",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 833,
+    "entity": "rift_level",
+    "entityId": "162",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 834,
+    "entity": "rift_level",
+    "entityId": "163",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 835,
+    "entity": "rift_level",
+    "entityId": "164",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 836,
+    "entity": "rift_level",
+    "entityId": "165",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 837,
+    "entity": "rift_level",
+    "entityId": "166",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 838,
+    "entity": "rift_level",
+    "entityId": "167",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 839,
+    "entity": "rift_level",
+    "entityId": "168",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 840,
+    "entity": "rift_level",
+    "entityId": "169",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 841,
+    "entity": "rift_level",
+    "entityId": "170",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 842,
+    "entity": "rift_level",
+    "entityId": "171",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 843,
+    "entity": "rift_level",
+    "entityId": "172",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 844,
+    "entity": "rift_level",
+    "entityId": "173",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 845,
+    "entity": "rift_level",
+    "entityId": "174",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 846,
+    "entity": "rift_level",
+    "entityId": "175",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 847,
+    "entity": "rift_level",
+    "entityId": "176",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 848,
+    "entity": "rift_level",
+    "entityId": "177",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 849,
+    "entity": "rift_level",
+    "entityId": "178",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 850,
+    "entity": "rift_level",
+    "entityId": "179",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 851,
+    "entity": "rift_level",
+    "entityId": "180",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 852,
+    "entity": "rift_level",
+    "entityId": "181",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 853,
+    "entity": "rift_level",
+    "entityId": "182",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 854,
+    "entity": "rift_level",
+    "entityId": "183",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 855,
+    "entity": "rift_level",
+    "entityId": "184",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 856,
+    "entity": "rift_level",
+    "entityId": "185",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 857,
+    "entity": "rift_level",
+    "entityId": "186",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 858,
+    "entity": "rift_level",
+    "entityId": "187",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 859,
+    "entity": "rift_level",
+    "entityId": "188",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 860,
+    "entity": "rift_level",
+    "entityId": "189",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 861,
+    "entity": "rift_level",
+    "entityId": "190",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 862,
+    "entity": "rift_level",
+    "entityId": "191",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 863,
+    "entity": "rift_level",
+    "entityId": "192",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 864,
+    "entity": "rift_level",
+    "entityId": "193",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 865,
+    "entity": "rift_level",
+    "entityId": "194",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 866,
+    "entity": "rift_level",
+    "entityId": "195",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 867,
+    "entity": "rift_level",
+    "entityId": "196",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 868,
+    "entity": "rift_level",
+    "entityId": "197",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 869,
+    "entity": "rift_level",
+    "entityId": "198",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 870,
+    "entity": "rift_level",
+    "entityId": "199",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 871,
+    "entity": "rift_level",
+    "entityId": "200",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 872,
+    "entity": "rift_season",
+    "entityId": "1",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 873,
+    "entity": "rift_season",
+    "entityId": "2",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 874,
+    "entity": "rift_season",
+    "entityId": "3",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 875,
+    "entity": "rift_season",
+    "entityId": "4",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 876,
+    "entity": "rift_season",
+    "entityId": "5",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 877,
+    "entity": "rift_season",
+    "entityId": "6",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 878,
+    "entity": "rift_season",
+    "entityId": "7",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 879,
+    "entity": "rift_season",
+    "entityId": "8",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 880,
+    "entity": "rift_season",
+    "entityId": "9",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 881,
+    "entity": "rift_season",
+    "entityId": "10",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 882,
+    "entity": "rift_season",
+    "entityId": "11",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 883,
+    "entity": "rift_season",
+    "entityId": "12",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 884,
+    "entity": "rift_season",
+    "entityId": "13",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 885,
+    "entity": "rift_season",
+    "entityId": "14",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 886,
+    "entity": "rift_season",
+    "entityId": "15",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 887,
+    "entity": "rift_season",
+    "entityId": "16",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 888,
+    "entity": "rift_season",
+    "entityId": "17",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 889,
+    "entity": "rift_season",
+    "entityId": "18",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 890,
+    "entity": "rift_season",
+    "entityId": "19",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 891,
+    "entity": "rift_season",
+    "entityId": "20",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 892,
+    "entity": "rift_season",
+    "entityId": "21",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 893,
+    "entity": "rift_season",
+    "entityId": "22",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 894,
+    "entity": "rift_season",
+    "entityId": "23",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 895,
+    "entity": "rift_season",
+    "entityId": "24",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 896,
+    "entity": "rift_season",
+    "entityId": "25",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 897,
+    "entity": "rift_season",
+    "entityId": "26",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 898,
+    "entity": "rift_season",
+    "entityId": "27",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 899,
+    "entity": "rift_season",
+    "entityId": "28",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 900,
+    "entity": "rift_season",
+    "entityId": "29",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 901,
+    "entity": "rift_season",
+    "entityId": "30",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 902,
+    "entity": "rift_season",
+    "entityId": "31",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 903,
+    "entity": "rift_season",
+    "entityId": "32",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 904,
+    "entity": "rift_season",
+    "entityId": "33",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 905,
+    "entity": "rift_season",
+    "entityId": "34",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 906,
+    "entity": "rift_season",
+    "entityId": "35",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 907,
+    "entity": "rift_season",
+    "entityId": "36",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 908,
+    "entity": "rift_season",
+    "entityId": "37",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 909,
+    "entity": "rift_season",
+    "entityId": "38",
+    "recordSlug": "003-stage-pushing-meta",
+    "sourceId": "web:crumblehub-stages"
+   }
   ]
  }
 }

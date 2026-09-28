@@ -1,7 +1,9 @@
 import { ImportError } from "../errors";
-import type { TableKey } from "../registry";
+import type { ContentKey, TableKey } from "../registry";
 import { TABLE_KEYS, recordColumnOf, specOf } from "../registry";
 import type { Repos, Store } from "../repos";
+import type { FactRef } from "../repos/fact-claims";
+import type { TableRepo } from "../repos/table-repo";
 import type { RecordPlan } from "./read-record";
 
 /** Rows an import inserted, per registered table, keyed by the table's registry name. */
@@ -19,22 +21,50 @@ export interface WriteResult {
 const OWNED_KEYS = TABLE_KEYS.filter((key) => recordColumnOf(key) !== undefined);
 
 /**
+ * Settles game facts after their claims changed: a fact no record claims
+ * any more is deleted with its citations; a claimed one is cited to every
+ * source its claims cite. A fact that no longer exists is skipped.
+ *
+ * @param repos - the write's repos
+ * @param facts - the facts whose claims changed
+ */
+function settleFacts(repos: Repos, facts: readonly FactRef[]): void {
+  for (const fact of facts) {
+    const key = TABLE_KEYS.find((k) => specOf(k).entity === fact.entity) as ContentKey;
+    const repo = repos[key] as TableRepo<unknown, never>;
+    const id = Number(fact.entityId);
+    if (!repo.get(id)) continue;
+    const sources = repos.factClaims.sourcesOf(fact);
+    if (sources.length > 0) {
+      repos.citations.replace(fact.entity, fact.entityId, sources);
+      continue;
+    }
+    repos.citations.removeAll(fact.entity, fact.entityId);
+    repo.remove(id);
+  }
+}
+
+/**
  * Deletes the rows record `slug` owns, children before parents, with the
  * citations of every cited row among them, then restarts every table's id
  * counter past its highest id left. Child rows (deck cookies, rune build
  * decks) go with their parents. A shared row that another record's rows
  * still reference, such as a source they cite, stays, still owned by
- * `slug`.
+ * `slug`. The record's claims to game facts go too: a fact no other record
+ * claims is deleted, and one another record claims keeps only that
+ * record's citations.
  *
  * @param repos - the write's repos
  * @param slug - the record's slug
  */
 function clearRecord(repos: Repos, slug: string): void {
+  const claimed = repos.factClaims.claimedBy(slug);
   for (const key of [...OWNED_KEYS].reverse()) {
     const { entity } = specOf(key);
     if (entity) repos.citations.removeFor(entity, repos.tables.ownedIds(key, slug));
     repos.tables.clearOwned(key, slug);
   }
+  settleFacts(repos, claimed);
   for (const key of TABLE_KEYS) repos.tables.restartIds(key);
 }
 

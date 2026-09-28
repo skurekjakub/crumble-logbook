@@ -55,9 +55,12 @@ export function insertSharedFacts<K extends ContentKey>(
 
 /**
  * A step writing rows of an ownerless content type (one with no record
- * column) as game facts: a row whose identity isn't stored yet is inserted
- * and cited to its sources, owned by no record, so no record's re-import
- * clears it; a stored row is skipped when its facts agree.
+ * column) as game facts: a row whose identity isn't stored yet is inserted,
+ * owned by no record; a stored row is kept when its facts agree. Either
+ * way the record being written claims the fact with the row's sources
+ * (`factClaims`), and the fact is cited to every source its claims cite.
+ * A record's re-import drops its claims first, so a fact it no longer
+ * lists goes once no other record claims it (see `writeRecord`).
  *
  * @typeParam K - the content type's registry key
  * @param spec - the content type and how its rows are compared
@@ -101,19 +104,35 @@ function factsStep<K extends ContentKey>(
     type Stored = { id: number; recordSlug: string | null } & Record<keyof ValuesOf<K>, unknown>;
     const repo = repos[spec.key] as unknown as TableRepo<Stored, ValuesOf<K>>;
     const loaded = new Map(repo.list().map((row) => [identityOf(row), row]));
+    /**
+     * Claims a game fact for the record being written, citing `sources`,
+     * and re-cites the fact to every source its claims cite.
+     *
+     * @param id - the fact's id
+     * @param sources - the sources the record cites for it
+     */
+    const claim = (id: number, sources: readonly string[]) => {
+      const fact = { entity, entityId: String(id) };
+      repos.factClaims.add(fact, record, sources);
+      repos.citations.replace(entity, fact.entityId, repos.factClaims.sourcesOf(fact));
+    };
     for (const { values, sources } of rows) {
       const existing = loaded.get(identityOf(values));
       if (existing) {
         const incoming: Partial<ValuesOf<K>> = { ...spec.defaults, ...values };
-        if (spec.facts.every((field) => existing[field] === (incoming[field] ?? null))) continue;
-        const { row, what } = spec.describe(values);
-        const holder = owned
-          ? `the one record ${existing.recordSlug ?? "(none)"} loaded`
-          : "the stored game fact";
-        throw new ImportError(spec.file, row, `${what} conflicts with ${holder}`);
+        if (!spec.facts.every((field) => existing[field] === (incoming[field] ?? null))) {
+          const { row, what } = spec.describe(values);
+          const holder = owned
+            ? `the one record ${existing.recordSlug ?? "(none)"} loaded`
+            : "the stored game fact";
+          throw new ImportError(spec.file, row, `${what} conflicts with ${holder}`);
+        }
+        if (!owned) claim(existing.id, sources);
+        continue;
       }
       const row = repo.insert(owned ? { ...values, recordSlug: record } : values);
-      repos.citations.replace(entity, String(row.id), [...sources]);
+      if (owned) repos.citations.replace(entity, String(row.id), [...sources]);
+      else claim(row.id, sources);
     }
   };
 }

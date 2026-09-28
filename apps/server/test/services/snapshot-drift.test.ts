@@ -89,12 +89,25 @@ describe("snapshotDrift", () => {
   });
 
   it("treats a table the snapshot predates as empty there", () => {
-    const snapshot = snapshotOf("001-a");
+    const seeded = testStore();
+    seedRecord(seeded, "001-a");
+    createServices(seeded).usageStats.create(
+      { kind: "cookie", subject: "x", usagePct: 50, sample: "s", capturedAt: "2026-01-01" },
+      ["dc:1"],
+    );
+    const snapshot = JSON.parse(JSON.stringify(exportSnapshot(seeded))) as Snapshot;
     const store = testStore();
     restoreSnapshot(store, snapshot);
     const older = { ...snapshot, tables: { ...snapshot.tables } } as Snapshot;
     delete (older.tables as Partial<Snapshot["tables"]>).usageStats;
-    expect(snapshotDrift(store, older).tables).toEqual([]);
+    expect(snapshotDrift(store, older).tables).toEqual([
+      { table: "usageStats", database: 1, snapshot: 0 },
+    ]);
+    const empty = testStore();
+    seedRecord(empty, "001-a");
+    const withoutRows = JSON.parse(JSON.stringify(exportSnapshot(empty))) as Snapshot;
+    delete (withoutRows.tables as Partial<Snapshot["tables"]>).usageStats;
+    expect(snapshotDrift(empty, withoutRows).tables).toEqual([]);
   });
 });
 
@@ -110,5 +123,15 @@ describe("driftWarning", () => {
     expect(warning).toContain("delete data/crumble.db");
     expect(warning).toContain("pnpm db:export");
     expect(JSON.stringify(exportSnapshot(store))).toBe(before);
+  });
+
+  it("sends a changed record through a fresh database, never an export of this one", () => {
+    const store = testStore();
+    restoreSnapshot(store, snapshotOf("001-a"));
+    const warning = driftWarning(snapshotDrift(store, snapshotOf("001-a", "003-c")), PATHS)!;
+    expect(warning).toContain("point CRUMBLE_DB at a new file");
+    expect(warning).toContain("pnpm import:record");
+    expect(warning).not.toMatch(/source of truth: run pnpm db:export/);
+    expect(warning).toContain("Don't export this database");
   });
 });

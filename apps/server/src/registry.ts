@@ -38,6 +38,7 @@ import {
   deckPets,
   decks,
   deckSlug,
+  factClaims,
   fightEventInput,
   fightEventPatch,
   fightEvents,
@@ -403,6 +404,7 @@ export const REGISTRY = {
     content: { order: ["level", "id"] },
   }),
   citations: entry(citations, {}),
+  factClaims: entry(factClaims, {}),
 };
 
 /** The registry's type. */

@@ -68,7 +68,8 @@ export interface ContentService<
    */
   update(id: number, patch: Partial<Values>, sources?: string[]): View;
   /**
-   * Deletes the row with `id` and its citations.
+   * Deletes the row with `id`, its citations and any research record's
+   * claim to it.
    *
    * @param id - the row's primary key
    * @throws {NotFoundError} if `id` doesn't exist
@@ -217,6 +218,7 @@ export function createContentService<
         const repo = table(repos);
         if (!repo.get(id)) throw new NotFoundError(entity, id);
         repos.citations.removeAll(entity, String(id));
+        repos.factClaims.removeFor({ entity, entityId: String(id) });
         repo.remove(id);
       }),
   };

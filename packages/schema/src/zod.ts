@@ -384,6 +384,9 @@ export const citationSelect = createSelectSchema(t.citations);
 /** A row selected from `citations`. */
 export type CitationRow = typeof t.citations.$inferSelect;
 
+/** A row selected from `fact_claims`. */
+export type FactClaimRow = typeof t.factClaims.$inferSelect;
+
 /**
  * Insert schema for `captures`. `path` is record-relative under
  * `evidence/`; `capturedAt` is ISO 8601 with an offset; `tool` is a

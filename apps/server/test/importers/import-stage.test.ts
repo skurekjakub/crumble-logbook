@@ -48,7 +48,7 @@ afterEach(() => {
 /**
  * Builds a throwaway copy of record 003's curated dataset, under its own
  * slug, with no evidence, capture rules or ledger, after applying `edit`
- * to its curated files.
+ * to its curated files. Building a slug again overwrites its copy.
  *
  * @param slug - the copy's record slug
  * @param edit - changes each parsed curated file in place, by file name
@@ -61,7 +61,7 @@ function stageCopy(
   tmp ??= mkdtempSync(join(tmpdir(), "crumble-stage-"));
   const dir = join(tmp, slug);
   cpSync(join(stageDir, "curated"), join(dir, "curated"), { recursive: true });
-  mkdirSync(join(dir, "extract"));
+  mkdirSync(join(dir, "extract"), { recursive: true });
   for (const [name, change] of Object.entries(edit)) {
     const path = join(dir, "curated", name);
     const file = JSON.parse(readFileSync(path, "utf-8")) as Record<string, unknown>;
@@ -147,7 +147,7 @@ describe("importRecord on research record 003", FULL_IMPORT, () => {
     );
   });
 
-  it("loads the game facts owned by no record, so a --replace keeps them and doesn't repeat them", () => {
+  it("loads the game facts owned by no record, and a --replace reloads them as they were, once", () => {
     const store = testStore();
     importRecord(store, stageDir);
     const facts = ["powerBrackets", "stageChapters", "riftLevels", "riftSeasons"] as const;
@@ -155,15 +155,10 @@ describe("importRecord on research record 003", FULL_IMPORT, () => {
     for (const rows of before) {
       expect(rows.every((row) => !("recordSlug" in row))).toBe(true);
     }
-    const { counts } = importRecord(store, stageDir, { replace: true });
-    expect(counts).toMatchObject({
-      powerBrackets: 0,
-      stageChapters: 0,
-      riftLevels: 0,
-      riftSeasons: 0,
-      stageClears: clears.length,
-    });
+    const citations = store.repos.tables.dump("citations");
+    importRecord(store, stageDir, { replace: true });
     expect(facts.map((key) => store.repos.tables.dump(key))).toEqual(before);
+    expect(store.repos.tables.dump("citations")).toEqual(citations);
     expect(store.repos.stageClears.count()).toBe(clears.length);
   });
 
@@ -224,6 +219,110 @@ describe("the stage collections' checks", FULL_IMPORT, () => {
     expect(() => importRecord(store, changed)).toThrow(
       /stage chapter conflicts with the stored game fact/,
     );
+  });
+});
+
+describe("--replace and the game facts a record lists", FULL_IMPORT, () => {
+  type Row = Record<string, unknown>;
+  /**
+   * Replaces the sources of the first power bracket.
+   *
+   * @param sources - the sources it cites afterwards
+   * @returns the edit, by curated file name
+   */
+  const firstBracketCites = (sources: string[]) => ({
+    "power-brackets.json": (file: Row) => {
+      (file.brackets as Row[])[0]!.sources = sources;
+    },
+  });
+  /** Drops the last Rift season and the last Rift level. */
+  const withoutLastSeason = {
+    "rift-levels.json": (file: Row) => {
+      (file.seasons as Row[]).pop();
+      (file.levels as Row[]).pop();
+    },
+  };
+
+  it("refreshes the sources the record gives a game fact", () => {
+    const store = testStore();
+    importRecord(store, stageCopy("910-stage-copy"));
+    importRecord(store, stageCopy("910-stage-copy", firstBracketCites(["dc:76835"])), {
+      replace: true,
+    });
+    const [first] = createServices(store).powerBrackets.list();
+    expect(first!.sources).toEqual(["dc:76835"]);
+  });
+
+  it("drops a game fact the record no longer lists", () => {
+    const store = testStore();
+    importRecord(store, stageCopy("911-stage-copy"));
+    const seasons = rift.seasons.length;
+    importRecord(store, stageCopy("911-stage-copy", withoutLastSeason), { replace: true });
+    expect(store.repos.riftSeasons.count()).toBe(seasons - 1);
+    expect(store.repos.riftLevels.count()).toBe(rift.levels.length - 1);
+    const cited = new Set(
+      store.repos.tables
+        .dump("citations")
+        .filter((c) => c.entity === "rift_season")
+        .map((c) => Number(c.entityId)),
+    );
+    expect([...cited].sort((a, b) => a - b)).toEqual(
+      store.repos.riftSeasons.list().map((s) => s.id),
+    );
+  });
+
+  it("keeps a fact another record still lists, cited to that record's sources alone", () => {
+    const store = testStore();
+    importRecord(store, stageCopy("912-stage-copy", firstBracketCites(["dc:76835"])));
+    importRecord(store, stageCopy("913-stage-copy", ownDecks("-b")));
+    const cites = () => createServices(store).powerBrackets.list()[0]!.sources;
+    expect(cites()).toEqual([...new Set([...brackets[0]!.sources, "dc:76835"])].sort());
+    importRecord(store, stageCopy("912-stage-copy", withoutLastSeason), { replace: true });
+    expect(store.repos.riftSeasons.count()).toBe(rift.seasons.length);
+    expect(cites()).toEqual([...brackets[0]!.sources].sort());
+    importRecord(store, stageCopy("913-stage-copy", { ...ownDecks("-b"), ...withoutLastSeason }), {
+      replace: true,
+    });
+    expect(store.repos.riftSeasons.count()).toBe(rift.seasons.length - 1);
+  });
+
+  it("drops every record's claim to a fact deleted through the API", async () => {
+    const store = testStore();
+    importRecord(store, stageCopy("916-stage-copy"));
+    const app = createApp(createServices(store));
+    const [first] = store.repos.powerBrackets.list();
+    expect(
+      (await app.request(`/api/power-brackets/${first!.id}`, { method: "DELETE" })).status,
+    ).toBe(204);
+    const claims = store.repos.tables
+      .dump("factClaims")
+      .filter((c) => c.entity === "power_bracket" && c.entityId === String(first!.id));
+    expect(claims).toEqual([]);
+  });
+
+  it("loads a changed fact the record alone claimed, and still fails one another record claims", () => {
+    const store = testStore();
+    /**
+     * Renames the first chapter's boss.
+     *
+     * @param bossEn - the English name it gets
+     * @returns the edit, by curated file name
+     */
+    const firstBoss = (bossEn: string) => ({
+      "stage-chapters.json": (file: Row) => {
+        (file.chapters as Row[])[0]!.boss_en = bossEn;
+      },
+    });
+    importRecord(store, stageCopy("914-stage-copy"));
+    importRecord(store, stageCopy("914-stage-copy", firstBoss("Renamed")), { replace: true });
+    expect(store.repos.stageChapters.list()[0]!.bossEn).toBe("Renamed");
+    importRecord(
+      store,
+      stageCopy("915-stage-copy", { ...ownDecks("-b"), ...firstBoss("Renamed") }),
+    );
+    expect(() =>
+      importRecord(store, stageCopy("914-stage-copy", firstBoss("Again")), { replace: true }),
+    ).toThrow(/stage chapter conflicts with the stored game fact/);
   });
 });
 

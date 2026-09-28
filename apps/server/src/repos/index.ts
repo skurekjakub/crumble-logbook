@@ -7,6 +7,8 @@ import type { CitationsRepo } from "./citations";
 import { createCitationsRepo } from "./citations";
 import type { DecksRepo } from "./decks";
 import { createDecksRepo } from "./decks";
+import type { FactClaimsRepo } from "./fact-claims";
+import { createFactClaimsRepo } from "./fact-claims";
 import type { GlossaryRepo } from "./glossary";
 import { createGlossaryRepo } from "./glossary";
 import type { RankingsRepo } from "./rankings";
@@ -32,6 +34,8 @@ export type ContentRepos = { [K in ContentKey]: TableRepo<RowOf<K>, InsertOf<K>>
 export type Repos = ContentRepos & {
   sources: SourcesRepo;
   citations: CitationsRepo;
+  /** Research records' claims to game facts, and the sources each cites. */
+  factClaims: FactClaimsRepo;
   decks: DecksRepo;
   glossary: GlossaryRepo;
   runeBuilds: RuneBuildsRepo;
@@ -72,6 +76,7 @@ export function createRepos(db: Db): Repos {
     ...createContentRepos(db),
     sources: createSourcesRepo(db),
     citations: createCitationsRepo(db),
+    factClaims: createFactClaimsRepo(db),
     decks: createDecksRepo(db),
     glossary: createGlossaryRepo(db),
     runeBuilds: createRuneBuildsRepo(db),
