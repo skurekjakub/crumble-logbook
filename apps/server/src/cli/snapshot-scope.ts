@@ -2,14 +2,16 @@
  * Reports which research records' rows a change to `data/snapshot.json`
  * touches, by content, against the snapshot at a git revision. Run via
  * `pnpm db:scope <rev> [<record slug> ...]`: prints each changed record
- * with its tables, and exits 1 when a record not named among the slugs
- * changed, 2 on a usage error.
+ * with its tables (a row's child rows and citations count as the row),
+ * then the game-fact tables that changed on a line of their own, and exits
+ * 1 when a record not named among the slugs changed, 2 on a usage error.
+ * A changed game fact alone doesn't fail it.
  */
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { repoRoot, snapshotPath } from "../config";
 import type { Snapshot } from "../services/export";
-import { changedRecords } from "../services/snapshot-scope";
+import { changedFacts, changedRecords } from "../services/snapshot-scope";
 
 const [rev, ...named] = process.argv.slice(2);
 if (rev === undefined) {
@@ -26,6 +28,8 @@ const before = JSON.parse(
 const after = JSON.parse(readFileSync(snapshotPath, "utf-8")) as Snapshot;
 const changes = changedRecords(before, after);
 for (const { record, tables } of changes) console.log(`${record}: ${tables.join(", ")}`);
+const facts = changedFacts(before, after);
+if (facts.length > 0) console.log(`game facts: ${facts.join(", ")}`);
 const unexpected = changes.filter((change) => !named.includes(change.record));
 if (unexpected.length > 0) {
   console.error(
