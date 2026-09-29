@@ -18,7 +18,7 @@ import { z } from "zod";
 import { ImportError } from "../errors";
 import type { Repos } from "../repos";
 import type { RowRefs } from "./collection-kit";
-import { checkDeckModes, collection, parseRows } from "./collection-kit";
+import { checkCurrentDecks, checkDeckModes, collection, parseRows } from "./collection-kit";
 import { assertUnclaimed } from "./shared";
 import type { WriteStep } from "./steps";
 import { insertCited } from "./steps";
@@ -224,13 +224,9 @@ export const DUNGEON_COLLECTIONS = {
         const problem = lineupProblem({ ...lineup, atkOrder: lineup.atk_order });
         if (problem) throw new ImportError(file, index, problem);
       });
-      checkDeckModes(
-        file,
-        "dungeon_lineup",
-        "crumble_dungeon",
-        lineups.map((lineup, index) => [index, lineup.deck ?? undefined] as const),
-        context,
-      );
+      const decks = lineups.map((lineup, index) => [index, lineup.deck ?? undefined] as const);
+      checkDeckModes(file, "dungeon_lineup", "crumble_dungeon", decks, context);
+      checkCurrentDecks(file, "dungeon_lineup", decks, context);
     },
     /** @inheritdoc */
     warnings: (lineups) =>

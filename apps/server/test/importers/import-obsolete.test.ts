@@ -8,6 +8,8 @@ import type { Store } from "../../src/repos";
 import { testStore } from "../helpers";
 
 const pvpDir = join(repoRoot, "research", "002-pvp-meta");
+const stageDir = join(repoRoot, "research", "003-stage-pushing-meta");
+const dungeonDir = join(repoRoot, "research", "004-golden-drop-meta");
 /** Importing a copy of record 002 reads every curated file; the copy has no ledger to hash. */
 const IMPORT = { timeout: 60_000 };
 
@@ -29,9 +31,27 @@ afterEach(() => {
  * @returns the copy's directory
  */
 function pvpCopy(slug: string, edit: Record<string, (rows: Row[]) => void> = {}): string {
+  return recordCopy(pvpDir, slug, edit);
+}
+
+/**
+ * Builds a throwaway copy of a record's curated dataset, under its own
+ * slug, with no evidence, capture rules or ledger, after applying `edit`
+ * to its curated array files.
+ *
+ * @param recordDir - the record to copy
+ * @param slug - the copy's record slug
+ * @param edit - changes each parsed curated file's rows in place, by file name
+ * @returns the copy's directory
+ */
+function recordCopy(
+  recordDir: string,
+  slug: string,
+  edit: Record<string, (rows: Row[]) => void> = {},
+): string {
   tmp ??= mkdtempSync(join(tmpdir(), "crumble-obsolete-"));
   const dir = join(tmp, slug);
-  cpSync(join(pvpDir, "curated"), join(dir, "curated"), { recursive: true });
+  cpSync(join(recordDir, "curated"), join(dir, "curated"), { recursive: true });
   mkdirSync(join(dir, "extract"), { recursive: true });
   for (const [name, change] of Object.entries(edit)) {
     const path = join(dir, "curated", name);
@@ -39,7 +59,7 @@ function pvpCopy(slug: string, edit: Record<string, (rows: Row[]) => void> = {})
     change(rows);
     writeFileSync(path, JSON.stringify(rows));
   }
-  const base = JSON.parse(readFileSync(join(pvpDir, "import.json"), "utf-8")) as {
+  const base = JSON.parse(readFileSync(join(recordDir, "import.json"), "utf-8")) as {
     record: object;
   };
   writeFileSync(
@@ -238,6 +258,70 @@ describe("the obsolete block's checks", IMPORT, () => {
     const dir = pvpCopy("920-pvp-copy", { "decks.json": retireFiveRanged["decks.json"]! });
     expect(() => importRecord(testStore(), dir)).toThrow(
       /counter five-ranged-vs-\S+ names obsolete deck arena-five-ranged; mark the counter obsolete too/,
+    );
+  });
+});
+
+/**
+ * Builds an in-memory store whose glossary knows every cookie record 004's
+ * dungeon files name, as record 001's glossary does in the real import order.
+ *
+ * @returns the store
+ */
+function dungeonStore(): Store {
+  /**
+   * Reads one of record 004's curated files.
+   *
+   * @param name - the file's name
+   * @returns its rows, unchecked
+   */
+  const read = (name: string) =>
+    JSON.parse(readFileSync(join(dungeonDir, "curated", name), "utf-8")) as Row[];
+  /**
+   * Lists the names a row keeps in some of its fields.
+   *
+   * @param row - the row
+   * @param fields - the fields holding a name or a list of names
+   * @returns the names
+   */
+  const names = (row: Row, fields: readonly string[]) =>
+    fields.flatMap((field) => {
+      const value = row[field];
+      if (typeof value === "string") return [value];
+      return Array.isArray(value) ? (value as string[]) : [];
+    });
+  const cookies = new Set([
+    ...read("dungeon-runs.json").flatMap((r) => names(r, ["atk_order"])),
+    ...read("dungeon-lineups.json").flatMap((l) => names(l, ["first40", "excluded", "atk_order"])),
+    ...read("dungeon-exclusions.json").flatMap((e) => names(e, ["kr"])),
+  ]);
+  const store = testStore();
+  for (const kr of cookies) store.repos.glossary.upsert({ kr, en: null, kind: "cookie" });
+  return store;
+}
+
+describe("recommendations that name an obsolete deck", IMPORT, () => {
+  it("rejects a stage zone slot that names an obsolete deck, naming the slot and the deck", () => {
+    const dir = recordCopy(stageDir, "922-stage-copy", {
+      "decks.json": (rows) => {
+        const deck = byId(rows, "stage-bari-coward-328");
+        deck.obsolete = { ...RETIRED, sources: deck.sources };
+      },
+    });
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      /curated\/stage-zones\.json \[zone 3 slot 2\]: stage_zone_slot names obsolete deck stage-bari-coward-328/,
+    );
+  });
+
+  it("rejects a dungeon lineup that names an obsolete deck, naming the lineup and the deck", () => {
+    const dir = recordCopy(dungeonDir, "923-dungeon-copy", {
+      "decks.json": (rows) => {
+        const deck = byId(rows, "dungeon-no-cheesecake-0907");
+        deck.obsolete = { ...RETIRED, sources: deck.sources };
+      },
+    });
+    expect(() => importRecord(dungeonStore(), dir)).toThrow(
+      /curated\/dungeon-lineups\.json \[1\]: dungeon_lineup names obsolete deck dungeon-no-cheesecake-0907/,
     );
   });
 });

@@ -21,7 +21,7 @@ import { z } from "zod";
 import { ImportError } from "../errors";
 import type { ValuesOf } from "../registry";
 import type { RowRefs } from "./collection-kit";
-import { checkDeckModes, collection } from "./collection-kit";
+import { checkCurrentDecks, checkDeckModes, collection } from "./collection-kit";
 import { parseFile } from "./files";
 import { insertGameFacts } from "./shared-facts";
 import type { CitedValues, WriteStep } from "./steps";
@@ -504,6 +504,7 @@ export const STAGE_COLLECTIONS = {
         ),
       );
       checkDeckModes(file, "stage_zone_slot", "stage", decks, context);
+      checkCurrentDecks(file, "stage_zone_slot", decks, context);
     },
     /** @inheritdoc */
     prepare: ({ zones }) => [

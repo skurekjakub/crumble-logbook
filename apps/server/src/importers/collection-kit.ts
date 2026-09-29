@@ -129,6 +129,34 @@ export function checkDeckModes(
 }
 
 /**
+ * Checks that no row of a collection of current recommendations names an
+ * obsolete deck: a recommendation can't point at a displaced deck, so the
+ * round that marks the deck obsolete updates the row too.
+ *
+ * @param file - the file, as errors name it
+ * @param entity - what the rows are, as the message names it
+ * @param decks - each row's deck, by the row as errors name it
+ * @param context - the curated decks marked obsolete
+ * @throws {ImportError} naming the file and row of the first row that names an obsolete deck
+ */
+export function checkCurrentDecks(
+  file: string,
+  entity: string,
+  decks: ReadonlyArray<readonly [row: string | number, deck: string | undefined]>,
+  { obsoleteDecks }: CheckContext,
+): void {
+  for (const [row, deck] of decks) {
+    if (deck !== undefined && obsoleteDecks.has(deck)) {
+      throw new ImportError(
+        file,
+        row,
+        `${entity} names obsolete deck ${deck}; point it at a current deck`,
+      );
+    }
+  }
+}
+
+/**
  * Validates every row of an array file with `schema`.
  *
  * @param file - the file's record-relative path, as errors name it
