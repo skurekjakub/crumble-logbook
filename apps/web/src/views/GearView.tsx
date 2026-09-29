@@ -60,7 +60,7 @@ export function GearView({ mode }: { mode: ModeSection }) {
               {current.length ? null : <EmptyState>No current gear.</EmptyState>}
               <ObsoleteSection id="gear-obsolete" latest={obsolete[0]?.obsoleteSince ?? null}>
                 {obsolete.map((g) => (
-                  <div key={g.id} className="obsolete-item">
+                  <div key={g.id} className="card obsolete-item">
                     <ObsoleteNotice
                       since={g.obsoleteSince!}
                       reason={g.obsoleteReason}

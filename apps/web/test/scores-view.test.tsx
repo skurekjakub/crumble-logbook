@@ -258,6 +258,7 @@ describe("scores view", () => {
 });
 
 describe("scores of obsolete decks", () => {
+  const ranged = score({ id: 4, damageG: 2000, powerG: 30, deckId: "ranged", ratio: 66 });
   const withRanged: Record<string, Canned> = {
     ...API,
     "/api/decks?mode=guild_conquest": {
@@ -269,13 +270,43 @@ describe("scores of obsolete decks", () => {
           obsoleteSince: "2026-10-12",
           obsoleteReason: "Patched out.",
           obsoleteSources: ["dc:76135"],
+          supersededBy: "cherry",
         },
       ],
     },
     "/api/scores": {
-      body: [...SCORES, score({ id: 4, damageG: 2000, powerG: 30, deckId: "ranged", ratio: 66 })],
+      body: [...SCORES, ranged],
     },
+    "/api/scores?deck=ranged": { body: [ranged] },
   };
+
+  it("links the deck that superseded an obsolete deck from its group's notice", async () => {
+    await renderRoute("/conquest/scores", withRanged);
+    const group = await screen.findByRole("region", {
+      name: "Ranged deck, obsolete",
+      hidden: true,
+    });
+    const notice = within(group).getByRole("note", { hidden: true });
+    expect(notice).toHaveTextContent("Superseded by Cherry deck.");
+    expect(within(notice).getByRole("link", { name: "Cherry deck", hidden: true })).toHaveAttribute(
+      "href",
+      "/conquest/decks#deck-cherry",
+    );
+  });
+
+  it("marks an obsolete deck in the picker, and picking it shows its scores under its notice", async () => {
+    await renderRoute("/conquest/scores?deck=ranged", withRanged);
+    const picker = await screen.findByRole("combobox", { name: "Deck" });
+    await waitFor(() =>
+      expect(within(picker).getByRole("option", { name: "Ranged deck (obsolete)" })).toBeTruthy(),
+    );
+    await waitFor(() => expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["2T"]));
+    expect(screen.getByRole("note")).toHaveTextContent(
+      "Ranged deck is obsolete since 2026-10-12: Patched out. Superseded by Cherry deck.",
+    );
+    expect(screen.getByRole("img", { name: /^2T at 30G power/ })).toBeInTheDocument();
+    expect(document.querySelector("details.obsolete")).toBeNull();
+  });
 
   it("ranks by damage among current decks only, and lists an obsolete deck's scores under its notice", async () => {
     await renderRoute("/conquest/scores", withRanged);

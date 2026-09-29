@@ -15,6 +15,7 @@ import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
 import { ErrorBox } from "../components/ErrorBox";
+import { ObsoleteNotice } from "../components/ObsoleteNotice";
 import { ObsoleteSection } from "../components/ObsoleteSection";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
@@ -25,10 +26,11 @@ import { ViewHeader } from "../components/ViewHeader";
 import type { DeckSeries } from "../lib/deck-series";
 import { deckSeries } from "../lib/deck-series";
 import { formatG, formatRatio, ratio } from "../lib/format";
-import { groupByObsoleteDeck, splitByDeck } from "../lib/obsolete";
+import { groupByObsoleteDeck, isCurrent, splitByDeck } from "../lib/obsolete";
 import { boardSeasons, latestCapture } from "../lib/rankings";
 import { optionalInt, optionalKey, optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
+import { DeckLink } from "./DeckLink";
 import { ModeViewHeader } from "./ModeViewHeader";
 import { ObsoleteDeckRows } from "./ObsoleteDeckRows";
 
@@ -138,7 +140,9 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
  * failed deck list is reported; the scores then show without deck names or
  * colours. The chart and the damage-ordered table hold the scores of
  * current decks and of none; an obsolete deck's scores end the ranking in
- * the collapsed Obsolete section, under the deck's notice.
+ * the collapsed Obsolete section, under the deck's notice. The picker
+ * marks obsolete decks, and picking one shows its scores in the chart and
+ * the table under its notice.
  *
  * @param props - the mode, the search params and their setter
  * @returns the scores view
@@ -150,9 +154,28 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
   const sources = useSourceIndex();
   const series = useMemo(() => deckSeries(decks.data ?? []), [decks.data]);
   const allDecks = decks.data ?? [];
-  const retired = scores.data
-    ? groupByObsoleteDeck(scores.data, allDecks).map((g) => ({ ...g, rows: byDamage(g.rows) }))
-    : [];
+  /**
+   * Finds a deck of the mode.
+   *
+   * @param id - the deck's id
+   * @returns the deck, or `undefined` when it isn't listed
+   */
+  const deckOf = (id: string) => allDecks.find((d) => d.id === id);
+  const picked = search.deck === undefined ? undefined : deckOf(search.deck);
+  const pickedObsolete = picked !== undefined && !isCurrent(picked);
+  /**
+   * The scores the chart and the table rank: every listed score when the
+   * picked deck is obsolete, else the scores of current decks and of none.
+   *
+   * @param rows - the listed scores
+   * @returns the ranked scores
+   */
+  const ranked = (rows: readonly Score[]) =>
+    pickedObsolete ? [...rows] : splitByDeck(rows, allDecks).current;
+  const retired =
+    scores.data && !pickedObsolete
+      ? groupByObsoleteDeck(scores.data, allDecks).map((g) => ({ ...g, rows: byDamage(g.rows) }))
+      : [];
   const toc = [
     { id: PARTS.chart, label: "Score chart" },
     ...(rng.data?.length ? [{ id: PARTS.rng, label: "RNG factors" }] : []),
@@ -175,13 +198,27 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
             <option value="">All decks</option>
             {decks.data?.map((d) => (
               <option key={d.id} value={d.id}>
-                {d.nameEn}
+                {isCurrent(d) ? d.nameEn : `${d.nameEn} (obsolete)`}
               </option>
             ))}
           </select>
         </div>
+        {pickedObsolete && picked.obsoleteSince ? (
+          <ObsoleteNotice
+            subject={picked.nameEn}
+            since={picked.obsoleteSince}
+            reason={picked.obsoleteReason}
+            sources={picked.obsoleteSources}
+            sourceIndex={sources}
+            superseded={
+              picked.supersededBy ? (
+                <DeckLink mode={mode} id={picked.supersededBy} deck={deckOf(picked.supersededBy)} />
+              ) : null
+            }
+          />
+        ) : null}
         <QueryResult query={scores} resource="scores">
-          {(rows) => <ScoreChart scores={splitByDeck(rows, allDecks).current} series={series} />}
+          {(rows) => <ScoreChart scores={ranked(rows)} series={series} />}
         </QueryResult>
         <QueryResult query={rng} resource="RNG factors">
           {(factors) =>
@@ -203,7 +240,7 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
           <div className="grid" role="region" aria-label="Posted scores" id={PARTS.table}>
             <DataTable
               columns={scoreColumns(series, sources)}
-              rows={byDamage(splitByDeck(scores.data, allDecks).current)}
+              rows={byDamage(ranked(scores.data))}
               rowKey={(s) => s.id}
               layout="stack"
             />
@@ -215,6 +252,8 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
             columns={scoreColumns(series, sources)}
             rowKey={(s) => s.id}
             sources={sources}
+            mode={mode}
+            deck={deckOf}
           />
         </ObsoleteSection>
         {mode.leaderboard ? (

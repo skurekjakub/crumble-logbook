@@ -679,9 +679,13 @@ describe("PvP counters", () => {
       "Obsolete since 2026-10-12: The ranged deck is gone.",
     );
     const stranded = section.querySelector("#counter-bari-vs-ranged")!;
-    expect(within(stranded as HTMLElement).getByRole("note", { hidden: true })).toHaveTextContent(
-      "Obsolete since 2026-10-12: Five-ranged deck is obsolete: The patch cut ranged damage.",
+    const strandedNote = within(stranded as HTMLElement).getByRole("note", { hidden: true });
+    expect(strandedNote).toHaveTextContent(
+      "Obsolete since 2026-10-12: Five-ranged deck is obsolete: The patch cut ranged damage. Superseded by Rye one-carry deck.",
     );
+    expect(
+      within(strandedNote).getByRole("link", { name: "Rye one-carry deck", hidden: true }),
+    ).toHaveAttribute("href", "/arena/teams#deck-rye");
     const toc = panel().getByRole("navigation", { name: "On this page" });
     expect(within(toc).getByRole("link", { name: "Obsolete" })).toHaveAttribute(
       "href",

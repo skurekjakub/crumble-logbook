@@ -424,26 +424,52 @@ describe("the runs board", () => {
 });
 
 describe("the runs board's obsolete teams", () => {
+  const retiredDeck: Deck = {
+    ...DECK,
+    id: "dungeon-old-beam",
+    nameEn: "Old beam lineup",
+    obsoleteSince: "2026-10-12",
+    obsoleteReason: "A patch capped the beam.",
+    obsoleteSources: ["dc:77306"],
+    supersededBy: DECK.id,
+  };
+  const withRetired: Record<string, Canned> = {
+    ...API,
+    "/api/decks?mode=crumble_dungeon": { body: [DECK, retiredDeck] },
+    "/api/dungeon-runs": {
+      body: [run(5, "run-old", 400, { deckId: retiredDeck.id }), ...RUNS],
+    },
+  };
+
+  it("links the team that superseded an obsolete team from its group's notice", async () => {
+    await renderRoute("/dungeon/runs", withRetired, { mode: DUNGEON });
+    const group = await screen.findByRole("region", {
+      name: "Old beam lineup, obsolete",
+      hidden: true,
+    });
+    const notice = within(group).getByRole("note", { hidden: true });
+    expect(notice).toHaveTextContent("Superseded by Milk–Scorpion beam lineup.");
+    expect(
+      within(notice).getByRole("link", { name: "Milk–Scorpion beam lineup", hidden: true }),
+    ).toHaveAttribute("href", "/dungeon/teams#deck-dungeon-milk-scorpion-figure");
+  });
+
+  it("applies the board's filters to the obsolete teams' runs too", async () => {
+    await renderRoute("/dungeon/runs?q=player%205", withRetired, { mode: DUNGEON });
+    const group = await screen.findByRole("region", {
+      name: "Old beam lineup, obsolete",
+      hidden: true,
+    });
+    expect(bodyRows(group).map((r) => r[1])).toEqual(["400G"]);
+    cleanup();
+    await renderRoute("/dungeon/runs?q=player%201", withRetired, { mode: DUNGEON });
+    await screen.findByRole("region", { name: "Ranked runs" });
+    await waitFor(() => expect(document.querySelectorAll("table").length).toBeGreaterThan(0));
+    expect(document.querySelector("details.obsolete")).toBeNull();
+  });
+
   it("keeps an obsolete team's runs out of the ranking and lists them under the team's notice", async () => {
-    const retiredDeck: Deck = {
-      ...DECK,
-      id: "dungeon-old-beam",
-      nameEn: "Old beam lineup",
-      obsoleteSince: "2026-10-12",
-      obsoleteReason: "A patch capped the beam.",
-      obsoleteSources: ["dc:77306"],
-    };
-    await renderRoute(
-      "/dungeon/runs",
-      {
-        ...API,
-        "/api/decks?mode=crumble_dungeon": { body: [DECK, retiredDeck] },
-        "/api/dungeon-runs": {
-          body: [run(5, "run-old", 400, { deckId: retiredDeck.id }), ...RUNS],
-        },
-      },
-      { mode: DUNGEON },
-    );
+    await renderRoute("/dungeon/runs", withRetired, { mode: DUNGEON });
     const ranked = await screen.findByRole("region", { name: "Ranked runs" });
     await waitFor(() =>
       expect(bodyRows(ranked).map((r) => [r[0], r[1]])).toEqual([

@@ -58,9 +58,7 @@ function LineupCard({ lineup: l, context }: { lineup: DungeonLineup; context: Li
   const { mode, firstWave, en, decks, exclusions, sources } = context;
   const kept = keptExclusions(l.first40, [...exclusions.values()]);
   const flagged = new Set(kept.map((e) => e.cookieKr));
-  const deck = l.deckId ? (
-    <DeckLink mode={mode.id} id={l.deckId} deck={decks?.get(l.deckId)} />
-  ) : null;
+  const deck = l.deckId ? <DeckLink mode={mode} id={l.deckId} deck={decks?.get(l.deckId)} /> : null;
   const atkOrder = l.atkOrder.length ? (
     <AtkOrder order={l.atkOrder.map((kr) => ({ kr, en: en(kr) }))} />
   ) : null;

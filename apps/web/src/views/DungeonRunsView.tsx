@@ -1,10 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "@tanstack/react-router";
 import { useSourceIndex } from "../api/hooks";
 import { decksQuery, dungeonRunsQuery, glossaryQuery, rngFactorsQuery } from "../api/queries";
 import type { DungeonRun, RngFactor } from "../api/types";
 import type { DungeonConfig, ModeSection } from "../app/modes";
-import { modeLink } from "../app/modes";
 import { AtkOrder } from "../components/AtkOrder";
 import type { Column, TableFilter, TableSelect } from "../components/DataTable";
 import { applyFilters, DataTable, TableTools } from "../components/DataTable";
@@ -18,7 +16,7 @@ import { groupByObsoleteDeck, splitByDeck } from "../lib/obsolete";
 import { optionalKey, optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
 import { sourceLabel } from "../lib/sources";
-import { deckId } from "./DeckCard";
+import { DeckLink } from "./DeckLink";
 import { CopyHeader } from "./ModeViewHeader";
 import { ObsoleteDeckRows } from "./ObsoleteDeckRows";
 
@@ -178,8 +176,9 @@ function showRun(r: DungeonRun, rank: number | undefined, deck: string | null): 
  * with the columns `columns` declares and the mode's RNG factors after
  * them. The board, evidence and text filters live in the URL and apply to
  * both groups; the text filter matches what a row shows. A run on an
- * obsolete team is left out of the ranking and the filters; those runs end
- * the board in the collapsed Obsolete section, under the team's notice.
+ * obsolete team is left out of the ranking; those runs end the board in
+ * the collapsed Obsolete section, under the team's notice with a link to
+ * the team that superseded it, and the filters apply to them too.
  *
  * @param props - the mode, its dungeon config, the search params and their setter
  * @returns the runs board
@@ -280,9 +279,11 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                 return (
                   <>
                     {r.deckId ? (
-                      <Link {...modeLink(mode.id, "/$mode/teams")} hash={deckId({ id: r.deckId })}>
-                        {s.deck}
-                      </Link>
+                      <DeckLink
+                        mode={mode}
+                        id={r.deckId}
+                        deck={deckRows?.find((d) => d.id === r.deckId)}
+                      />
                     ) : null}
                     {order.length ? <AtkOrder order={order} /> : null}
                     {r.atkOrderNote ? <div className="muted">{r.atkOrderNote}</div> : null}
@@ -333,7 +334,10 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
             ...g,
             rows: kept.filter((r) => r.standing === g.standing),
           })).filter((g) => g.rows.length > 0);
-          const retired = groupByObsoleteDeck(retiredRuns, deckRows ?? []);
+          const retired = groupByObsoleteDeck(
+            applyFilters(retiredRuns, filter, select, selects),
+            deckRows ?? [],
+          );
           return (
             <>
               <TableTools filter={filter} select={select} selects={selects} />
@@ -359,6 +363,8 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                   columns={columns}
                   rowKey={(r) => r.id}
                   sources={sources}
+                  mode={mode}
+                  deck={(id) => deckRows?.find((d) => d.id === id)}
                 />
               </ObsoleteSection>
             </>

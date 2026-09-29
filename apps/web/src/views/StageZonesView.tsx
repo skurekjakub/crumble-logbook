@@ -69,10 +69,10 @@ const zoneId = (zone: Pick<Zone, "zoneIndex">) => `zone-${zone.zoneIndex}`;
 /**
  * One zone layout as a card: its chapters, then a row per boss slot with the
  * boss, the plan, the deck it starts from (linking to the deck's card,
- * marked when the deck is obsolete), how
- * low a bracket the slot has been cleared at, and sources.
+ * marked when the deck is obsolete), how low a bracket the slot has been
+ * cleared at, and sources.
  *
- * @param props - the zone, the first chapter the layouts fix, the stage mode's id, the decks by id and the source index
+ * @param props - the zone, the first chapter the layouts fix, the stage mode, the decks by id and the source index
  * @returns the card
  */
 function ZoneCard({
@@ -84,7 +84,7 @@ function ZoneCard({
 }: {
   zone: Zone;
   fixedFrom: number;
-  mode: string;
+  mode: ModeSection;
   decks: ReadonlyMap<string, LifecycleDeck>;
   sources: SourceIndex;
 }) {
@@ -141,7 +141,7 @@ export function StageZonesView({ mode, stage }: { mode: ModeSection; stage: Stag
                   key={zone.zoneIndex}
                   zone={zone}
                   fixedFrom={stage.zones.fixedFrom}
-                  mode={mode.id}
+                  mode={mode}
                   decks={decks}
                   sources={sources}
                 />

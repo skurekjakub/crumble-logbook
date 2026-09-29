@@ -15,6 +15,7 @@ import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
 import { isCurrent } from "../lib/obsolete";
 import type { SourceIndex } from "../lib/sources";
+import { DeckLink } from "./DeckLink";
 import { ModeViewHeader } from "./ModeViewHeader";
 
 /** The name parts a counter heading shows for a deck. */
@@ -121,12 +122,15 @@ interface RetiredEdge {
   since: string;
   reason: string | null;
   sources: readonly string[];
+  /** The deck that superseded the obsolete deck the edge names, when one did. */
+  successor: string | null;
 }
 
 /**
  * Splits edges into the matrix's, current edges between current decks, and
  * the Obsolete section's: obsolete edges, under their own reason, and
- * current edges that name an obsolete deck, under that deck's; the most
+ * current edges that name an obsolete deck, under that deck's, with the
+ * deck that superseded it; the most
  * recently obsoleted first.
  *
  * @param edges - every edge, in list order
@@ -147,6 +151,7 @@ function matchups(
         since: edge.obsoleteSince,
         reason: edge.obsoleteReason,
         sources: edge.obsoleteSources,
+        successor: null,
       });
       continue;
     }
@@ -157,6 +162,7 @@ function matchups(
         since: gone.obsoleteSince,
         reason: `${gone.nameEn} is obsolete${gone.obsoleteReason ? `: ${gone.obsoleteReason}` : ""}`,
         sources: gone.obsoleteSources,
+        successor: gone.supersededBy,
       });
     } else {
       live.push(edge);
@@ -235,6 +241,11 @@ export function CountersView({ mode }: { mode: ModeSection }) {
                         reason={r.reason}
                         sources={r.sources}
                         sourceIndex={sources}
+                        superseded={
+                          r.successor ? (
+                            <DeckLink mode={mode} id={r.successor} deck={deck(r.successor)} />
+                          ) : null
+                        }
                       />
                     }
                   />
