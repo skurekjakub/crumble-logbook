@@ -21,6 +21,7 @@
     "import:record": "pnpm --filter @crumble/server import:record",
     "db:export": "pnpm --filter @crumble/server db:export",
     "db:restore": "pnpm --filter @crumble/server db:restore",
+    "db:scope": "pnpm --filter @crumble/server db:scope",
     "capture": "pnpm --filter @crumble/capture capture"
   },
   "devDependencies": {
