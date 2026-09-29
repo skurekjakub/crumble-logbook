@@ -272,6 +272,70 @@
     "lastHit": "2026-09-27"
   },
   {
+    "id": "dc-star",
+    "kind": "dc",
+    "query": "스타",
+    "why": "스타, a Season 5 top player on crumb.gg's conquest board.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-name-star",
+    "kind": "dc",
+    "query": "name:스타",
+    "why": "스타's own posts, by author name.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-ana",
+    "kind": "dc",
+    "query": "아나",
+    "why": "아나, a Season 5 top player on crumb.gg's conquest board.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-name-ana",
+    "kind": "dc",
+    "query": "name:아나",
+    "why": "아나's own posts, by author name.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-noeul",
+    "kind": "dc",
+    "query": "노을",
+    "why": "노을, a Season 5 top player on crumb.gg's conquest board.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-hwansang",
+    "kind": "dc",
+    "query": "환상",
+    "why": "환상, a Season 5 top player on crumb.gg's conquest board.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-carpe-diem",
+    "kind": "dc",
+    "query": "카르페디엠",
+    "why": "Carpe Diem, a top Season 5 guild on crumb.gg's guild board, whose members' teams the record lacks.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-carpe",
+    "kind": "dc",
+    "query": "카르페",
+    "why": "Carpe Diem by the short name posters use.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
     "id": "dc-comment-tami",
     "kind": "dc",
     "query": "comment:타미",
@@ -384,6 +448,14 @@
     "lastHit": null
   },
   {
+    "id": "youtube-black-leader",
+    "kind": "youtube",
+    "query": "검은반장 크럼블",
+    "why": "검은반장, a Season 5 top player on crumb.gg's conquest board, by name.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
     "id": "youtube-en-guild-conquest",
     "kind": "youtube",
     "query": "cookie run crumble guild conquest",
@@ -425,6 +497,24 @@
     "lastHit": "2026-09-27"
   },
   {
+    "id": "crumbgg-live-conquest-guilds",
+    "kind": "crumbgg",
+    "endpoint": "live",
+    "args": ["guild_conquest_guilds"],
+    "why": "The live Season board of conquest guilds, where the guilds whose members discovery chases stand now.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "crumbgg-lookup-seomyeong",
+    "kind": "crumbgg",
+    "endpoint": "api-lookup-suggest",
+    "args": ["섬영"],
+    "why": "섬영, whose 1T 999G is the record's top verified run: the lookup gives the player's current account power and board place.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
     "id": "crumbgg-rankings-players",
     "kind": "crumbgg",
     "endpoint": "api-rankings",
@@ -459,6 +549,15 @@
     "why": "crumb.gg's patch digest, which dates the balance changes a round's window covers.",
     "added": "2026-09-27",
     "lastHit": "2026-09-27"
+  },
+  {
+    "id": "crumbgg-data-meta",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": ["meta"],
+    "why": "crumb.gg's game catalog, which decodes the boards' cookie ids and shows new cookies.",
+    "added": "2026-09-27",
+    "lastHit": null
   },
   {
     "id": "crumbgg-data-dpschart",

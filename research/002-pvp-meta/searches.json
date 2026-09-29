@@ -420,6 +420,15 @@
     "lastHit": null
   },
   {
+    "id": "crumbgg-leaderboard",
+    "kind": "crumbgg",
+    "endpoint": "leaderboard",
+    "args": [],
+    "why": "Account power of the top 500, to tell a Rumble Arena leader's team from a leader's account.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
     "id": "crumbgg-data-meta",
     "kind": "crumbgg",
     "endpoint": "data",
