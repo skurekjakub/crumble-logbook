@@ -6,14 +6,23 @@
  * @module
  */
 
-/** A row with the obsolete lifecycle: `obsoleteSince` is unset or null while it is current. */
+/**
+ * A row with the obsolete lifecycle: `obsoleteSince` is unset or null while
+ * it is current; an obsolete row says why and cites the sources that say so.
+ */
 export interface Lifecycle {
   obsoleteSince?: string | null;
+  obsoleteReason?: string | null;
+  obsoleteSources?: readonly string[];
 }
 
-/** A deck as the lifecycle helpers read it. */
+/** A deck as the lifecycle helpers and the obsolete notices read it. */
 export interface LifecycleDeck extends Lifecycle {
   id: string;
+  /** Its English name, where a notice or a group names it. */
+  nameEn?: string;
+  /** The deck that superseded it, when one did. */
+  supersededBy?: string | null;
 }
 
 /**

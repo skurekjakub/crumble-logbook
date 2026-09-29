@@ -486,6 +486,26 @@ describe("the lineups", () => {
   });
 });
 
+describe("a lineup whose deck is obsolete", () => {
+  it("marks the deck obsolete beside its link", async () => {
+    await renderRoute(
+      "/dungeon/lineups",
+      {
+        ...API,
+        "/api/decks?mode=crumble_dungeon": {
+          body: [{ ...DECK, obsoleteSince: "2026-10-12", obsoleteReason: "Patched." }],
+        },
+      },
+      { mode: DUNGEON },
+    );
+    const card = (await screen.findByRole("heading", { name: /ND러너/ })).closest("article")!;
+    const link = await within(card).findByRole("link", { name: "Milk–Scorpion beam lineup" });
+    await waitFor(() =>
+      expect(link.parentElement!.querySelector(".pill.obsolete")).toHaveTextContent("obsolete"),
+    );
+  });
+});
+
 describe("the exclusions", () => {
   it("lists each exclusion with its kind, status, why and the lineups that leave it out or keep it", async () => {
     await renderDungeon("/dungeon/exclusions");

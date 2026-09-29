@@ -1,10 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "@tanstack/react-router";
 import { useSourceIndex } from "../api/hooks";
 import { decksQuery, stageZoneSlotsQuery } from "../api/queries";
 import type { StageZoneSlot } from "../api/types";
 import type { ModeSection, StageConfig } from "../app/modes";
-import { modeLink } from "../app/modes";
 import { CookieName } from "../components/CookieName";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
@@ -12,9 +10,10 @@ import { EmptyState } from "../components/EmptyState";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
+import type { LifecycleDeck } from "../lib/obsolete";
 import type { SourceIndex } from "../lib/sources";
+import { DeckLink } from "./DeckLink";
 import { CopyHeader } from "./ModeViewHeader";
-import { deckId } from "./DeckCard";
 
 /** One zone layout and its boss slots, in slot order. */
 interface Zone {
@@ -69,10 +68,11 @@ const zoneId = (zone: Pick<Zone, "zoneIndex">) => `zone-${zone.zoneIndex}`;
 
 /**
  * One zone layout as a card: its chapters, then a row per boss slot with the
- * boss, the plan, the deck it starts from (linking to the deck's card), how
+ * boss, the plan, the deck it starts from (linking to the deck's card,
+ * marked when the deck is obsolete), how
  * low a bracket the slot has been cleared at, and sources.
  *
- * @param props - the zone, the first chapter the layouts fix, the stage mode's id, deck names by id and the source index
+ * @param props - the zone, the first chapter the layouts fix, the stage mode's id, the decks by id and the source index
  * @returns the card
  */
 function ZoneCard({
@@ -85,7 +85,7 @@ function ZoneCard({
   zone: Zone;
   fixedFrom: number;
   mode: string;
-  decks: ReadonlyMap<string, string>;
+  decks: ReadonlyMap<string, LifecycleDeck>;
   sources: SourceIndex;
 }) {
   const columns: Column<StageZoneSlot>[] = [
@@ -95,13 +95,7 @@ function ZoneCard({
     {
       header: "Deck",
       cell: (s) =>
-        s.deckId ? (
-          <Link {...modeLink(mode, "/$mode/teams")} hash={deckId({ id: s.deckId })}>
-            {decks.get(s.deckId) ?? s.deckId}
-          </Link>
-        ) : (
-          "–"
-        ),
+        s.deckId ? <DeckLink mode={mode} id={s.deckId} deck={decks.get(s.deckId)} /> : "–",
     },
     { header: "Cleared at", cell: (s) => s.bracketNote ?? "–" },
     { header: "Sources", cell: (s) => <SourceChips ids={s.sources} sources={sources} /> },
@@ -131,8 +125,8 @@ export function StageZonesView({ mode, stage }: { mode: ModeSection; stage: Stag
   const decks =
     useQuery({
       ...decksQuery(mode.scope),
-      select: (list) => new Map(list.map((d) => [d.id, d.nameEn] as const)),
-    }).data ?? new Map<string, string>();
+      select: (list) => new Map(list.map((d) => [d.id, d] as const)),
+    }).data ?? new Map<string, LifecycleDeck>();
   return (
     <>
       <CopyHeader scope={mode.scope} copy={stage.zones} fallbackTitle="Zones" />

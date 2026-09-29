@@ -11,7 +11,8 @@ export type PillKind =
   | "low"
   | "disputed"
   | "verified"
-  | "claimed";
+  | "claimed"
+  | "obsolete";
 
 /** Props for {@link Pill}. */
 export interface PillProps {

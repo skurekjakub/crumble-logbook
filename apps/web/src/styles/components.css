@@ -14,7 +14,7 @@ a.chip:hover{background:var(--accent-soft);color:var(--ink)}
 .pill.meta,.pill.high,.pill.verified{color:var(--good)}
 .pill.alt{color:var(--accent)}
 .pill.legacy{color:var(--ink-3)}
-.pill.niche,.pill.medium,.pill.claimed{color:var(--warn)}
+.pill.niche,.pill.medium,.pill.claimed,.pill.obsolete{color:var(--warn)}
 .pill.low,.pill.disputed{color:var(--bad)}
 
 /* takeaways (overview view): one ruled list, not a card per finding */

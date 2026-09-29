@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "@tanstack/react-router";
 import { useSourceIndex } from "../api/hooks";
 import {
   decksQuery,
@@ -9,7 +8,6 @@ import {
 } from "../api/queries";
 import type { DungeonExclusion, DungeonLineup } from "../api/types";
 import type { DungeonConfig, ModeSection } from "../app/modes";
-import { modeLink } from "../app/modes";
 import { AtkOrder } from "../components/AtkOrder";
 import { CookieName } from "../components/CookieName";
 import { EmptyState } from "../components/EmptyState";
@@ -18,8 +16,9 @@ import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
 import { EXCLUSION_KINDS, EXCLUSION_STATUSES, keptExclusions } from "../lib/dungeon";
+import type { LifecycleDeck } from "../lib/obsolete";
 import type { SourceIndex } from "../lib/sources";
-import { deckId } from "./DeckCard";
+import { DeckLink } from "./DeckLink";
 import { CopyHeader } from "./ModeViewHeader";
 
 /**
@@ -38,15 +37,16 @@ interface LineupContext {
   firstWave: number;
   /** Names a Korean cookie name in English, or null when the glossary doesn't know it. */
   en: (kr: string) => string | null;
-  /** Each deck's English name, by id, once the decks load. */
-  decks: ReadonlyMap<string, string> | undefined;
+  /** Each deck, by id, once the decks load. */
+  decks: ReadonlyMap<string, LifecycleDeck> | undefined;
   /** The exclusions list, by Korean name. */
   exclusions: ReadonlyMap<string, DungeonExclusion>;
   sources: SourceIndex;
 }
 
 /**
- * One lineup as a card: author and date, the deck it documents, the ATK
+ * One lineup as a card: author and date, the deck it documents (marked
+ * when the deck is obsolete), the ATK
  * order, the level rule, the first wave in the author's order (flagging the
  * cookies the exclusions list names), the cookies it leaves out with the
  * exclusions list's reason, and sources.
@@ -59,9 +59,7 @@ function LineupCard({ lineup: l, context }: { lineup: DungeonLineup; context: Li
   const kept = keptExclusions(l.first40, [...exclusions.values()]);
   const flagged = new Set(kept.map((e) => e.cookieKr));
   const deck = l.deckId ? (
-    <Link {...modeLink(mode.id, "/$mode/teams")} hash={deckId({ id: l.deckId })}>
-      {decks?.get(l.deckId) ?? l.deckId}
-    </Link>
+    <DeckLink mode={mode.id} id={l.deckId} deck={decks?.get(l.deckId)} />
   ) : null;
   const atkOrder = l.atkOrder.length ? (
     <AtkOrder order={l.atkOrder.map((kr) => ({ kr, en: en(kr) }))} />
@@ -162,7 +160,7 @@ export function DungeonLineupsView({ mode, dungeon }: DungeonLineupsViewProps) {
   }).data;
   const decks = useQuery({
     ...decksQuery(mode.scope),
-    select: (list) => new Map(list.map((d) => [d.id, d.nameEn] as const)),
+    select: (list) => new Map(list.map((d) => [d.id, d] as const)),
   }).data;
   const context: LineupContext = {
     mode,

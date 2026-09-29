@@ -17,6 +17,7 @@ import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { optionalKey, optionalText } from "../lib/search";
 import { formatPower } from "../lib/stage";
+import { DeckName } from "./DeckLink";
 import { CopyHeader } from "./ModeViewHeader";
 
 /** Select labels per result. */
@@ -118,7 +119,9 @@ export interface StageClearsViewProps {
  * under its own heading, the failures, the unverified claims and the
  * rejected ones. Every row shows the stage and boss, era, team power as
  * posted (with the stage's recommended power when known), bracket,
- * result, how it was played, what backs it, the deck, a note and sources.
+ * result, how it was played, what backs it, the deck (marked when it is
+ * obsolete; an attempt on an obsolete deck keeps its place, since it is a
+ * dated measurement), a note and sources.
  * A boss is named in English as its row names it, else as the stage
  * tables do, else as the glossary does. The result, era and a text filter
  * live in the URL and apply to every group; the text filter matches the
@@ -133,7 +136,7 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
   const clears = useQuery(stageClearsQuery());
   const decks = useQuery({
     ...decksQuery(mode.scope),
-    select: (list) => new Map(list.map((d) => [d.id, d.nameEn] as const)),
+    select: (list) => new Map(list.map((d) => [d.id, d] as const)),
   }).data;
   const chapters = useQuery(stageChaptersQuery()).data ?? [];
   const slots = useQuery(stageZoneSlotsQuery()).data ?? [];
@@ -154,7 +157,7 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
    * @param c - the attempt
    * @returns the deck's English name (its id before the decks load), or null without a deck
    */
-  const deckOf = (c: StageClear) => (c.deckId ? (decks?.get(c.deckId) ?? c.deckId) : null);
+  const deckOf = (c: StageClear) => (c.deckId ? (decks?.get(c.deckId)?.nameEn ?? c.deckId) : null);
   const columns: Column<StageClear>[] = [
     { header: "Stage", cell: (c) => `${c.chapter}-${c.stageNo}`, className: "n" },
     { header: "Boss", cell: (c) => <CookieName kr={c.bossKr} en={bossEnOf(c)} /> },
@@ -182,7 +185,10 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
         <Pill kind={c.evidence === "screenshot" ? "verified" : "claimed"}>{c.evidence}</Pill>
       ),
     },
-    { header: "Deck", cell: (c) => deckOf(c) ?? "–" },
+    {
+      header: "Deck",
+      cell: (c) => (c.deckId ? <DeckName id={c.deckId} deck={decks?.get(c.deckId)} /> : "–"),
+    },
     { header: "Note", cell: (c) => c.note ?? "", className: "wide" },
     { header: "Sources", cell: (c) => <SourceChips ids={c.sources} sources={sources} /> },
   ];

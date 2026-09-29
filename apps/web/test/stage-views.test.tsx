@@ -365,6 +365,32 @@ describe("the zone board", () => {
   });
 });
 
+describe("rows that name an obsolete deck", () => {
+  const retired: Record<string, Canned> = {
+    ...API,
+    "/api/decks?mode=stage": {
+      body: [{ ...DECKS[0]!, obsoleteSince: "2026-10-12", obsoleteReason: "Patched." }, DECKS[1]!],
+    },
+  };
+
+  it("marks the deck obsolete beside its link on the zone board", async () => {
+    await renderRoute("/stage/zones", retired, { mode: STAGE });
+    const zone = (await screen.findByRole("heading", { name: /Ruined City/ })).closest("section")!;
+    const link = await within(zone).findByRole("link", { name: "Charge deck" });
+    await waitFor(() =>
+      expect(link.parentElement!.querySelector(".pill.obsolete")).toHaveTextContent("obsolete"),
+    );
+  });
+
+  it("marks the deck obsolete on the clears list, and keeps the clears in their ranking", async () => {
+    await renderRoute("/stage/clears", retired, { mode: STAGE });
+    const ranked = await screen.findByRole("region", { name: "Ranked clears" });
+    await waitFor(() => expect(ranked.querySelector(".pill.obsolete")).not.toBeNull());
+    expect(bodyRows(ranked)).toHaveLength(1);
+    expect(bodyRows(ranked)[0]).toContain("Charge deck obsolete");
+  });
+});
+
 describe("the clears list", () => {
   it("lists attempts in the API's order, furthest stage first", async () => {
     await renderStage("/stage/clears");
