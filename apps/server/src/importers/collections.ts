@@ -17,7 +17,14 @@ import { deckModeMismatch } from "../services/deck-modes";
 import { findCapture } from "./captures";
 import { DUNGEON_COLLECTIONS } from "./dungeon-collections";
 import type { Collection } from "./collection-kit";
-import { citedRows, collection, modedRows, parseModedRows, parseRows } from "./collection-kit";
+import {
+  checkObsoleteDates,
+  citedRows,
+  collection,
+  modedRows,
+  parseModedRows,
+  parseRows,
+} from "./collection-kit";
 import { parseFile } from "./files";
 import {
   mapCounter,
@@ -207,7 +214,9 @@ export const COLLECTIONS = {
         decks: deck.obsolete?.superseded_by ? [deck.obsolete.superseded_by] : [],
       })),
     /** @inheritdoc */
-    check: (file, decks, { deckModes }) => {
+    check: (file, decks, context) => {
+      checkObsoleteDates(file, decks, context);
+      const { deckModes } = context;
       decks.forEach((deck, index) => {
         const successor = deck.obsolete?.superseded_by;
         if (successor === undefined) return;
@@ -257,6 +266,10 @@ export const COLLECTIONS = {
         sources: [...rune.sources, ...(rune.obsolete?.sources ?? [])],
         decks: rune.decks,
       })),
+    /** @inheritdoc */
+    check: (file, runes, context) => {
+      checkObsoleteDates(file, runes, context);
+    },
     /** @inheritdoc */
     prepare: (runes) => [
       (repos, { record }) => {
@@ -327,7 +340,9 @@ export const COLLECTIONS = {
   counters: collection({
     ...counterRows,
     optional: true,
-    check: (file, edges, { deckModes, obsoleteDecks }) => {
+    check: (file, edges, context) => {
+      checkObsoleteDates(file, edges, context);
+      const { deckModes, obsoleteDecks } = context;
       edges.forEach((edge, index) => {
         for (const deck of [edge.team, edge.beaten_by]) {
           const mismatch = deckModeMismatch("counter", edge.mode, deck, deckModes.get(deck));

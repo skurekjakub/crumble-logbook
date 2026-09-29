@@ -34,10 +34,14 @@ function pvpCopy(slug: string, edit: Record<string, (rows: Row[]) => void> = {})
   return recordCopy(pvpDir, slug, edit);
 }
 
+/** The refresh round the copies stand for: their `meta.json` is updated on it. */
+const ROUND = "2026-10-12";
+
 /**
  * Builds a throwaway copy of a record's curated dataset, under its own
- * slug, with no evidence, capture rules or ledger, after applying `edit`
- * to its curated array files.
+ * slug, with no evidence, capture rules or ledger, updated on {@link ROUND}
+ * as a refresh round leaves it, after applying `edit` to its curated array
+ * files.
  *
  * @param recordDir - the record to copy
  * @param slug - the copy's record slug
@@ -53,6 +57,9 @@ function recordCopy(
   const dir = join(tmp, slug);
   cpSync(join(recordDir, "curated"), join(dir, "curated"), { recursive: true });
   mkdirSync(join(dir, "extract"), { recursive: true });
+  const metaPath = join(dir, "curated", "meta.json");
+  const meta = JSON.parse(readFileSync(metaPath, "utf-8")) as Row;
+  writeFileSync(metaPath, JSON.stringify({ ...meta, updated: ROUND }));
   for (const [name, change] of Object.entries(edit)) {
     const path = join(dir, "curated", name);
     const rows = JSON.parse(readFileSync(path, "utf-8")) as Row[];
@@ -234,6 +241,26 @@ describe("the obsolete block's checks", IMPORT, () => {
     });
     expect(() => importRecord(testStore(), day)).toThrow(
       /obsolete\.since: not a date on the calendar/,
+    );
+  });
+
+  it("rejects an obsolete block dated after the record's last update, the round that marked it", () => {
+    const later = pvpCopy("925-pvp-copy", {
+      "gear.json": (rows) => {
+        rows[0]!.obsolete = { ...RETIRED, since: "2026-10-13" };
+      },
+    });
+    expect(() => importRecord(testStore(), later)).toThrow(
+      /curated\/gear\.json \[0\]: obsolete since 2026-10-13 is after the record's update of 2026-10-12/,
+    );
+    const deckLater = pvpCopy("926-pvp-copy", {
+      ...retireFiveRanged,
+      "decks.json": (rows) => {
+        byId(rows, "arena-five-ranged").obsolete = { ...RETIRED, since: "2026-11-01" };
+      },
+    });
+    expect(() => importRecord(testStore(), deckLater)).toThrow(
+      /curated\/decks\.json \[\d+\]: obsolete since 2026-11-01 is after the record's update/,
     );
     const reason = pvpCopy("917-pvp-copy", {
       "gear.json": (rows) => {

@@ -142,6 +142,7 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
     obsoleteDecks: new Set(
       (parsed.decks ?? []).filter((deck) => deck.obsolete !== undefined).map((deck) => deck.id),
     ),
+    updated: parsed.meta?.updated,
   };
   for (const [name, collection] of ORDERED) {
     if (parsed[name] !== undefined) collection.check?.(files[name]!, parsed[name], context);

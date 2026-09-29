@@ -42,6 +42,8 @@ export interface CheckContext {
   deckModes: ReadonlyMap<string, GameMode>;
   /** The ids of the curated decks marked obsolete. */
   obsoleteDecks: ReadonlySet<string>;
+  /** The day the record was last updated (`meta.json`'s `updated`), when it has a meta file. */
+  updated: string | undefined;
 }
 
 /** What a collection's rows are mapped with, besides the rows themselves. */
@@ -157,6 +159,34 @@ export function checkCurrentDecks(
 }
 
 /**
+ * Checks that no row was marked obsolete after the record's last update:
+ * the round that marks a row obsolete updates the record, so an `obsolete`
+ * block dated later names a day no round has reached.
+ *
+ * @param file - the file, as errors name it
+ * @param rows - the collection's rows, in file order
+ * @param context - the record's last update
+ * @throws {ImportError} naming the file and row of the first block dated after it
+ */
+export function checkObsoleteDates(
+  file: string,
+  rows: ReadonlyArray<{ obsolete?: { since: string } | undefined }>,
+  { updated }: CheckContext,
+): void {
+  if (updated === undefined) return;
+  rows.forEach((row, index) => {
+    const since = row.obsolete?.since;
+    if (since !== undefined && since > updated) {
+      throw new ImportError(
+        file,
+        index,
+        `obsolete since ${since} is after the record's update of ${updated}`,
+      );
+    }
+  });
+}
+
+/**
  * Validates every row of an array file with `schema`.
  *
  * @param file - the file's record-relative path, as errors name it
@@ -250,6 +280,10 @@ export function citedRows<
         sources: [...row.sources, ...(row.obsolete?.sources ?? [])],
         decks: decks?.(row),
       })),
+    /** @inheritdoc */
+    check: (file, rows, context) => {
+      checkObsoleteDates(file, rows, context);
+    },
     /** @inheritdoc */
     prepare: (rows) => [
       insertCited(
