@@ -12,7 +12,8 @@ import { formatIssues } from "./files";
  * every curated row that states none; without it, the record takes its
  * mode from `meta.json`'s `modes` block, as `mapMeta` says, and the import
  * fails if there is none), where the curated dataset and the extractions
- * live, how to find each source's evidence capture, and one field per
+ * live (one folder, or a list whose earlier folders' summaries win), how
+ * to find each source's evidence capture, and one field per
  * extra block (see `EXTRAS` in `extras.ts`). Every path is relative to the
  * record directory; a capture rule's `dir` may climb into another record's
  * evidence (`../<slug>/evidence/...`). An unknown key fails, at the top
@@ -27,7 +28,7 @@ export const importManifest = z.strictObject({
     mode: z.enum(GAME_MODE).optional(),
   }),
   curated: z.string().min(1),
-  extractions: z.string().min(1),
+  extractions: z.union([z.string().min(1), z.array(z.string().min(1)).min(1)]),
   captures: z.array(
     z.strictObject({
       site: z.enum(["dc", "nv"]),

@@ -26,21 +26,25 @@ function postSourceId(post: ExtractionPost): string {
 /**
  * Collects the English summary of every extracted post, keyed by source id.
  *
- * Reads every `*.json` file of `dir` in file-name order; each holds a
- * `posts` array. The first non-empty `summary_en` seen for a source id wins.
+ * Reads the folders in the order given, and each folder's `*.json` files in
+ * file-name order; each file holds a `posts` array. The first non-empty
+ * `summary_en` seen for a source id wins, so an earlier folder's summary
+ * (a refresh round's) takes precedence over a later one's.
  *
- * @param dir - absolute path to the extraction directory
+ * @param dirs - absolute path to the extraction directory, or to each of them
  * @returns a map from source id (`dc:…`, `nv:…`, `web:…`) to its summary
  * @throws {ImportError} naming the file, if one can't be read or isn't
  *   valid JSON
  */
-export function loadSummaries(dir: string): Map<string, string> {
+export function loadSummaries(dirs: string | readonly string[]): Map<string, string> {
   const summaries = new Map<string, string>();
-  const files = readdirSync(dir)
-    .filter((name) => name.endsWith(".json"))
-    .sort();
-  for (const name of files) {
-    const file = join(dir, name);
+  const files = (typeof dirs === "string" ? [dirs] : dirs).flatMap((dir) =>
+    readdirSync(dir)
+      .filter((name) => name.endsWith(".json"))
+      .sort()
+      .map((name) => join(dir, name)),
+  );
+  for (const file of files) {
     let data: { posts?: ExtractionPost[] };
     try {
       data = JSON.parse(readFileSync(file, "utf-8")) as typeof data;

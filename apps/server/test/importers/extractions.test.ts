@@ -34,6 +34,27 @@ describe("loadSummaries", () => {
     expect(summaries.has("dc:70000")).toBe(false);
   });
 
+  it("reads every folder of a list, an earlier folder's summary winning", () => {
+    const round = mkdtempSync(join(tmpdir(), "crumble-extract-"));
+    try {
+      writeFileSync(
+        join(round, "dc.json"),
+        JSON.stringify({
+          posts: [
+            { source: "dc", id: "76135", summary_en: "The edited post's new lineup." },
+            { source: "dc", id: "80000", summary_en: "A post only the round extracted." },
+          ],
+        }),
+      );
+      const summaries = loadSummaries([round, fixtureDir]);
+      expect(summaries.get("dc:76135")).toBe("The edited post's new lineup.");
+      expect(summaries.get("dc:80000")).toBe("A post only the round extracted.");
+      expect(summaries.get("nv:43653")).toBe("The Cherry deck guide.");
+    } finally {
+      rmSync(round, { recursive: true, force: true });
+    }
+  });
+
   it("throws an ImportError naming a file that fails to parse", () => {
     const dir = mkdtempSync(join(tmpdir(), "crumble-extract-"));
     try {

@@ -47,6 +47,20 @@ describe("importManifest", () => {
     expect(importManifest.safeParse(valid).success).toBe(true);
   });
 
+  it("takes the extractions as one folder or as a list of folders, never an empty list", () => {
+    const withExtractions = (extractions: unknown) => ({ ...valid, extractions });
+    expect(importManifest.parse(withExtractions("evidence/08-extract")).extractions).toBe(
+      "evidence/08-extract",
+    );
+    expect(
+      importManifest.parse(
+        withExtractions(["evidence/r2026-10-12/08-extract", "evidence/08-extract"]),
+      ).extractions,
+    ).toEqual(["evidence/r2026-10-12/08-extract", "evidence/08-extract"]);
+    expect(importManifest.safeParse(withExtractions([])).success).toBe(false);
+    expect(importManifest.safeParse(withExtractions([""])).success).toBe(false);
+  });
+
   it("makes season, guild, power and ref columns optional", () => {
     const spec = {
       ...valid.rankings[0],

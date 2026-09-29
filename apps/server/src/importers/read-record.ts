@@ -176,7 +176,12 @@ export function readRecord(recordDir: string): RecordPlan {
   const context = {
     recordDir,
     manifest,
-    summaries: loadSummaries(join(recordDir, manifest.extractions)),
+    summaries: loadSummaries(
+      (typeof manifest.extractions === "string"
+        ? [manifest.extractions]
+        : manifest.extractions
+      ).map((dir) => join(recordDir, dir)),
+    ),
   };
 
   const steps: WriteStep[] = [];

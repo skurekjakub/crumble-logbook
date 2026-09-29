@@ -482,6 +482,32 @@ describe("importRecord validation", () => {
     expect(Object.values(tableCounts(store)).every((n) => n === 0)).toBe(true);
   }
 
+  it("reads summaries from every folder the manifest's extractions list, a round's first", () => {
+    const dir = tempRecord(null, () => {}, {
+      manifest: { extractions: ["round-extract", "extract"] },
+    });
+    mkdirSync(join(dir, "round-extract"));
+    writeFileSync(
+      join(dir, "round-extract", "dc.json"),
+      JSON.stringify({
+        posts: [{ source: "dc", id: "76135", summary_en: "The round's reading." }],
+      }),
+    );
+    writeFileSync(
+      join(dir, "extract", "dc.json"),
+      JSON.stringify({
+        posts: [
+          { source: "dc", id: "76135", summary_en: "The first round's reading." },
+          { source: "dc", id: "76235", summary_en: "Only the first round read this." },
+        ],
+      }),
+    );
+    const store = testStore();
+    importRecord(store, dir);
+    expect(store.repos.sources.get("dc:76135")?.summaryEn).toBe("The round's reading.");
+    expect(store.repos.sources.get("dc:76235")?.summaryEn).toBe("Only the first round read this.");
+  });
+
   it("accepts a curated manifest that leaves out scores, counters and usage", () => {
     const dir = tempRecord(null, () => {});
     editJson<{ collections: Record<string, string> }>(dir, "curated/manifest.json", (m) => {
