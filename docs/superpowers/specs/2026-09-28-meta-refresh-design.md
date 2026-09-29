@@ -22,7 +22,7 @@ An area is a record under `research/` whose `import.json` names a mode. A round 
 - **Evidence.** The round's captures go into `evidence/r<date>/`, with the same subfolder layout the record's first round uses (`02-dc/`, `04-naver/`, `05-youtube/`, `03-sites/`, `08-extract/`, `06-derived/`). Each capture gets its ledger line in the record's single `evidence/captures.jsonl`. Nothing from an earlier round is touched; a changed page is a new capture in the new round.
 - **Searches.** Baseline plus discovery (section 3).
 - **Curated data.** Updated in place from the round's evidence together with earlier evidence that still holds. A deck still in use keeps its id and gets its figures, levels and whys refreshed. A new build becomes a new deck. A displaced recommendation is marked obsolete (section 2), not deleted.
-- **README.** The verdict and the sections under it are rewritten to the current answer. A new `## Refresh <date>` section records the patch window the round covered, the changelog (recommendations added, obsoleted, changed and un-obsoleted, each with its evidence pointer), and what the round couldn't settle. Earlier refresh sections stay, newest first. The record's `updatedAt` in `import.json` moves to the round date.
+- **README.** The verdict and the sections under it are rewritten to the current answer. A new `## Refresh <date>` section records the patch window the round covered, the changelog (recommendations added, obsoleted, changed and un-obsoleted, each with its evidence pointer), and what the round couldn't settle. Earlier refresh sections stay, newest first. The record's `updated` in `curated/meta.json` moves to the round date (`import.json` has no such field, and its schema is strict).
 - **Trail.** The round's queries and syntheses are appended to `research-trail.md` under the round's date.
 
 ## 2. The obsolete lifecycle
@@ -30,7 +30,7 @@ An area is a record under `research/` whose `import.json` names a mode. A round 
 Applies to every recommendation table: `decks`, `rune_builds`, `gear_recs` and `counters`.
 
 - **Columns.** `obsolete_since` (ISO date, null while current) and `obsolete_reason` (text). Decks also get `superseded_by`, a nullable deck id. The reason is cited like any other claim: its sources become citations of a new cited-entity kind for obsolescence, keyed by the entity and its id. A deck keeps its `status` (`meta`, `alt`, `niche`, `legacy`), so the page can say what it was.
-- **Curated shape.** A recommendation in a curated file may carry `"obsolete": { "since": "2026-10-12", "reason": "…", "sources": ["dc:…"], "supersededBy": "…" }`. The importer validates it (the date, the sources exist, `supersededBy` names a deck of the same mode) and fills the columns and citations.
+- **Curated shape.** A recommendation in a curated file may carry `"obsolete": { "since": "2026-10-12", "reason": "…", "sources": ["dc:…"], "superseded_by": "…" }` (the importer's snake_case, as its other curated fields). The importer validates it (the date, the sources exist, `superseded_by` names a deck of the same mode) and fills the columns and citations.
 - **When a recommendation becomes obsolete.** Only on evidence in the round: a patch changed a mechanic it depends on and the round's scores or usage show it dropped out, or sources say outright that it no longer works, or a documented build beats it on damage or score in the same slot. Not being mentioned in the round is not evidence. That recommendation stays current, and the refresh section lists it as unconfirmed this round.
 - **`since`** is the date of the patch that displaced it, when the evidence ties it to one, or the round's date otherwise.
 - **Reversal.** A later round can clear `obsolete` on evidence; the changelog lists it as un-obsoleted.
@@ -73,7 +73,7 @@ The worktrees' gitignored media is copied into the main checkout before a worktr
 - **Authoring** follows `superpowers:writing-skills`.
   - First, a baseline run without the skill: give a subagent a refresh request on one area and record where it goes wrong. The likely failures are editing earlier captures, deleting displaced decks, rerunning only old searches, skipping the ledger, and ranking by 배.
   - Then the skill is written against those failures, and the same scenario reruns with it until the failures are gone.
-- **Acceptance** is a real round on one area, merged and reviewed, before the skill is used across all of them.
+- **Acceptance** is a real round on one area, merged and reviewed, before the skill is used across all of them. The skill enforces it: while no record has a refresh section, a round runs on `001-guild-conquest-meta` alone.
 - **`deep-research`'s repo section** is stale: it points at the Python scrapers and the dropped `scrape:*` jobs. It is updated to the `pnpm capture` commands, the ledger, and a pointer to `refresh-meta` for rounds after a record's first.
 
 ## 6. App work this needs

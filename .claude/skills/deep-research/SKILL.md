@@ -108,7 +108,9 @@ capture; a later measurement is a new file. Prettier skips the folder; nothing e
   them.
 - Do not `EnterWorktree` while a subagent runs in the primary checkout — the isolation guard
   refuses its Bash from that moment. Research happens in the primary checkout; the change it
-  recommends is the flow that branches.
+  recommends is the flow that branches. An agent dispatched into its own worktree
+  (`isolation: "worktree"`, as `refresh-meta`'s area agents are) works there by design; the
+  rule is about the session that dispatched a subagent into the primary checkout.
 
 ## Rationalizations
 
@@ -144,7 +146,10 @@ community, and the steps map as follows.
 - Records live in `research/NNN-<slug>/`: `README.md`, `research-trail.md` and `evidence/`,
   numbered in capture order; a record the app loads also has `import.json`, `curated/` and
   `searches.json`, its saved searches (schema `packages/capture/src/searches.ts`). Record
-  `003-stage-pushing-meta` shows the current evidence layout.
+  `003-stage-pushing-meta` shows the current evidence layout. The records test holds a new
+  importable record to both: `import.json` carries `"ledger": { "file": "evidence/captures.jsonl" }`,
+  and `searches.json` saves the searches the first round ran, each dated to `import.json`'s
+  `startedAt`.
 - "Measure" means capture: forum posts, comments, images, ranking pages and videos saved
   verbatim into `evidence/` with `pnpm capture` (`README.md` § Captures lists the commands and
   their arguments): `dc list` and `dc fetch`, `naver list` and `naver fetch`, `crumbgg

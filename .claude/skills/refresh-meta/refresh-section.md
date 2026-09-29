@@ -19,6 +19,7 @@ mode, each with its evidence pointer>, or "none".
 | obsoleted since <date> | <kind, id and name>: <reason>; superseded by <id> | `evidence/rYYYY-MM-DD/…` |
 | changed | <kind, id and name>: <what: figures, levels, whys, the deck a zone slot or lineup names> | `evidence/rYYYY-MM-DD/…` |
 | un-obsoleted | <kind, id and name>: <why it holds again> | `evidence/rYYYY-MM-DD/…` |
+| re-captured | <source id>: <what changed on the page>; rows curated from the earlier text | `evidence/rYYYY-MM-DD/…`, earlier `evidence/…` |
 
 A round that changed nothing says so in one line instead of the table.
 
