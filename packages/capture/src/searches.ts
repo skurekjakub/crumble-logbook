@@ -123,3 +123,50 @@ export function readSearches(recordDir: string): SavedSearch[] | null {
   if (!existsSync(file)) return null;
   return searchesFile.parse(JSON.parse(readFileSync(file, "utf-8")));
 }
+
+/** A README heading a refresh round adds: `## Refresh YYYY-MM-DD`. */
+const REFRESH_HEADING = /^## Refresh (\d{4}-\d{2}-\d{2})\b/gm;
+
+/**
+ * Lists the rounds a record has run: its first, the day its
+ * `import.json` says it started, and each round a `## Refresh <date>`
+ * section of its README records.
+ *
+ * @param recordDir - absolute path to the record folder
+ * @returns the rounds' dates, sorted
+ * @throws `Error` when the record has no `import.json` or no README, and
+ *   `SyntaxError` when `import.json` isn't JSON
+ */
+export function recordRounds(recordDir: string): string[] {
+  const manifest = JSON.parse(readFileSync(join(recordDir, "import.json"), "utf-8")) as {
+    record?: { startedAt?: unknown };
+  };
+  const readme = readFileSync(join(recordDir, "README.md"), "utf-8");
+  const rounds = new Set([...readme.matchAll(REFRESH_HEADING)].map((match) => match[1]!));
+  const started = manifest.record?.startedAt;
+  if (typeof started === "string") rounds.add(started);
+  return [...rounds].sort();
+}
+
+/**
+ * Checks that each saved search was added in, and last found something in,
+ * a round the record ran.
+ *
+ * @param searches - the record's saved searches
+ * @param rounds - the record's rounds (see {@link recordRounds})
+ * @returns one line per date that isn't a round, naming the search; empty when every date is
+ */
+export function searchRoundProblems(
+  searches: readonly SavedSearch[],
+  rounds: readonly string[],
+): string[] {
+  const ran = new Set(rounds);
+  return searches.flatMap((search) =>
+    (["added", "lastHit"] as const).flatMap((field) => {
+      const date = search[field];
+      return date === null || ran.has(date)
+        ? []
+        : [`${search.id}: ${field} ${date} isn't a round the record ran`];
+    }),
+  );
+}

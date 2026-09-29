@@ -227,6 +227,14 @@ describe("the obsolete block's checks", IMPORT, () => {
       },
     });
     expect(() => importRecord(testStore(), date)).toThrow(/obsolete\.since: expected YYYY-MM-DD/);
+    const day = pvpCopy("924-pvp-copy", {
+      "gear.json": (rows) => {
+        rows[0]!.obsolete = { ...RETIRED, since: "2026-02-30" };
+      },
+    });
+    expect(() => importRecord(testStore(), day)).toThrow(
+      /obsolete\.since: not a date on the calendar/,
+    );
     const reason = pvpCopy("917-pvp-copy", {
       "gear.json": (rows) => {
         rows[0]!.obsolete = { since: RETIRED.since, sources: RETIRED.sources };

@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { describeProblem, hasLedger, LEDGER_FILE, verifyLedger } from "../src/ledger";
 import { researchDir } from "../src/paths";
-import { readSearches, SEARCHES_FILE } from "../src/searches";
+import { readSearches, recordRounds, SEARCHES_FILE, searchRoundProblems } from "../src/searches";
 
 /**
  * A record's whole verification with a cold hash cache: every present
@@ -67,7 +67,7 @@ describe("every area's saved searches", () => {
   });
 
   for (const area of areas) {
-    it(`${area}: its searches.json is a valid search list, and present once a refresh round ran`, () => {
+    it(`${area}: its searches.json is a valid search list, dated by rounds the record ran, and present once a refresh round ran`, () => {
       const dir = join(researchDir, area);
       const refreshed = REFRESH_SECTION.test(readFileSync(join(dir, "README.md"), "utf-8"));
       const searches = readSearches(dir);
@@ -75,6 +75,7 @@ describe("every area's saved searches", () => {
         searches !== null || !refreshed,
         `${area} has a refresh section and no ${SEARCHES_FILE}`,
       ).toBe(true);
+      expect(searchRoundProblems(searches ?? [], recordRounds(dir))).toEqual([]);
     });
   }
 });

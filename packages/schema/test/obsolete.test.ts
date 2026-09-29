@@ -9,7 +9,7 @@ import {
   parseObsolescenceKey,
 } from "../src/obsolete";
 import { counters, decks, gearRecs, runeBuilds } from "../src/tables";
-import { deckInsert, gearRecInsert } from "../src/zod";
+import { deckInsert, gearRecInsert, isoDate } from "../src/zod";
 import { createTestDb } from "./helpers";
 
 describe("the obsolete lifecycle", () => {
@@ -93,6 +93,17 @@ describe("the obsolete lifecycle", () => {
     expect(deckInsert.safeParse({ ...base, supersededBy: "Not A Slug" }).success).toBe(false);
     const gear = { slot: "top_left", substats: "s", context: "raid", why: "w" };
     expect(gearRecInsert.safeParse({ ...gear, obsoleteSince: "soon" }).success).toBe(false);
+  });
+
+  it("takes only dates on the calendar", () => {
+    for (const ok of ["2026-10-12", "2024-02-29", "2026-12-31"]) {
+      expect(isoDate.safeParse(ok).success, ok).toBe(true);
+    }
+    for (const bad of ["2026-13-45", "2026-02-30", "2025-02-29", "2026-00-10", "2026-04-31"]) {
+      expect(isoDate.safeParse(bad).success, bad).toBe(false);
+    }
+    const base = { id: "d", position: 0, nameEn: "d", status: "meta" };
+    expect(deckInsert.safeParse({ ...base, obsoleteSince: "2026-02-30" }).success).toBe(false);
   });
 
   it("keeps the lifecycle columns out of every API input", () => {
