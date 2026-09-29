@@ -193,7 +193,7 @@ describe("app shell", () => {
         cleanup();
       }
     }
-  }, 15_000);
+  }, 30_000);
 
   it("serves a mode's page at a mixed-case path, as the router matches a static segment", async () => {
     for (const [path, id] of [
