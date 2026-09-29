@@ -12,6 +12,7 @@ export * from "./context";
 export * from "./html";
 export * from "./http";
 export * from "./ledger";
+export * from "./searches";
 export * from "./text";
 export * from "./time";
 export * as crumbgg from "./crumbgg";
