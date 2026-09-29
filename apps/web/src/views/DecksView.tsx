@@ -20,7 +20,8 @@ const OBSOLETE_ID = "decks-obsolete";
  * legend, with an "On this page" list linking to each current card and to
  * the Obsolete section. The obsolete decks end the page in that collapsed
  * section, each card in full under its notice; it opens when the address
- * names one of them. "No decks recorded yet." when there are none, and
+ * names one of them, and stays open when the address moves on, e.g. to a
+ * successor's card. "No decks recorded yet." when there are none, and
  * "No current decks." above the section when every deck is obsolete.
  *
  * @param mode - the mode whose decks and copy the view shows
@@ -60,7 +61,7 @@ export function DecksView({ mode }: { mode: ModeSection }) {
               <ObsoleteSection
                 id={OBSOLETE_ID}
                 latest={obsolete[0]?.obsoleteSince ?? null}
-                open={obsolete.some((d) => deckId(d) === hash)}
+                reveal={hash}
               >
                 {obsolete.map((d) => (
                   <DeckCard key={d.id} deck={d} sources={sources} deckName={deckName} />

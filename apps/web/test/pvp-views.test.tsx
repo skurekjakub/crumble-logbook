@@ -607,6 +607,28 @@ describe("PvP teams, obsolete", () => {
     expect(section).toHaveAttribute("open");
   });
 
+  it("keeps the Obsolete section open when the address moves to the successor, and reopens it for the next obsolete card", async () => {
+    const chain = deck("old-chain", 5, "Old chain deck", {
+      status: "legacy",
+      obsoleteSince: "2026-10-01",
+      obsoleteReason: "Outclassed.",
+    });
+    const router = await renderAt("/arena/teams#deck-ranged", ARENA, {
+      "/api/decks?mode=arena": { body: [...DECKS, RANGED, chain] },
+    });
+    const section = (await panel().findByText("Obsolete", { selector: "summary .label" })).closest(
+      "details",
+    )!;
+    await waitFor(() => expect(section.open).toBe(true));
+    const teams = { to: "/$mode/teams", params: { mode: "arena" } } as const;
+    await router.navigate({ ...teams, hash: "deck-rye" });
+    await waitFor(() => expect(router.state.location.hash).toBe("deck-rye"));
+    expect(section.open).toBe(true);
+    section.open = false;
+    await router.navigate({ ...teams, hash: "deck-old-chain" });
+    await waitFor(() => expect(section.open).toBe(true));
+  });
+
   it("says so when every team is obsolete", async () => {
     await renderAt("/arena/teams", ARENA, { "/api/decks?mode=arena": { body: [RANGED] } });
     expect(await panel().findByText("No current decks.")).toHaveClass("empty");

@@ -45,10 +45,10 @@ describe("ObsoleteSection", () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it("is collapsed, dated by its latest item, and opens when asked", () => {
+  it("is collapsed, dated by its latest item, and opens when the address names an item in it", () => {
     const { rerender } = render(
       <ObsoleteSection id="decks-obsolete" latest="2026-10-12">
-        <p>old deck</p>
+        <p id="deck-a">old deck</p>
       </ObsoleteSection>,
     );
     const section = document.getElementById("decks-obsolete")!;
@@ -57,10 +57,33 @@ describe("ObsoleteSection", () => {
     expect(section.querySelector("summary")).toHaveTextContent("Obsolete · latest 2026-10-12");
     expect(within(section).getByText("old deck")).toBeInTheDocument();
     rerender(
-      <ObsoleteSection id="decks-obsolete" latest="2026-10-12" open>
-        <p>old deck</p>
+      <ObsoleteSection id="decks-obsolete" latest="2026-10-12" reveal="deck-a">
+        <p id="deck-a">old deck</p>
       </ObsoleteSection>,
     );
     expect(document.getElementById("decks-obsolete")).toHaveAttribute("open");
+  });
+
+  it("never closes itself when the address moves on, and reopens for the next item it names", () => {
+    /**
+     * Renders the section with the address naming `reveal`.
+     *
+     * @param reveal - the id the address names, if any
+     * @returns the section's element
+     */
+    const view = (reveal?: string) => (
+      <ObsoleteSection id="decks-obsolete" latest="2026-10-12" reveal={reveal}>
+        <p id="deck-a">old deck</p>
+        <p id="deck-b">older deck</p>
+      </ObsoleteSection>
+    );
+    const { rerender } = render(view("deck-a"));
+    const section = document.getElementById("decks-obsolete") as HTMLDetailsElement;
+    expect(section.open).toBe(true);
+    rerender(view("deck-current"));
+    expect(section.open).toBe(true);
+    section.open = false;
+    rerender(view("deck-b"));
+    expect(section.open).toBe(true);
   });
 });

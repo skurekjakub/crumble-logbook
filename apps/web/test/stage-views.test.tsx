@@ -9,6 +9,7 @@ import type {
   RiftBoss,
   RiftLevel,
   RiftSeason,
+  RuneBuild,
   Source,
   StageChapter,
   StageClear,
@@ -17,7 +18,7 @@ import type {
 } from "../src/api/types";
 import { STAGE } from "../src/app/modes";
 import type { Canned } from "./helpers";
-import { CURRENT_DECK } from "./helpers";
+import { CURRENT, CURRENT_DECK } from "./helpers";
 import { bodyRows, renderRoute, VIEW_SOURCES } from "./view-harness";
 
 const SLUG = "003-stage-pushing-meta";
@@ -555,6 +556,47 @@ describe("the Dimensional Rift page", () => {
     await waitFor(() => expect(findings).toHaveTextContent("Clear 328-30 Entered the Rift after."));
     expect(findings).toHaveTextContent("Deck: Charge deck Scorpion Cookie: His Rift deck.");
     expect(findings).not.toHaveTextContent("Deck: Rift shred deck");
+  });
+
+  it("leaves obsolete decks and rune builds off the Rift page, asking the API for current ones", async () => {
+    const retired = { obsoleteSince: "2026-10-12", obsoleteReason: "Patched." };
+    const oldShred = { ...DECKS[1]!, ...retired };
+    const oldCharge = {
+      ...deck("old-charge", "Old charge deck"),
+      ...retired,
+      summary: "Ran the Rift before the patch.",
+    };
+    const oldRune: RuneBuild = {
+      ...CURRENT,
+      ...retired,
+      id: 9,
+      cookieKr: "호밀",
+      en: "Rye",
+      mode: "stage",
+      recordSlug: SLUG,
+      lines: "Old Rift lines",
+      why: "For the Rift before the patch.",
+      disputed: null,
+      decks: ["rift-shred"],
+      sources: ["dc:76835"],
+    };
+    await renderRoute(
+      "/stage/rift",
+      {
+        ...API,
+        "/api/decks?mode=stage": { body: [DECKS[0]!, oldShred, oldCharge] },
+        "/api/decks?mode=stage&current=true": { body: [DECKS[0]!] },
+        "/api/rune-builds?mode=stage": { body: [oldRune] },
+        "/api/rune-builds?mode=stage&current=true": { body: [] },
+      },
+      { mode: STAGE },
+    );
+    expect(await screen.findByText("No Rift decks recorded yet.")).toBeVisible();
+    expect(screen.queryByRole("heading", { name: /Rift shred deck/ })).toBeNull();
+    const main = screen.getByRole("main");
+    await waitFor(() => expect(main).toHaveTextContent("Levels"));
+    expect(main).not.toHaveTextContent("Old charge deck");
+    expect(main).not.toHaveTextContent("Old Rift lines");
   });
 
   it("shows the Rift decks with their cookies and the record's other Rift findings", async () => {
