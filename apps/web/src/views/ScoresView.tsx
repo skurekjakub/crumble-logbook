@@ -15,6 +15,7 @@ import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
 import { ErrorBox } from "../components/ErrorBox";
+import { ObsoleteSection } from "../components/ObsoleteSection";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { Scatter } from "../components/Scatter";
@@ -24,10 +25,12 @@ import { ViewHeader } from "../components/ViewHeader";
 import type { DeckSeries } from "../lib/deck-series";
 import { deckSeries } from "../lib/deck-series";
 import { formatG, formatRatio, ratio } from "../lib/format";
+import { groupByObsoleteDeck, splitByDeck } from "../lib/obsolete";
 import { boardSeasons, latestCapture } from "../lib/rankings";
 import { optionalInt, optionalKey, optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
 import { ModeViewHeader } from "./ModeViewHeader";
+import { ObsoleteDeckRows } from "./ObsoleteDeckRows";
 
 /** The scores view's search params: a deck for the scores, a season and board for the leaderboard. */
 export interface ScoresSearch {
@@ -65,6 +68,7 @@ const PARTS = {
   chart: "scores-chart",
   rng: "scores-rng",
   table: "scores-table",
+  obsolete: "scores-obsolete",
   leaderboard: "scores-leaderboard",
 } as const;
 
@@ -132,7 +136,9 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
  * table, narrowed by `?deck=`) and, when the mode has one, its leaderboard
  * (`?season=`, `?board=`), with an "On this page" list of those parts. A
  * failed deck list is reported; the scores then show without deck names or
- * colours.
+ * colours. The chart and the damage-ordered table hold the scores of
+ * current decks and of none; an obsolete deck's scores end the ranking in
+ * the collapsed Obsolete section, under the deck's notice.
  *
  * @param props - the mode, the search params and their setter
  * @returns the scores view
@@ -143,10 +149,15 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
   const rng = useQuery(rngFactorsQuery(mode.scope));
   const sources = useSourceIndex();
   const series = useMemo(() => deckSeries(decks.data ?? []), [decks.data]);
+  const allDecks = decks.data ?? [];
+  const retired = scores.data
+    ? groupByObsoleteDeck(scores.data, allDecks).map((g) => ({ ...g, rows: byDamage(g.rows) }))
+    : [];
   const toc = [
     { id: PARTS.chart, label: "Score chart" },
     ...(rng.data?.length ? [{ id: PARTS.rng, label: "RNG factors" }] : []),
     ...(scores.data ? [{ id: PARTS.table, label: "Posted scores" }] : []),
+    ...(retired.length ? [{ id: PARTS.obsolete, label: "Obsolete" }] : []),
     ...(mode.leaderboard ? [{ id: PARTS.leaderboard, label: mode.leaderboard.title }] : []),
   ];
 
@@ -170,7 +181,7 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
           </select>
         </div>
         <QueryResult query={scores} resource="scores">
-          {(rows) => <ScoreChart scores={rows} series={series} />}
+          {(rows) => <ScoreChart scores={splitByDeck(rows, allDecks).current} series={series} />}
         </QueryResult>
         <QueryResult query={rng} resource="RNG factors">
           {(factors) =>
@@ -192,12 +203,20 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
           <div className="grid" role="region" aria-label="Posted scores" id={PARTS.table}>
             <DataTable
               columns={scoreColumns(series, sources)}
-              rows={byDamage(scores.data)}
+              rows={byDamage(splitByDeck(scores.data, allDecks).current)}
               rowKey={(s) => s.id}
               layout="stack"
             />
           </div>
         )}
+        <ObsoleteSection id={PARTS.obsolete} latest={retired[0]?.deck.obsoleteSince ?? null}>
+          <ObsoleteDeckRows
+            groups={retired}
+            columns={scoreColumns(series, sources)}
+            rowKey={(s) => s.id}
+            sources={sources}
+          />
+        </ObsoleteSection>
         {mode.leaderboard ? (
           <Leaderboard
             config={mode.leaderboard}

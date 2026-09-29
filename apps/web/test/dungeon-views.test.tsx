@@ -423,6 +423,44 @@ describe("the runs board", () => {
   });
 });
 
+describe("the runs board's obsolete teams", () => {
+  it("keeps an obsolete team's runs out of the ranking and lists them under the team's notice", async () => {
+    const retiredDeck: Deck = {
+      ...DECK,
+      id: "dungeon-old-beam",
+      nameEn: "Old beam lineup",
+      obsoleteSince: "2026-10-12",
+      obsoleteReason: "A patch capped the beam.",
+      obsoleteSources: ["dc:77306"],
+    };
+    await renderRoute(
+      "/dungeon/runs",
+      {
+        ...API,
+        "/api/decks?mode=crumble_dungeon": { body: [DECK, retiredDeck] },
+        "/api/dungeon-runs": {
+          body: [run(5, "run-old", 400, { deckId: retiredDeck.id }), ...RUNS],
+        },
+      },
+      { mode: DUNGEON },
+    );
+    const ranked = await screen.findByRole("region", { name: "Ranked runs" });
+    await waitFor(() =>
+      expect(bodyRows(ranked).map((r) => [r[0], r[1]])).toEqual([
+        ["1", "379.31G"],
+        ["2", "244.69G"],
+        ["3", "219.53G"],
+      ]),
+    );
+    const group = screen.getByRole("region", { name: "Old beam lineup, obsolete", hidden: true });
+    expect(bodyRows(group).map((r) => [r[0], r[1]])).toEqual([["–", "400G"]]);
+    expect(within(group).getByRole("note", { hidden: true })).toHaveTextContent(
+      "Obsolete since 2026-10-12: A patch capped the beam.",
+    );
+    expect(group.closest("details")).not.toHaveAttribute("open");
+  });
+});
+
 describe("the lineups", () => {
   it("shows a lineup's ATK order, level rule, first wave, what it leaves out and the exclusions it keeps", async () => {
     await renderDungeon("/dungeon/lineups");

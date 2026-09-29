@@ -256,3 +256,37 @@ describe("scores view", () => {
     ).toBeInTheDocument();
   });
 });
+
+describe("scores of obsolete decks", () => {
+  const withRanged: Record<string, Canned> = {
+    ...API,
+    "/api/decks?mode=guild_conquest": {
+      body: [
+        ...DECKS,
+        {
+          id: "ranged",
+          nameEn: "Ranged deck",
+          obsoleteSince: "2026-10-12",
+          obsoleteReason: "Patched out.",
+          obsoleteSources: ["dc:76135"],
+        },
+      ],
+    },
+    "/api/scores": {
+      body: [...SCORES, score({ id: 4, damageG: 2000, powerG: 30, deckId: "ranged", ratio: 66 })],
+    },
+  };
+
+  it("ranks by damage among current decks only, and lists an obsolete deck's scores under its notice", async () => {
+    await renderRoute("/conquest/scores", withRanged);
+    await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(3));
+    expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["1.31T", "1T", "867G"]);
+    const group = screen.getByRole("region", { name: "Ranged deck, obsolete", hidden: true });
+    expect(bodyRows(group).map((r) => r[0])).toEqual(["2T"]);
+    expect(within(group).getByRole("note", { hidden: true })).toHaveTextContent(
+      "Obsolete since 2026-10-12: Patched out.",
+    );
+    expect(group.closest("details")).not.toHaveAttribute("open");
+    expect(screen.queryByRole("img", { name: /^2T at 30G power/ })).toBeNull();
+  });
+});

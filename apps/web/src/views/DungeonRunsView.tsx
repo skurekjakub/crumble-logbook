@@ -9,15 +9,18 @@ import { AtkOrder } from "../components/AtkOrder";
 import type { Column, TableFilter, TableSelect } from "../components/DataTable";
 import { applyFilters, DataTable, TableTools } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
+import { ObsoleteSection } from "../components/ObsoleteSection";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { formatDungeonG, ordinal, scorePerPower } from "../lib/dungeon";
+import { groupByObsoleteDeck, splitByDeck } from "../lib/obsolete";
 import { optionalKey, optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
 import { sourceLabel } from "../lib/sources";
 import { deckId } from "./DeckCard";
 import { CopyHeader } from "./ModeViewHeader";
+import { ObsoleteDeckRows } from "./ObsoleteDeckRows";
 
 /** Select labels per board a score was shown on. */
 const BOARDS: Readonly<Record<DungeonRun["board"], string>> = {
@@ -174,7 +177,9 @@ function showRun(r: DungeonRun, rank: number | undefined, deck: string | null): 
  * video shows, ranked by score, then the claims under their own heading,
  * with the columns `columns` declares and the mode's RNG factors after
  * them. The board, evidence and text filters live in the URL and apply to
- * both groups; the text filter matches what a row shows.
+ * both groups; the text filter matches what a row shows. A run on an
+ * obsolete team is left out of the ranking and the filters; those runs end
+ * the board in the collapsed Obsolete section, under the team's notice.
  *
  * @param props - the mode, its dungeon config, the search params and their setter
  * @returns the runs board
@@ -183,10 +188,8 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
   const sources = useSourceIndex();
   const runs = useQuery(dungeonRunsQuery());
   const rng = useQuery(rngFactorsQuery(mode.scope));
-  const decks = useQuery({
-    ...decksQuery(mode.scope),
-    select: (list) => new Map(list.map((d) => [d.id, d.nameEn] as const)),
-  }).data;
+  const deckRows = useQuery(decksQuery(mode.scope)).data;
+  const decks = deckRows ? new Map(deckRows.map((d) => [d.id, d.nameEn] as const)) : undefined;
   const glossary = useQuery({
     ...glossaryQuery(),
     select: (entries) => new Map(entries.map((e) => [e.kr, e.en] as const)),
@@ -213,8 +216,9 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
       <QueryResult query={runs} resource="dungeon runs">
         {(rows) => {
           if (!rows.length) return <EmptyState>No runs recorded yet.</EmptyState>;
+          const { current: live, obsolete: retiredRuns } = splitByDeck(rows, deckRows ?? []);
           const rank = new Map(
-            rows.filter((r) => r.standing === "verified").map((r, i) => [r.id, i + 1] as const),
+            live.filter((r) => r.standing === "verified").map((r, i) => [r.id, i + 1] as const),
           );
           /**
            * The texts a row shows.
@@ -324,11 +328,12 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
               test: (r, value) => r.evidence === value,
             },
           ];
-          const kept = applyFilters(rows, filter, select, selects);
+          const kept = applyFilters(live, filter, select, selects);
           const groups = GROUPS.map((g) => ({
             ...g,
             rows: kept.filter((r) => r.standing === g.standing),
           })).filter((g) => g.rows.length > 0);
+          const retired = groupByObsoleteDeck(retiredRuns, deckRows ?? []);
           return (
             <>
               <TableTools filter={filter} select={select} selects={selects} />
@@ -346,8 +351,16 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                   </section>
                 ))
               ) : (
-                <EmptyState>Nothing matches.</EmptyState>
+                <EmptyState>{live.length ? "Nothing matches." : "No current runs."}</EmptyState>
               )}
+              <ObsoleteSection id="runs-obsolete" latest={retired[0]?.deck.obsoleteSince ?? null}>
+                <ObsoleteDeckRows
+                  groups={retired}
+                  columns={columns}
+                  rowKey={(r) => r.id}
+                  sources={sources}
+                />
+              </ObsoleteSection>
             </>
           );
         }}
