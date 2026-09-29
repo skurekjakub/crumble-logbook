@@ -58,23 +58,16 @@ const areas = readdirSync(researchDir, { withFileTypes: true })
   )
   .map((entry) => entry.name);
 
-/** A README section a refresh round adds: `## Refresh YYYY-MM-DD`. */
-const REFRESH_SECTION = /^## Refresh \d{4}-\d{2}-\d{2}\b/m;
-
 describe("every area's saved searches", () => {
   it("finds the areas", () => {
     expect(areas.length).toBeGreaterThan(0);
   });
 
   for (const area of areas) {
-    it(`${area}: its searches.json is a valid search list, dated by rounds the record ran, and present once a refresh round ran`, () => {
+    it(`${area}: has a valid searches.json, dated by rounds the record ran`, () => {
       const dir = join(researchDir, area);
-      const refreshed = REFRESH_SECTION.test(readFileSync(join(dir, "README.md"), "utf-8"));
       const searches = readSearches(dir);
-      expect(
-        searches !== null || !refreshed,
-        `${area} has a refresh section and no ${SEARCHES_FILE}`,
-      ).toBe(true);
+      expect(searches, `${area} has no ${SEARCHES_FILE}`).not.toBeNull();
       expect(searchRoundProblems(searches ?? [], recordRounds(dir))).toEqual([]);
     });
   }

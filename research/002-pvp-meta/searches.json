@@ -1,0 +1,496 @@
+[
+  {
+    "id": "dc-subject-arena",
+    "kind": "dc",
+    "query": "subject:아레나",
+    "why": "Posts titled with Arena, the widest net for PvP teams and questions.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-subject-arena-deck",
+    "kind": "dc",
+    "query": "subject:아레나덱",
+    "why": "Posts titled with an Arena deck, where lineups are shared.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-deck",
+    "kind": "dc",
+    "query": "아레나 덱",
+    "why": "Arena deck posts, with lineups and formations.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-combo",
+    "kind": "dc",
+    "query": "아레나 조합",
+    "why": "The other word posters use for an Arena lineup.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-arena-first",
+    "kind": "dc",
+    "query": "아레나 1등",
+    "why": "Posts about the Arena board's first place and what it runs.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-ranking",
+    "kind": "dc",
+    "query": "아레나 랭킹",
+    "why": "Posts about the Arena ladder; regular Arena has no public board, so these are the only ladder data.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-grandmaster",
+    "kind": "dc",
+    "query": "그마",
+    "why": "Grandmaster, the top Arena tier: posts from the players whose teams set the meta.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-defense-deck",
+    "kind": "dc",
+    "query": "방덱",
+    "why": "Defense decks, half of every Arena recommendation.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-attack-deck",
+    "kind": "dc",
+    "query": "공덱",
+    "why": "Attack decks, the other half of every Arena recommendation.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-defense",
+    "kind": "dc",
+    "query": "아레나 방어",
+    "why": "Arena defense posts in plain words.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-counter-deck",
+    "kind": "dc",
+    "query": "카운터덱",
+    "why": "Counter decks, the record's counter edges.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-matchup",
+    "kind": "dc",
+    "query": "상성",
+    "why": "Matchup talk: which team beats which, and why.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-gear",
+    "kind": "dc",
+    "query": "아레나 장비",
+    "why": "Arena gear, one of the record's recommendations.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-preset",
+    "kind": "dc",
+    "query": "아레나 프리셋",
+    "why": "Arena gear presets as posters share them.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-pet",
+    "kind": "dc",
+    "query": "아레나 펫",
+    "why": "Arena pets, part of every deck's recommendation.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-arena-welfare",
+    "kind": "dc",
+    "query": "아레나 복지",
+    "why": "Cheap Arena teams players recommend to each other.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-oven-wanderer",
+    "kind": "dc",
+    "query": "오방",
+    "why": "Oven Wanderer, half of the Bari charge core both modes run.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-bari",
+    "kind": "dc",
+    "query": "바리",
+    "why": "Princess Bari, the cookie the PvP meta turned on after her release.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-bari-deck",
+    "kind": "dc",
+    "query": "바리덱",
+    "why": "Bari decks by name.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-rye-deck",
+    "kind": "dc",
+    "query": "호밀덱",
+    "why": "The Rye decks, the record's attack answer to Bari.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-hohwang",
+    "kind": "dc",
+    "query": "호황",
+    "why": "호황, the gallery's nickname for the Rye one-carry deck.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-evasion-deck",
+    "kind": "dc",
+    "query": "회피덱",
+    "why": "The evasion deck by name.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-evasion-nickname",
+    "kind": "dc",
+    "query": "회슝좍",
+    "why": "The evasion deck's nickname.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-crepe-espresso",
+    "kind": "dc",
+    "query": "딸크에소",
+    "why": "The Strawberry Crepe and Espresso deck by nickname.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-name-matmal",
+    "kind": "dc",
+    "query": "name:맞말은유동이",
+    "why": "A poster whose Arena decks the record cites.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-name-songsong",
+    "kind": "dc",
+    "query": "name:송송다리",
+    "why": "A poster whose Arena decks the record cites.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-name-hoc",
+    "kind": "dc",
+    "query": "name:호날두의쌀먹교실",
+    "why": "A poster whose Arena decks the record cites.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-recommend",
+    "kind": "dc",
+    "query": "@recommend",
+    "why": "The gallery's recommended posts, where PvP guides land.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-subject-rumble",
+    "kind": "dc",
+    "query": "subject:럼블",
+    "why": "The EN-derived name for Rumble Arena; the gallery rarely uses it.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "dc-wagle",
+    "kind": "dc",
+    "query": "와글",
+    "why": "Rumble Arena is 와글와글 아레나; its short forms find its posts.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-warena",
+    "kind": "dc",
+    "query": "와레나",
+    "why": "와레나, the gallery's short name for Rumble Arena.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-warena-first",
+    "kind": "dc",
+    "query": "와레나 1등",
+    "why": "Posts about the Rumble Arena board's first place.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-warena-bari",
+    "kind": "dc",
+    "query": "와레나 바리",
+    "why": "Bari teams in Rumble Arena.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-all-server-arena",
+    "kind": "dc",
+    "query": "전서버 아레나",
+    "why": "Rumble Arena matches every server, and posters call it the all-server Arena.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-unified-arena",
+    "kind": "dc",
+    "query": "통합 아레나",
+    "why": "Another name posters give the cross-server Rumble Arena.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "naver-guide-board",
+    "kind": "naver",
+    "menuId": 9,
+    "why": "The official cafe's guide board, where the global and KR PvP guides are posted.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "naver-patch-notes",
+    "kind": "naver",
+    "menuId": 3,
+    "why": "The official patch notes, which date new cookies, balance changes and Arena seasons.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-crumble-arena",
+    "kind": "youtube",
+    "query": "크럼블 아레나",
+    "why": "The widest KR YouTube net for Arena guides.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-arena-deck",
+    "kind": "youtube",
+    "query": "쿠키런 크럼블 아레나 덱",
+    "why": "The title KR creators give Arena deck guides.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-wagle-arena",
+    "kind": "youtube",
+    "query": "크럼블 와글와글 아레나",
+    "why": "Rumble Arena guides under the mode's KR name.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-warena",
+    "kind": "youtube",
+    "query": "와레나 크럼블",
+    "why": "Rumble Arena guides under its short name.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-bari-arena",
+    "kind": "youtube",
+    "query": "크럼블 바리공주 아레나",
+    "why": "Arena videos built around Princess Bari.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-en-arena",
+    "kind": "youtube",
+    "query": "cookie run crumble arena",
+    "why": "Global Arena guides and the official teasers.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-en-rumble-arena",
+    "kind": "youtube",
+    "query": "cookie run crumble rumble arena",
+    "why": "Global Rumble Arena guides.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-jp-arena",
+    "kind": "youtube",
+    "query": "クッキーラン クランブル アリーナ",
+    "why": "The JP server's Arena videos.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-susinwoo",
+    "kind": "youtube",
+    "channel": "@SuSinWoo",
+    "why": "서신우, whose Bari, Rye and Cheesecake Arena guides the record cites.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-vart",
+    "kind": "youtube",
+    "channel": "@Vart_Sub",
+    "why": "VART, whose Rumble Arena charge and Rye deck guides the record cites.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "youtube-noorimer",
+    "kind": "youtube",
+    "channel": "@누리머",
+    "why": "누리머, a server #2 player whose monthly Arena deck guide the record cites.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "crumbgg-live-rumble-arena",
+    "kind": "crumbgg",
+    "endpoint": "live",
+    "args": ["rumble_arena"],
+    "why": "The live Rumble Arena top 100 with their defense teams, the only ladder data either mode has.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "crumbgg-live-history-rumble-arena",
+    "kind": "crumbgg",
+    "endpoint": "live-history",
+    "args": ["rumble_arena", "2000"],
+    "why": "The Rumble Arena board's snapshot history, which shows how the top teams moved.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "crumbgg-stats",
+    "kind": "crumbgg",
+    "endpoint": "stats",
+    "args": [],
+    "why": "Cookie and pet usage across the Rumble Arena top 100.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "crumbgg-live-arena",
+    "kind": "crumbgg",
+    "endpoint": "live",
+    "args": ["arena"],
+    "why": "crumb.gg had no regular Arena board; a board appearing here would give regular Arena its first ladder data.",
+    "added": "2026-09-27",
+    "lastHit": null
+  },
+  {
+    "id": "crumbgg-data-meta",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": ["meta"],
+    "why": "crumb.gg's cookie list and client version: new cookies are a round's discovery seeds.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "crumbgg-data-patches",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": ["patches"],
+    "why": "crumb.gg's patch digest, which dates the balance changes a round's window covers.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "web-crumblehub-meta-decks",
+    "kind": "web",
+    "url": "https://crumblehub.co/api/meta-decks",
+    "why": "crumblehub's curated meta decks, which named the Rye and Espresso Arena decks.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "web-crumblehub-clear-decks-arena",
+    "kind": "web",
+    "url": "https://crumblehub.co/api/clear-decks?mode=arena&sort=recommended&limit=50&roster=4",
+    "why": "crumblehub's community-shared Arena decks, ranked by votes.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "web-crumblehub-clear-decks-rumble-arena",
+    "kind": "web",
+    "url": "https://crumblehub.co/api/clear-decks?mode=rumble_arena&sort=recommended&limit=50&roster=4",
+    "why": "crumblehub's community-shared Rumble Arena decks, ranked by votes.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "web-sugarpocket-decks",
+    "kind": "web",
+    "url": "https://cookieruncrumble.app/api/decks",
+    "why": "Sugar Pocket's community deck list, PvP decks among them.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "web-sugarpocket-tier",
+    "kind": "web",
+    "url": "https://cookieruncrumble.app/tier/",
+    "why": "Sugar Pocket's tier list, a living ranking of cookies.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "web-sugarpocket-rune-recommendations",
+    "kind": "web",
+    "url": "https://cookieruncrumble.app/rune-recommendations/",
+    "why": "Sugar Pocket's rune recommendations, kept current with the game.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  },
+  {
+    "id": "web-crumbleguides-arena",
+    "kind": "web",
+    "url": "https://crumbleguides.com/guides/cookie-run-crumble-arena",
+    "why": "An EN Arena guide its site keeps updating.",
+    "added": "2026-09-27",
+    "lastHit": "2026-09-27"
+  }
+]

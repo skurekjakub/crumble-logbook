@@ -1,0 +1,228 @@
+[
+  {
+    "id": "dc-crumble-dungeon",
+    "kind": "dc",
+    "query": "크럼블 던전",
+    "why": "The mode's KR name; Golden Drop is Crumble Dungeon (크럼블 던전).",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-crumble-dungeon-joined",
+    "kind": "dc",
+    "query": "크럼블던전",
+    "why": "The mode's name as posters type it without the space.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-keudeon",
+    "kind": "dc",
+    "query": "크던",
+    "why": "크던, the gallery's short name for the mode, used in most score posts.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-keudeon",
+    "kind": "dc",
+    "query": "subject:크던",
+    "why": "The short name in titles, where score posts announce themselves.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-crumble-dungeon-guide",
+    "kind": "dc",
+    "query": "크럼블 던전 공략",
+    "why": "Dungeon guides, where lineup rules are laid out.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-40",
+    "kind": "dc",
+    "query": "40마리",
+    "why": "The top-40-by-power rule, the lineup rule every build shares.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-golden-drop",
+    "kind": "dc",
+    "query": "황금갓방울",
+    "why": "The boss's full name; the bare 갓방울 is the pet in gallery speech, so only the full name is saved.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-dungeon-score",
+    "kind": "dc",
+    "query": "던전 점수",
+    "why": "Score posts in plain words.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-keudeon-deck",
+    "kind": "dc",
+    "query": "크던 덱",
+    "why": "Dungeon lineups by the short name.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-dungeon-deck",
+    "kind": "dc",
+    "query": "던전덱",
+    "why": "Dungeon lineups as posters name them.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-keudeon-new-record",
+    "kind": "dc",
+    "query": "크던 기갱",
+    "why": "New dungeon bests, the posts that carry result screens.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-keudeon-atk-order",
+    "kind": "dc",
+    "query": "크던 공순",
+    "why": "The ATK order, which routes Pomegranate's beam and decides the lineup.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "naver-guide-board",
+    "kind": "naver",
+    "menuId": 9,
+    "why": "The official cafe's guide board, where the named lineups with levels were posted (뱅국, 쿠키런 연두).",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-crumble-dungeon",
+    "kind": "youtube",
+    "query": "크럼블 던전",
+    "why": "The mode's KR name, the widest YouTube net for dungeon guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-crumble-dungeon-golden-drop",
+    "kind": "youtube",
+    "query": "크럼블던전 황금갓방울",
+    "why": "The title top creators give their dungeon guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-keudeon-high-score",
+    "kind": "youtube",
+    "query": "크던 고득점",
+    "why": "High-score dungeon videos by the short name.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "youtube-en-crumble-dungeon",
+    "kind": "youtube",
+    "query": "Crumble Dungeon cookie run crumble",
+    "why": "Global dungeon guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-en-holy-golden-drop",
+    "kind": "youtube",
+    "query": "Holy Golden Drop crumble",
+    "why": "Global dungeon guides by the boss's EN name.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-ndlover",
+    "kind": "youtube",
+    "channel": "@ndlover7",
+    "why": "ND러너, whose 50G and 180G dungeon guides the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-gni",
+    "kind": "youtube",
+    "channel": "@그니그니-z2q",
+    "why": "그니, whose high-ceiling lineup and dungeon tips the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-vart",
+    "kind": "youtube",
+    "channel": "@Vart_Sub",
+    "why": "VART, whose 250G dungeon guide the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-susinwoo",
+    "kind": "youtube",
+    "channel": "@SuSinWoo",
+    "why": "서신우, whose 127G dungeon guide the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "crumbgg-data-patches",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": ["patches"],
+    "why": "crumb.gg's patch digest, which dated the dungeon's buff fix and the cookies it touched.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "crumbgg-api-meta",
+    "kind": "crumbgg",
+    "endpoint": "api-meta",
+    "args": [],
+    "why": "crumb.gg's cookie list; a new cookie is a candidate for the top 40.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-cookierunwiki-crumble-dungeon",
+    "kind": "web",
+    "url": "https://cookierun.wiki/w/Crumble_Dungeon",
+    "why": "The wiki's mode page: the fight's length, entries and reward tables, edited as the game changes.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumbleguides-dungeon",
+    "kind": "web",
+    "url": "https://crumbleguides.com/guides/cookie-run-crumble-dungeon",
+    "why": "An EN dungeon guide its site keeps updating.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-cookieruncrumbles-dungeon-milk",
+    "kind": "web",
+    "url": "https://www.cookieruncrumbles.com/guides/cookie-run-crumble-dungeon-milk-buff-guide/",
+    "why": "An EN guide to the Milk buff engine the lineups share.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-eoggg-crumble",
+    "kind": "web",
+    "url": "https://eog.gg/games/cookierun-crumble/",
+    "why": "EOG's global hub, the only global source with a dungeon measurement.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  }
+]

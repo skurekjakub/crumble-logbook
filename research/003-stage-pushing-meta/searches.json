@@ -1,0 +1,276 @@
+[
+  {
+    "id": "dc-subject-stage",
+    "kind": "dc",
+    "query": "subject:스테이지",
+    "why": "The stage-pushing posts title themselves by the word stage.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-ste",
+    "kind": "dc",
+    "query": "subject:스테",
+    "why": "스테, the gallery's short form of stage in titles.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-stage-deck",
+    "kind": "dc",
+    "query": "subject:스테이지덱",
+    "why": "Stage deck posts by title.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-subject-35pct",
+    "kind": "dc",
+    "query": "subject:35%",
+    "why": "The 35% bracket, entered at 40% of recommended power, where most pushing happens.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-15pct",
+    "kind": "dc",
+    "query": "subject:15%",
+    "why": "The 15% bracket, entered at 20% of recommended power, the record's deepest push.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-15-percent-word",
+    "kind": "dc",
+    "query": "subject:15퍼",
+    "why": "The 15% bracket as posters type it.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-15-pro",
+    "kind": "dc",
+    "query": "subject:15프로",
+    "why": "The 15% bracket as posters type it.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-power-cut",
+    "kind": "dc",
+    "query": "투력컷",
+    "why": "The power a stage asks for, as posters call its cut-off.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-recommended",
+    "kind": "dc",
+    "query": "권장",
+    "why": "Recommended power, the gate the brackets are measured against.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-recommended-power",
+    "kind": "dc",
+    "query": "subject:권투",
+    "why": "권투, short for 권장 투력 (recommended power), in titles.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-correction",
+    "kind": "dc",
+    "query": "보정",
+    "why": "The power correction, the community's word for the bracket penalty.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-correction",
+    "kind": "dc",
+    "query": "subject:보정",
+    "why": "The power correction in titles.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-subject-dimension",
+    "kind": "dc",
+    "query": "subject:차원",
+    "why": "The Dimensional Rift (차원의 이면) in titles.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-rift",
+    "kind": "dc",
+    "query": "subject:이면",
+    "why": "The Rift by the second half of its name.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-328",
+    "kind": "dc",
+    "query": "subject:328",
+    "why": "328-30, the last main stage and the gate to the Rift.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-clear-deck",
+    "kind": "dc",
+    "query": "subject:클덱",
+    "why": "클덱, a clear deck: the team a poster cleared a stage with.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-idle-deck",
+    "kind": "dc",
+    "query": "방치덱",
+    "why": "Idle decks for mob stages, one of the record's decks.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-click",
+    "kind": "dc",
+    "query": "subject:딸깍",
+    "why": "딸깍, one-tap clears, a word for easy auto stages.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-subject-infinite-loop",
+    "kind": "dc",
+    "query": "subject:무한바퀴",
+    "why": "Looping a stage for rewards, a pushing habit posters name.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "naver-guide-board",
+    "kind": "naver",
+    "menuId": 9,
+    "why": "The official cafe's guide board, where the 35% and 15% clears are posted with screenshots.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "naver-notices",
+    "kind": "naver",
+    "menuId": 1,
+    "why": "The official notices, which announce updates such as the stage easing and the Rift.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "naver-patch-notes",
+    "kind": "naver",
+    "menuId": 3,
+    "why": "The official patch notes, the primary source for stage and Rift changes (nv:44477).",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-ndlover",
+    "kind": "youtube",
+    "channel": "@ndlover7",
+    "why": "ND러너, a top player whose Rift and stage videos the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-susinwoo",
+    "kind": "youtube",
+    "channel": "@SuSinWoo",
+    "why": "서신우, whose stage guide the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-kkwang-ramen",
+    "kind": "youtube",
+    "channel": "@꽝라멩",
+    "why": "꽝라멩, whose stage-clear video the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-gni",
+    "kind": "youtube",
+    "channel": "@그니그니-z2q",
+    "why": "그니, whose stage video the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "crumbgg-data-stages",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": ["stages"],
+    "why": "crumb.gg's stage table: recommended power per stage, which the brackets are computed from.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "crumbgg-data-patches",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": ["patches"],
+    "why": "crumb.gg's patch digest, which dated the 9/23 easing and the recommended powers it changed.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-stages",
+    "kind": "web",
+    "url": "https://crumblehub.co/stages",
+    "why": "crumblehub's stage tool, with the bracket table and every stage's boss and recommended power.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-stage-boss-index",
+    "kind": "web",
+    "url": "https://crumblehub.co/data/stage-boss-index-v2.json",
+    "why": "The stage tool's data file, rebuilt from each game version.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-clear-decks-stage",
+    "kind": "web",
+    "url": "https://crumblehub.co/api/clear-decks?mode=stage&sort=recommended&limit=50&roster=4",
+    "why": "crumblehub's community-shared stage clear decks, ranked by votes.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-stage-guide",
+    "kind": "web",
+    "url": "https://crumblehub.co/guides/stage",
+    "why": "crumblehub's stage guide, which states the brackets and the boss-damage exemption.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-sugarpocket-stages",
+    "kind": "web",
+    "url": "https://cookieruncrumble.app/stages/",
+    "why": "Sugar Pocket's stage page, kept current with the game data.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-sugarpocket-decks",
+    "kind": "web",
+    "url": "https://cookieruncrumble.app/api/decks",
+    "why": "Sugar Pocket's community deck list, which holds low-stage decks.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  }
+]

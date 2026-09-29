@@ -1,0 +1,516 @@
+[
+  {
+    "id": "dc-subject-combat-power",
+    "kind": "dc",
+    "query": "subject:전투력",
+    "why": "Posts titled with combat power, where players ask how to raise it and post before/after numbers.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-power",
+    "kind": "dc",
+    "query": "subject:투력",
+    "why": "투력, the gallery's short word for power, in titles.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-power",
+    "kind": "dc",
+    "query": "투력",
+    "why": "The short word for power anywhere in a post.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-raise-power",
+    "kind": "dc",
+    "query": "투력올리",
+    "why": "How to raise power, as posters ask it.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-efficiency",
+    "kind": "dc",
+    "query": "효율",
+    "why": "Efficiency, the word for power per unit of cost the record ranks by.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-stellar",
+    "kind": "dc",
+    "query": "스텔라",
+    "why": "Stellar Link, the only posted gain that moved a 2G team a whole step.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-plate",
+    "kind": "dc",
+    "query": "플레이트",
+    "why": "Plating, a power source with posted gains and published odds.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-plate-odds",
+    "kind": "dc",
+    "query": "플레이트 확률",
+    "why": "Plating's success odds, which a patch can change.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-upgrade-odds",
+    "kind": "dc",
+    "query": "강화 확률",
+    "why": "Upgrade odds, the cost side of plating.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-success-odds",
+    "kind": "dc",
+    "query": "성공 확률",
+    "why": "Success odds as posters quote them.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-expected-value",
+    "kind": "dc",
+    "query": "기댓값",
+    "why": "Expected-value posts that turn odds into a cost.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-oven",
+    "kind": "dc",
+    "query": "오븐",
+    "why": "Oven gear, a power source.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-gear-level",
+    "kind": "dc",
+    "query": "장비 레벨",
+    "why": "Gear levels as a power source.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-mercenary-squad",
+    "kind": "dc",
+    "query": "용병단",
+    "why": "The mercenary squad, a power source.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-resolve",
+    "kind": "dc",
+    "query": "돌파력",
+    "why": "Resolve, coin-bought flat stats for every cookie, whose per-level values patches change.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-gnome",
+    "kind": "dc",
+    "query": "노움",
+    "why": "The Gnome Laboratory, a power source whose cap patches raise.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-lab",
+    "kind": "dc",
+    "query": "연구소",
+    "why": "The lab by its common noun, Gnome Lab and guild research both.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-research-stone",
+    "kind": "dc",
+    "query": "연구석",
+    "why": "Research stones, the lab's cost.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-fame",
+    "kind": "dc",
+    "query": "명성",
+    "why": "Fame, a power source.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-guild-research",
+    "kind": "dc",
+    "query": "길드연구",
+    "why": "Guild research, the power source sized only by one unmeasured claim.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-guild-research-spaced",
+    "kind": "dc",
+    "query": "길드 연구",
+    "why": "Guild research as posters type it with the space.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-subject-star-grade",
+    "kind": "dc",
+    "query": "subject:성급",
+    "why": "Star grades in titles, a power source.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-holding-effect",
+    "kind": "dc",
+    "query": "보유효과",
+    "why": "Pets' holding effects, which add power without fielding the pet.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-collection",
+    "kind": "dc",
+    "query": "도감",
+    "why": "The collection's boosts, a power source.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-promotion",
+    "kind": "dc",
+    "query": "승급",
+    "why": "Promotion as a power source.",
+    "added": "2026-09-28",
+    "lastHit": null
+  },
+  {
+    "id": "dc-package",
+    "kind": "dc",
+    "query": "패키지",
+    "why": "Shop packages, the paid route's options.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-paying",
+    "kind": "dc",
+    "query": "과금",
+    "why": "Paying, where posters weigh what money buys.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-cash",
+    "kind": "dc",
+    "query": "현질",
+    "why": "Cash spending in gallery slang.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-light-spender",
+    "kind": "dc",
+    "query": "소과금",
+    "why": "Light spenders, one of the record's spender tiers.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-free",
+    "kind": "dc",
+    "query": "무과금",
+    "why": "Free players, the record's free route.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-free-short",
+    "kind": "dc",
+    "query": "무과",
+    "why": "Free players in the short form.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-value",
+    "kind": "dc",
+    "query": "가성비",
+    "why": "Value for money, how posters rank packages.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-pass",
+    "kind": "dc",
+    "query": "패스",
+    "why": "The Crumble Pass, part of the community's paid order.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-membership",
+    "kind": "dc",
+    "query": "멤버십",
+    "why": "The Sugarcoating memberships, permanent paid boosts.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-blessing",
+    "kind": "dc",
+    "query": "축복",
+    "why": "Sweet Blessing, the spending level and what each level unlocks.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-sweet",
+    "kind": "dc",
+    "query": "달달한",
+    "why": "Sweet Blessing by its first word.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "dc-blessing-level",
+    "kind": "dc",
+    "query": "축복 레벨",
+    "why": "Sweet Blessing's levels and their costs.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "naver-guide-board",
+    "kind": "naver",
+    "menuId": 9,
+    "why": "The official cafe's guide board, home of the newbie guidebook and the Stellar shapes.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-raise-power",
+    "kind": "youtube",
+    "query": "쿠키런 크럼블 전투력 올리는 법",
+    "why": "How-to-raise-power guides, the record's question in a creator's words.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-raise-power-short",
+    "kind": "youtube",
+    "query": "크럼블 전투력 올리기",
+    "why": "The same question in a shorter title.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-spending-packages",
+    "kind": "youtube",
+    "query": "크럼블 과금 효율 패키지",
+    "why": "Package value guides for paying players.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-stellar-link",
+    "kind": "youtube",
+    "query": "크럼블 스텔라 링크 공략",
+    "why": "Stellar Link guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-resolve",
+    "kind": "youtube",
+    "query": "크럼블 돌파력",
+    "why": "Resolve guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-plating",
+    "kind": "youtube",
+    "query": "크럼블 플레이트 강화",
+    "why": "Plating guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-gnome-lab",
+    "kind": "youtube",
+    "query": "크럼블 노움 연구소",
+    "why": "Gnome Lab research-order guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-en-increase-power",
+    "kind": "youtube",
+    "query": "Cookie Run Crumble increase power",
+    "why": "Global power guides.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-ndlover",
+    "kind": "youtube",
+    "channel": "@ndlover7",
+    "why": "ND러너, whose growth, Gnome Lab and package videos the record cites most.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-susinwoo",
+    "kind": "youtube",
+    "channel": "@SuSinWoo",
+    "why": "서신우, whose Stellar, plating, lab and package guides the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-kimbabo",
+    "kind": "youtube",
+    "channel": "@kimbabo",
+    "why": "김바보 TV, whose Resolve and spending videos the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-sachiel",
+    "kind": "youtube",
+    "channel": "@Sachiel_TV",
+    "why": "사키엘 TV, whose must-buy package video the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-kkwang-ramen",
+    "kind": "youtube",
+    "channel": "@꽝라멩",
+    "why": "꽝라멩, whose purchase and discount video the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "youtube-hun-tv",
+    "kind": "youtube",
+    "channel": "@훈TV훈",
+    "why": "훈TV, whose exchange-shop priorities the record cites.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "crumbgg-data-patches",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": ["patches"],
+    "why": "crumb.gg's patch digest, which dated the Resolve, Fame, Gnome Lab and plating changes.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "crumbgg-leaderboard",
+    "kind": "crumbgg",
+    "endpoint": "leaderboard",
+    "args": [],
+    "why": "The all-server combat power board, where the top accounts' power sits.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-api-efficiency",
+    "kind": "web",
+    "url": "https://crumblehub.co/api/efficiency",
+    "why": "crumblehub's package value table, Crystal value per KRW, kept current with the shop.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-spending",
+    "kind": "web",
+    "url": "https://crumblehub.co/guides/spending",
+    "why": "crumblehub's spending guide with KRW budget tiers.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-currency",
+    "kind": "web",
+    "url": "https://crumblehub.co/guides/currency",
+    "why": "crumblehub's currency guide, the spend order for each currency.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-crumblehub-plate-upgrade",
+    "kind": "web",
+    "url": "https://crumblehub.co/guides/plate-upgrade",
+    "why": "crumblehub's plating guide, updated when the plating cap moves.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-sugarpocket-stella",
+    "kind": "web",
+    "url": "https://cookieruncrumble.app/stella/",
+    "why": "Sugar Pocket's Stellar Link page.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-sugarpocket-guides",
+    "kind": "web",
+    "url": "https://cookieruncrumble.app/guides/",
+    "why": "Sugar Pocket's guides index, which adds guides as the game grows.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-pocketgamer-best-packs",
+    "kind": "web",
+    "url": "https://www.pocketgamer.com/cookierun-crumble/best-packs/",
+    "why": "Pocket Gamer's global pack guide, updated as packs change.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-appstore-kr",
+    "kind": "web",
+    "url": "https://apps.apple.com/kr/app/id6749251466",
+    "why": "The KR App Store page, whose top in-app purchases carry KRW prices.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-appstore-us",
+    "kind": "web",
+    "url": "https://apps.apple.com/us/app/cookierun-crumble-idle-rpg/id6749251466",
+    "why": "The US App Store page, the only source of USD prices.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  },
+  {
+    "id": "web-cookieruncrumbles-progression",
+    "kind": "web",
+    "url": "https://www.cookieruncrumbles.com/guides/cookie-run-crumble-beginner-progression-guide/",
+    "why": "An EN progression guide its site keeps updating.",
+    "added": "2026-09-28",
+    "lastHit": "2026-09-28"
+  }
+]
