@@ -154,7 +154,10 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
  * `obsoleteSources` (the sources of its obsolete reason) when
  * `spec.lifecycle` names its entity, then `en` when `spec.gloss` names a
  * column, glossed with the row's own record's entries first. Deleting a
- * row deletes its obsolete reason's citations with it.
+ * row deletes its obsolete reason's citations with it. The obsolete
+ * lifecycle is the record importer's alone: the API's inputs leave it
+ * out, and a caller of these writes must not pass it, since they would
+ * store a reason without the citations the import gives it.
  *
  * @param store - the store to persist through
  * @param spec - the table and entity this service manages

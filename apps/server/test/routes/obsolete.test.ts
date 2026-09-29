@@ -212,6 +212,35 @@ describe("obsolete recommendations in the API's views", () => {
     expect((await app.request("/api/decks/rye", { method: "DELETE" })).status).toBe(204);
   });
 
+  it("refuses a mode change that would leave a successor on another mode than the deck it supersedes", async () => {
+    const { app, store, ids } = setup();
+    for (const id of [ids.liveEdge, ids.oldEdge]) {
+      await app.request(`/api/counters/${String(id)}`, { method: "DELETE" });
+    }
+    /**
+     * Patches a deck's mode.
+     *
+     * @param id - the deck
+     * @param mode - its new mode
+     * @returns the response
+     */
+    const patch = (id: string, mode: string) =>
+      app.request(`/api/decks/${id}`, { ...jsonBody({ mode }), method: "PATCH" });
+    const successor = await patch("rye", "rumble_arena");
+    expect(successor.status).toBe(409);
+    expect(await successor.text()).toMatch(
+      /deck rye can't become rumble_arena: it supersedes deck ranged, of mode arena/,
+    );
+    const retired = await patch("ranged", "guild_conquest");
+    expect(retired.status).toBe(409);
+    expect(await retired.text()).toMatch(
+      /deck ranged can't become guild_conquest: it is superseded by deck rye, of mode arena/,
+    );
+    expect(store.repos.decks.get("rye")?.mode).toBe("arena");
+    expect(store.repos.decks.get("ranged")?.mode).toBe("arena");
+    expect((await patch("bari", "rumble_arena")).status).toBe(200);
+  });
+
   it("counts a source cited only for an obsolete reason as cited, under the record whose row cites it", async () => {
     const { app } = setup();
     const listed = await readJson<Array<{ id: string; records: string[] }>>(

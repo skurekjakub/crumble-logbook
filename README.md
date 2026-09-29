@@ -78,7 +78,7 @@ Every resource is under `/api` and speaks JSON. Validation failures are 400 with
 
 | Resource | Verbs | Notes |
 |---|---|---|
-| `/api/decks` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | `:id` is a slug. Cookie and pet names come back with their glossary English (`en`, `null` if unresolved); cookies carry their formation `slot` when known. A `PATCH` that changes a deck's `mode` while a counter edge, a stage row or a dungeon row names it under its old mode is 409. A deck another deck names as `supersededBy` can't be deleted (409). |
+| `/api/decks` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | `:id` is a slug. Cookie and pet names come back with their glossary English (`en`, `null` if unresolved); cookies carry their formation `slot` when known. A `PATCH` that changes a deck's `mode` while a counter edge, a stage row or a dungeon row names it under its old mode is 409, and so is one that would leave an obsolete deck and the deck that superseded it on different modes, from either side. A deck another deck names as `supersededBy` can't be deleted (409). |
 | `/api/counters` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Directed edges: `teamDeckId` is beaten by `beatenByDeckId`, under `conditions`, because of `why`. Both decks must be of the edge's `mode` (the import enforces the same rule). `?deck=` lists the edges on either side of a deck. |
 | `/api/usage` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | Usage figures, highest `usagePct` first, each with its sample and capture date. `?kind=cookie\|core\|pet\|team` filters. |
 | `/api/rune-builds` | `GET`, `GET /:id`, `POST`, `PATCH /:id`, `DELETE /:id` | `?deck=` filters by linked deck. |

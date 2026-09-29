@@ -29,7 +29,8 @@ export function deckModeMismatch(
  * `mode` would leave a row of a mode-bound content type naming a deck of
  * another mode. A row is mode-bound when it has a `mode` column or its
  * type is filed under one mode (`content.mode`); its reference columns are
- * the ones the registry declares.
+ * the ones the registry declares. An obsolete deck and the deck that
+ * superseded it must share a mode too, from either side.
  *
  * @param repos - the repos to read the rows from
  * @param deckId - the deck
@@ -42,6 +43,17 @@ export function deckModeChangeConflict(
   deckId: string,
   mode: GameMode,
 ): string | undefined {
+  const successor = repos.decks.get(deckId)?.supersededBy;
+  const successorMode = successor ? repos.decks.get(successor)?.mode : undefined;
+  if (successor && successorMode !== undefined && successorMode !== mode) {
+    return `deck ${deckId} can't become ${mode}: it is superseded by deck ${successor}, of mode ${successorMode}`;
+  }
+  for (const retired of repos.decks.supersededDecks(deckId)) {
+    const retiredMode = repos.decks.get(retired)?.mode;
+    if (retiredMode !== undefined && retiredMode !== mode) {
+      return `deck ${deckId} can't become ${mode}: it supersedes deck ${retired}, of mode ${retiredMode}`;
+    }
+  }
   for (const key of CONTENT_KEYS) {
     const { content, entity } = specOf(key);
     const columns = Object.keys(content?.refs ?? {});
