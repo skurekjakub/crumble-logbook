@@ -34,6 +34,10 @@ pnpm dev:web       # web app on http://localhost:5173, proxying /api (CRUMBLE_AP
 
 The server creates and seeds its database from `data/snapshot.json` when the file doesn't exist yet, so a fresh clone runs with `pnpm install && pnpm dev`. Delete `data/crumble.db` to start again from the snapshot. When the file exists, the server compares it with the snapshot on startup and logs a warning naming the records and tables that differ: after a pull that brought newer records, delete `data/crumble.db` to reseed; after changing a record's data, rebuild the snapshot from a fresh database (see [The database](#the-database)) rather than exporting this one. It only warns: it never reseeds or deletes the database itself.
 
+### Deployment
+
+The app is published read-only at https://crumble-logbook.vercel.app (Vercel project `crumble-logbook`, Hobby plan). `pnpm build:vercel` builds the web app and writes `.vercel/output` in Vercel's Build Output API layout: the web app as static files, and `apps/server/src/vercel.ts` bundled as the function behind `/api`. That function seeds an in-memory database from `data/snapshot.json` on every cold start and answers anything but `GET` and `HEAD` with 405, so the site shows the committed snapshot and nothing else: commit the snapshot, then deploy. `vercel deploy --prod` uploads the source (`.vercelignore` leaves out `research/` and its media) and Vercel runs the build, with pnpm from `packageManager` through corepack (the project's `ENABLE_EXPERIMENTAL_COREPACK` variable).
+
 ESLint runs typescript-eslint's strict type-checked rules, React's hook rules on the web app, and JSDoc on every function, method, class and interface method (see `AGENTS.md`). The config and the reason for each switched-off rule are in `tools/eslint-config/index.ts`.
 
 ### The database

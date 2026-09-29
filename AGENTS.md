@@ -19,7 +19,7 @@ Research tool for Cookie Run: Crumble: Guild Conquest (길드 토벌전) and PvP
 - Every deck cookie carries a level (or a level rule) and a mechanism "why".
 - Layered, extensible code: routes → services → repos → db, enforced by `apps/server/test/architecture.test.ts`. Files split along semantic and logical responsibility, not line count: don't pile unrelated concerns into one file, and a file that needs to be long stays long.
 - JSDoc, TSDoc-style, on every function, method, class and interface method, tests' `it()` bodies excepted: a summary of what it does, `@param name - …` for each parameter, `@returns …` when it returns a value, and `@throws …` for how it fails. Types stay in TypeScript, not in tags. ESLint enforces it (`tools/eslint-config`), and `pnpm verify` (typecheck, lint, format, tests) must pass before a commit.
-- Local only: no hosting, no auth. All TypeScript. Schemas are Drizzle + Zod.
+- No auth. The only hosting is the read-only Vercel deployment of the committed snapshot (README § Deployment); every write still happens locally. All TypeScript. Schemas are Drizzle + Zod.
 - The repo is public, and everything is published, raw text and JSON captures included. Captured media (images, video frames, video) stays local: `.gitignore` excludes it under `research/`. Raw APK or decompiled artefacts never go in the repo.
 - Work on `main` and push to `origin`; worktree lanes for parallel agents merge into `main`. No feature branches until the app has a working baseline.
 - Reviews run on Opus.

@@ -25,6 +25,7 @@ export function crumbleConfig(rootDir: string) {
       "docs/",
       ".claude/",
       ".superpowers/",
+      ".vercel/",
     ]),
 
     js.configs.recommended,
