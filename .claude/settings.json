@@ -46,11 +46,6 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"${CLAUDE_PROJECT_DIR}/.claude/hooks/run-hook.cmd\" block-destructive-bash",
-            "async": false
-          },
-          {
-            "type": "command",
             "command": "\"${CLAUDE_PROJECT_DIR}/.claude/hooks/run-hook.cmd\" prefer-verify-script",
             "async": false
           },
@@ -90,17 +85,6 @@
             "type": "command",
             "command": "\"${CLAUDE_PROJECT_DIR}/.claude/hooks/run-hook.cmd\" remind-rules",
             "async": false
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"${CLAUDE_PROJECT_DIR}/.claude/hooks/run-hook.cmd\" notify-done",
-            "async": true
           }
         ]
       }
