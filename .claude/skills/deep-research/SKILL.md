@@ -141,13 +141,27 @@ Any of these: stop, produce the missing capture, then continue.
 This skill was written for an HTTP-behaviour blog repo; in this repo the "site" is the game
 community, and the steps map as follows.
 
-- Records live in `research/NNN-<slug>/`. Record `001-guild-conquest-meta` is the reference
-  shape: `README.md`, `research-trail.md`, `STATE.md` (working state between sessions) and
-  `evidence/` numbered in capture order.
-- "Measure" means capture: forum posts, comments, images and ranking pages saved verbatim into
-  `evidence/`. The scrapers in `001/evidence/` (`dc_scrape.py`, `nv_scrape.py`) and the server's
-  `scrape:*` jobs write in that layout.
+- Records live in `research/NNN-<slug>/`: `README.md`, `research-trail.md` and `evidence/`,
+  numbered in capture order; a record the app loads also has `import.json`, `curated/` and
+  `searches.json`, its saved searches (schema `packages/capture/src/searches.ts`). Record
+  `003-stage-pushing-meta` shows the current evidence layout.
+- "Measure" means capture: forum posts, comments, images, ranking pages and videos saved
+  verbatim into `evidence/` with `pnpm capture` (`README.md` § Captures lists the commands and
+  their arguments): `dc list` and `dc fetch`, `naver list` and `naver fetch`, `crumbgg
+  <endpoint>`, and `youtube` `watch`, `search`, `download`, `frames`, `sheet` and `subs`.
+- Every file under `evidence/` gets its line in the record's `evidence/captures.jsonl` in the
+  commit that adds it. `pnpm capture` writes the line itself; a file captured any other way
+  (agent-browser, curl, a derived or hand-written file) gets it from `pnpm capture log <record>
+  <path> --url <url|-> --tool <tool>`. `pnpm capture verify <record>` checks a ledger, and
+  `pnpm verify` checks every record's. Captured media stays local (gitignored); its line is
+  committed.
+- The Python scrapers in `001/evidence/` are retired, kept unedited as the record of how
+  records 001 and 002 were captured. Never run them.
 - Subagent extractions follow `001/evidence/08-extract/BRIEF.md` and land in `08-extract/`;
-  `digest.py` condenses them per facet, and the `import:record` job loads them into the app.
-- Client-rendered pages (crumb.gg) are read with agent-browser, headed, using the native Chrome
-  (`AGENT_BROWSER_EXECUTABLE_PATH`); crumb.gg also has a public JSON API under `/pub/`.
+  `pnpm import:record <slug>` loads the curated dataset into the app.
+- Client-rendered pages are read with agent-browser, headed, using the native Chrome
+  (`AGENT_BROWSER_EXECUTABLE_PATH`); crumb.gg's public JSON is captured with
+  `pnpm capture crumbgg`.
+- This skill makes a record's first round. Bringing an existing record up to date after a
+  patch, or when the user says "refresh", is `refresh-meta`: a dated round inside the record,
+  not a new record.
