@@ -97,6 +97,21 @@ function byId(rows: Row[], id: string): Row {
 }
 
 /**
+ * Rewrites one curated file of a record copy, whatever its shape, so a test
+ * sets the rows it asserts on instead of relying on the live record's.
+ *
+ * @param dir - the copy's directory
+ * @param name - the curated file's name
+ * @param change - changes the parsed file in place
+ */
+function editCurated<T>(dir: string, name: string, change: (value: T) => void): void {
+  const path = join(dir, "curated", name);
+  const value = JSON.parse(readFileSync(path, "utf-8")) as T;
+  change(value);
+  writeFileSync(path, JSON.stringify(value));
+}
+
+/**
  * Lists the sources cited for why a row became obsolete.
  *
  * @param store - the store to read
@@ -343,6 +358,13 @@ describe("recommendations that name an obsolete deck", IMPORT, () => {
         deck.obsolete = { ...RETIRED, sources: deck.sources };
       },
     });
+    editCurated<{ zones: Array<{ zone_index: number; slots: Row[] }> }>(
+      dir,
+      "stage-zones.json",
+      (file) => {
+        file.zones.find((zone) => zone.zone_index === 3)!.slots[2]!.deck = "stage-bari-coward-328";
+      },
+    );
     expect(() => importRecord(testStore(), dir)).toThrow(
       /curated\/stage-zones\.json \[zone 3 slot 2\]: stage_zone_slot names obsolete deck stage-bari-coward-328/,
     );
@@ -353,6 +375,9 @@ describe("recommendations that name an obsolete deck", IMPORT, () => {
       "decks.json": (rows) => {
         const deck = byId(rows, "dungeon-no-cheesecake-0907");
         deck.obsolete = { ...RETIRED, sources: deck.sources };
+      },
+      "dungeon-lineups.json": (rows) => {
+        rows[1]!.deck = "dungeon-no-cheesecake-0907";
       },
     });
     expect(() => importRecord(dungeonStore(), dir)).toThrow(
