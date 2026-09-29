@@ -42,9 +42,10 @@ export interface RiftFindingsProps {
 /**
  * The record's findings about the Rift that live outside the Rift's own
  * tables and mechanics topic, each with its sources: takeaways, dated
- * events, RNG factors and rune lines, the "for your account" advice, clear
- * notes, and what the decks not played in the Rift say (summary, ceiling,
- * notes, a cookie's why), wherever the text mentions the Rift. Rune lines
+ * events, RNG factors and current rune lines, the "for your account" advice,
+ * clear notes, and what the current decks not played in the Rift say
+ * (summary, ceiling, notes, a cookie's why), wherever the text mentions the
+ * Rift. Rune lines
  * tied to a Rift deck count too. Mechanics filed under other topics reach
  * the page through their `alsoTopics` instead (see `TopicNotes`).
  *
@@ -62,10 +63,10 @@ export function RiftFindings({ mode, rift, sources, id }: RiftFindingsProps) {
   const takeaways = useQuery(takeawaysQuery(mode.scope)).data ?? [];
   const timeline = useQuery(timelineQuery(mode.scope)).data ?? [];
   const rng = useQuery(rngFactorsQuery(mode.scope)).data ?? [];
-  const runes = useQuery(runeBuildsQuery(mode.scope)).data ?? [];
+  const runes = useQuery(runeBuildsQuery(mode.scope, undefined, { current: true })).data ?? [];
   const advice = useQuery(recommendationsQuery(mode.recordSlug)).data ?? [];
   const clears = useQuery(stageClearsQuery()).data ?? [];
-  const decks = useQuery(decksQuery(mode.scope)).data ?? [];
+  const decks = useQuery(decksQuery(mode.scope, { current: true })).data ?? [];
   const items: Finding[] = [
     ...takeaways
       .filter((t) => about(`${t.text} ${t.detail ?? ""}`))

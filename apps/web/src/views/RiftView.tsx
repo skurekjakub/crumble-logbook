@@ -318,7 +318,7 @@ function Levels({
  * The Dimensional Rift page: the Rift's rules and caveats (the copy's
  * mechanics topic), where it opens, its seasons, every level of the chosen
  * season with its bracket entry powers, the reported boss and, with a
- * power typed in, the reader's bracket, then the decks played there and
+ * power typed in, the reader's bracket, then the current decks played there and
  * the record's other findings about it. The power and the season live in
  * the URL.
  *
@@ -334,7 +334,7 @@ export function RiftView({ mode, stage, search, onSearch, now = new Date() }: Ri
   const seasons = useQuery(riftSeasonsQuery());
   const bosses = useQuery(riftBossesQuery());
   const decks = useQuery({
-    ...decksQuery(mode.scope),
+    ...decksQuery(mode.scope, { current: true }),
     select: (list) => list.filter((d) => stage.rift.decks.includes(d.id)),
   });
   const typed = search.power ?? "";

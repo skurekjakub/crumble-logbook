@@ -71,7 +71,8 @@ export interface BossViewProps {
 /**
  * A boss screen: the boss's cited facts, its fight on a 0–length track,
  * what it takes to survive its lethal patterns, the buffers' values by star,
- * what to run, and the ATK-order checklist, with an "On this page" list of
+ * what to run (current decks, rune builds and gear only), and the ATK-order
+ * checklist, with an "On this page" list of
  * those sections. Every research claim comes from
  * the API data, selected by mechanics topic or fight-event key, with its
  * confidence and sources. Each block renders its own query, so one failed
@@ -86,9 +87,9 @@ export function BossView({ mode, boss }: BossViewProps) {
   const buffs = useQuery(buffValuesQuery());
   const debufferBuffs = useQuery(buffValuesQuery(boss.debufferKr));
   const mechanics = useQuery(mechanicsQuery(mode.scope));
-  const runes = useQuery(runeBuildsQuery(mode.scope));
-  const decks = useQuery(decksQuery(mode.scope));
-  const gear = useQuery(gearRecsQuery(mode.scope));
+  const runes = useQuery(runeBuildsQuery(mode.scope, undefined, { current: true }));
+  const decks = useQuery(decksQuery(mode.scope, { current: true }));
+  const gear = useQuery(gearRecsQuery(mode.scope, { current: true }));
 
   const events = fights.data ?? [];
   const mechs = mechanics.data ?? [];

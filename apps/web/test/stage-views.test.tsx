@@ -260,6 +260,7 @@ const API: Record<string, Canned> = {
   "/api/sources": { body: SOURCES },
   [`/api/sources?record=${SLUG}`]: { body: SOURCES },
   "/api/decks?mode=stage": { body: DECKS },
+  "/api/decks?mode=stage&current=true": { body: DECKS },
   "/api/power-brackets": { body: BRACKETS },
   "/api/stage-chapters": { body: CHAPTERS },
   "/api/stage-zone-slots": { body: SLOTS },
@@ -272,6 +273,7 @@ const API: Record<string, Canned> = {
   "/api/timeline?mode=stage": { body: [] },
   "/api/rng-factors?mode=stage": { body: [] },
   "/api/rune-builds?mode=stage": { body: [] },
+  "/api/rune-builds?mode=stage&current=true": { body: [] },
   "/api/mechanics?mode=stage": { body: [] },
   "/api/mechanics?mode=stage&topic=rules": { body: [] },
   [`/api/recommendations?record=${SLUG}`]: { body: [] },
@@ -485,6 +487,13 @@ describe("the Dimensional Rift page", () => {
         sources: ["dc:76835"],
       }) satisfies Mechanic;
     const charge = DECKS[0]!;
+    const riftDecks = [
+      {
+        ...charge,
+        cookies: [...charge.cookies, { ...charge.cookies[0]!, id: 2, why: "His Rift deck." }],
+      },
+      DECKS[1]!,
+    ];
     const api: Record<string, Canned> = {
       ...API,
       "/api/mechanics?mode=stage": {
@@ -506,15 +515,8 @@ describe("the Dimensional Rift page", () => {
         ] satisfies Recommendation[],
       },
       "/api/stage-clears": { body: [{ ...CLEARS[0]!, note: "Entered the Rift after." }] },
-      "/api/decks?mode=stage": {
-        body: [
-          {
-            ...charge,
-            cookies: [...charge.cookies, { ...charge.cookies[0]!, id: 2, why: "His Rift deck." }],
-          },
-          DECKS[1]!,
-        ],
-      },
+      "/api/decks?mode=stage": { body: riftDecks },
+      "/api/decks?mode=stage&current=true": { body: riftDecks },
     };
     await renderRoute("/stage/rift", api, { mode: STAGE });
     expect(await screen.findByText("In the Rift, every miss costs more.")).toBeVisible();

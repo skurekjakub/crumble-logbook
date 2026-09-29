@@ -1,7 +1,7 @@
-import { screen, within } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { screen, waitFor, within } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import type { BuffValue, Deck, FightEvent, GearRec, Mechanic, RuneBuild } from "../src/api/types";
-import { CURRENT, CURRENT_DECK } from "./helpers";
+import { CURRENT, CURRENT_DECK, requestPath } from "./helpers";
 import { bodyRows, renderRoute } from "./view-harness";
 
 const PATH = "/conquest/boss";
@@ -382,9 +382,10 @@ const FULL = {
   "/api/buff-values": { body: BUFF_VALUES },
   [buffsOf("닼초")]: { body: CHOCO_CHANCE },
   "/api/mechanics?mode=guild_conquest": { body: MECHANICS },
-  "/api/rune-builds?mode=guild_conquest": { body: RUNE_BUILDS },
+  "/api/rune-builds?mode=guild_conquest&current=true": { body: RUNE_BUILDS },
+  "/api/decks?mode=guild_conquest&current=true": { body: DECKS },
   "/api/decks?mode=guild_conquest": { body: DECKS },
-  "/api/gear-recs?mode=guild_conquest": { body: GEAR },
+  "/api/gear-recs?mode=guild_conquest&current=true": { body: GEAR },
 };
 
 const EMPTY = {
@@ -392,9 +393,10 @@ const EMPTY = {
   "/api/buff-values": { body: [] },
   [buffsOf("닼초")]: { body: [] },
   "/api/mechanics?mode=guild_conquest": { body: [] },
-  "/api/rune-builds?mode=guild_conquest": { body: [] },
+  "/api/rune-builds?mode=guild_conquest&current=true": { body: [] },
+  "/api/decks?mode=guild_conquest&current=true": { body: [] },
   "/api/decks?mode=guild_conquest": { body: [] },
-  "/api/gear-recs?mode=guild_conquest": { body: [] },
+  "/api/gear-recs?mode=guild_conquest&current=true": { body: [] },
 };
 
 /**
@@ -406,6 +408,16 @@ const EMPTY = {
 const section = (name: string) => screen.getByRole("region", { name });
 
 describe("Piñata boss view", () => {
+  it("asks the API for current rune builds, decks and gear only", async () => {
+    await renderRoute(PATH, FULL);
+    await waitFor(() => {
+      const asked = vi.mocked(globalThis.fetch).mock.calls.map(([input]) => requestPath(input));
+      expect(asked).toContain("/api/rune-builds?mode=guild_conquest&current=true");
+      expect(asked).toContain("/api/decks?mode=guild_conquest&current=true");
+      expect(asked).toContain("/api/gear-recs?mode=guild_conquest&current=true");
+    });
+  });
+
   it("heads the page with the boss's label and Korean name, and its cited English name, element, weakness, fight length and scoring", async () => {
     await renderRoute(PATH, FULL);
     const heading = await screen.findByRole("heading", { level: 2 });
