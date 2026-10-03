@@ -1,5 +1,5 @@
-/* The stage-pushing screens: the power field, the reach card, attempt results and the
-   Rift's findings list. Colours come from tokens.css only. */
+/* The stage-pushing screens: the power field, the reach card, attempt results, the
+   Rift's findings list and its clears with their teams. Colours come from tokens.css only. */
 
 .power-field {
   display: flex;
@@ -49,4 +49,13 @@
 
 .rift-findings li + li {
   margin-top: var(--sp-3);
+}
+
+.rift-clear + .rift-clear {
+  margin-top: var(--sp-5);
+}
+.rift-clear-team {
+  margin-left: var(--sp-4);
+  padding-left: var(--sp-3);
+  border-left: 2px solid var(--line);
 }

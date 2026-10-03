@@ -420,6 +420,19 @@ export const riftBossesQuery = () =>
   });
 
 /**
+ * Documented Dimensional Rift attempts: the clears the record accepts by
+ * season, highest level first, then lowest power first; then accepted
+ * failures, unverified and rejected attempts, each in the same order.
+ *
+ * @returns the query options
+ */
+export const riftClearsQuery = () =>
+  queryOptions({
+    queryKey: ["rift-clears"],
+    queryFn: () => parseResponse(api["rift-clears"].$get({ query: {} })),
+  });
+
+/**
  * What to bring per boss slot of each zone layout, in zone then slot order.
  *
  * @returns the query options

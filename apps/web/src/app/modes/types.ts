@@ -251,6 +251,8 @@ export interface StageConfig {
   clears: ViewCopy;
   /** The Dimensional Rift page. */
   rift: RiftConfig;
+  /** The Rift clears at one bracket, with the attempts that bound it. */
+  riftClears: RiftClearsConfig;
   /** Kept-damage percentages, highest first, whose furthest stage the calculator names. */
   reach: readonly number[];
 }
@@ -275,6 +277,17 @@ export interface RiftConfig extends ViewCopy {
    * about the Rift when it is filed under the Rift's topic.
    */
   mentions: readonly string[];
+}
+
+/**
+ * The Rift clears page: its copy, the kept-damage bracket whose clears it
+ * ranks, and the brackets whose entry power each clear's level shows.
+ */
+export interface RiftClearsConfig extends ViewCopy {
+  /** The kept-damage % whose clears the page ranks; every other attempt bounds it. */
+  bracket: number;
+  /** Kept-damage percentages whose entry power each level shows, lowest first. */
+  lines: readonly number[];
 }
 
 /** A section shared by every mode. */

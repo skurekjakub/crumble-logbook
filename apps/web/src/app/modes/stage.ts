@@ -1,6 +1,7 @@
 /**
  * The stage-pushing section: its tabs, view copy, rules card and the stage
- * screens (bracket calculator, zone board, clears, Dimensional Rift).
+ * screens (bracket calculator, zone board, clears, Dimensional Rift and its
+ * clears at 15%).
  *
  * @module
  */
@@ -26,6 +27,7 @@ export const STAGE = {
     modeTab("stage", "zones", "Zones & bosses", "/$mode/zones"),
     modeTab("stage", "clears", "Clears", "/$mode/clears"),
     modeTab("stage", "rift", "Dimensional Rift", "/$mode/rift"),
+    modeTab("stage", "rift-15", "Rift at 15%", "/$mode/rift-15"),
     modeTab("stage", "usage", "Usage", "/$mode/usage"),
     modeTab("stage", "runes", "Sugar runes", "/$mode/runes"),
     modeTab("stage", "gear", "Gear", "/$mode/gear"),
@@ -91,6 +93,12 @@ export const STAGE = {
       topic: "rift",
       decks: ["rift-shred"],
       mentions: ["Rift", "차원", "이면"],
+    },
+    riftClears: {
+      title: "Rift at 15%",
+      lede: "Dimensional Rift clears where the power gate leaves the team 15% of its damage. The clears the record accepts come first, by season, then highest level and, at one level, lowest power; the claims it leaves unverified or rejects follow. Each shows its team, the level's recommended power and the power the 15% and 35% brackets take. The attempts at other brackets and the failures at 15% bound how far 15% reaches. Team power is as posted: the Rift's own figure includes 차원의 힘.",
+      bracket: 15,
+      lines: [15, 35],
     },
     reach: [100, 75, 55, 35, 15],
   },
