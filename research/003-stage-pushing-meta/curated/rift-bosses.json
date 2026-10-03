@@ -1,13 +1,23 @@
 {
- "about": "Dimensional Rift levels whose boss players have reported, season 1. The game data behind rift-levels.json carries recommended power only; bosses come from posts and one calculator screenshot. Each level is one boss fight, with adds from both sides.",
- "measured": "2026-09-28",
+ "about": "Dimensional Rift levels whose boss players have reported, season 1. The game data behind rift-levels.json carries recommended power only; bosses come from posts, videos and one calculator screenshot. Each level is one boss fight, with adds from both sides. Players describe the bosses cycling every five levels (Cake Hound Pack, Cool Mint, Werehound Princess, truck, GingerCraven; dc:80225, dc:80294 comments); every screenshot level fits it, and 롤로노아's level-23 truck (nv:48662) is the one report that doesn't, so it isn't listed.",
+ "measured": "2026-10-03",
  "levels": [
+  { "level": 1, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "note": "The first boss; easy once 328-30 is behind you.", "sources": ["web:yt-51MkrIh2vJY"] },
+  { "level": 2, "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint", "note": "Summoned with many adds; fight from a corner and stack Scorpion when the boss overlaps the team at the start.", "sources": ["web:yt-hx9Y_5HpSps", "nv:49183"] },
   { "level": 3, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "note": "Brightseeker + Scorpion recommended; hardest boss at 15% per one pusher.", "sources": ["dc:76586", "dc:77015"] },
   { "level": 4, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "note": "Dark Choco and Devil for shred; about five tries, then level 차원의 힘.", "sources": ["dc:77114", "dc:77015"] },
   { "level": 5, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "note": "Needs the 35% bracket.", "sources": ["dc:76569", "dc:77015"] },
   { "level": 6, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "sources": ["dc:76862"] },
+  { "level": 8, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "note": "Cleared at 15% with a screenshot (dc:77709).", "sources": ["dc:77709"] },
   { "level": 9, "boss_kr": "폭주단 트럭 ×3", "boss_en": "Rowdy Truck ×3", "note": "A 10.15G player (3rd on the ranking then) was stuck here.", "sources": ["dc:75615", "dc:76174"] },
+  { "level": 10, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "note": "No damage lands just under its 35% line of 18.76G.", "sources": ["dc:78242"] },
+  { "level": 11, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "sources": ["dc:78353"] },
+  { "level": 12, "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint", "note": "Cleared at 15% with screenshots (dc:77612, dc:78353).", "sources": ["dc:77612", "dc:78353"] },
+  { "level": 14, "boss_kr": "폭주단 트럭 ×3", "boss_en": "Rowdy Truck ×3", "sources": ["dc:78412"] },
   { "level": 15, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "sources": ["dc:76321"] },
+  { "level": 18, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "note": "The furthest 15% clear with a screenshot (dc:78865).", "sources": ["dc:78865"] },
+  { "level": 19, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "sources": ["nv:48662", "dc:79406"] },
+  { "level": 20, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "note": "The server-wide #1 waited here over 30 hours on 2026-09-29.", "sources": ["dc:79406", "dc:77620"] },
   { "level": 100, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "note": "alkapa screenshot: recommended about 1,800G, enemy evasion 13,118, resistance 12,660, 30 s limit.", "sources": ["dc:73646"] }
  ]
 }

@@ -1,0 +1,173 @@
+{
+  "batch": "youtube-and-sites-rift15 (2026-10-03)",
+  "notes": "Read from frames (05-youtube/frames/, local only), the burned-in subtitles and the watch digests (05-youtube/yt-*.txt). None of these videos has captions. Rift brackets are computed only from the power the Rift shows with 차원의 힘 applied; a formation-screen figure decides no Rift bracket (the user's rule, 2026-10-03).",
+  "posts": [
+    {
+      "source": "youtube", "id": "yt:51MkrIh2vJY", "url": "https://www.youtube.com/watch?v=51MkrIh2vJY", "date": "2026-10-03",
+      "title_kr": "[쿠키런크럼블] 차원의 이면 입성! (최종 등반덱 포함)", "title_en": "Entering the Dimensional Rift (with the final climbing decks)", "relevance": 2, "scope": "both",
+      "summary_en": "서신우 (Lv.188) graduates the main stages and enters the Rift. His stage presets read 4.08G to 4.15G on the formation screen; inside the Rift at 차원의 힘 Lv.1 his profile header reads 4G 153M 598K with no guild, so header and lobby power agree at Lv.1. He shows the 차원의 힘 Lv.2 effects screen, the Continuum Cog (무한바퀴) pet, and the Rift idle reward (1분당 2개 of the Rift item at level 2). He calls levels 1-3 easy on entry and says the real Rift starts at level 2.",
+      "clears": [
+        { "stage": "Rift level 1", "boss": "케이크 들개떼", "team_power": "4G 153M 598K (header at 차원의 힘 Lv.1)", "recommended_power": "10.00G", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "41.5% of recommended on the header figure. The fight is shown at 100% then 97%; the clear itself is implied by his reaching level 2." }
+      ],
+      "teams": [
+        { "name": "서신우 preset 3 (달토끼덱, stages)", "scope": "stage", "for": "GingerCraven stages ('비겁이의 경우 달토끼덱으로')",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "?", "position": "row1", "role": "dealer", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "?", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "row1", "role": "dealer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "?", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "?", "position": "row2", "role": "dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "?", "position": "row2", "role": "airborne counter", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie", "level": "100", "stars": "?", "position": "row2", "role": "captain, healer", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "row2", "role": "healer", "note": "" },
+            { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie", "level": "100", "stars": "?", "position": "row2", "role": "tank", "note": "Identified by the subtitle naming the preset the 달토끼덱." }
+          ],
+          "pets": ["갓난갓방울", "?", "와사비 문어"], "perks": "", "captain": "", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [],
+      "mechanics": ["The Rift header power equals the lobby power at 차원의 힘 Lv.1 (4G 153M 598K against presets of 4.08-4.15G)."],
+      "rift": [
+        "차원의 힘 Lv.2 effects, as shown: Rift ATK, DEF and HP +10%, crit damage +30%, crit rate +10%, focus +5%, accuracy +10%. They equal crumb.gg rift.json's level-2 row.",
+        "Continuum Cog (무한바퀴): +50% ally boss damage in the Rift at its shown grade.",
+        "The Rift idle reward at level 2 includes a new item at 1 per minute ×2 ('1분 당 2개'), matching rift.json's idle table (level n gives n)."
+      ],
+      "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "진짜는 2스테이지부터 시작입니다", "en": "The real thing starts from level 2." },
+        { "kr": "비겁이의 경우 달토끼덱으로 진행하였고", "en": "For GingerCraven I used the Moon Rabbit deck." }
+      ]
+    },
+    {
+      "source": "youtube", "id": "yt:hx9Y_5HpSps", "url": "https://www.youtube.com/watch?v=hx9Y_5HpSps", "date": "2026-10-03",
+      "title_kr": "[쿠키런크럼블] 차원의 이면 시즌1 쿨링민트맛 쿠키 공략 (2단계)", "title_en": "Rift season 1 Cool Mint guide (level 2)", "relevance": 2, "scope": "rift",
+      "summary_en": "Level 2, Cool Mint with many adds. The formation screen shows 4.21G (lobby power; no Rift header is shown), so the video carries no Rift bracket. Advice: fight from a corner as usual; Cool Mint is summoned on top of the team at the start, so hold off then and let Scorpion stack. Rye can stand in; without Moon Rabbit, put Armor Repair in the armour perk slot. The boss falls to 0.000% with 7.733 left on the clock.",
+      "clears": [
+        { "stage": "Rift level 2", "boss": "쿨링민트맛 쿠키", "team_power": "4.21G (formation screen, lobby)", "recommended_power": "12.92G", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "서신우 level-2 preset", "note": "No Rift power shown, so no bracket. His own text gives 5.167G as the level's 35% line 'on the Rift's basis' (nv:49183, DC lane)." }
+      ],
+      "teams": [
+        { "name": "서신우 level-2 preset", "scope": "rift", "for": "Rift level 2, Cool Mint",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "airborne counter", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "dealer", "note": "" },
+            { "kr": "딸기쇼트케이크맛 쿠키", "en": "Strawberry Shortcake Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "?", "note": "Low confidence: read from the sprite (white hair, strawberries) against crumblehub's portraits." },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "dealer", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "captain, healer", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "healer", "note": "" },
+            { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "tank", "note": "" }
+          ],
+          "pets": ["갓난갓방울 20★", "무한바퀴 0★", "와사비 문어 19★"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "preset 4", "why": "Rye can replace a dealer; without Moon Rabbit, Armor Repair in the armour slot.", "substitutions": ["호밀맛 쿠키 for a dealer", "Armor Repair perk instead of Moon Rabbit"], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": ["The figure under the boss bar counts down from about 27.7 and reads 7.733 when the boss dies: the fight clock."], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "바리덱으로 겹치기만 하면 끝입니다", "en": "With the Bari deck you just stack on it and it's done." },
+        { "kr": "소환된 상태라 평소처럼 구석컨을 하면 답이 없어서 시작하면 바로 겹쳐주는데 그때만 손을 떼서 전갈의 스택을 묻히면서", "en": "It's summoned already, so the usual corner play doesn't work; it overlaps you at the start, so take your hand off then and let Scorpion's stacks land." }
+      ]
+    },
+    {
+      "source": "youtube", "id": "yt:In-nfQKm21g", "url": "https://www.youtube.com/watch?v=In-nfQKm21g", "date": "2026-10-03",
+      "title_kr": "[쿠키런크럼블] 차원의 이면 시즌1 망치공주 공략 (3단계)", "title_en": "Rift season 1 Werehound Princess guide (level 3)", "relevance": 2, "scope": "rift",
+      "summary_en": "Level 3, the Werehound Princess as on main stages: use the airborne deck. The formation screen shows 4.14G (lobby). He gives the level's line as 6.39G, which is rift-levels.json's 35% line, and says the 차원의 힘 buff raises Rift power enough that levels up to 3 fall easily on entry. Perks: make Milk receive every perk and raise only ATK. The boss reaches 0.000% with 1.733 on the clock.",
+      "clears": [
+        { "stage": "Rift level 3", "boss": "초코크림 늑대 망치공주", "team_power": "4.14G (formation screen, lobby)", "recommended_power": "15.97G", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "서신우 level-3 preset", "note": "No Rift power shown; by his own words his Rift power cleared the 6.39G (35%) line, so this is most likely a 35% clear." }
+      ],
+      "teams": [
+        { "name": "서신우 level-3 preset", "scope": "rift", "for": "Rift level 3, Werehound Princess",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "airborne counter", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "dealer", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "dealer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "tank", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "dealer", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "captain, healer", "note": "Receives every perk." },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "healer", "note": "" },
+            { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "tank", "note": "" }
+          ],
+          "pets": ["갓난갓방울 20★", "무한바퀴 0★", "와사비 문어 19★"], "perks": "초고속 승진 + 열정페이", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "preset 3", "why": "Airborne deck as on the main-stage Werehound Princess; all perks onto Milk, raise only ATK.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "이것의 권장 전투력은 6.39G인데 차원의 이면에서는 차원의 힘 버프를 받은 덕분에 전투력이 많이 높아지기 때문에 쉽게 잡으실 수 있습니다", "en": "Its required power is 6.39G, but in the Rift the 차원의 힘 buff raises your power a lot, so it falls easily." },
+        { "kr": "처음 입성하면 3단계까지는 쉽게 잡으실 수 있습니다", "en": "On first entering, levels up to 3 are easy." }
+      ]
+    },
+    {
+      "source": "youtube", "id": "yt:WmEItY7JYtE", "url": "https://www.youtube.com/watch?v=WmEItY7JYtE", "date": "2026-10-03",
+      "title_kr": "[쿠키런크럼블] 차원의 이면 시즌1 폭주단 트럭 공략 (4단계)", "title_en": "Rift season 1 Rowdy Truck guide (level 4)", "relevance": 2, "scope": "rift",
+      "summary_en": "Level 4, the truck. Formation screen 4.28G (lobby); the line 'on the Rift's basis' is 7.776G, rift-levels.json's 35% line. The truck hits hard, but in the Rift the perks go as usual: raise Milk's ATK only. Play as on main stages: move a little at a time so the truck's charge distance doesn't build, and don't get hit on the first lure. The truck reaches 0.000% with 4.633 on the clock.",
+      "clears": [
+        { "stage": "Rift level 4", "boss": "폭주단 트럭", "team_power": "4.28G (formation screen, lobby)", "recommended_power": "19.44G", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "서신우 level-4 preset", "note": "No Rift power shown." }
+      ],
+      "teams": [
+        { "name": "서신우 level-4 preset", "scope": "rift", "for": "Rift level 4, truck",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "buffer", "note": "Should survive to use its skill." },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "dealer", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "dealer", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "buffer", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "5+", "position": "row1", "role": "healer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "dealer", "note": "" },
+            { "kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "airborne counter", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "captain, healer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco Cookie", "level": "100", "stars": "5+", "position": "row2", "role": "tank", "note": "" }
+          ],
+          "pets": ["갓난갓방울 20★", "전지멜로우 20★", "무한바퀴 0★"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "preset 4", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "차원 기준 7.776G입니다", "en": "On the Rift's basis it is 7.776G." },
+        { "kr": "너무 빠르게 이동하면 돌진 거리가 되지 않으니 살짝씩 움직여 주시고", "en": "Moving too fast gives it charge distance, so move a little at a time." }
+      ]
+    },
+    {
+      "source": "youtube", "id": "yt:RFwK4e4tu9I", "url": "https://www.youtube.com/watch?v=RFwK4e4tu9I", "date": "2026-10-02",
+      "title_kr": "쿠키런 크럼블 오븐 39렙 임박 차원34단계 벌써 불금이라니..", "title_en": "Oven Lv.39 close, Rift level 34", "relevance": 1, "scope": "rift",
+      "summary_en": "ND러너's 3.6-hour stream at Rift level 34. Downloaded at 480p and sampled every ten minutes; the Rift header power isn't legible at that size, so the stream is not used for a bracket.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "youtube", "id": "yt:FDX52m60Dq0", "url": "https://www.youtube.com/watch?v=FDX52m60Dq0", "date": "2026-09-26",
+      "title_kr": "이런것도 있다고?? 차원의 이면 히든 보스?? 여기에 무한바퀴 펫 보상과 한정판 보상이..!!", "title_en": "A hidden Rift boss? Continuum Cog and limited rewards", "relevance": 1, "scope": "rift",
+      "summary_en": "ND러너 on the Rift's rewards and a hidden boss; watch page only, no lineup or power read.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    { "source": "youtube", "id": "yt:UEo9VrX_O3Q", "url": "https://www.youtube.com/watch?v=UEo9VrX_O3Q", "date": "2026-10-03", "title_kr": "차원의 이면", "title_en": "Off-topic: a Clash Royale stream with the same title", "relevance": 0, "scope": "rift", "summary_en": "Off-topic.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "youtube", "id": "yt:bhDMOLGarlE", "url": "https://www.youtube.com/watch?v=bhDMOLGarlE", "date": "2026-09-21", "title_kr": "EASY WIN TEAM for Dimensional Rift - A Complete Walkthough", "title_en": "Off-topic: RAID: Shadow Legends", "relevance": 0, "scope": "rift", "summary_en": "Off-topic.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    {
+      "source": "other", "id": "web:crumbgg-rift", "url": "https://crumb.gg/data/rift.json", "date": "2026-09-23",
+      "title_kr": "crumb.gg rift.json", "title_en": "crumb.gg's Rift data, game 1.4.002", "relevance": 3, "scope": "rift",
+      "summary_en": "The Rift's own tables from the client: the damage brackets (dmg: 10% → 5, 20% → 15, 40% → 35, 60% → 55, 80% → 75, 100% → 100, 120% → 120), the 차원의 힘 levels 1-100 with the XP each needs and the stats each grants (Lv.2 +10% ATK/DEF/HP, +30% crit damage, +10% crit, +5% focus, +10% accuracy; each level adds about 10% ATK/DEF/HP, to +990% at Lv.100), the idle gain per Rift level (level n gives n per minute), fragments per level, the reward keys (Continuum Cog at levels 1 and 20) and the seasons.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["The Rift's damage table is the main stages' table, so a Rift level's 15% bracket starts at 20% of its recommended power and its 35% at 40%."],
+      "rift": [
+        "차원의 힘 XP needed: Lv.2 30, Lv.3 990, Lv.4 2,520, Lv.5 4,560, Lv.10 24,870, Lv.14 54,630, Lv.20 and up rising to 7,818,570 at Lv.100.",
+        "Idle gain is the Rift level reached per minute, so pushing a level both raises the bracket's reach and speeds up the next 차원의 힘 level."
+      ],
+      "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other", "id": "web:arca-cookierun", "url": "https://arca.live/b/cookierun", "date": "2026-10-03",
+      "title_kr": "아카라이브 쿠키런 채널", "title_en": "arca.live Cookie Run channel: keyword searches and the unfiltered listing back to 2026-09-22", "relevance": 0, "scope": "rift",
+      "summary_en": "No Rift posts: the keyword searches (03-sites/arca_cookierun_search_*.tsv) and the listing (arca_cookierun_list_p*.tsv) hold only OvenBreak and Kingdom threads and invite-code requests in the window. Namu Wiki has no Rift article and its Cloudflare blocked the session; Reddit's Crumble subreddit returns nothing for 'rift'.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": [
+    { "kr": "무한바퀴", "en": "Continuum Cog", "kind": "pet", "confidence": "high", "evidence": "crumb.gg rift.json key; the official EN patch article" },
+    { "kr": "차원의 힘", "en": "Dimensional Energy", "kind": "term", "confidence": "high", "evidence": "the official EN patch article (x.com/CRCrumbleEN), via search results" }
+  ]
+}

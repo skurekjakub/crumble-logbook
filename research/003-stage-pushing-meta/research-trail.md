@@ -46,3 +46,41 @@ A lead passed in by the coordinator, not found by the rounds: crumb.gg publishes
 - Stage recommended power per stage and the Rift's per-level power: crumblehub's 1.4.002 data (`evidence/03-sites`).
 - Teams at 35% and 15%: DC and the Naver cafe only (`evidence/02-dc`, `evidence/04-naver`); the web rounds found none elsewhere.
 - The Rift's rules and the 9/23 stage relief: the official patch note (nv:44477) with press corroboration (`evidence/05-web`).
+
+## Round 2026-10-03 (Rift at 15%)
+
+### Web rounds
+
+Round 1 queries:
+- 쿠키런 크럼블 차원의 이면 15퍼
+- Cookie Run Crumble Dimensional Rift team low power clear guide
+- 크럼블 이면 덱 공략 차원의 힘
+
+Synthesis: the search engines index nothing Rift-specific in Korean beyond the 9/23 update; English results are generic team guides. The Rift's community lives on DCInside, the Naver cafe and YouTube, as in the first round.
+
+Round 2 queries:
+- reddit CookieRunCrumble "Dimensional Rift" power
+- arca.live 크럼블 차원의 이면
+- 나무위키 쿠키런: 크럼블 차원의 이면
+
+Synthesis: no Reddit or arca.live thread; the official EN names surfaced (Dimensional Energy Level for 차원의 힘, Continuum Cog for 무한바퀴, an SSR pet adding Boss DMG in the Rift). Checked in the browser afterwards: arca.live's Cookie Run channel, by keyword and by its unfiltered listing back to 2026-09-22, holds no Rift post (`evidence/r2026-10-03/03-sites/arca_cookierun_*.tsv`); Namu Wiki has no Rift article and its Cloudflare blocked the session; the Crumble subreddit returns nothing (`03-sites/reddit_cookieruncrumble_search_rift.txt`).
+
+Round 3 queries:
+- "Dimensional Energy" Cookie Run Crumble Rift
+- "Continuum Cog" Crumble
+- a probe of crumb.gg and crumblehub for Rift endpoints
+
+Synthesis: the press repeats the patch article; crumb.gg serves `data/rift.json`, the Rift's damage table, 차원의 힘 levels, idle gain and seasons from the 1.4.002 client (`03-sites/data-rift.json`). crumblehub's clear-deck API has no Rift mode.
+
+### YouTube
+
+Searches (`05-youtube/ytq-*.html`): 차원의 이면 15%, 차원의 이면 공략, 크럼블 이면 덱, 쿠키런 크럼블 차원의 이면, Cookie Run Crumble Dimensional Rift, then 차원의 이면 5단계, 차원의 이면 클리어, 이면 15퍼, 차원의 이면 덱, 크럼블 이면 공략, Crumble Dimensional Rift stage, 크럼블 차원의 힘, 무한바퀴 크럼블. They found 서신우's Rift entry and level 2-4 guides (read from frames and burned-in subtitles) and ND러너's level-34 stream; the rest were stage videos or other games.
+
+### DCInside and the Naver cafe
+
+The saved searches and the discovery queries are in the DC lane's listings (`02-dc/list-<search id>.tsv`) and `04-naver/list-naver-*.tsv`; the ones that produced a cited source are saved in `searches.json`. DC's search splits a title on spaces, so the multi-word queries are noisy; the single nicknames (비틀, 트럭, 쿨민, 망치, 차힘) carried the round.
+
+### Takeaways (each verified against a capture before use)
+
+- The bracket a Rift fight runs at: the Rift's header power against `curated/rift-levels.json`, with crumb.gg's `dmg` table (`03-sites/data-rift.json`) and 서신우's "차원 기준" lines (nv:49183, nv:49192, nv:49254).
+- The 15% clears and their teams: DCInside screenshots (`02-dc/dc/`), curated in `curated/rift-clears.json` and `curated/decks.json`.

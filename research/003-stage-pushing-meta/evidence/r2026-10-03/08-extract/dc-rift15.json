@@ -1,0 +1,501 @@
+{
+  "batch": "dc-rift15",
+  "about": "DCInside projectcc posts on the Dimensional Rift (차원의 이면) at the 15% bracket, 2026-09-23 to 2026-10-03, captured in evidence/r2026-10-03/02-dc/dc. Shape of evidence/08-extract/BRIEF.md; each clear also carries the fields of the rift-clears shape in docs/superpowers/specs/2026-10-03-rift-15-clears-design.md (rift_attempt). Brackets are computed from curated/rift-levels.json (season 1 levels) against the team power the in-Rift header shows (the sword figure under the player name), which includes 차원의 힘; power_basis 'rift' means that figure. Cookies are read from portraits in the battle bar against crumblehub's portraits; '?' where a portrait could not be matched. 'suggested_standing' is this lane's suggestion, for the curator to decide.",
+  "posts": [
+    {
+      "source": "dc", "id": "77709", "url": "https://m.dcinside.com/board/projectcc/77709", "date": "2026-09-29",
+      "title_kr": "8단계 비틀기성공", "title_en": "Level 8 twisted through", "relevance": 3, "scope": "rift",
+      "summary_en": "A 15% 'twist' (비틀기) clear of Rift level 8. The screenshot is the in-Rift battle screen of 카린 (Lv.188, Rift rank 188th): header team power 12G 152M 606K, boss 초코크림 늑대 망치공주 at 0.000%, '차원의 이면 8단계', fight clock 1.100. 카린 is the player who cleared 328-30 at 4.00G (dc:76835, first round), so the Rift header shows about three times their lobby power.",
+      "clears": [
+        { "stage": "rift-8", "boss": "초코크림 늑대 망치공주", "team_power": "12G 152M 606K", "recommended_power": "37,244,770,714 (rift-levels.json level 8)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "karin-bari", "note": "12.15G / 37.24G = 32.6% of recommended: the 15% bracket (35% from 14.90G). Boss HP 0.000% on the screenshot.",
+          "rift_attempt": { "season": 1, "level": 8, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "team_power": "12G 152M 606K", "power_basis": "rift", "rift_power_level": null, "recommended_power": 37244770714, "bracket": 15, "result": "clear", "play": null, "evidence": "screenshot", "suggested_standing": "accepted", "sources": ["dc:77709"] } }
+      ],
+      "teams": [
+        { "name": "karin-bari", "scope": "rift", "for": "Rift level 8 (Werehound Princess) at 15%",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bar 2", "role": "dealer", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5+", "position": "bar 3", "role": "poison / DEF shred", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "5+", "position": "bar 4", "role": "airborne counter", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 5", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 6", "role": "skill-AMP beam", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 7", "role": "buffer", "note": "" },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "5+", "position": "bar 8", "role": "charge dealer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "100", "stars": "5+", "position": "bar 9", "role": "dealer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 10", "role": "captain, healer", "note": "captain banner on its card" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 11", "role": "charge dealer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "100", "stars": "5+", "position": "bar 12", "role": "tank, DEF shred", "note": "" }
+          ],
+          "pets": ["색동 주머니", "무한바퀴", "?"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "", "why": "Not stated; the post is a screenshot only.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": ["The Rift header power of a player who entered at about 4.0G read 12.15G at level 8 on 2026-09-29."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "9.45mㅋㅋㅋ", "en": "(a commenter reads the 9.45M under the oven, not the team power)" }]
+    },
+    {
+      "source": "dc", "id": "78353", "url": "https://m.dcinside.com/board/projectcc/78353", "date": "2026-09-30",
+      "title_kr": "이면 11 12 비틀기 덱", "title_en": "Rift levels 11 and 12: the twist decks", "relevance": 3, "scope": "rift",
+      "summary_en": "카린 again (Lv.189): two in-Rift battle screenshots with the decks used to 'twist' levels 11 and 12. Level 11, 케이크 들개떼: header 17G 796M 59K, boss at 4%, clock 7.733. Level 12, 쿨링민트맛 쿠키: header 18G 398M 14K, boss 0.000%, clock 1.567. Both are the 15% bracket. Comments ask about level 8 (Werehound Princess) and level-10 GingerCraven at 17.2G, which deals no damage.",
+      "clears": [
+        { "stage": "rift-11", "boss": "케이크 들개떼", "team_power": "17G 796M 59K", "recommended_power": "53,635,610,953 (level 11)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "karin-witchberry-rockstar", "note": "17.80G / 53.64G = 33.2%: the 15% bracket (35% from 21.45G). The screenshot is mid-fight at 4% boss HP with 7.733 on the clock; the title says the level was cleared with this deck.",
+          "rift_attempt": { "season": 1, "level": 11, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "team_power": "17G 796M 59K", "power_basis": "rift", "rift_power_level": null, "recommended_power": 53635610953, "bracket": 15, "result": "clear", "play": null, "evidence": "screenshot", "suggested_standing": "unverified", "sources": ["dc:78353"] } },
+        { "stage": "rift-12", "boss": "쿨링민트맛 쿠키", "team_power": "18G 398M 14K", "recommended_power": "58,909,174,145 (level 12)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "karin-scorpion-witchberry", "note": "18.40G / 58.91G = 31.2%: the 15% bracket (35% from 23.56G). Boss HP 0.000%.",
+          "rift_attempt": { "season": 1, "level": 12, "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint", "team_power": "18G 398M 14K", "power_basis": "rift", "rift_power_level": null, "recommended_power": 58909174145, "bracket": 15, "result": "clear", "play": null, "evidence": "screenshot", "suggested_standing": "accepted", "sources": ["dc:78353"] } }
+      ],
+      "teams": [
+        { "name": "karin-witchberry-rockstar", "scope": "rift", "for": "Rift level 11 (Cake Hound Pack) at 15%",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bar 2", "role": "dealer", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 3", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 4", "role": "skill-AMP beam", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 5", "role": "buffer", "note": "" },
+            { "kr": "위치베리맛 쿠키", "en": "Witchberry", "level": "100", "stars": "5+", "position": "bar 6", "role": "?", "note": "" },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "5+", "position": "bar 7", "role": "charge dealer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "100", "stars": "5+", "position": "bar 8", "role": "dealer", "note": "" },
+            { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "100", "stars": "5+", "position": "bar 9", "role": "?", "note": "portrait read as Rockstar (white hair, striped jacket)" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 10", "role": "captain, healer", "note": "captain banner" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 11", "role": "charge dealer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "100", "stars": "5+", "position": "bar 12", "role": "tank, DEF shred", "note": "" }
+          ],
+          "pets": ["핫도그도그", "무한바퀴", "?"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "", "why": "Not stated. The same twelve as dc:77572's level-6 text list.", "substitutions": [], "unorthodox": [] },
+        { "name": "karin-scorpion-witchberry", "scope": "rift", "for": "Rift level 12 (Cool Mint) at 15%",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bar 2", "role": "dealer", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5+", "position": "bar 3", "role": "poison / DEF shred", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "5+", "position": "bar 4", "role": "airborne counter", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 5", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 6", "role": "skill-AMP beam", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 7", "role": "buffer", "note": "" },
+            { "kr": "위치베리맛 쿠키", "en": "Witchberry", "level": "100", "stars": "5+", "position": "bar 8", "role": "?", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 9", "role": "captain, healer", "note": "captain banner" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 10", "role": "charge dealer", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "5+", "position": "bar 11", "role": "healer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "100", "stars": "5+", "position": "bar 12", "role": "tank, DEF shred", "note": "" }
+          ],
+          "pets": ["핫도그도그", "색동 주머니", "무한바퀴"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "", "why": "Not stated.", "substitutions": [], "unorthodox": ["No Princess Bari against Cool Mint."] }
+      ],
+      "builds": [], "mechanics": [], "rift": ["Level 11 is the Cake Hound Pack and level 12 Cool Mint (both on the screenshots)."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "10단계 비겁이 컷이 몇임? 17.2인데 왜 딜이안박히지", "en": "What's the cut for level-10 GingerCraven? I'm at 17.2 and damage doesn't land." }]
+    },
+    {
+      "source": "dc", "id": "77612", "url": "https://m.dcinside.com/board/projectcc/77612", "date": "2026-09-29",
+      "title_kr": "이면 15퍼 쿨민", "title_en": "Rift Cool Mint at 15%", "relevance": 3, "scope": "rift",
+      "summary_en": "In-Rift screenshot of Noah (Lv.190, Rift rank 86th): '차원의 이면 12단계', Cool Mint at 0.000%, header 20G 453M 993K, gear preset '스가x'. The poster says this deck clears everything at 15% except the Cake Hound Pack; Werehound Princess and GingerCraven might fall with a lot of time but aren't worth it. In the comments the poster clears the three trucks by dropping Herb or Cherry Cola for Dark Choco and stacking Devil's and Dark Choco's DEF shred, pushing them to 9 or 7 o'clock; Devil survives thanks to the Rift buff.",
+      "clears": [
+        { "stage": "rift-12", "boss": "쿨링민트맛 쿠키", "team_power": "20G 453M 993K", "recommended_power": "58,909,174,145 (level 12)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "noah-devil", "note": "20.45G / 58.91G = 34.7%: the 15% bracket (35% from 23.56G). Boss 0.000%, clock 0.633.",
+          "rift_attempt": { "season": 1, "level": 12, "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint", "team_power": "20G 453M 993K", "power_basis": "rift", "rift_power_level": null, "recommended_power": 58909174145, "bracket": 15, "result": "clear", "play": null, "evidence": "screenshot", "suggested_standing": "accepted", "sources": ["dc:77612"] } },
+        { "stage": "rift-4 or rift-9", "boss": "폭주단 트럭 ×3", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "manual", "retries": "", "team": "noah-devil (Dark Choco in for Herb or Cherry Cola)", "note": "Comment thread: cleared the three trucks at 15% by stacking Devil and Dark Choco shred at 9 or 7 o'clock. Level not stated.",
+          "rift_attempt": { "season": 1, "level": null, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck ×3", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": null, "bracket": 15, "result": "clear", "play": "manual", "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:77612"] } },
+        { "stage": "rift (hammer, GingerCraven)", "boss": "초코크림 늑대 망치공주 / 비겁한 쿠키", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "noah-devil", "note": "Comment: 'the Werehound Princess and GingerCraven don't lose HP at all' at 15%.", "rift_attempt": null }
+      ],
+      "teams": [
+        { "name": "noah-devil", "scope": "rift", "for": "Rift Cool Mint at 15%; with Dark Choco, the three trucks",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bar 2", "role": "dealer", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5+", "position": "bar 3", "role": "poison / DEF shred", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "5+", "position": "bar 4", "role": "airborne counter", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 5", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 6", "role": "skill-AMP beam", "note": "" },
+            { "kr": "악마맛 쿠키", "en": "Devil", "level": "100", "stars": "5+", "position": "bar 7", "role": "DEF shred", "note": "'악쿠 오랜만이네' / 'survives thanks to the Rift buff, so it's worth a slot'" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 8", "role": "buffer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "100", "stars": "5+", "position": "bar 9", "role": "dealer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 10", "role": "captain, healer", "note": "captain banner" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 11", "role": "charge dealer", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "5+", "position": "bar 12", "role": "healer", "note": "" }
+          ],
+          "pets": ["무한바퀴", "색동 주머니", "?"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "", "why": "Devil's DEF shred stacked with Dark Choco's (when Dark Choco is in) forces damage through at 15%.", "substitutions": ["Three trucks: Dark Choco in for Herb or Cherry Cola."], "unorthodox": ["Devil, an old shred cookie, back in a top deck because the Rift buff keeps it alive."] }
+      ],
+      "builds": [{ "cookie": "team", "scope": "rift", "sugar_runes": "", "gear": "preset named '스가x' (skill haste)", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": ["At 15% the poster clears every boss but the Cake Hound Pack, the Werehound Princess and GingerCraven with this deck."], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "15퍼는 케이크 ㅈㄴ많이나오는거 제외하면 다 이덱으로깸", "en": "At 15% I clear everything with this deck except the one with tons of cakes." },
+        { "kr": "악마방깎이랑 닼초방깎이랑 겹쳐서 강제로 밀어야함", "en": "You have to stack Devil's and Dark Choco's DEF shred and force it." },
+        { "kr": "망치부인 비겁은 아예 안달아", "en": "The Werehound Princess and GingerCraven don't lose HP at all." }
+      ]
+    },
+    {
+      "source": "dc", "id": "78865", "url": "https://m.dcinside.com/board/projectcc/78865", "date": "2026-10-01",
+      "title_kr": "이면 망치부인 트럭 15퍼", "title_en": "Rift Werehound Princess and truck at 15%", "relevance": 3, "scope": "rift",
+      "summary_en": "Noah (Lv.191, Rift rank 88th) shows a 15% clear of Rift level 18, the Werehound Princess at 0.000%, header 29G 731M 961K. Conquest gear preset, the same pets, perks Passion Pay + Fast Promotion, levels adjusted so the buffs pile on Brightseeker, Rye and Cherry Cola and Brightseeker gets Macaron's. The truck is the hardest: without a knockback pet the formation collapses. A commenter reads the third pet as 색동 주머니 (launch).",
+      "clears": [
+        { "stage": "rift-18", "boss": "초코크림 늑대 망치공주", "team_power": "29G 731M 961K", "recommended_power": "102,496,304,864 (level 18)", "bracket": "15", "result": "clear", "play": "manual", "retries": "", "team": "noah-rye-hammer", "note": "29.73G / 102.50G = 29.0%: the 15% bracket (35% from 41.00G). Boss 0.000%, clock 1.067.",
+          "rift_attempt": { "season": 1, "level": 18, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "team_power": "29G 731M 961K", "power_basis": "rift", "rift_power_level": null, "recommended_power": 102496304864, "bracket": 15, "result": "clear", "play": "manual", "evidence": "screenshot", "suggested_standing": "accepted", "sources": ["dc:78865"] } },
+        { "stage": "rift (truck)", "boss": "폭주단 트럭", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "manual", "retries": "", "team": "noah-rye-hammer", "note": "Title claims the truck at 15% too; no truck screenshot, level not stated.",
+          "rift_attempt": { "season": 1, "level": null, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": null, "bracket": 15, "result": "clear", "play": "manual", "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:78865"] } }
+      ],
+      "teams": [
+        { "name": "noah-rye-hammer", "scope": "rift", "for": "Rift Werehound Princess (and truck) at 15%",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bar 2", "role": "main dealer", "note": "must receive Macaron's buff" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "64", "stars": "5+", "position": "bar 3", "role": "poison / DEF shred", "note": "levelled down so it doesn't take the buffs" },
+            { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "5+", "position": "bar 4", "role": "dealer", "note": "one of the three the buffs are concentrated on" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "70", "stars": "5+", "position": "bar 5", "role": "airborne counter", "note": "levelled down" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 6", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 7", "role": "skill-AMP beam", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 8", "role": "buffer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "70", "stars": "5+", "position": "bar 9", "role": "dealer", "note": "levelled down" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 10", "role": "captain, healer", "note": "captain banner" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 11", "role": "charge dealer", "note": "one of the three the buffs are concentrated on" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "70", "stars": "5+", "position": "bar 12", "role": "tank, DEF shred", "note": "levelled down" }
+          ],
+          "pets": ["무한바퀴", "색동 주머니", "전지멜로우"], "perks": "열정페이 + 초고속승진", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "",
+          "why": "Level adjustment (렙조절) as in Guild Conquest: the lower-level support cookies stop taking the ATK-ordered buffs, so Brightseeker, Rye and Cherry Cola get them and Brightseeker gets Macaron's. The same deck as nv:48662's second deck (Rye for Bari), with Scorpion at 64 instead of 45.",
+          "substitutions": ["Truck: a knockback pet, or the formation collapses."], "unorthodox": ["Conquest gear preset in a stage-type fight."] }
+      ],
+      "builds": [{ "cookie": "team", "scope": "rift", "sugar_runes": "", "gear": "Guild Conquest (토벌) preset per the text; the gear-menu dropdown on the screenshot reads '아레나', which isn't the formation's preset", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": ["Level 18 is the Werehound Princess (screenshot)."], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "렙조절해서 브시커 호밀 체콜 몰빵하고 시커가 마카롱 받게해주면되고", "en": "Adjust levels to pile everything on Brightseeker, Rye and Cherry Cola, and make Brightseeker get Macaron's buff." },
+        { "kr": "트럭이 진짜 ㅈㄴ빡센데 밀치기펫 안쓰면 진형이 붕괴되서 힘들더라", "en": "The truck is brutal; without a knockback pet the formation collapses." }
+      ]
+    },
+    {
+      "source": "dc", "id": "76997", "url": "https://m.dcinside.com/board/projectcc/76997", "date": "2026-09-28",
+      "title_kr": "15단계 비겁이 떡벽이네..", "title_en": "Level-15 GingerCraven is a solid wall", "relevance": 3, "scope": "rift",
+      "summary_en": "SCANDAL (Lv.189, 30th on the all-server Rift ranking) at Rift level 15: GingerCraven at 62% with 0.067 left on the clock, header 22G 813M 562K, gear preset '스테 치저뻥투' (stage, crit-resist power padding). The poster calls GingerCraven and the Werehound Princess walls.",
+      "clears": [
+        { "stage": "rift-15", "boss": "비겁한 쿠키", "team_power": "22G 813M 562K", "recommended_power": "78,894,911,744 (level 15)", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "scandal-15", "note": "22.81G / 78.89G = 28.9%: the 15% bracket (35% from 31.56G). 62% HP left as the clock runs out.",
+          "rift_attempt": { "season": 1, "level": 15, "boss_kr": "비겁한 쿠키", "boss_en": null, "team_power": "22G 813M 562K", "power_basis": "rift", "rift_power_level": null, "recommended_power": 78894911744, "bracket": 15, "result": "fail", "play": null, "evidence": "screenshot", "suggested_standing": "accepted", "sources": ["dc:76997"] } }
+      ],
+      "teams": [
+        { "name": "scandal-15", "scope": "rift", "for": "Rift level 15 GingerCraven (failed at 15%)",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bar 2", "role": "", "note": "" },
+            { "kr": "?", "en": null, "level": "100", "stars": "5+", "position": "bar 3", "role": "", "note": "white-haired portrait, not matched" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5+", "position": "bar 4", "role": "", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda", "level": "100", "stars": "5+", "position": "bar 5", "role": "", "note": "green-haired portrait, read as Melon Soda (low confidence)" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 6", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 7", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 8", "role": "", "note": "" },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "5+", "position": "bar 9", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 10", "role": "captain", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 11", "role": "", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "5+", "position": "bar 12", "role": "", "note": "" }
+          ],
+          "pets": ["핫도그도그", "무한바퀴", "?"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "team", "scope": "rift", "sugar_runes": "", "gear": "preset '스테 치저뻥투' (stage, crit-resist padding)", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": ["Level 15 is GingerCraven (screenshot); a 30th-ranked player was stopped there on 2026-09-28."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "78412", "url": "https://m.dcinside.com/board/projectcc/78412", "date": "2026-09-30",
+      "title_kr": "아 3트럭 좃같네", "title_en": "The three trucks are awful", "relevance": 2, "scope": "rift",
+      "summary_en": "In-Rift screenshot of '차원의 이면 14단계': 폭주단 트럭 at 6% with the clock at 0.000, so the fight timed out. The poster confirms it was at 15% and still hasn't cleared it.",
+      "clears": [
+        { "stage": "rift-14", "boss": "폭주단 트럭 ×3", "team_power": "?", "recommended_power": "72,667,110,973 (level 14)", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "Header cropped out; bracket from the poster's reply. 6% HP left at time-out.",
+          "rift_attempt": { "season": 1, "level": 14, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck ×3", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": 72667110973, "bracket": 15, "result": "fail", "play": null, "evidence": "screenshot", "suggested_standing": "accepted", "sources": ["dc:78412"] } }
+      ],
+      "teams": [], "builds": [], "mechanics": ["Rift boss fights are timed: the clock under the boss bar reaches 0.000 and the fight ends with the boss alive."], "rift": ["Level 14 is the Rowdy Truck (screenshot)."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "80294", "url": "https://m.dcinside.com/board/projectcc/80294", "date": "2026-10-03",
+      "title_kr": "이계 4단계부터 벽느껴지네", "title_en": "Hitting a wall from Rift level 4", "relevance": 3, "scope": "rift",
+      "summary_en": "도토리마스터 (Rift rank 697th, 축복 Lv.6) at Rift level 4: the Rowdy Truck at 61% with 4.333 on the clock, header 5G 366M 699K. Commenters: pull the trucks to 7 or 11 o'clock; with a skill-haste set it goes at 15% too; pets Continuum Cog, Octo Wasabi, Hot Doggie; the routine is 'levels 1-4 at 15%, park at GingerCraven, kill it at 35%, repeat'.",
+      "clears": [
+        { "stage": "rift-4", "boss": "폭주단 트럭", "team_power": "5G 366M 699K", "recommended_power": "19,438,391,006 (level 4)", "bracket": "15", "result": "?", "play": "?", "retries": "", "team": "acorn-4", "note": "5.37G / 19.44G = 27.6%: the 15% bracket (35% from 7.78G). Mid-fight, 61% HP left; no result posted.",
+          "rift_attempt": null }
+      ],
+      "teams": [
+        { "name": "acorn-4", "scope": "rift", "for": "Rift level 4 trucks (in progress)",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bar 2", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5+", "position": "bar 3", "role": "", "note": "" },
+            { "kr": "메론소다맛 쿠키", "en": "Melon Soda", "level": "100", "stars": "5+", "position": "bar 4", "role": "", "note": "green-haired portrait, low confidence" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "5+", "position": "bar 5", "role": "", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 6", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 7", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 8", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "100", "stars": "5+", "position": "bar 9", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 10", "role": "captain", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 11", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "100", "stars": "5+", "position": "bar 12", "role": "", "note": "" }
+          ],
+          "pets": ["?"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "", "why": "", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "team", "scope": "rift", "sugar_runes": "", "gear": "skill-haste (스가) set, per a commenter", "thresholds": "", "why": "A commenter pushed the trucks at 15% with it." }],
+      "mechanics": [], "rift": ["Rift routine per a commenter: levels 1-4 at 15%, park at GingerCraven until 35%, kill it, repeat.", "Pets a commenter used: the Rift pet (무한바퀴), 와사비 문어, 핫도그도그."], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "그거7시나 11시 몰아서잡아야해", "en": "You have to herd them to 7 or 11 o'clock to kill them." },
+        { "kr": "스가세팅끼고 15퍼도밀림", "en": "With a skill-haste set it goes at 15% too." },
+        { "kr": "1234 15퍼밀고 - 비겁파킹후 35퍼킬 반복", "en": "Push 1-2-3-4 at 15%, park at GingerCraven, kill it at 35%, repeat." }
+      ]
+    },
+    {
+      "source": "dc", "id": "77572", "url": "https://m.dcinside.com/board/projectcc/77572", "date": "2026-09-29",
+      "title_kr": "이면 6단계 15% 비틀기 성공", "title_en": "Rift level 6 twisted through at 15%", "relevance": 2, "scope": "rift",
+      "summary_en": "Text only: Rift level 6 (the Cake Hound Pack, per rift-bosses.json) cleared at 15%, with the lineup Macaron, Brightseeker, Cheesecake, Pomegranate, Skating Queen, Witchberry, Bari, Tiger Lily (정전), Rockstar, Milk, Cherry Cola, Dark Choco. A commenter asks for the pets; no answer.",
+      "clears": [
+        { "stage": "rift-6", "boss": "케이크 들개떼", "team_power": "?", "recommended_power": "28,240,662,352 (level 6)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "dc77572-text", "note": "Text only, no power posted.",
+          "rift_attempt": { "season": 1, "level": 6, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": 28240662352, "bracket": 15, "result": "clear", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:77572"] } }
+      ],
+      "teams": [
+        { "name": "dc77572-text", "scope": "rift", "for": "Rift level 6 Cake Hound Pack at 15%",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "?", "stars": "?", "position": "", "role": "", "note": "마카롱" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "?", "stars": "?", "position": "", "role": "", "note": "시커" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "?", "stars": "?", "position": "", "role": "", "note": "치케" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "?", "stars": "?", "position": "", "role": "", "note": "석류" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "?", "stars": "?", "position": "", "role": "", "note": "피겨" },
+            { "kr": "위치베리맛 쿠키", "en": "Witchberry", "level": "?", "stars": "?", "position": "", "role": "", "note": "위치베리" },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "?", "stars": "?", "position": "", "role": "", "note": "바리" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "?", "stars": "?", "position": "", "role": "", "note": "정전" },
+            { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "?", "stars": "?", "position": "", "role": "", "note": "락스타" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "?", "stars": "?", "position": "", "role": "", "note": "우유" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "?", "stars": "?", "position": "", "role": "", "note": "체콜" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "?", "stars": "?", "position": "", "role": "", "note": "닥초" }
+          ],
+          "pets": [], "perks": "", "captain": "", "formation": "", "why": "Not stated.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "78199", "url": "https://m.dcinside.com/board/projectcc/78199", "date": "2026-09-30",
+      "title_kr": "이면은 그나마 들개 쿨민은 15%컷 가능하네", "title_en": "In the Rift, at least the Cake Hounds and Cool Mint go at 15%", "relevance": 3, "scope": "rift",
+      "summary_en": "Text: Bari plus pierce (관통) cookies herd and kill the mob-heavy levels well; 'if you can't make 35%, try 15% with a skill-AMP/skill-haste preset'. In the comments the author says single-target bosses are practically impossible at 15% (once saw a boss down to 15% HP, gave up over the retries); GingerCraven is easy at 35% with Brightseeker, Scorpion and Cherry Cola alone; the Cake Hounds and Cool Mint fell at 15% to a Bari–Oven Wanderer–Skating Queen plus Witchberry–바궁–Rockstar combination; the Werehound Princess and the three trucks are hard at 15%.",
+      "clears": [
+        { "stage": "rift (Cake Hounds, Cool Mint)", "boss": "케이크 들개떼 / 쿨링민트맛 쿠키", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "dc78199-pierce", "note": "Levels not stated.",
+          "rift_attempt": { "season": 1, "level": null, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": null, "bracket": 15, "result": "clear", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:78199"] } },
+        { "stage": "rift (single-target bosses)", "boss": "?", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "fail", "play": "?", "retries": "many", "team": "", "note": "Saw a boss at 15% HP once, gave up on the retries.", "rift_attempt": null }
+      ],
+      "teams": [
+        { "name": "dc78199-pierce", "scope": "rift", "for": "Rift Cake Hound Pack and Cool Mint at 15%",
+          "cookies": [
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "?", "stars": "?", "position": "", "role": "charge dealer", "note": "바리" },
+            { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "?", "stars": "?", "position": "", "role": "", "note": "오방" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "?", "stars": "?", "position": "", "role": "buffer", "note": "피겨" },
+            { "kr": "위치베리맛 쿠키", "en": "Witchberry", "level": "?", "stars": "?", "position": "", "role": "", "note": "위치" },
+            { "kr": "바람궁수 쿠키", "en": "Wind Archer", "level": "?", "stars": "?", "position": "", "role": "pierce", "note": "바궁; read as Wind Archer because Bari is named separately (low confidence)" },
+            { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "?", "stars": "?", "position": "", "role": "", "note": "락스타" }
+          ],
+          "pets": [], "perks": "", "captain": "", "formation": "", "why": "Bari plus pierce cookies herd the mobs and kill them together.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "team", "scope": "rift", "sugar_runes": "", "gear": "skill-AMP / skill-haste preset (스증스가)", "thresholds": "", "why": "For players who can't reach 35%: damage at 15% is better than expected." }],
+      "mechanics": [], "rift": ["Single-target bosses are practically impossible at 15%; GingerCraven is easy at 35%."], "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "솔직히 단일보스들은 15컷 불가능이라고 보면 된다", "en": "Honestly, consider single bosses impossible at the 15% cut." },
+        { "kr": "들개 쿨민은 바리오방피겨 + 위치바궁락스타 조합으로 15로 내가 깨봄 망치랑 삼트럭은 15 컷은 빡세다고 보면 됨", "en": "I cleared the Cake Hounds and Cool Mint at 15 with Bari–Oven Wanderer–Skating Queen + Witchberry–Wind Archer–Rockstar; the Werehound Princess and the three trucks are tough at 15." }
+      ]
+    },
+    {
+      "source": "dc", "id": "78283", "url": "https://m.dcinside.com/board/projectcc/78283", "date": "2026-09-30",
+      "title_kr": "(정보) 차원의 이면 정보, 전투력 컷", "title_en": "(Info) Dimensional Rift info and power cuts", "relevance": 3, "scope": "rift",
+      "summary_en": "An info post: you need about 4G (328-30's 35% cut) to reach the Rift; inside, 차원의 힘 accrues at n per minute where n is the Rift level, and levelling it raises power; the structure is to raise power while idle, match each boss's 35% cut, and push. 'Some bosses fall at the 15% cut too: I took level 3, the Werehound Princess, at 15%.' Screenshots: 차원의 힘 Lv.4 (1,850/2,040) at 'level 4 repeating'; the Lv.4 effects (Rift ATK, DEF and HP amplification +30%, crit damage +90%, crit rate +30%, focus +15%, accuracy +20%); a table of the cuts per level (100%, 15% at 20%, 35% at 40%, 55% at 60%) for levels 1-25, which matches curated/rift-levels.json. Comments: the Rift's power is its own, from 차원의 힘; for 15% 'shred well' and stack Dark Choco to 10 with skill 2.",
+      "clears": [
+        { "stage": "rift-3", "boss": "초코크림 늑대 망치공주", "team_power": "?", "recommended_power": "15,972,585,564 (level 3)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "", "note": "Text claim by the author.",
+          "rift_attempt": { "season": 1, "level": 3, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": 15972585564, "bracket": 15, "result": "clear", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:78283"] } }
+      ],
+      "teams": [],
+      "builds": [{ "cookie": "다크초코 쿠키", "scope": "rift", "sugar_runes": "", "gear": "", "thresholds": "10 DEF-shred stacks", "why": "A commenter: at 15%, stack Dark Choco to 10 with skill 2." }],
+      "mechanics": ["The bracket cuts in the Rift are percentages of each level's recommended power: 15% at 20%, 35% at 40%, 55% at 60% (table image 78283-3, same figures as rift-levels.json)."],
+      "rift": [
+        "차원의 힘 accrues at n per minute, n the Rift level (text).",
+        "차원의 힘 Lv.4 effects (screenshot 78283-2): Rift ATK, DEF and HP amplification 30%, crit damage +90%, crit rate +30%, focus +15%, accuracy +20%.",
+        "Entry needs about 4G, 328-30's 35% cut."
+      ],
+      "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "방치 보상으로 투력을 높여서 투력 컷을 35%에 맞춰서 보스를 하나씩 밀면서 방치 보상을 높이는 구조임. 특정 보스들은 15% 컷에도 잡힘. 나는 3단계 망치 15%로 잡음.", "en": "The structure: raise power with idle rewards, match the 35% cut, push one boss at a time and raise the idle rewards. Some bosses fall at the 15% cut too. I took level 3, the Werehound Princess, at 15%." },
+        { "kr": "방깎 잘들어가는 세계선 찾는게 이면 핵심인듯. 계속 리트 ㄱㄱ", "en": "Finding the run where the DEF shred lands is the heart of the Rift. Keep retrying." }
+      ]
+    },
+    {
+      "source": "dc", "id": "78164", "url": "https://m.dcinside.com/board/projectcc/78164", "date": "2026-09-30",
+      "title_kr": "이면 4단계 3트럭 뭐임 ㅅㅂ????", "title_en": "What is Rift level 4, the three trucks?", "relevance": 2, "scope": "rift",
+      "summary_en": "A player stuck at level 4 asks whether the three trucks can be beaten at 15%. Two commenters say they cleared it at 15%; one adds that if it won't go, clear it at the next 차원의 힘 level, and that the trucks come back several times.",
+      "clears": [
+        { "stage": "rift-4", "boss": "폭주단 트럭 ×3", "team_power": "?", "recommended_power": "19,438,391,006 (level 4)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "", "note": "Commenters' claims (Breakthrough, 쩐흥다오). The post's image is the author's signature drawing, not the game.",
+          "rift_attempt": { "season": 1, "level": 4, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck ×3", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": 19438391006, "bracket": 15, "result": "clear", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:78164"] } }
+      ],
+      "teams": [], "builds": [], "mechanics": [], "rift": ["The trucks recur at several levels (commenter)."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "15퍼로 깸 도저히 안깨지면 다음 힘레벨때 깨 그거 몇번 더 나옴", "en": "Cleared it at 15%. If it really won't go, clear it at the next 차원의 힘 level; it comes up a few more times." }]
+    },
+    {
+      "source": "dc", "id": "79406", "url": "https://m.dcinside.com/board/projectcc/79406", "date": "2026-10-02",
+      "title_kr": "이면 20단 어케깸", "title_en": "How do you clear Rift level 20?", "relevance": 3, "scope": "rift",
+      "summary_en": "Text: 'I came up to level 19 clearing at 15% with 차원의 힘 level 14; is level 20 an endless wait?' Commenters: GingerCraven is an endless wait / a speed bump.",
+      "clears": [
+        { "stage": "rift-19", "boss": "폭주단 트럭 (by the level cycle; not stated)", "team_power": "?", "recommended_power": "110,005,849,382 (level 19)", "bracket": "15", "result": "clear", "play": "?", "retries": "", "team": "", "note": "Claims every level to 19 at 15% with 차원의 힘 Lv.14. Boss not named in the post.",
+          "rift_attempt": { "season": 1, "level": 19, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "team_power": null, "power_basis": null, "rift_power_level": 14, "recommended_power": 110005849382, "bracket": 15, "result": "clear", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:79406"] } },
+        { "stage": "rift-20", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "117,784,489,370 (level 20)", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "Stopped at level 20 (GingerCraven, per the commenters).",
+          "rift_attempt": { "season": 1, "level": 20, "boss_kr": "비겁한 쿠키", "boss_en": null, "team_power": null, "power_basis": null, "rift_power_level": 14, "recommended_power": 117784489370, "bracket": 15, "result": "fail", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:79406"] } }
+      ],
+      "teams": [], "builds": [], "mechanics": [], "rift": ["Level 20 is GingerCraven (commenters)."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "19단까지 차원렙 14로 15% 깨면서 올라왔는데", "en": "I came up to level 19 clearing at 15% with 차원의 힘 level 14." }]
+    },
+    {
+      "source": "dc", "id": "78242", "url": "https://m.dcinside.com/board/projectcc/78242", "date": "2026-09-30",
+      "title_kr": "이면 잘아는사람있어? 35%넘겼는대 딜이안드감", "title_en": "Anyone know the Rift? I'm past 35% but damage doesn't land", "relevance": 3, "scope": "rift",
+      "summary_en": "'Level-10 GingerCraven's 35% is about 16G; why does nothing land at 17G?' Reply: the 35% cut is 40% of recommended power. Level 10's 35% line is 18.76G (rift-levels.json), so at 17G the poster was in the 15% bracket and GingerCraven took no damage.",
+      "clears": [
+        { "stage": "rift-10", "boss": "비겁한 쿠키", "team_power": "17G", "recommended_power": "46,897,561,017 (level 10)", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "17G / 46.90G = 36.2%: the 15% bracket. The poster had misread the cut.",
+          "rift_attempt": { "season": 1, "level": 10, "boss_kr": "비겁한 쿠키", "boss_en": null, "team_power": "17G", "power_basis": "rift", "rift_power_level": null, "recommended_power": 46897561017, "bracket": 15, "result": "fail", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:78242"] } }
+      ],
+      "teams": [], "builds": [], "mechanics": ["The gate in the Rift compares the power the Rift shows with 40% (35% bracket) of the level's recommended power; a player 1.8G under the line still deals 15% damage."], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "35%컷은 권투의 40%임", "en": "The 35% cut is 40% of recommended power." }]
+    },
+    {
+      "source": "dc", "id": "78225", "url": "https://m.dcinside.com/board/projectcc/78225", "date": "2026-09-30",
+      "title_kr": "이면 투력 60G 돌파 ㅇㅅㅇ", "title_en": "Rift power past 60G", "relevance": 3, "scope": "rift",
+      "summary_en": "다함께차차차 (Lv.191, Rift rank 11th, 축복 Lv.10, 돌파력 1114): in-Rift header 63G 232M 704K at 차원의 힘 Lv.19 (366/14,820), '차원의 이면 25단계 반복 중'. Asked for their stage team power, the poster answers 'about 6.4'. Level 25 is a GingerCraven level (the level cycle); its 35% line is 65.29G, so at 63.23G the player sits 2G under it.",
+      "clears": [
+        { "stage": "rift-25", "boss": "비겁한 쿠키 (by the level cycle)", "team_power": "63G 232M 704K", "recommended_power": "163,225,131,373 (level 25)", "bracket": "15", "result": "?", "play": "?", "retries": "", "team": "", "note": "63.23G / 163.23G = 38.7%: the 15% bracket (35% from 65.29G). Parked, not a fight.", "rift_attempt": null }
+      ],
+      "teams": [], "builds": [], "mechanics": [],
+      "rift": ["At 차원의 힘 Lv.19 the Rift header showed 63.23G against a stage team power of about 6.4G (the poster's reply): about ten times.", "A level's '반복 중' line names the level the player is on (as '스테이지 328-30 반복 중' does on the main stages)."],
+      "stage_types": [], "disagreements": [], "quotes": [{ "kr": "6.4였나..", "en": "(stage team power) about 6.4, I think." }]
+    },
+    {
+      "source": "dc", "id": "80056", "url": "https://m.dcinside.com/board/projectcc/80056", "date": "2026-10-03",
+      "title_kr": "차원의 이면 1단계 깨니가 인원수 나오네?", "title_en": "Clearing Rift level 1 shows how many are in", "relevance": 2, "scope": "rift",
+      "summary_en": "The all-server Rift ranking at about 02:38 on 2026-10-03: 1st 군무원 and 2nd 홍백련 at level 39, 3rd 스타 at 34; 96th to 98th at level 23, 99th and 100th at 22; the poster 687th at level 1. A commenter says 400 players were in the Rift the day before.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Ranking 2026-10-03 ~02:38 KST: top at level 39, 3rd at 34, 100th at 22 (screenshot)."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "80338", "url": "https://m.dcinside.com/board/projectcc/80338", "date": "2026-10-03",
+      "title_kr": "축 5.8 차원의 이면 입성", "title_en": "Blessing 5.8: entered the Rift", "relevance": 2, "scope": "both",
+      "summary_en": "신성한바티칸 enters the Rift with Bari and Brightseeker at 3★ (SSRs but Cherry Cola at 9-10★), Stellar 8-4, Oven 38, plates +15/+16, 돌파력 1012. On entry the Rift screen shows 차원의 힘 Lv.1 (0/30), '차원의 이면 1단계 반복 중', header 4G 78M 24K, gear preset '스테'. Also pushed main stages at 15%, but only on desert and lava maps; matching the power cut with 3★ Bari and Brightseeker took long. The same poster's dc:80390 tries the Werehound Princess at 15%.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["At 차원의 힘 Lv.1 the Rift header shows the lobby power (4.08G), which is 40.8% of level 1's 10.00G: the 35% bracket on entry."], "stage_types": ["15% on main stages only on desert and lava terrain (text)."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "80390", "url": "https://m.dcinside.com/board/projectcc/80390", "date": "2026-10-03",
+      "title_kr": "이면 비겁말고는 전부 15% 되는거임?", "title_en": "Does everything but GingerCraven go at 15% in the Rift?", "relevance": 2, "scope": "rift",
+      "summary_en": "신성한바티칸 (entered the Rift the same day, dc:80338) can't get the Werehound Princess below 36% at 15% with Brightseeker 3★, even with Pomegranate's ATK order fixed in the conquest gear set. A commenter: within about 20% HP left, a 차원의 힘 level-up pushes it through; another: most who pushed at 15% are early entrants with TSSRs at 10★.",
+      "clears": [
+        { "stage": "rift (Werehound Princess)", "boss": "초코크림 늑대 망치공주", "team_power": "?", "recommended_power": "?", "bracket": "15", "result": "fail", "play": "?", "retries": "", "team": "", "note": "Best 36% HP left. Level not stated; just entered the Rift, so likely level 3. The image is a meme.",
+          "rift_attempt": { "season": 1, "level": null, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": null, "bracket": 15, "result": "fail", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:80390"] } }
+      ],
+      "teams": [], "builds": [{ "cookie": "석류맛 쿠키", "scope": "rift", "sugar_runes": "", "gear": "conquest gear set", "thresholds": "", "why": "Commenter: match Pomegranate's ATK order (공순) in the conquest set for the Werehound Princess." }],
+      "mechanics": [], "rift": ["Commenter: with about 20% boss HP left, a 차원의 힘 level-up gets it through."], "stage_types": [], "disagreements": ["Whether 15% works for a low-star account: 'most who pushed at 15% are early entrants with TSSRs at 10★'."],
+      "quotes": [{ "kr": "15퍼로 밀고올라간애들 태반이 선발대라 죄다 tssr10성인데", "en": "Most who pushed up at 15% are early entrants, all with TSSRs at 10★." }]
+    },
+    {
+      "source": "dc", "id": "77620", "url": "https://m.dcinside.com/board/projectcc/77620", "date": "2026-09-29",
+      "title_kr": "이면 와서 어이없었던거", "title_en": "What baffled me on reaching the Rift", "relevance": 2, "scope": "rift",
+      "summary_en": "The level-10 clear frame is time-limited; GingerCraven is practically impossible at 15%, so you idle until 35%; the all-server #1 stood at level 20 for over 30 hours.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["GingerCraven practically can't be cleared at 15%; the server-wide #1 waited at level 20 over 30 hours (text, 2026-09-29)."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "비겁이는 15%클 사실상 불가능이라 35% 될때까지 방치해야함", "en": "GingerCraven is practically impossible at 15%, so you idle until you reach 35%." }]
+    },
+    {
+      "source": "dc", "id": "79187", "url": "https://m.dcinside.com/board/projectcc/79187", "date": "2026-10-01",
+      "title_kr": "이면 비겁이 15%로 미는사람있음?", "title_en": "Anyone push Rift GingerCraven at 15%?", "relevance": 2, "scope": "rift",
+      "summary_en": "Every reply: impossible; you wait two or three days.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["GingerCraven at 15%: 'impossible', wait two or three days (replies)."], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "강제 이틀 삼틀 존버해야됨", "en": "You're forced to hold out two or three days." }]
+    },
+    {
+      "source": "dc", "id": "77529", "url": "https://m.dcinside.com/board/projectcc/77529", "date": "2026-09-28",
+      "title_kr": "이면 비틀어서 깰필요가 전혀없음", "title_en": "No need at all to twist through the Rift", "relevance": 2, "scope": "rift",
+      "summary_en": "Argues against 15% pushing in the Rift: clear one level per 차원의 힘 level-up, the shop has little worth buying, so clearing at 35% is the sane way. A commenter: except for certain bosses, it does clear at 15%.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [],
+      "disagreements": ["Whether twisting at 15% is worth it: this poster says no; dc:77612, dc:78353 and dc:78865 do it."],
+      "quotes": [{ "kr": "특정보스빼면 15%로도 깨짐", "en": "Apart from certain bosses, it clears at 15% too." }]
+    },
+    {
+      "source": "dc", "id": "80423", "url": "https://m.dcinside.com/board/projectcc/80423", "date": "2026-10-03",
+      "title_kr": "이면 20단계 치케 마카롱 넣고 뻥투 35퍼인데 안깨지노", "title_en": "Rift level 20 with Cheesecake and Macaron, padded to 35%, won't clear", "relevance": 2, "scope": "rift",
+      "summary_en": "Level 20 (GingerCraven) fails even at 35% with padded power; the poster will level 차원의 힘 once more.",
+      "clears": [
+        { "stage": "rift-20", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "117,784,489,370 (level 20)", "bracket": "35", "result": "fail", "play": "?", "retries": "", "team": "", "note": "Text only.",
+          "rift_attempt": { "season": 1, "level": 20, "boss_kr": "비겁한 쿠키", "boss_en": null, "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": 117784489370, "bracket": 35, "result": "fail", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["dc:80423"] } }
+      ],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "77180", "url": "https://m.dcinside.com/board/projectcc/77180", "date": "2026-09-28",
+      "title_kr": "이면 3트럭 덱점 알려주실분...", "title_en": "Can someone share a Rift three-truck deck?", "relevance": 2, "scope": "rift",
+      "summary_en": "A commenter at level 19 (joint first then, blessing 12) says the trucks are like the old Cactus Spider: they knock the team back so Milk's buff, the floor zones and Macaron's buff are hard to keep; the Rift needs Cheesecake plus Macaron to find a winning run; every boss they cleared took a different lineup, swapping cookies until one run worked; they pushed level-10 GingerCraven without Scorpion. Another: Pinot Noir in makes the trucks fall, and asks whether the truck launches rather than knocks back.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Trucks knock the team back; Pinot Noir in helps (commenters, text)."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이면이 기본적으로 치케+마카롱버프까지 포함해야 잡는 세계선이 나와서", "en": "In the Rift, a winning run only appears with Cheesecake's and Macaron's buffs in." }]
+    },
+    {
+      "source": "dc", "id": "78596", "url": "https://m.dcinside.com/board/projectcc/78596", "date": "2026-09-30",
+      "title_kr": "이면능력치", "title_en": "Rift stats", "relevance": 2, "scope": "rift",
+      "summary_en": "Screenshot of a 차원의 힘 level-effects panel (level not visible): Rift ATK, DEF and HP amplification 130%, crit damage +390%, crit rate +130%, focus +35%, accuracy +50%.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["A higher 차원의 힘 level (not shown) gives ATK/DEF/HP amplification 130%, crit damage +390%, crit rate +130%, focus +35%, accuracy +50%."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "77419", "url": "https://m.dcinside.com/board/projectcc/77419", "date": "2026-09-28",
+      "title_kr": "차원의이면 35퍼컷 투력 어디서봄", "title_en": "Where do you see the Rift's 35% power cut?", "relevance": 2, "scope": "rift",
+      "summary_en": "crumblehub lists only 100%; replies: just compute it, the 35% cut is 40% of recommended power.", "clears": [], "teams": [], "builds": [], "mechanics": ["The Rift's 35% cut is 40% of recommended power (reply)."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "80282", "url": "https://m.dcinside.com/board/projectcc/80282", "date": "2026-10-03",
+      "title_kr": "이면 투력 130g 뚫으면 쇳물 50개 주는거보고 보상 늘었다는거임?", "title_en": "Is 50 molten iron for passing 130G Rift power what they call more rewards?", "relevance": 1, "scope": "rift",
+      "summary_en": "A Rift reward tied to '이면 투력' (Rift power) 130G. A commenter: 'multiply by 0.4' (the 35% cut).", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Players call the in-Rift power '이면 투력'."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "80289", "url": "https://m.dcinside.com/board/projectcc/80289", "date": "2026-10-03",
+      "title_kr": "이면에서 명중템 투력 올라간다고 함부로 먹지마라..", "title_en": "Don't equip accuracy gear in the Rift just because power goes up", "relevance": 2, "scope": "rift",
+      "summary_en": "The Rift buff makes a gear piece's power look higher inside the Rift: it showed +100M, but equipping it dropped the deck's power by 10M. dc:79957 reports the same.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Gear comparisons inside the Rift show Rift-inflated power, which can disagree with the deck power after equipping (dc:80289, dc:79957)."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "79957", "url": "https://m.dcinside.com/board/projectcc/79957", "date": "2026-10-02",
+      "title_kr": "이면 들어가고부터 템 투력 표시 버그있는거같은데", "title_en": "Gear power display seems bugged since entering the Rift", "relevance": 2, "scope": "rift",
+      "summary_en": "Gear shown as a power gain turns out a loss once equipped, in the Rift too. Commenters: the gear power is computed with the Rift buff instead of stage power.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Gear power in the Rift is shown with the Rift buff applied (commenters)."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "80169", "url": "https://m.dcinside.com/board/projectcc/80169", "date": "2026-10-03",
+      "title_kr": "이면가신분들 이거 어떻게 되는지 아는분 계시나", "title_en": "Rift players: how does this work?", "relevance": 1, "scope": "rift",
+      "summary_en": "Screenshot: 차원의 힘 Lv.10 (3,463/6,000) at level 13 ('현재 13단계'); the level-20 clear reward is the SSR pet 무한바퀴, with 5 days 0 h left in the season. A commenter: after the level-30 time-limited frame, only shop currency.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["차원의 힘 Lv.10 at level 13 on 2026-10-03.", "Level-20 clear reward: 무한바퀴 (SSR pet)."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "77012", "url": "https://m.dcinside.com/board/projectcc/77012", "date": "2026-09-28",
+      "title_kr": "약 200번쨰로 차원왔따", "title_en": "Reached the Rift around 200th", "relevance": 1, "scope": "rift",
+      "summary_en": "Screenshot: 차원의 힘 Lv.2 (71/960) at '차원의 이면 3단계 반복 중'. Coming early pays: idle Dimension Fragments buy 12-hour rune-crystal items.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["차원의 힘 Lv.2 at level 3."], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "80225", "url": "https://m.dcinside.com/board/projectcc/80225", "date": "2026-10-03",
+      "title_kr": "오늘 이면 간다 이거야", "title_en": "Going to the Rift today", "relevance": 1, "scope": "rift",
+      "summary_en": "도토리마스터 about to enter. A commenter describes the loop: idle, clear the Cake Hounds, Cool Mint, Werehound Princess and truck, idle, repeat.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": ["Level cycle as a commenter describes it: Cake Hounds, Cool Mint, Werehound Princess, truck, then (GingerCraven) idle."], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "방치하고 들개 쿨민 망치 트럭깨고 방치 반복임", "en": "Idle, clear Cake Hounds, Cool Mint, Werehound Princess, truck, idle, repeat." }]
+    },
+    {
+      "source": "dc", "id": "78095", "url": "https://m.dcinside.com/board/projectcc/78095", "date": "2026-09-29",
+      "title_kr": "아니 이면 시발 2단계 그냥 깨지네", "title_en": "Rift level 2 just clears", "relevance": 1, "scope": "rift",
+      "summary_en": "Level 2 cleared at once after waiting on 차원의 힘 out of fear of its many adds. A commenter: Rift veterans say clear level 2 on day one. The image is the poster's signature drawing.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "75566", "url": "https://m.dcinside.com/board/projectcc/75566", "date": "2026-09-25",
+      "title_kr": "차원의 이면 투력컷?", "title_en": "Rift power cut?", "relevance": 1, "scope": "rift",
+      "summary_en": "The Rift doesn't display the 35%/55% cuts; is there no cut? (no replies).", "clears": [], "teams": [], "builds": [], "mechanics": ["The game shows no bracket cut in the Rift (2026-09-25 post)."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "77634", "url": "https://m.dcinside.com/board/projectcc/77634", "date": "2026-09-29",
+      "title_kr": "바리 6성 들고 320스테부터 328 이면까지 15퍼로 쳐민", "title_en": "With 6★ Bari, pushed from stage 320 to 328 and the Rift at 15%", "relevance": 1, "scope": "stage",
+      "summary_en": "Title-only claim: main stages 320 to 328 at 15% with a 6★ Bari. The image is the poster's signature drawing. A main-stage claim, not a Rift clear.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "77561", "url": "https://m.dcinside.com/board/projectcc/77561", "date": "2026-09-29",
+      "title_kr": "이면 15% 비틀기 덱 공략없노?", "title_en": "No guide for a Rift 15% twist deck?", "relevance": 1, "scope": "rift",
+      "summary_en": "Asks for the best Rift 15% deck; no answer. Shows '비틀기' (twisting) is the gallery's word for forcing a 15% clear.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    { "source": "dc", "id": "77628", "url": "https://m.dcinside.com/board/projectcc/77628", "date": "2026-09-29", "title_kr": "이면 비겁이 기존 비겁덱 35%로했는데 왜 피가안달지", "title_en": "Rift GingerCraven at '35%' with my old deck: no HP loss", "relevance": 1, "scope": "rift", "summary_en": "Text; no level or power, probably a misread cut (as in dc:78242).", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "dc", "id": "79001", "url": "https://m.dcinside.com/board/projectcc/79001", "date": "2026-10-01", "title_kr": "아면 고단계 형님들 질문있습니다", "title_en": "Question for high-level Rift players", "relevance": 1, "scope": "rift", "summary_en": "Asks for a Rift GingerCraven deck and gear preset. Reply: GingerCraven can't be done at 15% anyway, just pass the 35% cut; the asker says that didn't work.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "dc", "id": "77641", "url": "https://m.dcinside.com/board/projectcc/77641", "date": "2026-09-29", "title_kr": "비겁이 벽느꼈다 그냥 15% 깐다", "title_en": "GingerCraven wall; dropping to 15%", "relevance": 1, "scope": "rift", "summary_en": "Damage doesn't land; will level 차원의 힘 and come back.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] }
+  ],
+  "skipped": [
+    { "ids": ["74468", "74799", "75082", "75103", "75284", "75645", "76050", "76247", "76501", "76560", "76757", "76815", "77067", "77164", "77174", "77208", "77228", "77299", "77368", "77656", "77683", "77707", "77861", "77893", "77894", "77954", "78041", "78188", "78245", "78483", "78570", "78576", "78590", "78708", "78725", "78727", "78759", "78809", "78935", "78950", "79292", "79621", "79642", "79693", "79721", "79826", "79862", "80034", "80038", "80094", "80137", "80206", "80319", "80333", "80335", "80435", "80467", "80498", "80520", "80577", "80587"],
+      "relevance": 0, "note": "Captured in the round's sweep; Rift complaints, rewards, ranking chatter, entry posts or unanswered questions with no attempt, team or gate fact beyond those above. 76815 and 77228 note the Rift leader at level 19 on 2026-09-27/28; 80038 and 80520 show the Rift opening at 4.09G lobby power; 77707, 79862 and 78188 ask for 15% Werehound Princess, truck and GingerCraven decks unanswered." }
+  ],
+  "glossary": [
+    { "kr": "비틀기", "en": "Twisting (온몸 비틀기, 'body-twisting'): forcing a clear below the comfortable bracket by retries, level adjustment and lineup swaps, as in '이면 15% 비틀기'", "kind": "term", "confidence": "high", "evidence": "dc:77561, dc:77572, dc:77709, dc:78353, dc:80034" },
+    { "kr": "세계선", "en": "'World line': the lucky run in which the RNG (DEF shred landing, pathing) lines up for a clear", "kind": "term", "confidence": "high", "evidence": "dc:78283, dc:77180" },
+    { "kr": "차힘", "kr_short": [], "en": "Short for 차원의 힘", "kind": "term", "confidence": "high", "evidence": "dc:78095" },
+    { "kr": "이면 투력", "en": "Rift power: the team power the Rift shows, inflated by 차원의 힘", "kind": "term", "confidence": "high", "evidence": "dc:80282, dc:78283" },
+    { "kr": "차원 기준", "en": "'On the Rift's basis': a power figure stated as the Rift shows it", "kind": "term", "confidence": "high", "evidence": "nv:49183, nv:49192, nv:49254" },
+    { "kr": "쿨링민트맛 쿠키", "en": "Cool Mint (Rift levels 2 and 12)", "kind": "boss", "confidence": "high", "evidence": "dc:77612, dc:78353, nv:49183" },
+    { "kr": "망치부인", "en": "Choco Werehound Princess (another nickname)", "kind": "boss", "confidence": "high", "evidence": "dc:78865, dc:77612" },
+    { "kr": "3트럭", "kr_short": ["삼트럭"], "en": "The three Rowdy Trucks of a Rift truck level", "kind": "boss", "confidence": "high", "evidence": "dc:78164, dc:78412, dc:77180" },
+    { "kr": "무한바퀴", "en": "Continuum Cog (the Rift-exclusive SSR pet)", "kind": "pet", "confidence": "high", "evidence": "catalog pet0167; dc:80169" },
+    { "kr": "전지멜로우", "en": "Chargemellow (pet)", "kind": "pet", "confidence": "high", "evidence": "catalog pet4005; dc:78865, nv:48662" },
+    { "kr": "위치베리맛 쿠키", "kr_short": ["위치베리", "위치"], "en": "Witchberry", "kind": "cookie", "confidence": "high", "evidence": "catalog cookie2006; dc:77572, dc:78353" },
+    { "kr": "오븐방랑자 쿠키", "kr_short": ["오방"], "en": "Oven Wanderer", "kind": "cookie", "confidence": "high", "evidence": "catalog cookie4012; dc:78199" },
+    { "kr": "메론소다맛 쿠키", "en": "Melon Soda", "kind": "cookie", "confidence": "low", "evidence": "portrait match only (dc:76997, dc:80294)" },
+    { "kr": "정전", "en": "Tiger Lily (정글전사 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "catalog cookie0040; dc:77572" }
+  ]
+}

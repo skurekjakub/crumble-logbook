@@ -1,0 +1,153 @@
+{
+  "batch": "naver-rift15",
+  "about": "Official Naver cafe (ccrumble) articles on the Dimensional Rift, 2026-09-23 to 2026-10-03, captured in evidence/r2026-10-03/04-naver/nv. Shape of evidence/08-extract/BRIEF.md, plus the rift-clears fields (rift_attempt) where an attempt has a level. The guide board (menu 9) is public; free-board (menu 8) articles came back 'not logged in' (errorCode 0004) and are captured as refusals. Several articles embed Naver videos, which the scraper saves as 0-byte images; their lineups are read from the formation screenshots beside them. The formation screen's 전투력 is the lobby power, not the Rift's (see nv:48662).",
+  "posts": [
+    {
+      "source": "naver", "id": "48662", "url": "https://cafe.naver.com/ccrumble/48662", "date": "2026-10-01",
+      "title_kr": "[공유방 요청] 이면 폭주단 트럭 기록 (19단계, 23단계)", "title_en": "(Requested) Rift Rowdy Truck records, levels 19 and 23", "relevance": 3, "scope": "rift",
+      "summary_en": "롤로노아, a ranker who runs a KakaoTalk info room, posts the decks for the Rift truck at levels 19 and 23 with a clear video (embedded, not captured). Tips: run to the left wall at the start; make Macaron's skill hit the wall so it fires in a line. Deck 1 for a high-star Bari, deck 2 for a low-star Bari with Rye in Bari's slot and a multi-hit pet; both on a gear preset with six skill-haste lines and crit-resist padding (스가6줄 치저 뻥투). He cleared level 23 with Rye instead of Bari. The formation screenshot shows 전투력 4.3G, which at level 19 (15% from 22.00G) can only be the lobby figure.",
+      "clears": [
+        { "stage": "rift-19", "boss": "폭주단 트럭", "team_power": "? (formation screen 4.3G, lobby)", "recommended_power": "110,005,849,382 (level 19)", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "rolonoa-bari", "note": "Clear video not captured; Rift power not shown, so no bracket.",
+          "rift_attempt": { "season": 1, "level": 19, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "team_power": "4.3G (formation screen, lobby)", "power_basis": "lobby", "rift_power_level": null, "recommended_power": 110005849382, "bracket": null, "result": "clear", "play": "manual", "evidence": "text", "suggested_standing": "unverified", "sources": ["nv:48662"] } },
+        { "stage": "rift-23", "boss": "폭주단 트럭", "team_power": "? (formation screen 4.3G, lobby)", "recommended_power": "144,953,661,199 (level 23)", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "rolonoa-rye", "note": "Cleared with Rye instead of Bari. Level 23 as a truck level breaks the five-level cycle other posts describe (23 would be the Werehound Princess); unresolved.",
+          "rift_attempt": { "season": 1, "level": 23, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "team_power": "4.3G (formation screen, lobby)", "power_basis": "lobby", "rift_power_level": null, "recommended_power": 144953661199, "bracket": null, "result": "clear", "play": "manual", "evidence": "text", "suggested_standing": "unverified", "sources": ["nv:48662"] } }
+      ],
+      "teams": [
+        { "name": "rolonoa-bari", "scope": "rift", "for": "Rift truck, high-star Bari",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "top row 1", "role": "buffer", "note": "skill should hit the wall so it fires in a line" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bottom row 1", "role": "dealer", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "45", "stars": "5+", "position": "top row 2", "role": "poison / DEF shred", "note": "levelled down (렙조절)" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "70", "stars": "5+", "position": "bottom row 2", "role": "airborne counter", "note": "levelled down" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "top row 3", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bottom row 3", "role": "skill-AMP beam", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "top row 4", "role": "buffer", "note": "" },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "60", "stars": "high (the post's condition)", "position": "bottom row 4", "role": "charge dealer", "note": "levelled down" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "70", "stars": "5+", "position": "top row 5", "role": "dealer", "note": "levelled down" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bottom row 5", "role": "captain, healer", "note": "captain banner" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "top row 6", "role": "charge dealer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "70", "stars": "5+", "position": "bottom row 6", "role": "tank, DEF shred", "note": "levelled down" }
+          ],
+          "pets": ["전지멜로우 (20★)", "?", "?"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "two rows of six on the formation screen (preset 1)",
+          "why": "Level adjustment so the ATK-ordered buffs land on the dealers; start against the left wall so Macaron's skill fires in a line.",
+          "substitutions": ["Low-star Bari: Rye in Bari's slot and a multi-hit pet (deck rolonoa-rye)."], "unorthodox": ["Scorpion at Lv.45 and five other cookies under 100, on purpose."] },
+        { "name": "rolonoa-rye", "scope": "rift", "for": "Rift truck (level 23), and the Werehound Princess guide nv:48025; low-star Bari",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "top 1", "role": "buffer", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5+", "position": "bottom 1", "role": "dealer", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "45", "stars": "5+", "position": "top 2", "role": "poison / DEF shred", "note": "levelled down" },
+            { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "5+", "position": "bottom 2", "role": "dealer", "note": "in Bari's place" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "70", "stars": "5+", "position": "top 3", "role": "airborne counter", "note": "levelled down" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bottom 3", "role": "buffer", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "top 4", "role": "skill-AMP beam", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bottom 4", "role": "buffer", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "70", "stars": "5+", "position": "top 5", "role": "dealer", "note": "levelled down" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bottom 5", "role": "captain, healer", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "top 6", "role": "charge dealer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "70", "stars": "5+", "position": "bottom 6", "role": "tank, DEF shred", "note": "levelled down" }
+          ],
+          "pets": ["전지멜로우 (20★)", "무한바퀴 (0★)", "색동 주머니 (20★)"], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "preset 4, 전투력 4.3G on the formation screen",
+          "why": "Rye replaces a low-star Bari; Chargemellow is the multi-hit (연타) pet.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "team", "scope": "rift", "sugar_runes": "", "gear": "six skill-haste lines with crit-resist power padding (스가6줄 치저 뻥투 프리셋)", "thresholds": "", "why": "Skill haste for the buff rotation; crit resist inflates displayed power." }],
+      "mechanics": [], "rift": ["Levels 19 and 23 are truck levels per the title."], "stage_types": [], "disagreements": ["Level 23 as a truck contradicts the five-level cycle (dc:80225, dc:80294) that would make it the Werehound Princess."],
+      "quotes": [{ "kr": "본인은 23단계 트럭을 바리 대신 호밀로 깼음", "en": "I cleared the level-23 truck with Rye instead of Bari." }]
+    },
+    {
+      "source": "naver", "id": "48025", "url": "https://cafe.naver.com/ccrumble/48025", "date": "2026-09-30",
+      "title_kr": "[악림님 요청] 이면 망치공주 클리어 영상 및 공략 (레벨조절)", "title_en": "(Requested) Rift Werehound Princess clear video and guide (level adjustment)", "relevance": 3, "scope": "rift",
+      "summary_en": "롤로노아 answers a request for a 15% Werehound Princess tip (악림 on nv:47362: '망치.. 공주 15퍼 팁좀요'): the conquest gear preset, levels adjusted as in Guild Conquest, and care that Brightseeker gets Macaron's buff. The formation screenshot is the Rye deck at 4.3G (the same image as nv:48662's deck 2). 'Just idle on Rift GingerCraven or any boss that blocks you; what won't break won't break.' Comments: 악림 heads straight to level 13; 크아앙 was stuck at level 8 and cleared it at once, now on 9.",
+      "clears": [
+        { "stage": "rift-8", "boss": "초코크림 늑대 망치공주", "team_power": "?", "recommended_power": "37,244,770,714 (level 8)", "bracket": "?", "result": "clear", "play": "?", "retries": "", "team": "rolonoa-rye", "note": "Commenter 크아앙 cleared level 8 with the tip; power not posted.",
+          "rift_attempt": { "season": 1, "level": 8, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": 37244770714, "bracket": null, "result": "clear", "play": null, "evidence": "text", "suggested_standing": "unverified", "sources": ["nv:48025"] } }
+      ],
+      "teams": [], "builds": [{ "cookie": "team", "scope": "rift", "sugar_runes": "", "gear": "Guild Conquest (토벌) preset", "thresholds": "", "why": "Level adjustment as in Guild Conquest so Brightseeker and Macaron line up." }],
+      "mechanics": [], "rift": ["Rift GingerCraven or any blocking boss: idle; 'what won't break won't break'."], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "이면 비겁이나 막히는 보스는 그냥 방치하세요. 안 뚫리는건 아예 안 뚫립니다.", "en": "For Rift GingerCraven or a boss that blocks you, just idle. What won't break won't break at all." }]
+    },
+    {
+      "source": "naver", "id": "48033", "url": "https://cafe.naver.com/ccrumble/48033", "date": "2026-09-30",
+      "title_kr": "차원 이면 케이크 들개떼 클리어영상", "title_en": "Rift Cake Hound Pack clear video", "relevance": 3, "scope": "rift",
+      "summary_en": "롤로노아's Cake Hound Pack clear deck (formation screen 4.37G, preset 1) and tips: run left at the start and hit the stationary left-hand mobs first, since every mob must die. GingerCraven needs a set power, so there is nothing to do but idle until Rift power rises. Level not stated.",
+      "clears": [
+        { "stage": "rift (Cake Hound Pack)", "boss": "케이크 들개떼", "team_power": "? (formation 4.37G, lobby)", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "rolonoa-hounds", "note": "Level and Rift power not stated.",
+          "rift_attempt": null }
+      ],
+      "teams": [
+        { "name": "rolonoa-hounds", "scope": "rift", "for": "Rift Cake Hound Pack",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "?", "stars": "5+", "position": "top 1", "role": "", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "?", "stars": "5+", "position": "top 2", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "?", "stars": "5+", "position": "top 3", "role": "", "note": "" },
+            { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "?", "stars": "?", "position": "top 4", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "?", "stars": "5+", "position": "top 5", "role": "", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "?", "stars": "5+", "position": "top 6", "role": "", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "?", "stars": "5+", "position": "bottom 1", "role": "", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "?", "stars": "5+", "position": "bottom 2", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "?", "stars": "5+", "position": "bottom 3", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "?", "stars": "5+", "position": "bottom 4", "role": "", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "?", "stars": "5+", "position": "bottom 5", "role": "", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "?", "stars": "5+", "position": "bottom 6", "role": "", "note": "" }
+          ],
+          "pets": ["핫도그도그 (20★)", "전지멜로우 (20★)", "무한바퀴 (0★)"], "perks": "", "captain": "", "formation": "preset 1, 4.37G on the formation screen", "why": "Kill the stationary left-hand mobs first: the level ends only when every mob dies.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": [], "rift": ["GingerCraven needs a set power: idle until Rift power rises (text)."], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "비쿠는 올리고 싶어도 일정 투력을 달성해야하는거라, 이면 투력 오를 때 까지 방치말고는 할게 없습니다.", "en": "GingerCraven needs a set power, so until Rift power rises there's nothing to do but idle." }]
+    },
+    {
+      "source": "naver", "id": "49183", "url": "https://cafe.naver.com/ccrumble/49183", "date": "2026-10-03",
+      "title_kr": "차원의 이면 시즌1 쿨링민트맛 쿠키 공략 (2단계)", "title_en": "Rift season 1 Cool Mint guide (level 2)", "relevance": 2, "scope": "rift",
+      "summary_en": "서신우's video guide (embedded; the orchestrator's YouTube lane may hold it). Text: 'recommended power is 5.167G on the Rift's basis (차원 기준)', which is level 2's 35% line in rift-levels.json (5,167,667,134). The thumbnail shows level 2's boss as Cool Mint and a battle bar of Macaron, Scorpion, Pinot Noir, Cheesecake, Pomegranate, Skating Queen, Tiger Lily, Milk, a red-and-white cookie read as Rockstar, Herb, Cherry Cola and Moon Rabbit, all Lv.100.",
+      "clears": [], "teams": [
+        { "name": "susinwoo-coolmint-thumb", "scope": "rift", "for": "Rift level 2 Cool Mint (video thumbnail)",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5+", "position": "bar 1", "role": "", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5+", "position": "bar 2", "role": "", "note": "" },
+            { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "5+", "position": "bar 3", "role": "", "note": "" },
+            { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "5+", "position": "bar 4", "role": "", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5+", "position": "bar 5", "role": "", "note": "" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5+", "position": "bar 6", "role": "", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "100", "stars": "5+", "position": "bar 7", "role": "", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5+", "position": "bar 8", "role": "captain", "note": "" },
+            { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "100", "stars": "5+", "position": "bar 9", "role": "", "note": "low confidence" },
+            { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "5+", "position": "bar 10", "role": "", "note": "" },
+            { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "5+", "position": "bar 11", "role": "", "note": "" },
+            { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit", "level": "100", "stars": "5+", "position": "bar 12", "role": "", "note": "" }
+          ], "pets": [], "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "", "why": "Not in the text.", "substitutions": [], "unorthodox": [] }
+      ],
+      "builds": [], "mechanics": ["서신우 states the Rift cut 'on the Rift's basis' (차원 기준): the power the Rift shows."], "rift": ["Level 2 is Cool Mint (title and thumbnail)."], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "권장 전투력은 차원 기준 5.167G입니다", "en": "Recommended power is 5.167G on the Rift's basis." }]
+    },
+    {
+      "source": "naver", "id": "49192", "url": "https://cafe.naver.com/ccrumble/49192", "date": "2026-10-03",
+      "title_kr": "차원의 이면 시즌1 망치공주 공략 (3단계)", "title_en": "Rift season 1 Werehound Princess guide (level 3)", "relevance": 2, "scope": "rift",
+      "summary_en": "서신우's video guide. Text: 'level 3's recommended is 6.39G on the Rift's basis', level 3's 35% line (6,389,034,226). The thumbnail is the same image as nv:49183's (Cool Mint).",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Rift cut stated on the Rift's basis (차원 기준)."], "rift": ["Level 3 is the Werehound Princess (title)."], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "3단계 권장은 차원 기준 6.39G입니다", "en": "Level 3's recommended is 6.39G on the Rift's basis." }]
+    },
+    {
+      "source": "naver", "id": "49254", "url": "https://cafe.naver.com/ccrumble/49254", "date": "2026-10-03",
+      "title_kr": "차원의 이면 시즌1 폭주단 트럭 공략 (4단계)", "title_en": "Rift season 1 Rowdy Truck guide (level 4)", "relevance": 2, "scope": "rift",
+      "summary_en": "서신우's video guide. Text: 'the recommended 35% is about 7.776G on the Rift's basis', level 4's 35% line (7,775,356,403). Thumbnail: three Rowdy Trucks with the boss banner '폭주단 트럭'; the battle bar's portraits are too small to read reliably beyond Macaron, Brightseeker, Scorpion, Pinot Noir, Cheesecake, Pomegranate, Skating Queen, Milk and Herb, all Lv.100.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Rift cut stated on the Rift's basis: '권장 35%는 차원 기준 약 7.776G'."], "rift": ["Level 4 is three Rowdy Trucks (title and thumbnail)."], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "권장 35%는 차원 기준 약 7.776G입니다", "en": "The recommended 35% is about 7.776G on the Rift's basis." }]
+    },
+    {
+      "source": "naver", "id": "47362", "url": "https://cafe.naver.com/ccrumble/47362", "date": "2026-09-28",
+      "title_kr": "차원이면 쿨링민트 클리어덱 영상 공략 (이면 쿨민)", "title_en": "Rift Cool Mint clear deck video", "relevance": 2, "scope": "rift",
+      "summary_en": "롤로노아's Cool Mint clear (video and images not captured: 0-byte embeds). Tip: poke at the front, release touch when Cool Mint runs in and fire the poison damage, then go back down and burst. He finds the Werehound Princess and Cool Mint the easiest. Comments: 'the Rift has recommended power too: crumblehub's recommended × 40% is the 35% cut'; 악림 asks for a 15% Werehound Princess tip (answered in nv:48025).",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Commenter: the Rift's 35% cut is crumblehub's recommended power × 40%."], "rift": [], "stage_types": [], "disagreements": [], "quotes": [{ "kr": "여기도 권장투력 있어요..! 권장투력 보시구 하셔야해요 허브에 적힌 권장투력 x40% 하면 35 퍼컷이에요", "en": "There's recommended power here too! Check it: crumblehub's recommended power × 40% is the 35% cut." }]
+    },
+    {
+      "source": "naver", "id": "47361", "url": "https://cafe.naver.com/ccrumble/47361", "date": "2026-09-28",
+      "title_kr": "차원의 이면 폭주단 트럭 클리어 공략영상", "title_en": "Rift Rowdy Truck clear video", "relevance": 1, "scope": "rift",
+      "summary_en": "롤로노아: 'come all the way down and burst = clear'. Video not captured.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47357", "url": "https://cafe.naver.com/ccrumble/47357", "date": "2026-09-28",
+      "title_kr": "이면 가기 전 35% 구간 날먹 하는 방법", "title_en": "How to coast the 35% stages before the Rift", "relevance": 1, "scope": "stage",
+      "summary_en": "Main stages, not the Rift: with six skill-haste lines on the right-hand accessories, most 35% stages full-auto; 'doesn't work near the 15% line'. A commenter: the key is having enough power to level-adjust so buffs concentrate on the mains.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    { "source": "naver", "id": "45166", "url": "https://cafe.naver.com/ccrumble/45166", "date": "2026-09-23", "title_kr": "9월 23일(수) 확인된 현상 안내", "title_en": "Known issues, Sept 23", "relevance": 1, "scope": "stage", "summary_en": "Official: main-stage boss Cool Mint used only normal attacks, no skills (2026-09-23). A comment asks whether the Rift's rewards being lower than normal stages' is intended.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48486", "url": "https://cafe.naver.com/ccrumble/48486", "date": "2026-10-01", "title_kr": "오븐 자동 열기 기능 개선 및 일일 던전 난이도 완화 안내", "title_en": "Oven auto-open and daily dungeon easing notice", "relevance": 0, "scope": "stage", "summary_en": "Official notice on the oven and daily dungeons; nothing on the Rift's gate.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "45336", "url": "https://cafe.naver.com/ccrumble/45336", "date": "2026-09-23", "title_kr": "현재 스테이지 난이도 완화 (crumblehub.co 사이트 업뎃전 15%까지 클리어가능)", "title_en": "Stage easing: clears possible down to 15% before crumblehub updates", "relevance": 1, "scope": "stage", "summary_en": "Main-stage post from the easing day; no Rift content.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] }
+  ],
+  "refused": { "ids": ["45885", "46234", "46541", "46584", "46776", "47146", "47358", "47401", "47713", "47916", "48145", "48169", "48406", "48429", "48534", "48638", "48737", "49033", "49130", "49143", "49153"], "note": "Free-board (menu 8) articles; the API answered errorCode 0004 (not logged in). Their titles are in evidence/r2026-10-03/04-naver/list-naver-free-board.tsv." },
+  "glossary": []
+}

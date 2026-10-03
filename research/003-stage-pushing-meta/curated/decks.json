@@ -617,5 +617,144 @@
    "web:yt-BDuQ279mbP4",
    "web:yt-1AyEMtaE-s4"
   ]
+ },
+ {
+  "id": "rift-15-levelled-rye",
+  "mode": "stage",
+  "name_en": "Rift levelled Rye deck (15%)",
+  "name_kr": "이면 렙조절 호밀덱",
+  "status": "meta",
+  "ceiling": "Rift level 18 at 15% (Werehound Princess at 29.73G Rift power, manual, dc:78865), the furthest 15% clear with a screenshot. The same deck took the level-19 and level-23 trucks for 롤로노아 (nv:48662), whose Rift power isn't shown.",
+  "summary": "The Guild Conquest trick brought to the Rift: the cookies that must not take the ATK-ordered buffs are levelled down to 64–70, so Pomegranate's beam, Passion Pay and Rapid Promotion land on Brightseeker, Rye and Cherry Cola, and Macaron's crit buff on Brightseeker. Played by hand against the Werehound Princess and the trucks; the truck needs a knockback pet or the formation collapses. Conquest gear preset.",
+  "cookies": [
+   { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits, so it must land on Brightseeker. Aim its skill at the left wall so it fires in a line (nv:48662)." },
+   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Main dealer; the level adjustment exists so Macaron's buff and the ATK-ordered buffs reach it." },
+   { "kr": "전갈맛 쿠키", "level": "64 (45 in 롤로노아's copy): below the dealers", "why": "Poison stacks to 20 on the single boss; levelled down so the ATK-ordered buffs skip it." },
+   { "kr": "호밀맛 쿠키", "level": "100", "why": "Dealer with little wasted damage, one of the three the buffs pile on; takes the slot of a low-star Bari (롤로노아 cleared the level-23 truck with Rye instead of Bari)." },
+   { "kr": "피노누아맛 쿠키", "level": "70: below the dealers", "why": "Airborne counter so the Werehound Princess's launches don't disable the team; levelled down so it doesn't take the buffs." },
+   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer that pushers call undroppable with Macaron." },
+   { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies; the level adjustment decides who gets it." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer." },
+   { "kr": "정글전사 쿠키", "level": "70: below the dealers", "why": "Single-target ranged damage on the boss; levelled down so the buffs skip it." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer; holds the top ATK so Passion Pay and Rapid Promotion land as planned." },
+   { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Charge dealer, the third of the cookies the buffs pile on; the Rift entrance gives a Charge buff." },
+   { "kr": "다크초코 쿠키", "level": "70: below the dealers", "why": "Tank with a DEF-shred debuff; levelled down so it doesn't take the buffs." }
+  ],
+  "pets": [
+   "무한바퀴",
+   "색동 주머니",
+   "전지멜로우"
+  ],
+  "substitutions": [
+   "A high-star Princess Bari at Lv.60 in Rye's slot, Scorpion at 45 (롤로노아's deck 1, nv:48662).",
+   "Against the truck, a knockback pet; without one the formation collapses (dc:78865)."
+  ],
+  "sources": [
+   "dc:78865",
+   "nv:48662",
+   "nv:48025"
+  ]
+ },
+ {
+  "id": "rift-15-devil-shred",
+  "mode": "stage",
+  "name_en": "Rift Devil DEF-shred deck (15%)",
+  "name_kr": "이면 악마 방깎덱",
+  "status": "alt",
+  "ceiling": "Rift level 12 at 15% (Cool Mint at 20.45G Rift power, dc:77612); the poster clears the three trucks with it too, with Dark Choco in.",
+  "summary": "The full version of the Rift shred idea: Devil's DEF shred, stacked with Dark Choco's when Dark Choco comes in, forces damage through at 15%. Its owner clears everything at 15% with it except the Cake Hound Pack; the Werehound Princess and GingerCraven don't lose HP to it.",
+  "cookies": [
+   { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits." },
+   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Rear-line dealer that stays on the boss." },
+   { "kr": "전갈맛 쿠키", "level": "100", "why": "Poison stacks to 20 on a single boss." },
+   { "kr": "피노누아맛 쿠키", "level": "100", "why": "Airborne counter, and the power it carries." },
+   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer." },
+   { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies." },
+   { "kr": "악마맛 쿠키", "level": "100", "why": "DEF shred; it survives in the Rift thanks to the 차원의 힘 buff, so it is worth a slot there." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer." },
+   { "kr": "정글전사 쿠키", "level": "100", "why": "Single-target ranged damage." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer." },
+   { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Charge dealer; the Rift entrance gives a Charge buff." },
+   { "kr": "허브맛 쿠키", "level": "100", "why": "Second healer." }
+  ],
+  "pets": [
+   "무한바퀴",
+   "색동 주머니"
+  ],
+  "substitutions": [
+   "Three trucks: Dark Choco in for Herb or Cherry Cola, so its DEF shred stacks with Devil's; fight at the 7 or 9 o'clock position (dc:77612 comments)."
+  ],
+  "sources": [
+   "dc:77612"
+  ]
+ },
+ {
+  "id": "rift-15-bari-scorpion",
+  "mode": "stage",
+  "name_en": "Rift Bari–Scorpion deck (15%)",
+  "name_kr": "이면 바리 전갈덱",
+  "status": "alt",
+  "ceiling": "Rift level 8 at 15% (Werehound Princess at 12.15G Rift power, dc:77709); its Witchberry–Herb variant took level 12 at 15% (Cool Mint at 18.40G, dc:78353).",
+  "summary": "The post-easing stage core (Brightseeker, Princess Bari, Cherry Cola around the Milk–Pomegranate–Macaron buffers) with Scorpion and Pinot Noir for the single-boss levels, all at Lv.100. 카린, who cleared 328-30 at 4.00G, used it to force levels 8 and 12 at 15%.",
+  "cookies": [
+   { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits." },
+   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Rear-line dealer that stays on the boss." },
+   { "kr": "전갈맛 쿠키", "level": "100", "why": "Poison stacks to 20 on a single boss." },
+   { "kr": "피노누아맛 쿠키", "level": "100", "why": "Airborne counter against the Werehound Princess's launches." },
+   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer." },
+   { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer." },
+   { "kr": "바리공주맛 쿠키", "level": "100", "why": "Charge dealer; the Rift entrance gives a Charge buff." },
+   { "kr": "정글전사 쿠키", "level": "100", "why": "Single-target ranged damage." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer." },
+   { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Second charge dealer." },
+   { "kr": "다크초코 쿠키", "level": "100", "why": "Tank with a DEF-shred debuff." }
+  ],
+  "pets": [
+   "색동 주머니",
+   "무한바퀴"
+  ],
+  "substitutions": [
+   "Cool Mint (level 12): Witchberry and Herb in for Princess Bari and Tiger Lily, with 핫도그도그 (dc:78353)."
+  ],
+  "sources": [
+   "dc:77709",
+   "dc:78353"
+  ]
+ },
+ {
+  "id": "rift-15-mob-witchberry",
+  "mode": "stage",
+  "name_en": "Rift mob-level Witchberry–Rockstar deck (15%)",
+  "name_kr": "이면 들개 위치베리 락스타덱",
+  "status": "alt",
+  "ceiling": "Cake Hound Pack levels at 15%: level 11 at 17.80G Rift power (dc:78353, screenshot mid-fight at 4% HP) and level 6 (dc:77572, text).",
+  "summary": "For the Cake Hound levels, where a single-target deck drowns in adds: Princess Bari herds the pack and the pierce and area dealers kill it together. No Scorpion and no Pinot Noir, since there is no single boss to poison or launch.",
+  "cookies": [
+   { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits." },
+   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Rear-line dealer." },
+   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer." },
+   { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer." },
+   { "kr": "위치베리맛 쿠키", "level": "100", "why": "Area carry for mob waves." },
+   { "kr": "바리공주맛 쿠키", "level": "100", "why": "Charge dealer that herds the pack so the pierce dealers hit it together (dc:78199)." },
+   { "kr": "정글전사 쿠키", "level": "100", "why": "Single-target ranged damage on the stragglers." },
+   { "kr": "락스타맛 쿠키", "level": "100", "why": "Pierce damage through the herded pack." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer." },
+   { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Charge dealer." },
+   { "kr": "다크초코 쿠키", "level": "100", "why": "Tank with a DEF-shred debuff." }
+  ],
+  "pets": [
+   "핫도그도그",
+   "무한바퀴"
+  ],
+  "substitutions": [
+   "dc:78199's version for the Cake Hounds and Cool Mint: Princess Bari, Oven Wanderer and Skating Queen with Witchberry, Rockstar and a pierce archer, on a skill-AMP and skill-haste gear preset."
+  ],
+  "sources": [
+   "dc:78353",
+   "dc:77572",
+   "dc:78199"
+  ]
  }
 ]

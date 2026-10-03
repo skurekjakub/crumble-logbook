@@ -16,6 +16,7 @@
     "riftLevels": "rift-levels.json",
     "stageZones": "stage-zones.json",
     "stageClears": "stage-clears.json",
-    "riftBosses": "rift-bosses.json"
+    "riftBosses": "rift-bosses.json",
+    "riftClears": "rift-clears.json"
   }
 }
