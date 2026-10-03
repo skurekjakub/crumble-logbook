@@ -8,7 +8,7 @@ Pending work, newest decisions first. Decisions that need the user live in [`OPE
 
 ## Next
 
-- **Refresh every record.** Once the acceptance round is merged, "refresh" runs every area in parallel (`.claude/skills/refresh-meta/SKILL.md`).
+- **Refresh every record.** Once the acceptance round is merged, "refresh" runs every area in parallel (`.claude/skills/refresh-meta/SKILL.md`). Record 003's `## Refresh 2026-10-03` covered the Rift only: its next full round starts the main-stage window at 2026-09-28, not at that heading.
 - **Short glossary names.** English names are long ("Milk Cookie's Crunchy Strong Pediatrician") on every page. Add a short name to glossary entries and use it in tables and chips.
 - **One Korean name, different English per record.** The glossary holds one English name per key, so 비겁한 쿠키 reads "Cowardly Cookie" (record 001) where record 003 calls it GingerCraven. The stage clears view works around it; the gap is general.
 

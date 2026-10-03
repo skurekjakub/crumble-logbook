@@ -74,11 +74,11 @@ Synthesis: the press repeats the patch article; crumb.gg serves `data/rift.json`
 
 ### YouTube
 
-Searches (`05-youtube/ytq-*.html`): 차원의 이면 15%, 차원의 이면 공략, 크럼블 이면 덱, 쿠키런 크럼블 차원의 이면, Cookie Run Crumble Dimensional Rift, then 차원의 이면 5단계, 차원의 이면 클리어, 이면 15퍼, 차원의 이면 덱, 크럼블 이면 공략, Crumble Dimensional Rift stage, 크럼블 차원의 힘, 무한바퀴 크럼블. They found 서신우's Rift entry and level 2-4 guides (read from frames and burned-in subtitles) and ND러너's level-34 stream; the rest were stage videos or other games.
+Searches: one capture per query in `05-youtube/`, named `ytq-<query>.html`. They found 서신우's Rift entry and level 2-4 guides (read from frames and burned-in subtitles) and ND러너's level-34 stream; the rest were stage videos or other games.
 
 ### DCInside and the Naver cafe
 
-The saved searches and the discovery queries are in the DC lane's listings (`02-dc/list-<search id>.tsv`) and `04-naver/list-naver-*.tsv`; the ones that produced a cited source are saved in `searches.json`. DC's search splits a title on spaces, so the multi-word queries are noisy; the single nicknames (비틀, 트럭, 쿨민, 망치, 차힘) carried the round.
+The saved searches and the discovery queries are in the DC lane's listings (`02-dc/list-<search id>.tsv`) and `04-naver/list-naver-*.tsv`; the ones that produced a cited source are saved in `searches.json`. DC's search splits a title on spaces, so the multi-word queries are noisy; the single-word nicknames saved in `searches.json` carried the round.
 
 ### Takeaways (each verified against a capture before use)
 

@@ -1,11 +1,11 @@
 {
- "about": "Dimensional Rift levels whose boss players have reported, season 1. The game data behind rift-levels.json carries recommended power only; bosses come from posts, videos and one calculator screenshot. Each level is one boss fight, with adds from both sides. Players describe the bosses cycling every five levels (Cake Hound Pack, Cool Mint, Werehound Princess, truck, GingerCraven; dc:80225, dc:80294 comments); every screenshot level fits it, and 롤로노아's level-23 truck (nv:48662) is the one report that doesn't, so it isn't listed.",
+ "about": "Dimensional Rift levels whose boss players have reported, season 1. The game data behind rift-levels.json carries recommended power only; bosses come from posts, videos and one calculator screenshot. Each level is one boss fight, with adds from both sides. Players describe the bosses repeating every five levels in the order levels 1-5 below show (dc:80225, dc:80294 comments); every screenshot level fits it, and 롤로노아's level-23 truck (nv:48662) is the one report that doesn't, so it isn't listed.",
  "measured": "2026-10-03",
  "levels": [
   { "level": 1, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "note": "The first boss; easy once 328-30 is behind you.", "sources": ["web:yt-51MkrIh2vJY"] },
   { "level": 2, "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint", "note": "Summoned with many adds; fight from a corner and stack Scorpion when the boss overlaps the team at the start.", "sources": ["web:yt-hx9Y_5HpSps", "nv:49183"] },
   { "level": 3, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "note": "Brightseeker + Scorpion recommended; hardest boss at 15% per one pusher.", "sources": ["dc:76586", "dc:77015"] },
-  { "level": 4, "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "note": "Dark Choco and Devil for shred; about five tries, then level 차원의 힘.", "sources": ["dc:77114", "dc:77015"] },
+  { "level": 4, "boss_kr": "폭주단 트럭 ×3", "boss_en": "Rowdy Truck ×3", "note": "Dark Choco and Devil for shred; about five tries, then level 차원의 힘.", "sources": ["dc:77114", "dc:77015", "dc:78164"] },
   { "level": 5, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "note": "Needs the 35% bracket.", "sources": ["dc:76569", "dc:77015"] },
   { "level": 6, "boss_kr": "케이크 들개떼", "boss_en": "Cake Hound Pack", "sources": ["dc:76862"] },
   { "level": 8, "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "note": "Cleared at 15% with a screenshot (dc:77709).", "sources": ["dc:77709"] },

@@ -15,7 +15,7 @@
   { "kr": "주차", "kr_short": [], "en": "Parking: staying on the highest cleared stage for its idle rewards", "kind": "term", "sources": ["web:crumblehub-stage-guide"] },
   { "kr": "이면", "kr_short": ["차원"], "en": "Dimensional Rift (차원의 이면), the seasonal boss-only mode after 328-30", "kind": "term", "refers_to": "차원의 이면", "note": "Record 003's short forms; the full name's entry comes from the earlier records.", "sources": ["nv:44477", "web:pocketgamer-2026-09-23"] },
   { "kr": "차원의 힘", "kr_short": [], "en": "Dimensional Energy: the Rift-only level that fills per minute in the Rift and raises stats there", "kind": "term", "sources": ["nv:44477", "dc:74998", "dc:75241"] },
-  { "kr": "차힘", "kr_short": ["차원렙"], "en": "Dimensional Energy level (차원의 힘), as posters shorten it", "kind": "term", "refers_to": "차원의 힘", "sources": ["dc:79406"] },
+  { "kr": "차힘", "kr_short": ["차원렙"], "en": "Dimensional Energy level (차원의 힘), as posters shorten it", "kind": "term", "refers_to": "차원의 힘", "sources": ["dc:80423", "dc:79406"] },
   { "kr": "이면 투력", "kr_short": ["차원 기준"], "en": "Rift power: the team power the Rift shows in its header, 차원의 힘 included, which sets a Rift level's bracket", "kind": "term", "sources": ["dc:78283", "dc:78225"] },
   { "kr": "비틀기", "kr_short": ["비틀"], "en": "Twisting: forcing a clear one bracket lower than comfortable, usually at 15%", "kind": "term", "sources": ["dc:77709", "dc:78353", "dc:77572"] },
   { "kr": "3트럭", "kr_short": ["삼트럭"], "en": "The three Rowdy Trucks of a Rift truck level", "kind": "term", "refers_to": "폭주단 트럭", "boss": true, "sources": ["dc:78412", "dc:78164"] },
