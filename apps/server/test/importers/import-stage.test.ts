@@ -493,6 +493,11 @@ describe("the Rift clears collection", FULL_IMPORT, () => {
     );
   });
 
+  it("fails a clear whose power is the formation screen's, since only Rift power sets a Rift bracket", () => {
+    const dir = withRiftClears("938-stage-copy", [riftClear({ power_basis: "lobby" })]);
+    expect(() => importRecord(testStore(), dir)).toThrow(/rift-clears\.json.*power_basis/s);
+  });
+
   it("fails a clear at a season or a level no record loaded", () => {
     expect(() =>
       importRecord(testStore(), withRiftClears("932-stage-copy", [riftClear({ season: 99 })])),

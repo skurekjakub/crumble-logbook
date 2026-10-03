@@ -96,7 +96,7 @@ export const STAGE = {
     },
     riftClears: {
       title: "Rift at 15%",
-      lede: "Dimensional Rift clears where the power gate leaves the team 15% of its damage. The clears the record accepts come first, by season, then highest level and, at one level, lowest power; the claims it leaves unverified or rejects follow. Each shows its team, the level's recommended power and the power the 15% and 35% brackets take. The attempts at other brackets and the failures at 15% bound how far 15% reaches. Team power is as posted: the Rift's own figure includes 차원의 힘.",
+      lede: "Dimensional Rift clears where the power gate leaves the team 15% of its damage, read off the power the Rift shows with 차원의 힘 in it; formation-screen power never sets a Rift bracket. The clears the record accepts come first, by season, then highest level and, at one level, lowest power; the claims it leaves unverified or rejects follow. Each shows its team, the level's recommended power and the power the 15% and 35% brackets take. Clears claimed at 15% without a Rift power, the attempts at other brackets and the failures at 15% bound how far 15% reaches.",
       bracket: 15,
       lines: [15, 35],
     },

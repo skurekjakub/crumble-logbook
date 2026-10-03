@@ -156,8 +156,9 @@ export const stageClears = sqliteTable("stage_clears", {
  * One documented Dimensional Rift attempt at `level` of `season`, against
  * `bossKr` (`bossEn` when the record names it in English): the team power
  * as posted (`teamPower`, verbatim) and read as billions (`powerG`, `null`
- * when the post gives no figure), which power the figure is
- * (`powerBasis`, `null` when the post doesn't say), the 차원의 힘 level
+ * when the post gives no figure), whether the figure is the power the Rift
+ * shows (`powerBasis` `rift`; `null` when the post doesn't give it, and then
+ * the bracket is the poster's own), the 차원의 힘 level
  * when posted, the level's recommended power, the damage bracket
  * (`bracket`, the kept damage %), how it ended, how it was played (`null`
  * when unknown), what backs it, whether the record accepts it (`standing`;

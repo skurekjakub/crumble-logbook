@@ -41,7 +41,6 @@ const STANDINGS: Readonly<Record<RiftClear["standing"], readonly [PillKind, stri
 /** What a posted figure is, per power basis; `null` when the post doesn't say. */
 const BASES: Readonly<Record<NonNullable<RiftClear["powerBasis"]>, string>> = {
   rift: "as the Rift shows it, 차원의 힘 included",
-  lobby: "from the formation screen, outside the Rift",
 };
 
 /** The ids of the page's sections. */
@@ -239,12 +238,13 @@ export interface RiftClearsViewProps {
 }
 
 /**
- * The documented Dimensional Rift clears at the config's bracket, in the
- * API's order (the clears the record accepts by season, highest level and
- * lowest power first, then the unverified and rejected claims), each as a
- * card with its team (see {@link ClearCard}); then, under their own
- * heading, the attempts that bound them: every other bracket's attempts
- * and the failures at the bracket, as a table. A boss is named in English
+ * The documented Dimensional Rift clears at the config's bracket on the
+ * power the Rift shows, in the API's order (the clears the record accepts
+ * by season, highest level and lowest power first, then the unverified and
+ * rejected claims), each as a card with its team (see {@link ClearCard});
+ * then, under their own heading, the attempts that bound them: the clears
+ * claimed at the bracket without a Rift power, every other bracket's
+ * attempts and the failures at the bracket, as a table. A boss is named in English
  * as its row names it, else as the Rift bosses do, else as the glossary
  * does. The result and a text filter live in the URL and apply to both
  * lists; the text filter matches the level, the boss in Korean and
@@ -352,7 +352,9 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
         {(rows) => {
           if (!rows.length) return <EmptyState>No Rift clears recorded yet.</EmptyState>;
           const kept = applyFilters(rows, filter, select);
-          const ranked = kept.filter((c) => c.bracket === config.bracket && c.result === "clear");
+          const ranked = kept.filter(
+            (c) => c.bracket === config.bracket && c.result === "clear" && c.powerBasis === "rift",
+          );
           const bounds = kept.filter((c) => !ranked.includes(c));
           const shown = new Set<string>();
           return (
@@ -377,7 +379,8 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
                 <section id={PARTS.bounds} aria-labelledby={`${PARTS.bounds}-title`}>
                   <h3 id={`${PARTS.bounds}-title`}>Attempts that bound it</h3>
                   <p className="muted">
-                    Attempts at other brackets and failures at {config.bracket}%, in the same order.
+                    Clears claimed at {config.bracket}% without the Rift's power, attempts at other
+                    brackets and failures at {config.bracket}%, in the same order.
                   </p>
                   <DataTable columns={columns} rows={bounds} rowKey={(c) => c.id} layout="stack" />
                 </section>

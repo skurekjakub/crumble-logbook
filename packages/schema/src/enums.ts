@@ -181,10 +181,11 @@ export type RiftClearEvidence = (typeof RIFT_CLEAR_EVIDENCE)[number];
 
 /**
  * Which team power a Rift attempt's post gives: the power the Rift shows,
- * 차원의 힘 included (`rift`), or the formation screen's outside the Rift
- * (`lobby`).
+ * 차원의 힘 included (`rift`). It is the only power a Rift bracket is read
+ * from, so a formation-screen (lobby) figure has no value here: an attempt
+ * that gives only lobby power isn't a Rift clear at a bracket.
  */
-export const RIFT_POWER_BASIS = ["rift", "lobby"] as const;
+export const RIFT_POWER_BASIS = ["rift"] as const;
 export type RiftPowerBasis = (typeof RIFT_POWER_BASIS)[number];
 
 /**

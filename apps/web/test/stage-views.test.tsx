@@ -544,6 +544,24 @@ describe("the Rift at 15% page", () => {
     expect(within(ranked).getAllByRole("link", { name: "Rift shred deck" })).toHaveLength(2);
   });
 
+  it("keeps a 15% clear that gives no Rift power out of the ranked clears, with the attempts that bound them", async () => {
+    await renderRoute(
+      "/stage/rift-15",
+      {
+        ...API,
+        "/api/rift-clears": {
+          body: [riftClear(1), riftClear(6, { powerBasis: null, teamPower: "not posted" })],
+        },
+      },
+      { mode: STAGE },
+    );
+    const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
+    expect(within(ranked).getAllByRole("article", { name: /^Season/ })).toHaveLength(1);
+    const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });
+    await waitFor(() => expect(bodyRows(bounds)).toHaveLength(1));
+    expect(bodyRows(bounds)[0]).toContain("not posted");
+  });
+
   it("lists the attempts at other brackets and the 15% failures under their own heading", async () => {
     await renderStage("/stage/rift-15");
     const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });

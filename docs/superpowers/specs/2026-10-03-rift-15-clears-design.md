@@ -48,7 +48,7 @@ Record 003 (`research/003-stage-pushing-meta/`) holds the Rift's levels, rules a
 
 - `season`, `level`: integers; the level exists in `rift-levels.json`.
 - `boss_kr` required; `boss_en` or `null` when the glossary already names the boss.
-- `team_power`: verbatim. `power_basis`: `"rift"` when the figure is the power the Rift shows (차원의 힘 included), `"lobby"` when it's the formation screen's power outside the Rift, `null` when the post doesn't say.
+- `team_power`: verbatim. `power_basis`: `"rift"` when the figure is the power the Rift shows (차원의 힘 included), `null` when the post doesn't give it. A Rift bracket counts only on Rift power (the user's rule, 2026-10-03), so a post that gives only formation-screen power isn't a clear at a bracket; the tab ranks only the bracket's clears on Rift power.
 - `rift_power_level`: the 차원의 힘 level when posted, else `null`.
 - `recommended_power`: the level's recommended power from `rift-levels.json`, or `null`.
 - `bracket`: the kept damage % (15, 35, …); `result`: `clear` | `fail`; `play`: `manual` | `auto` | `semi-auto` | `null`; `evidence`: `screenshot` | `video` | `text`; `standing`: `accepted` | `unverified` | `rejected`, as the README section decides.
