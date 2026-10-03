@@ -121,6 +121,9 @@ function ownDecks(suffix: string): Record<string, (file: Record<string, unknown>
     "stage-clears.json": (file) => {
       for (const clear of file.clears as Row[]) rename(clear, "deck");
     },
+    "rift-clears.json": (file) => {
+      for (const clear of file.clears as Row[]) rename(clear, "deck");
+    },
   };
 }
 
