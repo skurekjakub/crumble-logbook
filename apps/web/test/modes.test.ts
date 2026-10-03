@@ -122,6 +122,7 @@ describe("MODES", () => {
         "/zones",
         "/clears",
         "/rift",
+        "/rift-15",
         "/usage",
         "/runes",
         "/gear",

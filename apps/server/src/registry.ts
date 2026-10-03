@@ -112,6 +112,9 @@ import {
   riftBossInput,
   riftBossPatch,
   riftBosses,
+  riftClearInput,
+  riftClearPatch,
+  riftClears,
   riftLevelInput,
   riftLevelPatch,
   riftLevels,
@@ -171,7 +174,8 @@ export type OrderKey<Row> =
 
 /**
  * How a list filter matches a view:
- * - `equals`: the view's column equals the value;
+ * - `equals`: the view's column equals the value (a number column, the
+ *   value read as a number);
  * - `anyOf`: at least one of the view's columns equals the value;
  * - `sameName`: the view's column names the same thing as the value, as a
  *   stored name, a glossary shorthand or the English gloss (case- and
@@ -370,6 +374,9 @@ export const rowId = z.coerce.number().int().positive();
 /** A non-empty free-text query value. */
 const nonEmpty = z.string().min(1);
 
+/** A positive whole-number query value, for an `equals` filter on an integer column. */
+const wholeNumber = z.string().regex(/^[1-9]\d*$/, "expected a positive whole number");
+
 /**
  * Every durable table, keyed by its snapshot name, in foreign-key-safe
  * insert order: a table only references tables above it.
@@ -548,6 +555,33 @@ export const REGISTRY = {
     entity: "rift_boss",
     api: { id: rowId, input: riftBossInput, patch: riftBossPatch },
     content: { order: ["level", "id"] },
+  }),
+  riftClears: entry(riftClears, {
+    path: "/rift-clears",
+    entity: "rift_clear",
+    filters: {
+      bracket: { schema: wholeNumber, match: { equals: "bracket" } },
+      result: { schema: z.enum(CLEAR_RESULT), match: { equals: "result" } },
+      season: { schema: wholeNumber, match: { equals: "season" } },
+      deck: { schema: deckSlug, match: { equals: "deckId" } },
+    },
+    api: { id: rowId, input: riftClearInput, patch: riftClearPatch },
+    content: {
+      // The ranked list first: accepted clears by season, highest level
+      // first, then lowest power; then accepted failures, then unverified
+      // and rejected attempts, each in the same order.
+      order: [
+        { column: "standing", rank: CLEAR_STANDING },
+        { column: "result", rank: CLEAR_RESULT },
+        "season",
+        { column: "level", desc: true },
+        { column: "powerG", nullsLast: true },
+        "id",
+      ],
+      refs: { deckId: "decks" },
+      gloss: "bossKr",
+      mode: "stage",
+    },
   }),
   dungeonRuns: entry(dungeonRuns, {
     path: "/dungeon-runs",

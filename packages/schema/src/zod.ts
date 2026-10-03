@@ -409,6 +409,29 @@ export const stageClearSelect = createSelectSchema(t.stageClears);
 /** A row selected from `stage_clears`. */
 export type StageClearRow = typeof t.stageClears.$inferSelect;
 
+/**
+ * Insert schema for `rift_clears`. `season`, `level` and `bracket` are
+ * positive integers; `teamPower` is non-empty; `powerG`, when present, is
+ * positive; `riftPowerLevel`, when present, a non-negative integer;
+ * `recommendedPower`, when present, a positive integer; `deckId`, when
+ * present, a lowercase slug.
+ */
+export const riftClearInsert = createInsertSchema(t.riftClears, {
+  season: () => positiveInt,
+  level: () => positiveInt,
+  bossKr: (s) => s.min(1),
+  teamPower: (s) => s.min(1),
+  powerG: (s) => s.positive().nullish(),
+  riftPowerLevel: (s) => s.int().nonnegative().nullish(),
+  recommendedPower: () => positiveInt.nullish(),
+  bracket: (s) => s.int().positive(),
+  deckId: () => deckSlug.nullish(),
+});
+/** Select schema for `rift_clears`, mirroring the stored row shape. */
+export const riftClearSelect = createSelectSchema(t.riftClears);
+/** A row selected from `rift_clears`. */
+export type RiftClearRow = typeof t.riftClears.$inferSelect;
+
 /** Insert schema for `rift_bosses`. `level` is a positive integer; `bossKr` non-empty. */
 export const riftBossInsert = createInsertSchema(t.riftBosses, {
   level: () => positiveInt,

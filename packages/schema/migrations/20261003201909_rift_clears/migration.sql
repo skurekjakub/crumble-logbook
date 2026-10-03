@@ -1,0 +1,21 @@
+CREATE TABLE `rift_clears` (
+	`id` integer PRIMARY KEY AUTOINCREMENT,
+	`season` integer NOT NULL,
+	`level` integer NOT NULL,
+	`boss_kr` text NOT NULL,
+	`boss_en` text,
+	`team_power` text NOT NULL,
+	`power_g` real,
+	`power_basis` text,
+	`rift_power_level` integer,
+	`recommended_power` integer,
+	`bracket` integer NOT NULL,
+	`result` text NOT NULL,
+	`play` text,
+	`evidence` text NOT NULL,
+	`standing` text DEFAULT 'unverified' NOT NULL,
+	`deck_id` text,
+	`note` text,
+	`record_slug` text,
+	CONSTRAINT `fk_rift_clears_deck_id_decks_id_fk` FOREIGN KEY (`deck_id`) REFERENCES `decks`(`id`) ON DELETE SET NULL
+);

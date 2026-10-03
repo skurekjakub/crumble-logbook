@@ -30,6 +30,7 @@ import { Route as ModePackagesRouteImport } from './routes/$mode/packages'
 import { Route as ModePlannerRouteImport } from './routes/$mode/planner'
 import { Route as ModePowerSourcesRouteImport } from './routes/$mode/power-sources'
 import { Route as ModeRiftRouteImport } from './routes/$mode/rift'
+import { Route as ModeRift15RouteImport } from './routes/$mode/rift-15'
 import { Route as ModeRoutesRouteImport } from './routes/$mode/routes'
 import { Route as ModeRunesRouteImport } from './routes/$mode/runes'
 import { Route as ModeRunsRouteImport } from './routes/$mode/runs'
@@ -146,6 +147,11 @@ const ModeRiftRoute = ModeRiftRouteImport.update({
   path: '/rift',
   getParentRoute: () => ModeRoute,
 } as any)
+const ModeRift15Route = ModeRift15RouteImport.update({
+  id: '/rift-15',
+  path: '/rift-15',
+  getParentRoute: () => ModeRoute,
+} as any)
 const ModeRoutesRoute = ModeRoutesRouteImport.update({
   id: '/routes',
   path: '/routes',
@@ -218,6 +224,7 @@ export interface FileRoutesByFullPath {
   '/$mode/planner': typeof ModePlannerRoute
   '/$mode/power-sources': typeof ModePowerSourcesRoute
   '/$mode/rift': typeof ModeRiftRoute
+  '/$mode/rift-15': typeof ModeRift15Route
   '/$mode/routes': typeof ModeRoutesRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/runs': typeof ModeRunsRoute
@@ -250,6 +257,7 @@ export interface FileRoutesByTo {
   '/$mode/planner': typeof ModePlannerRoute
   '/$mode/power-sources': typeof ModePowerSourcesRoute
   '/$mode/rift': typeof ModeRiftRoute
+  '/$mode/rift-15': typeof ModeRift15Route
   '/$mode/routes': typeof ModeRoutesRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/runs': typeof ModeRunsRoute
@@ -284,6 +292,7 @@ export interface FileRoutesById {
   '/$mode/planner': typeof ModePlannerRoute
   '/$mode/power-sources': typeof ModePowerSourcesRoute
   '/$mode/rift': typeof ModeRiftRoute
+  '/$mode/rift-15': typeof ModeRift15Route
   '/$mode/routes': typeof ModeRoutesRoute
   '/$mode/runes': typeof ModeRunesRoute
   '/$mode/runs': typeof ModeRunsRoute
@@ -319,6 +328,7 @@ export interface FileRouteTypes {
     | '/$mode/planner'
     | '/$mode/power-sources'
     | '/$mode/rift'
+    | '/$mode/rift-15'
     | '/$mode/routes'
     | '/$mode/runes'
     | '/$mode/runs'
@@ -351,6 +361,7 @@ export interface FileRouteTypes {
     | '/$mode/planner'
     | '/$mode/power-sources'
     | '/$mode/rift'
+    | '/$mode/rift-15'
     | '/$mode/routes'
     | '/$mode/runes'
     | '/$mode/runs'
@@ -384,6 +395,7 @@ export interface FileRouteTypes {
     | '/$mode/planner'
     | '/$mode/power-sources'
     | '/$mode/rift'
+    | '/$mode/rift-15'
     | '/$mode/routes'
     | '/$mode/runes'
     | '/$mode/runs'
@@ -555,6 +567,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeRiftRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/rift-15': {
+      id: '/$mode/rift-15'
+      path: '/rift-15'
+      fullPath: '/$mode/rift-15'
+      preLoaderRoute: typeof ModeRift15RouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/$mode/routes': {
       id: '/$mode/routes'
       path: '/routes'
@@ -644,6 +663,7 @@ interface ModeRouteChildren {
   ModePlannerRoute: typeof ModePlannerRoute
   ModePowerSourcesRoute: typeof ModePowerSourcesRoute
   ModeRiftRoute: typeof ModeRiftRoute
+  ModeRift15Route: typeof ModeRift15Route
   ModeRoutesRoute: typeof ModeRoutesRoute
   ModeRunesRoute: typeof ModeRunesRoute
   ModeRunsRoute: typeof ModeRunsRoute
@@ -672,6 +692,7 @@ const ModeRouteChildren: ModeRouteChildren = {
   ModePlannerRoute: ModePlannerRoute,
   ModePowerSourcesRoute: ModePowerSourcesRoute,
   ModeRiftRoute: ModeRiftRoute,
+  ModeRift15Route: ModeRift15Route,
   ModeRoutesRoute: ModeRoutesRoute,
   ModeRunesRoute: ModeRunesRoute,
   ModeRunsRoute: ModeRunsRoute,

@@ -95,6 +95,9 @@ export type RiftUnlock = InferResponseType<(typeof api)["rift-unlocks"]["$get"],
 /** The boss players report at a Rift level, with a note and sources. */
 export type RiftBoss = InferResponseType<(typeof api)["rift-bosses"]["$get"], 200>[number];
 
+/** A documented Dimensional Rift attempt, with the boss's `en` gloss and sources. */
+export type RiftClear = InferResponseType<(typeof api)["rift-clears"]["$get"], 200>[number];
+
 /** One boss slot of a zone layout: the plan, its deck, how low a bracket it was cleared at, and sources. */
 export type StageZoneSlot = InferResponseType<
   (typeof api)["stage-zone-slots"]["$get"],

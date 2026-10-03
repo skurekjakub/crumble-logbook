@@ -154,6 +154,7 @@ const expectedCounts = {
   stageZoneSlots: 0,
   stageClears: 0,
   riftBosses: 0,
+  riftClears: 0,
   dungeonRuns: 0,
   dungeonLineups: 0,
   dungeonExclusions: 0,

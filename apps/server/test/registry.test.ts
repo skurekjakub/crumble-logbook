@@ -40,6 +40,7 @@ type SeededKey =
   | "captures"
   | "stageZoneSlots"
   | "stageClears"
+  | "riftClears"
   | "dungeonRuns"
   | "dungeonLineups"
   | "dungeonExclusions"
@@ -100,6 +101,12 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
   stageZoneSlots: { deck: { match: { deckId: "s1" }, other: { deckId: "s2" }, value: "s1" } },
   stageClears: {
     result: { match: { result: "fail" }, other: {}, value: "fail" },
+    deck: { match: { deckId: "s1" }, other: { deckId: "s2" }, value: "s1" },
+  },
+  riftClears: {
+    bracket: { match: { bracket: 15 }, other: {}, value: "15" },
+    result: { match: { result: "fail" }, other: {}, value: "fail" },
+    season: { match: { season: 2 }, other: {}, value: "2" },
     deck: { match: { deckId: "s1" }, other: { deckId: "s2" }, value: "s1" },
   },
   dungeonRuns: {
@@ -425,6 +432,24 @@ const SEEDS: Record<SeededKey, Seed> = {
         era: "post-easing",
         teamPower: "1G",
         powerG: 1,
+        bracket: 35,
+        result: "clear",
+        evidence: "text",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  riftClears: (store, services, over) => {
+    ensureStageDecks(store, services);
+    const row = services.riftClears.create(
+      {
+        season: 1,
+        level: ++serial,
+        bossKr: "b",
+        teamPower: "2G",
+        powerG: 2,
         bracket: 35,
         result: "clear",
         evidence: "text",

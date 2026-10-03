@@ -171,6 +171,22 @@ export type ClearStanding = (typeof CLEAR_STANDING)[number];
 export const CLEAR_EVIDENCE = ["screenshot", "text"] as const;
 export type ClearEvidence = (typeof CLEAR_EVIDENCE)[number];
 
+/** How a Dimensional Rift attempt was played, as its post says: by hand, on auto or on semi-auto. */
+export const RIFT_CLEAR_PLAY = ["manual", "auto", "semi-auto"] as const;
+export type RiftClearPlay = (typeof RIFT_CLEAR_PLAY)[number];
+
+/** What backs a documented Dimensional Rift attempt: a screenshot, a video, or text alone. */
+export const RIFT_CLEAR_EVIDENCE = ["screenshot", "video", "text"] as const;
+export type RiftClearEvidence = (typeof RIFT_CLEAR_EVIDENCE)[number];
+
+/**
+ * Which team power a Rift attempt's post gives: the power the Rift shows,
+ * 차원의 힘 included (`rift`), or the formation screen's outside the Rift
+ * (`lobby`).
+ */
+export const RIFT_POWER_BASIS = ["rift", "lobby"] as const;
+export type RiftPowerBasis = (typeof RIFT_POWER_BASIS)[number];
+
 /**
  * What a usage figure counts: one cookie, a group of cookies that appear
  * together (`core`), one pet, or a whole team.
@@ -229,6 +245,7 @@ export const CITED_ENTITY = [
   "stage_zone_slot",
   "stage_clear",
   "rift_boss",
+  "rift_clear",
   "dungeon_run",
   "dungeon_lineup",
   "dungeon_exclusion",

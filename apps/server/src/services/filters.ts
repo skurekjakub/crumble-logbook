@@ -36,7 +36,12 @@ function matcher<View>(
    * @returns the column's value
    */
   const field = (view: View, column: string) => (view as Record<string, unknown>)[column];
-  if ("equals" in match) return (view) => field(view, match.equals) === value;
+  if ("equals" in match) {
+    return (view) => {
+      const stored = field(view, match.equals);
+      return typeof stored === "number" ? stored === Number(value) : stored === value;
+    };
+  }
   if ("anyOf" in match)
     return (view) => match.anyOf.some((column) => field(view, column) === value);
   if ("includes" in match)

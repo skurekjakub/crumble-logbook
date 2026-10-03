@@ -28,6 +28,7 @@ import {
   powerBracketInsert,
   recommendationInsert,
   riftBossInsert,
+  riftClearInsert,
   riftLevelInsert,
   riftSeasonInsert,
   riftUnlockInsert,
@@ -306,6 +307,29 @@ export const stageClearPatch = stageClear.patch.transform((patch) =>
 );
 /** Output of {@link stageClearPatch}. */
 export type StageClearPatch = z.output<typeof stageClearPatch>;
+
+const riftClear = citedInputs(riftClearInsert.omit({ powerG: true }));
+/**
+ * Input for creating a documented Dimensional Rift attempt, with the
+ * sources that show it. `powerG` isn't accepted: it is read from
+ * `teamPower` (see `postedPowerG`).
+ */
+export const riftClearInput = riftClear.input.transform((clear) => ({
+  ...clear,
+  powerG: postedPowerG(clear.teamPower),
+}));
+/** Output of {@link riftClearInput}. */
+export type RiftClearInput = z.output<typeof riftClearInput>;
+/**
+ * Patch for updating a documented Dimensional Rift attempt. `sources`, if
+ * given, must be non-empty. `powerG` isn't accepted: a patch that sets
+ * `teamPower` sets it too, read from the new text.
+ */
+export const riftClearPatch = riftClear.patch.transform((patch) =>
+  patch.teamPower === undefined ? patch : { ...patch, powerG: postedPowerG(patch.teamPower) },
+);
+/** Output of {@link riftClearPatch}. */
+export type RiftClearPatch = z.output<typeof riftClearPatch>;
 
 const riftBoss = citedInputs(riftBossInsert);
 /** Input for creating a reported Rift boss, with the sources that report it. */

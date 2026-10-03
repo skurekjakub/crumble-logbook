@@ -7,6 +7,7 @@ import type {
   Recommendation,
   ResearchRecord,
   RiftBoss,
+  RiftClear,
   RiftLevel,
   RiftSeason,
   RuneBuild,
@@ -235,6 +236,53 @@ const BOSSES: RiftBoss[] = [
   },
 ];
 
+/**
+ * Builds a documented Rift attempt: an accepted 15% clear at season 1,
+ * level 2, on the Rift shred deck, with `over` applied on top.
+ *
+ * @param id - the row's id
+ * @param over - fields to set instead
+ * @returns the attempt
+ */
+function riftClear(id: number, over: Partial<RiftClear> = {}): RiftClear {
+  return {
+    id,
+    season: 1,
+    level: 2,
+    bossKr: "폭주단 트럭",
+    bossEn: null,
+    en: null,
+    teamPower: `2.3${id}G`,
+    powerG: 2.3,
+    powerBasis: "rift",
+    riftPowerLevel: 14,
+    recommendedPower: null,
+    bracket: 15,
+    result: "clear",
+    play: "manual",
+    evidence: "screenshot",
+    standing: "accepted",
+    deckId: "rift-shred",
+    note: `rift note ${id}`,
+    recordSlug: SLUG,
+    sources: ["dc:76835"],
+    ...over,
+  };
+}
+
+/** In the API's order: the 15% clears, accepted then unverified, then the attempts that bound them. */
+const RIFT_CLEARS = [
+  riftClear(1),
+  riftClear(2, {
+    level: 1,
+    deckId: null,
+    note: "Dark Choco, Devil, Scorpion.",
+    standing: "unverified",
+  }),
+  riftClear(3, { bracket: 35 }),
+  riftClear(4, { season: 2, level: 3, result: "fail" }),
+];
+
 const TAKEAWAYS: Takeaway[] = [
   {
     id: 1,
@@ -269,6 +317,7 @@ const API: Record<string, Canned> = {
   "/api/rift-levels": { body: LEVELS },
   "/api/rift-seasons": { body: SEASONS },
   "/api/rift-bosses": { body: BOSSES },
+  "/api/rift-clears": { body: RIFT_CLEARS },
   "/api/rift-unlocks": { body: [{ id: 1, stage: "2-30", sources: ["nv:44477"] }] },
   "/api/takeaways?mode=stage": { body: TAKEAWAYS },
   "/api/timeline?mode=stage": { body: [] },
@@ -456,6 +505,78 @@ describe("the clears list", () => {
     await renderStage("/stage/clears?result=fail");
     await waitFor(() => expect(bodyRows(document)).toHaveLength(1));
     expect(bodyRows(document)[0]).toContain("Failed");
+  });
+});
+
+describe("the Rift at 15% page", () => {
+  it("shows each 15% clear in the API's order with its level's recommended power, the 15% and 35% lines, and its team", async () => {
+    await renderStage("/stage/rift-15");
+    const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
+    const cards = within(ranked).getAllByRole("article", { name: /^Season/ });
+    expect(cards.map((c) => within(c).getByRole("heading").textContent)).toEqual([
+      "Season 1, level 2",
+      "Season 1, level 1",
+    ]);
+    const [first, second] = cards;
+    await waitFor(() =>
+      expect(first).toHaveTextContent("20G recommended15% from 4G · 35% from 8G"),
+    );
+    expect(first).toHaveTextContent("Rowdy Truck");
+    expect(first).toHaveTextContent(
+      "2.31Gas the Rift shows it, 차원의 힘 included, 차원의 힘 Lv.14",
+    );
+    expect(first).toHaveTextContent("accepted");
+    expect(await within(ranked).findByRole("heading", { name: /Rift shred deck/ })).toBeVisible();
+    expect(second).toHaveTextContent("Dark Choco, Devil, Scorpion.");
+    expect(second).toHaveTextContent("10G recommended15% from 2G · 35% from 4G");
+    expect(second).toHaveTextContent("unverified");
+  });
+
+  it("shows a deck's card once, under the first clear that names it", async () => {
+    await renderRoute(
+      "/stage/rift-15",
+      { ...API, "/api/rift-clears": { body: [riftClear(1), riftClear(5, { level: 1 })] } },
+      { mode: STAGE },
+    );
+    const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
+    await within(ranked).findByRole("heading", { name: /Rift shred deck/ });
+    expect(within(ranked).getAllByRole("heading", { name: /Rift shred deck/ })).toHaveLength(1);
+    expect(within(ranked).getAllByRole("link", { name: "Rift shred deck" })).toHaveLength(2);
+  });
+
+  it("lists the attempts at other brackets and the 15% failures under their own heading", async () => {
+    await renderStage("/stage/rift-15");
+    const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });
+    await waitFor(() => expect(bodyRows(bounds)).toHaveLength(2));
+    expect(bodyRows(bounds)[0]).toContain("35%");
+    expect(bodyRows(bounds)[1]).toContain("Failed");
+    expect(bodyRows(bounds)[1]![0]).toBe("S2 · L3of 30G recommended");
+    const order = [...document.querySelectorAll("h3")].map((h) => h.textContent);
+    expect(order.indexOf("Clears at 15%")).toBeLessThan(order.indexOf("Attempts that bound it"));
+  });
+
+  it("filters by result and by text from the URL", async () => {
+    await renderStage("/stage/rift-15?result=fail");
+    const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });
+    await waitFor(() => expect(bodyRows(bounds)).toHaveLength(1));
+    expect(screen.queryByRole("region", { name: "Clears at 15%" })).toBeNull();
+    cleanup();
+    await renderStage("/stage/rift-15?q=Dark%20Choco");
+    const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
+    expect(within(ranked).getAllByRole("article", { name: /^Season/ })).toHaveLength(1);
+    expect(screen.queryByRole("region", { name: "Attempts that bound it" })).toBeNull();
+    cleanup();
+    await renderStage("/stage/rift-15?q=nobody");
+    expect(await screen.findByText("Nothing matches.")).toBeVisible();
+  });
+
+  it("says when the record has no Rift clears yet", async () => {
+    await renderRoute(
+      "/stage/rift-15",
+      { ...API, "/api/rift-clears": { body: [] } },
+      { mode: STAGE },
+    );
+    expect(await screen.findByText("No Rift clears recorded yet.")).toBeVisible();
   });
 });
 
