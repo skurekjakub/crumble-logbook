@@ -1,5 +1,14 @@
 import { integer, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
-import { CLEAR_EVIDENCE, CLEAR_PLAY, CLEAR_RESULT, CLEAR_STANDING, STAGE_ERA } from "../enums";
+import {
+  CLEAR_EVIDENCE,
+  CLEAR_PLAY,
+  CLEAR_RESULT,
+  CLEAR_STANDING,
+  RIFT_CLEAR_EVIDENCE,
+  RIFT_CLEAR_PLAY,
+  RIFT_POWER_BASIS,
+  STAGE_ERA,
+} from "../enums";
 import { recordSlugColumn } from "./columns";
 import { decks } from "./decks";
 
@@ -8,8 +17,7 @@ import { decks } from "./decks";
  * Rift seasons and the Rift's unlock are game facts: no research record
  * owns them (they have no `record_slug`); the records that list one claim
  * it (`fact_claims`), and a record that loads a fact already stored must
- * agree with it. Zone slots, clears and Rift bosses are research findings
- * a record owns.
+ * agree with it. The other tables hold research findings a record owns.
  */
 
 /**
@@ -138,6 +146,39 @@ export const stageClears = sqliteTable("stage_clears", {
   result: text("result", { enum: CLEAR_RESULT }).notNull(),
   play: text("play", { enum: CLEAR_PLAY }),
   evidence: text("evidence", { enum: CLEAR_EVIDENCE }).notNull(),
+  standing: text("standing", { enum: CLEAR_STANDING }).notNull().default("unverified"),
+  deckId: text("deck_id").references(() => decks.id, { onDelete: "set null" }),
+  note: text("note"),
+  recordSlug: recordSlugColumn(),
+});
+
+/**
+ * One documented Dimensional Rift attempt at `level` of `season`, against
+ * `bossKr` (`bossEn` when the record names it in English): the team power
+ * as posted (`teamPower`, verbatim) and read as billions (`powerG`, `null`
+ * when the post gives no figure), which power the figure is
+ * (`powerBasis`, `null` when the post doesn't say), the 차원의 힘 level
+ * when posted, the level's recommended power, the damage bracket
+ * (`bracket`, the kept damage %), how it ended, how it was played (`null`
+ * when unknown), what backs it, whether the record accepts it (`standing`;
+ * a row written through the API starts `unverified`), and the deck when
+ * the lineup matches one.
+ */
+export const riftClears = sqliteTable("rift_clears", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  season: integer("season").notNull(),
+  level: integer("level").notNull(),
+  bossKr: text("boss_kr").notNull(),
+  bossEn: text("boss_en"),
+  teamPower: text("team_power").notNull(),
+  powerG: real("power_g"),
+  powerBasis: text("power_basis", { enum: RIFT_POWER_BASIS }),
+  riftPowerLevel: integer("rift_power_level"),
+  recommendedPower: integer("recommended_power"),
+  bracket: integer("bracket").notNull(),
+  result: text("result", { enum: CLEAR_RESULT }).notNull(),
+  play: text("play", { enum: RIFT_CLEAR_PLAY }),
+  evidence: text("evidence", { enum: RIFT_CLEAR_EVIDENCE }).notNull(),
   standing: text("standing", { enum: CLEAR_STANDING }).notNull().default("unverified"),
   deckId: text("deck_id").references(() => decks.id, { onDelete: "set null" }),
   note: text("note"),

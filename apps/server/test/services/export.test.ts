@@ -302,6 +302,25 @@ function seedEverything(store: Store): SeedIds {
     ["dc:1"],
   );
   services.riftBosses.create({ level: 5, bossKr: "비겁한 쿠키", bossEn: "GingerCraven" }, ["dc:1"]);
+  services.riftClears.create(
+    {
+      season: 1,
+      level: 1,
+      bossKr: "비겁한 쿠키",
+      teamPower: "2.31G",
+      powerG: 2.31,
+      powerBasis: "rift",
+      riftPowerLevel: 14,
+      recommendedPower: 12000000000,
+      bracket: 15,
+      result: "clear",
+      play: "semi-auto",
+      evidence: "video",
+      deckId: "stage-deck",
+      note: null,
+    },
+    ["dc:1"],
+  );
   services.decks.create({
     id: "dungeon-deck",
     mode: "crumble_dungeon",
@@ -484,6 +503,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       stageZoneSlots: 1,
       stageClears: 1,
       riftBosses: 1,
+      riftClears: 1,
       dungeonRuns: 1,
       dungeonLineups: 1,
       dungeonExclusions: 1,
@@ -495,7 +515,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       spendingSteps: 1,
       growthCurves: 1,
       plannerSteps: 1,
-      citations: 35,
+      citations: 36,
       factClaims: 1,
     });
     for (const [table, rows] of Object.entries(first.tables)) {

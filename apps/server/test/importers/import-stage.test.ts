@@ -401,6 +401,150 @@ describe("--replace and the game facts a record lists", FULL_IMPORT, () => {
   });
 });
 
+describe("the Rift clears collection", FULL_IMPORT, () => {
+  type Row = Record<string, unknown>;
+  const [level1] = rift.levels as Array<{ level: number; recommended_power: number }>;
+  /** A cited source of record 003, so a fixture clear's sources are curated. */
+  const source = clears[0]!.sources[0]!;
+  /**
+   * Builds a fixture Rift clear at season 1, level 1, with `over` applied on top.
+   *
+   * @param over - fields to set instead
+   * @returns the clear, as `rift-clears.json` holds it
+   */
+  const riftClear = (over: Row = {}): Row => ({
+    season: 1,
+    level: level1!.level,
+    boss_kr: "비겁한 쿠키",
+    boss_en: null,
+    team_power: "2.31G",
+    power_basis: "rift",
+    rift_power_level: 14,
+    recommended_power: level1!.recommended_power,
+    bracket: 15,
+    result: "clear",
+    play: "manual",
+    evidence: "screenshot",
+    standing: "accepted",
+    deck: "rift-shred",
+    note: "fixture",
+    sources: [source],
+    ...over,
+  });
+  /**
+   * Builds a copy of record 003 whose curated manifest lists a
+   * `rift-clears.json` holding `rows`, after applying `edit`.
+   *
+   * @param slug - the copy's record slug
+   * @param rows - the Rift clears the file holds
+   * @param edit - further changes to the copy's curated files, by file name
+   * @returns the copy's directory
+   */
+  const withRiftClears = (
+    slug: string,
+    rows: Row[],
+    edit: Record<string, (file: Row) => void> = {},
+  ): string => {
+    const dir = stageCopy(slug, {
+      ...edit,
+      "manifest.json": (file) => {
+        (file.collections as Record<string, string>).riftClears = "rift-clears.json";
+      },
+    });
+    writeFileSync(
+      join(dir, "curated", "rift-clears.json"),
+      JSON.stringify({ about: "Fixture.", measured: "2026-10-03", clears: rows }),
+    );
+    return dir;
+  };
+
+  it("loads every clear with its sources, reading powerG from the posted power, and ranks them", async () => {
+    const store = testStore();
+    const { counts } = importRecord(
+      store,
+      withRiftClears("930-stage-copy", [
+        riftClear({ level: 2, note: "lower", recommended_power: null }),
+        riftClear({ team_power: "2.31G (2G 310M)", play: null, deck: null }),
+        riftClear({ result: "fail", level: 3, recommended_power: null }),
+        riftClear({ standing: "unverified", level: 9, recommended_power: null }),
+      ]),
+    );
+    expect(counts).toMatchObject({ riftClears: 4 });
+    const app = createApp(createServices(store));
+    const rows = await readJson<
+      Array<{ level: number; powerG: number; result: string; standing: string; sources: string[] }>
+    >(await app.request("/api/rift-clears"));
+    expect(rows.map((r) => [r.level, r.result, r.standing])).toEqual([
+      [2, "clear", "accepted"],
+      [1, "clear", "accepted"],
+      [3, "fail", "accepted"],
+      [9, "clear", "unverified"],
+    ]);
+    expect(rows[1]).toMatchObject({ powerG: 2.31, play: null, deckId: null, sources: [source] });
+  });
+
+  it("fails a clear whose level isn't in its season, naming the row", () => {
+    const dir = withRiftClears("931-stage-copy", [riftClear(), riftClear({ level: 150 })]);
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      /rift-clears\.json \[1\]: level 150 isn't in season 1, which runs levels 1-100/,
+    );
+  });
+
+  it("fails a clear at a season or a level no record loaded", () => {
+    expect(() =>
+      importRecord(testStore(), withRiftClears("932-stage-copy", [riftClear({ season: 99 })])),
+    ).toThrow(/rift-clears\.json \[0\]: no Rift season 99 is loaded/);
+    const withoutLastLevel = {
+      "rift-levels.json": (file: Row) => {
+        (file.levels as Row[]).pop();
+      },
+    };
+    const last = (rift.levels as Array<{ level: number }>).at(-1)!.level;
+    const dir = withRiftClears(
+      "933-stage-copy",
+      [riftClear({ season: 2, level: last, recommended_power: null })],
+      withoutLastLevel,
+    );
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      new RegExp(`rift-clears\\.json \\[0\\]: no Rift level ${last} is loaded`),
+    );
+  });
+
+  it("fails a clear whose recommended power isn't its level's", () => {
+    const dir = withRiftClears("934-stage-copy", [riftClear({ recommended_power: 1 })]);
+    expect(() => importRecord(testStore(), dir)).toThrow(
+      /rift-clears\.json \[0\]: recommended_power is 1; level 1 recommends \d+/,
+    );
+  });
+
+  it("fails a clear that names a deck of another mode, or cites a source the record doesn't curate", () => {
+    const arena = withRiftClears("935-stage-copy", [riftClear()], {
+      "decks.json": (file) => {
+        for (const deck of file as unknown as Row[]) {
+          if (deck.id === "rift-shred") deck.mode = "arena";
+        }
+      },
+    });
+    expect(() => importRecord(testStore(), arena)).toThrow(
+      /rift-clears\.json \[0\]: rift_clear mode stage doesn't match deck rift-shred's mode arena/,
+    );
+    const uncited = withRiftClears("936-stage-copy", [riftClear({ sources: ["dc:1"] })]);
+    expect(() => importRecord(testStore(), uncited)).toThrow(
+      /rift-clears\.json \[0\]: unknown source ids: dc:1/,
+    );
+  });
+
+  it("clears the record's Rift clears on --replace", () => {
+    const store = testStore();
+    importRecord(store, withRiftClears("937-stage-copy", [riftClear(), riftClear()]));
+    expect(store.repos.riftClears.count()).toBe(2);
+    importRecord(store, withRiftClears("937-stage-copy", [riftClear({ note: "again" })]), {
+      replace: true,
+    });
+    expect(store.repos.riftClears.list().map((c) => c.note)).toEqual(["again"]);
+  });
+});
+
 describe("a clear's powerG", FULL_IMPORT, () => {
   it("is the shared reading of its posted power, the exact breakdown over the headline", () => {
     const store = testStore();

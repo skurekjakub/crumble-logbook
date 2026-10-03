@@ -2,7 +2,7 @@
  * The stage-pushing mode's curated collections: each file's schema, its
  * checks and its mapping onto the stage tables. The power brackets, stage
  * chapters and Rift levels (with their seasons) load as ownerless game
- * facts; zone slots, clears and Rift bosses as rows the record owns.
+ * facts; the other collections as rows the record owns.
  *
  * @module
  */
@@ -11,6 +11,9 @@ import {
   CLEAR_PLAY,
   CLEAR_RESULT,
   CLEAR_STANDING,
+  RIFT_CLEAR_EVIDENCE,
+  RIFT_CLEAR_PLAY,
+  RIFT_POWER_BASIS,
   STAGE_ERA,
   deckSlug,
   entryPower,
@@ -204,6 +207,39 @@ export const seedRiftBosses = z.strictObject({
 export type SeedRiftBosses = z.output<typeof seedRiftBosses>;
 
 /**
+ * `rift-clears.json`: documented Dimensional Rift attempts, each at a
+ * `level` of a `season`, with the team power as posted, which power that
+ * is (`power_basis`), the bracket, whether the record accepts it
+ * (`standing`) and its sources. A field that may be `null` may also be
+ * left out. `recommended_power`, when given, must be the level's.
+ */
+export const seedRiftClears = z.strictObject({
+  ...header,
+  clears: z.array(
+    z.strictObject({
+      season: positiveInt,
+      level: positiveInt,
+      boss_kr: z.string().min(1),
+      boss_en: z.string().min(1).nullish(),
+      team_power: z.string().min(1),
+      power_basis: z.enum(RIFT_POWER_BASIS).nullish(),
+      rift_power_level: z.number().int().nonnegative().nullish(),
+      recommended_power: positiveInt.nullish(),
+      bracket: z.number().int().positive(),
+      result: z.enum(CLEAR_RESULT),
+      play: z.enum(RIFT_CLEAR_PLAY).nullish(),
+      evidence: z.enum(RIFT_CLEAR_EVIDENCE),
+      standing: z.enum(CLEAR_STANDING),
+      deck: deckSlug.nullish(),
+      note: z.string().min(1).nullish(),
+      sources: cited,
+    }),
+  ),
+});
+/** Output of {@link seedRiftClears}. */
+export type SeedRiftClears = z.output<typeof seedRiftClears>;
+
+/**
  * Splits a `<chapter>-<stage>` label.
  *
  * @param label - e.g. `328-30`
@@ -276,6 +312,48 @@ function checkEntryPowers(file: string, rows: readonly EntryPowers[]): WriteStep
         }
       }
     }
+  };
+}
+
+/**
+ * A step checking every Rift clear against the Rift seasons and levels
+ * stored when it runs (the record's own, written before it, or those
+ * another record loaded): its season must be stored and run its level,
+ * the level must be stored, and a `recommended_power` it gives must be
+ * the level's. It writes nothing.
+ *
+ * @param file - the file, as errors name it
+ * @param clears - the clears, in file order
+ * @returns the step
+ * @throws {ImportError} (from the step) naming the file and the clear's
+ *   index, for the first clear that fails a check; the import then writes
+ *   nothing
+ */
+function checkRiftLevels(file: string, clears: SeedRiftClears["clears"]): WriteStep {
+  return (repos) => {
+    const seasons = new Map(repos.riftSeasons.list().map((s) => [s.season, s]));
+    const levels = new Map(repos.riftLevels.list().map((l) => [l.level, l]));
+    clears.forEach((clear, index) => {
+      const season = seasons.get(clear.season);
+      if (!season) throw new ImportError(file, index, `no Rift season ${clear.season} is loaded`);
+      if (clear.level < season.firstLevel || clear.level > season.lastLevel) {
+        throw new ImportError(
+          file,
+          index,
+          `level ${clear.level} isn't in season ${clear.season}, which runs levels ${season.firstLevel}-${season.lastLevel}`,
+        );
+      }
+      const level = levels.get(clear.level);
+      if (!level) throw new ImportError(file, index, `no Rift level ${clear.level} is loaded`);
+      const recommended = clear.recommended_power;
+      if (recommended != null && recommended !== level.recommendedPower) {
+        throw new ImportError(
+          file,
+          index,
+          `recommended_power is ${recommended}; level ${clear.level} recommends ${level.recommendedPower}`,
+        );
+      }
+    });
   };
 }
 
@@ -596,6 +674,56 @@ export const STAGE_COLLECTIONS = {
             note: boss.note ?? null,
           },
           sources: boss.sources,
+        })),
+      ),
+    ],
+  }),
+  riftClears: collection({
+    optional: true,
+    /** @inheritdoc */
+    parse: (file, raw) => parseFile(file, raw, seedRiftClears),
+    /** @inheritdoc */
+    refs: ({ clears }): RowRefs[] =>
+      clears.map((clear, index) => ({
+        row: index,
+        sources: clear.sources,
+        decks: clear.deck == null ? [] : [clear.deck],
+      })),
+    /** @inheritdoc */
+    check: (file, { clears }, context) => {
+      checkDeckModes(
+        file,
+        "rift_clear",
+        "stage",
+        clears.map((clear, index) => [index, clear.deck ?? undefined] as const),
+        context,
+      );
+    },
+    /** @inheritdoc */
+    prepare: ({ clears }, { file }) => [
+      checkRiftLevels(file, clears),
+      insertCited(
+        "riftClears",
+        clears.map((clear) => ({
+          values: {
+            season: clear.season,
+            level: clear.level,
+            bossKr: clear.boss_kr,
+            bossEn: clear.boss_en ?? null,
+            teamPower: clear.team_power,
+            powerG: postedPowerG(clear.team_power),
+            powerBasis: clear.power_basis ?? null,
+            riftPowerLevel: clear.rift_power_level ?? null,
+            recommendedPower: clear.recommended_power ?? null,
+            bracket: clear.bracket,
+            result: clear.result,
+            play: clear.play ?? null,
+            evidence: clear.evidence,
+            standing: clear.standing,
+            deckId: clear.deck ?? null,
+            note: clear.note ?? null,
+          },
+          sources: clear.sources,
         })),
       ),
     ],
