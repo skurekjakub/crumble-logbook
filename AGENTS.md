@@ -2,6 +2,8 @@
 
 Research tool for Cookie Run: Crumble: Guild Conquest (길드 토벌전) and PvP (Arena, Rumble Arena) research records, served by a Hono API and a React web app.
 
+**Pull first, every session, before anything else (MANDATORY).** Run `git fetch origin && git status -sb`. If `main` is behind `origin/main`, pull (`git pull --ff-only`) before reading, planning or dispatching agents. If it has diverged or the tree is dirty, stop and ask the user. The user works on several machines, so a local clone can be far behind; work built on a stale clone is wasted.
+
 **Start every session by reading `README.md`** (layout, commands, API, working notes) and **`OPEN-QUESTIONS.md`** (decisions waiting on the user).
 
 - Design specs: `docs/superpowers/specs/`. Plans: `docs/superpowers/plans/`.
