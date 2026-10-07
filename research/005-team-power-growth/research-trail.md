@@ -48,3 +48,41 @@ Synthesis: the first query surfaced the App Store product page, whose top in-app
 - Measured before/after gains: Stellar (dc:68732, dc:77329), plating (dc:75684), Resolve versus gear (dc:76718), gear rarity (dc:72901), the 2G → 4G path (dc:76290, record 003).
 - Costs: plating odds (dc:53079, dc:72150), Stellar shapes (nv:43444, nv:5693, dc:55570, dc:56417), TSSR stars (dc:50913), KRW prices (crumblehub, App Store KR), USD prices (App Store US).
 - Orders: the cafe guidebook (nv:43444), ND러너's and 서신우's videos, crumblehub's currency and plating guides.
+
+## Round 2026-10-07
+
+The first refresh round. Window: 2026-09-28 (`curated/meta.json`'s `updated`) to 2026-10-07. The saved searches reran first, one capture each (`evidence/r2026-10-07/02-dc/list-<id>.tsv`, `04-sites/`, `05-youtube/`, `06-store/`); discovery followed. Search results are leads: a claim reached the README only from a capture.
+
+### Baseline
+
+- crumb.gg's patch digest answered 200 again on 2026-10-07 (the round brief had it at 404) and already carries update 1.5.002 as upcoming, with the new SSR's stats at level 120 (`04-sites/data-patches.json`). The official cafe's patch board (menu 3, `03-naver/list-naver-patch-notes.tsv`) lists the 10-08 notes (nv:50417, posted 10-07); the 10-01 notice on oven auto-open (nv:48486) sits outside that board and was fetched by id.
+- Every saved DCInside search covers the window: each listing's oldest row predates 09-28 (the gallery search reads back to about post 72,700, 09-22).
+- crumblehub's efficiency table and guides, Pocket Gamer and the EN progression guide are unchanged apart from page chrome; the App Store top-purchase lists rotated (KR adds the ₩1,500 Epic gear hot deal and the ₩6,000 Arena ticket pack).
+- Sugar Pocket's pages are client-rendered and agent-browser isn't installed on this machine, so they were saved as served (no rendered text). Two saved YouTube channels (훈TV, 김바보 TV) now post only other games. yt-dlp isn't installed either, so videos were dated from watch digests and read by title and description only.
+
+### Round 1 — survey
+
+Queries:
+- 쿠키런 크럼블 120레벨 확장 전투력
+- Cookie Run Crumble level cap 120 update October 2026
+- CookieRun Crumble max level 150 datamine
+
+Synthesis: the open web has nothing on the cap raise; news sites stop at the September updates. The "150" lead resolves to cookierun.wiki pages (a Cloudflare challenge to curl and WebFetch; not circumvented, not used) whose snippet speaks of Crumble Level 150, the account level, not the cookie cap. The community is where the round's material is.
+
+### Round 2 — deepen
+
+Queries:
+- CookieRun Crumble Chardonnay Cookie update max level 120 Gnome Laboratory 130
+- 쿠키런 크럼블 샤르도네맛 쿠키 업데이트 최대 레벨 120 노움 연구소
+- 쿠키런 크럼블 와글와글 스페셜 패스 가격 구성
+
+Synthesis: still nothing indexed on the 10-08 update or the Rumble Special Pass. The pass price comes from the App Store (₩19,000, `06-store/`); the update's details from the official notes and the gallery. Discovery moved to DCInside with the patch delta's words (120, 만렙, 레벨 확장, 경험치/경치, 출석, 우유, 와글 패스/스페셜 패스/스패, 복각, 깜짝 패키지, 샤르도네, 마일리지, 쇳물, 초코강, 자동 열기, 반죽, 유출, 뻥투), one listing each (`02-dc/list-dc-*.tsv`). 유출 ("leak") surfaced a client-data leak of the update from 10-02 that the gallery read as a cookie cap of 150 (dc:79685, dc:82186): that is where the "150" comes from.
+
+### Round 3 — verify
+
+Queries:
+- 쿠키런 크럼블 유출 쿠키 레벨 150 크럼블 레벨 350
+- crumb.gg Chardonnay Cookie Crumble stats level 120
+- 쿠키런 크럼블 특별 연구 공격력 증폭 30% 전투력 상승
+
+Synthesis: no web source carries the leak or a level-120 table; the verifying captures are the official notes (cap 120, not 150; nv:50417), the gallery's leak-versus-notes comparison (dc:82186) and crumb.gg's level-120 stats for the new SSR, which the round turned into a level-120 multiplier (`07-derived/level-120.json`, checked against Princess Bari at level 100). The lab ATK 30% gain is a screenshot in the gallery (dc:82156), not on the web.

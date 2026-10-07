@@ -1,0 +1,299 @@
+{
+ "lane": "dc",
+ "read": "2026-10-07",
+ "notes": "Lane A of the 2026-10-07 refresh. Read every post (body and comments) in ../02-dc/dc/ for ids 79685 79813 79815 79879 79883 80179 80209 81689 82104 82182 82186 81470 80165 82156 80399 81059 78447 78689 80865 81723 80816 78400 80574 81826 77826 78621 77660 78476 77788 80903 80947 81074 79519 81484 81815 82242 79600, and viewed every screenshot they name in ../02-dc/dc/img/ (79685-1..12, 79879-1..8, 81470-1..3, 82156-1, 81723-1, 80816-1, 78621-1, 80574-1, 77788-1, 79519-1..3, 80399-1). All files were present; none had to be waited for. Leak posts (79685, 79813, 79815, 79879) are datamines by the user 삥삥 of client 1.5.002 before the 2026-10-08 update; 82186 compares the leak with the official notes (the leak said Lv.150, the update gives Lv.120). Leak figures are marked as leaks in note. Dates are post dates (KST).",
+ "posts": [
+  {"source": "dc", "id": "81470", "url": "https://m.dcinside.com/board/projectcc/81470", "date": "2026-10-05",
+   "title_kr": "[📚정보] 내부 로직 (피해산출, 전투력 등)", "title_en": "Internal logic (damage calculation, combat power, etc.)", "relevance": 3,
+   "summary_en": "Decompiled formulas (by the leaker 삥삥, marked work in progress) for damage and for the displayed combat power (CP). Per cookie: offense = ATK × (crit dmg × crit rate + 1) × √(accuracy/AA + 1) × √(focus/AA + 1) × (focus% + 1) × (accuracy% + 1) × (element bonus × 0.5 + 1) × (boss dmg × 0.5 + 1); DEF factor = ln(DEF/5,000,000 + 1) + 1; survival = (crit resist + 1) × (HP × DEF factor) × √(evasion/AA + 1) × √(resist/AA + 1) × (resist% + 1) × (evasion% + 1); combined = √( 1/(1 − dmg reduction) × survival × 1/(1 − element reduction × 0.5) × offense ); utility = (speed/speed const + ability haste/1,000,000 + skill amp) × utility coefficient; CP(1 cookie) = floor((utility + 1) × combined × role coefficient); team CP = sum of members' floored CP. Constants: AA (accuracy/avoidance) = 5,000,000, Defense = 5,000,000, AbilityHaste = 1,000,000; role coefficient defense 1.0, charge 1.027, shooter 1.095 (support/heal/speed/utility coefficient included). Guild Conquest recommended power = 10,004,798,560 (about 10G). Team CP ÷ recommended indexes a CP penalty band in the damage formula. Damage = ATK × skill multiplier × 1/(1 + DEF/500) × crit × (1 + skill amp) × element × (1 + boss dmg, vs bosses only) × (1 + final dmg) × (1 − dmg reduction) × CP penalty.",
+   "datapoints": [
+    {"system": "lineup", "account": "game data (decompiled)", "before": "", "after": "", "cost": "", "note": "Because CP is a square root of offense × survival, a +X% to ATK alone (offense) or to HP alone (survival) raises a cookie's CP by about √(1+X) − 1, e.g. ATK +30% → about +14%; crit resist enters survival linearly, which is why 치저 is called a power-padding (뻥투) stat. The √ reading is this extraction's arithmetic on the posted formula."},
+    {"system": "lineup", "account": "game data", "before": "", "after": "", "cost": "", "note": "Guild Conquest recommended power 10,004,798,560 (토벌전 권장전투력, 약 100억)."}
+   ],
+   "advice": [],
+   "quotes": [
+    {"kr": "전투력(1명) = floor( (utility + 1) × combined × 역할계수 )", "en": "CP (one cookie) = floor((utility + 1) × combined × role coefficient)"},
+    {"kr": "combined = √( (1/(1−피해감소)) × survival × (1/(1−속성감소×0.5)) × offense )", "en": "combined = √(1/(1 − damage reduction) × survival × 1/(1 − element reduction × 0.5) × offense)"},
+    {"kr": "토벌전 권장전투력 = 10,004,798,560(약 100억)", "en": "Guild Conquest recommended power = 10,004,798,560 (about 10G)"},
+    {"kr": "팀 전투력 ÷ 권장치 비율로 아래 CP 페널티 밴드를 인덱싱.", "en": "Team power ÷ recommended indexes the CP penalty band below."}
+   ]},
+
+  {"source": "dc", "id": "79685", "url": "https://m.dcinside.com/board/projectcc/79685", "date": "2026-10-02",
+   "title_kr": "[⚠️유출] 다음버전 - 스킬, 연구소, 도감, 장비", "title_en": "[Leak] Next version: skills, lab, codex, gear", "relevance": 3,
+   "summary_en": "Datamined table diff for 1.5.002: gnomeResearchs +33 rows (184 → 217), codexs +5 (41 → 46; 4 cookie, 1 pet), equipments +3 (Eternal: Heliohoney spear, Timekeeper hat, Pure Vanilla cape), new SSR Chardonnay cookie, packages (normalPackages 89 → 99, shopPackageInfos 218 → 234, spotPackages 44 → 48, attendancePackages 5 → 7). Screenshots of the Gnome Lab expansion to 130-2 give per-node costs and effects. Basic node 111-1 ATK amp: 8.5% per level to 85% at Lv10, cost (basic research stones) 20M/27M/36M/48M/64M/85M/110M/150M/200M/270M (sum 1,010M), time 4h30m to 9h54m per level. Basic node 130-1 DEF amp: 5.5% per level to 55%, same cost and time ladder. Special research 21 HP amp 30% and special 22 ATK amp 30%: 50 special research stones each, 1 h, max 1 level. The tree also has a new 1-level node 'oven auto-open sub-option selection count +' (오븐 자동 열기 보조 옵션 선택 개수 증가), elemental damage, accuracy and evasion nodes (0/5) and crit rate nodes (0/10). New codex screenshots: one entry crit rate +1.05% (Lv11) and ATK +34; the #15 entry ATK +64, DEF +64, HP +1,600 at Lv21. Chardonnay base ATK 133 / DEF 60 / HP 2,790, ATK 315 / HP 6,605 at ★10.",
+   "datapoints": [
+    {"system": "gnome_lab", "account": "game data (leak, 1.5.002)", "before": "node 111-1 ATK amp 0%", "after": "85% (10 levels × 8.5%)", "cost": "20M+27M+36M+48M+64M+85M+110M+150M+200M+270M = 1,010M basic research stones; 4h30m–9h54m per level", "note": "The live update caps any single research at 12 h; these times are under it. Sum is this extraction's arithmetic."},
+    {"system": "gnome_lab", "account": "game data (leak)", "before": "node 130-1 DEF amp 0%", "after": "55% (10 × 5.5%)", "cost": "same ladder, 1,010M basic research stones", "note": ""},
+    {"system": "gnome_lab", "account": "game data (leak)", "before": "", "after": "special 21 HP amp 30%; special 22 ATK amp 30%", "cost": "50 special research stones each, 1 h", "note": "Special research now runs to 22 (confirmed by patch notes per dc:82186)."},
+    {"system": "collection", "account": "game data (leak)", "before": "41 codex entries", "after": "46", "cost": "", "note": "Entry stats seen: ATK +64, DEF +64, HP +1,600 at Lv21; crit rate +1.05% at Lv11, ATK +34 at Lv11."},
+    {"system": "gear_oven", "account": "game data (leak)", "before": "", "after": "3 new Eternal gear (spear, hat, cape)", "cost": "", "note": "Not in the official 10-08 notes (dc:82186). The poster guesses an Eternal gear package."}
+   ],
+   "advice": [],
+   "quotes": [
+    {"kr": "노움 연구소 증설 (130-2 까지 증설로 확인함)", "en": "Gnome Lab expansion (confirmed up to 130-2)"},
+    {"kr": "이터널 장비 3개 추가 (오븐 / 예상으로 이터널 장비 패키지 아닐까 싶음.", "en": "3 Eternal gear added (oven / my guess is an Eternal gear package)"}
+   ]},
+
+  {"source": "dc", "id": "82186", "url": "https://m.dcinside.com/board/projectcc/82186", "date": "2026-10-07",
+   "title_kr": "[일반] 유출 내용이랑 실제 업데이트 내용 정리해봄", "title_en": "Leak vs actual update, summarized", "relevance": 3,
+   "summary_en": "Side-by-side of the leak and the 10-08 patch notes. Leak: cookie max level 100 → 150, EXP for Lv.100–150 = 8.33G, Crumble level max 350; Gnome Lab basic 111–130 (+33 nodes) needing 18.89G basic research stones and 150 special stones, ATK amp +370% among effects, 68.9 days of research time; daily dungeons 770 → 900. Actual: max level only 120; Lv.79–100 EXP cut with refunds; lab to 130-2 and special 22, max 12 h per research with 1-minute speed-ups refunded for longer ones; no dungeon expansion but easier dungeons; no new gear in the notes; main stage to 364-30; Rift season 2 rewards improved, Rift exchange counts raised; mileage exchange adds Chocosteel and Syrup Metal; Rumble Arena season 2, 7-day check-in. The leaker adds in comments that the codex/cookie talk items were in the leak and that the lab time cut is in the data.",
+   "datapoints": [
+    {"system": "cookie_level", "account": "game data (leak)", "before": "Lv.100", "after": "Lv.150 (leak); Lv.120 actual", "cost": "Lv.100→150 EXP 8.33G (leak); Crumble level max 350 (leak)", "note": "The live cap is 120; no per-level EXP for 101–120 given."},
+    {"system": "gnome_lab", "account": "game data (leak)", "before": "basic research to 110", "after": "111–130 (+33 nodes); ATK amp +370% total among effects", "cost": "18.89G basic research stones, 150 special research stones, 68.9 days total time", "note": "Live time is capped at 12 h per research, so total time is shorter."}
+   ],
+   "advice": [],
+   "quotes": [
+    {"kr": "Lv.100 ~150까지 필요한 경험치 8.33G", "en": "EXP needed from Lv.100 to 150: 8.33G"},
+    {"kr": "기본 연구석 18.89G * 특별 연구석 150개 * 공격력 증폭 +370% 등 연구 효과 수치 공개 * 연구 시간 총 68.9일", "en": "18.89G basic research stones, 150 special research stones, effect values such as ATK amp +370%, total research time 68.9 days"},
+    {"kr": "마일리지 교환소에 초코강·시럽쇳물 추가", "en": "Chocosteel and Syrup Metal added to the mileage exchange"}
+   ]},
+
+  {"source": "dc", "id": "81826", "url": "https://m.dcinside.com/board/projectcc/81826", "date": "2026-10-06",
+   "title_kr": "[일반] 스테 왜 안 밀리나 했는데 길드를 나갔었구나", "title_en": "Wondered why I couldn't push stages; I had left the guild", "relevance": 3,
+   "summary_en": "A player who left their guild saw power drop sharply and stages stop; in comments: total power fell from 13G to about 10G on leaving (guild lab effects lost).",
+   "datapoints": [
+    {"system": "guild_lab", "account": "13G total power, guild state not stated", "before": "13G (in guild)", "after": "~10G (after leaving)", "cost": "", "note": "총투력 (account total). About −23%; 10G is approximate ('정도')."}
+   ],
+   "advice": [],
+   "quotes": [
+    {"kr": "좀 많이 13G에서 10G정도로 떡락했어", "en": "Dropped a lot, from 13G to about 10G"},
+    {"kr": "총투력 기준", "en": "That's total power"}
+   ]},
+
+  {"source": "dc", "id": "78400", "url": "https://m.dcinside.com/board/projectcc/78400", "date": "2026-09-30",
+   "title_kr": "[일반] 길드 있고 없고 차이 엄청 크네", "title_en": "Huge difference between having a guild or not", "relevance": 2,
+   "summary_en": "Same poster as dc:81826, a week earlier: joining a guild raised total power by 2G.",
+   "datapoints": [
+    {"system": "guild_lab", "account": "not stated (same poster at 13G a week later)", "before": "", "after": "+2G", "cost": "join a guild", "note": "총투력 (account total)."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "총투력 2g올라감", "en": "Total power went up 2g"}]},
+
+  {"source": "dc", "id": "81723", "url": "https://m.dcinside.com/board/projectcc/81723", "date": "2026-10-06",
+   "title_kr": "[일반] 길드 연구 이거 좀 커보이는데", "title_en": "This guild research looks big", "relevance": 2,
+   "summary_en": "Screenshot of the guild lab: Lv.14 tier has grass/light/dark elemental damage nodes, Lv.15 tier ATK/DEF/HP amp. Research 14-2 light elemental damage +10.00%, needs 5,835 research points; donate button 300 crystals; timer 8h8m.",
+   "datapoints": [
+    {"system": "guild_lab", "account": "guild lab Lv.14", "before": "14-2 0%", "after": "light elemental damage +10.00%", "cost": "5,835 research points; donation 300 crystals", "note": "Elemental damage is in the damage formula and in CP via element bonus × 0.5 (dc:81470)."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "길드 연구 이거 좀 커보이는데", "en": "This guild research looks kind of big"}]},
+
+  {"source": "dc", "id": "78621", "url": "https://m.dcinside.com/board/projectcc/78621", "date": "2026-09-30",
+   "title_kr": "[일반] 길드연구 이거 업뎃한적 있음?", "title_en": "Has guild research ever been extended?", "relevance": 2,
+   "summary_en": "Guild lab currently ends at 15-3: HP amp 7.00%, needs 8,540 research points, donation 400 crystals, requires guild level 15. Poster's guild is near 14-1 and wonders if research will stop mattering; a commenter expects more to be added.",
+   "datapoints": [
+    {"system": "guild_lab", "account": "guild near lab 14-1", "before": "", "after": "15-3 HP amp 7.00% (last node)", "cost": "8,540 research points; donation 400 crystals; guild Lv.15 required", "note": "Lv.15 tier also holds ATK amp and DEF amp nodes (values not shown)."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "곧 14-1인데 15-3이 끝이면 연구 빡세게 안해도될거같은데", "en": "We're at 14-1 soon; if 15-3 is the end we won't need to research hard"}]},
+
+  {"source": "dc", "id": "80816", "url": "https://m.dcinside.com/board/projectcc/80816", "date": "2026-10-04",
+   "title_kr": "[✋️질문] 길드 연구소 연구 크탈 300까지만 해달라는게", "title_en": "Guild says research crystals up to 300 only: what does that mean?", "relevance": 1,
+   "summary_en": "Guild rule question. Commenters read it as donate with crystals while the donation costs 300, stop once it shows 400 (the donation cost steps 300 → 400, see dc:78621, dc:81723).",
+   "datapoints": [],
+   "advice": [{"system": "guild_lab", "text": "Common guild rule: crystal-donate to guild research while it costs 300 per donation, stop when it rises to 400."}],
+   "quotes": [{"kr": "보통 400뜨면 그만", "en": "Usually you stop when it shows 400"}]},
+
+  {"source": "dc", "id": "80574", "url": "https://m.dcinside.com/board/projectcc/80574", "date": "2026-10-04",
+   "title_kr": "[✋️질문] 행님들 길드 탈퇴하면 스테이지 안밀리나요?", "title_en": "If I leave the guild, will I stop pushing stages?", "relevance": 2,
+   "summary_en": "Player whose guild (guild Lv.10, guild lab Lv.7) was half emptied asks if leaving hurts stage progress; a commenter says yes, you won't push. Screenshot: Guild Conquest team power 1.6G, personal conquest record 300G 63M, cookies Lv.100 (one Lv.95, one Lv.80). Another guild's terms: research 300 (crystals) a day, kicked after 1 day absent without research; a 12 h rejoin cooldown.",
+   "datapoints": [
+    {"system": "guild_lab", "account": "Guild Conquest team 1.6G, guild Lv.10 / lab Lv.7", "before": "", "after": "", "cost": "", "note": "Snapshot only; personal conquest damage 300G 63M."}
+   ],
+   "advice": [{"system": "guild_lab", "text": "Leaving a guild costs stage progress (guild research buffs are lost); recruiting guilds ask 300 crystals of research a day."}],
+   "quotes": [{"kr": "ㅇㅇ 안 밀림..", "en": "Yeah, you won't push"}, {"kr": "연구300,연구안한1일미접 올꺼면", "en": "Research 300, one day offline without research [is a kick]"}]},
+
+  {"source": "dc", "id": "82156", "url": "https://m.dcinside.com/board/projectcc/82156", "date": "2026-10-07",
+   "title_kr": "[일반] 공증 30퍼 투력 이만큼 오름", "title_en": "ATK amp 30% raised power this much", "relevance": 3,
+   "summary_en": "Screenshot of finishing Gnome Lab special research 19 (ATK amp 30.00%): power +76M 871K, at 3.4G. A commenter got exactly 100 (M) from it.",
+   "datapoints": [
+    {"system": "gnome_lab", "account": "3.4G (kind not stated)", "before": "3.4G", "after": "+76M 871K", "cost": "special research 19 (special research stones, cost not shown)", "note": "In-game popup figure, so the displayed (team) power gain. About +2.3%."},
+    {"system": "gnome_lab", "account": "not stated", "before": "", "after": "+100 (M)", "cost": "same node", "note": "Commenter; unit not written."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "3.4g기준 이만큼 오르노", "en": "At 3.4g it goes up this much"}, {"kr": "나는 딱 100올랏음", "en": "Mine went up exactly 100"}]},
+
+  {"source": "dc", "id": "80165", "url": "https://m.dcinside.com/board/projectcc/80165", "date": "2026-10-03",
+   "title_kr": "[일반] 공증30퍼 올리면 투력 얼마나 오르나", "title_en": "How much power does ATK amp 30% give?", "relevance": 1,
+   "summary_en": "Player 2m short of research stones for the ATK amp 30% node asks the gain; a commenter answers 200–300 (unit unstated, presumably M).",
+   "datapoints": [
+    {"system": "gnome_lab", "account": "not stated", "before": "", "after": "+200~300 (unit unstated)", "cost": "", "note": "Commenter's estimate, not measured."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "200~300", "en": "200–300"}]},
+
+  {"source": "dc", "id": "78447", "url": "https://m.dcinside.com/board/projectcc/78447", "date": "2026-09-30",
+   "title_kr": "[일반] 연구석 1m~1.5m 들어가는 체력,공격력,크확 있으면 그것부터 올려라", "title_en": "If there are HP/ATK/crit nodes costing 1m–1.5m stones, do those first", "relevance": 2,
+   "summary_en": "Lab order advice: take the cheap (1–1.5M research stone) HP, ATK and crit nodes first; of the special 30% nodes take only HP 30% now, and the ATK 30% one after clearing some of the lower nodes, because those raise power more.",
+   "datapoints": [],
+   "advice": [{"system": "gnome_lab", "text": "Do the 1–1.5M-stone HP/ATK/crit rate nodes first; take HP amp 30% only; do ATK amp 30% after a good share of the lower nodes, as they raise power more."}],
+   "quotes": [{"kr": "체력 30% 짜리만 찍고 ㅇㅇ 공30%짜리는 아래꺼 어느정도 찍고 올려라 그게 투력 더많이오름", "en": "Take only the HP 30% one; do the ATK 30% one after the lower nodes, that raises power more"}]},
+
+  {"source": "dc", "id": "78689", "url": "https://m.dcinside.com/board/projectcc/78689", "date": "2026-09-30",
+   "title_kr": "[일반] 연구 어떡하냐 체증 30까지 가는게 정배임?", "title_en": "Is going straight to HP amp 30 the standard play?", "relevance": 1,
+   "summary_en": "Poster guesses the stones to reach the HP amp 30% node and the ATK/HP nodes below it are about a wash.",
+   "datapoints": [],
+   "advice": [{"system": "gnome_lab", "text": "Opinion: rushing HP amp 30% vs the ATK/HP nodes under it is about even."}],
+   "quotes": [{"kr": "체증 30까지 가는데에 드는 연구석이랑 그 밑에 딜이랑 체력 올리는거나 또이또이 같을 거 같은데", "en": "The stones to reach HP amp 30 and raising damage and HP below it seem about the same"}]},
+
+  {"source": "dc", "id": "80865", "url": "https://m.dcinside.com/board/projectcc/80865", "date": "2026-10-04",
+   "title_kr": "[일반] 특별연구 공30찍고 더 올라가는게 맞음?", "title_en": "After special ATK 30, is it right to keep going?", "relevance": 1,
+   "summary_en": "After the special ATK 30% node, the next research costs more stones than the poster can supply.",
+   "datapoints": [],
+   "advice": [],
+   "quotes": [{"kr": "이거 연구석 감당이안되는데", "en": "I can't keep up with the research stones for this"}]},
+
+  {"source": "dc", "id": "77788", "url": "https://m.dcinside.com/board/projectcc/77788", "date": "2026-09-29",
+   "title_kr": "[일반] 가성비뻥투", "title_en": "Cost-efficient power padding", "relevance": 2,
+   "summary_en": "Screenshot: Gnome Lab research 48-2 support-type evasion +25 → +50 for 19,000 basic research stones; poster calls the evasion nodes cheap power padding. Evasion enters CP through survival (dc:81470).",
+   "datapoints": [
+    {"system": "gnome_lab", "account": "lab around node 48", "before": "support evasion +25", "after": "+50", "cost": "19,000 basic research stones", "note": "Power gain not shown."}
+   ],
+   "advice": [{"system": "gnome_lab", "text": "Class evasion nodes are cheap power padding."}],
+   "quotes": [{"kr": "나름 맛있다", "en": "Pretty tasty"}]},
+
+  {"source": "dc", "id": "80903", "url": "https://m.dcinside.com/board/projectcc/80903", "date": "2026-10-04",
+   "title_kr": "[일반] 투력뻥 스텟이 뭐뭐 있음?", "title_en": "Which stats pad power?", "relevance": 1,
+   "summary_en": "Asks which stats besides crit resist pad power (evasion? resist?). No answers; the CP formula in dc:81470 shows evasion and resist both enter survival.",
+   "datapoints": [],
+   "advice": [],
+   "quotes": [{"kr": "치저 말고 또 투력뻥 스텟이 뭐임?? 회피?? 저항?", "en": "Besides crit resist, which stats pad power? Evasion? Resist?"}]},
+
+  {"source": "dc", "id": "81689", "url": "https://m.dcinside.com/board/projectcc/81689", "date": "2026-10-06",
+   "title_kr": "[일반] 레벨 확장해도 생각보다는 투력 안오를 거 같던데", "title_en": "Level cap raise won't add as much power as you'd think", "relevance": 2,
+   "summary_en": "Back-calculating from the leaked per-level stat increments: Lv.119 gives about 25% more power than Lv.100. A commenter recalls the top stage's recommended power as about 8g.",
+   "datapoints": [
+    {"system": "cookie_level", "account": "not stated", "before": "Lv.100", "after": "Lv.119: ~+25% power", "cost": "", "note": "Inferred by the poster from leaked tables; kind of power not stated."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "유출된 증가치랑 기존 거 이용해서 역산하면 119렙 기준 100렙보다 약 25% 늘더라", "en": "Back-calculating from the leaked increments and the existing ones, Lv.119 is about 25% more than Lv.100"}, {"kr": "막스테권장이 8g랫나", "en": "Was the last stage's recommended 8g?"}]},
+
+  {"source": "dc", "id": "82104", "url": "https://m.dcinside.com/board/projectcc/82104", "date": "2026-10-07",
+   "title_kr": "[일반] 만렙확장되면 투력 2배는 뛰는 줄 아는 놈들이 있는데", "title_en": "Some think the level cap raise doubles power", "relevance": 2,
+   "summary_en": "Same IP as dc:81689: per the leak about +25%, at Lv.119, which needs Crumble level 195; most players will open about that far. A commenter says few have the Crumble level or EXP for the cap.",
+   "datapoints": [
+    {"system": "cookie_level", "account": "Crumble level 195", "before": "Lv.100", "after": "Lv.119: ~+25%", "cost": "Crumble level 195 gate for Lv.119", "note": "Poster's inference from leak data."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "25%는 119렙(크럼블레벨 195) 기준임 어차피 다들 그쯤 열거라", "en": "The 25% is for Lv.119 (Crumble level 195); everyone will open about that far anyway"}, {"kr": "애초에만렙찍을 크럼블 레벨도안되고 경험치도없음", "en": "Nobody has the Crumble level or the EXP to hit max level anyway"}]},
+
+  {"source": "dc", "id": "82182", "url": "https://m.dcinside.com/board/projectcc/82182", "date": "2026-10-07",
+   "title_kr": "[일반] 내 기준 이면없을때 150렙 오르는 투력", "title_en": "Power from Lv.150 on my account, without Rift", "relevance": 2,
+   "summary_en": "One cookie (Burning Seeker, 브시커) at Lv.100 shows 446.72m power; at Lv.150 885.57m, just under double. The poster then notes the cap is only 120.",
+   "datapoints": [
+    {"system": "cookie_level", "account": "single cookie, outside the Rift", "before": "Lv.100: 446.72m", "after": "Lv.150: 885.57m", "cost": "", "note": "Single-cookie power; Lv.150 figure presumably from leaked tables (the live cap is 120)."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "브시커 100렙 446.72m 150렙 885.57m 2배 좀 안되게 오름", "en": "Burning Seeker Lv.100 446.72m, Lv.150 885.57m, a bit under double"}, {"kr": "120 확장이네 근데", "en": "It's a 120 expansion though"}]},
+
+  {"source": "dc", "id": "80209", "url": "https://m.dcinside.com/board/projectcc/80209", "date": "2026-10-03",
+   "title_kr": "[일반] 유출 이제봤는데 경치 킵해놔야겠네", "title_en": "Just saw the leak, I'll bank my EXP", "relevance": 1,
+   "summary_en": "Plans to save cookie EXP for the leaked Lv.150 cap, expecting a jump like the Resolve ×2 patch.",
+   "datapoints": [],
+   "advice": [{"system": "cookie_level", "text": "Bank cookie EXP ahead of the level cap raise."}],
+   "quotes": [{"kr": "Lv150 이거 꽤 큰거 같은데 돌파력 2배때 느낀 기분 다시 느낄거 같음", "en": "Lv150 looks pretty big, I'll feel like during Resolve ×2 again"}]},
+
+  {"source": "dc", "id": "79883", "url": "https://m.dcinside.com/board/projectcc/79883", "date": "2026-10-02",
+   "title_kr": "[일반] 쿠키레벨갑자기왜올려", "title_en": "Why raise cookie level all of a sudden", "relevance": 1,
+   "summary_en": "Complains of having spent EXP racing the total power ranking before the level cap raise was leaked.",
+   "datapoints": [],
+   "advice": [],
+   "quotes": [{"kr": "총전투력 랭킹 다툼하느라고 다써버렷는데 어카노", "en": "I spent it all fighting for the total power ranking, now what"}]},
+
+  {"source": "dc", "id": "79815", "url": "https://m.dcinside.com/board/projectcc/79815", "date": "2026-10-02",
+   "title_kr": "[⚠️유출] 다음버전 - 차원의 이면 스테/보상 추가 (쇳물있음)", "title_en": "[Leak] Next version: Rift stages and rewards added (with Syrup Metal)", "relevance": 3,
+   "summary_en": "Rift (차원의 이면) stages 101–200 in 1.5.002 with recommended power 16.72G (101) to 3.01T (200). Key rewards: Syrup Metal 50 at 115, 140, 155, 170, 185, 200; SSR cookie select box at 125, 145, 160, 175, 190; 500 1-min speed-ups at 105, 135, 150, 165, 180, 195; Dimension Shards 170–390 on the others. Sample brackets: 105 39.78G, 110s 89.62G–183.81G, 115 131.82G, 125 272.73G, 140 587.56G, 150 864.37G, 155 1.02T, 170 1.57T, 180 2T.",
+   "datapoints": [
+    {"system": "rift_energy", "account": "game data (leak)", "before": "Rift 101 CP 16.72G", "after": "Rift 200 CP 3.01T", "cost": "", "note": "Recommended power per stage; reaching Syrup Metal 50 at 115 needs 131.82G recommended."},
+    {"system": "plating", "account": "game data (leak)", "before": "", "after": "Syrup Metal 50 × 6 (stages 115–200)", "cost": "", "note": "Plating material from the Rift; 300 Syrup Metal over 101–200 (extraction's sum)."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "권장 전투력: 16.72G ~ 3.01T", "en": "Recommended power: 16.72G to 3.01T"}, {"kr": "핵심 115단계 | CP 131.82G | 시럽쇳물 50", "en": "Key stage 115 | CP 131.82G | Syrup Metal 50"}]},
+
+  {"source": "dc", "id": "79813", "url": "https://m.dcinside.com/board/projectcc/79813", "date": "2026-10-02",
+   "title_kr": "[⚠️유출] 다음버전 - 신규 스테이지 퀘스트", "title_en": "[Leak] Next version: new stage quests", "relevance": 2,
+   "summary_en": "2,160 new stage quests (stages 329–364 clears, kills, gear/cookie/pet pulls, boxes, boss summons) with total rewards: cookie EXP 6,804,000; coins 4,914,000; basic research stones 91,800; crystals 37,080; Crumble EXP 16,200; Lucky Dough 5,400; rune crystals 4,536; premium cookie cutters 4,500; premium pet tickets 4,500; 1-min speed-ups 900; sturdy chests 720; Chocosteel 72; 18 of each 1 h auto-hunt reward ticket.",
+   "datapoints": [
+    {"system": "plating", "account": "game data (leak)", "before": "", "after": "Chocosteel 72 from the new quests", "cost": "", "note": "Also basic research stones 91,800 (small next to lab costs of 20M+ per level) and cookie EXP 6.8M."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "퀘스트 총 2160개 추가. 맛은 없음.", "en": "2,160 quests added in total. Not tasty."}]},
+
+  {"source": "dc", "id": "79879", "url": "https://m.dcinside.com/board/projectcc/79879", "date": "2026-10-02",
+   "title_kr": "[⚠️유출] 다음버전은 아님 - 쟁탈전", "title_en": "[Leak] Not next version: Clash", "relevance": 2,
+   "summary_en": "Datamined unreleased Clash (쟁탈전, 'Boisterous Clash') mode: base levels 1–20, 15 gummy-bear units × 10 levels, 29 tiers, a Tech Room (기술실, like the Gnome Lab) with 90 research items (1-1 to 30-3) whose effects apply to the main stage, Crumble Dungeon, daily dungeons, Impolant Tower and Clash. Security buffs give % ATK/DEF/HP to gummy bears. Resources: money, honour, wood, jelly beans, steel; a Clash bulk-support package exists. Reroll 50 crystals. The tables were removed from the live data.",
+   "datapoints": [
+    {"system": "lineup", "account": "game data (leak, unreleased)", "before": "", "after": "Clash Tech Room research 90 items, effects apply to main stage / dungeons / tower", "cost": "Clash resources", "note": "A possible future power source; not in 1.5.002."}
+   ],
+   "advice": [],
+   "quotes": [{"kr": "여기에도 기술실이란게 있음 (노움연구소 같은거임)", "en": "There's also a Tech Room here (like the Gnome Lab)"}, {"kr": "연구 효과는 메인 스테이지 · 크럼블 던전 · 일일 던전 · 임플란트 타워 · 쟁탈전에 모두 적용", "en": "Research effects apply to main stage, Crumble Dungeon, daily dungeons, Impolant Tower and Clash (screenshot)"}]},
+
+  {"source": "dc", "id": "80179", "url": "https://m.dcinside.com/board/projectcc/80179", "date": "2026-10-03",
+   "title_kr": "[일반] 유출보니까 그래도 담업뎃에 많이 개선되네", "title_en": "From the leak, the next update improves a lot", "relevance": 1,
+   "summary_en": "Reading of the leak: Crumble level now matters a lot (it gates cookie level); Rift rewards hold lots of Syrup Metal, so climbing stages fast pays and hoarding premium pulls while stalling stages loses; the packages are stuffed with Syrup Metal; +20 plating still looks out of reach and wants a pity or a fail-rate boost.",
+   "datapoints": [],
+   "advice": [{"system": "plating", "text": "Push stages and the Rift fast for its Syrup Metal rather than stall while saving pulls."}, {"system": "spending", "text": "Next update's packages carry a lot of Syrup Metal."}],
+   "quotes": [{"kr": "크럼블레벨 이제 굉장히 중요해졌고 이면보상에 쇳물이 많이 들어가서 스테이지 빨리 등반하는거에 의미가 커짐", "en": "Crumble level is now very important, and Rift rewards include lots of Syrup Metal, so climbing stages fast matters more"}, {"kr": "패키지에 쇳물 엄청 껴있음", "en": "The packages are packed with Syrup Metal"}]},
+
+  {"source": "dc", "id": "79519", "url": "https://m.dcinside.com/board/projectcc/79519", "date": "2026-10-02",
+   "title_kr": "[✋️질문] 4G는 대체 어케 달아요?", "title_en": "How do I reach 4G?", "relevance": 2,
+   "summary_en": "Snapshot of a player stuck at 3.17G: Crumble Lv.186, stage 318-15, Blessing Lv.9, Resolve 946 (ATK Lv.278 MAX +556; DEF and HP Lv.0, next level 707.38G coins), oven 37, plates +15 to +20 at gear Lv.101–108, cookies Lv.100 5-star, Stellar constellation 8 at 50% area (ATK/DEF/HP amp 65.00%), 38,880 SP unspent, star-unlock 711/720. Commenters: roll the Stellar shape (4 points could reach about 60%), finish Resolve (2,200 h of gold still banked), drop power-padding items and 치케허브 and fill with SSRs, the lab may be lacking; Blessing 9 at 3G means poor play.",
+   "datapoints": [
+    {"system": "stellar_link", "account": "3G 172M 988K, stage 318-15, Blessing 9", "before": "constellation 8, 50% area, 65.00% amp", "after": "", "cost": "38,880 SP banked; reroll 60 SP", "note": "Profile power (kind not labelled). Commenter: ~60% possible with 4 points."},
+    {"system": "resolve", "account": "same", "before": "Resolve 946 (ATK 278 MAX)", "after": "", "cost": "DEF/HP Lv.1 707.38G coins each", "note": "2,200 h of gold saved per poster."}
+   ],
+   "advice": [{"system": "stellar_link", "text": "Spend banked SP rerolling constellation 8."}, {"system": "resolve", "text": "Spend banked gold on Resolve before stage gear tweaks."}, {"system": "lineup", "text": "Drop power-padding gear and Chicory Herb for SSRs if still short."}],
+   "quotes": [{"kr": "스텔라 4개로 60퍼정도 가능하지안ㄹ나", "en": "Can't you get about 60% with 4 Stellar points?"}, {"kr": "그러고도 부족하면 뻥투력템이랑 치케허브빼고 ssr도배하면 충분히 밀듯", "en": "If still short, drop the power-padding items and Chicory Herb and fill with SSRs, you'll push"}]},
+
+  {"source": "dc", "id": "81484", "url": "https://m.dcinside.com/board/projectcc/81484", "date": "2026-10-06",
+   "title_kr": "[일반] 270지인데 이젠 투력 어케올려야함", "title_en": "At 270, how do I raise power now?", "relevance": 2,
+   "summary_en": "Stage-270 player asks how to raise power besides Resolve. The leaker 삥삥 answers: oven auto-open now stacks up to 100, so leave the oven on Legendary auto-open with 5 sub-options checked and farm power-padding gear.",
+   "datapoints": [],
+   "advice": [{"system": "gear_oven", "text": "Auto-open the oven at Legendary with 5 sub-options checked to farm power-padding gear (auto-open stacks to 100)."}],
+   "quotes": [{"kr": "이제 100개까지 쌓이니까 걍 오븐 레전두고 5개 체크하고 뻥투기도", "en": "It stacks up to 100 now, so just set the oven to Legendary, check 5 and pray for padding"}]},
+
+  {"source": "dc", "id": "81074", "url": "https://m.dcinside.com/board/projectcc/81074", "date": "2026-10-05",
+   "title_kr": "[일반] 이터널부터 투력 갑자기 이빠이오름?", "title_en": "Does power jump from Eternal gear?", "relevance": 1,
+   "summary_en": "Eternal gear comes at the next oven level. Comments: depends on options; with equal options it rises a fair bit; +15 Eternal sub-options are high so power rises fast; at 0.002% upgrade odds replacements are rare.",
+   "datapoints": [],
+   "advice": [],
+   "quotes": [{"kr": "이터널부터는 좆나 팍팍오르긴함 15강이면 부옵수치가 꽤나 높거든", "en": "From Eternal it really shoots up; at +15 the sub-option values are quite high"}]},
+
+  {"source": "dc", "id": "82242", "url": "https://m.dcinside.com/board/projectcc/82242", "date": "2026-10-07",
+   "title_kr": "[일반] 200~300섭 돌파력 명성 어느 정도냐", "title_en": "Resolve and Fame on servers 200–300?", "relevance": 2,
+   "summary_en": "Resolve / Fame levels reported by server: 927/121 (stage 296-14), 842/113 (late 300s), 1047/127 (early 400s, no paid Arena tickets, buys the gold pass), 1050/135 (200s), 937/116 (340s), 969/127 (mid-400s, stage 324), 1048/124 (200), 1027/129 (200s), 1109/167 (server 176). Tips: use every Arena ticket before midnight, fight opponents you surely beat, do all coin exchanges, open chests from 5 medals.",
+   "datapoints": [
+    {"system": "resolve", "account": "servers 176–400s, early October", "before": "", "after": "Resolve 842–1109; Fame 113–167", "cost": "", "note": "Snapshots; the higher Resolve accounts credit pushing stages at minimum cuts early and spending all gold."}
+   ],
+   "advice": [{"system": "fame", "text": "Spend all Arena tickets daily before midnight and attack opponents you surely beat."}, {"system": "resolve", "text": "Do every coin exchange and spend all gold on Resolve."}],
+   "quotes": [{"kr": "비슷한 애랑 붙으면 안 되고 무조건 이기는애랑 붙어야함 그래서 니 명성이 박살난듯", "en": "Don't fight equals, fight ones you'll surely beat; that's why your Fame is wrecked"}, {"kr": "시작할때부터 스테 최소컷으로 많이 밀어서?", "en": "Because I pushed stages at minimum cuts from the start?"}]},
+
+  {"source": "dc", "id": "79600", "url": "https://m.dcinside.com/board/projectcc/79600", "date": "2026-10-02",
+   "title_kr": "[일반] 돌파력 955인데 코인 3700시간 까면 몇단계까지 오를까", "title_en": "Resolve 955: how far will 3,700 h of coins go?", "relevance": 1,
+   "summary_en": "Player at Resolve 955 holding 3,700 h of coin boxes asks whether that buys 50 levels, noting the gold cost per level keeps rising. No figure answered.",
+   "datapoints": [{"system": "resolve", "account": "Resolve 955", "before": "955", "after": "", "cost": "3,700 h of coins banked", "note": "Outcome not posted."}],
+   "advice": [],
+   "quotes": [{"kr": "필요골드량 점점 높아지던데 50단계는 오르려나", "en": "The gold needed keeps rising; will it reach 50 levels?"}]},
+
+  {"source": "dc", "id": "81815", "url": "https://m.dcinside.com/board/projectcc/81815", "date": "2026-10-06",
+   "title_kr": "[일반] 돌파력 패치<<스노우볼 지리네", "title_en": "The Resolve patch snowballed badly", "relevance": 1,
+   "summary_en": "Thread blaming the earlier Resolve buff for making stages push endlessly without spending (and 50,000 cookie cutters handed out), shrinking spenders' edge; the Rift is read as a time sink added in response.",
+   "datapoints": [],
+   "advice": [],
+   "quotes": [{"kr": "돌파력 건든 이후로 과금안해도 끝없이 밀리니까 겜이 좆창난거지", "en": "After they touched Resolve you could push endlessly without paying, and the game broke"}]},
+
+  {"source": "dc", "id": "77660", "url": "https://m.dcinside.com/board/projectcc/77660", "date": "2026-09-29",
+   "title_kr": "[일반] 용병단 3에서 4될때 투력 많이오름?", "title_en": "Does mercenary band 3 → 4 add much power?", "relevance": 2,
+   "summary_en": "Player at 400m asks; commenters: the mercenary band does not affect power; level 4 unlocks one more perk slot.",
+   "datapoints": [{"system": "mercenary_band", "account": "400m", "before": "band 3", "after": "band 4: no power change", "cost": "", "note": "Commenters' statement."}],
+   "advice": [],
+   "quotes": [{"kr": "용병단은 투력에 영향 없옹", "en": "The mercenary band doesn't affect power"}, {"kr": "투력은 안오르고 복지 하나 더 쓸 수 있음", "en": "No power, but you can use one more perk"}]}
+ ],
+ "skipped": [
+  {"id": "80399", "reason": "anticipation, no data"},
+  {"id": "81059", "reason": "unanswered cost question"},
+  {"id": "77826", "reason": "guild donation policing"},
+  {"id": "78476", "reason": "unanswered stat question"},
+  {"id": "80947", "reason": "unanswered lab question"}
+ ]
+}

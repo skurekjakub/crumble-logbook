@@ -1,0 +1,179 @@
+{
+ "about": "What the 2026-10-08 update does to cookie levels, derived before it lands. Stats: crumb.gg's digest of update 1.5.002 lists the new SSR Chardonnay at level 120, 10★; dividing its shown stats by its base stats and its 10★ multiplier gives the level-120 multiplier, checked against Princess Bari at level 100, 10★ (which the same method returns as the game data's level-100 multiplier). EXP: the official notes' new costs for levels 79–100. Inferred, not posted: no player has a level-120 cookie yet, and team power also counts gear, Resolve and amplifications, so a cookie's +% stats is an upper bound on its team-power gain.",
+ "sources": {
+  "stats": "evidence/r2026-10-07/04-sites/data-patches.json (crumb.gg, updates v1-5-002 and 2026-09-23)",
+  "level_curve": "evidence/07-derived/level-curve.json (game data 1.4.002)",
+  "star_growth": "evidence/07-derived/star-growth.json",
+  "exp": "evidence/r2026-10-07/03-naver/nv/nv-50417.md (official notes, nv:50417)"
+ },
+ "method_check": {
+  "cookie": "Princess Bari Cookie",
+  "rarity": "TSSR",
+  "level": 100,
+  "grade": 10,
+  "base": {
+   "atk": 190,
+   "def": 85,
+   "hp": 2900
+  },
+  "top": {
+   "level": 100,
+   "grade": 10,
+   "atk": 13565,
+   "def": 2808,
+   "hp": 207070
+  },
+  "level_multiplier_implied": {
+   "atk": 27.526,
+   "def": 27.529,
+   "hp": 27.53
+  },
+  "level_multiplier_game_data": 27.53
+ },
+ "level_120": {
+  "cookie": "Chardonnay Cookie",
+  "rarity": "SSR",
+  "level": 120,
+  "grade": 10,
+  "base": {
+   "atk": 133,
+   "def": 60,
+   "hp": 2790
+  },
+  "top": {
+   "level": 120,
+   "grade": 10,
+   "atk": 14202,
+   "def": 3247,
+   "hp": 297958
+  },
+  "level_multiplier_implied": {
+   "atk": 45.105,
+   "def": 45.097,
+   "hp": 45.111
+  },
+  "stat_pct_at_120_implied": 4410.4,
+  "gain_120_over_100_pct": 63.8
+ },
+ "exp_79_100": {
+  "rows": [
+   {
+    "level": 79,
+    "old": 625666,
+    "new": 571791
+   },
+   {
+    "level": 80,
+    "old": 714999,
+    "new": 596378
+   },
+   {
+    "level": 81,
+    "old": 818179,
+    "new": 622023
+   },
+   {
+    "level": 82,
+    "old": 937511,
+    "new": 648770
+   },
+   {
+    "level": 83,
+    "old": 1075712,
+    "new": 676667
+   },
+   {
+    "level": 84,
+    "old": 1235984,
+    "new": 705763
+   },
+   {
+    "level": 85,
+    "old": 1422109,
+    "new": 736111
+   },
+   {
+    "level": 86,
+    "old": 1638559,
+    "new": 767764
+   },
+   {
+    "level": 87,
+    "old": 1890630,
+    "new": 800778
+   },
+   {
+    "level": 88,
+    "old": 2184603,
+    "new": 835211
+   },
+   {
+    "level": 89,
+    "old": 2527937,
+    "new": 871125
+   },
+   {
+    "level": 90,
+    "old": 2929502,
+    "new": 908584
+   },
+   {
+    "level": 91,
+    "old": 3399865,
+    "new": 947653
+   },
+   {
+    "level": 92,
+    "old": 3951630,
+    "new": 988402
+   },
+   {
+    "level": 93,
+    "old": 4599853,
+    "new": 1030903
+   },
+   {
+    "level": 94,
+    "old": 5362550,
+    "new": 1075232
+   },
+   {
+    "level": 95,
+    "old": 6261308,
+    "new": 1121467
+   },
+   {
+    "level": 96,
+    "old": 7322033,
+    "new": 1169690
+   },
+   {
+    "level": 97,
+    "old": 8575866,
+    "new": 1219987
+   },
+   {
+    "level": 98,
+    "old": 10060296,
+    "new": 1707982
+   },
+   {
+    "level": 99,
+    "old": 11820527,
+    "new": 2391174
+   },
+   {
+    "level": 100,
+    "old": 13911155,
+    "new": 3347644
+   }
+  ],
+  "old_matches_game_data": true,
+  "old_total_79_100": 93266474,
+  "new_total_79_100": 23741099,
+  "cut_pct": 74.5,
+  "cumulative_to_100_old": 98086378,
+  "cumulative_to_100_new": 28561003,
+  "note": "EXP spent past the new costs is refunded by mail (nv:50417). The EXP for levels 101–120 isn't in any capture."
+ }
+}

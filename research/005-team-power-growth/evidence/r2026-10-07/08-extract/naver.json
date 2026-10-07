@@ -1,0 +1,35 @@
+{
+ "lane": "naver",
+ "read": "2026-10-07",
+ "notes": "The official cafe's notices in the window: the patch board listing (../03-naver/list-naver-patch-notes.tsv) and the two notices fetched into ../03-naver/nv/. Read by the session agent.",
+ "posts": [
+  {"source": "nv", "id": "50417", "url": "https://cafe.naver.com/ccrumble/50417", "date": "2026-10-07", "title_kr": "10월 8일(목) 업데이트 안내", "title_en": "The 2026-10-08 update notes", "relevance": 3,
+   "summary_en": "The 10-08 update (maintenance that day): new SSR Chardonnay, main stages to 364-30, Gnome Lab basic research to 130-2 and special research to 22, cookie level cap 100 → 120, Rumble Arena season 2, new collections (4 cookie, 1 pet). Cookie EXP for levels 79–100 is cut, and EXP spent past the new costs comes back by mail. Gnome Lab research takes at most 12 hours per level; research that took longer is refunded in 1-minute speed-ups. Rift season-2 stage rewards add Syrup Metal, an SSR choice box and speed-ups; the Rift season-2 exchange sells more Chocosteel and Syrup Metal; the mileage exchange adds Chocosteel and Syrup Metal. A new 7-day check-in gives Milk (바삭튼튼 소아과 의사 우유맛 쿠키) with growth materials. Daily dungeons are made easier (EXP, dough, research stone dungeons) but not extended. Commenters complain the daily dungeons weren't extended past 770 and the plating shatter wasn't touched; one welcomes the Syrup in the mileage shop; one says the free Milk is good for new players.",
+   "datapoints": [
+    {"system": "cookie_level", "account": "any", "before": "cap 100", "after": "cap 120", "cost": "EXP for 101–120 not given", "note": "official"},
+    {"system": "cookie_level", "account": "any", "before": "Lv.100 costs 13,911,155 EXP", "after": "3,347,644", "cost": "", "note": "every level 79–100 is listed old → new; excess EXP refunded"},
+    {"system": "gnome_lab", "account": "any", "before": "110-2, special 19", "after": "130-2, special 22; 12 h cap per research", "cost": "", "note": "official"},
+    {"system": "plating", "account": "any", "before": "", "after": "Chocosteel and Syrup Metal in the mileage exchange; more of both in the Rift S2 exchange; Syrup in Rift S2 stage rewards", "cost": "", "note": "quantities in crumb.gg's digest of 1.5.002"},
+    {"system": "cookie_stars", "account": "any", "before": "", "after": "free Milk from a 7-day check-in", "cost": "log in 7 days", "note": ""}
+   ],
+   "advice": [],
+   "quotes": [
+    {"kr": "쿠키 최대 레벨 상한이 120레벨까지 확장됩니다.", "en": "The cookie level cap is raised to 120."},
+    {"kr": "업데이트 후 변경된 레벨업 요구량을 초과하여 사용된 쿠키 경험치는 우편함을 통해 소급 지급됩니다.", "en": "Cookie EXP spent beyond the changed level-up costs is refunded through the mailbox after the update."},
+    {"kr": "노움 연구소 연구 항목의 최대 소요 시간이 12시간으로 개선됩니다.", "en": "The longest Gnome Lab research now takes 12 hours."},
+    {"kr": "7일 동안 매일 접속하여 다양한 성장 재화와 함께 바삭튼튼 소아과 의사 우유맛 쿠키를 만나보세요!", "en": "Log in daily for 7 days for growth materials and Milk Cookie (Crunchy Strong Pediatrician)."},
+    {"kr": "출석 우유 뉴비한텐 좋겠네", "en": "(comment) The check-in Milk will be good for new players."}
+   ]},
+  {"source": "nv", "id": "48486", "url": "https://cafe.naver.com/ccrumble/48486", "date": "2026-10-01", "title_kr": "오븐 자동 열기 기능 개선 및 일일 던전 난이도 완화 안내 (18:43 내용 추가)", "title_en": "Oven auto-open improved (from 10-02); daily dungeons to be eased", "relevance": 3,
+   "summary_en": "From 2026-10-02 15:00 KST the oven's auto-open opens 200 dough at a time at oven 32, 300 at 34, 400 at 36 and 500 at 38 (oven 30 and below unchanged), and the auto-open result holds 100 pieces of gear instead of 30. A bug that stopped auto-open when a sort pop-up appeared is fixed on 10-08. Commenters had been unable to open their dough in a day (one holds 1.8M dough); some still ask for 1,000 at a time.",
+   "datapoints": [
+    {"system": "gear_oven", "account": "oven 32–38", "before": "auto-open up to 50 per open; 30 gear held", "after": "200 / 300 / 400 / 500 per open at oven 32 / 34 / 36 / 38; 100 gear held", "cost": "", "note": "the 50 is crumb.gg's 08-27 figure (first round); official from 10-02"}
+   ],
+   "advice": [],
+   "quotes": [
+    {"kr": "오븐 Lv.38 달성 시 ➔ 500개", "en": "At oven Lv.38: 500 per auto-open."},
+    {"kr": "자동 열기 결과의 장비 누적 수량 30개 ➔ 100개로 개선됩니다.", "en": "Auto-open now holds 100 pieces of gear (was 30)."},
+    {"kr": "반죽 180만개 있는데 하루종일 까도 다 못깐다", "en": "(comment) I have 1.8 million dough and can't open it all in a whole day."}
+   ]}
+ ]
+}
