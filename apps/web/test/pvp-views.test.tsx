@@ -423,9 +423,7 @@ describe("PvP chrome", () => {
     await renderAt("/arena", ARENA);
     expect(await screen.findByText("Regular Arena: two decks lead.")).toHaveClass("lede");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Arena Logbook");
-    expect(document.querySelector("header.top .label")).toHaveTextContent(
-      "Cookie Run: Crumble · 아레나",
-    );
+    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent("아레나");
     await waitFor(() =>
       expect(stamp()).toEqual({ Updated: "2026-09-27", Sources: "2", Decks: "3" }),
     );
@@ -435,7 +433,7 @@ describe("PvP chrome", () => {
   it("fills the Rumble Arena header from the record's Rumble lede", async () => {
     await renderAt("/rumble", RUMBLE);
     expect(await screen.findByText("Rumble Arena: one 12-cookie team.")).toHaveClass("lede");
-    expect(document.querySelector("header.top .label")).toHaveTextContent("와글와글 아레나");
+    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent("와글와글 아레나");
   });
 
   it("lists each PvP mode's pages under it in the navigation", async () => {
@@ -865,8 +863,8 @@ describe("PvP usage", () => {
     expect(c.getByRole("link", { name: "crumbgg-rumble-live" })).toBeVisible();
     const bars = [...cookies.querySelectorAll("li")];
     expect(bars.map((li) => li.querySelector(".nm")!.textContent)).toEqual([
-      "Pomegranate Cookie석류맛 쿠키",
-      "Herb Cookie허브맛 쿠키",
+      "Pomegranate석류맛 쿠키",
+      "Herb허브맛 쿠키",
     ]);
     expect(bars[1]!.querySelector(".bar-fill")).toHaveStyle({ width: "64.5%" });
     expect(bars[1]).toHaveTextContent("64.5%");

@@ -3,6 +3,7 @@ import { useSourceIndex } from "../api/hooks";
 import { mechanicsQuery } from "../api/queries";
 import type { ModeScope } from "../api/queries";
 import type { ModeSection, SharedView, ViewCopy } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { ConfidencePill } from "../components/ConfidencePill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
@@ -10,8 +11,9 @@ import { ViewHeader } from "../components/ViewHeader";
 
 /**
  * The mode's mechanics filed under `topic`, as their topic or one of their
- * further topics (`alsoTopics`), each as a note with its body, confidence
- * and sources; nothing when none are filed under it.
+ * further topics (`alsoTopics`), each as a callout: its confidence first,
+ * its body cut to one line (expanding on demand), its sources last;
+ * nothing when none are filed under it.
  *
  * @param props - the mode's scope and the mechanics topic
  * @returns the notes, inside the mechanics query's loading and error states
@@ -25,9 +27,12 @@ export function TopicNotes({ scope, topic }: { scope: ModeScope; topic: string }
         rows
           .filter((m) => m.topic === topic || m.alsoTopics.includes(topic))
           .map((m) => (
-            <div key={m.id} className="note">
-              {m.body} <ConfidencePill confidence={m.confidence} />{" "}
-              <SourceChips ids={m.sources} sources={sources} />
+            <div key={m.id} className="callout">
+              <ConfidencePill confidence={m.confidence} />
+              <span className="callout-body">
+                <Clamp lines={1}>{m.body}</Clamp>
+              </span>
+              <SourceChips ids={m.sources} sources={sources} max={2} />
             </div>
           ))
       }

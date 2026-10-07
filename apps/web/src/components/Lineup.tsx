@@ -1,3 +1,6 @@
+import { shortName } from "../lib/cookie-icons";
+import { CookieIcon } from "./CookieIcon";
+
 /** One cookie slot of a {@link Lineup}; a deck's `cookies[]` entries fit as they are. */
 export interface LineupCookie {
   cookieKr: string;
@@ -27,9 +30,10 @@ export function slotKind(level: string | null | undefined): "" | "max" | "filler
 }
 
 /**
- * One cookie's slot: level and star count, the English name, and the Korean
- * name and note beneath. Stars show only when they're a plain number; free
- * text ("?", "~7 (inferred …)") is left to the levels table.
+ * One cookie's slot: the portrait with the level and star count on it, the
+ * short English name (the full one in the tooltip), and the Korean name and
+ * note beneath. Stars show only when they're a plain number; free text
+ * ("?", "~7 (inferred …)") is left to the levels table.
  *
  * @param props - the cookie, and the slot element's id when it needs one
  * @returns the slot
@@ -39,13 +43,17 @@ export function LineupSlot({ cookie: c, slotId }: { cookie: LineupCookie; slotId
   const lv = c.level != null && c.level !== "" ? `Lv.${c.level}` : "";
   const stars = c.stars && /^\d+$/.test(c.stars) ? ` · ${c.stars}★` : "";
   const sub = [c.en ? c.cookieKr : "", c.note ?? ""].filter(Boolean).join(" · ");
+  const tip = [c.en, c.note].filter(Boolean).join(" — ");
   return (
-    <div className={kind ? `slot ${kind}` : "slot"} title={c.note ?? ""} data-slot={slotId}>
+    <div className={kind ? `slot ${kind}` : "slot"} title={tip} data-slot={slotId}>
+      <span className="pic">
+        <CookieIcon kr={c.cookieKr} en={c.en} size={40} />
+      </span>
       <span className="lv">
         {lv}
         {stars}
       </span>
-      <span className="nm">{c.en ?? c.cookieKr}</span>
+      <span className="nm">{c.en ? shortName(c.en) : c.cookieKr}</span>
       <span className="sub">{sub}</span>
     </div>
   );
