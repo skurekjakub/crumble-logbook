@@ -5,6 +5,9 @@ import {
 import { describe, expect, it } from "vitest";
 import {
   bracketAt,
+  bracketNoteParts,
+  bracketStep,
+  compactPower,
   entryPower,
   formatPower,
   furthest,
@@ -12,6 +15,7 @@ import {
   nextBracket,
   parsePower,
   seasonAt,
+  shortDeckName,
 } from "../src/lib/stage";
 
 /** The power gate's steps as record 003 documents them. */
@@ -101,5 +105,53 @@ describe("seasonAt", () => {
       running: false,
     });
     expect(seasonAt(seasons, new Date("2027-01-01T00:00:00Z"))).toBeUndefined();
+  });
+});
+
+describe("bracketStep", () => {
+  it("puts each kept-damage share on the scale the screens tint", () => {
+    expect([120, 100, 75, 55, 35, 15, 5, 1].map(bracketStep)).toEqual([
+      "full",
+      "full",
+      "high",
+      "high",
+      "mid",
+      "low",
+      "floor",
+      "floor",
+    ]);
+  });
+});
+
+describe("compactPower", () => {
+  it("prints the parsed figure short, else the post's words without their aside", () => {
+    expect(compactPower("4.00G (4G 3M 599K)", 4.003599)).toBe("4G");
+    expect(compactPower("971.8M (971M 839K)", 0.971839)).toBe("971.8M");
+    expect(compactPower("29G 731M 961K", 29.731961)).toBe("29.73G");
+    expect(compactPower("not posted (padded to 35%)", null)).toBe("not posted");
+    expect(compactPower("not posted", null)).toBe("not posted");
+  });
+});
+
+describe("shortDeckName", () => {
+  it("drops the aside in brackets at the end of a deck's name", () => {
+    expect(shortDeckName("Bari–Cherry Cola charge deck (post-easing general deck)")).toBe(
+      "Bari–Cherry Cola charge deck",
+    );
+    expect(shortDeckName("Rift levelled Rye deck (15%)")).toBe("Rift levelled Rye deck");
+    expect(shortDeckName("Charge deck")).toBe("Charge deck");
+  });
+});
+
+describe("bracketNoteParts", () => {
+  it("splits the bracket a note leads with from what it adds", () => {
+    expect(bracketNoteParts("35%")).toEqual({ pct: 35, rest: "" });
+    expect(bracketNoteParts("35%; fails at 15%")).toEqual({ pct: 35, rest: "fails at 15%" });
+    expect(bracketNoteParts("35% (auto)")).toEqual({ pct: 35, rest: "auto" });
+    expect(bracketNoteParts("15% viable on mob stages")).toEqual({
+      pct: 15,
+      rest: "viable on mob stages",
+    });
+    expect(bracketNoteParts("Untested")).toEqual({ pct: null, rest: "Untested" });
   });
 });

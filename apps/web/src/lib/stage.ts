@@ -139,3 +139,62 @@ export function seasonAt<S extends SeasonSpan>(
   const next = sorted.find((s) => Date.parse(s.startsAt) > t);
   return next ? { season: next, running: false } : undefined;
 }
+
+/** A step of the bracket scale the stage screens tint a kept-damage share with. */
+export type BracketStep = "full" | "high" | "mid" | "low" | "floor";
+
+/**
+ * The step of the bracket scale a kept-damage share sits on: the full
+ * damage or more, the upper brackets, the 35% line most pushers live on,
+ * the 15% line, and anything under it.
+ *
+ * @param damagePct - the kept-damage share, in %
+ * @returns the step
+ */
+export function bracketStep(damagePct: number): BracketStep {
+  if (damagePct >= 100) return "full";
+  if (damagePct >= 55) return "high";
+  if (damagePct >= 35) return "mid";
+  if (damagePct >= 15) return "low";
+  return "floor";
+}
+
+/**
+ * A posted team power the short way: its parsed figure in G printed as
+ * {@link formatPower} does, else the post's own words without the aside in
+ * brackets ("not posted (padded to 35%)" → "not posted").
+ *
+ * @param posted - the power as posted
+ * @param powerG - its most precise figure in G, or null when the post gives none
+ * @returns the short text
+ */
+export function compactPower(posted: string, powerG: number | null): string {
+  if (powerG !== null) return formatPower(Math.round(powerG * 1e9));
+  return posted.replace(/\s*\(.*\)\s*$/, "") || posted;
+}
+
+/**
+ * A deck's name without the aside in brackets at its end: "Bari–Cherry Cola
+ * charge deck (post-easing general deck)" → "Bari–Cherry Cola charge deck".
+ *
+ * @param name - the deck's full name
+ * @returns the short name
+ */
+export function shortDeckName(name: string): string {
+  return name.replace(/\s*\([^()]*\)\s*$/, "") || name;
+}
+
+/**
+ * Splits a zone slot's "cleared at" note into the bracket it leads with and
+ * what it adds: "35%; fails at 15%" → 35 and "fails at 15%", "35% (auto)" →
+ * 35 and "auto".
+ *
+ * @param note - the note
+ * @returns the leading bracket (null when the note doesn't lead with one) and the rest
+ */
+export function bracketNoteParts(note: string): { pct: number | null; rest: string } {
+  const m = /^\s*(\d+(?:\.\d+)?)%\s*[;:,]?\s*(.*)$/.exec(note);
+  if (!m) return { pct: null, rest: note.trim() };
+  const rest = m[2]!.trim().replace(/^\((.*)\)$/, "$1");
+  return { pct: Number(m[1]), rest };
+}
