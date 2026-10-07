@@ -229,6 +229,24 @@
   border-color: var(--accent);
   color: var(--ink);
 }
+/* Below the rail's breakpoint the links are one row that scrolls sideways, not a block of rows. */
+@media (max-width: 1199px) {
+  .toc {
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+  .toc-title {
+    flex: none;
+    white-space: nowrap;
+  }
+  .toc ol {
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+}
 @media (min-width: 1200px) {
   .has-toc {
     display: grid;
