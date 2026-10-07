@@ -8,12 +8,12 @@
  "you": {
   "summary": "Won in the lineup screen: Milk captain at top displayed ATK, Brightseeker then Figure on the beam, beam thieves out, Milk arriving early. Then retry.",
   "changes": [
-   "Captain Milk at the top ATK the cookie window shows (the captain's +10% doesn't count); perks Passion Pay plus Rapid Promotion or Like A Family.",
+   "Captain Milk at the top ATK the cookie window shows (without the captain's +10%, per one tester in dc:78378); perks Passion Pay plus Rapid Promotion or Like A Family.",
    "Set the ATK order by lowering dealers' levels: Milk, Brightseeker, Figure, Scorpion, Macaron, Cheesecake (the 578G order).",
    "The rest of the 40 only need more power than the excluded cookies.",
    "Level every cookie on the Exclusions page to Lv.1, Bari included; the 578G author also leaves Espresso out.",
    "If Milk walks in late, lower Pomegranate toward Lv.60 (still inside the 40) and drop spare supports.",
-   "Use a damage preset, arena or flat-ATK Conquest (no accuracy or focus), and try one move-speed line if Milk arrives late.",
+   "Use a damage preset, arena (no accuracy or focus) or flat-ATK Conquest, and try one move-speed line if Milk arrives late.",
    "Run at least once a day: the daily board pays only on days with a run, and the weekly board keeps only the best."
   ],
   "sources": ["nv:47255", "web:yt-tnAGQ2XgW9o", "dc:78378", "dc:82354", "dc:82406", "dc:62042", "dc:77306", "dc:76916", "web:yt-XeD4c3AuQAs", "web:yt-4v2xDWV13fg", "dc:65247", "dc:67615"]

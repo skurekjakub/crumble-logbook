@@ -144,7 +144,7 @@
    "source": "gnome_lab",
    "title": "Gnome Lab: stones per node near the top",
    "columns": ["node", "research_stones", "special_stones"],
-   "rows": [["newest nodes (September)", "1.6M", null], ["steps near HP 30%", "2.9M", null], ["research ~100 nodes", "5–6M", null], ["ATK 30%", "~50M", null], ["special research ATK amp", null, 50], ["each new node 111–130 (10 levels, from 10-08; leak)", "1,010M", null], ["the whole 111–130 expansion (leak)", "18.89G", 150]],
+   "rows": [["newest nodes (September)", "1.6M", null], ["steps near HP 30%", "2.9M", null], ["research ~100 nodes", "5–6M", null], ["ATK 30%", "~50M", null], ["special research ATK amp", null, 50], ["a 10-level node such as 130-1 (from 10-08; leak)", "1,010M", null], ["the whole 111–130 expansion (leak)", "18.89G", 150]],
    "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928", "dc:79685", "dc:82186"]
   },
   {

@@ -8,7 +8,7 @@
   "ceiling": "578.07G at 14.90G total power, server 1st, 0.000 s left (코니, 2026-09-28, screenshot and video).",
   "summary": "Highest documented score with a lineup. Brightseeker ATK #2, then Figure, Scorpion, Macaron, Cheesecake; every other favourite in by power, Espresso out.",
   "cookies": [
-   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain at ATK #1: takes Passion Pay and the beam, buffs the packed formation."},
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain, ATK #1: takes Passion Pay and the beam; buffs the formation."},
    {"kr": "브라이트시커 쿠키", "level_rule": "ATK #2", "why": "First beam target after Milk; ranged dealer that keeps firing."},
    {"kr": "피겨여왕맛 쿠키", "level_rule": "ATK #3", "why": "Beam buffer that stays by the boss."},
    {"kr": "전갈맛 쿠키", "level_rule": "ATK #4", "why": "Main single-target dealer, still in the beam ranks."},
@@ -36,7 +36,7 @@
   "name_en": "Milk–Scorpion–Figure beam lineup (스미노프TFT)",
   "name_kr": "크럼블던전 우유 전갈 피겨 조합",
   "status": "meta",
-  "obsolete": {"since": "2026-10-07", "reason": "Out-scored: 코니's Brightseeker-first order made 578.07G at 14.90G against this lineup's 379.3G at 15.58G.", "sources": ["nv:47255", "web:yt-tnAGQ2XgW9o"], "superseded_by": "dungeon-milk-seeker-figure"},
+  "obsolete": {"since": "2026-10-07", "reason": "Scorpion at ATK #2 out-scored by Brightseeker at #2: 578.07G at 14.90G vs 379.3G at 15.58G.", "sources": ["nv:47255", "web:yt-tnAGQ2XgW9o"], "superseded_by": "dungeon-milk-seeker-figure"},
   "ceiling": "379.3G at 15.58G total power, server 1st, 0.000 s left (2026-09-28, screenshot). Same rules: 159.6G at 8.57G (09-22), 43.2G at 3.51G (09-09).",
   "summary": "Was the top score until 9/28. Milk captain at ATK #1; beam to Scorpion, then Figure. Supports at Lv.70 or below; chargers, summoners and beam thieves out.",
   "cookies": [
@@ -91,7 +91,7 @@
   ],
   "atk_order": ["바삭튼튼 소아과 의사 우유맛 쿠키", "브라이트시커 쿠키", "전갈맛 쿠키", "피겨여왕맛 쿠키", "마카롱맛 쿠키", "치즈케이크맛 쿠키"],
   "atk_order_note": "The other 34 are lowered only until their power stays above the cookies left out (VART).",
-  "perks": "Milk captain; Passion Pay + Rapid Promotion, a little above Like A Family over 30+ runs each (전치, dc:80905).",
+  "perks": "Milk captain; Passion Pay + Rapid Promotion, a little above Like A Family by score ÷ power, 30+ runs each, too few runs to be sure (전치, dc:80905).",
   "substitutions": [
    "Scorpion above Brightseeker scores higher, per another poster (dc:71956).",
    "Figure above Scorpion is 코니's 578G order (dungeon-milk-seeker-figure)."
@@ -111,7 +111,7 @@
   "ceiling": "Record in the high 180s G at 14.14G total power; the run shown ends at 174.7G (2026-09-18, video; the record itself is stated, not shown).",
   "summary": "Fullest published list: all 40 named, plus the Lv.1 cookies. Beam goes to buffers: Macaron and Figure rank ATK #1 and #2 after Milk; dealers sit below.",
   "cookies": [
-   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "Kept at its current level; the highest ATK the cookie window shows, without the captain's +10% (dc:78378)", "why": "Captain; top displayed ATK, so Passion Pay lands on it."},
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "Kept at its current level; the highest ATK the cookie window shows (ND러너 reportedly counts the captain's +10%; one tester in dc:78378 says it doesn't)", "why": "Captain; top displayed ATK, so Passion Pay lands on it."},
    {"kr": "마카롱맛 쿠키", "level": "100", "why": "Beam target, ATK #1 after Milk; ATK runes hold the rank."},
    {"kr": "피겨여왕맛 쿠키", "level": "100", "why": "Beam target (ATK #2 after Milk)."},
    {"kr": "전갈맛 쿠키", "level_rule": "Levelled below Macaron and Figure in ATK", "why": "Main dealer, kept off the beam in this setting."},
@@ -200,7 +200,7 @@
   "ceiling": "50G+ ('520억 이상'), 2026-09-07 (text).",
   "summary": "Pre-9/10: Cheesecake at Lv.1, since its ATK buff reset Milk's stacks. Otherwise ND러너's later 40, with Cheerleader, Coffee, Adventurer where Knight, Alchemist, Cheesecake went.",
   "cookies": [
-   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "ATK #1 as the cookie window shows it, without the captain's +10% (dc:78378)", "why": "Captain with the top displayed ATK, so the perks land on it."},
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "ATK #1 as the cookie window shows it; one tester leaves out the captain's +10% (dc:78378), ND러너 reportedly counts it", "why": "Captain with the top displayed ATK, so the perks land on it."},
    {"kr": "피겨여왕맛 쿠키", "level_rule": "Beam target: ATK rank just below Milk", "why": "Recommended beam target in the pinned list."},
    {"kr": "전갈맛 쿠키", "level_rule": "Beam target", "why": "Recommended beam target in the pinned list."},
    {"kr": "마카롱맛 쿠키", "level_rule": "In the top 40", "why": "Buffer; also a beam target when its ATK allows."},
