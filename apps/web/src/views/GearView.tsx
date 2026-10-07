@@ -3,11 +3,10 @@ import { useSourceIndex } from "../api/hooks";
 import { gearRecsQuery } from "../api/queries";
 import type { ModeSection } from "../app/modes";
 import { EmptyState } from "../components/EmptyState";
-import { GEAR_SLOT_NAMES, GearBoard, generalGear } from "../components/GearBoard";
+import { GEAR_SLOT_NAMES, GearBoard, GearRow, generalGear } from "../components/GearBoard";
 import { ObsoleteNotice } from "../components/ObsoleteNotice";
 import { ObsoleteSection } from "../components/ObsoleteSection";
 import { QueryResult } from "../components/QueryResult";
-import { SourceChips } from "../components/SourceChips";
 import { splitObsolete } from "../lib/obsolete";
 import { ModeViewHeader } from "./ModeViewHeader";
 
@@ -18,7 +17,9 @@ import { ModeViewHeader } from "./ModeViewHeader";
  * Obsolete recommendations stay off the board; they end the page in the
  * collapsed Obsolete section, each under its notice. With no gear at all
  * it says so instead, and with only obsolete gear it says there is no
- * current gear above the section.
+ * current gear above the section. Each recommendation leads with its
+ * verdict pill; on a mode with a boss, one for another gear preset than the
+ * boss's is greyed as "<preset> only".
  *
  * @param mode - the mode whose gear and copy the view shows
  * @returns the gear view
@@ -26,6 +27,7 @@ import { ModeViewHeader } from "./ModeViewHeader";
 export function GearView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
   const gear = useQuery(gearRecsQuery(mode.scope));
+  const primary = mode.boss?.gearContext ?? null;
   return (
     <>
       <ModeViewHeader mode={mode} view="gear" fallbackTitle="Gear" />
@@ -37,23 +39,13 @@ export function GearView({ mode }: { mode: ModeSection }) {
           return (
             <>
               {general.length < current.length ? (
-                <GearBoard gear={current} sources={sources} />
+                <GearBoard gear={current} sources={sources} primary={primary} />
               ) : null}
               {general.length ? (
-                <div className="card">
+                <div className="card gear-notes">
                   <h3>General gear notes</h3>
                   {general.map((g) => (
-                    <div key={g.id}>
-                      <b>{g.substats}</b>
-                      {g.why ? (
-                        <>
-                          {" · "}
-                          <span className="muted">{g.why}</span>
-                        </>
-                      ) : null}{" "}
-                      <span className="chip">{g.context}</span>{" "}
-                      <SourceChips ids={g.sources} sources={sources} />
-                    </div>
+                    <GearRow key={g.id} g={g} sources={sources} primary={primary} />
                   ))}
                 </div>
               ) : null}
@@ -67,16 +59,10 @@ export function GearView({ mode }: { mode: ModeSection }) {
                       sources={g.obsoleteSources}
                       sourceIndex={sources}
                     />
-                    <div>
-                      <b>{g.substats}</b>{" "}
-                      <span className="muted">
-                        ·{" "}
-                        {(GEAR_SLOT_NAMES as Readonly<Record<string, string>>)[g.slot] ?? "General"}
-                      </span>{" "}
-                      <span className="chip">{g.context}</span>
+                    <div className="label">
+                      {(GEAR_SLOT_NAMES as Readonly<Record<string, string>>)[g.slot] ?? "General"}
                     </div>
-                    {g.why ? <div className="muted">{g.why}</div> : null}
-                    <SourceChips ids={g.sources} sources={sources} />
+                    <GearRow g={g} sources={sources} />
                   </div>
                 ))}
               </ObsoleteSection>

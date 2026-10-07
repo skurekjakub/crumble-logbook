@@ -3,16 +3,45 @@ import { useSourceIndex } from "../api/hooks";
 import { recommendationsQuery, recordQuery, rulesQuery, takeawaysQuery } from "../api/queries";
 import type { Mechanic, Recommendation, Takeaway } from "../api/types";
 import type { ModeSection, RulesConfig } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { ConfidencePill } from "../components/ConfidencePill";
 import { EmptyState } from "../components/EmptyState";
 import { Kv } from "../components/Kv";
+import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import type { SourceIndex } from "../lib/sources";
+import { leadSentence } from "../lib/verdict";
 import { ModeViewHeader } from "./ModeViewHeader";
 
 /**
- * The numbered takeaways, each with its detail and sources; "No takeaways yet." when there are none.
+ * One finding as a scannable row: its lead sentence in full, the rest of
+ * its text and its detail cut to one line, and its sources at the end.
+ *
+ * @param props - the takeaway and the source index
+ * @returns the row
+ */
+function Finding({ t, sources }: { t: Takeaway; sources: SourceIndex }) {
+  const { lead, rest } = leadSentence(t.text);
+  const more = [rest, t.detail ?? ""].filter((s) => s.trim()).join(" ");
+  return (
+    <li>
+      <div className="finding">
+        <div className="lead">{lead}</div>
+        {more ? (
+          <div className="muted">
+            <Clamp lines={1}>{more}</Clamp>
+          </div>
+        ) : null}
+      </div>
+      <SourceChips ids={t.sources} sources={sources} max={2} />
+    </li>
+  );
+}
+
+/**
+ * The ranked takeaways, the strongest first, each a {@link Finding} row;
+ * "No takeaways yet." when there are none.
  *
  * @param props - the takeaways and the source index
  * @returns the list, or the empty state
@@ -20,22 +49,18 @@ import { ModeViewHeader } from "./ModeViewHeader";
 function Takeaways({ rows, sources }: { rows: readonly Takeaway[]; sources: SourceIndex }) {
   if (!rows.length) return <EmptyState>No takeaways yet.</EmptyState>;
   return (
-    <ol className="take">
+    <ol className="take findings">
       {rows.map((t) => (
-        <li key={t.id}>
-          <div>
-            <div>{t.text}</div>
-            {t.detail ? <div className="muted">{t.detail}</div> : null}
-            <SourceChips ids={t.sources} sources={sources} />
-          </div>
-        </li>
+        <Finding key={t.id} t={t} sources={sources} />
       ))}
     </ol>
   );
 }
 
 /**
- * The "for your account" card: each recommendation's summary, changes and sources; nothing when there are none.
+ * The "for your account" card, bullets first: each recommendation's changes
+ * as a to-do list, then its summary cut to one line, then its sources;
+ * nothing when there are none.
  *
  * @param props - the card's heading, the recommendations and the source index
  * @returns the card, or null
@@ -51,48 +76,62 @@ function AccountCard({
 }) {
   if (!rows.length) return null;
   return (
-    <div className="card">
-      <h3>{title}</h3>
+    <section className="card account" aria-labelledby="account-title">
+      <h3 id="account-title">{title}</h3>
       {rows.map((r) => (
-        <div key={r.id}>
-          <div>{r.summary}</div>
+        <div key={r.id} className="advice">
           {r.changes.length ? (
-            <ul className="clean">
+            <ul className="todo">
               {r.changes.map((c, i) => (
-                <li key={i}>{c}</li>
+                <li key={i}>
+                  <Clamp lines={1}>{c}</Clamp>
+                </li>
               ))}
             </ul>
           ) : null}
-          <SourceChips ids={r.sources} sources={sources} />
+          <div className="advice-foot">
+            <div className="muted">
+              <Clamp lines={1}>{r.summary}</Clamp>
+            </div>
+            <SourceChips ids={r.sources} sources={sources} max={2} />
+          </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 
 /**
- * One rule's text, confidence (when below high) and sources.
+ * One rule: its confidence first when below high, its text cut to `lines`
+ * lines, and its sources last.
  *
- * @param props - the rule and the source index
+ * @param props - the rule, the source index, and the lines its text shows collapsed
  * @returns the rule's body
  */
-function RuleBody({ rule, sources }: { rule: Mechanic; sources: SourceIndex }) {
+function RuleBody({
+  rule,
+  sources,
+  lines = 1,
+}: {
+  rule: Mechanic;
+  sources: SourceIndex;
+  lines?: number;
+}) {
   return (
-    <>
-      <div>{rule.body}</div>
-      <div className="chips">
-        {rule.confidence === "high" ? null : <ConfidencePill confidence={rule.confidence} />}
-        <SourceChips ids={rule.sources} sources={sources} />
-      </div>
-    </>
+    <div className="rule">
+      {rule.confidence === "high" ? null : <ConfidencePill confidence={rule.confidence} />}
+      <span className="rule-body">
+        <Clamp lines={lines}>{rule.body}</Clamp>
+      </span>
+      <SourceChips ids={rule.sources} sources={sources} max={2} />
+    </div>
   );
 }
 
 /**
  * A mode's rules: the row titled `config.highlight`, when the config names
  * one, as its own card (the season's buffs), then the rest as a card of
- * title → rule. "No rules
- * recorded yet." when there are none.
+ * title → rule. "No rules recorded yet." when there are none.
  *
  * @param props - the rules, the mode's rules config and the source index
  * @returns the rule cards, or the empty state
@@ -115,7 +154,7 @@ function Rules({
       {highlight ? (
         <div className="card buffs">
           <h3>{highlight.title}</h3>
-          <RuleBody rule={highlight} sources={sources} />
+          <RuleBody rule={highlight} sources={sources} lines={2} />
         </div>
       ) : null}
       {rest.length ? (
@@ -129,10 +168,28 @@ function Rules({
 }
 
 /**
+ * A caveat as a one-line callout: a caution pill, then the text cut to one line.
+ *
+ * @param props - the caveat's text
+ * @returns the callout
+ */
+function Caveat({ text }: { text: string }) {
+  return (
+    <div className="callout caveat" role="note">
+      <Pill kind="medium">caveat</Pill>
+      <span className="callout-body note">
+        <Clamp lines={1}>{text}</Clamp>
+      </span>
+    </div>
+  );
+}
+
+/**
  * A mode's overview: its research record's caveats (the mode's own, then the
- * record's), the mode's rules when it files them, the load-bearing
- * takeaways, and the recommendations for the reader's own account. Each
- * block loads on its own, so one failed resource doesn't blank the others.
+ * record's) as one-line callouts, the mode's rules when it files them, the
+ * ranked takeaways as scannable rows, and the recommendations for the
+ * reader's own account. Each block loads on its own, so one failed resource
+ * doesn't blank the others.
  *
  * @param mode - the mode whose record, lists and copy the view shows
  * @returns the overview
@@ -154,11 +211,13 @@ export function OverviewView({ mode }: { mode: ModeSection }) {
 
   return (
     <>
-      {caveats?.map((c) => (
-        <div className="note" key={c}>
-          {c}
+      {caveats?.length ? (
+        <div className="caveats">
+          {caveats.map((c) => (
+            <Caveat key={c} text={c} />
+          ))}
         </div>
-      ))}
+      ) : null}
       <ModeViewHeader mode={mode} view="overview" fallbackTitle="Overview" />
       {mode.rules ? (
         <QueryResult query={rules} resource="rules">

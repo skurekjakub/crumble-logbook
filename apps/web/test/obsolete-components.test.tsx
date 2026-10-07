@@ -27,6 +27,19 @@ describe("ObsoleteNotice", () => {
       "#deck-rye",
     );
     expect(within(note).getByRole("link", { name: "DC 76135" })).toBeVisible();
+    // The verdict leads, as a grey pill.
+    expect(note.firstElementChild).toHaveClass("pill", "obsolete");
+    expect(note.firstElementChild).toHaveTextContent(/^Obsolete since 2026-10-12$/);
+  });
+
+  it("cuts a long reason to one line with a More button", () => {
+    const reason = "The patch capped the beam count, so the deck lost its ceiling. ".repeat(3);
+    render(
+      <ObsoleteNotice since="2026-10-12" reason={reason} sources={[]} sourceIndex={SOURCES} />,
+    );
+    const note = screen.getByRole("note");
+    expect(note.querySelector(".obsolete-reason .clamp")).not.toBeNull();
+    expect(within(note).getByRole("button", { name: "More" })).toBeVisible();
   });
 
   it("leaves out the reason and the successor when there are none", () => {

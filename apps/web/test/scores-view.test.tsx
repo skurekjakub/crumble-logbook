@@ -96,16 +96,26 @@ const scoresTable = () => screen.getByRole("region", { name: "Posted scores" });
 const rankingsRegion = () => screen.getByRole("region", { name: "crumb.gg leaderboard" });
 
 describe("scores view", () => {
-  it("renders the legacy heading, scatter, RNG cards and a damage-ordered table", async () => {
+  it("renders the legacy heading, the best run, scatter, RNG cards and a damage-ranked table", async () => {
     await renderRoute("/conquest/scores", API);
     expect(await screen.findByRole("heading", { name: "Scores and RNG" })).toBeVisible();
-    expect(screen.getByText(/Dashed lines mark 배 multiples/).closest(".lede")).not.toBeNull();
+    expect(screen.getByText(/Dashed lines mark 배/).closest("ul")).toHaveClass("points");
     await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(3));
-    expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["1.31T", "1T", "867G"]);
+    expect(bodyRows(scoresTable()).map((r) => r.slice(0, 2))).toEqual([
+      ["1", "1.31T"],
+      ["2", "1T"],
+      ["3", "867G"],
+    ]);
     const [top, , last] = bodyRows(scoresTable());
-    expect(top!.slice(0, 5)).toEqual(["1.31T", "26G", "50", "Cherry deck", "screenshot"]);
-    expect(last![3]).toBe("Melon Soda deck");
-    expect(last![4]).toBe("claimed");
+    expect(top!.slice(0, 6)).toEqual(["1", "1.31T", "Cherry deck", "screenshot", "26G", "50"]);
+    expect(last![2]).toBe("Melon Soda deck");
+    expect(last![3]).toBe("claimed");
+
+    const best = screen.getByRole("region", { name: "Best run" });
+    expect(best).toHaveClass("top-run");
+    expect(best.querySelector(".top-dmg")).toHaveTextContent("1.31T");
+    expect(best).toHaveTextContent("at 26G power");
+    expect(within(best).getByText("screenshot")).toHaveClass("pill", "verified");
     expect(within(scoresTable()).getByText("Other")).toBeInTheDocument();
 
     expect(screen.getByRole("group", { name: /damage against team power/ })).toBeInTheDocument();
@@ -137,7 +147,7 @@ describe("scores view", () => {
         within(toc)
           .getAllByRole("link")
           .map((a) => a.textContent),
-      ).toEqual(["Score chart", "RNG factors", "Posted scores", "crumb.gg leaderboard"]),
+      ).toEqual(["Score chart", "Posted scores", "RNG factors", "crumb.gg leaderboard"]),
     );
     const target = (label: string) =>
       document.querySelector(within(toc).getByRole("link", { name: label }).getAttribute("href")!);
@@ -178,7 +188,7 @@ describe("scores view", () => {
     await waitFor(() => expect(within(select).getAllByRole("option")).toHaveLength(3));
     fireEvent.change(select, { target: { value: "cherry" } });
     await waitFor(() => expect(router.state.location.search).toEqual({ deck: "cherry" }));
-    await waitFor(() => expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["1.31T"]));
+    await waitFor(() => expect(bodyRows(scoresTable()).map((r) => r[1])).toEqual(["1.31T"]));
   });
 
   it("drops unusable search params from the URL when a filter changes", async () => {
@@ -300,7 +310,7 @@ describe("scores of obsolete decks", () => {
     await waitFor(() =>
       expect(within(picker).getByRole("option", { name: "Ranged deck (obsolete)" })).toBeTruthy(),
     );
-    await waitFor(() => expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["2T"]));
+    await waitFor(() => expect(bodyRows(scoresTable()).map((r) => r[1])).toEqual(["2T"]));
     expect(screen.getByRole("note")).toHaveTextContent(
       "Ranged deck is obsolete since 2026-10-12: Patched out. Superseded by Cherry deck.",
     );
@@ -311,7 +321,9 @@ describe("scores of obsolete decks", () => {
   it("ranks by damage among current decks only, and lists an obsolete deck's scores under its notice", async () => {
     await renderRoute("/conquest/scores", withRanged);
     await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(3));
-    expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["1.31T", "1T", "867G"]);
+    expect(bodyRows(scoresTable()).map((r) => r[1])).toEqual(["1.31T", "1T", "867G"]);
+    // The best run is the best current one: the obsolete deck's 2T stays out of it.
+    expect(screen.getByRole("region", { name: "Best run" })).toHaveTextContent("1.31T");
     const group = screen.getByRole("region", { name: "Ranged deck, obsolete", hidden: true });
     expect(bodyRows(group).map((r) => r[0])).toEqual(["2T"]);
     expect(within(group).getByRole("note", { hidden: true })).toHaveTextContent(

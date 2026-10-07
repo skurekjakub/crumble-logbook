@@ -21,9 +21,46 @@ details.obsolete .obsolete-body {
   flex-direction: column;
   gap: var(--sp-2);
 }
+/* The notice: the grey "obsolete since" pill first, the one-line reason, the sources last. */
 .obsolete-notice {
-  border-left: 3px solid var(--warn);
-  padding: 2px 0 2px var(--sp-3);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-1) var(--sp-2);
+  padding: 2px 0;
   color: var(--ink-2);
   font-size: var(--fs-s);
+}
+.obsolete-notice > .pill {
+  flex: none;
+  margin-top: 1px;
+}
+.obsolete-why {
+  flex: 1;
+  min-width: 0;
+}
+.obsolete-reason .clamp {
+  display: inline;
+}
+.obsolete-reason .clamp:has(.clamp-text[style]) {
+  display: block;
+}
+.obsolete-notice .vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .obsolete-notice {
+    flex-wrap: wrap;
+  }
+  .obsolete-why {
+    flex-basis: 100%;
+    order: 1;
+  }
+  .obsolete-notice > .chips.src {
+    order: 2;
+  }
 }

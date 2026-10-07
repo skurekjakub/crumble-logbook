@@ -12,6 +12,7 @@ import {
 import type { Ranking, Score } from "../api/types";
 import type { LeaderboardConfig, ModeSection } from "../app/modes";
 import type { Column } from "../components/DataTable";
+import { Clamp } from "../components/Clamp";
 import { DataTable } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
 import { ErrorBox } from "../components/ErrorBox";
@@ -67,6 +68,7 @@ export interface ScoresViewProps {
 
 /** The ids of the view's sections, which its "On this page" list links to. */
 const PARTS = {
+  top: "scores-top",
   chart: "scores-chart",
   rng: "scores-rng",
   table: "scores-table",
@@ -85,18 +87,54 @@ function byDamage(scores: readonly Score[]): Score[] {
 }
 
 /**
- * Builds the scores table's columns.
+ * A score's evidence as a pill: "screenshot" for a verified score, "claimed" for a text claim.
  *
+ * @param props - the score
+ * @returns the pill
+ */
+function EvidencePill({ score }: { score: Pick<Score, "verified"> }) {
+  return score.verified ? <Pill kind="verified">screenshot</Pill> : <Pill kind="claimed" />;
+}
+
+/**
+ * Builds the scores table's columns: the rank by damage first, then the
+ * damage, deck, evidence, power and 배 (a normaliser, never the rank), the
+ * note cut to one line, the date and the sources.
+ *
+ * @param rows - the ranking's rows, highest damage first, a row's rank being its place in
+ *   them; null for rows outside the ranking (an obsolete deck's), which get no rank column
  * @param series - names each score's deck
  * @param sources - the source index for the chips
  * @returns the columns, in display order
  */
-function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[] {
+function scoreColumns(
+  rows: readonly Score[] | null,
+  series: DeckSeries,
+  sources: SourceIndex,
+): Column<Score>[] {
+  const rank = new Map(rows?.map((s, i) => [s.id, i + 1] as const));
   return [
+    ...(rows
+      ? [
+          {
+            header: "#",
+            cell: (s: Score) => rank.get(s.id) ?? "",
+            className: "n rank",
+          },
+        ]
+      : []),
     {
       header: "Damage",
-      cell: (s) => formatG(s.damageG),
+      cell: (s) => <b>{formatG(s.damageG)}</b>,
       className: "n",
+    },
+    {
+      header: "Deck",
+      cell: (s) => series.name(s.deckId),
+    },
+    {
+      header: "Evidence",
+      cell: (s) => <EvidencePill score={s} />,
     },
     {
       header: "Power",
@@ -106,19 +144,18 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
     {
       header: "배",
       cell: (s) => formatRatio(ratio(s)),
-      className: "n",
-    },
-    {
-      header: "Deck",
-      cell: (s) => series.name(s.deckId),
-    },
-    {
-      header: "Evidence",
-      cell: (s) => (s.verified ? <Pill kind="verified">screenshot</Pill> : <Pill kind="claimed" />),
+      className: "n muted",
     },
     {
       header: "Notes",
-      cell: (s) => s.note ?? "",
+      cell: (s) =>
+        s.note ? (
+          <Clamp lines={1} perLine={45}>
+            {s.note}
+          </Clamp>
+        ) : (
+          ""
+        ),
       className: "wide",
     },
     {
@@ -128,14 +165,63 @@ function scoreColumns(series: DeckSeries, sources: SourceIndex): Column<Score>[]
     },
     {
       header: "Source",
-      cell: (s) => <SourceChips ids={s.sources} sources={sources} />,
+      cell: (s) => <SourceChips ids={s.sources} sources={sources} max={2} />,
     },
   ];
 }
 
 /**
- * A mode's posted scores (scatter, RNG factor cards and a damage-ordered
- * table, narrowed by `?deck=`) and, when the mode has one, its leaderboard
+ * The best run by damage, set apart above the chart: its damage large, its
+ * power, 배 and deck, its evidence pill, its note cut to one line, and its
+ * sources at the end. Nothing when there are no scores.
+ *
+ * @param props - the ranked scores, highest damage first, the deck series and the source index
+ * @returns the card, or null
+ */
+function TopRun({
+  scores,
+  series,
+  sources,
+}: {
+  scores: readonly Score[];
+  series: DeckSeries;
+  sources: SourceIndex;
+}) {
+  const top = scores[0];
+  if (!top) return null;
+  const r = ratio(top);
+  return (
+    <section className="card top-run" aria-labelledby={PARTS.top}>
+      <span className="top-rank" aria-hidden="true">
+        #1
+      </span>
+      <div className="top-main">
+        <h3 id={PARTS.top}>Best run</h3>
+        <div className="top-figure">
+          <span className="top-dmg">{formatG(top.damageG)}</span>
+          <EvidencePill score={top} />
+        </div>
+        <div className="top-meta">
+          <span>{top.powerG != null ? `at ${formatG(top.powerG)} power` : "power not shown"}</span>
+          {r != null ? <span>{r}배</span> : null}
+          <span>{series.name(top.deckId)}</span>
+          {top.date ? <span>{top.date}</span> : null}
+        </div>
+        {top.note ? (
+          <div className="muted">
+            <Clamp lines={1}>{top.note}</Clamp>
+          </div>
+        ) : null}
+      </div>
+      <SourceChips ids={top.sources} sources={sources} max={2} />
+    </section>
+  );
+}
+
+/**
+ * A mode's posted scores (the best run by damage set apart, the scatter, a
+ * damage-ranked table and the RNG factor cards, narrowed by `?deck=`) and,
+ * when the mode has one, its leaderboard
  * (`?season=`, `?board=`), with an "On this page" list of those parts. A
  * failed deck list is reported; the scores then show without deck names or
  * colours. The chart and the damage-ordered table hold the scores of
@@ -176,10 +262,11 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
     scores.data && !pickedObsolete
       ? groupByObsoleteDeck(scores.data, allDecks).map((g) => ({ ...g, rows: byDamage(g.rows) }))
       : [];
+  const table = scores.data ? byDamage(ranked(scores.data)) : [];
   const toc = [
     { id: PARTS.chart, label: "Score chart" },
-    ...(rng.data?.length ? [{ id: PARTS.rng, label: "RNG factors" }] : []),
     ...(scores.data ? [{ id: PARTS.table, label: "Posted scores" }] : []),
+    ...(rng.data?.length ? [{ id: PARTS.rng, label: "RNG factors" }] : []),
     ...(retired.length ? [{ id: PARTS.obsolete, label: "Obsolete" }] : []),
     ...(mode.leaderboard ? [{ id: PARTS.leaderboard, label: mode.leaderboard.title }] : []),
   ];
@@ -218,38 +305,51 @@ export function ScoresView({ mode, search, onSearch }: ScoresViewProps) {
           />
         ) : null}
         <QueryResult query={scores} resource="scores">
-          {(rows) => <ScoreChart scores={ranked(rows)} series={series} />}
+          {(rows) => (
+            <>
+              <TopRun scores={byDamage(ranked(rows))} series={series} sources={sources} />
+              <ScoreChart scores={ranked(rows)} series={series} />
+            </>
+          )}
         </QueryResult>
+        {scores.data && (
+          <div className="grid ranked" role="region" aria-label="Posted scores" id={PARTS.table}>
+            <DataTable
+              columns={scoreColumns(table, series, sources)}
+              rows={table}
+              rowKey={(s) => s.id}
+              layout="stack"
+            />
+          </div>
+        )}
         <QueryResult query={rng} resource="RNG factors">
           {(factors) =>
             factors.length > 0 && (
               <div className="grid g3" id={PARTS.rng}>
                 {factors.map((r) => (
-                  <div key={r.id} className="card">
+                  <div key={r.id} className="card rng-card">
                     <h3>{r.factor}</h3>
-                    <div>{r.effect}</div>
-                    {r.mitigation && <div className="flag">{r.mitigation}</div>}
-                    <SourceChips ids={r.sources} sources={sources} />
+                    <div className="rng-effect">
+                      <Clamp lines={2}>{r.effect}</Clamp>
+                    </div>
+                    {r.mitigation && (
+                      <div className="flag">
+                        <Clamp lines={1}>{r.mitigation}</Clamp>
+                      </div>
+                    )}
+                    <div className="card-foot">
+                      <SourceChips ids={r.sources} sources={sources} max={2} />
+                    </div>
                   </div>
                 ))}
               </div>
             )
           }
         </QueryResult>
-        {scores.data && (
-          <div className="grid" role="region" aria-label="Posted scores" id={PARTS.table}>
-            <DataTable
-              columns={scoreColumns(series, sources)}
-              rows={byDamage(ranked(scores.data))}
-              rowKey={(s) => s.id}
-              layout="stack"
-            />
-          </div>
-        )}
         <ObsoleteSection id={PARTS.obsolete} latest={retired[0]?.deck.obsoleteSince ?? null}>
           <ObsoleteDeckRows
             groups={retired}
-            columns={scoreColumns(series, sources)}
+            columns={scoreColumns(null, series, sources)}
             rowKey={(s) => s.id}
             sources={sources}
             mode={mode}
@@ -331,7 +431,7 @@ function rankingColumns(board: RankingBoardFilter, sources: SourceIndex): Column
     {
       header: "Rank",
       cell: (r) => r.rank,
-      className: "n",
+      className: "n rank",
     },
     {
       header: board === "guilds" ? "Guild" : "Player",
@@ -414,7 +514,7 @@ function Leaderboard({ config, search, onBoard, onSeason, sources }: Leaderboard
     );
 
   return (
-    <div className="grid" role="region" aria-label={config.title} id={PARTS.leaderboard}>
+    <div className="grid ranked" role="region" aria-label={config.title} id={PARTS.leaderboard}>
       <ViewHeader title={config.title} lede={config.lede} />
       <div className="tools">
         <select

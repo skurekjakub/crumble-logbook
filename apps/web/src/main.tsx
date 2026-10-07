@@ -8,6 +8,7 @@ import "./styles/base.css";
 import "./styles/components.css";
 import "./styles/shell.css";
 import "./styles/ui.css";
+import "./styles/conquest.css";
 import "./styles/boss.css";
 import "./styles/pvp.css";
 import "./styles/stage.css";

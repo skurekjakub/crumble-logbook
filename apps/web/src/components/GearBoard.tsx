@@ -1,4 +1,7 @@
 import type { SourceIndex } from "../lib/sources";
+import { Clamp } from "./Clamp";
+import { Pill } from "./Pill";
+import { StancePill } from "./RuneBuilds";
 import { SourceChips } from "./SourceChips";
 
 /** The board's slot ids, in the order the in-game equipment screen shows them (2×2). */
@@ -35,6 +38,8 @@ export interface GearBoardProps {
   sources: SourceIndex;
   /** Display names per slot; defaults to {@link GEAR_SLOT_NAMES}. */
   slotNames?: Partial<Record<BoardSlot, string>>;
+  /** The page's own gear preset (e.g. "raid"); recommendations for another are greyed. */
+  primary?: string | null;
 }
 
 /**
@@ -48,12 +53,50 @@ export function generalGear<G extends GearEntry>(gear: readonly G[]): G[] {
 }
 
 /**
- * The 2×2 gear board with each slot's substat recommendations; empty slots say "No data yet."
+ * One gear recommendation as a row, verdict first: the recommended or avoid
+ * pill, the substats and the preset (context) chip, then the reason cut to
+ * one line, then the sources at the end. A recommendation for another
+ * preset than the page's `primary` one is marked "<context> only" instead
+ * of the verdict and greyed.
  *
- * @param props - the gear recommendations, the source index, and optional slot names
+ * @param props - the recommendation, the source index, and the page's own gear preset, if it has one
+ * @returns the row
+ */
+export function GearRow({
+  g,
+  sources,
+  primary,
+}: {
+  g: GearEntry;
+  sources: SourceIndex;
+  primary?: string | null;
+}) {
+  const other = primary != null && g.context != null && g.context !== primary;
+  return (
+    <div className={other ? "gear-rec other" : "gear-rec"}>
+      <div className="gear-top">
+        {other ? <Pill kind="legacy">{g.context} only</Pill> : <StancePill text={g.substats} />}
+        <span className="stat">{g.substats}</span>
+        {g.context && !other ? <span className="chip ctx">{g.context}</span> : null}
+      </div>
+      {g.why ? (
+        <div className="gear-why muted">
+          <Clamp lines={1}>{g.why}</Clamp>
+        </div>
+      ) : null}
+      <SourceChips ids={g.sources} sources={sources} max={2} />
+    </div>
+  );
+}
+
+/**
+ * The 2×2 gear board with each slot's substat recommendations as
+ * {@link GearRow}s; empty slots say "No data yet."
+ *
+ * @param props - the gear recommendations, the source index, optional slot names and the page's own preset
  * @returns the board
  */
-export function GearBoard({ gear, sources, slotNames }: GearBoardProps) {
+export function GearBoard({ gear, sources, slotNames, primary }: GearBoardProps) {
   return (
     <div className="gearboard">
       {GEAR_SLOTS.map((slot) => {
@@ -62,16 +105,7 @@ export function GearBoard({ gear, sources, slotNames }: GearBoardProps) {
           <div className="gslot" key={slot}>
             <div className="label">{slotNames?.[slot] ?? GEAR_SLOT_NAMES[slot]}</div>
             {rows.length ? (
-              rows.map((g) => (
-                <div key={g.id}>
-                  <div className="stat">{g.substats}</div>
-                  {g.why ? <div className="muted">{g.why}</div> : null}
-                  <div className="chips">
-                    {g.context ? <span className="chip">{g.context}</span> : null}
-                    <SourceChips ids={g.sources} sources={sources} />
-                  </div>
-                </div>
-              ))
+              rows.map((g) => <GearRow key={g.id} g={g} sources={sources} primary={primary} />)
             ) : (
               <div className="muted">No data yet.</div>
             )}

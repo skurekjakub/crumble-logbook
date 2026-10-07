@@ -3,6 +3,7 @@ import { survivalTitle } from "../../lib/fight-track";
 import { byTopic } from "../../lib/mechanics";
 import type { SourceIndex } from "../../lib/sources";
 import { EmptyState } from "../EmptyState";
+import { Pill } from "../Pill";
 import type { FightTimelineEvent } from "../FightTimeline";
 import type { MechanicLike } from "./notes";
 import { EventNote, MechanicNote } from "./notes";
@@ -22,9 +23,10 @@ export interface SurvivalProps {
 }
 
 /**
- * One card per lethal pattern, built from its fight events and the
- * mechanics filed under its topic, titled by the countdown at its anchor
- * event. Patterns with neither are left out.
+ * One card per lethal pattern, titled by the countdown at its anchor event
+ * and marked "lethal": first what it takes to live through it (the
+ * mechanics filed under its topic, set apart), then its fight events.
+ * Patterns with neither are left out.
  *
  * @param props - the boss config, its fight events and mechanics, the fight's length, and the source index
  * @returns the cards, or an empty state when no pattern has data
@@ -46,15 +48,20 @@ export function Survival({ boss, events, mechanics, length, sources }: SurvivalP
   return (
     <div className="grid g2">
       {cards.map((c) => (
-        <div key={c.key} className="card">
+        <div key={c.key} className="card survival-card">
           <div className="card-head">
             <h4>{c.title}</h4>
+            <Pill kind="avoid">lethal</Pill>
           </div>
+          {c.mechs.length ? (
+            <div className="survive-need">
+              {c.mechs.map((m) => (
+                <MechanicNote key={m.id} m={m} sources={sources} />
+              ))}
+            </div>
+          ) : null}
           {c.evs.map((e) => (
             <EventNote key={e.id} e={e} length={length} sources={sources} />
-          ))}
-          {c.mechs.map((m) => (
-            <MechanicNote key={m.id} m={m} sources={sources} />
           ))}
         </div>
       ))}
