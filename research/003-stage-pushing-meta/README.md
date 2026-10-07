@@ -54,7 +54,7 @@ As a falsifiable statement: for stage pushing there is a small documented set of
 
 ## Recommendation
 
-- **In the Rift, push every boss but GingerCraven at 15% with the Milk-first decks, and park at GingerCraven until 차원의 힘 reaches its 35% line.** The decks, best clear first, are in Refresh 2026-10-07; every attempt is in `curated/rift-clears.json`.
+- **In the Rift, push every boss but GingerCraven at 15% with the Milk-first decks, to about level 18 on screenshots (it stalls by 28, dc:80706), and park at GingerCraven until 차원의 힘 reaches its 35% line.** The decks, best clear first, are in Refresh 2026-10-07; every attempt is in `curated/rift-clears.json`.
 - **On main stages, push at 35% with the Bari–Cherry Cola–Brightseeker deck (or the Witchberry auto deck on mob stages), swap per boss slot, and use 15% only on mob stages and Cool Mint.** Before GingerCraven or a Redberry pack at 15%, pad displayed power across the 40% line instead: power gear preset, SSR power runes, guild. The per-chapter lines are in `curated/stage-chapters.json`.
 - **For the user's account:** a stage preset showing about 2.2G sits at 55% to 288-3, 35% to 304-19, and 15% everywhere to 328-30 (computed from `evidence/06-derived/stage-table.json`); a power-rolled stage preset usually shows more than the conquest preset. Reaching 328-30 at 35% needs 4.00G, and entering the Rift early compounds 차원의 힘.
 - Open sub-choice: auto versus manual at 35%. Recommendation: auto with boss auto-summon on mob stages and Cool Mint; manual for GingerCraven, the bikers and the Redberry packs.
@@ -80,19 +80,21 @@ Window: 2026-10-03 to 2026-10-07 for the Rift (the 10-03 round covered it to the
 
 ### The Rift 15% push teams
 
-Ranked by the highest level each has cleared at 15% with the Rift's header power on screen. Every cookie's level, slot and why, the pets, perks and substitutions are in `curated/decks.json`; every attempt is in `curated/rift-clears.json`.
+Ranked by the highest level each has cleared at 15% with the Rift's header power on screen, lowest power first at the same level, as the app's Rift view orders them. Every cookie's level, slot and why, the pets, perks and substitutions are in `curated/decks.json`; every attempt is in `curated/rift-clears.json`.
 
 | Deck | Best 15% clear | Its other 15% clears | Evidence |
 |---|---|---|---|
-| `rift-15-levelled-rye` (10-03 round) | level 18 Werehound Princess, 29.73G (29.0%) | level 19 and 23 trucks on lobby power only | dc:78865 |
+| `rift-15-levelled-rye` (10-03 round) | level 18 Werehound Princess, 29.73G (29.0%) | [^l19] | dc:78865 |
 | `rift-15-milk-first-seeker` (new) | level 17 Cool Mint, 32.97G (35.2%) | trucks: level 14 at 28.76G (39.6%), level 9 at 16.07G (38.0%), level 4 at 7.34G (37.8%) | `05-youtube/frames/kMw3e-05m34.0s.jpg`, `kMw3e-03m09.0s.jpg`, `IAFNe-03m22.0s.jpg`, `z9nK-00m30.0s.jpg` |
-| `rift-15-devil-shred` (10-03 round) | level 12 Cool Mint, 20.45G (34.7%) | | dc:77612 |
-| `rift-15-milk-first-mobs` (new) | level 12 Cool Mint, 18.55G (31.5%) | level 11 Cake Hounds at 18.55G (34.6%); with Wind Archer, levels 6 and 7 at 10.23G | `kMw3e-01m40.0s.jpg`, `kMw3e-00m53.0s.jpg`, `IAFNe-00m58.0s.jpg`, `IAFNe-01m48.0s.jpg` |
 | `rift-15-bari-scorpion` (10-03 round) | level 12 Cool Mint, 18.40G (31.2%) | level 8 Werehound Princess at 12.15G | dc:78353, dc:77709 |
+| `rift-15-milk-first-mobs` (new) | level 12 Cool Mint, 18.55G (31.5%) | level 11 Cake Hounds at 18.55G (34.6%); with Wind Archer, levels 6 and 7 at 10.23G | `kMw3e-01m40.0s.jpg`, `kMw3e-00m53.0s.jpg`, `IAFNe-00m58.0s.jpg`, `IAFNe-01m48.0s.jpg` |
+| `rift-15-devil-shred` (10-03 round) | level 12 Cool Mint, 20.45G (34.7%) | | dc:77612 |
 | `rift-15-milk-first-hammer` (new) | level 8 Werehound Princess, 13.84G (37.2%) | | `IAFNe-02m36.0s.jpg` |
 | no deck: 머핀이's all-Lv.100 shred line | level 7 Cool Mint, 11.20G (35.1%) | | `04-naver/nv/img/nv-50328-1.jpg` |
 
-The new decks are 그니's (Rift rank about 210th-280th, lobby 4.5-5.0G), from his level 6-10 and 11-20 guides (yt:IAFNvjeqUqw, yt:kMw3E6KXUAo). His `rift-15-milk-first-seeker`, by slot (row 1 then row 2): Macaron 100, Rye 88, Cheesecake 100, Skating Queen 100, Tiger Lily 96, Strawberry Crepe 82; Brightseeker 100, Pinot Noir 82, Pomegranate 100, Princess Bari 100, Milk (captain) 100, Cherry Cola 80. Its trucks variant takes Witchberry at 80 for Cherry Cola and Rye down to 77. Stars weren't legible on his screens. His deck rule, shown as an on-screen attack order, is the 10-03 round's levelled-Rye idea made explicit: Milk captains and sits at the top of the attack order so both perks (열정페이, 초고속승진) land on her, the buffers and the main dealer follow, and every cookie that mustn't take the ATK-ordered buffs is levelled to 77-97. For Cool Mint and the Werehound Princess, which launch, the third pet is an airborne-resist pouch; GingerCraven gets Octo Wasabi. GingerCraven itself is `rift-35-gingercraven-wasabi`: cleared at 35% at levels 10, 15 and 20 (49.31G, 41.9%, `kMw3f-08m05.0s.jpg`), never at 15%.
+[^l19]: 롤로노아's L19/L23 trucks (nv:48662): claimed at 15%, lobby power only, no bracket.
+
+The new decks are 그니's (Rift rank about 210th-280th, lobby 4.5-5.0G), from his level 6-10 and 11-20 guides (yt:IAFNvjeqUqw, yt:kMw3E6KXUAo). His `rift-15-milk-first-seeker`, by slot (row 1 then row 2): Macaron 100, Rye 88, Cheesecake 100, Skating Queen 100, Tiger Lily 96, Strawberry Crepe 82; Brightseeker 100, Pinot Noir 82, Pomegranate 100, Princess Bari 100, Milk (captain) 100, Cherry Cola 80. Its trucks variant takes Witchberry at 80 for Cherry Cola; Rye is 88 (77–91 on trucks). Stars weren't legible on his screens. His deck rule: Milk captains and tops the on-screen attack order (posted), so both perks (열정페이, 초고속승진) land on her, with the buffers and the main dealer below her. Mid dealers sit at 77–97, read as 렙따 (inferred, dc:80625), the 10-03 round's levelled-Rye idea. The overlay names a top six, but a cut there is inferred too and isn't strict: Rye is Lv.100 and outside the overlay at levels 6-7 (`IAFN-00m32.0s.jpg`), and Pomegranate is Lv.100 and outside the six in every 그니 deck. For Cool Mint and the Werehound Princess, which launch, the third pet is an airborne-resist pouch; GingerCraven gets Octo Wasabi. GingerCraven itself is `rift-35-gingercraven-wasabi`: cleared at 35% at levels 10, 15 and 20 (49.31G, 41.9%, `kMw3f-08m05.0s.jpg`), never at 15%.
 
 ### Reasoning
 
@@ -121,12 +123,12 @@ The new decks are 그니's (Rift rank about 210th-280th, lobby 4.5-5.0G), from h
 | added | `curated/stage-clears.json`: 289-30 Cool Mint at 15%, GingerCraven at 35% from 235-30 to 328-30, 237-1, and the 320-30 and 318-10 failures | `evidence/r2026-10-07/02-dc/dc/77874.md`, `04-naver/nv/nv-49540.md`, `08-extract/dc-stage.json`, `naver.json` |
 | changed | deck `stage-witch-idle`: Rockstar in Herb's slot, the ceiling (auto past 300 at 35%, 324-18 at 3.75G) and the pet and Bari-deck swaps | `evidence/r2026-10-07/02-dc/dc/78074.md`, `dc/78081.md`, `dc/77654.md` |
 | changed | `curated/rift-bosses.json`: the bosses of levels 7, 13, 16, 17, 28 and 30 | `evidence/r2026-10-07/08-extract/youtube.json`, `dc-rift.json` |
-| changed | `curated/takeaways.json` and `mechanics.json`: the Rift line (every boss but GingerCraven at 15%), 289-30 in the 15% stage line, Rift gear readings, 차원의 힘's pace and the Cool Mint HP hotfix | `evidence/r2026-10-07/03-sites/data-patches.json`, `02-dc/dc/81032.md`, `dc/81393.md` |
+| changed | `curated/takeaways.json` and `mechanics.json`: the Rift line (every boss but GingerCraven at 15%, to about level 18), 289-30 in the 15% stage line, Rift gear readings, 차원의 힘's pace and the Cool Mint HP hotfix | `evidence/r2026-10-07/03-sites/data-patches.json`, `02-dc/dc/81032.md`, `dc/81393.md` |
 | changed | `curated/meta.json`: season, caveat, slots note and the Rift advice | this section |
 | re-captured | web:crumbgg-rift: boss names now the game's own, every number unchanged; rows curated from the earlier text | `evidence/r2026-10-07/03-sites/data-rift.json`, earlier `evidence/r2026-10-03/03-sites/data-rift.json` |
 | re-captured | web:crumbgg-patches: answers 200 (not 404), with the 1.5.002 entry and the 1.4 hotfix | `evidence/r2026-10-07/03-sites/data-patches.json`, earlier `evidence/03-sites/crumbgg_data_patches_v5.json` |
 
-No recommendation was marked obsolete: the new decks clear different levels and bosses from the 10-03 decks, and none beats one of them at the same level and boss.
+No recommendation was marked obsolete. The new decks overlap the 10-03 ones: level 12 Cool Mint (`rift-15-milk-first-mobs` at 18.55G, `rift-15-bari-scorpion` at 18.40G, `rift-15-devil-shred` at 20.45G), level 8 Werehound Princess (`rift-15-milk-first-hammer` at 13.84G, `rift-15-bari-scorpion` at 12.15G) and level 11 Cake Hounds (`rift-15-milk-first-mobs` against `rift-15-mob-witchberry`'s unverified mid-fight screenshot). At the same level the score is the same, and the higher levels the new decks reach came with more 차원의 힘, so none beats an old deck in the same boss slot. `rift-15-mob-witchberry` is the borderline case: it has no accepted clear of its own.
 
 ### Unconfirmed this round
 
@@ -136,7 +138,8 @@ No new source named `rift-shred`, `rift-15-devil-shred`, `rift-15-bari-scorpion`
 
 - The 차원의 힘 level behind 그니's clears: his header shows 축복 Lv.6, not 차원의 힘. A screen with both would settle it.
 - When 그니 played them: the on-screen season countdown puts levels 4-17 at about 09-28 to 10-02, before this round's Rift window; the videos went up on 10-04 and 10-05.
-- Several pets and one cookie on 그니's screens (a yellow 20★ pet, a red-brown 20★ pet, a yellow-haired Lv.100 cookie in his GingerCraven decks); whether his 복주머니 is 색동 주머니.
+- Some pets on 그니's screens (a yellow 20★ pet, a red-brown 20★ pet); whether his 복주머니 is 색동 주머니.
+- The yellow-haired Lv.100 cookie in 그니's level-15 and -20 GingerCraven copies (the last card in `kMw3f-08m05.0s.jpg`) may be Moon Rabbit (감감술래 놀이 달토끼맛 쿠키), low confidence: its rabbit-eared, cherry-bowed portrait (`kMw3-07m12.0s.jpg`) and Grass defense card match 머핀이's row 2 slot 6 in `04-naver/nv/img/nv-50328-2.jpg`, which that round's extraction reads as Moon Rabbit.
 - A boss-HP table from an unnamed site (dc:80968) claims big Rift HP raises next patch (Cake Hounds +478%); crumb.gg's 1.5.002 data shows 0.7-1.4% boss HP changes. Season 2's first clears will settle it.
 - The level cap: 150 in a leak (dc:79865), 120 in the patch notes (nv:50417).
 - The date the Cool Mint Rift HP hotfix went live.

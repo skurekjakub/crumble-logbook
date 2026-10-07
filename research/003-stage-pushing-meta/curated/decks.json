@@ -489,7 +489,7 @@
   "name_en": "Witchberry–Rockstar idle deck (300+ mob stages)",
   "name_kr": "위치 락스타 방치덱",
   "status": "alt",
-  "ceiling": "Auto past 300 at 35%: 324-18 at 3.75G (dc:78074); with unattended retries it clears Cool Mint and GingerCraven too (dc:78081).",
+  "ceiling": "Auto past 300 at 35%: 324-18 at 3.75G (dc:78074). Claimed, endless-retry macro: Cool Mint and GingerCraven too; village Cool Mint stalls until the pet swap (dc:78081).",
   "summary": "AFK deck: Witchberry carries mob waves; Rockstar (tested over Strawberry Shortcake) adds the Pierce synergy. dc:77126 and 서신우's 300+ guide agree.",
   "cookies": [
    {
@@ -560,7 +560,7 @@
   ],
   "substitutions": [
    "Herb in Rockstar's slot (the 2026-09-28 lineup) for more healing.",
-   "Hot Doggie → 색동 주머니 against Cool Mint and other launch bosses (dc:78081, dc:77654).",
+   "Hot Doggie → 복주머니, likely 색동 주머니, against Cool Mint and other launch bosses (dc:78081, dc:77654).",
    "Bari charge deck for the snowfield and the desert bombers (dc:78074)."
   ],
   "sources": [
@@ -770,7 +770,7 @@
   "name_kr": "이면 우유 공순위 시커덱",
   "status": "meta",
   "ceiling": "Rift level 17 at 15% (Cool Mint, 32.97G Rift power); trucks at levels 14 (28.76G), 9 and 4. Screenshots (yt:kMw3E6KXUAo, yt:IAFNvjeqUqw).",
-  "summary": "그니's 15% deck for Cool Mint and the trucks: Milk captains at the top of the attack order, mid dealers levelled to 77–97 below the buffers.",
+  "summary": "그니's 15% deck for Cool Mint and the trucks: Milk captains atop the attack order (posted); mid dealers sit at 77–97, read as level-downs (inferred).",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
@@ -781,8 +781,8 @@
    {
     "kr": "호밀맛 쿠키",
     "slot": "row1-2",
-    "level": "88 (77 against the trucks): out of the top six",
-    "why": "Low-waste dealer, levelled so the ATK-ordered buffs skip it."
+    "level": "88 (77–91 on trucks): out of the top six",
+    "why": "Low-waste dealer; its lower level reads as a level-down (렙따)."
    },
    {
     "kr": "치즈케이크맛 쿠키",
@@ -800,7 +800,7 @@
     "kr": "정글전사 쿠키",
     "slot": "row1-5",
     "level": "96: just under the buffers",
-    "why": "Single-target ranged damage on the boss, kept out of the top six."
+    "why": "Single-target ranged damage on the boss, outside the top six."
    },
    {
     "kr": "딸기크레페맛 쿠키",
@@ -836,7 +836,7 @@
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "slot": "row2-5",
     "level": "100",
-    "why": "Captain and healer at the top of the attack order, so both perks land on her."
+    "why": "Captain-healer atop the attack order; both perks land on her."
    },
    {
     "kr": "체리콜라맛 쿠키",
@@ -853,7 +853,7 @@
    "마카롱맛 쿠키",
    "치즈케이크맛 쿠키"
   ],
-  "atk_order_note": "그니's on-screen attack order: Milk on top takes both perks; the cookies below Lv.100 stay out of the top six.",
+  "atk_order_note": "그니's on-screen attack order, Milk on top (posted). The six-cookie cut is inferred: Lv.100 Pomegranate sits outside it.",
   "pets": [
    "무한바퀴 (likely: the Rift's SSR reward pet)",
    "복주머니 (airborne resist; likely 색동 주머니)"
@@ -861,7 +861,7 @@
   "perks": "열정페이 + 초고속승진, both on Milk (captain, top ATK); 베테랑 용병단 Lv.4",
   "formation": "Slots as on 그니's level-17 formation screen (lobby 4.72G).",
   "substitutions": [
-   "Trucks (levels 4, 9, 14): Witchberry (Lv.80) for Cherry Cola, Rye down to 77–91; Strawberry Crepe and Cherry Cola swap freely.",
+   "Trucks (levels 4, 9, 14): Witchberry (Lv.80) for Cherry Cola, Rye at 77–91; Strawberry Crepe and Cherry Cola swap freely.",
    "Cool Mint: Witchberry can replace Brightseeker (그니's subtitle).",
    "Third pet: 복주머니 on Cool Mint and the Werehound Princess, whose skills launch."
   ],
@@ -908,7 +908,7 @@
     "kr": "정글전사 쿠키",
     "slot": "row1-5",
     "level": "95: just under the buffers",
-    "why": "Ranged damage kept out of the top six."
+    "why": "Ranged damage from outside the top six."
    },
    {
     "kr": "딸기크레페맛 쿠키",
@@ -944,7 +944,7 @@
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "slot": "row2-5",
     "level": "100",
-    "why": "Captain at the top of the attack order, so both perks land on her."
+    "why": "Captain-healer atop the attack order; both perks land on her."
    },
    {
     "kr": "체리콜라맛 쿠키",
@@ -961,7 +961,7 @@
    "마카롱맛 쿠키",
    "치즈케이크맛 쿠키"
   ],
-  "atk_order_note": "그니's on-screen attack order: Milk on top takes both perks; the cookies below Lv.100 stay out of the top six.",
+  "atk_order_note": "그니's on-screen attack order, Milk on top (posted). The six-cookie cut is inferred: Lv.100 Pomegranate, and Rye at levels 6–7, sit outside.",
   "pets": [
    "무한바퀴 (likely: the Rift's SSR reward pet)",
    "복주머니 on Cool Mint (airborne resist; likely 색동 주머니)"
@@ -969,7 +969,7 @@
   "perks": "열정페이 + 초고속승진, both on Milk (captain, top ATK)",
   "formation": "Slots as on 그니's level-11 formation screen (lobby 4.67G).",
   "substitutions": [
-   "Levels 6–7: Wind Archer (Lv.100, fourth in the attack order) for Witchberry, Rye down to the top-six order.",
+   "Levels 6–7: Wind Archer (Lv.100, fourth) for Witchberry; Rye stays Lv.100, below the top six.",
    "Level 12 (Cool Mint): Brightseeker can replace Witchberry; 복주머니 as third pet."
   ],
   "sources": [
@@ -1020,7 +1020,7 @@
     "kr": "정글전사 쿠키",
     "slot": "row1-6",
     "level": "94: just under the buffers",
-    "why": "Ranged damage kept out of the top six."
+    "why": "Ranged damage from outside the top six."
    },
    {
     "kr": "브라이트시커 쿠키",
@@ -1050,13 +1050,13 @@
     "kr": "바리공주맛 쿠키",
     "slot": "row2-5",
     "level": "80: out of the top six",
-    "why": "Charge damage without taking the buffs; Dark Choco can replace her."
+    "why": "Charge damage at Lv.80, outside the top six; Dark Choco can replace her."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "slot": "row2-6",
     "level": "100",
-    "why": "Captain at the top of the attack order, so both perks land on her."
+    "why": "Captain-healer atop the attack order; both perks land on her."
    }
   ],
   "pets": [
@@ -1096,8 +1096,8 @@
    {
     "kr": "피노누아맛 쿠키",
     "slot": "row1-3",
-    "level": "82 (60 at level 20): out of the top six",
-    "why": "Airborne counter, levelled below the buffers."
+    "level": "82 at level 10, 100 at 15, 60 at 20",
+    "why": "Airborne counter; below Lv.100 in the level-10 and -20 copies."
    },
    {
     "kr": "석류맛 쿠키",
@@ -1109,7 +1109,7 @@
     "kr": "정글전사 쿠키",
     "slot": "row1-5",
     "level": "95 (60 at level 20): below the buffers",
-    "why": "Ranged damage kept out of the top six."
+    "why": "Ranged damage from outside the top six."
    },
    {
     "kr": "허브맛 쿠키",
@@ -1145,7 +1145,7 @@
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "slot": "row2-5",
     "level": "100",
-    "why": "Captain at the top of the attack order, so both perks land on her."
+    "why": "Captain-healer atop the attack order; both perks land on her."
    },
    {
     "kr": "다크초코 쿠키",
