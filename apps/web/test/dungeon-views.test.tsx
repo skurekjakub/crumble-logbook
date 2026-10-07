@@ -323,7 +323,7 @@ describe("the Crumble Dungeon section", () => {
     expect(within(card).getAllByText("Lv.100").length).toBeGreaterThan(0);
     expect(card).toHaveTextContent("ATK #2: levelled down until only Milk's ATK is higher");
     expect(card).toHaveTextContent("First beam target after Milk.");
-    expect(card.querySelector(".order")).toHaveTextContent("Milk Cookie›Scorpion Cookie");
+    expect(card.querySelector(".order")).toHaveTextContent("Milk›Scorpion");
   });
 });
 
@@ -377,7 +377,7 @@ describe("the runs board", () => {
     expect(top![7]).toBe("Screenshot");
     await waitFor(() =>
       expect(within(ranked).getAllByRole("row")[1]!.querySelector(".order")).toHaveTextContent(
-        "Milk Cookie›Scorpion Cookie",
+        "Milk›Scorpion",
       ),
     );
     expect(top![9]).toContain("The post puts Scorpion second.");
@@ -491,19 +491,17 @@ describe("the lineups", () => {
   it("shows a lineup's ATK order, level rule, first wave, what it leaves out and the exclusions it keeps", async () => {
     await renderDungeon("/dungeon/lineups");
     const card = (await screen.findByRole("heading", { name: /ND러너/ })).closest("article")!;
-    await waitFor(() =>
-      expect(card.querySelector(".order")).toHaveTextContent("Milk Cookie›Scorpion Cookie"),
-    );
+    await waitFor(() => expect(card.querySelector(".order")).toHaveTextContent("Milk›Scorpion"));
     expect(card).toHaveTextContent("Excluded cookies at Lv.1.");
     expect(card).toHaveTextContent("The list names 3 cookies; the first 40 by power deploy first.");
     const wave = card.querySelector("ol.wave")!;
     expect([...wave.querySelectorAll("li")].map((li) => li.textContent)).toEqual([
-      `Milk Cookie ${MILK}`,
-      `Scorpion Cookie ${SCORPION}`,
+      `Milk ${MILK}`,
+      `Scorpion ${SCORPION}`,
       `Ion Cookie Robot ${ION}`,
     ]);
     expect(wave.querySelector("li.flagged")).toHaveTextContent("Ion Cookie Robot");
-    await waitFor(() => expect(card).toHaveTextContent(`Oven Wanderer Cookie ${OVEN} · Charger`));
+    await waitFor(() => expect(card).toHaveTextContent(`Oven Wanderer ${OVEN} · Charger`));
     expect(card).toHaveTextContent("is on the exclusions list (Charger, disputed)");
     expect(within(card).getByRole("link", { name: "Milk–Scorpion beam lineup" })).toHaveAttribute(
       "href",
@@ -537,7 +535,7 @@ describe("the exclusions", () => {
     await renderDungeon("/dungeon/exclusions");
     await waitFor(() => expect(bodyRows(document)).toHaveLength(EXCLUSIONS.length));
     const [oven, ion] = bodyRows(document);
-    expect(oven![0]).toContain("Oven Wanderer Cookie");
+    expect(oven![0]).toContain("Oven Wanderer");
     expect(oven![1]).toBe("Charger");
     expect(oven![2]).toBe("Excluded");
     expect(oven![3]).toBe("Drags Milk off the ranged dealers.");

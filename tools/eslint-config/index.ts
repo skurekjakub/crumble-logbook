@@ -130,6 +130,7 @@ export function crumbleConfig(rootDir: string) {
         "apps/server/src/main.ts",
         "apps/server/src/app.ts",
         "packages/capture/src/cli.ts",
+        "apps/web/scripts/**",
       ],
       rules: { "no-console": "off" },
     },

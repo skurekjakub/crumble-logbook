@@ -18,11 +18,12 @@
     "dev:reseed": "node -e \"for (const f of ['crumble.db', 'crumble.db-wal', 'crumble.db-shm']) require('fs').rmSync('data/' + f, { force: true })\" && pnpm dev",
     "dev:server": "pnpm --filter @crumble/server dev",
     "dev:web": "pnpm --filter @crumble/web dev",
+    "icons:fetch": "pnpm --filter @crumble/web icons:fetch",
     "import:record": "pnpm --filter @crumble/server import:record",
     "db:export": "pnpm --filter @crumble/server db:export",
     "db:restore": "pnpm --filter @crumble/server db:restore",
     "db:scope": "pnpm --filter @crumble/server db:scope",
-    "build:vercel": "pnpm --filter @crumble/web build && pnpm --filter @crumble/server build:vercel",
+    "build:vercel": "pnpm --filter @crumble/web icons:fetch --soft && pnpm --filter @crumble/web build && pnpm --filter @crumble/server build:vercel",
     "capture": "pnpm --filter @crumble/capture capture"
   },
   "devDependencies": {
