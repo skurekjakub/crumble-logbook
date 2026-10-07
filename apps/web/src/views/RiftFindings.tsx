@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import {
   decksQuery,
   recommendationsQuery,
@@ -9,9 +10,13 @@ import {
   timelineQuery,
 } from "../api/queries";
 import type { ModeSection, RiftConfig } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { SourceChips } from "../components/SourceChips";
 import type { SourceIndex } from "../lib/sources";
-import { mentionsAny } from "../lib/stage";
+import { mentionsAny, shortDeckName } from "../lib/stage";
+
+/** How many findings the card lists before "Show all". */
+export const FINDINGS_SHOWN = 8;
 
 /** One line of the Rift page's list of the record's other Rift findings. */
 interface Finding {
@@ -45,9 +50,11 @@ export interface RiftFindingsProps {
  * events, RNG factors and current rune lines, the "for your account" advice,
  * clear notes, and what the current decks not played in the Rift say
  * (summary, ceiling, notes, a cookie's why), wherever the text mentions the
- * Rift. Rune lines
- * tied to a Rift deck count too. Mechanics filed under other topics reach
- * the page through their `alsoTopics` instead (see `TopicNotes`).
+ * Rift. Rune lines tied to a Rift deck count too. Mechanics filed under
+ * other topics reach the page through their `alsoTopics` instead (see
+ * `TopicNotes`). Each finding reads kind first, its text cut to a line
+ * (expanding on demand) and its sources last; the first
+ * {@link FINDINGS_SHOWN} show, and "Show all" lists the rest.
  *
  * @param props - the stage mode, the Rift config, the source index and the card's id
  * @returns the card, or null when nothing else mentions the Rift
@@ -60,6 +67,7 @@ export function RiftFindings({ mode, rift, sources, id }: RiftFindingsProps) {
    * @returns `true` if the row is about the Rift
    */
   const about = (text: string) => mentionsAny(text, rift.mentions);
+  const [all, setAll] = useState(false);
   const takeaways = useQuery(takeawaysQuery(mode.scope)).data ?? [];
   const timeline = useQuery(timelineQuery(mode.scope)).data ?? [];
   const rng = useQuery(rngFactorsQuery(mode.scope)).data ?? [];
@@ -127,7 +135,7 @@ export function RiftFindings({ mode, rift, sources, id }: RiftFindingsProps) {
           .filter((line): line is { key: string; text: string } => !!line.text && about(line.text))
           .map((line) => ({
             key: `d${d.id}-${line.key}`,
-            label: `Deck: ${d.nameEn}`,
+            label: `Deck: ${shortDeckName(d.nameEn)}`,
             text: line.text,
             detail: null,
             sources: d.sources,
@@ -144,18 +152,40 @@ export function RiftFindings({ mode, rift, sources, id }: RiftFindingsProps) {
       })),
   ];
   if (!items.length) return null;
+  const listed = all ? items : items.slice(0, FINDINGS_SHOWN);
   return (
-    <section className="card" id={id}>
-      <h3>Elsewhere in the record</h3>
-      <ul className="clean rift-findings">
-        {items.map((item) => (
+    <section className="card" id={id} aria-labelledby={`${id}-title`}>
+      <h3 id={`${id}-title`}>Elsewhere in the record</h3>
+      <ul className="rift-findings">
+        {listed.map((item) => (
           <li key={item.key}>
-            <span className="label">{item.label}</span> {item.text}
-            {item.detail ? <div className="muted">{item.detail}</div> : null}
-            <SourceChips ids={item.sources} sources={sources} />
+            <span className="kind" title={item.label}>
+              {item.label}
+            </span>{" "}
+            <span className="finding">
+              <Clamp
+                lines={1}
+                length={item.text.length + (item.detail ? item.detail.length + 1 : 0)}
+              >
+                {item.text}
+                {item.detail ? <span className="muted"> {item.detail}</span> : null}
+              </Clamp>
+            </span>
+            <SourceChips ids={item.sources} sources={sources} max={1} />
           </li>
         ))}
       </ul>
+      {items.length > listed.length ? (
+        <button
+          type="button"
+          className="show-all"
+          onClick={() => {
+            setAll(true);
+          }}
+        >
+          Show all {items.length}
+        </button>
+      ) : null}
     </section>
   );
 }

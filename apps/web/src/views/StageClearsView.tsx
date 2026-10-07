@@ -8,17 +8,16 @@ import {
 } from "../api/queries";
 import type { StageClear } from "../api/types";
 import type { ModeSection, StageConfig } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { CookieName } from "../components/CookieName";
 import type { Column, TableFilter, TableSelect } from "../components/DataTable";
 import { applyFilters, DataTable, TableTools } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
-import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { optionalKey, optionalText } from "../lib/search";
-import { formatPower } from "../lib/stage";
-import { DeckName } from "./DeckLink";
 import { CopyHeader } from "./ModeViewHeader";
+import { BracketTag, EvidencePill, PowerCell, Rank, ResultPill, ShortDeckLink } from "./StageParts";
 
 /** Select labels per result. */
 const RESULTS: Readonly<Record<StageClear["result"], string>> = {
@@ -38,8 +37,10 @@ interface ClearGroup {
   id: string;
   /** Its heading. */
   title: string;
-  /** What its rows are. */
-  lede: string;
+  /** What its rows are, in a line; none when the view's own explainer says it. */
+  lede: string | null;
+  /** Whether its rows are a ranking, numbered from #1. */
+  ranked: boolean;
   /**
    * Tells whether an attempt belongs under the heading.
    *
@@ -57,25 +58,29 @@ const GROUPS: readonly ClearGroup[] = [
   {
     id: "clears-ranked",
     title: "Ranked clears",
-    lede: "Clears the record accepts, furthest stage first and, at one stage, lowest power first.",
+    lede: null,
+    ranked: true,
     test: (c) => c.standing === "accepted" && c.result === "clear",
   },
   {
     id: "clears-failed",
     title: "Failures",
-    lede: "Attempts the record accepts that didn't clear.",
+    lede: "Accepted attempts that didn't clear.",
+    ranked: false,
     test: (c) => c.standing === "accepted" && c.result === "fail",
   },
   {
     id: "clears-unverified",
     title: "Unverified claims",
-    lede: "Claimed without a screenshot; the record neither rests on them nor rejects them.",
+    lede: "No screenshot: neither relied on nor rejected.",
+    ranked: false,
     test: (c) => c.standing === "unverified",
   },
   {
     id: "clears-rejected",
     title: "Rejected claims",
     lede: "Claims the record argues against.",
+    ranked: false,
     test: (c) => c.standing === "rejected",
   },
 ];
@@ -115,18 +120,20 @@ export interface StageClearsViewProps {
 
 /**
  * The documented stage attempts: the clears the record accepts, ranked
- * furthest stage first and, at one stage, lowest power first; then, each
- * under its own heading, the failures, the unverified claims and the
- * rejected ones. Every row shows the stage and boss, era, team power as
- * posted (with the stage's recommended power when known), bracket,
- * result, how it was played, what backs it, the deck (marked when it is
- * obsolete; an attempt on an obsolete deck keeps its place, since it is a
- * dated measurement), a note and sources.
- * A boss is named in English as its row names it, else as the stage
- * tables do, else as the glossary does. The result, era and a text filter
- * live in the URL and apply to every group; the text filter matches the
- * names a row shows (stage, boss in Korean and English, deck), its team
- * power and its note.
+ * furthest stage first and, at one stage, lowest power first, each with its
+ * place (#1 marked); then, each under its own heading, the failures, the
+ * unverified claims and the rejected ones. A row reads verdict first: the
+ * stage (flagged when it was played before the easing), the boss with its
+ * portrait, the team power short (as posted in the tooltip, the stage's
+ * recommended power under it), the bracket as a tinted tag, the result and
+ * what backs it as pills (how it was played under the result), the deck by
+ * its short name (marked when obsolete; an attempt on an obsolete deck keeps
+ * its place, since it is a dated measurement), the note cut to a line and
+ * the sources last. A boss is named in English as its row names it, else as
+ * the stage tables do, else as the glossary does. The result, era and a
+ * text filter live in the URL and apply to every group; the text filter
+ * matches the names a row shows (stage, boss in Korean and English, deck),
+ * its team power and its note.
  *
  * @param props - the stage mode, its stage config, the search params and their setter
  * @returns the clears view
@@ -152,46 +159,85 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
    */
   const bossEnOf = (c: StageClear) => c.bossEn ?? bossNames.get(c.bossKr) ?? c.en;
   /**
-   * The deck name a row shows.
+   * The deck name a row's filter matches.
    *
    * @param c - the attempt
    * @returns the deck's English name (its id before the decks load), or null without a deck
    */
   const deckOf = (c: StageClear) => (c.deckId ? (decks?.get(c.deckId)?.nameEn ?? c.deckId) : null);
-  const columns: Column<StageClear>[] = [
-    { header: "Stage", cell: (c) => `${c.chapter}-${c.stageNo}`, className: "n" },
-    { header: "Boss", cell: (c) => <CookieName kr={c.bossKr} en={bossEnOf(c)} /> },
-    { header: "Era", cell: (c) => ERAS[c.era] },
-    {
-      header: "Team power",
-      cell: (c) => (
-        <>
-          {c.teamPower}
-          {c.recommendedPower ? (
-            <div className="muted">of {formatPower(c.recommendedPower)} recommended</div>
-          ) : null}
-        </>
-      ),
-    },
-    { header: "Bracket", cell: (c) => `${c.bracket}%`, className: "n" },
-    {
-      header: "Result",
-      cell: (c) => <span className={`result ${c.result}`}>{RESULTS[c.result]}</span>,
-    },
-    { header: "Play", cell: (c) => c.play ?? "?" },
-    {
-      header: "Evidence",
-      cell: (c) => (
-        <Pill kind={c.evidence === "screenshot" ? "verified" : "claimed"}>{c.evidence}</Pill>
-      ),
-    },
-    {
-      header: "Deck",
-      cell: (c) => (c.deckId ? <DeckName id={c.deckId} deck={decks?.get(c.deckId)} /> : "–"),
-    },
-    { header: "Note", cell: (c) => c.note ?? "", className: "wide" },
-    { header: "Sources", cell: (c) => <SourceChips ids={c.sources} sources={sources} /> },
-  ];
+  /**
+   * A group's columns: its place first when the group is a ranking.
+   *
+   * @param rankOf - each ranked clear's place, by id
+   * @param ranked - whether the group is the ranking
+   * @returns the columns
+   */
+  const columnsFor = (rankOf: ReadonlyMap<number, number>, ranked: boolean) => {
+    const columns: Column<StageClear>[] = [
+      {
+        header: "Stage",
+        cell: (c) => (
+          <span className="stage-at">
+            <b>
+              {c.chapter}-{c.stageNo}
+            </b>
+            {c.era === "pre-easing" ? (
+              <span className="era" title="Played before the 2026-09-23 easing">
+                pre-easing
+              </span>
+            ) : null}
+          </span>
+        ),
+        className: "n",
+      },
+      { header: "Boss", cell: (c) => <CookieName kr={c.bossKr} en={bossEnOf(c)} /> },
+      {
+        header: "Team power",
+        cell: (c) => (
+          <PowerCell posted={c.teamPower} powerG={c.powerG} recommended={c.recommendedPower} />
+        ),
+        className: "n",
+      },
+      { header: "Bracket", cell: (c) => <BracketTag pct={c.bracket} /> },
+      {
+        header: "Result",
+        cell: (c) => (
+          <span className="verdict">
+            <ResultPill result={c.result} />
+            <EvidencePill evidence={c.evidence} />
+            {c.play ? <span className="play">{c.play}</span> : null}
+          </span>
+        ),
+      },
+      {
+        header: "Deck",
+        cell: (c) =>
+          c.deckId ? <ShortDeckLink mode={mode} id={c.deckId} deck={decks?.get(c.deckId)} /> : "–",
+        className: "deck",
+      },
+      {
+        header: "Note",
+        cell: (c) =>
+          c.note ? (
+            <Clamp lines={2} perLine={50}>
+              {c.note}
+            </Clamp>
+          ) : null,
+        className: "wide clear-note",
+      },
+      {
+        header: "Sources",
+        cell: (c) => <SourceChips ids={c.sources} sources={sources} max={1} />,
+        className: "src",
+      },
+    ];
+    return ranked
+      ? [
+          { header: "#", cell: (c: StageClear) => <Rank n={rankOf.get(c.id) ?? null} /> },
+          ...columns,
+        ]
+      : columns;
+  };
   const filter: TableFilter<StageClear> = {
     value: search.q ?? "",
     onChange: (q) => onSearch({ q }),
@@ -230,6 +276,10 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
       <QueryResult query={clears} resource="stage clears">
         {(rows) => {
           if (!rows.length) return <EmptyState>No clears recorded yet.</EmptyState>;
+          // Places come from the whole ranking, so a filtered row keeps its number.
+          const rankOf = new Map(
+            rows.filter((c) => GROUPS[0]!.test(c)).map((c, i) => [c.id, i + 1] as const),
+          );
           const kept = applyFilters(rows, filter, select, selects);
           const groups = GROUPS.map((g) => ({ ...g, rows: kept.filter((c) => g.test(c)) })).filter(
             (g) => g.rows.length > 0,
@@ -239,11 +289,16 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
               <TableTools filter={filter} select={select} selects={selects} />
               {groups.length ? (
                 groups.map((g) => (
-                  <section key={g.id} id={g.id} aria-labelledby={`${g.id}-title`}>
+                  <section
+                    key={g.id}
+                    id={g.id}
+                    className={g.ranked ? "clears ranked" : "clears"}
+                    aria-labelledby={`${g.id}-title`}
+                  >
                     <h3 id={`${g.id}-title`}>{g.title}</h3>
-                    <p className="muted">{g.lede}</p>
+                    {g.lede ? <p className="group-lede">{g.lede}</p> : null}
                     <DataTable
-                      columns={columns}
+                      columns={columnsFor(rankOf, g.ranked)}
                       rows={g.rows}
                       rowKey={(c) => c.id}
                       layout="stack"
