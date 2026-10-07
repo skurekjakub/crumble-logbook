@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import { createApp } from "../src/app";
@@ -39,14 +40,23 @@ describe("the API over imported record 001", () => {
     }
   });
 
-  it("serves the scores sorted by damage, with the 1999G run's ratio computed", async () => {
+  it("serves the scores sorted by damage, with the best verified cherry run's ratio computed", async () => {
     const res = await app.request("/api/scores");
     expect(res.status).toBe(200);
     const scores = await readJson<ScoreView[]>(res);
     const damage = scores.map((s) => s.damageG);
     expect(damage).toEqual([...damage].sort((a, b) => b - a));
+    const curated = JSON.parse(
+      readFileSync(
+        join(repoRoot, "research", "001-guild-conquest-meta", "curated", "scores.json"),
+        "utf-8",
+      ),
+    ) as Array<{ damage_g: number; deck: string | null; verified: boolean }>;
+    const best = Math.max(
+      ...curated.filter((s) => s.verified && s.deck === "cherry").map((s) => s.damage_g),
+    );
     const top = scores.find((s) => s.verified && s.deckId === "cherry");
-    expect(Math.floor(top!.damageG)).toBe(1999);
+    expect(top!.damageG).toBe(best);
     expect(top!.ratio).toBe(Math.round(top!.damageG / top!.powerG!));
   });
 
