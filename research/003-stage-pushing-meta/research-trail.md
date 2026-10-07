@@ -84,3 +84,44 @@ The saved searches and the discovery queries are in the DC lane's listings (`02-
 
 - The bracket a Rift fight runs at: the Rift's header power against `curated/rift-levels.json`, with crumb.gg's `dmg` table (`03-sites/data-rift.json`) and 서신우's "차원 기준" lines (nv:49183, nv:49192, nv:49254).
 - The 15% clears and their teams: DCInside screenshots (`02-dc/dc/`), curated in `curated/rift-clears.json` and `curated/decks.json`.
+
+## Round 2026-10-07
+
+Window: the Rift from 2026-10-03, main stages from 2026-09-28, to 2026-10-07. The saved searches reran one capture each (`evidence/r2026-10-07/`); the discovery queries below are the round's own.
+
+### Web rounds
+
+Round 1 queries:
+- 쿠키런 크럼블 차원의 이면 시즌2
+- Cookie Run Crumble Dimensional Rift season 2 October 2026
+- 쿠키런 크럼블 10월 8일 업데이트 레벨 120 샤르도네
+
+Synthesis: the open web has nothing on Rift season 2 or the 10-08 update; the press stops at the 9/23 Chuseok update (Inven Global 26418). As in earlier rounds, the Rift lives on DCInside, the Naver cafe and YouTube.
+
+Round 2 queries:
+- Devsisters CookieRun Crumble Chuseok update dungeon oven
+- 크럼블 이면 15퍼 덱 망치공주 트럭 비틀기
+- "Crumble" "Dimensional" rift 15% team reddit OR discord
+
+Synthesis: the Chuseok article is the 9/23 update again. The Korean slang query returns nothing about the game. The English one surfaced cookierun.wiki's Crumble patch-notes pages (1.1 to 1.4).
+
+Round 3 queries:
+- cookierun.wiki Patch Notes (Crumble) October 8 update level cap 120 Chardonnay
+- cookierun.wiki Dimensional Rift Crumble Dimensional Energy Level season
+- 쿠키런 크럼블 차원의 이면 랭킹 단계 공략 블로그
+
+Synthesis: checked in the browser, cookierun.wiki's patch-notes index stops at 1.4 (2026-09-23) and has no 1.5 page; curl gets a 403 there. Korean blog guides (oslink.io) are beginner team guides with no Rift content. Not used: none of it adds a fact the captures don't.
+
+### Discovery outside the web rounds
+
+- **DCInside** (`02-dc/list-disc-*.tsv`): 시즌2, subject:시즌, subject:층, subject:주차, 샤르도네, 만렙, 뻥투, 차원조각, 무한바퀴, subject:차원의, 이면 20 and 이면 30 found cited posts. Nothing came from 이면 랭킹, subject:랭킹, subject:등수, subject:20단계/25단계/30단계, 120렙, 차원 15, subject:순위, 이면 순위, 렙조절, subject:이계, 이면 투력, subject:성공, subject:깼, subject:뚫, 이면 덱, subject:무바, subject:차힘, subject:15단, subject:망치공주 or subject:들개. Name searches (name:카린, name:Noah, name:노아, name:롤로노아, name:SCANDAL) found nothing new: the Rift posters post as anonymous ㅇㅇ.
+- **Naver cafe search** (`04-naver/search-*.txt`): 차원의 이면 and 이면 found nv:50328 and nv:49390; author:서신우 found nv:50582. Nothing came from 이면 15, 이면 덱, 시즌2 이면, 120레벨, 차원의 힘, 비틀기, 15퍼, 시즌2, 120, author:롤로노아 or author:카린. Several hits need a login (listed in the round's report).
+- **YouTube** (`05-youtube/ytq-*.html`): 차원의 이면 15퍼 surfaced 그니's per-level Rift shorts, which led to his level 6-10 and 11-20 deck guides (yt:IAFNvjeqUqw, yt:kMw3E6KXUAo), the round's main source. Cookie Run Crumble Dimensional Rift surfaced stanley's 35% shorts. Nothing citable came from 이면 15%, 차원의 이면 비틀기, 차원의 이면 20/21/25/30/40단계, 이면 시즌2, 크럼블 120레벨, 크럼블 샤르도네, 크럼블 이면 덱, 그니 차원의 이면, cookierun crumble dimensional rift stanley or 누리머 쿠키런 크럼블.
+- **crumb.gg** (`03-sites/`): its JS names the Rift board `/pub/live?board=dimension_stage` (captured with its 168-hour history) and the 10-08 client's data files `rift_v15.json` and `stages_v15.json` (captured). crumblehub's clear-deck API has no Rift mode (`rift`, `dimension`, `dimension_stage` and `dimensional_rift` answer 400). Sugar Pocket gained a `/dimension/` planner (captured; no teams).
+- **arca.live and Reddit** (`03-sites/`): nothing on the Rift since 10-03; Reddit served a bot check.
+
+### Takeaways (each verified against a capture before use)
+
+- 15% Rift clears with the header power on screen now cover every boss type except GingerCraven: 그니's guides (`05-youtube/frames/kMw3e-*.jpg`, `IAFNe-*.jpg`) and 머핀이's level 7 (`04-naver/nv/img/nv-50328-1.jpg`), curated in `curated/rift-clears.json`.
+- GingerCraven is still a 35% fight in every screenshot (그니 levels 5, 10, 15 and 20).
+- Season 2 (from 10-08) runs on new game data: recommended power ×1.448 and a new boss (`03-sites/data-rift_v15.json`, `06-derived/crumbgg-diff-r2026-10-07.json`).

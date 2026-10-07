@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-03",
- "season": "Game 1.4.002 (after the 2026-09-23 stage easing) · Dimensional Rift season 1 (to 2026-10-08)",
+ "updated": "2026-10-07",
+ "season": "Game 1.4.002 (after the 2026-09-23 stage easing) · Dimensional Rift season 1 (to 2026-10-08) · update 1.5.002 (level cap 120, stages to 364-30, Rift season 2) lands 2026-10-08",
  "lede": "What Korean players push main stages and the Dimensional Rift with while under-powered: the brackets, the 35% and 15% teams, and the per-boss swaps.",
- "caveat": "Main stages as of 2026-09-28, the Rift as of 2026-10-03. Main-stage 15% boss clears are claimed, never shown; Rift 15% screenshots reach level 18, never GingerCraven.",
+ "caveat": "As of 2026-10-07, before the 10-08 update (level cap 120, season 2 Rift power ×1.45) moves every line. Rift 15% screenshots cover every boss but GingerCraven; on main stages, only 289-30 Cool Mint.",
  "record": "research/003-stage-pushing-meta/",
  "footer": "Built from the research record's evidence captures.",
- "formation_slots": "A deck cookie's slot reads row<R>-<C> as in record 002: R is the row on the owner's formation screen (1 = top), C the column left to right. Only the all-in-one deck (dc:70308) posts its slots.",
+ "formation_slots": "A deck cookie's slot reads row<R>-<C> as in record 002: R is the row on the owner's formation screen (1 = top), C the column left to right. The all-in-one deck (dc:70308) and 그니's Rift decks (rift-15-milk-first-*, rift-35-gingercraven-wasabi) post their slots.",
  "you": {
   "summary": "Push at 35% with the Bari–Cherry Cola–Brightseeker deck, swapping per boss slot; use 15% only on mob stages; pad power across the next line before a boss.",
   "changes": [
@@ -16,9 +16,11 @@
    "At about 2.2G on a stage preset: 55% reaches 288-3, 35% reaches 304-19, 15% covers every stage to 328-30 (from the game data).",
    "Reach 328-30 (4.00G for 35%) early: the Rift's 차원의 힘 grows only while you are in it, and early entrants compound.",
    "In the Rift, read your bracket off the header power, never the formation screen: 15% from 20% of the level's recommended power.",
-   "Twist the levels between GingerCraven levels at 15% with the rift-15-* decks; park at each GingerCraven level until 차원의 힘 lifts you to its 35% line."
+   "Push every boss but GingerCraven at 15% with the rift-15-* decks; park at each GingerCraven level until 차원의 힘 lifts you to its 35% line.",
+   "In the 15% Rift decks, make Milk captain and top of the attack order; level the off-buff cookies below 100.",
+   "From 10-08: season 2 asks about 1.45× the power per level and level 120 lifts every preset; re-read the brackets then."
   ],
-  "sources": ["dc:76835", "dc:76814", "dc:75752", "dc:71892", "web:crumblehub-stages", "web:yt-1AyEMtaE-s4", "web:yt-BDuQ279mbP4", "dc:76290", "dc:70308", "dc:78865", "dc:77612", "dc:77709", "dc:78283", "web:crumbgg-rift"]
+  "sources": ["dc:76835", "dc:76814", "dc:75752", "dc:71892", "web:crumblehub-stages", "web:yt-1AyEMtaE-s4", "web:yt-BDuQ279mbP4", "dc:76290", "dc:70308", "dc:78865", "dc:77612", "dc:77709", "dc:78283", "web:crumbgg-rift", "web:yt-kMw3E6KXUAo", "web:yt-IAFNvjeqUqw", "nv:50328", "dc:77874", "web:crumbgg-rift-v15", "nv:50417"]
  },
  "modes": {
   "stage": {
