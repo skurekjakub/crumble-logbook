@@ -110,6 +110,7 @@ describe("app shell", () => {
       "Stage 스테이지",
       "Crumble Dungeon 크럼블 던전",
       "Team power 팀투",
+      "Account",
       "Research",
       "Sources",
       "Glossary",

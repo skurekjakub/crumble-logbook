@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ModeRouteImport } from './routes/$mode'
+import { Route as AccountRouteImport } from './routes/account'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as SourcesRouteImport } from './routes/sources'
@@ -50,6 +51,11 @@ const IndexRoute = IndexRouteImport.update({
 const ModeRoute = ModeRouteImport.update({
   id: '/$mode',
   path: '/$mode',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountRoute = AccountRouteImport.update({
+  id: '/account',
+  path: '/account',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlossaryRoute = GlossaryRouteImport.update({
@@ -206,6 +212,7 @@ const ResearchSlugCapturesRoute = ResearchSlugCapturesRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$mode': typeof ModeRouteWithChildren
+  '/account': typeof AccountRoute
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
@@ -239,6 +246,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/account': typeof AccountRoute
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
@@ -274,6 +282,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$mode': typeof ModeRouteWithChildren
+  '/account': typeof AccountRoute
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
@@ -310,6 +319,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$mode'
+    | '/account'
     | '/glossary'
     | '/research'
     | '/sources'
@@ -343,6 +353,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/account'
     | '/glossary'
     | '/research'
     | '/sources'
@@ -377,6 +388,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$mode'
+    | '/account'
     | '/glossary'
     | '/research'
     | '/sources'
@@ -412,6 +424,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ModeRoute: typeof ModeRouteWithChildren
+  AccountRoute: typeof AccountRoute
   GlossaryRoute: typeof GlossaryRoute
   ResearchRoute: typeof ResearchRoute
   SourcesRoute: typeof SourcesRoute
@@ -432,6 +445,13 @@ declare module '@tanstack/react-router' {
       path: '/$mode'
       fullPath: '/$mode'
       preLoaderRoute: typeof ModeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/glossary': {
@@ -710,6 +730,7 @@ const ModeRouteWithChildren = ModeRoute._addFileChildren(ModeRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ModeRoute: ModeRouteWithChildren,
+  AccountRoute: AccountRoute,
   GlossaryRoute: GlossaryRoute,
   ResearchRoute: ResearchRoute,
   SourcesRoute: SourcesRoute,

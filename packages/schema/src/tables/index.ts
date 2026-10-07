@@ -17,3 +17,4 @@ export * from "./team-power";
 export * from "./citations";
 export * from "./fact-claims";
 export * from "./captures";
+export * from "./account";

@@ -16,6 +16,7 @@ import "./styles/stage.css";
 import "./styles/dungeon.css";
 import "./styles/obsolete.css";
 import "./styles/team-power.css";
+import "./styles/account.css";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000 } },

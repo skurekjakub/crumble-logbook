@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { httpStatus } from "./errors";
 import { REGISTRY as R } from "./registry";
+import { accountRouter } from "./routes/account";
 import { capturesRouter } from "./routes/captures";
 import { crudRouter } from "./routes/content";
 import { exportRouter } from "./routes/export";
@@ -75,6 +76,7 @@ export function createApp(services: Services) {
     .route(R.rankings.path, rankingsRouter(services.rankings))
     .route(R.researchRecords.path, recordsRouter(services.records))
     .route(R.captures.path, capturesRouter(services.captures))
+    .route(R.accountSnapshots.path, accountRouter(services.account))
     .route("/export", exportRouter(services.export))
     .onError((err, c) => {
       const known = httpStatus(err);

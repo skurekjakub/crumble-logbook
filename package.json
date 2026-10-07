@@ -20,6 +20,7 @@
     "dev:web": "pnpm --filter @crumble/web dev",
     "icons:fetch": "pnpm --filter @crumble/web icons:fetch",
     "import:record": "pnpm --filter @crumble/server import:record",
+    "import:account": "pnpm --filter @crumble/server import:account",
     "db:export": "pnpm --filter @crumble/server db:export",
     "db:restore": "pnpm --filter @crumble/server db:restore",
     "db:scope": "pnpm --filter @crumble/server db:scope",

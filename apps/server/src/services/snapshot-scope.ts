@@ -29,14 +29,24 @@ const CITATIONS: TableKey = "citations";
 /** The table of research records' claims to game facts, which name a fact by its integer id. */
 const FACT_CLAIMS: TableKey = "factClaims";
 
+/** The tables of the reader's account, which `pnpm import:account` loads and no record owns. */
+const ACCOUNT_TABLES: ReadonlySet<TableKey> = new Set([
+  "accountSnapshots",
+  "accountLineups",
+  "accountCookies",
+  "accountRoadmaps",
+  "accountRoadmapItems",
+]);
+
 /**
  * How `db:scope` compares a table's rows:
  * - `owned`: a research record owns each row;
  * - `fact`: a game fact, owned by no record, compared on its own;
  * - `child`: each row belongs to a row of another table ({@link CHILDREN});
- * - `citation`: each row cites for a row of another table.
+ * - `citation`: each row cites for a row of another table;
+ * - `account`: the reader's account, owned by no record, compared on its own.
  */
-export type ScopeRole = "owned" | "fact" | "child" | "citation";
+export type ScopeRole = "owned" | "fact" | "child" | "citation" | "account";
 
 /**
  * Tells how `db:scope` compares a table's rows.
@@ -45,6 +55,7 @@ export type ScopeRole = "owned" | "fact" | "child" | "citation";
  * @returns its role, or `undefined` for a table the comparison doesn't place
  */
 export function scopeRole(key: TableKey): ScopeRole | undefined {
+  if (ACCOUNT_TABLES.has(key)) return "account";
   if (key === CITATIONS) return "citation";
   if (CHILDREN[key]) return "child";
   if (recordColumnOf(key) !== undefined) return "owned";
@@ -235,5 +246,24 @@ export function changedFacts(before: Snapshot, after: Snapshot): TableKey[] {
   return differing(
     grouped(entries(before), facts).get("facts"),
     grouped(entries(after), facts).get("facts"),
+  );
+}
+
+/**
+ * Lists the account tables whose rows differ between two snapshots, row
+ * for row, ids included: the account is loaded whole per snapshot or
+ * roadmap, so its ids follow the files.
+ *
+ * @param before - the earlier snapshot
+ * @param after - the later snapshot; a table either lacks counts as empty
+ * @returns the differing account tables, in registry order
+ */
+export function changedAccount(before: Snapshot, after: Snapshot): TableKey[] {
+  const was = before.tables as Partial<Record<TableKey, unknown[]>>;
+  const is = after.tables as Partial<Record<TableKey, unknown[]>>;
+  return TABLE_KEYS.filter(
+    (key) =>
+      scopeRole(key) === "account" &&
+      JSON.stringify(was[key] ?? []) !== JSON.stringify(is[key] ?? []),
   );
 }
