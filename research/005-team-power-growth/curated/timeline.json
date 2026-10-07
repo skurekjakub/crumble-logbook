@@ -5,5 +5,8 @@
  { "mode": "team_power", "date": "2026-09-10", "event": "Stages to 328-30; Gnome Lab to 90-2 (special 16), Fame to 360, Resolve to 1,500; daily dungeons to 570.", "sources": ["web:crumbgg-patches-20260928"] },
  { "mode": "team_power", "date": "2026-09-17", "event": "Mileage shop overhaul: more items, about 100,000 mileage a week to buy out.", "sources": ["web:yt-pDNtwVLg-6c"] },
  { "mode": "team_power", "date": "2026-09-23", "event": "Update 1.4.002: plating to 25; a shatter drops 2 levels and Syrup restores it; past shatters compensated.", "sources": ["dc:72150", "web:crumbgg-patches-20260928"] },
- { "mode": "team_power", "date": "2026-09-23", "event": "1.4.002: Gnome Lab to 110-2 (special 19); stages 169-1 to 328-30 eased (328-30 15.61G → 10.00G); the Dimensional Rift opens.", "sources": ["dc:72150", "web:crumbgg-patches-20260928"] }
+ { "mode": "team_power", "date": "2026-09-23", "event": "1.4.002: Gnome Lab to 110-2 (special 19); stages 169-1 to 328-30 eased (328-30 15.61G → 10.00G); the Dimensional Rift opens.", "sources": ["dc:72150", "web:crumbgg-patches-20260928"] },
+ { "mode": "team_power", "date": "2026-10-02", "event": "Oven auto-open: 200/300/400/500 dough at a time at oven 32/34/36/38 (was 50); holds 100 gear (was 30).", "sources": ["nv:48486", "web:crumbgg-patches-20261007"] },
+ { "mode": "team_power", "date": "2026-10-08", "event": "Announced 10-07: cookie cap 100 → 120; Lv.79–100 EXP cut ~75%, refunded; Gnome Lab to 130-2 (special 22), 12 h per research.", "sources": ["nv:50417", "web:crumbgg-patches-20261007"] },
+ { "mode": "team_power", "date": "2026-10-08", "event": "Announced 10-07: Chocosteel and Syrup Metal in the mileage shop; more in the Rift S2 exchange; free Milk from a 7-day check-in.", "sources": ["nv:50417", "web:crumbgg-patches-20261007"] }
 ]

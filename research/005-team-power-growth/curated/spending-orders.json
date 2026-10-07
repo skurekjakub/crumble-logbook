@@ -1,6 +1,6 @@
 {
  "about": "Ranked spending orders for raising team power, for a free player and for a paying one, at the account stages the sources discuss. Each step names the power source (power-sources.json) or package (packages.json), why it sits there and its sources. The order is the community's stated order. Every step carries a 'basis', what the step's place rests on: posted (the step itself is what a player measured, before and after), claimed (a figure stated without a measurement), unmeasured, or community (the step's place is the community's stated order, whatever figures its why cites for a neighbouring step or another account stage); 'basis_note' keeps the record's own wording where it says more, and where a step rests on inference it says so.",
- "measured": "2026-09-28",
+ "measured": "2026-10-07",
  "stages": [
   {
    "id": "early",
@@ -17,7 +17,7 @@
     {"step": "Arena every day for Fame.", "source": "fame", "basis": "community", "why": "Compounds.", "sources": ["web:yt-EocpkOD5NW0"]}
    ],
    "paid": [
-    {"step": "Ad Removal (7,500 KRW / $4.99).", "package": "ad-removal", "basis": "community", "why": "Every ad reward without ads.", "sources": ["web:crumblehub-spending", "nv:43692"]},
+    {"step": "Ad Removal (7,500 KRW / $4.99).", "package": "ad-removal", "basis": "community", "why": "Every ad reward without ads.", "sources": ["web:crumblehub-spending", "nv:43692", "nv:48555"]},
     {"step": "Unique 3-piece gear pack at oven 10 (6,000 KRW).", "package": "unique-gear-3", "basis": "community", "why": "Two tiers above oven-10 gear.", "sources": ["web:yt-FrKqf5lhZBs", "web:yt-l4I2DCv7d0k"]},
     {"step": "Crumble Pass (7,500 KRW / $4.99).", "package": "crumble-pass", "basis": "community", "why": "+1 daily dungeon, 10,918% value.", "sources": ["dc:68148", "web:pocketgamer-best-packs"]},
     {"step": "5.5 permanent membership (55,000 KRW) if staying 2+ months.", "package": "special-sugarcoating", "basis": "community", "why": "Lifetime +1 daily dungeon.", "sources": ["dc:73525", "web:yt-l4I2DCv7d0k"]},
@@ -62,18 +62,20 @@
    "id": "endgame",
    "label": "Stages 300–328 at ~2–4G (your 2.2G team sits here)",
    "free": [
-    {"step": "Check your guild's research level: a research-13 guild is claimed at ~+20% account total power; leaving a guild dropped a pusher to the 15% cut.", "source": "guild_lab", "basis": "claimed", "basis_note": "claimed (one unmeasured reply, about account total power; no team-power figure)", "why": "Free to check.", "sources": ["dc:76461", "dc:67596"]},
+    {"step": "Check your guild's research level: a research-13 guild is claimed at ~+20% account total power; leaving a guild dropped a pusher to the 15% cut.", "source": "guild_lab", "basis": "claimed", "basis_note": "claimed for team power; posted only in account total (13G → ~10G on leaving, dc:81826)", "why": "Free to check; leaving cost one player ~23% of account total.", "sources": ["dc:76461", "dc:67596", "dc:81826", "dc:78400"]},
     {"step": "Build a pure-power stage preset (crit resistance and other padding lines, SSR rune lines that add power) and swap to it at a line.", "source": "lineup", "basis": "unmeasured", "basis_note": "unmeasured (record 003's practice)", "why": "Free.", "sources": ["dc:76290", "dc:74089", "nv:32484"]},
     {"step": "Stellar: open and shape constellation-8 points up to 8-3, which free pulls reach; points past 8-3 (about 45 cookie stars to 8-6) need paid pulls.", "source": "stellar_link", "basis": "posted", "basis_note": "posted gain (+10% for the third point at 2G); reach inferred", "why": "≈ +3–4 chapters of 35% reach from 2.2G (inferred).", "sources": ["dc:77329", "dc:76290", "dc:76171"]},
-    {"step": "Gnome Lab: HP 30% and the lower ATK nodes before ATK 30% (~50M stones).", "source": "gnome_lab", "basis": "community", "basis_note": "community order; the 2G → 4G reply credits research", "why": "'Padded power is purely research' (dc:76290); the lower nodes pay better (dc:76620).", "sources": ["dc:76290", "dc:76272", "dc:77509", "dc:76620"]},
+    {"step": "Gnome Lab: HP 30% and the lower ATK nodes before ATK 30% (~50M stones).", "source": "gnome_lab", "basis": "community", "basis_note": "community order; the 2G → 4G reply credits research", "why": "'Padded power is purely research' (dc:76290); special research 19 (ATK 30%) gave +2.3% at 3.4G (dc:82156). From 10-08 each new node costs ~1.01G stones (leak).", "sources": ["dc:76290", "dc:76272", "dc:77509", "dc:76620", "dc:78447", "dc:82156", "dc:79685"]},
     {"step": "Plating: sword and bow toward 19–20 (most posted 4G accounts show sword 20–21, bow 19, rest 15).", "source": "plating", "basis": "community", "basis_note": "posted gain near 15 at 1.6G (~+1.5% a step, approximate); community order beyond", "why": "Slow: 2% per try at 19→20.", "sources": ["dc:76272", "dc:74431", "dc:76816", "dc:75684"]},
     {"step": "Oven levels toward the mid-30s for gear level.", "source": "gear_oven", "basis": "community", "basis_note": "community order; one account's account of its path", "why": "The 2G → 4G reply credits oven 36.", "sources": ["dc:76290"]},
+    {"step": "Bank cookie EXP for levels 101–120 (cap 120 from 10-08); levels 79–100 get ~75% cheaper and refunded.", "source": "cookie_level", "basis": "community", "basis_note": "community; the gain is inferred (+64% base stats at 120) or claimed (~+25% power at 119)", "why": "The next big free lever after 10-08; EXP and Crumble level gate it.", "sources": ["dc:80209", "dc:81689", "nv:50417", "web:crumbgg-patches-20261007"]},
     {"step": "Fame; Resolve only from banked coins to cross a line.", "source": "fame", "basis": "community", "basis_note": "community order", "why": "4G accounts: Fame 130, Resolve 997.", "sources": ["dc:76272", "dc:77104"]}
    ],
    "paid": [
+    {"step": "Rumble Special Pass (₩19,000) while it runs.", "package": "rumble-special-pass", "basis": "community", "basis_note": "community (no posted power figure)", "why": "A Bari pull ticket, Syrup and keys; the gallery calls it great value.", "sources": ["dc:81113", "dc:81695", "web:appstore-kr"]},
     {"step": "Keep the weekly key set and Crumble Pass running.", "package": "daily-dungeon-keys-weekly", "basis": "community", "basis_note": "community order (no posted power figure)", "why": "Stones for the lab, dough for the oven.", "sources": ["dc:77246", "web:yt-pldC8umlhnI"]},
     {"step": "Stellar Link packs to shape points that are already open (not for 100%).", "package": "stellar-pack-1", "basis": "community", "basis_note": "community order; the costs are guide expectations", "why": "Once points are open, SP is the cheapest way to add area (~550–1,900 SP expected per shape, nv:5693, dc:55570). It opens no points (dc:76290).", "sources": ["dc:55570", "nv:5693", "dc:76290", "dc:50913", "dc:75373"]},
-    {"step": "Plate thanks packs for Syrup, weapons first; keep restore Syrup in hand.", "package": "plate-thanks", "basis": "community", "basis_note": "posted gain near 15 (approximate) with table costs", "why": "About +1.5% per 14→15 step at 1.6G for ~₩14,700 (inferred); most posted 4G accounts have weapon plates at 19–21.", "sources": ["dc:75684", "dc:53079", "dc:76272", "web:yt-_Vyl0eQz9lU"]},
+    {"step": "Plate thanks packs for Syrup (all three while sold), weapons first; keep restore Syrup in hand.", "package": "plate-thanks", "basis": "community", "basis_note": "posted gain near 15 (approximate) with table costs", "why": "About +1.5% per 14→15 step at 1.6G for ~₩14,700 (inferred); most posted 4G accounts have weapon plates at 19–21.", "sources": ["dc:75684", "dc:53079", "dc:76272", "web:yt-_Vyl0eQz9lU"]},
     {"step": "TSSR stars only for Stellar points or a deck need.", "package": "tssr-pickup", "basis": "community", "basis_note": "community order (no posted power figure)", "why": "About 289,000 KRW for 5★; a blessing-7 player at 3G+ said reaching 328 would take about 3,000,000 KRW more.", "sources": ["dc:50913", "dc:77420"]}
    ]
   },
@@ -105,13 +107,14 @@
    {"source": "sugar_runes", "basis": "community"},
    {"source": "collection", "basis": "community"},
    {"source": "pets", "basis": "community"},
-   {"source": "cookie_level", "basis": "community"},
+   {"source": "cookie_level", "basis": "community", "basis_note": "nothing left at 100 until 10-08; then levels 101–120 (gain claimed or inferred)"},
    {"source": "mercenary_band", "basis": "community"}
   ],
   "paid": [
    {"package": "daily-dungeon-keys-weekly", "basis": "community"},
    {"package": "crumble-pass", "basis": "community"},
    {"package": "special-sugarcoating", "basis": "community"},
+   {"package": "rumble-special-pass", "basis": "community"},
    {"package": "stellar-pack-1", "basis": "community"},
    {"package": "plate-thanks", "basis": "community"},
    {"package": "monthly-gacha", "basis": "community"},
