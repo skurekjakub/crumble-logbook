@@ -17,8 +17,8 @@
     ] },
   { "zone_index": 3, "zone_kr": "폐허 도시", "zone_en": "Ruined City",
     "slots": [
-      { "stage": "-10", "boss_kr": "폭주단 바이커 ×3", "boss_en": "Rowdy Biker ×3", "plan": "Swap Rye for Scorpion; three fast targets reward single-target burst. Before the easing some took them at 55%; 35% clears exist (243-10 at 688M, 259-10 in 15 s at 1.28G).", "deck": "stage-seeker-allinone", "bracket_note": "35%; a wall at 15%", "sources": ["dc:70308", "dc:71293", "dc:68319", "dc:67268"] },
-      { "stage": "-20", "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "plan": "Swap Strawberry Crepe for Ion and add Icy Birdie; kite in circles at 7 or 9 o'clock until the first heal (about 26 s), then let go.", "deck": "stage-seeker-allinone", "bracket_note": "35%", "sources": ["dc:70308", "dc:72776"] },
+      { "stage": "-10", "boss_kr": "폭주단 바이커 ×3", "boss_en": "Rowdy Biker ×3", "plan": "Swap Rye for Scorpion: three fast targets reward single-target burst. 35% clears: 243-10 at 688M, 259-10 in 15 s at 1.28G.", "deck": "stage-seeker-allinone", "bracket_note": "35%; a wall at 15%", "sources": ["dc:70308", "dc:71293", "dc:68319", "dc:67268"] },
+      { "stage": "-20", "boss_kr": "폭주단 트럭", "boss_en": "Rowdy Truck", "plan": "Strawberry Crepe out for Ion, add Icy Birdie; kite in circles at 7 or 9 o'clock until the first heal (about 26 s), then auto.", "deck": "stage-seeker-allinone", "bracket_note": "35%", "sources": ["dc:70308", "dc:72776"] },
       { "stage": "-30", "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "plan": "The GingerCraven deck with damage-reduction perks and pets. 35% is the floor: 15% attempts fail.", "deck": "stage-bari-coward-328", "bracket_note": "35% (328-30 at 4.00G); fails at 15%", "sources": ["dc:72776", "dc:76835", "dc:71892", "dc:77154"] }
     ] },
   { "zone_index": 4, "zone_kr": "사막", "zone_en": "Desert",
@@ -33,7 +33,7 @@
     ] },
   { "zone_index": 6, "zone_kr": "광장", "zone_en": "Plaza",
     "slots": [
-      { "stage": "-10 to -15", "boss_kr": "레드베리 암살자 ×5–10", "boss_en": "Redberry Assassin pack", "plan": "The hardest slot after the easing. Swap two melee cookies for Jungle Warrior or Tiger Lily and Rye and lure the pack to the 6 o'clock stairs, or bring the area rapid-fire deck. Padding power to reach 35% beats a 15% attempt here.", "deck": "stage-aoe-rapidfire", "bracket_note": "35%; fails at 15%", "sources": ["web:yt-tZJ5wzhcUA8", "web:yt-1AyEMtaE-s4", "dc:76859", "dc:75871"] },
+      { "stage": "-10 to -15", "boss_kr": "레드베리 암살자 ×5–10", "boss_en": "Redberry Assassin pack", "plan": "Hardest slot post-easing: Jungle Warrior or Tiger Lily and Rye for two melee, lure to the 6 o'clock stairs, or go area rapid-fire. Pad to 35%.", "deck": "stage-aoe-rapidfire", "bracket_note": "35%; fails at 15%", "sources": ["web:yt-tZJ5wzhcUA8", "web:yt-1AyEMtaE-s4", "dc:76859", "dc:75871"] },
       { "stage": "-20", "boss_kr": "초코크림 늑대 망치공주", "boss_en": "Choco Werehound Princess", "plan": "Launch boss: Panda Dumpling.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["dc:70308", "dc:72776"] },
       { "stage": "-30", "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint Cookie", "plan": "Panda Dumpling, corner fight.", "deck": "stage-bari-cola-charge", "bracket_note": "35%", "sources": ["dc:70308"] }
     ] },
