@@ -1,4 +1,6 @@
 research/
+# account audits, written by the audit as read
+account/
 # verbatim captures, kept byte for byte
 packages/capture/test/fixtures/
 docs/
