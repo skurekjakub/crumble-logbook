@@ -489,7 +489,7 @@
   "name_en": "Witchberry–Rockstar idle deck (300+ mob stages)",
   "name_kr": "위치 락스타 방치덱",
   "status": "alt",
-  "ceiling": "Idle pushing of 300+ normal (mob) stages; not for GingerCraven or Cool Mint.",
+  "ceiling": "Auto pushing past 300 at 35%: 324-18 at 3.75G (41.7%, dc:78074); with unattended retries it also auto-clears Cool Mint and GingerCraven (dc:78081). Past about 300 its SR dealers struggle to hold the 35% line.",
   "summary": "The guide makers' AFK deck: Witchberry as the area carry with Rockstar (tested better than Strawberry Shortcake) on the Pierce synergy, built around Milk and the usual buffers. A 35% list (dc:77126) and 서신우's 300+ guide agree on the core.",
   "cookies": [
    {
@@ -543,9 +543,9 @@
     "why": "Dealer."
    },
    {
-    "kr": "허브맛 쿠키",
+    "kr": "락스타맛 쿠키",
     "level": "100",
-    "why": "Healer; Rockstar takes this slot in 서신우's version."
+    "why": "Pierce-synergy dealer beside Witchberry; every lineup this round runs it."
    },
    {
     "kr": "감감술래 놀이 달토끼맛 쿠키",
@@ -559,13 +559,19 @@
    "전지멜로우"
   ],
   "substitutions": [
-   "Rockstar for Herb (Pierce synergy)."
+   "Herb in Rockstar's slot (the 2026-09-28 lineup) for more healing.",
+   "Hot Doggie → 색동 주머니 against Cool Mint and other launch bosses (dc:78081, dc:77654).",
+   "Bari charge deck for the snowfield and the desert bombers (dc:78074)."
   ],
   "sources": [
    "dc:77126",
    "dc:76794",
    "web:yt-gEmz1YGzdNI",
-   "dc:72916"
+   "dc:72916",
+   "dc:78081",
+   "dc:78074",
+   "dc:77654",
+   "dc:79680"
   ]
  },
  {
@@ -755,6 +761,413 @@
    "dc:78353",
    "dc:77572",
    "dc:78199"
+  ]
+ },
+ {
+  "id": "rift-15-milk-first-seeker",
+  "mode": "stage",
+  "name_en": "Rift Milk-first Brightseeker deck (15%)",
+  "name_kr": "이면 우유 공순위 시커덱",
+  "status": "meta",
+  "ceiling": "Rift level 17 at 15% (Cool Mint at 32.97G header power, 35.2%); trucks at level 14 (28.76G, 39.6%), level 9 and level 4. All screenshots, yt:kMw3E6KXUAo, yt:IAFNvjeqUqw, yt:z9nKY8Z7Ius.",
+  "summary": "그니's 15% deck for Cool Mint and the trucks: Milk captains at the top of the attack order, mid dealers levelled to 77–97 below the buffers.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Crit-rate buffer, fifth in the attack order."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row1-2",
+    "level": "88 (77 against the trucks): out of the top six",
+    "why": "Low-waste dealer, levelled so the ATK-ordered buffs skip it."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Support buffer kept with Macaron; sixth in the attack order."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Buffer second in the attack order, right behind Milk."
+   },
+   {
+    "kr": "정글전사 쿠키",
+    "slot": "row1-5",
+    "level": "96: just under the buffers",
+    "why": "Single-target ranged damage on the boss, kept out of the top six."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "slot": "row1-6",
+    "level": "82: out of the top six",
+    "why": "Flex dealer; Cherry Cola can take the slot on trucks."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Main dealer, third in the attack order so the buffs reach it."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row2-2",
+    "level": "82: out of the top six",
+    "why": "Airborne counter against Cool Mint's launches."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Skill-AMP beam onto the top of the attack order."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Charge dealer fourth in the attack order; the Rift entrance buffs Charge."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Captain and healer at the top of the attack order, so both perks land on her."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "slot": "row2-6",
+    "level": "80: out of the top six",
+    "why": "Charge dealer; Witchberry takes the slot on trucks."
+   }
+  ],
+  "atk_order": [
+   "바삭튼튼 소아과 의사 우유맛 쿠키",
+   "피겨여왕맛 쿠키",
+   "브라이트시커 쿠키",
+   "바리공주맛 쿠키",
+   "마카롱맛 쿠키",
+   "치즈케이크맛 쿠키"
+  ],
+  "atk_order_note": "그니's on-screen attack order (공순위). Captain Milk tops it, so Passion Pay and Rapid Promotion land on her; the cookies levelled below 100 stay out of the top six.",
+  "pets": [
+   "무한바퀴 (likely: the Rift's SSR reward pet)",
+   "복주머니 (airborne resist; likely 색동 주머니)"
+  ],
+  "perks": "열정페이 + 초고속승진, both on Milk (captain, top ATK); 베테랑 용병단 Lv.4",
+  "formation": "Slots as on 그니's level-17 formation screen (lobby 4.72G).",
+  "substitutions": [
+   "Trucks (levels 4, 9, 14): Witchberry (Lv.80) for Cherry Cola, Rye down to 77–91; Strawberry Crepe and Cherry Cola swap freely.",
+   "Cool Mint: Witchberry can replace Brightseeker (그니's subtitle).",
+   "Third pet: 복주머니 on Cool Mint and the Werehound Princess, whose skills launch."
+  ],
+  "sources": [
+   "web:yt-kMw3E6KXUAo",
+   "web:yt-IAFNvjeqUqw",
+   "web:yt-z9nKY8Z7Ius"
+  ]
+ },
+ {
+  "id": "rift-15-milk-first-mobs",
+  "mode": "stage",
+  "name_en": "Rift Milk-first mob deck (15%)",
+  "name_kr": "이면 우유 공순위 위치베리덱",
+  "status": "alt",
+  "ceiling": "Rift level 12 at 15% (Cool Mint at 18.55G header power, 31.5%) and level 11 (Cake Hounds, 34.6%); with Wind Archer, levels 6 and 7 at 10.23G. Screenshots, yt:kMw3E6KXUAo, yt:IAFNvjeqUqw.",
+  "summary": "그니's Cake Hound and Cool Mint deck: no Brightseeker; Bari herds, Rye and a pierce dealer clear, with the same Milk-first attack order.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Crit-rate buffer, fifth in the attack order."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row1-2",
+    "level": "82: out of the top six",
+    "why": "Airborne counter for Cool Mint's launches."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill-AMP beam onto the top of the attack order."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "slot": "row1-4",
+    "level": "80: out of the top six",
+    "why": "Area dealer for the pack; Wind Archer or Brightseeker can take it."
+   },
+   {
+    "kr": "정글전사 쿠키",
+    "slot": "row1-5",
+    "level": "95: just under the buffers",
+    "why": "Ranged damage kept out of the top six."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "slot": "row1-6",
+    "level": "80: out of the top six",
+    "why": "Flex dealer below the attack-order cut."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Dealer fourth in the attack order, the buffs' main target here."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Support buffer, sixth in the attack order."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Buffer second in the attack order."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Charge dealer that herds the Cake Hound pack; third in the order."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Captain at the top of the attack order, so both perks land on her."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "slot": "row2-6",
+    "level": "80: out of the top six",
+    "why": "Charge dealer below the attack-order cut."
+   }
+  ],
+  "atk_order": [
+   "바삭튼튼 소아과 의사 우유맛 쿠키",
+   "피겨여왕맛 쿠키",
+   "바리공주맛 쿠키",
+   "호밀맛 쿠키",
+   "마카롱맛 쿠키",
+   "치즈케이크맛 쿠키"
+  ],
+  "atk_order_note": "그니's on-screen attack order (공순위). Captain Milk tops it, so Passion Pay and Rapid Promotion land on her; the cookies levelled below 100 stay out of the top six.",
+  "pets": [
+   "무한바퀴 (likely: the Rift's SSR reward pet)",
+   "복주머니 on Cool Mint (airborne resist; likely 색동 주머니)"
+  ],
+  "perks": "열정페이 + 초고속승진, both on Milk (captain, top ATK)",
+  "formation": "Slots as on 그니's level-11 formation screen (lobby 4.67G).",
+  "substitutions": [
+   "Levels 6–7: Wind Archer (Lv.100, fourth in the attack order) for Witchberry, Rye down to the top-six order.",
+   "Level 12 (Cool Mint): Brightseeker can replace Witchberry; 복주머니 as third pet."
+  ],
+  "sources": [
+   "web:yt-kMw3E6KXUAo",
+   "web:yt-IAFNvjeqUqw"
+  ]
+ },
+ {
+  "id": "rift-15-milk-first-hammer",
+  "mode": "stage",
+  "name_en": "Rift Milk-first Werehound deck (15%)",
+  "name_kr": "이면 우유 공순위 망치덱",
+  "status": "alt",
+  "ceiling": "Rift level 8 at 15% (Werehound Princess at 13.84G header power, 37.2%), screenshot, yt:IAFNvjeqUqw.",
+  "summary": "그니's Werehound Princess deck: Scorpion and Melon Soda for the single boss, Bari levelled down, the same Milk-first attack order.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Crit-rate buffer for Brightseeker."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Poison stacks on the single boss."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "slot": "row1-3",
+    "level": "77: out of the top six",
+    "why": "Extra single-target pressure, levelled below the buffers."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Support buffer kept with Macaron."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Buffer high in the attack order behind Milk."
+   },
+   {
+    "kr": "정글전사 쿠키",
+    "slot": "row1-6",
+    "level": "94: just under the buffers",
+    "why": "Ranged damage kept out of the top six."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Main dealer the buffs aim at."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row2-2",
+    "level": "90: out of the top six",
+    "why": "Second dealer, levelled below the buffers."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row2-3",
+    "level": "81: out of the top six",
+    "why": "Airborne counter: the Princess's launches would disable the team."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Skill-AMP beam onto the top of the attack order."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "slot": "row2-5",
+    "level": "80: out of the top six",
+    "why": "Charge damage without taking the buffs; Dark Choco can replace her."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Captain at the top of the attack order, so both perks land on her."
+   }
+  ],
+  "pets": [
+   "무한바퀴 (likely: the Rift's SSR reward pet)",
+   "복주머니 (airborne resist; likely 색동 주머니)"
+  ],
+  "perks": "열정페이 + 초고속승진, both on Milk (captain, top ATK)",
+  "formation": "Slots as on 그니's level-8 formation screen (lobby 4.62G).",
+  "substitutions": [
+   "Dark Choco for Princess Bari (그니's subtitle)."
+  ],
+  "sources": [
+   "web:yt-IAFNvjeqUqw"
+  ]
+ },
+ {
+  "id": "rift-35-gingercraven-wasabi",
+  "mode": "stage",
+  "name_en": "Rift GingerCraven Wasabi deck (35%)",
+  "name_kr": "이면 비겁이 와사비덱",
+  "status": "alt",
+  "ceiling": "Rift GingerCraven at 35%: level 20 at 49.31G header power (41.9%), level 15 at 34.01G (43.1%), level 10 at 18.81G (40.1%). Screenshots, yt:kMw3E6KXUAo, yt:IAFNvjeqUqw.",
+  "summary": "The deck for the Rift's every-fifth-level wall, which no source clears at 15%: debuff stackers held up by Octo Wasabi, many dealers, Milk captain.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Crit-rate buffer for Brightseeker."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Poison stacks on GingerCraven, a long single-boss fight."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row1-3",
+    "level": "82 (60 at level 20): out of the top six",
+    "why": "Airborne counter, levelled below the buffers."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Skill-AMP beam onto the top of the attack order."
+   },
+   {
+    "kr": "정글전사 쿠키",
+    "slot": "row1-5",
+    "level": "95 (60 at level 20): below the buffers",
+    "why": "Ranged damage kept out of the top six."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "97",
+    "why": "Sustain through the HP-pig fight; Lime or Princess Bari can replace it."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Main dealer."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "slot": "row2-2",
+    "level": "77: out of the top six",
+    "why": "Single-target pressure; Princess Bari can take the slot."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Support buffer kept with Macaron."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Buffer high in the attack order behind Milk."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Captain at the top of the attack order, so both perks land on her."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "slot": "row2-6",
+    "level": "60 (50–80 in 그니's later copies)",
+    "why": "DEF-shred debuff that Octo Wasabi keeps up."
+   }
+  ],
+  "pets": [
+   "와사비 문어 (keeps the sustained debuffs and dealer skills up)",
+   "무한바퀴 (likely: the Rift's SSR reward pet)"
+  ],
+  "perks": "열정페이 + 초고속승진, both on Milk (captain, top ATK)",
+  "formation": "Slots as on 그니's level-10 formation screen (lobby 4.9G).",
+  "substitutions": [
+   "Melon Soda → Princess Bari, Herb → Lime (그니's subtitles); his level-15 and level-20 copies bring an unidentified Lv.100 cookie.",
+   "서신우's level-5 version: the same core all at Lv.100, many dealers and no Moon Rabbit, since the Rift GingerCraven is 'just an HP pig' (yt:lyctKWAZdYI)."
+  ],
+  "sources": [
+   "web:yt-IAFNvjeqUqw",
+   "web:yt-kMw3E6KXUAo",
+   "web:yt-lyctKWAZdYI"
   ]
  }
 ]

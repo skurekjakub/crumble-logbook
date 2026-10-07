@@ -5,7 +5,7 @@
     "query": "subject:스테이지",
     "why": "The stage-pushing posts title themselves by the word stage.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-ste",
@@ -13,7 +13,7 @@
     "query": "subject:스테",
     "why": "스테, the gallery's short form of stage in titles.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-stage-deck",
@@ -21,7 +21,7 @@
     "query": "subject:스테이지덱",
     "why": "Stage deck posts by title.",
     "added": "2026-09-28",
-    "lastHit": null
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-35pct",
@@ -29,7 +29,7 @@
     "query": "subject:35%",
     "why": "The 35% bracket, entered at 40% of recommended power, where most pushing happens.",
     "added": "2026-09-28",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-15pct",
@@ -37,7 +37,7 @@
     "query": "subject:15%",
     "why": "The 15% bracket, entered at 20% of recommended power, the record's deepest push.",
     "added": "2026-09-28",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-15-percent-word",
@@ -45,7 +45,7 @@
     "query": "subject:15퍼",
     "why": "The 15% bracket as posters type it.",
     "added": "2026-09-28",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-15-pro",
@@ -53,7 +53,7 @@
     "query": "subject:15프로",
     "why": "The 15% bracket as posters type it.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-power-cut",
@@ -61,7 +61,7 @@
     "query": "투력컷",
     "why": "The power a stage asks for, as posters call its cut-off.",
     "added": "2026-09-28",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-recommended",
@@ -69,7 +69,7 @@
     "query": "권장",
     "why": "Recommended power, the gate the brackets are measured against.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-recommended-power",
@@ -77,7 +77,7 @@
     "query": "subject:권투",
     "why": "권투, short for 권장 투력 (recommended power), in titles.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-correction",
@@ -85,7 +85,7 @@
     "query": "보정",
     "why": "The power correction, the community's word for the bracket penalty.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-correction",
@@ -101,7 +101,7 @@
     "query": "subject:차원",
     "why": "The Dimensional Rift (차원의 이면) in titles.",
     "added": "2026-09-28",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-rift",
@@ -109,7 +109,7 @@
     "query": "subject:이면",
     "why": "The Rift by the second half of its name.",
     "added": "2026-09-28",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-328",
@@ -117,7 +117,7 @@
     "query": "subject:328",
     "why": "328-30, the last main stage and the gate to the Rift.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-clear-deck",
@@ -125,7 +125,7 @@
     "query": "subject:클덱",
     "why": "클덱, a clear deck: the team a poster cleared a stage with.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-idle-deck",
@@ -133,7 +133,7 @@
     "query": "방치덱",
     "why": "Idle decks for mob stages, one of the record's decks.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-click",
@@ -157,7 +157,7 @@
     "query": "이면",
     "why": "The Rift by name in titles and bodies; the round's widest net for Rift posts.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-rift-level",
@@ -165,7 +165,7 @@
     "query": "subject:단계",
     "why": "Rift levels are 단계 (stage N); posts title a level they cleared or failed.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-twist",
@@ -189,7 +189,7 @@
     "query": "subject:비겁",
     "why": "GingerCraven, the Rift's every-fifth-level wall.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-truck",
@@ -197,7 +197,7 @@
     "query": "subject:트럭",
     "why": "The Rowdy Truck levels.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-three-trucks",
@@ -205,7 +205,7 @@
     "query": "subject:3트럭",
     "why": "The three-truck Rift levels by their nickname.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-cooling-mint",
@@ -213,7 +213,7 @@
     "query": "subject:쿨민",
     "why": "Cool Mint, a Rift boss cleared at 15%.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-hammer",
@@ -221,7 +221,7 @@
     "query": "subject:망치",
     "why": "The Werehound Princess by her nickname.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-rift-15",
@@ -229,7 +229,7 @@
     "query": "이면 15",
     "why": "Rift posts that name the 15% bracket.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-dimension-power",
@@ -237,7 +237,7 @@
     "query": "차원의 힘",
     "why": "차원의 힘, the Rift-only level that inflates Rift power and so sets the bracket.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-dimension-level",
@@ -253,7 +253,7 @@
     "query": "차힘",
     "why": "차원의 힘 in its shortest form.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-15-cut",
@@ -269,7 +269,7 @@
     "menuId": 9,
     "why": "The official cafe's guide board, where the 35% and 15% clears are posted with screenshots.",
     "added": "2026-09-28",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "naver-notices",
@@ -277,7 +277,7 @@
     "menuId": 1,
     "why": "The official notices, which announce updates such as the stage easing and the Rift.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "naver-patch-notes",
@@ -285,7 +285,7 @@
     "menuId": 3,
     "why": "The official patch notes, the primary source for stage and Rift changes (nv:44477).",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-ndlover",
@@ -293,7 +293,7 @@
     "channel": "@ndlover7",
     "why": "ND러너, a top player whose Rift and stage videos the record cites.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-susinwoo",
@@ -301,7 +301,7 @@
     "channel": "@SuSinWoo",
     "why": "서신우, whose stage guide the record cites.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-kkwang-ramen",
@@ -317,7 +317,7 @@
     "channel": "@그니그니-z2q",
     "why": "그니, whose stage video the record cites.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-rift-guide",
@@ -325,13 +325,15 @@
     "query": "차원의 이면 공략",
     "why": "Rift guide videos; found 서신우's per-level season 1 guides.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-data-stages",
     "kind": "crumbgg",
     "endpoint": "data",
-    "args": ["stages"],
+    "args": [
+      "stages"
+    ],
     "why": "crumb.gg's stage table: recommended power per stage, which the brackets are computed from.",
     "added": "2026-09-28",
     "lastHit": "2026-09-28"
@@ -340,19 +342,23 @@
     "id": "crumbgg-data-patches",
     "kind": "crumbgg",
     "endpoint": "data",
-    "args": ["patches"],
+    "args": [
+      "patches"
+    ],
     "why": "crumb.gg's patch digest, which dated the 9/23 easing and the recommended powers it changed.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-data-rift",
     "kind": "crumbgg",
     "endpoint": "data",
-    "args": ["rift"],
+    "args": [
+      "rift"
+    ],
     "why": "crumb.gg's Rift data: the Rift's damage brackets, every 차원의 힘 level's stats, idle gain per level and the season dates.",
     "added": "2026-10-03",
-    "lastHit": "2026-10-03"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "web-crumblehub-stages",
@@ -376,7 +382,7 @@
     "url": "https://crumblehub.co/api/clear-decks?mode=stage&sort=recommended&limit=50&roster=4",
     "why": "crumblehub's community-shared stage clear decks, ranked by votes.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "web-crumblehub-stage-guide",
@@ -400,6 +406,159 @@
     "url": "https://cookieruncrumble.app/api/decks",
     "why": "Sugar Pocket's community deck list, which holds low-stage decks.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-season2",
+    "kind": "dc",
+    "query": "시즌2",
+    "why": "Rift season 2 talk: its rewards and what the 10-08 patch changes.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-season",
+    "kind": "dc",
+    "query": "subject:시즌",
+    "why": "Season questions in titles, among them support's answer on Rift reward timing.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-floor",
+    "kind": "dc",
+    "query": "subject:층",
+    "why": "Rift levels as posters call them floors (N층).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-rift-20",
+    "kind": "dc",
+    "query": "이면 20",
+    "why": "Rift level 20 posts, the GingerCraven wall posters compare 차원의 힘 levels at.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-max-level",
+    "kind": "dc",
+    "query": "만렙",
+    "why": "The level-cap raise and what it does to power.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-padded-power",
+    "kind": "dc",
+    "query": "뻥투",
+    "why": "뻥투, displayed power padded to cross a bracket line; Rift entries and 15% presets.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-dash30",
+    "kind": "dc",
+    "query": "subject:-30",
+    "why": "Chapter -30 boss clears, among them the first 15% -30 clear.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-witchberry",
+    "kind": "dc",
+    "query": "subject:위치베리",
+    "why": "The Witchberry auto stage deck.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-multihit-deck",
+    "kind": "dc",
+    "query": "subject:연타덱",
+    "why": "The multi-hit (연타) stage deck and its clears.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-level",
+    "kind": "dc",
+    "query": "subject:레벨",
+    "why": "Level-cap leaks and their stat columns.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-expansion",
+    "kind": "dc",
+    "query": "subject:확장",
+    "why": "The 10-08 stage expansion and its power cut.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-accuracy",
+    "kind": "dc",
+    "query": "subject:명중",
+    "why": "Accuracy tests and thresholds for stage pushing.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "naver-search-rift",
+    "kind": "naver",
+    "query": "차원의 이면",
+    "why": "The cafe's search for the Rift by name; found a 15% screenshot clear.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-rift-15peo",
+    "kind": "youtube",
+    "query": "차원의 이면 15퍼",
+    "why": "Rift 15% videos; found 그니's per-level clears with the header power on screen.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-rift-en",
+    "kind": "youtube",
+    "query": "Cookie Run Crumble Dimensional Rift",
+    "why": "English-titled Rift videos; found stanley's 35% clears.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "crumbgg-live-dimension-stage",
+    "kind": "crumbgg",
+    "endpoint": "live",
+    "args": [
+      "dimension_stage"
+    ],
+    "why": "crumb.gg's all-server Rift ranking: level reached per player.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "crumbgg-data-rift-v15",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": [
+      "rift_v15"
+    ],
+    "why": "crumb.gg's Rift data for the 1.5.002 client: season 2's powers and boss cycle.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "crumbgg-data-stages-v15",
+    "kind": "crumbgg",
+    "endpoint": "data",
+    "args": [
+      "stages_v15"
+    ],
+    "why": "crumb.gg's stage table for the 1.5.002 client: stages to 364-30.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
   }
 ]

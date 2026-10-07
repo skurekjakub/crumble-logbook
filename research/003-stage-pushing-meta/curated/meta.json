@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-03",
- "season": "Game 1.4.002 (after the 2026-09-23 stage easing) · Dimensional Rift season 1 (to 2026-10-08)",
+ "updated": "2026-10-07",
+ "season": "Game 1.4.002 (after the 2026-09-23 stage easing) · Dimensional Rift season 1 (to 2026-10-08) · update 1.5.002 (level cap 120, stages to 364-30, Rift season 2) lands 2026-10-08",
  "lede": "What Korean players push main stages and the Dimensional Rift with while under-powered: the power gate's brackets, the teams documented clearing at the 35% and 15% brackets, and what to swap per boss. Taken from DCInside, the official Naver cafe, KR YouTube and crumblehub's game data; every claim links to its post.",
- "caveat": "Snapshot of 2026-09-28, five days after the easing and the Rift's opening. Most shared stage decks predate the easing, so the post-easing deck rests on a handful of screenshot clears and top-player videos. No site ranks stage progress. On main stages 15% boss clears are claimed, never shown. In the Rift, a 2026-10-03 round found 15% clears with screenshots up to level 18 on the Werehound Princess and Cool Mint, all by early entrants whose Rift power had grown with 차원의 힘; the Cake Hound and truck levels at 15% are claimed but not shown, and GingerCraven needs 35%. A Rift bracket counts only on the power the Rift shows.",
+ "caveat": "Season 1 data: the 10-08 update raises the level cap to 120 and season 2's Rift power ×1.45, so every bracket line moves. As of 2026-10-07, 15% Rift clears with screenshots cover every boss but GingerCraven (Werehound Princess level 18, Cool Mint 17, trucks 14, Cake Hounds 11), all by early entrants whose Rift power grew with 차원의 힘; GingerCraven needs 35%. A Rift bracket counts only on the power the Rift shows. On main stages one -30 boss (Cool Mint, 289-30) has a 15% screenshot clear; GingerCraven and the Redberry packs still need 35%.",
  "record": "research/003-stage-pushing-meta/",
  "footer": "Built from the research record's evidence captures.",
- "formation_slots": "A deck cookie's slot reads row<R>-<C> as in record 002: R is the row on the owner's formation screen (1 = top), C the column left to right. Only the all-in-one deck (dc:70308) posts its slots.",
+ "formation_slots": "A deck cookie's slot reads row<R>-<C> as in record 002: R is the row on the owner's formation screen (1 = top), C the column left to right. The all-in-one deck (dc:70308) and 그니's Rift decks (rift-15-milk-first-*, rift-35-gingercraven-wasabi) post their slots.",
  "you": {
   "summary": "With every cookie built, push at 35% with the Bari–Cherry Cola–Brightseeker charge deck and swap per boss slot; drop to 15% only on mob stages, and pad power across the next bracket line before fighting a boss a step lower. If your stage preset shows about 2.2G, the 55% bracket reaches 288-3, 35% reaches 304-19 and the 15% line covers every stage to 328-30 (computed from the game data; a stage preset rolled for power usually shows more than a conquest preset).",
   "changes": [
@@ -14,9 +14,11 @@
    "Keep Panda Dumpling ready as the third pet for launch bosses, and a GingerCraven swap (Scorpion, Jungle Warrior) for the -30 stages of the ruined city and snowfield.",
    "Use stage-chapters.json to see where your power crosses 40% and 20% of recommended power: push on 35% to the 40% line, then only mob stages until the next line.",
    "Reach 328-30 (4.00G for 35%) early: the Rift's 차원의 힘 grows only while you are in it, and early entrants compound.",
-   "In the Rift, read your bracket off the header power, never the formation screen: 15% from 20% of a level's recommended power. Twist the levels between GingerCraven levels at 15% with the Rift decks of this record (rift-15-*), and park at each GingerCraven level until 차원의 힘 lifts you to its 35% line."
+   "In the Rift, read your bracket off the header power, never the formation screen: 15% from 20% of a level's recommended power. Push every boss but GingerCraven at 15% with a rift-15-* deck, and park at each GingerCraven level until 차원의 힘 lifts you to its 35% line.",
+   "For the 15% Rift decks, make Milk captain and top of the attack order, and level the cookies that mustn't take the ATK-ordered buffs below 100 (rift-15-milk-first-*, rift-15-levelled-rye).",
+   "From 10-08: season 2 asks about 1.45× season 1's power at each level, one comment says entry needs the new 364-30, and level 120 lifts what every preset reaches; re-read the brackets then."
   ],
-  "sources": ["dc:76835", "dc:76814", "dc:75752", "dc:71892", "web:crumblehub-stages", "web:yt-1AyEMtaE-s4", "web:yt-BDuQ279mbP4", "dc:76290", "dc:70308", "dc:78865", "dc:77612", "dc:77709", "dc:78283", "web:crumbgg-rift"]
+  "sources": ["dc:76835", "dc:76814", "dc:75752", "dc:71892", "web:crumblehub-stages", "web:yt-1AyEMtaE-s4", "web:yt-BDuQ279mbP4", "dc:76290", "dc:70308", "dc:78865", "dc:77612", "dc:77709", "dc:78283", "web:crumbgg-rift", "web:yt-kMw3E6KXUAo", "web:yt-IAFNvjeqUqw", "nv:50328", "dc:77874", "web:crumbgg-rift-v15", "nv:50417"]
  },
  "modes": {
   "stage": {
