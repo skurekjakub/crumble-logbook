@@ -36,6 +36,9 @@ research/**/*.webm
 research/**/*.mkv
 research/**/*.mov
 
+# macro logs
+tools/**/*.log
+
 __pycache__/
 *.pyc
 .DS_Store
