@@ -1,45 +1,78 @@
-/* The team-power screens. Colours come from tokens.css only. A basis mark's fill says how a
-   figure is known; only a solid mark stands for a player's own measurement. */
+/* The team-power screens: basis pills, short gain and cost figures, numbered route steps, the
+   account-stage switch, the comparison table and the planner's answer tiles. Colours come from
+   tokens.css only; only a green pill stands for a player's own measurement. */
 
-.basis {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 2px var(--sp-2);
-}
 .basis-note {
   font-size: var(--fs-xs);
   color: var(--ink-3);
 }
-.mark {
+.basis-pill,
+.grade {
   display: inline-flex;
-  align-items: center;
-  font: 600 var(--fs-2xs) / 1 var(--body);
-  padding: 3px 7px;
-  border-radius: 999px;
-  border: 1px solid currentColor;
   white-space: nowrap;
 }
-.mark.posted {
-  background: var(--good);
-  border-color: var(--good);
-  color: var(--surface);
+.basis-key {
+  margin: var(--sp-2) 0 var(--sp-3);
 }
-.mark.claimed {
-  color: var(--warn);
-  background: repeating-linear-gradient(
-    135deg,
-    var(--surface) 0 4px,
-    color-mix(in srgb, var(--warn) 22%, var(--surface)) 4px 7px
-  );
-}
-.mark.unmeasured,
-.mark.inferred {
+.grade-none {
   color: var(--ink-3);
-  border-style: dashed;
+  cursor: help;
 }
-.mark.community {
+
+/* Short figures: a gain in green, a price in ink, a missing gain quiet. */
+.fig {
+  font: 700 var(--fs-m) / 1.2 var(--mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.fig.gain {
+  color: var(--good);
+}
+.fig.none {
+  font: 500 var(--fs-xs) / 1.2 var(--body);
+  color: var(--ink-3);
+}
+.fig-sub {
+  margin-left: var(--sp-2);
+  font: 500 var(--fs-xs) / 1.2 var(--body);
+  color: var(--ink-3);
+}
+td.n .fig-sub {
+  display: block;
+  margin-left: 0;
+}
+.cost-fig {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+/* A power source's cost type: a tinted tag, free in green through paid in candy. */
+.cost-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: var(--radius-s);
+  font: 600 var(--fs-2xs) / 1.1 var(--body);
+  white-space: nowrap;
+}
+.cost-tag.c-free {
+  background: var(--good-soft);
+  color: var(--good);
+}
+.cost-tag.c-time_gated {
+  background: var(--accent-soft);
   color: var(--accent);
+}
+.cost-tag.c-mixed {
+  background: var(--surface-2);
+  color: var(--ink-2);
+}
+.cost-tag.c-paid {
+  background: var(--candy-soft);
+  color: var(--candy-ink);
 }
 
 /* Routes: two columns of numbered steps, stacked below the shell's breakpoint. */
@@ -47,6 +80,17 @@
   display: grid;
   gap: var(--sp-4);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  margin-top: var(--sp-3);
+}
+.route > h3 {
+  margin-bottom: var(--sp-2);
+}
+.order-note {
+  margin-top: var(--sp-2);
+}
+.order-title .muted {
+  font-weight: 400;
+  font-size: var(--fs-s);
 }
 ol.steps {
   counter-reset: step;
@@ -84,38 +128,29 @@ ol.steps > li > div {
 .step-head {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 2px var(--sp-3);
+  align-items: center;
+  gap: 2px var(--sp-2);
 }
 .step-head .name {
   font-weight: 700;
 }
-dl.facts {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 2px var(--sp-3);
-  margin: 0;
+.step-figs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sp-1) var(--sp-4);
+}
+.step-why {
   font-size: var(--fs-s);
-}
-dl.facts dt {
-  color: var(--ink-3);
-  font: 600 var(--fs-xs) / 1.6 var(--body);
-}
-dl.facts dd {
-  margin: 0;
-  min-width: 0;
-}
-.gain-figure {
-  font: 600 var(--fs-m) / 1.2 var(--mono);
-  font-variant-numeric: tabular-nums;
-  margin-right: var(--sp-2);
+  color: var(--ink-2);
 }
 
-/* The order switch: one button per account stage, the chosen one filled. */
+/* The account-stage switch: one button per stage, the chosen one filled. */
 .switch {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-1);
+  margin: var(--sp-3) 0;
 }
 .switch button {
   font: 500 var(--fs-s) / 1.2 var(--body);
@@ -136,42 +171,121 @@ dl.facts dd {
   color: var(--accent-ink);
 }
 
-/* The cost and efficiency grid: grades down, cost types across. */
-table.grid-cost td {
-  min-width: 9rem;
+/* The comparison table: one row per power source, the chosen stage's column tinted. */
+table.compare th[scope="row"] {
+  background: transparent;
+  font: 600 var(--fs-s) / 1.3 var(--body);
+  color: var(--ink);
+  white-space: normal;
+  min-width: 10rem;
 }
-table.grid-cost th[scope="row"] {
-  background: var(--surface-2);
+table.compare td,
+table.compare th[scope="col"] {
+  vertical-align: middle;
+}
+table.compare .chosen {
+  background: var(--accent-soft);
+}
+table.compare th.chosen {
+  color: var(--ink);
+}
+/* On a phone the table keeps only the chosen stage's grades; the switch picks the stage. */
+@media (max-width: 640px) {
+  table.compare .stage:not(.chosen) {
+    display: none;
+  }
+}
+.table-key {
+  margin: var(--sp-1) 0 0;
+  font-size: var(--fs-xs);
+}
+.ps-card .card-head h3 {
+  font-size: var(--fs-l);
+}
+
+/* Packages: the verdict and price lead; the why is one line. */
+td.verdict-cell .pill {
   white-space: nowrap;
 }
-table.grid-cost tr.ungraded th,
-table.grid-cost tr.ungraded td {
-  border-top: 2px solid var(--line);
-  color: var(--ink-2);
+.pack-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
 }
-ul.names {
-  list-style: none;
-  margin: 0;
+.pack-name .kr,
+.pack-name .muted {
+  font-size: var(--fs-2xs);
+}
+@media (min-width: 641px) {
+  td.pack-cell {
+    min-width: 11rem;
+  }
+  td.pack-why {
+    min-width: 16rem;
+  }
+}
+.feeds {
+  display: block;
+  min-width: 9rem;
+  font-size: var(--fs-xs);
+}
+
+/* Planner: the answer first, one big tile per reported bracket. */
+.standing {
+  margin: var(--sp-3) 0 var(--sp-5);
+}
+.standing h3 .fig {
+  font-size: var(--fs-l);
+}
+ul.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--sp-3);
+  margin: var(--sp-2) 0 0;
   padding: 0;
+  list-style: none;
+}
+.tile {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--good);
+  border-radius: var(--radius);
+  background: var(--surface);
 }
-
-/* A power source's efficiency at the chosen stage stands out from the others. */
-dl.kv dd.chosen,
-dl.kv dt.chosen {
+.tile.short {
+  border-top-color: var(--bad);
+}
+.tile-label {
+  font: 600 var(--fs-xs) / 1.3 var(--body);
+  color: var(--ink-3);
+}
+.tile-big {
+  font: 400 var(--fs-2xl) / 1.15 var(--display);
   color: var(--ink);
-  font-weight: 600;
 }
-
-/* A planner reach cell names the gap a crossing closes; above phone width it gets the room. */
+.tile-sub {
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+.tile-next {
+  margin-top: var(--sp-1);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+/* A reach cell names the gap a crossing closes; above phone width it gets the room. */
 @media (min-width: 641px) {
   td.reach-cell {
     min-width: 11rem;
   }
 }
+td.reach-cell .moved {
+  color: var(--good);
+  font-weight: 600;
+}
 
-.callout {
-  border-left: 4px solid var(--candy);
+td .chip.spender {
+  white-space: nowrap;
 }

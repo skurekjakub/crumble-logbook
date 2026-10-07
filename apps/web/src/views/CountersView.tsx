@@ -4,22 +4,26 @@ import { useSourceIndex } from "../api/hooks";
 import { countersQuery, decksQuery } from "../api/queries";
 import type { Counter, Deck } from "../api/types";
 import type { ModeSection } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { ConfidencePill } from "../components/ConfidencePill";
+import type { MatrixDeck } from "../components/CounterMatrix";
 import { CounterLegend, CounterMatrix } from "../components/CounterMatrix";
 import { EmptyState } from "../components/EmptyState";
+import { FaceStack } from "../components/Faces";
 import { Kv } from "../components/Kv";
 import { ObsoleteNotice } from "../components/ObsoleteNotice";
 import { ObsoleteSection } from "../components/ObsoleteSection";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
+import { deckFaces, shortDeckName } from "../lib/deck-names";
 import { isCurrent } from "../lib/obsolete";
 import type { SourceIndex } from "../lib/sources";
 import { DeckLink } from "./DeckLink";
 import { ModeViewHeader } from "./ModeViewHeader";
 
-/** The name parts a counter heading shows for a deck. */
-type DeckName = Pick<Deck, "id" | "nameEn" | "nameKr">;
+/** The deck fields a counter heading shows. */
+type DeckName = Pick<Deck, "id" | "nameEn" | "nameKr" | "cookies" | "atkOrder">;
 
 /** The view's sections, in page order, which its "On this page" list links to. */
 const TOC = [
@@ -36,23 +40,42 @@ const TOC = [
 const edgeId = (edge: Pick<Counter, "slug">) => `counter-${edge.slug}`;
 
 /**
- * A deck's English name with its Korean name beside it, or its id when the deck isn't listed.
+ * A deck as the matrix names it: its portraits, English and Korean names and tier.
+ *
+ * @param deck - a deck of the mode
+ * @returns the matrix's deck
+ */
+function matrixDeck(deck: Deck): MatrixDeck {
+  return {
+    id: deck.id,
+    nameEn: deck.nameEn,
+    nameKr: deck.nameKr,
+    faces: deckFaces(deck),
+    status: deck.status,
+  };
+}
+
+/**
+ * A team in an edge's heading: its portraits and short English name, the
+ * full names in the tooltip; its id when the deck isn't listed.
  *
  * @param props - the deck, when listed, and its id
  * @returns the label
  */
 function DeckLabel({ deck, id }: { deck: DeckName | undefined; id: string }) {
-  if (!deck) return <>{id}</>;
+  if (!deck) return <span className="edge-team">{id}</span>;
   return (
-    <>
-      {deck.nameEn} {deck.nameKr ? <span className="kr">{deck.nameKr}</span> : null}
-    </>
+    <span className="edge-team" title={deck.nameKr ? `${deck.nameEn} ${deck.nameKr}` : deck.nameEn}>
+      <FaceStack faces={deckFaces(deck)} size={20} />
+      <span>{shortDeckName(deck.nameEn)}</span>
+    </span>
   );
 }
 
 /**
- * One edge as a card: "team is beaten by team", its conditions, mechanism,
- * confidence and sources, headed by `notice` when given.
+ * One edge as a compact card, verdict first: its confidence, then "team
+ * loses to team", then its conditions and mechanism each cut to a line,
+ * sources at the foot; headed by `notice` when given.
  *
  * @param props - the edge, the deck lookup, the source index and an optional notice
  * @returns the card
@@ -71,23 +94,25 @@ function CounterCard({
   notice?: ReactNode;
 }) {
   return (
-    <article className="card" id={edgeId(edge)}>
+    <article className={`card edge-card ${edge.confidence}`} id={edgeId(edge)}>
       {notice}
-      <div className="card-head">
+      <div className="edge-head">
+        <ConfidencePill confidence={edge.confidence} />
         <h3>
           <DeckLabel deck={deck(edge.teamDeckId)} id={edge.teamDeckId} />{" "}
-          <span className="muted">is beaten by</span>{" "}
+          <span className="loses">loses to</span>{" "}
           <DeckLabel deck={deck(edge.beatenByDeckId)} id={edge.beatenByDeckId} />
         </h3>
-        <ConfidencePill confidence={edge.confidence} />
       </div>
       <Kv
         rows={[
-          ["Conditions", edge.conditions],
-          ["Why", edge.why],
+          ["When", edge.conditions ? <Clamp lines={1}>{edge.conditions}</Clamp> : null],
+          ["Why", edge.why ? <Clamp lines={1}>{edge.why}</Clamp> : null],
         ]}
       />
-      <SourceChips ids={edge.sources} sources={sources} />
+      <div className="card-foot">
+        <SourceChips ids={edge.sources} sources={sources} />
+      </div>
     </article>
   );
 }
@@ -215,7 +240,11 @@ export function CountersView({ mode }: { mode: ModeSection }) {
               {live.length ? (
                 <>
                   <div className="grid" id={TOC[0].id}>
-                    <CounterMatrix edges={live} decks={current} href={(e) => `#${edgeId(e)}`} />
+                    <CounterMatrix
+                      edges={live}
+                      decks={current.map(matrixDeck)}
+                      href={(e) => `#${edgeId(e)}`}
+                    />
                     <CounterLegend />
                   </div>
                   <h3 id={TOC[1].id}>Every edge</h3>

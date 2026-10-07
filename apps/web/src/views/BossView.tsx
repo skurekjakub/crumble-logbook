@@ -18,7 +18,7 @@ import { FactNote } from "../components/encounter/notes";
 import { Survival } from "../components/encounter/Survival";
 import { WhatToRun } from "../components/encounter/WhatToRun";
 import { FightTimeline } from "../components/FightTimeline";
-import { GearBoard, generalGear } from "../components/GearBoard";
+import { GearBoard, GearRow, generalGear } from "../components/GearBoard";
 import { Kv } from "../components/Kv";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
@@ -119,9 +119,9 @@ export function BossView({ mode, boss }: BossViewProps) {
             "Fight length",
             lengthEvent?.tElapsed != null ? (
               <div className={`boss-fact${lengthEvent.confidence === "low" ? " low" : ""}`}>
-                <span>{lengthEvent.tElapsed} s</span>
                 <ConfidencePill confidence={lengthEvent.confidence} />
-                <SourceChips ids={lengthEvent.sources} sources={sources} />
+                <span className="boss-fact-body">{lengthEvent.tElapsed} s</span>
+                <SourceChips ids={lengthEvent.sources} sources={sources} max={2} />
               </div>
             ) : null,
           ],
@@ -130,10 +130,13 @@ export function BossView({ mode, boss }: BossViewProps) {
 
       <TocLayout items={TOC}>
         <Section part={PARTS.timeline}>
-          <p className="muted">
-            Elapsed seconds along the track, the in-game countdown under them. Hatched marks are
-            unverified claims.
-          </p>
+          <div className="legend-row">
+            <span>Seconds elapsed, the in-game countdown under them</span>
+            <span>
+              <i className="sw fe-key low" />
+              unverified claim
+            </span>
+          </div>
           <QueryResult query={fights} resource="fight events">
             {(rows) => {
               const shown = rows.filter((e) => e.event !== boss.lengthEvent);
@@ -196,15 +199,11 @@ export function BossView({ mode, boss }: BossViewProps) {
                   <h4>Gear</h4>
                   <GearBoard gear={shown} sources={sources} />
                   {general.length ? (
-                    <ul className="clean">
+                    <div className="card gear-notes">
                       {general.map((g) => (
-                        <li key={g.id}>
-                          <b>{g.substats}</b>{" "}
-                          {g.why ? <span className="muted">{g.why}</span> : null}{" "}
-                          <SourceChips ids={g.sources} sources={sources} />
-                        </li>
+                        <GearRow key={g.id} g={g} sources={sources} />
                       ))}
-                    </ul>
+                    </div>
                   ) : null}
                 </>
               );

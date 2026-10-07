@@ -7,11 +7,13 @@ import {
   starCells,
   starLabel,
 } from "../../lib/buffs";
+import { shortName } from "../../lib/cookie-icons";
 import type { SourceIndex } from "../../lib/sources";
 import { CookieName } from "../CookieName";
 import type { Column } from "../DataTable";
 import { DataTable } from "../DataTable";
 import { EmptyState } from "../EmptyState";
+import { Points } from "../Points";
 import { SourceChips } from "../SourceChips";
 import type { MechanicLike } from "./notes";
 import { MechanicNote } from "./notes";
@@ -57,9 +59,9 @@ export function BuffTable({ rows, buffFormula, debuffFormula, sources }: BuffTab
    * Names a row's cookie.
    *
    * @param r - the row
-   * @returns the English name, or the Korean when unknown
+   * @returns the short English name, or the Korean when unknown
    */
-  const name = (r: BuffStarRow) => r.en ?? r.cookieKr;
+  const name = (r: BuffStarRow) => (r.en ? shortName(r.en) : r.cookieKr);
   const ampScaled = pivot.some((r) => r.scalesWithCasterAmp);
   const chances = [...new Set(pivot.filter((r) => r.chance).map(name))];
 
@@ -99,32 +101,34 @@ export function BuffTable({ rows, buffFormula, debuffFormula, sources }: BuffTab
     },
     {
       header: "Sources",
-      cell: (r) => <SourceChips ids={r.sources} sources={sources} />,
+      cell: (r) => <SourceChips ids={r.sources} sources={sources} max={2} />,
     },
   ];
 
   return (
     <>
-      {ampScaled
-        ? buffFormula.map((m) => <MechanicNote key={m.id} m={m} sources={sources} />)
-        : null}
-      {chances.length ? (
-        <>
-          <p className="muted">
-            {chances.length === 1
-              ? `${chances[0]}'s row is an application chance, not a buff size.`
-              : `${joinNames(chances.map((c) => `${c}'s`))} rows are application chances, not buff sizes.`}
-          </p>
-          {debuffFormula.map((m) => (
-            <MechanicNote key={m.id} m={m} sources={sources} />
-          ))}
-        </>
-      ) : null}
-      <p className="muted">
-        Each column holds the value from that star count up to the next column. A greyed value is
-        unchanged from the column to its left; a dash means the effect has no value yet at that
-        star. Rows marked "self only" buff the caster alone.
-      </p>
+      <div className="buff-notes">
+        {ampScaled
+          ? buffFormula.map((m) => <MechanicNote key={m.id} m={m} sources={sources} />)
+          : null}
+        {chances.length
+          ? debuffFormula.map((m) => <MechanicNote key={m.id} m={m} sources={sources} />)
+          : null}
+      </div>
+      <Points
+        items={[
+          "A column holds from that star up to the next.",
+          "Grey: unchanged from the left. Dash: no value yet.",
+          ...(chances.length
+            ? [
+                chances.length === 1
+                  ? `${chances[0]}: an application chance, not a buff.`
+                  : `${joinNames(chances)}: application chances, not buffs.`,
+              ]
+            : []),
+          '"Self only" buffs the caster alone.',
+        ]}
+      />
       <DataTable columns={columns} rows={pivot} rowKey={(r) => r.key} />
     </>
   );

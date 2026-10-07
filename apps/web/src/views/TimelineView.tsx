@@ -3,6 +3,7 @@ import { useSourceIndex } from "../api/hooks";
 import { timelineQuery } from "../api/queries";
 import type { TimelineEvent } from "../api/types";
 import type { ModeSection } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { EmptyState } from "../components/EmptyState";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
@@ -21,7 +22,8 @@ function byDate(a: TimelineEvent, b: TimelineEvent): number {
 
 /**
  * A mode's dated events (patches, new cookies and the decks that
- * followed), oldest first, with sources.
+ * followed), oldest first, one row each: the date, the event cut to one
+ * line, and its sources at the end.
  *
  * @param mode - the mode whose timeline and copy the view shows
  * @returns the timeline view
@@ -39,8 +41,10 @@ export function TimelineView({ mode }: { mode: ModeSection }) {
               {[...events].sort(byDate).map((t) => (
                 <li key={t.id}>
                   <span className="d">{t.date}</span>
-                  <span>{t.event}</span>
-                  <SourceChips ids={t.sources} sources={sources} />
+                  <span className="tl-event">
+                    <Clamp lines={1}>{t.event}</Clamp>
+                  </span>
+                  <SourceChips ids={t.sources} sources={sources} max={2} />
                 </li>
               ))}
             </ol>

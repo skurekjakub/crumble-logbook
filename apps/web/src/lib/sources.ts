@@ -49,5 +49,27 @@ export function citedBy(rows: ReadonlyArray<{ sources: readonly string[] }>): st
   return [...new Set(rows.flatMap((r) => r.sources))].sort();
 }
 
+/**
+ * A short label for a research record, for a chip or a select: its number
+ * and the mode it's filed under ("002-pvp-meta" filed under Arena →
+ * "002 Arena").
+ *
+ * @param slug - the record's slug
+ * @param records - the loaded records, each with the mode it's filed under
+ * @param modes - the mode sections, each with its label and game mode
+ * @returns the label; the number alone when the record or its mode isn't known,
+ *   and the slug when it has no number
+ */
+export function recordLabel(
+  slug: string,
+  records: ReadonlyArray<{ slug: string; mode: string }>,
+  modes: ReadonlyArray<{ label: string; scope: { mode: string } }>,
+): string {
+  const number = /^\d+/.exec(slug)?.[0] ?? slug;
+  const mode = records.find((r) => r.slug === slug)?.mode;
+  const section = modes.find((m) => m.scope.mode === mode);
+  return section ? `${number} ${section.label}` : number;
+}
+
 /** An index with no sources, for use before `/api/sources` has loaded. */
 export const EMPTY_SOURCES: SourceIndex = new Map();

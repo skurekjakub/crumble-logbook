@@ -5,7 +5,7 @@ import { powerBracketsQuery, stageChaptersQuery } from "../api/queries";
 import type { PlannerStep, PowerBracket, StageChapter } from "../api/types";
 import type { ModeSection, TeamPowerConfig } from "../app/modes";
 import { STAGE, modeLink } from "../app/modes";
-import { BasisLegend, BasisMark } from "../components/BasisMark";
+import { Clamp } from "../components/Clamp";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
@@ -26,7 +26,7 @@ import {
 } from "../lib/team-power";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
-import { PowerSourceLink } from "./TeamPowerParts";
+import { BasisKey, BasisPill, PowerSourceLink } from "./TeamPowerParts";
 import type { PowerSearch } from "./StageBracketsView";
 
 /** The brackets the planner reports, each with the share of damage it keeps. */
@@ -36,26 +36,31 @@ interface Share {
 }
 
 /**
- * Where a reach stops: the chapter's last stage and its boss, every
- * chapter, or not yet the first.
+ * Where a reach stops, as a tile shows it: the stage reached in big type
+ * and a line under it (its boss, every chapter, or the first chapter's
+ * last stage when none is reached yet).
  *
  * @param reach - the reach at one bracket
  * @param chapters - the chapters, in push order
- * @returns the text
+ * @returns the big text and the line under it
  */
-function reachText(reach: Reach<StageChapter>, chapters: readonly StageChapter[]): string {
+function reachText(
+  reach: Reach<StageChapter>,
+  chapters: readonly StageChapter[],
+): { big: string; sub: string } {
   const { reached } = reach;
-  if (!reached) return `not yet at ${chapters[0]?.lastStage ?? "the first chapter"}`;
-  if (reached === chapters.at(-1)) return `every chapter to ${reached.lastStage}`;
-  return `through ${reached.lastStage} (${reached.bossEn ?? reached.bossKr})`;
+  if (!reached) return { big: "Not yet", sub: `first: ${chapters[0]?.lastStage ?? "–"}` };
+  if (reached === chapters.at(-1)) return { big: reached.lastStage, sub: "every chapter" };
+  return { big: reached.lastStage, sub: reached.bossEn ?? reached.bossKr };
 }
 
 /**
- * Where the reader's power stands at each reported bracket: how far it
- * pushes and what the next chapter's last stage takes.
+ * The planner's answer, first and big: one tile per reported bracket with
+ * the furthest chapter's last stage the power keeps it to, and the power
+ * the next chapter takes (any gain that large crosses it).
  *
  * @param props - the power, the brackets reported and the chapters
- * @returns the card
+ * @returns the tiles
  */
 function Standing({
   power,
@@ -67,20 +72,26 @@ function Standing({
   chapters: readonly StageChapter[];
 }) {
   return (
-    <section className="card reach" aria-label="Where you stand">
-      <h3>At {formatPower(power)}</h3>
-      <ul className="clean">
+    <section className="standing" aria-label="Where you stand">
+      <h3>
+        At <span className="fig">{formatPower(power)}</span> you push
+      </h3>
+      <ul className="tiles">
         {shares.map(({ share, bracket }) => {
           const reach = reachAt(chapters, bracket, power);
+          const { big, sub } = reachText(reach, chapters);
           return (
-            <li key={share}>
-              <b>{share}% of damage or more</b>: {reachText(reach, chapters)}
+            <li key={share} className={reach.reached ? "tile" : "tile short"}>
+              <span className="tile-label">{share}% of damage or more</span>
+              <span className="tile-big">{big}</span>
+              <span className="tile-sub">{sub}</span>
               {reach.next && reach.nextPower !== undefined ? (
-                <span className="muted">
-                  {" "}
-                  · next, {reach.next.lastStage} at {formatPower(reach.nextPower)} (
-                  {formatPct((reach.nextPower / power - 1) * 100)}): any gain of that much or more
-                  crosses it
+                <span
+                  className="tile-next"
+                  title="Any gain of that much or more crosses it, whatever the step"
+                >
+                  Next {reach.next.lastStage} at {formatPower(reach.nextPower)} (
+                  {formatPct((reach.nextPower / power - 1) * 100)})
                 </span>
               ) : null}
             </li>
@@ -93,28 +104,31 @@ function Standing({
 
 /**
  * A planner step's gain: the posted figure it multiplies by (≈ when the
- * post gives it loosely) with that figure's note, then the record's words.
+ * post gives it loosely), then the record's words and the figure's note
+ * on one line.
  *
  * @param props - the step and the lists
  * @returns the gain
  */
 export function StepGain({ step, data }: { step: PlannerStep; data: TeamPowerData }) {
   const point = postedGainPoint(step, data.points);
+  const words = [step.gain, point ? `The figure: ${point.note}` : null].filter(Boolean).join(" · ");
   return (
     <>
       {point?.deltaPct == null ? null : (
-        <span className="gain-figure">{formatPct(point.deltaPct, point.approximate)}</span>
+        <span className="fig gain">{formatPct(point.deltaPct, point.approximate)}</span>
       )}
-      <span className="muted">{step.gain}</span>
-      {point ? <div className="basis-note">The figure: {point.note}</div> : null}
+      <span className="muted">
+        <Clamp lines={1}>{words}</Clamp>
+      </span>
     </>
   );
 }
 
 /**
- * What each step the record weighs buys: its basis and gain, and, for a
- * posted gain with a power typed, the new power and how far it pushes at
- * each reported bracket; other steps say no reach is derived.
+ * What each step the record weighs buys: its basis pill and gain, and,
+ * for a posted gain with a power typed, the new power and how far it
+ * pushes at each reported bracket; other steps say no reach is derived.
  *
  * @param props - the mode, the power (null when none is typed), the brackets, the chapters, the lists and the source index
  * @returns the card
@@ -156,7 +170,7 @@ function StepsBuy({
       header: "Step",
       cell: (s) => <PowerSourceLink mode={mode} slug={s.powerSource} sources={data.sources} />,
     },
-    { header: "Basis", cell: (s) => <BasisMark basis={s.basis} /> },
+    { header: "Basis", cell: (s) => <BasisPill basis={s.basis} /> },
     {
       header: "Gain",
       cell: (s) => <StepGain step={s} data={data} />,
@@ -166,8 +180,8 @@ function StepsBuy({
       header: "New power",
       cell: (s) => {
         const next = after(s);
-        if (next === null) return "not derived";
-        return `${loose(s) ? "≈ " : ""}${formatPower(next)}`;
+        if (next === null) return <span className="muted">not derived</span>;
+        return <span className="fig">{`${loose(s) ? "≈ " : ""}${formatPower(next)}`}</span>;
       },
       className: "n",
     },
@@ -179,7 +193,8 @@ function StepsBuy({
         const before = reachAt(chapters, bracket, power);
         const reached = reachAt(chapters, bracket, next).reached;
         const moved = chaptersGained(chapters, before.reached, reached);
-        return reachGained(before, reached, moved, power);
+        const text = reachGained(before, reached, moved, power);
+        return <span className={moved > 0 ? "moved" : undefined}>{text}</span>;
       },
       className: "reach-cell",
     })),
@@ -187,16 +202,17 @@ function StepsBuy({
       header: "The record's reach",
       cell: (s) => (
         <>
-          {s.reach} <SourceChips ids={s.sources} sources={index} />
+          <Clamp lines={1}>{s.reach}</Clamp>
+          <SourceChips ids={s.sources} sources={index} max={2} />
         </>
       ),
       className: "wide",
     },
   ];
   return (
-    <section className="card" aria-labelledby="buys-title">
+    <section aria-labelledby="buys-title">
       <h3 id="buys-title">What the next gains buy</h3>
-      <BasisLegend />
+      <BasisKey bases={["posted", "claimed", "unmeasured"]} />
       <DataTable
         columns={columns}
         rows={data.planner}
@@ -204,16 +220,15 @@ function StepsBuy({
         layout="stack"
         empty="No planner steps recorded yet."
       />
-      <p className="muted">
-        Reach is read chapter by chapter's last stage, where a chapter's recommended power peaks, as
-        the{" "}
+      <p className="muted table-key">
+        Reach is read at each chapter's last stage, as the{" "}
         <Link
           {...modeLink(STAGE.id, "/$mode/brackets")}
           search={power === null ? {} : { power: formatPower(power) }}
         >
           stage bracket calculator
         </Link>{" "}
-        reads it; the record's reach is per stage, so it can run a few stages further.
+        reads it.
       </p>
     </section>
   );
@@ -272,7 +287,9 @@ export function PowerPlannerView({ mode, teamPower, search, onSearch }: PowerPla
               });
               return (
                 <>
-                  {power === null ? null : (
+                  {power === null ? (
+                    <EmptyState>Type your team power above to see how far it pushes.</EmptyState>
+                  ) : (
                     <Standing power={power} shares={shares} chapters={chapterRows} />
                   )}
                   <TeamPowerLoaded state={state}>

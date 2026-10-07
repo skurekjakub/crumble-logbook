@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import type { SourceIndex } from "../lib/sources";
+import { Clamp } from "./Clamp";
+import { Pill } from "./Pill";
 import { SourceChips } from "./SourceChips";
 
 /** Props for {@link ObsoleteNotice}. */
@@ -19,8 +21,9 @@ export interface ObsoleteNoticeProps {
 }
 
 /**
- * The line that heads an obsolete item: since when, why, what superseded
- * it, and the sources that say so.
+ * The line that heads an obsolete item, verdict first: a grey "obsolete
+ * since" pill, then why (cut to one line), what superseded it, and the
+ * sources that say so at the end.
  *
  * @param props - the date, the reason, its sources, the source index, the successor and the item's name
  * @returns the notice
@@ -35,11 +38,21 @@ export function ObsoleteNotice({
 }: ObsoleteNoticeProps) {
   return (
     <div className="obsolete-notice" role="note">
-      <b>{subject ? `${subject} is obsolete since ${since}` : `Obsolete since ${since}`}</b>
-      {reason ? <>: {reason}</> : null}
-      {superseded ? <> Superseded by {superseded}.</> : null}
+      <Pill kind="obsolete">
+        {subject ? `${subject} is obsolete since ${since}` : `Obsolete since ${since}`}
+      </Pill>
+      <span className="obsolete-why">
+        {/* The colon reads the pill and the reason as one sentence to a screen reader. */}
+        {reason ? <span className="vh">: </span> : null}
+        {reason ? (
+          <span className="obsolete-reason">
+            <Clamp lines={1}>{reason}</Clamp>
+          </span>
+        ) : null}
+        {superseded ? <span className="superseded"> Superseded by {superseded}.</span> : null}
+      </span>
       {sources.length ? " " : null}
-      <SourceChips ids={sources} sources={sourceIndex} />
+      <SourceChips ids={sources} sources={sourceIndex} max={2} />
     </div>
   );
 }

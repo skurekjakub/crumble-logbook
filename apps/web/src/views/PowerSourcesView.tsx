@@ -1,8 +1,7 @@
-import type { ReactNode } from "react";
 import { useSourceIndex } from "../api/hooks";
 import type { PowerDataPoint, PowerSource } from "../api/types";
 import type { ModeSection, TeamPowerConfig } from "../app/modes";
-import { BasisMark } from "../components/BasisMark";
+import { Clamp } from "../components/Clamp";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
@@ -10,22 +9,28 @@ import { Kv } from "../components/Kv";
 import { Pill } from "../components/Pill";
 import { SourceChips } from "../components/SourceChips";
 import { ViewHeader } from "../components/ViewHeader";
+import { formatG } from "../lib/format";
 import { optionalKey } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
-import type { EfficiencyGrade, EfficiencyStage } from "../lib/team-power";
+import type { EfficiencyStage } from "../lib/team-power";
 import {
   COST_TYPES,
-  EFFICIENCY_GRADES,
   EFFICIENCY_STAGES,
   PLACES,
-  efficiencyGrade,
   formatPct,
-  postedGainPct,
+  gradeRank,
+  postedGainPoint,
 } from "../lib/team-power";
-import { formatG } from "../lib/format";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
-import { PowerSourceLink, Switch, powerSourceAnchor } from "./TeamPowerParts";
+import {
+  BasisPill,
+  CostTag,
+  GradePill,
+  PowerSourceLink,
+  Switch,
+  powerSourceAnchor,
+} from "./TeamPowerParts";
 
 /** The account stages, by value, for reading the search param. */
 const STAGES = Object.fromEntries(EFFICIENCY_STAGES) as Record<EfficiencyStage, string>;
@@ -49,37 +54,31 @@ export function validatePowerSourcesSearch(search: Record<string, unknown>): Pow
 }
 
 /**
- * The power sources the planner has a posted gain for.
+ * The posted gain the planner may multiply by for each power source.
  *
  * @param data - the lists
- * @returns their slugs, in the planner's order
+ * @returns each measured source's slug with its data point, in the planner's order
  */
-function measuredSources(data: TeamPowerData): ReadonlySet<string> {
-  return new Set(
-    data.planner.filter((s) => postedGainPct(s, data.points) !== null).map((s) => s.powerSource),
-  );
+function measuredSources(data: TeamPowerData): ReadonlyMap<string, PowerDataPoint> {
+  const measured = new Map<string, PowerDataPoint>();
+  for (const step of data.planner) {
+    const point = postedGainPoint(step, data.points);
+    if (point) measured.set(step.powerSource, point);
+  }
+  return measured;
 }
 
-/** Labels per efficiency grade. */
-const GRADE_LABELS: Readonly<Record<EfficiencyGrade, string>> = {
-  high: "High",
-  medium: "Medium",
-  low: "Low",
-  none: "None",
-};
-
 /**
- * The grid of cost against efficiency: cost types across, the record's
- * grades at the chosen stage down, and a last row for the power sources
- * whose note there leads with no grade. Each cell links to its sources'
- * cards; a source the planner has a posted gain for carries the posted
- * mark, so a grade backed by a measurement stands apart from one that isn't.
+ * Every power source in one comparison table, best grade at the chosen
+ * stage first (cheaper cost types first within a grade): its cost type,
+ * its grade at every stage (the chosen stage's column marked), and the
+ * posted gain the record measured for it, when there is one. Each name
+ * links to its card.
  *
- * @param props - the mode, the power sources, the stage graded at, and
- *   the slugs of the sources with a posted gain
+ * @param props - the mode, the power sources, the stage graded at, and the measured gains
  * @returns the card
  */
-function EfficiencyGrid({
+function CompareTable({
   mode,
   sources,
   stage,
@@ -88,73 +87,71 @@ function EfficiencyGrid({
   mode: ModeSection;
   sources: readonly PowerSource[];
   stage: EfficiencyStage;
-  measured: ReadonlySet<string>;
+  measured: ReadonlyMap<string, PowerDataPoint>;
 }) {
-  const rows: ReadonlyArray<readonly [EfficiencyGrade | null, string]> = [
-    ...EFFICIENCY_GRADES.map((g) => [g, GRADE_LABELS[g]] as const),
-    [null, "Not graded or unmeasured"],
-  ];
   /**
-   * The power sources in one cell of the grid.
+   * Where a power source's cost type sorts: free first, paid last.
    *
-   * @param grade - the row's grade, or null for the ungraded row
-   * @param cost - the column's cost type
-   * @returns the cell's list, or a dash when it's empty
+   * @param s - the power source
+   * @returns its cost type's place on the cost axis
    */
-  const cell = (grade: EfficiencyGrade | null, cost: string): ReactNode => {
-    const inCell = sources.filter(
-      (s) => s.costType === cost && efficiencyGrade(s.efficiency[stage]) === grade,
-    );
-    if (!inCell.length) return <span className="muted">–</span>;
-    return (
-      <ul className="names">
-        {inCell.map((s) => (
-          <li key={s.slug}>
-            <PowerSourceLink mode={mode} slug={s.slug} sources={sources} />
-            {measured.has(s.slug) ? (
-              <>
-                {" "}
-                <span className="mark posted">Posted</span>
-              </>
-            ) : null}
-          </li>
-        ))}
-      </ul>
-    );
-  };
+  const costRank = (s: PowerSource) => COST_TYPES.findIndex(([t]) => t === s.costType);
+  const sorted = [...sources].sort(
+    (a, b) =>
+      gradeRank(a.efficiency[stage]) - gradeRank(b.efficiency[stage]) || costRank(a) - costRank(b),
+  );
   return (
-    <section className="card" aria-labelledby="grid-title">
-      <h3 id="grid-title">
-        Cost against efficiency, {STAGES[stage].charAt(0).toLowerCase() + STAGES[stage].slice(1)}
+    <section aria-labelledby="compare-title">
+      <h3 id="compare-title">
+        Compared, best at {STAGES[stage].charAt(0).toLowerCase() + STAGES[stage].slice(1)} first
       </h3>
       <div className="tablewrap">
-        <table className="scroll grid-cost">
+        <table className="scroll compare">
           <thead>
             <tr>
-              <th scope="col">Efficiency</th>
-              {COST_TYPES.map(([type, label]) => (
-                <th key={type} scope="col">
+              <th scope="col">Power source</th>
+              <th scope="col">Cost</th>
+              {EFFICIENCY_STAGES.map(([key, label]) => (
+                <th key={key} scope="col" className={key === stage ? "stage chosen" : "stage"}>
                   {label}
                 </th>
               ))}
+              <th scope="col">Measured gain</th>
             </tr>
           </thead>
           <tbody>
-            {rows.map(([grade, label]) => (
-              <tr key={label} className={grade === null ? "ungraded" : undefined}>
-                <th scope="row">{label}</th>
-                {COST_TYPES.map(([type]) => (
-                  <td key={type}>{cell(grade, type)}</td>
-                ))}
-              </tr>
-            ))}
+            {sorted.map((s) => {
+              const point = measured.get(s.slug);
+              return (
+                <tr key={s.slug}>
+                  <th scope="row">
+                    <PowerSourceLink mode={mode} slug={s.slug} sources={sources} />
+                  </th>
+                  <td>
+                    <CostTag type={s.costType} />
+                  </td>
+                  {EFFICIENCY_STAGES.map(([key]) => (
+                    <td key={key} className={key === stage ? "stage chosen" : "stage"}>
+                      <GradePill note={s.efficiency[key]} />
+                    </td>
+                  ))}
+                  <td className="n">
+                    {point?.deltaPct == null ? (
+                      <span className="muted">–</span>
+                    ) : (
+                      <span className="fig gain" title={point.note}>
+                        {formatPct(point.deltaPct, point.approximate)}
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
-      <p className="muted">
-        <span className="mark posted">Posted</span> the record has a player's own before-and-after
-        gain for the power source, which the planner multiplies. A grade without it is the record's
-        judgement from costs and the community's word.
+      <p className="muted table-key">
+        Hover a grade for the record's note. A dash: the note leads with no grade.
       </p>
     </section>
   );
@@ -163,10 +160,10 @@ function EfficiencyGrid({
 /**
  * The figures behind the power sources the planner may multiply by: each
  * one's measured changes (a power before and after) and the record's own
- * arithmetic on its cost, each marked with how it is known (≈ when given
- * loosely), with the record's note near 2.2G under each. A figure with no
- * before and after, such as a gain several sources made together, is left
- * to the Data points page. Nothing here is divided by a cost.
+ * arithmetic on its cost, each with its basis pill (≈ when given loosely)
+ * and its note on one line. A figure with no before and after, such as a
+ * gain several sources made together, is left to the Data points page.
+ * Nothing here is divided by a cost.
  *
  * @param props - the mode, the lists and the source index
  * @returns the section, or null when no planner step has a posted gain
@@ -180,32 +177,46 @@ function WithNumbers({
   data: TeamPowerData;
   index: SourceIndex;
 }) {
-  const measured = [...measuredSources(data)];
+  const measured = [...measuredSources(data).keys()];
   if (!measured.length) return null;
   const columns: Column<PowerDataPoint>[] = [
-    { header: "How known", cell: (p) => <BasisMark basis={p.kind} /> },
+    { header: "How known", cell: (p) => <BasisPill basis={p.kind} /> },
     {
       header: "Change",
       cell: (p) =>
-        p.deltaPct === null
-          ? "–"
-          : `${formatPct(p.deltaPct, p.approximate)}${p.beforeG !== null && p.afterG !== null ? ` (${formatG(p.beforeG)} → ${formatG(p.afterG)})` : ""}`,
+        p.deltaPct === null ? (
+          "–"
+        ) : (
+          <>
+            <span className="fig gain">{formatPct(p.deltaPct, p.approximate)}</span>
+            {p.beforeG !== null && p.afterG !== null ? (
+              <span className="fig-sub">
+                {formatG(p.beforeG)} → {formatG(p.afterG)}
+              </span>
+            ) : null}
+          </>
+        ),
       className: "n",
     },
-    { header: "What it took", cell: (p) => p.cost ?? "–", className: "wide" },
-    { header: "Note", cell: (p) => p.note },
-    { header: "Sources", cell: (p) => <SourceChips ids={p.sources} sources={index} /> },
+    {
+      header: "What it took",
+      cell: (p) => (p.cost ? <Clamp lines={1}>{p.cost}</Clamp> : "–"),
+      className: "wide",
+    },
+    { header: "Note", cell: (p) => <Clamp lines={1}>{p.note}</Clamp>, className: "wide" },
+    { header: "Sources", cell: (p) => <SourceChips ids={p.sources} sources={index} max={2} /> },
   ];
   return (
-    <section className="panel" aria-labelledby="numbers-title">
+    <section aria-labelledby="numbers-title">
       <h3 id="numbers-title">Where the record has numbers</h3>
-      <div className="note callout">
-        This page doesn't divide a gain by a cost. Where the record compares two steps per won, its
-        note says so; where it can't compare them, the note says that instead.
+      <div className="callout">
+        <Pill kind="medium">Not per won</Pill>
+        <span className="callout-body">
+          Gains aren't divided by cost; notes say where they compare.
+        </span>
       </div>
       <div className="grid">
         {measured.map((slug) => {
-          const source = data.sources.find((s) => s.slug === slug);
           const points = data.points.filter(
             (p) =>
               p.powerSource === slug &&
@@ -223,7 +234,6 @@ function WithNumbers({
                 layout="stack"
                 empty="No figures recorded."
               />
-              {source ? <p className="muted">Near 2.2G: {source.efficiency.at22g}</p> : null}
             </section>
           );
         })}
@@ -233,10 +243,10 @@ function WithNumbers({
 }
 
 /**
- * One power source's card: what it raises, where it counts, its cost type,
- * its efficiency at every stage (the chosen one marked), cap and
- * diminishing returns, and, folded, its materials, posted gains, spend
- * order and patches.
+ * One power source's card: its name, cost type, grade at the chosen
+ * stage and confidence first; what it raises and the chosen stage's note,
+ * each on one line; then, folded, every stage's note, cap, diminishing
+ * returns, materials, posted gains, spend order and patches.
  *
  * @param props - the power source, the stage graded at and the source index
  * @returns the card
@@ -250,44 +260,42 @@ function PowerSourceCard({
   stage: EfficiencyStage;
   index: SourceIndex;
 }) {
-  const cost = COST_TYPES.find(([t]) => t === source.costType)?.[1];
   return (
-    <section className="card" id={powerSourceAnchor(source.slug)}>
+    <section className="card ps-card" id={powerSourceAnchor(source.slug)}>
       <div className="card-head">
         <h3>
           {source.nameEn} <span className="kr">{source.nameKr}</span>
         </h3>
         <span className="chips">
-          <span className="chip">{cost}</span>
+          <GradePill note={source.efficiency[stage]} />
+          <CostTag type={source.costType} />
           {source.confidence === "high" ? null : (
             <Pill kind={source.confidence}>{source.confidence} confidence</Pill>
           )}
         </span>
       </div>
-      <div>{source.raises}</div>
-      <div className="muted">Counts in: {source.appliesIn.map((p) => PLACES[p]).join(", ")}</div>
-      <dl className="kv">
-        {EFFICIENCY_STAGES.map(([key, label]) => (
-          <EfficiencyRow
-            key={key}
-            label={label}
-            note={source.efficiency[key]}
-            chosen={key === stage}
-          />
-        ))}
-        {(
-          [
+      <Kv
+        rows={[
+          ["Raises", <Clamp lines={1}>{source.raises}</Clamp>],
+          [STAGES[stage], <Clamp lines={1}>{source.efficiency[stage]}</Clamp>],
+          ["Counts in", source.appliesIn.map((p) => PLACES[p]).join(", ")],
+        ]}
+      />
+      <details>
+        <summary>Every stage, cap, materials, posted gains and patches</summary>
+        <Kv
+          rows={[
+            ...EFFICIENCY_STAGES.filter(([key]) => key !== stage).map(
+              ([key, label]) => [label, source.efficiency[key]] as const,
+            ),
             ["Cap", source.cap],
             ["Diminishing returns", source.diminishing],
             ["Cost per roll", source.costPerRoll],
             ["For the brackets", source.bracketEffect],
-          ] as const
-        ).map(([label, text]) =>
-          text ? <EfficiencyRow key={label} label={label} note={text} chosen={false} /> : null,
-        )}
-      </dl>
-      <details>
-        <summary>Materials, posted gains, spend order and patches</summary>
+            ["Spend order", source.spendOrder],
+            ["Patches", source.patchNotes],
+          ]}
+        />
         <DataTable
           columns={[
             { header: "Material", cell: (m) => m.name },
@@ -308,39 +316,18 @@ function PowerSourceCard({
                 {g.delta ? `, ${g.delta}` : null}
                 {g.cost ? <span className="muted"> ({g.cost})</span> : null}{" "}
                 <span className="basis-note">{g.kind}</span>{" "}
-                <SourceChips ids={g.sources} sources={index} />
+                <SourceChips ids={g.sources} sources={index} max={2} />
               </li>
             ))}
           </ul>
         ) : (
           <p className="muted">No posted gains.</p>
         )}
-        <Kv
-          rows={[
-            ["Spend order", source.spendOrder],
-            ["Patches", source.patchNotes],
-          ]}
-        />
       </details>
-      <SourceChips ids={source.sources} sources={index} />
+      <div className="card-foot">
+        <SourceChips ids={source.sources} sources={index} />
+      </div>
     </section>
-  );
-}
-
-/**
- * One term and its text in a power source's facts, marked when it is the
- * efficiency at the stage graded at.
- *
- * @param props - the term, the text and whether it is the chosen stage's efficiency
- * @returns the term and its text
- */
-function EfficiencyRow({ label, note, chosen }: { label: string; note: string; chosen: boolean }) {
-  const className = chosen ? "chosen" : undefined;
-  return (
-    <>
-      <dt className={className}>{label}</dt>
-      <dd className={className}>{note}</dd>
-    </>
   );
 }
 
@@ -358,9 +345,9 @@ export interface PowerSourcesViewProps {
 
 /**
  * Every power source on cost and efficiency: the account stage to grade
- * at (in the URL as `?stage=`), the grid of cost type against the
- * record's grade there, the figures behind the steps the planner may
- * multiply by, and a card per power source.
+ * at (in the URL as `?stage=`), one table comparing them all, best grade
+ * there first, the figures behind the steps the planner may multiply by,
+ * and a card per power source.
  *
  * @param props - the mode, its team-power config, the search params and their setter
  * @returns the view
@@ -385,7 +372,7 @@ export function PowerSourcesView({ mode, teamPower, search, onSearch }: PowerSou
             <EmptyState>No power sources recorded yet.</EmptyState>
           ) : (
             <>
-              <EfficiencyGrid
+              <CompareTable
                 mode={mode}
                 sources={data.sources}
                 stage={stage}

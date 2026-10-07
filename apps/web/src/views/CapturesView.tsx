@@ -7,7 +7,7 @@ import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { QueryResult } from "../components/QueryResult";
 import { ViewHeader } from "../components/ViewHeader";
-import { evidenceFolder } from "../lib/captures";
+import { evidenceFolder, splitPath } from "../lib/captures";
 import { optionalText } from "../lib/search";
 
 /** The captures view's search params: a folder, a tool, and a path or URL search. */
@@ -33,14 +33,16 @@ export function validateCapturesSearch(search: Record<string, unknown>): Capture
 
 const COLUMNS: Column<Capture>[] = [
   {
-    header: "Path",
-    cell: (c) => (
-      <span className="capture" title={c.path}>
-        <span className="mono" dir="ltr">
-          {c.path}
+    header: "File",
+    cell: (c) => {
+      const { dir, name } = splitPath(c.path);
+      return (
+        <span className="capture-file" title={c.path}>
+          <span className="capture-dir mono">{dir}</span>
+          <span className="capture-name mono">{name}</span>
         </span>
-      </span>
-    ),
+      );
+    },
     className: "wide capture-path",
   },
   {
@@ -67,7 +69,11 @@ const COLUMNS: Column<Capture>[] = [
   },
   {
     header: "Tool",
-    cell: (c) => <span className="mono">{c.tool}</span>,
+    cell: (c) => (
+      <span className="chips src">
+        <span className="chip">{c.tool}</span>
+      </span>
+    ),
     className: "capture-tool",
   },
 ];
@@ -105,15 +111,17 @@ export function CapturesView({ slug, search: { folder, tool, q }, onSearch }: Ca
   const captures = useQuery(capturesQuery(slug));
   return (
     <>
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <Link to="/research">Research</Link>
+        <span aria-hidden="true">/</span>
+        <span className="mono">research/{slug}/</span>
+      </nav>
       <ViewHeader
         title="Captures"
-        lede={
-          <>
-            The capture ledger of <span className="mono">research/{slug}/</span>: every evidence
-            file, where it came from, when it was captured and by what. ≈ marks a time backfilled
-            after the fact. <Link to="/research">All records</Link>
-          </>
-        }
+        lede={[
+          "Every evidence file: its URL, capture time and tool.",
+          "≈ marks a time backfilled after the fact.",
+        ]}
       />
       <QueryResult query={captures} resource="captures">
         {(rows) => (

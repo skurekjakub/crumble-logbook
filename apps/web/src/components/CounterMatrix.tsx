@@ -1,3 +1,10 @@
+import { shortDeckName } from "../lib/deck-names";
+import type { FaceRef } from "../lib/deck-names";
+import { Clamp } from "./Clamp";
+import { FaceStack } from "./Faces";
+import type { PillKind } from "./Pill";
+import { Pill } from "./Pill";
+
 /** A directed counter edge as the matrix needs it; `/api/counters` rows fit as they are. */
 export interface CounterEdge {
   slug: string;
@@ -7,30 +14,56 @@ export interface CounterEdge {
   beatenByDeckId: string;
   /** When the edge holds; null when the source states none. */
   conditions: string | null;
+  /** The mechanism: why the counter wins; shown when the cell is expanded. */
+  why?: string | null;
   confidence: "high" | "medium" | "low";
 }
 
-/** A deck the matrix names: its id, English name and Korean name. */
+/** A deck the matrix names. */
 export interface MatrixDeck {
   id: string;
   nameEn: string;
   /** The Korean name, shown beneath the English; null when unknown. */
   nameKr: string | null;
+  /** The cookies whose portraits stand for the deck, most telling first. */
+  faces?: readonly FaceRef[];
+  /** The deck's tier, shown as a pill on its row; omitted for none. */
+  status?: PillKind | null;
 }
 
+/** What a cell's verdict badge says per confidence: the pill kind and its word. */
+const VERDICT: Readonly<Record<CounterEdge["confidence"], readonly [PillKind, string]>> = {
+  high: ["high", "high"],
+  medium: ["medium", "medium"],
+  low: ["low", "claim"],
+};
+
 /**
- * A team's name in a matrix heading: English, with the Korean beneath when known.
+ * The first of a deck's Korean names, which often lists several ("호밀 원툴덱 / 호황").
+ *
+ * @param nameKr - the Korean name as stored
+ * @returns the first name
+ */
+const firstKr = (nameKr: string) => nameKr.split(" / ")[0]!.trim();
+
+/**
+ * A team in a matrix heading: its portraits, then its short English name,
+ * with its first Korean name beneath when known; the full names are in the
+ * tooltip.
  *
  * @param props - the team's deck id, and its deck when listed
- * @returns the name; the bare id when the deck isn't listed
+ * @returns the heading content; the bare id when the deck isn't listed
  */
-function TeamName({ id, deck }: { id: string; deck: MatrixDeck | undefined }) {
-  if (!deck) return <>{id}</>;
-  if (!deck.nameKr) return <>{deck.nameEn}</>;
+function TeamHead({ id, deck }: { id: string; deck: MatrixDeck | undefined }) {
+  if (!deck) return <span className="team-head">{id}</span>;
+  const title = deck.nameKr ? `${deck.nameEn} ${deck.nameKr}` : deck.nameEn;
   return (
-    <span className="name-stack">
-      {deck.nameEn}
-      <span className="kr">{deck.nameKr}</span>
+    <span className="team-head" title={title}>
+      <FaceStack faces={deck.faces ?? []} size={28} />
+      <span className="name-stack">
+        <span className="en">{shortDeckName(deck.nameEn)}</span>
+        {deck.nameKr ? <span className="kr">{firstKr(deck.nameKr)}</span> : null}
+      </span>
     </span>
   );
 }
@@ -64,12 +97,43 @@ function axis(
 }
 
 /**
- * The counter matrix: one row per team that something beats, one column
- * per team that beats something, each named in English with the Korean
- * beneath. A cell holds the edges "row is beaten by column", each with its
- * conditions, styled by its own confidence and linking to `href(edge)`; the
- * reverse matchup is a different cell, filled only by its own edges. A cell
- * where a team meets itself is marked, and every other cell is empty.
+ * One edge in a cell: a verdict badge coloured by confidence that links to
+ * the edge's entry, then its conditions cut to two short lines (a cell is
+ * narrow); expanding them also shows the mechanism.
+ *
+ * @param props - the edge, its accessible name and its link
+ * @returns the tile
+ */
+function EdgeTile({ edge, name, href }: { edge: CounterEdge; name: string; href: string }) {
+  const [kind, word] = VERDICT[edge.confidence];
+  const length = (edge.conditions?.length ?? 0) + (edge.why?.length ?? 0);
+  return (
+    <div className={`edge ${edge.confidence}`}>
+      <a className={`verdict ${edge.confidence}`} href={href} aria-label={name}>
+        <Pill kind={kind}>{word}</Pill>
+      </a>
+      {length ? (
+        <span className="edge-text">
+          <Clamp lines={2} perLine={22} length={length}>
+            {edge.conditions ? <span className="cond">{edge.conditions}</span> : null}
+            {edge.conditions && edge.why ? " " : null}
+            {edge.why ? <span className="why">{edge.why}</span> : null}
+          </Clamp>
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
+/**
+ * The counter matrix, read as win/lose: one row per team that something
+ * beats, one column per team that beats something, each headed by its
+ * portraits and short name. A filled cell means the column's team wins:
+ * each edge "row is beaten by column" is a tile coloured by its own
+ * confidence, its conditions cut short with the mechanism on demand,
+ * and its badge linking to `href(edge)`. The reverse matchup is a different
+ * cell, filled only by its own edges. A cell where a team meets itself is
+ * marked, and every other cell is empty.
  *
  * @param props - the edges, the decks naming the axes, and each cell's link
  * @returns the matrix table
@@ -83,62 +147,70 @@ export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
    */
   const find = (id: string) => decks.find((d) => d.id === id);
   /**
-   * Names a deck in English.
+   * Names a deck in English, shortened.
    *
    * @param id - the deck's id
-   * @returns its English name, or the id when it isn't listed
+   * @returns its short English name, or the id when it isn't listed
    */
-  const name = (id: string) => find(id)?.nameEn ?? id;
+  const name = (id: string) => {
+    const deck = find(id);
+    return deck ? shortDeckName(deck.nameEn) : id;
+  };
   const rows = axis(edges, decks, (e) => e.teamDeckId);
   const cols = axis(edges, decks, (e) => e.beatenByDeckId);
   return (
-    <div className="tablewrap">
+    <div className="tablewrap matrix-wrap">
       <table className="matrix">
         <caption className="label">Each row's team is beaten by the column's team</caption>
         <thead>
           <tr>
-            <th scope="col">Team ↓ · beaten by →</th>
+            <th scope="col" className="corner">
+              <span>Team ↓</span>
+              <span>beaten by →</span>
+            </th>
             {cols.map((id) => (
               <th key={id} scope="col">
-                <TeamName id={id} deck={find(id)} />
+                <TeamHead id={id} deck={find(id)} />
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {rows.map((team) => (
-            <tr key={team}>
-              <th scope="row">
-                <TeamName id={team} deck={find(team)} />
-              </th>
-              {cols.map((by) => {
-                const cell = edges.filter((e) => e.teamDeckId === team && e.beatenByDeckId === by);
-                if (team === by) {
+          {rows.map((team) => {
+            const deck = find(team);
+            return (
+              <tr key={team}>
+                <th scope="row">
+                  <TeamHead id={team} deck={deck} />
+                  {deck?.status ? <Pill kind={deck.status} /> : null}
+                </th>
+                {cols.map((by) => {
+                  if (team === by) {
+                    return (
+                      <td key={by} className="ctr self" aria-label="same team">
+                        –
+                      </td>
+                    );
+                  }
+                  const cell = edges.filter(
+                    (e) => e.teamDeckId === team && e.beatenByDeckId === by,
+                  );
                   return (
-                    <td key={by} className="ctr self" aria-label="same team">
-                      –
+                    <td key={by} className={cell.length ? "ctr hit" : "ctr"}>
+                      {cell.map((e) => (
+                        <EdgeTile
+                          key={e.slug}
+                          edge={e}
+                          href={href(e)}
+                          name={`${name(team)} is beaten by ${name(by)}: ${e.confidence} confidence${e.conditions ? `. ${e.conditions}` : ""}`}
+                        />
+                      ))}
                     </td>
                   );
-                }
-                return (
-                  <td key={by} className="ctr">
-                    {cell.map((e) => (
-                      <a
-                        key={e.slug}
-                        className={e.confidence}
-                        href={href(e)}
-                        title={e.conditions ?? undefined}
-                        aria-label={`${name(team)} is beaten by ${name(by)}: ${e.confidence} confidence${e.conditions ? `. ${e.conditions}` : ""}`}
-                      >
-                        <b>{e.confidence}</b>
-                        {e.conditions ? <span className="cond">{e.conditions}</span> : null}
-                      </a>
-                    ))}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
+                })}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
@@ -146,7 +218,7 @@ export function CounterMatrix({ edges, decks, href }: CounterMatrixProps) {
 }
 
 /**
- * The key to the matrix's cell styles, one per confidence level.
+ * The key to the matrix's tiles, one per confidence level.
  *
  * @returns the legend row
  */
@@ -163,7 +235,7 @@ export function CounterLegend() {
       </span>
       <span>
         <i className="sw ctr-sw low" />
-        low: unverified claim
+        claim: unverified
       </span>
     </div>
   );

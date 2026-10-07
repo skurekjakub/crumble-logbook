@@ -1,5 +1,7 @@
-/* The stage-pushing screens: the power field, the reach card, attempt results, the
-   Rift's findings list and its clears with their teams. Colours come from tokens.css only. */
+/* The stage-pushing screens: the power field, the reach answer, the bracket scale, ranked
+   attempts, the zone slots, the Rift's levels, findings and clears. The bracket scale is the
+   screens' visual axis: the kept-damage share tints its tag, from green (full damage) through
+   teal, amber and candy to red (under 15%). Colours come from tokens.css only. */
 
 .power-field {
   display: flex;
@@ -31,31 +33,400 @@
   color: var(--bad);
 }
 
-.card.reach {
-  border-left: 4px solid var(--accent);
+/* BracketTag: a kept-damage share, tinted by its step of the scale. */
+.bk {
+  display: inline-flex;
+  align-items: baseline;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font: 700 var(--fs-xs) / 1.2 var(--mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
-.card.reach li + li {
-  margin-top: var(--sp-1);
-}
-
-.result.clear {
+.bk-full {
   color: var(--good);
-  font-weight: 600;
+  background: var(--good-soft);
 }
-.result.fail {
+.bk-high {
+  color: var(--ink-2);
+  background: var(--surface-2);
+}
+.bk-mid {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.bk-low {
+  color: var(--candy-ink);
+  background: var(--candy-soft);
+}
+.bk-floor {
   color: var(--bad);
+  background: var(--bad-soft);
+}
+
+/* The reach answer: the reader's power large, then a tile per share with how far it reaches. */
+.reach-card {
+  margin: 0 0 var(--sp-5);
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.reach-card h3 {
+  margin: 0 0 var(--sp-3);
+  font: 400 var(--fs-2xl) / 1.1 var(--display);
+}
+.reach-card h3 .unit {
+  margin-left: 8px;
+  font: 500 var(--fs-s) / 1 var(--body);
+  color: var(--ink-3);
+}
+.reach-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.reach-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: var(--sp-3);
+  border-radius: var(--radius-s);
+  background: var(--surface-2);
+  min-width: 0;
+}
+.reach-value {
+  font: 700 var(--fs-xl) / 1.1 var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+.reach-sub {
+  font-size: var(--fs-xs);
+  color: var(--ink-2);
+  min-width: 0;
+}
+.reach-tile.none .reach-value {
+  color: var(--ink-3);
+}
+.reach-prompt {
+  margin: 0 0 var(--sp-5);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--ink-2);
+}
+
+/* The power gate as a ladder: from what share of recommended power each bracket starts. */
+.gate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin: var(--sp-2) 0;
+  padding: 0;
+  list-style: none;
+}
+.gate li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  min-width: 64px;
+}
+.gate .from {
+  font: 600 var(--fs-xs) / 1 var(--mono);
+  color: var(--ink-2);
+}
+.gate .kr {
+  font-size: var(--fs-2xs);
+  color: var(--ink-3);
+}
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.card-row h3 {
+  margin: 0;
+}
+details.chapters > summary {
+  cursor: pointer;
   font-weight: 600;
+  color: var(--accent);
+}
+details.chapters[open] > summary {
+  margin-bottom: var(--sp-2);
 }
 
-.rift-findings li + li {
-  margin-top: var(--sp-3);
+/* Ranked attempts: the place, #1 large; the best row edged in candy. */
+.st-rank {
+  font: 700 var(--fs-m) / 1 var(--mono);
+  color: var(--ink-2);
 }
-
-.rift-clear + .rift-clear {
+.st-rank.r1 {
+  font: 400 var(--fs-xl) / 1 var(--display);
+  color: var(--candy-ink);
+}
+.st-rank-none {
+  color: var(--ink-3);
+}
+tr:has(.st-rank.r1) {
+  background: var(--candy-soft);
+}
+tr:has(.st-rank.r1) > td:first-child {
+  box-shadow: inset 3px 0 0 var(--candy);
+}
+/* Phones: a stacked row is one block, so the edge goes on the row; sources stay last. */
+@media (max-width: 640px) {
+  table.stack tr:has(.st-rank.r1) {
+    box-shadow: inset 3px 0 0 var(--candy);
+  }
+  table.stack tr:has(.st-rank.r1) > td:first-child {
+    box-shadow: none;
+  }
+  table.stack td.src {
+    order: 2;
+  }
+}
+.stage-at,
+.pw {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.stage-at b,
+.pw b {
+  font: 700 var(--fs-base) / 1.2 var(--mono);
+}
+.era {
+  align-self: flex-start;
+  padding: 0 5px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-s);
+  font: 500 var(--fs-2xs) / 1.4 var(--body);
+  color: var(--ink-3);
+}
+.pw-of {
+  font: 400 var(--fs-2xs) / 1.2 var(--body);
+  color: var(--ink-3);
+}
+.st-verdict {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.play {
+  font-size: var(--fs-2xs);
+  color: var(--ink-3);
+}
+.st-verdict .pill {
+  white-space: nowrap;
+}
+td.deck {
+  width: 15ch;
+}
+td.deck a {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+td.src .chip {
+  white-space: nowrap;
+}
+@media (min-width: 641px) {
+  td.wide.clear-note {
+    width: 30%;
+  }
+}
+section.clears + section.clears {
   margin-top: var(--sp-5);
 }
-.rift-clear-team {
-  margin-left: var(--sp-4);
-  padding-left: var(--sp-3);
-  border-left: 2px solid var(--line);
+.st-group-lede {
+  margin: 0 0 var(--sp-2);
+  font-size: var(--fs-s);
+  color: var(--ink-3);
+}
+
+/* Zone slots: a tile per boss slot, the boss's portrait and the bracket first, then what to bring. */
+.zone-card .zone-chapters {
+  margin: 0 0 var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.zslots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--sp-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.zslot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  min-width: 0;
+}
+.zslot-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.zslot-stage {
+  font: 700 var(--fs-s) / 1 var(--mono);
+  color: var(--ink-2);
+}
+.zslot-cleared {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+  font-size: var(--fs-2xs);
+  color: var(--ink-3);
+  text-align: right;
+  justify-content: flex-end;
+}
+.bring {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--sp-2);
+  border-radius: var(--radius-s);
+  background: var(--surface-2);
+  font-size: var(--fs-s);
+}
+.bring-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.zslot-plan {
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+  --clamp-bg: var(--surface);
+}
+.zslot .chips.src {
+  margin-top: auto;
+  justify-content: flex-end;
+}
+
+/* The Rift: one-line facts, the season strip, the levels list and its fold. */
+.fact-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2) var(--sp-3);
+  margin: 0;
+}
+.fact-line + .fact-line {
+  margin-top: var(--sp-2);
+}
+.fact-line .big {
+  font: 700 var(--fs-l) / 1 var(--mono);
+}
+.fact {
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+.fact b {
+  color: var(--ink);
+  font-family: var(--mono);
+}
+.rift-lv {
+  font: 700 var(--fs-base) / 1 var(--mono);
+}
+.show-all {
+  margin-top: var(--sp-2);
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font: 600 var(--fs-xs) / 1.2 var(--body);
+  cursor: pointer;
+}
+.show-all:hover {
+  border-color: var(--accent);
+}
+.boss-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--fs-s);
+}
+.boss-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px var(--sp-2);
+}
+.boss-cell .muted {
+  font-size: var(--fs-xs);
+}
+.boss-cell + .boss-cell {
+  margin-top: var(--sp-2);
+}
+
+/* The Rift's findings elsewhere in the record: kind first, a line of text, sources last. */
+.rift-findings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rift-findings li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2) var(--sp-3);
+  font-size: var(--fs-s);
+}
+.rift-findings .kind {
+  flex: none;
+  max-width: 16ch;
+  padding: 1px 6px;
+  border-radius: var(--radius-s);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font: 600 var(--fs-2xs) / 1.5 var(--body);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rift-findings .rift-finding {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  .rift-findings li {
+    flex-wrap: wrap;
+  }
+  .rift-findings .rift-finding {
+    flex-basis: 100%;
+    order: 1;
+  }
+}
+
+/* Rift clears: the teams the ranked clears ran, once each, under the ranking. */
+.rift-teams > h3 {
+  margin-top: var(--sp-5);
 }

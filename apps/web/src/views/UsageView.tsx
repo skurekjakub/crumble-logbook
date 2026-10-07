@@ -1,16 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
-import { Fragment } from "react";
 import { useSourceIndex } from "../api/hooks";
 import { glossaryQuery, recordQuery, usageQuery } from "../api/queries";
 import type { UsageStat } from "../api/types";
 import type { ModeSection } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { CookieName } from "../components/CookieName";
 import { EmptyState } from "../components/EmptyState";
+import { MemberChips } from "../components/Faces";
+import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
 import { UsageBars, UsageLegend } from "../components/UsageBars";
 import type { SourceIndex } from "../lib/sources";
+import { hoistNote, ownSources } from "../lib/usage";
 import { ModeViewHeader } from "./ModeViewHeader";
 
 /** Section heading per usage kind, in display order. */
@@ -62,21 +65,10 @@ function samples(rows: readonly UsageStat[]): Sample[] {
 }
 
 /**
- * Reports whether a row cites exactly the sources its sample group cites.
- *
- * @param row - the usage row
- * @param group - the row's sample group
- * @returns `true` if the row's sources match the group's
- */
-function citesGroup(row: UsageStat, group: Sample): boolean {
-  return (
-    row.sources.length === group.sources.length &&
-    row.sources.every((s) => group.sources.includes(s))
-  );
-}
-
-/**
- * One sample's bars: the sample and capture date with its sources, then a bar per subject.
+ * One sample's bars: the sample and capture date with its sources and the
+ * caveat its rows share, then a ranked bar per subject. A cookie or pet
+ * shows its portrait; a group (a core, a team, a pet set) shows its name
+ * with its members' portraits under the bar.
  *
  * @param props - the sample group, the English namer and the source index
  * @returns the sample line and its bars
@@ -91,28 +83,50 @@ function SampleBars({
   en: (kr: string) => string | null;
   sources: SourceIndex;
 }) {
+  const notes = hoistNote(group.rows.map((r) => r.note));
+  const own = ownSources(group.rows);
   return (
     <>
       <div className="bar-sample">
-        <span>{group.sample}</span>
-        <span className="muted"> · captured {group.capturedAt}</span>{" "}
-        <SourceChips ids={group.sources} sources={sources} />
+        <span className="bar-sample-text">
+          <Clamp lines={1} perLine={70}>
+            {group.sample}
+          </Clamp>
+        </span>
+        <span className="muted">captured {group.capturedAt}</span>
+        <SourceChips ids={group.sources} sources={sources} max={2} />
       </div>
+      {notes.common ? (
+        <div className="bar-common muted">
+          <Clamp lines={1} perLine={70}>
+            {notes.common}
+          </Clamp>
+        </div>
+      ) : null}
       <UsageBars
-        bars={group.rows.map((r) => ({
-          key: r.id,
-          label: <CookieName kr={r.subject} en={r.en} />,
-          detail: r.members?.map((kr, i) => (
-            <Fragment key={`${i}-${kr}`}>
-              {i > 0 && " · "}
-              <CookieName kr={kr} en={en(kr)} inline />
-            </Fragment>
-          )),
-          pct: r.usagePct,
-          confirmedPct: r.confirmedPct,
-          note: r.note,
-          extra: citesGroup(r, group) ? null : <SourceChips ids={r.sources} sources={sources} />,
-        }))}
+        bars={group.rows.map((r, i) => {
+          const members = r.members ?? [];
+          const note = notes.rest[i];
+          return {
+            key: r.id,
+            label: members.length ? (
+              <span className="group-name">{r.subject}</span>
+            ) : (
+              <CookieName kr={r.subject} en={r.en} />
+            ),
+            detail: members.length ? (
+              <MemberChips members={members.map((kr) => ({ kr, en: en(kr) }))} />
+            ) : null,
+            pct: r.usagePct,
+            confirmedPct: r.confirmedPct,
+            note: note ? (
+              <Clamp lines={1} perLine={60}>
+                {note}
+              </Clamp>
+            ) : null,
+            extra: own[i]?.length ? <SourceChips ids={own[i]} sources={sources} max={2} /> : null,
+          };
+        })}
       />
     </>
   );
@@ -120,10 +134,12 @@ function SampleBars({
 
 /**
  * A mode's usage figures: one card per kind (cookies, cores, pets, teams),
- * each with a bar list per sample, its capture date and sources, and each
- * figure's own caveat, with an "On this page" list of the kinds shown. The
- * mode's caveat from its research record sits on top. Core members show in English where the glossary knows them. "No
- * usage data recorded yet." when there are none.
+ * each with a ranked bar list per sample, its capture date, sources and
+ * shared caveat, and each figure's own caveat cut to a line, with an "On
+ * this page" list of the kinds shown. The mode's caveat from its research
+ * record sits under the heading as a one-line callout. Group members show
+ * in English where the glossary knows them. "No usage data recorded yet."
+ * when there are none.
  *
  * @param mode - the mode whose usage, record and copy the view shows
  * @returns the usage view
@@ -150,8 +166,15 @@ export function UsageView({ mode }: { mode: ModeSection }) {
 
   return (
     <>
-      {caveat ? <div className="note">{caveat}</div> : null}
       <ModeViewHeader mode={mode} view="usage" fallbackTitle="Usage" />
+      {caveat ? (
+        <div className="callout usage-caveat">
+          <Pill kind="medium">caveat</Pill>
+          <span className="callout-body">
+            <Clamp lines={1}>{caveat}</Clamp>
+          </span>
+        </div>
+      ) : null}
       <QueryResult query={usage} resource="usage figures">
         {(rows) => {
           if (!rows.length) return <EmptyState>No usage data recorded yet.</EmptyState>;
@@ -161,11 +184,11 @@ export function UsageView({ mode }: { mode: ModeSection }) {
           return (
             <TocLayout items={kinds.map((k) => ({ id: kindId(k), label: KIND_LABELS[k] }))}>
               {rows.some((r) => r.confirmedPct != null) ? <UsageLegend /> : null}
-              <div className="grid g2">
+              <div className="grid g2 usage-grid">
                 {kinds.map((kind) => {
                   const ofKind = rows.filter((r) => r.kind === kind);
                   return (
-                    <section className="card" key={kind} id={kindId(kind)}>
+                    <section className="card usage-card" key={kind} id={kindId(kind)}>
                       <h3>{KIND_LABELS[kind]}</h3>
                       {samples(ofKind).map((g) => (
                         <SampleBars

@@ -5,6 +5,8 @@ import { decksQuery, recordQuery, sourcesQuery } from "../api/queries";
 import type { Section, StampStat } from "../app/modes";
 import { activeTab, SECTIONS, sectionForPath } from "../app/modes";
 import type { RouterContext } from "../app/router-context";
+import { useIconIndex } from "../api/hooks";
+import { IconIndexContext } from "../components/CookieIcon";
 import { ErrorBox } from "../components/ErrorBox";
 import { PageHeader } from "../components/PageHeader";
 import { SideNav } from "../components/SideNav";
@@ -63,6 +65,7 @@ function RootLayout() {
     enabled: stamp.includes("sources"),
   });
   const decks = useQuery({ ...decksQuery(scope), enabled: stamp.includes("decks") });
+  const icons = useIconIndex();
 
   const values: Record<StampStat, string | number | null | undefined> = {
     updated: record.data?.updatedAt,
@@ -81,57 +84,59 @@ function RootLayout() {
   const landing = section != null && path === section.to;
 
   return (
-    <div className="wrap">
-      <TopBar
-        navId={NAV_ID}
-        trail={[section?.label ?? "Crumble Logbook", ...(tab ? [tab.label] : [])]}
-      />
-      <SideNav
-        id={NAV_ID}
-        label="Logbook"
-        sections={SECTIONS.map((s, i) => ({
-          id: s.id,
-          label: s.label,
-          labelKr: s.labelKr,
-          link: s.link,
-          current: s.id !== section?.id ? null : landing ? "page" : "section",
-          startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",
-          hasPages: s.tabs.length > 0,
-          pages:
-            s.id === section?.id
-              ? s.tabs.map((t) => ({
-                  id: t.id,
-                  label: t.label,
-                  link: t.link,
-                  current: t.id === tab?.id,
-                }))
-              : [],
-        }))}
-      />
-      <div className="page">
-        <PageHeader
-          context={headerContext(section)}
-          title={section?.title ?? "Crumble Logbook"}
-          // The record's lede introduces a section, so it shows on the landing page only; a failure shows everywhere.
-          lede={landing || record.isError ? lede : ""}
-          stats={stamp.map((s) => [STAT_LABEL[s], values[s]] as const)}
+    <IconIndexContext value={icons}>
+      <div className="wrap">
+        <TopBar
+          navId={NAV_ID}
+          trail={[section?.label ?? "Crumble Logbook", ...(tab ? [tab.label] : [])]}
         />
-        <main>
-          <section className="panel">
-            <Outlet />
-          </section>
-        </main>
-        <footer>
-          {slug ? (
-            <>
-              Built from the research record's evidence captures. Research record:{" "}
-              <span className="mono">research/{slug}/</span>.
-            </>
-          ) : (
-            "Built from the research records' evidence captures."
-          )}
-        </footer>
+        <SideNav
+          id={NAV_ID}
+          label="Logbook"
+          sections={SECTIONS.map((s, i) => ({
+            id: s.id,
+            label: s.label,
+            labelKr: s.labelKr,
+            link: s.link,
+            current: s.id !== section?.id ? null : landing ? "page" : "section",
+            startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",
+            hasPages: s.tabs.length > 0,
+            pages:
+              s.id === section?.id
+                ? s.tabs.map((t) => ({
+                    id: t.id,
+                    label: t.label,
+                    link: t.link,
+                    current: t.id === tab?.id,
+                  }))
+                : [],
+          }))}
+        />
+        <div className="page">
+          <PageHeader
+            context={headerContext(section)}
+            title={section?.title ?? "Crumble Logbook"}
+            // The record's lede introduces a section, so it shows on the landing page only; a failure shows everywhere.
+            lede={landing || record.isError ? lede : ""}
+            stats={stamp.map((s) => [STAT_LABEL[s], values[s]] as const)}
+          />
+          <main>
+            <section className="panel">
+              <Outlet />
+            </section>
+          </main>
+          <footer>
+            {slug ? (
+              <>
+                Built from the research record's evidence captures. Research record:{" "}
+                <span className="mono">research/{slug}/</span>.
+              </>
+            ) : (
+              "Built from the research records' evidence captures."
+            )}
+          </footer>
+        </div>
       </div>
-    </div>
+    </IconIndexContext>
   );
 }

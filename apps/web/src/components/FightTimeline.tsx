@@ -2,6 +2,7 @@ import type { RefObject } from "react";
 import { useLayoutEffect, useRef, useState } from "react";
 import { eventLabel, markerRows, secondsLeft, trackPercent, whenLabel } from "../lib/fight-track";
 import type { SourceIndex } from "../lib/sources";
+import { Clamp } from "./Clamp";
 import { ConfidencePill } from "./ConfidencePill";
 import { SourceChips } from "./SourceChips";
 
@@ -113,8 +114,9 @@ function Lane({
 
 /**
  * A boss fight on a horizontal track from 0 to `length` seconds, the
- * in-game countdown under each tick, and the numbered events listed beneath
- * with their details and sources. Low-confidence events sit in their own
+ * in-game countdown under each tick, and the numbered events listed beneath,
+ * each with its confidence first, its detail cut to one line and its
+ * sources at the end. Low-confidence events sit in their own
  * hatched lane and are labelled "unverified claim"; events with no time are
  * listed but not placed.
  *
@@ -153,12 +155,16 @@ export function FightTimeline({ events, sources, length, tickEvery = 10 }: Fight
           <li key={e.id} className={isClaim(e) ? "low" : undefined}>
             <div className="fe-head">
               <span className="fe-num">{n}</span>
-              <span className="fe-when">{whenLabel(e.tElapsed, length)}</span>
-              <b>{eventLabel(e.event)}</b>
               <ConfidencePill confidence={e.confidence} />
+              <b>{eventLabel(e.event)}</b>
+              <span className="fe-when">{whenLabel(e.tElapsed, length)}</span>
             </div>
-            <div>{e.detail}</div>
-            <SourceChips ids={e.sources} sources={sources} />
+            <div className="fe-row">
+              <span className="fe-detail">
+                <Clamp lines={1}>{e.detail}</Clamp>
+              </span>
+              <SourceChips ids={e.sources} sources={sources} max={2} />
+            </div>
           </li>
         ))}
       </ol>
