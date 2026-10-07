@@ -66,6 +66,76 @@ export function efficiencyGrade(note: string): EfficiencyGrade | null {
   return lead ? (lead[1]!.toLowerCase() as EfficiencyGrade) : null;
 }
 
+/** The place an efficiency grade sorts at, best first. */
+const GRADE_RANK: Readonly<Record<EfficiencyGrade, number>> = {
+  high: 0,
+  medium: 1,
+  low: 2,
+  none: 3,
+};
+
+/**
+ * Where an efficiency note's grade sorts, best first, so power sources
+ * compare at a glance.
+ *
+ * @param note - the record's efficiency note
+ * @returns 0 for high through 3 for none, and 4 for a note that leads with no grade
+ */
+export function gradeRank(note: string): number {
+  const grade = efficiencyGrade(note);
+  return grade === null ? 4 : GRADE_RANK[grade];
+}
+
+/** A package's verdict at a glance: buy it, skip it, or it depends on the spender. */
+export type PackageVerdict = "buy" | "skip" | "depends";
+
+/** Words a verdict's opening clause uses to recommend a package. */
+const BUY = /\b(must-buy|first purchase|second purchase|third buy|best|top|good value|cheapest)\b/i;
+/** Words anywhere in a verdict that put a package last. */
+const SKIP = /\b(worst|puts it last|low value|not worth)\b/i;
+/** Words a verdict's opening clause uses to limit who a package suits. */
+const DEPENDS = /\b(not for|only)\b/i;
+
+/**
+ * Reads the record's free-text package verdict as buy, skip or depends.
+ * The opening clause (up to the first colon, semicolon or sentence end)
+ * decides a buy; a put-it-last word anywhere decides a skip unless the
+ * opening clause recommends it; a limiting opening clause reads as depends.
+ *
+ * @param verdict - the record's verdict on the package
+ * @returns the verdict, or null when the text gives none
+ */
+export function packageVerdict(verdict: string): PackageVerdict | null {
+  const lead = verdict.split(/[:;]|\.\s/)[0] ?? "";
+  if (BUY.test(lead)) return "buy";
+  if (SKIP.test(verdict)) return "skip";
+  if (DEPENDS.test(lead)) return "depends";
+  return null;
+}
+
+/** Where each verdict sorts: buys first, skips last, packages without one between. */
+const VERDICT_ORDER: Readonly<Record<PackageVerdict | "none", number>> = {
+  buy: 0,
+  depends: 1,
+  none: 2,
+  skip: 3,
+};
+
+/**
+ * The packages with the buys first and the skips last, the record's order
+ * kept within each verdict.
+ *
+ * @param packages - the packages, in the record's order
+ * @returns them, sorted
+ */
+export function byVerdict<P extends { verdict: string }>(packages: readonly P[]): P[] {
+  return [...packages].sort(
+    (a, b) =>
+      VERDICT_ORDER[packageVerdict(a.verdict) ?? "none"] -
+      VERDICT_ORDER[packageVerdict(b.verdict) ?? "none"],
+  );
+}
+
 /** What the planner needs of a planner step. */
 export interface GainStep {
   basis: StepBasis;

@@ -5,33 +5,33 @@
   "name_en": "Bari–Cherry Cola charge deck (post-easing general deck)",
   "name_kr": "바리 체콜 돌격덱 / 바리덱",
   "status": "meta",
-  "ceiling": "35% to the end: 312-30 at 2.74G and 328-30 at 4.00–4.06G (GingerCraven; the 328-30 variant is stage-bari-coward-328). With Brightseeker it is also the deck of the documented 15% clears past 300 (301-27 and 301-28 at 2.05G, manual).",
-  "summary": "The general stage deck since the 2026-09-23 easing: Brightseeker plus the two charge cookies Princess Bari and Cherry Cola do the damage, the Milk–Pomegranate–Macaron–Skating Queen–Cheesecake core buffs them, and Dark Choco and Moon Rabbit tank. ND러너's 'brainless' preset 5 is built on the same Cherry Cola, Bari and Strawberry Crepe core. It full-autos most 35% stages; it fails on bosses that hide behind adds or fake bosses, and on auto Cherry Cola can run ahead and drag Milk away.",
+  "ceiling": "35% to the end: 328-30 at 4.00–4.06G, 312-30 at 2.74G. 15% only on mob stages past 300: 301-27 and 301-28 at 2.05G, manual.",
+  "summary": "Post-easing general deck; full-autos most 35% stages. Brightseeker, Bari and Cherry Cola deal; the Milk–Pomegranate–Macaron–Skating Queen–Cheesecake core buffs; Dark Choco and Moon Rabbit tank.",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
     "level": "100",
-    "why": "Crit-rate buff: crit rate past 100% turns into extra hits, and pushers at 328 say damage doesn't land without Macaron and Cheesecake."
+    "why": "Crit-rate buff; past 100%, crit adds extra hits. Undroppable with Cheesecake."
    },
    {
     "kr": "브라이트시커 쿠키",
     "level": "100",
-    "why": "Rear-line dealer that stays on the boss; with Bari and Cherry Cola it is the trio credited with 'ripping 15%'. Stage practicality is quoted from 3★ (mid stages) and 5★ (201+)."
+    "why": "Rear-line dealer that stays on the boss; 3★ for mid stages, 5★ for 201+."
    },
    {
     "kr": "피노누아맛 쿠키",
     "level": "100",
-    "why": "Kept as the airborne counter so launch bosses don't disable the team, and for the power it carries (ND러너 tested removing it and calls that a detour). Moves to the bench for Scorpion on GingerCraven."
+    "why": "Airborne counter for launch bosses, plus power; benched for Scorpion on GingerCraven."
    },
    {
     "kr": "치즈케이크맛 쿠키",
     "level": "100",
-    "why": "Support buffer that the 328 pushers call undroppable with Macaron; swapped for Herb on stages that check healing."
+    "why": "Support buffer, undroppable with Macaron; Herb replaces it where healing is checked."
    },
    {
     "kr": "석류맛 쿠키",
     "level": "100",
-    "why": "Skill AMP beam (빨대) that goes to the top-ATK cookies; it is why Milk's and the carries' ATK order is managed."
+    "why": "Skill AMP beam (빨대) to the top-ATK cookies: why ATK order is managed."
    },
    {
     "kr": "피겨여왕맛 쿠키",
@@ -42,32 +42,32 @@
     "kr": "바리공주맛 쿠키",
     "level": "100",
     "stars": "5+ recommended",
-    "why": "Charge dealer; its practicality on stages is quoted from 5★, and a 0–2★ Bari is swapped for Rye. Needs manual play on stages with a fake boss or adds behind the boss."
+    "why": "Charge dealer from 5★; hand-play behind adds or fake bosses. 0–2★: Rye."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "level": "100",
-    "why": "Captain and healer. Must hold the top ATK so Passion Pay (열정페이) and the captain bonus land on it; its buff reaches every cookie in a compact formation."
+    "why": "Captain-healer at ATK #1, so Passion Pay (열정페이) and captain bonus land on it."
    },
    {
     "kr": "체리콜라맛 쿠키",
     "level": "100",
-    "why": "Second charge dealer. Two damage-reduction rune lines are enough (it dies easily); on auto it can run off and drag Milk away, so it belongs only in decks that also run Bari."
+    "why": "Second charge dealer; dies easily, two DR rune lines. Only with Bari."
    },
    {
     "kr": "허브맛 쿠키",
     "level": "100",
-    "why": "Second healer. Since the easing some pushers drop it for Rockstar or for damage, because stages now fail on damage rather than survival."
+    "why": "Second healer; often dropped for Rockstar or damage since the easing."
    },
    {
     "kr": "다크초코 쿠키",
     "level": "100",
-    "why": "Tank with a DEF-shred debuff (needs focus to land) and a large share of team power ('뻥투용'); often sacrificed to the first hit."
+    "why": "Tank and DEF shred (needs focus); carries power ('뻥투용'), dies first."
    },
    {
     "kr": "감감술래 놀이 달토끼맛 쿠키",
     "level": "100",
-    "why": "Second tank that shares hits with Dark Choco; allowed to die once its debuff is on."
+    "why": "Second tank sharing hits with Dark Choco; may die once its debuff lands."
    }
   ],
   "pets": [
@@ -115,12 +115,12 @@
   "name_kr": "328 비겁 덱",
   "status": "meta",
   "ceiling": "328-30 GingerCraven at 35%: 4.00G (카린, screenshot), 4.06G and 4.2G.",
-  "summary": "The general Bari–Cherry Cola deck turned for the final GingerCraven: Scorpion and Jungle Warrior replace Pinot Noir and Herb for single-target damage. One poster's list; the screenshot clear at 4.00G ran Scorpion, Bari, Cherry Cola, Herb and Moon Rabbit around the Milk–Pomegranate–Macaron core.",
+  "summary": "General deck tuned for the final GingerCraven: Scorpion and Jungle Warrior in for Pinot Noir and Herb. One poster's list; the 4.00G clear kept Herb.",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
     "level": "100",
-    "why": "Crit-rate buff: crit rate past 100% turns into extra hits, and pushers at 328 say damage doesn't land without Macaron and Cheesecake."
+    "why": "Crit-rate buff; past 100%, crit adds extra hits. Undroppable with Cheesecake."
    },
    {
     "kr": "브라이트시커 쿠키",
@@ -130,7 +130,7 @@
    {
     "kr": "전갈맛 쿠키",
     "level": "100",
-    "why": "Poison stacks to 20 on a single boss; the GingerCraven decks all carry it."
+    "why": "Poison stacks to 20 on a single boss; every GingerCraven deck runs it."
    },
    {
     "kr": "치즈케이크맛 쿠키",
@@ -156,7 +156,7 @@
    {
     "kr": "정글전사 쿠키",
     "level": "100",
-    "why": "Single-target ranged damage; ND러너 brings it in for bosses that scatter or run (Redberry, his Rift deck)."
+    "why": "Single-target ranged damage; ND러너's pick for bosses that scatter or run."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
@@ -201,8 +201,8 @@
   "name_en": "Brightseeker all-in-one deck with per-boss swaps (pre-easing)",
   "name_kr": "168 이후 All In One 단일 덱",
   "status": "alt",
-  "ceiling": "Before the easing: every stage from 169 at 35% on full auto (10–20 tries) except the three Rowdy Bikers and GingerCraven, which the author took at 55%; truck cleared at 816M. After the easing the same core pushes on auto (266-30 Cool Mint at 1.17G in a close variant).",
-  "summary": "그드득's one-deck guide for stages after 168: Milk captain with Passion Pay, the Pomegranate beam steered onto Rye, Brightseeker on the boss, Cake Hound and Dark Choco for the three-tank Armor Repair perk, and per-boss swaps (Scorpion for Rye, Ion for Strawberry Crepe, Panda Dumpling for launch bosses). Skating Queen and Cherry Cola are held one or two levels low so Milk keeps the top ATK.",
+  "ceiling": "Pre-easing: 35% on full auto from 169 (10–20 tries), truck at 816M; bikers and GingerCraven took 55%. Post-easing variant: 266-30 Cool Mint at 1.17G.",
+  "summary": "그드득's pre-easing one-deck guide past 168: Milk captain, Pomegranate's beam steered onto Rye, Brightseeker on the boss, swaps per boss.",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
@@ -250,7 +250,7 @@
     "kr": "피노누아맛 쿠키",
     "slot": "row2-2",
     "level": "100",
-    "why": "Kept for power; a commenter's Grapevine (heal, same Rapid Fire synergy) was tried and dropped."
+    "why": "Kept for power; Grapevine (heal, same Rapid Fire synergy) was tried and dropped."
    },
    {
     "kr": "피겨여왕맛 쿠키",
@@ -308,8 +308,8 @@
   "name_en": "GingerCraven 35% deck (pre-easing)",
   "name_kr": "비겁이 35% 덱",
   "status": "legacy",
-  "ceiling": "Before the easing: 248-30 at 801.5M and 243-30 at 693.5M (both 35%, 1.6–1.8 s left), 219-30 at 348M; other posters' variants cleared 243-30 at 919.6M and 248-30 at 981.7M.",
-  "summary": "ㅇㄹ's GingerCraven deck from the 169–248 era: Scorpion's poison reaches 20 stacks by its third turn, Brightseeker stays on the boss, Lime and Ion replace the Cool Mint deck's Pinot Noir for sustain, and damage-reduction perks and pets carry the team through the fear. Superseded by stage-bari-coward-328 after the easing, but it is the documented low-power line.",
+  "ceiling": "Pre-easing 35%: 248-30 at 801.5M, 243-30 at 693.5M (1.6–1.8 s left), 219-30 at 348M; variants took 243-30 at 919.6M, 248-30 at 981.7M.",
+  "summary": "ㅇㄹ's pre-easing GingerCraven deck, the documented low-power line: Scorpion poison to 20 by turn 3, Brightseeker on the boss, Lime and Ion for sustain.",
   "cookies": [
    {
     "kr": "브라이트시커 쿠키",
@@ -379,7 +379,7 @@
   ],
   "perks": "피감 + 체력 (damage reduction + HP).",
   "substitutions": [
-   "Tiger Lily or GingerBright (명랑한 쿠키, often at Lv.1 as a slot filler) for Cheesecake in other posters' versions.",
+   "Tiger Lily or GingerBright (명랑한 쿠키, often a Lv.1 filler) for Cheesecake in other versions.",
    "If 35% keeps failing: pad power into 55% (Wind Archer, Oven Wanderer) instead of retrying."
   ],
   "rng": "Fear landing on the carries decides bottom-of-bracket clears; clears end with under 2 s left.",
@@ -404,8 +404,8 @@
   "name_en": "Rapid Fire mob deck (ten-enemy stages and Redberry packs)",
   "name_kr": "10인 덱 / 연타덱",
   "status": "alt",
-  "ceiling": "35% on ten-enemy stages in 169–248 before the easing; after it, Redberry Assassin packs at the bottom of 35% (286-x) with an area variant.",
-  "summary": "For stages with ten enemies (Cake Hound packs, Durianeer followers, welding bots) and the plaza's Redberry Assassins, the single-target dealers make way for Witchberry, Rye, Strawberry Crepe, Twizzly Gummy and Melon Soda. ㅇㄹ's list is below; 그드득's post-easing area variant runs Bari, Cherry Cola, Oven Wanderer and Vampire around the same buffers.",
+  "ceiling": "Pre-easing: 35% on ten-enemy stages in 169–248. Post-easing area variant: Redberry packs at the bottom of 35% (286-x).",
+  "summary": "For ten-enemy stages and Redberry packs: Witchberry, Rye, Strawberry Crepe, Twizzly Gummy and Melon Soda replace the single-target dealers.",
   "cookies": [
    {
     "kr": "호밀맛 쿠키",
@@ -490,7 +490,7 @@
   "name_kr": "위치 락스타 방치덱",
   "status": "alt",
   "ceiling": "Idle pushing of 300+ normal (mob) stages; not for GingerCraven or Cool Mint.",
-  "summary": "The guide makers' AFK deck: Witchberry as the area carry with Rockstar (tested better than Strawberry Shortcake) on the Pierce synergy, built around Milk and the usual buffers. A 35% list (dc:77126) and 서신우's 300+ guide agree on the core.",
+  "summary": "AFK deck: Witchberry carries mob waves; Rockstar (tested over Strawberry Shortcake) adds the Pierce synergy. dc:77126 and 서신우's 300+ guide agree.",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
@@ -574,8 +574,8 @@
   "name_en": "Dimensional Rift DEF-shred deck (partial)",
   "name_kr": "이면 방깎 덱",
   "status": "niche",
-  "ceiling": "Rift levels 3–4 (Werehound Princess, truck) as described by a mid-ranked pusher. The top player ND러너's level-11 deck ran Scorpion, Jungle Warrior, Dark Choco, Wind Archer and Macaron; his level-16 deck Strawberry Crepe, Espresso and Bari.",
-  "summary": "What the Rift pushers describe: stack Scorpion's poison to 20 and DEF shred to 10 (Dark Choco alone can't; its focus of 1,023 wasn't enough), add Devil against the truck, keep Tiger Lily, and bring Octo Wasabi. Top guilds share full Rift decks privately, so only the core is public.",
+  "ceiling": "Rift levels 3–4 (Werehound Princess, truck), per a mid-ranked pusher. ND러너's level 11: Scorpion, Jungle Warrior, Dark Choco, Wind Archer, Macaron.",
+  "summary": "Partial Rift shred core: Scorpion poison to 20, DEF shred to 10, Devil against the truck, Tiger Lily, Octo Wasabi. Top guilds keep full decks private.",
   "cookies": [
    {
     "kr": "전갈맛 쿠키",
@@ -608,7 +608,7 @@
    "핫도그도그"
   ],
   "substitutions": [
-   "The Rift entrance gives a Charge buff, so Bari and other Charge cookies are common (ND러너's level-16 deck: Strawberry Crepe, Espresso, Bari)."
+   "The Rift entrance gives a Charge buff, so Bari and Charge cookies are common (ND러너's level 16: Strawberry Crepe, Espresso, Bari)."
   ],
   "sources": [
    "dc:77015",
@@ -624,21 +624,21 @@
   "name_en": "Rift levelled Rye deck (15%)",
   "name_kr": "이면 렙조절 호밀덱",
   "status": "meta",
-  "ceiling": "Rift level 18 at 15% (Werehound Princess at 29.73G Rift power, dc:78865), the furthest 15% clear with a screenshot. The same deck took the level-19 and level-23 trucks for 롤로노아 (nv:48662), whose Rift power isn't shown.",
-  "summary": "The Guild Conquest trick brought to the Rift: the cookies that must not take the ATK-ordered buffs are levelled down to 64–70, so Pomegranate's beam, Passion Pay and Rapid Promotion land on Brightseeker, Rye and Cherry Cola, and Macaron's crit buff on Brightseeker. For the Werehound Princess and the trucks; the truck needs a knockback pet or the formation collapses. Conquest gear preset.",
+  "ceiling": "Rift level 18 at 15% (Werehound Princess, 29.73G Rift power, dc:78865): the furthest screenshot 15% clear. Also 롤로노아's level-19 and -23 trucks (nv:48662), Rift power unshown.",
+  "summary": "The Guild Conquest trick in the Rift: non-dealers levelled to 64–70 so the ATK-ordered buffs pile on Brightseeker, Rye and Cherry Cola. Conquest gear preset.",
   "cookies": [
-   { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits, so it must land on Brightseeker. Aim its skill at the left wall so it fires in a line (nv:48662)." },
-   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Main dealer; the level adjustment exists so Macaron's buff and the ATK-ordered buffs reach it." },
-   { "kr": "전갈맛 쿠키", "level": "64 (45 in 롤로노아's copy): below the dealers", "why": "Poison stacks to 20 on the single boss; levelled down so the ATK-ordered buffs skip it." },
-   { "kr": "호밀맛 쿠키", "level": "100", "why": "Dealer with little wasted damage, one of the three the buffs pile on; takes the slot of a low-star Bari (롤로노아 cleared the level-23 truck with Rye instead of Bari)." },
-   { "kr": "피노누아맛 쿠키", "level": "70: below the dealers", "why": "Airborne counter so the Werehound Princess's launches don't disable the team; levelled down so it doesn't take the buffs." },
+   { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit buff for Brightseeker; aim at the left wall to fire in line (nv:48662)." },
+   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Main dealer; the level tuning sends Macaron's and the ATK-ordered buffs here." },
+   { "kr": "전갈맛 쿠키", "level": "64 (45 in 롤로노아's copy): below the dealers", "why": "Poison to 20 on the boss; levelled down so the buffs skip it." },
+   { "kr": "호밀맛 쿠키", "level": "100", "why": "Low-waste dealer the buffs pile on; replaces a low-star Bari (롤로노아's level-23 truck)." },
+   { "kr": "피노누아맛 쿠키", "level": "70: below the dealers", "why": "Airborne counter for Werehound launches; levelled down so the buffs skip it." },
    { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer that pushers call undroppable with Macaron." },
-   { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies; the level adjustment decides who gets it." },
-   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer of the stage core around Milk, Pomegranate and Macaron; in over 90% of shared stage clear decks (curated/usage.json)." },
-   { "kr": "정글전사 쿠키", "level": "70: below the dealers", "why": "Single-target ranged damage on the boss; levelled down so the buffs skip it." },
-   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer; holds the top ATK so Passion Pay and Rapid Promotion land as planned." },
-   { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Charge dealer, the third of the cookies the buffs pile on; the Rift entrance gives a Charge buff." },
-   { "kr": "다크초코 쿠키", "level": "70: below the dealers", "why": "Tank with a DEF-shred debuff; levelled down so it doesn't take the buffs." }
+   { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies; levels decide who gets it." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Core buffer around Milk, Pomegranate and Macaron; in 90%+ of shared stage clears." },
+   { "kr": "정글전사 쿠키", "level": "70: below the dealers", "why": "Single-target ranged damage; levelled down so the buffs skip it." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain-healer at ATK #1, so Passion Pay and Rapid Promotion land on it." },
+   { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Charge dealer the buffs pile on; the Rift entrance gives a Charge buff." },
+   { "kr": "다크초코 쿠키", "level": "70: below the dealers", "why": "Tank with DEF shred; levelled down so the buffs skip it." }
   ],
   "pets": [
    "무한바퀴",
@@ -661,28 +661,28 @@
   "name_en": "Rift Devil DEF-shred deck (15%)",
   "name_kr": "이면 악마 방깎덱",
   "status": "alt",
-  "ceiling": "Rift level 12 at 15% (Cool Mint at 20.45G Rift power, dc:77612); the poster clears the three trucks with it too, with Dark Choco in.",
-  "summary": "The full version of the Rift shred idea: Devil's DEF shred, stacked with Dark Choco's when Dark Choco comes in, forces damage through at 15%. Its owner clears everything at 15% with it except the Cake Hound Pack; the Werehound Princess and GingerCraven don't lose HP to it.",
+  "ceiling": "Rift level 12 at 15% (Cool Mint, 20.45G Rift power, dc:77612); the three trucks too, with Dark Choco in.",
+  "summary": "Devil's DEF shred, plus Dark Choco's when it comes in, forces damage through at 15%. Clears all but the Cake Hounds; Werehound Princess and GingerCraven hold.",
   "cookies": [
    { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits." },
    { "kr": "브라이트시커 쿠키", "level": "100", "why": "Rear-line dealer that stays on the boss." },
    { "kr": "전갈맛 쿠키", "level": "100", "why": "Poison stacks to 20 on a single boss." },
    { "kr": "피노누아맛 쿠키", "level": "100", "why": "Airborne counter, and the power it carries." },
-   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer that pushers call undroppable with Macaron: without the pair, damage doesn't land." },
+   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer; without it and Macaron, damage doesn't land." },
    { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies." },
-   { "kr": "악마맛 쿠키", "level": "100", "why": "DEF shred; it survives in the Rift thanks to the 차원의 힘 buff, so it is worth a slot there." },
-   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer of the stage core around Milk, Pomegranate and Macaron; in over 90% of shared stage clear decks (curated/usage.json)." },
+   { "kr": "악마맛 쿠키", "level": "100", "why": "DEF shred; survives in the Rift on the 차원의 힘 buff." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Core buffer around Milk, Pomegranate and Macaron; in 90%+ of shared stage clears." },
    { "kr": "정글전사 쿠키", "level": "100", "why": "Single-target ranged damage." },
-   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer; holds the top ATK so Passion Pay and the captain bonus land on it, and its buff reaches every cookie in a compact formation." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain-healer at ATK #1, so Passion Pay and the captain bonus land on it." },
    { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Charge dealer; the Rift entrance gives a Charge buff." },
-   { "kr": "허브맛 쿠키", "level": "100", "why": "Second healer, keeping the front alive through the adds that come in from both sides of a Rift fight." }
+   { "kr": "허브맛 쿠키", "level": "100", "why": "Second healer for the adds that come from both sides." }
   ],
   "pets": [
    "무한바퀴",
    "색동 주머니"
   ],
   "substitutions": [
-   "Three trucks: Dark Choco in for Herb or Cherry Cola, so its DEF shred stacks with Devil's; fight at the 7 or 9 o'clock position (dc:77612 comments)."
+   "Three trucks: Dark Choco in for Herb or Cherry Cola so the shreds stack; fight at 7 or 9 o'clock (dc:77612 comments)."
   ],
   "sources": [
    "dc:77612"
@@ -694,19 +694,19 @@
   "name_en": "Rift Bari–Scorpion deck (15%)",
   "name_kr": "이면 바리 전갈덱",
   "status": "alt",
-  "ceiling": "Rift level 8 at 15% (Werehound Princess at 12.15G Rift power, dc:77709); its Witchberry–Herb variant took level 12 at 15% (Cool Mint at 18.40G, dc:78353).",
-  "summary": "The post-easing stage core (Brightseeker, Princess Bari, Cherry Cola around the Milk–Pomegranate–Macaron buffers) with Scorpion and Pinot Noir for the single-boss levels, all at Lv.100. 카린, who cleared 328-30 at 4.00G, used it to force levels 8 and 12 at 15%.",
+  "ceiling": "Rift level 8 at 15% (Werehound Princess, 12.15G Rift power, dc:77709); Witchberry–Herb variant: level 12 Cool Mint at 18.40G (dc:78353).",
+  "summary": "The post-easing stage core plus Scorpion and Pinot Noir for single-boss levels, all Lv.100. 카린 (328-30 at 4.00G) forced levels 8 and 12 at 15% with it.",
   "cookies": [
    { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits." },
    { "kr": "브라이트시커 쿠키", "level": "100", "why": "Rear-line dealer that stays on the boss." },
    { "kr": "전갈맛 쿠키", "level": "100", "why": "Poison stacks to 20 on a single boss." },
    { "kr": "피노누아맛 쿠키", "level": "100", "why": "Airborne counter against the Werehound Princess's launches." },
-   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer that pushers call undroppable with Macaron: without the pair, damage doesn't land." },
+   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer; without it and Macaron, damage doesn't land." },
    { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies." },
-   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer of the stage core around Milk, Pomegranate and Macaron; in over 90% of shared stage clear decks (curated/usage.json)." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Core buffer around Milk, Pomegranate and Macaron; in 90%+ of shared stage clears." },
    { "kr": "바리공주맛 쿠키", "level": "100", "why": "Charge dealer; the Rift entrance gives a Charge buff." },
    { "kr": "정글전사 쿠키", "level": "100", "why": "Single-target ranged damage." },
-   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer; holds the top ATK so Passion Pay and the captain bonus land on it, and its buff reaches every cookie in a compact formation." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain-healer at ATK #1, so Passion Pay and the captain bonus land on it." },
    { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Second charge dealer beside Bari; the Rift entrance gives a Charge buff." },
    { "kr": "다크초코 쿠키", "level": "100", "why": "Tank with a DEF-shred debuff." }
   ],
@@ -729,18 +729,18 @@
   "name_kr": "이면 들개 위치베리 락스타덱",
   "status": "alt",
   "ceiling": "Cake Hound Pack levels at 15%: level 11 at 17.80G Rift power (dc:78353, screenshot mid-fight at 4% HP) and level 6 (dc:77572, text).",
-  "summary": "For the Cake Hound levels, where a single-target deck drowns in adds: Princess Bari herds the pack and the pierce and area dealers kill it together. No Scorpion and no Pinot Noir, since there is no single boss to poison or launch.",
+  "summary": "For Cake Hound levels: Bari herds the pack so the pierce and area dealers hit it together. No Scorpion or Pinot Noir: there's no single boss.",
   "cookies": [
    { "kr": "마카롱맛 쿠키", "level": "100", "why": "Crit-rate buff; crit past 100% turns into extra hits." },
-   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Rear-line dealer; with Bari and Cherry Cola it is the trio credited with 'ripping 15%' (dc:76825)." },
-   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer that pushers call undroppable with Macaron: without the pair, damage doesn't land." },
+   { "kr": "브라이트시커 쿠키", "level": "100", "why": "Rear-line dealer; with Bari and Cherry Cola, the trio 'ripping 15%' (dc:76825)." },
+   { "kr": "치즈케이크맛 쿠키", "level": "100", "why": "Support buffer; without it and Macaron, damage doesn't land." },
    { "kr": "석류맛 쿠키", "level": "100", "why": "Skill AMP beam to the top-ATK cookies." },
-   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Buffer of the stage core around Milk, Pomegranate and Macaron; in over 90% of shared stage clear decks (curated/usage.json)." },
+   { "kr": "피겨여왕맛 쿠키", "level": "100", "why": "Core buffer around Milk, Pomegranate and Macaron; in 90%+ of shared stage clears." },
    { "kr": "위치베리맛 쿠키", "level": "100", "why": "Area carry for mob waves." },
-   { "kr": "바리공주맛 쿠키", "level": "100", "why": "Charge dealer that herds the pack so the pierce dealers hit it together (dc:78199)." },
+   { "kr": "바리공주맛 쿠키", "level": "100", "why": "Charge dealer that herds the pack for the pierce dealers (dc:78199)." },
    { "kr": "정글전사 쿠키", "level": "100", "why": "Single-target ranged damage on the stragglers." },
    { "kr": "락스타맛 쿠키", "level": "100", "why": "Pierce damage through the herded pack." },
-   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain and healer; holds the top ATK so Passion Pay and the captain bonus land on it, and its buff reaches every cookie in a compact formation." },
+   { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain-healer at ATK #1, so Passion Pay and the captain bonus land on it." },
    { "kr": "체리콜라맛 쿠키", "level": "100", "why": "Charge dealer; the Rift entrance gives a Charge buff." },
    { "kr": "다크초코 쿠키", "level": "100", "why": "Tank with a DEF-shred debuff." }
   ],
@@ -749,7 +749,7 @@
    "무한바퀴"
   ],
   "substitutions": [
-   "dc:78199's version for the Cake Hounds and Cool Mint: Princess Bari, Oven Wanderer and Skating Queen with Witchberry, Rockstar and a pierce archer, on a skill-AMP and skill-haste gear preset."
+   "dc:78199 for Cake Hounds and Cool Mint: Bari, Oven Wanderer and Skating Queen with Witchberry, Rockstar and a pierce archer; skill-AMP and skill-haste gear."
   ],
   "sources": [
    "dc:78353",

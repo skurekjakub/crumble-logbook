@@ -1,7 +1,7 @@
 import { useSourceIndex } from "../api/hooks";
 import type { PowerDataPoint } from "../api/types";
 import type { ModeSection, TeamPowerConfig } from "../app/modes";
-import { BasisMark } from "../components/BasisMark";
+import { Clamp } from "../components/Clamp";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { ViewHeader } from "../components/ViewHeader";
@@ -11,7 +11,7 @@ import { sourceLabel } from "../lib/sources";
 import { KIND_LABELS, formatPct } from "../lib/team-power";
 import type { TeamPowerData } from "./TeamPowerData";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
-import { PowerSourceLink, useDropUnknown } from "./TeamPowerParts";
+import { BasisPill, PowerSourceLink, useDropUnknown } from "./TeamPowerParts";
 import { SourceChips } from "../components/SourceChips";
 
 /** The data points page's search params: a kind, a power source and a text filter. */
@@ -102,12 +102,22 @@ export function PowerDataPointsView({
       header: "Power source",
       cell: (p) => <PowerSourceLink mode={mode} slug={p.powerSource} sources={data.sources} />,
     },
-    { header: "How known", cell: (p) => <BasisMark basis={p.kind} /> },
+    { header: "How known", cell: (p) => <BasisPill basis={p.kind} /> },
     { header: "Before → after", cell: beforeAfter, className: "n" },
-    { header: "Change", cell: changeText, className: "n" },
-    { header: "What it took", cell: (p) => p.cost ?? "–" },
-    { header: "Note", cell: (p) => p.note, className: "wide" },
-    { header: "Sources", cell: (p) => <SourceChips ids={p.sources} sources={index} /> },
+    {
+      header: "Change",
+      cell: (p) => (
+        <span className={p.deltaPct === null ? undefined : "fig gain"}>{changeText(p)}</span>
+      ),
+      className: "n",
+    },
+    {
+      header: "What it took",
+      cell: (p) => (p.cost ? <Clamp lines={1}>{p.cost}</Clamp> : "–"),
+      className: "took",
+    },
+    { header: "Note", cell: (p) => <Clamp lines={1}>{p.note}</Clamp>, className: "wide" },
+    { header: "Sources", cell: (p) => <SourceChips ids={p.sources} sources={index} max={2} /> },
   ];
   return (
     <>

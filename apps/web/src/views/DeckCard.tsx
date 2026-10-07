@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import type { Deck, DeckCookie } from "../api/types";
 import { AtkOrder } from "../components/AtkOrder";
+import { Clamp } from "../components/Clamp";
 import { CookieName } from "../components/CookieName";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
@@ -49,7 +50,7 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
           },
         ]
       : []),
-    { header: "Level", cell: levelText, className: "mono" },
+    { header: "Level", cell: levelText, className: "lvl" },
     ...(cookies.some((c) => c.stars)
       ? [
           {
@@ -60,7 +61,7 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
       : []),
     {
       header: "Why",
-      cell: (c) => c.why,
+      cell: (c) => (c.why ? <Clamp lines={1}>{c.why}</Clamp> : null),
       className: "wide",
     },
   ];
@@ -91,10 +92,23 @@ function bullets(items: readonly string[]) {
   return (
     <ul className="clean">
       {items.map((x, i) => (
-        <li key={i}>{x}</li>
+        <li key={i}>
+          <Clamp lines={1}>{x}</Clamp>
+        </li>
       ))}
     </ul>
   );
+}
+
+/**
+ * A text cut to one line that expands on demand, or null when there's none
+ * (so {@link Kv} drops the row).
+ *
+ * @param text - the text, or null
+ * @returns the clamped text, or null
+ */
+function clamped(text: string | null) {
+  return text?.trim() ? <Clamp lines={1}>{text}</Clamp> : null;
 }
 
 /**
@@ -127,7 +141,11 @@ export function DeckCard({
   const atkOrder = d.atkOrder?.length ? (
     <>
       <AtkOrder order={d.atkOrder} />
-      {d.atkOrderNote ? <div className="muted">{d.atkOrderNote}</div> : null}
+      {d.atkOrderNote ? (
+        <div className="muted">
+          <Clamp lines={1}>{d.atkOrderNote}</Clamp>
+        </div>
+      ) : null}
     </>
   ) : null;
   const pets = d.pets.length
@@ -156,17 +174,21 @@ export function DeckCard({
           }
         />
       ) : null}
-      <div className="card-head">
-        <div>
+      <div className="card-head deck-head">
+        <div className="deck-title">
           <h3>
             {d.nameEn} <span className="kr">{d.nameKr ?? ""}</span>
           </h3>
-          <div className="muted">{d.summary ?? ""}</div>
+          <div className="chips">
+            <Pill kind={d.status} />
+            {d.ceilingText ? <span className="chip ceiling">ceiling {d.ceilingText}</span> : null}
+          </div>
         </div>
-        <div className="chips">
-          <Pill kind={d.status} />
-          {d.ceilingText ? <span className="chip">ceiling {d.ceilingText}</span> : null}
-        </div>
+        {d.summary ? (
+          <div className="muted">
+            <Clamp lines={1}>{d.summary}</Clamp>
+          </div>
+        ) : null}
       </div>
       {hasFormation(d.cookies) ? <Formation cookies={d.cookies} /> : <Lineup cookies={d.cookies} />}
       <LevelTable cookies={d.cookies} />
@@ -174,18 +196,20 @@ export function DeckCard({
         rows={[
           ["ATK order", atkOrder],
           ["Pets", pets],
-          ["Perks", d.perks],
-          ["Formation", d.formation],
+          ["Perks", clamped(d.perks)],
+          ["Formation", clamped(d.formation)],
           ["Swaps", bullets(notes("substitution"))],
-          ["RNG", d.rng],
+          ["RNG", clamped(d.rng)],
         ]}
       />
       {notes("unorthodox").map((u, i) => (
         <div className="flag" key={i}>
-          {u}
+          <Clamp lines={1}>{u}</Clamp>
         </div>
       ))}
-      <SourceChips ids={d.sources} sources={sources} />
+      <div className="card-foot">
+        <SourceChips ids={d.sources} sources={sources} />
+      </div>
     </article>
   );
 }

@@ -39,31 +39,52 @@ export const STAGE = {
   copy: {
     overview: {
       title: "How the pushers get through",
-      lede: "How stages work, then the load-bearing findings, each with the posts it stands on.",
+      lede: [
+        "How stages work, then the findings that carry the push.",
+        "Each finding links its posts.",
+      ],
     },
     decks: {
       title: "Teams",
-      lede: "The teams the record documents clearing stages under-powered, as their owners post them. Every cookie carries its level or level rule and why it's there; a deck's swaps say what changes per boss.",
+      lede: [
+        "Teams documented clearing stages under-powered.",
+        "Every cookie shows its level and why it's there.",
+        "Swaps say what changes per boss.",
+      ],
     },
     usage: {
       title: "Usage",
-      lede: "How often each cookie and pet appears in community-shared stage decks on crumblehub. These are shared decks, most of them from before the 2026-09-23 easing, not a ranking of what clears.",
+      lede: [
+        "How often cookies and pets appear in shared crumblehub decks.",
+        "Mostly pre-easing decks: popularity, not what clears.",
+      ],
     },
     runes: {
       title: "Sugar runes",
-      lede: 'Stage rune lines per cookie. "All" means every line rolls the same stat. Disputed rows are where posters disagreed; both sides are kept.',
+      lede: [
+        "Stage rune lines per cookie.",
+        '"All": every line rolls the same stat.',
+        "Disputed rows keep both sides.",
+      ],
     },
     gear: {
       title: "Gear substats",
-      lede: "Laid out like the equipment screen. Notes that apply to the whole set, such as which preset to wear, are under the board.",
+      lede: [
+        "Laid out like the equipment screen.",
+        "Set-wide notes, such as the preset to wear, sit under it.",
+      ],
     },
     mechanics: {
       title: "Mechanics",
-      lede: "What players measured or datamined about the power gate, accuracy and focus, the zones and the bosses. Confidence reflects how well each point is sourced. The mode's rules are on its overview.",
+      lede: [
+        "What players measured or datamined about stages.",
+        "Confidence says how well each point is sourced.",
+        "The mode's rules are on its overview.",
+      ],
     },
     timeline: {
       title: "How the push moved",
-      lede: "Patches, the stage easing, the Rift's opening and the clears that followed, oldest first.",
+      lede: ["Patches and the clears that followed, oldest first."],
     },
   },
   boss: null,
@@ -73,30 +94,50 @@ export const STAGE = {
   stage: {
     brackets: {
       title: "Bracket calculator",
-      lede: "Type your team power as the formation screen shows it. Each chapter's last stage then shows the share of damage you keep there and the power the next bracket takes, from the power gate's table and the stage's recommended power.",
+      lede: [
+        "Type your team power from the formation screen.",
+        "See how far you keep each damage share.",
+        "Every chapter's boss stage shows your bracket there.",
+      ],
       topic: "power-gate",
     },
     zones: {
       title: "Zones and boss slots",
-      lede: "Chapters cycle through the zone layouts below; from chapter 169 each layout's boss slots are fixed. Each slot says what to bring and how low a bracket it has been cleared at.",
+      lede: [
+        "Chapters cycle through these zone layouts.",
+        "From chapter 169 each layout's boss slots are fixed.",
+        "Each slot: what to bring, lowest bracket cleared.",
+      ],
       topic: "zones",
       fixedFrom: 169,
     },
     clears: {
       title: "Clears",
-      lede: "Documented attempts at the low brackets. The clears the record accepts are ranked furthest stage first and, at one stage, lowest power first; failures and the claims it leaves unverified or rejects follow, each under its own heading. Team power is as posted; before the 2026-09-23 easing, recommended power was higher from 169-1 to 328-30.",
+      lede: [
+        "Accepted clears: furthest stage first, then lowest power.",
+        "Failures and unverified or rejected claims follow.",
+        "Pre-easing rows faced higher recommended power.",
+      ],
       topic: "brackets-practice",
     },
     rift: {
       title: "Dimensional Rift",
-      lede: "The seasonal, boss-only mode past 328-30: its rules, seasons and levels, the bosses players report per level, and the decks they bring. Type your power as the Rift shows it to place yourself on the levels.",
+      lede: [
+        "Seasonal, boss-only mode past 328-30.",
+        "Type your power as the Rift shows it.",
+        "Levels, bosses per level and the decks players bring.",
+      ],
       topic: "rift",
       decks: ["rift-shred"],
       mentions: ["Rift", "차원", "이면"],
     },
     riftClears: {
       title: "Rift at 15%",
-      lede: "Dimensional Rift clears where the power gate leaves the team 15% of its damage, read off the power the Rift shows with 차원의 힘 in it; formation-screen power never sets a Rift bracket. The clears the record accepts come first, by season, then highest level and, at one level, lowest power; the claims it leaves unverified or rejects follow. Each shows its team, the level's recommended power and the power the 15% and 35% brackets take. Clears claimed at 15% without a Rift power, the attempts at other brackets and the failures at 15% bound how far 15% reaches.",
+      lede: [
+        "Highest level first, then lowest power; never a ratio.",
+        "The bracket is read off Rift power, 차원의 힘 included.",
+        "Attempts without it, at other brackets or failed bound the reach.",
+      ],
       bracket: 15,
       lines: [15, 35],
     },

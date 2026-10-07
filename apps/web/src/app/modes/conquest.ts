@@ -33,32 +33,50 @@ export const CONQUEST = {
   copy: {
     overview: {
       title: "What the top players do",
-      lede: "The load-bearing findings, each with the posts it stands on.",
+      lede: ["Ranked findings, the strongest first.", "Each links the posts it stands on."],
     },
     decks: {
       title: "Decks",
-      lede: "Lineups as the guides post them. Striped slots are deliberate Lv.1 fillers; each cookie's row under its deck says why it's there.",
+      lede: [
+        "Best documented lineups, meta first, each with its ceiling.",
+        "Striped slots are deliberate Lv.1 fillers.",
+        "Each cookie's row says why it's there.",
+      ],
       topic: "filler_levels",
     },
     runes: {
       title: "Sugar runes",
-      lede: 'Raid rune lines per cookie. "All" means every line rolls the same stat. Disputed rows are where posters disagreed; both sides are kept.',
+      lede: [
+        "Raid rune lines per cookie.",
+        '"All" means every line rolls the same stat.',
+        "Disputed: posters disagree, and both sides are kept.",
+      ],
     },
     gear: {
       title: "Gear substats",
-      lede: "Laid out like the equipment screen. Notes that apply to the whole set, such as which preset to wear, are under the board.",
+      lede: [
+        "Laid out like the equipment screen.",
+        "Whole-set notes, like which preset to wear, sit below.",
+      ],
     },
     scores: {
       title: "Scores and RNG",
-      lede: "Each dot is one posted score: team power across, damage up, both on log scales. Dashed lines mark 배 multiples (damage ÷ power), the unit the Korean community compares runs by. Solid dots have a screenshot behind them; faded dots are claims in text.",
+      lede: [
+        "Ranked by damage; the best run leads.",
+        "Solid dots have a screenshot; faded dots are text claims.",
+        "Dashed lines mark 배 (damage ÷ power), a normaliser only.",
+      ],
     },
     mechanics: {
       title: "Mechanics",
-      lede: "What the community measured or datamined (클뜯). Confidence reflects how well each point is sourced, not how plausible it sounds.",
+      lede: [
+        "What players measured or datamined (클뜯).",
+        "Confidence rates the sourcing, not how plausible it sounds.",
+      ],
     },
     timeline: {
       title: "How the meta moved",
-      lede: "Patches, new cookies and the decks that followed, oldest first.",
+      lede: ["Patches, new cookies and the decks that followed, oldest first."],
     },
   },
   boss: {
@@ -77,7 +95,11 @@ export const CONQUEST = {
       haste: "haste_breakpoint",
       atkPet: "atk_pet",
     },
-    lede: "The Guild Conquest boss on one page: when it hits, what it takes to live through it, what each buffer gives by star, and what to run.",
+    lede: [
+      "When it hits, and what it takes to survive.",
+      "What each buffer gives by star.",
+      "What to run, and the ATK-order check.",
+    ],
     deck: "cherry",
     gearContext: "raid",
     catcherKr: "전갈",
@@ -102,7 +124,10 @@ export const CONQUEST = {
   },
   leaderboard: {
     title: "crumb.gg leaderboard",
-    lede: "The crumb.gg board for one season, in rank order. The players and guilds boards rank by damage; the power board ranks by team power.",
+    lede: [
+      "One season's crumb.gg board, in rank order.",
+      "Players and guilds rank by damage; power by team power.",
+    ],
     boards: { players: "Players", guilds: "Guilds", power: "Power" },
   },
   rules: null,

@@ -7,7 +7,7 @@
    "id": "stellar_link",
    "name_en": "Stellar Link",
    "name_kr": "스텔라 링크",
-   "raises": "ATK/DEF/HP amplification (%) for every cookie in the lineup, by the area of the polygon drawn through a constellation's points in order; later constellations give more per % of area (constellation 2 at 100% ≈ 30%, 3 at 88% ≈ 35%, 4 at 96% ≈ 48%, nv:5693; at 96%: 1st 19.2%, 2nd 22.8%, 3rd 38.4% ATK amp, web:yt-y-bxOrnjIeU).",
+   "raises": "ATK/DEF/HP amplification (%) for the whole lineup, by the polygon area through a constellation's points; later constellations give more per % of area (nv:5693, web:yt-y-bxOrnjIeU).",
    "applies_in": {"stage": true, "rift": true, "arena": false, "conquest": true},
    "materials": [
     {"name": "points (별조각) on a constellation", "free": "open with the account's total cookie stars (constellation 1 with cookie slots); stars come from pulls", "paid": "more pulls (pickups, memberships)", "note": "pet stars don't count (dc:70489, web:yt-EocpkOD5NW0)"},
@@ -16,7 +16,7 @@
    "cost_type": "mixed",
    "cost_per_roll": "10 SP unlocked; 10/30/60/100/150/220 SP with 1–6 points locked (web:sugarpocket-stella)",
    "cap": "up to 12 points per constellation, 100% area; constellation 8 was the frontier in late September (dc:77104, dc:76272)",
-   "diminishing": "Area per SP falls fast: an 8-point octagon at 91% ≈ 1,900 SP expected, a 10-point 95% ≈ 5,280–7,900, a 12-point 100% ≈ 150,000–400,000 (dc:68586, dc:56417, nv:43444, dc:73840, web:yt-mL9MSX3QD94). Opening points needs ever more cookie stars: 8-3 → 8-6 is about 45 stars (dc:76290, record 003).",
+   "diminishing": "Area per SP falls fast: 91% (8 points) ≈ 1,900 SP, 95% (10) ≈ 5,280–7,900, 100% (12) ≈ 150,000–400,000 (dc:68586, dc:56417, nv:43444, dc:73840, web:yt-mL9MSX3QD94). New points need ever more cookie stars (dc:76290).",
    "posted_gains": [
     {"account": "1.5G, mid-September", "before": "1.5G", "after": "1.7G", "delta": "+13%", "cost": "constellation 8 opened", "kind": "posted", "sources": ["dc:68732"]},
     {"account": "2G, 2026-09-28", "before": "2G", "after": "2.2G", "delta": "+10%", "cost": "not posted: completing the 3-point triangle on constellation 8, most likely by opening its third point with cookie stars", "kind": "posted", "sources": ["dc:77329"]},
@@ -25,11 +25,11 @@
    "efficiency": {
     "early": "high: rolls at 10 SP to 60–70% on the open constellations; don't lock (nv:5693)",
     "mid": "high: the hexagon at 6 points and the octagon (91%, ~1,900 SP) at 8 (dc:55570, nv:43444)",
-    "late": "high while new points open (+10–13% per step posted, dc:77329, dc:68732), but the points come from cookie stars; low for pushing an old constellation past 95%",
-    "at_2_2g": "Up to 8-3 the points come from free pulls (dc:76290) and one such step was worth +10% at 2G, about 3–4 chapters of 35% reach (inferred from record 003's stage table, as the Planner page reads it). Past 8-3 the points need paid pulls: 8-3 → 8-6 is about 45 cookie stars, on the order of ₩2.3–4.2M at the TSSR pickup rate of dc:50913 (inferred upper bound; SSR stars cost less, unpriced), for a gain no one posted. Once points are open, Stellar Points are the cheapest way to add area. Not comparable per won with plating from the record's evidence."
+    "late": "high while new points open (+10–13% a step posted, dc:77329, dc:68732), but points cost cookie stars; low past 95% on an old constellation",
+    "at_2_2g": "high up to 8-3, free from pulls (dc:76290): one step was +10% at 2G. Past 8-3: ~45 paid cookie stars, ₩2.3–4.2M upper bound (dc:50913), gain unposted."
    },
    "bracket_effect": "Moves every bracket line at once; the only posted single step that moved a 2G account a full 0.2G.",
-   "spend_order": "Roll unlocked to ~70% early; shape later constellations first; hexagon at 6, octagon at 8, 95% at 10; F2P 70%, light 80s, mid low 90s, whale 96 (web:yt-5XXDHBHnISU, web:yt-mL9MSX3QD94).",
+   "spend_order": "Roll unlocked to ~70% early; shape later constellations first: hexagon at 6 points, octagon at 8, 95% at 10 (web:yt-5XXDHBHnISU, web:yt-mL9MSX3QD94).",
    "patch_notes": "none recorded",
    "confidence": "high",
    "sources": ["nv:5693", "nv:43444", "dc:68732", "dc:77329", "dc:76290", "dc:50913", "dc:55570", "dc:56417", "dc:68586", "dc:73840", "web:sugarpocket-stella", "web:yt-y-bxOrnjIeU", "web:yt-5XXDHBHnISU", "web:yt-mL9MSX3QD94", "web:yt-FrKqf5lhZBs"]
@@ -59,7 +59,7 @@
    "id": "lineup",
    "name_en": "Lineup and stage-preset power padding",
    "name_kr": "편성 · 스테이지 프리셋 뻥투",
-   "raises": "Displayed team power without new resources: the power formula weights cookie types (attackers high, healers/tanks/supports low) and gear lines by what the lineup lacks; crit resistance and accuracy/focus lines below target count heavily.",
+   "raises": "Displayed power for free: the formula weights attackers high, healers/tanks/supports low, and gear lines by what the lineup lacks (crit resistance, accuracy/focus below target).",
    "applies_in": {"stage": true, "rift": true, "arena": false, "conquest": false},
    "materials": [{"name": "a stage gear preset and lineup chosen for displayed power", "free": "existing gear and cookies; oven draws saved to a second preset", "paid": "none", "note": "power-padding helps only stages and the Rift (nv:41221)"}],
    "cost_type": "free",
@@ -70,7 +70,7 @@
     {"account": "early", "before": "Wind Archer 192 per hit", "after": "576 after adding a healer", "delta": "3× damage through the bracket", "cost": "a lineup swap", "kind": "posted", "sources": ["web:yt-njY-LhKqAtM"]},
     {"account": "1,100 accuracy / 1,200 focus", "before": "", "after": "", "delta": "+7M from one gear line", "cost": "a gear swap", "kind": "posted", "sources": ["dc:74953"]}
    ],
-   "efficiency": {"early": "unmeasured", "mid": "unmeasured", "late": "unmeasured; used when within a few % of a line", "at_2_2g": "unmeasured: record 003's pushers keep a separate stage preset rolled for power, which they say shows more than the conquest preset; no capture gives the team-power difference"},
+   "efficiency": {"early": "unmeasured", "mid": "unmeasured", "late": "unmeasured; used when within a few % of a line", "at_2_2g": "unmeasured: record 003's pushers say a power-rolled stage preset shows more than the conquest preset; no capture gives the difference"},
    "bracket_effect": "Designed for exactly this: pad across the next 40% (or 60%) line, then fight.",
    "spend_order": "Keep a pure-power stage preset and swap to it when a line is within reach (record 003, dc:76290).",
    "patch_notes": "1.4.002: presets can take already-drawn gear (web:crumbgg-patches-20260928).",
@@ -96,7 +96,7 @@
    ],
    "efficiency": {"early": "high: one step per node up to the specials", "mid": "high: HP then ATK nodes", "late": "medium: millions of stones per node", "at_2_2g": "medium; a steady free source, gated by stones and time"},
    "bracket_effect": "Steady growth; HP nodes add the most displayed power (web:yt-y-bxOrnjIeU, web:yt-0HQbrZK8W4g).",
-   "spend_order": "One step per node to reach special research (Sugar Flame from dismantling, dice, rune discount, speed), then HP > ATK > crit, defense last; take the cheaper lower ATK nodes before ATK 30% (~50M stones; '밑에꺼 다 찍는게 훨이득', dc:76620) (web:yt-y-bxOrnjIeU, dc:76642, nv:43444).",
+   "spend_order": "One step per node up to the specials (Sugar Flame, dice, rune discount, speed), then HP > ATK > crit, defense last; lower ATK nodes before ATK 30% (~50M stones, dc:76620) (web:yt-y-bxOrnjIeU, dc:76642, nv:43444).",
    "patch_notes": "Expanded 2026-09-10 and 2026-09-23 (web:crumbgg-patches-20260928).",
    "confidence": "medium",
    "sources": ["web:yt-y-bxOrnjIeU", "web:yt-0HQbrZK8W4g", "dc:76642", "dc:76647", "dc:76620", "dc:77277", "dc:76198", "dc:76290", "nv:43444", "web:crumbgg-patches-20260928"]
@@ -105,7 +105,7 @@
    "id": "plating",
    "name_en": "Plating (plate enhancement)",
    "name_kr": "플레이트 강화",
-   "raises": "The main stat of the gear slot by level (+3%/level to 5, +6% to 10, +12% to 15, +19% to 20; +200% at 20, +315% at 25) and its sub-stats every fifth level (+30/70/130/200/280%). The level stays with the slot when gear changes. Slots: 12.",
+   "raises": "The slot's main stat by level (+200% at 20, +315% at 25) and sub-stats every fifth level (+30/70/130/200/280%). The level stays with the slot; 12 slots.",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [
     {"name": "Chocosteel (초코강)", "free": "one an hour from idle, 24 a day (web:yt-l9086mj7hwA); exchanges; boxes", "paid": "plate packs, the 300 Chocosteel + 60 Syrup hot deal, weekly packs", "note": "priced 200 Crystals (web:crumblehub-efficiency) or 50 Crystals (dc:68116)"},
@@ -113,7 +113,7 @@
    ],
    "cost_type": "mixed",
    "cap": "25 since 1.4.002 (was 20)",
-   "diminishing": "Success falls from 90% at 0→1 to 14% at 14→15, 2% at 19→20 and every step to 25 (the Curves page). Expected cost to 15 is about 414 Chocosteel and 43 Syrup per slot (dc:53079). From 15 a shatter drops 2 levels (restore 20–80 Syrup).",
+   "diminishing": "Success falls from 90% (0→1) to 14% (14→15), then 2% for every step from 19. To 15: ~414 Chocosteel and 43 Syrup per slot (dc:53079).",
    "posted_gains": [
     {"account": "'1G 600M' (team or total not stated)", "before": "", "after": "", "delta": "about +8M per level (posed as a question, ~0.5%); 14→15 +20–30M (~1.5%)", "cost": "14→15 ≈ 104 Chocosteel + 13 Syrup expected", "kind": "posted gain (approximate), cost from the table", "sources": ["dc:75684", "dc:53079"]},
     {"account": "server top 3", "before": "", "after": "", "delta": "+200–300M each (no time span given)", "cost": "the poster guessed at plating great successes", "kind": "posted figure, guessed cause", "sources": ["dc:72479"]},
@@ -121,7 +121,7 @@
    ],
    "efficiency": {"early": "high: all to 5 then 10 is cheap", "mid": "medium: 10→15 with free Chocosteel (~4 days of idle per level near 15, inferred)", "late": "low: 2% steps with shatter risk; whale lane", "at_2_2g": "medium for any slot below 15 (sword, bow, staff first); low past 15. At 1.6G one step 14→15 bought ~0.5 chapters of 35% reach (inferred)."},
    "bracket_effect": "Small, steady; large only on lucky great successes. Not comparable per won with Stellar points from the record's evidence (see stellar_link).",
-   "spend_order": "All to 5, all to 10, then sword, bow, staff to 15, then ring, magic object, book; steps of 5; no Syrup below 12–13; keep Syrup for restores rather than shatter mitigation early past 15 (web:crumblehub-plate-upgrade, nv:43444, web:yt-_Vyl0eQz9lU, dc:75684).",
+   "spend_order": "All to 5, all to 10, then sword, bow, staff to 15, then ring, magic object, book. No Syrup below 12–13; past 15 save it for restores (web:crumblehub-plate-upgrade, nv:43444, web:yt-_Vyl0eQz9lU, dc:75684).",
    "patch_notes": "2026-09-23: cap 25; a shatter drops 2 levels instead of to 10; restore with Syrup; compensation for past shatters (dc:72150).",
    "confidence": "high",
    "sources": ["dc:53079", "dc:72150", "dc:75684", "dc:72479", "dc:76272", "dc:76414", "web:crumblehub-plate-upgrade", "web:yt-_Vyl0eQz9lU", "web:yt-l9086mj7hwA", "web:sugarpocket-catalog", "nv:43444"]
@@ -130,7 +130,7 @@
    "id": "gear_oven",
    "name_en": "Gear from the Oven (oven level and gear level)",
    "name_kr": "오븐 · 장비",
-   "raises": "Gear main and sub stats; gear level caps at oven level × 3, and rarity odds rise with oven level (Eternal from oven 31 at 0.002% a draw).",
+   "raises": "Gear main and sub stats. Gear level caps at oven level × 3; rarity odds rise with oven level (Eternal from oven 31, 0.002% a draw).",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [{"name": "dough (반죽) and Lucky Dough", "free": "dough daily dungeon, idle, mileage keys", "paid": "daily dungeon key packs, level pass (Lucky Dough), the 6,000 KRW Unique 3-piece at oven 10", "note": "opening speed is capped (~50 per request); a full day of play cannot open all dough (dc:76860, dc:76931)"}],
    "cost_type": "mixed",
@@ -175,7 +175,7 @@
    "materials": [{"name": "coins", "free": "idle coins, coin daily dungeon, coin auto-hunt chests (worth more when opened at a higher stage)", "paid": "stage pass (coin auto-hunt hours, 1,500–12,000 KRW tiers), coin chests in packs", "note": ""}],
    "cost_type": "mixed",
    "cap": "1,500 since 2026-09-10 (1,000 from 2026-08-27)",
-   "diminishing": "Flat stats shrink against % bonuses: +200 levels gave Milk ~1k ATK where one gear line gave 6k (dc:76718); late 'a level a day is a burden' (nv:43444).",
+   "diminishing": "Flat stats shrink against % bonuses: +200 levels gave Milk ~1k ATK, one gear line 6k (dc:76718); late, 'a level a day is a burden' (nv:43444).",
    "posted_gains": [
     {"account": "early (global)", "before": "", "after": "", "delta": "~1,000 power per level", "cost": "gold", "kind": "posted", "sources": ["web:yt-6DFlOgeXLds"]},
     {"account": "snapshots", "before": "", "after": "", "delta": "104 at stage 31, 209 at 43, 300 at 56, 775 at 168, 765–840 near 1G, 944 on 2026-09-24, 950 at 3.1G, 960 at 3.6G, 997 at 4G", "cost": "", "kind": "posted snapshots", "sources": ["nv:35880", "nv:39795", "nv:41301", "dc:76008", "dc:69704", "dc:74467", "dc:77104", "dc:76171", "dc:76272"]}
@@ -196,9 +196,9 @@
    "materials": [{"name": "copies of the cookie", "free": "cutters from quests (~50,000 by stage 168, nv:26202), Crystals, check-ins", "paid": "pickup packs, monthly gacha memberships, TSSR currency packs", "note": "an SSR needs 66 copies to 10★, a TSSR 55 (web:sugarpocket-catalog)"}],
    "cost_type": "mixed",
    "cap": "10★",
-   "diminishing": "Copies per star rise (TSSR 1★ 1 copy … 10★ 10 more); a pickup TSSR costs ~288,800 KRW to 5★ and ~972,000 KRW to 10★ (dc:50913).",
+   "diminishing": "Copies per star rise; a pickup TSSR costs ~288,800 KRW to 5★ and ~972,000 KRW to 10★ (dc:50913).",
    "posted_gains": [{"account": "stage 60", "before": "", "after": "20M", "delta": "Brightseeker 10★ 'no big difference' in stages", "cost": "TSSR 10★", "kind": "posted", "sources": ["dc:67616"]}, {"account": "arena", "before": "", "after": "", "delta": "Bari 5★ shows about Rye's power", "cost": "", "kind": "posted", "sources": ["dc:75874"]}],
-   "efficiency": {"early": "high: free cutters pile in", "mid": "medium: pickups to 5★ mainly for Stellar points", "late": "no posted power figure for TSSR stars; ~₩51,000–94,000 a star at the pickup rate (inferred from dc:50913); their main power value is the Stellar points they open", "at_2_2g": "the way points past 8-3 open (dc:76290); the resulting gain isn't posted"},
+   "efficiency": {"early": "high: free cutters pile in", "mid": "medium: pickups to 5★ mainly for Stellar points", "late": "no posted power figure; ~₩51,000–94,000 a star at the pickup rate (inferred from dc:50913); their power comes mainly via the Stellar points they open", "at_2_2g": "the way points past 8-3 open (dc:76290); the resulting gain isn't posted"},
    "bracket_effect": "Indirect, through Stellar Link.",
    "spend_order": "Pull pickups to at least 5★ (6–8★ for good ones); Crystals on cookies, not pets (web:yt-njY-LhKqAtM, web:yt-mL9MSX3QD94, web:yt-s4Y3glSPJPk).",
    "patch_notes": "TSSR gachas monthly, pickups every two weeks (nv:43444).",
@@ -265,7 +265,7 @@
    "name_kr": "도감",
    "raises": "Flat ATK/DEF/HP to cookies of given roles or elements per collection entry, stepped by the members' progress; claim rewards include Crystals.",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
-   "materials": [{"name": "owning and promoting the entry's cookies or pets", "free": "pulls", "paid": "pulls", "note": "players complain that new cookies are not added to the collection (nv:37730 comments; the DCInside gallery's post titles, captured by this record)"}],
+   "materials": [{"name": "owning and promoting the entry's cookies or pets", "free": "pulls", "paid": "pulls", "note": "players complain new cookies aren't added to the collection (nv:37730 comments; DCInside post titles)"}],
    "cost_type": "free",
    "cap": "per entry, 11 steps in the data (unit undocumented)",
    "diminishing": "fixed by the data",
@@ -317,7 +317,7 @@
    "id": "blessing",
    "name_en": "Sweet Blessing (spending level)",
    "name_kr": "달달한 축복 (축복)",
-   "raises": "No stat of its own: a VIP track filled by spending (about 10% of spend as points, level 3 under 100,000 KRW; 12 levels) and daily rewards; perks include auto-hunt bonuses and extra daily dungeon entries (blessing 4 with the 5.5 membership gives 6 entries, dc:76976); a Wind Archer copy at level 3.",
+   "raises": "Perks, no stats: extra dungeon entries (6 a day at blessing 4 with the 5.5, dc:76976), auto-hunt bonuses, a Wind Archer copy at level 3.",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [{"name": "spending", "free": "a slow daily trickle", "paid": "any purchase; the Sweet Blessing Lv.1–12 packs (738,500 KRW in all)", "note": ""}],
    "cost_type": "paid",

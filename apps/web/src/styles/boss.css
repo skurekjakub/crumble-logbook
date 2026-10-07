@@ -25,9 +25,30 @@
 }
 .boss-fact {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 4px 8px;
+}
+.boss-fact > .pill {
+  flex: none;
+  margin-top: 2px;
+}
+.boss-fact-body,
+.boss-note-body,
+.fe-detail {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  .boss-fact {
+    flex-wrap: wrap;
+  }
+  .boss-fact-body {
+    flex-basis: 100%;
+    order: 1;
+  }
+  .boss-fact > .chips.src {
+    order: 2;
+  }
 }
 .boss-fact + .boss-fact {
   margin-top: 4px;
@@ -136,6 +157,48 @@
   align-items: center;
   gap: 6px 10px;
 }
+/* An event's detail on one clamped line, its sources at the end of the row. */
+.fe-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2px var(--sp-3);
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+.fe-row .fe-detail {
+  flex-basis: 320px;
+}
+.boss-note-body {
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+/* The legend swatch for an unverified mark: the same dashed hatch as the track's. */
+.sw.fe-key.low {
+  border: 1.5px dashed var(--bad);
+  border-radius: 50%;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--surface) 0 2px,
+    color-mix(in srgb, var(--bad) 22%, var(--surface)) 2px 4px
+  );
+}
+/* A survival card: what it takes to live through the pattern, set apart above its events. */
+.survive-need {
+  display: grid;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-s);
+  background: var(--warn-soft);
+  --clamp-bg: var(--warn-soft);
+}
+.buff-notes {
+  display: grid;
+  gap: var(--sp-2);
+}
+.buff-notes:empty {
+  display: none;
+}
 .fe-num {
   min-width: 22px;
   border-radius: 11px;
@@ -162,11 +225,35 @@
   color: var(--ink-2);
   white-space: nowrap;
 }
-.boss-check {
+/* The ATK-order checklist: each line's pass, fail or check pill before what it checks. */
+ul.checks {
   display: grid;
-  gap: 8px;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.boss-check li::before {
-  content: "☐ ";
-  color: var(--accent);
+ul.checks > li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+}
+ul.checks > li > .pill {
+  flex: none;
+  min-width: 52px;
+  justify-content: center;
+  margin-top: 1px;
+}
+.check-body {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+.check-body .muted {
+  font-size: var(--fs-s);
 }

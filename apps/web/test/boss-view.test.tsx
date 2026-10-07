@@ -627,7 +627,7 @@ describe("Piñata boss view", () => {
     ]);
     const rows = bodyRows(table);
     const boss = rows.find((r) => r[1]!.startsWith("Boss DMG"))!;
-    expect(boss[0]).toContain("Tea Knight Cookie");
+    expect(boss[0]).toContain("Tea Knight");
     expect(boss.slice(2, 8)).toEqual(["45%", "50%", "55%", "60%", "65%", "70%"]);
     const milk = rows.find((r) => r[1]!.startsWith("ATK +"))!;
     expect(milk[1]).toContain("share of the caster's ATK");
@@ -645,7 +645,10 @@ describe("Piñata boss view", () => {
     await renderRoute(PATH, FULL);
     const buffs = await screen.findByRole("region", { name: "Buffs by star" });
     await within(buffs).findByRole("table");
-    expect(buffs).toHaveTextContent(/a greyed value is unchanged from the column to its left/i);
+    const key = within(buffs).getByRole("list");
+    expect(key).toHaveClass("points");
+    expect(key).toHaveTextContent(/Grey: unchanged from the left\. Dash: no value yet\./);
+    expect(key).not.toHaveTextContent(/dash (holds|is) a value/i);
   });
 
   it("writes no formula note of its own when the data has no formula mechanics", async () => {
@@ -674,9 +677,7 @@ describe("Piñata boss view", () => {
     expect(within(team).queryByText("self only")).toBeNull();
     const shred = trs.find((tr) => tr.textContent.includes("DEF shred"))!;
     expect(within(shred).getByText("chance")).toBeVisible();
-    expect(buffs).toHaveTextContent(
-      /미확인 쿠키's and Dark Choco Cookie's rows are application chances, not buff sizes/,
-    );
+    expect(buffs).toHaveTextContent(/미확인 쿠키 and Dark Choco: application chances, not buffs\./);
     const formula = within(buffs)
       .getByText(/Chance = base chance × \(focus ÷ resist/)
       .closest(".boss-note") as HTMLElement;
@@ -684,7 +685,7 @@ describe("Piñata boss view", () => {
     expect(await within(formula).findByRole("link", { name: "DC 76135" })).toBeVisible();
   });
 
-  it("gives one card per deck cookie, reason first, with the haste breakpoint and Dark Choco's chance on theirs", async () => {
+  it("gives one card per deck cookie, verdict and lines first, with the haste breakpoint and Dark Choco's chance on theirs", async () => {
     await renderRoute(PATH, FULL);
     await screen.findByText(/haste pays off steeply/i);
     const run = section("What to run");
@@ -696,13 +697,14 @@ describe("Piñata boss view", () => {
     const [seeker, choco] = cards as [HTMLElement, HTMLElement];
     const why = within(seeker).getByText(/top posters run 44\.6–49\.6/);
     const lines = within(seeker).getByText("Skill haste first (target 40–50 total with gear)");
-    expect(why.compareDocumentPosition(lines) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(lines.compareDocumentPosition(why) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(within(seeker).getByText("recommended")).toHaveClass("pill", "good");
     expect(seeker).toHaveTextContent("Disputed: At 58.6 haste");
     expect(seeker).toHaveTextContent(/haste pays off steeply/i);
     expect(within(seeker).getByText("medium")).toHaveClass("pill", "medium");
 
     expect(choco).toHaveTextContent("focus raises her debuff proc chance");
-    expect(choco).toHaveTextContent("DEF shred base application chance: 20% at every star.");
+    expect(choco).toHaveTextContent("DEF shred base chance: 20% at every star.");
     expect(within(choco).getByRole("link", { name: /Buffs by star/ })).toHaveAttribute(
       "href",
       "#boss-buffs",
@@ -715,20 +717,50 @@ describe("Piñata boss view", () => {
   it("checks the Cherry deck's ATK order against the catcher and the pet's in-battle bonus", async () => {
     await renderRoute(PATH, FULL);
     const check = await screen.findByRole("region", { name: "ATK-order check" });
-    await within(check).findByText("Brightseeker Cookie");
+    await within(check).findByText("Brightseeker");
     expect([...check.querySelectorAll(".order .step")].map((s) => s.textContent)).toEqual([
-      "Milk Cookie's Crunchy Strong Pediatrician",
-      "Brightseeker Cookie",
-      "Cheesecake Cookie",
+      "Milk · Pediatrician",
+      "Brightseeker",
+      "Cheesecake",
     ]);
-    const items = within(within(check).getByRole("list")).getAllByRole("listitem");
-    expect(items[0]).toHaveTextContent(
-      "Scorpion Cookie stays below Cheesecake Cookie once Octo Wasabi's in-battle ATK bonus is added.",
+    const items = within(check.querySelector("ul.checks")!).getAllByRole("listitem");
+    expect(items).toHaveLength(3);
+    const [catcher, pet, battle] = items as [HTMLElement, HTMLElement, HTMLElement];
+    expect(catcher.firstElementChild).toHaveTextContent("pass");
+    expect(catcher.firstElementChild).toHaveClass("pill", "good");
+    expect(catcher).toHaveTextContent(
+      /Scorpion.*sits below.*Cheesecake.*the last ranked cookie, with the pet's bonus added\./,
     );
-    expect(items[0]).toHaveTextContent("Lv.1–45, keeping ATK ≥10% below the 6th cookie");
-    expect(items[1]).toHaveTextContent("All 3 cookies in the ATK order sit above Scorpion Cookie.");
-    expect(items[2]).toHaveTextContent("Check the order in battle, not in the lobby.");
-    expect(items[2]).toHaveTextContent("isn't shown on the stat screen");
+    expect(catcher).toHaveTextContent("Lv.1–45, keeping ATK ≥10% below the 6th cookie");
+    expect(pet.firstElementChild).toHaveClass("pill", "good");
+    expect(pet).toHaveTextContent(/Octo Wasabi.*is in the deck\./);
+    expect(battle.firstElementChild).toHaveTextContent("check");
+    expect(battle).toHaveTextContent("Read the order in battle, not in the lobby.");
+    expect(battle).toHaveTextContent("isn't shown on the stat screen");
+  });
+
+  it("fails the catcher check when a ranked cookie sits below the catcher, and the pet check without the pet", async () => {
+    const cherry = DECKS.find((d) => d.id === "cherry")!;
+    const catcher = cherry.cookies.find((c) => c.cookieKr === "전갈")!;
+    await renderRoute(PATH, {
+      ...FULL,
+      "/api/decks?mode=guild_conquest&current=true": {
+        body: [
+          {
+            ...cherry,
+            atkOrder: [{ kr: "전갈", en: catcher.en }, ...cherry.atkOrder],
+            pets: [],
+          },
+        ],
+      },
+    });
+    const check = await screen.findByRole("region", { name: "ATK-order check" });
+    await within(check).findAllByText("Brightseeker");
+    const items = within(check.querySelector("ul.checks")!).getAllByRole("listitem");
+    expect(items[0]!.firstElementChild).toHaveTextContent("fail");
+    expect(items[0]!.firstElementChild).toHaveClass("pill", "avoid");
+    expect(items[1]!.firstElementChild).toHaveTextContent("fail");
+    expect(items[2]).not.toHaveTextContent("isn't shown on the stat screen");
   });
 
   it("shows an empty message in every section when nothing is recorded", async () => {

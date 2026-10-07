@@ -26,11 +26,17 @@ export const ARENA = {
     ...PVP_COPY,
     overview: {
       title: "What wins in Arena",
-      lede: "How the mode works, then the load-bearing findings, each with the posts it stands on.",
+      lede: [
+        "How the mode works, then the findings that decide it.",
+        "Each finding cites its posts.",
+      ],
     },
     usage: {
       title: "Usage",
-      lede: "How often each cookie and pet appears in community-shared Arena decks on crumblehub. These are shared decks, not ladder usage: no site publishes regular-Arena usage.",
+      lede: [
+        "Share of community-shared crumblehub decks per cookie and pet.",
+        "Shared decks, not ladder usage: no site publishes that.",
+      ],
     },
   },
   boss: null,

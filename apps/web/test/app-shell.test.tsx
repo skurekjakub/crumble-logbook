@@ -76,9 +76,7 @@ describe("app shell", () => {
     await renderAt("/conquest");
     expect(await screen.findByText(RECORD.lede)).toHaveClass("lede");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Piñata Raid Logbook");
-    expect(document.querySelector("header.top .label")).toHaveTextContent(
-      "Cookie Run: Crumble · 길드 토벌전",
-    );
+    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent("길드 토벌전");
     await waitFor(() =>
       expect(stamp()).toEqual({
         Updated: "2026-09-27",

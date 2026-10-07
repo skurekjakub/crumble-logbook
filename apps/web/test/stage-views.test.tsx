@@ -18,6 +18,8 @@ import type {
   Takeaway,
 } from "../src/api/types";
 import { STAGE } from "../src/app/modes";
+import { FINDINGS_SHOWN } from "../src/views/RiftFindings";
+import { LEVELS_SHOWN } from "../src/views/RiftView";
 import type { Canned } from "./helpers";
 import { CURRENT, CURRENT_DECK } from "./helpers";
 import { bodyRows, renderRoute, VIEW_SOURCES } from "./view-harness";
@@ -360,29 +362,69 @@ describe("the stage section", () => {
   });
 });
 
+/**
+ * Each row's text, its cells joined with a space, for checks that don't
+ * care which cell holds a word.
+ *
+ * @param root - where to look
+ * @returns a line per body row
+ */
+const rowTexts = (root: ParentNode) => bodyRows(root).map((cells) => cells.join(" "));
+
 describe("the bracket calculator", () => {
-  it("shows each chapter's entry powers from the bracket table without a power", async () => {
+  it("shows each chapter's entry powers from the bracket table without a power, and asks for one where the answer goes", async () => {
     await renderStage("/stage/brackets");
-    const table = await screen.findByRole("heading", { name: "Chapter by chapter" });
-    const card = table.closest("section")!;
+    expect(await screen.findByText(/Type your team power above/)).toBeVisible();
+    const card = await screen.findByRole("region", { name: "Chapter by chapter" });
     await waitFor(() => expect(bodyRows(card)).toHaveLength(CHAPTERS.length));
     // Chapter 2: 4G recommended, 35% from 40% of it.
     expect(bodyRows(card)[1]).toContain("1.6G");
     expect(within(card).getAllByRole("link", { name: "crumblehub-stages" }).length).toBe(1);
+    expect(card.querySelector("details.chapters")).not.toBeNull();
   });
 
-  it("places a typed power on every chapter and says how far each share reaches", async () => {
+  it("draws the power gate as a ladder of tinted brackets", async () => {
+    await renderStage("/stage/brackets");
+    const gate = await screen.findByRole("region", { name: "The power gate" });
+    const steps = within(gate).getAllByRole("listitem");
+    expect(steps).toHaveLength(BRACKETS.length);
+    expect(steps[3]).toHaveTextContent("40%+35%40% 이상");
+    expect(steps[3]!.querySelector(".bk.bk-mid")).not.toBeNull();
+    expect(steps[2]!.querySelector(".bk.bk-low")).not.toBeNull();
+  });
+
+  it("answers first how far each share reaches, then places the power on every chapter", async () => {
     await renderStage("/stage/brackets?power=2G");
     const reach = await screen.findByRole("region", { name: "How far you push" });
-    expect(reach).toHaveTextContent("100% of damage or more: through 1-30");
-    expect(reach).toHaveTextContent("35% of damage or more: through 2-30 (GingerCraven)");
-    expect(reach).toHaveTextContent("15% of damage or more: every chapter to 3-30");
-    const card = screen.getByRole("heading", { name: "Chapter by chapter" }).closest("section")!;
+    expect(within(reach).getByRole("heading")).toHaveTextContent(/^At 2G/);
+    const tiles = within(reach).getAllByRole("listitem");
+    expect(tiles.map((t) => t.querySelector(".reach-value")!.textContent)).toEqual([
+      "1-30",
+      "1-30",
+      "1-30",
+      "2-30",
+      "3-30",
+    ]);
+    expect(tiles[3]).toHaveTextContent("35%+2-30GingerCraven");
+    expect(tiles[4]).toHaveTextContent("every chapter");
+    const order = [...document.querySelectorAll("h3")].map((h) => h.textContent);
+    expect(order.findIndex((t) => t.startsWith("At 2G"))).toBeLessThan(
+      order.indexOf("The power gate"),
+    );
+    const card = screen.getByRole("region", { name: "Chapter by chapter" });
     const rows = bodyRows(card);
     expect(rows[0]).toContain("120%");
     expect(rows[1]).toContain("35%");
     expect(rows[1]).toContain("55% at 2.4G");
     expect(rows[2]).toContain("15%");
+  });
+
+  it("marks a share the power doesn't reach at the first chapter", async () => {
+    await renderStage("/stage/brackets?power=100M");
+    const reach = await screen.findByRole("region", { name: "How far you push" });
+    const tiles = within(reach).getAllByRole("listitem");
+    expect(tiles[0]).toHaveClass("none");
+    expect(tiles[0]).toHaveTextContent("not yet at 1-30");
   });
 
   it("asks for a power it can read when the text isn't one", async () => {
@@ -400,18 +442,50 @@ describe("the bracket calculator", () => {
 });
 
 describe("the zone board", () => {
-  it("shows each zone's slots with the plan, a link to the deck's card and the sources", async () => {
+  it("shows each slot as a tile: boss, bracket cleared at, what to bring as portraits, plan and sources", async () => {
     await renderStage("/stage/zones");
-    const zone = (await screen.findByRole("heading", { name: /Ruined City/ })).closest("section")!;
-    expect(zone).toHaveTextContent("Chapters 171, 179, 187, … every 8th chapter (fixed from 169).");
+    const zone = await screen.findByRole("region", { name: /Ruined City/ });
+    expect(zone).toHaveTextContent("Chapters 171, 179, 187 … every 8th from 169");
     expect(zone).not.toHaveTextContent("Chapters 3,");
-    expect(zone).toHaveTextContent("The GingerCraven deck with damage-reduction perks.");
-    expect(zone).toHaveTextContent("35%; fails at 15%");
+    const [slot] = within(zone).getAllByRole("listitem");
+    expect(slot).toHaveTextContent("The GingerCraven deck with damage-reduction perks.");
+    const cleared = slot!.querySelector(".zslot-cleared")!;
+    expect(cleared).toHaveTextContent("35%fails at 15%");
+    expect(cleared).toHaveAttribute("title", "35%; fails at 15%");
+    expect(cleared.querySelector(".bk.bk-mid")).not.toBeNull();
+    expect(slot).toHaveTextContent("GingerCraven");
     expect(await within(zone).findByRole("link", { name: "Charge deck" })).toHaveAttribute(
       "href",
       "/stage/teams#deck-stage-charge",
     );
+    const icons = slot!.querySelectorAll(".bring-icons > span");
+    expect([...icons].map((i) => i.getAttribute("title"))).toEqual(["Scorpion"]);
     expect(within(zone).getByRole("link", { name: "DC 76835" })).toBeVisible();
+  });
+
+  it("names a deck short, its full name in the tooltip", async () => {
+    await renderRoute(
+      "/stage/zones",
+      {
+        ...API,
+        "/api/decks?mode=stage": {
+          body: [deck("stage-charge", "Charge deck (post-easing general deck)"), DECKS[1]!],
+        },
+      },
+      { mode: STAGE },
+    );
+    const zone = await screen.findByRole("region", { name: /Ruined City/ });
+    const link = await within(zone).findByRole("link", { name: "Charge deck" });
+    expect(link).toHaveAttribute("title", "Charge deck (post-easing general deck)");
+  });
+
+  it("says when no zone plans are recorded", async () => {
+    await renderRoute(
+      "/stage/zones",
+      { ...API, "/api/stage-zone-slots": { body: [] } },
+      { mode: STAGE },
+    );
+    expect(await screen.findByText("No zone plans recorded yet.")).toBeVisible();
   });
 });
 
@@ -425,7 +499,7 @@ describe("rows that name an obsolete deck", () => {
 
   it("marks the deck obsolete beside its link on the zone board", async () => {
     await renderRoute("/stage/zones", retired, { mode: STAGE });
-    const zone = (await screen.findByRole("heading", { name: /Ruined City/ })).closest("section")!;
+    const zone = await screen.findByRole("region", { name: /Ruined City/ });
     const link = await within(zone).findByRole("link", { name: "Charge deck" });
     await waitFor(() =>
       expect(link.parentElement!.querySelector(".pill.obsolete")).toHaveTextContent("obsolete"),
@@ -445,31 +519,71 @@ describe("the clears list", () => {
   it("lists attempts in the API's order, furthest stage first", async () => {
     await renderStage("/stage/clears");
     await waitFor(() => expect(bodyRows(document)).toHaveLength(CLEARS.length));
-    expect(bodyRows(document).map((r) => r[0])).toEqual(["328-30", "328-20", "328-30"]);
-    expect(bodyRows(document)[0]).toContain("Cleared");
+    expect([...document.querySelectorAll(".stage-at b")].map((b) => b.textContent)).toEqual([
+      "328-30",
+      "328-20",
+      "328-30",
+    ]);
   });
 
-  it("ranks only the clears the record accepts, and shows the rest under their own headings", async () => {
+  it("ranks only the clears the record accepts, #1 marked, and shows the rest under their own headings", async () => {
     await renderStage("/stage/clears");
     const ranked = await screen.findByRole("region", { name: "Ranked clears" });
     await waitFor(() => expect(bodyRows(ranked)).toHaveLength(1));
-    expect(bodyRows(ranked)[0]![3]).toMatch(/^4\.00G/);
+    const [first] = bodyRows(ranked);
+    expect(first![0]).toBe("#1");
+    expect(ranked.querySelector("tr .st-rank.r1")).not.toBeNull();
+    expect(first![1]).toBe("328-30");
+    expect(first![3]).toBe("4Gof 10G");
+    expect(ranked.querySelector(".pw b")).toHaveAttribute("title", "4.00G");
+    expect(first![4]).toBe("35%");
+    expect(first![5]).toBe("Clearedscreenshot");
     const failures = screen.getByRole("region", { name: "Failures" });
-    expect(bodyRows(failures)[0]).toContain("Failed");
+    expect(rowTexts(failures)[0]).toContain("Failed");
+    expect(bodyRows(failures)[0]![0]).toBe("328-20pre-easing");
     expect(bodyRows(failures)[0]).toContain("DC 76835");
+    expect(failures.querySelector(".st-rank")).toBeNull();
     const rejected = screen.getByRole("region", { name: "Rejected claims" });
-    expect(bodyRows(rejected)[0]![3]).toMatch(/^3\.00G/);
-    expect(bodyRows(rejected)[0]).toContain("Cleared");
+    expect(bodyRows(rejected)[0]![2]).toBe("3Gof 10G");
+    expect(rowTexts(rejected)[0]).toContain("Cleared");
     expect(screen.queryByRole("region", { name: "Unverified claims" })).toBeNull();
     const order = [...document.querySelectorAll("h3")].map((h) => h.textContent);
     expect(order.indexOf("Ranked clears")).toBeLessThan(order.indexOf("Failures"));
     expect(order.indexOf("Failures")).toBeLessThan(order.indexOf("Rejected claims"));
   });
 
+  it("shows a text-only claim as a claim, and keeps a filtered clear's place", async () => {
+    const claims = [
+      clear(4, 30, "clear", "post-easing"),
+      { ...clear(6, 25, "clear", "post-easing"), evidence: "text" as const },
+    ];
+    await renderRoute(
+      "/stage/clears?q=328-25",
+      { ...API, "/api/stage-clears": { body: claims } },
+      { mode: STAGE },
+    );
+    const ranked = await screen.findByRole("region", { name: "Ranked clears" });
+    await waitFor(() => expect(bodyRows(ranked)).toHaveLength(1));
+    expect(bodyRows(ranked)[0]![0]).toBe("#2");
+    expect(ranked.querySelector(".pill.claimed")).toHaveTextContent("text only");
+  });
+
+  it("cuts a long note to a line or two, with More", async () => {
+    const long = { ...clear(4, 30, "clear", "post-easing"), note: "A long note. ".repeat(20) };
+    await renderRoute(
+      "/stage/clears",
+      { ...API, "/api/stage-clears": { body: [long] } },
+      { mode: STAGE },
+    );
+    const ranked = await screen.findByRole("region", { name: "Ranked clears" });
+    expect(await within(ranked).findByRole("button", { name: "More" })).toBeVisible();
+  });
+
   it("names a boss in English as the stage tables do, over another record's glossary", async () => {
     await renderStage("/stage/clears");
-    await waitFor(() => expect(bodyRows(document)[0]![1]).toContain("GingerCraven"));
-    expect(bodyRows(document)[0]![1]).not.toContain("Cowardly Cookie");
+    const ranked = await screen.findByRole("region", { name: "Ranked clears" });
+    await waitFor(() => expect(bodyRows(ranked)[0]![2]).toContain("GingerCraven"));
+    expect(bodyRows(ranked)[0]![2]).not.toContain("Cowardly Cookie");
   });
 
   it("filters by the boss's English and the deck the rows show", async () => {
@@ -504,44 +618,42 @@ describe("the clears list", () => {
   it("filters by result from the URL", async () => {
     await renderStage("/stage/clears?result=fail");
     await waitFor(() => expect(bodyRows(document)).toHaveLength(1));
-    expect(bodyRows(document)[0]).toContain("Failed");
+    expect(rowTexts(document)[0]).toContain("Failed");
   });
 });
 
 describe("the Rift at 15% page", () => {
-  it("shows each 15% clear in the API's order with its level's recommended power, the 15% and 35% lines, and its team", async () => {
+  it("ranks the 15% clears in the API's order: level, boss, power short, the 15% and 35% lines, verdict and team", async () => {
     await renderStage("/stage/rift-15");
     const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
-    const cards = within(ranked).getAllByRole("article", { name: /^Season/ });
-    expect(cards.map((c) => within(c).getByRole("heading").textContent)).toEqual([
-      "Season 1, level 2",
-      "Season 1, level 1",
-    ]);
-    const [first, second] = cards;
-    await waitFor(() =>
-      expect(first).toHaveTextContent("20G recommended15% from 4G · 35% from 8G"),
-    );
-    expect(first).toHaveTextContent("Rowdy Truck");
-    expect(first).toHaveTextContent(
-      "2.31Gas the Rift shows it, 차원의 힘 included, 차원의 힘 Lv.14",
-    );
-    expect(first).toHaveTextContent("accepted");
-    expect(await within(ranked).findByRole("heading", { name: /Rift shred deck/ })).toBeVisible();
-    expect(second).toHaveTextContent("Dark Choco, Devil, Scorpion.");
-    expect(second).toHaveTextContent("10G recommended15% from 2G · 35% from 4G");
-    expect(second).toHaveTextContent("unverified");
+    await waitFor(() => expect(bodyRows(ranked)).toHaveLength(2));
+    await waitFor(() => expect(bodyRows(ranked)[0]![4]).toBe("15% 4G35% 8G"));
+    const [first, second] = bodyRows(ranked);
+    expect(first!.slice(0, 2)).toEqual(["#1", "L2 S1of 20G"]);
+    expect(first![2]).toContain("Rowdy Truck");
+    expect(first![3]).toBe("2.3GRift power · 차원의 힘 Lv.14");
+    expect(first![5]).toBe("acceptedscreenshotmanual");
+    expect(first![6]).toBe("Rift shred deckrift note 1");
+    expect(second!.slice(0, 2)).toEqual(["–", "L1 S1of 10G"]);
+    expect(second![4]).toBe("15% 2G35% 4G");
+    expect(second![5]).toContain("unverified");
+    expect(second![6]).toBe("Dark Choco, Devil, Scorpion.");
   });
 
-  it("shows a deck's card once, under the first clear that names it", async () => {
+  it("shows each team's card once, under the ranking, and links the rows to it", async () => {
     await renderRoute(
       "/stage/rift-15",
       { ...API, "/api/rift-clears": { body: [riftClear(1), riftClear(5, { level: 1 })] } },
       { mode: STAGE },
     );
     const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
-    await within(ranked).findByRole("heading", { name: /Rift shred deck/ });
-    expect(within(ranked).getAllByRole("heading", { name: /Rift shred deck/ })).toHaveLength(1);
-    expect(within(ranked).getAllByRole("link", { name: "Rift shred deck" })).toHaveLength(2);
+    const links = await within(ranked).findAllByRole("link", { name: "Rift shred deck" });
+    expect(links).toHaveLength(2);
+    expect(links[0]).toHaveAttribute("href", "#deck-rift-shred");
+    const teams = await screen.findByRole("region", { name: "Their teams" });
+    expect(within(teams).getAllByRole("heading", { name: /Rift shred deck/ })).toHaveLength(1);
+    const order = [...document.querySelectorAll("h3")].map((h) => h.textContent);
+    expect(order.indexOf("Clears at 15%")).toBeLessThan(order.indexOf("Their teams"));
   });
 
   it("keeps a 15% clear that gives no Rift power out of the ranked clears, with the attempts that bound them", async () => {
@@ -556,10 +668,28 @@ describe("the Rift at 15% page", () => {
       { mode: STAGE },
     );
     const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
-    expect(within(ranked).getAllByRole("article", { name: /^Season/ })).toHaveLength(1);
+    await waitFor(() => expect(bodyRows(ranked)).toHaveLength(1));
     const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });
     await waitFor(() => expect(bodyRows(bounds)).toHaveLength(1));
-    expect(bodyRows(bounds)[0]).toContain("not posted");
+    expect(bodyRows(bounds)[0]![2]).toBe("2.3Gbasis unknown · 차원의 힘 Lv.14");
+  });
+
+  it("prints a power the post doesn't give short, its words in the tooltip", async () => {
+    await renderRoute(
+      "/stage/rift-15",
+      {
+        ...API,
+        "/api/rift-clears": {
+          body: [
+            riftClear(7, { powerBasis: null, powerG: null, teamPower: "not posted (padded)" }),
+          ],
+        },
+      },
+      { mode: STAGE },
+    );
+    const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });
+    await waitFor(() => expect(bounds.querySelector(".pw b")).toHaveTextContent("not posted"));
+    expect(bounds.querySelector(".pw b")).toHaveAttribute("title", "not posted (padded)");
   });
 
   it("lists the attempts at other brackets and the 15% failures under their own heading", async () => {
@@ -567,8 +697,8 @@ describe("the Rift at 15% page", () => {
     const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });
     await waitFor(() => expect(bodyRows(bounds)).toHaveLength(2));
     expect(bodyRows(bounds)[0]).toContain("35%");
-    expect(bodyRows(bounds)[1]).toContain("Failed");
-    expect(bodyRows(bounds)[1]![0]).toBe("S2 · L3of 30G recommended");
+    expect(rowTexts(bounds)[1]).toContain("Failed");
+    expect(bodyRows(bounds)[1]![0]).toBe("L3 S2of 30G");
     const order = [...document.querySelectorAll("h3")].map((h) => h.textContent);
     expect(order.indexOf("Clears at 15%")).toBeLessThan(order.indexOf("Attempts that bound it"));
   });
@@ -581,7 +711,7 @@ describe("the Rift at 15% page", () => {
     cleanup();
     await renderStage("/stage/rift-15?q=Dark%20Choco");
     const ranked = await screen.findByRole("region", { name: "Clears at 15%" });
-    expect(within(ranked).getAllByRole("article", { name: /^Season/ })).toHaveLength(1);
+    expect(bodyRows(ranked)).toHaveLength(1);
     expect(screen.queryByRole("region", { name: "Attempts that bound it" })).toBeNull();
     cleanup();
     await renderStage("/stage/rift-15?q=nobody");
@@ -601,21 +731,42 @@ describe("the Rift at 15% page", () => {
 describe("the Dimensional Rift page", () => {
   it("marks the running season and lists its levels with entry powers and reported bosses", async () => {
     await renderStage("/stage/rift");
-    const seasons = (await screen.findByRole("heading", { name: "Seasons" })).closest("section")!;
+    const seasons = await screen.findByRole("region", { name: "Seasons" });
     expect(seasons).toHaveTextContent("1 (running)");
-    const levels = screen.getByRole("heading", { name: "Levels" }).closest("section")!;
+    expect(seasons.querySelector(".fact-line")).toHaveTextContent("runningSeason 1levels 1–2");
+    expect(seasons).toHaveTextContent("nextSeason 2levels 3–3from 2100-01-01 UTC");
+    const levels = screen.getByRole("region", { name: "Levels" });
     await waitFor(() => expect(bodyRows(levels)).toHaveLength(2));
     expect(bodyRows(levels)[1]).toContain("8G");
     expect(levels).toHaveTextContent("Rowdy Truck");
     expect(levels).toHaveTextContent("Dark Choco and Devil for shred.");
   });
 
+  it("asks for a Rift power, then answers first how high each share climbs in the season", async () => {
+    await renderStage("/stage/rift");
+    expect(await screen.findByText(/Type your Rift power above/)).toBeVisible();
+    cleanup();
+    await renderStage("/stage/rift?power=5G");
+    const reach = await screen.findByRole("region", { name: "How far you climb" });
+    const tiles = within(reach).getAllByRole("listitem");
+    expect(tiles.map((t) => t.querySelector(".reach-value")!.textContent)).toEqual([
+      "–",
+      "–",
+      "–",
+      "L1",
+      "L2",
+    ]);
+    expect(tiles[0]).toHaveTextContent("not yet at L1");
+    expect(tiles[4]).toHaveTextContent("every level");
+  });
+
   it("names where the Rift opens from the stored unlock, cited to its own sources, whatever the last chapter", async () => {
     await renderStage("/stage/rift");
-    const entry = (await screen.findByRole("heading", { name: "Getting in" })).closest("section")!;
-    await waitFor(() => expect(entry).toHaveTextContent("The Rift opens after clearing 2-30."));
+    const entry = await screen.findByRole("region", { name: "Getting in" });
+    await waitFor(() => expect(entry).toHaveTextContent(/Opens after clearing\s*2-30/));
     expect(entry).not.toHaveTextContent("3-30");
-    expect(entry).toHaveTextContent("4G recommended, the 35% bracket from 1.6G");
+    expect(entry).toHaveTextContent("4G recommended");
+    expect(entry).toHaveTextContent("35% from 1.6G");
     const [rule, gate] = [...entry.querySelectorAll("p")];
     expect(within(rule!).getByText("Naver 44477")).toBeVisible();
     expect(within(rule!).queryByText("crumblehub-stages")).toBeNull();
@@ -624,10 +775,33 @@ describe("the Dimensional Rift page", () => {
 
   it("lists every season's levels on request, and places a typed power on them", async () => {
     await renderStage("/stage/rift?season=2&power=5G");
-    const levels = (await screen.findByRole("heading", { name: "Levels" })).closest("section")!;
+    const levels = await screen.findByRole("region", { name: "Levels" });
     await waitFor(() => expect(bodyRows(levels)).toHaveLength(1));
     expect(bodyRows(levels)[0]![0]).toBe("3");
     expect(bodyRows(levels)[0]).toContain("5%15% at 6G");
+  });
+
+  it("lists a long season's first levels, and the rest on request", async () => {
+    const many: RiftLevel[] = Array.from({ length: 40 }, (_, i) => ({
+      id: i + 1,
+      level: i + 1,
+      recommendedPower: (i + 1) * 10_000_000_000,
+      sources: ["web:crumblehub-stages"],
+    }));
+    await renderRoute(
+      "/stage/rift",
+      {
+        ...API,
+        "/api/rift-levels": { body: many },
+        "/api/rift-seasons": { body: [{ ...SEASONS[0]!, lastLevel: 40 }] },
+      },
+      { mode: STAGE },
+    );
+    const levels = await screen.findByRole("region", { name: "Levels" });
+    await waitFor(() => expect(bodyRows(levels)).toHaveLength(LEVELS_SHOWN));
+    fireEvent.click(within(levels).getByRole("button", { name: "Show all 40 levels" }));
+    expect(bodyRows(levels)).toHaveLength(40);
+    expect(within(levels).queryByRole("button", { name: /Show all/ })).toBeNull();
   });
 
   it("gathers the Rift facts the record keeps elsewhere: mechanics filed under the Rift too, account advice, clear notes and other decks' whys", async () => {
@@ -687,14 +861,36 @@ describe("the Dimensional Rift page", () => {
     await renderRoute("/stage/rift", api, { mode: STAGE });
     expect(await screen.findByText("In the Rift, every miss costs more.")).toBeVisible();
     expect(screen.queryByText("The table also gates the daily dungeons and the Rift.")).toBeNull();
-    const findings = (
-      await screen.findByRole("heading", { name: "Elsewhere in the record" })
-    ).closest("section")!;
+    const findings = await screen.findByRole("region", { name: "Elsewhere in the record" });
     await waitFor(() => expect(findings).toHaveTextContent("the Rift's 차원의 힘 compounds"));
     expect(findings).not.toHaveTextContent("Pad power.");
     await waitFor(() => expect(findings).toHaveTextContent("Clear 328-30 Entered the Rift after."));
     expect(findings).toHaveTextContent("Deck: Charge deck Scorpion Cookie: His Rift deck.");
     expect(findings).not.toHaveTextContent("Deck: Rift shred deck");
+  });
+
+  it("lists the first findings, cuts a long one to a line, and shows the rest on request", async () => {
+    const many: Takeaway[] = Array.from({ length: FINDINGS_SHOWN + 2 }, (_, i) => ({
+      id: i + 1,
+      position: i,
+      text: i === 0 ? `The Rift ${"runs long. ".repeat(20)}` : `Rift finding ${i + 1}.`,
+      detail: null,
+      mode: "stage",
+      recordSlug: SLUG,
+      sources: ["dc:76835"],
+    }));
+    await renderRoute(
+      "/stage/rift",
+      { ...API, "/api/takeaways?mode=stage": { body: many } },
+      { mode: STAGE },
+    );
+    const findings = await screen.findByRole("region", { name: "Elsewhere in the record" });
+    await waitFor(() =>
+      expect(within(findings).getAllByRole("listitem")).toHaveLength(FINDINGS_SHOWN),
+    );
+    expect(within(findings).getByRole("button", { name: "More" })).toBeVisible();
+    fireEvent.click(within(findings).getByRole("button", { name: `Show all ${many.length}` }));
+    expect(within(findings).getAllByRole("listitem")).toHaveLength(many.length);
   });
 
   it("leaves obsolete decks and rune builds off the Rift page, asking the API for current ones", async () => {
@@ -742,9 +938,7 @@ describe("the Dimensional Rift page", () => {
     await renderStage("/stage/rift");
     expect(await screen.findByRole("heading", { name: /Rift shred deck/ })).toBeVisible();
     expect(screen.queryByRole("heading", { name: /Charge deck/ })).toBeNull();
-    const findings = (
-      await screen.findByRole("heading", { name: "Elsewhere in the record" })
-    ).closest("section")!;
+    const findings = await screen.findByRole("region", { name: "Elsewhere in the record" });
     expect(findings).toHaveTextContent("The Dimensional Rift is a 35% fight at every level.");
     expect(findings).not.toHaveTextContent("Pad displayed power");
   });

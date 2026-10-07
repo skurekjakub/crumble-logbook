@@ -62,7 +62,7 @@
    "id": "endgame",
    "label": "Stages 300–328 at ~2–4G (your 2.2G team sits here)",
    "free": [
-    {"step": "Check the guild's research level; a research-13 guild is claimed at ~+20% of account total power over a small one, and leaving a guild dropped a pusher to the 15% cut.", "source": "guild_lab", "basis": "claimed", "basis_note": "claimed (one unmeasured reply, about account total power; no team-power figure)", "why": "Free to check.", "sources": ["dc:76461", "dc:67596"]},
+    {"step": "Check your guild's research level: a research-13 guild is claimed at ~+20% account total power; leaving a guild dropped a pusher to the 15% cut.", "source": "guild_lab", "basis": "claimed", "basis_note": "claimed (one unmeasured reply, about account total power; no team-power figure)", "why": "Free to check.", "sources": ["dc:76461", "dc:67596"]},
     {"step": "Build a pure-power stage preset (crit resistance and other padding lines, SSR rune lines that add power) and swap to it at a line.", "source": "lineup", "basis": "unmeasured", "basis_note": "unmeasured (record 003's practice)", "why": "Free.", "sources": ["dc:76290", "dc:74089", "nv:32484"]},
     {"step": "Stellar: open and shape constellation-8 points up to 8-3, which free pulls reach; points past 8-3 (about 45 cookie stars to 8-6) need paid pulls.", "source": "stellar_link", "basis": "posted", "basis_note": "posted gain (+10% for the third point at 2G); reach inferred", "why": "≈ +3–4 chapters of 35% reach from 2.2G (inferred).", "sources": ["dc:77329", "dc:76290", "dc:76171"]},
     {"step": "Gnome Lab: HP 30% and the lower ATK nodes before ATK 30% (~50M stones).", "source": "gnome_lab", "basis": "community", "basis_note": "community order; the 2G → 4G reply credits research", "why": "'Padded power is purely research' (dc:76290); the lower nodes pay better (dc:76620).", "sources": ["dc:76290", "dc:76272", "dc:77509", "dc:76620"]},
@@ -72,8 +72,8 @@
    ],
    "paid": [
     {"step": "Keep the weekly key set and Crumble Pass running.", "package": "daily-dungeon-keys-weekly", "basis": "community", "basis_note": "community order (no posted power figure)", "why": "Stones for the lab, dough for the oven.", "sources": ["dc:77246", "web:yt-pldC8umlhnI"]},
-    {"step": "Stellar Link packs to shape points that are already open (not for 100%).", "package": "stellar-pack-1", "basis": "community", "basis_note": "community order; the costs are guide expectations", "why": "Once points are open, SP is the cheapest way to add area (~550–1,900 SP expected per shape, nv:5693, dc:55570). SP doesn't open points: past 8-3 that takes cookie stars from paid pulls, about 45 stars to 8-6 (dc:76290), on the order of ₩2.3–4.2M at the TSSR pickup rate (inferred upper bound), for an unposted gain.", "sources": ["dc:55570", "nv:5693", "dc:76290", "dc:50913", "dc:75373"]},
-    {"step": "Plate thanks packs for Syrup, weapons first; keep restore Syrup in hand.", "package": "plate-thanks", "basis": "community", "basis_note": "posted gain near 15 (approximate) with table costs", "why": "About +1.5% per 14→15 step at 1.6G for about ₩14,700 (inferred); weapon plates at 19–21 show on most posted 4G accounts. Not comparable per won with Stellar from the evidence.", "sources": ["dc:75684", "dc:53079", "dc:76272", "web:yt-_Vyl0eQz9lU"]},
+    {"step": "Stellar Link packs to shape points that are already open (not for 100%).", "package": "stellar-pack-1", "basis": "community", "basis_note": "community order; the costs are guide expectations", "why": "Once points are open, SP is the cheapest way to add area (~550–1,900 SP expected per shape, nv:5693, dc:55570). It opens no points (dc:76290).", "sources": ["dc:55570", "nv:5693", "dc:76290", "dc:50913", "dc:75373"]},
+    {"step": "Plate thanks packs for Syrup, weapons first; keep restore Syrup in hand.", "package": "plate-thanks", "basis": "community", "basis_note": "posted gain near 15 (approximate) with table costs", "why": "About +1.5% per 14→15 step at 1.6G for ~₩14,700 (inferred); most posted 4G accounts have weapon plates at 19–21.", "sources": ["dc:75684", "dc:53079", "dc:76272", "web:yt-_Vyl0eQz9lU"]},
     {"step": "TSSR stars only for Stellar points or a deck need.", "package": "tssr-pickup", "basis": "community", "basis_note": "community order (no posted power figure)", "why": "About 289,000 KRW for 5★; a blessing-7 player at 3G+ said reaching 328 would take about 3,000,000 KRW more.", "sources": ["dc:50913", "dc:77420"]}
    ]
   },
@@ -120,7 +120,7 @@
    {"package": "tssr-pickup", "basis": "community"},
    {"package": "sweet-blessing", "basis": "community"}
   ],
-  "note": "Both orders are the community's stated orders at ~2.2G, not rankings by power per unit. Only Stellar Link (up to 8-3, +10% posted at 2G) and plating near 15 (~+1.5% a step at 1.6G, approximate) have posted team-power gains; the guild's +20% is one unmeasured claim about account total power and stage-preset padding is unmeasured; both sit first because they are free to check. Stellar points past 8-3 need paid pulls. The paid order assumes the light-tier buys (Ad Removal, Unique gear) are owned; no package has a posted power figure, and Stellar and plating can't be compared per won from the evidence.",
+  "note": "The community's orders at ~2.2G, not rankings by power per unit. Only Stellar (to 8-3) and plating near 15 have posted gains; guild and padding lead as free checks.",
   "sources": ["dc:76461", "dc:77329", "dc:76290", "dc:76272", "dc:75684", "dc:77246", "dc:50913"]
  }
 }

@@ -1,0 +1,356 @@
+/* The views every mode shares (overview, decks, runes, gear, scores, mechanics, timeline) and the
+   Guild Conquest screens, made scannable: verdict first, one line of text, sources last.
+   Loaded after ui.css. Colours come from tokens.css only. */
+
+/* Overview: caveats as one-line callouts, stacked tight. */
+.caveats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+.callout.caveat {
+  border-left-color: var(--warn);
+}
+.callout.caveat .note {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: inherit;
+}
+
+/* Overview: ranked findings. Big rank, the lead sentence, one clamped line, chips at the end.
+   The #1 finding gets the biggest number and a tinted row. */
+ol.take.findings li {
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--sp-1) var(--sp-3);
+  padding: var(--sp-3) var(--sp-4) var(--sp-3) var(--sp-3);
+}
+ol.take.findings li::before {
+  font-size: var(--fs-xl);
+  line-height: 1.05;
+}
+ol.take.findings li:first-child {
+  --top-bg: color-mix(in srgb, var(--candy-soft) 55%, var(--surface));
+  background: var(--top-bg);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+ol.take.findings li:first-child::before {
+  font-size: var(--fs-2xl);
+}
+ol.take.findings li:first-child .lead {
+  font-size: var(--fs-m);
+}
+ol.take.findings li:first-child .clamp {
+  --clamp-bg: var(--top-bg);
+}
+.finding {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.finding .lead {
+  font-weight: 600;
+  line-height: 1.4;
+}
+.finding .muted {
+  font-size: var(--fs-s);
+}
+ol.take.findings .chips.src {
+  justify-content: flex-end;
+  max-width: 15em;
+  padding-top: 2px;
+}
+@media (max-width: 640px) {
+  ol.take.findings li {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+  ol.take.findings .chips.src {
+    grid-column: 2;
+    justify-content: flex-start;
+    max-width: none;
+  }
+}
+
+/* Overview: the account card, bullets first. Each change is an arrowed to-do line. */
+.card.account {
+  gap: var(--sp-3);
+  border-left: 3px solid var(--accent);
+}
+.card.account h3 {
+  margin: 0;
+}
+.advice {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+ul.todo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.todo li {
+  position: relative;
+  padding-left: 22px;
+}
+ul.todo li::before {
+  content: "→";
+  position: absolute;
+  left: 2px;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.advice-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-1) var(--sp-3);
+  padding-top: var(--sp-2);
+  border-top: 1px dashed var(--line);
+  font-size: var(--fs-s);
+}
+.advice-foot > .muted {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+/* Overview: a rule's pill, clamped text and chips on one line. */
+.rule {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-1) var(--sp-2);
+}
+.rule-body {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  .rule {
+    flex-wrap: wrap;
+  }
+  .rule-body {
+    flex-basis: 100%;
+    order: 1;
+  }
+  .rule > .chips.src {
+    order: 2;
+  }
+}
+
+/* RuneCard: the portrait and name with the verdict pills, then the rune lines as the answer, the
+   reason under them, the decks as quiet chips and the sources at the foot. */
+.rune-card {
+  gap: var(--sp-2);
+}
+.rune-head {
+  align-items: center;
+}
+.rune-head .name-stack .en {
+  font-size: var(--fs-m);
+}
+.rune-card .rune-lines {
+  font: inherit;
+  color: var(--ink);
+}
+.rune-card .rune-lines .v {
+  font: 700 var(--fs-base) / 1.35 var(--body);
+}
+.rune-card .rune-why,
+.rune-card .rune-dispute {
+  font-size: var(--fs-s);
+  line-height: 1.45;
+}
+.rune-card .rune-why {
+  color: var(--ink-2);
+}
+.rune-card .card-foot {
+  margin-top: auto;
+}
+
+/* GearBoard and the general notes: one row per recommendation, verdict pill before the substats. */
+.gslot {
+  gap: var(--sp-3);
+}
+.gear-rec {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.gear-rec + .gear-rec {
+  padding-top: var(--sp-2);
+  border-top: 1px dashed var(--line);
+}
+.gear-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+.gear-top .stat {
+  font: 700 var(--fs-base) / 1.35 var(--body);
+}
+.gear-why {
+  font-size: var(--fs-s);
+}
+.chip.ctx {
+  font-weight: 600;
+}
+/* Mechanics: confidence first, the title beside it, the body cut to two lines, sources at the foot. */
+.mech-card {
+  gap: var(--sp-2);
+}
+.mech-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px 8px;
+}
+.mech-head > .pill {
+  flex: none;
+  margin-top: 2px;
+}
+.mech-head h3 {
+  margin: 0;
+}
+.mech-body {
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+.mech-card .card-foot {
+  margin-top: auto;
+}
+
+/* Timeline: one row per event, the date, the event on one line, sources at the end. */
+ol.tl {
+  gap: var(--sp-2);
+}
+ol.tl li {
+  display: grid;
+  grid-template-columns: 11ch minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px var(--sp-3);
+}
+ol.tl li .chips.src {
+  justify-content: flex-end;
+}
+/* Rows that sit on the page, not on a card: the "More" fade blends into the page colour. */
+ol.tl .clamp,
+dl.kv .boss-fact .clamp,
+.boss-sec > .muted .clamp,
+.fe-list .clamp {
+  --clamp-bg: var(--bg);
+}
+@media (max-width: 640px) {
+  ol.tl li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  ol.tl li .chips.src {
+    justify-content: flex-start;
+  }
+}
+
+/* Scores: the best run set apart, its damage the largest figure on the page. */
+.card.top-run {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--sp-3) var(--sp-4);
+  border-left: 3px solid var(--candy);
+}
+.top-rank {
+  flex: none;
+  font: 400 var(--fs-2xl) / 1 var(--display);
+  color: var(--candy);
+}
+.top-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.top-main h3 {
+  margin: 0;
+  font: 600 var(--fs-xs) / 1.3 var(--body);
+  color: var(--ink-3);
+}
+.top-figure {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+.top-dmg {
+  font: 400 var(--fs-2xl) / 1.1 var(--display);
+  color: var(--ink);
+}
+.top-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px var(--sp-3);
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+.top-main .muted {
+  font-size: var(--fs-s);
+}
+@media (max-width: 640px) {
+  .card.top-run {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .card.top-run > .chips.src {
+    flex-basis: 100%;
+  }
+}
+
+/* Ranked tables (posted scores, the leaderboard): the rank in display type, the #1 row tinted. */
+.ranked td.rank {
+  font: 400 var(--fs-m) / 1.2 var(--display);
+  color: var(--ink-3);
+  width: 3ch;
+}
+.ranked tbody tr:first-child td {
+  background: color-mix(in srgb, var(--candy-soft) 55%, var(--surface));
+  --clamp-bg: color-mix(in srgb, var(--candy-soft) 55%, var(--surface));
+}
+.ranked tbody tr:first-child td.rank {
+  color: var(--candy);
+  font-size: var(--fs-l);
+}
+@media (max-width: 640px) {
+  .ranked table.stack tbody tr:first-child {
+    background: color-mix(in srgb, var(--candy-soft) 55%, var(--surface));
+  }
+  .ranked table.stack tbody tr:first-child td {
+    background: none;
+  }
+}
+.rng-card h3 {
+  margin: 0;
+}
+.rng-card .rng-effect {
+  font-size: var(--fs-s);
+}
+.rng-card .card-foot {
+  margin-top: auto;
+}
+
+.gear-rec.other .stat {
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.card.gear-notes {
+  gap: var(--sp-3);
+}
+.card.gear-notes h3 {
+  margin: 0;
+}

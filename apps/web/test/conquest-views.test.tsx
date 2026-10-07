@@ -286,14 +286,19 @@ const panel = () => within(screen.getByRole("main"));
 describe("/conquest overview", () => {
   it("renders the caveat, takeaways in order with sources, and the account block", async () => {
     await renderAt("/conquest");
-    expect(await panel().findByText(RECORD.caveat)).toHaveClass("note");
+    const caveat = await panel().findByText(RECORD.caveat);
+    expect(caveat.closest(".callout")).not.toBeNull();
+    expect(within(caveat.closest(".callout") as HTMLElement).getByText("caveat")).toHaveClass(
+      "pill",
+      "medium",
+    );
     expect(panel().getByRole("heading", { name: "What the top players do" })).toBeVisible();
-    expect(
-      panel().getByText("The load-bearing findings, each with the posts it stands on."),
-    ).toHaveClass("lede");
+    expect(panel().getByText("Ranked findings, the strongest first.").closest("ul")).toHaveClass(
+      "points",
+    );
 
     const items = (await panel().findAllByRole("listitem")).filter((li) => li.closest("ol.take"));
-    expect(items.map((li) => li.querySelector("div > div")!.textContent)).toEqual([
+    expect(items.map((li) => li.querySelector(".lead")!.textContent)).toEqual([
       "Stack skill amp on the buffers.",
       "Keep fillers at Lv.1.",
     ]);
@@ -302,13 +307,39 @@ describe("/conquest overview", () => {
       "href",
       "https://example.test/nv/43653",
     );
+    expect(items[1]!.querySelector(".muted")).toBeNull();
 
     const card = (
       await panel().findByRole("heading", { name: "Your lineup against the meta" })
     ).closest(".card") as HTMLElement;
-    expect(within(card).getByText(RECOMMENDATIONS[0]!.summary)).toBeVisible();
-    expect(within(card).getByText("Level Scorpion to Lv.10–45.")).toBeVisible();
+    const change = within(card).getByText("Level Scorpion to Lv.10–45.");
+    const summary = within(card).getByText(RECOMMENDATIONS[0]!.summary);
+    expect(change.closest("ul")).toHaveClass("todo");
+    expect(change.compareDocumentPosition(summary) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(summary).toBeVisible();
     expect(within(card).getByText("DC 76135")).toHaveClass("chip");
+  });
+
+  it("leads each finding with its first sentence and folds the rest into one clamped line", async () => {
+    const long = {
+      ...TAKEAWAYS[0]!,
+      text: "The Cherry deck is the meta. Among teams running it, levels, runes, gear, stars and retries separate the scores, not the cookies picked.",
+      detail:
+        "The Naver guide and the 1T 312G run field the same cookies and pets, and so does every top-board lineup posted since.",
+    };
+    await renderAt("/conquest", { "/api/takeaways?mode=guild_conquest": { body: [long] } });
+    const item = (await panel().findByText("The Cherry deck is the meta.")).closest(
+      "li",
+    ) as HTMLElement;
+    expect(item.querySelector(".lead")).toHaveTextContent(/^The Cherry deck is the meta\.$/);
+    const rest = item.querySelector(".muted .clamp") as HTMLElement;
+    expect(rest).toHaveTextContent(
+      /^Among teams running it.*every top-board lineup posted since\./,
+    );
+    expect(within(rest).getByRole("button", { name: "More" })).toHaveAttribute(
+      "aria-expanded",
+      "false",
+    );
   });
 
   it("shows the legacy empty message with no takeaways and omits the account block", async () => {
@@ -333,10 +364,10 @@ describe("/conquest/decks", () => {
   it("keeps the filler claim out of the lede and shows its cited mechanic under it", async () => {
     await renderAt("/conquest/decks");
     const lede = await panel().findByText(/Striped slots are deliberate Lv\.1 fillers/, {
-      selector: ".lede",
+      selector: "ul.points li",
     });
     expect(lede).not.toHaveTextContent(/Pomegranate|beam/);
-    const note = (await panel().findByText(MECHANICS[0]!.body)).closest(".note") as HTMLElement;
+    const note = (await panel().findByText(MECHANICS[0]!.body)).closest(".callout") as HTMLElement;
     expect(within(note).getByText("high")).toHaveClass("pill", "high");
     expect(await within(note).findByRole("link", { name: "DC 76135" })).toBeVisible();
     expect(panel().queryByText(MECHANICS[1]!.body)).toBeNull();
@@ -349,7 +380,7 @@ describe("/conquest/decks", () => {
     ) as HTMLElement;
     expect(card).toHaveAttribute("id", "deck-cherry");
     expect(
-      panel().getByText(/Striped slots are deliberate Lv\.1 fillers/, { selector: ".lede" }),
+      panel().getByText(/Striped slots are deliberate Lv\.1 fillers/, { selector: "ul.points li" }),
     ).toBeVisible();
     const c = within(card);
     expect(c.getByText("meta")).toHaveClass("pill", "meta");
@@ -440,21 +471,23 @@ describe("/conquest/runes", () => {
   const cookies = () =>
     [...screen.getByRole("main").querySelectorAll(".rune-card h3")].map((h) => h.textContent);
 
-  it("renders one card per cookie: the reason first, then the lines, disputed note, decks and sources", async () => {
+  it("renders one card per cookie: verdict pills, then the lines, the reason, disputed note, decks and sources", async () => {
     await renderAt("/conquest/runes");
     const milk = (await panel().findByText("Milk's buff scales with her own ATK.")).closest(
       ".rune-card",
     ) as HTMLElement;
     const m = within(milk);
+    expect(milk.querySelector("h3 img.cicon, h3 .cicon")).not.toBeNull();
+    expect(m.getByText("recommended")).toHaveClass("pill", "good");
     const why = m.getByText("Milk's buff scales with her own ATK.");
     expect(why).toHaveClass("rune-why");
     const lines = m.getByText("All ATK%");
     expect(lines.closest(".rune-lines")).not.toBeNull();
-    expect(why.compareDocumentPosition(lines) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(lines.compareDocumentPosition(why) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(m.getByText("disputed")).toHaveClass("pill", "disputed");
     const disputed = m.getByText(/One commenter says skill amp is better on Milk\./);
     expect(disputed).toHaveClass("muted");
-    expect(lines.compareDocumentPosition(disputed) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(why.compareDocumentPosition(disputed) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     const decks = await m.findByRole("list", { name: "Decks" });
     expect(
       within(decks)
@@ -464,7 +497,7 @@ describe("/conquest/runes", () => {
     expect(m.getByRole("link", { name: "Naver 43653" })).toBeVisible();
     expect(cookies()).toEqual(["Milk우유", "Pomegranate석류", "메소"]);
     expect(
-      panel().getByText(/Disputed rows are where posters disagreed/, { selector: ".lede" }),
+      panel().getByText(/Disputed: posters disagree/, { selector: "ul.points li" }),
     ).toBeVisible();
   });
 
@@ -536,22 +569,34 @@ describe("/conquest/runes", () => {
 });
 
 describe("/conquest/gear", () => {
-  it("renders the board by slot with context chips, and the general notes", async () => {
+  it("renders the board by slot with verdict pills and context chips, and the general notes", async () => {
     await renderAt("/conquest/gear");
     expect(await panel().findByText("Skill amp + crit dmg")).toHaveClass("stat");
     expect(panel().getByRole("heading", { name: "Gear substats" })).toBeVisible();
-    expect(panel().getByText(/equipment screen/, { selector: ".lede" })).not.toHaveTextContent(
-      /9\/23|patch/,
-    );
+    expect(
+      panel()
+        .getByText(/equipment screen/, { selector: "ul.points li" })
+        .closest("ul"),
+    ).not.toHaveTextContent(/9\/23|patch/);
     const slot = panel().getByText("Skill amp + crit dmg").closest(".gslot") as HTMLElement;
-    expect(within(slot).getByText("raid")).toHaveClass("chip");
-    expect(within(slot).getByText("arena")).toHaveClass("chip");
+    const raid = panel().getByText("Skill amp + crit dmg").closest(".gear-rec") as HTMLElement;
+    expect(within(raid).getByText("recommended")).toHaveClass("pill", "good");
+    expect(within(raid).getByText("raid")).toHaveClass("chip");
+    // The raid page's own preset is raid, so an arena-preset row is greyed, not recommended.
+    const arena = within(slot).getByText("arena only");
+    expect(arena).toHaveClass("pill", "legacy");
+    expect(arena.closest(".gear-rec")).toHaveClass("other");
     expect(panel().getAllByText("No data yet.")).toHaveLength(3);
 
     const general = panel()
       .getByRole("heading", { name: "General gear notes" })
       .closest(".card") as HTMLElement;
-    expect(within(general).getByText("No move speed, accuracy or focus").tagName).toBe("B");
+    const avoid = within(general).getByText("No move speed, accuracy or focus");
+    expect(avoid).toHaveClass("stat");
+    expect(within(avoid.closest(".gear-rec") as HTMLElement).getByText("avoid")).toHaveClass(
+      "pill",
+      "avoid",
+    );
     expect(within(general).getByText("Move speed breaks the Cherry formation.")).toHaveClass(
       "muted",
     );

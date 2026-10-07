@@ -1,15 +1,13 @@
 import { useSourceIndex } from "../api/hooks";
-import type { SpendingStep } from "../api/types";
 import type { ModeSection, TeamPowerConfig } from "../app/modes";
-import { BasisLegend, BasisMark } from "../components/BasisMark";
 import { EmptyState } from "../components/EmptyState";
-import { SourceChips } from "../components/SourceChips";
 import { ViewHeader } from "../components/ViewHeader";
 import { optionalText } from "../lib/search";
-import type { SourceIndex } from "../lib/sources";
-import type { TeamPowerData } from "./TeamPowerData";
+import type { EfficiencyStage } from "../lib/team-power";
+import { EFFICIENCY_STAGES } from "../lib/team-power";
 import { TeamPowerLoaded, useTeamPowerData } from "./TeamPowerData";
-import { PackageLink, PowerSourceLink, Switch, useDropUnknown } from "./TeamPowerParts";
+import { BasisKey, Switch, useDropUnknown } from "./TeamPowerParts";
+import { OrderNote, RouteColumns } from "./TeamPowerSteps";
 
 /** The spending order page's search params: the order shown, by slug. */
 export interface SpendingSearch {
@@ -38,43 +36,15 @@ export function shortLabel(label: string): string {
 }
 
 /**
- * One step of an account stage's order: what to do, its basis, what it
- * spends on, why it sits there and its sources.
+ * The account stage a stage order's power sources are graded at: the
+ * order's own stage when the record grades one by that name, near 2.2G
+ * otherwise (the endgame and the Rift).
  *
- * @param props - the step, the mode, the lists and the source index
- * @returns the step's list item
+ * @param slug - the order's slug
+ * @returns the efficiency stage
  */
-function OrderStep({
-  step,
-  mode,
-  data,
-  index,
-}: {
-  step: SpendingStep;
-  mode: ModeSection;
-  data: TeamPowerData;
-  index: SourceIndex;
-}) {
-  return (
-    <li>
-      <div>
-        <div>{step.step}</div>
-        <div className="step-head">
-          <BasisMark basis={step.basis} note={step.basisNote} />
-          <span className="muted">
-            On{" "}
-            {step.packageSlug === null ? (
-              <PowerSourceLink mode={mode} slug={step.powerSource!} sources={data.sources} />
-            ) : (
-              <PackageLink mode={mode} slug={step.packageSlug} packages={data.packages} />
-            )}
-          </span>
-        </div>
-        {step.why ? <div className="muted">{step.why}</div> : null}
-        <SourceChips ids={step.sources} sources={index} />
-      </div>
-    </li>
-  );
+export function stageOf(slug: string): EfficiencyStage {
+  return EFFICIENCY_STAGES.find(([s]) => s === slug)?.[0] ?? "at22g";
 }
 
 /** Props for {@link SpendingOrderView}. */
@@ -92,7 +62,8 @@ export interface SpendingOrderViewProps {
 /**
  * The spending order for an account stage: a switch of the stages (in the
  * URL as `?order=`, the config's stage by default), then the stage's free
- * and paid routes as numbered steps, each with its basis mark.
+ * and paid routes as numbered steps, each with its basis pill, its gain
+ * and cost as short figures (graded at the stage) and its why on one line.
  *
  * @param props - the mode, its team-power config, the search params and their setter
  * @returns the view
@@ -109,7 +80,7 @@ export function SpendingOrderView({ mode, teamPower, search, onSearch }: Spendin
   return (
     <>
       <ViewHeader title={title} lede={lede} />
-      <BasisLegend />
+      <BasisKey />
       <TeamPowerLoaded state={state}>
         {(data) => {
           const stages = data.orders.filter((o) => o.kind === "stage");
@@ -129,28 +100,20 @@ export function SpendingOrderView({ mode, teamPower, search, onSearch }: Spendin
                   onSearch({ order: slug === teamPower.defaultOrder ? undefined : slug })
                 }
               />
-              <h3>{order.label}</h3>
-              {order.note ? <div className="note">{order.note}</div> : null}
-              <div className="routes">
-                {(["free", "paid"] as const).map((route) => {
-                  const onRoute = steps.filter((s) => s.route === route);
-                  const heading = route === "free" ? "Free" : "Paid";
-                  return (
-                    <section key={route} className="card" aria-label={heading}>
-                      <h3>{heading}</h3>
-                      {onRoute.length ? (
-                        <ol className="steps">
-                          {onRoute.map((s) => (
-                            <OrderStep key={s.id} step={s} mode={mode} data={data} index={index} />
-                          ))}
-                        </ol>
-                      ) : (
-                        <EmptyState>No steps on this route.</EmptyState>
-                      )}
-                    </section>
-                  );
-                })}
-              </div>
+              <h3 className="order-title">
+                {shortLabel(order.label)}
+                {order.label !== shortLabel(order.label) ? (
+                  <span className="muted">
+                    {" "}
+                    {order.label.slice(shortLabel(order.label).length + 1)}
+                  </span>
+                ) : null}
+              </h3>
+              <OrderNote order={order} index={index} />
+              <RouteColumns
+                steps={steps}
+                context={{ mode, data, index, stage: stageOf(order.slug), shared: order.sources }}
+              />
             </>
           );
         }}

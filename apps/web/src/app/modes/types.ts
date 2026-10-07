@@ -47,7 +47,11 @@ export interface SectionTab {
  */
 export interface ViewCopy {
   title: string;
-  lede: string;
+  /**
+   * What the view shows: 1–3 bullets of about 12 words or fewer (AGENTS.md:
+   * UI, scannable, not prose). A single string is a one-line explainer.
+   */
+  lede: string | readonly string[];
   /**
    * The mechanics topic whose cited rows the view shows under its lede,
    * when it has one: rows filed under it, or under it among their `alsoTopics`.
@@ -135,8 +139,8 @@ export interface BossConfig {
     /** The ATK-order pet's in-battle bonus; shown in the ATK-order check. */
     atkPet: string;
   };
-  /** The screen's lede. */
-  lede: string;
+  /** The screen's explainer: short bullets, as a view's {@link ViewCopy.lede}. */
+  lede: string | readonly string[];
   /** The deck whose runes and ATK order the screen checks. */
   deck: string;
   /** The gear context the screen shows. */
