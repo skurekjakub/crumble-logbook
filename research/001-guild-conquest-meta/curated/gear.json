@@ -6,5 +6,6 @@
   { "slot": "bottom-right", "substats": "Skill haste + damage reduction", "why": "Skill amp can't roll here. This group is the only one with both haste and damage reduction.", "context": "raid", "sources": ["nv:43653", "dc:75854", "dc:76218", "nv:43011"] },
   { "slot": "general", "substats": "6 skill-haste lines + 6 skill-amp lines, then crit, then spare damage reduction", "why": "Each piece has a fixed option pool, so 6 of each is the ceiling across 12 pieces.", "context": "raid", "sources": ["dc:75400", "dc:76135"] },
   { "slot": "general", "substats": "No move speed, accuracy or focus", "why": "Move speed breaks the Cherry formation. The boss has low evasion and resistance, so accuracy and focus (stage stats) are dead lines.", "context": "raid", "sources": ["dc:71135", "nv:43653", "dc:75854"] },
+  { "slot": "general", "substats": "Plates to +20 on skill-amp and crit-dmg accessories first", "why": "Second-hand reports on the Season 6 #1: plates at +20 and +25. A +20 weapon is said to equal a +15 accessory. Unverified.", "context": "raid", "sources": ["dc:81148", "dc:81144", "dc:80723", "dc:82457"] },
   { "slot": "general", "substats": "Separate raid preset (since 9/23)", "why": "Gear presets let raid gear stop doubling as arena gear. Posters describe the switch as a big jump.", "context": "raid", "sources": ["dc:75854", "dc:76562", "dc:75542"] }
 ]

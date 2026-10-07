@@ -1488,12 +1488,18 @@
   ],
   "en": "Chardonnay Cookie",
   "kind": "cookie",
-  "element": "",
-  "class": "",
-  "rarity": "",
-  "status": "not playable as of 1.4.002",
-  "note": "Listed under [NPC] on namu, not a playable cookie in game data 1.4.002. EN from crumblehub dictionary.",
-  "source": "https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+  "element": "풀/Grass",
+  "class": "지원/Support",
+  "rarity": "SSR",
+  "synergy_received": [
+   "탄속"
+  ],
+  "skill_kr": "신록의 성역",
+  "skill_en": "Sanctuary of Verdance",
+  "resource_key": "cookie4011",
+  "status": "playable from 1.5.002 (2026-10-08)",
+  "note": "Gives 다발 (Volley) 1–2, CRIT% and Push RES to allies in a line. Listed under [NPC] on namu before 1.5. EN from crumblehub dictionary and crumb.gg.",
+  "source": "https://crumb.gg/data/patches.json (captured 2026-10-07, 1.5.002) ; https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
  },
  {
   "kr": "데빌스투스 쿠키",
@@ -3599,5 +3605,43 @@
   "rarity": "",
   "note": "Mercenary perk (복지), unlock squad Lv4, id 2073791116: 돌격형 6명 이상 편성된 경우 돌격형 아군 이동속도 2 증가 / +2 Mov SPD with over 6 Charge Cookies in Lineup",
   "source": "https://crumblehub.co/assets/CookieCodex-CfPeHG29.js"
+ },
+ {
+  "kr": "비법소스",
+  "kr_short": [
+   "꿀통"
+  ],
+  "en": "Secret sauce",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Gallery slang for an unpublished trick behind a top score, used of the Season 6 #1 (dc:79678, dc:80835, dc:82457). 꿀통 (honey pot) is used the same way.",
+  "source": "https://m.dcinside.com/board/projectcc/82457"
+ },
+ {
+  "kr": "20강",
+  "kr_short": [
+   "25강",
+   "올20강"
+  ],
+  "en": "+20 (plate enhancement)",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "A gear plate (플레이트) enhanced to +20; 올20강 is every piece at +20. Credited for the Season 6 #1's score (dc:80723, dc:81148).",
+  "source": "https://m.dcinside.com/board/projectcc/81148"
+ },
+ {
+  "kr": "내실",
+  "kr_short": [],
+  "en": "Account depth",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "The account's underlying build (research, plates, stars, runes) as opposed to deck choice; 'the answer is 내실' (dc:80835).",
+  "source": "https://m.dcinside.com/board/projectcc/80835"
  }
 ]

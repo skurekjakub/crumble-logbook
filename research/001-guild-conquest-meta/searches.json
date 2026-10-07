@@ -5,7 +5,7 @@
     "query": "토벌",
     "why": "The gallery calls Guild Conquest 토벌; the bare term is the widest net for conquest posts, score screens and deck questions.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-tobeol-deck",
@@ -13,7 +13,7 @@
     "query": "토벌덱",
     "why": "Posters name their conquest team a 토벌덱 when they share or ask about one.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-pinata",
@@ -21,7 +21,7 @@
     "query": "피냐타",
     "why": "The boss's name, used in posts about the fight and its damage.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-recommend",
@@ -29,7 +29,7 @@
     "query": "@recommend",
     "why": "The gallery's recommended posts, where the guides and record screens that decided the Cherry deck landed.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-cherry-deck",
@@ -37,7 +37,7 @@
     "query": "체리덱",
     "why": "The Cherry deck is the record's ≥1T team; its name finds every run and setup posted for it.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-meso-deck",
@@ -45,7 +45,7 @@
     "query": "메소덱",
     "why": "The Melon Soda deck's short name, the Cherry deck's move-speed variant; its posts were found under other terms.",
     "added": "2026-09-27",
-    "lastHit": null
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-lottery-deck",
@@ -69,7 +69,7 @@
     "query": "1T",
     "why": "The gallery states conquest damage in T; 1T posts are the record's score band.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-2t",
@@ -77,7 +77,7 @@
     "query": "2T",
     "why": "2T is where the documented builds stop; a post at 2T or above is the lead the record lacks.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-3t",
@@ -85,7 +85,7 @@
     "query": "3T",
     "why": "The Season 5 leaders scored up to 3.2T without publishing their teams.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-comment-2t",
@@ -93,7 +93,7 @@
     "query": "comment:2T",
     "why": "High scores are often stated in comments under someone else's post.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-comment-3t",
@@ -109,7 +109,7 @@
     "query": "기갱",
     "why": "기록 갱신, a new personal best: the posts that carry result screens.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-tobeol-guide",
@@ -149,7 +149,7 @@
     "query": "공격력 순서",
     "why": "The ATK order decides who gets Pomegranate's beam, the Cherry deck's central rule.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-pomegranate",
@@ -157,7 +157,7 @@
     "query": "석류",
     "why": "Pomegranate's beam and level are the Cherry deck's engine.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-milk-atk-buff",
@@ -173,7 +173,7 @@
     "query": "룬",
     "why": "Sugar rune builds, one of the record's recommendations.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-skill-haste",
@@ -181,7 +181,7 @@
     "query": "스가",
     "why": "Skill Haste (스킬가속), the stat Brightseeker's and Tiger Lily's runes are built for.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-tea-knight",
@@ -189,7 +189,7 @@
     "query": "실론",
     "why": "Tea Knight's conquest-only Boss DMG buff; a support whose place in the team can change.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-survival",
@@ -197,7 +197,7 @@
     "query": "생존",
     "why": "Surviving the wipe is the record's open question for scores above 2T.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-17s",
@@ -205,7 +205,7 @@
     "query": "17초",
     "why": "The community's name for the wipe at 17 s left, which a run must survive to score past it.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-comment-17s",
@@ -213,7 +213,7 @@
     "query": "comment:17초",
     "why": "Survival builds for the 17 s wipe are often given in comments.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-500x",
@@ -221,7 +221,7 @@
     "query": "500배",
     "why": "Posters state runs as a multiple of team power; the term finds result posts, which the record ranks by damage.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-700x",
@@ -229,7 +229,7 @@
     "query": "700배",
     "why": "The top documented runs sit near 650-730×; the term finds their posts, which the record ranks by damage.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-ranking",
@@ -237,7 +237,7 @@
     "query": "랭킹",
     "why": "Posts about the conquest boards and who tops them.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-ranker",
@@ -253,7 +253,7 @@
     "query": "1등",
     "why": "Posts about the board's first place.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-cafe-guild",
@@ -357,7 +357,7 @@
     "menuId": 9,
     "why": "The official cafe's guide board, home of the Cherry deck guide (nv:43653) and the haste models.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "naver-patch-notes",
@@ -365,7 +365,7 @@
     "menuId": 3,
     "why": "The official patch notes, which dated the 8/13 change to Milk's buff; a round's patch window starts here.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-tobeoljeon",
@@ -373,7 +373,7 @@
     "query": "크럼블 토벌전",
     "why": "The KR name of the mode, the widest YouTube net for conquest guides and runs.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-guild-tobeoljeon",
@@ -381,7 +381,7 @@
     "query": "쿠키런 크럼블 길드 토벌전",
     "why": "The full KR title creators give conquest guides.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-tobeoljeon-1jo",
@@ -389,7 +389,7 @@
     "query": "크럼블 토벌전 1조",
     "why": "1조 is 1T in Korean titles, the record's score band.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-pinata-2t",
@@ -397,7 +397,7 @@
     "query": "크럼블 피냐타 2T",
     "why": "Videos at 2T and above, where the documented builds stop.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-cherry-deck",
@@ -405,7 +405,7 @@
     "query": "크럼블 토벌 체리덱",
     "why": "Videos of the record's ≥1T team.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-tobeol-1st",
@@ -413,7 +413,7 @@
     "query": "크럼블 토벌 1위",
     "why": "Videos by or about the board's first place.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-tobeol-new-record",
@@ -421,7 +421,7 @@
     "query": "크럼블 토벌 신기록",
     "why": "New-best videos, which show the result screen and usually the team.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-tobeol-1-5t",
@@ -437,7 +437,7 @@
     "query": "현이 크럼블 토벌",
     "why": "현이, a Season 5 top player, by name.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-weathering-child",
@@ -485,7 +485,7 @@
     "query": "薑餅人放置大戰爭 公會戰",
     "why": "The TW server's conquest videos.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-live-conquest-players",
@@ -494,7 +494,7 @@
     "args": ["guild_conquest_players"],
     "why": "The live Season board of conquest scores: who tops it now, and the players whose teams discovery chases.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-live-conquest-guilds",
@@ -503,7 +503,7 @@
     "args": ["guild_conquest_guilds"],
     "why": "The live Season board of conquest guilds, where the guilds whose members discovery chases stand now.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-lookup-seomyeong",
@@ -521,7 +521,7 @@
     "args": ["players"],
     "why": "Every season's final player board, the score history the record's bands come from.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-rankings-guilds",
@@ -530,7 +530,7 @@
     "args": ["guilds"],
     "why": "Every season's final guild board.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-leaderboard",
@@ -539,7 +539,7 @@
     "args": [],
     "why": "Account power of the top 500, joined with the conquest board to show how power drives score.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-data-patches",
@@ -548,7 +548,7 @@
     "args": ["patches"],
     "why": "crumb.gg's patch digest, which dates the balance changes a round's window covers.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-data-meta",
@@ -599,5 +599,93 @@
     "why": "An EN conquest guide its site keeps updating.",
     "added": "2026-09-27",
     "lastHit": "2026-09-27"
+  },
+  {
+    "id": "dc-5t",
+    "kind": "dc",
+    "query": "5T",
+    "why": "Season 6 scores reach 5T; the term found the first screen of the #1's 5T 115G and Season 5's last-hour runs.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-arsen",
+    "kind": "dc",
+    "query": "Arsen",
+    "why": "Arsen, the Season 6 #1 at 6T 276G and crumb.gg's developer, posts and is discussed under this name.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-chardonnay",
+    "kind": "dc",
+    "query": "샤르도네",
+    "why": "Chardonnay (10-08) grants Volley in a line; posters weigh whether she replaces Macaron or Tiger Lily in conquest.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-name-candyapple",
+    "kind": "dc",
+    "query": "name:캔디애플",
+    "why": "캔디애플 posts Melon Soda deck move-speed recipes and 2T results with screens.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-name-jeojangyong",
+    "kind": "dc",
+    "query": "name:저장용",
+    "why": "저장용 posts the Cherry deck's 2T build, a 100-run variance log and pet comparisons.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-panda",
+    "kind": "dc",
+    "query": "판다",
+    "why": "Panda Dumpling versus Candy Shade Pouch, the pet choice that moves placement and survival at the 17 s wipe.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-plate-20",
+    "kind": "dc",
+    "query": "20강",
+    "why": "Plates at +20, which posters credit for the Season 6 #1's score.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-popcorn",
+    "kind": "dc",
+    "query": "팝콘",
+    "why": "Popcorn in place of Cherry or Melon Soda, a variant one poster set a record with.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-secret-sauce",
+    "kind": "dc",
+    "query": "비법소스",
+    "why": "The gallery's word for the Season 6 #1's unpublished trick; the threads collect every theory.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-seoshinwoo-1t",
+    "kind": "youtube",
+    "query": "서신우 길드 토벌전 1T 공략",
+    "why": "서신우's 1T conquest guide, which nv:48773 wraps; his guides show the lobby, runes and run.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "web-crumbgg-guild-conquest",
+    "kind": "web",
+    "url": "https://crumb.gg/guild-conquest",
+    "why": "crumb.gg's Guild Conquest page: season dates, the boss and its damage-reduction phase table (agent-browser).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
   }
 ]

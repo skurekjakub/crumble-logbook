@@ -2476,5 +2476,418 @@
   "title_en": "I want 1T (섬영's lobby: 893.3G personal best at 1.38G)",
   "date": "2026-09-20",
   "signal": "relevance 3/3"
+ },
+ "web:crumbgg:final-s5": {
+  "url": "https://api.crumb.gg/api/rankings?kind=players",
+  "title": "길드 토벌전 개인·길드 랭킹 시즌 5 (최종)",
+  "title_en": "Guild Conquest player and guild rankings, Season 5 final (top 50), captured 2026-10-07",
+  "date": "2026-09-28",
+  "signal": "public game data"
+ },
+ "web:crumbgg:final-s6": {
+  "url": "https://crumb.gg/pub/live?board=guild_conquest_players",
+  "title": "길드 토벌전 개인·길드 랭킹 시즌 6 (최종)",
+  "title_en": "Guild Conquest player and guild rankings, Season 6 final (top 100), captured 2026-10-07",
+  "date": "2026-10-05",
+  "signal": "public game data"
+ },
+ "web:crumbgg:power-leaderboard-1007": {
+  "url": "https://crumb.gg/pub/leaderboard",
+  "title": "전투력 랭킹",
+  "title_en": "Power leaderboard (top 500 by account power), captured 2026-10-07",
+  "date": "2026-10-07",
+  "signal": "public game data"
+ },
+ "dc:76966": {
+  "url": "https://m.dcinside.com/board/projectcc/76966",
+  "title": "토벌 3T 오너",
+  "title_en": "Conquest 3T owner",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:77019": {
+  "url": "https://m.dcinside.com/board/projectcc/77019",
+  "title": "주머니보다 판다가 석류 정전버프 잘받긴 하네",
+  "title_en": "Panda picks up Pomegranate/Tiger Lily buffs better than the pouch",
+  "date": "2026-09-28",
+  "signal": "relevance 2/3"
+ },
+ "dc:77105": {
+  "url": "https://m.dcinside.com/board/projectcc/77105",
+  "title": "1.5t 성공",
+  "title_en": "Hit 1.5T",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:77113": {
+  "url": "https://m.dcinside.com/board/projectcc/77113",
+  "title": "550배 ㅅㅅ",
+  "title_en": "550x achieved",
+  "date": "2026-09-28",
+  "signal": "relevance 3/3"
+ },
+ "dc:78711": {
+  "url": "https://m.dcinside.com/board/projectcc/78711",
+  "title": "토벌덱투 3G로 1.5T 이상 치는 사람 있음?",
+  "title_en": "Anyone doing 1.5T+ at 3G deck power?",
+  "date": "2026-09-30",
+  "signal": "relevance 3/3"
+ },
+ "dc:79103": {
+  "url": "https://m.dcinside.com/board/projectcc/79103",
+  "title": "2T클럽에 합류",
+  "title_en": "Joined the 2T club",
+  "date": "2026-10-01",
+  "signal": "relevance 2/3"
+ },
+ "dc:79121": {
+  "url": "https://m.dcinside.com/board/projectcc/79121",
+  "title": "토벌 점수 기록하려고 표 만드니까 재미따",
+  "title_en": "Made a table to log conquest scores",
+  "date": "2026-10-01",
+  "signal": "relevance 3/3"
+ },
+ "dc:79140": {
+  "url": "https://m.dcinside.com/board/projectcc/79140",
+  "title": "17초에서 애매하게 우유 살았다죽었다 하는스펙은 허브함무바라",
+  "title_en": "If your Milk sometimes lives, sometimes dies at 17 s, try Herb",
+  "date": "2026-10-01",
+  "signal": "relevance 2/3"
+ },
+ "dc:79142": {
+  "url": "https://m.dcinside.com/board/projectcc/79142",
+  "title": "리트 하기 싫은 놈들 주목",
+  "title_en": "For those who hate retrying",
+  "date": "2026-10-01",
+  "signal": "relevance 3/3"
+ },
+ "dc:79144": {
+  "url": "https://m.dcinside.com/board/projectcc/79144",
+  "title": "17초 우유 사는 갤럼들 토벌인겜 체방피감 적고 가주셈",
+  "title_en": "Those whose Milk survives 17 s, post HP/DEF/DMG-red",
+  "date": "2026-10-01",
+  "signal": "relevance 2/3"
+ },
+ "dc:79169": {
+  "url": "https://m.dcinside.com/board/projectcc/79169",
+  "title": "토벌 판다/색동만두 고민했는데 신펫이 맞다",
+  "title_en": "Debated Panda vs the new pouch pet for conquest; the new pet is right",
+  "date": "2026-10-01",
+  "signal": "relevance 3/3"
+ },
+ "dc:79263": {
+  "url": "https://m.dcinside.com/board/projectcc/79263",
+  "title": "나름 강해졌다 생각했는데 17초까지 못버티네...",
+  "title_en": "Thought I'd got strong but can't last to 17 s",
+  "date": "2026-10-01",
+  "signal": "relevance 2/3"
+ },
+ "dc:79270": {
+  "url": "https://m.dcinside.com/board/projectcc/79270",
+  "title": "1.8t달성",
+  "title_en": "Reached 1.8T",
+  "date": "2026-10-01",
+  "signal": "relevance 3/3"
+ },
+ "dc:79277": {
+  "url": "https://m.dcinside.com/board/projectcc/79277",
+  "title": "2T단 가입",
+  "title_en": "Joined the 2T group",
+  "date": "2026-10-01",
+  "signal": "relevance 2/3"
+ },
+ "dc:79300": {
+  "url": "https://m.dcinside.com/board/projectcc/79300",
+  "title": "토벌전 1T달성 질문점...",
+  "title_en": "Question: how to reach 1T",
+  "date": "2026-10-01",
+  "signal": "relevance 3/3"
+ },
+ "dc:79359": {
+  "url": "https://m.dcinside.com/board/projectcc/79359",
+  "title": "훈수 듣고 토벌 1T단 달성 ㅅㅅ",
+  "title_en": "Took the advice and reached 1T",
+  "date": "2026-10-01",
+  "signal": "relevance 3/3"
+ },
+ "dc:79493": {
+  "url": "https://m.dcinside.com/board/projectcc/79493",
+  "title": "토벌 2t 대체 어케침",
+  "title_en": "How on earth do you hit 2T?",
+  "date": "2026-10-02",
+  "signal": "relevance 2/3"
+ },
+ "dc:79585": {
+  "url": "https://m.dcinside.com/board/projectcc/79585",
+  "title": "우와 570배 처음해봐",
+  "title_en": "First time at 570x",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "dc:79624": {
+  "url": "https://m.dcinside.com/board/projectcc/79624",
+  "title": "630배단 복귀",
+  "title_en": "Back in the 630x group",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "dc:79664": {
+  "url": "https://m.dcinside.com/board/projectcc/79664",
+  "title": "토벌전 씹괴물등장ㄷㄷ",
+  "title_en": "A monster appears in conquest",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "dc:79678": {
+  "url": "https://m.dcinside.com/board/projectcc/79678",
+  "title": "비법소스 딜러2명 아닐까",
+  "title_en": "Maybe the secret sauce is two dealers",
+  "date": "2026-10-02",
+  "signal": "relevance 2/3"
+ },
+ "dc:79882": {
+  "url": "https://m.dcinside.com/board/projectcc/79882",
+  "title": "이거 생존 안되는거 정상이냐",
+  "title_en": "Is it normal that this doesn't survive?",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "dc:79943": {
+  "url": "https://m.dcinside.com/board/projectcc/79943",
+  "title": "토벌 2T클럽 합류",
+  "title_en": "Joined the 2T club",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "dc:79975": {
+  "url": "https://m.dcinside.com/board/projectcc/79975",
+  "title": "팀투 1.96인데 1T뽑았다",
+  "title_en": "Team power 1.96, pulled 1T",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "dc:80067": {
+  "url": "https://m.dcinside.com/board/projectcc/80067",
+  "title": "토벌 체리덱 2t단 입갤",
+  "title_en": "Cherry deck enters the 2T group",
+  "date": "2026-10-03",
+  "signal": "relevance 3/3"
+ },
+ "dc:80069": {
+  "url": "https://m.dcinside.com/board/projectcc/80069",
+  "title": "뭔가 배치 잘되는 이속은 찾았는데",
+  "title_en": "Found move speeds that place well",
+  "date": "2026-10-03",
+  "signal": "relevance 3/3"
+ },
+ "dc:80159": {
+  "url": "https://m.dcinside.com/board/projectcc/80159",
+  "title": "토벌 갱신 551배 쳤음",
+  "title_en": "New conquest best, 551x",
+  "date": "2026-10-03",
+  "signal": "relevance 3/3"
+ },
+ "dc:80297": {
+  "url": "https://m.dcinside.com/board/projectcc/80297",
+  "title": "생각보다 전갈 딜비중이 높나?",
+  "title_en": "Is Scorpion's damage share higher than expected?",
+  "date": "2026-10-03",
+  "signal": "relevance 3/3"
+ },
+ "dc:80426": {
+  "url": "https://m.dcinside.com/board/projectcc/80426",
+  "title": "3T단 입성샷또",
+  "title_en": "Entered the 3T tier (screenshot)",
+  "date": "2026-10-03",
+  "signal": "relevance 1/3"
+ },
+ "dc:80615": {
+  "url": "https://m.dcinside.com/board/projectcc/80615",
+  "title": "ㅅㅂ 2t 성공",
+  "title_en": "Made 2T",
+  "date": "2026-10-04",
+  "signal": "relevance 2/3"
+ },
+ "dc:80723": {
+  "url": "https://m.dcinside.com/board/projectcc/80723",
+  "title": "토벌 1등 자기만의 덱이겠지?",
+  "title_en": "The conquest #1 must have their own deck, right?",
+  "date": "2026-10-04",
+  "signal": "relevance 2/3"
+ },
+ "dc:80785": {
+  "url": "https://m.dcinside.com/board/projectcc/80785",
+  "title": "17초 버티긴하는데 석류피겨만 버팀",
+  "title_en": "Survives the 17 s, but only Pomegranate and Skating Queen do",
+  "date": "2026-10-04",
+  "signal": "relevance 2/3"
+ },
+ "dc:80790": {
+  "url": "https://m.dcinside.com/board/projectcc/80790",
+  "title": "매크로 돌려놓으니까 체리덱 700배 떴었네",
+  "title_en": "Left a macro running and the Cherry deck hit 700배",
+  "date": "2026-10-04",
+  "signal": "relevance 2/3"
+ },
+ "dc:80846": {
+  "url": "https://m.dcinside.com/board/projectcc/80846",
+  "title": "체리 700배 기록용",
+  "title_en": "Cherry 700배, for the record",
+  "date": "2026-10-04",
+  "signal": "relevance 3/3"
+ },
+ "dc:80848": {
+  "url": "https://m.dcinside.com/board/projectcc/80848",
+  "title": "2T클럽 가입했다",
+  "title_en": "Joined the 2T club",
+  "date": "2026-10-04",
+  "signal": "relevance 3/3"
+ },
+ "dc:80859": {
+  "url": "https://m.dcinside.com/board/projectcc/80859",
+  "title": "체리덱 700배. 100회 시행 딜 편차 기록",
+  "title_en": "Cherry deck 700배: damage spread over 100 runs",
+  "date": "2026-10-04",
+  "signal": "relevance 3/3"
+ },
+ "dc:81023": {
+  "url": "https://m.dcinside.com/board/projectcc/81023",
+  "title": "2t클럽 가입",
+  "title_en": "Joined the 2T club",
+  "date": "2026-10-05",
+  "signal": "relevance 3/3"
+ },
+ "dc:81110": {
+  "url": "https://m.dcinside.com/board/projectcc/81110",
+  "title": "체리 750배 2T 클럽",
+  "title_en": "Cherry 750배, 2T club",
+  "date": "2026-10-05",
+  "signal": "relevance 3/3"
+ },
+ "dc:81144": {
+  "url": "https://m.dcinside.com/board/projectcc/81144",
+  "title": "(첩보)토벌덱 1위 관련",
+  "title_en": "(Intel) About the #1 conquest deck",
+  "date": "2026-10-05",
+  "signal": "relevance 2/3"
+ },
+ "dc:81148": {
+  "url": "https://m.dcinside.com/board/projectcc/81148",
+  "title": "(첩보) 토벌 랭킹1위의 비법 추가정보2",
+  "title_en": "(Intel) More on the #1's secret, part 2",
+  "date": "2026-10-05",
+  "signal": "relevance 2/3"
+ },
+ "dc:81671": {
+  "url": "https://m.dcinside.com/board/projectcc/81671",
+  "title": "샤르도네 토벌 연구가치 충분히 있다고 봄",
+  "title_en": "Chardonnay is worth researching for conquest",
+  "date": "2026-10-06",
+  "signal": "relevance 2/3"
+ },
+ "dc:81699": {
+  "url": "https://m.dcinside.com/board/projectcc/81699",
+  "title": "샤르도네 토벌전 못쓰는 이유",
+  "title_en": "Why Chardonnay can't be used in conquest",
+  "date": "2026-10-06",
+  "signal": "relevance 2/3"
+ },
+ "dc:81844": {
+  "url": "https://m.dcinside.com/board/projectcc/81844",
+  "title": "토벌전 피냐타 분석 - 최종 수정 완 (10/7 01:27)",
+  "title_en": "Conquest Piñata analysis, final revision",
+  "date": "2026-10-06",
+  "signal": "relevance 3/3"
+ },
+ "dc:82295": {
+  "url": "https://m.dcinside.com/board/projectcc/82295",
+  "title": "[유출] 탈퇴기념 방랑자길드 토벌 유출",
+  "title_en": "[Leak] Leaving the 방랑자 guild, leaking their conquest info",
+  "date": "2026-10-07",
+  "signal": "relevance 2/3"
+ },
+ "dc:82457": {
+  "url": "https://m.dcinside.com/board/projectcc/82457",
+  "title": "Crumb 슈가룬 최적화 툴 48시간 한정 공개 (+ 비법소스에 대해)",
+  "title_en": "Crumb sugar-rune optimizer open for 48 hours (+ on the secret sauce)",
+  "date": "2026-10-07",
+  "signal": "relevance 3/3"
+ },
+ "nv:48773": {
+  "url": "https://cafe.naver.com/ccrumble/48773",
+  "title": "길드 토벌전 1T 공략",
+  "title_en": "Guild Conquest 1T guide",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "nv:50417": {
+  "url": "https://cafe.naver.com/ccrumble/50417",
+  "title": "10월 8일(목) 업데이트 안내",
+  "title_en": "Oct 8 (Thu) update notes",
+  "date": "2026-10-07",
+  "signal": "relevance 2/3"
+ },
+ "web:crumbgg:guild-conquest": {
+  "url": "https://crumb.gg/guild-conquest",
+  "title": "길드 토벌전 (crumb.gg)",
+  "title_en": "crumb.gg Guild Conquest page: season dates, the Extra-Stuffed Piñata and its phase table",
+  "date": "2026-10-07",
+  "signal": "public game data"
+ },
+ "web:crumbgg:patches-1007": {
+  "url": "https://crumb.gg/data/patches.json",
+  "title": "crumb.gg patch digest (captured 2026-10-07)",
+  "title_en": "crumb.gg patch digest: 1.5.002 on 10-08 (Chardonnay, level cap 120) and the 1.4.002 hotfix",
+  "date": "2026-10-07",
+  "signal": "public game data"
+ },
+ "web:yt-WmSUutrNdaY": {
+  "url": "https://www.youtube.com/watch?v=WmSUutrNdaY",
+  "title": "[쿠키런크럼블] 길드 토벌전 1T 공략 (딜량 기준점)",
+  "title_en": "서신우's Guild Conquest 1T guide: Cherry deck at 2.31G",
+  "date": "2026-10-02",
+  "signal": "relevance 3/3"
+ },
+ "dc:79686": {
+  "url": "https://m.dcinside.com/board/projectcc/79686",
+  "title": "토벌 2.5T미만 기초생활 흙수저덱은 아직도 체리넣지?",
+  "title_en": "Sub-2.5T decks still run Cherry?",
+  "date": "2026-10-02",
+  "signal": "relevance 2/3"
+ },
+ "dc:80030": {
+  "url": "https://m.dcinside.com/board/projectcc/80030",
+  "title": "나 토벌전 왜이렇게 장애인같이침?",
+  "title_en": "Why is my conquest damage so bad?",
+  "date": "2026-10-03",
+  "signal": "relevance 3/3"
+ },
+ "dc:81335": {
+  "url": "https://m.dcinside.com/board/projectcc/81335",
+  "title": "3~400배 칠려면",
+  "title_en": "To hit 300–400배",
+  "date": "2026-10-05",
+  "signal": "relevance 2/3"
+ },
+ "nv:48486": {
+  "url": "https://cafe.naver.com/ccrumble/48486",
+  "title": "오븐 자동 열기 기능 개선 및 일일 던전 난이도 완화 안내 (18:43 내용 추가)",
+  "title_en": "Oven auto-open improvement and daily-dungeon easing notice (10-02); nothing on Guild Conquest",
+  "date": "2026-10-01",
+  "signal": "relevance 1/3"
+ },
+ "web:yt-mYqjYOdkqcg": {
+  "url": "https://www.youtube.com/watch?v=mYqjYOdkqcg",
+  "title": "[쿠키런 크럼블] 길드토벌전 1T 고득점 덱 공략 ft.메론소다맛 쿠키",
+  "title_en": "누리머's 1T Melon Soda deck guide: 1T 031G at 2.35G",
+  "date": "2026-10-01",
+  "signal": "relevance 3/3"
+ },
+ "web:yt-K0aJ56DdQvc": {
+  "url": "https://www.youtube.com/watch?v=K0aJ56DdQvc",
+  "title": "公會戰更新拚出1T86G傷害",
+  "title_en": "PonPonLin (TW): 1T 86G at 2.61G with Coffee Cookie, runes and gear shown",
+  "date": "2026-10-03",
+  "signal": "relevance 3/3"
  }
 }

@@ -20,5 +20,14 @@
   { "date": "2026-09-26", "event": "The '2T club' post: 1T 999G with the plain Cherry deck at about 3.07G (650×).", "sources": ["dc:76235"] },
   { "date": "2026-09-27", "event": "crumb.gg Season 5 board: #1 at 3T 226G, many players above 2T.", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] },
   { "date": "2026-09-27", "event": "The Season 5 #1 player across Seasons 1–5: 208G → 477G → 1.1T → 1.8T → 3.2T.", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] },
-  { "date": "2026-09-27", "event": "Season #1 scores: 248G, 882G, 1T 111G, 1T 786G, 3T 226G. #50 rose from 1T 031G (Season 4) to 1T 916G (Season 5).", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] }
+  { "date": "2026-09-27", "event": "Season #1 scores: 248G, 882G, 1T 111G, 1T 786G, 3T 226G. #50 rose from 1T 031G (Season 4) to 1T 916G (Season 5).", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] },
+  { "date": "2026-09-28", "event": "Season 5 closes: #1 날씨의아이 3T 305G, #50 2T 025G. The #2 posts his lobby: Melon Soda deck, no move speed, 4.23G.", "sources": ["web:crumbgg:final-s5", "dc:76966"] },
+  { "date": "2026-10-01", "event": "Season 6 opens on the same boss; 2.92T lands within the first hour.", "sources": ["web:crumbgg:final-s6", "web:crumbgg:guild-conquest", "dc:79103"] },
+  { "date": "2026-10-02", "event": "Arsen reaches 5T 115G, far ahead of #2 at 3T 740G; the gallery hunts his 'secret sauce'.", "sources": ["dc:79664", "dc:79678", "dc:80723"] },
+  { "date": "2026-10-03", "event": "2T 204G with a Cherry deck whose fillers are levelled to outlive the 17 s wipe.", "sources": ["dc:80067"] },
+  { "date": "2026-10-04", "event": "A 100-run log of one Cherry deck at 2.93G: 208–783×, mean 477×.", "sources": ["dc:80859"] },
+  { "date": "2026-10-05", "event": "Season 6 closes: #1 Arsen 6T 276G, #2 4T 910G, #50 3T 341G.", "sources": ["web:crumbgg:final-s6"] },
+  { "date": "2026-10-06", "event": "Boss datamine: damage reduction ramps 10% to 90% every 12 s from 10 s elapsed.", "sources": ["dc:81844", "web:crumbgg:guild-conquest"] },
+  { "date": "2026-10-07", "event": "Arsen, crumb.gg's developer, credits stacked small optimizations and money, and opens a rune optimizer for 48 h.", "sources": ["dc:82457"] },
+  { "date": "2026-10-07", "event": "10-08 patch notes: Chardonnay (다발 1–2), cookie level cap 120, Milk on a check-in. Season 7 opens after it.", "sources": ["nv:50417", "web:crumbgg:patches-1007", "web:crumbgg:guild-conquest"] }
 ]

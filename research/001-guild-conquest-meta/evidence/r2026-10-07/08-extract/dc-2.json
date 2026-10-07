@@ -1,0 +1,1026 @@
+{
+  "batch": "r2026-10-07-dc-2",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "80273",
+      "url": "https://m.dcinside.com/board/projectcc/80273",
+      "date": "2026-10-03",
+      "title_kr": "토벌 장비로 저항3줄,이속3줄 각각 테스트해봣는데",
+      "title_en": "Tested conquest gear with 3 lines of resistance and 3 lines of move speed, each",
+      "relevance": 2,
+      "summary_en": "Poster tried gear with 3 resistance (저항) lines and, separately, 3 move-speed lines. Neither helped: resistance did nothing, and move speed lined the cookies up oddly, so the cookies meant to survive the 17 s wipe died and the score dropped sharply. They are rerolling back to skill haste + DMG reduction (스가 피감).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "?", "substats": "저항 x3 lines (test)", "context": "raid", "why": "Tested: no effect on result"},
+        {"slot": "?", "substats": "이속 x3 lines (test)", "context": "raid", "why": "Tested: breaks the formation; 17 s survivors wiped; score fell"},
+        {"slot": "?", "substats": "스가 + 피감", "context": "raid", "why": "The setting the poster reverts to"}
+      ],
+      "rng": [],
+      "mechanics": ["Move speed on gear changes where cookies line up; a 3-line move-speed build caused the 17 s survivors to die."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "저항도 의미없고 이속3줄줫다고 쿠키들도 이상하게 정렬됨", "en": "Resistance is meaningless too, and giving 3 lines of move speed made the cookies line up weirdly"},
+        {"kr": "17초에 생존해야되는 쿠키들 전멸나서 토벌점수 개토막낫다", "en": "The cookies that have to survive at 17 s all died and my conquest score got chopped"},
+        {"kr": "스가 피감 다시 셋팅하려하는데 졸라 안나옴", "en": "Trying to set skill haste + DMG reduction again but it won't roll"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80297",
+      "url": "https://m.dcinside.com/board/projectcc/80297",
+      "date": "2026-10-03",
+      "title_kr": "생각보다 전갈 딜비중이 높나?",
+      "title_en": "Is Scorpion's damage share higher than expected?",
+      "relevance": 3,
+      "summary_en": "Poster runs a Light deck with Popcorn (팝콘) and set a personal record after switching the perk from the family card (가족카드, element DMG) to 초고속승진. Lobby screenshot: team power 1.86G, personal best 1T 150G (48th), Popcorn Lv.60 in the lineup, no move speed. Commenters: element DMG is weak; Dark Choco and Scorpion 'weren't a scam'.",
+      "scores": [{"damage": "1T 150G", "power": "1.86G", "ratio": "~618배 (derived)", "deck": "팝콘 빛속덱 (Popcorn in place of Cherry), perk 초고속승진", "note": "80297-1.jpg lobby: 개인 랭킹 48th 1T 150G, 전투력 1.86G"}],
+      "teams": [{
+        "name": "팝콘 빛속덱",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": "80297-1.jpg row1 pos1 (Grass, pink hair, red hat)"},
+          {"kr": "팝콘", "en": "Popcorn", "level": "60", "stars": "?", "note": "80297-1.jpg row1 pos2, Light shooter with star hat; identity from post text (medium confidence)"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "50", "stars": "?", "note": "row1 pos3, Dark, mustached cookie in top hat"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "row1 pos4, Dark, red hair"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "50", "stars": "?", "note": "row1 pos5, Grass, teal hair with orange flower"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "50", "stars": "?", "note": "row1 pos6, Dark, black/red"},
+          {"kr": "브시커", "en": "Brightseeker", "level": "100", "stars": "?", "note": "row2 pos1, Light shooter"},
+          {"kr": "전갈", "en": "Scorpion", "level": "50", "stars": "?", "note": "row2 pos2, Fire, red hair"},
+          {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": "row2 pos3, Light, yellow"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "100", "stars": "?", "note": "row2 pos4, Water"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "row2 pos5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "100", "stars": "?", "note": "row2 pos6, white-bearded armoured"}
+        ],
+        "pets": ["핫도그도그 (20★)", "와사비 문어 (20★)", "? white pouch-like pet with red/green striped base, likely 색동 주머니 (15★)"],
+        "atk_order": [],
+        "perks": "초고속승진 (switched from 가족카드 속성피해, which gave lower damage)",
+        "formation": "No move speed (이속x), per comment",
+        "substitutions": ["Popcorn in the Cherry/Melon Soda slot"],
+        "unorthodox": ["Fillers at Lv.50 rather than Lv.1 (Pinot, Tiger Lily, Dark Choco, Scorpion), Popcorn at Lv.60"]
+      }],
+      "sugar_runes": [{"cookie": "팝콘", "stats": "none yet; poster thinks all 스증 (스증도배) suits it", "why": "Started Popcorn that day"}],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Poster's arithmetic: family card element DMG +10%p on 15+113% (commenter corrects: 213→223, under 5%); 초고속승진 127/120 gives ~5.8% under Milk's buff, yet scored higher",
+        "Popcorn without move speed: poster thinks Popcorn hits harder than Melon Soda"
+      ],
+      "disagreements": ["Commenter corrects the poster's +7.8% figure: 113→123 is really 213→223, under 5%; poster agrees and says to ignore people using the family card"],
+      "quotes": [
+        {"kr": "팝콘넣은 빛속덱 돌리다가 초고속승진으로 바꾸니깐 기록갱신했네", "en": "Was running a Light deck with Popcorn, switched to 초고속승진 and set a new record"},
+        {"kr": "난 메소덱할때도 이속 하나도 안줬는데 메소보다 팝콘이 딜 쌘거같아서 그냥 바꾼거임 이속x", "en": "I gave no move speed even with the Melon deck; Popcorn seemed to hit harder than Melon so I swapped. No move speed"},
+        {"kr": "나도 이것저것 해봤는데 닼초 전갈은 스캠이 아니었따는 거..", "en": "I tried various things too: Dark Choco and Scorpion weren't a scam"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80387",
+      "url": "https://m.dcinside.com/board/projectcc/80387",
+      "date": "2026-10-03",
+      "title_kr": "토벌 30초에 터지는좆밥유저 덱은 없나요",
+      "title_en": "Is there a deck for weak users who wipe at 30 s?",
+      "relevance": 2,
+      "summary_en": "Low-power player copied the popular Cherry deck. Screenshot: team power 244M, score 17G 128M (~70배), with Lv.1 fillers including Scorpion at Lv.1. Useful as a low-end data point.",
+      "scores": [{"damage": "17G 128M", "power": "244M", "ratio": "~70배 (derived)", "deck": "체리덱 copy", "note": "80387-1.jpg"}],
+      "teams": [{
+        "name": "체리덱",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": "80387-1.jpg row1 pos1"},
+          {"kr": "브시커", "en": "Brightseeker", "level": "100", "stars": "?", "note": "row1 pos2, Light"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "row1 pos3, Dark"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "row1 pos4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "?", "note": "row1 pos5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "row1 pos6"},
+          {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": "row2 pos1, Fire"},
+          {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": "row2 pos2, Fire red hair"},
+          {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": "row2 pos3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "99", "stars": "?", "note": "row2 pos4, Water"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "row2 pos5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "94", "stars": "?", "note": "row2 pos6"}
+        ],
+        "pets": ["와사비 문어 (17★)", "? pouch-like pet, likely 색동 주머니 (14★)", "핫도그도그 (17★)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["Scorpion at Lv.1 (other posts tune it to Lv.21–50)"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "념글 토벌덱 보고 따라했는데 ..", "en": "Copied the conquest deck from the popular post.."}]
+    },
+    {
+      "source": "dc",
+      "id": "80410",
+      "url": "https://m.dcinside.com/board/projectcc/80410",
+      "date": "2026-10-03",
+      "title_kr": "토벌3t이상애들은 우유 슈가룬 올쓰알임?",
+      "title_en": "Do 3T+ players have all-SSR sugar runes on Milk?",
+      "relevance": 2,
+      "summary_en": "Question on how many SSR sugar-rune lines Milk has among 3T+ players. Answers: 6 SSR; another says 5 SSR and still 4T+.",
+      "scores": [{"damage": "4T+", "power": "?", "ratio": "", "deck": "?", "note": "Commenter with 5 SSR Milk runes"}],
+      "teams": [],
+      "sugar_runes": [{"cookie": "우유", "stats": "5–6 SSR lines among 3T–4T+ players (stat not stated)", "why": ""}],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "나5개 4t이상", "en": "I have 5, 4T+"},
+        {"kr": "6개", "en": "6"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80426",
+      "url": "https://m.dcinside.com/board/projectcc/80426",
+      "date": "2026-10-03",
+      "title_kr": "3T단 입성샷또",
+      "title_en": "Entered the 3T tier (screenshot)",
+      "relevance": 1,
+      "summary_en": "Result screen: final score 3,257,933,416,961 (3.258T). No lineup or power shown.",
+      "scores": [{"damage": "3,257,933,416,961 (3.258T)", "power": "?", "ratio": "", "deck": "?", "note": "80426-1.jpg 최종 점수"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "80525",
+      "url": "https://m.dcinside.com/board/projectcc/80525",
+      "date": "2026-10-04",
+      "title_kr": "토벌 1.5t 치는데",
+      "title_en": "I hit 1.5T in conquest",
+      "relevance": 1,
+      "summary_en": "Asks whether 1.5T gets into a top guild; reply says top-15 guild is doable.",
+      "scores": [{"damage": "1.5T", "power": "?", "ratio": "", "deck": "?", "note": "Self-reported"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "in 15까진 쌉가능일듯", "en": "Top 15 is easily possible"}]
+    },
+    {
+      "source": "dc",
+      "id": "80615",
+      "url": "https://m.dcinside.com/board/projectcc/80615",
+      "date": "2026-10-04",
+      "title_kr": "ㅅㅂ 2t 성공",
+      "title_en": "Made 2T",
+      "relevance": 2,
+      "summary_en": "1.987T at 613배 (implies ~3.24G team power). Cherry deck, only Dark Choco has 1 move-speed line. The image is a meme drawing, not a game screenshot.",
+      "scores": [{"damage": "1.987T", "power": "~3.24G (derived from 613배)", "ratio": "613배", "deck": "체리덱", "note": "Text only; 80615-1.jpg is a meme"}],
+      "teams": [{"name": "체리덱", "cookies": [{"kr": "닼초", "en": "Dark Choco", "level": "?", "stars": "?", "note": "Only cookie with move speed (이속 1)"}], "pets": [], "atk_order": [], "perks": "", "formation": "닼초만 이속 1", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [{"cookie": "닼초", "stats": "이속 1 line", "why": "formation"}],
+      "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "1.987 니까 2t 맞지? 613배 쳣음", "en": "1.987 so that's 2T right? Hit 613배"},
+        {"kr": "체리덱 닼초만 이속 1", "en": "Cherry deck, only Dark Choco has move speed 1"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80723",
+      "url": "https://m.dcinside.com/board/projectcc/80723",
+      "date": "2026-10-04",
+      "title_kr": "토벌 1등 자기만의 덱이겠지?",
+      "title_en": "The conquest #1 must have their own deck, right?",
+      "relevance": 2,
+      "summary_en": "Speculation about the Season 6 #1. Comments credit plate enhancement (+25 / all +20 with some +25), gear luck, surviving past 17 s and a self-built simulator. Rumour: only 2 guilds know the build. 언담 reports a personal record after dropping Cherry for Popcorn in the Melon Soda slot; a commenter says the #2 is at 4T700 and the gap is not a special build.",
+      "scores": [
+        {"damage": "4T 700G", "power": "?", "ratio": "", "deck": "?", "note": "Season 6 #2 as reported in comments"},
+        {"damage": "+1.8T vs last season", "power": "?", "ratio": "", "deck": "?", "note": "commenter's own gain"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [{"slot": "plate (플레이트)", "substats": "+20 on everything, some +25", "context": "raid", "why": "Commenters' explanation of the #1's lead"}],
+      "rng": ["언담: with 복지카드 207 (?) and a macro, the formation eventually lines up regardless of move speed"],
+      "mechanics": ["Popcorn in the Melon Soda slot (Cherry removed) gave 언담 a new record; 캔디애플 nearly set a record on the first try with Popcorn even with a broken 지팡이 (staff)"],
+      "disagreements": ["Some say #1 has a special build (simulator-found); others say it's just spec (all +20/+25 plates, Tea Knight 5★, ATK30 research) and luck, citing #2 at 4T700"],
+      "quotes": [
+        {"kr": "25강의힘", "en": "The power of +25"},
+        {"kr": "길드 2개만 빌드 안다고 들었는데 정확하지않음", "en": "Heard only 2 guilds know the build, not sure"},
+        {"kr": "걔말로는 무슨 시뮬레이터를 만들어서 돌리다 빌드를 발견했다는데 모르겠노", "en": "According to them, they built some simulator and found the build by running it, no idea"},
+        {"kr": "걍스팩오르면서 17초뒤다사니까 딜마니나오긴함", "en": "As spec rises everyone survives past 17 s, so damage goes up a lot"},
+        {"kr": "실론 5성 공30퍼 장비 와바박 까고 생존까지 하는데 엄청 오르긴 했을듯", "en": "Tea Knight 5★, ATK 30% (research), gear stacked and survival on top, it must have gone up a lot"},
+        {"kr": "님 혹시 체리덱 쓰는거면 메소덱이나 메소자리에 팝콘넣은덱 써봐주실수있음? 복지카드 207에 이속상관없이 매크로돌리면 결국 배치맞는데", "en": "If you use the Cherry deck, could you try the Melon deck or a deck with Popcorn in Melon's slot? With 복지카드 207 and a macro, the placement eventually lines up regardless of move speed"},
+        {"kr": "갠적으로 체리빼고 팝콘넣으니깐 기갱돼서", "en": "Personally I removed Cherry, put in Popcorn and set a new record"},
+        {"kr": "쟤 올 20강 둘둘에 25강도 섞여있는걸로 암", "en": "I know they're all +20 with some +25 mixed in"},
+        {"kr": "지팡이 터진상태로 1트만에 거의기갱함", "en": "With my staff broken, nearly set a record on the first try"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80739",
+      "url": "https://m.dcinside.com/board/projectcc/80739",
+      "date": "2026-10-04",
+      "title_kr": "쇳물 수급도 한정적인데 어케 토벌 1등이 올20강임???",
+      "title_en": "Molten iron is limited, how is the conquest #1 all +20?",
+      "relevance": 1,
+      "summary_en": "Disbelief that the #1 has all gear at +20 given the limited enhancement material (쇳물).",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "all", "substats": "+20 enhancement (claimed for #1)", "context": "raid", "why": ""}],
+      "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "쇳물 수급도 한정적인데 어케 토벌 1등이 올20강임???", "en": "Molten iron supply is limited, how is the #1 all +20???"}]
+    },
+    {
+      "source": "dc",
+      "id": "80785",
+      "url": "https://m.dcinside.com/board/projectcc/80785",
+      "date": "2026-10-04",
+      "title_kr": "17초 버티긴하는데 석류피겨만 버팀",
+      "title_en": "Survives the 17 s, but only Pomegranate and Skating Queen do",
+      "relevance": 2,
+      "summary_en": "At the 17 s wipe only Pomegranate and Skating Queen survive for the poster; Skating Queen dodges well. Poster concludes HP needs to exceed ~11M.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Skating Queen survives the 17 s wipe by moving away; poster's survival HP threshold estimate is 11M+"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "피겨 도망 잘다니네", "en": "Skating Queen runs away well"},
+        {"kr": "체력 11M은 넘겨야되나보다", "en": "Looks like HP has to exceed 11M"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80790",
+      "url": "https://m.dcinside.com/board/projectcc/80790",
+      "date": "2026-10-04",
+      "title_kr": "매크로 돌려놓으니까 체리덱 700배 떴었네",
+      "title_en": "Left a macro running and the Cherry deck hit 700배",
+      "relevance": 2,
+      "summary_en": "Cherry deck on a macro: 1.83T at 2.59G team power (~707배). Next the poster will retry with the Melon Soda deck.",
+      "scores": [{"damage": "1.83T", "power": "2.59G", "ratio": "~707배", "deck": "체리덱", "note": "Macro retries"}],
+      "teams": [], "sugar_runes": [], "gear": [],
+      "rng": ["700배 reached by macro retries"],
+      "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "2.59g 1.83t 이제 메소덱으로 리트나해야지", "en": "2.59G, 1.83T. Now I'll retry with the Melon deck"}]
+    },
+    {
+      "source": "dc",
+      "id": "80807",
+      "url": "https://m.dcinside.com/board/projectcc/80807",
+      "date": "2026-10-04",
+      "title_kr": "토벌3T넘는사람들아",
+      "title_en": "To people over 3T in conquest",
+      "relevance": 2,
+      "summary_en": "Asks Brightseeker's fully buffed ATK at 3T+. One 3T+ answer: 17.6M ATK, crit rate 631, crit damage 480.",
+      "scores": [], "teams": [],
+      "sugar_runes": [{"cookie": "브시커", "stats": "fully buffed ATK 17.6M, 치확 631, 치피 480 (3T+ player)", "why": ""}],
+      "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "17.6M", "en": "17.6M"},
+        {"kr": "631 480", "en": "631 480 (crit rate, crit damage)"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80835",
+      "url": "https://m.dcinside.com/board/projectcc/80835",
+      "date": "2026-10-04",
+      "title_kr": "토벌 비법소스 알고싶다",
+      "title_en": "I want to know the conquest secret sauce",
+      "relevance": 2,
+      "summary_en": "Thread on the 'secret sauce'. Answers: account depth (내실); full SSR options plus some move speed to line up; all +20 weapons; all +25 and all SSR. 저장용: deck/setting changes add a little, final damage rises with spec.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "weapon / all", "substats": "+20 (or +25) enhancement, full SSR options", "context": "raid", "why": "Commenters' answers to the secret sauce"}],
+      "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "풀SSR 옵션두르고 이속 일부줘서 줄잘세우는게 끝인듯?", "en": "Full SSR options plus some move speed to line up well, that's it?"},
+        {"kr": "이것저것 해봤는데, 결론은 내실이더라", "en": "Tried all sorts; the conclusion is account depth"},
+        {"kr": "덱, 세팅 바꿔서 쬐끔 딜 더 오를순 있는데, 결국 스펙이 올라야 최종딜이 오름", "en": "Changing deck and settings adds a bit of damage, but final damage only rises when spec rises"},
+        {"kr": "올 25강 올 SSR", "en": "All +25, all SSR"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80846",
+      "url": "https://m.dcinside.com/board/projectcc/80846",
+      "date": "2026-10-04",
+      "title_kr": "체리 700배 기록용",
+      "title_en": "Cherry 700배, for the record",
+      "relevance": 3,
+      "summary_en": "전치's Cherry deck lobby: team power 2.66G, personal 1T 869G (~703배), 6th. Lv.1 Pinot, Tiger Lily, Dark Choco, Cherry; Scorpion Lv.30; Tea Knight Lv.88. Plans to take ATK30 research and try 2T.",
+      "scores": [{"damage": "1T 869G", "power": "2.66G", "ratio": "~703배", "deck": "체리덱", "note": "80846-1.jpg, team slot 2"}],
+      "teams": [{
+        "name": "체리덱",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": "80846-1.jpg row1 pos1"},
+          {"kr": "브시커", "en": "Brightseeker", "level": "100", "stars": "?", "note": "row1 pos2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "row1 pos3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "row1 pos4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "?", "note": "row1 pos5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "row1 pos6"},
+          {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": "row2 pos1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "30", "stars": "?", "note": "row2 pos2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": "row2 pos3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "100", "stars": "?", "note": "row2 pos4"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "row2 pos5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "88", "stars": "?", "note": "row2 pos6; stars look all gold"}
+        ],
+        "pets": ["와사비 문어 (20★)", "핫도그도그 (20★)", "? pouch-like pet, likely 색동 주머니 (15★)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["Scorpion at Lv.30", "Tea Knight at Lv.88"]
+      }],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "내일 공30 뚫고 2T 도전해볼듯", "en": "Tomorrow I'll break through ATK30 and try for 2T"}]
+    },
+    {
+      "source": "dc",
+      "id": "80848",
+      "url": "https://m.dcinside.com/board/projectcc/80848",
+      "date": "2026-10-04",
+      "title_kr": "2T클럽 가입했다",
+      "title_en": "Joined the 2T club",
+      "relevance": 3,
+      "summary_en": "2T 72G at team power 3G (~691배), crediting Milk ★9. Lineup is the Melon Soda variant: Melon Soda Lv.1 in Cherry's slot, Scorpion Lv.40, Pinot Lv.60, Tiger Lily Lv.60, Dark Choco Lv.40.",
+      "scores": [{"damage": "2T 72G", "power": "3G", "ratio": "~691배", "deck": "메소덱 (Melon Soda Lv.1 in the Cherry slot)", "note": "80848-1.jpg"}],
+      "teams": [{
+        "name": "메소덱",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": "80848-1.jpg row1 pos1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "40", "stars": "?", "note": "row1 pos2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "60", "stars": "?", "note": "row1 pos3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "row1 pos4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "60", "stars": "?", "note": "row1 pos5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "40", "stars": "?", "note": "row1 pos6"},
+          {"kr": "브시커", "en": "Brightseeker", "level": "100", "stars": "?", "note": "row2 pos1"},
+          {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "?", "note": "row2 pos2, Water, green hair with goggles"},
+          {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": "row2 pos3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "100", "stars": "?", "note": "row2 pos4"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "9", "note": "row2 pos5, leader; ★9 from the post text"},
+          {"kr": "실론", "en": "Tea Knight", "level": "100", "stars": "?", "note": "row2 pos6"}
+        ],
+        "pets": ["와사비 문어 (20★)", "핫도그도그 (20★)", "? pouch-like pet, likely 색동 주머니 (17★)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["Melon Soda Lv.1 replaces Cherry"],
+        "unorthodox": ["Melon Soda at Lv.1 (formation piece, not damage)", "Fillers at Lv.40–60, not Lv.1"]
+      }],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "우유 9성의 몸비틀기", "en": "Milk ★9 doing its body twist"}]
+    },
+    {
+      "source": "dc",
+      "id": "80859",
+      "url": "https://m.dcinside.com/board/projectcc/80859",
+      "date": "2026-10-04",
+      "title_kr": "체리덱 700배. 100회 시행 딜 편차 기록",
+      "title_en": "Cherry deck 700배: damage spread over 100 runs",
+      "relevance": 3,
+      "summary_en": "저장용 logged 100 Cherry-deck runs at team power 2.92–2.94G (roster 23.09G). Best 2.301T (783배), worst 0.611T (208배), mean 477배. 400–499배 is the most common band (33%); 700배+ came 5 times in 100 (about 1 in 20). Comments: same power can give different multiples because of stars, research, rune values, gear, and 30 s/17 s survival.",
+      "scores": [
+        {"damage": "2.301T", "power": "2.92–2.94G", "ratio": "783배", "deck": "체리덱", "note": "80859-1.jpg best of 100"},
+        {"damage": "0.611T", "power": "2.92–2.94G", "ratio": "208배", "deck": "체리덱", "note": "worst of 100"},
+        {"damage": "mean", "power": "2.92–2.94G", "ratio": "477배 (team power), 61배 (roster 23.09G)", "deck": "체리덱", "note": "average of 100"}
+      ],
+      "teams": [],
+      "sugar_runes": [], "gear": [],
+      "rng": [
+        "100 runs (80859-1.jpg): <300배 9 runs (9%), 300–399배 16 (16%), 400–499배 33 (33%), 500–599배 24 (24%), 600–699배 13 (13%), 700배+ 5 (5%)",
+        "First runs at 2.92G: 0.963T 330배, 1.087T 372배, 1.822T 624배, 1.370T 469배, 1.691T 579배, 1.688T 578배, 1.450T 497배, 0.813T 278배, 1.238T 424배, 0.883T 302배",
+        "Spread best/worst ≈ 3.8×; poster: 700배+ appears about once in 20 runs",
+        "Same team power differs in multiple by star level, research, rune values, gear values and 30 s/17 s survival",
+        "Commenter: Milk ★8 → ★9 raised their best from 250배 to 310배 within a few runs"
+      ],
+      "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "대충 최고점 783배 최저점은 208배 평균 477배임", "en": "Roughly best 783배, worst 208배, average 477배"},
+        {"kr": "최고점(700배 이상)은 20번 때리면 한번 나옴", "en": "The top (700배+) comes once per 20 runs"},
+        {"kr": "30초, 17초구간 생존/전멸 차이등등등...스펙 오를수록 배수도 더 오르는 경향이 크고", "en": "Survival or wipe at the 30 s and 17 s marks etc... the higher the spec, the more the multiple tends to rise"},
+        {"kr": "나는 원래 250배가 최대였다가 우유 8성에서 9성 찍자마자 몇판만에 310배 쳤음", "en": "My max was 250배 until Milk went from ★8 to ★9; then I hit 310배 within a few runs"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80892",
+      "url": "https://m.dcinside.com/board/projectcc/80892",
+      "date": "2026-10-04",
+      "title_kr": "토벌 스가",
+      "title_en": "Conquest skill haste",
+      "relevance": 2,
+      "summary_en": "A top-50 (3T+, group 2) whale reportedly says removing skill haste from the top-right gear for crit damage/crit rate scores more. A top-5 commenter says removing 스가 halved their damage; another suggests the whale's Seeker is ★10 with full-haste runes, so gear can drop it.",
+      "scores": [], "teams": [], "sugar_runes": [{"cookie": "브시커", "stats": "10성 풀 스가 (runes) suggested as why the whale can drop haste on gear", "why": ""}],
+      "gear": [
+        {"slot": "우상단 (top-right)", "substats": "치피 or 치확 instead of 스가", "context": "raid", "why": "Claimed by a top-50 3T+ whale"},
+        {"slot": "우상단 (top-right)", "substats": "keep 스가", "context": "raid", "why": "Top-5 commenter: removing 스가 dropped damage by more than half"}
+      ],
+      "rng": [], "mechanics": [],
+      "disagreements": ["Whale (in50, 3T+): drop 스가 on top-right for 치피/치확 vs in5 commenter: removing 스가 halves damage"],
+      "quotes": [
+        {"kr": "우리 고래형님이 오른쪽 위에 스가 빼고 치피나 치확 넣으면 더 잘 나온다던데", "en": "Our whale says removing skill haste from top-right and putting crit damage or crit rate scores better"},
+        {"kr": "in5인데 스가빼니까 딜반도안나옴ㅅㄱ해라", "en": "I'm top 5 and removing haste gave less than half the damage"},
+        {"kr": "시커 10성 풀 스가라 장비는 빼준 거 아님 ?", "en": "Isn't it because Seeker is ★10 with full haste, so gear could drop it?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "80902",
+      "url": "https://m.dcinside.com/board/projectcc/80902",
+      "date": "2026-10-04",
+      "title_kr": "토벌1등 곧 6t네 미쳣노",
+      "title_en": "Conquest #1 is almost 6T, insane",
+      "relevance": 1,
+      "summary_en": "The #1 approaching 6T. A commenter at 880배 thinks there's something extra or plate luck.",
+      "scores": [{"damage": "~6T", "power": "?", "ratio": "", "deck": "?", "note": "Season 6 #1 (Arsen) as of 10-04"}, {"damage": "?", "power": "?", "ratio": "880배", "deck": "?", "note": "commenter"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "나도880배인데 먼가더있거나 플레이트운지리거나", "en": "I'm at 880배 too; there's something more, or insane plate luck"}]
+    },
+    {
+      "source": "dc",
+      "id": "80923",
+      "url": "https://m.dcinside.com/board/projectcc/80923",
+      "date": "2026-10-04",
+      "title_kr": "토벌에서 브시커 공 몇임?",
+      "title_en": "What's Brightseeker's ATK in conquest?",
+      "relevance": 2,
+      "summary_en": "Fully buffed Brightseeker ATK figures: 21.286M with crit damage, 18M with flat ATK (깡공), 9M for another. Image is a meme GIF.",
+      "scores": [], "teams": [],
+      "sugar_runes": [{"cookie": "브시커", "stats": "fully buffed ATK 21.286M (치피 build) / 18M (깡공 build) / 9M", "why": "flat ATK vs crit damage judged about equal"}],
+      "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "21m286k", "en": "21.286M"},
+        {"kr": "난 깡공끼고 18m인대", "en": "I have flat ATK on and it's 18M"},
+        {"kr": "둘이 비슷비슷한거같음 ㅁㄹ겟음", "en": "The two seem about the same, dunno"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81023",
+      "url": "https://m.dcinside.com/board/projectcc/81023",
+      "date": "2026-10-05",
+      "title_kr": "2t클럽 가입",
+      "title_en": "Joined the 2T club",
+      "relevance": 3,
+      "summary_en": "캔디애플: 2T 30G at team power 2.87G (~707배), 10th. Melon Soda variant: Melon Soda Lv.1, Scorpion Lv.21, Pinot/Tiger Lily/Dark Choco Lv.1. Move speed unchanged. The battle screenshot shows the in-fight cookie bar order.",
+      "scores": [{"damage": "2T 30G", "power": "2.87G", "ratio": "~707배", "deck": "메소덱 (Melon Soda Lv.1)", "note": "81023-1.jpg; 81023-2.jpg shows 6,459,926,886 mid-run"}],
+      "teams": [{
+        "name": "메소덱",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": "81023-1.jpg row1 pos1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "21", "stars": "?", "note": "row1 pos2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "row1 pos3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "row1 pos4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "?", "note": "row1 pos5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "row1 pos6"},
+          {"kr": "브시커", "en": "Brightseeker", "level": "100", "stars": "?", "note": "row2 pos1"},
+          {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "?", "note": "row2 pos2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": "row2 pos3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "100", "stars": "?", "note": "row2 pos4"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "row2 pos5, leader"},
+          {"kr": "실론", "en": "Tea Knight", "level": "100", "stars": "?", "note": "row2 pos6"}
+        ],
+        "pets": ["핫도그도그 (20★)", "와사비 문어 (20★)", "? pouch-like pet, likely 색동 주머니 (17★)"],
+        "atk_order": [],
+        "perks": "? (asked in comments, unanswered)",
+        "formation": "Move speed left as is (이속 그대로). In-battle bar order (81023-2.jpg, left→right): 마카롱 100, 브시커 100, 전갈 21, 메소 1, 피노 1, 치케 100, 석류 100, 피겨 100, 정전 1, 우유 100, 닼초 1, 실론 100",
+        "substitutions": ["Melon Soda Lv.1 replaces Cherry"],
+        "unorthodox": ["Scorpion at Lv.21", "Melon Soda at Lv.1"]
+      }],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "이속 그대로임? / 예압", "en": "Move speed unchanged? / Yep"},
+        {"kr": "자꾸 브시커가 오른쪽으로 가는데 첫배치 사진 보여줄 수 있음?", "en": "My Brightseeker keeps going right, can you show your starting placement?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81110",
+      "url": "https://m.dcinside.com/board/projectcc/81110",
+      "date": "2026-10-05",
+      "title_kr": "체리 750배 2T 클럽",
+      "title_en": "Cherry 750배, 2T club",
+      "relevance": 3,
+      "summary_en": "전치: 2T 186G at team power 2.9G (~754배), 3rd in league, same Cherry lineup as 80846. Everyone except Milk among the high-level cookies survives 17 s. Perks: 열페 + 초고속. Keeps Seeker alive via armour 피체 and HP research. 'Secret': pull skill haste and retry a lot. Renown 122, breakthrough 1034.",
+      "scores": [{"damage": "2T 186G", "power": "2.9G", "ratio": "~754배", "deck": "체리덱", "note": "81110-1.jpg, 3rd place, 41 min before season end"}],
+      "teams": [{
+        "name": "체리덱",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "?", "note": "81110-1.jpg row1 pos1"},
+          {"kr": "브시커", "en": "Brightseeker", "level": "100", "stars": "?", "note": "row1 pos2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "row1 pos3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "row1 pos4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "?", "note": "row1 pos5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "row1 pos6"},
+          {"kr": "체리", "en": "Cherry", "level": "1", "stars": "?", "note": "row2 pos1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "30", "stars": "?", "note": "row2 pos2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "100", "stars": "?", "note": "row2 pos3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "100", "stars": "?", "note": "row2 pos4"},
+          {"kr": "우유", "en": "Milk", "level": "100", "stars": "?", "note": "row2 pos5, leader; dies at 17 s"},
+          {"kr": "실론", "en": "Tea Knight", "level": "88", "stars": "?", "note": "row2 pos6"}
+        ],
+        "pets": ["와사비 문어 (20★)", "핫도그도그 (20★)", "? pouch-like pet, likely 색동 주머니 (15★)"],
+        "atk_order": [],
+        "perks": "열페 + 초고속(승진)",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["Scorpion Lv.30, Tea Knight Lv.88"]
+      }],
+      "sugar_runes": [],
+      "gear": [{"slot": "방어구 (armor)", "substats": "피체 (DMG reduction + HP?) farmed", "context": "raid", "why": "Keep Brightseeker alive through 17 s, with HP research"}],
+      "rng": ["Poster's method: pull skill haste and retry a lot"],
+      "mechanics": ["High-level cookies except Milk survive the 17 s wipe at this spec"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "우유빼고 고렙들은 버팀", "en": "The high-level ones except Milk survive"},
+        {"kr": "열페 초고속", "en": "열페, 초고속 (perks)"},
+        {"kr": "방어구 피체작 하고 체력연구 돌려야지", "en": "Farm 피체 on armour and run HP research"},
+        {"kr": "다른거 없는데 스가땡기고 존나 리트하기", "en": "Nothing special: pull skill haste and retry like crazy"},
+        {"kr": "122 돌파 1034", "en": "(Renown) 122, breakthrough 1034"},
+        {"kr": "담시즌은 3T다", "en": "Next season, 3T"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81132",
+      "url": "https://m.dcinside.com/board/projectcc/81132",
+      "date": "2026-10-05",
+      "title_kr": "6t ㅅㅂ 가능한 수치냐?",
+      "title_en": "Is 6T even a possible number?",
+      "relevance": 1,
+      "summary_en": "Poster capped at 4T after move-speed and deck experiments; asks how the #1 reaches 6T. Comments: it's deck/formation, not gear; the #1's guild (5 광제단 members) is 3rd; curious about the runes and lineup.",
+      "scores": [{"damage": "4T (cap)", "power": "?", "ratio": "", "deck": "?", "note": "poster's ceiling"}, {"damage": "6T", "power": "?", "ratio": "", "deck": "?", "note": "the #1"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [],
+      "disagreements": ["One commenter says the #1's gap is deck/formation, not gear; others attribute it to spending"],
+      "quotes": [
+        {"kr": "이속 실험도 해보고 조합도 ㅈㄹ 많이 해봤는데 이게 가능한거여? 4t대가 한계인데", "en": "Did move-speed experiments and tons of combos; is this possible? 4T is my limit"},
+        {"kr": "이건 장비차이가 아닌거같아 덱이랑 정렬 차이같은데", "en": "This doesn't look like a gear difference; looks like deck and formation"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81144",
+      "url": "https://m.dcinside.com/board/projectcc/81144",
+      "date": "2026-10-05",
+      "title_kr": "(첩보)토벌덱 1위 관련",
+      "title_en": "(Intel) About the #1 conquest deck",
+      "relevance": 2,
+      "summary_en": "Second-hand intel on the #1: sugar runes weigh heavily on crit damage, not all skill haste; no move speed at all; gear mixes skill amp, crit damage and skill haste; total skill haste (gear + runes) only needs to pass 32.7; more +20 accessories = more damage; past the haste floor, the ratio of skill amp to crit damage is decisive but unknown.",
+      "scores": [], "teams": [],
+      "sugar_runes": [{"cookie": "? (not stated)", "stats": "치피 heavy, not all 스가; 스가 total (gear + runes) ≥ 32.7", "why": "Golden ratio of 스증:치피 after the haste floor"}],
+      "gear": [{"slot": "all", "substats": "스증, 치피, 스가 mixed; accessories at +20", "context": "raid", "why": "Reported #1 setup"}],
+      "rng": [],
+      "mechanics": ["Reported: no move speed used by #1", "Skill haste threshold 32.7 (gear + runes), then 스증:치피 ratio matters"],
+      "disagreements": ["Commenter: 'more +20 accessories = more damage' is obvious"],
+      "quotes": [
+        {"kr": "슈가룬 치명피해의 비중이 상당히 높고 올스가는 아니라고함", "en": "Reportedly crit damage is a large share of the sugar runes, and it's not all skill haste"},
+        {"kr": "이속은 전혀 안쓴다고함", "en": "Reportedly uses no move speed at all"},
+        {"kr": "장비 + 슈가룬으로 스가는 32.7만 넘으면 된다고함", "en": "Skill haste from gear + runes only needs to exceed 32.7"},
+        {"kr": "스가가 32.7 이상이라는 가정하에 스증과 치피의 황금비율이 절대적으로 중요하다고함", "en": "Given haste ≥ 32.7, the golden ratio of skill amp to crit damage is absolutely key"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81148",
+      "url": "https://m.dcinside.com/board/projectcc/81148",
+      "date": "2026-10-05",
+      "title_kr": "(첩보) 토벌 랭킹1위의 비법 추가정보2",
+      "title_en": "(Intel) More on the #1's secret, part 2",
+      "relevance": 2,
+      "summary_en": "More second-hand intel: a +20 weapon is worth the same as a +15 crit-damage/skill-amp accessory; first priority is skill-amp and crit-damage accessories at +20 or higher; ATK comes from research.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [
+        {"slot": "weapon", "substats": "+20 ≈ value of a +15 치피/스증 accessory", "context": "raid", "why": "Reported #1 valuation"},
+        {"slot": "accessories (장신구)", "substats": "스증, 치피 at +20+", "context": "raid", "why": "Priority 1"}
+      ],
+      "rng": [], "mechanics": ["ATK is taken from research (연구소), not gear"], "disagreements": [],
+      "quotes": [
+        {"kr": "무기 20강이 치피,스증 장신구 15강이랑 동급의 가치다", "en": "A +20 weapon is worth the same as a +15 crit-damage/skill-amp accessory"},
+        {"kr": "스증과 치피장신구가 20강이상으로 찍는게 1순위다", "en": "Getting skill-amp and crit-damage accessories to +20 or higher is priority 1"},
+        {"kr": "공격력은 연구소에서 땡기는거다", "en": "ATK is pulled from research"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81172",
+      "url": "https://m.dcinside.com/board/projectcc/81172",
+      "date": "2026-10-05",
+      "title_kr": "근데 애초에 1등은 시커10강 플레이트 올20강아님?",
+      "title_en": "Isn't the #1 a Seeker 10★(?) with all +20 plates anyway?",
+      "relevance": 1,
+      "summary_en": "Speculation that the #1 is Seeker 10 and all plates +20, so non-whales can't copy the secret sauce.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "plate (플레이트)", "substats": "all +20 (speculated for #1)", "context": "raid", "why": ""}],
+      "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "근데 애초에 1등은 시커10강 플레이트 올20강아님?", "en": "Isn't the #1 Seeker 10 with all plates +20 to begin with?"}]
+    },
+    {
+      "source": "dc",
+      "id": "81188",
+      "url": "https://m.dcinside.com/board/projectcc/81188",
+      "date": "2026-10-05",
+      "title_kr": "1등 딱보니 스가 아래장비만 챙기고 윗줄은 스증치피 도배겠네",
+      "title_en": "Looks like #1 keeps skill haste only on the bottom gear and fills the top row with skill amp/crit damage",
+      "relevance": 1,
+      "summary_en": "Guess: #1 has 스가 on bottom gear only, top row all 스증/치피 at +20, research all into ATK. Replies: that's the baseline; something more (deck?) is on top.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [
+        {"slot": "bottom row", "substats": "스가", "context": "raid", "why": "speculation"},
+        {"slot": "top row / accessories top 3", "substats": "스증 + 치피 at +20 (or 스증 + 스가 per a commenter)", "context": "raid", "why": "speculation"}
+      ],
+      "rng": [], "mechanics": [],
+      "disagreements": ["식도염: that's the baseline everyone has; #1 has something beyond it"],
+      "quotes": [
+        {"kr": "그게 기본으로 깔리는거다 게이야... 뭔진 모르겠는데 거기서 뭔가 더 있다 조합이든 뭐든", "en": "That's the baseline... don't know what, but there's something more on top, the comp or whatever"},
+        {"kr": "게이야 너 장신구위에3개 스증스가아님?", "en": "Aren't your top 3 accessories skill amp + skill haste?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81217",
+      "url": "https://m.dcinside.com/board/projectcc/81217",
+      "date": "2026-10-05",
+      "title_kr": "얘네만 갈아도 토벌 1t는 오를듯",
+      "title_en": "Rerolling just these would add 1T",
+      "relevance": 2,
+      "summary_en": "Poster shows weak sugar runes on Pomegranate, Cheesecake, Macaron, Skating Queen and Scorpion. Comments debate Chardonnay replacing Macaron: its crit-rate coefficient is 8% lower, but it reliably receives Pomegranate's buff, gives AoE crit rate and has 다발.",
+      "scores": [], "teams": [],
+      "sugar_runes": [
+        {"cookie": "석류", "stats": "SSR 스증 4.40% x4, R 스증 2.80% x2 (unlocked, to reroll), SSR 스가 +4.00, SSR 스가 +5.00", "why": "81217-2.jpg"},
+        {"cookie": "치케", "stats": "SSR 스가 +4.00 x3, SSR 공증 6.50%, 6.10%, 6.10%; locked until ★10: SSR 공증 6.10%, C 치저 1.00%", "why": "81217-3.jpg"},
+        {"cookie": "마카롱", "stats": "SSR 스증 4.40% x3, R 스증 2.50% (unlocked), SSR 공증 6.10% x2; locked until ★10: SSR 공증 6.50%, C 이속 +0.20", "why": "81217-4.jpg"},
+        {"cookie": "피겨", "stats": "SSR 스증 4.40% x2, SSR 스가 +4.00 x2, C 공증 0.90%, C 치확 1.00% x2, R 치저 3.80% (C/R unlocked)", "why": "81217-5.jpg"},
+        {"cookie": "전갈", "stats": "SSR 공증 6.10% x3, SR 공증 4.70%, SSR 치피 7.00%, SSR 스가 +4.00 x2, SSR 집중확률 5.60%", "why": "81217-6.jpg"}
+      ],
+      "gear": [], "rng": [],
+      "mechanics": ["Chardonnay vs Macaron: 8% lower crit-rate coefficient, but guaranteed Pomegranate buff, AoE crit rate and 다발 (commenter 아이씨밤)"],
+      "disagreements": ["One commenter: Chardonnay is a downgrade of Macaron on crit coefficient; 아이씨밤: only 8% gap, and it can replace Macaron 10/10"],
+      "quotes": [
+        {"kr": "샤르도네 치확계수 마카롱 하위호환임", "en": "Chardonnay's crit-rate coefficient is a downgrade of Macaron's"},
+        {"kr": "8퍼차이인데 이게 샤르도네 확정으로 석류받는거랑 광역 치확증가라 대체 10가능임 심지어 다발도 있음", "en": "It's an 8% gap, but Chardonnay surely receives Pomegranate and gives AoE crit rate, so it fully replaces; it even has 다발"},
+        {"kr": "그냥 패키지에 껴주는 슈가룬 정도만 얻었지", "en": "I only got the sugar runes bundled in packages"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81290",
+      "url": "https://m.dcinside.com/board/projectcc/81290",
+      "date": "2026-10-05",
+      "title_kr": "[계란] 길드 토벌전 정산 10.5 (중요)",
+      "title_en": "[계란] guild conquest settlement 10/5",
+      "relevance": 1,
+      "summary_en": "Guild notice: guild 계란 at 6T 377G, 4th in group / 207th overall. Uses a regression ('홍어판독기') of ln(power) vs ln(damage) to flag under-performers for kicking. Member table (81290-6.jpg): top member 957.411G at 15.6 power, 877.921G at 16.46.",
+      "scores": [
+        {"damage": "957.411G", "power": "15.600 (total roster G, assumed)", "ratio": "", "deck": "?", "note": "81290-6.jpg 멍청*** row; expected 558.11G, achievement 171.5%"},
+        {"damage": "877.921G", "power": "16.460", "ratio": "", "deck": "?", "note": "81290-6.jpg top-power member"},
+        {"damage": "6T 377G (guild)", "power": "", "ratio": "", "deck": "", "note": "81290-1.jpg/81290-2.jpg 4th group, 207th overall"}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Guild tool regresses ln(damage) on ln(power) to get expected damage and a percentage 'achievement'"],
+      "disagreements": [],
+      "quotes": [{"kr": "홍어판독기로 2주연속 강퇴판정이면 추방하는 규칙을 추가하도록 하겠습니다", "en": "We'll add a rule: two weeks in a row of a kick verdict from the 홍어판독기 means removal"}]
+    },
+    {
+      "source": "dc",
+      "id": "81299",
+      "url": "https://m.dcinside.com/board/projectcc/81299",
+      "date": "2026-10-05",
+      "title_kr": "[갤길] 토벌결산 10.05 / 세명 구인중",
+      "title_en": "[갤길] conquest results 10/05, recruiting three",
+      "relevance": 1,
+      "summary_en": "Gallery guild settlement and recruitment. Guild 1st in group at 10T 693G. Analysis table (81299-1.jpg, LOO R² 0.8713, mean achievement 113.9%): top member 1T 896G at 24.89G roster power; 1T 229G at 18.72G; 1T 97G at 19.16G.",
+      "scores": [
+        {"damage": "1T 896G", "power": "24.89G (roster)", "ratio": "", "deck": "?", "note": "81299-1.jpg rank 1"},
+        {"damage": "1T 229G", "power": "18.72G (roster)", "ratio": "", "deck": "?", "note": "81299-1.jpg rank 2"},
+        {"damage": "10T 693G (guild)", "power": "", "ratio": "", "deck": "", "note": "81299-2.jpg, group 1st"}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "총투력 길갑 전 3.7G 가입 가능할까요??", "en": "Can I join with 3.7G total power?"}]
+    },
+    {
+      "source": "dc",
+      "id": "81335",
+      "url": "https://m.dcinside.com/board/projectcc/81335",
+      "date": "2026-10-05",
+      "title_kr": "3~400배 칠려면",
+      "title_en": "To hit 300–400배",
+      "relevance": 2,
+      "summary_en": "Poster capped at 250배 with Brightseeker ★5, Milk 8, Tea Knight ★3 and asks the minimum. Commenters list star levels and multiples: B7/M10/T4 491배; B7/M10/T4 500+배; B6/M9/T5 500배; B5/M9/T4 all gear +15 350배; B5/T3/M9 500배 (Cherry deck); a ★4 at 380배 with tuned-move-speed Melon deck, 350배 with Cherry. Consensus: no hard minimum; account depth raises the multiple.",
+      "scores": [
+        {"damage": "?", "power": "?", "ratio": "491배", "deck": "?", "note": "Brightseeker ★7, Milk ★10, Tea Knight ★4"},
+        {"damage": "?", "power": "?", "ratio": "500+배", "deck": "?", "note": "Brightseeker ★7, Milk 10, Tea Knight 4 (규진)"},
+        {"damage": "?", "power": "?", "ratio": "500배", "deck": "?", "note": "Brightseeker 6, Milk 9, Tea Knight 5"},
+        {"damage": "?", "power": "?", "ratio": "350배", "deck": "?", "note": "Brightseeker 5, Milk 9, Tea Knight 4, all gear +15"},
+        {"damage": "?", "power": "?", "ratio": "500배", "deck": "체리덱", "note": "Brightseeker 5, Tea Knight 3, Milk 9"},
+        {"damage": "?", "power": "?", "ratio": "380배", "deck": "메소덱 (move speed tuned)", "note": "Pusher, ★4 (cookie unspecified); 350배 with the Cherry deck"},
+        {"damage": "?", "power": "?", "ratio": "250배 (cap)", "deck": "?", "note": "poster: Brightseeker 5, Milk 8, Tea Knight 3; plates 좌상 15, 우상 15/15/14, rest 11–12"}
+      ],
+      "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "plate", "substats": "좌상 +15, 우상 +15/+15/+14, rest +11/+12 (poster)", "context": "raid", "why": ""}],
+      "rng": [],
+      "mechanics": ["Multiples rise with account depth: one commenter went 200–250배 → 600–700배 with the same comp (linked guide 71135)"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "브7 우10 실7 491배까지 봄", "en": "B7 M10 T7 saw up to 491배 (corrected: Tea Knight 4, not 7)"},
+        {"kr": "380배는 이속 조정한 메소덱으로 나온거긴 함 근데 저 체리덱으로도 350배까진 나왔음", "en": "380배 was with the move-speed-tuned Melon deck, but that Cherry deck also got 350배"},
+        {"kr": "토벌전도 내실 좀 탄다. 아무리 1등조합이라도 배수안나올수있음", "en": "Conquest depends on account depth too. Even the #1 comp may not give the multiple"},
+        {"kr": "난 저 조합으로 200~250배로 시작해서 점점 내실 쌓으면서 지금은 600~700배 나엄", "en": "I started at 200–250배 with that comp and, building depth, now get 600–700배"},
+        {"kr": "브5 실3 우9 인데 500배 쳤음 체리덱", "en": "B5 T3 M9 and I hit 500배, Cherry deck"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81344",
+      "url": "https://m.dcinside.com/board/projectcc/81344",
+      "date": "2026-10-05",
+      "title_kr": "토벌 1.803t",
+      "title_en": "Conquest 1.803T",
+      "relevance": 1,
+      "summary_en": "Job-seeking post: 1.803T with Tea Knight ★4 (text: '실론 4성 3갠데'), no packages bought; asks which guild rank they can join.",
+      "scores": [{"damage": "1.803T", "power": "?", "ratio": "", "deck": "?", "note": "Tea Knight ★4, F2P"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "실론 4성 3갠데 패키지 안삼", "en": "Tea Knight 4★, 3 of them(?), haven't bought packages"}]
+    },
+    {
+      "source": "dc",
+      "id": "81453",
+      "url": "https://m.dcinside.com/board/projectcc/81453",
+      "date": "2026-10-05",
+      "title_kr": "[치트키] 6회차 토벌전 정산",
+      "title_en": "[치트키] 6th conquest settlement",
+      "relevance": 1,
+      "summary_en": "Guild settlement using the same regression tool; members below 85% achievement face removal. Table (81453-1.jpg): top damage 2098.000G at 22.93 roster power, 1929.000G at 23.92, 1477.000G at 24.41; a 24.78 member only 547.874G (37.5%).",
+      "scores": [
+        {"damage": "2098.000G", "power": "22.93G (roster)", "ratio": "", "deck": "?", "note": "81453-1.jpg 코**"},
+        {"damage": "1929.000G", "power": "23.92G (roster)", "ratio": "", "deck": "?", "note": "81453-1.jpg **성"},
+        {"damage": "1451.000G", "power": "20.15G (roster)", "ratio": "", "deck": "?", "note": "81453-1.jpg *령"},
+        {"damage": "1289.000G", "power": "14.87G (roster)", "ratio": "", "deck": "?", "note": "81453-1.jpg *레, 182.8%"}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "총투 24g면 적어도 1t는 뽑아야 하는거 아닌가", "en": "With 24G total power you should pull at least 1T, no?"}]
+    },
+    {
+      "source": "dc",
+      "id": "81642",
+      "url": "https://m.dcinside.com/board/projectcc/81642",
+      "date": "2026-10-06",
+      "title_kr": "샤르도네가 토벌도 대체일듯",
+      "title_en": "Chardonnay will replace (Macaron) in conquest too",
+      "relevance": 1,
+      "summary_en": "Opinion: Macaron needs rune crafting, Chardonnay with all skill-amp runes would have higher crit rate, so it may replace Macaron.",
+      "scores": [], "teams": [],
+      "sugar_runes": [{"cookie": "샤르도네", "stats": "올스증 (proposed)", "why": "No crafting needed, unlike Macaron"}],
+      "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "마카롱 공작해야되는데 샤르도네는 그런거 필요없이 올스증으로 한다치면 치확수치가 더 높을듯", "en": "Macaron needs crafting; Chardonnay without that, on all skill amp, would probably have higher crit rate"}]
+    },
+    {
+      "source": "dc",
+      "id": "81671",
+      "url": "https://m.dcinside.com/board/projectcc/81671",
+      "date": "2026-10-06",
+      "title_kr": "샤르도네 토벌 연구가치 충분히 있다고 봄",
+      "title_en": "Chardonnay is worth researching for conquest",
+      "relevance": 2,
+      "summary_en": "저장용 posts Chardonnay's skill data (Lv5): 4 s cycle, 250% ATK, buffs crit rate +100%, 다발 synergy 100, knockback resistance 100% for 5 s. Peak crit rate is 100 vs Macaron's 120, but Chardonnay could replace both Macaron and Herb/Tiger Lily, freeing a slot. Commenters: 3-다발 on Pomegranate is mandatory and Tiger Lily must be pushed to deliver it; Chardonnay's knockback resistance may stop that; some use Panda Dumpling instead of Candy Shade Pouch so Tiger Lily gets pushed.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": [
+        "Chardonnay skill (81671-1.jpg, 기본 기준, skill Lv5): 사용 주기 4초; 피해량 공격력의 250%; 장벽 이동 속도 8.5; 치명확률 증가 100%; 다발 시너지 100; 밀어내기 저항 100%; 유지 시간 5초. Buff upgrades: 치명확률 50%→100%/틱 5s; 스킬 동시 발동 횟수 100%→200%/틱 5s; 밀어내기 저항 40%→60%/틱 5s",
+        "Macaron's crit-rate peak 120 vs Chardonnay 100 (author)",
+        "Commenter: current top scores need 3-다발 on Pomegranate; Tiger Lily must be pushed back to give it, and a knockback-resistance buff could prevent that",
+        "Some players run Panda Dumpling instead of Candy Shade Pouch so Tiger Lily is pushed further (more 다발)"
+      ],
+      "disagreements": ["Author: Chardonnay could replace Macaron + Herb/Tiger Lily vs commenter: Tiger Lily isn't optional; 3-다발 matters more than crit, so keep Macaron"],
+      "quotes": [
+        {"kr": "마카롱 고점이 120 샤르도네 고점이 100", "en": "Macaron peaks at 120, Chardonnay at 100"},
+        {"kr": "경우에따라 마카롱+허브(정전) 두 쿠키를 샤르도네 한명이 대체 하면서 남는 한자리에 뭐 넣느냐에 따라 새 빌드 나올수도 있지 않을까?", "en": "Chardonnay alone might replace Macaron + Herb (Tiger Lily), and depending on what fills the freed slot a new build could emerge"},
+        {"kr": "사실 샤르도네 넣으면 체리덱도 체리 안씀", "en": "Actually, with Chardonnay the Cherry deck doesn't use Cherry either"},
+        {"kr": "지금 고점은 3다발이 필수임 허브가 들어갈자리도없고", "en": "Current top scores require 3-다발; there's no room for Herb"},
+        {"kr": "정전을 안정적으로 밀어내면서 스킬은 안끊길정도의 띄우기를 위해서 색동대신 판다쓰는사람도있음", "en": "Some use Panda instead of 색동 to push Tiger Lily back reliably while keeping lift low enough that skills aren't interrupted"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81684",
+      "url": "https://m.dcinside.com/board/projectcc/81684",
+      "date": "2026-10-06",
+      "title_kr": "시뮬레이터 실험중",
+      "title_en": "Experimenting with a simulator",
+      "relevance": 1,
+      "summary_en": "삥삥 (author of 81844) is building a battle-simulation engine from Unity assets for their website; claims the combat logic uses real values.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "일단 전투로직이나 그런건 보이는것과 다르게 실제값이긴함", "en": "The combat logic, unlike how it looks, uses actual values"}]
+    },
+    {
+      "source": "dc",
+      "id": "81699",
+      "url": "https://m.dcinside.com/board/projectcc/81699",
+      "date": "2026-10-06",
+      "title_kr": "샤르도네 토벌전 못쓰는 이유",
+      "title_en": "Why Chardonnay can't be used in conquest",
+      "relevance": 2,
+      "summary_en": "Claim: Chardonnay lacks 3-다발. Long thread: 3-다발 on Pomegranate requires Tiger Lily to be pushed back; base knockback resistance 20% + 60% from Chardonnay may stop that. Seeker deals 70–80% of damage. Pet choice: 17 s 'safe band' is HP 5M–9M; those in it do better with Panda Dumpling, those above aim to survive past 17 s with Candy Shade Pouch (HP). 저장용: Panda set records until he crossed into the 17 s band, then Pouch's HP gave a big record. Research: don't take ATK30 special; flat ATK in lower nodes is more efficient.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": [
+        "Seeker damage share 70–80% (commenter)",
+        "Knockback resistance base 20% (+60% from Chardonnay) would keep Tiger Lily from being pushed back to give Pomegranate 3-다발",
+        "17 s survival band ≈ HP 5M–9M; Panda Dumpling better within it; above it, Candy Shade Pouch for surviving past 17 s",
+        "Candy Shade Pouch users see Tiger Lily pushed less, so 3-다발 to Pomegranate is rarer (흐암)",
+        "Research: lower-tier flat ATK beats the ATK+30% special research per research stone (저장용)"
+      ],
+      "disagreements": ["썸바디헬프미: Chardonnay replaces Macaron only, Tiger Lily stays vs ㅇㅇ1: Chardonnay's knockback-resistance buff would stop Tiger Lily being pushed, so 3-다발 fails; keep Macaron + Tiger Lily"],
+      "quotes": [
+        {"kr": "다발3이 아니라서 ㅇㅇ", "en": "Because it isn't 3-다발"},
+        {"kr": "시커 딜지분이 7~80퍼인데 딜러하나 넣겠다고 다른 파츠를 포기하다는건 배보다 배꼽이 더큼", "en": "Seeker is 70–80% of damage; giving up other parts to add a dealer is the tail wagging the dog"},
+        {"kr": "밀어내기저항이 기본 20퍼에 60퍼가 더해지면 정전이 밀려나서 석류한테 3다발을 주겠냐고", "en": "If knockback resistance goes from base 20% plus 60%, will Tiger Lily get pushed and give Pomegranate 3-다발?"},
+        {"kr": "17초 안정권이 보통 체력5m~9m 정도고 그이상은 17초 초과 생존노리니까 그안정권들은 판다쓰는게 더낫다봄", "en": "The 17 s safe band is usually HP 5M–9M; above that you aim to survive past 17 s, so those within the band are better off with Panda"},
+        {"kr": "판다로 고갱이 더 잘되다가 17초구간 걸치면서 체증때문에 색동으로 크게 고갱함", "en": "Panda gave records more often, then once I straddled the 17 s mark the HP boost made 색동 give a big record"},
+        {"kr": "공30 찍지 말고 하위에서 내실 다지는게 더 효율적임. 공격 투자만 하더라도 하위에 안찍은 깡공 다 투자하는게 공증30 특별연구보다 연구석 대비 공격력 더 많이오름", "en": "Don't take ATK30; build up the lower nodes. Even for ATK, filling the untaken flat-ATK nodes gives more ATK per research stone than the ATK+30% special research"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "81707",
+      "url": "https://m.dcinside.com/board/projectcc/81707",
+      "date": "2026-10-06",
+      "title_kr": "샤르도네 토벌 대체 되냐안되냐 지금 따질 이유가 없음",
+      "title_en": "No reason to argue now whether Chardonnay replaces anything",
+      "relevance": 1,
+      "summary_en": "저장용: wait for someone to test Chardonnay rather than rule it out now.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "지금부터 무조건 안된다고 못박아놓을 이유가 없음", "en": "No reason to nail it down as impossible right now"}]
+    },
+    {
+      "source": "dc",
+      "id": "81736",
+      "url": "https://m.dcinside.com/board/projectcc/81736",
+      "date": "2026-10-06",
+      "title_kr": "나 이제 17초 꽝 버틸 수 있는 거냐",
+      "title_en": "Can I survive the 17 s slam now?",
+      "relevance": 2,
+      "summary_en": "Milk stat screen: Lv.100, ★9 (promotion track at V/9, 승급 9/15), power 223.28M, ATK 814.95K, DEF 332.49K, HP 9.21M. Poster asks if 9M+ HP survives the 17 s slam.",
+      "scores": [],
+      "teams": [{"name": "?", "cookies": [{"kr": "우유", "en": "Milk (바삭튼튼 소아과 의사 우유맛 쿠키)", "level": "100", "stars": "9", "note": "81736-1.jpg: 223.28M power, ATK 814.95K, DEF 332.49K, HP 9.21M"}], "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Poster treats ~9M HP as the threshold for surviving the 17 s slam"],
+      "disagreements": [],
+      "quotes": [{"kr": "9M 넘었는데", "en": "Passed 9M"}]
+    },
+    {
+      "source": "dc",
+      "id": "81829",
+      "url": "https://m.dcinside.com/board/projectcc/81829",
+      "date": "2026-10-06",
+      "title_kr": "본인 2T 500 치는 길마인데",
+      "title_en": "I'm a guild master hitting 2T 500",
+      "relevance": 1,
+      "summary_en": "Guild master hitting 2T 500G recruits at a 300G cut; commenters say a 2T player's guild's low end is usually 600G.",
+      "scores": [{"damage": "2T 500G", "power": "?", "ratio": "", "deck": "?", "note": "Self-reported"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "300g는좀,, 나도 2티치는데 하위권 죄다 600g는되는디", "en": "300G is a bit... I hit 2T too and our bottom is all 600G+"}]
+    },
+    {
+      "source": "dc",
+      "id": "81844",
+      "url": "https://m.dcinside.com/board/projectcc/81844",
+      "date": "2026-10-06",
+      "title_kr": "토벌전 피냐타 분석 - 최종 수정 완 (10/7 01:27)",
+      "title_en": "Conquest Piñata analysis, final revision",
+      "relevance": 3,
+      "summary_en": "Datamined boss analysis by 삥삥. 60 s fight against an unkillable body (HP 4.6E); score = damage dealt to the body only (summon damage not counted). Body DEF 2000 → taken damage ×0.2; Dark, Light attackers ×1.15; crit resistance 0; immune to lift/knockback/control. Each 12 s spawner adds a self-buff about 10.5 s later that raises DMG reduction (0→10→30→50→70→90%) and multiplies body ATK (5K → 750M). Summons scale exponentially and cause the late wipe. Advice: front-load damage in 0–34 s.",
+      "scores": [], "teams": [], "sugar_runes": [],
+      "gear": [{"slot": "general", "substats": "crit rate / crit damage, ATK, skill amp, accuracy", "context": "raid", "why": "Body crit resistance 0; boss DMG / final DMG / element DMG are skill/buff stats, not gear options (author)"}],
+      "rng": ["Wipe time is not fixed; it depends on party survivability (author)"],
+      "mechanics": [
+        "Fight: GuildRaid_1, limit 60 s, bossHpMul 1.0, recommended power 100, accuracy multiplier ×10.0, other multipliers 1.0",
+        "Body (id 1976336819, mc0034, Dark): ATK 5,000, DEF 2,000, HP 4.6e18 (unkillable), speed 0, ACC 100,000 (×10 = 1M effective), AVO 100, crit/crit dmg/crit res 0, FOCUS 100, RESIST 100, lift resistance 1.0, knockback immune, actionImmune; hit radius 5.0, repulse 5.0, range/detect 100/100, targets EnemyWithMinDistance",
+        "Score per hit ≈ damage × defMul 0.2 (=1/(1+2000/500)) × element (Light ×1.15, else ×1.0, no disadvantage) × (1 − DMG reduction) × crit × (1+boss DMG) × (1+final DMG) × CP band",
+        "CP band = team power / recommended 100 ratio, penalty 0.01–1.2; below recommendation the score drops sharply",
+        "Phase table (DMG reduction | taken-damage multiplier | ATK multiplier | body ATK = slam/wave damage): ~10 s 0% | 0.200 | — | 5,000; 10 s~ 10% | 0.180 | ×101 | 505,000; 22 s~ 30% | 0.140 | ×5,001 | 25,005,000; 34 s~ 50% | 0.100 | ×25,001 | 125,005,000; 46 s~ 70% | 0.060 | ×50,001 | 250,005,000; 58 s~ 90% | 0.020 | ×150,001 | 750,005,000; tier6 99% | 0.002 | ×312,501 | 1,562,505,000 (would trigger at 70 s, never applies in 60 s)",
+        "The phase buff is one modifier with two effects: DAMAGE_DECREASE_SCREEN (official 'DMG Reduction') and ATTACK_POINT_MULTIPLIER (mult = 1 + value/10000; 1000000 → ×101). Values bp 1000–9900. Author says 505,000 matches measurement",
+        "Boss skill = spawner_01~06 at cooldown 0/12/24/36/48/60 s; within each: +2.0 s gift_drop (radius 2, knockback 1, lift 0.6, 12.5% ATK); +4.0 s summons (centre, then left +0.3 s, right +0.3 s); +6.5 s projectile_wave (full-screen, knockback 5, lift 0.85, 100%); +10.2 s jump slam explosion_buff (radius 10 around nearest ally, knockback 10, lift 0.9, 100%); +10.5 s DMG-reduction buff applied",
+        "Summons (mc0035), DEF 100, crit 0.1 fixed, 3 per tier (centre/left/right), life 60 s, rush (2×2 AoE, knockback 5, lift 0.6) and bite (single, knockback 0.25): tier1 0 s ATK 1,667 / HP 6,668; tier2 12 s 168,333 / 673,332; tier3 24 s 8,335,000 / 33,340,000; tier4 36 s 41,668,333 / 166,673,332; tier5 48 s 83,335,000 / 333,340,000; tier6 60 s 250,001,667 / 1,000,006,668",
+        "Author: the late-fight wipe is mainly the summons' ATK explosion; ally HP drops sharply from 24 s (8M) and 36 s (41M) tiers. Note the text elsewhere also says body slam/wave damage scales with the ATK multiplier (internal inconsistency: one line says body direct hit stays 5,000)",
+        "Summon damage is not counted in the score; hit the body only",
+        "Tips: dump buffs/cooldowns/ultimates in 0–34 s (DMG reduction ≤50%); Light dealers; knockback/lift resistance and protective buffs (e.g. Chardonnay's holy-water wall 성수벽) to survive wave and slam"
+      ],
+      "disagreements": ["Within the post: '[4] ... 본체 직격(슬램/파도 5,000)은 고정' contradicts '[3]/[5] 본체 공격력 5,000→505K→…→750M 폭증' for slam/wave damage", "crumb.gg calculator (82457-2.jpg) shows a DEF factor of ×0.383 at boss DEF 2000, vs this post's defMul 0.2"],
+      "quotes": [
+        {"kr": "60초 동안 '불사' 피냐타 본체에 누적 피해를 쌓는 콘텐츠 = 그 누적딜이 내 점수.", "en": "Content where you stack damage on an 'undying' piñata body for 60 s = that cumulative damage is your score."},
+        {"kr": "단계 : 본체 피해감소 0%(0~10초)→10→30→50→70→90% (발동 0/10/22/34/46/58초, 99%는 미적용)", "en": "Phases: body DMG reduction 0% (0–10 s) → 10 → 30 → 50 → 70 → 90% (at 0/10/22/34/46/58 s; 99% never applies)"},
+        {"kr": "속성  : 본체 어둠 → 빛 공격자 ×1.15 / 그 외 ×1.0 (열위 감소 없음)", "en": "Element: body Dark → Light attackers ×1.15 / others ×1.0 (no disadvantage reduction)"},
+        {"kr": "점수  : 소환수 딜은 미집계 — 오직 '본체' 누적딜만 점수", "en": "Score: summon damage isn't counted; only cumulative body damage scores"},
+        {"kr": "후반 파티 전멸의 주원인 = 이 소환수 공격력 폭증(본체 직격 아님). 24초(8M)·36초(41M) 구간부터 아군 체력이 급락.", "en": "Main cause of the late party wipe = these summons' ATK explosion (not the body's direct hit). Ally HP plunges from the 24 s (8M) and 36 s (41M) tiers."},
+        {"kr": "+10.2초  점프 슬램 explosion_buff [원형 반경10·대형] : 최근접 아군 중심 · 넉백 10 · 공중 0.9 · 100%", "en": "+10.2 s jump slam explosion_buff [circle radius 10, large]: centred on nearest ally, knockback 10, lift 0.9, 100%"},
+        {"kr": "CP밴드 = 팀전투력/권장100 비율(페널티 0.01~1.2). 권장 미만이면 점수 급감.", "en": "CP band = team power / recommended 100 ratio (penalty 0.01–1.2). Below recommended, the score plunges."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "82295",
+      "url": "https://m.dcinside.com/board/projectcc/82295",
+      "date": "2026-10-07",
+      "title_kr": "[유출] 탈퇴기념 방랑자길드 토벌 유출",
+      "title_en": "[Leak] Leaving the 방랑자 guild, leaking their conquest info",
+      "relevance": 2,
+      "summary_en": "Claims to leak Arsen's stat weights: skill amp +1% → +2% damage; crit rate +15% → +3%; crit damage +15% → +4%; ATK +650 → +2.5%, varying with breakthrough, research, gear, Stella. Commenters say it's old news; the 'real' tip is minimum skill haste then crit damage.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Reported Arsen stat weights: 스증 1% = dmg +2%; 치확 15% = +3%; 치피 15% = +4%; ATK 650 = +2.5% (flat ATK value depends on accumulated ATK; individual results vary)"],
+      "disagreements": ["Commenters: already leaked/known; 'just meet minimum haste then crit damage'; one notes by these numbers crit rate is weaker than crit damage", "Compare 82457-2.jpg (Arsen's own calculator): 스증 +1% → +0.45%, 치피 +1% → +0.38%, 치확 +1% → +0.34% for a sample Brightseeker"],
+      "quotes": [
+        {"kr": "스증 1%당 딜 2% 상승 치확 15%는 딜 3% 상승 치피 15%는 4% 상승 공격력 650은 2.5% 상승", "en": "Per 1% skill amp, damage +2%; crit rate 15% gives +3%; crit damage 15% gives +4%; ATK 650 gives +2.5%"},
+        {"kr": "이미 유출된거아닌가 스가 최저만 맞추고 치피", "en": "Wasn't this already leaked? Meet minimum skill haste, then crit damage"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "82303",
+      "url": "https://m.dcinside.com/board/projectcc/82303",
+      "date": "2026-10-07",
+      "title_kr": "토벌 유출",
+      "title_en": "Conquest leak",
+      "relevance": 2,
+      "summary_en": "Purported leak of a full gear and sugar-rune setup (weapon 스증+치피, armour 피감+체력, top-right 스증+스가, bottom-right 스가+피감; Seeker haste 45–47; Skating Queen haste tied to Seeker's at 1.41:1). Commenters mock it as AI-written for using non-existent names (피노키키, 블랙초코, 실론비치); one says only the gear part is worth reading.",
+      "scores": [], "teams": [],
+      "sugar_runes": [
+        {"cookie": "우유", "stats": "공격력", "why": ""},
+        {"cookie": "석류 / 마카롱 / 치즈케이크 / 실론", "stats": "스킬 증폭", "why": ""},
+        {"cookie": "브시커", "stats": "스가 45–47, rest 스증 or 치피", "why": "Claimed best band to stop drones flying off when clearing mobs; set last after SSR"},
+        {"cookie": "피겨", "stats": "스증 + 스가; Seeker:Skating Queen haste 1.41:1 — Seeker <45 → SQ 0; Seeker ≥45 → SQ 32; Seeker ≥52 → SQ 37+", "why": ""},
+        {"cookie": "정전 (정글전사)", "stats": "스가 8+ plus 스증/치피/공격력 (all-haste also valid)", "why": ""},
+        {"cookie": "전갈", "stats": "스가/스증/치피/공격력 choice; if ATK, keep below Milk's ATK", "why": "ATK order"},
+        {"cookie": "피노 / 닼초 (written 피노키키 / 블랙초코)", "stats": "스가 mainly", "why": "More casts to stack buffs/debuffs"},
+        {"cookie": "체리", "stats": "스증/치피/공격력/스가 choice", "why": ""}
+      ],
+      "gear": [
+        {"slot": "왼쪽 위 (검/활/지팡이)", "substats": "스증 + 치피", "context": "raid", "why": ""},
+        {"slot": "왼쪽 아래 (투구/갑옷/방패)", "substats": "피감 + 체력", "context": "raid", "why": ""},
+        {"slot": "오른쪽 위 (목걸이/반지/브로치)", "substats": "스증 + 스가", "context": "raid", "why": ""},
+        {"slot": "오른쪽 아래 (마법물체/책/음식)", "substats": "스가 + 피감", "context": "raid", "why": ""}
+      ],
+      "rng": [], "mechanics": [],
+      "disagreements": [
+        "Commenters mock it as AI-written: '피노키키', '블랙초코', '실론비치' are not real names ('AI 돌렸냐', '이거 딱봐도 ai한테 그럴듯하게 써줘인듯')",
+        "Commenter: top accessories 스가 + 스증 x2 + 치피 x1 is stronger",
+        "Commenter: Seeker haste to 46, rest all move speed",
+        "헬게이트: only the gear part and a few items are worth reading"
+      ],
+      "quotes": [
+        {"kr": "시커맛 쿠키 : 스킬 가속 45~47 맞춘 후, 남는 수치는 스킬 증폭 또는 치명타 피해", "en": "Seeker: set skill haste 45–47, put the rest in skill amp or crit damage"},
+        {"kr": "피노키키 / 블랙초코 쿠키 : 스킬 가속 위주", "en": "피노키키 / 블랙초코: mainly skill haste"},
+        {"kr": "이거 딱봐도 ai한테 그럴듯하게 써줘인듯", "en": "This is obviously 'AI, write something plausible'"},
+        {"kr": "위쪽 장신구 스가 + 스증2, 치피1이 더썜", "en": "Top accessories with skill haste + skill amp ×2, crit damage ×1 is stronger"},
+        {"kr": "위에 템세팅이랑 몇개만보고 나머지는 볼거없음", "en": "Look at the gear setup and a few items; the rest isn't worth reading"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "82457",
+      "url": "https://m.dcinside.com/board/projectcc/82457",
+      "date": "2026-10-07",
+      "title_kr": "Crumb 슈가룬 최적화 툴 48시간 한정 공개 (+ 비법소스에 대해)",
+      "title_en": "Crumb sugar-rune optimizer open for 48 hours (+ on the secret sauce)",
+      "relevance": 3,
+      "summary_en": "Arsen (Season 6 #1, crumb.gg developer) says the 'secret sauce' is many small optimizations stacked up, plus money. He publishes crumb.gg tools: sugar-rune optimizer (48 h), plate-enhancement simulator, formula/damage visualizer. Screenshots: optimizer suggests Milk all ATK%, Tea Knight/Cheesecake/Pomegranate all skill amp; damage calculator for Brightseeker; cheapest +15→+20 plate path.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "우유", "stats": "current 스증 x5, 치확 x2, 피감 → suggested 공증 x8 (+28.01%, 35.7만 rune crystals; 21.9만–44.5만 typical)", "why": "82457-1.jpg optimizer, 100만 budget"},
+        {"cookie": "실론 (실론나이트)", "stats": "current 방어, 공증, 스증, 체력, 피감, 체력, 집중, 치확 → suggested 스증 x8 (+6.12%, 19.2만; then +2.64만 for +1.29%)", "why": "82457-1.jpg"},
+        {"cookie": "치케", "stats": "current 치확 x3, 스증 x3, 피감 x2 → suggested 스증 x8 (+2.07%, 7.95만; then 8.77만 for +0.94%)", "why": "82457-1.jpg"},
+        {"cookie": "석류", "stats": "current 피감 x3, 스증 x5 → suggested 스증 x8 (+5.96%, 27.8만)", "why": "82457-1.jpg"}
+      ],
+      "gear": [{"slot": "plate (플레이트)", "substats": "+15→+20 cheapest path (82457-3.jpg, '시럽쇳물 아끼기' mode, 1 시럽쇳물 = 50 초코강): +10→+15 no protection; +15→+16 no protection, give up on break; +16→+17 drop-protection on, give up on break; +17→+20 drop-protection on, restore on break. Avg 179 tries, 3,194 초코강, 624 시럽쇳물 vs current 90 / 1,982 / 668 (초코강 +1,212 (+61%), 시럽쇳물 −44 (−6.5%))", "context": "raid", "why": "포기 하기 = accept the 2-step drop instead of restoring with 시럽쇳물"}],
+      "rng": [],
+      "mechanics": [
+        "Optimizer note (82457-1.jpg): skill haste works in usage-cycle breakpoints, so it isn't optimised; haste runes stay locked and are not simulated",
+        "Optimizer total: spend 99.1만 of 100만 rune crystals for +49.22%",
+        "Damage calculator (82457-2.jpg), boss DEF 2000, element advantage on ('길드 토벌전 보스: 방어력 2,000, 어둠속성. 페이즈마다 피해감소가 커집니다', phase selector none/1–6): Brightseeker Lv100 ★10, skill coefficient 100%, 스증 120%, 치확 250%, 치피 220%, 보스피해 200%, 속성피해 120% → 6,211만 per hit average (956만 without crit); stat ATK 130만, battle ATK 161만",
+        "ATK build-up chain: 레벨과 성급 13,565 → +고정 공격력 25,565 → ×공증(슈가룬) 30,678 → ×노움 연구소 184,068 → ×길드 연구소 239,288 → ×스텔라 링크 1,196,440 → +돌파력 1,296,440 → 전투 중 1,607,585",
+        "Per-hit multipliers: 스킬증폭 ×2.2, 치명 ×6.5, 보스피해 ×3, 방어력 ×0.383, 속성 ×2.35",
+        "Marginal gain per step: 고정 공격력 +1,000 +3.61%; 공격력 버프 +1% +0.81%; 공증(슈가룬) +1% +0.77%; 길드 연구소 공증 +1% +0.71%; 스가 +1 +0.68% (more casts); 스증 +1% +0.45%; 속성피해 +1% +0.43%; 치피 +1% +0.38%; 치확 +1% +0.34%; 보스피해 +1% +0.33%; 스텔라 링크 공증 +1% +0.18%; 노움 연구소 공증 +1% +0.15%; 돌파력 공격력 +1,000 +0.08%"
+      ],
+      "disagreements": ["DEF factor ×0.383 at DEF 2000 here vs 81844's defMul 0.2"],
+      "quotes": [
+        {"kr": "요즘 다들 \"비법소스\" 찾느라 재밌게 고민하시는 것 같더라고요. 사실 결국은 작은 최적화들이 하나하나 쌓인 거예요 (그리고 돈도 당연히 ㅋㅋ)", "en": "Everyone seems to be having fun hunting the 'secret sauce'. In the end it's just small optimizations piling up one by one (and money, of course lol)"},
+        {"kr": "플레이트 강화 시뮬레이터 (쇳물 그만 낭비하세요)", "en": "Plate enhancement simulator (stop wasting molten iron)"},
+        {"kr": "스킬가속은 사용 주기 구간 단위로 효과가 달라져 여기서는 최적화하지 않습니다.", "en": "Skill haste changes effect by usage-cycle bands, so it's not optimised here."},
+        {"kr": "모든 계산이 제 서버에서 돌아가서, 본인 폰이나 컴퓨터로 직접 결과를 브루트포스할 필요가 없어요.", "en": "All calculations run on my server, so you don't have to brute-force results on your own phone or PC."}
+      ]
+    }
+  ],
+  "glossary": [
+    {"kr": "색동 주머니 (icon)", "en": "Candy Shade Pouch (pet)", "kind": "pet", "confidence": "low", "evidence": "Third pet in most lobby shots (80297-1, 80846-1, 80848-1, 81023-1, 81110-1): white pouch-like creature with red/pink accents and a striped (색동) base, stars 14–17; not the blue panda icon earlier records tie to 판다만두"},
+    {"kr": "정전", "en": "Tiger Lily (정글전사 쿠키; brief's 'Jungle Warrior?' is the literal name)", "kind": "cookie", "confidence": "high", "evidence": "82303 writes 정글전사 쿠키; sprite Grass with teal hair and orange flower in every lobby"},
+    {"kr": "피노키키 / 블랙초코 / 실론비치", "en": "Garbled names for Pinot Noir / Dark Choco / Tea Knight (실론나이트)", "kind": "cookie", "confidence": "high", "evidence": "82303 commenters mock these as AI-made names; 썸바디헬프미 asks '블랙초코 = 다크초코인거지?'"},
+    {"kr": "다발 / 3다발", "en": "multi-cast synergy (skill fires multiple times at once); 3-다발 on Pomegranate is the top-score requirement", "kind": "term", "confidence": "high", "evidence": "81671-1 Chardonnay buff text '스킬이 동시에 발동하는 횟수가 증가합니다'; 81699 thread"},
+    {"kr": "밀어내기 저항", "en": "knockback (push) resistance; base 20% per 81699", "kind": "stat", "confidence": "high", "evidence": "81671-1, 81699"},
+    {"kr": "초고속승진 / 열페 / 가족카드 / 복지(카드)", "en": "perk (복지) cards: 초고속승진 (Rapid Promotion?), 열페 (열정페이?), 가족카드 (element DMG)", "kind": "term", "confidence": "low", "evidence": "80297 '가족카드 속성피해', 81110 '열페 초고속'"},
+    {"kr": "깡공", "en": "flat ATK (고정 공격력)", "kind": "stat", "confidence": "high", "evidence": "80923, 81699; 82457-2 '고정 공격력 +1,000'"},
+    {"kr": "피체", "en": "armour substat pair, probably 피감 + 체력 (DMG reduction + HP)", "kind": "stat", "confidence": "low", "evidence": "81110 '방어구 피체작'; 82303 lists 방어 부위 피감 + 체력"},
+    {"kr": "쇳물 / 시럽쇳물 / 초코강", "en": "plate enhancement materials; 1 시럽쇳물 = 50 초코강 on crumb.gg", "kind": "term", "confidence": "high", "evidence": "80739, 82457-3"},
+    {"kr": "홍어판독기", "en": "gallery guild tool: regression of ln(damage) on ln(power) to flag under-performing members", "kind": "term", "confidence": "high", "evidence": "81290, 81299, 81453"},
+    {"kr": "풀벞공", "en": "fully buffed in-battle ATK", "kind": "term", "confidence": "high", "evidence": "80807, 80923"},
+    {"kr": "브N / 우N / 실N", "en": "star levels of Brightseeker / Milk / Tea Knight", "kind": "term", "confidence": "high", "evidence": "81335 (브시커 5성, 우유 8강, 실론 3성 → '브5 우9 실4')"},
+    {"kr": "star display", "en": "lobby shows 5 star icons; pink = 2 stars, gold = 1 (★9 = 4 pink + 1 gold)", "kind": "term", "confidence": "low", "evidence": "81736-1 Milk: track node 9 (V) reached and 4 pink + 1 gold star"}
+  ]
+}
