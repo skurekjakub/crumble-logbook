@@ -1,8 +1,8 @@
 {
   "updated": "2026-09-27",
   "season": "S5",
-  "lede": "What Korean and global players run in Guild Conquest (길드 토벌전), taken from DCInside, the official Naver cafe and crumb.gg. Every claim links to the post it came from.",
-  "caveat": "Snapshot of 2026-09-27. Season 5 closed 2026-09-28 12:00 KST, and its final boards haven't been re-pulled yet, so the rankings here are from before the close. The Season 5 leaders (2.3–3.2T) haven't published their teams. The decks here are the best documented ones. The top documented run is 1T 999G with the Cherry deck (score screenshot posted by DC user awkward2637, who also posted 섬영's lobby; crumb.gg lists it as 섬영, 판도라); its team power isn't shown anywhere, and the author's own ~650× puts it near 3G. The research record's README.md lists what's still open.",
+  "lede": "What Korean and global players run in Guild Conquest (길드 토벌전), from DCInside, the official Naver cafe and crumb.gg. Every claim links its post.",
+  "caveat": "Snapshot of 2026-09-27, before Season 5's final boards. The 2.3–3.2T leaders haven't published teams. Best documented run: 1T 999G, Cherry deck, power unshown (≈3G).",
   "record": "Games/crumble/research/001-guild-conquest-meta/",
   "footer": "Built from the research record's evidence captures.",
   "gear_slot_names": {
@@ -12,10 +12,11 @@
     "bottom-right": "Bottom-right · special (magic item, book, food)"
   },
   "you": {
-    "summary": "Your account as you stated it on 2026-09-27: the plain Cherry deck at about 2.2G team power, Scorpion Lv.40, Brightseeker 8★. Runs usually show 5 Pomegranate beams, with a median of about 700G and a best of 900G (up from a 550G baseline). The 1T 312G author's Cherry deck peaked at 728×; at that multiple 2.2G would be about 1.6T, so the gap is in the setup, not in power.",
+    "summary": "Your gap is setup, not power. Cherry deck at 2.2G: median ≈700G, best 900G (from 550G). At the 1T 312G run's 728×, 2.2G makes ≈1.6T.",
     "changes": [
-      "Get the sixth beam more often: Tiger Lily all skill haste, and restart a run where Pomegranate misses 다발 3 by the HUD's 27 s mark.",
-      "Brightseeker to 10★ opens two more rune slots; the 1T 999G author runs 10★. Keep her in-battle haste in the 40–50 band.",
+      "Get the sixth beam more often: Tiger Lily all skill haste; restart any run where Pomegranate misses 다발 3 by the HUD's 27 s mark.",
+      "Brightseeker to 10★: two more rune slots. The 1T 999G author runs 10★.",
+      "Keep Brightseeker's in-battle haste in the 40–50 band.",
       "Reroll ATK% lines on Macaron and Skating Queen to skill amp; Milk keeps all ATK%. Re-check the ATK order in battle afterwards.",
       "Scorpion Lv.40 is fine if she lands exactly 7th in ATK in battle."
     ],
