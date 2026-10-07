@@ -1,0 +1,22 @@
+HTTP/1.1 404 Not Found
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 115203
+Cache-Control: public, max-age=300, stale-while-revalidate=86400
+Content-Disposition: inline; filename="404"
+Content-Length: 22096
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob: https://api.crumb.gg; font-src 'self' data:; connect-src 'self' https://api.crumb.gg; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+Content-Type: text/html; charset=utf-8
+Date: Wed, 07 Oct 2026 06:31:55 GMT
+Etag: "ffd6c2d7cbbac25603676815b61f1a6e"
+Last-Modified: Mon, 05 Oct 2026 22:31:52 GMT
+Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /404
+X-Vercel-Cache: HIT
+X-Vercel-Id: fra1::qk92g-1791354715489-a37d3115d5a6
+
