@@ -1,0 +1,96 @@
+{
+  "batch": "r2026-10-07-crumbgg",
+  "posts": [
+    {
+      "source": "other",
+      "id": "crumbgg:final-s5",
+      "url": "https://api.crumb.gg/api/rankings?kind=players",
+      "date": "2026-09-28",
+      "title_kr": "길드 토벌전 개인·길드 랭킹 시즌 5 (최종)",
+      "title_en": "Guild Conquest Season 5 final boards (top 50 players and guilds)",
+      "relevance": 3,
+      "summary_en": "Season 5's final top 50, captured 2026-10-07 (evidence/r2026-10-07/15-crumbgg/api/api-rankings-players.json, api-rankings-guilds.json; derived 11-players.tsv, 12-guilds.tsv). #1 날씨의아이 (카페) 3T 305G, #2 다함께차차차 (카페) 3T 045G, #3 환상 (카페) 3T 043G, #4 타미 (Carpediem) 3T 005G, #5 Arsen (방랑자) 2T 944G; #10 2T 714G, #50 2T 025G. The live board the record held on 09-27 had #1 at 3T 226G. Guilds: 카페 68T 925G, Carpediem 54T 182G, 월드 43T 175G. No teams are published.",
+      "scores": [
+        {"damage": "3305G", "power": null, "ratio": null, "deck": "?", "note": "#1 날씨의아이 (카페), final"},
+        {"damage": "3045G", "power": null, "ratio": null, "deck": "?", "note": "#2 다함께차차차 (카페), final"},
+        {"damage": "2714G", "power": null, "ratio": null, "deck": "?", "note": "#10, final"},
+        {"damage": "2025G", "power": null, "ratio": null, "deck": "?", "note": "#50, final"}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "crumbgg:final-s6",
+      "url": "https://crumb.gg/pub/live?board=guild_conquest_players",
+      "date": "2026-10-05",
+      "title_kr": "길드 토벌전 개인·길드 랭킹 시즌 6 (최종)",
+      "title_en": "Guild Conquest Season 6 final boards (top 100 players and guilds)",
+      "relevance": 3,
+      "summary_en": "crumb.gg's live board, fetched 2026-10-07 19:45 KST, reads season 6, phase final, 10-01 16:00 to 10-05 12:00 KST, next season 10-08 16:00 KST (evidence/r2026-10-07/15-crumbgg/api/pub-live-guild_conquest_players.json). #1 Arsen (카페) 6T 276G, #2 바삭한반장 (바삭젤리단) 4T 910G, #3 날씨의아이 (카페) 4T 770G; #10 스타 4T 201G, #50 3T 341G, #100 2T 763G. The same players scored about 1.4–2.1× their Season 5 finals (by crumb.gg player id). Guilds: 카페 99T 957G, Carpediem 94T 287G, 방랑자 72T 092G. Arsen posted 5T 115G in 방랑자 on 10-02 (dc:79664) and is listed in 카페 at the end.",
+      "scores": [
+        {"damage": "6276G", "power": "38.17G account", "ratio": null, "deck": "?", "note": "#1 Arsen, final"},
+        {"damage": "4910G", "power": "39.44G account", "ratio": null, "deck": "?", "note": "#2 바삭한반장, final"},
+        {"damage": "4770G", "power": "43.07G account", "ratio": null, "deck": "?", "note": "#3 날씨의아이, final"},
+        {"damage": "4201G", "power": "35.80G account", "ratio": null, "deck": "?", "note": "#10 스타, final"},
+        {"damage": "3341G", "power": null, "ratio": null, "deck": "?", "note": "#50, final"},
+        {"damage": "2763G", "power": null, "ratio": null, "deck": "?", "note": "#100, final"}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "crumbgg:power-leaderboard-1007",
+      "url": "https://crumb.gg/pub/leaderboard",
+      "date": "2026-10-07",
+      "title_kr": "전투력 랭킹",
+      "title_en": "Account power top 500, 2026-10-07",
+      "relevance": 2,
+      "summary_en": "Top account power is 50.76G (newbiee, 카페), against 30.0G on 09-27; #50 is 36.05G and #500 21.83G (evidence/r2026-10-07/15-crumbgg/13-power-top500.tsv). Joined by name and guild, the Season 6 top 50 hold 23.6–50.8G account power (median 35.5G), and score ÷ account power runs 76–164× (median 110×). The highest-power account, newbiee, placed #19; Arsen (#1) holds 38.2G. Account power, not the forum's 12-cookie team power.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "crumbgg:guild-conquest",
+      "url": "https://crumb.gg/guild-conquest",
+      "date": "2026-10-07",
+      "title_kr": "길드 토벌전",
+      "title_en": "crumb.gg Guild Conquest page: season dates, boss and phase table",
+      "relevance": 3,
+      "summary_en": "Season 6 ended; Season 7 runs 10-08 to 10-12 (shown in the browser's CEST: Oct 8 09:00 – Oct 12 05:00). Boss: Extra-Stuffed Piñata, Dark, CC immune, HP ∞, ATK 5,000, DEF 2,000, 60 s. Its phase table, one row every 12 s: summon HP 6,668 → 1B, summon ATK 1,667 → 250M, boss ATK +10,000% → +31,250,000%, and damage reduction 10%, 30%, 50%, 70%, 90%, 99% (evidence/r2026-10-07/15-crumbgg/40-guild-conquest-db.txt).",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": [
+        "Phase rows at 0/12/24/36/48/60 s cooldowns with DMG reduction 10/30/50/70/90/99% and summon ATK 1,667 / 168.3K / 8.34M / 41.67M / 83.33M / 250M.",
+        "Each phase: 2 s gift drop (0.125× ATK, radius 2), 4 s summons, 6.5 s wave hitting every enemy (1× ATK, knockback 5), 10.18 s slam (radius 10, knockback 10), 10.5 s the boss powers itself up."
+      ],
+      "disagreements": [], "quotes": [{"kr": "PHASE COOLDOWN SUMMON HP SUMMON ATK ATK DMG REDUCTION / 1 - 6,668 1,667 +10,000% 10% … 6 60s 1B 250M +31,250,000% 99%", "en": "the phase table as the page prints it"}]
+    },
+    {
+      "source": "other",
+      "id": "crumbgg:patches-1007",
+      "url": "https://crumb.gg/data/patches.json",
+      "date": "2026-10-07",
+      "title_kr": "패치 노트",
+      "title_en": "crumb.gg patch digest, 2026-10-07",
+      "relevance": 2,
+      "summary_en": "Answers 200 with JSON on 2026-10-07 (evidence/r2026-10-07/15-crumbgg/api/data-patches.json). Newest entries: 1.5.002 on 10-08 (upcoming): Chardonnay Cookie (SSR Grass support; a line barrier giving CRIT% 50–100%, Push RES 40–60% and Volley 1–2 to herself and allies in the line, 5 s), max cookie level 100 → 120, EXP for Lv.79–100 cut, a 7-day check-in giving Milk; and an undated 1.4.002 hotfix (Rift boss HP, auto bake, Arena protection). No Guild Conquest change between 09-23 and 10-07.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Chardonnay's kit grants 다발 (Volley) 1 at low grade and 2 at top grade, not 3 (data-patches.json, rich.cookies kit)."],
+      "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "yt-rEX1Rs7cEVw",
+      "url": "https://www.youtube.com/watch?v=rEX1Rs7cEVw",
+      "date": "2026-10-07",
+      "title_kr": "쿠키런 크럼블 토벌전 고득점을 위한 시뮬레이터",
+      "title_en": "A walkthrough of crumb.gg's Guild Conquest simulator",
+      "relevance": 1,
+      "summary_en": "A 205 s video by stanley showing crumb.gg's Guild Conquest simulator; the description says it was made with permission from the developer, Arsen. No team or score is read from it (evidence/r2026-10-07/14-global/yt/yt-rEX1Rs7cEVw.txt).",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "This vid was created with permission from the developer, Arsen.", "en": "(as written)"}]
+    }
+  ],
+  "glossary": [
+    {"kr": "샤르도네맛 쿠키", "en": "Chardonnay Cookie", "kind": "cookie", "confidence": "high", "evidence": "crumb.gg data-patches.json 1.5.002: SSR, Grass, Support, cookie4011"}
+  ]
+}

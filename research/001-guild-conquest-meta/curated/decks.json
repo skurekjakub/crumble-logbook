@@ -4,8 +4,8 @@
     "name_en": "Cherry deck",
     "name_kr": "체리덱",
     "status": "meta",
-    "ceiling": "1T 312G at 1.8G (729×)",
-    "summary": "The standard high-end deck since 9/20. Five Lv.1 fillers keep Pomegranate's +69% skill-amp beams on the carries; Cherry lines the team up inside Macaron's crit buff.",
+    "ceiling": "2T 186G at 2.9G (754×)",
+    "summary": "Still the standard deck in Season 6. Lv.1 fillers keep Pomegranate's +69% skill-amp beams on the carries; Cherry lines the team up inside Macaron's crit buff.",
     "cookies": [
       { "kr": "우유", "level": "100", "why": "ATK #1: both ATK perks land on her; her buff scales with ATK." },
       { "kr": "브시커", "level_rule": "Lv.100, or as high as possible while ATK < Milk", "why": "The carry (90%+ of damage per one poster); ATK #2 for beams." },
@@ -28,23 +28,24 @@
     "substitutions": [
       "Tiger Lily → Herb if the team dies at the 30 s slam: 5 beams, so Tea Knight drops to Lv.1.",
       "Cherry → Melon Soda if you're willing to tune move speed to 0.01 precision (see the Melon Soda deck).",
-      "Candy Shade Pouch replaced Panda Dumpling after 9/23 (more lift resistance plus 12.5% HP)."
+      "Pet: Candy Shade Pouch once carries outlive the 17 s wipe; Panda Dumpling while the team dies there (HP 5–9M).",
+      "Cherry → Popcorn (Lv.60, no move speed): one poster's personal best; single source."
     ],
-    "rng": "1T in 1–2 of 10 runs at 1.74G, 1.1T occasionally. At 0.97G: 150× floor, 250–350× average, 400×+ after 14 h of macro.",
+    "rng": "At 2.93G, 100 runs gave 208–783× (mean 477×); 700×+ in 1 of 20. At 1.74G, 1T in 1–2 of 10.",
     "unorthodox": [
       "Five cookies at Lv.1, including the damage-dealer Scorpion in some versions and the buffer Pomegranate in the #1 run.",
       "An R-rarity Cherry Cookie in an endgame team, purely for formation.",
       "Scorpion levelled to a precise ATK window as a beam catcher rather than as a dealer."
     ],
-    "sources": ["nv:43653", "dc:71135", "dc:76135", "dc:75400", "dc:75617", "dc:76545", "dc:76605", "dc:69368"]
+    "sources": ["nv:43653", "dc:71135", "dc:76135", "dc:75400", "dc:75617", "dc:76545", "dc:76605", "dc:69368", "dc:81110", "dc:80846", "dc:80859", "dc:78711", "nv:48773", "dc:81699", "dc:79169", "dc:80297", "dc:80723"]
   },
   {
     "id": "meso",
     "name_en": "Melon Soda deck",
     "name_kr": "메소정전 / 메소덱",
     "status": "alt",
-    "ceiling": "≈1T at 1.6G (625×)",
-    "summary": "Melon Soda replaces Cherry; move speed on sugar runes forms the line. Higher peak per power when it forms, but tuning is per-account and unforgiving.",
+    "ceiling": "2T 072G at 3.0G (691×)",
+    "summary": "Melon Soda replaces Cherry; move speed on sugar runes forms the line. Past 2T in Season 6; tuning is per-account and unforgiving.",
     "cookies": [
       { "kr": "우유", "level": "100", "why": "As in Cherry: ATK #1 for the perks; buff scales with ATK." },
       { "kr": "브시커", "level": "100", "why": "The carry; one 0.32 move-speed line (0.20–0.29 failed)." },
@@ -53,9 +54,9 @@
       { "kr": "실론", "level": "100", "why": "Beam recipient (ATK #5)." },
       { "kr": "치케", "level": "100", "why": "Sixth beam recipient; buffs Milk's ATK." },
       { "kr": "석류", "level": "100", "why": "Buffer; level is irrelevant to her buff." },
-      { "kr": "메소", "level_rule": "Lv.1–2", "why": "Placement: 0.51 + 0.20 move speed (−0.03 later helped); never takes beams." },
-      { "kr": "피노", "level_rule": "Lv.1–2", "why": "Lift resistance; 0.26 + 0.57 move speed sets arrival order." },
-      { "kr": "전갈", "level_rule": "Lv.1–7, set so she is exactly 7th in ATK (checked in battle)", "why": "Backstop at exactly 7th in ATK, so stray beams skip Melon Soda." },
+      { "kr": "메소", "level_rule": "Lv.1–2", "why": "Placement: one 0.20–0.57 move-speed line, tuned per account; never takes beams." },
+      { "kr": "피노", "level_rule": "Lv.1–2", "why": "Lift resistance; 2–3 move-speed lines (0.26–0.57) set arrival order." },
+      { "kr": "전갈", "level_rule": "Lv.1–40, set so she is exactly 7th in ATK (checked in battle)", "why": "Backstop at exactly 7th in ATK, so stray beams skip Melon Soda." },
       { "kr": "정전", "level": "1", "why": "Multi-hit synergy for 6 beams; all haste runes, no move speed." },
       { "kr": "닼초", "level_rule": "Lv.6–43", "why": "DEF shred. Level tuned so her ATK stays under the beam recipients." }
     ],
@@ -74,7 +75,7 @@
       "Move speed tuned to hundredths on sugar runes to script where each cookie stops.",
       "A 5★ Brightseeker reached 637.8G at 1.14G power, higher per power than most 10★ Cherry decks at the time."
     ],
-    "sources": ["dc:69368", "dc:71105", "dc:74759", "dc:76144", "dc:76716"]
+    "sources": ["dc:69368", "dc:71105", "dc:74759", "dc:76144", "dc:76716", "dc:80848", "dc:81023", "dc:80069", "dc:79624", "dc:79975"]
   },
   {
     "id": "herb",
@@ -100,9 +101,12 @@
     "atk_order": ["우유", "브시커", "피겨", "마카롱", "치케"],
     "pets": ["와사비문어", "핫도그", "색동주머니"],
     "perks": "열정페이 fixed, plus 초고속승진 (or a survival perk if the team is still dying).",
-    "substitutions": ["Back to Tiger Lily once the team survives to 17 s: its average is higher, and the ceiling is similar."],
+    "substitutions": [
+      "Back to Tiger Lily once the team survives to 17 s: its average is higher, and the ceiling is similar.",
+      "Low-variance cousin: Herb Lv.1 next to Tiger Lily, Scorpion out. 9 of 10 runs line up at ~500×; 1T 459G at 2.5G."
+    ],
     "rng": "Raises the floor more than the ceiling: one poster went 93× → 228× at 540M by fixing perks alone.",
-    "sources": ["nv:43011", "dc:71059", "dc:76157", "dc:76605", "dc:71135"]
+    "sources": ["nv:43011", "dc:71059", "dc:76157", "dc:76605", "dc:71135", "dc:79142", "nv:48773"]
   },
   {
     "id": "cheesecake-recipient",
@@ -154,5 +158,72 @@
     "pets": ["핫도그", "와사비문어", "판다만두"],
     "rng": "The author played 4,230 runs in one season and still finished around 87×.",
     "sources": ["nv:36558", "dc:55485"]
+  },
+  {
+    "id": "cherry-levelled",
+    "name_en": "Cherry deck, levelled fillers",
+    "name_kr": "체리덱 (생존 레벨)",
+    "status": "alt",
+    "ceiling": "2T 204G at 2.86G (771×)",
+    "summary": "Best forum screen with its lineup. Fillers sit just under the beam line, not at Lv.1, so 5–6 cookies outlive the 17 s wipe and keep hitting.",
+    "cookies": [
+      { "kr": "우유", "level": "100", "why": "ATK #1: both ATK perks land on her; her buff scales with ATK." },
+      { "kr": "브시커", "level": "100", "why": "The carry, ATK #2 for beams; survives the wipe here." },
+      { "kr": "피겨", "level": "100", "why": "Skill-amp buffer and beam recipient (ATK #3)." },
+      { "kr": "마카롱", "level": "100", "why": "Crit-rate buffer for the cookies in her line." },
+      { "kr": "실론", "level": "100", "why": "Conquest-only Boss DMG buff; beam recipient." },
+      { "kr": "치케", "level": "100", "why": "Grants 다발 2 and buffs Milk; sixth beam." },
+      { "kr": "석류", "level": "100", "why": "The beams; her level doesn't change them." },
+      { "kr": "피노", "level_rule": "As high as stays under the 6th cookie's ATK (Lv.71 in the 2T 204G run)", "why": "Lift resistance; the level keeps her alive past 17 s." },
+      { "kr": "정전", "level_rule": "Under the 6th cookie's ATK (Lv.60 in the 2T 204G run)", "why": "다발 3 for six beams; levelled to live past the wipe." },
+      { "kr": "닼초", "level_rule": "Under the 6th cookie's ATK (Lv.46 in the 2T 204G run)", "why": "DEF shred; levelled to keep shredding after 17 s." },
+      { "kr": "체리", "level_rule": "Under the 6th cookie's ATK (Lv.91 in the 2T 204G run)", "why": "Formation; levelled so she survives and chips in." },
+      { "kr": "전갈", "level_rule": "Under the 6th cookie's ATK after Octo Wasabi's +8% (Lv.42 in the 2T 204G run)", "why": "Catches stray beams; levelled to survive." }
+    ],
+    "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론", "치케"],
+    "atk_order_note": "Every filler's ATK stays under the 6th beam recipient's; the levels are the highest that still do.",
+    "pets": ["와사비문어", "색동주머니", "핫도그"],
+    "perks": "열정페이 + 초고속승진 on Milk.",
+    "formation": "No move speed: Cherry forms the line, as in the Cherry deck.",
+    "substitutions": [
+      "Candy Shade Pouch once carries outlive the wipe; Panda Dumpling placed better while they didn't."
+    ],
+    "rng": "Same author, 100 runs at 2.93G: 208–783×, mean 477×.",
+    "unorthodox": [
+      "Fillers levelled back up after the Lv.1 era, each held just under the beam line, to survive the 17 s wipe."
+    ],
+    "sources": ["dc:80067", "dc:79270", "dc:80859", "dc:79169", "dc:81699", "dc:79493"]
+  },
+  {
+    "id": "meso-nospeed",
+    "name_en": "Melon Soda deck, no move speed",
+    "name_kr": "이속 없는 메소덱",
+    "status": "alt",
+    "ceiling": "3T 045G at 4.23G (≈720×), Season 5 #2's lobby",
+    "summary": "The only top-10 team on screen. Melon Soda deck with Lv.30 fillers and no move speed; retries replace speed tuning.",
+    "cookies": [
+      { "kr": "우유", "level": "100", "why": "ATK #1 for the perks; her buff scales with ATK." },
+      { "kr": "브시커", "level": "100", "why": "The carry, ATK #2 for beams." },
+      { "kr": "피겨", "level": "100", "why": "Beam recipient (ATK #3)." },
+      { "kr": "마카롱", "level": "100", "why": "Crit-rate buffer and beam recipient." },
+      { "kr": "치케", "level": "100", "why": "Grants 다발 2 and buffs Milk; beam recipient." },
+      { "kr": "실론", "level": "100", "why": "Conquest-only Boss DMG buff; sixth beam." },
+      { "kr": "석류", "level": "100", "why": "The beams; her level doesn't change them." },
+      { "kr": "메소", "level": "30", "why": "Placement; 7th in ATK, so stray beams stop here." },
+      { "kr": "전갈", "level": "30", "why": "Sub-dealer under the beam line, 8th in ATK." },
+      { "kr": "정전", "level": "30", "why": "다발 3 for six beams; Lv.30 lives longer than Lv.1." },
+      { "kr": "닼초", "level": "30", "why": "DEF shred; 9th in ATK." },
+      { "kr": "피노", "level": "1", "why": "Lift resistance only." }
+    ],
+    "atk_order": ["우유", "브시커", "피겨", "마카롱", "치케", "실론"],
+    "atk_order_note": "Melon Soda 7th, Scorpion 8th, Dark Choco 9th: the Season 5 #2's order, from memory.",
+    "pets": ["핫도그", "색동주머니", "와사비문어"],
+    "formation": "No move speed anywhere. The line forms by chance, so the run is retried until it does.",
+    "rng": "Lines up poorly; the Season 5 #2 retries without limit.",
+    "unorthodox": [
+      "Zero move speed in a Melon Soda deck: alignment left to retries.",
+      "Fillers at Lv.30, not Lv.1."
+    ],
+    "sources": ["dc:76966", "dc:77113", "web:crumbgg:final-s5"]
   }
 ]

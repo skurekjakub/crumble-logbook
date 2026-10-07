@@ -1,0 +1,300 @@
+{
+  "batch": "videos-r2026-10-07",
+  "posts": [
+    {
+      "source": "other",
+      "id": "yt-WmSUutrNdaY",
+      "url": "https://www.youtube.com/watch?v=WmSUutrNdaY",
+      "date": "2026-10-01",
+      "title_kr": "[쿠키런크럼블] 길드 토벌전 1T 공략 (딜량 기준점)",
+      "title_en": "Guild Conquest 1T guide (damage checkpoints)",
+      "relevance": 3,
+      "summary_en": "서신우 shows a 2.31G-power team that scores 1,049,176,444,324 (~1.05T) on 지나치게 무거워진 피냐타. Pinot, Tiger Lily, Dark Choco and Cherry sit at Lv.1 and Pomegranate at Lv.100, and Scorpion's ATK is tuned below Cheesecake's after adding Octo Wasabi's buff. All sugar runes are shown. For fast retries he gives damage checkpoints at 37 s, 30 s and 20 s left and says to check that cookies survive the 17 s mark.",
+      "scores": [
+        {"damage": "1,049,176,444,324 (≈1.05T)", "power": "2.31G", "ratio": "≈454배", "deck": "체리덱 (Cherry Lv.1 formation slot)", "note": "result screen WmSUutrNdaY-0256.jpg; 길드 순위 4th, 길드 점수 4T 450G (+63G 279M). Lobby power WmSUutrNdaY-0012.png / -0018.jpg"},
+        {"damage": "201,290,156,641 at timer 37.267", "power": "2.31G", "ratio": "", "deck": "same run", "note": "37 s checkpoint, WmSUutrNdaY-0220.jpg"},
+        {"damage": "427,058,149,798 at timer 30.233", "power": "2.31G", "ratio": "", "deck": "same run", "note": "30 s checkpoint, WmSUutrNdaY-0227.jpg"},
+        {"damage": "752,056,714,622 at timer 19.733", "power": "2.31G", "ratio": "", "deck": "same run", "note": "≈20 s checkpoint, WmSUutrNdaY-0238.jpg"}
+      ],
+      "teams": [{
+        "name": "1T 체리덱 (tab 2)",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "95", "stars": "5 (4 pink + 1 gold)", "note": "grass; row1 slot1; WmSUutrNdaY-0018.jpg"},
+          {"kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "5 (1 pink + 4 gold)", "note": "light shooter; row1 slot2"},
+          {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "5 (pink)", "note": "dark; row1 slot3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "5 (pink)", "note": "dark; row1 slot4"},
+          {"kr": "정글전사", "en": "Tiger Lily", "level": "1", "stars": "5 (4 pink + 1 gold)", "note": "grass; row1 slot5"},
+          {"kr": "다크초코", "en": "Dark Choco", "level": "1", "stars": "5 (pink)", "note": "dark defense; row1 slot6"},
+          {"kr": "체리", "en": "Cherry", "level": "1", "stars": "5 (4 pink + 1 gold)", "note": "fire shooter; row2 slot1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "47", "stars": "5 (pink)", "note": "fire shooter; row2 slot2"},
+          {"kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "5 (4 pink + 1 gold)", "note": "light; row2 slot3"},
+          {"kr": "피겨여왕", "en": "Skating Queen", "level": "96", "stars": "5 (pink)", "note": "water striker; row2 slot4"},
+          {"kr": "우유 (바삭튼튼 소아과 의사 우유맛 쿠키)", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5 (4 pink + 1 gold)", "note": "light; leader (용병단장) banner; row2 slot5"},
+          {"kr": "실론나이트", "en": "Tea Knight", "level": "100", "stars": "5 (gold)", "note": "light defense; row2 slot6"}
+        ],
+        "pets": ["와사비 문어 (Octo Wasabi) ★19", "핫도그도그 (Hot Doggie) ★20", "색동 주머니 (Candy Shade Pouch) ★15"],
+        "atk_order": ["우유", "시커", "피겨", "실론", "마카롱", "치즈", "전갈"],
+        "perks": "용병단 leader 우유; 열정페이 (공격력 가장 높은 아군 공격력 20% 증가, 최대체력 20% … [cut]) and 초고속 승진 (공격력 가장 높은 아군 공격력 7% 증가). WmSUutrNdaY-0040.jpg",
+        "formation": "lobby tab 2 of 5; 2×6 grid as listed",
+        "substitutions": ["체리 자리에 메론(메론소다) → higher ceiling but needs a separate move-speed (이속) setup; author did not use it (WmSUutrNdaY-0012.png / subtitle at 0:12)"],
+        "unorthodox": [
+          "Pinot, Tiger Lily, Dark Choco, Cherry at Lv.1: '석류는 100레벨에 나머지는 1레벨로 두시면 됩니다' (WmSUutrNdaY-0032.jpg, -0034.jpg)",
+          "Scorpion Lv.47: ATK (its own ATK + Octo Wasabi's ATK buff) set below Cheesecake's (WmSUutrNdaY-0025.jpg, -0030.jpg)",
+          "Tea Knight runes only 3 open lines (3× SR 스증 3.50%) because of low promotion (WmSUutrNdaY-0151.jpg)"
+        ]
+      }],
+      "sugar_runes": [
+        {"cookie": "브라이트시커", "stats": "SSR 스킬가속 +4.00, SR +3.00, SR +3.00, SSR +4.00 (4 open lines, all 스가 = +14); locked: ★8 C 회피율 0.80%, ★8 SSR 스가 +4.00, ★10 U 치명피해 2.60%, ★10 R 이동속도 +0.51", "why": "WmSUutrNdaY-0110.jpg"},
+        {"cookie": "다크초코", "stats": "8 lines all 스킬가속: SR +2, +3, +2, +3, +2, +2, +2, SSR +4 (= +20)", "why": "WmSUutrNdaY-0114.jpg"},
+        {"cookie": "석류", "stats": "8 lines all 스킬증폭: SR 3.50, 3.20, 3.50, 3.20, 3.20, 3.50, 3.20 %, SSR 4.40%", "why": "WmSUutrNdaY-0119.jpg"},
+        {"cookie": "전갈", "stats": "SR 치명확률 5.80%, SSR 치명피해 7.00%, SR 스증 3.20%, SR 치확 5.40%, SSR 스증 4.70%, SSR 치확 7.00%, SR 치피 4.80%, SR 치확 4.80%", "why": "WmSUutrNdaY-0122.jpg"},
+        {"cookie": "우유", "stats": "SR 공격력 증폭 4.20%, SSR 6.50%, SR 5.10%, SR 4.20%, SR 4.70%, SSR 스증 4.40% (6 open); locked ★10 SSR 공증 6.10%, ★10 C 공증 1.40%", "why": "WmSUutrNdaY-0126.jpg"},
+        {"cookie": "피겨여왕", "stats": "8 lines all 스증: SR 3.80, 3.50, 3.20, 3.20, 3.20 %, SSR 4.40%, SR 3.20%, SSR 4.70%", "why": "WmSUutrNdaY-0130.jpg"},
+        {"cookie": "피노누아", "stats": "SR 체력 증폭 4.20%, SR 4.20%, SSR 6.50%, SR 4.70%, SR 4.20%, SSR 6.10%, SR 피해감소 4.70%, SR 방어력 증폭 5.10%", "why": "WmSUutrNdaY-0134.jpg"},
+        {"cookie": "마카롱", "stats": "6 open lines all 스증: SSR 4.40%, SR 3.50%, SSR 5.00%, SR 3.80%, SR 3.20%, SSR 4.40%; locked ★10 SR 공증 4.70%", "why": "WmSUutrNdaY-0137.jpg"},
+        {"cookie": "치즈케이크", "stats": "6 open lines all 스증: SR 3.50%, SSR 4.70%, SR 3.20%, SR 3.80%, SSR 4.40%, SR 3.80%; locked ★10 SSR 스증 4.40%, ★10 U 방어력 증폭 1.90%", "why": "WmSUutrNdaY-0141.jpg"},
+        {"cookie": "체리", "stats": "SR 치명피해 5.80%, SSR 공격력 증폭 6.50%, SR 치피 5.40%, SR 치피 5.80%, SR 치확 4.80%, SR 스증 3.20%; locked ★10 R 저항확률 2.80%, ★10 C 치피 1.60%", "why": "WmSUutrNdaY-0146.jpg (Cherry is Lv.1)"},
+        {"cookie": "실론나이트", "stats": "3 open lines: SR 스증 3.50% ×3; locked ★6 C 스증 1.30%, ★8 SSR 스증 4.40% ×2, ★10 SSR 스증 4.40%, ★10 R 스증 2.50%", "why": "WmSUutrNdaY-0151.jpg"},
+        {"cookie": "정글전사", "stats": "6 open lines all 스킬가속: SR +2, SSR +4, SR +2, +2, +2, +2 (= +14); locked ★10 R 집중확률 3.20%", "why": "WmSUutrNdaY-0155.jpg (Tiger Lily is Lv.1)"}
+      ],
+      "gear": [],
+      "rng": [
+        "Fast-retry rule: compare damage at 37 s, 30 s and 20 s left against the shown run, and check survival past 17 s (WmSUutrNdaY-0057.jpg, -0101.jpg)",
+        "Shown run checkpoints: 201.29G @37.267, 427.06G @30.233, 752.06G @19.733 (WmSUutrNdaY-0220/-0227/-0238.jpg)"
+      ],
+      "mechanics": [
+        "17 s mark: at timer 18.233 all 12 cookies are alive (814.3G); at 16.733 only Macaron, Brightseeker, Pomegranate, Skating Queen and Tea Knight remain (863.9G, WmSUutrNdaY-0241.jpg); at 11.733 Macaron, Brightseeker and Skating Queen are visible alive (985.3G, WmSUutrNdaY-0246.jpg); all dead by 6.000 (1,049.18G, WmSUutrNdaY-0252.jpg)",
+        "At timer 44.733 all 12 alive, 37.76G (WmSUutrNdaY-0213.jpg)",
+        "Scorpion receives Octo Wasabi's buff, so its pre-battle ATK plus Wasabi's ATK bonus must stay below Cheesecake's (WmSUutrNdaY-0025.jpg, -0030.jpg)",
+        "Tea Knight goes to 5★ this week (patch); buying every Tea Knight incl. packages then levelling with saved dough helps reach 1T (WmSUutrNdaY-0043.jpg, guild medal shop shows Tea Knight item 4,000)"
+      ],
+      "disagreements": [
+        "Commenter @Hycalix: team power ~1.3G, correct ATK order and runes, mostly SSR, but only ~300G",
+        "Commenter @choi-c4k: Seeker 5★, 스가 34, power 900M → ~370G",
+        "Commenter @mewmeiwr822: 582G following the layout; Lv.1 cookies die at 30 s, Milk at 25 s, all over by 17 s",
+        "Commenters ask why Lv.1 (unanswered in video beyond the rule) and why Cherry instead of Rye (호밀)"
+      ],
+      "quotes": [
+        {"kr": "체리 자리에 메론을 넣으면 더 고점이기는 한데 이속 세팅을 따로 해야 돼서 저는 사용하지 않았고", "en": "Melon Soda in Cherry's slot has a higher ceiling but needs a separate move-speed setup, so I didn't use it (0:12)"},
+        {"kr": "공격력 순서는 차례대로 우유, 시커, 피겨, 실론, 마카롱, 치즈, 전갈에", "en": "ATK order: Milk, Seeker, Skating Queen, Tea Knight, Macaron, Cheesecake, Scorpion (WmSUutrNdaY-0018.jpg, -0020.jpg)"},
+        {"kr": "전갈은 와사비 버프를 받기 때문에 들어가기 전 공격력에서 본인 기준 와사비의 공격력을 더한 전갈의 공격력을 치즈보다 낮게 설정해 주셔야 하며", "en": "Scorpion gets the Wasabi buff, so its pre-battle ATK plus Wasabi's ATK must be set below Cheesecake's (WmSUutrNdaY-0025.jpg, -0030.jpg)"},
+        {"kr": "석류는 100레벨에 나머지는 1레벨로 두시면 됩니다", "en": "Pomegranate at Lv.100, leave the rest at Lv.1 (WmSUutrNdaY-0032.jpg, -0034.jpg)"},
+        {"kr": "용병단은 이렇게 우유의 공격력을 최대한 높여주시고", "en": "Set the mercenary corps to push Milk's ATK as high as possible (WmSUutrNdaY-0037.jpg)"},
+        {"kr": "1T가 좀 애매하신 분들은 패키지를 포함한 모든 실론을 구매하셨다면 이번 주에 실론이 5성으로 오르기 때문에 해당 실론을 올리고 모아둔 반죽을 소모한 뒤 진행하시면 되겠습니다", "en": "If 1T is borderline and you bought every Tea Knight incl. packages, Tea Knight reaches 5★ this week: promote it and spend saved dough first (WmSUutrNdaY-0040.jpg, -0043.jpg)"},
+        {"kr": "빠른 리트를 하시려면 37초, 30초, 20초를 기준으로 저만큼 딜이 나왔는지와 17초 이후에 쿠키들이 생존에 성공했는지를 보시면 됩니다", "en": "For fast retries, check whether damage matches mine at 37 s, 30 s, 20 s and whether cookies survive past 17 s (WmSUutrNdaY-0057.jpg, -0101.jpg)"}
+      ]
+    },
+    {
+      "source": "other",
+      "id": "yt-mYqjYOdkqcg",
+      "url": "https://www.youtube.com/watch?v=mYqjYOdkqcg",
+      "date": "2026-10-01",
+      "title_kr": "[쿠키런 크럼블] 길드토벌전 1T 고득점 덱 공략 ft.메론소다맛 쿠키",
+      "title_en": "Guild Conquest 1T high-score deck guide ft. Melon Soda",
+      "relevance": 3,
+      "summary_en": "누리머 runs a 2.35G-power Melon Soda (메소) deck that scores 1,031,191,001,321 (~1.03T), personal rank 430th. Melon Soda, Pinot, Tiger Lily and Dark Choco are Lv.1 so that Pomegranate's buff doesn't scatter. He switched from Panda Dumpling (18% lift resistance) to Candy Shade Pouch (30% lift resistance, +10% HP) to keep the formation from breaking. Cherry deck = lower ceiling but stable; Melon Soda deck = higher ceiling, needs move-speed setup and endless retries; his lowest and highest scores differ by more than 3×.",
+      "scores": [
+        {"damage": "1,031,191,001,321 (≈1.03T)", "power": "2.35G", "ratio": "≈439배", "deck": "메소덱", "note": "final counter value from timer 15.333 onward, mYqjYOdkqcg-0109.jpg … -0117.jpg; personal ranking 430th 1T 31G, mYqjYOdkqcg-0144.jpg"},
+        {"damage": "388,575,135,122", "power": "2.35G", "ratio": "", "deck": "메소덱 (same deck, worst run)", "note": "inset shown at timer 14.500 as the author's lowest score, 'more than 3× gap' (mYqjYOdkqcg-0102.jpg, -0104.jpg)"},
+        {"damage": "4T 387G", "power": "?", "ratio": "", "deck": "?", "note": "personal ranking #1 Arsen; #2 똥에디 3T 740G; #3 바삭한반장 3T 513G; #4 노약자 3T 448G (mYqjYOdkqcg-0144.jpg)"}
+      ],
+      "teams": [{
+        "name": "메소덱",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "5 (3 pink + 2 gold)", "note": "grass; row1 slot1; mYqjYOdkqcg-0124.jpg"},
+          {"kr": "전갈", "en": "Scorpion", "level": "35", "stars": "5 (pink)", "note": "fire shooter; row1 slot2"},
+          {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "5 (pink)", "note": "dark; row1 slot3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "5 (pink)", "note": "dark; row1 slot4"},
+          {"kr": "정글전사", "en": "Tiger Lily", "level": "1", "stars": "5 (pink/gold mix, ?)", "note": "grass; row1 slot5"},
+          {"kr": "다크초코", "en": "Dark Choco", "level": "1", "stars": "5 (pink)", "note": "dark defense; row1 slot6"},
+          {"kr": "브라이트시커", "en": "Brightseeker", "level": "98", "stars": "5 (pink)", "note": "light shooter; row2 slot1"},
+          {"kr": "메론소다", "en": "Melon Soda", "level": "1", "stars": "5 (pink)", "note": "water shooter; row2 slot2"},
+          {"kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "5 (4 pink + 1 gold)", "note": "light; row2 slot3"},
+          {"kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "5 (pink)", "note": "water striker; row2 slot4"},
+          {"kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5 (pink)", "note": "light; leader banner; row2 slot5"},
+          {"kr": "실론나이트", "en": "Tea Knight", "level": "95", "stars": "5 (gold)", "note": "light defense; row2 slot6"}
+        ],
+        "pets": ["와사비 문어 (Octo Wasabi) ★20", "핫도그도그 (Hot Doggie) ★20", "색동 주머니 (Candy Shade Pouch) ★16"],
+        "atk_order": ["우유", "브라이트시커", "피겨여왕", "마카롱", "실론", "치즈케이크", "전갈"],
+        "perks": "복지는 열정페이 (공격력 가장 높은 아군 공격력 20% 증가, 최대체력 20% 감소), 초고속 승진 (공격력 가장 높은 아군 공격력 7% 증가); leader 우유 (mYqjYOdkqcg-0119.jpg)",
+        "formation": "2×6 lobby as listed; 2.35G (mYqjYOdkqcg-0124.jpg, -0132.jpg)",
+        "substitutions": ["체리덱 instead of 메소덱 for fewer retries and a stable score (subtitle ~0:47)"],
+        "unorthodox": [
+          "Melon Soda, Pinot, Tiger Lily, Dark Choco at Lv.1 'to minimise Pomegranate's buff scattering' (mYqjYOdkqcg-0132.jpg)",
+          "Scorpion Lv.35: level adjusted for the extra ATK from Octo Wasabi (mYqjYOdkqcg-0138.jpg)",
+          "Candy Shade Pouch instead of Panda Dumpling for lift resistance 30% vs 18% (mYqjYOdkqcg-0015.jpg, -0019.jpg)"
+        ]
+      }],
+      "sugar_runes": [
+        {"cookie": "(pinned comment)", "stats": "마카롱 스증; 브라이트시커 스증 > 치확, 치피 (8성 이상 스가); 전갈 스증 > 치확, 치피; 메론소다 스증 > 치확, 치피; 피노누아 피해감소, 체력 // 집중확률 (스테이지 겸용); 치즈케이크 스증; 석류 스증; 피겨여왕 스증; 정글전사 스가; 우유맛 공격력; 다크초코 스가 // 집중확률 (스테이지 겸용); 실론 스증", "why": "author's pinned comment (digest), no rune screens in video"}
+      ],
+      "gear": [],
+      "rng": [
+        "'문제는 이걸 유저들이 직접 조작할 수 없어서 최적의 상황이 나올 때까지 무한 리트를 해야 하는 건데요' (mYqjYOdkqcg-0013.jpg)",
+        "Lowest vs highest score with the deck differ by more than 3× (388.6G vs 1.03T; mYqjYOdkqcg-0102.jpg, -0104.jpg)",
+        "Panda Dumpling → Candy Shade Pouch cut retry count clearly ('리트 횟수가 확실히 줄어들었습니다', mYqjYOdkqcg-0045.jpg)",
+        "Cherry deck: lower ceiling, formation sits well; Melon Soda deck: higher ceiling, formation breaks unless move speed is set (mYqjYOdkqcg-0027.jpg, -0031.jpg, -0037.jpg)"
+      ],
+      "mechanics": [
+        "Score depends on how well cookies receive buffs (subtitle 0:00–0:05)",
+        "Panda Dumpling (R): 아군 띄우기 저항 18% 증가; Candy Shade Pouch (SSR): 아군 띄우기 저항 30%, 최대체력 10% 증가 (mYqjYOdkqcg-0015.jpg, -0019.jpg)",
+        "Octo Wasabi (SSR): 아군 지속 시너지 +40%, 지속 시너지를 받는 아군 공격력 10% 증가 (mYqjYOdkqcg-0138.jpg)",
+        "17 s mark: at timer 17.833 all 12 cookies alive (977.3G, mYqjYOdkqcg-0107.jpg); at 16.333 only one Lv.100 cookie card remains alive (1,025.4G, mYqjYOdkqcg-0109.jpg); subtitle says Pomegranate survives; damage stops at 1,031.19G from timer 15.333 (mYqjYOdkqcg-0112.jpg, -0117.jpg)",
+        "Run timeline: 122.45G @40.333 (mYqjYOdkqcg-0045.jpg), 421.70G @32.333 (-0053.jpg), 574.69G @28.300 (-0057.jpg), 837.61G @21.333 (-0104.jpg)"
+      ],
+      "disagreements": [
+        "Commenter @이연석2615: heard Brightseeker must be all 스가, set it so; asks whether to change (author recommends 스증 unless 8★)",
+        "Commenter asks why Scorpion takes 스증 over 집중 (unanswered)"
+      ],
+      "quotes": [
+        {"kr": "기존에 쓰던 판다만두의 저항은 18% 이번에 나온 색동주머니의 저항은 30% 이 차이 때문에 쿠키들의 진형이 붕괴되는 문제가 많이 줄어들었습니다", "en": "Panda Dumpling gave 18% resistance, the new Candy Shade Pouch gives 30%; this cut formation collapse a lot (mYqjYOdkqcg-0015.jpg, -0019.jpg)"},
+        {"kr": "체리는 고점은 낮으나 쿠키 진형이 비교적 잘 배치되고 메소는 고점은 높으나 쿠키 진형 배치가 잘 안됩니다", "en": "Cherry: lower ceiling, formation holds; Melon Soda: higher ceiling, formation doesn't hold (mYqjYOdkqcg-0027.jpg, -0031.jpg)"},
+        {"kr": "그래서 이 진형 배치를 위해 메소덱은 이속 세팅을 하는게 최고점의 방법인데요", "en": "So for formation, a move-speed setup is the way to max score with the Melon Soda deck (mYqjYOdkqcg-0037.jpg)"},
+        {"kr": "랭커가 아니면 이속 세팅은 도전하는 것을 비추천합니다 적은 리트로 적당한 점수를 원하신다면 체리덱을 쓰면 되고 많은 리트를 해서라도 고점을 원하신다면 메소덱을 쓰세요", "en": "Unless you're a ranker, don't attempt the speed setup; Cherry deck for a decent score with few retries, Melon Soda deck if you'll retry a lot for a high score (mYqjYOdkqcg-0050.jpg, -0053.jpg, -0057.jpg)"},
+        {"kr": "참고로 제 최저점과 최고점은 3배 이상 차이가 납니다 이렇게 점수 차이가 많이 나기 때문에 무한 리트가 최고이자 최선입니다", "en": "My lowest and highest differ by more than 3×; so endless retries are the best option (mYqjYOdkqcg-0102.jpg, -0104.jpg)"},
+        {"kr": "석류가 생존하는 것을 볼 때 17초 이후에도 체력, 방어력 등의 연구를 더 많이 하고 딜을 넣을 수 있는 덱을 만들어볼까 합니다", "en": "Seeing Pomegranate survive, I'll research more HP/DEF and try a deck that keeps dealing damage after 17 s (mYqjYOdkqcg-0109.jpg, -0112.jpg, -0117.jpg)"},
+        {"kr": "쿠키 공격력 순위는 1.우유 2.브라이트시커 3.피겨여왕 4.마카롱 5.실론 6.치즈케이크 7.전갈", "en": "Cookie ATK ranking (mYqjYOdkqcg-0124.jpg)"},
+        {"kr": "메소, 피노누아, 정글전사, 다크초코의 레벨을 1로 해서 석류 버프가 튀는 문제를 최소화합니다", "en": "Melon Soda, Pinot Noir, Tiger Lily, Dark Choco at Lv.1 to minimise Pomegranate's buff going astray (mYqjYOdkqcg-0132.jpg)"},
+        {"kr": "와사비 문어가 주는 추가 공격력을 고려해서 전갈맛 레벨을 조절하시면 됩니다", "en": "Adjust Scorpion's level for the extra ATK from Octo Wasabi (mYqjYOdkqcg-0138.jpg)"}
+      ]
+    },
+    {
+      "source": "other",
+      "id": "yt-K0aJ56DdQvc",
+      "url": "https://www.youtube.com/watch?v=K0aJ56DdQvc",
+      "date": "2026-10-03",
+      "title_kr": "公會戰更新拚出1T86G傷害 (薑餅人放置大戰爭)",
+      "title_en": "Guild Conquest update: 1T 86G damage, Milk & Cheesecake buff mechanics",
+      "relevance": 3,
+      "summary_en": "PonPonLin (TW client) scores 1,086,717,570,926 (1T 86G) with a 2.61G team that adds Coffee Cookie Lv.70 instead of Cherry/Melon Soda, with low-level (Lv.50/60) fillers rather than Lv.1. Every cookie's card stats (ATK) are shown to set the ATK order below Cheesecake's 735.85K. He explains that Milk and Cheesecake exchange ATK buffs to get around non-stacking, and that Pomegranate's tether randomly prefers attack-speed units and the current highest-ATK unit. Full sugar runes and all 7 gear pieces are shown.",
+      "scores": [
+        {"damage": "1,086,717,570,926 (1T 86G)", "power": "2.61G", "ratio": "≈416배", "deck": "coffee/Lv.50 filler deck", "note": "result K0aJ56DdQvc-0346.jpg: 最終分數 1,086,717,570,926, 公會排名 3rd, 公會分數 11T 386G (+101G 971M); lobby K0aJ56DdQvc-0004.jpg shows 個人排名 8th 1T 86G"},
+        {"damage": "15T 271G (guild)", "power": "", "ratio": "", "deck": "", "note": "guild ranking #1 달빛그늘 15T 271G, #2 파편 12T 927G, #3 會蹦蹦的餅乾 11T 604G (K0aJ56DdQvc-0004.jpg)"}
+      ],
+      "teams": [{
+        "name": "PonPonLin 1T86G (tab 3)",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "5 (4 pink + 1 gold)", "note": "SR card, ATK 767.92K, power 284.44M (K0aJ56DdQvc-0048.jpg); row1 slot1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "50", "stars": "5 (pink)", "note": "ATK 667.67K, power 257.19M (K0aJ56DdQvc-0054.jpg); row1 slot2"},
+          {"kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "5 (4 pink + 1 gold)", "note": "ATK 735.85K, power 268.77M (K0aJ56DdQvc-0106.jpg); row1 slot3"},
+          {"kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "5 (pink)", "note": "ATK 913.45K, power 333.23M (K0aJ56DdQvc-0118.jpg); row1 slot4"},
+          {"kr": "정글전사", "en": "Tiger Lily", "level": "60", "stars": "5 (3 pink + 2 gold)", "note": "ATK 641.87K, power 222.85M (K0aJ56DdQvc-0140.jpg); row1 slot5"},
+          {"kr": "다크초코", "en": "Dark Choco", "level": "50", "stars": "5 (pink)", "note": "ATK 656.22K, power 230.01M (K0aJ56DdQvc-0200.jpg); row1 slot6"},
+          {"kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "5 (1 pink + 4 gold)", "note": "ATK 884.53K, power 319.58M (K0aJ56DdQvc-0049.jpg); row2 slot1"},
+          {"kr": "피노누아", "en": "Pinot Noir", "level": "50", "stars": "5 (pink)", "note": "ATK 647.34K, power 243M (K0aJ56DdQvc-0058.jpg); row2 slot2"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "5 (pink)", "note": "ATK 856.72K, power 344.97M (K0aJ56DdQvc-0114.jpg); row2 slot3"},
+          {"kr": "커피 (咖啡餅乾)", "en": "Coffee Cookie", "level": "70", "stars": "5 (4 pink + 1 gold)", "note": "U rarity, water support; ATK 648.95K, power 217.96M (K0aJ56DdQvc-0121.jpg); row2 slot4"},
+          {"kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "5 (pink)", "note": "ATK 1M, power 346.34M (K0aJ56DdQvc-0152.jpg); leader banner; row2 slot5"},
+          {"kr": "실론나이트", "en": "Tea Knight", "level": "100", "stars": "5 (gold)", "note": "ATK 763.13K, power 269.65M (K0aJ56DdQvc-0207.jpg); row2 slot6"}
+        ],
+        "pets": ["와사비 문어 (Octo Wasabi) ★20", "색동 주머니 (Candy Shade Pouch) ★19", "핫도그도그 (Hot Doggie) ★20"],
+        "atk_order": ["우유 1M", "피겨 913.45K", "브시커 884.53K", "석류 856.72K", "마카롱 767.92K", "실론 763.13K", "치케 735.85K", "전갈 667.67K", "닼초 656.22K", "커피 648.95K", "피노 647.34K", "정전 641.87K"],
+        "perks": "Pinned comment: 傭兵隊長給牛奶、卡片大宗屬性、+20%攻擊-20%血量 (leader Milk, +20% ATK −20% HP card)",
+        "formation": "lobby tab 3, 2.61G (K0aJ56DdQvc-0004.jpg)",
+        "substitutions": ["Coffee Cookie Lv.70 in the slot others use for Cherry/Melon Soda", "Overlay: if retrying is too much trouble, run everything at Lv.100 and retry (K0aJ56DdQvc-0030.jpg)"],
+        "unorthodox": [
+          "Fillers at Lv.50/60/70 (Scorpion 50, Pinot 50, Dark Choco 50, Tiger Lily 60, Coffee 70) instead of Lv.1; every cookie except the main dealers/buffers kept below Cheesecake's 735K ATK (K0aJ56DdQvc-0106.jpg)",
+          "Coffee Cookie added for its continuous-synergy interval / single-target effect benefiting 探子(Brightseeker), Scorpion, Milk (K0aJ56DdQvc-0121.jpg)",
+          "Dark Choco all 스가 with ATK deliberately lowered (K0aJ56DdQvc-0200.jpg, -0201.jpg)"
+        ]
+      }],
+      "sugar_runes": [
+        {"cookie": "브라이트시커", "stats": "4 open: SSR 技能增幅 4.70%, R 技能增幅 2.50%, SSR 技能增幅 5.00%, R 暴擊傷害 3.80%; locked ★8 專注率 2.00%, ★8 攻擊力增幅 2.30%, ★10 傷害減少 1.80%, ★10 命中率 3.20%", "why": "K0aJ56DdQvc-0050.jpg"},
+        {"cookie": "전갈", "stats": "SR 스증 3.50, SR 집중 3.60, SR 집중 4.40, SSR 스증 4.40, SR 집중 4.00, SR 치피 5.40, SR 치피 4.80, SR 치피 4.80 (%) — '부분 집중'", "why": "K0aJ56DdQvc-0054.jpg"},
+        {"cookie": "피노누아", "stats": "SR 피감 3.90, 3.90, 4.20, 3.90 (%), SR 체력 증폭 4.70%, R 방어력 증폭 3.30%, SSR 체력 증폭 6.10%, SR 피감 4.20%", "why": "K0aJ56DdQvc-0102.jpg"},
+        {"cookie": "마카롱 / 석류 / 피겨여왕", "stats": "all 스킬증폭 (全技能增幅) per subtitles; rune lists not transcribed line-by-line", "why": "K0aJ56DdQvc-0048.jpg, -0114.jpg, -0118.jpg"},
+        {"cookie": "커피", "stats": "C 집중 1.20%, SR 스가 +3.00, SR +2.00, SR +2.00, SR +2.00, SSR +4.00; locked ★10 스증 2.50%, ★10 저항 2.00%", "why": "K0aJ56DdQvc-0130.jpg"},
+        {"cookie": "정글전사", "stats": "R 피감 3.30%, SR 체력 증폭 4.20%, SR 피감 4.20%, SR 체력 증폭 5.10%, SR 5.10%, SR 4.70%; locked ★10 SSR 치피 7.40%, U 피감 2.30% — '體力跟傷害減少'", "why": "K0aJ56DdQvc-0136.jpg, -0137.jpg"},
+        {"cookie": "우유", "stats": "SR 스증 3.20%, SR 스증 3.20%, SSR 공증 6.10%, SR 공증 4.70%, SR 4.70%, SSR 6.10%, SR 스증 3.20%, R 공증 3.70% — author plans to push 스증/공 lines to SSR gold", "why": "K0aJ56DdQvc-0144.jpg"},
+        {"cookie": "다크초코", "stats": "SR 스가 +3, +3, +3, SSR +5, SR +2, +2, C 집중 1.20%, SR +3 — '全塞技能加速'", "why": "K0aJ56DdQvc-0201.jpg"}
+      ],
+      "gear": [
+        {"slot": "왼쪽 위 (top-left) ×3", "substats": "치명확률 + 스킬증폭: 毀滅之斧 Lv109 +16 (main ATK +8,131; 暴擊率 21.27%, 技能增幅 8.07%); 穿透黑暗的淨化之弓 Lv111 +16 (main 命中 +584.26; 暴擊率 16.97%, 技能增幅 8.83%); 開啟夢幻的夢光魔杖 Lv104 +16 (main 暴擊率 41.92%; 暴擊率 20.30%, 技能增幅 8.60%)", "context": "raid (公會 Boss preset)", "why": "K0aJ56DdQvc-0218.jpg, -0221.jpg, -0222.jpg"},
+        {"slot": "우상단 (top-right) ×3", "substats": "스킬증폭 + 스킬가속: 虛無纏繞的項鍊 Lv111 +15 (main 暴擊抵抗 43.05%; 技能增幅 8.76%, 技能加速 +4.60); 狡詐的謊言胸針 Lv110 (main 抵抗 +533.00; 技能增幅 8.16%, 技能加速 +4.60)", "context": "raid", "why": "K0aJ56DdQvc-0224.jpg, -0228.jpg"},
+        {"slot": "우하단 (bottom-right)", "substats": "피해감소 + 스킬가속: 終極食譜 Lv101 +16 (main 技能增幅 13.38%; 傷害減少 6.34%, 技能加速 +4.60)", "context": "raid", "why": "K0aJ56DdQvc-0231.jpg"},
+        {"slot": "좌하단 / 방어구 (bottom-left)", "substats": "피해감소 + 체력: ?騎士盔甲 Lv110 +16 (main DEF +8,278; 傷害減少 6.53%, 體力 +10,729)", "context": "raid", "why": "K0aJ56DdQvc-0233.jpg (item name blurred)"}
+      ],
+      "rng": [
+        "Overlay: 完美連動極度吃運氣,需瘋狂 RE 拚傷害上限 — a perfect chain is pure luck, you must retry like mad (K0aJ56DdQvc-0030.jpg)",
+        "Pomegranate tether randomness: 石榴牽線的隨機性 (K0aJ56DdQvc-0030.jpg)"
+      ],
+      "mechanics": [
+        "Overlay: ATK buffs don't stack and the caster doesn't get its own effect; Milk and Cheesecake receive each other's buff, so Milk carries Cheesecake's big ATK buff and re-broadcasts it to the whole team; Milk is team-wide but Cheesecake has a hit-count limit (K0aJ56DdQvc-0030.jpg)",
+        "Overlay: Pomegranate's skill buff prefers attack-speed (彈速) cookies and the 'current highest ATK' unit; Tiger Lily synergy raises the cap but adds randomness (K0aJ56DdQvc-0030.jpg)",
+        "Coffee Cookie skill 要來杯咖啡嗎?: every 5 s, team accuracy +55%, continuous synergy 75%, lasts 4.5 s, 2 combo casts (K0aJ56DdQvc-0124.jpg)",
+        "Boss weakness icon = moon/dark element shown in lobby (K0aJ56DdQvc-0004.jpg)",
+        "Battle: timer 44.267 → 50.13G (K0aJ56DdQvc-0259.jpg); timer 43.300 → 64.06G with all 12 cookies alive (K0aJ56DdQvc-0300.jpg); 17 s-mark survival not captured"
+      ],
+      "disagreements": [
+        "Commenter @阿惟: suggests evasion (閃避) build with Pinot/Tiger Lily/Dark Choco/Cherry/Scorpion at Lv.1 and gear 左下 傷害減少+閃避, 右下 技能加速+閃避"
+      ],
+      "quotes": [
+        {"kr": "那起司蛋糕是735k / 其他的就是主輸出以及還有主增幅 / 餅乾攻擊力都要比735k再更低一點", "en": "Cheesecake is 735K; apart from the main dealers and main buffers, every cookie's ATK must be a bit lower than 735K (K0aJ56DdQvc-0106.jpg)"},
+        {"kr": "牛奶餅乾的話呢 它就是全放攻擊力最高嘛", "en": "Milk: all-in ATK, highest (K0aJ56DdQvc-0144.jpg / -0152.jpg)"},
+        {"kr": "黑巧克力的話呢 是全塞是塞技能加速 那整個的攻擊力呢也有拉低", "en": "Dark Choco: all skill haste, and its ATK is pulled down (K0aJ56DdQvc-0200.jpg)"},
+        {"kr": "若覺得麻煩,可都100等拚RE即可", "en": "If it's too much trouble, put everyone at Lv.100 and just retry (K0aJ56DdQvc-0030.jpg)"}
+      ]
+    },
+    {
+      "source": "other",
+      "id": "yt-aIHA41S7KJs",
+      "url": "https://www.youtube.com/watch?v=aIHA41S7KJs",
+      "date": "2026-10-01",
+      "title_kr": "Cookie Run Crumble: NEW Guild Conquest Lineup! 113 BILLION Score! (1 October Edition)",
+      "title_en": "NEW Guild Conquest lineup, 113 billion score",
+      "relevance": 2,
+      "summary_en": "EggZaMonkey (Global client) runs a 1.52G-power all-Lv.100 team with Popcorn, Rye and Melon Soda added, scoring 106.9G–113.4G across three runs (best 113,373,933,991). A static side panel shows the Passion Pay / Rapid Promotion perks and the sugar runes of Popcorn, Rye and Melon Soda. No ATK order or Lv.1 fillers are used.",
+      "scores": [
+        {"damage": "112,497,216,726", "power": "1.52G", "ratio": "≈74배", "deck": "Popcorn/Rye/Melon Soda all-Lv.100", "note": "run 1 result, aIHA41S7KJs-0047.jpg; guild rank 3rd, guild score 326G 416M (+5G 932M)"},
+        {"damage": "113,373,933,991", "power": "1.52G", "ratio": "≈75배", "deck": "same", "note": "run 2 result, aIHA41S7KJs-0135.jpg; guild score 327G 292M (+876M 717K); player ranking LRSONGABE 113G 373M (aIHA41S7KJs-0136.jpg)"},
+        {"damage": "106,947,912,798", "power": "1.52G", "ratio": "≈70배", "deck": "same", "note": "run 3 result, aIHA41S7KJs-0222.jpg"}
+      ],
+      "teams": [{
+        "name": "Global 1.52G lineup (tab 3)",
+        "cookies": [
+          {"kr": "마카롱", "en": "Macaron", "level": "100", "stars": "5 (3 pink + 2 gold)", "note": "grass; row1 slot1; aIHA41S7KJs-0136.jpg"},
+          {"kr": "팝콘", "en": "Popcorn", "level": "100", "stars": "5 (3 pink + 2 gold)", "note": "light shooter; row1 slot2"},
+          {"kr": "메론소다", "en": "Melon Soda", "level": "100", "stars": "5 (4 pink + 1 gold)", "note": "water shooter; row1 slot3"},
+          {"kr": "치즈케이크", "en": "Cheesecake", "level": "100", "stars": "5 (3 pink + 2 gold)", "note": "light; row1 slot4"},
+          {"kr": "피겨여왕", "en": "Skating Queen", "level": "100", "stars": "5 (pink)", "note": "water; row1 slot5"},
+          {"kr": "다크초코", "en": "Dark Choco", "level": "100", "stars": "5 (pink)", "note": "dark defense; row1 slot6"},
+          {"kr": "브라이트시커", "en": "Brightseeker", "level": "100", "stars": "?", "note": "light shooter; row2 slot1 (stars cut off)"},
+          {"kr": "호밀 (Rye)", "en": "Rye", "level": "100", "stars": "?", "note": "fire shooter; row2 slot2"},
+          {"kr": "피노누아", "en": "Pinot Noir", "level": "100", "stars": "?", "note": "dark; row2 slot3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "100", "stars": "?", "note": "dark; row2 slot4"},
+          {"kr": "우유", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "note": "light; leader banner; row2 slot5"},
+          {"kr": "실론나이트", "en": "Tea Knight", "level": "100", "stars": "?", "note": "light defense; row2 slot6"}
+        ],
+        "pets": ["핫도그도그 (Hot Doggie) ★20", "와사비 문어 (Octo Wasabi) ★20", "색동 주머니 (Candy Shade Pouch) ★9"],
+        "atk_order": [],
+        "perks": "Leader Milk; Passion Pay (+20% ATK, −20% Max HP for highest ATK Ally), Rapid Promotion (+7% ATK for highest ATK Ally) (aIHA41S7KJs-0045.jpg)",
+        "formation": "lobby tab 3, 1.52G (aIHA41S7KJs-0136.jpg); battle bar shows all 12 at Lv.100 (aIHA41S7KJs-0003.jpg)",
+        "substitutions": [],
+        "unorthodox": ["All 12 cookies Lv.100, no Lv.1 fillers; adds Popcorn and Rye (not in the KR guides)"]
+      }],
+      "sugar_runes": [
+        {"cookie": "팝콘 (Popcorn)", "stats": "Skill Haste +2.?, Accuracy Rate 5.?, CRIT DMG 4.80%, CRIT% 5.80%, CRIT DMG 7.00%, R ATK AMP 3.30% (values partly cut at panel edge)", "why": "aIHA41S7KJs-0045.jpg"},
+        {"cookie": "호밀 (Rye)", "stats": "Accuracy Rate 4.?, CRIT% 4.80%, CRIT DMG 4.80%, Accuracy Rate 3.?, ATK AMP 6.10%, ATK AMP 4.70%", "why": "aIHA41S7KJs-0045.jpg"},
+        {"cookie": "메론소다 (Melon Soda)", "stats": "ATK AMP 4.20%, CRIT% 5.80%, Skill Haste +4.0, CRIT DMG 7.00%, CRIT DMG 7.00%, CRIT% 7.40%", "why": "aIHA41S7KJs-0045.jpg"}
+      ],
+      "gear": [],
+      "rng": ["Three runs shown: 112.50G, 113.37G, 106.95G"],
+      "mechanics": [],
+      "disagreements": [
+        "Commenter @aeonreeds: this lineup raised score from 130G to 211G",
+        "Commenter @StraytheSkies: 'I cant see what the team is'"
+      ],
+      "quotes": []
+    }
+  ],
+  "glossary": [
+    {"kr": "색동 주머니", "en": "Candy Shade Pouch", "kind": "pet", "confidence": "high", "evidence": "mYqjYOdkqcg-0019.jpg: SSR pet, 아군 띄우기 저항 30%, 최대체력 10% 증가"},
+    {"kr": "판다만두", "en": "Panda Dumpling", "kind": "pet", "confidence": "high", "evidence": "mYqjYOdkqcg-0015.jpg: R pet, 아군 띄우기 저항 18% 증가"},
+    {"kr": "와사비 문어", "en": "Octo Wasabi", "kind": "pet", "confidence": "high", "evidence": "mYqjYOdkqcg-0138.jpg: SSR, 아군 지속 시너지 +40%, 지속 시너지를 받는 아군 공격력 10% 증가"},
+    {"kr": "정글전사", "en": "Tiger Lily", "kind": "cookie", "confidence": "high", "evidence": "caller mapping 정전=Tiger Lily; rune page title 정글전사 쿠키 (WmSUutrNdaY-0155.jpg); TW 叢林"},
+    {"kr": "실론나이트", "en": "Tea Knight", "kind": "cookie", "confidence": "high", "evidence": "rune page title 실론나이트 쿠키 (WmSUutrNdaY-0151.jpg); TW 錫蘭騎士餅乾 (K0aJ56DdQvc-0207.jpg)"},
+    {"kr": "피겨여왕", "en": "Skating Queen", "kind": "cookie", "confidence": "high", "evidence": "rune page 피겨여왕맛 쿠키 (WmSUutrNdaY-0130.jpg); TW 溜冰女王"},
+    {"kr": "커피", "en": "Coffee Cookie", "kind": "cookie", "confidence": "low", "evidence": "TW card 咖啡餅乾, U rarity, water support (K0aJ56DdQvc-0121.jpg); Korean name not shown"},
+    {"kr": "열정페이 / 초고속 승진", "en": "Passion Pay / Rapid Promotion", "kind": "term", "confidence": "high", "evidence": "mercenary perk cards, KR WmSUutrNdaY-0040.jpg and Global aIHA41S7KJs-0045.jpg"}
+  ]
+}
