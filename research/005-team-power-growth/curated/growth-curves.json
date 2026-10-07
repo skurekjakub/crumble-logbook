@@ -22,7 +22,7 @@
     [20, 2, 0.1, 42, 11, null, null, 23, 0, null, null],
     [24, 2, 0.1, 46, 15, null, null, 23, 80, null, null]
    ],
-   "note": "Odds up to 19→20 are from the table of 2026-08-30; from 2026-09-23 a shatter drops 2 levels (not to 10) and can be restored. Main-stat gain per level from 20 on (23%) is from the game data's rate table; sub-stats step at 5/10/15/20/25. Free Chocosteel: 24 a day from idle (web:yt-l9086mj7hwA), so the expected 104 for 14→15 is about 4 days of idle drops (inferred).",
+   "note": "14→15 costs ~4 days of free Chocosteel (24 a day, web:yt-l9086mj7hwA; inferred). Odds to 19→20 are the 2026-08-30 table; since 2026-09-23 a shatter drops 2 levels, restorable.",
    "sources": ["dc:53079", "dc:72150", "web:sugarpocket-catalog", "web:yt-l9086mj7hwA"]
   },
   {
@@ -40,7 +40,7 @@
    "title": "Stellar Link: Stellar Points per roll, by points locked",
    "columns": ["locked_points", "sp_per_roll"],
    "rows": [[0, 10], [1, 10], [2, 30], [3, 60], [4, 100], [5, 150], [6, 220]],
-   "note": "A Stellar Point is priced at 8.67 KRW (dc:68116) or 2.5 Crystals ≈ 10 KRW (web:crumblehub-efficiency); Vol.1 pack 32,000 KRW for 12,000 SP (2.7 KRW/SP incl. other items).",
+   "note": "A Stellar Point is worth 8.67 KRW (dc:68116) or 2.5 Crystals ≈ 10 KRW (web:crumblehub-efficiency); the Vol.1 pack works out to 2.7 KRW/SP.",
    "sources": ["web:sugarpocket-stella", "nv:5693", "nv:43444", "dc:55570", "dc:56417", "dc:68586", "web:yt-5XXDHBHnISU", "web:crumblehub-api-efficiency"]
   },
   {
@@ -87,7 +87,7 @@
    "title": "Cookie stars: expected cost of a pickup TSSR, by star",
    "columns": ["star", "expected_pulls", "expected_krw"],
    "rows": [[0, 167, 33400], [1, 180, 36000], [2, 360, 72000], [3, 668, 133600], [4, 1002, 200400], [5, 1440, 288800], [6, 1980, 396000], [7, 2520, 504000], [8, 3240, 648000], [9, 4140, 828000], [10, 4860, 972000]],
-   "note": "200 KRW a pull after the event's free pulls; packages trim about 10,000 KRW (dc:50913). Posted in August for Brightseeker; later posts put Bari 8★ at ~600,000 and a TSSR copy at 20,000–30,000 KRW.",
+   "note": "200 KRW a pull after the event's free pulls; packages trim ~10,000 KRW (dc:50913). Later posts: Bari 8★ ~600,000, a TSSR copy 20,000–30,000 KRW.",
    "sources": ["dc:50913", "dc:73162", "dc:74685", "dc:77246"]
   },
   {
