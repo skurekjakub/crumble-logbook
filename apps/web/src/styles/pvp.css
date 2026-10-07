@@ -1,5 +1,5 @@
-/* The PvP screens and the research index: season buffs, the formation grid, the
-   counter matrix and the usage bars. Colours come from tokens.css only. */
+/* The PvP screens: season buffs, the formation grid, the counter matrix and the usage bars
+   (the usage view is shared by every mode). Colours come from tokens.css only. */
 
 /* Overview: the season's buffs, set apart from the rules card. */
 .card.buffs {
@@ -73,191 +73,394 @@
   }
 }
 
-/* Counters: a directed matrix whose edges are shaded by their own confidence. The row
-   headings stick to the left edge so a wide matrix keeps its team names on a phone. */
+/* A team's glyph: overlapping portraits, each ringed in the surface colour. */
+.faces {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+}
+.faces .cicon {
+  box-shadow: 0 0 0 2px var(--surface);
+}
+.faces.s28 .cicon + .cicon {
+  margin-left: -9px;
+}
+.faces.s20 .cicon + .cicon {
+  margin-left: -6px;
+}
+.faces.s40 .cicon + .cicon {
+  margin-left: -13px;
+}
+
+/* A group's members: small portrait chips. */
+ul.members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.members li {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 7px 1px 1px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  font: 500 var(--fs-2xs) / 1.3 var(--body);
+  color: var(--ink-2);
+}
+
+/* Counters: a directed matrix read as win/lose. A filled cell means the column's team wins;
+   its tile is tinted by the edge's confidence. Row headings stick to the left edge so a wide
+   matrix keeps its team names on a phone. */
+.matrix-wrap {
+  max-width: 100%;
+}
+table.matrix {
+  width: auto;
+  min-width: 100%;
+}
 table.matrix caption {
   caption-side: top;
   text-align: left;
   padding: 8px 10px 0;
 }
 table.matrix th {
-  min-width: 7.5em;
-  max-width: 11em;
   white-space: normal;
+  vertical-align: bottom;
 }
-table.matrix th .kr {
-  font: 500 var(--fs-2xs) / 1.3 var(--body);
+table.matrix thead th:not(.corner) {
+  min-width: 8.5em;
+  max-width: 10em;
+}
+table.matrix th.corner {
+  vertical-align: bottom;
+  font-weight: 500;
+}
+table.matrix th.corner span {
+  display: block;
+  white-space: nowrap;
+}
+.team-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+.team-head .name-stack .en {
+  font: 700 var(--fs-xs) / 1.25 var(--body);
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.team-head .name-stack .kr {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 10em;
 }
 table.matrix tbody th {
   position: sticky;
   left: 0;
   z-index: 1;
-  font: 600 var(--fs-s) / 1.3 var(--body);
-  color: var(--ink);
+  min-width: 9.5em;
+  max-width: 11em;
+  vertical-align: top;
   background: var(--surface);
   box-shadow: inset -1px 0 0 var(--line);
 }
-table.matrix thead th:first-child {
+table.matrix tbody th .pill {
+  margin-top: 6px;
+}
+table.matrix thead th.corner {
   position: sticky;
   left: 0;
   z-index: 2;
 }
 td.ctr {
-  min-width: 9em;
-  max-width: 16em;
+  min-width: 8.5em;
+  max-width: 12em;
   padding: 4px;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   line-height: 1.35;
+  vertical-align: top;
 }
-td.ctr a {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 5px 8px;
-  border-radius: 6px;
-  color: var(--ink);
-  text-decoration: none;
-}
-td.ctr a + a {
-  margin-top: 4px;
-}
-td.ctr a:hover .cond {
-  text-decoration: underline;
-}
-td.ctr b {
-  font: 600 var(--fs-2xs) / 1 var(--body);
-}
-td.ctr .cond {
-  color: var(--ink-2);
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-td.ctr a.high,
-.ctr-sw.high {
-  background: color-mix(in srgb, var(--good) 20%, var(--surface));
-  box-shadow: inset 3px 0 0 var(--good);
-}
-td.ctr a.high b {
-  color: var(--good);
-}
-td.ctr a.medium,
-.ctr-sw.medium {
-  background: color-mix(in srgb, var(--warn) 14%, var(--surface));
-  box-shadow: inset 3px 0 0 var(--warn);
-}
-td.ctr a.medium b {
-  color: var(--warn);
-}
-td.ctr a.low,
-.ctr-sw.low {
-  background: repeating-linear-gradient(
-    135deg,
-    var(--surface) 0 7px,
-    color-mix(in srgb, var(--bad) 12%, var(--surface)) 7px 10px
-  );
-  box-shadow: inset 3px 0 0 var(--bad);
-}
-td.ctr a.low b {
-  color: var(--bad);
+td.ctr:not(.hit):not(.self) {
+  background: var(--surface);
 }
 td.ctr.self {
   padding: 9px 12px;
   background: var(--surface-2);
   color: var(--ink-3);
   text-align: center;
+  vertical-align: middle;
 }
-.counter-list {
-  display: grid;
-  gap: var(--sp-2);
-}
-.counter-list > .card:target {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* Usage: one horizontal bar per subject; the confirmed share is a solid segment inside. */
-ol.bars {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-}
-ol.bars li {
+.edge {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding: 6px 7px;
+  border-radius: var(--radius-s);
+  --clamp-bg: var(--edge-bg);
+  background: var(--edge-bg);
+  box-shadow: inset 3px 0 0 var(--edge-ink);
+}
+.edge + .edge {
+  margin-top: 4px;
+}
+.edge.high,
+.ctr-sw.high {
+  --edge-ink: var(--good);
+  --edge-bg: var(--good-soft);
+  background: var(--good-soft);
+}
+.edge.medium,
+.ctr-sw.medium {
+  --edge-ink: var(--warn);
+  --edge-bg: var(--warn-soft);
+  background: var(--warn-soft);
+}
+.edge.low,
+.ctr-sw.low {
+  --edge-ink: var(--bad);
+  --edge-bg: var(--surface);
+  background: repeating-linear-gradient(135deg, var(--surface) 0 7px, var(--bad-soft) 7px 10px);
+}
+.edge.low .clamp {
+  --clamp-bg: var(--surface);
+}
+.edge .verdict {
+  align-self: flex-start;
+  text-decoration: none;
+  border-radius: 999px;
+}
+.edge .verdict:hover .pill,
+.edge .verdict:focus-visible .pill {
+  box-shadow: 0 0 0 1.5px currentColor;
+}
+.edge .verdict .pill {
+  background: var(--surface);
+}
+.edge-text {
+  color: var(--ink-2);
   min-width: 0;
 }
-.bar-head {
+.edge-text .cond {
+  color: var(--ink);
+}
+.edge-text .why {
+  color: var(--ink-3);
+}
+.ctr-sw {
+  box-shadow: inset 3px 0 0 var(--edge-ink);
+}
+
+/* Every edge: compact cards, two up on wide screens. */
+.counter-list {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+}
+.counter-list > .card:target,
+.obsolete .card:target {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.edge-card {
+  gap: 6px;
+  border-left: 3px solid var(--line);
+}
+.edge-card.high {
+  border-left-color: var(--good);
+}
+.edge-card.medium {
+  border-left-color: var(--warn);
+}
+.edge-card.low {
+  border-left-color: var(--bad);
+}
+.edge-head {
   display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
-.bar-head .nm {
-  font-weight: 600;
+.edge-head h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 0;
+  font: 700 var(--fs-s) / 1.3 var(--body);
+}
+.edge-team {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.edge-head .loses {
+  font: 500 var(--fs-xs) / 1 var(--body);
+  color: var(--bad);
+}
+.edge-card dl.kv {
+  font-size: var(--fs-xs);
+  row-gap: 2px;
+}
+
+/* Usage: a ranked list. Each row is its rank, the subject drawn over a bar filled to its
+   share, and the share in large type; the confirmed share is a solid strip along the bar's
+   foot. The top rank is set apart in candy. */
+.usage-caveat {
+  margin-top: var(--sp-2);
+}
+.usage-card {
+  gap: var(--sp-2);
+}
+ol.bars {
+  list-style: none;
+  margin: 0 0 var(--sp-2);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+li.bar-row {
+  display: grid;
+  grid-template-columns: 2.1em minmax(0, 1fr) auto;
+  grid-template-areas:
+    "rank track val"
+    ". detail detail"
+    ". note note";
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 3px;
   min-width: 0;
-  overflow-wrap: anywhere;
+}
+.bar-rank {
+  grid-area: rank;
+  text-align: right;
+  font: 400 var(--fs-m) / 1 var(--display);
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.bar-track {
+  grid-area: track;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 5px 8px;
+  border-radius: var(--radius-s);
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--accent-soft);
+  box-shadow: inset -2px 0 0 var(--accent);
+}
+.bar-confirmed {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background: var(--accent);
+}
+.bar-track .nm {
+  position: relative;
+  min-width: 0;
+  font-weight: 600;
+}
+.bar-track .name-stack .en,
+.group-name {
+  font-weight: 700;
+  color: var(--ink);
 }
 .bar-val {
-  font: 13px/1.3 var(--mono);
+  grid-area: val;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 4.2em;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+.bar-val b {
+  font: 700 var(--fs-l) / 1.1 var(--body);
+  color: var(--ink);
+}
+.bar-conf {
+  font-size: var(--fs-2xs);
+  color: var(--ink-3);
+}
+li.bar-row.top .bar-rank {
+  font-size: var(--fs-2xl);
+  color: var(--candy);
+}
+li.bar-row.top .bar-fill {
+  background: var(--candy-soft);
+  box-shadow: inset -2px 0 0 var(--candy);
+}
+li.bar-row.top .bar-val b {
+  font-size: var(--fs-xl);
+}
 .bar-detail {
-  font-size: 13px;
-  color: var(--ink-2);
-}
-.bar-track {
-  position: relative;
-  height: 10px;
-  border-radius: 4px;
-  background: var(--surface-2);
-}
-.bar-fill,
-.bar-confirmed {
-  position: absolute;
-  inset: 0 auto 0 0;
-  border-radius: 4px;
-}
-.bar-fill {
-  background: color-mix(in srgb, var(--accent) 45%, var(--surface));
-}
-.bar-confirmed {
-  background: var(--accent);
+  grid-area: detail;
+  min-width: 0;
 }
 .bar-note {
-  font-size: 12px;
+  grid-area: note;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 6px;
+  gap: 2px 8px;
   align-items: center;
+  font-size: var(--fs-xs);
+  min-width: 0;
+}
+.bar-note > .muted {
+  flex: 1 1 12em;
+  min-width: 0;
 }
 .bar-sample {
-  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+  font-size: var(--fs-xs);
   color: var(--ink-2);
 }
+.bar-sample-text {
+  flex: 1 1 100%;
+  min-width: 0;
+  font-weight: 600;
+}
+.bar-common {
+  font-size: var(--fs-xs);
+}
 .bar-sw {
-  background: color-mix(in srgb, var(--accent) 45%, var(--surface));
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 .bar-sw.confirmed {
   background: var(--accent);
 }
-
-/* Research index: each covered mode with a link per screen. */
-.mode-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 8px;
-  align-items: baseline;
-}
-.mode-links + .mode-links {
-  margin-top: 8px;
-}
-.mode-link {
-  font-weight: 700;
+@media (max-width: 520px) {
+  li.bar-row {
+    grid-template-columns: 1.6em minmax(0, 1fr) auto;
+    column-gap: 6px;
+  }
+  .bar-val b {
+    font-size: var(--fs-m);
+  }
+  li.bar-row.top .bar-val b {
+    font-size: var(--fs-l);
+  }
 }

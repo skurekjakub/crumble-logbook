@@ -11,27 +11,46 @@ import type { SectionTab, SharedView, ViewCopy } from "./types";
 export const PVP_COPY = {
   decks: {
     title: "Teams",
-    lede: "The teams as their owners post them, laid out like the formation screen: two rows, back line on the left, front on the right (inferred from attack ranges). A team known only from an opponent's defense card has no slots and shows as a plain lineup. Stars are rarely readable in screenshots; ? marks an unknown.",
+    lede: [
+      "Laid out like the formation screen: back line left, front right.",
+      "A team seen only on a defense card shows as a plain lineup.",
+      "? marks a star count no screenshot shows.",
+    ],
   },
   counters: {
     title: "Counters",
-    lede: "Directed: each row is a team, each column a team that beats it, and each cell says under what conditions. A matchup that goes both ways is two cells with their own conditions. Shading follows confidence; hatched cells are unverified claims. Pick a cell for the mechanism and the posts.",
+    lede: [
+      "Row: the team you face. Column: the team that beats it.",
+      "Colour is confidence; hatched tiles are unverified claims.",
+      "Expand a tile for the mechanism; its badge opens the posts.",
+    ],
   },
   runes: {
     title: "Sugar runes",
-    lede: 'PvP rune lines per cookie. "All" means every line rolls the same stat. Disputed rows are where posters disagreed; both sides are kept.',
+    lede: [
+      "PvP rune lines per cookie.",
+      '"All" means every line rolls the same stat.',
+      "Disputed rows keep both sides.",
+    ],
   },
   gear: {
     title: "Gear substats",
-    lede: "Laid out like the equipment screen. Notes that apply to the whole set, such as which preset to wear, are under the board.",
+    lede: [
+      "Laid out like the equipment screen.",
+      "Set-wide notes, such as which preset to wear, sit under the board.",
+    ],
   },
   mechanics: {
     title: "Mechanics",
-    lede: "What players measured or datamined, and how this logbook resolved conflicting claims. Confidence reflects how well each point is sourced. The mode's rules are on its overview.",
+    lede: [
+      "What players measured or datamined.",
+      "Confidence shows how well each point is sourced.",
+      "The mode's rules are on its overview.",
+    ],
   },
   timeline: {
     title: "How the meta moved",
-    lede: "Patches, new cookies, seasons and the teams that followed, oldest first.",
+    lede: ["Patches, new cookies, seasons and the teams that followed, oldest first."],
   },
 } as const satisfies Partial<Record<SharedView, ViewCopy>>;
 
