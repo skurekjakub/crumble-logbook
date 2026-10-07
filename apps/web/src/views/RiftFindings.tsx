@@ -162,7 +162,7 @@ export function RiftFindings({ mode, rift, sources, id }: RiftFindingsProps) {
             <span className="kind" title={item.label}>
               {item.label}
             </span>{" "}
-            <span className="finding">
+            <span className="rift-finding">
               <Clamp
                 lines={1}
                 length={item.text.length + (item.detail ? item.detail.length + 1 : 0)}

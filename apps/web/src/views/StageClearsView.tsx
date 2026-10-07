@@ -202,7 +202,7 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
       {
         header: "Result",
         cell: (c) => (
-          <span className="verdict">
+          <span className="st-verdict">
             <ResultPill result={c.result} />
             <EvidencePill evidence={c.evidence} />
             {c.play ? <span className="play">{c.play}</span> : null}
@@ -296,7 +296,7 @@ export function StageClearsView({ mode, stage, search, onSearch }: StageClearsVi
                     aria-labelledby={`${g.id}-title`}
                   >
                     <h3 id={`${g.id}-title`}>{g.title}</h3>
-                    {g.lede ? <p className="group-lede">{g.lede}</p> : null}
+                    {g.lede ? <p className="st-group-lede">{g.lede}</p> : null}
                     <DataTable
                       columns={columnsFor(rankOf, g.ranked)}
                       rows={g.rows}

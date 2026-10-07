@@ -408,7 +408,7 @@ function Levels({
         <h3 id={`${PARTS.levels}-title`}>Levels</h3>
         <SourceChips ids={citedBy(levels)} sources={sources} />
       </div>
-      <p className="group-lede">Compare with the power the Rift shows, 차원의 힘 included.</p>
+      <p className="st-group-lede">Compare with the power the Rift shows, 차원의 힘 included.</p>
       <DataTable
         columns={columns}
         rows={listed}

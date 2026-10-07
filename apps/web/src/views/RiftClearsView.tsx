@@ -293,7 +293,7 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
     {
       header: "Verdict",
       cell: (c) => (
-        <span className="verdict">
+        <span className="st-verdict">
           <Pill kind={STANDINGS[c.standing][0]}>{STANDINGS[c.standing][1]}</Pill>
           <EvidencePill evidence={c.evidence} />
           {c.play ? <span className="play">{c.play}</span> : null}
@@ -327,7 +327,7 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
     {
       header: "Result",
       cell: (c) => (
-        <span className="verdict">
+        <span className="st-verdict">
           <ResultPill result={c.result} />
           <Pill kind={STANDINGS[c.standing][0]}>{STANDINGS[c.standing][1]}</Pill>
         </span>
@@ -405,7 +405,7 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
                   aria-labelledby={`${PARTS.bounds}-title`}
                 >
                   <h3 id={`${PARTS.bounds}-title`}>Attempts that bound it</h3>
-                  <p className="group-lede">
+                  <p className="st-group-lede">
                     No Rift power, another bracket, or failed at {config.bracket}%.
                   </p>
                   <DataTable

@@ -532,7 +532,7 @@ describe("the clears list", () => {
     await waitFor(() => expect(bodyRows(ranked)).toHaveLength(1));
     const [first] = bodyRows(ranked);
     expect(first![0]).toBe("#1");
-    expect(ranked.querySelector("tr .rank.r1")).not.toBeNull();
+    expect(ranked.querySelector("tr .st-rank.r1")).not.toBeNull();
     expect(first![1]).toBe("328-30");
     expect(first![3]).toBe("4Gof 10G");
     expect(ranked.querySelector(".pw b")).toHaveAttribute("title", "4.00G");
@@ -542,7 +542,7 @@ describe("the clears list", () => {
     expect(rowTexts(failures)[0]).toContain("Failed");
     expect(bodyRows(failures)[0]![0]).toBe("328-20pre-easing");
     expect(bodyRows(failures)[0]).toContain("DC 76835");
-    expect(failures.querySelector(".rank")).toBeNull();
+    expect(failures.querySelector(".st-rank")).toBeNull();
     const rejected = screen.getByRole("region", { name: "Rejected claims" });
     expect(bodyRows(rejected)[0]![2]).toBe("3Gof 10G");
     expect(rowTexts(rejected)[0]).toContain("Cleared");

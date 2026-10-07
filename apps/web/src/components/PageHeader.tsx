@@ -24,7 +24,7 @@ export function PageHeader({ context, title, lede, stats }: PageHeaderProps) {
   const shown = stats.filter(([, v]) => v != null && v !== "");
   return (
     <header className="top">
-      <div className="top-main">
+      <div className="page-title-block">
         <h1>
           {title}
           {context != null ? <span className="title-tag">{context}</span> : null}

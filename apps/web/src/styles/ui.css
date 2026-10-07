@@ -321,7 +321,7 @@ ul.points li::before {
 header.top {
   padding-bottom: var(--sp-4);
 }
-.top-main {
+.page-title-block {
   min-width: 0;
   flex: 1 1 420px;
 }

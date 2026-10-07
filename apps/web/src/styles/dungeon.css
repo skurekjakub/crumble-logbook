@@ -11,7 +11,7 @@ td.rank-cell {
   font-size: var(--fs-s);
   color: var(--ink-2);
 }
-.rank {
+.dg-rank {
   display: inline-grid;
   place-items: center;
   min-width: 2rem;
@@ -22,7 +22,7 @@ td.rank-cell {
   color: var(--ink-2);
   font: 400 var(--fs-m) / 1 var(--display);
 }
-.rank.top {
+.dg-rank.top {
   min-width: 2.75rem;
   height: 2.75rem;
   background: var(--surface);
@@ -34,13 +34,13 @@ td.rank-cell {
   font: 700 var(--fs-m) / 1.2 var(--mono);
   color: var(--ink);
 }
-tr:has(.rank.top) {
+tr:has(.dg-rank.top) {
   background: var(--candy-soft);
 }
-tr:has(.rank.top) .clamp {
+tr:has(.dg-rank.top) .clamp {
   --clamp-bg: var(--candy-soft);
 }
-tr:has(.rank.top) .score {
+tr:has(.dg-rank.top) .score {
   font-size: var(--fs-l);
 }
 /* A run's build carries a portrait ATK chain; above phone width its column gets the room. */
@@ -55,7 +55,7 @@ tr:has(.rank.top) .score {
     min-width: 6.5rem;
   }
 }
-.group-lede {
+.dg-group-lede {
   margin: 2px 0 var(--sp-2);
   font-size: var(--fs-s);
 }

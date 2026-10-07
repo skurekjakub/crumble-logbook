@@ -167,29 +167,29 @@ details.chapters[open] > summary {
 }
 
 /* Ranked attempts: the place, #1 large; the best row edged in candy. */
-.rank {
+.st-rank {
   font: 700 var(--fs-m) / 1 var(--mono);
   color: var(--ink-2);
 }
-.rank.r1 {
+.st-rank.r1 {
   font: 400 var(--fs-xl) / 1 var(--display);
   color: var(--candy-ink);
 }
-.rank-none {
+.st-rank-none {
   color: var(--ink-3);
 }
-tr:has(.rank.r1) {
+tr:has(.st-rank.r1) {
   background: var(--candy-soft);
 }
-tr:has(.rank.r1) > td:first-child {
+tr:has(.st-rank.r1) > td:first-child {
   box-shadow: inset 3px 0 0 var(--candy);
 }
 /* Phones: a stacked row is one block, so the edge goes on the row; sources stay last. */
 @media (max-width: 640px) {
-  table.stack tr:has(.rank.r1) {
+  table.stack tr:has(.st-rank.r1) {
     box-shadow: inset 3px 0 0 var(--candy);
   }
-  table.stack tr:has(.rank.r1) > td:first-child {
+  table.stack tr:has(.st-rank.r1) > td:first-child {
     box-shadow: none;
   }
   table.stack td.src {
@@ -219,7 +219,7 @@ tr:has(.rank.r1) > td:first-child {
   font: 400 var(--fs-2xs) / 1.2 var(--body);
   color: var(--ink-3);
 }
-.verdict {
+.st-verdict {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
@@ -229,7 +229,7 @@ tr:has(.rank.r1) > td:first-child {
   font-size: var(--fs-2xs);
   color: var(--ink-3);
 }
-.verdict .pill {
+.st-verdict .pill {
   white-space: nowrap;
 }
 td.deck {
@@ -253,7 +253,7 @@ td.src .chip {
 section.clears + section.clears {
   margin-top: var(--sp-5);
 }
-.group-lede {
+.st-group-lede {
   margin: 0 0 var(--sp-2);
   font-size: var(--fs-s);
   color: var(--ink-3);
@@ -412,7 +412,7 @@ section.clears + section.clears {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.rift-findings .finding {
+.rift-findings .rift-finding {
   flex: 1;
   min-width: 0;
 }
@@ -420,7 +420,7 @@ section.clears + section.clears {
   .rift-findings li {
     flex-wrap: wrap;
   }
-  .rift-findings .finding {
+  .rift-findings .rift-finding {
     flex-basis: 100%;
     order: 1;
   }

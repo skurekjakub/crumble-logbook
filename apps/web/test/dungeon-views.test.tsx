@@ -355,8 +355,8 @@ describe("the runs board", () => {
     expect(bodyRows(ranked)[0]![3]).toBe("15.58G24.3× per power");
     expect(bodyRows(ranked)[1]![3]).toBe("6.62G36.9× per power");
     // #1 stands out; the rest don't.
-    expect(ranked.querySelectorAll(".rank.top")).toHaveLength(1);
-    expect(ranked.querySelector("tbody tr .rank.top")).toHaveTextContent("1");
+    expect(ranked.querySelectorAll(".dg-rank.top")).toHaveLength(1);
+    expect(ranked.querySelector("tbody tr .dg-rank.top")).toHaveTextContent("1");
     const claims = screen.getByRole("region", { name: "Claims" });
     expect(bodyRows(claims)).toHaveLength(1);
     expect(bodyRows(claims)[0]![0]).toBe("–");
@@ -364,7 +364,7 @@ describe("the runs board", () => {
     expect(bodyRows(claims)[0]![2]).toBe("Text only");
     expect(claims.querySelector(".pill.claimed")).toHaveTextContent("Text only");
     expect(ranked.querySelector(".pill.verified")).toHaveTextContent("Screenshot");
-    expect(claims.querySelector(".rank.top")).toBeNull();
+    expect(claims.querySelector(".dg-rank.top")).toBeNull();
     const headers = [...ranked.querySelectorAll("th")].map((th) => th.textContent);
     expect(headers).toContain("Collection power");
   });

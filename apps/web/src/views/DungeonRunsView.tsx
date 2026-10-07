@@ -239,7 +239,9 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
               header: "Rank",
               cell: (r) => {
                 const place = rank.get(r.id);
-                return <span className={place === 1 ? "rank top" : "rank"}>{shown(r).rank}</span>;
+                return (
+                  <span className={place === 1 ? "dg-rank top" : "dg-rank"}>{shown(r).rank}</span>
+                );
               },
               className: "n rank-cell",
             },
@@ -385,7 +387,7 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                 groups.map((g) => (
                   <section key={g.id} id={g.id} aria-labelledby={`${g.id}-title`}>
                     <h3 id={`${g.id}-title`}>{g.title}</h3>
-                    <p className="muted group-lede">{g.lede}</p>
+                    <p className="muted dg-group-lede">{g.lede}</p>
                     <DataTable
                       columns={columns}
                       rows={g.rows}

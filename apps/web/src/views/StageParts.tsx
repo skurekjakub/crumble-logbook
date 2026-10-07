@@ -54,8 +54,8 @@ export function EvidencePill({ evidence }: { evidence: string }) {
  * @returns the badge, or a dash
  */
 export function Rank({ n }: { n: number | null }) {
-  if (n === null) return <span className="rank-none">–</span>;
-  return <span className={n === 1 ? "rank r1" : "rank"}>#{n}</span>;
+  if (n === null) return <span className="st-rank-none">–</span>;
+  return <span className={n === 1 ? "st-rank r1" : "st-rank"}>#{n}</span>;
 }
 
 /**
