@@ -5,7 +5,7 @@
     "query": "subject:전투력",
     "why": "Posts titled with combat power, where players ask how to raise it and post before/after numbers.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-power",
@@ -13,7 +13,7 @@
     "query": "subject:투력",
     "why": "투력, the gallery's short word for power, in titles.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-power",
@@ -21,7 +21,7 @@
     "query": "투력",
     "why": "The short word for power anywhere in a post.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-raise-power",
@@ -37,7 +37,7 @@
     "query": "효율",
     "why": "Efficiency, the word for power per unit of cost the record ranks by.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-stellar",
@@ -45,7 +45,7 @@
     "query": "스텔라",
     "why": "Stellar Link, the only posted gain that moved a 2G team a whole step.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-plate",
@@ -53,7 +53,7 @@
     "query": "플레이트",
     "why": "Plating, a power source with posted gains and published odds.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-plate-odds",
@@ -93,7 +93,7 @@
     "query": "오븐",
     "why": "Oven gear, a power source.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-gear-level",
@@ -117,7 +117,7 @@
     "query": "돌파력",
     "why": "Resolve, coin-bought flat stats for every cookie, whose per-level values patches change.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-gnome",
@@ -125,7 +125,7 @@
     "query": "노움",
     "why": "The Gnome Laboratory, a power source whose cap patches raise.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-lab",
@@ -133,7 +133,7 @@
     "query": "연구소",
     "why": "The lab by its common noun, Gnome Lab and guild research both.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-research-stone",
@@ -141,7 +141,7 @@
     "query": "연구석",
     "why": "Research stones, the lab's cost.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-fame",
@@ -149,7 +149,7 @@
     "query": "명성",
     "why": "Fame, a power source.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-guild-research",
@@ -157,7 +157,7 @@
     "query": "길드연구",
     "why": "Guild research, the power source sized only by one unmeasured claim.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-guild-research-spaced",
@@ -165,7 +165,7 @@
     "query": "길드 연구",
     "why": "Guild research as posters type it with the space.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-star-grade",
@@ -189,7 +189,7 @@
     "query": "도감",
     "why": "The collection's boosts, a power source.",
     "added": "2026-09-28",
-    "lastHit": null
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-promotion",
@@ -205,7 +205,7 @@
     "query": "패키지",
     "why": "Shop packages, the paid route's options.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-paying",
@@ -213,7 +213,7 @@
     "query": "과금",
     "why": "Paying, where posters weigh what money buys.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-cash",
@@ -221,7 +221,7 @@
     "query": "현질",
     "why": "Cash spending in gallery slang.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-light-spender",
@@ -253,7 +253,7 @@
     "query": "가성비",
     "why": "Value for money, how posters rank packages.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-pass",
@@ -261,7 +261,7 @@
     "query": "패스",
     "why": "The Crumble Pass, part of the community's paid order.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-membership",
@@ -269,7 +269,7 @@
     "query": "멤버십",
     "why": "The Sugarcoating memberships, permanent paid boosts.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-blessing",
@@ -277,7 +277,7 @@
     "query": "축복",
     "why": "Sweet Blessing, the spending level and what each level unlocks.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-sweet",
@@ -301,7 +301,7 @@
     "menuId": 9,
     "why": "The official cafe's guide board, home of the newbie guidebook and the Stellar shapes.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-raise-power",
@@ -419,10 +419,12 @@
     "id": "crumbgg-data-patches",
     "kind": "crumbgg",
     "endpoint": "data",
-    "args": ["patches"],
+    "args": [
+      "patches"
+    ],
     "why": "crumb.gg's patch digest, which dated the Resolve, Fame, Gnome Lab and plating changes.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-leaderboard",
@@ -431,7 +433,7 @@
     "args": [],
     "why": "The all-server combat power board, where the top accounts' power sits.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "web-crumblehub-api-efficiency",
@@ -495,7 +497,7 @@
     "url": "https://apps.apple.com/kr/app/id6749251466",
     "why": "The KR App Store page, whose top in-app purchases carry KRW prices.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "web-appstore-us",
@@ -512,5 +514,133 @@
     "why": "An EN progression guide its site keeps updating.",
     "added": "2026-09-28",
     "lastHit": "2026-09-28"
+  },
+  {
+    "id": "naver-patch-notes",
+    "kind": "naver",
+    "menuId": 3,
+    "why": "The official cafe's patch-notes board, the patch source when crumb.gg lags.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-120",
+    "kind": "dc",
+    "query": "120",
+    "why": "The level cap of 120 from 2026-10-08, as posters write it.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-max-level",
+    "kind": "dc",
+    "query": "만렙",
+    "why": "The level cap and its raises (만렙 확장).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-level-cap",
+    "kind": "dc",
+    "query": "레벨 확장",
+    "why": "Level cap raises spelled out.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-exp",
+    "kind": "dc",
+    "query": "경험치",
+    "why": "Cookie EXP: costs, cuts and refunds.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-exp-slang",
+    "kind": "dc",
+    "query": "경치",
+    "why": "Cookie EXP in the gallery's short form.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-leak",
+    "kind": "dc",
+    "query": "유출",
+    "why": "Client-data leaks of the next update, which carry level, lab and shop tables early.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-attendance",
+    "kind": "dc",
+    "query": "출석",
+    "why": "Check-in rewards, such as the free Milk of 2026-10-08.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-milk",
+    "kind": "dc",
+    "query": "우유",
+    "why": "Milk, the meta's buffer, whose copies open Stellar points.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-special-pass",
+    "kind": "dc",
+    "query": "스페셜 패스",
+    "why": "The Rumble Special Pass, a paid option since 1.4.002.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-special-pass-short",
+    "kind": "dc",
+    "query": "스패",
+    "why": "The Rumble Special Pass in short form.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-chardonnay",
+    "kind": "dc",
+    "query": "샤르도네",
+    "why": "The SSR of 2026-10-08 and the leak around it.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-mileage",
+    "kind": "dc",
+    "query": "마일리지",
+    "why": "The mileage exchange, which sells Chocosteel and Syrup Metal from 2026-10-08.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-syrup",
+    "kind": "dc",
+    "query": "쇳물",
+    "why": "Syrup Metal, plating's bottleneck: sources, packages and prices.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-chocosteel",
+    "kind": "dc",
+    "query": "초코강",
+    "why": "Chocosteel, plating's main material.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-dough",
+    "kind": "dc",
+    "query": "반죽",
+    "why": "Dough and the oven's auto-open, the gear route.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
   }
 ]

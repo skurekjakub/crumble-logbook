@@ -1,0 +1,28 @@
+{
+ "lane": "naver",
+ "read": "2026-10-07",
+ "notes": "The cafe's guide board (menu 9) in the window: ../03-naver/list-naver-guide-board-4p.tsv (the 2-page listing stopped at 09-30, so it was rerun with 4 pages back to 09-25). Most guide posts are stage and dungeon decks (record 003's ground); the posts below were fetched into ../03-naver/nv/. Read by the session agent. nv:50703 (a joke) and nv:47662 (a pull screenshot) carry nothing on power growth.",
+ "posts": [
+  {"source": "nv", "id": "48555", "url": "https://cafe.naver.com/ccrumble/48555", "date": "2026-10-01", "title_kr": "입문/복귀 유저 권장 가이드", "title_en": "Recommended guide for new and returning players", "relevance": 3,
+   "summary_en": "A long guide (2026-10-01). Purchases first: Ad Removal, the Crumble Pass (check its remaining days), the Unique gear pack at oven 10, the 55,000 KRW Special Sugarcoating membership. Gold has one use, Resolve (ATK, then HP, then DEF). Cookie EXP is refunded in full on reset, so spend it freely. Use coin, EXP and research-stone time tickets only when a stage is stuck, since they grow with the stage. Mileage: daily dungeon keys (coin > dough > research stone > EXP, rune) > Arena tickets > Stellar. Guild shop: Ceylon > Syrup > Chocosteel > Stellar. Stage gear: a pure-power (뻥투) preset to meet the recommended power, and an accuracy/focus preset (~900 accuracy past stage 100). Gnome Lab, 'the system with the biggest spec gains': push special research up to 19 taking only 2, 5, 7, 8, 10, 12, 14, 16, 18 and 19; when stones run short, level the lowest ATK-amplification basic nodes, then the HP ones; 'each finished research lets a stuck stage clear'. Speed-ups are best used while the research-stone dungeon is at 360–500, when stones outrun research. Guild research takes free and Crystal donations, the Crystal price rising with each donation and resetting daily; guilds usually ask under 8,140 Crystals a day.",
+   "datapoints": [
+    {"system": "gnome_lab", "account": "any", "before": "", "after": "", "cost": "", "note": "'연구가 하나 완료될 때마다 안 밀리던 스테이지가 밀릴 정도로 상승폭이 커서' — a claim, no figure"}
+   ],
+   "advice": [
+    {"system": "spending", "text": "Buy Ad Removal, the Crumble Pass, the Unique gear pack and the 5.5 membership first."},
+    {"system": "gnome_lab", "text": "Special research to 19 first (only 2, 5, 7, 8, 10, 12, 14, 16, 18, 19), then the lowest ATK-amp basic nodes, then HP."},
+    {"system": "resolve", "text": "Resolve in ATK → HP → DEF order; gold has no other use."},
+    {"system": "lineup", "text": "Keep a pure-power stage preset to meet recommended power and an accuracy preset (~900)."},
+    {"system": "plating", "text": "Guild shop: Ceylon > Syrup Metal > Chocosteel > Stellar."}
+   ],
+   "quotes": [
+    {"kr": "연구소 버프는 스펙 상승폭이 매우 큰 시스템이므로 효율적으로 연구하는게 매우 중요합니다.", "en": "The lab's buffs raise your spec more than anything, so research efficiently."},
+    {"kr": "특별 연구는 2, 5, 7, 8, 10, 12, 14, 16, 18, 19만 올려준다.", "en": "Only raise special research 2, 5, 7, 8, 10, 12, 14, 16, 18 and 19."}
+   ]},
+  {"source": "nv", "id": "47797", "url": "https://cafe.naver.com/ccrumble/47797", "date": "2026-09-29", "title_kr": "플레이트 개빡치게하네", "title_en": "Plating is infuriating", "relevance": 1,
+   "summary_en": "With shatter mitigation on, the plate shattered at a shown 3% on the first try past 15 (15 → 13), wasting the 5 Syrup spent on mitigation; the poster stops plating at 15. Commenters report the same.",
+   "datapoints": [{"system": "plating", "account": "", "before": "+15", "after": "+13 (shatter at a shown 3%, mitigation on)", "cost": "5 Syrup Metal for mitigation", "note": ""}],
+   "advice": [{"system": "plating", "text": "Stop at 15 without Syrup to spare (poster)."}],
+   "quotes": [{"kr": "박살완화까지 끼고 돌렷는데 3프로 확률을 뚫고 바로 터진다고?", "en": "I ran it with shatter mitigation and it shattered right away through a 3% chance?"}]}
+ ]
+}

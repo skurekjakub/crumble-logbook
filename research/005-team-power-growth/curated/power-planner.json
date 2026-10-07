@@ -1,6 +1,6 @@
 {
  "about": "Planner data: for a team power, the last main stage (in order) still inside each damage bracket, and what a power gain buys. Stage recommended power is game data 1.4.002 after the 2026-09-23 easing (record 003, evidence/06-derived/stage-table.json); the table is derived in evidence/07-derived/bracket-reach.json. Brackets: damage kept 55% from 60% of recommended power, 35% from 40%, 15% from 20% (record 003). The user's team is near 2.2G.",
- "measured": "2026-09-28",
+ "measured": "2026-10-07",
  "rows": [
   {"team_power_g": 1.0, "reach_55": "255-29", "reach_35": "272-15", "reach_15": "300-22"},
   {"team_power_g": 1.5, "reach_55": "272-15", "reach_35": "288-30", "reach_15": "317-8"},
@@ -19,11 +19,13 @@
   "rule_of_thumb": "Near 2.2G each +0.2G (about +9%) moves the 35% reach about three to four chapters and the 55% reach about three; the 15% bracket already covers every main stage from 2.0G. 328-30 at 35% needs 4.00G (+82%); at 55%, 6.00G.",
   "what_a_step_buys": [
    {"source": "stellar_link", "data_point": "stellar8-triangle-2g", "basis": "posted", "posted_gain": "+10% (2G → 2.2G, dc:77329); free pulls reach 8-3, points past it need paid pulls (dc:76290)", "inferred_reach_35": "about 304-19 → 308 (+3–4 chapters)", "sources": ["dc:77329", "dc:76290"]},
-   {"source": "guild_lab", "data_point": "guild-lab-claim", "basis": "claimed", "posted_gain": "none in team power: one unmeasured claim of ~+20% account total power (dc:76461)", "inferred_reach_35": "not derived", "sources": ["dc:76461"]},
+   {"source": "guild_lab", "data_point": "guild-lab-claim", "basis": "claimed", "posted_gain": "none in team power; account total only: ~+20% claimed (dc:76461), 13G → ~10G on leaving (dc:81826)", "inferred_reach_35": "not derived", "sources": ["dc:76461", "dc:81826"]},
    {"source": "plating", "data_point": "plate-14-15-1.6g", "basis": "posted", "posted_gain": "about +1.5% for one 14→15 step at 1.6G (dc:75684, approximate)", "inferred_reach_35": "about half a chapter", "sources": ["dc:75684", "dc:53079"]},
+   {"source": "gnome_lab", "data_point": "lab-special19-atk30-3.4g", "basis": "posted", "posted_gain": "+2.3% for special research 19, ATK amp 30% (+76.87M at 3.4G, dc:82156; team or total not stated)", "inferred_reach_35": "about one chapter", "sources": ["dc:82156"]},
+   {"source": "cookie_level", "data_point": "level-119-claim", "basis": "claimed", "posted_gain": "none yet (cap 120 from 10-08): one poster's ~+25% at level 119; base stats +64% at 120 (inferred)", "inferred_reach_35": "if +25%: 304-19 → about 313", "sources": ["dc:81689", "dc:82104", "web:crumbgg-patches-20261007"]},
    {"source": "lineup", "basis": "unmeasured", "posted_gain": "none: record 003's pushers say a padded stage preset shows more than the conquest preset, unmeasured", "inferred_reach_35": "not derived", "sources": ["dc:76290", "dc:74089", "nv:32484"]}
   ],
   "rift": "The Dimensional Rift opens after 328-30 and is a 35% fight at every level against Rift-inflated power (record 003); its own Dimensional Energy is the power source there (curated/power-sources.json, rift_energy)."
  },
- "sources": ["dc:77329", "dc:76290", "dc:76461", "dc:75684", "web:crumblehub-stages", "web:crumblehub-stage-tool"]
+ "sources": ["dc:77329", "dc:76290", "dc:76461", "dc:75684", "web:crumblehub-stages", "web:crumblehub-stage-tool", "dc:82156", "dc:81689", "dc:82104", "web:crumbgg-patches-20261007"]
 }
