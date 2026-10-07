@@ -28,3 +28,14 @@ Research tool for Cookie Run: Crumble: Guild Conquest (길드 토벌전) and PvP
   - `open` may not return while Vite runs: launch it in the background and navigate in-page.
   - No Playwright. curl only for JSON APIs and server-rendered pages.
 - The research write-up for a record is written at the end of the working session, to the deep-research contract (`.claude/skills/deep-research/SKILL.md`).
+- **UI: scannable, not prose (MANDATORY).**
+  - Every screen answers "what's good, what's not" at a glance. Rank, tier, good/avoid, win/lose and confidence show as badges, colour, icons and position before any text.
+  - Default-view explainers are 1–3 short bullets of about 12 words or fewer, never paragraphs.
+  - Any `why`, lede, caveat, mechanism or note longer than one line is clamped and expands on demand.
+  - No filler copy, no "Understanding X" headings, no marketing tone.
+  - A cookie's icon shows wherever the cookie appears, with a badge fallback.
+  - Sources are small chips at the end of a row, never inline text.
+  - Navigation is obvious, with a visible active state.
+  - Modern, sleek, simple: a restrained palette from the tokens, generous spacing, light and dark themes, phone width.
+  - Curated strings follow the same rule: a cookie `why` is one line, and other strings lead with the verdict in under ~25 words.
+  - Before a UI change is done, check every screen it touches in agent-browser.
