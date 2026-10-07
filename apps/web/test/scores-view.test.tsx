@@ -99,7 +99,7 @@ describe("scores view", () => {
   it("renders the legacy heading, scatter, RNG cards and a damage-ordered table", async () => {
     await renderRoute("/conquest/scores", API);
     expect(await screen.findByRole("heading", { name: "Scores and RNG" })).toBeVisible();
-    expect(screen.getByText(/Dashed lines mark 배 multiples/)).toHaveClass("lede");
+    expect(screen.getByText(/Dashed lines mark 배 multiples/).closest(".lede")).not.toBeNull();
     await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(3));
     expect(bodyRows(scoresTable()).map((r) => r[0])).toEqual(["1.31T", "1T", "867G"]);
     const [top, , last] = bodyRows(scoresTable());

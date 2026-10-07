@@ -627,7 +627,7 @@ describe("Piñata boss view", () => {
     ]);
     const rows = bodyRows(table);
     const boss = rows.find((r) => r[1]!.startsWith("Boss DMG"))!;
-    expect(boss[0]).toContain("Tea Knight Cookie");
+    expect(boss[0]).toContain("Tea Knight");
     expect(boss.slice(2, 8)).toEqual(["45%", "50%", "55%", "60%", "65%", "70%"]);
     const milk = rows.find((r) => r[1]!.startsWith("ATK +"))!;
     expect(milk[1]).toContain("share of the caster's ATK");
@@ -715,11 +715,11 @@ describe("Piñata boss view", () => {
   it("checks the Cherry deck's ATK order against the catcher and the pet's in-battle bonus", async () => {
     await renderRoute(PATH, FULL);
     const check = await screen.findByRole("region", { name: "ATK-order check" });
-    await within(check).findByText("Brightseeker Cookie");
+    await within(check).findByText("Brightseeker");
     expect([...check.querySelectorAll(".order .step")].map((s) => s.textContent)).toEqual([
-      "Milk Cookie's Crunchy Strong Pediatrician",
-      "Brightseeker Cookie",
-      "Cheesecake Cookie",
+      "Milk · Pediatrician",
+      "Brightseeker",
+      "Cheesecake",
     ]);
     const items = within(within(check).getByRole("list")).getAllByRole("listitem");
     expect(items[0]).toHaveTextContent(

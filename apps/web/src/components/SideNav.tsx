@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { MouseEvent } from "react";
 import type { LinkTarget } from "../app/modes";
+import { ThemeToggle } from "./ThemeToggle";
 
 /** One page link under the current section of a {@link SideNav}. */
 export interface NavPage {
@@ -77,6 +78,7 @@ export function SideNav({ id, label, sections }: SideNavProps) {
       <div className="brand">
         <span className="brand-name">Crumble Logbook</span>
         <span className="brand-game">Cookie Run: Crumble</span>
+        <ThemeToggle />
       </div>
       <ul className="nav-sections">
         {sections.map((s) => (

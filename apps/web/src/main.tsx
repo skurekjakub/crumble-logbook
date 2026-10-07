@@ -7,6 +7,7 @@ import "./styles/tokens.css";
 import "./styles/base.css";
 import "./styles/components.css";
 import "./styles/shell.css";
+import "./styles/ui.css";
 import "./styles/boss.css";
 import "./styles/pvp.css";
 import "./styles/stage.css";

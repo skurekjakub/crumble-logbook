@@ -336,7 +336,7 @@ describe("/conquest/decks", () => {
       selector: ".lede",
     });
     expect(lede).not.toHaveTextContent(/Pomegranate|beam/);
-    const note = (await panel().findByText(MECHANICS[0]!.body)).closest(".note") as HTMLElement;
+    const note = (await panel().findByText(MECHANICS[0]!.body)).closest(".callout") as HTMLElement;
     expect(within(note).getByText("high")).toHaveClass("pill", "high");
     expect(await within(note).findByRole("link", { name: "DC 76135" })).toBeVisible();
     expect(panel().queryByText(MECHANICS[1]!.body)).toBeNull();
