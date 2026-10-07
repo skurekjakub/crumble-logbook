@@ -9,6 +9,7 @@ import "./styles/components.css";
 import "./styles/shell.css";
 import "./styles/ui.css";
 import "./styles/shared-pages.css";
+import "./styles/conquest.css";
 import "./styles/boss.css";
 import "./styles/pvp.css";
 import "./styles/stage.css";

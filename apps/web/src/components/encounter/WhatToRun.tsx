@@ -78,7 +78,7 @@ function ChanceNote({
   return (
     <div className="boss-note">
       <div>
-        {effectName(chance.effectType)} base application chance:{" "}
+        {effectName(chance.effectType)} base chance:{" "}
         {values.length === 1 ? (
           <>
             <b>{formatPct(values[0])}</b> at every star.
@@ -90,9 +90,9 @@ function ChanceNote({
         )}
       </div>
       <div className="muted">
-        How focus and resist change it: see <a href={`#${buffTableId}`}>Buffs by star</a>.
+        Focus and resist: <a href={`#${buffTableId}`}>Buffs by star</a>
       </div>
-      <SourceChips ids={chance.sources} sources={sources} />
+      <SourceChips ids={chance.sources} sources={sources} max={2} />
     </div>
   );
 }
