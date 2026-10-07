@@ -2480,14 +2480,14 @@
  "web:crumbgg:final-s5": {
   "url": "https://api.crumb.gg/api/rankings?kind=players",
   "title": "길드 토벌전 개인·길드 랭킹 시즌 5 (최종)",
-  "title_en": "Guild Conquest player and guild rankings, Season 5 final (top 50), captured 2026-10-07",
+  "title_en": "Guild Conquest player and guild boards, Season 5 final (top 50 each), captured 2026-10-07; guilds from api/rankings?kind=guilds",
   "date": "2026-09-28",
   "signal": "public game data"
  },
  "web:crumbgg:final-s6": {
   "url": "https://crumb.gg/pub/live?board=guild_conquest_players",
   "title": "길드 토벌전 개인·길드 랭킹 시즌 6 (최종)",
-  "title_en": "Guild Conquest player and guild rankings, Season 6 final (top 100), captured 2026-10-07",
+  "title_en": "Guild Conquest player and guild boards, Season 6 final (top 100 each), captured 2026-10-07; guilds from pub/live?board=guild_conquest_guilds",
   "date": "2026-10-05",
   "signal": "public game data"
  },

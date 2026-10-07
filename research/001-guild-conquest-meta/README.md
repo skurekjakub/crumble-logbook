@@ -17,7 +17,7 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
 
 ## Verdict
 
-**True from 1T to about 2.2T; still unanswered above it.** The documented ≥1T meta is the Cherry deck (체리덱), with the Melon Soda deck (메소덱) as its move-speed variant. Every ≥2T forum lineup in Season 6 is one of the two, and the best with its lineup on screen is 2T 204G at 2.86G team power: a Cherry deck whose fillers are levelled just under the beam line so they outlive the 17 s wipe (dc:80067). Season 6's #1 reached 6T 276G and the rest of the top 10 4.2–4.9T (web:crumbgg:final-s6). No top-10 player has posted a run with its team; the only top-10 lineup on screen is the Season 5 #2's lobby, a Melon Soda deck with no move speed at 4.23G and a 3T 045G best (dc:76966). The #1 credits stacked small optimizations plus money (dc:82457), and posters credit plates at +20 and +25 (dc:81148, dc:80723). The strongest reason is still the spread at equal power: one Cherry deck at 2.93G gave 208–783× over 100 runs (dc:80859). What separates runs is execution, survival and gear depth, not a different team.
+**True from 1T to about 2.2T, and in part to 3T; still unanswered above it.** The documented ≥1T meta is the Cherry deck (체리덱), with the Melon Soda deck (메소덱) as its move-speed variant. Every ≥2T Season 6 forum lineup but one (dc:79943) is one of the two. The best run with its lineup on screen is the Season 5 #2's 3T 045G at 4.23G team power: a Melon Soda deck with no move speed, from a lobby that shows no runes, with the ATK order given from memory (dc:76966). Season 6's best forum screen with its lineup is 2T 204G at 2.86G: a Cherry deck whose fillers are levelled just under the beam line so they outlive the 17 s wipe (dc:80067). Season 6's #1 reached 6T 276G and the rest of the top 10 4.2–4.9T (web:crumbgg:final-s6); none of them has posted a team. The #1 credits stacked small optimizations plus money (dc:82457), and posters credit plates at +20 and +25 (dc:81148, dc:80723). The strongest reason is still the spread at equal power: the levelled-filler Cherry account at 2.93G got 208–783× over 100 runs (dc:80859). What separates runs is execution, survival and gear depth, not a different team.
 
 ## Reasoning
 
@@ -29,12 +29,12 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
    |---|---|---|---|---|---|
    | 3T 257G | not shown | — | not shown | Result screen, Season 6 | dc:80426 |
    | 3T 045G | 4.23G | ≈720 *derived* | Melon Soda, no move speed | Lobby: personal best and power; the Season 5 #2 | dc:76966 |
-   | 2T 919G | not shown | — | not shown | Result screen, Season 6 day 1; posted by 섬영, the 1T 999G author | dc:79103 |
+   | 2T 919G | not shown | — | not shown | Result screen, Season 6 day 1, 섬영's card on screen; posted by an anonymous ㅇㅇ, so 섬영 is *inferred* | dc:79103 |
    | 2T 204G | 2.86G | 771 | Cherry, fillers Lv.42–91 | Result screen and lobby | dc:80067 |
    | 2T 186G | 2.9G | ≈754 | Cherry, Lv.1 fillers | Lobby | dc:81110, dc:80846 |
    | 2T 130G | 3.82G | ≈557 | Herb Lv.85, no Cherry or Tiger Lily, an unidentified Light Lv.100 | Result screen and lobby | dc:79943 |
-   | 2T 072G | 3.0G | ≈691 | Melon Soda | Lobby | dc:80848 |
-   | 2T 030G | 2.87G | ≈707 | Melon Soda, move speed | Lobby | dc:81023 |
+   | 2T 072G | 3.0G | ≈691 | Melon Soda, levelled fillers (Lv.40–60) | Lobby | dc:80848 |
+   | 2T 030G | 2.87G | ≈707 | Melon Soda, move speed, Lv.1 fillers, Scorpion Lv.21 | Lobby | dc:81023 |
    | 1T 999G | 3.07G, *derived* from "덱투 650배정도" | ~650 *stated* | Cherry | Score on screen | dc:76235 |
    | 1.62T | 2.7G *derived* | ~600 *stated* | Cherry | Score on screen | dc:75462 |
    | 1T 312G | 1.8G | 728 | Cherry, Pomegranate Lv.1, Scorpion Lv.10 | Result screen | dc:76135 |
@@ -49,14 +49,14 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
 
 3. **Who ran the 1T 999G, and what's known about it.**
    - **Author.** DC user `awkward2637` posted it. The uid was read from the desktop site (`evidence/21-author-awkward2637/README.md`).
-   - **Player.** crumb.gg lists 1T 999G under 섬영 · 판도라 (`evidence/20-verify-1t999/`). The same uid posted 섬영's own conquest lobby (dc:69331, dc:71121). That the DC account belongs to 섬영's player is *inferred* from those screenshots, not stated. On Season 6's first day a result screen of 2T 919G was posted from 섬영's account (dc:79103), with no lineup.
+   - **Player.** crumb.gg lists 1T 999G under 섬영 · 판도라 (`evidence/20-verify-1t999/`). The same uid posted 섬영's own conquest lobby (dc:69331, dc:71121). That the DC account belongs to 섬영's player is *inferred* from those screenshots, not stated. On Season 6's first day an anonymous ㅇㅇ posted a 2T 919G result screen with 섬영's card on it (dc:79103), with no lineup; that the run is 섬영's is *inferred*.
    - **Team power.** It's on no screen. The last *observed* team power is 1.38G on 9/20 (dc:71121).
    - **Build.** Cherry deck, no move speed. Milk has 1.27M ATK from SSR ATK% lines at minimum rolls. All *stated* (dc:76235).
    - **Misread claims.** The "780×" and "정전씀" (uses Tiger Lily) replies in dc:76583 belong to another user, `female8264`. So Tiger Lily isn't confirmed for this run.
 
 4. **Power is necessary, not sufficient.**
    - **Forum runs.** At similar team power the multiple spans about 2×: 448× at 2.38G (dc:75176), ~450× at 3G (dc:76333, *stated*), 480× at 3.18G (dc:77105), and 557× at 3.82G (dc:79943). Against those, 771× at 2.86G (dc:80067).
-   - **One deck, many runs.** 100 runs of one Cherry deck at 2.93G gave 208–783×, mean 477×; 700×+ came once in 20 (dc:80859). A 39-run log at 2.44G spanned 246–629× (dc:79121).
+   - **One deck, many runs.** 100 runs on the levelled-filler Cherry account (저장용, the 2T 204G poster) at 2.93G gave 208–783×, mean 477×; 700×+ came once in 20 (dc:80859). A 39-run log at 2.44G spanned 246–629× (dc:79121).
    - **crumb.gg, Season 6 top 50.** Score ÷ account power runs 76–164× (median 110×). The strongest account (50.8G) placed #19, and the #1 holds 38.2G (`evidence/r2026-10-07/15-crumbgg/11-players.tsv`, `13-power-top500.tsv`).
    - **Caveat.** crumb.gg power is account-wide, not the 12-cookie team power the forum's 배 uses. The two ratios don't compare.
 
@@ -80,19 +80,19 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
    - **How often.** At 2.93G, 700×+ in 1 of 20 runs (dc:80859). At 1.74G, 1T lands in 1–2 of 10 runs (dc:75400). The ceiling is roughly the best of 20 runs plus 10–20% (dc:74815). Records still come from overnight macros (dc:76545, dc:79585).
    - **The 1T 999G author's history.** Two hours of manual retries bought him +16G on 9/19 (dc:70682). His next record, on 9/20, followed haste runes on Tiger Lily (dc:71121). → `curated/rng.json`, `curated/takeaways.json`.
 
-9. **Past 2T, the carries outlive the 17 s wipe.**
-   - **The screens.** The 2T 204G run keeps 5–6 cookies, Brightseeker included, alive past it (dc:80067); the 2T 186G run keeps every Lv.100 but Milk (dc:81110); the 2T 130G run ends at 5.2 s left (dc:79943). The first round's survival hypothesis now has run screens behind it, though no single build is shown surviving at 3T+.
-   - **What it takes.** About 10M+ HP per survivor: a 13.4M HP, 43% DR Brightseeker lived to about 7 s left (dc:79585), and a 10.4M HP, 39% DR Milk died (dc:79144). Panda Dumpling places Tiger Lily better while the team dies at 17 s; Candy Shade Pouch's HP wins once carries survive (dc:81699, dc:79169).
-   - **What it's worth, disputed.** The boss takes full damage to 10 s elapsed, then 10/30/50/70/90% less from 10/22/34/46/58 s (dc:81844, *derived* from game data; the same table is on crumb.gg's Guild Conquest page, `evidence/r2026-10-07/15-crumbgg/40-guild-conquest-db.txt`). Past the wipe, at 43 s elapsed, hits count at 30% and then 10%. Posters still put survival at +300–600G for a run that reaches 1.5T by 17 s (dc:79493, *stated*); a 1T guide says keep the damage pets and take the wipe (nv:48773).
+9. **Past 2T, the carries usually outlive the 17 s wipe.**
+   - **The screens.** Every ≥2T screen that shows the timer or a survival note outlives it. The 2T 204G run keeps 5–6 cookies, Brightseeker included, alive past it (dc:80067); the 2T 186G run keeps every Lv.100 but Milk (dc:81110); the 2T 130G run ends at 5.2 s left (dc:79943). 캔디애플's Melon Soda team, later 2T 030G, doesn't survive (dc:80069, dc:79882). The first round's survival hypothesis now has run screens behind it, though no single build is shown surviving at 3T+.
+   - **What it takes.** Posters estimate 10–13M+ HP per survivor, *stated* rather than measured: a 13.4M HP, 43% DR Brightseeker lived to about 7 s left (dc:79585), a 10.4M HP, 39% DR Milk died (dc:79144), and a poster whose Pomegranate and Skating Queen alone survive puts the bar past 11M (dc:80785). The first round's 9M floor came with 45% DR (dc:74801), and 5–9M is the band that safely reaches 17 s, not past it (dc:81699). Panda Dumpling places Tiger Lily better while the team dies at 17 s; Candy Shade Pouch's HP wins once carries survive (dc:81699, dc:79169).
+   - **What it's worth, disputed.** The boss takes full damage to 10 s elapsed, then 10/30/50/70/90% less from 10/22/34/46/58 s (dc:81844, *derived* from game data; the same table is on crumb.gg's Guild Conquest page, `evidence/r2026-10-07/15-crumbgg/40-guild-conquest-db.txt`). Past the wipe, from 43 to 46 s elapsed hits count at 50%, then 30% from 46 s, then 10% from 58 s. Posters still put survival at +300–600G for a run that reaches 1.5T by 17 s (dc:79493, *stated*); a 1T guide says keep the damage pets and take the wipe (nv:48773).
 
 10. **Season 6: the boards doubled, the teams stayed hidden.**
-    - **The boards.** Season 5 closed on 09-28 with #1 at 3T 305G and #50 at 2T 025G (web:crumbgg:final-s5). Season 6 ran 10-01 16:00 to 10-05 12:00 KST on the same boss: #1 Arsen 6T 276G, #2 4T 910G, #50 3T 341G, #100 2T 763G (web:crumbgg:final-s6). The same players scored 1.4–2.1× their Season 5 finals.
-    - **The #1.** Arsen, crumb.gg's developer, was at 5T 115G by 10-02, over a trillion ahead of #2 (dc:79664). He says the "secret sauce" is many small optimizations, plus money, and opened crumb.gg's rune optimizer for 48 h (dc:82457). Leaked stat weights from his account: skill amp +1% ≈ +2% damage, crit dmg +15% ≈ +4% (dc:82295, *stated* second-hand).
+    - **The boards.** Season 5 closed on 09-28 with #1 at 3T 305G and #50 at 2T 025G (web:crumbgg:final-s5). Season 6 ran 10-01 16:00 to 10-05 12:00 KST on the same boss: #1 Arsen 6T 276G, #2 4T 910G, #50 3T 341G, #100 2T 763G (web:crumbgg:final-s6). The 47 players on both boards scored 1.16–2.13× their Season 5 finals (`evidence/r2026-10-07/15-crumbgg/11-players.tsv`, joined by crumb.gg player id).
+    - **The #1.** Arsen, crumb.gg's developer, was at 5T 115G by 10-02, over a trillion ahead of #2 (dc:79664). He says the "secret sauce" is many small optimizations, plus money, and opened crumb.gg's rune optimizer for 48 h (dc:82457). Leaked stat weights from his account: skill amp +1% ≈ +2% damage, crit dmg +15% ≈ +4% (dc:82295, *stated* second-hand). His own calculator's sample shows far less: skill amp +1% ≈ +0.45%, crit dmg +1% ≈ +0.38% (dc:82457 image 2, *observed*).
     - **Not a new deck.** Posters who tried other dealers in Cherry's slot failed (dc:79678), and one says the #2's 4T 700 gap isn't a special build (dc:80723). A 1000×+ deck is rumoured without any detail (dc:79686).
 
 ## Steelman: "more power is all you need"
 
-**The case.** Damage is team power × multiple, so power multiplies everything. Season 6 bears it out on the boards: every top-100 player rose, and the forum's ≥2T screens sit at 2.86–4.23G team power, well above the first round's 1.8G. Survival past the wipe takes 10M+ HP, which is power by another name. Plates at +20 and +25, said to be behind the #1, are bought power.
+**The case.** Damage is team power × multiple, so power multiplies everything. Season 6 bears it out on the boards: every player on both seasons' boards rose (1.16–2.13×), though that says nothing of players on only one, and the forum's ≥2T screens sit at 2.86–4.23G team power, well above the first round's 1.8G. Survival past the wipe takes 10–13M+ HP by posters' estimate, which is power by another name. Plates at +20 and +25, said to be behind the #1, are bought power.
 
 **The answer, point by point.**
 - **Equal power, different results.** One deck at one power gave 208–783× across 100 runs (dc:80859). At 3.82G a team scored 2T 130G; at 2.86G another scored 2T 204G (dc:79943, dc:80067).
@@ -128,7 +128,7 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
    - **The target.** Exactly 7th in ATK, checked in battle (dc:71105). In the lobby, hold her at least 10% under the 6th cookie, because Octo Wasabi adds about 8% ATK when she enters (dc:76135). Season 6 runs use Lv.10–60 (dc:79585, dc:80159).
    - **Lv.40.** It's inside the documented range. Whether it's right depends only on where she lands in the in-battle order.
 5. **Raid gear preset** (`curated/gear.json`): weapons skill amp + crit dmg, top-right haste + skill amp, armour damage reduction + HP, bottom-right haste + damage reduction. No move speed, accuracy or focus.
-6. **Then survival, once the carries hold about 10M HP.** Level the fillers to just under the 6th cookie's ATK so they outlive the 17 s wipe and add chip damage, as the 2T 204G build does (dc:80067, dc:79270), and switch to Candy Shade Pouch then (dc:79169). Below that HP, keep Lv.1 fillers and the damage pets (nv:48773).
+6. **Then survival, once the carries hold 10–13M HP** (posters' estimate; 5–9M only reaches 17 s, dc:81699). Level the fillers to just under the 6th cookie's ATK so they outlive the 17 s wipe and add chip damage, as the 2T 204G build does (dc:80067, dc:79270), and switch to Candy Shade Pouch then (dc:79169). Below that HP, keep Lv.1 fillers and the damage pets (nv:48773).
 7. **Retry after a build change, not instead of one.** The best run is 29% over the median (*derived*), in line with "best of 20 + 10–20%" (dc:74815). `tools/conquest-macro/` automates the retry loop.
 
 ## What would change the verdict
@@ -163,21 +163,25 @@ Window: 2026-09-27 (`curated/meta.json` `updated`; no earlier refresh heading) t
 
 | Change | Recommendation | Evidence |
 |---|---|---|
-| added | deck `cherry-levelled`, Cherry deck with levelled fillers: 2T 204G at 2.86G, fillers held just under the beam line to outlive the 17 s wipe | `evidence/r2026-10-07/03-dc-posts/80067.md`, `79270.md` |
+| added | deck `cherry-levelled`, Cherry deck with levelled fillers: 2T 204G at 2.86G, fillers held just under the beam line to outlive the 17 s wipe; rng from the same account's 100-run log | `evidence/r2026-10-07/03-dc-posts/80067.md`, `79270.md`, `80859.md` |
 | added | deck `meso-nospeed`, Melon Soda deck with no move speed: the Season 5 #2's lobby, 3T 045G best at 4.23G | `evidence/r2026-10-07/03-dc-posts/76966.md`, `77113.md` |
-| changed | deck `cherry`: ceiling 1T 312G → 2T 186G at 2.9G; rng from a 100-run log; pet note (Panda while dying at 17 s, Pouch once surviving); Popcorn-for-Cherry substitution | `evidence/r2026-10-07/03-dc-posts/81110.md`, `80846.md`, `80859.md`, `81699.md`, `80297.md` |
-| changed | deck `meso`: ceiling ≈1T → 2T 072G at 3.0G; Scorpion's level range Lv.1–7 → Lv.1–40; Melon Soda's and Pinot's move-speed lines | `evidence/r2026-10-07/03-dc-posts/80848.md`, `81023.md`, `80069.md`, `79624.md` |
-| changed | deck `herb`: a low-variance substitution (Herb Lv.1 next to Tiger Lily, Scorpion out) | `evidence/r2026-10-07/03-dc-posts/79142.md` |
+| changed | deck `cherry`: ceiling 1T 312G → 2T 186G at 2.9G; pet note (Panda while dying at 17 s, Pouch once surviving); Popcorn-for-Cherry and Herb-for-Scorpion substitutions | `evidence/r2026-10-07/03-dc-posts/81110.md`, `80846.md`, `81699.md`, `80297.md`, `79142.md` |
+| changed | deck `meso`: ceiling ≈1T → 2T 030G at 2.87G; Scorpion's level range Lv.1–7 → Lv.1–40, Dark Choco's Lv.6–43 → Lv.1–43; Melon Soda's and Pinot's move-speed lines | `evidence/r2026-10-07/03-dc-posts/80848.md`, `81023.md`, `80069.md`, `79624.md` |
 | added | scores: Season 5 final and Season 6 final board rows, and the round's forum and video runs (all new rows; earlier rows kept) | `evidence/r2026-10-07/15-crumbgg/`, `evidence/r2026-10-07/08-extract/`, `evidence/r2026-10-07/14-global/frames/` |
 | added | mechanics: the boss's damage-reduction phases, scoring only the boss, survival HP and pet, what survival is worth (disputed), levelled fillers, leaked stat weights, Chardonnay's 다발 1–2 | `evidence/r2026-10-07/03-dc-posts/81844.md`, `evidence/r2026-10-07/15-crumbgg/40-guild-conquest-db.txt` |
-| changed | mechanic "Survival and the Season 5 jump": every Season 6 forum screen past 2T outlives the wipe | `evidence/r2026-10-07/03-dc-posts/80067.md`, `81110.md`, `79943.md` |
-| added | gear rec: plates to +20 on skill-amp and crit-dmg accessories first (second-hand) | `evidence/r2026-10-07/03-dc-posts/81148.md`, `81144.md` |
+| changed | mechanic "Survival and the Season 5 jump": every ≥2T screen that shows the timer or a survival note outlives the wipe; 캔디애플's Melon Soda team doesn't | `evidence/r2026-10-07/03-dc-posts/80067.md`, `81110.md`, `79943.md`, `80069.md` |
+| added | gear rec: skill-amp and crit-dmg accessories, plated to +20 first (second-hand) | `evidence/r2026-10-07/03-dc-posts/81148.md`, `81144.md` |
 | changed | rune build `브시커`: the Season 6 #1 haste rumour in its dispute | `evidence/r2026-10-07/03-dc-posts/81144.md` |
-| added | rng factor: run-to-run spread at fixed power | `evidence/r2026-10-07/03-dc-posts/80859.md`, `79121.md` |
+| added | rng factor: run-to-run spread at fixed power, on the levelled-filler account | `evidence/r2026-10-07/03-dc-posts/80859.md`, `79121.md` |
 | changed | takeaways, timeline and `meta.json` (season S6, caveat, the user's summary and survival step) | `evidence/r2026-10-07/` |
 | re-captured | crumblehub's meta decks and the crumbleguides and cookieruncrumbles conquest guides: unchanged since September; crumblehub's community conquest list adds one uncited deck | `evidence/r2026-10-07/13-sites/`, `evidence/r2026-10-07/14-global/web-cookieruncrumbles-guild-conquest.html` |
 
-Nothing was marked obsolete: no source in the round says a current recommendation stopped working, no patch in the window touched conquest, and no documented build beat one in its own slot. The Season 6 Cherry and Melon Soda runs extend the current decks rather than displace them.
+Nothing was marked obsolete: no source in the round says a current recommendation stopped working, and no patch in the window touched conquest. Each new deck was weighed against the deck in its slot, and both of each pair stay:
+
+- **`cherry-levelled` 2T 204G (dc:80067) against `cherry` 2T 186G (dc:81110).** The margin is within one setup's run spread (dc:80859). Levelled fillers only pay once the carries survive the wipe, which needs more power, so it's a higher-spec slot, not a replacement.
+- **`meso-nospeed` 3T 045G against `meso` 2T 030G (dc:76966, dc:81023).** Different power (4.23G against 2.87G), season and account; dropping move speed makes it a separate build.
+
+The Season 6 Cherry and Melon Soda runs extend the current decks rather than displace them.
 
 ### Unconfirmed this round
 
@@ -230,8 +234,8 @@ Every source the record used is in `curated/sources.json`, with its URL, title a
 | [web:crumbgg-join](https://crumb.gg/pub/leaderboard) | Season 5 scores joined with account power |
 | [web:crumbgg-lookup-seomyeong](https://crumb.gg/lookup) | 1T 999G listed under 섬영 · 판도라, 22.20B account power |
 | [web:sugarpocket-bundle-1.4.002](https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js) | Buff, damage and debuff formulas from the calculator's code |
-| [web:crumbgg:final-s5](https://api.crumb.gg/api/rankings?kind=players) | Season 5 final: #1 3T 305G, #50 2T 025G |
-| [web:crumbgg:final-s6](https://crumb.gg/pub/live?board=guild_conquest_players) | Season 6 final: #1 Arsen 6T 276G, #2 4T 910G, #50 3T 341G, #100 2T 763G |
+| [web:crumbgg:final-s5](https://api.crumb.gg/api/rankings?kind=players) | Season 5 final player and guild boards: #1 3T 305G, #50 2T 025G |
+| [web:crumbgg:final-s6](https://crumb.gg/pub/live?board=guild_conquest_players) | Season 6 final player and guild boards (guilds: `pub/live?board=guild_conquest_guilds`): #1 Arsen 6T 276G, #2 4T 910G, #50 3T 341G, #100 2T 763G |
 | [web:crumbgg:power-leaderboard-1007](https://crumb.gg/pub/leaderboard) | Account power top 500 on 10-07 (top 50.76G), joined with the Season 6 board |
 | [web:crumbgg:guild-conquest](https://crumb.gg/guild-conquest) | Season 6 and 7 dates; the boss and its damage-reduction phase table |
 | [web:crumbgg:patches-1007](https://crumb.gg/data/patches.json) | Nothing for conquest in the window; 1.5.002's Chardonnay kit (다발 1–2) and level cap 120 |
@@ -241,8 +245,8 @@ Every source the record used is in `curated/sources.json`, with its URL, title a
 | [dc:80067](https://m.dcinside.com/board/projectcc/80067), [dc:79270](https://m.dcinside.com/board/projectcc/79270) | The levelled-filler Cherry deck: 2T 204G at 2.86G, 1.81T at 2.69G |
 | [dc:81110](https://m.dcinside.com/board/projectcc/81110), [dc:80846](https://m.dcinside.com/board/projectcc/80846) | Cherry deck 2T 186G at 2.9G and its lobby |
 | [dc:76966](https://m.dcinside.com/board/projectcc/76966), [dc:77113](https://m.dcinside.com/board/projectcc/77113) | The Season 5 #2's no-move-speed Melon Soda lobby (3T 045G, 4.23G); the same build at 650G |
-| [dc:80848](https://m.dcinside.com/board/projectcc/80848), [dc:81023](https://m.dcinside.com/board/projectcc/81023), [dc:80069](https://m.dcinside.com/board/projectcc/80069) | Melon Soda deck 2T 072G and 2T 030G; 캔디애플's move-speed recipe |
-| [dc:80426](https://m.dcinside.com/board/projectcc/80426), [dc:79103](https://m.dcinside.com/board/projectcc/79103), [dc:79943](https://m.dcinside.com/board/projectcc/79943) | 3T 257G and 2T 919G result screens without teams; 2T 130G with Herb Lv.85 |
+| [dc:80848](https://m.dcinside.com/board/projectcc/80848), [dc:81023](https://m.dcinside.com/board/projectcc/81023), [dc:80069](https://m.dcinside.com/board/projectcc/80069) | Melon Soda 2T 072G (levelled fillers) and 2T 030G (the deck's ceiling); 캔디애플's move-speed recipe, and his team not surviving |
+| [dc:80426](https://m.dcinside.com/board/projectcc/80426), [dc:79103](https://m.dcinside.com/board/projectcc/79103), [dc:79943](https://m.dcinside.com/board/projectcc/79943) | 3T 257G and 2T 919G result screens without teams (the 2T 919G *inferred* to be 섬영's); 2T 130G with Herb Lv.85 |
 | [dc:80859](https://m.dcinside.com/board/projectcc/80859), [dc:79121](https://m.dcinside.com/board/projectcc/79121) | 100-run and 39-run logs at fixed power |
 | [dc:79585](https://m.dcinside.com/board/projectcc/79585), [dc:79144](https://m.dcinside.com/board/projectcc/79144), [dc:79169](https://m.dcinside.com/board/projectcc/79169), [dc:81699](https://m.dcinside.com/board/projectcc/81699), [dc:79493](https://m.dcinside.com/board/projectcc/79493) | Survival HP, the pet choice and what survival is worth |
 | [dc:81844](https://m.dcinside.com/board/projectcc/81844) | Boss datamine: damage-reduction phases, only the boss scores |
@@ -289,7 +293,6 @@ Not used, and why: Reddit (blocked), mrguider (Cloudflare), TikTok (JS shell), X
 
 - **Done.**
   - The 2026-10-07 round: Season 5's final and Season 6's boards, the round's forum runs, decks `cherry-levelled` and `meso-nospeed`, and the boss's phase table are in `curated/`.
-  - The round's ranking TSVs (`evidence/r2026-10-07/15-crumbgg/1[123]-*.tsv`) are captured but not yet in `import.json`'s `rankings`: the importer test counts record 001's rankings from the first round's TSVs only.
 - **Next, in order.**
   1. After the 10-08 update, re-check the ATK order with Lv.120 recipients, and whether Chardonnay enters any conquest lineup (Season 7 from 10-08 16:00 KST).
   2. Settle the 45 s / 27 s reading (Side findings); recommendation 1 depends on it.

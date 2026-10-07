@@ -5,9 +5,9 @@
     "name_kr": "체리덱",
     "status": "meta",
     "ceiling": "2T 186G at 2.9G (754×)",
-    "summary": "Still the standard deck in Season 6. Lv.1 fillers keep Pomegranate's +69% skill-amp beams on the carries; Cherry lines the team up inside Macaron's crit buff.",
+    "summary": "The standard deck. Lv.1 fillers keep Pomegranate's +69% beams on the carries; Cherry lines them up inside Macaron's crit buff.",
     "cookies": [
-      { "kr": "우유", "level": "100", "why": "ATK #1: both ATK perks land on her; her buff scales with ATK." },
+      { "kr": "우유", "level": "100", "why": "ATK #1 for both perks; her buff scales with ATK." },
       { "kr": "브시커", "level_rule": "Lv.100, or as high as possible while ATK < Milk", "why": "The carry (90%+ of damage per one poster); ATK #2 for beams." },
       { "kr": "피겨", "level_rule": "As high as possible while ATK < Milk (usually ATK #3)", "why": "Skill-amp buffer; base ATK alone ranks her into the beams." },
       { "kr": "마카롱", "level": "100", "why": "300%+ crit rate, but only to cookies in line with her." },
@@ -29,22 +29,23 @@
       "Tiger Lily → Herb if the team dies at the 30 s slam: 5 beams, so Tea Knight drops to Lv.1.",
       "Cherry → Melon Soda if you're willing to tune move speed to 0.01 precision (see the Melon Soda deck).",
       "Pet: Candy Shade Pouch once carries outlive the 17 s wipe; Panda Dumpling while the team dies there (HP 5–9M).",
-      "Cherry → Popcorn (Lv.60, no move speed): one poster's personal best; single source."
+      "Cherry → Popcorn (Lv.60, no move speed), fillers Lv.50: 1T 150G at 1.86G, one poster's best; single source.",
+      "Scorpion → Herb Lv.1, Cherry and Tiger Lily kept: 9 of 10 runs line up at ~500×, lower ceiling; 1T 459G at 2.5G."
     ],
-    "rng": "At 2.93G, 100 runs gave 208–783× (mean 477×); 700×+ in 1 of 20. At 1.74G, 1T in 1–2 of 10.",
+    "rng": "1T in 1–2 of 10 runs at 1.74G, 1.1T occasionally. At 0.97G: 150× floor, 250–350× average, 400×+ after 14 h of macro.",
     "unorthodox": [
       "Five cookies at Lv.1, including the damage-dealer Scorpion in some versions and the buffer Pomegranate in the #1 run.",
       "An R-rarity Cherry Cookie in an endgame team, purely for formation.",
       "Scorpion levelled to a precise ATK window as a beam catcher rather than as a dealer."
     ],
-    "sources": ["nv:43653", "dc:71135", "dc:76135", "dc:75400", "dc:75617", "dc:76545", "dc:76605", "dc:69368", "dc:81110", "dc:80846", "dc:80859", "dc:78711", "nv:48773", "dc:81699", "dc:79169", "dc:80297", "dc:80723"]
+    "sources": ["nv:43653", "dc:71135", "dc:76135", "dc:75400", "dc:75617", "dc:76545", "dc:76605", "dc:69368", "dc:81110", "dc:80846", "dc:78711", "nv:48773", "dc:81699", "dc:79169", "dc:80297", "dc:80723", "dc:79142"]
   },
   {
     "id": "meso",
     "name_en": "Melon Soda deck",
     "name_kr": "메소정전 / 메소덱",
     "status": "alt",
-    "ceiling": "2T 072G at 3.0G (691×)",
+    "ceiling": "2T 030G at 2.87G (≈707×)",
     "summary": "Melon Soda replaces Cherry; move speed on sugar runes forms the line. Past 2T in Season 6; tuning is per-account and unforgiving.",
     "cookies": [
       { "kr": "우유", "level": "100", "why": "As in Cherry: ATK #1 for the perks; buff scales with ATK." },
@@ -58,7 +59,7 @@
       { "kr": "피노", "level_rule": "Lv.1–2", "why": "Lift resistance; 2–3 move-speed lines (0.26–0.57) set arrival order." },
       { "kr": "전갈", "level_rule": "Lv.1–40, set so she is exactly 7th in ATK (checked in battle)", "why": "Backstop at exactly 7th in ATK, so stray beams skip Melon Soda." },
       { "kr": "정전", "level": "1", "why": "Multi-hit synergy for 6 beams; all haste runes, no move speed." },
-      { "kr": "닼초", "level_rule": "Lv.6–43", "why": "DEF shred. Level tuned so her ATK stays under the beam recipients." }
+      { "kr": "닼초", "level_rule": "Lv.1–43", "why": "DEF shred. Level tuned so her ATK stays under the beam recipients." }
     ],
     "atk_order": ["우유", "브시커", "피겨", "마카롱", "실론", "치케"],
     "atk_order_note": "Scorpion sits exactly 7th, ahead of Melon Soda and Dark Choco.",
@@ -102,11 +103,10 @@
     "pets": ["와사비문어", "핫도그", "색동주머니"],
     "perks": "열정페이 fixed, plus 초고속승진 (or a survival perk if the team is still dying).",
     "substitutions": [
-      "Back to Tiger Lily once the team survives to 17 s: its average is higher, and the ceiling is similar.",
-      "Low-variance cousin: Herb Lv.1 next to Tiger Lily, Scorpion out. 9 of 10 runs line up at ~500×; 1T 459G at 2.5G."
+      "Back to Tiger Lily once the team survives to 17 s: its average is higher, and the ceiling is similar."
     ],
     "rng": "Raises the floor more than the ceiling: one poster went 93× → 228× at 540M by fixing perks alone.",
-    "sources": ["nv:43011", "dc:71059", "dc:76157", "dc:76605", "dc:71135", "dc:79142", "nv:48773"]
+    "sources": ["nv:43011", "dc:71059", "dc:76157", "dc:76605", "dc:71135", "nv:48773"]
   },
   {
     "id": "cheesecake-recipient",
@@ -165,9 +165,9 @@
     "name_kr": "체리덱 (생존 레벨)",
     "status": "alt",
     "ceiling": "2T 204G at 2.86G (771×)",
-    "summary": "Best forum screen with its lineup. Fillers sit just under the beam line, not at Lv.1, so 5–6 cookies outlive the 17 s wipe and keep hitting.",
+    "summary": "Season 6's best forum screen with its lineup. Fillers sit just under the beam line, so 5–6 cookies outlive the 17 s wipe.",
     "cookies": [
-      { "kr": "우유", "level": "100", "why": "ATK #1: both ATK perks land on her; her buff scales with ATK." },
+      { "kr": "우유", "level": "100", "why": "ATK #1 for both perks; her buff scales with ATK." },
       { "kr": "브시커", "level": "100", "why": "The carry, ATK #2 for beams; survives the wipe here." },
       { "kr": "피겨", "level": "100", "why": "Skill-amp buffer and beam recipient (ATK #3)." },
       { "kr": "마카롱", "level": "100", "why": "Crit-rate buffer for the cookies in her line." },
@@ -188,7 +188,7 @@
     "substitutions": [
       "Candy Shade Pouch once carries outlive the wipe; Panda Dumpling placed better while they didn't."
     ],
-    "rng": "Same author, 100 runs at 2.93G: 208–783×, mean 477×.",
+    "rng": "Same account, 100 runs at 2.93G: 208–783×, mean 477×; 700×+ in 1 of 20.",
     "unorthodox": [
       "Fillers levelled back up after the Lv.1 era, each held just under the beam line, to survive the 17 s wipe."
     ],

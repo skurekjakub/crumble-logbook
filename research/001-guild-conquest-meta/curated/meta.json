@@ -2,7 +2,7 @@
   "updated": "2026-10-07",
   "season": "S6",
   "lede": "What Korean and global players run in Guild Conquest (길드 토벌전), from DCInside, the official Naver cafe and crumb.gg. Every claim links its post.",
-  "caveat": "Refreshed 2026-10-07, after Season 6 (#1 6T 276G). Top-10 teams unpublished. Best forum run with its lineup: 2T 204G, Cherry deck. Before the 10-08 level-120 patch.",
+  "caveat": "Best runs with a lineup: 3T 045G (Season 5 #2, Melon Soda, no move speed) and 2T 204G (Season 6 forum best, Cherry). Season 6 top-10 teams unpublished. Before the 10-08 level-120 patch.",
   "record": "Games/crumble/research/001-guild-conquest-meta/",
   "footer": "Built from the research record's evidence captures.",
   "gear_slot_names": {
@@ -19,8 +19,8 @@
       "Keep Brightseeker's in-battle haste in the 40–50 band.",
       "Reroll ATK% lines on Macaron and Skating Queen to skill amp; Milk keeps all ATK%. Re-check the ATK order in battle afterwards.",
       "Scorpion Lv.40 is fine if she lands exactly 7th in ATK in battle.",
-      "Once carries hold about 10M HP, level fillers to just under the beam line so they outlive the 17 s wipe (the 2T 204G build)."
+      "Once carries hold 10–13M HP (posters' estimate), level fillers to just under the beam line so they outlive the 17 s wipe (the 2T 204G build)."
     ],
-    "sources": ["dc:80067", "dc:79585", "dc:81335", "dc:76135", "dc:74818", "dc:70056", "dc:75462", "dc:66636", "nv:44761", "nv:43653", "dc:71135", "dc:71105"]
+    "sources": ["dc:80067", "dc:79585", "dc:81335", "dc:76135", "dc:74818", "dc:70056", "dc:75462", "dc:66636", "nv:44761", "nv:43653", "dc:71135", "dc:71105", "dc:79144"]
   }
 }
