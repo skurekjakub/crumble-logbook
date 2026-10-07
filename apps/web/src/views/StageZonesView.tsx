@@ -1,19 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSourceIndex } from "../api/hooks";
 import { decksQuery, stageZoneSlotsQuery } from "../api/queries";
-import type { StageZoneSlot } from "../api/types";
+import type { Deck, StageZoneSlot } from "../api/types";
 import type { ModeSection, StageConfig } from "../app/modes";
+import { Clamp } from "../components/Clamp";
+import { CookieIcon } from "../components/CookieIcon";
 import { CookieName } from "../components/CookieName";
-import type { Column } from "../components/DataTable";
-import { DataTable } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
-import type { LifecycleDeck } from "../lib/obsolete";
+import { shortName } from "../lib/cookie-icons";
 import type { SourceIndex } from "../lib/sources";
-import { DeckLink } from "./DeckLink";
+import { bracketNoteParts } from "../lib/stage";
 import { CopyHeader } from "./ModeViewHeader";
+import { BracketTag, ShortDeckLink } from "./StageParts";
 
 /** One zone layout and its boss slots, in slot order. */
 interface Zone {
@@ -55,7 +56,7 @@ function zonesOf(slots: readonly StageZoneSlot[]): Zone[] {
  */
 function chaptersOf(zoneIndex: number, fixedFrom: number): string {
   const first = fixedFrom + ((zoneIndex - 1 - ((fixedFrom - 1) % 8) + 8) % 8);
-  return `${[0, 1, 2].map((n) => first + 8 * n).join(", ")}, … every 8th chapter (fixed from ${fixedFrom})`;
+  return `${[0, 1, 2].map((n) => first + 8 * n).join(", ")} … every 8th from ${fixedFrom}`;
 }
 
 /**
@@ -67,10 +68,62 @@ function chaptersOf(zoneIndex: number, fixedFrom: number): string {
 const zoneId = (zone: Pick<Zone, "zoneIndex">) => `zone-${zone.zoneIndex}`;
 
 /**
- * One zone layout as a card: its chapters, then a row per boss slot with the
- * boss, the plan, the deck it starts from (linking to the deck's card,
- * marked when the deck is obsolete), how low a bracket the slot has been
- * cleared at, and sources.
+ * How low a bracket a slot has been cleared at: the bracket it leads with
+ * as a tinted tag, then what the note adds.
+ *
+ * @param props - the slot's note, or null when none is recorded
+ * @returns the line
+ */
+function ClearedAt({ note }: { note: string | null }) {
+  if (!note) return <span className="zslot-cleared">untested</span>;
+  const { pct, rest } = bracketNoteParts(note);
+  return (
+    <span className="zslot-cleared" title={note}>
+      {pct === null ? null : <BracketTag pct={pct} />}
+      {rest ? <span>{rest}</span> : null}
+    </span>
+  );
+}
+
+/**
+ * What a slot says to bring: the deck by its short name (linking to its
+ * card, marked when obsolete) and its cookies' portraits, each named in
+ * its tooltip.
+ *
+ * @param props - the slot's deck id, the deck once loaded, and the stage mode
+ * @returns the block, or null when the slot names no deck
+ */
+function Bring({
+  id,
+  deck,
+  mode,
+}: {
+  id: string | null;
+  deck: Deck | undefined;
+  mode: ModeSection;
+}) {
+  if (!id) return null;
+  return (
+    <div className="bring">
+      <ShortDeckLink mode={mode} id={id} deck={deck} />
+      {deck?.cookies.length ? (
+        <span className="bring-icons" aria-label="Cookies">
+          {deck.cookies.map((c) => (
+            <span key={c.id} title={c.en ? shortName(c.en) : c.cookieKr}>
+              <CookieIcon kr={c.cookieKr} en={c.en} size={28} />
+            </span>
+          ))}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
+/**
+ * One zone layout as a card: its chapters, then a tile per boss slot with
+ * the stage, how low a bracket it has been cleared at, the boss's portrait,
+ * what to bring (the deck and its cookies' portraits), the plan cut to two
+ * lines, and the sources last.
  *
  * @param props - the zone, the first chapter the layouts fix, the stage mode, the decks by id and the source index
  * @returns the card
@@ -85,28 +138,33 @@ function ZoneCard({
   zone: Zone;
   fixedFrom: number;
   mode: ModeSection;
-  decks: ReadonlyMap<string, LifecycleDeck>;
+  decks: ReadonlyMap<string, Deck>;
   sources: SourceIndex;
 }) {
-  const columns: Column<StageZoneSlot>[] = [
-    { header: "Stage", cell: (s) => s.stage, className: "n" },
-    { header: "Boss", cell: (s) => <CookieName kr={s.bossKr} en={s.bossEn} /> },
-    { header: "Plan", cell: (s) => s.plan, className: "wide" },
-    {
-      header: "Deck",
-      cell: (s) =>
-        s.deckId ? <DeckLink mode={mode} id={s.deckId} deck={decks.get(s.deckId)} /> : "–",
-    },
-    { header: "Cleared at", cell: (s) => s.bracketNote ?? "–" },
-    { header: "Sources", cell: (s) => <SourceChips ids={s.sources} sources={sources} /> },
-  ];
   return (
-    <section className="card" id={zoneId(zone)}>
-      <h3>
+    <section className="card zone-card" id={zoneId(zone)} aria-labelledby={`${zoneId(zone)}-title`}>
+      <h3 id={`${zoneId(zone)}-title`}>
         {zone.zoneIndex}. {zone.zoneEn} <span className="kr">{zone.zoneKr}</span>
       </h3>
-      <p className="muted">Chapters {chaptersOf(zone.zoneIndex, fixedFrom)}.</p>
-      <DataTable columns={columns} rows={zone.slots} rowKey={(s) => s.id} layout="stack" />
+      <p className="zone-chapters">Chapters {chaptersOf(zone.zoneIndex, fixedFrom)}</p>
+      <ul className="zslots">
+        {zone.slots.map((s) => (
+          <li key={s.id} className="zslot">
+            <div className="zslot-head">
+              <span className="zslot-stage">{s.stage}</span>
+              <ClearedAt note={s.bracketNote} />
+            </div>
+            <CookieName kr={s.bossKr} en={s.bossEn} size={40} />
+            <Bring id={s.deckId} deck={s.deckId ? decks.get(s.deckId) : undefined} mode={mode} />
+            <span className="zslot-plan">
+              <Clamp lines={2} perLine={40}>
+                {s.plan}
+              </Clamp>
+            </span>
+            <SourceChips ids={s.sources} sources={sources} max={2} />
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
@@ -126,7 +184,7 @@ export function StageZonesView({ mode, stage }: { mode: ModeSection; stage: Stag
     useQuery({
       ...decksQuery(mode.scope),
       select: (list) => new Map(list.map((d) => [d.id, d] as const)),
-    }).data ?? new Map<string, LifecycleDeck>();
+    }).data ?? new Map<string, Deck>();
   return (
     <>
       <CopyHeader scope={mode.scope} copy={stage.zones} fallbackTitle="Zones" />
