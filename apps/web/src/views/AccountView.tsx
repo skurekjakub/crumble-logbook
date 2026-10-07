@@ -4,7 +4,7 @@ import type { AccountOverview } from "../api/types";
 import { EmptyState } from "../components/EmptyState";
 import { QueryResult } from "../components/QueryResult";
 import { ViewHeader } from "../components/ViewHeader";
-import { compactFigures, humanize } from "../lib/account";
+import { compactFigures, humanize, readingTime } from "../lib/account";
 import { optionalText } from "../lib/search";
 import { AccountLineups, AccountUnread } from "./AccountLineups";
 import { AccountRoadmap } from "./AccountRoadmap";
@@ -59,11 +59,13 @@ interface PickerProps {
 function Picker(props: PickerProps) {
   const { label, entries, value } = props;
   if (entries.length < 2) return null;
+  // The latest's option has the empty value, so asking for it by id selects it too.
+  const selected = value === undefined || value === entries[0]!.id ? "" : value;
   return (
     <label className="acct-pick">
       <span className="label">{label}</span>
       <select
-        value={value ?? ""}
+        value={selected}
         onChange={(e) => {
           props.onPick(e.target.value || undefined);
         }}
@@ -89,13 +91,7 @@ function Picker(props: PickerProps) {
  */
 function AccountBody({ data, search, onSearch }: { data: AccountOverview } & AccountViewProps) {
   const { snapshot, roadmap } = data;
-  if (!snapshot && !roadmap) {
-    return (
-      <EmptyState>
-        No account imported yet. Run <code>pnpm import:account</code>.
-      </EmptyState>
-    );
-  }
+  if (!snapshot && !roadmap) return <EmptyState>No account audit yet.</EmptyState>;
   return (
     <>
       {snapshot?.profile.length ? (
@@ -103,8 +99,12 @@ function AccountBody({ data, search, onSearch }: { data: AccountOverview } & Acc
           {snapshot.profile.map((figure) => (
             <div key={figure.name}>
               <dt>{humanize(figure.name)}</dt>
-              <dd className="mono" title={figure.value}>
+              <dd
+                className="mono"
+                title={figure.at ? `${figure.value}, read ${figure.at}` : figure.value}
+              >
                 {compactFigures(figure.value)}
+                {figure.at ? <span className="at">{readingTime(figure.at)}</span> : null}
               </dd>
             </div>
           ))}

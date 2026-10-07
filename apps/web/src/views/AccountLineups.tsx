@@ -3,9 +3,12 @@ import type { AccountCookie, AccountLineup, AccountSnapshot } from "../api/types
 import { MODES } from "../app/modes";
 import { Clamp } from "../components/Clamp";
 import { CookieIcon } from "../components/CookieIcon";
-import { compactFigures, figure, humanize } from "../lib/account";
+import { compactFigures, figure, humanize, leadClause } from "../lib/account";
 import { shortName } from "../lib/cookie-icons";
 import { RefChip } from "./AccountRoadmap";
+
+/** Characters a gear preset's chip holds; the full name is in its tooltip. */
+const PRESET_CHARS = 20;
 
 /** Words a lineup key's short forms stand for. */
 const KEY_WORDS: Record<string, string> = { def: "defense", atk: "attack" };
@@ -146,8 +149,8 @@ function LineupCard({ lineup }: { lineup: AccountLineup }) {
             </span>
           ))}
           {lineup.gearPreset ? (
-            <span className="chip kit gear" title={`Gear preset: ${lineup.gearPreset}`}>
-              {lineup.gearPreset}
+            <span className="chip kit gear preset" title={`Gear preset: ${lineup.gearPreset}`}>
+              {leadClause(lineup.gearPreset, PRESET_CHARS)}
             </span>
           ) : null}
         </div>

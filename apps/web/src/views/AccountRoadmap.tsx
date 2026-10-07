@@ -4,8 +4,8 @@ import type { LinkTarget, ModeSection } from "../app/modes";
 import { MODES } from "../app/modes";
 import { Clamp } from "../components/Clamp";
 import { Pill } from "../components/Pill";
-import type { Priority } from "../lib/account";
-import { byPriority, costTone, leadClause, payoffTone } from "../lib/account";
+import type { GaugeView, Priority } from "../lib/account";
+import { byPriority, gauge } from "../lib/account";
 import { deckId } from "./DeckCard";
 import { deckPage } from "./DeckLink";
 
@@ -44,8 +44,9 @@ function refPage(mode: ModeSection, target: AccountRef): LinkTarget {
 
 /**
  * One reference as a chip at the end of a roadmap row: a deck links to its
- * card on its mode's decks page, any other row to its mode's page for that
- * kind of row, and one that isn't loaded shows as a quiet chip.
+ * card on its mode's decks page (an obsolete one marked before its label),
+ * any other row to its mode's page for that kind of row, and one that
+ * isn't loaded shows as a quiet chip. Only the label is cut short.
  *
  * @param props - the reference
  * @returns the chip
@@ -53,61 +54,68 @@ function refPage(mode: ModeSection, target: AccountRef): LinkTarget {
 export function RefChip({ target }: { target: AccountRef }) {
   const mode = MODES.find((m) => m.scope.mode === target.mode);
   const title = [target.record, target.entity, target.id].filter(Boolean).join(" · ");
+  const label = <span className="ref-label">{target.label}</span>;
   if (!target.found || !mode) {
     return (
       <span className="chip ref missing" title={`${title} (not loaded)`}>
-        {target.label}
+        {label}
       </span>
     );
   }
   if (target.entity === "deck") {
     return (
-      <Link {...deckPage(mode)} hash={deckId({ id: target.id })} className="chip ref" title={title}>
-        {target.label}
+      <Link
+        {...deckPage(mode)}
+        hash={deckId({ id: target.id })}
+        className="chip ref"
+        title={target.obsolete ? `${title} (obsolete)` : title}
+      >
         {target.obsolete ? <Pill kind="obsolete" /> : null}
+        {label}
       </Link>
     );
   }
   return (
     <Link {...refPage(mode, target)} className="chip ref file" title={title}>
-      {target.label}
+      {label}
     </Link>
   );
 }
 
 /**
- * A payoff or cost as a badge: its lead clause, coloured by its verdict,
- * the full text in the tooltip.
+ * A payoff or cost as a badge (see `gauge`), coloured by its verdict, the
+ * full text in the tooltip.
  *
- * @param props - the kind of badge and its text
+ * @param props - the kind of badge, its text and how it reads
  * @returns the badge
  */
-function Gauge({ kind, text }: { kind: "payoff" | "cost"; text: string }) {
-  const tone = kind === "payoff" ? payoffTone(text) : costTone(text);
+function Gauge({ kind, text, view }: { kind: "payoff" | "cost"; text: string; view: GaugeView }) {
   return (
     <span
-      className={`pill badge ${kind} t-${tone}`}
+      className={`pill badge ${kind} t-${view.tone}`}
       data-glyph={kind === "payoff" ? "+" : "−"}
       title={`${kind === "payoff" ? "Payoff" : "Cost"}: ${text}`}
     >
-      {leadClause(text)}
+      {view.text}
     </span>
   );
 }
 
 /**
  * One roadmap row: the action in a line, its area chip and its payoff and
- * cost badges; beneath, the `why` with the full payoff and cost, clamped
- * to a line, and the references as chips at the end.
+ * cost badges; beneath, the `why` with what the badges leave out of the
+ * payoff and cost, clamped to a line, and the references as chips at the end.
  *
  * @param props - the item
  * @returns the row
  */
 function RoadmapRow({ item }: { item: AccountItem }) {
+  const payoff = item.payoff ? gauge("payoff", item.payoff, item.size) : null;
+  const cost = item.cost ? gauge("cost", item.cost) : null;
   const detail = [
     item.why,
-    item.payoff ? `Payoff: ${item.payoff}` : null,
-    item.cost ? `Cost: ${item.cost}` : null,
+    payoff?.rest ? `Payoff: ${payoff.rest}` : null,
+    cost?.rest ? `Cost: ${cost.rest}` : null,
   ].filter((part) => part !== null);
   return (
     <li className={`road-item prio-${item.priority}`}>
@@ -115,8 +123,8 @@ function RoadmapRow({ item }: { item: AccountItem }) {
         <span className="road-action">{item.action}</span>
         <span className="road-badges">
           {item.area ? <span className="chip area">{item.area}</span> : null}
-          {item.payoff ? <Gauge kind="payoff" text={item.payoff} /> : null}
-          {item.cost ? <Gauge kind="cost" text={item.cost} /> : null}
+          {item.payoff && payoff ? <Gauge kind="payoff" text={item.payoff} view={payoff} /> : null}
+          {item.cost && cost ? <Gauge kind="cost" text={item.cost} view={cost} /> : null}
         </span>
       </div>
       {detail.length || item.refs.length ? (

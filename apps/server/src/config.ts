@@ -38,7 +38,8 @@ export const researchDir = join(repoRoot, "research");
 export const snapshotPath = join(repoRoot, "data", "snapshot.json");
 
 /**
- * Absolute path to the reader's account audits (`account/`, kept out of
- * git); overridable via `CRUMBLE_ACCOUNT`.
+ * Absolute path to the reader's account audits (`account/`, committed but
+ * for the screenshots under `snapshots/screens/`); overridable via
+ * `CRUMBLE_ACCOUNT`.
  */
 export const accountDir = process.env.CRUMBLE_ACCOUNT ?? join(repoRoot, "account");

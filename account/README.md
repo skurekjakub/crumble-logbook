@@ -22,7 +22,7 @@ Every section carries its own `capturedAt` and a `screens[]` list. Values that w
 | `perks`, `treasures`, `guildResearch`, `build` | Merc perks, Resolve, Fame, Gnome Lab, Stellar Links and guild research |
 | `progress` | Stage, Rift, Conquest, Arena, Rumble, Dungeon, tower, rankings |
 
-The roadmap JSON has `items[]` with `priority` (now, next or later), `area`, `action`, `why`, `payoff`, `cost` and `refs` (a record slug plus a deck `id` or a `file`). It also has `parked[]` and `unread[]`.
+The roadmap JSON has `items[]` with `priority` (now, next or later), `area`, `action`, `why`, `payoff`, `size` (how big the payoff is: `big`, `medium` or `small`; the app's payoff badge shows it), `cost` and `refs` (a record slug plus a deck `id` or a `file`). It also has `parked[]` and `unread[]`.
 
 ## Reading the game (MuMu, adb)
 

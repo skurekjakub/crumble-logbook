@@ -2,14 +2,17 @@ import type {
   AccountCookieRow,
   AccountParked,
   AccountPet,
-  AccountRef,
   AccountResource,
   AccountRoadmapItemRow,
+  AccountSize,
   GameMode,
   GlossaryRow,
 } from "@crumble/schema";
+import { accountSize } from "@crumble/schema";
 import { NotFoundError } from "../errors";
 import type { Repos, Store } from "../repos";
+import type { AccountRefView } from "./account-refs";
+import { resolveRef } from "./account-refs";
 import type { NameResolver } from "./names";
 import { createNameResolver } from "./names";
 import { recordsCovering } from "./records";
@@ -70,23 +73,12 @@ export interface AccountSnapshotView {
   unread: string[];
 }
 
-/**
- * A roadmap item's reference, resolved: the deck or research record it
- * names, with the game mode whose screens show it.
- */
-export interface AccountRefView extends AccountRef {
-  /** What the chip reads: the roadmap's label, else the deck's name, else the id. */
-  label: string;
-  /** The game mode whose screens show the row: the deck's, else the record's. */
-  mode: GameMode | null;
-  /** Whether the named deck or record is loaded. */
-  found: boolean;
-  /** Whether the named deck is marked obsolete. */
-  obsolete: boolean;
-}
+export type { AccountRefView };
 
 /** One roadmap item as the account view shows it. */
 export type AccountItemView = Omit<AccountRoadmapItemRow, "roadmapId" | "extra" | "refs"> & {
+  /** How big the payoff is, when the roadmap says: it drives the payoff badge. */
+  size: AccountSize | null;
   refs: AccountRefView[];
 };
 
@@ -221,49 +213,6 @@ function englishOf(extra: Record<string, unknown>): string | null {
 }
 
 /**
- * Resolves a roadmap reference to the deck or record it names.
- *
- * @param repos - the repos to read decks and records from
- * @param ref - the reference
- * @returns the reference with its label, mode and whether it is loaded
- */
-function resolveRef(repos: Repos, ref: AccountRef): AccountRefView {
-  const deck = ref.entity === null || ref.entity === "deck" ? repos.decks.get(ref.id) : undefined;
-  if (deck) {
-    return {
-      ...ref,
-      entity: "deck",
-      label: ref.label ?? deck.nameEn,
-      mode: deck.mode,
-      found: true,
-      obsolete: deck.obsoleteSince !== null,
-    };
-  }
-  const record = ref.record === null ? undefined : repos.records.get(ref.record);
-  const source =
-    ref.entity === null || ref.entity === "power_source"
-      ? repos.powerSources.list().find((row) => row.slug === ref.id)
-      : undefined;
-  if (source) {
-    return {
-      ...ref,
-      entity: "power_source",
-      label: ref.label ?? source.nameEn,
-      mode: "team_power",
-      found: true,
-      obsolete: false,
-    };
-  }
-  return {
-    ...ref,
-    label: ref.label ?? ref.id,
-    mode: record?.mode ?? null,
-    found: record !== undefined,
-    obsolete: false,
-  };
-}
-
-/**
  * Builds a snapshot's view.
  *
  * @param repos - the repos to read through
@@ -319,12 +268,11 @@ function roadmapView(repos: Repos, id: string): AccountRoadmapView {
     date: row.date,
     snapshotId: row.snapshotId,
     verdict: row.verdict,
-    items: repos.account
-      .items(id)
-      .map(({ roadmapId: _roadmapId, extra: _extra, refs, ...item }) => ({
-        ...item,
-        refs: refs.map((ref) => resolveRef(repos, ref)),
-      })),
+    items: repos.account.items(id).map(({ roadmapId: _roadmapId, extra, refs, ...item }) => ({
+      ...item,
+      size: accountSize(extra.size),
+      refs: refs.map((ref) => resolveRef(repos, ref)),
+    })),
     parked: row.parked.map((avenue) => ({
       ...avenue,
       refs: avenue.refs.map((ref) => resolveRef(repos, ref)),

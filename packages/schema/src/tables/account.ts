@@ -37,6 +37,11 @@ export interface AccountResource {
   name: string;
   /** The amount, as the snapshot writes it. */
   value: string;
+  /**
+   * When the amount was read, for one read again later than its section
+   * (its `capturedAt`, or `later` when it gives none); absent otherwise.
+   */
+  at?: string;
 }
 
 /**

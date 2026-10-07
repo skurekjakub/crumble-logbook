@@ -1,4 +1,6 @@
 import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { importAccount } from "../../src/importers/account";
 import { describe, expect, it } from "vitest";
 import { snapshotPath } from "../../src/config";
 import type { TableKey } from "../../src/registry";
@@ -6,8 +8,16 @@ import { TABLE_KEYS } from "../../src/registry";
 import type { Store } from "../../src/repos";
 import type { Snapshot } from "../../src/services/export";
 import { exportSnapshot } from "../../src/services/export";
-import { changedFacts, changedRecords, scopeRole } from "../../src/services/snapshot-scope";
+import {
+  changedAccount,
+  changedFacts,
+  changedRecords,
+  scopeRole,
+} from "../../src/services/snapshot-scope";
 import { testStore } from "../helpers";
+
+/** The account audit the importer's tests load. */
+const ACCOUNT_FIXTURE = join(import.meta.dirname, "..", "importers", "fixtures", "account");
 
 /**
  * Adds a gear rec that `record` owns.
@@ -92,6 +102,28 @@ function rows(snapshot: Snapshot, key: TableKey): Rows {
 function deckOwner(snapshot: Snapshot, id: unknown): unknown {
   return rows(snapshot, "decks").find((d) => d.id === id)?.recordSlug;
 }
+
+describe("changedAccount", () => {
+  it("names the account tables a new audit fills, and only the table whose rows changed", () => {
+    const before = exportSnapshot(testStore());
+    const store = testStore();
+    importAccount(store, ACCOUNT_FIXTURE);
+    const after = exportSnapshot(store);
+    expect(changedAccount(before, after)).toEqual([
+      "accountSnapshots",
+      "accountLineups",
+      "accountCookies",
+      "accountRoadmaps",
+      "accountRoadmapItems",
+    ]);
+    expect(changedAccount(after, after)).toEqual([]);
+    const edited = JSON.parse(JSON.stringify(after)) as Snapshot;
+    rows(edited, "accountRoadmapItems")[0]!.action = "Swap decks";
+    expect(changedAccount(after, edited)).toEqual(["accountRoadmapItems"]);
+    expect(changedRecords(after, edited)).toEqual([]);
+    expect(changedFacts(after, edited)).toEqual([]);
+  });
+});
 
 describe("the tables db:scope compares", () => {
   it("places every snapshot table: owned by a record, a game fact, a child row or a citation", () => {

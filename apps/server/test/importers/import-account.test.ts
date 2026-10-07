@@ -1,4 +1,4 @@
-import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
+import { cpSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -46,6 +46,13 @@ function seed(store: Store): void {
     mode: "arena",
   });
   addSource(store, "dc:1");
+  store.repos.mechanics.insert({
+    title: "Beam order",
+    body: "b",
+    confidence: "high",
+    mode: "arena",
+    recordSlug: "002-pvp-meta",
+  });
   createServices(store).decks.create({
     id: "arena-bari-oven-cola",
     nameEn: "Bari dive",
@@ -56,6 +63,7 @@ function seed(store: Store): void {
     notes: [],
     sources: ["dc:1"],
   });
+  store.repos.decks.update("arena-bari-oven-cola", { recordSlug: "002-pvp-meta" });
 }
 
 /**
@@ -87,8 +95,10 @@ describe("importAccount", () => {
     const result = importAccount(store, FIXTURE);
     expect(result.snapshots).toEqual(["2026-10-07"]);
     expect(result.roadmaps).toEqual(["2026-10-07"]);
-    expect(result.counts).toEqual({ snapshots: 1, lineups: 4, cookies: 7, roadmaps: 1, items: 2 });
-    const [def, atk, rift, dungeon] = store.repos.account.lineups("2026-10-07");
+    expect(result.skipped).toEqual([]);
+    expect(result.counts).toEqual({ snapshots: 1, lineups: 6, cookies: 10, roadmaps: 1, items: 2 });
+    const [def, atk, rift, dungeon, rumbleAtk, rumbleDef] =
+      store.repos.account.lineups("2026-10-07");
     expect(def).toMatchObject({
       lineup: "arena_def",
       gameMode: "arena",
@@ -108,10 +118,16 @@ describe("importAccount", () => {
       skillLevel: "V",
       power: "4510000000",
       promotion: "max",
-      runes: ["atkAmp 7", "skillHaste 8.5 ×2"],
+      runes: ["ATK AMP 7", "Skill Haste 8.5 ×2 +1?", "CRIT RES ?"],
     });
     expect(def!.cookies.map((c) => c.name)).toEqual(["체리맛 쿠키", "감초맛 쿠키", "미확인 쿠키"]);
     expect(atk!.cookies.map((c) => c.name)).toEqual(def!.cookies.map((c) => c.name));
+    expect(atk!.note).toBeNull();
+    expect(rumbleAtk!.cookies.map((c) => c.name)).toEqual(def!.cookies.map((c) => c.name));
+    expect(rumbleDef).toMatchObject({
+      cookies: [],
+      note: "Swap pending · same as rumble_old",
+    });
     expect(rift).toMatchObject({ gameMode: "stage", note: "Order from the battle bar" });
     expect(dungeon).toMatchObject({
       gameMode: "crumble_dungeon",
@@ -122,8 +138,9 @@ describe("importAccount", () => {
     const snapshot = store.repos.account.snapshot("2026-10-07")!;
     expect(snapshot.profile).toEqual([
       { name: "level", value: "192" },
-      { name: "combatPower", value: "47810542000" },
+      { name: "combatPower", value: "47813382000", at: "2026-10-07T17:13:00+02:00" },
     ]);
+    expect(Object.keys(snapshot.extra)).toEqual(["schema"]);
     expect(snapshot.resources).toEqual([
       { name: "gems", value: "216560" },
       { name: "coins", value: "1120000000000 → 132360000000" },
@@ -142,7 +159,8 @@ describe("importAccount", () => {
       "Mercenary perks per lineup",
       "Cookie EXP stock, Chocosteel, Syrup",
     ]);
-    expect(JSON.stringify(exportSnapshot(store).tables)).not.toContain(".jpg");
+    const exported = JSON.stringify(exportSnapshot(store).tables);
+    for (const image of [".jpg", ".png", ".webp"]) expect(exported).not.toContain(image);
     const roadmap = store.repos.account.roadmap("2026-10-07")!;
     expect(roadmap).toMatchObject({
       snapshotId: "2026-10-07",
@@ -157,11 +175,11 @@ describe("importAccount", () => {
     });
     const items = store.repos.account.items("2026-10-07");
     expect(items[0]).toMatchObject({ priority: "now", cost: "Free; lineup slots 3–5 are spare." });
-    expect(items[0]!.extra).toEqual({ rank: 1 });
+    expect(items[0]!.extra).toEqual({ rank: 1, size: "big" });
     expect(items[0]!.refs).toEqual([
       { record: "002-pvp-meta", entity: null, id: "arena-bari-oven-cola", label: null },
       { record: "002-pvp-meta", entity: "file", id: "curated/runes.json", label: "runes" },
-      { record: "002-pvp-meta", entity: "mechanic", id: "7", label: null },
+      { record: "002-pvp-meta", entity: "mechanic", id: "1", label: null },
     ]);
     expect(items[1]).toMatchObject({ area: null, payoff: "power: +3%", cost: "rune stones · 400" });
   });
@@ -177,6 +195,20 @@ describe("importAccount", () => {
     expect(warnings.some((w) => w.includes("체리맛 쿠키"))).toBe(false);
   });
 
+  it("warns about refs that name nothing loaded, and a same-as note that names no lineup", () => {
+    const store = testStore();
+    seed(store);
+    const { warnings } = importAccount(store, FIXTURE);
+    expect(warnings.filter((w) => w.includes("names nothing loaded"))).toEqual([
+      "snapshots/2026-10-07.json [lineups.rift]: 002-pvp-meta#deck:no-such-deck names nothing loaded",
+      "roadmap-2026-10-07.json [items.1]: 001-other-record#arena-bari-oven-cola names nothing loaded",
+      "roadmap-2026-10-07.json [parked.0]: 002-pvp-meta#nowhere names nothing loaded",
+    ]);
+    expect(warnings).toContainEqual(
+      'snapshots/2026-10-07.json: lineups.rumble_def: "same as rumble_old" names no lineup rumble_old; kept as its note',
+    );
+  });
+
   it("keeps older snapshots: --all loads every one, and an id loads that one", () => {
     const store = testStore();
     importAccount(store, FIXTURE, { ids: ["2026-10-01"] });
@@ -190,14 +222,37 @@ describe("importAccount", () => {
     expect(store.repos.account.snapshots().map((s) => s.id)).toEqual(["2026-10-07", "2026-10-01"]);
   });
 
-  it("refuses a loaded snapshot without --replace, writing nothing, and replaces it with", () => {
+  it("refuses a loaded snapshot named by id without --replace, writing nothing, and replaces it with", () => {
     const store = testStore();
     importAccount(store, FIXTURE);
     const before = exportSnapshot(store);
-    expect(() => importAccount(store, FIXTURE)).toThrow(/already loaded; pass --replace/);
+    expect(() => importAccount(store, FIXTURE, { ids: ["2026-10-07"] })).toThrow(
+      /already loaded; pass --replace/,
+    );
     expect(exportSnapshot(store)).toEqual(before);
     importAccount(store, FIXTURE, { replace: true });
     expect(exportSnapshot(store)).toEqual(before);
+  });
+
+  it("skips the latest files already loaded, so a new snapshot loads under the same roadmap", () => {
+    const dir = mkdtempSync(join(tmpdir(), "account-"));
+    cpSync(FIXTURE, dir, { recursive: true });
+    rmSync(join(dir, "snapshots", "2026-10-01.json"));
+    const store = testStore();
+    importAccount(store, dir);
+    const again = importAccount(store, dir);
+    expect(again).toMatchObject({ snapshots: [], roadmaps: [], warnings: [] });
+    expect(again.skipped).toEqual(["snapshots/2026-10-07.json", "roadmap-2026-10-07.json"]);
+    writeFileSync(
+      join(dir, "snapshots", "2026-10-08.json"),
+      JSON.stringify({ lineups: { conquest: [{ name: "체리 쿠키" }] } }),
+    );
+    const next = importAccount(store, dir);
+    expect(next).toMatchObject({ snapshots: ["2026-10-08"], roadmaps: [] });
+    expect(next.skipped).toEqual(["roadmap-2026-10-07.json"]);
+    expect(next.counts).toEqual({ snapshots: 1, lineups: 1, cookies: 1, roadmaps: 0, items: 0 });
+    expect(store.repos.account.snapshots().map((s) => s.id)).toEqual(["2026-10-08", "2026-10-07"]);
+    expect(store.repos.account.roadmaps().map((r) => r.id)).toEqual(["2026-10-07"]);
   });
 
   it("names the file and the path of a row that fails its schema", () => {
@@ -278,8 +333,17 @@ describe("GET /api/account", () => {
       found: true,
     });
     expect(refs[1]).toMatchObject({ entity: "file", label: "runes", mode: "arena", found: true });
-    expect(refs[2]).toMatchObject({ entity: "mechanic", mode: "arena", found: true });
-    expect(body.roadmap!.parked[0]!.refs[0]).toMatchObject({ found: true, mode: "arena" });
+    expect(refs[2]).toMatchObject({
+      entity: "mechanic",
+      label: "Beam order",
+      mode: "arena",
+      found: true,
+    });
+    expect(body.roadmap!.items[0]!.size).toBe("big");
+    expect(body.roadmap!.items[1]!.size).toBeNull();
+    expect(body.roadmap!.items[1]!.refs[0]).toMatchObject({ found: false, obsolete: false });
+    expect(body.roadmap!.parked[0]!.refs[0]).toMatchObject({ found: false, mode: "arena" });
+    expect(body.snapshot!.lineups[2]!.deck).toMatchObject({ id: "no-such-deck", found: false });
   });
 
   it("shows an older snapshot by id, and answers 404 for one that isn't loaded", async () => {
