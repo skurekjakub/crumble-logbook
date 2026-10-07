@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useSourceIndex } from "../api/hooks";
 import type { GrowthCurve } from "../api/types";
 import type { ModeSection, TeamPowerConfig } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { EmptyState } from "../components/EmptyState";
 import { TableTools } from "../components/DataTable";
 import { SourceChips } from "../components/SourceChips";
@@ -120,7 +121,11 @@ function CurveCard({
           </tbody>
         </table>
       </div>
-      {curve.note ? <p className="muted">{curve.note}</p> : null}
+      {curve.note ? (
+        <p className="muted">
+          <Clamp lines={1}>{curve.note}</Clamp>
+        </p>
+      ) : null}
       {curve.evidence && mode.recordSlug ? (
         <div className="label">
           Condensed from{" "}
