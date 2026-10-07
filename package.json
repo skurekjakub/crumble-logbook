@@ -23,7 +23,7 @@
     "db:export": "pnpm --filter @crumble/server db:export",
     "db:restore": "pnpm --filter @crumble/server db:restore",
     "db:scope": "pnpm --filter @crumble/server db:scope",
-    "build:vercel": "pnpm --filter @crumble/web icons:fetch --soft && pnpm --filter @crumble/web build && pnpm --filter @crumble/server build:vercel",
+    "build:vercel": "pnpm --filter @crumble/web build && pnpm --filter @crumble/server build:vercel",
     "capture": "pnpm --filter @crumble/capture capture"
   },
   "devDependencies": {

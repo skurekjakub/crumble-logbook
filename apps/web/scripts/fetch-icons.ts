@@ -1,8 +1,8 @@
 /**
  * `pnpm icons:fetch [--force] [--soft]`: downloads the cookie and pet icons
  * into `apps/web/public/icons/`, which Vite serves at `/icons/` and copies
- * into the build. The folder is gitignored: the icons are game assets and
- * the repo is public, so they are fetched, never committed.
+ * into the build. The icons are committed app assets; run this to add the
+ * icons of new cookies or pets, and commit what it writes.
  *
  * The source is crumb.gg, which serves every cookie at
  * `/cookies/<resource key>.webp` and every pet at `/pets/<resource key>.webp`
@@ -12,8 +12,7 @@
  *
  * A file already on disk is kept unless `--force` is given. A key crumb.gg
  * doesn't serve is a warning: the app shows that name's badge. When no icon
- * could be had at all it exits 1, unless `--soft`, which the Vercel build
- * passes so an outage at crumb.gg never fails a deploy.
+ * could be had at all it exits 1, unless `--soft`.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";

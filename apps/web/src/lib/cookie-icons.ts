@@ -4,9 +4,9 @@
  *
  * The keys come from the glossary (`extra.resource_key`, the game's own
  * resource id, e.g. `cookie0038` or `pet4001`), so the mapping is derived
- * from the data at runtime and nothing per cookie is committed. The files
- * themselves are game assets: `pnpm icons:fetch` downloads them from
- * crumb.gg into the gitignored `apps/web/public/icons/`.
+ * from the data at runtime. The files are committed in
+ * `apps/web/public/icons/`, served at `/icons/`; `pnpm icons:fetch` adds
+ * new ones from crumb.gg.
  *
  * @module
  */

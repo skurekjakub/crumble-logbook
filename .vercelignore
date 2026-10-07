@@ -6,4 +6,3 @@ node_modules/
 **/dist/
 *.db
 *.db-*
-apps/web/public/icons/

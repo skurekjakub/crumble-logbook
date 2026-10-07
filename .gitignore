@@ -32,9 +32,6 @@ research/**/*.webm
 research/**/*.mkv
 research/**/*.mov
 
-# game icons, fetched by pnpm icons:fetch (game assets stay out of the public repo)
-apps/web/public/icons/
-
 __pycache__/
 *.pyc
 .DS_Store
