@@ -7,12 +7,18 @@
  *
  * @module
  */
-import type { AccountRoadmapInput, AccountSnapshotInput, GlossaryRow } from "@crumble/schema";
+import type {
+  AccountRef,
+  AccountRoadmapInput,
+  AccountSnapshotInput,
+  GlossaryRow,
+} from "@crumble/schema";
 import { accountRoadmapFile, accountSnapshotFile, isoDate } from "@crumble/schema";
 import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { ImportError } from "../errors";
 import type { Repos, Store } from "../repos";
+import { refText, resolveRef } from "../services/account-refs";
 import { createNameResolver } from "../services/names";
 import { parseFile, readJson } from "./files";
 
@@ -94,7 +100,10 @@ export interface AccountImportOptions {
   all?: boolean;
   /** Load these ids (snapshot or roadmap) instead of the latest. */
   ids?: readonly string[];
-  /** Replace a snapshot or roadmap that is already loaded, instead of refusing. */
+  /**
+   * Replace a snapshot or roadmap that is already loaded. Without it, one
+   * named by `ids` is refused, and any other is skipped.
+   */
   replace?: boolean;
 }
 
@@ -114,11 +123,14 @@ export interface AccountImportResult {
   snapshots: string[];
   /** The ids of the roadmaps loaded, oldest first. */
   roadmaps: string[];
+  /** The files left alone because they are already loaded, relative to `account/`. */
+  skipped: string[];
   /** Rows inserted per account table. */
   counts: Record<"snapshots" | "lineups" | "cookies" | "roadmaps" | "items", number>;
   /**
    * Non-fatal findings: a cookie name the glossary doesn't know, an action
-   * longer than a line, a roadmap naming a snapshot that isn't loaded.
+   * longer than a line, a roadmap naming a snapshot that isn't loaded, a
+   * reference naming nothing loaded, a `same as` note naming no lineup.
    */
   warnings: string[];
 }
@@ -195,55 +207,129 @@ function nameWarnings(plan: SnapshotPlan, glossary: readonly GlossaryRow[]): str
 }
 
 /**
- * Writes the snapshots and roadmaps, replacing any already loaded under
- * the same id when `replace` is set.
+ * Lists the references of a snapshot's lineups and a roadmap's items and
+ * parked avenues that name nothing loaded (see `resolveRef`).
+ *
+ * @param repos - the repos to resolve against
+ * @param file - the file the references come from
+ * @param refs - each reference with where in the file it sits, e.g. `items.3`
+ * @returns a warning per unresolved reference
+ */
+function refWarnings(
+  repos: Repos,
+  file: string,
+  refs: ReadonlyArray<{ at: string; ref: AccountRef }>,
+): string[] {
+  return refs
+    .filter(({ ref }) => !resolveRef(repos, ref).found)
+    .map(({ at, ref }) => `${file} [${at}]: ${refText(ref)} names nothing loaded`);
+}
+
+/**
+ * Lists every reference of a snapshot (its lineups' matching decks) with
+ * where it sits.
+ *
+ * @param plan - the snapshot
+ * @returns the references
+ */
+function snapshotRefs(plan: SnapshotPlan): Array<{ at: string; ref: AccountRef }> {
+  return plan.data.lineups.flatMap((lineup) =>
+    lineup.deck === null ? [] : [{ at: `lineups.${lineup.lineup}`, ref: lineup.deck }],
+  );
+}
+
+/**
+ * Lists every reference of a roadmap (its items' and parked avenues'
+ * refs) with where it sits.
+ *
+ * @param plan - the roadmap
+ * @returns the references
+ */
+function roadmapRefs(plan: RoadmapPlan): Array<{ at: string; ref: AccountRef }> {
+  return [
+    ...plan.data.items.flatMap((item, i) => item.refs.map((ref) => ({ at: `items.${i}`, ref }))),
+    ...plan.data.parked.flatMap((avenue, i) =>
+      avenue.refs.map((ref) => ({ at: `parked.${i}`, ref })),
+    ),
+  ];
+}
+
+/** What {@link write} wrote, and what it left alone. */
+interface Written {
+  snapshots: SnapshotPlan[];
+  roadmaps: RoadmapPlan[];
+  /** The files already loaded and left alone. */
+  skipped: string[];
+}
+
+/**
+ * Writes the snapshots and roadmaps. One already loaded under the same id
+ * is replaced when `replace` is set; otherwise it is refused when it was
+ * asked for by id, and skipped when it was picked as the latest or as one
+ * of every file.
  *
  * @param repos - the transaction's repos
  * @param snapshots - the snapshots to write
  * @param roadmaps - the roadmaps to write
- * @param replace - replace a loaded one instead of refusing
- * @throws {ImportError} naming a snapshot or roadmap already loaded, without `replace`
+ * @param opts - whether the files were asked for by id, and whether to replace loaded ones
+ * @returns what was written and the files skipped
+ * @throws {ImportError} naming a snapshot or roadmap asked for by id that is already
+ *   loaded, without `replace`
  */
 function write(
   repos: Repos,
   snapshots: readonly SnapshotPlan[],
   roadmaps: readonly RoadmapPlan[],
-  replace: boolean,
-): void {
+  opts: { named: boolean; replace: boolean },
+): Written {
+  const isLoaded = {
+    snapshot: (s: SnapshotPlan) => repos.account.snapshot(s.id) !== undefined,
+    roadmap: (r: RoadmapPlan) => repos.account.roadmap(r.id) !== undefined,
+  };
   const loaded = [
-    ...snapshots.filter((s) => repos.account.snapshot(s.id)).map((s) => s.file),
-    ...roadmaps.filter((r) => repos.account.roadmap(r.id)).map((r) => r.file),
+    ...snapshots.filter(isLoaded.snapshot).map((s) => s.file),
+    ...roadmaps.filter(isLoaded.roadmap).map((r) => r.file),
   ];
-  if (loaded.length > 0 && !replace) {
+  if (loaded.length > 0 && opts.named && !opts.replace) {
     throw new ImportError(loaded[0]!, null, "already loaded; pass --replace to load it again");
   }
-  for (const s of snapshots) repos.account.removeSnapshot(s.id);
-  for (const r of roadmaps) repos.account.removeRoadmap(r.id);
+  const keep = opts.replace
+    ? { snapshots: [...snapshots], roadmaps: [...roadmaps], skipped: [] }
+    : {
+        snapshots: snapshots.filter((s) => !isLoaded.snapshot(s)),
+        roadmaps: roadmaps.filter((r) => !isLoaded.roadmap(r)),
+        skipped: loaded,
+      };
+  for (const s of keep.snapshots) repos.account.removeSnapshot(s.id);
+  for (const r of keep.roadmaps) repos.account.removeRoadmap(r.id);
   repos.account.restartIds();
-  for (const { id, date, file, data } of snapshots) {
-    const { lineups, ...rest } = data;
+  for (const { id, date, file, data } of keep.snapshots) {
+    const { lineups, issues: _issues, ...rest } = data;
     repos.account.insertSnapshot({ id, date, file, ...rest }, lineups);
   }
-  for (const { id, date, file, data } of roadmaps) {
+  for (const { id, date, file, data } of keep.roadmaps) {
     const { items, ...rest } = data;
     repos.account.insertRoadmap({ id, date, file, ...rest }, items);
   }
+  return keep;
 }
 
 /**
  * Loads account snapshots and roadmaps from `accountDir`: by default the
  * latest snapshot and the latest roadmap, by id. Each is validated (see
  * `@crumble/schema`'s account schemas) before anything is written, and
- * all of them are written in one transaction.
+ * all of them are written in one transaction. A file already loaded is
+ * skipped, unless it was asked for by id (refused) or `replace` is set.
  *
  * @param store - the store to load into
  * @param accountDir - absolute path to the account folder
  * @param opts - which files to load, and whether to replace loaded ones
- * @returns what was loaded, the rows inserted and any warnings
+ * @returns what was loaded and skipped, the rows inserted and any warnings
  * @throws {ImportError} when the folder holds no snapshot or roadmap, an id
  *   asked for has no file, a file is missing, malformed or fails its
  *   schema (naming the file and every issue's path), or a snapshot or
- *   roadmap is already loaded and `replace` isn't set; nothing is written
+ *   roadmap asked for by id is already loaded and `replace` isn't set;
+ *   nothing is written
  */
 export function importAccount(
   store: Store,
@@ -267,33 +353,41 @@ export function importAccount(
     ...f,
     data: parseFile(f.file, readJson(accountDir, f.file), accountRoadmapFile),
   }));
-  // `Store.transaction` can't infer its type parameter through its
-  // conditional return type; see `DeckService.create`'s implementation.
-  const warnings = store.transaction((repos) => {
+  const outcome = store.transaction<Written & { warnings: string[] }>((repos) => {
     const glossary = repos.glossary.list();
-    write(repos, snapshots, roadmaps, opts.replace ?? false);
+    const written = write(repos, snapshots, roadmaps, {
+      named: !opts.all && (opts.ids ?? []).length > 0,
+      replace: opts.replace ?? false,
+    });
     const loaded = new Set(repos.account.snapshots().map((s) => s.id));
-    return [
-      ...snapshots.flatMap((plan) => nameWarnings(plan, glossary)),
-      ...roadmaps.flatMap(copyWarnings),
-      ...roadmaps.flatMap((r) =>
+    const warnings = [
+      ...written.snapshots.flatMap((plan) =>
+        plan.data.issues.map((issue) => `${plan.file}: ${issue}`),
+      ),
+      ...written.snapshots.flatMap((plan) => nameWarnings(plan, glossary)),
+      ...written.snapshots.flatMap((plan) => refWarnings(repos, plan.file, snapshotRefs(plan))),
+      ...written.roadmaps.flatMap(copyWarnings),
+      ...written.roadmaps.flatMap((plan) => refWarnings(repos, plan.file, roadmapRefs(plan))),
+      ...written.roadmaps.flatMap((r) =>
         r.data.snapshotId !== null && !loaded.has(r.data.snapshotId)
           ? [`${r.file}: names snapshot ${r.data.snapshotId}, which isn't loaded`]
           : [],
       ),
-    ] as never;
-  }) as string[];
-  const lineups = snapshots.flatMap((s) => s.data.lineups);
+    ];
+    return { ...written, warnings };
+  });
+  const lineups = outcome.snapshots.flatMap((s) => s.data.lineups);
   return {
-    snapshots: snapshots.map((s) => s.id),
-    roadmaps: roadmaps.map((r) => r.id),
+    snapshots: outcome.snapshots.map((s) => s.id),
+    roadmaps: outcome.roadmaps.map((r) => r.id),
+    skipped: outcome.skipped,
     counts: {
-      snapshots: snapshots.length,
+      snapshots: outcome.snapshots.length,
       lineups: lineups.length,
       cookies: lineups.reduce((n, lineup) => n + lineup.cookies.length, 0),
-      roadmaps: roadmaps.length,
-      items: roadmaps.reduce((n, r) => n + r.data.items.length, 0),
+      roadmaps: outcome.roadmaps.length,
+      items: outcome.roadmaps.reduce((n, r) => n + r.data.items.length, 0),
     },
-    warnings,
+    warnings: outcome.warnings,
   };
 }

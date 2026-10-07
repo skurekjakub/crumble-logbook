@@ -124,6 +124,7 @@ const IMPORTER_DEPENDENCIES = [
   "config",
   "services/names",
   "services/deck-modes",
+  "services/account-refs",
 ].map((path) => `${SERVER}/${path}`);
 
 /**

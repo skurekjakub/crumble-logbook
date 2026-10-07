@@ -13,25 +13,50 @@
       "payoff": "The record's top Arena deck.",
       "cost": "Free; lineup slots 3–5 are spare.",
       "refs": [
-        { "record": "002-pvp-meta", "id": "arena-bari-oven-cola" },
-        { "record": "002-pvp-meta", "file": "curated/runes.json" },
-        "002-pvp-meta#mechanic:7"
-      ]
+        {
+          "record": "002-pvp-meta",
+          "id": "arena-bari-oven-cola"
+        },
+        {
+          "record": "002-pvp-meta",
+          "file": "curated/runes.json"
+        },
+        "002-pvp-meta#mechanic:1"
+      ],
+      "size": "Big"
     },
     {
       "rank": 2,
       "priority": "later",
       "action": "Level every rune on the carry to 15 before the next season begins in the arena",
-      "payoff": { "power": "+3%" },
-      "cost": ["rune stones", 400]
+      "payoff": {
+        "power": "+3%"
+      },
+      "cost": [
+        "rune stones",
+        400
+      ],
+      "refs": [
+        {
+          "record": "001-other-record",
+          "id": "arena-bari-oven-cola"
+        }
+      ]
     }
   ],
   "parked": [
     {
       "avenue": "Stage pushing",
       "why": "328-30 is the last stage.",
-      "refs": [{ "record": "002-pvp-meta", "id": "nowhere" }]
+      "refs": [
+        {
+          "record": "002-pvp-meta",
+          "id": "nowhere"
+        }
+      ]
     }
   ],
-  "unread": ["Mercenary perks per lineup"]
+  "unread": [
+    "Mercenary perks per lineup"
+  ]
 }

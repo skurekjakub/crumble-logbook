@@ -141,6 +141,67 @@ export function leadClause(text: string, max = 28): string {
   return `${cut || lead.slice(0, max)}…`;
 }
 
+/** A payoff's size, as a roadmap item may state it. */
+export type PayoffSize = "big" | "medium" | "small";
+
+/** Each stated payoff size's badge text and tone. */
+const SIZE_BADGE: Record<PayoffSize, { text: string; tone: Tone }> = {
+  big: { text: "Big", tone: "good" },
+  medium: { text: "Medium", tone: "warn" },
+  small: { text: "Small", tone: "quiet" },
+};
+
+/** A payoff or cost badge: what it reads, its colour, and the text it leaves out. */
+export interface GaugeView {
+  /** The badge's text. */
+  text: string;
+  tone: Tone;
+  /** What the badge doesn't show of the payoff or cost, for the row's detail line; `null` for nothing. */
+  rest: string | null;
+}
+
+/**
+ * Words a payoff or cost as a badge. A payoff whose size the roadmap
+ * states reads as that size, its text left for the detail line; any other
+ * reads as its lead clause, coloured by its wording, and leaves the
+ * detail line only what the lead clause doesn't already say.
+ *
+ * @param kind - whether it is the payoff or the cost
+ * @param text - the payoff or cost as written
+ * @param size - the payoff's stated size; ignored for a cost
+ * @returns the badge and the text it leaves out
+ */
+export function gauge(
+  kind: "payoff" | "cost",
+  text: string,
+  size: PayoffSize | null = null,
+): GaugeView {
+  if (kind === "payoff" && size !== null) return { ...SIZE_BADGE[size], rest: text };
+  const whole = text.trim();
+  const lead = leadClause(whole);
+  const cut = lead.endsWith("…") && !whole.startsWith(lead);
+  const after = whole
+    .slice(lead.length)
+    .replace(/^\s*[;.,]\s*/, "")
+    .trim();
+  return {
+    text: lead,
+    tone: kind === "payoff" ? payoffTone(text) : costTone(text),
+    rest: cut ? whole : after || null,
+  };
+}
+
+/**
+ * A reading's time as a short label: the `HH:MM` of an ISO date-time, any
+ * other text as written.
+ *
+ * @param at - when the figure was read, e.g. `2026-10-07T17:13:00+02:00`
+ * @returns the label, e.g. `17:13`
+ */
+export function readingTime(at: string): string {
+  return /^\d{4}-\d{2}-\d{2}T(\d{2}:\d{2})/.exec(at)?.[1] ?? at;
+}
+
 /**
  * A level or star figure as its badge reads: `Lv.80`, `7★`; free text as
  * written.

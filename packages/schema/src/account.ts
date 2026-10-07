@@ -6,8 +6,9 @@
  * few names for a field, and normalise it on parse: a figure becomes text,
  * runes, pets and resources become short chips, a lineup's cookies get
  * their level, stars and runes from the snapshot's cookie list, and any
- * field they don't map is kept under `extra`. Screenshot lists (`screens`)
- * are dropped everywhere: the screenshots stay local. The schemas fail
+ * field they don't map is kept under `extra`. Screenshots (`screens`
+ * lists, `screenshot…` fields, image paths) are dropped everywhere: they
+ * stay local. The schemas fail
  * only where nothing usable is left: a cookie with no name, a roadmap item
  * with no action or an unknown priority.
  *
@@ -33,8 +34,15 @@ export type AccountRoadmapItemRow = typeof t.accountRoadmapItems.$inferSelect;
 /** A plain JSON object, as the loose schemas pass one through. */
 type Obj = Record<string, unknown>;
 
-/** The fields the import never keeps: the screenshots behind a section, which stay local. */
-const DROPPED = ["screens"];
+/**
+ * The fields the import never keeps, the screenshots behind a section,
+ * which stay local: `screen`, `screens` and any field whose name starts
+ * with `screenshot`, in any case.
+ */
+const SCREEN_FIELD = /^(?:screens?$|screenshot)/i;
+
+/** A path to an image file, which the import never keeps either. */
+const IMAGE_FILE = /\.(?:png|jpe?g|webp|gif|bmp|avif|heic|tiff?)$/i;
 
 /** The fields that date a section, which no chip shows. */
 const DATING = ["capturedAt", "captured_at"];
@@ -50,17 +58,30 @@ function isObj(value: unknown): value is Obj {
 }
 
 /**
- * Removes every screenshot list (`screens`) from a value, at any depth.
+ * Reports whether a value is a string naming an image file
+ * (`arena-def.jpg`), as a screenshot's path does.
+ *
+ * @param value - any parsed JSON value
+ * @returns `true` for an image path
+ */
+function isImagePath(value: unknown): boolean {
+  return typeof value === "string" && IMAGE_FILE.test(value.trim());
+}
+
+/**
+ * Removes every screenshot from a value, at any depth: the fields named
+ * like one (`screen`, `screens`, `screenshot…`), and any string ending in
+ * an image extension, as a field's value or a list's entry.
  *
  * @param value - any parsed JSON value
  * @returns the value without them
  */
 export function withoutScreens(value: unknown): unknown {
-  if (Array.isArray(value)) return value.map(withoutScreens);
+  if (Array.isArray(value)) return value.filter((v) => !isImagePath(v)).map(withoutScreens);
   if (!isObj(value)) return value;
   return Object.fromEntries(
     Object.entries(value)
-      .filter(([key]) => !DROPPED.includes(key))
+      .filter(([key, inner]) => !SCREEN_FIELD.test(key) && !isImagePath(inner))
       .map(([key, inner]) => [key, withoutScreens(inner)]),
   );
 }
@@ -234,10 +255,43 @@ function resourceKeyOf(obj: Obj): string | null {
   return null;
 }
 
+/** Rune stats whose short label isn't their words title-cased. */
+const RUNE_STAT_LABEL: Record<string, string> = { critRate: "CRIT%", dmgReduction: "DR" };
+
+/** Words a rune stat's label writes in capitals, as the game does. */
+const STAT_ABBREVIATIONS = new Set(["atk", "def", "hp", "crit", "dmg", "amp", "res", "spd"]);
+
+/**
+ * A rune stat as a short label: `skillAmp` → `Skill AMP`, `atkAmp` →
+ * `ATK AMP`, `critRate` → `CRIT%`. A stat already in words keeps them,
+ * its abbreviations capitalised.
+ *
+ * @param stat - the stat as the snapshot names it, in camelCase, snake_case or words
+ * @returns the label
+ */
+export function runeStatLabel(stat: string): string {
+  const known = RUNE_STAT_LABEL[stat];
+  if (known !== undefined) return known;
+  return stat
+    .replace(/([a-z\d])([A-Z])/g, "$1 $2")
+    .split(/[\s_-]+/)
+    .filter((word) => word !== "")
+    .map((word) => {
+      const lower = word.toLowerCase();
+      return STAT_ABBREVIATIONS.has(lower)
+        ? lower.toUpperCase()
+        : lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join(" ");
+}
+
 /**
  * Words a cookie's runes as chips: rune lines that name a `stat` are
- * summed per stat (`skillHaste 21 ×5`), in the order the stats first
- * appear; runes of any other shape become chips as they are.
+ * summed per stat under its short label (`Skill Haste 21 ×5`), in the
+ * order the stats first appear. Only lines whose value is a number count
+ * toward the sum and its `×N`; lines whose value wasn't read (null, or
+ * text) show as `+N?` after it, or as `?` when none of the stat's lines
+ * was read. Runes of any other shape become chips as they are.
  *
  * @param value - the runes as written
  * @returns the chips
@@ -246,17 +300,23 @@ export function runeChips(value: unknown): string[] {
   if (!Array.isArray(value) || !value.every((r) => isObj(r) && textOf(r.stat) !== null)) {
     return chipsOf(value);
   }
-  const byStat = new Map<string, { sum: number; lines: number }>();
+  const byStat = new Map<string, { sum: number; read: number; unread: number }>();
   for (const rune of value as Obj[]) {
     const stat = textOf(rune.stat)!;
-    const entry = byStat.get(stat) ?? { sum: 0, lines: 0 };
-    entry.lines += 1;
-    if (typeof rune.value === "number") entry.sum += rune.value;
+    const entry = byStat.get(stat) ?? { sum: 0, read: 0, unread: 0 };
+    if (typeof rune.value === "number") {
+      entry.sum += rune.value;
+      entry.read += 1;
+    } else {
+      entry.unread += 1;
+    }
     byStat.set(stat, entry);
   }
-  return [...byStat].map(([stat, { sum, lines }]) => {
+  return [...byStat].map(([stat, { sum, read, unread }]) => {
+    const label = runeStatLabel(stat);
+    if (read === 0) return `${label} ?${unread > 1 ? ` ×${unread}` : ""}`;
     const total = Math.round(sum * 100) / 100;
-    return `${stat} ${total}${lines > 1 ? ` ×${lines}` : ""}`;
+    return `${label} ${total}${read > 1 ? ` ×${read}` : ""}${unread > 0 ? ` +${unread}?` : ""}`;
   });
 }
 
@@ -489,15 +549,63 @@ function cookieIndex(value: unknown): Map<string, Obj> {
 }
 
 /**
+ * The lineup key a `same as <key>` note names, its trailing punctuation
+ * left out (`same as arena_def.` names `arena_def`).
+ *
+ * @param text - the note written in place of a lineup's cookies
+ * @returns the key, or `null` when the note isn't a `same as`
+ */
+export function sameAsKey(text: string): string | null {
+  const key = /^\s*same as\s+(\S+)/i.exec(text)?.[1]?.replace(/[.,;:!?)\]}"']+$/, "");
+  return key ? key : null;
+}
+
+/**
+ * Follows a lineup's `same as <key>` note to the cookies it copies,
+ * through any chain of `same as` notes.
+ *
+ * @param from - the lineup whose note it is
+ * @param key - the key its note names
+ * @param byKey - every lineup, by key
+ * @returns the cookies, or why the chain names none
+ */
+function followSameAs(
+  from: string,
+  key: string,
+  byKey: ReadonlyMap<string, RawLineup>,
+): { cookies: RawCookie[] } | { miss: string } {
+  const seen = new Set([from]);
+  for (let next = key; ;) {
+    if (seen.has(next)) return { miss: `loops back to ${next}` };
+    seen.add(next);
+    const target = byKey.get(next);
+    if (target === undefined) return { miss: `names no lineup ${next}` };
+    if (Array.isArray(target.cookies)) return { cookies: target.cookies };
+    const further = sameAsKey(target.cookies);
+    if (further === null) return { miss: `leads to ${next}, which lists no cookies` };
+    next = further;
+  }
+}
+
+/** A snapshot's lineups, completed, and what couldn't be completed. */
+interface CompletedLineups {
+  lineups: AccountLineupInput[];
+  /** A line per `same as` note that names no lineup's cookies. */
+  issues: string[];
+}
+
+/**
  * Completes a snapshot's lineups: each cookie gets the details the cookie
  * list holds for it (its own fields win), and a lineup whose cookies are
- * written as `same as <key>` gets that lineup's cookies.
+ * written as `same as <key>` gets that lineup's cookies, following a chain
+ * of such notes. A note that names no lineup's cookies stays as the
+ * lineup's note, and is reported.
  *
  * @param raw - the lineups as parsed
  * @param index - the cookie list, by name and key
- * @returns the lineups
+ * @returns the lineups and the notes that named none
  */
-function completeLineups(raw: readonly RawLineup[], index: Map<string, Obj>): AccountLineupInput[] {
+function completeLineups(raw: readonly RawLineup[], index: Map<string, Obj>): CompletedLineups {
   /**
    * Completes one parsed cookie from the cookie list.
    *
@@ -510,10 +618,21 @@ function completeLineups(raw: readonly RawLineup[], index: Map<string, Obj>): Ac
     return toCookie({ ...details, ...obj }, name);
   };
   const byKey = new Map(raw.map((lineup) => [lineup.lineup, lineup]));
-  return raw.map(({ lineup, obj, cookies }) => {
-    const same = typeof cookies === "string" ? /^same as (\S+)/i.exec(cookies)?.[1] : undefined;
-    const source = same === undefined ? undefined : byKey.get(same)?.cookies;
-    const listed = Array.isArray(cookies) ? cookies : Array.isArray(source) ? source : [];
+  const issues: string[] = [];
+  const lineups = raw.map(({ lineup, obj, cookies }): AccountLineupInput => {
+    const text = typeof cookies === "string" ? cookies : null;
+    const same = text === null ? null : sameAsKey(text);
+    const followed = same === null ? null : followSameAs(lineup, same, byKey);
+    if (followed !== null && "miss" in followed) {
+      issues.push(`lineups.${lineup}: "${text}" ${followed.miss}; kept as its note`);
+    }
+    const listed = Array.isArray(cookies)
+      ? cookies
+      : followed !== null && "cookies" in followed
+        ? followed.cookies
+        : [];
+    const written = pick(obj, ["rowsNote", "note"]);
+    const unlisted = typeof cookies === "string" && listed.length === 0 ? cookies : null;
     const captain = obj.captain;
     const deck = refOf(obj.matchesDeck ?? obj.deck);
     return {
@@ -527,13 +646,12 @@ function completeLineups(raw: readonly RawLineup[], index: Map<string, Obj>): Ac
       pets: chipsOf(obj.pets),
       gearPreset: pick(obj, ["gearPreset", "gear_preset"]),
       deck: deck && deck.entity === null ? { ...deck, entity: "deck" } : deck,
-      note:
-        pick(obj, ["rowsNote", "note"]) ??
-        (typeof cookies === "string" && same === undefined ? cookies : null),
+      note: [written, unlisted].filter((part) => part !== null).join(" · ") || null,
       cookies: listed.map(complete),
       extra: rest(obj, [...LINEUP_COOKIES, ...LINEUP_FIELDS]),
     };
   });
+  return { lineups, issues };
 }
 
 /**
@@ -619,10 +737,44 @@ function unreadOf(value: unknown): string[] {
   });
 }
 
+/**
+ * Reads the account's own figures: the scalar fields under `account` (or
+ * `profile`), its dating left out. A later reading under `later` (with its
+ * own `capturedAt`) replaces the figures it read again, each marked with
+ * the time it was read, and adds any it read anew.
+ *
+ * @param file - the snapshot file
+ * @returns one entry per figure, in the order they are written
+ */
+function profileOf(file: Obj): AccountResource[] {
+  const section = isObj(file.account) ? file.account : isObj(file.profile) ? file.profile : null;
+  if (section === null) return [];
+  /**
+   * Lists an object's scalar figures, its dating left out.
+   *
+   * @param obj - the section or its later reading
+   * @returns name and value per figure
+   */
+  const scalars = (obj: Obj): AccountResource[] =>
+    Object.entries(obj).flatMap(([name, value]) => {
+      const text = DATING.includes(name) ? null : textOf(value);
+      return text === null ? [] : [{ name, value: text }];
+    });
+  const figures = scalars(section);
+  if (!isObj(section.later)) return figures;
+  const at = pick(section.later, DATING) ?? "later";
+  for (const figure of scalars(section.later)) {
+    const index = figures.findIndex((f) => f.name === figure.name);
+    if (index === -1) figures.push({ ...figure, at });
+    else figures[index] = { ...figure, at };
+  }
+  return figures;
+}
+
 /** An account snapshot, normalised. */
 export interface AccountSnapshotInput {
   capturedAt: string | null;
-  /** The account's own figures: its scalar fields under `account` (or `profile`). */
+  /** The account's own figures (see `profileOf`). */
   profile: AccountResource[];
   lineups: AccountLineupInput[];
   pets: AccountPet[];
@@ -630,6 +782,11 @@ export interface AccountSnapshotInput {
   unread: string[];
   /** The file's top-level fields the schema doesn't map, as written, screenshots left out. */
   extra: Obj;
+  /**
+   * What the file says that couldn't be read as meant, a line each: a
+   * `same as` note that names no lineup's cookies. Reported, never stored.
+   */
+  issues: string[];
 }
 
 /** The top-level fields of a snapshot the schema maps. */
@@ -638,6 +795,7 @@ const SNAPSHOT_FIELDS = [
   "captured_at",
   "account",
   "profile",
+  "cookies",
   "lineups",
   "pets",
   "resources",
@@ -648,27 +806,24 @@ const SNAPSHOT_FIELDS = [
  * An account snapshot file: `capturedAt` (or `captured_at`), `account`,
  * `lineups`, `cookies` (the list the lineups' cookies are completed
  * from), `pets`, `resources` and `unread`, every one optional; any other
- * field is kept under `extra`, and `screens` lists are dropped.
+ * field is kept under `extra`, and screenshots are dropped (see
+ * {@link withoutScreens}).
  */
 export const accountSnapshotFile = z.preprocess(
   withoutScreens,
-  z.looseObject({ lineups: lineupsFile.optional() }).transform((file): AccountSnapshotInput => ({
-    capturedAt: pick(file, ["capturedAt", "captured_at"]),
-    profile: figuresOf(
-      isObj(file.account) || isObj(file.profile)
-        ? Object.fromEntries(
-            Object.entries((file.account ?? file.profile) as Obj).filter(
-              ([, value]) => textOf(value) !== null,
-            ),
-          )
-        : null,
-    ),
-    lineups: completeLineups(file.lineups ?? [], cookieIndex(file.cookies)),
-    pets: petsOf(file.pets),
-    resources: figuresOf(file.resources),
-    unread: unreadOf(file.unread),
-    extra: rest(file, SNAPSHOT_FIELDS),
-  })),
+  z.looseObject({ lineups: lineupsFile.optional() }).transform((file): AccountSnapshotInput => {
+    const { lineups, issues } = completeLineups(file.lineups ?? [], cookieIndex(file.cookies));
+    return {
+      capturedAt: pick(file, ["capturedAt", "captured_at"]),
+      profile: profileOf(file),
+      lineups,
+      pets: petsOf(file.pets),
+      resources: figuresOf(file.resources),
+      unread: unreadOf(file.unread),
+      extra: rest(file, SNAPSHOT_FIELDS),
+      issues,
+    };
+  }),
 );
 
 /**
@@ -735,6 +890,33 @@ function refsOf(value: unknown): AccountRef[] {
     .filter((ref) => ref !== null);
 }
 
+/** How large a roadmap item's payoff is, as its badge shows it. */
+export const ACCOUNT_SIZE = ["big", "medium", "small"] as const;
+export type AccountSize = (typeof ACCOUNT_SIZE)[number];
+
+/** The words a payoff's `size` may be written as, by the size each means. */
+const SIZE_WORDS: Record<string, AccountSize> = {
+  big: "big",
+  large: "big",
+  high: "big",
+  medium: "medium",
+  med: "medium",
+  mid: "medium",
+  small: "small",
+  low: "small",
+};
+
+/**
+ * Reads a roadmap item's payoff `size`: `big`, `medium` or `small` (or
+ * `large`/`high`, `med`/`mid`, `low`), in any case.
+ *
+ * @param value - the size as written, or as kept under an item's `extra.size`
+ * @returns the size, or `null` for none or a word it doesn't know
+ */
+export function accountSize(value: unknown): AccountSize | null {
+  return typeof value === "string" ? (SIZE_WORDS[value.trim().toLowerCase()] ?? null) : null;
+}
+
 /** One roadmap item, normalised. */
 export interface AccountRoadmapItemInput {
   priority: AccountPriority;
@@ -744,7 +926,11 @@ export interface AccountRoadmapItemInput {
   payoff: string | null;
   cost: string | null;
   refs: AccountRef[];
-  /** The item's fields the schema doesn't map (its `rank`, say), as written. */
+  /**
+   * The item's fields the schema doesn't map (its `rank`, say), as
+   * written, and its payoff's `size`, normalised when {@link accountSize}
+   * reads it.
+   */
   extra: Obj;
 }
 
@@ -753,8 +939,9 @@ const ITEM_FIELDS = ["priority", "area", "action", "why", "payoff", "cost", "ref
 
 /**
  * A roadmap item: `priority` (`now`, `next` or `later`, in any case),
- * `action`, and optional `area`, `why`, `payoff`, `cost` and `refs` (or
- * one `ref`). A payoff or cost of any shape is worded as one line.
+ * `action`, and optional `area`, `why`, `payoff`, `cost`, `size` (how big
+ * the payoff is: `big`, `medium` or `small`) and `refs` (or one `ref`). A
+ * payoff or cost of any shape is worded as one line.
  */
 export const accountRoadmapItemFile = z
   .looseObject({
@@ -764,16 +951,19 @@ export const accountRoadmapItemFile = z
     ),
     action: z.string().trim().min(1),
   })
-  .transform((item): AccountRoadmapItemInput => ({
-    priority: item.priority,
-    area: chipsOf(item.area).join(" · ") || null,
-    action: item.action,
-    why: chipsOf(item.why).join(" ") || null,
-    payoff: chipsOf(item.payoff).join(" · ") || null,
-    cost: chipsOf(item.cost).join(" · ") || null,
-    refs: refsOf(item.refs ?? item.ref),
-    extra: rest(item, ITEM_FIELDS),
-  }));
+  .transform((item): AccountRoadmapItemInput => {
+    const size = accountSize(item.size);
+    return {
+      priority: item.priority,
+      area: chipsOf(item.area).join(" · ") || null,
+      action: item.action,
+      why: chipsOf(item.why).join(" ") || null,
+      payoff: chipsOf(item.payoff).join(" · ") || null,
+      cost: chipsOf(item.cost).join(" · ") || null,
+      refs: refsOf(item.refs ?? item.ref),
+      extra: { ...rest(item, ITEM_FIELDS), ...(size === null ? {} : { size }) },
+    };
+  });
 
 /**
  * Reads the parked avenues: a list of `{ avenue (or name), why, refs }`,
@@ -821,7 +1011,7 @@ const ROADMAP_FIELDS = [
  * A roadmap file: a list of items in order, or an object with `items` and
  * optionally the snapshot it was written from (an id or the snapshot's
  * path), a `verdict` and the `parked` avenues; any other field is kept
- * under `extra`, and `screens` lists are dropped.
+ * under `extra`, and screenshots are dropped (see {@link withoutScreens}).
  */
 export const accountRoadmapFile = z.preprocess(
   withoutScreens,

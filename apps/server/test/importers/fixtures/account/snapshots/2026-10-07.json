@@ -5,17 +5,31 @@
     "capturedAt": "2026-10-07T12:51:00+02:00",
     "level": 192,
     "combatPower": 47810542000,
-    "later": { "combatPower": 47813382000 },
-    "screens": ["main-screen-start.jpg"]
+    "later": {
+      "capturedAt": "2026-10-07T17:13:00+02:00",
+      "combatPower": 47813382000
+    },
+    "screens": [
+      "main-screen-start.jpg"
+    ]
   },
   "resources": {
     "capturedAt": "2026-10-07T12:51:00+02:00",
     "gems": 216560,
-    "coins": { "at1251": 1120000000000, "at1713": 132360000000, "note": "dropped between reads" },
-    "petTickets": [715, 7922],
+    "coins": {
+      "at1251": 1120000000000,
+      "at1713": 132360000000,
+      "note": "dropped between reads"
+    },
+    "petTickets": [
+      715,
+      7922
+    ],
     "crumbleDungeonEntries": "4/5",
     "syrup": null,
-    "screens": ["main-screen-start.jpg"]
+    "screens": [
+      "main-screen-start.jpg"
+    ]
   },
   "cookies": {
     "capturedAt": "2026-10-07T13:00:00+02:00",
@@ -29,12 +43,41 @@
         "skillTier": "V",
         "power": 4510000000,
         "runes": [
-          { "line": 1, "grade": "SSR", "stat": "atkAmp", "value": 7 },
-          { "line": 2, "grade": "SSR", "stat": "skillHaste", "value": 4 },
-          { "line": 3, "grade": "SSR", "stat": "skillHaste", "value": 4.5 }
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 7
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4.5
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": null
+          },
+          {
+            "line": 5,
+            "grade": "SR",
+            "stat": "critRes",
+            "value": "unread"
+          }
         ],
         "promotion": "max",
-        "usedIn": ["arena_def"]
+        "usedIn": [
+          "arena_def"
+        ]
       },
       {
         "en": "Licorice Cookie",
@@ -44,7 +87,9 @@
         "stars": 3
       }
     ],
-    "screens": ["cookie-list.jpg"]
+    "screens": [
+      "cookie-list.jpg"
+    ]
   },
   "lineups": {
     "arena_def": {
@@ -53,28 +98,65 @@
       "side": "defense",
       "gearPreset": "PvP",
       "power": 24270000,
-      "captain": { "en": "Cherry Cookie", "kr": "체리맛 쿠키", "resourceKey": "cookie0024" },
+      "captain": {
+        "en": "Cherry Cookie",
+        "kr": "체리맛 쿠키",
+        "resourceKey": "cookie0024"
+      },
       "rows": [
         [
-          { "en": "Cherry Cookie", "kr": "체리맛 쿠키", "resourceKey": "cookie0024" },
-          { "en": "Licorice Cookie", "kr": "감초맛 쿠키", "resourceKey": "cookie0503" }
+          {
+            "en": "Cherry Cookie",
+            "kr": "체리맛 쿠키",
+            "resourceKey": "cookie0024"
+          },
+          {
+            "en": "Licorice Cookie",
+            "kr": "감초맛 쿠키",
+            "resourceKey": "cookie0503"
+          }
         ],
-        [{ "en": "Unknown Cookie", "kr": "미확인 쿠키", "resourceKey": null }]
+        [
+          {
+            "en": "Unknown Cookie",
+            "kr": "미확인 쿠키",
+            "resourceKey": null
+          }
+        ]
       ],
-      "pets": ["Holy Baby Drop"],
-      "matchesDeck": { "record": "002-pvp-meta", "id": "arena-bari-oven-cola" },
-      "screens": ["arena-def-lineup.jpg"]
+      "pets": [
+        "Holy Baby Drop"
+      ],
+      "matchesDeck": {
+        "record": "002-pvp-meta",
+        "id": "arena-bari-oven-cola"
+      },
+      "screens": [
+        "arena-def-lineup.jpg"
+      ],
+      "screenshot": "arena-def-zoom.png"
     },
     "arena_atk": {
       "mode": "arena",
       "side": "attack",
-      "rows": "same as arena_def",
+      "rows": "same as arena_def.",
       "pets": []
     },
     "rift": {
       "mode": "dimensional_rift",
-      "rows": [[{ "kr": "체리맛 쿠키", "resourceKey": "cookie0024" }]],
-      "rowsNote": "Order from the battle bar"
+      "rows": [
+        [
+          {
+            "kr": "체리맛 쿠키",
+            "resourceKey": "cookie0024"
+          }
+        ]
+      ],
+      "rowsNote": "Order from the battle bar",
+      "matchesDeck": {
+        "record": "002-pvp-meta",
+        "id": "no-such-deck"
+      }
     },
     "crumble_dungeon": {
       "mode": "crumble_dungeon",
@@ -82,6 +164,15 @@
       "captain": null,
       "rows": "all owned cookies (top 40 by power deploy)",
       "pets": []
+    },
+    "rumble_atk": {
+      "mode": "rumble",
+      "rows": "same as arena_atk"
+    },
+    "rumble_def": {
+      "mode": "rumble",
+      "rows": "same as rumble_old",
+      "rowsNote": "Swap pending"
     }
   },
   "pets": {
@@ -94,10 +185,16 @@
         "stars": 20,
         "companionEffect": "Ally ATK +20%",
         "ownedEffect": "Support CRIT% 4.00%",
-        "promotion": "max"
+        "promotion": "max",
+        "proof": "pets/holy-baby-drop.webp"
       }
     ],
-    "screens": ["pet-list.jpg"]
+    "screens": [
+      "pet-list.jpg"
+    ]
   },
-  "unread": ["Mercenary perks per lineup", "Cookie EXP stock, Chocosteel, Syrup"]
+  "unread": [
+    "Mercenary perks per lineup",
+    "Cookie EXP stock, Chocosteel, Syrup"
+  ]
 }
