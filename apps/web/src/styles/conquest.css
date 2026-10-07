@@ -122,11 +122,6 @@ ul.todo li::before {
   min-width: 0;
 }
 
-/* The season-buffs card is tinted (pvp.css); its "More" fade matches the tint. */
-.card.buffs .clamp {
-  --clamp-bg: var(--candy-soft);
-}
-
 /* Overview: a rule's pill, clamped text and chips on one line. */
 .rule {
   display: flex;

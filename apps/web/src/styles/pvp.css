@@ -1,14 +1,9 @@
 /* The PvP screens: season buffs, the formation grid, the counter matrix and the usage bars
    (the usage view is shared by every mode). Colours come from tokens.css only. */
 
-/* Overview: the season's buffs, set apart from the rules card. */
+/* Overview: the season's buffs, set apart from the rules card by a candy edge, not a loud fill. */
 .card.buffs {
   border-left: 4px solid var(--candy);
-  background: var(--candy-soft);
-  color: var(--candy-ink);
-}
-.card.buffs .chip {
-  background: var(--surface);
 }
 
 /* A card head's chips (a PvP deck's ceiling is a sentence) wrap instead of overflowing. */
