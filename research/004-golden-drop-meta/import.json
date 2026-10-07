@@ -9,7 +9,9 @@
   "curated": "curated",
   "extractions": "evidence/08-extract",
   "captures": [
+    { "site": "dc", "dir": "evidence/r2026-10-07/02-dc/dc", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/02-dc/dc", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/r2026-10-07/04-naver/nv", "file": "nv-{id}.md" },
     { "site": "nv", "dir": "evidence/04-naver/nv", "file": "nv-{id}.md" }
   ],
   "rankings": [],
