@@ -1,12 +1,44 @@
 [
  {
+  "id": "dungeon-milk-seeker-figure",
+  "mode": "crumble_dungeon",
+  "name_en": "Milk–Brightseeker–Figure order, Espresso out (코니)",
+  "name_kr": "우유 시커 피겨 전갈 마카롱 치케",
+  "status": "meta",
+  "ceiling": "578.07G at 14.90G total power, server 1st, 0.000 s left (코니, 2026-09-28, screenshot and video).",
+  "summary": "Highest documented score with a lineup. Brightseeker ATK #2, then Figure, Scorpion, Macaron, Cheesecake; every other favourite in by power, Espresso out.",
+  "cookies": [
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain at ATK #1: takes Passion Pay and the beam, buffs the packed formation."},
+   {"kr": "브라이트시커 쿠키", "level_rule": "ATK #2", "why": "First beam target after Milk; ranged dealer that keeps firing."},
+   {"kr": "피겨여왕맛 쿠키", "level_rule": "ATK #3", "why": "Beam buffer that stays by the boss."},
+   {"kr": "전갈맛 쿠키", "level_rule": "ATK #4", "why": "Main single-target dealer, still in the beam ranks."},
+   {"kr": "마카롱맛 쿠키", "level_rule": "ATK #5", "why": "Crit-rate buffer in the beam ranks."},
+   {"kr": "치즈케이크맛 쿠키", "level_rule": "ATK #6", "why": "Its ATK buff stacks on Milk since the 9/10 fix."},
+   {"kr": "석류맛 쿠키", "level_rule": "In the 40; never below it (lower toward Lv.60 if Milk lags)", "why": "Beam source; the beam routes down the ATK order above."},
+   {"kr": "에스프레소맛 쿠키", "level_rule": "Out: levelled below the 40", "why": "Left out by the author; another player says it drains Macaron's buff."}
+  ],
+  "atk_order": ["바삭튼튼 소아과 의사 우유맛 쿠키", "브라이트시커 쿠키", "피겨여왕맛 쿠키", "전갈맛 쿠키", "마카롱맛 쿠키", "치즈케이크맛 쿠키"],
+  "atk_order_note": "The 40 deploy by power; every favourite cookie goes in except Espresso, and only the six ATK ranks are set (nv:47255).",
+  "perks": "Milk captain; Passion Pay + 탄액비 (named only in Korean).",
+  "substitutions": [
+   "Scorpion above Figure is 전치's order: 325.9G at 10.10G (dc:76916).",
+   "If Milk walks in late, lower Pomegranate toward Lv.60 and drop supports from the 40 (dc:82354, dc:81464)."
+  ],
+  "rng": "One copier went from 130G to 260G; others still see Milk arrive late.",
+  "unorthodox": [
+   "Espresso, a dealer in most lists, kept out of the 40."
+  ],
+  "sources": ["nv:47255", "web:yt-tnAGQ2XgW9o", "dc:80710", "dc:82354"]
+ },
+ {
   "id": "dungeon-milk-scorpion-figure",
   "mode": "crumble_dungeon",
   "name_en": "Milk–Scorpion–Figure beam lineup (스미노프TFT)",
   "name_kr": "크럼블던전 우유 전갈 피겨 조합",
   "status": "meta",
+  "obsolete": {"since": "2026-10-07", "reason": "Out-scored: 코니's Brightseeker-first order made 578.07G at 14.90G against this lineup's 379.3G at 15.58G.", "sources": ["nv:47255", "web:yt-tnAGQ2XgW9o"], "superseded_by": "dungeon-milk-seeker-figure"},
   "ceiling": "379.3G at 15.58G total power, server 1st, 0.000 s left (2026-09-28, screenshot). Same rules: 159.6G at 8.57G (09-22), 43.2G at 3.51G (09-09).",
-  "summary": "Highest documented score. Milk captain at ATK #1; beam to Scorpion, then Figure. Supports at Lv.70 or below; chargers, summoners and beam thieves out.",
+  "summary": "Was the top score until 9/28. Milk captain at ATK #1; beam to Scorpion, then Figure. Supports at Lv.70 or below; chargers, summoners and beam thieves out.",
   "cookies": [
    {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain, ATK #1: takes both perks and the beam; buffs everyone in range."},
    {"kr": "석류맛 쿠키", "level_rule": "In the top 40 by power; kept at Lv.70 in the 9/9 guide", "why": "Beam source: Skill AMP (빨대) to Milk, then down the ATK order."},
@@ -43,7 +75,7 @@
   "name_kr": "우브전피마치",
   "status": "meta",
   "ceiling": "325.9G at 10.10G total power, server 1st, 0.000 s left (전치, 2026-09-27, screenshot). 221.4G at 9.23G (VART, video); VART claims 250G without Espresso.",
-  "summary": "Best score per power of any published lineup. Brightseeker ATK #2 takes the beam; Cheesecake 6th buffs Milk. 전치: 105.2G (3.74G) to 325.9G (10.10G).",
+  "summary": "Brightseeker ATK #2 takes the beam, then Scorpion and Figure; Cheesecake 6th buffs Milk. 전치: 105.2G (3.74G) to 325.9G (10.10G).",
   "cookies": [
    {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level": "100", "why": "Captain, ATK #1: takes both perks; its stacking ATK buff covers the formation."},
    {"kr": "브라이트시커 쿠키", "level_rule": "ATK #2", "why": "Beam target, main ranged dealer; its haste decides Rapid Promotion (dc:76916)."},
@@ -59,15 +91,16 @@
   ],
   "atk_order": ["바삭튼튼 소아과 의사 우유맛 쿠키", "브라이트시커 쿠키", "전갈맛 쿠키", "피겨여왕맛 쿠키", "마카롱맛 쿠키", "치즈케이크맛 쿠키"],
   "atk_order_note": "The other 34 are lowered only until their power stays above the cookies left out (VART).",
-  "perks": "Milk captain; Passion Pay + Rapid Promotion.",
+  "perks": "Milk captain; Passion Pay + Rapid Promotion, a little above Like A Family over 30+ runs each (전치, dc:80905).",
   "substitutions": [
-   "Scorpion above Brightseeker scores higher, per another poster (dc:71956)."
+   "Scorpion above Brightseeker scores higher, per another poster (dc:71956).",
+   "Figure above Scorpion is 코니's 578G order (dungeon-milk-seeker-figure)."
   ],
   "rng": "Milk must come out at once; changing Scorpion's runes broke VART's arrival again.",
   "unorthodox": [
    "Two DEF-shred debuffers (Dark Choco and Devil) kept together."
   ],
-  "sources": ["dc:69414", "dc:76916", "web:yt-4v2xDWV13fg"]
+  "sources": ["dc:69414", "dc:76916", "web:yt-4v2xDWV13fg", "dc:80905"]
  },
  {
   "id": "dungeon-macaron-figure-beam",
@@ -78,7 +111,7 @@
   "ceiling": "Record in the high 180s G at 14.14G total power; the run shown ends at 174.7G (2026-09-18, video; the record itself is stated, not shown).",
   "summary": "Fullest published list: all 40 named, plus the Lv.1 cookies. Beam goes to buffers: Macaron and Figure rank ATK #1 and #2 after Milk; dealers sit below.",
   "cookies": [
-   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "Kept at its current level; the highest ATK counting the captain's +10%", "why": "Captain; top ATK with the captain's +10%, so Passion Pay lands."},
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "Kept at its current level; the highest ATK the cookie window shows, without the captain's +10% (dc:78378)", "why": "Captain; top displayed ATK, so Passion Pay lands on it."},
    {"kr": "마카롱맛 쿠키", "level": "100", "why": "Beam target, ATK #1 after Milk; ATK runes hold the rank."},
    {"kr": "피겨여왕맛 쿠키", "level": "100", "why": "Beam target (ATK #2 after Milk)."},
    {"kr": "전갈맛 쿠키", "level_rule": "Levelled below Macaron and Figure in ATK", "why": "Main dealer, kept off the beam in this setting."},
@@ -129,7 +162,7 @@
   "unorthodox": [
    "Beam deliberately given to buffers instead of dealers."
   ],
-  "sources": ["web:yt-XeD4c3AuQAs", "web:yt-UF6zcIkbh_8"]
+  "sources": ["web:yt-XeD4c3AuQAs", "web:yt-UF6zcIkbh_8", "dc:78378"]
  },
  {
   "id": "dungeon-gni-cheesecake",
@@ -167,7 +200,7 @@
   "ceiling": "50G+ ('520억 이상'), 2026-09-07 (text).",
   "summary": "Pre-9/10: Cheesecake at Lv.1, since its ATK buff reset Milk's stacks. Otherwise ND러너's later 40, with Cheerleader, Coffee, Adventurer where Knight, Alchemist, Cheesecake went.",
   "cookies": [
-   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "ATK #1 counting the captain's +10%", "why": "Captain with the top ATK counting the captain's +10%."},
+   {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "level_rule": "ATK #1 as the cookie window shows it, without the captain's +10% (dc:78378)", "why": "Captain with the top displayed ATK, so the perks land on it."},
    {"kr": "피겨여왕맛 쿠키", "level_rule": "Beam target: ATK rank just below Milk", "why": "Recommended beam target in the pinned list."},
    {"kr": "전갈맛 쿠키", "level_rule": "Beam target", "why": "Recommended beam target in the pinned list."},
    {"kr": "마카롱맛 쿠키", "level_rule": "In the top 40", "why": "Buffer; also a beam target when its ATK allows."},
@@ -175,6 +208,6 @@
    {"kr": "치즈케이크맛 쿠키", "level": "1", "why": "Kept out: before 9/10 its ATK buff erased Milk's stacked ATK buff."}
   ],
   "perks": "Milk captain; Passion Pay + Rapid Promotion.",
-  "sources": ["web:yt-UF6zcIkbh_8", "dc:61849", "dc:62042", "web:cookieruncrumbles-dungeon-milk"]
+  "sources": ["web:yt-UF6zcIkbh_8", "dc:61849", "dc:62042", "web:cookieruncrumbles-dungeon-milk", "dc:78378"]
  }
 ]

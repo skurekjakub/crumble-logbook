@@ -37,3 +37,35 @@ Synthesis: the DC round returned nothing new (saturation). The global round foun
 
 - The mode is one global client with per-server boards, so "KR vs global" is a difference of sources, not of rules.
 - The answer is a ranking of documented runs (`curated/dungeon-runs.json`) plus the lineup rules they share (`curated/decks.json`, `dungeon-exclusions.json`, `dungeon-lineups.json`).
+
+## Round 2026-10-07
+
+The refresh round, window 2026-09-28 to 2026-10-07. Web access through the sites' own search with the TypeScript scrapers, agent-browser (headed) for YouTube frames, the wiki and two DuckDuckGo queries, and curl for the channel pages and guides. yt-dlp and ffmpeg are not on this machine, so video stills were cut by screenshotting the player in agent-browser.
+
+### Baseline: the saved searches
+
+Queries: every entry in `searches.json`, one capture each (`evidence/r2026-10-07/02-dc/list-<id>.tsv`, `04-naver/list-naver-guide-board*.tsv`, `05-youtube/search/`, `05-youtube/channel-*.html`, `03-sites/crumbgg/`, the web pages), plus the official patch-notes and notices boards (`04-naver/list-naver-patch-notes.tsv`, `list-naver-notices.tsv`).
+
+Synthesis: crumb.gg's `patches.json` served 200 (the orchestrator had seen a 404) and lists 1.5.002 for 10-08 but not the 10-01 notice; the cafe's notice nv:48486 shows the window's "dungeon changes" are the Daily Dungeons, so Crumble Dungeon has no change since 9/23. The guide board held the window's top find, 코니's 578.07G at 14.90G (nv:47255), with a video giving the ATK order. DC added a 428.96G run with a 704.63G board entry behind it, a weekly-close timer, and posts on Milk's arrival. The saved channels posted no dungeon video. Gap: the order behind 428.96G and 704.63G, and the perks' basis.
+
+### Discovery 1: the window's new names
+
+Queries: DC `크던 우유`, `석류 레벨`, `이면 버프`; YouTube `크럼블 던전 500G`, `크럼블던전 공략 10월`, `쿠키런 크럼블 크던`.
+
+Synthesis: two players get Milk out at once with Pomegranate near Lv.60; 전치 reports the Rift buff counting in displayed power and scrambling the deployed order (dc:80897), backed by posts on Rift-inflated gear power. YouTube search saturated: only 누리머's 260G guide (09-28) was new, and its frames give 261.96G, 12.91G and Like A Family with Passion Pay.
+
+### Discovery 2: perks and the patch delta
+
+Queries: DC `열정페이`, `샤르도네`, `크던 G`.
+
+Synthesis: a Passion Pay test (dc:78378) finds the perk follows the ATK the cookie window shows, without the captain's +10%, against ND러너's guide; 전치 finds Rapid Promotion a little above Like A Family over 30+ runs each (dc:80905). Chardonnay talk cites a leak that she receives Projectile Speed, which would pull Pomegranate's beam; no run shows her, so it stays under "what would change".
+
+### Discovery 3: global and Korean web
+
+Queries: DuckDuckGo `"Crumble Dungeon" cookie run crumble best team score` and `크럼블 던전 공략 우유 석류` (`evidence/r2026-10-07/07-web/ddg-*.txt`); EOG, the wiki, Crumble Guides and the Milk guide re-captured.
+
+Synthesis: no global source posts a score near the Korean top; EOG revised its PvE tier read (10-04) but not its dungeon section; the wiki and guides are unchanged. Saturation.
+
+### After the round
+
+The top lineup moves from Scorpion second to Brightseeker second and Figure third (578.07G against 379.3G at similar power), and the Scorpion-first deck is marked obsolete. Unsettled: the 704.63G entry's lineup, 코니's full 40, and the weekly close's day.

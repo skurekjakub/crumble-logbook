@@ -7,7 +7,7 @@
     "mode": "crumble_dungeon"
   },
   "curated": "curated",
-  "extractions": "evidence/08-extract",
+  "extractions": ["evidence/r2026-10-07/08-extract", "evidence/08-extract"],
   "captures": [
     { "site": "dc", "dir": "evidence/r2026-10-07/02-dc/dc", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/02-dc/dc", "file": "{id}.md" },
