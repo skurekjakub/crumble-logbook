@@ -1,6 +1,6 @@
 {
  "about": "Cost and diminishing-return curves for the power sources, condensed from game data (record 001's Sugar Pocket catalogs, game 1.4.002, tabulated in evidence/07-derived/) and from posted tables (plating odds dc:53079 and the official 1.4.002 notice dc:72150; Stellar shapes nv:43444, nv:5693, dc:55570, dc:56417; TSSR star costs dc:50913). Each curve is a table: its columns, its rows of cells, and each row's sources where the record cites rows apart ('row_sources'). Full rows are in the evidence files named per curve.",
- "measured": "2026-09-28",
+ "measured": "2026-10-07",
  "curves": [
   {
    "id": "plating-odds",
@@ -17,13 +17,14 @@
     [12, 23, 1, 14, 0, 13, 2, 12, 0, 247, 20],
     [14, 14, 0.5, 20, 0, 15, 2, 12, 60, 414, 43],
     [15, 12, 0.5, 24, 5, 17, 5, 19, 0, 603, 89],
+    [16, 10, 0.5, 28, 6, 18, null, null, 0, null, null],
     [17, 8, 0.3, 32, 7, 19, null, 19, 0, null, null],
     [19, 2, 0.1, 39, 10, 25, 9, 19, 70, null, null],
     [20, 2, 0.1, 42, 11, null, null, 23, 0, null, null],
     [24, 2, 0.1, 46, 15, null, null, 23, 80, null, null]
    ],
-   "note": "Odds up to 19→20 are from the table of 2026-08-30; from 2026-09-23 a shatter drops 2 levels (not to 10) and can be restored. Main-stat gain per level from 20 on (23%) is from the game data's rate table; sub-stats step at 5/10/15/20/25. Free Chocosteel: 24 a day from idle (web:yt-l9086mj7hwA), so the expected 104 for 14→15 is about 4 days of idle drops (inferred).",
-   "sources": ["dc:53079", "dc:72150", "web:sugarpocket-catalog", "web:yt-l9086mj7hwA"]
+   "note": "14→15 costs ~4 days of free Chocosteel (24 a day, web:yt-l9086mj7hwA; inferred). Odds to 19→20 are the 2026-08-30 table (16→17 from a 10-06 screen); since 2026-09-23 a shatter drops 2 levels, restorable. A simulator puts 15→20 at ~3,194 Chocosteel and 624 Syrup.",
+   "sources": ["dc:53079", "dc:72150", "web:sugarpocket-catalog", "web:yt-l9086mj7hwA", "dc:81697", "dc:82457"]
   },
   {
    "id": "plating-restore",
@@ -40,7 +41,7 @@
    "title": "Stellar Link: Stellar Points per roll, by points locked",
    "columns": ["locked_points", "sp_per_roll"],
    "rows": [[0, 10], [1, 10], [2, 30], [3, 60], [4, 100], [5, 150], [6, 220]],
-   "note": "A Stellar Point is priced at 8.67 KRW (dc:68116) or 2.5 Crystals ≈ 10 KRW (web:crumblehub-efficiency); Vol.1 pack 32,000 KRW for 12,000 SP (2.7 KRW/SP incl. other items).",
+   "note": "A Stellar Point is worth 8.67 KRW (dc:68116) or 2.5 Crystals ≈ 10 KRW (web:crumblehub-efficiency); the Vol.1 pack works out to 2.7 KRW/SP.",
    "sources": ["web:sugarpocket-stella", "nv:5693", "nv:43444", "dc:55570", "dc:56417", "dc:68586", "web:yt-5XXDHBHnISU", "web:crumblehub-api-efficiency"]
   },
   {
@@ -69,9 +70,10 @@
    "source": "stellar_link",
    "title": "Stellar Link: ATK amplification by constellation and area",
    "columns": ["constellation", "area_pct", "atk_amp_pct"],
-   "rows": [[1, 96, 19.2], [2, 96, 22.8], [2, 100, 30], [3, 96, 38.4], [3, 88, 35], [4, 96, 48]],
-   "row_sources": [["web:yt-y-bxOrnjIeU"], ["web:yt-y-bxOrnjIeU"], ["nv:5693"], ["web:yt-y-bxOrnjIeU"], ["nv:5693"], ["nv:5693"]],
-   "sources": ["web:sugarpocket-stella", "nv:5693", "nv:43444", "dc:55570", "dc:56417", "dc:68586", "web:yt-5XXDHBHnISU", "web:crumblehub-api-efficiency"]
+   "rows": [[1, 96, 19.2], [2, 96, 22.8], [2, 100, 30], [3, 96, 38.4], [3, 88, 35], [4, 96, 48], [1, 37, 7.4], [5, 84, 50.4], [7, 91, 91], [7, 100, 100], [8, 66, 85.8], [8, 76, 98.8]],
+   "row_sources": [["web:yt-y-bxOrnjIeU"], ["web:yt-y-bxOrnjIeU"], ["nv:5693"], ["web:yt-y-bxOrnjIeU"], ["nv:5693"], ["nv:5693"], ["dc:81886"], ["dc:80669"], ["dc:81196"], ["dc:81285"], ["dc:78964"], ["dc:78814"]],
+   "note": "Amplification per 1% of area: 0.2 on constellation 1, 0.6 on 5, 1.0 on 7, 1.3 on 8 (screenshots, 2026-10).",
+   "sources": ["web:sugarpocket-stella", "nv:5693", "nv:43444", "dc:55570", "dc:56417", "dc:68586", "web:yt-5XXDHBHnISU", "web:crumblehub-api-efficiency", "dc:81886", "dc:80669", "dc:81196", "dc:81285", "dc:78964", "dc:78814"]
   },
   {
    "id": "stellar-targets",
@@ -87,18 +89,19 @@
    "title": "Cookie stars: expected cost of a pickup TSSR, by star",
    "columns": ["star", "expected_pulls", "expected_krw"],
    "rows": [[0, 167, 33400], [1, 180, 36000], [2, 360, 72000], [3, 668, 133600], [4, 1002, 200400], [5, 1440, 288800], [6, 1980, 396000], [7, 2520, 504000], [8, 3240, 648000], [9, 4140, 828000], [10, 4860, 972000]],
-   "note": "200 KRW a pull after the event's free pulls; packages trim about 10,000 KRW (dc:50913). Posted in August for Brightseeker; later posts put Bari 8★ at ~600,000 and a TSSR copy at 20,000–30,000 KRW.",
+   "note": "200 KRW a pull after the event's free pulls; packages trim ~10,000 KRW (dc:50913). Later posts: Bari 8★ ~600,000, a TSSR copy 20,000–30,000 KRW.",
    "sources": ["dc:50913", "dc:73162", "dc:74685", "dc:77246"]
   },
   {
    "id": "cookie-level",
    "source": "cookie_level",
-   "title": "Cookie level: stats and cumulative EXP by level",
-   "evidence": "evidence/07-derived/level-curve.json",
-   "columns": ["level", "stat_pct", "exp_cumulative"],
-   "rows": [[30, 283.05, 44371], [50, 625.25, 252273], [70, 1170.75, 1900204], [80, 1555.08, 6160569], [90, 2040.32, 22821295], [100, 2652.99, 98086378]],
-   "note": "Levels 91–100 take about 77% of the EXP to 100 for +30% relative stats (inferred).",
-   "sources": ["web:sugarpocket-catalog"]
+   "title": "Cookie level: stats, cumulative EXP and Crumble level by level (from 2026-10-08)",
+   "evidence": "evidence/07-derived/level-curve.json, evidence/r2026-10-07/07-derived/level-120.json",
+   "columns": ["level", "stat_pct", "exp_cumulative", "crumble_level"],
+   "rows": [[30, 283.05, 44371, null], [50, 625.25, 252273, null], [70, 1170.75, 1900204, null], [80, 1555.08, 5990000, 77], [90, 2040.32, 13560000, 87], [100, 2652.99, 28561003, 100], [110, 3324.06, 81820000, 150], [120, 4411.09, 280450000, 200]],
+   "row_sources": [["web:sugarpocket-catalog"], ["web:sugarpocket-catalog"], ["web:sugarpocket-catalog"], ["web:sugarpocket-catalog", "nv:50417", "dc:79865"], ["web:sugarpocket-catalog", "nv:50417", "dc:79865"], ["web:sugarpocket-catalog", "nv:50417"], ["dc:79865"], ["dc:79865", "web:crumbgg-patches-20261007"]],
+   "note": "Level 120 gives +64% base stats over 100 and takes ~252M more EXP and Crumble level 200 (leak; crumb.gg agrees). Before 10-08, EXP to 100 was 98.1M.",
+   "sources": ["web:sugarpocket-catalog", "web:crumbgg-patches-20261007", "nv:50417", "dc:79865"]
   },
   {
    "id": "cookie-stars",
@@ -133,24 +136,25 @@
    "source": "resolve",
    "title": "Resolve: levels posted by account stage or power",
    "columns": ["stage_or_power", "resolve"],
-   "rows": [["stage 31", 104], ["stage 43", 209], ["stage 56", 300], ["stage 168", 775], ["stage 176, 150M", 606], ["~1G", "765–840"], ["3.1G", 950], ["3.6G", 960], ["4G", 997]],
-   "sources": ["web:crumbgg-patches-20260928", "nv:35880", "nv:39795", "nv:41301", "dc:76008", "dc:76139", "dc:69704", "dc:77104", "dc:76171", "dc:76272"]
+   "rows": [["stage 31", 104], ["stage 43", 209], ["stage 56", 300], ["stage 168", 775], ["stage 176, 150M", 606], ["~1G", "765–840"], ["3.1G", 950], ["3.6G", 960], ["4G", 997], ["stage 285, 6.5G total (2026-10-05)", 874], ["3.17G (2026-10-02)", 946], ["servers 200–400s (2026-10-07)", "842–1,050"]],
+   "sources": ["web:crumbgg-patches-20260928", "nv:35880", "nv:39795", "nv:41301", "dc:76008", "dc:76139", "dc:69704", "dc:77104", "dc:76171", "dc:76272", "dc:81199", "dc:79519", "dc:82242"]
   },
   {
    "id": "gnome-lab-costs",
    "source": "gnome_lab",
    "title": "Gnome Lab: stones per node near the top",
    "columns": ["node", "research_stones", "special_stones"],
-   "rows": [["newest nodes (September)", "1.6M", null], ["steps near HP 30%", "2.9M", null], ["research ~100 nodes", "5–6M", null], ["ATK 30%", "~50M", null], ["special research ATK amp", null, 50]],
-   "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928"]
+   "rows": [["newest nodes (September)", "1.6M", null], ["steps near HP 30%", "2.9M", null], ["research ~100 nodes", "5–6M", null], ["ATK 30%", "~50M", null], ["special research ATK amp", null, 50], ["each new node 111–130 (10 levels, from 10-08; leak)", "1,010M", null], ["the whole 111–130 expansion (leak)", "18.89G", 150]],
+   "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928", "dc:79685", "dc:82186"]
   },
   {
    "id": "gnome-lab-caps",
    "source": "gnome_lab",
    "title": "Gnome Lab: the research cap by patch",
    "columns": ["date", "research", "special"],
-   "rows": [["2026-09-10", "90-2", 16], ["2026-09-23", "110-2", 19]],
-   "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928"]
+   "rows": [["2026-09-10", "90-2", 16], ["2026-09-23", "110-2", 19], ["2026-10-08", "130-2", 22]],
+   "note": "The 10-08 row is announced (nv:50417); from then a research takes 12 hours at most.",
+   "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928", "nv:50417", "web:crumbgg-patches-20261007"]
   },
   {
    "id": "rune-reroll",

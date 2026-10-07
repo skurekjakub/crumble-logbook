@@ -1,0 +1,32 @@
+{
+ "lane": "sites",
+ "read": "2026-10-07",
+ "notes": "The round's site and store captures (../04-sites/, ../06-store/), compared with the first round's copies. Read by the session agent.",
+ "posts": [
+  {"source": "web", "id": "crumbgg-patches-20261007", "url": "https://crumb.gg/data/patches.json", "date": "2026-10-07", "title_kr": "", "title_en": "crumb.gg's patch digest: the 1.4.002 hotfix and update 1.5.002 (upcoming 2026-10-08)", "relevance": 3,
+   "summary_en": "The digest answered 200 on 2026-10-07 and adds two entries since the first round. A 1.4.002 hotfix (undated in the digest; the official notice is nv:48486, 10-02): auto-bake 200/300/400/500 at oven 32/34/36/38, auto-bake stops at 100 unsold gear (was 30), Arena defender protection 6 days → 10 minutes, Rift boss summons count for missions. Update 1.5.002, flagged upcoming, release 2026-10-08 16:00 KST: max cookie level 100 → 120; EXP for Lv.79–100 lowered (Lv.100 13,911,155 → 3,347,644); Gnome Lab research time capped at 12 hours (rows 73–110, 51 nodes); Gnome Lab to research 130-2 and special 22; main stages to 364-30; mileage exchange adds Chocosteel ×5 for 1,500 mileage and Metal Syrup ×5 for 2,000 mileage; the Dimension Fragment (Rift) exchange's limits on Chocosteel ×5 and Metal Syrup ×2 rise from 5 to 10; a 7-day check-in with Milk Cookie's Crunchy Strong Pediatrician; the new SSR Chardonnay with base ATK 133 / DEF 60 / HP 2,790 and level-120 10★ stats ATK 14,202 / DEF 3,247 / HP 297,958. No balance change to existing cookies or pets.",
+   "datapoints": [
+    {"system": "cookie_level", "account": "an SSR at 10★", "before": "level 100: stats × 27.53 of base (game data)", "after": "level 120: × 45.1 of base", "cost": "", "note": "inferred: Chardonnay's level-120 stats ÷ base ÷ the 10★ multiplier; the method returns Bari's level-100 stats exactly (../07-derived/level-120.json)"},
+    {"system": "plating", "account": "any", "before": "", "after": "mileage: 5 Chocosteel for 1,500, 5 Syrup Metal for 2,000; Rift exchange limits 5 → 10", "cost": "mileage, Dimension Fragments", "note": "from 2026-10-08"},
+    {"system": "gear_oven", "account": "oven 32–38", "before": "50 per auto-bake", "after": "200–500 per auto-bake", "cost": "", "note": ""}
+   ],
+   "advice": [],
+   "quotes": [
+    {"kr": "쿠키 최대 레벨 100 → 120", "en": "Max cookie level 100 → 120"},
+    {"kr": "마일리지 교환소: 초코강 x5 (마일리지 포인트 1,500), 시럽쇳물 x5 (마일리지 포인트 2,000) 추가", "en": "Mileage Exchange: Chocosteel ×5 for 1,500 and Metal Syrup ×5 for 2,000 mileage added"}
+   ]},
+  {"source": "web", "id": "appstore-kr", "url": "https://apps.apple.com/kr/app/id6749251466", "date": "2026-10-07", "title_kr": "쿠키런: 크럼블 (App Store, KR)", "title_en": "KR App Store top in-app purchases", "relevance": 2,
+   "summary_en": "Top purchases on 2026-10-07: Ad Removal Sugar Coating Membership ₩7,500, Crumble Pass Season 3 ₩7,500, Daily Dungeon Key Set ₩6,000, Princess Bari Welcome Pack ₩6,000, Special Thanks Plating Pack ₩9,900, Epic Gear Hot Deal ₩1,500 (new on the list), Rumble Special Pass (와글와글 스페셜 패스) ₩19,000, Wisp of Guidance Support Pack Vol.2 ₩45,000, Princess Bari Rush Pack Vol.2 ₩20,000, Arena Ticket Pack ₩6,000 (new on the list). On 09-28 the Rumble Special Pass was already listed at ₩19,000.",
+   "datapoints": [{"system": "spending", "account": "", "before": "", "after": "", "cost": "Rumble Special Pass ₩19,000; Arena Ticket Pack ₩6,000; Epic Gear Hot Deal ₩1,500", "note": "₩19,000 pairs with $11.99 on the first round's tiers"}],
+   "advice": [], "quotes": []},
+  {"source": "web", "id": "appstore-us", "url": "https://apps.apple.com/us/app/cookierun-crumble-idle-rpg/id6749251466", "date": "2026-10-07", "title_kr": "", "title_en": "US App Store top in-app purchases", "relevance": 1,
+   "summary_en": "The list rotated to starter and Crystal packs (Crumble Starter Pack $1.99, Hypercharge Pack 1 $6.49, Oven Wanderer Celebration Package $4.79, Super Mega Value Pack Vol.1 $0.99, Cute Friends Trio Package $1.99, Cookie Gacha Pack $14.99, Crystal ×1/×2/×3 $0.99/$4.79/$8.99, Ad Removal $4.99). None of them shares a name with a KR listing except Ad Removal, so no new price tier pairs.",
+   "datapoints": [], "advice": [], "quotes": []},
+  {"source": "web", "id": "crumblehub", "url": "https://crumblehub.co/", "date": "2026-10-07", "title_kr": "", "title_en": "crumblehub efficiency table and guides", "relevance": 1,
+   "summary_en": "The efficiency API returns the same package list, values and settings as on 09-28; the spending, currency and plate-upgrade guides' text is unchanged.",
+   "datapoints": [], "advice": [], "quotes": []},
+  {"source": "web", "id": "pocketgamer-best-packs", "url": "https://www.pocketgamer.com/cookierun-crumble/best-packs/", "date": "2026-10-07", "title_kr": "", "title_en": "Pocket Gamer best packs", "relevance": 1,
+   "summary_en": "Article text unchanged since 09-28; only the related-article links changed. The EN progression guide (cookieruncrumbles.com) is unchanged too.",
+   "datapoints": [], "advice": [], "quotes": []}
+ ]
+}

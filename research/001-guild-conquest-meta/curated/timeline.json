@@ -6,7 +6,7 @@
   { "date": "2026-08-31", "event": "Cheesecake-overrides-Milk measured; retrying for the 'world line' where buffs land right becomes the ceiling method.", "sources": ["dc:55485"] },
   { "date": "2026-09-06", "event": "First move-speed alignment deck (157G at 628M).", "sources": ["dc:60340"] },
   { "date": "2026-09-07", "event": "Cheesecake lottery deck: 4,230 runs in one season for about 87×.", "sources": ["nv:36558"] },
-  { "date": "2026-09-10", "event": "Patch: Cherry Cola added, manual control in Guild Conquest removed (placement now comes from deck composition), same-type buffs compared on final value.", "sources": ["web:37730"] },
+  { "date": "2026-09-10", "event": "Patch: manual control in Guild Conquest removed (placement now from composition); Cherry Cola added; same-type buffs compared on final value.", "sources": ["web:37730"] },
   { "date": "2026-09-13", "event": "The #1 guild posts an 827.6G run; it still dies at the 17 s wipe.", "sources": ["web:yt-IkY9i5s7SOA"] },
   { "date": "2026-09-17", "event": "The '470× club' post: level-down fillers to Lv.1 and the ATK order Milk › Brightseeker › Skating Queen › Macaron. The Melon Soda deck hits 562G.", "sources": ["dc:69368"] },
   { "date": "2026-09-18", "event": "670M-power guide: six Lv.1 non-carries, Cherry enters the deck, 216–244×.", "sources": ["nv:43011"] },
@@ -18,5 +18,7 @@
   { "date": "2026-09-25", "event": "1.62T at about 600× with a 10★ Brightseeker on only four haste lines.", "sources": ["dc:75462"] },
   { "date": "2026-09-26", "event": "1T 312G at 1.8G with Pomegranate at Lv.1.", "sources": ["dc:76135"] },
   { "date": "2026-09-26", "event": "The '2T club' post: 1T 999G with the plain Cherry deck at about 3.07G (650×).", "sources": ["dc:76235"] },
-  { "date": "2026-09-27", "event": "crumb.gg Season 5 leaderboard: #1 at 3T 226G, with many players above 2T. The #1 player's own history: 208G → 477G → 1.1T → 1.8T → 3.2T across Seasons 1–5. Season #1s: 248G, 882G, 1T 111G, 1T 786G, 3T 226G; #50 went from 1T 031G in Season 4 to 1T 916G in Season 5.", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] }
+  { "date": "2026-09-27", "event": "crumb.gg Season 5 board: #1 at 3T 226G, many players above 2T.", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] },
+  { "date": "2026-09-27", "event": "The Season 5 #1 player across Seasons 1–5: 208G → 477G → 1.1T → 1.8T → 3.2T.", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] },
+  { "date": "2026-09-27", "event": "Season #1 scores: 248G, 882G, 1T 111G, 1T 786G, 3T 226G. #50 rose from 1T 031G (Season 4) to 1T 916G (Season 5).", "sources": ["web:crumbgg-s5", "web:crumbgg:rankings-s1", "web:crumbgg:rankings-s4", "web:crumbgg:rankings-s5"] }
 ]

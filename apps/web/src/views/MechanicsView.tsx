@@ -3,15 +3,17 @@ import { useSourceIndex } from "../api/hooks";
 import { mechanicsQuery } from "../api/queries";
 import type { ModeSection } from "../app/modes";
 import { topicsShownElsewhere } from "../app/modes";
+import { Clamp } from "../components/Clamp";
+import { ConfidencePill } from "../components/ConfidencePill";
 import { EmptyState } from "../components/EmptyState";
-import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { ModeViewHeader } from "./ModeViewHeader";
 
 /**
- * A mode's measured or datamined mechanics as cards, each with its
- * confidence pill and sources. Topics the mode shows elsewhere (its rules,
+ * A mode's measured or datamined mechanics as cards, each leading with its
+ * confidence pill, its body cut to two lines and its sources at the foot.
+ * Topics the mode shows elsewhere (its rules,
  * its boss's facts; see {@link topicsShownElsewhere}) are left out.
  *
  * @param mode - the mode whose mechanics and copy the view shows
@@ -32,14 +34,18 @@ export function MechanicsView({ mode }: { mode: ModeSection }) {
           items.length ? (
             <div className="grid g2">
               {items.map((x) => (
-                <div key={x.id} className="card">
-                  <div className="card-head">
+                <article key={x.id} className="card mech-card">
+                  <div className="mech-head">
+                    <ConfidencePill confidence={x.confidence} />
                     <h3>{x.title}</h3>
-                    <Pill kind={x.confidence} />
                   </div>
-                  <div>{x.body}</div>
-                  <SourceChips ids={x.sources} sources={sources} />
-                </div>
+                  <div className="mech-body">
+                    <Clamp lines={2}>{x.body}</Clamp>
+                  </div>
+                  <div className="card-foot">
+                    <SourceChips ids={x.sources} sources={sources} />
+                  </div>
+                </article>
               ))}
             </div>
           ) : (

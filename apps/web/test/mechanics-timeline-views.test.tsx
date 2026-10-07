@@ -53,20 +53,39 @@ describe("mechanics view", () => {
       "/api/mechanics?mode=guild_conquest": { body: MECHANICS },
     });
     expect(await screen.findByRole("heading", { name: "Mechanics" })).toBeVisible();
-    expect(screen.getByText(/Confidence reflects how well each point is sourced/)).toHaveClass(
-      "lede",
-    );
+    expect(
+      screen.getByText(/Confidence rates the sourcing/, { selector: "ul.points li" }),
+    ).toBeVisible();
     const card = (await screen.findByRole("heading", { name: MECHANICS[0]!.title })).closest(
       ".card",
     ) as HTMLElement;
     expect(card.parentElement).toHaveClass("grid", "g2");
-    expect(within(card).getByText("high")).toHaveClass("pill", "high");
+    const pill = within(card).getByText("high");
+    expect(pill).toHaveClass("pill", "high");
+    // The confidence comes before the title.
+    expect(
+      pill.compareDocumentPosition(within(card).getByRole("heading")) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
     expect(within(card).getByText(MECHANICS[0]!.body)).toBeInTheDocument();
     expect(await within(card).findByRole("link", { name: "DC 76135" })).toHaveAttribute(
       "href",
       "https://example.test/dc/76135",
     );
-    expect(screen.getByText("low")).toHaveClass("pill", "low");
+    expect(screen.getByText("unverified claim")).toHaveClass("pill", "low");
+  });
+
+  it("cuts a long body to two lines with a More button", async () => {
+    const body = `${"Beams go to the highest-ATK allies, not the highest power. ".repeat(6)}End.`;
+    await renderRoute("/conquest/mechanics", {
+      "/api/mechanics?mode=guild_conquest": { body: [{ ...MECHANICS[0]!, body }] },
+    });
+    const card = (await screen.findByRole("heading", { name: MECHANICS[0]!.title })).closest(
+      ".card",
+    ) as HTMLElement;
+    const clamp = card.querySelector(".mech-body .clamp") as HTMLElement;
+    expect(clamp.querySelector(".clamp-text")).toHaveStyle({ "--clamp": "2" });
+    expect(within(clamp).getByRole("button", { name: "More" })).toBeVisible();
   });
 
   it("leaves out the topics the mode shows elsewhere, and keeps the rest", async () => {
@@ -115,9 +134,10 @@ describe("timeline view", () => {
       "/api/timeline?mode=guild_conquest": { body: TIMELINE },
     });
     expect(await screen.findByRole("heading", { name: "How the meta moved" })).toBeVisible();
-    expect(screen.getByText(/oldest first/)).toHaveClass("lede");
-    const list = await within(screen.getByRole("main")).findByRole("list");
-    expect(list).toHaveClass("tl");
+    expect(screen.getByText(/oldest first/).closest("ul")).toHaveClass("points");
+    const list = await within(screen.getByRole("main")).findByRole("list", {
+      name: (_, el) => el.classList.contains("tl"),
+    });
     const items = within(list).getAllByRole("listitem");
     expect(items.map((li) => li.querySelector(".d")!.textContent)).toEqual([
       "2026-08-13",

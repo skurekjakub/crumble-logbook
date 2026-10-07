@@ -174,13 +174,14 @@ describe("importing a record's obsolete recommendations", IMPORT, () => {
         },
       }),
     );
-    const runes = store.repos.runeBuilds.list().filter((r) => r.obsoleteSince !== null);
-    expect(runes.map((r) => [r.cookieKr, r.obsoleteReason])).toEqual([["우유", RETIRED.reason]]);
+    // The record's own rounds mark rows obsolete too; only the rows this test marked are checked.
+    const runes = store.repos.runeBuilds.list().filter((r) => r.obsoleteReason === RETIRED.reason);
+    expect(runes.map((r) => r.cookieKr)).toEqual(["우유"]);
     expect(reasonSources(store, `rune_build:${String(runes[0]!.id)}`)).toEqual(["dc:71947"]);
-    const gear = store.repos.gearRecs.list().filter((g) => g.obsoleteSince !== null);
+    const gear = store.repos.gearRecs.list().filter((g) => g.obsoleteReason === RETIRED.reason);
     expect(gear.map((g) => g.slot)).toEqual(["top_left"]);
     expect(reasonSources(store, `gear_rec:${String(gear[0]!.id)}`)).toEqual(["dc:71947"]);
-    const edges = store.repos.counters.list().filter((c) => c.obsoleteSince !== null);
+    const edges = store.repos.counters.list().filter((c) => c.obsoleteReason === RETIRED.reason);
     expect(edges.map((c) => c.slug).sort()).toEqual([
       "five-ranged-vs-bari-oven",
       "five-ranged-vs-rye-onecarry",
@@ -388,29 +389,33 @@ describe("recommendations that name an obsolete deck", IMPORT, () => {
 
 describe("re-importing a record whose recommendations changed state", IMPORT, () => {
   it("replaces the reasons' citations with the rows, and un-obsoletes a row whose block is gone", () => {
-    const store = testStore();
-    const dir = pvpCopy("921-pvp-copy", retireFiveRanged);
-    importRecord(store, dir);
     /**
-     * Lists the entity ids of every obsolescence citation.
+     * Lists the entity ids of every obsolescence citation in a store.
      *
+     * @param from - the store to read
      * @returns the ids, sorted
      */
-    const reasons = () =>
-      store.repos.citations
+    const reasons = (from: Store) =>
+      from.repos.citations
         .all()
         .filter((c) => c.entity === "obsolescence")
         .map((c) => c.entityId)
         .sort();
-    const first = reasons();
+    const plain = testStore();
+    importRecord(plain, pvpCopy("922-pvp-copy", {}));
+    const own = reasons(plain);
+    const store = testStore();
+    const dir = pvpCopy("921-pvp-copy", retireFiveRanged);
+    importRecord(store, dir);
+    const first = reasons(store);
     expect(first).toContain("deck:arena-five-ranged");
     importRecord(store, dir, { replace: true });
-    expect(reasons()).toEqual(first);
+    expect(reasons(store)).toEqual(first);
     for (const file of ["decks.json", "counters.json"]) {
       cpSync(join(pvpDir, "curated", file), join(dir, "curated", file));
     }
     importRecord(store, dir, { replace: true });
-    expect(reasons()).toEqual([]);
+    expect(reasons(store)).toEqual(own);
     expect(store.repos.decks.get("arena-five-ranged")).toMatchObject({
       obsoleteSince: null,
       obsoleteReason: null,

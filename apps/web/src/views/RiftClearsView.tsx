@@ -9,21 +9,20 @@ import {
 } from "../api/queries";
 import type { Deck, PowerBracket, RiftClear } from "../api/types";
 import type { ModeSection, StageConfig } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { CookieName } from "../components/CookieName";
 import type { Column, TableFilter, TableSelect } from "../components/DataTable";
 import { applyFilters, DataTable, TableTools } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
-import { Kv } from "../components/Kv";
 import type { PillKind } from "../components/Pill";
 import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { optionalKey, optionalText } from "../lib/search";
-import type { SourceIndex } from "../lib/sources";
 import { entryPower, formatPower } from "../lib/stage";
 import { DeckCard } from "./DeckCard";
-import { DeckLink, DeckName } from "./DeckLink";
 import { CopyHeader } from "./ModeViewHeader";
+import { BracketTag, EvidencePill, PowerCell, Rank, ResultPill, ShortDeckLink } from "./StageParts";
 
 /** Select labels per result. */
 const RESULTS: Readonly<Record<RiftClear["result"], string>> = {
@@ -38,13 +37,17 @@ const STANDINGS: Readonly<Record<RiftClear["standing"], readonly [PillKind, stri
   rejected: ["disputed", "rejected"],
 };
 
-/** What a posted figure is, per power basis; `null` when the post doesn't say. */
+/** What a posted figure is, per power basis, as a power cell's tooltip says it. */
 const BASES: Readonly<Record<NonNullable<RiftClear["powerBasis"]>, string>> = {
-  rift: "as the Rift shows it, 차원의 힘 included",
+  rift: "Rift power, 차원의 힘 included",
 };
 
 /** The ids of the page's sections. */
-const PARTS = { ranked: "rift-15-clears", bounds: "rift-15-bounds" } as const;
+const PARTS = {
+  ranked: "rift-15-clears",
+  teams: "rift-15-teams",
+  bounds: "rift-15-bounds",
+} as const;
 
 /** The Rift clears view's search params: a result and a text filter. */
 export interface RiftClearsSearch {
@@ -63,15 +66,7 @@ export function validateRiftClearsSearch(search: Record<string, unknown>): RiftC
 }
 
 /**
- * Builds a clear card's DOM id.
- *
- * @param c - the attempt
- * @returns `rift-clear-<id>`
- */
-const clearId = (c: Pick<RiftClear, "id">) => `rift-clear-${c.id}`;
-
-/**
- * The level an attempt was made at, as the page names it.
+ * The level an attempt was made at, as the filter matches it.
  *
  * @param c - the attempt
  * @returns e.g. `S1 · L12`
@@ -79,13 +74,31 @@ const clearId = (c: Pick<RiftClear, "id">) => `rift-clear-${c.id}`;
 const levelLabel = (c: Pick<RiftClear, "season" | "level">) => `S${c.season} · L${c.level}`;
 
 /**
- * Where a level's brackets start: its recommended power, then the power
- * each bracket of `lines` takes there, from the power gate's table.
+ * An attempt's level, large, its season beside it and the level's
+ * recommended power under it.
+ *
+ * @param props - the attempt and its level's recommended power, when known
+ * @returns the cell's content
+ */
+function LevelCell({ clear: c, recommended }: { clear: RiftClear; recommended: number | null }) {
+  return (
+    <span className="stage-at">
+      <b>
+        L{c.level} <span className="pw-of">S{c.season}</span>
+      </b>
+      {recommended === null ? null : <span className="pw-of">of {formatPower(recommended)}</span>}
+    </span>
+  );
+}
+
+/**
+ * Where a level's brackets start: the power each bracket of `lines` takes
+ * there, a tinted tag each, from the power gate's table.
  *
  * @param props - the recommended power, when known, the bracket table and the kept-damage shares to show
- * @returns the line, or a dash without a recommended power
+ * @returns the lines, or a dash without a recommended power
  */
-function LevelLine({
+function LevelLines({
   recommended,
   brackets,
   lines,
@@ -95,133 +108,40 @@ function LevelLine({
   lines: readonly number[];
 }) {
   if (recommended === null) return <>–</>;
-  const entries = lines.flatMap((share) => {
-    const bracket = brackets.find((b) => b.damagePct === share);
-    return bracket
-      ? [`${share}% from ${formatPower(entryPower(recommended, bracket.minRatioPct))}`]
-      : [];
-  });
   return (
-    <>
-      {formatPower(recommended)} recommended
-      {entries.length ? <div className="muted">{entries.join(" · ")}</div> : null}
-    </>
+    <span className="pw">
+      {lines.flatMap((share) => {
+        const bracket = brackets.find((b) => b.damagePct === share);
+        return bracket
+          ? [
+              <span key={share}>
+                <BracketTag pct={share} />{" "}
+                {formatPower(entryPower(recommended, bracket.minRatioPct))}
+              </span>,
+            ]
+          : [];
+      })}
+    </span>
   );
 }
 
 /**
- * An attempt's team power as posted, with which power the figure is and
- * the 차원의 힘 level when the post gives them.
+ * An attempt's team power, short, with which power the figure is and the
+ * 차원의 힘 level under it when the post gives them; the post's wording in
+ * the tooltip.
  *
  * @param props - the attempt
- * @returns the power
+ * @returns the cell's content
  */
 function TeamPower({ clear: c }: { clear: RiftClear }) {
-  const basis = c.powerBasis ? BASES[c.powerBasis] : "the post doesn't say which power";
-  const level = c.riftPowerLevel === null ? "" : `, 차원의 힘 Lv.${c.riftPowerLevel}`;
+  const basis = c.powerBasis ? BASES[c.powerBasis] : "power not given as the Rift shows it";
   return (
-    <>
-      {c.teamPower}
-      <div className="muted">
-        {basis}
-        {level}
-      </div>
-    </>
-  );
-}
-
-/** What a clear card reads besides the clear. */
-interface ClearContext {
-  /** The stage mode, for deck links. */
-  mode: ModeSection;
-  /** Each deck, by id, once the decks load. */
-  decks: ReadonlyMap<string, Deck> | undefined;
-  /** The power gate's brackets. */
-  brackets: readonly PowerBracket[];
-  /** The kept-damage shares whose entry power a level shows. */
-  lines: readonly number[];
-  /**
-   * The recommended power of an attempt's level.
-   *
-   * @param c - the attempt
-   * @returns its own, else the stored level's, else null
-   */
-  recommended(c: RiftClear): number | null;
-  /**
-   * The English an attempt shows for its boss.
-   *
-   * @param c - the attempt
-   * @returns its own, else the Rift bosses', else the glossary's; null when none is known
-   */
-  bossEn(c: RiftClear): string | null;
-  /** The source index the chips link through. */
-  sources: SourceIndex;
-}
-
-/**
- * One clear as a card: its level and boss, standing, team (a link to its
- * deck, else the note), team power, the level's recommended power and
- * bracket entry powers, how it was played, what backs it and its sources;
- * then, the first time the page shows the deck, the deck's card under it.
- *
- * @param props - the clear, whether its deck's card is already on the page, and what the card reads besides
- * @returns the card, and the deck's card when it follows
- */
-function ClearCard({
-  clear: c,
-  deckShown,
-  context,
-}: {
-  clear: RiftClear;
-  deckShown: boolean;
-  context: ClearContext;
-}) {
-  const { mode, decks, brackets, lines, sources } = context;
-  const deck = c.deckId ? decks?.get(c.deckId) : undefined;
-  const [kind, standing] = STANDINGS[c.standing];
-  const team = c.deckId ? (
-    <DeckLink mode={mode} id={c.deckId} deck={deck} />
-  ) : (
-    (c.note ?? "No lineup posted.")
-  );
-  return (
-    <div className="rift-clear">
-      <article className="card" id={clearId(c)} aria-labelledby={`${clearId(c)}-title`}>
-        <div className="card-head">
-          <div>
-            <h3 id={`${clearId(c)}-title`}>
-              Season {c.season}, level {c.level}
-            </h3>
-            <CookieName kr={c.bossKr} en={context.bossEn(c)} inline />
-          </div>
-          <div className="chips">
-            <Pill kind={kind}>{standing}</Pill>
-          </div>
-        </div>
-        <Kv
-          rows={[
-            ["Team", team],
-            ["Team power", <TeamPower clear={c} />],
-            [
-              "Level",
-              <LevelLine recommended={context.recommended(c)} brackets={brackets} lines={lines} />,
-            ],
-            ["Play", c.play ?? "?"],
-            [
-              "Evidence",
-              <Pill kind={c.evidence === "text" ? "claimed" : "verified"}>{c.evidence}</Pill>,
-            ],
-            ["Note", c.deckId ? c.note : null],
-          ]}
-        />
-        <SourceChips ids={c.sources} sources={sources} />
-      </article>
-      {deck && !deckShown ? (
-        <div className="rift-clear-team">
-          <DeckCard deck={deck} sources={sources} />
-        </div>
-      ) : null}
-    </div>
+    <PowerCell posted={c.teamPower} powerG={c.powerG}>
+      <span className="pw-of" title={basis}>
+        {c.powerBasis === "rift" ? "Rift power" : "basis unknown"}
+        {c.riftPowerLevel === null ? "" : ` · 차원의 힘 Lv.${c.riftPowerLevel}`}
+      </span>
+    </PowerCell>
   );
 }
 
@@ -239,16 +159,20 @@ export interface RiftClearsViewProps {
 
 /**
  * The documented Dimensional Rift clears at the config's bracket on the
- * power the Rift shows, in the API's order (the clears the record accepts
- * by season, highest level and lowest power first, then the unverified and
- * rejected claims), each as a card with its team (see {@link ClearCard});
- * then, under their own heading, the attempts that bound them: the clears
- * claimed at the bracket without a Rift power, every other bracket's
- * attempts and the failures at the bracket, as a table. A boss is named in English
- * as its row names it, else as the Rift bosses do, else as the glossary
- * does. The result and a text filter live in the URL and apply to both
- * lists; the text filter matches the level, the boss in Korean and
- * English, the team power, the deck and the note.
+ * power the Rift shows, ranked in the API's order (the clears the record
+ * accepts by season, highest level and lowest power first, numbered from
+ * #1; then the unverified and rejected claims, unnumbered), a row each:
+ * the level large, the boss with its portrait, the team power short, the
+ * power the config's brackets take there, standing and evidence as pills,
+ * the team (its deck, else the note) and the sources last. Then the teams
+ * those clears ran, a card each, once; then, under their own heading, the
+ * attempts that bound them: the clears claimed at the bracket without a
+ * Rift power, every other bracket's attempts and the failures at the
+ * bracket. A boss is named in English as its row names it, else as the
+ * Rift bosses do, else as the glossary does. The result and a text filter
+ * live in the URL and apply to every list; the text filter matches the
+ * level, the boss in Korean and English, the team power, the deck and the
+ * note.
  *
  * @param props - the stage mode, its stage config, the search params and their setter
  * @returns the view
@@ -270,24 +194,36 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
       b.bossEn ? [[b.bossKr, b.bossEn] as const] : [],
     ),
   );
-  const context: ClearContext = {
-    mode,
-    decks,
-    brackets,
-    lines: config.lines,
-    /** @inheritdoc */
-    recommended: (c) => c.recommendedPower ?? levels.get(c.level) ?? null,
-    /** @inheritdoc */
-    bossEn: (c) => c.bossEn ?? bosses.get(c.bossKr) ?? c.en,
-    sources,
-  };
   /**
-   * The deck name a row shows.
+   * The recommended power of an attempt's level.
+   *
+   * @param c - the attempt
+   * @returns its own, else the stored level's, else null
+   */
+  const recommendedOf = (c: RiftClear) => c.recommendedPower ?? levels.get(c.level) ?? null;
+  /**
+   * The English an attempt shows for its boss.
+   *
+   * @param c - the attempt
+   * @returns its own, else the Rift bosses', else the glossary's; null when none is known
+   */
+  const bossEnOf = (c: RiftClear) => c.bossEn ?? bosses.get(c.bossKr) ?? c.en;
+  /**
+   * The deck name a row's filter matches.
    *
    * @param c - the attempt
    * @returns the deck's English name (its id before the decks load), or null without a deck
    */
   const deckOf = (c: RiftClear) => (c.deckId ? (decks?.get(c.deckId)?.nameEn ?? c.deckId) : null);
+  /**
+   * Whether an attempt is one of the ranked clears: a clear at the
+   * config's bracket on the power the Rift shows.
+   *
+   * @param c - the attempt
+   * @returns `true` if it is
+   */
+  const isRanked = (c: RiftClear) =>
+    c.bracket === config.bracket && c.result === "clear" && c.powerBasis === "rift";
   const filter: TableFilter<RiftClear> = {
     value: search.q ?? "",
     onChange: (q) => onSearch({ q }),
@@ -296,7 +232,7 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
         levelLabel(c),
         `level ${c.level}`,
         c.bossKr,
-        context.bossEn(c) ?? "",
+        bossEnOf(c) ?? "",
         c.teamPower,
         deckOf(c) ?? "",
         c.note ?? "",
@@ -311,39 +247,100 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
     onChange: (value) => onSearch({ result: optionalKey(value, RESULTS) }),
     test: (c, value) => c.result === value,
   };
-  const columns: Column<RiftClear>[] = [
+  const boss: Column<RiftClear> = {
+    header: "Boss",
+    cell: (c) => <CookieName kr={c.bossKr} en={bossEnOf(c)} />,
+  };
+  /**
+   * An attempt's note, cut to two lines.
+   *
+   * @param c - the attempt
+   * @returns the clamped note, or null without one
+   */
+  const note = (c: RiftClear) =>
+    c.note ? (
+      <Clamp lines={2} perLine={50}>
+        {c.note}
+      </Clamp>
+    ) : null;
+  const sourcesCol: Column<RiftClear> = {
+    header: "Sources",
+    cell: (c) => <SourceChips ids={c.sources} sources={sources} max={1} />,
+    className: "src",
+  };
+  /**
+   * The ranked clears' columns.
+   *
+   * @param rankOf - each accepted ranked clear's place, by id
+   * @returns the columns
+   */
+  const rankedColumns = (rankOf: ReadonlyMap<number, number>): Column<RiftClear>[] => [
+    { header: "#", cell: (c) => <Rank n={rankOf.get(c.id) ?? null} /> },
     {
       header: "Level",
-      cell: (c) => {
-        const recommended = context.recommended(c);
-        return (
-          <>
-            {levelLabel(c)}
-            {recommended === null ? null : (
-              <div className="muted">of {formatPower(recommended)} recommended</div>
-            )}
-          </>
-        );
-      },
+      cell: (c) => <LevelCell clear={c} recommended={recommendedOf(c)} />,
       className: "n",
     },
-    { header: "Boss", cell: (c) => <CookieName kr={c.bossKr} en={context.bossEn(c)} /> },
-    { header: "Team power", cell: (c) => c.teamPower },
-    { header: "Bracket", cell: (c) => `${c.bracket}%`, className: "n" },
+    boss,
+    { header: "Team power", cell: (c) => <TeamPower clear={c} />, className: "n" },
     {
-      header: "Result",
-      cell: (c) => <span className={`result ${c.result}`}>{RESULTS[c.result]}</span>,
+      header: "Lines",
+      cell: (c) => (
+        <LevelLines recommended={recommendedOf(c)} brackets={brackets} lines={config.lines} />
+      ),
+      className: "n",
     },
     {
-      header: "Standing",
-      cell: (c) => <Pill kind={STANDINGS[c.standing][0]}>{STANDINGS[c.standing][1]}</Pill>,
+      header: "Verdict",
+      cell: (c) => (
+        <span className="st-verdict">
+          <Pill kind={STANDINGS[c.standing][0]}>{STANDINGS[c.standing][1]}</Pill>
+          <EvidencePill evidence={c.evidence} />
+          {c.play ? <span className="play">{c.play}</span> : null}
+        </span>
+      ),
+    },
+    {
+      header: "Team",
+      cell: (c) =>
+        c.deckId ? (
+          <span className="pw">
+            <ShortDeckLink mode={mode} id={c.deckId} deck={decks?.get(c.deckId)} local />
+            {note(c)}
+          </span>
+        ) : (
+          (note(c) ?? "No lineup posted.")
+        ),
+      className: "wide clear-note",
+    },
+    sourcesCol,
+  ];
+  const boundsColumns: Column<RiftClear>[] = [
+    {
+      header: "Level",
+      cell: (c) => <LevelCell clear={c} recommended={recommendedOf(c)} />,
+      className: "n",
+    },
+    boss,
+    { header: "Team power", cell: (c) => <TeamPower clear={c} />, className: "n" },
+    { header: "Bracket", cell: (c) => <BracketTag pct={c.bracket} /> },
+    {
+      header: "Result",
+      cell: (c) => (
+        <span className="st-verdict">
+          <ResultPill result={c.result} />
+          <Pill kind={STANDINGS[c.standing][0]}>{STANDINGS[c.standing][1]}</Pill>
+        </span>
+      ),
     },
     {
       header: "Deck",
-      cell: (c) => (c.deckId ? <DeckName id={c.deckId} deck={decks?.get(c.deckId)} /> : "–"),
+      cell: (c) =>
+        c.deckId ? <ShortDeckLink mode={mode} id={c.deckId} deck={decks?.get(c.deckId)} /> : "–",
+      className: "deck",
     },
-    { header: "Note", cell: (c) => c.note ?? "", className: "wide" },
-    { header: "Sources", cell: (c) => <SourceChips ids={c.sources} sources={sources} /> },
+    { header: "Note", cell: note, className: "wide clear-note" },
+    sourcesCol,
   ];
   return (
     <>
@@ -351,12 +348,23 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
       <QueryResult query={clears} resource="Rift clears">
         {(rows) => {
           if (!rows.length) return <EmptyState>No Rift clears recorded yet.</EmptyState>;
-          const kept = applyFilters(rows, filter, select);
-          const ranked = kept.filter(
-            (c) => c.bracket === config.bracket && c.result === "clear" && c.powerBasis === "rift",
+          // Places come from the whole ranking, so a filtered row keeps its number.
+          const rankOf = new Map(
+            rows
+              .filter((c) => isRanked(c) && c.standing === "accepted")
+              .map((c, i) => [c.id, i + 1] as const),
           );
-          const bounds = kept.filter((c) => !ranked.includes(c));
-          const shown = new Set<string>();
+          const kept = applyFilters(rows, filter, select);
+          const ranked = kept.filter(isRanked);
+          const bounds = kept.filter((c) => !isRanked(c));
+          const teams = [
+            ...new Map(
+              ranked.flatMap((c): [string, Deck][] => {
+                const deck = c.deckId ? decks?.get(c.deckId) : undefined;
+                return deck ? [[deck.id, deck]] : [];
+              }),
+            ).values(),
+          ];
           return (
             <>
               <TableTools filter={filter} select={select} />
@@ -364,25 +372,48 @@ export function RiftClearsView({ mode, stage, search, onSearch }: RiftClearsView
                 <EmptyState>Nothing matches.</EmptyState>
               ) : null}
               {ranked.length ? (
-                <section id={PARTS.ranked} aria-labelledby={`${PARTS.ranked}-title`}>
+                <section
+                  id={PARTS.ranked}
+                  className="clears ranked"
+                  aria-labelledby={`${PARTS.ranked}-title`}
+                >
                   <h3 id={`${PARTS.ranked}-title`}>Clears at {config.bracket}%</h3>
-                  {ranked.map((c) => {
-                    const deckShown = c.deckId !== null && shown.has(c.deckId);
-                    if (c.deckId !== null && decks?.has(c.deckId)) shown.add(c.deckId);
-                    return (
-                      <ClearCard key={c.id} clear={c} deckShown={deckShown} context={context} />
-                    );
-                  })}
+                  <DataTable
+                    columns={rankedColumns(rankOf)}
+                    rows={ranked}
+                    rowKey={(c) => c.id}
+                    layout="stack"
+                  />
+                </section>
+              ) : null}
+              {teams.length ? (
+                <section
+                  id={PARTS.teams}
+                  className="rift-teams"
+                  aria-labelledby={`${PARTS.teams}-title`}
+                >
+                  <h3 id={`${PARTS.teams}-title`}>Their teams</h3>
+                  {teams.map((d) => (
+                    <DeckCard key={d.id} deck={d} sources={sources} />
+                  ))}
                 </section>
               ) : null}
               {bounds.length ? (
-                <section id={PARTS.bounds} aria-labelledby={`${PARTS.bounds}-title`}>
+                <section
+                  id={PARTS.bounds}
+                  className="clears"
+                  aria-labelledby={`${PARTS.bounds}-title`}
+                >
                   <h3 id={`${PARTS.bounds}-title`}>Attempts that bound it</h3>
-                  <p className="muted">
-                    Clears claimed at {config.bracket}% without the Rift's power, attempts at other
-                    brackets and failures at {config.bracket}%, in the same order.
+                  <p className="st-group-lede">
+                    No Rift power, another bracket, or failed at {config.bracket}%.
                   </p>
-                  <DataTable columns={columns} rows={bounds} rowKey={(c) => c.id} layout="stack" />
+                  <DataTable
+                    columns={boundsColumns}
+                    rows={bounds}
+                    rowKey={(c) => c.id}
+                    layout="stack"
+                  />
                 </section>
               ) : null}
             </>

@@ -10,6 +10,7 @@ import { EmptyState } from "../components/EmptyState";
 import { PowerField } from "../components/PowerField";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
+import { ViewHeader } from "../components/ViewHeader";
 import { optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
 import { citedBy } from "../lib/sources";
@@ -21,8 +22,9 @@ import {
   nextBracket,
   parsePower,
 } from "../lib/stage";
-import { ViewHeader } from "../components/ViewHeader";
 import { TopicNotes } from "./ModeViewHeader";
+import type { ReachTile } from "./StageParts";
+import { BracketTag, ReachTiles } from "./StageParts";
 
 /** The stage calculators' search params: the team power as typed. */
 export interface PowerSearch {
@@ -52,48 +54,45 @@ export interface StageBracketsViewProps {
 }
 
 /**
- * The power gate as a table: from what share of recommended power each
- * bracket starts, how much damage it keeps, the game's label and sources.
+ * The power gate as a ladder: a step per bracket, from what share of
+ * recommended power it starts, the damage it keeps as a tinted tag and the
+ * game's label; the sources once, beside the heading.
  *
  * @param props - the brackets and the source index
  * @returns the card
  */
-function BracketTable({
-  brackets,
-  sources,
-}: {
-  brackets: readonly PowerBracket[];
-  sources: SourceIndex;
-}) {
-  const columns: Column<PowerBracket>[] = [
-    {
-      header: "Team power vs recommended",
-      cell: (b) => `${b.minRatioPct}% or more`,
-      className: "n",
-    },
-    { header: "Damage kept", cell: (b) => `${b.damagePct}%`, className: "n" },
-    { header: "In game", cell: (b) => <span className="kr">{b.label}</span> },
-    { header: "Sources", cell: (b) => <SourceChips ids={b.sources} sources={sources} /> },
-  ];
+function Gate({ brackets, sources }: { brackets: readonly PowerBracket[]; sources: SourceIndex }) {
+  const steps = [...brackets].sort((a, b) => a.minRatioPct - b.minRatioPct);
   return (
-    <section className="card">
-      <h3>The power gate</h3>
-      <DataTable
-        columns={columns}
-        rows={[...brackets].sort((a, b) => a.minRatioPct - b.minRatioPct)}
-        rowKey={(b) => b.id}
-        empty="No power brackets recorded yet."
-      />
+    <section className="card" aria-labelledby="power-gate-title">
+      <div className="card-row">
+        <h3 id="power-gate-title">The power gate</h3>
+        <SourceChips ids={citedBy(steps)} sources={sources} />
+      </div>
+      {steps.length ? (
+        <ol className="gate" aria-label="Share of recommended power, then damage kept">
+          {steps.map((b) => (
+            <li key={b.id} title={`${b.minRatioPct}% of recommended or more keeps ${b.damagePct}%`}>
+              <span className="from">{b.minRatioPct}%+</span>
+              <BracketTag pct={b.damagePct} />
+              <span className="kr">{b.label}</span>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p className="muted">No power brackets recorded yet.</p>
+      )}
     </section>
   );
 }
 
 /**
- * How far the reader pushes at each reported share: the furthest chapter
- * whose last stage they enter at that bracket or better.
+ * The answer, first and large: for each reported share, the furthest
+ * chapter whose last stage the reader enters at that bracket or better,
+ * with the boss there.
  *
  * @param props - the chapters, the brackets, the reader's power and the shares to report
- * @returns the card
+ * @returns the answer card
  */
 function Reach({
   chapters,
@@ -107,35 +106,47 @@ function Reach({
   shares: readonly number[];
 }) {
   const last = chapters.at(-1);
+  const tiles = shares.flatMap((share): ReachTile[] => {
+    const bracket = brackets.find((b) => b.damagePct === share);
+    if (!bracket) return [];
+    const reached = furthest(chapters, (c) => c.recommendedPower, power, bracket.minRatioPct);
+    if (!reached) {
+      return [
+        { share, value: "–", sub: `not yet at ${chapters[0]?.lastStage ?? "1-30"}`, none: true },
+      ];
+    }
+    return [
+      {
+        share,
+        value: reached.lastStage,
+        sub:
+          reached === last ? (
+            "every chapter"
+          ) : (
+            <CookieName kr={reached.bossKr} en={reached.bossEn} inline />
+          ),
+      },
+    ];
+  });
   return (
-    <section className="card reach" aria-label="How far you push">
-      <h3>At {formatPower(power)}</h3>
-      <ul className="clean">
-        {shares.flatMap((share) => {
-          const bracket = brackets.find((b) => b.damagePct === share);
-          if (!bracket) return [];
-          const reached = furthest(chapters, (c) => c.recommendedPower, power, bracket.minRatioPct);
-          return [
-            <li key={share}>
-              <b>{share}% of damage or more</b>:{" "}
-              {!reached
-                ? `not yet at ${chapters[0]?.lastStage ?? "the first chapter"}`
-                : reached === last
-                  ? `every chapter to ${reached.lastStage}`
-                  : `through ${reached.lastStage} (${reached.bossEn ?? reached.bossKr})`}
-            </li>,
-          ];
-        })}
-      </ul>
-    </section>
+    <ReachTiles
+      label="How far you push"
+      heading={
+        <>
+          At {formatPower(power)}
+          <span className="unit">furthest boss stage per damage share</span>
+        </>
+      }
+      tiles={tiles}
+    />
   );
 }
 
 /**
- * The chapters' table: each chapter's last stage, zone, boss, recommended
+ * The chapters' table, folded: each chapter's last stage, boss, recommended
  * power and requirements, then either the entry power of each reported
- * share or, with a power, the reader's bracket there and the power the next
- * bracket up takes.
+ * share or, with a power, the reader's bracket there as a tinted tag and
+ * the power the next bracket up takes.
  *
  * @param props - the chapters, the brackets, the reader's power, the shares and the source index
  * @returns the card
@@ -154,9 +165,8 @@ function Chapters({
   sources: SourceIndex;
 }) {
   const base: Column<StageChapter>[] = [
-    { header: "Stage", cell: (c) => c.lastStage, className: "n" },
-    { header: "Zone", cell: (c) => c.zone },
-    { header: "Boss", cell: (c) => <CookieName kr={c.bossKr} en={c.bossEn} /> },
+    { header: "Stage", cell: (c) => <b>{c.lastStage}</b>, className: "n" },
+    { header: "Boss", cell: (c) => <CookieName kr={c.bossKr} en={c.bossEn} inline /> },
     { header: "Recommended", cell: (c) => formatPower(c.recommendedPower), className: "n" },
     { header: "Accuracy / focus", cell: (c) => `${c.accuracyReq} / ${c.focusReq}`, className: "n" },
   ];
@@ -179,9 +189,8 @@ function Chapters({
             header: "Your damage",
             cell: (c) => {
               const at = bracketAt(brackets, power, c.recommendedPower);
-              return at ? `${at.damagePct}%` : "–";
+              return at ? <BracketTag pct={at.damagePct} /> : "–";
             },
-            className: "n",
           },
           {
             header: "Next bracket",
@@ -195,28 +204,34 @@ function Chapters({
           },
         ];
   return (
-    <section className="card">
-      <h3>Chapter by chapter</h3>
-      <p className="muted">
-        Each chapter's last stage (its -30 boss), where the chapter's recommended power peaks.{" "}
+    <section className="card" aria-labelledby="chapters-title">
+      <div className="card-row">
+        <h3 id="chapters-title">Chapter by chapter</h3>
         <SourceChips ids={citedBy(chapters)} sources={sources} />
-      </p>
-      <DataTable
-        columns={[...base, ...withPower]}
-        rows={chapters}
-        rowKey={(c) => c.id}
-        empty="No stage chapters recorded yet."
-      />
+      </div>
+      <details className="chapters">
+        <summary>
+          {power === null ? "Entry powers" : "Your bracket"} at every boss stage ({chapters.length})
+        </summary>
+        <DataTable
+          columns={[...base, ...withPower]}
+          rows={chapters}
+          rowKey={(c) => c.id}
+          empty="No stage chapters recorded yet."
+        />
+      </details>
     </section>
   );
 }
 
 /**
  * The bracket calculator: the reader types their team power, and the view
- * shows how far that power pushes at each reported damage share, the power
- * gate with the cited mechanics of the copy's topic, and their bracket at
- * every chapter's last stage, from the bracket table and each stage's
- * recommended power. The power lives in the URL as `?power=`.
+ * answers first how far that power pushes at each reported damage share,
+ * then shows the power gate as a ladder with the cited mechanics of the
+ * copy's topic, and, folded, their bracket at every chapter's last stage,
+ * from the bracket table and each stage's recommended power. Without a
+ * power it asks for one where the answer goes. The power lives in the URL
+ * as `?power=`.
  *
  * @param props - the stage mode, its stage config, the search params and their setter
  * @returns the calculator
@@ -246,10 +261,14 @@ export function StageBracketsView({ mode, stage, search, onSearch }: StageBracke
                 <EmptyState>No stage chapters recorded yet.</EmptyState>
               ) : (
                 <>
-                  {power === null ? null : (
+                  {power === null ? (
+                    <p className="reach-prompt">
+                      Type your team power above to see how far you push.
+                    </p>
+                  ) : (
                     <Reach chapters={rows} brackets={table} power={power} shares={stage.reach} />
                   )}
-                  <BracketTable brackets={table} sources={sources} />
+                  <Gate brackets={table} sources={sources} />
                   {topic ? <TopicNotes scope={mode.scope} topic={topic} /> : null}
                   <Chapters
                     chapters={rows}

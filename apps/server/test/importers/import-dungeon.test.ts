@@ -31,6 +31,7 @@ const runs = curated<
     evidence: string;
     board: string;
     score_g: number;
+    deck: string | null;
     atk_order: string[] | null;
   }>
 >("dungeon-runs.json");
@@ -39,6 +40,11 @@ const lineups =
     "dungeon-lineups.json",
   );
 const exclusions = curated<Array<{ kr: string }>>("dungeon-exclusions.json");
+const decks = curated<Array<{ id: string; obsolete?: { superseded_by?: string } }>>("decks.json");
+/** Decks an obsolete block ties together; changing one's mode fails that link's check first. */
+const SUPERSESSION = new Set(
+  decks.flatMap((d) => (d.obsolete ? [d.id, d.obsolete.superseded_by ?? d.id] : [])),
+);
 
 /** Every cookie name record 004's dungeon files give, which record 001's glossary holds. */
 const COOKIES = new Set([
@@ -123,7 +129,7 @@ describe("importRecord on research record 004", FULL_IMPORT, () => {
       evidence: "screenshot",
       standing: "verified",
       deckId: "dungeon-milk-scorpion-figure",
-      atkOrder: runs[0]!.atk_order,
+      atkOrder: runs.find((r) => r.id === "run-sminoff-379g")!.atk_order,
       atkOrderNote: null,
       sources: ["dc:77306"],
     });
@@ -149,7 +155,7 @@ describe("importRecord on research record 004", FULL_IMPORT, () => {
       const scores = group.map((r) => r.scoreG);
       expect(scores).toEqual([...scores].sort((a, b) => b - a));
     }
-    expect(rows[0]!.slug).toBe("run-sminoff-379g");
+    expect(rows[0]!.slug).toBe([...shown].sort((a, b) => b.score_g - a.score_g)[0]!.id);
     const claims = runs.filter((r) => !shown.includes(r)).map((r) => r.id);
     expect(rows.slice(shown.length).map((r) => r.slug)).toEqual(
       expect.arrayContaining(claims) as unknown,
@@ -209,13 +215,15 @@ describe("importRecord on research record 004", FULL_IMPORT, () => {
 
 describe("the dungeon collections' checks", FULL_IMPORT, () => {
   it("fails a run or a lineup that names a deck of another mode", () => {
+    const linked = runs.findIndex((r) => r.deck !== null && !SUPERSESSION.has(r.deck));
+    const runDeck = runs[linked]!.deck!;
     const toArena = (rows: Row[]) => {
-      for (const deck of rows) if (deck.id === "dungeon-milk-scorpion-figure") deck.mode = "arena";
+      for (const deck of rows) if (deck.id === runDeck) deck.mode = "arena";
     };
     expect(() =>
       importRecord(dungeonStore(), dungeonCopy("900-dungeon-copy", { "decks.json": toArena })),
     ).toThrow(
-      /dungeon-runs\.json \[0\]: dungeon_run mode crumble_dungeon doesn't match deck dungeon-milk-scorpion-figure's mode arena/,
+      `dungeon-runs.json [${linked}]: dungeon_run mode crumble_dungeon doesn't match deck ${runDeck}'s mode arena`,
     );
     const lineupDeck = (rows: Row[]) => {
       for (const deck of rows) if (deck.id === "dungeon-macaron-figure-beam") deck.mode = "arena";
@@ -299,7 +307,11 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
     const store = dungeonStore();
     importRecord(store, dungeonCopy("907-dungeon-copy"));
     const ownDecks = (rows: Row[]) => {
-      for (const deck of rows) deck.id = `${String(deck.id)}-b`;
+      for (const deck of rows) {
+        deck.id = `${String(deck.id)}-b`;
+        const obsolete = deck.obsolete as { superseded_by?: string } | undefined;
+        if (obsolete?.superseded_by) obsolete.superseded_by = `${obsolete.superseded_by}-b`;
+      }
     };
     const unlinked = (rows: Row[]) => {
       for (const row of rows) row.deck = null;
@@ -317,6 +329,6 @@ describe("the dungeon collections' checks", FULL_IMPORT, () => {
           "dungeon-lineups.json": unlinked,
         }),
       ),
-    ).toThrow(/dungeon run id "run-sminoff-379g" is already loaded by record 907-dungeon-copy/);
+    ).toThrow(`dungeon run id "${runs[0]!.id}" is already loaded by record 907-dungeon-copy`);
   });
 });

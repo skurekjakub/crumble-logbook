@@ -1,15 +1,19 @@
 import { describe, expect, it } from "vitest";
 import {
+  byVerdict,
   chaptersGained,
   efficiencyGrade,
   formatKrw,
   formatPct,
+  gradeRank,
+  packageVerdict,
   postedGainPct,
   reachAt,
   reachGained,
   usdPrice,
 } from "../src/lib/team-power";
 import { columnLabel } from "../src/views/GrowthCurvesView";
+import { stageOf } from "../src/views/SpendingOrderView";
 
 const CHAPTERS = [
   { lastStage: "1-30", recommendedPower: 100 },
@@ -114,5 +118,47 @@ describe("prices and changes", () => {
     expect(formatPct(13.333)).toBe("+13.3%");
     expect(formatPct(-2)).toBe("-2%");
     expect(formatPct(1.6, true)).toBe("≈ +1.6%");
+  });
+});
+
+describe("gradeRank", () => {
+  it("sorts the grades best first and an ungraded note last", () => {
+    expect(["none", "low: rare", "medium; steady", "high", "unmeasured"].map(gradeRank)).toEqual([
+      3, 2, 1, 0, 4,
+    ]);
+  });
+});
+
+describe("packageVerdict and byVerdict", () => {
+  it("reads a buy from the opening clause and a skip from a put-it-last word", () => {
+    expect(packageVerdict("Early must-buy: carries stages 20–30s.")).toBe("buy");
+    expect(packageVerdict("The best growth per KRW; poor while capped.")).toBe("buy");
+    expect(packageVerdict("Called the worst value in the shop.")).toBe("skip");
+    expect(packageVerdict("Buys levels; low value except the first tiers.")).toBe("skip");
+    expect(packageVerdict("Not for light spenders; a copy comes free.")).toBe("depends");
+    expect(packageVerdict("With the 5.5 it takes each pickup to 7★.")).toBeNull();
+  });
+
+  it("puts the buys first and the skips last, keeping the record's order within each", () => {
+    const rows = [
+      { id: 1, verdict: "Called the worst value." },
+      { id: 2, verdict: "Plain words." },
+      { id: 3, verdict: "Top Crystal value." },
+      { id: 4, verdict: "Not for light spenders." },
+      { id: 5, verdict: "First purchase for everyone." },
+    ];
+    expect(byVerdict(rows).map((r) => r.id)).toEqual([3, 5, 4, 2, 1]);
+  });
+});
+
+describe("stageOf", () => {
+  it("grades a stage order at its own stage, and the endgame and the Rift near 2.2G", () => {
+    expect(["early", "mid", "late", "endgame", "rift"].map(stageOf)).toEqual([
+      "early",
+      "mid",
+      "late",
+      "at22g",
+      "at22g",
+    ]);
   });
 });

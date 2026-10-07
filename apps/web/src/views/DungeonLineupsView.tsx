@@ -9,12 +9,16 @@ import {
 import type { DungeonExclusion, DungeonLineup } from "../api/types";
 import type { DungeonConfig, ModeSection } from "../app/modes";
 import { AtkOrder } from "../components/AtkOrder";
+import { Clamp } from "../components/Clamp";
+import { CookieIcon } from "../components/CookieIcon";
 import { CookieName } from "../components/CookieName";
 import { EmptyState } from "../components/EmptyState";
 import { Kv } from "../components/Kv";
+import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
+import { shortName } from "../lib/cookie-icons";
 import { EXCLUSION_KINDS, EXCLUSION_STATUSES, keptExclusions } from "../lib/dungeon";
 import type { LifecycleDeck } from "../lib/obsolete";
 import type { SourceIndex } from "../lib/sources";
@@ -39,29 +43,30 @@ interface LineupContext {
   en: (kr: string) => string | null;
   /** Each deck, by id, once the decks load. */
   decks: ReadonlyMap<string, LifecycleDeck> | undefined;
-  /** The exclusions list, by Korean name. */
-  exclusions: ReadonlyMap<string, DungeonExclusion>;
+  /** The exclusions list, by Korean name; undefined while it loads. */
+  exclusions: ReadonlyMap<string, DungeonExclusion> | undefined;
   sources: SourceIndex;
 }
 
 /**
- * One lineup as a card: author and date, the deck it documents (marked
- * when the deck is obsolete), the ATK
- * order, the level rule, the first wave in the author's order (flagging the
- * cookies the exclusions list names), the cookies it leaves out with the
- * exclusions list's reason, and sources.
+ * One lineup as a card: author and date with a verdict pill (whether it
+ * keeps cookies the exclusions list levels out), the deck it documents
+ * (marked when obsolete), the kept exclusions as a callout, the ATK order,
+ * the level rule (clamped), the first wave as numbered portraits (the kept
+ * exclusions ringed), the cookies it leaves out with their kind, and sources.
  *
  * @param props - the lineup and what the card reads besides it
  * @returns the card
  */
 function LineupCard({ lineup: l, context }: { lineup: DungeonLineup; context: LineupContext }) {
   const { mode, firstWave, en, decks, exclusions, sources } = context;
-  const kept = keptExclusions(l.first40, [...exclusions.values()]);
+  const kept = keptExclusions(l.first40, [...(exclusions?.values() ?? [])]);
   const flagged = new Set(kept.map((e) => e.cookieKr));
   const deck = l.deckId ? <DeckLink mode={mode} id={l.deckId} deck={decks?.get(l.deckId)} /> : null;
   const atkOrder = l.atkOrder.length ? (
     <AtkOrder order={l.atkOrder.map((kr) => ({ kr, en: en(kr) }))} />
   ) : null;
+  const rule = <Clamp lines={1}>{l.levelRule}</Clamp>;
   const wave = (
     <>
       {l.first40.length !== firstWave ? (
@@ -70,61 +75,84 @@ function LineupCard({ lineup: l, context }: { lineup: DungeonLineup; context: Li
         </div>
       ) : null}
       <ol className="wave">
-        {l.first40.map((kr, i) => (
-          <li key={`${i}-${kr}`} className={flagged.has(kr) ? "flagged" : undefined}>
-            <CookieName kr={kr} en={en(kr)} inline />
-          </li>
-        ))}
+        {l.first40.map((kr, i) => {
+          const name = en(kr);
+          const hit = flagged.has(kr);
+          return (
+            <li
+              key={`${i}-${kr}`}
+              className={hit ? "flagged" : undefined}
+              title={[name ?? kr, name ? kr : "", hit ? "on the exclusions list" : ""]
+                .filter(Boolean)
+                .join(" · ")}
+            >
+              <span className="at" aria-hidden="true">
+                {i + 1}
+              </span>
+              <CookieIcon kr={kr} en={name} size={40} />
+              <span className="nm">{name ? shortName(name) : kr}</span>
+            </li>
+          );
+        })}
       </ol>
     </>
   );
   const leftOut = l.excluded.length ? (
-    <ul className="clean">
+    <ul className="out-strip">
       {l.excluded.map((kr) => {
-        const e = exclusions.get(kr);
+        const e = exclusions?.get(kr);
         return (
           <li key={kr}>
             <CookieName kr={kr} en={e?.en ?? en(kr)} inline />
-            {e ? <span className="muted"> · {EXCLUSION_KINDS[e.kind]}</span> : null}
+            {e ? <span className="chip">{EXCLUSION_KINDS[e.kind]}</span> : null}
           </li>
         );
       })}
     </ul>
   ) : null;
-  const keeps = kept.length ? (
-    <ul className="clean">
-      {kept.map((e) => (
-        <li key={e.id} className="flag">
-          <CookieName kr={e.cookieKr} en={e.en} inline /> is on the exclusions list (
-          {EXCLUSION_KINDS[e.kind]}, {EXCLUSION_STATUSES[e.status].toLowerCase()}) but this lineup
-          keeps it.
-        </li>
-      ))}
-    </ul>
-  ) : null;
   return (
-    <article className="card" id={lineupId(l)}>
+    <article className="card lineup-card" id={lineupId(l)}>
       <div className="card-head">
-        <div>
-          <h3>
-            {l.author} <span className="muted">{l.date}</span>
-          </h3>
-        </div>
-        <div className="chips">
+        <h3>
+          {l.author} <span className="muted">{l.date}</span>
+        </h3>
+        <span className="chips">
+          {kept.length ? (
+            <Pill kind="disputed">
+              Keeps {kept.length} excluded cookie{kept.length === 1 ? "" : "s"}
+            </Pill>
+          ) : exclusions ? (
+            <Pill kind="good">Follows the exclusions</Pill>
+          ) : null}
           <span className="chip">{l.complete ? "every cookie named" : "partly named"}</span>
-        </div>
+        </span>
       </div>
+      {deck ? <div className="lineup-deck">{deck}</div> : null}
+      {kept.length ? (
+        <div className="callout kept">
+          <span className="callout-body">
+            On the exclusions list, kept here:{" "}
+            {kept.map((e, i) => (
+              <span key={e.id}>
+                {i > 0 ? ", " : null}
+                <CookieName kr={e.cookieKr} en={e.en} inline /> ({EXCLUSION_KINDS[e.kind]},{" "}
+                {EXCLUSION_STATUSES[e.status].toLowerCase()})
+              </span>
+            ))}
+          </span>
+        </div>
+      ) : null}
       <Kv
         rows={[
-          ["Deck", deck],
           ["ATK order", atkOrder],
-          ["Level rule", l.levelRule],
-          ["Keeps from the exclusions list", keeps],
+          ["Level rule", rule],
           ["First wave", wave],
           ["Leaves out", leftOut],
         ]}
       />
-      <SourceChips ids={l.sources} sources={sources} />
+      <div className="card-foot">
+        <SourceChips ids={l.sources} sources={sources} />
+      </div>
     </article>
   );
 }
@@ -171,7 +199,7 @@ export function DungeonLineupsView({ mode, dungeon }: DungeonLineupsViewProps) {
      */
     en: (kr) => glossary?.get(kr) ?? null,
     decks,
-    exclusions: exclusions ?? new Map(),
+    exclusions,
     sources,
   };
   return (

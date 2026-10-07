@@ -1,5 +1,5 @@
 /* Styles the base sheets don't cover: the navigation (sidebar, phone top bar and drawer), the
-   "On this page" list, CookieName's stacked form and the rune cards. tokens.css, base.css and
+   "On this page" list and the rune cards. tokens.css, base.css and
    components.css are kept unformatted (see .prettierignore). The 960px breakpoint matches the
    shell grid in base.css. */
 
@@ -229,6 +229,24 @@
   border-color: var(--accent);
   color: var(--ink);
 }
+/* Below the rail's breakpoint the links are one row that scrolls sideways, not a block of rows. */
+@media (max-width: 1199px) {
+  .toc {
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+  .toc-title {
+    flex: none;
+    white-space: nowrap;
+  }
+  .toc ol {
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+}
 @media (min-width: 1200px) {
   .has-toc {
     display: grid;
@@ -265,16 +283,6 @@
   .toc a:hover {
     color: var(--accent);
   }
-}
-
-/* CookieName: English over Korean. */
-.name-stack {
-  display: inline-flex;
-  flex-direction: column;
-  line-height: 1.3;
-}
-.name-stack .kr {
-  font-size: 0.85em;
 }
 
 /* RuneCard: the reason leads; the rune lines sit under it, smaller and labelled. */
