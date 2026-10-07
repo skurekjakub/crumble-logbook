@@ -1,0 +1,9 @@
+{
+  "lane": "dc",
+  "note": "A DCInside post read in the round and left out of dc.json, read 2026-10-07 from evidence/r2026-10-07/02-dc/dc/80710.md and its images (local only).",
+  "posts": [
+    {"source": "dc", "id": "80710", "url": "https://m.dcinside.com/board/projectcc/80710", "date": "2026-10-04", "title_kr": "크럼블던전 한번만 봐주실분 ㅠㅠㅠ", "title_en": "Can someone check my Crumble Dungeon setup?", "relevance": 2,
+     "summary_en": "A 15G player with ATK order Milk, Scorpion, Figure, Melon Soda, Rye, Cheesecake scores about 10G under same-power rivals (mid-fight screen at 2.56G total power). Replies: give Brightseeker the beam too, and take Espresso out because it drains Macaron's buff.",
+     "scores": [], "mechanics": ["Espresso takes Macaron's buff away from the beam targets (a reply)."], "quotes": [{"kr": "에소빼는게 난 좋더라 에소가 마카롱 빨아가던데", "en": "I do better with Espresso out; Espresso soaks up Macaron"}, {"kr": "브시커도 빨대주셈", "en": "Give Brightseeker the beam too"}]}
+  ]
+}

@@ -15,5 +15,10 @@
  {"mode": "crumble_dungeon", "date": "2026-09-23", "event": "Update 1.4.002: Princess Bari (who pulls Milk away and is excluded), fine level control; the 'first 40' label disappears from the lobby, the rule stays.", "sources": ["nv:44477", "dc:74237", "dc:76922", "dc:77306"]},
  {"mode": "crumble_dungeon", "date": "2026-09-26", "event": "VART shows 221.4G at 9.23G (claims 250G); 서신우 127.1G at 10.15G.", "sources": ["web:yt-4v2xDWV13fg", "nv:46592"]},
  {"mode": "crumble_dungeon", "date": "2026-09-27", "event": "전치 posts 325.9G at 10.10G.", "sources": ["dc:76916"]},
- {"mode": "crumble_dungeon", "date": "2026-09-28", "event": "스미노프TFT posts 379.3G at 15.58G, the highest documented score.", "sources": ["dc:77306"]}
+ {"mode": "crumble_dungeon", "date": "2026-09-28", "event": "스미노프TFT posts 379.3G at 15.58G, the highest documented score.", "sources": ["dc:77306"]},
+ {"mode": "crumble_dungeon", "date": "2026-09-28", "event": "코니 posts 578.07G at 14.90G with a Brightseeker-first ATK order, the highest score with a lineup.", "sources": ["nv:47255", "web:yt-tnAGQ2XgW9o"]},
+ {"mode": "crumble_dungeon", "date": "2026-10-01", "event": "Official notice: oven auto-open improved 10-02 and Daily Dungeon easing promised; no Crumble Dungeon change.", "sources": ["nv:48486"]},
+ {"mode": "crumble_dungeon", "date": "2026-10-04", "event": "전치 reports the Rift buff in displayed power scrambling the dungeon's power order.", "sources": ["dc:80897", "dc:80698"]},
+ {"mode": "crumble_dungeon", "date": "2026-10-07", "event": "428.96G at 14.45G posted; the board behind it shows 704.63G in first.", "sources": ["dc:82406"]},
+ {"mode": "crumble_dungeon", "date": "2026-10-07", "event": "10-08 notes: level cap 120, Chardonnay, free Milk by attendance; no Crumble Dungeon line.", "sources": ["nv:50417"]}
 ]
