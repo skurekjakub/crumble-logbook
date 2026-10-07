@@ -1,0 +1,145 @@
+[
+  {
+    "id": "exp-auto-milk",
+    "name_en": "Fixture: Milk auto deck",
+    "status": "meta",
+    "dungeon": "exp",
+    "auto": "full",
+    "stage": 45,
+    "power": "1.85G",
+    "recommended_power": "2.4G",
+    "gear_preset": "Fixture: crit-damage preset",
+    "perks": "Fixture: 복지 heal-boost perk",
+    "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "summary": "Fixture: Milk heals and buffs; Brightseeker clears the boss without input.",
+    "cookies": [
+      {
+        "kr": "마카롱맛 쿠키",
+        "slot": "row1-1",
+        "level": "100",
+        "why": "Fixture: crit-rate buff."
+      },
+      {
+        "kr": "호밀맛 쿠키",
+        "slot": "row1-2",
+        "level": "100",
+        "why": "Fixture: steady ranged damage."
+      },
+      {
+        "kr": "석류맛 쿠키",
+        "slot": "row1-3",
+        "level": "100",
+        "why": "Fixture: Skill AMP beam onto the top ATK."
+      },
+      {
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "slot": "row1-4",
+        "level": "100",
+        "why": "Fixture: captain; heals and buffs the line."
+      },
+      {
+        "kr": "딸기크레페맛 쿠키",
+        "slot": "row1-5",
+        "level": "100",
+        "why": "Fixture: front-line tank."
+      },
+      {
+        "kr": "허브맛 쿠키",
+        "slot": "row1-6",
+        "level": "100",
+        "why": "Fixture: second healer keeps auto alive."
+      },
+      {
+        "kr": "브라이트시커 쿠키",
+        "slot": "row2-1",
+        "level": "100",
+        "why": "Fixture: main boss damage."
+      },
+      {
+        "kr": "피겨여왕맛 쿠키",
+        "slot": "row2-3",
+        "level_rule": "1–2 below the rest",
+        "why": "Fixture: buffer, kept under Milk's ATK."
+      },
+      {
+        "kr": "이름 모를 케이크 들개",
+        "slot": "row2-4",
+        "level": "100",
+        "why": "Fixture: third tank."
+      },
+      {
+        "kr": "다크초코 쿠키",
+        "slot": "row2-6",
+        "level": "100",
+        "why": "Fixture: tank and DEF shred."
+      }
+    ],
+    "pets": ["핫도그도그", "황금방울"],
+    "substitutions": ["Fixture: Scorpion for Rye at lower power."],
+    "sources": ["web:fixture-exp-guide"]
+  },
+  {
+    "id": "exp-partial-scorpion",
+    "name_en": "Fixture: Scorpion push deck",
+    "status": "alt",
+    "dungeon": "exp",
+    "auto": "semi",
+    "stage": 52,
+    "power": "2.1G",
+    "recommended_power": "2.6G",
+    "captain": "전갈맛 쿠키",
+    "summary": "Fixture: manual Scorpion skill on the boss phase; auto otherwise.",
+    "cookies": [
+      {
+        "kr": "전갈맛 쿠키",
+        "slot": "row1-1",
+        "level": "100",
+        "why": "Fixture: captain and boss dealer."
+      },
+      {
+        "kr": "석류맛 쿠키",
+        "slot": "row1-2",
+        "level": "100",
+        "why": "Fixture: beam onto Scorpion."
+      },
+      {
+        "kr": "마카롱맛 쿠키",
+        "slot": "row1-3",
+        "level": "100",
+        "why": "Fixture: crit-rate buff."
+      },
+      { "kr": "딸기크레페맛 쿠키", "slot": "row1-4", "level": "100", "why": "Fixture: tank." },
+      { "kr": "허브맛 쿠키", "slot": "row1-5", "level": "100", "why": "Fixture: healer." },
+      { "kr": "슈크림맛 쿠키", "slot": "row1-6", "level": "100", "why": "Fixture: ranged damage." }
+    ],
+    "pets": ["황금방울"],
+    "sources": ["web:fixture-exp-clear"]
+  },
+  {
+    "id": "exp-manual-cherry",
+    "name_en": "Fixture: Cherry budget deck",
+    "status": "niche",
+    "dungeon": "exp",
+    "auto": "manual",
+    "stage": 30,
+    "cookies": [
+      { "kr": "체리맛 쿠키", "level": "80", "why": "Fixture: cheap ranged damage." },
+      { "kr": "허브맛 쿠키", "level": "80", "why": "Fixture: healer." }
+    ],
+    "sources": ["web:fixture-exp-guide"]
+  },
+  {
+    "id": "dough-partial",
+    "name_en": "Fixture: Dough weakness deck",
+    "status": "meta",
+    "dungeon": "dough",
+    "auto": "semi",
+    "stage": 20,
+    "power": "1.2G",
+    "cookies": [
+      { "kr": "전갈맛 쿠키", "level": "100", "why": "Fixture: Fire for the Grass days." },
+      { "kr": "허브맛 쿠키", "level": "100", "why": "Fixture: healer." }
+    ],
+    "sources": ["web:fixture-dough"]
+  }
+]

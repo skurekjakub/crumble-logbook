@@ -6,5 +6,6 @@ export * from "./inputs";
 export * from "./ledger";
 export * from "./power";
 export * from "./dungeon";
+export * from "./daily-dungeon";
 export * from "./team-power";
 export * from "./account";

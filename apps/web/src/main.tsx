@@ -14,6 +14,7 @@ import "./styles/boss.css";
 import "./styles/pvp.css";
 import "./styles/stage.css";
 import "./styles/dungeon.css";
+import "./styles/daily-dungeon.css";
 import "./styles/obsolete.css";
 import "./styles/team-power.css";
 import "./styles/account.css";

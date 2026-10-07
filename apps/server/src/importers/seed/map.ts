@@ -7,10 +7,15 @@ import type {
   UsageStatInput,
   Values,
 } from "@crumble/schema";
-import { GAME_MODE, GEAR_SLOT, SOURCE_SITE, scores } from "@crumble/schema";
+import { GAME_MODE, GEAR_SLOT, SOURCE_SITE, scores, withRunPowers } from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { ImportError } from "../../errors";
-import type { DeckCookieInsert, DeckInsert, DeckNoteInsert } from "../../repos/decks";
+import type {
+  DeckCookieInsert,
+  DeckDailyRunInsert,
+  DeckInsert,
+  DeckNoteInsert,
+} from "../../repos/decks";
 import type { GlossaryInsert } from "../../repos/glossary";
 import type { RecordInsert, RecordModeInsert } from "../../repos/records";
 import type { SourceInsert } from "../../repos/sources";
@@ -28,12 +33,14 @@ import type {
 /** Insert payload for `scores`, as {@link mapScore} produces it. */
 export type ScoreInsert = Omit<InferInsertModel<typeof scores>, "id">;
 
-/** A curated deck split into its row and its ordered children. */
+/** A curated deck split into its row and its children. */
 export interface MappedDeck {
   deck: DeckInsert;
   cookies: DeckCookieInsert[];
   pets: string[];
   notes: DeckNoteInsert[];
+  /** A daily dungeon deck's run facts; `null` for a deck that names none. */
+  run: DeckDailyRunInsert | null;
 }
 
 /** A mechanic writeup ready to insert, with its sources. */
@@ -123,8 +130,11 @@ export function mapGlossary(e: SeedGlossaryEntry): GlossaryInsert {
  * @param position - the deck's display position (its index in the file)
  * @returns the deck row (`ceiling` becomes `ceilingText`; absent optional
  *   fields become `null`), its cookie slots (with their formation `slot`,
- *   or `null`), its pets, and its notes: `substitutions` as `substitution`
- *   notes followed by `unorthodox` as `unorthodox` notes
+ *   or `null`), its pets, its notes (`substitutions` as `substitution`
+ *   notes followed by `unorthodox` as `unorthodox` notes), and its run
+ *   facts when it names a `dungeon` and `auto` (the powers in billions read
+ *   from the posted `power` and `recommended_power`; `captain` becomes
+ *   `captainKr`), else `null`
  */
 export function mapDeck(d: SeedDeck, position: number): MappedDeck {
   return {
@@ -156,6 +166,18 @@ export function mapDeck(d: SeedDeck, position: number): MappedDeck {
       ...(d.substitutions ?? []).map((text) => ({ kind: "substitution" as const, text })),
       ...(d.unorthodox ?? []).map((text) => ({ kind: "unorthodox" as const, text })),
     ],
+    run:
+      d.dungeon === undefined || d.auto === undefined
+        ? null
+        : withRunPowers({
+            dungeon: d.dungeon,
+            auto: d.auto,
+            stage: d.stage ?? null,
+            power: d.power ?? null,
+            recommendedPower: d.recommended_power ?? null,
+            gearPreset: d.gear_preset ?? null,
+            captainKr: d.captain ?? null,
+          }),
   };
 }
 

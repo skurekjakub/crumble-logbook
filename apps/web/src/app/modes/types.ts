@@ -199,6 +199,23 @@ export interface ModeSection extends SectionBase {
   dungeon: DungeonConfig | null;
   /** The team-power screens, for the team power mode. */
   teamPower: TeamPowerConfig | null;
+  /** The daily dungeon board, for the daily dungeon mode. */
+  daily: DailyConfig | null;
+}
+
+/**
+ * The daily dungeon board, the mode's landing page: its copy, and the
+ * headings of its parts.
+ */
+export interface DailyConfig {
+  /** The board's heading and lede. */
+  board: ViewCopy;
+  /** The heading of the hero card: the best full-auto deck. */
+  heroTitle: string;
+  /** The heading of the other decks, ranked by stage. */
+  decksTitle: string;
+  /** The heading of the documented clears. */
+  clearsTitle: string;
 }
 
 /**

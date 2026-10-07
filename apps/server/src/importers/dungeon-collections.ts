@@ -18,7 +18,13 @@ import { z } from "zod";
 import { ImportError } from "../errors";
 import type { Repos } from "../repos";
 import type { RowRefs } from "./collection-kit";
-import { checkCurrentDecks, checkDeckModes, collection, parseRows } from "./collection-kit";
+import {
+  assertDistinct,
+  checkCurrentDecks,
+  checkDeckModes,
+  collection,
+  parseRows,
+} from "./collection-kit";
 import { assertUnclaimed } from "./shared";
 import type { WriteStep } from "./steps";
 import { insertCited } from "./steps";
@@ -90,22 +96,6 @@ export const seedDungeonExclusion = z.strictObject({
 });
 /** Output of {@link seedDungeonExclusion}. */
 export type SeedDungeonExclusion = z.output<typeof seedDungeonExclusion>;
-
-/**
- * Checks that every value of `values` is new.
- *
- * @param file - the file, as errors name it
- * @param what - the field, as errors name it
- * @param values - the values, in file order
- * @throws {ImportError} naming the file, the index and the value of the first repeat
- */
-function assertDistinct(file: string, what: string, values: readonly string[]): void {
-  const seen = new Set<string>();
-  values.forEach((value, index) => {
-    if (seen.has(value)) throw new ImportError(file, index, `duplicate ${what} "${value}"`);
-    seen.add(value);
-  });
-}
 
 /**
  * A step checking that every cookie name the rows give is a glossary

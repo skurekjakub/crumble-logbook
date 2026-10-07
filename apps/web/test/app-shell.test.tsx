@@ -109,6 +109,7 @@ describe("app shell", () => {
       "Rumble Arena 와글와글 아레나",
       "Stage 스테이지",
       "Crumble Dungeon 크럼블 던전",
+      "Daily Dungeons 일일던전",
       "Team power 팀투",
       "Account",
       "Research",

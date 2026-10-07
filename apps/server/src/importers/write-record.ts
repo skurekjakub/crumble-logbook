@@ -109,6 +109,27 @@ function assertLinksResolve(repos: Repos, record: string): void {
 }
 
 /**
+ * Checks that every daily dungeon a deck's run facts name is stored, so a
+ * `--replace` that drops a daily dungeon another record's deck runs fails
+ * instead of stranding the deck.
+ *
+ * @param repos - the write's repos
+ * @param record - the record being written, as the error names it
+ * @throws {ImportError} naming the first deck whose run facts name a missing dungeon
+ */
+function assertDeckRunsResolve(repos: Repos, record: string): void {
+  const dungeons = new Set(repos.dailyDungeons.list().map((row) => row.slug));
+  const ids = repos.decks.list().map((deck) => deck.id);
+  const stranded = repos.decks.dailyRuns(ids).find((run) => !dungeons.has(run.dungeon));
+  if (stranded === undefined) return;
+  throw new ImportError(
+    "<db>",
+    null,
+    `deck ${stranded.deckId} runs daily dungeon ${stranded.dungeon}, which record ${record} no longer loads; load that dungeon again or change the deck first`,
+  );
+}
+
+/**
  * Counts the rows of every registered table.
  *
  * @param repos - the repos to count through
@@ -135,9 +156,10 @@ function countAll(repos: Repos): ImportCounts {
  * @throws {ImportError} `"record <slug> is already loaded; pass --replace to
  *   load it again"` if any table has a row the record owns and `replace`
  *   isn't set
- * @throws {ImportError} naming a stored row whose slug link names a row
- *   that no longer exists after the write (a `--replace` that dropped a row
- *   another record names), after rolling back every write
+ * @throws {ImportError} naming a stored row whose slug link, or a deck
+ *   whose run facts, name a row that no longer exists after the write (a
+ *   `--replace` that dropped a row another record names), after rolling
+ *   back every write
  * @throws whatever a step throws (a constraint violation, or a conflict
  *   with a row another record loaded), after rolling back every write, the
  *   clears and the id counter resets included
@@ -165,6 +187,7 @@ export function writeRecord(store: Store, plan: RecordPlan, replace: boolean): W
     };
     for (const step of plan.steps) step(repos, context);
     assertLinksResolve(repos, slug);
+    assertDeckRunsResolve(repos, slug);
     const after = countAll(repos);
     const counts = Object.fromEntries(TABLE_KEYS.map((key) => [key, after[key] - before[key]]));
     return { counts, warnings } as never;

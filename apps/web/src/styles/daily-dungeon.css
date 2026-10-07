@@ -1,0 +1,389 @@
+/* The daily dungeon board: the dungeon tabs, the boss and entry facts as chips, the AUTO
+   badge, the hero deck, and the ranked decks and clears. Classes carry a `dd-` prefix so they
+   restyle nothing of another lane. Colours come from tokens.css only. */
+
+/* Dungeon tabs: a badge, the name and the top stage; the shown one filled. */
+.dd-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+.dd-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 6px 12px 6px 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2);
+  font: 600 var(--fs-s) / 1.2 var(--body);
+  cursor: pointer;
+}
+.dd-tab:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+.dd-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+.dd-tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.dd-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--ink-3);
+  color: var(--surface);
+  font: 700 11px / 1 var(--body);
+}
+.dd-tab.active .dd-badge {
+  box-shadow: 0 0 0 2px var(--accent-ink);
+}
+.dd-badge.el-fire {
+  background: var(--el-fire);
+}
+.dd-badge.el-water {
+  background: var(--el-water);
+}
+.dd-badge.el-grass {
+  background: var(--el-grass);
+}
+.dd-badge.el-light {
+  background: var(--el-light);
+}
+.dd-badge.el-dark {
+  background: var(--el-dark);
+}
+.dd-tab-top {
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font: 600 var(--fs-2xs) / 1 var(--mono);
+}
+.dd-tab.active .dd-tab-top {
+  background: var(--accent-ink);
+  color: var(--accent);
+}
+
+/* The panel: the dungeon's name and sources, then its facts. */
+.dd-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.dd-panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.dd-panel-head h3 {
+  margin: 0;
+  font-size: var(--fs-l);
+}
+.dd-panel-head .kr {
+  color: var(--ink-3);
+  font-size: var(--fs-s);
+  font-weight: 500;
+}
+.dd-facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.dd-fact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-1) var(--sp-2);
+}
+.dd-fact-row > .label {
+  min-width: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: var(--fs-2xs);
+}
+.chip.dd-el::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--ink-3);
+}
+.chip.dd-el.el-fire::before {
+  background: var(--el-fire);
+}
+.chip.dd-el.el-water::before {
+  background: var(--el-water);
+}
+.chip.dd-el.el-grass::before {
+  background: var(--el-grass);
+}
+.chip.dd-el.el-light::before {
+  background: var(--el-light);
+}
+.chip.dd-el.el-dark::before {
+  background: var(--el-dark);
+}
+.chip.dd-el.weak {
+  background: var(--good-soft);
+  color: var(--good);
+  font-weight: 600;
+}
+.chip.dd-fact.yes {
+  background: var(--good-soft);
+  color: var(--good);
+}
+.chip.dd-fact.no {
+  background: var(--bad-soft);
+  color: var(--bad);
+}
+.chip.dd-fact.unknown {
+  color: var(--ink-3);
+}
+.chip.dd-top {
+  background: var(--candy-soft);
+  color: var(--candy-ink);
+  font-weight: 700;
+}
+.dd-notes {
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+
+/* The AUTO badge, coloured by how far the run plays itself. */
+.dd-auto {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font: 700 var(--fs-2xs) / 1 var(--body);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.dd-auto.t-good {
+  background: var(--good);
+  color: var(--surface);
+}
+.dd-auto.t-warn {
+  background: var(--warn-soft);
+  color: var(--warn);
+  box-shadow: inset 0 0 0 1px var(--warn);
+}
+.dd-auto.t-quiet {
+  background: var(--surface-2);
+  color: var(--ink-3);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.chips.dd-run {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.chip.dd-stage,
+.chip.dd-power {
+  font-family: var(--mono);
+  font-weight: 600;
+}
+
+/* Sections: the hero, the ranked decks, the clears. */
+.dd-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.dd-section > h3 {
+  margin: 0;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+.dd-stage-fig {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3.25rem;
+  line-height: 1;
+}
+.dd-stage-fig .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.dd-stage-fig b {
+  font: 400 var(--fs-xl) / 1.1 var(--display);
+  color: var(--ink);
+}
+
+/* The hero: the best full-auto deck, tinted and ringed. */
+.card.dd-hero {
+  border-color: var(--good);
+  box-shadow: inset 0 0 0 1px var(--good);
+  gap: var(--sp-3);
+}
+.dd-hero-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2) var(--sp-3);
+}
+.dd-hero-head .dd-auto {
+  padding: 5px 10px;
+  font-size: var(--fs-xs);
+}
+.dd-hero-head .dd-stage-fig b {
+  font-size: var(--fs-2xl);
+}
+.dd-hero-name {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  font: 700 var(--fs-m) / 1.25 var(--body);
+}
+.dd-mechanism {
+  display: block;
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+.dd-pets {
+  align-items: center;
+}
+.chip.dd-pet {
+  padding: 2px 8px 2px 2px;
+  border-radius: 999px;
+}
+.chip.dd-power.rec {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--ink-3);
+}
+.chip.dd-gear {
+  max-width: 16rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dd-kit {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+  min-width: 0;
+}
+.dd-kit > .label {
+  flex: none;
+  min-width: 2.75rem;
+}
+.dd-why summary {
+  cursor: pointer;
+}
+.dd-why li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px var(--sp-2);
+  padding: 3px 0;
+  font-size: var(--fs-s);
+}
+.dd-swaps {
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+
+/* Ranked decks and clears: rank, stage, then the body; sources at the row's end. */
+ol.dd-ranks,
+ol.dd-clears {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dd-rank-row,
+.dd-clear-row {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--sp-2) var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.dd-rank {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font: 400 var(--fs-s) / 1 var(--display);
+}
+.dd-rank-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.dd-rank-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px var(--sp-2);
+  font-weight: 600;
+}
+.dd-faces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.dd-face {
+  position: relative;
+  display: inline-grid;
+}
+.dd-face.captain .cicon {
+  box-shadow: 0 0 0 2px var(--candy);
+}
+.dd-face .crown {
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  font: 700 11px / 1 var(--body);
+  color: var(--candy);
+}
+.dd-clear-meta {
+  font-size: var(--fs-xs);
+}
+
+@media (max-width: 640px) {
+  .dd-tab {
+    padding-right: 10px;
+    font-size: var(--fs-xs);
+  }
+  .dd-rank-row,
+  .dd-clear-row {
+    grid-template-columns: auto auto minmax(0, 1fr);
+  }
+  .dd-rank-row > .chips.src,
+  .dd-clear-row > .chips.src {
+    grid-column: 1 / -1;
+  }
+  .dd-fact-row > .label {
+    min-width: 100%;
+  }
+}

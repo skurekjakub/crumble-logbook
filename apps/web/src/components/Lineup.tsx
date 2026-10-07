@@ -9,6 +9,8 @@ export interface LineupCookie {
   stars: string | null;
   /** A short note shown under the name and as the slot's tooltip. */
   note?: string | null;
+  /** Whether the cookie captains the team: its portrait then wears a crown. */
+  captain?: boolean;
 }
 
 /** Props for {@link Lineup}. */
@@ -30,10 +32,11 @@ export function slotKind(level: string | null | undefined): "" | "max" | "filler
 }
 
 /**
- * One cookie's slot: the portrait with the level and star count on it, the
- * short English name (the full one in the tooltip), and the Korean name and
- * note beneath. Stars show only when they're a plain number; free text
- * ("?", "~7 (inferred …)") is left to the levels table.
+ * One cookie's slot: the portrait with the level and star count on it (and
+ * a crown when it captains the team), the short English name (the full one
+ * in the tooltip), and the Korean name and note beneath. Stars show only
+ * when they're a plain number; free text ("?", "~7 (inferred …)") is left
+ * to the levels table.
  *
  * @param props - the cookie, and the slot element's id when it needs one
  * @returns the slot
@@ -43,11 +46,17 @@ export function LineupSlot({ cookie: c, slotId }: { cookie: LineupCookie; slotId
   const lv = c.level != null && c.level !== "" ? `Lv.${c.level}` : "";
   const stars = c.stars && /^\d+$/.test(c.stars) ? ` · ${c.stars}★` : "";
   const sub = [c.en ? c.cookieKr : "", c.note ?? ""].filter(Boolean).join(" · ");
-  const tip = [c.en, c.note].filter(Boolean).join(" — ");
+  const tip = [c.en, c.captain ? "captain" : null, c.note].filter(Boolean).join(" — ");
+  const classes = ["slot", kind, c.captain ? "captain" : ""].filter(Boolean).join(" ");
   return (
-    <div className={kind ? `slot ${kind}` : "slot"} title={tip} data-slot={slotId}>
+    <div className={classes} title={tip} data-slot={slotId}>
       <span className="pic">
         <CookieIcon kr={c.cookieKr} en={c.en} size={40} />
+        {c.captain ? (
+          <span className="crown" role="img" aria-label="Captain">
+            ♛
+          </span>
+        ) : null}
       </span>
       <span className="lv">
         {lv}

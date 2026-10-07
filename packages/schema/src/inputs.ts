@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { dailyDeckProblem, withPowerG } from "./daily-dungeon";
 import { lineupProblem, runStanding } from "./dungeon";
 import { postedPowerG } from "./power";
 import { growthCurveProblem, spendingStepProblem } from "./team-power";
@@ -13,6 +14,9 @@ import {
   spendingStepInsert,
   buffValueInsert,
   counterInsert,
+  dailyDungeonClearInsert,
+  dailyDungeonInsert,
+  deckDailyDungeonInsert,
   deckCookieInsert,
   deckInsert,
   deckNoteInsert,
@@ -390,6 +394,41 @@ export const dungeonExclusionPatch = dungeonExclusion.patch;
 /** Output of {@link dungeonExclusionPatch}. */
 export type DungeonExclusionPatch = z.output<typeof dungeonExclusionPatch>;
 
+const dailyDungeon = citedInputs(dailyDungeonInsert);
+/**
+ * Input for creating a daily dungeon, with the sources that describe it.
+ * A `topStageSource` must exist too, and the row is cited to it.
+ */
+export const dailyDungeonInput = dailyDungeon.input;
+/** Output of {@link dailyDungeonInput}. */
+export type DailyDungeonInput = z.output<typeof dailyDungeonInput>;
+/** Patch for updating a daily dungeon. `sources`, if given, must be non-empty. */
+export const dailyDungeonPatch = dailyDungeon.patch;
+/** Output of {@link dailyDungeonPatch}. */
+export type DailyDungeonPatch = z.output<typeof dailyDungeonPatch>;
+
+const dailyDungeonClear = citedInputs(dailyDungeonClearInsert.omit({ powerG: true }));
+/**
+ * Input for creating a documented daily dungeon clear, with the sources
+ * that show it. `powerG` isn't accepted: it is read from `power` (see
+ * `postedPowerG`).
+ */
+export const dailyDungeonClearInput = dailyDungeonClear.input.transform((clear) =>
+  withPowerG(clear),
+);
+/** Output of {@link dailyDungeonClearInput}. */
+export type DailyDungeonClearInput = z.output<typeof dailyDungeonClearInput>;
+/**
+ * Patch for updating a documented daily dungeon clear. `sources`, if given,
+ * must be non-empty. `powerG` isn't accepted: a patch that sets `power`
+ * sets it too, read from the new text.
+ */
+export const dailyDungeonClearPatch = dailyDungeonClear.patch.transform((patch) =>
+  patch.power === undefined ? patch : withPowerG(patch),
+);
+/** Output of {@link dailyDungeonClearPatch}. */
+export type DailyDungeonClearPatch = z.output<typeof dailyDungeonClearPatch>;
+
 const powerSource = citedInputs(powerSourceInsert);
 /** Input for creating a power source, with the sources that describe it. */
 export const powerSourceInput = powerSource.input;
@@ -509,10 +548,27 @@ export const deckNoteInput = deckNoteInsert.pick({ kind: true, text: true });
 export type DeckNoteInput = z.output<typeof deckNoteInput>;
 
 /**
+ * Input for a daily dungeon deck's run facts: the dungeon it runs, how far
+ * it plays itself, the stage it reached, its power and the stage's
+ * recommended power as posted, its gear preset and its captain. `powerG`
+ * and `recommendedPowerG` aren't accepted: the server reads them from the
+ * posted powers.
+ */
+export const deckDailyRunInput = deckDailyDungeonInsert.omit({
+  deckId: true,
+  powerG: true,
+  recommendedPowerG: true,
+});
+/** Output of {@link deckDailyRunInput}. */
+export type DeckDailyRunInput = z.output<typeof deckDailyRunInput>;
+
+/**
  * The deck fields shared, unmodified, by {@link deckInput} and
  * {@link deckPatch}. Carries no `.default()`s, so `.partial()`-ing it (for
  * the patch) never injects a default value into a payload that omitted the
  * field. The obsolete lifecycle and `supersededBy` are left out.
+ * `dailyDungeon` holds a daily dungeon deck's run facts, `null` for any
+ * other deck.
  */
 const deckFields = deckInsert
   .omit({ id: true, position: true, ...LIFECYCLE, supersededBy: true })
@@ -521,19 +577,32 @@ const deckFields = deckInsert
     cookies: z.array(deckCookieInput).min(1),
     pets: nameList,
     notes: z.array(deckNoteInput),
+    dailyDungeon: deckDailyRunInput.nullable(),
     sources: sourceIds,
   });
 
 /**
  * Input for creating a deck. `id` must be a lowercase slug; `pets` and
- * `notes` default to `[]` when omitted. The obsolete lifecycle isn't
- * accepted: a record's import sets it.
+ * `notes` default to `[]` when omitted, and an omitted `dailyDungeon`
+ * means none. The
+ * deck must keep the daily dungeon rules (see `dailyDeckProblem`). The
+ * obsolete lifecycle isn't accepted: a record's import sets it.
  */
-export const deckInput = deckFields.extend({
-  id: deckSlug,
-  pets: nameList.default([]),
-  notes: z.array(deckNoteInput).default([]),
-});
+export const deckInput = deckFields
+  .extend({
+    id: deckSlug,
+    pets: nameList.default([]),
+    notes: z.array(deckNoteInput).default([]),
+    dailyDungeon: deckDailyRunInput.nullish(),
+  })
+  .superRefine((deck, ctx) => {
+    const problem = dailyDeckProblem({
+      mode: deck.mode ?? "guild_conquest",
+      cookies: deck.cookies.map((cookie) => cookie.cookieKr),
+      run: deck.dailyDungeon ?? null,
+    });
+    if (problem) ctx.addIssue({ code: "custom", message: problem, path: ["dailyDungeon"] });
+  });
 /** Output of {@link deckInput}. */
 export type DeckInput = z.output<typeof deckInput>;
 

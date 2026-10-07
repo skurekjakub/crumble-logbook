@@ -109,4 +109,5 @@ export const DUNGEON = {
     firstWave: 40,
   },
   teamPower: null,
+  daily: null,
 } as const satisfies ModeSection;

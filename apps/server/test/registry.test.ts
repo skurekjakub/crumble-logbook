@@ -44,6 +44,7 @@ type SeededKey =
   | "dungeonRuns"
   | "dungeonLineups"
   | "dungeonExclusions"
+  | "dailyDungeonClears"
   | "powerSources"
   | "powerDataPoints"
   | "packages"
@@ -119,6 +120,11 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
     kind: { match: { kind: "summoner" }, other: {}, value: "summoner" },
     status: { match: { status: "patched" }, other: {}, value: "patched" },
   },
+  dailyDungeonClears: {
+    dungeon: { match: { dungeon: "dough" }, other: {}, value: "dough" },
+    auto: { match: { auto: "semi" }, other: {}, value: "semi" },
+    deck: { match: { deckId: "y1" }, other: { deckId: "y2" }, value: "y1" },
+  },
   powerSources: {
     cost: { match: { costType: "paid" }, other: {}, value: "paid" },
     place: { match: { appliesIn: ["arena"] }, other: {}, value: "arena" },
@@ -190,6 +196,30 @@ function ensureDungeonDecks(store: Store, services: Services): void {
   for (const id of ["g1", "g2"]) {
     if (store.repos.decks.exists(id)) continue;
     services.decks.create({ ...deckBase, id, nameEn: id, mode: "crumble_dungeon" });
+  }
+}
+
+/**
+ * Creates the daily dungeons `exp` and `dough` and the daily dungeon decks
+ * `y1` and `y2` (both running `exp`) that daily dungeon seeds name, once per store.
+ *
+ * @param store - the store to check for existing rows
+ * @param services - the services to create the rows through
+ */
+function ensureDailyDungeons(store: Store, services: Services): void {
+  const sources = cite(store);
+  if (store.repos.dailyDungeons.count() > 0) return;
+  for (const [position, slug] of ["exp", "dough"].entries()) {
+    services.dailyDungeons.create({ slug, position, nameEn: slug, drops: [], notes: [] }, sources);
+  }
+  for (const id of ["y1", "y2"]) {
+    services.decks.create({
+      ...deckBase,
+      id,
+      nameEn: id,
+      mode: "daily_dungeon",
+      dailyDungeon: { dungeon: "exp", auto: "full" },
+    });
   }
 }
 
@@ -496,6 +526,21 @@ const SEEDS: Record<SeededKey, Seed> = {
   dungeonExclusions: (store, services, over) => {
     const row = services.dungeonExclusions.create(
       { cookieKr: `c${++serial}`, kind: "charger", why: "w", status: "excluded", ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  dailyDungeonClears: (store, services, over) => {
+    ensureDailyDungeons(store, services);
+    const row = services.dailyDungeonClears.create(
+      {
+        dungeon: "exp",
+        stage: ++serial,
+        powerG: null,
+        date: "2026-10-07",
+        evidence: "screenshot",
+        ...over,
+      },
       cite(store),
     );
     return ["id", row.id];

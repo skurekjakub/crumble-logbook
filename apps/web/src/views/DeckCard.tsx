@@ -3,6 +3,7 @@ import type { Deck, DeckCookie } from "../api/types";
 import { AtkOrder } from "../components/AtkOrder";
 import { Clamp } from "../components/Clamp";
 import { CookieName } from "../components/CookieName";
+import { RunChips } from "../components/DailyRun";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { Formation, hasFormation } from "../components/Formation";
@@ -71,6 +72,18 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
       <DataTable rows={cookies} rowKey={(c) => c.id} columns={columns} layout="stack" />
     </details>
   );
+}
+
+/**
+ * A deck's cookies as its formation shows them: the captain its run facts
+ * name, when they name one, crowned.
+ *
+ * @param d - the deck
+ * @returns the cookies, each with `captain` set
+ */
+export function withCaptain(d: Pick<Deck, "cookies" | "dailyDungeon">) {
+  const captain = d.dailyDungeon?.captain?.kr;
+  return d.cookies.map((c) => ({ ...c, captain: captain === c.cookieKr }));
 }
 
 /**
@@ -148,6 +161,7 @@ export function DeckCard({
       ) : null}
     </>
   ) : null;
+  const cookies = withCaptain(d);
   const pets = d.pets.length
     ? d.pets.map((p, i) => (
         <Fragment key={`${i}-${p.kr}`}>
@@ -181,6 +195,7 @@ export function DeckCard({
           </h3>
           <div className="chips">
             <Pill kind={d.status} />
+            {d.dailyDungeon ? <RunChips run={d.dailyDungeon} /> : null}
             {d.ceilingText ? <span className="chip ceiling">ceiling {d.ceilingText}</span> : null}
           </div>
         </div>
@@ -190,7 +205,7 @@ export function DeckCard({
           </div>
         ) : null}
       </div>
-      {hasFormation(d.cookies) ? <Formation cookies={d.cookies} /> : <Lineup cookies={d.cookies} />}
+      {hasFormation(cookies) ? <Formation cookies={cookies} /> : <Lineup cookies={cookies} />}
       <LevelTable cookies={d.cookies} />
       <Kv
         rows={[

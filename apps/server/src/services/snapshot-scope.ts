@@ -20,6 +20,7 @@ const CHILDREN: Partial<Record<TableKey, { parent: TableKey; column: string }>> 
   deckCookies: { parent: "decks", column: "deckId" },
   deckPets: { parent: "decks", column: "deckId" },
   deckNotes: { parent: "decks", column: "deckId" },
+  deckDailyDungeons: { parent: "decks", column: "deckId" },
   runeBuildDecks: { parent: "runeBuilds", column: "runeBuildId" },
 };
 

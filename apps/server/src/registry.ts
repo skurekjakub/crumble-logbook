@@ -24,6 +24,7 @@ import {
   CLEAR_STANDING,
   COST_TYPE,
   DATA_POINT_KIND,
+  DUNGEON_AUTO,
   DUNGEON_BOARD,
   EXCLUSION_CLASS,
   EXCLUSION_STATUS,
@@ -84,6 +85,13 @@ import {
   deckPets,
   decks,
   deckSlug,
+  dailyDungeonClearInput,
+  dailyDungeonClearPatch,
+  dailyDungeonClears,
+  dailyDungeonInput,
+  dailyDungeonPatch,
+  dailyDungeons,
+  deckDailyDungeons,
   dungeonExclusionInput,
   dungeonExclusionPatch,
   dungeonExclusions,
@@ -235,7 +243,8 @@ export interface ApiSpec {
 }
 
 /** The content types other rows name by their `slug` column (see {@link ContentSpec.links}). */
-export type LinkTarget = "powerSources" | "powerDataPoints" | "packages" | "spendingOrders";
+export type LinkTarget =
+  "powerSources" | "powerDataPoints" | "packages" | "spendingOrders" | "dailyDungeons";
 
 /**
  * Finds the row of a content type other rows name by its `slug`.
@@ -412,6 +421,7 @@ export const REGISTRY = {
   deckCookies: entry(deckCookies, {}),
   deckPets: entry(deckPets, {}),
   deckNotes: entry(deckNotes, {}),
+  deckDailyDungeons: entry(deckDailyDungeons, {}),
   runeBuilds: entry(runeBuilds, {
     path: "/rune-builds",
     entity: "rune_build",
@@ -628,6 +638,32 @@ export const REGISTRY = {
     api: { id: rowId, input: dungeonExclusionInput, patch: dungeonExclusionPatch },
     // One exclusion per cookie within a record; rows no record owns share `null`.
     content: { gloss: "cookieKr", unique: ["cookieKr", "recordSlug"] },
+  }),
+  dailyDungeons: entry(dailyDungeons, {
+    path: "/daily-dungeons",
+    entity: "daily_dungeon",
+    api: { id: rowId, input: dailyDungeonInput, patch: dailyDungeonPatch },
+    content: {
+      order: ["position", "id"],
+      innerSources: (row) => (row.topStageSource == null ? [] : [row.topStageSource]),
+    },
+  }),
+  dailyDungeonClears: entry(dailyDungeonClears, {
+    path: "/daily-dungeon-clears",
+    entity: "daily_dungeon_clear",
+    filters: {
+      dungeon: { schema: deckSlug, match: { equals: "dungeon" } },
+      auto: { schema: z.enum(DUNGEON_AUTO), match: { equals: "auto" } },
+      deck: { schema: deckSlug, match: { equals: "deckId" } },
+    },
+    api: { id: rowId, input: dailyDungeonClearInput, patch: dailyDungeonClearPatch },
+    content: {
+      // Furthest stage first, then lowest power. Never by a ratio.
+      order: [{ column: "stage", desc: true }, { column: "powerG", nullsLast: true }, "id"],
+      refs: { deckId: "decks" },
+      links: { dungeon: "dailyDungeons" },
+      mode: "daily_dungeon",
+    },
   }),
   powerSources: entry(powerSources, {
     path: "/power-sources",

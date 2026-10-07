@@ -135,4 +135,5 @@ export const CONQUEST = {
   stage: null,
   dungeon: null,
   teamPower: null,
+  daily: null,
 } as const satisfies ModeSection;

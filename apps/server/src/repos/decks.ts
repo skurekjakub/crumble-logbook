@@ -1,11 +1,19 @@
 import type {
   DeckCookieRow,
+  DeckDailyDungeonRow,
   DeckNoteKind,
   DeckNoteRow,
   DeckPetRow,
   DeckRow,
 } from "@crumble/schema";
-import { counters, deckCookies, deckNotes, deckPets, decks } from "@crumble/schema";
+import {
+  counters,
+  deckCookies,
+  deckDailyDungeons,
+  deckNotes,
+  deckPets,
+  decks,
+} from "@crumble/schema";
 import type { InferInsertModel } from "drizzle-orm";
 import { asc, count, eq, inArray, max, or } from "drizzle-orm";
 import type { Db } from "../db/client";
@@ -22,10 +30,15 @@ export type DeckCookieInsert = Omit<
 /** A single note, without the `id`/`deckId`/`position` the repo assigns. */
 export type DeckNoteInsert = { kind: DeckNoteKind; text: string };
 
+/** A daily dungeon deck's run facts, without the `deckId` the repo assigns. */
+export type DeckDailyRunInsert = Omit<InferInsertModel<typeof deckDailyDungeons>, "deckId">;
+
 /**
- * CRUD over `decks` and its ordered children (`deck_cookies`, `deck_pets`,
- * `deck_notes`). Children are always replaced as a whole list, positioned by
- * array index; there is no per-child update.
+ * CRUD over `decks` and its children: the ordered `deck_cookies`,
+ * `deck_pets` and `deck_notes`, and a daily dungeon deck's run facts
+ * (`deck_daily_dungeons`, one row per deck). Children are always replaced
+ * as a whole, the ordered ones positioned by array index; there is no
+ * per-child update.
  */
 export interface DecksRepo {
   /** Returns every deck, ordered by `position` then `id`. */
@@ -115,6 +128,26 @@ export interface DecksRepo {
    * @param notes - the new notes, in display order
    */
   replaceNotes(deckId: string, notes: DeckNoteInsert[]): void;
+  /**
+   * Returns the daily dungeon run facts of `deckIds`, ordered by deck id.
+   *
+   * @param deckIds - deck ids to look up; `[]` returns `[]`
+   */
+  dailyRuns(deckIds: string[]): DeckDailyDungeonRow[];
+  /**
+   * Replaces the daily dungeon run facts of `deckId`.
+   *
+   * @param deckId - the deck to replace them for
+   * @param run - the new facts, or `null` to leave the deck without any
+   */
+  replaceDailyRun(deckId: string, run: DeckDailyRunInsert | null): void;
+  /**
+   * Returns the ids of the decks whose run facts name the daily dungeon `dungeon`.
+   *
+   * @param dungeon - a daily dungeon's slug
+   * @returns their ids, sorted; `[]` when none does
+   */
+  runningDungeon(dungeon: string): string[];
   /** Returns the number of decks. */
   count(): number;
   /**
@@ -235,6 +268,33 @@ export function createDecksRepo(db: Db): DecksRepo {
           .run();
       }
     },
+    /** @inheritdoc */
+    dailyRuns: (deckIds) => {
+      if (deckIds.length === 0) return [];
+      return db
+        .select()
+        .from(deckDailyDungeons)
+        .where(inArray(deckDailyDungeons.deckId, deckIds))
+        .orderBy(asc(deckDailyDungeons.deckId))
+        .all();
+    },
+    /** @inheritdoc */
+    replaceDailyRun: (deckId, run) => {
+      db.delete(deckDailyDungeons).where(eq(deckDailyDungeons.deckId, deckId)).run();
+      if (run)
+        db.insert(deckDailyDungeons)
+          .values({ ...run, deckId })
+          .run();
+    },
+    /** @inheritdoc */
+    runningDungeon: (dungeon) =>
+      db
+        .select({ id: deckDailyDungeons.deckId })
+        .from(deckDailyDungeons)
+        .where(eq(deckDailyDungeons.dungeon, dungeon))
+        .orderBy(asc(deckDailyDungeons.deckId))
+        .all()
+        .map((row) => row.id),
     /** @inheritdoc */
     count: () => db.select({ n: count() }).from(decks).get()!.n,
     /** @inheritdoc */

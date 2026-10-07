@@ -7,6 +7,7 @@ import type { CapturesService } from "./captures";
 import { createCapturesService } from "./captures";
 import type { RegisteredService } from "./content";
 import { registeredService } from "./content";
+import { createDailyDungeonService } from "./daily-dungeons";
 import type { DeckService } from "./decks";
 import { createDeckService } from "./decks";
 import type { ExportService } from "./export";
@@ -27,7 +28,8 @@ import { createSourcesService } from "./sources";
 /**
  * One content service per registered content type, built from its registry
  * entry. Scores replace theirs with {@link ScoreService}, which adds the
- * damage/power ratio.
+ * damage/power ratio; daily dungeons wrap theirs with the rule that a
+ * dungeon a deck runs keeps its slug (`createDailyDungeonService`).
  */
 export type ContentServices = { [K in Exclude<ContentKey, "scores">]: RegisteredService<K> };
 
@@ -57,6 +59,7 @@ export function createServices(store: Store): Services {
   ) as ContentServices;
   return {
     ...content,
+    dailyDungeons: createDailyDungeonService(store),
     scores: createScoreService(store),
     decks: createDeckService(store),
     runeBuilds: createRuneBuildService(store),

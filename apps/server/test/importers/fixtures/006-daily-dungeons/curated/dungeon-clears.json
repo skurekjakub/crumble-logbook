@@ -1,0 +1,33 @@
+[
+  {
+    "dungeon": "exp",
+    "stage": 52,
+    "power": "2.1G",
+    "deck": "exp-partial-scorpion",
+    "auto": "semi",
+    "date": "2026-10-06",
+    "player": "fixture-a",
+    "evidence": "screenshot",
+    "sources": ["web:fixture-exp-clear"]
+  },
+  {
+    "dungeon": "exp",
+    "stage": 45,
+    "power": "1.85G",
+    "deck": "exp-auto-milk",
+    "auto": "full",
+    "date": "2026-10-05",
+    "evidence": "video",
+    "sources": ["web:fixture-exp-guide"]
+  },
+  {
+    "dungeon": "dough",
+    "stage": 18,
+    "power": null,
+    "deck": null,
+    "date": "2026-10-04",
+    "evidence": "text",
+    "note": "Fixture: claimed in a comment.",
+    "sources": ["web:fixture-dough"]
+  }
+]

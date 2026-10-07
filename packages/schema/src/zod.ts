@@ -509,6 +509,80 @@ export const dungeonExclusionSelect = createSelectSchema(t.dungeonExclusions);
 /** A row selected from `dungeon_exclusions`. */
 export type DungeonExclusionRow = typeof t.dungeonExclusions.$inferSelect;
 
+/**
+ * Insert schema for `daily_dungeons`. `slug` is a lowercase slug;
+ * `position` a non-negative integer; `nameEn` non-empty; `drops` and
+ * `notes` name lists, maybe empty; `topStage`, when present, a positive
+ * integer; `topStageDate`, when present, `YYYY-MM-DD`; `topStageSource`,
+ * when present, a source id; every other text, when present, non-empty.
+ */
+export const dailyDungeonInsert = createInsertSchema(t.dailyDungeons, {
+  slug: () => deckSlug,
+  position: (s) => s.int().nonnegative(),
+  nameEn: (s) => s.min(1),
+  nameKr: (s) => s.min(1).nullish(),
+  drops: () => nameList,
+  entryKeys: (s) => s.min(1).nullish(),
+  entryNote: (s) => s.min(1).nullish(),
+  bossKr: (s) => s.min(1).nullish(),
+  bossEn: (s) => s.min(1).nullish(),
+  bossElement: (s) => s.min(1).nullish(),
+  bossWeakness: (s) => s.min(1).nullish(),
+  bossRotation: (s) => s.min(1).nullish(),
+  topStage: () => positiveInt.nullish(),
+  topStageDate: () => isoDate.nullish(),
+  topStageSource: () => sourceId.nullish(),
+  notes: () => nameList,
+});
+/** Select schema for `daily_dungeons`, with the name lists typed precisely. */
+export const dailyDungeonSelect = createSelectSchema(t.dailyDungeons, {
+  drops: () => nameList,
+  notes: () => nameList,
+});
+/** A row selected from `daily_dungeons`. */
+export type DailyDungeonRow = typeof t.dailyDungeons.$inferSelect;
+
+/**
+ * Insert schema for `deck_daily_dungeons`. `dungeon` is a lowercase slug;
+ * `stage`, when present, a positive integer; every text, when present,
+ * non-empty; `powerG` and `recommendedPowerG`, when present, positive.
+ */
+export const deckDailyDungeonInsert = createInsertSchema(t.deckDailyDungeons, {
+  dungeon: () => deckSlug,
+  stage: () => positiveInt.nullish(),
+  power: (s) => s.min(1).nullish(),
+  powerG: (s) => s.positive().nullish(),
+  recommendedPower: (s) => s.min(1).nullish(),
+  recommendedPowerG: (s) => s.positive().nullish(),
+  gearPreset: (s) => s.min(1).nullish(),
+  captainKr: (s) => s.min(1).nullish(),
+});
+/** Select schema for `deck_daily_dungeons`, mirroring the stored row shape. */
+export const deckDailyDungeonSelect = createSelectSchema(t.deckDailyDungeons);
+/** A row selected from `deck_daily_dungeons`. */
+export type DeckDailyDungeonRow = typeof t.deckDailyDungeons.$inferSelect;
+
+/**
+ * Insert schema for `daily_dungeon_clears`. `dungeon` is a lowercase slug;
+ * `stage` a positive integer; `date` `YYYY-MM-DD`; `powerG`, when present,
+ * positive; `deckId`, when present, a lowercase slug; every other text,
+ * when present, non-empty.
+ */
+export const dailyDungeonClearInsert = createInsertSchema(t.dailyDungeonClears, {
+  dungeon: () => deckSlug,
+  stage: () => positiveInt,
+  power: (s) => s.min(1).nullish(),
+  powerG: (s) => s.positive().nullish(),
+  deckId: () => deckSlug.nullish(),
+  date: () => isoDate,
+  player: (s) => s.min(1).nullish(),
+  note: (s) => s.min(1).nullish(),
+});
+/** Select schema for `daily_dungeon_clears`, mirroring the stored row shape. */
+export const dailyDungeonClearSelect = createSelectSchema(t.dailyDungeonClears);
+/** A row selected from `daily_dungeon_clears`. */
+export type DailyDungeonClearRow = typeof t.dailyDungeonClears.$inferSelect;
+
 /** A curated id another row names a row by: lowercase words joined by `-` or `_`, dots allowed. */
 export const rowSlug = z
   .string()
