@@ -1,0 +1,22 @@
+{
+  "lane": "naver",
+  "note": "Official Naver cafe (cafe.naver.com/ccrumble) posts in the 2026-09-28 to 2026-10-07 window, read 2026-10-07 from evidence/r2026-10-07/04-naver/nv/nv-<id>.md and their images (local only). Listings: the patch-notes board (menu 3), notices (menu 1) and the guide board (menu 9, four pages back to 2026-09-25).",
+  "posts": [
+    {"source": "naver", "id": "nv-47255", "url": "https://cafe.naver.com/ccrumble/47255", "date": "2026-09-28", "title_kr": "크럼블 던전 578G 공략 (총투 15G)", "title_en": "Crumble Dungeon 578G guide (15G total power)", "relevance": 3,
+     "summary_en": "코니's result screen: 578.07G at 14.90G total power, rank 1st, 0.000 s left; the board strip shows Evenl at 516.12G and 존중이쿠키 at 438.52G. Links the video yt tnAGQ2XgW9o, which gives the ATK order and perks.",
+     "scores": [{"score_g": 578.069, "total_power_g": 14.902, "board": "run", "rank": 1, "time_left_s": 0.0}],
+     "mechanics": [], "quotes": [{"kr": "578,069,678,682", "en": "Final score 578,069,678,682"}]},
+    {"source": "naver", "id": "nv-48486", "url": "https://cafe.naver.com/ccrumble/48486", "date": "2026-10-01", "title_kr": "오븐 자동 열기 기능 개선 및 일일 던전 난이도 완화 안내 (18:43 내용 추가)", "title_en": "Oven auto-open improvement and Daily Dungeon difficulty easing (official notice)", "relevance": 2,
+     "summary_en": "Official notice. 10-02 15:00 KST: oven auto-open raised to 200-500 per batch at Oven Lv.32-38, and the auto-open gear cap 30 to 100. The 'dungeon changes' are the Daily Dungeons' difficulty, promised for the next update; nothing about Crumble Dungeon.",
+     "scores": [], "mechanics": ["No Crumble Dungeon change on 10-01/10-02."], "quotes": [{"kr": "다음 업데이트를 목표로 일일던전에 대한 개선 작업을 진행하고 있습니다", "en": "We are working on Daily Dungeon improvements, aiming at the next update"}]},
+    {"source": "naver", "id": "nv-50417", "url": "https://cafe.naver.com/ccrumble/50417", "date": "2026-10-07", "title_kr": "10월 8일(목) 업데이트 안내", "title_en": "10/8 update notes (official)", "relevance": 3,
+     "summary_en": "Official 10-08 notes: new SSR Chardonnay (Grass support: crit rate and push resistance and Volley to allies in a line, damage to enemies in it); main stages to 364-30; cookie level cap 100 to 120; Rumble Arena season 2; a 7-day attendance event that gives Milk Cookie's Crunchy Strong Pediatrician; Daily Dungeon bosses eased; EXP for Lv.79-100 lowered with a refund. No Crumble Dungeon line.",
+     "scores": [], "mechanics": ["Level cap 120 from 10-08.", "Free Milk from the 7-day attendance event.", "Chardonnay gives Volley in a line."], "quotes": [{"kr": "쿠키 최대 레벨 상한이 120레벨까지 확장됩니다", "en": "The cookie level cap rises to 120"}, {"kr": "7일 동안 매일 접속하여 다양한 성장 재화와 함께 바삭튼튼 소아과 의사 우유맛 쿠키를 만나보세요", "en": "Log in daily for 7 days for growth materials and Milk Cookie's Crunchy Strong Pediatrician"}]},
+    {"source": "naver", "id": "nv-50393", "url": "https://cafe.naver.com/ccrumble/50393", "date": "2026-10-07", "title_kr": "10월 8일(목) 점검 사전 안내", "title_en": "10/8 maintenance notice", "relevance": 1,
+     "summary_en": "Maintenance 10-08 13:00-16:00 KST.",
+     "scores": [], "mechanics": [], "quotes": []},
+    {"source": "naver", "id": "nv-49382", "url": "https://cafe.naver.com/ccrumble/49382", "date": "2026-10-04", "title_kr": "새로운 크럼블던전공략좀 올려주실분없나요?", "title_en": "Can anyone post a new Crumble Dungeon guide?", "relevance": 1,
+     "summary_en": "A request for an updated dungeon guide; no replies.",
+     "scores": [], "mechanics": [], "quotes": []}
+  ]
+}

@@ -12,6 +12,7 @@
     "dev": "tsx watch src/main.ts",
     "start": "tsx src/main.ts",
     "import:record": "tsx src/cli/import-record.ts",
+    "import:account": "tsx src/cli/import-account.ts",
     "db:export": "tsx src/cli/export.ts",
     "db:restore": "tsx src/cli/restore.ts",
     "db:scope": "tsx src/cli/snapshot-scope.ts",

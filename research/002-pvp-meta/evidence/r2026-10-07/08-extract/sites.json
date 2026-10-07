@@ -1,0 +1,88 @@
+{
+  "batch": "r2026-10-07 sites",
+  "mode_scope": "both",
+  "note": "Summaries of this round's site captures in ../03-sites/. Figures come from crumbgg-figures.txt; the synthesis is ../03-sites/SYNTHESIS.md.",
+  "posts": [
+    {
+      "source": "other",
+      "id": "crumbgg-meta-page-1007",
+      "url": "https://crumb.gg/pub/meta-page",
+      "date": "2026-10-07",
+      "title_en": "crumb.gg meta page: lineup shares for regular Arena and Rumble Arena",
+      "relevance": 3,
+      "mode": "both",
+      "summary_en": "New crumb.gg endpoint behind its /meta page, updated 2026-10-07 06:17Z. Regular Arena: the Rye / Skating Queen / Grapevine group holds 31.0%, the Rumble standard 12 24.3% and the old five-ranged deck 14.7% and falling. Rumble: the standard 12 holds 64.0% grouped and 47.3% exact, the Rye anti-charge group 31.3%, and the standard 12 with Rockstar for Herb rose to 6.1%. Milk is captain everywhere; the sample and method aren't stated."
+    },
+    {
+      "source": "other",
+      "id": "crumbgg-rumble-live-1007",
+      "url": "https://crumb.gg/pub/live?board=rumble_arena",
+      "date": "2026-10-07",
+      "title_en": "crumb.gg Rumble Arena live top 100, 2026-10-07",
+      "relevance": 3,
+      "mode": "rumble_arena",
+      "summary_en": "The Rumble top 100 on the last day of Season 1 (06:32Z): #1 슈퍼땅콩 at 6912, #2 凱凱の餅乾軍團 6854, #3 인미 6422. 12 teams are fully revealed and 9 of them are exactly the standard 12; the others swap in Vampire, Skating Queen, Crepe, Rye, Tiger Lily or Rockstar. Herb shows on one top-10 team; half the top 10 carry Icy Birdie."
+    },
+    {
+      "source": "other",
+      "id": "crumbgg-rumble-stats-1007",
+      "url": "https://crumb.gg/pub/stats",
+      "date": "2026-10-07",
+      "title_en": "crumb.gg Rumble top-100 cookie and pet usage, 2026-10-07",
+      "relevance": 3,
+      "mode": "rumble_arena",
+      "summary_en": "Revealed-slot counts across the Rumble top 100 (303 of 1,200 slots hidden). Herb fell from 67 to 44 since 09-27, Hot Doggie from 84 to 54, and Icy Birdie rose from 12 to 45. Cheesecake, Hound and Moon Rabbit rose; Bari, Oven and Cherry Cola dipped slightly."
+    },
+    {
+      "source": "other",
+      "id": "crumbgg-rumble-history-1007",
+      "url": "https://crumb.gg/pub/live-history?board=rumble_arena&hours=2000",
+      "date": "2026-10-07",
+      "title_en": "crumb.gg Rumble board history to 2026-10-07",
+      "relevance": 2,
+      "mode": "rumble_arena",
+      "summary_en": "1,865 snapshots from 09-24 to 10-07 06:23Z. The #1 rating rose from 4204 (09-27) to 6912 and #100 from 2869 to 3626. 凱凱の餅乾軍團 held #1 at the end of most days; 슈퍼땅콩 took it on 10-07."
+    },
+    {
+      "source": "other",
+      "id": "crumbgg-patches-404",
+      "url": "https://crumb.gg/data/patches.json",
+      "date": "2026-10-07",
+      "title_en": "crumb.gg patch digest: removed (404)",
+      "relevance": 1,
+      "mode": "both",
+      "summary_en": "crumb.gg's patch digest, which earlier rounds used to date balance changes, now answers 404 with the site's not-found page. Patch facts come from the official cafe's patch notes instead."
+    },
+    {
+      "source": "other",
+      "id": "sugarpocket-rumble-arena-1007",
+      "url": "https://cookieruncrumble.app/rumble-arena/",
+      "date": "2026-10-07",
+      "title_en": "Sugar Pocket Rumble Arena page (client 1.4.002 data)",
+      "relevance": 2,
+      "mode": "rumble_arena",
+      "summary_en": "Season calendar from the client data: Season 1 to 10-08 12:00 KST, Season 2 from 10-08 14:00 to 10-21 12:00 KST. The client lists only the Season 1 passives (Charge max HP +30%, all DMG reduction +30%, both teams), and the page warns that the per-season passive must be checked in game."
+    },
+    {
+      "source": "other",
+      "id": "crumblehub-clear-decks-arena-1007",
+      "url": "https://crumblehub.co/api/clear-decks?mode=arena&sort=recommended&limit=50&roster=4 (+3 cursor pages)",
+      "date": "2026-10-07",
+      "title_en": "crumblehub community Arena decks, 2026-10-07",
+      "relevance": 1,
+      "mode": "arena",
+      "summary_en": "86 shared Arena decks, 6 new since 09-27. Two of the new ones are the exact standard 12, one swaps Brightseeker for Oven, and one is an Adventurer bind deck. Shared decks, not ladder usage."
+    },
+    {
+      "source": "other",
+      "id": "teamhobby-patchnotes",
+      "url": "https://cc.team-hobby.com/?p=patchnotes",
+      "date": "2026-10-07",
+      "title_en": "삥스크럼블 data wiki: v1.5 patch notes (datamine)",
+      "relevance": 1,
+      "mode": "both",
+      "summary_en": "A fan datamine wiki's v1.5 notes: Chardonnay, new main stages and a cookie level cap of Lv.150. The official notes say the cap rises to 120, so 150 is a datamine reading, not the announced cap."
+    }
+  ],
+  "glossary": []
+}

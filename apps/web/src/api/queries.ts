@@ -351,6 +351,23 @@ export const recommendationsQuery = (record?: string | null) =>
   });
 
 /**
+ * The reader's account: a snapshot (lineups, pets, resources, what the
+ * audit couldn't read) and a roadmap, each the latest unless named, plus
+ * every loaded snapshot and roadmap by id.
+ *
+ * @param choice - the snapshot and roadmap ids to show; the latest of each when omitted
+ * @returns the query options
+ */
+export const accountQuery = (choice: { snapshot?: string; roadmap?: string } = {}) =>
+  queryOptions({
+    queryKey: ["account", { snapshot: choice.snapshot ?? null, roadmap: choice.roadmap ?? null }],
+    queryFn: () =>
+      parseResponse(
+        api.account.$get({ query: { snapshot: choice.snapshot, roadmap: choice.roadmap } }),
+      ),
+  });
+
+/**
  * The power gate's brackets, lowest first: a team with `minRatioPct`% of
  * recommended power keeps `damagePct`% of its damage.
  *

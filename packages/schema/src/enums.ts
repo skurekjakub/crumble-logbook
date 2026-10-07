@@ -261,3 +261,10 @@ export const CITED_ENTITY = [
   "obsolescence",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];
+
+/**
+ * When a roadmap item for the reader's account is due: do it now, next,
+ * or later. The account view groups and colours the items by it.
+ */
+export const ACCOUNT_PRIORITY = ["now", "next", "later"] as const;
+export type AccountPriority = (typeof ACCOUNT_PRIORITY)[number];

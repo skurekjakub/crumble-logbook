@@ -1,0 +1,3281 @@
+{
+ "batch": "youtube",
+ "about": "YouTube lane of record 003's 2026-10-07 round. Sources: the saved channel pages (ndlover, SuSinWoo, 꽝라멩, 그니), the saved query 차원의 이면 공략 and discovery searches, all in evidence/r2026-10-07/05-youtube. Frames (frames/, subs/, sheets/) were cut from downloaded videos and read one by one; cookies are identified from formation-screen art against the portrait descriptions in evidence/08-extract/youtube-frames.json and dc-4.json, and the battle bar order is formation row 1 slot 1, row 2 slot 1, row 1 slot 2, … (checked on every deck with a visible formation). Brackets are header power ÷ curated/rift-levels.json recommended_power (season 1); power_basis 'rift' means the sword figure under the player name on the in-Rift screen. Formation-screen power is noted as lobby power only. Levels and stars: levels are read off the battle bar; star tiers were not legible ('?'). Play dates come from the in-Rift countdown, assuming it counts to the season 1 end (2026-10-08 03:00 UTC); upload dates are the post dates. suggested_standing is this lane's suggestion.",
+ "posts": [
+  {
+   "source": "youtube",
+   "id": "web:yt-kMw3E6KXUAo",
+   "url": "https://www.youtube.com/watch?v=kMw3E6KXUAo",
+   "date": "2026-10-05",
+   "title_kr": "시즌1 차원의 이면 11~20단계 보스별 공략덱 추천 가이드",
+   "title_en": "Season 1 Rift levels 11-20: recommended deck per boss",
+   "relevance": 3,
+   "scope": "rift",
+   "summary_en": "그니 (Rift rank 210th-278th, blessing Lv.6) shows a deck and a full clear for every Rift level from 11 to 20 with the in-Rift header power on screen. Levels 11, 12, 14 and 17 clear in the 15% bracket (34.6%, 31.5%, 39.6%, 35.2% of recommended); 13, 15, 16, 18, 19 and 20 clear at 35% (40.2-43.1%). Lobby (formation) power is 4.67-5.02G throughout while the header climbs from 18.55G to 49.31G, i.e. 차원의 힘 growth between sessions. Every deck: captain Milk, perks 초고속 승진 + 열정페이, levelled-down supports, airborne-resist pet (복주머니) on Cool Mint/Werehound, 와사비 pet on GingerCraven.",
+   "clears": [
+    {
+     "stage": "rift-11",
+     "boss": "케이크 들개떼",
+     "team_power": "18G 553M 147K",
+     "recommended_power": "53,635,610,953 (level 11)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-witchberry",
+     "note": "18.553G / 53.636G = 34.6% of recommended (header power). Boss 0.000% at clock 1.500 (kMw3e-00m53.0s); header kMw3-00m24.0s. Rift countdown 7일 8시간 (≈2026-09-30 19:00 UTC if it counts to the season 1 end).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 11,
+      "boss_kr": "케이크 들개떼",
+      "boss_en": "Cake Hound Pack",
+      "team_power": "18G 553M 147K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 53635610953,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-12",
+     "boss": "쿨링민트맛 쿠키",
+     "team_power": "18G 553M 147K",
+     "recommended_power": "58,909,174,145 (level 12)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-witchberry",
+     "note": "18.553G / 58.909G = 31.5% of recommended (header power). Boss 0.000% at clock 1.367 (kMw3e-01m40.0s). Countdown 7일 8시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 12,
+      "boss_kr": "쿨링민트맛 쿠키",
+      "boss_en": "Cool Mint Cookie",
+      "team_power": "18G 553M 147K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 58909174145,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-13",
+     "boss": "초코크림 늑대 망치공주",
+     "team_power": "26G 987M 136K",
+     "recommended_power": "64,429,477,412 (level 13)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift35-hammer-13",
+     "note": "26.987G / 64.429G = 41.9% of recommended (header power). CRISPY CLEAR, boss 0.000% at 4.167 (kMw3e-02m25.0s). Countdown 5일 18시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 13,
+      "boss_kr": "초코크림 늑대 망치공주",
+      "boss_en": "Choco Werehound Princess",
+      "team_power": "26G 987M 136K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 64429477412,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-14",
+     "boss": "폭주단 트럭",
+     "team_power": "28G 762M 40K",
+     "recommended_power": "72,667,110,973 (level 14)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-truck-seeker",
+     "note": "28.762G / 72.667G = 39.6% of recommended (header power). CRISPY CLEAR, trucks 0.000% at 1.533 (kMw3e-03m09.0s); header also kMw3-02m40.0s. Countdown 5일 17시간. Just under the 35% line (29.07G).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 14,
+      "boss_kr": "폭주단 트럭",
+      "boss_en": "Rowdy Truck",
+      "team_power": "28G 762M 40K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 72667110973,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-15",
+     "boss": "비겁한 쿠키",
+     "team_power": "34G 9M 598K",
+     "recommended_power": "78,894,911,744 (level 15)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift35-gingercraven-15",
+     "note": "34.010G / 78.895G = 43.1% of recommended (header power). Boss 0.000% at 0.300 (kMw3e-03m57.0s). Countdown 5일 8시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 15,
+      "boss_kr": "비겁한 쿠키",
+      "boss_en": "GingerCraven",
+      "team_power": "34G 9M 598K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 78894911744,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-16",
+     "boss": "케이크 들개떼",
+     "team_power": "34G 301M 68K",
+     "recommended_power": "85,380,460,343 (level 16)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift35-hounds-16",
+     "note": "34.301G / 85.380G = 40.2% of recommended (header power). CRISPY CLEAR, 0.000% (kMw3e-04m47.0s). Countdown 5일 8시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 16,
+      "boss_kr": "케이크 들개떼",
+      "boss_en": "Cake Hound Pack",
+      "team_power": "34G 301M 68K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 85380460343,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-17",
+     "boss": "쿨링민트맛 쿠키",
+     "team_power": "32G 970M 165K",
+     "recommended_power": "93,598,521,876 (level 17)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-coolmint-seeker",
+     "note": "32.970G / 93.599G = 35.2% of recommended (header power). Boss 0.000% at 2.900 (kMw3e-05m34.0s); header also kMw3-05m06.0s. Countdown 5일 5시간 (≈2026-10-02 22:00 UTC). Header lower than at level 16 (34.30G).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 17,
+      "boss_kr": "쿨링민트맛 쿠키",
+      "boss_en": "Cool Mint Cookie",
+      "team_power": "32G 970M 165K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 93598521876,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-18",
+     "boss": "초코크림 늑대 망치공주",
+     "team_power": "42G 557M 552K",
+     "recommended_power": "102,496,304,864 (level 18)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift35-hammer-18",
+     "note": "42.558G / 102.496G = 41.5% of recommended (header power). CRISPY CLEAR, 0.000% at 1.167 (kMw3-06m24.0s). Countdown 4일 4시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 18,
+      "boss_kr": "초코크림 늑대 망치공주",
+      "boss_en": "Choco Werehound Princess",
+      "team_power": "42G 557M 552K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 102496304864,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-19",
+     "boss": "폭주단 트럭",
+     "team_power": "45G 439M 935K",
+     "recommended_power": "110,005,849,382 (level 19)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift35-truck-19",
+     "note": "45.440G / 110.006G = 41.3% of recommended (header power). 0.000% at 5.333 (kMw3e-07m08.0s). Countdown 3일 15시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 19,
+      "boss_kr": "폭주단 트럭",
+      "boss_en": "Rowdy Truck",
+      "team_power": "45G 439M 935K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 110005849382,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    },
+    {
+     "stage": "rift-20",
+     "boss": "비겁한 쿠키",
+     "team_power": "49G 308M 475K",
+     "recommended_power": "117,784,489,370 (level 20)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift35-gingercraven-20",
+     "note": "49.308G / 117.784G = 41.9% of recommended (header power). Header kMw3-07m38.0s; CRISPY CLEAR with an SSR pet drop kMw3f-08m05.0s. Countdown 3일 11시간 (≈2026-10-04 16:00 UTC).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 20,
+      "boss_kr": "비겁한 쿠키",
+      "boss_en": "GingerCraven",
+      "team_power": "49G 308M 475K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 117784489370,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-kMw3E6KXUAo"
+      ]
+     }
+    }
+   ],
+   "teams": [
+    {
+     "name": "gni-rift15-witchberry",
+     "scope": "rift",
+     "for": "Rift levels 11 (Cake Hounds) and 12 (Cool Mint) at 15%",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "82",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": "Levelled to 82."
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "위치베리맛 쿠키",
+       "en": "Witchberry Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "?",
+       "note": "Levelled to 80; subtitle: 바람궁수 (level 11) or 브라이트시커 (level 12) can replace her."
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "95",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "?",
+       "note": "Levelled to 95."
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": "Levelled to 80."
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "dealer; fourth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "dealer; third in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "체리콜라맛 쿠키",
+       "en": "Cherry Cola Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Levelled to 80."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 1★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "red-brown pet with sauce, 20★ (unidentified; 핫도그도그? low confidence) (level 11); 복주머니 17★ in its place for level 12 (kMw3 01:02)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen kMw3 00:14-00:22 (lobby 4.67G); battle bar kMw3-00m24.0s, kMw3e-00m53.0s, kMw3e-01m40.0s.",
+     "why": "Attack order overlay (kMw3 00:24): 1.우유 2.피겨 3.바리공주 4.호밀 5.마카롱 6.치즈케이크. Captain Milk and the perk cards are fixed (단장 우유, 복지카드 고정). Level 12 (Cool Mint) is an airborne boss: 복주머니 pet.",
+     "substitutions": [
+      "위치베리 → 바람궁수 (level 11)",
+      "위치베리 → 브라이트시커 (level 12)",
+      "Level 12: third pet → 복주머니"
+     ],
+     "unorthodox": [
+      "Same levelled-down supports as the levels 6-7 deck (피노 82, 위치베리 80, 딸크 80, 체콜 80)."
+     ]
+    },
+    {
+     "name": "gni-rift35-hammer-13",
+     "scope": "rift",
+     "for": "Rift level 13 Werehound Princess (35%)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "77",
+       "stars": "?",
+       "position": "battle bar 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "77",
+       "stars": "?",
+       "position": "battle bar 5",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "83",
+       "stars": "?",
+       "position": "battle bar 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 7",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 8",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 9",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 10",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "97",
+       "stars": "?",
+       "position": "battle bar 11",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 12",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 1★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "복주머니 pet, 17★ (named in the subtitles as 복주머니 펫 / 에어본 저항 펫: airborne resist)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen hidden by the perk card (kMw3 01:52, lobby 4.81G); cookies read from the battle bar kMw3e-02m25.0s.",
+     "why": "Subtitle: airborne-skill boss, so the 복주머니 pet; captain Milk, perks fixed.",
+     "substitutions": [],
+     "unorthodox": []
+    },
+    {
+     "name": "gni-rift15-truck-seeker",
+     "scope": "rift",
+     "for": "Rift level 14 Rowdy Trucks at 15%",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "77",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": "Levelled to 77."
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "dealer; fourth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "main dealer; third in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "83",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": "Levelled to 83."
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "위치베리맛 쿠키",
+       "en": "Witchberry Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "?",
+       "note": "Levelled to 80."
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "97",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "?",
+       "note": "Levelled to 97."
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Levelled to 80; subtitle: 체리콜라 can replace her."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 1★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "red-brown pet with sauce, 20★ (unidentified; 핫도그도그? low confidence)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen kMw3 02:30 (lobby 4.74G); battle bar kMw3-02m40.0s, kMw3e-03m09.0s.",
+     "why": "Attack order overlay (kMw3 02:40): 1.우유 2.피겨 3.시커 4.바리공주 5.마카롱 6.치즈케이크. Rye levelled down to 77 so it stays out of the top of the order.",
+     "substitutions": [
+      "딸기크레페 → 체리콜라"
+     ],
+     "unorthodox": [
+      "Rye at Lv.77."
+     ]
+    },
+    {
+     "name": "gni-rift35-gingercraven-15",
+     "scope": "rift",
+     "for": "Rift level 15 GingerCraven (35%)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": "Levelled to 80."
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "95",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "97",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "?",
+       "note": "Subtitle: 바리공주 can replace 허브."
+      },
+      {
+       "kr": "?",
+       "en": null,
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Unidentified portrait: yellow-haired girl in red with cherries and white fox-like ears (formation screen)."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 1★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "와사비 pet, 20★ MAX (subtitle: 와사비펫; green octopus art, 와사비 문어 / Octo Wasabi)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen kMw3 03:14 (lobby 5.02G); battle bar kMw3e-03m57.0s.",
+     "why": "Subtitle: 와사비 pet to keep the sustained debuffs up (지속 디버프 유지).",
+     "substitutions": [
+      "허브 → 바리공주"
+     ],
+     "unorthodox": []
+    },
+    {
+     "name": "gni-rift35-hounds-16",
+     "scope": "rift",
+     "for": "Rift level 16 Cake Hounds (35%)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 5",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 7",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 8",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "95",
+       "stars": "?",
+       "position": "battle bar 9",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 10",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 11",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "체리콜라맛 쿠키",
+       "en": "Cherry Cola Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 12",
+       "role": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "not read"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Cookies read from the battle bar kMw3e-04m47.0s.",
+     "why": "Subtitle: 브라이트시커 can be replaced by 바람궁수 or 위치베리.",
+     "substitutions": [
+      "브라이트시커 → 바람궁수 or 위치베리"
+     ],
+     "unorthodox": []
+    },
+    {
+     "name": "gni-rift15-coolmint-seeker",
+     "scope": "rift",
+     "for": "Rift level 17 Cool Mint at 15%",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "88",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": "Levelled to 88."
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "96",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "?",
+       "note": "Levelled to 96."
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "82",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": "Levelled to 82."
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "main dealer; third in the on-screen attack order; subtitle: 위치베리 can replace her",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "82",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": "Levelled to 82."
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "dealer; fourth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "체리콜라맛 쿠키",
+       "en": "Cherry Cola Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Levelled to 80."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 1★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "복주머니 pet, 17★ (named in the subtitles as 복주머니 펫 / 에어본 저항 펫: airborne resist)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen kMw3 04:50 (lobby 4.72G); battle bar kMw3-05m06.0s, kMw3e-05m34.0s.",
+     "why": "Attack order overlay (kMw3 05:06): 1.우유 2.피겨 3.시커 4.바리공주 5.마카롱 6.치즈케이크. Subtitle: airborne-skill boss, so the 복주머니 pet.",
+     "substitutions": [
+      "브라이트시커 → 위치베리"
+     ],
+     "unorthodox": []
+    },
+    {
+     "name": "gni-rift35-hammer-18",
+     "scope": "rift",
+     "for": "Rift level 18 Werehound Princess (35%)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "88",
+       "stars": "?",
+       "position": "battle bar 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "74",
+       "stars": "?",
+       "position": "battle bar 5",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "83",
+       "stars": "?",
+       "position": "battle bar 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 7",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 8",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 9",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "battle bar 10",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "95",
+       "stars": "?",
+       "position": "battle bar 11",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 12",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "not read"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Cookies read from the battle bar kMw3-06m24.0s.",
+     "why": "Subtitle: airborne-skill boss, so the 복주머니 pet; 호밀 can be replaced by 다크초코.",
+     "substitutions": [
+      "호밀 → 다크초코"
+     ],
+     "unorthodox": []
+    },
+    {
+     "name": "gni-rift35-truck-19",
+     "scope": "rift",
+     "for": "Rift level 19 Rowdy Trucks (35%)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "74",
+       "stars": "?",
+       "position": "battle bar 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "83",
+       "stars": "?",
+       "position": "battle bar 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 5",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 7",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "위치베리맛 쿠키",
+       "en": "Witchberry Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "battle bar 8",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 9",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "94",
+       "stars": "?",
+       "position": "battle bar 10",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 11",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "battle bar 12",
+       "role": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "not read"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Cookies read from the battle bar kMw3e-07m08.0s.",
+     "why": "Subtitle: 딸기크레페 can be replaced by 체리콜라; captain Milk, perks fixed.",
+     "substitutions": [
+      "딸기크레페 → 체리콜라"
+     ],
+     "unorthodox": []
+    },
+    {
+     "name": "gni-rift35-gingercraven-20",
+     "scope": "rift",
+     "for": "Rift level 20 GingerCraven (35%)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "60",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "?",
+       "note": "Levelled to 60."
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "50",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": "Levelled to 50."
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "60",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": "Levelled to 60."
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "?",
+       "note": "Subtitle: 허브 can replace 바리공주."
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "?",
+       "en": null,
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Unidentified portrait: yellow-haired girl in red with cherries and white fox-like ears (formation screen)."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 1★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "와사비 pet, 20★ MAX (subtitle: 와사비펫; green octopus art, 와사비 문어 / Octo Wasabi)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen kMw3 07:12 (lobby 4.97G); battle bar kMw3-07m38.0s, kMw3f-08m05.0s.",
+     "why": "Subtitle: 와사비 pet for the sustained debuffs.",
+     "substitutions": [
+      "바리공주 → 허브"
+     ],
+     "unorthodox": [
+      "Tiger Lily and Pinot Noir at Lv.60, Dark Choco at Lv.50."
+     ]
+    }
+   ],
+   "builds": [],
+   "mechanics": [
+    "Every deck is introduced with 단장 우유, 복지카드 고정 (captain Milk, perk cards fixed) and an on-screen attack-order list (공순위) with 우유 first: the two perks target the highest-ATK ally.",
+    "Subtitle (levels 12, 13, 17, 18): Cool Mint and Werehound Princess have airborne skills, so the third pet becomes 복주머니 (airborne resist).",
+    "Subtitle (levels 15, 20): 와사비 pet on GingerCraven to keep the sustained debuffs up.",
+    "Intro subtitle: once the (power) is met clearing is not hard (\"…맞춰진다면 클리어하는 데 어려움은 없습니다\"), and the Rift lets you field more dealer cookies (딜러 쿠키를 더 많이 사용할 수 있습니다)."
+   ],
+   "rift": [
+    "Header vs lobby: lobby 4.67-5.02G on the formation screens; header 18.55G (levels 11-12) → 26.99G (13) → 28.76G (14) → 34.01G (15) → 34.30G (16) → 32.97G (17) → 42.56G (18) → 45.44G (19) → 49.31G (20).",
+    "Rift rank shown under the name: 228th / 210th (levels 11-12), 274th (13-14), 250th (15), 227th (16), 230th/217th (17), 253rd (18-19), 278th (20).",
+    "The on-screen countdown beside the Rift icon reads 7일 8시간 at levels 11-12 and 3일 11시간 at level 20: if it counts to the season 1 end (2026-10-08 03:00 UTC), the fights were played 2026-09-30 to 2026-10-04 and uploaded 2026-10-05.",
+    "The header also shows 축복 Lv.6 (blessing), not the 차원의 힘 level; no 차원의 힘 level is on screen."
+   ],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "단장 우유,복지카드 고정입니다",
+     "en": "Captain Milk; the perk cards are fixed."
+    },
+    {
+     "kr": "에어본 스킬 보스이기에 복주머니 펫 사용해주세요",
+     "en": "It is an airborne-skill boss, so use the 복주머니 pet."
+    },
+    {
+     "kr": "지속 디버프 유지를 위해 와사비펫 사용했습니다",
+     "en": "I used the Wasabi pet to keep the sustained debuffs up."
+    },
+    {
+     "kr": "딜러 쿠키를 더 많이 사용할 수 있습니다",
+     "en": "You can field more dealer cookies."
+    }
+   ]
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-IAFNvjeqUqw",
+   "url": "https://www.youtube.com/watch?v=IAFNvjeqUqw",
+   "date": "2026-10-04",
+   "title_kr": "쿠키런 크럼블 시즌1 차원의이면 추천 공략덱 가이드",
+   "title_en": "Season 1 Rift recommended decks (one per boss)",
+   "relevance": 3,
+   "scope": "rift",
+   "summary_en": "그니 shows one deck per boss and clears Rift levels 6-10 with the header on screen: 6 (Cake Hounds, 36.2%), 7 (Cool Mint, 32.0%), 8 (Werehound, 37.2%) and 9 (Trucks, 38.0%) clear at 15%; 10 (GingerCraven, 40.1%) clears at 35%. Lobby power 4.49-4.9G against headers of 10.23-18.81G. Published 2026-10-03 18:30 PDT (2026-10-04 KST); the on-screen countdown (8일 20시간 → 7일 9시간) places the fights around 2026-09-29/30.",
+   "clears": [
+    {
+     "stage": "rift-6",
+     "boss": "케이크 들개떼",
+     "team_power": "10G 227M 672K",
+     "recommended_power": "28,240,662,352 (level 6)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-mob-windarcher",
+     "note": "10.228G / 28.241G = 36.2% of recommended (header power). Boss 0.000% at clock 1.767 (IAFNe-00m58.0s); header IAFN-00m32.0s. Countdown 8일 20시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 6,
+      "boss_kr": "케이크 들개떼",
+      "boss_en": "Cake Hound Pack",
+      "team_power": "10G 227M 672K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 28240662352,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-IAFNvjeqUqw"
+      ]
+     }
+    },
+    {
+     "stage": "rift-7",
+     "boss": "쿨링민트맛 쿠키",
+     "team_power": "10G 227M 672K",
+     "recommended_power": "31,941,744,070 (level 7)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-mob-windarcher",
+     "note": "10.228G / 31.942G = 32.0% of recommended (header power). Boss 0.000% at 1.867 (IAFNe-01m48.0s). Pet swapped to 복주머니.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 7,
+      "boss_kr": "쿨링민트맛 쿠키",
+      "boss_en": "Cool Mint Cookie",
+      "team_power": "10G 227M 672K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 31941744070,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-IAFNvjeqUqw"
+      ]
+     }
+    },
+    {
+     "stage": "rift-8",
+     "boss": "초코크림 늑대 망치공주",
+     "team_power": "13G 844M 579K",
+     "recommended_power": "37,244,770,714 (level 8)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-hammer",
+     "note": "13.845G / 37.245G = 37.2% of recommended (header power). Boss 0.000% at 0.500 (IAFNe-02m36.0s). Countdown 7일 21시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 8,
+      "boss_kr": "초코크림 늑대 망치공주",
+      "boss_en": "Choco Werehound Princess",
+      "team_power": "13G 844M 579K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 37244770714,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-IAFNvjeqUqw"
+      ]
+     }
+    },
+    {
+     "stage": "rift-9",
+     "boss": "폭주단 트럭",
+     "team_power": "16G 69M 572K",
+     "recommended_power": "42,283,114,065 (level 9)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-truck",
+     "note": "16.070G / 42.283G = 38.0% of recommended (header power). Trucks 0.000% at 1.367 (IAFNe-03m22.0s). Countdown 7일 19시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 9,
+      "boss_kr": "폭주단 트럭",
+      "boss_en": "Rowdy Truck",
+      "team_power": "16G 69M 572K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 42283114065,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-IAFNvjeqUqw"
+      ]
+     }
+    },
+    {
+     "stage": "rift-10",
+     "boss": "비겁한 쿠키",
+     "team_power": "18G 813M 711K",
+     "recommended_power": "46,897,561,017 (level 10)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift35-gingercraven",
+     "note": "18.814G / 46.898G = 40.1% of recommended (header power). CRISPY CLEAR, 0.000% at 3.000 (IAFNe-04m20.0s). Countdown 7일 9시간. 40.1%: just over the 35% line (18.76G).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 10,
+      "boss_kr": "비겁한 쿠키",
+      "boss_en": "GingerCraven",
+      "team_power": "18G 813M 711K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 46897561017,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-IAFNvjeqUqw"
+      ]
+     }
+    }
+   ],
+   "teams": [
+    {
+     "name": "gni-rift15-mob-windarcher",
+     "scope": "rift",
+     "for": "Rift levels 6 (Cake Hounds) and 7 (Cool Mint) at 15%",
+     "cookies": [
+      {
+       "kr": "바람궁수 쿠키",
+       "en": "Wind Archer Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "dealer; fourth in the on-screen attack order",
+       "note": "Fourth in the attack order overlay (IAFN 00:32). Subtitle: 위치베리 or 시커 can replace it."
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "94",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "?",
+       "note": "Levelled to 94."
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": "Levelled to 80."
+      },
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "81",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": "Levelled to 81."
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "dealer; third in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "체리콜라맛 쿠키",
+       "en": "Cherry Cola Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Levelled to 80, below the top six of the attack order."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 0★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "red-brown pet with sauce, 20★ (unidentified; 핫도그도그? low confidence) (level 6); 복주머니 17★ in its place for level 7 (IAFN 01:04)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen IAFN 00:04 (lobby 4.5G); battle bar 00:32 and 00:58 reads the same twelve with levels.",
+     "why": "Attack order overlay: 1.우유 2.피겨 3.바리공주 4.바람궁수 5.마카롱 6.치즈케이크. The lower-levelled cookies (피노 81, 정전 94, 딸크 80, 체콜 80) sit below that order. Perks fixed (복지카드 고정), captain Milk.",
+     "substitutions": [
+      "바람궁수 → 위치베리 (level 6 subtitle) or 위치베리/시커 (level 7 subtitle).",
+      "Level 7 (Cool Mint, airborne boss): swap the third pet for an airborne-resist pet (복주머니)."
+     ],
+     "unorthodox": [
+      "Cherry Cola and Strawberry Crepe levelled to 80; Pinot Noir 81."
+     ]
+    },
+    {
+     "name": "gni-rift15-hammer",
+     "scope": "rift",
+     "for": "Rift level 8 Werehound Princess at 15%",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "dealer (DoT/DEF shred)",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "77",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "?",
+       "note": "Levelled to 77."
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "94",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "dealer",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "90",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": "Levelled to 90."
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "81",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "?",
+       "note": "Levelled to 80 here; subtitle: 다크초코 can replace her."
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 0★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "복주머니 pet, 17★ (named in the subtitles as 복주머니 펫 / 에어본 저항 펫: airborne resist)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen IAFN 01:58 (lobby 4.62G); battle bar IAFNe-02m36.0s.",
+     "why": "Subtitle: an airborne boss, so wear the airborne-resist pet (에어본 저항 펫); 바리공주 may be swapped for 다크초코.",
+     "substitutions": [
+      "바리공주 → 다크초코 쿠키"
+     ],
+     "unorthodox": [
+      "Princess Bari at Lv.80 in this deck (100 in the others)."
+     ]
+    },
+    {
+     "name": "gni-rift15-truck",
+     "scope": "rift",
+     "for": "Rift level 9 Rowdy Trucks at 15%",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "90",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": "Levelled to 90."
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "dealer",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "dealer",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "81",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "위치베리맛 쿠키",
+       "en": "Witchberry Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "?",
+       "note": "Levelled to 80."
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "94",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "체리콜라맛 쿠키",
+       "en": "Cherry Cola Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Levelled to 80; subtitle: 딸기크레페 can replace her."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 0★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "red-brown pet with sauce, 20★ (unidentified; 핫도그도그? low confidence)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen IAFN 02:46 (lobby 4.49G, partly covered by the perk card); battle bar IAFNe-03m22.0s.",
+     "why": "Subtitle: perk cards fixed; 체리콜라 can be swapped for 딸기크레페.",
+     "substitutions": [
+      "체리콜라 → 딸기크레페"
+     ],
+     "unorthodox": []
+    },
+    {
+     "name": "gni-rift35-gingercraven",
+     "scope": "rift",
+     "for": "Rift GingerCraven (levels 10, the season 1 last boss of the cycle) at 35%",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "82",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "95",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "97",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": "Levelled to 97; subtitle: 라임맛 쿠키 can replace 허브."
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "77",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": "Levelled to 77; subtitle: 바리공주 can replace 메론소다."
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "60",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": "Levelled to 60."
+      }
+     ],
+     "pets": [
+      "SSR Rift pet, 0★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)",
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "와사비 pet, 20★ MAX (subtitle: 와사비펫; green octopus art, 와사비 문어 / Octo Wasabi)"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation screen IAFN 03:26 (lobby 4.9G); battle bar IAFNe-04m17.0s.",
+     "why": "Subtitle: 와사비 pet to extend the sustained dealers' skill duration (지속딜러 스킬 지속시간).",
+     "substitutions": [
+      "메론소다 → 바리공주",
+      "허브 → 라임"
+     ],
+     "unorthodox": [
+      "Dark Choco at Lv.60."
+     ]
+    }
+   ],
+   "builds": [],
+   "mechanics": [
+    "Intro subtitle: the Rift is built of the bosses and then repeats; clearable without much difficulty; just wear the right pet (펫 착용해주시면됩니다).",
+    "Subtitle: perk cards are fixed (복지카드는 고정입니다)."
+   ],
+   "rift": [
+    "The first pet slot is an SSR pet at 0★ in this video and 1★ in the levels 11-20 video: the Rift reward pet (see the pets entry)."
+   ],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "에어본 보스이기에 에어본 저항 펫을 착용해 주세요",
+     "en": "It is an airborne boss, so equip an airborne-resist pet."
+    },
+    {
+     "kr": "지속딜러 스킬 지속시간을 위해 와사비펫 사용합니다",
+     "en": "I use the Wasabi pet for the sustained dealers' skill duration."
+    },
+    {
+     "kr": "바람궁수 쿠키 대신 위치베리맛 쿠키 사용 가능합니다",
+     "en": "Witchberry can be used instead of Wind Archer."
+    }
+   ]
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-z9nKY8Z7Ius",
+   "url": "https://www.youtube.com/watch?v=z9nKY8Z7Ius",
+   "date": "2026-10-04",
+   "title_kr": "쿠키런 크럼블 차원의 이면 4단계 폭주단 트럭 보스 공략 가이드 전투력 7G 342M 클리어",
+   "title_en": "Rift level 4 Rowdy Trucks cleared at 7.34G",
+   "relevance": 2,
+   "scope": "rift",
+   "summary_en": "그니 short: Rift level 4 trucks cleared at header 7G 342M 19K, 37.8% of recommended (15%). Countdown 9일 6시간 (≈2026-09-28). Shows his plate gear and the stage gear preset.",
+   "clears": [
+    {
+     "stage": "rift-4",
+     "boss": "폭주단 트럭",
+     "team_power": "7G 342M 19K",
+     "recommended_power": "19,438,391,006 (level 4)",
+     "bracket": "15",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "gni-rift15-truck-4",
+     "note": "7.342G / 19.438G = 37.8% of recommended (header power). Header z9nK-00m04.0s; CRISPY CLEAR z9nK-00m30.0s.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 4,
+      "boss_kr": "폭주단 트럭",
+      "boss_en": "Rowdy Truck",
+      "team_power": "7G 342M 19K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 19438391006,
+      "bracket": 15,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-z9nKY8Z7Ius"
+      ]
+     }
+    }
+   ],
+   "teams": [
+    {
+     "name": "gni-rift15-truck-4",
+     "scope": "rift",
+     "for": "Rift level 4 Rowdy Trucks at 15%",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "91",
+       "stars": "?",
+       "position": "battle bar 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "83",
+       "stars": "?",
+       "position": "battle bar 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 5",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 7",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "위치베리맛 쿠키",
+       "en": "Witchberry Cookie",
+       "level": "80",
+       "stars": "?",
+       "position": "battle bar 8",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 9",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "정글전사 쿠키",
+       "en": "Tiger Lily Cookie",
+       "level": "94",
+       "stars": "?",
+       "position": "battle bar 10",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 11",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 12",
+       "role": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "not shown"
+     ],
+     "perks": "초고속 승진 (ATK of the highest-ATK ally +7%) + 열정페이 (highest-ATK ally ATK +20%, max HP −20%); Lv.4 베테랑 용병단",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Cookies read from the battle bar z9nK-00m04.0s (short z9nKY8Z7Ius).",
+     "why": "The levels-9/14 truck deck shape, with Strawberry Crepe at 100.",
+     "substitutions": [],
+     "unorthodox": []
+    }
+   ],
+   "builds": [
+    {
+     "cookie": "team",
+     "scope": "rift",
+     "sugar_runes": "",
+     "gear": "Stage preset (dropdown reads 스테이지). Plate gear on screen: Lv.108 +19, Lv.108 +18, Lv.108 +17, Lv.104 +16, Lv.105 +16, Lv.104 +16; second row +15, +15, +16, +16, +17, +16 (levels cut off). Oven Lv.36 (level 4) and Lv.37 (level 5).",
+     "thresholds": "",
+     "why": "Read off the 그니 shorts z9nK-00m04.0s and NEmo-00m31.0s."
+    }
+   ],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-NEmo5DDllPI",
+   "url": "https://www.youtube.com/watch?v=NEmo5DDllPI",
+   "date": "2026-10-04",
+   "title_kr": "쿠키런 크럼블 차원의 이면 5단계 비겁한 쿠키 보스 공략 가이드 전투력 10G 379M 클리어",
+   "title_en": "Rift level 5 GingerCraven cleared at 10.38G",
+   "relevance": 2,
+   "scope": "rift",
+   "summary_en": "그니 short: Rift level 5 GingerCraven at 0.000% (clock 1.267) with header 10G 379M 165K, 43.6% of recommended: a 35% clear. Countdown 8일 20시간.",
+   "clears": [
+    {
+     "stage": "rift-5",
+     "boss": "비겁한 쿠키",
+     "team_power": "10G 379M 165K",
+     "recommended_power": "23,805,240,582 (level 5)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "",
+     "note": "10.379G / 23.805G = 43.6% of recommended (header power). NEmo-00m31.0s. Team not transcribed (bar hidden by the subtitle).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 5,
+      "boss_kr": "비겁한 쿠키",
+      "boss_en": "GingerCraven",
+      "team_power": "10G 379M 165K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 23805240582,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-NEmo5DDllPI"
+      ]
+     }
+    }
+   ],
+   "teams": [],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-gni-rift-shorts",
+   "url": "https://www.youtube.com/@그니그니-z2q/shorts",
+   "date": "2026-10-05",
+   "title_kr": "쿠키런 크럼블 차원의 이면 N단계 … 보스 공략 가이드 전투력 … 클리어 (shorts)",
+   "title_en": "그니's per-level Rift shorts (levels 6-20)",
+   "relevance": 1,
+   "scope": "rift",
+   "summary_en": "Watch digests only (yt-9AwxuMpKHwk, JKZuINuA8Y0, Z990uawZtAA, FCrUgwQYa2g, Poq1gVPlAU4, KotH6qbU4ps, mPqWUqpWffg, N3kgQXQIkEo, kKHShqkL558, zYtQyzgCznA, HJjGe5EgDyU, IoWyMjGfgZE, DwNwmsPfkBw, 1TUHpNYwNvA, R8bKEfQoj48; published 2026-10-04/05). Their titles carry the same header powers as the two long videos, which are the frames cited above; no separate clears.",
+   "clears": [],
+   "teams": [],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-lyctKWAZdYI",
+   "url": "https://www.youtube.com/watch?v=lyctKWAZdYI",
+   "date": "2026-10-04",
+   "title_kr": "[쿠키런크럼블] 차원의 이면 시즌1 비겁한 쿠키 공략 (5단계)",
+   "title_en": "Rift season 1 GingerCraven guide (level 5)",
+   "relevance": 2,
+   "scope": "rift",
+   "summary_en": "서신우 clears Rift level 5 GingerCraven (0.000% at 0.233, lycte-01m56.0s) with an all-Lv.100 dealer-heavy deck at lobby 4.37G. The in-Rift header is cropped out, so no bracket. He says the Rift GingerCraven only has a higher power cut and is easier than at launch, a pure HP pig; no Moon Rabbit needed; perks just raise Milk's ATK. Shows Brightseeker's sugar runes (all Skill Haste).",
+   "clears": [
+    {
+     "stage": "rift-5",
+     "boss": "비겁한 쿠키",
+     "team_power": "not shown (lobby 4.37G)",
+     "recommended_power": "23,805,240,582 (level 5)",
+     "bracket": "?",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "seosinwoo-rift-gingercraven",
+     "note": "Auto-summon reservation on; boss 70% at 13.233, 53% at 9.233, 0.000% at 0.233. Countdown 3일 21시간 (≈2026-10-04 06:00 UTC).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 5,
+      "boss_kr": "비겁한 쿠키",
+      "boss_en": "GingerCraven",
+      "team_power": null,
+      "power_basis": null,
+      "rift_power_level": null,
+      "recommended_power": 23805240582,
+      "bracket": null,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "unverified",
+      "sources": [
+       "web:yt-lyctKWAZdYI"
+      ]
+     }
+    }
+   ],
+   "teams": [
+    {
+     "name": "seosinwoo-rift-gingercraven",
+     "scope": "rift",
+     "for": "Rift GingerCraven (level 5)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "허브맛 쿠키",
+       "en": "Herb Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "다크초코 쿠키",
+       "en": "Dark Choco Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "와사비 pet, 20★ MAX (subtitle: 와사비펫; green octopus art, 와사비 문어 / Octo Wasabi)",
+      "SSR Rift pet, 0★ (dark-red orb with a ring; the same icon drops as an SSR reward on the level-20 clear, kMw3f-08m05.0s; likely 무한바퀴 / Continuum Cog, low confidence)"
+     ],
+     "perks": "Raise Milk's ATK (용병단도 우유의 공격력만 높여주시면 됩니다); cards not shown",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Formation preset 4, lyct-00m10.0s; battle bar lycte-01m27.0s.",
+     "why": "\"조합은 이렇게 딜러를 많이 넣는\": many dealers; unlike the launch GingerCraven no 달토끼 (Moon Rabbit) for survival.",
+     "substitutions": [],
+     "unorthodox": []
+    }
+   ],
+   "builds": [
+    {
+     "cookie": "브라이트시커 쿠키",
+     "scope": "rift",
+     "sugar_runes": "SSR 스킬가속 +4.00, SR 스킬가속 +3.00, SR 스킬가속 +3.00, SSR 스킬가속 +4.00 (lyct-00m38.0s)",
+     "gear": "",
+     "thresholds": "",
+     "why": "Shown in the 슈가룬 section."
+    }
+   ],
+   "mechanics": [],
+   "rift": [
+    "Rift GingerCraven: only the power cut is higher; easier than at launch, just a lot of HP (서신우)."
+   ],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "저희가 기존에 생각하는 비겁이는 공격이 아파서 달토끼도 넣고",
+     "en": "The GingerCraven we knew hit hard, so we even ran Moon Rabbit;"
+    },
+    {
+     "kr": "차원의 경우 그냥 컷만 높을 뿐 난이도는 초창기보다 쉬운 상태이며 단순히 체력만 많은 체력 돼지라",
+     "en": "in the Rift only the cut is higher; it is easier than at launch, just an HP pig."
+    },
+    {
+     "kr": "용병단도 우유의 공격력만 높여주시면 됩니다",
+     "en": "For the mercenary perks, just raise Milk's ATK."
+    }
+   ]
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-uk9BbWZXnWY",
+   "url": "https://www.youtube.com/watch?v=uk9BbWZXnWY",
+   "date": "2026-10-06",
+   "title_kr": "[kor] 쿠키런 크럼블 차원의 이면 6단계 / 7단계 / 8단계 (stanley shorts)",
+   "title_en": "stanley: Rift levels 6-8",
+   "relevance": 1,
+   "scope": "rift",
+   "summary_en": "stanley (한정선, Lv.190, Rift rank 1024th-1031st, blessing Lv.7) clears Rift levels 6-8 at 35% (46.5%, 40.4%, 42.4%) on 2026-10-06 with an all-Lv.100 Brightseeker/Scorpion deck and the Arena gear preset. Also covers JfbjaxtymVg (level 7) and 9lneleKCG6I (level 8); the [en] uploads _lvscV5gi28 / R9NdoZsVK_M are the same clips.",
+   "clears": [
+    {
+     "stage": "rift-6",
+     "boss": "케이크 들개떼",
+     "team_power": "13G 124M 298K",
+     "recommended_power": "28,240,662,352 (level 6)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "",
+     "note": "13.124G / 28.241G = 46.5% of recommended (header power). CRISPY CLEAR, 0.000% at 6.333 (uk9B-00m24.0s). Countdown 1일 22시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 6,
+      "boss_kr": "케이크 들개떼",
+      "boss_en": "Cake Hound Pack",
+      "team_power": "13G 124M 298K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 28240662352,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-uk9BbWZXnWY"
+      ]
+     }
+    },
+    {
+     "stage": "rift-7",
+     "boss": "쿨링민트맛 쿠키",
+     "team_power": "12G 898M 638K",
+     "recommended_power": "31,941,744,070 (level 7)",
+     "bracket": "35",
+     "result": "?",
+     "play": "?",
+     "retries": "",
+     "team": "",
+     "note": "12.899G / 31.942G = 40.4% of recommended (header power). Only the fight start (100%) was framed (Jfbj-00m02.0s).",
+     "rift_attempt": {
+      "season": 1,
+      "level": 7,
+      "boss_kr": "쿨링민트맛 쿠키",
+      "boss_en": "Cool Mint Cookie",
+      "team_power": "12G 898M 638K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 31941744070,
+      "bracket": 35,
+      "result": "?",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "unverified",
+      "sources": [
+       "web:yt-JfbjaxtymVg"
+      ]
+     }
+    },
+    {
+     "stage": "rift-8",
+     "boss": "초코크림 늑대 망치공주",
+     "team_power": "15G 807M 947K",
+     "recommended_power": "37,244,770,714 (level 8)",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "",
+     "note": "15.808G / 37.245G = 42.4% of recommended (header power). CRISPY CLEAR, 0.000% at 6.100 (9lne-00m24.0s). Countdown 1일 5시간.",
+     "rift_attempt": {
+      "season": 1,
+      "level": 8,
+      "boss_kr": "초코크림 늑대 망치공주",
+      "boss_en": "Choco Werehound Princess",
+      "team_power": "15G 807M 947K",
+      "power_basis": "rift",
+      "rift_power_level": null,
+      "recommended_power": 37244770714,
+      "bracket": 35,
+      "result": "clear",
+      "play": null,
+      "evidence": "screenshot",
+      "suggested_standing": "accepted",
+      "sources": [
+       "web:yt-9lneleKCG6I"
+      ]
+     }
+    }
+   ],
+   "teams": [
+    {
+     "name": "stanley-rift35",
+     "scope": "rift",
+     "for": "Rift levels 6-8 (35%)",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "전갈맛 쿠키",
+       "en": "Scorpion Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 5",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 6",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 7",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 8",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 9",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 10",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 11",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "battle bar 12",
+       "role": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "not shown"
+     ],
+     "perks": "",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Level 6 battle bar uk9B-00m02.0s; level 7 swaps 메론소다 for 허브 (Jfbj-00m02.0s); level 8 swaps 바리 for 다크초코? (dark portrait, 9lne-00m24.0s).",
+     "why": "",
+     "substitutions": [],
+     "unorthodox": [
+      "Gear preset dropdown reads 아레나 (Arena preset in the Rift)."
+     ]
+    }
+   ],
+   "builds": [
+    {
+     "cookie": "team",
+     "scope": "rift",
+     "sugar_runes": "",
+     "gear": "Arena preset. Plate gear: Lv.114 +18, Lv.117 +17, Lv.113 +17, Lv.111 +15, Lv.114 +15, Lv.114 +15; Lv.106 +16, Lv.114 +15, Lv.114 +15, ?, ? +17, Lv.112 +16. Oven Lv.39.",
+     "thresholds": "",
+     "why": "uk9B-00m02.0s"
+    }
+   ],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-YSw-vo_FAkE",
+   "url": "https://www.youtube.com/watch?v=YSw-vo_FAkE",
+   "date": "2026-10-02",
+   "title_kr": "[쿠키런크럼블] 레드베리 암살자 최신 공략 (326-18)",
+   "title_en": "Redberry Assassin guide (326-18)",
+   "relevance": 2,
+   "scope": "stage",
+   "summary_en": "서신우 clears 326-18 (twelve Redberry Assassins, the hardest of the eight maps per him) at lobby 3.75G with a manual movement routine. The fight is a survival problem, not a time problem. Clear frame YSw-01m34.0s (0.000% at 0.200); countdown 5일 10시간 (≈2026-10-02).",
+   "clears": [
+    {
+     "stage": "326-18",
+     "boss": "레드베리 암살자 ×12",
+     "team_power": "3.75G (formation screen)",
+     "recommended_power": "? (326-30 is 9.52G)",
+     "bracket": "?",
+     "result": "clear",
+     "play": "manual",
+     "retries": "retry until the layout appears",
+     "team": "seosinwoo-redberry",
+     "note": "3.75G is 39.4% of 326-30's recommended; 326-18's own figure is not in the curated table."
+    }
+   ],
+   "teams": [
+    {
+     "name": "seosinwoo-redberry",
+     "scope": "stage",
+     "for": "326-18 Redberry Assassins",
+     "cookies": [
+      {
+       "kr": "마카롱맛 쿠키",
+       "en": "Macaron Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 1",
+       "role": "buffer; fifth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "호밀맛 쿠키",
+       "en": "Rye Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 2",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "피노누아맛 쿠키",
+       "en": "Pinot Noir Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 3",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "석류맛 쿠키",
+       "en": "Pomegranate Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 4",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "?",
+       "en": null,
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 5",
+       "role": "?",
+       "note": "Unidentified portrait: teal-and-pink-haired cookie with red roses (formation screen)."
+      },
+      {
+       "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+       "en": "Milk Cookie (Crunchy Strong Pediatrician)",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 1, slot 6",
+       "role": "captain (단장); healer; first in the on-screen attack order (공순위)",
+       "note": ""
+      },
+      {
+       "kr": "브라이트시커 쿠키",
+       "en": "Brightseeker Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 1",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "메론소다맛 쿠키",
+       "en": "Melon Soda Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 2",
+       "role": "moved onto the front assassin (subtitle)",
+       "note": ""
+      },
+      {
+       "kr": "치즈케이크맛 쿠키",
+       "en": "Cheesecake Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 3",
+       "role": "buffer; sixth in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "피겨여왕맛 쿠키",
+       "en": "Skating Queen Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 4",
+       "role": "buffer; second in the on-screen attack order",
+       "note": ""
+      },
+      {
+       "kr": "바리공주맛 쿠키",
+       "en": "Princess Bari Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 5",
+       "role": "?",
+       "note": ""
+      },
+      {
+       "kr": "딸기크레페맛 쿠키",
+       "en": "Strawberry Crepe Cookie",
+       "level": "100",
+       "stars": "?",
+       "position": "formation row 2, slot 6",
+       "role": "?",
+       "note": ""
+      }
+     ],
+     "pets": [
+      "yellow sleeping bread-like pet, 20★ (unidentified)",
+      "red-brown pet with sauce, 20★ (unidentified; 핫도그도그? low confidence)",
+      "pink-white-blue pet, 20★ (unidentified)"
+     ],
+     "perks": "shown on screen for players under mercenary Lv.4; not transcribed",
+     "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+     "formation": "Preset 4, YSw-00m18.0s; battle bar YSw-01m34.0s.",
+     "why": "",
+     "substitutions": [],
+     "unorthodox": []
+    }
+   ],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [
+    "Redberry 12-assassin map: start by moving to the 11 o'clock corner; when they reach your nose release and fight; move Melon Soda just far enough to reach the front assassin, then drop straight down and kill the high-HP ones from the bottom up; the outcome depends on where the assassins spawn, so retry until that layout appears."
+   ],
+   "disagreements": [],
+   "quotes": [
+    {
+     "kr": "8개의 맵 중에서 가장 어려운 것은 설원의 비겁이도 왕국의 쿨민도 아닌 왕국의 암살자로",
+     "en": "Of the eight maps the hardest is neither the snowfield GingerCraven nor the kingdom Cool Mint but the kingdom assassins,"
+    },
+    {
+     "kr": "암살자의 경우 기본적으로 시간이 부족하지 생존에 문제가 되는 곳은",
+     "en": "with the assassins the problem is basically time, not survival…"
+    },
+    {
+     "kr": "이러한 구도가 나올 때까지 리트를 하셔야 합니다",
+     "en": "You have to retry until this layout comes up."
+    }
+   ]
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-gni-stage-shorts",
+   "url": "https://www.youtube.com/@그니그니-z2q/shorts",
+   "date": "2026-10-07",
+   "title_kr": "쿠키런 크럼블 스테이지 NNN-NN … 보스 공략 가이드 전투력 … 클리어 (shorts)",
+   "title_en": "그니's main-stage shorts",
+   "relevance": 1,
+   "scope": "stage",
+   "summary_en": "Title-only stage clears uploaded 2026-10-05/07 (digests yt-JvVT5kzzuAk 322-30 Cool Mint 3G 486M, yt-myLKDSH0d5g 322-29 Durian Pirates 3G 486M, yt-Ir9g3j9MVik 321-20 뿔꿈툴이 3G 355M, yt-h9zeTzIrESk 283-30 GingerCraven 1G 979M; search listings also show 321-29 3G 485M, 283-20/22, 285-24, 286-20, 278-20, 272-30, 270-30, 258-30, 255-30). 그니 was already in the Rift at 4.5G lobby by 2026-09-28, so this is older footage uploaded late.",
+   "clears": [
+    {
+     "stage": "322-30",
+     "boss": "쿨링민트맛 쿠키",
+     "team_power": "3G 486M (title)",
+     "recommended_power": "8,630,958,403",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "",
+     "note": "40.4%; title only; gameplay predates the window (inferred)."
+    },
+    {
+     "stage": "283-30",
+     "boss": "비겁한 쿠키",
+     "team_power": "1G 979M (title)",
+     "recommended_power": "3,314,688,155",
+     "bracket": "35",
+     "result": "clear",
+     "play": "?",
+     "retries": "",
+     "team": "",
+     "note": "59.7%; title only; older footage."
+    }
+   ],
+   "teams": [],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-9Iv1DfuRUC4",
+   "url": "https://www.youtube.com/watch?v=9Iv1DfuRUC4",
+   "date": "2026-10-06",
+   "title_kr": "[쿠키런 크럼블] 최종 스테이지 클리어! 바리공주맛 쿠키 종결 덱 공략",
+   "title_en": "Final stage cleared: Princess Bari end-game stage decks",
+   "relevance": 1,
+   "scope": "stage",
+   "summary_en": "누리머 (Noorimer) presents the four stage decks he used to 328-30 (1 pierce idle deck, 2 Bari-Cherry Cola rapid-hit deck, 3 airborne-boss deck, 4 GingerCraven deck). Digest only: the download failed (YouTube bot check), so no frames.",
+   "clears": [],
+   "teams": [],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-OKBiO8_0J38",
+   "url": "https://www.youtube.com/watch?v=OKBiO8_0J38",
+   "date": "2026-10-06",
+   "title_kr": "쿠키런 크럼블 샤르도네맛 쿠키 출시 얼마나 강력할까??",
+   "title_en": "ND러너: how strong will Chardonnay be?",
+   "relevance": 1,
+   "scope": "both",
+   "summary_en": "ND러너 preview of the new SSR Chardonnay. Digest only. A top comment (@BA-vc7mk, 4 likes) says the leaked stats are crit rate and knockback resist, and that the next patch raises the cookie level cap to 150 and adds a map; this conflicts with the patch notes' 120.",
+   "clears": [],
+   "teams": [],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [
+    "Comment on OKBiO8_0J38 claims a level cap of 150; the 10-08 patch notes (nv:50417) say 120."
+   ],
+   "quotes": [
+    {
+     "kr": "다음패치에 쿠키레벨 150꺼지 상향되는것과 신규 맵이 하나 등장한다고 합니다",
+     "en": "(comment) next patch raises the cookie level to 150 and adds one new map."
+    }
+   ]
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-XqIsKR4mHes",
+   "url": "https://www.youtube.com/watch?v=XqIsKR4mHes",
+   "date": "2026-10-07",
+   "title_kr": "[쿠키런크럼블] 신규 스테이지 출시! 근데 개선은 거의 안 됐습니다..",
+   "title_en": "서신우: new stages released, but little improved",
+   "relevance": 1,
+   "scope": "both",
+   "summary_en": "서신우's 10-08 patch review (chapters: new SSR, new stages, 내실 확장, daily-dungeon, stage and sub-Lv.100 improvements, bug fixes, power-display problem). Digest only; not watched for content.",
+   "clears": [],
+   "teams": [],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  },
+  {
+   "source": "youtube",
+   "id": "web:yt-R4DuQpjn3gc",
+   "url": "https://www.youtube.com/watch?v=R4DuQpjn3gc",
+   "date": "2026-10-07",
+   "title_kr": "쿠키런 키우기 크럼블 이러다가 망해요! 샤르도네맛 쿠키 등장! 업데이트 소식 [사키엘TV]",
+   "title_en": "사키엘TV: Chardonnay and update news",
+   "relevance": 0,
+   "scope": "both",
+   "summary_en": "Patch-news video; digest only, nothing on Rift teams.",
+   "clears": [],
+   "teams": [],
+   "builds": [],
+   "mechanics": [],
+   "rift": [],
+   "stage_types": [],
+   "disagreements": [],
+   "quotes": []
+  }
+ ],
+ "glossary": [
+  {
+   "kr": "바람궁수",
+   "en": "Wind Archer Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "Green-haired archer in IAFN 00:04; named 4.바람궁수 in the attack-order overlay (IAFN 00:32) and in the subtitles."
+  },
+  {
+   "kr": "바리공주",
+   "en": "Princess Bari Cookie",
+   "kind": "cookie",
+   "confidence": "high",
+   "evidence": "White horned spirit with a sword; in every deck whose overlay lists 바리공주, swapped out exactly where a subtitle names her (IAFN 01:58, kMw3 07:12)."
+  },
+  {
+   "kr": "공순위",
+   "en": "attack order (ranking of the deck by ATK, shown as an overlay)",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "kMw3 00:24, 02:40, 05:06; IAFN 00:32"
+  },
+  {
+   "kr": "복지카드",
+   "en": "perk cards (용병단 복지)",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "단장 우유, 복지카드 고정 (kMw3 subtitles)"
+  },
+  {
+   "kr": "복주머니 펫",
+   "en": "Lucky-pouch pet (airborne resist), 17★ in 그니's decks",
+   "kind": "pet",
+   "confidence": "low",
+   "evidence": "Subtitle 복주머니 펫 / 에어본 저항 펫 with the white pouch icon (IAFN 01:04). May be the same pet as 색동 주머니 in dc:78865's comments."
+  },
+  {
+   "kr": "와사비펫",
+   "en": "Octo Wasabi pet (와사비 문어)",
+   "kind": "pet",
+   "confidence": "high",
+   "evidence": "Subtitle 와사비펫 with the green octopus icon, 20★ MAX (kMw3 03:14)."
+  },
+  {
+   "kr": "에어본 저항 펫",
+   "en": "airborne-resist pet",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "IAFN subtitles for Cool Mint and Werehound Princess."
+  },
+  {
+   "kr": "축복 Lv",
+   "en": "Blessing level shown at the top right of the in-Rift screen (not 차원의 힘)",
+   "kind": "term",
+   "confidence": "low",
+   "evidence": "축복 Lv.6 (그니), Lv.7 (stanley)"
+  },
+  {
+   "kr": "CRISPY CLEAR",
+   "en": "the clear banner",
+   "kind": "term",
+   "confidence": "high",
+   "evidence": "kMw3e-02m25.0s etc."
+  }
+ ]
+}

@@ -35,6 +35,11 @@ import {
   SOURCE_SITE,
   SPENDING_ORDER_KIND,
   SPEND_ROUTE,
+  accountCookies,
+  accountLineups,
+  accountRoadmapItems,
+  accountRoadmaps,
+  accountSnapshots,
   STEP_BASIS,
   USAGE_KIND,
   growthCurveInput,
@@ -714,6 +719,12 @@ export const REGISTRY = {
   }),
   citations: entry(citations, {}),
   factClaims: entry(factClaims, {}),
+  // The reader's own account, owned by no record: `pnpm import:account` loads it.
+  accountSnapshots: entry(accountSnapshots, { path: "/account" }),
+  accountLineups: entry(accountLineups, {}),
+  accountCookies: entry(accountCookies, {}),
+  accountRoadmaps: entry(accountRoadmaps, {}),
+  accountRoadmapItems: entry(accountRoadmapItems, {}),
 };
 
 /** The registry's type. */

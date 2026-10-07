@@ -33,5 +33,12 @@
  {"kr": "뻥투", "kr_short": ["뻥투력", "투력뻥"], "en": "Padded (inflated) power", "kind": "term", "sources": ["dc:74089", "dc:76290"]},
  {"kr": "팀투", "kr_short": ["팀투력", "파티투력", "덱투"], "en": "Team power", "kind": "term", "sources": ["dc:77329"]},
  {"kr": "자동 사냥 보상", "kr_short": ["자사", "자동사냥 보상"], "en": "Auto-hunt reward chest (coin / EXP / rune hours)", "kind": "term", "sources": ["nv:43444"]},
- {"kr": "이터널", "kr_short": [], "en": "Eternal (top gear rarity; from oven 31)", "kind": "term", "sources": ["web:sugarpocket-catalog"]}
+ {"kr": "이터널", "kr_short": [], "en": "Eternal (top gear rarity; from oven 31)", "kind": "term", "sources": ["web:sugarpocket-catalog"]},
+ {"kr": "경험치", "kr_short": ["경치"], "en": "Cookie EXP", "kind": "term", "note": "경치 is the gallery's short form; 경던 is the EXP daily dungeon.", "sources": ["dc:80209", "nv:50417"]},
+ {"kr": "만렙", "kr_short": ["만렙 확장", "렙확장"], "en": "Level cap (만렙 확장: a cap raise)", "kind": "term", "sources": ["dc:82104", "nv:50417"]},
+ {"kr": "크럼블 레벨", "kr_short": ["크럼블렙"], "en": "Crumble Level, the account level that caps cookie levels", "kind": "term", "sources": ["dc:82104", "dc:82186"]},
+ {"kr": "유출", "kr_short": [], "en": "Leak (client data of an update, posted before its notes)", "kind": "term", "sources": ["dc:79685", "dc:82186"]},
+ {"kr": "와글와글 스페셜 패스", "kr_short": ["스페셜 패스", "스패"], "en": "Rumble Special Pass (₩19,000)", "kind": "term", "sources": ["web:appstore-kr"]},
+ {"kr": "길탈", "kr_short": ["길드 탈퇴"], "en": "Leaving a guild (loses the guild lab's stats)", "kind": "term", "sources": ["dc:81826"]},
+ {"kr": "소급", "kr_short": ["소급 지급"], "en": "Retroactive refund or compensation", "kind": "term", "sources": ["nv:50417"]}
 ]

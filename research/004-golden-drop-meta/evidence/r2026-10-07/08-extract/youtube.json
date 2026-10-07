@@ -1,0 +1,25 @@
+{
+  "lane": "youtube",
+  "note": "YouTube videos in the window, read 2026-10-07 from evidence/r2026-10-07/05-youtube/watch/yt-<id>.txt (description, pinned and top comments) and the stills in evidence/r2026-10-07/05-youtube/frames/<id>-pNN.png (agent-browser screenshots of the player at each tenth of the video; local only). Neither dungeon video has captions. The saved channels (ND러너, 그니, VART, 서신우) posted no Crumble Dungeon video in the window (evidence/r2026-10-07/05-youtube/channel-*.html).",
+  "posts": [
+    {"source": "youtube", "id": "yt-tnAGQ2XgW9o", "url": "https://www.youtube.com/watch?v=tnAGQ2XgW9o", "date": "2026-09-28", "title_kr": "크림블 던전 578G 공략 (총투 15G)", "title_en": "코니: Crumble Dungeon 578G guide (15G total power)", "relevance": 3,
+     "summary_en": "코니's 70 s run: 578.07G at 14.90G total power, 1st, 0.000 s left (frames p10-p90; 549.85G with 10.07 s left at p80). On-screen text and pinned comment: deploy by power order; put every favourite cookie in except Espresso; ATK order Milk, Brightseeker, Figure, Scorpion, Macaron, Cheesecake; captain Milk; perks Passion Pay and 탄액비. A commenter went from 130G to 260G copying it; others report Milk still arriving late.",
+     "scores": [{"score_g": 578.069, "total_power_g": 14.902, "board": "run", "rank": 1, "time_left_s": 0.0}],
+     "mechanics": ["Espresso left out.", "ATK order Milk, Brightseeker, Figure, Scorpion, Macaron, Cheesecake."],
+     "quotes": [{"kr": "전투력 순위대로 배치 / 즐겨찾기 쿠키 다 넣기(에소 제외) / 공격력 순위 우유>시커>피겨>전갈>마카롱>치케 / 단장: 우유 / 복지: 열정페이, 탄액비", "en": "Deploy by power rank; put all favourite cookies in (except Espresso); ATK rank Milk > Brightseeker > Figure > Scorpion > Macaron > Cheesecake; captain Milk; perks Passion Pay, 탄액비"}, {"kr": "이거 진심 좋음 130g에서 260g 쳤음", "en": "This really works: went from 130G to 260G"}]},
+    {"source": "youtube", "id": "yt-p_n0oiKVJ-U", "url": "https://www.youtube.com/watch?v=p_n0oiKVJ-U", "date": "2026-09-28", "title_kr": "[쿠키런 크럼블] 크럼블 던전 260G 고득점 덱 공략", "title_en": "누리머 Noorimer: Crumble Dungeon 260G high-score deck guide", "relevance": 3,
+     "summary_en": "누리머's guide: weekly board 2nd at 261.96G (opening card), total power 12.91G in the fight (p70-p80), roster shown in power order, the first 25 at Lv.100 and the rest at Lv.60-100 (p30). Burned-in subtitles: the perk pair Like A Family with Passion Pay scored better; levels are tuned one at a time so Milk comes out fast. Comments report a 20% drop for one copier and Figure circling on the right.",
+     "scores": [{"score_g": 261.958, "total_power_g": 12.914, "board": "weekly-best", "rank": 2}],
+     "mechanics": ["Like A Family with Passion Pay scored better for this account."],
+     "quotes": [{"kr": "종합 복지 패키지가 점수가 더 잘 나왔습니다", "en": "The combined perk package scored better"}, {"kr": "기존에쓰던덱보다 20%이 낮아졌어요", "en": "20% lower than the deck I used before"}]},
+    {"source": "youtube", "id": "yt-OKBiO8_0J38", "url": "https://www.youtube.com/watch?v=OKBiO8_0J38", "date": "2026-10-06", "title_kr": "쿠키런 크럼블 샤르도네맛 쿠키 출시 얼마나 강력할까??", "title_en": "ND러너: how strong will Chardonnay be?", "relevance": 1,
+     "summary_en": "ND러너's Chardonnay preview (no captions; the description and comments say nothing about Crumble Dungeon).",
+     "scores": [], "mechanics": [], "quotes": []},
+    {"source": "youtube", "id": "yt-qDCEtY9oGtQ", "url": "https://www.youtube.com/watch?v=qDCEtY9oGtQ", "date": "2026-10-04", "title_kr": "[쿠키런크럼블] 다들 열쇠 수량 조절하고 계신가요?", "title_en": "서신우: are you managing your key count?", "relevance": 0,
+     "summary_en": "About Daily Dungeon keys and floor 770, not Crumble Dungeon.",
+     "scores": [], "mechanics": [], "quotes": []},
+    {"source": "youtube", "id": "yt-7HohaFbO2ig", "url": "https://www.youtube.com/watch?v=7HohaFbO2ig", "date": "2026-10-02", "title_kr": "Dungeons Are FINALLY NERFED!", "title_en": "Samool: Dungeons are finally nerfed", "relevance": 0,
+     "summary_en": "Global creator on the Daily Dungeon easing notice; not Crumble Dungeon.",
+     "scores": [], "mechanics": [], "quotes": []}
+  ]
+}

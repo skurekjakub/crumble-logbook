@@ -1,0 +1,590 @@
+{
+  "batch": "naver",
+  "about": "Official Naver cafe (cafe.naver.com/ccrumble) articles for record 003's 2026-10-07 round, captured in evidence/r2026-10-07/04-naver/nv (listings list-naver-*.tsv, cafe searches search-*.txt). Window: Rift 2026-10-03 to 2026-10-07, main stages 2026-09-28 to 2026-10-07; only articles not captured in an earlier round. Shape of evidence/08-extract/BRIEF.md, plus rift_attempt on Rift clears as in r2026-10-03/08-extract/dc-rift15.json. Rift brackets = in-Rift header power (the sword figure under the player name) / curated/rift-levels.json recommended_power (season 1). Stage brackets = header power (battle screen) or, where only a formation screen is shown, the formation-screen 전투력 (marked lobby), divided by curated/stage-chapters.json recommended_power of the chapter's -30 stage; -10/-20 and mid-chapter stages have no recommended power on file, so their bracket is '?'. Cookie names are read from formation portraits; '?' where a portrait could not be named with confidence. Free-board (menu 8) and several guide-board articles came back 'not logged in' (errorCode 0004) and are listed under skipped. Images that the scraper saved as 0-byte files (embedded videos) are noted as unreadable.",
+  "posts": [
+    {
+      "source": "naver", "id": "50328", "url": "https://cafe.naver.com/ccrumble/50328", "date": "2026-10-06",
+      "title_kr": "차원의 이면 7단계 쿨링민트 클리어", "title_en": "Dimensional Rift level 7 Cool Mint clear",
+      "relevance": 3, "scope": "rift",
+      "summary_en": "머핀이 (Lv.190, server rank 1117th) clears Rift level 7 (Cool Mint) at 11G 203M 735K header power, below the 35% line of 12G 776M they quote, i.e. in the 15% bracket (35.1% of recommended). Boss at 0.000% with 5.100 on the clock. Keys: Scorpion must stack from Cool Mint's first attack (the many adds break it), the stack must never drop, DEF shred must land, and if Milk dies retry at once. Lobby power of the deck (formation tab 5) is 4.21G.",
+      "clears": [
+        {
+          "stage": "rift-7", "boss": "쿨링민트맛 쿠키", "team_power": "11G 203M 735K", "recommended_power": "31,941,744,070 (level 7)", "bracket": "15",
+          "result": "clear", "play": "manual", "retries": "many (\"잡몹이 너무 많아서 실패 많이 했었어요\")", "team": "muffin-rift-coolmint-15",
+          "note": "11.204G / 31.942G = 35.1%: the 15% bracket (35% starts at 12,776,697,628, which matches the poster's '35퍼 투력은 12G 776M'). Header shows '차원의 이면 7단계', boss 0.000%, clock 5.100. Lobby (formation) power 4.21G.",
+          "rift_attempt": {
+            "season": 1, "level": 7, "boss_kr": "쿨링민트맛 쿠키", "boss_en": "Cool Mint Cookie",
+            "team_power": "11G 203M 735K", "power_basis": "rift", "rift_power_level": null,
+            "recommended_power": 31941744070, "bracket": 15, "result": "clear", "play": "manual",
+            "evidence": "screenshot", "suggested_standing": "accepted", "sources": ["nv:50328"]
+          }
+        }
+      ],
+      "teams": [
+        {
+          "name": "muffin-rift-coolmint-15", "scope": "rift", "for": "Rift Cool Mint (level 7) at 15%",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5★ (bar)", "position": "front row 1 / bar 1", "role": "buffer", "note": "" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5★", "position": "front row 2 / bar 3", "role": "poison stacks, DEF shred", "note": "the clear hinges on its stacks from Cool Mint's first attack" },
+            { "kr": "치즈케이크맛 쿠키?", "en": "Cheesecake (portrait read, low confidence)", "level": "100", "stars": "5★", "position": "front row 3 / bar 5", "role": "support", "note": "gold winged portrait" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5★", "position": "front row 4", "role": "buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5★", "position": "front row 5 / bar 9 (captain banner)", "role": "captain, healer", "note": "if Milk dies, retry" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "100", "stars": "5★", "position": "front row 6", "role": "tank, DEF shred", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5★", "position": "back row 1 / bar 2", "role": "main dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키?", "en": "Pinot Noir (portrait read, low confidence)", "level": "100", "stars": "5★", "position": "back row 2 / bar 4", "role": "?", "note": "green-robed priest with book" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5★", "position": "back row 3", "role": "skill-AMP beam", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "100", "stars": "5★", "position": "back row 4", "role": "dealer", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "100", "stars": "5★", "position": "back row 5", "role": "?", "note": "pink spiky portrait" },
+            { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit", "level": "100", "stars": "5★", "position": "back row 6 / bar 12", "role": "ATK-down support", "note": "" }
+          ],
+          "pets": ["? green cactus pet (20★)", "? white-red pet (17★)", "? dark planet pet with red eye (0★; same art as the player's Rift title icon, possibly the Rift pet 무한바퀴)"],
+          "perks": "", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "two rows of six; formation tab 5",
+          "why": "Scorpion poison stacks and DEF shred carry Cool Mint; all cookies Lv.100 (no level adjustment visible in the bar).",
+          "substitutions": [], "unorthodox": []
+        }
+      ],
+      "builds": [], "mechanics": [],
+      "rift": [
+        "15% clear of Rift level 7 at 11.20G header power (35.1% of 31.94G).",
+        "Poster: after this, waiting for 차원의 힘 to rise is the only way on ('이제 차원의 힘 오를 때까지 기다려야 됨')."
+      ],
+      "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "35퍼 투력은 12G 776M인데 11G 203M으로 클리어", "en": "The 35% power is 12G 776M, but I cleared at 11G 203M." },
+        { "kr": "쿨민 공격 첫트부터 전갈이 스택 바로 쌓아줘야 함 (잡몹이 너무 많아서 실패 많이 했었어요 ㅠ) 중간에 전갈 스택 풀리면 절대 안 되고 방깎도 잘 들어가야 하고 가끔 우유가 죽는데.. 이러면 바로 리트", "en": "Scorpion has to build stacks from Cool Mint's very first attack (I failed a lot because of the many adds); the stacks must never drop, DEF shred has to land, and sometimes Milk dies — then retry immediately." },
+        { "kr": "이제 차원의 힘 오를 때까지 기다려야 됨..", "en": "Now I have to wait until my Dimensional Energy goes up." }
+      ]
+    },
+    {
+      "source": "naver", "id": "49390", "url": "https://cafe.naver.com/ccrumble/49390", "date": "2026-10-04",
+      "title_kr": "차원의 이면 시즌1 비겁한 쿠키 공략 (5단계)", "title_en": "Rift season 1 GingerCraven guide (level 5)",
+      "relevance": 1, "scope": "rift",
+      "summary_en": "서신우 links a YouTube video of Rift level 5 (GingerCraven); the post body only has the thumbnail (boss intro, no power shown). He notes the boss order: Cake Hounds, Cool Mint, Werehound Princess, Truck, GingerCraven, then level 6 Cake Hounds and level 7 Cool Mint again, so the five repeat.",
+      "clears": [
+        { "stage": "rift-5", "boss": "비겁한 쿠키", "team_power": "?", "recommended_power": "23,805,240,582 (level 5)", "bracket": "?", "result": "?", "play": "?", "retries": "", "team": "",
+          "note": "Thumbnail only (BOSS intro); the video itself is not captured on this lane.",
+          "rift_attempt": { "season": 1, "level": 5, "boss_kr": "비겁한 쿠키", "boss_en": "GingerCraven", "team_power": null, "power_basis": null, "rift_power_level": null, "recommended_power": 23805240582, "bracket": null, "result": "?", "play": "?", "evidence": "text", "suggested_standing": "unverified", "sources": ["nv:49390"] } }
+      ],
+      "teams": [],
+      "builds": [], "mechanics": [],
+      "rift": ["Boss cycle confirmed by the poster: 들개 → 쿨민 → 망치 → 트럭 → 비겁이, repeating (level 6 들개, level 7 쿨민)."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "들개, 쿨민, 망치, 트럭, 비겁이 하고 다시 6단계 들개 7단계 쿨민인 걸 보니 저렇게 5개를 무한 반복하나 보네요", "en": "Hounds, Cool Mint, Hammer, Truck, GingerCraven, then level 6 Hounds and level 7 Cool Mint again — so those five repeat forever." }]
+    },
+    {
+      "source": "naver", "id": "50417", "url": "https://cafe.naver.com/ccrumble/50417", "date": "2026-10-07",
+      "title_kr": "10월 8일(목) 업데이트 안내", "title_en": "Thursday 8 October update notes",
+      "relevance": 3, "scope": "both",
+      "summary_en": "Official notes for the 10-08 patch: new SSR Chardonnay Cookie (Grass support, '신록의 성역'; a wall that raises crit chance and knockback resistance for allies in a line, gives the Volley (다발) synergy and damages enemies); main stages extended to 364-30 (new region Grape Divines Abbey); Gnome Lab basic research to 130-2 and special to 22; cookie level cap raised to 120; Rumble Arena season 2; main-stage boss fights: the normal monsters that appear with a boss have their ATK lowered below the boss's; Lv.79–100 cookie EXP requirement lowered with retroactive refund; Rift season 2 clear rewards add Syrup Ore (시럽쇳물), SSR choice boxes and 1-minute speed-ups, and the season 2 shop sells more Choco Steel and Syrup Ore; the missing floating gift box in the Rift is fixed. No change to recommended power or 차원의 힘 is mentioned. Comments: entering season 2 requires clearing the extended stages (to 364-30).",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": [
+        "Main-stage boss fights: normal monsters spawning with the boss now have lower ATK than the boss (10-08).",
+        "Cookie level cap 100 → 120 (10-08); Lv.79–100 EXP cost cut sharply (Lv.100: 13,911,155 → 3,347,644).",
+        "Main stages extended to 364-30 (new region 그레이프 디바인즈 수도원)."
+      ],
+      "rift": [
+        "Rift season 2 (from 10-08): stage clear rewards add Syrup Ore, SSR choice boxes and 1-min speed-ups; the S2 shop raises Choco Steel and Syrup Ore exchange limits.",
+        "Bug fix: the floating gift box did not appear in the Rift; fixed 10-08 (compensation in nv:50685).",
+        "Bug fix: the pre-Rift auto-hunt reward popup did not show Rift reward amounts.",
+        "Commenter 레몬소베트: season 2 Rift entry requires clearing the extended stages (to 364-30), not 324-30/328-30.",
+        "Nothing in the notes on recommended power, the power gate or 차원의 힘."
+      ],
+      "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "샤르도네맛 쿠키는 ‘신록의 성역’을 사용하는 풀속성 지원형 SSR 쿠키입니다.", "en": "Chardonnay Cookie is a Grass-element support SSR cookie that uses 'Verdant Sanctuary'." },
+        { "kr": "신록의 장벽으로 직선 상의 아군에게 치명확률과 밀어내기 저항을 올려 주고 다발 시너지를 제공하며, 적에게 피해를 입힙니다.", "en": "Its Verdant Barrier raises Crit Chance and knockback resistance for allies in a straight line, provides the Volley synergy, and damages enemies." },
+        { "kr": "메인 스테이지가 364-30까지 확장됩니다.", "en": "Main stages are extended to 364-30." },
+        { "kr": "노움 연구소의 기본 연구가 130-2, 특별 연구가 22까지 추가됩니다.", "en": "Gnome Lab basic research is added up to 130-2 and special research up to 22." },
+        { "kr": "쿠키 최대 레벨 상한이 120레벨까지 확장됩니다.", "en": "The cookie level cap is raised to Lv.120." },
+        { "kr": "모든 서버의 용병단들과 대결하는 경쟁 콘텐츠 와글와글 아레나의 새로운 시즌이 시작됩니다.", "en": "A new season of Rumble Arena, the competitive content against mercenary groups of all servers, begins." },
+        { "kr": "보스전 진행 시 함께 등장하는 일반 몬스터의 공격력이 보스보다 낮게 하향 조정됩니다.", "en": "In boss fights, the ATK of normal monsters that appear with the boss is lowered below the boss's." },
+        { "kr": "쿠키 79~100레벨 구간의 레벨업 필요 경험치가 하향됩니다.", "en": "The EXP needed to level cookies from 79 to 100 is lowered." },
+        { "kr": "ㄴ Lv.100 : 기존 13,911,155 ➔ 3,347,644", "en": "Lv.100: was 13,911,155, now 3,347,644." },
+        { "kr": "차원의 이면 시즌2 단계 클리어 보상에 시럽쇳물, SSR 선택 상자, 1분 가속권이 새롭게 추가됩니다.", "en": "Syrup Ore, SSR choice boxes and 1-minute speed-ups are added to Dimensional Rift season 2 level-clear rewards." },
+        { "kr": "차원의 이면 시즌2 교환소에서 초코강 및 시럽쇳물의 교환 가능 횟수가 증가합니다.", "en": "The Rift season 2 shop raises the exchange limits for Choco Steel and Syrup Ore." },
+        { "kr": "차원의 이면 진행 중 떠다니는 선물상자가 노출되지 않던 현상이 수정됩니다.", "en": "Fixed: the floating gift box did not appear while in the Dimensional Rift." },
+        { "kr": "차원의 이면 진입 전 자동 사냥 보상 내 스테이지 보상 상세 정보 팝업에서 차원의 이면을 통해 획득 가능한 보상량으로 표기되지 않았던 문제가 수정됩니다.", "en": "Fixed: before entering the Rift, the auto-hunt stage-reward detail popup did not show the amounts obtainable through the Rift." },
+        { "kr": "차원의 이면에서 보스 소환하기 미션 카운트가 정상 반영되지 않았던 현상이 수정되었습니다. (10월 2일)", "en": "(Fixed 10-02) The 'summon boss' mission count was not counted in the Rift." },
+        { "kr": "ㄴ ㄴㄴ 이번에 스테 늘어났으니 늘어난 곳까지 다 뚫어야 시즌2 이면 진입 (레몬소베트, comment)", "en": "(Comment) No — stages were extended this time, so you must clear up to the new end to enter the season 2 Rift." }
+      ]
+    },
+    {
+      "source": "naver", "id": "50685", "url": "https://cafe.naver.com/ccrumble/50685", "date": "2026-10-07",
+      "title_kr": "차원의 이면 떠다니는 선물 상자 미노출 현상 관련 보상 안내", "title_en": "Compensation for the Rift floating gift box not appearing",
+      "relevance": 1, "scope": "rift",
+      "summary_en": "Official: players who reached the Rift get random gift boxes (same pool as the floating box) = days since reaching the Rift × 3, by mail after the 10-08 update, claimable until 11-21. Fix lands 10-08.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [],
+      "rift": ["Compensation: random gift box × (days since reaching the Rift × 3), by mail after 10-08."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "지급 수량 : 차원의 이면 도달 후 경과 일수 X 3개", "en": "Amount: days elapsed since reaching the Rift × 3." }]
+    },
+    {
+      "source": "naver", "id": "50393", "url": "https://cafe.naver.com/ccrumble/50393", "date": "2026-10-07",
+      "title_kr": "10월 8일(목) 점검 사전 안내", "title_en": "Advance notice: 10-08 maintenance",
+      "relevance": 1, "scope": "both",
+      "summary_en": "Maintenance 2026-10-08 13:00–16:00 KST.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "점검 일시: 10/8 13:00 ~ 16:00 (KST)", "en": "Maintenance: 10/8 13:00–16:00 KST." }]
+    },
+    {
+      "source": "naver", "id": "50582", "url": "https://cafe.naver.com/ccrumble/50582", "date": "2026-10-07",
+      "title_kr": "이번 업데이트 문제점", "title_en": "Problems with this update",
+      "relevance": 2, "scope": "both",
+      "summary_en": "서신우's critique of the 10-08 notes. Rift-relevant: in the Rift the pets have to be bought, so little goes to Syrup Ore; the missed floating boxes are not compensated (since then they are, nv:50685); and the power display bug — because of 차원의 힘, picking gear that shows a power increase actually lowers power — is not even mentioned. Notes the higher level cap will let players push further on spec alone.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["Power display bug in the Rift: gear that shows +power lowers power once equipped, attributed to 차원의 힘 (also nv:49705)."],
+      "rift": ["In the Rift the pets must be purchased (서신우), competing with Syrup Ore for currency."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "차원의 힘 때문에 전투력이 올라가는 장비를 골라도 전투력이 내려가는 표기 문제가 있었는데 이는 언급조차 되지 않았습니다.", "en": "Because of Dimensional Energy, choosing gear that raises power actually lowered power — a display problem not even mentioned." },
+        { "kr": "차원에서는 펫을 구매해야 되서 사실상 쇳물에까지 투자를 못 하고", "en": "In the Rift you have to buy pets, so you can't really invest in ore." }
+      ]
+    },
+    {
+      "source": "naver", "id": "49705", "url": "https://cafe.naver.com/ccrumble/49705", "date": "2026-10-05",
+      "title_kr": "아니 이면이후에 투력 올라가는템 선택하면 투력이떨어져요", "title_en": "After entering the Rift, choosing gear that raises power lowers it",
+      "relevance": 2, "scope": "rift",
+      "summary_en": "After entering the Rift, swapping to gear the compare screen marks as +power keeps lowering stage power (5G 580M → 4G 989M over 6–8 swaps). Commenters: '+150m shown, −20m when equipped'; 특수역할담당 attributes it to accuracy/focus substats and the Rift buff, and advises skipping accuracy/focus pieces that look like power gains while in the Rift.",
+      "clears": [], "teams": [], "builds": [],
+      "mechanics": ["In the Rift the gear-compare power delta is wrong; accuracy/focus pieces are suspected (commenter)."],
+      "rift": ["Gear swaps made while in the Rift can silently lower real power; compare after equipping."],
+      "stage_types": [], "disagreements": [],
+      "quotes": [
+        { "kr": "C8 오전에 5G 580M 이였는데 지금 4G 989M 됫습니다", "en": "This morning it was 5G 580M, now it's 4G 989M." },
+        { "kr": "집중, 명중옵션 끼어있는템 갈아주면 이면버프때문에 그런거같더라구요 이면에 있을때 집중 명중 옵션인데 투력올라가면 걸러야될거같아요", "en": "It seems to happen with items carrying focus/accuracy, because of the Rift buff; in the Rift, skip focus/accuracy items that show a power gain." }
+      ]
+    },
+    {
+      "source": "naver", "id": "48376", "url": "https://cafe.naver.com/ccrumble/48376", "date": "2026-10-01",
+      "title_kr": "스테이지 간편덱 3개", "title_en": "Three easy stage decks",
+      "relevance": 3, "scope": "both",
+      "summary_en": "비쿠's stage decks written for the 35% recommended-power cut: a general deck (passion pay + repair contract), a multi-boss deck (passion pay + package 2) and a single-boss deck (GingerCraven/Cool Mint/Hammer). Pet rule: airborne bosses → pouch, knockback bosses → ghost, painful → Ice Birdie or King Choco Drop. Why he avoids Bari and Cherry Cola: aggro goes to adds behind the boss. In comments: he pushed every stage with the conquest gear preset (accuracy/focus just over 800 is enough), and in the Rift 'Hounds, Cool Mint, Hammer and GingerCraven push at 15%; the truck is hard'.",
+      "clears": [],
+      "teams": [
+        { "name": "biku-general-35", "scope": "stage", "for": "general stages at 35%",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "?", "stars": "?", "position": "front 1", "role": "buffer", "note": "" },
+            { "kr": "메론소다맛 쿠키?", "en": "Melon Soda (portrait read: green hair, goggles)", "level": "?", "stars": "?", "position": "front 2", "role": "dealer", "note": "text: Rye and Melon similar; Rye only when pierce is needed" },
+            { "kr": "치즈케이크맛 쿠키?", "en": "Cheesecake? (gold winged)", "level": "?", "stars": "?", "position": "front 3", "role": "support", "note": "" },
+            { "kr": "?", "en": "? (purple staff portrait)", "level": "?", "stars": "?", "position": "front 4", "role": "?", "note": "" },
+            { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "front 5", "role": "?", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "?", "stars": "?", "position": "front 6", "role": "tank / power padding", "note": "text: swap Dark Choco for Scorpion if wanted" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back 1", "role": "dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키?", "en": "Pinot Noir? (green-robed priest)", "level": "?", "stars": "?", "position": "back 2", "role": "?", "note": "" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "?", "stars": "?", "position": "back 3", "role": "skill-AMP beam", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "?", "stars": "?", "position": "back 4", "role": "healer", "note": "" },
+            { "kr": "허브맛 쿠키", "en": "Herb", "level": "?", "stars": "?", "position": "back 5", "role": "healer", "note": "text: Herb ↔ Tiger Lily by taste; Herb if healing short" },
+            { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit", "level": "?", "stars": "?", "position": "back 6", "role": "ATK-down", "note": "" }
+          ],
+          "pets": ["? pink-blue capsule pet (20★)", "핫도그? (hot dog, 20★)", "? yellow dumpling pet (20★)"], "perks": "열정페이 + 수리특약", "captain": "", "formation": "lobby 4.06G",
+          "why": "Composite deck for 35% pushing; Dark Choco is there to make the power cut.", "substitutions": ["Dark Choco → Scorpion", "Tiger Lily ↔ Herb; Dark Choco ↔ Devil (취향차이)"], "unorthodox": [] },
+        { "name": "biku-single-boss-35", "scope": "both", "for": "single bosses (GingerCraven, Cool Mint, Werehound Princess); also used in the Rift",
+          "cookies": [
+            { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "?", "stars": "?", "position": "front 1", "role": "buffer", "note": "if it hurts too much: Macaron → Lime" },
+            { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "?", "stars": "?", "position": "front 2", "role": "poison, DEF shred", "note": "" },
+            { "kr": "치즈케이크맛 쿠키?", "en": "Cheesecake?", "level": "?", "stars": "?", "position": "front 3", "role": "support", "note": "if it hurts: Cheesecake → Ion" },
+            { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "?", "stars": "?", "position": "front 4", "role": "buffer", "note": "" },
+            { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "?", "stars": "?", "position": "front 5", "role": "healer", "note": "" },
+            { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "?", "stars": "?", "position": "front 6", "role": "tank", "note": "" },
+            { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "?", "stars": "?", "position": "back 1", "role": "dealer", "note": "" },
+            { "kr": "피노누아맛 쿠키?", "en": "Pinot Noir?", "level": "?", "stars": "?", "position": "back 2", "role": "airborne counter?", "note": "if it still hurts: Pinot Noir → Grapevine" },
+            { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "?", "stars": "?", "position": "back 3", "role": "skill-AMP beam", "note": "" },
+            { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "?", "stars": "?", "position": "back 4", "role": "dealer", "note": "" },
+            { "kr": "?", "en": "? (red-black gothic, twin blades)", "level": "?", "stars": "?", "position": "back 5", "role": "?", "note": "text 'then Cherry Cola out, Cake Hounds in' suggests this slot is Cherry Cola? — not matched" },
+            { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit", "level": "?", "stars": "?", "position": "back 6", "role": "ATK-down", "note": "" }
+          ],
+          "pets": ["? (crowned brown pet, 20★; King Choco Drop?)", "핫도그? (20★)", "? yellow dumpling pet (20★)"], "perks": "열정페이 + 종합복지2 (→ 수리특약 if it hurts)", "captain": "", "formation": "lobby 4.09G, preset 토벌",
+          "why": "One-boss fights; damage swaps for survivability step by step as the boss hurts more.",
+          "substitutions": ["Cheesecake → Ion (and package 2 → repair contract)", "Cherry Cola → Cake Hounds", "Pinot Noir → Grapevine", "Macaron → Lime", "airborne: King Choco Drop → 색동주머니"], "unorthodox": [] }
+      ],
+      "builds": [{ "cookie": "all", "scope": "both", "sugar_runes": "", "gear": "conquest (토벌) gear preset for every stage, gear chosen for power", "thresholds": "accuracy and focus just over 800 each is enough to the end (비쿠)", "why": "power over accuracy past the threshold" }],
+      "mechanics": ["Pets by boss: airborne → 주머니 (pouch), knockback (Poison Shroomer, beetle, truck) → 유령 (ghost), heavy damage → 얼음과자새 or 초코왕방울."],
+      "rift": ["비쿠 (comment): in the Rift, Hounds, Cool Mint, Hammer and GingerCraven push at 15%; the truck is hard."],
+      "stage_types": ["Bari/Cherry Cola: aggro jumps to adds behind the boss; if used, run behind the boss at the start to bunch adds and boss."],
+      "disagreements": [],
+      "quotes": [
+        { "kr": "들개 쿨민 망치 비겁은 15로 밀리고 트럭은 빡세요", "en": "Hounds, Cool Mint, Hammer and GingerCraven push at 15; the truck is tough." },
+        { "kr": "모든 스테 토벌셋으로 밀었어요 명중집중은 800씩만넘기면 끝까지 아무문제없고 투력위주로 장비 챙기는게 좋아요", "en": "I pushed every stage with the conquest set; accuracy and focus just over 800 each is fine to the end — take gear for power." }
+      ]
+    },
+    {
+      "source": "naver", "id": "49540", "url": "https://cafe.naver.com/ccrumble/49540", "date": "2026-10-05",
+      "title_kr": "328-30 클리어덱", "title_en": "328-30 clear deck",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "성민성 (Lv.188, breakthrough 1043, fame 116) clears 328-30 GingerCraven at 4G 53M 744K header power (40.5%: 35% bracket), boss 0.000%, clock 1.767, gear preset 스테이지. One bar slot is greyed out (the Milk captain portrait slot, apparently dead).",
+      "clears": [{ "stage": "328-30", "boss": "비겁한 쿠키", "team_power": "4G 53M 744K", "recommended_power": "10,004,798,560", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "4.054G / 10.005G = 40.5%. Screenshot." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "49053", "url": "https://cafe.naver.com/ccrumble/49053", "date": "2026-10-03",
+      "title_kr": "328-30 공략:-)", "title_en": "328-30 guide",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "별이꽁 (Lv.188, breakthrough 1018, fame 123) finishes all stages: 328-30 cleared at the 35% cut ('35퍼 맞추고 깨세용 = 4G2M'); screenshot shows 'all stages cleared' with header 4G 10M 9K afterwards. Won't try the Rift ('무리무리'). Comment: 'adjust Cherry/Bari per stage to hit 35%'.",
+      "clears": [{ "stage": "328-30", "boss": "비겁한 쿠키", "team_power": "4G2M (text); 4G 10M 9K header after clear", "recommended_power": "10,004,798,560", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "4.002G / 10.005G = 40.0% (just over the 35% cut 4,001,919,424)." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "위에 갈수록 35퍼 맞추는거때문에 이거저것 넣고 뺐다하느라", "en": "Higher up I kept swapping things in and out just to hit 35%." }]
+    },
+    {
+      "source": "naver", "id": "49032", "url": "https://cafe.naver.com/ccrumble/49032", "date": "2026-10-02",
+      "title_kr": "326-30 공략:-)", "title_en": "326-30 guide",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "별이꽁: 326-30 (Cool Mint) at the 35% cut, 3G809M; if short on power, swap cookies one at a time. Formation and perk screenshots.",
+      "clears": [{ "stage": "326-30", "boss": "쿨링민트맛 쿠키", "team_power": "3G809M (text)", "recommended_power": "9,521,082,782", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "3.809G / 9.521G = 40.0%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "49029", "url": "https://cafe.naver.com/ccrumble/49029", "date": "2026-10-02",
+      "title_kr": "326-20 공략:-)", "title_en": "326-20 guide",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "별이꽁: 326-20 at the 35% cut, 3G778M; perks 초고속승진 + 열정페이.",
+      "clears": [{ "stage": "326-20", "boss": "?", "team_power": "3G778M (text)", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "Bracket as stated by the poster." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48211", "url": "https://cafe.naver.com/ccrumble/48211", "date": "2026-09-30",
+      "title_kr": "323-30 공략:-)", "title_en": "323-30 guide",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "별이꽁 (Lv.186): 323-30 GingerCraven cleared at 3G 572M 876K header power (40.4%: 35%), boss 0.000%, clock 2.667, preset 3. Formation tab 4 lobby 3.57G; perks 열정페이 + 의료보험. All cookies Lv.100; two bar slots greyed (dead).",
+      "clears": [{ "stage": "323-30", "boss": "비겁한 쿠키", "team_power": "3G 572M 876K", "recommended_power": "8,845,366,922", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "byeolikkong-323", "note": "3.573G / 8.845G = 40.4%." }],
+      "teams": [{ "name": "byeolikkong-323", "scope": "stage", "for": "323-30 GingerCraven at 35%",
+        "cookies": [
+          { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "5★+", "position": "front 1", "role": "buffer", "note": "" },
+          { "kr": "전갈맛 쿠키", "en": "Scorpion", "level": "100", "stars": "5★+", "position": "front 2", "role": "poison, DEF shred", "note": "" },
+          { "kr": "피노누아맛 쿠키?", "en": "Pinot Noir?", "level": "100", "stars": "5★+", "position": "front 3", "role": "?", "note": "" },
+          { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "5★+", "position": "front 4", "role": "buffer", "note": "" },
+          { "kr": "라임맛 쿠키", "en": "Lime", "level": "100", "stars": "5★+", "position": "front 5", "role": "?", "note": "" },
+          { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "100", "stars": "5★+", "position": "front 6", "role": "?", "note": "" },
+          { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "5★+", "position": "back 1", "role": "dealer", "note": "" },
+          { "kr": "메론소다맛 쿠키?", "en": "Melon Soda?", "level": "100", "stars": "5★+", "position": "back 2", "role": "dealer", "note": "" },
+          { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "5★+", "position": "back 3", "role": "skill-AMP beam", "note": "" },
+          { "kr": "정글전사 쿠키", "en": "Tiger Lily", "level": "100", "stars": "5★+", "position": "back 4", "role": "dealer", "note": "" },
+          { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (pediatrician)", "level": "100", "stars": "5★+", "position": "back 5", "role": "captain, healer", "note": "captain banner" },
+          { "kr": "다크초코 쿠키", "en": "Dark Choco", "level": "100", "stars": "5★+", "position": "back 6", "role": "tank", "note": "" }
+        ],
+        "pets": ["? yellow dumpling pet (20★)", "? green cactus pet (20★)", "핫도그? (20★)"], "perks": "열정페이 + 의료보험", "captain": "바삭튼튼 소아과 의사 우유맛 쿠키", "formation": "tab 4, lobby 3.57G",
+        "why": "", "substitutions": [], "unorthodox": [] }],
+      "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "49276", "url": "https://cafe.naver.com/ccrumble/49276", "date": "2026-10-03",
+      "title_kr": "323-30 비겁이 클덱", "title_en": "323-30 GingerCraven clear deck",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "성민성 (Lv.187): 323-30 GingerCraven at 3G 563M 698K header (40.3%: 35%), boss 0.000%, clock 3.800, preset 스테이지. '35% is a human right!'",
+      "clears": [{ "stage": "323-30", "boss": "비겁한 쿠키", "team_power": "3G 563M 698K", "recommended_power": "8,845,366,922", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "3.564G / 8.845G = 40.3%. Screenshot." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "35%는 인권!", "en": "35% is a human right!" }]
+    },
+    {
+      "source": "naver", "id": "49008", "url": "https://cafe.naver.com/ccrumble/49008", "date": "2026-10-02",
+      "title_kr": "320-30 비겁이 클리어덱", "title_en": "320-30 GingerCraven clear deck",
+      "relevance": 3, "scope": "stage",
+      "summary_en": "성민성 (Lv.186): 320-30 GingerCraven at 3G 294M 692K header (40.1%: 35%), boss 0.000%, clock 0.467, gear preset 토벌 (conquest). All 12 cookies Lv.100 5★ in the bar.",
+      "clears": [{ "stage": "320-30", "boss": "비겁한 쿠키", "team_power": "3G 294M 692K", "recommended_power": "8,217,606,944", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "3.295G / 8.218G = 40.1%. Cleared with 0.467 left. Screenshot." }],
+      "teams": [], "builds": [{ "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "conquest preset (토벌) used on a stage", "thresholds": "", "why": "" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48205", "url": "https://cafe.naver.com/ccrumble/48205", "date": "2026-09-30",
+      "title_kr": "323-10 공략:-)", "title_en": "323-10 guide",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "별이꽁: 323-10 at 35%, 3G481M (text); formation tab 5 lobby 3.52G; perks 열정페이 + 초고속승진.",
+      "clears": [{ "stage": "323-10", "boss": "?", "team_power": "3G481M (text); lobby 3.52G", "recommended_power": "?", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "Bracket as stated." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48201", "url": "https://cafe.naver.com/ccrumble/48201", "date": "2026-09-30",
+      "title_kr": "322-30 공략:-)", "title_en": "322-30 guide",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "별이꽁: 322-30 (Cool Mint) at 35%, 3G453M; '15% is impossible, gg'. Lobby 3.46G (tab 4); perks 열정페이 + 초고속승진.",
+      "clears": [{ "stage": "322-30", "boss": "쿨링민트맛 쿠키", "team_power": "3G453M (text); lobby 3.46G", "recommended_power": "8,630,958,403", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "3.453G / 8.631G = 40.0%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "35% 맞추고 해야 할 수 있어요 15%는 도전히 gg", "en": "You can do it only at 35%; 15% is hopeless, gg." }]
+    },
+    {
+      "source": "naver", "id": "48140", "url": "https://cafe.naver.com/ccrumble/48140", "date": "2026-09-30",
+      "title_kr": "321-30 공략:-)", "title_en": "321-30 guide",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "별이꽁: 321-30 Cool Mint first try with the 'round and round' control (circling Cool Mint); lobby 3.42G (40.6%); perks 초고속승진 + 열정페이. Commenter instead gathers at 7 o'clock.",
+      "clears": [{ "stage": "321-30", "boss": "쿨링민트맛 쿠키", "team_power": "lobby 3.42G", "recommended_power": "8,421,747,069", "bracket": "35", "result": "clear", "play": "manual", "retries": "first try", "team": "", "note": "lobby 3.42G / 8.42G = 40.6%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["Cool Mint: '동글동글' circling control near the boss; alternative: gather at 7 o'clock."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48026", "url": "https://cafe.naver.com/ccrumble/48026", "date": "2026-09-30",
+      "title_kr": "320-30 공략:-)", "title_en": "320-30 guide",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "별이꽁: 320-30 GingerCraven barely; 'without 35% there is no chance at all'; 35% ≈ 3G288M. Lobby 3.29G; perks 의료보험 + 열정페이. Deck includes Moon Rabbit.",
+      "clears": [{ "stage": "320-30", "boss": "비겁한 쿠키", "team_power": "lobby 3.29G", "recommended_power": "8,217,606,944", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "3.29G / 8.218G = 40.0%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "35퍼 안맞추면 아예 가능성이 없더라구요", "en": "If you don't hit 35% there's no chance at all." }]
+    },
+    {
+      "source": "naver", "id": "47456", "url": "https://cafe.naver.com/ccrumble/47456", "date": "2026-09-29",
+      "title_kr": "318-30공략 :-)", "title_en": "318-30 guide",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "별이꽁: 318-30 Cool Mint; lobby 3.15G (40.3%); perks 열정페이 + 초고속승진.",
+      "clears": [{ "stage": "318-30", "boss": "쿨링민트맛 쿠키", "team_power": "lobby 3.15G", "recommended_power": "7,824,051,598", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "3.15 / 7.824 = 40.3%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47440", "url": "https://cafe.naver.com/ccrumble/47440", "date": "2026-09-29",
+      "title_kr": "318-20 공략:-)", "title_en": "318-20 guide",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "별이꽁: 318-20 Werehound Princess, circle around the boss; lobby 3.15G; perks 열정페이 + 초고속승진.",
+      "clears": [{ "stage": "318-20", "boss": "초코크림 늑대 망치공주", "team_power": "lobby 3.15G", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47406", "url": "https://cafe.naver.com/ccrumble/47406", "date": "2026-09-29",
+      "title_kr": "317-20 공략:-)", "title_en": "317-20 guide",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "별이꽁 (Lv.183): 317-20 Tainted Ent at 3G 131M 250K header, boss 0.000%, clock 4.600, preset 3; lobby 3.13G; perks 열정페이 + 초고속승진. Tip from comments: oven 37 and Stella 8 boost gear power.",
+      "clears": [{ "stage": "317-20", "boss": "오염된 그루터기 정령", "team_power": "3G 131M 250K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "auto", "retries": "", "team": "", "note": "Cleared while not watching ('멍 때리고다가 깨져버렸지'). Screenshot." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47360", "url": "https://cafe.naver.com/ccrumble/47360", "date": "2026-09-28",
+      "title_kr": "315-30 공략:-)", "title_en": "315-30 guide",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "별이꽁: 315-30 GingerCraven first try with her multi-mob 'chain hit' (연타) deck after the usual GingerCraven deck stalled at ~30% boss HP; Milk died after the fear but it still cleared. Lobby 2.97G (40.9%); perks 열정페이 + 종합 복지 패키지 Lv2.",
+      "clears": [{ "stage": "315-30", "boss": "비겁한 쿠키", "team_power": "lobby 2.97G", "recommended_power": "7,268,774,864", "bracket": "35", "result": "clear", "play": "manual", "retries": "first try with this deck", "team": "", "note": "2.97 / 7.269 = 40.9%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["A chain-hit (연타) deck for 8–10+ mob maps also beat GingerCraven where the usual deck could not."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48104", "url": "https://cafe.naver.com/ccrumble/48104", "date": "2026-09-30",
+      "title_kr": "315-30 비겁한쿠키", "title_en": "315-30 GingerCraven",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "질퍽이와메타몽의차이: 315-30 with Wind Archer added to reach the 35% cut; lobby 2.95G (40.6%). Scorpion to 20 stacks before the fear, then hands off and pray. Perks 열정/초고속, captain Milk.",
+      "clears": [{ "stage": "315-30", "boss": "비겁한 쿠키", "team_power": "lobby 2.95G", "recommended_power": "7,268,774,864", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "2.95 / 7.269 = 40.6%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [],
+      "quotes": [{ "kr": "35퍼 맞추려고 바궁 넣었습니다. 공포 전 전갈 20중첩, 공포 후 손 떼고 기도하시면 됩니다.", "en": "I added Wind Archer to hit 35%. Scorpion to 20 stacks before the fear; after the fear, let go and pray." }]
+    },
+    {
+      "source": "naver", "id": "47585", "url": "https://cafe.naver.com/ccrumble/47585", "date": "2026-09-29",
+      "title_kr": "304-30 비겁이 클리어덱", "title_en": "304-30 GingerCraven clear deck",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "성민성 (Lv.181): 304-30 at 2G 566M 896K header (46.2%: 35%), boss 0.000%, clock 5.800, preset 스테이지; perks 초고속승진 + 열정페이, captain Milk.",
+      "clears": [{ "stage": "304-30", "boss": "비겁한 쿠키", "team_power": "2G 566M 896K", "recommended_power": "5,549,273,043", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "2.567 / 5.549 = 46.3%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47338", "url": "https://cafe.naver.com/ccrumble/47338", "date": "2026-09-28",
+      "title_kr": "299-30 비겁이 클리어덱 + 300스테 진입!", "title_en": "299-30 GingerCraven clear deck",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "성민성 (Lv.180): 299-30 at 2G 421M 683K header (49.3%: 35%), boss 0.000%, clock 1.200, preset 스테이지; credits 서신우's deck. Third image is a 0-byte file (video).",
+      "clears": [{ "stage": "299-30", "boss": "비겁한 쿠키", "team_power": "2G 421M 683K", "recommended_power": "4,908,535,621", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "2.422 / 4.909 = 49.3%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48666", "url": "https://cafe.naver.com/ccrumble/48666", "date": "2026-10-01",
+      "title_kr": "318-2 암살자 클리어 덱", "title_en": "318-2 Redberry Assassin clear deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "성민성: 318-2 Redberry Assassin at 3G 104M 549K header, 0.000%; go to the top and clear from the top down.",
+      "clears": [{ "stage": "318-2", "boss": "레드베리 암살자", "team_power": "3G 104M 549K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["Redberry Assassin: climb to the top and clear from the top down."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "49310", "url": "https://cafe.naver.com/ccrumble/49310", "date": "2026-10-04",
+      "title_kr": "267-30 비겁이 클리어덱", "title_en": "267-30 GingerCraven clear deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "폼생 (Lv.176): 267-30 at 1G 790M 813K header = 80.0% → the 75% bracket (not an under-power clear). Preset 스테 (명중 집중); perks 초고속승진 + 열정페이; two bar slots greyed.",
+      "clears": [{ "stage": "267-30", "boss": "비겁한 쿠키", "team_power": "1G 790M 813K", "recommended_power": "2,238,377,882", "bracket": "75", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "1.7908 / 2.2384 = 80.0%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "50267", "url": "https://cafe.naver.com/ccrumble/50267", "date": "2026-10-06",
+      "title_kr": "272-30 비겁이 클리어덱", "title_en": "272-30 GingerCraven clear deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "폼생: 272-30 at lobby 2.08G (82%: 75% bracket); a commenter notes a ~75% clear helps nobody.",
+      "clears": [{ "stage": "272-30", "boss": "비겁한 쿠키", "team_power": "lobby 2.08G", "recommended_power": "2,530,565,325", "bracket": "75", "result": "clear", "play": "?", "retries": "", "team": "", "note": "2.08 / 2.531 = 82%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "50035", "url": "https://cafe.naver.com/ccrumble/50035", "date": "2026-10-06",
+      "title_kr": "270-30 쿨민 클리어덱", "title_en": "270-30 Cool Mint clear deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "폼생: 270-30 Cool Mint at 2G 81M 841K header (86%: 75%), preset 토벌 (스증스가).",
+      "clears": [{ "stage": "270-30", "boss": "쿨링민트맛 쿠키", "team_power": "2G 81M 841K", "recommended_power": "2,409,372,194", "bracket": "75", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "2.082 / 2.409 = 86.4%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48731", "url": "https://cafe.naver.com/ccrumble/48731", "date": "2026-10-02",
+      "title_kr": "266-30 쿨민 클리어덱", "title_en": "266-30 Cool Mint clear deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "폼생: 266-30 Cool Mint at 1G 528M 521K header (70%: 55%).",
+      "clears": [{ "stage": "266-30", "boss": "쿨링민트맛 쿠키", "team_power": "1G 528M 521K", "recommended_power": "2,184,120,406", "bracket": "55", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "1.5285 / 2.1841 = 70.0%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47665", "url": "https://cafe.naver.com/ccrumble/47665", "date": "2026-09-29",
+      "title_kr": "265-30 쿨민 클리어덱", "title_en": "265-30 Cool Mint clear deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "폼생: 265-30 Cool Mint at 1G 495M 37K header (70%: 55%).",
+      "clears": [{ "stage": "265-30", "boss": "쿨링민트맛 쿠키", "team_power": "1G 495M 37K", "recommended_power": "2,131,178,111", "bracket": "55", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "1.495 / 2.131 = 70.2%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "49302", "url": "https://cafe.naver.com/ccrumble/49302", "date": "2026-10-04",
+      "title_kr": "267-10,20 쥐토바이 트럭 클리어덱", "title_en": "267-10/20 Biker and Truck clear deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "폼생: 267-10 Rowdy Biker at 1G 626M 589K header, both cleared without control.",
+      "clears": [{ "stage": "267-10", "boss": "폭주단 바이커", "team_power": "1G 626M 589K", "recommended_power": "?", "bracket": "?", "result": "clear", "play": "auto", "retries": "", "team": "", "note": "" }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48862", "url": "https://cafe.naver.com/ccrumble/48862", "date": "2026-10-02",
+      "title_kr": "224-30 비겁이 클리어덱", "title_en": "224-30 GingerCraven clear deck",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "하나바다: 224-30 at 454.8M (58.4%: 35%); perks 열정페이 + 방어구 수리; keep Scorpion on GingerCraven: place everyone behind the boss at the start because it steps back when it starts moving. Lobby shows several Lv.1 cookies on the roster (not in the deck).",
+      "clears": [{ "stage": "224-30", "boss": "비겁한 쿠키", "team_power": "454.83M (lobby)", "recommended_power": "779,273,201", "bracket": "35", "result": "clear", "play": "manual", "retries": "", "team": "", "note": "0.4548 / 0.7793 = 58.4%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["GingerCraven: start with cookies behind the boss so Scorpion stays on it when it backs off."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47514", "url": "https://cafe.naver.com/ccrumble/47514", "date": "2026-09-29",
+      "title_kr": "240-30 비겁이 클리어덱 626M", "title_en": "240-30 GingerCraven 626M",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "명두부 (Lv.163): 240-30 at 626M 4K header (54.2%: 35%), boss 0.000%, clock 1.500, preset 스테이지.",
+      "clears": [{ "stage": "240-30", "boss": "비겁한 쿠키", "team_power": "626M 4K", "recommended_power": "1,153,981,939", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "0.626 / 1.154 = 54.2%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47023", "url": "https://cafe.naver.com/ccrumble/47023", "date": "2026-09-28",
+      "title_kr": "235-30 비겁이 클리어덱 600M", "title_en": "235-30 GingerCraven 600M",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "명두부 (Lv.161): 235-30 at 589M 971K header (57.8%: 35%), boss 0.000%, clock 0.733; two cookies under Lv.100 (95, 90).",
+      "clears": [{ "stage": "235-30", "boss": "비겁한 쿠키", "team_power": "589M 971K", "recommended_power": "1,020,739,367", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "0.590 / 1.021 = 57.8%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47123", "url": "https://cafe.naver.com/ccrumble/47123", "date": "2026-09-28",
+      "title_kr": "243-30 비겁한쿠키 750M 클리어덱입니다+248-30비겁한(853M)클리어", "title_en": "243-30 GingerCraven 750M, 248-30 853M",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "아이러브로드리: retried 20 min at 740M (35% bracket), then used 500 h of coin auto-hunt rewards to raise breakthrough and cleared at 750.32M with 3 s left — which is 60.4%, i.e. the 55% bracket. 248-30 at 853M is also 60.7% (55%).",
+      "clears": [
+        { "stage": "243-30", "boss": "비겁한 쿠키", "team_power": "750.32M (lobby)", "recommended_power": "1,242,137,004", "bracket": "55", "result": "clear", "play": "?", "retries": "20 min at 740M failed", "team": "", "note": "740M = 59.6% (35%) failed; 750.32M = 60.4% (55%) cleared." },
+        { "stage": "248-30", "boss": "비겁한 쿠키", "team_power": "853M (text)", "recommended_power": "1,404,279,794", "bracket": "55", "result": "clear", "play": "?", "retries": "", "team": "", "note": "0.853 / 1.404 = 60.7%." }
+      ],
+      "teams": [], "builds": [], "mechanics": ["Crossing a bracket line (59.6% → 60.4%) turned a 20-minute fail into a clear."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47308", "url": "https://cafe.naver.com/ccrumble/47308", "date": "2026-09-28",
+      "title_kr": "248-30 비겁이덱", "title_en": "248-30 GingerCraven deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Dior: 248-30 with lobby 792.69M (56.4%: 35%); accuracy 1000, focus 1112, breakthrough 789, fame 90, lab 70-1.",
+      "clears": [{ "stage": "248-30", "boss": "비겁한 쿠키", "team_power": "lobby 792.69M", "recommended_power": "1,404,279,794", "bracket": "35", "result": "clear", "play": "?", "retries": "", "team": "", "note": "0.793 / 1.404 = 56.4%." }],
+      "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "48764", "url": "https://cafe.naver.com/ccrumble/48764", "date": "2026-10-02",
+      "title_kr": "스테이지별 적정 명중 수치", "title_en": "Adequate accuracy per stage",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "까불면아야한다's rule of thumb: adequate accuracy = stage number × 4 (200 → 800, 300 → 1200). Disputed in comments: 250–328 all need 1203 (자다흐가), 1000 is enough; 늉늉 pushes 300 at 700; 비쿠-style view that power matters more; 사계: gear power is relative to current stats, so excess accuracy adds little power.",
+      "clears": [], "teams": [],
+      "builds": [{ "cookie": "all", "scope": "stage", "sugar_runes": "", "gear": "", "thresholds": "accuracy ≈ stage × 4 (poster); 1203 for 250–328 (commenter); 700 at 300 works for another", "why": "accuracy misses zero out damage, but power decides the bracket" }],
+      "mechanics": ["Gear power is computed relative to current stats: substats below the game's requirement inflate power, above it add little (사계)."],
+      "rift": [], "stage_types": [],
+      "disagreements": ["Accuracy: stage×4 (까불면아야한다) vs 1203 flat for 250–328 (자다흐가) vs 700 at stage 300 (늉늉) vs 'power first' (오징어먹고싶다)."],
+      "quotes": [{ "kr": "적정명중 수치 = 스테이지 단계 * 4", "en": "Adequate accuracy = stage number × 4." }]
+    },
+    {
+      "source": "naver", "id": "48493", "url": "https://cafe.naver.com/ccrumble/48493", "date": "2026-10-01",
+      "title_kr": "개인 기록용 스테이지 덱", "title_en": "Personal stage deck",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "어싱싱해: one auto deck clears everything to 278-30 (later 302-01) at the 55%+ cut; perks 초고속승진 + 열정페이, captain Milk; accuracy 921 / focus 1281, later 900/1000 with gear for power.",
+      "clears": [], "teams": [], "builds": [{ "cookie": "all", "scope": "stage", "sugar_runes": "공증 스증 스가", "gear": "power-first", "thresholds": "accuracy 900, focus 1000", "why": "" }],
+      "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47148", "url": "https://cafe.naver.com/ccrumble/47148", "date": "2026-09-28",
+      "title_kr": "[TIP] 5사격 기반 상황별 스테이지덱", "title_en": "Five-shooter stage decks by situation",
+      "relevance": 2, "scope": "stage",
+      "summary_en": "사계: pushed to 300 at 35% with a five-shooter base, perks 열정페이 + 탄약비 전액 지원, six skill-haste (6스가) gear: dealers reach 15 skill-damage and Scorpion 42.6 haste with no haste runes. Variants for airborne bosses and the cactus spider (ghost pet for knockback resist); GingerCraven is not doable with five shooters (Scorpion-stack prayer instead).",
+      "clears": [], "teams": [], "builds": [{ "cookie": "shooters", "scope": "stage", "sugar_runes": "", "gear": "6 skill-haste lines", "thresholds": "", "why": "frequent skills" }],
+      "mechanics": [], "rift": [], "stage_types": ["Airborne-boss maps (Hammer, Cool Mint, Ent, beetle, snowman, ice golem) get their own deck; desert cactus spider takes the ghost pet."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47091", "url": "https://cafe.naver.com/ccrumble/47091", "date": "2026-09-28",
+      "title_kr": "스테이지 덱 (n번째)", "title_en": "Stage decks (nth)",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "신비한쿠키사전: Bari charge deck (Pomegranate buff on Milk, Bari, Brightseeker), an airborne-boss deck (Scorpion, Brightseeker get Pomegranate's buff), and a chain-hit deck; perks 열정페이 + 초고속승진, captain Milk. Accuracy 945 / focus 1100, to be lowered for power.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47031", "url": "https://cafe.naver.com/ccrumble/47031", "date": "2026-09-28",
+      "title_kr": "스테이지에서 멍청한 바리공주와 체리콜라 사용법!", "title_en": "How to use Bari and Cherry Cola in stages",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Move the cursor behind the adds behind the boss at the start so Bari/Cherry Cola hit boss and adds together.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": ["Charge dealers target adds; drag behind them to bunch them with the boss."], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47597", "url": "https://cafe.naver.com/ccrumble/47597", "date": "2026-09-29",
+      "title_kr": "레드베리 암살자 12마리 클리어 조합", "title_en": "Redberry Assassin ×12 clear",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Swap Herb for Doughnut to pad ~20M power and make the 35% cut at high stages, at the risk of a single healer.",
+      "clears": [], "teams": [], "builds": [], "mechanics": ["Power padding: Doughnut instead of Herb adds ~20M to reach a bracket."], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47879", "url": "https://cafe.naver.com/ccrumble/47879", "date": "2026-09-30",
+      "title_kr": "이거 원래 이렇게 피가 안달음?", "title_en": "Is boss HP supposed to barely drop?",
+      "relevance": 1, "scope": "stage",
+      "summary_en": "Commenter: you're power-gated at 15%; reach 20M 411K for 35%.",
+      "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": []
+    },
+    { "source": "naver", "id": "48470", "url": "https://cafe.naver.com/ccrumble/48470", "date": "2026-10-01", "title_kr": "318 스테이지 레드베리 암살자 덱", "title_en": "318 Redberry Assassin deck", "relevance": 1, "scope": "stage", "summary_en": "머핀이: Macaron, Brightseeker, Popcorn, Rye, Melon, Cheesecake, Pomegranate, Skating Queen, Espresso, Milk, Strawberry Crepe, Moon Rabbit; captain Milk; 열정페이 + 탄약비; Espresso is the main dealer; go to 10 or 7 o'clock.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48521", "url": "https://cafe.naver.com/ccrumble/48521", "date": "2026-10-01", "title_kr": "독수리 2마리 오토덱(300층)", "title_en": "Two eagles auto deck (300)", "relevance": 1, "scope": "stage", "summary_en": "Pets 갓방울, 핫도그, 전지; 열정페이 + 승진; used Jinx (징크스?) to make the power cut.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48492", "url": "https://cafe.naver.com/ccrumble/48492", "date": "2026-10-01", "title_kr": "선인장 거미 클리어 조합 및 컨트롤 팁(300층/탄약비)", "title_en": "Cactus spider tips (300)", "relevance": 1, "scope": "stage", "summary_en": "Pets 갓방울, 핫도그, 색동주머니; minimise control (control = damage loss), bunch on the field.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48799", "url": "https://cafe.naver.com/ccrumble/48799", "date": "2026-10-02", "title_kr": "324-19 선인장거미 클리어덱 기록용", "title_en": "324-19 cactus spider deck", "relevance": 1, "scope": "stage", "summary_en": "Shooter deck; 열정페이 + 탄약비지원.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49082", "url": "https://cafe.naver.com/ccrumble/49082", "date": "2026-10-03", "title_kr": "328-20 얼음골렘 클리어덱 기록용", "title_en": "328-20 Ice Golem deck", "relevance": 1, "scope": "stage", "summary_en": "If you can tank, drop Herb for damage; 열정페이 + 초고속승진.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49024", "url": "https://cafe.naver.com/ccrumble/49024", "date": "2026-10-02", "title_kr": "레드베리 암살자 최신 공략 (326-18)", "title_en": "Redberry Assassin (326-18)", "relevance": 1, "scope": "stage", "summary_en": "서신우: corner lure is mandatory; assassins go invisible (effectively invulnerable) intermittently.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50086", "url": "https://cafe.naver.com/ccrumble/50086", "date": "2026-10-06", "title_kr": "305스테이지인데 원덱으로 좀 돌리수 있는 방법없나요", "title_en": "One deck at 305?", "relevance": 1, "scope": "stage", "summary_en": "Replies: at 35% you change deck/pets nearly every stage; options Bari + Cherry Cola + Rye, or Wizard + Espresso + Twizzly + Rye, or Brightseeker + Scorpion + Cherry Cola.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50639", "url": "https://cafe.naver.com/ccrumble/50639", "date": "2026-10-07", "title_kr": "32-30 조언좀 구합니다", "title_en": "32-30 advice", "relevance": 0, "scope": "stage", "summary_en": "Newbie; in stages Cake Hounds is usually replaced with Moon Rabbit.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50388", "url": "https://cafe.naver.com/ccrumble/50388", "date": "2026-10-07", "title_kr": "뉴비의 32-30 클리어덱", "title_en": "Newbie 32-30", "relevance": 0, "scope": "stage", "summary_en": "Low stage; reply recommends a Witchberry idle deck.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50525", "url": "https://cafe.naver.com/ccrumble/50525", "date": "2026-10-07", "title_kr": "40-30 비겁한 쿠키", "title_en": "40-30 GingerCraven", "relevance": 0, "scope": "stage", "summary_en": "Low stage.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50007", "url": "https://cafe.naver.com/ccrumble/50007", "date": "2026-10-06", "title_kr": "38-30 쿨민", "title_en": "38-30 Cool Mint", "relevance": 0, "scope": "stage", "summary_en": "Low stage.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "47098", "url": "https://cafe.naver.com/ccrumble/47098", "date": "2026-09-28", "title_kr": "[축복2] 48-30 비겁한 쿠키", "title_en": "48-30 GingerCraven", "relevance": 0, "scope": "stage", "summary_en": "Low stage.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "47757", "url": "https://cafe.naver.com/ccrumble/47757", "date": "2026-09-29", "title_kr": "62-30 억지클", "title_en": "62-30 forced clear", "relevance": 0, "scope": "stage", "summary_en": "Low stage.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48571", "url": "https://cafe.naver.com/ccrumble/48571", "date": "2026-10-01", "title_kr": "202층 쿨링민트", "title_en": "202 Cool Mint", "relevance": 0, "scope": "stage", "summary_en": "Screenshot only; auto.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48138", "url": "https://cafe.naver.com/ccrumble/48138", "date": "2026-09-30", "title_kr": "195층 비겁이", "title_en": "195 GingerCraven", "relevance": 0, "scope": "stage", "summary_en": "Screenshot only; auto.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "47955", "url": "https://cafe.naver.com/ccrumble/47955", "date": "2026-09-30", "title_kr": "193층 쿨링민트", "title_en": "193 Cool Mint", "relevance": 0, "scope": "stage", "summary_en": "Screenshot only; auto.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49766", "url": "https://cafe.naver.com/ccrumble/49766", "date": "2026-10-05", "title_kr": "269-10", "title_en": "269-10", "relevance": 0, "scope": "stage", "summary_en": "Screenshot only, no text.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49630", "url": "https://cafe.naver.com/ccrumble/49630", "date": "2026-10-05", "title_kr": "5사격 레드베리 잡는 덱", "title_en": "Five-shooter Redberry deck", "relevance": 0, "scope": "stage", "summary_en": "Less control than Bari/Cherry Cola.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "47240", "url": "https://cafe.naver.com/ccrumble/47240", "date": "2026-09-28", "title_kr": "312-30 공략:-)", "title_en": "312-30 guide", "relevance": 1, "scope": "stage", "summary_en": "별이꽁: ~10 tries; prefers 명랑한 쿠키 (Cheerful) over Moon Rabbit vs GingerCraven ('damage drop is visibly different'); 사계 doubts it.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": ["Cheerful vs Moon Rabbit for GingerCraven ATK-down: 별이꽁 prefers Cheerful, 사계 notes Moon Rabbit has the higher proc."], "quotes": [] },
+    { "source": "naver", "id": "46919", "url": "https://cafe.naver.com/ccrumble/46919", "date": "2026-09-28", "title_kr": "310-30 공략:-)", "title_en": "310-30 guide", "relevance": 1, "scope": "stage", "summary_en": "별이꽁: rumour after the easing that old 35% = new 55%, old 15% = new 35%, and from ~313-23 it's 15%.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "46912", "url": "https://cafe.naver.com/ccrumble/46912", "date": "2026-09-28", "title_kr": "310-20 공략:-)", "title_en": "310-20 guide", "relevance": 0, "scope": "stage", "summary_en": "Deck screenshots only.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "47344", "url": "https://cafe.naver.com/ccrumble/47344", "date": "2026-09-28", "title_kr": "315-10 공략:-)", "title_en": "315-10 guide", "relevance": 0, "scope": "stage", "summary_en": "Deck screenshots only.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "47277", "url": "https://cafe.naver.com/ccrumble/47277", "date": "2026-09-28", "title_kr": "313-30 공략:-)", "title_en": "313-30 guide", "relevance": 0, "scope": "stage", "summary_en": "Cool Mint circling control; screenshots.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50309", "url": "https://cafe.naver.com/ccrumble/50309", "date": "2026-10-06", "title_kr": "엿먹이기용 회피덱 좋은듯", "title_en": "Evasion troll deck", "relevance": 0, "scope": "stage", "summary_en": "Arena defense; off-topic.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50543", "url": "https://cafe.naver.com/ccrumble/50543", "date": "2026-10-07", "title_kr": "자동방치 덱 ㅊㅊ해줘잉", "title_en": "Idle deck request", "relevance": 0, "scope": "stage", "summary_en": "Request at 202-22; reply: Witchberry deck.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48917", "url": "https://cafe.naver.com/ccrumble/48917", "date": "2026-10-02", "title_kr": "안녕하세요 스테이지덱 추천", "title_en": "Stage deck request", "relevance": 0, "scope": "stage", "summary_en": "Request.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48186", "url": "https://cafe.naver.com/ccrumble/48186", "date": "2026-09-30", "title_kr": "스테이지.크럼블 덱 좀 짜주세요", "title_en": "Deck request", "relevance": 0, "scope": "stage", "summary_en": "Request.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48090", "url": "https://cafe.naver.com/ccrumble/48090", "date": "2026-09-30", "title_kr": "은근히 빡치는 선인장 잡기", "title_en": "Cactus spider", "relevance": 0, "scope": "stage", "summary_en": "Chase the one heading to a corner so the rest follow.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49650", "url": "https://cafe.naver.com/ccrumble/49650", "date": "2026-10-05", "title_kr": "이면 클리어시 알수없는오류로 스테이지 안넘어감", "title_en": "Rift clear error", "relevance": 0, "scope": "rift", "summary_en": "Bug report: an error flash sometimes stops the Rift advancing after a clear.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49493", "url": "https://cafe.naver.com/ccrumble/49493", "date": "2026-10-04", "title_kr": "차원의 이면 오류 고쳐줘요", "title_en": "Rift gift box bug", "relevance": 0, "scope": "rift", "summary_en": "Bug report: floating gift box missing.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "50703", "url": "https://cafe.naver.com/ccrumble/50703", "date": "2026-10-07", "title_kr": "크럼블 유저 개꿀팁", "title_en": "Joke post", "relevance": 0, "scope": "stage", "summary_en": "Off-topic.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49239", "url": "https://cafe.naver.com/ccrumble/49239", "date": "2026-10-03", "title_kr": "7번 보스 : 레드베리 암살자 (2)", "title_en": "Redberry Assassin (2)", "relevance": 0, "scope": "stage", "summary_en": "Run to the 7 o'clock corner; video not captured.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "49238", "url": "https://cafe.naver.com/ccrumble/49238", "date": "2026-10-03", "title_kr": "4번 보스 : 망치공주 (2)", "title_en": "Werehound Princess (2)", "relevance": 0, "scope": "stage", "summary_en": "Pinot Noir skill at start, tank forward, Scorpion stacks.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "48990", "url": "https://cafe.naver.com/ccrumble/48990", "date": "2026-10-02", "title_kr": "5번 보스 : 비겁한 쿠키 (2)", "title_en": "GingerCraven (2)", "relevance": 1, "scope": "stage", "summary_en": "Moon Rabbit's skill times with GingerCraven's; get close to apply ATK-down, then Scorpion stacks.", "clears": [], "teams": [], "builds": [], "mechanics": [], "rift": [], "stage_types": [], "disagreements": [], "quotes": [] }
+  ],
+  "skipped": [
+    { "id": "47415", "reason": "refused: not logged in (errorCode 0004)" },
+    { "id": "50409", "reason": "refused (이면 재화 패치전에 털어야하냐)" },
+    { "id": "50204", "reason": "refused (축복5단 스테 확장전 이면 발담그기 성공)" },
+    { "id": "50068", "reason": "refused (차원의이면 35퍼 권투 질문)" },
+    { "id": "49886", "reason": "refused (차원의 이면 테두리, 서신우); browser redirected to Naver login" },
+    { "id": "49719", "reason": "refused" }, { "id": "49610", "reason": "refused" }, { "id": "49598", "reason": "refused" },
+    { "id": "49415", "reason": "refused" }, { "id": "49380", "reason": "refused (이면 가신 선생님들 도와주세요)" }, { "id": "49332", "reason": "refused (이면 올라온지 일주일정도 지났는데)" },
+    { "id": "50302", "reason": "refused (과연 다음 차원에서도 이럴 것인가.., 서신우)" }, { "id": "49003", "reason": "refused (다음 업데이트 떡밥, 롤로노아)" }, { "id": "50547", "reason": "refused (120랩 확장)" }
+  ],
+  "glossary": [
+    { "kr": "샤르도네맛 쿠키", "en": "Chardonnay Cookie (SSR, Grass support, 10-08)", "kind": "cookie", "confidence": "high", "evidence": "nv:50417" },
+    { "kr": "신록의 성역", "en": "Verdant Sanctuary (Chardonnay's skill)", "kind": "term", "confidence": "low", "evidence": "nv:50417" },
+    { "kr": "다발 시너지", "en": "Volley synergy", "kind": "term", "confidence": "low", "evidence": "nv:50417" },
+    { "kr": "그레이프 디바인즈 수도원", "en": "Grape Divines Abbey (new stage region, to 364-30)", "kind": "term", "confidence": "low", "evidence": "nv:50417" },
+    { "kr": "시럽쇳물", "en": "Syrup Ore (upgrade material)", "kind": "term", "confidence": "low", "evidence": "nv:50417" },
+    { "kr": "의료보험", "en": "Medical Insurance perk: +5% max HP to allies when ≥2 supports are fielded", "kind": "term", "confidence": "high", "evidence": "nv:48211 image" },
+    { "kr": "종합 복지 패키지 Lv2", "en": "Welfare Package Lv2 perk: allies +2% ATK/DEF/HP (종합2)", "kind": "term", "confidence": "high", "evidence": "nv:47360 image, nv:48376" },
+    { "kr": "수리특약", "en": "Repair Contract perk (방어구 수리)", "kind": "term", "confidence": "low", "evidence": "nv:48376, nv:48862" },
+    { "kr": "탄약비 전액 지원", "en": "Ammo Allowance perk (shooter perk, 탄약비)", "kind": "term", "confidence": "low", "evidence": "nv:47148" },
+    { "kr": "동글동글컨", "en": "circling control around Cool Mint", "kind": "term", "confidence": "high", "evidence": "nv:47277, nv:48140" },
+    { "kr": "명쿠", "en": "Cheerful Cookie (명랑한 쿠키)", "kind": "cookie", "confidence": "high", "evidence": "nv:47240" }
+  ]
+}

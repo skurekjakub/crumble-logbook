@@ -1,6 +1,6 @@
 {
  "about": "Every system that raises the team power (전투력) the game shows for a lineup, as the sources list them (nv:33130, nv:43444, the in-game Arena guide quoted by web:sugarpocket-guides). For each: what it raises, where it applies, its materials and whether they are free, time-gated or paid, its cap and diminishing returns, posted gains, efficiency by account stage, and what it does for the stage and Rift brackets of record 003. 'posted' figures are players' own; 'inferred' ones are this record's arithmetic on posted or game-data figures. Game version 1.4.002 (2026-09-23) unless a patch note says otherwise.",
- "measured": "2026-09-28",
+ "measured": "2026-10-07",
  "efficiency_scale": "high: a posted or inferred gain of several % of team power for a cost a player at that stage meets within days; medium: about 1% per few days' income or per ~10,000 KRW; low: well under 1% per the same, or gated by luck or large sums; none: no displayed power.",
  "sources_list": [
   {
@@ -15,8 +15,8 @@
    ],
    "cost_type": "mixed",
    "cost_per_roll": "10 SP unlocked; 10/30/60/100/150/220 SP with 1–6 points locked (web:sugarpocket-stella)",
-   "cap": "up to 12 points per constellation, 100% area; constellation 8 was the frontier in late September (dc:77104, dc:76272)",
-   "diminishing": "Area per SP falls fast: 91% (8 points) ≈ 1,900 SP, 95% (10) ≈ 5,280–7,900, 100% (12) ≈ 150,000–400,000 (dc:68586, dc:56417, nv:43444, dc:73840, web:yt-mL9MSX3QD94). New points need ever more cookie stars (dc:76290).",
+   "cap": "up to 12 points per constellation, 100% area; constellation 8 is still the frontier in October. A point opens every 15 cookie stars: constellation 8 at 660, 8-5 at 690, 8-6 at 705 (dc:81196, dc:78964, dc:78814, dc:77737)",
+   "diminishing": "Constellation 8 pays 1.3% amplification per 1% of area (1.0 on 7; dc:78814, dc:78964). Area per SP falls fast: 91% (8 points) ≈ 1,900 SP, 95% (10) ≈ 5,280–7,900, 100% (12) ≈ 150,000–400,000 (dc:68586, dc:56417, nv:43444, dc:73840, web:yt-mL9MSX3QD94). New points need ever more cookie stars (dc:76290).",
    "posted_gains": [
     {"account": "1.5G, mid-September", "before": "1.5G", "after": "1.7G", "delta": "+13%", "cost": "constellation 8 opened", "kind": "posted", "sources": ["dc:68732"]},
     {"account": "2G, 2026-09-28", "before": "2G", "after": "2.2G", "delta": "+10%", "cost": "not posted: completing the 3-point triangle on constellation 8, most likely by opening its third point with cookie stars", "kind": "posted", "sources": ["dc:77329"]},
@@ -29,31 +29,32 @@
     "at_2_2g": "high up to 8-3, free from pulls (dc:76290): one step was +10% at 2G. Past 8-3: ~45 paid cookie stars, ₩2.3–4.2M upper bound (dc:50913), gain unposted."
    },
    "bracket_effect": "Moves every bracket line at once; the only posted single step that moved a 2G account a full 0.2G.",
-   "spend_order": "Roll unlocked to ~70% early; shape later constellations first: hexagon at 6 points, octagon at 8, 95% at 10 (web:yt-5XXDHBHnISU, web:yt-mL9MSX3QD94).",
+   "spend_order": "Roll unlocked to ~70% early; shape later constellations first: hexagon at 6 points, octagon at 8, 95% at 10 (web:yt-5XXDHBHnISU, web:yt-mL9MSX3QD94). Open premium pulls up to 8-6 rather than hoard (dc:82029).",
    "patch_notes": "none recorded",
    "confidence": "high",
-   "sources": ["nv:5693", "nv:43444", "dc:68732", "dc:77329", "dc:76290", "dc:50913", "dc:55570", "dc:56417", "dc:68586", "dc:73840", "web:sugarpocket-stella", "web:yt-y-bxOrnjIeU", "web:yt-5XXDHBHnISU", "web:yt-mL9MSX3QD94", "web:yt-FrKqf5lhZBs"]
+   "sources": ["nv:5693", "nv:43444", "dc:68732", "dc:77329", "dc:76290", "dc:50913", "dc:55570", "dc:56417", "dc:68586", "dc:73840", "web:sugarpocket-stella", "web:yt-y-bxOrnjIeU", "web:yt-5XXDHBHnISU", "web:yt-mL9MSX3QD94", "web:yt-FrKqf5lhZBs", "dc:81196", "dc:78964", "dc:78814", "dc:77737", "dc:82029"]
   },
   {
    "id": "guild_lab",
    "name_en": "Guild Lab (guild research)",
    "name_kr": "길드 연구소",
-   "raises": "Account stats from the guild's research level (the tables are not captured).",
+   "raises": "Account stats from the guild's research: element damage and ATK/DEF/HP amplification nodes (14-2 Light damage +10%, 15-3 HP amp +7%; dc:81723, dc:78621). crumb.gg's calculator example applies a guild ATK amp of ×1.30 (dc:82457).",
    "applies_in": {"stage": true, "rift": true, "arena": false, "conquest": true},
    "materials": [{"name": "membership of a guild with high research", "free": "join; members donate Crystals toward research (dc:70446)", "paid": "none", "note": "guild help also shortens Gnome Lab timers (web:yt-0HQbrZK8W4g)"}],
    "cost_type": "free",
-   "cap": "guild research levels 11-1 to 14-1 reported for top guilds on 2026-09-22 (dc:72584)",
+   "cap": "guild lab level 15 (15-3) is the last node seen; levels 11-1 to 14-1 for top guilds on 2026-09-22 (dc:72584, dc:78621)",
    "diminishing": "not measured",
    "posted_gains": [
     {"account": "small guild → research-13 guild", "before": "", "after": "", "delta": "~+20% of account total power (총투력), not team power", "cost": "switching guild", "kind": "claimed (one reply, not measured)", "sources": ["dc:76461"]},
-    {"account": "stage pusher (capture in record 003)", "before": "not stated", "after": "the 15% cut after leaving the guild", "delta": "fell to the 15% bracket", "cost": "leaving", "kind": "posted", "sources": ["dc:67596"]}
+    {"account": "stage pusher (capture in record 003)", "before": "not stated", "after": "the 15% cut after leaving the guild", "delta": "fell to the 15% bracket", "cost": "leaving", "kind": "posted", "sources": ["dc:67596"]},
+    {"account": "13G account total, 2026-10-06", "before": "13G", "after": "~10G", "delta": "about −23% of account total (총투) on leaving; +2G on joining (dc:78400)", "cost": "leaving / joining", "kind": "posted (account total, not team power)", "sources": ["dc:81826", "dc:78400"]}
    ],
-   "efficiency": {"early": "unmeasured (free)", "mid": "unmeasured (free)", "late": "unmeasured (free)", "at_2_2g": "free and instant to check; the size is one unmeasured claim about account total power"},
-   "bracket_effect": "Unknown in team power: the only figure is about account total power, so no stage reach is derived from it.",
+   "efficiency": {"early": "unmeasured (free)", "mid": "unmeasured (free)", "late": "unmeasured (free)", "at_2_2g": "free and instant: one player lost ~23% of account total on leaving; the team-power share isn't posted"},
+   "bracket_effect": "Large but unsized in team power: leaving dropped one pusher to the 15% cut and another's total by ~23%.",
    "spend_order": "Be in the strongest guild you can keep up with; nv:33130 calls the guild mandatory.",
    "patch_notes": "none recorded",
    "confidence": "low",
-   "sources": ["dc:76461", "dc:67596", "dc:72584", "dc:70446", "nv:33130", "web:yt-0HQbrZK8W4g"]
+   "sources": ["dc:76461", "dc:67596", "dc:72584", "dc:70446", "nv:33130", "web:yt-0HQbrZK8W4g", "dc:81826", "dc:78400", "dc:81723", "dc:78621", "dc:80574", "dc:82457"]
   },
   {
    "id": "lineup",
@@ -64,7 +65,7 @@
    "materials": [{"name": "a stage gear preset and lineup chosen for displayed power", "free": "existing gear and cookies; oven draws saved to a second preset", "paid": "none", "note": "power-padding helps only stages and the Rift (nv:41221)"}],
    "cost_type": "free",
    "cap": "what the owned gear and cookies allow",
-   "diminishing": "A padded preset loses real stats (skill haste, amp); accuracy past ~1,000 adds little power (dc:56391).",
+   "diminishing": "A padded preset loses real stats (skill haste, amp); accuracy past ~1,000 adds little power (dc:56391). A decompiled formula (claimed) puts power at √(offense × survival), crit resistance inside survival (dc:81470).",
    "posted_gains": [
     {"account": "arena deck", "before": "3M", "after": "5M", "delta": "+67%", "cost": "commenters' guess: a gear or formation change", "kind": "posted figure, guessed cause", "sources": ["dc:72901"]},
     {"account": "early", "before": "Wind Archer 192 per hit", "after": "576 after adding a healer", "delta": "3× damage through the bracket", "cost": "a lineup swap", "kind": "posted", "sources": ["web:yt-njY-LhKqAtM"]},
@@ -75,7 +76,7 @@
    "spend_order": "Keep a pure-power stage preset and swap to it when a line is within reach (record 003, dc:76290).",
    "patch_notes": "1.4.002: presets can take already-drawn gear (web:crumbgg-patches-20260928).",
    "confidence": "low",
-   "sources": ["web:yt-EocpkOD5NW0", "web:yt-njY-LhKqAtM", "dc:56391", "dc:74089", "dc:74006", "dc:74953", "dc:72901", "nv:41221", "dc:76290"]
+   "sources": ["web:yt-EocpkOD5NW0", "web:yt-njY-LhKqAtM", "dc:56391", "dc:74089", "dc:74006", "dc:74953", "dc:72901", "nv:41221", "dc:76290", "dc:81470"]
   },
   {
    "id": "gnome_lab",
@@ -89,17 +90,18 @@
     {"name": "time", "free": "timers; guild help", "paid": "speed-ups in packs", "note": ""}
    ],
    "cost_type": "time_gated",
-   "cap": "research 110-2, special 19 (1.4.002); was 90-2 / 16 from 2026-09-10",
+   "cap": "research 110-2, special 19 (1.4.002); 130-2 and special 22 from 2026-10-08, with 12 h per research at most (nv:50417)",
    "diminishing": "Stone cost per step climbs into the millions near the top; defense nodes add almost no power (dc:76647).",
    "posted_gains": [
-    {"account": "2G → 4G player", "before": "2G", "after": "4G", "delta": "'padded power is purely research' (with oven 36, Bari 5★, Stellar 8-6)", "cost": "weeks of research", "kind": "posted", "sources": ["dc:76290"]}
+    {"account": "2G → 4G player", "before": "2G", "after": "4G", "delta": "'padded power is purely research' (with oven 36, Bari 5★, Stellar 8-6)", "cost": "weeks of research", "kind": "posted", "sources": ["dc:76290"]},
+    {"account": "3.4G, 2026-10-07", "before": "3.4G", "after": "3.477G", "delta": "+76.87M (+2.3%) for special research 19, ATK amplification 30%", "cost": "special research stones (not posted)", "kind": "posted (screenshot; team or total not stated); a commenter got +100M", "sources": ["dc:82156"]}
    ],
    "efficiency": {"early": "high: one step per node up to the specials", "mid": "high: HP then ATK nodes", "late": "medium: millions of stones per node", "at_2_2g": "medium; a steady free source, gated by stones and time"},
    "bracket_effect": "Steady growth; HP nodes add the most displayed power (web:yt-y-bxOrnjIeU, web:yt-0HQbrZK8W4g).",
-   "spend_order": "One step per node up to the specials (Sugar Flame, dice, rune discount, speed), then HP > ATK > crit, defense last; lower ATK nodes before ATK 30% (~50M stones, dc:76620) (web:yt-y-bxOrnjIeU, dc:76642, nv:43444).",
-   "patch_notes": "Expanded 2026-09-10 and 2026-09-23 (web:crumbgg-patches-20260928).",
+   "spend_order": "One step per node up to the specials (Sugar Flame, dice, rune discount, speed), then HP > ATK > crit, defense last; lower ATK nodes before ATK 30% (~50M stones, dc:76620) (web:yt-y-bxOrnjIeU, dc:76642, nv:43444). The cafe's 10-01 guide: special research to 19 first, then the lowest ATK-amp nodes, then HP (nv:48555).",
+   "patch_notes": "Expanded 2026-09-10 and 2026-09-23 (web:crumbgg-patches-20260928); 2026-10-08 (announced): to 130-2 and special 22, 12 h cap per research, longer past research refunded as speed-ups (nv:50417).",
    "confidence": "medium",
-   "sources": ["web:yt-y-bxOrnjIeU", "web:yt-0HQbrZK8W4g", "dc:76642", "dc:76647", "dc:76620", "dc:77277", "dc:76198", "dc:76290", "nv:43444", "web:crumbgg-patches-20260928"]
+   "sources": ["web:yt-y-bxOrnjIeU", "web:yt-0HQbrZK8W4g", "dc:76642", "dc:76647", "dc:76620", "dc:77277", "dc:76198", "dc:76290", "nv:43444", "web:crumbgg-patches-20260928", "dc:82156", "nv:50417", "nv:48555"]
   },
   {
    "id": "plating",
@@ -108,8 +110,8 @@
    "raises": "The slot's main stat by level (+200% at 20, +315% at 25) and sub-stats every fifth level (+30/70/130/200/280%). The level stays with the slot; 12 slots.",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [
-    {"name": "Chocosteel (초코강)", "free": "one an hour from idle, 24 a day (web:yt-l9086mj7hwA); exchanges; boxes", "paid": "plate packs, the 300 Chocosteel + 60 Syrup hot deal, weekly packs", "note": "priced 200 Crystals (web:crumblehub-efficiency) or 50 Crystals (dc:68116)"},
-    {"name": "Syrup Metal (시럽쇳물)", "free": "victory medal, guild medal and Rumble exchanges; high-tier boxes", "paid": "9,900 KRW plate thanks pack, the 5.5 and 7.5 packs", "note": "decline protection from 10, shatter restore from 15"}
+    {"name": "Chocosteel (초코강)", "free": "one an hour from idle, 24 a day (web:yt-l9086mj7hwA); exchanges; boxes; from 10-08 the mileage shop (5 for 1,500, nv:50417)", "paid": "plate packs, the 300 Chocosteel + 60 Syrup hot deal, weekly packs", "note": "priced 200 Crystals (web:crumblehub-efficiency) or 50 Crystals (dc:68116)"},
+    {"name": "Syrup Metal (시럽쇳물)", "free": "victory medal, guild medal and Rumble exchanges; high-tier boxes; from 10-08 the mileage shop (5 for 2,000) and Rift S2 rewards (nv:50417)", "paid": "9,900 KRW plate thanks pack, the 5.5 and 7.5 packs", "note": "decline protection from 10, shatter restore from 15"}
    ],
    "cost_type": "mixed",
    "cap": "25 since 1.4.002 (was 20)",
@@ -122,9 +124,9 @@
    "efficiency": {"early": "high: all to 5 then 10 is cheap", "mid": "medium: 10→15 with free Chocosteel (~4 days of idle per level near 15, inferred)", "late": "low: 2% steps with shatter risk; whale lane", "at_2_2g": "medium for any slot below 15 (sword, bow, staff first); low past 15. At 1.6G one step 14→15 bought ~0.5 chapters of 35% reach (inferred)."},
    "bracket_effect": "Small, steady; large only on lucky great successes. Not comparable per won with Stellar points from the record's evidence (see stellar_link).",
    "spend_order": "All to 5, all to 10, then sword, bow, staff to 15, then ring, magic object, book. No Syrup below 12–13; past 15 save it for restores (web:crumblehub-plate-upgrade, nv:43444, web:yt-_Vyl0eQz9lU, dc:75684).",
-   "patch_notes": "2026-09-23: cap 25; a shatter drops 2 levels instead of to 10; restore with Syrup; compensation for past shatters (dc:72150).",
+   "patch_notes": "2026-09-23: cap 25; a shatter drops 2 levels instead of to 10; restore with Syrup; compensation for past shatters (dc:72150). 2026-10-08 (announced): Chocosteel and Syrup in the mileage shop; Rift exchange limits 5 → 10 (nv:50417, web:crumbgg-patches-20261007).",
    "confidence": "high",
-   "sources": ["dc:53079", "dc:72150", "dc:75684", "dc:72479", "dc:76272", "dc:76414", "web:crumblehub-plate-upgrade", "web:yt-_Vyl0eQz9lU", "web:yt-l9086mj7hwA", "web:sugarpocket-catalog", "nv:43444"]
+   "sources": ["dc:53079", "dc:72150", "dc:75684", "dc:72479", "dc:76272", "dc:76414", "web:crumblehub-plate-upgrade", "web:yt-_Vyl0eQz9lU", "web:yt-l9086mj7hwA", "web:sugarpocket-catalog", "nv:43444", "nv:50417", "web:crumbgg-patches-20261007"]
   },
   {
    "id": "gear_oven",
@@ -132,7 +134,7 @@
    "name_kr": "오븐 · 장비",
    "raises": "Gear main and sub stats. Gear level caps at oven level × 3; rarity odds rise with oven level (Eternal from oven 31, 0.002% a draw).",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
-   "materials": [{"name": "dough (반죽) and Lucky Dough", "free": "dough daily dungeon, idle, mileage keys", "paid": "daily dungeon key packs, level pass (Lucky Dough), the 6,000 KRW Unique 3-piece at oven 10", "note": "opening speed is capped (~50 per request); a full day of play cannot open all dough (dc:76860, dc:76931)"}],
+   "materials": [{"name": "dough (반죽) and Lucky Dough", "free": "dough daily dungeon, idle, mileage keys", "paid": "daily dungeon key packs, level pass (Lucky Dough), the 6,000 KRW Unique 3-piece at oven 10", "note": "Since 10-02 auto-open takes 200–500 dough at a time from oven 32 (was ~50, when a day couldn't open it all) (nv:48486, dc:76860)"}],
    "cost_type": "mixed",
    "cap": "oven level 50 in the data (gear 145–150)",
    "diminishing": "Each oven level costs more dough; rarity jumps are luck.",
@@ -144,9 +146,9 @@
    "efficiency": {"early": "high: the Unique 3-piece (6,000 KRW) at oven 10 is two tiers above the drops", "mid": "high: oven levels drive power in the 600M–1G band", "late": "medium: Eternal draws are rare; oven 29 takes about a month with every key pack", "at_2_2g": "medium; the 2G→4G player credits oven 36 gear levels (dc:76290)"},
    "bracket_effect": "The main driver in mid-game; also where power padding lives (see lineup).",
    "spend_order": "Mileage and exchanges: dough keys first (nv:30148, web:yt-s4Y3glSPJPk); auto-draw one tier below the best rate (web:yt-EocpkOD5NW0).",
-   "patch_notes": "2026-08-13 auto-open up to 20 by oven level; 2026-08-27 up to 50 (web:crumbgg-patches-20260928).",
+   "patch_notes": "2026-08-13 auto-open up to 20 by oven level; 2026-08-27 up to 50 (web:crumbgg-patches-20260928); 2026-10-02 200/300/400/500 at oven 32/34/36/38, 100 gear held (nv:48486).",
    "confidence": "medium",
-   "sources": ["dc:77460", "nv:41221", "dc:75242", "dc:69664", "dc:76718", "dc:77256", "dc:76290", "dc:76860", "dc:76931", "web:yt-FrKqf5lhZBs", "web:sugarpocket-catalog"]
+   "sources": ["dc:77460", "nv:41221", "dc:75242", "dc:69664", "dc:76718", "dc:77256", "dc:76290", "dc:76860", "dc:76931", "web:yt-FrKqf5lhZBs", "web:sugarpocket-catalog", "nv:48486"]
   },
   {
    "id": "fame",
@@ -201,9 +203,9 @@
    "efficiency": {"early": "high: free cutters pile in", "mid": "medium: pickups to 5★ mainly for Stellar points", "late": "no posted power figure; ~₩51,000–94,000 a star at the pickup rate (inferred from dc:50913); their power comes mainly via the Stellar points they open", "at_2_2g": "the way points past 8-3 open (dc:76290); the resulting gain isn't posted"},
    "bracket_effect": "Indirect, through Stellar Link.",
    "spend_order": "Pull pickups to at least 5★ (6–8★ for good ones); Crystals on cookies, not pets (web:yt-njY-LhKqAtM, web:yt-mL9MSX3QD94, web:yt-s4Y3glSPJPk).",
-   "patch_notes": "TSSR gachas monthly, pickups every two weeks (nv:43444).",
+   "patch_notes": "TSSR gachas monthly, pickups every two weeks (nv:43444). 2026-10-08: a free Milk from a 7-day check-in, one more copy toward its stars (nv:50417).",
    "confidence": "high",
-   "sources": ["dc:50913", "dc:76290", "dc:67616", "dc:74607", "dc:77246", "dc:76081", "web:sugarpocket-catalog", "web:yt-njY-LhKqAtM", "nv:26202"]
+   "sources": ["dc:50913", "dc:76290", "dc:67616", "dc:74607", "dc:77246", "dc:76081", "web:sugarpocket-catalog", "web:yt-njY-LhKqAtM", "nv:26202", "nv:50417"]
   },
   {
    "id": "cookie_level",
@@ -213,15 +215,18 @@
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [{"name": "cookie EXP (별사탕)", "free": "idle, EXP daily dungeon, EXP auto-hunt chests", "paid": "EXP pass tiers, auto-hunt packs", "note": "level reset is free and refunds everything (nv:43444)"}],
    "cost_type": "mixed",
-   "cap": "100 (a raise is expected, dc:76394)",
-   "diminishing": "Levels 91–100 cost about 77% of the EXP to 100 for +30% relative stats (web:sugarpocket-catalog, inferred).",
-   "posted_gains": [],
-   "efficiency": {"early": "high", "mid": "high for the main lineup", "late": "none once the lineup is at 100", "at_2_2g": "none for a lineup already at 100"},
-   "bracket_effect": "Early driver; capped late.",
-   "spend_order": "Milk first, then dealers, the healer, the rest; Pomegranate lowest if it survives (web:yt-VPVzGKGwWog).",
-   "patch_notes": "1.4.002: hold the level-up button to pick a target level.",
+   "cap": "100; 120 from 2026-10-08 (nv:50417), gated by Crumble level (105 for level 101, +5 a level, 200 for 120; dc:79865). Posters sit at Crumble 175–192, so levels 115–118 at first (dc:81501). A leak said 150 (dc:82186).",
+   "diminishing": "From 10-08, EXP to 100 falls 98.1M → 28.6M (excess refunded); 101–120 then take ~252M more and Crumble level +5 per cookie level (leak, dc:79865).",
+   "posted_gains": [
+    {"account": "SSR at 10★, game data", "before": "level 100: stats ×27.5 of base", "after": "level 120: ×45.1", "delta": "+64% cookie stats (an upper bound on its power gain)", "cost": "~252M EXP per cookie and Crumble level 200 (leak, dc:79865)", "kind": "inferred from crumb.gg's level-120 stats; the leaked table agrees", "sources": ["web:crumbgg-patches-20261007", "dc:79865"]},
+    {"account": "any (gallery reverse calculation from the leak)", "before": "level 100", "after": "level 119", "delta": "~+25% power", "cost": "Crumble level 195 needed", "kind": "claimed (one poster's calculation)", "sources": ["dc:81689", "dc:82104"]}
+   ],
+   "efficiency": {"early": "high", "mid": "high for the main lineup", "late": "none at 100 until 10-08; then levels 101–120 (+64% cookie stats at 120, inferred)", "at_2_2g": "none for a lineup at 100 until 10-08; then the next big free lever, gated by EXP and Crumble level"},
+   "bracket_effect": "Early driver; capped late until 10-08. A claimed +25% power at 119 would take 2.2G to ~2.75G: 35% reach 304-19 → about 313 (inferred).",
+   "spend_order": "Milk first, then dealers, the healer, the rest; Pomegranate lowest if it survives (web:yt-VPVzGKGwWog). Bank EXP for 101–120 (dc:80209).",
+   "patch_notes": "1.4.002: hold the level-up button to pick a target level. 2026-10-08 (announced 10-07): cap 120; Lv.79–100 EXP cut with refunds (nv:50417).",
    "confidence": "high",
-   "sources": ["web:sugarpocket-catalog", "web:yt-VPVzGKGwWog", "nv:43444", "dc:76394"]
+   "sources": ["web:sugarpocket-catalog", "web:yt-VPVzGKGwWog", "nv:43444", "dc:76394", "nv:50417", "web:crumbgg-patches-20261007", "dc:82186", "dc:81689", "dc:82104", "dc:80209", "dc:79865", "dc:79885", "dc:80230", "dc:81501"]
   },
   {
    "id": "sugar_runes",

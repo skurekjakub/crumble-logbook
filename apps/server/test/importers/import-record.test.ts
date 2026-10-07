@@ -69,6 +69,7 @@ const sum = (ns: number[]) => ns.reduce((a, b) => a + b, 0);
 const distinct = (ids: string[]) => new Set(ids).size;
 
 type Manifest = {
+  rankings: Array<{ file: string }>;
   fightEvents: { file: string; sourceAliases: Record<string, string> };
   buffValues: {
     file: string;
@@ -98,11 +99,11 @@ const alias = (id: string) => manifest.fightEvents.sourceAliases[id] ?? id;
 /**
  * Counts the data lines (every non-blank line after the header) of an evidence TSV.
  *
- * @param file - the TSV's name in the crumb.gg evidence directory
+ * @param path - the TSV's record-relative path
  * @returns the number of data lines
  */
-function tsvDataLines(file: string): number {
-  const text = readFileSync(join(recordDir, "evidence", "15-crumbgg", file), "utf-8");
+function tsvDataLines(path: string): number {
+  const text = readFileSync(join(recordDir, path), "utf-8");
   return text.split(/\r?\n/).filter((line) => line.trim() !== "").length - 1;
 }
 
@@ -133,10 +134,7 @@ const expectedCounts = {
   runeBuildDecks: sum(runes.map((r) => distinct(r.decks))),
   gearRecs: gear.length,
   scores: scores.length,
-  rankings:
-    tsvDataLines("11-players.tsv") +
-    tsvDataLines("12-guilds.tsv") +
-    tsvDataLines("13-power-top500.tsv"),
+  rankings: sum(manifest.rankings.map((spec) => tsvDataLines(spec.file))),
   mechanics: mechanics.length,
   rngFactors: rng.length,
   timeline: timeline.length,
@@ -172,6 +170,11 @@ const expectedCounts = {
     sum(fightTimeline.map((e) => distinct(e.sources.map(alias)))) +
     sum(buffRowsPerCookie),
   factClaims: 0,
+  accountSnapshots: 0,
+  accountLineups: 0,
+  accountCookies: 0,
+  accountRoadmaps: 0,
+  accountRoadmapItems: 0,
 };
 
 /**
@@ -467,12 +470,12 @@ describe("importRecord validation", () => {
     "import.json",
   ).rankings;
   /**
-   * Finds record 001's manifest entry for the ranking TSV whose path ends in `file`.
+   * Finds record 001's manifest entry for a ranking TSV.
    *
-   * @param file - the end of the TSV's path
+   * @param file - the TSV's record-relative path
    * @returns the ranking spec
    */
-  const rankingSpec = (file: string) => rankingSpecs.find((spec) => spec.file.endsWith(file))!;
+  const rankingSpec = (file: string) => rankingSpecs.find((spec) => spec.file === file)!;
 
   /**
    * Asserts that every table's row count is zero.
@@ -799,7 +802,7 @@ describe("importRecord validation", () => {
   });
 
   it("rejects two ranking rows with the same board, season, rank and capture date, a null season included", () => {
-    const power = rankingSpec("13-power-top500.tsv");
+    const power = rankingSpec("evidence/15-crumbgg/13-power-top500.tsv");
     const dir = tempRecord(null, () => {}, {
       manifest: { rankings: [power, power] },
       evidence: [power.file],

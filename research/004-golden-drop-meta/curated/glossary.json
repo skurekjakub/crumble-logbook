@@ -9,5 +9,8 @@
  {"kr": "세계선", "kr_short": [], "en": "'World line': a lucky run setup where Milk arrives on time", "kind": "term", "sources": ["dc:71218", "dc:72724", "dc:71956"]},
  {"kr": "공순서", "kr_short": ["공순위", "공격력 순위"], "en": "ATK order (the ranking that routes the beam and ATK-targeted perks)", "kind": "term", "note": "Written as initials, e.g. 우브전피마치 = Milk, Brightseeker, Scorpion, Figure, Macaron, Cheesecake.", "sources": ["dc:69414", "dc:67621", "dc:72051"]},
  {"kr": "황금빛 광채", "kr_short": [], "en": "The title for holding the weekly Crumble Dungeon top 100 (literally 'golden radiance'; its official English name was not captured)", "kind": "term", "sources": ["nv:43444", "web:sugarpocket-catalog"]},
- {"kr": "오늘의 랭킹", "kr_short": ["일일 랭킹", "일간랭킹"], "en": "Today's ranking (Crumble Dungeon's daily board)", "kind": "term", "sources": ["nv:16132", "dc:67615"]}
+ {"kr": "오늘의 랭킹", "kr_short": ["일일 랭킹", "일간랭킹"], "en": "Today's ranking (Crumble Dungeon's daily board)", "kind": "term", "sources": ["nv:16132", "dc:67615"]},
+ {"kr": "깡공", "kr_short": [], "en": "Flat ATK (gear or rune lines of plain ATK rather than ATK%)", "kind": "term", "note": "Used of a flat-ATK Conquest preset in the dungeon.", "sources": ["dc:82406", "dc:79802"]},
+ {"kr": "기도메타", "kr_short": ["기도"], "en": "'Praying meta': buying every key and retrying until a lucky run lands", "kind": "term", "sources": ["dc:81761", "dc:82406"]},
+ {"kr": "탄액비", "kr_short": [], "en": "A mercenary perk the 578G author pairs with Passion Pay; its English name is not captured", "kind": "term", "sources": ["web:yt-tnAGQ2XgW9o"]}
 ]

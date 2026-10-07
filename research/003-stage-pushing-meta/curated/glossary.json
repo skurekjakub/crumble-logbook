@@ -36,5 +36,12 @@
   { "kr": "용암 와플 도마뱀", "kr_short": [], "en": "Magma Waffle Lizard (the lava zone's -10 to -15 packs)", "kind": "term", "boss": true, "sources": ["web:crumblehub-stage-boss-index", "dc:75752"] },
   { "kr": "용암 슈가 와플 도마뱀", "kr_short": [], "en": "Magma Sugar Waffle Lizard (the lava zone's -20 and -30)", "kind": "term", "boss": true, "sources": ["web:crumblehub-stage-boss-index"] },
   { "kr": "아이스콘 듀얼 나이트", "kr_short": [], "en": "Ice Cone Lancer (snowfield packs, e.g. -10)", "kind": "term", "boss": true, "sources": ["web:crumblehub-stage-boss-index"] },
-  { "kr": "얼음 사탕골렘", "kr_short": [], "en": "Ice Candy Golem (the snowfield's -20)", "kind": "term", "boss": true, "sources": ["web:crumblehub-stage-boss-index"] }
+  { "kr": "얼음 사탕골렘", "kr_short": [], "en": "Ice Candy Golem (the snowfield's -20)", "kind": "term", "boss": true, "sources": ["web:crumblehub-stage-boss-index"] },
+  { "kr": "공순위", "kr_short": ["공격력 순위"], "en": "Attack order: the team ranked by ATK, which decides who the ATK-ordered buffs and perks land on", "kind": "term", "sources": ["web:yt-kMw3E6KXUAo"] },
+  { "kr": "렙따", "kr_short": ["렙조절", "렙다운"], "en": "Levelling a cookie down so it drops out of the top of the attack order", "kind": "term", "sources": ["dc:80625"] },
+  { "kr": "뻥투", "kr_short": ["뻥투력", "개뻥투셋"], "en": "Padded power: a gear set rolled for displayed power to cross a bracket line", "kind": "term", "sources": ["dc:80823", "dc:80540"] },
+  { "kr": "복지카드", "kr_short": ["복지"], "en": "The mercenary band's perk cards (열정페이, 초고속승진)", "kind": "term", "sources": ["web:yt-kMw3E6KXUAo"] },
+  { "kr": "복주머니 펫", "kr_short": ["복주머니", "에어본 저항 펫"], "en": "The airborne-resist pet 그니 brings against Cool Mint and the Werehound Princess; likely 색동 주머니", "kind": "pet", "confidence": "low", "sources": ["web:yt-kMw3E6KXUAo"] },
+  { "kr": "숙성의 대천사", "kr_short": [], "en": "Well-Aged Archangel, the new boss of Rift season 2's six-boss cycle", "kind": "term", "boss": true, "sources": ["web:crumbgg-rift-v15"] },
+  { "kr": "샤르도네맛 쿠키", "kr_short": ["샤르도네"], "en": "Chardonnay Cookie, SSR Grass support of the 10-08 update (crit, push resist, Volley line buff)", "kind": "cookie", "sources": ["web:crumbgg-patches-1-5"] }
 ]

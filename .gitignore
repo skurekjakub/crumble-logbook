@@ -13,6 +13,10 @@ coverage/
 .env.*
 /.superpowers/
 
+# account audit screenshots stay local; the snapshot and roadmap JSON are committed
+/account/snapshots/screens/
+/account/**/*.log
+
 # personal Claude Code overrides
 .claude/settings.local.json
 

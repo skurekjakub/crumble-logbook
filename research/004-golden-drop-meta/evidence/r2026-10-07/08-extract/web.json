@@ -1,0 +1,120 @@
+{
+ "lane": "web",
+ "note": "Sites and global web pages re-captured or found in the 2026-10-07 round, read from evidence/r2026-10-07/03-sites/ and evidence/r2026-10-07/07-web/. Re-captured pages whose text did not change keep an empty summary_en (their note is in recapture_en), so the app keeps the first round's summary.",
+ "posts": [
+  {
+   "source": "web",
+   "id": "crumbgg-patches-data",
+   "url": "https://crumb.gg/data/patches.json",
+   "date": "2026-10-07",
+   "title_kr": "crumb.gg patches.json",
+   "title_en": "crumb.gg patch digest",
+   "relevance": 2,
+   "summary_en": "Served 200 on 2026-10-07. Newest entries: 1.5.002 on 10-08 (upcoming: Chardonnay, level cap 120, stages to 364-30, Lv.79-100 EXP cut, Milk attendance event) and an undated 1.4.002 hotfix (oven Auto Bake, Arena defender protection, Rift mission counts). No Crumble Dungeon line since 2026-09-10.",
+   "scores": [],
+   "mechanics": [],
+   "quotes": [
+    {
+     "kr": "쿠키 최대 레벨 100 → 120",
+     "en": "Max cookie level 100 → 120"
+    }
+   ]
+  },
+  {
+   "source": "web",
+   "id": "crumbgg-api-meta",
+   "url": "https://api.crumb.gg/api/meta",
+   "date": "2026-10-07",
+   "title_kr": "crumb.gg api/meta",
+   "title_en": "crumb.gg cookie list",
+   "relevance": 1,
+   "summary_en": "",
+   "scores": [],
+   "mechanics": [],
+   "quotes": [],
+   "recapture_en": "Client 1.4.002 with the same cookie list as on 2026-09-28; Chardonnay is not in it yet."
+  },
+  {
+   "source": "web",
+   "id": "eoggg-crumble",
+   "url": "https://eog.gg/games/cookierun-crumble/",
+   "date": "2026-10-07",
+   "title_kr": "EOG CookieRun: Crumble hub",
+   "title_en": "EOG's global hub",
+   "relevance": 1,
+   "summary_en": "",
+   "scores": [],
+   "mechanics": [],
+   "quotes": [],
+   "recapture_en": "Re-captured. The Crumble Dungeon exclusion section is unchanged (dated 2026-08-14); the PvE tier read was revised 2026-10-04 for the 76-cookie roster and a Guild Conquest lineup added 2026-10-07. No new dungeon score."
+  },
+  {
+   "source": "web",
+   "id": "cookierunwiki-crumble-dungeon",
+   "url": "https://cookierun.wiki/w/Crumble_Dungeon",
+   "date": "2026-10-07",
+   "title_kr": "Crumble Dungeon - Cookie Run Wiki",
+   "title_en": "Cookie Run Wiki: Crumble Dungeon",
+   "relevance": 1,
+   "summary_en": "",
+   "scores": [],
+   "mechanics": [],
+   "quotes": [],
+   "recapture_en": "Re-captured; the text matches the 2026-09-28 capture word for word."
+  },
+  {
+   "source": "web",
+   "id": "crumbleguides-dungeon",
+   "url": "https://crumbleguides.com/guides/cookie-run-crumble-dungeon",
+   "date": "2026-10-07",
+   "title_kr": "Crumble Guides: Crumble Dungeon",
+   "title_en": "Crumble Guides dungeon page",
+   "relevance": 1,
+   "summary_en": "",
+   "scores": [],
+   "mechanics": [],
+   "quotes": [],
+   "recapture_en": "Re-captured; byte-identical to the 2026-09-28 capture."
+  },
+  {
+   "source": "web",
+   "id": "cookieruncrumbles-dungeon-milk",
+   "url": "https://www.cookieruncrumbles.com/guides/cookie-run-crumble-dungeon-milk-buff-guide/",
+   "date": "2026-10-07",
+   "title_kr": "Crumble Dungeon Milk buff guide",
+   "title_en": "CookieRunCrumbles: Milk buff guide",
+   "relevance": 1,
+   "summary_en": "",
+   "scores": [],
+   "mechanics": [],
+   "quotes": [],
+   "recapture_en": "Re-captured; only the site's build chunks changed, the guide text is the same."
+  },
+  {
+   "source": "web",
+   "id": "ddg-crumble-dungeon-best-team-score",
+   "url": "https://html.duckduckgo.com/html/?q=%22Crumble+Dungeon%22+cookie+run+crumble+best+team+score",
+   "date": "2026-10-07",
+   "title_kr": "DuckDuckGo search",
+   "title_en": "Global search: Crumble Dungeon best team score",
+   "relevance": 0,
+   "summary_en": "Launch-era generic team guides only; no global score near the Korean top.",
+   "scores": [],
+   "mechanics": [],
+   "quotes": []
+  },
+  {
+   "source": "web",
+   "id": "ddg-crumble-dungeon-guide-milk-pomegranate-ko",
+   "url": "https://html.duckduckgo.com/html/?q=크럼블+던전+공략+우유+석류",
+   "date": "2026-10-07",
+   "title_kr": "DuckDuckGo search (KR)",
+   "title_en": "Korean search: Crumble Dungeon guide Milk Pomegranate",
+   "relevance": 0,
+   "summary_en": "Returned the round-one guides (dc:62042, ND러너) and older blogs; nothing in the window.",
+   "scores": [],
+   "mechanics": [],
+   "quotes": []
+  }
+ ]
+}

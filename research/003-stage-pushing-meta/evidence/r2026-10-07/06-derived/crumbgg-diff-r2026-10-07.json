@@ -1,0 +1,1890 @@
+{
+ "about": "Comparisons derived by derive_web_r2026-10-07.mjs from this round's 03-sites captures against the 2026-09-28 (evidence/03-sites) and 2026-10-03 (evidence/r2026-10-03/03-sites) captures. power_for_35 / power_for_15 = ceil(recommended_power x 0.4 / 0.2), the bottom of the 35% and 15% brackets.",
+ "derived_at": "2026-10-07T11:11:49.931Z",
+ "patches_json": {
+  "url": "https://crumb.gg/data/patches.json",
+  "result": "HTTP 200 (expected 404 did not happen); ?v=5 and ?v=6 return the same body (same sha256 by curl)",
+  "top_entry": {
+   "id": "v1-5-002",
+   "date": "2026-10-08",
+   "version": "1.5.002",
+   "upcoming": true,
+   "maint_start": "2026-10-08T13:00:00+09:00",
+   "maint_end": "2026-10-08T16:00:00+09:00",
+   "title": {
+    "ko": "샤르도네맛 쿠키",
+    "en": "Chardonnay Cookie"
+   }
+  },
+  "updates_not_in_2026_09_28_capture": [
+   {
+    "id": "v1-5-002",
+    "date": "2026-10-08",
+    "version": "1.5.002",
+    "upcoming": true,
+    "maint_start": "2026-10-08T13:00:00+09:00",
+    "maint_end": "2026-10-08T16:00:00+09:00",
+    "title_en": "Chardonnay Cookie",
+    "title_ko": "샤르도네맛 쿠키",
+    "cookies": [
+     "Chardonnay Cookie / 샤르도네맛 쿠키 (SSR Grass Support)"
+    ],
+    "sections": [
+     {
+      "key": "new",
+      "items": [
+       "New enemies: Blueberry Snail, Two-headed Pomegranate Snake, Monster Cauldron",
+       "New Adventure Notes: An Overly Acidic Morning, The Empty Space Alongside Prayers, The Thin Line Between Sacred Water and Poison, Someone's Diary, We'll Meet Again, Sister",
+       "New collections: The D'Vine Abbey, Safety First!, Dreams of Great Knighthood, Happy Harvest!, Busy Bodies"
+      ]
+     },
+     {
+      "key": "balance",
+      "items": [
+       "Nightmare-ridden Librarian: base ATK 500 → 350",
+       "Cookie EXP needed for Lv. 79–100 lowered (Lv. 100: 13,911,155 → 3,347,644)",
+       "Gnome Laboratory: research time per level capped at 12 hours (rows 73–110, 51 nodes)"
+      ]
+     },
+     {
+      "key": "expansion",
+      "items": [
+       "Main Stages up to 364-30",
+       "Gnome Laboratory up to research 130-2 and Special Research 22",
+       "Max cookie level 100 → 120"
+      ]
+     },
+     {
+      "key": "events",
+      "items": [
+       "7-Day Check-in Event (Milk Cookie's Crunchy Strong Pediatrician)",
+       "King Choco Drop's Roulette",
+       "Chardonnay Cookie Pick-Up Gacha"
+      ]
+     },
+     {
+      "key": "system",
+      "items": [
+       "Mileage Exchange: added Chocosteel x5 for 1,500 Mileage Points, Metal Syrup x5 for 2,000 Mileage Points",
+       "Dimension Fragment Exchange: purchase limit Chocosteel x5 5 → 10, Metal Syrup x2 5 → 10"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "v1-4-hotfix",
+    "date": null,
+    "version": "1.4.002",
+    "upcoming": false,
+    "maint_start": null,
+    "maint_end": null,
+    "title_en": "Hotfix",
+    "title_ko": "핫픽스",
+    "cookies": [],
+    "sections": [
+     {
+      "key": "balance",
+      "items": [
+       "Nightmare-ridden Librarian: Skill Prep 100% → 0%",
+       "Cool Mint Cookie (Dimensional Rift boss): base HP 800 → 900"
+      ]
+     },
+     {
+      "key": "system",
+      "items": [
+       "Auto Bake: x200 at Oven Lv. 32, x300 at Oven Lv. 34, x400 at Oven Lv. 36, x500 at Oven Lv. 38",
+       "Auto Bake stops when unsold gear reaches 100 (was 30)",
+       "Arena: defender protection time 6 days → 10 minutes",
+       "Arena: max daily defeats 100 → 1,000",
+       "Boss summons in the Dimensional Rift now count for \"Summon Bosses\" missions (events, guides, passes)"
+      ]
+     }
+    ]
+   }
+  ],
+  "entries_in_both_whose_section_text_changed": [
+   "2026-09-23",
+   "2026-08-27",
+   "2026-08-13"
+  ],
+  "entries_in_both_note": "checked by hand on 2026-10-07: wording edits only (2026-09-23 Guild Conquest reward line 'unranked' -> '5th'; 2026-08-27 and 2026-08-13 'level' -> 'stage', 'Grand Master' -> 'Grandmaster', star ranges spelled out); no number changed",
+  "rift_relevant": "v1-4-hotfix (undated, version 1.4.002): Cool Mint Cookie (Dimensional Rift boss) base HP 800 -> 900 (+12.5%); Rift boss summons count for Summon Bosses missions. v1-5-002: max cookie level 100 -> 120, Cookie EXP for Lv. 79-100 lowered, main stages to 364-30, Dimension Fragment Exchange limits Chocosteel x5 5 -> 10 and Metal Syrup x2 5 -> 10. No Rift entry in v1-5-002's sections."
+ },
+ "stages_json": {
+  "vs_2026_09_28": "byte-identical (game data 1.4.002, made 2026-09-23): no recommended power, bracket table, accuracy or focus change",
+  "stages_v15": {
+   "file": "evidence/r2026-10-07/03-sites/data-stages_v15.json",
+   "version": "1.5.002",
+   "made": "2026-10-06",
+   "dmg_bracket_table_same": true,
+   "existing_stages_changed": 0,
+   "stage_count": {
+    "1.4.002": 9840,
+    "1.5.002": 10920
+   },
+   "new_stages": "329-1 to 364-30",
+   "new_stage_power": {
+    "first": {
+     "stage": "329-1",
+     "recommended_power": 10012985251
+    },
+    "last": {
+     "stage": "364-30",
+     "recommended_power": 24202164458
+    }
+   },
+   "acc_table_same": true,
+   "foc_entries_added": 63
+  }
+ },
+ "rift_json": {
+  "vs_2026_10_03": {
+   "version": {
+    "old": "1.4.002",
+    "new": "1.4.002"
+   },
+   "made": {
+    "old": "2026-09-23",
+    "new": "2026-10-06"
+   },
+   "top_level": {
+    "v": "same",
+    "made": "changed",
+    "dmg": "same",
+    "fragments": "same",
+    "idle": "same",
+    "key": "same",
+    "levels": "same",
+    "seasons": "same",
+    "ranking": "same",
+    "_notes": "changed"
+   },
+   "compared": "data-rift.json 2026-10-07 vs 2026-10-03",
+   "sets": {
+    "1": {
+     "rows": [
+      1,
+      100
+     ],
+     "fields": {
+      "boss": {
+       "renamed_only_levels": 60,
+       "changed": []
+      },
+      "critRes": "new field",
+      "boss_ko": "new field",
+      "bossId": "new field",
+      "bossN": "new field",
+      "time": "new field",
+      "fragments": "new field",
+      "idle": "new field",
+      "key": "new field",
+      "key_ko": "new field"
+     }
+    },
+    "2": {
+     "rows": [
+      101,
+      200
+     ],
+     "fields": {
+      "boss": {
+       "renamed_only_levels": 51,
+       "changed": [
+        {
+         "level": 105,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 111,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 117,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 123,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 129,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 135,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 141,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 147,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 153,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 159,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 165,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 171,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 177,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 183,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 189,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        },
+        {
+         "level": 195,
+         "old": "",
+         "new": "Well-Aged Archangel"
+        }
+       ]
+      },
+      "critRes": "new field",
+      "boss_ko": "new field",
+      "bossId": "new field",
+      "bossN": "new field",
+      "time": "new field",
+      "fragments": "new field",
+      "idle": "new field",
+      "key": "new field",
+      "key_ko": "new field"
+     }
+    }
+   },
+   "summary": "Same game data (1.4.002): dmg brackets, 차원의 힘 levels (levels[]), idle gain, fragments, keys, season dates and ranking rewards are unchanged, and every recommended power (cp), acc, foc, bossHp and exp is unchanged in both sets. Changes: boss names now come from the game's Monster names (renames only for levels 1-100), set 2 gains a fifth boss in each cycle, new per-set fields (critRes, boss_ko, bossId, bossN, time, fragments, idle, key, key_ko) and _notes."
+  },
+  "season2_carried": {
+   "group": "1403276063 = levels 101-200 (sets['2'].rows [101,200])",
+   "already_in_2026_10_03_capture": true,
+   "differs_from_season1": true,
+   "boss_cycle_season1": [
+    {
+     "slot": 1,
+     "boss_en": "Cake Hound Pack",
+     "boss_ko": "케이크 들개떼",
+     "bossId": 1754400544
+    },
+    {
+     "slot": 2,
+     "boss_en": "Cool Mint Cookie",
+     "boss_ko": "쿨링민트맛 쿠키",
+     "bossId": 2130844112
+    },
+    {
+     "slot": 3,
+     "boss_en": "Choco Werehound Princess",
+     "boss_ko": "초코크림 늑대 망치공주",
+     "bossId": 1934633278
+    },
+    {
+     "slot": 4,
+     "boss_en": "Rowdy Truck",
+     "boss_ko": "폭주단 트럭",
+     "bossId": 1252378463
+    },
+    {
+     "slot": 5,
+     "boss_en": "GingerCraven",
+     "boss_ko": "비겁한 쿠키",
+     "bossId": 1936308301
+    }
+   ],
+   "boss_cycle_season2": [
+    {
+     "slot": 1,
+     "boss_en": "Cake Hound Pack",
+     "boss_ko": "케이크 들개떼",
+     "bossId": 1754400544
+    },
+    {
+     "slot": 2,
+     "boss_en": "Cool Mint Cookie",
+     "boss_ko": "쿨링민트맛 쿠키",
+     "bossId": 2130844112
+    },
+    {
+     "slot": 3,
+     "boss_en": "Choco Werehound Princess",
+     "boss_ko": "초코크림 늑대 망치공주",
+     "bossId": 1934633278
+    },
+    {
+     "slot": 4,
+     "boss_en": "Rowdy Truck",
+     "boss_ko": "폭주단 트럭",
+     "bossId": 1252378463
+    },
+    {
+     "slot": 5,
+     "boss_en": "Well-Aged Archangel",
+     "boss_ko": "숙성의 대천사",
+     "bossId": 1887208137
+    },
+    {
+     "slot": 6,
+     "boss_en": "GingerCraven",
+     "boss_ko": "비겁한 쿠키",
+     "bossId": 1936308301
+    }
+   ],
+   "note": "Season 2 cycles six bosses, not five: slot 5 is a new boss 'Well-Aged Archangel' (숙성의 대천사, bossId 1887208137) and GingerCraven (비겁한 쿠키) moves to every sixth level (106, 112, ...). The 2026-10-03 capture had an empty name in that slot.",
+   "recommended_power_season1_vs_season2_1_4_002": {
+    "level1": 10004798560,
+    "level101": 16716893064,
+    "ratio": 1.670887520997724
+   },
+   "idle_and_fragments_same_as_season1_in_1_4_002": true
+  },
+  "rift_v15": {
+   "file": "evidence/r2026-10-07/03-sites/data-rift_v15.json (crumb.gg's 'riftNext' file for update v1-5-002)",
+   "version": "1.5.002",
+   "made": "2026-10-06",
+   "top_level_vs_current": {
+    "v": "changed",
+    "made": "same",
+    "dmg": "same",
+    "fragments": "same",
+    "idle": "same",
+    "key": "same",
+    "levels": "same",
+    "seasons": "changed",
+    "ranking": "same",
+    "_notes": "same"
+   },
+   "compared": "data-rift_v15.json (1.5.002) vs data-rift.json (1.4.002), both 2026-10-07",
+   "sets": {
+    "1": {
+     "rows": [
+      1,
+      100
+     ],
+     "fields": {}
+    },
+    "2": {
+     "rows": [
+      101,
+      200
+     ],
+     "fields": {
+      "cp": {
+       "levels_changed": 100,
+       "ratio_min": 1.4477669004446074,
+       "ratio_max": 1.4477669005508782,
+       "first": [
+        {
+         "level": 101,
+         "old": 16716893064,
+         "new": 24202164458
+        },
+        {
+         "level": 102,
+         "old": 21586476316,
+         "new": 31252185909
+        },
+        {
+         "level": 103,
+         "old": 26688393899,
+         "new": 38638573313
+        }
+       ],
+       "last": [
+        {
+         "level": 199,
+         "old": 2951611038363,
+         "new": 4273244764554
+        },
+        {
+         "level": 200,
+         "old": 3007038388287,
+         "new": 4353490647158
+        }
+       ]
+      },
+      "foc": {
+       "levels_changed": 100,
+       "ratio_min": 1.0234113712374582,
+       "ratio_max": 1.024390243902439,
+       "first": [
+        {
+         "level": 101,
+         "old": 1196,
+         "new": 1225
+        },
+        {
+         "level": 102,
+         "old": 1315,
+         "new": 1347
+        },
+        {
+         "level": 103,
+         "old": 1435,
+         "new": 1470
+        }
+       ],
+       "last": [
+        {
+         "level": 199,
+         "old": 12916,
+         "new": 13224
+        },
+        {
+         "level": 200,
+         "old": 13035,
+         "new": 13346
+        }
+       ]
+      },
+      "bossHp": {
+       "levels_changed": 100,
+       "ratio_min": 1.0069686411149825,
+       "ratio_max": 1.0136518771331058,
+       "first": [
+        {
+         "level": 101,
+         "old": 2.22,
+         "new": 2.24
+        },
+        {
+         "level": 102,
+         "old": 2.31,
+         "new": 2.34
+        },
+        {
+         "level": 103,
+         "old": 2.4,
+         "new": 2.43
+        }
+       ],
+       "last": [
+        {
+         "level": 199,
+         "old": 6.36,
+         "new": 6.43
+        },
+        {
+         "level": 200,
+         "old": 6.39,
+         "new": 6.45
+        }
+       ]
+      },
+      "fragments": {
+       "old": [
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         110
+        ],
+        [
+         3,
+         120
+        ],
+        [
+         4,
+         130
+        ],
+        [
+         5,
+         140
+        ],
+        [
+         6,
+         150
+        ],
+        [
+         7,
+         160
+        ],
+        [
+         8,
+         170
+        ],
+        [
+         9,
+         180
+        ],
+        [
+         10,
+         0
+        ],
+        [
+         11,
+         200
+        ],
+        [
+         12,
+         210
+        ],
+        [
+         13,
+         220
+        ],
+        [
+         14,
+         230
+        ],
+        [
+         15,
+         240
+        ],
+        [
+         16,
+         250
+        ],
+        [
+         17,
+         260
+        ],
+        [
+         18,
+         270
+        ],
+        [
+         19,
+         280
+        ],
+        [
+         20,
+         0
+        ],
+        [
+         21,
+         300
+        ],
+        [
+         22,
+         310
+        ],
+        [
+         23,
+         320
+        ],
+        [
+         24,
+         330
+        ],
+        [
+         25,
+         340
+        ],
+        [
+         26,
+         350
+        ],
+        [
+         27,
+         360
+        ],
+        [
+         28,
+         370
+        ],
+        [
+         29,
+         380
+        ],
+        [
+         30,
+         0
+        ],
+        [
+         31,
+         400
+        ],
+        [
+         32,
+         400
+        ],
+        [
+         33,
+         400
+        ],
+        [
+         34,
+         400
+        ],
+        [
+         35,
+         400
+        ],
+        [
+         36,
+         400
+        ],
+        [
+         37,
+         400
+        ],
+        [
+         38,
+         400
+        ],
+        [
+         39,
+         400
+        ],
+        [
+         40,
+         400
+        ],
+        [
+         41,
+         400
+        ],
+        [
+         42,
+         400
+        ],
+        [
+         43,
+         400
+        ],
+        [
+         44,
+         400
+        ],
+        [
+         45,
+         400
+        ],
+        [
+         46,
+         400
+        ],
+        [
+         47,
+         400
+        ],
+        [
+         48,
+         400
+        ],
+        [
+         49,
+         400
+        ],
+        [
+         50,
+         400
+        ],
+        [
+         51,
+         400
+        ],
+        [
+         52,
+         400
+        ],
+        [
+         53,
+         400
+        ],
+        [
+         54,
+         400
+        ],
+        [
+         55,
+         400
+        ],
+        [
+         56,
+         400
+        ],
+        [
+         57,
+         400
+        ],
+        [
+         58,
+         400
+        ],
+        [
+         59,
+         400
+        ],
+        [
+         60,
+         400
+        ],
+        [
+         61,
+         400
+        ],
+        [
+         62,
+         400
+        ],
+        [
+         63,
+         400
+        ],
+        [
+         64,
+         400
+        ],
+        [
+         65,
+         400
+        ],
+        [
+         66,
+         400
+        ],
+        [
+         67,
+         400
+        ],
+        [
+         68,
+         400
+        ],
+        [
+         69,
+         400
+        ],
+        [
+         70,
+         400
+        ],
+        [
+         71,
+         400
+        ],
+        [
+         72,
+         400
+        ],
+        [
+         73,
+         400
+        ],
+        [
+         74,
+         400
+        ],
+        [
+         75,
+         400
+        ],
+        [
+         76,
+         400
+        ],
+        [
+         77,
+         400
+        ],
+        [
+         78,
+         400
+        ],
+        [
+         79,
+         400
+        ],
+        [
+         80,
+         400
+        ],
+        [
+         81,
+         400
+        ],
+        [
+         82,
+         400
+        ],
+        [
+         83,
+         400
+        ],
+        [
+         84,
+         400
+        ],
+        [
+         85,
+         400
+        ],
+        [
+         86,
+         400
+        ],
+        [
+         87,
+         400
+        ],
+        [
+         88,
+         400
+        ],
+        [
+         89,
+         400
+        ],
+        [
+         90,
+         400
+        ],
+        [
+         91,
+         400
+        ],
+        [
+         92,
+         400
+        ],
+        [
+         93,
+         400
+        ],
+        [
+         94,
+         400
+        ],
+        [
+         95,
+         400
+        ],
+        [
+         96,
+         400
+        ],
+        [
+         97,
+         400
+        ],
+        [
+         98,
+         400
+        ],
+        [
+         99,
+         400
+        ],
+        [
+         100,
+         400
+        ]
+       ],
+       "new": [
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         170
+        ],
+        [
+         3,
+         180
+        ],
+        [
+         4,
+         190
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         6,
+         200
+        ],
+        [
+         7,
+         210
+        ],
+        [
+         8,
+         220
+        ],
+        [
+         9,
+         230
+        ],
+        [
+         10,
+         0
+        ],
+        [
+         11,
+         240
+        ],
+        [
+         12,
+         250
+        ],
+        [
+         13,
+         260
+        ],
+        [
+         14,
+         270
+        ],
+        [
+         15,
+         0
+        ],
+        [
+         16,
+         280
+        ],
+        [
+         17,
+         290
+        ],
+        [
+         18,
+         300
+        ],
+        [
+         19,
+         310
+        ],
+        [
+         20,
+         0
+        ],
+        [
+         21,
+         320
+        ],
+        [
+         22,
+         330
+        ],
+        [
+         23,
+         340
+        ],
+        [
+         24,
+         350
+        ],
+        [
+         25,
+         0
+        ],
+        [
+         26,
+         360
+        ],
+        [
+         27,
+         370
+        ],
+        [
+         28,
+         380
+        ],
+        [
+         29,
+         390
+        ],
+        [
+         30,
+         0
+        ],
+        [
+         31,
+         400
+        ],
+        [
+         32,
+         400
+        ],
+        [
+         33,
+         400
+        ],
+        [
+         34,
+         400
+        ],
+        [
+         35,
+         0
+        ],
+        [
+         36,
+         400
+        ],
+        [
+         37,
+         400
+        ],
+        [
+         38,
+         400
+        ],
+        [
+         39,
+         400
+        ],
+        [
+         40,
+         0
+        ],
+        [
+         41,
+         400
+        ],
+        [
+         42,
+         400
+        ],
+        [
+         43,
+         400
+        ],
+        [
+         44,
+         400
+        ],
+        [
+         45,
+         0
+        ],
+        [
+         46,
+         400
+        ],
+        [
+         47,
+         400
+        ],
+        [
+         48,
+         400
+        ],
+        [
+         49,
+         400
+        ],
+        [
+         50,
+         0
+        ],
+        [
+         51,
+         400
+        ],
+        [
+         52,
+         400
+        ],
+        [
+         53,
+         400
+        ],
+        [
+         54,
+         400
+        ],
+        [
+         55,
+         0
+        ],
+        [
+         56,
+         400
+        ],
+        [
+         57,
+         400
+        ],
+        [
+         58,
+         400
+        ],
+        [
+         59,
+         400
+        ],
+        [
+         60,
+         0
+        ],
+        [
+         61,
+         400
+        ],
+        [
+         62,
+         400
+        ],
+        [
+         63,
+         400
+        ],
+        [
+         64,
+         400
+        ],
+        [
+         65,
+         0
+        ],
+        [
+         66,
+         400
+        ],
+        [
+         67,
+         400
+        ],
+        [
+         68,
+         400
+        ],
+        [
+         69,
+         400
+        ],
+        [
+         70,
+         0
+        ],
+        [
+         71,
+         400
+        ],
+        [
+         72,
+         400
+        ],
+        [
+         73,
+         400
+        ],
+        [
+         74,
+         400
+        ],
+        [
+         75,
+         0
+        ],
+        [
+         76,
+         400
+        ],
+        [
+         77,
+         400
+        ],
+        [
+         78,
+         400
+        ],
+        [
+         79,
+         400
+        ],
+        [
+         80,
+         0
+        ],
+        [
+         81,
+         400
+        ],
+        [
+         82,
+         400
+        ],
+        [
+         83,
+         400
+        ],
+        [
+         84,
+         400
+        ],
+        [
+         85,
+         0
+        ],
+        [
+         86,
+         400
+        ],
+        [
+         87,
+         400
+        ],
+        [
+         88,
+         400
+        ],
+        [
+         89,
+         400
+        ],
+        [
+         90,
+         0
+        ],
+        [
+         91,
+         400
+        ],
+        [
+         92,
+         400
+        ],
+        [
+         93,
+         400
+        ],
+        [
+         94,
+         400
+        ],
+        [
+         95,
+         0
+        ],
+        [
+         96,
+         400
+        ],
+        [
+         97,
+         400
+        ],
+        [
+         98,
+         400
+        ],
+        [
+         99,
+         400
+        ],
+        [
+         100,
+         0
+        ]
+       ]
+      },
+      "key": {
+       "old": {
+        "1": "Continuum Cog",
+        "10": "Dimensional Rift Stage 10 Frame",
+        "20": "Continuum Cog",
+        "30": "Dimensional Rift Stage 30 Frame"
+       },
+       "new": {
+        "1": "Continuum Cog",
+        "5": "1-min Speed-up ×500",
+        "10": "Dimensional Rift Stage 10 Frame",
+        "15": "Metal Syrup ×50",
+        "20": "Continuum Cog",
+        "25": "SSR Cookie Select Box 2",
+        "30": "Dimensional Rift Stage 30 Frame",
+        "35": "1-min Speed-up ×500",
+        "40": "Metal Syrup ×50",
+        "45": "SSR Cookie Select Box 2",
+        "50": "1-min Speed-up ×500",
+        "55": "Metal Syrup ×50",
+        "60": "SSR Cookie Select Box 2",
+        "65": "1-min Speed-up ×500",
+        "70": "Metal Syrup ×50",
+        "75": "SSR Cookie Select Box 2",
+        "80": "1-min Speed-up ×500",
+        "85": "Metal Syrup ×50",
+        "90": "SSR Cookie Select Box 2",
+        "95": "1-min Speed-up ×500",
+        "100": "Metal Syrup ×50"
+       }
+      },
+      "key_ko": {
+       "old": {
+        "1": "무한바퀴",
+        "10": "차원의 이면 10단계 달성 테두리",
+        "20": "무한바퀴",
+        "30": "차원의 이면 30단계 달성 테두리"
+       },
+       "new": {
+        "1": "무한바퀴",
+        "5": "1분 가속권 ×500",
+        "10": "차원의 이면 10단계 달성 테두리",
+        "15": "시럽쇳물 ×50",
+        "20": "무한바퀴",
+        "25": "SSR 쿠키 선택상자2",
+        "30": "차원의 이면 30단계 달성 테두리",
+        "35": "1분 가속권 ×500",
+        "40": "시럽쇳물 ×50",
+        "45": "SSR 쿠키 선택상자2",
+        "50": "1분 가속권 ×500",
+        "55": "시럽쇳물 ×50",
+        "60": "SSR 쿠키 선택상자2",
+        "65": "1분 가속권 ×500",
+        "70": "시럽쇳물 ×50",
+        "75": "SSR 쿠키 선택상자2",
+        "80": "1분 가속권 ×500",
+        "85": "시럽쇳물 ×50",
+        "90": "SSR 쿠키 선택상자2",
+        "95": "1분 가속권 ×500",
+        "100": "시럽쇳물 ×50"
+       }
+      }
+     }
+    }
+   },
+   "seasons_v15": [
+    {
+     "n": 1,
+     "from": "2026-09-23T02:30:00.000Z",
+     "to": "2026-10-02T01:30:00.000Z",
+     "set": 1
+    },
+    {
+     "n": 2,
+     "from": "2026-10-02T03:30:00.000Z",
+     "to": "2026-10-22T03:00:00.000Z",
+     "set": 2
+    },
+    {
+     "n": 3,
+     "from": "2026-10-22T04:30:00.000Z",
+     "to": "2026-11-05T03:00:00.000Z",
+     "set": 2
+    },
+    {
+     "n": 4,
+     "from": "2026-11-05T04:30:00.000Z",
+     "to": "2026-11-19T03:00:00.000Z",
+     "set": 2
+    }
+   ],
+   "seasons_current": [
+    {
+     "n": 1,
+     "from": "2026-09-23T02:30:00.000Z",
+     "to": "2026-10-08T03:00:00.000Z",
+     "set": 1
+    },
+    {
+     "n": 2,
+     "from": "2026-10-08T04:30:00.000Z",
+     "to": "2026-10-22T03:00:00.000Z",
+     "set": 2
+    },
+    {
+     "n": 3,
+     "from": "2026-10-22T04:30:00.000Z",
+     "to": "2026-11-05T03:00:00.000Z",
+     "set": 2
+    },
+    {
+     "n": 4,
+     "from": "2026-11-05T04:30:00.000Z",
+     "to": "2026-11-19T03:00:00.000Z",
+     "set": 2
+    }
+   ],
+   "season2_power_lines_1_5_002": [
+    {
+     "level": 101,
+     "boss_en": "Cake Hound Pack",
+     "recommended_power": 24202164458,
+     "power_for_35": 9680865784,
+     "power_for_15": 4840432892
+    },
+    {
+     "level": 102,
+     "boss_en": "Cool Mint Cookie",
+     "recommended_power": 31252185909,
+     "power_for_35": 12500874364,
+     "power_for_15": 6250437182
+    },
+    {
+     "level": 103,
+     "boss_en": "Choco Werehound Princess",
+     "recommended_power": 38638573313,
+     "power_for_35": 15455429326,
+     "power_for_15": 7727714663
+    },
+    {
+     "level": 104,
+     "boss_en": "Rowdy Truck",
+     "recommended_power": 47022549540,
+     "power_for_35": 18809019816,
+     "power_for_15": 9404509908
+    },
+    {
+     "level": 105,
+     "boss_en": "Well-Aged Archangel",
+     "recommended_power": 57586201668,
+     "power_for_35": 23034480668,
+     "power_for_15": 11517240334
+    },
+    {
+     "level": 106,
+     "boss_en": "GingerCraven",
+     "recommended_power": 68315733750,
+     "power_for_35": 27326293500,
+     "power_for_15": 13663146750
+    },
+    {
+     "level": 110,
+     "boss_en": "Rowdy Truck",
+     "recommended_power": 113447809829,
+     "power_for_35": 45379123932,
+     "power_for_15": 22689561966
+    },
+    {
+     "level": 112,
+     "boss_en": "GingerCraven",
+     "recommended_power": 142504570401,
+     "power_for_35": 57001828161,
+     "power_for_15": 28500914081
+    },
+    {
+     "level": 115,
+     "boss_en": "Choco Werehound Princess",
+     "recommended_power": 190851181808,
+     "power_for_35": 76340472724,
+     "power_for_15": 38170236362
+    },
+    {
+     "level": 118,
+     "boss_en": "GingerCraven",
+     "recommended_power": 247944265122,
+     "power_for_35": 99177706049,
+     "power_for_15": 49588853025
+    },
+    {
+     "level": 120,
+     "boss_en": "Cool Mint Cookie",
+     "recommended_power": 284927234191,
+     "power_for_35": 113970893677,
+     "power_for_15": 56985446839
+    },
+    {
+     "level": 125,
+     "boss_en": "Cake Hound Pack",
+     "recommended_power": 394850675851,
+     "power_for_35": 157940270341,
+     "power_for_15": 78970135171
+    },
+    {
+     "level": 130,
+     "boss_en": "GingerCraven",
+     "recommended_power": 533814761652,
+     "power_for_35": 213525904661,
+     "power_for_15": 106762952331
+    }
+   ],
+   "season2_power_lines_1_4_002": [
+    {
+     "level": 101,
+     "boss_en": "Cake Hound Pack",
+     "recommended_power": 16716893064,
+     "power_for_35": 6686757226,
+     "power_for_15": 3343378613
+    },
+    {
+     "level": 106,
+     "boss_en": "GingerCraven",
+     "recommended_power": 47186970310,
+     "power_for_35": 18874788124,
+     "power_for_15": 9437394062
+    },
+    {
+     "level": 110,
+     "boss_en": "Rowdy Truck",
+     "recommended_power": 78360549469,
+     "power_for_35": 31344219788,
+     "power_for_15": 15672109894
+    },
+    {
+     "level": 118,
+     "boss_en": "GingerCraven",
+     "recommended_power": 171259796748,
+     "power_for_35": 68503918700,
+     "power_for_15": 34251959350
+    },
+    {
+     "level": 120,
+     "boss_en": "Cool Mint Cookie",
+     "recommended_power": 196804633459,
+     "power_for_35": 78721853384,
+     "power_for_15": 39360926692
+    }
+   ],
+   "summary": "In 1.5.002 season 2 (levels 101-200) recommended power is x1.4478 of the 1.4.002 figures at every level (101: 24.20G vs 16.72G), focus (foc) and boss HP multipliers rise slightly, clear rewards change (fragments 170-400 with 0 every fifth level; new key rewards at 5/15/25/... levels). Set 1, 차원의 힘 levels, idle gain, the damage brackets and the boss cycle are unchanged. The v15 seasons table gives season 1 end 2026-10-02T01:30Z and season 2 start 2026-10-02T03:30Z, which contradicts the current file and the 10-08 patch; recorded as the file shows it."
+  },
+  "curated_rift_levels_json": {
+   "mismatches_vs_1_4_002": 0,
+   "mismatches_vs_1_5_002": 100,
+   "note": "curated/rift-levels.json matches 1.4.002 for all 200 levels; its levels 101-200 would be stale if 1.5.002 values apply in season 2."
+  }
+ },
+ "rift_ranking": {
+  "file": "evidence/r2026-10-07/06-derived/rift-ranking-2026-10-07.tsv",
+  "board_fetched_at": "2026-10-07T10:53:20.000Z",
+  "season": {
+   "season": 1,
+   "phase": "live",
+   "start": 0,
+   "end": 0,
+   "next_start": null
+  },
+  "shows": "rank, player, guild, level reached; no teams, no power",
+  "top_levels": [
+   {
+    "rank": 1,
+    "name": "홍백련",
+    "guild": "품격",
+    "level": 54
+   },
+   {
+    "rank": 2,
+    "name": "군무원",
+    "guild": "카페",
+    "level": 54
+   },
+   {
+    "rank": 3,
+    "name": "newbiee",
+    "guild": "카페",
+    "level": 53
+   },
+   {
+    "rank": 4,
+    "name": "날씨의아이",
+    "guild": "카페",
+    "level": 49
+   },
+   {
+    "rank": 5,
+    "name": "Bishop",
+    "guild": "카페",
+    "level": 49
+   }
+  ],
+  "rank10_level": 48,
+  "rank50_level": 39,
+  "rank100_level": 37,
+  "level_distribution_top100": {
+   "37": 15,
+   "38": 10,
+   "39": 28,
+   "40": 1,
+   "42": 8,
+   "43": 6,
+   "44": 20,
+   "47": 1,
+   "48": 3,
+   "49": 5,
+   "53": 1,
+   "54": 2
+  },
+  "history_daily": [
+   {
+    "at": "2026-10-04T15:50:36.909Z",
+    "top1": 44,
+    "rank10": 39,
+    "rank50": 33,
+    "rank100": 28
+   },
+   {
+    "at": "2026-10-05T00:03:48.093Z",
+    "top1": 45,
+    "rank10": 39,
+    "rank50": 34,
+    "rank100": 29
+   },
+   {
+    "at": "2026-10-06T00:03:49.128Z",
+    "top1": 49,
+    "rank10": 44,
+    "rank50": 37,
+    "rank100": 32
+   },
+   {
+    "at": "2026-10-07T00:03:50.074Z",
+    "top1": 54,
+    "rank10": 47,
+    "rank50": 39,
+    "rank100": 34
+   },
+   {
+    "at": "2026-10-07T10:56:34.868Z",
+    "top1": 54,
+    "rank10": 48,
+    "rank50": 39,
+    "rank100": 37
+   }
+  ]
+ },
+ "crumblehub": {
+  "clear_deck_api_modes": "the page code knows stage, arena, daily_dungeon, implant_tower, guild_raid; mode=rift / dimension / dimension_stage / dimensional_rift answer HTTP 400 {\"error\":\"Invalid mode\"}",
+  "stage_clear_decks": {
+   "previous_total": 519,
+   "now_total": 524,
+   "added": [
+    {
+     "id": "3847c680d2dcdc1a9d44db34e9a1f5c67be740db18375430cedc8a08f5c9b5cd",
+     "stage": "246-30",
+     "deckName": "쿨링민트 공략덱",
+     "createdAt": "2026-10-05 01:26:05",
+     "cookies": [
+      31,
+      70,
+      71,
+      7,
+      10,
+      24,
+      4,
+      12,
+      46,
+      22,
+      73,
+      5
+     ],
+     "pets": [
+      18,
+      54,
+      55
+     ],
+     "captainSlot": 4,
+     "recommendations": 1,
+     "score": 1
+    },
+    {
+     "id": "950f5e44600b62b9164f98bcaecd45a4675d1b8d828a2541fb346a2e0925de83",
+     "stage": "280-30",
+     "deckName": "Craven",
+     "createdAt": "2026-10-04 07:19:09",
+     "cookies": [
+      31,
+      18,
+      12,
+      46,
+      22,
+      14,
+      70,
+      25,
+      71,
+      7,
+      10,
+      24
+     ],
+     "pets": [
+      18,
+      54,
+      33
+     ],
+     "captainSlot": 10,
+     "recommendations": 1,
+     "score": 1
+    },
+    {
+     "id": "808ee57b42771cc9af3093673c44e735b03db8b433cb8db1619784b1babdefbd",
+     "stage": "247-30",
+     "deckName": "기본으로 쓰는 스테이지덱",
+     "createdAt": "2026-10-05 02:30:26",
+     "cookies": [
+      31,
+      25,
+      7,
+      74,
+      10,
+      24,
+      0,
+      71,
+      22,
+      33,
+      73,
+      5
+     ],
+     "pets": [
+      18,
+      54,
+      6
+     ],
+     "captainSlot": 4,
+     "recommendations": 0,
+     "score": 0
+    },
+    {
+     "id": "d53c67ea545a7db3514289f19154e8dd29f5de531f0a1827e567be0e503434ec",
+     "stage": "80-30",
+     "deckName": "죽어죽어죽어죽어죽어",
+     "createdAt": "2026-10-03 19:42:28",
+     "cookies": [
+      70,
+      73,
+      71,
+      75,
+      14,
+      20,
+      22,
+      10,
+      7,
+      31,
+      24,
+      46
+     ],
+     "pets": [
+      20,
+      54,
+      55
+     ],
+     "captainSlot": 7,
+     "recommendations": 0,
+     "score": 0
+    },
+    {
+     "id": "8debf17c2ff56cd610ce0fc2bdb390c8b8b567edfe245ad22890ea0a27112779",
+     "stage": "279-14",
+     "deckName": "",
+     "createdAt": "2026-10-02 12:24:11",
+     "cookies": [
+      70,
+      22,
+      75,
+      14,
+      10,
+      5,
+      7,
+      71,
+      25,
+      31,
+      24,
+      46
+     ],
+     "pets": [
+      54,
+      6,
+      18
+     ],
+     "captainSlot": 4,
+     "recommendations": 0,
+     "score": 0
+    }
+   ],
+   "removed": 0,
+   "verdict": "no material change"
+  }
+ },
+ "sugarpocket": {
+  "stage_snapshot_same_except_generatedAt": true,
+  "decks_added": [
+   {
+    "id": "04419116-0c55-4e11-98a5-d91a04c63f2d",
+    "title": "그냥 스테이지 밀어서..",
+    "purpose": "범용·시너지",
+    "cookieIds": [
+     75,
+     37,
+     74,
+     33,
+     5,
+     1,
+     73,
+     69,
+     58,
+     65,
+     44,
+     72
+    ],
+    "petIds": [
+     17,
+     19,
+     6
+    ],
+    "createdAt": "2026-09-28T11:17:54.752Z",
+    "tier": "D"
+   }
+  ],
+  "dimension_page": {
+   "file": "evidence/r2026-10-07/03-sites/sugarpocket_dimension.html",
+   "gameVersion": "1.4.002",
+   "stages": 200,
+   "recommended_power_mismatches_vs_crumbgg_1_4_002": 0,
+   "note": "new page (planner: recommended power, 차원의 힘 stats, season schedule); 1.4.002 data, no teams"
+  }
+ },
+ "recaptures": [
+  {
+   "new": "evidence/r2026-10-07/03-sites/data-stages.json",
+   "previous": "evidence/03-sites/crumbgg_data_stages.json",
+   "byte_identical": true
+  },
+  {
+   "new": "evidence/r2026-10-07/03-sites/crumblehub_stages_ko.html",
+   "previous": "evidence/03-sites/crumblehub_stages_ko.html",
+   "byte_identical": true
+  },
+  {
+   "new": "evidence/r2026-10-07/03-sites/crumblehub_stages_en.html",
+   "previous": "evidence/03-sites/crumblehub_stages_en.html",
+   "byte_identical": true
+  },
+  {
+   "new": "evidence/r2026-10-07/03-sites/crumblehub_guides_stage_ko.html",
+   "previous": "evidence/03-sites/crumblehub_guides_stage_ko.html",
+   "byte_identical": true
+  },
+  {
+   "new": "evidence/r2026-10-07/03-sites/crumblehub_data_stage-boss-index-v2.json",
+   "previous": "evidence/03-sites/crumblehub_data_stage-boss-index-v2.json",
+   "byte_identical": true
+  },
+  {
+   "new": "evidence/r2026-10-07/03-sites/sugarpocket_stages.html",
+   "previous": "evidence/03-sites/sugarpocket_stages.html",
+   "byte_identical": false
+  },
+  {
+   "new": "evidence/r2026-10-07/03-sites/sugarpocket_api_decks.json",
+   "previous": "evidence/03-sites/sugarpocket_api_decks.json",
+   "byte_identical": false
+  }
+ ]
+}

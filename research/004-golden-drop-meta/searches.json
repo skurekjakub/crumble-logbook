@@ -5,7 +5,7 @@
     "query": "크럼블 던전",
     "why": "The mode's KR name; Golden Drop is Crumble Dungeon (크럼블 던전).",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-crumble-dungeon-joined",
@@ -13,7 +13,7 @@
     "query": "크럼블던전",
     "why": "The mode's name as posters type it without the space.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-keudeon",
@@ -21,7 +21,7 @@
     "query": "크던",
     "why": "크던, the gallery's short name for the mode, used in most score posts.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-subject-keudeon",
@@ -29,7 +29,7 @@
     "query": "subject:크던",
     "why": "The short name in titles, where score posts announce themselves.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-crumble-dungeon-guide",
@@ -45,7 +45,7 @@
     "query": "40마리",
     "why": "The top-40-by-power rule, the lineup rule every build shares.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "dc-golden-drop",
@@ -101,7 +101,7 @@
     "menuId": 9,
     "why": "The official cafe's guide board, where the named lineups with levels were posted (뱅국, 쿠키런 연두).",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-crumble-dungeon",
@@ -109,7 +109,7 @@
     "query": "크럼블 던전",
     "why": "The mode's KR name, the widest YouTube net for dungeon guides.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-crumble-dungeon-golden-drop",
@@ -117,7 +117,7 @@
     "query": "크럼블던전 황금갓방울",
     "why": "The title top creators give their dungeon guides.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "youtube-keudeon-high-score",
@@ -182,7 +182,7 @@
     "args": ["patches"],
     "why": "crumb.gg's patch digest, which dated the dungeon's buff fix and the cookies it touched.",
     "added": "2026-09-28",
-    "lastHit": "2026-09-28"
+    "lastHit": "2026-10-07"
   },
   {
     "id": "crumbgg-api-meta",
@@ -224,5 +224,45 @@
     "why": "EOG's global hub, the only global source with a dungeon measurement.",
     "added": "2026-09-28",
     "lastHit": "2026-09-28"
+  },
+  {
+    "id": "naver-patch-notes",
+    "kind": "naver",
+    "menuId": 3,
+    "why": "The official patch-notes board; the round's patch source (nv:50417) while crumb.gg lags.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "naver-notices",
+    "kind": "naver",
+    "menuId": 1,
+    "why": "Official notices, where the 10-01 oven and Daily Dungeon notice ran (nv:48486).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-passion-pay",
+    "kind": "dc",
+    "query": "열정페이",
+    "why": "Passion Pay, the perk Milk must catch; found the test that the captain's +10% doesn't count (dc:78378).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-rift-buff",
+    "kind": "dc",
+    "query": "이면 버프",
+    "why": "The Rift buff in displayed power, which scrambles the dungeon's power order (dc:80897, dc:80289).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-chardonnay",
+    "kind": "dc",
+    "query": "샤르도네",
+    "why": "Chardonnay, the 10-08 SSR whose leaked Projectile Speed would pull Pomegranate's beam (dc:80285).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
   }
 ]

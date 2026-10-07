@@ -1,6 +1,7 @@
 [
  {"mode": "crumble_dungeon", "slot": "general", "substats": "Arena-style preset: Skill Haste first, then Skill AMP, crit rate, crit damage, damage reduction; no accuracy or focus", "why": "Damage and cast rate: the boss isn't accuracy-gated like stages. Most top posts reuse their arena preset.", "context": "arena", "sources": ["dc:62042", "dc:57218", "dc:60897", "nv:43444", "dc:71956", "web:yt-4v2xDWV13fg"]},
  {"mode": "crumble_dungeon", "slot": "general", "substats": "One move-speed line", "why": "Milk arrives sooner: one poster went 50-60G to 75.4G on lower displayed power; others see Milk come out at once.", "context": "raid", "sources": ["dc:65247", "dc:70059", "dc:68861"]},
- {"mode": "crumble_dungeon", "slot": "general", "substats": "The Guild Conquest preset", "why": "서신우 saw no misses on his Conquest preset; 섬영's weekly best used a preset labelled 토벌.", "context": "raid", "sources": ["web:yt-F9BzQ4DAbWg", "dc:67621"]},
+ {"mode": "crumble_dungeon", "slot": "general", "substats": "Flat-ATK (깡공) Conquest preset", "why": "The 428.96G run used it; one poster felt 10–15% more after a flat-ATK weapon swap.", "context": "raid", "sources": ["dc:82406", "dc:79802"]},
+ {"mode": "crumble_dungeon", "slot": "general", "substats": "The Guild Conquest preset", "why": "One account gained 100G on it vs 30G on arena, one run each; 서신우 saw no misses; 섬영's weekly best used it.", "context": "raid", "sources": ["web:yt-F9BzQ4DAbWg", "dc:67621", "dc:80202"]},
  {"mode": "crumble_dungeon", "slot": "general", "substats": "Higher displayed power", "why": "뱅국 picks gear for power; other guides trade it for damage lines, and the move-speed case scored higher on less power.", "context": "stage", "sources": ["nv:45597", "dc:65247"]}
 ]

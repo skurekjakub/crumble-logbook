@@ -1,6 +1,6 @@
 # 003 — Stage pushing meta: main stages and the Dimensional Rift (Cookie Run: Crumble)
 
-Status: active (started 2026-09-28; captured and curated 2026-09-28)
+Status: active (started 2026-09-28; captured and curated 2026-09-28; refreshed 2026-10-03 for the Rift and 2026-10-07)
 
 Measured on 2026-09-28 from `main`: the power gate and every stage's recommended power, accuracy and focus requirement from crumblehub's copy of game data 1.4.002; clears, teams and builds from DCInside's 쿠키런 크럼블 gallery, the official Naver cafe and KR YouTube (the top-ranked player ND러너 among them). The research changed no code. The curated dataset imports as the app's `stage` mode (`pnpm import:record 003-stage-pushing-meta`; see "What would change").
 
@@ -14,7 +14,7 @@ As a falsifiable statement: for stage pushing there is a small documented set of
 
 ## Verdict
 
-**Supported for the 35% bracket, partly for 15%.** The gate is an exact step table from game data: 35% of damage is kept from 40% of recommended power, 15% from 20%. Since the 2026-09-23 easing, screenshot clears show the 35% bracket reaching the last stage, 328-30, at 4.00G with a reproducible deck (Brightseeker, Princess Bari and Cherry Cola around the Milk–Pomegranate–Macaron buff core), and the boss swaps, pets, perks, gear and accuracy targets are stated precisely. At 15% only mob stages are documented (301-27 at 2.05G, 271-11 at 971.8M, both by hand); every 15% boss attempt on record fails, and the lone 328-30-at-15% claim has no screenshot. The strongest reason: the documented 15% clears sit a few million under the 40% line, so the pushers' own practice is to pad displayed power across the line rather than fight a boss a step lower. The Dimensional Rift differs: on the power the Rift shows, 15% boss clears have screenshots there, though not on GingerCraven (see Refresh 2026-10-03).
+**Supported for the 35% bracket everywhere, and for 15% in the Dimensional Rift on every boss but GingerCraven.** The gate is an exact step table from game data: 35% of damage is kept from 40% of recommended power, 15% from 20%. In the Rift, read on the power the Rift's header shows, screenshot 15% clears now cover every boss type except GingerCraven: the Werehound Princess to level 18 (29.73G), Cool Mint to level 17 (32.97G), the trucks to level 14 (28.76G) and the Cake Hounds to level 11 (18.55G), with the decks that did it written out cookie by cookie (Refresh 2026-10-07). GingerCraven, every fifth level, is cleared only at 35%. On main stages the 35% bracket reaches 328-30 at 4.00G with a reproducible deck (Brightseeker, Princess Bari and Cherry Cola around the Milk–Pomegranate–Macaron buff core); at 15% the documented clears are mob stages and one -30 Cool Mint (289-30 at 1.29G), while GingerCraven and the Redberry packs fail. The strongest reason: in both modes the pushers' 15% clears come from stacking the ATK-ordered buffs on a few dealers, and the walls they can't pass at 15% they pass by padding power across the 40% line.
 
 ## Reasoning
 
@@ -35,7 +35,7 @@ As a falsifiable statement: for stage pushing there is a small documented set of
    | 256-30 (pre-easing) | GingerCraven | 980M | 15% | auto | dc:71892: fail, 41% HP left after an hour |
 
    Before the easing the documented 35% line ran through GingerCraven from 216-30 (378M, 47.7% of recommended) to 248-30 (801.5M and 855M) and 264-30 (1.23G, 40.8%), from DCInside and the Naver cafe alike. All clears with their era, notes and sources: `curated/stage-clears.json`, built from `evidence/08-extract/dc-*.json` and `naver-*.json`.
-5. **15% is a mob-stage bracket.** Both 15% clears with screenshots are mob stages sitting just under the 40% line (0.6M and 4.4M short). Posters report the -10/-20/-30 bosses, the bikers, the eagle and the Redberry packs as walls at 15% (dc:77013, dc:77080, dc:67268, dc:75871); a pusher who took about 20% of GingerCraven's HP at 15% cleared it first try at 35% (dc:77154).
+5. **15% is a mob-stage bracket, with one boss exception.** The first round's 15% clears with screenshots are mob stages sitting just under the 40% line (0.6M and 4.4M short); the 2026-10-07 round adds 289-30 Cool Mint at 1.29G, 33.5% of recommended (dc:77874, screenshot), whose poster still can't take GingerCraven or the Redberry pack at 15%. Posters report the -10/-20/-30 bosses, the bikers, the eagle and the Redberry packs as walls at 15% (dc:77013, dc:77080, dc:67268, dc:75871); a pusher who took about 20% of GingerCraven's HP at 15% cleared it first try at 35% (dc:77154).
 6. **The deck and its swaps.** The post-easing general deck and its GingerCraven variant are in `curated/decks.json` (stage-bari-cola-charge, stage-bari-coward-328); the Naver cafe's post-easing template (nv:46348) has the same fixed buffer core (Macaron, Milk, Pomegranate, Skating Queen, Cheesecake, Milk's runes all ATK) with flex slots per boss. Alongside them sit the pre-easing all-in-one deck and its per-boss swaps (dc:70308) and the pre-easing GingerCraven 35% deck (dc:72776) as the documented low-power lines. ND러너's videos confirm the swaps: Panda Dumpling for launch bosses, Jungle Warrior and Rye for Redberry, Wind Archer or Scorpion for GingerCraven (`evidence/08-extract/youtube.json`).
 7. **Stage types are predictable.** From chapter 169 every chapter repeats one of eight zone layouts with fixed boss slots (zone = ((chapter − 1) mod 8) + 1), derived from the game data in `evidence/06-derived/zone-cycle.json`; the plan per slot is `curated/stage-zones.json`.
 8. **Power is padded, accuracy is capped.** Displayed power sets the bracket, so stage gear is rolled for power, SSR rune lines that add power are kept until the Rift, and a guild's bonus counts (dc:67596, dc:76290, yt:1AyEMtaE-s4). Accuracy requirements stop rising at 1,203.5; pushers call 900–1,000 enough after the easing (dc:75381, yt:BDuQ279mbP4). `curated/gear.json`, `curated/runes.json`.
@@ -54,7 +54,8 @@ As a falsifiable statement: for stage pushing there is a small documented set of
 
 ## Recommendation
 
-- **Push at 35% with the Bari–Cherry Cola–Brightseeker deck, swap per boss slot, and use 15% only on mob stages.** Before a boss at 15%, pad displayed power across the 40% line instead: power gear preset, SSR power runes, guild. The per-chapter lines are in `curated/stage-chapters.json`.
+- **In the Rift, push every boss but GingerCraven at 15% with the Milk-first decks, and park at GingerCraven until 차원의 힘 reaches its 35% line.** The decks, best clear first, are in Refresh 2026-10-07; every attempt is in `curated/rift-clears.json`.
+- **On main stages, push at 35% with the Bari–Cherry Cola–Brightseeker deck (or the Witchberry auto deck on mob stages), swap per boss slot, and use 15% only on mob stages and Cool Mint.** Before GingerCraven or a Redberry pack at 15%, pad displayed power across the 40% line instead: power gear preset, SSR power runes, guild. The per-chapter lines are in `curated/stage-chapters.json`.
 - **For the user's account:** a stage preset showing about 2.2G sits at 55% to 288-3, 35% to 304-19, and 15% everywhere to 328-30 (computed from `evidence/06-derived/stage-table.json`); a power-rolled stage preset usually shows more than the conquest preset. Reaching 328-30 at 35% needs 4.00G, and entering the Rift early compounds 차원의 힘.
 - Open sub-choice: auto versus manual at 35%. Recommendation: auto with boss auto-summon on mob stages and Cool Mint; manual for GingerCraven, the bikers and the Redberry packs.
 
@@ -72,6 +73,74 @@ For the app lane; this record changed nothing outside its folder.
 - **Media is local-only now.** The images and video frames under `evidence/` are gitignored since the user's change of 2026-09-28; their `captures.jsonl` lines keep their hashes. The frame transcription is committed as `evidence/08-extract/youtube-frames.json`.
 - **OPEN-QUESTIONS.md numbers the simulator calibration data "record 003"** (the grounding report, `evidence/01-repo-grounding/report.md`, flags it); this record took 003. Follow-up for the user: renumber that plan to the next free record.
 - **crumblehub's clear-deck API marks empty slots with -1.** Any scraper mapping ids by index must guard it; this record's first derivation read every empty pet slot as the Rift pet (fixed in `evidence/06-derived/derive_stage_data.py`). Consciously dropped as a follow-up: the app has no crumblehub scraper yet.
+
+## Refresh 2026-10-07
+
+Window: 2026-10-03 to 2026-10-07 for the Rift (the 10-03 round covered it to there) and 2026-09-28 to 2026-10-07 for the main stages. Patches in it: none that changed a stage, the Rift's numbers or a cookie. The official patch-notes board's 10-01/10-02 notes (nv:48486, captured in the 10-03 round) cover the oven's auto-open and dungeons (`evidence/r2026-10-07/04-naver/list-naver-patch-notes.tsv`). crumb.gg's patch digest, which answered 200 this round, adds an undated 1.4 hotfix that raised Cool Mint's Rift HP from 800 to 900 (`evidence/r2026-10-07/03-sites/data-patches.json`); with no date it re-files nothing. Update 1.5.002 lands on 2026-10-08, after the window (nv:50417): see "What would change". The captures are in `evidence/r2026-10-07/`, the extractions in its `08-extract/`.
+
+### The Rift 15% push teams
+
+Ranked by the highest level each has cleared at 15% with the Rift's header power on screen. Every cookie's level, slot and why, the pets, perks and substitutions are in `curated/decks.json`; every attempt is in `curated/rift-clears.json`.
+
+| Deck | Best 15% clear | Its other 15% clears | Evidence |
+|---|---|---|---|
+| `rift-15-levelled-rye` (10-03 round) | level 18 Werehound Princess, 29.73G (29.0%) | level 19 and 23 trucks on lobby power only | dc:78865 |
+| `rift-15-milk-first-seeker` (new) | level 17 Cool Mint, 32.97G (35.2%) | trucks: level 14 at 28.76G (39.6%), level 9 at 16.07G (38.0%), level 4 at 7.34G (37.8%) | `05-youtube/frames/kMw3e-05m34.0s.jpg`, `kMw3e-03m09.0s.jpg`, `IAFNe-03m22.0s.jpg`, `z9nK-00m30.0s.jpg` |
+| `rift-15-devil-shred` (10-03 round) | level 12 Cool Mint, 20.45G (34.7%) | | dc:77612 |
+| `rift-15-milk-first-mobs` (new) | level 12 Cool Mint, 18.55G (31.5%) | level 11 Cake Hounds at 18.55G (34.6%); with Wind Archer, levels 6 and 7 at 10.23G | `kMw3e-01m40.0s.jpg`, `kMw3e-00m53.0s.jpg`, `IAFNe-00m58.0s.jpg`, `IAFNe-01m48.0s.jpg` |
+| `rift-15-bari-scorpion` (10-03 round) | level 12 Cool Mint, 18.40G (31.2%) | level 8 Werehound Princess at 12.15G | dc:78353, dc:77709 |
+| `rift-15-milk-first-hammer` (new) | level 8 Werehound Princess, 13.84G (37.2%) | | `IAFNe-02m36.0s.jpg` |
+| no deck: 머핀이's all-Lv.100 shred line | level 7 Cool Mint, 11.20G (35.1%) | | `04-naver/nv/img/nv-50328-1.jpg` |
+
+The new decks are 그니's (Rift rank about 210th-280th, lobby 4.5-5.0G), from his level 6-10 and 11-20 guides (yt:IAFNvjeqUqw, yt:kMw3E6KXUAo). His `rift-15-milk-first-seeker`, by slot (row 1 then row 2): Macaron 100, Rye 88, Cheesecake 100, Skating Queen 100, Tiger Lily 96, Strawberry Crepe 82; Brightseeker 100, Pinot Noir 82, Pomegranate 100, Princess Bari 100, Milk (captain) 100, Cherry Cola 80. Its trucks variant takes Witchberry at 80 for Cherry Cola and Rye down to 77. Stars weren't legible on his screens. His deck rule, shown as an on-screen attack order, is the 10-03 round's levelled-Rye idea made explicit: Milk captains and sits at the top of the attack order so both perks (열정페이, 초고속승진) land on her, the buffers and the main dealer follow, and every cookie that mustn't take the ATK-ordered buffs is levelled to 77-97. For Cool Mint and the Werehound Princess, which launch, the third pet is an airborne-resist pouch; GingerCraven gets Octo Wasabi. GingerCraven itself is `rift-35-gingercraven-wasabi`: cleared at 35% at levels 10, 15 and 20 (49.31G, 41.9%, `kMw3f-08m05.0s.jpg`), never at 15%.
+
+### Reasoning
+
+1. **The new 15% clears are read off the header, with the result on screen.** Each row above shows the in-Rift header power and the boss at 0.000% or the clear banner (`05-youtube/frames/`, `04-naver/nv/img/nv-50328-1.jpg`); the bracket is that power ÷ the level's recommended power in `curated/rift-levels.json`. 그니's lobby power stays at 4.67-5.02G while his header climbs from 18.55G to 49.31G between sessions, the 차원의 힘 growth the 10-03 round described.
+2. **Every boss but GingerCraven now has a 15% screenshot.** The Cake Hounds and the trucks, claimed but not shown on 10-03, are shown (levels 11 and 14). GingerCraven, in every screenshot, is cleared at 35% (그니 at levels 5, 10, 15 and 20); DC's posters run the same loop: 15% on the other bosses with the conquest gear set, then park and idle at GingerCraven (dc:80812, dc:80625).
+3. **The field outran the 15% data.** crumb.gg's Rift board on 10-07 has the leaders at level 54 and rank 100 at level 37 (`06-derived/rift-ranking-2026-10-07.tsv`), but no 15% screenshot passes level 18; at level 28 the 15% attempts stall around 20% of the Werehound Princess's HP (dc:80706, text).
+4. **Main stages.** 289-30 Cool Mint fell at 15% (dc:77874). The 35% line runs through GingerCraven at 40-49% of recommended from 299-30 to 328-30 with screenshots (nv:47338, nv:47585, nv:49008, nv:49276, nv:48211, dc:82411, nv:49540), the same picture as the first round. The Witchberry auto deck (`stage-witch-idle`, now with Rockstar) is the round's stage deck for mob stages (dc:78074, dc:78081); the extraction is `08-extract/dc-stage.json` and `naver.json`.
+
+### What would change (10-08, update 1.5.002; a map, not this round's data)
+
+- **Level cap 100 → 120** (nv:50417): team power rises, by about +25% at Lv.119 on a leaked table (dc:82104, dc:79865), so every preset reaches further on the same stage and Rift lines. The existing stages' recommended power doesn't change (`03-sites/data-stages_v15.json`, `06-derived/crumbgg-diff-r2026-10-07.json`).
+- **Stages to 364-30**: 329-1 at 10.01G to 364-30 at 24.20G, whose 35% line is 9.68G (`data-stages_v15.json`). A comment on nv:50417 says entering Rift season 2 needs 364-30 cleared; unconfirmed.
+- **Main-stage boss fights**: the adds that come with a boss get lower ATK than the boss (nv:50417). Clears after 10-08 aren't comparable with this round's, so they need a new stage era.
+- **Rift season 2**: on the 1.5.002 data its recommended power is about 1.448× the 1.4.002 values `curated/rift-levels.json` holds for levels 101-200 (level 101: 16.72G → 24.20G), and its cycle has six bosses, with Well-Aged Archangel (숙성의 대천사) at 105, 111, … and GingerCraven every sixth level (`03-sites/data-rift_v15.json`). Level-clear rewards add syrup ore, SSR select boxes and speed-ups (nv:50417, dc:82279).
+- **Chardonnay** (SSR Grass support): crit rate and knockback resistance on a line of allies; knockback is what breaks a 15% truck formation (dc:78865), so it may enter the truck decks.
+
+### Changelog
+
+| Change | Recommendation | Evidence |
+|---|---|---|
+| added | deck `rift-15-milk-first-seeker`, Rift Milk-first Brightseeker deck (15%) | `evidence/r2026-10-07/05-youtube/yt-kMw3E6KXUAo.txt`, `frames/kMw3e-05m34.0s.jpg`, `frames/kMw3e-03m09.0s.jpg` |
+| added | deck `rift-15-milk-first-mobs`, Rift Milk-first mob deck (15%) | `evidence/r2026-10-07/05-youtube/frames/kMw3e-01m40.0s.jpg`, `frames/IAFNe-00m58.0s.jpg` |
+| added | deck `rift-15-milk-first-hammer`, Rift Milk-first Werehound deck (15%) | `evidence/r2026-10-07/05-youtube/frames/IAFNe-02m36.0s.jpg` |
+| added | deck `rift-35-gingercraven-wasabi`, Rift GingerCraven Wasabi deck (35%) | `evidence/r2026-10-07/05-youtube/frames/kMw3f-08m05.0s.jpg`, `yt-lyctKWAZdYI.txt` |
+| added | `curated/rift-clears.json`: 그니's 15% and 35% clears of levels 4-20, 머핀이's level 7, stanley's and 앙파's 35% clears, and the attempts that bound them (levels 6, 20, 28, 30) | `evidence/r2026-10-07/08-extract/youtube.json`, `naver.json`, `dc-rift.json` |
+| added | `curated/stage-clears.json`: 289-30 Cool Mint at 15%, GingerCraven at 35% from 235-30 to 328-30, 237-1, and the 320-30 and 318-10 failures | `evidence/r2026-10-07/02-dc/dc/77874.md`, `04-naver/nv/nv-49540.md`, `08-extract/dc-stage.json`, `naver.json` |
+| changed | deck `stage-witch-idle`: Rockstar in Herb's slot, the ceiling (auto past 300 at 35%, 324-18 at 3.75G) and the pet and Bari-deck swaps | `evidence/r2026-10-07/02-dc/dc/78074.md`, `dc/78081.md`, `dc/77654.md` |
+| changed | `curated/rift-bosses.json`: the bosses of levels 7, 13, 16, 17, 28 and 30 | `evidence/r2026-10-07/08-extract/youtube.json`, `dc-rift.json` |
+| changed | `curated/takeaways.json` and `mechanics.json`: the Rift line (every boss but GingerCraven at 15%), 289-30 in the 15% stage line, Rift gear readings, 차원의 힘's pace and the Cool Mint HP hotfix | `evidence/r2026-10-07/03-sites/data-patches.json`, `02-dc/dc/81032.md`, `dc/81393.md` |
+| changed | `curated/meta.json`: season, caveat, slots note and the Rift advice | this section |
+| re-captured | web:crumbgg-rift: boss names now the game's own, every number unchanged; rows curated from the earlier text | `evidence/r2026-10-07/03-sites/data-rift.json`, earlier `evidence/r2026-10-03/03-sites/data-rift.json` |
+| re-captured | web:crumbgg-patches: answers 200 (not 404), with the 1.5.002 entry and the 1.4 hotfix | `evidence/r2026-10-07/03-sites/data-patches.json`, earlier `evidence/03-sites/crumbgg_data_patches_v5.json` |
+
+No recommendation was marked obsolete: the new decks clear different levels and bosses from the 10-03 decks, and none beats one of them at the same level and boss.
+
+### Unconfirmed this round
+
+No new source named `rift-shred`, `rift-15-devil-shred`, `rift-15-bari-scorpion`, `rift-15-mob-witchberry` or `rift-15-levelled-rye` (the DC Rift listings in `02-dc/list-dc-*.tsv` and the YouTube and Naver searches); DC comments describe their levelled-down Scorpion, Dark Choco and Devil stacking in general (dc:80625). On main stages the Bari charge deck appears as a split beside the Witchberry deck (dc:78074) and GingerCraven decks keep the Scorpion core (dc:82287), but no source in the round names `stage-seeker-allinone`, `stage-coward-35` or `stage-aoe-rapidfire`. All stay current.
+
+### Couldn't settle
+
+- The 차원의 힘 level behind 그니's clears: his header shows 축복 Lv.6, not 차원의 힘. A screen with both would settle it.
+- When 그니 played them: the on-screen season countdown puts levels 4-17 at about 09-28 to 10-02, before this round's Rift window; the videos went up on 10-04 and 10-05.
+- Several pets and one cookie on 그니's screens (a yellow 20★ pet, a red-brown 20★ pet, a yellow-haired Lv.100 cookie in his GingerCraven decks); whether his 복주머니 is 색동 주머니.
+- A boss-HP table from an unnamed site (dc:80968) claims big Rift HP raises next patch (Cake Hounds +478%); crumb.gg's 1.5.002 data shows 0.7-1.4% boss HP changes. Season 2's first clears will settle it.
+- The level cap: 150 in a leak (dc:79865), 120 in the patch notes (nv:50417).
+- The date the Cool Mint Rift HP hotfix went live.
+- Naver articles that need a login (50068, 49886, 50302, 49380, 49332), listed in `04-naver/nv/`.
 
 ## Refresh 2026-10-03: Rift at 15%
 
@@ -142,6 +211,13 @@ Every cited id is in `curated/sources.json` with its URL. The ones that settled 
 - https://m.dcinside.com/board/projectcc/78865, /77612, /78353, /77709, /76997, /78242, /78283, /78225, /80056 — the Rift's 15% clears and failures, the power basis and the ranking (refresh 2026-10-03).
 - https://cafe.naver.com/ccrumble/48662, /48025, /49183, /49192, /49254 — the levelled truck deck and 서신우's lines "on the Rift's basis" (refresh 2026-10-03).
 - https://www.youtube.com/watch?v=51MkrIh2vJY, hx9Y_5HpSps, In-nfQKm21g, WmEItY7JYtE — 서신우's Rift entry and level 2-4 guides (refresh 2026-10-03).
+- https://www.youtube.com/watch?v=kMw3E6KXUAo, IAFNvjeqUqw, z9nKY8Z7Ius, NEmo5DDllPI — 그니's Rift decks and header-power clears of levels 4-20, the Milk-first 15% decks (refresh 2026-10-07).
+- https://www.youtube.com/watch?v=lyctKWAZdYI, uk9BbWZXnWY — 서신우's GingerCraven deck and stanley's 35% clears (refresh 2026-10-07).
+- https://cafe.naver.com/ccrumble/50328 — 머핀이's level-7 Cool Mint at 15% (refresh 2026-10-07).
+- https://cafe.naver.com/ccrumble/50417 — the 10-08 patch notes: level cap 120, stages to 364-30, Rift season 2 rewards, Chardonnay (refresh 2026-10-07).
+- https://cafe.naver.com/ccrumble/49540, /49276, /49008, /48211, /47585, /47338 — post-easing GingerCraven clears at 35% from 299-30 to 328-30 (refresh 2026-10-07).
+- https://m.dcinside.com/board/projectcc/77874, /80812, /80625, /80706, /81198, /78074, /78081 — 289-30 Cool Mint at 15%, the Rift's 15% loop and stalls, the Witchberry auto deck (refresh 2026-10-07).
+- https://crumb.gg/pub/live?board=dimension_stage, https://crumb.gg/data/patches.json, /data/rift_v15.json, /data/stages_v15.json — the Rift ranking, the 1.5.002 patch digest and the 10-08 client's Rift and stage data (refresh 2026-10-07).
 
 ## Files
 
@@ -157,4 +233,5 @@ Every cited id is in `curated/sources.json` with its URL. The ones that settled 
 - `evidence/06-derived/`: tables derived from the captures by the scripts beside them.
 - `evidence/08-extract/`: per-lane extractions in the shape of `BRIEF.md`.
 - `evidence/r2026-10-03/`: the Rift-at-15% round's captures, laid out like the first round's folders: `02-dc/` (listings `list-<search id>.tsv`, posts `dc/`), `03-sites/` (crumb.gg's `data-rift.json`, the arca.live and Reddit searches), `04-naver/` (listings, posts `nv/`), `05-youtube/` (searches, watch digests, and local-only videos and `frames/`), `08-extract/` (the round's extractions; `import.json` reads them ahead of the first round's).
+- `evidence/r2026-10-07/`: the 2026-10-07 round's captures, laid out like the first round's folders: `02-dc/` (listings `list-<search id>.tsv` and discovery `list-disc-*.tsv`, posts `dc/` with some comment pages as `dc/<no>-page.html` where the scraper's comment fetch came back empty, and a duplicate test refetch in `dc/refetch/`), `03-sites/` (crumb.gg's data, patch digest and Rift board, crumblehub, Sugar Pocket, arca.live and Reddit), `04-naver/` (listings, posts `nv/`, cafe searches `search-*.txt`), `05-youtube/` (channel pages, searches, watch digests, and local-only `frames/`, `subs/` and `sheets/`), `06-derived/` (`crumbgg-diff-r2026-10-07.json` and `rift-ranking-2026-10-07.tsv`, from `derive_web_r2026-10-07.mjs`), `08-extract/` (the round's extractions; `import.json` reads them first).
 - `evidence/*.py`: `ledger_backfill.py` (wrote the ledger's first lines; retired, since a rerun would repeat paths), `digest.py` (facet digests of the extractions), `build_sources.py` (`curated/sources.json`).

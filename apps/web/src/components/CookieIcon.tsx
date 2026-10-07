@@ -20,6 +20,8 @@ export interface CookieIconProps {
   en: string | null;
   /** The icon's size in px; 28 when omitted. */
   size?: IconSize;
+  /** The game resource key to draw when the glossary doesn't key the name. */
+  resourceKey?: string | null;
 }
 
 /**
@@ -28,12 +30,13 @@ export interface CookieIconProps {
  * shows a badge with the name's initials instead, tinted by the cookie's
  * element when known. Decorative: the name always shows beside it.
  *
- * @param props - the name and the size
+ * @param props - the name, the size, and a resource key to fall back on
  * @returns the portrait image, or the fallback badge
  */
-export function CookieIcon({ kr, en, size = 28 }: CookieIconProps) {
+export function CookieIcon({ kr, en, size = 28, resourceKey = null }: CookieIconProps) {
   const entry = lookupIcon(useContext(IconIndexContext), kr, en);
-  const src = entry?.key ? iconSrc(entry.key) : null;
+  const key = entry?.key ?? resourceKey;
+  const src = key ? iconSrc(key) : null;
   const [failed, setFailed] = useState<string | null>(null);
   if (src && failed !== src) {
     return (

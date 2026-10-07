@@ -1,0 +1,307 @@
+{
+  "schema": "crumble-account-roadmap/1",
+  "snapshot": "snapshots/2026-10-07.json",
+  "capturedAt": "2026-10-07T13:33:00+02:00",
+  "verdict": "A top-3 account. The gaps are setup, not power: Conquest beam order, Dungeon exclusions and the PvP deck choice.",
+  "items": [
+    {
+      "rank": 1,
+      "priority": "now",
+      "area": "conquest",
+      "action": "Reset Pinot, Dark Choco and Tiger Lily to Lv.1 before the season",
+      "why": "At Lv.100 their ATK is above Macaron, Tea Knight and Cheesecake, so they take the buffers' beams.",
+      "payoff": "Beams 4–6 go back to the buffers, as in the deck behind the record's 1T 999G.",
+      "cost": "Free; a reset refunds all EXP. Pinot plays Lv.1 in PvP until re-levelled.",
+      "refs": [{ "record": "001-guild-conquest-meta", "id": "cherry" }]
+    },
+    {
+      "rank": 2,
+      "priority": "now",
+      "area": "conquest",
+      "action": "Lower Scorpion until she's exactly 7th in ATK",
+      "why": "At Lv.100 (2.63M ATK) she's 4th. Her job is only to catch stray beams.",
+      "payoff": "One more beam reaches a buffer.",
+      "cost": "Free, roughly Lv.1–45. The Dungeon wants her high, so re-level her for it.",
+      "refs": [{ "record": "001-guild-conquest-meta", "id": "cherry" }, { "record": "004-golden-drop-meta", "id": "dungeon-milk-scorpion-figure" }]
+    },
+    {
+      "rank": 3,
+      "priority": "now",
+      "area": "conquest",
+      "action": "Check the ATK order in battle before keeping a run",
+      "why": "The order must be Milk › Brightseeker › Skating Queen › Macaron › Tea Knight › Cheesecake. Octo Wasabi's +8% doesn't show on the stat screen.",
+      "payoff": "Catches misaligned beams before the run is spent.",
+      "cost": "A few test runs.",
+      "refs": [{ "record": "001-guild-conquest-meta", "id": "cherry" }]
+    },
+    {
+      "rank": 4,
+      "priority": "now",
+      "area": "guild",
+      "action": "Donate gems to finish Light Elemental DMG research 14-2",
+      "why": "It's 49% done, and Light covers Milk, Brightseeker, Cheesecake and Tea Knight. The Piñata is weak to Light.",
+      "payoff": "+10% Elemental DMG for the Conquest carries.",
+      "cost": "1,000 gems a donation; 216K on hand.",
+      "refs": [{ "record": "001-guild-conquest-meta", "file": "curated/mechanics.json" }]
+    },
+    {
+      "rank": 5,
+      "priority": "now",
+      "area": "dungeon",
+      "action": "Reset Cool Mint, Licorice, Cream Soda, Shortcake and Lemon to Lv.1",
+      "why": "Excluded chargers, summoners and projectile cookies in the top 40 pull Milk away from the dealers.",
+      "payoff": "One measurement: benching Oven Wanderer and Cool Mint gave +42%. You score 128G; the meta deck makes 379G.",
+      "cost": "Free; none of them is in your lineups.",
+      "refs": [{ "record": "004-golden-drop-meta", "id": "dungeon-milk-scorpion-figure" }, { "record": "004-golden-drop-meta", "file": "curated/dungeon-exclusions.json" }]
+    },
+    {
+      "rank": 6,
+      "priority": "now",
+      "area": "rumble",
+      "action": "Swap Icy Birdie for King Choco Drop in Rumble defense",
+      "why": "Over 95% of top-100 Rumble teams run King Choco Drop. Yours sits unused at 10★.",
+      "payoff": "+16% max HP for the whole team.",
+      "cost": "Free.",
+      "refs": [{ "record": "002-pvp-meta", "id": "rumble-standard-12" }]
+    },
+    {
+      "rank": 7,
+      "priority": "now",
+      "area": "rumble",
+      "action": "Put Cherry Cola in Doughnut King's slot in Rumble defense",
+      "why": "The meta slot r2-5 is the third charger. Vampire is the alternative.",
+      "payoff": "Matches 9 of the 12 fully revealed top-100 teams.",
+      "cost": "Free. Re-check once Season 2's buff shows.",
+      "refs": [{ "record": "002-pvp-meta", "id": "rumble-standard-12" }, { "record": "002-pvp-meta", "id": "rumble-bari-vampire" }]
+    },
+    {
+      "rank": 8,
+      "priority": "now",
+      "area": "arena",
+      "action": "Test Bari–Oven–Cherry Cola in a spare Arena attack lineup",
+      "why": "Your Bari is 8★, past the 7★ line where Bari beats Rye at equal spec.",
+      "payoff": "The record's top Arena deck. You're 4th with the Rye deck.",
+      "cost": "Free; lineup slots 3–5 are spare.",
+      "refs": [{ "record": "002-pvp-meta", "id": "arena-bari-oven-cola" }, { "record": "002-pvp-meta", "id": "arena-rye-rockstar" }]
+    },
+    {
+      "rank": 9,
+      "priority": "now",
+      "area": "resources",
+      "action": "Spend the banked 31,930 SP on Stellar shuffles",
+      "why": "The area is 86%. Each shuffle can raise ATK/DEF/HP amp, which applies in every mode.",
+      "payoff": "ATK amp above 111.8%. The record's stop lines are 91–95%.",
+      "cost": "150 SP a shuffle, so about 212 shuffles on hand.",
+      "refs": [{ "record": "005-team-power-growth", "id": "stellar_link" }]
+    },
+    {
+      "rank": 10,
+      "priority": "next",
+      "area": "resources",
+      "action": "At the Lv.120 cap, level Milk first and keep her ATK #1",
+      "why": "Every buff order and both ATK perks key off the ATK #1 ally.",
+      "payoff": "A bigger Milk buff in Conquest, the Dungeon, the Rift and PvP.",
+      "cost": "EXP. The 10-08 patch refunds Lv.79–100 EXP, about 10.5M per Lv.100 cookie.",
+      "refs": [{ "record": "002-pvp-meta", "file": "README.md" }, { "record": "001-guild-conquest-meta", "id": "cherry" }]
+    },
+    {
+      "rank": 11,
+      "priority": "next",
+      "area": "arena",
+      "action": "Then level the PvP twelve to 120",
+      "why": "Level counts in Arena; Resolve, Stellar, the labs and Fame don't.",
+      "payoff": "PvP stats at the new cap.",
+      "cost": "EXP from the refund.",
+      "refs": [{ "record": "002-pvp-meta", "id": "rumble-standard-12" }, { "record": "005-team-power-growth", "id": "cookie_level" }]
+    },
+    {
+      "rank": 12,
+      "priority": "next",
+      "area": "runes",
+      "action": "Reroll Milk's four SR ATK lines toward SSR ATK",
+      "why": "Her 4.2–4.7 lines could roll 6–7. Milk wants all ATK% in Conquest and the Dungeon.",
+      "payoff": "About +9–11 points of ATK AMP on the cookie every buff scales from.",
+      "cost": "Rune crystals; 93,816 on hand.",
+      "refs": [{ "record": "001-guild-conquest-meta", "file": "curated/runes.json" }]
+    },
+    {
+      "rank": 13,
+      "priority": "next",
+      "area": "runes",
+      "action": "Reroll Skating Queen's three low lines to SSR Skill AMP",
+      "why": "Her U DR, C ATK and U HP lines add nothing to her buff, which scales with skill amp.",
+      "payoff": "A stronger skill-amp buff on the beam recipients.",
+      "cost": "Rune crystals.",
+      "refs": [{ "record": "001-guild-conquest-meta", "file": "curated/runes.json" }]
+    },
+    {
+      "rank": 14,
+      "priority": "next",
+      "area": "runes",
+      "action": "Upgrade Cheesecake's and Pomegranate's SR/R Skill AMP lines to SSR",
+      "why": "Cheesecake has 2 SR lines plus 2 junk lines; Pomegranate has 3 SR, 1 R and 1 C.",
+      "payoff": "Stronger buffs from the Volley grant and Pomegranate's beams.",
+      "cost": "Rune crystals.",
+      "refs": [{ "record": "001-guild-conquest-meta", "file": "curated/runes.json" }]
+    },
+    {
+      "rank": 15,
+      "priority": "next",
+      "area": "conquest",
+      "action": "Take Brightseeker to 10★",
+      "why": "10★ opens two rune slots. The 1.62T run used a 10★ Brightseeker.",
+      "payoff": "More haste or skill amp on the carry; the size of the gain is unmeasured.",
+      "cost": "10 TSSR soulstones (0/10).",
+      "refs": [{ "record": "001-guild-conquest-meta", "id": "cherry" }]
+    },
+    {
+      "rank": 16,
+      "priority": "next",
+      "area": "conquest",
+      "action": "Raise Tea Knight from 5★ to 7★ for skill tier IV",
+      "why": "She's the only buffer under 9★, and her +70% Boss DMG buff fills a beam slot.",
+      "payoff": "Unmeasured.",
+      "cost": "Tea Knight soulstones.",
+      "refs": [{ "record": "001-guild-conquest-meta", "id": "cherry" }]
+    },
+    {
+      "rank": 17,
+      "priority": "next",
+      "area": "runes",
+      "action": "Rune Bari for haste and DR; tank Hound, Ion and Oven",
+      "why": "Bari wants about 45 haste; yours runs ATK lines. Hound's runes are offensive.",
+      "payoff": "Full Soul Guidance uptime, and PvP tanks that hold.",
+      "cost": "Rune crystals. Bari's ATK lines also serve the Rift.",
+      "refs": [{ "record": "002-pvp-meta", "file": "curated/runes.json" }]
+    },
+    {
+      "rank": 18,
+      "priority": "next",
+      "area": "gear",
+      "action": "Plate the Conquest top-left weapons toward +20",
+      "why": "Sub-options rise from +130% at +15 to +200% at +20. Yours are +16 to +17.",
+      "payoff": "Bigger skill-amp and crit DMG lines.",
+      "cost": "Chocosteel and Syrup; about 2% a try at 19→20.",
+      "refs": [{ "record": "005-team-power-growth", "id": "plating" }, { "record": "001-guild-conquest-meta", "file": "curated/gear.json" }]
+    },
+    {
+      "rank": 19,
+      "priority": "next",
+      "area": "rift",
+      "action": "In Rift Season 2, run the levelled-Rye setup",
+      "why": "Non-dealers at Lv.64–70 stack the ATK-ordered buffs on Brightseeker, Rye and Cherry Cola.",
+      "payoff": "The record's furthest 15% clear. You run Bari, Crepe and Moon Rabbit instead.",
+      "cost": "Free; level resets.",
+      "refs": [{ "record": "003-stage-pushing-meta", "id": "rift-15-levelled-rye" }]
+    },
+    {
+      "rank": 20,
+      "priority": "next",
+      "area": "pets",
+      "action": "Promote Continuum Cog from 0★ (0/1)",
+      "why": "It gives +50% boss DMG in the Rift even at base.",
+      "payoff": "Unmeasured.",
+      "cost": "One copy.",
+      "refs": [{ "record": "003-stage-pushing-meta", "id": "rift-15-levelled-rye" }]
+    },
+    {
+      "rank": 21,
+      "priority": "next",
+      "area": "conquest",
+      "action": "Get Chardonnay and test her as the Volley source",
+      "why": "Her line buff grants Volley and could take over Tiger Lily's sixth-beam role.",
+      "payoff": "Unmeasured; her numbers are datamined only.",
+      "cost": "Gacha pulls.",
+      "refs": [{ "record": "002-pvp-meta", "file": "curated/mechanics.json" }]
+    },
+    {
+      "rank": 22,
+      "priority": "next",
+      "area": "gear",
+      "action": "Finish Oven 40",
+      "why": "The gear level cap is Oven × 3, so 117 becomes 120. The mission is 39/40.",
+      "payoff": "Higher base stats on new gear, plus 1,000 gems.",
+      "cost": "Coins; the amount wasn't read.",
+      "refs": [{ "record": "005-team-power-growth", "id": "gear_oven" }]
+    },
+    {
+      "rank": 23,
+      "priority": "later",
+      "area": "dungeon",
+      "action": "Reset Bari, Oven and Cherry Cola only for Dungeon sessions",
+      "why": "The Dungeon records exclude them, but they're your PvP core.",
+      "payoff": "Completes the exclusion list.",
+      "cost": "PvP defense is weaker while they sit at Lv.1.",
+      "refs": [{ "record": "004-golden-drop-meta", "file": "curated/dungeon-exclusions.json" }]
+    },
+    {
+      "rank": 24,
+      "priority": "later",
+      "area": "rumble",
+      "action": "Re-pick the Rumble deck once the Season 2 buff shows",
+      "why": "Season 1's Charge HP +30% propped up Bari and Oven.",
+      "payoff": "The defense fits the new passive.",
+      "cost": "Free.",
+      "refs": [{ "record": "002-pvp-meta", "id": "rumble-standard-12" }]
+    },
+    {
+      "rank": 25,
+      "priority": "later",
+      "area": "gear",
+      "action": "Replace the crit-RES lines on BR2 and BR3 with DR",
+      "why": "Crit resistance does nothing against the Conquest boss.",
+      "payoff": "Small; survival only.",
+      "cost": "New drops.",
+      "refs": [{ "record": "001-guild-conquest-meta", "file": "curated/gear.json" }]
+    },
+    {
+      "rank": 26,
+      "priority": "later",
+      "area": "arena",
+      "action": "Take Bari to 9★ through the pickup counter",
+      "why": "The counter is at 3,017 of 3,060, and Bari's strength scales with stars.",
+      "payoff": "More Bari DR and a shorter cooldown.",
+      "cost": "Paid pulls.",
+      "refs": [{ "record": "002-pvp-meta", "id": "arena-bari-oven-cola" }]
+    },
+    {
+      "rank": 27,
+      "priority": "later",
+      "area": "pets",
+      "action": "Star up King Choco Drop (10★, 1/4)",
+      "why": "It's the top Rumble pet; its HP grant grows with stars.",
+      "payoff": "More team HP in Rumble.",
+      "cost": "Copies.",
+      "refs": [{ "record": "002-pvp-meta", "id": "rumble-standard-12" }]
+    },
+    {
+      "rank": 28,
+      "priority": "later",
+      "area": "resources",
+      "action": "Fame 132, then the Gnome Lab DEF row",
+      "why": "Fame's crit DMG goes 86→88. Lab DEF is at 5/7.",
+      "payoff": "Small stat gains.",
+      "cost": "190 Fame medals (52 on hand) and lab stones.",
+      "refs": [{ "record": "005-team-power-growth", "id": "fame" }, { "record": "005-team-power-growth", "id": "gnome_lab" }]
+    }
+  ],
+  "parked": [
+    { "avenue": "Stage pushing", "why": "328-30 is the last stage, cleared 10-01.", "refs": [{ "record": "003-stage-pushing-meta", "id": "stage-bari-coward-328" }] },
+    { "avenue": "Rift Season 1, level 20", "why": "GingerCraven never falls at 15%. Idle there for Dimensional Energy; the season ends 10-08.", "refs": [{ "record": "003-stage-pushing-meta", "file": "curated/rift-bosses.json" }] },
+    { "avenue": "Resolve levels", "why": "1.3T coins a level, for power only.", "refs": [{ "record": "005-team-power-growth", "id": "resolve" }] },
+    { "avenue": "Total-power ranking", "why": "Power isn't damage; rank by damage or score.", "refs": [] },
+    { "avenue": "Melon Soda Conquest deck", "why": "About 1 run in 4 misaligns, and it ranks below Cherry.", "refs": [{ "record": "001-guild-conquest-meta", "id": "meso" }] },
+    { "avenue": "Herb Conquest version", "why": "Only for teams that die at the 30 s slam.", "refs": [{ "record": "001-guild-conquest-meta", "id": "herb" }] },
+    { "avenue": "Wind Archer 10★", "why": "She's in no researched deck.", "refs": [] },
+    { "avenue": "Free attendance Milk", "why": "Your Milk is already 10★ max.", "refs": [] },
+    { "avenue": "Package value tables", "why": "They rank by crystal value, not damage.", "refs": [{ "record": "005-team-power-growth", "file": "curated/packages.json" }] }
+  ],
+  "unread": [
+    "Mercenary perks per lineup",
+    "Power, PvP, Hit and Evasion gear presets",
+    "Rift header power and bracket",
+    "In-battle ATK order",
+    "EXP, Chocosteel and Syrup stock",
+    "The levels behind the 1T 762G run"
+  ]
+}
