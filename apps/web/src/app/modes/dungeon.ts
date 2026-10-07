@@ -36,31 +36,44 @@ export const DUNGEON = {
   copy: {
     overview: {
       title: "How the top scores are built",
-      lede: "How the dungeon works, then the load-bearing findings, each with the posts it stands on.",
+      lede: ["How the dungeon works, then what the top scores share."],
     },
     decks: {
       title: "Teams",
-      lede: "The lineups behind the top scores, as their owners describe them. There is no formation: the cookies with the highest power deploy first, so every cookie carries the level or level rule that puts it in (or keeps it out of) the first wave, and why it's there. Each team's ATK order runs from the top.",
+      lede: [
+        "The lineups behind the top scores, as their owners run them.",
+        "No formation: the highest-power cookies deploy first.",
+        "Each cookie's level puts it in or keeps it out.",
+      ],
     },
     usage: {
       title: "Usage",
-      lede: "How often each cookie appears in the full first-40 lists published in September. These are guides' lists, not a ranking of what scores.",
+      lede: [
+        "How often each cookie appears in published first-40 lists.",
+        "Guides' lists, not a ranking of what scores.",
+      ],
     },
     runes: {
       title: "Sugar runes",
-      lede: 'Dungeon rune lines per cookie. "All" means every line rolls the same stat. Disputed rows are where posters disagreed; both sides are kept.',
+      lede: [
+        'Dungeon rune lines per cookie; "All" means every line.',
+        "Disputed rows keep both sides.",
+      ],
     },
     gear: {
       title: "Gear substats",
-      lede: "The dungeon has no preset of its own: players pick an existing one. Each note says which and why.",
+      lede: ["No dungeon preset: players reuse an existing one."],
     },
     mechanics: {
       title: "Mechanics",
-      lede: "What players measured or inferred about how the dungeon plays. Confidence reflects how well each point is sourced. The mode's rules are on its overview.",
+      lede: [
+        "What players measured or inferred about the dungeon.",
+        "The pill says how well each point is sourced.",
+      ],
     },
     timeline: {
       title: "How the scores moved",
-      lede: "Launch, patches, guides and record runs, oldest first.",
+      lede: ["Launch, patches, guides and record runs, oldest first."],
     },
   },
   boss: null,
@@ -71,16 +84,26 @@ export const DUNGEON = {
   dungeon: {
     runs: {
       title: "Runs",
-      lede: "Documented scores, ranked by score. The runs a screenshot or video shows are ranked; scores stated only in text or posted as claims follow as claims. Total power is the whole collection's power the result screen shows, not a team's power. Score ÷ total power is only a normaliser for comparing accounts; it ranks nothing.",
+      lede: [
+        "Ranked by score; only screenshot or video runs rank.",
+        "Text-only scores follow as claims.",
+        "Score ÷ collection power only normalises accounts.",
+      ],
     },
     lineups: {
       title: "Published lineups",
-      lede: "The first-wave lists guides published, in the author's order, with the ATK order from the top, the rule the levels follow, and the cookies each keeps out. Cookies the exclusions list names are flagged where a lineup keeps them.",
+      lede: [
+        "Guides' first-wave lists, in the author's order.",
+        "Red ring: a cookie the exclusions list levels out.",
+      ],
       topic: "deployment",
     },
     exclusions: {
       title: "Exclusions",
-      lede: "Cookies players level out of the first wave, each with the kind of reason, why, where it stands now, and the published lineups that leave it out or keep it.",
+      lede: [
+        "Cookies players level out of the first wave.",
+        "The status pill says whether the advice still holds.",
+      ],
       topic: "formation",
     },
     firstWave: 40,
