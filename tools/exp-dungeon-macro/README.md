@@ -6,6 +6,8 @@ It talks to the emulator over adb rather than the mouse, so the MuMu window can 
 - It reads the screen with `adb exec-out screencap` (raw RGBA) and checks a few pixels.
 - It taps with `adb shell input`.
 
+The adb helpers are shared with the Guild Conquest macro, in `tools/adb-lib/AdbScreen.ahk`.
+
 ## Run
 
 1. Open the EXP Dungeon lobby on the stage to push.
