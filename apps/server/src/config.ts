@@ -36,3 +36,9 @@ export const researchDir = join(repoRoot, "research");
 
 /** Absolute path to the exported JSON snapshot file. */
 export const snapshotPath = join(repoRoot, "data", "snapshot.json");
+
+/**
+ * Absolute path to the reader's account audits (`account/`, kept out of
+ * git); overridable via `CRUMBLE_ACCOUNT`.
+ */
+export const accountDir = process.env.CRUMBLE_ACCOUNT ?? join(repoRoot, "account");

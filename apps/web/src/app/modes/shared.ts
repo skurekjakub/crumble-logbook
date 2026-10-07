@@ -8,6 +8,19 @@ import type { SharedSection } from "./types";
 /** Sections shared by every mode, in tab order after the modes. */
 export const SHARED_SECTIONS: readonly SharedSection[] = [
   {
+    id: "account",
+    kind: "shared",
+    label: "Account",
+    labelKr: null,
+    title: "Crumble Logbook",
+    to: "/account",
+    link: { to: "/account" },
+    recordSlug: null,
+    lede: null,
+    stamp: [],
+    tabs: [],
+  },
+  {
     id: "research",
     kind: "shared",
     label: "Research",

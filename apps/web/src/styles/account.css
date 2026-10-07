@@ -1,0 +1,407 @@
+/* The account view: the roadmap's priority groups and rows, the lineups' cookie tiles, and the
+   quiet holdings and "couldn't read" rows. Priority colours: now candy, next accent, later quiet. */
+
+.acct-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+.acct-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2) var(--sp-3);
+}
+.acct-pick {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-left: auto;
+}
+.acct-pick select {
+  font: var(--fs-s) var(--body);
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--ink);
+  max-width: 100%;
+}
+.acct-section .label,
+.acct-row .label {
+  font: 600 var(--fs-2xs) / 1.2 var(--body);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Roadmap: a group per priority under its badge; each row edged in the priority's colour. */
+.road {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.road-group {
+  --prio: var(--ink-3);
+  --prio-soft: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.road-group.prio-now {
+  --prio: var(--candy);
+  --prio-soft: var(--candy-soft);
+}
+.road-group.prio-next {
+  --prio: var(--accent);
+  --prio-soft: var(--accent-soft);
+}
+.prio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--prio-soft);
+  color: var(--prio);
+  font: 700 var(--fs-xs) / 1.2 var(--body);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.prio::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--prio);
+}
+.road-group.prio-now .prio {
+  color: var(--candy-ink);
+}
+.road-group ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--prio);
+  border-radius: var(--radius);
+}
+.road-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-3) var(--sp-4);
+  min-width: 0;
+}
+.road-item + .road-item {
+  border-top: 1px solid var(--line);
+}
+.road-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2) var(--sp-3);
+}
+.road-action {
+  font: 700 var(--fs-base) / 1.35 var(--body);
+  min-width: 0;
+}
+.road-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+.road-badges .badge {
+  max-width: 16em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.chip.area {
+  background: var(--prio-soft);
+  color: var(--ink-2);
+}
+.road-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-1) var(--sp-3);
+  font-size: var(--fs-s);
+  color: var(--ink-2);
+}
+.road-why {
+  flex: 1 1 18em;
+  min-width: 0;
+}
+.road-why .clamp {
+  font-weight: 400;
+}
+.chips.refs {
+  margin-left: auto;
+}
+.chip.ref {
+  color: var(--accent);
+  background: var(--accent-soft);
+  display: inline-block;
+  max-width: 20em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.chip.ref .pill {
+  padding: 1px 5px;
+}
+.chip.ref.missing {
+  color: var(--ink-3);
+  background: var(--surface-2);
+  text-decoration: line-through dotted;
+}
+
+/* Lineups: a card per mode; each cookie a tile, its stars on the portrait and its level and skill
+   as badges beside the name, gear, runes and pet as compact chips. */
+.acct-lineups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.acct-lineup .card-head .chips {
+  justify-content: flex-end;
+}
+.chip.power {
+  font-family: var(--mono);
+  color: var(--ink);
+}
+.chip.power::before {
+  content: "⚡";
+}
+.chip.mode-link {
+  color: var(--accent);
+}
+.acct-team {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: var(--sp-2);
+}
+@media (max-width: 520px) {
+  .acct-team {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+  }
+}
+.acct-cookie {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  align-content: start;
+  gap: var(--sp-2);
+  padding: var(--sp-2);
+  border-radius: var(--radius-s);
+  background: var(--surface-2);
+  min-width: 0;
+}
+.acct-cookie .pic {
+  position: relative;
+  flex: none;
+  align-self: flex-start;
+}
+.acct-cookie .fig.stars {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  padding: 1px 4px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--candy-ink);
+  font: 700 10px / 1 var(--body);
+  white-space: nowrap;
+}
+.acct-cookie .body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.acct-cookie .nm {
+  font: 700 var(--fs-xs) / 1.2 var(--body);
+  overflow-wrap: anywhere;
+}
+.acct-cookie .figs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.acct-cookie .fig.lv,
+.acct-cookie .fig.skill {
+  padding: 1px 5px;
+  border-radius: 999px;
+  font: 600 10px / 1.2 var(--mono);
+  background: var(--surface);
+  color: var(--ink-2);
+}
+.acct-cookie .fig.lv {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.chips.kits {
+  grid-column: 1 / -1;
+  gap: 3px;
+}
+.chip.kit {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 2px 5px;
+  font-size: 10px;
+  background: var(--surface);
+}
+.chip.kit::before {
+  color: var(--ink-3);
+}
+.chip.kit.gear::before {
+  content: "▪";
+}
+.chip.kit.rune::before {
+  content: "◆";
+}
+.chip.kit.pet::before {
+  content: "♥";
+}
+
+/* Holdings and what couldn't be read: one quiet row each, a label then chips. */
+.acct-holdings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.acct-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.acct-row .chips {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.chip.pet-chip {
+  white-space: normal;
+}
+.chip.quiet {
+  background: transparent;
+  border: 1px dashed var(--line);
+  color: var(--ink-3);
+  white-space: normal;
+}
+.acct-unread .chip.quiet::before {
+  content: "?";
+  font-weight: 700;
+}
+
+/* The account's own figures: a row of stat tiles above the roadmap. */
+.acct-profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: var(--sp-2);
+  margin: var(--sp-3) 0 0;
+}
+.acct-profile > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.acct-profile dt {
+  font: 600 var(--fs-2xs) / 1.2 var(--body);
+  color: var(--ink-3);
+}
+.acct-profile dd {
+  margin: 0;
+  font: 700 var(--fs-l) / 1.2 var(--mono);
+  color: var(--ink);
+}
+
+/* The roadmap's verdict, and the parked avenues in a quiet group. */
+.road-verdict {
+  margin: 0;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-s);
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-weight: 600;
+}
+.road-verdict .clamp {
+  font-weight: 600;
+}
+.road-group.prio-parked ol {
+  border-left-style: dashed;
+}
+.road-group.prio-parked .road-action {
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+/* A lineup's pets, gear preset and matching deck; the captain's crown; a lineup's note. */
+.acct-lineup-meta {
+  align-items: center;
+}
+.acct-lineup-meta .matches {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.acct-lineup .label {
+  font: 600 var(--fs-2xs) / 1.2 var(--body);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.acct-cookie.captain {
+  box-shadow: inset 0 0 0 1px var(--candy);
+}
+.acct-cookie .fig.crown {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  font: 700 12px / 1 var(--body);
+  color: var(--candy);
+}
+.acct-cookie .fig.promo {
+  padding: 1px 5px;
+  border-radius: 999px;
+  font: 600 10px / 1.2 var(--mono);
+  background: var(--surface);
+  color: var(--ink-3);
+}
+.acct-note {
+  font-size: var(--fs-s);
+  color: var(--ink-3);
+}
+.acct-note .clamp {
+  font-weight: 400;
+}
+.acct-pets summary {
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: var(--sp-2);
+}
+.chip.pet-chip .muted {
+  color: var(--ink-3);
+  margin-left: 2px;
+}
+.chip.ref.file::before {
+  content: "↗";
+}

@@ -81,7 +81,7 @@ export function driftWarning(
   }
   lines.push(
     `  If the snapshot is newer (a pull brought records or rows), stop the server, delete ${paths.dbPath} and start it again to reseed from the snapshot.`,
-    "  If a record's data changed and the snapshot should follow it, rebuild the snapshot from a fresh database: point CRUMBLE_DB at a new file, run pnpm import:record for every record in order, then pnpm db:export. Don't export this database: --replace and API edits leave ids and rows a fresh import would not make.",
+    "  If a record's data changed and the snapshot should follow it, rebuild the snapshot from a fresh database: point CRUMBLE_DB at a new file, run pnpm import:record for every record in order, then pnpm import:account --all, then pnpm db:export. Don't export this database: --replace and API edits leave ids and rows a fresh import would not make.",
   );
   return lines.join("\n");
 }

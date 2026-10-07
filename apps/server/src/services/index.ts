@@ -1,6 +1,8 @@
 import type { ContentKey } from "../registry";
 import { CONTENT_KEYS } from "../registry";
 import type { Store } from "../repos";
+import type { AccountService } from "./account";
+import { createAccountService } from "./account";
 import type { CapturesService } from "./captures";
 import { createCapturesService } from "./captures";
 import type { RegisteredService } from "./content";
@@ -39,6 +41,7 @@ export type Services = ContentServices & {
   rankings: RankingsService;
   records: RecordsService;
   captures: CapturesService;
+  account: AccountService;
   export: ExportService;
 };
 
@@ -62,6 +65,7 @@ export function createServices(store: Store): Services {
     rankings: createRankingsService(store),
     records: createRecordsService(store),
     captures: createCapturesService(store),
+    account: createAccountService(store),
     export: createExportService(store),
   };
 }

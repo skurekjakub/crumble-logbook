@@ -1,0 +1,37 @@
+{
+  "schema": "crumble-account-roadmap/1",
+  "snapshot": "snapshots/2026-10-07.json",
+  "capturedAt": "2026-10-07T13:33:00+02:00",
+  "verdict": "A top-3 account. The gaps are setup, not power.",
+  "items": [
+    {
+      "rank": 1,
+      "priority": "Now",
+      "area": "arena",
+      "action": "Swap to the Bari dive deck",
+      "why": "It beats the Rye defence at your spec.",
+      "payoff": "The record's top Arena deck.",
+      "cost": "Free; lineup slots 3–5 are spare.",
+      "refs": [
+        { "record": "002-pvp-meta", "id": "arena-bari-oven-cola" },
+        { "record": "002-pvp-meta", "file": "curated/runes.json" },
+        "002-pvp-meta#mechanic:7"
+      ]
+    },
+    {
+      "rank": 2,
+      "priority": "later",
+      "action": "Level every rune on the carry to 15 before the next season begins in the arena",
+      "payoff": { "power": "+3%" },
+      "cost": ["rune stones", 400]
+    }
+  ],
+  "parked": [
+    {
+      "avenue": "Stage pushing",
+      "why": "328-30 is the last stage.",
+      "refs": [{ "record": "002-pvp-meta", "id": "nowhere" }]
+    }
+  ],
+  "unread": ["Mercenary perks per lineup"]
+}

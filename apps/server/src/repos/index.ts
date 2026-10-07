@@ -1,6 +1,8 @@
 import type { Db } from "../db/client";
 import type { ContentKey, InsertOf, RowOf } from "../registry";
 import { CONTENT_KEYS, specOf } from "../registry";
+import type { AccountRepo } from "./account";
+import { createAccountRepo } from "./account";
 import type { CapturesRepo } from "./captures";
 import { createCapturesRepo } from "./captures";
 import type { CitationsRepo } from "./citations";
@@ -42,6 +44,8 @@ export type Repos = ContentRepos & {
   rankings: RankingsRepo;
   records: RecordsRepo;
   captures: CapturesRepo;
+  /** The reader's account snapshots and roadmaps. */
+  account: AccountRepo;
   /** Whole-table dump, load, count and clear over every registered table. */
   tables: TablesRepo;
 };
@@ -83,6 +87,7 @@ export function createRepos(db: Db): Repos {
     rankings: createRankingsRepo(db),
     records: createRecordsRepo(db),
     captures: createCapturesRepo(db),
+    account: createAccountRepo(db),
     tables: createTablesRepo(db),
   };
 }

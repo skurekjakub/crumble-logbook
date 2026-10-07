@@ -152,3 +152,24 @@ export type DungeonExclusion = InferResponseType<
   (typeof api)["dungeon-exclusions"]["$get"],
   200
 >[number];
+
+/** The reader's account view: a snapshot and a roadmap, and every loaded one by id. */
+export type AccountOverview = InferResponseType<typeof api.account.$get, 200>;
+
+/** An account snapshot: its lineups, pets, resources and what the audit couldn't read. */
+export type AccountSnapshot = NonNullable<AccountOverview["snapshot"]>;
+
+/** One lineup of an account snapshot, its cookies in formation order. */
+export type AccountLineup = AccountSnapshot["lineups"][number];
+
+/** One cookie of an account lineup, its names glossed. */
+export type AccountCookie = AccountLineup["cookies"][number];
+
+/** An account roadmap, its items in order. */
+export type AccountRoadmap = NonNullable<AccountOverview["roadmap"]>;
+
+/** One roadmap item: priority, area, action, why, payoff, cost and refs. */
+export type AccountItem = AccountRoadmap["items"][number];
+
+/** A roadmap item's reference, resolved to its deck or record. */
+export type AccountRef = AccountItem["refs"][number];

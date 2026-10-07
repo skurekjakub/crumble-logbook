@@ -172,6 +172,11 @@ const expectedCounts = {
     sum(fightTimeline.map((e) => distinct(e.sources.map(alias)))) +
     sum(buffRowsPerCookie),
   factClaims: 0,
+  accountSnapshots: 0,
+  accountLineups: 0,
+  accountCookies: 0,
+  accountRoadmaps: 0,
+  accountRoadmapItems: 0,
 };
 
 /**

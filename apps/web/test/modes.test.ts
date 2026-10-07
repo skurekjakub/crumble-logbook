@@ -181,8 +181,13 @@ describe("MODES", () => {
     }
   });
 
-  it("lists the research index among the shared sections, before Sources and Glossary", () => {
-    expect(SHARED_SECTIONS.map((s) => s.to)).toEqual(["/research", "/sources", "/glossary"]);
+  it("lists the account first among the shared sections, then research, Sources and Glossary", () => {
+    expect(SHARED_SECTIONS.map((s) => s.to)).toEqual([
+      "/account",
+      "/research",
+      "/sources",
+      "/glossary",
+    ]);
     expect(sectionForPath("/research")?.id).toBe("research");
   });
 

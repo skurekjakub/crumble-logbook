@@ -453,6 +453,14 @@ function seedEverything(store: Store): SeedIds {
     "kr-levers",
     ["dc:1"],
   );
+  store.repos.account.insertSnapshot(
+    { id: "2026-10-07", date: "2026-10-07", file: "snapshots/2026-10-07.json" },
+    [{ lineup: "arena", gameMode: "arena", cookies: [{ name: "체리 쿠키", level: "80" }] }],
+  );
+  store.repos.account.insertRoadmap(
+    { id: "2026-10-07", date: "2026-10-07", file: "roadmap-2026-10-07.json" },
+    [{ priority: "now", action: "Swap decks" }],
+  );
 
   return { mechanicId: mechanic.id, scoreId: score.id, deckCookieId };
 }
@@ -517,6 +525,11 @@ describe("exportSnapshot / restoreSnapshot", () => {
       plannerSteps: 1,
       citations: 36,
       factClaims: 1,
+      accountSnapshots: 1,
+      accountLineups: 1,
+      accountCookies: 1,
+      accountRoadmaps: 1,
+      accountRoadmapItems: 1,
     });
     for (const [table, rows] of Object.entries(first.tables)) {
       expect(rows.length, `table "${table}" should be seeded`).toBeGreaterThan(0);
