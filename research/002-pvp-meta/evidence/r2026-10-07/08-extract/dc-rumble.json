@@ -1,0 +1,1243 @@
+{
+ "batch": "r2026-10-07 dc-rumble",
+ "mode_scope": "rumble_arena",
+ "posts": [
+  {
+   "source": "dc", "id": "81227", "url": "https://m.dcinside.com/board/projectcc/81227", "date": "2026-10-05",
+   "title_kr": "[📚정보] 바없찐들을 위한 오방호밀덱 공략2탄(약간의 예능)",
+   "title_en": "Oven–Rye deck guide part 2 for players without Bari",
+   "relevance": 3, "mode": "rumble_arena",
+   "summary_en": "비푸맹 (168th, 3,201 pts, Elite Master 1, 30.46M) shares an Oven–Rye deck: his own Oven Wanderer is captain with ATK runes so it out-ATKs Milk, and the team runs 6 Skill Haste, so his Oven dives first and the enemy Bari and Oven, which dash at the highest-ATK enemy, chase it and bunch up for Strawberry Crepe and Rye. No Hound, because its knockback would break the bunch. His defense log (images 3-5) shows 13 defenses, 11 of them by 3000+ attackers; 12 held, 9 of the 11 3000+ attackers ran exactly the standard 12, and the only loss (−3) was to a Vampire–Bari–Oven deck with Mango Toucan and Fluffy Cheese Cat.",
+   "teams": [
+    {
+     "name": "Oven–Rye decoy deck (비푸맹, own formation, dc:81227-2)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "row1-1", "role": "crit buffer", "note": "" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "?", "position": "row1-2", "role": "main DPS", "note": "must be top 3 by ATK among the SSR/TSSR cookies (text)" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "?", "position": "row1-3", "role": "ATK buffer", "note": "" },
+      { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "?", "position": "row1-4", "role": "charger", "note": "sprite plus a Water Charge card" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "row1-5", "role": "tank", "note": "" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "?", "position": "row1-6", "role": "healer", "note": "" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "100", "stars": "?", "position": "row2-1", "role": "decoy charger", "note": "captain banner on its card (Fire Charge); ATK runes; text: needs at least 6★" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "row2-2", "role": "support / damage", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "?", "position": "row2-3", "role": "skill-amp buffer", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row2-4", "role": "buffer / healer", "note": "Oven's ATK must beat Milk's" },
+      { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "100", "stars": "?", "position": "row2-5", "role": "tank / damage", "note": "Light Tank card" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "tank", "note": "" }
+     ],
+     "pets": ["전지멜로우 20 (icon matches the codex label in dc:79685-9)", "갓난갓방울 20", "핫도그도그 20"],
+     "perks": "3탱 피감 + 종합 복지 (text); the perk icon row is not decoded",
+     "formation": "power 30.46M; formation tab 5; gear preset dropdown '아레나'. Levels read from the 편성중 cards, matched to cookies by element and class icon. Star icons are not decodable.",
+     "why": "Bari and Oven skills dash at the enemy with the highest ATK. Own Oven as captain with ATK runes is that target, and with Oven's 50% skill-ready start plus more Skill Haste than enemies who run none, it lands first; enemy Bari and Oven follow it and bunch up, and Crepe plus Rye hit the bunch.",
+     "unorthodox": ["Oven Wanderer as a decoy in an anti-charge deck", "Oven as captain with ATK runes", "no Hound", "6 Skill Haste baseline"]
+    },
+    {
+     "name": "Rumble standard 12 as seen attacking at 3000+ (dc:81227-3/4/5 defense log)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "??", "stars": "?", "position": "card-1", "role": "", "note": "" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "??", "stars": "?", "position": "card-2", "role": "charger", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "??", "stars": "?", "position": "card-3", "role": "", "note": "" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "??", "stars": "?", "position": "card-4", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "??", "stars": "?", "position": "card-5", "role": "", "note": "" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "??", "stars": "?", "position": "card-6", "role": "charger", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "??", "stars": "?", "position": "card-7", "role": "", "note": "captain banner" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "??", "stars": "?", "position": "card-8", "role": "tank", "note": "" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "??", "stars": "?", "position": "card-9", "role": "tank", "note": "" },
+      { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "??", "stars": "?", "position": "card-10", "role": "charger", "note": "dark sprite; identified by sprite and card icons" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "??", "stars": "?", "position": "card-11", "role": "healer", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "??", "stars": "?", "position": "card-12", "role": "tank", "note": "" }
+     ],
+     "pets": ["핫도그도그 20", "근엄한 초코왕방울 20", "갓난갓방울 20"],
+     "perks": "",
+     "formation": "log card order; levels and power hidden (Lv.??, ????)",
+     "why": "9 of the 11 3000+ attackers in the log ran exactly these 12; 8 of those 9 show exactly these three pets at 20, and the ninth's pet row is cut off between screenshots.",
+     "unorthodox": []
+    },
+    {
+     "name": "Vampire–Bari–Oven attacker (the one that broke the defense, ID 88a100)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "??", "stars": "?", "position": "card-1", "role": "", "note": "" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "??", "stars": "?", "position": "card-2", "role": "", "note": "" },
+      { "kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "??", "stars": "?", "position": "card-3", "role": "support", "note": "Light Support card, pink/yellow sprite (M)" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "??", "stars": "?", "position": "card-4", "role": "", "note": "" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "??", "stars": "?", "position": "card-5", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "??", "stars": "?", "position": "card-6", "role": "", "note": "" },
+      { "kr": "뱀파이어맛 쿠키", "en": "Vampire", "level": "??", "stars": "?", "position": "card-7", "role": "charger", "note": "red sprite, Fire card (M)" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "??", "stars": "?", "position": "card-8", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "??", "stars": "?", "position": "card-9", "role": "", "note": "captain banner" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "??", "stars": "?", "position": "card-10", "role": "", "note": "" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "??", "stars": "?", "position": "card-11", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "??", "stars": "?", "position": "card-12", "role": "", "note": "" }
+     ],
+     "pets": ["망고부리새 20 (orange bird icon, M)", "치즈뭉치 고양이 20 (orange cat icon, M)", "근엄한 초코왕방울 20"],
+     "perks": "",
+     "formation": "log card order",
+     "why": "Drops Cherry Cola and Herb for Vampire and Doughnut King and runs the evasion pets Mango Toucan and Fluffy Cheese Cat (dc:77880 ties Cheese Cat to Vampire evasion decks).",
+     "unorthodox": ["evasion pets on a Bari charge deck", "no Herb, no Cherry Cola"]
+    }
+   ],
+   "counters": [
+    { "team": "Rumble standard 12 (Bari–Oven charge)", "beaten_by": "Oven–Rye decoy deck", "mode": "rumble_arena", "why": "Enemy chargers chase the decoy Oven and bunch for Crepe and Rye.", "conditions": "Enemy Oven/Bari without Skill Haste (poster: over 90 in 100 such decks); own Oven at least 6★; easy vs low-star Oven decks, 'decent' vs high-star ones" },
+    { "team": "Oven–Rye decoy deck", "beaten_by": "Vampire–Bari–Oven with Mango Toucan + Fluffy Cheese Cat", "mode": "rumble_arena", "why": "Only attacker in the shown log that won (defender −3).", "conditions": "3000+ band; one sample" }
+   ],
+   "builds": [
+    { "cookie": "오븐방랑자 쿠키", "mode": "rumble_arena", "sugar_runes": "ATK (공룬), ATK priority 1 on the team; captain", "gear": "6 Skill Haste baseline for the team (text)", "why": "be the highest-ATK enemy so Bari and Oven dash at it, and act first" },
+    { "cookie": "호밀맛 쿠키", "mode": "rumble_arena", "sugar_runes": "heavy ATK rune work", "gear": "?", "why": "stay in the top 3 by ATK among the SSR/TSSR cookies" }
+   ],
+   "mechanics": [
+    "Bari and Oven skill text: they dash at the enemy with the highest ATK (poster).",
+    "Oven Wanderer starts with 50% skill readiness (poster: '스킬준비50%').",
+    "Poster: over 90 of 100 Oven–Bari decks he meets run no Skill Haste.",
+    "In the defense log, anonymous attackers show all 12 cookies (Lv.??), unlike the hidden slots on attack/revenge screens."
+   ],
+   "rules": [
+    "Top 3 on 2026-10-05: 凱凱の餅乾軍團 (S0298) 6,241; 슈퍼땅콩 (S0161) 6,086; Hazelicious (S0097) 6,021.",
+    "Elite Master 1 promotion needs 3,000 pts and overall 100th; reward 4,000 gems.",
+    "Each held defense paid +175 medals and +1 or +2 points, against 3000+ and 2000+ attackers alike; the failed defense paid no medals and cost −3.",
+    "Mileage-bought Rumble tickets cannot be refunded (commenter)."
+   ],
+   "results": [
+    { "team": "Oven–Rye decoy deck", "win_rate": "12 of 13 shown defenses held (10 of 11 vs 3000+, 2 of 2 vs 2000+)", "usage": "", "power": "30.46M", "note": "168th, 3,201 pts" },
+    { "team": "Rumble standard 12 (as attacker)", "win_rate": "", "usage": "9 of 11 3000+ attackers in the shown log", "power": "hidden", "note": "the other two: the Vampire variant and one card-set with two unidentified cards in place of Cherry Cola and Herb (ID c5bb77)" }
+   ],
+   "disagreements": [],
+   "quotes": [
+    { "kr": "오방한테 단장+ 공1순위를 주면 요즘 대부분의 오방바리덱은 스가가 없는 편이야.", "en": "Give Oven the captain slot and top ATK; most Oven–Bari decks these days have no Skill Haste." },
+    { "kr": "진짜로 100판을 한다고치면 90명이상은 스킬가속이 없는 편이야.", "en": "Out of 100 matches, more than 90 opponents have no Skill Haste." },
+    { "kr": "스킬가속이 높으면 들개녀석이 밀쳐서 진형망치는걸 방지하기위해 들개체용은 x", "en": "No Hound, so its knockback doesn't ruin the formation when Skill Haste is high." },
+    { "kr": "일단 오방이 최소 6성정돈 되어야 한다는점.", "en": "Oven has to be at least 6★." }
+   ]
+  },
+  {
+   "source": "dc", "id": "79238", "url": "https://m.dcinside.com/board/projectcc/79238", "date": "2026-10-01",
+   "title_kr": "[📚정보] 바없찐들을 위한 호밀덱 공략",
+   "title_en": "Rye deck guide for players without Bari",
+   "relevance": 3, "mode": "rumble_arena",
+   "summary_en": "비푸맹 (254th, 2,834 pts, Elite Master 1; attack and defense both 23.85M) shares a Rye deck: Angel replaces Herb (casts fast with 3 Skill Haste lines and its synergy lasts the first turn) and Lime adds 연쇄 and crit synergy; the aim is to survive the Bari opening and win the long fight. Gives rune, gear and perk choices. The defense log shows 5 defenses at 2000+, all held (+1/+2, +175 medals each); of the 4 fully visible attackers, 3 ran the standard 12 and 1 a Rye-type list. A commenter who is server #1 with a charge deck reports about 80% after copying it.",
+   "teams": [
+    {
+     "name": "Rye anti-charge, Angel/Lime list (비푸맹, own formation, dc:79238-2)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "row1-1", "role": "crit buffer", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "row1-2", "role": "support / secondary damage", "note": "1.0-1.5M+ per fight per the poster" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "?", "position": "row1-3", "role": "skill-amp buffer", "note": "" },
+      { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "100", "stars": "?", "position": "row1-4", "role": "support", "note": "white hair + guitar sprite, Fire Support card" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "row1-5", "role": "tank", "note": "" },
+      { "kr": "천사맛 쿠키", "en": "Angel", "level": "?", "stars": "?", "position": "row1-6", "role": "support (lasting synergy)", "note": "replaces Herb; its card is covered by an overlay in the screenshot" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "?", "position": "row2-1", "role": "main DPS", "note": "2-3M per fight per the poster" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "?", "position": "row2-2", "role": "ATK buffer", "note": "" },
+      { "kr": "라임맛 쿠키", "en": "Lime", "level": "100", "stars": "?", "position": "row2-3", "role": "support (연쇄 + crit synergy)", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row2-4", "role": "buffer / healer", "note": "captain banner" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "row2-5", "role": "tank", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "tank", "note": "" }
+     ],
+     "pets": ["얼음과자새 20 (white bird icon, M)", "근엄한 초코왕방울 20", "핫도그도그 20"],
+     "perks": "피감 + 열정페이 (poster's choice), or 피감 + 종합, or 피감 + 체력 5%",
+     "formation": "power 23.85M; formation tab 4. Levels read from the 편성중 cards; star icons not decodable.",
+     "why": "Bari decks win in the opening burst; this list is built to survive it (Angel's sustain, Lime's synergies) and then Rye and Pinot win the long fight.",
+     "unorthodox": ["Angel (U rarity) instead of Herb", "Lime in a Rye deck", "only 3 Skill Haste lines on gear"]
+    }
+   ],
+   "counters": [
+    { "team": "Rumble standard 12 (Bari–Oven charge)", "beaten_by": "Rye Angel/Lime list", "mode": "rumble_arena", "why": "Survives the opening dive; Rye and Pinot win the long fight.", "conditions": "Elite Master 1 (2,834 pts, 23.85M) defending against 2000+ attackers; 3 standard-12 attacks shown, all held" }
+   ],
+   "builds": [
+    { "cookie": "천사맛 쿠키", "mode": "rumble_arena", "sugar_runes": "피감 스가 (one 체력 line recommended)", "gear": "?", "why": "fast first cast; synergy lasts the first turn" },
+    { "cookie": "호밀맛 쿠키", "mode": "rumble_arena", "sugar_runes": "공 2-3 lines + all 치피; Pomegranate's buff must land on it", "gear": "?", "why": "was 스증; with Lime, Macaron and Pomegranate give enough skill amp even against double 치저" },
+    { "cookie": "라임맛 쿠키", "mode": "rumble_arena", "sugar_runes": "피감 스가 (one 체력 line recommended)", "gear": "?", "why": "" },
+    { "cookie": "all (gear template)", "mode": "rumble_arena", "sugar_runes": "", "gear": "top-left: 스증 + 치확/치피 + 명중 (about one line); bottom-left: 피감 치저 (one 체력 can help); top-right: 스증 스가 (the deck's only 3 스가 lines); bottom-right: 피감 치저", "why": "치확 recommended; 치피 if the gear is shared with Guild Conquest" }
+   ],
+   "mechanics": [],
+   "rules": [
+    "Elite Master 1 promotion needs 3,000 pts and overall 100th; reward 4,000 gems.",
+    "Each held defense against 2000+ attackers paid +175 medals and +1 or +2 points.",
+    "Top 3 on 2026-10-01 (~19:00): 凱凱の餅乾軍團 (S0298) 5,066; Hazelicious (S0097) 4,967; 슈퍼땅콩 (S0161) 4,953.",
+    "Season end timer 6d16h54m (screenshot posted 2026-10-01 19:19 KST), about 2026-10-08 12:00 KST.",
+    "Rumble buff icon reads 30% on the lobby screen."
+   ],
+   "results": [
+    { "team": "Rye Angel/Lime list", "win_rate": "~80% reported by one copier (server #1 charge-deck player)", "usage": "", "power": "23.85M", "note": "254th, 2,834 pts; 5 of 5 shown defenses held" }
+   ],
+   "disagreements": [],
+   "quotes": [
+    { "kr": "바리덱은 버티는게 포인트라서, 버티기만 하면 이길확률이 높아져", "en": "Against Bari decks the point is to survive; if you survive, your odds go up." },
+    { "kr": "고오맙다 서버1등 돌격덱인데 이걸로 승률 한 80%는 나오는듯", "en": "Thanks; I'm the server-#1 charge-deck player and this gets about 80%." },
+    { "kr": "허브를 천사로만 바꿔서 써보는 데 ㄹㅇ 허브보다 천사가 훨씬 좋네", "en": "Just swapping Herb for Angel, Angel really is much better than Herb." }
+   ]
+  },
+  {
+   "source": "dc", "id": "80759", "url": "https://m.dcinside.com/board/projectcc/80759", "date": "2026-10-04",
+   "title_kr": "와레나 순위권들 바리덱에 뱀파 같이 쓰던데 이유가 머임?",
+   "title_en": "Why do top Rumble Bari decks run Vampire?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "The poster sees Cherry Cola and Vampire about half and half in top Bari decks. A commenter clarifies these are Bari–Oven decks, not evasion decks: from about 50th up to 10th many drop Cherry Cola for Vampire. Another guesses Vampire lowers accuracy so the defender can't recover after the opening burst.",
+   "teams": [
+    {
+     "name": "Bari–Oven with Vampire (ranked ~10-50)",
+     "mode": "rumble_arena",
+     "cookies": [ { "kr": "뱀파이어맛 쿠키", "en": "Vampire", "level": "?", "stars": "?", "position": "Cherry Cola's slot", "role": "charger", "note": "replaces Cherry Cola" } ],
+     "pets": [], "perks": "", "formation": "",
+     "why": "Commenter's guess: Vampire's accuracy-down stops the opponent stabilising after the opening (L).",
+     "unorthodox": []
+    }
+   ],
+   "counters": [],
+   "builds": [],
+   "mechanics": ["Vampire lowers enemy accuracy (commenter's inference)."],
+   "rules": [],
+   "results": [ { "team": "Bari–Oven with Vampire", "win_rate": "", "usage": "about half of the Bari decks in the top ~10-50 (one observer)", "power": "", "note": "" } ],
+   "disagreements": ["One commenter first assumed Vampire means an evasion deck; corrected: these are Bari–Oven decks."],
+   "quotes": [
+    { "kr": "체콜 뱀파 반반인 것 같은데", "en": "Looks like Cherry Cola and Vampire half and half." },
+    { "kr": "바리 오방인데 50위권부터 10위권 사람들 체콜 빼고 뱀파 많이 넣더라", "en": "They're Bari–Oven; from around 50th to 10th, lots of people drop Cherry Cola for Vampire." }
+   ]
+  },
+  {
+   "source": "dc", "id": "78195", "url": "https://m.dcinside.com/board/projectcc/78195", "date": "2026-09-30",
+   "title_kr": "근데 와레나 랭커들 바리덱 이거 호밀덱으로 잘잡는거 맞나;;",
+   "title_en": "Do Rye decks really beat ranker Bari decks?",
+   "relevance": 3, "mode": "rumble_arena",
+   "summary_en": "The poster's 4.5M Rye deck lost 5 straight to a ranker's Bari deck (5.01M per text). Image 2 is a defense-log entry in which that ranker (4.94M, 3,472 pts) beat the poster's defense (−2); the entry shows levels: Macaron, Pinot, Bari, Milk and Cherry Cola at 100, a Brightseeker-sprite card at 98, Oven, Pomegranate, Ion, Herb and Moon Rabbit at 93, Hound at 90. Commenters: Rye needs at least 5★ and those beating Bari run Rye 8★+, Rye must be top 3 by ATK to get Pomegranate's buff, and guild level 4 for the 10% DR perk is needed to survive the opening.",
+   "teams": [
+    {
+     "name": "Ranker Bari deck (3,472 pts, 4.94M), as shown in the poster's defense log",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "card-1", "role": "", "note": "" },
+      { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "98", "stars": "?", "position": "card-2", "role": "ranged DPS", "note": "Light Ranged card; sprite matches the card labelled 브라이트시커 in dc:81838-1 (M)" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "93", "stars": "?", "position": "card-3", "role": "charger", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "card-4", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "93", "stars": "?", "position": "card-5", "role": "", "note": "" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "?", "position": "card-6", "role": "charger", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "card-7", "role": "", "note": "captain banner" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "90", "stars": "?", "position": "card-8", "role": "tank", "note": "" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "93", "stars": "?", "position": "card-9", "role": "tank", "note": "" },
+      { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "?", "position": "card-10", "role": "charger", "note": "" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "93", "stars": "?", "position": "card-11", "role": "healer", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "93", "stars": "?", "position": "card-12", "role": "tank", "note": "" }
+     ],
+     "pets": ["갓난갓방울 16 (M)", "? orange cat/lion face 15 (possibly 치즈뭉치 고양이, L)", "? red/white face 17 (possibly 색동 주머니, L)"],
+     "perks": "",
+     "formation": "log card order",
+     "why": "Standard 12 with Brightseeker in Cheesecake's place; sub-100 levels on Oven, Pomegranate, Hound, Ion, Herb and Moon Rabbit.",
+     "unorthodox": ["Brightseeker instead of Cheesecake", "Oven and Pomegranate at Lv.93"]
+    },
+    {
+     "name": "Poster's Rye attack team ('내 공격팀', dc:78195-1)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "98", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "92", "stars": "?", "position": "row1-2", "role": "", "note": "Light Support card, pink/yellow sprite (M)" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "96", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine", "level": "92", "stars": "?", "position": "row1-4", "role": "", "note": "Grass Support card, purple-haired sprite (M)" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "98", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "?", "position": "row2-1", "role": "main DPS", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "98", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "98", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "94", "stars": "?", "position": "row2-4", "role": "", "note": "Fire card, white-haired sprite (M)" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "97", "stars": "?", "position": "row2-5", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": ["갓난갓방울 19", "얼음과자새 18 (M)", "? blue blob 18 (possibly 뽀글방울, L)"],
+     "perks": "",
+     "formation": "own team panel, 2 rows of 6",
+     "why": "",
+     "unorthodox": []
+    }
+   ],
+   "counters": [
+    { "team": "Rye deck (4.5M)", "beaten_by": "Ranker Bari deck (4.94-5.01M, 3,472 pts)", "mode": "rumble_arena", "why": "Lost 5 of 5; commenter: Bari and Cherry Cola dive in and grind down Macaron and Rye at the start.", "conditions": "Rye 7★ and guild level 3 (no 10% DR perk) per the thread" }
+   ],
+   "builds": [
+    { "cookie": "호밀맛 쿠키", "mode": "rumble_arena", "sugar_runes": "poster runs 치피 1 / 공증 2 / 스증 1; advised to raise ATK", "gear": "?", "why": "Rye must be top 3 by ATK (Milk included) so Pomegranate's buff (빨대) lands on it; lower Pinot's level if needed" }
+   ],
+   "mechanics": [
+    "Pomegranate's buff goes to the top ATK cookies; commenters say Rye must be top 3 (one said top 5) to receive it.",
+    "A 3,472-pt attacker appears with visible power and levels in this defense log (not anonymous)."
+   ],
+   "rules": [
+    "Guild (용병단) level 4 unlocks the 10% DR perk; commenters call it necessary for Rye to survive the opening.",
+    "A failed defense here cost −2."
+   ],
+   "results": [],
+   "disagreements": ["Rye star floor: 'at least 5★' vs 'those who beat Bari run Rye 8★+' (same comment)."],
+   "quotes": [
+    { "kr": "호밀은 적어도 5성은 찍어야돼 바리 개팬다는 애들 호밀 최소 8성임", "en": "Rye needs at least 5★; the people who say they crush Bari have Rye at 8★ minimum." },
+    { "kr": "용병단 4렙찍고 피감10퍼 복지를 받아야 초반 딜이 대응 될건데", "en": "You need guild level 4 and the 10% DR perk to handle the opening damage." },
+    { "kr": "나도 10성바리 좆고래들한텐 맨날 따먹힘", "en": "I get eaten by 10★ Bari whales every day too." }
+   ]
+  },
+  {
+   "source": "dc", "id": "82266", "url": "https://m.dcinside.com/board/projectcc/82266", "date": "2026-10-07",
+   "title_kr": "아레나 덱 공유: 바리곤듀없찐들을 위한 탐험가 속박플 호밀덱",
+   "title_en": "Adventurer bind Rye deck for players without Bari",
+   "relevance": 2, "mode": "both",
+   "summary_en": "A blessing-5 player shares a Rye deck with Adventurer instead of Skating Queen (Skating Queen walks into the enemy side and gets cut); against the Bari decks met higher up, swap Doughnut King for Rockstar. Posted as an Arena deck, but the result screen is a Rumble Season 1 first promotion to Elite Master 1 (4,000 gems), 19.13M beating 20.55M at 2,699th. The formation sits in a gear preset named '토벌용'.",
+   "teams": [
+    {
+     "name": "Adventurer Rye deck (기지개운동, own formation, dc:82266-1)",
+     "mode": "both",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "96", "stars": "?", "position": "row1-2", "role": "", "note": "swap for Rockstar vs Bari decks" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "탐험가맛 쿠키", "en": "Adventurer", "level": "100", "stars": "?", "position": "row1-4", "role": "charger (bind)", "note": "Grass Charge card" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "97", "stars": "?", "position": "row1-5", "role": "tank", "note": "" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "?", "position": "row1-6", "role": "healer", "note": "" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "?", "position": "row2-1", "role": "main DPS", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "96", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row2-4", "role": "", "note": "captain banner" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "93", "stars": "?", "position": "row2-5", "role": "tank", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "tank", "note": "" }
+     ],
+     "pets": ["얼음과자새 19 (M)", "핫도그도그 19", "갓난갓방울 20"],
+     "perks": "perk icon row not decoded",
+     "formation": "power 19.51M; gear preset '토벌용'",
+     "why": "Adventurer binds instead of diving in like Skating Queen.",
+     "unorthodox": ["Adventurer (U rarity)", "sub-100 levels on Doughnut, Pomegranate, Hound, Ion"]
+    }
+   ],
+   "counters": [],
+   "builds": [],
+   "mechanics": [],
+   "rules": ["Rumble Elite Master 1 first promotion pays 4,000 gems."],
+   "results": [ { "team": "Adventurer Rye deck", "win_rate": "", "usage": "", "power": "19.13M vs 20.55M", "note": "Rumble Season 1 promotion fight, 2,699th" } ],
+   "disagreements": ["A commenter beat a copy of this deck on his server with the regular Rye deck."],
+   "quotes": [ { "kr": "피겨는 룰루랄라 ~ 하고 상대진영까지 들어가서 컷 당한다능", "en": "Skating Queen wanders into the enemy side and gets cut." } ]
+  },
+  {
+   "source": "dc", "id": "77408", "url": "https://m.dcinside.com/board/projectcc/77408", "date": "2026-09-28",
+   "title_kr": "근데 호밀덱이 바리덱 카운터는 맞아?",
+   "title_en": "Is Rye really the Bari counter?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "A player who parks around 10th-30th in Rumble says nearly everyone between 10th and 50th runs Bari, he has seen only two or three Rye decks there and never lost to one. Commenters: Rye wins up to the upper-middle ranks; at the top, finished Bari decks (TSSR, TSSR and SSR carries against Rye's SR) out-power it and cut it before it warms up. One 12M Bari deck reportedly beat a 19M Rye deck.",
+   "teams": [],
+   "counters": [
+    { "team": "Rye anti-charge", "beaten_by": "finished Bari–Oven–Cherry Cola deck", "mode": "rumble_arena", "why": "Deck power: the Bari deck's carries are two TSSR and one SSR against Rye's SR, so the gap grows with stars and setup.", "conditions": "top ranks; built Bari decks" },
+    { "team": "unfinished Bari deck", "beaten_by": "Rye anti-charge", "mode": "rumble_arena", "why": "The matchup itself favours Rye.", "conditions": "mid ladder" }
+   ],
+   "builds": [], "mechanics": [], "rules": [], "results": [],
+   "disagreements": ["Bari stars: one commenter says 5★ Bari decks lose to Rye; another says 5★ is food and only 10★ matters; the first had never seen a 10★ on his server."],
+   "quotes": [
+    { "kr": "원래 중상위권까지는 호밀덱이 쌔고 최상위로 올라갈 수록 바리덱이 더 쌤", "en": "Rye is stronger up to the upper-middle; the higher you go, the stronger Bari gets." },
+    { "kr": "나 12m대 바리덱인데 19m 호밀까지도 찢음", "en": "My 12M Bari deck tears up Rye decks as high as 19M." }
+   ]
+  },
+  {
+   "source": "dc", "id": "80059", "url": "https://m.dcinside.com/board/projectcc/80059", "date": "2026-10-03",
+   "title_kr": "와글와글 아레나 이거 다???처리된 유저는 뭐임",
+   "title_en": "Why are Rumble users shown as ???",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Asks whether users shown as ??? are a bug. Commenters: once you climb a bit, defense logs, attack targets and levels all show like that; it is anti-abuse, starting at Elite Master or so.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Anonymity covers defense-log entries, attack targets and levels above a threshold; commenters place it at Elite Master."],
+   "results": [], "disagreements": [],
+   "quotes": [ { "kr": "좀 올라오면 방어기록도 공격할때 상대도 레벨도 다 저렇게 뜸", "en": "Once you climb a bit, the defense log, attack opponents and levels all show like that." } ]
+  },
+  {
+   "source": "dc", "id": "78990", "url": "https://m.dcinside.com/board/projectcc/78990", "date": "2026-10-01",
+   "title_kr": "와레나 투력 12M 차이도 이기네",
+   "title_en": "Won Rumble at a 12M power gap",
+   "relevance": 3, "mode": "rumble_arena",
+   "summary_en": "도토리마스터's 20.86M Rye deck (272nd) beat a 32.27M Bari deck (162nd) with 19.967 s left. Damage: Rye 2,597,126, Hound 1,453,557, Pinot 1,247,337, Skating Queen 441,061 against enemy Bari 2,093,694, Oven 1,330,688, Cherry Cola 723,158. The poster asks whether the Oven–Bari deck is dead next season if it loses like this even with the Rumble buff; commenters split.",
+   "teams": [
+    {
+     "name": "Rye deck, Rockstar/Skating Queen list (도토리마스터, attack)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "?", "position": "?", "role": "main DPS", "note": "2,597,126 dmg" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "?", "role": "tank", "note": "1,453,557 dmg" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "?", "role": "", "note": "1,247,337 dmg" },
+      { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "100", "stars": "?", "position": "?", "role": "charger", "note": "441,061 dmg" },
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "?", "role": "", "note": "378,329 dmg" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "?", "role": "tank", "note": "309,980 dmg" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "?", "role": "tank", "note": "203,246 dmg" },
+      { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "100", "stars": "?", "position": "?", "role": "support", "note": "3,498 dmg" }
+     ],
+     "pets": [], "perks": "", "formation": "damage tab shows 8 rows per side; the other 4 cookies are not on screen",
+     "why": "Same poster and list as dc:78308.",
+     "unorthodox": []
+    }
+   ],
+   "counters": [ { "team": "Bari–Oven–Cherry Cola deck (32.27M, 162nd)", "beaten_by": "Rye deck (20.86M, 272nd)", "mode": "rumble_arena", "why": "Rye, Hound and Pinot outlast the opening; enemy Bari 2.09M and Oven 1.33M were not enough.", "conditions": "−11.4M power" } ],
+   "builds": [], "mechanics": [], "rules": [],
+   "results": [ { "team": "Rye deck", "win_rate": "", "usage": "", "power": "20.86M vs 32.27M", "note": "won with 19.967 s left; enemy damage: Bari 2,093,694, Oven 1,330,688, Cherry Cola 723,158, Pinot 259,172, Macaron 94,970, Ion 94,101, Hound 90,554, Moon Rabbit 21,108" } ],
+   "disagreements": [
+    "Commenter: at the top, Rye decks get cut in 1 second.",
+    "Commenter: Rye gains a lot from the shared 30% DR, so judge after the charge buff goes; on hard regular-Arena servers Rye is reportedly losing to Bari.",
+    "Bari's future: Oven is hopeless but Bari keeps value as a charge buffer, and any strong new charge TSSR revives it (several commenters)."
+   ],
+   "quotes": [
+    { "kr": "근데 오방바리덱 돌격덱은 와레나 버프상태여도 이정도면 다음시즌은 관짝행 아님?", "en": "If the Oven–Bari charge deck loses like this even with the Rumble buff, isn't it dead next season?" },
+    { "kr": "상위권가면 호밀덱 1초만에 썰림", "en": "Higher up, Rye decks get sliced in 1 second." },
+    { "kr": "바리는 접대용이고 토끼가 본체", "en": "Bari is the hostess; Moon Rabbit is the real core." }
+   ]
+  },
+  {
+   "source": "dc", "id": "78308", "url": "https://m.dcinside.com/board/projectcc/78308", "date": "2026-09-30",
+   "title_kr": "와레나 200위 호밀덱 푼다",
+   "title_en": "My 200th-place Rumble Rye deck",
+   "relevance": 3, "mode": "rumble_arena",
+   "summary_en": "도토리마스터 shares his 20.39M Rye deck at about 200th; Rye is still 8★ and he expects more at 9★. Against Bari decks Skating Queen wins more often than Grapevine, but in Rye mirrors Grapevine is better (poster). A commenter says this list tops out around 200th and is adding Brightseeker.",
+   "teams": [
+    {
+     "name": "Rye deck, Rockstar/Skating Queen list (도토리마스터, own formation, dc:78308-1)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "?", "stars": "?", "position": "row1-1", "role": "crit buffer", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "?", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "?", "stars": "?", "position": "row1-4", "role": "support", "note": "white hair + guitar sprite" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "row1-5", "role": "tank", "note": "" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "?", "stars": "?", "position": "row1-6", "role": "healer", "note": "" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "?", "stars": "8", "position": "row2-1", "role": "main DPS", "note": "8★ per text" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "?", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "피겨여왕맛 쿠키", "en": "Skating Queen", "level": "?", "stars": "?", "position": "row2-3", "role": "charger", "note": "better than Grapevine vs Bari decks (poster)" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "?", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "row2-5", "role": "tank", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "?", "stars": "?", "position": "row2-6", "role": "tank", "note": "" }
+     ],
+     "pets": ["핫도그도그 20", "근엄한 초코왕방울 10", "얼음과자새 20 (M)"],
+     "perks": "perk icon row not decoded; a commenter asks about perks, unanswered",
+     "formation": "power 20.39M; sprite rows only (no cards, no levels)",
+     "why": "Rye carry; Skating Queen in Grapevine's place for the Bari matchup.",
+     "unorthodox": []
+    }
+   ],
+   "counters": [
+    { "team": "Rumble standard 12 (Bari–Oven charge)", "beaten_by": "Rye deck with Skating Queen", "mode": "rumble_arena", "why": "Skating Queen wins more than Grapevine vs Bari decks (poster's experience).", "conditions": "~200th band" },
+    { "team": "Rye deck (mirror)", "beaten_by": "Rye deck with Grapevine", "mode": "rumble_arena", "why": "Grapevine better in the Rye mirror (poster).", "conditions": "" }
+   ],
+   "builds": [], "mechanics": [], "rules": [],
+   "results": [ { "team": "Rye deck", "win_rate": "", "usage": "", "power": "20.39M", "note": "~200th; commenter: ceiling ~200th" } ],
+   "disagreements": ["Commenter asks whether Holy Baby Drop beats Hot Doggie; another asks why no Doughnut. Unanswered."],
+   "quotes": [ { "kr": "바리덱 상대로눈 포도보다 피겨가 승률이 더 높더라 근데 같은 호밀덱 상대로는 포도가 더 좋음", "en": "Against Bari decks Skating Queen wins more than Grapevine, but against other Rye decks Grapevine is better." } ]
+  },
+  {
+   "source": "dc", "id": "78187", "url": "https://m.dcinside.com/board/projectcc/78187", "date": "2026-09-30",
+   "title_kr": "와레나 쌀숭이덱 그마찍먹함",
+   "title_en": "Touched Grand Master with my Rye deck",
+   "relevance": 3, "mode": "rumble_arena",
+   "summary_en": "길룡부하 reached Rumble Grand Master 3 for the first time this season (4,000 gems) at 101st with a 22.54M Rye deck, beating a 28.14M opponent at 116th. The lineup on the battle screen is Macaron, Doughnut King, Cheesecake, Grapevine, Milk, Ion over Rye, Pinot, Pomegranate, Rockstar, Hound, Moon Rabbit, all Lv.100. Asked his oven level, he answers 37.",
+   "teams": [
+    {
+     "name": "Rye deck, Doughnut/Grapevine/Rockstar list (길룡부하, attack, battle-screen cards)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "100", "stars": "?", "position": "row1-2", "role": "", "note": "pink/yellow sprite (M)" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "포도넝쿨맛 쿠키", "en": "Grapevine", "level": "100", "stars": "?", "position": "row1-4", "role": "", "note": "purple-haired sprite (M)" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row1-5", "role": "", "note": "captain banner" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "100", "stars": "?", "position": "row2-1", "role": "main DPS", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "락스타맛 쿠키", "en": "Rockstar", "level": "100", "stars": "?", "position": "row2-4", "role": "", "note": "white-haired sprite (M)" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "row2-5", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": [], "perks": "",
+     "formation": "battle-result screen, own side, 2 rows of 6 small cards (not a formation screen)",
+     "why": "", "unorthodox": []
+    }
+   ],
+   "counters": [],
+   "builds": [], "mechanics": [],
+   "rules": ["Grand Master 3 sits above Elite Master 1; first promotion to it pays 4,000 gems."],
+   "results": [ { "team": "Rye deck", "win_rate": "", "usage": "", "power": "22.54M vs 28.14M", "note": "101st vs 116th, promotion fight" } ],
+   "disagreements": [],
+   "quotes": [ { "kr": "이번 시즌 그랜드 마스터 3 첫 승급을 축하합니다!", "en": "Congratulations on your first promotion to Grand Master 3 this season! (game text)" } ]
+  },
+  {
+   "source": "dc", "id": "77717", "url": "https://m.dcinside.com/board/projectcc/77717", "date": "2026-09-29",
+   "title_kr": "방금 와레나 투력 10m차이 이김;",
+   "title_en": "Just won Rumble at a 10M power gap",
+   "relevance": 3, "mode": "rumble_arena",
+   "summary_en": "우이's 12.48M deck beat a 22.72M deck (Bari, Brightseeker, Oven, Rye and the standard supports). Crepe and then Rye died first, but Vampire and Pinot chipped the rest down; the poster credits Milk (2,893,597 healing) and Lime (1,408,960). The win gave +8 points (2,390, 983rd) and 175 medals. Commenters say both sides were under-built (Stella not unlocked, Bari 4★).",
+   "teams": [
+    {
+     "name": "Rye/Vampire sustain deck (우이, attack; from the stats tabs)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "?", "stars": "?", "position": "?", "role": "DPS", "note": "932,772 dmg" },
+      { "kr": "뱀파이어맛 쿠키", "en": "Vampire", "level": "?", "stars": "?", "position": "?", "role": "charger", "note": "869,948 dmg" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "?", "stars": "?", "position": "?", "role": "", "note": "811,015 dmg" },
+      { "kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "?", "stars": "?", "position": "?", "role": "", "note": "601,302 dmg; 571,749 taken" },
+      { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "?", "stars": "?", "position": "?", "role": "tank", "note": "442,321 dmg" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "?", "role": "tank", "note": "313,032 dmg" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "?", "stars": "?", "position": "?", "role": "tank", "note": "152,486 dmg" },
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "?", "stars": "?", "position": "?", "role": "", "note": "82,073 dmg" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "?", "stars": "?", "position": "?", "role": "healer", "note": "2,893,597 healing; 757,266 taken" },
+      { "kr": "라임맛 쿠키", "en": "Lime", "level": "?", "stars": "?", "position": "?", "role": "healer/support", "note": "1,408,960 healing" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "?", "stars": "?", "position": "?", "role": "", "note": "467,123 taken (damage-taken tab)" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "?", "stars": "?", "position": "?", "role": "", "note": "366,051 taken (damage-taken tab)" }
+     ],
+     "pets": [], "perks": "", "formation": "12 cookies identified across the damage, damage-taken and healing tabs",
+     "why": "Sustain carried the fight after the damage dealers died.",
+     "unorthodox": ["Vampire in a Rye deck", "Lime as a second healer"]
+    }
+   ],
+   "counters": [ { "team": "Bari–Brightseeker–Oven–Rye deck (22.72M)", "beaten_by": "Rye/Vampire sustain deck (12.48M)", "mode": "rumble_arena", "why": "Enemy damage (Bari 1,795,810, Brightseeker 937,432, Oven 921,490, Rye 656,414) could not beat Milk + Lime healing.", "conditions": "−10.2M power; both sides under-built per commenters" } ],
+   "builds": [], "mechanics": [],
+   "rules": ["An attack win at ~2,390 pts gave +8 points and 175 medals."],
+   "results": [ { "team": "Rye/Vampire sustain deck", "win_rate": "", "usage": "", "power": "12.48M vs 22.72M", "note": "2,390 pts, 983rd after the win" } ],
+   "disagreements": ["Whether a 22M fight counts as a weak-player fight: one commenter says both decks are under-built (Stella 8, Bari 4★); others note 22M is around 1,000th cross-server."],
+   "quotes": [ { "kr": "뱀파랑 피노누아가 야금야금 잡아서 이김;;", "en": "Vampire and Pinot picked them off bit by bit and I won." } ]
+  },
+  {
+   "source": "dc", "id": "80950", "url": "https://m.dcinside.com/board/projectcc/80950", "date": "2026-10-04",
+   "title_kr": "호밀덱 허브 대신 천사 ㄱㅊ ?",
+   "title_en": "Angel instead of Herb in a Rye deck?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Asks about dc:79238's Angel-for-Herb swap. A user running it says it is sturdy and fine, and the deck doesn't need much 다발. Without King Choco Drop, a commenter points out 뽀글방울 has higher numbers than 색동 주머니, and the poster switches. The images are a dccon and the 79238 link preview.",
+   "teams": [], "counters": [],
+   "builds": [ { "cookie": "천사맛 쿠키", "mode": "rumble_arena", "sugar_runes": "", "gear": "", "why": "replaces Herb; 'sturdy; you don't need much 다발 anyway'" } ],
+   "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "쓰고잇는데 딴딴하니 ㄱㅊ은듯 어차피 다발 많이 필요없고", "en": "I'm using it; it's sturdy and fine, you don't need much 다발 anyway." } ]
+  },
+  {
+   "source": "dc", "id": "77392", "url": "https://m.dcinside.com/board/projectcc/77392", "date": "2026-09-28",
+   "title_kr": "600번대 촌장 와레나 엘마 왔다",
+   "title_en": "Server-600s player reached Elite Master",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "뻐커 (S0619) got the first Elite Master 5 promotion of the season (2,000 gems) with a 12.38M Bari deck at 1,967th, beating 15.86M (1,948th). Thanks to Bari he can fight players from older servers. A commenter calls the tier-up gem rewards stingy.",
+   "teams": [
+    {
+     "name": "Bari deck (뻐커, battle-screen cards)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "?", "en": null, "level": "?", "stars": "?", "position": "row1-1", "role": "", "note": "card blank/dark on the result screen; not readable" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row1-4", "role": "", "note": "captain banner" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "100", "stars": "?", "position": "row2-1", "role": "", "note": "Fire card (M)" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "?", "position": "row2-5", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": [], "perks": "", "formation": "battle-result screen, own side",
+     "why": "Standard 12 minus Macaron as far as visible.",
+     "unorthodox": ["first slot not readable (empty or unreadable)"]
+    }
+   ],
+   "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Elite Master 5 first promotion pays 2,000 gems; here reached at about 2,000 pts and 1,967th."],
+   "results": [ { "team": "Bari deck", "win_rate": "", "usage": "", "power": "12.38M vs 15.86M", "note": "1,967th vs 1,948th" } ],
+   "disagreements": [], "quotes": [ { "kr": "바리 덕분에 앞섭 깔개들이랑은 좋은 승부 가능하네", "en": "Thanks to Bari I can hold my own against older servers." } ]
+  },
+  {
+   "source": "dc", "id": "78969", "url": "https://m.dcinside.com/board/projectcc/78969", "date": "2026-10-01",
+   "title_kr": "와레나 1위도 우리섭이네",
+   "title_en": "Rumble #1 is from our server too",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Top 3 on 2026-10-01 ~12:00: 凱凱の餅乾軍團 (S0298) 5,076, 슈퍼땅콩 (S0161) 4,968, Hazelicious (S0097) 4,889; 凱凱 is also #1 in S0298's power ranking at 6G 522M. The poster (지연, S0298) is Master 2 at 2,125 pts (top 52.53%), where promotion needs 2,000 pts and top 50.00% for 1,800 gems; the season-end timer reads 6d23h59m. Commenters expect the end to be decided by who has the most mileage for tickets.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": [
+    "Master 2 promotion needs 2,000 pts and top 50.00%; pays 1,800 gems.",
+    "Season end timer 6d23h59m at about 2026-10-01 12:00 KST, i.e. about 2026-10-08 12:00 KST.",
+    "Rumble buff icon reads 30% on the lobby screen."
+   ],
+   "results": [ { "team": "#1 凱凱の餅乾軍團", "win_rate": "", "usage": "", "power": "account power 6G 522M (S0298 power rank #1)", "note": "5,076 pts on 10/1" } ],
+   "disagreements": [],
+   "quotes": [ { "kr": "어차피 마지막날 가봐야암 결국 누가누가 마일리지 더 많냐 대결일듯ㅋㅋ", "en": "You'll only know on the last day; it'll come down to who has more mileage." } ]
+  },
+  {
+   "source": "dc", "id": "82055", "url": "https://m.dcinside.com/board/projectcc/82055", "date": "2026-10-07",
+   "title_kr": "왜케 UI가 불편하냐",
+   "title_en": "Why is the UI so inconvenient",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Rumble has its own formations and you can't bulk-level there; levels can only be changed in the main cookie UI. The lobby screenshot (posted 10/7 06:43 KST) shows top 3 凱凱の餅乾軍團 6,929, 슈퍼땅콩 6,671, 인미 (S0360) 6,391, the 30% buff icon, and 1d5h19m to season end. The poster is Diamond 2 at 1,750 (73,909th); promotion at 1,800 pays 1,200 gems.",
+   "teams": [
+    {
+     "name": "Poster's low-power Rumble formation (1.71M, dc:82055-2)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "?", "en": null, "level": "81", "stars": "?", "position": "row1-1", "role": "", "note": "Light Ranged card, staff-holding sprite; not identified" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "81", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "?", "en": null, "level": "81", "stars": "?", "position": "row1-3", "role": "", "note": "dark brown sprite; Grass Ranged card on the roster; not identified" },
+      { "kr": "?", "en": null, "level": "81", "stars": "?", "position": "row1-4", "role": "", "note": "green-haired sprite; Grass Support card on the roster; not identified" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "81", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "81", "stars": "?", "position": "row1-6", "role": "", "note": "Water Charge card with the captain banner (M)" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "81", "stars": "?", "position": "row2-1", "role": "", "note": "" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "81", "stars": "?", "position": "row2-2", "role": "", "note": "large beast sprite, Fire Tank card (M)" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "81", "stars": "?", "position": "row2-3", "role": "", "note": "white sprite, Fire Charge card (M)" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "81", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "81", "stars": "?", "position": "row2-5", "role": "", "note": "Light Tank card (M)" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "81", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": ["전지멜로우 12 (M)", "? green bean pet 13", "색동 주머니 11 (M)"],
+     "perks": "",
+     "formation": "formation tab 2; gear preset '프리셋 1'; sprite-to-card matching is partial, low confidence overall",
+     "why": "Low-power casual account; included only as an own-formation reading.",
+     "unorthodox": []
+    }
+   ],
+   "counters": [], "builds": [], "mechanics": [],
+   "rules": [
+    "Top 3 on 2026-10-07 ~06:43 KST: 凱凱の餅乾軍團 (S0298) 6,929; 슈퍼땅콩 (S0161) 6,671; 인미 (S0360) 6,391.",
+    "Season 1 end timer 1d5h19m at ~06:43 KST on 10/7, i.e. about 2026-10-08 12:00 KST.",
+    "Diamond 2 promotion at 1,800 pts pays 1,200 gems.",
+    "Rumble formations are separate (own tabs 1-5); cookie levels change only in the main cookie UI.",
+    "The 30% buff icon is still on the Rumble lobby on 10/7."
+   ],
+   "results": [], "disagreements": [],
+   "quotes": [ { "kr": "무조건 메인 쿠키 UI에서만 레벨 조절 가능한거 ㅈㄴ 불편함", "en": "Being able to change levels only in the main cookie UI is really inconvenient." } ]
+  },
+  {
+   "source": "dc", "id": "82052", "url": "https://m.dcinside.com/board/projectcc/82052", "date": "2026-10-07",
+   "title_kr": "와레나 엘마로 마감하겠다",
+   "title_en": "Finishing Rumble at Elite Master",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "The poster ends the season 2,339th at 2,591 pts in Elite Master 1 (20.08M); promotion needs 3,000 pts and overall 100th for 4,000 gems, which he could buy with mileage but won't. Commenters: everyone from about 101st to 2,300th is Elite Master 1 with the same reward, so there is no reason to push.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Elite Master 1 covered roughly ranks 101-2,300 on 10/7 and the season reward is the same across it (commenters)."],
+   "results": [ { "team": "", "win_rate": "", "usage": "", "power": "20.08M", "note": "2,339th, 2,591 pts" } ],
+   "disagreements": [],
+   "quotes": [
+    { "kr": "100~2300등까지 다 엘마1이노", "en": "Everyone from 100th to 2,300th is Elite Master 1." },
+    { "kr": "101등부터는 엘마1이랑 보상똑같나보네", "en": "From 101st on, the reward seems to be the same as Elite Master 1." }
+   ]
+  },
+  {
+   "source": "dc", "id": "77491", "url": "https://m.dcinside.com/board/projectcc/77491", "date": "2026-09-28",
+   "title_kr": "이거머임?? 와레나",
+   "title_en": "What is this? (Rumble)",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "A revenge screen against an anonymous 2000+ opponent shows 3 of the 12 defense slots as sleeping-face placeholders and a win reward of 30-34 points. The poster's own attack team at 2,118 pts is the standard 12 at Lv.100. A commenter says names are hidden from Elite Master to stop sniping.",
+   "teams": [
+    {
+     "name": "Anonymous 2000+ defense with 3 hidden slots",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "??", "stars": "?", "position": "row1-1", "role": "", "note": "Grass Support card (M)" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "??", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "??", "stars": "?", "position": "row1-4", "role": "", "note": "" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "??", "stars": "?", "position": "row1-5", "role": "", "note": "Fire Ranged card" },
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "??", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row2-1", "role": "", "note": "" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "??", "stars": "?", "position": "row2-3", "role": "", "note": "captain banner" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "??", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "도넛행성 에일리언 도넛킹", "en": "Space Doughnut's Royal Excellence", "level": "??", "stars": "?", "position": "row2-5", "role": "", "note": "pink/yellow sprite (M)" },
+      { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "??", "stars": "?", "position": "row2-6", "role": "", "note": "Light Ranged card, brown-haired sprite (M)" }
+     ],
+     "pets": ["갓난갓방울 20", "얼음과자새 20 (M)", "근엄한 초코왕방울 20"],
+     "perks": "", "formation": "opponent panel on the revenge screen", "why": "", "unorthodox": []
+    },
+    {
+     "name": "Poster's attack team (2,118 pts; power blurred)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row1-4", "role": "", "note": "captain banner" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "100", "stars": "?", "position": "row2-1", "role": "", "note": "" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "?", "position": "row2-5", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": ["핫도그도그 20", "갓난갓방울 20", "? brown monkey-like face 20"],
+     "perks": "", "formation": "own team panel, formation tab 2", "why": "", "unorthodox": []
+    }
+   ],
+   "counters": [], "builds": [], "mechanics": [],
+   "rules": ["At 2000+ the opponent is '익명의 도전자' with ???? power and Lv.??, and some slots are hidden on the revenge screen (3 of 12 here).", "Revenge screen: '승리 시 획득' 30~34 points; revenges 0/7."],
+   "results": [], "disagreements": [],
+   "quotes": [ { "kr": "엘마부터 가려주는듯 저격못하게", "en": "Seems they hide it from Elite Master so you can't snipe." } ]
+  },
+  {
+   "source": "dc", "id": "77636", "url": "https://m.dcinside.com/board/projectcc/77636", "date": "2026-09-29",
+   "title_kr": "와레나 익명은 뭐임?",
+   "title_en": "What is 'anonymous' in Rumble?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Image 1 is a defense-log entry: an anonymous 2000+ attacker running the standard 12 with Hot Doggie, King Choco Drop and Holy Baby Drop beat the poster's defense (방어 실패 −1). Image 2 is the revenge screen: the same kind of defense with 2 of 12 slots hidden and a win reward of 35-39 points, against the poster 센구 (S0387, 11.3M, 1,931 pts) whose attack team is the standard 12 at Lv.100. A commenter says this shows above 2,000 points.",
+   "teams": [
+    {
+     "name": "Anonymous 2000+ defense with 2 hidden slots (revenge screen)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "??", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "??", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "??", "stars": "?", "position": "row1-3", "role": "", "note": "captain banner" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "??", "stars": "?", "position": "row1-4", "role": "", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "??", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "??", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "??", "stars": "?", "position": "row2-1", "role": "", "note": "" },
+      { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "??", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "??", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "??", "stars": "?", "position": "row2-5", "role": "", "note": "" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": ["갓난갓방울 20", "핫도그도그 20", "근엄한 초코왕방울 20"],
+     "perks": "", "formation": "opponent panel on the revenge screen",
+     "why": "Bari and Oven are the likely hidden two (inference, L).",
+     "unorthodox": []
+    },
+    {
+     "name": "Attacker 센구 (S0387, 11.3M, 1,931 pts): standard 12",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "100", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "100", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row1-4", "role": "", "note": "captain banner" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "허브맛 쿠키", "en": "Herb", "level": "100", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "100", "stars": "?", "position": "row2-1", "role": "", "note": "" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "100", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "체리콜라맛 쿠키", "en": "Cherry Cola", "level": "100", "stars": "?", "position": "row2-5", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "100", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": ["갓난갓방울 20", "핫도그도그 20", "? brown monkey-like face 19"],
+     "perks": "", "formation": "own team panel, formation tab 2", "why": "", "unorthodox": []
+    }
+   ],
+   "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Above 2,000 points opponents are anonymous; 2 of 12 slots hidden on this revenge screen.", "Revenge screen: '승리 시 획득' 35~39 points; revenges 0/7.", "A failed defense against a 2000+ attacker cost −1 here."],
+   "results": [], "disagreements": [],
+   "quotes": [ { "kr": "2000점넘어가면뜨는거임", "en": "It shows up once you pass 2,000 points." } ]
+  },
+  {
+   "source": "dc", "id": "80927", "url": "https://m.dcinside.com/board/projectcc/80927", "date": "2026-10-04",
+   "title_kr": "와레나 이거 머임 ??",
+   "title_en": "What is this in Rumble?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Revenge screen against an anonymous 2000+ defense with 3 of 12 slots hidden and a win reward of 25-29 points. The poster's own attack team (6.08M, 2,001 pts) is an Oven–Bari deck with Brightseeker and Strawberry Crepe. A commenter says the blind starts at Elite Master.",
+   "teams": [
+    {
+     "name": "Anonymous 2000+ defense with 3 hidden slots",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "??", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "??", "stars": "?", "position": "row1-2", "role": "", "note": "captain banner" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "??", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "??", "stars": "?", "position": "row1-4", "role": "", "note": "" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "??", "stars": "?", "position": "row1-6", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "??", "stars": "?", "position": "row2-1", "role": "", "note": "" },
+      { "kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "??", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "??", "stars": "?", "position": "row2-4", "role": "", "note": "" },
+      { "kr": "호밀맛 쿠키", "en": "Rye", "level": "??", "stars": "?", "position": "row2-5", "role": "", "note": "Fire Ranged card" },
+      { "kr": "(hidden)", "en": null, "level": "?", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": ["핫도그도그 20", "갓난갓방울 20", "얼음과자새 20 (M)"],
+     "perks": "", "formation": "opponent panel on the revenge screen", "why": "", "unorthodox": []
+    },
+    {
+     "name": "Poster's attack team (6.08M, 2,001 pts)",
+     "mode": "rumble_arena",
+     "cookies": [
+      { "kr": "마카롱맛 쿠키", "en": "Macaron", "level": "98", "stars": "?", "position": "row1-1", "role": "", "note": "" },
+      { "kr": "오븐방랑자 쿠키", "en": "Oven Wanderer", "level": "100", "stars": "?", "position": "row1-2", "role": "", "note": "" },
+      { "kr": "치즈케이크맛 쿠키", "en": "Cheesecake", "level": "98", "stars": "?", "position": "row1-3", "role": "", "note": "" },
+      { "kr": "바리공주맛 쿠키", "en": "Princess Bari", "level": "100", "stars": "?", "position": "row1-4", "role": "", "note": "" },
+      { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "row1-5", "role": "", "note": "" },
+      { "kr": "?", "en": null, "level": "100", "stars": "?", "position": "row1-6", "role": "", "note": "Dark card, dark hooded sprite with red eyes; not identified" },
+      { "kr": "브라이트시커 쿠키", "en": "Brightseeker", "level": "100", "stars": "?", "position": "row2-1", "role": "", "note": "Light Ranged card; sprite matches dc:81838-1 (M)" },
+      { "kr": "피노누아맛 쿠키", "en": "Pinot Noir", "level": "98", "stars": "?", "position": "row2-2", "role": "", "note": "" },
+      { "kr": "석류맛 쿠키", "en": "Pomegranate", "level": "100", "stars": "?", "position": "row2-3", "role": "", "note": "" },
+      { "kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk (Pediatrician)", "level": "100", "stars": "?", "position": "row2-4", "role": "", "note": "captain banner" },
+      { "kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe", "level": "100", "stars": "?", "position": "row2-5", "role": "", "note": "" },
+      { "kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit (Persimmon)", "level": "99", "stars": "?", "position": "row2-6", "role": "", "note": "" }
+     ],
+     "pets": ["갓난갓방울 18", "핫도그도그 17", "얼음과자새 18 (M)"],
+     "perks": "", "formation": "own team panel, formation tab 1", "why": "", "unorthodox": []
+    }
+   ],
+   "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Hidden defense slots ('블라인드') start at Elite Master per a commenter.", "Revenge screen: '승리 시 획득' 25~29 points; revenges 0/6."],
+   "results": [], "disagreements": [],
+   "quotes": [ { "kr": "엘마 부터 블라인드", "en": "Blind from Elite Master." } ]
+  },
+  {
+   "source": "dc", "id": "81223", "url": "https://m.dcinside.com/board/projectcc/81223", "date": "2026-10-05",
+   "title_kr": "와레나 1위 따거 근황",
+   "title_en": "Rumble #1 update",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Mid-fight screenshot attacking #1 凱凱の餅乾軍團 (S0298): the defense shows 42.92M power, and at 45.267 s left only two of its cookies remain, Ion (Lv.100) and a white-haired Fire card (Lv.100, Bari or Oven by sprite). The poster plans revenge; commenters joke about how much damage reduction it stacks.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [],
+   "results": [ { "team": "#1 凱凱の餅乾軍團 defense", "win_rate": "", "usage": "", "power": "42.92M", "note": "Ion Lv.100 and a white-haired Fire card Lv.100 still alive at 45.267 s" } ],
+   "disagreements": [], "quotes": [ { "kr": "피감을 얼마나 떡칠한거임", "en": "How much damage reduction did he pile on?" } ]
+  },
+  {
+   "source": "dc", "id": "80446", "url": "https://m.dcinside.com/board/projectcc/80446", "date": "2026-10-03",
+   "title_kr": "바리 ㅈ으로 보는애들 많네",
+   "title_en": "Many people underrate Bari",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "A player oscillating around 50th says he has never seen a Rye deck in the upper ranks: Bari with SSR Skill DMG runes plus high Skill DMG from gear cuts Rye at the start, and he rates Bari above Brightseeker. Commenters: of course Rumble is full of Bari since the charge buff favours it; judge in Season 2; Bari gets dropped once the next TSSR arrives.",
+   "teams": [], "counters": [ { "team": "Rye anti-charge", "beaten_by": "Bari deck with high Skill DMG", "mode": "rumble_arena", "why": "Bari's opening burst kills Rye immediately.", "conditions": "around 50th (poster)" } ],
+   "builds": [ { "cookie": "바리공주맛 쿠키", "mode": "rumble_arena", "sugar_runes": "스증 SSR runes", "gear": "high 스증 from gear", "why": "kill Rye at the start" } ],
+   "mechanics": [], "rules": [], "results": [],
+   "disagreements": ["Bari fans vs skeptics: the poster rates Bari above Brightseeker; commenters call it a Rumble one-trick that falls when the buff rotates or the next TSSR comes."],
+   "quotes": [ { "kr": "바리 스증 ssr은 기본이고 장비로 땡겨오는 스증 조오온나 높아서 걍 시작하자마자 호밀 썰려있는데", "en": "Bari's SSR Skill DMG runes are a given and the Skill DMG from gear is huge, so Rye is sliced the moment the fight starts." } ]
+  },
+  {
+   "source": "dc", "id": "80462", "url": "https://m.dcinside.com/board/projectcc/80462", "date": "2026-10-03",
+   "title_kr": "와레나 상위권애들 바리 슈가룬 스증으로몰빵함?",
+   "title_en": "Do top players stack Skill DMG on Bari?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Asks whether top Rumble players put all Skill DMG on Bari's sugar runes or mix in Skill Haste. One answer: Skill DMG is the main stat, compromising with one crit DMG or ATK line. Another saw a Bari with about 230 crit rate unbuffed in Arena and wonders if that comes from sugar runes.",
+   "teams": [], "counters": [],
+   "builds": [ { "cookie": "바리공주맛 쿠키", "mode": "rumble_arena", "sugar_runes": "스증 main; one 치피 or 공 line", "gear": "?", "why": "commenter" } ],
+   "mechanics": [], "rules": [], "results": [],
+   "disagreements": ["One commenter thinks top Bari runes may be crit rate (saw ~230 crit unbuffed in Arena)."],
+   "quotes": [ { "kr": "스증이 메인이고 치피나 공1줄정도 타협해야지", "en": "Skill DMG is the main stat; compromise with one crit DMG or ATK line." } ]
+  },
+  {
+   "source": "dc", "id": "81511", "url": "https://m.dcinside.com/board/projectcc/81511", "date": "2026-10-06",
+   "title_kr": "와레나 오방바리덱 장비 답지가 뭐임?",
+   "title_en": "What's the gear answer for Oven–Bari?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "The poster heard he should drop Skill Haste on his Oven–Bari deck, and despite good sugar runes he still gets pushed back. The only reply is a link.",
+   "teams": [], "counters": [],
+   "builds": [ { "cookie": "오방바리덱", "mode": "rumble_arena", "sugar_runes": "", "gear": "no 스가 (advice the poster heard)", "why": "" } ],
+   "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "스가 빼라는 말은 들었는데", "en": "I heard I should take out Skill Haste." } ]
+  },
+  {
+   "source": "dc", "id": "82000", "url": "https://m.dcinside.com/board/projectcc/82000", "date": "2026-10-07",
+   "title_kr": "바리 성급 중요함?",
+   "title_en": "Do Bari's stars matter?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "A player with a 2★ Bari asks whether Bari is only usable in Rumble at 7★ or more. One answer: even 7★ gets torn apart by Rye decks; usable from 8★. Another: if you haven't pulled it by now, skip it.",
+   "teams": [], "counters": [ { "team": "Bari deck with Bari at 7★", "beaten_by": "Rye deck", "mode": "rumble_arena", "why": "", "conditions": "commenter; Bari usable from 8★" } ],
+   "builds": [], "mechanics": [], "rules": [], "results": [],
+   "disagreements": ["Bari's Rumble star floor: 8★ here; 5★ in earlier threads and record 002's ruling."],
+   "quotes": [ { "kr": "7성도 호밀덱한테 찢긴다 최소 8성부터 사용가능", "en": "Even 7★ gets torn by Rye decks; usable from 8★." } ]
+  },
+  {
+   "source": "dc", "id": "77704", "url": "https://m.dcinside.com/board/projectcc/77704", "date": "2026-09-29",
+   "title_kr": "와레나 상위권 갈수록 회피덱 많네",
+   "title_en": "More evasion decks higher up in Rumble",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Evasion decks get more common higher up the Rumble ladder, so the poster is going to add two accuracy lines.",
+   "teams": [], "counters": [ { "team": "evasion deck", "beaten_by": "attack team with 2 accuracy lines", "mode": "rumble_arena", "why": "accuracy offsets evasion", "conditions": "" } ],
+   "builds": [ { "cookie": "attack team", "mode": "rumble_arena", "sugar_runes": "", "gear": "명중 2 lines", "why": "beat evasion" } ],
+   "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "명중 2줄 챙기러간다", "en": "Off to get two accuracy lines." } ]
+  },
+  {
+   "source": "dc", "id": "77880", "url": "https://m.dcinside.com/board/projectcc/77880", "date": "2026-09-29",
+   "title_kr": "와레나에 회슝좍 방덱 갑자기 늘었네",
+   "title_en": "Evasion defenses suddenly common in Rumble",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Evasion defenses suddenly increased, but their pets give them away, so the attacker switches to the stage gear preset and beats them. Replies: one runs no pet because 1,300 evasion is enough; another explains that without Fluffy Cheese Cat Vampire bites fewer times and without the evasion pet the dodging is less reliable, so evasion decks get swept by 3-charger Bari decks unless they are much stronger.",
+   "teams": [], "counters": [
+    { "team": "evasion defense", "beaten_by": "attack with the stage (accuracy) gear preset", "mode": "rumble_arena", "why": "pets reveal the evasion deck; the stage preset carries accuracy", "conditions": "" },
+    { "team": "evasion deck without its pets", "beaten_by": "Bari deck (3 chargers)", "mode": "rumble_arena", "why": "fewer Vampire bites and less reliable dodging", "conditions": "unless the evasion deck has a big power edge (commenter)" }
+   ],
+   "builds": [ { "cookie": "evasion defense", "mode": "rumble_arena", "sugar_runes": "", "gear": "~1,300 evasion without a pet (commenter)", "why": "" } ],
+   "mechanics": ["Evasion decks are identifiable from their pets (evasion pet, Fluffy Cheese Cat).", "Commenter: Fluffy Cheese Cat increases how often Vampire bites; the evasion pet stabilises dodging."],
+   "rules": [], "results": [], "disagreements": ["Run evasion pets (reliable dodging) vs skip them (no tell for the attacker)."],
+   "quotes": [ { "kr": "펫만봐도 티나서 바로 스테셋끼고 개팰수있는데", "en": "Their pets give them away, so you just put on the stage set and beat them up." } ]
+  },
+  {
+   "source": "dc", "id": "79045", "url": "https://m.dcinside.com/board/projectcc/79045", "date": "2026-10-01",
+   "title_kr": "와레나 필승법",
+   "title_en": "How to always win Rumble",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Look for defenses with the evasion pet Mango Toucan and hit them with the stage accuracy set; the defender can't hide pets. Replies: one has 1,500 evasion without the pet; another runs two accuracy lines plus a +20 bow even on his regular Arena set; a third is surprised a shield goes to +20.",
+   "teams": [], "counters": [ { "team": "evasion defense with Mango Toucan", "beaten_by": "attack with the stage accuracy set", "mode": "rumble_arena", "why": "", "conditions": "" } ],
+   "builds": [ { "cookie": "evasion defense", "mode": "rumble_arena", "sugar_runes": "", "gear": "1,500 evasion without the pet (commenter); shield +20 mentioned", "why": "" }, { "cookie": "attack team (regular Arena set)", "mode": "both", "sugar_runes": "", "gear": "명중 2 lines + bow +20 (commenter)", "why": "anti-evasion" } ],
+   "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "회피펫 망고부리새 낀놈만 찾아서 스테 명중셋으로 줘패면 백전백승", "en": "Find the ones with the evasion pet Mango Toucan and beat them with the stage accuracy set: you win every time." }, { "kr": "펫 안끼고 회피 1500이다", "en": "1,500 evasion without the pet." } ]
+  },
+  {
+   "source": "dc", "id": "79562", "url": "https://m.dcinside.com/board/projectcc/79562", "date": "2026-10-02",
+   "title_kr": "회피덱 하나 만들어놔야겠다",
+   "title_en": "I should build an evasion deck",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "In Rumble the poster often gets reversed by defenses with over 1,100 evasion. Replies: build an accuracy + crit-resist set instead; one confirms a +20 shield; another has an evasion set and never used it.",
+   "teams": [], "counters": [ { "team": "evasion defense (1,100+ evasion)", "beaten_by": "accuracy + crit-resist set", "mode": "rumble_arena", "why": "", "conditions": "commenter" } ],
+   "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "다 회피 1100넘네", "en": "They all have over 1,100 evasion." }, { "kr": "그럼 그냥 명중 치저 셋을 만들지", "en": "Then just make an accuracy + crit-resist set." } ]
+  },
+  {
+   "source": "dc", "id": "79841", "url": "https://m.dcinside.com/board/projectcc/79841", "date": "2026-10-02",
+   "title_kr": "와레나 방어에 명중 두줄 넣으니까",
+   "title_en": "Two accuracy lines on the Rumble defense",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "After putting two accuracy lines on his Rumble defense, evasion attackers all bounce off.",
+   "teams": [], "counters": [ { "team": "evasion attack", "beaten_by": "defense with 2 accuracy lines", "mode": "rumble_arena", "why": "", "conditions": "one poster" } ],
+   "builds": [ { "cookie": "defense team", "mode": "rumble_arena", "sugar_runes": "", "gear": "명중 2 lines", "why": "beats evasion attackers" } ],
+   "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "회피로 치는애들 싹다 머리 깨지고 가네", "en": "Everyone attacking with evasion leaves with a cracked head." } ]
+  },
+  {
+   "source": "dc", "id": "77736", "url": "https://m.dcinside.com/board/projectcc/77736", "date": "2026-09-29",
+   "title_kr": "와레나 체력바 버그있음?",
+   "title_en": "Rumble HP bar bug?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "The poster's HP bar barely moves in Rumble even against weak opponents. Commenters: the same deck's bar moves in regular Arena; Rumble has 30% damage reduction, which several only then noticed. The image is an emoticon.",
+   "teams": [], "counters": [], "builds": [],
+   "mechanics": ["Rumble applies 30% damage reduction, so HP bars move less than in regular Arena (players)."],
+   "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "와레나는 30퍼 피감 있어서 조금 다르긴 해", "en": "Rumble has 30% damage reduction, so it's a bit different." } ]
+  },
+  {
+   "source": "dc", "id": "77727", "url": "https://m.dcinside.com/board/projectcc/77727", "date": "2026-09-29",
+   "title_kr": "와레나 뻥투력 존나많네",
+   "title_en": "Lots of inflated power in Rumble",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Beat an anonymous defense with 10M more power. A commenter says an open defense without Brightseeker and Rye often holds.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "시커 호밀 빼두고 오픈방덱하는데 자주 방어 성공하더라", "en": "I leave Seeker and Rye out of an open defense and it often holds." } ]
+  },
+  {
+   "source": "dc", "id": "80215", "url": "https://m.dcinside.com/board/projectcc/80215", "date": "2026-10-03",
+   "title_kr": "바리덱 좋은데?",
+   "title_en": "The Bari deck is good",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "A 6M Bari deck is beating 11M and 14M decks, including Rye decks, and quietly piling up Rumble medals. Commenters: weak Rye decks get sliced anyway; one says those were not Rye decks.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+   "disagreements": ["Whether the beaten decks were real Rye decks."], "quotes": []
+  },
+  {
+   "source": "dc", "id": "77290", "url": "https://m.dcinside.com/board/projectcc/77290", "date": "2026-09-28",
+   "title_kr": "와레나 그마는 절대 못가겠네",
+   "title_en": "I'll never reach Grand Master",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "At Elite Master more than half of opponents have 10★ TSSRs. Commenters: farm points with lots of refreshes, or settle for Master.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["Elite Master and Grand Master tiers exist (players)."], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "77489", "url": "https://m.dcinside.com/board/projectcc/77489", "date": "2026-09-28",
+   "title_kr": "와레나 필승하려면 그냥 허브8성 만 보고들가면되네",
+   "title_en": "To always win Rumble, just look for an 8-star Herb",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Title says to look for 8★ Herb; the body says Herb at Lv.8, i.e. low-effort defenses, give free points, and the poster will farm to around 400th.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "78007", "url": "https://m.dcinside.com/board/projectcc/78007", "date": "2026-09-29",
+   "title_kr": "바리 << 이년 굳이 5성 찍어줄 필요없지?",
+   "title_en": "No need to take Bari to 5 stars?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Asks whether taking Bari to 5★ is worth it just to dabble in Rumble. The only reply is an emoticon.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "78154", "url": "https://m.dcinside.com/board/projectcc/78154", "date": "2026-09-30",
+   "title_kr": "니들 와레나 티켓 5장씩 들어오는거 맞노?",
+   "title_en": "Do you get 5 Rumble tickets?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "With the blessing, the coating membership and the Crumble Pass the poster expects 8 tickets, but after finishing quests he has 7/8.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Rumble ticket sources: base daily tickets plus blessing, coating membership and Crumble Pass (player expects 8, sees 7/8)."],
+   "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "78478", "url": "https://m.dcinside.com/board/projectcc/78478", "date": "2026-09-30",
+   "title_kr": "바리 걍 스킵 때려야지",
+   "title_en": "Just skipping Bari",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "The poster will skip Bari: it is a Rumble one-trick that only works because Rumble's buff favours it, and the season rewards don't motivate him. Commenters: Bari will be used whenever an overpowered charger comes out since it buffs chargers; others say chargers are weak by design and new strong cookies will crowd Bari out.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+   "disagreements": ["Bari's future after the buff rotates: dead (poster) vs revived by any strong new charger (commenters)."],
+   "quotes": [ { "kr": "뭔가 개사기 돌격형 나올때마다 같이 쓰일 느낌임 돌격형 버퍼라서", "en": "It feels like it'll be used every time a broken charger comes out, since it's a charger buffer." } ]
+  },
+  {
+   "source": "dc", "id": "78530", "url": "https://m.dcinside.com/board/projectcc/78530", "date": "2026-09-30",
+   "title_kr": "와레나 말고 그냥 아레나에서도 돌격이 짱임?",
+   "title_en": "Is charge best in regular Arena too?",
+   "relevance": 1, "mode": "arena",
+   "summary_en": "In regular Arena the poster's multi-hit deck can't beat charge decks of equal power. Reply: at equal power you should win, so the other side must be better built.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "78883", "url": "https://m.dcinside.com/board/projectcc/78883", "date": "2026-10-01",
+   "title_kr": "바리스테덱은 오방이는 안쓰지?",
+   "title_en": "Bari stage decks don't use Oven?",
+   "relevance": 1, "mode": "both",
+   "summary_en": "Asks whether Oven Wanderer is useless outside Rumble. No replies.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "79240", "url": "https://m.dcinside.com/board/projectcc/79240", "date": "2026-10-01",
+   "title_kr": "와레나 1등 짱깨새끼 축복12정도되나?",
+   "title_en": "Is the Rumble #1 at blessing 12?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "The top guild has many whales but can't beat the #1. Replies: #1 keeps buying tickets with mileage; Arena is decided by tickets; Koreans will push on the last day.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "마일로 티켓계속 산대", "en": "They say he keeps buying tickets with mileage." }, { "kr": "아레나는 티켓빨임", "en": "Arena is all about tickets." } ]
+  },
+  {
+   "source": "dc", "id": "79247", "url": "https://m.dcinside.com/board/projectcc/79247", "date": "2026-10-01",
+   "title_kr": "와레나 1등 한정 프로필 이런거도 안주냐 근데",
+   "title_en": "No exclusive profile for Rumble #1?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Regular Arena gives frames, so the poster wants exclusive profiles and frames for the cross-server Arena top 3. Replies: Rumble is a hastily made stop-gap mode; treat it as an event.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "79581", "url": "https://m.dcinside.com/board/projectcc/79581", "date": "2026-10-02",
+   "title_kr": "바리는 TSSR함정 카드임 다음 TSSR 시커급 사기로 나올듯",
+   "title_en": "Bari is a TSSR trap",
+   "relevance": 1, "mode": "both",
+   "summary_en": "Predicts Bari is dead once the Rumble buff changes and that the next TSSR will be Brightseeker-level and essential for 쟁탈전, Arena and Rumble. A commenter says leaks point to Ready Berry or Sea Fairy as the next TSSR.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "얘도 와레나 버프바꾸고 나면 관짝행임", "en": "It's headed for the coffin once the Rumble buff changes." } ]
+  },
+  {
+   "source": "dc", "id": "80403", "url": "https://m.dcinside.com/board/projectcc/80403", "date": "2026-10-03",
+   "title_kr": "아레나)당연히 오방바리가 딜을하니가 나머지 딜이 적은거겠지만",
+   "title_en": "Why the third charger deals so little",
+   "relevance": 1, "mode": "arena",
+   "summary_en": "In regular Arena the third charger deals oddly little damage. Replies: Oven and Bari kill everything first, and Cherry Cola's share rises when one of them dies; one says 2 chargers wins more; Skating Queen keeps turning back.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "80886", "url": "https://m.dcinside.com/board/projectcc/80886", "date": "2026-10-04",
+   "title_kr": "와글아레나 100등 안 프로필이나 테두리 보상 없지?",
+   "title_en": "No profile or frame for Rumble top 100?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Burning tickets to reach the Rumble top 100 leaves nothing behind, since there is no profile or frame reward. No replies.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["Season rewards include no profile or frame for top 100 (player)."], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81069", "url": "https://m.dcinside.com/board/projectcc/81069", "date": "2026-10-05",
+   "title_kr": "와레나 블라인드는 씨발진짜 뭐임",
+   "title_en": "What is the Rumble blind?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Complains about the blind. Commenters: it is anonymity from Elite Master or so, meant to stop abuse; another says the blind kicks in around rank 10,000.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Blind starts around Elite Master (commenter) or around 10,000th (another commenter)."],
+   "results": [], "disagreements": ["Where the blind starts: Elite Master vs about 10,000th."],
+   "quotes": [ { "kr": "10000등 쯤부터 블라인드가 쳐걸리는데", "en": "The blind kicks in from around 10,000th." } ]
+  },
+  {
+   "source": "dc", "id": "81079", "url": "https://m.dcinside.com/board/projectcc/81079", "date": "2026-10-05",
+   "title_kr": "임시 웹 공유",
+   "title_en": "Datamine site shared",
+   "relevance": 1, "mode": "both",
+   "summary_en": "The leaker shares cc.team-hobby.com with leak summaries, cookie and pet data, next-update content and live rankings for Guild Conquest, Wagle Wagle Arena and 차원의 이면. The screenshot is the Guild Conquest battle simulator, whose pet panel labels pet icons by name.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81116", "url": "https://m.dcinside.com/board/projectcc/81116", "date": "2026-10-05",
+   "title_kr": "[📚정보] 다음 신규쿠키 예고",
+   "title_en": "Next new cookie teaser",
+   "relevance": 1, "mode": "both",
+   "summary_en": "Official @CRCrumbleKR post of 2026-10-05 teasing a silhouetted new cookie tied to 'Grape Divines' (그레이프 디바인즈); commenters identify it as Chardonnay.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81199", "url": "https://m.dcinside.com/board/projectcc/81199", "date": "2026-10-05",
+   "title_kr": "즐겜 유저 스펙",
+   "title_en": "A casual player's spec",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "80s-server player, 6.5G total power, Pomegranate and Milk 9★, Brightseeker, Wind Archer and Oven 5★, Bari 2★: stays in Arena top 30 and Rumble top 30%. A commenter expects spec gaps to widen once the level cap rises.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+   "disagreements": ["The level-cap raise is expected to widen PvP spec gaps (commenter)."], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81267", "url": "https://m.dcinside.com/board/projectcc/81267", "date": "2026-10-05",
+   "title_kr": "tssr 제일 구린건 바궁인듯?",
+   "title_en": "Wind Archer is the worst TSSR?",
+   "relevance": 1, "mode": "both",
+   "summary_en": "Oven Wanderer and Bari are used in Rumble and Brightseeker rules stages, so Wind Archer, with no use, is the worst TSSR. Commenters: Wind Archer still clears daily dungeons; one calls Oven Wanderer the real 'hostess one-trick'.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "방랑자야말로 접대 원툴 아닌가", "en": "Isn't Oven Wanderer the real hostess one-trick?" } ]
+  },
+  {
+   "source": "dc", "id": "81297", "url": "https://m.dcinside.com/board/projectcc/81297", "date": "2026-10-05",
+   "title_kr": "와레나 보상상점 설마 픽업쿠키 10개가 끝임?",
+   "title_en": "Rumble shop pickup cutters capped at 10?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "The Rumble reward shop sells the pickup cutter as a single item with a purchase limit of 10; players find that stingy.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["Rumble shop: pickup cookie cutter, 1 per purchase, limit 10."], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81405", "url": "https://m.dcinside.com/board/projectcc/81405", "date": "2026-10-05",
+   "title_kr": "와레나 상점 이거 초기화 없지?",
+   "title_en": "No Rumble shop reset?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Nothing left to buy; the poster assumes the shop won't reset this patch. The one reply says it resets monthly.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["Rumble shop resets monthly (one commenter)."], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "한달리셋", "en": "Monthly reset." } ]
+  },
+  {
+   "source": "dc", "id": "81507", "url": "https://m.dcinside.com/board/projectcc/81507", "date": "2026-10-06",
+   "title_kr": "와레나 상점 쿠뽑, 펫뽑 진짜 1개임?",
+   "title_en": "Rumble shop cookie/pet draws really single?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Asks whether the cookie and pet draw items in the Rumble shop are really single draws rather than 10; the reply confirms.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["Rumble shop cookie and pet draws are single draws."], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81552", "url": "https://m.dcinside.com/board/projectcc/81552", "date": "2026-10-06",
+   "title_kr": "와레나 다음부턴 서버분리해서 하자",
+   "title_en": "Split Rumble by server next time",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Cross-server Rumble was a mistake and the rewards give no reason to try; wants numbered rank frames for the top 100. Reply: split by server it would be no different from Arena.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81634", "url": "https://m.dcinside.com/board/projectcc/81634", "date": "2026-10-06",
+   "title_kr": "내일 강제 소탕해야하네",
+   "title_en": "Forced to sweep tomorrow",
+   "relevance": 1, "mode": "both",
+   "summary_en": "The poster bought all the dungeon keys in the Rumble shop in week one without expecting the stage expansion. The screenshot of the coin dungeon shows a '쟁탈전' tab next to 도전 던전 and 일일 던전.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": ["The dungeon menu shows a 쟁탈전 tab (screenshot); whether it opens is not shown."], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81656", "url": "https://m.dcinside.com/board/projectcc/81656", "date": "2026-10-06",
+   "title_kr": "와레나 와펜 in100은 개빡세네연",
+   "title_en": "Rumble top 100 is hard",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Getting into the Rumble top 100 (for the 와펜) is hard. A reply jokes about sitting in Elite Master 1.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81741", "url": "https://m.dcinside.com/board/projectcc/81741", "date": "2026-10-06",
+   "title_kr": "공지 해석이 이거라고??",
+   "title_en": "That's how the notice reads?",
+   "relevance": 0, "mode": "both",
+   "summary_en": "Mocks a notice line saying a pop-up/auto-open bug will be fixed in the 10/8 update. Not about Rumble.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81777", "url": "https://m.dcinside.com/board/projectcc/81777", "date": "2026-10-06",
+   "title_kr": "이면 그러면 낼모레가 시즌2임?",
+   "title_en": "Is 차원의 이면 Season 2 the day after tomorrow?",
+   "relevance": 0, "mode": "both",
+   "summary_en": "About 차원의 이면 (a separate mode) and its Season 2. Not about Rumble.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81856", "url": "https://m.dcinside.com/board/projectcc/81856", "date": "2026-10-06",
+   "title_kr": "치약쿠키 써본사람있음?",
+   "title_en": "Anyone used Toothpaste Cookie?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "If Chardonnay replaces Macaron in Rumble the range buff goes, so the poster proposes dropping Macaron and Herb for Chardonnay and Toothpaste. Replies: nobody needs the range buff now that Espresso is falling out of use, except perhaps Bari, though one says he can't feel Bari getting it; Toothpaste's hit detection is too poor to use.",
+   "teams": [], "counters": [], "builds": [],
+   "mechanics": ["Macaron gives a range (범위) buff; whether Bari benefits is disputed."],
+   "rules": [], "results": [],
+   "disagreements": ["Whether Bari benefits from Macaron's range buff."],
+   "quotes": [ { "kr": "마카롱 허브 빼고>샤르 치약초코쓰면 어떨까?", "en": "What about dropping Macaron and Herb for Chardonnay and Toothpaste?" }, { "kr": "바리도 버프 받나 안받나 체감 안되던데", "en": "I can't even tell whether Bari gets the buff." } ]
+  },
+  {
+   "source": "dc", "id": "81887", "url": "https://m.dcinside.com/board/projectcc/81887", "date": "2026-10-06",
+   "title_kr": "와레나 픽업 쿠키/펫 이거",
+   "title_en": "Rumble shop pickup cookie/pet",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Surprise that the Rumble shop pickup cookie and pet draws are single draws. Reply: shop currency prices went up.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81905", "url": "https://m.dcinside.com/board/projectcc/81905", "date": "2026-10-06",
+   "title_kr": "쟁탈전은 고래형들이 싹다 가져가는 구조 였음 좋겠다",
+   "title_en": "Hope 쟁탈전 lets whales take everything",
+   "relevance": 1, "mode": "both",
+   "summary_en": "Hopes the coming 쟁탈전 mode rewards heavy spenders; a commenter notes strong players will benefit anyway since it is PvP. Mostly complaints about how the developer treats spenders.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "81992", "url": "https://m.dcinside.com/board/projectcc/81992", "date": "2026-10-07",
+   "title_kr": "서버 순위보상 차이 별로 안나는겜인거같은데 맞음?",
+   "title_en": "Rank rewards differ little?",
+   "relevance": 1, "mode": "both",
+   "summary_en": "Guild Conquest and Rumble are cross-server, while Arena and Crumble are per server; rank rewards seem small. Reply: nothing differs much except the #1 frame.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["Rumble and Guild Conquest are cross-server; Arena is per server."], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "82037", "url": "https://m.dcinside.com/board/projectcc/82037", "date": "2026-10-07",
+   "title_kr": "[✋️질문] 와글 아레나 재화 초기화돼?",
+   "title_en": "Does the Rumble currency reset?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Asks whether Rumble currency resets and whether it must all be spent. No replies.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "82152", "url": "https://m.dcinside.com/board/projectcc/82152", "date": "2026-10-07",
+   "title_kr": "이정도면 무과금이지?",
+   "title_en": "Is this F2P?",
+   "relevance": 0, "mode": "rumble_arena",
+   "summary_en": "Lists monthly purchases, including a Rumble (와레나) pass and weekly keys, and asks whether that counts as free-to-play.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "82211", "url": "https://m.dcinside.com/board/projectcc/82211", "date": "2026-10-07",
+   "title_kr": "와레나 상점 교환횟수 증가는 없지?",
+   "title_en": "No increase in Rumble shop exchange limits?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Nothing left to buy in the Rumble shop; the poster already exchanged coins for the 와펜 and the SSR item. No replies.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "82217", "url": "https://m.dcinside.com/board/projectcc/82217", "date": "2026-10-07",
+   "title_kr": "와레나 상점 초기화도 해줘야 하는거 아님?",
+   "title_en": "Shouldn't the Rumble shop reset?",
+   "relevance": 2, "mode": "rumble_arena",
+   "summary_en": "Season rewards will flood players with Rumble coins, yet Season 2 starts without a shop reset, the poster says. No replies.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Rumble shop reportedly does not reset for Season 2 (poster's claim; contradicted by comments in dc:82260 and dc:81405)."],
+   "results": [], "disagreements": [],
+   "quotes": [ { "kr": "어디에 쓰라고 상점 초기화 없이 시즌2인거야", "en": "Where are we supposed to spend it, Season 2 with no shop reset?" } ]
+  },
+  {
+   "source": "dc", "id": "82260", "url": "https://m.dcinside.com/board/projectcc/82260", "date": "2026-10-07",
+   "title_kr": "와레나 열쇠 안 산 사람 있냐?",
+   "title_en": "Who didn't buy the Rumble keys?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "With the daily dungeon expanding in two weeks, players who saved Rumble-shop keys are ahead. Commenters say the Rumble shop resets in two weeks, on a Thursday, so you can buy keys before the reset on update day.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [],
+   "rules": ["Rumble shop resets on a Thursday, about two weeks out (commenters); not confirmed by any notice."],
+   "results": [], "disagreements": ["Shop reset: '2주뒤 초기화' / '초기화 목요일' here vs 'no reset for Season 2' (dc:82217)."],
+   "quotes": [ { "kr": "2주뒤 초기화하는데 뭔소리임", "en": "What are you on about, it resets in two weeks." }, { "kr": "초기화 목요일임", "en": "The reset is on Thursday." } ]
+  },
+  {
+   "source": "dc", "id": "82292", "url": "https://m.dcinside.com/board/projectcc/82292", "date": "2026-10-07",
+   "title_kr": "마일리지로 와레나 모두사기 되버린 애들 불쌍하노",
+   "title_en": "Pity those who spent all their mileage on Rumble",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "Once syrup-iron (쇳물) items are added to the mileage shop, spending mileage on Rumble tickets looks like poor value. Replies: Rumble is just prestige for heavy spenders; mileage accumulates easily anyway.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+   "quotes": [ { "kr": "와레나는 그냥 고과금 명예용이지", "en": "Rumble is just for heavy spenders' honour." } ]
+  },
+  {
+   "source": "dc", "id": "82313", "url": "https://m.dcinside.com/board/projectcc/82313", "date": "2026-10-07",
+   "title_kr": "와레나상점은 초기화안되는거지?",
+   "title_en": "The Rumble shop doesn't reset, right?",
+   "relevance": 1, "mode": "rumble_arena",
+   "summary_en": "One-line question whether the Rumble shop does not reset. No replies at capture.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  },
+  {
+   "source": "dc", "id": "77447", "url": "https://m.dcinside.com/board/projectcc/77447", "date": "2026-09-28",
+   "title_kr": "와레나보니까 S001도 있는건가 아님 S100부터 시작인가",
+   "title_en": "Is there an S001?",
+   "relevance": 0, "mode": "rumble_arena",
+   "summary_en": "Asks whether server numbers seen in Rumble start at S001 or S100. Replies: from 001.",
+   "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+  }
+ ],
+ "glossary": [
+  { "kr": "전지멜로우", "en": "Chargemellow (pet)", "kind": "pet", "confidence": "high", "evidence": "Already in record 001 glossary. Its icon (pink/blue face) is labelled 전지멜로우 in the codex image dc:79685-9; the pre-round extract spelled it 전자멜로우, which is wrong." },
+  { "kr": "시럽쇳물 / 쇳물", "en": "syrup-iron item (package and mileage-shop material)", "kind": "term", "confidence": "low", "evidence": "dc:82292 ('쇳물 마일리지'), dc:79891-3 package contents ('시럽쇳물 ×20')" },
+  { "kr": "와펜", "en": "? Rumble shop item (badge/emblem; unclear)", "kind": "term", "confidence": "low", "evidence": "dc:81656, dc:82211" },
+  { "kr": "빨대", "en": "Pomegranate's buff landing on a cookie (slang, 'straw')", "kind": "term", "confidence": "low", "evidence": "dc:78195 comments ('호밀 석류 빨대 받어?'), dc:79238 ('빨떄확정')" }
+ ]
+}

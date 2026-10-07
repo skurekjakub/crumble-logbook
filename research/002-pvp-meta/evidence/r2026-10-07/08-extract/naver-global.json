@@ -1,0 +1,597 @@
+{
+  "batch": "r2026-10-07 naver-global",
+  "mode_scope": "both",
+  "captured": "2026-10-07",
+  "notes": [
+    "Window 2026-09-27 to 2026-10-07. Every entry is checked against this round's captures in ../04-naver-global/ (nv/*.md, nv/img/, yt/*.txt digests and .html watch pages). The pre-round extraction (scratchpad bk/.../08-extract/naver-global-2026-10-07.json) was the starting point only.",
+    "This round has no YouTube captions, transcripts or storyboard frames. Video claims stand only where the digest text (title, description, chapters, top comments) states them. Rosters, power figures, ranks and subtitles the pre-round read from storyboard frames are dropped or marked 'not supported by this round'.",
+    "nv dates are the 'written' field of each capture; yt dates are the page's published date (UTC-7 as captured).",
+    "Image nv-48067-1.jpg is an empty (0-byte) file in this capture.",
+    "Star counts on cards: yellow stars count 1-5; pink stars appear on higher-star cards. Exact counts are given only where clearly legible; otherwise '?'."
+  ],
+  "posts": [
+    {
+      "source": "naver", "id": "50417", "url": "https://cafe.naver.com/ccrumble/50417", "date": "2026-10-07",
+      "title_kr": "10월 8일(목) 업데이트 안내", "title_en": "Update notes for Thursday 8 October",
+      "relevance": 3, "mode": "both",
+      "summary_en": "Official 10-08 patch note. It adds the SSR Grass Support Chardonnay Cookie (straight-line ally buff: CRIT chance, push resistance and Volley synergy, plus damage to enemies), raises the cookie level cap to 120 and cuts Lv.79-100 EXP costs with a refund, and opens Rumble Arena Season 2 with a single generic sentence (no passive, dates or rewards). Arena help text gains a line on how mercenary effects apply; a 7-day attendance event gives Milk Cookie's Crunchy Strong Pediatrician. No cookie, pet or Arena balance change is listed; comments complain that 쟁탈전 is again absent and that Rumble hides opponents past 2,000 points.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": [
+        "Chardonnay Cookie (샤르도네맛 쿠키): SSR, 풀속성 (Grass), 지원형 (Support), skill '신록의 성역'. Note text: '신록의 장벽으로 직선 상의 아군에게 치명확률과 밀어내기 저항을 올려 주고 다발 시너지를 제공하며, 적에게 피해를 입힙니다.' The official card GIF (nv-50417-2.gif, first frame) shows 'SSR · 풀속성 · 지원', five stars and two synergy icons.",
+        "Cookie level cap: '쿠키 최대 레벨 상한이 120레벨까지 확장됩니다.'",
+        "Lv.79-100 EXP requirement cut (e.g. Lv.99 11,820,527 -> 2,391,174; Lv.100 13,911,155 -> 3,347,644); EXP spent above the new requirement is refunded by mail.",
+        "Gnome Lab basic research extended to 130-2 and special research to 22 (screenshot nv-50417-5 shows 연구 130-2 체력 증폭 60.00%)."
+      ],
+      "rules": [
+        "Rumble Arena: '■ 와글와글 아레나 시즌2 오픈 - 모든 서버의 용병단들과 대결하는 경쟁 콘텐츠 와글와글 아레나의 새로운 시즌이 시작됩니다.' No passive, dates, length or reward changes are stated.",
+        "Arena: '■ 아레나 도움말 문구 보완 - 아레나 도움말 내 용병단 효과 적용에 대한 안내 문구가 추가됩니다.' The note does not quote the new wording.",
+        "10-02 fixes listed: boss-summon mission counts in Dimensional Rift, Crumble Pass and 와글와글 스페셜 패스 (Rumble Special Pass).",
+        "Events: Chardonnay pickup with missions (points reset at event end); 초코왕방울 roulette; new 7-day attendance whose Day 7 reward is the SSR '바삭튼튼 소아과 의사 우유맛 쿠키' (nv-50417-8: Day 1 10 cutters?, Day 2 1,000 ?, Day 3 2 coin time tickets?, Day 4 60 ?, Day 5 2 dough time tickets?, Day 6 500 crystals?, Day 7 SSR Milk ×1). The event tab bar in nv-50417-6/7/8 shows a separate '와글와글 아레나' event tab.",
+        "No balance change to cookies, pets or Arena/Rumble rules appears in the note. PvE-only changes: daily dungeon difficulty cuts, stage boss-fight add ATK reduced below the boss."
+      ],
+      "results": [],
+      "disagreements": [
+        "Level cap: the official note says 120. The teamhobby datamine page (03-sites/teamhobby_patchnotes.html, 'v1.5 ... 다음 업데이트 적용 예상') says 'Lv.100 → Lv.150', and a commenter on yt-OKBiO8_0J38 says '쿠키레벨 150꺼지'. The official note governs.",
+        "Daily dungeons: teamhobby's datamine lists '일일 던전 5종 770 → 900단계'; the official note has no dungeon extension and many commenters complain about exactly that."
+      ],
+      "quotes": [
+        {"kr": "샤르도네맛 쿠키는 ‘신록의 성역’을 사용하는 풀속성 지원형 SSR 쿠키입니다.", "en": "Chardonnay Cookie is a Grass-element Support SSR cookie who uses 'Sanctuary of Fresh Greenery'."},
+        {"kr": "신록의 장벽으로 직선 상의 아군에게 치명확률과 밀어내기 저항을 올려 주고 다발 시너지를 제공하며, 적에게 피해를 입힙니다.", "en": "With a barrier of fresh greenery she raises the CRIT chance and push resistance of allies in a straight line, grants Volley synergy, and damages enemies."},
+        {"kr": "■ 와글와글 아레나 시즌2 오픈 - 모든 서버의 용병단들과 대결하는 경쟁 콘텐츠 와글와글 아레나의 새로운 시즌이 시작됩니다.", "en": "Rumble Arena Season 2 opens: a new season of Rumble Arena, the competitive mode against Mercenaries from every server, begins."},
+        {"kr": "■ 아레나 도움말 문구 보완 - 아레나 도움말 내 용병단 효과 적용에 대한 안내 문구가 추가됩니다.", "en": "Arena help text supplemented: a line explaining how Mercenary (perk) effects apply is added to the Arena help."},
+        {"kr": "- 쿠키 최대 레벨 상한이 120레벨까지 확장됩니다.", "en": "The cookie max level cap is extended to Lv.120."},
+        {"kr": "- 7일 동안 매일 접속하여 다양한 성장 재화와 함께 바삭튼튼 소아과 의사 우유맛 쿠키를 만나보세요!", "en": "Log in every day for 7 days to get growth materials and Milk Cookie's Crunchy Strong Pediatrician."},
+        {"kr": "전업마법사: 와레나부터 ㅈ같음 2천점 이후론 왜 다 가려가지고 ㅋㅋㅋ 마일리지 소모를 그렇게 하라고 가르치더냐?", "en": "(comment) Rumble Arena is the worst: why is everything hidden past 2,000 points? Is that how you teach us to burn mileage?"},
+        {"kr": "사계: 1. 쟁탈전 2. 임플란트  언급이라도 해주자", "en": "(comment) At least mention 1. 쟁탈전 2. the Implant Tower."},
+        {"kr": "롤로노아: 아놔 솔직히 임플타워, 쟁탈전 안 내줄거 알고는 있었는데 일일던전 확장은 왜 없어요?", "en": "(comment) I knew you wouldn't release the Implant Tower or 쟁탈전, but why no daily dungeon extension?"},
+        {"kr": "롤로노아: 3. 와글 아레나로 마일리지 쏙 빨아먹고 와레나 보상은 그냥 둬야지~~ 테두리? 특별 보상? 알게 뭐야!!", "en": "(comment, sarcastic) Drain our mileage through Rumble Arena and leave its rewards as they are: frames? special rewards? who cares!"},
+        {"kr": "에스님: 아오 진짜 쟁탈전이라도 빨리 내놓던가", "en": "(comment) At least hurry up and release 쟁탈전."},
+        {"kr": "에스님: 지금 제일 큰 문제는 바리공주 아닌가?? 바리공주 혼자서 진영 다 무너뜨리고 독단적으로 잡몹때려서", "en": "(comment, about stages) Isn't the biggest problem Princess Bari? She breaks formation alone and goes off hitting adds."},
+        {"kr": "타마타마: 체콜이랑 바리공주는 개선된걸로 보여요~ 보스 외 잡몹들 공격력 줄였으니까 가출은 안하지 않을까 싶네요~", "en": "(reply) Cherry Cola and Bari look addressed: adds other than the boss had their ATK cut, so they may not wander off. (PvE stages, not PvP.)"},
+        {"kr": "크럼크림블: 출석 우유 뉴비한텐 좋겠네", "en": "(comment) The attendance Milk will be good for newbies."}
+      ]
+    },
+    {
+      "source": "naver", "id": "50393", "url": "https://cafe.naver.com/ccrumble/50393", "date": "2026-10-07",
+      "title_kr": "10월 8일(목) 점검 사전 안내", "title_en": "Advance notice: maintenance on Thursday 8 October",
+      "relevance": 1, "mode": "both",
+      "summary_en": "Official maintenance notice: 10/8 13:00-16:00 KST. Arena and Rumble Arena are unavailable during it, and Rumble Season 2 starts with this update. Comments complain about the daytime window; none discuss PvP.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [],
+      "rules": ["Maintenance 10/8 13:00 ~ 16:00 (KST)."],
+      "results": [], "disagreements": [],
+      "quotes": [{"kr": "🛠️ 점검 일시: 10/8 13:00 ~ 16:00 (KST)", "en": "Maintenance: 10/8 13:00-16:00 (KST)."}]
+    },
+    {
+      "source": "naver", "id": "48486", "url": "https://cafe.naver.com/ccrumble/48486", "date": "2026-10-01",
+      "title_kr": "오븐 자동 열기 기능 개선 및 일일 던전 난이도 완화 안내 (18:43 내용 추가)", "title_en": "Oven auto-open improvement and daily dungeon difficulty easing (18:43 addendum)",
+      "relevance": 1, "mode": "both",
+      "summary_en": "Official notice applied 10-02 15:00 KST: oven auto-open per run rises with oven level (Lv.32 200, Lv.34 300, Lv.36 400, Lv.38 500) and the auto-open equipment stack grows from 30 to 100. A bug where the cleanup popup stops auto-open is to be fixed on 10-08. No PvP content; indirect effect only (faster gear farming for PvP presets).",
+      "teams": [], "counters": [], "builds": [], "mechanics": [],
+      "rules": ["Oven auto-open: Lv.32 200 / Lv.34 300 / Lv.36 400 / Lv.38 500 per run; equipment stack 30 -> 100; from 10-02 15:00 KST."],
+      "results": [], "disagreements": [],
+      "quotes": [{"kr": "자동 열기 결과의 장비 누적 수량 30개 ➔ 100개로 개선됩니다.", "en": "The auto-open equipment accumulation cap is raised from 30 to 100."}]
+    },
+    {
+      "source": "naver", "id": "48978", "url": "https://cafe.naver.com/ccrumble/48978", "date": "2026-10-02",
+      "title_kr": "바리공주 2성 아레나!", "title_en": "Arena with a 2-star Princess Bari!",
+      "relevance": 3, "mode": "arena",
+      "summary_en": "소금노움 (7M) runs the standard Bari charge deck with Bari at 2★ (Arena preset 2, 7.45M) and says it wins quite often up to 9M and alternates wins and losses against 10M+. Captain Milk; perks Armor Repair + Health Insurance, chosen because the team is squishy. Four battle-stat screens show Bari on top at 1.67M-2.08M damage. For Bari 7★ the author relays that swapping Cake Hound for Strawberry Crepe gave an 8M deck that beat 14M (second-hand; the screenshot shows only the 8.44M deck).",
+      "teams": [
+        {
+          "name": "Bari 2★ charge deck (소금노움, Arena preset 2, 7.45M)", "mode": "arena",
+          "cookies": [
+            {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "Grass support", "note": "22,855 / 35,601 / 7,453 / 2,922 damage in the four screens"},
+            {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "80", "stars": "?", "position": "top row 2", "role": "Dark support", "note": "Lv.80 on the card and in every damage table"},
+            {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "Dark support (buffer)", "note": "not in the 8-row damage tables"},
+            {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "top row 4", "role": "captain (단장), Light support", "note": "captain banner on the card; text '단장 우유'"},
+            {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "top row 5", "role": "Water tank", "note": "116,113 / 357,450 / 172,060 / 285,982 damage"},
+            {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "Grass support (healer)", "note": ""},
+            {"kr": "오븐방랑자 쿠키", "en": "Oven Wanderer Cookie", "level": "100", "stars": "5", "position": "bottom row 1", "role": "Fire charge DPS", "note": "442,700 / 1,022,465 / 823,736 / 476,816 damage"},
+            {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "bottom row 2", "role": "Light support", "note": ""},
+            {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "100", "stars": "2", "position": "bottom row 3", "role": "Fire charge, main DPS", "note": "1,877,647 / 1,673,340 / 2,078,591 / 1,921,802 damage (top in all four screens)"},
+            {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "100", "stars": "?", "position": "bottom row 4", "role": "Fire tank", "note": "940,715 / 234,885 / 223,438 / 159,925 damage"},
+            {"kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "bottom row 5", "role": "Water charge DPS", "note": "395,449 / 305,052 / 736,345 / 134,211 damage"},
+            {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "bottom row 6", "role": "Grass tank", "note": "244,750 / 193,949 / 182,499 / 120,761 damage"}
+          ],
+          "pets": ["? (hotdog-like icon, possibly 핫도그도그 Hot Doggie) 18★", "? (yellow icon) 19★", "? (white bird-like icon with a bow) 17★"],
+          "perks": "방어구 수리 특약 (Armor Repair) + 의료보험 (Health Insurance)",
+          "formation": "Image nv-48978-5.jpg (preset 2, label '아레나', 7.45M). Top: Macaron, Pinot Noir, Pomegranate, Milk, Ion, Herb. Bottom: Oven Wanderer, Cheesecake, Bari, Cake Hound, Cherry Cola, Moon Rabbit. Synergy bar shows five icons.",
+          "why": "Author: other guides recommend this deck from Bari 5★, but it still works at 2★. Health Insurance + Armor Repair because '좀 물몸이라 버티려고' (my team is squishy, so it's to hold out). Gear per author's reply: Skill AMP, Skill Haste, crit resist and DR lines, plus one or two crit damage / crit chance lines where they roll.",
+          "unorthodox": ["Bari at only 2★", "Pinot Noir at Lv.80", "Health Insurance instead of the commenter's Passion Pay + Rapid Promotion (열정페이, 초고속 승진)"]
+        },
+        {
+          "name": "Bari 7★ variant (another player's deck as relayed, 8.44M)", "mode": "arena",
+          "cookies": [
+            {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "top row 1", "role": "support", "note": ""},
+            {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "90", "stars": "?", "position": "top row 2", "role": "support", "note": ""},
+            {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "top row 3", "role": "buffer", "note": ""},
+            {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "top row 4", "role": "captain", "note": "captain banner"},
+            {"kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "99", "stars": "?", "position": "top row 5", "role": "Light tank", "note": "replaces Cake Hound"},
+            {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "100", "stars": "?", "position": "top row 6", "role": "support", "note": ""},
+            {"kr": "오븐방랑자 쿠키", "en": "Oven Wanderer Cookie", "level": "100", "stars": "?", "position": "bottom row 1", "role": "charge DPS", "note": ""},
+            {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "100", "stars": "?", "position": "bottom row 2", "role": "support", "note": ""},
+            {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "99", "stars": "7 (per text; card stars not legible)", "position": "bottom row 3", "role": "charge main DPS", "note": ""},
+            {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "100", "stars": "?", "position": "bottom row 4", "role": "tank", "note": "moves from top row to bottom row in this variant"},
+            {"kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "100", "stars": "?", "position": "bottom row 5", "role": "charge DPS", "note": ""},
+            {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "100", "stars": "?", "position": "bottom row 6", "role": "tank", "note": ""}
+          ],
+          "pets": ["? (white bird-like icon) 18★", "? (hotdog-like icon) 19★", "? (yellow icon) 20★"],
+          "perks": "?",
+          "formation": "Image nv-48978-6.jpg (preset 2, label '길드토벌', 8.44M).",
+          "why": "'바리공주 7성인 분들께선 들개를 딸크로 바꿔서 함 써보세요 다른 분이 쳐봤는데 덱 전투력 8M이어도 14M 이기더라구요'",
+          "unorthodox": ["The screenshot's preset selector reads '길드토벌' (Guild Conquest), not '아레나'"]
+        }
+      ],
+      "counters": [
+        {"team": "Defenses up to about 9M (sometimes 10M+)", "beaten_by": "Bari 2★ charge deck at 7.45M", "mode": "arena", "why": "not stated by the author", "conditions": "Author's experience: wins fairly often up to 9M; alternates wins and losses against 10M+."},
+        {"team": "A 14M deck", "beaten_by": "Bari 7★ variant with Strawberry Crepe (8M / 8.44M)", "mode": "arena", "why": "not stated", "conditions": "Second-hand ('다른 분이 쳐봤는데'); the win itself is not in the screenshot."}
+      ],
+      "builds": [
+        {"cookie": "(team)", "mode": "arena", "sugar_runes": "?", "gear": "Q: '장비는 스증스가 치저피감쪽 챙기는세팅 맞나여?' A: '넹 치피 치확도 같이 붙는 거 있음 한 두 개 붙여줫슴니다' = Skill AMP, Skill Haste, crit resist, DR, plus one or two pieces that also carry crit damage / crit chance.", "why": ""}
+      ],
+      "mechanics": [],
+      "rules": [],
+      "results": [
+        {"team": "Bari 2★ charge deck", "win_rate": "", "usage": "", "power": "7.45M (author says 7M)", "note": "Four battle-stat screens (nv-48978-1..4), opponent side pixelated; win or loss is not shown. Bari 1,877,647 / 1,673,340 / 2,078,591 / 1,921,802."},
+        {"team": "Bari 7★ Crepe variant", "win_rate": "", "usage": "", "power": "8.44M", "note": "Claimed to beat 14M (second-hand)."}
+      ],
+      "disagreements": ["Most advice ties the Bari deck to Bari 5★+ (author: '다들 바리공주 5성 때 쓰는 걸 추천하셔서'); this author uses it at 2★."],
+      "quotes": [
+        {"kr": "아직 성급이 낮아서 10M 이상인 분들 때렸을 때는 퐁당퐁당 졌다 이겼다 하는데 9M까진 꽤나 이기는 것 같슴니다 (본인 7M)", "en": "My stars are still low, so against 10M+ players I alternate losses and wins, but up to 9M I seem to win quite a lot (I'm 7M)."},
+        {"kr": "단장 우유 복지 방어구 수리 특약, 의료보험", "en": "Captain: Milk. Perks: Armor Repair, Health Insurance."},
+        {"kr": "바리공주 7성인 분들께선 들개를 딸크로 바꿔서 함 써보세요 다른 분이 쳐봤는데 덱 전투력 8M이어도 14M 이기더라구요", "en": "If your Bari is 7★, try swapping Cake Hound for Strawberry Crepe; someone else tried it and an 8M deck beat 14M."},
+        {"kr": "아 저는 좀 물몸이라 버티려고 저거 쓰고 있슴니다", "en": "I'm a bit squishy, so I use those to hold out."}
+      ]
+    },
+    {
+      "source": "naver", "id": "48067", "url": "https://cafe.naver.com/ccrumble/48067", "date": "2026-09-30",
+      "title_kr": "아레나 최신 시커덱 공략", "title_en": "Latest Arena Brightseeker deck guide",
+      "relevance": 3, "mode": "arena",
+      "summary_en": "Seo Sinwoo's cafe post for his video lGxbv7l8QTQ; the body is only the title and two images (one empty file, one Cheesecake card). The author's comment replies carry the content: the Brightseeker deck is for players whose Bari is below 5★ and whose Brightseeker is 5★+; a 5★+ Bari keeps the Bari deck; if both are below 5★, use the Rye deck. At equal spec the side that wins the first clash wins, and dying fast means you ran into a 5★ Bari deck's first skill. Without Majestic King Choco Drop use Icy Birdie; the hidden bottom-right cookie is Moon Rabbit.",
+      "teams": [
+        {
+          "name": "Seo Sinwoo Brightseeker deck (roster partial; only what the text states)", "mode": "arena",
+          "cookies": [
+            {"kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "5+ (required)", "position": "?", "role": "?", "note": "deck is named after it"},
+            {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "bottom right (covered by the video's overlay)", "role": "?", "note": "author reply: '가려지는 쿠키는 달토끼인데'"},
+            {"kr": "?", "en": null, "level": "?", "stars": "?", "position": "?", "role": "?", "note": "remaining cookies not given in this round's text"}
+          ],
+          "pets": ["근엄한 초코왕방울 (Majestic King Choco Drop); 얼음과자새 (Icy Birdie) if missing", "?", "?"],
+          "perks": "?",
+          "formation": "?",
+          "why": "For Bari <5★ and Brightseeker 5★+.",
+          "unorthodox": []
+        }
+      ],
+      "counters": [
+        {"team": "Brightseeker deck (attacker without survival research)", "beaten_by": "5★ Bari deck", "mode": "arena", "why": "'5성 바리덱한테 들어가서 첫 스킬에 쓸려 나가신 거라 생존 관련 연구가 부족해서' (swept by its first skill; not enough survival research)", "conditions": "Author's advice: avoid that defense."}
+      ],
+      "builds": [],
+      "mechanics": ["'동스펙 기준으로는 초반 교전이 이기는 쪽이 이기고' (at equal spec, whoever wins the opening clash wins)."],
+      "rules": [],
+      "results": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "영상 설명처럼 해당 덱은 바리가 5성 미만이라 바리덱을 사용하기 별로인 상태에서 시커가 5성 이상인 사람이 사용하는 덱으로 바리가 5성 이상이라 기존에 사용하던 바리덱이 더 승률이 좋으면 그렇게 하시고 그건 아닌데 시커도 5성 미만이라면 그것도 당연히 구리기 때문에 호밀덱을 사용하셔야 합니다", "en": "As the video says, this deck is for people whose Bari is below 5★ (so a Bari deck is poor) and whose Brightseeker is 5★+. If your Bari is 5★+ and your old Bari deck wins more, keep it; if Brightseeker is also below 5★, this deck is bad too, so use the Rye deck."},
+        {"kr": "영상 설명처럼 동스펙 기준으로는 초반 교전이 이기는 쪽이 이기고 너무 빠르게 죽어서 지는 건 첫 교전에서 패배하신 것이며 그럴 경우는 5성 바리덱한테 들어가서 첫 스킬에 쓸려 나가신 거라 생존 관련 연구가 부족해서 해당 덱한테 못 버티는 스펙이라는 거니 피하시면 됩니다", "en": "At equal spec the opening clash decides it. Dying very fast means you lost the first clash, i.e. you attacked a 5★ Bari deck and were swept by its first skill; your survival research can't hold against that deck, so avoid it."},
+        {"kr": "더욱덕ㄱㄱ: 왕초코없으면 어떤펫쓰나요 / 서신우: 얼음과자새 쓰시면 됩니다", "en": "Q: Which pet without King Choco? A: Use Icy Birdie."},
+        {"kr": "셰슉코: 바리 시커 둘 다 7성정도면 무슨 덱 쓰시나여? / 서신우: https://cafe.naver.com/ccrumble/45429", "en": "Q: What deck if both Bari and Brightseeker are about 7★? A: (link to nv:45429)."}
+      ]
+    },
+    {
+      "source": "naver", "id": "50309", "url": "https://cafe.naver.com/ccrumble/50309", "date": "2026-10-06",
+      "title_kr": "엿먹이기용 회피덱 좋은듯", "title_en": "An evasion deck for trolling attackers seems good",
+      "relevance": 2, "mode": "arena",
+      "summary_en": "Proposes an Arena defense built to spite attackers: evasion raised to 1,400 with 6 evasion gear pieces, the Mango Toucan pet, and all-evasion sugar runes on one cookie whose runes matter little (Pinot Noir). A weaker attacker loses, a stronger attacker on an accuracy-sacrificing Arena preset draws, and only a stage preset (accuracy) beats it, which forces attackers to give up their Arena preset. The author rejects Peach Cookie; a commenter replies that Peach with Skill Haste 43+ plus Dr. Wasabi gives permanent ~90% evasion.",
+      "teams": [
+        {"name": "Evasion spite defense (no full roster given)", "mode": "arena",
+         "cookies": [{"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "?", "role": "evasion rune carrier", "note": "the only cookie named in the deck"}],
+         "pets": ["망고부리새 (Mango Toucan)"], "perks": "?", "formation": "?",
+         "why": "Forces the attacker to choose between damage and accuracy; 'win by evasion (X), troll (O)'.",
+         "unorthodox": ["Deliberately built to draw against stronger attackers rather than to win"]}
+      ],
+      "counters": [
+        {"team": "Evasion spite defense", "beaten_by": "Stronger attacker using a stage (accuracy) preset", "mode": "arena", "why": "accuracy counters evasion", "conditions": "Weaker attackers lose; stronger attackers with an accuracy-free Arena preset only draw (author)."}
+      ],
+      "builds": [
+        {"cookie": "피노누아맛 쿠키", "mode": "arena", "sugar_runes": "all evasion (회피율 8개)", "gear": "team: 6 evasion pieces, evasion ~1,400", "why": "Pinot's sugar runes barely matter ('슈가룬 영향 거의 안받는 피노')"}
+      ],
+      "mechanics": ["Commenter: Peach Cookie with Skill Haste 43+ and Dr. Wasabi keeps evasion at ~90% permanently.", "Author: without Skill Haste 100 (impossible), Peach's buff drops when Milk dies."],
+      "rules": [],
+      "results": [],
+      "disagreements": ["Author: Peach is useless here. 노쇳물강화마스터: '복숭아 스가 43 이상+ 와사비면 상시 회피율 90%인데 굳이 피노를 버리셔야하나'."],
+      "quotes": [
+        {"kr": "아레나 방어덱은 무조건 1. 아이템 : 6회피 2. 펫 : 망고부리새 3. 슈가룬 : 피노 하나만 올 회피", "en": "Arena defense, always: 1. gear: 6 evasion, 2. pet: Mango Toucan, 3. sugar runes: all evasion on Pinot only."},
+        {"kr": "노쇳물강화마스터: 복숭아 혼자는 당근 쓰레기죠 ㅠ 복숭아 스가 43 이상+ 와사비면 상시 회피율 90%인데 굳이 피노를 버리셔야하나", "en": "(comment) Peach alone is trash of course, but Peach with Skill Haste 43+ plus (Dr.) Wasabi gives permanent 90% evasion, so why sacrifice Pinot?"}
+      ]
+    },
+    {
+      "source": "naver", "id": "46716", "url": "https://cafe.naver.com/ccrumble/46716", "date": "2026-09-27",
+      "title_kr": "고수인 당신도 어쩌면 모를 수도 있는 소소한 팁들", "title_en": "Small tips even veterans might not know",
+      "relevance": 2, "mode": "both",
+      "summary_en": "A tips post by 가방은 항상 두개 (written with Guild Conquest and dungeons in mind, but the mechanics are general). Synergy-giving cookies buff synergy receivers first (Pomegranate to Milk, Macaron to Milky Way), pet ATK buffs change the ATK ranking used for buff targeting, DR stacks multiplicatively (10% + 10% = 19%), and Skill Haste follows CD × 100 / (100 + haste). Debuff chance scales with focus over resist.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": [
+        "Synergy givers buff synergy receivers first: '석류->우유 뿐만아니라 마카롱 ->밀키 처럼 시너지때문에 오히려 손해인 경우도 있다' (in Guild Conquest Macaron's buff often goes to Milky Way and is not a straight line).",
+        "ATK ranking for buffs includes pet ATK buffs: with equal 100K ATK, Octo Wasabi sends Pomegranate's buff to Scorpion; a 전지 pet sends it to Melon Soda.",
+        "DR stacks multiplicatively: Icy Birdie 10% + DR perk 10% = 81% damage taken = 19% DR, not 20%.",
+        "DEF uses a log function in the power formula.",
+        "Skill Haste: real CD = (base CD) / (haste + 100) × 100; CD 10 s with haste 10 -> 9.09 s, haste 20 -> 8.33 s (diminishing returns).",
+        "Debuff chance = base chance × (my focus) / (target resist); e.g. 20% × 400 / 200 = 40%. Resist and focus are better the higher they are, unlike accuracy."
+      ],
+      "rules": [], "results": [], "disagreements": [],
+      "quotes": [
+        {"kr": "얼음과자새 10% 이후 받는 피해량 90%에서 다시 10%를 적용하여 81% 피해를 입는 19% 피해감소 효과가 적용된다.", "en": "After Icy Birdie's 10%, damage taken is 90%; the next 10% applies to that, so you take 81%: a 19% damage reduction."},
+        {"kr": "(기존 쿨타임) / (스킬가속 +100) ×100 의 공식이기에", "en": "Because the formula is (base cooldown) / (Skill Haste + 100) × 100."}
+      ]
+    },
+    {
+      "source": "naver", "id": "48555", "url": "https://cafe.naver.com/ccrumble/48555", "date": "2026-10-01",
+      "title_kr": "입문/복귀 유저 권장 가이드", "title_en": "Recommended guide for new and returning players",
+      "relevance": 2, "mode": "both",
+      "summary_en": "Long beginner guide by 백산. For PvP: Arena is per server and Rumble Arena is cross-server; current Arena/Rumble gear values evasion, crit chance, crit resist, Skill Haste and Skill AMP, built as either an evasion preset or a crit-resist preset (each also with Skill AMP, crit chance, accuracy). Arena refills one ticket every 2 hours; Rumble tickets refill to max at midnight; both have a free opponent refresh every 30 minutes. Rumble's passive changes every season, so its meta changes each season. Its dungeon screenshots show a '쟁탈전' tab in the dungeon menu.",
+      "teams": [], "counters": [],
+      "builds": [
+        {"cookie": "(team)", "mode": "both", "sugar_runes": "General (not PvP-specific) list: 우유 공증; 마카롱 스증; 치즈케이크 스증; 석류 스증; 다크초코 스가, 집중; 피겨 스증, 스가; 피노누아 스가, 집중; 허브 스가, 스증; 브라이트시커 스가; 전갈 스증; 실론 스증; 달토끼 스가, 집중; 체리콜라 스증.", "gear": "Arena/Rumble: evasion, crit chance, crit resist, Skill Haste, Skill AMP are the key lines. Evasion deck: evasion + Skill AMP, crit chance, accuracy. Crit-resist deck: crit resist + Skill AMP, crit chance, accuracy.", "why": "The PvP preset meta changes with the deck meta."}
+      ],
+      "mechanics": ["Hidden recommended-power damage tiers exist in PvE (e.g. 35% vs 55% damage bands); low accuracy causes misses and low focus fails debuffs."],
+      "rules": [
+        "Arena runs per server; Rumble Arena, guilds and Guild Conquest are cross-server.",
+        "Diamonds can buy Arena and Rumble opponent refreshes, but a free refresh is given every 30 minutes.",
+        "Arena: fame medals only on wins; victory medals by tier; 1 ticket recharges every 2 hours. Suggested victory-medal shop order: 쇳물, 초코강, Stellar points.",
+        "Rumble: wins give 와글와글 medals only (no fame medals). Shop order: dough dungeon ticket, gold dungeon ticket, EXP ticket, 쇳물. 'Rumble tickets refill to the maximum at midnight every day.'",
+        "'와레나는 매 시즌별로 적용되는 패시브가 달라져 매번 메타가 바뀌게 됩니다.'",
+        "Mileage order: daily dungeon keys > Arena ticket > Stellar.",
+        "Gear presets: up to 5."
+      ],
+      "results": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "현재는 회피, 치확, 치저, 스가, 스증 등이 중요한 옵션으로 취급받는데 이것들을 사람마다, 팀마다 어느 비중으로 가져가는지에 따라 프리셋이 바뀌게 됩니다.", "en": "Right now evasion, crit chance, crit resist, Skill Haste and Skill AMP are treated as the important lines; presets differ by how much of each a player or team takes."},
+        {"kr": "와레나 입장권은 매일 자정 최대치만큼 충전됩니다. 와레나는 매 시즌별로 적용되는 패시브가 달라져 매번 메타가 바뀌게 됩니다.", "en": "Rumble tickets refill to the maximum at midnight every day. Rumble applies a different passive each season, so the meta changes every season."},
+        {"kr": "아레나와 와레나 새로고침은 30분마다 새로고침 기회를 무료로 주기에", "en": "Arena and Rumble give a free opponent refresh every 30 minutes."}
+      ]
+    },
+    {
+      "source": "naver", "id": "46862", "url": "https://cafe.naver.com/ccrumble/46862", "date": "2026-09-27",
+      "title_kr": "와글와글 아레나 패스/축복 입장 횟수 추가 버프 미적용 의심 제보합니다.", "title_en": "Bug report: Rumble Arena pass/Blessing extra-entry buffs seem not to apply",
+      "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "Bug report (client 1.4.002): with three +1 daily-entry buffs (Blessing Lv.4, lifetime Special Sugarcoating Membership, Crumble Pass), regular Arena resets to 6/6 at midnight, but Rumble Arena, whose maximum is shown as 8, refills only to 5/8. The Rumble screenshot shows a +13 point win offer at 1,419 points and an attack team at 2.96M that includes Lv.1 cookies. Another screenshot shows Arena tickets at 21/6.",
+      "teams": [
+        {
+          "name": "Reporter's Rumble attack team (preset 3, 2.96M)", "mode": "rumble_arena",
+          "cookies": [
+            {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "100", "stars": "?", "position": "row 1 slot 1", "role": "Grass support", "note": "identified from portrait"},
+            {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "96", "stars": "?", "position": "row 1 slot 2", "role": "Fire ranged", "note": "identified from portrait (feathered hat)"},
+            {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "96", "stars": "?", "position": "row 1 slot 3", "role": "Light support", "note": "identified from portrait"},
+            {"kr": "?", "en": null, "level": "1", "stars": "?", "position": "row 1 slot 4", "role": "Water ?", "note": "Lv.1 filler"},
+            {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "96", "stars": "?", "position": "row 1 slot 5", "role": "Fire tank", "note": ""},
+            {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "96", "stars": "?", "position": "row 1 slot 6", "role": "Grass support", "note": ""},
+            {"kr": "?", "en": null, "level": "1", "stars": "?", "position": "row 2 slot 1", "role": "Light ranged ?", "note": "Lv.1 filler"},
+            {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "96", "stars": "?", "position": "row 2 slot 2", "role": "Dark support", "note": ""},
+            {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "100", "stars": "?", "position": "row 2 slot 3", "role": "Dark support", "note": ""},
+            {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "100", "stars": "?", "position": "row 2 slot 4", "role": "captain", "note": "captain banner"},
+            {"kr": "?", "en": null, "level": "1", "stars": "?", "position": "row 2 slot 5", "role": "Light ?", "note": "Lv.1 filler (pink portrait)"},
+            {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "96", "stars": "?", "position": "row 2 slot 6", "role": "Grass tank", "note": ""}
+          ],
+          "pets": ["? 16★", "? (hotdog-like icon) 17★", "? 16★"],
+          "perks": "?", "formation": "Card grid in nv-46862-1.jpg (roster order, not battlefield positions).",
+          "why": "Not explained; this is a bug-report screenshot.",
+          "unorthodox": ["Three Lv.1 cookies in a Rumble attack team (reason not stated)"]
+        }
+      ],
+      "counters": [], "builds": [], "mechanics": [],
+      "rules": [
+        "Rumble max entries shown as 8 with three +1 buffs, but refill at midnight reaches only 5/8 (reporter; unconfirmed bug). Arena resets to 6/6 with the same buffs.",
+        "Rumble win at 1,419 points offered +13 points ('승리 시 획득! +13'). Free refresh counter shows 5/5.",
+        "Arena ticket counter in nv-46862-4 shows 21/6 (tickets can exceed the daily maximum)."
+      ],
+      "results": [{"team": "Reporter's Rumble attack team", "win_rate": "", "usage": "", "power": "2.96M", "note": "1,419 Rumble points; account power on the main screen 254M 696K (nv-46862-2), so PvP power is shown on a different scale."}],
+      "disagreements": [],
+      "quotes": [{"kr": "와글와글 아레나: 패스로 인해 최대 수량이 8회로 확장되었음에도 불구하고, 자정이 지나면 8/8회가 아닌 5/8회 상태로만 충전되어 있습니다.", "en": "Rumble Arena: although the pass raises the maximum to 8, after midnight it is only filled to 5/8, not 8/8."}]
+    },
+    {
+      "source": "naver", "id": "49834", "url": "https://cafe.naver.com/ccrumble/49834", "date": "2026-10-05",
+      "title_kr": "아레나 장난하냐 투력 10M 차이나는데 방어 쳐뚫리네? ㅁㅊ 개같너 피감에 또 손댓냐", "title_en": "Is Arena a joke? My defense gets broken by someone 10M below me; did you touch DR again?",
+      "relevance": 1, "mode": "arena",
+      "summary_en": "Bug-board post whose title complains that a defense 10M power above the attacker still loses and asks whether DR was changed again; the body is the empty report template. Two comments say they beat inflated-power defenses 8-12M above them. No official answer and no evidence of a DR change.",
+      "teams": [], "counters": [{"team": "High displayed-power defenses (8-12M above the attacker)", "beaten_by": "lower-power attackers", "mode": "arena", "why": "commenter calls them '뻥투력' (inflated power)", "conditions": "Commenters' claims only."}],
+      "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": ["Title implies a stealth DR change; commenters attribute it to inflated displayed power."],
+      "quotes": [
+        {"kr": "보루1: 8~10M차이나는 뻥투력들 팰때 쾌감 지리긴해~", "en": "(comment) Beating inflated-power players 8-10M above me feels great."},
+        {"kr": "라라라라: ㅋㅋㅋㅋㅋ 11m 차이 이김. 약 12m", "en": "(comment) I beat an 11M gap. About 12M."}
+      ]
+    },
+    {
+      "source": "naver", "id": "49427", "url": "https://cafe.naver.com/ccrumble/49427", "date": "2026-10-04",
+      "title_kr": "🔥쿠키런 크럼블 아레나 1티어 조합 및 공략 공유🔥", "title_en": "Sharing a tier-1 Arena combo and guide",
+      "relevance": 1, "mode": "arena",
+      "summary_en": "Guide-board post by 동이 whose captured body is empty (the embed did not come through as text), so this round cannot confirm which video it links. Comments ask what to use without King Choco ('spend money') and say the screen is too small to read. Its title matches 미스터 M's video 3Fxt7juDICM in theme, but the link is not in this capture.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [
+        {"kr": "genegene: 초코왕방울 없으면 뭐쓰나요? / 다문: 돈을 써야죠", "en": "Q: What do I use without King Choco Drop? A: You have to spend money."},
+        {"kr": "JBG: 화면이 작아서 안보이네요", "en": "The screen is too small to see."}
+      ]
+    },
+    {
+      "source": "naver", "id": "50133", "url": "https://cafe.naver.com/ccrumble/50133", "date": "2026-10-06",
+      "title_kr": "와글와글 아레나 상점 골드키3개 상품", "title_en": "Rumble Arena shop: the 3-gold-key item",
+      "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "Bug report: buying the 3 gold dungeon keys item for 500 Rumble medals took the medals and marked it sold out without delivering the keys. The shop screenshot lists Rumble shop prices (dough ticket 500, keys ×3 500, a Rumble ticket for 1,000 mileage, treasure chests 3,500/3,000, and more) and shows 15 days 19 h 40 min remaining on 10-06.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [],
+      "rules": ["Rumble shop (nv-50133-1): many items priced 350-3,500 와글와글 medals; one item priced 1,000 mileage; remaining time '15일 19시간 40분' at capture of the screenshot."],
+      "results": [], "disagreements": [],
+      "quotes": [{"kr": "구매하니까 500메달 사라지고 품절만 되고 골드키 안들어옴", "en": "When I bought it, 500 medals disappeared and it went sold out, but no gold keys arrived."}]
+    },
+    {
+      "source": "naver", "id": "48832", "url": "https://cafe.naver.com/ccrumble/48832", "date": "2026-10-02",
+      "title_kr": "와레나 개편하세요", "title_en": "Rework Rumble Arena",
+      "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "Suggestion post: Rumble Arena is not differentiated from regular Arena and feels like a forced mileage sink. The author suggests changing the number of participating cookies or, since it is cross-server, counting the Gnome Lab stats, to get more varied decks. No comments.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [],
+      "rules": ["Implied by the suggestion: Rumble currently uses the same cookie count as Arena and does not apply Gnome Lab stats (author's framing; not official)."],
+      "results": [], "disagreements": [],
+      "quotes": [{"kr": "기존아레나와 다르게 참가쿠키수를 변경한다던지 전서버라면 적용 능력치를 노움연구소까지 더하던지", "en": "Change the number of participating cookies unlike regular Arena, or, since it's all-server, add the Gnome Lab to the applied stats."}]
+    },
+    {
+      "source": "naver", "id": "47879", "url": "https://cafe.naver.com/ccrumble/47879", "date": "2026-09-30",
+      "title_kr": "이거 원래 이렇게 피가 안달음?", "title_en": "Is HP supposed to barely go down like this?",
+      "relevance": 0, "mode": "both",
+      "summary_en": "A question (Breakthrough 477, fame 53) about a boss barely losing HP; context is PvE, not PvP. Commenters point to the hidden power cut: the poster deals only 15% damage and would reach the 35% band at 20M411K power, or misses because of low accuracy.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["PvE power-cut bands: '지금 딜 15퍼밖에 안들어가여 투력 좀만올려서 20M411K 이상 되면 35퍼 들어갈거임' (commenter)."],
+      "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "47415", "url": "https://cafe.naver.com/ccrumble/47415", "date": "2026-09-29",
+      "title_kr": "회피덱 공략", "title_en": "Evasion deck guide",
+      "relevance": 1, "mode": "arena",
+      "summary_en": "Members-only post: the capture is a login refusal. Title, date and engagement come from list-naver-guide-board.tsv (author 쿠키키키, 22 likes, 1 comment, 1,608 views). Its content is unknown; it shows that evasion decks were being discussed on 09-29.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other", "id": "yt-lGxbv7l8QTQ", "url": "https://www.youtube.com/watch?v=lGxbv7l8QTQ", "date": "2026-09-30",
+      "title_kr": "[쿠키런크럼블] 아레나 최신 시커덱 공략", "title_en": "Latest Arena Brightseeker deck guide (서신우)",
+      "relevance": 2, "mode": "arena",
+      "summary_en": "Seo Sinwoo's video behind nv:48067 (15,739 views). The digest has chapters only (조합, 상성, 슈가룬, 아레나) and no deck list or matchup text. His pinned comment says he now puts Herb in Strawberry Crepe's slot, so the shown deck had Strawberry Crepe. Commenters say low-spec Crepe + Espresso decks often win 2-3M up and ask about rune choices (Macaron Skill AMP vs ATK, Pinot HP amp, Ion shield scaling, Rockstar HP).",
+      "teams": [
+        {"name": "Brightseeker deck (only what the text shows)", "mode": "arena",
+         "cookies": [
+           {"kr": "브라이트시커 쿠키", "en": "Brightseeker Cookie", "level": "?", "stars": "5+ (nv:48067)", "position": "?", "role": "?", "note": ""},
+           {"kr": "딸기크레페맛 쿠키", "en": "Strawberry Crepe Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "pinned comment: now replaced by 허브맛 쿠키"}
+         ],
+         "pets": ["?"], "perks": "?", "formation": "?", "why": "", "unorthodox": []}
+      ],
+      "counters": [{"team": "Higher-spec decks (2-3M above)", "beaten_by": "Strawberry Crepe + Espresso deck (딸크 에소덱)", "mode": "arena", "why": "", "conditions": "Commenter claim for low-spec accounts."}],
+      "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "@SuSinWoo: 요즘은 여기서 딸크 자리에 허브를 넣고 있습니다", "en": "These days I put Herb in Strawberry Crepe's slot."},
+        {"kr": "@smileing-wave: 저스펙은 딸크 에소덱이 진리인듯요 위로 2~3M 차이나도 자주 이겨요", "en": "For low spec the Crepe-Espresso deck seems to be the answer; it often wins against decks 2-3M above."},
+        {"kr": "@100곰곰곰: 피노누아는 체력증폭하는 이유가 뭘까요?", "en": "Why does Pinot Noir use HP amplification? (implies the video's Pinot uses HP-amp runes; indirect)"}
+      ]
+    },
+    {
+      "source": "other", "id": "yt-2Ylz143BgdQ", "url": "https://www.youtube.com/watch?v=2Ylz143BgdQ", "date": "2026-09-29",
+      "title_kr": "아레나 그냥 이거 쓰세요! 돌격덱 호밀몰빵덱 추천! [쿠키런 키우기 / 쿠키런 크럼블]", "title_en": "Just use these in Arena! Charge deck and Rye all-in deck (꽝라멩)",
+      "relevance": 2, "mode": "arena",
+      "summary_en": "A 70-second short presenting 'the two meta decks currently dominating the Arena rankings': a charge deck and a Rye all-in deck. The digest has no deck list or decision rule; comments imply the charge deck uses Oven Wanderer and Bari, the Rye deck uses Skating Queen, and King Choco Drop is a pet in at least one deck. A commenter's question ties the switch to Bari reaching 5★, but the creator's rule is not in the text.",
+      "teams": [
+        {"name": "돌격덱 (charge deck)", "mode": "arena",
+         "cookies": [
+           {"kr": "오븐방랑자 쿠키", "en": "Oven Wanderer Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "comment: '방랑자말고 쓸수있는 쿠키 뭐가 있을까요?'"},
+           {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "comments ask about Bari sugar runes"}
+         ],
+         "pets": ["근엄한 초코왕방울? (comment asks for a substitute: Hot Doggie or Icy Birdie)"], "perks": "?", "formation": "?", "why": "", "unorthodox": []},
+        {"name": "호밀 몰빵덱 (Rye all-in deck)", "mode": "arena",
+         "cookies": [
+           {"kr": "호밀맛 쿠키", "en": "Rye Cookie", "level": "?", "stars": "?", "position": "?", "role": "carry", "note": ""},
+           {"kr": "피겨여왕맛 쿠키", "en": "Skating Queen Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "comment: '호밀덱 너무잘죽어서 피겨빼고 락스타넣어도 좋은거같아요'"}
+         ],
+         "pets": ["?"], "perks": "? (a commenter asks whether Armor Repair + Passion Pay beats Passion Pay + Crunch Mode, suggesting the video uses the former)", "formation": "?", "why": "", "unorthodox": []}
+      ],
+      "counters": [], "builds": [], "mechanics": [], "rules": [],
+      "results": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "현재 아레나 랭킹을 장악하고 있는 메타덱 두가지를 정리해봤습니다", "en": "I've summarised the two meta decks currently dominating the Arena rankings."},
+        {"kr": "@jmcheru00: 돌격덱은 아레나 기준인거지 스테이지용은 아닌거죠??? 그리고 바리는5성이나 방랑자가2성이면 전환이 유리한 상황일까요?(아레나)", "en": "The charge deck is for Arena, not stages, right? And if Bari is 5★ but Oven Wanderer is 2★, is switching (to it) favourable? (Arena)"},
+        {"kr": "@solokaraoke15: 상대랑 덱이 완전 똑같고 투력도 차이없는데 상대 바리는 70만딜넣는데 제 바리는 20만밖에 못넣는이유가 뭘까요", "en": "Identical decks and power, yet the opponent's Bari deals 700K and mine only 200K; why?"}
+      ]
+    },
+    {
+      "source": "other", "id": "yt-Dxbq3EFRoMY", "url": "https://www.youtube.com/watch?v=Dxbq3EFRoMY", "date": "2026-10-02",
+      "title_kr": "쿠키런 크럼블 와글와글 아레나 시즌1 공략", "title_en": "Rumble Arena Season 1 guide (그니)",
+      "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "그니's Rumble Season 1 guide. The digest's chapters show its structure: attack deck 1, attack deck 2, a crit-resist gear set, an evasion defense deck and an evasion gear set, then gameplay. Deck rosters, power figures and subtitles are not in this round's text; the pre-round's frame-read rosters (Tiger Lily in deck 1, bait defense) are not supported here. A commenter asks about Cherry Cola and Bari runes and how much Skill Haste gives 30% cooldown reduction (25 haste = 20%).",
+      "teams": [
+        {"name": "와레나 공격덱1 (Rumble attack deck 1)", "mode": "rumble_arena", "cookies": [{"kr": "?", "en": null, "level": "?", "stars": "?", "position": "?", "role": "?", "note": "not in digest text"}], "pets": ["?"], "perks": "?", "formation": "?", "why": "", "unorthodox": []},
+        {"name": "와레나 공격덱2 (Rumble attack deck 2)", "mode": "rumble_arena", "cookies": [{"kr": "?", "en": null, "level": "?", "stars": "?", "position": "?", "role": "?", "note": "not in digest text"}], "pets": ["?"], "perks": "?", "formation": "?", "why": "", "unorthodox": []},
+        {"name": "와레나 회피방어덱 (Rumble evasion defense deck)", "mode": "rumble_arena", "cookies": [{"kr": "?", "en": null, "level": "?", "stars": "?", "position": "?", "role": "?", "note": "not in digest text"}], "pets": ["?"], "perks": "?", "formation": "?", "why": "", "unorthodox": []}
+      ],
+      "counters": [],
+      "builds": [
+        {"cookie": "(team)", "mode": "rumble_arena", "sugar_runes": "?", "gear": "Two sets per chapters: 치명저항 장비세팅 (crit resist) for attack, 회피 장비세팅 (evasion) for defense. Values not in text.", "why": ""}
+      ],
+      "mechanics": ["Commenter: Skill Haste 25 gives a 20% cooldown cut, consistent with nv:46716's CD × 100 / (100 + haste)."],
+      "rules": [], "results": [], "disagreements": [],
+      "quotes": [
+        {"kr": "00:00 인트로,와레나 공격덱1 / 00:27 와레나 공격덱2 / 00:45 와레나 치명저항 장비세팅 / 01:22 와레나 회피방어덱 / 01:48 와레나 회피 장비세팅", "en": "Chapters: Rumble attack deck 1; attack deck 2; crit-resist gear; evasion defense deck; evasion gear."},
+        {"kr": "@아이디로쿠: 체리콜라, 바리 슈가룬 세팅이궁금하며 스가의 수치가 25일때 20프로인건 알겠으나 30프로가되려면 어느정도의 수치가 있어야하는지도 궁금합니다!", "en": "I'd like Cherry Cola's and Bari's sugar runes; I know Skill Haste 25 gives 20%, but how much is needed for 30%?"}
+      ]
+    },
+    {
+      "source": "other", "id": "yt-OLr04-X7yO4", "url": "https://www.youtube.com/watch?v=OLr04-X7yO4", "date": "2026-09-27",
+      "title_kr": "", "title_en": "Cookie Run Crumble: Arena Team Lineup & Sugar Runes Build! Amazing PVP Team! (EggZaMonkey EX)",
+      "relevance": 2, "mode": "arena",
+      "summary_en": "EN build video whose chapters list the 12 cookies of the Bari charge deck, one build per cookie: Macaron, Oven Wanderer, Pinot Noir, Cheesecake, Pomegranate, Princess Bari, Milk, Nameless Cake Hound, Ion Robot, Cherry Cola, Herb, Moon Rabbit. The rune builds themselves are not in the text. It matches the roster in nv:48978.",
+      "teams": [
+        {"name": "EggZaMonkey Arena team (chapter list)", "mode": "arena",
+         "cookies": [
+           {"kr": "마카롱맛 쿠키", "en": "Macaron Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "0:27"},
+           {"kr": "오븐방랑자 쿠키", "en": "Oven Wanderer Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "1:14"},
+           {"kr": "피노누아맛 쿠키", "en": "Pinot Noir Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "1:58"},
+           {"kr": "치즈케이크맛 쿠키", "en": "Cheesecake Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "3:42"},
+           {"kr": "석류맛 쿠키", "en": "Pomegranate Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "4:47"},
+           {"kr": "바리공주맛 쿠키", "en": "Princess Bari Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "5:38"},
+           {"kr": "바삭튼튼 소아과 의사 우유맛 쿠키", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "7:17 'Milk Cookie Build'"},
+           {"kr": "이름 모를 케이크 들개", "en": "Nameless Cake Hound", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "8:00"},
+           {"kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "9:05"},
+           {"kr": "체리콜라맛 쿠키", "en": "Cherry Cola Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "10:27"},
+           {"kr": "허브맛 쿠키", "en": "Herb Cookie", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "12:34"},
+           {"kr": "감감술래 놀이 달토끼맛 쿠키", "en": "Moon Rabbit Cookie's Pampered with Persimmon", "level": "?", "stars": "?", "position": "?", "role": "?", "note": "13:13"}
+         ],
+         "pets": ["?"], "perks": "?", "formation": "?", "why": "", "unorthodox": []}
+      ],
+      "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other", "id": "yt-_kfXIGFNquA", "url": "https://www.youtube.com/watch?v=_kfXIGFNquA", "date": "2026-09-30",
+      "title_kr": "", "title_en": "Ranking the Top 10 Cookie Characters for PVP / Arena! (September 2026 Edition) (EggZaMonkey EX)",
+      "relevance": 1, "mode": "arena",
+      "summary_en": "EN top-10 PvP cookie ranking. The digest has only 'Number 10' to 'Number 1' chapter markers and one unrelated comment, so the ranking itself is not in this round's text. The pre-round order (Milk first) came from storyboard frames and is not supported here.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other", "id": "yt-zhXTfJwXH-k", "url": "https://www.youtube.com/watch?v=zhXTfJwXH-k", "date": "2026-09-28",
+      "title_kr": "", "title_en": "BEST Princess Bari Counter Team! | Arena & Rumble Arena (chaye)",
+      "relevance": 2, "mode": "both",
+      "summary_en": "EN video presenting a team meant to beat Princess Bari teams in both Arena and Rumble Arena, with a defense history, team overview with perks, and Arena examples (per chapters). The team itself is not in the text. The creator's pinned comment: players at Mercenary Level 4+ should use Crunch Mode and Armor Repair.",
+      "teams": [{"name": "chaye Bari counter team", "mode": "both", "cookies": [{"kr": "?", "en": null, "level": "?", "stars": "?", "position": "?", "role": "?", "note": "not in digest text"}], "pets": ["?"], "perks": "Crunch Mode + Armor Repair (Mercenary Lv.4+)", "formation": "?", "why": "Counter to Princess Bari teams (title).", "unorthodox": []}],
+      "counters": [{"team": "Princess Bari teams", "beaten_by": "chaye's counter team (roster not in text)", "mode": "both", "why": "?", "conditions": "Mercenary Lv.4+ perks Crunch Mode + Armor Repair"}],
+      "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "", "en": "@chayeCRC: For players Mercenary Level 4 and above, use Crunch Mode and Armor Repair"}]
+    },
+    {
+      "source": "other", "id": "yt-NbSkyTH4LPo", "url": "https://www.youtube.com/watch?v=NbSkyTH4LPo", "date": "2026-09-29",
+      "title_kr": "", "title_en": "Everyone Is Using OVEN WANDERER?! Is He Actually Good..? Or Overrated? (Samool)",
+      "relevance": 1, "mode": "arena",
+      "summary_en": "Samool asks whether Oven Wanderer is good or overrated; the description has no content. Commenters say he is 'carried by Bari', that Cherry Cola is better because Volley and Rapid Fire synergy are always present in Arena teams, and that Oven needs 7★, a chain pet and Skating Queen. Another commenter finds Macaron's priority low since Moon Rabbit.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": ["Commenter: Cherry Cola benefits from the Volley and Rapid Fire synergies that Arena teams always carry."],
+      "rules": [], "results": [],
+      "disagreements": ["Oven Wanderer: 'carried by Bari' / 'overrated' (commenters) vs 'he found his niche' (commenter)."],
+      "quotes": [
+        {"kr": "", "en": "@noellekori: the reason cherry cola is better is not because of bari but because of volley and rapid fire synergy always present in arena teams"},
+        {"kr": "", "en": "@darkbluuu: He still not OP but he's being carried by Bari."},
+        {"kr": "", "en": "@dindjarin2866: For oven to work i think you need him at 7 stars + chain pet + skating queen. He will go for 1.5m"}
+      ]
+    },
+    {
+      "source": "other", "id": "yt-7HohaFbO2ig", "url": "https://www.youtube.com/watch?v=7HohaFbO2ig", "date": "2026-10-02",
+      "title_kr": "", "title_en": "Dungeons Are FINALLY NERFED! What I Think About The State Of The Game? (Samool)",
+      "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "Samool on the dungeon nerf and the game's state; the description has no content. One comment states that at higher Rumble Arena levels all enemy teams are anonymous ('all you see is question marks'), which lowers the incentive to play. Another asks which mercenary perks to run at Lv.4.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [],
+      "rules": ["Commenter: at higher Rumble levels every enemy team is anonymous (question marks)."],
+      "results": [], "disagreements": [],
+      "quotes": [{"kr": "", "en": "@Mammary_Mints: At higher levels in the rumble arena all of the enemy teams are anonymous so the incentive to play is even lower, all you see is question marks on everything."}]
+    },
+    {
+      "source": "other", "id": "yt-9ACfuomXglQ", "url": "https://www.youtube.com/watch?v=9ACfuomXglQ", "date": "2026-10-05",
+      "title_kr": "", "title_en": "NEW SSR Chardonnay Cookie Character Animations & Skills / Synergy Predictions! (EggZaMonkey EX)",
+      "relevance": 2, "mode": "both",
+      "summary_en": "Chardonnay preview. The top comment relays a Reddit datamine: SSR Plant (Grass) Support, ATK 133 / DEF 60 / HP 2,790, skill Sanctuary of Fresh Greenery, with buffs lasting 5 s: CRIT% +50% at 0★ up to +100% at 9★+, Volley synergy 100 (200 from 5★), push resistance 40% (60% from 5★). Another commenter thinks she might replace Herb.",
+      "teams": [], "counters": [], "builds": [],
+      "mechanics": [
+        "Datamine (comment, low confidence): buffs last 5 s. CRIT%: 0★ +50%, 1★ +60%, 3★ +70%, 5★ +80%, 7★ +90%, 9★+ +100%. Volley synergy: 100 at 0-3★, 200 at 5★+. Push RES: 40% at 0-3★, 60% at 5★+.",
+        "Datamine skill text: increases the critical chance and knockback resistance of herself and allies in a straight line, grants Volley synergy, deals damage to enemies in the line. Base stats ATK 133, DEF 60, HP 2,790 (match teamhobby's datamine card)."
+      ],
+      "rules": [], "results": [], "disagreements": [],
+      "quotes": [
+        {"kr": "", "en": "@mindwars_: Chardonnay's buff sizes (each buff lasts 5 seconds): CRIT%:0 stars: +50% 1 star: +60% 3 stars: +70% 5 stars: +80% 7 stars: +90% 9 and up: +100%"},
+        {"kr": "", "en": "@denysvision: Also from looks of it, Chardonnay Cookie might replace Herb"}
+      ]
+    },
+    {
+      "source": "other", "id": "yt-VilGFNriNCU", "url": "https://www.youtube.com/watch?v=VilGFNriNCU", "date": "2026-10-04",
+      "title_kr": "", "title_en": "Chardonnay Cookie Soon?! ANOTHER Anti-CC Support? (Samool)",
+      "relevance": 1, "mode": "both",
+      "summary_en": "Early Chardonnay speculation titled 'another anti-CC support'. Several top comments say the site Samool used was the Cookie Run OC (fan-made character) wiki, so the video's Chardonnay info predates the official reveal and may be wrong. One commenter says crit chance would make her a Macaron replacement, while noting Macaron's range synergy for Bari and Milky Way.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": ["Commenters: the video's source was a fan OC wiki, not the real cookie."],
+      "quotes": [
+        {"kr": "", "en": "@tristanrowanmooijman3549: the website that you found chardonnay cookie on isn't the actual correct wiki, that's the cookie run oc wiki"},
+        {"kr": "", "en": "@flallien: If she really ended up giving crit chance, wouldn't that be a good Macaron Cookie replacement. Well im still considering the range synergy she provide for Princess Bari and Milky Way tho.."}
+      ]
+    },
+    {
+      "source": "other", "id": "yt-Hpb-D_uOg0g", "url": "https://www.youtube.com/watch?v=Hpb-D_uOg0g", "date": "2026-10-06",
+      "title_kr": "", "title_en": "Chardonnay Cookie Confirmed! (Samool)",
+      "relevance": 1, "mode": "both",
+      "summary_en": "Samool's 3-minute reaction to the official Chardonnay reveal; the description has no content. A commenter notes that the small wings icon over Chardonnay during her skill marks the active buff, like Pinot Noir's icon. No stats or PvP claims in the text.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "", "en": "@ITZPIKACHU-c5f: the little wings icon that appears above Chardonnay Cookie when she uses her skill is the buff, similar to Pinot Noir Cookie"}]
+    },
+    {
+      "source": "other", "id": "yt-OKBiO8_0J38", "url": "https://www.youtube.com/watch?v=OKBiO8_0J38", "date": "2026-10-06",
+      "title_kr": "쿠키런 크럼블 샤르도네맛 쿠키 출시 얼마나 강력할까??", "title_en": "How strong will Chardonnay Cookie be? (ND러너)",
+      "relevance": 1, "mode": "both",
+      "summary_en": "ND러너's Chardonnay preview; the description is channel promotion only. A commenter says the leak gives her crit chance and push resistance and that the next patch raises cookie level to 150 and adds a new map; the official note says 120. Another asks for Strawberry Crepe sugar runes.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": ["Commenter: level cap 150 next patch; official nv:50417: 120."],
+      "quotes": [{"kr": "@BA-vc7mk: 능력치는 치확이랑 밀치기 저항 이라고 유출 됬고 다음패치에 쿠키레벨 150꺼지 상향되는것과 신규 맵이 하나 등장한다고 합니다 :)", "en": "Leaks say her stats are crit chance and knockback resistance, and that next patch raises cookie level to 150 and adds a new map."}]
+    },
+    {
+      "source": "other", "id": "yt-DaU0_8dEd1w", "url": "https://www.youtube.com/watch?v=DaU0_8dEd1w", "date": "2026-10-06",
+      "title_kr": "[쿠키런크럼블] 신규 쿠키 공개! 하지만 중요한 건 개선입니다", "title_en": "New cookie revealed! But improvements are what matter (서신우)",
+      "relevance": 1, "mode": "both",
+      "summary_en": "Seo Sinwoo's pre-patch video: chapters cover the new SSR cookie, update predictions, daily dungeon improvements, dough and gift-box fixes, and 'power display improvement' (전투력 표기 개선). No PvP content is stated in the text. One commenter wishes for genuinely new content 'like 쟁탈전' instead of only fixes.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "@elin782: 고치는것만 바라지말고 좀 나아가는걸 바랐으면 좋겠다. 예를들어 쟁탈전 같은 현재와 다른 신선한 새로운 컨텐츠.", "en": "I wish we hoped for progress, not just fixes: fresh new content different from now, like 쟁탈전."}]
+    },
+    {
+      "source": "other", "id": "yt-yMXLQAlb9HQ", "url": "https://www.youtube.com/watch?v=yMXLQAlb9HQ", "date": "2026-10-06",
+      "title_kr": "", "title_en": "8 October Patch Notes! Some Nice Changes Coming (EggZaMonkey EX)",
+      "relevance": 1, "mode": "both",
+      "summary_en": "EN walkthrough of the 10-08 patch notes. Chapters include 'key updates / New SSR Chardonnay Cookie', 'Team Building content expansion', 'Rumble Arena / Cookie talk', the check-in event and the EXP changes. The text adds nothing beyond the official note; no Rumble passive is stated.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "", "en": "Chapter: 2:46 Rumble Arena / Cookie talk"}]
+    },
+    {
+      "source": "other", "id": "yt-zxrnOg3SIro", "url": "https://www.youtube.com/watch?v=zxrnOg3SIro", "date": "2026-10-05",
+      "title_kr": "쿠키런 크럼블 다음 신쿠 떴습니다 ㅋㅋ", "title_en": "The next new cookie is out (VART)",
+      "relevance": 0, "mode": "both",
+      "summary_en": "A 31-second short announcing that Chardonnay Cookie's update notice is out. One commenter notes that as an SSR she will be easier to take to 10★ than Macaron. No PvP content.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [],
+      "quotes": [{"kr": "@Wolhyang_: SSR이라서 마카롱보다 10성 찍기 쉬운..", "en": "Being SSR, she's easier to get to 10★ than Macaron..."}]
+    },
+    {
+      "source": "other", "id": "yt-3Fxt7juDICM", "url": "https://www.youtube.com/watch?v=3Fxt7juDICM", "date": "2026-10-03",
+      "title_kr": "쿠키런 크럼블 아레나 승률 99% 사기 조합 공유 | 최신 쿠폰 리딤 코드 확인하세요!", "title_en": "A broken Arena combo with a 99% win rate | latest coupon codes (미스터 M)",
+      "relevance": 0, "mode": "arena",
+      "summary_en": "A coupon-code channel's Arena video. The description promises the current meta combo with a 99% win rate and F2P value tips, and lists two coupon codes, but names no cookies; there are no comments. The pre-round's combo details (Ion + Rockstar + Moon Rabbit, pets) came from frames and are not supported by this round.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [],
+      "disagreements": ["The '99% win rate' is an unsupported claim."],
+      "quotes": [{"kr": "현 아레나 승률 99%를 달성하고 있는 사기 조합을 준비했는데요", "en": "I've prepared a broken combo currently achieving a 99% Arena win rate."}]
+    },
+    {
+      "source": "other", "id": "yt-sLknXy1U-d8", "url": "https://www.youtube.com/watch?v=sLknXy1U-d8", "date": "2026-03-22",
+      "title_kr": "쿠키런: 크럼블 🍪 | Official PV", "title_en": "CookieRun: Crumble | Official PV (uploaded by 쿠밥)",
+      "relevance": 1, "mode": "both",
+      "summary_en": "A 157-second PV uploaded on 2026-03-22 by the channel 쿠밥 (not the official Devsisters channel). The digest has only hashtags and no comments; nothing in this round's text mentions 쟁탈전 or a territory mode. The pre-round's description of a stronghold-capture PvP segment came from frames and a DC post, which this round did not capture.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other", "id": "yt-UZXP6E4pLo0", "url": "https://www.youtube.com/watch?v=UZXP6E4pLo0", "date": "2026-10-05",
+      "title_kr": "[쿠키런크럼블] 하락 방지는 필수입니다", "title_en": "Downgrade protection is a must (서신우)",
+      "relevance": 0, "mode": "both",
+      "summary_en": "Plate (gear) enhancement video. Seo Sinwoo's pinned comment lists the 쇳물 cost to restore each level: 15-16: 20, 17: 30, 18: 40, 19: 50, 20: 60, 21: 65, 22: 70, 23: 75, 24: 80. Relevant to PvP only as gear-building cost.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Restore cost in 쇳물 by plate level (pinned comment): 15:20, 16:20, 17:30, 18:40, 19:50, 20:60, 21:65, 22:70, 23:75, 24:80."],
+      "rules": [], "results": [], "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": [
+    {"kr": "신록의 성역", "en": "Sanctuary of Fresh Greenery (Chardonnay Cookie's skill)", "kind": "term", "confidence": "high", "evidence": "KR: nv:50417 and teamhobby_patchnotes.html; EN: datamine comment on yt-9ACfuomXglQ"},
+    {"kr": "밀어내기 저항", "en": "push (knockback) resistance", "kind": "stat", "confidence": "high", "evidence": "nv:50417 (Chardonnay buff); the datamine comment renders it as 'knockback resistance' / 'Push RES'"},
+    {"kr": "다발 시너지", "en": "Volley synergy", "kind": "term", "confidence": "high", "evidence": "nv:50417; 'grants Volley synergy' in the yt-9ACfuomXglQ datamine comment"},
+    {"kr": "와글와글 스페셜 패스", "en": "Rumble Special Pass", "kind": "term", "confidence": "high", "evidence": "nv:50417 (10-02 fix list)"},
+    {"kr": "시커덱", "en": "Brightseeker deck", "kind": "term", "confidence": "high", "evidence": "nv:48067, yt-lGxbv7l8QTQ (시커 = 브라이트시커)"},
+    {"kr": "호밀 몰빵덱 / 호몰덱", "en": "Rye all-in deck (same idea as the curated 호밀 원툴덱)", "kind": "term", "confidence": "high", "evidence": "yt-2Ylz143BgdQ title and comments"},
+    {"kr": "딸크 에소덱", "en": "Strawberry Crepe + Espresso deck", "kind": "term", "confidence": "high", "evidence": "comment on yt-lGxbv7l8QTQ (curated glossary has 딸크에소)"},
+    {"kr": "쟁탈전", "en": "unreleased mode (EN client string 'Crumb Clash' per record 001); a '쟁탈전' tab sits in the in-game dungeon menu", "kind": "term", "confidence": "high", "evidence": "nv-48555-1.png and nv-48555-2.png (tab beside 도전 던전 / 일일 던전); comments on nv:50417 and yt-DaU0_8dEd1w"},
+    {"kr": "방어 보호 기간", "en": "defense protection period (Rumble: 6 days per teamhobby)", "kind": "term", "confidence": "low", "evidence": "03-sites/teamhobby_arena.html"},
+    {"kr": "초코왕방울 룰렛", "en": "King Choco Drop Roulette (10-08 event)", "kind": "term", "confidence": "high", "evidence": "nv:50417, nv-50417-7.png"}
+  ]
+}
