@@ -178,11 +178,23 @@ details.chapters[open] > summary {
 .rank-none {
   color: var(--ink-3);
 }
-tr:has(.rank.r1) > td {
+tr:has(.rank.r1) {
   background: var(--candy-soft);
 }
 tr:has(.rank.r1) > td:first-child {
   box-shadow: inset 3px 0 0 var(--candy);
+}
+/* Phones: a stacked row is one block, so the edge goes on the row; sources stay last. */
+@media (max-width: 640px) {
+  table.stack tr:has(.rank.r1) {
+    box-shadow: inset 3px 0 0 var(--candy);
+  }
+  table.stack tr:has(.rank.r1) > td:first-child {
+    box-shadow: none;
+  }
+  table.stack td.src {
+    order: 2;
+  }
 }
 .stage-at,
 .pw {
@@ -371,9 +383,6 @@ section.clears + section.clears {
 }
 .boss-cell + .boss-cell {
   margin-top: var(--sp-2);
-}
-tr:has(.mine) > td {
-  background: var(--accent-soft);
 }
 
 /* The Rift's findings elsewhere in the record: kind first, a line of text, sources last. */
