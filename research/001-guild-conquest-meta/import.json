@@ -22,6 +22,45 @@
   ],
   "rankings": [
     {
+      "file": "evidence/r2026-10-07/15-crumbgg/11-players.tsv",
+      "board": "players",
+      "capturedAt": "2026-10-07",
+      "source": "web:crumbgg:final-s{season}",
+      "columns": {
+        "season": "season",
+        "rank": "rank",
+        "name": "player",
+        "guild": "guild",
+        "value": "score_G",
+        "power": "power_G",
+        "ref": "crumb_player_id"
+      }
+    },
+    {
+      "file": "evidence/r2026-10-07/15-crumbgg/12-guilds.tsv",
+      "board": "guilds",
+      "capturedAt": "2026-10-07",
+      "source": "web:crumbgg:final-s{season}",
+      "columns": {
+        "season": "season",
+        "rank": "rank",
+        "name": "guild",
+        "value": "score_G"
+      }
+    },
+    {
+      "file": "evidence/r2026-10-07/15-crumbgg/13-power-top500.tsv",
+      "board": "power",
+      "capturedAt": "2026-10-07",
+      "source": "web:crumbgg:power-leaderboard-1007",
+      "columns": {
+        "rank": "rank",
+        "name": "player",
+        "guild": "guild",
+        "value": "combat_power_G"
+      }
+    },
+    {
       "file": "evidence/15-crumbgg/11-players.tsv",
       "board": "players",
       "capturedAt": "2026-09-27",
