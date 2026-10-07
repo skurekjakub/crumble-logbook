@@ -145,4 +145,5 @@ export const STAGE = {
   },
   dungeon: null,
   teamPower: null,
+  daily: null,
 } as const satisfies ModeSection;

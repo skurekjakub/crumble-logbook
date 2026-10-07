@@ -364,6 +364,40 @@ function seedEverything(store: Store): SeedIds {
     { cookieKr: "오븐방랑자 쿠키", kind: "charger", why: "w", status: "excluded" },
     ["dc:1"],
   );
+  services.dailyDungeons.create(
+    { slug: "exp", position: 0, nameEn: "EXP Dungeon", drops: ["EXP"], notes: [] },
+    ["dc:1"],
+  );
+  services.decks.create({
+    id: "daily-deck",
+    mode: "daily_dungeon",
+    nameEn: "Daily deck",
+    status: "meta",
+    cookies: [{ cookieKr: "체리 쿠키", level: "100", levelRule: null, stars: null, why: "x" }],
+    pets: [],
+    notes: [],
+    dailyDungeon: {
+      dungeon: "exp",
+      auto: "full",
+      stage: 30,
+      power: "1.2G",
+      captainKr: "체리 쿠키",
+    },
+    sources: ["dc:1"],
+  });
+  services.dailyDungeonClears.create(
+    {
+      dungeon: "exp",
+      stage: 30,
+      power: "1.2G",
+      powerG: 1.2,
+      deckId: "daily-deck",
+      auto: "full",
+      date: "2026-10-07",
+      evidence: "screenshot",
+    },
+    ["dc:1"],
+  );
   services.powerSources.create(
     {
       slug: "plating",
@@ -485,10 +519,11 @@ describe("exportSnapshot / restoreSnapshot", () => {
       recordModes: 1,
       captures: 1,
       glossary: 1,
-      decks: 4,
-      deckCookies: 4,
+      decks: 5,
+      deckCookies: 5,
       deckPets: 1,
       deckNotes: 1,
+      deckDailyDungeons: 1,
       runeBuilds: 1,
       runeBuildDecks: 1,
       gearRecs: 1,
@@ -515,6 +550,8 @@ describe("exportSnapshot / restoreSnapshot", () => {
       dungeonRuns: 1,
       dungeonLineups: 1,
       dungeonExclusions: 1,
+      dailyDungeons: 1,
+      dailyDungeonClears: 1,
       powerSources: 1,
       powerDataPoints: 1,
       packages: 1,
@@ -523,7 +560,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       spendingSteps: 1,
       growthCurves: 1,
       plannerSteps: 1,
-      citations: 36,
+      citations: 39,
       factClaims: 1,
       accountSnapshots: 1,
       accountLineups: 1,
@@ -662,7 +699,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
     const target = testStore();
     const counts = restoreSnapshot(target, { version: 1, tables: older as Snapshot["tables"] });
     expect(counts.usageStats).toBe(0);
-    expect(counts.decks).toBe(4);
+    expect(counts.decks).toBe(5);
     expect(exportSnapshot(target).tables.usageStats).toEqual([]);
   });
 

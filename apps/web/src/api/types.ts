@@ -147,6 +147,21 @@ export type GrowthCurve = InferResponseType<(typeof api)["growth-curves"]["$get"
 /** A step the power planner weighs: its power source, the data point of its gain, and its basis. */
 export type PlannerStep = InferResponseType<(typeof api)["planner-steps"]["$get"], 200>[number];
 
+/**
+ * A daily dungeon: names, drops, entry (keys, ticket back on a loss, quick
+ * clear), boss (element, weakness, rotation), top stage and notes, with sources.
+ */
+export type DailyDungeon = InferResponseType<(typeof api)["daily-dungeons"]["$get"], 200>[number];
+
+/** A documented daily dungeon clear: stage, power as posted and in G, deck, auto, evidence and sources. */
+export type DailyDungeonClear = InferResponseType<
+  (typeof api)["daily-dungeon-clears"]["$get"],
+  200
+>[number];
+
+/** A daily dungeon deck's run facts: its dungeon, auto, stage, power and captain. */
+export type DailyRun = NonNullable<Deck["dailyDungeon"]>;
+
 /** A cookie kept out of Crumble Dungeon's first wave, with its `en` gloss, reason, status and sources. */
 export type DungeonExclusion = InferResponseType<
   (typeof api)["dungeon-exclusions"]["$get"],

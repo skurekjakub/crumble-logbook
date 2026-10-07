@@ -27,6 +27,7 @@ import { Route as ModeExclusionsRouteImport } from './routes/$mode/exclusions'
 import { Route as ModeGearRouteImport } from './routes/$mode/gear'
 import { Route as ModeLineupsRouteImport } from './routes/$mode/lineups'
 import { Route as ModeMechanicsRouteImport } from './routes/$mode/mechanics'
+import { Route as ModeOverviewRouteImport } from './routes/$mode/overview'
 import { Route as ModePackagesRouteImport } from './routes/$mode/packages'
 import { Route as ModePlannerRouteImport } from './routes/$mode/planner'
 import { Route as ModePowerSourcesRouteImport } from './routes/$mode/power-sources'
@@ -133,6 +134,11 @@ const ModeMechanicsRoute = ModeMechanicsRouteImport.update({
   path: '/mechanics',
   getParentRoute: () => ModeRoute,
 } as any)
+const ModeOverviewRoute = ModeOverviewRouteImport.update({
+  id: '/overview',
+  path: '/overview',
+  getParentRoute: () => ModeRoute,
+} as any)
 const ModePackagesRoute = ModePackagesRouteImport.update({
   id: '/packages',
   path: '/packages',
@@ -227,6 +233,7 @@ export interface FileRoutesByFullPath {
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/overview': typeof ModeOverviewRoute
   '/$mode/packages': typeof ModePackagesRoute
   '/$mode/planner': typeof ModePlannerRoute
   '/$mode/power-sources': typeof ModePowerSourcesRoute
@@ -261,6 +268,7 @@ export interface FileRoutesByTo {
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/overview': typeof ModeOverviewRoute
   '/$mode/packages': typeof ModePackagesRoute
   '/$mode/planner': typeof ModePlannerRoute
   '/$mode/power-sources': typeof ModePowerSourcesRoute
@@ -297,6 +305,7 @@ export interface FileRoutesById {
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
+  '/$mode/overview': typeof ModeOverviewRoute
   '/$mode/packages': typeof ModePackagesRoute
   '/$mode/planner': typeof ModePlannerRoute
   '/$mode/power-sources': typeof ModePowerSourcesRoute
@@ -334,6 +343,7 @@ export interface FileRouteTypes {
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
+    | '/$mode/overview'
     | '/$mode/packages'
     | '/$mode/planner'
     | '/$mode/power-sources'
@@ -368,6 +378,7 @@ export interface FileRouteTypes {
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
+    | '/$mode/overview'
     | '/$mode/packages'
     | '/$mode/planner'
     | '/$mode/power-sources'
@@ -403,6 +414,7 @@ export interface FileRouteTypes {
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
+    | '/$mode/overview'
     | '/$mode/packages'
     | '/$mode/planner'
     | '/$mode/power-sources'
@@ -559,6 +571,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeMechanicsRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/overview': {
+      id: '/$mode/overview'
+      path: '/overview'
+      fullPath: '/$mode/overview'
+      preLoaderRoute: typeof ModeOverviewRouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/$mode/packages': {
       id: '/$mode/packages'
       path: '/packages'
@@ -679,6 +698,7 @@ interface ModeRouteChildren {
   ModeGearRoute: typeof ModeGearRoute
   ModeLineupsRoute: typeof ModeLineupsRoute
   ModeMechanicsRoute: typeof ModeMechanicsRoute
+  ModeOverviewRoute: typeof ModeOverviewRoute
   ModePackagesRoute: typeof ModePackagesRoute
   ModePlannerRoute: typeof ModePlannerRoute
   ModePowerSourcesRoute: typeof ModePowerSourcesRoute
@@ -708,6 +728,7 @@ const ModeRouteChildren: ModeRouteChildren = {
   ModeGearRoute: ModeGearRoute,
   ModeLineupsRoute: ModeLineupsRoute,
   ModeMechanicsRoute: ModeMechanicsRoute,
+  ModeOverviewRoute: ModeOverviewRoute,
   ModePackagesRoute: ModePackagesRoute,
   ModePlannerRoute: ModePlannerRoute,
   ModePowerSourcesRoute: ModePowerSourcesRoute,

@@ -1,0 +1,12 @@
+{
+  "batch": "01-fixture",
+  "posts": [
+    {
+      "source": "other",
+      "id": "fixture-exp-guide",
+      "title_en": "Fixture: EXP Dungeon auto guide",
+      "relevance": 3,
+      "summary_en": "Fixture summary: an auto deck for the EXP Dungeon."
+    }
+  ]
+}

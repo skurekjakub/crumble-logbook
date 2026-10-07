@@ -1,0 +1,30 @@
+{
+  "web:fixture-exp-guide": {
+    "url": "https://example.test/fixture-exp-guide",
+    "title": "Fixture EXP Dungeon guide",
+    "title_en": "Fixture: EXP Dungeon auto guide",
+    "date": "2026-10-05",
+    "signal": "relevance 3/3"
+  },
+  "web:fixture-exp-clear": {
+    "url": "https://example.test/fixture-exp-clear",
+    "title": "Fixture EXP clear",
+    "title_en": "Fixture: an EXP Dungeon clear screenshot",
+    "date": "2026-10-06",
+    "signal": "relevance 2/3"
+  },
+  "web:fixture-dough": {
+    "url": "https://example.test/fixture-dough",
+    "title": "Fixture dough dungeon",
+    "title_en": "Fixture: the dough dungeon's entry and boss",
+    "date": "2026-10-04",
+    "signal": "relevance 2/3"
+  },
+  "web:fixture-wiki": {
+    "url": "https://example.test/fixture-wiki",
+    "title": "Fixture wiki",
+    "title_en": "Fixture: the daily dungeon list",
+    "date": "2026-10-01",
+    "signal": "relevance 1/3"
+  }
+}

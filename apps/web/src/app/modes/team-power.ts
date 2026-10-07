@@ -109,4 +109,5 @@ export const TEAM_POWER = {
       ],
     },
   },
+  daily: null,
 } as const satisfies ModeSection;

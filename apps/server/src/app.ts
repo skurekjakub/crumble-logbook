@@ -58,6 +58,11 @@ export function createApp(services: Services) {
       R.dungeonExclusions.path,
       crudRouter(endpoints(services.dungeonExclusions), R.dungeonExclusions),
     )
+    .route(R.dailyDungeons.path, crudRouter(endpoints(services.dailyDungeons), R.dailyDungeons))
+    .route(
+      R.dailyDungeonClears.path,
+      crudRouter(endpoints(services.dailyDungeonClears), R.dailyDungeonClears),
+    )
     .route(R.powerSources.path, crudRouter(endpoints(services.powerSources), R.powerSources))
     .route(
       R.powerDataPoints.path,

@@ -3,7 +3,8 @@
  * validated, what its rows reference, and how its rows are mapped into
  * write steps. A new curated collection is an entry here (or in a file
  * whose collections this one spreads in, such as `stage-collections.ts`,
- * `dungeon-collections.ts` or `team-power-collections.ts`)
+ * `dungeon-collections.ts`, `daily-dungeon-collections.ts` or
+ * `team-power-collections.ts`)
  * plus its file in the record's `curated/manifest.json`; the reader and
  * the writer need no edits.
  *
@@ -15,6 +16,12 @@ import type { GlossaryInsert } from "../repos/glossary";
 import type { SourceInsert } from "../repos/sources";
 import { deckModeMismatch } from "../services/deck-modes";
 import { findCapture } from "./captures";
+import {
+  DAILY_DUNGEONS,
+  DAILY_DUNGEON_CLEARS,
+  dailyRunProblem,
+  storedDungeons,
+} from "./daily-dungeon-collections";
 import { DUNGEON_COLLECTIONS } from "./dungeon-collections";
 import type { Collection } from "./collection-kit";
 import {
@@ -202,6 +209,8 @@ export const COLLECTIONS = {
       ];
     },
   }),
+  // Before the decks: a daily dungeon deck names a stored daily dungeon.
+  ...DAILY_DUNGEONS,
   decks: collection({
     optional: true,
     /** @inheritdoc */
@@ -218,6 +227,8 @@ export const COLLECTIONS = {
       checkObsoleteDates(file, decks, context);
       const { deckModes } = context;
       decks.forEach((deck, index) => {
+        const problem = dailyRunProblem(deck);
+        if (problem) throw new ImportError(file, index, problem);
         const successor = deck.obsolete?.superseded_by;
         if (successor === undefined) return;
         if (successor === deck.id) {
@@ -238,7 +249,13 @@ export const COLLECTIONS = {
             decks.map((deck) => deck.id),
             (id) => repos.decks.get(id)?.recordSlug,
           );
-          for (const { deck, cookies, pets, notes, seed } of mapped) {
+          const dungeons = storedDungeons(repos);
+          mapped.forEach(({ run }, index) => {
+            if (run && !dungeons.has(run.dungeon)) {
+              throw new ImportError(file, index, `daily dungeon ${run.dungeon} isn't loaded`);
+            }
+          });
+          for (const { deck, cookies, pets, notes, run, seed } of mapped) {
             repos.decks.insert({
               ...deck,
               ...lifecycleColumns(seed.obsolete),
@@ -248,6 +265,7 @@ export const COLLECTIONS = {
             repos.decks.replaceCookies(deck.id, cookies);
             repos.decks.replacePets(deck.id, pets);
             repos.decks.replaceNotes(deck.id, notes);
+            repos.decks.replaceDailyRun(deck.id, run);
             repos.citations.replace("deck", deck.id, seed.sources);
             citeObsolescence(repos, "deck", deck.id, seed.obsolete);
           }
@@ -373,6 +391,7 @@ export const COLLECTIONS = {
   usage: { ...citedRows("usageStats", modedRows(seedUsage), mapUsage), optional: true },
   ...STAGE_COLLECTIONS,
   ...DUNGEON_COLLECTIONS,
+  ...DAILY_DUNGEON_CLEARS,
   ...TEAM_POWER_COLLECTIONS,
 };
 

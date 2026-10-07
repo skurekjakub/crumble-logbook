@@ -1,9 +1,18 @@
-import type { DeckCookieRow, DeckInput, DeckNoteKind, DeckPatch, DeckRow } from "@crumble/schema";
-import { OBSOLESCENCE, obsolescenceKey } from "@crumble/schema";
-import { ConflictError, NotFoundError } from "../errors";
+import type {
+  DeckCookieRow,
+  DeckDailyDungeonRow,
+  DeckDailyRunInput,
+  DeckInput,
+  DeckNoteKind,
+  DeckPatch,
+  DeckRow,
+} from "@crumble/schema";
+import { OBSOLESCENCE, dailyDeckProblem, obsolescenceKey, withRunPowers } from "@crumble/schema";
+import { ConflictError, NotFoundError, UnknownRefsError } from "../errors";
 import type { FiltersOf } from "../registry";
 import { REGISTRY } from "../registry";
 import type { Repos, Store } from "../repos";
+import type { DeckDailyRunInsert } from "../repos/decks";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
 import { deckModeChangeConflict } from "./deck-modes";
@@ -11,12 +20,18 @@ import { applyFilters } from "./filters";
 import type { NameRef } from "./names";
 import { createNameResolver, recordsOf } from "./names";
 
+/** A daily dungeon deck's run facts as returned to callers, its captain glossed. */
+export type DailyRunView = Omit<DeckDailyDungeonRow, "deckId" | "captainKr"> & {
+  captain: NameRef | null;
+};
+
 /**
  * A deck as returned to callers: its cookies and pets carry a resolved
  * English gloss alongside their stored Korean name (the deck's own record's
  * glossary entries first), `atkOrder` is resolved from a raw name list to
- * {@link NameRef}s (or stays `null`), and the row carries its citing
- * sources, and the sources that say why it became obsolete
+ * {@link NameRef}s (or stays `null`), `dailyDungeon` holds a daily dungeon
+ * deck's run facts (`null` for any other deck), and the row carries its
+ * citing sources, and the sources that say why it became obsolete
  * (`obsoleteSources`, empty while it is current).
  */
 export type DeckView = Omit<Cited<DeckRow>, "atkOrder"> & {
@@ -24,13 +39,16 @@ export type DeckView = Omit<Cited<DeckRow>, "atkOrder"> & {
   pets: NameRef[];
   notes: Array<{ kind: DeckNoteKind; text: string }>;
   atkOrder: NameRef[] | null;
+  dailyDungeon: DailyRunView | null;
   obsoleteSources: string[];
 };
 
 /**
  * CRUD over the decks aggregate: the deck row, its ordered cookies, pets and
- * notes, and its citations, with Korean names resolved to English via the
- * glossary on every read.
+ * notes, a daily dungeon deck's run facts, and its citations, with Korean
+ * names resolved to English via the glossary on every read. A deck keeps
+ * the daily dungeon rules (`dailyDeckProblem`), and its run facts name a
+ * stored daily dungeon.
  */
 export interface DeckService {
   /**
@@ -53,27 +71,31 @@ export interface DeckService {
    * @param input - the deck and its children; `position` defaults to the
    *   next free position when omitted
    * @throws {ConflictError} if `input.id` already exists
-   * @throws {UnknownRefsError} if any cited source id doesn't exist
+   * @throws {UnknownRefsError} if any cited source id, or the daily dungeon
+   *   the run facts name, doesn't exist
    */
   create(input: DeckInput): DeckView;
   /**
    * Updates the deck with `id`, merging in `patch`. Only the children whose
-   * key is present in `patch` (`cookies`, `pets`, `notes`) are replaced; an
-   * absent key leaves that child list unchanged, while an empty array
-   * clears it. Citations are replaced only when `patch.sources` is given.
+   * key is present in `patch` (`cookies`, `pets`, `notes`, `dailyDungeon`)
+   * are replaced; an absent key leaves that child unchanged, while an
+   * empty array (or a `null` run) clears it. Citations are replaced only
+   * when `patch.sources` is given.
    *
    * @param id - the deck's slug id
    * @param patch - the fields and children to change
    * @throws {NotFoundError} if `id` doesn't exist
-   * @throws {UnknownRefsError} if any cited source id doesn't exist
+   * @throws {UnknownRefsError} if any cited source id, or the daily dungeon
+   *   the run facts name, doesn't exist
    * @throws {ConflictError} if `patch.mode` would leave a mode-bound row
    *   (a counter edge, a stage or dungeon row) naming a deck of another
-   *   mode; nothing is written
+   *   mode, or if the patched deck would break the daily dungeon rules;
+   *   nothing is written
    */
   update(id: string, patch: DeckPatch): DeckView;
   /**
-   * Deletes the deck with `id` and its citations. Its cookies, pets and
-   * notes cascade; any score referencing it keeps its row with `deckId` set
+   * Deletes the deck with `id` and its citations. Its cookies, pets, notes
+   * and run facts cascade; any score referencing it keeps its row with `deckId` set
    * to `null` (both via the schema's foreign keys). A deck a counter edge
    * names is kept: delete or repoint the edges first. Its obsolete reason's
    * citations go with it.
@@ -105,6 +127,42 @@ function groupByDeckId<T extends { deckId: string }>(rows: T[]): Map<string, T[]
 }
 
 /**
+ * Maps a deck's run facts as submitted onto their columns.
+ *
+ * @param run - the run facts, or `null` for a deck without any
+ * @returns the columns, the powers in billions read from the posted texts, or `null`
+ */
+function dailyRunValues(run: DeckDailyRunInput | null): DeckDailyRunInsert | null {
+  return run === null ? null : withRunPowers(run);
+}
+
+/**
+ * Builds the view of a deck's stored run facts.
+ *
+ * @param run - the stored row
+ * @param resolve - glosses a Korean name for the deck's record
+ * @returns the facts, the captain glossed (`null` when none is named)
+ */
+function runView(run: DeckDailyDungeonRow, resolve: (name: string) => NameRef): DailyRunView {
+  const { deckId: _deckId, captainKr, ...facts } = run;
+  return { ...facts, captain: captainKr === null ? null : resolve(captainKr) };
+}
+
+/**
+ * Checks that the daily dungeon a deck's run facts name is stored.
+ *
+ * @param repos - the write's repos
+ * @param run - the run facts, or `null` for a deck without any
+ * @throws {UnknownRefsError} `"dailyDungeons"` naming the slug when no daily dungeon has it
+ */
+function assertDungeonExists(repos: Repos, run: { dungeon: string } | null): void {
+  if (run === null) return;
+  if (!repos.dailyDungeons.list().some((dungeon) => dungeon.slug === run.dungeon)) {
+    throw new UnknownRefsError("dailyDungeons", [run.dungeon]);
+  }
+}
+
+/**
  * Builds a {@link DeckService} over `store`.
  *
  * @param store - the store to persist through
@@ -124,6 +182,7 @@ export function createDeckService(store: Store): DeckService {
     const cookiesByDeck = groupByDeckId(repos.decks.cookies(ids));
     const petsByDeck = groupByDeckId(repos.decks.pets(ids));
     const notesByDeck = groupByDeckId(repos.decks.notes(ids));
+    const runsByDeck = new Map(repos.decks.dailyRuns(ids).map((run) => [run.deckId, run]));
     const sourcesById = repos.citations.sourcesFor("deck", ids);
     const reasonsById = repos.citations.sourcesFor(
       OBSOLESCENCE,
@@ -131,6 +190,7 @@ export function createDeckService(store: Store): DeckService {
     );
     return rows.map((row) => {
       const records = recordsOf(row);
+      const run = runsByDeck.get(row.id);
       return {
         ...row,
         sources: sourcesById.get(row.id) ?? [],
@@ -145,6 +205,7 @@ export function createDeckService(store: Store): DeckService {
           kind: note.kind,
           text: note.text,
         })),
+        dailyDungeon: run ? runView(run, (name) => resolve(name, records)) : null,
       };
     });
   };
@@ -171,7 +232,8 @@ export function createDeckService(store: Store): DeckService {
         if (repos.decks.exists(input.id))
           throw new ConflictError(`deck already exists: ${input.id}`);
         assertSourcesExist(repos, input.sources);
-        const { cookies, pets, notes, sources, position, ...values } = input;
+        const { cookies, pets, notes, dailyDungeon, sources, position, ...values } = input;
+        assertDungeonExists(repos, dailyDungeon ?? null);
         const row = repos.decks.insert({
           ...values,
           position: position ?? repos.decks.nextPosition(),
@@ -179,6 +241,7 @@ export function createDeckService(store: Store): DeckService {
         repos.decks.replaceCookies(row.id, cookies);
         repos.decks.replacePets(row.id, pets);
         repos.decks.replaceNotes(row.id, notes);
+        repos.decks.replaceDailyRun(row.id, dailyRunValues(dailyDungeon ?? null));
         repos.citations.replace("deck", row.id, sources);
         return toViews(repos, [row])[0] as never;
       }),
@@ -186,8 +249,9 @@ export function createDeckService(store: Store): DeckService {
     update: (id, patch) =>
       store.transaction((repos) => {
         if (!repos.decks.exists(id)) throw new NotFoundError("deck", id);
-        const { cookies, pets, notes, sources, ...values } = patch;
+        const { cookies, pets, notes, dailyDungeon, sources, ...values } = patch;
         if (sources !== undefined) assertSourcesExist(repos, sources);
+        if (dailyDungeon !== undefined) assertDungeonExists(repos, dailyDungeon);
         if (values.mode !== undefined) {
           const conflict = deckModeChangeConflict(repos, id, values.mode);
           if (conflict) throw new ConflictError(conflict);
@@ -198,6 +262,15 @@ export function createDeckService(store: Store): DeckService {
         if (cookies !== undefined) repos.decks.replaceCookies(id, cookies);
         if (pets !== undefined) repos.decks.replacePets(id, pets);
         if (notes !== undefined) repos.decks.replaceNotes(id, notes);
+        if (dailyDungeon !== undefined) {
+          repos.decks.replaceDailyRun(id, dailyRunValues(dailyDungeon));
+        }
+        const problem = dailyDeckProblem({
+          mode: row.mode,
+          cookies: repos.decks.cookies([id]).map((cookie) => cookie.cookieKr),
+          run: repos.decks.dailyRuns([id])[0] ?? null,
+        });
+        if (problem) throw new ConflictError(`deck ${id}: ${problem}`);
         if (sources !== undefined) repos.citations.replace("deck", id, sources);
         return toViews(repos, [row])[0] as never;
       }),

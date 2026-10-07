@@ -1,0 +1,25 @@
+{
+  "updated": "2026-10-07",
+  "season": "Fixture data, not research",
+  "lede": "Fixture: the daily dungeons, the furthest auto deck per dungeon first.",
+  "caveat": "Fixture rows for tests; no claim here is research.",
+  "you": {
+    "summary": "Fixture: run the EXP Dungeon on full auto with the Milk deck.",
+    "changes": ["Fixture: captain Milk, Brightseeker on the boss."],
+    "sources": ["web:fixture-exp-guide"]
+  },
+  "modes": {
+    "daily_dungeon": {
+      "lede": "Fixture: each daily dungeon's best full-auto deck, then the rest by stage.",
+      "caveat": "Fixture rows for tests.",
+      "rules": [
+        {
+          "title": "Entry",
+          "body": "Fixture: each dungeon takes its own key; a lost run returns it.",
+          "confidence": "medium",
+          "sources": ["web:fixture-wiki"]
+        }
+      ]
+    }
+  }
+}

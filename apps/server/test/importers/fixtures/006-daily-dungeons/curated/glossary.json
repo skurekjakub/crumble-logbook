@@ -1,0 +1,152 @@
+[
+  {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "kr_short": ["우유", "소아과"],
+    "en": "Milk Cookie's Crunchy Strong Pediatrician",
+    "kind": "cookie",
+    "element": "빛/Light",
+    "class": "지원/Support",
+    "rarity": "SSR",
+    "resource_key": "cookie4019"
+  },
+  {
+    "kr": "마카롱맛 쿠키",
+    "kr_short": ["마카롱"],
+    "en": "Macaron Cookie",
+    "kind": "cookie",
+    "element": "풀/Grass",
+    "class": "지원/Support",
+    "rarity": "SR",
+    "resource_key": "cookie0059"
+  },
+  {
+    "kr": "호밀맛 쿠키",
+    "kr_short": ["호밀"],
+    "en": "Rye Cookie",
+    "kind": "cookie",
+    "element": "불/Fire",
+    "class": "사격/Ranged",
+    "rarity": "SR",
+    "resource_key": "cookie0515"
+  },
+  {
+    "kr": "석류맛 쿠키",
+    "kr_short": ["석류"],
+    "en": "Pomegranate Cookie",
+    "kind": "cookie",
+    "element": "어둠/Dark",
+    "class": "지원/Support",
+    "rarity": "SSR",
+    "resource_key": "cookie0126"
+  },
+  {
+    "kr": "딸기크레페맛 쿠키",
+    "kr_short": ["딸크"],
+    "en": "Strawberry Crepe Cookie",
+    "kind": "cookie",
+    "element": "빛/Light",
+    "class": "방어/Tank",
+    "rarity": "SSR",
+    "resource_key": "cookie0518"
+  },
+  {
+    "kr": "허브맛 쿠키",
+    "kr_short": ["허브"],
+    "en": "Herb Cookie",
+    "kind": "cookie",
+    "element": "풀/Grass",
+    "class": "지원/Support",
+    "rarity": "SR",
+    "resource_key": "cookie0063"
+  },
+  {
+    "kr": "브라이트시커 쿠키",
+    "kr_short": ["시커"],
+    "en": "Brightseeker Cookie",
+    "kind": "cookie",
+    "element": "빛/Light",
+    "class": "사격/Ranged",
+    "rarity": "TSSR",
+    "resource_key": "cookie4013"
+  },
+  {
+    "kr": "피겨여왕맛 쿠키",
+    "kr_short": ["피겨"],
+    "en": "Skating Queen Cookie",
+    "kind": "cookie",
+    "element": "물/Water",
+    "class": "돌격/Charge",
+    "rarity": "SSR",
+    "resource_key": "cookie0018"
+  },
+  {
+    "kr": "다크초코 쿠키",
+    "kr_short": ["닼초"],
+    "en": "Dark Choco Cookie",
+    "kind": "cookie",
+    "element": "어둠/Dark",
+    "class": "방어/Tank",
+    "rarity": "SSR",
+    "resource_key": "cookie0103"
+  },
+  {
+    "kr": "전갈맛 쿠키",
+    "kr_short": ["전갈"],
+    "en": "Scorpion Cookie",
+    "kind": "cookie",
+    "element": "불/Fire",
+    "class": "사격/Ranged",
+    "rarity": "SSR",
+    "resource_key": "cookie0181"
+  },
+  {
+    "kr": "체리맛 쿠키",
+    "kr_short": ["체리"],
+    "en": "Cherry Cookie",
+    "kind": "cookie",
+    "element": "불/Fire",
+    "class": "사격/Ranged",
+    "rarity": "R",
+    "resource_key": "cookie0028"
+  },
+  {
+    "kr": "이름 모를 케이크 들개",
+    "kr_short": ["들개"],
+    "en": "Nameless Cake Hound",
+    "kind": "cookie",
+    "element": "불/Fire",
+    "class": "방어/Tank",
+    "rarity": "SSR",
+    "resource_key": "cookie4024"
+  },
+  {
+    "kr": "슈크림맛 쿠키",
+    "kr_short": ["슈크림"],
+    "en": "Cream Puff Cookie",
+    "kind": "cookie",
+    "element": "빛/Light",
+    "class": "사격/Ranged",
+    "rarity": "SSR",
+    "resource_key": "cookie0048"
+  },
+  {
+    "kr": "핫도그도그",
+    "kr_short": ["핫도그"],
+    "en": "Hot Doggie",
+    "kind": "pet",
+    "element": "",
+    "class": "",
+    "rarity": "SSR",
+    "resource_key": "pet0111"
+  },
+  {
+    "kr": "황금방울",
+    "kr_short": [],
+    "en": "Gold Drop",
+    "kind": "pet",
+    "element": "",
+    "class": "",
+    "rarity": "SSR",
+    "resource_key": "pet0029"
+  }
+]

@@ -507,6 +507,28 @@ export const dungeonExclusionsQuery = () =>
   });
 
 /**
+ * The daily dungeons, in the record's order: entry, boss, drops and top stage.
+ *
+ * @returns the query options
+ */
+export const dailyDungeonsQuery = () =>
+  queryOptions({
+    queryKey: ["daily-dungeons"],
+    queryFn: () => parseResponse(api["daily-dungeons"].$get({ query: {} })),
+  });
+
+/**
+ * Documented daily dungeon clears, furthest stage first, then lowest power.
+ *
+ * @returns the query options
+ */
+export const dailyDungeonClearsQuery = () =>
+  queryOptions({
+    queryKey: ["daily-dungeon-clears"],
+    queryFn: () => parseResponse(api["daily-dungeon-clears"].$get({ query: {} })),
+  });
+
+/**
  * Every system that raises displayed team power, in the record's order.
  *
  * @returns the query options

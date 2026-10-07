@@ -8,8 +8,11 @@ export const CURRENT = {
   obsoleteSources: [] as string[],
 };
 
-/** The lifecycle fields of a current deck, spread into fixtures. */
-export const CURRENT_DECK = { ...CURRENT, supersededBy: null };
+/**
+ * The fields of a current deck of a mode without daily dungeon run facts,
+ * spread into fixtures: its lifecycle, and `dailyDungeon: null`.
+ */
+export const CURRENT_DECK = { ...CURRENT, supersededBy: null, dailyDungeon: null };
 
 /** A canned API response: a JSON body, optionally with a non-200 status. */
 export type Canned = { status?: number; body: unknown };

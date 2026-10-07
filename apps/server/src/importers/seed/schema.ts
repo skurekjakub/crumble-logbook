@@ -10,6 +10,7 @@ import type { GameMode } from "@crumble/schema";
 import {
   CONFIDENCE,
   DECK_STATUS,
+  DUNGEON_AUTO,
   GAME_MODE,
   GEAR_CONTEXT,
   GLOSSARY_KIND,
@@ -78,10 +79,24 @@ export const seedDeckCookie = z
 /** Output of {@link seedDeckCookie}. */
 export type SeedDeckCookie = z.output<typeof seedDeckCookie>;
 
-/** One entry of `decks.json`. `obsolete`, when present, marks it obsolete. */
+/**
+ * One entry of `decks.json`. `obsolete`, when present, marks it obsolete.
+ * A `daily_dungeon` deck also names its run facts: the daily dungeon it
+ * runs (`dungeon`, an id of `daily-dungeons.json`), how far it plays
+ * itself (`auto`), the stage it reached, its team power and the stage's
+ * recommended power as posted, its gear preset and its captain (one of its
+ * cookies' `kr`); a deck of any other mode names none.
+ */
 export const seedDeck = z.strictObject({
   id: deckSlug,
   mode,
+  dungeon: deckSlug.optional(),
+  auto: z.enum(DUNGEON_AUTO).optional(),
+  stage: z.number().int().positive().optional(),
+  power: z.string().min(1).optional(),
+  recommended_power: z.string().min(1).optional(),
+  gear_preset: z.string().min(1).optional(),
+  captain: z.string().min(1).optional(),
   name_en: z.string().min(1),
   name_kr: z.string().optional(),
   status: z.enum(DECK_STATUS),

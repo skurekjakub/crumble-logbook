@@ -1,0 +1,13 @@
+{
+  "collections": {
+    "meta": "meta.json",
+    "takeaways": "takeaways.json",
+    "dailyDungeons": "daily-dungeons.json",
+    "decks": "decks.json",
+    "dailyDungeonClears": "dungeon-clears.json",
+    "mechanics": "mechanics.json",
+    "timeline": "timeline.json",
+    "sources": "sources.json",
+    "glossary": "glossary.json"
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "exp",
+    "name_en": "EXP Dungeon",
+    "name_kr": "경험치 던전",
+    "drops": ["EXP jelly"],
+    "entry": {
+      "keys": "Fixture: 2 a day",
+      "ticket_back_on_loss": true,
+      "quick_clear": true,
+      "note": "Fixture: quick clear opens after a stage's first clear."
+    },
+    "boss": {
+      "en": "Fixture boss",
+      "element": "Fire",
+      "weakness": "Water",
+      "rotates": false
+    },
+    "top_stage": { "stage": 52, "date": "2026-10-06", "source": "web:fixture-exp-clear" },
+    "notes": ["Fixture: full auto stalls past 45 without a second healer."],
+    "sources": ["web:fixture-exp-guide", "web:fixture-wiki"]
+  },
+  {
+    "id": "dough",
+    "name_en": "Dough Dungeon",
+    "name_kr": "반죽 던전",
+    "drops": ["Dough", "Coins"],
+    "entry": { "keys": "Fixture: 2 a day", "ticket_back_on_loss": false, "quick_clear": null },
+    "boss": {
+      "element": null,
+      "weakness": null,
+      "rotates": true,
+      "rotation": "Fixture: element changes by weekday"
+    },
+    "top_stage": null,
+    "sources": ["web:fixture-dough"]
+  },
+  {
+    "id": "research-stone",
+    "name_en": "Research Stone Dungeon",
+    "drops": ["Research stones"],
+    "entry": {},
+    "boss": {},
+    "sources": ["web:fixture-wiki"]
+  }
+]

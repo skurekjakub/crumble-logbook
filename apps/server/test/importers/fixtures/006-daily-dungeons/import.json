@@ -1,0 +1,13 @@
+{
+  "record": {
+    "slug": "006-daily-dungeons",
+    "question": "Fixture: which decks clear each daily dungeon furthest, on full auto first.",
+    "status": "active",
+    "startedAt": "2026-10-07",
+    "mode": "daily_dungeon"
+  },
+  "curated": "curated",
+  "extractions": "extract",
+  "captures": [],
+  "rankings": []
+}

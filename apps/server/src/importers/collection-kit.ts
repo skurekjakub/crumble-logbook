@@ -106,6 +106,22 @@ export function collection<Parsed>(collection: Collection<Parsed>): Collection<P
 }
 
 /**
+ * Checks that every value of `values` is new.
+ *
+ * @param file - the file, as errors name it
+ * @param what - the field, as errors name it
+ * @param values - the values, in file order
+ * @throws {ImportError} naming the file, the index and the value of the first repeat
+ */
+export function assertDistinct(file: string, what: string, values: readonly string[]): void {
+  const seen = new Set<string>();
+  values.forEach((value, index) => {
+    if (seen.has(value)) throw new ImportError(file, index, `duplicate ${what} "${value}"`);
+    seen.add(value);
+  });
+}
+
+/**
  * Checks that every deck the rows of a one-mode collection name is a deck
  * of that mode.
  *

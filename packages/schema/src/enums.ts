@@ -43,9 +43,11 @@ export type RankingBoard = (typeof RANKING_BOARD)[number];
  * Game mode research content is about: Guild Conquest (길드 토벌전), regular
  * Arena (아레나), Rumble Arena (와글와글 아레나), stage pushing (main
  * stages and the Dimensional Rift), Crumble Dungeon (크럼블 던전, the
- * score attack against the Holy Golden Drop), or team power growth
- * (전투력: what raises the power the game shows for a lineup, and at what
- * cost). The first is the default of every `mode` column.
+ * score attack against the Holy Golden Drop), team power growth (전투력:
+ * what raises the power the game shows for a lineup, and at what cost), or
+ * the daily dungeons (일일던전: the EXP, dough, research-stone and other
+ * dungeons pushed stage by stage for materials). The first is the default
+ * of every `mode` column.
  */
 export const GAME_MODE = [
   "guild_conquest",
@@ -54,8 +56,16 @@ export const GAME_MODE = [
   "stage",
   "crumble_dungeon",
   "team_power",
+  "daily_dungeon",
 ] as const;
 export type GameMode = (typeof GAME_MODE)[number];
+
+/**
+ * How far a daily dungeon run plays itself: on full auto (`full`), on
+ * semi-auto, auto with some play by hand (`semi`), or by hand (`manual`).
+ */
+export const DUNGEON_AUTO = ["full", "semi", "manual"] as const;
+export type DungeonAuto = (typeof DUNGEON_AUTO)[number];
 
 /** Where a power source's power counts: main stages, the Dimensional Rift, Arena, Guild Conquest. */
 export const POWER_PLACE = ["stage", "rift", "arena", "conquest"] as const;
@@ -250,6 +260,8 @@ export const CITED_ENTITY = [
   "dungeon_run",
   "dungeon_lineup",
   "dungeon_exclusion",
+  "daily_dungeon",
+  "daily_dungeon_clear",
   "power_source",
   "power_data_point",
   "package",

@@ -28,7 +28,7 @@ import { ImportError } from "../errors";
 import type { LinkTarget } from "../registry";
 import type { Repos } from "../repos";
 import type { RowRefs } from "./collection-kit";
-import { collection } from "./collection-kit";
+import { assertDistinct, collection } from "./collection-kit";
 import { parseFile } from "./files";
 import { assertUnclaimed } from "./shared";
 import type { CitedValues, WriteStep } from "./steps";
@@ -269,22 +269,6 @@ export const seedPlanner = z.strictObject({
 });
 /** Output of {@link seedPlanner}. */
 export type SeedPlanner = z.output<typeof seedPlanner>;
-
-/**
- * Checks that every value of `values` is new.
- *
- * @param file - the file, as errors name it
- * @param what - the field, as errors name it
- * @param values - the values, in file order
- * @throws {ImportError} naming the file, the index and the value of the first repeat
- */
-function assertDistinct(file: string, what: string, values: readonly string[]): void {
-  const seen = new Set<string>();
-  values.forEach((value, index) => {
-    if (seen.has(value)) throw new ImportError(file, index, `duplicate ${what} "${value}"`);
-    seen.add(value);
-  });
-}
 
 /** One slug a row names, as {@link checkLinks} checks it. */
 interface NamedSlug {

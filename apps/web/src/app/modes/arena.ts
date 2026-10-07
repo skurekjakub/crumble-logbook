@@ -46,4 +46,5 @@ export const ARENA = {
   stage: null,
   dungeon: null,
   teamPower: null,
+  daily: null,
 } as const satisfies ModeSection;

@@ -19,6 +19,7 @@ import {
   activeTab,
   ARENA,
   CONQUEST,
+  DAILY,
   DUNGEON,
   MODES,
   modeById,
@@ -181,6 +182,24 @@ describe("MODES", () => {
     }
   });
 
+  it("files the daily dungeon section under record 006, landing on the dungeon board", () => {
+    expect(DAILY.recordSlug).toBe("006-daily-dungeons");
+    expect(DAILY.scope.mode).toBe("daily_dungeon");
+    expect(DAILY.to).toBe("/daily-dungeons");
+    expect(DAILY.tabs.map((t) => [t.id, t.to])).toEqual(
+      [
+        ["dungeons", ""],
+        ["overview", "/overview"],
+        ["teams", "/teams"],
+        ["mechanics", "/mechanics"],
+        ["timeline", "/timeline"],
+      ].map(([id, sub]) => [id, `/daily-dungeons${sub}`]),
+    );
+    expect(activeTab(DAILY.tabs, "/daily-dungeons")?.id).toBe("dungeons");
+    expect(sectionForPath("/daily-dungeons/teams")?.id).toBe("daily-dungeons");
+    for (const mode of MODES) expect(mode.daily === null, mode.id).toBe(mode !== DAILY);
+  });
+
   it("lists the account first among the shared sections, then research, Sources and Glossary", () => {
     expect(SHARED_SECTIONS.map((s) => s.to)).toEqual([
       "/account",
@@ -226,7 +245,13 @@ describe("mode-scoped queries", () => {
     expectTypeOf<ModeOf<InferRequestType<typeof api.usage.$get>>>().toEqualTypeOf<Mode>();
     expectTypeOf<ModeOf<InferRequestType<typeof api.records.$get>>>().toEqualTypeOf<Mode>();
     expectTypeOf<GameMode>().toEqualTypeOf<
-      "guild_conquest" | "arena" | "rumble_arena" | "stage" | "crumble_dungeon" | "team_power"
+      | "guild_conquest"
+      | "arena"
+      | "rumble_arena"
+      | "stage"
+      | "crumble_dungeon"
+      | "team_power"
+      | "daily_dungeon"
     >();
   });
 
