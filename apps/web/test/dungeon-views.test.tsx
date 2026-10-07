@@ -352,16 +352,21 @@ describe("the runs board", () => {
       ["3", "219.53G"],
     ]);
     // The second run has the higher score ÷ power; it still ranks below the first.
-    expect(bodyRows(ranked)[0]![3]).toBe("24.3×");
-    expect(bodyRows(ranked)[1]![3]).toBe("36.9×");
+    expect(bodyRows(ranked)[0]![3]).toBe("15.58G24.3× per power");
+    expect(bodyRows(ranked)[1]![3]).toBe("6.62G36.9× per power");
+    // #1 stands out; the rest don't.
+    expect(ranked.querySelectorAll(".rank.top")).toHaveLength(1);
+    expect(ranked.querySelector("tbody tr .rank.top")).toHaveTextContent("1");
     const claims = screen.getByRole("region", { name: "Claims" });
     expect(bodyRows(claims)).toHaveLength(1);
     expect(bodyRows(claims)[0]![0]).toBe("–");
     expect(bodyRows(claims)[0]![1]).toBe("350G");
-    expect(bodyRows(claims)[0]).toContain("Text only");
+    expect(bodyRows(claims)[0]![2]).toBe("Text only");
+    expect(claims.querySelector(".pill.claimed")).toHaveTextContent("Text only");
+    expect(ranked.querySelector(".pill.verified")).toHaveTextContent("Screenshot");
+    expect(claims.querySelector(".rank.top")).toBeNull();
     const headers = [...ranked.querySelectorAll("th")].map((th) => th.textContent);
-    expect(headers).toContain("Total power (collection)");
-    expect(headers).toContain("Score ÷ power (normaliser)");
+    expect(headers).toContain("Collection power");
   });
 
   it("shows each run's total power, time and cookies left, board, server place, evidence and build", async () => {
@@ -369,21 +374,20 @@ describe("the runs board", () => {
     const ranked = await screen.findByRole("region", { name: "Ranked runs" });
     await waitFor(() => expect(bodyRows(ranked)).toHaveLength(3));
     const [top, efficient, weekly] = bodyRows(ranked);
-    expect(top![2]).toBe("15.58G");
-    expect(top![4]).toBe("0 s");
-    expect(top![6]).toContain("Run result");
-    expect(top![6]).toContain("1st on the server");
-    expect(top![6]).toContain("Server: a server in the 100s");
-    expect(top![7]).toBe("Screenshot");
+    expect(top![3]).toContain("15.58G");
+    expect(top![4]).toContain("Run result");
+    expect(top![4]).toContain("1st on the server · 0 s left");
+    expect(top![4]).toContain("Server: a server in the 100s");
+    expect(top![2]).toBe("Screenshot");
     await waitFor(() =>
       expect(within(ranked).getAllByRole("row")[1]!.querySelector(".order")).toHaveTextContent(
         "Milk›Scorpion",
       ),
     );
-    expect(top![9]).toContain("The post puts Scorpion second.");
-    expect(efficient![5]).toBe("0");
-    expect(weekly![6]).toContain("Weekly best");
-    expect(weekly![7]).toBe("Video");
+    expect(top![6]).toContain("The post puts Scorpion second.");
+    expect(efficient![4]).toContain("2 s left · 0 cookies left");
+    expect(weekly![4]).toContain("Weekly best");
+    expect(weekly![2]).toBe("Video");
     expect(
       await within(ranked).findByRole("link", { name: "Milk–Scorpion beam lineup" }),
     ).toHaveAttribute("href", "/dungeon/teams#deck-dungeon-milk-scorpion-figure");
@@ -495,18 +499,56 @@ describe("the lineups", () => {
     expect(card).toHaveTextContent("Excluded cookies at Lv.1.");
     expect(card).toHaveTextContent("The list names 3 cookies; the first 40 by power deploy first.");
     const wave = card.querySelector("ol.wave")!;
+    // Numbered portraits in the author's order, the Korean name on hover.
     expect([...wave.querySelectorAll("li")].map((li) => li.textContent)).toEqual([
-      `Milk ${MILK}`,
-      `Scorpion ${SCORPION}`,
-      `Ion Cookie Robot ${ION}`,
+      "1Milk",
+      "2Scorpion",
+      "3Ion Cookie Robot",
     ]);
+    expect(wave.querySelectorAll("li .cicon")).toHaveLength(3);
+    expect(wave.querySelector("li")).toHaveAttribute("title", `Milk Cookie · ${MILK}`);
     expect(wave.querySelector("li.flagged")).toHaveTextContent("Ion Cookie Robot");
-    await waitFor(() => expect(card).toHaveTextContent(`Oven Wanderer ${OVEN} · Charger`));
-    expect(card).toHaveTextContent("is on the exclusions list (Charger, disputed)");
+    await waitFor(() => expect(card).toHaveTextContent(`Oven Wanderer ${OVEN}Charger`));
+    expect(card.querySelector(".card-head .pill.disputed")).toHaveTextContent(
+      "Keeps 1 excluded cookie",
+    );
+    expect(card.querySelector(".callout.kept")).toHaveTextContent(
+      `On the exclusions list, kept here: Ion Cookie Robot ${ION} (Charger, disputed)`,
+    );
     expect(within(card).getByRole("link", { name: "Milk–Scorpion beam lineup" })).toHaveAttribute(
       "href",
       "/dungeon/teams#deck-dungeon-milk-scorpion-figure",
     );
+  });
+});
+
+describe("a lineup that keeps nothing the exclusions list levels out", () => {
+  it("says it follows the exclusions, with no kept callout", async () => {
+    await renderRoute(
+      "/dungeon/lineups",
+      {
+        ...API,
+        "/api/dungeon-lineups": { body: [{ ...LINEUPS[0]!, first40: [MILK, SCORPION] }] },
+      },
+      { mode: DUNGEON },
+    );
+    const card = (await screen.findByRole("heading", { name: /ND러너/ })).closest("article")!;
+    await waitFor(() =>
+      expect(card.querySelector(".card-head .pill.good")).toHaveTextContent(
+        "Follows the exclusions",
+      ),
+    );
+    expect(card.querySelector(".callout.kept")).toBeNull();
+    expect(card.querySelector("li.flagged")).toBeNull();
+  });
+
+  it("says so when no lineup is recorded", async () => {
+    await renderRoute(
+      "/dungeon/lineups",
+      { ...API, "/api/dungeon-lineups": { body: [] } },
+      { mode: DUNGEON },
+    );
+    expect(await screen.findByText("No lineups recorded yet.")).toBeVisible();
   });
 });
 
@@ -533,25 +575,61 @@ describe("a lineup whose deck is obsolete", () => {
 describe("the exclusions", () => {
   it("lists each exclusion with its kind, status, why and the lineups that leave it out or keep it", async () => {
     await renderDungeon("/dungeon/exclusions");
-    await waitFor(() => expect(bodyRows(document)).toHaveLength(EXCLUSIONS.length));
-    const [oven, ion] = bodyRows(document);
-    expect(oven![0]).toContain("Oven Wanderer");
-    expect(oven![1]).toBe("Charger");
-    expect(oven![2]).toBe("Excluded");
-    expect(oven![3]).toBe("Drags Milk off the ranged dealers.");
-    await waitFor(() => expect(bodyRows(document)[0]![4]).toBe("ND러너 2026-09-18"));
-    expect(bodyRows(document)[0]![5]).toBe("–");
-    expect(ion![2]).toBe("Disputed");
-    expect(bodyRows(document)[1]![5]).toBe("ND러너 2026-09-18");
+    const list = await screen.findByRole("list", { name: "Exclusions" });
+    const rows = () => [...list.querySelectorAll("li.excl")] as HTMLElement[];
+    expect(rows()).toHaveLength(EXCLUSIONS.length);
+    const [oven, ion] = rows();
+    expect(oven!.querySelector(".excl-who")).toHaveTextContent("Oven Wanderer");
+    expect(oven!.querySelector(".excl-who .cicon")).not.toBeNull();
+    expect(oven!.querySelector(".excl-tags .chip")).toHaveTextContent("Charger");
+    expect(oven!.querySelector(".pill.avoid")).toHaveTextContent("Excluded");
+    expect(oven!.querySelector(".excl-why")).toHaveTextContent(
+      "Drags Milk off the ranged dealers.",
+    );
+    await waitFor(() =>
+      expect(oven!.querySelector(".excl-by")).toHaveTextContent(
+        "Left out by ND러너 2026-09-18Kept by –",
+      ),
+    );
+    expect(ion!.querySelector(".pill.claimed")).toHaveTextContent("Disputed");
+    expect(ion!.querySelector(".excl-by")).toHaveTextContent(
+      "Left out by –Kept by ND러너 2026-09-18",
+    );
     expect(screen.getAllByRole("link", { name: "ND러너 2026-09-18" })[0]).toHaveAttribute(
       "href",
       "/dungeon/lineups#lineup-ndrunner-2026-09-18",
     );
   });
 
+  it("marks a patched exclusion as retired", async () => {
+    await renderRoute(
+      "/dungeon/exclusions",
+      {
+        ...API,
+        "/api/dungeon-exclusions": { body: [{ ...EXCLUSIONS[0]!, status: "patched" }] },
+      },
+      { mode: DUNGEON },
+    );
+    const list = await screen.findByRole("list", { name: "Exclusions" });
+    expect(list.querySelector("li.excl.s-patched .pill.obsolete")).toHaveTextContent("Patched");
+  });
+
+  it("says so when there are no exclusions, or none match", async () => {
+    await renderRoute(
+      "/dungeon/exclusions",
+      { ...API, "/api/dungeon-exclusions": { body: [] } },
+      { mode: DUNGEON },
+    );
+    expect(await screen.findByText("No exclusions recorded yet.")).toBeVisible();
+    cleanup();
+    await renderDungeon("/dungeon/exclusions?status=patched");
+    expect(await screen.findByText("Nothing matches.")).toBeVisible();
+  });
+
   it("filters by status from the URL", async () => {
     await renderDungeon("/dungeon/exclusions?status=disputed");
-    await waitFor(() => expect(bodyRows(document)).toHaveLength(1));
-    expect(bodyRows(document)[0]![0]).toContain("Ion Cookie Robot");
+    const list = await screen.findByRole("list", { name: "Exclusions" });
+    expect(list.querySelectorAll("li.excl")).toHaveLength(1);
+    expect(list.querySelector("li.excl")).toHaveTextContent("Ion Cookie Robot");
   });
 });

@@ -4,6 +4,7 @@ import { decksQuery, dungeonRunsQuery, glossaryQuery, rngFactorsQuery } from "..
 import type { DungeonRun, RngFactor } from "../api/types";
 import type { DungeonConfig, ModeSection } from "../app/modes";
 import { AtkOrder } from "../components/AtkOrder";
+import { Clamp } from "../components/Clamp";
 import type { Column, TableFilter, TableSelect } from "../components/DataTable";
 import { applyFilters, DataTable, TableTools } from "../components/DataTable";
 import { EmptyState } from "../components/EmptyState";
@@ -51,13 +52,13 @@ const GROUPS: readonly RunGroup[] = [
   {
     id: "runs-ranked",
     title: "Ranked runs",
-    lede: "Scores a screenshot or video shows, highest first.",
+    lede: "Screenshot or video runs, highest score first.",
     standing: "verified",
   },
   {
     id: "runs-claimed",
     title: "Claims",
-    lede: "Scores stated only in text, or posted as claims; listed by score, not ranked.",
+    lede: "Text-only scores, by score; not ranked.",
     standing: "claim",
   },
 ];
@@ -105,17 +106,23 @@ export interface DungeonRunsViewProps {
 function RunSpread({ rows, sources }: { rows: readonly RngFactor[]; sources: SourceIndex }) {
   if (!rows.length) return null;
   return (
-    <section className="card" aria-labelledby="runs-spread-title">
+    <section className="run-spread" aria-labelledby="runs-spread-title">
       <h3 id="runs-spread-title">What moves a run</h3>
-      <ul className="clean">
-        {rows.map((f) => (
-          <li key={f.id}>
-            <b>{f.factor}.</b> {f.effect}
-            {f.mitigation ? <div className="muted">What helps: {f.mitigation}</div> : null}
-            <SourceChips ids={f.sources} sources={sources} />
-          </li>
-        ))}
-      </ul>
+      {rows.map((f) => (
+        <div key={f.id} className="callout">
+          <span className="callout-body">
+            <Clamp lines={1} length={f.factor.length + f.effect.length + 2}>
+              <b>{f.factor}.</b> {f.effect}
+            </Clamp>
+            {f.mitigation ? (
+              <span className="helps">
+                <Clamp lines={1}>{`What helps: ${f.mitigation}`}</Clamp>
+              </span>
+            ) : null}
+          </span>
+          <SourceChips ids={f.sources} sources={sources} max={2} />
+        </div>
+      ))}
     </section>
   );
 }
@@ -157,8 +164,9 @@ function showRun(r: DungeonRun, rank: number | undefined, deck: string | null): 
     score: formatDungeonG(r.scoreG),
     totalPower: formatDungeonG(r.totalPowerG),
     perPower: perPower == null ? "–" : `${perPower}×`,
-    timeLeft: r.timeLeftS == null ? "–" : `${r.timeLeftS} s`,
-    cookiesLeft: r.cookiesLeft == null ? "–" : String(r.cookiesLeft),
+    timeLeft: r.timeLeftS == null ? "" : `${r.timeLeftS} s left`,
+    cookiesLeft:
+      r.cookiesLeft == null ? "" : `${r.cookiesLeft} cookie${r.cookiesLeft === 1 ? "" : "s"} left`,
     board: BOARDS[r.board],
     place: r.serverRank == null ? "" : `${ordinal(r.serverRank)} on the server`,
     server: r.server ? `Server: ${r.server}` : "",
@@ -227,32 +235,18 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
            */
           const shown = (r: DungeonRun) => showRun(r, rank.get(r.id), deckOf(r));
           const columns: Column<DungeonRun>[] = [
-            { header: "Rank", cell: (r) => shown(r).rank, className: "n" },
-            { header: "Score", cell: (r) => shown(r).score, className: "n" },
             {
-              header: "Total power (collection)",
-              cell: (r) => shown(r).totalPower,
-              className: "n",
-            },
-            {
-              header: "Score ÷ power (normaliser)",
-              cell: (r) => shown(r).perPower,
-              className: "n",
-            },
-            { header: "Time left", cell: (r) => shown(r).timeLeft, className: "n" },
-            { header: "Cookies left", cell: (r) => shown(r).cookiesLeft, className: "n" },
-            {
-              header: "Board",
+              header: "Rank",
               cell: (r) => {
-                const s = shown(r);
-                return (
-                  <>
-                    {s.board}
-                    {s.place ? <div>{s.place}</div> : null}
-                    {s.server ? <div className="muted">{s.server}</div> : null}
-                  </>
-                );
+                const place = rank.get(r.id);
+                return <span className={place === 1 ? "rank top" : "rank"}>{shown(r).rank}</span>;
               },
+              className: "n rank-cell",
+            },
+            {
+              header: "Score",
+              cell: (r) => <span className="score">{shown(r).score}</span>,
+              className: "n",
             },
             {
               header: "Evidence",
@@ -263,6 +257,41 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
               ),
             },
             {
+              header: "Collection power",
+              cell: (r) => {
+                const s = shown(r);
+                return (
+                  <>
+                    {s.totalPower}
+                    {s.perPower === "–" ? null : (
+                      <div
+                        className="muted"
+                        title="Score ÷ collection power: a normaliser, not a rank"
+                      >
+                        {s.perPower} per power
+                      </div>
+                    )}
+                  </>
+                );
+              },
+              className: "n",
+            },
+            {
+              header: "Run",
+              cell: (r) => {
+                const s = shown(r);
+                const facts = [s.place, s.timeLeft, s.cookiesLeft].filter(Boolean);
+                return (
+                  <>
+                    {s.board}
+                    {facts.length ? <div className="muted">{facts.join(" · ")}</div> : null}
+                    {s.server ? <div className="muted">{s.server}</div> : null}
+                  </>
+                );
+              },
+              className: "run-facts",
+            },
+            {
               header: "Player",
               cell: (r) => (
                 <>
@@ -270,12 +299,14 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                   <div className="muted">{r.date}</div>
                 </>
               ),
+              className: "run-player",
             },
             {
               header: "Build",
               cell: (r) => {
                 const s = shown(r);
                 const order = orderOf(r);
+                const extras = [r.atkOrderNote ?? "", s.perks, s.preset].filter(Boolean);
                 return (
                   <>
                     {r.deckId ? (
@@ -286,16 +317,25 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                       />
                     ) : null}
                     {order.length ? <AtkOrder order={order} /> : null}
-                    {r.atkOrderNote ? <div className="muted">{r.atkOrderNote}</div> : null}
-                    {s.perks ? <div className="muted">{s.perks}</div> : null}
-                    {s.preset ? <div className="muted">{s.preset}</div> : null}
+                    {extras.length ? (
+                      <div className="muted">
+                        <Clamp lines={1}>{extras.join(" · ")}</Clamp>
+                      </div>
+                    ) : null}
+                    {r.note ? (
+                      <div className="run-note">
+                        <Clamp lines={1}>{r.note}</Clamp>
+                      </div>
+                    ) : null}
                   </>
                 );
               },
               className: "wide run-build",
             },
-            { header: "Note", cell: (r) => r.note ?? "", className: "wide" },
-            { header: "Sources", cell: (r) => <SourceChips ids={r.sources} sources={sources} /> },
+            {
+              header: "Sources",
+              cell: (r) => <SourceChips ids={r.sources} sources={sources} max={2} />,
+            },
           ];
           const filter: TableFilter<DungeonRun> = {
             value: search.q ?? "",
@@ -345,7 +385,7 @@ export function DungeonRunsView({ mode, dungeon, search, onSearch }: DungeonRuns
                 groups.map((g) => (
                   <section key={g.id} id={g.id} aria-labelledby={`${g.id}-title`}>
                     <h3 id={`${g.id}-title`}>{g.title}</h3>
-                    <p className="muted">{g.lede}</p>
+                    <p className="muted group-lede">{g.lede}</p>
                     <DataTable
                       columns={columns}
                       rows={g.rows}

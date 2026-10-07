@@ -36,15 +36,18 @@ export const TEAM_POWER = {
   copy: {
     overview: {
       title: "What raises team power",
-      lede: "Where team power counts, then the load-bearing findings, each with the posts it stands on.",
+      lede: ["Where team power counts, then what raises it."],
     },
     mechanics: {
       title: "Mechanics",
-      lede: "How the game computes and grows displayed power, as players measured or read it. Confidence reflects how well each point is sourced. Where team power counts is on the overview.",
+      lede: [
+        "How the game computes and grows displayed power.",
+        "The pill says how well each point is sourced.",
+      ],
     },
     timeline: {
       title: "How the growth systems moved",
-      lede: "Patches that changed a power source's cost, cap or curve, oldest first.",
+      lede: ["Patches that changed a cost, cap or curve, oldest first."],
     },
   },
   boss: null,
@@ -56,33 +59,54 @@ export const TEAM_POWER = {
   teamPower: {
     routes: {
       title: "Routes",
-      lede: "The free route and the paid route near 2.2G, as the record ranks them. Each step carries its basis: only a posted step rests on a player's own before-and-after figure. The gain is the one the record ties to that step; a step without one says so.",
+      lede: [
+        "The free and paid routes near 2.2G, in the record's order.",
+        "Only a green Posted step rests on a measured gain.",
+      ],
     },
     powerSources: {
       title: "Cost and efficiency",
-      lede: "Every power source by what it costs and how much power it gives for that cost, at the account stage you pick. The grades are the record's: high is a posted or inferred gain of several percent of team power for a cost met within days, medium about 1% per a few days' income or about ₩10,000, low well under that or gated by luck or large sums, none no displayed power. Most grades rest on neither a posted nor an inferred gain; the grid marks the ones that do. A note that doesn't lead with a grade isn't graded.",
+      lede: [
+        "Every power source's cost and grade at your account stage.",
+        "High: several percent of team power within days.",
+        "Most grades are judgement; a green Posted mark is measured.",
+      ],
     },
     spending: {
       title: "Spending order",
-      lede: "The order to spend in at each account stage, free and paid, with what each step's place rests on and why it sits there.",
+      lede: [
+        "What to spend on first at each account stage.",
+        "The pill says what each step's place rests on.",
+      ],
     },
     defaultOrder: "endgame",
     planner: {
       title: "Planner",
-      lede: "Type your team power as the formation screen shows it. The planner places you on the main stages with the power gate's brackets and each chapter's recommended power, then shows what each step the record weighs would buy. It multiplies only by posted gains; a claimed or unmeasured step shows why no reach is derived.",
+      lede: [
+        "Type your team power as the formation screen shows it.",
+        "See how far it pushes, and what each step buys.",
+        "Only posted gains are multiplied in.",
+      ],
     },
     reach: [55, 35, 15],
     packages: {
       title: "Packages",
-      lede: "The shop packages the sources discuss, with their KRW price and their USD price as the US App Store lists it, or the price tier it pairs with (≈, inferred). Crystal value compares a package's contents with the plain Crystal pack; it is not team power. The shop rotates: prices are as of 2026-09-28.",
+      lede: [
+        "Shop packages the sources discuss, with a buy or skip verdict.",
+        "≈ marks a USD price inferred from its KRW tier.",
+        "Prices as of 2026-09-28; the shop rotates.",
+      ],
     },
     curves: {
       title: "Curves",
-      lede: "How each power source's cost climbs and its return falls: odds, costs and stats by level, condensed from game data and posted tables.",
+      lede: ["How each power source's cost climbs and its return falls."],
     },
     dataPoints: {
       title: "Data points",
-      lede: "Every team-power figure the record found: measured changes, gains per step and account snapshots, in the record's order. Posted figures are players' own; claimed ones are stated without a measurement; inferred ones are the record's arithmetic.",
+      lede: [
+        "Every team-power figure the record found, in its order.",
+        "Posted: a player's own. Claimed: stated. Inferred: the record's maths.",
+      ],
     },
   },
 } as const satisfies ModeSection;

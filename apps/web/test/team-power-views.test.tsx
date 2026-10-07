@@ -456,70 +456,122 @@ describe("the team power section", () => {
     expect(screen.getByText("Power is not strength.")).toBeVisible();
   });
 
-  it("ranks the free and paid routes with each step's basis, and a gain only where the record ties a posted one", async () => {
+  it("ranks the free and paid routes with each step's basis pill, and a gain figure only where the record ties a posted one", async () => {
     await renderAt("/team-power/routes");
-    expect(await screen.findByText("Both orders are the community's stated orders.")).toBeVisible();
+    const note = (
+      await screen.findByText("Both orders are the community's stated orders.")
+    ).closest(".callout")!;
+    expect(note.querySelector(".pill")).toHaveTextContent("Stated order");
     const free = screen.getByRole("region", { name: "Free route" });
     const items = within(free).getAllByRole("listitem");
-    expect(items.map((li) => li.querySelector(".mark")?.textContent)).toEqual([
+    expect(items.map((li) => li.querySelector(".pill")?.textContent)).toEqual([
       "Claimed",
       "Unmeasured",
       "Posted",
     ]);
-    expect(items[2]).toHaveTextContent("+10%");
-    expect(items[2]).toHaveTextContent("(2G → 2.2G)");
-    expect(items[2]).toHaveTextContent("posted up to 8-3; paid past it");
-    expect(items[0]!.querySelector(".gain-figure")).toBeNull();
+    expect(items[2]!.querySelector(".pill.verified")).not.toBeNull();
+    expect(items[2]!.querySelector(".fig.gain")).toHaveTextContent("+10%2G → 2.2G");
+    expect(items[2]!.querySelector(".basis-pill")).toHaveAttribute(
+      "title",
+      "a player's own before-and-after figure · posted up to 8-3; paid past it",
+    );
+    expect(items[0]!.querySelector(".fig.gain")).toBeNull();
+    expect(items[0]!.querySelector(".fig.none")).toHaveTextContent("not measured");
     expect(items[0]).toHaveTextContent("one unmeasured claim of ~+20% account total power");
+    // A step's chips leave out the order's own sources, shown once on its callout.
+    expect(items[0]!.querySelector(".chips.src")).toBeNull();
     expect(within(items[0]!).getByRole("link", { name: "Guild Lab" })).toHaveAttribute(
       "href",
       "/team-power/power-sources#ps-guild_lab",
     );
+    expect(items[0]!.querySelector(".cost-tag.c-free")).toHaveTextContent("Free");
     const paid = screen.getByRole("region", { name: "Paid route" });
-    expect(paid).toHaveTextContent("₩6,000 · $3.99");
-    expect(paid).toHaveTextContent("No posted power figure");
+    expect(paid.querySelector(".fig.price")).toHaveTextContent("₩6,000$3.99 · weekly");
+    expect(paid).toHaveTextContent("no gain posted");
   });
 
-  it("grids cost against the record's grade at the chosen stage, keeping ungraded notes apart", async () => {
+  it("compares every power source in one table, best grade at the chosen stage first", async () => {
     await renderAt("/team-power/power-sources");
-    const grid = await screen.findByRole("region", { name: /Cost against efficiency, near 2.2G/ });
-    const rows = gridRows(grid);
-    const medium = rows.find((r) => r[0] === "Medium")!;
-    expect(medium[3]).toBe("Plating Posted");
-    const ungraded = rows.find((r) => r[0] === "Not graded or unmeasured")!;
-    expect(ungraded[1]).toBe("Guild LabLineup padding");
-    expect(ungraded[3]).toBe("Stellar Link Posted");
+    const table = await screen.findByRole("region", { name: /Compared, best at near 2.2G first/ });
+    const rows = gridRows(table);
+    // Medium at 2.2G sorts above the ungraded notes; free sorts above mixed within a grade.
+    expect(rows.map((r) => r[0])).toEqual([
+      "Plating",
+      "Guild Lab",
+      "Lineup padding",
+      "Stellar Link",
+    ]);
+    expect(rows[0]).toEqual([
+      "Plating",
+      "Free or paid",
+      "High",
+      "Medium",
+      "Low",
+      "Medium",
+      "+1.6%",
+    ]);
+    expect(rows[3]![5]).toBe("–");
+    expect(rows[3]![6]).toBe("+10%");
+    expect(table.querySelectorAll("th.chosen")).toHaveLength(1);
+    expect(table.querySelector("th.chosen")).toHaveTextContent("Near 2.2G");
     fireEvent.click(screen.getByRole("button", { name: "Early" }));
-    const early = await screen.findByRole("region", { name: /Cost against efficiency, early/ });
-    expect(gridRows(early).find((r) => r[0] === "High")![3]).toBe(
-      "Stellar Link PostedPlating Posted",
-    );
+    const early = await screen.findByRole("region", { name: /Compared, best at early first/ });
+    expect(gridRows(early).map((r) => r[0])).toEqual([
+      "Stellar Link",
+      "Plating",
+      "Guild Lab",
+      "Lineup padding",
+    ]);
     expect(document.getElementById("ps-plating")).not.toBeNull();
   });
 
   it("shows the measured sources' figures side by side, marking the inferred one, and divides nothing", async () => {
     await renderAt("/team-power/power-sources");
     const numbers = await screen.findByRole("region", { name: "Where the record has numbers" });
-    expect(numbers).toHaveTextContent("doesn't divide a gain by a cost");
-    expect(numbers).toHaveTextContent("Not comparable per won with plating.");
+    expect(numbers.querySelector(".callout")).toHaveTextContent("Gains aren't divided by cost");
     expect(within(numbers).getAllByText("Inferred")).toHaveLength(1);
     expect(numbers).toHaveTextContent("about ₩14,700");
   });
 
   it("opens the spending order on the reader's stage, and switches stage through the URL", async () => {
     const router = await renderAt("/team-power/spending");
-    expect(await screen.findByText("Check the guild's research level.")).toBeVisible();
+    const free = await screen.findByRole("region", { name: "Free route" });
+    await waitFor(() => expect(free).toHaveTextContent("Check the guild's research level."));
+    expect(free).toHaveTextContent("Free to check.");
+    expect(screen.getByRole("heading", { name: /Stages 300–328 at ~2–4G/ })).toBeVisible();
     fireEvent.click(screen.getByRole("button", { name: "Stages 168–248" }));
     await waitFor(() => expect(router.state.location.search).toEqual({ order: "mid" }));
-    expect(await screen.findByText("Plating to 15 with free Chocosteel.")).toBeVisible();
+    await waitFor(() =>
+      expect(screen.getByRole("region", { name: "Free route" })).toHaveTextContent(
+        "Plating to 15 with free Chocosteel.",
+      ),
+    );
+    // Graded at the order's own stage: plating is medium mid-game.
+    expect(
+      screen.getByRole("region", { name: "Free route" }).querySelector(".grade .pill"),
+    ).toHaveTextContent("Medium");
+  });
+
+  it("puts the planner's answer first, and asks for a power before one is typed", async () => {
+    await renderAt("/team-power/planner");
+    expect(
+      await screen.findByText("Type your team power above to see how far it pushes."),
+    ).toBeVisible();
+    expect(screen.queryByRole("region", { name: "Where you stand" })).toBeNull();
   });
 
   it("places a typed power on the stages and multiplies only posted gains into reach", async () => {
     await renderAt("/team-power/planner?power=2.2G");
     const standing = await screen.findByRole("region", { name: "Where you stand" });
-    expect(standing).toHaveTextContent("35% of damage or more: through 304-30 (Boss 304)");
-    expect(standing).toHaveTextContent("next, 308-30 at 2.4G (+9.1%)");
-    expect(standing).toHaveTextContent("55% of damage or more: not yet at 300-30");
+    const tiles = [...standing.querySelectorAll("li.tile")];
+    const at35 = tiles.find((t) => t.textContent.startsWith("35%"))!;
+    expect(at35.querySelector(".tile-big")).toHaveTextContent("304-30");
+    expect(at35.querySelector(".tile-sub")).toHaveTextContent("Boss 304");
+    expect(at35.querySelector(".tile-next")).toHaveTextContent("Next 308-30 at 2.4G (+9.1%)");
+    const at55 = tiles.find((t) => t.textContent.startsWith("55%"))!;
+    expect(at55).toHaveClass("short");
+    expect(at55.querySelector(".tile-big")).toHaveTextContent("Not yet");
+    expect(at55.querySelector(".tile-sub")).toHaveTextContent("first: 300-30");
     const buys = await screen.findByRole("region", { name: "What the next gains buy" });
     const rows = bodyRows(buys);
     expect(rows[0]).toEqual(
@@ -532,7 +584,8 @@ describe("the team power section", () => {
     );
     expect(rows[1]).toEqual(expect.arrayContaining(["not derived"]));
     const claimRow = buys.querySelectorAll("tbody tr")[1]!;
-    expect(claimRow.querySelector(".gain-figure")).toBeNull();
+    expect(claimRow.querySelector(".fig.gain")).toBeNull();
+    expect(claimRow.querySelector(".pill.claimed")).toHaveTextContent("Claimed");
     expect(rows[2]).toEqual(expect.arrayContaining(["304-30 (no change)"]));
   });
 
@@ -561,13 +614,11 @@ describe("the team power section", () => {
       { mode: TEAM_POWER },
     );
     const standing = await screen.findByRole("region", { name: "Where you stand" });
-    expect(standing).toHaveTextContent(
-      "next, 304-30 at 2.22G (+0.9%): any gain of that much or more crosses it",
-    );
+    expect(standing).toHaveTextContent("Next 304-30 at 2.22G (+0.9%)");
     const buys = await screen.findByRole("region", { name: "What the next gains buy" });
     const plating = buys.querySelectorAll("tbody tr")[2]!;
     const cells = [...plating.querySelectorAll("td")].map((td) => td.textContent);
-    expect(plating.querySelector(".gain-figure")).toHaveTextContent("≈ +1.6%");
+    expect(plating.querySelector(".fig.gain")).toHaveTextContent("≈ +1.6%");
     expect(plating).toHaveTextContent("The figure: midpoint used; doesn't say team or total power");
     expect(cells).toContain("≈ 2.24G");
     expect(cells).toContain("304-30 (+1 chapter; the next, 304-30, was +0.9% away)");
@@ -614,14 +665,43 @@ describe("the team power section", () => {
     );
     const numbers = await screen.findByRole("region", { name: "Where the record has numbers" });
     expect(numbers).not.toHaveTextContent("Stellar, Resolve and gear together");
-    expect(numbers).toHaveTextContent("+10% (2G → 2.2G)");
-    const grid = screen.getByRole("region", { name: /Cost against efficiency/ });
-    expect(within(grid).getAllByText("Posted").length).toBeGreaterThan(1);
+    expect(numbers).toHaveTextContent("+10%2G → 2.2G");
+    const table = screen.getByRole("region", { name: /Compared, best at/ });
+    expect(gridRows(table).find((r) => r[0] === "Stellar Link")![6]).toBe("+10%");
+  });
+
+  it("leads each package with a buy or skip verdict and its price, buys first and skips last", async () => {
+    await renderRoute(
+      "/team-power/packages",
+      {
+        ...API,
+        "/api/packages": {
+          body: [
+            { ...PACKAGES[0]!, verdict: "Called the worst value in the shop." },
+            PACKAGES[1]!,
+            { ...PACKAGES[2]!, verdict: "Early must-buy: carries stages 20–30s." },
+          ],
+        },
+      },
+      { mode: TEAM_POWER },
+    );
+    await screen.findByText("Key Set");
+    const rows = [...document.querySelector("table")!.querySelectorAll("tbody tr")];
+    expect(rows.map((r) => r.querySelector(".pack-name b")?.textContent)).toEqual([
+      "Monthly Reward",
+      "Stellar Pack",
+      "Key Set",
+    ]);
+    expect(rows[0]!.querySelector(".pill.good")).toHaveTextContent("Buy");
+    expect(rows[0]!.querySelector(".fig.price")).toHaveTextContent("₩7,500≈ $4.99");
+    expect(rows[1]!.querySelector(".pill")).toBeNull();
+    expect(rows[2]!.querySelector(".pill.avoid")).toHaveTextContent("Skip");
   });
 
   it("drops an unknown order or power source from the URL", async () => {
     const router = await renderAt("/team-power/spending?order=bogus");
-    await screen.findByText("Check the guild's research level.");
+    const free = await screen.findByRole("region", { name: "Free route" });
+    await waitFor(() => expect(free).toHaveTextContent("Check the guild's research level."));
     await waitFor(() => expect(router.state.location.search).toEqual({}));
     cleanup();
     const curves = await renderAt("/team-power/curves?source=bogus");
