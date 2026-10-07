@@ -35,7 +35,9 @@ const orders = curated<{
   ranked_at_2_2g: { id: string; note: string; free: Step[]; paid: Step[] };
 }>("spending-orders.json");
 const curves = curated<{ curves: unknown[] }>("growth-curves.json");
-const planner = curated<{ from_2_2g: { what_a_step_buys: unknown[] } }>("power-planner.json");
+const planner = curated<{
+  from_2_2g: { what_a_step_buys: Array<{ basis: string; data_point: string | null }> };
+}>("power-planner.json");
 
 let tmp: string | undefined;
 afterEach(() => {
@@ -147,10 +149,11 @@ describe("importRecord on research record 005", FULL_IMPORT, () => {
     });
     expect(services.spendingSteps.list({ basis: "unmeasured" }).length).toBeGreaterThan(0);
     const steps = services.plannerSteps.list();
-    expect(steps.filter((s) => s.basis === "posted").map((s) => s.dataPoint)).toEqual([
-      "stellar8-triangle-2g",
-      "plate-14-15-1.6g",
-    ]);
+    const posted = planner.from_2_2g.what_a_step_buys.filter((s) => s.basis === "posted");
+    expect(posted.length).toBeGreaterThan(0);
+    expect(steps.filter((s) => s.basis === "posted").map((s) => s.dataPoint)).toEqual(
+      posted.map((s) => s.data_point),
+    );
   });
 
   it("reloads identically with --replace", () => {
