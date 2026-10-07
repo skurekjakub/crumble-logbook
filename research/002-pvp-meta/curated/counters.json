@@ -45,7 +45,7 @@
     "team": "arena-bari-oven-cola",
     "beaten_by": "arena-evasion",
     "conditions": "An attacker with no accuracy: 14.38M beat 27.35M.",
-    "why": "Misses on the first turn leave the dive spent; the evasion deck then wins.",
+    "why": "If the evasion deck survives the dive's first turn, it wins; lose one or two cookies and it folds.",
     "confidence": "medium",
     "sources": ["dc:80136", "dc:77691"]
   },

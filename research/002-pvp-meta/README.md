@@ -10,15 +10,15 @@ As a falsifiable statement: for each PvP mode there is a small documented set of
 
 ## Verdict
 
-**Arena: supported.** A built Bari–Oven–Cherry Cola deck (`arena-bari-oven-cola`) is the strongest: from Bari 7★ the Rye deck can't win at equal spec. The Rye decks (`arena-rye-onecarry`, `arena-rye-rockstar`) are the value pick and beat Bari up to about 6★. Owner formation screens now give lineup, slots, levels, stars and pets for both, and crumb.gg's new meta page gives the first ladder shares: the Rye / Skating Queen / Grapevine lineup is the most run.
+**Arena: supported.** A built Bari–Oven–Cherry Cola deck (`arena-bari-oven-cola`) is the strongest: from Bari 7★ it usually beats the Rye deck at equal spec, though Rye wins over 8–10★ Bari are reported. The Rye decks (`arena-rye-onecarry`, `arena-rye-rockstar`) are the value pick and beat Bari up to about 6★. Owner formation screens now give lineup, slots, levels, stars and pets for both, and crumb.gg's new meta page gives the first ladder shares: the Rye / Skating Queen / Grapevine lineup is the most run.
 
-**Rumble Arena: supported for the lineup, partly for the build.** The top 100 still run one 12-cookie team (`rumble-standard-12`) on Season 1's last day, with the top 10 dropping Herb and moving to Icy Birdie. Slots come from owner attack panels; stars, gear and perks of the top-10 defenses stay hidden above 2,000 points. Season 2's buff, which decides whether the charge core survives, was unannounced on 10-07.
+**Rumble Arena: supported for the lineup, partly for the build.** The top 100 still run one 12-cookie team (`rumble-standard-12`) on Season 1's last day, with Herb shown less often in the top 10 (hidden slots may hold her) and Icy Birdie on half of them. Slots come from owner attack panels; stars, gear and perks of the top-10 defenses stay hidden above 2,000 points. Season 2's buff, which decides whether the charge core survives, was unannounced on 10-07.
 
 ## Reasoning
 
-- **Arena's order.** Set Bari > set Rye >>> plain Bari > plain Rye (dc:80465). Rye holds Bari up to 6★ and loses from 7★ (dc:81134); a 6★-Bari server #1 can't stop a 10★ Bari with any Rye deck in regular Arena (dc:77192). Under 5★ a Bari deck is "a junk deck" (dc:80465, dc:82022).
+- **Arena's order.** Set Bari > set Rye >>> plain Bari > plain Rye (dc:80465). Rye usually holds Bari up to 6★ and loses from 7★: the OP of dc:81134 and one reply say so, and a 6★-Bari server #1 can't stop a 10★ Bari with any Rye deck in regular Arena (dc:77192). It isn't absolute: in the same thread a reply says an Angel Rye deck beat Bari up to 8★ and another that at similar spec the attacker wins either way; dc:77672 has a Rockstar Rye deck repeatedly beating a 10★ Bari (its poster then lost to set Bari decks over about 50 fights; mode unclear); dc:78543 shows an 8★ Rye beating a 10★ Oven–Bari deck (mode not shown). Under 5★ a Bari deck is "a junk deck" (dc:80465, dc:82022).
 - **Ruling kept: "Rye beats Bari" is mostly Rumble.** Rumble's +30% DR keeps Rye's tanks alive through the dive; regular Arena has no such buff (dc:77192, dc:74229). Medium confidence.
-- **Gear changed.** Six Skill Haste lines lost the opening: three lines won more for a Rye deck (dc:79067), and Bari decks run none, with Skill AMP + crit rate up top and DR + crit RES below (dc:78977, dc:82006). The six-haste rows are obsolete.
+- **Arena gear changed.** Six Skill Haste lines lost the opening: three lines won more for a Rye deck (dc:79067), and Bari decks run none, with Skill AMP + crit rate up top and DR + crit RES below (dc:78977, dc:82006). The Arena six-haste rows are obsolete: dc:79067 calls six haste a scam with a reply confirming it, replies on dc:79151 and dc:78977 drop the bottom-right haste, and a reply on `evidence/r2026-10-07/01-dc-arena/dc/81451.md` says the gear meta moved with Bari. Two uncaptured listing titles dissent (80142 "6 haste seems better", 80391 "3 haste seems a scam", `evidence/r2026-10-07/01-dc-arena/list-dc-subject-arena.tsv`). Rumble's six-haste row stays current and is marked disputed: dc:79238 is one author's three-line choice, a reply there says six holds up better than expected, the same author's newer dc:81227 runs six on purpose, and dc:81511 is hearsay.
 - **Stars are readable.** Yellow stars count to 5 and each pink star adds one; two posts' text matches the reading (dc:78977, dc:78543). The Bari deck's own screen shows Bari 7★ and Oven 9★ at 22.14M (dc:77158).
 - **First regular-Arena ladder data.** crumb.gg's meta page: the Rye / Skating / Grapevine lineup 13.0%, the Rumble standard 12 11.3%; grouped, Rye builds 31% and the old five-ranged deck 15% and falling (`web:crumbgg-meta-page-1007`). Its sample is unstated.
 - **Rumble's top drifts at the edges.** Herb fell from 67 to 44 revealed top-100 slots and Icy Birdie rose from 12 to 45; 9 of 12 fully revealed teams are exactly the standard 12 (`evidence/r2026-10-07/08-extract/crumbgg-figures.txt`).
@@ -27,11 +27,14 @@ As a falsifiable statement: for each PvP mode there is a small documented set of
 - **crumb.gg grids sort by attack range.** Every board grid and meta-page lineup lists cookies in falling range (`03-sites/SYNTHESIS.md`), matching the game's auto-placement datamine (dc:81770). Board grids give membership, not slots; the standard 12's slots are re-sourced to owner attack panels, which agree.
 - **Attacker advantage.** Many players report equal defenses losing; the in-game help lists what counts in Arena and omits merc perks (dc:81024). The 10-08 update only adds help text on perks (nv:50417). Cause untested.
 - **"Conquest arena" doesn't exist.** Guild Conquest (길드 토벌전) is PvE (record 001). The closest PvP mode is 부스러기 쟁탈전 (Crumb Clash), unreleased: a datamine describes base raids with 6 cookies plus bear troops, ELO and 29 tiers (dc:79879), and a coming-soon tab sits in the dungeon menu (dc:78556, nv:48555). Its tables were emptied in the latest data.
-- **바궁 means Wind Archer in PvP threads**, while record 001's glossary lists it under Princess Bari. `curated/glossary.json` flags the clash.
+- **바궁 means Wind Archer in PvP threads**, while record 001's glossary lists it under Princess Bari. In PvP it sits in the pre-Bari ranged decks and is called the last-place TSSR; PvP posts call Princess Bari 바리, 바공 or 비리. Record 001 stays unedited, so a name resolver needs a mode-aware rule or the post's context. `curated/glossary.json` flags the clash.
+- **Rumble Arena's other names:** TW 熱鬧開戰競技場; a JP video tags it わちゃわちゃアリーナ (`curated/glossary.json` sources).
+- **Reading `formation_slots`.** Column 1 as the back line and column 6 as the front is inferred from attack ranges. Slots come only from owner formation screens: opponent cards look mirrored, and crumb.gg grids list cookies by attack range, not position.
+- **Rumble usage bars (`curated/usage.json`).** A core's bar is an upper bound: it counts top-100 teams whose hidden slots could hold the missing members. The confirmed share counts only teams with every member revealed. The turtle 8 isn't a separate team (see the one-team ruling above); the standard-12 row's deck is `rumble-standard-12`.
 
 ## Refresh 2026-10-07
 
-Window: 2026-09-27 (`curated/meta.json` `updated`) to 2026-10-07. Patches in it: none applied. The official board lists the 10-08 update's notes, posted 10-07 (nv:50417, maintenance nv:50393, `evidence/r2026-10-07/04-naver-global/list-naver-patch-notes.tsv`): new SSR support Chardonnay, cookie level cap 100 → 120 (level counts in Arena), Rumble Arena Season 2 opens with no passive stated, Arena help text on merc perks, free Milk by attendance; no balance change to any cookie, pet or Arena rule. crumb.gg's patch digest now answers 404 (`evidence/r2026-10-07/03-sites/crumbgg_data-patches-404.html`). Arena is still Season 5 (dc:81572). The captures are in `evidence/r2026-10-07/`, the extractions in its `08-extract/`, the searches in `research-trail.md`.
+Window: 2026-09-27 (`curated/meta.json` `updated`) to 2026-10-07. Patches in it: none applied. The official board lists the 10-08 update's notes, posted 10-07 (nv:50417, maintenance nv:50393, `evidence/r2026-10-07/04-naver-global/list-naver-patch-notes.tsv`): new SSR support Chardonnay, cookie level cap 100 → 120 (level counts in Arena), Rumble Arena Season 2 opens with no passive stated (10-08 14:00 to 10-21 12:00 KST in both the Sugar Pocket page text and its client JSON's `rumble` block; the 10-08 13:30 to 10-22 12:00 dates in the same JSON are the `dimension` block's, another mode), Arena help text on merc perks, free Milk by attendance; no balance change to any cookie, pet or Arena rule. crumb.gg's patch digest now answers 404 (`evidence/r2026-10-07/03-sites/crumbgg_data-patches-404.html`). Arena is still Season 5 (dc:81572). The captures are in `evidence/r2026-10-07/`, the extractions in its `08-extract/`, the searches in `research-trail.md`.
 
 ### Changelog
 
@@ -39,7 +42,7 @@ Window: 2026-09-27 (`curated/meta.json` `updated`) to 2026-10-07. Patches in it:
 |---|---|---|
 | obsoleted since 2026-10-07 | gear rec, arena general "Skill Haste on all six right-side pieces": three lines won more for a Rye deck, and Bari decks run none | `evidence/r2026-10-07/01-dc-arena/dc/79067.md`, `dc/78977.md` |
 | obsoleted since 2026-10-07 | gear rec, arena bottom-right "Skill Haste + crit RES (or DR)": DR + crit RES here survived the opening far more often | `evidence/r2026-10-07/01-dc-arena/dc/79067.md`, `dc/78977.md` |
-| obsoleted since 2026-10-07 | gear rec, Rumble general "Skill Haste on all six right-side pieces": Rumble guides run three lines on Rye decks, none on Bari decks | `evidence/r2026-10-07/01-dc-arena/dc/79238.md`, `02-dc-rumble/dc/81511.md` |
+| changed | gear rec, Rumble general "Skill Haste on all six right-side pieces": stays current, marked disputed. One Rye guide runs three lines, a reply says six holds up, the same author's newer guide runs six, and the drop-haste claim is hearsay | `evidence/r2026-10-07/01-dc-arena/dc/79238.md`, `dc/81227.md`, `02-dc-rumble/dc/81511.md` |
 | added | gear recs: arena top-right for Bari decks, bottom-right DR + crit RES, haste counts by deck, 230% crit; Rumble haste by deck, two accuracy lines | `evidence/r2026-10-07/01-dc-arena/dc/79067.md`, `dc/78977.md`, `dc/82006.md`, `dc/80465.md`, `02-dc-rumble/dc/77704.md` |
 | added | deck `arena-rye-rockstar`, Rye deck with Rockstar (own screen, stars read) | `evidence/r2026-10-07/01-dc-arena/dc/81275.md`, `dc/77725.md`, `dc/80762.md` |
 | added | deck `rumble-rye-rockstar`, Rye anti-charge with Rockstar + Skating Queen | `evidence/r2026-10-07/02-dc-rumble/dc/78308.md`, `dc/78990.md` |
@@ -49,7 +52,7 @@ Window: 2026-09-27 (`curated/meta.json` `updated`) to 2026-10-07. Patches in it:
 | added | counters: `rye-rockstar-vs-bari-oven`, `rye-onecarry-vs-rye-rockstar`, `bari-oven-vs-evasion`, `standard-12-vs-rye-rockstar`, `rye-rockstar-vs-standard-12`, `standard-12-vs-rye-angel-lime`, `standard-12-vs-oven-rye-decoy`, `oven-rye-decoy-vs-bari-vampire` | `evidence/r2026-10-07/08-extract/dc-arena.json`, `dc-rumble.json` |
 | added | runes: Angel, Lime, decoy Oven, Chain Pinot | `evidence/r2026-10-07/01-dc-arena/dc/79238.md`, `dc/81227.md`, `dc/78350.md` |
 | added | usage: Rumble top-100 cookie, pet and pet-set counts and the standard-12 count of 10-07; meta-page cookie, pet and lineup shares for both modes | `evidence/r2026-10-07/08-extract/crumbgg-figures.txt` |
-| changed | counters `rye-onecarry-vs-bari-oven` and `bari-oven-vs-rye-onecarry`: the flip moves from 8★ to Rye holding up to 6★, Bari winning from 7★ | `evidence/r2026-10-07/01-dc-arena/dc/81134.md`, `dc/80465.md`, `dc/77192.md` |
+| changed | counters `rye-onecarry-vs-bari-oven` and `bari-oven-vs-rye-onecarry`: the flip moves from 8★ to Rye usually holding up to 6★, Bari usually winning from 7★ | `evidence/r2026-10-07/01-dc-arena/dc/81134.md`, `dc/80465.md`, `dc/77192.md` |
 | changed | counter `rye-anticharge-vs-standard-12`: Rye on 2 of the top 100 on 10-07; top-end losses re-sourced | `evidence/r2026-10-07/02-dc-rumble/dc/80446.md`, `03-sites/pub-stats.json` |
 | changed | deck `arena-bari-oven-cola`: formation re-sourced to the owner screen dc:77158 with stars; ceiling, perks and substitutions refreshed | `evidence/r2026-10-07/01-dc-arena/dc/77158.md`, `dc/78977.md`, `04-naver-global/nv/nv-48978.md` |
 | changed | deck `arena-rye-onecarry`: the most-run Arena lineup (13.0%); Rockstar moved to its own deck | `evidence/r2026-10-07/03-sites/crumbgg_pub-meta-page.json` |
@@ -66,7 +69,6 @@ Window: 2026-09-27 (`curated/meta.json` `updated`) to 2026-10-07. Patches in it:
 No source in the round mentioned these; they stay current:
 
 - `arena-chain`, `arena-crepe-espresso` (one reply calls it outdated, dc:79368; no result either way), `arena-five-ranged` (legacy), `rumble-bari-crepe-cola`, `rumble-bari-lowstar`, `rumble-wizard`, `rumble-evasion`, `rumble-ranged`, and their counter edges. Searched: the saved DC searches, `회피`, `명중`, `락스타`, `천사` (`evidence/r2026-10-07/01-dc-arena/list-*.tsv`).
-- The six-haste rule's last holdout: dc:81227 runs six on purpose for its decoy Oven; that row is part of `rumble-oven-rye-decoy`, not a general recommendation.
 
 ### Couldn't settle
 
@@ -77,6 +79,7 @@ No source in the round mentioned these; they stay current:
 - **crumb.gg's meta-page sample and method.** Unstated; the shares may count defenses, opponents or crumb.gg users.
 - **Whether Herb is gone from the top-10 Rumble teams** or only hidden: hidden slots cover it on most.
 - **Bari's star floor in Rumble:** 5★ vs 8★ (dc:82000). A ranked 5★ vs 8★ result would settle it.
+- **Rumble gear's haste count.** Six, three or none: dc:79238 runs three on a Rye deck, dc:81227 six on its decoy deck, and dc:81511 only heard to drop it. Rumble win rates by haste count would settle it.
 - **The Rumble shop reset:** two weeks, monthly or never (dc:82217, dc:82260, dc:81405).
 
 ## Sources

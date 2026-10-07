@@ -1,5 +1,5 @@
 [
-  { "mode": "arena", "text": "Built Bari–Oven–Cherry Cola is the strongest Arena deck: from Bari 7★ the Rye deck can't win at equal spec.", "detail": "Order per the gallery: set Bari > set Rye >>> plain Bari > plain Rye.", "sources": ["dc:80465", "dc:81134", "dc:77192", "dc:78977", "web:yt-2Ylz143BgdQ"] },
+  { "mode": "arena", "text": "Built Bari–Oven–Cherry Cola is the strongest Arena deck: from Bari 7★ it usually beats Rye at equal spec.", "detail": "Not always: Angel and Rockstar Rye decks are reported beating 8–10★ Bari. Order: set Bari > set Rye >>> plain Bari > plain Rye.", "sources": ["dc:80465", "dc:81134", "dc:77192", "dc:78977", "web:yt-2Ylz143BgdQ", "dc:77672", "dc:78543"] },
   { "mode": "arena", "text": "The Rye deck is the value pick: it beats Bari up to about 6★ and any unset Bari deck.", "detail": "Under 5★ a Bari deck is 'a junk deck' against Rye.", "sources": ["dc:80465", "dc:81134", "dc:82022"] },
   { "mode": "arena", "text": "Most-run Arena lineup: the Rye / Skating Queen / Grapevine deck, 13.0% of crumb.gg's sample.", "detail": "Grouped: Rye builds 31%, the Rumble standard 12 24%, the old five-ranged deck 15% and falling.", "sources": ["web:crumbgg-meta-page-1007"] },
   { "mode": "arena", "text": "Rye deck flex: Rockstar. Its shield lands inside Bari's first dive.", "detail": "One mirror report has the Rockstar version beat Skating + Grapevine. Angel for Herb is disputed.", "sources": ["dc:77725", "dc:80762", "dc:81275", "dc:81134", "dc:81556"] },
@@ -10,7 +10,7 @@
   { "mode": "arena", "text": "Re-check after 10-08: the Lv.120 cap counts in Arena, and Chardonnay is new.", "sources": ["nv:50417", "dc:81024"] },
 
   { "mode": "rumble_arena", "text": "The standard 12 still holds the top 100 on Season 1's last day.", "detail": "9 of the 12 fully revealed top-100 teams are exactly it.", "sources": ["web:crumbgg-rumble-live-1007", "web:crumbgg-meta-page-1007", "dc:81227"] },
-  { "mode": "rumble_arena", "text": "The top 10 are dropping Herb, usually for Rockstar or Skating Queen.", "detail": "Herb fell from 67 to 44 top-100 slots; hidden slots hide most replacements.", "sources": ["web:crumbgg-rumble-stats-1007", "web:crumbgg-rumble-live-1007", "web:crumbgg-meta-page-1007"] },
+  { "mode": "rumble_arena", "text": "Herb shows less often in the top 10; hidden slots hide what replaced her.", "detail": "Herb fell from 67 to 44 top-100 slots. Rockstar shows once in the top 10 (#3).", "sources": ["web:crumbgg-rumble-stats-1007", "web:crumbgg-rumble-live-1007", "web:crumbgg-meta-page-1007"] },
   { "mode": "rumble_arena", "text": "Third pet is moving from Hot Doggie to Icy Birdie.", "detail": "Icy Birdie rose from 12 to 45 in the top 100.", "sources": ["web:crumbgg-rumble-stats-1007", "web:crumbgg-rumble-live-1007"] },
   { "mode": "rumble_arena", "text": "Rye decks win mid-ladder, even 12M down, but lose to finished Bari at the top.", "sources": ["dc:78990", "dc:79238", "dc:77408", "dc:80446"] },
   { "mode": "rumble_arena", "text": "From about 10th to 50th, half the Bari decks reportedly run Vampire for Cherry Cola.", "sources": ["dc:80759", "dc:81227"] },

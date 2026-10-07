@@ -1,5 +1,5 @@
 [
-  { "mode": "arena", "title": "Ruling: Bari's star threshold against Rye", "body": "Rye holds Bari up to about 6★; from 7–8★ a built Bari deck wins at equal spec.", "confidence": "medium", "sources": ["dc:81134", "dc:77192", "dc:80465", "dc:76712", "dc:75878"] },
+  { "mode": "arena", "title": "Ruling: Bari's star threshold against Rye", "body": "Rye usually holds Bari to about 6★; from 7–8★ built Bari usually wins at equal spec. Wins against 8–10★ Bari are reported.", "confidence": "medium", "sources": ["dc:81134", "dc:77192", "dc:80465", "dc:76712", "dc:75878", "dc:77672", "dc:78543"] },
   { "mode": "arena", "title": "Ruling: 5★ Bari is a floor", "body": "Under 5★ Soul Guidance covers one charger and the Bari deck loses to Rye.", "confidence": "medium", "sources": ["nv:45718", "nv:45312", "dc:80465", "dc:82022", "nv:48067", "web:yt-lGxbv7l8QTQ"] },
   { "mode": "arena", "title": "Ruling: 'Rye beats Bari' is mostly Rumble", "body": "Rumble's +30% DR keeps Rye's tanks alive; in regular Arena the same deck dies in seconds.", "confidence": "medium", "sources": ["dc:74229", "dc:77192", "dc:76717", "dc:75501"] },
   { "mode": "arena", "title": "A set Bari deck", "body": "'Set' means about 230% unbuffed crit, so the dive crits through Moon Rabbit.", "confidence": "low", "sources": ["dc:80465", "dc:80462"] },

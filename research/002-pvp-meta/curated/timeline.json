@@ -26,7 +26,7 @@
   { "mode": "rumble_arena", "date": "2026-10-05", "event": "An Oven–Rye decoy defense holds 10 of 11 attacks above 3,000 points.", "sources": ["dc:81227"] },
   { "mode": "arena", "date": "2026-10-05", "event": "In-game help lists what counts in Arena; merc perks aren't on it.", "sources": ["dc:81024"] },
   { "mode": "arena", "date": "2026-10-07", "event": "crumb.gg's meta page publishes lineup shares, the first regular-Arena ladder data.", "sources": ["web:crumbgg-meta-page-1007"] },
-  { "mode": "rumble_arena", "date": "2026-10-07", "event": "Season 1's last day: 슈퍼땅콩 #1 at 6912; Herb fading and Icy Birdie rising in the top 10.", "sources": ["web:crumbgg-rumble-live-1007", "web:crumbgg-rumble-stats-1007"] },
+  { "mode": "rumble_arena", "date": "2026-10-07", "event": "Season 1's last day: 슈퍼땅콩 #1 at 6912; Herb fading and Icy Birdie rising in the top 100.", "sources": ["web:crumbgg-rumble-live-1007", "web:crumbgg-rumble-stats-1007"] },
   { "mode": "rumble_arena", "date": "2026-10-08", "event": "Season 1 ends at 12:00 KST; rewards pay out automatically.", "sources": ["dc:73855", "dc:75881", "dc:82055"] },
   { "mode": "arena", "date": "2026-10-08", "event": "Update (maintenance 13:00–16:00 KST): Chardonnay, Lv.120 cap, Arena help text on perks, Milk attendance.", "sources": ["nv:50417", "nv:50393"] },
   { "mode": "rumble_arena", "date": "2026-10-08", "event": "Season 2 opens (client data: 14:00 KST to 10-21 12:00); passive unannounced.", "sources": ["nv:50417", "web:sugarpocket-rumble-arena-1007"] }
