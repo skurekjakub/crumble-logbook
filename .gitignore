@@ -13,8 +13,9 @@ coverage/
 .env.*
 /.superpowers/
 
-# the user's own account snapshots and roadmaps stay local (the repo is public)
-/account/
+# account audit screenshots stay local; the snapshot and roadmap JSON are committed
+/account/snapshots/screens/
+/account/**/*.log
 
 # personal Claude Code overrides
 .claude/settings.local.json
