@@ -682,11 +682,7 @@ describe("PvP counters", () => {
       "/api/counters?mode=arena": { body: [...COUNTERS, retiredEdge, strandedEdge] },
     });
     await panel().findByRole("table", { name: /beaten by/i });
-    expect(matrix().columns).toEqual([
-      "Rye one-carry deck",
-      "Bari–Oven deck",
-      "Crepe–Espresso deck",
-    ]);
+    expect(matrix().columns).toEqual(["Rye one-carry", "Bari–Oven", "Crepe–Espresso"]);
     expect([...document.querySelectorAll(".counter-list > [id]")].map((el) => el.id)).toEqual([
       "counter-rye-vs-bari",
       "counter-bari-vs-crepe",
@@ -717,38 +713,64 @@ describe("PvP counters", () => {
     await renderAt("/arena/counters", ARENA);
     await panel().findByRole("table", { name: /beaten by/i });
     const { columns, rows } = matrix();
-    expect(columns).toEqual(["Rye one-carry deck", "Bari–Oven deck", "Crepe–Espresso deck"]);
+    expect(columns).toEqual(["Rye one-carry", "Bari–Oven", "Crepe–Espresso"]);
     expect(rows.map((r) => r.team)).toEqual(columns);
 
     const cell = (team: string, beatenBy: string) =>
       rows.find((r) => r.team === team)!.cells[columns.indexOf(beatenBy)]!;
-    const edge = cell("Rye one-carry deck", "Bari–Oven deck");
+    const edge = cell("Rye one-carry", "Bari–Oven");
     expect(within(edge).getByRole("link")).toHaveAttribute("href", "#counter-rye-vs-bari");
     expect(within(edge).getByRole("link")).toHaveAccessibleName(
-      "Rye one-carry deck is beaten by Bari–Oven deck: medium confidence. Bari and Oven at 8–10★.",
+      "Rye one-carry is beaten by Bari–Oven: medium confidence. Bari and Oven at 8–10★.",
     );
     expect(within(edge).getByRole("link")).toHaveClass("medium");
     expect(edge).toHaveTextContent("mediumBari and Oven at 8–10★.");
-    const reverse = cell("Bari–Oven deck", "Rye one-carry deck");
+    const reverse = cell("Bari–Oven", "Rye one-carry");
     expect(within(reverse).queryByRole("link")).toBeNull();
-    expect(cell("Rye one-carry deck", "Rye one-carry deck")).toHaveClass("self");
-    expect(within(cell("Bari–Oven deck", "Crepe–Espresso deck")).getByRole("link")).toHaveClass(
-      "low",
-    );
-    expect(within(cell("Crepe–Espresso deck", "Rye one-carry deck")).getByRole("link")).toHaveClass(
-      "high",
-    );
+    expect(cell("Rye one-carry", "Rye one-carry")).toHaveClass("self");
+    expect(within(cell("Bari–Oven", "Crepe–Espresso")).getByRole("link")).toHaveClass("low");
+    expect(within(cell("Crepe–Espresso", "Rye one-carry")).getByRole("link")).toHaveClass("high");
   });
 
   it("names each team in English with its Korean name beneath, on both axes", async () => {
     await renderAt("/arena/counters", ARENA);
     const table = await panel().findByRole("table", { name: /beaten by/i });
-    const col = within(table).getByRole("columnheader", { name: /Rye one-carry deck/ });
+    const col = within(table).getByRole("columnheader", { name: /Rye one-carry/ });
     expect(within(col).getByText("호밀 원툴덱")).toHaveClass("kr");
-    const row = within(table).getByRole("rowheader", { name: /Rye one-carry deck/ });
+    const row = within(table).getByRole("rowheader", { name: /Rye one-carry/ });
     expect(within(row).getByText("호밀 원툴덱")).toHaveClass("kr");
-    const bari = within(table).getByRole("columnheader", { name: "Bari–Oven deck" });
+    const bari = within(table).getByRole("columnheader", { name: "Bari–Oven" });
     expect(bari.querySelector(".kr")).toBeNull();
+    expect(col.querySelector(".team-head")).toHaveAttribute(
+      "title",
+      "Rye one-carry deck 호밀 원툴덱",
+    );
+  });
+
+  it("heads each team with the portraits its name mentions, and its row with its tier", async () => {
+    await renderAt("/arena/counters", ARENA);
+    const table = await panel().findByRole("table", { name: /beaten by/i });
+    const col = within(table).getByRole("columnheader", { name: /Rye one-carry/ });
+    expect(col.querySelector(".faces")).toHaveAttribute("title", "Rye");
+    const bari = within(table).getByRole("columnheader", { name: "Bari–Oven" });
+    expect(bari.querySelector(".faces")).toHaveAttribute("title", "Princess Bari");
+    const crepe = within(table).getByRole("rowheader", { name: /Crepe–Espresso/ });
+    expect(within(crepe).getByText("niche")).toHaveClass("pill", "niche");
+  });
+
+  it("puts an edge's conditions and mechanism in its tile, the mechanism after the conditions", async () => {
+    await renderAt("/arena/counters", ARENA);
+    await panel().findByRole("table", { name: /beaten by/i });
+    const { columns, rows } = matrix();
+    const tile = rows
+      .find((r) => r.team === "Rye one-carry")!
+      .cells[columns.indexOf("Bari–Oven")]!.querySelector(".edge")!;
+    expect(tile).toHaveClass("edge", "medium");
+    expect(tile.querySelector(".cond")).toHaveTextContent("Bari and Oven at 8–10★.");
+    expect(tile.querySelector(".why")).toHaveTextContent(
+      "The chargers dive Milk before the shields cycle.",
+    );
+    expect(within(tile as HTMLElement).getByRole("button", { name: "More" })).toBeVisible();
   });
 
   it("styles each edge in a cell by its own confidence", async () => {
@@ -764,9 +786,7 @@ describe("PvP counters", () => {
     });
     await panel().findByRole("table", { name: /beaten by/i });
     const { columns, rows } = matrix();
-    const edge = rows.find((r) => r.team === "Rye one-carry deck")!.cells[
-      columns.indexOf("Bari–Oven deck")
-    ]!;
+    const edge = rows.find((r) => r.team === "Rye one-carry")!.cells[columns.indexOf("Bari–Oven")]!;
     const links = within(edge).getAllByRole("link");
     expect(links.map((a) => [a.classList.contains("medium"), a.classList.contains("low")])).toEqual(
       [
@@ -795,8 +815,8 @@ describe("PvP counters", () => {
     const { columns, rows } = matrix();
     const cell = (team: string, beatenBy: string) =>
       rows.find((r) => r.team === team)!.cells[columns.indexOf(beatenBy)]!;
-    const there = cell("Rye one-carry deck", "Bari–Oven deck");
-    const back = cell("Bari–Oven deck", "Rye one-carry deck");
+    const there = cell("Rye one-carry", "Bari–Oven");
+    const back = cell("Bari–Oven", "Rye one-carry");
     expect(there).toHaveTextContent("Bari and Oven at 8–10★.");
     expect(there).not.toHaveTextContent("Bari at 8★ or less.");
     expect(back).toHaveTextContent("Bari at 8★ or less.");
@@ -808,8 +828,10 @@ describe("PvP counters", () => {
     await renderAt("/arena/counters", ARENA);
     await panel().findByRole("table", { name: /beaten by/i });
     const item = document.getElementById("counter-rye-vs-bari")!;
-    expect(item.querySelector("h3")).toHaveTextContent(
-      "Rye one-carry deck 호밀 원툴덱 is beaten by Bari–Oven deck",
+    expect(item.querySelector("h3")).toHaveTextContent("Rye one-carry loses to Bari–Oven");
+    expect(item.querySelector(".edge-team")).toHaveAttribute(
+      "title",
+      "Rye one-carry deck 호밀 원툴덱",
     );
     const i = within(item);
     expect(i.getByText("Bari and Oven at 8–10★.")).toBeVisible();
@@ -849,34 +871,44 @@ describe("PvP usage", () => {
       "Cores",
       "Pets",
     ]);
-    expect(
-      panel().getByText("The game hides some defenders, so usage counts are lower bounds."),
-    ).toHaveClass("note");
+    const caveat = panel().getByText(
+      "The game hides some defenders, so usage counts are lower bounds.",
+    );
+    expect(caveat.closest(".callout")).toHaveTextContent("caveat");
   });
 
-  it("draws each subject's share with its sample, capture date, note and sources", async () => {
+  it("ranks each subject's share with its sample, capture date, note and sources", async () => {
     await renderAt("/rumble/usage", RUMBLE);
     const cookies = await section("Cookies");
     const c = within(cookies);
     expect(c.getByText("top 100 Rumble Arena defenses on crumb.gg")).toBeVisible();
     expect(c.getByText(/captured 2026-09-27/)).toBeVisible();
     expect(c.getByRole("link", { name: "crumbgg-rumble-live" })).toBeVisible();
-    const bars = [...cookies.querySelectorAll("li")];
+    const bars = [...cookies.querySelectorAll("li.bar-row")];
     expect(bars.map((li) => li.querySelector(".nm")!.textContent)).toEqual([
       "Pomegranate석류맛 쿠키",
       "Herb허브맛 쿠키",
     ]);
+    expect(bars.map((li) => li.querySelector(".bar-rank")!.textContent)).toEqual(["1", "2"]);
+    expect(bars[0]).toHaveClass("top");
+    expect(bars[1]).not.toHaveClass("top");
     expect(bars[1]!.querySelector(".bar-fill")).toHaveStyle({ width: "64.5%" });
     expect(bars[1]).toHaveTextContent("64.5%");
-    expect(c.getAllByText("Lower bound: hidden slots.")).toHaveLength(2);
+    // The note both rows repeat is said once, for the sample.
+    expect(c.getAllByText("Lower bound: hidden slots.")).toHaveLength(1);
+    expect(cookies.querySelector(".bar-common")).toHaveTextContent("Lower bound: hidden slots.");
+    expect(cookies.querySelector(".bar-note")).toBeNull();
   });
 
-  it("shows a core's members in English where the glossary knows them, and its confirmed share", async () => {
+  it("shows a core's members as portrait chips in English where the glossary knows them, and its confirmed share", async () => {
     await renderAt("/rumble/usage", RUMBLE);
     const cores = await section("Cores");
-    const li = cores.querySelector("li")!;
+    const li = cores.querySelector<HTMLElement>("li.bar-row")!;
     expect(li.querySelector(".nm")).toHaveTextContent("tank line");
-    expect(await within(li).findByText(/Ion Cookie Robot/)).toBeVisible();
+    expect(await within(li).findByText("Ion Cookie Robot")).toBeVisible();
+    const members = [...li.querySelectorAll("ul.members li")];
+    expect(members.map((m) => m.textContent)).toEqual(["Ion Cookie Robot", "미확인 쿠키"]);
+    expect(members.every((m) => m.querySelector(".cicon"))).toBe(true);
     expect(li).toHaveTextContent("미확인 쿠키");
     expect(li.querySelector(".bar-confirmed")).toHaveStyle({ width: "52%" });
     expect(li).toHaveTextContent("52% confirmed");

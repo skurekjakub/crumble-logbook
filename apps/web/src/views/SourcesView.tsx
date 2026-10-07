@@ -1,21 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
 import type { SourceSiteFilter } from "../api/queries";
-import { sourcesQuery } from "../api/queries";
+import { recordsQuery, sourcesQuery } from "../api/queries";
 import type { Source } from "../api/types";
+import { MODES } from "../app/modes";
 import { CaptureStamp } from "../components/CaptureStamp";
+import { Clamp } from "../components/Clamp";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
 import { QueryResult } from "../components/QueryResult";
 import { ViewHeader } from "../components/ViewHeader";
 import { optionalKey, optionalText } from "../lib/search";
-import { sourceLabel } from "../lib/sources";
+import { recordLabel, sourceLabel } from "../lib/sources";
 
 /** Select label per site; the keys are every site `?site=` accepts. */
 const SITE_LABELS: Record<SourceSiteFilter, string> = { dc: "DC", nv: "Naver", web: "Web" };
 
-/** The sources view's search params: a site to narrow to and a title search. */
+/** The highest relevance a source is given. */
+const MAX_RELEVANCE = 3;
+
+/** The sources view's search params: a site and a record to narrow to, and a title search. */
 export interface SourcesSearch {
   site?: SourceSiteFilter;
+  record?: string;
   q?: string;
 }
 
@@ -23,10 +29,14 @@ export interface SourcesSearch {
  * Reads the sources view's search params.
  *
  * @param search - the router's decoded query values
- * @returns the site and title search, each dropped when unusable
+ * @returns the site, record and title search, each dropped when unusable
  */
 export function validateSourcesSearch(search: Record<string, unknown>): SourcesSearch {
-  return { site: optionalKey(search.site, SITE_LABELS), q: optionalText(search.q) };
+  return {
+    site: optionalKey(search.site, SITE_LABELS),
+    record: optionalText(search.record),
+    q: optionalText(search.q),
+  };
 }
 
 /**
@@ -45,62 +55,107 @@ function newestFirst(a: Source, b: Source): number {
   return a.id.localeCompare(b.id);
 }
 
-const COLUMNS: Column<Source>[] = [
-  {
-    header: "Source",
-    cell: (s) => (
-      <a href={s.url} target="_blank" rel="noopener">
-        {sourceLabel(s.id)}
-      </a>
-    ),
-    className: "n source-id",
-  },
-  {
-    header: "Title",
-    cell: (s) => (
-      <>
-        {s.title ?? ""}
-        {s.titleEn && <span className="muted"> {s.titleEn}</span>}
-      </>
-    ),
-    className: "wide source-title",
-  },
-  {
-    header: "Date",
-    cell: (s) => s.date ?? "",
-    className: "n",
-  },
-  {
-    header: "Relevance",
-    cell: (s) => s.relevance ?? "",
-    className: "n",
-  },
-  {
-    header: "Capture",
-    // Truncated from the left, so the file name stays in view; the full path is the tooltip.
-    cell: (s) =>
-      s.capturePath && (
-        <span className="capture" title={s.capturePath}>
-          <span className="mono" dir="ltr">
-            {s.capturePath}
+/**
+ * A source's relevance as a row of dots, filled up to its score, with the
+ * score in words for assistive tech and the tooltip.
+ *
+ * @param props - the relevance, or null when unrated
+ * @returns the meter, or null when unrated
+ */
+function Relevance({ value }: { value: number | null }) {
+  if (value == null) return null;
+  const label = `Relevance ${value} of ${MAX_RELEVANCE}`;
+  return (
+    <span className="relevance" title={label} role="img" aria-label={label}>
+      {Array.from({ length: MAX_RELEVANCE }, (_, i) => (
+        <i key={i} className={i < value ? "on" : undefined} />
+      ))}
+    </span>
+  );
+}
+
+/**
+ * Builds the table's columns: the source's link, its title (English first,
+ * the original beneath), date, relevance, the records citing it as quiet
+ * chips, and its capture.
+ *
+ * @param label - names a record's slug for its chip
+ * @returns the columns
+ */
+function columns(label: (slug: string) => string): Column<Source>[] {
+  return [
+    {
+      header: "Source",
+      cell: (s) => (
+        <a className="source-link" href={s.url} target="_blank" rel="noopener" title={s.url}>
+          {sourceLabel(s.id)}
+        </a>
+      ),
+      className: "source-id",
+    },
+    {
+      header: "Title",
+      cell: (s) => {
+        const main = s.titleEn ?? s.title ?? "";
+        return (
+          <span className="source-title-text">
+            <span className="en">
+              <Clamp lines={1}>{main}</Clamp>
+            </span>
+            {s.titleEn && s.title ? <span className="kr">{s.title}</span> : null}
           </span>
+        );
+      },
+      className: "wide source-title",
+    },
+    {
+      header: "Date",
+      cell: (s) => s.date ?? "",
+      className: "n",
+    },
+    {
+      header: "Relevance",
+      cell: (s) => <Relevance value={s.relevance} />,
+      className: "source-rel",
+    },
+    {
+      header: "Records",
+      cell: (s) => (
+        <span className="chips src">
+          {s.records.map((r) => (
+            <span key={r} className="chip" title={r}>
+              {label(r)}
+            </span>
+          ))}
         </span>
       ),
-    className: "wide source-capture",
-  },
-  {
-    header: "Captured",
-    cell: (s) =>
-      s.capture && (
-        <CaptureStamp
-          capturedAt={s.capture.capturedAt}
-          tool={s.capture.tool}
-          approx={s.capture.approx}
-        />
+      className: "source-records",
+    },
+    {
+      header: "Captured",
+      // The path is cut from the left, so the file name stays in view; the full path is the tooltip.
+      cell: (s) => (
+        <span className="source-capture-cell">
+          {s.capture ? (
+            <CaptureStamp
+              capturedAt={s.capture.capturedAt}
+              tool={s.capture.tool}
+              approx={s.capture.approx}
+            />
+          ) : null}
+          {s.capturePath ? (
+            <span className="capture" title={s.capturePath}>
+              <span className="mono" dir="ltr">
+                {s.capturePath}
+              </span>
+            </span>
+          ) : null}
+        </span>
       ),
-    className: "source-captured",
-  },
-];
+      className: "source-captured",
+    },
+  ];
+}
 
 /** Props for {@link SourcesView}. */
 export interface SourcesViewProps {
@@ -111,23 +166,36 @@ export interface SourcesViewProps {
 }
 
 /**
- * Every cited source, newest first, filterable by site (`?site=`) and title (`?q=`).
+ * Every cited source, newest first, filterable by site (`?site=`), research
+ * record (`?record=`) and title (`?q=`). Each row ends with the records that
+ * cite it as quiet chips and its capture.
  *
  * @param props - the search params and their setter
  * @returns the sources view
  */
-export function SourcesView({ search: { site, q }, onSearch }: SourcesViewProps) {
-  const sources = useQuery(sourcesQuery({ site }));
+export function SourcesView({ search: { site, record, q }, onSearch }: SourcesViewProps) {
+  const sources = useQuery(sourcesQuery({ site, record }));
+  const records = useQuery(recordsQuery()).data ?? [];
+  /**
+   * Names a record for its chip and the record select.
+   *
+   * @param slug - the record's slug
+   * @returns its label
+   */
+  const label = (slug: string) => recordLabel(slug, records, MODES);
   return (
     <>
       <ViewHeader
         title="Sources"
-        lede="Every post this logbook cites, with when and by what its capture was taken (≈ marks a time backfilled after the fact). Raw captures are in the research record's evidence folder."
+        lede={[
+          "Every post this logbook cites, newest first.",
+          "Dots rate relevance; ≈ marks a backfilled capture time.",
+        ]}
       />
       <QueryResult query={sources} resource="sources">
         {(rows) => (
           <DataTable
-            columns={COLUMNS}
+            columns={columns(label)}
             rows={[...rows].sort(newestFirst)}
             rowKey={(s) => s.id}
             filter={{
@@ -143,7 +211,16 @@ export function SourcesView({ search: { site, q }, onSearch }: SourcesViewProps)
               value: site ?? "",
               onChange: (v) => onSearch({ site: optionalKey(v, SITE_LABELS) }),
             }}
-            empty={site ? "No sources from this site." : "No sources recorded yet."}
+            selects={[
+              {
+                name: "Record",
+                label: "All records",
+                options: records.map((r) => [r.slug, label(r.slug)] as const),
+                value: record ?? "",
+                onChange: (v) => onSearch({ record: optionalText(v) }),
+              },
+            ]}
+            empty={site || record ? "No sources match these filters." : "No sources recorded yet."}
             layout="stack"
           />
         )}
