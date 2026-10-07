@@ -2476,5 +2476,26 @@
   "title_en": "I want 1T (섬영's lobby: 893.3G personal best at 1.38G)",
   "date": "2026-09-20",
   "signal": "relevance 3/3"
+ },
+ "web:crumbgg:final-s5": {
+  "url": "https://api.crumb.gg/api/rankings?kind=players",
+  "title": "길드 토벌전 개인·길드 랭킹 시즌 5 (최종)",
+  "title_en": "Guild Conquest player and guild rankings, Season 5 final (top 50), captured 2026-10-07",
+  "date": "2026-09-28",
+  "signal": "public game data"
+ },
+ "web:crumbgg:final-s6": {
+  "url": "https://crumb.gg/pub/live?board=guild_conquest_players",
+  "title": "길드 토벌전 개인·길드 랭킹 시즌 6 (최종)",
+  "title_en": "Guild Conquest player and guild rankings, Season 6 final (top 100), captured 2026-10-07",
+  "date": "2026-10-05",
+  "signal": "public game data"
+ },
+ "web:crumbgg:power-leaderboard-1007": {
+  "url": "https://crumb.gg/pub/leaderboard",
+  "title": "전투력 랭킹",
+  "title_en": "Power leaderboard (top 500 by account power), captured 2026-10-07",
+  "date": "2026-10-07",
+  "signal": "public game data"
  }
 }

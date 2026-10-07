@@ -9,6 +9,9 @@
   "curated": "curated",
   "extractions": "evidence/08-extract",
   "captures": [
+    { "site": "dc", "dir": "evidence/r2026-10-07/03-dc-posts", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/r2026-10-07/07-nv-posts", "file": "nv-{id}.md" },
+    { "site": "nv", "dir": "evidence/r2026-10-07/14-global/nv-patchnotes", "file": "nv-{id}.md" },
     { "site": "dc", "dir": "evidence/03-dc-posts", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/11-dc-posts-extra", "file": "{id}.md" },
     { "site": "dc", "dir": "evidence/16-top-players/dc", "file": "{id}.md" },
