@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
+import { Fragment } from "react";
 import { recordsQuery, sourcesQuery } from "../api/queries";
 import type { ResearchRecord } from "../api/types";
 import type { ModeSection } from "../app/modes";
 import { MODES } from "../app/modes";
+import { Clamp } from "../components/Clamp";
 import { EmptyState } from "../components/EmptyState";
-import { Kv } from "../components/Kv";
+import { Pill } from "../components/Pill";
 import { QueryResult } from "../components/QueryResult";
 import { ViewHeader } from "../components/ViewHeader";
 
@@ -22,31 +24,10 @@ function coveredModes(record: ResearchRecord): ModeSection[] {
 }
 
 /**
- * A mode's name linking to its landing page, then a link per screen.
- *
- * @param props - the mode
- * @returns the links
- */
-function ModeLinks({ mode }: { mode: ModeSection }) {
-  return (
-    <div className="mode-links">
-      <Link {...mode.link} className="mode-link">
-        {mode.label}
-      </Link>{" "}
-      {mode.labelKr ? <span className="kr">{mode.labelKr}</span> : null}
-      <div className="chips">
-        {mode.tabs.map((t) => (
-          <Link key={t.id} {...t.link} className="chip">
-            {t.label}
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/**
- * One record as a card: slug, question, status, dates, lede, source count and its modes' screens.
+ * One record as a compact card: its status, slug and update date on top,
+ * its modes as the heading (each linking to the mode's screens), the lede
+ * and the research question each cut to a line, then its dates, source
+ * count and capture ledger.
  *
  * @param props - the record, and its source count once known
  * @returns the card
@@ -54,42 +35,66 @@ function ModeLinks({ mode }: { mode: ModeSection }) {
 function RecordCard({ record, sources }: { record: ResearchRecord; sources: number | undefined }) {
   const modes = coveredModes(record);
   return (
-    <article className="card">
-      <div className="card-head">
-        <div>
-          <div className="label">{record.slug}</div>
-          <h3>{record.question}</h3>
-        </div>
-        <div className="chips">
-          <span className="chip">{record.status}</span>
-          {sources == null ? null : <span className="chip">{sources} sources</span>}
-        </div>
+    <article className="card record-card">
+      <div className="record-top">
+        <Pill kind={record.status === "active" ? "good" : "legacy"}>{record.status}</Pill>
+        <span className="record-no mono" title={`research/${record.slug}/`}>
+          {record.slug}
+        </span>
+        <span className="record-updated muted">
+          Updated <time dateTime={record.updatedAt}>{record.updatedAt}</time>
+        </span>
       </div>
-      {record.lede ? <div className="muted">{record.lede}</div> : null}
-      <Kv
-        rows={[
-          [
-            "Dates",
-            `Started ${record.startedAt} · Updated ${record.updatedAt}${record.seasonLabel ? ` · ${record.seasonLabel}` : ""}`,
-          ],
-          ["Screens", modes.length ? modes.map((m) => <ModeLinks key={m.id} mode={m} />) : null],
-          ["Folder", <span className="mono">research/{record.slug}/</span>],
-          [
-            "Evidence",
-            <Link to="/research/$slug/captures" params={{ slug: record.slug }}>
-              Capture ledger
-            </Link>,
-          ],
-        ]}
-      />
+      <h3 className="record-modes">
+        {modes.length
+          ? modes.map((m, i) => (
+              <Fragment key={m.id}>
+                {i > 0 ? " " : null}
+                <Link {...m.link} className="mode-chip">
+                  {m.label}
+                  {m.labelKr ? (
+                    <>
+                      {" "}
+                      <span className="kr">{m.labelKr}</span>
+                    </>
+                  ) : null}
+                </Link>
+              </Fragment>
+            ))
+          : record.slug}
+      </h3>
+      {record.lede ? (
+        <div className="record-lede">
+          <Clamp lines={2} perLine={60}>
+            {record.lede}
+          </Clamp>
+        </div>
+      ) : null}
+      <div className="record-q muted">
+        <span className="label">Question</span> <Clamp lines={1}>{record.question}</Clamp>
+      </div>
+      <div className="record-foot">
+        <span className="chips">
+          <span className="chip">Started {record.startedAt}</span>
+          {record.seasonLabel ? (
+            <span className="chip season" title={record.seasonLabel}>
+              {record.seasonLabel}
+            </span>
+          ) : null}
+          {sources == null ? null : <span className="chip">{sources} sources</span>}
+        </span>
+        <Link to="/research/$slug/captures" params={{ slug: record.slug }} className="ledger-link">
+          Capture ledger
+        </Link>
+      </div>
     </article>
   );
 }
 
 /**
- * The research index: every research record with its slug, question,
- * status, dates, source count, and links to the screens of each mode it
- * covers. "No research records yet." when there are none.
+ * The research index: every research record as a compact card, with its
+ * status, dates, modes, lede, question, source count and capture ledger.
+ * "No research records yet." when there are none.
  *
  * @returns the research index
  */
@@ -108,18 +113,23 @@ export function ResearchView() {
     <>
       <ViewHeader
         title="Research records"
-        lede="Each record is one investigated question: its evidence captures, curated findings and verdict live under research/ in the repo. The screens of each mode it covers are built from it."
+        lede={[
+          "One investigated question per record.",
+          "Each mode's screens are built from its record.",
+        ]}
       />
       <QueryResult query={records} resource="research records">
         {(rows) =>
           rows.length ? (
-            rows.map((r) => (
-              <RecordCard
-                key={r.slug}
-                record={r}
-                sources={counts?.get(r.slug) ?? (counts ? 0 : undefined)}
-              />
-            ))
+            <div className="record-grid">
+              {rows.map((r) => (
+                <RecordCard
+                  key={r.slug}
+                  record={r}
+                  sources={counts?.get(r.slug) ?? (counts ? 0 : undefined)}
+                />
+              ))}
+            </div>
           ) : (
             <EmptyState>No research records yet.</EmptyState>
           )

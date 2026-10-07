@@ -1,7 +1,7 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import type { Capture } from "../src/api/types";
-import { captureTime, evidenceFolder } from "../src/lib/captures";
+import { captureTime, evidenceFolder, splitPath } from "../src/lib/captures";
 import { bodyRows, renderRoute } from "./view-harness";
 
 const SLUG = "001-guild-conquest-meta";
@@ -45,6 +45,14 @@ describe("capture ledger helpers", () => {
     expect(captureTime("yesterday")).toBe("yesterday");
   });
 
+  it("splits a path into its folder and its file name", () => {
+    expect(splitPath("evidence/03-dc-posts/img/1-1.jpg")).toEqual({
+      dir: "evidence/03-dc-posts/img/",
+      name: "1-1.jpg",
+    });
+    expect(splitPath("README.md")).toEqual({ dir: "", name: "README.md" });
+  });
+
   it("files a capture under its first evidence folder", () => {
     expect(evidenceFolder("evidence/03-dc-posts/img/1-1.jpg")).toBe("evidence/03-dc-posts");
     expect(evidenceFolder("evidence/01-access-probe.tsv")).toBe("evidence");
@@ -56,7 +64,17 @@ describe("/research/$slug/captures", () => {
     await renderRoute(`/research/${SLUG}/captures`, API);
     expect(await screen.findByRole("heading", { name: "Captures" })).toBeVisible();
     expect(screen.getByText(`research/${SLUG}/`)).toHaveClass("mono");
+    const crumbs = screen.getByRole("navigation", { name: "Breadcrumb" });
+    expect(within(crumbs).getByRole("link", { name: "Research" })).toHaveAttribute(
+      "href",
+      "/research",
+    );
+    expect(screen.getByText(/≈ marks a time backfilled/).closest("ul")).toHaveClass("points");
     await waitFor(() => expect(bodyRows(panel())).toHaveLength(4));
+    expect(screen.getByText("1-1.jpg")).toHaveClass("capture-name");
+    expect(panel().querySelector("tbody td.capture-tool .chip")).toHaveTextContent(
+      "python:dc_scrape",
+    );
     const rows = bodyRows(panel());
     expect(rows[0]).toEqual([
       "evidence/03-dc-posts/1.md",

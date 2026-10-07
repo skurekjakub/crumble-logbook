@@ -3,6 +3,8 @@ import type { GlossaryKindFilter } from "../api/queries";
 import { glossaryQuery } from "../api/queries";
 import type { GlossaryEntry } from "../api/types";
 import type { Column } from "../components/DataTable";
+import { Clamp } from "../components/Clamp";
+import { CookieName } from "../components/CookieName";
 import { DataTable } from "../components/DataTable";
 import { QueryResult } from "../components/QueryResult";
 import { ViewHeader } from "../components/ViewHeader";
@@ -33,23 +35,59 @@ export function validateGlossarySearch(search: Record<string, unknown>): Glossar
   return { kind: optionalKey(search.kind, KIND_LABELS), q: optionalText(search.q) };
 }
 
+/**
+ * An entry's name: a cookie or pet with its portrait and short English name
+ * over the Korean (the full English in the tooltip); any other term in
+ * English, cut to a line, over the Korean; the Korean alone when it has no
+ * English.
+ *
+ * @param props - the entry
+ * @returns the name
+ */
+function EntryName({ entry }: { entry: GlossaryEntry }) {
+  if (entry.kind === "cookie" || entry.kind === "pet") {
+    return <CookieName kr={entry.kr} en={entry.en} />;
+  }
+  return (
+    <span className="name-stack term">
+      <span className="en">
+        {entry.en ? (
+          <Clamp lines={1} perLine={50}>
+            {entry.en}
+          </Clamp>
+        ) : (
+          entry.kr
+        )}
+      </span>
+      {entry.en ? <span className="kr">{entry.kr}</span> : null}
+    </span>
+  );
+}
+
 const COLUMNS: Column<GlossaryEntry>[] = [
   {
-    header: "Korean",
-    cell: (g) => g.kr,
+    header: "Name",
+    cell: (g) => <EntryName entry={g} />,
+    className: "wide gloss-name",
   },
   {
     header: "Shorthand",
-    cell: (g) => g.shorthand.join(", "),
-  },
-  {
-    header: "English",
-    cell: (g) => g.en ?? <span className="muted">{g.kr}</span>,
+    cell: (g) =>
+      g.shorthand.length ? (
+        <span className="chips">
+          {g.shorthand.map((s) => (
+            <span key={s} className="chip">
+              {s}
+            </span>
+          ))}
+        </span>
+      ) : null,
+    className: "gloss-short",
   },
   {
     header: "Kind",
-    cell: (g) => KIND_LABELS[g.kind],
-    className: "n",
+    cell: (g) => <span className={`kind k-${g.kind}`}>{KIND_LABELS[g.kind]}</span>,
+    className: "gloss-kind",
   },
 ];
 
@@ -73,7 +111,10 @@ export function GlossaryView({ search: { kind, q }, onSearch }: GlossaryViewProp
     <>
       <ViewHeader
         title="Glossary"
-        lede="Korean names and forum shorthand mapped to the English client."
+        lede={[
+          "Korean names and forum shorthand, mapped to the English client.",
+          "Search any of them: Korean, shorthand or English.",
+        ]}
       />
       <QueryResult query={glossary} resource="glossary">
         {(rows) => (
@@ -95,6 +136,7 @@ export function GlossaryView({ search: { kind, q }, onSearch }: GlossaryViewProp
               onChange: (v) => onSearch({ kind: optionalKey(v, KIND_LABELS) }),
             }}
             empty={kind ? "No glossary entries of this kind." : "No glossary entries yet."}
+            layout="stack"
           />
         )}
       </QueryResult>

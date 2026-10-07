@@ -65,34 +65,46 @@ describe("/research", () => {
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Crumble Logbook");
   });
 
-  it("lists every record with its slug, question, status, dates and source count", async () => {
+  it("lists every record as a compact card: status pill, slug, modes, lede, question, dates and source count", async () => {
     await renderRoute("/research", API);
     const pvp = await card("002-pvp-meta");
     const p = within(pvp);
-    expect(p.getByRole("heading", { name: "What wins in Arena and Rumble Arena?" })).toBeVisible();
-    expect(p.getByText("done")).toHaveClass("chip");
+    expect(
+      p.getByRole("heading", { name: "Arena 아레나 Rumble Arena 와글와글 아레나" }),
+    ).toBeVisible();
+    expect(p.getByText("done")).toHaveClass("pill", "legacy");
+    expect(within(await card("001-guild-conquest-meta")).getByText("active")).toHaveClass(
+      "pill",
+      "good",
+    );
+    expect(p.getByText("What players run in PvP.")).toBeVisible();
+    expect(p.getByText("What wins in Arena and Rumble Arena?")).toBeVisible();
     expect(pvp).toHaveTextContent("Started 2026-09-27");
     expect(pvp).toHaveTextContent("Updated 2026-09-28");
-    expect(await p.findByText("2 sources")).toBeVisible();
-    expect(p.getByText("research/002-pvp-meta/")).toHaveClass("mono");
+    expect(await p.findByText("2 sources")).toHaveClass("chip");
+    expect(p.getByText("002-pvp-meta")).toHaveAttribute("title", "research/002-pvp-meta/");
     expect(within(await card("001-guild-conquest-meta")).getByText("4 sources")).toBeVisible();
+    expect(within(await card("001-guild-conquest-meta")).getByText("S5 (live)")).toHaveClass(
+      "chip",
+    );
   });
 
-  it("links each record to every mode it covers and to that mode's screens", async () => {
+  it("links each record to every mode it covers, as mode chips", async () => {
     await renderRoute("/research", API);
     const pvp = await card("002-pvp-meta");
     const p = within(pvp);
-    expect(p.getByRole("link", { name: "Arena" })).toHaveAttribute("href", "/arena");
-    expect(p.getByRole("link", { name: "Rumble Arena" })).toHaveAttribute("href", "/rumble");
-    expect(p.getAllByRole("link", { name: "Counters" }).map((a) => a.getAttribute("href"))).toEqual(
-      ["/arena/counters", "/rumble/counters"],
+    expect(p.getByRole("link", { name: "Arena 아레나" })).toHaveAttribute("href", "/arena");
+    expect(p.getByRole("link", { name: "Rumble Arena 와글와글 아레나" })).toHaveAttribute(
+      "href",
+      "/rumble",
     );
+    expect(p.queryByRole("link", { name: "Counters" })).toBeNull();
     const conquest = within(await card("001-guild-conquest-meta"));
-    expect(conquest.getByRole("link", { name: "Guild Conquest" })).toHaveAttribute(
+    expect(conquest.getByRole("link", { name: "Guild Conquest 길드 토벌전" })).toHaveAttribute(
       "href",
       "/conquest",
     );
-    expect(conquest.queryByRole("link", { name: "Arena" })).toBeNull();
+    expect(conquest.queryByRole("link", { name: /^Arena/ })).toBeNull();
   });
 
   it("links each record to its capture ledger", async () => {
@@ -107,7 +119,9 @@ describe("/research", () => {
       ...API,
       "/api/records/002-pvp-meta": { body: RECORDS[1] },
     });
-    fireEvent.click(within(await card("002-pvp-meta")).getByRole("link", { name: "Rumble Arena" }));
+    fireEvent.click(
+      within(await card("002-pvp-meta")).getByRole("link", { name: /^Rumble Arena/ }),
+    );
     await waitFor(() => expect(router.state.location.pathname).toBe("/rumble"));
   });
 
