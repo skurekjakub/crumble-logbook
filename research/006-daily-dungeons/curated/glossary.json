@@ -1,0 +1,185 @@
+[
+ {
+  "kr": "일일 던전",
+  "kr_short": [
+   "일던",
+   "일일던전"
+  ],
+  "en": "Daily Dungeons (the dungeon menu's daily tab)",
+  "kind": "term",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "kr": "경험치 던전",
+  "kr_short": [
+   "경던",
+   "경험치던전"
+  ],
+  "en": "EXP Dungeon",
+  "kind": "term",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "kr": "코인 던전",
+  "kr_short": [
+   "코인던전"
+  ],
+  "en": "Coin Dungeon",
+  "kind": "term",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "kr": "반죽 던전",
+  "kr_short": [
+   "반죽던전"
+  ],
+  "en": "Dough Dungeon",
+  "kind": "term",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "kr": "연구석 던전",
+  "kr_short": [
+   "연구석던전"
+  ],
+  "en": "Research Stone Dungeon (global: Innovite Dungeon)",
+  "kind": "term",
+  "sources": [
+   "nv:43827",
+   "web:yt-RaZght8lZZ8"
+  ]
+ },
+ {
+  "kr": "룬결정 던전",
+  "kr_short": [
+   "룬결정던전",
+   "슈가룬 던전",
+   "슈가룬던전"
+  ],
+  "en": "Rune Crystal Dungeon",
+  "kind": "term",
+  "sources": [
+   "nv:16132"
+  ]
+ },
+ {
+  "kr": "악몽을 꾸는 도서관 사서",
+  "kr_short": [
+   "사서"
+  ],
+  "en": "Nightmare-Dreaming Librarian (EXP Dungeon boss; translated)",
+  "kind": "term",
+  "sources": [
+   "dc:80715",
+   "nv:50417"
+  ]
+ },
+ {
+  "kr": "사막 모래 풍뎅이",
+  "kr_short": [],
+  "en": "Desert Sand Scarab (Coin Dungeon enemy; translated)",
+  "kind": "term",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "kr": "타피오카 개구리",
+  "kr_short": [],
+  "en": "Tapioca Frog (Dough Dungeon enemy; translated)",
+  "kind": "term",
+  "sources": [
+   "nv:43827",
+   "nv:50417"
+  ]
+ },
+ {
+  "kr": "찐만두 들개",
+  "kr_short": [],
+  "en": "Steamed-bun hound (Dough Dungeon enemy; translated)",
+  "kind": "term",
+  "sources": [
+   "nv:50417"
+  ]
+ },
+ {
+  "kr": "위험한 우무젤리",
+  "kr_short": [
+   "우무젤리"
+  ],
+  "en": "Dangerous Agar Jelly (Research Stone Dungeon enemy; translated)",
+  "kind": "term",
+  "sources": [
+   "nv:43827",
+   "nv:50417"
+  ]
+ },
+ {
+  "kr": "백설탕 가디언 골렘",
+  "kr_short": [],
+  "en": "White Sugar Guardian Golem (Rune Crystal Dungeon boss; translated)",
+  "kind": "term",
+  "sources": [
+   "nv:16132"
+  ]
+ },
+ {
+  "kr": "소탕",
+  "kr_short": [],
+  "en": "Sweep (quick clear of a stage already cleared)",
+  "kind": "term",
+  "sources": [
+   "dc:81070"
+  ]
+ },
+ {
+  "kr": "달성 보상",
+  "kr_short": [],
+  "en": "First-clear rewards (one-time, per stage)",
+  "kind": "term",
+  "sources": [
+   "dc:82001"
+  ]
+ },
+ {
+  "kr": "탄속펫",
+  "kr_short": [],
+  "en": "Projectile Speed pet (Furball Pup)",
+  "kind": "term",
+  "sources": [
+   "dc:80715"
+  ]
+ },
+ {
+  "kr": "노컨",
+  "kr_short": [
+   "아예 노컨",
+   "No손컨",
+   "노컨덱"
+  ],
+  "en": "No control (hands-off); 노컨덱 is a deck that clears that way",
+  "kind": "term",
+  "sources": [
+   "dc:78450",
+   "nv:46250",
+   "nv:48076"
+  ]
+ },
+ {
+  "kr": "벨튀",
+  "kr_short": [],
+  "en": "Hit-and-run (strike, pull out, re-enter)",
+  "kind": "term",
+  "sources": [
+   "nv:46851"
+  ]
+ }
+]

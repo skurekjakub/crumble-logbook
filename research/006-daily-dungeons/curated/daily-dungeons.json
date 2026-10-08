@@ -1,0 +1,184 @@
+[
+ {
+  "id": "exp",
+  "name_en": "EXP Dungeon",
+  "name_kr": "경험치 던전",
+  "drops": [
+   "XP (7.51M a run at 746)"
+  ],
+  "entry": {
+   "keys": "3 keys a day; up to 6 with blessing and passes",
+   "quick_clear": true,
+   "note": "Each dungeon has its own key; unused keys don't carry over, weekends add extras."
+  },
+  "boss": {
+   "kr": "악몽을 꾸는 도서관 사서",
+   "en": "Nightmare-Dreaming Librarian",
+   "element": "Dark",
+   "weakness": "Light",
+   "rotates": false
+  },
+  "top_stage": {
+   "stage": 770,
+   "date": "2026-10-07",
+   "source": "dc:82001"
+  },
+  "notes": [
+   "Hands-off record 746 (dc:80715); a reply credits the 770 clear to auto with endless retries.",
+   "10-08 update: lower boss ATK, slower push AoE, smaller inner-book range."
+  ],
+  "sources": [
+   "dc:80715",
+   "dc:82001",
+   "nv:50417",
+   "dc:81981"
+  ]
+ },
+ {
+  "id": "dough",
+  "name_en": "Dough Dungeon",
+  "name_kr": "반죽 던전",
+  "drops": [
+   "Lucky dough (31,140 a run at 527)"
+  ],
+  "entry": {
+   "keys": "3 keys a day; up to 6 with blessing and passes",
+   "quick_clear": true,
+   "note": "Each dungeon has its own key; unused keys don't carry over, weekends add extras."
+  },
+  "boss": {
+   "kr": "타피오카 개구리",
+   "en": "Tapioca Frog",
+   "element": "Water",
+   "weakness": "Grass",
+   "rotates": false
+  },
+  "top_stage": {
+   "stage": 770,
+   "date": "2026-10-07",
+   "source": "dc:82162"
+  },
+  "notes": [
+   "Hardest-hitting after EXP: run to the 5 o'clock corner; Cream Puff's field launches the frogs.",
+   "10-08 update: lower ATK for the frogs and the steamed-bun hounds (찐만두 들개).",
+   "Lucky dough opens the oven for gear."
+  ],
+  "sources": [
+   "dc:82162",
+   "nv:50417",
+   "nv:48486",
+   "dc:81981"
+  ]
+ },
+ {
+  "id": "research-stone",
+  "name_en": "Research Stone Dungeon",
+  "name_kr": "연구석 던전",
+  "drops": [
+   "Research stones (124K at 526, 352K at 703)"
+  ],
+  "entry": {
+   "keys": "3 keys a day; up to 6 with blessing and passes",
+   "quick_clear": true,
+   "note": "Each dungeon has its own key; unused keys don't carry over, weekends add extras."
+  },
+  "boss": {
+   "kr": "위험한 우무젤리",
+   "en": "Dangerous Agar Jelly",
+   "element": "Fire",
+   "weakness": "Water",
+   "rotates": false
+  },
+  "top_stage": {
+   "stage": 703,
+   "date": "2026-10-02",
+   "source": "nv:49007"
+  },
+  "notes": [
+   "Global client name: Innovite Dungeon.",
+   "Jellies spawn under the team and explode; long fights risk a time-over.",
+   "10-08 update: less jelly HP, moved and faster spawns.",
+   "Top is a stage-select screen; the last clear may be one lower."
+  ],
+  "sources": [
+   "nv:49007",
+   "nv:50417",
+   "web:yt-RaZght8lZZ8",
+   "dc:81981"
+  ]
+ },
+ {
+  "id": "coin",
+  "name_en": "Coin Dungeon",
+  "name_kr": "코인 던전",
+  "drops": [
+   "Coins (111.1G a run at 524)"
+  ],
+  "entry": {
+   "keys": "3 keys a day; up to 6 with blessing and passes",
+   "quick_clear": true,
+   "note": "Each dungeon has its own key; unused keys don't carry over, weekends add extras."
+  },
+  "boss": {
+   "kr": "사막 모래 풍뎅이",
+   "en": "Desert Sand Scarab",
+   "element": "Light",
+   "weakness": "Dark",
+   "rotates": false
+  },
+  "top_stage": {
+   "stage": 770,
+   "date": "2026-10-07",
+   "source": "dc:81991"
+  },
+  "notes": [
+   "Scarabs back off when approached: hold a corner, let them gather; the usual loss is the timer.",
+   "Not changed by the 10-08 update."
+  ],
+  "sources": [
+   "dc:81991",
+   "dc:81988",
+   "dc:82001",
+   "nv:43827",
+   "dc:81981"
+  ]
+ },
+ {
+  "id": "rune",
+  "name_en": "Rune Crystal Dungeon",
+  "name_kr": "룬결정 던전",
+  "drops": [
+   "Rune crystals (481 at 472, 728 at 719)"
+  ],
+  "entry": {
+   "keys": "3 keys a day; up to 6 with blessing and passes",
+   "quick_clear": true,
+   "note": "Each dungeon has its own key; unused keys don't carry over, weekends add extras."
+  },
+  "boss": {
+   "kr": "백설탕 가디언 골렘",
+   "en": "White Sugar Guardian Golem",
+   "element": "Grass",
+   "weakness": "Fire",
+   "rotates": false
+  },
+  "top_stage": {
+   "stage": 719,
+   "date": "2026-10-05",
+   "source": "nv:49521"
+  },
+  "notes": [
+   "Most automatable dungeon: full auto holds into the 600s.",
+   "Added 2026-08-13; crystals refine sugar runes. Also called 슈가룬 던전.",
+   "Not changed by the 10-08 update.",
+   "Top is a stage-select screen; the last clear may be one lower."
+  ],
+  "sources": [
+   "nv:49521",
+   "nv:16132",
+   "nv:43827",
+   "nv:47793",
+   "dc:81981"
+  ]
+ }
+]

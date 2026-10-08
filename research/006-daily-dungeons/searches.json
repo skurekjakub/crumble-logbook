@@ -1,0 +1,266 @@
+[
+  {
+    "id": "dc-gyeongdeon",
+    "kind": "dc",
+    "query": "경던",
+    "why": "경던, the gallery's short name for the EXP Dungeon, in nearly every EXP deck post.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-exp-dungeon",
+    "kind": "dc",
+    "query": "경험치 던전",
+    "why": "The EXP Dungeon's full name.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-exp-dungeon-joined",
+    "kind": "dc",
+    "query": "경험치던전",
+    "why": "The full name as posters type it without the space.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-gyeongdeon-deck",
+    "kind": "dc",
+    "query": "경던덱",
+    "why": "EXP deck posts by the short name.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-no-control",
+    "kind": "dc",
+    "query": "노컨",
+    "why": "No control: where the hands-off clears announce themselves.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-auto",
+    "kind": "dc",
+    "query": "오토",
+    "why": "Auto clears and auto decks across the daily dungeons.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-auto-deck",
+    "kind": "dc",
+    "query": "오토덱",
+    "why": "Auto deck posts; found the 724 and 746 EXP decks (dc:79492, dc:80715).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-full-auto",
+    "kind": "dc",
+    "query": "풀오토",
+    "why": "Full-auto clear posts.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-ildeon",
+    "kind": "dc",
+    "query": "subject:일던",
+    "why": "일던, the daily dungeons' short name, in titles; found the 770 clears and key threads.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-daily-dungeon",
+    "kind": "dc",
+    "query": "subject:일일던전",
+    "why": "The daily dungeons' full name in titles.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-coin",
+    "kind": "dc",
+    "query": "subject:코인던전",
+    "why": "Coin Dungeon posts; found the coin 770 clears (dc:81991, dc:81988).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-dough",
+    "kind": "dc",
+    "query": "subject:반죽던전",
+    "why": "Dough Dungeon posts.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-research-stone",
+    "kind": "dc",
+    "query": "subject:연구석던전",
+    "why": "Research Stone Dungeon posts.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-rune",
+    "kind": "dc",
+    "query": "subject:룬결정",
+    "why": "Rune Crystal Dungeon posts.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-sweep",
+    "kind": "dc",
+    "query": "subject:소탕",
+    "why": "Sweep (quick clear) threads: when players stop pushing.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "dc-subject-keys",
+    "kind": "dc",
+    "query": "subject:열쇠",
+    "why": "Daily dungeon keys: caps, weekend extras, shops and packs.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "naver-guide-board",
+    "kind": "naver",
+    "menuId": 9,
+    "why": "The official cafe's guide board, where the dungeon decks with screenshots are posted.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "naver-notices",
+    "kind": "naver",
+    "menuId": 1,
+    "why": "Official notices, where the 10-01 daily dungeon easing notice ran (nv:48486).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "naver-patch-notes",
+    "kind": "naver",
+    "menuId": 3,
+    "why": "Official patch notes: stage caps and the 10-08 easing (nv:37730, nv:44477, nv:50417).",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "naver-menu-4",
+    "kind": "naver",
+    "menuId": 4,
+    "why": "A further official board listed alongside notices and patch notes.",
+    "added": "2026-10-07",
+    "lastHit": null
+  },
+  {
+    "id": "youtube-exp-dungeon",
+    "kind": "youtube",
+    "query": "크럼블 경험치 던전",
+    "why": "EXP Dungeon videos by the full name.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-gyeongdeon",
+    "kind": "youtube",
+    "query": "쿠키런 크럼블 경던",
+    "why": "EXP Dungeon videos by the short name.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-gyeongdeon-auto",
+    "kind": "youtube",
+    "query": "크럼블 경던 오토",
+    "why": "EXP auto videos.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-exp-700",
+    "kind": "youtube",
+    "query": "크럼블 경험치던전 700",
+    "why": "EXP clears around 700.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-en-exp-dungeon",
+    "kind": "youtube",
+    "query": "crumble exp dungeon",
+    "why": "Global EXP Dungeon videos.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-daily-dungeon",
+    "kind": "youtube",
+    "query": "크럼블 일일던전",
+    "why": "Daily dungeon guides covering every dungeon.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-coin-dungeon",
+    "kind": "youtube",
+    "query": "크럼블 코인던전",
+    "why": "Coin Dungeon videos.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-dough-dungeon",
+    "kind": "youtube",
+    "query": "크럼블 반죽던전",
+    "why": "Dough Dungeon videos.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-research-stone-dungeon",
+    "kind": "youtube",
+    "query": "크럼블 연구석던전",
+    "why": "Research Stone Dungeon videos.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-rune-dungeon",
+    "kind": "youtube",
+    "query": "크럼블 룬결정던전",
+    "why": "Rune Crystal Dungeon videos.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-susinwoo-dungeon",
+    "kind": "youtube",
+    "query": "서신우 크럼블 던전",
+    "why": "서신우's per-dungeon guides, mirrored on the cafe.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-vart",
+    "kind": "youtube",
+    "channel": "@Vart_Sub",
+    "why": "VART, whose auto decks for each dungeon the record cites.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  },
+  {
+    "id": "youtube-ndlover",
+    "kind": "youtube",
+    "channel": "@ndlover7",
+    "why": "ND러너, whose 721 EXP auto run the record cites.",
+    "added": "2026-10-07",
+    "lastHit": "2026-10-07"
+  }
+]

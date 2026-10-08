@@ -1,0 +1,19 @@
+{
+  "record": {
+    "slug": "006-daily-dungeons",
+    "question": "Players post daily dungeon clears with the lineup, pets, perks and run method precisely enough that, for each daily dungeon, the deck that clears the furthest stage on full auto can be named and reproduced, alongside the boss, entry and stage-cap facts that bound it.",
+    "status": "active",
+    "startedAt": "2026-10-07",
+    "mode": "daily_dungeon"
+  },
+  "curated": "curated",
+  "extractions": "evidence/08-extract",
+  "captures": [
+    { "site": "dc", "dir": "evidence/02-dc-yt-exp/dc", "file": "{id}.md" },
+    { "site": "dc", "dir": "evidence/03-other-dungeons/dc", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/01-naver-exp/nv", "file": "nv-{id}.md" },
+    { "site": "nv", "dir": "evidence/03-other-dungeons/nv", "file": "nv-{id}.md" }
+  ],
+  "rankings": [],
+  "ledger": { "file": "evidence/captures.jsonl" }
+}
