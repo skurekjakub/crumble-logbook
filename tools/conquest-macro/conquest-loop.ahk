@@ -15,7 +15,7 @@ global Phase := "idle"
 ; Fallbacks used when a key is missing from the INI. Section -> key -> value.
 global DEFAULTS := Map(
     "Adb", Map("Path", "C:\Program Files\Netease\MuMuPlayer\nx_main\adb.exe", "Serial", "emulator-5556",
-               "CaptureDisplay", "4619827767814508545", "InputDisplay", "2"),
+               "Package", "com.devsisters.cc", "CaptureDisplay", "auto", "InputDisplay", "auto"),
     "Points", Map("EnterX", "712", "EnterY", "2172", "DismissX", "720", "DismissY", "2470", "JitterPx", "6"),
     "Detect", Map("Lobby", "1200,1374,00CB8F|100,1494,005667|60,2300,007E91|1100,2290,007E91|1320,2160,00CB8F",
                   "EnterReady", "880,2144,FD9500",

@@ -47,7 +47,7 @@ The lobby layout was read from the game on 2026-10-07, between seasons, so ENTER
 ## Tuning
 
 Points and pixels are in game pixels on the 1440×2560 portrait display that adb sees, not the window.
-- **`[Adb]`:** `CaptureDisplay` is the SurfaceFlinger display id (`adb shell dumpsys SurfaceFlinger --display-id`). `InputDisplay` is the `input -d` index; MuMu runs the game on display 2.
+- **`[Adb]`:** `CaptureDisplay` (the SurfaceFlinger id for `screencap -d`) and `InputDisplay` (the `input -d` index) default to `auto`: the display whose top activity is `Package`. MuMu renumbers its displays when it restarts, so a fixed id goes stale; `auto` finds the game again whenever a capture fails. To pin one, read `adb shell dumpsys activity activities` (the `Display #N` running the game) and `adb shell dumpsys display` (that display's `uniqueId='local:…'`).
 - **`[Detect]`:** each screen is a list of `x,y,RRGGBB` pixels that must all be within `Tolerance`. If an update moves the lobby, re-learn it with F9.
 
 Don't keep the log open with `tail -f` on Windows, which locks it: the script then drops log lines.
