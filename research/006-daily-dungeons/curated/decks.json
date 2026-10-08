@@ -1,0 +1,6109 @@
+[
+ {
+  "id": "exp-dc80715-furball",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 746,
+  "power": "4.5G",
+  "recommended_power": "9.7G",
+  "gear_preset": "Skill haste 27.6; Conquest preset steadier",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "Brightseeker solo, Furball Pup (746 hands-off)",
+  "status": "meta",
+  "summary": "746 with no input: Brightseeker deals alone, Furball Pup (Projectile Speed) is the key; retry until Milk or Ion survives the opening.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Tank that lowers the boss's DEF; a spare Armor Repair body."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "털뭉치 멍뭉이",
+   "근엄한 초코왕방울",
+   "얼음과자새"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Health Insurance (의료보험)",
+  "substitutions": [
+   "No Furball Pup: Hot Doggie (dc:79492), Octo Wasabi (dc:80701) or Holy Baby Drop (dc:78450).",
+   "Stage gear preset in place of Conquest when short on damage (dc:79492 comments)."
+  ],
+  "sources": [
+   "dc:80715"
+  ]
+ },
+ {
+  "id": "exp-dc79492-hotdog",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 724,
+  "power": "3.96G",
+  "recommended_power": "7.72G",
+  "gear_preset": "Stage preset",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "Brightseeker solo, Hot Doggie (724)",
+  "status": "alt",
+  "summary": "Same lineup with Hot Doggie, full auto at 724; a commenter with a 5★ Brightseeker failed at 713.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "stars": "10",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Tank that lowers the boss's DEF; a spare Armor Repair body."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "근엄한 초코왕방울",
+   "얼음과자새"
+  ],
+  "perks": "Health Insurance (의료보험) + Armor Repair (방어구 수리 특약)",
+  "obsolete": {
+   "since": "2026-10-04",
+   "reason": "Same cookies; Furball Pup in Hot Doggie's slot cleared 746 with no input.",
+   "sources": [
+    "dc:80715"
+   ],
+   "superseded_by": "exp-dc80715-furball"
+  },
+  "sources": [
+   "dc:79492"
+  ]
+ },
+ {
+  "id": "exp-nv48705-biku",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 724,
+  "power": "4.5G",
+  "gear_preset": "Stage preset",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "비쿠's Brightseeker deck (724)",
+  "status": "alt",
+  "summary": "The cafe's copy of the DC lineup: a video at 724; the cafe roundup labels it the EXP auto deck.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Tank that lowers the boss's DEF; a spare Armor Repair body."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "근엄한 초코왕방울",
+   "얼음과자새",
+   "핫도그도그"
+  ],
+  "perks": "Health Insurance (의료보험) + Armor Repair (방어구 수리 특약)",
+  "substitutions": [
+   "Not clearing: Skating Queen for Dark Choco, or a Projectile Speed pet.",
+   "The roundup's version runs Furball Pup in Hot Doggie's slot."
+  ],
+  "obsolete": {
+   "since": "2026-10-04",
+   "reason": "Same cookies as the 746 deck; its Furball Pup variant is that deck.",
+   "sources": [
+    "dc:80715",
+    "nv:49847"
+   ],
+   "superseded_by": "exp-dc80715-furball"
+  },
+  "sources": [
+   "nv:48705",
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "exp-nv48828-bag",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "semi",
+  "stage": 716,
+  "power": "4.54G",
+  "gear_preset": "Arena & Conquest preset",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "가방은 항상 두개's semi-auto (716)",
+  "status": "alt",
+  "summary": "Semi-auto 716: nudge the team down after Moon Rabbit's skill to catch Milk's, re-enter at 48 s; keep Brightseeker alive.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "갓난갓방울",
+   "근엄한 초코왕방울"
+  ],
+  "perks": "Passion Pay (열정페이) + Armor Repair (방어구 수리 특약)",
+  "sources": [
+   "nv:48828",
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "exp-yt-ndrunner-721",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 721,
+  "power": "6.93G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "ND러너's auto deck (721)",
+  "status": "alt",
+  "summary": "Auto with retries at 721: keep Brightseeker alive for two skill casts. Second pet read as Candy Shade Pouch, unconfirmed.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "stars": "10",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "1",
+    "why": "Lv1 as posted: a tank body for Armor Repair's count."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "색동 주머니",
+   "근엄한 초코왕방울"
+  ],
+  "substitutions": [
+   "No King Choco Drop: Holy Baby Drop or Hot Doggie."
+  ],
+  "sources": [
+   "web:yt-0CUv152HVrA"
+  ]
+ },
+ {
+  "id": "exp-dc80513",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 705,
+  "power": "3.41G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "Two-dealer manual deck (705)",
+  "status": "niche",
+  "summary": "Clears 705 with control (\"컨함\"); Scorpion as a second dealer.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "근엄한 초코왕방울",
+   "얼음과자새",
+   "와사비 문어"
+  ],
+  "sources": [
+   "dc:80513"
+  ]
+ },
+ {
+  "id": "exp-dc78450-figure",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 696,
+  "power": "4.15G",
+  "recommended_power": "5.77G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "Brightseeker solo, Skating Queen (696)",
+  "status": "alt",
+  "summary": "\"아예 노컨\" (no control at all) at 696: the solo frame with Skating Queen where later decks run Dark Choco.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "stars": "10",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "얼음과자새"
+  ],
+  "perks": "Passion Pay (열정페이) + Armor Repair (방어구 수리 특약)",
+  "sources": [
+   "dc:78450"
+  ]
+ },
+ {
+  "id": "exp-nv47333-roronoa",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 683,
+  "power": "4.08G",
+  "recommended_power": "5.05G",
+  "gear_preset": "Conquest preset",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "롤로노아's \"only Brightseeker must live\" deck (683)",
+  "status": "alt",
+  "summary": "Auto with a good hit rate at 683; only Brightseeker needs to survive.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "치약초코 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Flex healer in Grapevine's role."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "근엄한 초코왕방울",
+   "핫도그도그"
+  ],
+  "substitutions": [
+   "Stuck: Grapevine for Skating Queen."
+  ],
+  "sources": [
+   "nv:47333"
+  ]
+ },
+ {
+  "id": "exp-nv46895-yolo",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 679,
+  "power": "3.12G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "YOLO2's manual deck (679)",
+  "status": "niche",
+  "summary": "Pull back to the second book ring, go in at 47–48 s after the double push; even above recommended power, no control melts the team.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "근엄한 초코왕방울",
+   "갓난갓방울"
+  ],
+  "sources": [
+   "nv:46895"
+  ]
+ },
+ {
+  "id": "exp-dc80701-shyer",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 676,
+  "power": "2.61G",
+  "recommended_power": "4.69G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "shyer's 5★ Brightseeker copy (676)",
+  "status": "alt",
+  "summary": "The solo lineup on auto at 676 with a 5★ Brightseeker; a commenter calls endless auto retries the method.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "stars": "5",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Tank that lowers the boss's DEF; a spare Armor Repair body."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "와사비 문어",
+   "얼음과자새",
+   "근엄한 초코왕방울"
+  ],
+  "sources": [
+   "dc:80701"
+  ]
+ },
+ {
+  "id": "exp-dc77003",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "semi",
+  "stage": 661,
+  "power": "2.42G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "GingerBright semi-auto deck (661)",
+  "status": "niche",
+  "summary": "Hands off, then enter at 48 s; GingerBright's debuff doesn't stack with Moon Rabbit's.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Light tank; the third Armor Repair tank before Moon Rabbit."
+   },
+   {
+    "kr": "명랑한 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Lowers the boss's ATK; doesn't stack with Moon Rabbit's debuff."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "96",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "근엄한 초코왕방울",
+   "얼음과자새",
+   "와사비 문어"
+  ],
+  "sources": [
+   "dc:77003"
+  ]
+ },
+ {
+  "id": "exp-nv49978-hearts",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "semi",
+  "stage": 659,
+  "gear_preset": "Power-padding preset (뻥투력)",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "하츠's \"final 2\" semi-auto (659)",
+  "status": "alt",
+  "summary": "From 655: drag the first row so Grapevine isn't hit, then hands off from the second row.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "뽀글방울",
+   "핫도그도그",
+   "얼음과자새"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:49978"
+  ]
+ },
+ {
+  "id": "exp-nv48303-cookdas",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 657,
+  "power": "2.61G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "쿠크다스s004's manual deck (657)",
+  "status": "niche",
+  "summary": "Hit once, pull to 7 o'clock, buffs at 53 s, enter between book rows at 47.5 s, out after the second drone, back at 32 s.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "뽀글방울",
+   "얼음과자새"
+  ],
+  "sources": [
+   "nv:48303"
+  ]
+ },
+ {
+  "id": "exp-yt-nurimer-655",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 655,
+  "power": "2.47G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "누리머's Rye deck (655)",
+  "status": "alt",
+  "summary": "Auto plus retries at 655: VART's Rye lineup.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level_rule": "Lv ?",
+    "stars": "10",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level_rule": "Lv ?",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-3",
+    "level_rule": "Lv ?",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level_rule": "Lv ?",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level_rule": "Lv ?",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level_rule": "Lv ?",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row2-1",
+    "level_rule": "Lv ?",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level_rule": "Lv ?",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level_rule": "Lv ?",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level_rule": "Lv ?",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "얼음과자새"
+  ],
+  "perks": "Passion Pay (열정페이) + Armor Repair (방어구 수리 특약)",
+  "substitutions": [
+   "No King Choco Drop: Soda Dollop or Candy Shade Pouch."
+  ],
+  "sources": [
+   "web:yt-6hrfYOlgYu4"
+  ]
+ },
+ {
+  "id": "exp-dc78207",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 654,
+  "power": "1.79G",
+  "recommended_power": "3.74G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "1.8G budget push (654)",
+  "status": "alt",
+  "summary": "Left on auto it clears; if not, drop the drones and run, repeat; failing that, sweep. 654 at 1.79G.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "얼음과자새",
+   "뽀글방울"
+  ],
+  "perks": "Health Insurance (의료보험) + Armor Repair (방어구 수리 특약)",
+  "sources": [
+   "dc:78207"
+  ]
+ },
+ {
+  "id": "exp-nv47793-yongsa",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 651,
+  "power": "2.97G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "용사맛 쿠키's text-only auto deck (651)",
+  "status": "niche",
+  "summary": "Auto works only with power to spare; otherwise go in after the second slam, and under 50% boss HP raise power.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level_rule": "Lv ?",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level_rule": "Lv ?",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Flex charger; extra damage while the tanks hold."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "뽀글방울",
+   "얼음과자새",
+   "핫도그도그"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Passion Pay (열정페이)",
+  "substitutions": [
+   "Lv20 King Choco Drop for Soda Dollop."
+  ],
+  "sources": [
+   "nv:47793"
+  ]
+ },
+ {
+  "id": "exp-dc75870-dealers",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 644,
+  "power": "3.59G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "갓갓.'s multi-dealer deck (644)",
+  "status": "niche",
+  "summary": "No control (\"컨안함\") at 644; argues extra dealers beat GingerBright, Moon Rabbit and Rockstar. Twelfth cookie not named.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "악마맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Extra Dark ranged dealer; the poster argues dealers beat debuffers."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level_rule": "Lv ?",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level_rule": "Lv ?",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "근엄한 초코왕방울",
+   "갓난갓방울"
+  ],
+  "sources": [
+   "dc:75870"
+  ]
+ },
+ {
+  "id": "exp-yt-vart-641",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 641,
+  "power": "2.21G",
+  "gear_preset": "Skill haste / Skill AMP / DMG resist",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "VART's Rye auto deck (641)",
+  "status": "alt",
+  "summary": "\"못깨면 리트\": retry what doesn't clear. 630 to 641 on auto with Rye as a second dealer.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level_rule": "Lv ?",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level_rule": "Lv ?",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-3",
+    "level_rule": "Lv ?",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level_rule": "Lv ?",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level_rule": "Lv ?",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level_rule": "Lv ?",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row2-1",
+    "level_rule": "Lv ?",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level_rule": "Lv ?",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level_rule": "Lv ?",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level_rule": "Lv ?",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "근엄한 초코왕방울",
+   "갓난갓방울"
+  ],
+  "perks": "Passion Pay (열정페이) + Armor Repair (방어구 수리 특약)",
+  "sources": [
+   "web:yt-VVHt98jkWCo",
+   "web:yt-zx8hJ6_37w8"
+  ]
+ },
+ {
+  "id": "exp-nv46851-ssw",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 638,
+  "power": "2.67G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "서신우's hit-and-run deck (638)",
+  "status": "niche",
+  "summary": "Hands off at the start; heal outside the book ring after each push, re-enter on the next turn.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "와사비 문어",
+   "근엄한 초코왕방울"
+  ],
+  "sources": [
+   "nv:46851",
+   "web:yt-FhBEadxPWWs"
+  ]
+ },
+ {
+  "id": "exp-dc75345",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 634,
+  "power": "3.28G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "Pinot Noir positioning deck (634)",
+  "status": "niche",
+  "summary": "Manual positioning at 634; the fire charger slot is read from a small frame.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Flex support in a buffer slot."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "오븐방랑자 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Fire charger; portrait read as Oven Wanderer, unconfirmed."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "얼음과자새"
+  ],
+  "sources": [
+   "dc:75345"
+  ]
+ },
+ {
+  "id": "exp-nv48076-tube",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 632,
+  "power": "1.79G",
+  "recommended_power": "2.97G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "튜브1919's no-control deck (632)",
+  "status": "alt",
+  "summary": "Left alone it mostly clears first try at 632, 1.79G; Ion's and Rockstar's sugar runes matter. A 1.2G commenter fails at 595.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "80",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "근엄한 초코왕방울",
+   "색동 주머니"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Health Insurance (의료보험)",
+  "substitutions": [
+   "No King Choco Drop: maybe an SR slime pet."
+  ],
+  "sources": [
+   "nv:48076"
+  ]
+ },
+ {
+  "id": "exp-nv46607-ssw",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "semi",
+  "stage": 629,
+  "power": "2.58G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "서신우's enter-at-48 s deck (629)",
+  "status": "niche",
+  "summary": "Hands off, pull back when pushed, enter after the second knockback (about 48 s). The video's edge slot may be Rye.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "얼음과자새"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Health Insurance (의료보험)",
+  "obsolete": {
+   "since": "2026-09-27",
+   "reason": "The author's hit-and-run deck reached 638 the same day.",
+   "sources": [
+    "nv:46851"
+   ],
+   "superseded_by": "exp-nv46851-ssw"
+  },
+  "sources": [
+   "nv:46607",
+   "web:yt-VQM7Tt6R-2Y"
+  ]
+ },
+ {
+  "id": "exp-nv45930-ssw",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 606,
+  "power": "2.25G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "서신우's 600+ deck (606)",
+  "status": "legacy",
+  "summary": "Early 600+ guide; mentions Princess Bari's knockback immunity.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Flex Water ranged dealer."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "얼음과자새"
+  ],
+  "substitutions": [
+   "A survival pet in place of Chargemellow."
+  ],
+  "obsolete": {
+   "since": "2026-09-27",
+   "reason": "The author's later hit-and-run deck dropped Scorpion and Melon Soda and reached 638.",
+   "sources": [
+    "nv:46851"
+   ],
+   "superseded_by": "exp-nv46851-ssw"
+  },
+  "sources": [
+   "nv:45930",
+   "web:yt-ZrEzOgcIYjw"
+  ]
+ },
+ {
+  "id": "exp-nv46250-domi",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 605,
+  "power": "1.55G",
+  "recommended_power": "2.25G",
+  "gear_preset": "Conquest preset: skill haste, skill amp, crit damage",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "도미's No-control deck (605)",
+  "status": "alt",
+  "summary": "\"No손컨\" at 605: shields block the damage; manual control makes it worse. Skill-amp pets over ATK pets.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Light tank; the third Armor Repair tank before Moon Rabbit."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "95",
+    "why": "Kept at Lv95 so it stops taking Pomegranate's buff from Brightseeker."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   }
+  ],
+  "pets": [
+   "근엄한 초코왕방울",
+   "핫도그도그",
+   "얼음과자새"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Health Insurance (의료보험)",
+  "sources": [
+   "nv:46250",
+   "nv:44654"
+  ]
+ },
+ {
+  "id": "exp-nv46707-pueri",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 601,
+  "power": "1.38G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "푸에리's sole-dealer auto deck (601)",
+  "status": "alt",
+  "summary": "Brightseeker as the only dealer gave the fewest retries; keep it even at low stars. It dies: retry.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "얼음과자새"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:46707"
+  ]
+ },
+ {
+  "id": "exp-nv45715-hearts",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 581,
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "하츠's Rye–Scorpion auto deck (581)",
+  "status": "legacy",
+  "summary": "566 to 581 on auto with Rye and Scorpion beside Brightseeker.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "색동 주머니",
+   "뽀글방울"
+  ],
+  "perks": "Health Insurance (의료보험) + Armor Repair (방어구 수리 특약)",
+  "obsolete": {
+   "since": "2026-10-06",
+   "reason": "The author's later deck drops Rye and Scorpion for a single dealer.",
+   "sources": [
+    "nv:49978"
+   ],
+   "superseded_by": "exp-nv49978-hearts"
+  },
+  "sources": [
+   "nv:45715"
+  ]
+ },
+ {
+  "id": "exp-dc73577-gramph",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 582,
+  "power": "1.26G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "gramPH's first auto \"world line\" (582)",
+  "status": "legacy",
+  "summary": "The first posted auto deck: no control, just retry. Three dealers, Ion and Rockstar shields.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "근엄한 초코왕방울",
+   "키위새"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Passion Pay (열정페이)",
+  "substitutions": [
+   "No King Choco Drop: Soda Dollop."
+  ],
+  "obsolete": {
+   "since": "2026-09-27",
+   "reason": "Later auto decks drop Scorpion and Skating Queen for healers; VART's reached 641.",
+   "sources": [
+    "web:yt-VVHt98jkWCo"
+   ],
+   "superseded_by": "exp-yt-vart-641"
+  },
+  "sources": [
+   "dc:73577",
+   "web:yt-MxJ7HUD1jVw"
+  ]
+ },
+ {
+  "id": "exp-nv46544-gogi",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 578,
+  "power": "1.11G",
+  "recommended_power": "1.7G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "고기파이's hit-and-run deck (578)",
+  "status": "niche",
+  "summary": "Hit-and-run at 578, 1.11G; all-damage pets. Brightseeker or Milk dying means retry.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-4",
+    "level": "90",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row1-6",
+    "level": "90",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row2-4",
+    "level": "70",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "와사비 문어"
+  ],
+  "perks": "Passion Pay (열정페이) + Health Insurance (의료보험)",
+  "sources": [
+   "nv:46544"
+  ]
+ },
+ {
+  "id": "exp-dc74694",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "semi",
+  "stage": 571,
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "Brightseeker free-ride deck (571)",
+  "status": "niche",
+  "summary": "Semi-auto at 571, timing the second skill.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "탐험가맛 쿠키",
+    "level": "100",
+    "why": "Flex slot; the author says it isn't needed."
+   },
+   {
+    "kr": "치약초코 쿠키",
+    "level": "90",
+    "why": "Flex healer in Grapevine's role."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level": "100",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "뽀글방울",
+   "얼음과자새",
+   "와사비 문어"
+  ],
+  "sources": [
+   "dc:74694"
+  ]
+ },
+ {
+  "id": "exp-nv45541-lucky",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 554,
+  "power": "1.33G",
+  "recommended_power": "1.32G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "행운쿠키's auto deck (554)",
+  "status": "niche",
+  "summary": "Auto at 554 at about recommended power.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Heals the lowest-HP ally, catching whoever the books hit."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row1-4",
+    "level": "81",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "96",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-3",
+    "level": "99",
+    "why": "Crit-rate buff for Brightseeker's lasers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "91",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "갓난갓방울",
+   "핫도그도그"
+  ],
+  "sources": [
+   "nv:45541"
+  ]
+ },
+ {
+  "id": "exp-dc77041",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "manual",
+  "stage": 535,
+  "power": "0.70G",
+  "gear_preset": "Arena preset",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "농밀은포평's manual guide deck (535)",
+  "status": "niche",
+  "summary": "Manual at 535, 0.70G; Rooty for accuracy on the arena preset.",
+  "cookies": [
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Second dealer: Fire ranged damage beside Brightseeker."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "ATK buff that lands on Brightseeker."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Light tank; the third Armor Repair tank before Moon Rabbit."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row2-1",
+    "level": "96",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Flex support in a buffer slot."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "인삼이라지",
+   "얼음과자새"
+  ],
+  "sources": [
+   "dc:77041"
+  ]
+ },
+ {
+  "id": "exp-nv43827-nun",
+  "mode": "daily_dungeon",
+  "dungeon": "exp",
+  "auto": "full",
+  "stage": 524,
+  "power": "795M",
+  "recommended_power": "973M",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "눈's early auto deck (524)",
+  "status": "niche",
+  "summary": "Clears alone with 3–4 retries per stage at 524; a higher-star Brightseeker smooths it.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for Brightseeker's damage."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Extra ranged dealer with damage over time."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Flex slot: a field Brightseeker deals from while it stands in it."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "slot": "row1-5",
+    "level": "97",
+    "why": "Shielding tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Second healer: keeps Milk and Brightseeker up through the slams."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Team shield that soaks the knockback slams."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Light tank; the third Armor Repair tank before Moon Rabbit."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that lowers the boss's DEF; a spare Armor Repair body."
+   }
+  ],
+  "pets": [
+   "근엄한 초코왕방울",
+   "와사비 문어",
+   "핫도그도그"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Armor Repair (방어구 수리 특약)",
+  "substitutions": [
+   "No King Choco Drop: Icy Birdie."
+  ],
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "id": "coin-yt-vart-674",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "full",
+  "stage": 674,
+  "power": "2.67G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "VART's area auto deck (674)",
+  "status": "meta",
+  "summary": "No hand control, retry on a loss; the title claims clears to 700. Banana Lion feeds the area dealers.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "slot": "row1-1",
+    "level_rule": "Lv ?",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "slot": "row1-2",
+    "level_rule": "Lv ?",
+    "why": "Long-range Light dealer for scarabs that back away."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row1-3",
+    "level_rule": "Lv ?",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-4",
+    "level_rule": "Lv ?",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "slot": "row1-5",
+    "level_rule": "Lv ?",
+    "why": "Ranged area damage on the bunched scarabs."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-6",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row2-1",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-2",
+    "level_rule": "Lv ?",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row2-3",
+    "level_rule": "Lv ?",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-4",
+    "level_rule": "Lv ?",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "slot": "row2-5",
+    "level_rule": "Lv ?",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "slot": "row2-6",
+    "level_rule": "Lv ?",
+    "why": "Tank that holds the corner while the scarabs gather."
+   }
+  ],
+  "pets": [
+   "사바나나 사자",
+   "핫도그도그",
+   "갓난갓방울"
+  ],
+  "perks": "Passion Pay (열정페이) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "web:yt-LM1NwNyxqEA",
+   "web:yt-zx8hJ6_37w8"
+  ]
+ },
+ {
+  "id": "coin-dc81991-gramph",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "manual",
+  "stage": 770,
+  "power": "4.3G",
+  "recommended_power": "12.43G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "gramPH's 770 manual deck",
+  "status": "meta",
+  "summary": "Cleared the 770 cap by hand: from 767 the circling stops working; start at 1 o'clock and steer around Skating Queen.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range Light dealer for scarabs that back away."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "갓난갓방울",
+   "앵앵베리버드"
+  ],
+  "sources": [
+   "dc:81991"
+  ]
+ },
+ {
+  "id": "coin-dc81988-somebody",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "manual",
+  "stage": 770,
+  "power": "5.19G",
+  "gear_preset": "Skill haste",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "썸바디헬프미's 770 corridor deck",
+  "status": "alt",
+  "summary": "770 by circling the central corridor; never chase the scarabs. Passion Pay with five ranged cookies.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Ranged area damage on the bunched scarabs."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level": "100",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "전지멜로우"
+  ],
+  "perks": "Passion Pay (열정페이)",
+  "sources": [
+   "dc:81988"
+  ]
+ },
+ {
+  "id": "coin-nv48344-yongsa",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "manual",
+  "stage": 708,
+  "power": "3.12G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "용사맛 쿠키's 7 o'clock deck (708)",
+  "status": "niche",
+  "summary": "Hold 7 o'clock, finish by hand; the author says don't use Skating Queen.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Long-range Light dealer for scarabs that back away."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "뱀파이어맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Healer that keeps the team up for the full timer."
+   }
+  ],
+  "pets": [
+   "치즈뭉치 고양이",
+   "핫도그도그",
+   "갓난갓방울"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:48344",
+   "nv:47793"
+  ]
+ },
+ {
+  "id": "coin-yt-ssw-700",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "manual",
+  "stage": 700,
+  "power": "3.33G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "서신우's 700 deck",
+  "status": "niche",
+  "summary": "Manual clear of 700 with chargers chasing the scarabs.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "오븐방랑자 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Team shield; buys time against the clock."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Tank that holds the corner while the scarabs gather."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "전지멜로우",
+   "핫도그도그"
+  ],
+  "sources": [
+   "web:yt-szDOdi061sc",
+   "nv:48436"
+  ]
+ },
+ {
+  "id": "coin-dc81582-tino",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "semi",
+  "stage": 697,
+  "power": "1.94G",
+  "recommended_power": "5.83G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "티노씨's stay-put deck (697)",
+  "status": "alt",
+  "summary": "Stay put and nudge up and down at 697, 1.94G; a commenter used it at 763. Levels lowered so Milk keeps the top-ATK slot.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "98",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "94",
+    "why": "Long-range Light dealer for scarabs that back away."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level": "87",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "74",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "레몬맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield; buys time against the clock."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up for the full timer."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "앵앵베리버드"
+  ],
+  "sources": [
+   "dc:81582",
+   "dc:81588",
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "coin-nv48127-dodeok",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "manual",
+  "stage": 697,
+  "power": "2.18G",
+  "recommended_power": "5.83G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "도덕킹's Skating Queen field deck (697)",
+  "status": "niche",
+  "summary": "Stand on Skating Queen's field and fight there.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level": "100",
+    "why": "Ranged damage over time on scarabs out of reach."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level": "100",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "뱀파이어맛 쿠키",
+    "level": "100",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "전지멜로우",
+   "핫도그도그"
+  ],
+  "perks": "Passion Pay (열정페이) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "nv:48127"
+  ]
+ },
+ {
+  "id": "coin-nv47326-jilpeok",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "semi",
+  "stage": 683,
+  "power": "2.71G",
+  "recommended_power": "5.05G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "질퍽이's corner deck (683)",
+  "status": "niche",
+  "summary": "Deal from a corner.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level": "100",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Ranged area damage on the bunched scarabs."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "전지멜로우"
+  ],
+  "sources": [
+   "nv:47326"
+  ]
+ },
+ {
+  "id": "coin-nv48282-tamatama",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "semi",
+  "stage": 622,
+  "power": "1.63G",
+  "recommended_power": "2.68G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "타마타마's Dark element deck (622)",
+  "status": "alt",
+  "summary": "Dark on the Light scarabs' weakness; one move to 7 or 1 o'clock, then about 80% on auto. Third pet unconfirmed.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "닌자맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level": "100",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "감초맛 쿠키",
+    "level": "100",
+    "why": "Dark tank adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Dark tank adding damage on the scarabs' weakness."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "치즈뭉치 고양이",
+   "찹쌀 하프물범"
+  ],
+  "perks": "Like A Family (가족 같은 용병단) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:48282"
+  ]
+ },
+ {
+  "id": "coin-nv43827-nun",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "full",
+  "stage": 524,
+  "power": "823.2M",
+  "recommended_power": "973.07M",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "눈's early auto deck (524)",
+  "status": "niche",
+  "summary": "No retries needed up to 524: the easiest dungeon at the time.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer reaches scarabs that keep their distance."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range Light dealer for scarabs that back away."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level": "100",
+    "why": "Ranged damage over time on scarabs out of reach."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "level": "100",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Dark tank adding damage on the scarabs' weakness."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "새콤달곰",
+   "핫도그도그"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "id": "coin-nv45446-sinbi",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "full",
+  "power": "1.52G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "신비한쿠키사전's auto deck (about 560)",
+  "status": "niche",
+  "summary": "Full auto past 560; move to 7 o'clock if the team is dying. The same deck runs dough.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "오븐방랑자 쿠키",
+    "level": "95",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "쿨링민트맛 쿠키",
+    "level": "90",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up for the full timer."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Tank that holds the corner while the scarabs gather."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "level": "100",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "95",
+    "why": "Tank that cuts enemy ATK."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "핫도그도그"
+  ],
+  "perks": "Passion Pay (열정페이) + Health Insurance (의료보험)",
+  "substitutions": [
+   "Berry Angrybeak for King Choco Drop."
+  ],
+  "sources": [
+   "nv:45446",
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "coin-nv49847-domi",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "semi",
+  "power": "2.19G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "도미's corner-then-auto deck",
+  "status": "niche",
+  "summary": "Corner first, then auto; from the cafe roundup.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "레몬맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "커피맛 쿠키",
+    "level": "100",
+    "why": "Water support buffing the dealers."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range Light dealer for scarabs that back away."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer for scarabs out of reach."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Ranged area damage on the bunched scarabs."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "인삼이라지",
+   "갓난갓방울"
+  ],
+  "perks": "Passion Pay (열정페이) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "coin-yt-ssw-chain",
+  "mode": "daily_dungeon",
+  "dungeon": "coin",
+  "auto": "manual",
+  "power": "3.41G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "서신우's chain deck",
+  "status": "niche",
+  "summary": "Chain-synergy build with Fluffy Cheese Cat; played by hand.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark support adding damage on the scarabs' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Field the team fights on while the scarabs close in."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark ranged dealer on the scarabs' weakness."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Team shield; buys time against the clock."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged drone damage on scarabs that keep their distance."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "뱀파이어맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Dark ranged dealer on the Light scarabs' weakness."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger that runs down the scattered scarabs."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "치즈뭉치 고양이"
+  ],
+  "sources": [
+   "web:yt-h0qCokY_Ylg",
+   "nv:48585"
+  ]
+ },
+ {
+  "id": "dough-dc82162-dalto",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "manual",
+  "stage": 770,
+  "power": "5.36G",
+  "recommended_power": "12.43G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "DALTO's 770 deck",
+  "status": "meta",
+  "summary": "Cleared the 770 cap: bunch at 5 o'clock and strafe like the EXP dungeon, dodging the frogs' shots.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level": "100",
+    "why": "Field launches the frogs into the air, stopping their shots."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level": "100",
+    "why": "Shielding tank against the volleys."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Grass healer against the frogs' projectiles."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer firing from the corner."
+   },
+   {
+    "kr": "감초맛 쿠키",
+    "level": "100",
+    "why": "Tank with damage that holds the corner."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer firing from the corner."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Tank that soaks the frogs' projectiles."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "level": "100",
+    "why": "Light tank that soaks the projectiles."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Grass tank that cuts enemy ATK."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "핫도그도그"
+  ],
+  "sources": [
+   "dc:82162"
+  ]
+ },
+ {
+  "id": "dough-nv50183-yongsa",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "semi",
+  "stage": 766,
+  "power": "3.03G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "용사맛 쿠키's Cream Puff deck (766)",
+  "status": "alt",
+  "summary": "3 o'clock, then the 5 o'clock corner; take Cream Puff (\"꼭 넣으세요\").",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Long-range dealer firing from the corner."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Field launches the frogs into the air, stopping their shots."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Grass ranged area damage on the frogs' weakness."
+   },
+   {
+    "kr": "크림소다맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger; flex damage."
+   },
+   {
+    "kr": "치약초코 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Grass support healer."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Crit-rate buff for the dealers."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Team shield against the frogs' volleys."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level_rule": "Lv ?",
+    "why": "Tank that soaks the frogs' projectiles."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Grass healer against the frogs' projectiles."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "와사비 문어",
+   "얼음과자새"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
+  "substitutions": [
+   "Banana Lion in Octo Wasabi's slot (the earlier version).",
+   "Last stage: Armor Repair + Health Insurance perks, arena gear with skill-haste lines (nv:50297)."
+  ],
+  "sources": [
+   "nv:50183",
+   "nv:48344",
+   "nv:50297"
+  ]
+ },
+ {
+  "id": "dough-nv50398-gogi",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "semi",
+  "stage": 704,
+  "power": "2.52G",
+  "recommended_power": "6.27G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "고기파이's merged 5 o'clock deck (704)",
+  "status": "alt",
+  "summary": "Merges 용사맛 쿠키's and 비쿠's guides: run to 5 o'clock and fight there.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "레몬맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer firing from the corner."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer firing from the corner."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "딸기쇼트케이크맛 쿠키",
+    "level": "100",
+    "why": "Grass charger on the frogs' weakness."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "level": "100",
+    "why": "Light tank that soaks the projectiles."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer firing from the corner."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level": "85",
+    "why": "Field launches the frogs into the air, stopping their shots."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Grass ranged area damage on the frogs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Grass healer against the frogs' projectiles."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "와사비 문어",
+   "얼음과자새"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:50398"
+  ]
+ },
+ {
+  "id": "dough-nv47326-jilpeok",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "semi",
+  "stage": 688,
+  "power": "2.89G",
+  "recommended_power": "5.31G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "질퍽이's 7 o'clock deck (688)",
+  "status": "niche",
+  "summary": "Fight from the 7 o'clock corner.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer firing from the corner."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer firing from the corner."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer firing from the corner."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level": "100",
+    "why": "Field launches the frogs into the air, stopping their shots."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer firing from the corner."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Grass ranged area damage on the frogs' weakness."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Charger that reaches the frogs."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Grass healer against the frogs' projectiles."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "전지멜로우"
+  ],
+  "sources": [
+   "nv:47326"
+  ]
+ },
+ {
+  "id": "dough-yt-vart-679",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "full",
+  "stage": 679,
+  "power": "2.63G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "VART's tank auto deck (679)",
+  "status": "meta",
+  "summary": "Full auto at 679 behind three tanks for Armor Repair; the title claims 700, the author prefers manual. Auto fails past 600 near 1G.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Flex support."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Grass healer for whoever the projectiles hit."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level_rule": "Lv ?",
+    "why": "Tank that soaks the frogs' projectiles."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Grass healer against the frogs' projectiles."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Long-range dealer firing from the corner."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Field the team fights on in the corner."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Light tank that soaks the projectiles."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Tank that soaks the projectiles."
+   }
+  ],
+  "pets": [
+   "근엄한 초코왕방울",
+   "핫도그도그",
+   "갓난갓방울"
+  ],
+  "perks": "Health Insurance (의료보험) + Armor Repair (방어구 수리 특약)",
+  "substitutions": [
+   "Icy Birdie for King Choco Drop."
+  ],
+  "sources": [
+   "web:yt-7GHVEHoVFsw",
+   "web:yt-zx8hJ6_37w8"
+  ]
+ },
+ {
+  "id": "dough-nv48412-tamatama",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "semi",
+  "stage": 629,
+  "power": "1.36G",
+  "recommended_power": "2.88G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "타마타마's Grass element deck (629)",
+  "status": "alt",
+  "summary": "Grass on the Water frogs' weakness; one move to 7 or 1 o'clock, then hands off, \"99%\".",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "딸기쇼트케이크맛 쿠키",
+    "level": "100",
+    "why": "Grass charger on the frogs' weakness."
+   },
+   {
+    "kr": "치약초코 쿠키",
+    "level": "100",
+    "why": "Grass support healer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Grass healer against the frogs' projectiles."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer firing from the corner."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Grass ranged area damage on the frogs' weakness."
+   },
+   {
+    "kr": "닥터 와사비 쿠키",
+    "level": "100",
+    "why": "Grass ranged dealer on the frogs' weakness."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Charger that reaches the frogs."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Tank that soaks the frogs' projectiles."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Grass tank that cuts enemy ATK."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "사바나나 사자",
+   "파우치사우루스"
+  ],
+  "perks": "Like A Family (가족 같은 용병단) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:48412"
+  ]
+ },
+ {
+  "id": "dough-nv43827-nun",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "full",
+  "stage": 527,
+  "power": "813.27M",
+  "recommended_power": "1G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "눈's early auto deck (527)",
+  "status": "niche",
+  "summary": "About one retry in three at 527.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer firing from the corner."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Charger that reaches the frogs."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Tank that soaks the frogs' projectiles."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Grass healer against the frogs' projectiles."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Grass buffer adding to the weakness damage."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage from the corner."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on in the corner."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "level": "100",
+    "why": "Light tank that soaks the projectiles."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Tank that soaks the projectiles."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "근엄한 초코왕방울",
+   "핫도그도그"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Armor Repair (방어구 수리 특약)",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "id": "dough-nv49847-domi",
+  "mode": "daily_dungeon",
+  "dungeon": "dough",
+  "auto": "semi",
+  "power": "2.17G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "도미's corner deck",
+  "status": "niche",
+  "summary": "Corner, then auto; from the cafe roundup.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Grass ranged dealer on the Water frogs' weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "포도넝쿨맛 쿠키",
+    "level": "100",
+    "why": "Grass healer for whoever the projectiles hit."
+   },
+   {
+    "kr": "닥터 와사비 쿠키",
+    "level": "96",
+    "why": "Grass ranged dealer on the frogs' weakness."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Tank that soaks the frogs' projectiles."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Grass healer against the frogs' projectiles."
+   },
+   {
+    "kr": "슈크림맛 쿠키",
+    "level": "100",
+    "why": "Field launches the frogs into the air, stopping their shots."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Grass ranged area damage on the frogs' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "level": "100",
+    "why": "Light tank that soaks the projectiles."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Grass tank that cuts enemy ATK."
+   }
+  ],
+  "pets": [
+   "얼음과자새",
+   "핫도그도그",
+   "근엄한 초코왕방울"
+  ],
+  "perks": "Passion Pay (열정페이) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "rs-nv49007-roronoa",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "full",
+  "stage": 703,
+  "power": "4.87G",
+  "recommended_power": "6.21G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "롤로노아's stand-in-place auto deck (703)",
+  "status": "meta",
+  "summary": "\"가까이 오지마!\": slow, but kills everything on auto without moving. A 3.26G player failed at 689.",
+  "cookies": [
+   {
+    "kr": "마법사맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Ranged area damage on the jelly waves."
+   },
+   {
+    "kr": "도넛행성 에일리언 도넛킹",
+    "slot": "row1-2",
+    "level": "90",
+    "why": "Support buffing the ranged dealers."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Water ranged dealer on the Fire jellies' weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "에일리언 도넛",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "감초맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Tank whose piercing damage clears jelly waves."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Piercing support damage through the waves."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-5",
+    "level": "80",
+    "why": "Water support; crit-rate buff for the dealers."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Healer that keeps the team up through the explosions."
+   }
+  ],
+  "pets": [
+   "전지멜로우",
+   "갓난갓방울",
+   "핫도그도그"
+  ],
+  "sources": [
+   "nv:49007"
+  ]
+ },
+ {
+  "id": "rs-nv48344-yongsa",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "manual",
+  "stage": 676,
+  "power": "3.09G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "용사맛 쿠키's 7 o'clock deck (676)",
+  "status": "niche",
+  "summary": "Manual from 7 o'clock; no Hound.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "감초맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Tank whose piercing damage clears jelly waves."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Water ranged dealer on the Fire jellies' weakness."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Piercing support damage through the waves."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Water charger whose field holds the team in place."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Piercing ranged damage through the jelly waves."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Water support; crit-rate buff for the dealers."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Healer that keeps the team up through the explosions."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "전지멜로우",
+   "핫도그도그"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:48344"
+  ]
+ },
+ {
+  "id": "rs-nv50391-gogi",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "semi",
+  "stage": 665,
+  "power": "2.49G",
+  "recommended_power": "4.19G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "고기파이's 9 o'clock semi-auto (665)",
+  "status": "alt",
+  "summary": "Hug 9 o'clock, push to the centre once the jellies drop below 40%.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer that pops jellies at a distance."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer that pops jellies at a distance."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Water charger whose field holds the team in place."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Ranged area damage on the jelly waves."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield against the explosions."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up through the explosions."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "사바나나 사자",
+   "핫도그도그"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:50391"
+  ]
+ },
+ {
+  "id": "rs-dc78207",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "manual",
+  "stage": 634,
+  "power": "1.8G",
+  "recommended_power": "3.04G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "1.8G centre-circling deck (634)",
+  "status": "niche",
+  "summary": "Circle the centre until about 50 s, aim Licorice.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer that pops jellies at a distance."
+   },
+   {
+    "kr": "감초맛 쿠키",
+    "level": "100",
+    "why": "Tank whose piercing damage clears jelly waves."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "위치베리맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Charger; flex damage on the waves."
+   },
+   {
+    "kr": "딸기크레페맛 쿠키",
+    "level": "100",
+    "why": "Tank that absorbs the explosions."
+   },
+   {
+    "kr": "오렌지맛 쿠키",
+    "level": "100",
+    "why": "Water support buffing the dealers."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Water charger whose field holds the team in place."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "98",
+    "why": "Piercing ranged damage through the jelly waves."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up through the explosions."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "갓난갓방울",
+   "전지멜로우"
+  ],
+  "perks": "Passion Pay (열정페이) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "dc:78207"
+  ]
+ },
+ {
+  "id": "rs-yt-vart-620",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "full",
+  "stage": 620,
+  "power": "2.46G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "VART's piercing auto deck (620)",
+  "status": "alt",
+  "summary": "Full auto with retries at 620; the title claims 670. Optionally drag to 6 o'clock.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Water ranged dealer on the Fire jellies' weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Piercing ranged damage through the jelly waves."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged drone damage on the waves."
+   },
+   {
+    "kr": "감초맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Tank whose piercing damage clears jelly waves."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Piercing support damage through the waves."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "정글전사 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger; flex damage."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Healer that keeps the team up through the explosions."
+   }
+  ],
+  "pets": [
+   "전지멜로우",
+   "핫도그도그",
+   "갓난갓방울"
+  ],
+  "perks": "Health Insurance (의료보험) + Armor Repair (방어구 수리 특약)",
+  "substitutions": [
+   "dc:77041 runs the same lineup with Twizzly Gummy at Lv1."
+  ],
+  "sources": [
+   "web:yt-CZS-dKsfbAk",
+   "web:yt-zx8hJ6_37w8",
+   "dc:77041"
+  ]
+ },
+ {
+  "id": "rs-nv43827-nun",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "full",
+  "stage": 526,
+  "power": "826.5M",
+  "recommended_power": "993.44M",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "눈's early auto deck (526)",
+  "status": "niche",
+  "summary": "Full auto at 526.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer that pops jellies at a distance."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer that pops jellies at a distance."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "100",
+    "why": "Ranged area damage on the jelly waves."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Charger; flex damage on the waves."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Tank that absorbs the explosions."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage on the waves."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Water charger whose field holds the team in place."
+   },
+   {
+    "kr": "크림소다맛 쿠키",
+    "level": "100",
+    "why": "Water charger on the jellies' weakness."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Tank that absorbs the explosions."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "새콤달곰",
+   "핫도그도그"
+  ],
+  "perks": "General Perks Lv.2 (종합 복지 패키지 Lv2) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "nv:43827"
+  ]
+ },
+ {
+  "id": "rs-nv45446-sinbi",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "full",
+  "power": "1.59G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "신비한쿠키사전's auto deck (about 550)",
+  "status": "niche",
+  "summary": "Full auto past 550, no corner needed; 도미 runs it at 2.62G.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer that pops jellies at a distance."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage on the waves."
+   },
+   {
+    "kr": "도넛행성 에일리언 도넛킹",
+    "level": "100",
+    "why": "Support buffing the ranged dealers."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level": "100",
+    "why": "Piercing support damage through the waves."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Water charger whose field holds the team in place."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Tank that absorbs the explosions."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer that pops jellies before they reach the team."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "100",
+    "why": "Water ranged dealer on the Fire jellies' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up through the explosions."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "전지멜로우"
+  ],
+  "perks": "Passion Pay (열정페이) + Health Insurance (의료보험)",
+  "sources": [
+   "nv:45446",
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "rs-nv49244-budget",
+  "mode": "daily_dungeon",
+  "dungeon": "research-stone",
+  "auto": "full",
+  "stage": 441,
+  "power": "348M",
+  "recommended_power": "412M",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "고성방가's budget idle deck (441)",
+  "status": "niche",
+  "summary": "A free player's idle deck at 441, below recommended power.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "96",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "98",
+    "why": "Water ranged dealer on the Fire jellies' weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "95",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "에스프레소맛 쿠키",
+    "level": "97",
+    "why": "Ranged area damage on the jelly waves."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "96",
+    "why": "Healer that keeps the team up through the explosions."
+   },
+   {
+    "kr": "버블껌맛 쿠키",
+    "level": "80",
+    "why": "Water tank; a budget front line."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level": "96",
+    "why": "Piercing support damage through the waves."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "98",
+    "why": "Water charger whose field holds the team in place."
+   },
+   {
+    "kr": "트위즐젤리맛 쿠키",
+    "level": "95",
+    "why": "Piercing ranged damage through the jelly waves."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "97",
+    "why": "Tank that absorbs the explosions."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "96",
+    "why": "Tank that cuts enemy ATK."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "얼음과자새"
+  ],
+  "perks": "Passion Pay (열정페이) + Armor Repair (방어구 수리 특약)",
+  "sources": [
+   "nv:49244"
+  ]
+ },
+ {
+  "id": "rune-yt-ssw-715",
+  "mode": "daily_dungeon",
+  "dungeon": "rune",
+  "auto": "manual",
+  "stage": 715,
+  "power": "4.5G",
+  "recommended_power": "7.03G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "서신우's orb-dodging deck (715)",
+  "status": "alt",
+  "summary": "By hand: dodge the green orbs at 53, 45, 37 and 29 s.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Fire ranged dealer on the golem's weakness."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Cast first: answers the golem's opening knock-up."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Crit-rate buff for the dealers."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level_rule": "Lv ?",
+    "why": "Fire tank; one of Armor Repair's three tanks."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged drone damage; flex dealer."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged dealer; flex damage."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Field the team fights on; flex buffer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger; flex damage."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "전지멜로우"
+  ],
+  "perks": "Passion Pay (열정페이) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "web:yt-N6fgEKs3qq4",
+   "nv:49521"
+  ]
+ },
+ {
+  "id": "rune-nv47326-jilpeok",
+  "mode": "daily_dungeon",
+  "dungeon": "rune",
+  "auto": "full",
+  "stage": 659,
+  "power": "2.95G",
+  "recommended_power": "3.93G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "질퍽이's Fire auto deck (659)",
+  "status": "meta",
+  "summary": "Retries now and then but mostly kills the golem on auto at 659.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "slot": "row1-1",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "오븐방랑자 쿠키",
+    "slot": "row1-2",
+    "level": "100",
+    "why": "Fire charger on the golem's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "slot": "row1-3",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "slot": "row1-4",
+    "level": "100",
+    "why": "Fire charger on the weakness, immune to knockback."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "slot": "row1-5",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "slot": "row1-6",
+    "level": "100",
+    "why": "Healer that keeps the team up through the orbs."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "slot": "row2-1",
+    "level": "100",
+    "why": "Ranged drone damage; flex dealer."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "slot": "row2-2",
+    "level": "100",
+    "why": "Ranged dealer; flex damage."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "slot": "row2-3",
+    "level": "100",
+    "why": "Field the team fights on; flex buffer."
+   },
+   {
+    "kr": "라임맛 쿠키",
+    "slot": "row2-4",
+    "level": "100",
+    "why": "Crit-rate buff for the dealers."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "slot": "row2-5",
+    "level": "100",
+    "why": "Charger; flex damage."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "slot": "row2-6",
+    "level": "100",
+    "why": "Tank that cuts the golem's ATK; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "핫도그도그",
+   "와사비 문어"
+  ],
+  "sources": [
+   "nv:47326"
+  ]
+ },
+ {
+  "id": "rune-nv47793-yongsa",
+  "mode": "daily_dungeon",
+  "dungeon": "rune",
+  "auto": "full",
+  "stage": 635,
+  "power": "2.7G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "용사맛 쿠키's full-auto deck (635)",
+  "status": "alt",
+  "summary": "The one dungeon the author runs fully on auto: 611 to 635.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged drone damage; flex dealer."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Fire damage over time on the Grass golem's weakness."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Fire ranged dealer on the golem's weakness."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Ranged dealer; flex damage."
+   },
+   {
+    "kr": "피노누아맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Cast first: answers the golem's opening knock-up."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Field the team fights on; flex buffer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "체리콜라맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Charger; flex damage."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Healer that keeps the team up through the orbs."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level_rule": "Lv ?",
+    "why": "Tank that absorbs the opening hits."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "전지멜로우",
+   "핫도그도그"
+  ],
+  "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
+  "sources": [
+   "nv:47793",
+   "nv:48344"
+  ]
+ },
+ {
+  "id": "rune-nv48838-tamatama",
+  "mode": "daily_dungeon",
+  "dungeon": "rune",
+  "auto": "full",
+  "stage": 614,
+  "power": "1.78G",
+  "recommended_power": "2.47G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "타마타마's Fire element deck (614)",
+  "status": "alt",
+  "summary": "\"Start, win\" at 614, 1.78G; three tanks turn on Armor Repair.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Fire ranged dealer on the golem's weakness."
+   },
+   {
+    "kr": "뱀파이어맛 쿠키",
+    "level": "100",
+    "why": "Fire charger on the golem's weakness."
+   },
+   {
+    "kr": "복숭아맛 쿠키",
+    "level": "100",
+    "why": "Fire charger on the golem's weakness."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Fire tank; one of Armor Repair's three tanks."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up through the orbs."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level": "100",
+    "why": "Fire damage over time on the Grass golem's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on; flex buffer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "이온맛 쿠키로봇",
+    "level": "100",
+    "why": "Shielding tank; an Armor Repair tank."
+   },
+   {
+    "kr": "감감술래 놀이 달토끼맛 쿠키",
+    "level": "100",
+    "why": "Tank that cuts the golem's ATK; an Armor Repair tank."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "와사비 문어",
+   "꽃개구리"
+  ],
+  "perks": "Armor Repair (방어구 수리 특약) + Health Insurance (의료보험)",
+  "substitutions": [
+   "Princess Bari (5★) for Peach cleared to 656; another commenter reported 683."
+  ],
+  "sources": [
+   "nv:48838"
+  ]
+ },
+ {
+  "id": "rune-nv49847-domi",
+  "mode": "daily_dungeon",
+  "dungeon": "rune",
+  "auto": "full",
+  "power": "2.22G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "도미's auto deck",
+  "status": "niche",
+  "summary": "Full auto, from the cafe roundup.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage; flex dealer."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level": "100",
+    "why": "Fire damage over time on the Grass golem's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on; flex buffer."
+   },
+   {
+    "kr": "락스타맛 쿠키",
+    "level": "100",
+    "why": "Team shield against the orbs."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer; flex damage."
+   },
+   {
+    "kr": "오븐방랑자 쿠키",
+    "level": "100",
+    "why": "Fire charger on the golem's weakness."
+   },
+   {
+    "kr": "치즈케이크맛 쿠키",
+    "level": "100",
+    "why": "ATK buff for the dealers."
+   },
+   {
+    "kr": "다크체리맛 쿠키",
+    "level": "100",
+    "why": "Fire charger on the golem's weakness."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Fire charger on the weakness, immune to knockback."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   }
+  ],
+  "pets": [
+   "핫도그도그",
+   "얼음과자새",
+   "근엄한 초코왕방울"
+  ],
+  "perks": "Passion Pay (열정페이) + Rapid Promotion (초고속 승진)",
+  "sources": [
+   "nv:49847"
+  ]
+ },
+ {
+  "id": "rune-nv45446-sinbi",
+  "mode": "daily_dungeon",
+  "dungeon": "rune",
+  "auto": "full",
+  "power": "1.49G",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "신비한쿠키사전's auto deck (about 550)",
+  "status": "niche",
+  "summary": "Full auto past 550.",
+  "cookies": [
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level": "100",
+    "why": "Fire damage over time on the Grass golem's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바리공주맛 쿠키",
+    "level": "100",
+    "why": "Fire charger on the weakness, immune to knockback."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up through the orbs."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage; flex dealer."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Fire ranged dealer on the golem's weakness."
+   },
+   {
+    "kr": "다크체리맛 쿠키",
+    "level": "61",
+    "why": "Fire charger on the golem's weakness."
+   },
+   {
+    "kr": "정글전사 쿠키",
+    "level": "100",
+    "why": "Charger; flex damage."
+   },
+   {
+    "kr": "이름 모를 케이크 들개",
+    "level": "100",
+    "why": "Fire tank; one of Armor Repair's three tanks."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Tank that absorbs the opening hits."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "전지멜로우",
+   "핫도그도그"
+  ],
+  "perks": "Passion Pay (열정페이) + Health Insurance (의료보험)",
+  "sources": [
+   "nv:45446"
+  ]
+ },
+ {
+  "id": "rune-nv43827-nun",
+  "mode": "daily_dungeon",
+  "dungeon": "rune",
+  "auto": "full",
+  "stage": 472,
+  "power": "832.8M",
+  "recommended_power": "567.83M",
+  "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
+  "name_en": "눈's early auto deck (472)",
+  "status": "niche",
+  "summary": "Full auto at 472, well above recommended power.",
+  "cookies": [
+   {
+    "kr": "바람궁수 쿠키",
+    "level": "100",
+    "why": "Long-range archer; flex damage."
+   },
+   {
+    "kr": "밀키웨이맛 쿠키",
+    "level": "100",
+    "why": "Long-range dealer; flex damage."
+   },
+   {
+    "kr": "전갈맛 쿠키",
+    "level": "100",
+    "why": "Fire damage over time on the Grass golem's weakness."
+   },
+   {
+    "kr": "메론소다맛 쿠키",
+    "level": "100",
+    "why": "Ranged dealer; flex damage."
+   },
+   {
+    "kr": "피겨여왕맛 쿠키",
+    "level": "100",
+    "why": "Field the team fights on; flex buffer."
+   },
+   {
+    "kr": "허브맛 쿠키",
+    "level": "100",
+    "why": "Healer that keeps the team up through the orbs."
+   },
+   {
+    "kr": "마카롱맛 쿠키",
+    "level": "100",
+    "why": "Support buffer for the dealers."
+   },
+   {
+    "kr": "브라이트시커 쿠키",
+    "level": "100",
+    "why": "Ranged drone damage; flex dealer."
+   },
+   {
+    "kr": "호밀맛 쿠키",
+    "level": "100",
+    "why": "Fire ranged dealer on the golem's weakness."
+   },
+   {
+    "kr": "석류맛 쿠키",
+    "level": "100",
+    "why": "Skill AMP beam onto the top-ATK dealer."
+   },
+   {
+    "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "level": "100",
+    "why": "Captain: heals and buffs the top-ATK dealer."
+   },
+   {
+    "kr": "다크초코 쿠키",
+    "level": "100",
+    "why": "Tank that absorbs the opening hits."
+   }
+  ],
+  "pets": [
+   "갓난갓방울",
+   "와사비 문어",
+   "핫도그도그"
+  ],
+  "sources": [
+   "nv:43827"
+  ]
+ }
+]

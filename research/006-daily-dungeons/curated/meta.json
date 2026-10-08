@@ -1,0 +1,67 @@
+{
+ "updated": "2026-10-07",
+ "season": "Game before the 2026-10-08 update · stage cap 770",
+ "lede": "The daily dungeons (일일던전): each dungeon's boss and entry, and the decks that clear it furthest, full auto first.",
+ "caveat": "Snapshot of 2026-10-07, the day before the 10-08 easing. Stages are posted screenshots and videos; ranked by stage, never by a ratio.",
+ "you": {
+  "summary": "Run EXP on the solo-Brightseeker deck with the Projectile Speed pet, retry until it clears; sweep each dungeon at your wall.",
+  "changes": [
+   "EXP: Brightseeker, Pomegranate, Lime, Milk (captain), Ion, Dark Choco / Cheesecake, Grapevine, Rockstar, Hound, Herb, Moon Rabbit.",
+   "Pets Furball Pup, King Choco Drop, Icy Birdie; perks Armor Repair + Health Insurance.",
+   "Below a 10★ Brightseeker or about 4G, expect retries; a Conquest gear preset steadies it.",
+   "Other dungeons: stack the boss's weakness element; rune crystal runs on full auto longest.",
+   "Push for first-clear rewards, then sweep."
+  ],
+  "sources": [
+   "dc:80715",
+   "dc:79492",
+   "nv:48838",
+   "dc:81070"
+  ]
+ },
+ "modes": {
+  "daily_dungeon": {
+   "lede": "Each daily dungeon's furthest full-auto deck, then every posted deck by stage.",
+   "caveat": "Bosses, keys and caps from patch notes and screenshots; key refunds on a loss are unconfirmed.",
+   "rules": [
+    {
+     "title": "Every dungeon is open every day",
+     "body": "Each has a fixed boss, element and key; stages rise in recommended power. No weekday rotation.",
+     "confidence": "high",
+     "sources": [
+      "nv:45446",
+      "nv:43827"
+     ]
+    },
+    {
+     "title": "Stage cap 770",
+     "body": "Raised from 570 to 770 on 9/23; the 10-08 update didn't raise it.",
+     "confidence": "high",
+     "sources": [
+      "nv:37730",
+      "nv:44477",
+      "nv:50417"
+     ]
+    },
+    {
+     "title": "Keys and sweeps",
+     "body": "3 keys a day, up to 6; any cleared stage can be swept; repeat toggle (연속 도전) reruns.",
+     "confidence": "medium",
+     "sources": [
+      "dc:81981",
+      "dc:81070",
+      "nv:43827"
+     ]
+    },
+    {
+     "title": "Below recommended power, damage drops",
+     "body": "The stage power brackets apply: auto decks fail when the damage correction falls to about 35%.",
+     "confidence": "medium",
+     "sources": [
+      "dc:81139"
+     ]
+    }
+   ]
+  }
+ }
+}

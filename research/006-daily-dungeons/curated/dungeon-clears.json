@@ -1,0 +1,284 @@
+[
+ {
+  "dungeon": "exp",
+  "stage": 770,
+  "power": null,
+  "deck": null,
+  "auto": null,
+  "date": "2026-10-07",
+  "player": null,
+  "evidence": "screenshot",
+  "note": "First-clear reward board ticked to 770; a reply credits auto with endless retries.",
+  "sources": [
+   "dc:82001"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 746,
+  "power": "4.5G",
+  "deck": "exp-dc80715-furball",
+  "auto": "full",
+  "date": "2026-10-04",
+  "player": null,
+  "evidence": "video",
+  "note": "Clear screen after a run with no input.",
+  "sources": [
+   "dc:80715"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 742,
+  "power": null,
+  "deck": null,
+  "auto": "manual",
+  "date": "2026-10-04",
+  "player": null,
+  "evidence": "text",
+  "note": "Title claim; manual retries an hour a day.",
+  "sources": [
+   "dc:80543"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 724,
+  "power": "3.96G",
+  "deck": "exp-dc79492-hotdog",
+  "auto": "full",
+  "date": "2026-10-02",
+  "player": null,
+  "evidence": "video",
+  "sources": [
+   "dc:79492"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 724,
+  "power": "4.5G",
+  "deck": "exp-nv48705-biku",
+  "auto": "full",
+  "date": "2026-10-02",
+  "player": "비쿠",
+  "evidence": "video",
+  "sources": [
+   "nv:48705",
+   "nv:49847"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 721,
+  "power": "6.93G",
+  "deck": "exp-yt-ndrunner-721",
+  "auto": "full",
+  "date": "2026-10-03",
+  "player": "ND러너",
+  "evidence": "video",
+  "note": "Auto with retries; a defeat is shown first.",
+  "sources": [
+   "web:yt-0CUv152HVrA"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 716,
+  "power": "4.54G",
+  "deck": "exp-nv48828-bag",
+  "auto": "semi",
+  "date": "2026-10-02",
+  "player": "가방은 항상 두개",
+  "evidence": "video",
+  "sources": [
+   "nv:48828"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 705,
+  "power": "3.41G",
+  "deck": "exp-dc80513",
+  "auto": "manual",
+  "date": "2026-10-04",
+  "player": "머하냐",
+  "evidence": "screenshot",
+  "sources": [
+   "dc:80513"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 696,
+  "power": "4.15G",
+  "deck": "exp-dc78450-figure",
+  "auto": "full",
+  "date": "2026-09-30",
+  "player": null,
+  "evidence": "video",
+  "sources": [
+   "dc:78450"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 683,
+  "power": "4.08G",
+  "deck": "exp-nv47333-roronoa",
+  "auto": "full",
+  "date": "2026-09-29",
+  "player": "롤로노아",
+  "evidence": "screenshot",
+  "sources": [
+   "nv:47333"
+  ]
+ },
+ {
+  "dungeon": "exp",
+  "stage": 582,
+  "power": "1.26G",
+  "deck": "exp-dc73577-gramph",
+  "auto": "full",
+  "date": "2026-09-23",
+  "player": "gramPH",
+  "evidence": "screenshot",
+  "sources": [
+   "dc:73577"
+  ]
+ },
+ {
+  "dungeon": "dough",
+  "stage": 770,
+  "power": "5.36G",
+  "deck": "dough-dc82162-dalto",
+  "auto": "manual",
+  "date": "2026-10-07",
+  "player": "DALTO",
+  "evidence": "screenshot",
+  "sources": [
+   "dc:82162"
+  ]
+ },
+ {
+  "dungeon": "dough",
+  "stage": 770,
+  "power": null,
+  "deck": null,
+  "auto": null,
+  "date": "2026-10-07",
+  "player": null,
+  "evidence": "screenshot",
+  "note": "First-clear reward board ticked to 770.",
+  "sources": [
+   "dc:82001"
+  ]
+ },
+ {
+  "dungeon": "dough",
+  "stage": 766,
+  "power": "3.03G",
+  "deck": "dough-nv50183-yongsa",
+  "auto": "semi",
+  "date": "2026-10-06",
+  "player": "용사맛 쿠키",
+  "evidence": "screenshot",
+  "sources": [
+   "nv:50183"
+  ]
+ },
+ {
+  "dungeon": "research-stone",
+  "stage": 703,
+  "power": "4.87G",
+  "deck": "rs-nv49007-roronoa",
+  "auto": "full",
+  "date": "2026-10-02",
+  "player": "롤로노아",
+  "evidence": "screenshot",
+  "note": "Stage-select screen at 703.",
+  "sources": [
+   "nv:49007"
+  ]
+ },
+ {
+  "dungeon": "coin",
+  "stage": 770,
+  "power": "4.3G",
+  "deck": "coin-dc81991-gramph",
+  "auto": "manual",
+  "date": "2026-10-07",
+  "player": "gramPH",
+  "evidence": "screenshot",
+  "sources": [
+   "dc:81991"
+  ]
+ },
+ {
+  "dungeon": "coin",
+  "stage": 770,
+  "power": "5.19G",
+  "deck": "coin-dc81988-somebody",
+  "auto": "manual",
+  "date": "2026-10-07",
+  "player": "썸바디헬프미",
+  "evidence": "screenshot",
+  "sources": [
+   "dc:81988"
+  ]
+ },
+ {
+  "dungeon": "coin",
+  "stage": 770,
+  "power": null,
+  "deck": null,
+  "auto": null,
+  "date": "2026-10-07",
+  "player": null,
+  "evidence": "screenshot",
+  "note": "First-clear reward board ticked to 770.",
+  "sources": [
+   "dc:82001"
+  ]
+ },
+ {
+  "dungeon": "rune",
+  "stage": 719,
+  "power": null,
+  "deck": null,
+  "auto": null,
+  "date": "2026-10-05",
+  "player": "서신우",
+  "evidence": "screenshot",
+  "note": "Stage-select screen at 719, recommended 7.33G.",
+  "sources": [
+   "nv:49521"
+  ]
+ },
+ {
+  "dungeon": "rune",
+  "stage": 715,
+  "power": "4.5G",
+  "deck": "rune-yt-ssw-715",
+  "auto": "manual",
+  "date": "2026-10-05",
+  "player": "서신우",
+  "evidence": "video",
+  "sources": [
+   "web:yt-N6fgEKs3qq4"
+  ]
+ },
+ {
+  "dungeon": "rune",
+  "stage": 659,
+  "power": "2.95G",
+  "deck": "rune-nv47326-jilpeok",
+  "auto": "full",
+  "date": "2026-09-29",
+  "player": "질퍽이와메타몽의차이",
+  "evidence": "screenshot",
+  "sources": [
+   "nv:47326"
+  ]
+ }
+]

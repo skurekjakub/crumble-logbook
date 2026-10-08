@@ -1,0 +1,307 @@
+[
+ {
+  "topic": "exp-boss",
+  "title": "One boss at every stage: the Dark Librarian",
+  "body": "Every capture from 524 to 746 shows the same Librarian, Dark, weak to Light. No dungeon rotates by weekday.",
+  "confidence": "high",
+  "sources": [
+   "nv:43827",
+   "dc:80715",
+   "nv:45446"
+  ]
+ },
+ {
+  "topic": "exp-boss",
+  "title": "Two opening pushes; enter at 47–48 s",
+  "body": "A first slam near 53 s, a double push ending about 48 s. Manual players enter right after it; walking in early gets the team hit again.",
+  "confidence": "high",
+  "sources": [
+   "nv:48303",
+   "nv:46895",
+   "nv:48828",
+   "dc:77003",
+   "web:yt-O3WxZZHsKyY",
+   "dc:80471"
+  ]
+ },
+ {
+  "topic": "exp-boss",
+  "title": "Later hits near 38 s; re-entry about 32 s",
+  "body": "A commenter times another hit at 38 s; one manual guide re-enters at 32 s after pulling out.",
+  "confidence": "medium",
+  "sources": [
+   "nv:48828",
+   "nv:48303"
+  ]
+ },
+ {
+  "topic": "exp-boss",
+  "title": "Pushes every few seconds shove the team out of the book ring",
+  "body": "The team heals safely outside the books, then re-enters. Knockback resistance helps: Princess Bari, the Little Ghost pet.",
+  "confidence": "medium",
+  "sources": [
+   "nv:46851",
+   "nv:45930",
+   "nv:48174",
+   "dc:77282",
+   "dc:81710"
+  ]
+ },
+ {
+  "topic": "exp-boss",
+  "title": "Flying book rows do the damage",
+  "body": "A book hit leaves Milk standing still. Manual players park in the gap between book rows.",
+  "confidence": "medium",
+  "sources": [
+   "dc:76824",
+   "dc:80126",
+   "dc:79968"
+  ]
+ },
+ {
+  "topic": "exp-boss",
+  "title": "Milk, Brightseeker or Pomegranate dying loses the run",
+  "body": "Auto works because Milk and the shields absorb the opening; then Brightseeker gets two or more skill casts.",
+  "confidence": "high",
+  "sources": [
+   "dc:77003",
+   "nv:46707",
+   "nv:46544",
+   "web:yt-0CUv152HVrA"
+  ]
+ },
+ {
+  "topic": "exp-boss",
+  "title": "Low power caps damage",
+  "body": "At a 35% damage correction (power far under recommended) the auto deck stops working.",
+  "confidence": "medium",
+  "sources": [
+   "dc:81139"
+  ]
+ },
+ {
+  "topic": "auto",
+  "title": "Retry is the method",
+  "body": "Every auto source says to keep pressing retry: losses come from the opening, and a rerun with the same deck often clears.",
+  "confidence": "high",
+  "sources": [
+   "dc:73577",
+   "dc:80701",
+   "web:yt-VVHt98jkWCo",
+   "web:yt-6hrfYOlgYu4",
+   "web:yt-0CUv152HVrA"
+  ]
+ },
+ {
+  "topic": "auto",
+  "title": "Disputed: one EXP dealer or more",
+  "body": "The 724 and 746 decks run Brightseeker alone; VART and 누리머 add Rye; one poster argues extra dealers clear better.",
+  "confidence": "medium",
+  "sources": [
+   "dc:79492",
+   "dc:80715",
+   "web:yt-VVHt98jkWCo",
+   "web:yt-6hrfYOlgYu4",
+   "dc:75870",
+   "nv:46707"
+  ]
+ },
+ {
+  "topic": "auto",
+  "title": "Disputed: does EXP auto hold past 720",
+  "body": "746 cleared with no input; others stall at 746 with more power, call the deck a one-day fix, or say 720 needs control.",
+  "confidence": "medium",
+  "sources": [
+   "dc:80715",
+   "dc:82340",
+   "dc:81485",
+   "web:yt-zx8hJ6_37w8",
+   "nv:46895"
+  ]
+ },
+ {
+  "topic": "auto",
+  "title": "Disputed: the EXP gear preset",
+  "body": "Conquest (damage-reduction) preset is steadier per several posts; others need the stage preset's damage; some use arena plus Rooty for accuracy.",
+  "confidence": "medium",
+  "sources": [
+   "dc:79421",
+   "dc:79478",
+   "dc:82563",
+   "dc:80715",
+   "dc:80425",
+   "dc:79492",
+   "dc:77041",
+   "dc:78836"
+  ]
+ },
+ {
+  "topic": "auto",
+  "title": "Projectile Speed pet tipped the EXP deck",
+  "body": "Furball Pup adds Projectile Speed synergy and ATK; the 746 poster calls it the key.",
+  "confidence": "medium",
+  "sources": [
+   "dc:80715"
+  ]
+ },
+ {
+  "topic": "perks",
+  "title": "Armor Repair in nearly every EXP deck",
+  "body": "Three or more tanks give allies 10% damage reduction; Hound, Ion and Moon Rabbit are there for it.",
+  "confidence": "high",
+  "sources": [
+   "nv:46250",
+   "nv:48174",
+   "dc:79492",
+   "dc:78207",
+   "nv:43827"
+  ]
+ },
+ {
+  "topic": "perks",
+  "title": "Disputed: the second perk",
+  "body": "Health Insurance (+5% max HP with two supports) or Passion Pay (+20% ATK on the top-ATK ally, −20% its HP). 아포 says switch to HP if cookies die entering at 48 s.",
+  "confidence": "medium",
+  "sources": [
+   "dc:79492",
+   "dc:80715",
+   "web:yt-VVHt98jkWCo",
+   "web:yt-6hrfYOlgYu4",
+   "web:yt-O3WxZZHsKyY",
+   "nv:46544"
+  ]
+ },
+ {
+  "topic": "perks",
+  "title": "Other dungeons favour damage perks",
+  "body": "Passion Pay with Rapid Promotion or Like A Family; one guide keeps Health Insurance plus Armor Repair for EXP only.",
+  "confidence": "medium",
+  "sources": [
+   "dc:78207",
+   "nv:48282",
+   "nv:48344",
+   "nv:43827"
+  ]
+ },
+ {
+  "topic": "coin",
+  "title": "Scarabs keep their distance",
+  "body": "They back off when approached and close in when the team holds still. Sit in a corner and let them bunch.",
+  "confidence": "high",
+  "sources": [
+   "dc:81582",
+   "nv:46840",
+   "nv:46559",
+   "nv:49319"
+  ]
+ },
+ {
+  "topic": "coin",
+  "title": "Hold 7 o'clock until about 42 s",
+  "body": "Or release at 50 s. Near the cap the corner stops working; the 770 clears steer from 1 o'clock or circle the corridor.",
+  "confidence": "medium",
+  "sources": [
+   "nv:49319",
+   "dc:81991",
+   "dc:81988"
+  ]
+ },
+ {
+  "topic": "dough",
+  "title": "Frogs shoot hard; fight from the 5 o'clock corner",
+  "body": "Runs fail when cookies die first. 5 o'clock is now preferred over 7.",
+  "confidence": "high",
+  "sources": [
+   "nv:48412",
+   "nv:47271",
+   "nv:50398",
+   "nv:48344",
+   "dc:82162"
+  ]
+ },
+ {
+  "topic": "dough",
+  "title": "Cream Puff's field launches the frogs",
+  "body": "Frogs bounce in its field. At about 30% skill haste, with Milk and pet duration, the field never drops.",
+  "confidence": "medium",
+  "sources": [
+   "dc:80985",
+   "nv:50183",
+   "nv:50297"
+  ]
+ },
+ {
+  "topic": "research-stone",
+  "title": "Jellies spawn under the team and explode",
+  "body": "They keep dropping in until about 40% remain; an explosion can wipe the team. Long fights risk the timer.",
+  "confidence": "medium",
+  "sources": [
+   "dc:79239",
+   "nv:49250",
+   "nv:46838",
+   "nv:50391"
+  ]
+ },
+ {
+  "topic": "rune",
+  "title": "Opening knock-up: cast Pinot Noir first",
+  "body": "The golem's first attack launches the team into the air.",
+  "confidence": "medium",
+  "sources": [
+   "nv:46845"
+  ]
+ },
+ {
+  "topic": "rune",
+  "title": "Green orbs at 53, 45, 37 and 29 s",
+  "body": "Eight seconds apart; manual players dodge them on those beats.",
+  "confidence": "medium",
+  "sources": [
+   "web:yt-N6fgEKs3qq4"
+  ]
+ },
+ {
+  "topic": "entry",
+  "title": "Keys: 3 a day, up to 6",
+  "body": "Blessing (축복), the permanent ₩5.5k pass and the Crumble Pass add keys; Saturdays and Sundays add more.",
+  "confidence": "medium",
+  "sources": [
+   "dc:81981",
+   "dc:80664",
+   "dc:79358"
+  ]
+ },
+ {
+  "topic": "entry",
+  "title": "More keys: shops and packs",
+  "body": "The mileage and arena shops sell keys, and a ₩6,000 key pack exists. Bought keys stack above the cap.",
+  "confidence": "medium",
+  "sources": [
+   "dc:81634",
+   "dc:82346",
+   "nv:49847"
+  ]
+ },
+ {
+  "topic": "entry",
+  "title": "Unknown: does a lost run return its key",
+  "body": "No capture states it. Guides treat losses as free retries, which suggests a key is spent only on a clear.",
+  "confidence": "low",
+  "sources": [
+   "nv:43827",
+   "dc:73577"
+  ]
+ },
+ {
+  "topic": "entry",
+  "title": "Sweep (소탕) once stuck",
+  "body": "Each stage pays a one-time first-clear reward, so players push before sweeping, then sweep at their wall.",
+  "confidence": "high",
+  "sources": [
+   "dc:81070",
+   "dc:80671",
+   "dc:79491",
+   "dc:82001"
+  ]
+ }
+]
