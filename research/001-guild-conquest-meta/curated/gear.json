@@ -1,5 +1,6 @@
 [
   { "slot": "top-left", "substats": "Skill amp + crit dmg", "why": "Crit dmg over crit rate: Macaron already pushes crit rate past 300%. Target at +15: skill amp 9%+, crit dmg 20%+. Skill amp beats displayed power.", "context": "raid", "sources": ["dc:75854", "dc:76218", "dc:76191", "dc:75606", "dc:31349"] },
+  { "slot": "top-left", "substats": "Skill amp + crit rate, or skill amp + flat ATK (Season 7)", "why": "Disputed after Chardonnay: 서신우 runs crit rate; one poster scored 2.6T on flat ATK vs 2.2T on crit dmg.", "context": "raid", "sources": ["nv:51157", "dc:84162", "dc:84246"] },
   { "slot": "top-left", "substats": "Skill amp + crit rate (arena)", "why": "In arena, enemy crit resistance eats crit rate, so crit rate is the arena pick. Several raid players run the arena set and lose damage.", "context": "arena", "sources": ["dc:75854", "dc:75606"] },
   { "slot": "top-right", "substats": "Skill haste + skill amp", "why": "The only slot group that rolls both of the raid's key stats. Max haste roll is +4.6 at plate +15.", "context": "raid", "sources": ["nv:43653", "dc:75854", "dc:76218", "nv:43011"] },
   { "slot": "bottom-left", "substats": "Damage reduction + HP", "why": "Crit resistance does nothing against the raid boss. Survive the 30 s slam and reach the 17 s wipe.", "context": "raid", "sources": ["nv:43653", "dc:75854", "dc:71381", "dc:76218"] },

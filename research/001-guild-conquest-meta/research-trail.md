@@ -72,3 +72,46 @@ Round 3 queries:
 - CookieRun Crumble Chardonnay Cookie Volley guild conquest
 
 Synthesis: no hit names crumb.gg, the damage-reduction phases or Chardonnay. The web rounds end here; the round's findings come from the DC gallery, the official cafe, YouTube and crumb.gg captures.
+
+## Round 2026-10-09
+
+Window: 2026-10-07 (the last refresh heading) to 2026-10-09. Captures in `evidence/r2026-10-09/`.
+
+### Baseline
+
+The patch data first: crumb.gg's `data/patches.json` (`15-crumbgg/api/data-patches.json`) has 1.5.002 as released on 10-08 16:00 KST, with Chardonnay's kit (CRIT% +60–120%, 다발 1–2, Push RES 40–60%) and the level cap 120. The official patch board (`14-global/list-naver-patch-notes.tsv`) has nothing newer than nv:50417; re-fetched, its body is unchanged. Then every other saved search once, each into a file named for its id: the DC listings in `list-<id>.tsv`, the Naver guide board in `list-naver-guide-board.tsv`, crumb.gg in `15-crumbgg/api/`, YouTube in `14-global/ytq/`, the web pages in `13-sites/` and `14-global/`. The gallery now posts far faster than in September: three pages of `토벌` reached only 10-08 13:00, so `토벌` and `샤르도네` were rerun with more pages (`-2`) until they predated 10-07 19:23 (dc:82457, the last round's newest post). crumb.gg's `/pub/leaderboard` answered 404 three times; no power board this round.
+
+Synthesis:
+- Season 7 runs 10-08 16:00 to 10-12 12:00 KST on the same Extra-Stuffed Piñata (crumb.gg's page; the in-game lobby in dc:83491). The live #1 is 환상 at 10T 266G after about 22 hours; Season 6's #1 is not in the top 100.
+- The gallery switched decks on day one: Macaron out for Chardonnay, Cherry out for Melon Soda. 저장용's 4T 228G at 4.55G and 4T 300G at 4.29G, and 캔디애플's 3T 966G and 4T 078G, are Chardonnay decks with their lineups on screen.
+- 서신우's 2.5T guide video (RKNiw1fRosw) shows the same deck at 5★ Chardonnay, with runes and all twelve cookies alive past 17 s.
+- The saved web pages are byte-identical to 10-07.
+
+### Discovery
+
+From the patch delta and the baseline's new names: DC listings `list-disc-*.tsv` for 샤르, comment:샤르도네, 샤르도네 토벌, 다발, 밀치기 저항, 120렙, 118렙, 레벨 확장, 시즌7, 10T, 8T, 4T, 1000배, 딸크, 정전 빼, and the Season 7 top players 공포, 바삭한반장, newbiee, 리리 (환상, 노을, 타미 and 날씨의아이 are saved searches). The official notices board (menu 1, `14-global/list-disc-naver-notices.tsv`) for a hotfix: none, only a correction (nv:51057) and the maintenance notice. The Naver guide board's new conquest posts (nv:51157, nv:51490). YouTube watch pages for the round's new conquest and Chardonnay videos.
+
+Synthesis: no Season 7 top-10 player posted a team; their names return nothing on DC. The forum settles the mechanism: Milk and Chardonnay take Pomegranate's beams first through 탄속; crit buffs don't stack, so Chardonnay replaces Macaron; her 다발 2 doesn't replace Tiger Lily's 다발 3, so Tiger Lily stays; her Push RES may keep Pomegranate out of Tiger Lily's range (disputed). Cookie Lv.120 needs account level 200, so day-one cores are Lv.114–118.
+
+### Web rounds (iterative-research)
+
+Round 1 queries:
+- 쿠키런 크럼블 샤르도네 토벌전
+- Cookie Run Crumble Chardonnay Cookie guild conquest team
+- 크럼블 120레벨 토벌 시즌7
+
+Synthesis: as in both earlier rounds, the engines index only launch-era articles (Inven Global, allthings.how) and nothing on Chardonnay or Season 7.
+
+Round 2 queries:
+- "Chardonnay Cookie" Crumble Volley Pomegranate
+- CookieRun Crumble October 8 update level 120 Chardonnay
+- 샤르도네맛 쿠키 크럼블 덱 추천
+
+Synthesis: wine pages and the August update's coverage; no page knows the 10-08 update.
+
+Round 3 queries:
+- 쿠키런 크럼블 샤르도네 석류 탄속 토벌
+- crumb.gg guild conquest season 7 Cookie Run Crumble
+- Cookie Run Crumble Chardonnay Cookie tier list build sugar runes
+
+Synthesis: the allthings.how Piñata guide again and July-era tier lists. The web rounds end here; the round's findings come from the DC gallery, the official cafe, YouTube and crumb.gg captures.
