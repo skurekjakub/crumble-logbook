@@ -11,6 +11,7 @@ The adb helpers are shared with the EXP Dungeon macro, in `tools/adb-lib/AdbScre
 - `conquest-loop.ahk`: the script. Needs [AutoHotkey v2](https://www.autohotkey.com/) (`winget install AutoHotkey.AutoHotkey`).
 - `conquest-loop.ini`: every knob. The script reads it at start and on F10. F9 writes learned signatures to it.
 - `conquest-loop.log`: one line per tap, run, learn or stop.
+- `stops\`: when the loop stops on an error, the screen it stopped on, as a PNG named by the time, logged next to the error.
 
 ## What the loop does
 

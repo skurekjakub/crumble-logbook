@@ -36,8 +36,9 @@ research/**/*.webm
 research/**/*.mkv
 research/**/*.mov
 
-# macro logs
+# macro logs, and the screens a macro stopped on
 tools/**/*.log
+tools/**/stops/
 
 __pycache__/
 *.pyc

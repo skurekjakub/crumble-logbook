@@ -184,11 +184,23 @@ RunLoop() {
         Log("stopped by user")
     } catch Error as e {
         Log("error: " e.Message)
+        Log(SaveStopShot())
         TrayTip(e.Message, "Conquest loop stopped", 3)
     }
     Running := false
     Phase := "idle"
     UpdateStatus()
+}
+
+/**
+ * Saves the screen the loop stopped on to stops\ next to the script.
+ * @returns a log line naming the file, or saying none could be saved
+ */
+SaveStopShot() {
+    dir := A_ScriptDir "\stops"
+    try DirCreate(dir)
+    name := FormatTime(, "yyyy-MM-dd_HHmmss") ".png"
+    return SaveScreenshot(dir "\" name) ? "screen saved: stops\" name : "screen not saved"
 }
 
 /**

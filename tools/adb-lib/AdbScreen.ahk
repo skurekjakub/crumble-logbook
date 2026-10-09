@@ -111,6 +111,20 @@ Capture() {
 }
 
 /**
+ * Saves what the game shows right now as a PNG, for working out later why a macro stopped.
+ * @param path file to write, e.g. "C:\…\stops\2026-10-09_015215.png"
+ * @returns true when a PNG was written; false when adb wrote nothing (never raises)
+ */
+SaveScreenshot(path) {
+    try {
+        id := GameDisplay("Capture")
+        RunWait(A_ComSpec ' /c ""' Cfg["Path"] '" -s ' Cfg["Serial"] " exec-out screencap -p" (id != "" ? " -d " id : "") ' > "' path '""', , "Hide")
+        return FileExist(path) && FileGetSize(path) > 0
+    }
+    return false
+}
+
+/**
  * Reads one pixel of a capture.
  * @param buf capture from Capture()
  * @param x column in game pixels
