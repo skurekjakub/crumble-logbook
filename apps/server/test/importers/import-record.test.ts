@@ -36,8 +36,9 @@ function curated<T>(name: string): T {
   return JSON.parse(readFileSync(join(recordDir, "curated", name), "utf-8")) as T;
 }
 
-type Cited = { sources: string[] };
+type Cited = { sources: string[]; obsolete?: { sources: string[] } };
 type CuratedDeck = Cited & {
+  id: string;
   cookies: unknown[];
   pets?: string[];
   substitutions?: string[];
@@ -167,8 +168,9 @@ const expectedCounts = {
   spendingSteps: 0,
   growthCurves: 0,
   plannerSteps: 0,
+  // An obsolete row's reason is cited under its own key, apart from the row's sources.
   citations:
-    sum(citedRows.map((r) => distinct(r.sources))) +
+    sum(citedRows.map((r) => distinct(r.sources) + distinct(r.obsolete?.sources ?? []))) +
     distinct(meta.you.sources) +
     sum(fightTimeline.map((e) => distinct(e.sources.map(alias)))) +
     sum(buffRowsPerCookie),
@@ -592,10 +594,12 @@ describe("importRecord validation", () => {
 
   it("rejects a counter filed under another mode than its decks, naming the file and row", () => {
     const dir = tempRecord(null, () => {});
+    // A counter may only name current decks, so the edge uses the record's first two.
+    const [team, beatenBy] = decks.filter((d) => d.obsolete === undefined).map((d) => d.id);
     const edge = {
       mode: "guild_conquest",
-      team: "cherry",
-      beaten_by: "meso",
+      team,
+      beaten_by: beatenBy,
       why: "w",
       confidence: "low",
       sources: ["dc:76135"],
@@ -603,8 +607,8 @@ describe("importRecord validation", () => {
     writeFileSync(
       join(dir, "curated", "counters.json"),
       JSON.stringify([
-        { ...edge, id: "cherry-vs-meso" },
-        { ...edge, id: "cherry-vs-meso-arena", mode: "arena" },
+        { ...edge, id: "edge" },
+        { ...edge, id: "edge-arena", mode: "arena" },
       ]),
     );
     editJson<{ collections: Record<string, string> }>(dir, "curated/manifest.json", (m) => {
@@ -613,7 +617,9 @@ describe("importRecord validation", () => {
     const store = testStore();
     expect(() => importRecord(store, dir)).toThrow(ImportError);
     expect(() => importRecord(store, dir)).toThrow(
-      /counters\.json \[1\]: counter mode arena doesn't match deck cherry's mode guild_conquest/,
+      new RegExp(
+        `counters\\.json \\[1\\]: counter mode arena doesn't match deck ${team}'s mode guild_conquest`,
+      ),
     );
     expectEmpty(store);
   });
