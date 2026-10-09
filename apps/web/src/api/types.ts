@@ -159,9 +159,6 @@ export type DailyDungeonClear = InferResponseType<
   200
 >[number];
 
-/** A daily dungeon deck's run facts: its dungeon, auto, stage, power and captain. */
-export type DailyRun = NonNullable<Deck["dailyDungeon"]>;
-
 /** A cookie kept out of Crumble Dungeon's first wave, with its `en` gloss, reason, status and sources. */
 export type DungeonExclusion = InferResponseType<
   (typeof api)["dungeon-exclusions"]["$get"],

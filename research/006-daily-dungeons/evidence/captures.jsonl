@@ -873,3 +873,5 @@
 {"path":"evidence/04-lane-reports/dcyt-exp.md","url":null,"captured_at":"2026-10-07T21:00:00+02:00","tool":"manual","sha256":"e62cfad5d3e5a1160423023c6de9da5fdcdb3b82135b62c65dddfaeb266ed811"}
 {"path":"evidence/04-lane-reports/other-dungeons.md","url":null,"captured_at":"2026-10-07T21:00:00+02:00","tool":"manual","sha256":"95160ab981c68835dd1fdbb9a41ccf37f528321f29adecbdd5b2c5ee3b3cb5c8"}
 {"path":"evidence/08-extract/sources.json","url":null,"captured_at":"2026-10-09T01:27:03+02:00","tool":"manual","sha256":"07f0e8ff643fd3bd37967d8b1a3fa9f9b6e526cfe4ff68484324f6cce8d17d76"}
+{"path":"evidence/03-other-dungeons/yt/frames/vart-dough-00m47.0s.jpg","url":"https://www.youtube.com/watch?v=7GHVEHoVFsw","captured_at":"2026-10-09T02:06:04+02:00","tool":"manual","sha256":"cdd04ba684fca1898ad5eaa98bf6f6a8dc27253c8a10266e9b276ae8f044846b"}
+{"path":"evidence/03-other-dungeons/yt/frames/vart-dough-01m14.0s.jpg","url":"https://www.youtube.com/watch?v=7GHVEHoVFsw","captured_at":"2026-10-09T02:06:06+02:00","tool":"manual","sha256":"41d5f88171a18961e352c3b5bc08d763ef854dfae81ddc590039a07de6e53ef3"}

@@ -39,6 +39,21 @@ export const deckSlug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "expected a
 /** A non-empty list of non-empty strings, used for json string-array columns. */
 export const nameList = z.array(z.string().min(1));
 
+/** A level written as only an unknown marker: `?`, `??`, `Lv ?`, `Lv.?`, in any case. */
+const UNKNOWN_LEVEL = /^\s*(?:lv\.?\s*)?[?？]+\s*$/i;
+
+/**
+ * A deck cookie's level rule: non-empty, and more than an unknown marker
+ * such as `?` or `Lv ?`. A level the evidence doesn't show is written as a
+ * rule that says so ("Likely Lv 100 (not stated)"), never as a placeholder.
+ */
+export const levelRuleText = z
+  .string()
+  .min(1)
+  .refine((rule) => !UNKNOWN_LEVEL.test(rule), {
+    message: 'a level rule states a level or a rule, not only an unknown marker such as "Lv ?"',
+  });
+
 /**
  * Insert schema for `sources`. `id` must be `<site>:<key>`; `date`, when
  * present, must be `YYYY-MM-DD`; `relevance`, when present, is an integer
@@ -106,9 +121,13 @@ export const deckSelect = createSelectSchema(t.decks, {
 /** A row selected from `decks`. */
 export type DeckRow = typeof t.decks.$inferSelect;
 
-/** Insert schema for `deck_cookies`. `cookieKr` and `why` must be non-empty. */
+/**
+ * Insert schema for `deck_cookies`. `cookieKr` and `why` must be non-empty;
+ * `levelRule`, when given, must be a {@link levelRuleText}.
+ */
 export const deckCookieInsert = createInsertSchema(t.deckCookies, {
   cookieKr: (s) => s.min(1),
+  levelRule: () => levelRuleText.nullish(),
   why: (s) => s.min(1),
 });
 /** Select schema for `deck_cookies`, mirroring the stored row shape. */

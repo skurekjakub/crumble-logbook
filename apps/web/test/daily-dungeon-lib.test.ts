@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { RankedDeck } from "../src/lib/daily-dungeon";
 import {
+  dungeonChipName,
   elementKey,
   factVerdict,
   pickDungeon,
@@ -96,5 +97,14 @@ describe("elementKey and factVerdict", () => {
     expect(factVerdict(true)).toBe("yes");
     expect(factVerdict(false)).toBe("no");
     expect(factVerdict(null)).toBe("unknown");
+  });
+});
+
+describe("dungeonChipName", () => {
+  it("drops a trailing Dungeon, and keeps a name that is nothing else", () => {
+    expect(dungeonChipName("EXP Dungeon")).toBe("EXP");
+    expect(dungeonChipName("Research Stone Dungeon")).toBe("Research Stone");
+    expect(dungeonChipName("Rune Crystal")).toBe("Rune Crystal");
+    expect(dungeonChipName("Dungeon")).toBe("Dungeon");
   });
 });

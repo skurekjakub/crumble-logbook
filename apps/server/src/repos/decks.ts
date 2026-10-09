@@ -132,6 +132,8 @@ export interface DecksRepo {
    * Returns the daily dungeon run facts of `deckIds`, ordered by deck id.
    *
    * @param deckIds - deck ids to look up; `[]` returns `[]`
+   * @returns one row per deck that has run facts; a deck without them, or
+   *   one that doesn't exist, has none
    */
   dailyRuns(deckIds: string[]): DeckDailyDungeonRow[];
   /**

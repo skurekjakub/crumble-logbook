@@ -105,6 +105,21 @@ describe("seed schemas", () => {
     expect(result.success).toBe(false);
   });
 
+  it("reject a level rule that is only an unknown marker, and keep one that says why", () => {
+    for (const marker of ["?", "Lv ?", "lv.?", " LV?? ", "Lv ？"]) {
+      const result = seedDeck.safeParse({
+        ...cherry,
+        cookies: [{ kr: "우유", level_rule: marker, why: "level not shown" }],
+      });
+      expect(result.success, marker).toBe(false);
+    }
+    const stated = seedDeck.safeParse({
+      ...cherry,
+      cookies: [{ kr: "우유", level_rule: "Likely Lv 100 (not stated)", why: "w" }],
+    });
+    expect(stated.success).toBe(true);
+  });
+
   it("accept a sources record keyed by source id, with optional fields", () => {
     const parsed = seedSources.parse({
       "dc:76135": { url: "https://gall.dcinside.com/76135" },

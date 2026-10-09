@@ -7,13 +7,7 @@
  * @module
  */
 import { notFound } from "@tanstack/react-router";
-import type {
-  DailyConfig,
-  DungeonConfig,
-  ModeSection,
-  StageConfig,
-  TeamPowerConfig,
-} from "./modes";
+import type { DungeonConfig, ModeSection, StageConfig, TeamPowerConfig } from "./modes";
 import { modeById, tabAt } from "./modes";
 
 /**
@@ -71,21 +65,6 @@ export function requireDungeon(mode: ModeSection, pathname: string): { dungeon: 
   requireTab(mode, pathname);
   if (!mode.dungeon) throw notFound();
   return { dungeon: mode.dungeon };
-}
-
-/**
- * Refuses the daily dungeon board for a mode without it, or that doesn't
- * list the page among its tabs.
- *
- * @param mode - the mode, from the route context
- * @param pathname - the requested path
- * @returns the mode's daily dungeon config, for the route context
- * @throws the router's not-found error for any other mode or page
- */
-export function requireDaily(mode: ModeSection, pathname: string): { daily: DailyConfig } {
-  requireTab(mode, pathname);
-  if (!mode.daily) throw notFound();
-  return { daily: mode.daily };
 }
 
 /**

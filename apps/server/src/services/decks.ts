@@ -15,6 +15,7 @@ import type { Repos, Store } from "../repos";
 import type { DeckDailyRunInsert } from "../repos/decks";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
+import { deckRefProblem } from "./content";
 import { deckModeChangeConflict } from "./deck-modes";
 import { applyFilters } from "./filters";
 import type { NameRef } from "./names";
@@ -89,8 +90,10 @@ export interface DeckService {
    *   the run facts name, doesn't exist
    * @throws {ConflictError} if `patch.mode` would leave a mode-bound row
    *   (a counter edge, a stage or dungeon row) naming a deck of another
-   *   mode, or if the patched deck would break the daily dungeon rules;
-   *   nothing is written
+   *   mode, if the patched deck would break the daily dungeon rules, or if
+   *   new run facts would leave a row naming the deck breaking its own
+   *   rule (a clear of a dungeon the deck no longer runs); nothing is
+   *   written
    */
   update(id: string, patch: DeckPatch): DeckView;
   /**
@@ -271,6 +274,10 @@ export function createDeckService(store: Store): DeckService {
           run: repos.decks.dailyRuns([id])[0] ?? null,
         });
         if (problem) throw new ConflictError(`deck ${id}: ${problem}`);
+        if (dailyDungeon !== undefined) {
+          const naming = deckRefProblem(repos, id);
+          if (naming) throw new ConflictError(naming);
+        }
         if (sources !== undefined) repos.citations.replace("deck", id, sources);
         return toViews(repos, [row])[0] as never;
       }),

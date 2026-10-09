@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { createApp } from "../../src/app";
 import { importRecord } from "../../src/importers/import-record";
+import { writeRecord } from "../../src/importers/write-record";
 import { createServices } from "../../src/services";
 import { readJson, testStore } from "../helpers";
 
@@ -148,6 +149,18 @@ describe("importRecord on the daily dungeon fixture", () => {
     });
   });
 
+  it("keeps an obsolete daily dungeon deck with its run facts, marked and superseded", async () => {
+    const store = testStore();
+    importRecord(store, fixtureDir);
+    const app = createApp(createServices(store));
+    const retired = await readJson<Row>(await app.request("/api/decks/exp-auto-retired"));
+    expect(retired).toMatchObject({
+      obsoleteSince: "2026-10-06",
+      supersededBy: "exp-auto-milk",
+      dailyDungeon: { dungeon: "exp", auto: "full", stage: 60 },
+    });
+  });
+
   it("lists the clears furthest stage first, filtered by dungeon, never by a ratio", async () => {
     const store = testStore();
     importRecord(store, fixtureDir);
@@ -272,5 +285,30 @@ describe("importRecord on the daily dungeon fixture", () => {
       },
     });
     expect(() => importRecord(testStore(), source)).toThrow(/unknown source ids: web:nowhere/);
+  });
+
+  it("refuses a --replace that drops a daily dungeon another record's deck runs", () => {
+    const store = testStore();
+    store.repos.dailyDungeons.insert({
+      slug: "exp",
+      position: 0,
+      nameEn: "EXP",
+      drops: [],
+      notes: [],
+      recordSlug: "a",
+    });
+    store.repos.decks.insert({
+      id: "other-auto",
+      position: 0,
+      nameEn: "Other",
+      status: "meta",
+      mode: "daily_dungeon",
+      recordSlug: "b",
+    });
+    store.repos.decks.replaceDailyRun("other-auto", { dungeon: "exp", auto: "full" });
+    expect(() => writeRecord(store, { slug: "a", steps: [], warnings: [] }, true)).toThrow(
+      /deck other-auto runs daily dungeon exp, which record a no longer loads/,
+    );
+    expect(store.repos.dailyDungeons.list().map((row) => row.slug)).toEqual(["exp"]);
   });
 });

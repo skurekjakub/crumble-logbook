@@ -141,5 +141,28 @@
       { "kr": "허브맛 쿠키", "level": "100", "why": "Fixture: healer." }
     ],
     "sources": ["web:fixture-dough"]
+  },
+  {
+    "id": "exp-auto-retired",
+    "name_en": "Fixture: retired auto deck",
+    "status": "legacy",
+    "dungeon": "exp",
+    "auto": "full",
+    "stage": 60,
+    "cookies": [
+      {
+        "kr": "브라이트시커 쿠키",
+        "level": "100",
+        "why": "Fixture: boss damage before the patch."
+      },
+      { "kr": "허브맛 쿠키", "level": "100", "why": "Fixture: healer." }
+    ],
+    "obsolete": {
+      "since": "2026-10-06",
+      "reason": "Fixture: a patch broke its opening.",
+      "sources": ["web:fixture-exp-clear"],
+      "superseded_by": "exp-auto-milk"
+    },
+    "sources": ["web:fixture-exp-guide"]
   }
 ]

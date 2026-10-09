@@ -17,6 +17,7 @@ import {
   USAGE_KIND,
   deckSlug,
   isoDate,
+  levelRuleText,
   sourceId,
 } from "@crumble/schema";
 import { z } from "zod";
@@ -61,14 +62,16 @@ export const seedDeckObsolete = seedObsolete.extend({ superseded_by: deckSlug.op
 
 /**
  * One cookie slot of a curated deck. Needs a `level` or a `level_rule` (or
- * both); `slot` is its formation position as displayed, when known.
+ * both), and a `level_rule` says more than an unknown marker such as
+ * `Lv ?` ({@link levelRuleText}); `slot` is its formation position as
+ * displayed, when known.
  */
 export const seedDeckCookie = z
   .strictObject({
     kr: z.string().min(1),
     slot: z.string().min(1).optional(),
     level: z.string().min(1).optional(),
-    level_rule: z.string().min(1).optional(),
+    level_rule: levelRuleText.optional(),
     stars: z.string().min(1).optional(),
     why: z.string().min(1),
   })

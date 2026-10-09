@@ -9,6 +9,7 @@
  * @module
  */
 import {
+  clearDeckProblem,
   dailyDeckProblem,
   dailyDungeonClearInsert,
   dailyDungeonInsert,
@@ -149,13 +150,8 @@ function checkClearDungeons(file: string, clears: readonly SeedDailyDungeonClear
       }
       if (row.deck == null) return;
       const runs = repos.decks.dailyRuns([row.deck])[0]?.dungeon;
-      if (runs !== undefined && runs !== row.dungeon) {
-        throw new ImportError(
-          file,
-          index,
-          `deck ${row.deck} runs daily dungeon ${runs}, not ${row.dungeon}`,
-        );
-      }
+      const problem = clearDeckProblem(row.dungeon, row.deck, runs);
+      if (problem) throw new ImportError(file, index, problem);
     });
   };
 }

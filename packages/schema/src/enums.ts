@@ -45,8 +45,8 @@ export type RankingBoard = (typeof RANKING_BOARD)[number];
  * stages and the Dimensional Rift), Crumble Dungeon (크럼블 던전, the
  * score attack against the Holy Golden Drop), team power growth (전투력:
  * what raises the power the game shows for a lineup, and at what cost), or
- * the daily dungeons (일일던전: the EXP, dough, research-stone and other
- * dungeons pushed stage by stage for materials). The first is the default
+ * the daily dungeons (일일던전: dungeons pushed stage by stage for
+ * materials, each with its own boss and key). The first is the default
  * of every `mode` column.
  */
 export const GAME_MODE = [

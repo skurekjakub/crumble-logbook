@@ -1,8 +1,10 @@
 import { Fragment } from "react";
+import { useDailyDungeonIndex } from "../api/hooks";
 import type { Deck, DeckCookie } from "../api/types";
 import { AtkOrder } from "../components/AtkOrder";
 import { Clamp } from "../components/Clamp";
 import { CookieName } from "../components/CookieName";
+import type { DailyRun } from "../components/DailyRun";
 import { RunChips } from "../components/DailyRun";
 import type { Column } from "../components/DataTable";
 import { DataTable } from "../components/DataTable";
@@ -13,6 +15,18 @@ import { ObsoleteNotice } from "../components/ObsoleteNotice";
 import { Pill } from "../components/Pill";
 import { SourceChips } from "../components/SourceChips";
 import type { SourceIndex } from "../lib/sources";
+
+/**
+ * A daily dungeon deck's run chips, the dungeon it runs looked up by slug
+ * so the chip shows its name and its boss's element.
+ *
+ * @param props - the deck's run facts
+ * @returns the chips
+ */
+function DeckRunChips({ run }: { run: DailyRun }) {
+  const dungeons = useDailyDungeonIndex();
+  return <RunChips run={run} dungeon={dungeons.get(run.dungeon)} />;
+}
 
 /**
  * A cookie's level requirement as the levels table shows it: the level rule
@@ -195,7 +209,7 @@ export function DeckCard({
           </h3>
           <div className="chips">
             <Pill kind={d.status} />
-            {d.dailyDungeon ? <RunChips run={d.dailyDungeon} /> : null}
+            {d.dailyDungeon ? <DeckRunChips run={d.dailyDungeon} /> : null}
             {d.ceilingText ? <span className="chip ceiling">ceiling {d.ceilingText}</span> : null}
           </div>
         </div>

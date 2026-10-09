@@ -57,6 +57,15 @@ describe("deckCookieInput", () => {
     expect(result.success).toBe(true);
   });
 
+  it("rejects a levelRule that is only an unknown marker", () => {
+    const result = inputs.deckCookieInput.safeParse({
+      cookieKr: "브시커",
+      levelRule: "Lv ?",
+      why: "x",
+    });
+    expect(result.success).toBe(false);
+  });
+
   it("rejects an empty why", () => {
     const result = inputs.deckCookieInput.safeParse({
       cookieKr: "브시커",

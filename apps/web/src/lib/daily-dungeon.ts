@@ -91,6 +91,16 @@ export function splitHero<D extends RankedDeck>(
   return { hero, rest: ranked.filter((d) => d !== hero) };
 }
 
+/**
+ * A daily dungeon's name as a chip shows it: without a trailing "Dungeon".
+ *
+ * @param nameEn - the dungeon's English name, e.g. `EXP Dungeon`
+ * @returns the short name, e.g. `EXP`; the name itself when nothing is left after the cut
+ */
+export function dungeonChipName(nameEn: string): string {
+  return nameEn.replace(/\s*dungeon\s*$/i, "") || nameEn;
+}
+
 /** The elements the tokens tint, by their English name in lower case. */
 const ELEMENTS = ["fire", "water", "grass", "light", "dark"] as const;
 

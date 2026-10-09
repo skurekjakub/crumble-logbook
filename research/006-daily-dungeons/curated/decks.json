@@ -503,7 +503,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
@@ -793,7 +793,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "전갈맛 쿠키",
@@ -971,7 +971,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
@@ -1142,13 +1142,13 @@
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
   "name_en": "쿠크다스s004's manual deck (657)",
   "status": "niche",
-  "summary": "Hit once, pull to 7 o'clock, buffs at 53 s, enter between book rows at 47.5 s, out after the second drone, back at 32 s.",
+  "summary": "Clears 657 by hand with 2–3 retries a stage: enter between book rows at 47.5 s, out to 7 o'clock, back at 32 s.",
   "cookies": [
    {
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
@@ -1241,74 +1241,74 @@
    {
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
-    "level_rule": "Lv ?",
+    "level": "100",
     "stars": "10",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
     "slot": "row1-2",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "ATK buff that lands on Brightseeker."
    },
    {
     "kr": "포도넝쿨맛 쿠키",
     "slot": "row1-3",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Heals the lowest-HP ally, catching whoever the books hit."
    },
    {
     "kr": "락스타맛 쿠키",
     "slot": "row1-4",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Team shield that soaks the knockback slams."
    },
    {
     "kr": "이름 모를 케이크 들개",
     "slot": "row1-5",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
    },
    {
     "kr": "허브맛 쿠키",
     "slot": "row1-6",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Second healer: keeps Milk and Brightseeker up through the slams."
    },
    {
     "kr": "호밀맛 쿠키",
     "slot": "row2-1",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Second dealer: Fire ranged damage beside Brightseeker."
    },
    {
     "kr": "석류맛 쿠키",
     "slot": "row2-2",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
    },
    {
     "kr": "라임맛 쿠키",
     "slot": "row2-3",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Crit-rate buff for Brightseeker's lasers."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "slot": "row2-4",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
    },
    {
     "kr": "이온맛 쿠키로봇",
     "slot": "row2-5",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Shielding tank; counts toward Armor Repair's three tanks."
    },
    {
     "kr": "감감술래 놀이 달토끼맛 쿠키",
     "slot": "row2-6",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
    }
   ],
@@ -1435,62 +1435,62 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Support buffer for Brightseeker's damage."
    },
    {
     "kr": "브라이트시커 쿠키",
-    "level_rule": "Lv ?",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "level_rule": "Likely Lv 100 (not stated)",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "ATK buff that lands on Brightseeker."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Flex slot: a field Brightseeker deals from while it stands in it."
    },
    {
     "kr": "락스타맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Team shield that soaks the knockback slams."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
    },
    {
     "kr": "이름 모를 케이크 들개",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
    },
    {
     "kr": "이온맛 쿠키로봇",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Shielding tank; counts toward Armor Repair's three tanks."
    },
    {
     "kr": "체리콜라맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Flex charger; extra damage while the tanks hold."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Second healer: keeps Milk and Brightseeker up through the slams."
    },
    {
     "kr": "감감술래 놀이 달토끼맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
    }
   ],
@@ -1514,6 +1514,7 @@
   "auto": "full",
   "stage": 644,
   "power": "3.59G",
+  "recommended_power": "3.37G",
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
   "name_en": "갓갓.'s multi-dealer deck (644)",
   "status": "niche",
@@ -1521,57 +1522,57 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Support buffer for Brightseeker's damage."
    },
    {
     "kr": "전갈맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Extra ranged dealer with damage over time."
    },
    {
     "kr": "브라이트시커 쿠키",
-    "level_rule": "Lv ?",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "level_rule": "Likely Lv 100 (not stated)",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "ATK buff that lands on Brightseeker."
    },
    {
     "kr": "악마맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Extra Dark ranged dealer; the poster argues dealers beat debuffers."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Flex slot: a field Brightseeker deals from while it stands in it."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
    },
    {
     "kr": "이온맛 쿠키로봇",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Shielding tank; counts toward Armor Repair's three tanks."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Second healer: keeps Milk and Brightseeker up through the slams."
    },
    {
     "kr": "이름 모를 케이크 들개",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
    }
   ],
@@ -1600,73 +1601,73 @@
    {
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
-    "level_rule": "Lv ?",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "level": "100",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
     "slot": "row1-2",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "ATK buff that lands on Brightseeker."
    },
    {
     "kr": "포도넝쿨맛 쿠키",
     "slot": "row1-3",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Heals the lowest-HP ally, catching whoever the books hit."
    },
    {
     "kr": "락스타맛 쿠키",
     "slot": "row1-4",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Team shield that soaks the knockback slams."
    },
    {
     "kr": "이름 모를 케이크 들개",
     "slot": "row1-5",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks."
    },
    {
     "kr": "허브맛 쿠키",
     "slot": "row1-6",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Second healer: keeps Milk and Brightseeker up through the slams."
    },
    {
     "kr": "호밀맛 쿠키",
     "slot": "row2-1",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Second dealer: Fire ranged damage beside Brightseeker."
    },
    {
     "kr": "석류맛 쿠키",
     "slot": "row2-2",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker."
    },
    {
     "kr": "라임맛 쿠키",
     "slot": "row2-3",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Crit-rate buff for Brightseeker's lasers."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "slot": "row2-4",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy."
    },
    {
     "kr": "이온맛 쿠키로봇",
     "slot": "row2-5",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Shielding tank; counts toward Armor Repair's three tanks."
    },
    {
     "kr": "감감술래 놀이 달토끼맛 쿠키",
     "slot": "row2-6",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank."
    }
   ],
@@ -1792,7 +1793,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "피노누아맛 쿠키",
@@ -1887,7 +1888,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "호밀맛 쿠키",
@@ -1985,7 +1986,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
@@ -2125,7 +2126,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row2-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "메론소다맛 쿠키",
@@ -2387,7 +2388,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "호밀맛 쿠키",
@@ -2490,7 +2491,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "호밀맛 쿠키",
@@ -2634,7 +2635,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row2-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
@@ -2775,7 +2776,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "석류맛 쿠키",
@@ -2870,7 +2871,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row1-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "호밀맛 쿠키",
@@ -3001,7 +3002,7 @@
     "kr": "브라이트시커 쿠키",
     "slot": "row2-1",
     "level": "100",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness."
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness."
    },
    {
     "kr": "석류맛 쿠키",
@@ -3062,73 +3063,73 @@
    {
     "kr": "바람궁수 쿠키",
     "slot": "row1-1",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Long-range archer reaches scarabs that keep their distance."
    },
    {
     "kr": "밀키웨이맛 쿠키",
     "slot": "row1-2",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Long-range Light dealer for scarabs that back away."
    },
    {
     "kr": "피노누아맛 쿠키",
     "slot": "row1-3",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark support adding damage on the scarabs' weakness."
    },
    {
     "kr": "석류맛 쿠키",
     "slot": "row1-4",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "에스프레소맛 쿠키",
     "slot": "row1-5",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged area damage on the bunched scarabs."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "slot": "row1-6",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "마카롱맛 쿠키",
     "slot": "row2-1",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "브라이트시커 쿠키",
     "slot": "row2-2",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged drone damage on scarabs that keep their distance."
    },
    {
     "kr": "치즈케이크맛 쿠키",
     "slot": "row2-3",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "ATK buff for the dealers."
    },
    {
     "kr": "피겨여왕맛 쿠키",
     "slot": "row2-4",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Field the team fights on while the scarabs close in."
    },
    {
     "kr": "바리공주맛 쿠키",
     "slot": "row2-5",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Charger that runs down the scattered scarabs."
    },
    {
     "kr": "이름 모를 케이크 들개",
     "slot": "row2-6",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Tank that holds the corner while the scarabs gather."
    }
   ],
@@ -3324,62 +3325,62 @@
   "cookies": [
    {
     "kr": "바람궁수 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Long-range archer reaches scarabs that keep their distance."
    },
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "밀키웨이맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Long-range Light dealer for scarabs that back away."
    },
    {
     "kr": "호밀맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Ranged dealer for scarabs out of reach."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Dark support adding damage on the scarabs' weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "ATK buff for the dealers."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "뱀파이어맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Charger that runs down the scattered scarabs."
    },
    {
     "kr": "위치베리맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Dark ranged dealer on the Light scarabs' weakness."
    },
    {
     "kr": "트위즐젤리맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Dark ranged dealer on the scarabs' weakness."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Healer that keeps the team up for the full timer."
    }
   ],
@@ -3408,62 +3409,62 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "오븐방랑자 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Charger that runs down the scattered scarabs."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark support adding damage on the scarabs' weakness."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Field the team fights on while the scarabs close in."
    },
    {
     "kr": "바리공주맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Charger that runs down the scattered scarabs."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "브라이트시커 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged drone damage on scarabs that keep their distance."
    },
    {
     "kr": "호밀맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged dealer for scarabs out of reach."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "위치베리맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark ranged dealer on the Light scarabs' weakness."
    },
    {
     "kr": "락스타맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Team shield; buys time against the clock."
    },
    {
     "kr": "딸기크레페맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Tank that holds the corner while the scarabs gather."
    }
   ],
@@ -3902,11 +3903,12 @@
   "mode": "daily_dungeon",
   "dungeon": "coin",
   "auto": "full",
+  "stage": 566,
   "power": "1.52G",
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
-  "name_en": "신비한쿠키사전's auto deck (about 560)",
+  "name_en": "신비한쿠키사전's auto deck (566)",
   "status": "niche",
-  "summary": "Full auto past 560; move to 7 o'clock if the team is dying. The same deck runs dough.",
+  "summary": "Full auto to 566 (stage-select screen); move to 7 o'clock if the team is dying. The same deck runs dough.",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
@@ -4078,62 +4080,62 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark support adding damage on the scarabs' weakness."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Field the team fights on while the scarabs close in."
    },
    {
     "kr": "트위즐젤리맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark ranged dealer on the scarabs' weakness."
    },
    {
     "kr": "락스타맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Team shield; buys time against the clock."
    },
    {
     "kr": "브라이트시커 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged drone damage on scarabs that keep their distance."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "ATK buff for the dealers."
    },
    {
     "kr": "뱀파이어맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Charger that runs down the scattered scarabs."
    },
    {
     "kr": "위치베리맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Dark ranged dealer on the Light scarabs' weakness."
    },
    {
     "kr": "바리공주맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Charger that runs down the scattered scarabs."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals and buffs the top-ATK dealer."
    }
   ],
@@ -4234,72 +4236,72 @@
   "id": "dough-nv50183-yongsa",
   "mode": "daily_dungeon",
   "dungeon": "dough",
-  "auto": "semi",
+  "auto": "manual",
   "stage": 766,
   "power": "3.03G",
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
   "name_en": "용사맛 쿠키's Cream Puff deck (766)",
   "status": "alt",
-  "summary": "3 o'clock, then the 5 o'clock corner; take Cream Puff (\"꼭 넣으세요\").",
+  "summary": "Manual: keep steering to 7 o'clock until the team pins left of the base; Cream Puff's field then never drops.",
   "cookies": [
    {
     "kr": "바람궁수 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Grass ranged dealer on the Water frogs' weakness."
    },
    {
     "kr": "밀키웨이맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Long-range dealer firing from the corner."
    },
    {
     "kr": "슈크림맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Field launches the frogs into the air, stopping their shots."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "에스프레소맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Grass ranged area damage on the frogs' weakness."
    },
    {
     "kr": "크림소다맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Charger; flex damage."
    },
    {
     "kr": "치약초코 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Grass support healer."
    },
    {
     "kr": "라임맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Crit-rate buff for the dealers."
    },
    {
     "kr": "락스타맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Team shield against the frogs' volleys."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "이름 모를 케이크 들개",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Tank that soaks the frogs' projectiles."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Grass healer against the frogs' projectiles."
    }
   ],
@@ -4487,75 +4489,75 @@
   ]
  },
  {
-  "id": "dough-yt-vart-679",
+  "id": "dough-yt-vart-675",
   "mode": "daily_dungeon",
   "dungeon": "dough",
-  "auto": "full",
-  "stage": 679,
+  "auto": "semi",
+  "stage": 675,
   "power": "2.63G",
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
-  "name_en": "VART's tank auto deck (679)",
-  "status": "meta",
-  "summary": "Full auto at 679 behind three tanks for Armor Repair; the title claims 700, the author prefers manual. Auto fails past 600 near 1G.",
+  "name_en": "VART's tank semi-auto deck (675)",
+  "status": "alt",
+  "summary": "Semi-auto to 675: run to 1 o'clock, let go once the team bunches. Title claims 700; author says manual is better.",
   "cookies": [
    {
     "kr": "바람궁수 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Grass ranged dealer on the Water frogs' weakness."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Flex support."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "포도넝쿨맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Grass healer for whoever the projectiles hit."
    },
    {
     "kr": "이름 모를 케이크 들개",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Tank that soaks the frogs' projectiles."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Grass healer against the frogs' projectiles."
    },
    {
     "kr": "밀키웨이맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Long-range dealer firing from the corner."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "ATK buff for the dealers."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Field the team fights on in the corner."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "딸기크레페맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Light tank that soaks the projectiles."
    },
    {
     "kr": "다크초코 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Tank that soaks the projectiles."
    }
   ],
@@ -4932,62 +4934,62 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "호밀맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Ranged dealer that pops jellies before they reach the team."
    },
    {
     "kr": "감초맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Tank whose piercing damage clears jelly waves."
    },
    {
     "kr": "메론소다맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Water ranged dealer on the Fire jellies' weakness."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Piercing support damage through the waves."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "ATK buff for the dealers."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Water charger whose field holds the team in place."
    },
    {
     "kr": "트위즐젤리맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Piercing ranged damage through the jelly waves."
    },
    {
     "kr": "라임맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Water support; crit-rate buff for the dealers."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Healer that keeps the team up through the explosions."
    }
   ],
@@ -5183,62 +5185,62 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "호밀맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged dealer that pops jellies before they reach the team."
    },
    {
     "kr": "메론소다맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Water ranged dealer on the Fire jellies' weakness."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "ATK buff for the dealers."
    },
    {
     "kr": "트위즐젤리맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Piercing ranged damage through the jelly waves."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "브라이트시커 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged drone damage on the waves."
    },
    {
     "kr": "감초맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Tank whose piercing damage clears jelly waves."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Piercing support damage through the waves."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "정글전사 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Charger; flex damage."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Healer that keeps the team up through the explosions."
    }
   ],
@@ -5346,11 +5348,12 @@
   "mode": "daily_dungeon",
   "dungeon": "research-stone",
   "auto": "full",
+  "stage": 566,
   "power": "1.59G",
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
-  "name_en": "신비한쿠키사전's auto deck (about 550)",
+  "name_en": "신비한쿠키사전's auto deck (566)",
   "status": "niche",
-  "summary": "Full auto past 550, no corner needed; 도미 runs it at 2.62G.",
+  "summary": "Full auto to 566 (stage-select screen), no corner needed; 도미 runs it at 2.62G.",
   "cookies": [
    {
     "kr": "바람궁수 쿠키",
@@ -5523,62 +5526,62 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "호밀맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Fire ranged dealer on the golem's weakness."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Cast first: answers the golem's opening knock-up."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "라임맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Crit-rate buff for the dealers."
    },
    {
     "kr": "이름 모를 케이크 들개",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Fire tank; one of Armor Repair's three tanks."
    },
    {
     "kr": "브라이트시커 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged drone damage; flex dealer."
    },
    {
     "kr": "메론소다맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Ranged dealer; flex damage."
    },
    {
     "kr": "치즈케이크맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "ATK buff for the dealers."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Field the team fights on; flex buffer."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "체리콜라맛 쿠키",
-    "level_rule": "Lv ?",
+    "level": "100",
     "why": "Charger; flex damage."
    }
   ],
@@ -5604,7 +5607,7 @@
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
   "name_en": "질퍽이's Fire auto deck (659)",
   "status": "meta",
-  "summary": "Retries now and then but mostly kills the golem on auto at 659.",
+  "summary": "Auto at 659, inferred: the post names no hand moves and \"mostly kills\" with retries; nv:47793 runs rune hands-off too.",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
@@ -5685,7 +5688,8 @@
    "와사비 문어"
   ],
   "sources": [
-   "nv:47326"
+   "nv:47326",
+   "nv:47793"
   ]
  },
  {
@@ -5702,62 +5706,62 @@
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Support buffer for the dealers."
    },
    {
     "kr": "브라이트시커 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Ranged drone damage; flex dealer."
    },
    {
     "kr": "전갈맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Fire damage over time on the Grass golem's weakness."
    },
    {
     "kr": "호밀맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Fire ranged dealer on the golem's weakness."
    },
    {
     "kr": "메론소다맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Ranged dealer; flex damage."
    },
    {
     "kr": "피노누아맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Cast first: answers the golem's opening knock-up."
    },
    {
     "kr": "석류맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Skill AMP beam onto the top-ATK dealer."
    },
    {
     "kr": "피겨여왕맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Field the team fights on; flex buffer."
    },
    {
     "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Captain: heals and buffs the top-ATK dealer."
    },
    {
     "kr": "체리콜라맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Charger; flex damage."
    },
    {
     "kr": "허브맛 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Healer that keeps the team up through the orbs."
    },
    {
     "kr": "다크초코 쿠키",
-    "level_rule": "Lv ?",
+    "level_rule": "Likely Lv 100 (not stated)",
     "why": "Tank that absorbs the opening hits."
    }
   ],
@@ -5946,11 +5950,12 @@
   "mode": "daily_dungeon",
   "dungeon": "rune",
   "auto": "full",
+  "stage": 550,
   "power": "1.49G",
   "captain": "바삭튼튼 소아과 의사 우유맛 쿠키",
-  "name_en": "신비한쿠키사전's auto deck (about 550)",
+  "name_en": "신비한쿠키사전's auto deck (550)",
   "status": "niche",
-  "summary": "Full auto past 550.",
+  "summary": "Full auto to 550 (stage-select screen); the author expects it to keep working.",
   "cookies": [
    {
     "kr": "마카롱맛 쿠키",

@@ -2,14 +2,18 @@
    badge, the hero deck, and the ranked decks and clears. Classes carry a `dd-` prefix so they
    restyle nothing of another lane. Colours come from tokens.css only. */
 
-/* Dungeon tabs: a badge, the name and the top stage; the shown one filled. */
+/* Dungeon tabs: a badge, the name and the top stage; the shown one filled. They wrap on a
+   wide screen; on a narrow one they stay one row that scrolls sideways (see the media query). */
 .dd-tabs {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-2);
+  max-width: 100%;
   margin: var(--sp-3) 0 var(--sp-4);
 }
 .dd-tab {
+  flex: none;
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: var(--sp-2);
@@ -196,6 +200,33 @@
   font-family: var(--mono);
   font-weight: 600;
 }
+/* The dungeon a deck runs, first among its run chips, its dot the boss's element. */
+.chip.dd-dungeon {
+  font-weight: 700;
+  color: var(--ink);
+}
+.chip.dd-dungeon::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--ink-3);
+}
+.chip.dd-dungeon.el-fire::before {
+  background: var(--el-fire);
+}
+.chip.dd-dungeon.el-water::before {
+  background: var(--el-water);
+}
+.chip.dd-dungeon.el-grass::before {
+  background: var(--el-grass);
+}
+.chip.dd-dungeon.el-light::before {
+  background: var(--el-light);
+}
+.chip.dd-dungeon.el-dark::before {
+  background: var(--el-dark);
+}
 
 /* Sections: the hero, the ranked decks, the clears. */
 .dd-section {
@@ -371,6 +402,14 @@ ol.dd-clears {
 }
 
 @media (max-width: 640px) {
+  .dd-tabs {
+    flex-wrap: nowrap;
+    /* Room for the focus outline, which the scroll box would clip. */
+    padding: 4px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
   .dd-tab {
     padding-right: 10px;
     font-size: var(--fs-xs);
