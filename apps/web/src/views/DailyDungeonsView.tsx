@@ -207,7 +207,9 @@ function DungeonPanel({
   daily: DailyConfig;
   sources: SourceIndex;
 }) {
-  const { hero, rest } = splitHero(rankDecks(decks, dungeon.slug));
+  const ranked = rankDecks(decks, dungeon.slug);
+  const { hero, rest } = splitHero(ranked);
+  const places = new Map(ranked.map((d, i) => [d.id, i + 1]));
   const byId = new Map(decks.map((d) => [d.id, d]));
   const board = { mode, daily, sources };
   return (
@@ -225,7 +227,7 @@ function DungeonPanel({
       </div>
       <DungeonFacts dungeon={dungeon} sources={sources} />
       <HeroDeck deck={hero} {...board} />
-      <RankedDecks decks={rest} {...board} />
+      <RankedDecks decks={rest} places={places} {...board} />
       <ClearList
         clears={clears.filter((c) => c.dungeon === dungeon.slug)}
         decks={byId}

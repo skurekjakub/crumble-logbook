@@ -176,4 +176,63 @@ describe("daily dungeon routes", () => {
     );
     expect(arena.status).toBe(409);
   });
+
+  it("refuses a clear naming a deck that runs another dungeon, on create and on update", async () => {
+    const app = setup();
+    await app.request("/api/decks", jsonBody(dailyDeck));
+    const clear = {
+      dungeon: "dough",
+      stage: 41,
+      deckId: "exp-auto",
+      auto: "full",
+      date: "2026-10-07",
+      evidence: "screenshot",
+      sources: ["dc:1"],
+    };
+    const mismatch = await app.request("/api/daily-dungeon-clears", jsonBody(clear));
+    expect(mismatch.status).toBe(409);
+    expect(await mismatch.text()).toContain("deck exp-auto runs daily dungeon exp, not dough");
+    const created = await app.request(
+      "/api/daily-dungeon-clears",
+      jsonBody({ ...clear, dungeon: "exp" }),
+    );
+    expect(created.status).toBe(201);
+    const { id } = await readJson<{ id: number }>(created);
+    expect((await patch(app, `/api/daily-dungeon-clears/${id}`, { dungeon: "dough" })).status).toBe(
+      409,
+    );
+    expect((await patch(app, `/api/daily-dungeon-clears/${id}`, { deckId: null })).status).toBe(
+      200,
+    );
+  });
+
+  it("PATCH /api/decks/:id refuses to move a deck off the dungeon a clear names it under", async () => {
+    const app = setup();
+    await app.request("/api/decks", jsonBody(dailyDeck));
+    await app.request(
+      "/api/daily-dungeon-clears",
+      jsonBody({
+        dungeon: "exp",
+        stage: 41,
+        deckId: "exp-auto",
+        auto: "full",
+        date: "2026-10-07",
+        evidence: "screenshot",
+        sources: ["dc:1"],
+      }),
+    );
+    const moved = await patch(app, "/api/decks/exp-auto", {
+      dailyDungeon: { dungeon: "dough", auto: "full" },
+    });
+    expect(moved.status).toBe(409);
+    expect(await moved.text()).toContain("runs daily dungeon dough, not exp");
+    const deck = await readJson<{ dailyDungeon: { dungeon: string } }>(
+      await app.request("/api/decks/exp-auto"),
+    );
+    expect(deck.dailyDungeon.dungeon).toBe("exp");
+    const stays = await patch(app, "/api/decks/exp-auto", {
+      dailyDungeon: { dungeon: "exp", auto: "semi" },
+    });
+    expect(stays.status).toBe(200);
+  });
 });

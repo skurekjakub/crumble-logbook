@@ -4,6 +4,7 @@ import { ConflictError, NotFoundError, UnknownRefsError } from "../errors";
 import type {
   AnyFilters,
   ContentKey,
+  DeckDungeon,
   FiltersOf,
   LinkTarget,
   LinkedRow,
@@ -388,6 +389,43 @@ function linkedIn(repos: Repos): LinkedRow {
 }
 
 /**
+ * Finds the daily dungeon a deck runs in the repos of a write, for a registry `check`.
+ *
+ * @param repos - the write's repos
+ * @returns the lookup
+ */
+function deckDungeonIn(repos: Repos): DeckDungeon {
+  return (deckId) => repos.decks.dailyRuns([deckId])[0]?.dungeon;
+}
+
+/**
+ * Checks the rows that reference deck `deckId` against their registry
+ * `check`, as the deck now stands: a deck write that would leave one
+ * breaking its rule (a clear naming a deck that no longer runs its
+ * dungeon, say) is refused by its caller.
+ *
+ * @param repos - the write's repos, the deck already written
+ * @param deckId - the deck
+ * @returns the message naming the first row that breaks its rule, or
+ *   `undefined` when every row naming the deck keeps its rule
+ */
+export function deckRefProblem(repos: Repos, deckId: string): string | undefined {
+  for (const key of CONTENT_KEYS) {
+    const { content, entity } = specOf(key);
+    const columns = Object.keys(content?.refs ?? {});
+    if (!content?.check || columns.length === 0) continue;
+    for (const row of repos[key].list() as Array<{ id: number } & Record<string, unknown>>) {
+      if (!columns.some((column) => row[column] === deckId)) continue;
+      const problem = content.check(row, linkedIn(repos), deckDungeonIn(repos));
+      if (problem) {
+        return `deck ${deckId} can't change so: ${entity!} ${String(row.id)} names it, and ${problem}`;
+      }
+    }
+  }
+  return undefined;
+}
+
+/**
  * The content types and columns that name rows of `target` by slug.
  *
  * @param target - a content type
@@ -479,7 +517,7 @@ export function registeredService<K extends ContentKey>(
         // Updated in place: the rows naming it must still keep their own rules.
         const content = specOf(other).content;
         for (const row of naming) {
-          const problem = content?.check?.(row, linkedIn(repos));
+          const problem = content?.check?.(row, linkedIn(repos), deckDungeonIn(repos));
           if (problem) {
             throw new ConflictError(
               `${entity!} ${slug} can't change so: ${otherEntity} ${row.id} names it, and ${problem}`,
@@ -490,7 +528,7 @@ export function registeredService<K extends ContentKey>(
     },
     /** @inheritdoc */
     checkRow: (repos, row) => {
-      const problem = content?.check?.(row, linkedIn(repos));
+      const problem = content?.check?.(row, linkedIn(repos), deckDungeonIn(repos));
       if (problem) throw new ConflictError(`${entity!} ${row.id}: ${problem}`);
       if (unique.length > 0) {
         const others = repos[key].list() as readonly AnyRow[];

@@ -38,6 +38,7 @@ import {
   SPEND_ROUTE,
   accountCookies,
   accountLineups,
+  clearDeckProblem,
   accountRoadmapItems,
   accountRoadmaps,
   accountSnapshots,
@@ -258,6 +259,15 @@ export type LinkedRow = (
   slug: string,
 ) => Readonly<Record<string, unknown>> | undefined;
 
+/**
+ * Finds the daily dungeon a deck runs.
+ *
+ * @param deckId - the deck's id
+ * @returns the slug of the dungeon its run facts name, or `undefined` when
+ *   it has none or doesn't exist
+ */
+export type DeckDungeon = (deckId: string) => string | undefined;
+
 /** How the generic repo and content service handle a cited table with an integer `id`. */
 export interface ContentSpec<Row> {
   /** List order; defaults to ascending `id`. */
@@ -293,15 +303,16 @@ export interface ContentSpec<Row> {
    */
   unique?: readonly ColumnOf<Row>[];
   /**
-   * Checks a row as written (a patch merged in) against rules its columns
-   * and the rows it links to must keep. It runs again when a row it links
-   * to is updated.
+   * Checks a row as written (a patch merged in) against rules its columns,
+   * the rows it links to and the decks it references must keep. It runs
+   * again when a row it links to, or a deck it references, is updated.
    *
    * @param row - the written row
    * @param linked - finds a row the written row names by slug
+   * @param deckDungeon - finds the daily dungeon a deck runs
    * @returns what is wrong with it, or `undefined` when it keeps them
    */
-  check?(row: Row, linked: LinkedRow): string | undefined;
+  check?(row: Row, linked: LinkedRow, deckDungeon: DeckDungeon): string | undefined;
   /**
    * Columns read from a row's other columns: after every write the row
    * is updated to the values this returns.
@@ -663,6 +674,12 @@ export const REGISTRY = {
       refs: { deckId: "decks" },
       links: { dungeon: "dailyDungeons" },
       mode: "daily_dungeon",
+      check: (clear, _linked, deckDungeon) =>
+        clearDeckProblem(
+          clear.dungeon,
+          clear.deckId,
+          clear.deckId == null ? undefined : deckDungeon(clear.deckId),
+        ),
     },
   }),
   powerSources: entry(powerSources, {

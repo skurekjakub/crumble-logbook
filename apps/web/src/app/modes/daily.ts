@@ -7,7 +7,7 @@
 import { modeLink, modeTab } from "./links";
 import type { ModeSection } from "./types";
 
-/** The daily dungeons (일일던전): the EXP, dough, research-stone and other dungeons, pushed stage by stage. */
+/** The daily dungeons (일일던전): material dungeons pushed stage by stage, each with its own boss and key. */
 export const DAILY = {
   id: "daily-dungeons",
   kind: "mode",

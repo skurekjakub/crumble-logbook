@@ -1,7 +1,8 @@
 /**
- * The daily dungeon rules both the record importer and the API apply to a
- * deck: only a `daily_dungeon` deck has run facts, every one has them, and
- * its captain is one of its cookies.
+ * The daily dungeon rules both the record importer and the API apply: only
+ * a `daily_dungeon` deck has run facts, every one has them, its captain is
+ * one of its cookies, and a clear names only a deck that runs the clear's
+ * dungeon.
  *
  * @module
  */
@@ -69,4 +70,24 @@ export function dailyDeckProblem(deck: DailyDeckShape): string | undefined {
     return `captain ${captain} is not one of the deck's cookies`;
   }
   return undefined;
+}
+
+/**
+ * Checks a daily dungeon clear against the deck it names: the deck runs
+ * the clear's dungeon.
+ *
+ * @param dungeon - the clear's daily dungeon slug
+ * @param deckId - the deck the clear names, or `null`/`undefined` when it names none
+ * @param deckDungeon - the daily dungeon that deck runs, or `undefined`
+ *   when it runs none or isn't known
+ * @returns what is wrong with the clear, or `undefined` when the deck runs
+ *   its dungeon, it names no deck, or the deck's dungeon isn't known
+ */
+export function clearDeckProblem(
+  dungeon: string,
+  deckId: string | null | undefined,
+  deckDungeon: string | undefined,
+): string | undefined {
+  if (deckId == null || deckDungeon === undefined || deckDungeon === dungeon) return undefined;
+  return `deck ${deckId} runs daily dungeon ${deckDungeon}, not ${dungeon}`;
 }

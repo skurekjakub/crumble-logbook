@@ -176,23 +176,32 @@ export function HeroDeck({
 
 /**
  * A dungeon's other decks, ranked by stage reached: each row leads with
- * its rank, stage and auto badge, then its name, portraits and power, its
- * mechanism cut to a line, and its sources last.
+ * its place in the dungeon's full ranking (the hero keeps its own place,
+ * so the rest aren't renumbered around it), stage and auto badge, then its
+ * name, portraits and power, its mechanism cut to a line, and its sources
+ * last.
  *
- * @param props - the ranked decks (the hero left out) and the board
+ * @param props - the ranked decks (the hero left out), each deck's place
+ *   in the full ranking by id, and the board
  * @returns the list, or null when there are none
  */
-export function RankedDecks({ decks, mode, daily, sources }: BoardContext & { decks: Deck[] }) {
+export function RankedDecks({
+  decks,
+  places,
+  mode,
+  daily,
+  sources,
+}: BoardContext & { decks: Deck[]; places: ReadonlyMap<string, number> }) {
   if (!decks.length) return null;
   return (
     <section className="dd-section" aria-label={daily.decksTitle}>
       <h3>{daily.decksTitle}</h3>
       <ol className="dd-ranks">
-        {decks.map((deck, i) => {
+        {decks.map((deck) => {
           const run = deck.dailyDungeon!;
           return (
             <li key={deck.id} className="dd-rank-row">
-              <span className="dd-rank">{i + 1}</span>
+              <span className="dd-rank">{places.get(deck.id)}</span>
               <StageFigure stage={run.stage} />
               <span className="dd-rank-body">
                 <span className="dd-rank-top">

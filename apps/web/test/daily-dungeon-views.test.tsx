@@ -199,6 +199,17 @@ const DECKS = [
   ),
   deck("exp-manual", "Cherry budget", { auto: "manual", stage: 30 }),
   deck("dough-partial", "Dough weakness", { dungeon: "dough", auto: "semi", stage: 20 }),
+  deck(
+    "exp-retired",
+    "Retired auto",
+    { stage: 60 },
+    {
+      obsoleteSince: "2026-10-06",
+      obsoleteReason: "A patch broke its opening.",
+      obsoleteSources: ["dc:90001"],
+      supersededBy: "exp-auto",
+    },
+  ),
 ];
 
 const CLEARS: DailyDungeonClear[] = [
@@ -300,6 +311,33 @@ describe("the daily dungeon board", () => {
     expect(list).not.toHaveTextContent("Dough weakness");
   });
 
+  it("numbers each deck by its place in the full ranking, the hero's place left to the hero", async () => {
+    await renderDaily("/daily-dungeons");
+    const list = await screen.findByRole("region", { name: "Decks by stage" });
+    const places = within(list)
+      .getAllByRole("listitem")
+      .map((r) => r.querySelector(".dd-rank")?.textContent);
+    expect(places).toEqual(["1", "3"]);
+  });
+
+  it("keeps an obsolete deck off the board, even one that reached further on full auto", async () => {
+    await renderDaily("/daily-dungeons");
+    const hero = await screen.findByRole("region", { name: "Best full auto" });
+    expect(within(hero).getByRole("link", { name: "Milk auto" })).toBeVisible();
+    const panel = screen.getByRole("tabpanel");
+    expect(panel).not.toHaveTextContent("Retired auto");
+  });
+
+  it("says so when no daily dungeon is recorded", async () => {
+    await renderRoute(
+      "/daily-dungeons",
+      { ...API, "/api/daily-dungeons": { body: [] } },
+      { mode: DAILY },
+    );
+    expect(await screen.findByText("No daily dungeons recorded yet.")).toBeVisible();
+    expect(screen.queryByRole("tablist")).toBeNull();
+  });
+
   it("shows the boss and entry facts as chips, and the shown dungeon's clears", async () => {
     await renderDaily("/daily-dungeons");
     const panel = await screen.findByRole("tabpanel");
@@ -340,5 +378,25 @@ describe("the daily dungeon board", () => {
       "aria-selected",
       "true",
     );
+  });
+});
+
+describe("the daily dungeon teams", () => {
+  it("leads each deck's run chips with the dungeon it runs, tinted by the boss's element", async () => {
+    await renderDaily("/daily-dungeons/teams");
+    const exp = (await screen.findByRole("heading", { name: /Milk auto/ })).closest(
+      "article",
+    ) as HTMLElement;
+    const expChips = exp.querySelector(".dd-run") as HTMLElement;
+    const expDungeon = expChips.firstElementChild as HTMLElement;
+    await waitFor(() => expect(expDungeon).toHaveClass("dd-dungeon", "el-fire"));
+    expect(expDungeon).toHaveTextContent("EXP");
+    expect(expDungeon).toHaveAttribute("title", "Daily dungeon: EXP Dungeon");
+    const dough = screen
+      .getByRole("heading", { name: /Dough weakness/ })
+      .closest("article") as HTMLElement;
+    const doughDungeon = dough.querySelector(".dd-run")?.firstElementChild;
+    expect(doughDungeon).toHaveClass("dd-dungeon", "el-none");
+    expect(doughDungeon).toHaveTextContent("Dough");
   });
 });
