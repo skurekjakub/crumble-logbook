@@ -179,7 +179,7 @@
   "stage": 766,
   "power": "3.03G",
   "deck": "dough-nv50183-yongsa",
-  "auto": "semi",
+  "auto": "manual",
   "date": "2026-10-06",
   "player": "용사맛 쿠키",
   "evidence": "screenshot",
@@ -277,8 +277,10 @@
   "date": "2026-09-29",
   "player": "질퍽이와메타몽의차이",
   "evidence": "screenshot",
+  "note": "Auto inferred: the post names no hand moves, only occasional retries.",
   "sources": [
-   "nv:47326"
+   "nv:47326",
+   "nv:47793"
   ]
  }
 ]
