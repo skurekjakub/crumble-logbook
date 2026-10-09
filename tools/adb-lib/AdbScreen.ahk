@@ -55,6 +55,39 @@ ResolveDisplays() {
 }
 
 /**
+ * Tells whether the game is the top activity on some display, resolving its displays afresh.
+ * @returns true when it is; false when it isn't running or another app covers it
+ */
+GameOnTop() {
+    global AdbDisplays
+    AdbDisplays := Map()
+    try {
+        ResolveDisplays()
+        return true
+    }
+    return false
+}
+
+/**
+ * Starts the game's activity, on the display it last ran on when that is known.
+ * @param activity the activity class, e.g. "com.devsisters.plugin.OvenUnityPlayerActivity"
+ */
+LaunchGame(activity) {
+    display := AdbDisplays.Has("Input") ? " --display " AdbDisplays["Input"] : ""
+    Adb("shell am start" display " -n " Cfg["Package"] "/" activity)
+}
+
+/**
+ * Sends an Android key event to the game's display, e.g. 4 for Back.
+ * @param code the key code
+ * @throws Error from GameDisplay when "auto" can't find the game
+ */
+KeyEvent(code) {
+    id := GameDisplay("Input")
+    Adb("shell input" (id != "" ? " -d " id : "") " keyevent " code)
+}
+
+/**
  * Returns the display id to pass to adb for capturing or tapping.
  * @param kind "Capture" (reads [Adb] CaptureDisplay) or "Input" (reads InputDisplay)
  * @returns the configured id; the game's resolved id when the value is "auto"; empty for the

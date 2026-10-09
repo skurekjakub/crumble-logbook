@@ -16,13 +16,20 @@ The adb helpers are shared with the EXP Dungeon macro, in `tools/adb-lib/AdbScre
 ## What the loop does
 
 Every 2 s it captures the screen and:
-1. **Lobby with ENTER lit:** taps ENTER. If the lobby still shows after `StuckLimit` taps, it stops.
+1. **Lobby with ENTER lit:** taps ENTER. If the lobby still shows after `StuckLimit` taps (a popup swallowing them), it leaves the lobby with Back and recovers.
 2. **Lobby with ENTER greyed:** stops. The season is closed.
 3. **Anything else:** a fight or the results.
    - It taps Dismiss (the bottom-centre button) once the results show. Until the result screen is learned, that means once `MinFightMs` (66 s: loading plus the 60 s fight) has passed since ENTER.
    - Dismiss is never tapped earlier, because in a running fight that button leaves the fight.
-   - After `MaxFightMs` it taps Dismiss whatever the screen shows.
-   - If the lobby isn't back within `StallMs` after that, it stops.
+   - With no lobby `MaxFightMs` after ENTER, it recovers.
+
+**Recovering** brings the game back to the Conquest lobby from anywhere: the main screen, the guild hall, a popup, or a closed game. On the lobby the bottom-centre button is Back, and in the guild hall it is Close, so a missed lobby can walk Dismiss out to the main screen. Each try:
+1. Relaunches the game (`Activity`) and waits `LaunchWaitMs` if it isn't on top.
+2. Dismisses a learned result screen.
+3. Taps the bottom bar's **Guild** button, then the guild hall's **Guild Conquest** building, checking for the lobby after each.
+4. Presses Back, to close a popup that hides the bottom bar.
+
+It saves the screen to `stops\` when it starts recovering, and stops after `RecoverTries` tries.
 
 The fight facts behind these defaults come from `research/001-guild-conquest-meta`: the fight is 60 s, and the team wipes when the timer shows about 17 s. ENTER and Dismiss sit where the earlier mouse-driven version tapped them through Season 6.
 

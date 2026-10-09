@@ -16,15 +16,17 @@ global Phase := "idle"
 global DEFAULTS := Map(
     "Adb", Map("Path", "C:\Program Files\Netease\MuMuPlayer\nx_main\adb.exe", "Serial", "emulator-5556",
                "Package", "com.devsisters.cc", "CaptureDisplay", "auto", "InputDisplay", "auto"),
-    "Points", Map("EnterX", "712", "EnterY", "2172", "DismissX", "720", "DismissY", "2470", "JitterPx", "6"),
+    "Points", Map("EnterX", "712", "EnterY", "2172", "DismissX", "720", "DismissY", "2470",
+                  "GuildNavX", "933", "GuildNavY", "2413", "ConquestX", "267", "ConquestY", "1450", "JitterPx", "6"),
     "Detect", Map("Lobby", "1200,1374,00CB8F|100,1494,005667|60,2300,007E91|1100,2290,007E91|1320,2160,00CB8F",
                   "EnterReady", "880,2144,FD9500",
                   "Result", "",
                   "ResultPoints", "200,300|720,300|1240,300|200,1280|720,1280|1240,1280|200,2300|720,2300|1240,2300",
                   "Tolerance", "30"),
     "Timing", Map("PollMs", "2000", "AfterEnterMs", "6000", "MinFightMs", "66000", "MaxFightMs", "100000",
-                  "StallMs", "60000"),
-    "Run", Map("MaxRuns", "0", "StuckLimit", "3", "LogFile", "conquest-loop.log")
+                  "RecoverStepMs", "4000", "LaunchWaitMs", "90000"),
+    "Run", Map("MaxRuns", "0", "StuckLimit", "3", "RecoverTries", "8",
+               "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log")
 )
 
 LoadConfig()
@@ -137,10 +139,10 @@ Wait(ms) {
  * - In the lobby with ENTER lit, it taps ENTER.
  * - Off the lobby, it taps Dismiss once the learned result screen shows, or, with no result
  *   learned, once MinFightMs have passed since ENTER (the fight's full 60 s plus loading).
- *   MaxFightMs is the fallback either way.
- * Dismiss is the bottom-centre button, which leaves a running fight, so it is never tapped earlier.
- * @throws Error, caught here, when ENTER is greyed, ENTER keeps leaving the lobby showing, or the
- *   lobby doesn't come back within StallMs after MaxFightMs
+ *   Dismiss is the bottom-centre button, which leaves a running fight, so it is never tapped earlier.
+ * - Still off the lobby MaxFightMs after ENTER, it navigates back to the lobby with Recover.
+ * @throws Error, caught here, when ENTER is greyed, ENTER keeps leaving the lobby showing, or
+ *   Recover can't reach the lobby
  */
 RunLoop() {
     global Runs, Phase, Running
@@ -158,8 +160,12 @@ RunLoop() {
                 }
                 if !Shows(buf, Cfg["EnterReady"])
                     throw Error("ENTER isn't lit: the season is closed, or press F9 on the live lobby to learn its colour")
-                if (stuck >= N("StuckLimit"))
-                    throw Error("still in the lobby after " stuck " ENTER taps: a popup may be open")
+                if (stuck >= N("StuckLimit")) {
+                    ; A popup over the lobby swallows ENTER; leave and come back to clear it.
+                    Recover("still in the lobby after " stuck " ENTER taps", true)
+                    stuck := 0
+                    continue
+                }
                 Phase := "enter"
                 Tap("Enter")
                 Runs += 1
@@ -170,9 +176,10 @@ RunLoop() {
                 continue
             }
             since := A_TickCount - enteredAt
-            if (screen = "result" || (Cfg["Result"] = "" && since >= N("MinFightMs")) || since >= N("MaxFightMs")) {
-                if (since >= N("MaxFightMs") + N("StallMs"))
-                    throw Error("the lobby didn't come back " Round(since / 1000) " s after ENTER")
+            if (since >= N("MaxFightMs")) {
+                Recover("no lobby " Round(since / 1000) " s after ENTER")
+                enteredAt := A_TickCount
+            } else if (screen = "result" || (Cfg["Result"] = "" && since >= N("MinFightMs"))) {
                 Phase := "results"
                 Tap("Dismiss")
             } else {
@@ -193,7 +200,52 @@ RunLoop() {
 }
 
 /**
- * Saves the screen the loop stopped on to stops\ next to the script.
+ * Navigates from wherever the game is back to the Guild Conquest lobby: the bottom bar's Guild
+ * button, then the Guild Conquest building in the guild hall. Each try first relaunches the game
+ * if it isn't on top, dismisses a learned result screen, and ends with Back to close a popup that
+ * may hide the bottom bar.
+ * @param reason why the loop is recovering, for the log
+ * @param leaveFirst true to step out of the lobby first (Back), for a popup that swallows ENTER
+ * @throws Error when RecoverTries tries don't reach the lobby
+ */
+Recover(reason, leaveFirst := false) {
+    global Phase
+    Phase := "recover"
+    Log("recovering: " reason)
+    Log(SaveStopShot())
+    if leaveFirst {
+        KeyEvent(4)
+        Wait(N("RecoverStepMs"))
+    }
+    loop N("RecoverTries") {
+        try_ := A_Index
+        if !GameOnTop() {
+            Log("the game isn't on top; launching it")
+            LaunchGame(Cfg["Activity"])
+            Wait(N("LaunchWaitMs"))
+        }
+        screen := ScreenOf(Capture())
+        if (screen = "lobby" && !leaveFirst)
+            return Log("back in the lobby")
+        if (screen = "result") {
+            Tap("Dismiss")
+            Wait(N("RecoverStepMs"))
+        }
+        leaveFirst := false
+        for step in ["GuildNav", "Conquest"] {
+            Tap(step)
+            Wait(N("RecoverStepMs"))
+            if (ScreenOf(Capture()) = "lobby")
+                return Log("back in the lobby after try " try_)
+        }
+        KeyEvent(4)
+        Wait(N("RecoverStepMs"))
+    }
+    throw Error("couldn't get back to the Conquest lobby after " N("RecoverTries") " tries")
+}
+
+/**
+ * Saves the current screen to stops\ next to the script, so a stop or a recovery can be explained.
  * @returns a log line naming the file, or saying none could be saved
  */
 SaveStopShot() {
