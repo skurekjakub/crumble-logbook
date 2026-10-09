@@ -100542,7 +100542,7 @@
     "capturedAt": "2026-10-07T21:00:00+02:00",
     "approx": null,
     "tool": "manual",
-    "sha256": "4c0ce06adf21cadde73a307646c912f2a6efceddd9683fce8c3f46962be74176"
+    "sha256": "3685fe72aab6a8670000f928779fd5b969a4e219379129c168b4a2b21ebad1b0"
    },
    {
     "id": 8357,
@@ -100552,7 +100552,7 @@
     "capturedAt": "2026-10-07T21:00:00+02:00",
     "approx": null,
     "tool": "manual",
-    "sha256": "e62cfad5d3e5a1160423023c6de9da5fdcdb3b82135b62c65dddfaeb266ed811"
+    "sha256": "2597696f6f4d4496155673e3c2f5746523b147430a69ec10b667ccb4e21c3685"
    },
    {
     "id": 8358,
@@ -100562,7 +100562,7 @@
     "capturedAt": "2026-10-07T21:00:00+02:00",
     "approx": null,
     "tool": "manual",
-    "sha256": "95160ab981c68835dd1fdbb9a41ccf37f528321f29adecbdd5b2c5ee3b3cb5c8"
+    "sha256": "6c58b2c2c09719cf266eb67119dc9781f432ca13c56202a946d36f247469be98"
    },
    {
     "id": 8359,
@@ -100573,6 +100573,26 @@
     "approx": null,
     "tool": "manual",
     "sha256": "07f0e8ff643fd3bd37967d8b1a3fa9f9b6e526cfe4ff68484324f6cce8d17d76"
+   },
+   {
+    "id": 8360,
+    "recordSlug": "006-daily-dungeons",
+    "path": "evidence/03-other-dungeons/yt/frames/vart-dough-00m47.0s.jpg",
+    "url": "https://www.youtube.com/watch?v=7GHVEHoVFsw",
+    "capturedAt": "2026-10-09T02:06:04+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "cdd04ba684fca1898ad5eaa98bf6f6a8dc27253c8a10266e9b276ae8f044846b"
+   },
+   {
+    "id": 8361,
+    "recordSlug": "006-daily-dungeons",
+    "path": "evidence/03-other-dungeons/yt/frames/vart-dough-01m14.0s.jpg",
+    "url": "https://www.youtube.com/watch?v=7GHVEHoVFsw",
+    "capturedAt": "2026-10-09T02:06:06+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "41d5f88171a18961e352c3b5bc08d763ef854dfae81ddc590039a07de6e53ef3"
    }
   ],
   "glossary": [
@@ -108071,11 +108091,11 @@
    {
     "id": "coin-nv45446-sinbi",
     "position": 42,
-    "nameEn": "신비한쿠키사전's auto deck (about 560)",
+    "nameEn": "신비한쿠키사전's auto deck (566)",
     "nameKr": null,
     "status": "niche",
     "ceilingText": null,
-    "summary": "Full auto past 560; move to 7 o'clock if the team is dying. The same deck runs dough.",
+    "summary": "Full auto to 566 (stage-select screen); move to 7 o'clock if the team is dying. The same deck runs dough.",
     "formation": null,
     "perks": "Passion Pay (열정페이) + Health Insurance (의료보험)",
     "rng": null,
@@ -108341,7 +108361,7 @@
     "nameKr": null,
     "status": "alt",
     "ceilingText": null,
-    "summary": "3 o'clock, then the 5 o'clock corner; take Cream Puff (\"꼭 넣으세요\").",
+    "summary": "Manual: keep steering to 7 o'clock until the team pins left of the base; Cream Puff's field then never drops.",
     "formation": null,
     "perks": "Rapid Promotion (초고속 승진) + Passion Pay (열정페이)",
     "rng": null,
@@ -108373,13 +108393,13 @@
     "supersededBy": null
    },
    {
-    "id": "dough-yt-vart-679",
+    "id": "dough-yt-vart-675",
     "position": 49,
-    "nameEn": "VART's tank auto deck (679)",
+    "nameEn": "VART's tank semi-auto deck (675)",
     "nameKr": null,
-    "status": "meta",
+    "status": "alt",
     "ceilingText": null,
-    "summary": "Full auto at 679 behind three tanks for Armor Repair; the title claims 700, the author prefers manual. Auto fails past 600 near 1G.",
+    "summary": "Semi-auto to 675: run to 1 o'clock, let go once the team bunches. Title claims 700; author says manual is better.",
     "formation": null,
     "perks": "Health Insurance (의료보험) + Armor Repair (방어구 수리 특약)",
     "rng": null,
@@ -109019,7 +109039,7 @@
     "nameKr": null,
     "status": "niche",
     "ceilingText": null,
-    "summary": "Hit once, pull to 7 o'clock, buffs at 53 s, enter between book rows at 47.5 s, out after the second drone, back at 32 s.",
+    "summary": "Clears 657 by hand with 2–3 retries a stage: enter between book rows at 47.5 s, out to 7 o'clock, back at 32 s.",
     "formation": null,
     "perks": null,
     "rng": null,
@@ -109474,11 +109494,11 @@
    {
     "id": "rs-nv45446-sinbi",
     "position": 59,
-    "nameEn": "신비한쿠키사전's auto deck (about 550)",
+    "nameEn": "신비한쿠키사전's auto deck (566)",
     "nameKr": null,
     "status": "niche",
     "ceilingText": null,
-    "summary": "Full auto past 550, no corner needed; 도미 runs it at 2.62G.",
+    "summary": "Full auto to 566 (stage-select screen), no corner needed; 도미 runs it at 2.62G.",
     "formation": null,
     "perks": "Passion Pay (열정페이) + Health Insurance (의료보험)",
     "rng": null,
@@ -109841,11 +109861,11 @@
    {
     "id": "rune-nv45446-sinbi",
     "position": 66,
-    "nameEn": "신비한쿠키사전's auto deck (about 550)",
+    "nameEn": "신비한쿠키사전's auto deck (550)",
     "nameKr": null,
     "status": "niche",
     "ceilingText": null,
-    "summary": "Full auto past 550.",
+    "summary": "Full auto to 550 (stage-select screen); the author expects it to keep working.",
     "formation": null,
     "perks": "Passion Pay (열정페이) + Health Insurance (의료보험)",
     "rng": null,
@@ -109864,7 +109884,7 @@
     "nameKr": null,
     "status": "meta",
     "ceilingText": null,
-    "summary": "Retries now and then but mostly kills the golem on auto at 659.",
+    "summary": "Auto at 659, inferred: the post names no hand moves and \"mostly kills\" with retries; nv:47793 runs rune hands-off too.",
     "formation": null,
     "perks": null,
     "rng": null,
@@ -116973,7 +116993,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -117369,7 +117389,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -117633,7 +117653,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -117897,7 +117917,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -118026,10 +118046,10 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 0,
     "cookieKr": "브라이트시커 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": "10",
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -118037,8 +118057,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 1,
     "cookieKr": "치즈케이크맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "ATK buff that lands on Brightseeker.",
     "slot": "row1-2"
@@ -118048,8 +118068,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 2,
     "cookieKr": "포도넝쿨맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Heals the lowest-HP ally, catching whoever the books hit.",
     "slot": "row1-3"
@@ -118059,8 +118079,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 3,
     "cookieKr": "락스타맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Team shield that soaks the knockback slams.",
     "slot": "row1-4"
@@ -118070,8 +118090,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 4,
     "cookieKr": "이름 모를 케이크 들개",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks.",
     "slot": "row1-5"
@@ -118081,8 +118101,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 5,
     "cookieKr": "허브맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Second healer: keeps Milk and Brightseeker up through the slams.",
     "slot": "row1-6"
@@ -118092,8 +118112,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 6,
     "cookieKr": "호밀맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Second dealer: Fire ranged damage beside Brightseeker.",
     "slot": "row2-1"
@@ -118103,8 +118123,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 7,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker.",
     "slot": "row2-2"
@@ -118114,8 +118134,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 8,
     "cookieKr": "라임맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Crit-rate buff for Brightseeker's lasers.",
     "slot": "row2-3"
@@ -118125,8 +118145,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 9,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy.",
     "slot": "row2-4"
@@ -118136,8 +118156,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 10,
     "cookieKr": "이온맛 쿠키로봇",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Shielding tank; counts toward Armor Repair's three tanks.",
     "slot": "row2-5"
@@ -118147,8 +118167,8 @@
     "deckId": "exp-yt-nurimer-655",
     "position": 11,
     "cookieKr": "감감술래 놀이 달토끼맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank.",
     "slot": "row2-6"
@@ -118291,7 +118311,7 @@
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Support buffer for Brightseeker's damage.",
     "slot": null
@@ -118302,9 +118322,9 @@
     "position": 1,
     "cookieKr": "브라이트시커 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": null
    },
    {
@@ -118313,7 +118333,7 @@
     "position": 2,
     "cookieKr": "치즈케이크맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "ATK buff that lands on Brightseeker.",
     "slot": null
@@ -118324,7 +118344,7 @@
     "position": 3,
     "cookieKr": "석류맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker.",
     "slot": null
@@ -118335,7 +118355,7 @@
     "position": 4,
     "cookieKr": "피겨여왕맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Flex slot: a field Brightseeker deals from while it stands in it.",
     "slot": null
@@ -118346,7 +118366,7 @@
     "position": 5,
     "cookieKr": "락스타맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Team shield that soaks the knockback slams.",
     "slot": null
@@ -118357,7 +118377,7 @@
     "position": 6,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy.",
     "slot": null
@@ -118368,7 +118388,7 @@
     "position": 7,
     "cookieKr": "이름 모를 케이크 들개",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks.",
     "slot": null
@@ -118379,7 +118399,7 @@
     "position": 8,
     "cookieKr": "이온맛 쿠키로봇",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Shielding tank; counts toward Armor Repair's three tanks.",
     "slot": null
@@ -118390,7 +118410,7 @@
     "position": 9,
     "cookieKr": "체리콜라맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Flex charger; extra damage while the tanks hold.",
     "slot": null
@@ -118401,7 +118421,7 @@
     "position": 10,
     "cookieKr": "허브맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Second healer: keeps Milk and Brightseeker up through the slams.",
     "slot": null
@@ -118412,7 +118432,7 @@
     "position": 11,
     "cookieKr": "감감술래 놀이 달토끼맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank.",
     "slot": null
@@ -118423,7 +118443,7 @@
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Support buffer for Brightseeker's damage.",
     "slot": null
@@ -118434,7 +118454,7 @@
     "position": 1,
     "cookieKr": "전갈맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Extra ranged dealer with damage over time.",
     "slot": null
@@ -118445,9 +118465,9 @@
     "position": 2,
     "cookieKr": "브라이트시커 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": null
    },
    {
@@ -118456,7 +118476,7 @@
     "position": 3,
     "cookieKr": "치즈케이크맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "ATK buff that lands on Brightseeker.",
     "slot": null
@@ -118467,7 +118487,7 @@
     "position": 4,
     "cookieKr": "악마맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Extra Dark ranged dealer; the poster argues dealers beat debuffers.",
     "slot": null
@@ -118478,7 +118498,7 @@
     "position": 5,
     "cookieKr": "석류맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker.",
     "slot": null
@@ -118489,7 +118509,7 @@
     "position": 6,
     "cookieKr": "피겨여왕맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Flex slot: a field Brightseeker deals from while it stands in it.",
     "slot": null
@@ -118500,7 +118520,7 @@
     "position": 7,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy.",
     "slot": null
@@ -118511,7 +118531,7 @@
     "position": 8,
     "cookieKr": "이온맛 쿠키로봇",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Shielding tank; counts toward Armor Repair's three tanks.",
     "slot": null
@@ -118522,7 +118542,7 @@
     "position": 9,
     "cookieKr": "허브맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Second healer: keeps Milk and Brightseeker up through the slams.",
     "slot": null
@@ -118533,7 +118553,7 @@
     "position": 10,
     "cookieKr": "이름 모를 케이크 들개",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks.",
     "slot": null
@@ -118543,10 +118563,10 @@
     "deckId": "exp-yt-vart-641",
     "position": 0,
     "cookieKr": "브라이트시커 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -118554,8 +118574,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 1,
     "cookieKr": "치즈케이크맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "ATK buff that lands on Brightseeker.",
     "slot": "row1-2"
@@ -118565,8 +118585,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 2,
     "cookieKr": "포도넝쿨맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Heals the lowest-HP ally, catching whoever the books hit.",
     "slot": "row1-3"
@@ -118576,8 +118596,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 3,
     "cookieKr": "락스타맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Team shield that soaks the knockback slams.",
     "slot": "row1-4"
@@ -118587,8 +118607,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 4,
     "cookieKr": "이름 모를 케이크 들개",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Damage-reduction tank; counts toward Armor Repair's three tanks.",
     "slot": "row1-5"
@@ -118598,8 +118618,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 5,
     "cookieKr": "허브맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Second healer: keeps Milk and Brightseeker up through the slams.",
     "slot": "row1-6"
@@ -118609,8 +118629,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 6,
     "cookieKr": "호밀맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Second dealer: Fire ranged damage beside Brightseeker.",
     "slot": "row2-1"
@@ -118620,8 +118640,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 7,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Skill AMP beam and Projectile Speed synergy onto Brightseeker.",
     "slot": "row2-2"
@@ -118631,8 +118651,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 8,
     "cookieKr": "라임맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Crit-rate buff for Brightseeker's lasers.",
     "slot": "row2-3"
@@ -118642,8 +118662,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 9,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals, buffs ATK and feeds Brightseeker's duration synergy.",
     "slot": "row2-4"
@@ -118653,8 +118673,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 10,
     "cookieKr": "이온맛 쿠키로봇",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Shielding tank; counts toward Armor Repair's three tanks.",
     "slot": "row2-5"
@@ -118664,8 +118684,8 @@
     "deckId": "exp-yt-vart-641",
     "position": 11,
     "cookieKr": "감감술래 놀이 달토끼맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Tank that cuts the boss's ATK and crit; an Armor Repair tank.",
     "slot": "row2-6"
@@ -118810,7 +118830,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -118942,7 +118962,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -119074,7 +119094,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -119272,7 +119292,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row2-1"
    },
    {
@@ -119602,7 +119622,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -119734,7 +119754,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -119932,7 +119952,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row2-1"
    },
    {
@@ -120130,7 +120150,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -120262,7 +120282,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row1-1"
    },
    {
@@ -120460,7 +120480,7 @@
     "level": "100",
     "levelRule": null,
     "stars": null,
-    "why": "Sole dealer: Light drone lasers on the Dark Librarian's weakness.",
+    "why": "Main dealer: Light drone lasers on the Dark Librarian's weakness.",
     "slot": "row2-1"
    },
    {
@@ -120523,8 +120543,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 0,
     "cookieKr": "바람궁수 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Long-range archer reaches scarabs that keep their distance.",
     "slot": "row1-1"
@@ -120534,8 +120554,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 1,
     "cookieKr": "밀키웨이맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Long-range Light dealer for scarabs that back away.",
     "slot": "row1-2"
@@ -120545,8 +120565,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 2,
     "cookieKr": "피노누아맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark support adding damage on the scarabs' weakness.",
     "slot": "row1-3"
@@ -120556,8 +120576,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 3,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer.",
     "slot": "row1-4"
@@ -120567,8 +120587,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 4,
     "cookieKr": "에스프레소맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged area damage on the bunched scarabs.",
     "slot": "row1-5"
@@ -120578,8 +120598,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 5,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": "row1-6"
@@ -120589,8 +120609,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 6,
     "cookieKr": "마카롱맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": "row2-1"
@@ -120600,8 +120620,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 7,
     "cookieKr": "브라이트시커 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged drone damage on scarabs that keep their distance.",
     "slot": "row2-2"
@@ -120611,8 +120631,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 8,
     "cookieKr": "치즈케이크맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "ATK buff for the dealers.",
     "slot": "row2-3"
@@ -120622,8 +120642,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 9,
     "cookieKr": "피겨여왕맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Field the team fights on while the scarabs close in.",
     "slot": "row2-4"
@@ -120633,8 +120653,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 10,
     "cookieKr": "바리공주맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Charger that runs down the scattered scarabs.",
     "slot": "row2-5"
@@ -120644,8 +120664,8 @@
     "deckId": "coin-yt-vart-674",
     "position": 11,
     "cookieKr": "이름 모를 케이크 들개",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Tank that holds the corner while the scarabs gather.",
     "slot": "row2-6"
@@ -120920,7 +120940,7 @@
     "position": 0,
     "cookieKr": "바람궁수 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Long-range archer reaches scarabs that keep their distance.",
     "slot": null
@@ -120931,7 +120951,7 @@
     "position": 1,
     "cookieKr": "마카롱맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": null
@@ -120942,7 +120962,7 @@
     "position": 2,
     "cookieKr": "밀키웨이맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Long-range Light dealer for scarabs that back away.",
     "slot": null
@@ -120953,7 +120973,7 @@
     "position": 3,
     "cookieKr": "호밀맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Ranged dealer for scarabs out of reach.",
     "slot": null
@@ -120964,7 +120984,7 @@
     "position": 4,
     "cookieKr": "피노누아맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Dark support adding damage on the scarabs' weakness.",
     "slot": null
@@ -120975,7 +120995,7 @@
     "position": 5,
     "cookieKr": "치즈케이크맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "ATK buff for the dealers.",
     "slot": null
@@ -120986,7 +121006,7 @@
     "position": 6,
     "cookieKr": "석류맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -120997,7 +121017,7 @@
     "position": 7,
     "cookieKr": "뱀파이어맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Charger that runs down the scattered scarabs.",
     "slot": null
@@ -121008,7 +121028,7 @@
     "position": 8,
     "cookieKr": "위치베리맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Dark ranged dealer on the Light scarabs' weakness.",
     "slot": null
@@ -121019,7 +121039,7 @@
     "position": 9,
     "cookieKr": "트위즐젤리맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Dark ranged dealer on the scarabs' weakness.",
     "slot": null
@@ -121030,7 +121050,7 @@
     "position": 10,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -121041,7 +121061,7 @@
     "position": 11,
     "cookieKr": "허브맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Healer that keeps the team up for the full timer.",
     "slot": null
@@ -121051,8 +121071,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": null
@@ -121062,8 +121082,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 1,
     "cookieKr": "오븐방랑자 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Charger that runs down the scattered scarabs.",
     "slot": null
@@ -121073,8 +121093,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 2,
     "cookieKr": "피노누아맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark support adding damage on the scarabs' weakness.",
     "slot": null
@@ -121084,8 +121104,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 3,
     "cookieKr": "피겨여왕맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Field the team fights on while the scarabs close in.",
     "slot": null
@@ -121095,8 +121115,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 4,
     "cookieKr": "바리공주맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Charger that runs down the scattered scarabs.",
     "slot": null
@@ -121106,8 +121126,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 5,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -121117,8 +121137,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 6,
     "cookieKr": "브라이트시커 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged drone damage on scarabs that keep their distance.",
     "slot": null
@@ -121128,8 +121148,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 7,
     "cookieKr": "호밀맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged dealer for scarabs out of reach.",
     "slot": null
@@ -121139,8 +121159,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 8,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -121150,8 +121170,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 9,
     "cookieKr": "위치베리맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark ranged dealer on the Light scarabs' weakness.",
     "slot": null
@@ -121161,8 +121181,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 10,
     "cookieKr": "락스타맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Team shield; buys time against the clock.",
     "slot": null
@@ -121172,8 +121192,8 @@
     "deckId": "coin-yt-ssw-700",
     "position": 11,
     "cookieKr": "딸기크레페맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Tank that holds the corner while the scarabs gather.",
     "slot": null
@@ -122107,8 +122127,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": null
@@ -122118,8 +122138,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 1,
     "cookieKr": "피노누아맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark support adding damage on the scarabs' weakness.",
     "slot": null
@@ -122129,8 +122149,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 2,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark support: Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -122140,8 +122160,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 3,
     "cookieKr": "피겨여왕맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Field the team fights on while the scarabs close in.",
     "slot": null
@@ -122151,8 +122171,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 4,
     "cookieKr": "트위즐젤리맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark ranged dealer on the scarabs' weakness.",
     "slot": null
@@ -122162,8 +122182,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 5,
     "cookieKr": "락스타맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Team shield; buys time against the clock.",
     "slot": null
@@ -122173,8 +122193,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 6,
     "cookieKr": "브라이트시커 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged drone damage on scarabs that keep their distance.",
     "slot": null
@@ -122184,8 +122204,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 7,
     "cookieKr": "치즈케이크맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "ATK buff for the dealers.",
     "slot": null
@@ -122195,8 +122215,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 8,
     "cookieKr": "뱀파이어맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Charger that runs down the scattered scarabs.",
     "slot": null
@@ -122206,8 +122226,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 9,
     "cookieKr": "위치베리맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Dark ranged dealer on the Light scarabs' weakness.",
     "slot": null
@@ -122217,8 +122237,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 10,
     "cookieKr": "바리공주맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Charger that runs down the scattered scarabs.",
     "slot": null
@@ -122228,8 +122248,8 @@
     "deckId": "coin-yt-ssw-chain",
     "position": 11,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -122372,7 +122392,7 @@
     "position": 0,
     "cookieKr": "바람궁수 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Grass ranged dealer on the Water frogs' weakness.",
     "slot": null
@@ -122383,7 +122403,7 @@
     "position": 1,
     "cookieKr": "밀키웨이맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Long-range dealer firing from the corner.",
     "slot": null
@@ -122394,7 +122414,7 @@
     "position": 2,
     "cookieKr": "슈크림맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Field launches the frogs into the air, stopping their shots.",
     "slot": null
@@ -122405,7 +122425,7 @@
     "position": 3,
     "cookieKr": "석류맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -122416,7 +122436,7 @@
     "position": 4,
     "cookieKr": "에스프레소맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Grass ranged area damage on the frogs' weakness.",
     "slot": null
@@ -122427,7 +122447,7 @@
     "position": 5,
     "cookieKr": "크림소다맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Charger; flex damage.",
     "slot": null
@@ -122438,7 +122458,7 @@
     "position": 6,
     "cookieKr": "치약초코 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Grass support healer.",
     "slot": null
@@ -122449,7 +122469,7 @@
     "position": 7,
     "cookieKr": "라임맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Crit-rate buff for the dealers.",
     "slot": null
@@ -122460,7 +122480,7 @@
     "position": 8,
     "cookieKr": "락스타맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Team shield against the frogs' volleys.",
     "slot": null
@@ -122471,7 +122491,7 @@
     "position": 9,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -122482,7 +122502,7 @@
     "position": 10,
     "cookieKr": "이름 모를 케이크 들개",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Tank that soaks the frogs' projectiles.",
     "slot": null
@@ -122493,7 +122513,7 @@
     "position": 11,
     "cookieKr": "허브맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Grass healer against the frogs' projectiles.",
     "slot": null
@@ -122764,132 +122784,132 @@
    },
    {
     "id": 1155,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 0,
     "cookieKr": "바람궁수 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Grass ranged dealer on the Water frogs' weakness.",
     "slot": null
    },
    {
     "id": 1156,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 1,
     "cookieKr": "피노누아맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Flex support.",
     "slot": null
    },
    {
     "id": 1157,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 2,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Skill AMP beam onto the top-ATK dealer.",
     "slot": null
    },
    {
     "id": 1158,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 3,
     "cookieKr": "포도넝쿨맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Grass healer for whoever the projectiles hit.",
     "slot": null
    },
    {
     "id": 1159,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 4,
     "cookieKr": "이름 모를 케이크 들개",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Tank that soaks the frogs' projectiles.",
     "slot": null
    },
    {
     "id": 1160,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 5,
     "cookieKr": "허브맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Grass healer against the frogs' projectiles.",
     "slot": null
    },
    {
     "id": 1161,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 6,
     "cookieKr": "밀키웨이맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Long-range dealer firing from the corner.",
     "slot": null
    },
    {
     "id": 1162,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 7,
     "cookieKr": "치즈케이크맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "ATK buff for the dealers.",
     "slot": null
    },
    {
     "id": 1163,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 8,
     "cookieKr": "피겨여왕맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Field the team fights on in the corner.",
     "slot": null
    },
    {
     "id": 1164,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 9,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
    },
    {
     "id": 1165,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 10,
     "cookieKr": "딸기크레페맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Light tank that soaks the projectiles.",
     "slot": null
    },
    {
     "id": 1166,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 11,
     "cookieKr": "다크초코 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Tank that soaks the projectiles.",
     "slot": null
@@ -123428,7 +123448,7 @@
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": null
@@ -123439,7 +123459,7 @@
     "position": 1,
     "cookieKr": "호밀맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Ranged dealer that pops jellies before they reach the team.",
     "slot": null
@@ -123450,7 +123470,7 @@
     "position": 2,
     "cookieKr": "감초맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Tank whose piercing damage clears jelly waves.",
     "slot": null
@@ -123461,7 +123481,7 @@
     "position": 3,
     "cookieKr": "메론소다맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Water ranged dealer on the Fire jellies' weakness.",
     "slot": null
@@ -123472,7 +123492,7 @@
     "position": 4,
     "cookieKr": "피노누아맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Piercing support damage through the waves.",
     "slot": null
@@ -123483,7 +123503,7 @@
     "position": 5,
     "cookieKr": "치즈케이크맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "ATK buff for the dealers.",
     "slot": null
@@ -123494,7 +123514,7 @@
     "position": 6,
     "cookieKr": "석류맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -123505,7 +123525,7 @@
     "position": 7,
     "cookieKr": "피겨여왕맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Water charger whose field holds the team in place.",
     "slot": null
@@ -123516,7 +123536,7 @@
     "position": 8,
     "cookieKr": "트위즐젤리맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Piercing ranged damage through the jelly waves.",
     "slot": null
@@ -123527,7 +123547,7 @@
     "position": 9,
     "cookieKr": "라임맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Water support; crit-rate buff for the dealers.",
     "slot": null
@@ -123538,7 +123558,7 @@
     "position": 10,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -123549,7 +123569,7 @@
     "position": 11,
     "cookieKr": "허브맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Healer that keeps the team up through the explosions.",
     "slot": null
@@ -123823,8 +123843,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": null
@@ -123834,8 +123854,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 1,
     "cookieKr": "호밀맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged dealer that pops jellies before they reach the team.",
     "slot": null
@@ -123845,8 +123865,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 2,
     "cookieKr": "메론소다맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Water ranged dealer on the Fire jellies' weakness.",
     "slot": null
@@ -123856,8 +123876,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 3,
     "cookieKr": "치즈케이크맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "ATK buff for the dealers.",
     "slot": null
@@ -123867,8 +123887,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 4,
     "cookieKr": "트위즐젤리맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Piercing ranged damage through the jelly waves.",
     "slot": null
@@ -123878,8 +123898,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 5,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -123889,8 +123909,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 6,
     "cookieKr": "브라이트시커 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged drone damage on the waves.",
     "slot": null
@@ -123900,8 +123920,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 7,
     "cookieKr": "감초맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Tank whose piercing damage clears jelly waves.",
     "slot": null
@@ -123911,8 +123931,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 8,
     "cookieKr": "피노누아맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Piercing support damage through the waves.",
     "slot": null
@@ -123922,8 +123942,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 9,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -123933,8 +123953,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 10,
     "cookieKr": "정글전사 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Charger; flex damage.",
     "slot": null
@@ -123944,8 +123964,8 @@
     "deckId": "rs-yt-vart-620",
     "position": 11,
     "cookieKr": "허브맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Healer that keeps the team up through the explosions.",
     "slot": null
@@ -124351,8 +124371,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": null
@@ -124362,8 +124382,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 1,
     "cookieKr": "호밀맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Fire ranged dealer on the golem's weakness.",
     "slot": null
@@ -124373,8 +124393,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 2,
     "cookieKr": "피노누아맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Cast first: answers the golem's opening knock-up.",
     "slot": null
@@ -124384,8 +124404,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 3,
     "cookieKr": "석류맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -124395,8 +124415,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 4,
     "cookieKr": "라임맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Crit-rate buff for the dealers.",
     "slot": null
@@ -124406,8 +124426,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 5,
     "cookieKr": "이름 모를 케이크 들개",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Fire tank; one of Armor Repair's three tanks.",
     "slot": null
@@ -124417,8 +124437,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 6,
     "cookieKr": "브라이트시커 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged drone damage; flex dealer.",
     "slot": null
@@ -124428,8 +124448,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 7,
     "cookieKr": "메론소다맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Ranged dealer; flex damage.",
     "slot": null
@@ -124439,8 +124459,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 8,
     "cookieKr": "치즈케이크맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "ATK buff for the dealers.",
     "slot": null
@@ -124450,8 +124470,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 9,
     "cookieKr": "피겨여왕맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Field the team fights on; flex buffer.",
     "slot": null
@@ -124461,8 +124481,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 10,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -124472,8 +124492,8 @@
     "deckId": "rune-yt-ssw-715",
     "position": 11,
     "cookieKr": "체리콜라맛 쿠키",
-    "level": null,
-    "levelRule": "Lv ?",
+    "level": "100",
+    "levelRule": null,
     "stars": null,
     "why": "Charger; flex damage.",
     "slot": null
@@ -124616,7 +124636,7 @@
     "position": 0,
     "cookieKr": "마카롱맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Support buffer for the dealers.",
     "slot": null
@@ -124627,7 +124647,7 @@
     "position": 1,
     "cookieKr": "브라이트시커 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Ranged drone damage; flex dealer.",
     "slot": null
@@ -124638,7 +124658,7 @@
     "position": 2,
     "cookieKr": "전갈맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Fire damage over time on the Grass golem's weakness.",
     "slot": null
@@ -124649,7 +124669,7 @@
     "position": 3,
     "cookieKr": "호밀맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Fire ranged dealer on the golem's weakness.",
     "slot": null
@@ -124660,7 +124680,7 @@
     "position": 4,
     "cookieKr": "메론소다맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Ranged dealer; flex damage.",
     "slot": null
@@ -124671,7 +124691,7 @@
     "position": 5,
     "cookieKr": "피노누아맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Cast first: answers the golem's opening knock-up.",
     "slot": null
@@ -124682,7 +124702,7 @@
     "position": 6,
     "cookieKr": "석류맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Skill AMP beam onto the top-ATK dealer.",
     "slot": null
@@ -124693,7 +124713,7 @@
     "position": 7,
     "cookieKr": "피겨여왕맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Field the team fights on; flex buffer.",
     "slot": null
@@ -124704,7 +124724,7 @@
     "position": 8,
     "cookieKr": "바삭튼튼 소아과 의사 우유맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Captain: heals and buffs the top-ATK dealer.",
     "slot": null
@@ -124715,7 +124735,7 @@
     "position": 9,
     "cookieKr": "체리콜라맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Charger; flex damage.",
     "slot": null
@@ -124726,7 +124746,7 @@
     "position": 10,
     "cookieKr": "허브맛 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Healer that keeps the team up through the orbs.",
     "slot": null
@@ -124737,7 +124757,7 @@
     "position": 11,
     "cookieKr": "다크초코 쿠키",
     "level": null,
-    "levelRule": "Lv ?",
+    "levelRule": "Likely Lv 100 (not stated)",
     "stars": null,
     "why": "Tank that absorbs the opening hits.",
     "slot": null
@@ -126774,19 +126794,19 @@
    },
    {
     "id": 251,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 0,
     "petKr": "근엄한 초코왕방울"
    },
    {
     "id": 252,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 1,
     "petKr": "핫도그도그"
    },
    {
     "id": 253,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 2,
     "petKr": "갓난갓방울"
    },
@@ -128049,7 +128069,7 @@
    },
    {
     "id": 134,
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "position": 0,
     "kind": "substitution",
     "text": "Icy Birdie for King Choco Drop."
@@ -128122,7 +128142,7 @@
     "deckId": "coin-nv45446-sinbi",
     "dungeon": "coin",
     "auto": "full",
-    "stage": null,
+    "stage": 566,
     "power": "1.52G",
     "powerG": 1.52,
     "recommendedPower": null,
@@ -128289,7 +128309,7 @@
    {
     "deckId": "dough-nv50183-yongsa",
     "dungeon": "dough",
-    "auto": "semi",
+    "auto": "manual",
     "stage": 766,
     "power": "3.03G",
     "powerG": 3.03,
@@ -128311,10 +128331,10 @@
     "captainKr": "바삭튼튼 소아과 의사 우유맛 쿠키"
    },
    {
-    "deckId": "dough-yt-vart-679",
+    "deckId": "dough-yt-vart-675",
     "dungeon": "dough",
-    "auto": "full",
-    "stage": 679,
+    "auto": "semi",
+    "stage": 675,
     "power": "2.63G",
     "powerG": 2.63,
     "recommendedPower": null,
@@ -128365,8 +128385,8 @@
     "stage": 644,
     "power": "3.59G",
     "powerG": 3.59,
-    "recommendedPower": null,
-    "recommendedPowerG": null,
+    "recommendedPower": "3.37G",
+    "recommendedPowerG": 3.37,
     "gearPreset": null,
     "captainKr": "바삭튼튼 소아과 의사 우유맛 쿠키"
    },
@@ -128734,7 +128754,7 @@
     "deckId": "rs-nv45446-sinbi",
     "dungeon": "research-stone",
     "auto": "full",
-    "stage": null,
+    "stage": 566,
     "power": "1.59G",
     "powerG": 1.59,
     "recommendedPower": null,
@@ -128818,7 +128838,7 @@
     "deckId": "rune-nv45446-sinbi",
     "dungeon": "rune",
     "auto": "full",
-    "stage": null,
+    "stage": 550,
     "power": "1.49G",
     "powerG": 1.49,
     "recommendedPower": null,
@@ -162617,8 +162637,8 @@
    {
     "id": 63,
     "position": 2,
-    "text": "The 770 cap fell by hand on 10-07; full-auto decks top out lower in every dungeon.",
-    "detail": "Coin and dough by manual corner play; EXP credited to endless auto retries in one reply.",
+    "text": "770 fell on 10-07: EXP reportedly on auto with endless retries, coin and dough by hand; posted full-auto decks stop lower.",
+    "detail": "The EXP method is an anonymous \"ㅇㅇ\" reply under the 770 boards, likely the poster but not shown to be. Its lineup isn't posted.",
     "mode": "daily_dungeon",
     "recordSlug": "006-daily-dungeons"
    },
@@ -175487,6 +175507,7 @@
     "topStageDate": "2026-10-07",
     "topStageSource": "dc:82162",
     "notes": [
+     "Full auto stops low: the best posted is 527 (nv:43827); VART's 675 needs one move first.",
      "Hardest-hitting after EXP: run to the 5 o'clock corner; Cream Puff's field launches the frogs.",
      "10-08 update: lower ATK for the frogs and the steamed-bun hounds (찐만두 들개).",
      "Lucky dough opens the oven for gear."
@@ -175772,7 +175793,7 @@
     "power": "3.03G",
     "powerG": 3.03,
     "deckId": "dough-nv50183-yongsa",
-    "auto": "semi",
+    "auto": "manual",
     "date": "2026-10-06",
     "player": "용사맛 쿠키",
     "evidence": "screenshot",
@@ -175874,7 +175895,7 @@
     "date": "2026-09-29",
     "player": "질퍽이와메타몽의차이",
     "evidence": "screenshot",
-    "note": null,
+    "note": "Auto inferred: the post names no hand moves, only occasional retries.",
     "recordSlug": "006-daily-dungeons"
    }
   ],
@@ -209529,1586 +209550,1610 @@
    {
     "id": 4941,
     "entity": "daily_dungeon",
-    "entityId": "3",
-    "sourceId": "nv:49007"
+    "entityId": "2",
+    "sourceId": "nv:43827"
    },
    {
     "id": 4942,
     "entity": "daily_dungeon",
-    "entityId": "3",
-    "sourceId": "nv:50417"
+    "entityId": "2",
+    "sourceId": "web:yt-7GHVEHoVFsw"
    },
    {
     "id": 4943,
     "entity": "daily_dungeon",
     "entityId": "3",
-    "sourceId": "web:yt-RaZght8lZZ8"
+    "sourceId": "nv:49007"
    },
    {
     "id": 4944,
     "entity": "daily_dungeon",
     "entityId": "3",
-    "sourceId": "dc:81981"
+    "sourceId": "nv:50417"
    },
    {
     "id": 4945,
     "entity": "daily_dungeon",
-    "entityId": "4",
-    "sourceId": "dc:81991"
+    "entityId": "3",
+    "sourceId": "web:yt-RaZght8lZZ8"
    },
    {
     "id": 4946,
     "entity": "daily_dungeon",
-    "entityId": "4",
-    "sourceId": "dc:81988"
+    "entityId": "3",
+    "sourceId": "dc:81981"
    },
    {
     "id": 4947,
     "entity": "daily_dungeon",
     "entityId": "4",
-    "sourceId": "dc:82001"
+    "sourceId": "dc:81991"
    },
    {
     "id": 4948,
     "entity": "daily_dungeon",
     "entityId": "4",
-    "sourceId": "nv:43827"
+    "sourceId": "dc:81988"
    },
    {
     "id": 4949,
     "entity": "daily_dungeon",
     "entityId": "4",
-    "sourceId": "dc:81981"
+    "sourceId": "dc:82001"
    },
    {
     "id": 4950,
     "entity": "daily_dungeon",
-    "entityId": "5",
-    "sourceId": "nv:49521"
+    "entityId": "4",
+    "sourceId": "nv:43827"
    },
    {
     "id": 4951,
     "entity": "daily_dungeon",
-    "entityId": "5",
-    "sourceId": "nv:16132"
+    "entityId": "4",
+    "sourceId": "dc:81981"
    },
    {
     "id": 4952,
     "entity": "daily_dungeon",
     "entityId": "5",
-    "sourceId": "nv:43827"
+    "sourceId": "nv:49521"
    },
    {
     "id": 4953,
     "entity": "daily_dungeon",
     "entityId": "5",
-    "sourceId": "nv:47793"
+    "sourceId": "nv:16132"
    },
    {
     "id": 4954,
     "entity": "daily_dungeon",
     "entityId": "5",
-    "sourceId": "dc:81981"
+    "sourceId": "nv:43827"
    },
    {
     "id": 4955,
+    "entity": "daily_dungeon",
+    "entityId": "5",
+    "sourceId": "nv:47793"
+   },
+   {
+    "id": 4956,
+    "entity": "daily_dungeon",
+    "entityId": "5",
+    "sourceId": "dc:81981"
+   },
+   {
+    "id": 4957,
     "entity": "deck",
     "entityId": "exp-dc80715-furball",
     "sourceId": "dc:80715"
    },
    {
-    "id": 4956,
+    "id": 4958,
     "entity": "deck",
     "entityId": "exp-dc79492-hotdog",
     "sourceId": "dc:79492"
    },
    {
-    "id": 4957,
+    "id": 4959,
     "entity": "obsolescence",
     "entityId": "deck:exp-dc79492-hotdog",
     "sourceId": "dc:80715"
    },
    {
-    "id": 4958,
+    "id": 4960,
     "entity": "deck",
     "entityId": "exp-nv48705-biku",
     "sourceId": "nv:48705"
    },
    {
-    "id": 4959,
+    "id": 4961,
     "entity": "deck",
     "entityId": "exp-nv48705-biku",
     "sourceId": "nv:49847"
    },
    {
-    "id": 4960,
+    "id": 4962,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv48705-biku",
     "sourceId": "dc:80715"
    },
    {
-    "id": 4961,
+    "id": 4963,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv48705-biku",
-    "sourceId": "nv:49847"
-   },
-   {
-    "id": 4962,
-    "entity": "deck",
-    "entityId": "exp-nv48828-bag",
-    "sourceId": "nv:48828"
-   },
-   {
-    "id": 4963,
-    "entity": "deck",
-    "entityId": "exp-nv48828-bag",
     "sourceId": "nv:49847"
    },
    {
     "id": 4964,
     "entity": "deck",
+    "entityId": "exp-nv48828-bag",
+    "sourceId": "nv:48828"
+   },
+   {
+    "id": 4965,
+    "entity": "deck",
+    "entityId": "exp-nv48828-bag",
+    "sourceId": "nv:49847"
+   },
+   {
+    "id": 4966,
+    "entity": "deck",
     "entityId": "exp-yt-ndrunner-721",
     "sourceId": "web:yt-0CUv152HVrA"
    },
    {
-    "id": 4965,
+    "id": 4967,
     "entity": "deck",
     "entityId": "exp-dc80513",
     "sourceId": "dc:80513"
    },
    {
-    "id": 4966,
+    "id": 4968,
     "entity": "deck",
     "entityId": "exp-dc78450-figure",
     "sourceId": "dc:78450"
    },
    {
-    "id": 4967,
+    "id": 4969,
     "entity": "deck",
     "entityId": "exp-nv47333-roronoa",
     "sourceId": "nv:47333"
    },
    {
-    "id": 4968,
+    "id": 4970,
     "entity": "deck",
     "entityId": "exp-nv46895-yolo",
     "sourceId": "nv:46895"
    },
    {
-    "id": 4969,
+    "id": 4971,
     "entity": "deck",
     "entityId": "exp-dc80701-shyer",
     "sourceId": "dc:80701"
    },
    {
-    "id": 4970,
+    "id": 4972,
     "entity": "deck",
     "entityId": "exp-dc77003",
     "sourceId": "dc:77003"
    },
    {
-    "id": 4971,
+    "id": 4973,
     "entity": "deck",
     "entityId": "exp-nv49978-hearts",
     "sourceId": "nv:49978"
    },
    {
-    "id": 4972,
+    "id": 4974,
     "entity": "deck",
     "entityId": "exp-nv48303-cookdas",
     "sourceId": "nv:48303"
    },
    {
-    "id": 4973,
+    "id": 4975,
     "entity": "deck",
     "entityId": "exp-yt-nurimer-655",
     "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
-    "id": 4974,
+    "id": 4976,
     "entity": "deck",
     "entityId": "exp-dc78207",
     "sourceId": "dc:78207"
    },
    {
-    "id": 4975,
+    "id": 4977,
     "entity": "deck",
     "entityId": "exp-nv47793-yongsa",
     "sourceId": "nv:47793"
    },
    {
-    "id": 4976,
+    "id": 4978,
     "entity": "deck",
     "entityId": "exp-dc75870-dealers",
     "sourceId": "dc:75870"
    },
    {
-    "id": 4977,
+    "id": 4979,
     "entity": "deck",
     "entityId": "exp-yt-vart-641",
     "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
-    "id": 4978,
+    "id": 4980,
     "entity": "deck",
     "entityId": "exp-yt-vart-641",
     "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
-    "id": 4979,
+    "id": 4981,
     "entity": "deck",
     "entityId": "exp-nv46851-ssw",
     "sourceId": "nv:46851"
    },
    {
-    "id": 4980,
+    "id": 4982,
     "entity": "deck",
     "entityId": "exp-nv46851-ssw",
     "sourceId": "web:yt-FhBEadxPWWs"
    },
    {
-    "id": 4981,
+    "id": 4983,
     "entity": "deck",
     "entityId": "exp-dc75345",
     "sourceId": "dc:75345"
    },
    {
-    "id": 4982,
+    "id": 4984,
     "entity": "deck",
     "entityId": "exp-nv48076-tube",
     "sourceId": "nv:48076"
    },
    {
-    "id": 4983,
+    "id": 4985,
     "entity": "deck",
     "entityId": "exp-nv46607-ssw",
     "sourceId": "nv:46607"
    },
    {
-    "id": 4984,
+    "id": 4986,
     "entity": "deck",
     "entityId": "exp-nv46607-ssw",
     "sourceId": "web:yt-VQM7Tt6R-2Y"
    },
    {
-    "id": 4985,
+    "id": 4987,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv46607-ssw",
     "sourceId": "nv:46851"
    },
    {
-    "id": 4986,
+    "id": 4988,
     "entity": "deck",
     "entityId": "exp-nv45930-ssw",
     "sourceId": "nv:45930"
    },
    {
-    "id": 4987,
+    "id": 4989,
     "entity": "deck",
     "entityId": "exp-nv45930-ssw",
     "sourceId": "web:yt-ZrEzOgcIYjw"
    },
    {
-    "id": 4988,
+    "id": 4990,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv45930-ssw",
     "sourceId": "nv:46851"
    },
    {
-    "id": 4989,
+    "id": 4991,
     "entity": "deck",
     "entityId": "exp-nv46250-domi",
     "sourceId": "nv:46250"
    },
    {
-    "id": 4990,
+    "id": 4992,
     "entity": "deck",
     "entityId": "exp-nv46250-domi",
     "sourceId": "nv:44654"
    },
    {
-    "id": 4991,
+    "id": 4993,
     "entity": "deck",
     "entityId": "exp-nv46707-pueri",
     "sourceId": "nv:46707"
    },
    {
-    "id": 4992,
+    "id": 4994,
     "entity": "deck",
     "entityId": "exp-nv45715-hearts",
     "sourceId": "nv:45715"
    },
    {
-    "id": 4993,
+    "id": 4995,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv45715-hearts",
     "sourceId": "nv:49978"
    },
    {
-    "id": 4994,
+    "id": 4996,
     "entity": "deck",
     "entityId": "exp-dc73577-gramph",
     "sourceId": "dc:73577"
    },
    {
-    "id": 4995,
+    "id": 4997,
     "entity": "deck",
     "entityId": "exp-dc73577-gramph",
     "sourceId": "web:yt-MxJ7HUD1jVw"
    },
    {
-    "id": 4996,
+    "id": 4998,
     "entity": "obsolescence",
     "entityId": "deck:exp-dc73577-gramph",
     "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
-    "id": 4997,
+    "id": 4999,
     "entity": "deck",
     "entityId": "exp-nv46544-gogi",
     "sourceId": "nv:46544"
    },
    {
-    "id": 4998,
+    "id": 5000,
     "entity": "deck",
     "entityId": "exp-dc74694",
     "sourceId": "dc:74694"
    },
    {
-    "id": 4999,
+    "id": 5001,
     "entity": "deck",
     "entityId": "exp-nv45541-lucky",
     "sourceId": "nv:45541"
    },
    {
-    "id": 5000,
+    "id": 5002,
     "entity": "deck",
     "entityId": "exp-dc77041",
     "sourceId": "dc:77041"
    },
    {
-    "id": 5001,
+    "id": 5003,
     "entity": "deck",
     "entityId": "exp-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5002,
+    "id": 5004,
     "entity": "deck",
     "entityId": "coin-yt-vart-674",
     "sourceId": "web:yt-LM1NwNyxqEA"
    },
    {
-    "id": 5003,
+    "id": 5005,
     "entity": "deck",
     "entityId": "coin-yt-vart-674",
     "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
-    "id": 5004,
+    "id": 5006,
     "entity": "deck",
     "entityId": "coin-dc81991-gramph",
     "sourceId": "dc:81991"
    },
    {
-    "id": 5005,
+    "id": 5007,
     "entity": "deck",
     "entityId": "coin-dc81988-somebody",
     "sourceId": "dc:81988"
    },
    {
-    "id": 5006,
+    "id": 5008,
     "entity": "deck",
     "entityId": "coin-nv48344-yongsa",
     "sourceId": "nv:48344"
    },
    {
-    "id": 5007,
+    "id": 5009,
     "entity": "deck",
     "entityId": "coin-nv48344-yongsa",
     "sourceId": "nv:47793"
    },
    {
-    "id": 5008,
+    "id": 5010,
     "entity": "deck",
     "entityId": "coin-yt-ssw-700",
     "sourceId": "web:yt-szDOdi061sc"
    },
    {
-    "id": 5009,
+    "id": 5011,
     "entity": "deck",
     "entityId": "coin-yt-ssw-700",
     "sourceId": "nv:48436"
    },
    {
-    "id": 5010,
+    "id": 5012,
     "entity": "deck",
     "entityId": "coin-dc81582-tino",
     "sourceId": "dc:81582"
    },
    {
-    "id": 5011,
+    "id": 5013,
     "entity": "deck",
     "entityId": "coin-dc81582-tino",
     "sourceId": "dc:81588"
    },
    {
-    "id": 5012,
+    "id": 5014,
     "entity": "deck",
     "entityId": "coin-dc81582-tino",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5013,
+    "id": 5015,
     "entity": "deck",
     "entityId": "coin-nv48127-dodeok",
     "sourceId": "nv:48127"
    },
    {
-    "id": 5014,
+    "id": 5016,
     "entity": "deck",
     "entityId": "coin-nv47326-jilpeok",
     "sourceId": "nv:47326"
    },
    {
-    "id": 5015,
+    "id": 5017,
     "entity": "deck",
     "entityId": "coin-nv48282-tamatama",
     "sourceId": "nv:48282"
    },
    {
-    "id": 5016,
+    "id": 5018,
     "entity": "deck",
     "entityId": "coin-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5017,
+    "id": 5019,
     "entity": "deck",
     "entityId": "coin-nv45446-sinbi",
     "sourceId": "nv:45446"
    },
    {
-    "id": 5018,
+    "id": 5020,
     "entity": "deck",
     "entityId": "coin-nv45446-sinbi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5019,
+    "id": 5021,
     "entity": "deck",
     "entityId": "coin-nv49847-domi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5020,
+    "id": 5022,
     "entity": "deck",
     "entityId": "coin-yt-ssw-chain",
     "sourceId": "web:yt-h0qCokY_Ylg"
    },
    {
-    "id": 5021,
+    "id": 5023,
     "entity": "deck",
     "entityId": "coin-yt-ssw-chain",
     "sourceId": "nv:48585"
    },
    {
-    "id": 5022,
+    "id": 5024,
     "entity": "deck",
     "entityId": "dough-dc82162-dalto",
     "sourceId": "dc:82162"
    },
    {
-    "id": 5023,
+    "id": 5025,
     "entity": "deck",
     "entityId": "dough-nv50183-yongsa",
     "sourceId": "nv:50183"
    },
    {
-    "id": 5024,
+    "id": 5026,
     "entity": "deck",
     "entityId": "dough-nv50183-yongsa",
     "sourceId": "nv:48344"
    },
    {
-    "id": 5025,
+    "id": 5027,
     "entity": "deck",
     "entityId": "dough-nv50183-yongsa",
     "sourceId": "nv:50297"
    },
    {
-    "id": 5026,
+    "id": 5028,
     "entity": "deck",
     "entityId": "dough-nv50398-gogi",
     "sourceId": "nv:50398"
    },
    {
-    "id": 5027,
+    "id": 5029,
     "entity": "deck",
     "entityId": "dough-nv47326-jilpeok",
     "sourceId": "nv:47326"
    },
    {
-    "id": 5028,
+    "id": 5030,
     "entity": "deck",
-    "entityId": "dough-yt-vart-679",
+    "entityId": "dough-yt-vart-675",
     "sourceId": "web:yt-7GHVEHoVFsw"
    },
    {
-    "id": 5029,
+    "id": 5031,
     "entity": "deck",
-    "entityId": "dough-yt-vart-679",
+    "entityId": "dough-yt-vart-675",
     "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
-    "id": 5030,
+    "id": 5032,
     "entity": "deck",
     "entityId": "dough-nv48412-tamatama",
     "sourceId": "nv:48412"
    },
    {
-    "id": 5031,
+    "id": 5033,
     "entity": "deck",
     "entityId": "dough-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5032,
+    "id": 5034,
     "entity": "deck",
     "entityId": "dough-nv49847-domi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5033,
+    "id": 5035,
     "entity": "deck",
     "entityId": "rs-nv49007-roronoa",
     "sourceId": "nv:49007"
    },
    {
-    "id": 5034,
+    "id": 5036,
     "entity": "deck",
     "entityId": "rs-nv48344-yongsa",
     "sourceId": "nv:48344"
    },
    {
-    "id": 5035,
+    "id": 5037,
     "entity": "deck",
     "entityId": "rs-nv50391-gogi",
     "sourceId": "nv:50391"
    },
    {
-    "id": 5036,
+    "id": 5038,
     "entity": "deck",
     "entityId": "rs-dc78207",
     "sourceId": "dc:78207"
    },
    {
-    "id": 5037,
+    "id": 5039,
     "entity": "deck",
     "entityId": "rs-yt-vart-620",
     "sourceId": "web:yt-CZS-dKsfbAk"
    },
    {
-    "id": 5038,
+    "id": 5040,
     "entity": "deck",
     "entityId": "rs-yt-vart-620",
     "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
-    "id": 5039,
+    "id": 5041,
     "entity": "deck",
     "entityId": "rs-yt-vart-620",
     "sourceId": "dc:77041"
    },
    {
-    "id": 5040,
+    "id": 5042,
     "entity": "deck",
     "entityId": "rs-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5041,
+    "id": 5043,
     "entity": "deck",
     "entityId": "rs-nv45446-sinbi",
     "sourceId": "nv:45446"
    },
    {
-    "id": 5042,
+    "id": 5044,
     "entity": "deck",
     "entityId": "rs-nv45446-sinbi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5043,
+    "id": 5045,
     "entity": "deck",
     "entityId": "rs-nv49244-budget",
     "sourceId": "nv:49244"
    },
    {
-    "id": 5044,
+    "id": 5046,
     "entity": "deck",
     "entityId": "rune-yt-ssw-715",
     "sourceId": "web:yt-N6fgEKs3qq4"
    },
    {
-    "id": 5045,
+    "id": 5047,
     "entity": "deck",
     "entityId": "rune-yt-ssw-715",
     "sourceId": "nv:49521"
    },
    {
-    "id": 5046,
+    "id": 5048,
     "entity": "deck",
     "entityId": "rune-nv47326-jilpeok",
     "sourceId": "nv:47326"
    },
    {
-    "id": 5047,
+    "id": 5049,
+    "entity": "deck",
+    "entityId": "rune-nv47326-jilpeok",
+    "sourceId": "nv:47793"
+   },
+   {
+    "id": 5050,
     "entity": "deck",
     "entityId": "rune-nv47793-yongsa",
     "sourceId": "nv:47793"
    },
    {
-    "id": 5048,
+    "id": 5051,
     "entity": "deck",
     "entityId": "rune-nv47793-yongsa",
     "sourceId": "nv:48344"
    },
    {
-    "id": 5049,
+    "id": 5052,
     "entity": "deck",
     "entityId": "rune-nv48838-tamatama",
     "sourceId": "nv:48838"
    },
    {
-    "id": 5050,
+    "id": 5053,
     "entity": "deck",
     "entityId": "rune-nv49847-domi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5051,
+    "id": 5054,
     "entity": "deck",
     "entityId": "rune-nv45446-sinbi",
     "sourceId": "nv:45446"
    },
    {
-    "id": 5052,
+    "id": 5055,
     "entity": "deck",
     "entityId": "rune-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5053,
+    "id": 5056,
     "entity": "mechanic",
     "entityId": "245",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5054,
+    "id": 5057,
     "entity": "mechanic",
     "entityId": "245",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5055,
+    "id": 5058,
     "entity": "mechanic",
     "entityId": "245",
     "sourceId": "nv:45446"
    },
    {
-    "id": 5056,
-    "entity": "mechanic",
-    "entityId": "246",
-    "sourceId": "nv:48303"
-   },
-   {
-    "id": 5057,
-    "entity": "mechanic",
-    "entityId": "246",
-    "sourceId": "nv:46895"
-   },
-   {
-    "id": 5058,
-    "entity": "mechanic",
-    "entityId": "246",
-    "sourceId": "nv:48828"
-   },
-   {
     "id": 5059,
     "entity": "mechanic",
     "entityId": "246",
-    "sourceId": "dc:77003"
+    "sourceId": "nv:48303"
    },
    {
     "id": 5060,
     "entity": "mechanic",
     "entityId": "246",
-    "sourceId": "web:yt-O3WxZZHsKyY"
+    "sourceId": "nv:46895"
    },
    {
     "id": 5061,
     "entity": "mechanic",
     "entityId": "246",
-    "sourceId": "dc:80471"
+    "sourceId": "nv:48828"
    },
    {
     "id": 5062,
+    "entity": "mechanic",
+    "entityId": "246",
+    "sourceId": "dc:77003"
+   },
+   {
+    "id": 5063,
+    "entity": "mechanic",
+    "entityId": "246",
+    "sourceId": "web:yt-O3WxZZHsKyY"
+   },
+   {
+    "id": 5064,
+    "entity": "mechanic",
+    "entityId": "246",
+    "sourceId": "dc:80471"
+   },
+   {
+    "id": 5065,
     "entity": "mechanic",
     "entityId": "247",
     "sourceId": "nv:48828"
    },
    {
-    "id": 5063,
+    "id": 5066,
     "entity": "mechanic",
     "entityId": "247",
     "sourceId": "nv:48303"
    },
    {
-    "id": 5064,
+    "id": 5067,
     "entity": "mechanic",
     "entityId": "248",
     "sourceId": "nv:46851"
    },
    {
-    "id": 5065,
+    "id": 5068,
     "entity": "mechanic",
     "entityId": "248",
     "sourceId": "nv:45930"
    },
    {
-    "id": 5066,
+    "id": 5069,
     "entity": "mechanic",
     "entityId": "248",
     "sourceId": "nv:48174"
    },
    {
-    "id": 5067,
+    "id": 5070,
     "entity": "mechanic",
     "entityId": "248",
     "sourceId": "dc:77282"
    },
    {
-    "id": 5068,
+    "id": 5071,
     "entity": "mechanic",
     "entityId": "248",
     "sourceId": "dc:81710"
    },
    {
-    "id": 5069,
+    "id": 5072,
     "entity": "mechanic",
     "entityId": "249",
     "sourceId": "dc:76824"
    },
    {
-    "id": 5070,
+    "id": 5073,
     "entity": "mechanic",
     "entityId": "249",
     "sourceId": "dc:80126"
    },
    {
-    "id": 5071,
+    "id": 5074,
     "entity": "mechanic",
     "entityId": "249",
     "sourceId": "dc:79968"
    },
    {
-    "id": 5072,
+    "id": 5075,
     "entity": "mechanic",
     "entityId": "250",
     "sourceId": "dc:77003"
    },
    {
-    "id": 5073,
+    "id": 5076,
     "entity": "mechanic",
     "entityId": "250",
     "sourceId": "nv:46707"
    },
    {
-    "id": 5074,
+    "id": 5077,
     "entity": "mechanic",
     "entityId": "250",
     "sourceId": "nv:46544"
    },
    {
-    "id": 5075,
+    "id": 5078,
     "entity": "mechanic",
     "entityId": "250",
     "sourceId": "web:yt-0CUv152HVrA"
    },
    {
-    "id": 5076,
+    "id": 5079,
     "entity": "mechanic",
     "entityId": "251",
     "sourceId": "dc:81139"
    },
    {
-    "id": 5077,
-    "entity": "mechanic",
-    "entityId": "252",
-    "sourceId": "dc:73577"
-   },
-   {
-    "id": 5078,
-    "entity": "mechanic",
-    "entityId": "252",
-    "sourceId": "dc:80701"
-   },
-   {
-    "id": 5079,
-    "entity": "mechanic",
-    "entityId": "252",
-    "sourceId": "web:yt-VVHt98jkWCo"
-   },
-   {
     "id": 5080,
     "entity": "mechanic",
     "entityId": "252",
-    "sourceId": "web:yt-6hrfYOlgYu4"
+    "sourceId": "dc:73577"
    },
    {
     "id": 5081,
     "entity": "mechanic",
     "entityId": "252",
-    "sourceId": "web:yt-0CUv152HVrA"
+    "sourceId": "dc:80701"
    },
    {
     "id": 5082,
     "entity": "mechanic",
-    "entityId": "253",
-    "sourceId": "dc:79492"
+    "entityId": "252",
+    "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
     "id": 5083,
     "entity": "mechanic",
-    "entityId": "253",
-    "sourceId": "dc:80715"
+    "entityId": "252",
+    "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
     "id": 5084,
     "entity": "mechanic",
-    "entityId": "253",
-    "sourceId": "web:yt-VVHt98jkWCo"
+    "entityId": "252",
+    "sourceId": "web:yt-0CUv152HVrA"
    },
    {
     "id": 5085,
     "entity": "mechanic",
     "entityId": "253",
-    "sourceId": "web:yt-6hrfYOlgYu4"
+    "sourceId": "dc:79492"
    },
    {
     "id": 5086,
     "entity": "mechanic",
     "entityId": "253",
-    "sourceId": "dc:75870"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5087,
     "entity": "mechanic",
     "entityId": "253",
-    "sourceId": "nv:46707"
+    "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
     "id": 5088,
     "entity": "mechanic",
-    "entityId": "254",
-    "sourceId": "dc:80715"
+    "entityId": "253",
+    "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
     "id": 5089,
     "entity": "mechanic",
-    "entityId": "254",
-    "sourceId": "dc:82340"
+    "entityId": "253",
+    "sourceId": "dc:75870"
    },
    {
     "id": 5090,
     "entity": "mechanic",
-    "entityId": "254",
-    "sourceId": "dc:81485"
+    "entityId": "253",
+    "sourceId": "nv:46707"
    },
    {
     "id": 5091,
     "entity": "mechanic",
     "entityId": "254",
-    "sourceId": "web:yt-zx8hJ6_37w8"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5092,
     "entity": "mechanic",
     "entityId": "254",
-    "sourceId": "nv:46895"
+    "sourceId": "dc:82340"
    },
    {
     "id": 5093,
     "entity": "mechanic",
-    "entityId": "255",
-    "sourceId": "dc:79421"
+    "entityId": "254",
+    "sourceId": "dc:81485"
    },
    {
     "id": 5094,
     "entity": "mechanic",
-    "entityId": "255",
-    "sourceId": "dc:79478"
+    "entityId": "254",
+    "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
     "id": 5095,
     "entity": "mechanic",
-    "entityId": "255",
-    "sourceId": "dc:82563"
+    "entityId": "254",
+    "sourceId": "nv:46895"
    },
    {
     "id": 5096,
     "entity": "mechanic",
     "entityId": "255",
-    "sourceId": "dc:80715"
+    "sourceId": "dc:79421"
    },
    {
     "id": 5097,
     "entity": "mechanic",
     "entityId": "255",
-    "sourceId": "dc:80425"
+    "sourceId": "dc:79478"
    },
    {
     "id": 5098,
     "entity": "mechanic",
     "entityId": "255",
-    "sourceId": "dc:79492"
+    "sourceId": "dc:82563"
    },
    {
     "id": 5099,
     "entity": "mechanic",
     "entityId": "255",
-    "sourceId": "dc:77041"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5100,
     "entity": "mechanic",
     "entityId": "255",
-    "sourceId": "dc:78836"
+    "sourceId": "dc:80425"
    },
    {
     "id": 5101,
+    "entity": "mechanic",
+    "entityId": "255",
+    "sourceId": "dc:79492"
+   },
+   {
+    "id": 5102,
+    "entity": "mechanic",
+    "entityId": "255",
+    "sourceId": "dc:77041"
+   },
+   {
+    "id": 5103,
+    "entity": "mechanic",
+    "entityId": "255",
+    "sourceId": "dc:78836"
+   },
+   {
+    "id": 5104,
     "entity": "mechanic",
     "entityId": "256",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5102,
+    "id": 5105,
     "entity": "mechanic",
     "entityId": "257",
     "sourceId": "nv:46250"
    },
    {
-    "id": 5103,
+    "id": 5106,
     "entity": "mechanic",
     "entityId": "257",
     "sourceId": "nv:48174"
    },
    {
-    "id": 5104,
-    "entity": "mechanic",
-    "entityId": "257",
-    "sourceId": "dc:79492"
-   },
-   {
-    "id": 5105,
-    "entity": "mechanic",
-    "entityId": "257",
-    "sourceId": "dc:78207"
-   },
-   {
-    "id": 5106,
-    "entity": "mechanic",
-    "entityId": "257",
-    "sourceId": "nv:43827"
-   },
-   {
     "id": 5107,
     "entity": "mechanic",
-    "entityId": "258",
+    "entityId": "257",
     "sourceId": "dc:79492"
    },
    {
     "id": 5108,
     "entity": "mechanic",
-    "entityId": "258",
-    "sourceId": "dc:80715"
+    "entityId": "257",
+    "sourceId": "dc:78207"
    },
    {
     "id": 5109,
     "entity": "mechanic",
-    "entityId": "258",
-    "sourceId": "web:yt-VVHt98jkWCo"
+    "entityId": "257",
+    "sourceId": "nv:43827"
    },
    {
     "id": 5110,
     "entity": "mechanic",
     "entityId": "258",
-    "sourceId": "web:yt-6hrfYOlgYu4"
+    "sourceId": "dc:79492"
    },
    {
     "id": 5111,
     "entity": "mechanic",
     "entityId": "258",
-    "sourceId": "web:yt-O3WxZZHsKyY"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5112,
     "entity": "mechanic",
     "entityId": "258",
-    "sourceId": "nv:46544"
+    "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
     "id": 5113,
     "entity": "mechanic",
-    "entityId": "259",
-    "sourceId": "dc:78207"
+    "entityId": "258",
+    "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
     "id": 5114,
     "entity": "mechanic",
-    "entityId": "259",
-    "sourceId": "nv:48282"
+    "entityId": "258",
+    "sourceId": "web:yt-O3WxZZHsKyY"
    },
    {
     "id": 5115,
     "entity": "mechanic",
-    "entityId": "259",
-    "sourceId": "nv:48344"
+    "entityId": "258",
+    "sourceId": "nv:46544"
    },
    {
     "id": 5116,
     "entity": "mechanic",
     "entityId": "259",
-    "sourceId": "nv:43827"
+    "sourceId": "dc:78207"
    },
    {
     "id": 5117,
     "entity": "mechanic",
-    "entityId": "260",
-    "sourceId": "dc:81582"
+    "entityId": "259",
+    "sourceId": "nv:48282"
    },
    {
     "id": 5118,
     "entity": "mechanic",
-    "entityId": "260",
-    "sourceId": "nv:46840"
+    "entityId": "259",
+    "sourceId": "nv:48344"
    },
    {
     "id": 5119,
     "entity": "mechanic",
-    "entityId": "260",
-    "sourceId": "nv:46559"
+    "entityId": "259",
+    "sourceId": "nv:43827"
    },
    {
     "id": 5120,
     "entity": "mechanic",
     "entityId": "260",
-    "sourceId": "nv:49319"
+    "sourceId": "dc:81582"
    },
    {
     "id": 5121,
+    "entity": "mechanic",
+    "entityId": "260",
+    "sourceId": "nv:46840"
+   },
+   {
+    "id": 5122,
+    "entity": "mechanic",
+    "entityId": "260",
+    "sourceId": "nv:46559"
+   },
+   {
+    "id": 5123,
+    "entity": "mechanic",
+    "entityId": "260",
+    "sourceId": "nv:49319"
+   },
+   {
+    "id": 5124,
     "entity": "mechanic",
     "entityId": "261",
     "sourceId": "nv:49319"
    },
    {
-    "id": 5122,
+    "id": 5125,
     "entity": "mechanic",
     "entityId": "261",
     "sourceId": "dc:81991"
    },
    {
-    "id": 5123,
+    "id": 5126,
     "entity": "mechanic",
     "entityId": "261",
     "sourceId": "dc:81988"
-   },
-   {
-    "id": 5124,
-    "entity": "mechanic",
-    "entityId": "262",
-    "sourceId": "nv:48412"
-   },
-   {
-    "id": 5125,
-    "entity": "mechanic",
-    "entityId": "262",
-    "sourceId": "nv:47271"
-   },
-   {
-    "id": 5126,
-    "entity": "mechanic",
-    "entityId": "262",
-    "sourceId": "nv:50398"
    },
    {
     "id": 5127,
     "entity": "mechanic",
     "entityId": "262",
-    "sourceId": "nv:48344"
+    "sourceId": "nv:48412"
    },
    {
     "id": 5128,
     "entity": "mechanic",
     "entityId": "262",
-    "sourceId": "dc:82162"
+    "sourceId": "nv:47271"
    },
    {
     "id": 5129,
+    "entity": "mechanic",
+    "entityId": "262",
+    "sourceId": "nv:50398"
+   },
+   {
+    "id": 5130,
+    "entity": "mechanic",
+    "entityId": "262",
+    "sourceId": "nv:48344"
+   },
+   {
+    "id": 5131,
+    "entity": "mechanic",
+    "entityId": "262",
+    "sourceId": "dc:82162"
+   },
+   {
+    "id": 5132,
     "entity": "mechanic",
     "entityId": "263",
     "sourceId": "dc:80985"
    },
    {
-    "id": 5130,
+    "id": 5133,
     "entity": "mechanic",
     "entityId": "263",
     "sourceId": "nv:50183"
    },
    {
-    "id": 5131,
+    "id": 5134,
     "entity": "mechanic",
     "entityId": "263",
     "sourceId": "nv:50297"
    },
    {
-    "id": 5132,
+    "id": 5135,
     "entity": "mechanic",
     "entityId": "264",
     "sourceId": "dc:79239"
    },
    {
-    "id": 5133,
+    "id": 5136,
     "entity": "mechanic",
     "entityId": "264",
     "sourceId": "nv:49250"
    },
    {
-    "id": 5134,
+    "id": 5137,
     "entity": "mechanic",
     "entityId": "264",
     "sourceId": "nv:46838"
    },
    {
-    "id": 5135,
+    "id": 5138,
     "entity": "mechanic",
     "entityId": "264",
     "sourceId": "nv:50391"
    },
    {
-    "id": 5136,
+    "id": 5139,
     "entity": "mechanic",
     "entityId": "265",
     "sourceId": "nv:46845"
    },
    {
-    "id": 5137,
+    "id": 5140,
     "entity": "mechanic",
     "entityId": "266",
     "sourceId": "web:yt-N6fgEKs3qq4"
    },
    {
-    "id": 5138,
+    "id": 5141,
     "entity": "mechanic",
     "entityId": "267",
     "sourceId": "dc:81981"
    },
    {
-    "id": 5139,
+    "id": 5142,
     "entity": "mechanic",
     "entityId": "267",
     "sourceId": "dc:80664"
    },
    {
-    "id": 5140,
+    "id": 5143,
     "entity": "mechanic",
     "entityId": "267",
     "sourceId": "dc:79358"
    },
    {
-    "id": 5141,
+    "id": 5144,
     "entity": "mechanic",
     "entityId": "268",
     "sourceId": "dc:81634"
    },
    {
-    "id": 5142,
+    "id": 5145,
     "entity": "mechanic",
     "entityId": "268",
     "sourceId": "dc:82346"
    },
    {
-    "id": 5143,
+    "id": 5146,
     "entity": "mechanic",
     "entityId": "268",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5144,
+    "id": 5147,
     "entity": "mechanic",
     "entityId": "269",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5145,
+    "id": 5148,
     "entity": "mechanic",
     "entityId": "269",
     "sourceId": "dc:73577"
-   },
-   {
-    "id": 5146,
-    "entity": "mechanic",
-    "entityId": "270",
-    "sourceId": "dc:81070"
-   },
-   {
-    "id": 5147,
-    "entity": "mechanic",
-    "entityId": "270",
-    "sourceId": "dc:80671"
-   },
-   {
-    "id": 5148,
-    "entity": "mechanic",
-    "entityId": "270",
-    "sourceId": "dc:79491"
    },
    {
     "id": 5149,
     "entity": "mechanic",
     "entityId": "270",
-    "sourceId": "dc:82001"
+    "sourceId": "dc:81070"
    },
    {
     "id": 5150,
+    "entity": "mechanic",
+    "entityId": "270",
+    "sourceId": "dc:80671"
+   },
+   {
+    "id": 5151,
+    "entity": "mechanic",
+    "entityId": "270",
+    "sourceId": "dc:79491"
+   },
+   {
+    "id": 5152,
+    "entity": "mechanic",
+    "entityId": "270",
+    "sourceId": "dc:82001"
+   },
+   {
+    "id": 5153,
     "entity": "timeline_event",
     "entityId": "108",
     "sourceId": "nv:16132"
    },
    {
-    "id": 5151,
+    "id": 5154,
     "entity": "timeline_event",
     "entityId": "109",
     "sourceId": "nv:37730"
    },
    {
-    "id": 5152,
+    "id": 5155,
     "entity": "timeline_event",
     "entityId": "110",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5153,
+    "id": 5156,
     "entity": "timeline_event",
     "entityId": "111",
     "sourceId": "nv:44477"
    },
    {
-    "id": 5154,
+    "id": 5157,
     "entity": "timeline_event",
     "entityId": "112",
     "sourceId": "dc:73577"
    },
    {
-    "id": 5155,
+    "id": 5158,
     "entity": "timeline_event",
     "entityId": "113",
     "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
-    "id": 5156,
+    "id": 5159,
     "entity": "timeline_event",
     "entityId": "114",
     "sourceId": "nv:48486"
    },
    {
-    "id": 5157,
+    "id": 5160,
     "entity": "timeline_event",
     "entityId": "115",
     "sourceId": "dc:79492"
    },
    {
-    "id": 5158,
+    "id": 5161,
     "entity": "timeline_event",
     "entityId": "116",
     "sourceId": "nv:49007"
    },
    {
-    "id": 5159,
+    "id": 5162,
     "entity": "timeline_event",
     "entityId": "117",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5160,
+    "id": 5163,
     "entity": "timeline_event",
     "entityId": "118",
     "sourceId": "dc:81991"
    },
    {
-    "id": 5161,
+    "id": 5164,
     "entity": "timeline_event",
     "entityId": "118",
     "sourceId": "dc:82162"
    },
    {
-    "id": 5162,
+    "id": 5165,
     "entity": "timeline_event",
     "entityId": "118",
     "sourceId": "dc:82001"
    },
    {
-    "id": 5163,
+    "id": 5166,
     "entity": "timeline_event",
     "entityId": "119",
     "sourceId": "nv:50417"
    },
    {
-    "id": 5164,
+    "id": 5167,
     "entity": "takeaway",
     "entityId": "61",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5165,
+    "id": 5168,
     "entity": "takeaway",
     "entityId": "61",
     "sourceId": "dc:79492"
    },
    {
-    "id": 5166,
+    "id": 5169,
     "entity": "takeaway",
     "entityId": "62",
     "sourceId": "dc:73577"
    },
    {
-    "id": 5167,
+    "id": 5170,
     "entity": "takeaway",
     "entityId": "62",
     "sourceId": "dc:80701"
    },
    {
-    "id": 5168,
+    "id": 5171,
     "entity": "takeaway",
     "entityId": "62",
     "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
-    "id": 5169,
+    "id": 5172,
     "entity": "takeaway",
     "entityId": "63",
     "sourceId": "dc:81991"
    },
    {
-    "id": 5170,
+    "id": 5173,
     "entity": "takeaway",
     "entityId": "63",
     "sourceId": "dc:82162"
    },
    {
-    "id": 5171,
+    "id": 5174,
     "entity": "takeaway",
     "entityId": "63",
     "sourceId": "dc:82001"
-   },
-   {
-    "id": 5172,
-    "entity": "takeaway",
-    "entityId": "64",
-    "sourceId": "nv:43827"
-   },
-   {
-    "id": 5173,
-    "entity": "takeaway",
-    "entityId": "64",
-    "sourceId": "nv:48282"
-   },
-   {
-    "id": 5174,
-    "entity": "takeaway",
-    "entityId": "64",
-    "sourceId": "nv:48412"
    },
    {
     "id": 5175,
     "entity": "takeaway",
     "entityId": "64",
-    "sourceId": "nv:48838"
+    "sourceId": "nv:43827"
    },
    {
     "id": 5176,
+    "entity": "takeaway",
+    "entityId": "64",
+    "sourceId": "nv:48282"
+   },
+   {
+    "id": 5177,
+    "entity": "takeaway",
+    "entityId": "64",
+    "sourceId": "nv:48412"
+   },
+   {
+    "id": 5178,
+    "entity": "takeaway",
+    "entityId": "64",
+    "sourceId": "nv:48838"
+   },
+   {
+    "id": 5179,
     "entity": "takeaway",
     "entityId": "65",
     "sourceId": "nv:47793"
    },
    {
-    "id": 5177,
+    "id": 5180,
     "entity": "takeaway",
     "entityId": "65",
     "sourceId": "nv:48838"
    },
    {
-    "id": 5178,
+    "id": 5181,
     "entity": "takeaway",
     "entityId": "65",
     "sourceId": "web:yt-7GHVEHoVFsw"
    },
    {
-    "id": 5179,
+    "id": 5182,
     "entity": "takeaway",
     "entityId": "66",
     "sourceId": "nv:50417"
    },
    {
-    "id": 5180,
+    "id": 5183,
     "entity": "takeaway",
     "entityId": "66",
     "sourceId": "nv:48486"
    },
    {
-    "id": 5181,
+    "id": 5184,
     "entity": "takeaway",
     "entityId": "67",
     "sourceId": "dc:81070"
    },
    {
-    "id": 5182,
+    "id": 5185,
     "entity": "takeaway",
     "entityId": "67",
     "sourceId": "dc:80671"
    },
    {
-    "id": 5183,
+    "id": 5186,
     "entity": "daily_dungeon_clear",
     "entityId": "1",
     "sourceId": "dc:82001"
    },
    {
-    "id": 5184,
+    "id": 5187,
     "entity": "daily_dungeon_clear",
     "entityId": "2",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5185,
+    "id": 5188,
     "entity": "daily_dungeon_clear",
     "entityId": "3",
     "sourceId": "dc:80543"
    },
    {
-    "id": 5186,
+    "id": 5189,
     "entity": "daily_dungeon_clear",
     "entityId": "4",
     "sourceId": "dc:79492"
    },
    {
-    "id": 5187,
+    "id": 5190,
     "entity": "daily_dungeon_clear",
     "entityId": "5",
     "sourceId": "nv:48705"
    },
    {
-    "id": 5188,
+    "id": 5191,
     "entity": "daily_dungeon_clear",
     "entityId": "5",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5189,
+    "id": 5192,
     "entity": "daily_dungeon_clear",
     "entityId": "6",
     "sourceId": "web:yt-0CUv152HVrA"
    },
    {
-    "id": 5190,
+    "id": 5193,
     "entity": "daily_dungeon_clear",
     "entityId": "7",
     "sourceId": "nv:48828"
    },
    {
-    "id": 5191,
+    "id": 5194,
     "entity": "daily_dungeon_clear",
     "entityId": "8",
     "sourceId": "dc:80513"
    },
    {
-    "id": 5192,
+    "id": 5195,
     "entity": "daily_dungeon_clear",
     "entityId": "9",
     "sourceId": "dc:78450"
    },
    {
-    "id": 5193,
+    "id": 5196,
     "entity": "daily_dungeon_clear",
     "entityId": "10",
     "sourceId": "nv:47333"
    },
    {
-    "id": 5194,
+    "id": 5197,
     "entity": "daily_dungeon_clear",
     "entityId": "11",
     "sourceId": "dc:73577"
    },
    {
-    "id": 5195,
+    "id": 5198,
     "entity": "daily_dungeon_clear",
     "entityId": "12",
     "sourceId": "dc:82162"
    },
    {
-    "id": 5196,
+    "id": 5199,
     "entity": "daily_dungeon_clear",
     "entityId": "13",
     "sourceId": "dc:82001"
    },
    {
-    "id": 5197,
+    "id": 5200,
     "entity": "daily_dungeon_clear",
     "entityId": "14",
     "sourceId": "nv:50183"
    },
    {
-    "id": 5198,
+    "id": 5201,
     "entity": "daily_dungeon_clear",
     "entityId": "15",
     "sourceId": "nv:49007"
    },
    {
-    "id": 5199,
+    "id": 5202,
     "entity": "daily_dungeon_clear",
     "entityId": "16",
     "sourceId": "dc:81991"
    },
    {
-    "id": 5200,
+    "id": 5203,
     "entity": "daily_dungeon_clear",
     "entityId": "17",
     "sourceId": "dc:81988"
    },
    {
-    "id": 5201,
+    "id": 5204,
     "entity": "daily_dungeon_clear",
     "entityId": "18",
     "sourceId": "dc:82001"
    },
    {
-    "id": 5202,
+    "id": 5205,
     "entity": "daily_dungeon_clear",
     "entityId": "19",
     "sourceId": "nv:49521"
    },
    {
-    "id": 5203,
+    "id": 5206,
     "entity": "daily_dungeon_clear",
     "entityId": "20",
     "sourceId": "web:yt-N6fgEKs3qq4"
    },
    {
-    "id": 5204,
+    "id": 5207,
     "entity": "daily_dungeon_clear",
     "entityId": "21",
     "sourceId": "nv:47326"
+   },
+   {
+    "id": 5208,
+    "entity": "daily_dungeon_clear",
+    "entityId": "21",
+    "sourceId": "nv:47793"
    }
   ],
   "factClaims": [

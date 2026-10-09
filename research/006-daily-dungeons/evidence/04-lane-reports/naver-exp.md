@@ -4,7 +4,7 @@ A clean, hands-off clear at ~700 is still rare. The posted decks that come close
 - The 716 clear (nv:48828) is semi-auto: you nudge the team down after 달토끼's skill and go in at 48s.
 - The game updates tomorrow, 10/8 (official notice nv:50417). It nerfs this boss: lower base ATK, longer cooldown on the push AoE, smaller inner-book attack range. nv:49847 claims ATK goes 500→350 (~30%); that figure is not in the official text.
 
-Nothing was committed; the repo is untouched. Captures are in `C:/Users/skure/AppData/Local/Temp/claude/C--repositories-crumble-logbook/a6e87aaa-5f16-415e-b28b-a8ab54161751/scratchpad/expdeck/naver/`:
+Nothing was committed; the repo is untouched. Captures are in `<scratchpad>/expdeck/naver/`:
 - `nv-<id>.json` (raw API answer) and `nv-<id>.md` (text and comments)
 - `img/` (post images, cafe video thumbnails, YouTube frames)
 - `yt/` (YouTube watch pages)

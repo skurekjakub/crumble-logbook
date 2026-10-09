@@ -1,6 +1,6 @@
 ## Daily dungeons other than EXP: what I found (as of 2026-10-07)
 
-I did no commits and changed nothing in the repo (`git status` is clean). All captures are in `C:/Users/skure/AppData/Local/Temp/claude/C--repositories-crumble-logbook/a6e87aaa-5f16-415e-b28b-a8ab54161751/scratchpad/expdeck/other/`:
+I did no commits and changed nothing in the repo (`git status` is clean). All captures are in `<scratchpad>/expdeck/other/`:
 - **`manifest.jsonl`** has a line per file (`file, url, captured_at, source_id, tool`), with every line tagged.
 - **`evidence/captures.jsonl`** is the scrapers' ledger for the same files.
 - **Evidence folders:** `evidence/nv` (posts and images), `evidence/dc`, `evidence/yt` (watch digests, `video/`, `frames/`).

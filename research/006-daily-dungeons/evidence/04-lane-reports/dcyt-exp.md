@@ -72,7 +72,7 @@ I matched cookies and pets to the repo's icon sheets and could not pin down a fe
 - the power in 80715, which isn't shown.
 
 ### Files
-Everything is under `C:/Users/skure/AppData/Local/Temp/claude/C--repositories-crumble-logbook/a6e87aaa-5f16-415e-b28b-a8ab54161751/scratchpad/expdeck/dc-yt/`:
+Everything is under `<scratchpad>/expdeck/dc-yt/`:
 - `manifest.jsonl` has a line per file: file, url, captured_at, source_id, tool, sha256, and `derived_from` for frames.
 - `evidence/captures.jsonl` is the capture tool's own ledger.
 - `evidence/list-*.tsv` are the DC search listings.
