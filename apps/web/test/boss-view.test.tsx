@@ -1,10 +1,13 @@
 import { screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import type { BuffValue, Deck, FightEvent, GearRec, Mechanic, RuneBuild } from "../src/api/types";
+import { CONQUEST } from "../src/app/modes/conquest";
 import { CURRENT, CURRENT_DECK, requestPath } from "./helpers";
 import { bodyRows, renderRoute } from "./view-harness";
 
 const PATH = "/conquest/boss";
+/** The deck the boss screen checks, as the mode config names it. */
+const BOSS_DECK = CONQUEST.boss.deck;
 
 const FIGHT_EVENTS = [
   {
@@ -273,7 +276,7 @@ const RUNE_BUILDS = [
     lines: "Skill haste first (target 40–50 total with gear)",
     why: "More haste keeps more of her drones up; top posters run 44.6–49.6.",
     disputed: "At 58.6 haste, 1–2 drones peeled off onto adds.",
-    decks: ["cherry"],
+    decks: [BOSS_DECK],
     sources: ["dc:76135"],
   },
   {
@@ -286,7 +289,7 @@ const RUNE_BUILDS = [
     lines: "Skill haste (+ damage reduction)",
     why: "Her DEF shred isn't amplified by skill amp, so haste to reapply it faster.",
     disputed: "One commenter argues focus raises her debuff proc chance.",
-    decks: ["cherry"],
+    decks: [BOSS_DECK],
     sources: [],
   },
   {
@@ -307,7 +310,7 @@ const RUNE_BUILDS = [
 const DECKS = [
   {
     ...CURRENT_DECK,
-    id: "cherry",
+    id: BOSS_DECK,
     position: 0,
     mode: "guild_conquest",
     recordSlug: null,
@@ -740,15 +743,15 @@ describe("Piñata boss view", () => {
   });
 
   it("fails the catcher check when a ranked cookie sits below the catcher, and the pet check without the pet", async () => {
-    const cherry = DECKS.find((d) => d.id === "cherry")!;
-    const catcher = cherry.cookies.find((c) => c.cookieKr === "전갈")!;
+    const bossDeck = DECKS[0]!;
+    const catcher = bossDeck.cookies.find((c) => c.cookieKr === "전갈")!;
     await renderRoute(PATH, {
       ...FULL,
       "/api/decks?mode=guild_conquest&current=true": {
         body: [
           {
-            ...cherry,
-            atkOrder: [{ kr: "전갈", en: catcher.en }, ...cherry.atkOrder],
+            ...bossDeck,
+            atkOrder: [{ kr: "전갈", en: catcher.en }, ...bossDeck.atkOrder],
             pets: [],
           },
         ],
@@ -771,7 +774,9 @@ describe("Piñata boss view", () => {
     expect(await screen.findByText("No rune builds recorded for this deck yet.")).toHaveClass(
       "empty",
     );
-    expect(await screen.findByText("The Cherry deck isn't recorded yet.")).toHaveClass("empty");
+    expect(await screen.findByText("The recommended deck isn't recorded yet.")).toHaveClass(
+      "empty",
+    );
     expect(screen.queryByRole("alert")).toBeNull();
     expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("Piñata");
   });

@@ -223,7 +223,7 @@ export function BossView({ mode, boss }: BossViewProps) {
                   sources={sources}
                 />
               ) : (
-                <EmptyState>The Cherry deck isn't recorded yet.</EmptyState>
+                <EmptyState>The recommended deck isn't recorded yet.</EmptyState>
               );
             }}
           </QueryResult>

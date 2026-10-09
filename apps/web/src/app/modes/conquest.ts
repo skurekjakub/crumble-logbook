@@ -100,7 +100,7 @@ export const CONQUEST = {
       "What each buffer gives by star.",
       "What to run, and the ATK-order check.",
     ],
-    deck: "cherry",
+    deck: "chardonnay",
     gearContext: "raid",
     catcherKr: "전갈",
     atkPetKr: "와사비문어",
