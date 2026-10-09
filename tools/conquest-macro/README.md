@@ -17,7 +17,7 @@ The adb helpers are shared with the EXP Dungeon macro, in `tools/adb-lib/AdbScre
 
 Every 2 s it captures the screen and:
 1. **Lobby with ENTER lit:** taps ENTER. If the lobby still shows after `StuckLimit` taps (a popup swallowing them), it leaves the lobby with Back and recovers.
-2. **Lobby with ENTER greyed:** stops. The season is closed.
+2. **Lobby with ENTER greyed:** waits. The lobby greys ENTER for a moment on its way back from the results, so the loop stops (the season is closed) only after `GreyLimit` polls in a row.
 3. **Anything else:** a fight or the results.
    - It taps Dismiss (the bottom-centre button) once the results show. Until the result screen is learned, that means once `MinFightMs` (66 s: loading plus the 60 s fight) has passed since ENTER.
    - Dismiss is never tapped earlier, because in a running fight that button leaves the fight.

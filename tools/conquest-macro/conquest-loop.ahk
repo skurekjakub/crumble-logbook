@@ -25,7 +25,7 @@ global DEFAULTS := Map(
                   "Tolerance", "30"),
     "Timing", Map("PollMs", "2000", "AfterEnterMs", "6000", "MinFightMs", "66000", "MaxFightMs", "100000",
                   "RecoverStepMs", "4000", "LaunchWaitMs", "90000"),
-    "Run", Map("MaxRuns", "0", "StuckLimit", "3", "RecoverTries", "8",
+    "Run", Map("MaxRuns", "0", "StuckLimit", "3", "GreyLimit", "8", "RecoverTries", "8",
                "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log")
 )
 
@@ -147,6 +147,7 @@ Wait(ms) {
 RunLoop() {
     global Runs, Phase, Running
     stuck := 0
+    grey := 0
     ; Started off the lobby: assume a fight began now, so Dismiss waits as it would after ENTER.
     enteredAt := A_TickCount
     try {
@@ -158,8 +159,17 @@ RunLoop() {
                     Log("MaxRuns reached")
                     break
                 }
-                if !Shows(buf, Cfg["EnterReady"])
-                    throw Error("ENTER isn't lit: the season is closed, or press F9 on the live lobby to learn its colour")
+                ; The lobby shows ENTER greyed for a moment while it returns from the results,
+                ; so only a lasting grey means the season is closed.
+                if !Shows(buf, Cfg["EnterReady"]) {
+                    grey += 1
+                    if (grey >= N("GreyLimit"))
+                        throw Error("ENTER isn't lit: the season is closed, or press F9 on the live lobby to learn its colour")
+                    Phase := "ENTER greyed " grey "/" N("GreyLimit")
+                    Wait(N("PollMs"))
+                    continue
+                }
+                grey := 0
                 if (stuck >= N("StuckLimit")) {
                     ; A popup over the lobby swallows ENTER; leave and come back to clear it.
                     Recover("still in the lobby after " stuck " ENTER taps", true)
