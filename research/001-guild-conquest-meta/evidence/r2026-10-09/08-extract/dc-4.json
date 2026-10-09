@@ -1,0 +1,135 @@
+{
+  "batch": "r2026-10-09-dc-4",
+  "identification_key": "Discovery posts and the two Naver cafe posts, read in the main session. 84312-2.jpg identified by element icons and art as in dc-1..dc-3: leaf Lv.115 with pale lilac/green hair = 샤르도네; water Lv.115 with purple cap = 피겨; light gold Lv.115 = 치케; light nurse with leader banner = 우유; light bearded knight = 실론; leaf teal hair Lv.1 = 정전; water green hair goggles Lv.40 = 메소; fire red hair Lv.45 = 전갈; dark grey monocle Lv.1 = 피노; dark red curls Lv.115 = 석류; dark black/red Lv.1 = 닼초; light goggles Lv.115 = 브시커. Pets: Candy Shade Pouch 15, Octo Wasabi 20, Hot Doggie 20.",
+  "posts": [
+    {
+      "source": "dc", "id": "84312", "url": "https://m.dcinside.com/board/projectcc/84312", "date": "2026-10-09",
+      "title_kr": "샤르도네 덕분에 17초 전멸파티 414배율 띄움", "title_en": "Thanks to Chardonnay, a team that wipes at 17 s hit 414×",
+      "relevance": 2,
+      "summary_en": "건축학과 posts a Season 7 lobby: personal best 617G 785M at team power 1.49G (414×), a Chardonnay deck at Lv.115 that still wipes at the 17 s slam.",
+      "scores": [{"damage": "617G 785M", "power": "1.49G", "ratio": "414배 (author)", "deck": "Chardonnay deck, Melon Soda Lv.40", "note": "84312-1.jpg personal ranking; 84312-2.jpg lobby"}],
+      "teams": [{"name": "Chardonnay deck at Lv.115", "cookies": [
+        {"kr": "브시커", "level": "115"}, {"kr": "전갈", "level": "45"}, {"kr": "피노", "level": "1"}, {"kr": "석류", "level": "115"}, {"kr": "정전", "level": "1"}, {"kr": "닼초", "level": "1"},
+        {"kr": "샤르도네", "level": "115"}, {"kr": "메소", "level": "40"}, {"kr": "치케", "level": "115"}, {"kr": "피겨", "level": "115"}, {"kr": "우유", "level": "115"}, {"kr": "실론", "level": "115"}],
+        "pets": ["색동주머니 15", "와사비문어 20", "핫도그 20"], "note": "84312-2.jpg"}],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": ["The run still wipes at the 17 s slam (title)."], "disagreements": [], "quotes": ["샤르도네 덕분에 17초 전멸파티 414배율 띄움"]
+    },
+    {
+      "source": "dc", "id": "83400", "url": "https://m.dcinside.com/board/projectcc/83400", "date": "2026-10-08",
+      "title_kr": "토벌 고점은 마카롱아님??", "title_en": "Isn't Macaron still the conquest ceiling?",
+      "relevance": 2,
+      "summary_en": "The poster argues that dropping from 다발 3 to 다발 2 costs a beam among Milk, Seeker, Cheesecake, Tea Knight and Skating Queen, so Macaron may still be the ceiling. Commenters answer that Tiger Lily stays in the deck, so Chardonnay replaces only Macaron; one notes 70%+ of conquest damage comes from Brightseeker and that the ceiling needs Tiger Lily's 다발 to reach Pomegranate.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Tiger Lily stays: Chardonnay replaces Macaron, not Tiger Lily (comments).", "Over 70% of conquest damage comes from Brightseeker (the author, stated)."],
+      "disagreements": ["Author: the ceiling is Macaron, because Chardonnay's 다발 2 costs a beam. Commenters: Tiger Lily is kept, so the beam count is unchanged and Chardonnay beats Macaron."],
+      "quotes": ["어짜피 토벌딜의 70퍼센트 이상이 시커한테 나오는데 딜러 하나추가해봐야 석류한테 정전 다발안드가면 고점못찍음", "정전그대로쓴다던데"]
+    },
+    {
+      "source": "dc", "id": "83659", "url": "https://m.dcinside.com/board/projectcc/83659", "date": "2026-10-08",
+      "title_kr": "샤르도네가 어느정도길래 그럼", "title_en": "How strong is Chardonnay, then?",
+      "relevance": 2,
+      "summary_en": "Commenters report their conquest scores before and after Chardonnay: 70G → 200G, 300s → 900s G, 300G → 1T, 330G → 1.2T, 'score tripled', and a new player from 70–80× to 250×. All text, no screens.",
+      "scores": [{"damage": "330G → 1T 200G", "power": "?", "ratio": "?", "deck": "?", "note": "comment, text only"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": ["300따리였는데 1T됨", "토벌 점수 3배뜀"]
+    },
+    {
+      "source": "dc", "id": "83671", "url": "https://m.dcinside.com/board/projectcc/83671", "date": "2026-10-08",
+      "title_kr": "와 토벌 미츘네", "title_en": "Wow, conquest is crazy now",
+      "relevance": 1,
+      "summary_en": "The poster runs Candy Shade Pouch (lift resistance) with Little Ghost (push resistance) and reports a large jump. A commenter warns that Chardonnay already gives Push RES and that more of it stops Pomegranate getting Tiger Lily's 다발 3.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["More Push RES (pet) may stop Pomegranate receiving Tiger Lily's 다발 3 (comment)."], "disagreements": [], "quotes": ["유령까지 쓰면 오히려 석류가 정전 다발 3 못 받아서 더 안 좋을 것 같은데"]
+    },
+    {
+      "source": "dc", "id": "83693", "url": "https://m.dcinside.com/board/projectcc/83693", "date": "2026-10-08",
+      "title_kr": "시커 5성찍으니까 1t가 오르네", "title_en": "Brightseeker to 5★ and I gained 1T",
+      "relevance": 1,
+      "summary_en": "330G last season, 1T 330G now, after Brightseeker 5★; a commenter credits Chardonnay more. Text only.",
+      "scores": [{"damage": "1T 330G", "power": "?", "ratio": "?", "deck": "?", "note": "text only"}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": ["시커도 시커인데 샤르도네가 씨발임"]
+    },
+    {
+      "source": "dc", "id": "83039", "url": "https://m.dcinside.com/board/projectcc/83039", "date": "2026-10-08",
+      "title_kr": "120렙도 못찍는거아님?", "title_en": "Can't we even reach Lv.120?",
+      "relevance": 1,
+      "summary_en": "Cookie Lv.120 needs Crumble (account) level 200; commenters at about 190 expect Lv.117–118 for now.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Cookie level 120 is gated by account level 200; most players sit at Lv.115–118 on day one (comments)."], "disagreements": [], "quotes": ["크럼블 렙 200찍어야 120아님?", "118렙찍겠네"]
+    },
+    {
+      "source": "dc", "id": "83975", "url": "https://m.dcinside.com/board/projectcc/83975", "date": "2026-10-09",
+      "title_kr": "탄속에 다발에 치확버퍼..", "title_en": "Projectile speed, Volley and a crit buffer",
+      "relevance": 1,
+      "summary_en": "The poster says Chardonnay must go to 10★; commenters wish her Volley were 3.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": ["Chardonnay's Volley tops out at 다발 2 (comments)."], "disagreements": [], "quotes": ["무조건 10성 찍어야되는듯"]
+    },
+    {
+      "source": "dc", "id": "83639", "url": "https://m.dcinside.com/board/projectcc/83639", "date": "2026-10-08",
+      "title_kr": "이제 정전대신에 관통+3다발주는 애만 나오면된다", "title_en": "Now we only need a cookie with Pierce + Volley 3 to replace Tiger Lily",
+      "relevance": 1,
+      "summary_en": "언담 implies Tiger Lily stays as the only 다발 3 source; a commenter wishes Chardonnay gave 다발 3.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": ["Tiger Lily is still the only 다발 3 source."], "disagreements": [], "quotes": ["그냥 샤르도네가 3다발로 나왔어야 했는데"]
+    },
+    {
+      "source": "dc", "id": "83221", "url": "https://m.dcinside.com/board/projectcc/83221", "date": "2026-10-08",
+      "title_kr": "샤르 스증 주는 이유가 뭐임?", "title_en": "Why give Chardonnay skill amp?",
+      "relevance": 1,
+      "summary_en": "The skill text lists only Push RES as not scaling with skill amp, so her crit buff scales; Macaron also ran skill amp.",
+      "scores": [], "teams": [], "sugar_runes": [{"cookie": "샤르도네", "lines": "skill amp", "note": "only Push RES is marked as not scaling with skill amp"}], "gear": [], "rng": [], "mechanics": ["Chardonnay's crit buff scales with skill amp; Push RES doesn't."], "disagreements": [], "quotes": ["적용불가가 밀치기 저항만 적혀있긴한데"]
+    },
+    {
+      "source": "dc", "id": "83644", "url": "https://m.dcinside.com/board/projectcc/83644", "date": "2026-10-08",
+      "title_kr": "딸크<-체리콜라보다 셈?", "title_en": "Is Strawberry Crepe stronger than Cherry Cola?",
+      "relevance": 1,
+      "summary_en": "Commenters: Strawberry Crepe is a tank that gets four 연타 synergies and hits like a dealer; with Chardonnay one of the two tops the damage chart, then Rye. Stage context.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": ["탱컨데 시너지 4연타받아서 데미지 5배임"]
+    },
+    {
+      "source": "dc", "id": "83777", "url": "https://m.dcinside.com/board/projectcc/83777", "date": "2026-10-08",
+      "title_kr": "딸크는 그래도 탱커라고 잘안죽는게 장점인듯?", "title_en": "Strawberry Crepe's upside is that she rarely dies?",
+      "relevance": 0, "summary_en": "Stage talk on Strawberry Crepe vs Cherry Cola survival; not conquest.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "83712", "url": "https://m.dcinside.com/board/projectcc/83712", "date": "2026-10-08",
+      "title_kr": "샤카롱 때문인지 레벨 확장 때문인지", "title_en": "Whether it's Chardonnay or the level cap",
+      "relevance": 0, "summary_en": "Stage progress: commenters credit Chardonnay more than the level cap; one measured 40.0% → 43% from levels alone.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": ["레벨 확장도 확장인데 샤르도네가 더 큰 것 같음"]
+    },
+    {"source": "dc", "id": "83383", "url": "https://m.dcinside.com/board/projectcc/83383", "date": "2026-10-08", "title_kr": "용병단 급하게 올릴필요 없지?", "title_en": "No rush to level the mercenary squad?", "relevance": 0, "summary_en": "Mercenary squad and research timing; not conquest.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []},
+    {"source": "dc", "id": "83911", "url": "https://m.dcinside.com/board/projectcc/83911", "date": "2026-10-09", "title_kr": "빨대에 우유버프 풀로받고 2번째 샤르빔 발사 드르륵", "title_en": "Arena: Chardonnay's second beam with full buffs", "relevance": 0, "summary_en": "Arena; not conquest.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []},
+    {"source": "dc", "id": "84053", "url": "https://m.dcinside.com/board/projectcc/84053", "date": "2026-10-09", "title_kr": "치즈케이크 다발은 왜있는거임?", "title_en": "Why does Cheesecake give Volley?", "relevance": 0, "summary_en": "A question with no answer.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []},
+    {"source": "dc", "id": "83223", "url": "https://m.dcinside.com/board/projectcc/83223", "date": "2026-10-08", "title_kr": "샤르도네 토벌 개씨발미친련", "title_en": "Chardonnay in conquest is insane", "relevance": 1, "summary_en": "A 24G-power account that scored about 50× before now scores far more; photo of a screen, numbers not transcribed.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": ["기존토벌 24g로 50배치던거 걍 개따먹노"]},
+    {"source": "dc", "id": "83632", "url": "https://m.dcinside.com/board/projectcc/83632", "date": "2026-10-08", "title_kr": "샤르도네 토벌끝나기전까지 8성 못달아줄거같은데..", "title_en": "I won't get Chardonnay to 8★ before the season ends", "relevance": 0, "summary_en": "No content.", "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []},
+    {
+      "source": "nv", "id": "51157", "url": "https://cafe.naver.com/ccrumble/51157", "date": "2026-10-08",
+      "title_kr": "길드 토벌전 2.5T 공략 (샤르도네)", "title_en": "Guild Conquest 2.5T guide (Chardonnay)",
+      "relevance": 3,
+      "summary_en": "서신우's cafe post for his video RKNiw1fRosw: a result frame at 2,501,105,826,814 with the timer at 0.000 (the team survived to the end). In comments he gives the conquest gear: weapons skill amp + crit rate (some say flat ATK is better), armour damage reduction + HP (crit resistance is a filler line), top accessories haste + skill amp, bottom accessories damage reduction + haste. Melon Soda is held under Scorpion's ATK after Octo Wasabi's buff; only Scorpion needs the ATK sum, since Milk, Seeker and Skating Queen all get the pet's buff. A commenter (로얄이) went from 1.8T to 4T 'easily' after the patch and says Strawberry Crepe in the Cherry slot worked best for him, and to try other Light dealers there; his guild has a higher deck it won't share.",
+      "scores": [
+        {"damage": "2,501,105,826,814 (2.50T)", "power": "?", "ratio": "?", "deck": "Chardonnay deck (서신우)", "note": "nv-51157-1.png, timer 0.000"},
+        {"damage": "4T+", "power": "?", "ratio": "?", "deck": "Strawberry Crepe in the Cherry slot (로얄이)", "note": "comment; screenshot reply not captured as text"}
+      ],
+      "teams": [], "sugar_runes": [],
+      "gear": [
+        {"slot": "top-left (weapons)", "substats": "skill amp ×3 + crit rate (flat ATK said to be better by some)", "context": "raid"},
+        {"slot": "bottom-left (armour)", "substats": "damage reduction ×3 + HP", "context": "raid"},
+        {"slot": "top-right (accessories)", "substats": "haste ×3 + skill amp", "context": "raid"},
+        {"slot": "bottom-right (special)", "substats": "damage reduction ×3 + haste", "context": "raid"}
+      ],
+      "rng": [], "mechanics": ["Scorpion is the only cookie whose ATK needs Octo Wasabi's +% accounted for; Melon Soda sits under Scorpion's post-buff ATK (서신우)."],
+      "disagreements": ["Weapons: crit rate (서신우) vs flat ATK (others, see dc-3 84162)."],
+      "quotes": ["무기 3개 증폭 + 치확 (공격력이 더 좋다는 말도 있는데 일단 치확 씀)", "레벨 확장에 신쿠 나온뒤로 4T는 그냥 쉽게 넘기던데 원래 1.8T였는데", "제가 찾아낸 선에서는 딸크 넣는 게 좋았어요"]
+    },
+    {
+      "source": "nv", "id": "51490", "url": "https://cafe.naver.com/ccrumble/51490", "date": "2026-10-09",
+      "title_kr": "토벌전 덱 공유좀요..", "title_en": "Please share a conquest deck",
+      "relevance": 2,
+      "summary_en": "A commenter gives 'the most standard deck now': Brightseeker, Scorpion, Pinot, Pomegranate, Tiger Lily, Dark Choco, Chardonnay, Melon Soda, Cheesecake, Skating Queen, Milk, Tea Knight; pets Octo Wasabi, Candy Shade Pouch (복주머니), Hot Doggie. No levels.",
+      "scores": [], "teams": [{"name": "Standard deck after the patch (comment)", "cookies": ["브시커", "전갈", "피노", "석류", "정전", "닼초", "샤르", "메론", "치케", "피겨", "우유", "실론"], "pets": ["와사비문어", "색동주머니", "핫도그"]}],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": ["시커 전갈 피노 석류 정글 닼초 샤르 메론 치케 피겨 우유 실론 펫은 와사비 복주머니 핫도그 지금 젤 무난한 덱입니다"]
+    }
+  ]
+}
