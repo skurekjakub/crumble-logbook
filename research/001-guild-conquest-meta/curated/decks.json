@@ -40,8 +40,8 @@
     ],
     "obsolete": {
       "since": "2026-10-08",
-      "reason": "Chardonnay gives Macaron's crit buff to the whole line, so Cherry's formation job is gone; the Chardonnay deck scores 4T 300G at 4.29G.",
-      "sources": ["dc:83991", "dc:83653", "dc:83473", "dc:83310"],
+      "reason": "Chardonnay's crit buff covers the whole line, so Cherry's formation job is gone; from 9★ she beats Macaron: 4T 300G at Lv.118 vs 2T 186G at Lv.100. Counter-case: an 8★ lost to a 9★ Macaron, 3.6T to 3.8T.",
+      "sources": ["dc:83991", "dc:83653", "dc:83473", "dc:83118", "dc:83310"],
       "superseded_by": "chardonnay"
     },
     "sources": ["nv:43653", "dc:71135", "dc:76135", "dc:75400", "dc:75617", "dc:76545", "dc:76605", "dc:69368", "dc:81110", "dc:80846", "dc:78711", "nv:48773", "dc:81699", "dc:79169", "dc:80297", "dc:80723", "dc:79142"]
@@ -51,11 +51,11 @@
     "name_en": "Chardonnay deck",
     "name_kr": "샤르도네덱",
     "status": "meta",
-    "ceiling": "4T 300G at 4.29G (≈1000×), Season 7",
+    "ceiling": "≥4T 647G in battle; best final 4T 300G at 4.29G (≈1000×), Season 7",
     "summary": "The Cherry deck with Chardonnay for Macaron and Melon Soda for Cherry. Her line crit buff makes formation and move speed unnecessary.",
     "cookies": [
       { "kr": "우유", "level_rule": "Max level (Lv.118 on 10-09; Lv.120 needs account Lv.200)", "stars": "10★", "why": "ATK #1 for both perks; 탄속 makes her a fixed beam target." },
-      { "kr": "샤르도네", "level_rule": "Max level (Lv.118 in the 4T runs)", "stars": "9–10★ in the 4T runs; 5★ already beats Macaron per most posters", "why": "Line crit buff + 다발 2; 탄속 takes a beam at any ATK." },
+      { "kr": "샤르도네", "level_rule": "Max level (Lv.118 in the 4T runs)", "stars": "9–10★ in the 4T runs; an 8★ lost to a 9★ Macaron in the one paired test; 5★ wins only in unpaired claims, likely Lv.118 vs Lv.100", "why": "Line crit buff + 다발 2; 탄속 takes a beam at any ATK." },
       { "kr": "브시커", "level_rule": "Max level", "why": "The carry, over 70% of damage; a beam recipient." },
       { "kr": "피겨", "level_rule": "Max level", "why": "Skill-amp buffer and beam recipient." },
       { "kr": "실론", "level_rule": "Max level", "why": "Conquest-only Boss DMG buff; beam recipient." },
@@ -76,7 +76,7 @@
       "Melon Soda → Strawberry Crepe Lv.50, or Popcorn: 1T 275G at 1.7G with both; posters split on the best of the three.",
       "Fillers Lv.40–90, still under the 6th recipient's ATK: all twelve alive at 5.8 s left in one run.",
       "Tiger Lily → a dealer: 1.09T at 2.32G; 저장용 tried dealers and came back to Tiger Lily.",
-      "Chardonnay under 9★: one test had 8★ at 3.6T vs a 9★ Macaron Cherry deck at 3.8T; others report 5★ tripling 9★ Macaron."
+      "Chardonnay under 9★: one paired test had 8★ at 3.6T vs a 9★ Macaron Cherry deck at 3.8T; 5★ \"tripling\" Macaron is unpaired, likely Lv.118 vs Lv.100."
     ],
     "rng": "Varies less than the Cherry deck (one poster). Floor about 3T on a 1000× account; the main roll is Pomegranate catching Tiger Lily's 다발 3.",
     "unorthodox": [
@@ -123,8 +123,8 @@
     ],
     "obsolete": {
       "since": "2026-10-08",
-      "reason": "Move speed lined the carries up inside Macaron's buff; Chardonnay's line makes it unneeded, and her deck keeps Melon Soda without speed for 4T+.",
-      "sources": ["dc:83991", "dc:83653", "dc:84283"],
+      "reason": "Move speed is no longer needed for formation: Chardonnay's crit buff covers the whole line. Speed now only tunes Tiger Lily's reach to Pomegranate.",
+      "sources": ["dc:83991", "dc:83653", "dc:84283", "dc:83491"],
       "superseded_by": "chardonnay"
     },
     "sources": ["dc:69368", "dc:71105", "dc:74759", "dc:76144", "dc:76716", "dc:80848", "dc:81023", "dc:80069", "dc:79624", "dc:79975"]
@@ -245,8 +245,8 @@
     ],
     "obsolete": {
       "since": "2026-10-08",
-      "reason": "Same Macaron and Cherry core; its author's Chardonnay deck beat his Cherry ceiling of about 3T by over 1T, fillers levelled the same way.",
-      "sources": ["dc:83991", "dc:83653", "dc:83608"],
+      "reason": "Chardonnay's crit buff covers the whole line and crit buffs don't stack, so Macaron goes, and Cherry, which only served her. Season 7: ≈4.3T observed vs a Cherry deck's stated 3.8T.",
+      "sources": ["dc:83991", "dc:83118", "dc:83473", "dc:83310"],
       "superseded_by": "chardonnay"
     },
     "sources": ["dc:80067", "dc:79270", "dc:80859", "dc:79169", "dc:81699", "dc:79493"]
@@ -283,8 +283,8 @@
     ],
     "obsolete": {
       "since": "2026-10-08",
-      "reason": "Macaron core displaced: at similar power the Chardonnay deck scores 4T 300G (4.29G) against this deck's 3T 045G (4.23G).",
-      "sources": ["dc:83991", "dc:76966", "dc:83653"],
+      "reason": "Chardonnay's crit buff covers the whole line and crit buffs don't stack, so Macaron goes, and Melon Soda's placement, which only served her. Season 7: ≈4.3T observed vs a Macaron Cherry deck's stated 3.8T.",
+      "sources": ["dc:83991", "dc:83118", "dc:83473", "dc:83310"],
       "superseded_by": "chardonnay"
     },
     "sources": ["dc:76966", "dc:77113", "web:crumbgg:final-s5"]

@@ -83,7 +83,7 @@ The patch data first: crumb.gg's `data/patches.json` (`15-crumbgg/api/data-patch
 
 Synthesis:
 - Season 7 runs 10-08 16:00 to 10-12 12:00 KST on the same Extra-Stuffed Piñata (crumb.gg's page; the in-game lobby in dc:83491). The live #1 is 환상 at 10T 266G after about 22 hours; Season 6's #1 is not in the top 100.
-- The gallery switched decks on day one: Macaron out for Chardonnay, Cherry out for Melon Soda. 저장용's 4T 228G at 4.55G and 4T 300G at 4.29G, and 캔디애플's 3T 966G and 4T 078G, are Chardonnay decks with their lineups on screen.
+- The gallery switched decks on day one: Macaron out for Chardonnay, Cherry out for Melon Soda. 저장용's 4T 227G at 4.55G and 4T 300G at 4.29G, and 캔디애플's 3T 966G and 4T 077G, are Chardonnay decks: the 4T 300G and 3T 966G lobbies show the lineup, the result screens don't. An anonymous in-battle screen at 4T 647G, 13.7 s left, shows the deck's portraits and levels (dc:83836).
 - 서신우's 2.5T guide video (RKNiw1fRosw) shows the same deck at 5★ Chardonnay, with runes and all twelve cookies alive past 17 s.
 - The saved web pages are byte-identical to 10-07.
 

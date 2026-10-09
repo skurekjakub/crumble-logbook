@@ -17,7 +17,7 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
 
 ## Verdict
 
-**True from 1T to about 4.3T since the 10-08 update; still unanswered above it.** The documented meta is now the Chardonnay deck (샤르도네덱): the Cherry deck with Chardonnay at max level in Macaron's slot and Melon Soda in Cherry's, Tiger Lily kept for the sixth beam, no move speed (dc:83653, dc:83991, dc:84290). Its best run with the lineup on screen is 4T 300G at 4.29G team power, about 1000×, from a poster whose Cherry deck topped out near 3T (dc:83991); 캔디애플 shows 3T 966G at 3.91G and a 4.08T result at 1020× (dc:83491, dc:84283). The Cherry and Melon Soda decks are obsolete since 10-08. Season 7 runs on the same Piñata (web:crumbgg:guild-conquest-1009, dc:83491); its live #1 is at 10T 266G after a day and the top 10 sit above 7.8T (web:crumbgg:live-s7), with no team posted. The strongest reason is the mechanism: Chardonnay gives Macaron's crit buff to everyone in her line, so Cherry's formation job and move speed go, and she takes a Pomegranate beam through 탄속 at any ATK, so she sits at max level without breaking the order (dc:83991, dc:83476, dc:83118). Levels are not yet comparable across the patch: cores sit at Lv.114–118 until accounts reach level 200 (dc:83039).
+**True from 1T to about 4.3T since the 10-08 update; still unanswered above it.** The documented meta is now the Chardonnay deck (샤르도네덱): the Cherry deck with Chardonnay at max level in Macaron's slot and Melon Soda in Cherry's, Tiger Lily kept for the sixth beam, no move speed (dc:83653, dc:83991, dc:84290). Its highest observed damage is at least 4T 647G, in battle at 13.7 s left with all twelve portraits and their levels on screen (dc:83836); its best final score is 4T 300G at 4.29G team power, about 1000×, from a poster whose Cherry deck topped out near 3T (dc:83991; Lv.118 vs Lv.100). 캔디애플 shows 3T 966G at 3.91G and a 4T 077G result at 1020× (dc:83491, dc:84283). The Cherry and Melon Soda decks are obsolete since 10-08. Season 7 runs on the same Piñata (web:crumbgg:guild-conquest-1009, dc:83491); its live #1 is at 10T 266G after a day and the top 10 sit above 7.8T (web:crumbgg:live-s7), with no team posted. The strongest reason is the mechanism: Chardonnay gives Macaron's crit buff to everyone in her line, so Cherry's formation job and move speed go, and she takes a Pomegranate beam through 탄속 at any ATK, so she sits at max level without breaking the order (dc:83991, dc:83476, dc:83118). Levels are not yet comparable across the patch: cores sit at Lv.114–118 until accounts reach level 200 (dc:83039).
 
 ## Reasoning
 
@@ -36,7 +36,7 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
    | 2T 072G | 3.0G | ≈691 | Melon Soda, levelled fillers (Lv.40–60) | Lobby | dc:80848 |
    | 2T 030G | 2.87G | ≈707 | Melon Soda, move speed, Lv.1 fillers, Scorpion Lv.21 | Lobby | dc:81023 |
    | 1T 999G | 3.07G, *derived* from "덱투 650배정도" | ~650 *stated* | Cherry | Score on screen | dc:76235 |
-   | 1.62T | 2.7G *derived* | ~600 *stated* | Cherry | Score on screen | dc:75462 |
+   | 1T 617G | 2.7G *derived* | ~600 *stated* | Cherry | Score on screen | dc:75462 |
    | 1T 312G | 1.8G | 728 | Cherry, Pomegranate Lv.1, Scorpion Lv.10 | Result screen | dc:76135 |
    | 1T 116G | 1.74G | 641 | Cherry, Scorpion Lv.45 | Result screen | dc:75400 |
    | 1T 086G | 2.61G | ≈416 | Coffee Cookie in Cherry's slot, fillers Lv.50–60 (TW client) | Video frames | web:yt-K0aJ56DdQvc |
@@ -82,7 +82,7 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
 
 9. **Past 2T, the carries usually outlive the 17 s wipe.**
    - **The screens.** Every ≥2T screen that shows the timer or a survival note outlives it. The 2T 204G run keeps 5–6 cookies, Brightseeker included, alive past it (dc:80067); the 2T 186G run keeps every Lv.100 but Milk (dc:81110); the 2T 130G run ends at 5.2 s left (dc:79943). 캔디애플's Melon Soda team, later 2T 030G, doesn't survive (dc:80069, dc:79882). The first round's survival hypothesis now has run screens behind it, though no single build is shown surviving at 3T+.
-   - **What it takes.** Posters estimate 10–13M+ HP per survivor, *stated* rather than measured: a 13.4M HP, 43% DR Brightseeker lived to about 7 s left (dc:79585), a 10.4M HP, 39% DR Milk died (dc:79144), and a poster whose Pomegranate and Skating Queen alone survive puts the bar past 11M (dc:80785). The first round's 9M floor came with 45% DR (dc:74801), and 5–9M is the band that safely reaches 17 s, not past it (dc:81699). Panda Dumpling places Tiger Lily better while the team dies at 17 s; Candy Shade Pouch's HP wins once carries survive (dc:81699, dc:79169).
+   - **What it takes.** In Season 6, at Lv.100, posters estimated 10–13M+ HP per survivor, *stated* rather than measured (Season 7's lower bar is in reasoning 11): a 13.4M HP, 43% DR Brightseeker lived to about 7 s left (dc:79585), a 10.4M HP, 39% DR Milk died (dc:79144), and a poster whose Pomegranate and Skating Queen alone survive puts the bar past 11M (dc:80785). The first round's 9M floor came with 45% DR (dc:74801), and 5–9M is the band that safely reaches 17 s, not past it (dc:81699). Panda Dumpling places Tiger Lily better while the team dies at 17 s; Candy Shade Pouch's HP wins once carries survive (dc:81699, dc:79169).
    - **What it's worth, disputed.** The boss takes full damage to 10 s elapsed, then 10/30/50/70/90% less from 10/22/34/46/58 s (dc:81844, *derived* from game data; the same table is on crumb.gg's Guild Conquest page, `evidence/r2026-10-07/15-crumbgg/40-guild-conquest-db.txt`). Past the wipe, from 43 to 46 s elapsed hits count at 50%, then 30% from 46 s, then 10% from 58 s. Posters still put survival at +300–600G for a run that reaches 1.5T by 17 s (dc:79493, *stated*); a 1T guide says keep the damage pets and take the wipe (nv:48773).
 
 10. **Season 6: the boards doubled, the teams stayed hidden.**
@@ -96,23 +96,23 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
 
       | Damage | Team power | 배 | What's observed | Source |
       |---|---|---|---|---|
-      | 4T 648G | not shown | — | In battle at 13.7 s left, all alive; final not shown | dc:83836 |
+      | 4T 647G | not shown | — | In battle at 13.7 s left, all alive; Lv.118 core, fillers Lv.1, Dark Choco Lv.20; final not shown | dc:83836 |
       | 4T 300G | 4.29G | ≈1000 | Lobby; Pomegranate Lv.1, fillers Lv.40 | dc:83991 |
-      | 4T 228G | 4.55G | 929 | Result screen | dc:83653 |
-      | 4T 078G | ≈4.0G *derived* from 1020× | 1020 *stated* | Result screen; move speed tuned on Pinot and Melon Soda | dc:84283 |
+      | 4T 227G | 4.55G | 929 | Result screen | dc:83653 |
+      | 4T 077G | ≈4.0G *derived* from 1020× | 1020 *stated* | Result screen; move speed tuned on Pinot and Melon Soda | dc:84283 |
       | 3T 966G | 3.91G | ≈1014 | Lobby; every filler Lv.1 | dc:83491 |
       | 2T 756G | 3.53G | 780 | Lobby; Scorpion Lv.60 | dc:83521 |
       | 2T 501G | 3.89G | ≈643 | Video result screen; Chardonnay 5★ | web:yt-RKNiw1fRosw |
 
-      Text-only: 3.6T for an 8★ Chardonnay against 3.8T for the same account's 9★ Macaron Cherry deck (dc:83310); 1200× (dc:83573).
+      Scores are truncated as the game shows them (4,227,877,443,138 is 4T 227G). Text-only: 3.6T for an 8★ Chardonnay against 3.8T for the same account's 9★ Macaron Cherry deck, posted an hour into Season 7 (dc:83310); 1200× (dc:83573).
     - **Why it works.** Her line buff reaches the carries wherever they stop, so Cherry and move speed have no job left (dc:83991). Milk and Chardonnay receive 탄속 and take Pomegranate's beams first at any ATK; the other beams go by ATK (dc:83476, dc:83488, dc:83504). Her crit buff scales with skill amp; only her Push RES doesn't (dc:83255).
     - **Tiger Lily stays.** Chardonnay's 다발 2 gives 5 beams; the best 다발 held counts, so Tiger Lily's 다발 3 is still the sixth (dc:84290, dc:83229). Her Push RES keeps Pomegranate out of Tiger Lily's range in some runs; one poster tunes Pinot and Melon Soda speed to catch it in 2 of 3 (dc:83533, dc:84283), *stated*.
-    - **Level 120.** Cookie Lv.120 needs account level 200, so day-one cores are Lv.114–118 (dc:83039, web:yt-RKNiw1fRosw). At those levels the wipe is survivable: all twelve alive past 17 s in the 2.5T video, fillers at Lv.50–90 alive to 5.8 s (dc:83608). Level rules stay relative to the 6th recipient's ATK, checked after Octo Wasabi's bonus (nv:51157).
+    - **Level 120.** Cookie Lv.120 needs account level 200, so day-one cores are Lv.114–118 (dc:83039, web:yt-RKNiw1fRosw). At those levels the wipe is survivable: all twelve alive past 17 s in the 2.5T video, fillers at Lv.50–90 alive to 5.8 s (dc:83608). Posters put the bar at about 9M in-game HP, *stated*: "체력 한9m되니까 사는거같음" (dc:83608), and 9.2M on the Lv.1 fillers of the 4T 647G run, alive at 13.7 s left (dc:83836). Level rules stay relative to the 6th recipient's ATK, checked after Octo Wasabi's bonus (nv:51157).
     - **The boards.** Season 7 opened 10-08 16:00 KST and ends 10-12 12:00 KST. On 10-09 14:26 KST: #1 환상 10T 266G, #50 5T 328G, #100 4T 413G; the players on both boards sit at 1.2–2.7× their Season 6 finals, median 1.84× (`evidence/r2026-10-09/15-crumbgg/11-players.tsv` joined with `evidence/r2026-10-07/15-crumbgg/11-players.tsv`). Season 6's #1, Arsen, isn't in the top 100.
 
 ## Steelman: "more power is all you need"
 
-**The case.** Damage is team power × multiple, so power multiplies everything. Season 6 bears it out on the boards: every player on both seasons' boards rose (1.16–2.13×), though that says nothing of players on only one, and the forum's ≥2T screens sit at 2.86–4.23G team power, well above the first round's 1.8G. Survival past the wipe takes 10–13M+ HP by posters' estimate, which is power by another name. Plates at +20 and +25, said to be behind the #1, are bought power.
+**The case.** Damage is team power × multiple, so power multiplies everything. Season 6 bears it out on the boards: every player on both seasons' boards rose (1.16–2.13×), though that says nothing of players on only one, and the forum's ≥2T screens sit at 2.86–4.23G team power, well above the first round's 1.8G. Survival past the wipe took 10–13M+ HP by Season 6 posters' estimate at Lv.100, and about 9M at Season 7's Lv.114–118, which is power by another name. Plates at +20 and +25, said to be behind the #1, are bought power.
 
 **The answer, point by point.**
 - **Equal power, different results.** One deck at one power gave 208–783× across 100 runs (dc:80859). At 3.82G a team scored 2T 130G; at 2.86G another scored 2T 204G (dc:79943, dc:80067).
@@ -132,7 +132,7 @@ As a falsifiable statement: there is a small, documented set of Guild Conquest t
 - Tiger Lily's haste has been tuned, but runs still often show 5 Pomegranate beams.
 
 **Since 10-08, first switch to the Chardonnay deck** (reasoning 11, `curated/meta.json`):
-- Chardonnay at max level in Macaron's slot, all skill-amp runes; 9–10★ is what the 4T runs show (dc:83991, dc:83491), and most posters say 5★ already beats a 9★ Macaron (dc:83841, dc:84142).
+- Chardonnay at max level in Macaron's slot, all skill-amp runes; 9–10★ is what the 4T runs show (dc:83991, dc:83491). The one paired test had an 8★ losing to a 9★ Macaron, 3.6T to 3.8T, and its thread puts the threshold at 9★ (dc:83310). Posters who say 5★ already wins give no paired run (dc:83841); multiples like "4× my old score" at 6★ compare against pre-patch scores (Lv.118 vs Lv.100), so they are mostly the level gain, not evidence about stars (dc:84142).
 - Melon Soda at Lv.1 in Cherry's slot, no move speed; Strawberry Crepe Lv.50 is the alternative (dc:83653, dc:83515).
 - Keep Tiger Lily and restart runs where Pomegranate misses her 다발 3 (dc:84290, dc:84283).
 - At the Chardonnay deck's 640–1000×, 2.2G makes about 1.4–2.2T (*derived*).
@@ -146,7 +146,7 @@ The steps below date from 10-07; those about Macaron or Cherry no longer apply, 
    - **What's left is positioning.** Even with haste, 6 beams depend on Pomegranate standing near Tiger Lily when Tiger Lily mounts. Panda Dumpling, not Candy Shade Pouch, lets her get pushed into place while the team still dies at 17 s (dc:81699).
    - **Use the checklist as a retry filter.** Pomegranate should hold 다발 2 by the HUD's 45 s mark and 다발 3 by the 27 s mark (dc:70056). A run that misses 다발 3 stays at 5 beams, so restart it (a *derived* use of the checklist). Whether "45초/27초" means time left or time elapsed is still ambiguous (see Side findings).
 2. **Brightseeker to 10★.**
-   - **Evidence.** The 1.62T and 1T 999G author runs a 10★ Brightseeker (dc:75462, *stated*). 10★ opens two more rune slots (dc:66636).
+   - **Evidence.** The 1T 617G and 1T 999G author runs a 10★ Brightseeker (dc:75462, *stated*). 10★ opens two more rune slots (dc:66636).
    - **Size of the gain.** Unmeasured for 8★ → 10★. Star thresholds posters report for 500×: Brightseeker 6–7★ with Milk 9–10★ and Tea Knight 4–5★ (dc:81335, *stated*).
    - **Haste.** 45 in combat is already in the 40–50 band where returns flatten (nv:44761). Don't chase more, and stay under about 58 (dc:75934).
 3. **Reroll the ATK% lines on Macaron and Skating Queen to skill amp.** Milk keeps all ATK%.
@@ -156,7 +156,7 @@ The steps below date from 10-07; those about Macaron or Cherry no longer apply, 
    - **The target.** Exactly 7th in ATK, checked in battle (dc:71105). In the lobby, hold her at least 10% under the 6th cookie, because Octo Wasabi adds about 8% ATK when she enters (dc:76135). Season 6 runs use Lv.10–60 (dc:79585, dc:80159).
    - **Lv.40.** It's inside the documented range. Whether it's right depends only on where she lands in the in-battle order.
 5. **Raid gear preset** (`curated/gear.json`): weapons skill amp + crit dmg, top-right haste + skill amp, armour damage reduction + HP, bottom-right haste + damage reduction. No move speed, accuracy or focus.
-6. **Then survival, once the carries hold 10–13M HP** (posters' estimate; 5–9M only reaches 17 s, dc:81699). Level the fillers to just under the 6th cookie's ATK so they outlive the 17 s wipe and add chip damage, as the 2T 204G build does (dc:80067, dc:79270), and switch to Candy Shade Pouch then (dc:79169). Below that HP, keep Lv.1 fillers and the damage pets (nv:48773).
+6. **Then survival, once the carries hold about 9M+ in-game HP.** Season 7 note: at Lv.114–118 posters say about 9M survives (dc:83608, dc:83836, *stated*); the Season 6 estimate at Lv.100 was 10–13M, with 5–9M only reaching 17 s (dc:81699). Level the fillers to just under the 6th cookie's ATK so they outlive the 17 s wipe and add chip damage, as the 2T 204G build does (dc:80067, dc:79270), and switch to Candy Shade Pouch then (dc:79169). Below that HP, keep Lv.1 fillers and the damage pets (nv:48773).
 7. **Retry after a build change, not instead of one.** The best run is 29% over the median (*derived*), in line with "best of 20 + 10–20%" (dc:74815). `tools/conquest-macro/` automates the retry loop.
 
 ## What would change the verdict
@@ -190,14 +190,16 @@ Window: 2026-10-07 (the last refresh heading) to 2026-10-09. Patches in it: 1.5.
 | Change | Recommendation | Evidence |
 |---|---|---|
 | added | deck `chardonnay`, Chardonnay deck: Chardonnay for Macaron, Melon Soda for Cherry; 4T 300G at 4.29G | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md`, `83491.md`, `84283.md`, `evidence/r2026-10-09/08-extract/videos.json` |
-| obsoleted since 2026-10-08 | deck `cherry`, Cherry deck: Chardonnay takes Macaron's role line-wide, so Cherry's formation job is gone; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md`, `83473.md`, `83310.md` |
-| obsoleted since 2026-10-08 | deck `cherry-levelled`, Cherry deck with levelled fillers: same Macaron and Cherry core, beaten by its author's Chardonnay deck by over 1T; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md`, `83608.md` |
-| obsoleted since 2026-10-08 | deck `meso`, Melon Soda deck: its move speed served Macaron's narrow buff; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md`, `84283.md` |
-| obsoleted since 2026-10-08 | deck `meso-nospeed`, Melon Soda deck with no move speed: 3T 045G at 4.23G against the Chardonnay deck's 4T 300G at 4.29G; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `evidence/r2026-10-07/03-dc-posts/76966.md` |
-| obsoleted since 2026-10-08 | rune build `메소` (move speed): the Chardonnay deck runs Melon Soda without it | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md` |
+| obsoleted since 2026-10-08 | deck `cherry`, Cherry deck: Chardonnay's crit buff covers the whole line, so Cherry's formation job is gone, and from 9★ she beats Macaron; counter-case an 8★ Chardonnay losing to a 9★ Macaron, 3.6T to 3.8T; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md`, `83473.md`, `83118.md`, `83310.md` |
+| obsoleted since 2026-10-08 | deck `cherry-levelled`, Cherry deck with levelled fillers: crit buffs don't stack, so Macaron goes, and Cherry only served her; Season 7's ≈4.3T observed against a Cherry deck's stated 3.8T; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83118.md`, `83473.md`, `83310.md` |
+| obsoleted since 2026-10-08 | deck `meso`, Melon Soda deck: move speed is no longer needed for formation, and now only tunes Tiger Lily's reach; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md`, `84283.md`, `83491.md` |
+| obsoleted since 2026-10-08 | deck `meso-nospeed`, Melon Soda deck with no move speed: same Macaron core and reasoning as `cherry-levelled`; superseded by `chardonnay` | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83118.md`, `83473.md`, `83310.md` |
+| obsoleted since 2026-10-08 | rune build `메소` (move speed): no longer needed for formation; speed now only tunes Tiger Lily's reach | `evidence/r2026-10-09/03-dc-posts/83991.md`, `83653.md`, `84283.md`, `83491.md` |
 | added | rune builds `샤르도네` (all skill amp) and `메소` (crit, as a sub-dealer); the Chardonnay deck on every rune build that still applies | `evidence/r2026-10-09/03-dc-posts/83255.md`, `83476.md`, `evidence/r2026-10-09/08-extract/videos.json` |
 | added | gear rec: weapons skill amp + crit rate or flat ATK (disputed) | `evidence/r2026-10-09/07-nv-posts/nv-51157.md`, `evidence/r2026-10-09/03-dc-posts/84162.md` |
-| added | mechanics: 탄속 beam priority, the six recipients, crit buffs not stacking, Chardonnay's skill-amp scaling, Tiger Lily's 다발 3 against Push RES (disputed), level 120's account gate, Season 7 survival, Season 7 keeps the Piñata | `evidence/r2026-10-09/03-dc-posts/83476.md`, `84290.md`, `83118.md`, `83255.md`, `83533.md`, `83039.md`, `83836.md`, `evidence/r2026-10-09/15-crumbgg/40-guild-conquest-db.txt` |
+| added | mechanics: the rules the round established about Chardonnay, level 120 and Season 7, each row in `curated/mechanics.json` | `evidence/r2026-10-09/03-dc-posts/83476.md`, `84290.md`, `83118.md`, `83255.md`, `83533.md`, `83039.md`, `83836.md`, `evidence/r2026-10-09/15-crumbgg/40-guild-conquest-db.txt` |
+| changed | mechanic "HP that outlives the wipe": Season 7's about 9M in-game at Lv.114–118 beside Season 6's 10–13M at Lv.100 | `evidence/r2026-10-09/03-dc-posts/83608.md`, `83836.md` |
+| changed | rune build `피노`: the Chardonnay deck's lines (HP amp, DR, DEF amp, or speed for Tiger Lily); gear rec weapons skill amp + crit dmg: the crit-rate reason no longer names Macaron | `evidence/r2026-10-09/08-extract/videos.json`, `evidence/r2026-10-09/03-dc-posts/84283.md`, `83310.md` |
 | changed | mechanics "Beam count", "Who grants 다발" and "Chardonnay grants 다발 1–2": released values (CRIT% 60–120%, not 50–100%) and her barrier as a 다발 2 source | `evidence/r2026-10-09/15-crumbgg/api/data-patches.json`, `evidence/r2026-10-09/03-dc-posts/84290.md` |
 | added | rng factors: Tiger Lily's 다발 3 with Chardonnay; beam steals near equal ATK | `evidence/r2026-10-09/03-dc-posts/84283.md`, `83736.md` |
 | added | scores: Season 7 forum and video runs and the live board's #1 and #50 (earlier rows kept); rankings: Season 7 live boards, `capturedAt` 2026-10-09 | `evidence/r2026-10-09/08-extract/`, `evidence/r2026-10-09/15-crumbgg/11-players.tsv`, `12-guilds.tsv` |
@@ -207,16 +209,17 @@ Window: 2026-10-07 (the last refresh heading) to 2026-10-09. Patches in it: 1.5.
 
 ### Unconfirmed this round
 
-- Decks `herb`, `cheesecake-recipient` and `lottery`: no source in the round mentions them (`dc-cheesecake-deck` and `dc-lottery-deck` came back empty; `dc-tobeol`, `dc-tobeol-deck` and the discovery search `다발` came back without them). They stay as they were, though each still lists Macaron.
+- Decks `herb`, `cheesecake-recipient` and `lottery` stay current, but only because nothing tests them. Each still runs Macaron, and `herb` and `cheesecake-recipient` Cherry too, so the round's Macaron and Cherry evidence bears on them; yet no source in the round runs any of them (`dc-cheesecake-deck` and `dc-lottery-deck` came back empty; `dc-tobeol`, `dc-tobeol-deck` and the discovery search `다발` came back without them), and not being tested isn't evidence. `herb` is the Cherry deck's Herb version, kept for its survival-fallback slot, which no source tested: treat it with caution.
 - Rune builds `마카롱` and `체리`, and the raid gear presets other than weapons: no Season 7 post re-measures them.
 
 ### Couldn't settle
 
-- **The Chardonnay star threshold.** One account's 8★ Chardonnay (3.6T) lost to its 9★ Macaron Cherry deck (3.8T), text only (dc:83310); others report 5★ tripling 9★ Macaron (dc:83841). Paired screens at equal power would settle it.
+- **The Chardonnay star threshold.** One account's 8★ Chardonnay (3.6T) lost to its 9★ Macaron Cherry deck (3.8T), text only (dc:83310); others report 5★ tripling 9★ Macaron with no paired run, which may include the Lv.100 → 118 gain (dc:83841). Paired screens at equal power and level would settle it.
 - **Whether Tiger Lily's 다발 3 reliably reaches Pomegranate past Chardonnay's Push RES.** Posters disagree (dc:83533, dc:83423); move-speed tuning is one poster's 2 of 3 runs (dc:84283). A run log with the 다발 counter would settle it.
 - **The Season 7 top 10's teams.** The live board shows 7.8–10.3T with no lineup; Season 6's #1 isn't in the top 100. A posted lobby from any of them would settle it.
 - **Account power.** crumb.gg's `/pub/leaderboard` answered 404 on 10-09, so no power board joins the Season 7 scores this round.
 - **Levels across the patch.** Scores before 10-08 ran Lv.100 cores, those after Lv.114–118; no source isolates the level gain from Chardonnay's.
+- **The Piñata screen's buffer-by-star table** comes from the Sugar Pocket 1.4.002 capture (`evidence/19-sugarpocket/`), which predates Chardonnay and still lists Macaron. A known gap: fixing it needs a capture of a client 1.5.002 dataset, which this round doesn't have.
 
 ## Refresh 2026-10-07
 
@@ -280,8 +283,8 @@ Every source the record used is in `curated/sources.json`, with its URL, title a
 | [dc:76583](https://m.dcinside.com/board/projectcc/76583) | Survival to 8 s left at 21G account power; female8264's 780× |
 | [dc:69331](https://m.dcinside.com/board/projectcc/69331), [dc:71121](https://m.dcinside.com/board/projectcc/71121) | 섬영's lobby screens posted by awkward2637; Tiger Lily haste runes |
 | [dc:70682](https://m.dcinside.com/board/projectcc/70682) | Two hours of retries for +16G |
-| [dc:75462](https://m.dcinside.com/board/projectcc/75462) | 1.62T at about 600×; 10★ Brightseeker on 4 haste lines |
-| [dc:75176](https://m.dcinside.com/board/projectcc/75176) | 1.07T at 2.38G (448×) |
+| [dc:75462](https://m.dcinside.com/board/projectcc/75462) | 1T 617G at about 600×; 10★ Brightseeker on 4 haste lines |
+| [dc:75176](https://m.dcinside.com/board/projectcc/75176) | 1T 066G at 2.38G (448×) |
 | [dc:76333](https://m.dcinside.com/board/projectcc/76333), [dc:76317](https://m.dcinside.com/board/projectcc/76317) | Text-only 1.3T / 1.5T / 2.8T claims |
 | [dc:74815](https://m.dcinside.com/board/projectcc/74815), [dc:76545](https://m.dcinside.com/board/projectcc/76545) | Retry odds and macro hours |
 | [dc:74801](https://m.dcinside.com/board/projectcc/74801), [dc:69856](https://m.dcinside.com/board/projectcc/69856) | The 9M HP / 45% DR survival floor |
@@ -313,9 +316,9 @@ Every source the record used is in `curated/sources.json`, with its URL, title a
 | [dc:80859](https://m.dcinside.com/board/projectcc/80859), [dc:79121](https://m.dcinside.com/board/projectcc/79121) | 100-run and 39-run logs at fixed power |
 | [dc:79585](https://m.dcinside.com/board/projectcc/79585), [dc:79144](https://m.dcinside.com/board/projectcc/79144), [dc:79169](https://m.dcinside.com/board/projectcc/79169), [dc:81699](https://m.dcinside.com/board/projectcc/81699), [dc:79493](https://m.dcinside.com/board/projectcc/79493) | Survival HP, the pet choice and what survival is worth |
 | [dc:81844](https://m.dcinside.com/board/projectcc/81844) | Boss datamine: damage-reduction phases, only the boss scores |
-| [dc:83991](https://m.dcinside.com/board/projectcc/83991), [dc:83653](https://m.dcinside.com/board/projectcc/83653) | The Chardonnay deck: 4T 300G at 4.29G with its lobby and ATK order; 4T 228G at 4.55G and the swap that made it |
-| [dc:83491](https://m.dcinside.com/board/projectcc/83491), [dc:84283](https://m.dcinside.com/board/projectcc/84283) | 캔디애플's Chardonnay deck: 3T 966G at 3.91G (Season 7 lobby on the Piñata), 4T 078G at 1020×, move speed for Tiger Lily's 다발 |
-| [dc:83521](https://m.dcinside.com/board/projectcc/83521), [dc:83836](https://m.dcinside.com/board/projectcc/83836), [dc:83608](https://m.dcinside.com/board/projectcc/83608), [dc:83953](https://m.dcinside.com/board/projectcc/83953), [dc:84089](https://m.dcinside.com/board/projectcc/84089), [dc:83515](https://m.dcinside.com/board/projectcc/83515), [dc:84284](https://m.dcinside.com/board/projectcc/84284), [dc:84312](https://m.dcinside.com/board/projectcc/84312) | Season 7 runs with lineups: 780×, 4T 648G mid-run past the wipe, levelled fillers alive to 5.8 s, Strawberry Crepe and Popcorn variants, no Tiger Lily, a team that still wipes |
+| [dc:83991](https://m.dcinside.com/board/projectcc/83991), [dc:83653](https://m.dcinside.com/board/projectcc/83653) | The Chardonnay deck: 4T 300G at 4.29G with its lobby and ATK order; 4T 227G at 4.55G and the swap that made it |
+| [dc:83491](https://m.dcinside.com/board/projectcc/83491), [dc:84283](https://m.dcinside.com/board/projectcc/84283) | 캔디애플's Chardonnay deck: 3T 966G at 3.91G (Season 7 lobby on the Piñata), 4T 077G at 1020×, move speed for Tiger Lily's 다발 |
+| [dc:83521](https://m.dcinside.com/board/projectcc/83521), [dc:83836](https://m.dcinside.com/board/projectcc/83836), [dc:83608](https://m.dcinside.com/board/projectcc/83608), [dc:83953](https://m.dcinside.com/board/projectcc/83953), [dc:84089](https://m.dcinside.com/board/projectcc/84089), [dc:83515](https://m.dcinside.com/board/projectcc/83515), [dc:84284](https://m.dcinside.com/board/projectcc/84284), [dc:84312](https://m.dcinside.com/board/projectcc/84312) | Season 7 runs with lineups: 780×, 4T 647G mid-run past the wipe, levelled fillers alive to 5.8 s, Strawberry Crepe and Popcorn variants, no Tiger Lily, a team that still wipes |
 | [dc:84290](https://m.dcinside.com/board/projectcc/84290), [dc:83994](https://m.dcinside.com/board/projectcc/83994), [dc:83476](https://m.dcinside.com/board/projectcc/83476), [dc:83488](https://m.dcinside.com/board/projectcc/83488), [dc:83229](https://m.dcinside.com/board/projectcc/83229) | Beams: 탄속 holders first, 다발 2 vs 3, the six recipients, why Tiger Lily stays |
 | [dc:83533](https://m.dcinside.com/board/projectcc/83533), [dc:83423](https://m.dcinside.com/board/projectcc/83423), [dc:83305](https://m.dcinside.com/board/projectcc/83305) | Chardonnay's Push RES against Tiger Lily's 다발 3 (disputed) |
 | [dc:83255](https://m.dcinside.com/board/projectcc/83255), [dc:83118](https://m.dcinside.com/board/projectcc/83118), [dc:83310](https://m.dcinside.com/board/projectcc/83310), [dc:83841](https://m.dcinside.com/board/projectcc/83841) | Her crit buff scales with skill amp; crit buffs don't stack; Chardonnay vs Macaron by stars |
@@ -372,7 +375,7 @@ Not used, and why: Reddit (blocked), mrguider (Cloudflare), TikTok (JS shell), X
 ## Current state (2026-10-09)
 
 - **Done.**
-  - The 2026-10-09 round: deck `chardonnay`, the Macaron decks marked obsolete, Season 7's live boards and forum runs, and the 탄속 beam rule are in `curated/`.
+  - The 2026-10-09 round: deck `chardonnay`, the Cherry and Melon Soda decks marked obsolete (the untested Macaron decks stay current, unconfirmed), Season 7's live boards and forum runs, and the 탄속 beam rule are in `curated/`.
 - **Next, in order.**
   1. After Season 7 closes (10-12 12:00 KST), capture the final boards and any top-10 lobby.
   2. Re-check the ATK order and filler levels once recipients reach Lv.120.
