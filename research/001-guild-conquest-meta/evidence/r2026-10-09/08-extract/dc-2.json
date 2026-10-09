@@ -1,0 +1,1040 @@
+{
+  "batch": "r2026-10-09-dc-2",
+  "identification_key": "Lobby portraits carry no names; cookies are named by element icon + art, cross-checked against the author's text and the round brief. Light: 브시커 = brown hair, purple eye, pink hat; 치케 = gold/yellow hair (blue card frame); 우유 = white nurse with purple banner and pink bear; 실론 = white-bearded old knight. Water: 피겨 = gold face with purple headphones; 메소 = green hair, goggles. Grass: 샤르도네 = pale lilac/pink hair with green streaks; 정전 = teal hair, orange flower. Dark: 석류 = red curly hair; 피노 = grey hair, monocle; 닼초 = black/red hair. Fire: 전갈 = red hair. 딸크 (Strawberry Crepe) = light, pink fluffy hair (83515, by elimination: the author says he put 딸크 in the Cherry slot and it is the only non-standard cookie). Stars: each card shows five star slots; gold stars only = 1–5★, and each pink star over a gold one adds one, so N pink stars = 5+N★ (10★ = all pink). Star counts below are read that way from 2x crops; where pink/gold was ambiguous the value carries a '?'. Pets: 핫도그 = bun with sauce, 와사비문어 = green, 색동주머니 = white round with red/green trim; the number on the pet tile is transcribed as written (★N), as in the previous round.",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "83475",
+      "url": "https://m.dcinside.com/board/projectcc/83475",
+      "date": "2026-10-08",
+      "title_kr": "이제 렙조절도 덜 해도 되는거 아님?",
+      "title_en": "Don't we need less level tuning now?",
+      "relevance": 2,
+      "summary_en": "With Milk and Chardonnay guaranteed Pomegranate's straw, and Seeker / Skating Queen usually next by ATK, the poster argues only the 5th–6th ATK ranks need checking. A commenter adds that once Tea Knight reaches 10★, Cheesecake's ATK buff will be the main one.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Milk and Chardonnay take Pomegranate's straw for certain; only the 5th–6th ATK ranks still need ordering (author's reading)."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "우유 샤르도네 확정으로 받고 보통 시커 피겨가 그 다음 공격력은 되니까 5-6순위 정도만 체크해도 되겠는데", "en": "Milk and Chardonnay get it for sure, and Seeker and Skating Queen usually have the next-highest ATK, so you'd only need to check ranks 5–6"},
+        {"kr": "실론 10성시대에는 치케 공증이 메인일듯", "en": "In the 10★ Tea Knight era, Cheesecake's ATK buff will probably be the main one"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83476",
+      "url": "https://m.dcinside.com/board/projectcc/83476",
+      "date": "2026-10-08",
+      "title_kr": "샤르도네 스증 공증 두개 붙이는게 맞것지?",
+      "title_en": "Chardonnay: skill amp plus ATK% runes, right?",
+      "relevance": 2,
+      "summary_en": "The author planned ATK% runes on Chardonnay so she would get Pomegranate's buff. Commenters correct him: as a Projectile Speed (탄속) synergy recipient she is Pomegranate's first straw target regardless of ATK, even at ATK 1, so all skill amp. Milk is also a fixed straw target but still runs ATK%.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "샤르도네", "stats": "all 스증 (commenters); author's 스증 + 공증 plan rejected", "why": "탄속 synergy makes her a fixed Pomegranate straw target, so ATK doesn't matter"},
+        {"cookie": "우유", "stats": "공증", "why": "'ㅇㅇ 그래도 우유는 공증' — still ATK% for Milk despite the fixed straw (her buff scales with her ATK)"}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Cookies holding the 탄속 (Projectile Speed) synergy are Pomegranate's straw priority 1 regardless of ATK, even at ATK 1."],
+      "disagreements": ["Author: Chardonnay needs ATK% to get Pomegranate's buff. Commenters: no, 탄속 synergy fixes the straw."],
+      "quotes": [
+        {"kr": "탄속 달고 있으면 공 상관없이 석류 빨대 1순위임", "en": "If she has Projectile Speed, she's Pomegranate's straw priority 1 regardless of ATK"},
+        {"kr": "공격력이 1이어도 석류빨대 꽃힌다", "en": "Even at ATK 1 the Pomegranate straw sticks to her"},
+        {"kr": "그럼 우유 샤르도네는 석류 빨때 확정이네", "en": "So Milk and Chardonnay are guaranteed Pomegranate's straw"},
+        {"kr": "ㅇㅇ 그래도 우유는 공증", "en": "Yes, but Milk still gets ATK%"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83488",
+      "url": "https://m.dcinside.com/board/projectcc/83488",
+      "date": "2026-10-08",
+      "title_kr": "애들아 샤르도네 공격력 신경 안써도 된다",
+      "title_en": "Guys, you don't need to care about Chardonnay's ATK",
+      "relevance": 2,
+      "summary_en": "PSA: Chardonnay's straw is fixed even at ATK 1 because she holds the 탄속 synergy. A commenter jokes he first wrote 다발 (Volley) and was 'half right'.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["탄속 synergy → fixed Pomegranate straw at any ATK (repeated claim, not measured)."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "'탄속' 시너지라 공격력 1이어도 빨대고정으로 박힌다", "en": "Because it's the 'Projectile Speed' synergy, the straw is fixed on her even at ATK 1"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83490",
+      "url": "https://m.dcinside.com/board/projectcc/83490",
+      "date": "2026-10-08",
+      "title_kr": "⚠️⚠️ 샤르도네 탄속이라 공증필요없다고 ⚠️⚠️",
+      "title_en": "Chardonnay has Projectile Speed, so no ATK% needed",
+      "relevance": 1,
+      "summary_en": "Same PSA: run all skill amp on Chardonnay. A commenter notes skill-amp runes are hard to roll.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [{"cookie": "샤르도네", "stats": "all 스증", "why": "탄속 makes ATK irrelevant for the straw"}],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "올스증으로 밀어버리세요", "en": "Push her with all skill amp"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83491",
+      "url": "https://m.dcinside.com/board/projectcc/83491",
+      "date": "2026-10-08",
+      "title_kr": "4t클럽",
+      "title_en": "4T club",
+      "relevance": 3,
+      "summary_en": "캔디애플 (guild 탄산수맛쿠키, #1 at 26T 283G) posts 3T 966G, Season 7 personal rank 2, team power 3.91G (~1,013배), with Chardonnay Lv.118 in Macaron's slot and Melon Soda Lv.1 in Cherry's slot; fillers 전갈/피노/정전/닼초/메소 all Lv.1. His floor is about 3T. Tiger Lily's 다발 3 reaches Pomegranate only 'sometimes' now; Milk survives the 17 s wipe with 피감 44.7%; 정전 runs 10 skill haste.",
+      "scores": [
+        {"damage": "3T 966G", "power": "3.91G", "ratio": "~1,013배 (derived)", "deck": "샤르도네 + 메소덱 (Cherry deck with 마카롱→샤르도네, 체리→메소)", "note": "83491-1.jpg lobby, personal rank 2, 3d 17h left in Season 7. Guild board: 탄산수맛쿠키 26T 283G, OVEN 23T 967G, 史萊姆遊樂區 16T 262G. Floor '3t?'"}
+      ],
+      "teams": [
+        {
+          "name": "샤르도네 메소덱",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "6", "note": "r1c1"},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "10", "note": "r1c2"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "9", "note": "r1c3"},
+            {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "10", "note": "r1c4"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "9", "note": "r1c5; 10 skill haste per author"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "10", "note": "r1c6"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "7", "note": "r2c1; 2 pink stars"},
+            {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "9", "note": "r2c2"},
+            {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "9", "note": "r2c3"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "10", "note": "r2c4"},
+            {"kr": "우유", "en": "Milk", "level": "118", "stars": "10", "note": "r2c5 leader banner; 피감 44.7%, survives 17 s"},
+            {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "4", "note": "r2c6; four gold stars visible"}
+          ],
+          "pets": ["핫도그 ★20", "와사비문어 ★20", "색동주머니 ★17"],
+          "atk_order": [],
+          "perks": "",
+          "formation": "Has move-speed lines; author unsure they matter, plans to test move speed to get Tiger Lily's synergy onto Pomegranate",
+          "substitutions": ["마카롱 → 샤르도네 (Lv.118)", "체리 → 메소 (Lv.1)"],
+          "unorthodox": ["Every filler (전갈, 피노, 정전, 닼초, 메소) at Lv.1 while the core is at Lv.118", "Chardonnay only 7★ yet the deck reaches ~4T"]
+        }
+      ],
+      "sugar_runes": [{"cookie": "정전", "stats": "스가 10", "why": "author's answer to '정전 스가 몇줌'"}],
+      "gear": [{"slot": "?", "substats": "Milk total 피감 44.7%", "context": "raid", "why": "Milk survives the 17 s wipe; a commenter at 42.8% with 15M HP Milk dies at half HP"}],
+      "rng": ["Floor about 3T for this deck ('저점 얼마부터 뜸?' → '3t?').", "Tiger Lily's 다발 3 reaches Pomegranate only sometimes ('가끔닿음')."],
+      "mechanics": [
+        "Chardonnay's Push RES reportedly keeps Tiger Lily's 다발 3 synergy off Pomegranate; author: it still lands sometimes.",
+        "초코초코케이크: Tiger Lily gives her synergy for 1 s after casting to allies within 3 tiles, so time it with skill haste and the boss knockback skill.",
+        "Milk survives the 17 s wipe at 피감 44.7%; a commenter with 42.8% and 15M HP loses Milk. Another commenter copied the move-speed setup from an earlier post and Milk took only one gift box and lived."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "샤르도네 때문에 정글 다발 3 시너지가 석류한테 안 닿는다고 하는데 맞음?", "en": "People say Tiger Lily's Volley 3 synergy no longer reaches Pomegranate because of Chardonnay, true?"},
+        {"kr": "가끔닿음", "en": "Sometimes it reaches"},
+        {"kr": "정전이 스킬 쓰고 난 뒤 1초동안 3칸안 아군한테 시너지 주는거라 스킬가속이랑 보스 밀어내기 스킬 맞추면 될거임", "en": "Tiger Lily gives the synergy to allies within 3 tiles for 1 s after her skill, so line up skill haste and the boss-pushing skill"},
+        {"kr": "피감 44.7퍼임", "en": "DMG reduction is 44.7%"},
+        {"kr": "이전글 보고 이속 따라했더니 우유가 선물상자 하나만 맞아서 안죽음", "en": "Copied the move speed from your earlier post and Milk got hit by only one gift box and didn't die"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83494",
+      "url": "https://m.dcinside.com/board/projectcc/83494",
+      "date": "2026-10-08",
+      "title_kr": "토벌 체리는 이제 그냥 뺌?",
+      "title_en": "Do we just drop Cherry in conquest now?",
+      "relevance": 1,
+      "summary_en": "Asks what replaces Cherry; the one answer is Melon Soda.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "메소", "en": "Melon Soda"}]
+    },
+    {
+      "source": "dc",
+      "id": "83504",
+      "url": "https://m.dcinside.com/board/projectcc/83504",
+      "date": "2026-10-08",
+      "title_kr": "석류 빨대 3개아님?",
+      "title_en": "Isn't Pomegranate's straw count 3?",
+      "relevance": 2,
+      "summary_en": "The poster sees 4 Pomegranate straws, not 3. Answer: the Volley (다발) synergy raises the count. Straws on Chardonnay and Milk are fixed while the rest shift; explanation: 탄속 holders are fixed, then ATK order, which moves as Milk's ATK buff changes people's ATK.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Straws beyond the 탄속 holders shift during the fight because Milk's ATK buff changes who has the higher ATK."],
+      "mechanics": [
+        "Pomegranate straw count: 3 base, 4 when Pomegranate gets the 다발 synergy (observed).",
+        "Straw priority: 탄속 synergy recipients first (fixed), then by ATK (검머짐)."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "다발 시너지 받으면 늘어남", "en": "It increases when she gets the Volley synergy"},
+        {"kr": "석류 빨대 샤르 더네하고 우유 고정인데 다른애들 계속 바뀌거든", "en": "Pomegranate's straws on Chardonnay and Milk are fixed but the others keep changing"},
+        {"kr": "탄속 시너지인 애들은 빨대 고정 그 다음부터 공격력순", "en": "Cookies with the Projectile Speed synergy have a fixed straw; after them it's by ATK"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83515",
+      "url": "https://m.dcinside.com/board/projectcc/83515",
+      "date": "2026-10-08",
+      "title_kr": "메모용 딸크 토벌 730배",
+      "title_en": "Memo: Strawberry Crepe conquest 730x",
+      "relevance": 3,
+      "summary_en": "TTO (lobby name Poooooman, personal rank 4th) scores 1T 194G at team power 1.62G (~730배) with the Cherry deck minus Macaron and Cherry, plus Chardonnay (10★) and Strawberry Crepe (Lv.50). ATK order 우피브샤치실. Instead of tuning levels he just lowered supports-adjacent cookies so the supports get Pomegranate, and raised Scorpion 10 levels. No move speed. He found Strawberry Crepe scored higher than Melon Soda in brief testing.",
+      "scores": [
+        {"damage": "1T 194G", "power": "1.62G", "ratio": "730배 (author); ~737배 derived", "deck": "체리덱 with 마카롱→샤르도네, 체리→딸크", "note": "83515-1.jpg lobby, 3d 16h left. Guild board: 다이노사워 8T 176G, HERMES 6T 676G, 카리나 4T 916G"}
+      ],
+      "teams": [
+        {
+          "name": "딸크 샤르도네덱",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "116", "stars": "6", "note": "r1c1"},
+            {"kr": "전갈", "en": "Scorpion", "level": "60", "stars": "9", "note": "r1c2; author 'raised Scorpion 10 levels'"},
+            {"kr": "치케", "en": "Cheesecake", "level": "116", "stars": "9", "note": "r1c3"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "116", "stars": "9", "note": "r1c4"},
+            {"kr": "우유", "en": "Milk", "level": "116", "stars": "10", "note": "r1c5 leader banner"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "50", "stars": "10", "note": "r1c6"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "116", "stars": "10", "note": "r2c1; a commenter: '샤르10성 시원하네'"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "50", "stars": "10", "note": "r2c2"},
+            {"kr": "석류", "en": "Pomegranate", "level": "116", "stars": "10", "note": "r2c3"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "8", "note": "r2c4"},
+            {"kr": "딸크", "en": "Strawberry Crepe", "level": "50", "stars": "9", "note": "r2c5; light, pink hair; id by elimination + author text"},
+            {"kr": "실론", "en": "Tea Knight", "level": "116", "stars": "5", "note": "r2c6; five gold stars"}
+          ],
+          "pets": ["핫도그 ★20", "색동주머니 ★17", "와사비문어 ★19"],
+          "atk_order": ["우유", "피겨", "브시커", "샤르도네", "치케", "실론"],
+          "perks": "",
+          "formation": "No move speed",
+          "substitutions": ["마카롱 → 샤르도네", "체리 → 딸크 (Strawberry Crepe)"],
+          "unorthodox": ["Fillers at Lv.50–60 rather than Lv.1, tuned only so the supports take Pomegranate's straw", "Tiger Lily alone at Lv.1"]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Author's prior ATK order was 우브피마치실 (Milk, Seeker, Skating, Macaron, Cheesecake, Tea Knight); the new cookie shuffled it to 우피브샤치실."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "딸크 존나쌔니까 그냥넣어라 공순서 우피브샤치실", "en": "Strawberry Crepe is damn strong, just put her in. ATK order Milk, Skating, Seeker, Chardonnay, Cheesecake, Tea Knight"},
+        {"kr": "그냥 내리고 전갈 10렙 올림", "en": "Just lowered them and raised Scorpion 10 levels"},
+        {"kr": "그냥 서포터 석류받게 애들 내린거", "en": "Just lowered the others so the supporters get Pomegranate"},
+        {"kr": "체리덱에서 마카롱 체리빼고 딸크넣은것", "en": "Cherry deck minus Macaron and Cherry, plus Strawberry Crepe"},
+        {"kr": "나는 딸크가 더 잘나오긴했음", "en": "Strawberry Crepe scored better for me (vs Melon Soda)"},
+        {"kr": "이속 안넣음", "en": "No move speed"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83521",
+      "url": "https://m.dcinside.com/board/projectcc/83521",
+      "date": "2026-10-08",
+      "title_kr": "토벌 780배",
+      "title_en": "Conquest 780x",
+      "relevance": 3,
+      "summary_en": "우우웅12 posts 2T 756G at team power 3.53G (780배), personal rank 1 (guild board blacked out; the rank-1 avatar is Chardonnay). Same Chardonnay + Melon Soda deck with Scorpion at Lv.60 and the other fillers at Lv.1. ATK order given as 우시피실전; author thinks Tiger Lily can be swapped for something else.",
+      "scores": [
+        {"damage": "2T 756G", "power": "3.53G", "ratio": "780배 (author; ~781 derived)", "deck": "샤르도네 메소덱", "note": "83521-1.jpg lobby, personal rank 1 (scope unclear: guild list redacted), 3d 18h left"}
+      ],
+      "teams": [
+        {
+          "name": "샤르도네 메소덱",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "8", "note": "r1c1"},
+            {"kr": "전갈", "en": "Scorpion", "level": "60", "stars": "10", "note": "r1c2"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "10", "note": "r1c3"},
+            {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "10", "note": "r1c4"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "8", "note": "r1c5"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "10", "note": "r1c6"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "9", "note": "r2c1"},
+            {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "9", "note": "r2c2"},
+            {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "9", "note": "r2c3"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "10", "note": "r2c4"},
+            {"kr": "우유", "en": "Milk", "level": "118", "stars": "10", "note": "r2c5 leader banner"},
+            {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "4", "note": "r2c6; four gold stars"}
+          ],
+          "pets": ["와사비문어 ★20", "핫도그 ★20", "색동주머니 ★15"],
+          "atk_order": ["우유", "시커", "피겨", "실론", "전갈"],
+          "perks": "",
+          "formation": "",
+          "substitutions": ["마카롱 → 샤르도네", "체리 → 메소 (Lv.1)"],
+          "unorthodox": ["Scorpion Lv.60 placed 5th in the ATK order, after Tea Knight; Cheesecake absent from the stated order", "Author: Tiger Lily could be dropped"]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "정전빼고 다른거넣어도될듯 우시피실전", "en": "Could probably drop Tiger Lily for something else. Milk, Seeker, Skating, Tea Knight, Scorpion"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83526",
+      "url": "https://m.dcinside.com/board/projectcc/83526",
+      "date": "2026-10-08",
+      "title_kr": "토벌 시커랑 피겨중에 공 누가 더 높게함?",
+      "title_en": "Who gets higher ATK, Seeker or Skating Queen?",
+      "relevance": 1,
+      "summary_en": "Notes Chardonnay takes one of the first straw slots, so the poster asks whether Seeker or Skating Queen should have the higher ATK. No answers.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Chardonnay occupies one of Pomegranate's first straw slots."],
+      "disagreements": [],
+      "quotes": [{"kr": "샤르도네가 첫빨대자리 하나 가져가던데", "en": "Chardonnay takes one of the first straw spots"}]
+    },
+    {
+      "source": "dc",
+      "id": "83527",
+      "url": "https://m.dcinside.com/board/projectcc/83527",
+      "date": "2026-10-08",
+      "title_kr": "샤르도네랑 정전이랑 다발주는게 겹치는데 걍 정전 딜러로 바꿔도되지않음?",
+      "title_en": "Chardonnay and Tiger Lily both give Volley; swap Tiger Lily for a DPS?",
+      "relevance": 2,
+      "summary_en": "Asks why conquest players keep Tiger Lily when Chardonnay also gives 다발. Replies: Tiger Lily gives 다발 3, Chardonnay 다발 2, so Tiger Lily's is higher. Another: conquest is a Seeker launch pad, so force skill amp onto Cheesecake.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [{"cookie": "치케", "stats": "스증", "why": "'토벌은 그냥 브커 발사대' — conquest is a Seeker launch pad"}],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Tiger Lily = 다발 3 synergy; Chardonnay = 다발 2 (commenter)."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "정전은 3시너지고 샤르도네는 2시너지임", "en": "Tiger Lily is a 3 synergy and Chardonnay a 2"},
+        {"kr": "토벌은 그냥 브커 발사대라서 어거지로라도 치케 스증 먹이는 게 좋지", "en": "Conquest is just a Brightseeker launch pad, so force skill amp onto Cheesecake"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83533",
+      "url": "https://m.dcinside.com/board/projectcc/83533",
+      "date": "2026-10-08",
+      "title_kr": "근데 샤르도네 밀치기 저항있어서 정전이 석류에다가 시너지 못줌",
+      "title_en": "Chardonnay's Push RES stops Tiger Lily giving Pomegranate the synergy",
+      "relevance": 2,
+      "summary_en": "Claims Chardonnay's Push RES keeps Tiger Lily's synergy off Pomegranate, then says it seems probabilistic. A commenter asks whether Panda Dumpling (lifting further) instead of Candy Shade Pouch would change it.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Whether Tiger Lily's synergy reaches Pomegranate is described as chance ('확률')."],
+      "mechanics": ["Chardonnay's Push RES (밀치기 저항) changes positioning so Tiger Lily's synergy often misses Pomegranate (claim)."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "근데 샤르도네 밀치기 저항있어서 정전이 석류에다가 시너지 못줌", "en": "But Chardonnay has Push RES so Tiger Lily can't give Pomegranate the synergy"},
+        {"kr": "그게 확률인거 같음", "en": "Seems to be chance"},
+        {"kr": "색동주머니 대신 판다만두 써서 멀리 띄우면 못 받나?", "en": "If you use Panda Dumpling instead of Candy Shade Pouch to launch further, would she not get it?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83549",
+      "url": "https://m.dcinside.com/board/projectcc/83549",
+      "date": "2026-10-08",
+      "title_kr": "마카롱에 사르도네끼면 치증 뻥튀가능?",
+      "title_en": "Macaron plus Chardonnay: does crit stack?",
+      "relevance": 2,
+      "summary_en": "Running Macaron and Chardonnay together doesn't stack: of the same buff only the highest value applies. Commenters explain Cheesecake + Milk works differently: Cheesecake's ATK buff raises Milk's ATK, which raises Milk's own ATK buff; Milk only partly takes her own buff (3 of 10 stacks), so Cheesecake's buff is the bigger lift for her.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Same-type buffs don't stack; only the highest applies (so Macaron + Chardonnay crit buffs don't add).",
+        "Milk receives only 3 of her own 10 ATK-buff stacks; Cheesecake's ATK buff exceeds that, raising Milk's ATK and with it the buff Milk gives others."
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "같은 버프는 제일 높은 수치 하나만 적용됨", "en": "For the same buff only the single highest value applies"},
+        {"kr": "치케가 우유한테 공증 주면 우유 공격력이 뻥튀기 돼서 우유 공증 버프가 증가하는 걸 노리고 하는 거임", "en": "When Cheesecake buffs Milk's ATK, Milk's ATK inflates and so does her ATK buff; that's the goal"},
+        {"kr": "우유는 본인 공벞을 10스택중 3스택만 부분적으로 먹음. 그래서 치케 버프가 우유 3스택보다 증가폭이 높아서 우유공이 더 오르는거.", "en": "Milk only partly takes her own ATK buff, 3 of 10 stacks, so Cheesecake's buff gives a bigger increase than those 3 stacks and Milk's ATK goes up more"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83562",
+      "url": "https://m.dcinside.com/board/projectcc/83562",
+      "date": "2026-10-08",
+      "title_kr": "17초에 애들 살긴 사는데",
+      "title_en": "Everyone survives 17 s, but...",
+      "relevance": 1,
+      "summary_en": "Everyone survives the 17 s wipe except Milk. A commenter: Milk has almost no self-heal and loses too much HP to the gift boxes before 17 s. The author considers Herb instead of Tiger Lily.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Milk takes gift-box hits before 17 s and barely self-heals, so she is the one who dies at the wipe."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "얘 자힐이 거의 안돼서 17초 전에 선물 상자 맞는거에 체력 너무 갈림.", "en": "She barely self-heals, so the gift boxes before 17 s grind her HP down"},
+        {"kr": "정전 대신 허브 넣어야하나 고민중", "en": "Thinking about Herb instead of Tiger Lily"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83568",
+      "url": "https://m.dcinside.com/board/projectcc/83568",
+      "date": "2026-10-08",
+      "title_kr": "샤르도네 미친놈 토벌 280배를 그냥 뽑아주네",
+      "title_en": "Chardonnay is insane, 280x out of the box",
+      "relevance": 2,
+      "summary_en": "A low-power account went from barely 100배 to 280배 on a click with Chardonnay; result screen 279,736,634,148 with a 4★ Seeker. 캔디애플 invites him to the '1000배 club'; the poster can't get 300배 despite retries.",
+      "scores": [
+        {"damage": "279.7G (279,736,634,148)", "power": "~1.0G (derived from 280배)", "ratio": "280배 (author)", "deck": "Chardonnay deck, 4★ Brightseeker", "note": "83568-1.jpg result screen; guild rank 2nd, guild score 6T 617G (+14G 642M). Previously ~100배"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Repeated retries didn't reach 300배; poster blames the 4★ Seeker."],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "저번에만해도 100배 겨우 나오던게 이젠 딸깍으로 넘어가지는게", "en": "Last time I barely got 100x, now it's passed with one click"},
+        {"kr": "근데 이게 시커 4성 딜이라는거임", "en": "And this is with a 4★ Seeker"},
+        {"kr": "1000배 클럽 와라", "en": "Come join the 1000x club (캔디애플)"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83570",
+      "url": "https://m.dcinside.com/board/projectcc/83570",
+      "date": "2026-10-08",
+      "title_kr": "토벌 이제 정전을 빼냐 마냐 빼고 뭐넣냐 인데",
+      "title_en": "Drop Tiger Lily or not, and for what?",
+      "relevance": 1,
+      "summary_en": "Debate on dropping Tiger Lily: only she gives 다발 3, so commenters say she can't go yet; one says try DPS in her slot and you'll feel the ceiling drop immediately.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Tiger Lily is the only 다발 3 source."],
+      "disagreements": ["Some want to replace Tiger Lily (83521, 83527); here commenters say the top score needs her."],
+      "quotes": [
+        {"kr": "다발3이 정전 혼자라 아직 못 빼지 않냐", "en": "Tiger Lily is the only Volley 3, so you can't drop her yet"},
+        {"kr": "걍 정전자리 딜러몇개 돌려넣어보셈 최고점은 절대못뺀단거 바로느껴짐", "en": "Just rotate a few DPS into her slot; you'll feel right away that for the top score she can't go"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83573",
+      "url": "https://m.dcinside.com/board/projectcc/83573",
+      "date": "2026-10-08",
+      "title_kr": "샤르도네미친놈 토벌1200배찍음ㅋㅋㅋ",
+      "title_en": "Chardonnay insane, hit 1200x",
+      "relevance": 2,
+      "summary_en": "Claims 1200배 (no screenshot). Deck: the original deck with Macaron swapped for Chardonnay, Melon Soda (not Cherry).",
+      "scores": [
+        {"damage": "?", "power": "?", "ratio": "1200배 (claim, no image)", "deck": "메소덱 with 마카롱→샤르도네", "note": "unverified"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "원래덱에 마카롱빼고 샤르도네", "en": "Original deck, Macaron out, Chardonnay in"},
+        {"kr": "메소", "en": "Melon Soda (answering 'Cherry?')"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83578",
+      "url": "https://m.dcinside.com/board/projectcc/83578",
+      "date": "2026-10-08",
+      "title_kr": "시커 4성 2T 가까이 찍었네",
+      "title_en": "Nearly 2T with a 4★ Seeker",
+      "relevance": 2,
+      "summary_en": "gramPH reports close to 2T at 575배 with a 4★ Seeker and says Strawberry Crepe beats Melon Soda or Cherry. No screenshot.",
+      "scores": [
+        {"damage": "~2T (claim)", "power": "~3.4G (derived)", "ratio": "575배", "deck": "딸크 deck, 4★ 브시커", "note": "no image"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "575배다 메소나 체리 말고 딸크 좋은 듯", "en": "575x. Strawberry Crepe seems better than Melon Soda or Cherry"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83595",
+      "url": "https://m.dcinside.com/board/projectcc/83595",
+      "date": "2026-10-08",
+      "title_kr": "아니 근데 토벌점수 이정도 차이나면 마카롱 이거 빨간약 아님?",
+      "title_en": "With a score gap this big, wasn't Macaron a red pill?",
+      "relevance": 2,
+      "summary_en": "Poster asks how scores doubled if Chardonnay's crit buff equals Macaron's, implying the old 'Macaron line' worldline didn't matter. Replies: leaked data had Chardonnay at 100% crit vs Macaron 120%; scores came from Cheesecake/Milk order; others argue Macaron's buff could never cover all DPS for the whole fight, Cherry's removal and Chardonnay's sub-DPS count, plus four days of growth and today's packages.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["With Macaron, keeping every DPS in her crit buff all fight was 'nearly impossible'; players searched for the worldline where Seeker got it most."],
+      "mechanics": ["Leak: Chardonnay crit buff 100% vs Macaron 120% (언담; 83760 says both 120%)."],
+      "disagreements": [
+        "Poster / one commenter: Macaron lining up mattered little; the gains came from Cheesecake–Milk ordering.",
+        "Other commenter: Macaron could never keep all DPS crit-buffed; Chardonnay does, Cherry is gone and Chardonnay adds sub-DPS, plus growth and package spending."
+      ],
+      "quotes": [
+        {"kr": "유출때는 샤를 100퍼 마카롱 120퍼였음..", "en": "In the leak Chardonnay was 100% and Macaron 120%"},
+        {"kr": "샤를 5성이어도 마카롱 9성 따잇할거같은데", "en": "Even a 5★ Chardonnay probably beats a 9★ Macaron"},
+        {"kr": "마카롱넣으면 토벌끝까지 딜러싹다 치확받기가 아예불가능했다고", "en": "With Macaron it was outright impossible for every DPS to keep the crit buff until the end"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83608",
+      "url": "https://m.dcinside.com/board/projectcc/83608",
+      "date": "2026-10-08",
+      "title_kr": "오 5초까지 전부생존된다",
+      "title_en": "Oh, everyone survives to 5 s",
+      "relevance": 3,
+      "summary_en": "Raising the fillers' levels keeps all 12 alive until 5 s left; the in-battle shot shows 1,713,978,724,627 (1.71T) with 5.833 s on the clock. Fillers: Scorpion 50, Melon Soda 71, Pinot 90, Tiger Lily 80, Dark Choco 61; core at Lv.117. Author: about 9M in-game HP is enough, and Scorpion is set just below Cheesecake's ATK; fillers must stay below the buffers' ATK.",
+      "scores": [
+        {"damage": "≥1.71T (1,713,978,724,627 at 5.833 s left; final not shown)", "power": "?", "ratio": "?", "deck": "샤르도네 메소덱, leveled fillers", "note": "83608-1.jpg in-battle"}
+      ],
+      "teams": [
+        {
+          "name": "샤르도네 메소덱 (fillers leveled to survive)",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "?", "stars": "?", "note": "slot 1 hidden behind her skill cut-in (brown hair, purple eye visible)"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "117", "stars": "6?", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "50", "stars": "10?", "note": "ATK set just below 치케"},
+            {"kr": "메소", "en": "Melon Soda", "level": "71", "stars": "10?", "note": ""},
+            {"kr": "피노", "en": "Pinot Noir", "level": "90", "stars": "10?", "note": ""},
+            {"kr": "치케", "en": "Cheesecake", "level": "117", "stars": "?", "note": ""},
+            {"kr": "석류", "en": "Pomegranate", "level": "117", "stars": "10?", "note": ""},
+            {"kr": "피겨", "en": "Skating Queen", "level": "117", "stars": "10?", "note": ""},
+            {"kr": "정전", "en": "Tiger Lily", "level": "80", "stars": "?", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "117", "stars": "10?", "note": "HP bar visibly depleted at 5.8 s"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "61", "stars": "10?", "note": ""},
+            {"kr": "실론", "en": "Tea Knight", "level": "117", "stars": "4?", "note": "gold stars"}
+          ],
+          "pets": [],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": [],
+          "unorthodox": ["Fillers at Lv.50–90 instead of Lv.1 so they survive to the end; Scorpion's level tuned to sit just under Cheesecake's ATK"]
+        }
+      ],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["About 9M in-game HP lets fillers survive to the end (author).", "Fillers' ATK must stay below the buffers' ATK so the buffers keep Pomegranate's straw."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "렙 올려주니까 되네", "en": "Works once I raised the levels"},
+        {"kr": "체력 한9m되니까 사는거같음 인게임기준", "en": "Seems they live once HP is about 9M, in-game figure"},
+        {"kr": "치케보다 딱 낮게 설정했음", "en": "Set it just below Cheesecake (Scorpion's ATK)"},
+        {"kr": "버퍼들보다는 공 낮게 줘야되자너", "en": "You have to keep their ATK lower than the buffers'"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83619",
+      "url": "https://m.dcinside.com/board/projectcc/83619",
+      "date": "2026-10-08",
+      "title_kr": "샤르도네 스가 한줄 정도 괜찮지 않을까",
+      "title_en": "One skill-haste line on Chardonnay?",
+      "relevance": 2,
+      "summary_en": "gramPH: with 6 skill-haste gear lines Chardonnay sits at 27 skill haste; one rune line would push it past 30. A commenter: two +20 gear pieces also reach 30. Someone who put 5 SSR skill-haste runes on her is told that's too many.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [{"cookie": "샤르도네", "stats": "mostly 스증, optionally one 스가 line to reach 30+", "why": "gear's 6 스가 lines give 27"}],
+      "gear": [{"slot": "all", "substats": "6 스가 lines → 27 skill haste; two +20 pieces → 30", "context": "raid", "why": ""}],
+      "rng": [],
+      "mechanics": ["Skill haste converts to real cooldown reduction only in steps of tens; 30 is 'maybe 10% or 20%' (unsure)."],
+      "disagreements": ["'굳이?' (unnecessary) vs 'her damage is strong too, worth considering'."],
+      "quotes": [
+        {"kr": "장비 6스가 하니까 스가27이던데", "en": "With 6 skill-haste gear lines it's 27 skill haste"},
+        {"kr": "20강두개하면 30됨", "en": "Two +20 pieces gets you 30"},
+        {"kr": "ssr 스가 5개 갈았는데 그러면 안된다", "en": "I slotted 5 SSR skill-haste runes; don't do that"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83633",
+      "url": "https://m.dcinside.com/board/projectcc/83633",
+      "date": "2026-10-08",
+      "title_kr": "석류에 스가 안주는이유머야?",
+      "title_en": "Why no skill haste on Pomegranate?",
+      "relevance": 2,
+      "summary_en": "Pomegranate's buff casts every 10 s and lasts 9 s; the poster asks why not skill haste for 100% uptime. Answer: gear's base skill haste already gives 100% uptime, so runes go skill amp; only switch if your Pomegranate is 3–4★ and runes are cheap to replace.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [{"cookie": "석류", "stats": "all 스증", "why": "gear's base 스가 already keeps the 9 s buff up 100% of the 10 s cycle"}],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Pomegranate buff: 10 s cycle, 9 s duration; gear base skill haste closes the gap."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "석류에 스가 주면 버프 10초 마다 쓸때 9초 유지니까", "en": "Her buff is cast every 10 s and lasts 9 s"},
+        {"kr": "장비 기본 스가로 어차피 100퍼 유지야", "en": "Gear's base skill haste keeps it at 100% uptime anyway"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83640",
+      "url": "https://m.dcinside.com/board/projectcc/83640",
+      "date": "2026-10-08",
+      "title_kr": "1200배꿀팁푼다 0초까지생존해라",
+      "title_en": "1200x tip: survive until 0 s",
+      "relevance": 1,
+      "summary_en": "One-line tip: to hit 1200배, keep the team alive until the timer runs out.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "1200배꿀팁푼다 0초까지생존해라", "en": "1200x tip: survive until 0 s"}]
+    },
+    {
+      "source": "dc",
+      "id": "83649",
+      "url": "https://m.dcinside.com/board/projectcc/83649",
+      "date": "2026-10-08",
+      "title_kr": "토벌 레벨 쇼부존",
+      "title_en": "Conquest level showdown",
+      "relevance": 1,
+      "summary_en": "Lv.1 fillers vs levelling them enough to survive 30 s / 17 s. 언담: Lv.1 if casual; level them with ATK checks if you'll retry a lot. Another: they survive even at Lv.1, only Milk is borderline.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": ["Level fillers (with ATK checks) vs keep them at Lv.1 ('they live even at Lv.1, Milk is borderline')."],
+      "quotes": [
+        {"kr": "대충할거면 전자 트라이 많이할거면 공격력 체크하면서 후자", "en": "If casual, the former; if you'll try a lot, the latter while checking ATK"},
+        {"kr": "걍 1렙이여도 살던데 우유만 좀 아슬아슬한듯", "en": "They live even at Lv.1; only Milk is a bit marginal"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83653",
+      "url": "https://m.dcinside.com/board/projectcc/83653",
+      "date": "2026-10-08",
+      "title_kr": "토벌덱 샤르도네로 바꾸고 4.2t 달성",
+      "title_en": "Switched to Chardonnay, hit 4.2T",
+      "relevance": 3,
+      "summary_en": "저장용 scores 4,227,877,443,138 (4.23T) at team power 4.55G (929배): the old deck with Macaron → Chardonnay (max level) and Cherry → Melon Soda (Lv.1). Less variance than the Cherry deck; he'll switch for stability. His Tiger Lily has only 4 skill haste; Chardonnay runs all skill amp (not complete yet).",
+      "scores": [
+        {"damage": "4.23T (4,227,877,443,138)", "power": "4.55G", "ratio": "929배", "deck": "샤르도네 메소덱 (마카롱→샤르도네 max, 체리→메소 Lv.1)", "note": "83653-1.jpg result screen"}
+      ],
+      "teams": [
+        {
+          "name": "샤르도네 메소덱",
+          "cookies": [
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "max (최대렙)", "stars": "?", "note": "replaced 마카롱; all 스증 runes, not all slotted yet"},
+            {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "?", "note": "replaced 체리"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "?", "stars": "?", "note": "only 4 skill haste"}
+          ],
+          "pets": [],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": ["마카롱 → 샤르도네 (max level)", "체리 → 메소 (Lv.1)"],
+          "unorthodox": ["Tiger Lily with only 4 skill haste"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "샤르도네", "stats": "all 스증 (incomplete)", "why": ""},
+        {"cookie": "정전", "stats": "no rune care; 스가 4 total", "why": ""}
+      ],
+      "gear": [],
+      "rng": ["Lower variance than the Cherry deck (author, before setting a Cherry-deck best this season)."],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "팀투 4.55g 929배 기존 체리덱보다 편차도 적음", "en": "Team power 4.55G, 929x, and less variance than the old Cherry deck"},
+        {"kr": "기존덱에서 마카롱 빼고 샤르도네(최대렙) 체리 빼고 메소(1렙)", "en": "Old deck: Macaron out, Chardonnay (max level) in; Cherry out, Melon Soda (Lv.1) in"},
+        {"kr": "정전 슈가룬 따로 신경쓰지 않아서 4밖에 없음", "en": "Didn't bother with Tiger Lily's sugar runes, she has only 4"},
+        {"kr": "올스증주고 있는데 아직 몇개 덜줬음", "en": "Going all skill amp, a few still missing"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83657",
+      "url": "https://m.dcinside.com/board/projectcc/83657",
+      "date": "2026-10-08",
+      "title_kr": "샤르도네 너프 먹겠는데??????",
+      "title_en": "Chardonnay's going to get nerfed?",
+      "relevance": 2,
+      "summary_en": "A newbie at 70–80배 got 150배 on a first try by swapping Macaron → Chardonnay, and 250배 after Cherry → Melon Soda. In arena (combo deck with Melon Soda) Chardonnay in Macaron's slot beats teams at 20–30M power from 17–18M, ~80–90% win rate. His Chardonnay is 8★ with 4 skill-amp runes. Commenters say Devsisters doesn't nerf pickup cookies.",
+      "scores": [
+        {"damage": "?", "power": "?", "ratio": "70–80배 → 150배 (마카롱→샤르) → 250배 (+체리→메소)", "deck": "newbie account, first-try scores", "note": "no image"}
+      ],
+      "teams": [],
+      "sugar_runes": [{"cookie": "샤르도네", "stats": "8★, 스증 4 runes", "why": ""}],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "마카롱 > 샤르 여기서만 150배 나오더라", "en": "Macaron → Chardonnay alone gave 150x"},
+        {"kr": "체리뺴고 메소 넣으니까 250배...", "en": "Cherry out, Melon Soda in: 250x"},
+        {"kr": "내 샤르는 8성에 스증 4개 붙음", "en": "My Chardonnay is 8★ with 4 skill-amp runes"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83677",
+      "url": "https://m.dcinside.com/board/projectcc/83677",
+      "date": "2026-10-08",
+      "title_kr": "샤르도네 올스가 맞음 ?",
+      "title_en": "All skill haste on Chardonnay?",
+      "relevance": 2,
+      "summary_en": "Asks if Chardonnay should go all skill haste. Majority: all skill amp, which reportedly raises her crit buff amount; one commenter says all haste so she hits every 2 s. Her skill cycles every 4 s and lasts 5 s. Images are reaction stickers.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [{"cookie": "샤르도네", "stats": "all 스증 (majority); all 스가 (one dissent)", "why": "스증 reportedly raises her crit-buff amount; 스가 makes her attack every 2 s"}],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Chardonnay skill: 4 s cycle, 5 s duration (commenter).", "Skill amp reportedly raises Chardonnay's crit-rate buff (claim, unmeasured)."],
+      "disagreements": ["All 스증 (several, 'our server and guild say all skill amp') vs all 스가 ('딜미쳣음, hits every 2 s'); a third: if she's already on the straw as a DPS, haste isn't bad."],
+      "quotes": [
+        {"kr": "치확 버프량 더 올라갈걸", "en": "The crit-rate buff amount should go up"},
+        {"kr": "사용주기 4초 유지시간 5초", "en": "4 s cycle, 5 s duration"},
+        {"kr": "ㅇㅇ 올스가임 딜미쳣음 올스가하면 2초마다 딜함", "en": "Yes, all haste, damage is insane, with all haste she deals damage every 2 s"},
+        {"kr": "우리서버랑 길드에선 올 스증이라고 하던데", "en": "My server and guild say all skill amp"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83678",
+      "url": "https://m.dcinside.com/board/projectcc/83678",
+      "date": "2026-10-08",
+      "title_kr": "토벌은 치확의미없음?",
+      "title_en": "Is crit rate pointless in conquest?",
+      "relevance": 2,
+      "summary_en": "Screenshot compares two Eternal 환상을 여는 꿈빛지팡이 plates in a '토벌' preset: Lv.97 (crit 34.03% main; 스증 8.53%, 치피 14.23%; 209.79M) vs Lv.106 (crit 39.77%; 치확 16.76%, 스증 8.62%; 232.96M). Replies: conquest receives every growth source so crit rate's value drops and crit damage is better; another says the boss has no crit resistance, which is why crit-res substats get swapped for 피감/체력.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "plate (플레이트) 환상을 여는 꿈빛지팡이, Eternal", "substats": "Lv.97: 치확 34.03% / 스증 8.53% / 치피 14.23%; Lv.106: 치확 39.77% / 치확 16.76% / 스증 8.62%", "context": "raid ('토벌' preset)", "why": "author weighing a double-crit-rate plate"},
+        {"slot": "all", "substats": "스증 + 치피 over 치확", "context": "raid", "why": "commenter: crit rate's value falls in conquest"}
+      ],
+      "rng": [],
+      "mechanics": ["Claim: the conquest boss has no crit resistance.", "Claim: conquest applies every growth source (돌파력, research, honor, Stellar), lowering crit rate's marginal value."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "토벌은 모든 성장요소(돌파력, 연구소, 명예, 스텔라 등)을 다 받아서 치확 밸류가 떨어지는 걸로 알고 있음 그래서 치피가 더 좋다고", "en": "Conquest receives every growth source (breakthrough, lab, honor, Stellar…), so crit rate is worth less; that's why crit damage is better"},
+        {"kr": "보스가 치저가 없다고 한거 같음 그래서 부옵 치저도 다빼버리고 피감체증 이렇게 가잖아요", "en": "I think the boss has no crit res, which is why people drop crit-res substats and go DMG reduction / HP"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83688",
+      "url": "https://m.dcinside.com/board/projectcc/83688",
+      "date": "2026-10-08",
+      "title_kr": "치저는 이제 사실상 의미가 없네",
+      "title_en": "Crit res is pointless now",
+      "relevance": 1,
+      "summary_en": "Arena discussion: the poster thinks Chardonnay's crit buff makes crit res pointless; commenters argue the opposite, since in a crit-rate meta crit res (cutting 6-tier crits to 4-tier) beats 피감/HP. One claims teams start at 600% crit rate in arena.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [{"slot": "?", "substats": "치저", "context": "arena", "why": "commenters: in a crit-rate meta crit res is worth more than 피감/체력"}],
+      "rng": [],
+      "mechanics": ["Arena claim: crit rate can start at 600%; crit tiers ('6단치명타' vs '4단치명타') are reduced by crit res."],
+      "disagreements": ["Poster: crit res is pointless now. Commenters: it matters more in a crit-rate meta."],
+      "quotes": [
+        {"kr": "초동에 600퍼박고시작해서 치저장비로 120퍼라도 까야됨", "en": "They start at 600% so you have to cut at least 120% with crit-res gear"},
+        {"kr": "6단치명타랑 4단치명타의 차이인데 왜의미가없노", "en": "It's the difference between 6-tier and 4-tier crits, how is that pointless"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83691",
+      "url": "https://m.dcinside.com/board/projectcc/83691",
+      "date": "2026-10-08",
+      "title_kr": "토벌 한시간 쳐봤는데",
+      "title_en": "An hour of conquest",
+      "relevance": 2,
+      "summary_en": "After an hour the author averages ~230배, best 290배: 291G 323M at 996.57M power (personal rank 41st). Same Chardonnay + Melon Soda lineup at Lv.111. Gear is set (스가스증 / 스가피감, perks 720). 언담 advises skill amp everywhere, some haste on Seeker / Tiger Lily / Dark Choco, and many retries.",
+      "scores": [
+        {"damage": "291G 323M", "power": "996.57M", "ratio": "~292배 (derived); average ~230배", "deck": "샤르도네 메소덱", "note": "83691-1.jpg lobby, rank 41st, 3d 14h left. Guild board: 계란 12T 110G, 쫀득 11T 742G, 쭉쭉질러 9T 7G"}
+      ],
+      "teams": [
+        {
+          "name": "샤르도네 메소덱",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "111", "stars": "5", "note": "r1c1, gold stars only"},
+            {"kr": "전갈", "en": "Scorpion", "level": "60", "stars": "9", "note": "r1c2"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "9", "note": "r1c3"},
+            {"kr": "석류", "en": "Pomegranate", "level": "111", "stars": "8", "note": "r1c4"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "8", "note": "r1c5"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "9", "note": "r1c6"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "111", "stars": "6", "note": "r2c1"},
+            {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "9", "note": "r2c2"},
+            {"kr": "치케", "en": "Cheesecake", "level": "111", "stars": "8?", "note": "r2c3"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "111", "stars": "9", "note": "r2c4"},
+            {"kr": "우유", "en": "Milk", "level": "111", "stars": "8?", "note": "r2c5 leader banner"},
+            {"kr": "실론", "en": "Tea Knight", "level": "111", "stars": "5?", "note": "r2c6 gold stars"}
+          ],
+          "pets": ["색동주머니 ★10", "와사비문어 ★20", "핫도그 ★19"],
+          "atk_order": [],
+          "perks": "복지 set (720)",
+          "formation": "",
+          "substitutions": ["마카롱 → 샤르도네", "체리 → 메소"],
+          "unorthodox": ["Scorpion Lv.60, other fillers Lv.1"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "all", "stats": "스증 everywhere; some 스가 on 시커, 정전, 닼초", "why": "언담's advice"},
+        {"cookie": "브시커", "stats": "'ssr 454' (author's reply to 'Seeker's haste runes look too low'; meaning unclear)", "why": ""}
+      ],
+      "gear": [{"slot": "?", "substats": "스가스증, 스가피감", "context": "raid", "why": "author's conquest gear"}],
+      "rng": ["~230배 average, 290배 max over an hour of retries."],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "평균 230정도 나오고 290이 최대던데", "en": "Average about 230, max 290"},
+        {"kr": "애들 스증도배랑 시커 정전 닼초에 스가좀 챙겨주고 리트많이하셈", "en": "Plaster skill amp on everyone, give Seeker, Tiger Lily and Dark Choco some haste, and retry a lot"},
+        {"kr": "엉 스가스증에 스가피감했고 복지도 맞췄어", "en": "Yeah, did skill haste/amp and haste/DMG-reduction, perks set too"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83692",
+      "url": "https://m.dcinside.com/board/projectcc/83692",
+      "date": "2026-10-08",
+      "title_kr": "신규보스 와꾸바리 상당하네",
+      "title_en": "The new boss looks great",
+      "relevance": 0,
+      "summary_en": "Instagram ad for a new stage, 그레이프 디바인즈 수도원 (Grape Divines Monastery), with new boss 수도원 석상 (Monastery Statue). Not Guild Conquest.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "83694",
+      "url": "https://m.dcinside.com/board/projectcc/83694",
+      "date": "2026-10-08",
+      "title_kr": "토벌 체리 자리 고민이네",
+      "title_en": "Torn on Cherry's conquest slot",
+      "relevance": 2,
+      "summary_en": "Cherry-slot options Melon Soda / Popcorn / Strawberry Crepe: in a few runs Popcorn ≥ Melon Soda > Strawberry Crepe. Melon Soda has more potential but less stability; Popcorn is more stable.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Melon Soda: higher ceiling, less stable; Popcorn: steadier (few runs)."],
+      "mechanics": [],
+      "disagreements": ["83515 and 83578 rank Strawberry Crepe above Melon Soda; here it ranks last."],
+      "quotes": [
+        {"kr": "팝콘 >= 메소 > 딸크긴했는데", "en": "Popcorn ≥ Melon Soda > Strawberry Crepe"},
+        {"kr": "메소는 포텐셜은 좋은게 안정성이 좀 떨어지는 느낌이고 팝콘이 안정성이 좀 좋은 느낌이엿음", "en": "Melon Soda has good potential but feels less stable; Popcorn felt more stable"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83698",
+      "url": "https://m.dcinside.com/board/projectcc/83698",
+      "date": "2026-10-08",
+      "title_kr": "피겨가 석류 버프를 못받는데 왜이럼?",
+      "title_en": "Why doesn't Skating Queen get Pomegranate's buff?",
+      "relevance": 1,
+      "summary_en": "Stage-mode screenshot (stage 219-25, all cookies Lv.110): Pomegranate's straw goes to 이온 instead of Skating Queen. Answers: Skating Queen runs out of Milk's range, loses the ATK buff and falls below 이온 in ATK, so she loses the straw; group them by kiting back and forth.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Skating Queen leaving Milk's buff range drops her ATK and can lose her the straw."],
+      "mechanics": ["Straw goes to the highest ATK; Milk's buff only reaches cookies in range, so a roaming Skating Queen can fall below others."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "공격력 높은순으로 빨대 받는거라 우유버프를 이온이 받고 피겨가 못받으면 피겨 공격력이 이온보다 낮아져서 빨대도 못받는거임", "en": "The straw goes by highest ATK; if 이온 gets Milk's buff and Skating Queen doesn't, her ATK drops below 이온's and she loses the straw"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83709",
+      "url": "https://m.dcinside.com/board/projectcc/83709",
+      "date": "2026-10-08",
+      "title_kr": "토벌 장비 이거맞음?",
+      "title_en": "Is this the right conquest gear?",
+      "relevance": 2,
+      "summary_en": "Proposed conquest gear: top-left 스증/치확, bottom-left 피감/치저, top-right 스가/스증, bottom-right 스가/피감. Advice: swap 치저 for 체력 and 치확 for 치피 (small difference); crit rate 60 ≈ crit dmg 45; said to be the former #1 (foreign) conquest player's setup.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [
+        {"slot": "좌상단 (top-left)", "substats": "스증 / 치확 → advised 스증 / 치피", "context": "raid", "why": "치확 60 ≈ 치피 45"},
+        {"slot": "좌하단 (bottom-left)", "substats": "피감 / 치저 → advised 피감 / 체력", "context": "raid", "why": ""},
+        {"slot": "우상단 (top-right)", "substats": "스가 / 스증", "context": "raid", "why": ""},
+        {"slot": "우하단 (bottom-right)", "substats": "스가 / 피감", "context": "raid", "why": ""}
+      ],
+      "rng": [],
+      "mechanics": ["Crit rate 60 ≈ crit damage 45 in value (commenter; varies by runes)."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "좌상단 스증/치확 좌하단 피감/치저 우상단 스가/스증 우하단 스가/피감", "en": "Top-left skill amp/crit rate, bottom-left DMG red./crit res, top-right haste/amp, bottom-right haste/DMG red."},
+        {"kr": "치저를 체력으로바꾸고 치확을 치피로 바꾸ㅡ셈", "en": "Swap crit res for HP and crit rate for crit dmg"},
+        {"kr": "치확 60이랑 치피 45랑 거의동급이라던데", "en": "Crit rate 60 and crit dmg 45 are said to be about equal"},
+        {"kr": "전 토벌전 1위 외국유저기준으론 저렇다하더라", "en": "That's reportedly the former conquest #1 foreign player's setup"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83722",
+      "url": "https://m.dcinside.com/board/projectcc/83722",
+      "date": "2026-10-08",
+      "title_kr": "이거 설마 스증 먹냐",
+      "title_en": "Does this really scale with skill amp?",
+      "relevance": 0,
+      "summary_en": "Arena: 캔디애플 asks if 복숭봉술 (a peach cookie's skill: 3.5 s cycle, 38.3%/76.6% ATK hits, 45% evasion for 1.75 s) scales with skill amp; replies say yes, reaching 100% evasion. Side mechanic: debuffs check only focus vs resist, damage checks only accuracy vs evasion, so Scorpion's DoT can miss.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Debuffs roll focus vs resist only; damage rolls accuracy vs evasion only; Scorpion's DoT stacks can still miss (commenter)."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "디버프는 집중 저항만 보고 딜 들어가는 건 명중 회피만 본다 ㅇㅇ 전갈 도트뎀도 그래서 중첩은 쌓여도 미스나기도 함", "en": "Debuffs only check focus vs resist and damage only checks accuracy vs evasion; that's why Scorpion's DoT can stack yet miss"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83730",
+      "url": "https://m.dcinside.com/board/projectcc/83730",
+      "date": "2026-10-08",
+      "title_kr": "토벌 고수들 피겨 스가 주냐 안주냐 그냥 올스증 박아?",
+      "title_en": "Skating Queen: skill haste or all skill amp?",
+      "relevance": 1,
+      "summary_en": "Asks whether Skating Queen gets a skill-haste line or all skill amp. Answers: varies by person; one gave one haste line long ago.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [{"cookie": "피겨", "stats": "all 스증 or one 스가 line", "why": "'사람마다달라'"}],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "난 스가 한줄줫음", "en": "I gave her one haste line"}]
+    },
+    {
+      "source": "dc",
+      "id": "83736",
+      "url": "https://m.dcinside.com/board/projectcc/83736",
+      "date": "2026-10-08",
+      "title_kr": "토벌 전갈 메소 등 1렙 주던 애들 렙 주려는데 질문",
+      "title_en": "Levelling the Lv.1 fillers (Scorpion, Melon Soda…)",
+      "relevance": 2,
+      "summary_en": "Levelling fillers raises their ATK; can they steal Pomegranate's straw mid-fight? They need at least Lv.60–70 not to die. Answers: if one steals it, retry. 언담: a 1-point ATK edge usually wins the straw, but the closer the ATK values the more often it gets stolen; many tries fix it.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Close ATK values make the straw flip between cookies; the higher-ATK one 'usually' wins (언담)."],
+      "mechanics": ["Fillers need about Lv.60–70 to survive (author).", "Straw goes to higher ATK even by 1 point 'mostly'; near-equal ATK gives a chance to lose it."],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "적어도 6~70렙은 줘야 안죽던데", "en": "They need at least Lv.60–70 not to die"},
+        {"kr": "공격력이 1이라도 차이나면 웬만하면 공높은쪽이 먹음. 근데 공격력이 비슷할수록 뺏길확률이 생기는거임. 트라이많이하면 해결됨", "en": "Even a 1-point ATK difference usually goes to the higher side, but the closer the ATK the more chance it's stolen. Lots of tries solves it"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "83745",
+      "url": "https://m.dcinside.com/board/projectcc/83745",
+      "date": "2026-10-08",
+      "title_kr": "나도합류한다",
+      "title_en": "I'm joining too",
+      "relevance": 0,
+      "summary_en": "Arena: 캔디애플 (Lv.191, power 5G 856M, 8th) sets gear auto-open to Eternal+ with 회피 + 스킬증폭 to build an evasion deck after being beaten by one. Commenters discuss evasion-deck bottom-right (crit res beat haste for one).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [{"slot": "우하단", "substats": "회피 + 치저 (one commenter) vs 회피 + 스가", "context": "arena", "why": "'6스가하면 걍 녹더라'"}],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "83760",
+      "url": "https://m.dcinside.com/board/projectcc/83760",
+      "date": "2026-10-08",
+      "title_kr": "토벌 8T는 뭐냐 사르도네 그정도임?",
+      "title_en": "What's this 8T in conquest? Is Chardonnay that good?",
+      "relevance": 1,
+      "summary_en": "Poster marvels at an '8T' conquest figure (unclear whether a guild or personal score; 83515's board shows guild 다이노사워 at 8T 176G). 언담: it's the same 120% crit rate (as Macaron).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Chardonnay's crit buff = 120%, same as Macaron's (언담; contradicts the 100% leak cited in 83595)."],
+      "disagreements": [],
+      "quotes": [{"kr": "같은 치확 120퍼라는거임..", "en": "It's the same 120% crit rate"}]
+    },
+    {
+      "source": "dc",
+      "id": "83781",
+      "url": "https://m.dcinside.com/board/projectcc/83781",
+      "date": "2026-10-08",
+      "title_kr": "본인 ㅁㅌㅊ",
+      "title_en": "Rate me",
+      "relevance": 0,
+      "summary_en": "Joke post: spent 400k diamonds on the wrong gacha, unaware of the Chardonnay pickup, got one copy while others reached 5–6★.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": []
+    }
+  ],
+  "glossary": [
+    {"kr": "샤르도네 / 샤르 / 샤를 / 사르도네 / 샤르 더네", "en": "Chardonnay", "kind": "cookie", "confidence": "high", "evidence": "grass, lilac/green hair Lv.118 in 83491/83521; authors name her"},
+    {"kr": "딸크", "en": "Strawberry Crepe (light, pink fluffy hair)", "kind": "cookie", "confidence": "high", "evidence": "83515-1.jpg: the only non-standard cookie (light, pink hair, Lv.50) where the author says he put 딸크 in Cherry's slot"},
+    {"kr": "피겨", "en": "Skating Queen (Water: gold face, purple headphones)", "kind": "cookie", "confidence": "high", "evidence": "water icon in 83491/83515/83521/83691; corrects the previous round's grass guess"},
+    {"kr": "팝콘", "en": "Popcorn", "kind": "cookie", "confidence": "low", "evidence": "83694 Cherry-slot option"},
+    {"kr": "이온", "en": null, "kind": "cookie", "confidence": "low", "evidence": "83698: a cookie taking Pomegranate's straw in stage mode; not identified"},
+    {"kr": "복숭봉술", "en": "skill of a peach cookie (evasion buff, scales with skill amp)", "kind": "term", "confidence": "low", "evidence": "83722-1.jpg skill card"},
+    {"kr": "탄속", "en": "Projectile Speed synergy (Chardonnay receives it); holders are fixed Pomegranate straw targets", "kind": "term", "confidence": "high", "evidence": "83476, 83488, 83504"},
+    {"kr": "다발", "en": "Volley synergy (Tiger Lily 3, Chardonnay 2); raises Pomegranate's straws 3→4", "kind": "term", "confidence": "high", "evidence": "83504, 83527"},
+    {"kr": "환상을 여는 꿈빛지팡이", "en": "an Eternal plate (wand)", "kind": "slot", "confidence": "high", "evidence": "83678-1.jpg"},
+    {"kr": "망고부리 / 초코왕방울 / 와사비", "en": "arena evasion-deck pets (망고부리 unidentified; 초코왕방울 = Majestic King Choco Drop?)", "kind": "pet", "confidence": "low", "evidence": "83722 comments"},
+    {"kr": "수도원 석상", "en": "Monastery Statue, new stage boss of 그레이프 디바인즈 수도원 (not conquest)", "kind": "term", "confidence": "high", "evidence": "83692-1.jpg"},
+    {"kr": "pink stars", "en": "star 6–10: each pink star over a gold one adds one (all pink = 10★)", "kind": "term", "confidence": "low", "evidence": "83515: commenter calls the all-pink Chardonnay 10★"}
+  ]
+}

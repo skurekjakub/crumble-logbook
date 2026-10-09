@@ -1484,7 +1484,10 @@
  {
   "kr": "샤르도네맛 쿠키",
   "kr_short": [
-   "샤르도네"
+   "샤르도네",
+   "샤르",
+   "사르도네",
+   "샤를도네"
   ],
   "en": "Chardonnay Cookie",
   "kind": "cookie",
@@ -1494,12 +1497,15 @@
   "synergy_received": [
    "탄속"
   ],
+  "synergy_given": [
+   "다발"
+  ],
   "skill_kr": "신록의 성역",
   "skill_en": "Sanctuary of Verdance",
   "resource_key": "cookie4011",
   "status": "playable from 1.5.002 (2026-10-08)",
-  "note": "Gives 다발 (Volley) 1–2, CRIT% and Push RES to allies in a line. Listed under [NPC] on namu before 1.5. EN from crumblehub dictionary and crumb.gg.",
-  "source": "https://crumb.gg/data/patches.json (captured 2026-10-07, 1.5.002) ; https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
+  "note": "Line barrier (1x8, 5 s): CRIT% +60→120%, Push RES 40→60% and 다발 1→2 to herself and allies in the line, 194→250% ATK damage to enemies in it, each across stars. Cooldown 4 s, first cast at 1 s, range 5.25 (crumb.gg, 10-09). Listed under [NPC] on namu before 1.5. EN from crumblehub dictionary and crumb.gg.",
+  "source": "https://crumb.gg/data/patches.json (captured 2026-10-07 and 2026-10-09, 1.5.002) ; https://namu.wiki/w/쿠키런: 크럼블 ; https://crumblehub.co/assets/LanguageRuntime-BhZ50ZVn.js"
  },
  {
   "kr": "데빌스투스 쿠키",
@@ -3006,7 +3012,7 @@
   "element": "",
   "class": "",
   "rarity": "",
-  "note": "game text",
+  "note": "game text. Milk and Chardonnay receive it; in conquest a 탄속 holder takes one of Pomegranate's beams first, whatever her ATK (dc:83476, dc:83488, dc:83991).",
   "source": "https://cookieruncrumble.app/api/catalog/gameplay (game 1.4.002, data commit e8125f78)"
  },
  {
@@ -3643,5 +3649,18 @@
   "rarity": "",
   "note": "The account's underlying build (research, plates, stars, runes) as opposed to deck choice; 'the answer is 내실' (dc:80835).",
   "source": "https://m.dcinside.com/board/projectcc/80835"
+ },
+ {
+  "kr": "샤르도네덱",
+  "kr_short": [
+   "샤르덱"
+  ],
+  "en": "Chardonnay deck",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "The Cherry deck with Chardonnay in Macaron's slot and Melon Soda (or Strawberry Crepe, Popcorn) in Cherry's (dc:83653, dc:83991).",
+  "source": "https://m.dcinside.com/board/projectcc/83991"
  }
 ]

@@ -7,8 +7,11 @@
     "mode": "guild_conquest"
   },
   "curated": "curated",
-  "extractions": ["evidence/r2026-10-07/08-extract", "evidence/08-extract"],
+  "extractions": ["evidence/r2026-10-09/08-extract", "evidence/r2026-10-07/08-extract", "evidence/08-extract"],
   "captures": [
+    { "site": "dc", "dir": "evidence/r2026-10-09/03-dc-posts", "file": "{id}.md" },
+    { "site": "nv", "dir": "evidence/r2026-10-09/07-nv-posts", "file": "nv-{id}.md" },
+    { "site": "nv", "dir": "evidence/r2026-10-09/14-global/nv-patchnotes", "file": "nv-{id}.md" },
     { "site": "dc", "dir": "evidence/r2026-10-07/03-dc-posts", "file": "{id}.md" },
     { "site": "nv", "dir": "evidence/r2026-10-07/07-nv-posts", "file": "nv-{id}.md" },
     { "site": "nv", "dir": "evidence/r2026-10-07/14-global/nv-patchnotes", "file": "nv-{id}.md" },
@@ -21,6 +24,32 @@
     { "site": "nv", "dir": "evidence/16-top-players/nv", "file": "nv-{id}.md" }
   ],
   "rankings": [
+    {
+      "file": "evidence/r2026-10-09/15-crumbgg/11-players.tsv",
+      "board": "players",
+      "capturedAt": "2026-10-09",
+      "source": "web:crumbgg:live-s{season}",
+      "columns": {
+        "season": "season",
+        "rank": "rank",
+        "name": "player",
+        "guild": "guild",
+        "value": "score_G",
+        "ref": "crumb_player_id"
+      }
+    },
+    {
+      "file": "evidence/r2026-10-09/15-crumbgg/12-guilds.tsv",
+      "board": "guilds",
+      "capturedAt": "2026-10-09",
+      "source": "web:crumbgg:live-s{season}",
+      "columns": {
+        "season": "season",
+        "rank": "rank",
+        "name": "guild",
+        "value": "score_G"
+      }
+    },
     {
       "file": "evidence/r2026-10-07/15-crumbgg/11-players.tsv",
       "board": "players",

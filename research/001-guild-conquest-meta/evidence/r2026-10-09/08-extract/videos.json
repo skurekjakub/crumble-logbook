@@ -1,0 +1,108 @@
+{
+  "batch": "videos-r2026-10-09",
+  "identification_key": "Lobby and battle-bar portraits carry no names. Cookies are named by element icon + art, cross-checked against the author's subtitles and the rune-page titles: 브라이트시커 = light shooter, brown hair, purple eye (rune page 브라이트시커 쿠키, RKNiw1fRosw-01m16.5s.jpg); 샤르도네 = grass support, pink/lilac hair with green streak (gacha card 샤르도네맛 쿠키, 풀속성 지원, RKNiw1fRosw-00m10.0s.jpg; rune page 샤르도네맛 쿠키, RKNiw1fRosw-02m03.5s.jpg); 전갈 = fire shooter, red hair; 피노누아 = dark, grey hair, monocle; 석류 = dark, red curly hair; 정글전사 = grass, teal hair, orange flower; 다크초코 = dark defense, black/red hair; 메론소다 = water shooter, green hair, goggles; 치즈케이크 = light, yellow hair; 피겨여왕 = water, yellow face with purple earmuffs (named 피겨 in the ATK-order subtitle; the only other water cookie is 메론소다); 우유 = light, white nurse with pink bear and the leader banner; 실론나이트 = light defense, white-bearded knight. Star display: the card shows five stars, gold for the first five and turning pink one by one for 6★–10★. This reading is checked against rune-line locks: Chardonnay and Tea Knight show all-gold stars and still have their ★6 rune line locked; Brightseeker shows 1 pink + 4 gold with 4 open lines and ★8 lines locked; Tiger Lily shows 4 pink + 1 gold with 6 open lines and ★10 lines locked. Stars below are given as the visible colours plus the star count this reading implies.",
+  "posts": [
+    {
+      "source": "other",
+      "id": "yt-RKNiw1fRosw",
+      "url": "https://www.youtube.com/watch?v=RKNiw1fRosw",
+      "date": "2026-10-08",
+      "title_kr": "[쿠키런크럼블] 길드 토벌전 2.5T 공략 (샤르도네)",
+      "title_en": "Guild Conquest 2.5T guide (Chardonnay)",
+      "relevance": 3,
+      "summary_en": "서신우 runs a 3.89G-power Melon Soda deck with Chardonnay (Lv.118, 5★) in Macaron's slot and scores 2,501,105,826,814 (≈2.50T, ≈643배), guild rank 1st, raising his personal best from 2T 217G by 284G 77M. Pinot, Tiger Lily and Dark Choco stay at Lv.1, Scorpion is Lv.65 and Melon Soda Lv.78 for ATK ordering, everyone else is Lv.114–118. All 12 cookies are still alive at 16.967, 11.967 and 5.967 on the timer; by 4.967 only Pomegranate and Skating Queen remain, and both survive to 0.000. Sugar runes are shown for every cookie except Scorpion and Cheesecake; Chardonnay has only 3 open lines, all 스증.",
+      "scores": [
+        {"damage": "2,501,105,826,814 (≈2.50T)", "power": "3.89G", "ratio": "≈643배", "deck": "메소덱 + 샤르도네 (Chardonnay in Macaron's slot)", "note": "result screen RKNiw1fRosw-03m07.0s.jpg: 최종 점수 2,501,105,826,814, 길드 순위 1st, 길드 점수 4T 667G (+284G 77M). Lobby power RKNiw1fRosw-00m25.5s.jpg … -01m02.0s.jpg"},
+        {"damage": "2T 217G", "power": "3.89G (same lobby)", "ratio": "≈570배", "deck": "same deck, earlier run", "note": "개인 랭킹 #1 서신우 2T 21?G, digits partly behind the overlay character; 2T 217G read across RKNiw1fRosw-00m14.0s.jpg, -00m21.0s.jpg, -00m23.5s.jpg. Consistent with the result's +284G 77M (2,501.1G − 284.1G ≈ 2,217G). Subtitle: '첫판부터 이미 450배를 넘은'"},
+        {"damage": "105,713,423,511 at timer 44.467", "power": "3.89G", "ratio": "", "deck": "same run", "note": "RKNiw1fRosw-02m20.0s.jpg"},
+        {"damage": "269,286,709,304 at timer 39.967", "power": "3.89G", "ratio": "", "deck": "same run", "note": "RKNiw1fRosw-02m24.5s.jpg"},
+        {"damage": "460,907,489,729 at timer 37.467", "power": "3.89G", "ratio": "", "deck": "same run", "note": "37 s checkpoint, RKNiw1fRosw-02m27.0s.jpg"},
+        {"damage": "1,057,556,417,861 at timer 29.967", "power": "3.89G", "ratio": "", "deck": "same run", "note": "30 s checkpoint, RKNiw1fRosw-02m34.5s.jpg"},
+        {"damage": "1,726,817,361,271 at timer 20.467", "power": "3.89G", "ratio": "", "deck": "same run", "note": "≈20 s checkpoint, RKNiw1fRosw-02m44.0s.jpg"},
+        {"damage": "1,999,481,769,429 at timer 16.967", "power": "3.89G", "ratio": "", "deck": "same run", "note": "17 s mark, all 12 alive, RKNiw1fRosw-02m47.5s.jpg"}
+      ],
+      "teams": [{
+        "name": "2.5T 메소덱 + 샤르도네 (tab 2)",
+        "cookies": [
+          {"kr": "브라이트시커", "en": "Brightseeker", "level": "118", "stars": "1 pink + 4 gold (≈6★; 4 open rune lines, ★8 lines locked)", "note": "light shooter; row1 slot1; RKNiw1fRosw-00m25.5s.jpg"},
+          {"kr": "전갈", "en": "Scorpion", "level": "65", "stars": "5 pink (≈10★)", "note": "fire shooter; row1 slot2; level tuned for ATK order incl. Octo Wasabi's % (RKNiw1fRosw-00m57.5s.jpg, -00m59.5s.jpg)"},
+          {"kr": "피노누아", "en": "Pinot Noir", "level": "1", "stars": "5 pink (≈10★)", "note": "dark support; row1 slot3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "5 pink (≈10★)", "note": "dark support; row1 slot4; levelled to the account's max ('만렙') because as the buff giver its ATK doesn't matter (RKNiw1fRosw-00m46.5s.jpg, -00m47.5s.jpg, -00m50.0s.jpg)"},
+          {"kr": "정글전사", "en": "Tiger Lily", "level": "1", "stars": "4 pink + 1 gold (≈9★; ★10 rune lines locked)", "note": "grass; row1 slot5"},
+          {"kr": "다크초코", "en": "Dark Choco", "level": "1", "stars": "5 pink (≈10★)", "note": "dark defense; row1 slot6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "5 gold (≈5★; ★6 rune line still locked, RKNiw1fRosw-02m03.5s.jpg)", "note": "grass support (SSR, NEW card RKNiw1fRosw-00m10.0s.jpg); row2 slot1; takes Macaron's slot (no Macaron in the lineup)"},
+          {"kr": "메론소다", "en": "Melon Soda", "level": "78", "stars": "5 pink (≈10★)", "note": "water shooter; row2 slot2; last in the stated ATK order"},
+          {"kr": "치즈케이크", "en": "Cheesecake", "level": "118", "stars": "4 pink + 1 gold (≈9★)", "note": "light; row2 slot3"},
+          {"kr": "피겨여왕", "en": "Skating Queen", "level": "114", "stars": "5 pink (≈10★)", "note": "water; row2 slot4; survives to timer 0.000 with Pomegranate (RKNiw1fRosw-03m04.5s.jpg)"},
+          {"kr": "우유 (바삭튼튼 소아과 의사 우유맛 쿠키)", "en": "Milk Cookie's Crunchy Strong Pediatrician", "level": "118", "stars": "5 pink (≈10★)", "note": "light; leader (용병단장) banner; row2 slot5"},
+          {"kr": "실론나이트", "en": "Tea Knight", "level": "118", "stars": "5 gold (≈5★; ★6 rune line locked, RKNiw1fRosw-01m59.5s.jpg)", "note": "light defense; row2 slot6"}
+        ],
+        "pets": ["와사비 문어 (Octo Wasabi) ★20", "핫도그도그 (Hot Doggie) ★20", "색동 주머니 (Candy Shade Pouch) ★16"],
+        "atk_order": ["우유", "시커", "피겨", "실론", "치즈", "전갈", "메론"],
+        "perks": "용병단 leader 우유; 초고속 승진 (공격력 가장 높은 아군 공격력 7% 증가) and 열정페이 (공격력 가장 높은 아군 공격력 20% 증가, 최대체력 20% 감소). 'Push Milk's ATK as high as possible; if your mercenary level is under 4, use only 승진' (RKNiw1fRosw-01m02.0s.jpg, -01m04.5s.jpg, -01m07.0s.jpg)",
+        "formation": "lobby tab 2 of 5, 2×6 grid as listed, 전투력 3.89G (RKNiw1fRosw-00m25.5s.jpg). Battle bar order differs from the lobby: Brightseeker, Chardonnay, Scorpion, Melon Soda, Pinot, Cheesecake, Pomegranate, Skating Queen, Tiger Lily, Milk, Dark Choco, Tea Knight (RKNiw1fRosw-02m07.0s.jpg)",
+        "substitutions": [
+          "마카롱 → 샤르도네: Chardonnay sits in the grass slot Macaron held in the 10-01 Cherry deck (WmSUutrNdaY) and Macaron is gone from the lineup; subtitle 'Chardonnay has the same synergy as Pomegranate' (RKNiw1fRosw-00m36.5s.jpg)",
+          "체리 → 메론소다: 'Melon went back in' (다시 메론이 들어갔는데, RKNiw1fRosw-00m10.0s.jpg); the 10-01 video used Cherry Lv.1 and said Melon needed a move-speed setup"
+        ],
+        "unorthodox": [
+          "Pinot, Tiger Lily, Dark Choco at Lv.1: 'raising them makes no damage difference and Pomegranate's buff going to them is a loss' (RKNiw1fRosw-00m51.5s.jpg, -00m53.0s.jpg, -00m55.5s.jpg)",
+          "Scorpion Lv.65 and Melon Soda Lv.78 instead of max level, to sit at the bottom of the ATK order; Scorpion's level must account for the % Octo Wasabi adds (RKNiw1fRosw-00m57.5s.jpg, -00m59.5s.jpg)",
+          "Chardonnay at 5★ with only 3 open rune lines (RKNiw1fRosw-02m03.5s.jpg)",
+          "Tea Knight at 5★ with only 3 open rune lines (RKNiw1fRosw-01m59.5s.jpg)",
+          "No cookie at Lv.120: maxed cookies show Lv.118, Skating Queen Lv.114"
+        ]
+      }],
+      "sugar_runes": [
+        {"cookie": "브라이트시커", "stats": "4 open lines, all 스킬가속: SSR +4.00, SR +3.00, SR +3.00, SSR +4.00 (= +14); locked ★8 C 회피율 0.80%, ★8 SSR 스가 +4.00, ★10 U 치명피해 2.60%, ★10 R 이동속도 +0.51", "why": "RKNiw1fRosw-01m16.5s.jpg (identical to the 10-01 video's Brightseeker page)"},
+        {"cookie": "다크초코", "stats": "8 lines all 스킬가속: SR +2.00, +3.00, +2.00, +3.00, +2.00, +2.00, +2.00, SSR +4.00 (= +20)", "why": "RKNiw1fRosw-01m21.5s.jpg"},
+        {"cookie": "석류", "stats": "8 lines all 스킬증폭: SR 3.50, 3.20, 3.50, 3.20, 3.20, 3.50, 3.20 %, SSR 4.40%", "why": "RKNiw1fRosw-01m26.0s.jpg"},
+        {"cookie": "우유", "stats": "SR 공격력 증폭 4.20%, SSR 6.50%, SR 5.10%, SR 4.20%, SR 4.70%, SSR 스킬증폭 4.40%, SSR 공증 6.10%, R 공증 3.70% (8 lines: 7 공증, 1 스증)", "why": "RKNiw1fRosw-01m34.5s.jpg"},
+        {"cookie": "피겨여왕", "stats": "8 lines all 스킬증폭: SR 3.80, 3.50, 3.20, 3.20, 3.20 %, SSR 4.40%, SR 3.20%, SSR 4.70%", "why": "RKNiw1fRosw-01m39.0s.jpg"},
+        {"cookie": "메론소다", "stats": "8 lines, crit only: SR 치명확률 5.40%, SR 치명피해 4.80%, SR 치확 4.80%, SR 치확 5.40%, SR 치피 4.80%, SR 치피 4.80%, SR 치피 5.40%, U 치피 2.20% (치확 15.6%, 치피 22.0%)", "why": "RKNiw1fRosw-01m43.5s.jpg"},
+        {"cookie": "피노누아", "stats": "SR 체력 증폭 4.20%, SR 4.20%, SSR 6.50%, SR 4.70%, SR 4.20%, SSR 6.10%, SR 피해감소 4.70%, SR 방어력 증폭 5.10%", "why": "RKNiw1fRosw-01m47.5s.jpg (same as the 10-01 video)"},
+        {"cookie": "정글전사", "stats": "6 open lines all 스킬가속: SR +2.00, SSR +4.00, SR +2.00, +2.00, +2.00, +2.00 (= +14); locked ★10 R 집중확률 3.20%, ★10 U 공격력 증폭 1.90%", "why": "RKNiw1fRosw-01m51.5s.jpg"},
+        {"cookie": "실론나이트", "stats": "3 open lines: SR 스킬증폭 3.50% ×3; locked ★6 C 스증 1.30%, ★8 SSR 스증 4.40% ×2, ★10 SSR 스증 4.40%, ★10 R 스증 2.50%", "why": "RKNiw1fRosw-01m59.5s.jpg"},
+        {"cookie": "샤르도네", "stats": "3 open lines all 스킬증폭: SR 3.50%, SSR 4.70%, SR 3.20% (= 11.40%); locked ★6 C 이동속도 +0.20, ★8 C 공격력 증폭 1.40%, ★8 R 회피율 3.20%, ★10 C 체력 증폭 0.90%, ★10 SSR 스킬증폭 4.70%", "why": "RKNiw1fRosw-02m03.5s.jpg"},
+        {"cookie": "전갈 / 치즈케이크", "stats": "?", "why": "no rune page for either among the frames"}
+      ],
+      "gear": [],
+      "rng": [
+        "'첫판부터 이미 450배를 넘은 걸 보니 샤르도네 이후로 고점이 더 높아진 것 같네요' — usual cap ~300배 of team power, first run already past 450배 (RKNiw1fRosw-00m15.0s.jpg, -00m19.0s.jpg, -00m21.0s.jpg, -00m25.5s.jpg)",
+        "Shown run checkpoints: 460.91G @37.467, 1,057.56G @29.967, 1,726.82G @20.467, 1,999.48G @16.967 (RKNiw1fRosw-02m27.0s.jpg, -02m34.5s.jpg, -02m44.0s.jpg, -02m47.5s.jpg)",
+        "No retry count given"
+      ],
+      "mechanics": [
+        "17 s mark: all 12 cookie cards lit at 16.967 (1,999.48G), 15.967 (2,056.66G), 11.967 (2,256.11G), 9.467 (2,339.56G), 7.467 (2,390.12G) and 5.967 (2,450.46G); by 4.967 only Pomegranate (Lv.118) and Skating Queen (Lv.114) remain (2,484.09G), and both survive to 0.000 (2,501.11G) (RKNiw1fRosw-02m47.5s.jpg, -02m48.5s.jpg, -02m52.5s.jpg, -02m55.0s.jpg, -02m57.0s.jpg, -02m58.5s.jpg, -02m59.5s.jpg, -03m04.5s.jpg)",
+        "Chardonnay's battle-bar card is greyed at 39.967 and 33.467 and lit again at 29.967; the cause isn't visible (RKNiw1fRosw-02m24.5s.jpg, -02m31.0s.jpg, -02m34.5s.jpg)",
+        "Run timeline: 0 @56.467 (-02m08.0s), 1.63G @52.967 (-02m11.5s), 19.77G @48.467 (-02m16.0s), 46.05G @46.467 (-02m18.0s), 105.71G @44.467 (-02m20.0s), 269.29G @39.967 (-02m24.5s), 718.35G @33.467 (-02m31.0s), 1,525.85G @23.967 (-02m40.5s), 1,797.57G @19.467 (-02m45.0s)",
+        "Chardonnay 'has the same synergy as Pomegranate' (샤르도네가 석류와 같은 시너지라, RKNiw1fRosw-00m36.5s.jpg); the follow-up '석류의 버프는 우유, 샤르도네가 …' is cut between frames -00m40.5s and -00m46.5s, so who Pomegranate's buff should reach is only partly stated",
+        "Pomegranate is the buff giver, so its own ATK doesn't matter and it goes to max level (RKNiw1fRosw-00m46.5s.jpg, -00m47.5s.jpg, -00m50.0s.jpg)",
+        "Boss lobby shows moon (dark) element, weakness sun (light) (RKNiw1fRosw-00m14.0s.jpg)",
+        "Chardonnay card: SSR, 풀속성, 지원 (RKNiw1fRosw-00m10.0s.jpg)"
+      ],
+      "disagreements": [
+        "Commenter @김우기-z9z: running this deck at 1.56G power, Milk dies around 17 s and the rest follow, ~200–250G; asks whether it's spec or retries (unanswered)",
+        "Commenter @울지마내인생: survives 17 s even without the mercenary effect, wonders if spec is the difference",
+        "Commenter @mvpWhyAmIHere restates the order as Milk, Seeker, Tea Knight, Ice Skater, Scorpion, Melon (omits Cheesecake and swaps Skating Queen / Tea Knight vs the subtitle)",
+        "Commenter @승아-p2e: lowering levels felt like a chore but gave 'overwhelming' damage",
+        "Commenter @펭구KR0 asks why a cookie is used when skill amp doesn't apply to it ('스증적용불가인데 사용하는 이유'), cookie not named; @qp7403 asks why Pinot runes are HP; @깔깔-u8y asks whether all-스증 Brightseeker should switch to all-가속; @통스팸불계치 asks from what star Seeker 스가 is worthwhile; @Min62487 asks whether Scorpion still counts the pet's 10% ATK; @알로이-w2l asks whether low-level cookies must be reset and re-levelled for other content (all unanswered in the digest)"
+      ],
+      "quotes": [
+        {"kr": "다시 메론이 들어갔는데 이번에는", "en": "Melon went back in, and this time … (over the Chardonnay NEW card, RKNiw1fRosw-00m10.0s.jpg)"},
+        {"kr": "보통 기존 전투력에서 300배를 곱하면 멈추는데 첫판부터 이미 450배를 넘은 걸 보니 샤르도네 이후로 고점이 더 높아진 것 같네요", "en": "Usually score stops around 300× team power, but the first run already passed 450×, so the ceiling seems higher since Chardonnay (RKNiw1fRosw-00m15.0s.jpg, -00m19.0s.jpg, -00m21.0s.jpg, -00m25.5s.jpg)"},
+        {"kr": "조합은 이렇게 기존 조합에서", "en": "The lineup is this, from the existing lineup … (RKNiw1fRosw-00m25.5s.jpg; the next subtitle is not in the frames)"},
+        {"kr": "공격력 순서는 차례대로 우유, 시커, 피겨, 실론, 치즈, 전갈, 메론인데 샤르도네가 석류와 같은 시너지라", "en": "ATK order: Milk, Seeker, Skating Queen, Tea Knight, Cheesecake, Scorpion, Melon; Chardonnay has the same synergy as Pomegranate … (RKNiw1fRosw-00m30.5s.jpg, -00m32.0s.jpg, -00m36.5s.jpg)"},
+        {"kr": "석류의 버프는 우유, 샤르도네가", "en": "Pomegranate's buff … Milk, Chardonnay … (sentence cut, RKNiw1fRosw-00m40.5s.jpg)"},
+        {"kr": "추가로 석류는 버프를 주는 당사자이기 때문에 공격력 상관이 없어서 만렙으로 올리고 나머지는 올려도 데미지 차이는 없고 괜히 석류 버프가 가면 손해인 애들이니 1레벨로 두시면 되며", "en": "Pomegranate gives the buff, so its ATK doesn't matter: max it. The rest make no damage difference if raised and only waste Pomegranate's buff, so leave them at Lv.1 (RKNiw1fRosw-00m46.5s.jpg … -00m55.5s.jpg)"},
+        {"kr": "추가로 전갈은 공격력 조절을 할 때 와사비로 오르는 %를 고려해야 됩니다", "en": "When tuning Scorpion's ATK, account for the % Wasabi adds (RKNiw1fRosw-00m55.5s.jpg, -00m57.5s.jpg, -00m59.5s.jpg)"},
+        {"kr": "용병단은 이렇게 우유의 공격력을 최대한 높여주고 4레벨 미만이신 분들은 승진만 사용하시면 되며", "en": "Set the mercenary corps to push Milk's ATK as high as possible; below level 4, use only Promotion (RKNiw1fRosw-01m02.0s.jpg, -01m04.5s.jpg, -01m07.0s.jpg)"}
+      ]
+    }
+  ],
+  "glossary": [
+    {"kr": "샤르도네맛 쿠키", "en": "Chardonnay Cookie", "kind": "cookie", "confidence": "high", "evidence": "NEW gacha card: SSR, 풀속성, 지원 (RKNiw1fRosw-00m10.0s.jpg); rune page title (RKNiw1fRosw-02m03.5s.jpg)"},
+    {"kr": "메론소다맛 쿠키", "en": "Melon Soda Cookie", "kind": "cookie", "confidence": "high", "evidence": "rune page title (RKNiw1fRosw-01m43.5s.jpg); water shooter, green hair, goggles in lobby"},
+    {"kr": "★ display (gold → pink)", "en": "Five stars shown; gold up to 5★, each pink star is one star above 5", "kind": "term", "confidence": "high", "evidence": "all-gold Chardonnay and Tea Knight both have their ★6 rune line locked (RKNiw1fRosw-02m03.5s.jpg, -01m59.5s.jpg); 1-pink Brightseeker has 4 open lines with ★8 locked (-01m16.5s.jpg); 4-pink Tiger Lily has ★10 lines locked (-01m51.5s.jpg). The r2026-10-07 extraction wrote these as '5 (n pink + m gold)', which under this reading means 5+n★"}
+  ]
+}
