@@ -1,0 +1,135 @@
+{
+  "web:client-1.5.002-damage-system": {
+    "url": "https://github.com/skurekjakub/crumble-logbook/blob/main/research/007-damage-formula/evidence/01-damage-formula-analysis.md",
+    "title": "Client 1.5.002: the damage system, read from the Burst-compiled code",
+    "title_en": "Client 1.5.002: the damage system, read from the Burst-compiled code",
+    "date": "2026-10-10",
+    "signal": "Derived analysis of Crumble.DamageSystem.CalculatedDamage (0x003f43b0) and CombatBonusProperty.ApplyBonus (0x00464530) in lib_burst_generated.so, Ghidra 12.1.4 with Cpp2IL 2022.1.0-pre-release.21 layouts; evidence/01-damage-formula-analysis.md"
+  },
+  "dc:31349": {
+    "url": "https://m.dcinside.com/board/projectcc/31349",
+    "title": "[📚정보] 치명 관련 스탯 정리",
+    "title_en": "[Info] Crit-related stats summary",
+    "date": "2026-08-14",
+    "signal": "relevance 2/3"
+  },
+  "dc:75589": {
+    "url": "https://m.dcinside.com/board/projectcc/75589",
+    "title": "토벌 치확이 필요함?",
+    "title_en": "Is crit rate needed in raid?",
+    "date": "2026-09-25",
+    "signal": "relevance 3/3"
+  },
+  "dc:75854": {
+    "url": "https://m.dcinside.com/board/projectcc/75854",
+    "title": "와 토벌 프리셋 신세계네 진짜",
+    "title_en": "Wow, a raid gear preset is a whole new world",
+    "date": "2026-09-26",
+    "signal": "relevance 3/3"
+  },
+  "dc:76333": {
+    "url": "https://m.dcinside.com/board/projectcc/76333",
+    "title": "5번정도 1.3T 나오면 이게 내 고점인거지?",
+    "title_en": "Hit 1.3T about five times — is that my ceiling?",
+    "date": "2026-09-26",
+    "signal": "relevance 2/3"
+  },
+  "dc:82295": {
+    "url": "https://m.dcinside.com/board/projectcc/82295",
+    "title": "[유출] 탈퇴기념 방랑자길드 토벌 유출",
+    "title_en": "[Leak] Leaving the 방랑자 guild, leaking their conquest info",
+    "date": "2026-10-07",
+    "signal": "relevance 2/3"
+  },
+  "dc:82457": {
+    "url": "https://m.dcinside.com/board/projectcc/82457",
+    "title": "Crumb 슈가룬 최적화 툴 48시간 한정 공개 (+ 비법소스에 대해)",
+    "title_en": "Crumb sugar-rune optimizer open for 48 hours (+ on the secret sauce)",
+    "date": "2026-10-07",
+    "signal": "relevance 3/3"
+  },
+  "dc:52401": {
+    "url": "https://m.dcinside.com/board/projectcc/52401",
+    "title": "[📚정보] 띄우기 저항 작동 방식 정리",
+    "title_en": "[Info] How lift (airborne) resistance works",
+    "date": "2026-08-29",
+    "signal": "relevance 3/3"
+  },
+  "dc:75400": {
+    "url": "https://m.dcinside.com/board/projectcc/75400",
+    "title": "체리덱 641배 찍었음",
+    "title_en": "Cherry deck hit 641x",
+    "date": "2026-09-25",
+    "signal": "relevance 3/3"
+  },
+  "dc:46452": {
+    "url": "https://m.dcinside.com/board/projectcc/46452",
+    "title": "[📢소식] [안내] 스킬 증폭 적용 방식 수정 및 슈가룬 재화 환급 안내",
+    "title_en": "[News] Official notice: skill amp application change + sugar rune refund",
+    "date": "2026-08-27",
+    "signal": "relevance 2/3"
+  },
+  "dc:71135": {
+    "url": "https://m.dcinside.com/board/projectcc/71135",
+    "title": "[📚정보] 토벌 체리덱 460배 세팅(ai이미지 주의)",
+    "title_en": "[Info] Guild Conquest Cherry deck 460x setup (AI-made image warning)",
+    "date": "2026-09-20",
+    "signal": "relevance 3/3"
+  },
+  "dc:48412": {
+    "url": "https://m.dcinside.com/board/projectcc/48412",
+    "title": "[일반] 토벌전 피노+판다펫 필수임",
+    "title_en": "Guild Conquest: Pinot (Noir) + Panda pet are mandatory",
+    "date": "2026-08-27",
+    "signal": "relevance 2/3"
+  },
+  "dc:81844": {
+    "url": "https://m.dcinside.com/board/projectcc/81844",
+    "title": "토벌전 피냐타 분석 - 최종 수정 완 (10/7 01:27)",
+    "title_en": "Conquest Piñata analysis, final revision",
+    "date": "2026-10-06",
+    "signal": "relevance 3/3"
+  },
+  "dc:83118": {
+    "url": "https://m.dcinside.com/board/projectcc/83118",
+    "title": "치확 버프는 중첩 안 됨? 마카롱+샤르도네 둘 다 쓰기 불가능?",
+    "title_en": "Don't crit buffs stack? Can't run Macaron and Chardonnay together?",
+    "date": "2026-10-08",
+    "signal": "relevance 2/3"
+  },
+  "dc:55485": {
+    "url": "https://m.dcinside.com/board/projectcc/55485",
+    "title": "[📚정보] 치즈 우유 버프 정리",
+    "title_en": "[Info] Cheesecake vs Milk buff interaction",
+    "date": "2026-08-31",
+    "signal": "relevance 3/3"
+  },
+  "web:25737": {
+    "url": "https://cafe.naver.com/ccrumble/25737",
+    "title": "8월 27일(목) 업데이트 안내",
+    "title_en": "8/27 update notes",
+    "date": "2026-08-26",
+    "signal": "relevance 2/3"
+  },
+  "web:sugarpocket-bundle-1.4.002": {
+    "url": "https://cookieruncrumble.app/sugar-pocket/assets/index-CAL2QT8S.js",
+    "title": "슈가포켓 번들 내장 스킬·룬 데이터 (클라이언트 1.4.002)",
+    "title_en": "Sugar Pocket bundle's embedded skill and rune dataset (client 1.4.002)",
+    "date": "2026-09-27",
+    "signal": "Per-grade buff and debuff values from the bundle's JSON.parse literal, plus the stat, skill-damage, buff and debuff-chance formulas from its code; capture, sha256 and quoted formulas in evidence/19-sugarpocket/"
+  },
+  "web:crumblehub-formulas": {
+    "url": "https://crumblehub.co/assets/formulas-B0zZ21YN.js",
+    "title": "데미지 공식 코드 (크럼블 허브)",
+    "title_en": "crumblehub's damage formula: the power penalty is the last multiplier",
+    "date": "2026-09-28",
+    "signal": "relevance 2/3"
+  },
+  "web:crumblehub-stages": {
+    "url": "https://crumblehub.co/stages",
+    "title": "스테이지 정보: 권장 스탯·전투력 보정 (크럼블 허브)",
+    "title_en": "Stage information: recommended power, accuracy/focus requirement and the power-damage brackets, game data 1.4.002 (crumblehub)",
+    "date": "2026-09-28",
+    "signal": "relevance 3/3"
+  }
+}

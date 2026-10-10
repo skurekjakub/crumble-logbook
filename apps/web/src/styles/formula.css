@@ -1,0 +1,330 @@
+/* The damage formula screen: the formula strip, the pipeline cards by phase, the crit
+   calculator, the constants, the claim rows and the method footer. Classes carry an `fx-`
+   prefix so they restyle nothing of another lane. Colours come from tokens.css only. */
+
+/* The whole product on one wrapping line: each multiplier a chip, joined by ×. */
+.formula-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 4px;
+  margin: 0;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: var(--fs-s);
+}
+.fx-term {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.fx-op {
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.fx-chip {
+  padding: 2px 8px;
+  border-radius: var(--radius-s);
+  background: var(--accent-soft);
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.fx-chip:hover {
+  outline: 1px solid var(--accent);
+}
+.fx-chip.screen {
+  background: var(--warn-soft);
+}
+
+/* Page sections and their one-line explainers. */
+.fx-sec {
+  display: grid;
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+.fx-sec > h3,
+.fx-lede {
+  margin: 0;
+}
+.fx-lede {
+  font-size: var(--fs-s);
+}
+
+/* The pipeline: a phase heading over a grid of step cards. */
+.fx-phase {
+  display: grid;
+  gap: var(--sp-2);
+}
+.fx-phase-title {
+  margin: 0;
+  font: 600 var(--fs-xs) / 1.3 var(--body);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.fx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: var(--sp-3);
+}
+.fx-step,
+.fx-constant {
+  scroll-margin-top: var(--sp-4);
+  border-left: 3px solid var(--accent);
+}
+.fx-step.fx-gate,
+.fx-step.fx-result {
+  border-left-color: var(--ink-3);
+}
+.fx-step.screen {
+  border-left-color: var(--warn);
+}
+.fx-constant {
+  border-left-color: var(--bad);
+}
+.fx-step-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+.fx-step-head h4 {
+  margin: 0;
+  font: 700 var(--fs-m) / 1.25 var(--body);
+}
+.fx-no {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font: 700 var(--fs-2xs) / 1 var(--mono);
+}
+.fx-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-left: auto;
+}
+.fx-expr {
+  display: block;
+  padding: 6px 8px;
+  border-radius: var(--radius-s);
+  background: var(--surface-2);
+  color: var(--ink);
+  font: 500 var(--fs-s) / 1.4 var(--mono);
+  overflow-wrap: anywhere;
+}
+.fx-applies,
+.fx-why,
+.fx-detail,
+.fx-measure {
+  margin: 0;
+  font-size: var(--fs-s);
+}
+.fx-applies {
+  color: var(--candy-ink);
+}
+.fx-why {
+  font-weight: 600;
+}
+.fx-const {
+  background: var(--bad-soft);
+  color: var(--bad);
+  font-family: var(--mono);
+}
+.fx-guess {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+.fx-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 8px;
+  margin-top: auto;
+}
+.fx-ref {
+  min-width: 0;
+  color: var(--ink-3);
+  font-size: var(--fs-2xs);
+  overflow-wrap: anywhere;
+}
+
+/* The crit calculator: two fields, then the multiplier, the tiers and the next-point verdict. */
+.fx-calc {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--sp-3) var(--sp-5);
+}
+.fx-calc-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+.fx-calc-fields label {
+  display: grid;
+  gap: 4px;
+}
+.fx-input {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ink-3);
+}
+.fx-input input {
+  width: 7ch;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 var(--fs-m) / 1.2 var(--mono);
+}
+.fx-input input[aria-invalid="true"] {
+  border-color: var(--bad);
+}
+.fx-calc-out {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2) var(--sp-3);
+  margin: 0;
+}
+.fx-calc-out.err {
+  color: var(--bad);
+  font-size: var(--fs-s);
+}
+.fx-big {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--accent);
+}
+.fx-next {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-size: var(--fs-xs);
+}
+
+/* Compact cited rows: a marker, the bold verdict with its detail, the sources at the end. */
+.fx-rows,
+.fx-claims {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.fx-rows li,
+.fx-claim {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 4px var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: var(--fs-s);
+}
+.fx-rows li:not(:has(.fx-mark)) {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+.fx-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font: 700 var(--fs-xs) / 1 var(--body);
+}
+.fx-mark.good {
+  background: var(--good-soft);
+  color: var(--good);
+}
+.fx-row-body {
+  min-width: 0;
+}
+
+/* Claims: the verdict badge leads; the row's edge carries the verdict's colour. */
+.fx-claim {
+  border-left: 3px solid var(--line);
+}
+.fx-claim.v-agrees {
+  border-left-color: var(--good);
+}
+.fx-claim.v-partly {
+  border-left-color: var(--warn);
+}
+.fx-claim.v-disagrees {
+  border-left-color: var(--bad);
+}
+.fx-claim.v-consistent {
+  border-left-color: var(--accent);
+}
+.fx-verdict {
+  min-width: 9ch;
+}
+.fx-claim-body {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.fx-claim-text,
+.fx-claim-code {
+  margin: 0;
+}
+.fx-claim-text {
+  font-weight: 600;
+}
+.fx-claim-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.fx-claim-ref {
+  max-width: 24ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The method: small, quiet, at the foot. */
+.fx-method {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--sp-4);
+  margin-top: var(--sp-5);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-2xs);
+}
+
+@media (max-width: 640px) {
+  .fx-calc {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fx-rows li,
+  .fx-claim {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .fx-rows li > .chips.src,
+  .fx-claim-end {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+  .fx-rows li:not(:has(.fx-mark)) > .chips.src {
+    grid-column: 1;
+  }
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "c-def",
+    "step": "defense",
+    "symbol": "C_def",
+    "field": "_combatConstantDefense",
+    "holder": "DamageSystem+0x90",
+    "label_kr": "방어 상수: 피해 비율 계산",
+    "meaning": "The target DEF at which a hit keeps 59%.",
+    "candidate": "500 (crumblehub's default)",
+    "measure": "Hit one target at two DEF values, all else equal: the damage ratio fixes C_def.",
+    "sources": ["web:client-1.5.002-damage-system", "web:crumblehub-formulas"]
+  },
+  {
+    "id": "c-inc",
+    "step": "element",
+    "symbol": "C_inc",
+    "field": "_combatConstantBaseElementDamageIncrease",
+    "holder": "DamageSystem+0x98",
+    "label_kr": "공격자 속성 피해 증가 기본값",
+    "meaning": "The base bonus on every element advantage.",
+    "candidate": "15% (crumblehub's default)",
+    "measure": "One cookie on an advantaged and a neutral target with equal DEF and RES: ratio − 1 − its element DMG.",
+    "sources": ["web:client-1.5.002-damage-system", "web:crumblehub-formulas"]
+  },
+  {
+    "id": "c-dec",
+    "step": "element",
+    "symbol": "C_dec",
+    "field": "_combatConstantBaseElementDamageDecrease",
+    "holder": "DamageSystem+0xA0",
+    "label_kr": "피격자 속성 피해 감소 기본값",
+    "meaning": "The base reduction when the target's element beats yours.",
+    "candidate": "0 (crumblehub's default)",
+    "measure": "A Light and a Fire cookie with equal stats on the Dark Piñata: Light lower means C_dec + the boss's element RES > 0.",
+    "sources": ["web:client-1.5.002-damage-system", "web:crumblehub-formulas"]
+  },
+  {
+    "id": "power-penalty",
+    "step": "power-penalty",
+    "symbol": "Penalty",
+    "field": "_combatPowerPenaltyMultiplier",
+    "holder": "DamageSystem+0xA8, from GameSettingData._combatPowerPenaltyDamageMultiplier",
+    "meaning": "Your outgoing damage multiplier from the power tier table.",
+    "candidate": "1% to 120% by power ratio (record 003's brackets)",
+    "measure": "Record 003's stage power brackets measure it: damage kept per power ratio.",
+    "sources": ["web:client-1.5.002-damage-system", "web:crumblehub-stages"]
+  }
+]

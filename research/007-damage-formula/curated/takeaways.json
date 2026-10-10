@@ -1,0 +1,37 @@
+[
+  {
+    "text": "Buckets multiply: the emptiest bucket pays the most per point.",
+    "detail": "Final DMG, skill amp, boss DMG, crit and element are separate factors; inside each, buffs add.",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "text": "Skill amp is one additive bucket: +1 point ≈ 1 ÷ (1 + total amp) more damage.",
+    "detail": "At 100% amp a point is +0.5%; at 122%, +0.45%. The damage step can't give the leak's +2%.",
+    "sources": ["web:client-1.5.002-damage-system", "dc:82295"]
+  },
+  {
+    "text": "Boss DMG is its own bucket: full value on bosses, nothing on adds.",
+    "detail": "+Δ is worth Δ ÷ (1 + Boss), whatever skill amp or crit hold.",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "text": "Crit: raise whichever of crit rate and crit DMG is lower.",
+    "detail": "Expected crit = 1 + CDR × (CR − CRES), linear past 100%; break-even at CR − CRES = CDR.",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "text": "Light on the Dark Piñata hinges on a server constant: test it.",
+    "detail": "Dark beats Light too; if C_dec + the boss's element RES > 0, Light deals less than a neutral cookie.",
+    "sources": ["web:client-1.5.002-damage-system", "dc:48412"]
+  },
+  {
+    "text": "Outside Conquest, low team power cuts your damage; Conquest has no penalty.",
+    "detail": "Arena, stages, the Rift and daily dungeons multiply your damage by a power tier; Guild Conquest doesn't.",
+    "sources": ["web:client-1.5.002-damage-system", "web:crumblehub-stages"]
+  },
+  {
+    "text": "Accuracy only counts against targets with Avoidance.",
+    "detail": "With 0 Avoidance no miss roll happens.",
+    "sources": ["web:client-1.5.002-damage-system"]
+  }
+]

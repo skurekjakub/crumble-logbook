@@ -19,14 +19,25 @@ import { CONQUEST } from "./conquest";
 import { DAILY } from "./daily";
 import { DUNGEON } from "./dungeon";
 import { RUMBLE } from "./rumble";
-import { SHARED_SECTIONS } from "./shared";
+import { FORMULA, FORMULA_SCOPE, SHARED_SECTIONS } from "./shared";
 import { STAGE } from "./stage";
 import { TEAM_POWER } from "./team-power";
 import type { ModeSection, Section, SectionTab } from "./types";
 
 export type * from "./types";
 export { modeLink, modePath, modeTab } from "./links";
-export { ARENA, CONQUEST, DAILY, DUNGEON, RUMBLE, SHARED_SECTIONS, STAGE, TEAM_POWER };
+export {
+  ARENA,
+  CONQUEST,
+  DAILY,
+  DUNGEON,
+  FORMULA,
+  FORMULA_SCOPE,
+  RUMBLE,
+  SHARED_SECTIONS,
+  STAGE,
+  TEAM_POWER,
+};
 
 /** Game modes, in tab order. */
 export const MODES: readonly ModeSection[] = [

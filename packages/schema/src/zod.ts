@@ -800,6 +800,69 @@ export const plannerStepSelect = createSelectSchema(t.plannerSteps);
 /** A row selected from `planner_steps`. */
 export type PlannerStepRow = typeof t.plannerSteps.$inferSelect;
 
+/**
+ * Insert schema for `formula_steps`. `slug` is a lowercase slug;
+ * `position` a non-negative integer; `feeds` a name list, maybe empty;
+ * `name`, `expression` and `why` non-empty; every other text, when
+ * present, non-empty.
+ */
+export const formulaStepInsert = createInsertSchema(t.formulaSteps, {
+  slug: () => rowSlug,
+  position: (s) => s.int().nonnegative(),
+  name: (s) => s.min(1),
+  expression: (s) => s.min(1),
+  feeds: () => nameList,
+  appliesTo: (s) => s.min(1).nullish(),
+  why: (s) => s.min(1),
+  detail: (s) => s.min(1).nullish(),
+  codeRef: (s) => s.min(1).nullish(),
+});
+/** Select schema for `formula_steps`, with the feeds typed precisely. */
+export const formulaStepSelect = createSelectSchema(t.formulaSteps, { feeds: () => nameList });
+/** A row selected from `formula_steps`. */
+export type FormulaStepRow = typeof t.formulaSteps.$inferSelect;
+
+/**
+ * Insert schema for `formula_constants`. `slug` and `step` are lowercase
+ * slugs; `position` a non-negative integer; `value`, when present, a
+ * finite number; every text non-empty, the optional ones when present.
+ */
+export const formulaConstantInsert = createInsertSchema(t.formulaConstants, {
+  slug: () => rowSlug,
+  position: (s) => s.int().nonnegative(),
+  step: () => rowSlug,
+  symbol: (s) => s.min(1),
+  field: (s) => s.min(1),
+  holder: (s) => s.min(1),
+  labelKr: (s) => s.min(1).nullish(),
+  meaning: (s) => s.min(1),
+  candidate: (s) => s.min(1).nullish(),
+  measure: (s) => s.min(1),
+});
+/** Select schema for `formula_constants`, mirroring the stored row shape. */
+export const formulaConstantSelect = createSelectSchema(t.formulaConstants);
+/** A row selected from `formula_constants`. */
+export type FormulaConstantRow = typeof t.formulaConstants.$inferSelect;
+
+/**
+ * Insert schema for `formula_claims`. `slug` is a lowercase slug;
+ * `position` a non-negative integer; `claim` and `code` non-empty;
+ * `refRecord`, when present, a record slug; `refTitle`, when present,
+ * non-empty. Whether the two come together is `claimRefProblem`'s rule.
+ */
+export const formulaClaimInsert = createInsertSchema(t.formulaClaims, {
+  slug: () => rowSlug,
+  position: (s) => s.int().nonnegative(),
+  claim: (s) => s.min(1),
+  code: (s) => s.min(1),
+  refRecord: () => deckSlug.nullish(),
+  refTitle: (s) => s.min(1).nullish(),
+});
+/** Select schema for `formula_claims`, mirroring the stored row shape. */
+export const formulaClaimSelect = createSelectSchema(t.formulaClaims);
+/** A row selected from `formula_claims`. */
+export type FormulaClaimRow = typeof t.formulaClaims.$inferSelect;
+
 /** Insert schema for `citations`. */
 export const citationInsert = createInsertSchema(t.citations);
 /** Select schema for `citations`, mirroring the stored row shape. */

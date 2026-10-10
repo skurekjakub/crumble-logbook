@@ -1,0 +1,142 @@
+[
+  {
+    "topic": "stacking",
+    "title": "ATK and HP",
+    "body": "⌊base × (1 + Σ%) + Σflat⌋: every battle ATK% buff shares one pool.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "stacking",
+    "title": "DEF",
+    "body": "max(⌊base × (1 + Σ%) + Σflat⌋, 0): shred past 0 is wasted.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Crit rate, crit DMG, crit RES, boss DMG, element DMG, accuracy, avoidance",
+    "body": "base × (1 + Σ%) + Σflat, in basis points.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Skill amp, skill haste, accuracy %, avoidance %, focus %, resist %",
+    "body": "base + Σflat: no % multiplier on these.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Final DMG",
+    "body": "base + Σflat: no % multiplier.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "stacking",
+    "title": "DMG RES and element RES",
+    "body": "Screen: 1 − (1 − base) × Π(1 − bonus), clamped to 0–100%. Two 30% sources make 51%.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Knockback and airborne RES",
+    "body": "Screen, like DMG RES, clamped to 0–100%.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system", "dc:52401"]
+  },
+  {
+    "topic": "crit",
+    "title": "Expected crit = 1 + CDR × (CR − CRES)",
+    "body": "Linear in crit rate with no cap at 100%; below 0 it is ×1.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "crit",
+    "title": "Tiers: the floor, plus a chance at one more",
+    "body": "200% crits twice every hit; 198% crits once, and a second time 98% of the time.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system", "dc:31349"]
+  },
+  {
+    "topic": "crit",
+    "title": "Raise whichever of crit rate and crit DMG is lower",
+    "body": "Per equal point, crit rate wins while CDR > CR − CRES, crit DMG after. Break-even is CR − CRES = CDR, not 100%.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "open_question",
+    "title": "C_def, C_inc, C_dec and the penalty tiers",
+    "body": "Server data, not in the client; each has a measurement plan.",
+    "confidence": "low",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "open_question",
+    "title": "Does Light gain on the Dark Piñata?",
+    "body": "Only if C_dec plus the boss's element RES is 0. Test a Light cookie against an equal Fire one.",
+    "confidence": "low",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "open_question",
+    "title": "Base crit DMG and the boss's DEF, RES, crit RES and avoidance",
+    "body": "All table data; none of it is in the client.",
+    "confidence": "low",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "open_question",
+    "title": "How skill amp scales buffs",
+    "body": "Set where modifiers are created, outside the damage system.",
+    "confidence": "low",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "open_question",
+    "title": "How gear, runes and research build base stats",
+    "body": "Managed code in the encrypted libil2cpp.so; unread.",
+    "confidence": "low",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "open_question",
+    "title": "Heals",
+    "body": "The heal calculation wasn't analysed.",
+    "confidence": "low",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "method",
+    "title": "Client 1.5.002",
+    "body": "com.devsisters.cc, Unity 6000.3.15f1, IL2CPP metadata v39, Android x86_64.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "method",
+    "title": "Cpp2IL 2022.1.0-pre-release.21",
+    "body": "Type and field layouts from global-metadata.dat.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "method",
+    "title": "Ghidra 12.1.4, headless",
+    "body": "On lib_burst_generated.so: libil2cpp.so's bodies are AppSealing-encrypted, the Burst copy isn't.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "method",
+    "title": "Functions read",
+    "body": "DamageSystem.CalculatedDamage @ 0x003f43b0; CombatBonusProperty.ApplyBonus @ 0x00464530; modifier sums @ 0x0042fed0.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-damage-system"]
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "miss",
+    "phase": "gate",
+    "name": "Miss roll",
+    "expression": "hit = clamp(Acc% − Avoid%ₜ + Acc ÷ Avoidₜ, 0, 1)",
+    "feeds": ["Accuracy", "Avoidance (target)"],
+    "stacking": "additive",
+    "applies_to": "Fixture: only against Avoidance above 0",
+    "confidence": "read",
+    "why": "Fixture: accuracy is dead weight against 0 avoidance.",
+    "code_ref": "Fixture.DamageSystem @ 0x1",
+    "sources": ["web:fixture-client"]
+  },
+  {
+    "id": "defense",
+    "phase": "factor",
+    "name": "Enemy DEF",
+    "expression": "1 ÷ (1 + ln(1 + DEFₜ ÷ C_def))",
+    "feeds": ["DEF (target)"],
+    "stacking": "additive",
+    "confidence": "read",
+    "why": "Fixture: DEF never zeroes damage.",
+    "detail": "Fixture: at DEF = C_def the factor is 0.59.",
+    "sources": ["web:fixture-client"]
+  },
+  {
+    "id": "floor",
+    "phase": "result",
+    "name": "Floor",
+    "expression": "max(0, ⌊product⌋)",
+    "confidence": "read",
+    "why": "Fixture: no random spread.",
+    "sources": ["web:fixture-client"]
+  }
+]

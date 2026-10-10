@@ -3,8 +3,8 @@
  * validated, what its rows reference, and how its rows are mapped into
  * write steps. A new curated collection is an entry here (or in a file
  * whose collections this one spreads in, such as `stage-collections.ts`,
- * `dungeon-collections.ts`, `daily-dungeon-collections.ts` or
- * `team-power-collections.ts`)
+ * `dungeon-collections.ts`, `daily-dungeon-collections.ts`,
+ * `team-power-collections.ts` or `damage-formula-collections.ts`)
  * plus its file in the record's `curated/manifest.json`; the reader and
  * the writer need no edits.
  *
@@ -22,6 +22,7 @@ import {
   dailyRunProblem,
   storedDungeons,
 } from "./daily-dungeon-collections";
+import { FORMULA_COLLECTIONS } from "./damage-formula-collections";
 import { DUNGEON_COLLECTIONS } from "./dungeon-collections";
 import type { Collection } from "./collection-kit";
 import {
@@ -393,6 +394,7 @@ export const COLLECTIONS = {
   ...DUNGEON_COLLECTIONS,
   ...DAILY_DUNGEON_CLEARS,
   ...TEAM_POWER_COLLECTIONS,
+  ...FORMULA_COLLECTIONS,
 };
 
 /** The curated collections by manifest key. */

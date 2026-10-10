@@ -3,8 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Fragment } from "react";
 import { recordsQuery, sourcesQuery } from "../api/queries";
 import type { ResearchRecord } from "../api/types";
-import type { ModeSection } from "../app/modes";
-import { MODES } from "../app/modes";
+import type { Section } from "../app/modes";
+import { MODES, SHARED_SECTIONS } from "../app/modes";
 import { Clamp } from "../components/Clamp";
 import { EmptyState } from "../components/EmptyState";
 import { Pill } from "../components/Pill";
@@ -12,15 +12,18 @@ import { QueryResult } from "../components/QueryResult";
 import { ViewHeader } from "../components/ViewHeader";
 
 /**
- * The modes a record covers that have screens: the mode it's filed under
- * and every mode it lists, in tab order.
+ * The sections a record has screens in: the modes it's filed under or
+ * lists, in tab order, then the shared sections built from it.
  *
  * @param record - a research record
- * @returns the covered modes' sections
+ * @returns the sections
  */
-function coveredModes(record: ResearchRecord): ModeSection[] {
+function coveredModes(record: ResearchRecord): Section[] {
   const covered = new Set([record.mode, ...record.modes.map((m) => m.mode)]);
-  return MODES.filter((m) => covered.has(m.scope.mode));
+  return [
+    ...MODES.filter((m) => covered.has(m.scope.mode)),
+    ...SHARED_SECTIONS.filter((s) => s.recordSlug === record.slug),
+  ];
 }
 
 /**

@@ -1,0 +1,215 @@
+[
+  {
+    "id": "crit-tiers",
+    "claim": "Past 100%, crit rate rolls extra tiers: 200% crits twice, 198% once plus 98% for a second.",
+    "code": "⌊e⌋ guaranteed tiers, plus one more with probability e − ⌊e⌋.",
+    "verdict": "agrees",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Crit tiers" },
+    "sources": ["dc:31349", "dc:75589", "dc:75854", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "crit-tier-size",
+    "claim": "Each crit tier adds 50% plus bonus crit DMG.",
+    "code": "Each tier adds the whole crit DMG stat; a 50% base would be data, not code.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Crit tiers" },
+    "sources": ["dc:31349", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "crit-over-100",
+    "claim": "Past 100% crit rate, +10% crit DMG beats +10% crit rate.",
+    "code": "Expected crit is 1 + CDR × e: crit DMG wins only while e > CDR; 100% isn't the line.",
+    "verdict": "partly",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Crit above 100%" },
+    "sources": ["dc:31349", "dc:75589", "dc:75854", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "weapon-digits",
+    "claim": "Weapon line: take crit rate when the rate's last two digits are 30 or more, else crit DMG.",
+    "code": "Expected damage is linear in crit rate; the digits change the spread, not the mean.",
+    "verdict": "disagrees",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Weapon: crit rate or crit dmg" },
+    "sources": ["dc:76333", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "boss-crit-res",
+    "claim": "The raid boss has no crit resistance.",
+    "code": "Crit RES subtracts straight from crit rate; the boss's value is data.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Crit above 100%" },
+    "sources": ["dc:31349", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "accuracy-boss",
+    "claim": "Accuracy is useless on the Guild Conquest boss.",
+    "code": "No miss roll at all when the target's Avoidance is 0.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Boss" },
+    "sources": ["dc:48412", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "def-floor",
+    "claim": "Enemy DEF floors at 0.",
+    "code": "DEF is clamped at 0 when buffs apply and again in the damage step.",
+    "verdict": "agrees",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Skill amp nerf (8/27)" },
+    "sources": ["dc:46452", "dc:71135", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "leak-amp",
+    "claim": "Leak: skill amp +1% ≈ +2% damage.",
+    "code": "The damage step gives at most +1% ÷ (1 + amp); any more must come from amp scaling buffs.",
+    "verdict": "disagrees",
+    "ref": {
+      "record": "001-guild-conquest-meta",
+      "title": "Stat weights on the Season 6 #1's account"
+    },
+    "sources": ["dc:82295", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "calculator-sample",
+    "claim": "His calculator: skill amp +1% ≈ +0.45%, crit DMG +1% ≈ +0.38%.",
+    "code": "0.01 ÷ (1 + amp) fits amp ≈ 122%; the crit figure fits e ÷ (1 + CDR × e).",
+    "verdict": "consistent",
+    "ref": {
+      "record": "001-guild-conquest-meta",
+      "title": "Stat weights on the Season 6 #1's account"
+    },
+    "sources": ["dc:82457", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "leak-crit",
+    "claim": "Leak: crit DMG +15% ≈ +4%, crit rate +15% ≈ +3%.",
+    "code": "The two gains' ratio is e ÷ CDR: about 1.3 on his account.",
+    "verdict": "consistent",
+    "ref": {
+      "record": "001-guild-conquest-meta",
+      "title": "Stat weights on the Season 6 #1's account"
+    },
+    "sources": ["dc:82295", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "leak-atk",
+    "claim": "Leak: ATK +650 ≈ +2.5% damage.",
+    "code": "ATK is linear, a flat base line scaled by battle ATK%; needs his base ATK to check.",
+    "verdict": "unresolved",
+    "ref": {
+      "record": "001-guild-conquest-meta",
+      "title": "Stat weights on the Season 6 #1's account"
+    },
+    "sources": ["dc:82295", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "light-vs-dark",
+    "claim": "The Piñata is Dark, weak to Light.",
+    "code": "Dark also beats Light; resistance wins when C_dec + the boss's element RES > 0.",
+    "verdict": "unresolved",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Piñata's weakness" },
+    "sources": ["dc:48412", "web:25737", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "boss-dr-ramp",
+    "claim": "The boss's damage reduction ramps 10/30/50/70/90%.",
+    "code": "Damage × (1 − DR), DR stacking as a screen: early hits are worth the most.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Damage reduction ramps every 12 s" },
+    "sources": ["dc:81844", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "lift-res-stacking",
+    "claim": "Lift resistance stacks as base + extra − base × extra.",
+    "code": "Knockback and airborne RES stack as a screen, clamped to 0–100%.",
+    "verdict": "agrees",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Lift resistance stacking" },
+    "sources": ["dc:52401", "dc:75400", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "crit-buffs-no-stack",
+    "claim": "Macaron's and Chardonnay's crit buffs don't stack.",
+    "code": "Modifiers carry a group id and only enabled ones are summed; group rules weren't read.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Crit buffs don't stack" },
+    "sources": ["dc:83118", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "cheesecake-over-milk",
+    "claim": "Cheesecake's ATK buff overrides Milk's on the same cookie.",
+    "code": "Modifiers carry a group id and only enabled ones are summed; group rules weren't read.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Cheesecake's buff overrides Milk's" },
+    "sources": ["dc:55485", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "amp-exclusion",
+    "claim": "Skill amp no longer boosts stat-reduction debuffs.",
+    "code": "The settings carry an amp-exclusion list; what it holds is data.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Skill amp nerf (8/27)" },
+    "sources": ["dc:46452", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "debuff-chance",
+    "claim": "Debuff chance = base × (focus ÷ resist + focus% − resist%).",
+    "code": "Hit chance has the same shape with accuracy and avoidance; the debuff code wasn't read.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Debuff application chance" },
+    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "buff-amp-scaling",
+    "claim": "Buffs scale with the caster's skill amp: ⌊base × value × (1 + amp)⌋.",
+    "code": "Set where modifiers are created, outside the damage system: not read.",
+    "verdict": "unresolved",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Buffs scale with the caster's skill amp" },
+    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "stat-layering",
+    "claim": "Sugar Pocket: battle stats are ⌊base × (1 + Σ%) + Σflat⌋.",
+    "code": "ApplyBonus does exactly this for HP, ATK and DEF.",
+    "verdict": "agrees",
+    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "gate-last",
+    "claim": "The power gate multiplies final damage, last.",
+    "code": "The penalty is the last factor before the floor.",
+    "verdict": "agrees",
+    "ref": {
+      "record": "003-stage-pushing-meta",
+      "title": "The power gate is a step function on final damage"
+    },
+    "sources": ["web:crumblehub-formulas", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "gate-yours-only",
+    "claim": "The power gate cuts only your team's damage, not the boss's.",
+    "code": "The penalty applies only to hits on the Enemy side.",
+    "verdict": "agrees",
+    "ref": { "record": "003-stage-pushing-meta", "title": "What the gate does not touch" },
+    "sources": ["web:crumblehub-stages", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "gate-other-content",
+    "claim": "The same power gate covers the daily dungeons and the Rift.",
+    "code": "The Rift and daily dungeon controllers hold a penalty; Guild Conquest's holds none.",
+    "verdict": "agrees",
+    "ref": { "record": "003-stage-pushing-meta", "title": "The same table gates other content" },
+    "sources": ["web:crumblehub-stages", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "pvp-fixed",
+    "claim": "PvP's power correction is fixed at 100%.",
+    "code": "Arena controllers hold a PvP penalty from a server table the client doesn't carry.",
+    "verdict": "unresolved",
+    "ref": { "record": "003-stage-pushing-meta", "title": "What the gate does not touch" },
+    "sources": ["web:crumblehub-stages", "web:client-1.5.002-damage-system"]
+  },
+  {
+    "id": "crumblehub-model",
+    "claim": "crumblehub's damage code: these factors, in this order, with the element override.",
+    "code": "Same factors, same order, same override, crit tiers and hit chance; its constants are unconfirmed defaults.",
+    "verdict": "agrees",
+    "sources": ["web:crumblehub-formulas", "web:client-1.5.002-damage-system"]
+  }
+]

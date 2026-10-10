@@ -1,0 +1,11 @@
+{
+  "updated": "2026-10-10",
+  "season": "Fixture client",
+  "lede": "Fixture: what multiplies what in a hit's damage.",
+  "caveat": "Fixture rows for tests; no claim here is research.",
+  "you": {
+    "summary": "Fixture: raise the smallest bucket first.",
+    "changes": ["Fixture: compare skill amp with 1 / (1 + your amp)."],
+    "sources": ["web:fixture-client"]
+  }
+}

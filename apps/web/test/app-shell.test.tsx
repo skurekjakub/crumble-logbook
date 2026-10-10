@@ -111,6 +111,7 @@ describe("app shell", () => {
       "Crumble Dungeon 크럼블 던전",
       "Daily Dungeons 일일던전",
       "Team power 팀투",
+      "Damage formula",
       "Account",
       "Research",
       "Sources",

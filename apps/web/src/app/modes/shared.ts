@@ -3,10 +3,34 @@
  *
  * @module
  */
+import type { ModeScope } from "../../api/queries";
 import type { SharedSection } from "./types";
+
+/**
+ * The damage formula's section: how a hit's damage is computed, which
+ * every battle mode shares. Its record files its rows under the
+ * `damage_formula` mode, which no mode section shows.
+ */
+export const FORMULA = {
+  id: "formula",
+  kind: "shared",
+  label: "Damage formula",
+  labelKr: null,
+  title: "Damage formula",
+  to: "/formula",
+  link: { to: "/formula" },
+  recordSlug: "007-damage-formula",
+  lede: null,
+  stamp: ["updated", "sources"],
+  tabs: [],
+} as const satisfies SharedSection;
+
+/** How the damage formula section scopes its mechanics and takeaways requests. */
+export const FORMULA_SCOPE: ModeScope = { mode: "damage_formula" };
 
 /** Sections shared by every mode, in tab order after the modes. */
 export const SHARED_SECTIONS: readonly SharedSection[] = [
+  FORMULA,
   {
     id: "account",
     kind: "shared",

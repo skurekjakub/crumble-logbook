@@ -148,6 +148,21 @@ export type GrowthCurve = InferResponseType<(typeof api)["growth-curves"]["$get"
 export type PlannerStep = InferResponseType<(typeof api)["planner-steps"]["$get"], 200>[number];
 
 /**
+ * A damage formula step: phase, expression, the stats that feed it, how
+ * their bonuses stack, when it applies, how it's known, its verdict and sources.
+ */
+export type FormulaStep = InferResponseType<(typeof api)["formula-steps"]["$get"], 200>[number];
+
+/** A server-side constant the formula reads: its step, client field, value or guess, and how to measure it. */
+export type FormulaConstant = InferResponseType<
+  (typeof api)["formula-constants"]["$get"],
+  200
+>[number];
+
+/** A community damage claim held against the code: the claim, the code's reading, the verdict and where it's recorded. */
+export type FormulaClaim = InferResponseType<(typeof api)["formula-claims"]["$get"], 200>[number];
+
+/**
  * A daily dungeon: names, drops, entry (keys, ticket back on a loss, quick
  * clear), boss (element, weakness, rotation), top stage and notes, with sources.
  */

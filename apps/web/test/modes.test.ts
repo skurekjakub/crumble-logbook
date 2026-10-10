@@ -200,14 +200,16 @@ describe("MODES", () => {
     for (const mode of MODES) expect(mode.daily === null, mode.id).toBe(mode !== DAILY);
   });
 
-  it("lists the account first among the shared sections, then research, Sources and Glossary", () => {
+  it("lists the damage formula first among the shared sections, then the account, research, Sources and Glossary", () => {
     expect(SHARED_SECTIONS.map((s) => s.to)).toEqual([
+      "/formula",
       "/account",
       "/research",
       "/sources",
       "/glossary",
     ]);
     expect(sectionForPath("/research")?.id).toBe("research");
+    expect(sectionForPath("/formula")?.id).toBe("formula");
   });
 
   it("gives every mode its own API scope", () => {
@@ -252,6 +254,7 @@ describe("mode-scoped queries", () => {
       | "crumble_dungeon"
       | "team_power"
       | "daily_dungeon"
+      | "damage_formula"
     >();
   });
 

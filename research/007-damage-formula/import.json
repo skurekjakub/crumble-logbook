@@ -1,0 +1,53 @@
+{
+  "record": {
+    "slug": "007-damage-formula",
+    "question": "The 1.5.002 client's code fixes how a hit's damage is computed precisely enough to name every multiplier, which stats share an additive bucket and which multiply, how crit tiers, misses, element, defense and the power penalty work, and where the community's damage model is right or wrong.",
+    "status": "active",
+    "startedAt": "2026-10-10",
+    "mode": "damage_formula"
+  },
+  "curated": "curated",
+  "extractions": [
+    "../001-guild-conquest-meta/evidence/r2026-10-09/08-extract",
+    "../001-guild-conquest-meta/evidence/r2026-10-07/08-extract",
+    "../001-guild-conquest-meta/evidence/08-extract",
+    "../003-stage-pushing-meta/evidence/r2026-10-07/08-extract",
+    "../003-stage-pushing-meta/evidence/r2026-10-03/08-extract",
+    "../003-stage-pushing-meta/evidence/08-extract"
+  ],
+  "captures": [
+    {
+      "site": "dc",
+      "dir": "../001-guild-conquest-meta/evidence/r2026-10-09/03-dc-posts",
+      "file": "{id}.md"
+    },
+    {
+      "site": "dc",
+      "dir": "../001-guild-conquest-meta/evidence/r2026-10-07/03-dc-posts",
+      "file": "{id}.md"
+    },
+    { "site": "dc", "dir": "../001-guild-conquest-meta/evidence/03-dc-posts", "file": "{id}.md" },
+    {
+      "site": "dc",
+      "dir": "../001-guild-conquest-meta/evidence/11-dc-posts-extra",
+      "file": "{id}.md"
+    },
+    {
+      "site": "dc",
+      "dir": "../001-guild-conquest-meta/evidence/16-top-players/dc",
+      "file": "{id}.md"
+    },
+    {
+      "site": "dc",
+      "dir": "../001-guild-conquest-meta/evidence/18-kr-encounter/dc",
+      "file": "{id}.md"
+    },
+    {
+      "site": "dc",
+      "dir": "../001-guild-conquest-meta/evidence/21-author-awkward2637",
+      "file": "{id}.md"
+    }
+  ],
+  "rankings": [],
+  "ledger": { "file": "evidence/captures.jsonl" }
+}

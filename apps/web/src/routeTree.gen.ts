@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ModeRouteImport } from './routes/$mode'
 import { Route as AccountRouteImport } from './routes/account'
+import { Route as FormulaRouteImport } from './routes/formula'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as SourcesRouteImport } from './routes/sources'
@@ -57,6 +58,11 @@ const ModeRoute = ModeRouteImport.update({
 const AccountRoute = AccountRouteImport.update({
   id: '/account',
   path: '/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormulaRoute = FormulaRouteImport.update({
+  id: '/formula',
+  path: '/formula',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlossaryRoute = GlossaryRouteImport.update({
@@ -219,6 +225,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$mode': typeof ModeRouteWithChildren
   '/account': typeof AccountRoute
+  '/formula': typeof FormulaRoute
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
@@ -254,6 +261,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/formula': typeof FormulaRoute
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
@@ -291,6 +299,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$mode': typeof ModeRouteWithChildren
   '/account': typeof AccountRoute
+  '/formula': typeof FormulaRoute
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
@@ -329,6 +338,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$mode'
     | '/account'
+    | '/formula'
     | '/glossary'
     | '/research'
     | '/sources'
@@ -364,6 +374,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/account'
+    | '/formula'
     | '/glossary'
     | '/research'
     | '/sources'
@@ -400,6 +411,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$mode'
     | '/account'
+    | '/formula'
     | '/glossary'
     | '/research'
     | '/sources'
@@ -437,6 +449,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ModeRoute: typeof ModeRouteWithChildren
   AccountRoute: typeof AccountRoute
+  FormulaRoute: typeof FormulaRoute
   GlossaryRoute: typeof GlossaryRoute
   ResearchRoute: typeof ResearchRoute
   SourcesRoute: typeof SourcesRoute
@@ -464,6 +477,13 @@ declare module '@tanstack/react-router' {
       path: '/account'
       fullPath: '/account'
       preLoaderRoute: typeof AccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formula': {
+      id: '/formula'
+      path: '/formula'
+      fullPath: '/formula'
+      preLoaderRoute: typeof FormulaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/glossary': {
@@ -752,6 +772,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ModeRoute: ModeRouteWithChildren,
   AccountRoute: AccountRoute,
+  FormulaRoute: FormulaRoute,
   GlossaryRoute: GlossaryRoute,
   ResearchRoute: ResearchRoute,
   SourcesRoute: SourcesRoute,

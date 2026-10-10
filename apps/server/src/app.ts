@@ -74,6 +74,12 @@ export function createApp(services: Services) {
     .route(R.spendingSteps.path, crudRouter(endpoints(services.spendingSteps), R.spendingSteps))
     .route(R.growthCurves.path, crudRouter(endpoints(services.growthCurves), R.growthCurves))
     .route(R.plannerSteps.path, crudRouter(endpoints(services.plannerSteps), R.plannerSteps))
+    .route(R.formulaSteps.path, crudRouter(endpoints(services.formulaSteps), R.formulaSteps))
+    .route(
+      R.formulaConstants.path,
+      crudRouter(endpoints(services.formulaConstants), R.formulaConstants),
+    )
+    .route(R.formulaClaims.path, crudRouter(endpoints(services.formulaClaims), R.formulaClaims))
     .route(R.decks.path, crudRouter(services.decks, R.decks))
     .route(R.runeBuilds.path, crudRouter(services.runeBuilds, R.runeBuilds))
     .route(R.sources.path, sourcesRouter(services.sources))

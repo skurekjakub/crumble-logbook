@@ -481,6 +481,37 @@ function seedEverything(store: Store): SeedIds {
     },
     ["dc:1"],
   );
+  services.formulaSteps.create(
+    {
+      slug: "defense",
+      position: 0,
+      phase: "factor",
+      name: "Enemy DEF",
+      expression: "1 ÷ (1 + ln(1 + DEF ÷ C_def))",
+      feeds: ["DEF (target)"],
+      stacking: "additive",
+      confidence: "read",
+      why: "w",
+    },
+    ["dc:1"],
+  );
+  services.formulaConstants.create(
+    {
+      slug: "c-def",
+      position: 0,
+      step: "defense",
+      symbol: "C_def",
+      field: "_combatConstantDefense",
+      holder: "DamageSystem+0x90",
+      meaning: "m",
+      measure: "two hits",
+    },
+    ["dc:1"],
+  );
+  services.formulaClaims.create(
+    { slug: "crit-tiers", position: 0, claim: "c", code: "k", verdict: "agrees" },
+    ["dc:1"],
+  );
   const [bracket] = store.repos.powerBrackets.list();
   store.repos.factClaims.add(
     { entity: "power_bracket", entityId: String(bracket!.id) },
@@ -560,7 +591,10 @@ describe("exportSnapshot / restoreSnapshot", () => {
       spendingSteps: 1,
       growthCurves: 1,
       plannerSteps: 1,
-      citations: 39,
+      formulaSteps: 1,
+      formulaConstants: 1,
+      formulaClaims: 1,
+      citations: 42,
       factClaims: 1,
       accountSnapshots: 1,
       accountLineups: 1,
