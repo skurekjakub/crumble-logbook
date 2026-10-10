@@ -1,0 +1,7 @@
+[
+  {
+    "text": "Fixture: skill amp is one additive bucket.",
+    "detail": "Fixture: +1 point is worth 1 / (1 + total amp).",
+    "sources": ["web:fixture-client"]
+  }
+]

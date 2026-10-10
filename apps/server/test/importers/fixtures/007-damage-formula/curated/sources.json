@@ -1,0 +1,16 @@
+{
+  "web:fixture-client": {
+    "url": "https://example.test/fixture-client",
+    "title": "Fixture client analysis",
+    "title_en": "Fixture: the client's damage system",
+    "date": "2026-10-10",
+    "signal": "relevance 3/3"
+  },
+  "web:fixture-forum": {
+    "url": "https://example.test/fixture-forum",
+    "title": "Fixture forum post",
+    "title_en": "Fixture: a crit claim",
+    "date": "2026-10-01",
+    "signal": "relevance 2/3"
+  }
+}

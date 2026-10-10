@@ -51,7 +51,8 @@ type SeededKey =
   | "spendingOrders"
   | "spendingSteps"
   | "growthCurves"
-  | "plannerSteps";
+  | "plannerSteps"
+  | "formulaClaims";
 
 /**
  * Creates one valid row of a type, with `over` applied on top.
@@ -119,6 +120,9 @@ const FILTER_CASES: Partial<Record<TableKey, Record<string, FilterCase>>> = {
   dungeonExclusions: {
     kind: { match: { kind: "summoner" }, other: {}, value: "summoner" },
     status: { match: { status: "patched" }, other: {}, value: "patched" },
+  },
+  formulaClaims: {
+    verdict: { match: { verdict: "disagrees" }, other: {}, value: "disagrees" },
   },
   dailyDungeonClears: {
     dungeon: { match: { dungeon: "dough" }, other: {}, value: "dough" },
@@ -632,6 +636,20 @@ const SEEDS: Record<SeededKey, Seed> = {
         basis: "community",
         gain: "g",
         reach: "r",
+        ...over,
+      },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  formulaClaims: (store, services, over) => {
+    const row = services.formulaClaims.create(
+      {
+        slug: `claim-${++serial}`,
+        position: serial,
+        claim: "c",
+        code: "k",
+        verdict: "agrees",
         ...over,
       },
       cite(store),

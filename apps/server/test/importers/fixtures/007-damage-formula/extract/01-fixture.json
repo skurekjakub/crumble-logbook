@@ -1,0 +1,12 @@
+{
+  "batch": "01-fixture",
+  "posts": [
+    {
+      "source": "other",
+      "id": "fixture-client",
+      "title_en": "Fixture: the client's damage system",
+      "relevance": 3,
+      "summary_en": "Fixture summary: the damage system read from the client."
+    }
+  ]
+}

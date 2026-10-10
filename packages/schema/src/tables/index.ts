@@ -15,6 +15,7 @@ export * from "./stage";
 export * from "./dungeon";
 export * from "./daily-dungeon";
 export * from "./team-power";
+export * from "./damage-formula";
 export * from "./citations";
 export * from "./fact-claims";
 export * from "./captures";

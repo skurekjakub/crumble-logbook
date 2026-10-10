@@ -20,8 +20,19 @@
  */
 import type { CitedEntity, GainPoint, GameMode, Values } from "@crumble/schema";
 import {
+  CLAIM_VERDICT,
   CLEAR_RESULT,
   CLEAR_STANDING,
+  claimRefProblem,
+  formulaClaimInput,
+  formulaClaimPatch,
+  formulaClaims,
+  formulaConstantInput,
+  formulaConstantPatch,
+  formulaConstants,
+  formulaStepInput,
+  formulaStepPatch,
+  formulaSteps,
   COST_TYPE,
   DATA_POINT_KIND,
   DUNGEON_AUTO,
@@ -245,7 +256,12 @@ export interface ApiSpec {
 
 /** The content types other rows name by their `slug` column (see {@link ContentSpec.links}). */
 export type LinkTarget =
-  "powerSources" | "powerDataPoints" | "packages" | "spendingOrders" | "dailyDungeons";
+  | "powerSources"
+  | "powerDataPoints"
+  | "packages"
+  | "spendingOrders"
+  | "dailyDungeons"
+  | "formulaSteps";
 
 /**
  * Finds the row of a content type other rows name by its `slug`.
@@ -769,6 +785,25 @@ export const REGISTRY = {
             : (linked("powerDataPoints", step.dataPoint) as GainPoint | undefined),
         ),
     },
+  }),
+  formulaSteps: entry(formulaSteps, {
+    path: "/formula-steps",
+    entity: "formula_step",
+    api: { id: rowId, input: formulaStepInput, patch: formulaStepPatch },
+    content: { order: ["position", "id"] },
+  }),
+  formulaConstants: entry(formulaConstants, {
+    path: "/formula-constants",
+    entity: "formula_constant",
+    api: { id: rowId, input: formulaConstantInput, patch: formulaConstantPatch },
+    content: { order: ["position", "id"], links: { step: "formulaSteps" } },
+  }),
+  formulaClaims: entry(formulaClaims, {
+    path: "/formula-claims",
+    entity: "formula_claim",
+    filters: { verdict: { schema: z.enum(CLAIM_VERDICT), match: { equals: "verdict" } } },
+    api: { id: rowId, input: formulaClaimInput, patch: formulaClaimPatch },
+    content: { order: ["position", "id"], check: claimRefProblem },
   }),
   citations: entry(citations, {}),
   factClaims: entry(factClaims, {}),

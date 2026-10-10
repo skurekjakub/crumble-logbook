@@ -1,0 +1,14 @@
+[
+  {
+    "id": "c-def",
+    "step": "defense",
+    "symbol": "C_def",
+    "field": "_combatConstantDefense",
+    "holder": "DamageSystem+0x90",
+    "label_kr": "방어 상수",
+    "meaning": "Fixture: scales target DEF.",
+    "candidate": "500 (fixture tool default)",
+    "measure": "Fixture: two hits that differ only in target DEF.",
+    "sources": ["web:fixture-client"]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "record": {
+    "slug": "007-damage-formula",
+    "question": "Fixture: how the client computes a hit's damage.",
+    "status": "active",
+    "startedAt": "2026-10-10",
+    "mode": "damage_formula"
+  },
+  "curated": "curated",
+  "extractions": "extract",
+  "captures": [],
+  "rankings": []
+}

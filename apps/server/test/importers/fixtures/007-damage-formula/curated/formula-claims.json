@@ -1,0 +1,17 @@
+[
+  {
+    "id": "crit-tiers",
+    "claim": "Fixture: 200% crit rate crits twice.",
+    "code": "Fixture: ⌊e⌋ tiers plus one with probability frac(e).",
+    "verdict": "agrees",
+    "ref": { "record": "007-damage-formula", "title": "Fixture: crit tiers" },
+    "sources": ["web:fixture-forum", "web:fixture-client"]
+  },
+  {
+    "id": "weapon-digits",
+    "claim": "Fixture: take crit rate when the last two digits are 30 or more.",
+    "code": "Fixture: expected damage is linear in crit rate.",
+    "verdict": "disagrees",
+    "sources": ["web:fixture-forum"]
+  }
+]

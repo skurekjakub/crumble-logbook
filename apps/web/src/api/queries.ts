@@ -617,6 +617,39 @@ export const plannerStepsQuery = () =>
   });
 
 /**
+ * The damage formula's steps, in code order.
+ *
+ * @returns the query options
+ */
+export const formulaStepsQuery = () =>
+  queryOptions({
+    queryKey: ["formula-steps"],
+    queryFn: () => parseResponse(api["formula-steps"].$get({ query: {} })),
+  });
+
+/**
+ * The server-side constants the damage formula reads, in the record's order.
+ *
+ * @returns the query options
+ */
+export const formulaConstantsQuery = () =>
+  queryOptions({
+    queryKey: ["formula-constants"],
+    queryFn: () => parseResponse(api["formula-constants"].$get({ query: {} })),
+  });
+
+/**
+ * The community's damage claims held against the client's code, in the record's order.
+ *
+ * @returns the query options
+ */
+export const formulaClaimsQuery = () =>
+  queryOptions({
+    queryKey: ["formula-claims"],
+    queryFn: () => parseResponse(api["formula-claims"].$get({ query: {} })),
+  });
+
+/**
  * Leaderboard rows in rank order.
  *
  * @param filter - restrict to one season and/or board

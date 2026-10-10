@@ -18,6 +18,7 @@ import "./styles/daily-dungeon.css";
 import "./styles/obsolete.css";
 import "./styles/team-power.css";
 import "./styles/account.css";
+import "./styles/formula.css";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000 } },

@@ -168,6 +168,9 @@ const expectedCounts = {
   spendingSteps: 0,
   growthCurves: 0,
   plannerSteps: 0,
+  formulaSteps: 0,
+  formulaConstants: 0,
+  formulaClaims: 0,
   // An obsolete row's reason is cited under its own key, apart from the row's sources.
   citations:
     sum(citedRows.map((r) => distinct(r.sources) + distinct(r.obsolete?.sources ?? []))) +

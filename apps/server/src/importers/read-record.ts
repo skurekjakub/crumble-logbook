@@ -38,7 +38,7 @@ interface CuratedFiles {
  * The game modes whose research has no lineups: a record filed only under
  * these may leave `decks` out of its curated manifest without a warning.
  */
-export const MODES_WITHOUT_DECKS: readonly GameMode[] = ["team_power"];
+export const MODES_WITHOUT_DECKS: readonly GameMode[] = ["team_power", "damage_formula"];
 
 /**
  * The warning for a record whose curated manifest lists no decks though a

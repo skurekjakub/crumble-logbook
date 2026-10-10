@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { dailyDeckProblem, withPowerG } from "./daily-dungeon";
+import { claimRefProblem } from "./damage-formula";
 import { lineupProblem, runStanding } from "./dungeon";
 import { postedPowerG } from "./power";
 import { growthCurveProblem, spendingStepProblem } from "./team-power";
@@ -25,6 +26,9 @@ import {
   dungeonLineupInsert,
   dungeonRunInsert,
   fightEventInsert,
+  formulaClaimInsert,
+  formulaConstantInsert,
+  formulaStepInsert,
   gearRecInsert,
   glossaryInsert,
   mechanicInsert,
@@ -525,6 +529,51 @@ export type PlannerStepInput = z.output<typeof plannerStepInput>;
 export const plannerStepPatch = plannerStep.patch;
 /** Output of {@link plannerStepPatch}. */
 export type PlannerStepPatch = z.output<typeof plannerStepPatch>;
+
+const formulaStep = citedInputs(formulaStepInsert);
+/** Input for creating a damage formula step, with the sources that read it. */
+export const formulaStepInput = formulaStep.input;
+/** Output of {@link formulaStepInput}. */
+export type FormulaStepInput = z.output<typeof formulaStepInput>;
+/** Patch for updating a damage formula step. `sources`, if given, must be non-empty. */
+export const formulaStepPatch = formulaStep.patch;
+/** Output of {@link formulaStepPatch}. */
+export type FormulaStepPatch = z.output<typeof formulaStepPatch>;
+
+const formulaConstant = citedInputs(formulaConstantInsert);
+/**
+ * Input for creating a damage formula constant, with the sources that
+ * name it. Its `step` must be a stored formula step's slug.
+ */
+export const formulaConstantInput = formulaConstant.input;
+/** Output of {@link formulaConstantInput}. */
+export type FormulaConstantInput = z.output<typeof formulaConstantInput>;
+/** Patch for updating a damage formula constant. `sources`, if given, must be non-empty. */
+export const formulaConstantPatch = formulaConstant.patch;
+/** Output of {@link formulaConstantPatch}. */
+export type FormulaConstantPatch = z.output<typeof formulaConstantPatch>;
+
+const formulaClaim = citedInputs(formulaClaimInsert);
+/**
+ * Input for creating a community claim held against the code, with the
+ * sources that make the claim and read the code. It names its record and
+ * mechanic title together or neither (see {@link claimRefProblem}).
+ * `citedInputs` omits before this refine: zod 4 rejects `.omit()` on a
+ * refined object.
+ */
+export const formulaClaimInput = formulaClaim.input.superRefine((claim, ctx) => {
+  const problem = claimRefProblem(claim);
+  if (problem) ctx.addIssue({ code: "custom", message: problem, path: ["refTitle"] });
+});
+/** Output of {@link formulaClaimInput}. */
+export type FormulaClaimInput = z.output<typeof formulaClaimInput>;
+/**
+ * Patch for updating a community claim. `sources`, if given, must be
+ * non-empty; the patched row must still keep {@link claimRefProblem}'s rule.
+ */
+export const formulaClaimPatch = formulaClaim.patch;
+/** Output of {@link formulaClaimPatch}. */
+export type FormulaClaimPatch = z.output<typeof formulaClaimPatch>;
 
 /**
  * Input for a single deck cookie slot. `id`, `deckId` and `position` are

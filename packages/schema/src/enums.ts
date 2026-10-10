@@ -46,8 +46,9 @@ export type RankingBoard = (typeof RANKING_BOARD)[number];
  * score attack against the Holy Golden Drop), team power growth (전투력:
  * what raises the power the game shows for a lineup, and at what cost), or
  * the daily dungeons (일일던전: dungeons pushed stage by stage for
- * materials, each with its own boss and key). The first is the default
- * of every `mode` column.
+ * materials, each with its own boss and key), or the damage formula (how
+ * the client computes a hit's damage, which every battle mode shares).
+ * The first is the default of every `mode` column.
  */
 export const GAME_MODE = [
   "guild_conquest",
@@ -57,8 +58,42 @@ export const GAME_MODE = [
   "crumble_dungeon",
   "team_power",
   "daily_dungeon",
+  "damage_formula",
 ] as const;
 export type GameMode = (typeof GAME_MODE)[number];
+
+/**
+ * Where a damage formula step sits: a roll before the product (`gate`),
+ * one multiplier of the product (`factor`), or what happens to the
+ * product (`result`).
+ */
+export const FORMULA_PHASE = ["gate", "factor", "result"] as const;
+export type FormulaPhase = (typeof FORMULA_PHASE)[number];
+
+/**
+ * How the battle bonuses feeding a damage formula step combine: summed
+ * into one pool (`additive`), stacked as 1 − Π(1 − x) (`screen`), or not
+ * at all, the step's value being skill or table data (`fixed`).
+ */
+export const FORMULA_STACKING = ["additive", "screen", "fixed"] as const;
+export type FormulaStacking = (typeof FORMULA_STACKING)[number];
+
+/**
+ * How a damage formula finding is known: read from the client's code
+ * (`read`), inferred from names and placement (`inferred`), or not known
+ * (`unknown`).
+ */
+export const FORMULA_CONFIDENCE = ["read", "inferred", "unknown"] as const;
+export type FormulaConfidence = (typeof FORMULA_CONFIDENCE)[number];
+
+/**
+ * What the client's code says of a community claim: it confirms it
+ * (`agrees`), doesn't contradict it but leaves its numbers to data
+ * (`consistent`), confirms part of it (`partly`), contradicts it
+ * (`disagrees`), or can't settle it without server data (`unresolved`).
+ */
+export const CLAIM_VERDICT = ["agrees", "consistent", "partly", "disagrees", "unresolved"] as const;
+export type ClaimVerdict = (typeof CLAIM_VERDICT)[number];
 
 /**
  * How far a daily dungeon run plays itself: on full auto (`full`), on
@@ -270,6 +305,9 @@ export const CITED_ENTITY = [
   "spending_step",
   "growth_curve",
   "planner_step",
+  "formula_step",
+  "formula_constant",
+  "formula_claim",
   "obsolescence",
 ] as const;
 export type CitedEntity = (typeof CITED_ENTITY)[number];
