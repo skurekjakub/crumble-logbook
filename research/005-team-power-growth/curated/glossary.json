@@ -40,5 +40,10 @@
  {"kr": "유출", "kr_short": [], "en": "Leak (client data of an update, posted before its notes)", "kind": "term", "sources": ["dc:79685", "dc:82186"]},
  {"kr": "와글와글 스페셜 패스", "kr_short": ["스페셜 패스", "스패"], "en": "Rumble Special Pass (₩19,000)", "kind": "term", "sources": ["web:appstore-kr"]},
  {"kr": "길탈", "kr_short": ["길드 탈퇴"], "en": "Leaving a guild (loses the guild lab's stats)", "kind": "term", "sources": ["dc:81826"]},
- {"kr": "소급", "kr_short": ["소급 지급"], "en": "Retroactive refund or compensation", "kind": "term", "sources": ["nv:50417"]}
+ {"kr": "소급", "kr_short": ["소급 지급"], "en": "Retroactive refund or compensation", "kind": "term", "sources": ["nv:50417"]},
+ {"kr": "마일리지 교환소", "kr_short": ["마일리지 상점", "마일리지"], "en": "Mileage exchange (sells 50 Chocosteel and 50 Syrup Metal a week since 2026-10-08)", "kind": "term", "sources": ["web:yt-EbXFIgSprRU", "nv:50417"]},
+ {"kr": "대성공", "kr_short": [], "en": "Great success (plating: +2 levels in one press)", "kind": "term", "sources": ["dc:84474", "dc:84056"]},
+ {"kr": "장인 출석 패키지", "kr_short": ["출석 패키지", "출석팩"], "en": "Artisan 7-day check-in pack (₩25,000: 100 Chocosteel, 100 Syrup Metal)", "kind": "term", "sources": ["dc:82897"]},
+ {"kr": "이터널 장비 세트 패키지", "kr_short": ["이터널 패키지"], "en": "Eternal gear set package (₩35,000; Lv.95 gear, skipped)", "kind": "term", "sources": ["dc:83361", "web:yt-EbXFIgSprRU"]},
+ {"kr": "신규지역 탐험 패키지", "kr_short": [], "en": "New region exploration pack (₩25,000, 50 Syrup Metal)", "kind": "term", "sources": ["dc:84080", "dc:82898"]}
 ]

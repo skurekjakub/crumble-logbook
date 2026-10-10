@@ -1,0 +1,597 @@
+{
+  "lane": "dc",
+  "read": "2026-10-10",
+  "posts": [
+    {
+      "source": "dc", "id": "84973", "url": "https://m.dcinside.com/board/projectcc/84973", "date": "2026-10-10",
+      "title_kr": "20강 오너들아질문", "title_en": "Question for +20 owners",
+      "relevance": 2,
+      "summary_en": "Poster holds 550 Syrup Metal with the staff plate at +19 and the magic-object plate at +18 and wants exactly one at +20. A commenter says the staff is the safe pick because +19→+20 costs about 430 Syrup Metal in expectation.",
+      "datapoints": [
+        { "system": "plating", "account": "Seeker crit rate 684 / crit damage 523 under full buffs; 550 Syrup Metal on hand", "before": "staff +19, magic object +18", "after": "", "cost": "+19→+20 expected ~430 Syrup Metal", "note": "the 430 expectation is a commenter's estimate" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "(comment) With limited Syrup Metal, finish the plate already at +19 (staff); it is the safe +20." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "내가 쇳물이지금 550개 있는데 지팡이가 19강 마법물체가 18강임", "en": "I have 550 Syrup Metal now; staff is +19, magic object +18." },
+        { "kr": "안전빵은 지팡이긴할거임 19>20기댓값이 430개 정도라서", "en": "(comment) The safe bet is the staff, since 19→20 has an expected cost of about 430." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84965", "url": "https://m.dcinside.com/board/projectcc/84965", "date": "2026-10-10",
+      "title_kr": "아레나도 단장복지 따로 하게해줬음 좋겠다", "title_en": "Wish Arena had its own leader-perk setting",
+      "relevance": 1,
+      "summary_en": "Perks (단장 복지) are one global setting, so the poster has to swap them every time they play Arena; a commenter calls it the most urgent fix, another just plays without swapping.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [
+        { "system": "mercenary_band", "mode": "arena", "text": "Perk setup is shared across modes; players re-set perks before Arena fights, implying the perk choice affects Arena results." }
+      ],
+      "quotes": [
+        { "kr": "맨날칠때마다 바꿔야되니까 귀찮네", "en": "Annoying to have to change it every time I fight." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84903", "url": "https://m.dcinside.com/board/projectcc/84903", "date": "2026-10-10",
+      "title_kr": "장비 3스가 프리셋 6스가 프리셋 따로 만들어야 하나", "title_en": "Should I make separate 3-haste and 6-haste gear presets?",
+      "relevance": 1,
+      "summary_en": "On a five-element Barley deck the poster cut skill haste to 3 lines because haste reportedly matters little, but 6 haste lines look better for Guild Conquest, stages and the Crumble Dungeon. No replies.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Poster's impression: 6 skill-haste sub lines look better than 3 for Conquest, stages and Crumble Dungeon even on the Barley deck (no figure)." }
+      ],
+      "quotes": [
+        { "kr": "토벌전이나 스테, 크럼블에서는 6스가가 더 좋아보이네", "en": "In Conquest, stages and Crumble, 6 haste looks better." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84870", "url": "https://m.dcinside.com/board/projectcc/84870", "date": "2026-10-10",
+      "title_kr": "토벌 장비프리셋 피감 vs 체력 둘중 뭐 챙김?", "title_en": "Conquest gear preset: damage reduction or HP?",
+      "relevance": 2,
+      "summary_en": "Conquest preset: bottom-left items carry HP + damage reduction, bottom-right carry damage reduction + skill haste; only half the team survives past 17 seconds. A commenter runs the same.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest preset: bottom-left HP + damage reduction, bottom-right damage reduction + skill haste (poster and a commenter agree)." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Survival lines (HP, damage reduction) on the lower gear row keep damage dealers alive past the 17 s mark; with this set half the team survives past 17 s." }
+      ],
+      "quotes": [
+        { "kr": "좌하단은 체력 피감 우하단은 피감 스가", "en": "Bottom-left HP + damage reduction, bottom-right damage reduction + skill haste." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84851", "url": "https://m.dcinside.com/board/projectcc/84851", "date": "2026-10-10",
+      "title_kr": "니들 토벌셋도 따로 맞춤?", "title_en": "Do you build a separate Conquest set too?",
+      "relevance": 2,
+      "summary_en": "Poster asks whether others build a Conquest gear set without crit resistance. Commenters fill all 5 gear presets; one says swapping crit resistance for HP lets the team live to the 5-second mark; bottom-right stays haste + damage reduction.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) For Conquest drop crit resistance and put HP on the bottom-left items; bottom-right is haste + damage reduction." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "(comment) Replacing crit resistance with HP keeps everyone alive to the 5 s mark (likely 5 s remaining on the timer), lengthening damage time." }
+      ],
+      "quotes": [
+        { "kr": "치저빼고 체력 넣으니까 5초까지 다 살더라 맞추면 좋음", "en": "(comment) Took out crit resistance and put HP in, and everyone lives until 5 s; worth building." },
+        { "kr": "프리셋 5개 꽉꽉 채우지 않나", "en": "(comment) Don't you fill all 5 presets?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84841", "url": "https://m.dcinside.com/board/projectcc/84841", "date": "2026-10-10",
+      "title_kr": "토벌이랑 아레나 장비 옵션 뭐챙겨야됨?", "title_en": "Which gear sub-stats for Conquest and Arena?",
+      "relevance": 1,
+      "summary_en": "Poster states Conquest uses 6 skill-haste lines and asks what Arena needs; no replies.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest: 6 skill-haste sub lines (poster's working rule)." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "토벌은 6스가고 아레나는 뭐챙김?", "en": "Conquest is 6 haste; what do you take for Arena?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84774", "url": "https://m.dcinside.com/board/projectcc/84774", "date": "2026-10-10",
+      "title_kr": "나보다 스테 낮은애가 나보다 크럼블 레벨 높은 이유?", "title_en": "Why does someone at a lower stage have a higher Crumble level?",
+      "relevance": 2,
+      "summary_en": "A commenter explains that Crumble-level EXP accrues faster at higher stages, so a player who sat a while at a fairly high stage can out-level one who climbed recently; the lucky dice reward is unrelated.",
+      "datapoints": [],
+      "advice": [
+        { "system": "cookie_level", "text": "(comment) Crumble level EXP rate scales with your stage; time spent at a high stage, not the lucky dice, drives it." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "스테 높을수록 크럼블경험치 빨리오르니까", "en": "(comment) The higher the stage, the faster Crumble EXP rises." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84757", "url": "https://m.dcinside.com/board/projectcc/84757", "date": "2026-10-10",
+      "title_kr": "토벌 팀투 1.3G 평딜 430쯤 나오는데", "title_en": "Conquest team power 1.3G, average about 430",
+      "relevance": 2,
+      "summary_en": "Conquest team power 1.3G gives an average of about 430 per run; the poster expects a higher ceiling and blames a 4-star Seeker.",
+      "datapoints": [
+        { "system": "lineup", "account": "Conquest team 1.3G (team power)", "before": "", "after": "average ~430 per run", "cost": "", "note": "unit of 430 not stated (likely G of score or a multiple); Seeker 4-star" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "cookie_stars", "mode": "conquest", "text": "Poster suspects a 4-star Seeker caps Conquest damage at team power 1.3G (opinion, no comparison)." }
+      ],
+      "quotes": [
+        { "kr": "시커 4성이라 그래도 힘든가", "en": "(poster's comment) Maybe it's hard because Seeker is 4-star." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84746", "url": "https://m.dcinside.com/board/projectcc/84746", "date": "2026-10-10",
+      "title_kr": "총투 13.4g 토벌 1T면 못한거겠지?", "title_en": "Account total 13.4g and 1T in Conquest: is that bad?",
+      "relevance": 3,
+      "summary_en": "Screenshot: Conquest personal score 1T 20G with a 2.08G team (preset 1), second in the guild; account total 13.4g. The team pads with several cookies at Lv.1; damage dealers Lv.116; pets 20/20/14.",
+      "datapoints": [
+        { "system": "account", "account": "account total 13.4g; Conquest team 2.08G (team power, on screen)", "before": "", "after": "Conquest personal 1T 20G", "cost": "", "note": "about 490배 (1T 20G / 2.08G), derived; Lv.1 cookies used as padding" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "lineup", "mode": "conquest", "text": "Team of Lv.116 attackers plus Lv.1 fillers at 2.08G team power scored 1T 20G." }
+      ],
+      "quotes": [
+        { "kr": "총투 13.4g 토벌 1T면 못한거겠지?", "en": "Account total 13.4g and 1T in Conquest, that's poor, right?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84745", "url": "https://m.dcinside.com/board/projectcc/84745", "date": "2026-10-10",
+      "title_kr": "토벌 치저 아예 안챙겨??", "title_en": "Do you skip crit resistance entirely for Conquest?",
+      "relevance": 3,
+      "summary_en": "Screenshot of the same +15 Eternal helmet: with damage reduction 6.50% + crit resistance 21.43% it shows 336.65M power; the alternative with damage reduction 6.76% + HP +10,079 shows 228.64M (−108M). A commenter says crit resistance is a dead line in Conquest because the boss doesn't crit and Conquest has no power correction (stages do), and the same holds for the Crumble Dungeon.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "kind not stated (item power on gear screen)", "before": "helmet subs dmg reduction 6.50% + crit resistance 21.43%: 336.65M", "after": "dmg reduction 6.76% + HP +10,079: 228.64M (-108M)", "cost": "", "note": "crit resistance sub inflates displayed power far more than HP" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Drop crit resistance for Conquest and Crumble Dungeon; take HP instead even though displayed power falls." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "(comment) Crit resistance does nothing in Conquest: the boss doesn't crit, and Conquest has no power-based correction; on stages it at least feeds the power correction." },
+        { "system": "gear_oven", "mode": "crumble_dungeon", "text": "(comment) Same for the Crumble Dungeon: crit resistance is a wasted line." },
+        { "system": "gear_oven", "mode": "stage", "text": "(comment) On stages crit resistance raises power, which feeds the stage power correction." }
+      ],
+      "quotes": [
+        { "kr": "토벌보스가 치명타로 안때리니 옵션 자체가 잉여옵. 스테이지면 투력보정이라도 있지만 토벌은 투력보정도 없음", "en": "(comment) The Conquest boss doesn't hit with crits, so the line is wasted; stages at least have a power correction, Conquest has none." },
+        { "kr": "100m이나 떨어지는데.. 체력 고르는게 맞는거?", "en": "Power drops by 100m; is HP really right?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84724", "url": "https://m.dcinside.com/board/projectcc/84724", "date": "2026-10-10",
+      "title_kr": "토벌 장비 추천 부탁", "title_en": "Conquest gear advice please",
+      "relevance": 2,
+      "summary_en": "At stage 301-25 the poster compares +15 Eternal necklaces: equipped crit resistance 37.72% main with skill damage 7.49% + skill haste +4.60 (258.99M) versus crit resistance 40.59% with crit rate 18.74% + skill damage 7.72% (307.66M, +48.67M). Crit rate is 505% with the Chardonnay buff; gear haste totals 27.6, Seeker's haste 44.6. No replies.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "stage 301-25; kind not stated (item power)", "before": "necklace skill dmg 7.49% + haste +4.60: 258.99M", "after": "necklace crit rate 18.74% + skill dmg 7.72%: 307.66M (+48.67M)", "cost": "", "note": "crit rate 505% under Chardonnay buff; gear haste 27.6, Seeker haste 44.6" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "샤르버프 받았을 때 기준 치확 505퍼", "en": "Crit rate 505% with the Chardonnay buff." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84695", "url": "https://m.dcinside.com/board/projectcc/84695", "date": "2026-10-10",
+      "title_kr": "15퍼 스가셋 끼는사람들아 6스가씀?", "title_en": "Those running a haste set at 15%: 6 haste lines?",
+      "relevance": 1,
+      "summary_en": "Poster asks whether the 15% haste set uses 6 haste lines or puts haste + damage reduction on the bottom row and skill damage/crit damage on top. Commenters: 6 haste; one also uses the 6-haste set in Arena.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comments) Use 6 skill-haste lines for 15% stage pushing; one commenter uses the same 6-haste set in Arena." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "arena", "text": "(comment) A commenter fights Arena with the 6-haste set (no figure)." }
+      ],
+      "quotes": [
+        { "kr": "아레나 6스가 셋끼고함", "en": "(comment) I do Arena with the 6-haste set on." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84603", "url": "https://m.dcinside.com/board/projectcc/84603", "date": "2026-10-09",
+      "title_kr": "크던,토벌 열심히 하는분들한테 궁금한게", "title_en": "Question for dedicated Crumble Dungeon / Conquest players",
+      "relevance": 2,
+      "summary_en": "Only gear has presets, so for Crumble Dungeon and Conquest players re-level cookies (level reset/padding) and change perks by hand every run. Commenters confirm and accept Arena defence losses in the meantime, relying on the revenge feature and attack wins.",
+      "datapoints": [],
+      "advice": [
+        { "system": "lineup", "text": "(comments) Before Conquest/Crumble Dungeon runs, lower cookie levels and switch perks, then restore them quickly for Arena defence." }
+      ],
+      "damage": [
+        { "system": "mercenary_band", "mode": "arena", "text": "Changing perks and cookie levels for Conquest leaves the Arena defence weaker meanwhile; players accept losses (revenge exists)." }
+      ],
+      "quotes": [
+        { "kr": "매번 할때마다 쿠키레벨,복지 하나하나 올리고내리면서 하는거임..?", "en": "Do you raise and lower cookie levels and perks one by one every time?" },
+        { "kr": "금방하고 다시 돌려둬야지 최대한", "en": "(comment) Do it quickly and change it back as soon as possible." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84577", "url": "https://m.dcinside.com/board/projectcc/84577", "date": "2026-10-09",
+      "title_kr": "검 다음 20강 뭐부터감?", "title_en": "After the sword, which plate goes to +20 next?",
+      "relevance": 1,
+      "summary_en": "Asks which plate to take to +20 after the sword; the one reply says the book.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "(comment) After the sword, take the book plate to +20." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "책", "en": "(comment) The book." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84574", "url": "https://m.dcinside.com/board/projectcc/84574", "date": "2026-10-09",
+      "title_kr": "그냥 올 17부터 할까", "title_en": "Maybe just get everything to +17 first",
+      "relevance": 1,
+      "summary_en": "Poster is too risk-averse to attempt +20 plates and considers bringing every plate to +17 first.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "Poster's plan: all plates to +17 before any +20 attempt (opinion)." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "나 같은 에겐은 20강 도전 못하겠음..", "en": "A timid player like me can't attempt +20." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84551", "url": "https://m.dcinside.com/board/projectcc/84551", "date": "2026-10-09",
+      "title_kr": "15퍼 그냥 토벌셋으로 미는 게 더 빠른 거 같은데", "title_en": "Pushing 15% with the Conquest set seems faster",
+      "relevance": 2,
+      "summary_en": "Poster finds the Conquest gear set pushes 15% stages faster than the stage preset. Commenters: one is building a dedicated set (2 hit, 4 crit damage, 6 skill damage, 3 haste, 3 crit resistance, 5 damage reduction, 1 concentration); another says at the same % (35%/15%) a 6-haste set pushes better than power-inflating gear; another notes most players' stage sets carry no haste.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) At the same stage % (35% or 15%), 6-haste gear clears better than power-inflating gear." },
+        { "system": "gear_oven", "text": "(comment) Stage set vs Conquest set differ mainly by hit 3 + concentration 1 swapped for crit damage 3 + damage reduction 1." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "stage", "text": "(comment) Skill-haste gear beats displayed-power (crit resistance) gear for actually clearing stages at a given %." }
+      ],
+      "quotes": [
+        { "kr": "원래도 같은 퍼센트(35퍼 15퍼)면 뻥투장비보다 6스가 장비가 더 잘 밀어", "en": "(comment) Even before, at the same percent (35%, 15%), 6-haste gear pushes better than power-padding gear." },
+        { "kr": "2명중4치피6스증3스가3치저5피감1집중", "en": "(comment) 2 hit, 4 crit dmg, 6 skill dmg, 3 haste, 3 crit res, 5 dmg reduction, 1 concentration." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84496", "url": "https://m.dcinside.com/board/projectcc/84496", "date": "2026-10-09",
+      "title_kr": "20강 오너들아", "title_en": "+20 owners",
+      "relevance": 3,
+      "summary_en": "Plate screen: sword +18, bow +18, staff +17, necklace +16, ring +15, brooch +15, helmet +15, armor +17, shield +15, magic object +18, book +18, food +17. Poster asks whether to take the sword to +20 now or raise the rest to +17 first; a commenter took only the sword to +20 straight from mostly +15.",
+      "datapoints": [
+        { "system": "plating", "account": "kind not stated", "before": "sword +18, bow +18, magic object +18, book +18; staff/armor/food +17; necklace +16; ring/brooch/helmet/shield +15", "after": "", "cost": "", "note": "plate screen on image" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "(comment) A commenter went sword-only to +20 while the other plates were around +15." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "15둘둘일때 깡으로 검만 20갓음", "en": "(comment) When I was around +15 I took just the sword to +20 straight." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84480", "url": "https://m.dcinside.com/board/projectcc/84480", "date": "2026-10-09",
+      "title_kr": "아레나 방덱 복지 적용 안되는거 진짜임?", "title_en": "Is it true perks don't apply to the Arena defence deck?",
+      "relevance": 2,
+      "summary_en": "Poster heard perks (복지) don't apply to the Arena defence deck, which would make a 3-tank perk setup pointless. One commenter notes attackers usually win and revenges always win; another says perks do apply, but some skills key off the arena position rather than the cookie's position, which favours the attacker.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [
+        { "system": "mercenary_band", "mode": "arena", "text": "Disputed: a rumour says perks don't apply on Arena defence; a commenter says they do apply, and attacker advantage comes from some skills using arena position instead of cookie position. Unverified either way." }
+      ],
+      "quotes": [
+        { "kr": "적용되는데 스킬 중에 어떤건 쿠키 위치가 아니라 아레나 위치 기준으로 적용돼서 공격 측이 유리하다고 하던데", "en": "(comment) They do apply, but some skills apply by arena position rather than cookie position, so I heard the attacker has the edge." },
+        { "kr": "그럼 3탱 고집할 필요 없겠네", "en": "Then there's no need to insist on 3 tanks." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84441", "url": "https://m.dcinside.com/board/projectcc/84441", "date": "2026-10-09",
+      "title_kr": "2명중4치피6스증 6피감3스가3치저 스테이지용세팅", "title_en": "Stage setup: 2 hit 4 crit dmg 6 skill dmg / 6 dmg red 3 haste 3 crit res",
+      "relevance": 2,
+      "summary_en": "Poster plans a stage gear set of 2 hit, 4 crit damage, 6 skill damage on top and 6 damage reduction, 3 haste, 3 crit resistance below. Commenters: 2 hit + 2 concentration is enough for stages; a +15 2-concentration ring shows 1300; 800 concentration already handles the 'coward' boss, so drop one damage reduction for power padding.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "kind not stated", "before": "", "after": "concentration 1300 with a +15 2-concentration ring", "cost": "", "note": "commenter's figure; 800 reported as enough for one boss" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Stage set: 2 hit + 2 concentration suffice; 800 concentration was enough, so trade a damage-reduction line for power padding." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "2집중 반지 15강 1300 뜨는 거 보면 16~17 하고 1집중해도 될듯", "en": "(comment) A +15 2-concentration ring shows 1300, so at +16–17 one concentration line may do." },
+        { "kr": "800으로도 비겁이 잡혀서 투력뻥용으로 피감하나 빼고 넣어야할듯", "en": "(poster's reply) 800 already catches the coward boss, so swap a damage reduction for power padding." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84437", "url": "https://m.dcinside.com/board/projectcc/84437", "date": "2026-10-09",
+      "title_kr": "17강 7개 완성했다", "title_en": "Finished seven plates at +17",
+      "relevance": 3,
+      "summary_en": "Plate screen (oven Lv.39): seven plates at +17, the rest +15; the bow broke three times. Chocosteel per plate varies; once breaks start, up to 100 per slot. Commenters: the set passes the 17-second mark in Conquest, and one at all +15 also passes with all damage reduction/HP on the bottom row; another sank ~1000 Chocosteel without Syrup Metal and is now short of Chocosteel.",
+      "datapoints": [
+        { "system": "plating", "account": "oven Lv.39; kind not stated", "before": "all +15", "after": "seven plates +17, rest +15", "cost": "up to ~100 Chocosteel per slot when breaks happen", "note": "cost is the poster's rough estimate; bow broke 3 times" },
+        { "system": "plating", "account": "commenter", "before": "~1000 Chocosteel stockpiled", "after": "spent without Syrup Metal; now short of Chocosteel", "cost": "~1000 Chocosteel", "note": "" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "(comment) Spending Chocosteel without Syrup Metal backfired for one commenter; now Chocosteel-starved." },
+        { "system": "gear_oven", "text": "(comment) For Conquest, put damage reduction / HP on the whole bottom row; all +15 plates still pass 17 s." }
+      ],
+      "damage": [
+        { "system": "plating", "mode": "conquest", "text": "(comments) +17 plates pass Conquest's 17 s mark; an all-+15 account also passes with damage reduction/HP bottom row." }
+      ],
+      "quotes": [
+        { "kr": "박살나기 시작하면 뭐 부위당 100개도 든다고 봐야할듯", "en": "(poster's reply) Once it starts breaking, expect even 100 per slot." },
+        { "kr": "나 올15인데 넘김", "en": "(comment) I'm all +15 and I pass it." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84430", "url": "https://m.dcinside.com/board/projectcc/84430", "date": "2026-10-09",
+      "title_kr": "복지 5렙은 언제나옴?", "title_en": "When does perk level 5 come?",
+      "relevance": 1,
+      "summary_en": "Asks when perk level 5 unlocks; the reply names 'Indomitable Mercenary Band' (불굴의 용병단), apparently the band tier that unlocks it.",
+      "datapoints": [],
+      "advice": [
+        { "system": "mercenary_band", "text": "(comment) Perk level 5 comes with the 'Indomitable Mercenary Band' tier (interpretation of a one-phrase reply)." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "불굴의 용병단", "en": "(comment) Indomitable Mercenary Band." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84382", "url": "https://m.dcinside.com/board/projectcc/84382", "date": "2026-10-09",
+      "title_kr": "이면 간 애들아 20강 몇개냐", "title_en": "Rift players, how many +20 plates do you have?",
+      "relevance": 2,
+      "summary_en": "Poll of Rift players' +20 plate count: one commenter has 3 (first claimed blessing 6, then said blessing 9), another has 0.",
+      "datapoints": [
+        { "system": "plating", "account": "Rift player, blessing 9 (stated after a joke '6')", "before": "", "after": "three +20 plates", "cost": "", "note": "self-reported" },
+        { "system": "plating", "account": "Rift player", "before": "", "after": "zero +20 plates", "cost": "", "note": "self-reported" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "세개 잇서", "en": "(comment) I have three." },
+        { "kr": "난 0개", "en": "(comment) I have zero." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84354", "url": "https://m.dcinside.com/board/projectcc/84354", "date": "2026-10-09",
+      "title_kr": "토벌 고득점용 장비 질문좀", "title_en": "Gear for high Conquest scores",
+      "relevance": 2,
+      "summary_en": "Conquest high-score layout: top-left skill damage + crit damage, top-right skill damage + haste, bottom-left damage reduction + HP, bottom-right damage reduction + haste; two items are still Legendary. A commenter says higher grade means higher values.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest layout: TL skill dmg + crit dmg, TR skill dmg + haste, BL dmg reduction + HP, BR dmg reduction + haste." },
+        { "system": "gear_oven", "text": "(comment) Higher gear grade gives higher sub-stat values, so Legendary pieces should be upgraded." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "좌하 3개 피감 체력 , 우하 3개 피감 스가", "en": "Bottom-left three: dmg reduction + HP; bottom-right three: dmg reduction + haste." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84340", "url": "https://m.dcinside.com/board/projectcc/84340", "date": "2026-10-09",
+      "title_kr": "토벌/아레나 생각하면 스가>치피임?", "title_en": "For Conquest/Arena, is haste > crit damage?",
+      "relevance": 3,
+      "summary_en": "Ring comparison: equipped +15 ring with crit damage 14.83% + skill damage 8.97% (491.6M) vs one with skill damage 8.62% + haste +4.60 (461.03M, −30.57M). Commenters: haste only rolls 4.6 at +15 (fixed value); on a five-element Barley deck skill damage + crit damage beats haste, other decks want skill damage + haste.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "kind not stated (item power)", "before": "ring crit dmg 14.83% + skill dmg 8.97%: 491.6M", "after": "ring skill dmg 8.62% + haste +4.60: 461.03M (-30.57M)", "cost": "", "note": "haste sub is a fixed +4.60 at +15 per commenters" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Five-element Barley deck: skill dmg + crit dmg over haste; other decks: skill dmg + haste." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "(comment) Deck-dependent: Barley decks gain more from crit damage than haste; other decks from haste." }
+      ],
+      "quotes": [
+        { "kr": "스가는 4.6 밖에 없음 15강이라면", "en": "(comment) Haste only comes as 4.6 at +15." },
+        { "kr": "오방바리덱이면 스증치피가 좋고 기타 다른 덱이면 스증스가", "en": "(comment) Barley deck: skill dmg + crit dmg; other decks: skill dmg + haste." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84330", "url": "https://m.dcinside.com/board/projectcc/84330", "date": "2026-10-09",
+      "title_kr": "3탱복지로 17초사니까 기갱햇네", "title_en": "3-tank perks got me past 17 s and a new record",
+      "relevance": 2,
+      "summary_en": "Using 3-tank perks the team survived the 17-second mark in Conquest and set a personal record; poster suggests 3 tanks plus three more attack research levels beats three more HP research levels.",
+      "datapoints": [],
+      "advice": [
+        { "system": "guild_lab", "text": "Poster's idea: with 3 tanks surviving, spend research on attack rather than HP." }
+      ],
+      "damage": [
+        { "system": "mercenary_band", "mode": "conquest", "text": "3-tank perk setup kept the team alive past 17 s and gave a personal best (no figure)." }
+      ],
+      "quotes": [
+        { "kr": "체력연구 3번 더할바에 3탱커에 공연구 3번더하면 되는거 아닐까요?", "en": "Rather than three more HP research levels, why not 3 tanks and three more attack research levels?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84309", "url": "https://m.dcinside.com/board/projectcc/84309", "date": "2026-10-09",
+      "title_kr": "브시커 스증보다 치피야???", "title_en": "Bright Seeker: crit damage over skill damage?",
+      "relevance": 2,
+      "summary_en": "crumb.gg sub-stat tiers for Bright Seeker: S skill haste, A crit damage, B skill damage / crit rate, C attack %. Commenters: all haste; Chardonnay raises crit rate a lot; Pomegranate already gives Seeker skill damage, lowering its value.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "crumb.gg priority for Bright Seeker: haste > crit damage > skill damage = crit rate > attack %." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "석류가 브시커한테 스증을 꼿으니깐 상대적으로 밸류가 낮아지는거긴함.", "en": "(comment) Pomegranate feeds Seeker skill damage, so skill damage is relatively worth less." },
+        { "kr": "요번에 샤르도네가 거의 확정으로 치확 쭉 늘려줘서 그런거 아닌가 싶네", "en": "(comment) Probably because Chardonnay now raises crit rate almost to a sure crit." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84186", "url": "https://m.dcinside.com/board/projectcc/84186", "date": "2026-10-09",
+      "title_kr": "강화 오지게 안붙는데 20강은 어캐함?", "title_en": "Upgrades keep failing; how do people reach +20?",
+      "relevance": 1,
+      "summary_en": "Poster complains the last step to +20 is a 2% chance; commenters say it's luck, or spending hundreds of thousands of won.",
+      "datapoints": [
+        { "system": "plating", "account": "", "before": "+19", "after": "+20", "cost": "2% success rate on the last step", "note": "rate as stated by the poster" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "마지막에 2퍼 뚫은 새끼들은 미친새끼들이냐", "en": "Are the people who hit the final 2% crazy?" },
+        { "kr": "몇십만원 지르는 방법밖에", "en": "(comment) Only way is spending a few hundred thousand won." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84162", "url": "https://m.dcinside.com/board/projectcc/84162", "date": "2026-10-09",
+      "title_kr": "토벌은 깡공이 맞는 듯?", "title_en": "Flat attack seems right for Conquest",
+      "relevance": 3,
+      "summary_en": "Before Chardonnay, three items with skill damage ~9% + flat attack 750 gave 2.6t in Conquest with a sloppy run. Switching to skill damage + crit damage (skill damage mid-8.5, crit damage 15–16) finished at only 2.2t even on a good run where Milk and buffers lived to the 5 s mark; poster concludes flat attack is better for Conquest.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "kind not stated", "before": "skill dmg 9% + flat atk 750 on 3 items: 2.6t Conquest", "after": "skill dmg ~8.5 + crit dmg 15–16: 2.2t Conquest", "cost": "", "note": "different runs and patch timing (pre-Chardonnay vs after); single comparison" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Poster: for Conquest, flat attack on the skill-damage items beats crit damage (one comparison)." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Flat attack 750 lines (×3 items) scored 2.6t vs 2.2t with crit damage 15–16 lines; poster reads flat attack as ~+18% better." }
+      ],
+      "quotes": [
+        { "kr": "스증9퍼 깡공 750 3개 집고 대충 쳐도 2.6t였는데", "en": "With three items of skill dmg 9% + flat atk 750 I got 2.6t even playing sloppily." },
+        { "kr": "스증치피로 다시 바꿔봤더니 우유랑 버퍼들 5초까지 살아남는 고점판 떴는데도 2.2t마무리함", "en": "Switched back to skill dmg + crit dmg and even on a peak run with Milk and buffers alive to 5 s it finished at 2.2t." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84096", "url": "https://m.dcinside.com/board/projectcc/84096", "date": "2026-10-09",
+      "title_kr": "부옵 체력은 별로지 않나?", "title_en": "Isn't the HP sub-stat weak?",
+      "relevance": 2,
+      "summary_en": "HP sub lines (~10,000) are used in the Conquest preset out of necessity; poster doubts they matter in Arena. Commenters: HP sub is about 1/10 of the armor's HP main stat; doesn't help in Arena; with Chardonnay, crit resistance and HP may be about equal.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) HP sub (~10,000) is about 1/10 of an armor HP main stat; skip it for Arena." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "arena", "text": "(comment) HP sub lines have no felt effect in Arena." }
+      ],
+      "quotes": [
+        { "kr": "체력 부옵션이 갑옷 체력 주옵션 1/10 수준이라 굳이일거 같은데", "en": "(comment) The HP sub is about 1/10 of the armor HP main, so not worth it." },
+        { "kr": "아레나에서는 안먹긴함 나는", "en": "(comment) In Arena it doesn't do anything for me." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84014", "url": "https://m.dcinside.com/board/projectcc/84014", "date": "2026-10-09",
+      "title_kr": "어떻게 막 500배1000배씩는거임???", "title_en": "How do people hit 500x–1000x?",
+      "relevance": 3,
+      "summary_en": "Conquest screen: personal score 120G 822M with a 664.75M team (preset 3; filler cookies at Lv.1/40/60). The stage gear set shows 900m but the roughly-built skill damage + haste set (664m) scores higher. A commenter says multipliers in the hundreds rarely appear below ~1g team power.",
+      "datapoints": [
+        { "system": "lineup", "account": "Conquest team 664.75M (team power, on screen)", "before": "stage gear set: 900m", "after": "skill dmg + haste set: 664m; Conquest personal 120G 822M", "cost": "", "note": "about 181배, derived; skill dmg/haste set scores higher despite lower power" }
+      ],
+      "advice": [
+        { "system": "lineup", "text": "(comment) Hundreds-of-times multipliers start appearing once team power passes ~1g." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Skill dmg + haste gear at 664m team power scores more than the stage set at 900m." },
+        { "system": "cookie_stars", "mode": "conquest", "text": "(comments) A 5-star vs 4-star Ceylon (and Seeker) believed to make a large difference (opinion)." }
+      ],
+      "quotes": [
+        { "kr": "스테셋은 900m나오고 스증스가 대충맞춘거 끼면 664m인데 일단 대충맞춘 스증스가가 더 높게뽑히긴함", "en": "The stage set shows 900m and the rough skill dmg/haste set 664m, but the rough skill dmg/haste set scores higher." },
+        { "kr": "원래 투력 낮을수록 배수 몇백배 이런거 잘 안나옴 팀투 1g넘어가면 슬슬.잘나와", "en": "(comment) The lower your power, the rarer multipliers in the hundreds; past 1g team power they start coming." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84919", "url": "https://m.dcinside.com/board/projectcc/84919", "date": "2026-10-10",
+      "title_kr": "15퍼로 모든맵 한바퀴 돌고 스테이지 공략팁", "title_en": "Stage tips after clearing every map at 15%",
+      "relevance": 3,
+      "summary_en": "Guide. Screenshot at stage 352-8: team power 4G 881M 210K (preset '건실스테'), blessing Lv.6, cookies Lv.118 (one 115), oven Lv.39, plates mostly +15 with two +17 and one +10. Gear: 6 skill dmg, 4 crit dmg, 2 hit on top; 5 dmg reduction, 3 haste, 3 crit resistance, 1 concentration below; maximise crit dmg × crit rate. Perk card fixed at 720; Battery pet except on airborne maps (lucky pouch). Commenters: crit resistance only for padding power; Battery makes Strawberry Crepe 1.6× stronger; swapping a hit item for a hit pet would be ~4% damage.",
+      "datapoints": [
+        { "system": "account", "account": "stage 352-8; team 4G 881M 210K (team power, stage preset on screen); blessing Lv.6", "before": "", "after": "cookies Lv.118; oven Lv.39; plates +15 with +17 on two and +10 on one", "cost": "", "note": "from screenshot" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "15% stage set: 6 skill dmg / 4 crit dmg / 2 hit top, 5 dmg reduction / 3 haste / 3 crit res / 1 concentration bottom; choose crit dmg vs rate to maximise their product." },
+        { "system": "gear_oven", "text": "Crit resistance lines are only for power padding; skip them if power is already sufficient." },
+        { "system": "mercenary_band", "text": "Perk card fixed at 720." },
+        { "system": "pets", "text": "Battery pet except on airborne maps, where the lucky pouch goes in." }
+      ],
+      "damage": [
+        { "system": "pets", "mode": "stage", "text": "(poster's reply) Battery pet makes Strawberry Crepe 1.6× stronger; replacing a hit gear line with a hit pet estimated at ~4% damage." },
+        { "system": "lineup", "mode": "stage", "text": "Dark Choco adds damage in the tens of percent but is skipped because its defence shred doesn't always apply; power is irrelevant so Devil cookie recommended." }
+      ],
+      "quotes": [
+        { "kr": "치피×치확이 최대한 높아야 좋음", "en": "Crit dmg × crit rate should be as high as possible." },
+        { "kr": "딸크는 전지빨로 1.6배쌔지고", "en": "(poster's reply) Strawberry Crepe gets 1.6× stronger from the Battery." },
+        { "kr": "뻥투땜에 투력남으면 안써도됨", "en": "(poster's reply) Crit resistance is for power padding; skip it if you have power to spare." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84887", "url": "https://m.dcinside.com/board/projectcc/84887", "date": "2026-10-10",
+      "title_kr": "크던 60배이상", "title_en": "Crumble Dungeon over 60x",
+      "relevance": 3,
+      "summary_en": "Crumble Dungeon weekly ranking 771G 651M at team power 12.58G (preset '토벌(치피)'), over 60x. Lowering haste failed to reach the old record; going back to the usual set gave a new best. Set: TL skill dmg + crit dmg, TR skill dmg + haste, BL dmg reduction + HP, BR dmg reduction + haste; perks '20 7'; Seeker haste 44.6 (35.4 with the lowered set, Figure 24.4). Poster found the 15-haste set weak since before the patch.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "team 12.58G (team power, on screen)", "before": "lowered haste (Seeker 35.4, Figure 24.4): below old record", "after": "Seeker haste 44.6: Crumble Dungeon 771G 651M (new best)", "cost": "", "note": "about 61배, derived; gains since the old record also include other spec-ups" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Crumble Dungeon: keep Seeker haste high (44.6); TL skill dmg + crit dmg, TR skill dmg + haste, BL dmg red + HP, BR dmg red + haste." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "crumble_dungeon", "text": "Higher Seeker haste (44.6 vs 35.4) gave the better Crumble Dungeon score: 771G 651M at 12.58G team." }
+      ],
+      "quotes": [
+        { "kr": "스가낮추니 기존기록도 안나와서 원래 치던대로 치니 바로 기갱함", "en": "Lowering haste didn't even match my old record; going back to my usual set gave a new record right away." },
+        { "kr": "시커 35.4에 피겨 24.4임", "en": "(poster's reply) Seeker 35.4 and Figure 24.4 (lowered-haste set)." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84918", "url": "https://m.dcinside.com/board/projectcc/84918", "date": "2026-10-10",
+      "title_kr": "832배", "title_en": "832x",
+      "relevance": 3,
+      "summary_en": "Conquest personal score 1T 948G with a 2.34G team: 832x. Set: flat attack with 4 haste lines plus Popcorn and Strawberry Crepe; several cookies at Lv.1 as filler; pets 20/20/17; perks '20 7'.",
+      "datapoints": [
+        { "system": "lineup", "account": "Conquest team 2.34G (team power, on screen)", "before": "", "after": "Conquest personal 1T 948G (832배)", "cost": "", "note": "pets 20/20/17; Lv.1 filler cookies" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Flat attack + 4 haste set reached 832x (1T 948G at 2.34G team)." }
+      ],
+      "quotes": [
+        { "kr": "깡공 4스가 + 팝콘딸크", "en": "Flat attack, 4 haste + Popcorn and Strawberry Crepe." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84669", "url": "https://m.dcinside.com/board/projectcc/84669", "date": "2026-10-09",
+      "title_kr": "이 정도로 한적한 서버 한 손에 꼽을거 같은데", "title_en": "A server this empty must be rare",
+      "relevance": 1,
+      "summary_en": "Server 619 has 10 active players; 10th place has a 1m team, so a top-10 Crumble Arena finish is guaranteed. Mostly banter about dead servers.",
+      "datapoints": [
+        { "system": "account", "account": "10th-ranked player on server 619: team 1m (team power)", "before": "", "after": "", "cost": "", "note": "" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "10등 점마 팀투 1m인데", "en": "The 10th-place guy has 1m team power." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84492", "url": "https://m.dcinside.com/board/projectcc/84492", "date": "2026-10-09",
+      "title_kr": "팀투 4G면 어디까지 됨?", "title_en": "How far does 4G team power get you?",
+      "relevance": 2,
+      "summary_en": "Poster at 4G team power occasionally times out at Redberry. Commenters: at 35% about 328-29; at 15% up to just before the Rift.",
+      "datapoints": [
+        { "system": "lineup", "account": "team 4G (team power)", "before": "", "after": "35% → stage 328-29; 15% → just before the Rift", "cost": "", "note": "commenters' reports" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "35퍼 328-29", "en": "(comment) 35%: 328-29." },
+        { "kr": "15퍼로 밀면 이면 직전까지도 가능", "en": "(comment) Pushing at 15% gets you to just before the Rift." }
+      ]
+    },
+    {
+      "source": "dc", "id": "84177", "url": "https://m.dcinside.com/board/projectcc/84177", "date": "2026-10-09",
+      "title_kr": "딜량 뭐임 서로 동투력 27M vs 27M 이였음", "title_en": "What's this damage gap? Both sides 27M power",
+      "relevance": 2,
+      "summary_en": "Cross-server PvP battle stats (S0171 vs S0059, likely Rumble Arena), both sides 27M power: poster's Chardonnay dealt 3,495,543 vs the opponent's top Rye 2,071,927. A commenter guesses Chardonnay melted everything while Rye chased Figure and Ion.",
+      "datapoints": [
+        { "system": "lineup", "account": "27M vs 27M (kind not stated)", "before": "", "after": "own Chardonnay 3,495,543 dmg; opponent Rye 2,071,927, Chardonnay 822,334", "cost": "", "note": "cookies Lv.116–117" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "lineup", "mode": "rumble", "text": "At equal power, Chardonnay out-damaged the opposing Rye by ~1.7× (3,495,543 vs 2,071,927); targeting, not power, decided it." }
+      ],
+      "quotes": [
+        { "kr": "호밀이 싸돌아다니는 피겨나 이온 때리는 동안 샤르도네가 다 녹여버린 건가", "en": "(comment) Maybe Chardonnay melted everything while Rye was off hitting the roaming Figure and Ion." }
+      ]
+    }
+  ]
+}

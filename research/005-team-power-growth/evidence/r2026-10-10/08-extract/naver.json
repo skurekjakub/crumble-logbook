@@ -1,0 +1,68 @@
+{
+  "lane": "naver",
+  "read": "2026-10-10",
+  "posts": [
+    {
+      "source": "naver", "id": "51217", "url": "https://cafe.naver.com/ccrumble/51217", "date": "2026-10-08",
+      "title_kr": "10/08 업데이트 이후 슈가룬", "title_en": "Sugar runes after the 10-08 update", "relevance": 3,
+      "summary_en": "The guide board's rune table per cookie after 1.5.002, in priority order per cookie. For Guild Conquest the author ranks skill amp first and skill haste second; Chardonnay gets skill amp because it raises her crit-rate buff, though the amp doesn't apply to her own skill.",
+      "datapoints": [],
+      "advice": [
+        { "system": "sugar_runes", "text": "Dealers: skill amp, crit damage, ATK (Brightseeker adds skill haste first). Milk: ATK. Chardonnay: skill amp." },
+        { "system": "sugar_runes", "text": "Reroll unlocked: the first option is the priority, the later ones are kept when they roll, because currency is short." }
+      ],
+      "damage": [
+        { "system": "sugar_runes", "mode": "conquest", "text": "Current Conquest meta: skill amp first, then skill haste; Brightseeker needs 40+ haste." },
+        { "system": "sugar_runes", "mode": "conquest", "text": "(comment) Chardonnay's skill amp raises her crit-rate buff, which beats raising crit rate directly." }
+      ],
+      "quotes": [
+        { "kr": "다만 현재 토벌 메타에는 스증 1순위, 다음이 스가 챙기는게 제일 좋습니다", "en": "(author's reply) In the current Conquest meta skill amp is first, then skill haste." },
+        { "kr": "스증으로 치확버프를 올리는게 좋습니다", "en": "(author's reply) Raising the crit-rate buff through skill amp is better." }
+      ]
+    },
+    {
+      "source": "naver", "id": "51157", "url": "https://cafe.naver.com/ccrumble/51157", "date": "2026-10-08",
+      "title_kr": "길드 토벌전 2.5T 공략 (샤르도네)", "title_en": "Guild Conquest 2.5T guide (Chardonnay)", "relevance": 3,
+      "summary_en": "A creator's Conquest guide with the Chardonnay deck. In the comments the author gives the Conquest gear sub-stats by slot group, and says the set is for Conquest only: stages want accuracy and focus, and crit resistance there only pads power. A reader reports clearing 4T easily since the level expansion and the new cookie, up from 1.8T.",
+      "datapoints": [
+        { "system": "lineup", "account": "a reader's Conquest deck", "before": "1.8T", "after": "4T 'easily'", "cost": "level expansion and the new cookie", "note": "a comment; cause split between the level cap and Chardonnay; no power figure" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest gear: the three weapons skill amp + crit rate (some say ATK is better); the three armour pieces damage reduction + HP; the upper accessories skill haste + skill amp; the lower accessories damage reduction + skill haste." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Weapons skill amp + crit rate; armour damage reduction + HP (crit resistance raises power but is a dead line); upper accessories haste + amp; lower accessories DR + haste (amp can't roll there)." },
+        { "system": "gear_oven", "mode": "stage", "text": "Stage gear takes accuracy and focus first; crit resistance pads displayed power only." }
+      ],
+      "quotes": [
+        { "kr": "무기 3개 증폭 + 치확 (공격력이 더 좋다는 말도 있는데 일단 치확 씀)", "en": "(author) Weapons: skill amp + crit rate (some say ATK is better; I use crit rate for now)." },
+        { "kr": "레벨 확장에 신쿠 나온뒤로 4T는 그냥 쉽게 넘기던데 원래 1.8T였는데", "en": "(comment) Since the level expansion and the new cookie I pass 4T easily; I was at 1.8T." }
+      ]
+    },
+    {
+      "source": "naver", "id": "51817", "url": "https://cafe.naver.com/ccrumble/51817", "date": "2026-10-10",
+      "title_kr": "길드 토벌전 3.1T 공략", "title_en": "Guild Conquest 3.1T guide", "relevance": 2,
+      "summary_en": "The same creator's 3.1T Conquest guide (Strawberry Crepe variant). A reader with an 8★ Brightseeker, all-haste runes and mostly skill-amp runes averages 1.2–1.3T and asks whether the gap is spec or retries.",
+      "datapoints": [], "advice": [], "damage": [],
+      "quotes": [ { "kr": "평균적으러 1.2-1.3T밖에 안나와서요", "en": "(comment) I only average 1.2–1.3T." } ]
+    },
+    {
+      "source": "naver", "id": "51707", "url": "https://cafe.naver.com/ccrumble/51707", "date": "2026-10-09",
+      "title_kr": "플레이트 박살", "title_en": "Plate shattered", "relevance": 1,
+      "summary_en": "A shatter rant; a commenter asks for a plating pity ceiling.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "51364", "url": "https://cafe.naver.com/ccrumble/51364", "date": "2026-10-08",
+      "title_kr": "레벨 14길드 버프길드", "title_en": "A level-14 guild recruiting for its lab buffs", "relevance": 1,
+      "summary_en": "A level-14 guild advertises its research buffs; guild research is a recruiting point.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "naver", "id": "51435", "url": "https://cafe.naver.com/ccrumble/51435", "date": "2026-10-09",
+      "title_kr": "프리셋 여태까지 덱 편성에서 설정해야 적용되는지 이제 알았네", "title_en": "Presets only apply once set in the deck formation", "relevance": 0,
+      "summary_en": "Members-only: the capture holds the refusal, not the post. Title only: a gear preset applies once it is chosen in the deck formation.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    }
+  ]
+}

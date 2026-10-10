@@ -1,0 +1,663 @@
+{
+  "lane": "dc",
+  "read": "2026-10-10",
+  "posts": [
+    {
+      "source": "dc", "id": "81976", "url": "https://m.dcinside.com/board/projectcc/81976", "date": "2026-10-07",
+      "title_kr": "아 이면 전투력 지랄나는거 에반데", "title_en": "Rift power display going haywire is too much",
+      "relevance": 3,
+      "summary_en": "Screenshot in the Rift: a weapon comparison popup shows +24.3M power with an up arrow, but equipping the raw-attack item lowered the poster's conquest deck power. Commenters attribute the inflated display to the Rift's Dimension Power (차원의 힘).",
+      "datapoints": [
+        { "system": "gear_oven", "account": "Lv.190, profile power 17G 800M 900K (kind not stated, Rift-inflated per comments), rank 941st, blessing (축복) Lv.5, Dimension Power Lv.9, Rift stage 10", "before": "equipped Eternal staff Lv.114 +15: crit rate 45.10%, skill amp 7.93%, crit dmg 16.07%, item power 1.6G", "after": "candidate Eternal staff Lv.117 +15: crit rate 47.15%, attack +719, skill amp 8.60%, item power 1.62G (+24.3M)", "cost": "", "note": "popup says +24.3M; poster says the conquest deck's power dropped after equipping it (no figure given)" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Swapping crit dmg sub-stat for flat attack (깡공) showed a power gain in the Rift popup but lowered the conquest deck's power." },
+        { "system": "rift_energy", "mode": "rift", "text": "(comment) Dimension Power inflates displayed power in the Rift, so gear arrows there mislead." }
+      ],
+      "quotes": [
+        { "kr": "토벌 장비 이렇게 뜨길래 진짜 깡공이 좋은건가 싶어서 껴봤는데 토벌덱 투력 떨어짐", "en": "Conquest gear showed up like this so I tried it thinking flat attack was really better, but the conquest deck's power dropped" },
+        { "kr": "차원의 힘 때문에 전투력 뻥튀기 된거", "en": "(comment) Power is inflated because of Dimension Power" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82009", "url": "https://m.dcinside.com/board/projectcc/82009", "date": "2026-10-07",
+      "title_kr": "쇳물던전을 만들던지 요구량을 줄이든지 씨발년들아", "title_en": "Either add a Syrup Metal dungeon or cut the requirement",
+      "relevance": 2,
+      "summary_en": "Plating from +18 up: shatter chance exceeds success; with shatter mitigation one attempt costs 8 Syrup Metal while the Rift reward is 10. Comments debate whether shatter mitigation pays off.",
+      "datapoints": [
+        { "system": "plating", "account": "", "before": "+18 and above", "after": "", "cost": "8 Syrup Metal per attempt with shatter mitigation (박살완화)", "note": "Rift reward stated as 10 Syrup Metal" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "(comment) From +18 up, shatter mitigation should be on; not using it is a loss." },
+        { "system": "plating", "text": "(comment) Counter: with 8% shatter and a 40-unit restore cost, mitigation costing more than 1.6 is not worth it." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "박살완화 걸고하면 1트에 쇳물8개처먹는데 이면보상은 쇳물10개?", "en": "With shatter mitigation one try eats 8 Syrup Metal, and the Rift reward is 10?" },
+        { "kr": "박살확률 8프로에 복구 40개면 박살완화비용이 1.6이상이면 손해아님?", "en": "(comment) With an 8% shatter chance and 40 to restore, isn't mitigation a loss if it costs over 1.6?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82086", "url": "https://m.dcinside.com/board/projectcc/82086", "date": "2026-10-07",
+      "title_kr": "스테에서 스가를 어떻게 집는다는거임?", "title_en": "How do you take skill haste on a stage deck?",
+      "relevance": 2,
+      "summary_en": "Taking skill-haste gear drops displayed power by tens of M (77M for the poster, about 60 stages back), so the poster doubts the advice to drop accuracy/focus for haste. Commenters: high accuracy/focus is inflated power, and at the same power an arena or conquest set pushes stages better.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "kind not stated", "before": "accuracy/focus (명집) gear", "after": "skill haste (스가) gear", "cost": "", "note": "power dropped 77M, poster says that is 60 stages back" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Use an arena 6-haste preset instead of chasing displayed power." },
+        { "system": "gear_oven", "text": "(comment) Auto-picking for power fills accuracy/focus anyway; high accuracy/focus is inflated power." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "stage", "text": "(comment) At the same power cut, an arena or conquest gear set pushes stages better; a commenter who switched from the power-inflating set to the conquest set clearly deals more damage." }
+      ],
+      "quotes": [
+        { "kr": "77M 떨어졌는데? 스테이지 60개 뒤로 가야함", "en": "(comment, poster) It dropped 77M? I'd have to go 60 stages back" },
+        { "kr": "같은 투력컷일 때 아레나나 토벌셋이 더 잘 민다는 이야기겠지", "en": "(comment) It means at the same power cut an arena or conquest set pushes better" },
+        { "kr": "나도 뻥투쓰다가 걍 토벌셋끼니까 확실히 딜 잘두감", "en": "(comment) I used inflated-power gear too, and switching to the conquest set clearly deals better damage" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82105", "url": "https://m.dcinside.com/board/projectcc/82105", "date": "2026-10-07",
+      "title_kr": "아레나 장비 질문 있습니다", "title_en": "Question about arena gear",
+      "relevance": 2,
+      "summary_en": "Arena rank-3 player built an arena gear set (6 haste on the left, skill amp, crit rate, crit resist, damage reduction) but now loses to players the stage set used to beat; asks whether the top two are evasion decks.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "gear level 36, arena rank 3", "before": "stage (power) set: beats ranks 1 and 2", "after": "arena set (6 haste left; skill amp, crit rate, crit resist, damage reduction two lines each): loses to them", "cost": "", "note": "poster's own observation" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Check whether an opponent is an evasion deck by tapping their cookie in battle." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "arena", "text": "Poster's arena set with haste/skill amp/crit resist/damage reduction lost matches the higher-power stage set won; heard evasion decks lose to stage (accuracy) sets." }
+      ],
+      "quotes": [
+        { "kr": "스테덱으로 잡던 애들이 아레나로 바꿔서 치면 져버리는데", "en": "Players I beat with the stage set, I lose to after switching to the arena set" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82107", "url": "https://m.dcinside.com/board/projectcc/82107", "date": "2026-10-07",
+      "title_kr": "명중,집중,스킬적용확률 어디서 봄?", "title_en": "Where do I see accuracy, focus, skill application rate?",
+      "relevance": 1,
+      "summary_en": "Stuck on stages, asks where to read accuracy/focus/skill application rate for the gallery's power calculator site. Comments: tap the main dealer's portrait in battle; or just enter power and the site shows how far you can push.",
+      "datapoints": [],
+      "advice": [
+        { "system": "lineup", "text": "(comment) Stats vary per cookie but are close; read the main dealer's from the battle screen." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "그냥 너 투력만 입력하고 어디까지 밀수잇나 확인만 혀", "en": "(comment) Just enter your power and check how far you can push" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82136", "url": "https://m.dcinside.com/board/projectcc/82136", "date": "2026-10-07",
+      "title_kr": "이면 간 사람들 장비 어떻게 먹고 있냐?", "title_en": "Rift players, how are you picking gear?",
+      "relevance": 2,
+      "summary_en": "In the Rift, gear with an up arrow can still lower power. A commenter's workaround: set the current stage formation to an unused gear preset, then compare, so power at least won't drop.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Switch the stage formation to an unused gear preset before comparing new gear; then swaps at least don't lower power." },
+        { "system": "gear_oven", "text": "(comment) Accuracy/focus is a scam (inflated power)." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "그냥 지금 편성된 스테편성창에서 장비프리셋을 안쓰는걸로 바꿔놓고 장비 보고 바꾸면 최소한 떨어지지는 않음", "en": "(comment) Change the stage formation's gear preset to an unused one, then compare and swap gear; at least it won't drop" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82138", "url": "https://m.dcinside.com/board/projectcc/82138", "date": "2026-10-07",
+      "title_kr": "장비 프리셋 다들 이렇게 하고있나?", "title_en": "Is everyone running gear presets like this?",
+      "relevance": 2,
+      "summary_en": "In the Rift the poster runs stage, arena and conquest presets; popups promising +100m gave +10m and +20m gave -10m. Conquest set: 6 haste plus HP, damage reduction, crit dmg. A commenter skips the top two sub-lines on level-100 gear because they always mix crit resist and accuracy.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "Rift reached; kind not stated", "before": "popup: +100m / +20m", "after": "actual: +10m / -10m", "cost": "", "note": "poster's observation of Rift display mismatch" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest preset: 6 skill haste plus HP, damage reduction, crit damage." },
+        { "system": "gear_oven", "text": "(comment) On level-100 conquest gear the top two lines are always crit resist/accuracy mixes, so judge from line three." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "무슨 100m 오른다더만 10m 오르고 20m 오른다더만 10m 떨어짐", "en": "It said +100m and went up 10m, said +20m and dropped 10m" },
+        { "kr": "토벌셋은 6스가에 체력 피감 치피 잡는거라", "en": "The conquest set takes 6 haste plus HP, damage reduction, crit damage" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82163", "url": "https://m.dcinside.com/board/projectcc/82163", "date": "2026-10-07",
+      "title_kr": "와 초코강 1500개 쓰고 노쇳물 활 15>15했다", "title_en": "Spent 1500 Chocosteel, no Syrup Metal, bow went +15 to +15",
+      "relevance": 2,
+      "summary_en": "Plating a bow from +15 without Syrup Metal: it fell to +11, +14, +10 and back; 1500 Chocosteel spent just to recover +15.",
+      "datapoints": [
+        { "system": "plating", "account": "", "before": "bow +15", "after": "bow +15 (via +11, +14, +11, +14, +10)", "cost": "1500 Chocosteel, no Syrup Metal", "note": "poster had nearly 2000 Chocosteel" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "와 초코강 1500개 쓰고 노쇳물 활 15>15했다", "en": "Spent 1500 Chocosteel with no Syrup Metal and the bow went 15 to 15" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82247", "url": "https://m.dcinside.com/board/projectcc/82247", "date": "2026-10-07",
+      "title_kr": "이면 장비 교체 투력 떨어지는건 왜 내용에 없어?", "title_en": "Why isn't the Rift gear-swap power drop mentioned?",
+      "relevance": 1,
+      "summary_en": "Poster stopped opening dough because Rift gear swaps lower real power; a comment says the displayed power includes the Rift and the up/down arrows use it.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "투력표기를 이면포함으로 만들고 거기서 상승 하락을 쳐넣으니까 그냥 병신집단임", "en": "(comment) They made the power display include the Rift and put the up/down arrows on that" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82252", "url": "https://m.dcinside.com/board/projectcc/82252", "date": "2026-10-07",
+      "title_kr": "플레이트 500개 모여서 16강 트라이해볼건데", "title_en": "Have 500 plates, going to try +16",
+      "relevance": 2,
+      "summary_en": "Asks which plate slot to push to +16 first for conquest: weapon, crit-damage accessory or skill-amp accessory. Comments: accessories-first assumes going to +20; the top-left weapons and bottom-right magic object/book are optional (book is good); without Syrup Metal gather 1000 plates first.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "(comment) Accessory-first plating assumes taking each slot to +20." },
+        { "system": "plating", "text": "(comment) Top-left weapon slots and the bottom-right magic object/book are optional; the book is said to be good." },
+        { "system": "plating", "text": "(comment) Without Syrup Metal, save 1000 plates before trying." }
+      ],
+      "damage": [
+        { "system": "plating", "mode": "conquest", "text": "Hearsay that accessory plating comes first for conquest damage." }
+      ],
+      "quotes": [
+        { "kr": "악세우선은 20강찍는 가정임", "en": "(comment) Accessories-first assumes you take them to +20" },
+        { "kr": "노쇳물이면 1000개 모으고하지", "en": "(comment) With no Syrup Metal, gather 1000 first" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82258", "url": "https://m.dcinside.com/board/projectcc/82258", "date": "2026-10-07",
+      "title_kr": "플레이트 900개 쌓여있는데 어카냐 이거? 쇳물없는데", "title_en": "900 plates piled up, no Syrup Metal, what now?",
+      "relevance": 1,
+      "summary_en": "Poster has 900 plates and no Syrup Metal. A comment: pressing without Syrup Metal toward +10 burns them all.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "쇳물없이 눌러서 10강 갔다오면 없어져있음", "en": "(comment) Press without Syrup Metal, bounce through +10, and they're gone" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82295", "url": "https://m.dcinside.com/board/projectcc/82295", "date": "2026-10-07",
+      "title_kr": "[유출] 탈퇴기념 방랑자길드 토벌 유출", "title_en": "[Leak] A guild's conquest stat weights, leaked on leaving",
+      "relevance": 3,
+      "summary_en": "Leaked guild-internal conquest stat weights: 1% skill amp = 2% damage, 15% crit rate = 3%, 15% crit dmg = 4%, 650 attack = 2.5%. Flat attack value depends on accumulated totals; individual results vary with break-through, research, gear and stellar link. Commenters say it was already known; one claims a 69t74g score after applying it.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Already known: hit the minimum skill haste, then crit damage." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Skill amp: +1% = +2% damage." },
+        { "system": "gear_oven", "mode": "conquest", "text": "Crit rate +15% = +3% damage; crit damage +15% = +4% damage." },
+        { "system": "gear_oven", "mode": "conquest", "text": "Attack +650 = +2.5% damage; varies with accumulated attack, break-through, research, gear and stellar link." }
+      ],
+      "quotes": [
+        { "kr": "스증 1%당 딜 2% 상승", "en": "Each 1% skill amp raises damage 2%" },
+        { "kr": "치피 15%는 4% 상승", "en": "15% crit damage raises it 4%" },
+        { "kr": "공격력 650은 2.5% 상승", "en": "650 attack raises it 2.5%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82303", "url": "https://m.dcinside.com/board/projectcc/82303", "date": "2026-10-07",
+      "title_kr": "토벌 유출", "title_en": "Conquest leak",
+      "relevance": 2,
+      "summary_en": "A 'leaked' conquest gear and sugar-rune guide: attack slots skill amp + crit dmg, defence slots damage reduction + HP, top-right accessories skill amp + haste, bottom-right haste + damage reduction; Seeker haste 45–47. Commenters call it AI-written (nonexistent cookie names) and suggest skill amp ×2 + crit dmg on the top accessories instead.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest gear: weapons skill amp + crit dmg; armour damage reduction + HP; top-right accessories skill amp + haste; bottom-right haste + damage reduction." },
+        { "system": "sugar_runes", "text": "Sugar runes: Milk attack; most dealers skill amp; Seeker haste 45–47 then skill amp or crit dmg; Figure haste scaled to Seeker's (0/32/37+)." },
+        { "system": "gear_oven", "text": "(comment) Top accessories with haste + skill amp ×2 + crit dmg ×1 hit harder." },
+        { "system": "sugar_runes", "text": "(comment) Seeker haste to 46, rest movement speed." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Guide claims the listed gear lines maximise conquest damage; commenters doubt its source (likely AI-written)." }
+      ],
+      "quotes": [
+        { "kr": "시커맛 쿠키 : 스킬 가속 45~47 맞춘 후, 남는 수치는 스킬 증폭 또는 치명타 피해", "en": "Seeker: set skill haste 45–47, then skill amp or crit damage" },
+        { "kr": "이거 딱봐도 ai한테 그럴듯하게 써줘인듯", "en": "(comment) This is obviously 'AI, write something plausible'" },
+        { "kr": "위쪽 장신구 스가 + 스증2, 치피1이 더썜", "en": "(comment) Top accessories with haste + skill amp ×2 and crit dmg ×1 are stronger" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82337", "url": "https://m.dcinside.com/board/projectcc/82337", "date": "2026-10-07",
+      "title_kr": "300스테이지 이상구간 명집800", "title_en": "Stage 300+, accuracy/focus 800",
+      "relevance": 2,
+      "summary_en": "Past stage 300 with accuracy/focus around 800 and misses showing. Comment: keeping 900 makes it smooth; pick one accuracy item, focus rises to 1400 on its own from power-chasing gear.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "stage 300+", "before": "accuracy/focus 800", "after": "", "cost": "", "note": "commenter says 900 is enough" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Keep accuracy/focus at 900 past stage 300; take one accuracy item, focus comes from power gear (up to 1400)." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "stage", "text": "Accuracy/focus 800 shows misses past stage 300; 900 is called smooth." }
+      ],
+      "quotes": [
+        { "kr": "900만 유지하면 쾌적함", "en": "(comment) Keep it at 900 and it's comfortable" },
+        { "kr": "명중장비는 하나 고르고 집중은 어차피 뻥투템 고르다보면 존나 오름 1400까지도", "en": "(comment) Pick one accuracy item; focus climbs to 1400 anyway from power gear" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82361", "url": "https://m.dcinside.com/board/projectcc/82361", "date": "2026-10-07",
+      "title_kr": "야수의 심장 ㅁㅌㅊ", "title_en": "Heart of a beast, how's this",
+      "relevance": 3,
+      "summary_en": "Poster meant to push a necklace to +16 but pressed the +20 sword without Syrup Metal or protection and hit +21. Screenshot shows the +20 odds and stat change.",
+      "datapoints": [
+        { "system": "plating", "account": "", "before": "sword +20: attack +12,474, skill amp 12.00%, accuracy +200.47", "after": "sword +21: attack +13,430, skill amp 12.00%, accuracy +200.47", "cost": "27 plates per attempt (412 held), no drop protection, no shatter mitigation", "note": "+20 odds on screen: great success 0.10%, success 2.00%, maintain 42.90%, drop 43.00%, shatter 12.00%" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "20강짜리 노쇳물로 누름", "en": "Pressed the +20 piece with no Syrup Metal" },
+        { "kr": "와 근데 확률2퍼 애미쳐듀ㅣ졌네ㅋㅋ", "en": "(comment) Wow, a 2% chance" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82383", "url": "https://m.dcinside.com/board/projectcc/82383", "date": "2026-10-07",
+      "title_kr": "애들아 열쇠 쇳물 사지말고", "title_en": "Don't buy keys and Syrup Metal",
+      "relevance": 1,
+      "summary_en": "Joke post: buy fall/winter clothes instead of keys and Syrup Metal. Comments mention 100–200k won of Syrup Metal as a modest spend.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "패션에 돈 많이 쓸거면 10만-20만원 쇳물 사도 어차피 티도 안나잖아", "en": "(comment) If you spend a lot on fashion, 100–200k won of Syrup Metal won't even show" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82388", "url": "https://m.dcinside.com/board/projectcc/82388", "date": "2026-10-07",
+      "title_kr": "치확보다 치피가 더 낫다는건 알겠는데", "title_en": "I get that crit damage beats crit rate, but",
+      "relevance": 2,
+      "summary_en": "Using the leaked weights (15% crit rate = 3% damage, 15% crit dmg = 4%), the poster notes gear rolls crit rate up to 23% but crit dmg barely to 16%, so a high crit-rate roll may beat crit dmg. Comments give observed highs.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "", "before": "", "after": "highest rolls seen: crit rate 23% (+20 item), crit dmg ~16%; a commenter's highs crit rate 21%, crit dmg 16%; +15 item crit dmg 16.3%", "cost": "", "note": "observed rolls, not game data" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Pick by ratio: take a high crit-rate roll, replace it with a high crit-dmg roll when one drops." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Leaked weights: 15% crit rate = 3% damage, 15% crit dmg = 4%; but crit-rate rolls run larger (23% vs ~16%)." }
+      ],
+      "quotes": [
+        { "kr": "치확이 23% 짜리가 뜨면 치피는 15% 구경도 못해본거같은데", "en": "Crit rate rolls 23%, while I've barely seen 15% crit damage" },
+        { "kr": "15강 치피 16.3퍼임", "en": "(comment) +15 crit damage is 16.3%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82390", "url": "https://m.dcinside.com/board/projectcc/82390", "date": "2026-10-07",
+      "title_kr": "올19 후에 20강이 맞겠지?", "title_en": "Should be all +19 first, then +20, right?",
+      "relevance": 2,
+      "summary_en": "Poster burned about 1000 Chocosteel and 300 Syrup Metal on a failed sword +20 attempt; would have half-finished all +18 with it. Comments: go all +18 and hope for great success; aim for +19 on two slots.",
+      "datapoints": [
+        { "system": "plating", "account": "", "before": "sword +19", "after": "not +20", "cost": "about 1000 Chocosteel and 300 Syrup Metal", "note": "poster's estimate" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "Bring every slot to +19 before trying +20." },
+        { "system": "plating", "text": "(comment) Go all +18 and rely on great success." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "검20 트라이에 쳐녹은 초코강천개에 시럽300개 생각하니 울화통터지네", "en": "A thousand Chocosteel and 300 Syrup Metal melted on the sword +20 try" },
+        { "kr": "그 생각으로 쳐박다가 시럽 다 녹음 저거 안녹였음 18작 반은 끝냈을듯", "en": "(comment, poster) Without that I'd have half-finished the +18 grind" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82405", "url": "https://m.dcinside.com/board/projectcc/82405", "date": "2026-10-07",
+      "title_kr": "오븐장비 투력높은거 안놨으면 걍 다 버리냐(", "title_en": "Do you just sell oven gear that isn't higher power?",
+      "relevance": 1,
+      "summary_en": "Oven gear with good sub-options can show lower power due to a weak main stat; poster sells everything anyway. Comment: preset the wanted options before drawing.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Select the wanted options before opening oven gear." }
+      ],
+      "damage": [],
+      "quotes": []
+    },
+    {
+      "source": "dc", "id": "82451", "url": "https://m.dcinside.com/board/projectcc/82451", "date": "2026-10-07",
+      "title_kr": "차원의 이면 떠다니는 선물 상자보상 지급", "title_en": "Rift floating gift box compensation",
+      "relevance": 1,
+      "summary_en": "Official notice: the Rift's floating gift boxes failed to show; fixed on 10-08, with compensation of 3 random gift boxes per day since reaching the Rift (cutters, auto-hunt rewards, crystals, lucky dough 100, rune crystals 500).",
+      "datapoints": [
+        { "system": "rift_energy", "account": "players who reached the Rift", "before": "", "after": "", "cost": "", "note": "compensation = days since reaching the Rift × 3 boxes, each one of: pickup cutter 10, premium cutter 10, coin/EXP 2h or 4h auto-hunt ×10, crystals 1,000 or 3,000, lucky dough 100, rune crystals 500" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "지급 수량 : 차원의 이면 도달 후 경과 일수 X 3개", "en": "Quantity: days since reaching the Rift × 3" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82459", "url": "https://m.dcinside.com/board/projectcc/82459", "date": "2026-10-07",
+      "title_kr": "이시발 크확은 왜 전투력 올라가는거냐", "title_en": "Why does crit rate raise power?",
+      "relevance": 1,
+      "summary_en": "Poster thinks crit rate is past 100% and should be skipped on gear. Comments: crits can trigger multiple times above 100%; the research tree has lots of crit rate for a reason.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "(comment) Crit rate over 100% still adds multi-crits; don't dismiss it." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "stage", "text": "(comment) Crit rate above 100% gives multiple crits, so it still adds damage." }
+      ],
+      "quotes": [
+        { "kr": "크리 여러번 터짐", "en": "(comment) It crits multiple times" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82469", "url": "https://m.dcinside.com/board/projectcc/82469", "date": "2026-10-07",
+      "title_kr": "결국 비법소스는", "title_en": "In the end, the secret sauce is",
+      "relevance": 1,
+      "summary_en": "Opinion: top players win by spending sugar runes, plates and Syrup Metal very efficiently, beyond money and luck.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": []
+    },
+    {
+      "source": "dc", "id": "82545", "url": "https://m.dcinside.com/board/projectcc/82545", "date": "2026-10-07",
+      "title_kr": "플레이트 강화 중앙값 찾는중", "title_en": "Finding the median plate enhancement cost",
+      "relevance": 1,
+      "summary_en": "A player runs tens of millions of Monte Carlo plate-enhancement simulations; code screenshot shows milestones 15, 18, 20, 22, 25 and reports median Chocosteel per strategy.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": []
+    },
+    {
+      "source": "dc", "id": "82595", "url": "https://m.dcinside.com/board/projectcc/82595", "date": "2026-10-08",
+      "title_kr": "올 15강 이후부턴 박살 완화&하락 방지 필수임?", "title_en": "After all +15, are shatter mitigation and drop protection required?",
+      "relevance": 2,
+      "summary_en": "Comments: use drop protection only, all the way to +20; shatter mitigation is a loss.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "(comment) Past +15 use drop protection only; skip shatter mitigation." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "박살완화는 안하고 하락방지만 한다고 들었음", "en": "(comment) Heard you skip shatter mitigation and use only drop protection" },
+        { "kr": "박살완화는 하면 손해", "en": "(comment) Shatter mitigation is a loss" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82608", "url": "https://m.dcinside.com/board/projectcc/82608", "date": "2026-10-08",
+      "title_kr": "플레이트 강화 시뮬레이터 업데이트", "title_en": "Plate enhancement simulator update",
+      "relevance": 2,
+      "summary_en": "A fan wiki's plate simulator now has an optimal-strategy tab, 10M simulations per start/end level pair via Markov absorption chains. A commenter: this site and another both say skipping shatter mitigation uses less Syrup Metal.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "Use the simulator's optimal strategy (cc.team-hobby.com, platesim, opt tab)." },
+        { "system": "plating", "text": "(comment) Both simulators show not using shatter mitigation costs less Syrup Metal." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "전체 강화에 대해 1천만회씩 시뮬레이션 진행함.", "en": "Ran 10 million simulations for every enhancement" },
+        { "kr": "박살완화 안누르는게 쇳물이 더 적게든다고나오네", "en": "(comment) Not pressing shatter mitigation comes out cheaper in Syrup Metal" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82613", "url": "https://m.dcinside.com/board/projectcc/82613", "date": "2026-10-08",
+      "title_kr": "6줄 세공 기댓값 얼마정도인지 아는게이 있노?", "title_en": "Anyone know the expected cost of a 6-line refine?",
+      "relevance": 2,
+      "summary_en": "Poster has 200k of the refine currency and two lines already fine. Comment: up to 6 lines 200k is workable, but the last two lines cost 800k.",
+      "datapoints": [
+        { "system": "sugar_runes", "account": "", "before": "", "after": "6-line refine", "cost": "200k to reach 6 lines; last two lines 800k", "note": "commenter's figure; system inferred (세공 = refine, currency not named)" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "6줄까지는 20만개로 비벼볼만하다 마지막 두개가 80만개듬", "en": "(comment) 200k gets you to 6 lines; the last two take 800k" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82648", "url": "https://m.dcinside.com/board/projectcc/82648", "date": "2026-10-08",
+      "title_kr": "마일리지 상점 다 터는게 맞냐?", "title_en": "Should I clear out the mileage shop?",
+      "relevance": 1,
+      "summary_en": "Whether the mileage shop resets with the new items; commenters think a plain addition won't reset it, unlike the earlier announced overhaul.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": []
+    },
+    {
+      "source": "dc", "id": "82682", "url": "https://m.dcinside.com/board/projectcc/82682", "date": "2026-10-08",
+      "title_kr": "플레이트 70개 이거 혜자 같는데 맞음?", "title_en": "Is this 70-plate pack a good deal?",
+      "relevance": 2,
+      "summary_en": "Player stuck at 40-30 asks about buying the 70-plate pack three times. Comments: fine for an early spec-up, +10 and above can be reached free; Syrup Metal is the real bottleneck, Chocosteel is plentiful.",
+      "datapoints": [],
+      "advice": [
+        { "system": "spending", "text": "(comment) Plate packs are fine early; plating to +10 can be free." },
+        { "system": "plating", "text": "(comment) Syrup Metal is the real constraint; Chocosteel is abundant." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "본체는 쇳물임 초코강은 개허벌임", "en": "(comment) Syrup Metal is what matters; Chocosteel is plentiful" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82688", "url": "https://m.dcinside.com/board/projectcc/82688", "date": "2026-10-08",
+      "title_kr": "공30 이거 찍은 애들 잇음?", "title_en": "Anyone hit attack 30?",
+      "relevance": 1,
+      "summary_en": "Asks who reached attack research level 30 and where research stones come from; commenters reached it by hoarding.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": []
+    },
+    {
+      "source": "dc", "id": "82708", "url": "https://m.dcinside.com/board/projectcc/82708", "date": "2026-10-08",
+      "title_kr": "쿠키 120 다찍으면 팀투 얼마나 오를라나", "title_en": "How much team power from taking cookies to 120?",
+      "relevance": 2,
+      "summary_en": "A commenter says the 120 cap raises team power about 25%; the poster at 6.5g expects about 8g.",
+      "datapoints": [
+        { "system": "cookie_level", "account": "team power 6.5g", "before": "6.5g", "after": "about 8g (expected)", "cost": "", "note": "hearsay +25% team power; projection, not measured" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "팀투 25퍼 오른데", "en": "(comment) They say team power goes up 25%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82830", "url": "https://m.dcinside.com/board/projectcc/82830", "date": "2026-10-08",
+      "title_kr": "아레나 장비 우하단을 바꿨음", "title_en": "Changed my arena gear's bottom-right slots",
+      "relevance": 2,
+      "summary_en": "Arena: swapping the bottom-right lines from haste + damage reduction to damage reduction + crit resist stopped deaths in about 20 matches against Bari and 오방 decks with 3–4M more power. Pets: lucky pouch, damage-reduction bell. Fights now last longer.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "kind not stated; opponents 3–4M higher", "before": "bottom-right haste + damage reduction: occasional deaths", "after": "damage reduction + crit resist: no deaths in about 20 matches", "cost": "", "note": "poster's count ('20판인가')" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Arena: bottom-right gear damage reduction + crit resist for survivability." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "arena", "text": "Damage reduction + crit resist made the team much tankier; fights run longer, so a damage pet may be needed." }
+      ],
+      "quotes": [
+        { "kr": "아까 20판인가 해도 한 번도 안 죽음", "en": "Played about 20 matches and didn't die once" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82845", "url": "https://m.dcinside.com/board/projectcc/82845", "date": "2026-10-08",
+      "title_kr": "확실히 이면 나오니까 투력오르는 템이 다르긴하네", "title_en": "Leaving the Rift changes which items raise power",
+      "relevance": 2,
+      "summary_en": "After leaving the Rift, the auto-open result shows four items with power-up arrows where before only one did (and that one went down).",
+      "datapoints": [
+        { "system": "gear_oven", "account": "Lv.193, profile power 6G 485M 98K (kind not stated), rank 1st, stage 328-30, blessing Lv.7", "before": "in Rift: 1 item flagged as power up", "after": "outside Rift: that item lower, 4 others flagged", "cost": "", "note": "" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "원래 투력오르던거 1개였는데 그거 내려가고 4개 생겼노", "en": "There was one power-up item; it went down and four appeared" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82885", "url": "https://m.dcinside.com/board/projectcc/82885", "date": "2026-10-08",
+      "title_kr": "자동열기 보조옵션 정배?", "title_en": "Are these auto-open sub-options right?",
+      "relevance": 2,
+      "summary_en": "At stage 229 with 3G account total, the poster auto-opens with two presets: stage (haste, skill amp, damage reduction, accuracy, focus) and arena/conquest (haste, skill amp, damage reduction, crit rate, crit dmg), adding attack% at 6 options.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "stage 229, account total 3G", "before": "", "after": "", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Stage auto-open: haste, skill amp, damage reduction, accuracy, focus." },
+        { "system": "gear_oven", "text": "Arena/conquest auto-open: haste, skill amp, damage reduction, crit rate, crit damage." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "229지에 총투 3G 인데", "en": "Stage 229, account total 3G" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82897", "url": "https://m.dcinside.com/board/projectcc/82897", "date": "2026-10-08",
+      "title_kr": "오늘업뎃 - 출석패키지", "title_en": "Today's update: attendance packages",
+      "relevance": 3,
+      "summary_en": "Data-mined attendance packages (10-08 13:30 to 10-22 12:30): 7-day artisan pack ₩25,000 with 100 Chocosteel and 100 Syrup Metal total; 5-day Bari pack ₩14,000 with profile, cutters, crystals and 4K 인도의 혼불.",
+      "datapoints": [
+        { "system": "spending", "account": "", "before": "", "after": "", "cost": "₩25,000", "note": "7-day artisan attendance: D1 50 Chocosteel, 50 Syrup Metal, 5K crystals, 5 cookie EXP 8h; D2 30 pickup cutters; D3 20 Chocosteel; D4 20 Syrup Metal; D5 5 coin 8h; D6 30 Chocosteel; D7 30 Syrup Metal" },
+        { "system": "spending", "account": "", "before": "", "after": "", "cost": "₩14,000", "note": "5-day Bari attendance: D1 Bari special profile, 2K 인도의 혼불, 5 EXP 4h, 5 coin 4h; D2 60 premium cutters; D3 2K crystals; D4 60 pickup cutters; D5 2K 인도의 혼불" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "100초코강 100쇳물 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ", "en": "(comment) 100 Chocosteel, 100 Syrup Metal" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82898", "url": "https://m.dcinside.com/board/projectcc/82898", "date": "2026-10-08",
+      "title_kr": "패키지 쇳물/바리재화 정리", "title_en": "Packages: Syrup Metal and Bari currency summary",
+      "relevance": 3,
+      "summary_en": "Tally of the update's packages containing Syrup Metal (Syrup Metal / Bari currency, price in 만원, purchase limit): buying all gives about 870 Syrup Metal for roughly ₩600–650k. A comment says Special Thanks is ₩9,900 not ₩7,500.",
+      "datapoints": [
+        { "system": "spending", "account": "", "before": "", "after": "870 Syrup Metal", "cost": "about 60-65만 (₩600–650k)", "note": "per pack (Syrup Metal/Bari currency, 만원, limit): Chardonnay 30/3000 2.2 (3); Bari 20/13500 2.7 (5); Special Thanks 30/0 0.75 (3) [comment: 0.99]; Update1 20/0 1.5 (3); Update2 50/0 3.9 (5); 7-day attendance 100/0 2.5 (1); New Area 50/0 2.5 (3); Eternal Gear 30/0 3.5" }
+      ],
+      "advice": [
+        { "system": "spending", "text": "(comment) Apart from Update 1/2 and Eternal, the packs are efficient." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "쇳물 870개 대략 60-65만", "en": "870 Syrup Metal, roughly 600–650k won" },
+        { "kr": "특별감사 0.99 아이가?", "en": "(comment) Isn't Special Thanks 0.99?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82908", "url": "https://m.dcinside.com/board/projectcc/82908", "date": "2026-10-08",
+      "title_kr": "오늘 일단 1만짜리 30/70팩이랑 출석팩 사먹는다", "title_en": "Buying the ₩10k 30/70 pack and the attendance pack today",
+      "relevance": 3,
+      "summary_en": "Poster buys the ₩10k 30/70 pack and the attendance pack, then everything except Stage 12 and Eternal, to take the sword to +20. Screenshot shows +19 to +20 plate odds with drop protection and the option-amplification jump. A comment: expected cost about 427 Syrup Metal.",
+      "datapoints": [
+        { "system": "plating", "account": "132 plates, 692 Syrup Metal held", "before": "sword +19: main option amp +177.00%, sub option amp +130.00%", "after": "+20: main option amp +200.00%, sub option amp +200.00%", "cost": "25 plates + 4 Syrup Metal (drop protection on) per attempt", "note": "odds on screen with drop protection: great success 0.10%, success 2.00%, maintain 87.90%, drop 0.00%, shatter 10.00%; comment: expected value about 427 Syrup Metal (hearsay)" }
+      ],
+      "advice": [
+        { "system": "spending", "text": "Buy all packs except Stage 12 and Eternal, which are less efficient." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "기댓값으론 427갠가 그렇다는데", "en": "(comment, poster) They say the expected value is about 427" },
+        { "kr": "19강 대성공 0.1퍼였네", "en": "(comment) +19 great success was 0.1%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82914", "url": "https://m.dcinside.com/board/projectcc/82914", "date": "2026-10-08",
+      "title_kr": "패키지 살거 딱 정해준다", "title_en": "Here's exactly which packages to buy",
+      "relevance": 2,
+      "summary_en": "Buy list: required artisan attendance ₩25,000, artisan ₩9,900 ×3, stage ₩7,500, new stage ₩25,000; optional Bari ₩27,000.",
+      "datapoints": [],
+      "advice": [
+        { "system": "spending", "text": "Must buy: artisan attendance ₩25,000, artisan ₩9,900 ×3, stage ₩7,500, new stage ₩25,000; optional: Bari ₩27,000." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "장인 출석 25000원", "en": "Artisan attendance ₩25,000" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82940", "url": "https://m.dcinside.com/board/projectcc/82940", "date": "2026-10-08",
+      "title_kr": "일던확장없어 미친것들아", "title_en": "No daily dungeon expansion",
+      "relevance": 0,
+      "summary_en": "Data-miner reports the daily dungeon level expansion was removed from the final pre-maintenance data.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "82944", "url": "https://m.dcinside.com/board/projectcc/82944", "date": "2026-10-08",
+      "title_kr": "내가 유출하는게 뭔지 설명해줌.", "title_en": "Explaining what I leak",
+      "relevance": 0,
+      "summary_en": "Data-miner explains leaks come from staging-server data, not APK decompiling.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "82976", "url": "https://m.dcinside.com/board/projectcc/82976", "date": "2026-10-08",
+      "title_kr": "이 좆같은 그래프는 뭐냐 ㅋㅋ", "title_en": "What is this awful graph",
+      "relevance": 0,
+      "summary_en": "Mocks the developer's stock price chart.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "82994", "url": "https://m.dcinside.com/board/projectcc/82994", "date": "2026-10-08",
+      "title_kr": "오늘업뎃 - 던전스폰량/스테이지 조정", "title_en": "Today's update: dungeon spawns and stage adjustments",
+      "relevance": 1,
+      "summary_en": "Patch data: boss-stage minions now hit weaker than the boss; daily EXP, dough and research-stone dungeons made easier. A commenter says dough dungeon damage was cut over 60%.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "반죽던전 데미지 60퍼 넘게 너프했네", "en": "(comment) Dough dungeon damage nerfed by over 60%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "82997", "url": "https://m.dcinside.com/board/projectcc/82997", "date": "2026-10-08",
+      "title_kr": "공지뜸", "title_en": "Notice posted",
+      "relevance": 1,
+      "summary_en": "Official correction: the daily dungeon level expansion in the store notes ships with the 10-22 update, not 10-08.",
+      "datapoints": [], "advice": [], "damage": [],
+      "quotes": [
+        { "kr": "10월 22일 업데이트 시 적용 예정인 내용입니다.", "en": "It is scheduled for the October 22 update." }
+      ]
+    },
+    {
+      "source": "dc", "id": "83030", "url": "https://m.dcinside.com/board/projectcc/83030", "date": "2026-10-08",
+      "title_kr": "경험치 소급 지급됨", "title_en": "EXP refund delivered",
+      "relevance": 1,
+      "summary_en": "The excess-EXP refund from the cookie EXP requirement cut arrives by mail.",
+      "datapoints": [], "advice": [], "damage": [],
+      "quotes": [
+        { "kr": "쿠키 경험치 요구량 개선에 따른 초과 경험치 소급 지급", "en": "Retroactive grant of excess EXP after the cookie EXP requirement improvement" }
+      ]
+    },
+    {
+      "source": "dc", "id": "83049", "url": "https://m.dcinside.com/board/projectcc/83049", "date": "2026-10-08",
+      "title_kr": "만렙확장 투력 증가량 25% 언저리인 건 다들 알고 있냐?", "title_en": "Did you know the level-cap raise gives about +25% power?",
+      "relevance": 2,
+      "summary_en": "Claims the cookie cap extension raises power by about 25%; a commenter says they can't reach max anyway.",
+      "datapoints": [
+        { "system": "cookie_level", "account": "", "before": "Lv.100 cap", "after": "Lv.120 cap", "cost": "", "note": "about +25% power, kind not stated; source not given" }
+      ],
+      "advice": [], "damage": [],
+      "quotes": [
+        { "kr": "만렙확장 투력 증가량 25% 언저리인 건 다들 알고 있냐?", "en": "Does everyone know the max-level extension raises power around 25%?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "83061", "url": "https://m.dcinside.com/board/projectcc/83061", "date": "2026-10-08",
+      "title_kr": "100렙 수치 확 깎는거 좋긴 하네", "title_en": "Cutting the level-100 EXP is nice",
+      "relevance": 1,
+      "summary_en": "Welcomes the Lv.100 EXP cut; a comment says it lowers the hurdle for new players.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "83091", "url": "https://m.dcinside.com/board/projectcc/83091", "date": "2026-10-08",
+      "title_kr": "난 117렙까지만되네 쿠키", "title_en": "My cookies only go to Lv.117",
+      "relevance": 2,
+      "summary_en": "Cookie cap is gated by Crumble level; the poster can reach Lv.117. Commenters: one needs Crumble Lv.190 for the next unlock; each 5 Crumble levels opened one cookie level.",
+      "datapoints": [
+        { "system": "cookie_level", "account": "", "before": "", "after": "cookie cap Lv.117 at the poster's Crumble level", "cost": "", "note": "(comment) Crumble Lv.190 needed to raise it; 1 cookie level per 5 Crumble levels, remembered ('~던 거 같은데')" }
+      ],
+      "advice": [], "damage": [],
+      "quotes": [
+        { "kr": "크럼블렙 5단위로 쿠키렙 1씩 뚫렸던거 같은데", "en": "(comment) I think each 5 Crumble levels unlocked one cookie level" }
+      ]
+    }
+  ]
+}
