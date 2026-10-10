@@ -1,0 +1,752 @@
+{
+  "batch": "r2026-10-10-dc-2",
+  "identification_key": "Lobby portraits carry no names; cookies named by element icon + art + class icon, cross-checked with the author's text and the 10-09 keys (r2026-10-09/08-extract/dc-2.json, dc-3.json). 브시커 = light, brown hair, purple eye, pink goggles, crossbow icon (crumb.gg card in 84309 names the same art 브라이트시커). 샤르도네 = grass, pale lilac/pink hair with green streaks, double-chevron icon. 전갈 = fire, red hair, crossbow. 메소 = water, green hair, white goggles, crossbow. 팝콘 = light, star-spangled red/blue glasses, popcorn bucket, crossbow, purple (epic) frame (84894; matches the title '전갈 팝콘'). 딸크 = light, pink fluffy hair, shield icon (84434, 84772; matches the titles/text naming 딸크 and no other non-standard cookie). 피노 = dark, grey hair, monocle. 치케 = light, gold curly hair, blue frame. 석류 = dark, red curly hair. 피겨 = water, yellow face, purple headphones, bell icon. 정전 = grass, teal hair, orange flower, bell icon, purple frame. 우유 = light, white nurse, purple leader banner, pink bear. 닼초 = dark, black/red hair, shield icon. 실론 = light, white-bearded knight, shield icon (84398 detail screen names it 실론나이트 쿠키, SSR, 빛속성, 방어). Stars: five slots per card; gold only = 1–5★ (grey/empty slots count as missing), each pink star replaces a gold one (1 pink + 4 gold = 6★, 5 pink = 10★); read from 2–4x lanczos crops of each star row, all reads clear unless marked '?'. Pets: bun with sauce = 핫도그, green cactus/octopus = 와사비문어, white round with red/green trim = 색동주머니; the number on each pet tile is transcribed as ★N. Lobby positions are given as rNcM (row, column) of the 12-card grid; that is list order, not proven formation.",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "85201",
+      "url": "https://m.dcinside.com/board/projectcc/85201",
+      "date": "2026-10-10",
+      "title_kr": "핵 의심되는데 이 유저 핵인지 좀 봐주실",
+      "title_en": "I suspect a hacker; can you look at whether this user is hacking?",
+      "relevance": 1,
+      "summary_en": "Off-topic hack accusation on a ~480 server. The suspected rank-1 player reportedly has 6.7G power (vs the author's 4G and 2nd place's 5G) and is said to score 700–900G in Conquest. Commenters doubt the author's own low power more than the rank-1's; one at a 480 server with 축복7 has 6G.",
+      "scores": [
+        {"damage": "700–900G", "power": "6.7G (6G700M)", "ratio": "~104–134배 (derived)", "deck": "?", "note": "stated, hearsay ('나온다고하고'); not on a screen; the power figure may be team power (commenters call it 팀투)"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": ["Commenter ㅇㅇ 2: the 2nd/3rd are the abnormal ones (too low), not rank 1; author: rank 1 jumped ~1G overnight, so suspects hacking"],
+      "quotes": [
+        {"kr": "투력이 6G700M", "en": "Power is 6G 700M"},
+        {"kr": "토벌은 700-900G 나온다고하고", "en": "They say they get 700–900G in Conquest"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85203",
+      "url": "https://m.dcinside.com/board/projectcc/85203",
+      "date": "2026-10-10",
+      "title_kr": "핵의심 유저 글 추가 못 쓴거 있어서 요거로 봐주세요",
+      "title_en": "Suspected-hacker post again, with the details I left out; read this one",
+      "relevance": 1,
+      "summary_en": "Re-post of 85201 adding that the suspected rank-1 player has Bari 3★, Seeker 5★, Oven 6★ and no other 10★ cookies, yet 6.7G power and a reported 700–900G Conquest score. Commenters say a 축10 player at a high-400s server can't be at 4–5G team power.",
+      "scores": [
+        {"damage": "700–900G", "power": "6.7G", "ratio": "~104–134배 (derived)", "deck": "? (바리 3★, 시커 5★, 오븐 6★ per the author)", "note": "stated hearsay; same claim as 85201"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": ["언담: not impossible for a 축6 player without TSSR spending; another: author's 4–5G team power is the implausible part"],
+      "quotes": [
+        {"kr": "바리는3성 시커는5성 오븐6성 그외 모든 쿠키 10성도 못찍어보임", "en": "Bari 3★, Seeker 5★, Oven 6★; doesn't look like any other cookie has reached 10★"},
+        {"kr": "축10에 400후반대면 팀투가 4g5g일수가 없음 축8 400중반인 내가 팀투 8g넘었는데..", "en": "With 축10 on a high-400s server your team power can't be 4–5G; I'm 축8 on a mid-400s server and my team power is over 8G"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84538",
+      "url": "https://m.dcinside.com/board/projectcc/84538",
+      "date": "2026-10-09",
+      "title_kr": "우리섭 랭킹1등 갑자기 사라짐;;",
+      "title_en": "Our server's rank-1 suddenly disappeared",
+      "relevance": 0,
+      "summary_en": "Off-topic: a server's top-ranked player vanished; commenters guess a refund run or a hacker ban.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "환불런 했거나 핵이거나", "en": "Either did a refund run or was a hacker"}]
+    },
+    {
+      "source": "dc",
+      "id": "84560",
+      "url": "https://m.dcinside.com/board/projectcc/84560",
+      "date": "2026-10-09",
+      "title_kr": "전갈 독 치확치피 받는다. 이유까지 적어왔으니 클뜯 게이는 확인하도록",
+      "title_en": "Scorpion's poison does take crit rate and crit damage; I wrote out why, so the client-decompiling guy should check",
+      "relevance": 3,
+      "summary_en": "Datamine (ARM64 client code) claiming Scorpion's poison DoT rolls crit and applies the crit-damage multiplier: each poison tick creates a separate DamageData passed to the normal DamageSystem.CalculatedDamage, which does the crit roll and multiplier; the IsWeakEffect=true flag on poison was not found to exclude crit damage. Poison ticks use stored (snapshotted) caster stats; whether the snapshot is at cast or at poison application is unconfirmed. The earlier claimant (도미) replies he still cannot find it in the client he decompiled and asks for help.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Scorpion's needle initial hit and the poison applied on hit are processed separately (author, datamine)",
+        "DamageOverTimeModifierSystem.EffectJob.Execute (0x35dea0) creates a DamageData per poison tick and passes it to DamageSystem.CalculatedDamage (0x2f1364), which runs the crit roll (0x2f2b3c–0x2f2c68) and applies the crit-damage multiplier (0x2f31ac–0x2f3270)",
+        "Poison data has IsWeakEffect=true, but no branch excluding the poison's crit-damage multiplier was found",
+        "Poison ticks read stored caster stats (crit rate, crit dmg, ATK), not live stats; snapshot timing (skill cast vs poison application) unconfirmed"
+      ],
+      "disagreements": [
+        "Author (초코초코케이크): crit rate and crit damage apply to poison. 도미 (ㅇㅇ 2), who earlier claimed crit dmg doesn't apply: cannot find it in the client he decompiled, asks the author to help, shares a Google Drive folder",
+        "ㅇㅇ 1 sides with the author from observed damage: it must apply, judging by the damage numbers"
+      ],
+      "quotes": [
+        {"kr": "결론부터 말하면 전갈 독뎀에도 치확 치피 정상적으로 적용됨.", "en": "Bottom line first: crit rate and crit damage apply normally to Scorpion's poison damage too."},
+        {"kr": "DamageOverTimeModifierSystem.EffectJob.Execute에서 독 피해가 발생할 때마다 별도의 DamageData를 생성하고, 이 데이터가 일반 피해 계산 시스템인 DamageSystem.CalculatedDamage로 전달됨.", "en": "Every time poison damage occurs, DamageOverTimeModifierSystem.EffectJob.Execute creates a separate DamageData, which is passed to the normal damage calculation, DamageSystem.CalculatedDamage."},
+        {"kr": "독 데이터에 IsWeakEffect=true라는 설정도 있는데, 이 설정 때문에 독의 치명타 피해 배율이 제외되는 분기도 확인되지 않았음.", "en": "The poison data also has IsWeakEffect=true, but I found no branch where that setting excludes the poison's crit-damage multiplier."},
+        {"kr": "독 틱마다 현재 능력치를 새로 조회하는 게 아니라 저장된 시전자 능력치를 사용하는 구조인데, 그 능력치가 스킬 시전 시점에 저장되는지 독을 부여하는 시점에 저장되는지는 추가 확인이 필요하긴함", "en": "Each poison tick uses the caster's stored stats rather than looking up current stats, but whether they are stored at skill cast or at poison application still needs checking."},
+        {"kr": "나 그 치피 안된다는 도미인데, 도저히 내가 뜯은 클라에선 찾을 수 없음. 너가 좀 도와줘봐 내가 다른 클라를 뜯은게 아닌 이상 안보여", "en": "I'm the 도미 who said crit damage doesn't apply; I really can't find it in the client I decompiled. Help me out; unless I decompiled a different client, I don't see it."},
+        {"kr": "ㅇㅇ 적용안될수가없음 딜보면", "en": "Yeah, it can't not apply, look at the damage."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84309",
+      "url": "https://m.dcinside.com/board/projectcc/84309",
+      "date": "2026-10-09",
+      "title_kr": "브시커 스증보다 치피야???",
+      "title_en": "Brightseeker: crit damage over skill amp???",
+      "relevance": 2,
+      "summary_en": "Screenshot of crumb.gg's Brightseeker sugar-rune tier card: S 스킬가속, A 치명피해, B 스킬증폭 and 치명확률, C 공격력 증폭. The author had built skill haste + skill amp. Commenters: all skill haste; Chardonnay's near-guaranteed crit-rate boost raises crit damage's value; Pomegranate already plugs skill amp into Seeker, lowering amp's relative value.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [
+        {"cookie": "브시커", "stats": "crumb.gg tier card (84309-1.jpg): S 스킬가속; A 치명피해; B 스킬증폭, 치명확률; C 공격력 증폭", "why": "Commenters: Chardonnay raises crit rate almost to certainty, so crit dmg gains; Pomegranate gives Seeker skill amp, so 스증 runes are relatively worth less"},
+        {"cookie": "브시커", "stats": "올스가 (all skill haste)", "why": "commenter ㅇㅇ, no reason given"},
+        {"cookie": "브시커", "stats": "author's build: 스가 + 스증", "why": "built before seeing the crumb.gg card"}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Pomegranate's beam gives Brightseeker skill amp, which diminishes the marginal value of skill-amp runes (ㅇㄹ)", "Chardonnay gives a near-certain crit-rate boost (누브티스)"],
+      "disagreements": ["crumb.gg ranks crit dmg (A) above skill amp (B) for Brightseeker; author had built 스가/스증; commenter says all skill haste"],
+      "quotes": [
+        {"kr": "아앗,,,, 스가 스증으로 만들었는데", "en": "Ah... I built skill haste and skill amp"},
+        {"kr": "올스가", "en": "All skill haste"},
+        {"kr": "요번에 샤르도네가 거의 확정으로 치확 쭉 늘려줘서 그런거 아닌가 싶네", "en": "I think it's because Chardonnay now boosts crit rate almost to a certainty"},
+        {"kr": "석류가 브시커한테 스증을 꼿으니깐 상대적으로 밸류가 낮아지는거긴함.", "en": "Pomegranate plugs skill amp into Brightseeker, so its value is relatively lower."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84359",
+      "url": "https://m.dcinside.com/board/projectcc/84359",
+      "date": "2026-10-09",
+      "title_kr": "이러면 딜러들 슈가룬도 싹 갈아엎어야겠네",
+      "title_en": "Then we'll have to redo all the dealers' sugar runes",
+      "relevance": 2,
+      "summary_en": "Author says crit-rate rune lines are now worthless because Chardonnay's crit-rate buff exceeds 300%, so dealers' runes should move to skill amp and crit damage, or maybe tank options. Commenters: nobody puts crit rate on runes anyway (they thought he meant gear).",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [{"cookie": "dealers (general)", "stats": "drop 치확, reroll to 스증 + 치피 (or 탱옵 tank options)", "why": "Chardonnay's crit rate exceeds 300%, so 6–7% crit-rate lines add nothing"}],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Chardonnay's crit-rate buff is said to exceed 300% (stated by the author, not measured)"],
+      "disagreements": ["Author: reroll crit-rate rune lines. Commenters: no one puts crit rate on sugar runes in the first place; one had assumed he meant gear"],
+      "quotes": [
+        {"kr": "치확이 아주 휴지조각됐으니 싹다 스증이랑 치피로 갈아버려야지", "en": "Crit rate has become waste paper, so I'll reroll everything to skill amp and crit damage"},
+        {"kr": "아니면 차라리 탱옵을 챙길까", "en": "Or should I take tank options instead"},
+        {"kr": "샤르도네가 주는 치확이 300%가 넘는데 6% 7% 챙겨서 어따씀", "en": "Chardonnay gives over 300% crit rate; what's the point of 6% or 7%"},
+        {"kr": "애초에 룬에 치확주는애 없는데", "en": "Nobody puts crit rate on runes in the first place"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84587",
+      "url": "https://m.dcinside.com/board/projectcc/84587",
+      "date": "2026-10-09",
+      "title_kr": "시커 5성이면 딜 얼마나 더 오름?",
+      "title_en": "How much more damage would a 5★ Seeker give?",
+      "relevance": 3,
+      "summary_en": "Lobby: 1T 862G at 3.55G team power (~524배) with a 4★ Lv.118 Brightseeker in a Chardonnay deck running Scorpion (Lv.60) and Melon Soda (Lv.50), other fillers Lv.50. Author heard 4→5★ Seeker gives about 1.5x damage. 언담: Seeker's drones go from 2 to 3 at 5★; another expects 3T.",
+      "scores": [
+        {"damage": "1T 862G", "power": "3.55G", "ratio": "~524배 (derived)", "deck": "샤르도네덱 (전갈 + 메소), 4★ 브시커", "note": "observed on lobby screen 84587-1.jpg (personal ranking row; guild board blanked out)"}
+      ],
+      "teams": [{
+        "name": "샤르도네덱 (전갈 + 메소)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "4", "note": "r1c1; 4 gold + 1 empty"},
+          {"kr": "전갈", "en": "Scorpion", "level": "60", "stars": "10", "note": "r1c2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "50", "stars": "9", "note": "r1c3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "10", "note": "r1c4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "50", "stars": "9", "note": "r1c5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "50", "stars": "10", "note": "r1c6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "8", "note": "r2c1"},
+          {"kr": "메소", "en": "Melon Soda", "level": "50", "stars": "10", "note": "r2c2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "9", "note": "r2c3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "10", "note": "r2c4"},
+          {"kr": "우유", "en": "Milk", "level": "118", "stars": "10", "note": "r2c5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "5", "note": "r2c6"}
+        ],
+        "pets": ["색동주머니 ★12", "와사비문어 ★20", "핫도그 ★20"],
+        "atk_order": [],
+        "perks": "용병단: 열정페이 초고속승진 (author's answer in comments; meaning of 용병단 not established)",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["Fillers 피노/정전/닼초/메소 all Lv.50, 전갈 Lv.60 (not Lv.1)"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Brightseeker 4★→5★: drones go from 2 to 3 (언담, stated)", "Other gallery users claim 4→5★ Seeker gives ~1.5x damage (stated, unverified)", "Milk and Pomegranate reach 10★ once stages past 328 are cleared (ㅇㅇ, stated: stage rewards)"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "다른 갤럼들은 4->5성이 딜 1.5배정도 더 오른다는데 ㄹㅇ임?", "en": "Others in the gallery say 4→5★ raises damage about 1.5x; is that real?"},
+        {"kr": "일단 3T는 걍 뚫을 듯", "en": "You'd probably just break 3T"},
+        {"kr": "드론이 2개에서 3개가됨", "en": "The drones go from 2 to 3"},
+        {"kr": "우석은 328이상 뚫으면 무조건 10성단다 스테밀어잇", "en": "Milk and Pomegranate are guaranteed 10★ once you clear past 328; push stages"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84434",
+      "url": "https://m.dcinside.com/board/projectcc/84434",
+      "date": "2026-10-09",
+      "title_kr": "5시커 3실론 이 이상 못뽑겠다",
+      "title_en": "5★ Seeker, 3★ Tea Knight: can't get more than this",
+      "relevance": 3,
+      "summary_en": "Lobby: 382G 147M at 840.03M team power (~455배), personal rank 32nd, Chardonnay deck with Scorpion Lv.64 and Strawberry Crepe Lv.45 (no Melon Soda), 5★ Seeker and 3★ Tea Knight. Commenters report 779G at 1.3G (~600배; gear top-right all +15 except three, Chardonnay +10) and, with 5★ Seeker / 4★ Tea Knight, '1T 700M' (~800배).",
+      "scores": [
+        {"damage": "382G 147M", "power": "840.03M", "ratio": "~455배 (derived)", "deck": "샤르도네덱 (전갈 + 딸크), 5★ 시커, 3★ 실론", "note": "observed on lobby screen 84434-1.jpg, personal 32nd"},
+        {"damage": "779G", "power": "1.3G", "ratio": "600배 (stated by 주짓숙)", "deck": "?", "note": "stated in comment (ㅇㅇ 1), not on a screen"},
+        {"damage": "1T 700M (as written; likely 1T 700G)", "power": "?", "ratio": "~800배 (stated)", "deck": "5★ 시커, 4★ 실론", "note": "stated in comment, not on a screen"}
+      ],
+      "teams": [{
+        "name": "샤르도네덱 (전갈 + 딸크)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "114", "stars": "5", "note": "r1c1; 5 gold"},
+          {"kr": "전갈", "en": "Scorpion", "level": "64", "stars": "9", "note": "r1c2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "114", "stars": "8", "note": "r1c3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "110", "stars": "9", "note": "r1c4"},
+          {"kr": "우유", "en": "Milk", "level": "114", "stars": "9", "note": "r1c5, leader banner"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "30", "stars": "9", "note": "r1c6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "114", "stars": "8", "note": "r2c1"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "45", "stars": "10", "note": "r2c2"},
+          {"kr": "석류", "en": "Pomegranate", "level": "114", "stars": "9", "note": "r2c3"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "45", "stars": "8", "note": "r2c4"},
+          {"kr": "딸크", "en": "Strawberry Crepe", "level": "45", "stars": "9", "note": "r2c5; light, pink fluffy hair, shield icon"},
+          {"kr": "실론", "en": "Tea Knight", "level": "114", "stars": "3", "note": "r2c6; 3 gold + 2 empty"}
+        ],
+        "pets": ["와사비문어 ★20", "색동주머니 ★19", "핫도그 ★17"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["딸크 in place of 메소"],
+        "unorthodox": ["Fillers at Lv.30–64 (닼초 30, 피노/정전/딸크 45, 전갈 64), not Lv.1"]
+      }],
+      "sugar_runes": [],
+      "gear": [{"slot": "우상단 (플레이트)", "substats": "enhancement: all +15 except the three bottom-left; Chardonnay's at +10", "context": "raid", "why": "answer to '플레이트 우상단 올15이상임?' from the 779G-at-1.3G commenter"}],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "1.3g로 779g 나옴", "en": "I get 779G with 1.3G"},
+        {"kr": "600배 ㄷㄷ하노 플레이트 우상단 올15이상임?", "en": "600배, wow; are your top-right plates all +15 or higher?"},
+        {"kr": "ㅇㅇ 좌측하단 3개 빼고 다 15강에 샤르도네 10강임", "en": "Yes, all +15 except the three at the bottom-left, and Chardonnay's are +10"},
+        {"kr": "난 5시커 4실론인데 1T 700M까지 나옴", "en": "I have 5★ Seeker and 4★ Tea Knight and get up to 1T 700M"},
+        {"kr": "800배? 정도 되는 듯", "en": "About 800배, I think"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84398",
+      "url": "https://m.dcinside.com/board/projectcc/84398",
+      "date": "2026-10-09",
+      "title_kr": "제발 실론 재판매좀",
+      "title_en": "Please put Tea Knight on sale again",
+      "relevance": 1,
+      "summary_en": "캔디애플's Tea Knight detail screen: 실론나이트 쿠키, SSR, light, defense, 4★, Lv.118/118, power 421.41M, ATK 1.1M, DEF 665.73K, HP 12.22M, promotion shards 4/5. He missed the shop purchase. A commenter says not getting Tea Knight to 5★ this week means not caring about Conquest.",
+      "scores": [],
+      "teams": [{
+        "name": "single cookie",
+        "cookies": [{"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "4", "note": "84398-1.jpg detail screen: 실론나이트 쿠키, SSR, 빛속성 방어; power 421.41M, ATK 1.1M, DEF 665.73K, HP 12.22M; 승급 4/5"}],
+        "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": []
+      }],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "이번주도 5성이 안되는건 토벌전 생각이 아예 업는 유저인가봐요", "en": "Still not 5★ this week means you aren't thinking about Guild Conquest at all"},
+        {"kr": "+수급량 계산실수해서 쇳물 사버림", "en": "Also miscalculated my income and bought molten iron instead"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85254",
+      "url": "https://m.dcinside.com/board/projectcc/85254",
+      "date": "2026-10-11",
+      "title_kr": "시발실수했어",
+      "title_en": "Damn, I made a mistake",
+      "relevance": 0,
+      "summary_en": "Off-topic: 캔디애플's pull history on the 달토끼 (Moon Rabbit) pickup banner, two 10-pulls with no pickup (pity counter shows 2,676/2,700).",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "좆토끼 십련이", "en": "Damn rabbit, a 10-pull"}]
+    },
+    {
+      "source": "dc",
+      "id": "85257",
+      "url": "https://m.dcinside.com/board/projectcc/85257",
+      "date": "2026-10-11",
+      "title_kr": "60배단 합류",
+      "title_en": "Joined the 60x club",
+      "relevance": 2,
+      "summary_en": "캔디애플's result screen: final score 1,246,988,243,958 (1T 246G), guild rank 2nd (up 1), 2.033 s left on the timer (team wiped before time ran out). The faded lobby header behind it shows 20G 780M 172K power; 1246.99G ÷ 20.78G = 60.0, so his '60배' uses that header power (likely whole-account power), not deck power. He says since adding Milk it's a pure luck fight.",
+      "scores": [
+        {"damage": "1,246,988,243,958 (1T 246G)", "power": "20G 780M 172K (faded lobby header behind the result; likely account power, not team power)", "ratio": "60배 (title); 1246.99G ÷ 20.78G = 60.0 matches", "deck": "? (Milk included per text)", "note": "damage observed on result screen 85257-1.jpg; 남은 시간 2.033초; guild rank 2nd (↑1); 내 최고 기록 1T, rivals 塔塔大魔王 1.63T (1st) and two at ~1.2T; this ratio is NOT comparable to deck-power 배"}
+      ],
+      "teams": [],
+      "sugar_runes": [], "gear": [],
+      "rng": ["Since adding Milk, results are 'pure luck' (캔디애플)"],
+      "mechanics": ["Result screen lists 남은 시간 (time left): this run ended with 2.033 s left"],
+      "disagreements": [],
+      "quotes": [{"kr": "걍 우유 붙이고부터는 쌩 운빨싸움이네", "en": "Ever since I put Milk in, it's a pure luck fight"}]
+    },
+    {
+      "source": "dc",
+      "id": "84938",
+      "url": "https://m.dcinside.com/board/projectcc/84938",
+      "date": "2026-10-10",
+      "title_kr": "오 메소딸크 ㄹㅇ좋네",
+      "title_en": "Oh, Melon Soda + Strawberry Crepe is really good",
+      "relevance": 2,
+      "summary_en": "Running Melon Soda + Strawberry Crepe (without Scorpion and Cherry) gave an immediate new record at 770배. His Strawberry Crepe sugar runes are a mix of skill haste, skill amp, crit damage and damage reduction.",
+      "scores": [{"damage": "?", "power": "?", "ratio": "770배", "deck": "샤르도네덱 with 메소 + 딸크, no 전갈/체리", "note": "stated, not on a screen"}],
+      "teams": [{"name": "메소딸크", "cookies": [], "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": ["전갈 and 체리 out; 메소 and 딸크 in (author first agreed to '정전체리빼고?' then corrected to 전갈 체리)"], "unorthodox": ["No Scorpion"]}],
+      "sugar_runes": [{"cookie": "딸크", "stats": "스가, 스증, 치피, 피감 mixed (짬뽕)", "why": "none given"}],
+      "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "바로 기갱해서 770배 침", "en": "Set a new record right away, hit 770배"},
+        {"kr": "아 전갈 체리 빼고", "en": "Ah, without Scorpion and Cherry"},
+        {"kr": "스가 스증 치피 피감 짬뽕임..", "en": "It's a mishmash of skill haste, skill amp, crit dmg and damage reduction.."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84921",
+      "url": "https://m.dcinside.com/board/projectcc/84921",
+      "date": "2026-10-10",
+      "title_kr": "메전팝딸",
+      "title_en": "Melon Soda / Scorpion / Popcorn / Strawberry Crepe",
+      "relevance": 2,
+      "summary_en": "Asks which two sub-dealers give the highest ceiling. 언담: Scorpion is fixed; Popcorn beats Melon Soda because it gets element damage; Strawberry Crepe is weaker than Popcorn but its placement pushes Tiger Lily so Pomegranate gets the 3-volley. Another commenter: the 1300배 run below used Melon Soda + Crepe.",
+      "scores": [{"damage": "?", "power": "?", "ratio": "1300배", "deck": "메소 + 딸크", "note": "stated hearsay about another post, not on a screen"}],
+      "teams": [],
+      "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Popcorn benefits from element damage (속성뎀) and so out-damages Melon Soda (언담)", "Strawberry Crepe's position pushes Tiger Lily, which lets Pomegranate receive Tiger Lily's 다발3 (언담)"],
+      "disagreements": ["언담: Scorpion fixed + Popcorn or Crepe; ㅇㅇ: the 1300배 run used Melon Soda + Crepe (no Scorpion)"],
+      "quotes": [
+        {"kr": "전갈 고정에 메소vs팝콘은 속성뎀 받는 팝콘이 쌔고 팝콘vs딸크는 딸크가 약하긴한데 배치상으로 정전 밀어줘서 석류한테 3다발 잘먹여줌", "en": "Scorpion is fixed; Melon Soda vs Popcorn, Popcorn is stronger since it gets element damage; Popcorn vs Crepe, Crepe is weaker, but by placement it pushes Tiger Lily so Pomegranate gets the 3-volley reliably"},
+        {"kr": "밑에 1300배 친애는 메소딸크썼다는데", "en": "The guy below who hit 1300배 says he used Melon Soda + Crepe"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85010",
+      "url": "https://m.dcinside.com/board/projectcc/85010",
+      "date": "2026-10-10",
+      "title_kr": "그래서 메소가 고점이 더높아 딸크가 고점이 더높아?",
+      "title_en": "So which has the higher ceiling, Melon Soda or Strawberry Crepe?",
+      "relevance": 2,
+      "summary_en": "Asks Melon Soda vs Strawberry Crepe ceiling. One commenter, after about a day of testing, says Crepe scores higher given the same time of unlimited retries, while noting specs differ.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [],
+      "rng": ["Comparison framed as 'same time, unlimited retries': Crepe gave the higher best score for that commenter"],
+      "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "하루 정도 해본게 끝이고 스펙도 사람들 마다 다르긴 하지만 , 내기준 같은 시간 무한 리트 한다 했을때 딸크가 더 높게 나오더라", "en": "I've only tried for about a day and specs differ per person, but for me, with the same time of endless retries, Strawberry Crepe scores higher"}]
+    },
+    {
+      "source": "dc",
+      "id": "84736",
+      "url": "https://m.dcinside.com/board/projectcc/84736",
+      "date": "2026-10-10",
+      "title_kr": "토벌 딸크 vs 메론 뭐가 나음?",
+      "title_en": "Conquest: Strawberry Crepe vs Melon (Soda), which is better?",
+      "relevance": 2,
+      "summary_en": "Author at 425배 asks Crepe vs Melon Soda. 규진 hit 1000배 / 4T with Crepe; 저장용 sees little difference and says to bring whichever has the better-developed sugar runes.",
+      "scores": [
+        {"damage": "?", "power": "?", "ratio": "425배", "deck": "?", "note": "author, stated"},
+        {"damage": "4T", "power": "~4G (derived from 1000배)", "ratio": "1000배", "deck": "딸크 deck", "note": "규진, stated"}
+      ],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [],
+      "disagreements": ["규진: depends on the person, got 1000배 with Crepe; 저장용: little difference, pick by sugar-rune development"],
+      "quotes": [
+        {"kr": "난 딸크로 1000배찍음 4t", "en": "I hit 1000배 with Strawberry Crepe, 4T"},
+        {"kr": "큰 차이 없는거같음 너가 슈가룬 더 잘키워놓은거 끌고가셈", "en": "Not much difference; bring whichever you've built better sugar runes for"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84772",
+      "url": "https://m.dcinside.com/board/projectcc/84772",
+      "date": "2026-10-10",
+      "title_kr": "토벌 딸크 ㄱㅊ은것같지않음?",
+      "title_en": "Isn't Strawberry Crepe pretty good in Conquest?",
+      "relevance": 3,
+      "summary_en": "Result 5,811,728,676,708 (5T 811G) with a 5.72G lobby (~1016배): Chardonnay deck with Scorpion and Strawberry Crepe (no Melon Soda), all core cookies Lv.118 and fillers raised to Lv.65–75. Author: Crepe's raw damage is worse than Melon Soda's but high rolls keep coming with it, because it stands ahead of Tiger Lily and pushes her so Pomegranate gets the 3-volley, and its light damage clears adds so Seeker's drones don't leak onto them. 캔디애플 asks if the high filler levels aim for 5-second survival; author: yes.",
+      "scores": [
+        {"damage": "5,811,728,676,708 (5T 811G)", "power": "5.72G", "ratio": "~1016배 (derived)", "deck": "샤르도네덱 (전갈 + 딸크)", "note": "damage observed on result screen 84772-1.jpg (guild rank 3rd, guild score 11T 972G, up 236G 495M; HUD behind shows 0.000 beside an unidentified icon, likely time left); power observed on lobby 84772-2.jpg, assumed to be the same deck"}
+      ],
+      "teams": [{
+        "name": "샤르도네덱 (전갈 + 딸크)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "10", "note": "r1c1; alive at the end"},
+          {"kr": "전갈", "en": "Scorpion", "level": "65", "stars": "10", "note": "r1c2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "9", "note": "r1c3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "10", "note": "r1c4"},
+          {"kr": "우유", "en": "Milk", "level": "118", "stars": "10", "note": "r1c5, leader banner"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "67", "stars": "10", "note": "r1c6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "10", "note": "r2c1; alive at the end"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "70", "stars": "10", "note": "r2c2"},
+          {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "10", "note": "r2c3; alive at the end"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "73", "stars": "9", "note": "r2c4"},
+          {"kr": "딸크", "en": "Strawberry Crepe", "level": "75", "stars": "10", "note": "r2c5; light, pink fluffy hair, shield icon"},
+          {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "5", "note": "r2c6"}
+        ],
+        "pets": ["와사비문어 ★20", "색동주머니 ★20", "핫도그 ★20"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "Crepe stands ahead of Tiger Lily (front line) and pushes her toward Pomegranate (author)",
+        "substitutions": ["딸크 in place of 메소"],
+        "unorthodox": ["Fillers raised to Lv.65–75 (전갈 65, 닼초 67, 피노 70, 정전 73, 딸크 75) to survive ('5초생존' per 캔디애플's question, confirmed by author)"]
+      }],
+      "sugar_runes": [], "gear": [],
+      "rng": ["High scores keep appearing whenever Crepe is in (author's observation over retries)", "End screen 84772-1.jpg: only Brightseeker, Chardonnay and Pomegranate cards are lit at the end; the rest are dimmed (likely dead)"],
+      "mechanics": [
+        "Strawberry Crepe is placed ahead of Tiger Lily and pushes her, so Tiger Lily's 다발3 reaches Pomegranate (author)",
+        "Crepe's light damage keeps clearing adds, so Brightseeker's drones don't get diverted onto adds (author)",
+        "국희: the higher the 명성 (?), the more element damage it receives and the harder it hits"
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "딜 자체는 메소보다 허접한것같은데 이상하게 고점 계속 얘 넣으면떠서", "en": "Its own damage seems worse than Melon Soda's, but oddly the high scores keep coming whenever I put it in"},
+        {"kr": "가만 지켜보니까 얘가 정전보다 앞라인이라 정전을 밀어서 석류한테 다발3 잘들어가는거랑", "en": "Watching closely, it's in a line ahead of Tiger Lily so it pushes her, and Pomegranate reliably gets volley 3"},
+        {"kr": "광딜로 잡몹 계속 치워서 시커 드론이 잡몹한테 샐 틈이 없는거 두개가 좀 큰것같은데", "en": "and its light damage keeps clearing the adds so Seeker's drones never leak onto them; those two seem big"},
+        {"kr": "명성이 높을수록 속피 잘받고 패는것도 큼", "en": "The higher the 명성, the better it takes element damage and the harder it hits"},
+        {"kr": "렙왤케높음 5초생존 노림?", "en": "Why are the levels so high, aiming for 5-second survival?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84894",
+      "url": "https://m.dcinside.com/board/projectcc/84894",
+      "date": "2026-10-10",
+      "title_kr": "전갈 팝콘 알려준사람 존나고맙다",
+      "title_en": "Huge thanks to whoever told me about Scorpion + Popcorn",
+      "relevance": 3,
+      "summary_en": "Lobby: 1T 713G at 2.62G (~654배), personal 1st in guild, Chardonnay deck with Scorpion and Popcorn (no Melon Soda), every filler Lv.30. With Melon Soda he sat at 1–1.1T; switching to Popcorn jumped him to 1.7T. Popcorn runes: crit damage and skill amp only; he says his sugar runes are tightly set.",
+      "scores": [
+        {"damage": "1T 713G", "power": "2.62G", "ratio": "~654배 (derived); '650배 처음 넘겨봄' (stated)", "deck": "샤르도네덱 (전갈 + 팝콘)", "note": "observed on lobby 84894-1.jpg, personal 1st; guild board 4T 721G / 2T 725G / 2T 672G"},
+        {"damage": "1–1.1T", "power": "?", "ratio": "?", "deck": "same deck with 메소 instead of 팝콘", "note": "stated in comment"}
+      ],
+      "teams": [{
+        "name": "샤르도네덱 (전갈 + 팝콘)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "117", "stars": "6", "note": "r1c1; 1 pink + 4 gold"},
+          {"kr": "팝콘", "en": "Popcorn", "level": "30", "stars": "9", "note": "r1c2; light, crossbow, purple frame"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "30", "stars": "10", "note": "r1c3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "117", "stars": "10", "note": "r1c4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "30", "stars": "9", "note": "r1c5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "30", "stars": "10", "note": "r1c6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "117", "stars": "7", "note": "r2c1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "30", "stars": "10", "note": "r2c2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "117", "stars": "9", "note": "r2c3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "117", "stars": "10", "note": "r2c4"},
+          {"kr": "우유", "en": "Milk", "level": "117", "stars": "10", "note": "r2c5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "117", "stars": "4", "note": "r2c6; 4 gold + 1 empty"}
+        ],
+        "pets": ["핫도그 ★20", "와사비문어 ★20", "색동주머니 ★15"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["팝콘 in place of 메소"],
+        "unorthodox": ["Every filler (팝콘, 피노, 정전, 닼초, 전갈) at Lv.30, including the sub-dealers"]
+      }],
+      "sugar_runes": [{"cookie": "팝콘", "stats": "치피 + 스증 only (no 스가)", "why": "none given; author says his sugar runes are set very hard ('개빡')"}],
+      "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [
+        {"kr": "1T에서 놀다가 지금 1.7T 까지 보는중", "en": "I was stuck around 1T and now I'm seeing up to 1.7T"},
+        {"kr": "650배 처음 넘겨봄", "en": "First time over 650배"},
+        {"kr": "슈가룬 좀 개빡으로 세팅하긴 함", "en": "I did set my sugar runes really hard"},
+        {"kr": "치피랑 스증만 줌 나는", "en": "I only gave it crit damage and skill amp"},
+        {"kr": "메소 쓸때 1~1.1T에서 놀던거 팝콘으로 바꾸고 확 뜀", "en": "With Melon Soda I sat at 1–1.1T; switching to Popcorn made it jump"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84833",
+      "url": "https://m.dcinside.com/board/projectcc/84833",
+      "date": "2026-10-10",
+      "title_kr": "님들토벌뭐넣음?",
+      "title_en": "What do you all put in for Conquest?",
+      "relevance": 1,
+      "summary_en": "Asks which of Strawberry Crepe, Scorpion, Melon Soda and Popcorn people run; no comments.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "딸크 전갈 메소 팝콘 중에", "en": "Among Strawberry Crepe, Scorpion, Melon Soda and Popcorn"}]
+    },
+    {
+      "source": "dc",
+      "id": "84704",
+      "url": "https://m.dcinside.com/board/projectcc/84704",
+      "date": "2026-10-10",
+      "title_kr": "뭔가 샤르도네 정글3 같이넣는게 전갈딜더잘나오는데",
+      "title_en": "Somehow running Chardonnay together with Jungle Warrior (3) gives more Scorpion damage",
+      "relevance": 2,
+      "summary_en": "Author sees more Scorpion damage when both Chardonnay and Tiger Lily are in and guesses the volley stays up. Commenter: it's because one more cookie gets Pomegranate's beam: Chardonnay is volley 2, Tiger Lily volley 3, and Pomegranate's beams = 3 + the volley number.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Chardonnay = 다발2, Tiger Lily (정전) = 다발3; Pomegranate's beams (빨대) = 3 + her volley number, so Tiger Lily gives 6 beams vs 5 with Chardonnay alone (ㅇㅇ 1)"],
+      "disagreements": ["Author: volley chaining between two volley givers keeps the DoT up. ㅇㅇ 1: no, it's simply one more beam recipient"],
+      "quotes": [
+        {"kr": "다발이 안끊겨서그런가? 두명이면 다발이 연속으로 걸릴수도있으니까 그만큼 도트도 잘거나?", "en": "Is it because the volley doesn't break? With two of them the volley could be applied back-to-back, so the DoT also lands more?"},
+        {"kr": "그냥 석류 빨대를 1명이 더 받아서 그런거겠지", "en": "It's just that one more cookie gets Pomegranate's straw"},
+        {"kr": "샤르도네는 다발2고 정전은 다발3임 석류 빨대는 3+다발숫자고", "en": "Chardonnay is volley 2 and Tiger Lily is volley 3; Pomegranate's straws are 3 + the volley number"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84488",
+      "url": "https://m.dcinside.com/board/projectcc/84488",
+      "date": "2026-10-09",
+      "title_kr": "토벌 이제 정전도 필요없는거 아님?",
+      "title_en": "Isn't Tiger Lily unnecessary in Conquest now?",
+      "relevance": 2,
+      "summary_en": "Asks whether Tiger Lily is still needed since Chardonnay also gives volley, or only because she is still the only volley-3. Commenter: the 3-volley is what lets Pomegranate reach Tea Knight.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Tiger Lily's 다발3 (the only volley-3) gives Pomegranate enough beams to reach Tea Knight (ㅇㅇ, hearsay '~더라')"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "정전이 아직 유일한 3다발이라서 써야하나?", "en": "Do we have to use Tiger Lily because she's still the only volley-3?"},
+        {"kr": "3다발로 실론에 석류 박는다더라", "en": "They say the 3-volley is how Pomegranate gets plugged into Tea Knight"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84990",
+      "url": "https://m.dcinside.com/board/projectcc/84990",
+      "date": "2026-10-10",
+      "title_kr": "토벌칠때 다발이 자꾸 5개로 되는데",
+      "title_en": "In Conquest my volley keeps ending up at 5",
+      "relevance": 2,
+      "summary_en": "Pomegranate's beam count keeps dropping to 5, so Tea Knight's skill amp keeps cutting out. Asked if it's a skill-haste shortfall, the author says '6 skill haste, all +15'. Another commenter: adding Strawberry Crepe seems to put Pomegranate inside Tiger Lily's range.",
+      "scores": [], "teams": [], "sugar_runes": [{"cookie": "? (석류/team, unclear)", "stats": "6스가, all +15 (as written: '6스가에 다 15')", "why": "reply to 'not enough skill haste?'"}],
+      "gear": [],
+      "rng": ["Pomegranate's beams intermittently fall to 5, dropping Tea Knight (6th) from the buff"],
+      "mechanics": ["Beams = 5 means Pomegranate holds only Chardonnay's 다발2, not Tiger Lily's 다발3; the 6th recipient (Tea Knight) loses skill amp", "Strawberry Crepe in the deck seems to bring Pomegranate into Tiger Lily's buff range (ㅇㅇ 1)"],
+      "disagreements": ["나나리: maybe lacking skill haste; author: already 6 스가 all +15"],
+      "quotes": [
+        {"kr": "그래서 실론이 스증이 자꾸 끊기는데 어케해야됨?", "en": "So Tea Knight's skill amp keeps cutting out; what should I do?"},
+        {"kr": "6스가에 다 15인뎅", "en": "It's 6 skill haste, all at +15"},
+        {"kr": "딸크 넣으면 정전 범위에 석류가 잘 들어가는듯?", "en": "If you add Strawberry Crepe, Pomegranate seems to get into Tiger Lily's range more often?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85193",
+      "url": "https://m.dcinside.com/board/projectcc/85193",
+      "date": "2026-10-10",
+      "title_kr": "석류 정전 3다발 받는거 왤케어렵냐;;",
+      "title_en": "Why is it so hard for Pomegranate to get Tiger Lily's 3-volley",
+      "relevance": 2,
+      "summary_en": "Pomegranate rarely receives Tiger Lily's volley 3, so Tea Knight in 6th priority keeps missing the beam. WinterisComing: watching only Tea Knight, the beam keeps cutting out, even mid-run on his record run.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [],
+      "rng": ["Tea Knight (6th beam priority) loses the beam mid-run whenever Pomegranate fails to receive Tiger Lily's 다발3, even on record runs (WinterisComing)"],
+      "mechanics": ["6th beam slot depends on Pomegranate holding Tiger Lily's 다발3"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "그래서 6순위인 실론이 자꾸 못받는다", "en": "So Tea Knight, 6th in priority, keeps not getting it"},
+        {"kr": "실론만 확인하는데 자꾸 끊기더라 기갱했을때도 중간에 끊기던데...", "en": "I only watch Tea Knight and it keeps cutting out; even on my record run it cut out midway..."},
+        {"kr": "정전 3다발 스킬을 석류가 못받아서그래", "en": "It's because Pomegranate doesn't receive Tiger Lily's 3-volley skill"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85064",
+      "url": "https://m.dcinside.com/board/projectcc/85064",
+      "date": "2026-10-10",
+      "title_kr": "석류 다발 개수 제한 있음?",
+      "title_en": "Is there a cap on Pomegranate's volley count?",
+      "relevance": 2,
+      "summary_en": "Asks whether stacking many volley givers lets Pomegranate beam 7–8 cookies. Answer: only the single highest volley buff applies.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Only the highest volley buff applies to Pomegranate; volley buffs don't add (commenter)"],
+      "disagreements": [],
+      "quotes": [{"kr": "가장 높은 다발버프 하나만 적용", "en": "Only the single highest volley buff applies"}]
+    },
+    {
+      "source": "dc",
+      "id": "84750",
+      "url": "https://m.dcinside.com/board/projectcc/84750",
+      "date": "2026-10-10",
+      "title_kr": "토벌전 석류 빨대 개수 이거 맞음?",
+      "title_en": "Is this Pomegranate straw count right for Conquest?",
+      "relevance": 2,
+      "summary_en": "Author adds base 3 + Tiger Lily 3 + Cheesecake 1 + Chardonnay 2 = 9 straws. Commenters: only the highest counts, so Tiger Lily's 3 is the cap (6 total); if it stacked, people would run Macaron, Lime, Orange and Chardonnay in stages too.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Pomegranate straws = base 3 + the single highest volley synergy (Tiger Lily's 3); Cheesecake's 1 and Chardonnay's 2 don't add (commenters)", "Author lists Cheesecake as a volley-1 source (stated)"],
+      "disagreements": ["Author: volley sources add up to 9 straws; commenters: only the highest applies"],
+      "quotes": [
+        {"kr": "기존 3개 +정전 3개 + 치케 1개 + 샤르도네 2개 해서 석류 빨대 9개", "en": "Base 3 + Tiger Lily 3 + Cheesecake 1 + Chardonnay 2 makes 9 Pomegranate straws"},
+        {"kr": "다발 시너지 가장 높은 정전 3개가 끝이다", "en": "Tiger Lily's 3, the highest volley synergy, is the end of it"},
+        {"kr": "그게 됫으면 스테에도 마카롱 라임 오렌지 샤르 넣고 쓸듯", "en": "If that worked, people would put Macaron, Lime, Orange and Chardonnay in stages too"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84714",
+      "url": "https://m.dcinside.com/board/projectcc/84714",
+      "date": "2026-10-10",
+      "title_kr": "토벌 석류빨대 실론주냐 샤르주냐??",
+      "title_en": "Conquest: does Pomegranate's straw go to Tea Knight or Chardonnay??",
+      "relevance": 2,
+      "summary_en": "How to tune levels so the beam lands right. Answers: Chardonnay is fixed (always gets it through synergy), Tea Knight goes last. 저장용: Milk and Chardonnay always first through synergy, then Seeker, Skating Queen, Cheesecake, Tea Knight; some say Skating Queen must be 3rd, but he thinks order within the top 6 barely matters; 6 total = base 3 + Tiger Lily 3.",
+      "scores": [],
+      "teams": [{"name": "beam priority", "cookies": [], "pets": [], "atk_order": ["우유", "샤르도네", "시커", "피겨", "치케", "실론"], "perks": "", "formation": "", "substitutions": [], "unorthodox": []}],
+      "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Milk and Chardonnay get Pomegranate's beam through synergy regardless of ATK; the remaining beams follow ATK order (저장용, ㅇㅇ)", "6 beams total = Pomegranate base 3 + Tiger Lily's 3 (저장용)"],
+      "disagreements": ["Some say Skating Queen must be 3rd in the order; 저장용 thinks order within the top 6 makes little difference"],
+      "quotes": [
+        {"kr": "시너지 때문에 샤르도네는 무조건 고정임 실론 막순위가 맞음", "en": "Because of synergy Chardonnay is always fixed; Tea Knight last is right"},
+        {"kr": "우유 샤르도네는 시너지때문에 무조건 우선순위 그다음 시커 피겨 치케 실론 피겨가 3위여야 한다는 이야기도 있는데 나는 6위안에만 들면 순서 섞여도 그렇게 큰 차이 없다고 보는편", "en": "Milk and Chardonnay are always top priority because of synergy, then Seeker, Skating Queen, Cheesecake, Tea Knight; some say Skating Queen must be 3rd, but I think as long as they're in the top 6, mixed order doesn't make a big difference"},
+        {"kr": "어쨋든 총 6명 석류 기본3가닥 + 정전버프로 추가로 3가닥", "en": "Anyway, 6 in total: Pomegranate's base 3 strands + 3 more from Tiger Lily's buff"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84370",
+      "url": "https://m.dcinside.com/board/projectcc/84370",
+      "date": "2026-10-09",
+      "title_kr": "샤르 석류 같이쓰명 샤르 확정빨때인가요??",
+      "title_en": "If Chardonnay and Pomegranate are both in, is Chardonnay a guaranteed straw??",
+      "relevance": 2,
+      "summary_en": "Yes: 누브티스 says because of synergy Chardonnay is guaranteed a Pomegranate beam in almost all situations regardless of ATK.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Chardonnay gets Pomegranate's beam regardless of ATK in most situations, through synergy (누브티스)"],
+      "disagreements": [],
+      "quotes": [{"kr": "시너지때문에 앵간한 상황에선 공격력 상관 없이 확정임", "en": "Because of synergy it's guaranteed in most situations, regardless of attack"}]
+    },
+    {
+      "source": "dc",
+      "id": "84505",
+      "url": "https://m.dcinside.com/board/projectcc/84505",
+      "date": "2026-10-09",
+      "title_kr": "샤르 우유가 빨대먹고 빨대 하나 바리줌?",
+      "title_en": "Chardonnay and Milk take straws; does one go to Bari?",
+      "relevance": 1,
+      "summary_en": "Asks whether, with Chardonnay and Milk taking beams, one beam should go to Princess Bari. No comments.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "바리주는게 맞나", "en": "Is giving it to Bari right?"}]
+    },
+    {
+      "source": "dc",
+      "id": "84804",
+      "url": "https://m.dcinside.com/board/projectcc/84804",
+      "date": "2026-10-10",
+      "title_kr": "다발시너지가 중첩된다는 얘기가있는데 사실임?",
+      "title_en": "Is it true that volley synergies stack?",
+      "relevance": 2,
+      "summary_en": "Asks if two volley-2 givers make a 4-shot skill fire 8. Answers: no. One commenter gives per-skill formulas: Melon Soda 25 shots + 5 per synergy level (Melon+Pinot 35, + a multi-hit pet 45); Scorpion 4 + 2 per synergy level (8 with Chardonnay, 10 with Tiger Lily); only a pet's and a cookie's synergy stack.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": [
+        "Volley synergy applies differently per skill (ㅇㅇ 1, stated, not shown measured)",
+        "Melon Soda: base 25 shots + synergy × 5; Melon Soda + Pinot = 35; + a 연타 (multi-hit) pet = 45",
+        "Scorpion: base 4 shots + synergy × 2; with Chardonnay (다발2) 8, with Tiger Lily (다발3) 10",
+        "Only pet + cookie volley synergies stack; cookie + cookie do not"
+      ],
+      "disagreements": ["OP heard that cookie volley synergies stack (and lists Jungle Warrior as 다발2); commenters say no and that Tiger Lily's is 다발3 (10 Scorpion shots)"],
+      "quotes": [
+        {"kr": "시너지는 캐릭스킬마다 다르게 적용됨가령 메소는 기본 25발에 시너지수*5가 더해져서메소+피노 35발메소+피노+연타펫 45발전갈은 기본 4발에 시너지수 *2샤르8발정전10발임시너지가 중첩되는건 펫과 쿠키만", "en": "Synergy applies differently per cookie skill. E.g. Melon Soda's base 25 shots get synergy × 5 added: Melon Soda + Pinot = 35 shots, Melon Soda + Pinot + multi-hit pet = 45. Scorpion's base 4 shots get synergy × 2: 8 with Chardonnay, 10 with Tiger Lily. Only a pet and a cookie stack synergy."}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84630",
+      "url": "https://m.dcinside.com/board/projectcc/84630",
+      "date": "2026-10-09",
+      "title_kr": "이제 체리 안쓰고 팝콘이나 메소 쓰면 이속작 해야함??",
+      "title_en": "Now that we run Popcorn or Melon Soda instead of Cherry, do we need movement-speed tuning??",
+      "relevance": 2,
+      "summary_en": "Movement-speed tuning was only needed to line Macaron up; with Chardonnay position doesn't matter, so no speed tuning. Agreed plan: Chardonnay gets a beam anyway so max her level, and set the cookies that don't need a beam to Lv.1. Another: Chardonnay lays a field even without speed tuning.",
+      "scores": [],
+      "teams": [{"name": "샤르도네덱 level rule", "cookies": [], "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": ["팝콘 or 메소 in place of 체리"], "unorthodox": ["Non-beam cookies at Lv.1; Chardonnay full level (OP's plan, confirmed 'ㅇㅇ')"]}],
+      "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["이속작 (movement-speed tuning) existed to position Macaron; Chardonnay removes the need since position doesn't matter", "Chardonnay lays a ground field (장판) regardless of speed tuning"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "이속은 마카롱땜에 자리 맞춰야해서 했던거고 샤르도네덕에 자리 상관없으니 이속 ㄴ", "en": "Speed tuning was for lining Macaron up; thanks to Chardonnay position doesn't matter, so no speed tuning"},
+        {"kr": "샤르는 어짜피 빨대받으니까 풀렙주고 나머지 빨대필요없는 애들 1렙주면 되겠지?", "en": "Chardonnay gets a straw anyway, so max her level and put the others that don't need a straw at Lv.1, right?"},
+        {"kr": "이속 안맞춰도 샤르도네가 장판 뿌려주잖아", "en": "Even without speed tuning, Chardonnay spreads her field"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84573",
+      "url": "https://m.dcinside.com/board/projectcc/84573",
+      "date": "2026-10-09",
+      "title_kr": "팝콘덱 이거 가능한가",
+      "title_en": "Is this Popcorn deck viable?",
+      "relevance": 2,
+      "summary_en": "Links a YouTube 'NEW Guild Conquest Team Lineup! 277 BILLION Damage!' (no Scorpion; a commenter says Tiger Lily is the one dropped). Gallery dismisses it as weak for its power (<100배). TTO tested Crepe+Scorpion, Crepe+Popcorn and Melon+Scorpion: Crepe+Popcorn 750배, Crepe+Scorpion 730배. 그드득: 1.2T at 3.5G; swapping Chardonnay into the old Cherry deck gives 200배 as a baseline.",
+      "scores": [
+        {"damage": "277G", "power": "? (그드득's reply implies 3.1G)", "ratio": "<100배 (commenters)", "deck": "YouTube Popcorn lineup without Scorpion", "note": "stated in linked video title; video not watched"},
+        {"damage": "?", "power": "?", "ratio": "750배", "deck": "딸크 + 팝콘", "note": "TTO, stated"},
+        {"damage": "?", "power": "?", "ratio": "730배", "deck": "딸크 + 전갈", "note": "TTO, stated"},
+        {"damage": "1.2T", "power": "3.5G", "ratio": "~343배 (derived)", "deck": "?", "note": "그드득, stated"}
+      ],
+      "teams": [],
+      "sugar_runes": [], "gear": [],
+      "rng": ["TTO plans to leave Crepe+Scorpion running overnight (auto retries) before deciding"],
+      "mechanics": ["Old Cherry deck with Chardonnay swapped in: ~200배 baseline (그드득, stated)"],
+      "disagreements": ["Video lineup vs gallery: video claims a new lineup at 277G; 언담/그드득/others: far too low for the power, under 100배"],
+      "quotes": [
+        {"kr": "나는 딸크전갈 딸크팝콘 메소전갈 다 섞어서 써봤다가 딸크팝콘 딸크전갈 고민중", "en": "I tried Crepe+Scorpion, Crepe+Popcorn and Melon+Scorpion, and I'm deciding between Crepe+Popcorn and Crepe+Scorpion"},
+        {"kr": "지금 딸크팝콘 750배 딸크전갈 730배 띄우긴함", "en": "Right now I've hit 750배 with Crepe+Popcorn and 730배 with Crepe+Scorpion"},
+        {"kr": "3.1g면 100배만해도 300g인데 100배도 못뽑는데 뭔..... 걍 버리셈", "en": "At 3.1G even 100배 is 300G, and it doesn't even get 100배..... just drop it"},
+        {"kr": "나만해도 3.5g로 1.2t는뽑는다.... 기존 체리덱에 그냥 샤르도네만 갈아치워도 200배가 기본임 이제", "en": "Even I get 1.2T at 3.5G.... just swapping Chardonnay into the old Cherry deck gives 200배 as the baseline now"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84468",
+      "url": "https://m.dcinside.com/board/projectcc/84468",
+      "date": "2026-10-09",
+      "title_kr": "딸크덱은 뭐 풀리는거 없음?",
+      "title_en": "Nothing out yet on the Strawberry Crepe deck?",
+      "relevance": 1,
+      "summary_en": "Asks for any Strawberry Crepe deck info; the only image is a sticker (cat holding a knife, '주인님, 어서...!'). No comments.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "84807",
+      "url": "https://m.dcinside.com/board/projectcc/84807",
+      "date": "2026-10-10",
+      "title_kr": "정글전사<-딜러로서는 형편없지?",
+      "title_en": "Jungle Warrior is awful as a dealer, right?",
+      "relevance": 1,
+      "summary_en": "Asks whether Jungle Warrior (정전) has any damage beyond her volley synergy, even with Bari's buff. No comments.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "걍 다발시너지 외에 딜은 아예 기대조차 할수없는수준임? 바리받아도 안되지?", "en": "Apart from the volley synergy, is her damage not even worth expecting? Not even with Bari's buff?"}]
+    },
+    {
+      "source": "dc",
+      "id": "84699",
+      "url": "https://m.dcinside.com/board/projectcc/84699",
+      "date": "2026-10-10",
+      "title_kr": "정글전사 이제 퇴물됐냐?",
+      "title_en": "Is Jungle Warrior obsolete now?",
+      "relevance": 1,
+      "summary_en": "Asks if Jungle Warrior is useless now that Chardonnay is out; the only reply points to her volley 3.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [],
+      "disagreements": ["Author: Chardonnay makes Jungle Warrior useless; commenter: her 다발3 still matters"],
+      "quotes": [{"kr": "다발3이 ㅈ으로보이드나", "en": "Does volley 3 look like nothing to you?"}]
+    }
+  ],
+  "glossary": [
+    {"kr": "실론 / 실론나이트 쿠키", "en": "Tea Knight", "kind": "cookie", "confidence": "high", "evidence": "84398 detail screen: 실론나이트 쿠키, SSR, 빛속성, 방어 class, white-bearded knight art matching the 실론 lobby card; English name from the round brief"},
+    {"kr": "정전 / 정글전사", "en": "Tiger Lily", "kind": "cookie", "confidence": "high", "evidence": "84807/84699/84804 call the volley-3 cookie 정글전사; 84704 calls it 정전 다발3; English name from the round brief"},
+    {"kr": "브시커 / 브라이트시커", "en": "Brightseeker", "kind": "cookie", "confidence": "high", "evidence": "crumb.gg card in 84309 names the pink-goggle crossbow art 브라이트시커"},
+    {"kr": "딸크", "en": "Strawberry Crepe", "kind": "cookie", "confidence": "high", "evidence": "light, pink fluffy hair, shield icon in 84434 and 84772; the posts' text names 딸크 as the only non-standard cookie"},
+    {"kr": "팝콘", "en": "Popcorn", "kind": "cookie", "confidence": "high", "evidence": "84894 lobby: light, crossbow, popcorn bucket and star glasses; title '전갈 팝콘'"},
+    {"kr": "빨대 / 가닥", "en": "Pomegranate's beam (straw/strand)", "kind": "term", "confidence": "high", "evidence": "84704: 석류 빨대는 3+다발숫자; 84714: 기본3가닥 + 정전버프로 3가닥"},
+    {"kr": "다발 / 다발시너지", "en": "Volley (multi-shot synergy)", "kind": "term", "confidence": "high", "evidence": "84804 shot counts; 85064/84750 only the highest applies"},
+    {"kr": "이속작", "en": "movement-speed tuning (to fix positions)", "kind": "term", "confidence": "high", "evidence": "84630: done to line up Macaron; unneeded with Chardonnay"},
+    {"kr": "장판", "en": "ground field / zone", "kind": "term", "confidence": "high", "evidence": "84630: Chardonnay spreads a field"},
+    {"kr": "연타펫", "en": "multi-hit pet (unidentified)", "kind": "pet", "confidence": "low", "evidence": "84804: adds +10 Melon Soda shots on top of Pinot; pet not named"},
+    {"kr": "명성", "en": null, "kind": "stat", "confidence": "low", "evidence": "84772 국희: higher 명성 → takes element damage better and hits harder; meaning not established"},
+    {"kr": "용병단", "en": null, "kind": "term", "confidence": "low", "evidence": "84587: '님 용병단은 뭐낌?' answered '열정페이 초고속승진'; some equippable set, not established"},
+    {"kr": "플레이트", "en": "plate (gear piece)", "kind": "slot", "confidence": "low", "evidence": "84434: '플레이트 우상단 올15이상임?' answered with +15 enhancement levels"},
+    {"kr": "클뜯", "en": "client decompiling / datamining", "kind": "term", "confidence": "high", "evidence": "84560 title and ARM64 addresses"},
+    {"kr": "기갱", "en": "new personal record (기록 갱신)", "kind": "term", "confidence": "high", "evidence": "84938, 85193"},
+    {"kr": "우석", "en": "Milk + Pomegranate (우유 + 석류)", "kind": "term", "confidence": "high", "evidence": "84587 comment context"}
+  ]
+}

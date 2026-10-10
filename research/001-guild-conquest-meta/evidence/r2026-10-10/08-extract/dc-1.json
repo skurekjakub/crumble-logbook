@@ -1,0 +1,1215 @@
+{
+  "batch": "r2026-10-10-dc-1",
+  "identification_key": "Lobby portraits carry no names. Each cookie is named from its element icon and art, checked against the author's text and the round brief, using the key in r2026-10-09 dc-2/dc-3. Light (sun icon): 브시커 = brown hair, purple eye, pink hat, crossbow icon. 치케 = gold curly hair, blue frame. 우유 = white nurse with the purple leader banner and pink bear. 실론 = white-bearded knight, shield icon. 팝콘 = star-spangled red/white/blue glasses; confirmed by 84830-2, a sugar-rune screen titled '팝콘맛 쿠키', and by the titles of 84830 and 84918. 딸크 = pink fluffy hair, shield icon (84918, whose text says 팝콘딸크; 85259, whose ATK order ends in 딸). Water (drop): 피겨 = gold face, purple headphones, bell icon. 메소 = green hair, white goggles, crossbow. Grass (leaf): 샤르도네 = pale lilac/pink hair with a green streak, double-chevron icon. 정전 = teal hair, orange flower, bell icon. 마카롱 = pink hair under a red/white hat (84663-3 only). Dark (moon): 석류 = red curly hair, double chevron. 피노 = grey hair, monocle. 닼초 = black/red hair, shield icon. Fire (flame): 전갈 = red hair, crossbow. 체리 = round orange face with red/white, blue frame, Lv.80 (84663-3 only; identified by elimination from the author's 'Macaron-Cherry deck'). Stars: each card shows five star slots. Gold only = 1–5★; each pink star replaces a gold one, so 4 pink + 1 gold = 9★ and 5 pink = 10★. 84663-3 and 84663-5 are sharp 850px crops and are read with confidence. The other lobbies are full-screen captures where a star is about 12px, so their stars carry a '?' and the visible impression; '?' alone means unreadable. Images were read at native size with no crops. Pets: bun with sauce = 핫도그, green cactus-like = 와사비문어, white round with red/green trim = 색동주머니; the number on each pet tile is transcribed as shown. Every lobby in the batch shows the boss with a moon (Dark) icon and '약점' (weakness) with a sun (Light) icon.",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "84580",
+      "url": "https://m.dcinside.com/board/projectcc/84580",
+      "date": "2026-10-09",
+      "title_kr": "전갈메소 5.5t",
+      "title_en": "Scorpion + Melon Soda, 5.5T",
+      "relevance": 1,
+      "summary_en": "Title-only post: 5.5T with Scorpion and Melon Soda as the sub-dealers. Body: 'time to stop now'. No image and no comments.",
+      "scores": [{"damage": "5.5T", "power": "?", "ratio": "?", "deck": "샤르도네덱? with 전갈+메소 sub-dealers (title)", "note": "stated in the title only; no screenshot"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "이제 고만해야지", "en": "Time to stop now"}]
+    },
+    {
+      "source": "dc",
+      "id": "84970",
+      "url": "https://m.dcinside.com/board/projectcc/84970",
+      "date": "2026-10-10",
+      "title_kr": "시커7성 5T쳤다",
+      "title_en": "Hit 5T with a 7★ Seeker",
+      "relevance": 2,
+      "summary_en": "5T with Brightseeker at only 7★. The author credits Chardonnay and asks for a Seeker rerun. Sub-dealers are Scorpion + Melon Soda (author's reply).",
+      "scores": [{"damage": "5T", "power": "?", "ratio": "?", "deck": "샤르도네덱, sub-dealers 전갈+메소, 브시커 7★", "note": "stated in the title and a reply; no image"}],
+      "teams": [{
+        "name": "샤르도네덱 (stated)",
+        "cookies": [
+          {"kr": "시커", "en": "Brightseeker", "level": "?", "stars": "7", "note": "stated in the title"},
+          {"kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "note": "sub-dealer, author's reply"},
+          {"kr": "메소", "en": "Melon Soda", "level": "?", "stars": "?", "note": "sub-dealer, author's reply"}
+        ],
+        "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": []
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "샤르가 좋긴 하다 그러니 시커 제발 복각좀 해다오", "en": "Chardonnay really is good, so please, rerun Seeker"},
+        {"kr": "서브딜러 뭐 썼엉 / 전갈메소", "en": "Which sub-dealers? / Scorpion and Melon Soda"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85163",
+      "url": "https://m.dcinside.com/board/projectcc/85163",
+      "date": "2026-10-10",
+      "title_kr": "5t 찍을 수 잇겟는데",
+      "title_en": "I think I can hit 5T",
+      "relevance": 2,
+      "summary_en": "The author got 4.37T and lists the full lineup in a comment: the standard Chardonnay deck with Scorpion and Melon Soda as sub-dealers. He first wrote 전갈 twice, then corrected the second one to 정전 (Tiger Lily). The image is a hand-drawn doodle, not a score screen.",
+      "scores": [{"damage": "4.37T", "power": "?", "ratio": "?", "deck": "샤르도네덱, sub-dealers 전갈+메소", "note": "stated in the body ('4.37 나왓다'); 85163-1.jpg is an MS-Paint-style doodle saying '븜-하', no game screen"}],
+      "teams": [{
+        "name": "샤르도네덱 (stated in comment)",
+        "cookies": [
+          {"kr": "브싴", "en": "Brightseeker", "level": "?", "stars": "?", "note": "comment list order"},
+          {"kr": "샤르", "en": "Chardonnay", "level": "?", "stars": "?", "note": ""},
+          {"kr": "전갈", "en": "Scorpion", "level": "?", "stars": "?", "note": ""},
+          {"kr": "메소", "en": "Melon Soda", "level": "?", "stars": "?", "note": ""},
+          {"kr": "피노", "en": "Pinot Noir", "level": "?", "stars": "?", "note": ""},
+          {"kr": "치케", "en": "Cheesecake", "level": "?", "stars": "?", "note": ""},
+          {"kr": "석류", "en": "Pomegranate", "level": "?", "stars": "?", "note": ""},
+          {"kr": "피겨", "en": "Skating Queen", "level": "?", "stars": "?", "note": ""},
+          {"kr": "정전", "en": "Tiger Lily", "level": "?", "stars": "?", "note": "written as a second 전갈, corrected by the author to 정전"},
+          {"kr": "우유", "en": "Milk", "level": "?", "stars": "?", "note": ""},
+          {"kr": "닼초", "en": "Dark Choco", "level": "?", "stars": "?", "note": ""},
+          {"kr": "실론", "en": "Tea Knight", "level": "?", "stars": "?", "note": ""}
+        ],
+        "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": []
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "4.37 나왓다", "en": "Got 4.37"},
+        {"kr": "브싴 샤르 전갈 메소 피노 치케 석류 피겨 전갈 우유 닼초 실론", "en": "Seeker, Chardonnay, Scorpion, Melon Soda, Pinot, Cheesecake, Pomegranate, Skating Queen, Scorpion [sic], Milk, Dark Choco, Tea Knight"},
+        {"kr": "전갈 한자리에 정전임? / 아 정전 ㅋㅋㅋ 잘못씀", "en": "Is one of the Scorpion slots Tiger Lily? / Oh, Tiger Lily, lol, typo"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84663",
+      "url": "https://m.dcinside.com/board/projectcc/84663",
+      "date": "2026-10-09",
+      "title_kr": "토벌 마카롱체리덱 vs 샤르도네덱 딜량 비교",
+      "title_en": "Conquest damage: Macaron-Cherry deck vs Chardonnay deck",
+      "relevance": 3,
+      "summary_en": "A controlled A/B test with 50 hand-logged runs per deck. Plates, gear preset, pets, sugar runes, research and breakthrough were held equal; only Macaron/Cherry was swapped for Chardonnay/Melon Soda, with levels re-tuned. Macaron-Cherry at 4.27G: mean 423배, range 201–711배, max 3.036T. Chardonnay at 4.40G: mean 809배, range 592–1024배, max 4.504T. The spread narrows from more than 3x to under 2x. The lobby proof shows a 4T 668G personal best at 4.4G (rank 1st). Both lineups run Pomegranate at Lv.1, and the author says her ATK rank doesn't matter because she gives the buff rather than receiving it.",
+      "scores": [
+        {"damage": "4T 668G", "power": "4.4G", "ratio": "~1061배 (computed: 4.668T ÷ 4.4G); post says '1000배 인증'", "deck": "샤르도네덱 (메소 Lv.45 + 전갈 Lv.20 sub-dealers)", "note": "observed: 84663-1 lobby, 개인 랭킹 1st, deck tab 5, 전투력 4.4G"},
+        {"damage": "50 runs: max 4.504T, min 2.604T", "power": "4.40G team; 31.18G 총투력", "ratio": "team mean 809배, min 592배, max 1024배; total-power mean 114배, max 144배", "deck": "샤르도네덱", "note": "observed: spreadsheet 84663-2 and summary 84663-6. Distribution: <500배 0, 500–599 1 (2%), 600–699 3 (6%), 700–799 18 (36%), 800–899 21 (42%), 900–999 6 (12%), ≥1000 1 (2%)"},
+        {"damage": "50 runs: max 3.036T, min 0.860T", "power": "4.27G", "ratio": "team mean 423배, min 201배, max 711배; total-power mean 58배, max 98배", "deck": "마카롱체리덱 (previous meta)", "note": "observed: lobby 84663-3, summary 84663-4. Distribution: <300 6 (12%), 300–399 20 (40%), 400–499 9 (18%), 500–599 9 (18%), 600–699 5 (10%), 700–799 1 (2%), ≥800 0"}
+      ],
+      "teams": [
+        {
+          "name": "샤르도네덱 (84663-1 / 84663-5, 4.4G)",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "10", "note": "row 1 slot 1; 5 pink"},
+            {"kr": "전갈", "en": "Scorpion", "level": "20", "stars": "10", "note": "row 1 slot 2"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "10", "note": "row 1 slot 3"},
+            {"kr": "석류", "en": "Pomegranate", "level": "1", "stars": "10", "note": "row 1 slot 4; dark, red curly hair, double chevron, Lv.1"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "9", "note": "row 1 slot 5; 4 pink + 1 gold"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "10", "note": "row 1 slot 6"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "10", "note": "row 2 slot 1"},
+            {"kr": "메소", "en": "Melon Soda", "level": "45", "stars": "10", "note": "row 2 slot 2"},
+            {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "9", "note": "row 2 slot 3; 4 pink + 1 gold"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "10", "note": "row 2 slot 4"},
+            {"kr": "우유", "en": "Milk", "level": "118", "stars": "10", "note": "row 2 slot 5, leader banner"},
+            {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "5", "note": "row 2 slot 6; 5 gold"}
+          ],
+          "pets": ["핫도그 (20)", "색동주머니 (20)", "와사비문어 (20)"],
+          "atk_order": ["우유", "샤르도네", "브시커", "피겨", "치케", "실론"],
+          "perks": "",
+          "formation": "",
+          "substitutions": ["샤르도네 replaces 마카롱; 메소 replaces 체리", "전갈 lowered from Lv.50 to Lv.20; 메소 at Lv.45"],
+          "unorthodox": ["석류 (Pomegranate, the beam giver) at Lv.1 in both decks", "Lv.1 피노, 정전, 닼초; Lv.20 전갈; Lv.45 메소", "No Melon Soda move-speed tuning: it only served Macaron's placement", "Either 전갈 or 메소 is set above 닼초 in ATK (as read on the profile at battle start) to catch a stray straw when Milk is buffed late"]
+        },
+        {
+          "name": "마카롱체리덱 (84663-3, 4.27G)",
+          "cookies": [
+            {"kr": "마카롱", "en": "Macaron", "level": "118", "stars": "9", "note": "row 1 slot 1; grass, pink hair, red/white hat; 4 pink + 1 gold"},
+            {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "10", "note": "row 1 slot 2"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "10", "note": "row 1 slot 3"},
+            {"kr": "석류", "en": "Pomegranate", "level": "1", "stars": "10", "note": "row 1 slot 4"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "9", "note": "row 1 slot 5; 4 pink + 1 gold"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "10", "note": "row 1 slot 6"},
+            {"kr": "체리", "en": "Cherry Cola", "level": "80", "stars": "10?", "note": "row 2 slot 1; fire, round orange face, blue frame; by elimination from the author's text"},
+            {"kr": "전갈", "en": "Scorpion", "level": "50", "stars": "10", "note": "row 2 slot 2"},
+            {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "9", "note": "row 2 slot 3"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "10", "note": "row 2 slot 4"},
+            {"kr": "우유", "en": "Milk", "level": "118", "stars": "10", "note": "row 2 slot 5, leader banner"},
+            {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "5", "note": "row 2 slot 6; 5 gold"}
+          ],
+          "pets": ["핫도그 (20)", "색동주머니 (20)", "와사비문어 (20)"],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": [],
+          "unorthodox": ["Lv.1 석류, 피노, 정전, 닼초; Lv.80 체리; Lv.50 전갈"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "샤르도네 / 마카롱", "stats": "Only 5 slots of 스증 (skill amp); the remaining slots are junk lines. Skill level 5 on both, so the comparison is like for like", "why": "Sugar-rune crafting unfinished; held equal across the two decks"}
+      ],
+      "gear": [
+        {"slot": "좌상단 / 우상단 / 좌하단 / 우하단", "substats": "좌상단 스증 + 치확 or 치피; 우상단 스증 + 스가; 좌하단 피감 + @; 우하단 스가 + 피감", "context": "raid (commenter quoting the earlier Cherry-deck guide)", "why": "A commenter asks whether the Cherry-deck guide's gear still applies. Unanswered in the capture"}
+      ],
+      "rng": [
+        "Macaron-Cherry: low-to-high spread over 3x (201–711배), with most runs in the lower bands",
+        "Chardonnay: spread under 2x (592–1024배), with most runs in the 700–899배 bands",
+        "The old deck's high band (~700배) sits in the new deck's lower-middle band",
+        "Pomegranate's straw can 'bounce' when Milk receives her buff late. The fix is a backup 전갈 or 메소 with ATK above 닼초",
+        "Chardonnay sheet rows 1–22 (4.40G team / 31.18G total), read from small text in 84663-2: 3.264T/742, 3.781T/859, 3.015T/685, 3.203T/728, 3.682T/837, 3.499T/795, 4.082T/928, 4.134T/940, 2.604T/592, 4.380T/995, 4.308T/979, 3.570T/811, 3.827T/870, 3.569T/811, 3.355T/763, 3.423T/778, 3.570T/811, 3.541T/805, 3.546T/806, 2.757T/627, 3.618T/822, 3.135T/713 (damage/team 배)"
+      ],
+      "mechanics": [
+        "Chardonnay's buff range is very wide where Macaron's is narrow, so no placement fillers and no move-speed micro-tuning are needed",
+        "ATK order: Milk 1st, Chardonnay 2nd regardless of ATK (synergy), then Seeker, Skating Queen, Cheesecake, Tea Knight. Ranks 3–6 can be shuffled",
+        "Pomegranate gives the buff and doesn't receive it, so her ATK rank can mix with the recipients",
+        "Melon Soda move speed was only there to set up Macaron's buff placement; with Macaron gone it is not needed"
+      ],
+      "disagreements": ["Some say Skating Queen must be 3rd in ATK; the author thinks ranks 3–6 can be mixed"],
+      "quotes": [
+        {"kr": "플레이트강화, 장비프리셋, 펫구성, 슈가룬, 연구, 돌파력 등등 다 동일하게 유지하고 덱 구성만 마카롱/체리 -> 샤르도네/메론소다 로 변경하고, 레벨도 그에따른 최적화를 했음", "en": "Plates, gear preset, pets, sugar runes, research, breakthrough etc. all kept the same; only the deck changed from Macaron/Cherry to Chardonnay/Melon Soda, with levels optimised to match"},
+        {"kr": "팀투력 4.27G로 저점은 201배, 고점은 711배로 최대 3T의 딜량을 냈음", "en": "At 4.27G team power: low 201배, high 711배, max ~3T"},
+        {"kr": "팀투력 4.4G에 저점 592배 고점 1024배로 최대 4.5T의 딜을 뽑아냈음", "en": "At 4.4G: low 592배, high 1024배, max 4.5T"},
+        {"kr": "스킬은 마카롱/샤르도네 둘 다 5단계로 동일하고 슈가룬도 5칸씩만 스증 띄우고 나머지 칸들은 잉여옵인것도 동일함", "en": "Skill level 5 on both Macaron and Chardonnay, and both have only 5 rune slots of skill amp with junk on the rest"},
+        {"kr": "마카롱의 옹졸한 버프범위에비해 샤르도네 버프범위는 엄청 넓어서 굳이 배치를 위한 잉여쿠키들을 구성할 필요도, 이속미세조절을 할 필요성도 없어져서", "en": "Compared with Macaron's stingy buff range, Chardonnay's is huge, so you no longer need filler cookies for placement or move-speed micro-tuning"},
+        {"kr": "토벌도 마카롱빼고 샤르도네 넣어라", "en": "For Conquest too: drop Macaron, put in Chardonnay"},
+        {"kr": "우유 1순위 샤르도네 시너지 때문에 공 상관없이 2순위 시커 피겨 치케 실론 순으로 했음 피겨가 3순위여야 한다는 이야기도 있는데, 난 3~6순위 순서 섞여도 상관 없다고 보는 편", "en": "Milk 1st; Chardonnay 2nd regardless of ATK because of synergy; then Seeker, Skating Queen, Cheesecake, Tea Knight. Some say Skating Queen must be 3rd, but I think ranks 3–6 can be mixed"},
+        {"kr": "석류도 본인이 버프 받는게 아니라 주는입장이라 공격력 순위가 위에애들이랑 섞여도 상관x 종종 우유버프 늦게받아서 석류빨대 튀는거 대체용으로 전갈이나 메소를 토벌 시작하자마자 프로필 눌렀을때 기준 닼초보다 공 높게 설정", "en": "Pomegranate gives the buff rather than receiving it, so her ATK rank can mix with those above. Milk sometimes gets the buff late and Pomegranate's straw bounces, so as a backup set Scorpion or Melon Soda above Dark Choco in ATK, as read on the profile right at the start of the fight"},
+        {"kr": "메소덱 이속 넣는게 마카롱이 딜러들한테 버프 예쁘게넣는 배치 만들려고 넣던건데 마카롱이 아예 빠지는거라 현재로서는 넣을 필요 없음", "en": "Move speed on Melon Soda was for a placement where Macaron buffs the dealers neatly. Macaron is out entirely, so there's no need now"},
+        {"kr": "좌상단 스증치확or치피 우상단 스증스가 좌하단 피감+@ 우하단 스가피감 입니까?", "en": "(Commenter) Is the gear top-left skill amp + crit rate or crit dmg, top-right skill amp + skill haste, bottom-left dmg reduction + any, bottom-right skill haste + dmg reduction?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84913",
+      "url": "https://m.dcinside.com/board/projectcc/84913",
+      "date": "2026-10-10",
+      "title_kr": "1300배 쳣서",
+      "title_en": "Hit 1300배",
+      "relevance": 2,
+      "summary_en": "A BATTLE OVER screen shows a final score of 8,069,982,896,711 (8T 069G) with 길드 순위 1st. The title says 1300배. Sub-dealers are Melon Soda + Strawberry Crepe, with Chardonnay at 10★ and sugar runes not finished. A commenter asks which of Scorpion, Melon Soda, Strawberry Crepe or Popcorn is best.",
+      "scores": [{"damage": "8,069,982,896,711 (8T 069G)", "power": "~6.2G (computed: damage ÷ 1300; not shown)", "ratio": "1300배 (title)", "deck": "샤르도네덱 with 메소+딸크 sub-dealers, 샤르 10★", "note": "damage observed on the BATTLE OVER / 최종 점수 screen (84913-1), 길드 순위 1st; 배 stated only; 84913-2.gif is a sticker"}],
+      "teams": [{
+        "name": "샤르도네덱 (stated)",
+        "cookies": [
+          {"kr": "샤르", "en": "Chardonnay", "level": "?", "stars": "10", "note": "stated in a reply"},
+          {"kr": "메소", "en": "Melon Soda", "level": "?", "stars": "?", "note": "sub-dealer"},
+          {"kr": "딸크", "en": "Strawberry Crepe", "level": "?", "stars": "?", "note": "sub-dealer"}
+        ],
+        "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": ["메소+딸크 as the sub-dealer pair"], "unorthodox": []
+      }],
+      "sugar_runes": [{"cookie": "샤르도네", "stats": "not fully rolled ('슈가룬 다맞추진못함')", "why": ""}],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "메소딸크", "en": "Melon Soda + Strawberry Crepe"},
+        {"kr": "그게고점인가 전갈 메소 딸크 팝콘뭐가좋은지ㅋㅋㅋ", "en": "Is that the high end? Which is better: Scorpion, Melon Soda, Strawberry Crepe or Popcorn, lol"},
+        {"kr": "10성인데 슈가룬 다맞추진못함", "en": "(Chardonnay is) 10★, but I haven't finished the sugar runes"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84393",
+      "url": "https://m.dcinside.com/board/projectcc/84393",
+      "date": "2026-10-09",
+      "title_kr": "천이백배쳣서",
+      "title_en": "Hit 1200배",
+      "relevance": 2,
+      "summary_en": "A cropped ranking banner shows 7T 557G; the title says 1200배. The setup is the Cherry deck with Melon Soda in Cherry's slot (and Chardonnay, per the body). The author has three '20강' items: sword, bow and book.",
+      "scores": [{"damage": "7T 557G", "power": "~6.3G (computed from 1200배; not shown)", "ratio": "1200배 (title)", "deck": "샤르도네덱, 메소 in Cherry's slot", "note": "damage observed (cropped ranking banner 84393-1); 배 stated; 84393-2.gif is a sticker"}],
+      "teams": [{
+        "name": "샤르도네덱 (stated)",
+        "cookies": [
+          {"kr": "샤르", "en": "Chardonnay", "level": "?", "stars": "?", "note": "'샤르 최고'"},
+          {"kr": "메소", "en": "Melon Soda", "level": "?", "stars": "?", "note": "in Cherry's slot"}
+        ],
+        "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": ["메소 replaces 체리"], "unorthodox": []
+      }],
+      "sugar_runes": [],
+      "gear": [{"slot": "? ('20강')", "substats": "3 items at 20강: 검 (sword), 활 (bow), 책 (book)", "context": "raid", "why": "Answer to 'how many 20강'. What '20강' refers to (plate or weapon-type enhancement) isn't stated"}],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "체리 자리에 메소", "en": "Melon Soda in Cherry's slot"},
+        {"kr": "20강 몇개임 / 3개 / 책 검 마법물체? / 검 활 책", "en": "How many at +20? / 3 / Book, sword, magic object? / Sword, bow, book"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84388",
+      "url": "https://m.dcinside.com/board/projectcc/84388",
+      "date": "2026-10-09",
+      "title_kr": "1100배",
+      "title_en": "1100배",
+      "relevance": 2,
+      "summary_en": "A BATTLE OVER screen on 지나치게 무거워진 피냐타 shows 4,420,793,891,803 with the timer at 0.000 (the fight ran to time), 길드 순위 2nd and a guild score of 44T 257G (+343G 108M). The author kept the same setup and still has Tea Knight at 4★. Asked whether move speed matters, he says it seems to.",
+      "scores": [{"damage": "4,420,793,891,803 (4T 420G)", "power": "~4.0G (computed from 1100배; not shown)", "ratio": "1100배 (title)", "deck": "? (setup 'unchanged'; 실론 4★)", "note": "observed on the BATTLE OVER screen 84388-1; timer 0.000; ribbon shows the previous best (내 최고 기록) 4.07T, guildmates 쑹멜 4.06T and 대범한꼬마 6.03T (1st)"}],
+      "teams": [{
+        "name": "?",
+        "cookies": [
+          {"kr": "실론", "en": "Tea Knight", "level": "?", "stars": "4", "note": "stated ('아직도 실론4임')"},
+          {"kr": "?", "en": null, "level": "118", "stars": "?", "note": "the dimmed battle bar shows only one card clearly: Lv.118, red hair, double-chevron icon (possibly 석류); the rest is unreadable"}
+        ],
+        "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": ["Still runs Tea Knight at 4★"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Move speed (이속) 'seems to' matter (author, unquantified)"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "세팅 그대로임 ? / ㅇㅇ", "en": "Same setup as before? / Yes"},
+        {"kr": "아직도 실론4임", "en": "Tea Knight is still 4★"},
+        {"kr": "이속 의미 있음? / 있는듯", "en": "Does move speed matter? / Seems so"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85112",
+      "url": "https://m.dcinside.com/board/projectcc/85112",
+      "date": "2026-10-10",
+      "title_kr": "토벌 1400배 어떻게치는데,,,,",
+      "title_en": "How do you hit 1400배 in Conquest?",
+      "relevance": 1,
+      "summary_en": "The author has hit 1200배 and survives to 0초 but can't get higher. He asks for the 'secret sauce'. A commenter is also stuck at 1200배.",
+      "scores": [{"damage": "?", "power": "?", "ratio": "1200배 (best)", "deck": "?", "note": "stated; team survives to 0초"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "1200배까진 쳐봤고 0초까지 생존가능함", "en": "I've hit up to 1200배 and can survive to 0 s"},
+        {"kr": "나도 1200배에서 더 못올리겠다..", "en": "I can't get past 1200배 either"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85159",
+      "url": "https://m.dcinside.com/board/projectcc/85159",
+      "date": "2026-10-10",
+      "title_kr": "님들 팀투6.4g로 4t뽑은거면 잘친거임? 냉정하게 평가좀",
+      "title_en": "4T at 6.4G team power: good or bad? Be honest",
+      "relevance": 2,
+      "summary_en": "4T at 6.4G team power (~625배), voted 'very bad' by several commenters. One says 600배 with everyone alive is disappointing and to come back at 1000배 (6.4T). The author then realises he had been attacking with his arena gear preset; the follow-up is 85172.",
+      "scores": [
+        {"damage": "4T", "power": "6.4G (arena preset, per the author's last comment)", "ratio": "~625배 (computed)", "deck": "?", "note": "stated only"},
+        {"damage": "?", "power": "?", "ratio": "600배 (commenter's reading of the author's run, all alive)", "deck": "?", "note": "stated"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [{"slot": "preset", "substats": "arena preset used by mistake instead of the raid preset", "context": "raid vs arena", "why": "The arena preset inflates displayed team power and isn't the raid setup"}],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "올생존 600배는 많이 아쉽지않나?", "en": "600배 with everyone alive is pretty disappointing, no?"},
+        {"kr": "1000배는 6.4t인데요;", "en": "1000배 would be 6.4T, though"},
+        {"kr": "이런 시발 여태 아레나프리셋으로 치고있었네;", "en": "Damn, I've been attacking with my arena preset this whole time"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84918",
+      "url": "https://m.dcinside.com/board/projectcc/84918",
+      "date": "2026-10-10",
+      "title_kr": "832배",
+      "title_en": "832배",
+      "relevance": 2,
+      "summary_en": "The lobby shows 1T 948G at 2.34G team power (832배). The sub-dealers are Popcorn and Strawberry Crepe, both at Lv.1, with no Scorpion or Melon Soda. Runes are flat ATK plus 4 skill haste. ATK order is Milk, Seeker, Skating Queen, Cheesecake, Tea Knight. The author complains that Pomegranate too often fails to receive Tiger Lily.",
+      "scores": [{"damage": "1T 948G", "power": "2.34G", "ratio": "832배 (title; 1.948T ÷ 2.34G = 832.5 computed)", "deck": "샤르도네덱 with 팝콘+딸크", "note": "observed: lobby 84918-1 (name blanked); season ends in 1일 22시간 46분"}],
+      "teams": [{
+        "name": "샤르도네덱, 팝콘딸크 (84918-1, 2.34G)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "117", "stars": "?", "note": "row 1 slot 1; stars too small to separate pink from gold"},
+          {"kr": "팝콘", "en": "Popcorn", "level": "1", "stars": "?", "note": "row 1 slot 2; light, star-spangled glasses"},
+          {"kr": "치케", "en": "Cheesecake", "level": "117", "stars": "?", "note": "row 1 slot 3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "110", "stars": "?", "note": "row 1 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "117", "stars": "?", "note": "row 1 slot 5, leader banner"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "10?", "note": "row 1 slot 6; looks all pink"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "117", "stars": "?", "note": "row 2 slot 1"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "row 2 slot 2"},
+          {"kr": "석류", "en": "Pomegranate", "level": "117", "stars": "?", "note": "row 2 slot 3"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "?", "note": "row 2 slot 4"},
+          {"kr": "딸크", "en": "Strawberry Crepe", "level": "1", "stars": "?", "note": "row 2 slot 5; light, pink fluffy hair, shield icon"},
+          {"kr": "실론", "en": "Tea Knight", "level": "110", "stars": "?", "note": "row 2 slot 6; stars look gold only (≤5?)"}
+        ],
+        "pets": ["핫도그 (20)", "와사비문어 (20)", "색동주머니 (17)"],
+        "atk_order": ["우유", "브시커", "피겨", "치케", "실론"],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["팝콘+딸크 in place of 전갈+메소"],
+        "unorthodox": ["Both sub-dealers (팝콘, 딸크) at Lv.1", "피겨 and 실론 at Lv.110 against a Lv.117 core"]
+      }],
+      "sugar_runes": [{"cookie": "? (not stated)", "stats": "깡공 (flat ATK) + 4 스가 (skill haste)", "why": ""}],
+      "gear": [],
+      "rng": ["Pomegranate too often fails to receive Tiger Lily (the Volley that raises her beam count)"],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "깡공 4스가 + 팝콘딸크", "en": "Flat ATK, 4 skill haste + Popcorn & Strawberry Crepe"},
+        {"kr": "석류가 정전을 너무 못받음", "en": "Pomegranate fails to receive Tiger Lily way too often"},
+        {"kr": "우브피치실", "en": "(ATK order) Milk, Seeker, Skating Queen, Cheesecake, Tea Knight"},
+        {"kr": "방수특낌? / 20 7", "en": "'방수특낌?' (meaning unclear) / 20 7"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84830",
+      "url": "https://m.dcinside.com/board/projectcc/84830",
+      "date": "2026-10-10",
+      "title_kr": "토벌 기록 726배 전갈 팝콘",
+      "title_en": "Conquest record 726배, Scorpion + Popcorn",
+      "relevance": 2,
+      "summary_en": "The lobby shows 2T 92G at 2.88G (726배) with Scorpion + Popcorn as sub-dealers and every filler at Lv.30. A screenshot of Popcorn's sugar runes shows mostly crit dmg and dmg reduction. The author ignored ATK order and only levelled down, and played fewer than 10 runs. A commenter says surviving to 5초 gives 1000배; another says he hit about 1400배.",
+      "scores": [
+        {"damage": "2T 92G", "power": "2.88G", "ratio": "726배 (title; computed 726.4)", "deck": "샤르도네덱 with 전갈+팝콘", "note": "observed: lobby 84830-1, 개인 랭킹 36th, deck tab 1; season ends in 2일 2시간 51분"},
+        {"damage": "?", "power": "?", "ratio": "~1400배 ('1400배엿나', hedged)", "deck": "?", "note": "a commenter, stated only"}
+      ],
+      "teams": [{
+        "name": "샤르도네덱, 전갈팝콘 (84830-1, 2.88G)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "117", "stars": "?", "note": "row 1 slot 1"},
+          {"kr": "팝콘", "en": "Popcorn", "level": "30", "stars": "≤9", "note": "row 1 slot 2; its rune screen still shows the ★10-locked lines"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "30", "stars": "?", "note": "row 1 slot 3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "117", "stars": "?", "note": "row 1 slot 4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "30", "stars": "?", "note": "row 1 slot 5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "30", "stars": "?", "note": "row 1 slot 6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "117", "stars": "?", "note": "row 2 slot 1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "30", "stars": "?", "note": "row 2 slot 2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "117", "stars": "?", "note": "row 2 slot 3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "117", "stars": "?", "note": "row 2 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "117", "stars": "?", "note": "row 2 slot 5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "117", "stars": "?", "note": "row 2 slot 6; stars look gold only"}
+        ],
+        "pets": ["핫도그 (20)", "와사비문어 (20)", "색동주머니 (18)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["팝콘 in place of 메소"],
+        "unorthodox": ["Every filler and sub-dealer at Lv.30, not Lv.1", "ATK order not managed ('신경 안쓰고 렙따만 함'); Seeker's ATK 1.12 vs Skating Queen's 1.11 (unit not stated)"]
+      }],
+      "sugar_runes": [{"cookie": "팝콘", "stats": "Observed (84830-2): C 피해감소 1.50%; C 치명확률 증가 1.00%; SR 치명피해 증가 5.40%; SR 치명피해 증가 5.40%; SR 스킬가속 증가 +2.00; R 피해감소 3.60%. Locked until ★10: C 스킬증폭 증가 1.30%, C 치명확률 증가 1.00%", "why": "Author calls these runes terrible ('ㅈ망') and expects a higher peak once rolled properly"}],
+      "gear": [],
+      "rng": ["A commenter: surviving to 5초 gives 1000배", "The author's team doesn't keep everyone alive to 5초"],
+      "mechanics": [
+        "Sugar-rune slots 7–8 open only at ★10 ('쿠키 ★10 승급 시 …'), as seen on Popcorn's rune screen",
+        "SR skill-haste line = +2.00 (flat); SR crit-damage line = 5.40%",
+        "Lobby shows the boss as Dark (moon icon) with 약점 (weakness) Light (sun icon)"
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "팝콘 슈가룬 ㅈ망인데 맞추면 고점 더 나올듯", "en": "Popcorn's sugar runes are trash; once I roll them properly the peak should go higher"},
+        {"kr": "5초까지생존하면 1000배나오더라", "en": "If you survive to 5 s you get 1000배"},
+        {"kr": "신경 안쓰고 렙따만 함", "en": "Didn't bother (with ATK order); just did the level-down"},
+        {"kr": "피겨 1.11 시커 1.12", "en": "Skating Queen 1.11, Seeker 1.12"},
+        {"kr": "10판도 안친듯", "en": "Probably fewer than 10 runs"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84337",
+      "url": "https://m.dcinside.com/board/projectcc/84337",
+      "date": "2026-10-09",
+      "title_kr": "토벌 3T,825배 클럽 달성",
+      "title_en": "Conquest: joined the 3T / 825배 club",
+      "relevance": 3,
+      "summary_en": "The lobby shows 3T 94G at 3.75G (825배), with Scorpion Lv.40 and Melon Soda Lv.1 as sub-dealers. The one unusual choice is 14 skill haste on Tiger Lily (41.6 skill haste on her info screen), which keeps Pomegranate at 6 straws; every other rune is standard. A max-level Tea Knight ranks 5th in ATK, just above Cheesecake.",
+      "scores": [{"damage": "3T 94G", "power": "3.75G", "ratio": "825배 (title; computed 825.1)", "deck": "샤르도네덱 with 전갈+메소", "note": "observed: lobby 84337-1, 개인 랭킹 7th, deck tab 5; season ends in 2일 20시간 41분"}],
+      "teams": [{
+        "name": "샤르도네덱, 전갈메소 (84337-1, 3.75G)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "117", "stars": "9?", "note": "row 1 slot 1; last star looks gold"},
+          {"kr": "전갈", "en": "Scorpion", "level": "40", "stars": "10?", "note": "row 1 slot 2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "35", "stars": "10?", "note": "row 1 slot 3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "117", "stars": "10?", "note": "row 1 slot 4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "30", "stars": "9?", "note": "row 1 slot 5; last star looks gold"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "10?", "note": "row 1 slot 6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "117", "stars": "10?", "note": "row 2 slot 1"},
+          {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "10?", "note": "row 2 slot 2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "117", "stars": "9?", "note": "row 2 slot 3; last star looks gold"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "117", "stars": "10?", "note": "row 2 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "117", "stars": "10?", "note": "row 2 slot 5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "117", "stars": "5", "note": "row 2 slot 6; 5 gold"}
+        ],
+        "pets": ["와사비문어 (20)", "핫도그 (20)", "색동주머니 (18)"],
+        "atk_order": ["... 실론 (5th)", "치케 (6th)"],
+        "perks": "",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["Tiger Lily kept at Lv.30 but given 14 skill haste so Pomegranate holds 6 straws", "Pinot Lv.35, Scorpion Lv.40, Dark Choco and Melon Soda Lv.1"]
+      }],
+      "sugar_runes": [
+        {"cookie": "정전", "stats": "스가 14 (info-window skill haste 41.6)", "why": "Keeps Pomegranate at 6 straws (6빨대). Note: 14 would equal 7 SR lines at +2.00, the line value seen in 84830-2; the author doesn't say how it is split"},
+        {"cookie": "others", "stats": "'정배 룬' (standard runes)", "why": ""}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Tiger Lily's skill haste sustains Pomegranate's 6-straw state (3 base + Volley 3)",
+        "A max-level Tea Knight sits 5th in ATK, just above Cheesecake (author's deck)"
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "특이점 정전스가 14줌 나머진 그냥 정배 룬", "en": "The unusual bit: I gave Tiger Lily 14 skill haste; everything else is standard runes"},
+        {"kr": "정전 스가 유의미한가?? 걍 아무 잡룬 줘놨는데 / 정전 스가로 석류 6빨대 유지시키기", "en": "Does skill haste on Tiger Lily matter? I just gave her junk runes / Tiger Lily's skill haste keeps Pomegranate at 6 straws"},
+        {"kr": "실론 만렙이면 공격력 등수 몇등임? 6등? / 5등 치케 바로 위", "en": "With Tea Knight at max level, what's his ATK rank, 6th? / 5th, right above Cheesecake"},
+        {"kr": "정전 정보창에서 스가 몇나옴? / 41.6", "en": "What skill haste does Tiger Lily's info window show? / 41.6"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84702",
+      "url": "https://m.dcinside.com/board/projectcc/84702",
+      "date": "2026-10-10",
+      "title_kr": "전시즌 400G에서 1.33T 샤르도네 뽕맛이 아주 좋다",
+      "title_en": "From 400G last season to 1.33T: Chardonnay feels great",
+      "relevance": 1,
+      "summary_en": "From 400G last season to 1.33T this season, credited to Chardonnay. Text only.",
+      "scores": [{"damage": "1.33T (last season 400G)", "power": "?", "ratio": "?", "deck": "샤르도네덱", "note": "stated in the title"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "잘만하면 더 나올거 같은데", "en": "If I play it well it should go higher"}]
+    },
+    {
+      "source": "dc",
+      "id": "85185",
+      "url": "https://m.dcinside.com/board/projectcc/85185",
+      "date": "2026-10-10",
+      "title_kr": "팀투 3.5로 2.8T 1인분 맞지??",
+      "title_en": "2.8T at 3.5G team power is pulling my weight, right?",
+      "relevance": 1,
+      "summary_en": "2.8T at 3.5G team power (800배). A commenter hit 2.1T at 2.9G.",
+      "scores": [
+        {"damage": "2.8T", "power": "3.5G", "ratio": "800배", "deck": "?", "note": "stated"},
+        {"damage": "2.1T", "power": "2.9G", "ratio": "~724배 (computed)", "deck": "?", "note": "commenter, stated"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "800배침", "en": "Hit 800배"},
+        {"kr": "흠 팀투 2.9 2.1 쳤는데 3.5되면 2.8은 걍 친다는 거군", "en": "Hm, I did 2.1 at 2.9 team power, so at 3.5 you'd just hit 2.8"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85172",
+      "url": "https://m.dcinside.com/board/projectcc/85172",
+      "date": "2026-10-10",
+      "title_kr": "밑에 4t친다는 갤럼인데 ㅅㅂ 여태 아레나셋이였음",
+      "title_en": "I'm the 4T guy from below: I'd been on my arena set all along",
+      "relevance": 2,
+      "summary_en": "Follow-up to 85159. Switching to the raid gear set drops displayed team power from 6.4G to 5.6G, so his 4T is ~714배 against raid-set power. He concludes the norm is 5T+.",
+      "scores": [{"damage": "4T", "power": "5.6G (raid set); 6.4G on the arena set", "ratio": "~714배 on raid-set power (computed); ~625배 on arena-set power", "deck": "?", "note": "stated only"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [{"slot": "preset", "substats": "raid set (토벌셋) vs arena set (아레나셋)", "context": "raid vs arena", "why": "The raid set shows lower team power (5.6G vs 6.4G), and 배 benchmarks assume the raid set's power"}],
+      "rng": [],
+      "mechanics": ["Displayed team power depends on the equipped gear preset; the arena set reads higher than the raid set"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "토벌셋으로 바꾸니까 순식간에 팀투 5.6g로 빠지네", "en": "Switching to the raid set instantly drops team power to 5.6G"},
+        {"kr": "암튼 정배가 5t 이상이라는거지?", "en": "So anyway, the norm is 5T or more?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85221",
+      "url": "https://m.dcinside.com/board/projectcc/85221",
+      "date": "2026-10-10",
+      "title_kr": "800배치면 4t도 되겠네..",
+      "title_en": "At 800배 I'd reach 4T too",
+      "relevance": 1,
+      "summary_en": "Hypothetical: 800배 would give the author 4T, implying ~5G team power. He plans to push ATK to 30% and focus on Conquest rather than stages.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "공30퍼찍고 토벌이나 해야겠다 스테밀어서 뭐하노..", "en": "I'll get ATK to 30% and just do Conquest; what's the point of pushing stages"}]
+    },
+    {
+      "source": "dc",
+      "id": "85209",
+      "url": "https://m.dcinside.com/board/projectcc/85209",
+      "date": "2026-10-10",
+      "title_kr": "17초사망 600배이상있음?",
+      "title_en": "Anyone above 600배 while dying at 17초?",
+      "relevance": 2,
+      "summary_en": "The author's team wipes at the 17초 slam and he caps at 600배. Commenters report 725배 with about half the team dying, 700+배 at 2G, and 750배. One estimates up to 800배 for strong accounts.",
+      "scores": [
+        {"damage": "?", "power": "?", "ratio": "600배 (author's cap, full wipe at 17초)", "deck": "?", "note": "stated"},
+        {"damage": "?", "power": "?", "ratio": "725배 (about half the team dies at 17초)", "deck": "?", "note": "commenter 도토리마스터, stated"},
+        {"damage": "?", "power": "2G", "ratio": "a little over 700배", "deck": "?", "note": "commenter, stated"},
+        {"damage": "?", "power": "?", "ratio": "750배", "deck": "?", "note": "commenter TTO, stated"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["With a wipe at the 17초 slam, reported ceilings are 600–750배, maybe 800배 for high-spec accounts"],
+      "disagreements": ["Author: 600배 is the limit with a 17초 wipe; commenters: 700–750배 is possible"],
+      "quotes": [
+        {"kr": "600배가 한계같노", "en": "600배 seems to be the limit"},
+        {"kr": "전멸은 아니고 반정도 죽는데 725배침", "en": "Not a full wipe, about half die, and I hit 725배"},
+        {"kr": "2g로 700배 조금 넘게침 / 스펙 좋은 사람은 아마 800배까진 나올듯", "en": "Got a bit over 700배 at 2G / People with good specs can probably reach 800배"},
+        {"kr": "750배까진 나옴", "en": "You can get up to 750배"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85200",
+      "url": "https://m.dcinside.com/board/projectcc/85200",
+      "date": "2026-10-10",
+      "title_kr": "토벌 17초 전멸이면",
+      "title_en": "If you wipe at 17초 in Conquest",
+      "relevance": 2,
+      "summary_en": "The author asks whether a 17초 wipe caps you at 500–600배 and how to survive to 5초. Answers: raise lab HP research and push stages to level breakthrough. Non-levelled-down cookies with ~12M HP survive past 17초. Lv.119 cookies with lab HP and breakthrough reach ~19M HP and survive to 0초.",
+      "scores": [{"damage": "?", "power": "?", "ratio": "500–600배 (asked as the cap with a 17초 wipe)", "deck": "?", "note": "stated (question)"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Survival through the 17초 slam: about 12M HP per cookie survives past 17초 (commenter, 'not sure')",
+        "About 19M HP survives to 0초, reached with Lv.119 cookies, heavy lab HP% research and raised breakthrough (commenter)",
+        "Survival levers: lab HP research (연구소 체력) and breakthrough (돌파력) levelled by pushing stages"
+      ],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "500배 ~ 600배가 한계? 그리고 5초 생존 할려면 뭔짓 해야함? 17초 쾅에 무조건 다 죽던데..", "en": "Is 500–600배 the limit? And what do I have to do to survive to 5 s? Everyone always dies to the 17 s slam"},
+        {"kr": "연구소체력열심히찍고 스테열심히밀어서 돌파력 레벨업", "en": "Max lab HP research and push stages hard to level up breakthrough"},
+        {"kr": "확실하진 않은데 난 렙다 안한 애들이 체력 12m 정도 되니까 살더라 17초 이후에도", "en": "Not sure, but my non-levelled-down cookies have about 12M HP and they survive past 17 s"},
+        {"kr": "쿠키들119렙 연구소 체증 많이 찍기 돌파려올리기 체력19M쯤 되면 0초까지 살아", "en": "Cookies at Lv.119, lots of lab HP%, raise breakthrough: at about 19M HP they live to 0 s"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85179",
+      "url": "https://m.dcinside.com/board/projectcc/85179",
+      "date": "2026-10-10",
+      "title_kr": "0초에 죽는데 500배면 홍어일까요",
+      "title_en": "Dying at 0초 with 500배: am I bad?",
+      "relevance": 1,
+      "summary_en": "The author survives to 0초 but gets only 500배 (3.5T). He orders ATK correctly but doesn't drop fillers to Lv.1, saying Lv.1 only gives 600–700배 and isn't worth it unless you farm 배. A commenter notes that 17초-wipe teams already get 600배 and suspects no level tuning or power-inflating gear. The image is a Pepe sticker.",
+      "scores": [{"damage": "3.5T", "power": "~7G (computed from 500배; not stated)", "ratio": "500배", "deck": "? (fillers not at Lv.1)", "note": "stated only; 85179-1.png is a sticker"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [{"slot": "?", "substats": "'뻥투장비' (power-inflating gear) raised as a suspect", "context": "raid", "why": "Gear that inflates team power lowers the 배"}],
+      "rng": [],
+      "mechanics": ["Level-down to Lv.1 is framed as a 배-farming trick: it raises 배 by lowering team power"],
+      "disagreements": ["Author: Lv.1 fillers only reach 600–700배, so they aren't worth it; commenter 박모모: 500배 surviving to 0초 means a missing level-down or inflated-power gear"],
+      "quotes": [
+        {"kr": "17초도 600배를 뽑는판에..", "en": "When even 17 s wipes get 600배..."},
+        {"kr": "레벨 조정안하거나 뻥투장비로 치는거 아니야??", "en": "Aren't you skipping level tuning, or using power-inflating gear?"},
+        {"kr": "공순서는 맞추는데 1렙을 안만들고 치긴함 굳이? 배수딸칠거 아니면 의미없는거 같아서 근데 1렙으로 낮춰봤자 6-700배임", "en": "I do set the ATK order but don't make Lv.1s. Why bother? It seems pointless unless you're farming the multiple. Even dropping to Lv.1 only gives 600–700배"},
+        {"kr": "난 왜 3.5t박에 안돼지", "en": "Why do I only get 3.5T"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85167",
+      "url": "https://m.dcinside.com/board/projectcc/85167",
+      "date": "2026-10-10",
+      "title_kr": "17초 죽는 스펙으로는 몇배까지 치냐",
+      "title_en": "What 배 can you reach with a spec that dies at 17초?",
+      "relevance": 2,
+      "summary_en": "A commenter with a 17초-wipe spec hit 435배: 662G 256M at 1.52G team power. He lists stars for all twelve Chardonnay-deck cookies, including Tea Knight at 1★ and Skating Queen under the nickname 김연아. TTO says a 17초-wipe spec tops out around 750배, maybe 800, and not 1000.",
+      "scores": [
+        {"damage": "662G 256M", "power": "1.52G", "ratio": "435배 (computed 435.7)", "deck": "샤르도네덱 (stars listed)", "note": "commenter 건축학과, stated; wipes at 17초"},
+        {"damage": "?", "power": "?", "ratio": "750배 max with a 17초 wipe", "deck": "?", "note": "commenter TTO, stated"}
+      ],
+      "teams": [{
+        "name": "샤르도네덱 (건축학과, stated, 1.52G)",
+        "cookies": [
+          {"kr": "시커", "en": "Brightseeker", "level": "?", "stars": "6", "note": "stated"},
+          {"kr": "샤르", "en": "Chardonnay", "level": "?", "stars": "7", "note": ""},
+          {"kr": "전갈", "en": "Scorpion", "level": "?", "stars": "9", "note": ""},
+          {"kr": "멜소", "en": "Melon Soda", "level": "?", "stars": "9", "note": "written 멜소"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "?", "stars": "10", "note": ""},
+          {"kr": "치케", "en": "Cheesecake", "level": "?", "stars": "8", "note": ""},
+          {"kr": "석류", "en": "Pomegranate", "level": "?", "stars": "9", "note": ""},
+          {"kr": "김연아", "en": "Skating Queen", "level": "?", "stars": "10", "note": "nickname for 피겨 (Yuna Kim, figure skater)"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "?", "stars": "8", "note": ""},
+          {"kr": "우유", "en": "Milk", "level": "?", "stars": "10", "note": ""},
+          {"kr": "닼초", "en": "Dark Choco", "level": "?", "stars": "9", "note": ""},
+          {"kr": "실론", "en": "Tea Knight", "level": "?", "stars": "1", "note": "1★"}
+        ],
+        "pets": [], "atk_order": [], "perks": "", "formation": "", "substitutions": [], "unorthodox": ["Tea Knight at 1★"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": ["Reported ceiling for a 17초-wipe spec: ~750–800배; 1000배 needs a spec that survives 17초"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "17초 죽는 스펙으로 435배 나왔음", "en": "Got 435배 with a spec that dies at 17 s"},
+        {"kr": "투력 1.52 시커 6성 샤르 7성 전갈 9성 멜소 9성 피노 10성 치케 8성 석류 9성 김연아 10성 정전 8성 우유 10성 닼초 9성 실론 1성", "en": "Power 1.52; Seeker 6★, Chardonnay 7★, Scorpion 9★, Melon Soda 9★, Pinot 10★, Cheesecake 8★, Pomegranate 9★, Yuna Kim [Skating Queen] 10★, Tiger Lily 8★, Milk 10★, Dark Choco 9★, Tea Knight 1★"},
+        {"kr": "662G256M", "en": "662G 256M"},
+        {"kr": "17초 죽는스펙 최대 750배 나오긴함 800배 까진 어캐 찍을듯 1000배는 안될거같은데", "en": "A spec that dies at 17 s maxes around 750배; maybe 800 somehow; 1000 seems impossible"},
+        {"kr": "1000배 얘기하는건 17초 뚫는 스펙이긴 하겠다 800배 까지가 최대치긴 할듯", "en": "The 1000배 talk must be from specs that get through 17 s; 800배 is probably the max"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85212",
+      "url": "https://m.dcinside.com/board/projectcc/85212",
+      "date": "2026-10-10",
+      "title_kr": "근데 토벌고점이라는게 평균딜의 몇배정도 나와?",
+      "title_en": "How far above the average does a Conquest high-roll go?",
+      "relevance": 2,
+      "summary_en": "Over 50 runs the author averages about 3.2T, and no run fell outside 2.7–3.7T (about ±20%). 언담 replies that with Macaron gone the high/low gap is small. The swing now comes down to whether Pomegranate receives Tiger Lily, and you can spot a high-roll from Cheesecake's or Tea Knight's skill amp. The image is a sticker.",
+      "scores": [{"damage": "mean ~3.2T; all 50 runs within 2.7–3.7T", "power": "?", "ratio": "?", "deck": "?", "note": "stated; 85212-1.png is a sticker"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [
+        "50 runs: spread about ±20% of the mean (2.7–3.7T around 3.2T)",
+        "Main random factor after Macaron left: whether Pomegranate receives Tiger Lily",
+        "A high-roll can be read from Cheesecake's or Tea Knight's skill amp"
+      ],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "50판돌렸는데 고점 저점차이가 평균에서 플마20퍼 정도인거 같은데 2배 이상 나오는거지? 지금 평균 3.2T 정도인데 2.7-3.7 바깥으로 간판이 한판도 안나옴", "en": "Ran 50 games and the high/low seems to be about ±20% of the mean; does it ever go 2x? My average is ~3.2T and not one run went outside 2.7–3.7"},
+        {"kr": "마카롱 사라지고 고저점 차이 크게안남. 석류가 정전 받냐 못받냐 싸움인데. 치케나 실론 스증만 보면 고점 판독됨", "en": "With Macaron gone the high/low gap isn't big. It's down to whether Pomegranate receives Tiger Lily. Look at Cheesecake's or Tea Knight's skill amp and you can tell a high-roll"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85194",
+      "url": "https://m.dcinside.com/board/projectcc/85194",
+      "date": "2026-10-10",
+      "title_kr": "500배 1000배가 토벌셋 기준이였구나",
+      "title_en": "So 500배 / 1000배 are measured on the raid set",
+      "relevance": 2,
+      "summary_en": "The author had computed his 배 from arena-set power. The arena set has slightly more skill amp, he says, and the 500배/1000배 benchmarks are measured on the raid set. He asks whether 733배 with a 17초 wipe is good enough to stop. 언담 suggests going all the way to Lv.1 tuning to maximise the 배.",
+      "scores": [{"damage": "?", "power": "?", "ratio": "733배 (dies at 17초)", "deck": "?", "note": "stated"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [{"slot": "preset", "substats": "arena set has slightly higher skill amp ('스증 살짝높아서')", "context": "raid vs arena", "why": "The 배 benchmarks are measured on the raid set's team power"}],
+      "rng": [],
+      "mechanics": ["Community 배 benchmarks (500배, 1000배) use the raid preset's team power"],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "아레나셋이 더 스증 살짝높아서 그걸로 계산했네", "en": "The arena set has slightly more skill amp, so I'd calculated with that"},
+        {"kr": "그럼 17초 죽는데 733배면 스탑해도 되는거?", "en": "So if I die at 17 s with 733배, can I stop?"},
+        {"kr": "1렙작까지해서 배수 최대로 계산해보자", "en": "Go as far as the Lv.1 setup and calculate the max multiple"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84778",
+      "url": "https://m.dcinside.com/board/projectcc/84778",
+      "date": "2026-10-10",
+      "title_kr": "토벌 100배이상 치는건",
+      "title_en": "To hit 100배+ in Conquest",
+      "relevance": 1,
+      "summary_en": "A low-power player asks what it takes to reach 100배. Replies: about 800M power; one hit 10G at 100M power ('optimised setup matters'); another hit 55G at under 400M.",
+      "scores": [
+        {"damage": "10G", "power": "100M", "ratio": "~100배 (computed)", "deck": "?", "note": "commenter, stated"},
+        {"damage": "55G", "power": "<400M", "ratio": ">137배 (computed)", "deck": "?", "note": "commenter, stated"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "100M때도 10G쳤음 최적화세팅이 중요함", "en": "I hit 10G even at 100M; optimised setup is what matters"},
+        {"kr": "400M 안되는데 55G임 덱 잘짜봐", "en": "Under 400M and I'm at 55G; build your deck well"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84698",
+      "url": "https://m.dcinside.com/board/projectcc/84698",
+      "date": "2026-10-10",
+      "title_kr": "선배님들 전투력 5g인데 토벌전 자기투력 10배찍으라는데 50g지?",
+      "title_en": "My power is 5G; 'hit 10x your power' means 50G?",
+      "relevance": 0,
+      "summary_en": "Asks whether '10x your power' means 50G at 5G power; a commenter says that usually refers to total power. The image is a photo of grilled beef.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "보통그럼 총투 얘기지", "en": "Usually that means total power"}]
+    },
+    {
+      "source": "dc",
+      "id": "84527",
+      "url": "https://m.dcinside.com/board/projectcc/84527",
+      "date": "2026-10-09",
+      "title_kr": "토벌 덱투력 1G인 사람 점수 얼마나오냐",
+      "title_en": "What do people with 1G deck power score?",
+      "relevance": 1,
+      "summary_en": "A commenter reports 903G at 1.4G deck power.",
+      "scores": [{"damage": "903G", "power": "1.4G (deck)", "ratio": "~645배 (computed)", "deck": "?", "note": "commenter 앢옼, stated"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "덱투 1.4쥐  점수 903쥐", "en": "Deck power 1.4G, score 903G"}]
+    },
+    {
+      "source": "dc",
+      "id": "84513",
+      "url": "https://m.dcinside.com/board/projectcc/84513",
+      "date": "2026-10-09",
+      "title_kr": "토벌 3t 정도치면 길드in50 들갈수있나?",
+      "title_en": "Does ~3T get me into a top-50 guild?",
+      "relevance": 1,
+      "summary_en": "A guild-placement question. Reply: 3T gets you into a top-30 guild.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "In30 가능", "en": "Top 30 possible"}]
+    },
+    {
+      "source": "dc",
+      "id": "84389",
+      "url": "https://m.dcinside.com/board/projectcc/84389",
+      "date": "2026-10-09",
+      "title_kr": "토벌5t면 in10 길드가능?",
+      "title_en": "Does 5T get me into a top-10 guild?",
+      "relevance": 1,
+      "summary_en": "A guild-placement question. Replies say 5T easily gets you into a top-10 guild.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "그냥 가능도 아니고 쌉가능", "en": "Not just possible, totally possible"}]
+    },
+    {
+      "source": "dc",
+      "id": "84366",
+      "url": "https://m.dcinside.com/board/projectcc/84366",
+      "date": "2026-10-09",
+      "title_kr": "토벌 2T 정도면 어느 길드까지 갈 수 있음?",
+      "title_en": "What guild tier does ~2T get you?",
+      "relevance": 1,
+      "summary_en": "Guild-placement and scouting talk. 2T is said to get you into a top-25 guild. A top-40s guild raised its daily donation from 300 to 500.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "2T면 in25도 가능하다", "en": "With 2T even top 25 is possible"}]
+    },
+    {
+      "source": "dc",
+      "id": "85259",
+      "url": "https://m.dcinside.com/board/projectcc/85259",
+      "date": "2026-10-11",
+      "title_kr": "950M 토벌 400배 기록용",
+      "title_en": "950M power, 400배 (for the record)",
+      "relevance": 2,
+      "summary_en": "A low-power account shows 380G 954M at 949.08M team power (401배). The sub-dealers are Scorpion Lv.60 and Strawberry Crepe Lv.85, with fillers at Lv.50. ATK order is Milk, Seeker, Skating Queen, Tea Knight, Cheesecake, Scorpion, Strawberry Crepe. A newbie says copying this deck tripled his score; the author copied it from YouTube.",
+      "scores": [{"damage": "380G 954M", "power": "949.08M", "ratio": "400배 (title; computed 401.4)", "deck": "샤르도네덱 with 전갈+딸크", "note": "observed: lobby 85259-1, 개인 랭킹 32nd, deck tab 3"}],
+      "teams": [{
+        "name": "샤르도네덱, 전갈딸크 (85259-1, 949.08M)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "114", "stars": "?", "note": "row 1 slot 1; stars look gold (≤5?)"},
+          {"kr": "전갈", "en": "Scorpion", "level": "60", "stars": "?", "note": "row 1 slot 2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "114", "stars": "?", "note": "row 1 slot 3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "109", "stars": "?", "note": "row 1 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "114", "stars": "?", "note": "row 1 slot 5, leader banner"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "50", "stars": "?", "note": "row 1 slot 6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "114", "stars": "?", "note": "row 2 slot 1"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "50", "stars": "?", "note": "row 2 slot 2"},
+          {"kr": "석류", "en": "Pomegranate", "level": "114", "stars": "?", "note": "row 2 slot 3"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "50", "stars": "?", "note": "row 2 slot 4"},
+          {"kr": "딸크", "en": "Strawberry Crepe", "level": "85", "stars": "?", "note": "row 2 slot 5; pink fluffy hair"},
+          {"kr": "실론", "en": "Tea Knight", "level": "114", "stars": "?", "note": "row 2 slot 6; stars look gold"}
+        ],
+        "pets": ["핫도그 (18)", "와사비문어 (17)", "색동주머니 (10)"],
+        "atk_order": ["우유", "브시커", "피겨", "실론", "치케", "전갈", "딸크"],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["딸크 in place of 메소"],
+        "unorthodox": ["Fillers at Lv.50 (not Lv.1); 딸크 at Lv.85 and 전갈 at Lv.60 to sit 6th–7th in ATK"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "우브피실치전딸", "en": "(ATK order) Milk, Seeker, Skating Queen, Tea Knight, Cheesecake, Scorpion, Strawberry Crepe"},
+        {"kr": "아니 나 뉴빈데 뭔씨발 니덱 따라하니까 점수가 3배가올랐어", "en": "I'm a newbie, and copying your deck tripled my score"},
+        {"kr": "나도 유튜브보고 친건데", "en": "I copied it from YouTube too"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85191",
+      "url": "https://m.dcinside.com/board/projectcc/85191",
+      "date": "2026-10-10",
+      "title_kr": "드디어 토벌 1t 쳤어",
+      "title_en": "Finally hit 1T in Conquest",
+      "relevance": 2,
+      "summary_en": "The lobby shows 1T 164G at 2.74G (~425배) with Popcorn + Scorpion sub-dealers and every filler at Lv.30, the same layout as 84830. Asked why Lv.30, the author says he just copied decks. He plays manually and can't run many attempts.",
+      "scores": [{"damage": "1T 164G", "power": "2.74G", "ratio": "~425배 (computed; not stated)", "deck": "샤르도네덱 with 팝콘+전갈", "note": "observed: lobby 85191-1, 개인 랭킹 7th, deck tab 2; 85191-2.png is a sticker"}],
+      "teams": [{
+        "name": "샤르도네덱, 팝콘전갈 (85191-1, 2.74G)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "116", "stars": "?", "note": "row 1 slot 1"},
+          {"kr": "팝콘", "en": "Popcorn", "level": "30", "stars": "?", "note": "row 1 slot 2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "30", "stars": "?", "note": "row 1 slot 3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "116", "stars": "?", "note": "row 1 slot 4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "30", "stars": "?", "note": "row 1 slot 5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "30", "stars": "?", "note": "row 1 slot 6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "116", "stars": "?", "note": "row 2 slot 1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "30", "stars": "?", "note": "row 2 slot 2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "116", "stars": "?", "note": "row 2 slot 3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "116", "stars": "?", "note": "row 2 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "116", "stars": "?", "note": "row 2 slot 5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "116", "stars": "?", "note": "row 2 slot 6; stars look gold"}
+        ],
+        "pets": ["핫도그 (20)", "색동주머니 (17)", "와사비문어 (20)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": ["팝콘 in place of 메소"],
+        "unorthodox": ["All fillers and sub-dealers at Lv.30, copied from other decks"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "손크로라 많이 못돌리는데 냥 기분 굿", "en": "I play by hand ('hand macro') so I can't run many, but it feels good"},
+        {"kr": "왜 30렙으로 맞춤? / 그냥 덱들 따라한거", "en": "Why set them to Lv.30? / Just copied other decks"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "85087",
+      "url": "https://m.dcinside.com/board/projectcc/85087",
+      "date": "2026-10-10",
+      "title_kr": "토벌 2T 겨우 찍먹 성공",
+      "title_en": "Barely scraped 2T",
+      "relevance": 1,
+      "summary_en": "Barely reached 2T; the author calls Chardonnay a crazy cookie. Text only.",
+      "scores": [{"damage": "2T", "power": "?", "ratio": "?", "deck": "샤르도네덱", "note": "stated in the title"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "ㅅㅂ 샤르도네가 미친쿠키네", "en": "Damn, Chardonnay is a crazy cookie"}]
+    },
+    {
+      "source": "dc",
+      "id": "84739",
+      "url": "https://m.dcinside.com/board/projectcc/84739",
+      "date": "2026-10-10",
+      "title_kr": "뉴비 토벌 첫 1t 했어",
+      "title_en": "Newbie: first 1T in Conquest",
+      "relevance": 2,
+      "summary_en": "A newbie's lobby shows 1T 12G at 1.69G (~599배). It is the textbook Chardonnay deck with Scorpion + Melon Soda, every filler and sub-dealer at Lv.1 and the core at Lv.116.",
+      "scores": [{"damage": "1T 12G", "power": "1.69G", "ratio": "~599배 (computed)", "deck": "샤르도네덱 with 전갈+메소", "note": "observed: lobby 84739-1, 개인 랭킹 5th, deck tab 1; season ends in 2일 9시간 55분"}],
+      "teams": [{
+        "name": "샤르도네덱, 전갈메소 (84739-1, 1.69G)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "116", "stars": "9?", "note": "row 1 slot 1; last star looks gold"},
+          {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": "row 1 slot 2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "row 1 slot 3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "116", "stars": "?", "note": "row 1 slot 4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "9?", "note": "row 1 slot 5; last star looks gold"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "row 1 slot 6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "116", "stars": "?", "note": "row 2 slot 1"},
+          {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "?", "note": "row 2 slot 2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "116", "stars": "?", "note": "row 2 slot 3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "116", "stars": "?", "note": "row 2 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "116", "stars": "?", "note": "row 2 slot 5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "116", "stars": "?", "note": "row 2 slot 6; stars look gold only"}
+        ],
+        "pets": ["와사비문어 (20)", "색동주머니 (19)", "핫도그 (20)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["전갈, 피노, 정전, 닼초, 메소 all at Lv.1"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "샤르도네는 신이야", "en": "Chardonnay is a god"}]
+    },
+    {
+      "source": "dc",
+      "id": "84786",
+      "url": "https://m.dcinside.com/board/projectcc/84786",
+      "date": "2026-10-10",
+      "title_kr": "토벌 3판에 970인데 1t 되겠지?",
+      "title_en": "970 after 3 runs: will I make 1T?",
+      "relevance": 1,
+      "summary_en": "970G after 3 runs; the author wonders whether that is his ceiling. The image is a photo of a person, not a game screen.",
+      "scores": [{"damage": "970G", "power": "?", "ratio": "?", "deck": "?", "note": "stated; 84786-1.jpg is an unrelated portrait photo"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["970G after only 3 runs"],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "아 시발 저게 고점인가", "en": "Damn, is that my peak?"}]
+    },
+    {
+      "source": "dc",
+      "id": "84746",
+      "url": "https://m.dcinside.com/board/projectcc/84746",
+      "date": "2026-10-10",
+      "title_kr": "총투 13.4g 토벌 1T면 못한거겠지?",
+      "title_en": "1T at 13.4G total power: that's bad, right?",
+      "relevance": 2,
+      "summary_en": "The lobby shows 1T 20G at 2.08G team power (~490배) on a 13.4G total-power account, 2nd in the guild. It is the same Lv.1-filler Chardonnay deck with Scorpion + Melon Soda.",
+      "scores": [{"damage": "1T 20G", "power": "2.08G team; 13.4G total (stated)", "ratio": "~490배 (computed); ~76배 on total power", "deck": "샤르도네덱 with 전갈+메소", "note": "observed: lobby 84746-1, 개인 랭킹 2nd, deck tab 1; season ends in 2일 9시간 37분"}],
+      "teams": [{
+        "name": "샤르도네덱, 전갈메소 (84746-1, 2.08G)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "116", "stars": "?", "note": "row 1 slot 1"},
+          {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "?", "note": "row 1 slot 2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "row 1 slot 3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "116", "stars": "?", "note": "row 1 slot 4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "?", "note": "row 1 slot 5"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "row 1 slot 6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "116", "stars": "?", "note": "row 2 slot 1"},
+          {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "?", "note": "row 2 slot 2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "116", "stars": "?", "note": "row 2 slot 3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "116", "stars": "?", "note": "row 2 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "116", "stars": "?", "note": "row 2 slot 5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "116", "stars": "?", "note": "row 2 slot 6; gold stars, possibly fewer than 5"}
+        ],
+        "pets": ["와사비문어 (20)", "핫도그 (20)", "색동주머니 (14)"],
+        "atk_order": [],
+        "perks": "",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["전갈, 피노, 정전, 닼초, 메소 all at Lv.1"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "그래도 이번 토벌 2등이면 할만큼한거겠지요?", "en": "Still, 2nd this Conquest means I did enough, right?"}]
+    },
+    {
+      "source": "dc",
+      "id": "84764",
+      "url": "https://m.dcinside.com/board/projectcc/84764",
+      "date": "2026-10-10",
+      "title_kr": "토벌 한시간해서 250배쳤다",
+      "title_en": "An hour of Conquest for 250배",
+      "relevance": 2,
+      "summary_en": "250배 after an hour of tries; the author asks how people reach 400배. Cheesecake and Tiger Lily die at 30초 and Milk at about 25초. Commenters say nobody should die at 30초 and the cause is weak research HP and account depth. The author's level-down puts Pinot, Pomegranate, Tiger Lily, Dark Choco and Melon Soda at Lv.1 and Scorpion at ~Lv.40; his skill-haste setup is only 834M. Two commenters advise Herb in place of Tiger Lily if the team dies at 30초. The author objects that this loses the Volley.",
+      "scores": [{"damage": "?", "power": "834M ('스가세팅 834m', likely team power on the haste setup)", "ratio": "250배", "deck": "샤르도네덱? (Lv.1 피노/석류/정전/닼초/메소, 전갈 ~Lv.40)", "note": "stated only"}],
+      "teams": [{
+        "name": "? (stated levels only)",
+        "cookies": [
+          {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "?", "note": "stated"},
+          {"kr": "석류", "en": "Pomegranate", "level": "1", "stars": "?", "note": "stated"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "?", "note": "stated; dies around 30초"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "?", "note": "stated"},
+          {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "?", "note": "stated"},
+          {"kr": "전갈", "en": "Scorpion", "level": "~40", "stars": "?", "note": "stated"},
+          {"kr": "치즈", "en": "Cheesecake", "level": "? (levelled)", "stars": "?", "note": "'치즈' dies around 30초"},
+          {"kr": "우유", "en": "Milk", "level": "? (levelled)", "stars": "?", "note": "dies around 25초"},
+          {"kr": "실론", "en": "Tea Knight", "level": "? (levelled)", "stars": "low ('실론별이 낮기도하고')", "note": "stated"}
+        ],
+        "pets": [], "atk_order": [], "perks": "", "formation": "",
+        "substitutions": ["Suggested by commenters: 허브 (Herb) in place of 정전 when the team dies at 30초"],
+        "unorthodox": ["석류 at Lv.1 (stated)"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [
+        "Nobody should die at the 30초 mark (commenter 갓갓.); deaths there point to weak research HP and account depth (연구체력, 내실)",
+        "Herb in place of Tiger Lily is advised when the team dies at 30초; the trade-off is losing Tiger Lily's Volley (다발)"
+      ],
+      "disagreements": ["Commenters (incl. 규진): swap Tiger Lily for Herb if dying at 30초; author: losing the Volley would make it weaker (to be tested)"],
+      "quotes": [
+        {"kr": "어케 400배치는거냐 매크로 써야하나", "en": "How do people hit 400배? Do I need a macro?"},
+        {"kr": "30초에 누구죽어? / 치즈랑 정전정도? 25초쯤에 우유죽고", "en": "Who dies at 30 s? / Cheesecake and Tiger Lily, roughly? Milk dies around 25 s"},
+        {"kr": "30초엔 아무도죽으면안돼 / 연구체력 내실이런게 부족한거", "en": "Nobody should die at 30 s / You're short on research HP and account depth"},
+        {"kr": "후발대라 스가세팅 834m밖에 안나옴", "en": "I'm a late starter, so my skill-haste setup is only 834M"},
+        {"kr": "피노석류정전닼초메소 1렙하고 나머지 다 레벨올려서 하는데 / 전갈도 40정도만 레벨찍고 함", "en": "Pinot, Pomegranate, Tiger Lily, Dark Choco, Melon Soda at Lv.1, the rest levelled / Scorpion only to about Lv.40"},
+        {"kr": "30초에 죽으면 정전 말고 허브 ㄱㄱ", "en": "If you die at 30 s, use Herb instead of Tiger Lily"},
+        {"kr": "그럼 다발 빠져서 약해질거같은데", "en": "But then I lose the Volley and it'd get weaker"},
+        {"kr": "그러면 정전대신 허브들어가면 허브 레벨빼야함? 공순서 어케해야하지", "en": "If Herb goes in for Tiger Lily, do I level Herb down? How should the ATK order go?"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84757",
+      "url": "https://m.dcinside.com/board/projectcc/84757",
+      "date": "2026-10-10",
+      "title_kr": "토벌 팀투 1.3G 평딜 430쯤 나오는데",
+      "title_en": "1.3G team power, averaging about 430",
+      "relevance": 1,
+      "summary_en": "At 1.3G team power the author averages about 430 (likely 배) and expects a higher peak. His Seeker is only 4★.",
+      "scores": [{"damage": "?", "power": "1.3G", "ratio": "~430 average (unit not stated, likely 배)", "deck": "? (브시커 4★)", "note": "stated"}],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "이거 분명 훨씬 높은 고점있을텐데 언제나오려나", "en": "There must be a much higher peak; when will it come?"},
+        {"kr": "시커 4성이라 그래도 힘든가", "en": "Maybe it's hard anyway because Seeker is 4★"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84759",
+      "url": "https://m.dcinside.com/board/projectcc/84759",
+      "date": "2026-10-10",
+      "title_kr": "토벌딜이 투력에 비해 너무 낮게 나오네",
+      "title_en": "My Conquest damage is too low for my power",
+      "relevance": 0,
+      "summary_en": "A complaint that damage is low relative to power, with no numbers. A commenter offers to diagnose from a setup screenshot.",
+      "scores": [],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [{"kr": "장비슈가룬은 다 캡처하는게 더 귀찮을거같은데 글로 써도 괜찮음", "en": "Capturing all the gear and sugar runes is a hassle; writing them out is fine"}]
+    },
+    {
+      "source": "dc",
+      "id": "84700",
+      "url": "https://m.dcinside.com/board/projectcc/84700",
+      "date": "2026-10-10",
+      "title_kr": "토벌 브시커4성 700g 나오는데",
+      "title_en": "700G with a 4★ Brightseeker",
+      "relevance": 1,
+      "summary_en": "700G with a 4★ Brightseeker; the author asks how much 5★ would add. A commenter with a 5★ Seeker gets only 500G. The image is a facepalm meme.",
+      "scores": [
+        {"damage": "700G", "power": "?", "ratio": "?", "deck": "? (브시커 4★)", "note": "stated; 84700-1.jpg is a meme photo"},
+        {"damage": "500G", "power": "?", "ratio": "?", "deck": "? (브시커 5★)", "note": "commenter, stated"}
+      ],
+      "teams": [],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [],
+      "quotes": [
+        {"kr": "5성달면 얼만큼오름??", "en": "How much does it go up at 5★?"},
+        {"kr": "나 5성 500g따리인데 어캐했노 ㅋㅋㅋ", "en": "I'm 5★ and only at 500G; how did you do it lol"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84607",
+      "url": "https://m.dcinside.com/board/projectcc/84607",
+      "date": "2026-10-09",
+      "title_kr": "토벌 기록용",
+      "title_en": "Conquest, for the record",
+      "relevance": 2,
+      "summary_en": "A phone photo of the lobby shows 2T 831G at 4.38G (~646배): the Chardonnay deck with Scorpion Lv.40 and Melon Soda Lv.1, Pinot and Dark Choco at Lv.40, Tiger Lily at Lv.60. A commenter asks whether Skating Queen out-ATKs Seeker. The answer is 'slightly lower', but the first three straws going Milk-Seeker-Chardonnay versus Milk-Skating Queen-Chardonnay seems to matter. The author decides to lower Skating Queen and retry.",
+      "scores": [{"damage": "2T 831G", "power": "4.38G", "ratio": "~646배 (computed)", "deck": "샤르도네덱 with 전갈+메소", "note": "observed: photo of the lobby (84607-1), 개인 랭킹 45th, deck tab 2; season ends in 2일 14시간 1분"}],
+      "teams": [{
+        "name": "샤르도네덱, 전갈메소 (84607-1, 4.38G)",
+        "cookies": [
+          {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "9?", "note": "row 1 slot 1; last star looks gold"},
+          {"kr": "전갈", "en": "Scorpion", "level": "40", "stars": "?", "note": "row 1 slot 2"},
+          {"kr": "피노", "en": "Pinot Noir", "level": "40", "stars": "?", "note": "row 1 slot 3"},
+          {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "?", "note": "row 1 slot 4"},
+          {"kr": "정전", "en": "Tiger Lily", "level": "60", "stars": "9?", "note": "row 1 slot 5; last star looks gold"},
+          {"kr": "닼초", "en": "Dark Choco", "level": "40", "stars": "?", "note": "row 1 slot 6"},
+          {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "?", "note": "row 2 slot 1"},
+          {"kr": "메소", "en": "Melon Soda", "level": "1", "stars": "?", "note": "row 2 slot 2"},
+          {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "?", "note": "row 2 slot 3"},
+          {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "?", "note": "row 2 slot 4"},
+          {"kr": "우유", "en": "Milk", "level": "118", "stars": "?", "note": "row 2 slot 5, leader banner"},
+          {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "5?", "note": "row 2 slot 6; gold stars"}
+        ],
+        "pets": ["와사비문어 (20)", "핫도그 (20)", "색동주머니 (17)"],
+        "atk_order": ["우유", "브시커", "피겨 (slightly below 브시커)", "..."],
+        "perks": "",
+        "formation": "",
+        "substitutions": [],
+        "unorthodox": ["Fillers at Lv.40 (피노, 닼초, 전갈) and Lv.60 (정전), 메소 at Lv.1"]
+      }],
+      "sugar_runes": [],
+      "gear": [],
+      "rng": ["Which three cookies get Pomegranate's first 3 straws (Milk-Seeker-Chardonnay vs Milk-Skating Queen-Chardonnay) may change the result (commenter 연어사)"],
+      "mechanics": ["Pomegranate's first 3 straws go to the top of the ATK order, so Seeker vs Skating Queen in 2nd–3rd ATK decides who gets them"],
+      "disagreements": ["Author: being in the top 5 is enough; 연어사: the first-3-straw split (Seeker vs Skating Queen) seems to matter"],
+      "quotes": [
+        {"kr": "피겨가 시커안땀?", "en": "Doesn't Skating Queen out-ATK Seeker?"},
+        {"kr": "살짝낮음 어차피 5순위에만 들면 되는거아닌가", "en": "Slightly lower. Isn't it enough to be in the top 5 anyway?"},
+        {"kr": "처음 3빨대 우브샤 받냐 우피샤 받냐 차이 있는거같아서 나는", "en": "I think it matters whether the first 3 straws go to Milk-Seeker-Chardonnay or Milk-Skating Queen-Chardonnay"},
+        {"kr": "그렇군 피겨쫌내리고 리트해야겠다", "en": "I see, I'll lower Skating Queen a bit and retry"}
+      ]
+    }
+  ],
+  "glossary": [
+    {"kr": "김연아", "en": "Skating Queen (nickname for 피겨, after figure skater Yuna Kim)", "kind": "cookie", "confidence": "high", "evidence": "85167 lists '김연아 10성' in 피겨's place within a full twelve-cookie Chardonnay lineup"},
+    {"kr": "팝콘", "en": "Popcorn", "kind": "cookie", "confidence": "high", "evidence": "84830-2 sugar-rune screen titled '팝콘맛 쿠키'; light cookie with star-spangled glasses in 84830-1, 84918-1, 85191-1"},
+    {"kr": "딸크", "en": "Strawberry Crepe", "kind": "cookie", "confidence": "high", "evidence": "84918 '팝콘딸크' with a light, pink-haired, shield-icon cookie; 85259 ATK order ends '딸' with the same art (Lv.85)"},
+    {"kr": "마카롱", "en": "Macaron", "kind": "cookie", "confidence": "high", "evidence": "84663-3: grass element, pink hair under a red/white hat, Lv.118, in the author's 'Macaron-Cherry deck'"},
+    {"kr": "체리", "en": "Cherry Cola", "kind": "cookie", "confidence": "low", "evidence": "84663-3: the only cookie left to be Cherry: fire, round orange face with red/white, blue frame, Lv.80. English name from the round brief"},
+    {"kr": "멜소", "en": "Melon Soda (variant spelling of 메소)", "kind": "cookie", "confidence": "high", "evidence": "85167 lineup"},
+    {"kr": "치즈", "en": "Cheesecake (shorthand)", "kind": "cookie", "confidence": "low", "evidence": "84764 '치즈랑 정전' dying at 30초; Cheesecake is the only cheese cookie in the deck"},
+    {"kr": "허브", "en": "Herb", "kind": "cookie", "confidence": "low", "evidence": "84764: suggested replacement for Tiger Lily (정전) when the team dies at 30초"},
+    {"kr": "빨대 (6빨대)", "en": "straw: Pomegranate's beam; '6빨대' = 6 beams (3 base + Volley 3)", "kind": "term", "confidence": "high", "evidence": "84337 '정전 스가로 석류 6빨대 유지'; 84607 '처음 3빨대'"},
+    {"kr": "스킬가속 증가 (스가)", "en": "skill haste; an SR rune line gives +2.00 (flat)", "kind": "stat", "confidence": "high", "evidence": "84830-2 rune screen"},
+    {"kr": "깡공", "en": "flat ATK", "kind": "stat", "confidence": "high", "evidence": "84918 '깡공 4스가'"},
+    {"kr": "토벌셋 / 아레나셋 (아레나프리셋)", "en": "raid gear preset / arena gear preset", "kind": "term", "confidence": "high", "evidence": "85159 + 85172: 6.4G team power on the arena set vs 5.6G on the raid set; 85194: 배 benchmarks use the raid set"},
+    {"kr": "뻥투장비", "en": "power-inflating gear (raises displayed power, lowers 배)", "kind": "term", "confidence": "high", "evidence": "85179"},
+    {"kr": "렙따 / 렙다 / 1렙작", "en": "deliberate level-down of fillers (to Lv.1 or similar)", "kind": "term", "confidence": "high", "evidence": "84830, 85200, 85194"},
+    {"kr": "정배", "en": "the standard / the norm ('정배 룬' = standard runes; '정배가 5t 이상' = the norm is 5T+)", "kind": "term", "confidence": "high", "evidence": "84337, 85172, 84830"},
+    {"kr": "돌파력", "en": "breakthrough (account stat raised by pushing stages)", "kind": "term", "confidence": "low", "evidence": "84663 held equal across decks; 85200 'raise by pushing stages'"},
+    {"kr": "연구소 체력 / 연구소 체증 / 연구체력", "en": "lab (research) HP / HP% research", "kind": "term", "confidence": "high", "evidence": "85200, 84764"},
+    {"kr": "내실", "en": "account depth (overall investment)", "kind": "term", "confidence": "low", "evidence": "84764"},
+    {"kr": "약점", "en": "weakness; the Piñata lobby shows a Dark (moon) boss with weakness Light (sun)", "kind": "term", "confidence": "high", "evidence": "lobby screenshots 84830-1, 84337-1, 84918-1, 84739-1, 84746-1, 84607-1, 85191-1"},
+    {"kr": "20강", "en": "+20 enhancement, counted per weapon type (검 sword, 활 bow, 책 book); what is enhanced isn't stated", "kind": "term", "confidence": "low", "evidence": "84393 comments"},
+    {"kr": "섭딜 / 서브딜러", "en": "sub-dealer", "kind": "term", "confidence": "high", "evidence": "84970, 85163"},
+    {"kr": "손크로", "en": "playing by hand ('hand macro'), no macro", "kind": "term", "confidence": "low", "evidence": "85191"},
+    {"kr": "방수특", "en": "?", "kind": "term", "confidence": "low", "evidence": "84918 comment '방수특낌?' answered '20 7'; meaning unclear"}
+  ]
+}

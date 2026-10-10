@@ -115,3 +115,47 @@ Round 3 queries:
 - Cookie Run Crumble Chardonnay Cookie tier list build sugar runes
 
 Synthesis: the allthings.how Piñata guide again and July-era tier lists. The web rounds end here; the round's findings come from the DC gallery, the official cafe, YouTube and crumb.gg captures.
+
+## Round 2026-10-10
+
+Window: 2026-10-09 (the last refresh heading) to 2026-10-10; the gallery posts read run from 10-09 14:41 to 10-11 00:23 KST, after the last round's newest post (dc:84303). Captures in `evidence/r2026-10-10/`.
+
+### Baseline
+
+The patch data first: crumb.gg's `data/patches.json` (`15-crumbgg/api/data-patches.json`) is byte-identical to the 10-09 capture, newest 1.5.002. The official patch board (`14-global/list-naver-patch-notes.tsv`) still ends at nv:50417, and the notices board (`14-global/list-naver-notices.tsv`) has nothing after nv:51057 (10-08): no hotfix. Then every other saved search once, each into a file named for its id: the DC listings in `list-<id>.tsv`, the Naver guide board in `list-naver-guide-board.tsv`, crumb.gg in `15-crumbgg/api/`, YouTube in `14-global/ytq/`, the web pages in `13-sites/` and `14-global/`. `토벌`, `샤르도네` and `샤르` ran six pages, the broad single-word terms four, so every listing's last page predates 10-09 14:35 KST. crumb.gg's `/pub/leaderboard` answered 404 again, and its rankings page now offers only the conquest, Rumble Arena and Rift boards: no power board.
+
+Synthesis:
+- Season 7's live board on 10-11 00:41 KST: #1 Arsen at 13T 522G (not in the top 100 on 10-09), #10 at 10T 219G, #50 at 8T 101G, #100 at 6T 660G. The 79 players on both this board and Season 6's final sit at 1.69–3.31× their Season 6 scores, median 2.48× (`15-crumbgg/11-players.tsv` joined with `evidence/r2026-10-07/15-crumbgg/11-players.tsv` by player id).
+- crumb.gg's Guild Conquest page differs from 10-09 only in its countdowns: Season 8 opens 10-15 16:00 KST, boss not announced.
+- The Naver guide board has two new conquest guides, both Chardonnay decks with Strawberry Crepe: 신비한쿠키사전's 3T 384G at 5.06G (nv:51882) and 서신우's 3.1T (nv:51817, the video W6jC87xR1fE). YouTube adds 누리머's 3T 416G with Crepe (Up48r9fwOM8).
+- The gallery's ≥2T posts are all Chardonnay decks: 8T 069G on a result screen with Melon Soda and Strawberry Crepe as sub-dealers (dc:84913), 7T 557G with Melon Soda in Cherry's slot (dc:84393), 5T 811G at 5.72G with the lineup on screen (dc:84772), 4T 668G at 4.4G with a 50-run Macaron-vs-Chardonnay test (dc:84663).
+- crumblehub's community conquest list adds one uncited deck ("use Chardonnay instead of Macaron", 10-09); its meta decks, crumbleguides and cookieruncrumbles are unchanged apart from a redeploy's file names.
+
+### Discovery
+
+From the baseline's new names and the brief's seeds, DC listings `list-disc-*.tsv` for 메소딸크, 딸기크레페, 전갈, 마카롱, 1100배, 1200배, 1300배, 1400배, 6T, 7T, 9T, 10T, 샤르덱, 샤르도네덱, 신덱, 개사기덱, 샤르 9성, 샤르 5성, 정전 다발, 3다발, 120레벨, 만렙, 200렙, 올생존, 0초, the Season 7 top players and guilds (저주11단, 젱젱, 바삭한반장, 딘딘, 리리, 목사, 군무원, 방랑자; 환상, 스타, 노을, 타미 and Arsen are saved searches), the guide authors 서신우 and 누리머, and the authors of the round's 5T posts (러유, 븜구미사랑단). YouTube watch pages for every new conquest video in the saved searches; the two Korean guides downloaded and cut into frames.
+
+Synthesis: no Season 7 top-10 player posted a team, and none of their names returns a conquest post; a poster asks the top ranks to unmask (dc:84555). The new lead is Lv.119: a lobby at 8.04G shows Lv.119 cores and a 6T 351G personal best with Strawberry Crepe and levelled fillers (dc:84701), and a reply puts survival to 0 s at Lv.119 and about 19M HP (dc:85200). The Scorpion question settles toward crit: a decompile places the crit roll in the client's native library and has poison ticks pass through it (dc:84560, dc:84579). No post names a deck without Chardonnay, Pomegranate or Tiger Lily at 2T+, and `120레벨`, `200렙`, `샤르덱`, `개사기덱` and the top players' names came back empty.
+
+### Web rounds (iterative-research)
+
+Round 1 queries:
+- 쿠키런 크럼블 길드 토벌전 샤르도네 덱 시즌7
+- Cookie Run Crumble guild conquest Chardonnay team trillion October 2026
+- 크럼블 토벌전 딸기크레페 메론소다 샤르도네 고득점
+
+Synthesis: launch-era articles (Inven Global, allthings.how, Bleeding Cool) and a Cookie Run: Kingdom deck blog; the Korean food words return Crumbl bakery pages. Nothing on Chardonnay or Season 7.
+
+Round 2 queries:
+- "Chardonnay Cookie" CookieRun Crumble guild raid lineup Strawberry Crepe
+- crumb.gg guild conquest season 7 leaderboard Arsen
+- 쿠키런 크럼블 샤르도네맛 쿠키 토벌 8T
+
+Synthesis: the one new result, `allthings.how/?p=178870`, redirects to a Cherry Cola PvE teams guide that predates Chardonnay; not used. crumb.gg doesn't surface; an FFXIV "Arsen" does.
+
+Round 3 queries:
+- allthings.how CookieRun Crumble Strawberry Crepe Cookie guild conquest
+- CookieRun Crumble Chardonnay Cookie skill Volley Synergy Push RES build
+- 쿠키런 크럼블 120레벨 계정레벨 200 토벌전
+
+Synthesis: Pocket Gamer cookie guides and the fan wiki's synergy page, all pre-Chardonnay; Korean launch news. As in every round, the engines index nothing at T-tier. The round's findings come from the DC gallery, the official cafe, YouTube and crumb.gg captures.

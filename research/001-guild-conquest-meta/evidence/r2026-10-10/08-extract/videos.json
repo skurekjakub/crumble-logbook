@@ -1,0 +1,212 @@
+{
+  "batch": "r2026-10-10-videos",
+  "identification_key": "Read in the main session from frames cut with ffmpeg from yt-dlp downloads (evidence/r2026-10-10/14-global/frames/<videoId>-<mmss>.jpg) and from the watch digests (evidence/r2026-10-10/14-global/yt/yt-<videoId>.txt). Cookies named by element icon + art as in evidence/r2026-10-09/08-extract/dc-2.json and dc-3.json: light shooter brown hair purple eye = 브시커; fire shooter red hair = 전갈; light gold = 치케; water yellow face purple headphones = 피겨; light nurse with leader banner = 우유; dark black/red hair = 닼초; grass pale lilac/green hair = 샤르도네; dark grey hair monocle = 피노; dark red curls = 석류; grass teal hair orange flower = 정전; light pink fluffy hair, shield icon = 딸크 (the subtitles name 딸크); light white-bearded knight = 실론. Star counts are not transcribed: the frames are too small to separate pink from gold on every card. Only the two Korean conquest guides were downloaded; the other conquest videos in the round's searches are summarised from their watch digests alone.",
+  "posts": [
+    {
+      "source": "other",
+      "id": "yt-W6jC87xR1fE",
+      "url": "https://www.youtube.com/watch?v=W6jC87xR1fE",
+      "date": "2026-10-10",
+      "title_kr": "[쿠키런크럼블] 길드 토벌전 3.1T 공략 (딸크)",
+      "title_en": "서신우's Guild Conquest 3.1T guide (Strawberry Crepe)",
+      "relevance": 3,
+      "summary_en": "서신우 runs the Chardonnay deck with Strawberry Crepe (Lv.83) in Melon Soda's slot and Scorpion at Lv.64, at 4.54G team power. His run ends at 3,136,690,367,977 (3T 136G, ≈691배 derived). Pinot and Tiger Lily sit at Lv.1, Dark Choco at Lv.50, the six recipients and Pomegranate at Lv.118. The subtitle gives the ATK order 우유, 시커, 피겨, 실론, 치즈, 전갈, 딸크. Chardonnay's rune page shows four open lines, all skill amp (3.20–4.70%), with the ★8 and ★10 lines still locked.",
+      "scores": [
+        {"damage": "3,136,690,367,977 (3T 136G)", "power": "4.54G", "ratio": "≈691배 (derived)", "deck": "샤르도네덱, 딸크 in 메소's slot", "note": "Battle end at timer 0.000 on nv-51817-2.png (the cafe post wrapping the video); lobby power on W6jC87xR1fE-00m10.0s.jpg. Observed."}
+      ],
+      "teams": [
+        {
+          "name": "3.1T 샤르도네덱 (딸크)",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "", "note": "row 1"},
+            {"kr": "전갈", "en": "Scorpion", "level": "64", "stars": "", "note": "row 1"},
+            {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "", "note": "row 1"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "", "note": "row 1"},
+            {"kr": "우유", "en": "Milk", "level": "118", "stars": "", "note": "row 1, leader banner"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "50", "stars": "", "note": "row 1"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "", "note": "row 2; four open rune lines, ★8 lines locked"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "", "note": "row 2"},
+            {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "", "note": "row 2"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "", "note": "row 2"},
+            {"kr": "딸크", "en": "Strawberry Crepe", "level": "83", "stars": "", "note": "row 2"},
+            {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "", "note": "row 2"}
+          ],
+          "pets": ["와사비문어 ★20", "핫도그 ★20", "색동주머니 ★18"],
+          "atk_order": ["우유", "브시커", "피겨", "실론", "치케", "전갈", "딸크"],
+          "perks": "초고속 승진 + 열정페이 on Milk (W6jC87xR1fE-00m38.0s.jpg)",
+          "formation": "",
+          "substitutions": ["딸크 in place of 메소"],
+          "unorthodox": ["Pomegranate at Lv.118, not Lv.1"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "샤르도네", "stats": "스증 SR 3.50%, SSR 4.70%, SR 3.20%, SR 3.50% (four open lines, all skill amp)", "why": "W6jC87xR1fE-01m06.0s.jpg"}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "A commenter (@Mon9Rin9) switched Melon Soda to 딸크 after this video and lost about 200G on average; another (@choi-c4k) logged an hour per ATK order and found 우브피실치 best, at 1T 200G on 1.8G."
+      ],
+      "quotes": [
+        {"kr": "메론 쓰다가 이거 보고 딸크로 바꿔봤는데, 평균 점수가 200G 정도 깎이면 그냥 메론을 쓰는게 맞을까요?", "en": "I was using Melon Soda, switched to Strawberry Crepe after this, and my average dropped about 200G; should I just use Melon Soda?"},
+        {"kr": "우유, 시커, 피겨, 실론, 치즈, 전갈, 딸크", "en": "(ATK order subtitle) Milk, Brightseeker, Skating Queen, Tea Knight, Cheesecake, Scorpion, Strawberry Crepe"}
+      ]
+    },
+    {
+      "source": "other",
+      "id": "yt-Up48r9fwOM8",
+      "url": "https://www.youtube.com/watch?v=Up48r9fwOM8",
+      "date": "2026-10-09",
+      "title_kr": "[쿠키런 크럼블] 길드토벌전 3T 416G 고득점 덱 공략 ft.샤르도네맛 쿠키",
+      "title_en": "누리머's Guild Conquest 3T 416G high-score deck guide with Chardonnay",
+      "relevance": 3,
+      "summary_en": "누리머 first levels every filler high (Scorpion Lv.83, Dark Choco Lv.88, Pinot Lv.90, Tiger Lily Lv.100, Strawberry Crepe Lv.87), then shows the final lineup at 3.87G with Scorpion, Dark Choco, Pinot, Tiger Lily and Strawberry Crepe all at Lv.1 and the rest at Lv.118: no Cherry, no Melon Soda. At 9.467 s left the run is at 3,219,487,807,733 with the core alive; the title gives 3T 416G (≈883배 derived). His pinned comment gives every cookie's runes.",
+      "scores": [
+        {"damage": "3T 416G", "power": "3.87G", "ratio": "≈883배 (derived)", "deck": "샤르도네덱, 전갈 + 딸크, every filler Lv.1", "note": "Title figure (stated); lobby power on Up48r9fwOM8-01m36.0s.jpg; in battle 3,219,487,807,733 at 9.467 s left on Up48r9fwOM8-01m08.0s.jpg (observed)."}
+      ],
+      "teams": [
+        {
+          "name": "3T 416G 샤르도네덱 (전갈 + 딸크)",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "118", "stars": "", "note": ""},
+            {"kr": "전갈", "en": "Scorpion", "level": "1", "stars": "", "note": "Lv.83 in the first lineup shown"},
+            {"kr": "치케", "en": "Cheesecake", "level": "118", "stars": "", "note": ""},
+            {"kr": "피겨", "en": "Skating Queen", "level": "118", "stars": "", "note": ""},
+            {"kr": "우유", "en": "Milk", "level": "118", "stars": "", "note": "leader"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "1", "stars": "", "note": "Lv.88 in the first lineup"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "118", "stars": "", "note": ""},
+            {"kr": "피노", "en": "Pinot Noir", "level": "1", "stars": "", "note": "Lv.90 in the first lineup"},
+            {"kr": "석류", "en": "Pomegranate", "level": "118", "stars": "", "note": ""},
+            {"kr": "정전", "en": "Tiger Lily", "level": "1", "stars": "", "note": "Lv.100 in the first lineup"},
+            {"kr": "딸크", "en": "Strawberry Crepe", "level": "1", "stars": "", "note": "Lv.87 in the first lineup"},
+            {"kr": "실론", "en": "Tea Knight", "level": "118", "stars": "", "note": ""}
+          ],
+          "pets": ["와사비문어 ★20", "핫도그 ★20", "색동주머니 ★17"],
+          "atk_order": ["우유"],
+          "perks": "초고속 승진 + 열정페이 on Milk, 'ATK #1' (Up48r9fwOM8-01m36.0s.jpg)",
+          "formation": "",
+          "substitutions": ["딸크 and 전갈 as the sub-dealers; no 메소"],
+          "unorthodox": ["Scorpion at Lv.1, where his earlier video had her levelled (a commenter asks why)"]
+        }
+      ],
+      "sugar_runes": [
+        {"cookie": "브시커", "stats": "스증 > 치확, 치피 (스가 from 8★)", "why": "pinned comment"},
+        {"cookie": "샤르도네", "stats": "스증", "why": "pinned comment"},
+        {"cookie": "전갈", "stats": "스증 > 치확, 치피", "why": "pinned comment"},
+        {"cookie": "피노", "stats": "피감, 체력 // 집중확률 (for stages too)", "why": "pinned comment"},
+        {"cookie": "치케", "stats": "스증", "why": "pinned comment"},
+        {"cookie": "석류", "stats": "스증", "why": "pinned comment"},
+        {"cookie": "피겨", "stats": "스증", "why": "pinned comment"},
+        {"cookie": "정전", "stats": "스가", "why": "pinned comment"},
+        {"cookie": "우유", "stats": "공격력", "why": "pinned comment"},
+        {"cookie": "딸크", "stats": "스증, 스가", "why": "pinned comment"},
+        {"cookie": "닼초", "stats": "스가 // 집중확률 (for stages too)", "why": "pinned comment"},
+        {"cookie": "실론", "stats": "스증", "why": "pinned comment"}
+      ],
+      "gear": [],
+      "rng": [],
+      "mechanics": [],
+      "disagreements": [
+        "Several commenters say Milk dies at 17 s with this lineup (one at about 22G total power)."
+      ],
+      "quotes": [
+        {"kr": "각각 레벨을 최대한 올렸는데요", "en": "(subtitle, over the first lineup) I raised each one's level as far as it goes"},
+        {"kr": "결국 이게 정답인듯, 다른 유투버분도 이 덱으로 바꿔서 공략올림", "en": "(comment) This seems to be the answer in the end; another YouTuber switched to this deck and posted a guide too"},
+        {"kr": "17초에 왜 우유가 죽을까요.. 총투 22G 정도 되는데..", "en": "(comment) Why does Milk die at 17 s.. my total power is about 22G.."}
+      ]
+    },
+    {
+      "source": "other",
+      "id": "yt-X_UKcXBUb4A",
+      "url": "https://www.youtube.com/watch?v=X_UKcXBUb4A",
+      "date": "2026-10-09",
+      "title_kr": "薑餅人放置大戰爭｜公會戰更新拚出2T880G傷害😱!?夏多內餅乾版本✨牛奶&起司Buff機制說明📉Guild Conquest Stuffed Pinata🔥",
+      "title_en": "PonPonLin (TW client): Guild Conquest 2T 880G, Chardonnay version",
+      "relevance": 2,
+      "summary_en": "Watch digest only: a TW-client Chardonnay-version conquest team at 2T 880G (title), with chapters for the lineup, gear and repeated runs. Not downloaded.",
+      "scores": [{"damage": "2T 880G", "power": "", "ratio": "", "deck": "Chardonnay version (title)", "note": "Title only (stated)."}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "公會戰更新拚出2T880G傷害!?夏多內餅乾版本", "en": "Guild war update: 2T 880G damage, Chardonnay version"}]
+    },
+    {
+      "source": "other",
+      "id": "yt-s_ep8PG0qDI",
+      "url": "https://www.youtube.com/watch?v=s_ep8PG0qDI",
+      "date": "2026-10-09",
+      "title_kr": "💩薑餅人放置大戰爭💰 | 公會討伐戰（20261009)詳見說明",
+      "title_en": "低能餅乾 (TW client): Guild Conquest run, 2026-10-09",
+      "relevance": 1,
+      "summary_en": "Watch digest only: the description gives perks 熱情代替薪水 + 超高速升遷, ATK order Milk › Brightseeker › Skating Queen › Tea Knight › Scorpion › Melon Soda, and Pomegranate and Chardonnay at max level. No score in the digest.",
+      "scores": [],
+      "teams": [{"name": "TW Chardonnay deck", "cookies": [], "pets": [], "atk_order": ["牛奶", "探子", "溜冰", "錫蘭", "蠍子", "哈蜜瓜"], "perks": "熱情代替薪水 + 超高速升遷", "formation": "", "substitutions": [], "unorthodox": ["石榴 and 夏多內 at max level"]}],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [],
+      "quotes": [{"kr": "攻擊力順序 牛奶》探子》溜冰》錫蘭》蠍子》哈蜜瓜 *石榴 夏多內 滿級", "en": "ATK order Milk › Brightseeker › Skating Queen › Tea Knight › Scorpion › Melon Soda; Pomegranate and Chardonnay max level"}]
+    },
+    {
+      "source": "other",
+      "id": "yt-jUNOH5sdgUQ",
+      "url": "https://www.youtube.com/watch?v=jUNOH5sdgUQ",
+      "date": "2026-10-09",
+      "title_kr": "Cookie Run : Crumble | Guild Conquest 1.5T (09/10/2026)",
+      "title_en": "Cortazar Reus: Guild Conquest 1.5T",
+      "relevance": 1,
+      "summary_en": "Watch digest only: a 1.5T run (title); the description says to use the right gear preset in the lineup settings. No lineup in the digest.",
+      "scores": [{"damage": "1.5T", "power": "", "ratio": "", "deck": "", "note": "Title only (stated)."}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "yt-IzzNbNgTZ5A",
+      "url": "https://www.youtube.com/watch?v=IzzNbNgTZ5A",
+      "date": "2026-10-09",
+      "title_kr": "SHE'S BROKEN! Best New Support Cookie Chardonnay Cookie Review & Guild Conquest 352G+",
+      "title_en": "Chateaw: Chardonnay review and a 352G conquest run",
+      "relevance": 1,
+      "summary_en": "Watch digest only: a Chardonnay review with a 352G+ conquest run (title). Low band; not downloaded.",
+      "scores": [{"damage": "352G+", "power": "", "ratio": "", "deck": "with Chardonnay", "note": "Title only (stated)."}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "yt-dQATpRLOylY",
+      "url": "https://www.youtube.com/watch?v=dQATpRLOylY",
+      "date": "2026-10-10",
+      "title_kr": "Cookie Run Crumble: Guild Conquest Lineup! 528 BILLION Damage! 5 Stars SSR Chardonnay Cookie!",
+      "title_en": "EggZaMonkey EX: 528G with a 5★ Chardonnay",
+      "relevance": 1,
+      "summary_en": "Watch digest only: a 528G conquest lineup with a 5★ Chardonnay (title). Low band.",
+      "scores": [{"damage": "528G", "power": "", "ratio": "", "deck": "with 5★ Chardonnay", "note": "Title only (stated)."}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "yt-7b8Fg1xGv1A",
+      "url": "https://www.youtube.com/watch?v=7b8Fg1xGv1A",
+      "date": "2026-10-09",
+      "title_kr": "Cookie Run Crumble: NEW Guild Conquest Team Lineup! 277 BILLION Damage! (7 October Edition!)",
+      "title_en": "EggZaMonkey EX: 277G lineup (7 October edition)",
+      "relevance": 0,
+      "summary_en": "Watch digest only: a 277G lineup from before Chardonnay. Off the round's band.",
+      "scores": [{"damage": "277G", "power": "", "ratio": "", "deck": "", "note": "Title only (stated)."}],
+      "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "other",
+      "id": "yt-oaz3NMXllOo",
+      "url": "https://www.youtube.com/watch?v=oaz3NMXllOo",
+      "date": "2026-10-09",
+      "title_kr": "MOST OP COOKIE YET! Chardonnay's Buff Is Insane... And Her Damage Is INSANE?? [Cookie Run Crumble]",
+      "title_en": "Samool: Chardonnay review",
+      "relevance": 1,
+      "summary_en": "Watch digest only: an EN review of Chardonnay. A commenter says Chardonnay takes Pomegranate's beam automatically through their synergy, unlike Macaron, and buffs the whole party.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Comment: 'Char gets automatically gets Pom beam because of their synergy. Char gets the Skamp easily unlike Macaron and last Char buffs the entire party.'"],
+      "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": [
+    {"kr": "메소딸크", "en": "Melon Soda + Strawberry Crepe", "kind": "term", "confidence": "high", "evidence": "dc:84913 (reply '메소딸크'), dc:84938 ('전갈 체리 빼고': Scorpion and Cherry out)"},
+    {"kr": "메전팝딸", "en": "Melon Soda / Scorpion / Popcorn / Strawberry Crepe", "kind": "term", "confidence": "high", "evidence": "dc:84921: which two of the four go in the sub-dealer slots"}
+  ]
+}
