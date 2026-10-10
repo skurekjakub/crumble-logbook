@@ -31,9 +31,10 @@
 
 ## Task 3: Buff scaling
 
-- [ ] Decompile the modifier systems in the Burst library (`CharacterModifierManagementSystem`, `ScaleModifierRecalculateSystem`, `AddCharacterModifier*`) and find whether Skill AMP scales a buff's value (agent).
+- [x] Decompile the modifier systems in the Burst library (`CharacterModifierManagementSystem`, `ScaleModifierRecalculateSystem`, `AddCharacterModifier*`) and find whether Skill AMP scales a buff's value (agent). It does: each buff line is `value × caster stat × (1 + caster Skill AMP)`, read once when the buff lands. Debuffs and final-damage lines get no amp, and the server can exclude a stat type. Same modifier ID refreshes and stacks; same group keeps the strongest.
 - [ ] Fold the result into record 007 and the page.
-- [ ] Update the roadmap's rune-reroll payoffs if the scaling changes them.
+- [x] Update the roadmap's rune-reroll payoffs: a buffer's Skill AMP lines lift her buffs, so Milk keeps hers and rerolls only her SR ATK lines.
+- [ ] Record 001's "Cheesecake's buff overrides Milk's" (a weaker buff kept) conflicts with strongest-in-group; check in record 007 whether they share a modifier ID instead.
 
 ## Task 4: In-game check
 

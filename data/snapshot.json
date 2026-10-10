@@ -247098,7 +247098,7 @@
     "area": "runes",
     "action": "Reroll the dead rune lines on the Conquest buffers",
     "why": "Skating Queen C Resistance, Cheesecake U DEF AMP and U CRIT%, Pomegranate R CRIT DMG do nothing for buffs.",
-    "payoff": "~4.4–5.0 Skill AMP each on a buffer; how much it lifts their buffs isn't readable in the client (encrypted).",
+    "payoff": "~4.4–5.0 Skill AMP each; a point lifts that buffer's buffs by 1 ÷ (1 + her Skill AMP), ~0.6%, but not her debuffs.",
     "cost": "300 crystals a craft; 7,830 on hand.",
     "refs": [
      {
@@ -247125,9 +247125,9 @@
     "position": 1,
     "priority": "now",
     "area": "runes",
-    "action": "Reroll Milk's SR ATK AMP and Skill AMP lines toward SSR ATK",
-    "why": "Four SR ATK lines (4.2–4.7) and an SSR Skill AMP 5.0; record 001 runs her all ATK%.",
-    "payoff": "About +15 ATK AMP on the buff source, which also keeps her ATK #1.",
+    "action": "Reroll Milk's SR ATK AMP lines toward SSR ATK",
+    "why": "Her buff is 10% of her ATK × (1 + her Skill AMP), so both count; the SR ATK lines (4.2–4.7) are the weak ones.",
+    "payoff": "About +8 ATK AMP on the buff source, which also keeps her ATK #1. Trading her Skill AMP 5.0 for ATK is about even.",
     "cost": "Crystals, after the dead lines.",
     "refs": [
      {
