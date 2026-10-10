@@ -2,7 +2,7 @@
   "updated": "2026-10-10",
   "season": "S7",
   "lede": "What Korean and global players run in Guild Conquest (길드 토벌전), from DCInside, the official Naver cafe and crumb.gg. Every claim links its post.",
-  "caveat": "Season 7, same Piñata. Chardonnay deck still best: 8T 069G result, 6T 351G with lineup on screen. Top-10 teams unpublished; live #1 13T 522G.",
+  "caveat": "Season 7, same Piñata. Chardonnay deck still best: 8T 069G result, sub-dealers from an unattributed reply; 6T 351G lobby with lineup. Top-10 teams unpublished.",
   "record": "Games/crumble/research/001-guild-conquest-meta/",
   "footer": "Built from the research record's evidence captures.",
   "gear_slot_names": {
@@ -12,15 +12,16 @@
     "bottom-right": "Bottom-right · special (magic item, book, food)"
   },
   "you": {
-    "summary": "Swap Macaron for Chardonnay and Cherry for a sub-dealer. At the deck's 590–1020× over 50 runs, 2.2G makes about 1.3–2.3T.",
+    "summary": "You already run the Chardonnay deck: 4T 613G, 12th, at 5.64G. Its 592–1024× spread over 50 runs puts that power at 3.3–5.8T (derived).",
     "changes": [
-      "Chardonnay in Macaron's slot, max level, all skill-amp runes; a 10★ doubled a 9★ Macaron's mean.",
-      "Sub-dealers: two of Scorpion, Melon Soda, Strawberry Crepe; no move speed. Crepe is in the top on-screen runs.",
-      "Keep Tiger Lily for the sixth beam; restart runs where Pomegranate misses her 다발 3.",
-      "Milk, Chardonnay, Brightseeker, Skating Queen, Tea Knight, Cheesecake at max level; sub-dealers under Cheesecake's ATK.",
-      "Brightseeker to 10★ and her in-battle haste in the 40–50 band.",
-      "Once carries hold about 11–15M in-game HP, level the fillers: 1000×+ runs outlive the 17 s wipe."
+      "Reroll the buffers' dead rune lines to skill amp: a buff scales with its caster's skill amp.",
+      "Milk stays all ATK%: reroll her SR ATK lines toward SSR so she holds ATK #1 for both perks.",
+      "Level Milk to Lv.119 first, then Brightseeker; Lv.120 waits on account level 200.",
+      "Swap crit-res gear lines for DR, HP or haste: the boss doesn't crit, and teams that wipe at 17 s stall near 600–750×.",
+      "No HP bar is settled: 15M is hearsay, and a 15M Milk still dies in some runs.",
+      "ATK order Milk › Brightseeker › Skating Queen › Cheesecake › Tea Knight; check it in battle with fillers reset.",
+      "Keep Tiger Lily; restart runs where Pomegranate misses her 다발 3."
     ],
-    "sources": ["dc:84663", "dc:84772", "dc:84701", "dc:84913", "dc:83991", "dc:83255", "dc:84290", "dc:84283", "dc:84736", "dc:84989", "dc:85200", "dc:85209", "dc:85167", "dc:75462", "dc:66636", "nv:44761", "dc:75934", "nv:51882", "web:yt-RKNiw1fRosw"]
+    "sources": ["dc:84663", "nv:43653", "dc:71135", "web:sugarpocket-bundle-1.4.002", "dc:83255", "dc:76235", "dc:83039", "dc:84701", "dc:84745", "dc:84851", "dc:85209", "dc:85167", "dc:84989", "dc:85011", "dc:85200", "nv:51882", "dc:84714", "dc:84290", "dc:84990"]
   }
 }

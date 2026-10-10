@@ -237,7 +237,7 @@
     "query": "랭킹",
     "why": "Posts about the conquest boards and who tops them.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-ranker",
@@ -253,7 +253,7 @@
     "query": "1등",
     "why": "Posts about the board's first place.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-cafe-guild",
@@ -461,7 +461,7 @@
     "query": "cookie run crumble guild conquest",
     "why": "The global name of the mode, for EN guides and runs.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "youtube-en-guild-conquest-1t",
@@ -469,7 +469,7 @@
     "query": "crumble guild conquest 1T",
     "why": "Global runs in the record's score band.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "youtube-jp-guild",
@@ -485,7 +485,7 @@
     "query": "薑餅人放置大戰爭 公會戰",
     "why": "The TW server's conquest videos.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "crumbgg-live-conquest-players",
@@ -582,7 +582,7 @@
     "url": "https://crumblehub.co/api/clear-decks?mode=guild_raid&sort=recommended&limit=50&roster=4",
     "why": "crumblehub's community-shared conquest decks, ranked by votes.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "web-cookieruncrumbles-guild-conquest",

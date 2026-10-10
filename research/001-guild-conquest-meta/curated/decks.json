@@ -51,32 +51,32 @@
     "name_en": "Chardonnay deck",
     "name_kr": "샤르도네덱",
     "status": "meta",
-    "ceiling": "8T 069G result (1300×, deck stated); 6T 351G at 8.04G with the lineup on screen; Season 7",
+    "ceiling": "8T 069G result (1300×; sub-dealers from an unattributed reply); 6T 351G lobby best at 8.04G, lineup on screen; Season 7",
     "summary": "The Cherry deck with Chardonnay for Macaron and a sub-dealer for Cherry. Her line crit buff makes formation and move speed unnecessary.",
     "cookies": [
       { "kr": "우유", "level_rule": "Max level (Lv.118–119 on 10-10; Lv.120 needs account Lv.200)", "stars": "10★", "why": "ATK #1 for both perks; 탄속 makes her a fixed beam target." },
-      { "kr": "샤르도네", "level_rule": "Max level (Lv.118–119 in the top runs)", "stars": "10★ doubled a 9★ Macaron's mean in a 50-run paired test; below 9★, only a text claim of 8★ losing", "why": "Line crit buff + 다발 2; 탄속 takes a beam at any ATK." },
+      { "kr": "샤르도네", "level_rule": "Max level (Lv.118–119 in the top runs)", "stars": "10★ nearly doubled a 9★ Macaron's mean, deck vs deck over 50 runs; below 9★, only a text claim of 8★ losing", "why": "Line crit buff + 다발 2; 탄속 takes a beam at any ATK." },
       { "kr": "브시커", "level_rule": "Max level", "why": "The carry, over 70% of damage; a beam recipient." },
       { "kr": "피겨", "level_rule": "Max level", "why": "Skill-amp buffer and beam recipient." },
       { "kr": "실론", "level_rule": "Max level", "why": "Conquest-only Boss DMG buff; beam recipient." },
       { "kr": "치케", "level_rule": "Max level", "why": "Buffs Milk's ATK; sixth beam recipient." },
       { "kr": "석류", "level_rule": "Lv.1 or max: no damage difference", "why": "Gives the beams; Lv.1 only lowers power, max helps survival." },
-      { "kr": "정전", "level_rule": "Lv.1–40, under the 6th recipient's ATK (Lv.73–100 in survival builds)", "why": "다발 3 for the sixth beam; when it misses, Tea Knight loses his." },
-      { "kr": "전갈", "level_rule": "Lv.1–65, 7th in ATK after Octo Wasabi's bonus", "why": "Sub-dealer whose poison crits (datamine); catches stray beams." },
-      { "kr": "닼초", "level_rule": "Lv.1–40, under the beam line (Lv.50–88 in survival builds)", "why": "DEF shred; haste runes." },
-      { "kr": "피노", "level_rule": "Lv.1 (Lv.70–119 in survival builds)", "why": "Lift resistance for the carries." },
-      { "kr": "메소", "level_rule": "Lv.1–78, under Scorpion's ATK; no move speed", "why": "Sub-dealer in Cherry's old slot; Strawberry Crepe here leads the on-screen top runs." }
+      { "kr": "정전", "level_rule": "Under the sub-dealers' ATK; in survival builds no lower than keeps her alive, else Lv.1", "why": "다발 3 for the sixth beam; when it misses, the sixth recipient loses the beam." },
+      { "kr": "전갈", "level_rule": "Under the 6th recipient's ATK, checked after Octo Wasabi's bonus", "why": "Sub-dealer whose poison crits (datamine); catches stray beams." },
+      { "kr": "닼초", "level_rule": "Under the sub-dealers' ATK; in survival builds no lower than keeps her alive, else Lv.1", "why": "DEF shred; haste runes." },
+      { "kr": "피노", "level_rule": "Under the sub-dealers' ATK; in survival builds no lower than keeps her alive, else Lv.1", "why": "Lift resistance for the carries." },
+      { "kr": "메소", "level_rule": "Under the 6th recipient's ATK, beside Scorpion; no move speed", "why": "Sub-dealer in Cherry's old slot; Strawberry Crepe here leads the on-screen top runs." }
     ],
-    "atk_order": ["우유", "샤르도네", "브시커", "피겨", "실론", "치케"],
-    "atk_order_note": "Milk and Chardonnay take beams first through 탄속; the rest go by ATK, their order within the six barely matters. Sub-dealers under Cheesecake.",
+    "atk_order": ["우유", "샤르도네", "브시커", "피겨", "치케", "실론"],
+    "atk_order_note": "Milk and Chardonnay take beams first through 탄속; the rest go by ATK. Cheesecake before Tea Knight, so her beam lifts Milk's ATK; some guides flip the pair. Sub-dealers under the sixth recipient; Dark Choco, Pinot and Tiger Lily under the sub-dealers.",
     "pets": ["핫도그", "와사비문어", "색동주머니"],
     "perks": "Leader Milk; 열정페이 + 초고속승진 on Milk (승진 only below mercenary Lv.4).",
     "formation": "No Cherry and no move speed needed. Strawberry Crepe stands ahead of Tiger Lily and pushes her toward Pomegranate (stated).",
     "substitutions": [
-      "Melon Soda → Strawberry Crepe, fillers levelled: 6T 351G at 8.04G (Lv.119) and 5T 811G at 5.72G, both on screen.",
-      "Scorpion → Strawberry Crepe (메소딸크): 8T 069G result at a stated 1300×; 770× on another account.",
-      "Melon Soda → Popcorn: 1T 713G at 2.62G, up from 1–1.1T; posters split on the pair, 저장용 sees little difference.",
-      "Fillers levelled for survival (Lv.55–119): what the top on-screen runs do; 1000×+ runs outlive the wipe.",
+      "Melon Soda → Strawberry Crepe, fillers levelled: a 6T 351G lobby best at 8.04G (Lv.119) and a 5T 811G result at 5.72G.",
+      "Scorpion → Strawberry Crepe (메소딸크): the 8T 069G result at 1300×, the pair from an unattributed reply; 770× on another account.",
+      "Melon Soda → Popcorn: 1T 713G at 2.62G, up from 1–1.1T with Melon Soda on the same account (stated).",
+      "Fillers levelled for survival (Lv.55–119): what the top two on-screen runs do; Lv.1 fillers also reach about 1000×.",
       "Tiger Lily → a dealer: 1.09T at 2.32G; under a 5★ Brightseeker, drop her and level Brightseeker out of the beams (1T 372G at 3.37G).",
       "Chardonnay vs Macaron, same account at Lv.118, 50 runs each: 10★ Chardonnay 592–1024× (mean 809×), 9★ Macaron 201–711× (mean 423×)."
     ],
@@ -84,7 +84,7 @@
     "unorthodox": [
       "Chardonnay takes a beam at any ATK, so she sits at max level without breaking the ATK order.",
       "Cherry and move speed gone after a month as the deck's backbone.",
-      "The top on-screen runs level every filler (Lv.55–119) so they outlive the wipe."
+      "The top two on-screen runs level every filler (Lv.55–119) so they outlive the wipe."
     ],
     "sources": ["dc:83991", "dc:83653", "dc:83491", "dc:84283", "dc:83521", "dc:83836", "dc:83608", "dc:83953", "dc:84089", "dc:83515", "dc:84290", "dc:83994", "dc:83310", "dc:83841", "dc:84284", "dc:83694", "dc:83039", "dc:83400", "nv:51157", "nv:51490", "web:yt-RKNiw1fRosw", "dc:84663", "dc:84913", "dc:84393", "dc:84772", "dc:84701", "dc:84938", "dc:84921", "dc:84736", "dc:84894", "dc:84573", "dc:84544", "dc:84365", "dc:84560", "dc:84579", "dc:84337", "dc:85232", "dc:84714", "dc:84990", "dc:85193", "dc:85212", "nv:51882", "nv:51817", "web:yt-W6jC87xR1fE", "web:yt-Up48r9fwOM8"]
   },
@@ -157,10 +157,11 @@
     "pets": ["와사비문어", "핫도그", "색동주머니"],
     "perks": "열정페이 fixed, plus 초고속승진 (or a survival perk if the team is still dying).",
     "substitutions": [
-      "Back to Tiger Lily once the team survives to 17 s: its average is higher, and the ceiling is similar."
+      "Once the team survives the slam, move to the Chardonnay deck: it nearly doubled a Macaron Cherry deck's mean, deck vs deck.",
+      "Season 7: posters still prescribe Herb for Tiger Lily when cookies die at 30 s (stated)."
     ],
     "rng": "Raises the floor more than the ceiling: one poster went 93× → 228× at 540M by fixing perks alone.",
-    "sources": ["nv:43011", "dc:71059", "dc:76157", "dc:76605", "dc:71135", "nv:48773"]
+    "sources": ["nv:43011", "dc:71059", "dc:76157", "dc:76605", "dc:71135", "nv:48773", "dc:84764", "dc:85180", "dc:84663"]
   },
   {
     "id": "cheesecake-recipient",
@@ -185,6 +186,12 @@
     ],
     "pets": ["와사비문어", "핫도그", "판다만두"],
     "rng": "Not reported separately.",
+    "obsolete": {
+      "since": "2026-10-08",
+      "reason": "Runs the Macaron Cherry core: on one account the Chardonnay deck nearly doubled that core's mean, and its tester says drop Macaron. Cheesecake still takes a beam there.",
+      "sources": ["dc:84663", "dc:83118", "nv:51882"],
+      "superseded_by": "chardonnay"
+    },
     "sources": ["nv:44761"]
   },
   {
@@ -211,6 +218,12 @@
     "atk_order": ["우유", "피겨", "전갈", "브시커", "메소", "마카롱"],
     "pets": ["핫도그", "와사비문어", "판다만두"],
     "rng": "The author played 4,230 runs in one season and still finished around 87×.",
+    "obsolete": {
+      "since": "2026-10-08",
+      "reason": "Macaron is its crit buffer, and crit buffs don't stack; on one account the Chardonnay deck nearly doubled a Macaron deck's mean. Already legacy behind the level-down and Cherry decks.",
+      "sources": ["dc:84663", "dc:83118"],
+      "superseded_by": "chardonnay"
+    },
     "sources": ["nv:36558", "dc:55485"]
   },
   {
