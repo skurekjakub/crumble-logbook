@@ -1,0 +1,6404 @@
+{
+  "schema": "crumble-account-snapshot/1",
+  "capturedAt": "2026-10-10T11:40:00+02:00",
+  "client": {
+    "region": "global",
+    "language": "en",
+    "platform": "Android (MuMu Player)",
+    "gameVersion": null,
+    "patchState": "after the 10-08 update (1.5.002, cookie cap 120 gated by Crumble level)"
+  },
+  "privacy": "No nickname, UID, guild name or other players' names. Screens stay local under snapshots/screens/.",
+  "account": {
+    "capturedAt": "2026-10-10T10:05:00+02:00",
+    "level": 194,
+    "combatPower": 7447948000,
+    "headerRank": 3,
+    "blessingLevel": 8,
+    "ovenLevel": 39,
+    "cookiesOwned": 77,
+    "cookieLevelCap": 118,
+    "screens": [
+      "main-screen.png"
+    ]
+  },
+  "resources": {
+    "capturedAt": "2026-10-10T10:05:00+02:00",
+    "gems": 76348,
+    "coins": 444740000000,
+    "runeCrystals": 7830,
+    "petTickets": [
+      935,
+      12270
+    ],
+    "gnomeLabStones": 11970000,
+    "gnomeLabSecondary": 774,
+    "stellarPoints": 44630,
+    "guildCoins": 1340,
+    "arenaTickets": null,
+    "rumbleTickets": null,
+    "crumbleDungeonEntries": null,
+    "bariPickupTickets": null,
+    "fameMedals": 17,
+    "cookieExp": 40620000,
+    "chocosteel": 535,
+    "syrup": 26,
+    "screens": [
+      "main-screen.png",
+      "runes-brightseeker.png",
+      "pet-list.png",
+      "build-gnome-lab.png",
+      "build-stellar-links.png",
+      "build-fame.png",
+      "plating.png"
+    ]
+  },
+  "cookies": {
+    "capturedAt": "2026-10-10T10:30:00+02:00",
+    "runesCapturedAt": "2026-10-10T10:45:00+02:00",
+    "skillTierNote": "Skill nodes I–V unlock at 1/3/5/7/9 stars; skillTier is the in-game tier",
+    "list": [
+      {
+        "en": "Brightseeker Cookie",
+        "kr": "브라이트시커 쿠키",
+        "resourceKey": "cookie4013",
+        "rarity": "TSSR",
+        "element": "빛/Light",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 711780000,
+        "stats": {
+          "atk": 1540000,
+          "def": 631730,
+          "hp": 15890000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 7
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 5
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "R",
+            "stat": "moveSpeed",
+            "value": null
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          }
+        ],
+        "promotion": "2/10",
+        "usedIn": [
+          "conquest",
+          "rift"
+        ]
+      },
+      {
+        "en": "Princess Bari Cookie",
+        "kr": "바리공주맛 쿠키",
+        "resourceKey": "cookie0081",
+        "rarity": "TSSR",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 118,
+        "stars": 8,
+        "skillTier": "IV",
+        "power": 636440000,
+        "stats": {
+          "atk": 1640000,
+          "def": 632960,
+          "hp": 15810000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 2,
+            "grade": "U",
+            "stat": "moveSpeed",
+            "value": 0.32
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.5
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.2
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 5
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.5
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "promotion": "4/9",
+        "usedIn": [
+          "rift",
+          "rumble_def"
+        ]
+      },
+      {
+        "en": "Strawberry Crepe Cookie",
+        "kr": "딸기크레페맛 쿠키",
+        "resourceKey": "cookie0518",
+        "rarity": "SSR",
+        "element": "빛/Light",
+        "class": "방어/Tank",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 619240000,
+        "stats": {
+          "atk": 1280000,
+          "def": 696460,
+          "hp": 18090000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.3
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 3,
+            "grade": "U",
+            "stat": "evasion",
+            "value": 1.6
+          },
+          {
+            "line": 4,
+            "grade": "C",
+            "stat": "hpAmp",
+            "value": 1.4
+          },
+          {
+            "line": 5,
+            "grade": "U",
+            "stat": "focus",
+            "value": 2
+          },
+          {
+            "line": 6,
+            "grade": "R",
+            "stat": "critDmg",
+            "value": 3.8
+          },
+          {
+            "line": 7,
+            "grade": "R",
+            "stat": "evasion",
+            "value": 2.8
+          },
+          {
+            "line": 8,
+            "grade": "U",
+            "stat": "critDmg",
+            "value": 2.2
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "rift"
+        ]
+      },
+      {
+        "en": "Pomegranate Cookie",
+        "kr": "석류맛 쿠키",
+        "resourceKey": "cookie0126",
+        "rarity": "SSR",
+        "element": "어둠/Dark",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 618430000,
+        "stats": {
+          "atk": 1240000,
+          "def": 604800,
+          "hp": 16380000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 2,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.8
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "critDmg",
+            "value": 4.2
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.5
+          },
+          {
+            "line": 5,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.5
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 7,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.8
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "conquest",
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Milk Cookie's Crunchy Strong Pediatrician",
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "resourceKey": "cookie4019",
+        "rarity": "SSR",
+        "element": "빛/Light",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 649850000,
+        "stats": {
+          "atk": 1580000,
+          "def": 620040,
+          "hp": 16350000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.5
+          },
+          {
+            "line": 2,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.2
+          },
+          {
+            "line": 3,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.7
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 5
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 7
+          },
+          {
+            "line": 7,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.2
+          },
+          {
+            "line": 8,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.2
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "conquest",
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ],
+        "note": "Captain in every lineup read"
+      },
+      {
+        "en": "Skating Queen Cookie",
+        "kr": "피겨여왕맛 쿠키",
+        "resourceKey": "cookie0018",
+        "rarity": "SSR",
+        "element": "물/Water",
+        "class": "돌격/Charge",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 638010000,
+        "stats": {
+          "atk": 1320000,
+          "def": 637030,
+          "hp": 15850000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 3,
+            "grade": "C",
+            "stat": "resistance",
+            "value": 0.8
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "conquest",
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Pinot Noir Cookie",
+        "kr": "피노누아맛 쿠키",
+        "resourceKey": "cookie4010",
+        "rarity": "SSR",
+        "element": "어둠/Dark",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 586630000,
+        "stats": {
+          "atk": 1240000,
+          "def": 610130,
+          "hp": 16630000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "C",
+            "stat": "accuracy",
+            "value": 0.8
+          },
+          {
+            "line": 2,
+            "grade": "U",
+            "stat": "defAmp",
+            "value": 1.9
+          },
+          {
+            "line": 3,
+            "grade": "C",
+            "stat": "accuracy",
+            "value": 1.2
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 6,
+            "grade": "U",
+            "stat": "hpAmp",
+            "value": 1.9
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 8,
+            "grade": "C",
+            "stat": "critRes",
+            "value": 1.6
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "conquest",
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Cherry Cola Cookie",
+        "kr": "체리콜라맛 쿠키",
+        "resourceKey": "cookie0250",
+        "rarity": "SSR",
+        "element": "물/Water",
+        "class": "돌격/Charge",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 648050000,
+        "stats": {
+          "atk": 1450000,
+          "def": 637030,
+          "hp": 15850000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "focus",
+            "value": 1.2
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.5
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "rift"
+        ]
+      },
+      {
+        "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+        "kr": "감감술래 놀이 달토끼맛 쿠키",
+        "resourceKey": "cookie4025",
+        "rarity": "SSR",
+        "element": "풀/Grass",
+        "class": "방어/Tank",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 588560000,
+        "stats": {
+          "atk": 1220000,
+          "def": 678710,
+          "hp": 17010000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 3,
+            "grade": "SR",
+            "stat": "evasion",
+            "value": 3.6
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 5,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.2
+          },
+          {
+            "line": 6,
+            "grade": "R",
+            "stat": "skillAmp",
+            "value": 2.8
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          }
+        ],
+        "promotion": "12/15",
+        "usedIn": [
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Rye Cookie",
+        "kr": "호밀맛 쿠키",
+        "resourceKey": "cookie0515",
+        "rarity": "SR",
+        "element": "불/Fire",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 535390000,
+        "stats": {
+          "atk": 1190000,
+          "def": 616500,
+          "hp": 12050000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.8
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.5
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.6
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "moveSpeed",
+            "value": 0.26
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.5
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "atkAmp",
+            "value": 1.4
+          }
+        ],
+        "promotion": "142/300",
+        "usedIn": [
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Chardonnay Cookie",
+        "kr": "샤르도네맛 쿠키",
+        "resourceKey": "cookie4011",
+        "rarity": "SSR",
+        "element": "풀/Grass",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 640900000,
+        "stats": {
+          "atk": 1240000,
+          "def": 604800,
+          "hp": 16360000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 5
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.5
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "promotion": "max",
+        "usedIn": [
+          "conquest"
+        ]
+      },
+      {
+        "en": "Macaron Cookie",
+        "kr": "마카롱맛 쿠키",
+        "resourceKey": "cookie0059",
+        "rarity": "SR",
+        "element": "풀/Grass",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 514150000,
+        "stats": {
+          "atk": 1080000,
+          "def": 603530,
+          "hp": 13440000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 3,
+            "grade": "C",
+            "stat": "critDmg",
+            "value": 1
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "U",
+            "stat": "evasion",
+            "value": 1.6
+          },
+          {
+            "line": 2,
+            "grade": "U",
+            "stat": "critDmg",
+            "value": 2.6
+          }
+        ],
+        "promotion": "113/300",
+        "usedIn": [
+          "conquest",
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Cheesecake Cookie",
+        "kr": "치즈케이크맛 쿠키",
+        "resourceKey": "cookie0037",
+        "rarity": "R",
+        "element": "빛/Light",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 458510000,
+        "stats": {
+          "atk": 992450,
+          "def": 624340,
+          "hp": 11790000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.8
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 4,
+            "grade": "U",
+            "stat": "defAmp",
+            "value": 1.9
+          },
+          {
+            "line": 5,
+            "grade": "U",
+            "stat": "critRate",
+            "value": 2.2
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 5
+          },
+          {
+            "line": 2,
+            "grade": "R",
+            "stat": "skillAmp",
+            "value": 2.5
+          }
+        ],
+        "promotion": "463/800",
+        "usedIn": [
+          "conquest",
+          "rift",
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Wind Archer Cookie",
+        "kr": "바람궁수 쿠키",
+        "resourceKey": "cookie0070",
+        "rarity": "TSSR",
+        "element": "풀/Grass",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 716220000,
+        "stats": {
+          "atk": 1530000,
+          "def": 617780,
+          "hp": 16760000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 8
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 8
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 8
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7.4
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "moveSpeed",
+            "value": 0.63
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7
+          },
+          {
+            "line": 8,
+            "grade": "U",
+            "stat": "critRate",
+            "value": 2.2
+          }
+        ],
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Vampire Cookie",
+        "kr": "뱀파이어맛 쿠키",
+        "resourceKey": "cookie0035",
+        "rarity": "SSR",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 621490000,
+        "stats": {
+          "atk": 1290000,
+          "def": 636530,
+          "hp": 15840000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "U",
+            "stat": "focus",
+            "value": 1.6
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7
+          },
+          {
+            "line": 3,
+            "grade": "C",
+            "stat": "accuracy",
+            "value": 0.8
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "evasion",
+            "value": 6
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 7,
+            "grade": "C",
+            "stat": "resistance",
+            "value": 1.2
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Espresso Cookie",
+        "kr": "에스프레소맛 쿠키",
+        "resourceKey": "cookie0513",
+        "rarity": "SSR",
+        "element": "풀/Grass",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 640210000,
+        "stats": {
+          "atk": 1330000,
+          "def": 630110,
+          "hp": 14320000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "R",
+            "stat": "moveSpeed",
+            "value": 0.57
+          },
+          {
+            "line": 2,
+            "grade": "SR",
+            "stat": "defAmp",
+            "value": 4.2
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7.4
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7.4
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.2
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 6
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Cream Puff Cookie",
+        "kr": "슈크림맛 쿠키",
+        "resourceKey": "cookie0048",
+        "rarity": "SSR",
+        "element": "빛/Light",
+        "class": "사격/Ranged",
+        "level": 100,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 529960000,
+        "stats": {
+          "atk": 1130000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "accuracy",
+            "value": 4
+          },
+          {
+            "line": 2,
+            "grade": "U",
+            "stat": "evasion",
+            "value": 2
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.3
+          },
+          {
+            "line": 4,
+            "grade": "R",
+            "stat": "dmgReduction",
+            "value": 3.3
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "atkAmp",
+            "value": 1.4
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 7,
+            "grade": "C",
+            "stat": "moveSpeed",
+            "value": 0.2
+          },
+          {
+            "line": 8,
+            "grade": "R",
+            "stat": "critRate",
+            "value": 3.8
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Twizzly Gummy Cookie",
+        "kr": "트위즐젤리맛 쿠키",
+        "resourceKey": "cookie0527",
+        "rarity": "SSR",
+        "element": "어둠/Dark",
+        "class": "사격/Ranged",
+        "level": 100,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 494060000,
+        "stats": {
+          "atk": 1160000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "R",
+            "stat": "critRes",
+            "value": 4.2
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "atkAmp",
+            "value": 0.9
+          },
+          {
+            "line": 3,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 5.1
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "focus",
+            "value": 1.2
+          },
+          {
+            "line": 6,
+            "grade": "U",
+            "stat": "critDmg",
+            "value": 2.6
+          },
+          {
+            "line": 7,
+            "grade": "U",
+            "stat": "evasion",
+            "value": 2
+          },
+          {
+            "line": 8,
+            "grade": "U",
+            "stat": "critRate",
+            "value": 2.2
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Milky Way Cookie",
+        "kr": "밀키웨이맛 쿠키",
+        "resourceKey": "cookie0573",
+        "rarity": "SSR",
+        "element": "빛/Light",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 633760000,
+        "stats": {
+          "atk": 1390000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7
+          },
+          {
+            "line": 2,
+            "grade": "U",
+            "stat": "accuracy",
+            "value": 1.6
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7.4
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Dark Choco Cookie",
+        "kr": "다크초코 쿠키",
+        "resourceKey": "cookie0103",
+        "rarity": "SSR",
+        "element": "어둠/Dark",
+        "class": "방어/Tank",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 614880000,
+        "stats": {
+          "atk": 1220000,
+          "def": 681240,
+          "hp": 17920000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "U",
+            "stat": "accuracy",
+            "value": 1.6
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.2
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 5
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 7,
+            "grade": "U",
+            "stat": "critRate",
+            "value": 2.2
+          },
+          {
+            "line": 8,
+            "grade": "SR",
+            "stat": "skillHaste",
+            "value": 3
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "conquest"
+        ]
+      },
+      {
+        "en": "Scorpion Cookie",
+        "kr": "전갈맛 쿠키",
+        "resourceKey": "cookie0181",
+        "rarity": "SSR",
+        "element": "불/Fire",
+        "class": "사격/Ranged",
+        "level": 56,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 383130000,
+        "stats": {
+          "atk": 857940,
+          "def": 559260,
+          "hp": 8730000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "C",
+            "stat": "defAmp",
+            "value": 0.9
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "resistance",
+            "value": 1.2
+          },
+          {
+            "line": 3,
+            "grade": "SR",
+            "stat": "critDmg",
+            "value": 4.8
+          },
+          {
+            "line": 4,
+            "grade": "R",
+            "stat": "accuracy",
+            "value": 2.8
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 5
+          },
+          {
+            "line": 7,
+            "grade": "U",
+            "stat": "hpAmp",
+            "value": 1.9
+          },
+          {
+            "line": 8,
+            "grade": "R",
+            "stat": "accuracy",
+            "value": 3.2
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "conquest"
+        ]
+      },
+      {
+        "en": "Space Doughnut's Royal Excellence",
+        "kr": "도넛행성 에일리언 도넛킹",
+        "resourceKey": "cookie4018",
+        "rarity": "SSR",
+        "element": "빛/Light",
+        "class": "지원/Support",
+        "level": 100,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 514520000,
+        "stats": {
+          "atk": 1060000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 3,
+            "grade": "U",
+            "stat": "critDmg",
+            "value": 2.2
+          },
+          {
+            "line": 4,
+            "grade": "R",
+            "stat": "skillAmp",
+            "value": 2.5
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.2
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 7,
+            "grade": "U",
+            "stat": "defAmp",
+            "value": 2.3
+          },
+          {
+            "line": 8,
+            "grade": "C",
+            "stat": "hpAmp",
+            "value": 0.9
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "rumble_def"
+        ],
+        "note": "도넛킹 (Doughnut King) in PvP posts"
+      },
+      {
+        "en": "Ion Cookie Robot",
+        "kr": "이온맛 쿠키로봇",
+        "resourceKey": "cookie0136",
+        "rarity": "SSR",
+        "element": "물/Water",
+        "class": "방어/Tank",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 649880000,
+        "stats": {
+          "atk": 1270000,
+          "def": 681720,
+          "hp": 18840000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "U",
+            "stat": "atkAmp",
+            "value": 1.9
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 5
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.3
+          },
+          {
+            "line": 4,
+            "grade": "C",
+            "stat": "accuracy",
+            "value": 1.2
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "hpAmp",
+            "value": 6.5
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Cool Mint Cookie",
+        "kr": "쿨링민트맛 쿠키",
+        "resourceKey": "cookie4006",
+        "rarity": "SSR",
+        "element": "물/Water",
+        "class": "돌격/Charge",
+        "level": 100,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 516910000,
+        "stats": {
+          "atk": 1270000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 3,
+            "grade": "C",
+            "stat": "evasion",
+            "value": 0.8
+          },
+          {
+            "line": 4,
+            "grade": "U",
+            "stat": "hpAmp",
+            "value": 1.9
+          },
+          {
+            "line": 5,
+            "grade": "R",
+            "stat": "focus",
+            "value": 2.8
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "critRes",
+            "value": 8
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Nameless Cake Hound",
+        "kr": "이름 모를 케이크 들개",
+        "resourceKey": "cookie4024",
+        "rarity": "SSR",
+        "element": "불/Fire",
+        "class": "방어/Tank",
+        "level": 118,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 631910000,
+        "stats": {
+          "atk": 1220000,
+          "def": 681240,
+          "hp": 17890000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7.4
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 3,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.5
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 7,
+            "grade": "R",
+            "stat": "critDmg",
+            "value": 3.8
+          },
+          {
+            "line": 8,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Melon Soda Cookie",
+        "kr": "메론소다맛 쿠키",
+        "resourceKey": "cookie3001",
+        "rarity": "SSR",
+        "element": "물/Water",
+        "class": "사격/Ranged",
+        "level": 40,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 346630000,
+        "stats": {
+          "atk": 849710,
+          "def": 555070,
+          "hp": 8090000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": null,
+            "stat": "critDmg",
+            "value": 1.6
+          },
+          {
+            "line": 2,
+            "grade": null,
+            "stat": "moveSpeed",
+            "value": 0.2
+          },
+          {
+            "line": 3,
+            "grade": null,
+            "stat": "defAmp",
+            "value": 1.4
+          },
+          {
+            "line": 4,
+            "grade": null,
+            "stat": "evasion",
+            "value": 1.6
+          },
+          {
+            "line": 5,
+            "grade": null,
+            "stat": "atkAmp",
+            "value": 1.4
+          },
+          {
+            "line": 6,
+            "grade": null,
+            "stat": "accuracy",
+            "value": 1.6
+          },
+          {
+            "line": 7,
+            "grade": null,
+            "stat": "accuracy",
+            "value": 1.2
+          },
+          {
+            "line": 8,
+            "grade": "R",
+            "stat": "moveSpeed",
+            "value": 0.51
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines; grades not transcribed"
+      },
+      {
+        "en": "Tea Knight Cookie",
+        "kr": "실론나이트 쿠키",
+        "resourceKey": "cookie0532",
+        "rarity": "SSR",
+        "element": "빛/Light",
+        "class": "방어/Tank",
+        "level": 118,
+        "stars": 5,
+        "skillTier": "III",
+        "power": 482870000,
+        "stats": {
+          "atk": 1060000,
+          "def": 683840,
+          "hp": 14150000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 5
+          },
+          {
+            "line": 2,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "promotion": "2/7",
+        "usedIn": [
+          "conquest"
+        ],
+        "note": "Only three slots open below 6 stars",
+        "runesLocked": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4,
+            "unlocksAtStars": 6
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4,
+            "unlocksAtStars": 8
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7,
+            "unlocksAtStars": 8
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.5,
+            "unlocksAtStars": 10
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4,
+            "unlocksAtStars": 10
+          }
+        ]
+      },
+      {
+        "en": "Licorice Cookie",
+        "kr": "감초맛 쿠키",
+        "resourceKey": "cookie0503",
+        "rarity": "SR",
+        "element": "어둠/Dark",
+        "class": "방어/Tank",
+        "level": 100,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 399580000,
+        "stats": {
+          "atk": 955450,
+          "def": 625210,
+          "hp": 11900000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "R",
+            "stat": "focus",
+            "value": 3.2
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "skillAmp",
+            "value": 1.3
+          },
+          {
+            "line": 3,
+            "grade": "U",
+            "stat": "critDmg",
+            "value": 2.6
+          },
+          {
+            "line": 4,
+            "grade": "R",
+            "stat": "moveSpeed",
+            "value": 0.51
+          },
+          {
+            "line": 5,
+            "grade": "U",
+            "stat": "critRate",
+            "value": 2.6
+          },
+          {
+            "line": 6,
+            "grade": "C",
+            "stat": "moveSpeed",
+            "value": 0.2
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "161/300",
+        "usedIn": []
+      },
+      {
+        "en": "Herb Cookie",
+        "kr": "허브맛 쿠키",
+        "resourceKey": "cookie0063",
+        "rarity": "SR",
+        "element": "풀/Grass",
+        "class": "지원/Support",
+        "level": 114,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 489800000,
+        "stats": {
+          "atk": 1040000,
+          "def": 605500,
+          "hp": 12850000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "defAmp",
+            "value": 3.3
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "moveSpeed",
+            "value": 0.26
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "promotion": "177/300",
+        "usedIn": [
+          "arena_def",
+          "arena_atk",
+          "rumble_def",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Orange Cookie",
+        "kr": "오렌지맛 쿠키",
+        "resourceKey": "cookie0053",
+        "rarity": "SR",
+        "element": "물/Water",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 500870000,
+        "stats": {
+          "atk": 1110000,
+          "def": 604020,
+          "hp": 13810000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "accuracy",
+            "value": 4.4
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "resistance",
+            "value": null
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "hpAmp",
+            "value": 3.7
+          },
+          {
+            "line": 4,
+            "grade": "U",
+            "stat": "critRate",
+            "value": 2.6
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "skillAmp",
+            "value": 1.3
+          },
+          {
+            "line": 6,
+            "grade": "C",
+            "stat": "dmgReduction",
+            "value": 1.8
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "135/300",
+        "usedIn": []
+      },
+      {
+        "en": "Rockstar Cookie",
+        "kr": "락스타맛 쿠키",
+        "resourceKey": "cookie0027",
+        "rarity": "SR",
+        "element": "불/Fire",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 510970000,
+        "stats": {
+          "atk": 1080000,
+          "def": 603530,
+          "hp": 13670000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 6
+          },
+          {
+            "line": 2,
+            "grade": "U",
+            "stat": "hpAmp",
+            "value": 2.3
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "critRate",
+            "value": 3.8
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "resistance",
+            "value": 0.8
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 5
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "172/300",
+        "usedIn": [
+          "arena_def",
+          "arena_atk",
+          "rumble_atk"
+        ]
+      },
+      {
+        "en": "Tiger Lily Cookie",
+        "kr": "정글전사 쿠키",
+        "resourceKey": "cookie0040",
+        "rarity": "SR",
+        "element": "풀/Grass",
+        "class": "돌격/Charge",
+        "level": 40,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 318920000,
+        "stats": {
+          "atk": 788940,
+          "def": 542300,
+          "hp": 8110000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "skillHaste",
+            "value": 3
+          },
+          {
+            "line": 2,
+            "grade": "R",
+            "stat": "hpAmp",
+            "value": 3.7
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 4,
+            "grade": "U",
+            "stat": "atkAmp",
+            "value": 1.9
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "resistance",
+            "value": 0.8
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "skillHaste",
+            "value": 2
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "121/300",
+        "usedIn": [
+          "conquest"
+        ]
+      },
+      {
+        "en": "Dr. Bones Cookie",
+        "kr": "닥터 뼈다귀 쿠키",
+        "resourceKey": "cookie0195",
+        "rarity": "SR",
+        "element": "풀/Grass",
+        "class": "지원/Support",
+        "level": 100,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 440110000,
+        "stats": {
+          "atk": 1000000,
+          "def": 576770,
+          "hp": 11200000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "R",
+            "stat": "atkAmp",
+            "value": 3.7
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "atkAmp",
+            "value": 0.9
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 5,
+            "grade": "R",
+            "stat": "atkAmp",
+            "value": 3.7
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 5
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.7
+          }
+        ],
+        "promotion": "144/300",
+        "usedIn": []
+      },
+      {
+        "en": "Witchberry Cookie",
+        "kr": "위치베리맛 쿠키",
+        "resourceKey": "cookie2006",
+        "rarity": "SR",
+        "element": "어둠/Dark",
+        "class": "사격/Ranged",
+        "level": 100,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 438910000,
+        "stats": {
+          "atk": 1080000,
+          "def": 589740,
+          "hp": 10330000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "U",
+            "stat": "moveSpeed",
+            "value": 0.32
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 7
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 5
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "skillHaste",
+            "value": 2
+          },
+          {
+            "line": 5,
+            "grade": "U",
+            "stat": "focus",
+            "value": 1.6
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          }
+        ],
+        "runesLockedUntil10Stars": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 2,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.2
+          }
+        ],
+        "promotion": "149/300",
+        "usedIn": []
+      },
+      {
+        "en": "Lime Cookie",
+        "kr": "라임맛 쿠키",
+        "resourceKey": "cookie0054",
+        "rarity": "SR",
+        "element": "물/Water",
+        "class": "지원/Support",
+        "level": 100,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 425250000,
+        "stats": {
+          "atk": 1010000,
+          "def": 577260,
+          "hp": 11200000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "C",
+            "stat": "evasion",
+            "value": null
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "accuracy",
+            "value": null
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "critRate",
+            "value": 3.8
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.2
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "critRes",
+            "value": null
+          },
+          {
+            "line": 6,
+            "grade": "C",
+            "stat": "dmgReduction",
+            "value": null
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "145/300",
+        "usedIn": []
+      },
+      {
+        "en": "Grapevine Cookie",
+        "kr": "포도넝쿨맛 쿠키",
+        "resourceKey": "cookie4003",
+        "rarity": "R",
+        "element": "풀/Grass",
+        "class": "지원/Support",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 454530000,
+        "stats": {
+          "atk": 987870,
+          "def": 608830,
+          "hp": 11790000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.7
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillHaste",
+            "value": 4
+          },
+          {
+            "line": 3,
+            "grade": "U",
+            "stat": "defAmp",
+            "value": 1.9
+          },
+          {
+            "line": 4,
+            "grade": "C",
+            "stat": "evasion",
+            "value": 0.8
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 6,
+            "grade": "C",
+            "stat": "dmgReduction",
+            "value": 1.8
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "545/800",
+        "usedIn": []
+      },
+      {
+        "en": "Cherry Cookie",
+        "kr": "체리맛 쿠키",
+        "resourceKey": "cookie0028",
+        "rarity": "R",
+        "element": "불/Fire",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 473140000,
+        "stats": {
+          "atk": 1030000,
+          "def": 616500,
+          "hp": 10770000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.5
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 3,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.8
+          },
+          {
+            "line": 4,
+            "grade": "U",
+            "stat": "dmgReduction",
+            "value": 2.3
+          },
+          {
+            "line": 5,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.8
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "554/800",
+        "usedIn": [
+          "conquest"
+        ]
+      },
+      {
+        "en": "Devil Cookie",
+        "kr": "악마맛 쿠키",
+        "resourceKey": "cookie0023",
+        "rarity": "U",
+        "element": "어둠/Dark",
+        "class": "사격/Ranged",
+        "level": 100,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 377870000,
+        "stats": {
+          "atk": 884360,
+          "def": 589740,
+          "hp": 8850000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "C",
+            "stat": "moveSpeed",
+            "value": null
+          },
+          {
+            "line": 2,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "dmgReduction",
+            "value": 3.3
+          },
+          {
+            "line": 4,
+            "grade": "U",
+            "stat": "evasion",
+            "value": 1.6
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.7
+          },
+          {
+            "line": 6,
+            "grade": "U",
+            "stat": "atkAmp",
+            "value": 2.3
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "787/1,000",
+        "usedIn": []
+      },
+      {
+        "en": "Adventurer Cookie",
+        "kr": "탐험가맛 쿠키",
+        "resourceKey": "cookie0038",
+        "rarity": "U",
+        "element": "풀/Grass",
+        "class": "돌격/Charge",
+        "level": 100,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 382130000,
+        "stats": {
+          "atk": 861230,
+          "def": 596880,
+          "hp": 9380000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "critRes",
+            "value": 7
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.3
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "hpAmp",
+            "value": 3.3
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.7
+          },
+          {
+            "line": 5,
+            "grade": "C",
+            "stat": "critRate",
+            "value": 1.6
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.6
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "695/1,000",
+        "usedIn": []
+      },
+      {
+        "en": "GingerBright",
+        "kr": "명랑한 쿠키",
+        "resourceKey": "cookie0003",
+        "rarity": "C",
+        "element": "빛/Light",
+        "class": "돌격/Charge",
+        "level": 100,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 392910000,
+        "stats": {
+          "atk": 832300,
+          "def": 613260,
+          "hp": 8670000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.2
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.6
+          },
+          {
+            "line": 3,
+            "grade": "R",
+            "stat": "focus",
+            "value": 3.2
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 5.2
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 6
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 7,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          },
+          {
+            "line": 8,
+            "grade": "SR",
+            "stat": "accuracy",
+            "value": 3.6
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Oven Wanderer Cookie",
+        "kr": "오븐방랑자 쿠키",
+        "resourceKey": "cookie4012",
+        "rarity": "TSSR",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 655850000,
+        "stats": {
+          "atk": 1420000,
+          "def": 634750,
+          "hp": 17960000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "evasion",
+            "value": 5.2
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "hpAmp",
+            "value": 1.4
+          },
+          {
+            "line": 3,
+            "grade": "C",
+            "stat": "resistance",
+            "value": 0.8
+          },
+          {
+            "line": 4,
+            "grade": "R",
+            "stat": "evasion",
+            "value": 2.8
+          },
+          {
+            "line": 5,
+            "grade": "SSR",
+            "stat": "moveSpeed",
+            "value": 1
+          },
+          {
+            "line": 6,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.4
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "8/10",
+        "usedIn": [
+          "rumble_def"
+        ]
+      },
+      {
+        "en": "Madeleine Cookie",
+        "kr": "마들렌맛 쿠키",
+        "resourceKey": "cookie0511",
+        "rarity": "SSR",
+        "element": "빛/Light",
+        "class": "방어/Tank",
+        "level": 1,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 301130000,
+        "stats": {
+          "atk": 769600,
+          "def": 548400,
+          "hp": 7450000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "critRes",
+            "value": 7
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "dmgReduction",
+            "value": null
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "critDmg",
+            "value": 7
+          },
+          {
+            "line": 4,
+            "grade": "C",
+            "stat": "resistance",
+            "value": null
+          },
+          {
+            "line": 5,
+            "grade": "U",
+            "stat": "critRate",
+            "value": 2.2
+          },
+          {
+            "line": 6,
+            "grade": "U",
+            "stat": "critDmg",
+            "value": 2.6
+          },
+          {
+            "line": 7,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 8,
+            "grade": "C",
+            "stat": "atkAmp",
+            "value": 1.4
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Toothpaste Cookie",
+        "kr": "치약초코 쿠키",
+        "resourceKey": "cookie4017",
+        "rarity": "SSR",
+        "element": "풀/Grass",
+        "class": "지원/Support",
+        "level": 95,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 475440000,
+        "stats": {
+          "atk": 1020000,
+          "def": 571870,
+          "hp": 12980000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "hpAmp",
+            "value": 6.5
+          },
+          {
+            "line": 2,
+            "grade": "C",
+            "stat": "critDmg",
+            "value": null
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "moveSpeed",
+            "value": 0.94
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "focus",
+            "value": 6
+          },
+          {
+            "line": 5,
+            "grade": "R",
+            "stat": "skillAmp",
+            "value": 2.8
+          },
+          {
+            "line": 6,
+            "grade": "U",
+            "stat": "focus",
+            "value": null
+          },
+          {
+            "line": 7,
+            "grade": "C",
+            "stat": "skillAmp",
+            "value": null
+          },
+          {
+            "line": 8,
+            "grade": "C",
+            "stat": "moveSpeed",
+            "value": null
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Schwarzwälder",
+        "kr": "찰스",
+        "resourceKey": "cookie0570",
+        "rarity": "SSR",
+        "element": "불/Fire",
+        "class": "방어/Tank",
+        "level": 1,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 300970000,
+        "stats": {
+          "atk": 761670,
+          "def": 533180,
+          "hp": 7450000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Cream Soda Cookie",
+        "kr": "크림소다맛 쿠키",
+        "resourceKey": "cookie1004",
+        "rarity": "SSR",
+        "element": "물/Water",
+        "class": "돌격/Charge",
+        "level": 100,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 482580000,
+        "stats": {
+          "atk": 1120000,
+          "def": 598520,
+          "hp": 12740000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "One SSR critDmg 7.0 line; rest low-grade"
+      },
+      {
+        "en": "Strawberry Shortcake Cookie",
+        "kr": "딸기쇼트케이크맛 쿠키",
+        "resourceKey": "cookie0072",
+        "rarity": "SSR",
+        "element": "풀/Grass",
+        "class": "돌격/Charge",
+        "level": 100,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 520160000,
+        "stats": {
+          "atk": 1190000,
+          "def": 598030,
+          "hp": 12740000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "evasion",
+            "value": 5.2
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "dmgReduction",
+            "value": 5.7
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "critRate",
+            "value": 7
+          },
+          {
+            "line": 4,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.5
+          },
+          {
+            "line": 5,
+            "grade": "SR",
+            "stat": "critRate",
+            "value": 4.8
+          },
+          {
+            "line": 6,
+            "grade": "SR",
+            "stat": "dmgReduction",
+            "value": 3.9
+          },
+          {
+            "line": 7,
+            "grade": "C",
+            "stat": "atkAmp",
+            "value": 1.4
+          },
+          {
+            "line": 8,
+            "grade": "SR",
+            "stat": "atkAmp",
+            "value": 4.7
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": []
+      },
+      {
+        "en": "Popcorn Cookie",
+        "kr": "팝콘맛 쿠키",
+        "resourceKey": "cookie0101",
+        "rarity": "SR",
+        "element": "빛/Light",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 534340000,
+        "stats": {
+          "atk": 1240000,
+          "def": 643110,
+          "hp": 12050000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": [
+          {
+            "line": 1,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 2,
+            "grade": "SSR",
+            "stat": "atkAmp",
+            "value": 6.1
+          },
+          {
+            "line": 3,
+            "grade": "SSR",
+            "stat": "skillAmp",
+            "value": 4.7
+          },
+          {
+            "line": 4,
+            "grade": "SR",
+            "stat": "skillAmp",
+            "value": 3.2
+          },
+          {
+            "line": 5,
+            "grade": "R",
+            "stat": "defAmp",
+            "value": 3.7
+          },
+          {
+            "line": 6,
+            "grade": "R",
+            "stat": "resistance",
+            "value": 3.2
+          }
+        ],
+        "runesLockedUntil10Stars": null,
+        "promotion": "114/300",
+        "usedIn": []
+      },
+      {
+        "en": "Dr. Wasabi Cookie",
+        "kr": "닥터 와사비 쿠키",
+        "resourceKey": "cookie0107",
+        "rarity": "SR",
+        "element": "풀/Grass",
+        "class": "사격/Ranged",
+        "level": 100,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 420780000,
+        "stats": {
+          "atk": 1010000,
+          "def": 589740,
+          "hp": 10310000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "174/300",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Peach Cookie",
+        "kr": "복숭아맛 쿠키",
+        "resourceKey": "cookie0056",
+        "rarity": "SR",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 2,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 291590000,
+        "stats": {
+          "atk": 748630,
+          "def": 531780,
+          "hp": 7340000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "156/300",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Pancake Cookie",
+        "kr": "팬케이크맛 쿠키",
+        "resourceKey": "cookie0069",
+        "rarity": "SR",
+        "element": "풀/Grass",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 495180000,
+        "stats": {
+          "atk": 1140000,
+          "def": 616500,
+          "hp": 12050000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "149/300",
+        "usedIn": [],
+        "note": "One SR critDmg 5.8 line; rest low-grade"
+      },
+      {
+        "en": "Lemon Cookie",
+        "kr": "레몬맛 쿠키",
+        "resourceKey": "cookie0052",
+        "rarity": "SR",
+        "element": "빛/Light",
+        "class": "사격/Ranged",
+        "level": 118,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 507770000,
+        "stats": {
+          "atk": 1140000,
+          "def": 631730,
+          "hp": 12210000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "99/300",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Blackberry Cookie",
+        "kr": "블랙베리맛 쿠키",
+        "resourceKey": "cookie0042",
+        "rarity": "R",
+        "element": "어둠/Dark",
+        "class": "돌격/Charge",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 280570000,
+        "stats": {
+          "atk": 749810,
+          "def": 531630,
+          "hp": 7330000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "576/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Alchemist Cookie",
+        "kr": "연금술사맛 쿠키",
+        "resourceKey": "cookie0034",
+        "rarity": "R",
+        "element": "물/Water",
+        "class": "사격/Ranged",
+        "level": 96,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 393900000,
+        "stats": {
+          "atk": 941690,
+          "def": 585670,
+          "hp": 9320000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "535/800",
+        "usedIn": [],
+        "note": "One SSR moveSpeed 0.88 line; rest low-grade"
+      },
+      {
+        "en": "Lilac Cookie",
+        "kr": "라일락맛 쿠키",
+        "resourceKey": "cookie0522",
+        "rarity": "R",
+        "element": "어둠/Dark",
+        "class": "사격/Ranged",
+        "level": 95,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 379270000,
+        "stats": {
+          "atk": 908660,
+          "def": 584130,
+          "hp": 9240000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "563/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Space Doughnut",
+        "kr": "에일리언 도넛",
+        "resourceKey": "cookie0106",
+        "rarity": "R",
+        "element": "빛/Light",
+        "class": "사격/Ranged",
+        "level": 96,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 394650000,
+        "stats": {
+          "atk": 913250,
+          "def": 600410,
+          "hp": 9270000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "495/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Poison Mushroom Cookie",
+        "kr": "독버섯맛 쿠키",
+        "resourceKey": "cookie0502",
+        "rarity": "R",
+        "element": "어둠/Dark",
+        "class": "돌격/Charge",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 286010000,
+        "stats": {
+          "atk": 738210,
+          "def": 531630,
+          "hp": 7330000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "528/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Dark Cherry Cookie",
+        "kr": "다크체리맛 쿠키",
+        "resourceKey": "cookie4001",
+        "rarity": "R",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 99,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 376360000,
+        "stats": {
+          "atk": 911200,
+          "def": 605220,
+          "hp": 10190000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "562/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Berry Yogurt Cookie",
+        "kr": "요거트베리맛 쿠키",
+        "resourceKey": "cookie4002",
+        "rarity": "R",
+        "element": "물/Water",
+        "class": "방어/Tank",
+        "level": 53,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 315340000,
+        "stats": {
+          "atk": 836400,
+          "def": 562060,
+          "hp": 8190000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "535/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Cocoa Cookie",
+        "kr": "코코아맛 쿠키",
+        "resourceKey": "cookie0045",
+        "rarity": "R",
+        "element": "물/Water",
+        "class": "방어/Tank",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 290470000,
+        "stats": {
+          "atk": 786360,
+          "def": 536510,
+          "hp": 7520000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "532/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Bear Jelly Worker",
+        "kr": "일꾼 곰젤리",
+        "resourceKey": "cookie4023",
+        "rarity": "R",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 95,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 367730000,
+        "stats": {
+          "atk": 905330,
+          "def": 588890,
+          "hp": 9650000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "520/800",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Cheerleader Cookie",
+        "kr": "치어리더맛 쿠키",
+        "resourceKey": "cookie0020",
+        "rarity": "U",
+        "element": "물/Water",
+        "class": "지원/Support",
+        "level": 90,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 343920000,
+        "stats": {
+          "atk": 855400,
+          "def": 566650,
+          "hp": 8940000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "754/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Coffee Cookie",
+        "kr": "커피맛 쿠키",
+        "resourceKey": "cookie0010",
+        "rarity": "U",
+        "element": "물/Water",
+        "class": "지원/Support",
+        "level": 80,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 345730000,
+        "stats": {
+          "atk": 855930,
+          "def": 558210,
+          "hp": 8460000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "841/1,000",
+        "usedIn": [],
+        "note": "SSR skillAmp 4.4 and SSR skillHaste 4; rest low-grade"
+      },
+      {
+        "en": "Zombie Cookie",
+        "kr": "좀비맛 쿠키",
+        "resourceKey": "cookie0013",
+        "rarity": "U",
+        "element": "풀/Grass",
+        "class": "방어/Tank",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 281860000,
+        "stats": {
+          "atk": 751700,
+          "def": 534970,
+          "hp": 7300000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "830/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Princess Cookie",
+        "kr": "공주맛 쿠키",
+        "resourceKey": "cookie0008",
+        "rarity": "U",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 292660000,
+        "stats": {
+          "atk": 749580,
+          "def": 531630,
+          "hp": 7420000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "815/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Knight Cookie",
+        "kr": "용사맛 쿠키",
+        "resourceKey": "cookie0009",
+        "rarity": "U",
+        "element": "빛/Light",
+        "class": "방어/Tank",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 285430000,
+        "stats": {
+          "atk": 756290,
+          "def": 548330,
+          "hp": 7350000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "774/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Angel Cookie",
+        "kr": "천사맛 쿠키",
+        "resourceKey": "cookie0012",
+        "rarity": "U",
+        "element": "빛/Light",
+        "class": "지원/Support",
+        "level": 90,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 351890000,
+        "stats": {
+          "atk": 838520,
+          "def": 587290,
+          "hp": 8830000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "829/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Gumball Cookie",
+        "kr": "버블껌맛 쿠키",
+        "resourceKey": "cookie0050",
+        "rarity": "U",
+        "element": "물/Water",
+        "class": "방어/Tank",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 289080000,
+        "stats": {
+          "atk": 784720,
+          "def": 533590,
+          "hp": 7300000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "895/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Onion Cookie",
+        "kr": "양파맛 쿠키",
+        "resourceKey": "cookie0058",
+        "rarity": "U",
+        "element": "어둠/Dark",
+        "class": "지원/Support",
+        "level": 1,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 282390000,
+        "stats": {
+          "atk": 737630,
+          "def": 530720,
+          "hp": 7300000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "864/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Red Pepper Cookie",
+        "kr": "홍고추맛 쿠키",
+        "resourceKey": "cookie0047",
+        "rarity": "U",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 80,
+        "stars": 9,
+        "skillTier": "V",
+        "power": 323530000,
+        "stats": {
+          "atk": 817100,
+          "def": 569860,
+          "hp": 8390000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "718/1,000",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Strawberry Cookie",
+        "kr": "딸기맛 쿠키",
+        "resourceKey": "cookie0002",
+        "rarity": "C",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 1,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 298100000,
+        "stats": {
+          "atk": 744610,
+          "def": 531680,
+          "hp": 7400000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Muscle Cookie",
+        "kr": "근육맛 쿠키",
+        "resourceKey": "cookie0015",
+        "rarity": "C",
+        "element": "어둠/Dark",
+        "class": "방어/Tank",
+        "level": 1,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 279870000,
+        "stats": {
+          "atk": 749840,
+          "def": 537150,
+          "hp": 7470000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Ninja Cookie",
+        "kr": "닌자맛 쿠키",
+        "resourceKey": "cookie0007",
+        "rarity": "C",
+        "element": "어둠/Dark",
+        "class": "사격/Ranged",
+        "level": 95,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 348950000,
+        "stats": {
+          "atk": 824230,
+          "def": 584840,
+          "hp": 8470000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Wizard Cookie",
+        "kr": "마법사맛 쿠키",
+        "resourceKey": "cookie0025",
+        "rarity": "C",
+        "element": "빛/Light",
+        "class": "사격/Ranged",
+        "level": 95,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 358320000,
+        "stats": {
+          "atk": 829690,
+          "def": 610270,
+          "hp": 8390000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Skater Cookie",
+        "kr": "보더맛 쿠키",
+        "resourceKey": "cookie0011",
+        "rarity": "C",
+        "element": "물/Water",
+        "class": "돌격/Charge",
+        "level": 1,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 305950000,
+        "stats": {
+          "atk": 773010,
+          "def": 536120,
+          "hp": 7290000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "GingerBrave",
+        "kr": "용감한 쿠키",
+        "resourceKey": "cookie0001",
+        "rarity": "C",
+        "element": "불/Fire",
+        "class": "돌격/Charge",
+        "level": 1,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 294170000,
+        "stats": {
+          "atk": 748330,
+          "def": 531680,
+          "hp": 7330000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      },
+      {
+        "en": "Blueberry Bird",
+        "kr": "블루베리 새",
+        "resourceKey": "cookie4021",
+        "rarity": "C",
+        "element": "물/Water",
+        "class": "지원/Support",
+        "level": 90,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 353690000,
+        "stats": {
+          "atk": 832230,
+          "def": 571870,
+          "hp": 8610000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "One SSR skillAmp 4.4 line; rest low-grade"
+      },
+      {
+        "en": "Sugar Gnome",
+        "kr": "설탕노움",
+        "resourceKey": "cookie4022",
+        "rarity": "C",
+        "element": "풀/Grass",
+        "class": "돌격/Charge",
+        "level": 1,
+        "stars": 10,
+        "skillTier": "V",
+        "power": 295220000,
+        "stats": {
+          "atk": 736000,
+          "def": 533540,
+          "hp": 7570000,
+          "basis": "info page with the Conquest gear preset equipped"
+        },
+        "runes": null,
+        "runesLockedUntil10Stars": null,
+        "promotion": "max",
+        "usedIn": [],
+        "note": "Low-grade lines only"
+      }
+    ],
+    "screens": [
+      "cookie-info-sheets.png",
+      "runes-sheets.png"
+    ],
+    "levelNote": "Cookie level cap is 118 at Crumble Lv.194 (one cookie level per 5 Crumble levels past 100). Lv.118→119 costs 28,013K EXP per cookie; 40.6M banked. Pinot and Dark Choco are Lv.118 for stage pushing and are reset before Guild Conquest.",
+    "runesNote": "Runes re-read for the Conquest deck and the cookies before Dr. Bones in the rune cycle; the rest carry over from 2026-10-07."
+  },
+  "statPanels": {
+    "capturedAt": "2026-10-07T13:01:00+02:00",
+    "Brightseeker Cookie": {
+      "gearPreset": "Conquest",
+      "atk": 2981000,
+      "def": 1566000,
+      "hp": 32441000,
+      "critRate": 436.61,
+      "critRes": 190.44,
+      "critDmg": 714.31,
+      "dmgReduction": 42.41,
+      "moveSpeed": 3.5,
+      "skillAmp": 70.75,
+      "skillHaste": 21,
+      "skillPrep": 100,
+      "bossDmg": 88,
+      "elementalDmg": 107.4,
+      "accuracy": 1285.88,
+      "accuracyRate": 55,
+      "evasion": 858.9,
+      "focus": 1039.42
+    },
+    "screens": [
+      "stats-brightseeker-1.jpg",
+      "stats-brightseeker-2.jpg",
+      "stats-brightseeker-3.jpg"
+    ]
+  },
+  "presets": [
+    {
+      "name": "Conquest",
+      "capturedAt": "2026-10-10T10:15:00+02:00",
+      "equipped": true,
+      "slots": [
+        {
+          "slot": "TL1",
+          "item": "Axe-Spear of Blind Destruction",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "atk",
+            "value": 10769
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 8.8
+            },
+            {
+              "stat": "critDmg",
+              "value": 16.56
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "TL2",
+          "item": "Resplendent Wind Guardian",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "accuracy",
+            "value": 669.98
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 8.48
+            },
+            {
+              "stat": "critDmg",
+              "value": 15.2
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TL3",
+          "item": "Dreaming Moon",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "critRate",
+            "value": 55.43
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 9.15
+            },
+            {
+              "stat": "critDmg",
+              "value": 14.6
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BL1",
+          "item": "Helmet of Silence",
+          "grade": "Eternal",
+          "level": 112,
+          "main": {
+            "stat": "def",
+            "value": 7858
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.78
+            },
+            {
+              "stat": "hp",
+              "value": 10414
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BL2",
+          "item": "Awakened Dragon Lord's Armor",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "hp",
+            "value": 126880
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.25
+            },
+            {
+              "stat": "hp",
+              "value": 9412
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "BL3",
+          "item": "Hollyberry Shield",
+          "grade": "Eternal",
+          "level": 113,
+          "main": {
+            "stat": "evasion",
+            "value": 549.4
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.87
+            },
+            {
+              "stat": "hp",
+              "value": 10700
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "TR1",
+          "item": "Endless Void Necklace",
+          "grade": "Eternal",
+          "level": 116,
+          "main": {
+            "stat": "critRes",
+            "value": 54.46
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 9.03
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TR2",
+          "item": "Eternally Sweet Paradise",
+          "grade": "Eternal",
+          "level": 113,
+          "main": {
+            "stat": "focus",
+            "value": 597.64
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 8.97
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "TR3",
+          "item": "Light of Deceit",
+          "grade": "Eternal",
+          "level": 116,
+          "main": {
+            "stat": "resistance",
+            "value": 565.8
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 9.01
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BR1",
+          "item": "Free Explorer's Lily",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "critDmg",
+            "value": 41.93
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.64
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BR2",
+          "item": "Ultimate Recipe Book",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "skillAmp",
+            "value": 20.2
+          },
+          "subs": [
+            {
+              "stat": "critRes",
+              "value": 21.85
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "BR3",
+          "item": "Rainbow Ginseng",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "dmgReduction",
+            "value": 17.39
+          },
+          "subs": [
+            {
+              "stat": "critRes",
+              "value": 20.9
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 16
+        }
+      ],
+      "screens": [
+        "gear-conquest-sheet.png"
+      ]
+    },
+    {
+      "name": "Power",
+      "capturedAt": "2026-10-10T10:15:00+02:00",
+      "equipped": false,
+      "slots": [
+        {
+          "slot": "TL1",
+          "item": "Axe-Spear of Blind Destruction",
+          "grade": "Eternal",
+          "level": 114,
+          "main": {
+            "stat": "atk",
+            "value": 10256
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 7.88
+            },
+            {
+              "stat": "accuracy",
+              "value": 179.38
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "TL2",
+          "item": "Resplendent Wind Guardian",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "accuracy",
+            "value": 669.98
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 8.99
+            },
+            {
+              "stat": "critDmg",
+              "value": 16.14
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TL3",
+          "item": "Dreaming Moon",
+          "grade": "Eternal",
+          "level": 114,
+          "main": {
+            "stat": "critRate",
+            "value": 53.02
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 20.07
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.83
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BL1",
+          "item": "Helmet of Silence",
+          "grade": "Eternal",
+          "level": 113,
+          "main": {
+            "stat": "def",
+            "value": 7993
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.85
+            },
+            {
+              "stat": "critRes",
+              "value": 19.71
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BL2",
+          "item": "Awakened Dragon Lord's Armor",
+          "grade": "Eternal",
+          "level": 115,
+          "main": {
+            "stat": "hp",
+            "value": 122580
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 5.61
+            },
+            {
+              "stat": "critRes",
+              "value": 21.06
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "BL3",
+          "item": "Hollyberry Shield",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "evasion",
+            "value": 569.9
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.9
+            },
+            {
+              "stat": "critRes",
+              "value": 18.56
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "TR1",
+          "item": "Endless Void Necklace",
+          "grade": "Eternal",
+          "level": 113,
+          "main": {
+            "stat": "critRes",
+            "value": 52.05
+          },
+          "subs": [
+            {
+              "stat": "focus",
+              "value": 215.12
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.44
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TR2",
+          "item": "Eternally Sweet Paradise",
+          "grade": "Eternal",
+          "level": 112,
+          "main": {
+            "stat": "focus",
+            "value": 593.18
+          },
+          "subs": [
+            {
+              "stat": "accuracy",
+              "value": 172.08
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.53
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "TR3",
+          "item": "Light of Deceit",
+          "grade": "Eternal",
+          "level": 113,
+          "main": {
+            "stat": "resistance",
+            "value": 549.4
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 18.3
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.97
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BR1",
+          "item": "Free Explorer's Lily",
+          "grade": "Eternal",
+          "level": 112,
+          "main": {
+            "stat": "critDmg",
+            "value": 38.56
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.21
+            },
+            {
+              "stat": "critRes",
+              "value": 21.06
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BR2",
+          "item": "Ultimate Recipe Book",
+          "grade": "Eternal",
+          "level": 114,
+          "main": {
+            "stat": "skillAmp",
+            "value": 19.16
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.04
+            },
+            {
+              "stat": "critRes",
+              "value": 21.91
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "BR3",
+          "item": "Rainbow Ginseng",
+          "grade": "Eternal",
+          "level": 110,
+          "main": {
+            "stat": "dmgReduction",
+            "value": 15.61
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.8
+            },
+            {
+              "stat": "critRes",
+              "value": 21.78
+            }
+          ],
+          "enhance": 16
+        }
+      ],
+      "screens": [
+        "gear-power-sheet.png"
+      ]
+    },
+    {
+      "name": "PvP",
+      "capturedAt": "2026-10-10T10:15:00+02:00",
+      "equipped": false,
+      "slots": [
+        {
+          "slot": "TL1",
+          "item": "Axe-Spear of Blind Destruction",
+          "grade": "Eternal",
+          "level": 113,
+          "main": {
+            "stat": "atk",
+            "value": 10099
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 20.35
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.78
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "TL2",
+          "item": "Resplendent Wind Guardian",
+          "grade": "Eternal",
+          "level": 112,
+          "main": {
+            "stat": "accuracy",
+            "value": 641.06
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 19.68
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.94
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TL3",
+          "item": "Dreaming Moon",
+          "grade": "Eternal",
+          "level": 111,
+          "main": {
+            "stat": "critRate",
+            "value": 50.61
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 20.58
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.8
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BL1",
+          "item": "Helmet of Silence",
+          "grade": "Eternal",
+          "level": 110,
+          "main": {
+            "stat": "def",
+            "value": 7610
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.67
+            },
+            {
+              "stat": "critRes",
+              "value": 20.17
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BL2",
+          "item": "Awakened Dragon Lord's Armor",
+          "grade": "Eternal",
+          "level": 115,
+          "main": {
+            "stat": "hp",
+            "value": 122580
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.67
+            },
+            {
+              "stat": "critRes",
+              "value": 16.74
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "BL3",
+          "item": "Hollyberry Shield",
+          "grade": "Eternal",
+          "level": 110,
+          "main": {
+            "stat": "evasion",
+            "value": 533
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 5.72
+            },
+            {
+              "stat": "critRes",
+              "value": 20.74
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "TR1",
+          "item": "Endless Void Necklace",
+          "grade": "Eternal",
+          "level": 115,
+          "main": {
+            "stat": "critRes",
+            "value": 53.98
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 22.01
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TR2",
+          "item": "Eternally Sweet Paradise",
+          "grade": "Eternal",
+          "level": 114,
+          "main": {
+            "stat": "focus",
+            "value": 602.1
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 8.53
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "TR3",
+          "item": "Light of Deceit",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "resistance",
+            "value": 569.9
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 8.21
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BR1",
+          "item": "Free Explorer's Lily",
+          "grade": "Eternal",
+          "level": 111,
+          "main": {
+            "stat": "critDmg",
+            "value": 38.07
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.8
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BR2",
+          "item": "Ultimate Recipe Book",
+          "grade": "Eternal",
+          "level": 113,
+          "main": {
+            "stat": "skillAmp",
+            "value": 19.16
+          },
+          "subs": [
+            {
+              "stat": "dmgReduction",
+              "value": 6.83
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "BR3",
+          "item": "Rainbow Ginseng",
+          "grade": "Eternal",
+          "level": 117,
+          "main": {
+            "stat": "dmgReduction",
+            "value": 17.39
+          },
+          "subs": [
+            {
+              "stat": "critRes",
+              "value": 20.9
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 16
+        }
+      ],
+      "screens": [
+        "gear-pvp-sheet.png"
+      ]
+    },
+    {
+      "name": "Hit",
+      "capturedAt": "2026-10-10T10:15:00+02:00",
+      "equipped": false,
+      "slots": [
+        {
+          "slot": "TL1",
+          "item": "Ruthless Red Dragon's Greatsword",
+          "grade": "Legendary",
+          "level": 81,
+          "main": {
+            "stat": "atk",
+            "value": 5024
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 5.88
+            },
+            {
+              "stat": "critDmg",
+              "value": 11.04
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "TL2",
+          "item": "Divine Archer's Bow Sword",
+          "grade": "Unique",
+          "level": 82,
+          "main": {
+            "stat": "accuracy",
+            "value": 409.1
+          },
+          "subs": [
+            {
+              "stat": "accuracy",
+              "value": 134.36
+            },
+            {
+              "stat": "skillAmp",
+              "value": 4.73
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TL3",
+          "item": "Blazing Wildfire",
+          "grade": "Unique",
+          "level": 84,
+          "main": {
+            "stat": "critRate",
+            "value": 27.83
+          },
+          "subs": [
+            {
+              "stat": "skillAmp",
+              "value": 4.6
+            },
+            {
+              "stat": "critDmg",
+              "value": 5.56
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BL1",
+          "item": "Healer's Hat",
+          "grade": "Legendary",
+          "level": 82,
+          "main": {
+            "stat": "def",
+            "value": 4069
+          },
+          "subs": [
+            {
+              "stat": "evasion",
+              "value": 54.53
+            },
+            {
+              "stat": "critRes",
+              "value": 12.12
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BL2",
+          "item": "Starlight Traveler's Cloak",
+          "grade": "Unique",
+          "level": 79,
+          "main": {
+            "stat": "hp",
+            "value": 47415
+          },
+          "subs": [
+            {
+              "stat": "critRes",
+              "value": 14.44
+            },
+            {
+              "stat": "evasion",
+              "value": 87.64
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "BL3",
+          "item": "Awakened Dragon Lord's Shield",
+          "grade": "Legendary",
+          "level": 81,
+          "main": {
+            "stat": "evasion",
+            "value": 369
+          },
+          "subs": [
+            {
+              "stat": "def",
+              "value": 315
+            },
+            {
+              "stat": "critRes",
+              "value": 12.85
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "TR1",
+          "item": "Subtle Fragrant Remedy",
+          "grade": "Legendary",
+          "level": 84,
+          "main": {
+            "stat": "critRes",
+            "value": 29.81
+          },
+          "subs": [
+            {
+              "stat": "accuracy",
+              "value": 104.79
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TR2",
+          "item": "Giant Bear Jelly Gem Ring",
+          "grade": "Unique",
+          "level": 83,
+          "main": {
+            "stat": "focus",
+            "value": 382.45
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 14.35
+            },
+            {
+              "stat": "accuracy",
+              "value": 79.72
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "TR3",
+          "item": "Guardian's Brooch",
+          "grade": "Unique",
+          "level": 84,
+          "main": {
+            "stat": "resistance",
+            "value": 358.75
+          },
+          "subs": [
+            {
+              "stat": "atk",
+              "value": 174
+            },
+            {
+              "stat": "skillAmp",
+              "value": 3.81
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BR1",
+          "item": "Darkness-Imbued Skull",
+          "grade": "Legendary",
+          "level": 81,
+          "main": {
+            "stat": "critDmg",
+            "value": 21.23
+          },
+          "subs": [
+            {
+              "stat": "moveSpeed",
+              "value": 0.71
+            },
+            {
+              "stat": "critRes",
+              "value": 17.27
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BR2",
+          "item": "Forbidden Tome",
+          "grade": "Unique",
+          "level": 83,
+          "main": {
+            "stat": "skillAmp",
+            "value": 9.97
+          },
+          "subs": [
+            {
+              "stat": "resistance",
+              "value": 106.38
+            },
+            {
+              "stat": "evasion",
+              "value": 91.58
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "BR3",
+          "item": "Premium Grape Juice",
+          "grade": "Unique",
+          "level": 79,
+          "main": {
+            "stat": "dmgReduction",
+            "value": 8.18
+          },
+          "subs": [
+            {
+              "stat": "resistance",
+              "value": 99.49
+            },
+            {
+              "stat": "focus",
+              "value": 152.43
+            }
+          ],
+          "enhance": 16
+        }
+      ],
+      "screens": [
+        "gear-hit-sheet.png"
+      ]
+    },
+    {
+      "name": "Evasion",
+      "capturedAt": "2026-10-10T10:15:00+02:00",
+      "equipped": false,
+      "slots": [
+        {
+          "slot": "TL1",
+          "item": "Axe-Spear of Blind Destruction",
+          "grade": "Eternal",
+          "level": 105,
+          "main": {
+            "stat": "atk",
+            "value": 8831
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 16.03
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.55
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "TL2",
+          "item": "Resplendent Wind Guardian",
+          "grade": "Eternal",
+          "level": 105,
+          "main": {
+            "stat": "accuracy",
+            "value": 597.68
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 18.03
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.11
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TL3",
+          "item": "Dreaming Moon",
+          "grade": "Eternal",
+          "level": 107,
+          "main": {
+            "stat": "critRate",
+            "value": 47.71
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 14.99
+            },
+            {
+              "stat": "skillAmp",
+              "value": 9.13
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BL1",
+          "item": "Helmet of Silence",
+          "grade": "Eternal",
+          "level": 110,
+          "main": {
+            "stat": "def",
+            "value": 7610
+          },
+          "subs": [
+            {
+              "stat": "evasion",
+              "value": 102.07
+            },
+            {
+              "stat": "critRes",
+              "value": 18.67
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BL2",
+          "item": "Awakened Dragon Lord's Armor",
+          "grade": "Eternal",
+          "level": 110,
+          "main": {
+            "stat": "hp",
+            "value": 112170
+          },
+          "subs": [
+            {
+              "stat": "evasion",
+              "value": 69.92
+            },
+            {
+              "stat": "dmgReduction",
+              "value": 6.64
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "BL3",
+          "item": "Hollyberry Shield",
+          "grade": "Eternal",
+          "level": 108,
+          "main": {
+            "stat": "evasion",
+            "value": 524.8
+          },
+          "subs": [
+            {
+              "stat": "evasion",
+              "value": 87.83
+            },
+            {
+              "stat": "critRes",
+              "value": 21.89
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "TR1",
+          "item": "Endless Void Necklace",
+          "grade": "Eternal",
+          "level": 109,
+          "main": {
+            "stat": "critRes",
+            "value": 49.16
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 14.32
+            },
+            {
+              "stat": "skillAmp",
+              "value": 7.36
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "TR2",
+          "item": "Eternally Sweet Paradise",
+          "grade": "Eternal",
+          "level": 110,
+          "main": {
+            "stat": "focus",
+            "value": 579.8
+          },
+          "subs": [
+            {
+              "stat": "resistance",
+              "value": 105.92
+            },
+            {
+              "stat": "skillAmp",
+              "value": 8.48
+            }
+          ],
+          "enhance": 16
+        },
+        {
+          "slot": "TR3",
+          "item": "Light of Deceit",
+          "grade": "Eternal",
+          "level": 107,
+          "main": {
+            "stat": "resistance",
+            "value": 520.7
+          },
+          "subs": [
+            {
+              "stat": "critRate",
+              "value": 17.75
+            },
+            {
+              "stat": "skillAmp",
+              "value": 9.1
+            }
+          ],
+          "enhance": 15
+        },
+        {
+          "slot": "BR1",
+          "item": "Free Explorer's Lily",
+          "grade": "Eternal",
+          "level": 114,
+          "main": {
+            "stat": "critDmg",
+            "value": 40
+          },
+          "subs": [
+            {
+              "stat": "evasion",
+              "value": 85.79
+            },
+            {
+              "stat": "dmgReduction",
+              "value": 6.48
+            }
+          ],
+          "enhance": 17
+        },
+        {
+          "slot": "BR2",
+          "item": "Ultimate Recipe Book",
+          "grade": "Eternal",
+          "level": 111,
+          "main": {
+            "stat": "skillAmp",
+            "value": 18.13
+          },
+          "subs": [
+            {
+              "stat": "evasion",
+              "value": 115.99
+            },
+            {
+              "stat": "skillHaste",
+              "value": 4.6
+            }
+          ],
+          "enhance": 18
+        },
+        {
+          "slot": "BR3",
+          "item": "Rainbow Ginseng",
+          "grade": "Eternal",
+          "level": 112,
+          "main": {
+            "stat": "dmgReduction",
+            "value": 16.05
+          },
+          "subs": [
+            {
+              "stat": "evasion",
+              "value": 115.59
+            },
+            {
+              "stat": "dmgReduction",
+              "value": 6.41
+            }
+          ],
+          "enhance": 16
+        }
+      ],
+      "screens": [
+        "gear-evasion-sheet.png"
+      ]
+    }
+  ],
+  "lineups": {
+    "conquest": {
+      "capturedAt": "2026-10-10T11:25:00+02:00",
+      "mode": "guild_conquest",
+      "lineupSlot": 2,
+      "gearPreset": "Conquest",
+      "power": 5640000000,
+      "captain": {
+        "en": "Milk Cookie's Crunchy Strong Pediatrician",
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "resourceKey": "cookie4019"
+      },
+      "matchesDeck": "chardonnay",
+      "note": "Read while the account was pushing main stages: Pinot and Dark Choco were Lv.118, and the user resets them before running the Piñata.",
+      "rows": [
+        [
+          {
+            "en": "Brightseeker Cookie",
+            "kr": "브라이트시커 쿠키",
+            "resourceKey": "cookie4013"
+          },
+          {
+            "en": "Scorpion Cookie",
+            "kr": "전갈맛 쿠키",
+            "resourceKey": "cookie0181"
+          },
+          {
+            "en": "Pinot Noir Cookie",
+            "kr": "피노누아맛 쿠키",
+            "resourceKey": "cookie4010"
+          },
+          {
+            "en": "Pomegranate Cookie",
+            "kr": "석류맛 쿠키",
+            "resourceKey": "cookie0126"
+          },
+          {
+            "en": "Tiger Lily Cookie",
+            "kr": "정글전사 쿠키",
+            "resourceKey": "cookie0040"
+          },
+          {
+            "en": "Dark Choco Cookie",
+            "kr": "다크초코 쿠키",
+            "resourceKey": "cookie0103"
+          }
+        ],
+        [
+          {
+            "en": "Chardonnay Cookie",
+            "kr": "샤르도네맛 쿠키",
+            "resourceKey": "cookie4011"
+          },
+          {
+            "en": "Melon Soda Cookie",
+            "kr": "메론소다맛 쿠키",
+            "resourceKey": "cookie3001"
+          },
+          {
+            "en": "Cheesecake Cookie",
+            "kr": "치즈케이크맛 쿠키",
+            "resourceKey": "cookie0037"
+          },
+          {
+            "en": "Skating Queen Cookie",
+            "kr": "피겨여왕맛 쿠키",
+            "resourceKey": "cookie0018"
+          },
+          {
+            "en": "Milk Cookie's Crunchy Strong Pediatrician",
+            "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+            "resourceKey": "cookie4019"
+          },
+          {
+            "en": "Tea Knight Cookie",
+            "kr": "실론나이트 쿠키",
+            "resourceKey": "cookie0532"
+          }
+        ]
+      ],
+      "pets": [
+        "Hot Doggie",
+        "Octo Wasabi",
+        "Candy Shade Pouch"
+      ],
+      "screens": [
+        "guild-conquest.png",
+        "guild-conquest-lineup.png"
+      ]
+    },
+    "rift": {
+      "capturedAt": "2026-10-07T13:25:00+02:00",
+      "mode": "dimensional_rift",
+      "lineupSlot": 4,
+      "gearPreset": "Conquest (equipped); lineup editor lists Power",
+      "power": 5080000000,
+      "captain": {
+        "en": "Milk Cookie's Crunchy Strong Pediatrician",
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "resourceKey": "cookie4019"
+      },
+      "rows": [
+        [
+          {
+            "en": "Macaron Cookie",
+            "kr": "마카롱맛 쿠키",
+            "resourceKey": "cookie0059"
+          },
+          {
+            "en": "Brightseeker Cookie",
+            "kr": "브라이트시커 쿠키",
+            "resourceKey": "cookie4013"
+          },
+          {
+            "en": "Rye Cookie",
+            "kr": "호밀맛 쿠키",
+            "resourceKey": "cookie0515"
+          },
+          {
+            "en": "Pinot Noir Cookie",
+            "kr": "피노누아맛 쿠키",
+            "resourceKey": "cookie4010"
+          },
+          {
+            "en": "Cheesecake Cookie",
+            "kr": "치즈케이크맛 쿠키",
+            "resourceKey": "cookie0037"
+          },
+          {
+            "en": "Pomegranate Cookie",
+            "kr": "석류맛 쿠키",
+            "resourceKey": "cookie0126"
+          }
+        ],
+        [
+          {
+            "en": "Skating Queen Cookie",
+            "kr": "피겨여왕맛 쿠키",
+            "resourceKey": "cookie0018"
+          },
+          {
+            "en": "Princess Bari Cookie",
+            "kr": "바리공주맛 쿠키",
+            "resourceKey": "cookie0081"
+          },
+          {
+            "en": "Milk Cookie's Crunchy Strong Pediatrician",
+            "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+            "resourceKey": "cookie4019"
+          },
+          {
+            "en": "Strawberry Crepe Cookie",
+            "kr": "딸기크레페맛 쿠키",
+            "resourceKey": "cookie0518"
+          },
+          {
+            "en": "Cherry Cola Cookie",
+            "kr": "체리콜라맛 쿠키",
+            "resourceKey": "cookie0250"
+          },
+          {
+            "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+            "kr": "감감술래 놀이 달토끼맛 쿠키",
+            "resourceKey": "cookie4025"
+          }
+        ]
+      ],
+      "rowsNote": "Order from the battle bar, not the formation grid",
+      "pets": [
+        "Continuum Cog",
+        "Candy Shade Pouch",
+        "Hot Doggie"
+      ],
+      "screens": [
+        "rift-lineup.jpg",
+        "lineup4-edit-view.jpg",
+        "cookie-list-promotion.jpg"
+      ]
+    },
+    "arena_def": {
+      "capturedAt": "2026-10-07T13:25:00+02:00",
+      "mode": "arena",
+      "side": "defense",
+      "lineupSlot": null,
+      "gearPreset": "PvP",
+      "power": 24270000,
+      "captain": {
+        "en": "Milk Cookie's Crunchy Strong Pediatrician",
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "resourceKey": "cookie4019"
+      },
+      "rows": [
+        [
+          {
+            "en": "Macaron Cookie",
+            "kr": "마카롱맛 쿠키",
+            "resourceKey": "cookie0059"
+          },
+          {
+            "en": "Pinot Noir Cookie",
+            "kr": "피노누아맛 쿠키",
+            "resourceKey": "cookie4010"
+          },
+          {
+            "en": "Pomegranate Cookie",
+            "kr": "석류맛 쿠키",
+            "resourceKey": "cookie0126"
+          },
+          {
+            "en": "Rockstar Cookie",
+            "kr": "락스타맛 쿠키",
+            "resourceKey": "cookie0027"
+          },
+          {
+            "en": "Nameless Cake Hound",
+            "kr": "이름 모를 케이크 들개",
+            "resourceKey": "cookie4024"
+          },
+          {
+            "en": "Herb Cookie",
+            "kr": "허브맛 쿠키",
+            "resourceKey": "cookie0063"
+          }
+        ],
+        [
+          {
+            "en": "Rye Cookie",
+            "kr": "호밀맛 쿠키",
+            "resourceKey": "cookie0515"
+          },
+          {
+            "en": "Cheesecake Cookie",
+            "kr": "치즈케이크맛 쿠키",
+            "resourceKey": "cookie0037"
+          },
+          {
+            "en": "Skating Queen Cookie",
+            "kr": "피겨여왕맛 쿠키",
+            "resourceKey": "cookie0018"
+          },
+          {
+            "en": "Milk Cookie's Crunchy Strong Pediatrician",
+            "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+            "resourceKey": "cookie4019"
+          },
+          {
+            "en": "Ion Cookie Robot",
+            "kr": "이온맛 쿠키로봇",
+            "resourceKey": "cookie0136"
+          },
+          {
+            "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+            "kr": "감감술래 놀이 달토끼맛 쿠키",
+            "resourceKey": "cookie4025"
+          }
+        ]
+      ],
+      "pets": [
+        "Hot Doggie",
+        "Holy Baby Drop",
+        "Icy Birdie"
+      ],
+      "matchesDeck": {
+        "record": "002-pvp-meta",
+        "id": "arena-rye-rockstar"
+      },
+      "screens": [
+        "arena-def-lineup.jpg",
+        "arena-def-formation.jpg",
+        "arena-def-pets.jpg"
+      ]
+    },
+    "arena_atk": {
+      "capturedAt": "2026-10-07T13:25:00+02:00",
+      "mode": "arena",
+      "side": "attack",
+      "lineupSlot": 2,
+      "gearPreset": "PvP",
+      "power": 24270000,
+      "captain": {
+        "en": "Milk Cookie's Crunchy Strong Pediatrician",
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "resourceKey": "cookie4019"
+      },
+      "rows": "same as arena_def",
+      "pets": [
+        "Holy Baby Drop",
+        "Hot Doggie",
+        "Icy Birdie"
+      ],
+      "matchesDeck": {
+        "record": "002-pvp-meta",
+        "id": "arena-rye-rockstar"
+      },
+      "screens": [
+        "arena-atk-lineup.jpg"
+      ]
+    },
+    "rumble_def": {
+      "capturedAt": "2026-10-07T13:25:00+02:00",
+      "mode": "rumble_arena",
+      "side": "defense",
+      "lineupSlot": null,
+      "gearPreset": "PvP",
+      "power": 25200000,
+      "captain": {
+        "en": "Milk Cookie's Crunchy Strong Pediatrician",
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "resourceKey": "cookie4019"
+      },
+      "rows": [
+        [
+          {
+            "en": "Macaron Cookie",
+            "kr": "마카롱맛 쿠키",
+            "resourceKey": "cookie0059"
+          },
+          {
+            "en": "Space Doughnut's Royal Excellence",
+            "kr": "도넛행성 에일리언 도넛킹",
+            "resourceKey": "cookie4018"
+          },
+          {
+            "en": "Cheesecake Cookie",
+            "kr": "치즈케이크맛 쿠키",
+            "resourceKey": "cookie0037"
+          },
+          {
+            "en": "Princess Bari Cookie",
+            "kr": "바리공주맛 쿠키",
+            "resourceKey": "cookie0081"
+          },
+          {
+            "en": "Nameless Cake Hound",
+            "kr": "이름 모를 케이크 들개",
+            "resourceKey": "cookie4024"
+          },
+          {
+            "en": "Herb Cookie",
+            "kr": "허브맛 쿠키",
+            "resourceKey": "cookie0063"
+          }
+        ],
+        [
+          {
+            "en": "Oven Wanderer Cookie",
+            "kr": "오븐방랑자 쿠키",
+            "resourceKey": "cookie4012"
+          },
+          {
+            "en": "Pinot Noir Cookie",
+            "kr": "피노누아맛 쿠키",
+            "resourceKey": "cookie4010"
+          },
+          {
+            "en": "Pomegranate Cookie",
+            "kr": "석류맛 쿠키",
+            "resourceKey": "cookie0126"
+          },
+          {
+            "en": "Milk Cookie's Crunchy Strong Pediatrician",
+            "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+            "resourceKey": "cookie4019"
+          },
+          {
+            "en": "Ion Cookie Robot",
+            "kr": "이온맛 쿠키로봇",
+            "resourceKey": "cookie0136"
+          },
+          {
+            "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+            "kr": "감감술래 놀이 달토끼맛 쿠키",
+            "resourceKey": "cookie4025"
+          }
+        ]
+      ],
+      "pets": [
+        "Hot Doggie",
+        "Icy Birdie",
+        "Holy Baby Drop"
+      ],
+      "matchesDeck": {
+        "record": "002-pvp-meta",
+        "id": "rumble-standard-12",
+        "diff": "Space Doughnut's Royal Excellence in Cherry Cola's slot"
+      },
+      "screens": [
+        "rumble-def-lineup.jpg",
+        "rumble-def-cards.jpg"
+      ]
+    },
+    "rumble_atk": {
+      "capturedAt": "2026-10-07T13:25:00+02:00",
+      "mode": "rumble_arena",
+      "side": "attack",
+      "lineupSlot": 1,
+      "gearPreset": "PvP",
+      "power": 24270000,
+      "captain": {
+        "en": "Milk Cookie's Crunchy Strong Pediatrician",
+        "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
+        "resourceKey": "cookie4019"
+      },
+      "rows": "same as arena_def",
+      "pets": [
+        "Holy Baby Drop",
+        "Icy Birdie",
+        "Hot Doggie"
+      ],
+      "matchesDeck": {
+        "record": "002-pvp-meta",
+        "id": "arena-rye-rockstar"
+      },
+      "screens": [
+        "rumble-atk-lineup.jpg"
+      ]
+    },
+    "crumble_dungeon": {
+      "capturedAt": "2026-10-07T13:25:00+02:00",
+      "mode": "crumble_dungeon",
+      "lineupSlot": null,
+      "gearPreset": "Conquest",
+      "power": 23690000000,
+      "captain": null,
+      "rows": "all owned cookies (top 40 by power deploy)",
+      "pets": [],
+      "screens": [
+        "crumble-dungeon.jpg"
+      ]
+    }
+  },
+  "pets": {
+    "capturedAt": "2026-10-10T10:50:00+02:00",
+    "owned": "57/57",
+    "list": [
+      {
+        "name": "Gold Drop",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally CRIT% +14%",
+        "ownedEffect": "Support CRIT% 4.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Fluffy Cheese Cat",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Chain synergy +2; receiving ally ATK +10%",
+        "ownedEffect": "Tank CRIT RES 4.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Kiwi Bird",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally DEF +20%",
+        "ownedEffect": "Charge CRIT RES 4.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Furball Pup",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Projectile Speed synergy +50%; receiving ally ATK +10%",
+        "ownedEffect": "Ranged CRIT RES 4.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Marshmallow Hamster",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Dark ally CRIT DMG +28%",
+        "ownedEffect": "Support CRIT RES 4.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Banana Lion",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Range synergy +30%; receiving ally ATK +10%",
+        "ownedEffect": "Grass Elemental DMG 5.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Octo Wasabi",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Duration synergy +40%; receiving ally ATK +10%",
+        "ownedEffect": "Water ATK +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Hot Doggie",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally Skill AMP +10%",
+        "ownedEffect": "Grass ATK +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Avocatapult",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally Resistance +10%",
+        "ownedEffect": "Light ATK +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Mango Toucan",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally Evasion +10%",
+        "ownedEffect": "Dark ATK +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Rooty",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally Accuracy +10%",
+        "ownedEffect": "Fire DEF +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Floral Froglet",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Fire ally CRIT DMG +28%",
+        "ownedEffect": "Water DEF +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Yule Log Cake",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Water ally CRIT DMG +28%",
+        "ownedEffect": "Grass DEF +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Pterosatchel",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Grass ally CRIT DMG +28%",
+        "ownedEffect": "Light DEF +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Bonbon Birdy",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Light ally CRIT DMG +28%",
+        "ownedEffect": "Dark DEF +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Yakgwa Pupper",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally Focus +10%",
+        "ownedEffect": "Fire HP +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Eggbeak",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Charge ally DMG Reduction +20%",
+        "ownedEffect": "Water HP +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Breadog",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Tank ally Evasion +20%",
+        "ownedEffect": "Grass HP +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Berry Angrybeak",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ranged ally Accuracy +20%",
+        "ownedEffect": "Light HP +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Constable Whiskers",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Support ally Focus +20%",
+        "ownedEffect": "Dark HP +160",
+        "promotion": "max"
+      },
+      {
+        "name": "Holy Baby Drop",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally ATK +20%",
+        "ownedEffect": "Charge CRIT% 4.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Chargemellow",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Rapid Fire synergy +2; receiving ally ATK +10%",
+        "ownedEffect": "Ranged CRIT% 4.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Candy Shade Pouch",
+        "rarity": "SSR",
+        "stars": 20,
+        "companionEffect": "Ally lift RES 30%, max HP +12.5%",
+        "ownedEffect": "Water Elemental DMG 5.00%",
+        "promotion": "max"
+      },
+      {
+        "name": "Sweet n' Sour",
+        "rarity": "SSR",
+        "stars": 15,
+        "companionEffect": "Ally CRIT DMG +13%",
+        "ownedEffect": "Fire ATK +122",
+        "promotion": "0/6"
+      },
+      {
+        "name": "Majestic King Choco Drop",
+        "rarity": "SSR",
+        "stars": 10,
+        "companionEffect": "Ally Max HP +16%",
+        "ownedEffect": "Fire Elemental DMG 2.80%",
+        "promotion": "1/4"
+      },
+      {
+        "name": "Continuum Cog",
+        "rarity": "SSR",
+        "stars": 0,
+        "companionEffect": "+50% ally Boss DMG in the Dimensional Rift",
+        "ownedEffect": "Charge Evasion +3.00",
+        "promotion": "0/1"
+      },
+      {
+        "name": "Apple Rabbit",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Fire ally ATK +24%",
+        "ownedEffect": "Support Evasion +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Lemon Slice",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Water ally ATK +24%",
+        "ownedEffect": "Tank Focus +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Owlcorn",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Grass ally ATK +24%",
+        "ownedEffect": "Charge Focus +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Mini Orange Mouse",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Light ally ATK +24%",
+        "ownedEffect": "Ranged Focus +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Sweet Rice Seal",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Dark ally ATK +24%",
+        "ownedEffect": "Support Focus +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Firestarter",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Charge ally CRIT DMG +14%",
+        "ownedEffect": "Tank Resistance +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Milk Angel",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Tank ally CRIT RES +14%",
+        "ownedEffect": "Charge Resistance +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Junior Sleuth Ted",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Ranged ally CRIT DMG +14%",
+        "ownedEffect": "Ranged Resistance +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Lord Crumbles III",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Support ally Skill AMP +12%",
+        "ownedEffect": "Support Resistance +46",
+        "promotion": "max"
+      },
+      {
+        "name": "Creamtese",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Ally ATK +12%",
+        "ownedEffect": "Tank CRIT% 3.33%",
+        "promotion": "max"
+      },
+      {
+        "name": "Icy Birdie",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Ally DMG Reduction +12%",
+        "ownedEffect": "Charge CRIT% 3.33%",
+        "promotion": "max"
+      },
+      {
+        "name": "Soda Dollop",
+        "rarity": "SR",
+        "stars": 20,
+        "companionEffect": "Ally Max HP +12%",
+        "ownedEffect": "Ranged CRIT% 3.33%",
+        "promotion": "max"
+      },
+      {
+        "name": "Little Ghost",
+        "rarity": "R",
+        "stars": null,
+        "companionEffect": "Ally Push RES +18%",
+        "ownedEffect": "Ranged HP +82",
+        "promotion": "39/200"
+      },
+      {
+        "name": "Panda Dumpling",
+        "rarity": "R",
+        "stars": null,
+        "companionEffect": "Ally Lift RES +18%",
+        "ownedEffect": "Support HP +82",
+        "promotion": "109/200"
+      },
+      {
+        "name": "Dark Spirit Helmet",
+        "rarity": "R",
+        "stars": null,
+        "companionEffect": "Ally Move SPD +7%",
+        "ownedEffect": "Tank CRIT% 2.65%",
+        "promotion": "122/200"
+      },
+      {
+        "name": "Cloud Pelican",
+        "rarity": "R",
+        "stars": null,
+        "companionEffect": "Fire ally Max HP +16%",
+        "ownedEffect": "Charge CRIT% 2.65%",
+        "promotion": "97/200"
+      },
+      {
+        "name": "Fruit Doe",
+        "rarity": "R",
+        "stars": null,
+        "companionEffect": "Water ally Max HP +16%",
+        "ownedEffect": "Ranged CRIT% 2.65%",
+        "promotion": "85/200"
+      }
+    ],
+    "unreadNote": "The remaining R and C pets past Fruit Doe were not opened",
+    "screens": [
+      "pet-shelter.jpg",
+      "pet-list.jpg",
+      "pet-gold-drop.jpg",
+      "pet-details-01.jpg",
+      "pet-details-02.jpg",
+      "pet-details-03.jpg"
+    ],
+    "note": "Pet list re-checked on 2026-10-10: unchanged from 2026-10-07 (57/57; Sweet n' Sour 15★ 0/6, King Choco Drop 10★ 1/4, Continuum Cog 0★ 0/1)."
+  },
+  "treasures": {
+    "capturedAt": "2026-10-07T12:51:00+02:00",
+    "value": null,
+    "note": "No treasure or artifact menu found on the EN client's bottom bar",
+    "screens": []
+  },
+  "perks": {
+    "capturedAt": "2026-10-07T13:25:00+02:00",
+    "value": null,
+    "captain": "Milk (flag on her card in every lineup read)",
+    "note": "Mercenary perks (용병단 복지) not found without opening an edit screen",
+    "screens": [
+      "arena-def-cards.jpg"
+    ]
+  },
+  "build": {
+    "resolve": {
+      "capturedAt": "2026-10-10T11:00:00+02:00",
+      "stage": 1097,
+      "nextCost": 1460000000000,
+      "screens": [
+        "build-resolve.png"
+      ]
+    },
+    "fame": {
+      "capturedAt": "2026-10-10T11:00:00+02:00",
+      "level": 133,
+      "bossDmg": 90,
+      "elementalDmg": 88,
+      "elementalDmgNext": 90,
+      "critDmg": 88,
+      "medals": 17,
+      "nextCost": 200,
+      "screens": [
+        "build-fame.png"
+      ]
+    },
+    "gnomeLab": {
+      "capturedAt": "2026-10-10T11:00:00+02:00",
+      "inProgress": {
+        "id": "75-1",
+        "effect": "CRIT% 7.00% → 9.30%",
+        "node": "3/8",
+        "remaining": "7h53m"
+      },
+      "special": {
+        "next": "Special Research 20",
+        "effect": "Select +1 Sub Stat on Auto Bake",
+        "requires": "research 113-1"
+      },
+      "screens": [
+        "build-gnome-lab.png",
+        "build-gnome-lab-special.png"
+      ]
+    },
+    "stellarLinks": {
+      "capturedAt": "2026-10-10T11:02:00+02:00",
+      "constellation": 8,
+      "area": 86,
+      "atkAmp": 111.8,
+      "defAmp": 111.8,
+      "hpAmp": 111.8,
+      "starshards": "722/735",
+      "stellarPoints": 44630,
+      "shuffleCost": 150,
+      "byConstellation": {
+        "6": {
+          "area": 96,
+          "amp": 76.8,
+          "shuffleCost": 220
+        },
+        "7": {
+          "area": 94,
+          "amp": 94,
+          "shuffleCost": 220
+        },
+        "8": {
+          "area": 86,
+          "amp": 111.8,
+          "shuffleCost": 150
+        }
+      },
+      "note": "Constellation 8 has 7 points open (a point every 15 cookie stars; the 8th opens at 735). A regular heptagon covers ~87.1% of the circle, so 86% is near this point count's ceiling.",
+      "screens": [
+        "build-stellar-links.png",
+        "build-stellar-constellations.png"
+      ]
+    }
+  },
+  "guildResearch": {
+    "capturedAt": "2026-10-10T11:10:00+02:00",
+    "guildLevel": 15,
+    "members": "30/30",
+    "guildPower": 708850000000,
+    "centerLevel": 14,
+    "inProgress": {
+      "id": "14-3",
+      "effect": "Dark Cookie Elemental DMG 10.00%",
+      "progress": "229/6,418 (3%)",
+      "donateCost": "100 gems"
+    },
+    "done": [
+      "13-*",
+      "14-1 Grass",
+      "14-2 Light"
+    ],
+    "locked": [
+      "15-* ATK/DEF/HP"
+    ],
+    "screens": [
+      "guild-hall.png",
+      "guild-research.png"
+    ]
+  },
+  "progress": {
+    "capturedAt": "2026-10-10T11:25:00+02:00",
+    "stage": {
+      "repeating": "354-12",
+      "lastStage": "364-30",
+      "serverRank": 3,
+      "note": "Stages run to 364-30 since 10-08; the account is pushing them."
+    },
+    "rift": {
+      "season": 1,
+      "bestLevel": 19,
+      "bestAt": "2026-10-07T05:46:56",
+      "repeatingLevel": 20,
+      "autoSummon": true,
+      "dimensionalEnergyLevel": 18,
+      "serverRank": 517,
+      "riftHeaderPower": null,
+      "bracket": null,
+      "screens": [
+        "ranking-rift.jpg",
+        "rift-main.jpg"
+      ]
+    },
+    "guildConquest": {
+      "boss": "Extra-Stuffed Piñata",
+      "weakness": "Light",
+      "seasonBest": 4613000000000,
+      "playerRank": 12,
+      "guildRank": 1,
+      "seasonState": "Season 7, ends in 1d 20h56m from 11:25",
+      "macroRuns": "403 runs logged by the retry loop to 06:28",
+      "screens": [
+        "guild-conquest.png"
+      ]
+    },
+    "arena": {
+      "season": 5,
+      "rank": 4,
+      "trophies": 4453,
+      "league": "Grandmaster 1",
+      "top3": [
+        4696,
+        4652,
+        4556
+      ],
+      "seasonEndsIn": "15h40m from 13:20",
+      "screens": [
+        "arena-lobby.jpg"
+      ]
+    },
+    "rumbleArena": {
+      "season": 1,
+      "rank": 734,
+      "trophies": 2835,
+      "league": "Elite Master 1",
+      "nextPromotion": "3,000 trophies or top 100",
+      "top3": [
+        6875,
+        6859,
+        6657
+      ],
+      "seasonBuff": "Charge class HP +30%",
+      "seasonEndsIn": "15h31m from 13:28",
+      "screens": [
+        "rumble-lobby.jpg"
+      ]
+    },
+    "crumbleDungeon": {
+      "boss": "Holy Golden Drop",
+      "weeklyBest": 128359000000,
+      "weeklyRank": 6,
+      "top3": [
+        488225000000,
+        319277000000,
+        268478000000
+      ],
+      "squadPower": 23690000000,
+      "gearPreset": "Conquest",
+      "screens": [
+        "crumble-dungeon.jpg"
+      ]
+    },
+    "plaqueTower": {
+      "floor": 850,
+      "screens": [
+        "challenge-dungeons.jpg"
+      ]
+    },
+    "rankings": {
+      "totalPower": {
+        "rank": 3,
+        "value": 26861000000
+      },
+      "teamPower": {
+        "rank": 3,
+        "value": 5085000000
+      },
+      "screens": [
+        "ranking-total-power.jpg",
+        "ranking-team-power.jpg"
+      ]
+    },
+    "gacha": {
+      "cookieGachaLevel": 10,
+      "bariPickupCounter": "3,017/3,060 (guaranteed at 3,060)",
+      "screens": [
+        "gacha-bari-pickup.jpg"
+      ]
+    }
+  },
+  "unread": [
+    "Mercenary band level and perks per lineup",
+    "Rift, Arena, Rumble and Crumble Dungeon lineups and progress since 10-07 (carried over)",
+    "In-battle ATK order for Conquest with the fillers reset",
+    "Arena and Rumble tickets, Dungeon entries",
+    "Runes of the cookies after Dr. Bones in the rune cycle (carried over from 10-07)",
+    "Collection effects past the first screen",
+    "Which Gnome Lab rows are done besides the one in progress",
+    "Oven 40 upgrade cost"
+  ],
+  "plating": {
+    "capturedAt": "2026-10-10T11:35:00+02:00",
+    "enhanceBySlot": {
+      "TL1": 18,
+      "TL2": 17,
+      "TL3": 17,
+      "BL1": 15,
+      "BL2": 16,
+      "BL3": 15,
+      "TR1": 17,
+      "TR2": 16,
+      "TR3": 15,
+      "BR1": 17,
+      "BR2": 18,
+      "BR3": 16
+    },
+    "note": "Plating stays with the slot across presets. Sub-stat boost moves only every fifth level (+130% at 15–19, +200% at 20).",
+    "nextTry": {
+      "slot": "TL1",
+      "from": 18,
+      "to": 19,
+      "superPct": 0.2,
+      "upgradePct": 6,
+      "noChangePct": 85.8,
+      "downgradePct": 0,
+      "breakPct": 8,
+      "breakDrop": 2,
+      "chocosteel": 20,
+      "syrupToPreventBreak": 4,
+      "mainBoost": "159% → 177%",
+      "subBoost": "130% (unchanged)",
+      "downgradeBlocked": true
+    },
+    "screens": [
+      "plating.png",
+      "plating-odds.png"
+    ]
+  },
+  "collection": {
+    "capturedAt": "2026-10-10T10:55:00+02:00",
+    "activeEffectsPartial": {
+      "atk": {
+        "tank": 622,
+        "charge": 221,
+        "ranged": 289,
+        "support": 168,
+        "fire": 214,
+        "water": 973,
+        "grass": 102,
+        "light": 223,
+        "dark": 79
+      },
+      "def": {
+        "tank": 142,
+        "charge": 123,
+        "ranged": 645,
+        "support": 116,
+        "fire": 43,
+        "water": 63,
+        "grass": 43
+      }
+    },
+    "note": "Flat stats only; the list scrolls past what was read.",
+    "screens": [
+      "collection-effects.png"
+    ]
+  }
+}
