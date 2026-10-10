@@ -51,39 +51,42 @@
     "name_en": "Chardonnay deck",
     "name_kr": "샤르도네덱",
     "status": "meta",
-    "ceiling": "≥4T 647G in battle; best final 4T 300G at 4.29G (≈1000×), Season 7",
-    "summary": "The Cherry deck with Chardonnay for Macaron and Melon Soda for Cherry. Her line crit buff makes formation and move speed unnecessary.",
+    "ceiling": "8T 069G result (1300×, deck stated); 6T 351G at 8.04G with the lineup on screen; Season 7",
+    "summary": "The Cherry deck with Chardonnay for Macaron and a sub-dealer for Cherry. Her line crit buff makes formation and move speed unnecessary.",
     "cookies": [
-      { "kr": "우유", "level_rule": "Max level (Lv.118 on 10-09; Lv.120 needs account Lv.200)", "stars": "10★", "why": "ATK #1 for both perks; 탄속 makes her a fixed beam target." },
-      { "kr": "샤르도네", "level_rule": "Max level (Lv.118 in the 4T runs)", "stars": "9–10★ in the 4T runs; an 8★ lost to a 9★ Macaron in the one paired test; 5★ wins only in unpaired claims, likely Lv.118 vs Lv.100", "why": "Line crit buff + 다발 2; 탄속 takes a beam at any ATK." },
+      { "kr": "우유", "level_rule": "Max level (Lv.118–119 on 10-10; Lv.120 needs account Lv.200)", "stars": "10★", "why": "ATK #1 for both perks; 탄속 makes her a fixed beam target." },
+      { "kr": "샤르도네", "level_rule": "Max level (Lv.118–119 in the top runs)", "stars": "10★ doubled a 9★ Macaron's mean in a 50-run paired test; below 9★, only a text claim of 8★ losing", "why": "Line crit buff + 다발 2; 탄속 takes a beam at any ATK." },
       { "kr": "브시커", "level_rule": "Max level", "why": "The carry, over 70% of damage; a beam recipient." },
       { "kr": "피겨", "level_rule": "Max level", "why": "Skill-amp buffer and beam recipient." },
       { "kr": "실론", "level_rule": "Max level", "why": "Conquest-only Boss DMG buff; beam recipient." },
       { "kr": "치케", "level_rule": "Max level", "why": "Buffs Milk's ATK; sixth beam recipient." },
       { "kr": "석류", "level_rule": "Lv.1 or max: no damage difference", "why": "Gives the beams; Lv.1 only lowers power, max helps survival." },
-      { "kr": "정전", "level_rule": "Lv.1–40, under the 6th recipient's ATK (Lv.80 in a survival build)", "why": "다발 3 for the sixth beam; Push RES makes it land only sometimes." },
-      { "kr": "전갈", "level_rule": "Lv.1–65, 7th in ATK after Octo Wasabi's bonus", "why": "Catches stray beams so fillers don't." },
-      { "kr": "닼초", "level_rule": "Lv.1–40, under the beam line", "why": "DEF shred; haste runes." },
-      { "kr": "피노", "level_rule": "Lv.1 (Lv.90 in a survival build)", "why": "Lift resistance for the carries." },
-      { "kr": "메소", "level_rule": "Lv.1–78, under Scorpion's ATK; no move speed", "why": "Sub-dealer in Cherry's old slot; no formation job left." }
+      { "kr": "정전", "level_rule": "Lv.1–40, under the 6th recipient's ATK (Lv.73–100 in survival builds)", "why": "다발 3 for the sixth beam; when it misses, Tea Knight loses his." },
+      { "kr": "전갈", "level_rule": "Lv.1–65, 7th in ATK after Octo Wasabi's bonus", "why": "Sub-dealer whose poison crits (datamine); catches stray beams." },
+      { "kr": "닼초", "level_rule": "Lv.1–40, under the beam line (Lv.50–88 in survival builds)", "why": "DEF shred; haste runes." },
+      { "kr": "피노", "level_rule": "Lv.1 (Lv.70–119 in survival builds)", "why": "Lift resistance for the carries." },
+      { "kr": "메소", "level_rule": "Lv.1–78, under Scorpion's ATK; no move speed", "why": "Sub-dealer in Cherry's old slot; Strawberry Crepe here leads the on-screen top runs." }
     ],
     "atk_order": ["우유", "샤르도네", "브시커", "피겨", "실론", "치케"],
-    "atk_order_note": "Milk and Chardonnay take beams first through 탄속 at any ATK; the rest go by ATK. Scorpion 7th, then Melon Soda.",
+    "atk_order_note": "Milk and Chardonnay take beams first through 탄속; the rest go by ATK, their order within the six barely matters. Sub-dealers under Cheesecake.",
     "pets": ["핫도그", "와사비문어", "색동주머니"],
     "perks": "Leader Milk; 열정페이 + 초고속승진 on Milk (승진 only below mercenary Lv.4).",
-    "formation": "No Cherry and no move speed needed. Optional speed on Pinot and Melon Soda helps Tiger Lily's 다발 3 reach Pomegranate (2 of 3 runs, one poster).",
+    "formation": "No Cherry and no move speed needed. Strawberry Crepe stands ahead of Tiger Lily and pushes her toward Pomegranate (stated).",
     "substitutions": [
-      "Melon Soda → Strawberry Crepe Lv.50, or Popcorn: 1T 275G at 1.7G with both; posters split on the best of the three.",
-      "Fillers Lv.40–90, still under the 6th recipient's ATK: all twelve alive at 5.8 s left in one run.",
-      "Tiger Lily → a dealer: 1.09T at 2.32G; 저장용 tried dealers and came back to Tiger Lily.",
-      "Chardonnay under 9★: one paired test had 8★ at 3.6T vs a 9★ Macaron Cherry deck at 3.8T; 5★ \"tripling\" Macaron is unpaired, likely Lv.118 vs Lv.100."
+      "Melon Soda → Strawberry Crepe, fillers levelled: 6T 351G at 8.04G (Lv.119) and 5T 811G at 5.72G, both on screen.",
+      "Scorpion → Strawberry Crepe (메소딸크): 8T 069G result at a stated 1300×; 770× on another account.",
+      "Melon Soda → Popcorn: 1T 713G at 2.62G, up from 1–1.1T; posters split on the pair, 저장용 sees little difference.",
+      "Fillers levelled for survival (Lv.55–119): what the top on-screen runs do; 1000×+ runs outlive the wipe.",
+      "Tiger Lily → a dealer: 1.09T at 2.32G; under a 5★ Brightseeker, drop her and level Brightseeker out of the beams (1T 372G at 3.37G).",
+      "Chardonnay vs Macaron, same account at Lv.118, 50 runs each: 10★ Chardonnay 592–1024× (mean 809×), 9★ Macaron 201–711× (mean 423×)."
     ],
-    "rng": "Varies less than the Cherry deck (one poster). Floor about 3T on a 1000× account; the main roll is Pomegranate catching Tiger Lily's 다발 3.",
+    "rng": "Narrow: 50 runs at 4.4G gave 592–1024× (mean 809×), against 201–711× with Macaron. The main roll is Pomegranate catching Tiger Lily's 다발 3.",
     "unorthodox": [
       "Chardonnay takes a beam at any ATK, so she sits at max level without breaking the ATK order.",
-      "Cherry and move speed gone after a month as the deck's backbone."
+      "Cherry and move speed gone after a month as the deck's backbone.",
+      "The top on-screen runs level every filler (Lv.55–119) so they outlive the wipe."
     ],
-    "sources": ["dc:83991", "dc:83653", "dc:83491", "dc:84283", "dc:83521", "dc:83836", "dc:83608", "dc:83953", "dc:84089", "dc:83515", "dc:84290", "dc:83994", "dc:83310", "dc:83841", "dc:84284", "dc:83694", "dc:83039", "dc:83400", "nv:51157", "nv:51490", "web:yt-RKNiw1fRosw"]
+    "sources": ["dc:83991", "dc:83653", "dc:83491", "dc:84283", "dc:83521", "dc:83836", "dc:83608", "dc:83953", "dc:84089", "dc:83515", "dc:84290", "dc:83994", "dc:83310", "dc:83841", "dc:84284", "dc:83694", "dc:83039", "dc:83400", "nv:51157", "nv:51490", "web:yt-RKNiw1fRosw", "dc:84663", "dc:84913", "dc:84393", "dc:84772", "dc:84701", "dc:84938", "dc:84921", "dc:84736", "dc:84894", "dc:84573", "dc:84544", "dc:84365", "dc:84560", "dc:84579", "dc:84337", "dc:85232", "dc:84714", "dc:84990", "dc:85193", "dc:85212", "nv:51882", "nv:51817", "web:yt-W6jC87xR1fE", "web:yt-Up48r9fwOM8"]
   },
   {
     "id": "meso",

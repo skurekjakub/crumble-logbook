@@ -3662,5 +3662,27 @@
   "rarity": "",
   "note": "The Cherry deck with Chardonnay in Macaron's slot and Melon Soda (or Strawberry Crepe, Popcorn) in Cherry's (dc:83653, dc:83991).",
   "source": "https://m.dcinside.com/board/projectcc/83991"
+ },
+ {
+  "kr": "메소딸크",
+  "kr_short": [],
+  "en": "Melon Soda + Strawberry Crepe",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "The Chardonnay deck's sub-dealer pair with Scorpion out: Melon Soda and Strawberry Crepe (dc:84913, dc:84938).",
+  "source": "https://m.dcinside.com/board/projectcc/84938"
+ },
+ {
+  "kr": "메전팝딸",
+  "kr_short": [],
+  "en": "Melon Soda / Scorpion / Popcorn / Strawberry Crepe",
+  "kind": "term",
+  "element": "",
+  "class": "",
+  "rarity": "",
+  "note": "Shorthand for the four sub-dealers posters choose two of in the Chardonnay deck (dc:84921).",
+  "source": "https://m.dcinside.com/board/projectcc/84921"
  }
 ]

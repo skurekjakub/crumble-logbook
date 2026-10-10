@@ -33,5 +33,8 @@
   { "date": "2026-10-08", "event": "Update 1.5.002: Chardonnay (CRIT% +60–120%, 다발 1–2) and level cap 120. Season 7 opens on the same Piñata.", "sources": ["web:crumbgg:patches-1009", "web:crumbgg:guild-conquest-1009", "dc:83491"] },
   { "date": "2026-10-08", "event": "Posters swap Macaron for Chardonnay and Cherry for Melon Soda: 4T 227G at 4.55G on day one.", "sources": ["dc:83653", "dc:83473", "dc:83491"] },
   { "date": "2026-10-08", "event": "서신우's 2.5T Chardonnay guide: all twelve cookies alive past the 17 s wipe.", "sources": ["web:yt-RKNiw1fRosw", "nv:51157"] },
-  { "date": "2026-10-09", "event": "Chardonnay deck at about 1000×: 4T 300G at 4.29G. Season 7's live #1 is at 10T 266G.", "sources": ["dc:83991", "dc:84283", "web:crumbgg:live-s7"] }
+  { "date": "2026-10-09", "event": "Chardonnay deck at about 1000×: 4T 300G at 4.29G. Season 7's live #1 is at 10T 266G.", "sources": ["dc:83991", "dc:84283", "web:crumbgg:live-s7"] },
+  { "date": "2026-10-09", "event": "A 50-run paired test at Lv.118: Chardonnay averages 809×, Macaron 423×, on one account.", "sources": ["dc:84663"] },
+  { "date": "2026-10-10", "event": "Strawberry Crepe leads the top runs as a sub-dealer: 5T 811G at 5.72G, then 8T 069G beside Melon Soda.", "sources": ["dc:84772", "dc:84913", "nv:51882", "web:yt-W6jC87xR1fE"] },
+  { "date": "2026-10-10", "event": "First Lv.119 lineup: 6T 351G at 8.04G. Arsen leads Season 7's live board at 13T 522G.", "sources": ["dc:84701", "web:crumbgg:live-1010-s7"] }
 ]

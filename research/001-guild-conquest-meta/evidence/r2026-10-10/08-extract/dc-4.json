@@ -1,0 +1,116 @@
+{
+  "batch": "r2026-10-10-dc-4",
+  "identification_key": "The discovery posts, read in the main session. 84701-1.jpg is identified by element icons and art as in evidence/r2026-10-09/08-extract/dc-2.json: light shooter brown hair purple eye Lv.119 = 브시커; fire red hair Lv.55 = 전갈; light gold Lv.119 = 치케; water yellow face purple headphones Lv.119 = 피겨; light nurse with leader banner Lv.119 = 우유; dark black/red hair Lv.75 = 닼초; grass pale lilac/green hair Lv.119 = 샤르도네; dark grey hair monocle Lv.119 = 피노; dark red curls Lv.119 = 석류; grass teal hair orange flower Lv.87 = 정전; light pink fluffy hair, shield icon Lv.92 = 딸크 (the author answers he never tried Melon Soda); light white-bearded knight Lv.119 = 실론. Stars are not transcribed: pink and gold can't be told apart at this size. Pets: 핫도그 ★20, 와사비문어 ★20, 색동주머니 ★12.",
+  "posts": [
+    {
+      "source": "dc",
+      "id": "84701",
+      "url": "https://m.dcinside.com/board/projectcc/84701",
+      "date": "2026-10-10",
+      "title_kr": "6t단 가입",
+      "title_en": "Joined the 6T band",
+      "relevance": 3,
+      "summary_en": "The conquest lobby shows the player's personal best at 6T 351G (2nd in the guild's personal ranking) and deck tab 2 at 8.04G team power (≈790배 derived). The lineup is the Chardonnay deck with Strawberry Crepe in Melon Soda's slot and the fillers levelled: the six recipients, Pomegranate and Pinot at Lv.119, Scorpion Lv.55, Dark Choco Lv.75, Tiger Lily Lv.87, Strawberry Crepe Lv.92. The first lineup on screen with Lv.119 cookies. Commenters say he dealt little for his power; one with lower power claims 10T.",
+      "scores": [
+        {"damage": "6T 351G", "power": "8.04G", "ratio": "≈790배 (derived)", "deck": "샤르도네덱, 딸크 in 메소's slot, fillers levelled", "note": "Observed: lobby 84701-1.jpg, 개인 랭킹 2nd 카린 6T 351G, deck tab 2 전투력 8.04G; season ends in 2일 11시간 9분."},
+        {"damage": "10T", "power": "below 8.04G (stated)", "ratio": "", "deck": "", "note": "A commenter: '나너보다투력낮은데 딜10T인데'. Stated only."}
+      ],
+      "teams": [
+        {
+          "name": "6T 351G 샤르도네덱 (딸크, Lv.119)",
+          "cookies": [
+            {"kr": "브시커", "en": "Brightseeker", "level": "119", "stars": "", "note": "row 1"},
+            {"kr": "전갈", "en": "Scorpion", "level": "55", "stars": "", "note": "row 1"},
+            {"kr": "치케", "en": "Cheesecake", "level": "119", "stars": "", "note": "row 1"},
+            {"kr": "피겨", "en": "Skating Queen", "level": "119", "stars": "", "note": "row 1"},
+            {"kr": "우유", "en": "Milk", "level": "119", "stars": "", "note": "row 1, leader banner"},
+            {"kr": "닼초", "en": "Dark Choco", "level": "75", "stars": "", "note": "row 1"},
+            {"kr": "샤르도네", "en": "Chardonnay", "level": "119", "stars": "", "note": "row 2"},
+            {"kr": "피노", "en": "Pinot Noir", "level": "119", "stars": "", "note": "row 2"},
+            {"kr": "석류", "en": "Pomegranate", "level": "119", "stars": "", "note": "row 2"},
+            {"kr": "정전", "en": "Tiger Lily", "level": "87", "stars": "", "note": "row 2"},
+            {"kr": "딸크", "en": "Strawberry Crepe", "level": "92", "stars": "", "note": "row 2"},
+            {"kr": "실론", "en": "Tea Knight", "level": "119", "stars": "", "note": "row 2"}
+          ],
+          "pets": ["핫도그 ★20", "와사비문어 ★20", "색동주머니 ★12"],
+          "atk_order": [],
+          "perks": "",
+          "formation": "",
+          "substitutions": ["딸크 in place of 메소 ('메소 안써봄')"],
+          "unorthodox": ["Pinot at Lv.119; every filler levelled, none at Lv.1"]
+        }
+      ],
+      "sugar_runes": [], "gear": [], "rng": [], "mechanics": [],
+      "disagreements": ["Commenters say 6T is low for 8.04G; the poster's team power may include arena-set padding ('뻥투비율 높은듯')."],
+      "quotes": [
+        {"kr": "메소보다 딸크가좋음? / 메소 안써봄", "en": "Is Crepe better than Melon Soda? / Never tried Melon Soda"},
+        {"kr": "나너보다투력낮은데 딜10T인데", "en": "My power is lower than yours and I deal 10T"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84579",
+      "url": "https://m.dcinside.com/board/projectcc/84579",
+      "date": "2026-10-09",
+      "title_kr": "전갈 치피 안받는다고 한 사람인데",
+      "title_en": "I'm the one who said Scorpion doesn't take crit damage",
+      "relevance": 2,
+      "summary_en": "The poster who claimed Scorpion's poison can't crit says he found no crit formula in the client's data files and asks where it is. 초코초코케이크 answers that the crit and crit-damage calculation lives in the APK's native library (lib_burst_generated.so), not in the data sets, and gives the code addresses for the poison tick, damage calculation, crit roll and crit multiplier; the poison's IsWeakEffect flag doesn't appear to cancel crit damage. The poster accepts it.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Scorpion's poison ticks go through the normal crit roll and crit-damage multiplier (stated from a decompile of lib_burst_generated.so; addresses given)."],
+      "disagreements": ["The original 'no crit' poster couldn't find the formula in the data files; the decompiler places it in native code."],
+      "quotes": [
+        {"kr": "치명타 계산식은 data 폴더의 patch binary set이나 entity binary set에 있는 게 아니라, APK 내부의 lib_burst_generated.so에 있음", "en": "The crit formula isn't in the data folder's patch or entity binary sets; it's in lib_burst_generated.so inside the APK"},
+        {"kr": "독에 설정된 IsWeakEffect도 확인했는데, 치명타 피해를 무효화하는 조건은 아닌듯", "en": "I checked the poison's IsWeakEffect too; it doesn't seem to be a condition that cancels crit damage"}
+      ]
+    },
+    {
+      "source": "dc",
+      "id": "84557",
+      "url": "https://m.dcinside.com/board/projectcc/84557",
+      "date": "2026-10-09",
+      "title_kr": "전갈 치피치확 받는거같은데",
+      "title_en": "Scorpion seems to take crit rate and crit damage",
+      "relevance": 2,
+      "summary_en": "초코초코케이크 says Scorpion's poison damage passes through the crit rate and crit damage formula and promises the code (delivered in 84560 and 84579). A commenter notes conquest might score differently; he says he'll check the scoring code.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [],
+      "mechanics": ["Scorpion's poison crits (stated, datamine to follow)."],
+      "disagreements": ["A commenter: conquest may use a different mechanism from stages."],
+      "quotes": [{"kr": "내가 봤을땐 전갈 독 피해도 치확치피 계산식 지나감", "en": "As far as I can see, Scorpion's poison damage goes through the crit rate / crit damage formula too"}]
+    },
+    {
+      "source": "dc",
+      "id": "84554",
+      "url": "https://m.dcinside.com/board/projectcc/84554",
+      "date": "2026-10-09",
+      "title_kr": "전갈을 뺐었는데 체급 낮아지니까 다시 전갈이네",
+      "title_en": "I dropped Scorpion, but as the weight class fell it's Scorpion again",
+      "relevance": 1,
+      "summary_en": "Stage-pushing context: the poster dropped Scorpion and came back to her; commenters say the game lacks ranged dealers. Not conquest-specific.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "84493",
+      "url": "https://m.dcinside.com/board/projectcc/84493",
+      "date": "2026-10-09",
+      "title_kr": "결국 전갈 다시 쓰게 되네",
+      "title_en": "Ended up using Scorpion again",
+      "relevance": 0,
+      "summary_en": "Stage pushing at the 15% band: Scorpion is back. Off-topic for conquest.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    },
+    {
+      "source": "dc",
+      "id": "84582",
+      "url": "https://m.dcinside.com/board/projectcc/84582",
+      "date": "2026-10-09",
+      "title_kr": "클뜯게이들아",
+      "title_en": "Dataminers",
+      "relevance": 0,
+      "summary_en": "About the stage sprint (광속질주) respawn timer: about a minute, or every 100 kills. Off-topic for conquest.",
+      "scores": [], "teams": [], "sugar_runes": [], "gear": [], "rng": [], "mechanics": [], "disagreements": [], "quotes": []
+    }
+  ],
+  "glossary": []
+}
