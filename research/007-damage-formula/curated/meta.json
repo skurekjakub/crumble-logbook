@@ -1,0 +1,16 @@
+{
+  "updated": "2026-10-10",
+  "season": "Client 1.5.002",
+  "lede": "How the client computes a hit's damage: what multiplies what, and what's worth upgrading.",
+  "caveat": "Read from the 1.5.002 client's code. The server-side constants aren't in the client and still need measuring.",
+  "you": {
+    "summary": "Feed the emptiest bucket: skill amp, boss DMG, final DMG and crit each multiply damage.",
+    "changes": [
+      "Weigh a skill amp point at 1 ÷ (1 + your total amp).",
+      "Crit: raise whichever of crit rate and crit DMG is lower.",
+      "Don't pick weapon lines by crit-rate digits.",
+      "Test Light against Fire on the Piñata before trusting its weakness."
+    ],
+    "sources": ["web:client-1.5.002-damage-system"]
+  }
+}
