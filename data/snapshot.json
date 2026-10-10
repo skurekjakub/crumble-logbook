@@ -18932,7 +18932,7 @@
     "updatedAt": "2026-10-10",
     "seasonLabel": "Game 1.5.002 (live since 2026-10-08): cookie cap 120 by Crumble level, Gnome Lab 130-2, mileage Chocosteel and Syrup Metal",
     "lede": "Team power (전투력) gates stages and the Dimensional Rift: what raises it, what each source costs free and paid, posted gains, the spend order, and which systems raise damage where power decides nothing.",
-    "caveat": "Refreshed 2026-10-10, two days into 1.5.002: the level-120 gain is one comment (+7.5%), Conquest damage weights are a leak. Few posted gains, almost all DCInside.",
+    "caveat": "Refreshed 2026-10-10, two days into 1.5.002: the level gain is one comment (about +7.5%), Conquest damage weights are a leak. Few posted gains, almost all DCInside.",
     "mode": "team_power"
    },
    {
@@ -176168,7 +176168,7 @@
    {
     "id": 254,
     "title": "Mercenary perks are one setting for every mode",
-    "body": "Passion Pay gives the top attacker +20% ATK; players swap perks by hand before Conquest. Band Lv.4 opens a second slot.",
+    "body": "Passion Pay gives the ATK #1 ally +20% ATK (Milk in Conquest); players swap perks by hand before Conquest. Band Lv.4 opens a second slot.",
     "confidence": "medium",
     "mode": "team_power",
     "topic": "damage",
@@ -177944,7 +177944,7 @@
    {
     "id": 53,
     "position": 4,
-    "text": "Cookie levels 101–120 are live and free: one posted step to the new cap was +7.5% team power; Crumble level gates it.",
+    "text": "Cookie levels 101–120 are live and free: one comment posted about +7.5% team power after raising levels; Crumble level gates it.",
     "detail": "One cookie level per 5 Crumble levels past 100: 190 opens 118, 200 opens 120. ~+25% is hearsay; base stats +64% at 120 (inferred).",
     "mode": "team_power",
     "recordSlug": "005-team-power-growth"
@@ -178152,7 +178152,7 @@
      "Plate with drop protection only; skip shatter mitigation. Without bought Syrup, all plates to +17 before a weapon to +20.",
      "Lab stones, not time, are the limit now: fill the crit rate and crit damage nodes you skipped before climbing.",
      "Keep a power preset for 35% lines; at the 15% line and in Guild Conquest use the damage preset, whatever it shows.",
-     "Spend speed-ups on Mercenary Band Lv.4 for a second perk (Passion Pay: +20% ATK to your top attacker)."
+     "Spend speed-ups on Mercenary Band Lv.4 for a second perk (Passion Pay: +20% ATK to your ATK #1 ally, Milk in Conquest)."
     ],
     "recordSlug": "005-team-power-growth"
    },
@@ -191531,9 +191531,9 @@
      },
      {
       "account": "Guild Conquest, 2026-10-09",
-      "before": "Macaron/Cherry deck at 4.27G: average 423× team power (best 3.036T)",
-      "after": "Chardonnay/Melon Soda deck at 4.4G: average 809× (best 4.504T)",
-      "delta": "damage, not power: +91% average Conquest score over 50 runs each",
+      "before": "Macaron/Cherry deck at 4.27G: average ~1.81T damage (best 3.036T)",
+      "after": "Chardonnay/Melon Soda deck at 4.4G: average ~3.56T (best 4.504T)",
+      "delta": "damage, not power: +97% average Conquest damage over 50 runs each (posted as 423× → 809× team power)",
       "cost": "Chardonnay in for Macaron",
       "kind": "posted (spreadsheet screenshot)",
       "sources": [
@@ -191543,14 +191543,13 @@
       ]
      },
      {
-      "account": "Guild Conquest at 5.32G and 4.91G",
-      "before": "1T 372G; 724.76G",
-      "after": "~1.3T; 1.0T",
-      "delta": "damage, not power: +~9% and +38% from attack-order level tuning alone",
-      "cost": "free",
-      "kind": "posted",
+      "account": "Guild Conquest at 4.91G, 2026-10-09",
+      "before": "previous best 724.76G",
+      "after": "1.0T",
+      "delta": "damage, not power: +38% after the patch, causes mixed",
+      "cost": "deck, levels and attack order changed together",
+      "kind": "posted (screenshot)",
       "sources": [
-       "dc:84762",
        "dc:84116"
       ]
      }
@@ -191707,7 +191706,7 @@
       "before": "ATK +7,934, crit rate 19.04%, skill amp 8.44%",
       "after": "+20: ATK +9,190, crit rate 24.84%, skill amp 11.01%",
       "delta": "damage stats: +5.8 points crit rate, +2.57 points skill amp",
-      "cost": "one great success (0.10%) at 26 Chocosteel + 5 Syrup",
+      "cost": "one great success; the odds and cost behind the result likely show the plate already at +20, not this press",
       "kind": "posted (screenshot)",
       "sources": [
        "dc:84474"
@@ -192080,8 +192079,8 @@
       "account": "a stage pusher, 2026-10-08",
       "before": "40.0% of a stage's recommended power",
       "after": "43%",
-      "delta": "+7.5% team power (same stage)",
-      "cost": "levelling the lineup to the new cap",
+      "delta": "about +7.5% team power (same stage; the 43% drops its decimal, so up to ~+9.8%)",
+      "cost": "raising the lineup's levels after 10-08",
       "kind": "posted (a comment); commenters credit Chardonnay more than the levels for faster clears",
       "sources": [
        "dc:83712"
@@ -192139,10 +192138,10 @@
     "efficiency": {
      "early": "high",
      "mid": "high for the main lineup",
-     "late": "high while the Crumble level allows another level: +7.5% team power posted for the step to the new cap",
-     "at22g": "the first free lever after 10-08: a lineup at 100 gains up to the Crumble-level cap; one pusher measured +7.5%"
+     "late": "high while the Crumble level allows another level: about +7.5% team power posted (a comment) after raising levels",
+     "at22g": "the first free lever after 10-08: a lineup at 100 gains up to the Crumble-level cap; one pusher posted about +7.5% (a comment)"
     },
-    "bracketEffect": "Early driver; capped late until 10-08. The one posted step (+7.5%) takes 2.2G to ~2.37G: 35% reach 304-19 → about 307 (inferred).",
+    "bracketEffect": "Early driver; capped late until 10-08. The one posted step (about +7.5%) takes 2.2G to ~2.37G: 35% reach 304-19 → about 307 (inferred).",
     "spendOrder": "Milk first, then dealers, the healer, the rest; Pomegranate lowest if it survives (web:yt-VPVzGKGwWog). In Conquest and the Crumble Dungeon the attack order sets levels: dealers ranked by ATK, supports but Chardonnay as low as possible (dc:83720, dc:84626).",
     "patchNotes": "1.4.002: hold the level-up button to pick a target level. 2026-10-08: cap 120; Lv.79–100 EXP cut, excess refunded by mail (nv:50417, web:cookierun-wiki-patch-1-5).",
     "confidence": "high",
@@ -192180,7 +192179,7 @@
      "at22g": "keep SSR lines that add power (crit resistance) on the stage preset until the Rift (record 003)"
     },
     "bracketEffect": "Mostly real damage, not displayed power.",
-    "spendOrder": "Milk ATK%, then Pomegranate, then dealers (nv:43444 §8.2). After 10-08 the guide board ranks skill amp first and skill haste second for Conquest; Chardonnay takes all skill amp (nv:51217, web:yt-7ZcZXq0zUmE). Read each skill first: amp is dead where the text says it doesn't apply, haste where the cooldown is no longer than the duration (web:yt-7ZcZXq0zUmE).",
+    "spendOrder": "Milk ATK%, then Pomegranate, then dealers (nv:43444 §8.2). After 10-08 the guide board's table goes per cookie: skill amp leads for most dealers and supports, skill haste for Brightseeker, ATK for Milk, skill amp alone for Chardonnay; its author puts skill amp before haste in today's Conquest meta (nv:51217, a reply; web:yt-7ZcZXq0zUmE). Read each skill first: amp is dead where the text says it doesn't apply, haste where the cooldown is no longer than the duration (web:yt-7ZcZXq0zUmE).",
     "patchNotes": "Rune recommendations updated with 1.4.002 (nv:43444) and again for 1.5.002 (nv:51217).",
     "confidence": "medium",
     "recordSlug": "005-team-power-growth"
@@ -192264,7 +192263,7 @@
     "slug": "mercenary_band",
     "nameEn": "Mercenary band level, captain and perks",
     "nameKr": "용병단 · 단장 · 복지",
-    "raises": "The leader gets +10% ATK/DEF/HP per band level; perks add damage: Passion Pay +20% ATK (−20% HP) to the highest-ATK ally, Rapid Promotion +7% ATK to the same, Like A Family +2% elemental damage per cookie of the main element. Band Lv.4 opens a second perk slot. No displayed power (web:cookierun-wiki-mercenary-guild).",
+    "raises": "The leader gets a flat +10% ATK/DEF/HP from band Lv.1 (the wiki's Effects column is cumulative, not per level); perks add damage: Passion Pay +20% ATK (−20% HP) to the highest-ATK ally, Rapid Promotion +7% ATK to the same, Like A Family +2% elemental damage per cookie of the main element. Band Lv.4 opens a second perk slot. No displayed power (web:cookierun-wiki-mercenary-guild).",
     "appliesIn": [
      "stage",
      "rift",
@@ -192274,9 +192273,9 @@
     "materials": [
      {
       "name": "band level",
-      "free": "requirements (Lv.4: Crumble level 85, oven 29, Fame 40, 40 lab researches) plus a timer (Lv.3 → 4 about 1 day 14 h)",
+      "free": "requirements (Lv.4: Crumble level 85, oven 29, Fame 40, 40 lab researches) plus a timer (3 days from Lv.3 to 4, web:cookierun-wiki-mercenary-guild)",
       "paid": "speed-ups in packs",
-      "note": "the 1-minute speed-ups the lab can no longer use go here (dc:83383, dc:83916)"
+      "note": "the 1-minute speed-ups the lab can no longer use go here: one poster with 1 d 22 h left needed 1 d 13:44 of them (dc:83383, dc:83916)"
      }
     ],
     "costType": "time_gated",
@@ -192299,7 +192298,7 @@
       "account": "top Crumble Dungeon runs, 2026-10-08/09",
       "before": null,
       "after": "1.09T and 787G scores",
-      "delta": "both run Passion Pay (with Rapid Promotion) on the top shooter",
+      "delta": "both run Passion Pay on the ATK #1 ally, Milk; one pairs it with Rapid Promotion (dc:84626), the other with All Ammo Provided (dc:83720)",
       "cost": null,
       "kind": "posted (perk choice, not a measured gain)",
       "sources": [
@@ -192315,7 +192314,7 @@
      "at22g": "none for power (damage only): spend the speed-ups here"
     },
     "bracketEffect": "None on the bracket; real damage within it.",
-    "spendOrder": "Speed-ups into band Lv.4, then Passion Pay and Rapid Promotion on the carry for Conquest and the Crumble Dungeon (dc:83383, dc:83916, dc:83720). Perks are one setting for every mode, so players swap them by hand before Conquest and accept weaker Arena defence meanwhile (dc:84603, dc:84965); three-tank perks carried one team past the 17 s wipe (dc:84330). Whether perks apply on Arena defence is disputed (dc:84480); 1.5.002 added the rule to the Arena pop-up (web:cookierun-wiki-patch-1-5).",
+    "spendOrder": "Speed-ups into band Lv.4, then Passion Pay on the ATK #1 ally (Milk in record 001's decks) for Conquest and the Crumble Dungeon, with Rapid Promotion or All Ammo Provided as the second perk (dc:83383, dc:83916, dc:84626, dc:83720). Perks are one setting for every mode, so players swap them by hand before Conquest and accept weaker Arena defence meanwhile (dc:84603, dc:84965); three-tank perks carried one team past the 17 s wipe (dc:84330). Whether perks apply on Arena defence is disputed (dc:84480); 1.5.002 added the rule to the Arena pop-up (web:cookierun-wiki-patch-1-5).",
     "patchNotes": "1.5.002: the Arena information pop-up now explains how Mercenary Guild effects apply (web:cookierun-wiki-patch-1-5).",
     "confidence": "medium",
     "recordSlug": "005-team-power-growth"
@@ -192889,8 +192888,8 @@
     "beforeG": null,
     "afterG": null,
     "deltaPct": 7.5,
-    "cost": "levelling the lineup to the new cap (Crumble-level gated)",
-    "note": "a commenter's power on one stage went from 40.0% to 43% of its recommended power after levelling; approximate: a comment, levels before and after not given",
+    "cost": "raising the lineup's levels after 10-08 (Crumble-level gated)",
+    "note": "a commenter's power on one stage went from 40.0% to 43% of its recommended power after raising levels; approximate: one comment, the 43% drops its decimal (+7.5% to ~+9.8%), levels before and after not given",
     "recordSlug": "005-team-power-growth"
    },
    {
@@ -193000,23 +192999,23 @@
     "date": "2026-10-09",
     "beforeG": null,
     "afterG": null,
-    "deltaPct": 91.3,
+    "deltaPct": 97.1,
     "cost": "Chardonnay in for Macaron (team power 4.27G → 4.4G)",
-    "note": "damage, not power: average Guild Conquest score over 50 runs each, 423× → 809× team power (best 3.036T → 4.504T)",
+    "note": "damage, not power: average Guild Conquest damage over 50 runs each, ~1.81T → ~3.56T (posted as 423× and 809× team power, a normaliser only); best 3.036T → 4.504T",
     "recordSlug": "005-team-power-growth"
    },
    {
     "id": 43,
-    "slug": "conquest-level-tuning",
+    "slug": "conquest-best-724g-1t",
     "kind": "posted",
-    "approximate": true,
+    "approximate": false,
     "powerSource": "lineup",
-    "date": "2026-10-10",
+    "date": "2026-10-09",
     "beforeG": null,
     "afterG": null,
-    "deltaPct": 9,
-    "cost": "free: cookie levels set to the attack order",
-    "note": "damage, not power: a 5.32G team's Conquest score 1T 372G → ~1.3T (the after is a comment); another went 724.76G → 1.0T at 4.91G (dc:84116)",
+    "deltaPct": 38.2,
+    "cost": "not separated: the deck, levels and attack order after 1.5.002 changed together",
+    "note": "damage, not power: one player's previous Conquest best 724.76G → 1.0T at a 4.91G team after 1.5.002 (screenshot); causes mixed",
     "recordSlug": "005-team-power-growth"
    },
    {
@@ -193501,7 +193500,7 @@
     "crystalValuePct": null,
     "crystalValueBasis": null,
     "contents": "pick-up currency; Vol.2 adds 30 Syrup Metal (₩22,000, 3 a sale)",
-    "verdict": "For damage, not power: Chardonnay doubled a Conquest deck's average score (dc:84663); the gallery calls the pick-up packs efficient.",
+    "verdict": "For damage, not power: Chardonnay took a Conquest deck's average damage from ~1.81T to ~3.56T (+97%, dc:84663); the gallery calls the pick-up packs efficient.",
     "tier": "medium",
     "recordSlug": "005-team-power-growth"
    },
@@ -194318,7 +194317,7 @@
     "powerSource": "cookie_level",
     "packageSlug": null,
     "basis": "posted",
-    "basisNote": "posted once (+7.5% on one stage, a comment, approximate); ~+25% is hearsay",
+    "basisNote": "posted (a comment): about +7.5% on one stage after raising levels; ~+25% is hearsay",
     "why": "The first free lever of 1.5.002; the Crumble level, not EXP, holds most accounts at 116–118.",
     "recordSlug": "005-team-power-growth"
    },
@@ -194358,7 +194357,7 @@
     "packageSlug": null,
     "basis": "community",
     "basisNote": "community order (damage, no power)",
-    "why": "Passion Pay (+20% ATK to the top attacker) runs in the top Crumble Dungeon and Conquest teams.",
+    "why": "Passion Pay (+20% ATK to the ATK #1 ally, Milk) runs in the top Crumble Dungeon and Conquest teams.",
     "recordSlug": "005-team-power-growth"
    },
    {
@@ -194526,7 +194525,7 @@
     "powerSource": "cookie_level",
     "packageSlug": null,
     "basis": "posted",
-    "basisNote": "+7.5% posted once (a comment) for levelling to the new cap; gated by Crumble level",
+    "basisNote": "posted (a comment): about +7.5% after raising levels; gated by Crumble level",
     "why": null,
     "recordSlug": "005-team-power-growth"
    },
@@ -195087,17 +195086,6 @@
       4
      ],
      [
-      18,
-      "on",
-      0.1,
-      null,
-      null,
-      0,
-      11,
-      26,
-      5
-     ],
-     [
       19,
       "on",
       0.1,
@@ -195134,9 +195122,6 @@
       "dc:84886"
      ],
      [
-      "dc:84474"
-     ],
-     [
       "dc:83284",
       "dc:82908"
      ],
@@ -195144,7 +195129,7 @@
       "dc:82361"
      ]
     ],
-    "note": "Each row is one in-game screen (the 16 row is a book, the others swords, brooches and a necklace). Drop protection sets decline to 0 and moves its share to maintain. +20 lifts main stats from +177% to +200% and sub stats from +130% to +200%. Restoring a shatter at 19 costs 50 Syrup.",
+    "note": "Each row is one in-game screen: brooches at 11 and 12, a book at 16, swords from 17. dc:84474's screen (11% shatter, 26 Chocosteel + 5 Syrup) is left out: it sits behind a great success to +20, so its level is unclear. Drop protection sets decline to 0 and moves its share to maintain. +20 lifts main stats from +177% to +200% and sub stats from +130% to +200%. Restoring a shatter at 19 costs 50 Syrup.",
     "evidence": "evidence/r2026-10-10/08-extract/dc-a.json, dc-b.json, dc-c.json",
     "recordSlug": "005-team-power-growth"
    },
@@ -196047,7 +196032,7 @@
     "powerSource": "cookie_level",
     "dataPoint": "level-cap-ratio-40-43",
     "basis": "posted",
-    "gain": "+7.5%: one pusher's power on a stage went from 40.0% to 43% of its recommended power after levelling to the new cap (dc:83712, a comment); ~+25% is hearsay (dc:82708)",
+    "gain": "about +7.5% (a comment): one pusher's power on a stage went from 40.0% to 43% of its recommended power after raising levels; the 43% drops its decimal (dc:83712); ~+25% is hearsay (dc:82708)",
     "reach": "304-19 → about 307",
     "recordSlug": "005-team-power-growth"
    },
@@ -223409,1627 +223394,1627 @@
     "id": 4558,
     "entity": "power_data_point",
     "entityId": "43",
-    "sourceId": "dc:84762"
-   },
-   {
-    "id": 4559,
-    "entity": "power_data_point",
-    "entityId": "43",
     "sourceId": "dc:84116"
    },
    {
-    "id": 4560,
+    "id": 4559,
     "entity": "power_data_point",
     "entityId": "44",
     "sourceId": "dc:82295"
    },
    {
-    "id": 4561,
+    "id": 4560,
     "entity": "power_data_point",
     "entityId": "44",
     "sourceId": "dc:82388"
    },
    {
-    "id": 4562,
+    "id": 4561,
     "entity": "power_data_point",
     "entityId": "45",
     "sourceId": "web:cookierun-wiki-build"
    },
    {
-    "id": 4563,
+    "id": 4562,
     "entity": "power_data_point",
     "entityId": "46",
     "sourceId": "dc:84914"
    },
    {
-    "id": 4564,
+    "id": 4563,
     "entity": "power_data_point",
     "entityId": "46",
     "sourceId": "dc:84199"
    },
    {
-    "id": 4565,
+    "id": 4564,
     "entity": "power_data_point",
     "entityId": "47",
     "sourceId": "dc:84919"
    },
    {
-    "id": 4566,
+    "id": 4565,
     "entity": "power_data_point",
     "entityId": "48",
     "sourceId": "dc:83756"
    },
    {
-    "id": 4567,
+    "id": 4566,
     "entity": "power_data_point",
     "entityId": "49",
     "sourceId": "dc:84023"
    },
    {
-    "id": 4568,
+    "id": 4567,
     "entity": "power_data_point",
     "entityId": "50",
     "sourceId": "dc:76290"
+   },
+   {
+    "id": 4568,
+    "entity": "power_data_point",
+    "entityId": "50",
+    "sourceId": "dc:50913"
    },
    {
     "id": 4569,
     "entity": "power_data_point",
     "entityId": "50",
-    "sourceId": "dc:50913"
+    "sourceId": "nv:5693"
    },
    {
     "id": 4570,
-    "entity": "power_data_point",
-    "entityId": "50",
-    "sourceId": "nv:5693"
+    "entity": "package",
+    "entityId": "1",
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4571,
     "entity": "package",
     "entityId": "1",
-    "sourceId": "web:crumblehub-spending"
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4572,
     "entity": "package",
     "entityId": "1",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4573,
     "entity": "package",
     "entityId": "1",
-    "sourceId": "web:appstore-kr"
+    "sourceId": "dc:70230"
    },
    {
     "id": 4574,
     "entity": "package",
     "entityId": "1",
-    "sourceId": "dc:70230"
+    "sourceId": "nv:43692"
    },
    {
     "id": 4575,
     "entity": "package",
     "entityId": "1",
-    "sourceId": "nv:43692"
+    "sourceId": "web:pocketgamer-best-packs"
    },
    {
     "id": 4576,
     "entity": "package",
     "entityId": "1",
-    "sourceId": "web:pocketgamer-best-packs"
+    "sourceId": "web:yt-Ba81bn9B2oA"
    },
    {
     "id": 4577,
     "entity": "package",
     "entityId": "1",
-    "sourceId": "web:yt-Ba81bn9B2oA"
+    "sourceId": "web:yt-l4I2DCv7d0k"
    },
    {
     "id": 4578,
     "entity": "package",
-    "entityId": "1",
-    "sourceId": "web:yt-l4I2DCv7d0k"
+    "entityId": "2",
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4579,
     "entity": "package",
     "entityId": "2",
-    "sourceId": "web:crumblehub-spending"
+    "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
     "id": 4580,
     "entity": "package",
     "entityId": "2",
-    "sourceId": "web:yt-FrKqf5lhZBs"
+    "sourceId": "web:yt-l4I2DCv7d0k"
    },
    {
     "id": 4581,
     "entity": "package",
     "entityId": "2",
-    "sourceId": "web:yt-l4I2DCv7d0k"
+    "sourceId": "dc:76031"
    },
    {
     "id": 4582,
     "entity": "package",
     "entityId": "2",
-    "sourceId": "dc:76031"
+    "sourceId": "web:yt-Xhw4Z6_q56k"
    },
    {
     "id": 4583,
     "entity": "package",
-    "entityId": "2",
-    "sourceId": "web:yt-Xhw4Z6_q56k"
+    "entityId": "3",
+    "sourceId": "dc:68148"
    },
    {
     "id": 4584,
     "entity": "package",
     "entityId": "3",
-    "sourceId": "dc:68148"
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4585,
     "entity": "package",
     "entityId": "3",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4586,
     "entity": "package",
     "entityId": "3",
-    "sourceId": "web:appstore-us"
+    "sourceId": "dc:77069"
    },
    {
     "id": 4587,
     "entity": "package",
     "entityId": "3",
-    "sourceId": "dc:77069"
+    "sourceId": "dc:76976"
    },
    {
     "id": 4588,
     "entity": "package",
     "entityId": "3",
-    "sourceId": "dc:76976"
+    "sourceId": "web:pocketgamer-best-packs"
    },
    {
     "id": 4589,
     "entity": "package",
-    "entityId": "3",
-    "sourceId": "web:pocketgamer-best-packs"
+    "entityId": "4",
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4590,
     "entity": "package",
     "entityId": "4",
-    "sourceId": "web:appstore-kr"
+    "sourceId": "dc:81113"
    },
    {
     "id": 4591,
     "entity": "package",
     "entityId": "4",
-    "sourceId": "dc:81113"
+    "sourceId": "dc:79739"
    },
    {
     "id": 4592,
     "entity": "package",
     "entityId": "4",
-    "sourceId": "dc:79739"
+    "sourceId": "dc:81695"
    },
    {
     "id": 4593,
     "entity": "package",
-    "entityId": "4",
-    "sourceId": "dc:81695"
+    "entityId": "5",
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4594,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "web:crumblehub-spending"
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4595,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "dc:73525"
    },
    {
     "id": 4596,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "dc:73525"
+    "sourceId": "dc:76976"
    },
    {
     "id": 4597,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "dc:76976"
+    "sourceId": "dc:77409"
    },
    {
     "id": 4598,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "dc:77409"
+    "sourceId": "nv:43692"
    },
    {
     "id": 4599,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "nv:43692"
+    "sourceId": "web:yt-l4I2DCv7d0k"
    },
    {
     "id": 4600,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "web:yt-l4I2DCv7d0k"
+    "sourceId": "web:pocketgamer-best-packs"
    },
    {
     "id": 4601,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "web:pocketgamer-best-packs"
+    "sourceId": "dc:79326"
    },
    {
     "id": 4602,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "dc:79326"
+    "sourceId": "dc:80380"
    },
    {
     "id": 4603,
     "entity": "package",
     "entityId": "5",
-    "sourceId": "dc:80380"
+    "sourceId": "dc:80855"
    },
    {
     "id": 4604,
     "entity": "package",
-    "entityId": "5",
-    "sourceId": "dc:80855"
+    "entityId": "6",
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4605,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "web:crumblehub-spending"
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4606,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "web:appstore-us"
+    "sourceId": "dc:77246"
    },
    {
     "id": 4607,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "dc:77246"
+    "sourceId": "web:yt-EocpkOD5NW0"
    },
    {
     "id": 4608,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "web:yt-EocpkOD5NW0"
+    "sourceId": "web:yt-njY-LhKqAtM"
    },
    {
     "id": 4609,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "web:yt-njY-LhKqAtM"
+    "sourceId": "web:yt-pldC8umlhnI"
    },
    {
     "id": 4610,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "web:yt-pldC8umlhnI"
+    "sourceId": "web:yt-DjsoeuzuFkI"
    },
    {
     "id": 4611,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "web:yt-DjsoeuzuFkI"
+    "sourceId": "dc:82346"
    },
    {
     "id": 4612,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "dc:82346"
+    "sourceId": "dc:82357"
    },
    {
     "id": 4613,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "dc:82357"
+    "sourceId": "dc:78163"
    },
    {
     "id": 4614,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "dc:78163"
+    "sourceId": "dc:82997"
    },
    {
     "id": 4615,
     "entity": "package",
     "entityId": "6",
-    "sourceId": "dc:82997"
+    "sourceId": "web:yt-EbXFIgSprRU"
    },
    {
     "id": 4616,
     "entity": "package",
-    "entityId": "6",
-    "sourceId": "web:yt-EbXFIgSprRU"
+    "entityId": "7",
+    "sourceId": "dc:78666"
    },
    {
     "id": 4617,
     "entity": "package",
     "entityId": "7",
-    "sourceId": "dc:78666"
+    "sourceId": "dc:78163"
    },
    {
     "id": 4618,
     "entity": "package",
     "entityId": "7",
-    "sourceId": "dc:78163"
+    "sourceId": "dc:82357"
    },
    {
     "id": 4619,
     "entity": "package",
-    "entityId": "7",
-    "sourceId": "dc:82357"
+    "entityId": "8",
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4620,
     "entity": "package",
     "entityId": "8",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "dc:68145"
    },
    {
     "id": 4621,
     "entity": "package",
     "entityId": "8",
-    "sourceId": "dc:68145"
+    "sourceId": "dc:73114"
    },
    {
     "id": 4622,
     "entity": "package",
     "entityId": "8",
-    "sourceId": "dc:73114"
+    "sourceId": "dc:76357"
    },
    {
     "id": 4623,
     "entity": "package",
-    "entityId": "8",
-    "sourceId": "dc:76357"
+    "entityId": "9",
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4624,
     "entity": "package",
     "entityId": "9",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "dc:68145"
    },
    {
     "id": 4625,
     "entity": "package",
     "entityId": "9",
-    "sourceId": "dc:68145"
+    "sourceId": "dc:77246"
    },
    {
     "id": 4626,
     "entity": "package",
     "entityId": "9",
-    "sourceId": "dc:77246"
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4627,
     "entity": "package",
-    "entityId": "9",
-    "sourceId": "web:crumblehub-spending"
+    "entityId": "10",
+    "sourceId": "dc:68148"
    },
    {
     "id": 4628,
     "entity": "package",
     "entityId": "10",
-    "sourceId": "dc:68148"
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4629,
     "entity": "package",
     "entityId": "10",
-    "sourceId": "web:crumblehub-spending"
+    "sourceId": "dc:70449"
    },
    {
     "id": 4630,
     "entity": "package",
     "entityId": "10",
-    "sourceId": "dc:70449"
+    "sourceId": "dc:68682"
    },
    {
     "id": 4631,
     "entity": "package",
     "entityId": "10",
-    "sourceId": "dc:68682"
+    "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
     "id": 4632,
     "entity": "package",
     "entityId": "10",
-    "sourceId": "web:yt-FrKqf5lhZBs"
-   },
-   {
-    "id": 4633,
-    "entity": "package",
-    "entityId": "10",
     "sourceId": "nv:43444"
    },
    {
-    "id": 4634,
+    "id": 4633,
     "entity": "package",
     "entityId": "11",
     "sourceId": "dc:68148"
    },
    {
-    "id": 4635,
+    "id": 4634,
     "entity": "package",
     "entityId": "11",
     "sourceId": "web:crumblehub-efficiency"
    },
    {
-    "id": 4636,
+    "id": 4635,
     "entity": "package",
     "entityId": "11",
     "sourceId": "web:yt-TXbSBnGza84"
    },
    {
-    "id": 4637,
+    "id": 4636,
     "entity": "package",
     "entityId": "12",
     "sourceId": "web:crumblehub-api-efficiency"
+   },
+   {
+    "id": 4637,
+    "entity": "package",
+    "entityId": "12",
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4638,
     "entity": "package",
     "entityId": "12",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
     "id": 4639,
     "entity": "package",
     "entityId": "12",
-    "sourceId": "web:yt-FrKqf5lhZBs"
+    "sourceId": "dc:76290"
    },
    {
     "id": 4640,
     "entity": "package",
-    "entityId": "12",
-    "sourceId": "dc:76290"
+    "entityId": "13",
+    "sourceId": "web:crumblehub-api-efficiency"
    },
    {
     "id": 4641,
     "entity": "package",
     "entityId": "13",
-    "sourceId": "web:crumblehub-api-efficiency"
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4642,
     "entity": "package",
     "entityId": "13",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
     "id": 4643,
     "entity": "package",
     "entityId": "13",
-    "sourceId": "web:yt-FrKqf5lhZBs"
+    "sourceId": "dc:75373"
    },
    {
     "id": 4644,
     "entity": "package",
     "entityId": "13",
-    "sourceId": "dc:75373"
-   },
-   {
-    "id": 4645,
-    "entity": "package",
-    "entityId": "13",
     "sourceId": "dc:73840"
    },
    {
-    "id": 4646,
+    "id": 4645,
     "entity": "package",
     "entityId": "14",
     "sourceId": "web:crumblehub-api-efficiency"
    },
    {
-    "id": 4647,
+    "id": 4646,
     "entity": "package",
     "entityId": "14",
     "sourceId": "web:crumblehub-efficiency"
+   },
+   {
+    "id": 4647,
+    "entity": "package",
+    "entityId": "14",
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4648,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "web:appstore-kr"
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4649,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "web:appstore-us"
+    "sourceId": "dc:75067"
    },
    {
     "id": 4650,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "dc:75067"
+    "sourceId": "dc:76838"
    },
    {
     "id": 4651,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "dc:76838"
+    "sourceId": "dc:74079"
    },
    {
     "id": 4652,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "dc:74079"
+    "sourceId": "dc:78666"
    },
    {
     "id": 4653,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "dc:78666"
+    "sourceId": "dc:82058"
    },
    {
     "id": 4654,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "dc:82058"
+    "sourceId": "dc:78966"
    },
    {
     "id": 4655,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "dc:78966"
+    "sourceId": "dc:82914"
    },
    {
     "id": 4656,
     "entity": "package",
     "entityId": "14",
-    "sourceId": "dc:82914"
-   },
-   {
-    "id": 4657,
-    "entity": "package",
-    "entityId": "14",
     "sourceId": "web:yt-EbXFIgSprRU"
    },
    {
-    "id": 4658,
+    "id": 4657,
     "entity": "package",
     "entityId": "15",
     "sourceId": "dc:82897"
    },
    {
-    "id": 4659,
+    "id": 4658,
     "entity": "package",
     "entityId": "15",
     "sourceId": "dc:82898"
+   },
+   {
+    "id": 4659,
+    "entity": "package",
+    "entityId": "15",
+    "sourceId": "dc:82914"
    },
    {
     "id": 4660,
     "entity": "package",
     "entityId": "15",
-    "sourceId": "dc:82914"
+    "sourceId": "dc:82908"
    },
    {
     "id": 4661,
     "entity": "package",
-    "entityId": "15",
-    "sourceId": "dc:82908"
+    "entityId": "16",
+    "sourceId": "dc:82898"
    },
    {
     "id": 4662,
     "entity": "package",
     "entityId": "16",
-    "sourceId": "dc:82898"
+    "sourceId": "dc:82914"
    },
    {
     "id": 4663,
     "entity": "package",
     "entityId": "16",
-    "sourceId": "dc:82914"
-   },
-   {
-    "id": 4664,
-    "entity": "package",
-    "entityId": "16",
     "sourceId": "dc:84080"
    },
    {
-    "id": 4665,
+    "id": 4664,
     "entity": "package",
     "entityId": "17",
     "sourceId": "dc:83361"
    },
    {
-    "id": 4666,
+    "id": 4665,
     "entity": "package",
     "entityId": "17",
     "sourceId": "dc:82898"
    },
    {
-    "id": 4667,
+    "id": 4666,
     "entity": "package",
     "entityId": "17",
     "sourceId": "dc:82908"
    },
    {
-    "id": 4668,
+    "id": 4667,
     "entity": "package",
     "entityId": "17",
     "sourceId": "web:yt-EbXFIgSprRU"
    },
    {
-    "id": 4669,
+    "id": 4668,
     "entity": "package",
     "entityId": "18",
     "sourceId": "web:appstore-kr"
+   },
+   {
+    "id": 4669,
+    "entity": "package",
+    "entityId": "18",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4670,
     "entity": "package",
     "entityId": "18",
-    "sourceId": "web:appstore-us"
+    "sourceId": "dc:82898"
    },
    {
     "id": 4671,
     "entity": "package",
     "entityId": "18",
-    "sourceId": "dc:82898"
-   },
-   {
-    "id": 4672,
-    "entity": "package",
-    "entityId": "18",
     "sourceId": "dc:84663"
    },
    {
-    "id": 4673,
+    "id": 4672,
     "entity": "package",
     "entityId": "19",
     "sourceId": "dc:82058"
    },
    {
-    "id": 4674,
+    "id": 4673,
     "entity": "package",
     "entityId": "20",
     "sourceId": "dc:50913"
    },
    {
-    "id": 4675,
+    "id": 4674,
     "entity": "package",
     "entityId": "20",
     "sourceId": "dc:74607"
    },
    {
-    "id": 4676,
+    "id": 4675,
     "entity": "package",
     "entityId": "20",
     "sourceId": "dc:77246"
    },
    {
-    "id": 4677,
+    "id": 4676,
     "entity": "package",
     "entityId": "20",
     "sourceId": "dc:76081"
    },
    {
-    "id": 4678,
+    "id": 4677,
     "entity": "package",
     "entityId": "20",
     "sourceId": "dc:73455"
    },
    {
-    "id": 4679,
+    "id": 4678,
     "entity": "package",
     "entityId": "20",
     "sourceId": "web:appstore-us"
    },
    {
-    "id": 4680,
+    "id": 4679,
     "entity": "package",
     "entityId": "20",
     "sourceId": "web:appstore-kr"
    },
    {
-    "id": 4681,
+    "id": 4680,
     "entity": "package",
     "entityId": "20",
     "sourceId": "web:crumblehub-efficiency"
    },
    {
-    "id": 4682,
+    "id": 4681,
     "entity": "package",
     "entityId": "21",
     "sourceId": "dc:78599"
    },
    {
-    "id": 4683,
+    "id": 4682,
     "entity": "package",
     "entityId": "21",
     "sourceId": "dc:78704"
    },
    {
-    "id": 4684,
+    "id": 4683,
     "entity": "package",
     "entityId": "21",
     "sourceId": "web:appstore-kr"
    },
    {
-    "id": 4685,
+    "id": 4684,
     "entity": "package",
     "entityId": "22",
     "sourceId": "web:crumblehub-spending"
    },
    {
-    "id": 4686,
+    "id": 4685,
     "entity": "package",
     "entityId": "22",
     "sourceId": "web:yt-l4I2DCv7d0k"
    },
    {
-    "id": 4687,
+    "id": 4686,
     "entity": "package",
     "entityId": "22",
     "sourceId": "web:yt-mL9MSX3QD94"
    },
    {
-    "id": 4688,
+    "id": 4687,
     "entity": "package",
     "entityId": "22",
+    "sourceId": "web:crumblehub-efficiency"
+   },
+   {
+    "id": 4688,
+    "entity": "package",
+    "entityId": "23",
     "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4689,
     "entity": "package",
     "entityId": "23",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
     "id": 4690,
     "entity": "package",
     "entityId": "23",
-    "sourceId": "web:yt-FrKqf5lhZBs"
+    "sourceId": "web:yt-l4I2DCv7d0k"
    },
    {
     "id": 4691,
     "entity": "package",
-    "entityId": "23",
+    "entityId": "24",
     "sourceId": "web:yt-l4I2DCv7d0k"
    },
    {
     "id": 4692,
     "entity": "package",
     "entityId": "24",
-    "sourceId": "web:yt-l4I2DCv7d0k"
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4693,
     "entity": "package",
     "entityId": "24",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
     "id": 4694,
     "entity": "package",
     "entityId": "24",
-    "sourceId": "web:yt-FrKqf5lhZBs"
+    "sourceId": "dc:79355"
    },
    {
     "id": 4695,
     "entity": "package",
     "entityId": "24",
-    "sourceId": "dc:79355"
+    "sourceId": "dc:79278"
    },
    {
     "id": 4696,
     "entity": "package",
-    "entityId": "24",
-    "sourceId": "dc:79278"
+    "entityId": "25",
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4697,
     "entity": "package",
     "entityId": "25",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "dc:77157"
    },
    {
     "id": 4698,
     "entity": "package",
     "entityId": "25",
-    "sourceId": "dc:77157"
+    "sourceId": "dc:81565"
    },
    {
     "id": 4699,
     "entity": "package",
     "entityId": "25",
-    "sourceId": "dc:81565"
+    "sourceId": "dc:80380"
    },
    {
     "id": 4700,
     "entity": "package",
     "entityId": "25",
-    "sourceId": "dc:80380"
+    "sourceId": "dc:79326"
    },
    {
     "id": 4701,
     "entity": "package",
-    "entityId": "25",
-    "sourceId": "dc:79326"
+    "entityId": "26",
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4702,
     "entity": "package",
     "entityId": "26",
-    "sourceId": "web:crumblehub-spending"
+    "sourceId": "web:crumblehub-efficiency"
    },
    {
     "id": 4703,
     "entity": "package",
     "entityId": "26",
-    "sourceId": "web:crumblehub-efficiency"
+    "sourceId": "dc:72099"
    },
    {
     "id": 4704,
     "entity": "package",
     "entityId": "26",
-    "sourceId": "dc:72099"
-   },
-   {
-    "id": 4705,
-    "entity": "package",
-    "entityId": "26",
     "sourceId": "nv:31074"
    },
    {
-    "id": 4706,
+    "id": 4705,
     "entity": "package",
     "entityId": "27",
     "sourceId": "dc:67701"
    },
    {
-    "id": 4707,
+    "id": 4706,
     "entity": "package",
     "entityId": "27",
     "sourceId": "dc:71836"
+   },
+   {
+    "id": 4707,
+    "entity": "package",
+    "entityId": "27",
+    "sourceId": "dc:68362"
    },
    {
     "id": 4708,
     "entity": "package",
     "entityId": "27",
-    "sourceId": "dc:68362"
+    "sourceId": "dc:81881"
    },
    {
     "id": 4709,
     "entity": "package",
     "entityId": "27",
-    "sourceId": "dc:81881"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4710,
     "entity": "package",
     "entityId": "27",
-    "sourceId": "web:appstore-kr"
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4711,
     "entity": "package",
     "entityId": "27",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:cookierun-wiki-build"
    },
    {
     "id": 4712,
-    "entity": "package",
-    "entityId": "27",
-    "sourceId": "web:cookierun-wiki-build"
+    "entity": "price_tier",
+    "entityId": "1",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4713,
     "entity": "price_tier",
     "entityId": "1",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4714,
     "entity": "price_tier",
-    "entityId": "1",
-    "sourceId": "web:appstore-kr"
+    "entityId": "2",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4715,
     "entity": "price_tier",
     "entityId": "2",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4716,
     "entity": "price_tier",
-    "entityId": "2",
-    "sourceId": "web:appstore-kr"
+    "entityId": "3",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4717,
     "entity": "price_tier",
     "entityId": "3",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4718,
     "entity": "price_tier",
-    "entityId": "3",
-    "sourceId": "web:appstore-kr"
+    "entityId": "4",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4719,
     "entity": "price_tier",
     "entityId": "4",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4720,
     "entity": "price_tier",
-    "entityId": "4",
-    "sourceId": "web:appstore-kr"
+    "entityId": "5",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4721,
     "entity": "price_tier",
     "entityId": "5",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4722,
     "entity": "price_tier",
-    "entityId": "5",
-    "sourceId": "web:appstore-kr"
+    "entityId": "6",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4723,
     "entity": "price_tier",
     "entityId": "6",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4724,
     "entity": "price_tier",
-    "entityId": "6",
-    "sourceId": "web:appstore-kr"
+    "entityId": "7",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4725,
     "entity": "price_tier",
     "entityId": "7",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4726,
     "entity": "price_tier",
-    "entityId": "7",
-    "sourceId": "web:appstore-kr"
+    "entityId": "8",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4727,
     "entity": "price_tier",
     "entityId": "8",
-    "sourceId": "web:appstore-us"
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4728,
     "entity": "price_tier",
-    "entityId": "8",
-    "sourceId": "web:appstore-kr"
+    "entityId": "9",
+    "sourceId": "web:appstore-us"
    },
    {
     "id": 4729,
     "entity": "price_tier",
     "entityId": "9",
-    "sourceId": "web:appstore-us"
-   },
-   {
-    "id": 4730,
-    "entity": "price_tier",
-    "entityId": "9",
     "sourceId": "web:appstore-kr"
    },
    {
-    "id": 4731,
+    "id": 4730,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "nv:26202"
    },
    {
-    "id": 4732,
+    "id": 4731,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "dc:67995"
    },
    {
-    "id": 4733,
+    "id": 4732,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:yt-s4Y3glSPJPk"
    },
    {
-    "id": 4734,
+    "id": 4733,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:cookieruncrumbles-progression"
    },
    {
-    "id": 4735,
+    "id": 4734,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:yt-VPVzGKGwWog"
    },
    {
-    "id": 4736,
+    "id": 4735,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "nv:43444"
    },
    {
-    "id": 4737,
+    "id": 4736,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "dc:70429"
    },
    {
-    "id": 4738,
+    "id": 4737,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:yt-6DFlOgeXLds"
    },
    {
-    "id": 4739,
+    "id": 4738,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:yt-njY-LhKqAtM"
    },
    {
-    "id": 4740,
+    "id": 4739,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:yt-mL9MSX3QD94"
    },
    {
-    "id": 4741,
+    "id": 4740,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "nv:5693"
    },
    {
-    "id": 4742,
+    "id": 4741,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:yt-5XXDHBHnISU"
    },
    {
-    "id": 4743,
+    "id": 4742,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "nv:30148"
    },
    {
-    "id": 4744,
+    "id": 4743,
     "entity": "spending_order",
     "entityId": "1",
     "sourceId": "web:crumblehub-currency"
+   },
+   {
+    "id": 4744,
+    "entity": "spending_order",
+    "entityId": "1",
+    "sourceId": "web:yt-y-bxOrnjIeU"
    },
    {
     "id": 4745,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "web:yt-y-bxOrnjIeU"
+    "sourceId": "nv:33130"
    },
    {
     "id": 4746,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "nv:33130"
+    "sourceId": "dc:53079"
    },
    {
     "id": 4747,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "dc:53079"
+    "sourceId": "web:yt-EocpkOD5NW0"
    },
    {
     "id": 4748,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "web:yt-EocpkOD5NW0"
+    "sourceId": "web:crumblehub-spending"
    },
    {
     "id": 4749,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "web:crumblehub-spending"
+    "sourceId": "nv:43692"
    },
    {
     "id": 4750,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "nv:43692"
+    "sourceId": "nv:48555"
    },
    {
     "id": 4751,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "nv:48555"
+    "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
     "id": 4752,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "web:yt-FrKqf5lhZBs"
+    "sourceId": "web:yt-l4I2DCv7d0k"
    },
    {
     "id": 4753,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "web:yt-l4I2DCv7d0k"
+    "sourceId": "dc:68148"
    },
    {
     "id": 4754,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "dc:68148"
+    "sourceId": "web:pocketgamer-best-packs"
    },
    {
     "id": 4755,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "web:pocketgamer-best-packs"
+    "sourceId": "dc:73525"
    },
    {
     "id": 4756,
     "entity": "spending_order",
     "entityId": "1",
-    "sourceId": "dc:73525"
-   },
-   {
-    "id": 4757,
-    "entity": "spending_order",
-    "entityId": "1",
     "sourceId": "web:crumblehub-efficiency"
    },
    {
-    "id": 4758,
+    "id": 4757,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:75242"
    },
    {
-    "id": 4759,
+    "id": 4758,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:69664"
    },
    {
-    "id": 4760,
+    "id": 4759,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:76139"
    },
    {
-    "id": 4761,
+    "id": 4760,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "web:crumblehub-currency"
    },
    {
-    "id": 4762,
+    "id": 4761,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "web:yt-l9086mj7hwA"
    },
    {
-    "id": 4763,
+    "id": 4762,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:55570"
    },
    {
-    "id": 4764,
+    "id": 4763,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "nv:43444"
    },
    {
-    "id": 4765,
+    "id": 4764,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:71509"
    },
    {
-    "id": 4766,
+    "id": 4765,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "web:yt-y-bxOrnjIeU"
    },
    {
-    "id": 4767,
+    "id": 4766,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:76642"
    },
    {
-    "id": 4768,
+    "id": 4767,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:76008"
    },
    {
-    "id": 4769,
+    "id": 4768,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:77116"
    },
    {
-    "id": 4770,
+    "id": 4769,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:70628"
    },
    {
-    "id": 4771,
+    "id": 4770,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:77246"
    },
    {
-    "id": 4772,
+    "id": 4771,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "web:yt-EocpkOD5NW0"
    },
    {
-    "id": 4773,
+    "id": 4772,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "web:yt-DjsoeuzuFkI"
    },
    {
-    "id": 4774,
+    "id": 4773,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "dc:70449"
    },
    {
-    "id": 4775,
+    "id": 4774,
     "entity": "spending_order",
     "entityId": "2",
     "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
-    "id": 4776,
+    "id": 4775,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:68732"
    },
    {
-    "id": 4777,
+    "id": 4776,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:56417"
    },
    {
-    "id": 4778,
+    "id": 4777,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:70732"
    },
    {
-    "id": 4779,
+    "id": 4778,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:75684"
    },
    {
-    "id": 4780,
+    "id": 4779,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "web:yt-_Vyl0eQz9lU"
    },
    {
-    "id": 4781,
+    "id": 4780,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:76198"
    },
    {
-    "id": 4782,
+    "id": 4781,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:77277"
    },
    {
-    "id": 4783,
+    "id": 4782,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:74812"
    },
    {
-    "id": 4784,
+    "id": 4783,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "nv:46363"
    },
    {
-    "id": 4785,
+    "id": 4784,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "nv:41221"
    },
    {
-    "id": 4786,
+    "id": 4785,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:68362"
    },
    {
-    "id": 4787,
+    "id": 4786,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:75067"
    },
    {
-    "id": 4788,
+    "id": 4787,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:74079"
    },
    {
-    "id": 4789,
+    "id": 4788,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "web:yt-FrKqf5lhZBs"
    },
    {
-    "id": 4790,
+    "id": 4789,
     "entity": "spending_order",
     "entityId": "3",
     "sourceId": "dc:71836"
    },
    {
-    "id": 4791,
+    "id": 4790,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:76461"
    },
    {
-    "id": 4792,
+    "id": 4791,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:67596"
    },
    {
-    "id": 4793,
+    "id": 4792,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:81826"
    },
    {
-    "id": 4794,
+    "id": 4793,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:78400"
    },
    {
-    "id": 4795,
+    "id": 4794,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:76290"
    },
    {
-    "id": 4796,
+    "id": 4795,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:74089"
    },
    {
-    "id": 4797,
+    "id": 4796,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "nv:32484"
    },
    {
-    "id": 4798,
+    "id": 4797,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:77329"
    },
    {
-    "id": 4799,
+    "id": 4798,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:76171"
    },
    {
-    "id": 4800,
+    "id": 4799,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:76272"
    },
    {
-    "id": 4801,
+    "id": 4800,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:77509"
    },
    {
-    "id": 4802,
+    "id": 4801,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:76620"
    },
    {
-    "id": 4803,
+    "id": 4802,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:78447"
    },
    {
-    "id": 4804,
+    "id": 4803,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:82156"
    },
    {
-    "id": 4805,
+    "id": 4804,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:79685"
    },
    {
-    "id": 4806,
+    "id": 4805,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:74431"
    },
    {
-    "id": 4807,
+    "id": 4806,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:76816"
    },
    {
-    "id": 4808,
+    "id": 4807,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:75684"
    },
    {
-    "id": 4809,
+    "id": 4808,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83712"
    },
    {
-    "id": 4810,
+    "id": 4809,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83392"
    },
    {
-    "id": 4811,
+    "id": 4810,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83091"
    },
    {
-    "id": 4812,
+    "id": 4811,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83342"
    },
    {
-    "id": 4813,
+    "id": 4812,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "nv:50417"
    },
    {
-    "id": 4814,
+    "id": 4813,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:82708"
    },
    {
-    "id": 4815,
+    "id": 4814,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "web:yt-EbXFIgSprRU"
    },
    {
-    "id": 4816,
+    "id": 4815,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83320"
    },
    {
-    "id": 4817,
+    "id": 4816,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:82682"
    },
    {
-    "id": 4818,
+    "id": 4817,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:82595"
    },
    {
-    "id": 4819,
+    "id": 4818,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:82608"
    },
    {
-    "id": 4820,
+    "id": 4819,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:84350"
    },
    {
-    "id": 4821,
+    "id": 4820,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:84476"
    },
    {
-    "id": 4822,
+    "id": 4821,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83825"
    },
    {
-    "id": 4823,
+    "id": 4822,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83374"
    },
    {
-    "id": 4824,
+    "id": 4823,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:82908"
    },
    {
-    "id": 4825,
+    "id": 4824,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83383"
    },
    {
-    "id": 4826,
+    "id": 4825,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83916"
    },
    {
-    "id": 4827,
+    "id": 4826,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "web:cookierun-wiki-mercenary-guild"
    },
    {
-    "id": 4828,
+    "id": 4827,
     "entity": "spending_order",
     "entityId": "4",
     "sourceId": "dc:83720"
+   },
+   {
+    "id": 4828,
+    "entity": "spending_order",
+    "entityId": "4",
+    "sourceId": "dc:84626"
    },
    {
     "id": 4829,
@@ -225874,4103 +225859,4109 @@
    {
     "id": 4969,
     "entity": "spending_step",
-    "entityId": "43",
-    "sourceId": "dc:76272"
+    "entityId": "42",
+    "sourceId": "dc:84626"
    },
    {
     "id": 4970,
     "entity": "spending_step",
     "entityId": "43",
-    "sourceId": "dc:77104"
+    "sourceId": "dc:76272"
    },
    {
     "id": 4971,
     "entity": "spending_step",
     "entityId": "43",
-    "sourceId": "web:cookierun-wiki-build"
+    "sourceId": "dc:77104"
    },
    {
     "id": 4972,
     "entity": "spending_step",
-    "entityId": "44",
-    "sourceId": "dc:81113"
+    "entityId": "43",
+    "sourceId": "web:cookierun-wiki-build"
    },
    {
     "id": 4973,
     "entity": "spending_step",
     "entityId": "44",
-    "sourceId": "dc:81695"
+    "sourceId": "dc:81113"
    },
    {
     "id": 4974,
     "entity": "spending_step",
     "entityId": "44",
-    "sourceId": "web:appstore-kr"
+    "sourceId": "dc:81695"
    },
    {
     "id": 4975,
     "entity": "spending_step",
-    "entityId": "45",
-    "sourceId": "dc:82897"
+    "entityId": "44",
+    "sourceId": "web:appstore-kr"
    },
    {
     "id": 4976,
     "entity": "spending_step",
     "entityId": "45",
-    "sourceId": "dc:82914"
+    "sourceId": "dc:82897"
    },
    {
     "id": 4977,
     "entity": "spending_step",
-    "entityId": "46",
-    "sourceId": "dc:77246"
+    "entityId": "45",
+    "sourceId": "dc:82914"
    },
    {
     "id": 4978,
     "entity": "spending_step",
     "entityId": "46",
-    "sourceId": "web:yt-pldC8umlhnI"
+    "sourceId": "dc:77246"
    },
    {
     "id": 4979,
     "entity": "spending_step",
     "entityId": "46",
-    "sourceId": "dc:82997"
+    "sourceId": "web:yt-pldC8umlhnI"
    },
    {
     "id": 4980,
     "entity": "spending_step",
     "entityId": "46",
-    "sourceId": "web:yt-EbXFIgSprRU"
+    "sourceId": "dc:82997"
    },
    {
     "id": 4981,
     "entity": "spending_step",
-    "entityId": "47",
-    "sourceId": "dc:55570"
+    "entityId": "46",
+    "sourceId": "web:yt-EbXFIgSprRU"
    },
    {
     "id": 4982,
     "entity": "spending_step",
     "entityId": "47",
-    "sourceId": "nv:5693"
+    "sourceId": "dc:55570"
    },
    {
     "id": 4983,
     "entity": "spending_step",
     "entityId": "47",
-    "sourceId": "dc:76290"
+    "sourceId": "nv:5693"
    },
    {
     "id": 4984,
     "entity": "spending_step",
     "entityId": "47",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:76290"
    },
    {
     "id": 4985,
     "entity": "spending_step",
     "entityId": "47",
-    "sourceId": "dc:75373"
+    "sourceId": "dc:50913"
    },
    {
     "id": 4986,
     "entity": "spending_step",
-    "entityId": "48",
-    "sourceId": "dc:75684"
+    "entityId": "47",
+    "sourceId": "dc:75373"
    },
    {
     "id": 4987,
     "entity": "spending_step",
     "entityId": "48",
-    "sourceId": "dc:53079"
+    "sourceId": "dc:75684"
    },
    {
     "id": 4988,
     "entity": "spending_step",
     "entityId": "48",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:53079"
    },
    {
     "id": 4989,
     "entity": "spending_step",
     "entityId": "48",
-    "sourceId": "web:yt-_Vyl0eQz9lU"
+    "sourceId": "dc:76272"
    },
    {
     "id": 4990,
     "entity": "spending_step",
-    "entityId": "49",
-    "sourceId": "dc:50913"
+    "entityId": "48",
+    "sourceId": "web:yt-_Vyl0eQz9lU"
    },
    {
     "id": 4991,
     "entity": "spending_step",
     "entityId": "49",
-    "sourceId": "dc:77420"
+    "sourceId": "dc:50913"
    },
    {
     "id": 4992,
     "entity": "spending_step",
-    "entityId": "50",
-    "sourceId": "dc:76372"
+    "entityId": "49",
+    "sourceId": "dc:77420"
    },
    {
     "id": 4993,
     "entity": "spending_step",
     "entityId": "50",
-    "sourceId": "dc:75058"
+    "sourceId": "dc:76372"
    },
    {
     "id": 4994,
+    "entity": "spending_step",
+    "entityId": "50",
+    "sourceId": "dc:75058"
+   },
+   {
+    "id": 4995,
     "entity": "spending_step",
     "entityId": "51",
     "sourceId": "nv:43444"
    },
    {
-    "id": 4995,
+    "id": 4996,
     "entity": "spending_step",
     "entityId": "52",
     "sourceId": "dc:77104"
    },
    {
-    "id": 4996,
+    "id": 4997,
     "entity": "spending_step",
     "entityId": "52",
     "sourceId": "dc:77420"
    },
    {
-    "id": 4997,
-    "entity": "spending_step",
-    "entityId": "53",
-    "sourceId": "dc:76461"
-   },
-   {
     "id": 4998,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 4999,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5000,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5001,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5002,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5003,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5004,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5005,
     "entity": "spending_step",
     "entityId": "53",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5006,
     "entity": "spending_step",
-    "entityId": "54",
-    "sourceId": "dc:76461"
+    "entityId": "53",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5007,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5008,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5009,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5010,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5011,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5012,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5013,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5014,
     "entity": "spending_step",
     "entityId": "54",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5015,
     "entity": "spending_step",
-    "entityId": "55",
-    "sourceId": "dc:76461"
+    "entityId": "54",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5016,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5017,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5018,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5019,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5020,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5021,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5022,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5023,
     "entity": "spending_step",
     "entityId": "55",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5024,
     "entity": "spending_step",
-    "entityId": "56",
-    "sourceId": "dc:76461"
+    "entityId": "55",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5025,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5026,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5027,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5028,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5029,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5030,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5031,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5032,
     "entity": "spending_step",
     "entityId": "56",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5033,
     "entity": "spending_step",
-    "entityId": "57",
-    "sourceId": "dc:76461"
+    "entityId": "56",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5034,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5035,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5036,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5037,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5038,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5039,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5040,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5041,
     "entity": "spending_step",
     "entityId": "57",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5042,
     "entity": "spending_step",
-    "entityId": "58",
-    "sourceId": "dc:76461"
+    "entityId": "57",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5043,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5044,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5045,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5046,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5047,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5048,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5049,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5050,
     "entity": "spending_step",
     "entityId": "58",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5051,
     "entity": "spending_step",
-    "entityId": "59",
-    "sourceId": "dc:76461"
+    "entityId": "58",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5052,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5053,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5054,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5055,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5056,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5057,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5058,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5059,
     "entity": "spending_step",
     "entityId": "59",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5060,
     "entity": "spending_step",
-    "entityId": "60",
-    "sourceId": "dc:76461"
+    "entityId": "59",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5061,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5062,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5063,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5064,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5065,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5066,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5067,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5068,
     "entity": "spending_step",
     "entityId": "60",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5069,
     "entity": "spending_step",
-    "entityId": "61",
-    "sourceId": "dc:76461"
+    "entityId": "60",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5070,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5071,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5072,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5073,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5074,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5075,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5076,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5077,
     "entity": "spending_step",
     "entityId": "61",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5078,
     "entity": "spending_step",
-    "entityId": "62",
-    "sourceId": "dc:76461"
+    "entityId": "61",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5079,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5080,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5081,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5082,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5083,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5084,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5085,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5086,
     "entity": "spending_step",
     "entityId": "62",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5087,
     "entity": "spending_step",
-    "entityId": "63",
-    "sourceId": "dc:76461"
+    "entityId": "62",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5088,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5089,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5090,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5091,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5092,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5093,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5094,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5095,
     "entity": "spending_step",
     "entityId": "63",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5096,
     "entity": "spending_step",
-    "entityId": "64",
-    "sourceId": "dc:76461"
+    "entityId": "63",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5097,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5098,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5099,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5100,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5101,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5102,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5103,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5104,
     "entity": "spending_step",
     "entityId": "64",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5105,
     "entity": "spending_step",
-    "entityId": "65",
-    "sourceId": "dc:76461"
+    "entityId": "64",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5106,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5107,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5108,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5109,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5110,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5111,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5112,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5113,
     "entity": "spending_step",
     "entityId": "65",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5114,
     "entity": "spending_step",
-    "entityId": "66",
-    "sourceId": "dc:76461"
+    "entityId": "65",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5115,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5116,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5117,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5118,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5119,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5120,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5121,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5122,
     "entity": "spending_step",
     "entityId": "66",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5123,
     "entity": "spending_step",
-    "entityId": "67",
-    "sourceId": "dc:76461"
+    "entityId": "66",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5124,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5125,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5126,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5127,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5128,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5129,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5130,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5131,
     "entity": "spending_step",
     "entityId": "67",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5132,
     "entity": "spending_step",
-    "entityId": "68",
-    "sourceId": "dc:76461"
+    "entityId": "67",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5133,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5134,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5135,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5136,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5137,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5138,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5139,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5140,
     "entity": "spending_step",
     "entityId": "68",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5141,
     "entity": "spending_step",
-    "entityId": "69",
-    "sourceId": "dc:76461"
+    "entityId": "68",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5142,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5143,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5144,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5145,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5146,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5147,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5148,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5149,
     "entity": "spending_step",
     "entityId": "69",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5150,
     "entity": "spending_step",
-    "entityId": "70",
-    "sourceId": "dc:76461"
+    "entityId": "69",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5151,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5152,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5153,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5154,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5155,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5156,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5157,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5158,
     "entity": "spending_step",
     "entityId": "70",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5159,
     "entity": "spending_step",
-    "entityId": "71",
-    "sourceId": "dc:76461"
+    "entityId": "70",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5160,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5161,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5162,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5163,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5164,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5165,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5166,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5167,
     "entity": "spending_step",
     "entityId": "71",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5168,
     "entity": "spending_step",
-    "entityId": "72",
-    "sourceId": "dc:76461"
+    "entityId": "71",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5169,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5170,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5171,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5172,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5173,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5174,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5175,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5176,
     "entity": "spending_step",
     "entityId": "72",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5177,
     "entity": "spending_step",
-    "entityId": "73",
-    "sourceId": "dc:76461"
+    "entityId": "72",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5178,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5179,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5180,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5181,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5182,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5183,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5184,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5185,
     "entity": "spending_step",
     "entityId": "73",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5186,
     "entity": "spending_step",
-    "entityId": "74",
-    "sourceId": "dc:76461"
+    "entityId": "73",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5187,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5188,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5189,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5190,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5191,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5192,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5193,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5194,
     "entity": "spending_step",
     "entityId": "74",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5195,
     "entity": "spending_step",
-    "entityId": "75",
-    "sourceId": "dc:76461"
+    "entityId": "74",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5196,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5197,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5198,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5199,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5200,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5201,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5202,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5203,
     "entity": "spending_step",
     "entityId": "75",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5204,
     "entity": "spending_step",
-    "entityId": "76",
-    "sourceId": "dc:76461"
+    "entityId": "75",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5205,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5206,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5207,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5208,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5209,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5210,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5211,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5212,
     "entity": "spending_step",
     "entityId": "76",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5213,
     "entity": "spending_step",
-    "entityId": "77",
-    "sourceId": "dc:76461"
+    "entityId": "76",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5214,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5215,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5216,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5217,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5218,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5219,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5220,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5221,
     "entity": "spending_step",
     "entityId": "77",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5222,
     "entity": "spending_step",
-    "entityId": "78",
-    "sourceId": "dc:76461"
+    "entityId": "77",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5223,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:77329"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5224,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:76290"
+    "sourceId": "dc:77329"
    },
    {
     "id": 5225,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76290"
    },
    {
     "id": 5226,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:75684"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5227,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5228,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:50913"
+    "sourceId": "dc:77246"
    },
    {
     "id": 5229,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:83712"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5230,
     "entity": "spending_step",
     "entityId": "78",
-    "sourceId": "dc:82897"
+    "sourceId": "dc:83712"
    },
    {
     "id": 5231,
-    "entity": "growth_curve",
-    "entityId": "1",
-    "sourceId": "dc:53079"
+    "entity": "spending_step",
+    "entityId": "78",
+    "sourceId": "dc:82897"
    },
    {
     "id": 5232,
     "entity": "growth_curve",
     "entityId": "1",
-    "sourceId": "dc:72150"
+    "sourceId": "dc:53079"
    },
    {
     "id": 5233,
     "entity": "growth_curve",
     "entityId": "1",
-    "sourceId": "web:sugarpocket-catalog"
+    "sourceId": "dc:72150"
    },
    {
     "id": 5234,
     "entity": "growth_curve",
     "entityId": "1",
-    "sourceId": "web:yt-l9086mj7hwA"
+    "sourceId": "web:sugarpocket-catalog"
    },
    {
     "id": 5235,
     "entity": "growth_curve",
     "entityId": "1",
-    "sourceId": "dc:81697"
+    "sourceId": "web:yt-l9086mj7hwA"
    },
    {
     "id": 5236,
     "entity": "growth_curve",
     "entityId": "1",
-    "sourceId": "dc:82457"
+    "sourceId": "dc:81697"
    },
    {
     "id": 5237,
     "entity": "growth_curve",
-    "entityId": "2",
-    "sourceId": "dc:84056"
+    "entityId": "1",
+    "sourceId": "dc:82457"
    },
    {
     "id": 5238,
     "entity": "growth_curve",
     "entityId": "2",
-    "sourceId": "dc:84616"
+    "sourceId": "dc:84056"
    },
    {
     "id": 5239,
     "entity": "growth_curve",
     "entityId": "2",
-    "sourceId": "dc:84886"
+    "sourceId": "dc:84616"
    },
    {
     "id": 5240,
     "entity": "growth_curve",
     "entityId": "2",
-    "sourceId": "dc:84474"
+    "sourceId": "dc:84886"
    },
    {
     "id": 5241,
     "entity": "growth_curve",
     "entityId": "2",
-    "sourceId": "dc:83284"
+    "sourceId": "dc:84474"
    },
    {
     "id": 5242,
     "entity": "growth_curve",
     "entityId": "2",
-    "sourceId": "dc:82908"
+    "sourceId": "dc:83284"
    },
    {
     "id": 5243,
     "entity": "growth_curve",
     "entityId": "2",
-    "sourceId": "dc:82361"
+    "sourceId": "dc:82908"
    },
    {
     "id": 5244,
     "entity": "growth_curve",
     "entityId": "2",
-    "sourceId": "dc:83185"
+    "sourceId": "dc:82361"
    },
    {
     "id": 5245,
+    "entity": "growth_curve",
+    "entityId": "2",
+    "sourceId": "dc:83185"
+   },
+   {
+    "id": 5246,
     "entity": "growth_curve",
     "entityId": "3",
     "sourceId": "web:cookierun-wiki-build"
    },
    {
-    "id": 5246,
+    "id": 5247,
     "entity": "growth_curve",
     "entityId": "4",
     "sourceId": "dc:53079"
    },
    {
-    "id": 5247,
+    "id": 5248,
     "entity": "growth_curve",
     "entityId": "4",
     "sourceId": "dc:72150"
    },
    {
-    "id": 5248,
+    "id": 5249,
     "entity": "growth_curve",
     "entityId": "4",
     "sourceId": "web:sugarpocket-catalog"
    },
    {
-    "id": 5249,
+    "id": 5250,
     "entity": "growth_curve",
     "entityId": "4",
     "sourceId": "web:yt-l9086mj7hwA"
    },
    {
-    "id": 5250,
-    "entity": "growth_curve",
-    "entityId": "5",
-    "sourceId": "web:sugarpocket-stella"
-   },
-   {
     "id": 5251,
     "entity": "growth_curve",
     "entityId": "5",
-    "sourceId": "nv:5693"
+    "sourceId": "web:sugarpocket-stella"
    },
    {
     "id": 5252,
     "entity": "growth_curve",
     "entityId": "5",
-    "sourceId": "nv:43444"
+    "sourceId": "nv:5693"
    },
    {
     "id": 5253,
     "entity": "growth_curve",
     "entityId": "5",
-    "sourceId": "dc:55570"
+    "sourceId": "nv:43444"
    },
    {
     "id": 5254,
     "entity": "growth_curve",
     "entityId": "5",
-    "sourceId": "dc:56417"
+    "sourceId": "dc:55570"
    },
    {
     "id": 5255,
     "entity": "growth_curve",
     "entityId": "5",
-    "sourceId": "dc:68586"
+    "sourceId": "dc:56417"
    },
    {
     "id": 5256,
     "entity": "growth_curve",
     "entityId": "5",
-    "sourceId": "web:yt-5XXDHBHnISU"
+    "sourceId": "dc:68586"
    },
    {
     "id": 5257,
     "entity": "growth_curve",
     "entityId": "5",
-    "sourceId": "web:crumblehub-api-efficiency"
+    "sourceId": "web:yt-5XXDHBHnISU"
    },
    {
     "id": 5258,
     "entity": "growth_curve",
-    "entityId": "6",
-    "sourceId": "web:sugarpocket-stella"
+    "entityId": "5",
+    "sourceId": "web:crumblehub-api-efficiency"
    },
    {
     "id": 5259,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "nv:5693"
+    "sourceId": "web:sugarpocket-stella"
    },
    {
     "id": 5260,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "nv:43444"
+    "sourceId": "nv:5693"
    },
    {
     "id": 5261,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "dc:55570"
+    "sourceId": "nv:43444"
    },
    {
     "id": 5262,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "dc:56417"
+    "sourceId": "dc:55570"
    },
    {
     "id": 5263,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "dc:68586"
+    "sourceId": "dc:56417"
    },
    {
     "id": 5264,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "web:yt-5XXDHBHnISU"
+    "sourceId": "dc:68586"
    },
    {
     "id": 5265,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "web:crumblehub-api-efficiency"
+    "sourceId": "web:yt-5XXDHBHnISU"
    },
    {
     "id": 5266,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "dc:70036"
+    "sourceId": "web:crumblehub-api-efficiency"
    },
    {
     "id": 5267,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "dc:72592"
+    "sourceId": "dc:70036"
    },
    {
     "id": 5268,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "nv:43697"
+    "sourceId": "dc:72592"
    },
    {
     "id": 5269,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "dc:73840"
+    "sourceId": "nv:43697"
    },
    {
     "id": 5270,
     "entity": "growth_curve",
     "entityId": "6",
-    "sourceId": "web:yt-mL9MSX3QD94"
+    "sourceId": "dc:73840"
    },
    {
     "id": 5271,
     "entity": "growth_curve",
-    "entityId": "7",
-    "sourceId": "web:sugarpocket-stella"
+    "entityId": "6",
+    "sourceId": "web:yt-mL9MSX3QD94"
    },
    {
     "id": 5272,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "nv:5693"
+    "sourceId": "web:sugarpocket-stella"
    },
    {
     "id": 5273,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "nv:43444"
+    "sourceId": "nv:5693"
    },
    {
     "id": 5274,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:55570"
+    "sourceId": "nv:43444"
    },
    {
     "id": 5275,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:56417"
+    "sourceId": "dc:55570"
    },
    {
     "id": 5276,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:68586"
+    "sourceId": "dc:56417"
    },
    {
     "id": 5277,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "web:yt-5XXDHBHnISU"
+    "sourceId": "dc:68586"
    },
    {
     "id": 5278,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "web:crumblehub-api-efficiency"
+    "sourceId": "web:yt-5XXDHBHnISU"
    },
    {
     "id": 5279,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:81886"
+    "sourceId": "web:crumblehub-api-efficiency"
    },
    {
     "id": 5280,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:80669"
+    "sourceId": "dc:81886"
    },
    {
     "id": 5281,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:81196"
+    "sourceId": "dc:80669"
    },
    {
     "id": 5282,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:81285"
+    "sourceId": "dc:81196"
    },
    {
     "id": 5283,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:78964"
+    "sourceId": "dc:81285"
    },
    {
     "id": 5284,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "dc:78814"
+    "sourceId": "dc:78964"
    },
    {
     "id": 5285,
     "entity": "growth_curve",
     "entityId": "7",
-    "sourceId": "web:yt-y-bxOrnjIeU"
+    "sourceId": "dc:78814"
    },
    {
     "id": 5286,
     "entity": "growth_curve",
-    "entityId": "8",
-    "sourceId": "web:sugarpocket-stella"
+    "entityId": "7",
+    "sourceId": "web:yt-y-bxOrnjIeU"
    },
    {
     "id": 5287,
     "entity": "growth_curve",
     "entityId": "8",
-    "sourceId": "nv:5693"
+    "sourceId": "web:sugarpocket-stella"
    },
    {
     "id": 5288,
     "entity": "growth_curve",
     "entityId": "8",
-    "sourceId": "nv:43444"
+    "sourceId": "nv:5693"
    },
    {
     "id": 5289,
     "entity": "growth_curve",
     "entityId": "8",
-    "sourceId": "dc:55570"
+    "sourceId": "nv:43444"
    },
    {
     "id": 5290,
     "entity": "growth_curve",
     "entityId": "8",
-    "sourceId": "dc:56417"
+    "sourceId": "dc:55570"
    },
    {
     "id": 5291,
     "entity": "growth_curve",
     "entityId": "8",
-    "sourceId": "dc:68586"
+    "sourceId": "dc:56417"
    },
    {
     "id": 5292,
     "entity": "growth_curve",
     "entityId": "8",
-    "sourceId": "web:yt-5XXDHBHnISU"
+    "sourceId": "dc:68586"
    },
    {
     "id": 5293,
     "entity": "growth_curve",
     "entityId": "8",
-    "sourceId": "web:crumblehub-api-efficiency"
+    "sourceId": "web:yt-5XXDHBHnISU"
    },
    {
     "id": 5294,
     "entity": "growth_curve",
-    "entityId": "9",
-    "sourceId": "dc:50913"
+    "entityId": "8",
+    "sourceId": "web:crumblehub-api-efficiency"
    },
    {
     "id": 5295,
     "entity": "growth_curve",
     "entityId": "9",
-    "sourceId": "dc:73162"
+    "sourceId": "dc:50913"
    },
    {
     "id": 5296,
     "entity": "growth_curve",
     "entityId": "9",
-    "sourceId": "dc:74685"
+    "sourceId": "dc:73162"
    },
    {
     "id": 5297,
     "entity": "growth_curve",
     "entityId": "9",
-    "sourceId": "dc:77246"
+    "sourceId": "dc:74685"
    },
    {
     "id": 5298,
     "entity": "growth_curve",
-    "entityId": "10",
-    "sourceId": "web:sugarpocket-catalog"
+    "entityId": "9",
+    "sourceId": "dc:77246"
    },
    {
     "id": 5299,
     "entity": "growth_curve",
     "entityId": "10",
-    "sourceId": "web:crumbgg-patches-20261007"
+    "sourceId": "web:sugarpocket-catalog"
    },
    {
     "id": 5300,
     "entity": "growth_curve",
     "entityId": "10",
-    "sourceId": "nv:50417"
+    "sourceId": "web:crumbgg-patches-20261007"
    },
    {
     "id": 5301,
     "entity": "growth_curve",
     "entityId": "10",
-    "sourceId": "dc:79865"
+    "sourceId": "nv:50417"
    },
    {
     "id": 5302,
     "entity": "growth_curve",
     "entityId": "10",
-    "sourceId": "dc:83392"
+    "sourceId": "dc:79865"
    },
    {
     "id": 5303,
     "entity": "growth_curve",
     "entityId": "10",
-    "sourceId": "dc:83091"
+    "sourceId": "dc:83392"
    },
    {
     "id": 5304,
     "entity": "growth_curve",
-    "entityId": "11",
-    "sourceId": "web:sugarpocket-catalog"
+    "entityId": "10",
+    "sourceId": "dc:83091"
    },
    {
     "id": 5305,
     "entity": "growth_curve",
-    "entityId": "12",
+    "entityId": "11",
     "sourceId": "web:sugarpocket-catalog"
    },
    {
     "id": 5306,
     "entity": "growth_curve",
     "entityId": "12",
-    "sourceId": "nv:30148"
+    "sourceId": "web:sugarpocket-catalog"
    },
    {
     "id": 5307,
     "entity": "growth_curve",
     "entityId": "12",
-    "sourceId": "dc:77460"
+    "sourceId": "nv:30148"
    },
    {
     "id": 5308,
     "entity": "growth_curve",
-    "entityId": "13",
-    "sourceId": "web:crumbgg-patches-20260928"
+    "entityId": "12",
+    "sourceId": "dc:77460"
    },
    {
     "id": 5309,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "nv:35880"
+    "sourceId": "web:crumbgg-patches-20260928"
    },
    {
     "id": 5310,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "nv:39795"
+    "sourceId": "nv:35880"
    },
    {
     "id": 5311,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "nv:41301"
+    "sourceId": "nv:39795"
    },
    {
     "id": 5312,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "dc:76008"
+    "sourceId": "nv:41301"
    },
    {
     "id": 5313,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "dc:76139"
+    "sourceId": "dc:76008"
    },
    {
     "id": 5314,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "dc:69704"
+    "sourceId": "dc:76139"
    },
    {
     "id": 5315,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "dc:77104"
+    "sourceId": "dc:69704"
    },
    {
     "id": 5316,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "dc:76171"
+    "sourceId": "dc:77104"
    },
    {
     "id": 5317,
     "entity": "growth_curve",
     "entityId": "13",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76171"
    },
    {
     "id": 5318,
     "entity": "growth_curve",
-    "entityId": "14",
-    "sourceId": "web:crumbgg-patches-20260928"
+    "entityId": "13",
+    "sourceId": "dc:76272"
    },
    {
     "id": 5319,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "nv:35880"
+    "sourceId": "web:crumbgg-patches-20260928"
    },
    {
     "id": 5320,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "nv:39795"
+    "sourceId": "nv:35880"
    },
    {
     "id": 5321,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "nv:41301"
+    "sourceId": "nv:39795"
    },
    {
     "id": 5322,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:76008"
+    "sourceId": "nv:41301"
    },
    {
     "id": 5323,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:76139"
+    "sourceId": "dc:76008"
    },
    {
     "id": 5324,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:69704"
+    "sourceId": "dc:76139"
    },
    {
     "id": 5325,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:77104"
+    "sourceId": "dc:69704"
    },
    {
     "id": 5326,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:76171"
+    "sourceId": "dc:77104"
    },
    {
     "id": 5327,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:76272"
+    "sourceId": "dc:76171"
    },
    {
     "id": 5328,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:81199"
+    "sourceId": "dc:76272"
    },
    {
     "id": 5329,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:79519"
+    "sourceId": "dc:81199"
    },
    {
     "id": 5330,
     "entity": "growth_curve",
     "entityId": "14",
-    "sourceId": "dc:82242"
+    "sourceId": "dc:79519"
    },
    {
     "id": 5331,
     "entity": "growth_curve",
-    "entityId": "15",
-    "sourceId": "web:yt-y-bxOrnjIeU"
+    "entityId": "14",
+    "sourceId": "dc:82242"
    },
    {
     "id": 5332,
     "entity": "growth_curve",
     "entityId": "15",
-    "sourceId": "dc:76198"
+    "sourceId": "web:yt-y-bxOrnjIeU"
    },
    {
     "id": 5333,
     "entity": "growth_curve",
     "entityId": "15",
-    "sourceId": "dc:77277"
+    "sourceId": "dc:76198"
    },
    {
     "id": 5334,
     "entity": "growth_curve",
     "entityId": "15",
-    "sourceId": "dc:76620"
+    "sourceId": "dc:77277"
    },
    {
     "id": 5335,
     "entity": "growth_curve",
     "entityId": "15",
-    "sourceId": "dc:76601"
+    "sourceId": "dc:76620"
    },
    {
     "id": 5336,
     "entity": "growth_curve",
     "entityId": "15",
-    "sourceId": "web:crumbgg-patches-20260928"
+    "sourceId": "dc:76601"
    },
    {
     "id": 5337,
     "entity": "growth_curve",
     "entityId": "15",
-    "sourceId": "dc:79685"
+    "sourceId": "web:crumbgg-patches-20260928"
    },
    {
     "id": 5338,
     "entity": "growth_curve",
     "entityId": "15",
-    "sourceId": "dc:82186"
+    "sourceId": "dc:79685"
    },
    {
     "id": 5339,
     "entity": "growth_curve",
-    "entityId": "16",
-    "sourceId": "web:yt-y-bxOrnjIeU"
+    "entityId": "15",
+    "sourceId": "dc:82186"
    },
    {
     "id": 5340,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "dc:76198"
+    "sourceId": "web:yt-y-bxOrnjIeU"
    },
    {
     "id": 5341,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "dc:77277"
+    "sourceId": "dc:76198"
    },
    {
     "id": 5342,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "dc:76620"
+    "sourceId": "dc:77277"
    },
    {
     "id": 5343,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "dc:76601"
+    "sourceId": "dc:76620"
    },
    {
     "id": 5344,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "web:crumbgg-patches-20260928"
+    "sourceId": "dc:76601"
    },
    {
     "id": 5345,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "nv:50417"
+    "sourceId": "web:crumbgg-patches-20260928"
    },
    {
     "id": 5346,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "web:crumbgg-patches-20261007"
+    "sourceId": "nv:50417"
    },
    {
     "id": 5347,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "web:cookierun-wiki-patch-1-5"
+    "sourceId": "web:crumbgg-patches-20261007"
    },
    {
     "id": 5348,
     "entity": "growth_curve",
     "entityId": "16",
-    "sourceId": "dc:83916"
+    "sourceId": "web:cookierun-wiki-patch-1-5"
    },
    {
     "id": 5349,
+    "entity": "growth_curve",
+    "entityId": "16",
+    "sourceId": "dc:83916"
+   },
+   {
+    "id": 5350,
     "entity": "growth_curve",
     "entityId": "17",
     "sourceId": "web:sugarpocket-catalog"
    },
    {
-    "id": 5350,
+    "id": 5351,
     "entity": "planner_step",
     "entityId": "1",
     "sourceId": "dc:77329"
    },
    {
-    "id": 5351,
+    "id": 5352,
     "entity": "planner_step",
     "entityId": "1",
     "sourceId": "dc:76290"
-   },
-   {
-    "id": 5352,
-    "entity": "planner_step",
-    "entityId": "2",
-    "sourceId": "dc:76461"
    },
    {
     "id": 5353,
     "entity": "planner_step",
     "entityId": "2",
-    "sourceId": "dc:81826"
+    "sourceId": "dc:76461"
    },
    {
     "id": 5354,
     "entity": "planner_step",
-    "entityId": "3",
-    "sourceId": "dc:75684"
+    "entityId": "2",
+    "sourceId": "dc:81826"
    },
    {
     "id": 5355,
     "entity": "planner_step",
     "entityId": "3",
-    "sourceId": "dc:53079"
+    "sourceId": "dc:75684"
    },
    {
     "id": 5356,
+    "entity": "planner_step",
+    "entityId": "3",
+    "sourceId": "dc:53079"
+   },
+   {
+    "id": 5357,
     "entity": "planner_step",
     "entityId": "4",
     "sourceId": "dc:82156"
    },
    {
-    "id": 5357,
+    "id": 5358,
     "entity": "planner_step",
     "entityId": "5",
     "sourceId": "dc:83712"
    },
    {
-    "id": 5358,
+    "id": 5359,
     "entity": "planner_step",
     "entityId": "5",
     "sourceId": "dc:82708"
    },
    {
-    "id": 5359,
+    "id": 5360,
     "entity": "planner_step",
     "entityId": "5",
     "sourceId": "dc:81689"
    },
    {
-    "id": 5360,
+    "id": 5361,
     "entity": "planner_step",
     "entityId": "6",
     "sourceId": "dc:76290"
    },
    {
-    "id": 5361,
+    "id": 5362,
     "entity": "planner_step",
     "entityId": "6",
     "sourceId": "dc:74089"
    },
    {
-    "id": 5362,
+    "id": 5363,
     "entity": "planner_step",
     "entityId": "6",
     "sourceId": "nv:32484"
    },
    {
-    "id": 5363,
+    "id": 5364,
     "entity": "planner_step",
     "entityId": "6",
     "sourceId": "dc:84655"
    },
    {
-    "id": 5364,
-    "entity": "recommendation",
-    "entityId": "6",
-    "sourceId": "dc:80715"
-   },
-   {
     "id": 5365,
     "entity": "recommendation",
     "entityId": "6",
-    "sourceId": "dc:79492"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5366,
     "entity": "recommendation",
     "entityId": "6",
-    "sourceId": "nv:48838"
+    "sourceId": "dc:79492"
    },
    {
     "id": 5367,
     "entity": "recommendation",
     "entityId": "6",
-    "sourceId": "dc:81070"
+    "sourceId": "nv:48838"
    },
    {
     "id": 5368,
-    "entity": "mechanic",
-    "entityId": "255",
-    "sourceId": "nv:45446"
+    "entity": "recommendation",
+    "entityId": "6",
+    "sourceId": "dc:81070"
    },
    {
     "id": 5369,
     "entity": "mechanic",
     "entityId": "255",
-    "sourceId": "nv:43827"
+    "sourceId": "nv:45446"
    },
    {
     "id": 5370,
     "entity": "mechanic",
-    "entityId": "256",
-    "sourceId": "nv:37730"
+    "entityId": "255",
+    "sourceId": "nv:43827"
    },
    {
     "id": 5371,
     "entity": "mechanic",
     "entityId": "256",
-    "sourceId": "nv:44477"
+    "sourceId": "nv:37730"
    },
    {
     "id": 5372,
     "entity": "mechanic",
     "entityId": "256",
-    "sourceId": "nv:50417"
+    "sourceId": "nv:44477"
    },
    {
     "id": 5373,
     "entity": "mechanic",
-    "entityId": "257",
-    "sourceId": "dc:81981"
+    "entityId": "256",
+    "sourceId": "nv:50417"
    },
    {
     "id": 5374,
     "entity": "mechanic",
     "entityId": "257",
-    "sourceId": "dc:81070"
+    "sourceId": "dc:81981"
    },
    {
     "id": 5375,
     "entity": "mechanic",
     "entityId": "257",
-    "sourceId": "nv:43827"
+    "sourceId": "dc:81070"
    },
    {
     "id": 5376,
+    "entity": "mechanic",
+    "entityId": "257",
+    "sourceId": "nv:43827"
+   },
+   {
+    "id": 5377,
     "entity": "mechanic",
     "entityId": "258",
     "sourceId": "dc:81139"
    },
    {
-    "id": 5377,
-    "entity": "daily_dungeon",
-    "entityId": "1",
-    "sourceId": "dc:80715"
-   },
-   {
     "id": 5378,
     "entity": "daily_dungeon",
     "entityId": "1",
-    "sourceId": "dc:82001"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5379,
     "entity": "daily_dungeon",
     "entityId": "1",
-    "sourceId": "nv:50417"
+    "sourceId": "dc:82001"
    },
    {
     "id": 5380,
     "entity": "daily_dungeon",
     "entityId": "1",
-    "sourceId": "dc:81981"
+    "sourceId": "nv:50417"
    },
    {
     "id": 5381,
     "entity": "daily_dungeon",
-    "entityId": "2",
-    "sourceId": "dc:82162"
+    "entityId": "1",
+    "sourceId": "dc:81981"
    },
    {
     "id": 5382,
     "entity": "daily_dungeon",
     "entityId": "2",
-    "sourceId": "nv:50417"
+    "sourceId": "dc:82162"
    },
    {
     "id": 5383,
     "entity": "daily_dungeon",
     "entityId": "2",
-    "sourceId": "nv:48486"
+    "sourceId": "nv:50417"
    },
    {
     "id": 5384,
     "entity": "daily_dungeon",
     "entityId": "2",
-    "sourceId": "dc:81981"
+    "sourceId": "nv:48486"
    },
    {
     "id": 5385,
     "entity": "daily_dungeon",
     "entityId": "2",
-    "sourceId": "nv:43827"
+    "sourceId": "dc:81981"
    },
    {
     "id": 5386,
     "entity": "daily_dungeon",
     "entityId": "2",
-    "sourceId": "web:yt-7GHVEHoVFsw"
+    "sourceId": "nv:43827"
    },
    {
     "id": 5387,
     "entity": "daily_dungeon",
-    "entityId": "3",
-    "sourceId": "nv:49007"
+    "entityId": "2",
+    "sourceId": "web:yt-7GHVEHoVFsw"
    },
    {
     "id": 5388,
     "entity": "daily_dungeon",
     "entityId": "3",
-    "sourceId": "nv:50417"
+    "sourceId": "nv:49007"
    },
    {
     "id": 5389,
     "entity": "daily_dungeon",
     "entityId": "3",
-    "sourceId": "web:yt-RaZght8lZZ8"
+    "sourceId": "nv:50417"
    },
    {
     "id": 5390,
     "entity": "daily_dungeon",
     "entityId": "3",
-    "sourceId": "dc:81981"
+    "sourceId": "web:yt-RaZght8lZZ8"
    },
    {
     "id": 5391,
     "entity": "daily_dungeon",
-    "entityId": "4",
-    "sourceId": "dc:81991"
+    "entityId": "3",
+    "sourceId": "dc:81981"
    },
    {
     "id": 5392,
     "entity": "daily_dungeon",
     "entityId": "4",
-    "sourceId": "dc:81988"
+    "sourceId": "dc:81991"
    },
    {
     "id": 5393,
     "entity": "daily_dungeon",
     "entityId": "4",
-    "sourceId": "dc:82001"
+    "sourceId": "dc:81988"
    },
    {
     "id": 5394,
     "entity": "daily_dungeon",
     "entityId": "4",
-    "sourceId": "nv:43827"
+    "sourceId": "dc:82001"
    },
    {
     "id": 5395,
     "entity": "daily_dungeon",
     "entityId": "4",
-    "sourceId": "dc:81981"
+    "sourceId": "nv:43827"
    },
    {
     "id": 5396,
     "entity": "daily_dungeon",
-    "entityId": "5",
-    "sourceId": "nv:49521"
+    "entityId": "4",
+    "sourceId": "dc:81981"
    },
    {
     "id": 5397,
     "entity": "daily_dungeon",
     "entityId": "5",
-    "sourceId": "nv:16132"
+    "sourceId": "nv:49521"
    },
    {
     "id": 5398,
     "entity": "daily_dungeon",
     "entityId": "5",
-    "sourceId": "nv:43827"
+    "sourceId": "nv:16132"
    },
    {
     "id": 5399,
     "entity": "daily_dungeon",
     "entityId": "5",
-    "sourceId": "nv:47793"
+    "sourceId": "nv:43827"
    },
    {
     "id": 5400,
     "entity": "daily_dungeon",
     "entityId": "5",
-    "sourceId": "dc:81981"
+    "sourceId": "nv:47793"
    },
    {
     "id": 5401,
+    "entity": "daily_dungeon",
+    "entityId": "5",
+    "sourceId": "dc:81981"
+   },
+   {
+    "id": 5402,
     "entity": "deck",
     "entityId": "exp-dc80715-furball",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5402,
+    "id": 5403,
     "entity": "deck",
     "entityId": "exp-dc79492-hotdog",
     "sourceId": "dc:79492"
    },
    {
-    "id": 5403,
+    "id": 5404,
     "entity": "obsolescence",
     "entityId": "deck:exp-dc79492-hotdog",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5404,
+    "id": 5405,
     "entity": "deck",
     "entityId": "exp-nv48705-biku",
     "sourceId": "nv:48705"
    },
    {
-    "id": 5405,
+    "id": 5406,
     "entity": "deck",
     "entityId": "exp-nv48705-biku",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5406,
+    "id": 5407,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv48705-biku",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5407,
+    "id": 5408,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv48705-biku",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5408,
+    "id": 5409,
     "entity": "deck",
     "entityId": "exp-nv48828-bag",
     "sourceId": "nv:48828"
    },
    {
-    "id": 5409,
+    "id": 5410,
     "entity": "deck",
     "entityId": "exp-nv48828-bag",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5410,
+    "id": 5411,
     "entity": "deck",
     "entityId": "exp-yt-ndrunner-721",
     "sourceId": "web:yt-0CUv152HVrA"
    },
    {
-    "id": 5411,
+    "id": 5412,
     "entity": "deck",
     "entityId": "exp-dc80513",
     "sourceId": "dc:80513"
    },
    {
-    "id": 5412,
+    "id": 5413,
     "entity": "deck",
     "entityId": "exp-dc78450-figure",
     "sourceId": "dc:78450"
    },
    {
-    "id": 5413,
+    "id": 5414,
     "entity": "deck",
     "entityId": "exp-nv47333-roronoa",
     "sourceId": "nv:47333"
    },
    {
-    "id": 5414,
+    "id": 5415,
     "entity": "deck",
     "entityId": "exp-nv46895-yolo",
     "sourceId": "nv:46895"
    },
    {
-    "id": 5415,
+    "id": 5416,
     "entity": "deck",
     "entityId": "exp-dc80701-shyer",
     "sourceId": "dc:80701"
    },
    {
-    "id": 5416,
+    "id": 5417,
     "entity": "deck",
     "entityId": "exp-dc77003",
     "sourceId": "dc:77003"
    },
    {
-    "id": 5417,
+    "id": 5418,
     "entity": "deck",
     "entityId": "exp-nv49978-hearts",
     "sourceId": "nv:49978"
    },
    {
-    "id": 5418,
+    "id": 5419,
     "entity": "deck",
     "entityId": "exp-nv48303-cookdas",
     "sourceId": "nv:48303"
    },
    {
-    "id": 5419,
+    "id": 5420,
     "entity": "deck",
     "entityId": "exp-yt-nurimer-655",
     "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
-    "id": 5420,
+    "id": 5421,
     "entity": "deck",
     "entityId": "exp-dc78207",
     "sourceId": "dc:78207"
    },
    {
-    "id": 5421,
+    "id": 5422,
     "entity": "deck",
     "entityId": "exp-nv47793-yongsa",
     "sourceId": "nv:47793"
    },
    {
-    "id": 5422,
+    "id": 5423,
     "entity": "deck",
     "entityId": "exp-dc75870-dealers",
     "sourceId": "dc:75870"
    },
    {
-    "id": 5423,
+    "id": 5424,
     "entity": "deck",
     "entityId": "exp-yt-vart-641",
     "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
-    "id": 5424,
+    "id": 5425,
     "entity": "deck",
     "entityId": "exp-yt-vart-641",
     "sourceId": "web:yt-zx8hJ6_37w8"
-   },
-   {
-    "id": 5425,
-    "entity": "deck",
-    "entityId": "exp-nv46851-ssw",
-    "sourceId": "nv:46851"
    },
    {
     "id": 5426,
     "entity": "deck",
     "entityId": "exp-nv46851-ssw",
-    "sourceId": "web:yt-FhBEadxPWWs"
+    "sourceId": "nv:46851"
    },
    {
     "id": 5427,
+    "entity": "deck",
+    "entityId": "exp-nv46851-ssw",
+    "sourceId": "web:yt-FhBEadxPWWs"
+   },
+   {
+    "id": 5428,
     "entity": "deck",
     "entityId": "exp-dc75345",
     "sourceId": "dc:75345"
    },
    {
-    "id": 5428,
+    "id": 5429,
     "entity": "deck",
     "entityId": "exp-nv48076-tube",
     "sourceId": "nv:48076"
    },
    {
-    "id": 5429,
+    "id": 5430,
     "entity": "deck",
     "entityId": "exp-nv46607-ssw",
     "sourceId": "nv:46607"
    },
    {
-    "id": 5430,
+    "id": 5431,
     "entity": "deck",
     "entityId": "exp-nv46607-ssw",
     "sourceId": "web:yt-VQM7Tt6R-2Y"
    },
    {
-    "id": 5431,
+    "id": 5432,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv46607-ssw",
     "sourceId": "nv:46851"
    },
    {
-    "id": 5432,
+    "id": 5433,
     "entity": "deck",
     "entityId": "exp-nv45930-ssw",
     "sourceId": "nv:45930"
    },
    {
-    "id": 5433,
+    "id": 5434,
     "entity": "deck",
     "entityId": "exp-nv45930-ssw",
     "sourceId": "web:yt-ZrEzOgcIYjw"
    },
    {
-    "id": 5434,
+    "id": 5435,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv45930-ssw",
     "sourceId": "nv:46851"
    },
    {
-    "id": 5435,
+    "id": 5436,
     "entity": "deck",
     "entityId": "exp-nv46250-domi",
     "sourceId": "nv:46250"
    },
    {
-    "id": 5436,
+    "id": 5437,
     "entity": "deck",
     "entityId": "exp-nv46250-domi",
     "sourceId": "nv:44654"
    },
    {
-    "id": 5437,
+    "id": 5438,
     "entity": "deck",
     "entityId": "exp-nv46707-pueri",
     "sourceId": "nv:46707"
    },
    {
-    "id": 5438,
+    "id": 5439,
     "entity": "deck",
     "entityId": "exp-nv45715-hearts",
     "sourceId": "nv:45715"
    },
    {
-    "id": 5439,
+    "id": 5440,
     "entity": "obsolescence",
     "entityId": "deck:exp-nv45715-hearts",
     "sourceId": "nv:49978"
    },
    {
-    "id": 5440,
+    "id": 5441,
     "entity": "deck",
     "entityId": "exp-dc73577-gramph",
     "sourceId": "dc:73577"
    },
    {
-    "id": 5441,
+    "id": 5442,
     "entity": "deck",
     "entityId": "exp-dc73577-gramph",
     "sourceId": "web:yt-MxJ7HUD1jVw"
    },
    {
-    "id": 5442,
+    "id": 5443,
     "entity": "obsolescence",
     "entityId": "deck:exp-dc73577-gramph",
     "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
-    "id": 5443,
+    "id": 5444,
     "entity": "deck",
     "entityId": "exp-nv46544-gogi",
     "sourceId": "nv:46544"
    },
    {
-    "id": 5444,
+    "id": 5445,
     "entity": "deck",
     "entityId": "exp-dc74694",
     "sourceId": "dc:74694"
    },
    {
-    "id": 5445,
+    "id": 5446,
     "entity": "deck",
     "entityId": "exp-nv45541-lucky",
     "sourceId": "nv:45541"
    },
    {
-    "id": 5446,
+    "id": 5447,
     "entity": "deck",
     "entityId": "exp-dc77041",
     "sourceId": "dc:77041"
    },
    {
-    "id": 5447,
+    "id": 5448,
     "entity": "deck",
     "entityId": "exp-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5448,
+    "id": 5449,
     "entity": "deck",
     "entityId": "coin-yt-vart-674",
     "sourceId": "web:yt-LM1NwNyxqEA"
    },
    {
-    "id": 5449,
+    "id": 5450,
     "entity": "deck",
     "entityId": "coin-yt-vart-674",
     "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
-    "id": 5450,
+    "id": 5451,
     "entity": "deck",
     "entityId": "coin-dc81991-gramph",
     "sourceId": "dc:81991"
    },
    {
-    "id": 5451,
+    "id": 5452,
     "entity": "deck",
     "entityId": "coin-dc81988-somebody",
     "sourceId": "dc:81988"
    },
    {
-    "id": 5452,
+    "id": 5453,
     "entity": "deck",
     "entityId": "coin-nv48344-yongsa",
     "sourceId": "nv:48344"
    },
    {
-    "id": 5453,
+    "id": 5454,
     "entity": "deck",
     "entityId": "coin-nv48344-yongsa",
     "sourceId": "nv:47793"
-   },
-   {
-    "id": 5454,
-    "entity": "deck",
-    "entityId": "coin-yt-ssw-700",
-    "sourceId": "web:yt-szDOdi061sc"
    },
    {
     "id": 5455,
     "entity": "deck",
     "entityId": "coin-yt-ssw-700",
-    "sourceId": "nv:48436"
+    "sourceId": "web:yt-szDOdi061sc"
    },
    {
     "id": 5456,
     "entity": "deck",
-    "entityId": "coin-dc81582-tino",
-    "sourceId": "dc:81582"
+    "entityId": "coin-yt-ssw-700",
+    "sourceId": "nv:48436"
    },
    {
     "id": 5457,
     "entity": "deck",
     "entityId": "coin-dc81582-tino",
-    "sourceId": "dc:81588"
+    "sourceId": "dc:81582"
    },
    {
     "id": 5458,
     "entity": "deck",
     "entityId": "coin-dc81582-tino",
-    "sourceId": "nv:49847"
+    "sourceId": "dc:81588"
    },
    {
     "id": 5459,
+    "entity": "deck",
+    "entityId": "coin-dc81582-tino",
+    "sourceId": "nv:49847"
+   },
+   {
+    "id": 5460,
     "entity": "deck",
     "entityId": "coin-nv48127-dodeok",
     "sourceId": "nv:48127"
    },
    {
-    "id": 5460,
+    "id": 5461,
     "entity": "deck",
     "entityId": "coin-nv47326-jilpeok",
     "sourceId": "nv:47326"
    },
    {
-    "id": 5461,
+    "id": 5462,
     "entity": "deck",
     "entityId": "coin-nv48282-tamatama",
     "sourceId": "nv:48282"
    },
    {
-    "id": 5462,
+    "id": 5463,
     "entity": "deck",
     "entityId": "coin-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5463,
+    "id": 5464,
     "entity": "deck",
     "entityId": "coin-nv45446-sinbi",
     "sourceId": "nv:45446"
    },
    {
-    "id": 5464,
-    "entity": "deck",
-    "entityId": "coin-nv45446-sinbi",
-    "sourceId": "nv:49847"
-   },
-   {
     "id": 5465,
     "entity": "deck",
-    "entityId": "coin-nv49847-domi",
+    "entityId": "coin-nv45446-sinbi",
     "sourceId": "nv:49847"
    },
    {
     "id": 5466,
     "entity": "deck",
-    "entityId": "coin-yt-ssw-chain",
-    "sourceId": "web:yt-h0qCokY_Ylg"
+    "entityId": "coin-nv49847-domi",
+    "sourceId": "nv:49847"
    },
    {
     "id": 5467,
     "entity": "deck",
     "entityId": "coin-yt-ssw-chain",
-    "sourceId": "nv:48585"
+    "sourceId": "web:yt-h0qCokY_Ylg"
    },
    {
     "id": 5468,
+    "entity": "deck",
+    "entityId": "coin-yt-ssw-chain",
+    "sourceId": "nv:48585"
+   },
+   {
+    "id": 5469,
     "entity": "deck",
     "entityId": "dough-dc82162-dalto",
     "sourceId": "dc:82162"
    },
    {
-    "id": 5469,
+    "id": 5470,
     "entity": "deck",
     "entityId": "dough-nv50183-yongsa",
     "sourceId": "nv:50183"
    },
    {
-    "id": 5470,
+    "id": 5471,
     "entity": "deck",
     "entityId": "dough-nv50183-yongsa",
     "sourceId": "nv:48344"
    },
    {
-    "id": 5471,
+    "id": 5472,
     "entity": "deck",
     "entityId": "dough-nv50183-yongsa",
     "sourceId": "nv:50297"
    },
    {
-    "id": 5472,
+    "id": 5473,
     "entity": "deck",
     "entityId": "dough-nv50398-gogi",
     "sourceId": "nv:50398"
    },
    {
-    "id": 5473,
+    "id": 5474,
     "entity": "deck",
     "entityId": "dough-nv47326-jilpeok",
     "sourceId": "nv:47326"
    },
    {
-    "id": 5474,
+    "id": 5475,
     "entity": "deck",
     "entityId": "dough-yt-vart-675",
     "sourceId": "web:yt-7GHVEHoVFsw"
    },
    {
-    "id": 5475,
+    "id": 5476,
     "entity": "deck",
     "entityId": "dough-yt-vart-675",
     "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
-    "id": 5476,
+    "id": 5477,
     "entity": "deck",
     "entityId": "dough-nv48412-tamatama",
     "sourceId": "nv:48412"
    },
    {
-    "id": 5477,
+    "id": 5478,
     "entity": "deck",
     "entityId": "dough-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5478,
+    "id": 5479,
     "entity": "deck",
     "entityId": "dough-nv49847-domi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5479,
+    "id": 5480,
     "entity": "deck",
     "entityId": "rs-nv49007-roronoa",
     "sourceId": "nv:49007"
    },
    {
-    "id": 5480,
+    "id": 5481,
     "entity": "deck",
     "entityId": "rs-nv48344-yongsa",
     "sourceId": "nv:48344"
    },
    {
-    "id": 5481,
+    "id": 5482,
     "entity": "deck",
     "entityId": "rs-nv50391-gogi",
     "sourceId": "nv:50391"
    },
    {
-    "id": 5482,
+    "id": 5483,
     "entity": "deck",
     "entityId": "rs-dc78207",
     "sourceId": "dc:78207"
    },
    {
-    "id": 5483,
+    "id": 5484,
     "entity": "deck",
     "entityId": "rs-yt-vart-620",
     "sourceId": "web:yt-CZS-dKsfbAk"
    },
    {
-    "id": 5484,
+    "id": 5485,
     "entity": "deck",
     "entityId": "rs-yt-vart-620",
     "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
-    "id": 5485,
+    "id": 5486,
     "entity": "deck",
     "entityId": "rs-yt-vart-620",
     "sourceId": "dc:77041"
    },
    {
-    "id": 5486,
+    "id": 5487,
     "entity": "deck",
     "entityId": "rs-nv43827-nun",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5487,
+    "id": 5488,
     "entity": "deck",
     "entityId": "rs-nv45446-sinbi",
     "sourceId": "nv:45446"
    },
    {
-    "id": 5488,
+    "id": 5489,
     "entity": "deck",
     "entityId": "rs-nv45446-sinbi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5489,
+    "id": 5490,
     "entity": "deck",
     "entityId": "rs-nv49244-budget",
     "sourceId": "nv:49244"
    },
    {
-    "id": 5490,
+    "id": 5491,
     "entity": "deck",
     "entityId": "rune-yt-ssw-715",
     "sourceId": "web:yt-N6fgEKs3qq4"
    },
    {
-    "id": 5491,
+    "id": 5492,
     "entity": "deck",
     "entityId": "rune-yt-ssw-715",
     "sourceId": "nv:49521"
    },
    {
-    "id": 5492,
+    "id": 5493,
     "entity": "deck",
     "entityId": "rune-nv47326-jilpeok",
     "sourceId": "nv:47326"
    },
    {
-    "id": 5493,
-    "entity": "deck",
-    "entityId": "rune-nv47326-jilpeok",
-    "sourceId": "nv:47793"
-   },
-   {
     "id": 5494,
     "entity": "deck",
-    "entityId": "rune-nv47793-yongsa",
+    "entityId": "rune-nv47326-jilpeok",
     "sourceId": "nv:47793"
    },
    {
     "id": 5495,
     "entity": "deck",
     "entityId": "rune-nv47793-yongsa",
-    "sourceId": "nv:48344"
+    "sourceId": "nv:47793"
    },
    {
     "id": 5496,
+    "entity": "deck",
+    "entityId": "rune-nv47793-yongsa",
+    "sourceId": "nv:48344"
+   },
+   {
+    "id": 5497,
     "entity": "deck",
     "entityId": "rune-nv48838-tamatama",
     "sourceId": "nv:48838"
    },
    {
-    "id": 5497,
+    "id": 5498,
     "entity": "deck",
     "entityId": "rune-nv49847-domi",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5498,
+    "id": 5499,
     "entity": "deck",
     "entityId": "rune-nv45446-sinbi",
     "sourceId": "nv:45446"
    },
    {
-    "id": 5499,
+    "id": 5500,
     "entity": "deck",
     "entityId": "rune-nv43827-nun",
-    "sourceId": "nv:43827"
-   },
-   {
-    "id": 5500,
-    "entity": "mechanic",
-    "entityId": "259",
     "sourceId": "nv:43827"
    },
    {
     "id": 5501,
     "entity": "mechanic",
     "entityId": "259",
-    "sourceId": "dc:80715"
+    "sourceId": "nv:43827"
    },
    {
     "id": 5502,
     "entity": "mechanic",
     "entityId": "259",
-    "sourceId": "nv:45446"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5503,
     "entity": "mechanic",
-    "entityId": "260",
-    "sourceId": "nv:48303"
+    "entityId": "259",
+    "sourceId": "nv:45446"
    },
    {
     "id": 5504,
     "entity": "mechanic",
     "entityId": "260",
-    "sourceId": "nv:46895"
+    "sourceId": "nv:48303"
    },
    {
     "id": 5505,
     "entity": "mechanic",
     "entityId": "260",
-    "sourceId": "nv:48828"
+    "sourceId": "nv:46895"
    },
    {
     "id": 5506,
     "entity": "mechanic",
     "entityId": "260",
-    "sourceId": "dc:77003"
+    "sourceId": "nv:48828"
    },
    {
     "id": 5507,
     "entity": "mechanic",
     "entityId": "260",
-    "sourceId": "web:yt-O3WxZZHsKyY"
+    "sourceId": "dc:77003"
    },
    {
     "id": 5508,
     "entity": "mechanic",
     "entityId": "260",
-    "sourceId": "dc:80471"
+    "sourceId": "web:yt-O3WxZZHsKyY"
    },
    {
     "id": 5509,
     "entity": "mechanic",
-    "entityId": "261",
-    "sourceId": "nv:48828"
+    "entityId": "260",
+    "sourceId": "dc:80471"
    },
    {
     "id": 5510,
     "entity": "mechanic",
     "entityId": "261",
-    "sourceId": "nv:48303"
+    "sourceId": "nv:48828"
    },
    {
     "id": 5511,
     "entity": "mechanic",
-    "entityId": "262",
-    "sourceId": "nv:46851"
+    "entityId": "261",
+    "sourceId": "nv:48303"
    },
    {
     "id": 5512,
     "entity": "mechanic",
     "entityId": "262",
-    "sourceId": "nv:45930"
+    "sourceId": "nv:46851"
    },
    {
     "id": 5513,
     "entity": "mechanic",
     "entityId": "262",
-    "sourceId": "nv:48174"
+    "sourceId": "nv:45930"
    },
    {
     "id": 5514,
     "entity": "mechanic",
     "entityId": "262",
-    "sourceId": "dc:77282"
+    "sourceId": "nv:48174"
    },
    {
     "id": 5515,
     "entity": "mechanic",
     "entityId": "262",
-    "sourceId": "dc:81710"
+    "sourceId": "dc:77282"
    },
    {
     "id": 5516,
     "entity": "mechanic",
-    "entityId": "263",
-    "sourceId": "dc:76824"
+    "entityId": "262",
+    "sourceId": "dc:81710"
    },
    {
     "id": 5517,
     "entity": "mechanic",
     "entityId": "263",
-    "sourceId": "dc:80126"
+    "sourceId": "dc:76824"
    },
    {
     "id": 5518,
     "entity": "mechanic",
     "entityId": "263",
-    "sourceId": "dc:79968"
+    "sourceId": "dc:80126"
    },
    {
     "id": 5519,
     "entity": "mechanic",
-    "entityId": "264",
-    "sourceId": "dc:77003"
+    "entityId": "263",
+    "sourceId": "dc:79968"
    },
    {
     "id": 5520,
     "entity": "mechanic",
     "entityId": "264",
-    "sourceId": "nv:46707"
+    "sourceId": "dc:77003"
    },
    {
     "id": 5521,
     "entity": "mechanic",
     "entityId": "264",
-    "sourceId": "nv:46544"
+    "sourceId": "nv:46707"
    },
    {
     "id": 5522,
     "entity": "mechanic",
     "entityId": "264",
-    "sourceId": "web:yt-0CUv152HVrA"
+    "sourceId": "nv:46544"
    },
    {
     "id": 5523,
+    "entity": "mechanic",
+    "entityId": "264",
+    "sourceId": "web:yt-0CUv152HVrA"
+   },
+   {
+    "id": 5524,
     "entity": "mechanic",
     "entityId": "265",
     "sourceId": "dc:81139"
    },
    {
-    "id": 5524,
+    "id": 5525,
     "entity": "mechanic",
     "entityId": "266",
     "sourceId": "dc:73577"
    },
    {
-    "id": 5525,
+    "id": 5526,
     "entity": "mechanic",
     "entityId": "266",
     "sourceId": "dc:80701"
    },
    {
-    "id": 5526,
-    "entity": "mechanic",
-    "entityId": "266",
-    "sourceId": "web:yt-VVHt98jkWCo"
-   },
-   {
     "id": 5527,
     "entity": "mechanic",
     "entityId": "266",
-    "sourceId": "web:yt-6hrfYOlgYu4"
+    "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
     "id": 5528,
     "entity": "mechanic",
     "entityId": "266",
-    "sourceId": "web:yt-0CUv152HVrA"
+    "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
     "id": 5529,
     "entity": "mechanic",
-    "entityId": "267",
-    "sourceId": "dc:79492"
+    "entityId": "266",
+    "sourceId": "web:yt-0CUv152HVrA"
    },
    {
     "id": 5530,
     "entity": "mechanic",
     "entityId": "267",
-    "sourceId": "dc:80715"
+    "sourceId": "dc:79492"
    },
    {
     "id": 5531,
     "entity": "mechanic",
     "entityId": "267",
-    "sourceId": "web:yt-VVHt98jkWCo"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5532,
     "entity": "mechanic",
     "entityId": "267",
-    "sourceId": "web:yt-6hrfYOlgYu4"
+    "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
     "id": 5533,
     "entity": "mechanic",
     "entityId": "267",
-    "sourceId": "dc:75870"
+    "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
     "id": 5534,
     "entity": "mechanic",
     "entityId": "267",
-    "sourceId": "nv:46707"
+    "sourceId": "dc:75870"
    },
    {
     "id": 5535,
     "entity": "mechanic",
-    "entityId": "268",
-    "sourceId": "dc:80715"
+    "entityId": "267",
+    "sourceId": "nv:46707"
    },
    {
     "id": 5536,
     "entity": "mechanic",
     "entityId": "268",
-    "sourceId": "dc:82340"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5537,
     "entity": "mechanic",
     "entityId": "268",
-    "sourceId": "dc:81485"
+    "sourceId": "dc:82340"
    },
    {
     "id": 5538,
     "entity": "mechanic",
     "entityId": "268",
-    "sourceId": "web:yt-zx8hJ6_37w8"
+    "sourceId": "dc:81485"
    },
    {
     "id": 5539,
     "entity": "mechanic",
     "entityId": "268",
-    "sourceId": "nv:46895"
+    "sourceId": "web:yt-zx8hJ6_37w8"
    },
    {
     "id": 5540,
     "entity": "mechanic",
-    "entityId": "269",
-    "sourceId": "dc:79421"
+    "entityId": "268",
+    "sourceId": "nv:46895"
    },
    {
     "id": 5541,
     "entity": "mechanic",
     "entityId": "269",
-    "sourceId": "dc:79478"
+    "sourceId": "dc:79421"
    },
    {
     "id": 5542,
     "entity": "mechanic",
     "entityId": "269",
-    "sourceId": "dc:82563"
+    "sourceId": "dc:79478"
    },
    {
     "id": 5543,
     "entity": "mechanic",
     "entityId": "269",
-    "sourceId": "dc:80715"
+    "sourceId": "dc:82563"
    },
    {
     "id": 5544,
     "entity": "mechanic",
     "entityId": "269",
-    "sourceId": "dc:80425"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5545,
     "entity": "mechanic",
     "entityId": "269",
-    "sourceId": "dc:79492"
+    "sourceId": "dc:80425"
    },
    {
     "id": 5546,
     "entity": "mechanic",
     "entityId": "269",
-    "sourceId": "dc:77041"
+    "sourceId": "dc:79492"
    },
    {
     "id": 5547,
     "entity": "mechanic",
     "entityId": "269",
-    "sourceId": "dc:78836"
+    "sourceId": "dc:77041"
    },
    {
     "id": 5548,
+    "entity": "mechanic",
+    "entityId": "269",
+    "sourceId": "dc:78836"
+   },
+   {
+    "id": 5549,
     "entity": "mechanic",
     "entityId": "270",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5549,
+    "id": 5550,
     "entity": "mechanic",
     "entityId": "271",
     "sourceId": "nv:46250"
    },
    {
-    "id": 5550,
+    "id": 5551,
     "entity": "mechanic",
     "entityId": "271",
     "sourceId": "nv:48174"
    },
    {
-    "id": 5551,
-    "entity": "mechanic",
-    "entityId": "271",
-    "sourceId": "dc:79492"
-   },
-   {
     "id": 5552,
     "entity": "mechanic",
     "entityId": "271",
-    "sourceId": "dc:78207"
+    "sourceId": "dc:79492"
    },
    {
     "id": 5553,
     "entity": "mechanic",
     "entityId": "271",
-    "sourceId": "nv:43827"
+    "sourceId": "dc:78207"
    },
    {
     "id": 5554,
     "entity": "mechanic",
-    "entityId": "272",
-    "sourceId": "dc:79492"
+    "entityId": "271",
+    "sourceId": "nv:43827"
    },
    {
     "id": 5555,
     "entity": "mechanic",
     "entityId": "272",
-    "sourceId": "dc:80715"
+    "sourceId": "dc:79492"
    },
    {
     "id": 5556,
     "entity": "mechanic",
     "entityId": "272",
-    "sourceId": "web:yt-VVHt98jkWCo"
+    "sourceId": "dc:80715"
    },
    {
     "id": 5557,
     "entity": "mechanic",
     "entityId": "272",
-    "sourceId": "web:yt-6hrfYOlgYu4"
+    "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
     "id": 5558,
     "entity": "mechanic",
     "entityId": "272",
-    "sourceId": "web:yt-O3WxZZHsKyY"
+    "sourceId": "web:yt-6hrfYOlgYu4"
    },
    {
     "id": 5559,
     "entity": "mechanic",
     "entityId": "272",
-    "sourceId": "nv:46544"
+    "sourceId": "web:yt-O3WxZZHsKyY"
    },
    {
     "id": 5560,
     "entity": "mechanic",
-    "entityId": "273",
-    "sourceId": "dc:78207"
+    "entityId": "272",
+    "sourceId": "nv:46544"
    },
    {
     "id": 5561,
     "entity": "mechanic",
     "entityId": "273",
-    "sourceId": "nv:48282"
+    "sourceId": "dc:78207"
    },
    {
     "id": 5562,
     "entity": "mechanic",
     "entityId": "273",
-    "sourceId": "nv:48344"
+    "sourceId": "nv:48282"
    },
    {
     "id": 5563,
     "entity": "mechanic",
     "entityId": "273",
-    "sourceId": "nv:43827"
+    "sourceId": "nv:48344"
    },
    {
     "id": 5564,
     "entity": "mechanic",
-    "entityId": "274",
-    "sourceId": "dc:81582"
+    "entityId": "273",
+    "sourceId": "nv:43827"
    },
    {
     "id": 5565,
     "entity": "mechanic",
     "entityId": "274",
-    "sourceId": "nv:46840"
+    "sourceId": "dc:81582"
    },
    {
     "id": 5566,
     "entity": "mechanic",
     "entityId": "274",
-    "sourceId": "nv:46559"
+    "sourceId": "nv:46840"
    },
    {
     "id": 5567,
     "entity": "mechanic",
     "entityId": "274",
-    "sourceId": "nv:49319"
+    "sourceId": "nv:46559"
    },
    {
     "id": 5568,
     "entity": "mechanic",
-    "entityId": "275",
+    "entityId": "274",
     "sourceId": "nv:49319"
    },
    {
     "id": 5569,
     "entity": "mechanic",
     "entityId": "275",
-    "sourceId": "dc:81991"
+    "sourceId": "nv:49319"
    },
    {
     "id": 5570,
     "entity": "mechanic",
     "entityId": "275",
-    "sourceId": "dc:81988"
+    "sourceId": "dc:81991"
    },
    {
     "id": 5571,
     "entity": "mechanic",
-    "entityId": "276",
-    "sourceId": "nv:48412"
+    "entityId": "275",
+    "sourceId": "dc:81988"
    },
    {
     "id": 5572,
     "entity": "mechanic",
     "entityId": "276",
-    "sourceId": "nv:47271"
+    "sourceId": "nv:48412"
    },
    {
     "id": 5573,
     "entity": "mechanic",
     "entityId": "276",
-    "sourceId": "nv:50398"
+    "sourceId": "nv:47271"
    },
    {
     "id": 5574,
     "entity": "mechanic",
     "entityId": "276",
-    "sourceId": "nv:48344"
+    "sourceId": "nv:50398"
    },
    {
     "id": 5575,
     "entity": "mechanic",
     "entityId": "276",
-    "sourceId": "dc:82162"
+    "sourceId": "nv:48344"
    },
    {
     "id": 5576,
     "entity": "mechanic",
-    "entityId": "277",
-    "sourceId": "dc:80985"
+    "entityId": "276",
+    "sourceId": "dc:82162"
    },
    {
     "id": 5577,
     "entity": "mechanic",
     "entityId": "277",
-    "sourceId": "nv:50183"
+    "sourceId": "dc:80985"
    },
    {
     "id": 5578,
     "entity": "mechanic",
     "entityId": "277",
-    "sourceId": "nv:50297"
+    "sourceId": "nv:50183"
    },
    {
     "id": 5579,
     "entity": "mechanic",
-    "entityId": "278",
-    "sourceId": "dc:79239"
+    "entityId": "277",
+    "sourceId": "nv:50297"
    },
    {
     "id": 5580,
     "entity": "mechanic",
     "entityId": "278",
-    "sourceId": "nv:49250"
+    "sourceId": "dc:79239"
    },
    {
     "id": 5581,
     "entity": "mechanic",
     "entityId": "278",
-    "sourceId": "nv:46838"
+    "sourceId": "nv:49250"
    },
    {
     "id": 5582,
     "entity": "mechanic",
     "entityId": "278",
-    "sourceId": "nv:50391"
+    "sourceId": "nv:46838"
    },
    {
     "id": 5583,
+    "entity": "mechanic",
+    "entityId": "278",
+    "sourceId": "nv:50391"
+   },
+   {
+    "id": 5584,
     "entity": "mechanic",
     "entityId": "279",
     "sourceId": "nv:46845"
    },
    {
-    "id": 5584,
+    "id": 5585,
     "entity": "mechanic",
     "entityId": "280",
     "sourceId": "web:yt-N6fgEKs3qq4"
    },
    {
-    "id": 5585,
+    "id": 5586,
     "entity": "mechanic",
     "entityId": "281",
     "sourceId": "dc:81981"
    },
    {
-    "id": 5586,
+    "id": 5587,
     "entity": "mechanic",
     "entityId": "281",
     "sourceId": "dc:80664"
    },
    {
-    "id": 5587,
+    "id": 5588,
     "entity": "mechanic",
     "entityId": "281",
     "sourceId": "dc:79358"
    },
    {
-    "id": 5588,
+    "id": 5589,
     "entity": "mechanic",
     "entityId": "282",
     "sourceId": "dc:81634"
    },
    {
-    "id": 5589,
+    "id": 5590,
     "entity": "mechanic",
     "entityId": "282",
     "sourceId": "dc:82346"
    },
    {
-    "id": 5590,
+    "id": 5591,
     "entity": "mechanic",
     "entityId": "282",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5591,
+    "id": 5592,
     "entity": "mechanic",
     "entityId": "283",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5592,
+    "id": 5593,
     "entity": "mechanic",
     "entityId": "283",
     "sourceId": "dc:73577"
-   },
-   {
-    "id": 5593,
-    "entity": "mechanic",
-    "entityId": "284",
-    "sourceId": "dc:81070"
    },
    {
     "id": 5594,
     "entity": "mechanic",
     "entityId": "284",
-    "sourceId": "dc:80671"
+    "sourceId": "dc:81070"
    },
    {
     "id": 5595,
     "entity": "mechanic",
     "entityId": "284",
-    "sourceId": "dc:79491"
+    "sourceId": "dc:80671"
    },
    {
     "id": 5596,
     "entity": "mechanic",
     "entityId": "284",
-    "sourceId": "dc:82001"
+    "sourceId": "dc:79491"
    },
    {
     "id": 5597,
+    "entity": "mechanic",
+    "entityId": "284",
+    "sourceId": "dc:82001"
+   },
+   {
+    "id": 5598,
     "entity": "timeline_event",
     "entityId": "113",
     "sourceId": "nv:16132"
    },
    {
-    "id": 5598,
+    "id": 5599,
     "entity": "timeline_event",
     "entityId": "114",
     "sourceId": "nv:37730"
    },
    {
-    "id": 5599,
+    "id": 5600,
     "entity": "timeline_event",
     "entityId": "115",
     "sourceId": "nv:43827"
    },
    {
-    "id": 5600,
+    "id": 5601,
     "entity": "timeline_event",
     "entityId": "116",
     "sourceId": "nv:44477"
    },
    {
-    "id": 5601,
+    "id": 5602,
     "entity": "timeline_event",
     "entityId": "117",
     "sourceId": "dc:73577"
    },
    {
-    "id": 5602,
+    "id": 5603,
     "entity": "timeline_event",
     "entityId": "118",
     "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
-    "id": 5603,
+    "id": 5604,
     "entity": "timeline_event",
     "entityId": "119",
     "sourceId": "nv:48486"
    },
    {
-    "id": 5604,
+    "id": 5605,
     "entity": "timeline_event",
     "entityId": "120",
     "sourceId": "dc:79492"
    },
    {
-    "id": 5605,
+    "id": 5606,
     "entity": "timeline_event",
     "entityId": "121",
     "sourceId": "nv:49007"
    },
    {
-    "id": 5606,
+    "id": 5607,
     "entity": "timeline_event",
     "entityId": "122",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5607,
-    "entity": "timeline_event",
-    "entityId": "123",
-    "sourceId": "dc:81991"
-   },
-   {
     "id": 5608,
     "entity": "timeline_event",
     "entityId": "123",
-    "sourceId": "dc:82162"
+    "sourceId": "dc:81991"
    },
    {
     "id": 5609,
     "entity": "timeline_event",
     "entityId": "123",
-    "sourceId": "dc:82001"
+    "sourceId": "dc:82162"
    },
    {
     "id": 5610,
+    "entity": "timeline_event",
+    "entityId": "123",
+    "sourceId": "dc:82001"
+   },
+   {
+    "id": 5611,
     "entity": "timeline_event",
     "entityId": "124",
     "sourceId": "nv:50417"
    },
    {
-    "id": 5611,
+    "id": 5612,
     "entity": "takeaway",
     "entityId": "63",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5612,
+    "id": 5613,
     "entity": "takeaway",
     "entityId": "63",
     "sourceId": "dc:79492"
-   },
-   {
-    "id": 5613,
-    "entity": "takeaway",
-    "entityId": "64",
-    "sourceId": "dc:73577"
    },
    {
     "id": 5614,
     "entity": "takeaway",
     "entityId": "64",
-    "sourceId": "dc:80701"
+    "sourceId": "dc:73577"
    },
    {
     "id": 5615,
     "entity": "takeaway",
     "entityId": "64",
-    "sourceId": "web:yt-VVHt98jkWCo"
+    "sourceId": "dc:80701"
    },
    {
     "id": 5616,
     "entity": "takeaway",
-    "entityId": "65",
-    "sourceId": "dc:81991"
+    "entityId": "64",
+    "sourceId": "web:yt-VVHt98jkWCo"
    },
    {
     "id": 5617,
     "entity": "takeaway",
     "entityId": "65",
-    "sourceId": "dc:82162"
+    "sourceId": "dc:81991"
    },
    {
     "id": 5618,
     "entity": "takeaway",
     "entityId": "65",
-    "sourceId": "dc:82001"
+    "sourceId": "dc:82162"
    },
    {
     "id": 5619,
     "entity": "takeaway",
-    "entityId": "66",
-    "sourceId": "nv:43827"
+    "entityId": "65",
+    "sourceId": "dc:82001"
    },
    {
     "id": 5620,
     "entity": "takeaway",
     "entityId": "66",
-    "sourceId": "nv:48282"
+    "sourceId": "nv:43827"
    },
    {
     "id": 5621,
     "entity": "takeaway",
     "entityId": "66",
-    "sourceId": "nv:48412"
+    "sourceId": "nv:48282"
    },
    {
     "id": 5622,
     "entity": "takeaway",
     "entityId": "66",
-    "sourceId": "nv:48838"
+    "sourceId": "nv:48412"
    },
    {
     "id": 5623,
     "entity": "takeaway",
-    "entityId": "67",
-    "sourceId": "nv:47793"
+    "entityId": "66",
+    "sourceId": "nv:48838"
    },
    {
     "id": 5624,
     "entity": "takeaway",
     "entityId": "67",
-    "sourceId": "nv:48838"
+    "sourceId": "nv:47793"
    },
    {
     "id": 5625,
     "entity": "takeaway",
     "entityId": "67",
-    "sourceId": "web:yt-7GHVEHoVFsw"
+    "sourceId": "nv:48838"
    },
    {
     "id": 5626,
     "entity": "takeaway",
-    "entityId": "68",
-    "sourceId": "nv:50417"
+    "entityId": "67",
+    "sourceId": "web:yt-7GHVEHoVFsw"
    },
    {
     "id": 5627,
     "entity": "takeaway",
     "entityId": "68",
-    "sourceId": "nv:48486"
+    "sourceId": "nv:50417"
    },
    {
     "id": 5628,
     "entity": "takeaway",
-    "entityId": "69",
-    "sourceId": "dc:81070"
+    "entityId": "68",
+    "sourceId": "nv:48486"
    },
    {
     "id": 5629,
     "entity": "takeaway",
     "entityId": "69",
-    "sourceId": "dc:80671"
+    "sourceId": "dc:81070"
    },
    {
     "id": 5630,
+    "entity": "takeaway",
+    "entityId": "69",
+    "sourceId": "dc:80671"
+   },
+   {
+    "id": 5631,
     "entity": "daily_dungeon_clear",
     "entityId": "1",
     "sourceId": "dc:82001"
    },
    {
-    "id": 5631,
+    "id": 5632,
     "entity": "daily_dungeon_clear",
     "entityId": "2",
     "sourceId": "dc:80715"
    },
    {
-    "id": 5632,
+    "id": 5633,
     "entity": "daily_dungeon_clear",
     "entityId": "3",
     "sourceId": "dc:80543"
    },
    {
-    "id": 5633,
+    "id": 5634,
     "entity": "daily_dungeon_clear",
     "entityId": "4",
     "sourceId": "dc:79492"
    },
    {
-    "id": 5634,
+    "id": 5635,
     "entity": "daily_dungeon_clear",
     "entityId": "5",
     "sourceId": "nv:48705"
    },
    {
-    "id": 5635,
+    "id": 5636,
     "entity": "daily_dungeon_clear",
     "entityId": "5",
     "sourceId": "nv:49847"
    },
    {
-    "id": 5636,
+    "id": 5637,
     "entity": "daily_dungeon_clear",
     "entityId": "6",
     "sourceId": "web:yt-0CUv152HVrA"
    },
    {
-    "id": 5637,
+    "id": 5638,
     "entity": "daily_dungeon_clear",
     "entityId": "7",
     "sourceId": "nv:48828"
    },
    {
-    "id": 5638,
+    "id": 5639,
     "entity": "daily_dungeon_clear",
     "entityId": "8",
     "sourceId": "dc:80513"
    },
    {
-    "id": 5639,
+    "id": 5640,
     "entity": "daily_dungeon_clear",
     "entityId": "9",
     "sourceId": "dc:78450"
    },
    {
-    "id": 5640,
+    "id": 5641,
     "entity": "daily_dungeon_clear",
     "entityId": "10",
     "sourceId": "nv:47333"
    },
    {
-    "id": 5641,
+    "id": 5642,
     "entity": "daily_dungeon_clear",
     "entityId": "11",
     "sourceId": "dc:73577"
    },
    {
-    "id": 5642,
+    "id": 5643,
     "entity": "daily_dungeon_clear",
     "entityId": "12",
     "sourceId": "dc:82162"
    },
    {
-    "id": 5643,
+    "id": 5644,
     "entity": "daily_dungeon_clear",
     "entityId": "13",
     "sourceId": "dc:82001"
    },
    {
-    "id": 5644,
+    "id": 5645,
     "entity": "daily_dungeon_clear",
     "entityId": "14",
     "sourceId": "nv:50183"
    },
    {
-    "id": 5645,
+    "id": 5646,
     "entity": "daily_dungeon_clear",
     "entityId": "15",
     "sourceId": "nv:49007"
    },
    {
-    "id": 5646,
+    "id": 5647,
     "entity": "daily_dungeon_clear",
     "entityId": "16",
     "sourceId": "dc:81991"
    },
    {
-    "id": 5647,
+    "id": 5648,
     "entity": "daily_dungeon_clear",
     "entityId": "17",
     "sourceId": "dc:81988"
    },
    {
-    "id": 5648,
+    "id": 5649,
     "entity": "daily_dungeon_clear",
     "entityId": "18",
     "sourceId": "dc:82001"
    },
    {
-    "id": 5649,
+    "id": 5650,
     "entity": "daily_dungeon_clear",
     "entityId": "19",
     "sourceId": "nv:49521"
    },
    {
-    "id": 5650,
+    "id": 5651,
     "entity": "daily_dungeon_clear",
     "entityId": "20",
     "sourceId": "web:yt-N6fgEKs3qq4"
    },
    {
-    "id": 5651,
+    "id": 5652,
     "entity": "daily_dungeon_clear",
     "entityId": "21",
     "sourceId": "nv:47326"
    },
    {
-    "id": 5652,
+    "id": 5653,
     "entity": "daily_dungeon_clear",
     "entityId": "21",
     "sourceId": "nv:47793"
@@ -239361,8 +239352,7 @@
        "seasonBest": 4613000000000,
        "playerRank": 12,
        "guildRank": 1,
-       "seasonState": "Season 7, ends in 1d 20h56m from 11:25",
-       "macroRuns": "403 runs logged by the retry loop to 06:28"
+       "seasonState": "Season 7, ends in 1d 20h56m from 11:25"
       },
       "arena": {
        "season": 5,
@@ -239674,7 +239664,7 @@
     ],
     "gearPreset": "Conquest",
     "deck": {
-     "record": null,
+     "record": "001-guild-conquest-meta",
      "entity": "deck",
      "id": "chardonnay",
      "label": null
@@ -246343,7 +246333,7 @@
     "date": "2026-10-10",
     "file": "roadmap-2026-10-10.json",
     "snapshotId": "2026-10-10",
-    "verdict": "A top-3 account at 4T 613G in Conquest. Damage now comes from rune grades, plating to +20 and Lv.119; the beam order is set per mode.",
+    "verdict": "Top 3 in total power; 4T 613G (12th) in Conquest. Damage now comes from rune grades, plating to +20 and Lv.119.",
     "parked": [
      {
       "avenue": "Stellar shuffles at 7 points",
@@ -246383,7 +246373,7 @@
      },
      {
       "avenue": "Resolve levels",
-      "why": "1.46T coins a level for flat stats; power only.",
+      "why": "1.46T coins a level for flat stats; little damage this late.",
       "refs": [
        {
         "record": "005-team-power-growth",
@@ -247135,9 +247125,9 @@
     "position": 1,
     "priority": "now",
     "area": "runes",
-    "action": "Reroll Milk's four SR ATK AMP lines toward SSR",
-    "why": "SR 4.2, 4.7, 4.2, 4.2 where SSR rolls 6.1–7.0; her buff scales with her ATK.",
-    "payoff": "About +9 ATK AMP on the buff source, which also keeps her ATK #1.",
+    "action": "Reroll Milk's SR ATK AMP and Skill AMP lines toward SSR ATK",
+    "why": "Four SR ATK lines (4.2–4.7) and an SSR Skill AMP 5.0; record 001 runs her all ATK%.",
+    "payoff": "About +15 ATK AMP on the buff source, which also keeps her ATK #1.",
     "cost": "Crystals, after the dead lines.",
     "refs": [
      {
@@ -247166,7 +247156,7 @@
     "area": "conquest",
     "action": "At Crumble Lv.195, level Milk to 119, then Brightseeker",
     "why": "The cap opens one cookie level per 5 Crumble levels past 100. Milk must stay ATK #1 for both perks.",
-    "payoff": "Base stats on the buff source and the carry; one posted step to the cap was +7.5% team power.",
+    "payoff": "Base stats on the buff source and the carry; one posted level-up comment gave about +7.5% team power.",
     "cost": "28.0M EXP per cookie; 40.6M banked. The stage-pushing levels on Pinot and Dark Choco come back on reset.",
     "refs": [
      {
@@ -247193,10 +247183,10 @@
     "position": 3,
     "priority": "now",
     "area": "conquest",
-    "action": "Before Conquest, set Passion Pay and Rapid Promotion on Milk",
-    "why": "Perks are one setting shared by every mode, so a stage or Arena setup carries into Conquest. Not read this audit.",
-    "payoff": "Passion Pay +20% ATK and Rapid Promotion +7% ATK on the top attacker.",
-    "cost": "Free.",
+    "action": "Before Conquest, check the perks: Passion Pay and Rapid Promotion",
+    "why": "Perks are one setting shared by every mode; band level and perks weren't read this audit.",
+    "payoff": "Passion Pay +20% ATK and Rapid Promotion +7% ATK on the ATK #1 ally, Milk.",
+    "cost": "Free. Both slots need band Lv.4; record 001 runs Rapid Promotion only below it.",
     "refs": [
      {
       "record": "005-team-power-growth",
@@ -247298,8 +247288,8 @@
     "priority": "next",
     "area": "conquest",
     "action": "Promote Brightseeker and Cheesecake to 10★",
-    "why": "Their 10★ rune lines are already rolled (SSR haste; SSR Skill AMP 5.0). Stars also open Stellar points.",
-    "payoff": "Two more lines each, without crystals.",
+    "why": "Their 10★ rune lines are already rolled: Brightseeker SSR haste 4; Cheesecake Skill AMP 5.0 and 2.5.",
+    "payoff": "Free rune lines (Brightseeker's other is dead move speed); stars also open Stellar points.",
     "cost": "Brightseeker 2/10, Cheesecake 463/800 shards.",
     "refs": [
      {
@@ -247336,6 +247326,12 @@
       "entity": null,
       "id": "gnome_lab",
       "label": null
+     },
+     {
+      "record": "001-guild-conquest-meta",
+      "entity": "file",
+      "id": "curated/mechanics.json",
+      "label": "mechanics"
      }
     ],
     "extra": {
@@ -247370,81 +247366,6 @@
     "id": 39,
     "roadmapId": "2026-10-10",
     "position": 10,
-    "priority": "later",
-    "area": "resources",
-    "action": "Spend Stellar Points when constellation 8's 8th point opens",
-    "why": "7 points cap the area near 87% (you're at 86%); the 8th opens at 735 cookie stars (722 now) and lifts the cap to ~90%.",
-    "payoff": "Up to ~+4% area, ×1.3 amplification on constellation 8.",
-    "cost": "~1,900 SP for the octagon; 44,630 banked. Lock points before rerolling.",
-    "refs": [
-     {
-      "record": "005-team-power-growth",
-      "entity": null,
-      "id": "stellar_link",
-      "label": null
-     }
-    ],
-    "extra": {
-     "rank": 11,
-     "size": "medium"
-    }
-   },
-   {
-    "id": 40,
-    "roadmapId": "2026-10-10",
-    "position": 11,
-    "priority": "later",
-    "area": "conquest",
-    "action": "Raise Tea Knight to 7★ as the event allows",
-    "why": "Her Boss DMG buff is 60% at 5★, 65% at 7★; her ★6 and ★8 rune slots hold SSR Skill AMP 4.4, 4.4 and 4.7.",
-    "payoff": "A bigger Conquest-only buff and three Skill AMP lines.",
-    "cost": "Time-gated (2/7).",
-    "refs": [
-     {
-      "record": "001-guild-conquest-meta",
-      "entity": null,
-      "id": "chardonnay",
-      "label": null
-     }
-    ],
-    "extra": {
-     "rank": 12,
-     "size": "medium"
-    }
-   },
-   {
-    "id": 41,
-    "roadmapId": "2026-10-10",
-    "position": 12,
-    "priority": "later",
-    "area": "gear",
-    "action": "Replace the crit-RES lines on BR2 and BR3 from Oven drops",
-    "why": "Crit RES does nothing against the boss; it only pads displayed power.",
-    "payoff": "DR or haste instead: survival past the 17 s wipe.",
-    "cost": "Oven filter: Skill AMP + DR.",
-    "refs": [
-     {
-      "record": "005-team-power-growth",
-      "entity": null,
-      "id": "gear_oven",
-      "label": null
-     },
-     {
-      "record": "001-guild-conquest-meta",
-      "entity": "file",
-      "id": "curated/gear.json",
-      "label": "gear"
-     }
-    ],
-    "extra": {
-     "rank": 13,
-     "size": "small"
-    }
-   },
-   {
-    "id": 42,
-    "roadmapId": "2026-10-10",
-    "position": 13,
     "priority": "next",
     "area": "dungeon",
     "action": "Reset Cool Mint, Licorice, Cream Soda, Shortcake and Lemon to Lv.1",
@@ -247466,14 +247387,15 @@
      }
     ],
     "extra": {
-     "rank": 14,
+     "rank": 11,
+     "size": "big",
      "carriedFrom": "2026-10-07"
     }
    },
    {
-    "id": 43,
+    "id": 40,
     "roadmapId": "2026-10-10",
-    "position": 14,
+    "position": 11,
     "priority": "next",
     "area": "rumble",
     "action": "Swap Icy Birdie for King Choco Drop in Rumble defense",
@@ -247489,14 +247411,15 @@
      }
     ],
     "extra": {
-     "rank": 15,
+     "rank": 12,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
    {
-    "id": 44,
+    "id": 41,
     "roadmapId": "2026-10-10",
-    "position": 15,
+    "position": 12,
     "priority": "next",
     "area": "rumble",
     "action": "Put Cherry Cola in Doughnut King's slot in Rumble defense",
@@ -247518,14 +247441,15 @@
      }
     ],
     "extra": {
-     "rank": 16,
+     "rank": 13,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
    {
-    "id": 45,
+    "id": 42,
     "roadmapId": "2026-10-10",
-    "position": 16,
+    "position": 13,
     "priority": "next",
     "area": "arena",
     "action": "Test Bari–Oven–Cherry Cola in a spare Arena attack lineup",
@@ -247547,14 +247471,15 @@
      }
     ],
     "extra": {
-     "rank": 17,
+     "rank": 14,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
    {
-    "id": 46,
+    "id": 43,
     "roadmapId": "2026-10-10",
-    "position": 17,
+    "position": 14,
     "priority": "next",
     "area": "arena",
     "action": "Then level the PvP twelve to 120",
@@ -247576,14 +247501,15 @@
      }
     ],
     "extra": {
-     "rank": 18,
+     "rank": 15,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
    {
-    "id": 47,
+    "id": 44,
     "roadmapId": "2026-10-10",
-    "position": 18,
+    "position": 15,
     "priority": "next",
     "area": "runes",
     "action": "Rune Bari for haste and DR; tank Hound, Ion and Oven",
@@ -247599,14 +247525,15 @@
      }
     ],
     "extra": {
-     "rank": 19,
+     "rank": 16,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
    {
-    "id": 48,
+    "id": 45,
     "roadmapId": "2026-10-10",
-    "position": 19,
+    "position": 16,
     "priority": "next",
     "area": "rift",
     "action": "In Rift Season 2, run the levelled-Rye setup",
@@ -247622,14 +247549,15 @@
      }
     ],
     "extra": {
-     "rank": 20,
+     "rank": 17,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
    {
-    "id": 49,
+    "id": 46,
     "roadmapId": "2026-10-10",
-    "position": 20,
+    "position": 17,
     "priority": "next",
     "area": "pets",
     "action": "Promote Continuum Cog from 0★ (0/1)",
@@ -247645,8 +247573,90 @@
      }
     ],
     "extra": {
-     "rank": 21,
+     "rank": 18,
+     "size": "small",
      "carriedFrom": "2026-10-07"
+    }
+   },
+   {
+    "id": 47,
+    "roadmapId": "2026-10-10",
+    "position": 18,
+    "priority": "later",
+    "area": "resources",
+    "action": "Spend Stellar Points when constellation 8's 8th point opens",
+    "why": "7 points cap the area near 87% (you're at 86%); the 8th opens at 735 cookie stars (722 now).",
+    "payoff": "The octagon reaches ~91% area: up to ~+5%, ×1.3 amplification on constellation 8.",
+    "cost": "~1,900 SP for the octagon; 44,630 banked. Lock points before rerolling.",
+    "refs": [
+     {
+      "record": "005-team-power-growth",
+      "entity": null,
+      "id": "stellar_link",
+      "label": null
+     }
+    ],
+    "extra": {
+     "rank": 19,
+     "size": "medium"
+    }
+   },
+   {
+    "id": 48,
+    "roadmapId": "2026-10-10",
+    "position": 19,
+    "priority": "later",
+    "area": "conquest",
+    "action": "Raise Tea Knight to 7★ as the event allows",
+    "why": "Her ★6 and ★8 rune slots hold SSR Skill AMP 4.4, 4.4 and 4.7, already rolled.",
+    "payoff": "Three Skill AMP lines on the Boss DMG buffer (+70% max, +45% at lowest grade).",
+    "cost": "Time-gated (2/7).",
+    "refs": [
+     {
+      "record": "001-guild-conquest-meta",
+      "entity": null,
+      "id": "chardonnay",
+      "label": null
+     },
+     {
+      "record": "001-guild-conquest-meta",
+      "entity": "file",
+      "id": "curated/mechanics.json",
+      "label": "mechanics"
+     }
+    ],
+    "extra": {
+     "rank": 20,
+     "size": "medium"
+    }
+   },
+   {
+    "id": 49,
+    "roadmapId": "2026-10-10",
+    "position": 20,
+    "priority": "later",
+    "area": "gear",
+    "action": "Replace the crit-RES lines on BR2 and BR3 from Oven drops",
+    "why": "Crit RES does nothing against the boss; it only pads displayed power.",
+    "payoff": "DR or haste instead: survival past the 17 s wipe.",
+    "cost": "Oven filter: Skill AMP + DR.",
+    "refs": [
+     {
+      "record": "005-team-power-growth",
+      "entity": null,
+      "id": "gear_oven",
+      "label": null
+     },
+     {
+      "record": "001-guild-conquest-meta",
+      "entity": "file",
+      "id": "curated/gear.json",
+      "label": "gear"
+     }
+    ],
+    "extra": {
+     "rank": 21,
+     "size": "small"
     }
    },
    {
@@ -247669,6 +247679,7 @@
     ],
     "extra": {
      "rank": 22,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
@@ -247692,6 +247703,7 @@
     ],
     "extra": {
      "rank": 23,
+     "size": "small",
      "carriedFrom": "2026-10-07"
     }
    },
@@ -247715,6 +247727,7 @@
     ],
     "extra": {
      "rank": 24,
+     "size": "medium",
      "carriedFrom": "2026-10-07"
     }
    },
@@ -247738,6 +247751,7 @@
     ],
     "extra": {
      "rank": 25,
+     "size": "small",
      "carriedFrom": "2026-10-07"
     }
    }
