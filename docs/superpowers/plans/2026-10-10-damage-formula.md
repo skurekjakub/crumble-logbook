@@ -23,8 +23,8 @@
 
 ## Task 2: Record 007 and the "Damage formula" page
 
-- [ ] Build record 007-damage-formula and the page in a worktree lane (agent).
-- [ ] Merge `--no-ff`; check that no decompiled artefact was committed.
+- [x] Build record 007-damage-formula and the page in a worktree lane (agent).
+- [x] Merge `--no-ff`; check that no decompiled artefact was committed (`e67eb06`).
 - [ ] `pnpm capture verify`; import gate in a fresh database with every record; export and scope the snapshot.
 - [ ] Check every touched screen in agent-browser, light and dark, phone width.
 - [ ] Opus review; fix findings; push; remove the worktree.

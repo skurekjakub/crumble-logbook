@@ -48,9 +48,9 @@
     "stacking": "additive",
     "confidence": "read",
     "why": "Its own bucket: +x% is worth x ÷ (1 + FDR) of damage.",
-    "detail": "Battle bonuses add flat to the base rate; no % multiplier applies to it.",
+    "detail": "Battle bonuses add flat to the base rate; no % multiplier applies to it. A final DMG buff is the same size whoever gives it: no caster amp or ATK term.",
     "code_ref": "CombatProperty._finalDamageRate (+0xD0)",
-    "sources": ["web:client-1.5.002-damage-system"]
+    "sources": ["web:client-1.5.002-damage-system", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "defense",
@@ -88,9 +88,9 @@
     "stacking": "additive",
     "confidence": "read",
     "why": "One pool: +1 point is worth 1 ÷ (1 + total amp) of damage.",
-    "detail": "Applies to every hit the damage system computes, not only skill hits. At 100% amp a point is +0.5% damage; at 122%, about +0.45%.",
-    "code_ref": "CombatProperty._abilityAmplify (+0x68)",
-    "sources": ["web:client-1.5.002-damage-system"]
+    "detail": "Applies to every hit the damage system computes, not only skill hits. At 100% amp a point is +0.5% damage; at 122%, about +0.45%. A caster's amp also scales the buffs she gives, sized when she casts; debuffs and final DMG lines excepted.",
+    "code_ref": "CombatProperty._abilityAmplify (+0x68); CharacterModifierManagementSystem.CollectBonusProperties @ 0x0044de70",
+    "sources": ["web:client-1.5.002-damage-system", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "damage-reduction",

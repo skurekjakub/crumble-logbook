@@ -58,13 +58,13 @@
   {
     "id": "leak-amp",
     "claim": "Leak: skill amp +1% ≈ +2% damage.",
-    "code": "The damage step gives at most +1% ÷ (1 + amp); any more must come from amp scaling buffs.",
-    "verdict": "disagrees",
+    "code": "One cookie's damage step gives at most +1% ÷ (1 + amp), but buffers' amp also grows their buffs; the team total needs skill data.",
+    "verdict": "unresolved",
     "ref": {
       "record": "001-guild-conquest-meta",
       "title": "Stat weights on the Season 6 #1's account"
     },
-    "sources": ["dc:82295", "web:client-1.5.002-damage-system"]
+    "sources": ["dc:82295", "web:client-1.5.002-damage-system", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "calculator-sample",
@@ -126,42 +126,74 @@
   {
     "id": "crit-buffs-no-stack",
     "claim": "Macaron's and Chardonnay's crit buffs don't stack.",
-    "code": "Modifiers carry a group id and only enabled ones are summed; group rules weren't read.",
+    "code": "Within one group only the largest stack × strength counts; whether the two share a group is data.",
     "verdict": "consistent",
     "ref": { "record": "001-guild-conquest-meta", "title": "Crit buffs don't stack" },
-    "sources": ["dc:83118", "web:client-1.5.002-damage-system"]
+    "sources": ["dc:83118", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "cheesecake-over-milk",
-    "claim": "Cheesecake's ATK buff overrides Milk's on the same cookie.",
-    "code": "Modifiers carry a group id and only enabled ones are summed; group rules weren't read.",
-    "verdict": "consistent",
+    "claim": "Cheesecake's ATK buff overrides Milk's on the same cookie: 228K kept over Milk's 483K.",
+    "code": "A group keeps the larger stack × strength, not a fixed order. Fits only if Milk's stacks were low then, or they share an ID.",
+    "verdict": "partly",
     "ref": { "record": "001-guild-conquest-meta", "title": "Cheesecake's buff overrides Milk's" },
-    "sources": ["dc:55485", "web:client-1.5.002-damage-system"]
+    "sources": ["dc:55485", "web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "id": "cheesecake-then-milk",
+    "claim": "Best case: Cheesecake buffs Milk first, and Milk's buff then gives 667K.",
+    "code": "Milk's buff is sized from her ATK when she casts, buffs she holds included.",
+    "verdict": "agrees",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Cheesecake's buff overrides Milk's" },
+    "sources": ["dc:55485", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "amp-exclusion",
     "claim": "Skill amp no longer boosts stat-reduction debuffs.",
-    "code": "The settings carry an amp-exclusion list; what it holds is data.",
-    "verdict": "consistent",
+    "code": "Debuffs never take the caster's amp: a hard-coded category check. A server list can exclude more stats.",
+    "verdict": "agrees",
     "ref": { "record": "001-guild-conquest-meta", "title": "Skill amp nerf (8/27)" },
-    "sources": ["dc:46452", "web:client-1.5.002-damage-system"]
+    "sources": ["dc:46452", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "debuff-chance",
     "claim": "Debuff chance = base × (focus ÷ resist + focus% − resist%).",
-    "code": "Hit chance has the same shape with accuracy and avoidance; the debuff code wasn't read.",
-    "verdict": "consistent",
+    "code": "Exactly this for debuffs and crowd control; no resist counts as 1, and tenacity shortens them.",
+    "verdict": "agrees",
     "ref": { "record": "001-guild-conquest-meta", "title": "Debuff application chance" },
-    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-damage-system"]
+    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "buff-amp-scaling",
     "claim": "Buffs scale with the caster's skill amp: ⌊base × value × (1 + amp)⌋.",
-    "code": "Set where modifiers are created, outside the damage system: not read.",
-    "verdict": "unresolved",
+    "code": "⌊value × base × (1 + caster amp)⌋, computed once when the buff lands; not for debuffs or excluded stats.",
+    "verdict": "agrees",
     "ref": { "record": "001-guild-conquest-meta", "title": "Buffs scale with the caster's skill amp" },
-    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-damage-system"]
+    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "id": "share-of-stat-buff",
+    "claim": "A buff given as a share of the caster's ATK or HP scales with that stat.",
+    "code": "The base is the caster's ATK, max(DEF, 0) or HP, taken when she casts.",
+    "verdict": "agrees",
+    "ref": { "record": "001-guild-conquest-meta", "title": "A share-of-stat buff scales with that stat" },
+    "sources": ["web:sugarpocket-bundle-1.4.002", "web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "id": "chardonnay-amp",
+    "claim": "Chardonnay's crit buff grows with skill amp; only her Push RES doesn't.",
+    "code": "Crit lines take the caster's amp unless excluded; push and airborne RES lines add raw.",
+    "verdict": "agrees",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Chardonnay's crit buff scales with skill amp" },
+    "sources": ["dc:83255", "dc:83221", "web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "id": "beams-on-buffers",
+    "claim": "A Pomegranate beam on a buffer adds more damage than another dealer would.",
+    "code": "Amp a buffer holds when she casts scales every amp-scaled buff of that cast; the size is skill data.",
+    "verdict": "consistent",
+    "ref": { "record": "001-guild-conquest-meta", "title": "Six recipients, six beams" },
+    "sources": ["dc:84290", "web:client-1.5.002-buff-scaling"]
   },
   {
     "id": "stat-layering",

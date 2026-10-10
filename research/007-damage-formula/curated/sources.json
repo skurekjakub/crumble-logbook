@@ -6,6 +6,20 @@
     "date": "2026-10-10",
     "signal": "Derived analysis of Crumble.DamageSystem.CalculatedDamage (0x003f43b0) and CombatBonusProperty.ApplyBonus (0x00464530) in lib_burst_generated.so, Ghidra 12.1.4 with Cpp2IL 2022.1.0-pre-release.21 layouts; evidence/01-damage-formula-analysis.md"
   },
+  "web:client-1.5.002-buff-scaling": {
+    "url": "https://github.com/skurekjakub/crumble-logbook/blob/main/research/007-damage-formula/evidence/02-buff-scaling-analysis.md",
+    "title": "Client 1.5.002: how a buffer's stats size the buffs she gives",
+    "title_en": "Client 1.5.002: how a buffer's stats size the buffs she gives",
+    "date": "2026-10-10",
+    "signal": "Derived analysis of CharacterModifierManagementSystem.CollectBonusProperties (0x0044de70), its add pipeline and the modifier group job in lib_burst_generated.so, Ghidra 12.1.4; evidence/02-buff-scaling-analysis.md"
+  },
+  "web:ingame-2026-10-10-milk": {
+    "url": "https://github.com/skurekjakub/crumble-logbook/blob/main/research/007-damage-formula/evidence/03-ingame-2026-10-10/readings.md",
+    "title": "In game, 2026-10-10: Milk's Gentle Remedy and stat sheet under two gear presets",
+    "title_en": "In game, 2026-10-10: Milk's Gentle Remedy and stat sheet under two gear presets",
+    "date": "2026-10-10",
+    "signal": "Android client 1.5.002 screenshots (kept local) transcribed in evidence/03-ingame-2026-10-10/readings.md"
+  },
   "dc:31349": {
     "url": "https://m.dcinside.com/board/projectcc/31349",
     "title": "[📚정보] 치명 관련 스탯 정리",
@@ -96,6 +110,27 @@
     "title_en": "Don't crit buffs stack? Can't run Macaron and Chardonnay together?",
     "date": "2026-10-08",
     "signal": "relevance 2/3"
+  },
+  "dc:83255": {
+    "url": "https://m.dcinside.com/board/projectcc/83255",
+    "title": "치확 증가는 스증 버프 받는거 아님?",
+    "title_en": "Doesn't the crit-rate increase scale with skill amp?",
+    "date": "2026-10-08",
+    "signal": "relevance 3/3"
+  },
+  "dc:83221": {
+    "url": "https://m.dcinside.com/board/projectcc/83221",
+    "title": "샤르 스증 주는 이유가 뭐임?",
+    "title_en": "Why give Chardonnay skill amp?",
+    "date": "2026-10-08",
+    "signal": "relevance 1/3"
+  },
+  "dc:84290": {
+    "url": "https://m.dcinside.com/board/projectcc/84290",
+    "title": "다발버프 어케동작하는거임?",
+    "title_en": "How does the volley buff work?",
+    "date": "2026-10-09",
+    "signal": "relevance 3/3"
   },
   "dc:55485": {
     "url": "https://m.dcinside.com/board/projectcc/55485",

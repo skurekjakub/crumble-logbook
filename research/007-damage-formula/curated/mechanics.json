@@ -49,6 +49,48 @@
     "sources": ["web:client-1.5.002-damage-system", "dc:52401"]
   },
   {
+    "topic": "stacking",
+    "title": "A buff's size: ⌊value × base × (1 + caster amp)⌋",
+    "body": "Base is 1 or the caster's ATK, DEF or HP. The caster's amp counts, not the receiver's; no level, crit or boss term.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-buff-scaling", "web:sugarpocket-bundle-1.4.002"]
+  },
+  {
+    "topic": "stacking",
+    "title": "No amp on debuffs, final DMG or lift RES lines",
+    "body": "Debuffs never take amp (hard-coded); final DMG, push/airborne RES and heal-cut lines add raw. A server list can exclude more stats.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-buff-scaling", "dc:46452"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Buffs are sized when the buffer casts",
+    "body": "Her stats are copied at cast. Buffs she holds then enlarge that cast; later buffs don't grow buffs already out.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Same buff again: replace and stack",
+    "body": "New value, fresh duration, stack +1 up to the cap; every stack takes the newest value, whoever cast it.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Same group: only the biggest counts",
+    "body": "Largest stack × strength wins, caster amp and ATK included; the rest switch off. Ungrouped buffs sum.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-buff-scaling", "dc:83118"]
+  },
+  {
+    "topic": "stacking",
+    "title": "Debuff chance = rate × (focus ÷ resist + focus% − resist%)",
+    "body": "Caster's focus at cast, target's resist live; tenacity shortens debuffs. Amp plays no part.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-buff-scaling", "web:sugarpocket-bundle-1.4.002"]
+  },
+  {
     "topic": "crit",
     "title": "Expected crit = 1 + CDR × (CR − CRES)",
     "body": "Linear in crit rate with no cap at 100%; below 0 it is ×1.",
@@ -92,10 +134,24 @@
   },
   {
     "topic": "open_question",
-    "title": "How skill amp scales buffs",
-    "body": "Set where modifiers are created, outside the damage system.",
+    "title": "Each buff's values and the amp exclusion list",
+    "body": "Patch and server data, not in the client: base type, group, max stack, and which stats skip amp.",
     "confidence": "low",
-    "sources": ["web:client-1.5.002-damage-system"]
+    "sources": ["web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "topic": "open_question",
+    "title": "Passive auras, shields and damage over time",
+    "body": "When auras snapshot, and how shields and DoT scale, wasn't settled.",
+    "confidence": "low",
+    "sources": ["web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "topic": "open_question",
+    "title": "Gear A/B needs battle numbers",
+    "body": "Out of battle, swapping gear presets left Milk's sheet and header power unchanged.",
+    "confidence": "medium",
+    "sources": ["web:ingame-2026-10-10-milk"]
   },
   {
     "topic": "open_question",
@@ -138,5 +194,19 @@
     "body": "DamageSystem.CalculatedDamage @ 0x003f43b0; CombatBonusProperty.ApplyBonus @ 0x00464530; modifier sums @ 0x0042fed0.",
     "confidence": "high",
     "sources": ["web:client-1.5.002-damage-system"]
+  },
+  {
+    "topic": "method",
+    "title": "Buff sizing read",
+    "body": "CharacterModifierManagementSystem.CollectBonusProperties @ 0x0044de70; skill spawn snapshot @ 0x00339990.",
+    "confidence": "high",
+    "sources": ["web:client-1.5.002-buff-scaling"]
+  },
+  {
+    "topic": "method",
+    "title": "In game, 2026-10-10",
+    "body": "Milk's skill text and stat sheet under two gear presets, Android 1.5.002.",
+    "confidence": "high",
+    "sources": ["web:ingame-2026-10-10-milk"]
   }
 ]
