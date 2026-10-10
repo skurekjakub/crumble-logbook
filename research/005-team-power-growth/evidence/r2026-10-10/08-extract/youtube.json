@@ -1,0 +1,90 @@
+{
+  "lane": "youtube",
+  "read": "2026-10-10",
+  "note": "Posts carry source 'web' and id 'yt-<video id>' so the importer keys their summaries as the curated web:yt-<id> sources. Read from the watch digests (05-youtube/yt-*.txt) and, where named, the frames (f-*) and subtitle-band sheets (subs-*), which stay local.",
+  "posts": [
+    {
+      "source": "web", "id": "yt-EbXFIgSprRU", "url": "https://www.youtube.com/watch?v=EbXFIgSprRU", "date": "2026-10-09",
+      "title_kr": "[쿠키런크럼블] 업데이트 이후 크럼블 (추천 패키지 포함)", "title_en": "Crumble after the update, with the recommended packages (서신우)", "relevance": 3,
+      "summary_en": "Read from frames (f-EbXFIgSprRU-*). The Eternal gear set package is ₩35,000 for three Lv.95 +18 Eternal pieces, 30 Syrup Metal and 6,000 Crystals, one per account during a 7-day sale. The Plating Special Thanks pack is ₩9,900 for 70 Chocosteel and 30 Syrup Metal, three a sale. The mileage exchange now sells 5 Chocosteel for 1,500 mileage and 5 Syrup Metal for 2,000, ten of each a week (50 of each). The daily dungeon key set (₩6,000, weekly) isn't worth buying now because the daily dungeons expand in two weeks. The cap shows cookies going 100 → 118.",
+      "datapoints": [
+        { "system": "plating", "account": "mileage exchange from 10-08", "before": "", "after": "5 Chocosteel for 1,500 mileage, 5 Syrup Metal for 2,000; 10 buys of each a week", "cost": "mileage", "note": "frame 01m00: '구매 가능 10/10', narration 'every week you can buy 50'" },
+        { "system": "spending", "account": "shop", "before": "", "after": "Eternal gear set: Lv.95 Eternal pieces at +18 (a lance: ATK +7,364, accuracy +181.70, crit rate 22.08%), 30 Syrup Metal, 6,000 Crystals", "cost": "₩35,000, 1/1 during a 7-day sale", "note": "frames 00m04–00m12" }
+      ],
+      "advice": [
+        { "system": "spending", "text": "Skip the daily dungeon key set for now: daily dungeons expand in about two weeks." },
+        { "system": "spending", "text": "The new packages are for players who plate." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "매주 50개를 구매할 수 있고", "en": "(narration) You can buy 50 every week.", "at": "01:00" },
+        { "kr": "어차피 일던은 2주 뒤에 확장되기 때문에", "en": "(narration) The daily dungeons expand in two weeks anyway.", "at": "00:52 (frame)" }
+      ]
+    },
+    {
+      "source": "web", "id": "yt-7ZcZXq0zUmE", "url": "https://www.youtube.com/watch?v=7ZcZXq0zUmE", "date": "2026-10-09",
+      "title_kr": "[쿠키런크럼블] 모든 쿠키에게 스킬 증폭이 좋은 것은 아닙니다", "title_en": "Skill amplification isn't best for every cookie (서신우)", "relevance": 3,
+      "summary_en": "Read from the subtitle-band sheets (subs-7ZcZXq0zUmE-*). Skill amp is the best rune line in general, but read each skill: where the text says amplification doesn't apply (Pinot Noir; the Cake Hound's damage-reduction buff), amp is a dead line, and haste is dead when the skill's cooldown is no longer than its duration (Pinot 9.5 s/10 s, Cake Hound 7.25 s/6.5 s). Chardonnay: only push resistance ignores amp, and her cooldown (4 s) is shorter than her duration (5 s), so she takes all skill amp.",
+      "datapoints": [], "advice": [
+        { "system": "sugar_runes", "text": "Check a skill's text for 'amplification not applied' before rolling skill amp; check cooldown against duration before rolling haste." },
+        { "system": "sugar_runes", "text": "Chardonnay: all skill amp (the author's pinned comment adds that haste also works in Arena, where she deals damage)." }
+      ],
+      "damage": [
+        { "system": "sugar_runes", "mode": "conquest", "text": "Skill amp only pays on effects it applies to; haste only when the skill's cooldown exceeds its duration." }
+      ],
+      "quotes": [
+        { "kr": "증폭이 제일 좋고 이것만 뽑기는 어려우니", "en": "(narration, sheet subs-7ZcZXq0zUmE-00) Amp is the best, but it is hard to roll only that." },
+        { "kr": "샤르는 올 증폭을 주시면 됩니다", "en": "(narration, sheet subs-7ZcZXq0zUmE-04) Give Chardonnay all amp." }
+      ]
+    },
+    {
+      "source": "web", "id": "yt-HcVx3n0gjpQ", "url": "https://www.youtube.com/watch?v=HcVx3n0gjpQ", "date": "2026-09-24",
+      "title_kr": "[쿠키런크럼블] 장비 프리셋 사용 방법 공략", "title_en": "How to use gear presets (서신우)", "relevance": 3,
+      "summary_en": "The creator's pinned comment lists gear sub-stats per preset. Stage: weapons accuracy + (amp, ATK, crit rate, crit dmg); armour by power; upper accessories accuracy/focus + (haste, ATK, crit); lower accessories focus + (haste, DR, HP, DEF); accuracy can sit ~300 and focus ~200 below the stage's line. Conquest: no accuracy, focus or crit resistance, and displayed power doesn't matter, so take weaker-power gear with better lines: weapons amp + (ATK, crit rate, crit dmg); armour DR + (HP, DEF); upper accessories haste + (amp, ATK, crit); lower accessories haste + (DR, HP, DEF). Arena: as Conquest but crit resistance counts on armour and lower accessories; with Moon Rabbit stripping crit, the Conquest preset can serve Arena.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "Keep separate stage, Conquest and Arena presets; outside stages pick gear by its lines, not its displayed power." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Weapons amp first; armour DR; upper accessories haste; lower accessories haste; crit resistance, accuracy and focus are dead lines." },
+        { "system": "gear_oven", "mode": "arena", "text": "Conquest lines plus crit resistance on armour and lower accessories." }
+      ],
+      "quotes": [
+        { "kr": "여기서는 명중, 집중, 치저가 필요 없고 권투력을 챙길 필요가 없기 때문에", "en": "(pinned comment) Here accuracy, focus and crit resistance aren't needed, nor recommended power." }
+      ]
+    },
+    {
+      "source": "web", "id": "yt-4B-82pmUooI", "url": "https://www.youtube.com/watch?v=4B-82pmUooI", "date": "2026-09-24",
+      "title_kr": "[쿠키런 크럼블] 플레이트 장비 가이드: 강화 우선순위 및 옵션 프리셋 총정리", "title_en": "Plating and gear guide: plating order and option presets (누리머)", "relevance": 2,
+      "summary_en": "Plating priority and per-mode option presets for Arena, Conquest and stages; a viewer's summary comment: Arena and Conquest take amp + crit on the top-left, haste + DR bottom-right, haste + amp top-right, DR + HP bottom-left; stages take power plus accuracy and focus.",
+      "datapoints": [], "advice": [
+        { "system": "gear_oven", "text": "(comment) Arena/Conquest: top-left amp + crit; bottom-right haste + DR; top-right haste + amp; bottom-left DR + HP. Stage: power + accuracy/focus." }
+      ], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "yt-hkEy0y74IJQ", "url": "https://www.youtube.com/watch?v=hkEy0y74IJQ", "date": "2026-09-21",
+      "title_kr": "쿠키런 크럼블 컨텐츠별 장비선택 공략 가이드 영상", "title_en": "Gear choice by mode (그니)", "relevance": 1,
+      "summary_en": "Chapters on applying presets and the recommended gear up to stage 248, after 249, for Guild Conquest and the Crumble Dungeon, and for Arena; only the digest was read.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "yt--Lp1ysKTNNM", "url": "https://www.youtube.com/watch?v=-Lp1ysKTNNM", "date": "2026-09-20",
+      "title_kr": "[쿠키런크럼블] 다들 가속 장비 하나씩 챙겨두세요", "title_en": "Keep a haste gear piece of each kind (서신우)", "relevance": 1,
+      "summary_en": "Before presets launched: keep haste gear aside for Conquest and Arena. Only the digest was read; a commenter warns past 248 that chasing accuracy/focus costs the 35% line.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "yt-RKNiw1fRosw", "url": "https://www.youtube.com/watch?v=RKNiw1fRosw", "date": "2026-10-08",
+      "title_kr": "[쿠키런크럼블] 길드 토벌전 2.5T 공략 (샤르도네)", "title_en": "Guild Conquest 2.5T (Chardonnay) (서신우)", "relevance": 1,
+      "summary_en": "The video behind the cafe guide nv:51157; its gear lines are in that post's comments. Only the digest was read.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "yt-Up48r9fwOM8", "url": "https://www.youtube.com/watch?v=Up48r9fwOM8", "date": "2026-10-08",
+      "title_kr": "[쿠키런 크럼블] 길드토벌전 3T 416G 고득점 덱 공략 ft.샤르도네맛 쿠키", "title_en": "Guild Conquest 3T 416G with Chardonnay (누리머)", "relevance": 1,
+      "summary_en": "A 3T Conquest deck video; a viewer at 1.8G team power reports 1T 200G after testing attack orders an hour each. Only the digest was read.",
+      "datapoints": [ { "system": "lineup", "account": "a viewer at 1.8G", "before": "", "after": "1T 200G", "cost": "", "note": "comment" } ],
+      "advice": [], "damage": [], "quotes": []
+    }
+  ]
+}

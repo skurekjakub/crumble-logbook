@@ -1,6 +1,6 @@
 {
  "about": "Cost and diminishing-return curves for the power sources, condensed from game data (record 001's Sugar Pocket catalogs, game 1.4.002, tabulated in evidence/07-derived/) and from posted tables (plating odds dc:53079 and the official 1.4.002 notice dc:72150; Stellar shapes nv:43444, nv:5693, dc:55570, dc:56417; TSSR star costs dc:50913). Each curve is a table: its columns, its rows of cells, and each row's sources where the record cites rows apart ('row_sources'). Full rows are in the evidence files named per curve.",
- "measured": "2026-10-07",
+ "measured": "2026-10-10",
  "curves": [
   {
    "id": "plating-odds",
@@ -25,6 +25,35 @@
    ],
    "note": "14→15 costs ~4 days of free Chocosteel (24 a day, web:yt-l9086mj7hwA; inferred). Odds to 19→20 are the 2026-08-30 table (16→17 from a 10-06 screen); since 2026-09-23 a shatter drops 2 levels, restorable. A simulator puts 15→20 at ~3,194 Chocosteel and 624 Syrup.",
    "sources": ["dc:53079", "dc:72150", "web:sugarpocket-catalog", "web:yt-l9086mj7hwA", "dc:81697", "dc:82457"]
+  },
+  {
+   "id": "plating-odds-screens",
+   "source": "plating",
+   "title": "Plating: odds and cost per press on 1.5.002 screens",
+   "evidence": "evidence/r2026-10-10/08-extract/dc-a.json, dc-b.json, dc-c.json",
+   "columns": ["from", "drop_protection", "great_success_pct", "success_pct", "maintain_pct", "decline_pct", "shatter_pct", "chocosteel", "syrup"],
+   "rows": [
+    [11, "off", 1, 24, 62, 13, 0, 12, 0],
+    [12, "off", 1, 23, 62, 14, 0, 13, 0],
+    [16, "on", 0.5, 10, 83.5, 0, 6, 18, 3],
+    [17, "on", 0.3, 8, 84.7, 0, 7, 19, 4],
+    [18, "on", 0.1, null, null, 0, 11, 26, 5],
+    [19, "on", 0.1, 2, 87.9, 0, 10, 25, 4],
+    [20, "off", 0.1, 2, 42.9, 43, 12, 27, 0]
+   ],
+   "row_sources": [["dc:84056"], ["dc:84616"], ["dc:84886"], ["dc:84886"], ["dc:84474"], ["dc:83284", "dc:82908"], ["dc:82361"]],
+   "note": "Each row is one in-game screen (the 16 row is a book, the others swords, brooches and a necklace). Drop protection sets decline to 0 and moves its share to maintain. +20 lifts main stats from +177% to +200% and sub stats from +130% to +200%. Restoring a shatter at 19 costs 50 Syrup.",
+   "sources": ["dc:84056", "dc:84616", "dc:84886", "dc:84474", "dc:83284", "dc:82908", "dc:82361", "dc:83185"]
+  },
+  {
+   "id": "fame-damage",
+   "source": "fame",
+   "title": "Fame: boss, elemental and crit damage by level",
+   "evidence": "evidence/r2026-10-10/04-sites/wiki-Fame.html (the wiki's Build page)",
+   "columns": ["level", "boss_dmg_pct", "elemental_dmg_pct", "crit_dmg_pct", "medals_for_level"],
+   "rows": [[3, 2, 2, 2, 2], [6, 4, 4, 4, 4], [18, 12, 12, 12, 15], [24, 16, 16, 16, 21], [30, 20, 20, 20, 28], [32, 22, 22, 20, 31]],
+   "note": "Each level adds 2% to one of the three in turn. The wiki's table stops at 32; at Fame 130 the pattern gives about +87% each (inferred, unverified in game).",
+   "sources": ["web:cookierun-wiki-build"]
   },
   {
    "id": "plating-restore",
@@ -100,8 +129,8 @@
    "columns": ["level", "stat_pct", "exp_cumulative", "crumble_level"],
    "rows": [[30, 283.05, 44371, null], [50, 625.25, 252273, null], [70, 1170.75, 1900204, null], [80, 1555.08, 5990000, 77], [90, 2040.32, 13560000, 87], [100, 2652.99, 28561003, 100], [110, 3324.06, 81820000, 150], [120, 4411.09, 280450000, 200]],
    "row_sources": [["web:sugarpocket-catalog"], ["web:sugarpocket-catalog"], ["web:sugarpocket-catalog"], ["web:sugarpocket-catalog", "nv:50417", "dc:79865"], ["web:sugarpocket-catalog", "nv:50417", "dc:79865"], ["web:sugarpocket-catalog", "nv:50417"], ["dc:79865"], ["dc:79865", "web:crumbgg-patches-20261007"]],
-   "note": "Level 120 gives +64% base stats over 100 and takes ~252M more EXP and Crumble level 200 (leak; crumb.gg agrees). Before 10-08, EXP to 100 was 98.1M.",
-   "sources": ["web:sugarpocket-catalog", "web:crumbgg-patches-20261007", "nv:50417", "dc:79865"]
+   "note": "Level 120 gives +64% base stats over 100 and takes ~252M more EXP and Crumble level 200 (leak; crumb.gg agrees). Before 10-08, EXP to 100 was 98.1M. Live since 10-08, the gate matches the leak: Crumble 154 opens 110, 190 opens 118, 200 opens 120 (dc:83392, dc:83091).",
+   "sources": ["web:sugarpocket-catalog", "web:crumbgg-patches-20261007", "nv:50417", "dc:79865", "dc:83392", "dc:83091"]
   },
   {
    "id": "cookie-stars",
@@ -153,8 +182,8 @@
    "title": "Gnome Lab: the research cap by patch",
    "columns": ["date", "research", "special"],
    "rows": [["2026-09-10", "90-2", 16], ["2026-09-23", "110-2", 19], ["2026-10-08", "130-2", 22]],
-   "note": "The 10-08 row is announced (nv:50417); from then a research takes 12 hours at most.",
-   "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928", "nv:50417", "web:crumbgg-patches-20261007"]
+   "note": "The 10-08 row is live (nv:50417, web:cookierun-wiki-patch-1-5); a research takes 12 hours at most, so stones, not time, now limit the lab (dc:83916).",
+   "sources": ["web:yt-y-bxOrnjIeU", "dc:76198", "dc:77277", "dc:76620", "dc:76601", "web:crumbgg-patches-20260928", "nv:50417", "web:crumbgg-patches-20261007", "web:cookierun-wiki-patch-1-5", "dc:83916"]
   },
   {
    "id": "rune-reroll",

@@ -1,0 +1,747 @@
+{
+  "lane": "dc",
+  "read": "2026-10-10",
+  "posts": [
+    {
+      "source": "dc", "id": "84023", "url": "https://m.dcinside.com/board/projectcc/84023", "date": "2026-10-09",
+      "title_kr": "광제유닠패스단 축4 달성 기념 스펙공유", "title_en": "Spec share for reaching blessing 4 (Crown/Unique/Pass spender)",
+      "relevance": 3,
+      "summary_en": "A low spender (Crown pass, unique package, Crumble Pass twice) posts a full account snapshot on reaching blessing level 4: account total 7.65G at stage 271-10, oven 37, Guild Conquest 316G with the Chardonnay deck, dungeon floors, resolve 796, fame 112, research through 80-2, Stellar percentages.",
+      "datapoints": [
+        { "system": "account", "account": "server in the low 200s, rank ~10s; spend: 광제 + 유니크 + 크럼블패스 2회차", "before": "", "after": "총투력 7.65G (account total); stage 271-10; oven 37; gear 15강 x7, rest 11~13; 석류9 우유10; 오방6 시커6 바궁6 바리4; arena in20; 토벌 316G (샤르도네기준); 경던586 코던585 반죽던626 연구석던563 룬결정던 531; 돌파796; 명성112; 연구 80-2까지 공 방 치 마스터; 스텔라 91 96 95 92 96 95", "cost": "Crown pass + unique package + Crumble Pass twice", "note": "'장비 15강' is likely plate level (kind not stated); 9/10/6/4 after cookie names are star counts" },
+        { "system": "blessing", "account": "stage 271-10, total 7.65G", "before": "", "after": "축4 (blessing level 4)", "cost": "", "note": "" }
+      ],
+      "advice": [],
+      "damage": [{ "system": "lineup", "mode": "conquest", "text": "Conquest score 316G with the Chardonnay deck at 7.65G account total." }],
+      "quotes": [
+        { "kr": "총투력 7.65G", "en": "Total power 7.65G" },
+        { "kr": "토벌 316G (샤르도네기준)", "en": "Conquest 316G (with Chardonnay)" },
+        { "kr": "연구 80-2까지 공 방 치 마스터", "en": "Research mastered attack, defense, heal up to 80-2" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84056", "url": "https://m.dcinside.com/board/projectcc/84056", "date": "2026-10-09",
+      "title_kr": "플레이트 ㅈ주작이 분명한 이유", "title_en": "Why plating is clearly rigged",
+      "relevance": 3,
+      "summary_en": "Screenshots of a brooch plate: a great success +11 to +13, then two drops back to +11. Screens show the plating odds and costs at +11 and +12.",
+      "datapoints": [
+        { "system": "plating", "account": "chocosteel 150, syrup metal 1,115 on screen", "before": "브로치 +11 (저항 증가 +383.08)", "after": "+13 via 대성공 (저항 증가 +441.64; crit rate 15.13% and skill amp 6.66% unchanged)", "cost": "14 초코강 per try (150/14 on screen); 5 chocosteel left after great success", "note": "great success refunded material per the screen" },
+        { "system": "plating", "account": "", "before": "+13", "after": "+11 (two drops)", "cost": "", "note": "rates at +11→+12: 대성공 1.00%, 성공 24.00%, 유지 62.00%, 하락 13.00%, 박살 0.00%, cost 12 chocosteel; main option +57.00% → +69.00%, sub option +70.00%" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "전진 먼저해서 초코강만 더 먹었다", "en": "(comment, poster) Going forward first just ate more chocosteel" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84070", "url": "https://m.dcinside.com/board/projectcc/84070", "date": "2026-10-09",
+      "title_kr": "레전장비 패키지 떴는데 사는게 좋읆가요?", "title_en": "A legendary gear package popped up, should I buy it?",
+      "relevance": 2,
+      "summary_en": "Oven 24 at 55m power asks about a legendary gear package; commenters say value stops at the unique gear package and legendary gear arrives naturally in ~3 days from oven 24.",
+      "datapoints": [
+        { "system": "spending", "account": "oven 24, 전투력 55m (kind not stated)", "before": "", "after": "", "cost": "legendary gear package (price not stated)", "note": "" }
+      ],
+      "advice": [
+        { "system": "spending", "text": "The value buy stops at the unique gear package; buy legendary only if racing for rank." },
+        { "system": "gear_oven", "text": "From oven 24 it took one commenter 3 days to get legendary gear for free." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "내가볼때 가성비는 유니크장비까지임", "en": "(comment) Value for money stops at unique gear" },
+        { "kr": "24렙에서 레전장비 먹기까지 3일 걸렸음", "en": "(comment) From level 24 it took me 3 days to get legendary gear" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84080", "url": "https://m.dcinside.com/board/projectcc/84080", "date": "2026-10-09",
+      "title_kr": "신규지역 탐험 패키지 씨발년아", "title_en": "The new-region exploration package (rant)",
+      "relevance": 2,
+      "summary_en": "The new-region exploration package sells 50 syrup metal for 25,000 won. A commenter spent 7.5 (likely 75,000 won) on reaching 329, got a brooch plate to 13, then fell back to 11.",
+      "datapoints": [
+        { "system": "spending", "account": "", "before": "", "after": "", "cost": "쇳물 50개 2.5만원", "note": "new-region exploration package" },
+        { "system": "plating", "account": "commenter, stage 329", "before": "브로치 13", "after": "11", "cost": "7.5 털리고", "note": "'7.5' read as 75,000 won (unit not stated)" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "쇳물 50개 2.5만원", "en": "50 syrup metal for 25,000 won" },
+        { "kr": "나도 329 들어가자마자 7.5 털리고 브로치 13 갔다가 11로 돌아왔다", "en": "(comment) As soon as I hit 329 I got fleeced for 7.5, brooch went to 13 then back to 11" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84116", "url": "https://m.dcinside.com/board/projectcc/84116", "date": "2026-10-09",
+      "title_kr": "팀투력 20g 1t달성", "title_en": "Hit 1T (conquest) at 20G",
+      "relevance": 3,
+      "summary_en": "Conquest final score 1,001,941,852,715 (2nd) with a 4.91G team on screen; the lobby shows 20G 581M 280K (the poster's '20g', likely account total) and a previous best of 724.76G. Deck and level screenshots; only Figure gets the first garnet straw, healers dropped, Ceylon as a defense shuttle.",
+      "datapoints": [
+        { "system": "lineup", "account": "team 전투력 4.91G on deck screen; 20G 581M 280K on conquest screen", "before": "내 최고 기록 724.76G", "after": "최종 점수 1,001,941,852,715", "cost": "", "note": "title calls 20g team power; the deck screen says 4.91G team, so 20G is likely account total. '스킬가속/공20' unexplained" }
+      ],
+      "advice": [
+        { "system": "lineup", "text": "Give only Figure the first garnet (석류) straw buff and copy the screenshot levels; the filler cookies' levels must match too." }
+      ],
+      "damage": [
+        { "system": "lineup", "mode": "conquest", "text": "Attack-order level tuning (only Figure gets first garnet buff, Ceylon as defense shuttle, healers out) took the score from 724.76G best to 1.0T at 4.91G team power." }
+      ],
+      "quotes": [
+        { "kr": "피겨만 첫석류 받게하고 나머진 걍 스샷대로 배끼셈", "en": "(comment, poster) Let only Figure get the first garnet buff and copy the rest from the screenshots" },
+        { "kr": "토벌 국룰대로 함 대신 나머지 짜바리들도 렙 맞춰야되더라", "en": "(comment, poster) Standard conquest rule, but the filler cookies' levels need matching too" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84150", "url": "https://m.dcinside.com/board/projectcc/84150", "date": "2026-10-09",
+      "title_kr": "스텔라 90퍼 넘으면 시마이침?", "title_en": "Stop rolling Stellar once over 90%?",
+      "relevance": 2,
+      "summary_en": "Stellar opened to 7-8 with rolls 91 95 91 91 91 91 91; commenters say push the 7th Stellar to 95% once its 10 slots open; one bought Stellar and rolled everything to 95%+.",
+      "datapoints": [
+        { "system": "stellar_link", "account": "opened to 7-8", "before": "", "after": "91 95 91 91 91 91 91", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "stellar_link", "text": "Once the 7th Stellar has 10 slots open, roll it to at least 95%." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "7스텔라는 10개열리면 95퍼까진 해주자", "en": "(comment) Once the 7th Stellar has 10 open, take it to 95%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84152", "url": "https://m.dcinside.com/board/projectcc/84152", "date": "2026-10-09",
+      "title_kr": "원래 길드탈퇴하면 스테전투력 줄어드냐?ㅡㅡ", "title_en": "Does leaving a guild lower stage power?",
+      "relevance": 2,
+      "summary_en": "Leaving a level-13 guild cut the poster's stage power a lot; commenters confirm it is the guild lab research.",
+      "datapoints": [
+        { "system": "guild_lab", "account": "was in a level 13 guild", "before": "", "after": "stage power dropped sharply", "cost": "", "note": "no figure" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "길드연구 땜에", "en": "(comment) Because of guild research" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84157", "url": "https://m.dcinside.com/board/projectcc/84157", "date": "2026-10-09",
+      "title_kr": "총투 50G된애 잇는데", "title_en": "Someone hit 50G total",
+      "relevance": 2,
+      "summary_en": "Someone's account total went from about 35G before the update to 50G; the poster suspects plate luck, a commenter points to the level cap raise.",
+      "datapoints": [
+        { "system": "account", "account": "another player", "before": "35쯤 (account total, before 1.5.002)", "after": "50G (account total)", "cost": "", "note": "second-hand, 'about'" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "레벨확장 영향도 생각해야댐", "en": "(comment) You have to count the level cap expansion too" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84169", "url": "https://m.dcinside.com/board/projectcc/84169", "date": "2026-10-09",
+      "title_kr": "스텔라 2만개 털었는데 92 -> 66됫음", "title_en": "Spent 20,000 Stellar and went 92 → 66",
+      "relevance": 2,
+      "summary_en": "Rerolling a Stellar Link with 20,000 Stellar points dropped it from 92% to 66%.",
+      "datapoints": [
+        { "system": "stellar_link", "account": "", "before": "92", "after": "66", "cost": "스텔라 2만개", "note": "" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "스텔라 2만개 털었는데 92 -> 66됫음", "en": "Spent 20,000 Stellar and it went 92 → 66" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84171", "url": "https://m.dcinside.com/board/projectcc/84171", "date": "2026-10-09",
+      "title_kr": "15퍼 미는애들 토벌셋으로 미는중임?", "title_en": "Are people pushing the 15% tier with the conquest set?",
+      "relevance": 3,
+      "summary_en": "At the 15% stage tier the attack correction is gone, so useful gear options (crit damage, skill damage) beat inflated power; commenters push faster with the conquest preset than the stage (power) preset.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "At 15% gear useful options beat inflated power; crit damage hits hard with high crit rate now; skill damage > skill haste." },
+        { "system": "gear_oven", "text": "The conquest set differs from the stage set by swapping accuracy/focus lines for crit damage/damage reduction." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "stage", "text": "At 15% of recommended power there is no attack correction; crit damage and skill-damage subs raise damage, inflated power no longer helps." },
+        { "system": "gear_oven", "mode": "stage", "text": "A commenter at 15% pushes faster with the conquest set than the stage set; accuracy/focus sets barely differ." }
+      ],
+      "quotes": [
+        { "kr": "15%면 공격력 보정 없어지니까 장비 능력이 유효옵 쓰는게 훨 좋지", "en": "(comment) At 15% the attack correction goes away, so gear with useful options is far better" },
+        { "kr": "지금까진 스테셋보다 토벌셋이 미는속도 빠른듯", "en": "(comment) So far the conquest set pushes faster than the stage set" },
+        { "kr": "스다>스가", "en": "(comment) Skill damage > skill haste" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84176", "url": "https://m.dcinside.com/board/projectcc/84176", "date": "2026-10-09",
+      "title_kr": "플레이트 올15담에", "title_en": "After all plates at 15",
+      "relevance": 2,
+      "summary_en": "After all plates at +15, is weapon +20 next? A commenter: for power take all to +17; for conquest take book, magic object to +20.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "For power, take all plates to +17; for conquest, take book and magic object (and weapon) to +20." }
+      ],
+      "damage": [
+        { "system": "plating", "mode": "conquest", "text": "Commenter: conquest damage favours book and magic-object plates at +20 over all-17." }
+      ],
+      "quotes": [
+        { "kr": "투력은 올17 토벌는 책마법물체 20", "en": "(comment) For power all 17, for conquest book/magic object 20" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84182", "url": "https://m.dcinside.com/board/projectcc/84182", "date": "2026-10-09",
+      "title_kr": "쇳물 패키지 안사니까 1-2주에 강화 하나 올리는거같네", "title_en": "Without the syrup metal package it's one plate level per 1–2 weeks",
+      "relevance": 2,
+      "summary_en": "Without buying syrup metal packages the poster gains about one plate level every 1–2 weeks.",
+      "datapoints": [
+        { "system": "plating", "account": "non-buyer of syrup metal packages", "before": "", "after": "", "cost": "1-2주에 강화 하나", "note": "poster's estimate" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "쇳물 패키지 안사니까 1-2주에 강화 하나 올리는거같네", "en": "Without buying the syrup metal package it's one enhancement every 1–2 weeks" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84187", "url": "https://m.dcinside.com/board/projectcc/84187", "date": "2026-10-09",
+      "title_kr": "샤르도네 나오고 바로 연구 박아줬다", "title_en": "Researched it right after Chardonnay came out",
+      "relevance": 3,
+      "summary_en": "After Chardonnay released, the poster maxed Gnome Lab research 72-2, support-type crit damage +11.25% (3/3); a commenter is also researching crit damage.",
+      "datapoints": [
+        { "system": "gnome_lab", "account": "", "before": "", "after": "연구 72-2 지원형 치명피해 증가 11.25% (3/3)", "cost": "", "note": "screenshot" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "gnome_lab", "mode": "conquest", "text": "Support-type crit damage research (72-2, 11.25%) prioritised for the Chardonnay deck (inferred from timing)." }
+      ],
+      "quotes": [
+        { "kr": "나도 어제부터 치피 찍는중", "en": "(comment) I've been researching crit damage since yesterday too" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84199", "url": "https://m.dcinside.com/board/projectcc/84199", "date": "2026-10-09",
+      "title_kr": "350 스테 이후 권장투력.JPG", "title_en": "Recommended power after stage 350",
+      "relevance": 3,
+      "summary_en": "A table (game version 1.5.002) of recommended power per chapter 348–364 at the 15/35/55/75/100% tiers, with accuracy and focus requirements and boss.",
+      "datapoints": [
+        { "system": "lineup", "account": "stage 350", "before": "", "after": "15% 33.526억, 35% 67.053억, 55% 100.58억, 75% 134.11억, 100% 167.63억; 명중 1,204, 집중 1,198", "cost": "", "note": "team power kind not stated on table" },
+        { "system": "lineup", "account": "stage 360", "before": "", "after": "15% 42.85억, 35% 85.701억, 55% 128.55억, 75% 171.4억, 100% 214.25억; 명중 1,204, 집중 1,216", "cost": "", "note": "" },
+        { "system": "lineup", "account": "stage 364 (last)", "before": "", "after": "15% 47.27억, 35% 94.539억, 55% 141.81억, 75% 189.08억, 100% 236.35억; 명중 1,204, 집중 1,223", "cost": "", "note": "" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "15프로로 눈돌아가는게 미쳤네..", "en": "(comment) It's crazy that everyone's eyeing the 15% tier" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84219", "url": "https://m.dcinside.com/board/projectcc/84219", "date": "2026-10-09",
+      "title_kr": "얘들아 월요일 리셋되는 쇳물 패키지", "title_en": "The syrup metal package that resets Monday",
+      "relevance": 1,
+      "summary_en": "Syrup metal package resets on Monday; the poster asks if 100 can be bought after two plates shattered.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "100개는 살 수 있음?", "en": "Can you buy 100?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84227", "url": "https://m.dcinside.com/board/projectcc/84227", "date": "2026-10-09",
+      "title_kr": "플레이트 시뮬돌려봤는대 운없으면 진짜 소름이네 ㅋㅋ", "title_en": "Ran a plate simulation, bad luck is terrifying",
+      "relevance": 2,
+      "summary_en": "In a simulation, a plate took 105 tries from +19 to +20, about 1,400 chocosteel and 890 syrup metal.",
+      "datapoints": [
+        { "system": "plating", "account": "simulation", "before": "+19", "after": "+20", "cost": "105번 시도, 초코강 1400개인가에 쇳물 890개인가", "note": "simulated bad-luck run; figures recalled ('인가')" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "19에서 20강 105번 시도만에 성공", "en": "19 to 20 succeeded after 105 tries" },
+        { "kr": "초코강 1400개인가에 쇳물 890개인가", "en": "Something like 1,400 chocosteel and 890 syrup metal" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84297", "url": "https://m.dcinside.com/board/projectcc/84297", "date": "2026-10-09",
+      "title_kr": "스페셜 패스 살만함?", "title_en": "Is the special pass worth it?",
+      "relevance": 2,
+      "summary_en": "Commenters rate the 19,000 won special pass as top value (5% sugar rune discount, better than the 6,000 won key pack); buy monthly passes early in the period.",
+      "datapoints": [
+        { "system": "spending", "account": "low spender: 광제 5.5 패스 + 열쇠팩", "before": "", "after": "", "cost": "19000원 짜리 와글와글 스페셜패스", "note": "" }
+      ],
+      "advice": [
+        { "system": "spending", "text": "Monthly passes are always worth buying; for stage-clear rewards buy only gold." },
+        { "system": "spending", "text": "Special pass gives a 5% sugar rune discount and beats the 6,000 won key pack; buying late loses days of the 30-day benefit." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "슈가룬5퍼할인도 은근크고 가성비는 goat긴함", "en": "(comment) The 5% sugar rune discount is surprisingly big; value is GOAT" },
+        { "kr": "6천원 열쇠팩보다 좋음", "en": "(comment) Better than the 6,000 won key pack" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84316", "url": "https://m.dcinside.com/board/projectcc/84316", "date": "2026-10-09",
+      "title_kr": "플레이트 15에서 20갈 때", "title_en": "Plates from 15 to 20",
+      "relevance": 2,
+      "summary_en": "Asks when to enable drop prevention and shatter mitigation from +15 to +20; a commenter restores immediately from +16→+17 on.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "From +16→+17 onward, restore a shattered plate immediately." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "16->17부터 복구바로", "en": "(comment) From 16->17, restore right away" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84337", "url": "https://m.dcinside.com/board/projectcc/84337", "date": "2026-10-09",
+      "title_kr": "토벌 3T,825배 클럽 달성", "title_en": "Conquest 3T / 825x club",
+      "relevance": 3,
+      "summary_en": "Conquest personal 3T 94G (7th) with a 3.75G team, about 825x. Runes are standard except Dark Enchantress (정전) with 14 skill-haste lines to keep garnet's straws at 6; Dark Enchantress skill haste 41.6 on the info screen; max-level Ceylon is 5th in attack, just above Chicke.",
+      "datapoints": [
+        { "system": "lineup", "account": "team 전투력 3.75G (deck screen)", "before": "", "after": "3T 94G (825배)", "cost": "", "note": "screenshot, personal rank 7th" },
+        { "system": "sugar_runes", "account": "", "before": "", "after": "정전 스가 14줄; 정보창 스가 41.6", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "sugar_runes", "text": "Stack skill haste on Dark Enchantress (14 lines) to keep garnet at 6 straws; other runes standard damage." }
+      ],
+      "damage": [
+        { "system": "sugar_runes", "mode": "conquest", "text": "Dark Enchantress skill-haste runes keep garnet's 6 straws up, part of a 3T 94G (825x) run at 3.75G team." }
+      ],
+      "quotes": [
+        { "kr": "특이점 정전스가 14줌", "en": "The one quirk: Dark Enchantress got 14 skill haste" },
+        { "kr": "정전 스가로 석류 6빨대 유지시키기", "en": "(comment, poster) Dark Enchantress skill haste keeps garnet at 6 straws" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84338", "url": "https://m.dcinside.com/board/projectcc/84338", "date": "2026-10-09",
+      "title_kr": "길드 투력컷이라는게 프로필 전투력임?", "title_en": "Is the guild power cutoff profile power?",
+      "relevance": 1,
+      "summary_en": "Asks whether a guild's power cutoff means profile power or party power; a commenter thinks total power.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "총전투력일껄", "en": "(comment) Probably total power" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84347", "url": "https://m.dcinside.com/board/projectcc/84347", "date": "2026-10-09",
+      "title_kr": "이거 노움연구 있잖음", "title_en": "About Gnome research",
+      "relevance": 3,
+      "summary_en": "Gnome Lab crit-rate nodes on screen: 63-1 at 6/7 (12.90%→15.10%, 480K, 9:21:44) and 69-1 at 1/7 (2.20%→4.50%, 190K, 6:26:05). Asks whether to stop each node at 4/7 and move up for efficiency.",
+      "datapoints": [
+        { "system": "gnome_lab", "account": "", "before": "연구 63-1 6/7 치명확률 12.90%", "after": "15.10%", "cost": "480K, 9:21:44", "note": "screenshot; the post text swaps costs (says 63-1 190K 2.3%, 69-1 480K 2.2%)" },
+        { "system": "gnome_lab", "account": "", "before": "연구 69-1 1/7 치명확률 2.20%", "after": "4.50%", "cost": "190K, 6:26:05", "note": "screenshot" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "한 4/7까지만 찍고 올라가는 게 효율이 좋나", "en": "Is it more efficient to stop at about 4/7 and move up?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84350", "url": "https://m.dcinside.com/board/projectcc/84350", "date": "2026-10-09",
+      "title_kr": "너네 15-16 하락방지 키냐", "title_en": "Do you use drop prevention at 15-16?",
+      "relevance": 3,
+      "summary_en": "A calculator screen, 'cheapest way from +15 to +20' at 1 syrup metal = 50 chocosteel: +10→+15 nothing; +15→+16 no drop prevention, give up on shatter; +16→+17 drop prevention on, give up; +17→+20 drop prevention on, restore. Commenters: the advice saves syrup metal; buyers have spare syrup, non-buyers need it; one values syrup at ~13 chocosteel.",
+      "datapoints": [
+        { "system": "plating", "account": "calculator assumption 시럽쇳물 1개 = 50 초코강", "before": "+15", "after": "+20", "cost": "+15→+16: no prevention, 포기; +16→+17: 하락 방지, 포기; +17→+20: 하락 방지, 복구", "note": "third-party calculator screenshot" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "Up to +16 skipping drop prevention has the higher expected value; use it from +16→+17, restore from +17 on." },
+        { "system": "plating", "text": "The best policy depends on the syrup:chocosteel exchange rate you assume; one commenter uses 13 chocosteel per syrup." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "16강끼지는 하락 방지 안하는게 기댓값 높다는데 맞나", "en": "They say up to 16 skipping drop prevention has higher expected value, right?" },
+        { "kr": "난 쇳물당 초코강 13개정도로 보고 계산함", "en": "(comment) I calculate with about 13 chocosteel per syrup metal" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84374", "url": "https://m.dcinside.com/board/projectcc/84374", "date": "2026-10-09",
+      "title_kr": "강화비법 유출함", "title_en": "Leaked enhancement secret",
+      "relevance": 0,
+      "summary_en": "Joke post: give the Sugar Gnome crit SSR runes for plating great successes.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "84400", "url": "https://m.dcinside.com/board/projectcc/84400", "date": "2026-10-09",
+      "title_kr": "뉴비인데 아레나, 토벌 장비는 언제쯤 맞추는게 좋아요?", "title_en": "Newbie: when to set arena and conquest gear?",
+      "relevance": 2,
+      "summary_en": "Oven 12 with the unique package asks when to set arena/conquest gear. Commenters: gear presets can share gear, so set them now; package gear applies to every preset.",
+      "datapoints": [
+        { "system": "spending", "account": "oven 12", "before": "", "after": "", "cost": "유니크 패키지", "note": "" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Gear moves between presets, so build stage, arena and conquest presets at the same time." },
+        { "system": "spending", "text": "Package gear is usable in every preset." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "패키지는 프리셋마다 다 사용됨", "en": "(comment) The package is usable in every preset" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84427", "url": "https://m.dcinside.com/board/projectcc/84427", "date": "2026-10-09",
+      "title_kr": "다들 스테 돌파 몇임?", "title_en": "What's everyone's stage and resolve?",
+      "relevance": 3,
+      "summary_en": "A survey thread of stage vs resolve (돌파력) level. Poster 319-17 / 791; replies range from 229/772 to 352-24/1074, a Rift player at 1170. One spends gold when blocked at stage, then fights conquest.",
+      "datapoints": [
+        { "system": "resolve", "account": "poster, stage 319-17", "before": "", "after": "돌파력 791단계", "cost": "", "note": "" },
+        { "system": "resolve", "account": "commenters, stage / 돌파력", "before": "", "after": "342 1009; 311-20 /901 (5.5안삼 2.0열쇠팩 안삼); 229 772; 255-8/771; 287 781; 312-3 869; 334/980; 271 909; 346/1110; 320 992; 237/738; 327-13/1003; 352 24/1074; 332/999; 318 1042; 이면옴 1170", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "resolve", "text": "One player saves mileage-shop gold, spends it when stage is blocked and before conquest." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "스테 막히면 골드 쓰고 토벌 치려하는데 막히지를 않음", "en": "(comment) I spend gold when stage blocks and then do conquest, but it never blocks" },
+        { "kr": "그전까진 매주 산건 스테 최대한 밀고 토벌 치기전에 쓰고 그랬음", "en": "(comment) Until then, what I bought weekly I used after pushing stage as far as possible, before conquest" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84467", "url": "https://m.dcinside.com/board/projectcc/84467", "date": "2026-10-09",
+      "title_kr": "크럼블 1위는 팀투력 얼마정도인가요", "title_en": "What team power does the #1 player have?",
+      "relevance": 1,
+      "summary_en": "Asks the top player's stage team power; no answers.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "84474", "url": "https://m.dcinside.com/board/projectcc/84474", "date": "2026-10-09",
+      "title_kr": "대성공이 존재하는거였노", "title_en": "Great success really exists",
+      "relevance": 3,
+      "summary_en": "Sword plate great success +18 → +20: attack +7,934 → +9,190, crit rate 19.04% → 24.84%, skill amp 8.44% → 11.01%. On screen, +18 odds with drop prevention: great success 0.10%, shatter 11.00%; cost 26 chocosteel + 5 syrup metal.",
+      "datapoints": [
+        { "system": "plating", "account": "", "before": "검 +18: 공격력 증가 +7,934, 치명확률 증가 19.04%, 스킬증폭 증가 8.44%", "after": "+20: +9,190, 24.84%, 11.01%", "cost": "26 초코강 + 5 시럽쇳물 per try (하락 방지 on)", "note": "screenshot; 대성공 0.10%, 박살 11.00% at +18" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "plating", "mode": "conquest", "text": "Weapon plate +18→+20 adds attack +1,256, crit rate +5.80 points and skill amp +2.57 points per screen (mode not stated)." }
+      ],
+      "quotes": [
+        { "kr": "드디어 플레이트 20단 가입했노", "en": "Finally joined the plate-20 club" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84476", "url": "https://m.dcinside.com/board/projectcc/84476", "date": "2026-10-09",
+      "title_kr": "소과금인데 올 15 다음 무기 먼저 20강임?", "title_en": "Low spender: after all 15, weapon to 20 first?",
+      "relevance": 2,
+      "summary_en": "Commenter: unless buying syrup metal, take all plates to 17; evasion and resistance plates are only for inflated power.",
+      "datapoints": [],
+      "advice": [
+        { "system": "plating", "text": "Without buying syrup metal, take all plates to +17 before weapon +20." },
+        { "system": "plating", "text": "Evasion and resistance plates are mostly for displayed power." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "쇳물살거아니면 올17하자", "en": "(comment) If you're not buying syrup metal, go all 17" },
+        { "kr": "그 둘은 딱 뻥투용이긴 한데", "en": "(comment) Those two are purely for inflated power" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84553", "url": "https://m.dcinside.com/board/projectcc/84553", "date": "2026-10-09",
+      "title_kr": "연구석이 부족하니까 가속권 쓸곳이 없네 용병 5렙 패치해라", "title_en": "Short on research stones, nowhere to use speed-ups; patch mercenary level 5",
+      "relevance": 1,
+      "summary_en": "Research stones, not time, are now the Gnome Lab bottleneck, so speed-up tickets sit unused; wants mercenary level 5.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "연구석이 부족하니까 가속권 쓸곳이 없네", "en": "Short on research stones, so no use for speed-up tickets" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84572", "url": "https://m.dcinside.com/board/projectcc/84572", "date": "2026-10-09",
+      "title_kr": "오늘 오븐 39렙 되는데 프리셋 함 봐줘라", "title_en": "Oven hits 39 today, check my presets",
+      "relevance": 3,
+      "summary_en": "Oven 39 player at 4G 500M pushing 340 with the conquest set at the 15% tier; accuracy/focus and inflated-power sets now feel useless. A commenter lists a gear preset scheme (conquest, arena base/charge/evasion). Crit damage now beats crit rate because of Chardonnay. In the Rift, accuracy and other stats are given, so the conquest set pushes 15% there.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "oven 39, stage ~340, 4g500m (kind not stated)", "before": "presets: 명집 (1050~1100), 뻥투, 스가스증피감", "after": "plan: stage/conquest shared, PvP, power set", "cost": "", "note": "accuracy 900 without accuracy gear; research ~+100" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest preset: (skill amp/crit dmg)(skill amp/skill haste)(HP/dmg reduction)(dmg reduction/skill haste)." },
+        { "system": "gear_oven", "text": "Arena base: (skill amp/crit dmg)(skill amp/haste)(crit res/dmg red)(crit res/haste); charge: no haste; evasion: swap dmg red for evasion." },
+        { "system": "gear_oven", "text": "Replace crit-rate lines with crit damage; Chardonnay makes crit damage stronger." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "stage", "text": "At the 15% tier the 6-skill-haste conquest set pushes; the inflated-power set doesn't, and Chardonnay leaves spare damage." },
+        { "system": "gear_oven", "mode": "rift", "text": "The Rift grants accuracy and other stats, so the conquest set pushes the 15% tier there." }
+      ],
+      "quotes": [
+        { "kr": "15%는 6스가가 핵심이더라", "en": "(comment, poster) For 15%, six skill-haste lines are the key" },
+        { "kr": "치확은 다치피로바꾸셈 이젠 샤르때메 치피가더셈", "en": "(comment) Swap all crit rate for crit damage; with Chardonnay crit damage is stronger now" },
+        { "kr": "이면에서는 명중하고 기타스탯 존나올려줘서 15퍼를 토벌셋", "en": "(comment) The Rift boosts accuracy and other stats a lot, so 15% with the conquest set" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84599", "url": "https://m.dcinside.com/board/projectcc/84599", "date": "2026-10-09",
+      "title_kr": "스테프리셋에선 치피>치확임?", "title_en": "In the stage preset, crit dmg > crit rate?",
+      "relevance": 1,
+      "summary_en": "Notes crit rate raises displayed power more than crit damage; asks which is better for stage. No answers.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "투력은 치확이 더 오르는데", "en": "Power rises more with crit rate" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84616", "url": "https://m.dcinside.com/board/projectcc/84616", "date": "2026-10-09",
+      "title_kr": "노쇳물 14강 지랄하지 말고 쇳물 넣을까 걍", "title_en": "Should I stop the no-syrup grind to 14 and just use syrup?",
+      "relevance": 3,
+      "summary_en": "Holding 1,121 syrup metal and a +20 weapon, the poster grinds plates to +14 without syrup. On screen, brooch +12→+13: main option +69%→+81%; odds 1/23/62/14/0%; cost 13 chocosteel. Commenters: one restores +15 without syrup at about 100 chocosteel on average; another needed ~500 chocosteel for a +14; one turns on drop prevention from +12.",
+      "datapoints": [
+        { "system": "plating", "account": "초코강 18, 시럽쇳물 1,121; weapon at +20", "before": "브로치 +12 주옵션 증폭 +69.00%, 서브옵션 증폭 +70.00%", "after": "+13 주옵션 +81.00%", "cost": "13 초코강; 대성공 1.00%, 성공 23.00%, 유지 62.00%, 하락 14.00%, 박살 0.00%", "note": "screenshot" },
+        { "system": "plating", "account": "commenter", "before": "+16 attempt shattered", "after": "back to +15 without syrup", "cost": "평균 초코강 100개", "note": "commenter's average" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "To +14 skipping syrup metal is right long term; above +15 syrup melts fast." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "14강까진 노쇳물이 길게 보면 맞긴한데", "en": "No syrup up to 14 is right in the long run" },
+        { "kr": "난 16강가다가 터지면 노쇳물로 15강복구함 평균 초코강 100개면 복구하던데", "en": "(comment) When going to 16 shatters, I re-climb to 15 without syrup, about 100 chocosteel on average" },
+        { "kr": "15강 이상 누르면 근데 진짜 존나 녹긴함", "en": "(comment, poster) Above 15 it really melts" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84626", "url": "https://m.dcinside.com/board/projectcc/84626", "date": "2026-10-09",
+      "title_kr": "크럼블던전 50배 정보 공유", "title_en": "Crumble Dungeon 50x info share",
+      "relevance": 3,
+      "summary_en": "Crumble Dungeon guide at 50x: score 787G 446M with a 16.18G team (about 15G when actually run), preset 'conquest haste 4'. Rules for the 40-cookie lineup: no bullet-speed synergy cookies, no back-and-forth chargers, low-power supporters. Cutting accessory skill haste from 6 to 4 lines (Seeker 45.6→36.4, Figure 27.6→18.4) stabilised score. The top 6 attack cookies get the garnet straw. Crit damage > attack. Resolve 1073, Stellar 8-6, welfare 열정페이 초고속승진.",
+      "datapoints": [
+        { "system": "lineup", "account": "team 16.18G on screen (15G when run), 돌파 1073, 스텔라 8-6", "before": "", "after": "787G 446M (크던 50배)", "cost": "", "note": "screenshot" },
+        { "system": "gear_oven", "account": "", "before": "accessory 스가 6줄: 시커 45.6, 피겨 27.6", "after": "4줄 (top two gear lines to 스증치피): 시커 36.4, 피겨 18.4", "cost": "", "note": "skill haste values; score more stable" },
+        { "system": "mercenary_band", "account": "", "before": "", "after": "복지: 열정페이 초고속승진", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "lineup", "text": "Keep bullet-speed synergy cookies (except Milk, Chardonnay) out; they steal garnet's straw." },
+        { "system": "lineup", "text": "Give garnet's straw to the top-6 attack cookies; keep others 10–20% below Chicke's attack." },
+        { "system": "lineup", "text": "Sort by power with the conquest preset equipped, or the order changes." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "crumble_dungeon", "text": "Dropping skill haste 6→4 lines (two lines to skill amp/crit dmg) stopped Figure misplacing skills; score steadier." },
+        { "system": "gear_oven", "mode": "crumble_dungeon", "text": "Crit damage felt better than attack (not calculated)." },
+        { "system": "gear_oven", "mode": "conquest", "text": "(comment) Switching to a crit-damage set gave a first 1T score." }
+      ],
+      "quotes": [
+        { "kr": "기존에 악세에서 스가 6줄 챙기고 했었다가 4줄로 바꾸니까 점수 안정성이 달라짐", "en": "Going from 6 skill-haste accessory lines to 4 changed score stability" },
+        { "kr": "시커 45.6 -> 36.4 가 됐고 피겨는 27.6 -> 18.4가 됨", "en": "Seeker went 45.6 -> 36.4 and Figure 27.6 -> 18.4" },
+        { "kr": "나도 치피셋으로 바꾸고 치니 1T 처음 찍어지더라", "en": "(comment) I switched to a crit-damage set and hit 1T for the first time" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84655", "url": "https://m.dcinside.com/board/projectcc/84655", "date": "2026-10-09",
+      "title_kr": "토벌셋으로 스테밀라고 하는거보고 토벌 프리셋으로 바꿨는데", "title_en": "Switched to the conquest preset to push stage, as advised",
+      "relevance": 2,
+      "summary_en": "Switching from the stage to the conquest gear preset drops displayed power about 900M; some fall out of the 15% tier and others drop from 35% to 15%.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "kind not stated", "before": "stage preset", "after": "conquest preset: -900M정도", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "If you push at the 35% tier, stay on the power preset." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "900M정도 떨어지는데", "en": "It drops about 900M" },
+        { "kr": "35퍼로 밀거면 35퍼로 밀어잇", "en": "(comment) If you push at 35%, stay at 35%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84663", "url": "https://m.dcinside.com/board/projectcc/84663", "date": "2026-10-09",
+      "title_kr": "토벌 마카롱체리덱 vs 샤르도네덱 딜량 비교", "title_en": "Conquest: Macaron/Cherry deck vs Chardonnay deck damage",
+      "relevance": 3,
+      "summary_en": "A 50-run-each conquest test, everything else equal (plates, gear presets, pets, runes, research, resolve). Macaron/Cherry at 4.27G team: avg 423x team, low 0.860T (201x), high 3.036T (711x). Chardonnay/Melon Soda at 4.4G: avg 809x, low 2.604T (592x), high 4.504T (1024x). Chardonnay wins and needs no speed tuning; the poster is personal #1 at 4T 668G.",
+      "datapoints": [
+        { "system": "lineup", "account": "team 4.27G, Macaron+Cherry deck, 50 runs", "before": "", "after": "팀투력 평균 423배, 총투력 평균 58배, 최저점 0.860T (201배), 최고점 3.036T (711배, 총 98배)", "cost": "", "note": "spreadsheet screenshot" },
+        { "system": "lineup", "account": "team 4.4G, Chardonnay+Melon Soda deck, 50 runs", "before": "", "after": "팀투력 평균 809배, 총투력 평균 114배, 최저점 2.604T (592배), 최고점 4.504T (1024배, 총 144배)", "cost": "", "note": "spreadsheet screenshot; 4T 668G personal rank 1 on screen" }
+      ],
+      "advice": [
+        { "system": "lineup", "text": "Drop Macaron for Chardonnay in conquest; speed tuning and filler cookies no longer needed." },
+        { "system": "lineup", "text": "Attack order: Milk first, Chardonnay any, then Seeker, Figure, Chicke, Ceylon; Scorpion or Melon Soda above Dark Choco as backup." }
+      ],
+      "damage": [
+        { "system": "lineup", "mode": "conquest", "text": "Chardonnay deck about 1.5x the Macaron/Cherry deck's best (4.504T vs 3.036T), avg 809x vs 423x team power." }
+      ],
+      "quotes": [
+        { "kr": "최고점 딜량을 비교했을때 마카롱체리덱의 1.5배가량의 딜을 뽑아냈음", "en": "At peak it dealt about 1.5x the Macaron/Cherry deck's damage" },
+        { "kr": "팀투력 4.4G에 저점 592배 고점 1024배로 최대 4.5T의 딜을 뽑아냈음", "en": "At 4.4G team power, low 592x, high 1024x, up to 4.5T damage" },
+        { "kr": "토벌도 마카롱빼고 샤르도네 넣어라", "en": "In conquest too, drop Macaron for Chardonnay" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84691", "url": "https://m.dcinside.com/board/projectcc/84691", "date": "2026-10-10",
+      "title_kr": "용병단 복지 이거맞음?", "title_en": "Is this the right mercenary welfare?",
+      "relevance": 1,
+      "summary_en": "Asks if welfare 열정페이 + 초고속승진 is used for stage, arena and conquest alike; no answers.",
+      "datapoints": [],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "열정페이 초고속승진 <--- 스테 아레나 토벌 다 이렇게 쓰나?", "en": "Passion Pay + Fast Promotion, used for stage, arena and conquest?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84697", "url": "https://m.dcinside.com/board/projectcc/84697", "date": "2026-10-10",
+      "title_kr": "오늘 연구 그냥 미뤄둔 치확 치피 다 연구해야겠다", "title_en": "Going to research the crit rate/dmg I skipped",
+      "relevance": 2,
+      "summary_en": "Research stones are too short to climb, and attack/HP are mostly done, so the poster will fill in crit-rate and crit-damage nodes.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gnome_lab", "text": "When stones are short for higher tiers, fill skipped crit rate/crit damage nodes." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "위로 올라가기엔 연구석이 너무 모자라고 공체는 앵간찍었으니 치확치피를 진득하게 올려봐야겠다", "en": "Too few research stones to go up, attack/HP mostly done, so I'll raise crit rate and crit damage" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84702", "url": "https://m.dcinside.com/board/projectcc/84702", "date": "2026-10-10",
+      "title_kr": "전시즌 400G에서 1.33T 샤르도네 뽕맛이 아주 좋다", "title_en": "From 400G last season to 1.33T with Chardonnay",
+      "relevance": 2,
+      "summary_en": "Conquest score went from 400G last season to 1.33T with Chardonnay.",
+      "datapoints": [
+        { "system": "lineup", "account": "power not stated", "before": "400G (last season)", "after": "1.33T", "cost": "", "note": "" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "lineup", "mode": "conquest", "text": "Adding Chardonnay took the score from 400G to 1.33T." }
+      ],
+      "quotes": [
+        { "kr": "전시즌 400G에서 1.33T 샤르도네 뽕맛이 아주 좋다", "en": "From 400G last season to 1.33T, Chardonnay feels great" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84754", "url": "https://m.dcinside.com/board/projectcc/84754", "date": "2026-10-10",
+      "title_kr": "아니 오븐39렙으로 올라갔으면 좋은 장비좀 안나오냐", "title_en": "Oven 39 but no better gear",
+      "relevance": 2,
+      "summary_en": "After 3 days at oven 39 none of the power gear changed; a commenter explains the long stay at the previous oven maxed sub-options, so higher-level drops lose on subs.",
+      "datapoints": [
+        { "system": "gear_oven", "account": "oven 39", "before": "", "after": "no power-gear upgrade in 3 days", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "A new oven level may not upgrade power right away; old gear has near-max sub-options." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "부옵이 낮아서 구래", "en": "(comment) It's because the sub-options are lower" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84759", "url": "https://m.dcinside.com/board/projectcc/84759", "date": "2026-10-10",
+      "title_kr": "토벌딜이 투력에 비해 너무 낮게 나오네", "title_en": "Conquest damage too low for my power",
+      "relevance": 1,
+      "summary_en": "Conquest damage is low relative to power; a commenter offers a review (continued in 84762).",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "dc", "id": "84762", "url": "https://m.dcinside.com/board/projectcc/84762", "date": "2026-10-10",
+      "title_kr": "토벌세팅 봐주실 수 잇나여", "title_en": "Can you review my conquest setup?",
+      "relevance": 3,
+      "summary_en": "A 5.32G team scores 1T 372G before level tuning (1.3T after) with crit rate/skill amp top gear and dmg reduction/crit res bottom gear. Commenters: crit res does nothing in conquest; put skill haste on the right six; the conquest set is skill amp/crit dmg, skill amp/haste, dmg red/HP, dmg red/haste. Raise the right gear plates to 15; Figure all skill-amp runes. Resolve, fame and research also matter. Plates: sword 18, offensive 16, defensive 15.",
+      "datapoints": [
+        { "system": "lineup", "account": "team 전투력 5.32G (deck screen)", "before": "", "after": "1T 372G (before level tuning); 1.3t after (comment)", "cost": "", "note": "screenshot" },
+        { "system": "plating", "account": "", "before": "", "after": "검 18 공격적 옵션 16 수비적 옵션 15", "cost": "", "note": "" }
+      ],
+      "advice": [
+        { "system": "gear_oven", "text": "Conquest gear: skill amp/crit dmg, skill amp/skill haste, dmg reduction/HP, dmg reduction/skill haste; right six all skill haste." },
+        { "system": "sugar_runes", "text": "Figure all skill-amp runes; rework SR-locked runes to SSR; 4 skill haste in SSR slots if not starring up." },
+        { "system": "plating", "text": "Take the right-side gear plates to 15." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Crit resistance is a dead option in conquest; skill haste and crit damage lines raise damage." },
+        { "system": "lineup", "mode": "conquest", "text": "Level tuning took the run from 1T 372G to about 1.3T at 5.32G." },
+        { "system": "resolve", "mode": "conquest", "text": "(comment) Resolve, fame and research also matter for conquest damage." }
+      ],
+      "quotes": [
+        { "kr": "우측6개 죄다 스가 ㄱ 치저는 토벌에서 무옵션", "en": "(comment) All right six to skill haste; crit res is a dead option in conquest" },
+        { "kr": "스증치피/스증스가/피감체력/피강스가 임 토벌용", "en": "(comment) Skill amp+crit dmg / skill amp+haste / dmg red+HP / dmg red+haste for conquest" },
+        { "kr": "사진 외에 돌파력 , 명성 , 연구도 중요함", "en": "(comment) Besides the screenshots, resolve, fame and research matter too" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84805", "url": "https://m.dcinside.com/board/projectcc/84805", "date": "2026-10-10",
+      "title_kr": "플레이트강화 확률 이정도로 극악으로할거면", "title_en": "If plating odds are this bad...",
+      "relevance": 1,
+      "summary_en": "After 26 straight fails, the poster wants no drop/shatter and a 100% success option with syrup metal; commenters say full syrup buyers would pull ahead.",
+      "datapoints": [
+        { "system": "plating", "account": "", "before": "", "after": "26번째 실패", "cost": "", "note": "" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "그럼 쇳물 풀구매한놈들만 존나게 썌져서 격차 오짐", "en": "(comment) Then only full syrup-metal buyers get much stronger and the gap explodes" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84837", "url": "https://m.dcinside.com/board/projectcc/84837", "date": "2026-10-10",
+      "title_kr": "돌파력 만렙은 몇렙인가요?", "title_en": "What's the resolve cap?",
+      "relevance": 1,
+      "summary_en": "Asks the resolve level cap; a commenter guesses 1500.",
+      "datapoints": [
+        { "system": "resolve", "account": "", "before": "", "after": "만렙 1500", "cost": "", "note": "commenter unsure ('이엿나')" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "1500이엿나", "en": "(comment) Was it 1500?" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84865", "url": "https://m.dcinside.com/board/projectcc/84865", "date": "2026-10-10",
+      "title_kr": "무소과금은 플레이트 박살완화 무조건 눌러야댐..", "title_en": "F2P/low spenders must use shatter mitigation",
+      "relevance": 2,
+      "summary_en": "The poster lost 800 chocosteel on a +15 shatter without mitigation (to +11), then rebuilt to +15 with syrup. Commenters: mitigation still shatters; by expected value skip it; always keep enough to restore. One frames it as 5% lose 20 vs 100% lose 2 plus 2.5% lose 20 more.",
+      "datapoints": [
+        { "system": "plating", "account": "non/low spender", "before": "+15", "after": "+11 (박살)", "cost": "초코강 800개 날리고", "note": "" }
+      ],
+      "advice": [
+        { "system": "plating", "text": "By expected value skip shatter mitigation, but keep enough to restore before pressing." }
+      ],
+      "damage": [],
+      "quotes": [
+        { "kr": "박살완화는 안하고 돌리는게 이득이래서 눌렀다가 한번만에 박살뜨고 초코강 800개 날리고 11강 됐었슴", "en": "Was told skipping mitigation pays, shattered first try, lost 800 chocosteel, down to 11" },
+        { "kr": "5%확률로 20개 잃기 vs 100%확률로 2개 잃고 2.5%확률로 20개 추가로 잃기 기댓값 계산해봐", "en": "(comment) Compute it: 5% chance to lose 20 vs 100% lose 2 and 2.5% chance to lose 20 more" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84873", "url": "https://m.dcinside.com/board/projectcc/84873", "date": "2026-10-10",
+      "title_kr": "애매한 35퍼 뻥투력보다 15퍼가 잘 밀리네", "title_en": "15% pushes better than borderline 35% inflated power",
+      "relevance": 2,
+      "summary_en": "A well-built 15%-tier lineup on the conquest 6-skill-haste preset pushes stages better than a borderline 35% inflated-power set.",
+      "datapoints": [],
+      "advice": [
+        { "system": "gear_oven", "text": "Push stages at 15% with the conquest 6-skill-haste preset over a borderline 35% power set." }
+      ],
+      "damage": [
+        { "system": "gear_oven", "mode": "stage", "text": "6-skill-haste conquest preset at 15% clears better than inflated power at 35%." }
+      ],
+      "quotes": [
+        { "kr": "15퍼 조합 잘짜서 토벌 6스가 프리셋으로 하는데 뻥투 35퍼보다 더 잘미네", "en": "A good 15% lineup on the conquest 6-haste preset pushes better than inflated 35%" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84886", "url": "https://m.dcinside.com/board/projectcc/84886", "date": "2026-10-10",
+      "title_kr": "플레이트 패키지 5.5만원결과", "title_en": "Result of a 55,000 won plate package",
+      "relevance": 3,
+      "summary_en": "Spent a 55,000 won plate package: 2 shatters, 1 success. Before: chocosteel 273, syrup 161; sword +17, magic object +16, book and the rest +15. After: chocosteel 4, syrup 76; book +16. On screen, sword +17→+18 odds with drop prevention: 0.30/8.00/84.70/0.00/7.00%, cost 19 chocosteel + 4 syrup.",
+      "datapoints": [
+        { "system": "spending", "account": "", "before": "초코강 273, 시럽쇳물 161; 검 +17, 마법물체 +16, 책 +15, 나머지 +15", "after": "초코강 4, 시럽쇳물 76; 책 +16", "cost": "5.5만원 (plate package); net 269 chocosteel + 85 syrup used", "note": "result: 2폭팔, 1성공; package contents not shown" },
+        { "system": "plating", "account": "", "before": "검 +17", "after": "", "cost": "19 초코강 + 4 시럽쇳물 per try with 하락 방지", "note": "대성공 0.30%, 성공 8.00%, 유지 84.70%, 하락 0.00%, 박살 7.00%; book +16→+17: 0.50/10.00/83.50/0.00/6.00%, 18 chocosteel + 3 syrup" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "2폭팔,1성공", "en": "2 shatters, 1 success" }
+      ]
+    },
+    {
+      "source": "dc", "id": "84914", "url": "https://m.dcinside.com/board/projectcc/84914", "date": "2026-10-10",
+      "title_kr": "6.2G 361스테 입갤", "title_en": "6.2G at stage 361",
+      "relevance": 3,
+      "summary_en": "At 6G 288M 100K on screen, on stage 360-30 with the accuracy/focus preset; oven 39, cookies Lv.118, plates mixed +17/+15, blessing Lv.6. Asks if this reaches the last stage; a commenter says the last stage's 15% cut is 4.7G.",
+      "datapoints": [
+        { "system": "account", "account": "stage 360-30, oven 39, 축복 Lv.6, preset 명중/집중", "before": "", "after": "6G 288M 100K (kind not stated; title 6.2G)", "cost": "", "note": "screenshot" }
+      ],
+      "advice": [],
+      "damage": [],
+      "quotes": [
+        { "kr": "일단 막스테 15%컷이 4.7G긴 함", "en": "(comment) The last stage's 15% cut is 4.7G" }
+      ]
+    }
+  ]
+}

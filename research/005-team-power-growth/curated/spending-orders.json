@@ -1,6 +1,6 @@
 {
  "about": "Ranked spending orders for raising team power, for a free player and for a paying one, at the account stages the sources discuss. Each step names the power source (power-sources.json) or package (packages.json), why it sits there and its sources. The order is the community's stated order. Every step carries a 'basis', what the step's place rests on: posted (the step itself is what a player measured, before and after), claimed (a figure stated without a measurement), unmeasured, or community (the step's place is the community's stated order, whatever figures its why cites for a neighbouring step or another account stage); 'basis_note' keeps the record's own wording where it says more, and where a step rests on inference it says so.",
- "measured": "2026-10-07",
+ "measured": "2026-10-10",
  "stages": [
   {
    "id": "early",
@@ -68,12 +68,16 @@
     {"step": "Gnome Lab: HP 30% and the lower ATK nodes before ATK 30% (~50M stones).", "source": "gnome_lab", "basis": "community", "basis_note": "community order; the 2G → 4G reply credits research", "why": "'Padded power is purely research' (dc:76290); special research 19 (ATK 30%) gave +2.3% at 3.4G (dc:82156). From 10-08 a 10-level node (130-1) costs ~1.01G stones (leak).", "sources": ["dc:76290", "dc:76272", "dc:77509", "dc:76620", "dc:78447", "dc:82156", "dc:79685"]},
     {"step": "Plating: sword and bow toward 19–20 (most posted 4G accounts show sword 20–21, bow 19, rest 15).", "source": "plating", "basis": "community", "basis_note": "posted gain near 15 at 1.6G (~+1.5% a step, approximate); community order beyond", "why": "Slow: 2% per try at 19→20.", "sources": ["dc:76272", "dc:74431", "dc:76816", "dc:75684"]},
     {"step": "Oven levels toward the mid-30s for gear level.", "source": "gear_oven", "basis": "community", "basis_note": "community order; one account's account of its path", "why": "The 2G → 4G reply credits oven 36.", "sources": ["dc:76290"]},
-    {"step": "Bank cookie EXP for levels 101–120 (cap 120 from 10-08); levels 79–100 get ~75% cheaper and refunded.", "source": "cookie_level", "basis": "community", "basis_note": "community; the gain is inferred (+64% base stats at 120) or claimed (~+25% power at 119)", "why": "The next big free lever after 10-08; EXP and Crumble level gate it.", "sources": ["dc:80209", "dc:81689", "nv:50417", "web:crumbgg-patches-20261007"]},
-    {"step": "Fame; Resolve only from banked coins to cross a line.", "source": "fame", "basis": "community", "basis_note": "community order", "why": "4G accounts: Fame 130, Resolve 997.", "sources": ["dc:76272", "dc:77104"]}
+    {"step": "Level the main lineup to the cap your Crumble level opens (one cookie level per 5 Crumble levels past 100; 120 at Crumble 200), with the EXP refunded on 10-08.", "source": "cookie_level", "basis": "posted", "basis_note": "posted once (+7.5% on one stage, a comment, approximate); ~+25% is hearsay", "why": "The first free lever of 1.5.002; the Crumble level, not EXP, holds most accounts at 116–118.", "sources": ["dc:83712", "dc:83392", "dc:83091", "dc:83342", "nv:50417", "dc:82708"]},
+    {"step": "Buy the mileage shop's 50 Chocosteel and 50 Syrup Metal every week.", "source": "plating", "basis": "community", "basis_note": "community order (no power figure)", "why": "Syrup is plating's bottleneck past 15; 5 for 2,000 mileage, ten buys a week.", "sources": ["web:yt-EbXFIgSprRU", "dc:83320", "dc:82682"]},
+    {"step": "Plate with drop protection only, no shatter mitigation; without bought Syrup take every plate to +17 before a weapon to +20. For Conquest damage, book and artifact first.", "source": "plating", "basis": "community", "basis_note": "simulators and community order", "why": "19→20 is ~1,190 Chocosteel and ~428 Syrup expected; +20 lifts main and sub stats to +200%.", "sources": ["dc:82595", "dc:82608", "dc:84350", "dc:84476", "dc:83825", "dc:83374", "dc:82908"]},
+    {"step": "Spend speed-ups on Mercenary Band Lv.4 for a second perk; the lab is stone-bound since the 12 h cap.", "source": "mercenary_band", "basis": "community", "basis_note": "community order (damage, no power)", "why": "Passion Pay (+20% ATK to the top attacker) runs in the top Crumble Dungeon and Conquest teams.", "sources": ["dc:83383", "dc:83916", "web:cookierun-wiki-mercenary-guild", "dc:83720"]},
+    {"step": "Fame; Resolve only from banked coins to cross a line.", "source": "fame", "basis": "community", "basis_note": "community order", "why": "4G accounts: Fame 130, Resolve 997. Fame is boss, elemental and crit damage, so it pays in Conquest too.", "sources": ["dc:76272", "dc:77104", "web:cookierun-wiki-build"]}
    ],
    "paid": [
     {"step": "Rumble Special Pass (₩19,000) while it runs.", "package": "rumble-special-pass", "basis": "community", "basis_note": "community (no posted power figure)", "why": "A Bari pull ticket, Syrup and keys; the gallery calls it great value.", "sources": ["dc:81113", "dc:81695", "web:appstore-kr"]},
-    {"step": "Keep the weekly key set and Crumble Pass running.", "package": "daily-dungeon-keys-weekly", "basis": "community", "basis_note": "community order (no posted power figure)", "why": "Stones for the lab, dough for the oven.", "sources": ["dc:77246", "web:yt-pldC8umlhnI"]},
+    {"step": "Artisan 7-day check-in pack (₩25,000: 100 Chocosteel + 100 Syrup) while it runs to 10-22.", "package": "artisan-checkin", "basis": "community", "basis_note": "community (no posted power figure)", "why": "The gallery's must-buy of the 10-08 shop.", "sources": ["dc:82897", "dc:82914"]},
+    {"step": "Keep the Crumble Pass running; the weekly key set again once the daily dungeons expand (10-22).", "package": "daily-dungeon-keys-weekly", "basis": "community", "basis_note": "community order (no posted power figure)", "why": "Stones for the lab, dough for the oven; sweeping keys buy little until new floors open.", "sources": ["dc:77246", "web:yt-pldC8umlhnI", "dc:82997", "web:yt-EbXFIgSprRU"]},
     {"step": "Stellar Link packs to shape points that are already open (not for 100%).", "package": "stellar-pack-1", "basis": "community", "basis_note": "community order; the costs are guide expectations", "why": "Once points are open, SP is the cheapest way to add area (~550–1,900 SP expected per shape, nv:5693, dc:55570). It opens no points (dc:76290).", "sources": ["dc:55570", "nv:5693", "dc:76290", "dc:50913", "dc:75373"]},
     {"step": "Plate thanks packs for Syrup (all three while sold), weapons first; keep restore Syrup in hand.", "package": "plate-thanks", "basis": "community", "basis_note": "posted gain near 15 (approximate) with table costs", "why": "About +1.5% per 14→15 step at 1.6G for ~₩14,700 (inferred); most posted 4G accounts have weapon plates at 19–21.", "sources": ["dc:75684", "dc:53079", "dc:76272", "web:yt-_Vyl0eQz9lU"]},
     {"step": "TSSR stars only for Stellar points or a deck need.", "package": "tssr-pickup", "basis": "community", "basis_note": "community order (no posted power figure)", "why": "About 289,000 KRW for 5★; a blessing-7 player at 3G+ said reaching 328 would take about 3,000,000 KRW more.", "sources": ["dc:50913", "dc:77420"]}
@@ -97,6 +101,7 @@
   "free": [
    {"source": "guild_lab", "basis": "claimed"},
    {"source": "lineup", "basis": "unmeasured"},
+   {"source": "cookie_level", "basis": "posted", "basis_note": "+7.5% posted once (a comment) for levelling to the new cap; gated by Crumble level"},
    {"source": "stellar_link", "basis": "posted", "basis_note": "posted up to 8-3; paid past it"},
    {"source": "gnome_lab", "basis": "community"},
    {"source": "plating", "basis": "posted", "basis_note": "posted near 15 (approximate)"},
@@ -107,11 +112,11 @@
    {"source": "sugar_runes", "basis": "community"},
    {"source": "collection", "basis": "community"},
    {"source": "pets", "basis": "community"},
-   {"source": "cookie_level", "basis": "community", "basis_note": "nothing left at 100 until 10-08; then levels 101–120 (gain claimed or inferred)"},
-   {"source": "mercenary_band", "basis": "community"}
+   {"source": "mercenary_band", "basis": "community", "basis_note": "no power; damage perks at band Lv.4"}
   ],
   "paid": [
-   {"package": "daily-dungeon-keys-weekly", "basis": "community"},
+   {"package": "artisan-checkin", "basis": "community", "basis_note": "while it runs (to 10-22)"},
+   {"package": "daily-dungeon-keys-weekly", "basis": "community", "basis_note": "once the daily dungeons expand (10-22)"},
    {"package": "crumble-pass", "basis": "community"},
    {"package": "special-sugarcoating", "basis": "community"},
    {"package": "rumble-special-pass", "basis": "community"},
@@ -123,7 +128,7 @@
    {"package": "tssr-pickup", "basis": "community"},
    {"package": "sweet-blessing", "basis": "community"}
   ],
-  "note": "The community's orders at ~2.2G, not rankings by power per unit. Only Stellar (to 8-3) and plating near 15 have posted gains; guild and padding lead as free checks.",
-  "sources": ["dc:76461", "dc:77329", "dc:76290", "dc:76272", "dc:75684", "dc:77246", "dc:50913"]
+  "note": "The community's orders at ~2.2G, not rankings by power per unit. Cookie levels to the Crumble-level cap, Stellar (to 8-3) and plating near 15 have posted gains; guild and padding lead as free checks.",
+  "sources": ["dc:76461", "dc:77329", "dc:76290", "dc:76272", "dc:75684", "dc:77246", "dc:50913", "dc:83712", "dc:82897"]
  }
 }

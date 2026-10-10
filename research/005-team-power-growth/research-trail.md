@@ -86,3 +86,41 @@ Queries:
 - 쿠키런 크럼블 특별 연구 공격력 증폭 30% 전투력 상승
 
 Synthesis: no web source carries the leak or a level-120 table; the verifying captures are the official notes (cap 120, not 150; nv:50417), the gallery's leak-versus-notes comparison (dc:82186) and crumb.gg's level-120 stats for the new SSR, which the round turned into a level-120 multiplier (`07-derived/level-120.json`, checked against Princess Bari at level 100). The lab ATK 30% gain is a screenshot in the gallery (dc:82156), not on the web.
+
+## Round 2026-10-10
+
+The second refresh round. Window: 2026-10-07 to 2026-10-10, two days into update 1.5.002. The round asks, beside team power, which upgrade systems raise damage in Guild Conquest, PvP, the Rift and the Crumble Dungeon, and counts every system that grows an account, gear sub-stats and presets included. Saved searches reran first (`evidence/r2026-10-10/`); discovery followed.
+
+### Baseline
+
+- crumb.gg's patch digest lists 1.5.002 as released on 2026-10-08 16:00 KST and nothing later (`04-sites/data-patches.json`); the cafe's patch board has no newer notice than the 10-07 notes (`03-naver/list-naver-patch-notes.tsv`). crumb.gg's `/pub/leaderboard` answers 404, as in record 001's 10-09 round, so the power board isn't captured; `/api/meta` was captured instead and carries no board.
+- Every saved DCInside listing reaches back before 10-07 (oldest rows 09-23 to 10-07). The guide board (`03-naver/list-naver-guide-board.tsv`) gave the post-patch rune table (nv:51217) and a creator's Conquest gear lines (nv:51157); one post is members-only (nv:51435, saved as the refusal).
+- crumblehub's table and guides, the EN progression guide and Pocket Gamer are unchanged; the App Store pages moved to 1.5.001 with new top purchases and price pairs (₩9,900 = $6.99, ₩22,000 = $13.99, ₩1,500 = $0.99). agent-browser now runs on this machine, so Sugar Pocket's pages were captured rendered.
+- yt-dlp and ffmpeg are installed now: the post-update overview (yt-EbXFIgSprRU) was read from frames and the skill-amp video (yt-7ZcZXq0zUmE) from subtitle-band sheets. Two saved channels still post only other games.
+
+### Round 1 — survey
+
+Queries:
+- 쿠키런 크럼블 120레벨 전투력 상승 후기
+- CookieRun Crumble 1.5.002 level 120 gnome laboratory 130 update
+- CookieRun Crumble best gear substats guild conquest skill amplification crit
+
+Synthesis: the open web still has nothing on 1.5.002 or level-120 gains. The leads are cookierun.wiki, which now answers 200 to plain requests (it was a Cloudflare challenge on 10-07), and a global guide site (allthings.how, HTTP 403 to curl; not used). The wiki's Gear, Build, Mercenary Guild, Collection and 1.5 notes pages were captured (`04-sites/wiki-*.html`).
+
+### Round 2 — deepen
+
+Queries:
+- 쿠키런 크럼블 노움 연구소 특별 연구 21 22 효과
+- 쿠키런 크럼블 장비 부옵션 추천 토벌 스테이지 아레나 프리셋
+- CookieRun Crumble Fame boss damage crit damage per level guide
+
+Synthesis: nothing indexed on specials 20–22 or per-mode gear; the wiki's Build page gives Fame's per-level damage table (boss, elemental and crit damage in turn) and its Gear page the sub-stat pool of each slot group, which explains the gallery's per-slot Conquest lines. Discovery moved to DCInside with the patch delta's words and the round's damage angle (118, 119, 크럼블 레벨, 특별 연구, 특연, 프리셋, 부옵, 장비 옵션, 이터널 패키지, 토벌 장비, 스증, 스가, 복지, 치저, 20강, 박살, 팀투, 총투, 신규지역, 차원조각; `02-dc/list-dc-*.tsv`) and YouTube (크럼블 120레벨, 장비 옵션, 토벌 장비 세팅, 마일리지 교환, level 120). The gear-preset guides found that way predate the window but answer the gear question (web:yt-HcVx3n0gjpQ and its pinned comment).
+
+### Round 3 — verify
+
+Queries:
+- CookieRun Crumble October 8 update Chardonnay level 120 Crumble level requirement
+- cookierun.wiki Mercenary Guild perks Passion Pay Crumble
+- 쿠키런 크럼블 플레이트 20강 기댓값 초코강 쇳물 시뮬레이터
+
+Synthesis: the Crumble-level gate is verified from the gallery, not the web: Crumble 154 opens 110, 190 opens 118, 200 opens 120 (dc:83392, dc:83091), as the 10-02 leak said. The perks' values come from the wiki's Mercenary Guild page (its "(Mechanic)" page answered 404). Plating's 19→20 cost rests on in-game screens and a relayed simulator figure in the gallery (dc:83284, dc:83374, dc:84350); the simulators themselves were not captured. The Conquest per-stat weights exist only as a leaked guild sheet (dc:82295).

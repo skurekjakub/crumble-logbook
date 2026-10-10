@@ -1,0 +1,93 @@
+{
+  "lane": "sites",
+  "read": "2026-10-10",
+  "posts": [
+    {
+      "source": "web", "id": "crumbgg-patches-20261010", "url": "https://crumb.gg/data/patches.json", "date": "2026-10-10",
+      "title_kr": "", "title_en": "crumb.gg patch digest (captured 2026-10-10)", "relevance": 3,
+      "summary_en": "Update 1.5.002 is listed as released (2026-10-08 16:00 KST), no longer upcoming, with the same changes the 10-07 capture announced; no later patch is listed. New collections on 10-08: The D'Vine Abbey, Safety First!, Dreams of Great Knighthood, Happy Harvest!, Busy Bodies.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "cookierun-wiki-patch-1-5", "url": "https://cookierun.wiki/w/Patch_Notes_(Crumble)/1.5", "date": "2026-10-08",
+      "title_kr": "", "title_en": "Cookie Run Wiki: the 10-08 update notes (EN)", "relevance": 3,
+      "summary_en": "The global notes for 1.5.002: cap 120, Gnome Lab to 130-2 and special 22, the full Lv.79–100 EXP table (Lv.100 13,911,155 → 3,347,644), research time capped at 12 h with the excess refunded as 1-minute speed-ups, Metal Syrup, SSR select boxes and speed-ups added to Rift stage rewards, more Chocosteel and Metal Syrup in the Rift exchange, both in the mileage exchange, four cookie collections and one pet collection added, and the Arena pop-up now explains how Mercenary Guild effects apply.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "cookierun-wiki-gear", "url": "https://cookierun.wiki/w/Gear", "date": "2026-10-08",
+      "title_kr": "", "title_en": "Cookie Run Wiki: Gear (Crumble)", "relevance": 3,
+      "summary_en": "Twelve gear types in four groups with fixed main stats and sub-stat pools. Weapons (sword ATK, bow accuracy, staff crit rate): ATK, accuracy, crit rate, crit dmg, skill amp. Armour (helmet DEF, armour HP, shield evasion): DEF, HP, evasion, crit resistance, damage reduction. Upper accessories (necklace crit resistance, ring focus, brooch resistance): ATK, accuracy, crit rate, crit dmg, skill amp, focus, resistance, skill haste, move speed. Lower accessories (artifact crit dmg, book skill amp, food damage reduction): DEF, HP, evasion, crit resistance, damage reduction, focus, resistance, skill haste, move speed. Normal–Excellent gear has no sub-stats, Magic–Epic one, Special–Eternal two.",
+      "datapoints": [], "advice": [],
+      "damage": [
+        { "system": "gear_oven", "mode": "conquest", "text": "Skill amp rolls only on weapons and upper accessories; skill haste only on accessories; so the damage lines are fixed by slot group." }
+      ],
+      "quotes": []
+    },
+    {
+      "source": "web", "id": "cookierun-wiki-plating", "url": "https://cookierun.wiki/w/Plating", "date": "2026-10-10",
+      "title_kr": "", "title_en": "Cookie Run Wiki: Plating (marked outdated)", "relevance": 2,
+      "summary_en": "Plating raises a slot's main stat (+3% a level to +105% at 15, +200% at 20) and its sub-stats in steps (+30% at 5, +70% at 10, +130% at 15, +200% at 20); the level stays with the slot. Its odds table predates the 2026-09-23 shatter change.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "cookierun-wiki-build", "url": "https://cookierun.wiki/w/Build", "date": "2026-09-15",
+      "title_kr": "", "title_en": "Cookie Run Wiki: Build (Resolve, Fame, Gnome Laboratory, Stellar Links)", "relevance": 3,
+      "summary_en": "Resolve: +1 ATK/DEF and +10 HP a level to 101, +2/+20 after; a Resolve stage's max level rises with the main stage. Fame raises boss damage, elemental damage and crit damage, +2% to one of them per level in turn (Lv.30: +20% each), paid in Fame medals from the Arena; the table stops at Lv.32. The Gnome Laboratory section is a stub. Stellar Links: empty.",
+      "datapoints": [
+        { "system": "fame", "account": "game data (wiki table, Lv.1–32)", "before": "Lv.3: +2% boss, +2% elemental, +2% crit dmg", "after": "Lv.30: +20% each", "cost": "Fame medals: 1 at Lv.2 rising to 31 at Lv.32", "note": "a level adds 2% to one of the three in turn" }
+      ],
+      "advice": [],
+      "damage": [
+        { "system": "fame", "mode": "conquest", "text": "Fame is a pure damage source (boss, elemental and crit damage); Guild Conquest is a boss fight, so every Fame level counts there." }
+      ],
+      "quotes": []
+    },
+    {
+      "source": "web", "id": "cookierun-wiki-mercenary-guild", "url": "https://cookierun.wiki/w/Mercenary_Guild", "date": "2026-10-10",
+      "title_kr": "", "title_en": "Cookie Run Wiki: Mercenary Guild (levels, leader, perks)", "relevance": 3,
+      "summary_en": "Band levels 0–4 listed with requirements (Lv.4: Crumble level 85, five Lv.80 cookies, stage 61-30, oven 29, 40 lab researches, Fame 40) and the flag of a Lv.5. Each level gives the leader +10% ATK/DEF/HP; Lv.4 adds a second perk slot. Perks include Passion Pay (+20% ATK, −20% HP for the highest-ATK ally), Rapid Promotion (+7% ATK for the highest-ATK ally), Crunch Mode, Like A Family (+2% elemental damage per cookie of the lineup's main element), Health Insurance, Armor Repair and All Ammo Provided.",
+      "datapoints": [], "advice": [],
+      "damage": [
+        { "system": "mercenary_band", "mode": "conquest", "text": "Passion Pay and Rapid Promotion add ATK to the highest-ATK ally, which in Conquest and the Crumble Dungeon is the carry the attack order puts first." }
+      ],
+      "quotes": []
+    },
+    {
+      "source": "web", "id": "cookierun-wiki-collection", "url": "https://cookierun.wiki/w/Collection_(Crumble)", "date": "2026-10-10",
+      "title_kr": "", "title_en": "Cookie Run Wiki: Collection (Crumble)", "relevance": 2,
+      "summary_en": "Collections give ATK, DEF or HP to every cookie of a role or element, and 100 Crystals per milestone. One collection includes the check-in costume 'Milk Cookie's Crunchy Strong Pediatrician' (support ATK).",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "cookierun-wiki-upgrading", "url": "https://cookierun.wiki/w/Upgrading_(Crumble)", "date": "2026-10-10",
+      "title_kr": "", "title_en": "Cookie Run Wiki: Upgrading (levels and promotion)", "relevance": 1,
+      "summary_en": "The pre-10-08 EXP table to level 100 (Lv.100 13.9M) and the copies per promotion for cookies and pets; not yet updated for the cap of 120.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "sugarpocket-stella", "url": "https://cookieruncrumble.app/stella/", "date": "2026-10-10",
+      "title_kr": "스텔라 시뮬레이션", "title_en": "Sugar Pocket: Stellar Link simulator (rendered)", "relevance": 2,
+      "summary_en": "Rendered with agent-browser. The simulator, built on the APK data, lists constellations 1–10 (Aries to Capricorn) and shows constellation 1 at 44.2% area giving +8.8% ATK, DEF and HP, a reroll costing 10 SP unlocked, and at most six pieces locked.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "sugarpocket-guides", "url": "https://cookieruncrumble.app/guides/", "date": "2026-10-10",
+      "title_kr": "쿠키런 크럼블 플레이 가이드", "title_en": "Sugar Pocket: play guide (rendered)", "relevance": 2,
+      "summary_en": "Rendered with agent-browser; unchanged in substance since 2026-09-12. Stage power sets the share of damage kept by bracket (55% to 75% is +36.4% real damage); the in-game Arena guide counts level and promotion, pet holding effects, the collection, gear, plating and sugar runes, and doesn't confirm Mercenary Guild effects.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "appstore-kr", "url": "https://apps.apple.com/kr/app/id6749251466", "date": "2026-10-10",
+      "title_kr": "", "title_en": "KR App Store page (captured 2026-10-10)", "relevance": 2,
+      "summary_en": "Version 1.5.001 (release notes: Chardonnay, expanded daily dungeon levels, expanded lab levels). Top purchases: Plating Special Thanks ₩9,900, Ad Removal ₩7,500, daily dungeon key set ₩6,000, Chardonnay pick-up Vol.2 ₩22,000, Arena tickets ₩6,000, Epic gear hot deal ₩1,500, Crumble Pass season 3 ₩7,500, Chardonnay pick-up Vol.1 ₩9,900, 'Endless Guidance' pack ₩27,000, Chardonnay 2★ pack ₩19,000.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    },
+    {
+      "source": "web", "id": "appstore-us", "url": "https://apps.apple.com/us/app/cookierun-crumble-idle-rpg/id6749251466", "date": "2026-10-10",
+      "title_kr": "", "title_en": "US App Store page (captured 2026-10-10)", "relevance": 2,
+      "summary_en": "Top purchases: Ad Removal $4.99, Special Thanks Plating Pack $6.99, Crumble Pass $4.99, Daily Dungeon Key Set $3.99, Arena Ticket Pack $3.99, Hot Deal Epic Gear $0.99, All Those Cookies Pass $11.99, Chardonnay Pick-up Vol.2 $13.99, Shocking 2000% Jackpot $0.99, Chardonnay 2★ $11.99. New tier pairs with the KR list: ₩1,500 = $0.99, ₩9,900 = $6.99, ₩22,000 = $13.99.",
+      "datapoints": [], "advice": [], "damage": [], "quotes": []
+    }
+  ]
+}

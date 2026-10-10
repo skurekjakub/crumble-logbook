@@ -1,6 +1,6 @@
 {
- "about": "Every system that raises the team power (전투력) the game shows for a lineup, as the sources list them (nv:33130, nv:43444, the in-game Arena guide quoted by web:sugarpocket-guides). For each: what it raises, where it applies, its materials and whether they are free, time-gated or paid, its cap and diminishing returns, posted gains, efficiency by account stage, and what it does for the stage and Rift brackets of record 003. 'posted' figures are players' own; 'inferred' ones are this record's arithmetic on posted or game-data figures. Game version 1.4.002 (2026-09-23) unless a patch note says otherwise.",
- "measured": "2026-10-07",
+ "about": "Every system that raises the team power (전투력) the game shows for a lineup, as the sources list them (nv:33130, nv:43444, the in-game Arena guide quoted by web:sugarpocket-guides). For each: what it raises, where it applies, its materials and whether they are free, time-gated or paid, its cap and diminishing returns, posted gains, efficiency by account stage, and what it does for the stage and Rift brackets of record 003. 'posted' figures are players' own; 'inferred' ones are this record's arithmetic on posted or game-data figures. A gain marked 'damage, not power' is a score or stat change in a mode where power decides nothing (Guild Conquest, Arena, the 15% stage line). Game version 1.5.002 (2026-10-08) unless a patch note says otherwise.",
+ "measured": "2026-10-10",
  "efficiency_scale": "high: a posted or inferred gain of several % of team power for a cost a player at that stage meets within days; medium: about 1% per few days' income or per ~10,000 KRW; low: well under 1% per the same, or gated by luck or large sums; none: no displayed power.",
  "sources_list": [
   {
@@ -29,10 +29,10 @@
     "at_2_2g": "high up to 8-3, free from pulls (dc:76290): one step was +10% at 2G. Past 8-3: ~45 paid cookie stars, ₩2.3–4.2M upper bound (dc:50913), gain unposted."
    },
    "bracket_effect": "Moves every bracket line at once; the only posted single step that moved a 2G account a full 0.2G.",
-   "spend_order": "Roll unlocked to ~70% early; shape later constellations first: hexagon at 6 points, octagon at 8, 95% at 10 (web:yt-5XXDHBHnISU, web:yt-mL9MSX3QD94). Open premium pulls up to 8-6 rather than hoard (dc:82029).",
-   "patch_notes": "none recorded",
+   "spend_order": "Roll unlocked to ~70% early; shape later constellations first: hexagon at 6 points, octagon at 8, 95% at 10 (web:yt-5XXDHBHnISU, web:yt-mL9MSX3QD94). Open premium pulls up to 8-6 rather than hoard (dc:82029); a player ~9 stars short of constellation 8 was told to spend banked pulls now (dc:83289). Lock before rolling: 20,000 SP of rolls took one constellation from 92% to 66% (dc:84169).",
+   "patch_notes": "none recorded; Sugar Pocket's simulator (APK data) lists constellations up to 10 (web:sugarpocket-stella)",
    "confidence": "high",
-   "sources": ["nv:5693", "nv:43444", "dc:68732", "dc:77329", "dc:76290", "dc:50913", "dc:55570", "dc:56417", "dc:68586", "dc:73840", "web:sugarpocket-stella", "web:yt-y-bxOrnjIeU", "web:yt-5XXDHBHnISU", "web:yt-mL9MSX3QD94", "web:yt-FrKqf5lhZBs", "dc:81196", "dc:78964", "dc:78814", "dc:77737", "dc:82029"]
+   "sources": ["dc:83289", "dc:84169", "nv:5693", "nv:43444", "dc:68732", "dc:77329", "dc:76290", "dc:50913", "dc:55570", "dc:56417", "dc:68586", "dc:73840", "web:sugarpocket-stella", "web:yt-y-bxOrnjIeU", "web:yt-5XXDHBHnISU", "web:yt-mL9MSX3QD94", "web:yt-FrKqf5lhZBs", "dc:81196", "dc:78964", "dc:78814", "dc:77737", "dc:82029"]
   },
   {
    "id": "guild_lab",
@@ -47,14 +47,15 @@
    "posted_gains": [
     {"account": "small guild → research-13 guild", "before": "", "after": "", "delta": "~+20% of account total power (총투력), not team power", "cost": "switching guild", "kind": "claimed (one reply, not measured)", "sources": ["dc:76461"]},
     {"account": "stage pusher (capture in record 003)", "before": "not stated", "after": "the 15% cut after leaving the guild", "delta": "fell to the 15% bracket", "cost": "leaving", "kind": "posted", "sources": ["dc:67596"]},
-    {"account": "13G account total, 2026-10-06", "before": "13G", "after": "~10G", "delta": "about −23% of account total (총투) on leaving; +2G on joining (dc:78400)", "cost": "leaving / joining", "kind": "posted (account total, not team power)", "sources": ["dc:81826", "dc:78400"]}
+    {"account": "13G account total, 2026-10-06", "before": "13G", "after": "~10G", "delta": "about −23% of account total (총투) on leaving; +2G on joining (dc:78400)", "cost": "leaving / joining", "kind": "posted (account total, not team power)", "sources": ["dc:81826", "dc:78400"]},
+    {"account": "left a level-13 guild, 2026-10-09", "before": "", "after": "", "delta": "stage power 'dropped sharply'; commenters put it on the guild research", "cost": "leaving", "kind": "posted (no figure)", "sources": ["dc:84152"]}
    ],
    "efficiency": {"early": "unmeasured (free)", "mid": "unmeasured (free)", "late": "unmeasured (free)", "at_2_2g": "free and instant: one player lost ~23% of account total on leaving; the team-power share isn't posted"},
    "bracket_effect": "Large but unsized in team power: leaving dropped one pusher to the 15% cut and another's total by ~23%.",
    "spend_order": "Be in the strongest guild you can keep up with; nv:33130 calls the guild mandatory.",
    "patch_notes": "none recorded",
    "confidence": "low",
-   "sources": ["dc:76461", "dc:67596", "dc:72584", "dc:70446", "nv:33130", "web:yt-0HQbrZK8W4g", "dc:81826", "dc:78400", "dc:81723", "dc:78621", "dc:80574", "dc:82457"]
+   "sources": ["dc:76461", "dc:67596", "dc:72584", "dc:70446", "nv:33130", "web:yt-0HQbrZK8W4g", "dc:81826", "dc:78400", "dc:81723", "dc:78621", "dc:80574", "dc:82457", "dc:84152", "nv:51364"]
   },
   {
    "id": "lineup",
@@ -69,14 +70,17 @@
    "posted_gains": [
     {"account": "arena deck", "before": "3M", "after": "5M", "delta": "+67%", "cost": "commenters' guess: a gear or formation change", "kind": "posted figure, guessed cause", "sources": ["dc:72901"]},
     {"account": "early", "before": "Wind Archer 192 per hit", "after": "576 after adding a healer", "delta": "3× damage through the bracket", "cost": "a lineup swap", "kind": "posted", "sources": ["web:yt-njY-LhKqAtM"]},
-    {"account": "1,100 accuracy / 1,200 focus", "before": "", "after": "", "delta": "+7M from one gear line", "cost": "a gear swap", "kind": "posted", "sources": ["dc:74953"]}
+    {"account": "1,100 accuracy / 1,200 focus", "before": "", "after": "", "delta": "+7M from one gear line", "cost": "a gear swap", "kind": "posted", "sources": ["dc:74953"]},
+    {"account": "a +15 Eternal helmet, 2026-10-09", "before": "damage reduction 6.50% + crit resistance 21.43%: 336.65M", "after": "damage reduction 6.76% + HP +10,079: 228.64M", "delta": "−108M displayed for the same damage taken in Conquest, where the boss never crits", "cost": "a gear swap", "kind": "posted (screenshot)", "sources": ["dc:84745"]},
+    {"account": "Guild Conquest, 2026-10-09", "before": "Macaron/Cherry deck at 4.27G: average 423× team power (best 3.036T)", "after": "Chardonnay/Melon Soda deck at 4.4G: average 809× (best 4.504T)", "delta": "damage, not power: +91% average Conquest score over 50 runs each", "cost": "Chardonnay in for Macaron", "kind": "posted (spreadsheet screenshot)", "sources": ["dc:84663", "dc:84702", "dc:83653"]},
+    {"account": "Guild Conquest at 5.32G and 4.91G", "before": "1T 372G; 724.76G", "after": "~1.3T; 1.0T", "delta": "damage, not power: +~9% and +38% from attack-order level tuning alone", "cost": "free", "kind": "posted", "sources": ["dc:84762", "dc:84116"]}
    ],
-   "efficiency": {"early": "unmeasured", "mid": "unmeasured", "late": "unmeasured; used when within a few % of a line", "at_2_2g": "unmeasured: record 003's pushers say a power-rolled stage preset shows more than the conquest preset; no capture gives the difference"},
-   "bracket_effect": "Designed for exactly this: pad across the next 40% (or 60%) line, then fight.",
-   "spend_order": "Keep a pure-power stage preset and swap to it when a line is within reach (record 003, dc:76290).",
+   "efficiency": {"early": "unmeasured", "mid": "unmeasured", "late": "used when within a few % of a 35% line; useless at the 15% line, where the damage preset clears faster", "at_2_2g": "a power preset pads displayed power by hundreds of millions (crit resistance alone: 108M on one helmet; the Conquest preset shows ~900M less); the gain in reach isn't posted"},
+   "bracket_effect": "Designed for exactly this: pad across the next 40% (or 60%) line, then fight. At the 15% line it buys nothing.",
+   "spend_order": "Keep a pure-power stage preset and swap to it when a 35% line is within reach (record 003, dc:76290); push at the 15% line with the Conquest preset (dc:84171, dc:84873, dc:84551). For damage modes, the attack order sets cookie levels (dc:83720, dc:84762).",
    "patch_notes": "1.4.002: presets can take already-drawn gear (web:crumbgg-patches-20260928).",
    "confidence": "low",
-   "sources": ["web:yt-EocpkOD5NW0", "web:yt-njY-LhKqAtM", "dc:56391", "dc:74089", "dc:74006", "dc:74953", "dc:72901", "nv:41221", "dc:76290", "dc:81470"]
+   "sources": ["web:yt-EocpkOD5NW0", "web:yt-njY-LhKqAtM", "dc:56391", "dc:74089", "dc:74006", "dc:74953", "dc:72901", "nv:41221", "dc:76290", "dc:81470", "dc:84745", "dc:84663", "dc:84702", "dc:83653", "dc:84762", "dc:84116", "dc:84171", "dc:84873", "dc:84551", "dc:83720", "dc:84655"]
   },
   {
    "id": "gnome_lab",
@@ -90,49 +94,53 @@
     {"name": "time", "free": "timers; guild help", "paid": "speed-ups in packs", "note": ""}
    ],
    "cost_type": "time_gated",
-   "cap": "research 110-2, special 19 (1.4.002); 130-2 and special 22 from 2026-10-08, with 12 h per research at most (nv:50417)",
-   "diminishing": "Stone cost per step climbs into the millions near the top; defense nodes add almost no power (dc:76647).",
+   "cap": "research 130-2 and special 22 since 2026-10-08, with 12 h per research at most; time past 12 h already spent came back as 1-minute speed-ups (nv:50417, web:cookierun-wiki-patch-1-5). What specials 20–22 give isn't posted yet.",
+   "diminishing": "Stone cost per step climbs into the millions near the top; defense nodes add almost no power (dc:76647). Since the 12 h cap, stones run out before time does (dc:83916, dc:83383, dc:84697).",
    "posted_gains": [
     {"account": "2G → 4G player", "before": "2G", "after": "4G", "delta": "'padded power is purely research' (with oven 36, Bari 5★, Stellar 8-6)", "cost": "weeks of research", "kind": "posted", "sources": ["dc:76290"]},
-    {"account": "3.4G, 2026-10-07", "before": "3.4G", "after": "3.477G", "delta": "+76.87M (+2.3%) for special research 19, ATK amplification 30%", "cost": "special research stones (not posted)", "kind": "posted (screenshot; team or total not stated); a commenter got +100M", "sources": ["dc:82156"]}
+    {"account": "3.4G, 2026-10-07", "before": "3.4G", "after": "3.477G", "delta": "+76.87M (+2.3%) for special research 19, ATK amplification 30%", "cost": "special research stones (not posted)", "kind": "posted (screenshot; team or total not stated); a commenter got +100M", "sources": ["dc:82156"]},
+    {"account": "nodes on screen, 2026-10-09", "before": "63-1 crit rate 12.90%; 69-1 crit rate 2.20%", "after": "15.10%; 4.50%", "delta": "damage stats: +2.2 and +2.3 points crit rate a step", "cost": "480K and 190K stones a step", "kind": "posted (screenshot)", "sources": ["dc:84347"]},
+    {"account": "after Chardonnay, 2026-10-09", "before": "", "after": "72-2 support crit damage 11.25% (3/3)", "delta": "damage stat", "cost": "not posted", "kind": "posted (screenshot)", "sources": ["dc:84187"]}
    ],
-   "efficiency": {"early": "high: one step per node up to the specials", "mid": "high: HP then ATK nodes", "late": "medium: millions of stones per node", "at_2_2g": "medium; a steady free source, gated by stones and time"},
+   "efficiency": {"early": "high: one step per node up to the specials", "mid": "high: HP then ATK nodes", "late": "medium: millions of stones per node; stones, not time, are the limit since 10-08", "at_2_2g": "medium; a steady free source, gated by stones. For damage, the crit rate and crit damage nodes left behind are cheap (190K–480K a step)"},
    "bracket_effect": "Steady growth; HP nodes add the most displayed power (web:yt-y-bxOrnjIeU, web:yt-0HQbrZK8W4g).",
-   "spend_order": "One step per node up to the specials (Sugar Flame, dice, rune discount, speed), then HP > ATK > crit, defense last; lower ATK nodes before ATK 30% (~50M stones, dc:76620) (web:yt-y-bxOrnjIeU, dc:76642, nv:43444). The cafe's 10-01 guide: special research to 19 first, then the lowest ATK-amp nodes, then HP (nv:48555).",
-   "patch_notes": "Expanded 2026-09-10 and 2026-09-23 (web:crumbgg-patches-20260928); 2026-10-08 (announced): to 130-2 and special 22, 12 h cap per research, longer past research refunded as speed-ups (nv:50417).",
+   "spend_order": "One step per node up to the specials (Sugar Flame, dice, rune discount, speed), then HP > ATK > crit, defense last; lower ATK nodes before ATK 30% (~50M stones, dc:76620) (web:yt-y-bxOrnjIeU, dc:76642, nv:43444). The cafe's 10-01 guide: special research to 19 first, then the lowest ATK-amp nodes, then HP (nv:48555). Since 10-08 posters short of stones fill the crit rate and crit damage nodes they skipped (dc:84697, dc:84187), and put speed-ups into the Mercenary Band instead (dc:83916).",
+   "patch_notes": "Expanded 2026-09-10 and 2026-09-23 (web:crumbgg-patches-20260928); 2026-10-08: to 130-2 and special 22, 12 h cap per research, longer past research refunded as speed-ups (nv:50417, web:cookierun-wiki-patch-1-5).",
    "confidence": "medium",
-   "sources": ["web:yt-y-bxOrnjIeU", "web:yt-0HQbrZK8W4g", "dc:76642", "dc:76647", "dc:76620", "dc:77277", "dc:76198", "dc:76290", "nv:43444", "web:crumbgg-patches-20260928", "dc:82156", "nv:50417", "nv:48555"]
+   "sources": ["web:yt-y-bxOrnjIeU", "web:yt-0HQbrZK8W4g", "dc:76642", "dc:76647", "dc:76620", "dc:77277", "dc:76198", "dc:76290", "nv:43444", "web:crumbgg-patches-20260928", "dc:82156", "nv:50417", "nv:48555", "web:cookierun-wiki-patch-1-5", "dc:83916", "dc:83383", "dc:84697", "dc:84347", "dc:84187"]
   },
   {
    "id": "plating",
    "name_en": "Plating (plate enhancement)",
    "name_kr": "플레이트 강화",
-   "raises": "The slot's main stat by level (+200% at 20, +315% at 25) and sub-stats every fifth level (+30/70/130/200/280%). The level stays with the slot; 12 slots.",
+   "raises": "The slot's main stat by level (+177% at 19, +200% at 20, +315% at 25) and sub-stats every fifth level (+30/70/130/200/280%; dc:83284, dc:82908). The level stays with the slot. For damage the book (skill amp) and artifact (crit dmg) plates matter most; armour plates pad power most (dc:83825, dc:83834, web:cookierun-wiki-gear).",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [
-    {"name": "Chocosteel (초코강)", "free": "one an hour from idle, 24 a day (web:yt-l9086mj7hwA); exchanges; boxes; from 10-08 the mileage shop (5 for 1,500, nv:50417)", "paid": "plate packs, the 300 Chocosteel + 60 Syrup hot deal, weekly packs", "note": "priced 200 Crystals (web:crumblehub-efficiency) or 50 Crystals (dc:68116)"},
-    {"name": "Syrup Metal (시럽쇳물)", "free": "victory medal, guild medal and Rumble exchanges; high-tier boxes; from 10-08 the mileage shop (5 for 2,000) and Rift S2 rewards (nv:50417)", "paid": "9,900 KRW plate thanks pack, the 5.5 and 7.5 packs", "note": "decline protection from 10, shatter restore from 15"}
+    {"name": "Chocosteel (초코강)", "free": "one an hour from idle, 24 a day (web:yt-l9086mj7hwA); exchanges; boxes (~100–120 a day, dc:83801); the mileage shop, 5 for 1,500 mileage, 50 a week (web:yt-EbXFIgSprRU)", "paid": "plate packs, the 7-day artisan check-in pack (100 + 100 Syrup for ₩25,000), weekly packs (dc:82897)", "note": "priced 200 Crystals (web:crumblehub-efficiency) or 50 Crystals (dc:68116); posters call it plentiful next to Syrup (dc:82682)"},
+    {"name": "Syrup Metal (시럽쇳물)", "free": "victory medal, guild medal and Rumble exchanges; high-tier boxes; the mileage shop, 5 for 2,000 mileage, 50 a week (web:yt-EbXFIgSprRU); Rift stage rewards and exchange (10 a buy, web:cookierun-wiki-patch-1-5, dc:82009)", "paid": "₩9,900 plate thanks pack (30), the ₩25,000 artisan check-in (100), the ₩25,000 new-region pack (50); all the 10-08 packs together hold ~870 for ₩600–650k (dc:82898, dc:84080)", "note": "drop protection from 10 (4–5 a press near 19), shatter restore from 15 (50 at 19); the bottleneck past 15"}
    ],
    "cost_type": "mixed",
    "cap": "25 since 1.4.002 (was 20)",
-   "diminishing": "Success falls from 90% (0→1) to 14% (14→15), then 2% for every step from 19. To 15: ~414 Chocosteel and 43 Syrup per slot (dc:53079).",
+   "diminishing": "Success falls from 90% (0→1) to 14% (14→15), then 2% for every step from 19. To 15: ~414 Chocosteel and 43 Syrup per slot (dc:53079). 19→20 is expected at ~1,190 Chocosteel and 428 Syrup (relayed, dc:83374); posted runs spent 1,300–1,425 Chocosteel and ~400 Syrup (dc:83284, dc:83825, dc:83451).",
    "posted_gains": [
+    {"account": "a +19 sword, 2026-10-08", "before": "+19", "after": "+17 (shattered)", "delta": "−74.67M power (kind not stated)", "cost": "~1,300 Chocosteel over 52 presses; 50 Syrup to restore", "kind": "posted (screenshot)", "sources": ["dc:83284"]},
+    {"account": "a +18 sword, 2026-10-09", "before": "ATK +7,934, crit rate 19.04%, skill amp 8.44%", "after": "+20: ATK +9,190, crit rate 24.84%, skill amp 11.01%", "delta": "damage stats: +5.8 points crit rate, +2.57 points skill amp", "cost": "one great success (0.10%) at 26 Chocosteel + 5 Syrup", "kind": "posted (screenshot)", "sources": ["dc:84474"]},
     {"account": "'1G 600M' (team or total not stated)", "before": "", "after": "", "delta": "about +8M per level (posed as a question, ~0.5%); 14→15 +20–30M (~1.5%)", "cost": "14→15 ≈ 104 Chocosteel + 13 Syrup expected", "kind": "posted gain (approximate), cost from the table", "sources": ["dc:75684", "dc:53079"]},
     {"account": "server top 3", "before": "", "after": "", "delta": "+200–300M each (no time span given)", "cost": "the poster guessed at plating great successes", "kind": "posted figure, guessed cause", "sources": ["dc:72479"]},
     {"account": "most posted 4G accounts", "before": "", "after": "4G", "delta": "", "cost": "sword 20–21, bow 19, rest 15; the exception dc:76290 reached 4G with no plate above 18", "kind": "posted snapshot", "sources": ["dc:76272", "dc:76816", "dc:74431", "dc:76290"]}
    ],
-   "efficiency": {"early": "high: all to 5 then 10 is cheap", "mid": "medium: 10→15 with free Chocosteel (~4 days of idle per level near 15, inferred)", "late": "low: 2% steps with shatter risk; whale lane", "at_2_2g": "medium for any slot below 15 (sword, bow, staff first); low past 15. At 1.6G one step 14→15 bought ~0.5 chapters of 35% reach (inferred)."},
+   "efficiency": {"early": "high: all to 5 then 10 is cheap", "mid": "medium: 10→15 with free Chocosteel (~4 days of idle per level near 15, inferred)", "late": "low for power: 2% steps with shatter risk. For Conquest damage the book and artifact plates to +20 are the community's pick (+200% main and sub stats at 20)", "at_2_2g": "medium for any slot below 15 (sword, bow, staff first); low past 15. Without bought Syrup, a plate level every 1–2 weeks (dc:84182)."},
    "bracket_effect": "Small, steady; large only on lucky great successes. Not comparable per won with Stellar points from the record's evidence (see stellar_link).",
-   "spend_order": "All to 5, all to 10, then sword, bow, staff to 15, then ring, magic object, book. No Syrup below 12–13; past 15 save it for restores (web:crumblehub-plate-upgrade, nv:43444, web:yt-_Vyl0eQz9lU, dc:75684).",
-   "patch_notes": "2026-09-23: cap 25; a shatter drops 2 levels instead of to 10; restore with Syrup; compensation for past shatters (dc:72150). 2026-10-08 (announced): Chocosteel and Syrup in the mileage shop; Rift exchange limits 5 → 10 (nv:50417, web:crumbgg-patches-20261007).",
+   "spend_order": "All to 5, all to 10, then sword, bow, staff to 15, then the rest to 15. No Syrup below 12–13. Past 15: drop protection only, no shatter mitigation, restore from 17 (simulators, dc:82595, dc:82608, dc:84350, dc:84865). Without bought Syrup, everything to +17 before a weapon to +20 (dc:84476); for Conquest damage, book and artifact to +20 first; for power, armour (dc:83825, dc:83834, dc:84176).",
+   "patch_notes": "2026-09-23: cap 25; a shatter drops 2 levels instead of to 10; restore with Syrup; compensation for past shatters (dc:72150). 2026-10-08: Chocosteel and Syrup in the mileage shop (50 of each a week), Syrup in Rift stage rewards, Rift exchange limits 5 → 10 (nv:50417, web:cookierun-wiki-patch-1-5, web:yt-EbXFIgSprRU).",
    "confidence": "high",
-   "sources": ["dc:53079", "dc:72150", "dc:75684", "dc:72479", "dc:76272", "dc:76414", "web:crumblehub-plate-upgrade", "web:yt-_Vyl0eQz9lU", "web:yt-l9086mj7hwA", "web:sugarpocket-catalog", "nv:43444", "nv:50417", "web:crumbgg-patches-20261007"]
+   "sources": ["dc:53079", "dc:72150", "dc:75684", "dc:72479", "dc:76272", "dc:76414", "web:crumblehub-plate-upgrade", "web:yt-_Vyl0eQz9lU", "web:yt-l9086mj7hwA", "web:sugarpocket-catalog", "nv:43444", "nv:50417", "web:crumbgg-patches-20261007", "dc:83284", "dc:82908", "dc:83825", "dc:83834", "dc:84176", "dc:83374", "dc:83451", "dc:84474", "dc:83801", "web:yt-EbXFIgSprRU", "dc:82897", "dc:82682", "web:cookierun-wiki-patch-1-5", "dc:82009", "dc:82898", "dc:84080", "dc:84182", "dc:82595", "dc:82608", "dc:84350", "dc:84865", "dc:84476", "web:cookierun-wiki-gear"]
   },
   {
    "id": "gear_oven",
    "name_en": "Gear from the Oven (oven level and gear level)",
    "name_kr": "오븐 · 장비",
-   "raises": "Gear main and sub stats. Gear level caps at oven level × 3; rarity odds rise with oven level (Eternal from oven 31, 0.002% a draw).",
+   "raises": "Gear main and sub stats. Gear level caps at oven level × 3; rarity odds rise with oven level (Eternal from oven 31, 0.002% a draw). Each slot group has a fixed sub-stat pool: skill amp rolls only on weapons and upper accessories, skill haste only on accessories, crit resistance and damage reduction only on armour and lower accessories (web:cookierun-wiki-gear). Presets keep a gear set per mode; the damage sets show less power (dc:84655).",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [{"name": "dough (반죽) and Lucky Dough", "free": "dough daily dungeon, idle, mileage keys", "paid": "daily dungeon key packs, level pass (Lucky Dough), the 6,000 KRW Unique 3-piece at oven 10", "note": "Since 10-02 auto-open takes 200–500 dough at a time from oven 32 (was ~50, when a day couldn't open it all) (nv:48486, dc:76860)"}],
    "cost_type": "mixed",
@@ -141,32 +149,34 @@
    "posted_gains": [
     {"account": "600M–1G band", "before": "600M", "after": "1G", "delta": "mostly oven-level gear", "cost": "", "kind": "posted", "sources": ["dc:75242"]},
     {"account": "~800M", "before": "", "after": "", "delta": "+50M/day, +100M on key-pack days", "cost": "keys", "kind": "posted", "sources": ["dc:69664"]},
-    {"account": "late", "before": "", "after": "", "delta": "+87 ATK bow line → Milk ATK +6k", "cost": "one gear line", "kind": "posted", "sources": ["dc:76718"]}
+    {"account": "late", "before": "", "after": "", "delta": "+87 ATK bow line → Milk ATK +6k", "cost": "one gear line", "kind": "posted", "sources": ["dc:76718"]},
+    {"account": "a stage pusher, 2026-10-09", "before": "stage (power) preset", "after": "Conquest preset", "delta": "about −900M displayed power, yet it clears faster at the 15% line", "cost": "a preset swap", "kind": "posted (no base figure)", "sources": ["dc:84655", "dc:84171", "dc:84873"]},
+    {"account": "Conquest damage weights, a guild's internal sheet", "before": "", "after": "", "delta": "skill amp +1% = +2% damage; crit dmg +15% = +4%; crit rate +15% = +3%; ATK +650 = +2.5%", "cost": "gear lines", "kind": "claimed (a leak; it says results vary with Resolve, research, gear and Stellar)", "sources": ["dc:82295", "dc:82388"]}
    ],
-   "efficiency": {"early": "high: the Unique 3-piece (6,000 KRW) at oven 10 is two tiers above the drops", "mid": "high: oven levels drive power in the 600M–1G band", "late": "medium: Eternal draws are rare; oven 29 takes about a month with every key pack", "at_2_2g": "medium; the 2G→4G player credits oven 36 gear levels (dc:76290)"},
-   "bracket_effect": "The main driver in mid-game; also where power padding lives (see lineup).",
-   "spend_order": "Mileage and exchanges: dough keys first (nv:30148, web:yt-s4Y3glSPJPk); auto-draw one tier below the best rate (web:yt-EocpkOD5NW0).",
-   "patch_notes": "2026-08-13 auto-open up to 20 by oven level; 2026-08-27 up to 50 (web:crumbgg-patches-20260928); 2026-10-02 200/300/400/500 at oven 32/34/36/38, 100 gear held (nv:48486).",
+   "efficiency": {"early": "high: the Unique 3-piece (6,000 KRW) at oven 10 is two tiers above the drops", "mid": "high: oven levels drive power in the 600M–1G band", "late": "medium for power: Eternal draws are rare and a new oven level may not beat near-maxed sub-stats for days (dc:84754). High for damage: the sub-stat lines are the main damage lever in Conquest and Arena", "at_2_2g": "medium; the 2G→4G player credits oven 36 gear levels (dc:76290)"},
+   "bracket_effect": "The main driver in mid-game; also where power padding lives (see lineup). At the 15% line the damage preset clears faster than the power preset.",
+   "spend_order": "Mileage and exchanges: dough keys first (nv:30148, web:yt-s4Y3glSPJPk); auto-draw one tier below the best rate (web:yt-EocpkOD5NW0). Keep presets per mode (web:yt-HcVx3n0gjpQ, nv:51157, dc:84572, dc:83818). Conquest: weapons skill amp + crit dmg (or crit rate or ATK, disputed), armour damage reduction + HP, upper accessories skill haste + skill amp, lower accessories damage reduction + skill haste; no accuracy, focus or crit resistance. Arena: the same with crit resistance on armour and lower accessories. Stage: accuracy and focus to the stage's line, then power. Oven filter: skill amp and damage reduction, one valid line per slot group (dc:83807).",
+   "patch_notes": "2026-08-13 auto-open up to 20 by oven level; 2026-08-27 up to 50 (web:crumbgg-patches-20260928); 2026-10-02 200/300/400/500 at oven 32/34/36/38, 100 gear held (nv:48486). In the Rift the power arrows mislead: Dimensional Energy inflates them (dc:81976, dc:82138, dc:82845).",
    "confidence": "medium",
-   "sources": ["dc:77460", "nv:41221", "dc:75242", "dc:69664", "dc:76718", "dc:77256", "dc:76290", "dc:76860", "dc:76931", "web:yt-FrKqf5lhZBs", "web:sugarpocket-catalog", "nv:48486"]
+   "sources": ["dc:77460", "nv:41221", "dc:75242", "dc:69664", "dc:76718", "dc:77256", "dc:76290", "dc:76860", "dc:76931", "web:yt-FrKqf5lhZBs", "web:sugarpocket-catalog", "nv:48486", "web:cookierun-wiki-gear", "dc:84655", "dc:84171", "dc:84873", "dc:82295", "dc:82388", "dc:84754", "web:yt-HcVx3n0gjpQ", "nv:51157", "dc:84572", "dc:83818", "dc:83807", "dc:81976", "dc:82138", "dc:82845"]
   },
   {
    "id": "fame",
    "name_en": "Fame",
    "name_kr": "명성",
-   "raises": "Boss, element and crit damage per level, and displayed power (nv:33130, web:yt-5XXDHBHnISU).",
+   "raises": "Boss, elemental and crit damage, +2% to one of the three per level in turn (Lv.30: +20% each), and displayed power (web:cookierun-wiki-build, nv:33130, web:yt-5XXDHBHnISU). Pure damage, so it counts in Guild Conquest, a boss fight, though not in Arena.",
    "applies_in": {"stage": true, "rift": true, "arena": false, "conquest": true},
    "materials": [{"name": "victory medals from Arena wins", "free": "daily Arena attempts against beatable opponents", "paid": "Arena ticket packages (daily 6,000 KRW ticket; weekly)", "note": "not applied in Arena itself"}],
    "cost_type": "time_gated",
    "cap": "360 since 2026-09-10",
    "diminishing": "Linear in attempts; ticket buyers pull ahead (Fame 150 with every ticket pack vs 131, dc:71836).",
    "posted_gains": [{"account": "reported levels", "before": "", "after": "", "delta": "Fame 25 at stage 31, 42 at 43, ~100 near 1G, 110–121 at stages 270s, 130 at 4G, 149–150 top", "cost": "", "kind": "posted snapshots", "sources": ["nv:35880", "nv:39795", "dc:69704", "dc:68362", "dc:76272", "dc:71810", "dc:71836"]}],
-   "efficiency": {"early": "medium", "mid": "medium", "late": "medium; the gap compounds (web:yt-EocpkOD5NW0)", "at_2_2g": "medium; free daily, ticket packs for paying players"},
+   "efficiency": {"early": "medium", "mid": "medium", "late": "medium for power; high for Conquest damage, since each level adds ~0.67% to each of boss, elemental and crit damage (inferred from the Lv.1–32 table); the gap compounds (web:yt-EocpkOD5NW0)", "at_2_2g": "medium; free daily, ticket packs for paying players"},
    "bracket_effect": "Slow and steady.",
-   "spend_order": "Use every Arena attempt on beatable opponents; treat Arena as a Fame farm (web:yt-UTjeHORBk7c).",
+   "spend_order": "Use every Arena attempt on beatable opponents; treat Arena as a Fame farm (web:yt-UTjeHORBk7c). Conquest players count Fame with Resolve and research as damage (dc:84762).",
    "patch_notes": "Cap raised to 360 on 2026-09-10.",
    "confidence": "medium",
-   "sources": ["nv:33130", "web:yt-5XXDHBHnISU", "web:yt-EocpkOD5NW0", "web:yt-UTjeHORBk7c", "dc:71836", "dc:68362", "dc:69704"]
+   "sources": ["nv:33130", "web:yt-5XXDHBHnISU", "web:yt-EocpkOD5NW0", "web:yt-UTjeHORBk7c", "dc:71836", "dc:68362", "dc:69704", "web:cookierun-wiki-build", "dc:84762", "dc:84023"]
   },
   {
    "id": "resolve",
@@ -180,14 +190,15 @@
    "diminishing": "Flat stats shrink against % bonuses: +200 levels gave Milk ~1k ATK, one gear line 6k (dc:76718); late, 'a level a day is a burden' (nv:43444).",
    "posted_gains": [
     {"account": "early (global)", "before": "", "after": "", "delta": "~1,000 power per level", "cost": "gold", "kind": "posted", "sources": ["web:yt-6DFlOgeXLds"]},
-    {"account": "snapshots", "before": "", "after": "", "delta": "104 at stage 31, 209 at 43, 300 at 56, 775 at 168, 765–840 near 1G, 944 on 2026-09-24, 950 at 3.1G, 960 at 3.6G, 997 at 4G", "cost": "", "kind": "posted snapshots", "sources": ["nv:35880", "nv:39795", "nv:41301", "dc:76008", "dc:69704", "dc:74467", "dc:77104", "dc:76171", "dc:76272"]}
+    {"account": "snapshots", "before": "", "after": "", "delta": "104 at stage 31, 209 at 43, 300 at 56, 775 at 168, 765–840 near 1G, 944 on 2026-09-24, 950 at 3.1G, 960 at 3.6G, 997 at 4G", "cost": "", "kind": "posted snapshots", "sources": ["nv:35880", "nv:39795", "nv:41301", "dc:76008", "dc:69704", "dc:74467", "dc:77104", "dc:76171", "dc:76272"]},
+    {"account": "a stage survey, 2026-10-09", "before": "", "after": "", "delta": "stage 229: 772; 319: 791; 334: 980; 346: 1,110; 352: 1,074; a Rift player 1,170", "cost": "", "kind": "posted snapshots", "sources": ["dc:84427"]}
    ],
    "efficiency": {"early": "high: cheap coins, large relative gain", "mid": "medium: bank coin chests and open them when a 35% line fails", "late": "low", "at_2_2g": "low per coin; open banked chests only to cross a line"},
    "bracket_effect": "Early accounts cross lines with it; late accounts use banked coins as a one-off pad.",
    "spend_order": "Early: ATK first, then fill; hold coin chests until stuck, then open a half at a time (dc:76008, dc:77116, web:yt-5XXDHBHnISU).",
    "patch_notes": "2026-08-13 doubled per-level stats after 101; caps 1,000 (08-27) and 1,500 (09-10).",
    "confidence": "high",
-   "sources": ["web:crumbgg-patches-20260928", "dc:76718", "dc:76008", "dc:77116", "dc:70429", "web:yt-jlA7Lfy8G2M", "web:yt-6DFlOgeXLds", "nv:43444"]
+   "sources": ["web:crumbgg-patches-20260928", "dc:76718", "dc:76008", "dc:77116", "dc:70429", "web:yt-jlA7Lfy8G2M", "web:yt-6DFlOgeXLds", "nv:43444", "dc:84427", "web:cookierun-wiki-build"]
   },
   {
    "id": "cookie_stars",
@@ -215,18 +226,21 @@
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
    "materials": [{"name": "cookie EXP (별사탕)", "free": "idle, EXP daily dungeon, EXP auto-hunt chests", "paid": "EXP pass tiers, auto-hunt packs", "note": "level reset is free and refunds everything (nv:43444)"}],
    "cost_type": "mixed",
-   "cap": "100; 120 from 2026-10-08 (nv:50417), gated by Crumble level (105 for level 101, +5 a level, 200 for 120; dc:79865). Posters sit at Crumble 175–192, so levels 115–118 at first (dc:81501). A leak said 150 (dc:82186).",
-   "diminishing": "From 10-08, EXP to 100 falls 98.1M → 28.6M (excess refunded); 101–120 then take ~252M more and Crumble level +5 per cookie level (leak, dc:79865).",
+   "cap": "120 since 2026-10-08 (nv:50417), gated by Crumble level: one cookie level per 5 Crumble levels past 100 (Crumble 154 → 110, 190 → 118, 200 → 120; dc:83392, dc:83091, dc:79865). Posters sit at Lv.116–118 (dc:83756, dc:83324, dc:84914). A leak said 150 (dc:82186).",
+   "diminishing": "EXP to 100 fell 98.1M → 28.6M on 10-08 and the excess came back by mail, over 1G EXP for some (dc:83342, dc:83030, web:cookierun-wiki-patch-1-5); 101–120 take ~252M more per cookie (leak, dc:79865). The Crumble-level gate, not EXP, holds most accounts below 120.",
    "posted_gains": [
+    {"account": "a stage pusher, 2026-10-08", "before": "40.0% of a stage's recommended power", "after": "43%", "delta": "+7.5% team power (same stage)", "cost": "levelling the lineup to the new cap", "kind": "posted (a comment); commenters credit Chardonnay more than the levels for faster clears", "sources": ["dc:83712"]},
+    {"account": "3G, 2026-10-09", "before": "3G", "after": "4.038G", "delta": "+35% in a day", "cost": "levels, Chardonnay and spent keys together", "kind": "posted (kind of power not stated; causes mixed)", "sources": ["dc:83919"]},
     {"account": "SSR at 10★, game data", "before": "level 100: stats ×27.5 of base", "after": "level 120: ×45.1", "delta": "+64% cookie stats (an upper bound on its power gain)", "cost": "~252M EXP per cookie and Crumble level 200 (leak, dc:79865)", "kind": "inferred from crumb.gg's level-120 stats; the leaked table agrees", "sources": ["web:crumbgg-patches-20261007", "dc:79865"]},
-    {"account": "any (gallery reverse calculation from the leak)", "before": "level 100", "after": "level 119", "delta": "~+25% power", "cost": "Crumble level 195 needed", "kind": "claimed (one poster's calculation)", "sources": ["dc:81689", "dc:82104"]}
+    {"account": "any (gallery reverse calculation from the leak)", "before": "level 100", "after": "level 119", "delta": "~+25% power", "cost": "Crumble level 195 needed", "kind": "claimed (one poster's calculation; repeated as hearsay after 10-08, dc:82708, dc:83049)", "sources": ["dc:81689", "dc:82104", "dc:82708", "dc:83049"]},
+    {"account": "a Guild Conquest player, 2026-10-08", "before": "1.8T", "after": "4T 'easily'", "delta": "damage, not power: about 2.2× the Conquest score", "cost": "the level expansion and Chardonnay together", "kind": "posted (a comment; causes mixed)", "sources": ["nv:51157"]}
    ],
-   "efficiency": {"early": "high", "mid": "high for the main lineup", "late": "none at 100 until 10-08; then levels 101–120 (+64% cookie stats at 120, inferred)", "at_2_2g": "none for a lineup at 100 until 10-08; then the next big free lever, gated by EXP and Crumble level"},
-   "bracket_effect": "Early driver; capped late until 10-08. A claimed +25% power at 119 would take 2.2G to ~2.75G: 35% reach 304-19 → about 313 (inferred).",
-   "spend_order": "Milk first, then dealers, the healer, the rest; Pomegranate lowest if it survives (web:yt-VPVzGKGwWog). Bank EXP for 101–120 (dc:80209).",
-   "patch_notes": "1.4.002: hold the level-up button to pick a target level. 2026-10-08 (announced 10-07): cap 120; Lv.79–100 EXP cut with refunds (nv:50417).",
+   "efficiency": {"early": "high", "mid": "high for the main lineup", "late": "high while the Crumble level allows another level: +7.5% team power posted for the step to the new cap", "at_2_2g": "the first free lever after 10-08: a lineup at 100 gains up to the Crumble-level cap; one pusher measured +7.5%"},
+   "bracket_effect": "Early driver; capped late until 10-08. The one posted step (+7.5%) takes 2.2G to ~2.37G: 35% reach 304-19 → about 307 (inferred).",
+   "spend_order": "Milk first, then dealers, the healer, the rest; Pomegranate lowest if it survives (web:yt-VPVzGKGwWog). In Conquest and the Crumble Dungeon the attack order sets levels: dealers ranked by ATK, supports but Chardonnay as low as possible (dc:83720, dc:84626).",
+   "patch_notes": "1.4.002: hold the level-up button to pick a target level. 2026-10-08: cap 120; Lv.79–100 EXP cut, excess refunded by mail (nv:50417, web:cookierun-wiki-patch-1-5).",
    "confidence": "high",
-   "sources": ["web:sugarpocket-catalog", "web:yt-VPVzGKGwWog", "nv:43444", "dc:76394", "nv:50417", "web:crumbgg-patches-20261007", "dc:82186", "dc:81689", "dc:82104", "dc:80209", "dc:79865", "dc:79885", "dc:80230", "dc:81501"]
+   "sources": ["web:sugarpocket-catalog", "web:yt-VPVzGKGwWog", "nv:43444", "dc:76394", "nv:50417", "web:crumbgg-patches-20261007", "dc:82186", "dc:81689", "dc:82104", "dc:80209", "dc:79865", "dc:79885", "dc:80230", "dc:81501", "dc:83712", "dc:83919", "dc:83392", "dc:83091", "dc:83342", "dc:83030", "dc:82708", "dc:83049", "nv:51157", "dc:83756", "dc:83324", "dc:84914", "dc:83720", "dc:84626", "web:cookierun-wiki-patch-1-5", "web:crumbgg-patches-20261010"]
   },
   {
    "id": "sugar_runes",
@@ -241,10 +255,10 @@
    "posted_gains": [],
    "efficiency": {"early": "low for power", "mid": "low for power", "late": "low for power; high for damage", "at_2_2g": "keep SSR lines that add power (crit resistance) on the stage preset until the Rift (record 003)"},
    "bracket_effect": "Mostly real damage, not displayed power.",
-   "spend_order": "Milk ATK%, then Pomegranate, then dealers (nv:43444 §8.2).",
-   "patch_notes": "Rune recommendations updated with 1.4.002 (nv:43444).",
+   "spend_order": "Milk ATK%, then Pomegranate, then dealers (nv:43444 §8.2). After 10-08 the guide board ranks skill amp first and skill haste second for Conquest; Chardonnay takes all skill amp (nv:51217, web:yt-7ZcZXq0zUmE). Read each skill first: amp is dead where the text says it doesn't apply, haste where the cooldown is no longer than the duration (web:yt-7ZcZXq0zUmE).",
+   "patch_notes": "Rune recommendations updated with 1.4.002 (nv:43444) and again for 1.5.002 (nv:51217).",
    "confidence": "medium",
-   "sources": ["dc:69758", "dc:75058", "web:yt-l9086mj7hwA", "web:sugarpocket-catalog", "nv:43444"]
+   "sources": ["dc:69758", "dc:75058", "web:yt-l9086mj7hwA", "web:sugarpocket-catalog", "nv:43444", "nv:51217", "web:yt-7ZcZXq0zUmE"]
   },
   {
    "id": "pets",
@@ -277,28 +291,31 @@
    "posted_gains": [],
    "efficiency": {"early": "medium: claim the red dots", "mid": "low", "late": "low", "at_2_2g": "low; claim anything pending"},
    "bracket_effect": "Small.",
-   "spend_order": "Claim collection rewards when they appear (web:cookieruncrumbles-progression).",
-   "patch_notes": "",
+   "spend_order": "Claim collection rewards when they appear (web:cookieruncrumbles-progression). Effects are ATK, DEF or HP for a role or element, plus 100 Crystals a milestone (web:cookierun-wiki-collection).",
+   "patch_notes": "2026-10-08: new cookie and pet collections, among them one with the check-in Milk costume (web:crumbgg-patches-20261010, web:cookierun-wiki-patch-1-5, web:cookierun-wiki-collection).",
    "confidence": "low",
-   "sources": ["web:sugarpocket-catalog", "nv:26202", "nv:37730", "web:cookieruncrumbles-progression"]
+   "sources": ["web:sugarpocket-catalog", "nv:26202", "nv:37730", "web:cookieruncrumbles-progression", "web:cookierun-wiki-collection", "web:crumbgg-patches-20261010", "web:cookierun-wiki-patch-1-5"]
   },
   {
    "id": "mercenary_band",
    "name_en": "Mercenary band level, captain and perks",
    "name_kr": "용병단 · 단장 · 복지",
-   "raises": "Combat perks (Passion Pay, Rapid Promotion, …) and the captain's effect; no displayed power.",
+   "raises": "The leader gets +10% ATK/DEF/HP per band level; perks add damage: Passion Pay +20% ATK (−20% HP) to the highest-ATK ally, Rapid Promotion +7% ATK to the same, Like A Family +2% elemental damage per cookie of the main element. Band Lv.4 opens a second perk slot. No displayed power (web:cookierun-wiki-mercenary-guild).",
    "applies_in": {"stage": true, "rift": true, "arena": true, "conquest": true},
-   "materials": [{"name": "band level", "free": "oven level (band 4 at oven 29)", "paid": "key packs speed the oven", "note": ""}],
+   "materials": [{"name": "band level", "free": "requirements (Lv.4: Crumble level 85, oven 29, Fame 40, 40 lab researches) plus a timer (Lv.3 → 4 about 1 day 14 h)", "paid": "speed-ups in packs", "note": "the 1-minute speed-ups the lab can no longer use go here (dc:83383, dc:83916)"}],
    "cost_type": "time_gated",
-   "cap": "band level 4 reported",
+   "cap": "band level 4 live; a Lv.5 flag is in the data (web:cookierun-wiki-mercenary-guild)",
    "diminishing": "",
-   "posted_gains": [{"account": "band 4", "before": "", "after": "", "delta": "no power change, large felt difference", "cost": "", "kind": "posted", "sources": ["dc:69659"]}],
-   "efficiency": {"early": "none for power", "mid": "none for power", "late": "none for power", "at_2_2g": "none for power (damage only)"},
+   "posted_gains": [
+    {"account": "band 4", "before": "", "after": "", "delta": "no power change, large felt difference", "cost": "", "kind": "posted", "sources": ["dc:69659"]},
+    {"account": "top Crumble Dungeon runs, 2026-10-08/09", "before": "", "after": "1.09T and 787G scores", "delta": "both run Passion Pay (with Rapid Promotion) on the top shooter", "cost": "", "kind": "posted (perk choice, not a measured gain)", "sources": ["dc:83720", "dc:84626"]}
+   ],
+   "efficiency": {"early": "none for power", "mid": "none for power", "late": "none for power; high for damage once Lv.4 opens the second perk", "at_2_2g": "none for power (damage only): spend the speed-ups here"},
    "bracket_effect": "None on the bracket; real damage within it.",
-   "spend_order": "",
-   "patch_notes": "",
+   "spend_order": "Speed-ups into band Lv.4, then Passion Pay and Rapid Promotion on the carry for Conquest and the Crumble Dungeon (dc:83383, dc:83916, dc:83720). Perks are one setting for every mode, so players swap them by hand before Conquest and accept weaker Arena defence meanwhile (dc:84603, dc:84965); three-tank perks carried one team past the 17 s wipe (dc:84330). Whether perks apply on Arena defence is disputed (dc:84480); 1.5.002 added the rule to the Arena pop-up (web:cookierun-wiki-patch-1-5).",
+   "patch_notes": "1.5.002: the Arena information pop-up now explains how Mercenary Guild effects apply (web:cookierun-wiki-patch-1-5).",
    "confidence": "medium",
-   "sources": ["dc:69659", "dc:77256", "dc:67950"]
+   "sources": ["dc:69659", "dc:77256", "dc:67950", "web:cookierun-wiki-mercenary-guild", "dc:83383", "dc:83916", "dc:83720", "dc:84626", "web:cookierun-wiki-patch-1-5", "dc:84603", "dc:84965", "dc:84330", "dc:84480"]
   },
   {
    "id": "rift_energy",
@@ -313,10 +330,10 @@
    "posted_gains": [{"account": "Rift", "before": "", "after": "~10G", "delta": "", "cost": "", "kind": "posted", "sources": ["dc:76372"]}],
    "efficiency": {"early": "n/a", "mid": "n/a", "late": "high inside the Rift", "at_2_2g": "n/a until 328-30"},
    "bracket_effect": "Only the Rift's brackets.",
-   "spend_order": "Enter early; it compounds (record 003).",
+   "spend_order": "Enter early; it compounds (record 003). Inside the Rift the gear power arrows mislead, and the Rift grants accuracy, so the Conquest preset pushes its 15% line (dc:81976, dc:82138, dc:84572).",
    "patch_notes": "New in 1.4.002.",
    "confidence": "medium",
-   "sources": ["dc:76372", "dc:75058"]
+   "sources": ["dc:76372", "dc:75058", "dc:81976", "dc:82138", "dc:84572"]
   },
   {
    "id": "blessing",
