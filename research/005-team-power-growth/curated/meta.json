@@ -2,7 +2,7 @@
  "updated": "2026-10-10",
  "season": "Game 1.5.002 (live since 2026-10-08): cookie cap 120 by Crumble level, Gnome Lab 130-2, mileage Chocosteel and Syrup Metal",
  "lede": "Team power (전투력) gates stages and the Dimensional Rift: what raises it, what each source costs free and paid, posted gains, the spend order, and which systems raise damage where power decides nothing.",
- "caveat": "Refreshed 2026-10-10, two days into 1.5.002: the level-120 gain is one comment (+7.5%), Conquest damage weights are a leak. Few posted gains, almost all DCInside.",
+ "caveat": "Refreshed 2026-10-10, two days into 1.5.002: the level gain is one comment (about +7.5%), Conquest damage weights are a leak. Few posted gains, almost all DCInside.",
  "record": "research/005-team-power-growth/",
  "footer": "Built from the research record's evidence captures.",
  "you": {
@@ -16,7 +16,7 @@
    "Plate with drop protection only; skip shatter mitigation. Without bought Syrup, all plates to +17 before a weapon to +20.",
    "Lab stones, not time, are the limit now: fill the crit rate and crit damage nodes you skipped before climbing.",
    "Keep a power preset for 35% lines; at the 15% line and in Guild Conquest use the damage preset, whatever it shows.",
-   "Spend speed-ups on Mercenary Band Lv.4 for a second perk (Passion Pay: +20% ATK to your top attacker)."
+   "Spend speed-ups on Mercenary Band Lv.4 for a second perk (Passion Pay: +20% ATK to your ATK #1 ally, Milk in Conquest)."
   ],
   "sources": ["dc:77329", "dc:76461", "dc:76290", "dc:81826", "dc:84152", "dc:83392", "dc:83091", "dc:83712", "web:yt-EbXFIgSprRU", "dc:82595", "dc:84476", "dc:84350", "dc:83916", "dc:84697", "dc:84171", "dc:84873", "dc:83383", "web:cookierun-wiki-mercenary-guild", "nv:50417"]
  },
