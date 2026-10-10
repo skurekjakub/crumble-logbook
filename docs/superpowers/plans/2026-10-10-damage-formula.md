@@ -28,7 +28,7 @@
 - [x] `pnpm capture verify`; import gate in a fresh database with every record; export and scope the snapshot (`e4e92c9`).
 - [x] Check every touched screen in agent-browser, light and dark, phone width.
 - [x] Opus review; fix findings; push. The struct offsets in the evidence and code citations stay (the user's call); decode keys stay out.
-- [ ] Remove the lane's worktree folder (git has dropped it; Windows held a file open).
+- [x] Remove the lane's worktree folder, with every other stale worktree and branch; the superseded branches are bundled in the session scratchpad first.
 
 ## Task 3: Buff scaling
 
