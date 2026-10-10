@@ -1,0 +1,40 @@
+{
+  "batch": "r2026-10-10 dc-rumble",
+  "mode_scope": "rumble_arena",
+  "captured": "2026-10-10",
+  "window": "2026-10-07 to 2026-10-10 (DC post ids 82615-85154)",
+  "notes": [
+    "Evidence: r2026-10-10/02-dc-rumble/dc/<id>.md with images in dc/img/. Season 1 closed 10-08 12:00 KST; Season 2 battles opened 10-08 14:00 KST.",
+    "No post in the window shows a Rumble owner formation screen with Chardonnay, so the Season 2 team's membership comes from crumb.gg's board (../08-extract/crumbgg-figures.txt)."
+  ],
+  "posts": [
+    { "source": "dc", "id": "82803", "url": "https://m.dcinside.com/board/projectcc/82803", "date": "2026-10-08", "title_kr": "와레나 in100 간신히 성공 ㅅㅅ", "title_en": "Barely made the Rumble top 100", "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "Season 1's final screen, two hours before the close: #1 슈퍼땅콩 7,292, #2 凱凱の餅乾軍團 7,264, #3 살라딘 7,048; the poster is 101st at 3,804 in Elite Master 1. A reply: 100th was 3,805.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [{ "team": "", "win_rate": "", "usage": "", "power": "", "note": "Season 1 final: #1 7,292; 101st 3,804" }], "disagreements": [], "quotes": [{ "kr": "와 100등이 3805이던데", "en": "100th was 3,805" }] },
+    { "source": "dc", "id": "82762", "url": "https://m.dcinside.com/board/projectcc/82762", "date": "2026-10-08", "title_kr": "와레나 3034점이 407등인데", "title_en": "3,034 points is 407th in Rumble", "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "Season 1's end: 3,034 points ranked 407th; a reply puts 2,688 at 1,884th, both in Elite Master 1.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [] },
+    { "source": "dc", "id": "83358", "url": "https://m.dcinside.com/board/projectcc/83358", "date": "2026-10-08", "title_kr": "와글레나 시즌2 의미가 없는데?", "title_en": "Rumble Season 2 is pointless?", "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "With the shop bought out and the top 100 out of reach, stop at Elite Master 1-2. A reply: 101st and 2,000th get the same reward.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [] },
+    { "source": "dc", "id": "83844", "url": "https://m.dcinside.com/board/projectcc/83844", "date": "2026-10-08", "title_kr": "지금 와레나 1등덱을 손민수 하면 된다는거제?", "title_en": "So I just copy the current Rumble #1 deck?", "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "Season 2's first night. Replies read the #1 deck: no Herb; Chardonnay gives Volley, the buffed Rockstar shields fast, and Cheesecake now gets pierce; an Oven-Bari deck that can't one-shot is pointless anyway. Another: Herb has been dead in Arena for a while.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{ "kr": "허브 아레나에서 관짝간지 꽤 됐는데", "en": "Herb has been in the coffin in Arena for a while" }] },
+    { "source": "dc", "id": "83881", "url": "https://m.dcinside.com/board/projectcc/83881", "date": "2026-10-09", "title_kr": "와글아레나 상점 초기화는 왜 2시즌마다야?", "title_en": "Why does the Rumble shop reset only every two seasons?", "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "The title states the shop resets every two seasons; it didn't reset for Season 2. dc:83889: 'it's a four-week shop', with the timer shown.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["The Rumble medal shop resets every two seasons (four weeks); not at Season 2's start."], "results": [], "disagreements": [], "quotes": [{ "kr": "아님 얜 4주짜리 상점이다", "en": "No, this one is a four-week shop" }] },
+    { "source": "dc", "id": "83889", "url": "https://m.dcinside.com/board/projectcc/83889", "date": "2026-10-09", "title_kr": "와레나 상점 초기화 아녔나", "title_en": "Wasn't the Rumble shop supposed to reset?", "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "The poster expected a reset on 10-09; replies: a four-week shop, see the remaining time at the bottom.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": ["Four-week Rumble shop."], "results": [], "disagreements": [], "quotes": [] },
+    { "source": "dc", "id": "85154", "url": "https://m.dcinside.com/board/projectcc/85154", "date": "2026-10-10", "title_kr": "와레나는 이제 오방몰빵이 메타인가보네", "title_en": "Rumble is an Oven all-in meta now?", "relevance": 2, "mode": "rumble_arena",
+      "summary_en": "Frog pets (Floral Froglet) are spreading on the ranking. Reply: Chardonnay raised the value of crit DMG, and Bari and Oven are both Fire, hence the Fire crit DMG pet. 'One-shot meta'.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Floral Froglet (+28% crit DMG to Fire allies) pays because Bari and Oven are Fire and Chardonnay floods crit."], "rules": [], "results": [], "disagreements": [], "quotes": [{ "kr": "샤르도네 때문에 치피 밸류가 많이 올라갔고 바리오방덱에서 바리오방 둘 다 불속성이라서 개구리펫 많이 쓰나보네", "en": "Chardonnay raised crit DMG's value, and Bari and Oven are both Fire, so frog pets are popular" }] },
+    { "source": "dc", "id": "83047", "url": "https://m.dcinside.com/board/projectcc/83047", "date": "2026-10-08", "title_kr": "아레나 공격보정 와레나에는 없는거 맞음?", "title_en": "Rumble has no attacker advantage, right?", "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "Replies guess Rumble has it too. No test.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [] },
+    { "source": "dc", "id": "82811", "url": "https://m.dcinside.com/board/projectcc/82811", "date": "2026-10-08", "title_kr": "결국 와레나 1등은 한국인이네", "title_en": "A Korean took Rumble #1 in the end", "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "Season 1's final minutes. Replies: the leader was swarmed; revenge gives risk-free points, and attackers are favoured in both modes because defenses are fixed and attackers see them.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Revenge and fixed defenses favour the attacker in both modes (replies)."], "rules": [], "results": [], "disagreements": [], "quotes": [] }
+  ],
+  "glossary": []
+}

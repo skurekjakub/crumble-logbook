@@ -27,7 +27,7 @@
   { "kr": "연쇄덱", "kr_short": ["해골덱"], "en": "Chain deck", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Deck: arena-chain.", "source": "dc:75982" },
   { "kr": "돌격덱", "kr_short": [], "en": "charge deck", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Deck built on charge-type divers (Oven Wanderer, Bari, Cherry Cola).", "source": "dc:74481, web:yt-DCmFEOU2ADY" },
   { "kr": "돌장연", "kr_short": [], "en": "charge deck (slang, exact expansion unknown)", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Low confidence; apparently 돌격 + 장판 + 연계.", "source": "dc:75453" },
-  { "kr": "빨대", "kr_short": [], "en": "'straw': Pomegranate's Skill AMP beam", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Goes to allies by ATK rank.", "source": "dc:74746, dc:74618" },
+  { "kr": "빨대", "kr_short": [], "en": "'straw': Pomegranate's Skill AMP beam", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Goes to Projectile Speed receivers first, then by ATK rank.", "source": "dc:74746, dc:74618, dc:83476" },
   { "kr": "공순", "kr_short": [], "en": "ATK order", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Allies ranked by ATK, which decides who gets beams and perks.", "source": "dc:71947, dc:69421" },
   { "kr": "깔개", "kr_short": [], "en": "(slang) fodder / low-ranked player", "kind": "term", "element": "", "class": "", "rarity": "", "source": "dc:72542, dc:76602" },
   { "kr": "접대", "kr_short": [], "en": "(slang) favoured by the developers", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Said of Bari under the Charge buff.", "source": "dc:75517" },
@@ -50,5 +50,13 @@
   { "kr": "부스러기 쟁탈전", "kr_short": ["쟁탈전"], "en": "Crumb Clash", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Unreleased base-raiding PvP mode known from a datamine and a coming-soon tab. The closest thing to a 'conquest arena'.", "source": "dc:79879, dc:78556, nv:48555" },
   { "kr": "공격보정", "kr_short": [], "en": "attack correction (suspected attacker bonus)", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Players' name for the suspected attacker advantage in Arena. Unconfirmed.", "source": "dc:79950, dc:78397" },
   { "kr": "오방 호밀덱", "kr_short": [], "en": "Oven–Rye decoy deck", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Rye deck with a top-ATK Oven captain as decoy. Deck: rumble-oven-rye-decoy.", "source": "dc:81227" },
-  { "kr": "6스가", "kr_short": ["3스가", "0스가"], "en": "six (three, zero) Skill Haste gear lines", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Count of Skill Haste lines on the arena preset.", "source": "dc:79067, dc:82006" }
+  { "kr": "6스가", "kr_short": ["3스가", "0스가"], "en": "six (three, zero) Skill Haste gear lines", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Count of Skill Haste lines on the arena preset.", "source": "dc:79067, dc:82006" },
+  { "kr": "우석샤", "kr_short": [], "en": "Milk + Pomegranate + Chardonnay, the fixed support core", "kind": "term", "element": "", "class": "", "rarity": "", "note": "From 우유, 석류, 샤르도네.", "source": "dc:83191, dc:83296" },
+  { "kr": "뚱카롱", "kr_short": ["똥카롱"], "en": "Macaron Cookie (nickname)", "kind": "term", "element": "", "class": "", "rarity": "", "refers_to": "마카롱맛 쿠키", "source": "dc:83147, dc:83871" },
+  { "kr": "죽창메타", "kr_short": ["죽창"], "en": "one-shot meta", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Whoever lands the opening burst wins.", "source": "dc:83352, dc:85154" },
+  { "kr": "초살", "kr_short": ["원빵"], "en": "instant kill in the opening", "kind": "term", "element": "", "class": "", "rarity": "", "source": "dc:83352, dc:85284" },
+  { "kr": "마들렌덱", "kr_short": ["마들렌 초살덱"], "en": "Madeleine six-cookie burst deck", "kind": "term", "element": "", "class": "", "rarity": "", "note": "Deck: arena-madeleine.", "source": "dc:83386, dc:84809" },
+  { "kr": "복슝좍", "kr_short": ["복숭아덱", "회피복슝덱"], "en": "Peach evasion deck", "kind": "term", "element": "", "class": "", "rarity": "", "note": "An evasion deck built around Peach's +45% evasion. Deck family: arena-evasion.", "source": "dc:82850, dc:84709, dc:83998" },
+  { "kr": "치저셋", "kr_short": ["치저 세팅"], "en": "crit RES gear preset", "kind": "term", "element": "", "class": "", "rarity": "", "source": "dc:83252, web:yt-JuDMhwANm1M" },
+  { "kr": "개구리펫", "kr_short": ["개구리"], "en": "Floral Froglet (pet), Fire crit DMG +28%", "kind": "term", "element": "", "class": "", "rarity": "", "refers_to": "꽃개구리", "source": "dc:85154" }
 ]
