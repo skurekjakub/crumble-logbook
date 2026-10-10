@@ -15707,6 +15707,32 @@
     "recordSlug": "005-team-power-growth"
    },
    {
+    "id": "web:client-1.5.002-buff-scaling",
+    "site": "web",
+    "url": "https://github.com/skurekjakub/crumble-logbook/blob/main/research/007-damage-formula/evidence/02-buff-scaling-analysis.md",
+    "title": "Client 1.5.002: how a buffer's stats size the buffs she gives",
+    "titleEn": "Client 1.5.002: how a buffer's stats size the buffs she gives",
+    "date": "2026-10-10",
+    "relevance": null,
+    "note": "Derived analysis of CharacterModifierManagementSystem.CollectBonusProperties (0x0044de70), its add pipeline and the modifier group job in lib_burst_generated.so, Ghidra 12.1.4; evidence/02-buff-scaling-analysis.md",
+    "summaryEn": null,
+    "capturePath": null,
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": "web:client-1.5.002-damage-system",
+    "site": "web",
+    "url": "https://github.com/skurekjakub/crumble-logbook/blob/main/research/007-damage-formula/evidence/01-damage-formula-analysis.md",
+    "title": "Client 1.5.002: the damage system, read from the Burst-compiled code",
+    "titleEn": "Client 1.5.002: the damage system, read from the Burst-compiled code",
+    "date": "2026-10-10",
+    "relevance": null,
+    "note": "Derived analysis of Crumble.DamageSystem.CalculatedDamage (0x003f43b0) and CombatBonusProperty.ApplyBonus (0x00464530) in lib_burst_generated.so, Ghidra 12.1.4 with Cpp2IL 2022.1.0-pre-release.21 layouts; evidence/01-damage-formula-analysis.md",
+    "summaryEn": null,
+    "capturePath": null,
+    "recordSlug": "007-damage-formula"
+   },
+   {
     "id": "web:cookierun-wiki-build",
     "site": "web",
     "url": "https://cookierun.wiki/w/Build",
@@ -17371,6 +17397,19 @@
     "recordSlug": "003-stage-pushing-meta"
    },
    {
+    "id": "web:ingame-2026-10-10-milk",
+    "site": "web",
+    "url": "https://github.com/skurekjakub/crumble-logbook/blob/main/research/007-damage-formula/evidence/03-ingame-2026-10-10/readings.md",
+    "title": "In game, 2026-10-10: Milk's Gentle Remedy and stat sheet under two gear presets",
+    "titleEn": "In game, 2026-10-10: Milk's Gentle Remedy and stat sheet under two gear presets",
+    "date": "2026-10-10",
+    "relevance": null,
+    "note": "Android client 1.5.002 screenshots (kept local) transcribed in evidence/03-ingame-2026-10-10/readings.md",
+    "summaryEn": null,
+    "capturePath": null,
+    "recordSlug": "007-damage-formula"
+   },
+   {
     "id": "web:oslink-team-building-guide",
     "site": "web",
     "url": "https://www.oslink.io/blog/guide/cookierun-crumble-team-building-guide.html",
@@ -18945,6 +18984,17 @@
     "lede": "The daily dungeons (일일던전): each dungeon's boss and entry, and the decks that clear it furthest, full auto first.",
     "caveat": "Snapshot of 2026-10-07, the day before the 10-08 easing. Stages are posted screenshots and videos; ranked by stage, never by a ratio.",
     "mode": "daily_dungeon"
+   },
+   {
+    "slug": "007-damage-formula",
+    "question": "The 1.5.002 client's code fixes how a hit's damage is computed precisely enough to name every multiplier, which stats share an additive bucket and which multiply, how crit tiers, misses, element, defense and the power penalty work, and where the community's damage model is right or wrong.",
+    "status": "active",
+    "startedAt": "2026-10-10",
+    "updatedAt": "2026-10-10",
+    "seasonLabel": "Client 1.5.002",
+    "lede": "How the client computes a hit's damage: what multiplies what, and what's worth upgrading.",
+    "caveat": "Read from the 1.5.002 client's code. The server-side constants aren't in the client and still need measuring.",
+    "mode": "damage_formula"
    }
   ],
   "recordModes": [
@@ -112365,6 +112415,116 @@
     "approx": null,
     "tool": "manual",
     "sha256": "41d5f88171a18961e352c3b5bc08d763ef854dfae81ddc590039a07de6e53ef3"
+   },
+   {
+    "id": 9339,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/01-damage-formula-analysis.md",
+    "url": null,
+    "capturedAt": "2026-10-10T10:42:38+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "0711ca920e8c08d1958c69c3ac66c5f6faef2299e8bde61063fc9b3a9ffb2d00"
+   },
+   {
+    "id": 9340,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/02-buff-scaling-analysis.md",
+    "url": null,
+    "capturedAt": "2026-10-10T11:27:52+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "b3ecb02aeac7ab1da2c9343dd60ac4abb102e36ffdef2dc3a0e3b46c269d7188"
+   },
+   {
+    "id": 9341,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/milk-skill.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:39:59+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "59973e142b32e9de9f70675e055ebc8bb9442c0bbe9f8f99b13957789ad07d13"
+   },
+   {
+    "id": 9342,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/milk-stats-conquest-1.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:40:32+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "408ade384ace264098cf94f29b86c1aa514c083efff329a8d695f26bf4c50985"
+   },
+   {
+    "id": 9343,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/milk-stats-conquest-2.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:40:54+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "24d121db074b2f464b0211c9600311d416085773568048f80e36dd42d572a6b8"
+   },
+   {
+    "id": 9344,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/milk-stats-conquest-3.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:41:14+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "0fab737ac6fad9127ad0ec573cc66a7675ab681f0c9bd522a580c2572e6d2938"
+   },
+   {
+    "id": 9345,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/main-preset-power.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:43:19+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "d5b7f10b642182e4bffd5190e7492ec583378cda1a2c96d2e2a1196e8123823f"
+   },
+   {
+    "id": 9346,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/milk-stats-power-1.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:43:51+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "d0cd63fa2f42e06207d30745d17de1059190cab2180b1a6fa447197310aad895"
+   },
+   {
+    "id": 9347,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/milk-stats-power-2.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:43:56+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "c62596a78d4c65d83c07335dbb75611f3c8abb37937c6542ced155fe363e5a71"
+   },
+   {
+    "id": 9348,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/main-preset-conquest.png",
+    "url": null,
+    "capturedAt": "2026-10-10T10:45:23+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "ddd95b98cf54aa2bc4d2d20f4a22ad801905073277361ce4e1c55a8fb4ba4121"
+   },
+   {
+    "id": 9349,
+    "recordSlug": "007-damage-formula",
+    "path": "evidence/03-ingame-2026-10-10/readings.md",
+    "url": null,
+    "capturedAt": "2026-10-10T11:28:52+02:00",
+    "approx": null,
+    "tool": "manual",
+    "sha256": "e3affe191475368a986bd9a1ddabc8feb9d80fb8368efbcfd44dbeaef948b54b"
    }
   ],
   "glossary": [
@@ -176474,6 +176634,306 @@
     "topic": "entry",
     "alsoTopics": [],
     "recordSlug": "006-daily-dungeons"
+   },
+   {
+    "id": 285,
+    "title": "ATK and HP",
+    "body": "⌊base × (1 + Σ%) + Σflat⌋: every battle ATK% buff shares one pool.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 286,
+    "title": "DEF",
+    "body": "max(⌊base × (1 + Σ%) + Σflat⌋, 0): shred past 0 is wasted.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 287,
+    "title": "Crit rate, crit DMG, crit RES, boss DMG, element DMG, accuracy, avoidance",
+    "body": "base × (1 + Σ%) + Σflat, in basis points.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 288,
+    "title": "Skill amp, skill haste, accuracy %, avoidance %, focus %, resist %",
+    "body": "base + Σflat: no % multiplier on these.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 289,
+    "title": "Final DMG",
+    "body": "base + Σflat: no % multiplier.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 290,
+    "title": "DMG RES and element RES",
+    "body": "Screen: 1 − (1 − base) × Π(1 − bonus), clamped to 0–100%. Two 30% sources make 51%.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 291,
+    "title": "Knockback and airborne RES",
+    "body": "Screen, like DMG RES, clamped to 0–100%.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 292,
+    "title": "A buff's size: ⌊value × base × (1 + caster amp)⌋",
+    "body": "Base is 1 or the caster's ATK, DEF or HP. The caster's amp counts, not the receiver's; no level, crit or boss term.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 293,
+    "title": "No amp on debuffs, final DMG or lift RES lines",
+    "body": "Debuffs never take amp (hard-coded); final DMG, push/airborne RES and heal-cut lines add raw. A server list can exclude more stats.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 294,
+    "title": "Buffs are sized when the buffer casts",
+    "body": "Her stats are copied at cast. Buffs she holds then enlarge that cast; later buffs don't grow buffs already out.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 295,
+    "title": "Same buff again: replace and stack",
+    "body": "New value, fresh duration, stack +1 up to the cap; every stack takes the newest value, whoever cast it.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 296,
+    "title": "Same group: only the biggest counts",
+    "body": "Largest stack × strength wins, caster amp and ATK included; the rest switch off. Ungrouped buffs sum.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 297,
+    "title": "Debuff chance = rate × (focus ÷ resist + focus% − resist%)",
+    "body": "Caster's focus at cast, target's resist live; tenacity shortens debuffs. Amp plays no part.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "stacking",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 298,
+    "title": "Expected crit = 1 + CDR × (CR − CRES)",
+    "body": "Linear in crit rate with no cap at 100%; below 0 it is ×1.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "crit",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 299,
+    "title": "Tiers: the floor, plus a chance at one more",
+    "body": "200% crits twice every hit; 198% crits once, and a second time 98% of the time.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "crit",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 300,
+    "title": "Raise whichever of crit rate and crit DMG is lower",
+    "body": "Per equal point, crit rate wins while CDR > CR − CRES, crit DMG after. Break-even is CR − CRES = CDR, not 100%.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "crit",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 301,
+    "title": "C_def, C_inc, C_dec and the penalty tiers",
+    "body": "Server data, not in the client; each has a measurement plan.",
+    "confidence": "low",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 302,
+    "title": "Does Light gain on the Dark Piñata?",
+    "body": "Only if C_dec plus the boss's element RES is 0. Test a Light cookie against an equal Fire one.",
+    "confidence": "low",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 303,
+    "title": "Base crit DMG and the boss's DEF, RES, crit RES and avoidance",
+    "body": "All table data; none of it is in the client.",
+    "confidence": "low",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 304,
+    "title": "Each buff's values and the amp exclusion list",
+    "body": "Patch and server data, not in the client: base type, group, max stack, and which stats skip amp.",
+    "confidence": "low",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 305,
+    "title": "Passive auras, shields and damage over time",
+    "body": "When auras snapshot, and how shields and DoT scale, wasn't settled.",
+    "confidence": "low",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 306,
+    "title": "Gear A/B needs battle numbers",
+    "body": "Out of battle, swapping gear presets left Milk's sheet and header power unchanged.",
+    "confidence": "medium",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 307,
+    "title": "How gear, runes and research build base stats",
+    "body": "Managed code in the encrypted libil2cpp.so; unread.",
+    "confidence": "low",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 308,
+    "title": "Heals",
+    "body": "The heal calculation wasn't analysed.",
+    "confidence": "low",
+    "mode": "damage_formula",
+    "topic": "open_question",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 309,
+    "title": "Client 1.5.002",
+    "body": "com.devsisters.cc, Unity 6000.3.15f1, IL2CPP metadata v39, Android x86_64.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "method",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 310,
+    "title": "Cpp2IL 2022.1.0-pre-release.21",
+    "body": "Type and field layouts from global-metadata.dat.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "method",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 311,
+    "title": "Ghidra 12.1.4, headless",
+    "body": "On lib_burst_generated.so: libil2cpp.so's bodies are AppSealing-encrypted, the Burst copy isn't.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "method",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 312,
+    "title": "Functions read",
+    "body": "DamageSystem.CalculatedDamage @ 0x003f43b0; CombatBonusProperty.ApplyBonus @ 0x00464530; modifier sums @ 0x0042fed0.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "method",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 313,
+    "title": "Buff sizing read",
+    "body": "CharacterModifierManagementSystem.CollectBonusProperties @ 0x0044de70; skill spawn snapshot @ 0x00339990.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "method",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 314,
+    "title": "In game, 2026-10-10",
+    "body": "Milk's skill text and stat sheet under two gear presets, Android 1.5.002.",
+    "confidence": "high",
+    "mode": "damage_formula",
+    "topic": "method",
+    "alsoTopics": [],
+    "recordSlug": "007-damage-formula"
    }
   ],
   "rngFactors": [
@@ -177522,6 +177982,20 @@
     "event": "10-08 patch notes: EXP, dough and research stone eased; coin and rune unchanged; no stage raise.",
     "mode": "daily_dungeon",
     "recordSlug": "006-daily-dungeons"
+   },
+   {
+    "id": 125,
+    "date": "2026-10-10",
+    "event": "Client 1.5.002's damage system read from its Burst-compiled code.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 126,
+    "date": "2026-10-10",
+    "event": "How a buffer's stats size her buffs, read from the client; Milk checked in game.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
    }
   ],
   "takeaways": [
@@ -178076,6 +178550,94 @@
     "detail": null,
     "mode": "daily_dungeon",
     "recordSlug": "006-daily-dungeons"
+   },
+   {
+    "id": 70,
+    "position": 0,
+    "text": "Buckets multiply: the emptiest bucket pays the most per point.",
+    "detail": "Final DMG, skill amp, boss DMG, crit and element are separate factors; inside each, buffs add.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 71,
+    "position": 1,
+    "text": "Skill amp is one additive bucket: +1 point ≈ 1 ÷ (1 + total amp) more damage.",
+    "detail": "At 100% amp a point is +0.5%; at 122%, +0.45%. Anything past that comes from buffers' amp growing their buffs.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 72,
+    "position": 2,
+    "text": "A buffer's Skill AMP isn't dead: it grows every buff she gives.",
+    "detail": "+1 point lifts each amp-scaled buff by 1 ÷ (1 + her amp). Milk keeps her Skill AMP line.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 73,
+    "position": 3,
+    "text": "Buff the buffer before she casts: buffs are sized at cast.",
+    "detail": "A +69% amp beam on Milk (75.8% amp) grows her next buff ~39%, unless ATK skips amp. Later buffs don't count.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 74,
+    "position": 4,
+    "text": "Amp does nothing for debuffs or final DMG buffs.",
+    "detail": "Debuffs, final DMG and push/airborne RES lines ignore the caster's amp; those buffers gain from other lines.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 75,
+    "position": 5,
+    "text": "Same-group buffs don't add: only the biggest counts.",
+    "detail": "Largest stack × strength wins on each cookie; check overlap before pairing buffers.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 76,
+    "position": 6,
+    "text": "Boss DMG is its own bucket: full value on bosses, nothing on adds.",
+    "detail": "+Δ is worth Δ ÷ (1 + Boss), whatever skill amp or crit hold.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 77,
+    "position": 7,
+    "text": "Crit: raise whichever of crit rate and crit DMG is lower.",
+    "detail": "Expected crit = 1 + CDR × (CR − CRES), linear past 100%; break-even at CR − CRES = CDR.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 78,
+    "position": 8,
+    "text": "Light on the Dark Piñata hinges on a server constant: test it.",
+    "detail": "Dark beats Light too; if C_dec + the boss's element RES > 0, Light deals less than a neutral cookie.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 79,
+    "position": 9,
+    "text": "Outside Conquest, low team power cuts your damage; Conquest has no penalty.",
+    "detail": "Arena, stages, the Rift and daily dungeons multiply your damage by a power tier; Guild Conquest doesn't.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 80,
+    "position": 10,
+    "text": "Accuracy only counts against targets with Avoidance.",
+    "detail": "With 0 Avoidance no miss roll happens.",
+    "mode": "damage_formula",
+    "recordSlug": "007-damage-formula"
    }
   ],
   "recommendations": [
@@ -178167,6 +178729,18 @@
      "Push for first-clear rewards, then sweep."
     ],
     "recordSlug": "006-daily-dungeons"
+   },
+   {
+    "id": 7,
+    "summary": "Feed the emptiest bucket: skill amp, boss DMG, final DMG and crit each multiply damage.",
+    "changes": [
+     "Weigh a skill amp point at 1 ÷ (1 + your total amp).",
+     "Keep Skill AMP on buffers: it grows every buff they give.",
+     "Crit: raise whichever of crit rate and crit DMG is lower.",
+     "Don't pick weapon lines by crit-rate digits.",
+     "Test Light against Fire on the Piñata before trusting its weakness."
+    ],
+    "recordSlug": "007-damage-formula"
    }
   ],
   "fightEvents": [
@@ -196045,6 +196619,631 @@
     "gain": "a power preset shows hundreds of millions more than the Conquest preset (~900M on one account, dc:84655); its effect on reach isn't posted, and at the 15% line it buys nothing",
     "reach": "not derived",
     "recordSlug": "005-team-power-growth"
+   }
+  ],
+  "formulaSteps": [
+   {
+    "id": 1,
+    "slug": "miss",
+    "position": 0,
+    "phase": "gate",
+    "name": "Miss roll",
+    "expression": "hit = clamp(Acc% − Avoid%_t + Acc ÷ Avoid_t, 0, 1)",
+    "feeds": [
+     "Accuracy",
+     "Accuracy %",
+     "Avoidance (target)",
+     "Avoidance % (target)"
+    ],
+    "stacking": "additive",
+    "appliesTo": "Only when the target's Avoidance is above 0",
+    "confidence": "read",
+    "why": "No Avoidance on the target, no roll: Accuracy is dead weight there.",
+    "detail": "A draw at or above the chance is a Miss and the hit deals nothing. Accuracy and Avoidance take battle % and flat bonuses; Accuracy % and Avoidance % take flat ones only.",
+    "codeRef": "DamageSystem.CalculatedDamage @ 0x003f43b0",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 2,
+    "slug": "atk",
+    "position": 1,
+    "phase": "factor",
+    "name": "ATK",
+    "expression": "ATK",
+    "feeds": [
+     "ATK",
+     "ATK %"
+    ],
+    "stacking": "additive",
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "Every battle ATK% buff shares one pool; a flat base line is scaled by it.",
+    "detail": "Battle ATK = ⌊base × (1 + Σ ATK%) + Σ flat ATK⌋. Gear, runes and research build the base in managed code the client encrypts, so that part isn't read.",
+    "codeRef": "CombatProperty._attackPoint (+0x18); CombatBonusProperty.ApplyBonus @ 0x00464530",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 3,
+    "slug": "skill-coefficient",
+    "position": 2,
+    "phase": "factor",
+    "name": "Skill coefficient",
+    "expression": "DamageMultiplier",
+    "feeds": [
+     "Skill % of ATK"
+    ],
+    "stacking": "fixed",
+    "appliesTo": null,
+    "confidence": "inferred",
+    "why": "The hit's % of ATK from skill data: 155.2% is ×1.552.",
+    "detail": "A plain float on each hit. That it is the skill coefficient is inferred from its name and place; the code that writes it wasn't read.",
+    "codeRef": "DamageData.DamageMultiplier (+0x118)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 4,
+    "slug": "final-damage",
+    "position": 3,
+    "phase": "factor",
+    "name": "Final DMG",
+    "expression": "1 + FDR",
+    "feeds": [
+     "Final DMG"
+    ],
+    "stacking": "additive",
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "Its own bucket: +x% is worth x ÷ (1 + FDR) of damage.",
+    "detail": "Battle bonuses add flat to the base rate; no % multiplier applies to it. A final DMG buff is the same size whoever gives it: no caster amp or ATK term.",
+    "codeRef": "CombatProperty._finalDamageRate (+0xD0)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 5,
+    "slug": "defense",
+    "position": 4,
+    "phase": "factor",
+    "name": "Enemy DEF",
+    "expression": "1 ÷ (1 + ln(1 + DEF_t ÷ C_def))",
+    "feeds": [
+     "DEF (target)",
+     "DEF shred"
+    ],
+    "stacking": "additive",
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "DEF never zeroes damage: at DEF = C_def a hit keeps 59%.",
+    "detail": "DEF is floored at 0 first. The curve keeps 42% at 3 × C_def and 29% at 10 × C_def, so shred pays most against low-DEF targets. C_def is server data.",
+    "codeRef": "CombatProperty._defensePoint (+0x20); DamageSystem+0x90",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 6,
+    "slug": "element",
+    "position": 5,
+    "phase": "factor",
+    "name": "Element",
+    "expression": "adv: 1 + EDB + C_inc · res: 1 ÷ (1 + EDR_t + C_dec)",
+    "feeds": [
+     "Element DMG",
+     "Element DMG RES (target)"
+    ],
+    "stacking": "additive",
+    "appliesTo": "Advantage or resistance only; a neutral hit is ×1",
+    "confidence": "read",
+    "why": "Light vs Dark: the reduction wins whenever C_dec plus the boss's element RES is above 0.",
+    "detail": "Fire beats Grass, Water beats Fire, Grass beats Water; Light and Dark beat each other, so a Light hit on Dark sets both and resistance wins. Element DMG adds; the target's element RES stacks as a screen.",
+    "codeRef": "CombatProperty._elementDamageBonus (+0x80), _elementDamageDecrease (+0x88); DamageSystem+0x98, +0xA0",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 7,
+    "slug": "skill-amp",
+    "position": 6,
+    "phase": "factor",
+    "name": "Skill amp",
+    "expression": "1 + Amp",
+    "feeds": [
+     "Skill AMP"
+    ],
+    "stacking": "additive",
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "One pool: +1 point is worth 1 ÷ (1 + total amp) of damage.",
+    "detail": "Applies to every hit the damage system computes, not only skill hits. At 100% amp a point is +0.5% damage; at 122%, about +0.45%. A caster's amp also scales the buffs she gives, sized when she casts; debuffs and final DMG lines excepted.",
+    "codeRef": "CombatProperty._abilityAmplify (+0x68); CharacterModifierManagementSystem.CollectBonusProperties @ 0x0044de70",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 8,
+    "slug": "damage-reduction",
+    "position": 7,
+    "phase": "factor",
+    "name": "Enemy DMG RES",
+    "expression": "1 − DR_t",
+    "feeds": [
+     "DMG RES (target)"
+    ],
+    "stacking": "screen",
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "Reduction stacks as a screen: two 30% sources make 51%, not 60%.",
+    "detail": "Battle DR = 1 − (1 − base) × Π(1 − bonus), clamped to 0–100% when buffs apply; the damage step applies it as is.",
+    "codeRef": "CombatProperty._damageDecrease (+0x60)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 9,
+    "slug": "boss-damage",
+    "position": 8,
+    "phase": "factor",
+    "name": "Boss DMG",
+    "expression": "1 + Boss",
+    "feeds": [
+     "Boss DMG"
+    ],
+    "stacking": "additive",
+    "appliesTo": "Boss targets only",
+    "confidence": "read",
+    "why": "Its own bucket: worth Δ ÷ (1 + Boss) on bosses, nothing on adds.",
+    "detail": "Applied when the target carries the boss tag; every other target takes ×1.",
+    "codeRef": "CombatProperty._bossDamageRate (+0xB0)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 10,
+    "slug": "crit",
+    "position": 9,
+    "phase": "factor",
+    "name": "Crit",
+    "expression": "1 + CDR × n · E = 1 + CDR × max(0, CR − CRES_t)",
+    "feeds": [
+     "CRIT%",
+     "CRIT DMG",
+     "CRIT RES (target)"
+    ],
+    "stacking": "additive",
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "Linear past 100%: every 100% of crit rate is one more guaranteed tier.",
+    "detail": "n = ⌊e⌋ tiers plus one more with probability e − ⌊e⌋, where e = CR − CRES_t. Per equal point, crit rate wins while CDR > e, crit DMG after.",
+    "codeRef": "CombatProperty._criticalRate (+0x28), _criticalDamageRate (+0x30), _criticalResist (+0x38)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 11,
+    "slug": "power-penalty",
+    "position": 10,
+    "phase": "factor",
+    "name": "Power penalty",
+    "expression": "Penalty",
+    "feeds": [
+     "Team power vs recommended"
+    ],
+    "stacking": "fixed",
+    "appliesTo": "Hits on the Enemy side in Arena, stages, the Rift and daily dungeons; not Guild Conquest",
+    "confidence": "inferred",
+    "why": "Under recommended power you lose damage outside Conquest; Conquest has no penalty hook.",
+    "detail": "A server tier table keyed by your power ÷ recommended (PvE) or enemy (PvP) power sets it. The side check is read; which modes wire it is inferred from the battle controllers.",
+    "codeRef": "DamageSystem+0xA8 (_combatPowerPenaltyMultiplier)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 12,
+    "slug": "floor",
+    "position": 11,
+    "phase": "result",
+    "name": "Floor",
+    "expression": "max(0, ⌊product⌋)",
+    "feeds": [],
+    "stacking": null,
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "No random spread: only the miss and crit-tier rolls vary a hit.",
+    "detail": "Each hit's rolls are seeded from attacker and target, so damage is deterministic given the seeds.",
+    "codeRef": "DamageSystem.CalculatedDamage @ 0x003f43b0",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 13,
+    "slug": "shields",
+    "position": 12,
+    "phase": "result",
+    "name": "Shields, then HP",
+    "expression": "HP −= dmg − shield absorbed",
+    "feeds": [
+     "Shield"
+    ],
+    "stacking": null,
+    "appliesTo": null,
+    "confidence": "read",
+    "why": "Shields absorb first; an invincible target shows the number but loses no HP.",
+    "detail": "Shields absorb in buffer order; the rest comes off HP, floored at 0. A map prop loses 1 HP per hit.",
+    "codeRef": "DamageSystem.CalculatedDamage @ 0x003f43b0",
+    "recordSlug": "007-damage-formula"
+   }
+  ],
+  "formulaConstants": [
+   {
+    "id": 1,
+    "slug": "c-def",
+    "position": 0,
+    "step": "defense",
+    "symbol": "C_def",
+    "field": "_combatConstantDefense",
+    "holder": "DamageSystem+0x90",
+    "labelKr": "방어 상수: 피해 비율 계산",
+    "meaning": "The target DEF at which a hit keeps 59%.",
+    "value": null,
+    "candidate": "500 (crumblehub's default)",
+    "measure": "Hit one target at two DEF values, all else equal: the damage ratio fixes C_def.",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 2,
+    "slug": "c-inc",
+    "position": 1,
+    "step": "element",
+    "symbol": "C_inc",
+    "field": "_combatConstantBaseElementDamageIncrease",
+    "holder": "DamageSystem+0x98",
+    "labelKr": "공격자 속성 피해 증가 기본값",
+    "meaning": "The base bonus on every element advantage.",
+    "value": null,
+    "candidate": "15% (crumblehub's default)",
+    "measure": "One cookie on an advantaged and a neutral target with equal DEF and RES: ratio − 1 − its element DMG.",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 3,
+    "slug": "c-dec",
+    "position": 2,
+    "step": "element",
+    "symbol": "C_dec",
+    "field": "_combatConstantBaseElementDamageDecrease",
+    "holder": "DamageSystem+0xA0",
+    "labelKr": "피격자 속성 피해 감소 기본값",
+    "meaning": "The base reduction when the target's element beats yours.",
+    "value": null,
+    "candidate": "0 (crumblehub's default)",
+    "measure": "A Light and a Fire cookie with equal stats on the Dark Piñata: Light lower means C_dec + the boss's element RES > 0.",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 4,
+    "slug": "power-penalty",
+    "position": 3,
+    "step": "power-penalty",
+    "symbol": "Penalty",
+    "field": "_combatPowerPenaltyMultiplier",
+    "holder": "DamageSystem+0xA8, from GameSettingData._combatPowerPenaltyDamageMultiplier",
+    "labelKr": null,
+    "meaning": "Your outgoing damage multiplier from the power tier table.",
+    "value": null,
+    "candidate": "1% to 120% by power ratio (record 003's brackets)",
+    "measure": "Record 003's stage power brackets measure it: damage kept per power ratio.",
+    "recordSlug": "007-damage-formula"
+   }
+  ],
+  "formulaClaims": [
+   {
+    "id": 1,
+    "slug": "crit-tiers",
+    "position": 0,
+    "claim": "Past 100%, crit rate rolls extra tiers: 200% crits twice, 198% once plus 98% for a second.",
+    "code": "⌊e⌋ guaranteed tiers, plus one more with probability e − ⌊e⌋.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Crit tiers",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 2,
+    "slug": "crit-tier-size",
+    "position": 1,
+    "claim": "Each crit tier adds 50% plus bonus crit DMG.",
+    "code": "Each tier adds the whole crit DMG stat; a 50% base would be data, not code.",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Crit tiers",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 3,
+    "slug": "crit-over-100",
+    "position": 2,
+    "claim": "Past 100% crit rate, +10% crit DMG beats +10% crit rate.",
+    "code": "Expected crit is 1 + CDR × e: crit DMG wins only while e > CDR; 100% isn't the line.",
+    "verdict": "partly",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Crit above 100%",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 4,
+    "slug": "weapon-digits",
+    "position": 3,
+    "claim": "Weapon line: take crit rate when the rate's last two digits are 30 or more, else crit DMG.",
+    "code": "Expected damage is linear in crit rate; the digits change the spread, not the mean.",
+    "verdict": "disagrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Weapon: crit rate or crit dmg",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 5,
+    "slug": "boss-crit-res",
+    "position": 4,
+    "claim": "The raid boss has no crit resistance.",
+    "code": "Crit RES subtracts straight from crit rate; the boss's value is data.",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Crit above 100%",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 6,
+    "slug": "accuracy-boss",
+    "position": 5,
+    "claim": "Accuracy is useless on the Guild Conquest boss.",
+    "code": "No miss roll at all when the target's Avoidance is 0.",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Boss",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 7,
+    "slug": "def-floor",
+    "position": 6,
+    "claim": "Enemy DEF floors at 0.",
+    "code": "DEF is clamped at 0 when buffs apply and again in the damage step.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Skill amp nerf (8/27)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 8,
+    "slug": "leak-amp",
+    "position": 7,
+    "claim": "Leak: skill amp +1% ≈ +2% damage.",
+    "code": "One cookie's damage step gives at most +1% ÷ (1 + amp), but buffers' amp also grows their buffs; the team total needs skill data.",
+    "verdict": "unresolved",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Stat weights on the Season 6 #1's account",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 9,
+    "slug": "calculator-sample",
+    "position": 8,
+    "claim": "His calculator: skill amp +1% ≈ +0.45%, crit DMG +1% ≈ +0.38%.",
+    "code": "0.01 ÷ (1 + amp) fits amp ≈ 122%; the crit figure fits e ÷ (1 + CDR × e).",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Stat weights on the Season 6 #1's account",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 10,
+    "slug": "leak-crit",
+    "position": 9,
+    "claim": "Leak: crit DMG +15% ≈ +4%, crit rate +15% ≈ +3%.",
+    "code": "The two gains' ratio is e ÷ CDR: about 1.3 on his account.",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Stat weights on the Season 6 #1's account",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 11,
+    "slug": "leak-atk",
+    "position": 10,
+    "claim": "Leak: ATK +650 ≈ +2.5% damage.",
+    "code": "ATK is linear, a flat base line scaled by battle ATK%; needs his base ATK to check.",
+    "verdict": "unresolved",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Stat weights on the Season 6 #1's account",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 12,
+    "slug": "light-vs-dark",
+    "position": 11,
+    "claim": "The Piñata is Dark, weak to Light.",
+    "code": "Dark also beats Light; resistance wins when C_dec + the boss's element RES > 0.",
+    "verdict": "unresolved",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Piñata's weakness",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 13,
+    "slug": "boss-dr-ramp",
+    "position": 12,
+    "claim": "The boss's damage reduction ramps 10/30/50/70/90%.",
+    "code": "Damage × (1 − DR), DR stacking as a screen: early hits are worth the most.",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Damage reduction ramps every 12 s",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 14,
+    "slug": "lift-res-stacking",
+    "position": 13,
+    "claim": "Lift resistance stacks as base + extra − base × extra.",
+    "code": "Knockback and airborne RES stack as a screen, clamped to 0–100%.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Lift resistance stacking",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 15,
+    "slug": "crit-buffs-no-stack",
+    "position": 14,
+    "claim": "Macaron's and Chardonnay's crit buffs don't stack.",
+    "code": "Within one group only the largest stack × strength counts; whether the two share a group is data.",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Crit buffs don't stack",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 16,
+    "slug": "cheesecake-over-milk",
+    "position": 15,
+    "claim": "Cheesecake's ATK buff overrides Milk's on the same cookie: 228K kept over Milk's 483K.",
+    "code": "A group keeps the larger stack × strength, not a fixed order. Fits only if Milk's stacks were low then, or they share an ID.",
+    "verdict": "partly",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Cheesecake's buff overrides Milk's",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 17,
+    "slug": "cheesecake-then-milk",
+    "position": 16,
+    "claim": "Best case: Cheesecake buffs Milk first, and Milk's buff then gives 667K.",
+    "code": "Milk's buff is sized from her ATK when she casts, buffs she holds included.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Cheesecake's buff overrides Milk's",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 18,
+    "slug": "amp-exclusion",
+    "position": 17,
+    "claim": "Skill amp no longer boosts stat-reduction debuffs.",
+    "code": "Debuffs never take the caster's amp: a hard-coded category check. A server list can exclude more stats.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Skill amp nerf (8/27)",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 19,
+    "slug": "debuff-chance",
+    "position": 18,
+    "claim": "Debuff chance = base × (focus ÷ resist + focus% − resist%).",
+    "code": "Exactly this for debuffs and crowd control; no resist counts as 1, and tenacity shortens them.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Debuff application chance",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 20,
+    "slug": "buff-amp-scaling",
+    "position": 19,
+    "claim": "Buffs scale with the caster's skill amp: ⌊base × value × (1 + amp)⌋.",
+    "code": "⌊value × base × (1 + caster amp)⌋, computed once when the buff lands; not for debuffs or excluded stats.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Buffs scale with the caster's skill amp",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 21,
+    "slug": "share-of-stat-buff",
+    "position": 20,
+    "claim": "A buff given as a share of the caster's ATK or HP scales with that stat.",
+    "code": "The base is the caster's ATK, max(DEF, 0) or HP, taken when she casts.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "A share-of-stat buff scales with that stat",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 22,
+    "slug": "chardonnay-amp",
+    "position": 21,
+    "claim": "Chardonnay's crit buff grows with skill amp; only her Push RES doesn't.",
+    "code": "Crit lines take the caster's amp unless excluded; push and airborne RES lines add raw.",
+    "verdict": "agrees",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Chardonnay's crit buff scales with skill amp",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 23,
+    "slug": "beams-on-buffers",
+    "position": 22,
+    "claim": "A Pomegranate beam on a buffer adds more damage than another dealer would.",
+    "code": "Amp a buffer holds when she casts scales every amp-scaled buff of that cast; the size is skill data.",
+    "verdict": "consistent",
+    "refRecord": "001-guild-conquest-meta",
+    "refTitle": "Six recipients, six beams",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 24,
+    "slug": "stat-layering",
+    "position": 23,
+    "claim": "Sugar Pocket: battle stats are ⌊base × (1 + Σ%) + Σflat⌋.",
+    "code": "ApplyBonus does exactly this for HP, ATK and DEF.",
+    "verdict": "agrees",
+    "refRecord": null,
+    "refTitle": null,
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 25,
+    "slug": "gate-last",
+    "position": 24,
+    "claim": "The power gate multiplies final damage, last.",
+    "code": "The penalty is the last factor before the floor.",
+    "verdict": "agrees",
+    "refRecord": "003-stage-pushing-meta",
+    "refTitle": "The power gate is a step function on final damage",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 26,
+    "slug": "gate-yours-only",
+    "position": 25,
+    "claim": "The power gate cuts only your team's damage, not the boss's.",
+    "code": "The penalty applies only to hits on the Enemy side.",
+    "verdict": "agrees",
+    "refRecord": "003-stage-pushing-meta",
+    "refTitle": "What the gate does not touch",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 27,
+    "slug": "gate-other-content",
+    "position": 26,
+    "claim": "The same power gate covers the daily dungeons and the Rift.",
+    "code": "The Rift and daily dungeon controllers hold a penalty; Guild Conquest's holds none.",
+    "verdict": "agrees",
+    "refRecord": "003-stage-pushing-meta",
+    "refTitle": "The same table gates other content",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 28,
+    "slug": "pvp-fixed",
+    "position": 27,
+    "claim": "PvP's power correction is fixed at 100%.",
+    "code": "Arena controllers hold a PvP penalty from a server table the client doesn't carry.",
+    "verdict": "unresolved",
+    "refRecord": "003-stage-pushing-meta",
+    "refTitle": "What the gate does not touch",
+    "recordSlug": "007-damage-formula"
+   },
+   {
+    "id": 29,
+    "slug": "crumblehub-model",
+    "position": 28,
+    "claim": "crumblehub's damage code: these factors, in this order, with the element override.",
+    "code": "Same factors, same order, same override, crit tiers and hit chance; its constants are unconfirmed defaults.",
+    "verdict": "agrees",
+    "refRecord": null,
+    "refTitle": null,
+    "recordSlug": "007-damage-formula"
    }
   ],
   "citations": [
@@ -229965,6 +231164,900 @@
     "entity": "daily_dungeon_clear",
     "entityId": "21",
     "sourceId": "nv:47793"
+   },
+   {
+    "id": 5654,
+    "entity": "recommendation",
+    "entityId": "7",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5655,
+    "entity": "recommendation",
+    "entityId": "7",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5656,
+    "entity": "mechanic",
+    "entityId": "285",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5657,
+    "entity": "mechanic",
+    "entityId": "286",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5658,
+    "entity": "mechanic",
+    "entityId": "287",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5659,
+    "entity": "mechanic",
+    "entityId": "288",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5660,
+    "entity": "mechanic",
+    "entityId": "289",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5661,
+    "entity": "mechanic",
+    "entityId": "290",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5662,
+    "entity": "mechanic",
+    "entityId": "291",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5663,
+    "entity": "mechanic",
+    "entityId": "291",
+    "sourceId": "dc:52401"
+   },
+   {
+    "id": 5664,
+    "entity": "mechanic",
+    "entityId": "292",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5665,
+    "entity": "mechanic",
+    "entityId": "292",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 5666,
+    "entity": "mechanic",
+    "entityId": "293",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5667,
+    "entity": "mechanic",
+    "entityId": "293",
+    "sourceId": "dc:46452"
+   },
+   {
+    "id": 5668,
+    "entity": "mechanic",
+    "entityId": "294",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5669,
+    "entity": "mechanic",
+    "entityId": "295",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5670,
+    "entity": "mechanic",
+    "entityId": "296",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5671,
+    "entity": "mechanic",
+    "entityId": "296",
+    "sourceId": "dc:83118"
+   },
+   {
+    "id": 5672,
+    "entity": "mechanic",
+    "entityId": "297",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5673,
+    "entity": "mechanic",
+    "entityId": "297",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 5674,
+    "entity": "mechanic",
+    "entityId": "298",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5675,
+    "entity": "mechanic",
+    "entityId": "299",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5676,
+    "entity": "mechanic",
+    "entityId": "299",
+    "sourceId": "dc:31349"
+   },
+   {
+    "id": 5677,
+    "entity": "mechanic",
+    "entityId": "300",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5678,
+    "entity": "mechanic",
+    "entityId": "301",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5679,
+    "entity": "mechanic",
+    "entityId": "302",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5680,
+    "entity": "mechanic",
+    "entityId": "303",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5681,
+    "entity": "mechanic",
+    "entityId": "304",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5682,
+    "entity": "mechanic",
+    "entityId": "305",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5683,
+    "entity": "mechanic",
+    "entityId": "306",
+    "sourceId": "web:ingame-2026-10-10-milk"
+   },
+   {
+    "id": 5684,
+    "entity": "mechanic",
+    "entityId": "307",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5685,
+    "entity": "mechanic",
+    "entityId": "308",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5686,
+    "entity": "mechanic",
+    "entityId": "309",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5687,
+    "entity": "mechanic",
+    "entityId": "310",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5688,
+    "entity": "mechanic",
+    "entityId": "311",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5689,
+    "entity": "mechanic",
+    "entityId": "312",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5690,
+    "entity": "mechanic",
+    "entityId": "313",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5691,
+    "entity": "mechanic",
+    "entityId": "314",
+    "sourceId": "web:ingame-2026-10-10-milk"
+   },
+   {
+    "id": 5692,
+    "entity": "timeline_event",
+    "entityId": "125",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5693,
+    "entity": "timeline_event",
+    "entityId": "126",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5694,
+    "entity": "timeline_event",
+    "entityId": "126",
+    "sourceId": "web:ingame-2026-10-10-milk"
+   },
+   {
+    "id": 5695,
+    "entity": "takeaway",
+    "entityId": "70",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5696,
+    "entity": "takeaway",
+    "entityId": "71",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5697,
+    "entity": "takeaway",
+    "entityId": "71",
+    "sourceId": "dc:82295"
+   },
+   {
+    "id": 5698,
+    "entity": "takeaway",
+    "entityId": "72",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5699,
+    "entity": "takeaway",
+    "entityId": "72",
+    "sourceId": "web:ingame-2026-10-10-milk"
+   },
+   {
+    "id": 5700,
+    "entity": "takeaway",
+    "entityId": "73",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5701,
+    "entity": "takeaway",
+    "entityId": "74",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5702,
+    "entity": "takeaway",
+    "entityId": "74",
+    "sourceId": "dc:46452"
+   },
+   {
+    "id": 5703,
+    "entity": "takeaway",
+    "entityId": "75",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5704,
+    "entity": "takeaway",
+    "entityId": "75",
+    "sourceId": "dc:83118"
+   },
+   {
+    "id": 5705,
+    "entity": "takeaway",
+    "entityId": "76",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5706,
+    "entity": "takeaway",
+    "entityId": "77",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5707,
+    "entity": "takeaway",
+    "entityId": "78",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5708,
+    "entity": "takeaway",
+    "entityId": "78",
+    "sourceId": "dc:48412"
+   },
+   {
+    "id": 5709,
+    "entity": "takeaway",
+    "entityId": "79",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5710,
+    "entity": "takeaway",
+    "entityId": "79",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 5711,
+    "entity": "takeaway",
+    "entityId": "80",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5712,
+    "entity": "formula_step",
+    "entityId": "1",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5713,
+    "entity": "formula_step",
+    "entityId": "2",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5714,
+    "entity": "formula_step",
+    "entityId": "3",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5715,
+    "entity": "formula_step",
+    "entityId": "4",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5716,
+    "entity": "formula_step",
+    "entityId": "4",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5717,
+    "entity": "formula_step",
+    "entityId": "5",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5718,
+    "entity": "formula_step",
+    "entityId": "6",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5719,
+    "entity": "formula_step",
+    "entityId": "7",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5720,
+    "entity": "formula_step",
+    "entityId": "7",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5721,
+    "entity": "formula_step",
+    "entityId": "8",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5722,
+    "entity": "formula_step",
+    "entityId": "9",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5723,
+    "entity": "formula_step",
+    "entityId": "10",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5724,
+    "entity": "formula_step",
+    "entityId": "11",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5725,
+    "entity": "formula_step",
+    "entityId": "11",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 5726,
+    "entity": "formula_step",
+    "entityId": "12",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5727,
+    "entity": "formula_step",
+    "entityId": "13",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5728,
+    "entity": "formula_constant",
+    "entityId": "1",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5729,
+    "entity": "formula_constant",
+    "entityId": "1",
+    "sourceId": "web:crumblehub-formulas"
+   },
+   {
+    "id": 5730,
+    "entity": "formula_constant",
+    "entityId": "2",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5731,
+    "entity": "formula_constant",
+    "entityId": "2",
+    "sourceId": "web:crumblehub-formulas"
+   },
+   {
+    "id": 5732,
+    "entity": "formula_constant",
+    "entityId": "3",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5733,
+    "entity": "formula_constant",
+    "entityId": "3",
+    "sourceId": "web:crumblehub-formulas"
+   },
+   {
+    "id": 5734,
+    "entity": "formula_constant",
+    "entityId": "4",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5735,
+    "entity": "formula_constant",
+    "entityId": "4",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 5736,
+    "entity": "formula_claim",
+    "entityId": "1",
+    "sourceId": "dc:31349"
+   },
+   {
+    "id": 5737,
+    "entity": "formula_claim",
+    "entityId": "1",
+    "sourceId": "dc:75589"
+   },
+   {
+    "id": 5738,
+    "entity": "formula_claim",
+    "entityId": "1",
+    "sourceId": "dc:75854"
+   },
+   {
+    "id": 5739,
+    "entity": "formula_claim",
+    "entityId": "1",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5740,
+    "entity": "formula_claim",
+    "entityId": "2",
+    "sourceId": "dc:31349"
+   },
+   {
+    "id": 5741,
+    "entity": "formula_claim",
+    "entityId": "2",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5742,
+    "entity": "formula_claim",
+    "entityId": "3",
+    "sourceId": "dc:31349"
+   },
+   {
+    "id": 5743,
+    "entity": "formula_claim",
+    "entityId": "3",
+    "sourceId": "dc:75589"
+   },
+   {
+    "id": 5744,
+    "entity": "formula_claim",
+    "entityId": "3",
+    "sourceId": "dc:75854"
+   },
+   {
+    "id": 5745,
+    "entity": "formula_claim",
+    "entityId": "3",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5746,
+    "entity": "formula_claim",
+    "entityId": "4",
+    "sourceId": "dc:76333"
+   },
+   {
+    "id": 5747,
+    "entity": "formula_claim",
+    "entityId": "4",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5748,
+    "entity": "formula_claim",
+    "entityId": "5",
+    "sourceId": "dc:31349"
+   },
+   {
+    "id": 5749,
+    "entity": "formula_claim",
+    "entityId": "5",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5750,
+    "entity": "formula_claim",
+    "entityId": "6",
+    "sourceId": "dc:48412"
+   },
+   {
+    "id": 5751,
+    "entity": "formula_claim",
+    "entityId": "6",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5752,
+    "entity": "formula_claim",
+    "entityId": "7",
+    "sourceId": "dc:46452"
+   },
+   {
+    "id": 5753,
+    "entity": "formula_claim",
+    "entityId": "7",
+    "sourceId": "dc:71135"
+   },
+   {
+    "id": 5754,
+    "entity": "formula_claim",
+    "entityId": "7",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5755,
+    "entity": "formula_claim",
+    "entityId": "8",
+    "sourceId": "dc:82295"
+   },
+   {
+    "id": 5756,
+    "entity": "formula_claim",
+    "entityId": "8",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5757,
+    "entity": "formula_claim",
+    "entityId": "8",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5758,
+    "entity": "formula_claim",
+    "entityId": "9",
+    "sourceId": "dc:82457"
+   },
+   {
+    "id": 5759,
+    "entity": "formula_claim",
+    "entityId": "9",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5760,
+    "entity": "formula_claim",
+    "entityId": "10",
+    "sourceId": "dc:82295"
+   },
+   {
+    "id": 5761,
+    "entity": "formula_claim",
+    "entityId": "10",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5762,
+    "entity": "formula_claim",
+    "entityId": "11",
+    "sourceId": "dc:82295"
+   },
+   {
+    "id": 5763,
+    "entity": "formula_claim",
+    "entityId": "11",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5764,
+    "entity": "formula_claim",
+    "entityId": "12",
+    "sourceId": "dc:48412"
+   },
+   {
+    "id": 5765,
+    "entity": "formula_claim",
+    "entityId": "12",
+    "sourceId": "web:25737"
+   },
+   {
+    "id": 5766,
+    "entity": "formula_claim",
+    "entityId": "12",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5767,
+    "entity": "formula_claim",
+    "entityId": "13",
+    "sourceId": "dc:81844"
+   },
+   {
+    "id": 5768,
+    "entity": "formula_claim",
+    "entityId": "13",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5769,
+    "entity": "formula_claim",
+    "entityId": "14",
+    "sourceId": "dc:52401"
+   },
+   {
+    "id": 5770,
+    "entity": "formula_claim",
+    "entityId": "14",
+    "sourceId": "dc:75400"
+   },
+   {
+    "id": 5771,
+    "entity": "formula_claim",
+    "entityId": "14",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5772,
+    "entity": "formula_claim",
+    "entityId": "15",
+    "sourceId": "dc:83118"
+   },
+   {
+    "id": 5773,
+    "entity": "formula_claim",
+    "entityId": "15",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5774,
+    "entity": "formula_claim",
+    "entityId": "16",
+    "sourceId": "dc:55485"
+   },
+   {
+    "id": 5775,
+    "entity": "formula_claim",
+    "entityId": "16",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5776,
+    "entity": "formula_claim",
+    "entityId": "17",
+    "sourceId": "dc:55485"
+   },
+   {
+    "id": 5777,
+    "entity": "formula_claim",
+    "entityId": "17",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5778,
+    "entity": "formula_claim",
+    "entityId": "18",
+    "sourceId": "dc:46452"
+   },
+   {
+    "id": 5779,
+    "entity": "formula_claim",
+    "entityId": "18",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5780,
+    "entity": "formula_claim",
+    "entityId": "19",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 5781,
+    "entity": "formula_claim",
+    "entityId": "19",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5782,
+    "entity": "formula_claim",
+    "entityId": "20",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 5783,
+    "entity": "formula_claim",
+    "entityId": "20",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5784,
+    "entity": "formula_claim",
+    "entityId": "21",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 5785,
+    "entity": "formula_claim",
+    "entityId": "21",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5786,
+    "entity": "formula_claim",
+    "entityId": "22",
+    "sourceId": "dc:83255"
+   },
+   {
+    "id": 5787,
+    "entity": "formula_claim",
+    "entityId": "22",
+    "sourceId": "dc:83221"
+   },
+   {
+    "id": 5788,
+    "entity": "formula_claim",
+    "entityId": "22",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5789,
+    "entity": "formula_claim",
+    "entityId": "23",
+    "sourceId": "dc:84290"
+   },
+   {
+    "id": 5790,
+    "entity": "formula_claim",
+    "entityId": "23",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5791,
+    "entity": "formula_claim",
+    "entityId": "24",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
+   },
+   {
+    "id": 5792,
+    "entity": "formula_claim",
+    "entityId": "24",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5793,
+    "entity": "formula_claim",
+    "entityId": "25",
+    "sourceId": "web:crumblehub-formulas"
+   },
+   {
+    "id": 5794,
+    "entity": "formula_claim",
+    "entityId": "25",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5795,
+    "entity": "formula_claim",
+    "entityId": "26",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 5796,
+    "entity": "formula_claim",
+    "entityId": "26",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5797,
+    "entity": "formula_claim",
+    "entityId": "27",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 5798,
+    "entity": "formula_claim",
+    "entityId": "27",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5799,
+    "entity": "formula_claim",
+    "entityId": "28",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 5800,
+    "entity": "formula_claim",
+    "entityId": "28",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5801,
+    "entity": "formula_claim",
+    "entityId": "29",
+    "sourceId": "web:crumblehub-formulas"
+   },
+   {
+    "id": 5802,
+    "entity": "formula_claim",
+    "entityId": "29",
+    "sourceId": "web:client-1.5.002-damage-system"
    }
   ],
   "factClaims": [
