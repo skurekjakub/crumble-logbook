@@ -5321,7 +5321,10 @@
         "kr": "바삭튼튼 소아과 의사 우유맛 쿠키",
         "resourceKey": "cookie4019"
       },
-      "matchesDeck": "chardonnay",
+      "matchesDeck": {
+        "record": "001-guild-conquest-meta",
+        "id": "chardonnay"
+      },
       "note": "Read while the account was pushing main stages: Pinot and Dark Choco were Lv.118, and the user resets them before running the Piñata.",
       "rows": [
         [
@@ -6244,7 +6247,6 @@
       "playerRank": 12,
       "guildRank": 1,
       "seasonState": "Season 7, ends in 1d 20h56m from 11:25",
-      "macroRuns": "403 runs logged by the retry loop to 06:28",
       "screens": [
         "guild-conquest.png"
       ]
