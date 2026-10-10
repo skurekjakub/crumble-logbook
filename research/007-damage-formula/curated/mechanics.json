@@ -57,9 +57,9 @@
   },
   {
     "topic": "stacking",
-    "title": "No amp on debuffs, final DMG or lift RES lines",
-    "body": "Debuffs never take amp (hard-coded); final DMG, push/airborne RES and heal-cut lines add raw. A server list can exclude more stats.",
-    "confidence": "high",
+    "title": "No amp on debuffs or lift RES lines; likely none on final DMG",
+    "body": "Debuffs never take amp (hard-coded); push/airborne RES and heal-cut lines add raw, final DMG lines most likely too (inferred). A server list can exclude more stats.",
+    "confidence": "medium",
     "sources": ["web:client-1.5.002-buff-scaling", "dc:46452"]
   },
   {
@@ -106,7 +106,7 @@
   },
   {
     "topic": "crit",
-    "title": "Raise whichever of crit rate and crit DMG is lower",
+    "title": "Raise whichever of effective crit rate (crit rate − target crit RES) and crit DMG is lower",
     "body": "Per equal point, crit rate wins while CDR > CR − CRES, crit DMG after. Break-even is CR − CRES = CDR, not 100%.",
     "confidence": "high",
     "sources": ["web:client-1.5.002-damage-system"]

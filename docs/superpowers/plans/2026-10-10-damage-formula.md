@@ -25,20 +25,21 @@
 
 - [x] Build record 007-damage-formula and the page in a worktree lane (agent).
 - [x] Merge `--no-ff`; check that no decompiled artefact was committed (`e67eb06`).
-- [ ] `pnpm capture verify`; import gate in a fresh database with every record; export and scope the snapshot.
-- [ ] Check every touched screen in agent-browser, light and dark, phone width.
-- [ ] Opus review; fix findings; push; remove the worktree.
+- [x] `pnpm capture verify`; import gate in a fresh database with every record; export and scope the snapshot (`e4e92c9`).
+- [x] Check every touched screen in agent-browser, light and dark, phone width.
+- [x] Opus review; fix findings; push. The struct offsets in the evidence and code citations stay (the user's call); decode keys stay out.
+- [ ] Remove the lane's worktree folder (git has dropped it; Windows held a file open).
 
 ## Task 3: Buff scaling
 
 - [x] Decompile the modifier systems in the Burst library (`CharacterModifierManagementSystem`, `ScaleModifierRecalculateSystem`, `AddCharacterModifier*`) and find whether Skill AMP scales a buff's value (agent). It does: each buff line is `value × caster stat × (1 + caster Skill AMP)`, read once when the buff lands. Debuffs and final-damage lines get no amp, and the server can exclude a stat type. Same modifier ID refreshes and stacks; same group keeps the strongest.
-- [ ] Fold the result into record 007 and the page.
+- [x] Fold the result into record 007 and the page (`9fd7c68`; the page renders the new mechanics from data, no code change).
 - [x] Update the roadmap's rune-reroll payoffs: a buffer's Skill AMP lines lift her buffs, so Milk keeps hers and rerolls only her SR ATK lines.
-- [ ] Record 001's "Cheesecake's buff overrides Milk's" (a weaker buff kept) conflicts with strongest-in-group; check in record 007 whether they share a modifier ID instead.
+- [x] Record 001's "Cheesecake's buff overrides Milk's" (a weaker buff kept) conflicts with strongest-in-group. Record 007 rates it "partly": not stacking fits the group rule, a fixed priority doesn't; the modifier IDs are in patch data, not the APK.
 
 ## Task 4: In-game check
 
 - [x] Read a buffer's skill text and stat sheet under the current gear. Milk's Gentle Remedy reads "ATK Increase 10% of Caster's Attack", stacks ×10: a fixed ratio with no Skill AMP term.
 - [x] Switch to a preset with different Skill AMP; read them again; switch back. Power and Conquest gave the same stat sheet and header power out of battle, so the info screens can't A/B gear. Preset is back on Conquest.
-- [ ] Log the screenshots as gitignored captures with ledger lines in record 007 once its lane merges; add the result as a data point.
+- [x] Log the screenshots as gitignored captures with ledger lines in record 007 once its lane merges; add the result as a data point (`evidence/03-ingame-2026-10-10/`, `9fd7c68`).
 - [ ] Compare with Task 3. The info screens can't answer it; a battle A/B (damage under two presets) is the in-game route left.

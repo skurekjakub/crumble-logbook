@@ -34,6 +34,7 @@ const VERDICT_BADGE: Record<ClaimVerdict, Badge> = {
 const STACKING_BADGE: Record<FormulaStacking, Badge> = {
   additive: { kind: "alt", label: "adds inside" },
   screen: { kind: "niche", label: "screen stacking" },
+  mixed: { kind: "niche", label: "adds; RES screens" },
   fixed: { kind: "legacy", label: "fixed value" },
 };
 
@@ -58,8 +59,9 @@ export function verdictBadge(verdict: ClaimVerdict): Badge {
 }
 
 /**
- * The badge of a step's stacking rule; screen stacking reads as a caution,
- * since it is the one rule where two bonuses give less than their sum.
+ * The badge of a step's stacking rule; screen stacking, whole or on the
+ * resistance side, reads as a caution, since there two bonuses give less
+ * than their sum.
  *
  * @param stacking - how the step's bonuses combine
  * @returns its badge
@@ -107,7 +109,8 @@ export interface CritEdge {
 /**
  * Weighs one more point of crit rate against one more of crit DMG at the
  * given stats: crit rate wins while crit DMG exceeds the effective rate,
- * crit DMG once the rate exceeds it.
+ * crit DMG once the rate exceeds it. At an effective rate of 0 or below no
+ * hit crits, so crit DMG is worth nothing and crit rate is the stat to raise.
  *
  * @param effectiveRate - crit rate minus the target's crit RES, as a fraction
  * @param critDamage - crit DMG, as a fraction
@@ -118,6 +121,7 @@ export function critEdge(effectiveRate: number, critDamage: number, step = 0.01)
   const base = expectedCrit(effectiveRate, critDamage);
   const rate = expectedCrit(effectiveRate + step, critDamage) / base - 1;
   const damage = expectedCrit(effectiveRate, critDamage + step) / base - 1;
+  if (effectiveRate <= 0) return { rate, damage, better: "rate" };
   const better = Math.abs(rate - damage) < 1e-12 ? "even" : rate > damage ? "rate" : "damage";
   return { rate, damage, better };
 }
@@ -155,13 +159,16 @@ export function formatTimes(value: number): string {
 }
 
 /**
- * Reads a percentage the reader typed: digits with an optional decimal
- * part, an optional `%`, nothing else.
+ * Reads a percentage the reader typed: an optional leading minus (a hyphen
+ * or `−`), digits with an optional decimal part, an optional `%`, nothing
+ * else.
  *
- * @param text - the field's text, e.g. `135` or `135.5%`
+ * @param text - the field's text, e.g. `135`, `135.5%` or `-20`
  * @returns the value as a fraction, or `null` when the text isn't a percentage
  */
 export function parsePct(text: string): number | null {
-  const match = /^\s*(\d+(?:\.\d+)?)\s*%?\s*$/.exec(text);
-  return match ? Number(match[1]) / 100 : null;
+  const match = /^\s*([-−]?)\s*(\d+(?:\.\d+)?)\s*%?\s*$/.exec(text);
+  if (!match) return null;
+  const value = Number(match[2]) / 100;
+  return match[1] ? -value : value;
 }

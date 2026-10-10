@@ -1,6 +1,5 @@
-/* The damage formula screen: the formula strip, the pipeline cards by phase, the crit
-   calculator, the constants, the claim rows and the method footer. Classes carry an `fx-`
-   prefix so they restyle nothing of another lane. Colours come from tokens.css only. */
+/* The damage formula screen. Classes carry an `fx-` prefix so they restyle nothing of
+   another lane. Colours come from tokens.css only. */
 
 /* The whole product on one wrapping line: each multiplier a chip, joined by ×. */
 .formula-strip {
@@ -253,12 +252,19 @@
   background: var(--good-soft);
   color: var(--good);
 }
+.fx-mark.avoid {
+  background: var(--bad-soft);
+  color: var(--bad);
+}
 .fx-row-body {
   min-width: 0;
 }
 
-/* Claims: the verdict badge leads; the row's edge carries the verdict's colour. */
+/* Claims: the verdict badge leads; the row's edge carries the verdict's colour. The badge
+   column has one width, wide enough for the longest verdict, so every body starts at the
+   same edge. */
 .fx-claim {
+  grid-template-columns: 6.5rem minmax(0, 1fr) auto;
   border-left: 3px solid var(--line);
 }
 .fx-claim.v-agrees {
@@ -273,9 +279,6 @@
 .fx-claim.v-consistent {
   border-left-color: var(--accent);
 }
-.fx-verdict {
-  min-width: 9ch;
-}
 .fx-claim-body {
   display: grid;
   gap: 2px;
@@ -284,6 +287,19 @@
 .fx-claim-text,
 .fx-claim-code {
   margin: 0;
+}
+/* The "Code" label stays on the reading's first line, clamped or not. */
+.fx-claim-code {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+}
+.fx-claim-code > .label {
+  flex: none;
+}
+.fx-claim-code > .clamp {
+  flex: 1;
+  min-width: 0;
 }
 .fx-claim-text {
   font-weight: 600;
@@ -315,13 +331,18 @@
   .fx-calc {
     grid-template-columns: minmax(0, 1fr);
   }
-  .fx-rows li,
-  .fx-claim {
+  .fx-rows li {
     grid-template-columns: auto minmax(0, 1fr);
   }
-  .fx-rows li > .chips.src,
-  .fx-claim-end {
+  /* A phone stacks the claim: the verdict badge on top, then the body and the chips. */
+  .fx-claim {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fx-rows li > .chips.src {
     grid-column: 2;
+    justify-content: flex-start;
+  }
+  .fx-claim-end {
     justify-content: flex-start;
   }
   .fx-rows li:not(:has(.fx-mark)) > .chips.src {

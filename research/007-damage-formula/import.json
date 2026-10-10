@@ -1,7 +1,7 @@
 {
   "record": {
     "slug": "007-damage-formula",
-    "question": "The 1.5.002 client's code fixes how a hit's damage is computed precisely enough to name every multiplier, which stats share an additive bucket and which multiply, how crit tiers, misses, element, defense and the power penalty work, and where the community's damage model is right or wrong.",
+    "question": "The 1.5.002 client's code fixes how a hit's damage is computed, and how each buff's size is set from its caster, precisely enough to name every multiplier, which stats share an additive bucket and which multiply, how crit tiers, misses, element, defense and the power penalty work, which caster stats a buff reads and when, and where the community's damage model is right or wrong.",
     "status": "active",
     "startedAt": "2026-10-10",
     "mode": "damage_formula"
@@ -46,7 +46,8 @@
       "site": "dc",
       "dir": "../001-guild-conquest-meta/evidence/21-author-awkward2637",
       "file": "{id}.md"
-    }
+    },
+    { "site": "nv", "dir": "../001-guild-conquest-meta/evidence/07-nv-posts", "file": "nv-{id}.md" }
   ],
   "rankings": [],
   "ledger": { "file": "evidence/captures.jsonl" }

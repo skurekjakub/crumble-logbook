@@ -67,11 +67,9 @@ export interface StepCardProps {
 }
 
 /**
- * One pipeline step as a card: its number and name, how it's known and how
- * its bonuses stack as badges, the expression in monospace, the stats that
- * feed it, when it applies, its one-line verdict, the longer reading
- * clamped, the constants it reads, and where in the client it was read
- * with its sources at the end.
+ * One pipeline step as a card, badges and expression first and every line
+ * of prose clamped, so the card reads at a glance; its server constants
+ * link to their cards, and its sources sit at the foot.
  *
  * @param props - the step, its number, its constants and the source index
  * @returns the card
@@ -109,7 +107,11 @@ export function StepCard({ step, number, constants, sources }: StepCardProps) {
           <span aria-hidden="true">◎</span> {step.appliesTo}
         </p>
       ) : null}
-      <p className="fx-why">{step.why}</p>
+      <p className="fx-why">
+        <Clamp lines={1} perLine={28}>
+          {step.why}
+        </Clamp>
+      </p>
       {step.detail ? (
         <p className="fx-detail muted">
           <Clamp lines={1} perLine={70}>
@@ -210,7 +212,7 @@ export function ClaimRow({ claim, sources }: { claim: FormulaClaim; sources: Sou
         </p>
         <p className="fx-claim-code muted">
           <span className="label">Code</span>{" "}
-          <Clamp lines={1} perLine={70}>
+          <Clamp lines={1} perLine={40}>
             {claim.code}
           </Clamp>
         </p>
@@ -255,7 +257,7 @@ export function CritCalculator() {
           <span className="fx-input">
             <input
               id={`${id}-rate`}
-              inputMode="decimal"
+              inputMode="text"
               value={rate}
               aria-invalid={r == null}
               onChange={(e) => {
@@ -305,7 +307,7 @@ export function CritCalculator() {
               </Pill>
             )}
             <span className="muted">
-              +1% rate {formatPct(edge.rate)} · +1% DMG {formatPct(edge.damage)}
+              +1% rate {formatPct(edge.rate)}; +1% DMG {formatPct(edge.damage)}
             </span>
           </span>
         </div>

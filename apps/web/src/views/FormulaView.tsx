@@ -18,6 +18,7 @@ import { TocLayout } from "../components/TocLayout";
 import { ViewHeader } from "../components/ViewHeader";
 import { byTopic } from "../lib/mechanics";
 import type { SourceIndex } from "../lib/sources";
+import { stance } from "../lib/verdict";
 import { ClaimRow, ConstantCard, CritCalculator, FormulaStrip, StepCard } from "./FormulaParts";
 
 /** The mechanics topics the screen reads, each shown in its own section. */
@@ -115,14 +116,30 @@ function MechanicRows({
 }
 
 /**
- * The damage formula screen: the whole product as one line, the pipeline
- * of steps as cards grouped by phase (each with its confidence, stacking
- * rule, expression, feeding stats and constants), the crit rules with a
- * calculator, the upgrade verdicts, the stacking rules inside a bucket,
- * the server constants with how to measure them, the community's claims
- * against the code, the open questions, and the method at the foot. Each
- * block renders its own query, so one failed resource leaves the others
- * in place.
+ * An upgrade verdict's marker: a green tick for one that says what to do,
+ * a red cross for one whose wording says what to avoid (see {@link stance}).
+ *
+ * @param props - the verdict's text
+ * @returns the marker, named for assistive tech by its stance
+ */
+function VerdictMark({ text }: { text: string }) {
+  return stance(text) === "avoid" ? (
+    <span className="fx-mark avoid" role="img" aria-label="avoid">
+      ✗
+    </span>
+  ) : (
+    <span className="fx-mark good" role="img" aria-label="do">
+      ✓
+    </span>
+  );
+}
+
+/**
+ * The damage formula screen: the whole product as one line over a page of
+ * sections, from the pipeline of steps to what to upgrade, how the
+ * community's model holds up and what is still open, with the method at
+ * the foot. Each block renders its own query, so one failed resource
+ * leaves the others in place.
  *
  * @returns the screen
  */
@@ -175,9 +192,7 @@ export function FormulaView() {
                 <ul className="fx-rows fx-verdicts">
                   {rows.map((t) => (
                     <li key={t.id}>
-                      <span className="fx-mark good" aria-hidden="true">
-                        ✓
-                      </span>
+                      <VerdictMark text={t.text} />
                       <span className="fx-row-body">
                         <strong>{t.text}</strong>
                         {t.detail ? (

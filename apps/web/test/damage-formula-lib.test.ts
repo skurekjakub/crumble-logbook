@@ -38,6 +38,13 @@ describe("crit arithmetic", () => {
     expect(edge.damage).toBeCloseTo(0.0135 / 2.35);
   });
 
+  it("puts the next point in crit rate when the target's crit RES leaves no effective rate", () => {
+    expect(critEdge(0, 1).better).toBe("rate");
+    expect(critEdge(-0.2, 1).better).toBe("rate");
+    expect(critEdge(-0.2, 1).damage).toBe(0);
+    expect(critEdge(0, 0).better).toBe("rate");
+  });
+
   it("values a point in an additive bucket at 1 ÷ (1 + its total)", () => {
     expect(bucketGain(1)).toBeCloseTo(0.005);
     expect(bucketGain(1.22)).toBeCloseTo(0.0045, 4);
@@ -57,6 +64,7 @@ describe("badges", () => {
     expect(confidenceBadge("inferred").kind).toBe("medium");
     expect(confidenceBadge("unknown").kind).toBe("low");
     expect(stackingBadge("screen").kind).not.toBe(stackingBadge("additive").kind);
+    expect(stackingBadge("mixed").label).toContain("RES screens");
   });
 });
 
@@ -68,11 +76,14 @@ describe("number formats", () => {
     expect(formatTimes(2)).toBe("×2");
   });
 
-  it("reads a typed percentage, with or without %, and refuses anything else", () => {
+  it("reads a typed percentage, with or without % or a leading minus, and refuses anything else", () => {
     expect(parsePct("135")).toBeCloseTo(1.35);
     expect(parsePct(" 98.5% ")).toBeCloseTo(0.985);
+    expect(parsePct("-5")).toBeCloseTo(-0.05);
+    expect(parsePct("−12.5%")).toBeCloseTo(-0.125);
     expect(parsePct("abc")).toBeNull();
     expect(parsePct("")).toBeNull();
-    expect(parsePct("-5")).toBeNull();
+    expect(parsePct("5-")).toBeNull();
+    expect(parsePct("--5")).toBeNull();
   });
 });

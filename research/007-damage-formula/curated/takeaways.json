@@ -5,27 +5,27 @@
     "sources": ["web:client-1.5.002-damage-system"]
   },
   {
-    "text": "Skill amp is one additive bucket: +1 point ≈ 1 ÷ (1 + total amp) more damage.",
-    "detail": "At 100% amp a point is +0.5%; at 122%, +0.45%. Anything past that comes from buffers' amp growing their buffs.",
+    "text": "Skill amp is one additive bucket: +1 point ≈ 1% ÷ (1 + total amp) more damage.",
+    "detail": "At 100% amp a point is +0.5%; at 122%, +0.45%. Anything past that comes from buffers' amp growing their amp-scaled buffs.",
     "sources": ["web:client-1.5.002-damage-system", "dc:82295"]
   },
   {
-    "text": "A buffer's Skill AMP isn't dead: it grows every buff she gives.",
-    "detail": "+1 point lifts each amp-scaled buff by 1 ÷ (1 + her amp). Milk keeps her Skill AMP line.",
+    "text": "A buffer's Skill AMP isn't dead: it grows every amp-scaled buff she gives.",
+    "detail": "+1 point lifts each amp-scaled buff by 1% ÷ (1 + her amp). Milk keeps her Skill AMP line, unless the server excludes ATK.",
     "sources": ["web:client-1.5.002-buff-scaling", "web:ingame-2026-10-10-milk"]
   },
   {
     "text": "Buff the buffer before she casts: buffs are sized at cast.",
     "detail": "A +69% amp beam on Milk (75.8% amp) grows her next buff ~39%, unless ATK skips amp. Later buffs don't count.",
-    "sources": ["web:client-1.5.002-buff-scaling"]
+    "sources": ["web:client-1.5.002-buff-scaling", "nv:29690", "web:ingame-2026-10-10-milk"]
   },
   {
-    "text": "Amp does nothing for debuffs or final DMG buffs.",
-    "detail": "Debuffs, final DMG and push/airborne RES lines ignore the caster's amp; those buffers gain from other lines.",
+    "text": "Don't pay for amp on a debuffer: debuffs never take it.",
+    "detail": "Push/airborne RES lines add raw too; final DMG lines most likely do (inferred). Those buffers gain from other lines.",
     "sources": ["web:client-1.5.002-buff-scaling", "dc:46452"]
   },
   {
-    "text": "Same-group buffs don't add: only the biggest counts.",
+    "text": "Don't pair same-group buffs: only the biggest counts.",
     "detail": "Largest stack × strength wins on each cookie; check overlap before pairing buffers.",
     "sources": ["web:client-1.5.002-buff-scaling", "dc:83118"]
   },
@@ -35,7 +35,7 @@
     "sources": ["web:client-1.5.002-damage-system"]
   },
   {
-    "text": "Crit: raise whichever of crit rate and crit DMG is lower.",
+    "text": "Crit: raise whichever of effective crit rate (crit rate − target crit RES) and crit DMG is lower.",
     "detail": "Expected crit = 1 + CDR × (CR − CRES), linear past 100%; break-even at CR − CRES = CDR.",
     "sources": ["web:client-1.5.002-damage-system"]
   },
@@ -45,13 +45,13 @@
     "sources": ["web:client-1.5.002-damage-system", "dc:48412"]
   },
   {
-    "text": "Outside Conquest, low team power cuts your damage; Conquest has no penalty.",
-    "detail": "Arena, stages, the Rift and daily dungeons multiply your damage by a power tier; Guild Conquest doesn't.",
+    "text": "Outside Conquest, low team power likely cuts your damage; Conquest holds no penalty.",
+    "detail": "Arena, stage, Rift and daily dungeon controllers hold a power-tier penalty; that each mode applies it is inferred.",
     "sources": ["web:client-1.5.002-damage-system", "web:crumblehub-stages"]
   },
   {
-    "text": "Accuracy only counts against targets with Avoidance.",
-    "detail": "With 0 Avoidance no miss roll happens.",
+    "text": "Skip Accuracy against targets with no Avoidance: no miss roll happens.",
+    "detail": "With 0 Avoidance every hit lands; Accuracy only counts against Avoidance.",
     "sources": ["web:client-1.5.002-damage-system"]
   }
 ]

@@ -6,9 +6,9 @@
   "you": {
     "summary": "Feed the emptiest bucket: skill amp, boss DMG, final DMG and crit each multiply damage.",
     "changes": [
-      "Weigh a skill amp point at 1 ÷ (1 + your total amp).",
-      "Keep Skill AMP on buffers: it grows every buff they give.",
-      "Crit: raise whichever of crit rate and crit DMG is lower.",
+      "Weigh a skill amp point at 1% ÷ (1 + your total amp).",
+      "Keep Skill AMP on buffers: it grows every amp-scaled buff they give.",
+      "Crit: raise whichever of effective crit rate (crit rate − target crit RES) and crit DMG is lower.",
       "Don't pick weapon lines by crit-rate digits.",
       "Test Light against Fire on the Piñata before trusting its weakness."
     ],

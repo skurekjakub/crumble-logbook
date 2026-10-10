@@ -18987,7 +18987,7 @@
    },
    {
     "slug": "007-damage-formula",
-    "question": "The 1.5.002 client's code fixes how a hit's damage is computed precisely enough to name every multiplier, which stats share an additive bucket and which multiply, how crit tiers, misses, element, defense and the power penalty work, and where the community's damage model is right or wrong.",
+    "question": "The 1.5.002 client's code fixes how a hit's damage is computed, and how each buff's size is set from its caster, precisely enough to name every multiplier, which stats share an additive bucket and which multiply, how crit tiers, misses, element, defense and the power penalty work, which caster stats a buff reads and when, and where the community's damage model is right or wrong.",
     "status": "active",
     "startedAt": "2026-10-10",
     "updatedAt": "2026-10-10",
@@ -176717,9 +176717,9 @@
    },
    {
     "id": 293,
-    "title": "No amp on debuffs, final DMG or lift RES lines",
-    "body": "Debuffs never take amp (hard-coded); final DMG, push/airborne RES and heal-cut lines add raw. A server list can exclude more stats.",
-    "confidence": "high",
+    "title": "No amp on debuffs or lift RES lines; likely none on final DMG",
+    "body": "Debuffs never take amp (hard-coded); push/airborne RES and heal-cut lines add raw, final DMG lines most likely too (inferred). A server list can exclude more stats.",
+    "confidence": "medium",
     "mode": "damage_formula",
     "topic": "stacking",
     "alsoTopics": [],
@@ -176787,7 +176787,7 @@
    },
    {
     "id": 300,
-    "title": "Raise whichever of crit rate and crit DMG is lower",
+    "title": "Raise whichever of effective crit rate (crit rate − target crit RES) and crit DMG is lower",
     "body": "Per equal point, crit rate wins while CDR > CR − CRES, crit DMG after. Break-even is CR − CRES = CDR, not 100%.",
     "confidence": "high",
     "mode": "damage_formula",
@@ -178562,16 +178562,16 @@
    {
     "id": 71,
     "position": 1,
-    "text": "Skill amp is one additive bucket: +1 point ≈ 1 ÷ (1 + total amp) more damage.",
-    "detail": "At 100% amp a point is +0.5%; at 122%, +0.45%. Anything past that comes from buffers' amp growing their buffs.",
+    "text": "Skill amp is one additive bucket: +1 point ≈ 1% ÷ (1 + total amp) more damage.",
+    "detail": "At 100% amp a point is +0.5%; at 122%, +0.45%. Anything past that comes from buffers' amp growing their amp-scaled buffs.",
     "mode": "damage_formula",
     "recordSlug": "007-damage-formula"
    },
    {
     "id": 72,
     "position": 2,
-    "text": "A buffer's Skill AMP isn't dead: it grows every buff she gives.",
-    "detail": "+1 point lifts each amp-scaled buff by 1 ÷ (1 + her amp). Milk keeps her Skill AMP line.",
+    "text": "A buffer's Skill AMP isn't dead: it grows every amp-scaled buff she gives.",
+    "detail": "+1 point lifts each amp-scaled buff by 1% ÷ (1 + her amp). Milk keeps her Skill AMP line, unless the server excludes ATK.",
     "mode": "damage_formula",
     "recordSlug": "007-damage-formula"
    },
@@ -178586,15 +178586,15 @@
    {
     "id": 74,
     "position": 4,
-    "text": "Amp does nothing for debuffs or final DMG buffs.",
-    "detail": "Debuffs, final DMG and push/airborne RES lines ignore the caster's amp; those buffers gain from other lines.",
+    "text": "Don't pay for amp on a debuffer: debuffs never take it.",
+    "detail": "Push/airborne RES lines add raw too; final DMG lines most likely do (inferred). Those buffers gain from other lines.",
     "mode": "damage_formula",
     "recordSlug": "007-damage-formula"
    },
    {
     "id": 75,
     "position": 5,
-    "text": "Same-group buffs don't add: only the biggest counts.",
+    "text": "Don't pair same-group buffs: only the biggest counts.",
     "detail": "Largest stack × strength wins on each cookie; check overlap before pairing buffers.",
     "mode": "damage_formula",
     "recordSlug": "007-damage-formula"
@@ -178610,7 +178610,7 @@
    {
     "id": 77,
     "position": 7,
-    "text": "Crit: raise whichever of crit rate and crit DMG is lower.",
+    "text": "Crit: raise whichever of effective crit rate (crit rate − target crit RES) and crit DMG is lower.",
     "detail": "Expected crit = 1 + CDR × (CR − CRES), linear past 100%; break-even at CR − CRES = CDR.",
     "mode": "damage_formula",
     "recordSlug": "007-damage-formula"
@@ -178626,16 +178626,16 @@
    {
     "id": 79,
     "position": 9,
-    "text": "Outside Conquest, low team power cuts your damage; Conquest has no penalty.",
-    "detail": "Arena, stages, the Rift and daily dungeons multiply your damage by a power tier; Guild Conquest doesn't.",
+    "text": "Outside Conquest, low team power likely cuts your damage; Conquest holds no penalty.",
+    "detail": "Arena, stage, Rift and daily dungeon controllers hold a power-tier penalty; that each mode applies it is inferred.",
     "mode": "damage_formula",
     "recordSlug": "007-damage-formula"
    },
    {
     "id": 80,
     "position": 10,
-    "text": "Accuracy only counts against targets with Avoidance.",
-    "detail": "With 0 Avoidance no miss roll happens.",
+    "text": "Skip Accuracy against targets with no Avoidance: no miss roll happens.",
+    "detail": "With 0 Avoidance every hit lands; Accuracy only counts against Avoidance.",
     "mode": "damage_formula",
     "recordSlug": "007-damage-formula"
    }
@@ -178734,9 +178734,9 @@
     "id": 7,
     "summary": "Feed the emptiest bucket: skill amp, boss DMG, final DMG and crit each multiply damage.",
     "changes": [
-     "Weigh a skill amp point at 1 ÷ (1 + your total amp).",
-     "Keep Skill AMP on buffers: it grows every buff they give.",
-     "Crit: raise whichever of crit rate and crit DMG is lower.",
+     "Weigh a skill amp point at 1% ÷ (1 + your total amp).",
+     "Keep Skill AMP on buffers: it grows every amp-scaled buff they give.",
+     "Crit: raise whichever of effective crit rate (crit rate − target crit RES) and crit DMG is lower.",
      "Don't pick weapon lines by crit-rate digits.",
      "Test Light against Fire on the Piñata before trusting its weakness."
     ],
@@ -196638,7 +196638,7 @@
     "stacking": "additive",
     "appliesTo": "Only when the target's Avoidance is above 0",
     "confidence": "read",
-    "why": "No Avoidance on the target, no roll: Accuracy is dead weight there.",
+    "why": "Accuracy needs target Avoidance.",
     "detail": "A draw at or above the chance is a Miss and the hit deals nothing. Accuracy and Avoidance take battle % and flat bonuses; Accuracy % and Avoidance % take flat ones only.",
     "codeRef": "DamageSystem.CalculatedDamage @ 0x003f43b0",
     "recordSlug": "007-damage-formula"
@@ -196657,8 +196657,8 @@
     "stacking": "additive",
     "appliesTo": null,
     "confidence": "read",
-    "why": "Every battle ATK% buff shares one pool; a flat base line is scaled by it.",
-    "detail": "Battle ATK = ⌊base × (1 + Σ ATK%) + Σ flat ATK⌋. Gear, runes and research build the base in managed code the client encrypts, so that part isn't read.",
+    "why": "ATK% buffs share one pool.",
+    "detail": "A flat base line is scaled by that pool: battle ATK =⌊base × (1 + Σ ATK%) + Σ flat ATK⌋. Gear, runes and research build the base in managed code the client encrypts, so that part isn't read.",
     "codeRef": "CombatProperty._attackPoint (+0x18); CombatBonusProperty.ApplyBonus @ 0x00464530",
     "recordSlug": "007-damage-formula"
    },
@@ -196675,7 +196675,7 @@
     "stacking": "fixed",
     "appliesTo": null,
     "confidence": "inferred",
-    "why": "The hit's % of ATK from skill data: 155.2% is ×1.552.",
+    "why": "Skill % of ATK: 155.2% is ×1.552.",
     "detail": "A plain float on each hit. That it is the skill coefficient is inferred from its name and place; the code that writes it wasn't read.",
     "codeRef": "DamageData.DamageMultiplier (+0x118)",
     "recordSlug": "007-damage-formula"
@@ -196693,8 +196693,8 @@
     "stacking": "additive",
     "appliesTo": null,
     "confidence": "read",
-    "why": "Its own bucket: +x% is worth x ÷ (1 + FDR) of damage.",
-    "detail": "Battle bonuses add flat to the base rate; no % multiplier applies to it. A final DMG buff is the same size whoever gives it: no caster amp or ATK term.",
+    "why": "Own bucket: +x% ≈ x ÷ (1 + FDR).",
+    "detail": "Battle bonuses add flat to the base rate; no % multiplier applies to it. A final DMG buff is most likely the same size whoever gives it, with no caster amp or ATK term (inferred).",
     "codeRef": "CombatProperty._finalDamageRate (+0xD0)",
     "recordSlug": "007-damage-formula"
    },
@@ -196712,7 +196712,7 @@
     "stacking": "additive",
     "appliesTo": null,
     "confidence": "read",
-    "why": "DEF never zeroes damage: at DEF = C_def a hit keeps 59%.",
+    "why": "DEF = C_def still keeps 59%.",
     "detail": "DEF is floored at 0 first. The curve keeps 42% at 3 × C_def and 29% at 10 × C_def, so shred pays most against low-DEF targets. C_def is server data.",
     "codeRef": "CombatProperty._defensePoint (+0x20); DamageSystem+0x90",
     "recordSlug": "007-damage-formula"
@@ -196723,15 +196723,15 @@
     "position": 5,
     "phase": "factor",
     "name": "Element",
-    "expression": "adv: 1 + EDB + C_inc · res: 1 ÷ (1 + EDR_t + C_dec)",
+    "expression": "adv: 1 + EDB + C_inc; res: 1 ÷ (1 + EDR_t + C_dec)",
     "feeds": [
      "Element DMG",
      "Element DMG RES (target)"
     ],
-    "stacking": "additive",
+    "stacking": "mixed",
     "appliesTo": "Advantage or resistance only; a neutral hit is ×1",
     "confidence": "read",
-    "why": "Light vs Dark: the reduction wins whenever C_dec plus the boss's element RES is above 0.",
+    "why": "Light on Dark loses if C_dec + RES > 0.",
     "detail": "Fire beats Grass, Water beats Fire, Grass beats Water; Light and Dark beat each other, so a Light hit on Dark sets both and resistance wins. Element DMG adds; the target's element RES stacks as a screen.",
     "codeRef": "CombatProperty._elementDamageBonus (+0x80), _elementDamageDecrease (+0x88); DamageSystem+0x98, +0xA0",
     "recordSlug": "007-damage-formula"
@@ -196749,8 +196749,8 @@
     "stacking": "additive",
     "appliesTo": null,
     "confidence": "read",
-    "why": "One pool: +1 point is worth 1 ÷ (1 + total amp) of damage.",
-    "detail": "Applies to every hit the damage system computes, not only skill hits. At 100% amp a point is +0.5% damage; at 122%, about +0.45%. A caster's amp also scales the buffs she gives, sized when she casts; debuffs and final DMG lines excepted.",
+    "why": "+1 point ≈ 1% ÷ (1 + total amp).",
+    "detail": "Applies to every hit the damage system computes, not only skill hits. At 100% amp a point is +0.5% damage; at 122%, about +0.45%. A caster's amp also scales the buffs she gives, sized when she casts; debuffs excepted, and most likely final DMG lines (inferred).",
     "codeRef": "CombatProperty._abilityAmplify (+0x68); CharacterModifierManagementSystem.CollectBonusProperties @ 0x0044de70",
     "recordSlug": "007-damage-formula"
    },
@@ -196767,7 +196767,7 @@
     "stacking": "screen",
     "appliesTo": null,
     "confidence": "read",
-    "why": "Reduction stacks as a screen: two 30% sources make 51%, not 60%.",
+    "why": "Two 30% sources make 51%, not 60%.",
     "detail": "Battle DR = 1 − (1 − base) × Π(1 − bonus), clamped to 0–100% when buffs apply; the damage step applies it as is.",
     "codeRef": "CombatProperty._damageDecrease (+0x60)",
     "recordSlug": "007-damage-formula"
@@ -196785,7 +196785,7 @@
     "stacking": "additive",
     "appliesTo": "Boss targets only",
     "confidence": "read",
-    "why": "Its own bucket: worth Δ ÷ (1 + Boss) on bosses, nothing on adds.",
+    "why": "Δ ÷ (1 + Boss) on bosses; 0 on adds.",
     "detail": "Applied when the target carries the boss tag; every other target takes ×1.",
     "codeRef": "CombatProperty._bossDamageRate (+0xB0)",
     "recordSlug": "007-damage-formula"
@@ -196796,7 +196796,7 @@
     "position": 9,
     "phase": "factor",
     "name": "Crit",
-    "expression": "1 + CDR × n · E = 1 + CDR × max(0, CR − CRES_t)",
+    "expression": "1 + CDR × n; E = 1 + CDR × max(0, CR − CRES_t)",
     "feeds": [
      "CRIT%",
      "CRIT DMG",
@@ -196805,8 +196805,8 @@
     "stacking": "additive",
     "appliesTo": null,
     "confidence": "read",
-    "why": "Linear past 100%: every 100% of crit rate is one more guaranteed tier.",
-    "detail": "n = ⌊e⌋ tiers plus one more with probability e − ⌊e⌋, where e = CR − CRES_t. Per equal point, crit rate wins while CDR > e, crit DMG after.",
+    "why": "Each 100% effective crit rate = a sure tier.",
+    "detail": "Linear past 100%: n = ⌊e⌋ tiers plus one more with probability e − ⌊e⌋, where e = CR − CRES_t, the effective crit rate. Per equal point, crit rate wins while CDR > e, crit DMG after.",
     "codeRef": "CombatProperty._criticalRate (+0x28), _criticalDamageRate (+0x30), _criticalResist (+0x38)",
     "recordSlug": "007-damage-formula"
    },
@@ -196821,9 +196821,9 @@
      "Team power vs recommended"
     ],
     "stacking": "fixed",
-    "appliesTo": "Hits on the Enemy side in Arena, stages, the Rift and daily dungeons; not Guild Conquest",
+    "appliesTo": "Hits on the Enemy side; likely Arena, stages, the Rift and daily dungeons, not Guild Conquest",
     "confidence": "inferred",
-    "why": "Under recommended power you lose damage outside Conquest; Conquest has no penalty hook.",
+    "why": "Likely cuts damage when under-powered.",
     "detail": "A server tier table keyed by your power ÷ recommended (PvE) or enemy (PvP) power sets it. The side check is read; which modes wire it is inferred from the battle controllers.",
     "codeRef": "DamageSystem+0xA8 (_combatPowerPenaltyMultiplier)",
     "recordSlug": "007-damage-formula"
@@ -196839,7 +196839,7 @@
     "stacking": null,
     "appliesTo": null,
     "confidence": "read",
-    "why": "No random spread: only the miss and crit-tier rolls vary a hit.",
+    "why": "Only miss and crit rolls vary a hit.",
     "detail": "Each hit's rolls are seeded from attacker and target, so damage is deterministic given the seeds.",
     "codeRef": "DamageSystem.CalculatedDamage @ 0x003f43b0",
     "recordSlug": "007-damage-formula"
@@ -196857,8 +196857,8 @@
     "stacking": null,
     "appliesTo": null,
     "confidence": "read",
-    "why": "Shields absorb first; an invincible target shows the number but loses no HP.",
-    "detail": "Shields absorb in buffer order; the rest comes off HP, floored at 0. A map prop loses 1 HP per hit.",
+    "why": "Shields absorb first, then HP.",
+    "detail": "Shields absorb in buffer order; the rest comes off HP, floored at 0. An invincible target shows the number but loses no HP; a map prop loses 1 HP per hit.",
     "codeRef": "DamageSystem.CalculatedDamage @ 0x003f43b0",
     "recordSlug": "007-damage-formula"
    }
@@ -197216,9 +197216,9 @@
     "id": 27,
     "slug": "gate-other-content",
     "position": 26,
-    "claim": "The same power gate covers the daily dungeons and the Rift.",
-    "code": "The Rift and daily dungeon controllers hold a penalty; Guild Conquest's holds none.",
-    "verdict": "agrees",
+    "claim": "The same power gate covers the daily dungeons, the Implant Tower and the Rift.",
+    "code": "The Rift and daily dungeon controllers hold a penalty; the Implant Tower wasn't traced. Guild Conquest's holds none.",
+    "verdict": "partly",
     "refRecord": "003-stage-pushing-meta",
     "refTitle": "The same table gates other content",
     "recordSlug": "007-damage-formula"
@@ -231450,611 +231450,623 @@
    {
     "id": 5701,
     "entity": "takeaway",
-    "entityId": "74",
-    "sourceId": "web:client-1.5.002-buff-scaling"
+    "entityId": "73",
+    "sourceId": "nv:29690"
    },
    {
     "id": 5702,
     "entity": "takeaway",
-    "entityId": "74",
-    "sourceId": "dc:46452"
+    "entityId": "73",
+    "sourceId": "web:ingame-2026-10-10-milk"
    },
    {
     "id": 5703,
     "entity": "takeaway",
-    "entityId": "75",
+    "entityId": "74",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5704,
     "entity": "takeaway",
+    "entityId": "74",
+    "sourceId": "dc:46452"
+   },
+   {
+    "id": 5705,
+    "entity": "takeaway",
+    "entityId": "75",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5706,
+    "entity": "takeaway",
     "entityId": "75",
     "sourceId": "dc:83118"
    },
    {
-    "id": 5705,
+    "id": 5707,
     "entity": "takeaway",
     "entityId": "76",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
-    "id": 5706,
+    "id": 5708,
     "entity": "takeaway",
     "entityId": "77",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
-    "id": 5707,
-    "entity": "takeaway",
-    "entityId": "78",
-    "sourceId": "web:client-1.5.002-damage-system"
-   },
-   {
-    "id": 5708,
-    "entity": "takeaway",
-    "entityId": "78",
-    "sourceId": "dc:48412"
-   },
-   {
     "id": 5709,
     "entity": "takeaway",
-    "entityId": "79",
+    "entityId": "78",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5710,
     "entity": "takeaway",
+    "entityId": "78",
+    "sourceId": "dc:48412"
+   },
+   {
+    "id": 5711,
+    "entity": "takeaway",
+    "entityId": "79",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5712,
+    "entity": "takeaway",
     "entityId": "79",
     "sourceId": "web:crumblehub-stages"
    },
    {
-    "id": 5711,
+    "id": 5713,
     "entity": "takeaway",
     "entityId": "80",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
-    "id": 5712,
-    "entity": "formula_step",
-    "entityId": "1",
-    "sourceId": "web:client-1.5.002-damage-system"
-   },
-   {
-    "id": 5713,
-    "entity": "formula_step",
-    "entityId": "2",
-    "sourceId": "web:client-1.5.002-damage-system"
-   },
-   {
     "id": 5714,
     "entity": "formula_step",
-    "entityId": "3",
+    "entityId": "1",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5715,
     "entity": "formula_step",
-    "entityId": "4",
+    "entityId": "2",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5716,
     "entity": "formula_step",
-    "entityId": "4",
-    "sourceId": "web:client-1.5.002-buff-scaling"
+    "entityId": "3",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5717,
     "entity": "formula_step",
-    "entityId": "5",
+    "entityId": "4",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5718,
     "entity": "formula_step",
-    "entityId": "6",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "entityId": "4",
+    "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5719,
     "entity": "formula_step",
-    "entityId": "7",
+    "entityId": "5",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5720,
     "entity": "formula_step",
-    "entityId": "7",
-    "sourceId": "web:client-1.5.002-buff-scaling"
+    "entityId": "6",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5721,
     "entity": "formula_step",
-    "entityId": "8",
+    "entityId": "7",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5722,
     "entity": "formula_step",
-    "entityId": "9",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "entityId": "7",
+    "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5723,
     "entity": "formula_step",
-    "entityId": "10",
+    "entityId": "8",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5724,
     "entity": "formula_step",
-    "entityId": "11",
+    "entityId": "9",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5725,
     "entity": "formula_step",
-    "entityId": "11",
-    "sourceId": "web:crumblehub-stages"
+    "entityId": "10",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5726,
     "entity": "formula_step",
-    "entityId": "12",
+    "entityId": "11",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5727,
     "entity": "formula_step",
-    "entityId": "13",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "entityId": "11",
+    "sourceId": "web:crumblehub-stages"
    },
    {
     "id": 5728,
-    "entity": "formula_constant",
-    "entityId": "1",
+    "entity": "formula_step",
+    "entityId": "12",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5729,
-    "entity": "formula_constant",
-    "entityId": "1",
-    "sourceId": "web:crumblehub-formulas"
+    "entity": "formula_step",
+    "entityId": "13",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5730,
     "entity": "formula_constant",
-    "entityId": "2",
+    "entityId": "1",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5731,
     "entity": "formula_constant",
-    "entityId": "2",
+    "entityId": "1",
     "sourceId": "web:crumblehub-formulas"
    },
    {
     "id": 5732,
     "entity": "formula_constant",
-    "entityId": "3",
+    "entityId": "2",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5733,
     "entity": "formula_constant",
-    "entityId": "3",
+    "entityId": "2",
     "sourceId": "web:crumblehub-formulas"
    },
    {
     "id": 5734,
     "entity": "formula_constant",
-    "entityId": "4",
+    "entityId": "3",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5735,
     "entity": "formula_constant",
-    "entityId": "4",
-    "sourceId": "web:crumblehub-stages"
+    "entityId": "3",
+    "sourceId": "web:crumblehub-formulas"
    },
    {
     "id": 5736,
-    "entity": "formula_claim",
-    "entityId": "1",
-    "sourceId": "dc:31349"
+    "entity": "formula_constant",
+    "entityId": "4",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5737,
-    "entity": "formula_claim",
-    "entityId": "1",
-    "sourceId": "dc:75589"
+    "entity": "formula_constant",
+    "entityId": "4",
+    "sourceId": "web:crumblehub-stages"
    },
    {
     "id": 5738,
     "entity": "formula_claim",
     "entityId": "1",
-    "sourceId": "dc:75854"
+    "sourceId": "dc:31349"
    },
    {
     "id": 5739,
     "entity": "formula_claim",
     "entityId": "1",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "sourceId": "dc:75589"
    },
    {
     "id": 5740,
     "entity": "formula_claim",
-    "entityId": "2",
-    "sourceId": "dc:31349"
+    "entityId": "1",
+    "sourceId": "dc:75854"
    },
    {
     "id": 5741,
     "entity": "formula_claim",
-    "entityId": "2",
+    "entityId": "1",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5742,
     "entity": "formula_claim",
-    "entityId": "3",
+    "entityId": "2",
     "sourceId": "dc:31349"
    },
    {
     "id": 5743,
     "entity": "formula_claim",
-    "entityId": "3",
-    "sourceId": "dc:75589"
+    "entityId": "2",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5744,
     "entity": "formula_claim",
     "entityId": "3",
-    "sourceId": "dc:75854"
+    "sourceId": "dc:31349"
    },
    {
     "id": 5745,
     "entity": "formula_claim",
     "entityId": "3",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "sourceId": "dc:75589"
    },
    {
     "id": 5746,
     "entity": "formula_claim",
-    "entityId": "4",
-    "sourceId": "dc:76333"
+    "entityId": "3",
+    "sourceId": "dc:75854"
    },
    {
     "id": 5747,
     "entity": "formula_claim",
-    "entityId": "4",
+    "entityId": "3",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5748,
     "entity": "formula_claim",
-    "entityId": "5",
-    "sourceId": "dc:31349"
+    "entityId": "4",
+    "sourceId": "dc:76333"
    },
    {
     "id": 5749,
     "entity": "formula_claim",
-    "entityId": "5",
+    "entityId": "4",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5750,
     "entity": "formula_claim",
-    "entityId": "6",
-    "sourceId": "dc:48412"
+    "entityId": "5",
+    "sourceId": "dc:31349"
    },
    {
     "id": 5751,
     "entity": "formula_claim",
-    "entityId": "6",
+    "entityId": "5",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5752,
     "entity": "formula_claim",
-    "entityId": "7",
-    "sourceId": "dc:46452"
+    "entityId": "6",
+    "sourceId": "dc:48412"
    },
    {
     "id": 5753,
     "entity": "formula_claim",
-    "entityId": "7",
-    "sourceId": "dc:71135"
+    "entityId": "6",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5754,
     "entity": "formula_claim",
     "entityId": "7",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "sourceId": "dc:46452"
    },
    {
     "id": 5755,
     "entity": "formula_claim",
-    "entityId": "8",
-    "sourceId": "dc:82295"
+    "entityId": "7",
+    "sourceId": "dc:71135"
    },
    {
     "id": 5756,
     "entity": "formula_claim",
-    "entityId": "8",
+    "entityId": "7",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5757,
     "entity": "formula_claim",
     "entityId": "8",
-    "sourceId": "web:client-1.5.002-buff-scaling"
+    "sourceId": "dc:82295"
    },
    {
     "id": 5758,
+    "entity": "formula_claim",
+    "entityId": "8",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5759,
+    "entity": "formula_claim",
+    "entityId": "8",
+    "sourceId": "web:client-1.5.002-buff-scaling"
+   },
+   {
+    "id": 5760,
     "entity": "formula_claim",
     "entityId": "9",
     "sourceId": "dc:82457"
    },
    {
-    "id": 5759,
+    "id": 5761,
     "entity": "formula_claim",
     "entityId": "9",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
-    "id": 5760,
-    "entity": "formula_claim",
-    "entityId": "10",
-    "sourceId": "dc:82295"
-   },
-   {
-    "id": 5761,
-    "entity": "formula_claim",
-    "entityId": "10",
-    "sourceId": "web:client-1.5.002-damage-system"
-   },
-   {
     "id": 5762,
     "entity": "formula_claim",
-    "entityId": "11",
+    "entityId": "10",
     "sourceId": "dc:82295"
    },
    {
     "id": 5763,
     "entity": "formula_claim",
-    "entityId": "11",
+    "entityId": "10",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5764,
     "entity": "formula_claim",
-    "entityId": "12",
-    "sourceId": "dc:48412"
+    "entityId": "11",
+    "sourceId": "dc:82295"
    },
    {
     "id": 5765,
     "entity": "formula_claim",
-    "entityId": "12",
-    "sourceId": "web:25737"
+    "entityId": "11",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5766,
     "entity": "formula_claim",
     "entityId": "12",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "sourceId": "dc:48412"
    },
    {
     "id": 5767,
     "entity": "formula_claim",
-    "entityId": "13",
-    "sourceId": "dc:81844"
+    "entityId": "12",
+    "sourceId": "web:25737"
    },
    {
     "id": 5768,
     "entity": "formula_claim",
-    "entityId": "13",
+    "entityId": "12",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5769,
     "entity": "formula_claim",
-    "entityId": "14",
-    "sourceId": "dc:52401"
+    "entityId": "13",
+    "sourceId": "dc:81844"
    },
    {
     "id": 5770,
     "entity": "formula_claim",
-    "entityId": "14",
-    "sourceId": "dc:75400"
+    "entityId": "13",
+    "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5771,
     "entity": "formula_claim",
     "entityId": "14",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "sourceId": "dc:52401"
    },
    {
     "id": 5772,
+    "entity": "formula_claim",
+    "entityId": "14",
+    "sourceId": "dc:75400"
+   },
+   {
+    "id": 5773,
+    "entity": "formula_claim",
+    "entityId": "14",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5774,
     "entity": "formula_claim",
     "entityId": "15",
     "sourceId": "dc:83118"
    },
    {
-    "id": 5773,
+    "id": 5775,
     "entity": "formula_claim",
     "entityId": "15",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
-    "id": 5774,
-    "entity": "formula_claim",
-    "entityId": "16",
-    "sourceId": "dc:55485"
-   },
-   {
-    "id": 5775,
-    "entity": "formula_claim",
-    "entityId": "16",
-    "sourceId": "web:client-1.5.002-buff-scaling"
-   },
-   {
     "id": 5776,
     "entity": "formula_claim",
-    "entityId": "17",
+    "entityId": "16",
     "sourceId": "dc:55485"
    },
    {
     "id": 5777,
     "entity": "formula_claim",
-    "entityId": "17",
+    "entityId": "16",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5778,
     "entity": "formula_claim",
-    "entityId": "18",
-    "sourceId": "dc:46452"
+    "entityId": "17",
+    "sourceId": "dc:55485"
    },
    {
     "id": 5779,
     "entity": "formula_claim",
-    "entityId": "18",
+    "entityId": "17",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5780,
     "entity": "formula_claim",
-    "entityId": "19",
-    "sourceId": "web:sugarpocket-bundle-1.4.002"
+    "entityId": "18",
+    "sourceId": "dc:46452"
    },
    {
     "id": 5781,
     "entity": "formula_claim",
-    "entityId": "19",
+    "entityId": "18",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5782,
     "entity": "formula_claim",
-    "entityId": "20",
+    "entityId": "19",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
     "id": 5783,
     "entity": "formula_claim",
-    "entityId": "20",
+    "entityId": "19",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5784,
     "entity": "formula_claim",
-    "entityId": "21",
+    "entityId": "20",
     "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
     "id": 5785,
     "entity": "formula_claim",
-    "entityId": "21",
+    "entityId": "20",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5786,
     "entity": "formula_claim",
-    "entityId": "22",
-    "sourceId": "dc:83255"
+    "entityId": "21",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
     "id": 5787,
     "entity": "formula_claim",
-    "entityId": "22",
-    "sourceId": "dc:83221"
+    "entityId": "21",
+    "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5788,
     "entity": "formula_claim",
     "entityId": "22",
-    "sourceId": "web:client-1.5.002-buff-scaling"
+    "sourceId": "dc:83255"
    },
    {
     "id": 5789,
     "entity": "formula_claim",
-    "entityId": "23",
-    "sourceId": "dc:84290"
+    "entityId": "22",
+    "sourceId": "dc:83221"
    },
    {
     "id": 5790,
     "entity": "formula_claim",
-    "entityId": "23",
+    "entityId": "22",
     "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5791,
     "entity": "formula_claim",
-    "entityId": "24",
-    "sourceId": "web:sugarpocket-bundle-1.4.002"
+    "entityId": "23",
+    "sourceId": "dc:84290"
    },
    {
     "id": 5792,
     "entity": "formula_claim",
-    "entityId": "24",
-    "sourceId": "web:client-1.5.002-damage-system"
+    "entityId": "23",
+    "sourceId": "web:client-1.5.002-buff-scaling"
    },
    {
     "id": 5793,
     "entity": "formula_claim",
-    "entityId": "25",
-    "sourceId": "web:crumblehub-formulas"
+    "entityId": "24",
+    "sourceId": "web:sugarpocket-bundle-1.4.002"
    },
    {
     "id": 5794,
     "entity": "formula_claim",
-    "entityId": "25",
+    "entityId": "24",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5795,
     "entity": "formula_claim",
-    "entityId": "26",
-    "sourceId": "web:crumblehub-stages"
+    "entityId": "25",
+    "sourceId": "web:crumblehub-formulas"
    },
    {
     "id": 5796,
     "entity": "formula_claim",
-    "entityId": "26",
+    "entityId": "25",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5797,
     "entity": "formula_claim",
-    "entityId": "27",
+    "entityId": "26",
     "sourceId": "web:crumblehub-stages"
    },
    {
     "id": 5798,
     "entity": "formula_claim",
-    "entityId": "27",
+    "entityId": "26",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5799,
     "entity": "formula_claim",
-    "entityId": "28",
+    "entityId": "27",
     "sourceId": "web:crumblehub-stages"
    },
    {
     "id": 5800,
     "entity": "formula_claim",
-    "entityId": "28",
+    "entityId": "27",
     "sourceId": "web:client-1.5.002-damage-system"
    },
    {
     "id": 5801,
     "entity": "formula_claim",
+    "entityId": "28",
+    "sourceId": "web:crumblehub-stages"
+   },
+   {
+    "id": 5802,
+    "entity": "formula_claim",
+    "entityId": "28",
+    "sourceId": "web:client-1.5.002-damage-system"
+   },
+   {
+    "id": 5803,
+    "entity": "formula_claim",
     "entityId": "29",
     "sourceId": "web:crumblehub-formulas"
    },
    {
-    "id": 5802,
+    "id": 5804,
     "entity": "formula_claim",
     "entityId": "29",
     "sourceId": "web:client-1.5.002-damage-system"

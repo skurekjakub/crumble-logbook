@@ -72,10 +72,12 @@ export type FormulaPhase = (typeof FORMULA_PHASE)[number];
 
 /**
  * How the battle bonuses feeding a damage formula step combine: summed
- * into one pool (`additive`), stacked as 1 − Π(1 − x) (`screen`), or not
- * at all, the step's value being skill or table data (`fixed`).
+ * into one pool (`additive`), stacked as 1 − Π(1 − x) (`screen`), the
+ * attacker's bonuses summed while the target's resistance stacks as a
+ * screen (`mixed`), or not at all, the step's value being skill or table
+ * data (`fixed`).
  */
-export const FORMULA_STACKING = ["additive", "screen", "fixed"] as const;
+export const FORMULA_STACKING = ["additive", "screen", "mixed", "fixed"] as const;
 export type FormulaStacking = (typeof FORMULA_STACKING)[number];
 
 /**

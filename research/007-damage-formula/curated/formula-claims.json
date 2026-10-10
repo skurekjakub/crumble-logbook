@@ -223,9 +223,9 @@
   },
   {
     "id": "gate-other-content",
-    "claim": "The same power gate covers the daily dungeons and the Rift.",
-    "code": "The Rift and daily dungeon controllers hold a penalty; Guild Conquest's holds none.",
-    "verdict": "agrees",
+    "claim": "The same power gate covers the daily dungeons, the Implant Tower and the Rift.",
+    "code": "The Rift and daily dungeon controllers hold a penalty; the Implant Tower wasn't traced. Guild Conquest's holds none.",
+    "verdict": "partly",
     "ref": { "record": "003-stage-pushing-meta", "title": "The same table gates other content" },
     "sources": ["web:crumblehub-stages", "web:client-1.5.002-damage-system"]
   },

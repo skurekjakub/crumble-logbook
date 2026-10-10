@@ -61,6 +61,11 @@ const STEPS = [
   step(3, "damage-reduction", { name: "Enemy DMG RES", stacking: "screen" }),
   step(4, "defense", { name: "Enemy DEF", confidence: "inferred", codeRef: "DamageSystem+0x90" }),
   step(5, "floor", { phase: "result", name: "Floor", stacking: null }),
+  step(6, "element", {
+    name: "Element",
+    stacking: "mixed",
+    why: "Light vs Dark: the reduction wins whenever C_dec plus the boss's element RES is above 0.",
+  }),
 ];
 
 const CONSTANTS: FormulaConstant[] = [
@@ -148,6 +153,15 @@ const TAKEAWAYS: Takeaway[] = [
     recordSlug: SLUG,
     sources: ["dc:76135"],
   },
+  {
+    id: 2,
+    position: 1,
+    text: "Don't pay for amp on a debuffer: debuffs never take it.",
+    detail: null,
+    mode: "damage_formula",
+    recordSlug: SLUG,
+    sources: ["dc:76135"],
+  },
 ];
 
 const API: Record<string, Canned> = {
@@ -183,7 +197,12 @@ describe("/formula", () => {
     await renderRoute("/formula", API);
     const strip = await screen.findByLabelText("Damage formula");
     const terms = within(strip).getAllByRole("link");
-    expect(terms.map((a) => a.textContent)).toEqual(["Skill amp", "Enemy DMG RES", "Enemy DEF"]);
+    expect(terms.map((a) => a.textContent)).toEqual([
+      "Skill amp",
+      "Enemy DMG RES",
+      "Enemy DEF",
+      "Element",
+    ]);
     expect(terms[0]).toHaveAttribute("href", "#step-skill-amp");
     expect(terms[1]).toHaveClass("screen");
   });
@@ -197,6 +216,7 @@ describe("/formula", () => {
       "Skill amp",
       "Enemy DMG RES",
       "Enemy DEF",
+      "Element",
       "Floor",
     ]);
     expect(within(cards[0]!).getByText("Only against Avoidance", { exact: false })).toBeVisible();
@@ -207,7 +227,17 @@ describe("/formula", () => {
       "href",
       "#const-c-def",
     );
-    expect(within(cards[4]!).queryByText("adds inside")).toBeNull();
+    expect(within(cards[4]!).getByText("adds; RES screens")).toBeVisible();
+    expect(within(cards[5]!).queryByText("adds inside")).toBeNull();
+  });
+
+  it("cuts a step's long why to one line that expands on demand, and leaves a short one whole", async () => {
+    await renderRoute("/formula", API);
+    const pipeline = await region("Pipeline");
+    const cards = await within(pipeline).findAllByRole("article");
+    expect(within(cards[4]!).getByRole("button", { name: "More" })).toBeVisible();
+    expect(within(cards[1]!).getByText("One pool.")).toBeVisible();
+    expect(within(cards[1]!).queryByRole("button", { name: "More" })).toBeNull();
   });
 
   it("works out the expected crit and which stat's next point is worth more", async () => {
@@ -217,9 +247,21 @@ describe("/formula", () => {
     expect(within(crit).getByText("next point: crit DMG")).toBeVisible();
     fireEvent.change(within(crit).getByLabelText(/Crit DMG/), { target: { value: "200" } });
     expect(within(crit).getByText("next point: crit rate")).toBeVisible();
+    fireEvent.change(within(crit).getByLabelText(/Crit rate/), { target: { value: "-20" } });
+    expect(within(crit).getByLabelText("Expected crit multiplier")).toHaveTextContent("×1");
+    expect(within(crit).getByText("next point: crit rate")).toBeVisible();
     fireEvent.change(within(crit).getByLabelText(/Crit rate/), { target: { value: "x" } });
     expect(within(crit).getByRole("alert")).toHaveTextContent("Enter both as percentages");
     expect(await within(crit).findByText("Raise the lower stat")).toBeVisible();
+  });
+
+  it("marks each upgrade verdict as a do or, when its wording says so, an avoid", async () => {
+    await renderRoute("/formula", API);
+    const upgrade = await region("What to upgrade");
+    const rows = await within(upgrade).findAllByRole("listitem");
+    expect(within(rows[0]!).getByRole("img", { name: "do" })).toHaveTextContent("✓");
+    expect(within(rows[1]!).getByRole("img", { name: "avoid" })).toHaveTextContent("✗");
+    expect(within(rows[1]!).queryByRole("img", { name: "do" })).toBeNull();
   });
 
   it("shows each claim's verdict first, a contradicted one as wrong, with where it's recorded", async () => {
@@ -236,9 +278,8 @@ describe("/formula", () => {
     const constants = await region("Server constants");
     expect(await within(constants).findByText("unknown")).toBeVisible();
     expect(within(constants).getByText("guess: 500 (crumblehub's default)")).toBeVisible();
-    expect(
-      await within(await region("What to upgrade")).findByText("Skill amp is one additive bucket."),
-    ).toBeVisible();
+    const upgrade = await region("What to upgrade");
+    expect(await within(upgrade).findByText("Skill amp is one additive bucket.")).toBeVisible();
     expect(await within(await region("Inside a bucket")).findByText("ATK and HP")).toBeVisible();
     expect(await within(await region("Open questions")).findByText("Heals")).toBeVisible();
     expect(await screen.findByRole("contentinfo", { name: "Method" })).toHaveTextContent(
