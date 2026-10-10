@@ -1,5 +1,65 @@
 [
   {
+    "id": "rye-chardonnay-vs-bari-chardonnay",
+    "mode": "arena",
+    "team": "arena-rye-chardonnay",
+    "beaten_by": "arena-bari-oven-chardonnay",
+    "conditions": "Bari 5★+; one report from 4★ with a 10★ Chardonnay. 29.89M beat 34.79M.",
+    "why": "Chardonnay's crit flood kills Rye's line before the long fight it needs.",
+    "confidence": "medium",
+    "sources": ["dc:84728", "dc:83352", "dc:84760", "dc:83548", "dc:84857", "dc:85029"]
+  },
+  {
+    "id": "rye-onecarry-vs-bari-chardonnay",
+    "mode": "arena",
+    "team": "arena-rye-onecarry",
+    "beaten_by": "arena-bari-oven-chardonnay",
+    "conditions": "Bari 5★+; a 10★ Bari wins in about a second.",
+    "why": "Without Chardonnay the Rye deck has less crit and still can't outlast the opening.",
+    "confidence": "medium",
+    "sources": ["dc:83352", "dc:85029", "dc:84760", "dc:83147"]
+  },
+  {
+    "id": "bari-chardonnay-vs-rye-chardonnay",
+    "mode": "arena",
+    "team": "arena-bari-oven-chardonnay",
+    "beaten_by": "arena-rye-chardonnay",
+    "conditions": "Bari under 5★, or Oven far under the enemy's.",
+    "why": "With one soul target the dive doesn't kill; Rye wins the long fight.",
+    "confidence": "medium",
+    "sources": ["dc:84765", "dc:84732", "dc:83896", "dc:83859", "dc:84760"]
+  },
+  {
+    "id": "bari-chardonnay-vs-evasion",
+    "mode": "arena",
+    "team": "arena-bari-oven-chardonnay",
+    "beaten_by": "arena-evasion",
+    "conditions": "An attack with no accuracy; a long shot against 10★ Bari.",
+    "why": "Misses waste the opening; lose a cookie and the evasion deck folds.",
+    "confidence": "low",
+    "sources": ["dc:84936", "dc:85029", "dc:82861", "dc:82842"]
+  },
+  {
+    "id": "evasion-vs-accuracy-chardonnay",
+    "mode": "arena",
+    "team": "arena-evasion",
+    "beaten_by": "arena-bari-oven-chardonnay",
+    "conditions": "Attacker on an accuracy preset, or with Coffee or Doughnut King.",
+    "why": "Accuracy cancels evasion; Coffee lifts accuracy and Doughnut stops Peach.",
+    "confidence": "medium",
+    "sources": ["dc:83938", "dc:83918", "dc:84443", "dc:83998"]
+  },
+  {
+    "id": "madeleine-vs-bari-chardonnay",
+    "mode": "arena",
+    "team": "arena-madeleine",
+    "beaten_by": "arena-bari-oven-chardonnay",
+    "conditions": "Replies only; no result shown.",
+    "why": "Bari–Oven lands the same burst with more HP and a full team.",
+    "confidence": "low",
+    "sources": ["dc:85161", "dc:84475"]
+  },
+  {
     "id": "rye-onecarry-vs-bari-oven",
     "mode": "arena",
     "team": "arena-rye-onecarry",
@@ -7,6 +67,7 @@
     "conditions": "Bari 7★+ at similar spec, or a clear spec lead.",
     "why": "The dive deletes Milk and Rye within seconds; Arena has no +30% DR to blunt it.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron Bari deck, displaced by its Chardonnay version.", "sources": ["dc:83118", "nv:51751", "web:crumbgg-meta-page-1010"] },
     "sources": ["dc:81134", "dc:77192", "dc:80465", "dc:76712", "dc:75878", "dc:75761", "dc:74972", "dc:73569"]
   },
   {
@@ -17,6 +78,7 @@
     "conditions": "Bari 6★ or less, or an unset Bari deck. Under 5★ Bari is 'a junk deck'.",
     "why": "If the dive doesn't kill, the Bari deck has no sustain and Rye wins the long fight.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron Bari deck; with Chardonnay, Rye now loses from about Bari 5★.", "sources": ["dc:84760", "dc:83352", "dc:83118"] },
     "sources": ["dc:81134", "dc:80465", "dc:82022", "dc:75148", "dc:75463", "dc:76368", "dc:76853"]
   },
   {
@@ -27,6 +89,7 @@
     "conditions": "A fully set Bari deck: one player lost it over about 50 fights.",
     "why": "The faster shield still can't hold a finished dive.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron Bari deck, displaced by its Chardonnay version.", "sources": ["dc:83118", "nv:51751", "web:crumbgg-meta-page-1010"] },
     "sources": ["dc:77672", "dc:78224", "dc:77192"]
   },
   {
@@ -47,6 +110,7 @@
     "conditions": "An attacker with no accuracy: 14.38M beat 27.35M.",
     "why": "If the evasion deck survives the dive's first turn, it wins; lose one or two cookies and it folds.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron Bari deck, displaced by its Chardonnay version.", "sources": ["dc:83118", "nv:51751", "web:crumbgg-meta-page-1010"] },
     "sources": ["dc:80136", "dc:77691"]
   },
   {
@@ -67,6 +131,7 @@
     "conditions": "Stated by the deck's proposers; no result shown.",
     "why": "Soul Guidance makes the chargers immune to push and lift.",
     "confidence": "low",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron Bari deck, displaced by its Chardonnay version.", "sources": ["dc:83118", "nv:51751", "web:crumbgg-meta-page-1010"] },
     "sources": ["dc:75681", "dc:75724", "nv:44477"]
   },
   {
@@ -77,6 +142,7 @@
     "conditions": "Bari under 5★, so Soul Guidance covers one charger.",
     "why": "Not explained; plausibly the unwrapped chargers get pushed out (inference).",
     "confidence": "low",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron Bari deck, displaced by its Chardonnay version.", "sources": ["dc:83118", "nv:51751", "web:crumbgg-meta-page-1010"] },
     "sources": ["nv:45312"]
   },
   {
@@ -117,6 +183,7 @@
     "conditions": "Even at 1★ Bari and twice the power in launch week.",
     "why": "The chargers reach the back line and kill the carries and Milk on contact.",
     "confidence": "high",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron Bari deck, displaced by its Chardonnay version.", "sources": ["dc:83118", "nv:51751", "web:crumbgg-meta-page-1010"] },
     "sources": ["dc:74285", "dc:73497", "dc:75322", "dc:74146"]
   },
   {
@@ -131,6 +198,26 @@
   },
 
   {
+    "id": "rye-chardonnay-vs-chardonnay-12",
+    "mode": "rumble_arena",
+    "team": "rumble-rye-chardonnay",
+    "beaten_by": "rumble-chardonnay-12",
+    "conditions": "Even 5M up: a 25M Bari deck killed a 30M Rye deck at the start. Rye is on 8 of the top 100.",
+    "why": "The kept +30% Charge HP and Chardonnay's crit carry the dive through Rye's wall.",
+    "confidence": "medium",
+    "sources": ["dc:83352", "web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"]
+  },
+  {
+    "id": "rye-rockstar-vs-chardonnay-12",
+    "mode": "rumble_arena",
+    "team": "rumble-rye-rockstar",
+    "beaten_by": "rumble-chardonnay-12",
+    "conditions": "Above mid-ladder; the Macaron Rye deck lacks even Chardonnay's crit.",
+    "why": "The dive kills before Rockstar's shield and the DR buff can save the back line.",
+    "confidence": "low",
+    "sources": ["dc:83352", "web:crumbgg-rumble-stats-1010"]
+  },
+  {
     "id": "ranged-vs-standard-12",
     "mode": "rumble_arena",
     "team": "rumble-ranged",
@@ -138,6 +225,7 @@
     "conditions": "Even with the ranged side 3–4M stronger; works with Bari at 2–3★.",
     "why": "Chargers with +30% HP reach the back-line carries first.",
     "confidence": "high",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:74794", "dc:74463", "dc:75189", "dc:73955"]
   },
   {
@@ -158,6 +246,7 @@
     "conditions": "Mid-ladder at similar power; wins reported up to +6M and once at −8M.",
     "why": "Rumble's +30% DR lets the tanks survive the dive; then Rye out-damages.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:74721", "dc:74229", "dc:75553", "dc:76717", "dc:73857", "dc:78187"]
   },
   {
@@ -168,6 +257,7 @@
     "conditions": "At the very top, against finished high-star Bari. Rye is on 2 of the top 100 (10-07).",
     "why": "Buffed divers kill the back line on contact, before tanks and heals matter.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:77408", "dc:80446", "dc:78195", "dc:75553", "dc:74463", "web:crumbgg-rumble-stats-1007"]
   },
   {
@@ -178,6 +268,7 @@
     "conditions": "Mid-ladder, even 12M down: 20.86M beat 32.27M.",
     "why": "Rockstar's shield and the DR buff absorb the dive; Rye and Hound finish it.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:78990", "dc:78308"]
   },
   {
@@ -188,6 +279,7 @@
     "conditions": "At the top: a commenter caps it near 200th; finished Bari wins higher up.",
     "why": "High-star divers kill before the shield cycles.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:78308", "dc:77408", "dc:80446"]
   },
   {
@@ -198,6 +290,7 @@
     "conditions": "Held 3 standard-12 attacks above 2,000 points (254th, 23.85M).",
     "why": "The team survives the opening; Rye and Chain-buffed Pinot win the long fight.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:79238", "dc:80950"]
   },
   {
@@ -208,6 +301,7 @@
     "conditions": "Above 3,000 points, when the enemy chargers run no Skill Haste: 9 standard-12 attackers failed.",
     "why": "Enemy chargers chase the decoy Oven and clump for Crepe and Rye.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:81227"]
   },
   {
@@ -228,6 +322,7 @@
     "conditions": "One player on day 1, winning 2M down.",
     "why": "Crepe pushes the enemy front together for Bari and Cherry Cola (disputed).",
     "confidence": "low",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:73857"]
   },
   {
@@ -248,6 +343,7 @@
     "conditions": "Any early-sweep Bari deck; 'catastrophic' with Bari 5★+ and Oven.",
     "why": "The charge burst wipes it before Wizard gets going.",
     "confidence": "medium",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:74028", "nv:45902"]
   },
   {
@@ -268,6 +364,7 @@
     "conditions": "Only against a mediocre-spec Bari side; a warning, not shown.",
     "why": "The +30% DR blunts the burst, and a surviving Rapid Fire deck wins.",
     "confidence": "low",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["nv:45502"]
   },
   {
@@ -288,6 +385,7 @@
     "conditions": "8.41M with 1,005 evasion beat 16.53M with 950 accuracy. Disputed.",
     "why": "Attacks miss; Vampire cuts accuracy further. Hidden names stop scouting.",
     "confidence": "low",
+    "obsolete": { "since": "2026-10-08", "reason": "Names the Macaron standard 12, displaced by the Chardonnay 12.", "sources": ["web:crumbgg-rumble-stats-1010", "web:crumbgg-rumble-live-1010"] },
     "sources": ["dc:74627", "dc:71672", "dc:75453"]
   }
 ]

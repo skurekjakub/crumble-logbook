@@ -27,7 +27,13 @@
   { "mode": "arena", "date": "2026-10-05", "event": "In-game help lists what counts in Arena; merc perks aren't on it.", "sources": ["dc:81024"] },
   { "mode": "arena", "date": "2026-10-07", "event": "crumb.gg's meta page publishes lineup shares, the first regular-Arena ladder data.", "sources": ["web:crumbgg-meta-page-1007"] },
   { "mode": "rumble_arena", "date": "2026-10-07", "event": "Season 1's last day: 슈퍼땅콩 #1 at 6912; Herb fading and Icy Birdie rising in the top 100.", "sources": ["web:crumbgg-rumble-live-1007", "web:crumbgg-rumble-stats-1007"] },
-  { "mode": "rumble_arena", "date": "2026-10-08", "event": "Season 1 ends at 12:00 KST; rewards pay out automatically.", "sources": ["dc:73855", "dc:75881", "dc:82055"] },
-  { "mode": "arena", "date": "2026-10-08", "event": "Update (maintenance 13:00–16:00 KST): Chardonnay, Lv.120 cap, Arena help text on perks, Milk attendance.", "sources": ["nv:50417", "nv:50393"] },
-  { "mode": "rumble_arena", "date": "2026-10-08", "event": "Season 2 opens (client data: 14:00 KST to 10-21 12:00); passive unannounced.", "sources": ["nv:50417", "web:sugarpocket-rumble-arena-1007"] }
+  { "mode": "rumble_arena", "date": "2026-10-08", "event": "Season 1 ends at 12:00 KST: #1 슈퍼땅콩 7,292; 100th near 3,805. Rewards pay out automatically.", "sources": ["dc:73855", "dc:75881", "dc:82055", "dc:82803"] },
+  { "mode": "arena", "date": "2026-10-08", "event": "Season 5 ends at 12:00 KST; Season 6 runs 16:00 KST to 10-22 12:00.", "sources": ["web:crumbgg-arena-page-1010"] },
+  { "mode": "arena", "date": "2026-10-08", "event": "Update 1.5.002 (maintenance 13:00–16:00 KST): Chardonnay, Lv.120 cap, Eternal Lv.95 set, lineup codes, Arena help on perks.", "sources": ["nv:50417", "nv:50393", "web:crumbgg-patches-1010"] },
+  { "mode": "rumble_arena", "date": "2026-10-08", "event": "Season 2 opens at 14:00 KST to 10-21 12:00, with Season 1's passives.", "sources": ["nv:50417", "web:sugarpocket-rumble-arena-1007", "web:crumbgg-arena-page-1010"] },
+  { "mode": "arena", "date": "2026-10-08", "event": "Chardonnay replaces Macaron within hours; a 30M Chardonnay Bari deck beats a 42M 10★ one.", "sources": ["dc:83191", "dc:83199", "dc:83118"] },
+  { "mode": "arena", "date": "2026-10-08", "event": "The six-cookie Madeleine deck is posted as defense bait.", "sources": ["dc:83386"] },
+  { "mode": "arena", "date": "2026-10-09", "event": "서신우's Chardonnay Arena guide: crit RES gear essential; Rye for Cherry Cola under Bari 5★.", "sources": ["web:yt-JuDMhwANm1M", "nv:51751"] },
+  { "mode": "arena", "date": "2026-10-10", "event": "crumb.gg: the Chardonnay Bari group leads Arena at 23.2%; Macaron falls to 48.4% of lineups.", "sources": ["web:crumbgg-meta-page-1010"] },
+  { "mode": "rumble_arena", "date": "2026-10-10", "event": "Season 2's top 100: Chardonnay on 85, Macaron on 5; #1 벼락맞은선인장 at 2,467.", "sources": ["web:crumbgg-rumble-live-1010", "web:crumbgg-rumble-stats-1010"] }
 ]

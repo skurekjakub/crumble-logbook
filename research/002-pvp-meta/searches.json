@@ -5,7 +5,7 @@
     "query": "subject:아레나",
     "why": "Posts titled with Arena, the widest net for PvP teams and questions.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-subject-arena-deck",
@@ -13,7 +13,7 @@
     "query": "subject:아레나덱",
     "why": "Posts titled with an Arena deck, where lineups are shared.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-arena-deck",
@@ -21,7 +21,7 @@
     "query": "아레나 덱",
     "why": "Arena deck posts, with lineups and formations.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-arena-combo",
@@ -53,7 +53,7 @@
     "query": "그마",
     "why": "Grandmaster, the top Arena tier: posts from the players whose teams set the meta.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-defense-deck",
@@ -61,7 +61,7 @@
     "query": "방덱",
     "why": "Defense decks, half of every Arena recommendation.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-attack-deck",
@@ -77,7 +77,7 @@
     "query": "아레나 방어",
     "why": "Arena defense posts in plain words.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-counter-deck",
@@ -85,7 +85,7 @@
     "query": "카운터덱",
     "why": "Counter decks, the record's counter edges.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-matchup",
@@ -93,7 +93,7 @@
     "query": "상성",
     "why": "Matchup talk: which team beats which, and why.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-arena-gear",
@@ -101,7 +101,7 @@
     "query": "아레나 장비",
     "why": "Arena gear, one of the record's recommendations.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-arena-preset",
@@ -109,7 +109,7 @@
     "query": "아레나 프리셋",
     "why": "Arena gear presets as posters share them.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-arena-pet",
@@ -133,7 +133,7 @@
     "query": "오방",
     "why": "Oven Wanderer, half of the Bari charge core both modes run.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-bari",
@@ -141,7 +141,7 @@
     "query": "바리",
     "why": "Princess Bari, the cookie the PvP meta turned on after her release.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-bari-deck",
@@ -149,7 +149,7 @@
     "query": "바리덱",
     "why": "Bari decks by name.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-rye-deck",
@@ -157,7 +157,7 @@
     "query": "호밀덱",
     "why": "The Rye decks, the record's attack answer to Bari.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-hohwang",
@@ -173,7 +173,7 @@
     "query": "회피덱",
     "why": "The evasion deck by name.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-evasion-nickname",
@@ -197,7 +197,7 @@
     "query": "name:맞말은유동이",
     "why": "A poster whose Arena decks the record cites.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-name-songsong",
@@ -205,7 +205,7 @@
     "query": "name:송송다리",
     "why": "A poster whose Arena decks the record cites.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-name-hoc",
@@ -221,7 +221,7 @@
     "query": "@recommend",
     "why": "The gallery's recommended posts, where PvP guides land.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-subject-rumble",
@@ -237,7 +237,7 @@
     "query": "와글",
     "why": "Rumble Arena is 와글와글 아레나; its short forms find its posts.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-warena",
@@ -245,7 +245,7 @@
     "query": "와레나",
     "why": "와레나, the gallery's short name for Rumble Arena.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-warena-first",
@@ -253,7 +253,7 @@
     "query": "와레나 1등",
     "why": "Posts about the Rumble Arena board's first place.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-warena-bari",
@@ -285,7 +285,7 @@
     "menuId": 9,
     "why": "The official cafe's guide board, where the global and KR PvP guides are posted.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "naver-patch-notes",
@@ -301,7 +301,7 @@
     "query": "크럼블 아레나",
     "why": "The widest KR YouTube net for Arena guides.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "youtube-arena-deck",
@@ -309,7 +309,7 @@
     "query": "쿠키런 크럼블 아레나 덱",
     "why": "The title KR creators give Arena deck guides.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "youtube-wagle-arena",
@@ -317,7 +317,7 @@
     "query": "크럼블 와글와글 아레나",
     "why": "Rumble Arena guides under the mode's KR name.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "youtube-warena",
@@ -333,7 +333,7 @@
     "query": "크럼블 바리공주 아레나",
     "why": "Arena videos built around Princess Bari.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "youtube-en-arena",
@@ -363,9 +363,9 @@
     "id": "youtube-susinwoo",
     "kind": "youtube",
     "channel": "@SuSinWoo",
-    "why": "서신우, whose Bari, Rye and Cheesecake Arena guides the record cites.",
+    "why": "서신우, whose Bari, Rye, Cheesecake and Chardonnay Arena guides the record cites.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "youtube-vart",
@@ -390,7 +390,7 @@
     "args": ["rumble_arena"],
     "why": "The live Rumble Arena top 100 with their defense teams, the only ladder data either mode has.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "crumbgg-live-history-rumble-arena",
@@ -408,7 +408,7 @@
     "args": [],
     "why": "Cookie and pet usage across the Rumble Arena top 100.",
     "added": "2026-09-27",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "crumbgg-live-arena",
@@ -435,7 +435,7 @@
     "args": ["meta"],
     "why": "crumb.gg's cookie list and client version: new cookies are a round's discovery seeds.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "crumbgg-data-patches",
@@ -444,7 +444,7 @@
     "args": ["patches"],
     "why": "crumb.gg's patch digest, which dates the balance changes a round's window covers.",
     "added": "2026-09-27",
-    "lastHit": "2026-09-27"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "web-crumblehub-meta-decks",
@@ -508,7 +508,7 @@
     "query": "공격보정",
     "why": "공격보정, the players' name for the suspected attacker advantage in Arena.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-angel",
@@ -516,7 +516,7 @@
     "query": "천사",
     "why": "Angel Cookie, the new Herb replacement in Rye decks.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-accuracy",
@@ -524,7 +524,7 @@
     "query": "명중",
     "why": "Accuracy, the answer to evasion defenses.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-clash",
@@ -538,9 +538,9 @@
     "id": "dc-chardonnay",
     "kind": "dc",
     "query": "샤르도네",
-    "why": "Chardonnay, the 10-08 support cookie; its PvP use is unmeasured.",
+    "why": "Chardonnay, the 10-08 support that leads both PvP metas since her release.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-rockstar",
@@ -548,7 +548,7 @@
     "query": "락스타",
     "why": "Rockstar, the Rye deck's flex.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "dc-elite-master",
@@ -556,7 +556,7 @@
     "query": "엘마",
     "why": "Elite Master, the Rumble league from 2,000 points.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "web-crumbgg-meta-page",
@@ -564,7 +564,7 @@
     "url": "https://crumb.gg/pub/meta-page",
     "why": "crumb.gg's lineup shares for both modes: the only regular-Arena ladder data.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
   },
   {
     "id": "web-sugarpocket-rumble-arena",
@@ -572,6 +572,118 @@
     "url": "https://cookieruncrumble.app/rumble-arena/",
     "why": "Sugar Pocket's Rumble page: the client's season calendar, passives and tiers.",
     "added": "2026-10-07",
-    "lastHit": "2026-10-07"
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-shar",
+    "kind": "dc",
+    "query": "샤르",
+    "why": "샤르, the short name for Chardonnay, the 10-08 support that reset both PvP metas.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-crit-res",
+    "kind": "dc",
+    "query": "치저",
+    "why": "Crit RES, the gear line argued over once Chardonnay pushed crit past 100%.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-haste-0",
+    "kind": "dc",
+    "query": "0스가",
+    "why": "Zero-haste presets, the Bari decks' gear choice.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-haste-6",
+    "kind": "dc",
+    "query": "6스가",
+    "why": "Six-haste presets, back in the argument after 10-08.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-madeleine",
+    "kind": "dc",
+    "query": "마들렌",
+    "why": "The six-cookie Madeleine burst deck.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-peach",
+    "kind": "dc",
+    "query": "복숭아",
+    "why": "Peach, the evasion deck's +45% evasion cookie, and its counters.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-revenge",
+    "kind": "dc",
+    "query": "복수",
+    "why": "Revenge attacks, the core of the attacker-advantage complaints.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-eternal",
+    "kind": "dc",
+    "query": "이터널",
+    "why": "Eternal gear, including the paid Lv.95 set.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-frog",
+    "kind": "dc",
+    "query": "개구리",
+    "why": "Floral Froglet, the Fire crit DMG pet rising in Rumble.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-season-2",
+    "kind": "dc",
+    "query": "시즌2",
+    "why": "Season 2 of Rumble Arena: its buff, shop and rewards.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "dc-warena-buff",
+    "kind": "dc",
+    "query": "와레나 버프",
+    "why": "Rumble Arena's season buff by its short name.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "web-crumbgg-arena-page",
+    "kind": "web",
+    "url": "https://crumb.gg/arena",
+    "why": "crumb.gg's Arena page (read in a headed browser): both modes' seasons, passives, tiers and hidden defenders.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "web-crumbgg-equipment",
+    "kind": "web",
+    "url": "https://crumb.gg/equipment",
+    "why": "crumb.gg's equipment pages, for new gear's fixed lines and stats.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
+  },
+  {
+    "id": "web-blog-tunphoto0224",
+    "kind": "web",
+    "url": "https://m.blog.naver.com/tunphoto0224/224435676352",
+    "why": "올렐레옹's blog post behind the cafe's Chardonnay Arena deck; the author posts Arena decks per patch.",
+    "added": "2026-10-10",
+    "lastHit": "2026-10-10"
   }
 ]

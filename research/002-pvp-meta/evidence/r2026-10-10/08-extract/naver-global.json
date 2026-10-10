@@ -1,0 +1,60 @@
+{
+  "batch": "r2026-10-10 naver-global",
+  "mode_scope": "both",
+  "captured": "2026-10-10",
+  "window": "2026-10-07 to 2026-10-10",
+  "notes": [
+    "Evidence: r2026-10-10/04-naver-global/: nv/ (cafe articles), yt/ (watch digests, channel pages, the JuDMhwANm1M video with its frames and subtitle sheets), ytq/ (search pages and _hits.tsv), blog-tunphoto0224-224435676352.md (agent-browser read).",
+    "yt:JuDMhwANm1M has no captions; its narration is read from the burned-in subtitles in subs-JuDMhwANm1M/s-00.jpg to s-04.jpg, and its screens from frames-JuDMhwANm1M/."
+  ],
+  "posts": [
+    { "source": "other", "id": "yt-JuDMhwANm1M", "url": "https://www.youtube.com/watch?v=JuDMhwANm1M", "date": "2026-10-09", "title_kr": "[쿠키런크럼블] 아레나 샤르덱 공략", "title_en": "Arena Chardonnay deck guide (서신우)", "relevance": 3, "mode": "arena",
+      "summary_en": "서신우's post-patch Arena guide. Lineup: Bari 5★+ runs Cherry Cola, otherwise Rye; Strawberry Crepe sometimes to melt the first clash, usually Rockstar or Herb. Perks: Passion Pay on Milk with Armor Repair; under merc Lv.4, Health Insurance. Power jumped because Chardonnay deals more than other dealers and buffs crit, and because players moved from Conquest gear to crit RES gear, now essential against her opening burst. His crit RES preset: top-left Skill AMP + crit rate, bottom-left DR + crit RES, top-right Skill AMP + haste, bottom-right haste + crit RES or DR. Runes on screen: Milk ATK AMP x7 + Skill AMP; Rye crit DMG x5 + Skill AMP; Moon Rabbit DR x7 + HP; Chardonnay, Cheesecake and Herb all Skill AMP; Oven Skill Haste + ATK AMP x2 + Skill AMP. Chardonnay: Skill AMP, haste is a matter of taste. Battle: his 32.82M beat 34.51M, rising to 2,454 points and 3rd; his top damage Rye 2.03M, Oven 1.15M, Chardonnay 1.10M, Bari 0.74M.",
+      "teams": [{ "name": "Chardonnay Bari deck (Rye version)", "mode": "arena", "cookies": [
+        { "kr": "샤르도네", "en": "Chardonnay", "level": "118 (bottom bar)", "stars": "?", "position": "row1-1", "role": "crit buff, damage", "note": "30.71M screen" },
+        { "kr": "호밀", "en": "Rye", "level": "118", "stars": "?", "position": "row1-2", "role": "dealer in Cherry Cola's place", "note": "" },
+        { "kr": "치케", "en": "Cheesecake", "level": "118", "stars": "?", "position": "row1-3", "role": "ATK buff", "note": "" },
+        { "kr": "바리", "en": "Princess Bari", "level": "118", "stars": "?", "position": "row1-4", "role": "core charger", "note": "" },
+        { "kr": "들개", "en": "Nameless Cake Hound", "level": "118", "stars": "?", "position": "row1-5", "role": "tank", "note": "" },
+        { "kr": "허브", "en": "Herb", "level": "118", "stars": "?", "position": "row1-6", "role": "healer; Rockstar or Crepe swap", "note": "" },
+        { "kr": "오방", "en": "Oven Wanderer", "level": "118", "stars": "?", "position": "row2-1", "role": "charger", "note": "" },
+        { "kr": "피노", "en": "Pinot Noir", "level": "118", "stars": "?", "position": "row2-2", "role": "healing cut", "note": "" },
+        { "kr": "석류", "en": "Pomegranate", "level": "118", "stars": "?", "position": "row2-3", "role": "Skill AMP beam", "note": "" },
+        { "kr": "우유", "en": "Milk", "level": "118", "stars": "?", "position": "row2-4", "role": "captain", "note": "" },
+        { "kr": "이온맛 쿠키로봇", "en": "Ion Cookie Robot", "level": "118", "stars": "?", "position": "row2-5", "role": "tank", "note": "" },
+        { "kr": "달토끼", "en": "Moon Rabbit", "level": "118", "stars": "?", "position": "row2-6", "role": "tank", "note": "behind the avatar" }
+      ], "pets": ["갓난갓방울", "핫도그도그", "얼음과자새"], "perks": "Armor Repair + Passion Pay (Milk); Health Insurance under merc Lv.4", "formation": "owner formation screens at 24.08M, 30.71M and 31.5M", "why": "Chardonnay's crit flood and damage", "unorthodox": [] }],
+      "counters": [], "builds": [
+        { "cookie": "team", "mode": "arena", "sugar_runes": "", "gear": "top-left Skill AMP+crit rate; bottom-left DR+crit RES; top-right Skill AMP+haste; bottom-right haste+crit RES or DR", "why": "Crit RES is essential against Chardonnay's opening burst" },
+        { "cookie": "샤르도네", "mode": "arena", "sugar_runes": "Skill AMP (haste optional)", "gear": "", "why": "Arena is a burst meta; she doesn't cycle her skill much" },
+        { "cookie": "호밀", "mode": "arena", "sugar_runes": "crit DMG x5 + Skill AMP", "gear": "", "why": "" },
+        { "cookie": "달토끼", "mode": "arena", "sugar_runes": "DR x7 + HP AMP", "gear": "", "why": "" },
+        { "cookie": "우유", "mode": "arena", "sugar_runes": "ATK AMP x7 + Skill AMP", "gear": "", "why": "" }
+      ],
+      "mechanics": ["Arena power rose after 10-08 mostly from Chardonnay and crit RES gear, not the level cap."], "rules": [],
+      "results": [{ "team": "Chardonnay Bari deck (Rye version)", "win_rate": "", "usage": "", "power": "32.82M vs 34.51M", "note": "win; 2,454 points (+16), 3rd; mode not labelled" }], "disagreements": [], "quotes": [
+        { "kr": "바리가 5성 이상이면 체콜 아니라면 호밀을 사용하고", "en": "If Bari is 5★ or more, Cherry Cola; otherwise Rye" },
+        { "kr": "이를 버티기 위해서는 치저 세팅이 필수로 사용되며", "en": "To withstand it, a crit RES setting is essential" },
+        { "kr": "해당 장비는 차례대로 무기는 증폭, 치확 방어구는 피감, 치저 윗 악세는 증폭, 가속 아래는 가속에 사람에 따라 치저를 가져가는 경우도 있고 여기서는 피감을 챙기는 경우도 있습니다", "en": "In order: weapons Skill AMP + crit rate; armour DR + crit RES; upper accessories Skill AMP + haste; lower haste plus crit RES or DR by preference" }
+      ] },
+    { "source": "naver", "id": "51751", "url": "https://cafe.naver.com/ccrumble/51751", "date": "2026-10-10", "title_kr": "아레나 샤르덱 공략", "title_en": "Arena Chardonnay deck guide (cafe post of the video)", "relevance": 3, "mode": "arena",
+      "summary_en": "서신우's cafe post of the video. Replies: at Bari 5★ put Cherry Cola in Rye's slot; Chardonnay and Macaron together is a bad idea because only one buff of a kind applies.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Only one crit-rate buff of the kind applies: Chardonnay and Macaron don't stack."], "rules": [], "results": [], "disagreements": [], "quotes": [{ "kr": "호밀 자리에 체콜을 넣으면 그게 5성 조합입니다", "en": "Put Cherry Cola in Rye's slot: that's the 5★ lineup" }, { "kr": "동일한 종류의 버프는 하나만 적용되서 별로입니다", "en": "Only one buff of the same kind applies, so it's poor" }] },
+    { "source": "naver", "id": "51299", "url": "https://cafe.naver.com/ccrumble/51299", "date": "2026-10-08", "title_kr": "샤르도네맛 쿠키 활용, 신규 아레나 추천덱! 상대 진영을 순삭!!", "title_en": "New Arena deck with Chardonnay: delete the enemy line", "relevance": 3, "mode": "arena",
+      "summary_en": "올렐레오로리's cafe post linking the blog post below. Replies by the author: Chardonnay takes Macaron's slot whatever her stars; Bari under 5★ still works with Oven and Cherry Cola, 5★+ is better; replace Oven with Rye if needed; Pomegranate's first skill hits three fixed targets, Chardonnay and Milk by Projectile Speed, so give the third to Bari or Oven; lately the author swaps Herb for Rye and battles are fast again.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["Pomegranate's first skill has three fixed targets: Projectile Speed receivers first."], "rules": [], "results": [], "disagreements": [], "quotes": [{ "kr": "성급과 관계없이 마카롱 자리를 대체하는거라 아무 상관 없습니다", "en": "She replaces Macaron's slot regardless of stars" }] },
+    { "source": "other", "id": "blog-tunphoto0224-224435676352", "url": "https://m.blog.naver.com/tunphoto0224/224435676352", "date": "2026-10-08", "title_kr": "[쿠키런:크럼블] 샤르도네맛 쿠키 출시! 신규 아레나 추천 덱", "title_en": "Chardonnay is out: the new recommended Arena deck (올렐레옹 blog)", "relevance": 3, "mode": "arena",
+      "summary_en": "The deck: Bari, Oven Wanderer and Cherry Cola deal; Ion, Cake Hound and Moon Rabbit tank; Cheesecake, Herb, Milk, Pomegranate and Pinot buff; Chardonnay in Macaron's old slot. At max stars her crit buff equals Macaron's but lands fast on a wide line with push RES and needs no stacking, so even low-star Chardonnay beats Macaron in Arena. Perks: Passion Pay fixed; Armor Repair against strong opponents, Rapid Promotion against weak ones. Runes: Skill AMP first (push RES ignores it); haste unnecessary because her 5 s buff outlasts the 4 s cooldown.",
+      "teams": [], "counters": [], "builds": [{ "cookie": "샤르도네", "mode": "arena", "sugar_runes": "Skill AMP first; no haste", "gear": "", "why": "Crit buff scales with Skill AMP; 5 s duration over a 4 s cooldown" }], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{ "kr": "성급이 낮아도 마카롱 자리에는 이제 샤르도네맛 쿠키를 쓰는게 훨씬 좋아", "en": "Even at low stars, Chardonnay is far better in Macaron's slot now" }] },
+    { "source": "naver", "id": "51217", "url": "https://cafe.naver.com/ccrumble/51217", "date": "2026-10-08", "title_kr": "10/08 업데이트 이후 슈가룬", "title_en": "Sugar runes after the 10-08 update", "relevance": 2, "mode": "both",
+      "summary_en": "A general rune list in priority order (all modes): Chardonnay Skill AMP; Rye Skill AMP, crit DMG, ATK AMP; Bari Skill AMP, haste, DR; Oven Skill AMP, DR or HP; Cherry Cola Skill AMP, crit DMG, DR, ATK AMP; Moon Rabbit haste, focus, DR; Hound haste, HP / DR / RES; Ion HP, DR, ATK AMP; Pinot focus, haste, DR; Milk ATK AMP. Author: Chardonnay's crit buff grows with Skill AMP.",
+      "teams": [], "counters": [], "builds": [{ "cookie": "샤르도네", "mode": "both", "sugar_runes": "Skill AMP", "gear": "", "why": "Crit buff scales" }], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [{ "kr": "스증으로 치확버프를 올리는게 좋습니다", "en": "Raise the crit buff with Skill AMP" }] },
+    { "source": "naver", "id": "51057", "url": "https://cafe.naver.com/ccrumble/51057", "date": "2026-10-08", "title_kr": "스토어 업데이트 소식 내 일일던전 레벨 확장 문구 관련 정정 안내", "title_en": "Correction: the store text's daily-dungeon expansion", "relevance": 1, "mode": "both",
+      "summary_en": "Official notice: the daily-dungeon level expansion in the store's update text belongs to the 10-22 update. Dates the next update; nothing for PvP.",
+      "teams": [], "counters": [], "builds": [], "mechanics": [], "rules": [], "results": [], "disagreements": [], "quotes": [] },
+    { "source": "naver", "id": "51000", "url": "https://cafe.naver.com/ccrumble/51000", "date": "2026-10-08", "title_kr": "님들 그거암? 와레나는 강종컨이 가능했다는거", "title_en": "Did you know Rumble allows force-quitting?", "relevance": 1, "mode": "rumble_arena",
+      "summary_en": "Force-quitting a Rumble battle works, unlike Arena. Replies: the result is decided at the start; 100 replays give the same death order and damage.",
+      "teams": [], "counters": [], "builds": [], "mechanics": ["A battle's outcome is fixed at its start; force-quitting doesn't change it (replies)."], "rules": [], "results": [], "disagreements": [], "quotes": [{ "kr": "100번을 돌려도 결과는 같더군요", "en": "Even after 100 runs the result was the same" }] }
+  ],
+  "glossary": []
+}
