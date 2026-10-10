@@ -15,16 +15,42 @@ Adb(args) {
 }
 
 /**
- * Runs adb against the configured device, hidden, and returns what it printed.
- * @param args everything after `adb -s <serial>`, e.g. "shell dumpsys display"
+ * Runs adb, hidden, and returns what it printed.
+ * @param args everything after `adb -s <serial>`, e.g. "shell dumpsys display"; with onDevice
+ *   false, everything after `adb`, e.g. "connect 127.0.0.1:5557"
+ * @param onDevice false for a command to the adb server rather than the device (no `-s`)
  * @returns adb's stdout and stderr; empty when it printed nothing
  */
-AdbOut(args) {
+AdbOut(args, onDevice := true) {
     path := A_Temp "\adb-out-" ProcessExist() ".txt"
+    target := onDevice ? " -s " Cfg["Serial"] : ""
     try FileDelete(path)
-    RunWait(A_ComSpec ' /c ""' Cfg["Path"] '" -s ' Cfg["Serial"] " " args ' > "' path '" 2>&1"', , "Hide")
+    RunWait(A_ComSpec ' /c ""' Cfg["Path"] '"' target " " args ' > "' path '" 2>&1"', , "Hide")
     try return FileRead(path, "UTF-8")
     return ""
+}
+
+/**
+ * Makes sure adb reaches the configured device. The adb server drops an emulator that restarts
+ * and never finds it again, so a network serial (host:port) that doesn't answer is disconnected
+ * and connected again.
+ * @throws Error when adb can't reach the device: the emulator isn't running, or the serial is an
+ *   `emulator-N` one, which only an adb server restart finds again
+ */
+EnsureDevice() {
+    serial := Cfg["Serial"]
+    if (Trim(AdbOut("get-state"), " `r`n") = "device")
+        return
+    if !RegExMatch(serial, "^[^:\s]+:\d+$")
+        throw Error("adb can't reach " serial "; set [Adb] Serial to the emulator's host:port (MuMu: 127.0.0.1:5557), or restart adb with ``adb kill-server``")
+    AdbOut("disconnect " serial, false)
+    said := Trim(AdbOut("connect " serial, false), " `r`n")
+    loop 5 {
+        if (Trim(AdbOut("get-state"), " `r`n") = "device")
+            return
+        Sleep 1000
+    }
+    throw Error("adb can't reach " serial ", so the emulator isn't running or listens elsewhere (adb: " said ")")
 }
 
 /**
@@ -32,10 +58,12 @@ AdbOut(args) {
  * displays when it restarts, so fixed ids go stale.
  * - The logical id (for `input -d`) is the display whose top resumed activity is [Adb] Package.
  * - The SurfaceFlinger id (for `screencap -d`) is that display's `local:` unique id.
- * @throws Error when the game isn't the top activity on any display, or the display has no unique id
+ * @throws Error from EnsureDevice when adb can't reach the device; Error when the game isn't the
+ *   top activity on any display, or the display has no unique id
  */
 ResolveDisplays() {
     global AdbDisplays
+    EnsureDevice()
     pkg := Cfg["Package"]
     logical := ""
     current := ""
@@ -120,9 +148,11 @@ IsImage(buf) {
 /**
  * Captures the game's display as raw RGBA: a 16-byte header (width, height, format, colour
  * space as UInt32) followed by 4 bytes per pixel. A failed capture is retried a few times,
- * resolving an "auto" display again in case the emulator renumbered its displays.
+ * reconnecting the device and resolving an "auto" display again in case the emulator restarted
+ * or renumbered its displays.
  * @returns Buffer with the capture
- * @throws Error when adb produced no image on any try, or "auto" can't find the game
+ * @throws Error when adb produced no image on any try, adb can't reach the device, or "auto"
+ *   can't find the game
  */
 Capture() {
     global AdbDisplays
@@ -138,6 +168,7 @@ Capture() {
         if IsImage(buf)
             return buf
         AdbDisplays := Map()
+        EnsureDevice()
         Sleep 1000
     }
     throw Error("screen capture failed; check [Adb] Path, Serial, Package and CaptureDisplay")
