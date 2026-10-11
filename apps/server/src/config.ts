@@ -43,3 +43,9 @@ export const snapshotPath = join(repoRoot, "data", "snapshot.json");
  * `CRUMBLE_ACCOUNT`.
  */
 export const accountDir = process.env.CRUMBLE_ACCOUNT ?? join(repoRoot, "account");
+
+/**
+ * Absolute path to the Guild Conquest macro's folder, whose INI and recorded runs and curves
+ * (local, gitignored) the attempts API reads; overridable via `CRUMBLE_MACRO`.
+ */
+export const macroDir = process.env.CRUMBLE_MACRO ?? join(repoRoot, "tools", "conquest-macro");

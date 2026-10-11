@@ -110,4 +110,5 @@ export const DUNGEON = {
   },
   teamPower: null,
   daily: null,
+  attempts: null,
 } as const satisfies ModeSection;

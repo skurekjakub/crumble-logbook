@@ -679,3 +679,19 @@ export const rankingSeasonsQuery = () =>
     queryKey: ["rankings", "seasons"],
     queryFn: () => parseResponse(api.rankings.seasons.$get()),
   });
+
+/** How often the attempts page asks again, so it follows a running macro. */
+const ATTEMPTS_REFRESH_MS = 20_000;
+
+/**
+ * The Guild Conquest macro's recorded attempts, oldest first, with their curves and the
+ * macro's pace rule; refreshed while the page is open.
+ *
+ * @returns the query options
+ */
+export const attemptsQuery = () =>
+  queryOptions({
+    queryKey: ["attempts"],
+    queryFn: () => parseResponse(api.attempts.$get()),
+    refetchInterval: ATTEMPTS_REFRESH_MS,
+  });

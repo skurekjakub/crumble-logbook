@@ -7,7 +7,7 @@
  * @module
  */
 import { notFound } from "@tanstack/react-router";
-import type { DungeonConfig, ModeSection, StageConfig, TeamPowerConfig } from "./modes";
+import type { DungeonConfig, ModeSection, StageConfig, TeamPowerConfig, ViewCopy } from "./modes";
 import { modeById, tabAt } from "./modes";
 
 /**
@@ -83,4 +83,19 @@ export function requireTeamPower(
   requireTab(mode, pathname);
   if (!mode.teamPower) throw notFound();
   return { teamPower: mode.teamPower };
+}
+
+/**
+ * Refuses the macro's attempts page for a mode the macro doesn't play, or
+ * that doesn't list the page among its tabs.
+ *
+ * @param mode - the mode, from the route context
+ * @param pathname - the requested path
+ * @returns the page's copy, for the route context
+ * @throws the router's not-found error for any other mode or page
+ */
+export function requireAttempts(mode: ModeSection, pathname: string): { attempts: ViewCopy } {
+  requireTab(mode, pathname);
+  if (!mode.attempts) throw notFound();
+  return { attempts: mode.attempts };
 }

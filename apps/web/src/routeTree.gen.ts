@@ -17,6 +17,7 @@ import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as ModeIndexRouteImport } from './routes/$mode/index'
+import { Route as ModeAttemptsRouteImport } from './routes/$mode/attempts'
 import { Route as ModeBossRouteImport } from './routes/$mode/boss'
 import { Route as ModeBracketsRouteImport } from './routes/$mode/brackets'
 import { Route as ModeClearsRouteImport } from './routes/$mode/clears'
@@ -83,6 +84,11 @@ const SourcesRoute = SourcesRouteImport.update({
 const ModeIndexRoute = ModeIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeAttemptsRoute = ModeAttemptsRouteImport.update({
+  id: '/attempts',
+  path: '/attempts',
   getParentRoute: () => ModeRoute,
 } as any)
 const ModeBossRoute = ModeBossRouteImport.update({
@@ -229,6 +235,7 @@ export interface FileRoutesByFullPath {
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
+  '/$mode/attempts': typeof ModeAttemptsRoute
   '/$mode/boss': typeof ModeBossRoute
   '/$mode/brackets': typeof ModeBracketsRoute
   '/$mode/clears': typeof ModeClearsRoute
@@ -265,6 +272,7 @@ export interface FileRoutesByTo {
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
+  '/$mode/attempts': typeof ModeAttemptsRoute
   '/$mode/boss': typeof ModeBossRoute
   '/$mode/brackets': typeof ModeBracketsRoute
   '/$mode/clears': typeof ModeClearsRoute
@@ -303,6 +311,7 @@ export interface FileRoutesById {
   '/glossary': typeof GlossaryRoute
   '/research': typeof ResearchRoute
   '/sources': typeof SourcesRoute
+  '/$mode/attempts': typeof ModeAttemptsRoute
   '/$mode/boss': typeof ModeBossRoute
   '/$mode/brackets': typeof ModeBracketsRoute
   '/$mode/clears': typeof ModeClearsRoute
@@ -342,6 +351,7 @@ export interface FileRouteTypes {
     | '/glossary'
     | '/research'
     | '/sources'
+    | '/$mode/attempts'
     | '/$mode/boss'
     | '/$mode/brackets'
     | '/$mode/clears'
@@ -378,6 +388,7 @@ export interface FileRouteTypes {
     | '/glossary'
     | '/research'
     | '/sources'
+    | '/$mode/attempts'
     | '/$mode/boss'
     | '/$mode/brackets'
     | '/$mode/clears'
@@ -415,6 +426,7 @@ export interface FileRouteTypes {
     | '/glossary'
     | '/research'
     | '/sources'
+    | '/$mode/attempts'
     | '/$mode/boss'
     | '/$mode/brackets'
     | '/$mode/clears'
@@ -512,6 +524,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/$mode/'
       preLoaderRoute: typeof ModeIndexRouteImport
+      parentRoute: typeof ModeRoute
+    }
+    '/$mode/attempts': {
+      id: '/$mode/attempts'
+      path: '/attempts'
+      fullPath: '/$mode/attempts'
+      preLoaderRoute: typeof ModeAttemptsRouteImport
       parentRoute: typeof ModeRoute
     }
     '/$mode/boss': {
@@ -707,6 +726,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface ModeRouteChildren {
+  ModeAttemptsRoute: typeof ModeAttemptsRoute
   ModeBossRoute: typeof ModeBossRoute
   ModeBracketsRoute: typeof ModeBracketsRoute
   ModeClearsRoute: typeof ModeClearsRoute
@@ -737,6 +757,7 @@ interface ModeRouteChildren {
 }
 
 const ModeRouteChildren: ModeRouteChildren = {
+  ModeAttemptsRoute: ModeAttemptsRoute,
   ModeBossRoute: ModeBossRoute,
   ModeBracketsRoute: ModeBracketsRoute,
   ModeClearsRoute: ModeClearsRoute,

@@ -68,4 +68,5 @@ export const DAILY = {
     decksTitle: "Decks by stage",
     clearsTitle: "Clears",
   },
+  attempts: null,
 } as const satisfies ModeSection;

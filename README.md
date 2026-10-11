@@ -12,7 +12,8 @@ A local research tool for Cookie Run: Crumble: what top Korean and global player
 | `apps/server` | The data API: Hono over SQLite, layered `routes → services → repos`, with one content-type registry, plus the record importer and the snapshot CLIs. |
 | `apps/web` | The web app: React + TanStack Router/Query, typed against the API through `hc<AppType>`. One section per game mode (driven by `src/app/modes/`, a file per mode, and served by the shared routes under `src/routes/$mode/`), plus the Damage formula (record 007's pipeline of multipliers, crit calculator and community claims against the client's code), Account (the reader's roadmap and lineups), Research, Sources and Glossary. |
 | `data/` | `crumble.db` (local, gitignored) and `snapshot.json`, the committed, diffable dump of the database. |
-| `tools/conquest-macro/` | An AutoHotkey v2 loop that retries the Guild Conquest fight; its README covers tuning. |
+| `tools/conquest-macro/` | An AutoHotkey v2 loop that retries the Guild Conquest fight; its README covers tuning. The runs and score curves it records locally are charted on Guild Conquest's Attempts tab. |
+| `tools/conquest-hud/` | Reads the fight's score and countdown, and the results' final score, off a capture for the macro. |
 | `tools/eslint-config/` | The ESLint flat config (a workspace package). It carries its own TypeScript 6.0, because typescript-eslint needs the JS compiler API, which the native TypeScript 7 behind `tsc` doesn't ship yet (expected in 7.1). |
 | `docs/superpowers/` | The design specs (`specs/`) and the implementation plans (`plans/`). |
 | `OPEN-QUESTIONS.md` | Decisions waiting on the user. |
@@ -122,6 +123,7 @@ Every resource is under `/api` and speaks JSON. Validation failures are 400 with
 | `/api/rankings` | `GET`, `GET /seasons` | `?season=` and `?board=players\|guilds\|power`. |
 | `/api/records` | `GET`, `GET /:slug` | Research records: the mode each is filed under, and `modes`, the modes it covers with their own lede and caveat. |
 | `/api/account` | `GET` | The reader's account: the latest snapshot (lineups with names glossed, pets, resources, `unread`) and roadmap (items with `refs` resolved to a deck or record and its mode), each `null` when none is loaded, and every loaded snapshot and roadmap by id. `?snapshot=` and `?roadmap=` pick older ones (404 when not loaded). Read-only: `pnpm import:account` writes it. |
+| `/api/attempts` | `GET` | The Guild Conquest macro's recorded runs, oldest first: how each ended, its score when the pace was judged, its final score and its score curve, with the pace rule from the macro's INI. Read-only and live: it reads `tools/conquest-macro/` (or the folder `CRUMBLE_MACRO` names) on every request, and those files are local, so the deployment answers `available: false`. Not in the database or the snapshot. |
 | `/api/export` | `GET` | The full snapshot, the same shape as `data/snapshot.json`. |
 
 **SQLite driver:** Node's built-in `node:sqlite`, through the `drizzle-orm/node-sqlite` driver in drizzle-orm 1.0 beta. It needs no native build, which matters on ARM64 Windows. Zod schemas come from `drizzle-orm/zod`, the 1.0 home of drizzle-zod. The fallbacks (`better-sqlite3`, `@libsql/client`) weren't needed. The spike, run 2026-09-27 on Node 24.18.0 ARM64, is kept as `packages/schema/test/driver.test.ts`.

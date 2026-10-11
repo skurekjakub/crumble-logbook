@@ -14,9 +14,10 @@
 import { existsSync, readFileSync } from "node:fs";
 import { serve } from "@hono/node-server";
 import { createApp } from "./app";
-import { dbPath, port, snapshotPath } from "./config";
+import { dbPath, macroDir, port, snapshotPath } from "./config";
 import { openDb } from "./db/client";
 import { createStore } from "./repos";
+import { createAttemptsRepo } from "./repos/attempts";
 import { createServices } from "./services";
 import type { Snapshot } from "./services/export";
 import { restoreSnapshot } from "./services/export";
@@ -45,7 +46,7 @@ if (seed) {
     console.warn(`warning: couldn't compare ${dbPath} with ${snapshotPath}: ${String(err)}`);
   }
 }
-const app = createApp(createServices(store));
+const app = createApp(createServices(store, createAttemptsRepo(macroDir)));
 
 serve({ fetch: app.fetch, port }, (info) => {
   console.log(`crumble-logbook API on http://localhost:${info.port}/api (db: ${dbPath})`);

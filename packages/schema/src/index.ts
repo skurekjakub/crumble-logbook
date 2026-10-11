@@ -10,3 +10,4 @@ export * from "./daily-dungeon";
 export * from "./team-power";
 export * from "./damage-formula";
 export * from "./account";
+export * from "./attempts";

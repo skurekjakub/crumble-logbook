@@ -27,6 +27,7 @@ export const CONQUEST = {
     modeTab("conquest", "mechanics", "Mechanics", "/$mode/mechanics"),
     modeTab("conquest", "timeline", "Timeline", "/$mode/timeline"),
     modeTab("conquest", "boss", "Piñata", "/$mode/boss"),
+    modeTab("conquest", "attempts", "Attempts", "/$mode/attempts"),
   ],
   scope: { mode: "guild_conquest" },
   placeholder: null,
@@ -136,4 +137,12 @@ export const CONQUEST = {
   dungeon: null,
   teamPower: null,
   daily: null,
+  attempts: {
+    title: "Your attempts",
+    lede: [
+      "Every macro run, live; expand one for its curve.",
+      "Green made the bar at 30 s left; grey was pruned.",
+      "Pick a moment to test an earlier cut.",
+    ],
+  },
 } as const satisfies ModeSection;

@@ -201,6 +201,8 @@ export interface ModeSection extends SectionBase {
   teamPower: TeamPowerConfig | null;
   /** The daily dungeon board, for the daily dungeon mode. */
   daily: DailyConfig | null;
+  /** The macro's attempts page, for a mode the retry macro plays. */
+  attempts: ViewCopy | null;
 }
 
 /**

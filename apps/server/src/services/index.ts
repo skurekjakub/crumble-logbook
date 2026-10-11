@@ -1,8 +1,12 @@
 import type { ContentKey } from "../registry";
 import { CONTENT_KEYS } from "../registry";
 import type { Store } from "../repos";
+import type { AttemptsRepo } from "../repos/attempts";
+import { createAttemptsRepo } from "../repos/attempts";
 import type { AccountService } from "./account";
 import { createAccountService } from "./account";
+import type { AttemptsService } from "./attempts";
+import { createAttemptsService } from "./attempts";
 import type { CapturesService } from "./captures";
 import { createCapturesService } from "./captures";
 import type { RegisteredService } from "./content";
@@ -44,6 +48,7 @@ export type Services = ContentServices & {
   records: RecordsService;
   captures: CapturesService;
   account: AccountService;
+  attempts: AttemptsService;
   export: ExportService;
 };
 
@@ -51,9 +56,14 @@ export type Services = ContentServices & {
  * Builds every service over a shared {@link Store}.
  *
  * @param store - the store services persist through
+ * @param attempts - reads the Guild Conquest macro's recorded attempts, which live in the
+ *   macro's own files rather than the store; by default there are none
  * @returns the service set
  */
-export function createServices(store: Store): Services {
+export function createServices(
+  store: Store,
+  attempts: AttemptsRepo = createAttemptsRepo(null),
+): Services {
   const content = Object.fromEntries(
     CONTENT_KEYS.map((key) => [key, registeredService(store, key)]),
   ) as ContentServices;
@@ -69,6 +79,7 @@ export function createServices(store: Store): Services {
     records: createRecordsService(store),
     captures: createCapturesService(store),
     account: createAccountService(store),
+    attempts: createAttemptsService(attempts),
     export: createExportService(store),
   };
 }

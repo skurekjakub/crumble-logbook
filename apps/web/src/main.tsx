@@ -19,6 +19,7 @@ import "./styles/obsolete.css";
 import "./styles/team-power.css";
 import "./styles/account.css";
 import "./styles/formula.css";
+import "./styles/attempts.css";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000 } },
