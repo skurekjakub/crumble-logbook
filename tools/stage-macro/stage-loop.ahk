@@ -273,10 +273,12 @@ Attempt(num, script) {
     changed := SceneChange(started)
     Log(changed ? Format("scene changed {} s after the tap", Secs(started, changed))
         : Format("Summon Boss still up {} s after the tap", Secs(started, A_TickCount)))
+    a := {num: num, try: Tries[num], script: has ? rel : "", video: video, started: started,
+        changed: changed, seen: 0, ended: 0, reason: ""}
     if (has && changed) {
         Phase := "playing " rel
         try {
-            PlayScript(script, changed)
+            PlayScript(script, a)
         } catch Error as e {
             if (e is StopSignal)
                 throw e
@@ -284,8 +286,7 @@ Attempt(num, script) {
         }
     }
     Phase := "boss"
-    return {num: num, try: Tries[num], script: has ? rel : "", video: video, started: started,
-        changed: changed, seen: 0, ended: 0, reason: ""}
+    return a
 }
 
 /**
@@ -313,13 +314,14 @@ SceneChange(started) {
 /**
  * Plays a movement script, logging each step with its time from the scene change. One step per
  * line, `;` starts a comment.
- * - `wait <ms>`: does nothing for that long.
+ * - `wait <ms>`: does nothing for that long, while following the encounter (Watch).
  * - `<keys> <ms>`: holds W, A, S or D, or several joined by +, e.g. `W+D 1200`, for that long.
+ * The script stops early once the encounter has ended.
  * @param path the script's path
- * @param changed A_TickCount of the scene change the script counts from
+ * @param a the try from Attempt; the script counts from its scene change
  * @throws Error naming the line when a step isn't one of those; StopSignal when F8 stops the loop
  */
-PlayScript(path, changed) {
+PlayScript(path, a) {
     for i, line in StrSplit(FileRead(path, "UTF-8"), "`n", "`r") {
         step := Trim(RegExReplace(line, ";.*$"))
         if (step = "")
@@ -327,9 +329,12 @@ PlayScript(path, changed) {
         if !RegExMatch(step, "i)^(wait|[WASD](?:\+[WASD])*)\s+(\d+)$", &m)
             throw Error("line " i " isn't a step: " step)
         CheckStop()
-        Log(Format("step at +{} s: {}", Secs(changed, A_TickCount), step))
+        Log(Format("step at +{} s: {}", Secs(a.changed, A_TickCount), step))
         if (m[1] = "wait") {
-            Wait(Integer(m[2]))
+            if !Watch(a, Integer(m[2])) {
+                Log(Format("script stopped at +{} s: the encounter has ended", Secs(a.changed, A_TickCount)))
+                return
+            }
             continue
         }
         keys := []
@@ -337,7 +342,33 @@ PlayScript(path, changed) {
             keys.Push("KEYCODE_" k)
         HoldKeys(keys, Integer(m[2]))
     }
-    Log(Format("script done at +{} s", Secs(changed, A_TickCount)))
+    Log(Format("script done at +{} s", Secs(a.changed, A_TickCount)))
+}
+
+/**
+ * Waits while following a try's encounter, polling the screen into Judge, so a script's long
+ * wait neither hides when the encounter showed nor plays on past its end.
+ * @param a the try from Attempt; Judge fills in its ticks
+ * @param ms how long to wait
+ * @returns false once the encounter has been gone 2 s; true when the wait ran out with it still on
+ *   or not yet shown
+ * @throws StopSignal when F8 stops the loop
+ */
+Watch(a, ms) {
+    deadline := A_TickCount + ms
+    loop {
+        ; A capture takes about half a second; one closer to the deadline would overrun it.
+        if (deadline - A_TickCount > 700) {
+            Judge(a, Observe(Capture()))
+            ; A blast over the boss icon can hide the encounter for a poll; gone 2 s is over.
+            if (a.ended && A_TickCount - a.ended >= 2000)
+                return false
+        }
+        left := deadline - A_TickCount
+        if (left <= 0)
+            return true
+        Wait(Min(N("PollMs"), left))
+    }
 }
 
 /**

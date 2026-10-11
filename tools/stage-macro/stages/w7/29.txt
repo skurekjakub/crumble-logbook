@@ -1,0 +1,5 @@
+; 358-29, Durianeer Fanfruit: spawns just up and right of the team, as 358-28's boss does.
+; Won with no input on 2026-10-11, in about 19 s. This script, 358-28's opening walk, is untested.
+wait 500
+W+D 300
+D 500
