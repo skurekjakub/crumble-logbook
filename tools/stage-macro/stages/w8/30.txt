@@ -1,0 +1,7 @@
+; 359-30, GingerCraven: spawns right of the team, a little above it.
+; Lost with no input: 59% health left at 28 s. From the HUD, W+D 150 then D 300 left the team
+; just under it and lost 4 tries (41% to 61% left). This one carries on up onto it; untested.
+encounter
+W+D 150
+D 300
+W 200
