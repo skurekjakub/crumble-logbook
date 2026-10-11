@@ -1,0 +1,6 @@
+; 362-24, Redberry Assassin: stands right of the team at the HUD, about level with it, amid a pack
+; of red-hooded assassins spread out to its right, as on 362-18.
+; Lost with no input: 7% health left at 27 s. This script, 362-18's, won its first try here on
+; 2026-10-11.
+encounter
+D 1000

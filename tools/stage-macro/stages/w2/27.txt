@@ -1,0 +1,6 @@
+; 362-27, Queen Jelly Bee: stands right of the team at the HUD, about level with it, amid a pack
+; spread out to its right, as on 362-23.
+; Lost with no input: 31% health left at 31 s. With this script, 362-23's, it lost 3
+; tries (14% to 24% left) and won the 4th on 2026-10-11, in about 22 s.
+encounter
+D 550

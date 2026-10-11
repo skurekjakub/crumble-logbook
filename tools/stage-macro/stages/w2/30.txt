@@ -1,0 +1,7 @@
+; 362-30, Cool Mint Cookie: the chapter's boss, a cookie with a drill who stands right of the team
+; at the HUD, a little above it, amid a pack spread out to its right.
+; Lost with no input: 83% health left at 30 s. The user beat the stage by hand on 2026-10-11
+; ("it's tricky"); this walk is untested.
+encounter
+W+D 200
+D 500
