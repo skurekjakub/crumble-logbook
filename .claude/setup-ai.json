@@ -29,7 +29,6 @@
       "block-destructive-bash",
       "prefer-verify-script",
       "format-on-edit",
-      "project-context",
       "remind-rules",
       "notify-done"
     ],
