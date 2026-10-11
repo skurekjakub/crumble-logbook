@@ -315,6 +315,8 @@ SceneChange(started) {
  * Plays a movement script, logging each step with its time from the scene change. One step per
  * line, `;` starts a comment.
  * - `wait <ms>`: does nothing for that long, while following the encounter (Watch).
+ * - `encounter`: waits for the encounter's HUD, while following it (Watch). The boss's intro
+ *   plays between the scene change and the HUD, and the team won't move during it.
  * - `<keys> <ms>`: holds W, A, S or D, or several joined by +, e.g. `W+D 1200`, for that long.
  * The script stops early once the encounter has ended.
  * @param path the script's path
@@ -326,21 +328,30 @@ PlayScript(path, a) {
         step := Trim(RegExReplace(line, ";.*$"))
         if (step = "")
             continue
-        if !RegExMatch(step, "i)^(wait|[WASD](?:\+[WASD])*)\s+(\d+)$", &m)
+        if !RegExMatch(step, "i)^(?:(encounter)|(wait|[WASD](?:\+[WASD])*)\s+(\d+))$", &m)
             throw Error("line " i " isn't a step: " step)
         CheckStop()
         Log(Format("step at +{} s: {}", Secs(a.changed, A_TickCount), step))
-        if (m[1] = "wait") {
-            if !Watch(a, Integer(m[2])) {
+        if (m[1] != "") {
+            while (!a.seen && A_TickCount - a.changed < N("StartWaitMs"))
+                Watch(a, N("PollMs"))
+            Log(a.seen ? Format("encounter showing at +{} s", Secs(a.changed, a.seen))
+                : "script stopped: no encounter " N("StartWaitMs") " ms after the scene change")
+            if !a.seen
+                return
+            continue
+        }
+        if (m[2] = "wait") {
+            if !Watch(a, Integer(m[3])) {
                 Log(Format("script stopped at +{} s: the encounter has ended", Secs(a.changed, A_TickCount)))
                 return
             }
             continue
         }
         keys := []
-        for k in StrSplit(StrUpper(m[1]), "+")
+        for k in StrSplit(StrUpper(m[2]), "+")
             keys.Push("KEYCODE_" k)
-        HoldKeys(keys, Integer(m[2]))
+        HoldKeys(keys, Integer(m[3]))
     }
     Log(Format("script done at +{} s", Secs(a.changed, A_TickCount)))
 }
