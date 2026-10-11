@@ -167,12 +167,14 @@ HoldKeys(keys, ms) {
  * Starts recording the game's display on the device, without waiting for it.
  * @param devicePath where the device writes the video, e.g. "/sdcard/boss.mp4"
  * @param seconds when the recording stops
+ * @param options more screenrecord options, e.g. "--size 720x1280 --bit-rate 4000000"
  * @returns the adb process id
  * @throws Error from GameDisplay when "auto" can't find the game
  */
-RecordScreen(devicePath, seconds) {
+RecordScreen(devicePath, seconds, options := "") {
     id := GameDisplay("Capture")
-    return AdbStart("shell screenrecord" (id != "" ? " --display-id " id : "") " --time-limit " seconds " " devicePath)
+    return AdbStart("shell screenrecord" (id != "" ? " --display-id " id : "") " --time-limit " seconds
+        (options != "" ? " " options : "") " " devicePath)
 }
 
 /**

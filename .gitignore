@@ -36,11 +36,12 @@ research/**/*.webm
 research/**/*.mkv
 research/**/*.mov
 
-# macro logs and run records, and the screens a macro stopped on
+# macro logs and run records, the screens a macro stopped on, and its recordings
 tools/**/*.log
 tools/**/*-runs.csv
 tools/**/*-curves.csv
 tools/**/stops/
+tools/**/recordings/
 
 __pycache__/
 *.pyc

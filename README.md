@@ -14,6 +14,7 @@ A local research tool for Cookie Run: Crumble: what top Korean and global player
 | `data/` | `crumble.db` (local, gitignored) and `snapshot.json`, the committed, diffable dump of the database. |
 | `tools/conquest-macro/` | An AutoHotkey v2 loop that retries the Guild Conquest fight; its README covers tuning. The runs and score curves it records locally are charted on Guild Conquest's Attempts tab. |
 | `tools/exp-dungeon-macro/` | An AutoHotkey v2 loop that retries an EXP Dungeon stage until it falls. |
+| `tools/stage-macro/` | An AutoHotkey v2 loop that fights each stage's boss with that stage's movement script (`stages/`), walking the team onto the boss as the encounter opens. |
 | `tools/macro-lib/` | What the macros share: adb screen capture, taps and key holds, and the loop's frame (INI, log, status, start/stop, probe, hotkeys). |
 | `tools/hud/` | Reads numbers off a capture for the macros: the Guild Conquest score, countdown and final score, and a stage's number. |
 | `tools/eslint-config/` | The ESLint flat config (a workspace package). It carries its own TypeScript 6.0, because typescript-eslint needs the JS compiler API, which the native TypeScript 7 behind `tsc` doesn't ship yet (expected in 7.1). |

@@ -1,0 +1,4 @@
+; 358-21, Blueberry Cream Hermit Crab: spawns right of the team and a little above it.
+; With no input it kept 22% at the end.
+wait 2000
+D 2600
