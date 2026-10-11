@@ -1,0 +1,8 @@
+; 362-4, Cookievorous Plant: a big red flower that stands up and right of the team at the HUD.
+; Big bosses like it need the walk to carry the team slightly past them, so the whole line ends up
+; on it.
+; Lost with no input: 67% health left at 29 s. W+D 300, D 400 lost 1 try (5% left). This walk
+; past it lost 1 (16% left) and won the 2nd on 2026-10-11, in about 25 s.
+encounter
+W+D 400
+D 550

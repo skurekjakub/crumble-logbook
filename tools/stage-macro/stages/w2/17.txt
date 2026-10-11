@@ -1,0 +1,6 @@
+; 362-17, Cookievorous Plant: a big red flower that stands up and right of the team at the HUD, as
+; on 362-14. The walk carries the team well past the flower's middle.
+; Lost with no input: 31% health left at 29 s. This script, 362-14's, is untested here.
+encounter
+W+D 500
+D 900

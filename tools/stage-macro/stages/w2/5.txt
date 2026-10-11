@@ -1,0 +1,7 @@
+; 362-5, Cookievorous Plant: a big red flower that stands up and right of the team at the HUD, as
+; on 362-4; the walk carries the team slightly past it.
+; Lost with no input: 28% health left at 33 s. With this script, 362-4's, it lost 1
+; try (34% left) and won the 2nd on 2026-10-11, in about 21 s.
+encounter
+W+D 400
+D 550

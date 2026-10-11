@@ -1,0 +1,7 @@
+; 362-3, Redberry Assassin: stands right of the team at the HUD, a little below it, amid a pack of
+; red-hooded assassins, as on 362-2.
+; Lost with no input: 23% health left at 33 s. This walk, the one that beat 362-2, won
+; its first try here on 2026-10-11, in about 18 s.
+encounter
+S+D 150
+D 400
