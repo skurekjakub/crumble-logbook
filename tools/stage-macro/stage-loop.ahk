@@ -22,6 +22,9 @@ global Tries := Map()
 global UnreadSaved := Map()
 ; The screen the last poll classified, so the log records each change once.
 global LastScreen := ""
+; How long a capture takes, in ms, averaged over recent ones, so Watch knows whether one still fits
+; before a wait's end. Starts at a typical capture's time over MuMu's adb.
+global CaptureMs := 1500
 
 ; Fallbacks used when a key is missing from the INI. Section -> key -> value.
 global DEFAULTS := Map(
@@ -32,9 +35,10 @@ global DEFAULTS := Map(
                   "Boss", "320,380,FF632D|360,380,FF632D|320,400,FF3617|380,400,FF3617",
                   "Transition", "300,800,271D1D|720,1200,271D1D|1100,1000,271D1D|300,1400,271D1D|1100,600,271D1D",
                   "Tolerance", "30", "HpBar", "416,1170,438", "HpEmptyMax", "112"),
-    "Timing", Map("PollMs", "1000", "UnreadLimit", "10", "StartWaitMs", "25000", "PassAfterMs", "30000"),
+    "Timing", Map("PollMs", "1000", "ClearingPollMs", "3000", "UnreadLimit", "10", "StartWaitMs", "25000",
+                  "PassAfterMs", "30000"),
     "Stages", Map("Worlds", "9", "Stages", "30", "ScriptDir", "stages", "WaitForScript", "1"),
-    "Record", Map("Video", "1", "Seconds", "45", "BitRate", "4000000", "VideoDir", "recordings"),
+    "Record", Map("Video", "unscripted", "Seconds", "45", "BitRate", "4000000", "VideoDir", "recordings"),
     "Run", Map("MaxTries", "0", "LogFile", "stage-loop.log", "RunsFile", "stage-runs.csv"),
     "Hud", Map("Node", "node")
 )
@@ -140,12 +144,58 @@ Secs(from, to) {
 }
 
 /**
- * The loop, run on its own thread by F8. Polls the screen every PollMs and logs each screen change.
- * - On Summon Boss, it takes the stage's number from the screen, or carries the expected one
- *   forward when the reader can't read it, then taps Summon Boss and plays the stage's script.
+ * Captures the screen, folding the time it took into CaptureMs.
+ * @returns Buffer with the capture, as Capture()
+ * @throws Error from Capture() when adb produces no image
+ */
+TimedCapture() {
+    global CaptureMs
+    at := A_TickCount
+    buf := Capture()
+    CaptureMs += (A_TickCount - at - CaptureMs) / 4
+    return buf
+}
+
+/**
+ * Waits out the rest of a poll's period, so polls start every `ms` however long the capture and
+ * the work on it took; a poll that took longer starts the next one at once.
+ * @param polled A_TickCount when the poll's capture began
+ * @param ms the period
+ * @throws StopSignal when F8 stops the loop
+ */
+Pace(polled, ms) {
+    CheckStop()
+    UpdateStatus()
+    Wait(Max(0, polled + ms - A_TickCount))
+}
+
+/**
+ * Tells which tries [Record] Video records. It's read on every try, so F10 can change it mid-run.
+ * @returns "all", "unscripted" (only tries of a stage with no script, whose video the script is
+ *   written from) or "off"; 1 reads as "all" and 0 as "off"
+ * @throws Error when Video is none of those
+ */
+RecordMode() {
+    v := StrLower(Cfg["Video"])
+    switch v {
+        case "1": return "all"
+        case "0": return "off"
+        case "all", "unscripted", "off": return v
+    }
+    throw Error("[Record] Video is " Cfg["Video"] "; set it to all, unscripted or off")
+}
+
+/**
+ * The loop, run on its own thread by F8. Polls the screen and logs each screen change: every PollMs
+ * while a try is out, and every ClearingPollMs while nothing is deciding (the game clearing enemies,
+ * or a stage waiting for its script). Each poll period counts from its capture's start.
+ * - When the screen comes to Summon Boss, it takes the stage's number from the screen once (again
+ *   each poll only while no stage is known and the number stays unreadable), or carries the
+ *   expected one forward when the reader can't read it, then taps Summon Boss and plays the
+ *   stage's script.
  * - While a try is out, Judge follows its encounter to a result.
- * - A stage without a script whose boss won waits for its script (WaitForScript), so the next
- *   try plays it.
+ * - A stage without a script whose boss won waits for its script (WaitForScript), checking only
+ *   that the file exists, so the next try plays it.
  * @throws Error, caught here, when the stage's number is unknown and stays unreadable for
  *   UnreadLimit polls on Summon Boss, or a stage loses MaxTries times in a row
  */
@@ -153,21 +203,25 @@ RunLoop() {
     global Phase, Tries
     pending := ""
     unread := 0
+    ; The stage on Summon Boss is settled, read or carried forward, since the screen came to it.
+    known := false
     Log("expecting " (Current = "" ? "an unknown stage" : Current))
     try {
         while Running {
-            buf := Capture()
+            polled := A_TickCount
+            buf := TimedCapture()
             screen := Observe(buf)
             if (pending != "") {
                 verdict := Judge(pending, screen, buf)
                 if (verdict = "") {
-                    Wait(N("PollMs"))
+                    Pace(polled, N("PollMs"))
                     continue
                 }
                 if (verdict = "dropped") {
                     Log(Format("Summon Boss still up {} s after the tap: the encounter didn't start; summoning again",
                         Secs(pending.started, A_TickCount)))
-                    StopRecording()
+                    if (pending.video != "")
+                        StopRecording()
                     Tries[pending.num] -= 1
                 } else {
                     Settle(pending, verdict)
@@ -179,45 +233,51 @@ RunLoop() {
                 pending := ""
             }
             if (screen != "summon") {
+                known := false
                 Phase := screen = "boss" ? "boss" : "clearing"
-                Wait(N("PollMs"))
+                Pace(polled, N("ClearingPollMs"))
                 continue
             }
-            out := HudRun("stage", buf)
-            read := HudField(out, "stage")
-            if (read != "") {
-                if (Current != "" && read != Current)
-                    Log("read " read " on Summon Boss where " Current " was expected; going by the read")
-                if (read != Current)
-                    Expect(read)
-                unread := 0
-            } else {
-                unread += 1
-                Log("stage number unread on Summon Boss (" unread "): " HudLine(out))
-                if (Current != "" && !UnreadSaved.Has(Current)) {
-                    UnreadSaved[Current] := true
-                    Log("for teaching the reader: " SaveStopShot("unread_" Current "_"))
+            if !known {
+                out := HudRun("stage", buf)
+                read := HudField(out, "stage")
+                if (read != "") {
+                    if (Current != "" && read != Current)
+                        Log("read " read " on Summon Boss where " Current " was expected; going by the read")
+                    if (read != Current)
+                        Expect(read)
+                    unread := 0
+                } else {
+                    unread += 1
+                    Log("stage number unread on Summon Boss (" unread "): " HudLine(out))
+                    if (Current != "" && !UnreadSaved.Has(Current)) {
+                        UnreadSaved[Current] := true
+                        Log("for teaching the reader: " SaveStopShot("unread_" Current "_"))
+                    }
+                    if (Current = "") {
+                        if (unread >= N("UnreadLimit"))
+                            throw Error("can't read the stage's number on Summon Boss and none is expected; F7 shows what the reader sees")
+                        Phase := "reading the stage " unread "/" N("UnreadLimit")
+                        Pace(polled, N("PollMs"))
+                        continue
+                    }
+                    Log("going by the expected " Current)
                 }
-                if (Current = "") {
-                    if (unread >= N("UnreadLimit"))
-                        throw Error("can't read the stage's number on Summon Boss and none is expected; F7 shows what the reader sees")
-                    Phase := "reading the stage " unread "/" N("UnreadLimit")
-                    Wait(N("PollMs"))
-                    continue
-                }
-                Log("going by the expected " Current)
+                known := true
             }
             script := ScriptPath(Current)
             if (Tries.Get(Current, 0) > 0 && !FileExist(script) && N("WaitForScript")) {
                 if (Phase != "waiting for a script")
                     Log("waiting for " StrReplace(script, A_ScriptDir "\") " before trying again")
                 Phase := "waiting for a script"
-                Wait(N("PollMs"))
+                Pace(polled, N("ClearingPollMs"))
                 continue
             }
             if (N("MaxTries") > 0 && Tries.Get(Current, 0) >= N("MaxTries"))
                 throw Error(Current " lost " Tries[Current] " times in a row; tune " StrReplace(script, A_ScriptDir "\"))
             unread := 0
+            ; The screen comes back to Summon Boss after the try, and its stage is read afresh.
+            known := false
             pending := Attempt(Current, script)
         }
     } catch StopSignal {
@@ -279,23 +339,25 @@ Judge(a, screen, buf) {
 }
 
 /**
- * Fights a stage's boss once: starts the recording, taps Summon Boss, waits for the scene to
- * change, and plays the stage's script from the change.
+ * Fights a stage's boss once: starts the recording when RecordMode wants this try's, taps Summon
+ * Boss, waits for the scene to change, and plays the stage's script from the change.
  * @param num the stage's number, e.g. "358-20"
  * @param script the script's path; a missing script plays nothing
  * @returns the try: {num, try, script, video, started, changed, seen, ended, hp, reason}: the
- *   ticks of the tap and the scene change (0 when it didn't change), and of the encounter showing
- *   and ending (0 until they do), and the boss's lowest health in percent (101 until read), which
- *   Judge fills in
- * @throws StopSignal when F8 stops the loop mid-script
+ *   video's name (empty when not recorded), the ticks of the tap and the scene change (0 when it
+ *   didn't change), and of the encounter showing and ending (0 until they do), and the boss's
+ *   lowest health in percent (101 until read), which Judge fills in
+ * @throws Error from RecordMode when [Record] Video isn't a mode; StopSignal when F8 stops the loop
+ *   mid-script
  */
 Attempt(num, script) {
     global Phase, Tries
+    mode := RecordMode()
     Tries[num] := Tries.Get(num, 0) + 1
     rel := StrReplace(script, A_ScriptDir "\")
     has := FileExist(script) != ""
     Log(Format("try {} on {}: {}", Tries[num], num, has ? "script " rel : "no script at " rel))
-    video := N("Video") ? VideoName(num, Tries[num]) : ""
+    video := (mode = "all" || (mode = "unscripted" && !has)) ? VideoName(num, Tries[num]) : ""
     if (video != "") {
         RecordScreen("/sdcard/stage-boss.mp4", N("Seconds"), "--bit-rate " Cfg["BitRate"])
         ; screenrecord takes a moment to start; without this the first frames of the scene change are lost.
@@ -339,7 +401,7 @@ SceneChange(started) {
     while (A_TickCount - started < N("StartWaitMs")) {
         CheckStop()
         at := A_TickCount
-        buf := Capture()
+        buf := TimedCapture()
         if (Shows(buf, Cfg["Transition"]) || Shows(buf, Cfg["Boss"]))
             return at
     }
@@ -372,7 +434,7 @@ PlayScript(path, a) {
             ; starts late is one the team spends short of the boss.
             while (!a.seen && A_TickCount - a.changed < N("StartWaitMs")) {
                 CheckStop()
-                buf := Capture()
+                buf := TimedCapture()
                 Judge(a, Observe(buf), buf)
             }
             Log(a.seen ? Format("encounter showing at +{} s", Secs(a.changed, a.seen))
@@ -408,9 +470,9 @@ PlayScript(path, a) {
 Watch(a, ms) {
     deadline := A_TickCount + ms
     loop {
-        ; A capture takes about half a second; one closer to the deadline would overrun it.
-        if (deadline - A_TickCount > 700) {
-            buf := Capture()
+        ; A capture that can't finish, and be judged, before the deadline would hold up the next step.
+        if (deadline - A_TickCount > CaptureMs + 200) {
+            buf := TimedCapture()
             Judge(a, Observe(buf), buf)
             ; A blast over the boss icon can hide the encounter for a poll; gone 2 s is over.
             if (a.ended && A_TickCount - a.ended >= 2000)
