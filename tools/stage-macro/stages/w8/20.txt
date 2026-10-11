@@ -1,0 +1,6 @@
+; 359-20, Rowdy Truck: spawns above the team, a little to its left.
+; Won with no input on 2026-10-11, in about 19 s. This script walks onto it from the HUD;
+; untested.
+encounter
+W+A 200
+W 250

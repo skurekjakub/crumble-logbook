@@ -1,0 +1,5 @@
+; 359-22, Broken Welding Bot: spawns just up and right of the team, amid its robots.
+; Lost with no input: 38% health left at 28 s. From the HUD, W+D 350 then D 300 walked the team
+; off past it; W+D 150 lost 7 tries, the team wandering off after the robots on some. This walk,
+; 359-12's, lost 1 try and won the 2nd on 2026-10-11, in about 13 s.
+D 1900
