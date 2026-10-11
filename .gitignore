@@ -39,6 +39,7 @@ research/**/*.mov
 # macro logs and run records, and the screens a macro stopped on
 tools/**/*.log
 tools/**/*-runs.csv
+tools/**/*-curves.csv
 tools/**/stops/
 
 __pycache__/

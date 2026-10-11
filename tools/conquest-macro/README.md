@@ -20,9 +20,10 @@ Every 2 s it captures the screen and:
 1. **Lobby with ENTER lit:** taps ENTER. If the lobby still shows after `StuckLimit` taps (a popup swallowing them), it leaves the lobby with Back and recovers.
 2. **Lobby with ENTER greyed:** waits. The lobby greys ENTER for a moment on its way back from the results, so the loop stops (the season is closed) only after `GreyLimit` polls in a row.
 3. **Anything else:** a fight or the results.
-   - **Pace check:** from `PruneFromMs` after ENTER it reads the fight's score and countdown as fast as captures come. If the score is below `MinScore` when the countdown shows `CheckAtS` seconds left, it ends the run: the bottom-centre button, then **End Battle** on "Are you sure you want to end the battle?".
+   - **Following the fight:** from `ReadFromMs` after ENTER it reads the fight's score and countdown as fast as captures come (about two a second), and keeps every reading as the run's score curve. The fight is over when the countdown reads 0, or when neither number has been read for `GoneMs`.
+   - **Pace check:** if the score is below `MinScore` when the countdown shows `CheckAtS` seconds left, it ends the run: the bottom-centre button, then **End Battle** on "Are you sure you want to end the battle?".
    - The score at exactly `CheckAtS` is interpolated between the reads either side of it. Around 30 s left the score climbs about 0.16T a second, so a late read would flatter it.
-   - It taps Dismiss (the bottom-centre button) once the results show: `AfterEndMs` after End Battle, otherwise once the result screen is learned or `MinFightMs` (66 s: loading plus the 60 s fight) has passed since ENTER. It never taps it earlier, because in a running fight that button asks to end the battle.
+   - It taps Dismiss (the bottom-centre button) once the results show: `AfterEndMs` after End Battle, once it has seen the fight end, or once the result screen is learned or `MinFightMs` (66 s: loading plus the 60 s fight) has passed since ENTER. It never taps it earlier, because in a running fight that button asks to end the battle.
    - Before that first Dismiss it reads the final score off BATTLE OVER, for up to `FinalWaitMs`, and records the run.
    - With no lobby `MaxFightMs` after ENTER, it recovers.
 
@@ -38,7 +39,7 @@ It saves the screen to `stops\` when it starts recovering, and stops after `Reco
 
 ## Runs file
 
-`conquest-runs.csv` (`[Run] RunsFile`) gets a row per run, and the log a matching `run over:` line. It stays local, like the log.
+`conquest-runs.csv` (`[Run] RunsFile`) gets a row per run, and the log a matching `run over:` line. `conquest-curves.csv` (`CurvesFile`) gets the run's score curve: a row per reading (`time`, the run's ENTER time; `t_left`, the seconds left; `score`). Both stay local, like the log, and the app's Guild Conquest **Attempts** tab charts them while the server runs locally.
 
 | Column | Value |
 |---|---|
@@ -55,6 +56,7 @@ It saves the screen to `stops\` when it starts recovering, and stops after `Reco
 | `kept-unjudged` | No score read at `CheckAtS` (the check off, a fight already running when the loop started, or the HUD unreadable); played the full fight. |
 | `kept-end-failed` | Behind pace, but the end-battle question never showed; played the full fight. |
 | `stopped`, `error` | F8 or an error stopped the loop mid-run; no final score. |
+| `no-results` | The lobby came back without the results showing; no final score. |
 
 The fight facts behind these defaults come from `research/001-guild-conquest-meta`: the fight is 60 s, and the team wipes when the timer shows about 17 s. ENTER and Dismiss sit where the earlier mouse-driven version tapped them through Season 6.
 

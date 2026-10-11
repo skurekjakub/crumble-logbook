@@ -29,12 +29,12 @@ global DEFAULTS := Map(
                   "ResultPoints", "200,300|720,300|1240,300|200,1280|720,1280|1240,1280|200,2300|720,2300|1240,2300",
                   "Tolerance", "30"),
     "Timing", Map("PollMs", "2000", "AfterEnterMs", "6000", "MinFightMs", "66000", "MaxFightMs", "100000",
-                  "RecoverStepMs", "4000", "LaunchWaitMs", "90000", "PruneFromMs", "24000",
+                  "RecoverStepMs", "4000", "LaunchWaitMs", "90000", "ReadFromMs", "0", "GoneMs", "3000",
                   "ConfirmWaitMs", "1500", "AfterEndMs", "4000", "FinalWaitMs", "8000"),
     "Prune", Map("MinScore", "1950000000000", "CheckAtS", "30", "LateS", "3", "Node", "node"),
     "Run", Map("MaxRuns", "0", "StuckLimit", "3", "GreyLimit", "8", "RecoverTries", "8",
                "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log",
-               "RunsFile", "conquest-runs.csv")
+               "RunsFile", "conquest-runs.csv", "CurvesFile", "conquest-curves.csv")
 )
 
 LoadConfig()
@@ -148,10 +148,12 @@ Wait(ms) {
  * - Off the lobby, it taps Dismiss once the learned result screen shows, or, with no result
  *   learned, once MinFightMs have passed since ENTER (the fight's full 60 s plus loading).
  *   Dismiss is the bottom-centre button, which leaves a running fight, so it is never tapped earlier.
- * - PruneFromMs after ENTER, it judges the fight once with JudgePace, and ends it with EndRun
- *   when the score is behind MinScore; Dismiss then closes the results without waiting.
+ * - ReadFromMs after ENTER, it follows the fight with TrackFight, which records the score curve
+ *   and judges the pace; a run behind MinScore is ended with EndRun. Once the fight is over or
+ *   ended, Dismiss closes the results without waiting for MinFightMs.
  * - Before the first Dismiss of a run, it reads the final score with ReadFinal and records the
- *   run with RecordRun. A run stopped by F8 or an error mid-fight is recorded without one.
+ *   run with RecordRun. A run stopped by F8 or an error mid-fight, or one that reaches the lobby
+ *   without results, is recorded without one.
  * - Still off the lobby MaxFightMs after ENTER, it navigates back to the lobby with Recover.
  * @throws Error, caught here, when ENTER is greyed, ENTER keeps leaving the lobby showing, or
  *   Recover can't reach the lobby
@@ -191,6 +193,8 @@ RunLoop() {
                     stuck := 0
                     continue
                 }
+                if (rec.fought && !rec.recorded)
+                    RecordRun(rec, "no-results", "")
                 Phase := "enter"
                 Tap("Enter")
                 Runs += 1
@@ -205,17 +209,17 @@ RunLoop() {
             if (since >= N("MaxFightMs")) {
                 Recover("no lobby " Round(since / 1000) " s after ENTER")
                 enteredAt := A_TickCount
-            } else if (!rec.judged && !rec.ended && N("MinScore") > 0 && since >= N("PruneFromMs") && since < N("MinFightMs")) {
-                rec.judged := true
-                Phase := "judging"
-                rec.pace := JudgePace(enteredAt + N("MinFightMs"))
-                if (rec.pace != "" && rec.pace < N("MinScore")) {
+            } else if (!rec.tracked && since >= N("ReadFromMs") && since < N("MinFightMs")) {
+                rec.tracked := true
+                if (TrackFight(rec, enteredAt + N("MinFightMs")) = "behind") {
                     rec.ended := EndRun()
                     continue
                 }
-            } else if (screen = "result" || (Cfg["Result"] = "" && (since >= N("MinFightMs") || rec.ended))) {
+                if rec.over
+                    continue
+            } else if (screen = "result" || (Cfg["Result"] = "" && (since >= N("MinFightMs") || rec.ended || rec.over))) {
                 if !rec.recorded
-                    RecordRun(rec,EndOf(rec), ReadFinal())
+                    RecordRun(rec, EndOf(rec), ReadFinal())
                 Phase := "results"
                 Tap("Dismiss")
             } else {
@@ -226,12 +230,12 @@ RunLoop() {
     } catch StopSignal {
         Log("stopped by user")
         if (rec.fought && !rec.recorded)
-            RecordRun(rec,"stopped", "")
+            RecordRun(rec, "stopped", "")
     } catch Error as e {
         Log("error: " e.Message)
         Log(SaveStopShot())
         if (rec.fought && !rec.recorded)
-            RecordRun(rec,"error", "")
+            RecordRun(rec, "error", "")
         TrayTip(e.Message, "Conquest loop stopped", 3)
     }
     Running := false
@@ -285,38 +289,62 @@ Recover(reason, leaveFirst := false) {
 }
 
 /**
- * Reads the fight's score at the moment the countdown shows CheckAtS seconds left. It reads the
- * HUD as fast as captures come until the countdown passes CheckAtS, and interpolates between the
- * last reading above it and the first at or below it, since the score climbs fast enough there
- * that a second's lag would add more than the leniency in MinScore.
- * @param deadline A_TickCount by which to give up, e.g. when the fight must be over
- * @returns the score at CheckAtS; empty when the HUD couldn't be read before the countdown
- *   passed CheckAtS - LateS or the deadline, or the fight screen went away
+ * Follows the fight, reading the HUD as fast as captures come, and adds each reading with both
+ * the countdown and the score to the run's curve.
+ *
+ * With MinScore set, it also judges the pace: the score at the moment the countdown shows
+ * CheckAtS seconds left, interpolated between the last reading above it and the first at or
+ * below it, since the score climbs fast enough there that a second's lag would add more than
+ * the leniency in MinScore. It sets the run's pace and stops early when the run is behind.
+ * @param rec the run's record from NewRun; its curve, pace and over are filled in
+ * @param deadline A_TickCount by which to stop, e.g. when the fight must be over
+ * @returns "behind" when the score at CheckAtS is below MinScore; "over" when the countdown
+ *   reads 0, or neither number has been read for GoneMs after the fight showed (the results
+ *   are up), and the run's over is set; "lobby" when the lobby shows; "deadline" otherwise
  * @throws StopSignal when F8 stops the loop
  */
-JudgePace(deadline) {
+TrackFight(rec, deadline) {
+    global Phase
     at := N("CheckAtS")
+    judging := N("MinScore") > 0
     before := ""
+    seenAt := 0
     hud := {out: ""}
     loop {
         if !Running
             throw StopSignal()
         if (A_TickCount >= deadline) {
-            Log("pace: no reading by the deadline; keeping the run. Last read: " Trim(StrReplace(hud.out, "`n", " | "), " |`r"))
-            return ""
+            if judging
+                Log("pace: no reading by the deadline; keeping the run. Last read: " Trim(StrReplace(hud.out, "`n", " | "), " |`r"))
+            return "deadline"
         }
         buf := Capture()
-        if (ScreenOf(buf) != "other") {
-            Log("pace: the fight screen went away before " at " s left")
-            return ""
+        if (ScreenOf(buf) = "lobby") {
+            Log("the lobby showed while following the fight")
+            return "lobby"
         }
         hud := ReadHud(buf)
-        if (hud.timer = "") {
+        if (hud.timer = "" && hud.score = "") {
+            if (seenAt && A_TickCount - seenAt >= N("GoneMs")) {
+                rec.over := true
+                return "over"
+            }
             UpdateStatus()
             continue
         }
-        Phase := Format("judging, {:.1f} s left", hud.timer)
+        seenAt := A_TickCount
+        if (hud.timer = "")
+            continue
+        if (hud.score != "")
+            rec.curve.Push([hud.timer, hud.score])
+        Phase := Format("fight, {:.1f} s left", hud.timer)
         UpdateStatus()
+        if (hud.timer = 0) {
+            rec.over := true
+            return "over"
+        }
+        if !judging
+            continue
         if (hud.timer > at) {
             if (hud.score != "")
                 before := hud
@@ -324,7 +352,8 @@ JudgePace(deadline) {
         }
         if (hud.timer < at - N("LateS")) {
             Log(Format("pace: no score read by {:.3f} s left; keeping the run", hud.timer))
-            return ""
+            judging := false
+            continue
         }
         if (hud.score = "")
             continue
@@ -333,7 +362,10 @@ JudgePace(deadline) {
             score := Round(before.score + (hud.score - before.score) * (before.timer - at) / (before.timer - hud.timer))
         Log(Format("pace: {} at {} s left (read {} at {:.3f} s{}); need {}", Short(score), at, Short(hud.score), hud.timer
             , before != "" ? Format(", {} at {:.3f} s", Short(before.score), before.timer) : "", Short(N("MinScore"))))
-        return score
+        rec.pace := score
+        judging := false
+        if (score < N("MinScore"))
+            return "behind"
     }
 }
 
@@ -363,13 +395,14 @@ EndRun() {
 
 /**
  * Starts the record of a run, numbered and timed from now.
- * @returns {number, entered, fought, judged, pace, ended, recorded}: the run's number, when it
- *   started, whether its fight showed, whether JudgePace ran, the score it read (empty when none),
- *   whether EndRun ended it, and whether RecordRun wrote it
+ * @returns {number, entered, fought, tracked, curve, pace, over, ended, recorded}: the run's
+ *   number, when it started, whether its fight showed, whether TrackFight ran, its readings as
+ *   [seconds left, score] pairs, its score at CheckAtS (empty when none was read), whether the
+ *   fight was seen to end, whether EndRun ended it, and whether RecordRun wrote it
  */
 NewRun() {
-    return {number: Runs, entered: FormatTime(, "yyyy-MM-dd HH:mm:ss"), fought: false, judged: false,
-        pace: "", ended: false, recorded: false}
+    return {number: Runs, entered: FormatTime(, "yyyy-MM-dd HH:mm:ss"), fought: false, tracked: false,
+        curve: [], pace: "", over: false, ended: false, recorded: false}
 }
 
 /**
@@ -419,30 +452,47 @@ ReadFinal() {
 }
 
 /**
- * Logs a run's outcome and appends it to RunsFile next to the script, a CSV with the columns
- * time, run, end, pace_score and final_score; it writes the header when it creates the file.
- * A write that fails is retried briefly and then logged, never raised.
+ * Logs a run's outcome and appends it to the CSVs next to the script: a row to RunsFile (time,
+ * run, end, pace_score, final_score) and its curve to CurvesFile (time, t_left, score: a row
+ * per reading, keyed to the run by time).
  * @param rec the run's record from NewRun; marked recorded
- * @param end how the run ended: an EndOf value, "stopped" or "error"
+ * @param end how the run ended: an EndOf value, "stopped", "error" or "no-results"
  * @param final the final score; empty when it wasn't read
  */
-RecordRun(rec,end, final) {
+RecordRun(rec, end, final) {
     rec.recorded := true
-    Log(Format("run over: {}; {}; final {}", end
+    Log(Format("run over: {}; {}; final {}; {} readings", end
         , rec.pace = "" ? "no score read at " N("CheckAtS") " s left" : Short(rec.pace) " at " N("CheckAtS") " s left"
-        , final = "" ? "unread" : Short(final)))
-    path := A_ScriptDir "\" Cfg["RunsFile"]
-    line := rec.entered "," rec.number "," end "," rec.pace "," final "`n"
+        , final = "" ? "unread" : Short(final), rec.curve.Length))
+    AppendCsv(Cfg["RunsFile"], "time,run,end,pace_score,final_score"
+        , rec.entered "," rec.number "," end "," rec.pace "," final "`n")
+    rows := ""
+    for p in rec.curve
+        rows .= rec.entered "," Format("{:.3f}", p[1]) "," p[2] "`n"
+    if (rows != "")
+        AppendCsv(Cfg["CurvesFile"], "time,t_left,score", rows)
+}
+
+/**
+ * Appends rows to a CSV next to the script, writing its header first when it creates the file.
+ * A write that fails (another program holding the file open, say) is retried briefly and then
+ * logged, never raised.
+ * @param name the file's name, e.g. "conquest-runs.csv"
+ * @param header the column names, comma-separated
+ * @param rows the rows, each ending in a newline
+ */
+AppendCsv(name, header, rows) {
+    path := A_ScriptDir "\" name
     loop 5 {
         try {
             if !FileExist(path)
-                FileAppend("time,run,end,pace_score,final_score`n", path, "UTF-8-RAW")
-            FileAppend(line, path, "UTF-8-RAW")
+                FileAppend(header "`n", path, "UTF-8-RAW")
+            FileAppend(rows, path, "UTF-8-RAW")
             return
         }
         Sleep 100
     }
-    Log("couldn't write " Cfg["RunsFile"])
+    Log("couldn't write " name)
 }
 
 /**
