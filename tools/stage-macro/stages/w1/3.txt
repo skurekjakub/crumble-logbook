@@ -1,0 +1,6 @@
+; 361-3, Pomegranate Beetle: stands right of the team at the HUD, a little above it, as on 361-1.
+; Lost with no input: 26% health left at 30 s. With this script, 361-1's, it lost 1
+; try (16% left) and won the 2nd on 2026-10-11, in about 22 s.
+encounter
+W+D 250
+D 500

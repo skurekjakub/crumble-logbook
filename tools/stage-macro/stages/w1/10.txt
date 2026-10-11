@@ -1,0 +1,8 @@
+; 361-10, Poison Shroomer: stands right of the team at the HUD, a little below it, amid a pack of
+; mushrooms spread out to the screen's right edge.
+; Lost with no input: 16% health left at 29 s. S+D 200, D 300 lost 3 tries (27% to 46% left),
+; stopping the team's back half short of the pack, and won the 4th on 2026-10-11, in about 23 s.
+; This longer walk is untested.
+encounter
+S+D 150
+D 550

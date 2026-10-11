@@ -1,0 +1,5 @@
+; 361-5, Poison Shroomer: stands right of the team at the HUD, about level with it, as on 361-2.
+; Lost with no input: 54% health left at 31 s. With this script, 361-2's, it lost 1
+; try (15% left) and won the 2nd on 2026-10-11, in about 10 s.
+encounter
+D 400

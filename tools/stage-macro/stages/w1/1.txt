@@ -1,0 +1,6 @@
+; 361-1, Pomegranate Beetle: stands right of the team at the HUD, a little above it.
+; Lost with no input: 50% health left at 34 s. With this walk it lost 3 tries (47% to
+; 4% left) and won the 4th on 2026-10-11, in about 18 s.
+encounter
+W+D 250
+D 500

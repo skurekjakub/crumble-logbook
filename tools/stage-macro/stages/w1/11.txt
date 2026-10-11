@@ -1,0 +1,6 @@
+; 361-11, Pomegranate Beetle: stands right of the team at the HUD, a little above it, as on 361-1.
+; Lost with no input: 42% health left at 34 s. With this script, 361-1's, it lost 6
+; tries on 2026-10-11 (20% to 62% left) with the team reaching the boss.
+encounter
+W+D 250
+D 500

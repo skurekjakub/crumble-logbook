@@ -1,0 +1,6 @@
+; 361-7, Tainted Pomegranate Crow: stands right of the team at the HUD, a little above it.
+; Lost with no input: 9% health left at 29 s. This walk won its first try on 2026-10-11,
+; in about 20 s.
+encounter
+W+D 150
+D 400

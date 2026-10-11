@@ -1,0 +1,7 @@
+; 361-2, Poison Shroomer: stands right of the team at the HUD, about level with it; how far right
+; varies from try to try.
+; Lost with no input: 46% health left at 32 s. D 600 lost 5 tries (15% to 59% left), at times
+; carrying the team past it. This shorter walk lost 15 tries (8% to 60% left) and won the 16th
+; on 2026-10-11, in about 20 s: the team reaches the boss, so losses are its damage falling short.
+encounter
+D 400
