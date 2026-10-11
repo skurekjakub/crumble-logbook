@@ -1,0 +1,7 @@
+; 359-4, Broken Welding Bot: spawns past the right edge of the screen, about level with the team.
+; Lost with no input: 49% health left at 28 s. W+D 400 then D 1600 walked the team up past it
+; and it never lost health; D 1300 stopped short, with the boss still at the edge; D 2200 reached
+; its cluster but ended just right of the boss, 58% left at 24 s. D 1900 won its first try on
+; 2026-10-11, in 16 s.
+wait 500
+D 1900

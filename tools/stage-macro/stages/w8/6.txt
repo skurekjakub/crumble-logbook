@@ -1,0 +1,5 @@
+; 359-6, Broken Cleaning Bot: spawns right of the team, a little above it, as on 359-5.
+; Lost with no input: 42% health left at 28 s. With 359-5's script (wait 500, D 1700) the team
+; reached it by 6.5 s and left it at about 20%, 3 tries running. This one walks from the scene
+; change on and won its first try on 2026-10-11, at 27 s.
+D 1700

@@ -1,0 +1,5 @@
+; 359-8, Rowdy Biker: spawns right of the team, a little above it, and drives about during the
+; fight, so how close it stays is luck.
+; Lost with no input: 33% health left at 28 s. With this script it lost 3 tries, at 14% to 42%
+; left, and won the 4th on 2026-10-11, at 25 s.
+D 1500
