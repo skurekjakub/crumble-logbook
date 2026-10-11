@@ -47,11 +47,24 @@ class StopSignal extends Error {
 MacroInit(parts) {
     global Macro
     Macro := parts
+    SweepTemp()
     LoadConfig()
     UpdateStatus()
     for arg in A_Args
         if (arg = "/start")
             ToggleRun()
+}
+
+/**
+ * Deletes the macros' temp files older than an hour, left by macros that ended without cleaning
+ * up. A macro still open writes its file again on its next read.
+ */
+SweepTemp() {
+    cutoff := DateAdd(A_Now, -1, "Hours")
+    for pattern in ["adb-screen-*.bin", "hud-*.bin", "run-out-*.txt"]
+        loop files A_Temp "\" pattern
+            if (A_LoopFileTimeModified < cutoff)
+                try FileDelete(A_LoopFileFullPath)
 }
 
 /**
@@ -141,16 +154,16 @@ UpdateStatus(extra := "") {
 }
 
 /**
- * Sleeps in short slices, unwinding when the loop is stopped.
+ * Refreshes the status tooltip, then sleeps in short slices, unwinding when the loop is stopped.
  * @param ms duration in milliseconds
  * @throws StopSignal when F8 stops the loop mid-wait
  */
 Wait(ms) {
+    UpdateStatus()
     finish := A_TickCount + ms
     while (A_TickCount < finish) {
         CheckStop()
-        UpdateStatus()
-        Sleep 200
+        Sleep Min(200, finish - A_TickCount)
     }
 }
 

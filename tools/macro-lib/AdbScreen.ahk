@@ -1,36 +1,159 @@
-; Screen reading and tapping over adb, shared by the macros under tools/.
-; Every function reads the caller's global Cfg map: Path, Serial, Package, CaptureDisplay,
-; InputDisplay (the [Adb] section) and Tolerance.
+; Screen reading and tapping over adb, shared by the macros under tools/, and the pipes it runs
+; programs on. Every adb function reads the caller's global Cfg map: Path, Serial, Package,
+; CaptureDisplay, InputDisplay (the [Adb] section) and Tolerance.
 
 ; The game's displays as last resolved for "auto": Map("Input", logical id, "Capture", SurfaceFlinger id).
 global AdbDisplays := Map()
-; Numbers each temp file, so a probe timer that interrupts the loop never shares one with it.
-global TempSerial := 0
 
 /**
- * Names a temp file no other call is using.
- * @param stem the file's prefix, e.g. "adb-screen"
- * @param ext the extension with its dot, e.g. ".bin"
- * @returns a path in the temp folder
+ * Starts a program with no window, its output on a pipe the caller reads with PipeRead.
+ * @param cmd the command line, e.g. '"C:\…\adb.exe" -s 127.0.0.1:5557 exec-out screencap'; the
+ *   program is an .exe, found on PATH when the line doesn't give its folder
+ * @param stdin true to give it a pipe for its input, written with PipeWrite; otherwise its input
+ *   is empty
+ * @param stderr true to send its stderr down the same pipe as its stdout; false to discard it
+ * @returns {process, out, in}: its process handle, the read end of its output and the write end of
+ *   its input (0 without stdin), for PipeClose to release
+ * @throws OSError when a pipe can't be made or the program can't be started, e.g. its file doesn't
+ *   exist
  */
-TempPath(stem, ext) {
-    global TempSerial
-    TempSerial += 1
-    return A_Temp "\" stem "-" ProcessExist() "-" TempSerial ext
+PipeStart(cmd, stdin := false, stderr := true) {
+    sa := Buffer(3 * A_PtrSize, 0)
+    NumPut("UInt", sa.Size, sa, 0)
+    NumPut("Int", 1, sa, 2 * A_PtrSize)
+    outRead := 0, outWrite := 0, inRead := 0, inWrite := 0
+    ; The pipe holds what the program writes while PipeRead waits between reads; a few MB keeps
+    ; screencap from stalling on a full pipe.
+    if !DllCall("CreatePipe", "Ptr*", &outRead, "Ptr*", &outWrite, "Ptr", sa, "UInt", 0x400000)
+        throw OSError()
+    if (stdin && !DllCall("CreatePipe", "Ptr*", &inRead, "Ptr*", &inWrite, "Ptr", sa, "UInt", 0)) {
+        err := OSError()
+        DllCall("CloseHandle", "Ptr", outRead), DllCall("CloseHandle", "Ptr", outWrite)
+        throw err
+    }
+    ; Only the program's ends are inherited: a copy of ours in the program would keep its pipes
+    ; open after it exits.
+    DllCall("SetHandleInformation", "Ptr", outRead, "UInt", 1, "UInt", 0)
+    if inWrite
+        DllCall("SetHandleInformation", "Ptr", inWrite, "UInt", 1, "UInt", 0)
+    ; NUL for the input and stderr it doesn't get a pipe for, as `< NUL 2> NUL` would give it.
+    nul := DllCall("CreateFileW", "Str", "NUL", "UInt", 0xC0000000, "UInt", 3, "Ptr", sa, "UInt", 3
+        , "UInt", 0, "Ptr", 0, "Ptr")
+    if (nul = -1)
+        nul := 0
+    si := Buffer(A_PtrSize = 8 ? 104 : 68, 0)
+    NumPut("UInt", si.Size, si, 0)
+    NumPut("UInt", 0x100, si, A_PtrSize = 8 ? 60 : 44)  ; STARTF_USESTDHANDLES
+    NumPut("Ptr", stdin ? inRead : nul, "Ptr", outWrite, "Ptr", stderr ? outWrite : nul, si
+        , A_PtrSize = 8 ? 80 : 56)
+    pi := Buffer(2 * A_PtrSize + 8, 0)
+    ; CreateProcessW may write to the command line, so it gets a copy.
+    line := Buffer(StrPut(cmd, "UTF-16"))
+    StrPut(cmd, line, "UTF-16")
+    ok := DllCall("CreateProcessW", "Ptr", 0, "Ptr", line, "Ptr", 0, "Ptr", 0, "Int", true
+        , "UInt", 0x08000000, "Ptr", 0, "Ptr", 0, "Ptr", si, "Ptr", pi)  ; CREATE_NO_WINDOW
+    code := A_LastError
+    for h in [outWrite, inRead, nul]
+        if h
+            DllCall("CloseHandle", "Ptr", h)
+    if !ok {
+        DllCall("CloseHandle", "Ptr", outRead)
+        if inWrite
+            DllCall("CloseHandle", "Ptr", inWrite)
+        throw OSError(code, , cmd)
+    }
+    DllCall("CloseHandle", "Ptr", NumGet(pi, A_PtrSize, "Ptr"))
+    return {process: NumGet(pi, 0, "Ptr"), out: outRead, in: inWrite}
+}
+
+/**
+ * Appends what a PipeStart program has written since the last read to a buffer, waiting for it to
+ * write more when it hasn't yet.
+ * @param p the program, from PipeStart
+ * @param buf the Buffer to append to; it grows as needed, so its address may change
+ * @param size how many bytes of buf are already used
+ * @param block true to wait in ReadFile, for a program that starts none of its own: a program
+ *   that does, as adb starts its server, can leave a copy of the pipe open after it exits, so the
+ *   default waits on the program itself instead
+ * @returns how many bytes of buf are used now; size unchanged once the program has exited and
+ *   everything it wrote has been read
+ */
+PipeRead(p, buf, size, block := false) {
+    avail := 0
+    loop {
+        if !DllCall("PeekNamedPipe", "Ptr", p.out, "Ptr", 0, "UInt", 0, "Ptr", 0, "UInt*", &avail, "Ptr", 0)
+            return size
+        if (avail || block)
+            break
+        if (DllCall("WaitForSingleObject", "Ptr", p.process, "UInt", 15) != 0x102) {  ; not WAIT_TIMEOUT
+            DllCall("PeekNamedPipe", "Ptr", p.out, "Ptr", 0, "UInt", 0, "Ptr", 0, "UInt*", &avail, "Ptr", 0)
+            if !avail
+                return size
+            break
+        }
+    }
+    want := Max(avail, 0x10000)
+    if (buf.Size < size + want)
+        buf.Size := Max(2 * buf.Size, size + want)
+    got := 0
+    if !DllCall("ReadFile", "Ptr", p.out, "Ptr", buf.Ptr + size, "UInt", want, "UInt*", &got, "Ptr", 0)
+        return size
+    return size + got
+}
+
+/**
+ * Writes a line of text to a PipeStart program's input.
+ * @param p the program, from PipeStart with stdin
+ * @param text the text, written as UTF-8
+ * @returns true when all of it was written; false when the program has closed its input
+ */
+PipeWrite(p, text) {
+    bytes := Buffer(StrPut(text, "UTF-8"))
+    n := StrPut(text, bytes, "UTF-8") - 1
+    written := 0
+    return DllCall("WriteFile", "Ptr", p.in, "Ptr", bytes, "UInt", n, "UInt*", &written, "Ptr", 0) && written = n
+}
+
+/**
+ * Releases a PipeStart program's handles. A program still reading its input sees it close.
+ * @param p the program, from PipeStart
+ */
+PipeClose(p) {
+    for h in [p.process, p.out, p.in]
+        if h
+            DllCall("CloseHandle", "Ptr", h)
+}
+
+/**
+ * Runs a program with no window and returns everything it wrote, as bytes.
+ * @param cmd the command line, as for PipeStart
+ * @param stderr true to include its stderr; false for its stdout alone
+ * @returns a Buffer exactly as long as the output
+ * @throws OSError when the program can't be started
+ */
+RunPiped(cmd, stderr := true) {
+    p := PipeStart(cmd, false, stderr)
+    buf := Buffer(0x100000)
+    size := 0
+    while ((more := PipeRead(p, buf, size)) != size)
+        size := more
+    PipeClose(p)
+    buf.Size := size
+    return buf
 }
 
 /**
  * Runs a command line, hidden, and returns what it printed.
- * @param cmd the command line, e.g. '"node" "cli.ts" read "x.bin"'
- * @returns stdout and stderr; empty when it printed nothing
+ * @param cmd the command line, as for PipeStart, e.g. '"C:\…\adb.exe" -s 127.0.0.1:5557 get-state'
+ * @returns stdout and stderr; why it couldn't run when the program can't be started; empty when
+ *   it printed nothing
  */
 RunOut(cmd) {
-    path := TempPath("run-out", ".txt")
-    RunWait(A_ComSpec ' /c "' cmd ' > "' path '" 2>&1"', , "Hide")
-    out := ""
-    try out := FileRead(path, "UTF-8")
-    try FileDelete(path)
-    return out
+    try
+        out := RunPiped(cmd)
+    catch OSError as e
+        return "can't run " cmd ": " e.Message
+    return out.Size ? StrGet(out, out.Size, "UTF-8") : ""
 }
 
 /**
@@ -179,29 +302,34 @@ RecordScreen(devicePath, seconds, options := "") {
 
 /**
  * Stops a recording RecordScreen started, the way Ctrl+C would, so screenrecord finishes the file,
- * and waits up to 5 s for it to exit.
- * @returns true when no recording is running any more
+ * and waits on the device, up to 5 s, for it to exit. A recording that already ended returns at once.
+ * @returns true when no recording is running any more; false when one still is, or adb can't
+ *   reach the device
  */
 StopRecording() {
-    Adb("shell pkill -2 screenrecord")
-    loop 10 {
-        if (Trim(AdbOut("shell pidof screenrecord"), " `r`n") = "")
-            return true
-        Sleep 500
-    }
-    return false
+    out := AdbOut('shell "pkill -2 screenrecord; i=0; while pidof screenrecord >/dev/null && [ $i -lt 50 ]; '
+        . 'do sleep 0.1; i=$((i+1)); done; pidof screenrecord >/dev/null || echo stopped"')
+    return InStr(out, "stopped") > 0
 }
 
 /**
- * Copies a file off the device and deletes it there.
+ * Copies a file off the device and deletes it there, whether or not the copy arrived.
  * @param devicePath the file on the device, e.g. "/sdcard/boss.mp4"
  * @param localPath where to save it
- * @returns true when the file arrived
+ * @returns true when the file arrived; false when the device has no such file or it couldn't be saved
  */
 PullFile(devicePath, localPath) {
-    Adb('pull ' devicePath ' "' localPath '"')
-    Adb("shell rm -f " devicePath)
-    return FileExist(localPath) != ""
+    try {
+        data := RunPiped('"' Cfg["Path"] '" -s ' Cfg["Serial"] ' exec-out "cat ' devicePath ' 2>/dev/null; rm -f '
+            . devicePath '"', false)
+        if !data.Size
+            return false
+        f := FileOpen(localPath, "w")
+        f.RawWrite(data)
+        f.Close()
+        return true
+    }
+    return false
 }
 
 /**
@@ -221,7 +349,7 @@ GameDisplay(kind) {
 }
 
 /**
- * Tells whether a file read from screencap holds a whole raw image. A failed screencap prints
+ * Tells whether screencap's output holds a whole raw image. A failed screencap prints
  * an error message instead, whose bytes would otherwise read as an absurd width and height.
  * @param buf the bytes screencap wrote
  * @returns true when the header's size is plausible and the pixels are all there
@@ -245,15 +373,12 @@ IsImage(buf) {
  */
 Capture() {
     global AdbDisplays
-    path := TempPath("adb-screen", ".bin")
     loop 4 {
         id := GameDisplay("Capture")
-        display := id != "" ? " -d " id : ""
-        RunWait(A_ComSpec ' /c ""' Cfg["Path"] '" -s ' Cfg["Serial"] " exec-out screencap" display ' > "' path '""', , "Hide")
-        try buf := FileRead(path, "RAW")
-        catch
+        try
+            buf := RunPiped('"' Cfg["Path"] '" -s ' Cfg["Serial"] " exec-out screencap" (id != "" ? " -d " id : ""), false)
+        catch OSError
             buf := Buffer(0)
-        try FileDelete(path)
         if IsImage(buf)
             return buf
         AdbDisplays := Map()
@@ -271,8 +396,13 @@ Capture() {
 SaveScreenshot(path) {
     try {
         id := GameDisplay("Capture")
-        RunWait(A_ComSpec ' /c ""' Cfg["Path"] '" -s ' Cfg["Serial"] " exec-out screencap -p" (id != "" ? " -d " id : "") ' > "' path '""', , "Hide")
-        return FileExist(path) && FileGetSize(path) > 0
+        png := RunPiped('"' Cfg["Path"] '" -s ' Cfg["Serial"] " exec-out screencap -p" (id != "" ? " -d " id : ""), false)
+        if !png.Size
+            return false
+        f := FileOpen(path, "w")
+        f.RawWrite(png)
+        f.Close()
+        return true
     }
     return false
 }
