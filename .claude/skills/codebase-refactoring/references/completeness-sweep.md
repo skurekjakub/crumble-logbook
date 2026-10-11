@@ -1,108 +1,165 @@
 # Completeness sweep
 
-How to prove you found every reference to something you are moving, renaming, or deleting —
-including the references that are invisible to the import graph.
+How to prove you found every reference to something you are moving, renaming
+or deleting, including the references the import graph can't see.
+
+## Contents
+
+- Why the import graph is not enough
+- Building the inventory (Phase 1)
+- The sweep after the edit (Phase 5.5)
+- TypeScript-specific traps
+- Locator classes
 
 ## Why the import graph is not enough
 
-`tsc` proves that everything the type system can see still resolves. It cannot see a path inside
-a string, a glob in a config file, a markdown link, or a code fence in a blog post. Rename tooling
-has the same blind spot by construction: IDEs exclude dynamic usages from rename by default.
+`pnpm typecheck` proves that everything the type system can see still
+resolves. It cannot see a path inside a string, a directory named in the
+architecture test, a glob in a config file, or a Markdown link. Rename tooling
+has the same blind spot by construction: string literals and comments are
+opt-in.
 
-So the compiler passing is necessary and not sufficient. The gap it leaves is exactly where a
-partial refactor hides: the code compiles, the tests pass, and a config glob or a doc link now
-points at nothing.
+So the compiler passing is necessary and not sufficient. The gap it leaves is
+exactly where a partial refactor hides: the code compiles, the tests pass, and
+a rule in `architecture.test.ts` or a README row now points at nothing.
 
 ## Building the inventory (Phase 1)
 
-Count first, then act — a number you can re-derive independently is what gives "did I get them
-all" an answer.
+Count first, then act. The point is a number you can re-derive independently,
+so "did I get them all" has an answer.
 
 ### Importers, per module
 
-Quote the closing delimiter so `foo` does not also match `foo-bar`:
+Imports are relative inside a package, without an extension (`"../repos"`,
+`"./deck-modes"`), and by package name across packages (`@crumble/schema`,
+`@crumble/schema/power`, `@crumble/capture/ledger`, `@crumble/server` for
+types). A folder import (`"../repos"`) goes through its `index.ts`, so grep
+both the file and its folder. Quote the closing delimiter so `deck-modes`
+does not also match `deck-modes-x`:
 
 ```bash
-git grep -l "@/lib/proxy/chain'" -- app lib mcp-server tests proxy.ts
+git grep -lE "from \"(\.\./)+services/deck-modes\"" -- apps/server
+git grep -l "from \"./deck-modes\"" -- apps/server/src/services
+git grep -l "from \"@crumble/schema/power\"" -- apps packages tools
 ```
 
-Do this per module rather than per directory, then also take the union — a file may import two
-modules from the same directory, so per-module counts sum to more than the file count. Report
-both, and say which is which. Path aliases have two spellings: `@/lib/x` and a relative `../x`
-resolve to the same module — grep both.
+Do this per module rather than per directory, then also take the union: a
+file may import two modules from the same directory, so per-module counts sum
+to more than the file count. Report both, and say which is which.
 
 ### Symbol occurrences vs files
 
-`git grep -l` counts files; `git grep -c` counts lines; neither counts occurrences. When a
-rename's blast radius matters, say which you measured. "12 sites" meaning "12 files, 37
-occurrences" invites a reviewer to think a sweep was incomplete.
+`git grep -l` counts files; `git grep -c` counts lines; neither counts
+occurrences. When a rename's blast radius matters, say which you measured. A
+plan that says "12 sites" and means "12 files, 37 occurrences" invites a
+reviewer to think a sweep was incomplete.
 
-### Cycles
+### The dependency rules
 
-There is no cycle checker in the gate. When a move's argument rests on a cycle, run one ad hoc
-rather than reasoning about imports — `npx madge --circular --extensions ts,tsx app lib
-mcp-server proxy.ts` — and record the result as part of the baseline. A module cycle is a loop
-between specific modules; `a/x → b/y → a/z` is a chain, and a directory-level back-edge is not a
-cycle. "This would create a cycle" is a claim about named modules — find the loop or drop it.
+There is no dependency-graph tool. The layering is enforced by
+`apps/server/test/architecture.test.ts`: it parses every source file's
+imports under `apps/server/src`, `apps/web/src`, `packages/schema/src` and
+`packages/capture/src` and fails on a forbidden edge. Run it alone inside the
+loop:
+
+```bash
+pnpm exec vitest run apps/server/test/architecture.test.ts
+```
+
+What people get wrong here:
+
+- **A module cycle is not a directory back-edge.** `a/x.ts → b/y.ts → a/z.ts`
+  is a chain, not a cycle. "Moving this would create a cycle" is a claim
+  about specific modules; verify it by finding the actual loop, or drop the
+  argument.
+- **The test covers what its rules name.** A move into a new directory the
+  rules don't mention is unchecked until a rule names it. Read the rules for
+  the destination before claiming the move is gated.
 
 ## The sweep after the edit (Phase 5.5)
 
-For every old path and old symbol, grep the whole repo as raw text. Expected result: zero hits.
-Every hit is a missed site or a named exception.
+For every old path and old symbol, grep the whole repo as raw text. Expected
+result: zero hits. Every hit is a missed site or a named exception.
 
 ```bash
-# old module path, anywhere at all — docs, config, skills, posts, drafts
-git grep -n "lib/proxy/agent-markdown-user-agents"
+# old module path, anywhere: docs, skills, config, fixtures
+git grep -n "services/deck-modes"
 
 # old symbol name as raw text, not as an import
-git grep -n "\bprefersMarkdownByUserAgent\b"
+git grep -nw "deckModeMismatch"
 
-# markdown links pointing at source files that moved
-git grep -nE "\]\([./]+.*lib/proxy" -- '*.md' '*.mdx'
+# Markdown links pointing at source files that moved
+git grep -nE "\]\([./]*[^)]*services/deck-modes" -- '*.md'
 ```
 
-Use `grep -E` for anything with `(`, `)`, `|`, `+`, or `?` in the pattern. In basic regex a bare
-`(` is a literal and `\(` opens a group, so `"\](http"` matches a markdown link and `"\]\(http"`
-is a hard error (`Unmatched ( or \(`) — the two spellings mean opposite things in the two modes.
-Verify a pattern matches something you know exists before trusting that it matched nothing.
+Use `-E` for anything with `(`, `)`, `|`, `+` or `?` in the pattern. In basic
+regex those are literals, so `']\(http'` silently matches nothing and the
+absence of output reads as a clean result. Verify a pattern matches something
+you know exists before trusting that it matched nothing.
 
-Then re-run `npm run verify` and compare every number against the Phase 0 baseline. Equal or
-better. A test count that fell means tests stopped running.
+Hits under `docs/superpowers/specs/`, `docs/superpowers/plans/`,
+`docs/architecture/` and a research record's history are frozen journal:
+name them as deliberate exceptions, don't edit them.
+
+Then re-run the Phase 0 measurements and compare every number. A test count
+that fell means tests stopped running.
 
 ## TypeScript-specific traps
 
-**Barrel re-exports hide the real consumer.** Nothing may import a symbol from the module that
-declares it while eight things import it from an `index.ts`. Check the barrel before arguing
-from "consumed directly".
+**`z.infer` of an optional schema is not the non-null type.** When
+`.optional()` is applied inside the schema const, the inferred type is
+`{…} | undefined`, and `keyof` over that union is `never`. A
+`Partial<Record<keyof T, string>>` built on it collapses to `{}` and any
+indexed write stops compiling. Move `.optional()` to the field's use site and
+infer off the bare object, or wrap in `NonNullable`. The same holds for the
+schemas `drizzle-orm/zod` derives from a table. Probe type identity with a
+mutual-assignability check rather than reasoning about it.
 
-**Type-only imports are erased.** `import type` from a `server-only` module in a client
-component is safe and does not pull the module into the client bundle. Don't report it as a leak,
-and don't rely on its absence as proof that no client code depends on the shape.
+**Barrels hide the real consumer.** `packages/schema/src/index.ts`,
+`apps/server/src/repos/index.ts` and `apps/server/src/services/index.ts`
+re-export what their folders declare; most consumers import from
+`@crumble/schema` or the folder, not from the declaring file. A "consumed
+directly" argument needs the barrel checked first.
 
-**Test fixtures pin paths as data.** A fixture under `tests/fixtures/` keyed by module path, a
-mock registered by path in `tests/mocks/`, or a `vi.mock('@/lib/…')` string does not appear in
-the import graph and will not fail to compile. `git grep` the path under `tests/` explicitly.
+**Type-only imports are erased.** The web app imports `@crumble/server` for
+types only, and the architecture test allows exactly that. Don't report an
+`import type` as a leak, and don't let a move turn one into a value import:
+the rule fails, and the server would land in the client bundle.
 
-**`z.infer` of an optional schema is not the non-null type.** With `.optional()` inside the
-schema const, the inferred type is `{…} | undefined` and `keyof` over that union is `never`.
-Probe type identity with a mutual-assignability check rather than reasoning about it.
+**Package subpaths are an API.** `@crumble/schema/power` and
+`@crumble/schema/migrations` exist because a package's `exports` map names
+them. Moving the file behind one means editing the map, and grepping for the
+subpath, not the file name.
 
-## Repo-specific locator classes
+**Generated files pin paths.** `apps/web/src/routeTree.gen.ts` lists every
+route file; a moved or renamed route regenerates it on the next Vite build or
+`pnpm dev`, and the regenerated file is committed with the move.
 
-Things in this repo that name source paths or symbols without importing them:
+**Test fixtures and rules pin paths as data.** The architecture test's
+directory constants, a fixture record under
+`apps/server/test/importers/fixtures/`, and the ledger's record-relative
+paths don't appear in the import graph and won't fail to compile.
+
+## Locator classes
+
+Things that name source paths without importing them; check every one the
+move could touch:
 
 | Where | Why it bites |
 |---|---|
-| `AGENTS.md` | Loaded into every session. A stale path here misdirects every agent. |
-| `.ai/feature-constitution/*/README.md` | Read as the spec of a subsystem before touching it. |
-| `.claude/skills/*/SKILL.md`, `.claude/agents/*.md` | Skills and the reviewer cite paths and commands; a stale one is followed. |
-| `.ai/shared/*.md`, `.ai/comment-policy.md` | Examples in the policy quote real symbols. |
-| `content/blog/*.mdx`, `content/about.mdx` | **Published pages quote paths and symbols in code fences, and `<CodeLink source>` names files outright.** A rename makes a public claim false or fails the build. Surface these to the user; don't silently edit a post. |
-| `content/drafts/*.mdx`, `content/drafts/*.md` | Tracked, unpublished, and they quote the same paths. Same rule as posts: surface, don't silently edit — the author decides whether the draft tracks the code. |
-| `mdx-components.tsx` | The tag → component map; a moved component is reached by name from MDX. |
-| `next.config.ts`, `vitest.config.mts`, `tsconfig.json` | Globs, aliases, and setup paths. |
-| `package.json` scripts, `scripts/*.sh` | Scripts naming files directly. |
-| `.github/workflows/ci.yml` | The CI gate names scripts; a renamed script breaks every PR. |
+| `apps/server/test/architecture.test.ts` | Its rules name directories and files; a stale one stops guarding anything. |
+| `apps/server/src/registry.ts` | Every server layer, the snapshot and the importer's order derive from it. |
+| `apps/web/src/app/modes/` | Tabs and their routes, as data. |
+| `README.md` | The What's here table, the API table and the command blocks are read as the map. |
+| `AGENTS.md`, `CLAUDE.md`, `.ai/agent-working-rules.md` | Loaded every session; a stale path misdirects every agent. Changes to `AGENTS.md` go to the user. |
+| `.claude/skills/**`, `.claude/agents/*.md` | Workflows naming helpers and paths. |
+| `docs/conventions/*.md`, `docs/gotchas.md` | Rules agents follow; a stale path makes the convention wrong. |
+| `.ai/dod/*.md`, `.ai/diagrams/*.md`, `.ai/regression/*.md` | Checklists, orientation maps and click-throughs naming paths and routes. |
+| Relative Markdown links | `[label](../apps/server/src/x.ts)` 404s silently; nothing validates them. |
+| `vitest.config.ts`, `pnpm-workspace.yaml`, packages' `exports` | Projects, workspace members and subpaths by path. |
+| `apps/server/src/cli/build-vercel.ts`, `.vercelignore` | What the deployment bundles and uploads. |
+| `package.json` scripts | Scripts naming files directly (`tsx src/cli/import-record.ts`). |
+| `.gitignore` | Paths kept local; a moved tool's run files must stay ignored. |
 
-`.ai/feature-constitution/*/spec.md`, `plan*.md`, and `research*` are frozen journals — correctly
-out of scope. The `README.md` beside them is not.
+The specs and plans under `docs/superpowers/` are frozen journals, correctly
+out of scope. `README.md` is not.

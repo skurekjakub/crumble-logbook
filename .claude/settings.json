@@ -1,6 +1,5 @@
 {
   "//": "Project-scoped Claude Code settings (committed). User-specific overrides live in settings.local.json (gitignored).",
-
   "permissions": {
     "allow": [
       "Bash(npm test)",
@@ -15,7 +14,6 @@
     ],
     "deny": ["Bash(npm publish*)", "Bash(git push --force*)"]
   },
-
   "hooks": {
     "SessionStart": [
       {
@@ -53,6 +51,11 @@
             "type": "command",
             "command": "\"${CLAUDE_PROJECT_DIR}/.claude/hooks/run-hook.cmd\" require-commit-format",
             "async": false
+          },
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/hooks/block-destructive-bash\""
           }
         ]
       }
@@ -88,6 +91,30 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/hooks/notify-done\""
+          }
+        ]
+      }
     ]
+  },
+  "enabledPlugins": {
+    "research-planning@giga-marketplace": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "giga-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "skurekjakub/giga-marketplace"
+      }
+    }
   }
 }

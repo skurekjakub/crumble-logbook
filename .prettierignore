@@ -6,6 +6,8 @@ packages/capture/test/fixtures/
 docs/
 data/
 .claude/
+# agent working files and setup-ai templates, re-rendered by setup-ai on update
+.ai/
 **/migrations/
 pnpm-lock.yaml
 *.md

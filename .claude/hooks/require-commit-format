@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # PreToolUse hook matching Bash. Blocks the two commands that cannot produce a
-# message conforming to .ai/shared/commit-and-pr-format.md, by exiting 2 (Claude
+# message conforming to .ai/resources/pr-guidelines.md, by exiting 2 (Claude
 # Code's "deny" signal for PreToolUse). Pass-through (exit 0) for anything else.
 #
 # It checks for flags, never for message content: a shell string cannot be
@@ -31,7 +31,7 @@ advise() {
     echo "" >&2
     echo "${2}" >&2
     echo "" >&2
-    echo "format: .ai/shared/commit-and-pr-format.md" >&2
+    echo "format: .ai/resources/pr-guidelines.md" >&2
     echo "command was: ${cmd}" >&2
     exit 2
 }

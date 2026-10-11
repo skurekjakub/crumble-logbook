@@ -4,14 +4,16 @@
 # emits at most once per REMIND_INTERVAL_SECONDS (default 300) per agent, so the
 # rules stay live inside long autonomous turns without flooding context.
 #
-# Customize per repo: edit the REMINDERS array below. Keep entries terse — a
-# single line each, prioritized by impact. The goal is one-glance reinforcement,
-# not paragraphs of doctrine; past a handful of rules it becomes noise.
+# The rules live in .ai/reminders.md: every "- " bullet there is a rule, and
+# every other line is ignored. Edit that file, not this script.
 #
 # Output: JSON with hookSpecificOutput.additionalContext (Claude Code shape).
 # Falls back to `additional_context` top-level for compatible platforms.
 
 set -euo pipefail
+
+REMINDERS_FILE="${CLAUDE_PROJECT_DIR:-$(pwd)}/.ai/reminders.md"
+[ -r "$REMINDERS_FILE" ] || exit 0
 
 # The event name decides which output key Claude Code reads; a payload without
 # one is treated as a user prompt.
@@ -48,19 +50,12 @@ printf '%s' "$now" > "$state_file"
 # Sessions end without telling the hook; drop state older than a day.
 find "$state_dir" -maxdepth 1 -name 'last-*' -mmin +1440 -delete 2>/dev/null || true
 
-REMINDERS=(
-    "NO COUNTING OR ENUMERATING IN PROSE — never write how many of something the repo has (\"three doors\", \"the same four stages\") or type a roster into a sentence. Point at the folder or file that holds the list. Thresholds in a rule and dated measurements in a record are fine. AGENTS.md § Key directives."
-    "COMMENTS READ AS API, NOT NARRATIVE — JSDoc on every function (what it does, params, returns, how it fails), inline comments only at gotchas, as long as the point needs. Test each sentence: would it still be true if a different caller used this tomorrow? If not, cut it. Why you chose it goes in the commit message; a behaviour that must keep working goes in a test name; history stays in git log."
-    "FILE CHANGES GO THROUGH Read/Edit/Write — never sed, python heredocs, or cat > through Bash. Bash is for running things."
-    "UNRELATED CODE — don't touch code outside the task. Surface bad code or design smells you spot; the user decides whether to address separately."
-)
+# CRLF from a Windows editor would leave a stray \r on every rule.
+rules=$(grep -E '^- ' "$REMINDERS_FILE" | tr -d '\r' || true)
+[ -n "$rules" ] || exit 0
 
-# Build the reminder block.
-reminder_text="HIGH-PRIORITY RULES (auto-injected periodically — fix in .claude/hooks/remind-rules if outdated):"
-for r in "${REMINDERS[@]}"; do
-    reminder_text="${reminder_text}
-- ${r}"
-done
+reminder_text="HIGH-PRIORITY RULES (auto-injected periodically — edit .ai/reminders.md if outdated):
+${rules}"
 
 # Caveman mode reinforcement — the caveman plugin writes the active intensity to
 # this user-scoped flag. Mirror it here so the reminder survives long turns where

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # PreToolUse hook matching Bash. Steers whole-repo quality-gate runs toward
-# `npm run verify` by exiting 2 (Claude Code's "deny" signal for PreToolUse).
+# `pnpm verify` by exiting 2 (Claude Code's "deny" signal for PreToolUse).
 # Pass-through (exit 0) for anything else.
 #
 # The point is to stop the "run the gates by hand" pattern without breaking the
@@ -9,8 +9,8 @@
 #   1. Two or more gates chained in one command  -> blocked. That is verify's job.
 #   2. An unscoped whole-repo run of a gate that HAS a scoped form
 #      (test, lint, format:check)               -> blocked. Scope it or verify.
-#   3. A lone typecheck or build                 -> allowed. No scoped form
-#      exists, and each is a legitimate single check.
+#   3. A lone typecheck or build                 -> allowed. Each is a
+#      legitimate single check.
 #
 # Matching is anchored to the whole segment, so any extra argument — a path, a
 # filter, `--` passthrough — falls through as a scoped run and is allowed.
@@ -29,11 +29,11 @@ gate_of() {
     # rtk proxies bare dev commands, so the same gate can arrive either way.
     local seg="${1#rtk }"
     case "$seg" in
-    'npm run typecheck' | 'npx tsc --noEmit' | 'tsc --noEmit') echo typecheck ;;
-    'npm run lint' | 'npx eslint .' | 'eslint .') echo lint ;;
-    'npm run format:check' | 'npx prettier --check .') echo format ;;
-    'npm test' | 'npm run test' | 'npx vitest run' | 'vitest run') echo test ;;
-    'npm run build' | 'next build' | 'npx next build') echo build ;;
+    'pnpm typecheck' | 'pnpm run typecheck' | 'pnpm -r typecheck' | 'pnpm exec tsc -p .' | 'tsc -p .') echo typecheck ;;
+    'pnpm lint' | 'pnpm run lint' | 'pnpm exec eslint .' | 'pnpm exec eslint --max-warnings 0 .' | 'eslint .') echo lint ;;
+    'pnpm format:check' | 'pnpm run format:check' | 'pnpm exec prettier --check .' | 'prettier --check .') echo format ;;
+    'pnpm test' | 'pnpm run test' | 'pnpm vitest run' | 'pnpm exec vitest run' | 'pnpm -r test' | 'vitest run') echo test ;;
+    'pnpm build:vercel' | 'pnpm run build:vercel') echo build ;;
     *) echo '' ;;
     esac
 }
@@ -53,8 +53,8 @@ fi
 
 advise() {
     echo "blocked by project hook: ${1}" >&2
-    echo "run: npm run verify" >&2
-    echo "  (typecheck -> eslint -> prettier -> vitest -> next build, fastest failure first)" >&2
+    echo "run: pnpm verify" >&2
+    echo "  (typecheck -> eslint -> prettier -> vitest, fastest failure first)" >&2
     echo "command was: ${cmd}" >&2
     exit 2
 }
@@ -66,13 +66,13 @@ fi
 case "${gates[0]}" in
 test)
     echo "blocked by project hook: unscoped whole-repo test run" >&2
-    echo "run: npm run verify   (or scope it: npx vitest run path/to/one.test.ts)" >&2
+    echo "run: pnpm verify   (or scope it: pnpm exec vitest run path/to/one.test.ts)" >&2
     echo "command was: ${cmd}" >&2
     exit 2
     ;;
 lint | format)
     echo "blocked by project hook: unscoped whole-repo ${gates[0]} run" >&2
-    echo "run: npm run verify   (or scope it by passing a path)" >&2
+    echo "run: pnpm verify   (or scope it: pnpm exec eslint <path>, pnpm exec prettier --check <path>)" >&2
     echo "command was: ${cmd}" >&2
     exit 2
     ;;

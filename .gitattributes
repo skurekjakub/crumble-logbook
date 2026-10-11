@@ -2,3 +2,6 @@
 
 # Captures whose README records a sha256 keep their exact bytes.
 research/001-guild-conquest-meta/evidence/19-sugarpocket/*.json -text
+
+# setup-ai hooks are bash scripts; CRLF breaks them.
+.claude/hooks/* text eol=lf

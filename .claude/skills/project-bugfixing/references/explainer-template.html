@@ -11,12 +11,13 @@
     fill slot. Leave the tokens alone so the series reads as one series. Add a
     rule if a figure needs one; do not restyle what is here.
   - Sections are fixed: BEFORE → THE DEFECT → THE CHANGE → RESIDUAL RISK. Do
-    not add, reorder or rename them. No quiz — this page is published after
-    `npm run verify` exits 0, so a quiz would be grading a decision already
-    made.
-  - Three figure components are provided at the bottom of the markup as
-    commented-out blocks: a code/wire excerpt, a comparison-bar figure, and a
-    segmented-lane figure. Move the ones you need into place, delete the rest.
+    not add, reorder or rename them. No quiz — a feature walkthrough is
+    published before the code lands so its quiz can still catch a wrong model;
+    this page is published after `pnpm verify` exits 0, so a quiz would be
+    grading a decision already made.
+  - Figure components (a code/wire excerpt, a comparison-bar figure, a
+    segmented-lane figure) sit at the bottom of the markup as commented-out
+    blocks. Move the ones you need into place, delete the rest.
   - The page must survive the Artifact CSP: no external fonts, scripts,
     stylesheets or images. Everything here already does.
   - Both themes are handled by the tokens. Do not write component CSS inside a
@@ -26,12 +27,12 @@
   <title>, the <h1>, and the `description` you pass to `Artifact` all name the
   defect the way a tracker entry would: short, flat, to the point. Roughly 4-8
   words. Name the thing and what is wrong with it, then stop.
-    ✅ Accept: text/markdown on tag pages returns HTML
-    ✅ Callout projection drops nested list items
-    ✅ Negotiated .md twin cached as public
-    ❌ The projection walked the Callout children before the list plugin ran,
-       so every nested item rendered flat    (a sentence — this is the standfirst)
-    ❌ The scraper stopped ignoring "come back later"    (a headline)
+    ✅ Rift clears ranked by ratio
+    ✅ Cookie icon missing on Lineup slots
+    ✅ ?current=false ignored on /api/decks
+    ❌ The stage clears service sorted by power ÷ recommended power, so every
+       15% clear ranked above a deeper 35% one     (a sentence — the standfirst)
+    ❌ The Teams tab got its icons back    (a headline)
   Could it be the subject line of a ticket? If it needs a comma or the word
   "so", it is too long. The mechanism and the measurement go in the standfirst,
   which is the very next line on the page. Body copy is where the writing craft
@@ -39,8 +40,8 @@
 
   NUMBERS ARE MEASUREMENTS, NOT TARGETS
   Numbers on this page are legitimate only as measurements — dated, sourced,
-  with nothing built to satisfy them ("minimum line indent 4 → 0", "18 content
-  files use the tag"). Say where each came from and when. A number that is a
+  with nothing built to satisfy them ("Rift clears ranked out of order on
+  2026-10-03's import: 4 → 0", "the Teams tab drops icons for 6 cookies"). Say where each came from and when. A number that is a
   target, or that restates a constant, does not belong here at all.
 -->
 
@@ -401,7 +402,7 @@
     <!-- FILL: the specific failure. Measured where it was measured, and marked
          as reasoned where it was not — an unmarked guess reads as evidence
          later. Quote the standard if one says otherwise (an RFC, a header
-         spec, the repo's own AGENTS.md).
+         spec, the repo's own AGENTS.md or README.md).
          This is where a figure earns its place. Use one only if it shows
          something the prose cannot: a before/after magnitude, a budget being
          overspent. Do not decorate.
@@ -436,7 +437,7 @@
     </ul>
 
     <!-- Keep verbatim except the path. Only publish once verify has exited 0. -->
-    <p class="verdict"><strong>npm run verify → exit 0.</strong> Root cause and evidence:
+    <p class="verdict"><strong>pnpm verify → exit 0.</strong> Root cause and evidence:
       .ai/bugfixes/NNN-&lt;slug&gt;/root-cause.md</p>
   </section>
 </div>
