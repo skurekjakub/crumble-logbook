@@ -1,0 +1,7 @@
+; 360-30, Ginkgoblin Stormer: stands up and right of the team at the HUD, further up than on
+; 360-20.
+; Lost with no input: 49% health left at 29 s. This walk, 360-20's with a longer diagonal, won
+; its first try on 2026-10-11, in about 22 s.
+encounter
+W+D 250
+D 450

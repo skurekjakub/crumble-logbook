@@ -1,0 +1,6 @@
+; 360-26, Ginkgoblin Bomber: stands right of the team at the HUD, a little above it, as on 360-22.
+; Lost with no input: 17% health left at 31 s. This script, 360-22's, won its first try
+; here on 2026-10-11, in about 18 s.
+encounter
+W+D 250
+D 500
