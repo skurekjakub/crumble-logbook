@@ -1,19 +1,14 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-#Include ..\adb-lib\AdbScreen.ahk
+#Include ..\macro-lib\AdbScreen.ahk
+#Include ..\macro-lib\Macro.ahk
+#Include ..\macro-lib\Hud.ahk
 ; Guild Conquest retry loop over adb: lobby -> ENTER -> fight -> dismiss the results -> repeat.
 ; A fight whose score is behind MinScore when the countdown reaches CheckAtS is ended early.
 ; It reads the screen with `adb exec-out screencap` and taps with `adb shell input`, so the emulator
 ; window can sit behind other windows. Every knob is in conquest-loop.ini; see README.md.
 
-global IniPath := A_ScriptDir "\conquest-loop.ini"
-; Reads the fight's score and countdown from a capture; see tools/conquest-hud.
-global HudCli := A_ScriptDir "\..\conquest-hud\src\cli.ts"
-global Cfg := Map()
-global Running := false
-global Probing := false
 global Runs := 0
-global Phase := "idle"
 
 ; Fallbacks used when a key is missing from the INI. Section -> key -> value.
 global DEFAULTS := Map(
@@ -37,72 +32,10 @@ global DEFAULTS := Map(
                "RunsFile", "conquest-runs.csv", "CurvesFile", "conquest-curves.csv")
 )
 
-LoadConfig()
-UpdateStatus()
-for arg in A_Args
-    if (arg = "/start")
-        ToggleRun()
+MacroInit({Title: "Conquest loop", IniPath: A_ScriptDir "\conquest-loop.ini", Defaults: DEFAULTS,
+    Counters: () => "runs " Runs, Tag: () => "run " Runs, Probe: ProbeText, Run: RunLoop, Keys: "  F9 learn"})
 
-F7:: ToggleProbe()
-F8:: ToggleRun()
 F9:: Learn()
-F10:: {
-    LoadConfig()
-    UpdateStatus("config reloaded")
-}
-F12:: ExitApp()
-
-/**
- * Raised inside the run thread when F8 stops the loop; unwinds any wait.
- */
-class StopSignal extends Error {
-}
-
-/**
- * Reads every knob from the INI into Cfg, falling back to DEFAULTS.
- */
-LoadConfig() {
-    global Cfg
-    Cfg := Map()
-    for section, keys in DEFAULTS
-        for key, fallback in keys
-            Cfg[key] := Trim(IniRead(IniPath, section, key, fallback))
-}
-
-/**
- * Returns the numeric value of a knob.
- * @param key knob name, e.g. "PollMs"
- * @returns Number; throws if the INI value isn't numeric
- */
-N(key) {
-    return Number(Cfg[key])
-}
-
-/**
- * Appends a timestamped line to the log file next to the script. A write that fails (another
- * program holding the file open, say) is retried briefly and then dropped, never raised.
- * @param msg text to log
- */
-Log(msg) {
-    line := FormatTime(, "yyyy-MM-dd HH:mm:ss") " [run " Runs "] " msg "`n"
-    loop 5 {
-        try {
-            FileAppend(line, A_ScriptDir "\" Cfg["LogFile"], "UTF-8")
-            return
-        }
-        Sleep 100
-    }
-}
-
-/**
- * Shows the status tooltip in the top-left corner of the screen.
- * @param extra optional detail appended after the phase
- */
-UpdateStatus(extra := "") {
-    state := Running ? "RUNNING" : "stopped"
-    ToolTip("Conquest loop: " state " | runs " Runs " | " Phase (extra ? " " extra : "")
-        . "`nF8 start/stop  F7 probe  F9 learn  F10 reload ini  F12 exit", 10, 10, 1)
-}
 
 /**
  * Classifies a capture.
@@ -119,31 +52,7 @@ ScreenOf(buf) {
 }
 
 /**
- * Taps a named point in game pixels, with a random offset of up to JitterPx.
- * @param name point prefix in [Points], e.g. "Enter" reads EnterX / EnterY
- */
-Tap(name) {
-    p := TapAt(N(name "X"), N(name "Y"), N("JitterPx"))
-    Log("tap " name " @ " p.x "," p.y)
-}
-
-/**
- * Sleeps in short slices, unwinding when the loop is stopped.
- * @param ms duration in milliseconds
- * @throws StopSignal when F8 stops the loop mid-wait
- */
-Wait(ms) {
-    finish := A_TickCount + ms
-    while (A_TickCount < finish) {
-        if !Running
-            throw StopSignal()
-        UpdateStatus()
-        Sleep 200
-    }
-}
-
-/**
- * The retry loop, run on its own thread by ToggleRun. Checks the screen every PollMs.
+ * The retry loop, run on its own thread by F8. Checks the screen every PollMs.
  * - In the lobby with ENTER lit, it taps ENTER.
  * - Off the lobby, it taps Dismiss once the learned result screen shows, or, with no result
  *   learned, once MinFightMs have passed since ENTER (the fight's full 60 s plus loading).
@@ -159,7 +68,7 @@ Wait(ms) {
  *   Recover can't reach the lobby
  */
 RunLoop() {
-    global Runs, Phase, Running
+    global Runs, Phase
     stuck := 0
     grey := 0
     ; Started off the lobby: assume a fight began now, so Dismiss waits as it would after ENTER.
@@ -238,9 +147,6 @@ RunLoop() {
             RecordRun(rec, "error", "")
         TrayTip(e.Message, "Conquest loop stopped", 3)
     }
-    Running := false
-    Phase := "idle"
-    UpdateStatus()
 }
 
 /**
@@ -311,11 +217,10 @@ TrackFight(rec, deadline) {
     seenAt := 0
     hud := {out: ""}
     loop {
-        if !Running
-            throw StopSignal()
+        CheckStop()
         if (A_TickCount >= deadline) {
             if judging
-                Log("pace: no reading by the deadline; keeping the run. Last read: " Trim(StrReplace(hud.out, "`n", " | "), " |`r"))
+                Log("pace: no reading by the deadline; keeping the run. Last read: " HudLine(hud.out))
             return "deadline"
         }
         buf := Capture()
@@ -435,8 +340,7 @@ ReadFinal() {
     last := ""
     hud := {out: ""}
     while (A_TickCount < deadline) {
-        if !Running
-            throw StopSignal()
+        CheckStop()
         UpdateStatus()
         buf := Capture()
         if (ScreenOf(buf) = "lobby")
@@ -446,7 +350,7 @@ ReadFinal() {
             return hud.final
         last := hud.final
     }
-    Log("final score unreadable. Last read: " Trim(StrReplace(hud.out, "`n", " | "), " |`r"))
+    Log("final score unreadable. Last read: " HudLine(hud.out))
     Log(SaveStopShot())
     return ""
 }
@@ -474,57 +378,19 @@ RecordRun(rec, end, final) {
 }
 
 /**
- * Appends rows to a CSV next to the script, writing its header first when it creates the file.
- * A write that fails (another program holding the file open, say) is retried briefly and then
- * logged, never raised.
- * @param name the file's name, e.g. "conquest-runs.csv"
- * @param header the column names, comma-separated
- * @param rows the rows, each ending in a newline
- */
-AppendCsv(name, header, rows) {
-    path := A_ScriptDir "\" name
-    loop 5 {
-        try {
-            if !FileExist(path)
-                FileAppend(header "`n", path, "UTF-8-RAW")
-            FileAppend(rows, path, "UTF-8-RAW")
-            return
-        }
-        Sleep 100
-    }
-    Log("couldn't write " name)
-}
-
-/**
  * Reads the fight's score and countdown, and the results' final score, from a capture with
- * tools/conquest-hud.
+ * tools/hud.
  * @param buf capture from Capture()
  * @returns {score, timer, final, out}: the scores as integers and the seconds left as a number,
  *   each empty when it couldn't be read, and the reader's output for the log
  */
 ReadHud(buf) {
-    path := A_Temp "\conquest-hud-" ProcessExist() ".bin"
-    f := FileOpen(path, "w")
-    f.RawWrite(buf)
-    f.Close()
-    out := RunOut('"' Cfg["Node"] '" "' HudCli '" read "' path '"')
-    score := RegExMatch(out, "m)^score (\d+)", &s) ? Integer(s[1]) : ""
-    timer := RegExMatch(out, "m)^timer (\d+(?:\.\d+)?)", &t) ? Number(t[1]) : ""
-    final := RegExMatch(out, "m)^final (\d+)", &f) ? Integer(f[1]) : ""
-    return {score: score, timer: timer, final: final, out: out}
-}
-
-/**
- * Runs a command line, hidden, and returns what it printed.
- * @param cmd the command line, e.g. '"node" "cli.ts" read "x.bin"'
- * @returns stdout and stderr; empty when it printed nothing
- */
-RunOut(cmd) {
-    path := A_Temp "\conquest-run-" ProcessExist() ".txt"
-    try FileDelete(path)
-    RunWait(A_ComSpec ' /c "' cmd ' > "' path '" 2>&1"', , "Hide")
-    try return FileRead(path, "UTF-8")
-    return ""
+    out := HudRun("read", buf)
+    score := HudField(out, "score")
+    timer := HudField(out, "timer")
+    final := HudField(out, "final")
+    return {score: score = "" ? "" : Integer(score), timer: timer = "" ? "" : Number(timer),
+        final: final = "" ? "" : Integer(final), out: out}
 }
 
 /**
@@ -540,33 +406,6 @@ Short(n) {
 }
 
 /**
- * Saves the current screen to stops\ next to the script, so a stop or a recovery can be explained.
- * @returns a log line naming the file, or saying none could be saved
- */
-SaveStopShot() {
-    dir := A_ScriptDir "\stops"
-    try DirCreate(dir)
-    name := FormatTime(, "yyyy-MM-dd_HHmmss") ".png"
-    return SaveScreenshot(dir "\" name) ? "screen saved: stops\" name : "screen not saved"
-}
-
-/**
- * F8: starts the loop on a new thread, or asks a running loop to stop at its next wait slice.
- */
-ToggleRun() {
-    global Running
-    if Running {
-        Running := false
-        UpdateStatus("stopping")
-        return
-    }
-    LoadConfig()
-    Running := true
-    Log("started")
-    SetTimer(RunLoop, -1)
-}
-
-/**
  * F9: a menu that learns a screen's signature from what the game shows right now and saves it to
  * the INI: ENTER's lit colour (on the live lobby), the whole lobby, or the result screen.
  */
@@ -576,7 +415,7 @@ Learn() {
     m.Add("Lobby (on the lobby)", LearnHandler.Bind("Lobby", "Lobby"))
     m.Add("Result screen (on the results, before dismissing)", LearnHandler.Bind("Result", "ResultPoints"))
     m.Add()
-    m.Add("Forget the result screen", (*) => (IniWrite("", IniPath, "Detect", "Result"), LoadConfig(), UpdateStatus("result forgotten")))
+    m.Add("Forget the result screen", (*) => (IniWrite("", Macro.IniPath, "Detect", "Result"), LoadConfig(), UpdateStatus("result forgotten")))
     m.Show()
 }
 
@@ -588,7 +427,7 @@ Learn() {
 LearnHandler(key, pointsKey, *) {
     try {
         spec := Sample(Capture(), Cfg[pointsKey])
-        IniWrite(spec, IniPath, "Detect", key)
+        IniWrite(spec, Macro.IniPath, "Detect", key)
         LoadConfig()
         Log("learned " key ": " spec)
         UpdateStatus("learned " key)
@@ -598,31 +437,13 @@ LearnHandler(key, pointsKey, *) {
 }
 
 /**
- * F7: toggles a probe that captures the screen and shows what the script sees: the screen it
- * classifies and the colour at every signature pixel.
+ * The probe's text: the screen the loop would classify, what the HUD reader reads, and the
+ * colour at every signature pixel.
+ * @param buf capture from Capture()
+ * @returns the tooltip text
  */
-ToggleProbe() {
-    global Probing
-    Probing := !Probing
-    SetTimer(ShowProbe, Probing ? 2000 : 0)
-    if Probing
-        ShowProbe()
-    else
-        ToolTip(, , , 2)
-}
-
-/**
- * Draws the probe tooltip under the status line.
- */
-ShowProbe() {
-    try {
-        buf := Capture()
-        hud := ReadHud(buf)
-        text := "screen: " ScreenOf(buf) "`nHUD: " StrReplace(Trim(hud.out, "`r`n"), "`n", " | ")
-            . "`nLobby:" Describe(buf, Cfg["Lobby"])
-            . "`nEnterReady:" Describe(buf, Cfg["EnterReady"]) "`nResult:" Describe(buf, Cfg["Result"])
-    } catch Error as e {
-        text := e.Message
-    }
-    ToolTip(text, 10, 60, 2)
+ProbeText(buf) {
+    return "screen: " ScreenOf(buf) "`nHUD: " HudLine(HudRun("read", buf))
+        . "`nLobby:" Describe(buf, Cfg["Lobby"])
+        . "`nEnterReady:" Describe(buf, Cfg["EnterReady"]) "`nResult:" Describe(buf, Cfg["Result"])
 }

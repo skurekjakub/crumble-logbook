@@ -12,7 +12,7 @@ Where tests live, so `rubber-duk-tests` puts a new file where the next reader lo
     `renderRoute` (`view-harness.tsx`);
   - `<module>-lib.test.ts` covers a pure module of `src/lib/`;
   - a component test is named after the component (`data-table.test.tsx`) and calls `render` itself.
-- **`packages/*/test/` and `tools/conquest-hud/test/`** are flat, named for the source module (`ledger.test.ts`) or the contract (`records.test.ts`) they
+- **`packages/*/test/` and `tools/hud/test/`** are flat, named for the source module (`ledger.test.ts`) or the contract (`records.test.ts`) they
   cover.
 - **Integration tests** (real modules together, fakes only at the process boundary):
   - server route tests build the real app over an in-memory database,
@@ -31,7 +31,7 @@ Where tests live, so `rubber-duk-tests` puts a new file where the next reader lo
 - **Fixtures** are frozen and committed:
   - `packages/capture/test/fixtures/` holds verbatim captures, kept byte for byte (prettier skips them);
   - `apps/server/test/importers/fixtures/` holds small records and account files;
-  - the HUD tests draw synthetic screens in `tools/conquest-hud/test/helpers.ts`;
+  - the HUD tests draw synthetic screens in `tools/hud/test/helpers.ts`;
   - web fixtures are typed constants in the test file or in `view-harness.tsx`.
 - **Live data:** committed research records are fair input; the local `data/crumble.db`, `account/`
   screenshots and the macro's run files never are.

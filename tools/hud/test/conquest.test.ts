@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
+import { learnField, readFinal, readScore, readTimer } from "../src/conquest.ts";
 import type { HudTemplates } from "../src/hud.ts";
-import { learnField, readFinal, readScore, readTimer } from "../src/hud.ts";
+import { emptyTemplates } from "../src/hud.ts";
 import {
   blankScreen,
   drawNumber,
@@ -16,7 +17,7 @@ import {
  * @returns the learned templates.
  */
 function synthTemplates(): HudTemplates {
-  let templates: HudTemplates = { score: [], timer: [], final: [] };
+  let templates: HudTemplates = emptyTemplates();
   for (const [score, timer] of [
     ["1,234,567,890", "12.345"],
     ["9,876,543,210", "50.678"],
@@ -160,7 +161,7 @@ describe("readFinal", () => {
 });
 
 describe("learnField", () => {
-  const none: HudTemplates = { score: [], timer: [], final: [] };
+  const none = emptyTemplates();
 
   it("refuses a number with a different count of digits from the capture", () => {
     const screen = blankScreen();

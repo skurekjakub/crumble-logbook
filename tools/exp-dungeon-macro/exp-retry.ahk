@@ -1,17 +1,13 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-#Include ..\adb-lib\AdbScreen.ahk
+#Include ..\macro-lib\AdbScreen.ahk
+#Include ..\macro-lib\Macro.ahk
 ; EXP Dungeon retry loop over adb: taps ENTER in the dungeon lobby, closes the DEFEAT screen, repeats.
 ; It reads the screen with `adb exec-out screencap` and taps with `adb shell input`, so the emulator
 ; window can sit behind other windows. Every knob is in exp-retry.ini; see README.md.
 
-global IniPath := A_ScriptDir "\exp-retry.ini"
-global Cfg := Map()
-global Running := false
-global Probing := false
 global Entries := 0
 global Defeats := 0
-global Phase := "idle"
 
 ; Fallbacks used when a key is missing from the INI. Section -> key -> value.
 global DEFAULTS := Map(
@@ -25,71 +21,9 @@ global DEFAULTS := Map(
     "Run", Map("MaxEntries", "0", "LobbyStuckLimit", "3", "LogFile", "exp-retry.log")
 )
 
-LoadConfig()
-UpdateStatus()
-for arg in A_Args
-    if (arg = "/start")
-        ToggleRun()
-
-F7:: ToggleProbe()
-F8:: ToggleRun()
-F10:: {
-    LoadConfig()
-    UpdateStatus("config reloaded")
-}
-F12:: ExitApp()
-
-/**
- * Raised inside the run thread when F8 stops the loop; unwinds any wait.
- */
-class StopSignal extends Error {
-}
-
-/**
- * Reads every knob from the INI into Cfg, falling back to DEFAULTS.
- */
-LoadConfig() {
-    global Cfg
-    Cfg := Map()
-    for section, keys in DEFAULTS
-        for key, fallback in keys
-            Cfg[key] := Trim(IniRead(IniPath, section, key, fallback))
-}
-
-/**
- * Returns the numeric value of a knob.
- * @param key knob name, e.g. "PollMs"
- * @returns Number; throws if the INI value isn't numeric
- */
-N(key) {
-    return Number(Cfg[key])
-}
-
-/**
- * Appends a timestamped line to the log file next to the script. A write that fails (another
- * program holding the file open, say) is retried briefly and then dropped, never raised.
- * @param msg text to log
- */
-Log(msg) {
-    line := FormatTime(, "yyyy-MM-dd HH:mm:ss") " [entries " Entries ", defeats " Defeats "] " msg "`n"
-    loop 5 {
-        try {
-            FileAppend(line, A_ScriptDir "\" Cfg["LogFile"], "UTF-8")
-            return
-        }
-        Sleep 100
-    }
-}
-
-/**
- * Shows the status tooltip in the top-left corner of the screen.
- * @param extra optional detail appended after the phase
- */
-UpdateStatus(extra := "") {
-    state := Running ? "RUNNING" : "stopped"
-    ToolTip("EXP retry: " state " | entries " Entries " | defeats " Defeats " | " Phase (extra ? " " extra : "")
-        . "`nF8 start/stop  F7 probe  F10 reload ini  F12 exit", 10, 10, 1)
-}
+MacroInit({Title: "EXP retry", IniPath: A_ScriptDir "\exp-retry.ini", Defaults: DEFAULTS,
+    Counters: () => "entries " Entries " | defeats " Defeats, Tag: () => "entries " Entries ", defeats " Defeats,
+    Probe: ProbeText, Run: RunLoop, Keys: ""})
 
 /**
  * Classifies a capture.
@@ -105,36 +39,12 @@ ScreenOf(buf) {
 }
 
 /**
- * Taps a named point in game pixels, with a random offset of up to JitterPx.
- * @param name point prefix in [Points], e.g. "Enter" reads EnterX / EnterY
- */
-Tap(name) {
-    p := TapAt(N(name "X"), N(name "Y"), N("JitterPx"))
-    Log("tap " name " @ " p.x "," p.y)
-}
-
-/**
- * Sleeps in short slices, unwinding when the loop is stopped.
- * @param ms duration in milliseconds
- * @throws StopSignal when F8 stops the loop mid-wait
- */
-Wait(ms) {
-    finish := A_TickCount + ms
-    while (A_TickCount < finish) {
-        if !Running
-            throw StopSignal()
-        UpdateStatus()
-        Sleep 200
-    }
-}
-
-/**
- * The retry loop, run on its own thread by ToggleRun. It never taps on a screen it doesn't
+ * The retry loop, run on its own thread by F8. It never taps on a screen it doesn't
  * recognise, so a fight (or a chain of wins under the game's Auto) just gets polled.
  * @throws Error, caught here, when ENTER keeps leaving the lobby showing (out of keys or a popup)
  */
 RunLoop() {
-    global Entries, Defeats, Phase, Running
+    global Entries, Defeats, Phase
     stuck := 0
     last := ""
     try {
@@ -176,50 +86,13 @@ RunLoop() {
         Log("error: " e.Message)
         TrayTip(e.Message, "EXP retry stopped", 3)
     }
-    Running := false
-    Phase := "idle"
-    UpdateStatus()
 }
 
 /**
- * F8: starts the loop on a new thread, or asks a running loop to stop at its next wait slice.
+ * The probe's text: the screen the loop would classify and the colour at every signature pixel.
+ * @param buf capture from Capture()
+ * @returns the tooltip text
  */
-ToggleRun() {
-    global Running
-    if Running {
-        Running := false
-        UpdateStatus("stopping")
-        return
-    }
-    LoadConfig()
-    Running := true
-    Log("started")
-    SetTimer(RunLoop, -1)
-}
-
-/**
- * F7: toggles a probe that captures the screen and shows what the script sees: the screen it
- * classifies and the colour at every signature pixel.
- */
-ToggleProbe() {
-    global Probing
-    Probing := !Probing
-    SetTimer(ShowProbe, Probing ? 2000 : 0)
-    if Probing
-        ShowProbe()
-    else
-        ToolTip(, , , 2)
-}
-
-/**
- * Draws the probe tooltip under the status line.
- */
-ShowProbe() {
-    try {
-        buf := Capture()
-        text := "screen: " ScreenOf(buf) "`nLobby:" Describe(buf, Cfg["Lobby"]) "`nDefeat:" Describe(buf, Cfg["Defeat"])
-    } catch Error as e {
-        text := e.Message
-    }
-    ToolTip(text, 10, 60, 2)
+ProbeText(buf) {
+    return "screen: " ScreenOf(buf) "`nLobby:" Describe(buf, Cfg["Lobby"]) "`nDefeat:" Describe(buf, Cfg["Defeat"])
 }

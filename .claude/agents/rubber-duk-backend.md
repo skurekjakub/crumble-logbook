@@ -46,7 +46,7 @@ Read **full files**, not hunks. A hunk that looks fine can violate an invariant 
 - **Captures.** Scrapers in `packages/capture` are pure I/O (nothing from `apps/`), append each file's ledger line as they write it, and never overwrite a capture. A capture taken any other way gets `pnpm capture log`. Media stays local; its ledger line is committed.
 - **Snapshot.** `data/snapshot.json` is rebuilt from a fresh import of every record, in number order, into an empty database (`CRUMBLE_DB` at a new file), then `pnpm db:export` — never exported from a database `--replace` or the API changed. `pnpm db:scope HEAD <slug>` proves which records a rebuild touched.
 - **Deployment.** `apps/server/src/vercel.ts` seeds an in-memory database from the snapshot and answers 405 to anything but `GET` and `HEAD`. A route that reads local files at request time (`/api/attempts`) answers `available: false` there.
-- **HUD and macros.** `tools/conquest-hud` is TypeScript run by Node and tested on synthetic screens (`tools/conquest-hud/test/helpers.ts`), never real captures. The AutoHotkey v2 macros under `tools/` aren't covered by `pnpm verify`; their README is their spec, and a change to their INI keys or CSV columns updates the reader in `apps/server/src/repos/attempts.ts` in the same change.
+- **HUD and macros.** `tools/hud` is TypeScript run by Node and tested on synthetic screens (`tools/hud/test/helpers.ts`), never real captures. The AutoHotkey v2 macros under `tools/` aren't covered by `pnpm verify`; their README is their spec, and a change to their INI keys or CSV columns updates the reader in `apps/server/src/repos/attempts.ts` in the same change.
 
 ## Anti-patterns you avoid by reflex
 

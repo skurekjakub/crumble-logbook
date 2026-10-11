@@ -6,7 +6,7 @@ It talks to the emulator over adb rather than the mouse, so the MuMu window can 
 - It reads the screen with `adb exec-out screencap` (raw RGBA) and checks a few pixels.
 - It taps with `adb shell input`.
 
-The adb helpers are shared with the Guild Conquest macro, in `tools/adb-lib/AdbScreen.ahk`.
+The adb helpers and the loop's frame (INI, log, status tooltip, start/stop, probe, hotkeys) are shared with the other macros, in `tools/macro-lib/`.
 
 ## Run
 

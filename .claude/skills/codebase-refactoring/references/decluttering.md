@@ -18,7 +18,7 @@ This file covers the order to work in and the judgement calls around "dead".
   without a config it doesn't know the workspace's entry points (the CLIs in
   `apps/server/src/cli/`, `apps/server/src/vercel.ts`, the route files, the
   scripts in `apps/web/scripts/`, `packages/capture/src/cli.ts`,
-  `tools/conquest-hud/src/cli.ts`), so expect false positives there. Don't
+  `tools/hud/src/cli.ts`), so expect false positives there. Don't
   commit a config as part of a declutter; adopting the tool is its own
   decision for the user.
 - **An export with no importer:** `git grep -nw <symbol>` across `apps`,

@@ -296,12 +296,6 @@ importers:
         specifier: 1.0.0-beta.22
         version: 1.0.0-beta.22
 
-  tools/conquest-hud:
-    devDependencies:
-      '@types/node':
-        specifier: ^24.19.0
-        version: 24.19.0
-
   tools/eslint-config:
     dependencies:
       '@eslint/js':
@@ -325,6 +319,12 @@ importers:
       typescript-eslint:
         specifier: 8.70.1
         version: 8.70.1(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3)
+
+  tools/hud:
+    devDependencies:
+      '@types/node':
+        specifier: ^24.19.0
+        version: 24.19.0
 
 packages:
 

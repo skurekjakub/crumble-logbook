@@ -89,9 +89,9 @@ rehash.
 
 ## The HUD reader passes typecheck and tests, then fails under Node
 
-**Symptom:** `pnpm --filter @crumble/conquest-hud hud` throws `ERR_MODULE_NOT_FOUND` while
+**Symptom:** `pnpm --filter @crumble/hud hud` throws `ERR_MODULE_NOT_FOUND` while
 `pnpm verify` is green.
-**Cause:** `tools/conquest-hud` runs as `node src/cli.ts`, with Node stripping the types, and Node needs
+**Cause:** `tools/hud` runs as `node src/cli.ts`, with Node stripping the types, and Node needs
 the `.ts` extension on every relative import. `tsc` (bundler resolution) and Vitest's resolver both
 accept an import without it.
 **Fix:** import with `.ts` (`./hud.ts`). Keep to syntax Node can strip; the package's

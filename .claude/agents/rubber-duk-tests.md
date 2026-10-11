@@ -34,7 +34,7 @@ You own `**/*.test.ts` and `**/*.test.tsx` and the shared helpers beside them. T
 - **Web** (`apps/web/test/`). `renderRoute(path, api, { mode })` from `view-harness.tsx` renders the whole app at a URL through a memory-history router; `stubApi()` from `helpers.tsx` answers `/api/...` by path and query string and 404s anything else; `testQueryClient()` never retries; `VIEW_SOURCES` and `bodyRows()` are shared. Query by role, label and text; assert the order, verdict badge text and values a reader sees. Pure logic in `src/lib/` gets a plain `*-lib.test.ts`.
 - **Capture** (`packages/capture/test/`). `fakeFetch()` serves canned responses, `fixture()` reads frozen pages from `fixtures/`, `FIXED_NOW` and `testContext()` pin the clock. Never the live network.
 - **Schema** (`packages/schema/test/`). `createTestDb()` for table and roundtrip tests.
-- **HUD reader** (`tools/conquest-hud/test/`). `blankScreen()`, `fillRect()` and `drawNumber()` with the layouts in `helpers.ts` draw synthetic screens. Never a real capture: captured media stays local and isn't in the repo.
+- **HUD reader** (`tools/hud/test/`). `blankScreen()`, `fillRect()` and `drawNumber()` with the layouts in `helpers.ts` draw synthetic screens. Never a real capture: captured media stays local and isn't in the repo.
 - **The ledger suite** runs over every committed record. When it fails, the record is wrong, not the test: an edited capture is restored from git, a missing line is added with `pnpm capture log`. Never edit the test, and never re-hash a capture to match.
 
 ## Red / green (WRITE, mandatory)

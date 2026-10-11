@@ -22,7 +22,7 @@ this stack: the versions to look up rather than remember, the skills to load, an
 - `packages/schema`: Drizzle tables (`src/tables/`), drizzle-kit migrations (`migrations/`), and the
   Zod schemas the server and the web share.
 - `packages/capture`: the scrapers and the capture ledger, pure I/O, run as `pnpm capture`.
-- `tools/conquest-hud`: run by Node directly (`node src/cli.ts`), so its imports end in `.ts` and its
+- `tools/hud`: run by Node directly (`node src/cli.ts`), so its imports end in `.ts` and its
   syntax must be erasable (`allowImportingTsExtensions`, `erasableSyntaxOnly`).
 - `tools/conquest-macro`: AutoHotkey v2. No TypeScript gate reaches it; its README covers checking it.
 - One gate: `pnpm verify` (typecheck → eslint → prettier check → vitest).
