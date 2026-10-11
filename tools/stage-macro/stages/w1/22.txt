@@ -1,0 +1,7 @@
+; 361-22, Tainted Pomegranate Crow: stands right of the team at the HUD, about level with it,
+; amid a pack spread out to its right.
+; Lost with no input: 26% health left at 29 s. This walk, 361-7's lengthened for the spread pack,
+; won its first try on 2026-10-11, in about 17 s.
+encounter
+W+D 150
+D 550

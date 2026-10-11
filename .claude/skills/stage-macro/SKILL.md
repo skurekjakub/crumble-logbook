@@ -122,6 +122,11 @@ Never commit `stage-runs*.csv`, the log, recordings or `stops\`.
 - **`boss left at 0%` on a fail is a misread**: the bar drains on the defeat screen after time
   runs out. Trust the last `boss at N%` before `encounter gone` instead.
 - **A "pass" can be the user playing the stage by hand.** If the user says so, record it.
+- **A menu opened over a fight blinds the loop.** Missions, roulette or Auto Bake windows hide the
+  boss HUD, so the fight looks "gone" and, with no Summon Boss for `PassAfterMs`, it is logged as a
+  pass. A very short `lasting` on a pass is the tell; check the recording. The loop reads the
+  stage on the next Summon Boss and corrects itself (`read X on Summon Boss where Y was
+  expected`), so nothing needs fixing by hand, but don't credit a script with that win.
 - **`[Record] Video`** is `unscripted` by default: only no-script tries are recorded, which is all
   writing scripts needs. To diagnose a scripted stage, set `all` in `stage-loop.ini` and press F10
   in the loop (it rereads the ini); set it back after.

@@ -1,0 +1,7 @@
+; 361-30, Tainted Ent: stands right of the team at the HUD, a little above it, amid a pack spread
+; out to its right.
+; Lost with no input: 12% health left at 30 s. This walk won its first try on 2026-10-11,
+; in about 16 s.
+encounter
+W+D 250
+D 500
