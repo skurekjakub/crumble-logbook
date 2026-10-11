@@ -1,0 +1,5 @@
+; 359-11, Broken Welding Bot: spawns right of the team, about level with it, amid its robots.
+; Lost with no input: 21% health left at 28 s. D 1500 stopped at the cluster's edge and lost 3
+; tries (11% left). This one walks into the robots, as 359-4's does, and won its first try on
+; 2026-10-11, in about 17 s.
+D 1900

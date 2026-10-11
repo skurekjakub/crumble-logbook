@@ -1,0 +1,4 @@
+; 359-12, Broken Welding Bot: spawns right of the team amid its robots, some tries well above it.
+; Lost with no input: 15% health left at 28 s. With this script, 359-11's, it lost the 1st try,
+; walking under the boss (55% left), and won the 2nd on 2026-10-11, in about 19 s.
+D 1900
