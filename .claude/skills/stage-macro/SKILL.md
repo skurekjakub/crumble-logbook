@@ -58,7 +58,9 @@ user asks, or to restart on new code. A recording in flight ends at its own time
 - **`pass on try N`**: if the stage has a script, update its comment (below), then delete the
   stage's recordings (Gotchas).
 - **`fail on try 1 (no script)` + `waiting for stages\wX\N.txt`**: write the script now (below).
-  The loop is idle until the file exists.
+  The loop is idle until the file exists, and the game summons the boss by itself when Summon
+  Boss sits untouched for about 2 minutes: that fight runs with no script, and a win shows up only
+  as `read <next stage> on Summon Boss where <stage> was expected`.
 - **`fail on try N (stages\…)`**: leave the script and let the loop retry, unless the recording
   shows the team missing the boss pack (below). Losses where the team sits on the boss are the
   team's damage falling short; retries absorb them. The user's rule: retry until it passes, don't

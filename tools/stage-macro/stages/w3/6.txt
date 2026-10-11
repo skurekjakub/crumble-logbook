@@ -1,0 +1,7 @@
+; 363-6, Valley Magmastorm Ghost: stands up and right of the team at the HUD, near the screen's
+; right edge, amid a pack spread out to its right, as on 363-1.
+; Lost with no input: 40% health left at 31 s. This script, 363-1's, won its first try here on
+; 2026-10-11, in about 22 s.
+encounter
+W+D 300
+D 600

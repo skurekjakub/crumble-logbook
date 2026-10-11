@@ -1,0 +1,7 @@
+; 363-1, Valley Magmastorm Ghost: stands up and right of the team at the HUD, near the screen's
+; right edge, amid a pack spread out to its right.
+; Lost with no input: 44% health left at 29 s. This walk won its first try on 2026-10-11, in
+; about 24 s.
+encounter
+W+D 300
+D 600

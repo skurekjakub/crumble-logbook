@@ -1,0 +1,8 @@
+; 363-9, Valley Magmastorm Ghost: stands up and right of the team at the HUD, at the screen's right
+; edge, amid a pack spread out to its right, as on 363-6.
+; Lost with no input: 10% health left at 31 s, then won with no input on 2026-10-11, in a fight
+; the game summoned by itself while the loop waited for this file. This script, 363-6's, is
+; untested here.
+encounter
+W+D 300
+D 600
