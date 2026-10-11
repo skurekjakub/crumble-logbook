@@ -74,7 +74,7 @@ export function readDigits(
   let digits = "";
   for (const [i, glyph] of glyphs.entries()) {
     const m = match(shapeOf(blobs, glyph), templates);
-    if (!isConfident(m))
+    if (!isConfident(m, field.maxDistance))
       return {
         ok: false,
         reason: `digit ${i + 1} is unclear (nearest ${m.digit} at ${m.distance.toFixed(3)}, next at ${m.runnerUp.toFixed(3)})`,

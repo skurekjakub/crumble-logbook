@@ -103,10 +103,12 @@ export function match(shape: Shape, templates: DigitTemplate[]): Match {
  * Tells whether a match is certain enough to read the digit from.
  *
  * @param m - the match.
+ * @param maxDistance - the furthest the best template may be; small glyphs, whose few pixels
+ *   shift more between samples, need more room than MAX_DISTANCE.
  * @returns true when the template is near and no other digit comes close.
  */
-export function isConfident(m: Match): boolean {
-  return m.distance <= MAX_DISTANCE && m.runnerUp - m.distance >= MIN_MARGIN;
+export function isConfident(m: Match, maxDistance = MAX_DISTANCE): boolean {
+  return m.distance <= maxDistance && m.runnerUp - m.distance >= MIN_MARGIN;
 }
 
 /**

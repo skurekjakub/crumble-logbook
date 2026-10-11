@@ -1,0 +1,7 @@
+; 358-27, Blueberry Cream Hermit Crab (two of them): spawn right of the team, about level with it.
+; Lost with no input: the encounter ran its full 30 s. With this script it lost 5 tries and won the
+; 6th on 2026-10-11, but the loop then started scripts early on some tries, so its timing is
+; untested.
+wait 500
+W+D 400
+D 1800

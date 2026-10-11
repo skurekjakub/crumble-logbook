@@ -1,0 +1,4 @@
+; 358-24, Blueberry Cream Hermit Crab: spawns right of the team, level with it.
+; Lost with no input; won on the first try with this script (2026-10-11).
+wait 500
+D 2200

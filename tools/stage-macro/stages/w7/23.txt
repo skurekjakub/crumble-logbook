@@ -1,0 +1,4 @@
+; 358-23, Durianeer Fanfruit: spawns right of the team, slightly above it.
+; Won with no input on 2026-10-11; this walk onto it is untested.
+wait 500
+D 1800

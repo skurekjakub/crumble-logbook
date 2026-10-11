@@ -1,4 +1,4 @@
 ; 358-20, Mangosteen Water Bomber: spawns right of the team, out of reach.
 ; Passed 2026-10-11 on the first try with this script; with no input the boss kept 73% at 12 s left.
-wait 2000
+wait 500
 D 2600

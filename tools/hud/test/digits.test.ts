@@ -35,3 +35,15 @@ describe("match", () => {
     expect(isConfident(m)).toBe(false);
   });
 });
+
+describe("isConfident", () => {
+  const far = { digit: "8", distance: 0.15, runnerUp: 0.35 };
+
+  it("refuses a clear match further than MAX_DISTANCE by default", () => {
+    expect(isConfident(far)).toBe(false);
+  });
+
+  it("takes the same match within a field's looser limit", () => {
+    expect(isConfident(far, 0.2)).toBe(true);
+  });
+});

@@ -26,6 +26,8 @@ export interface Field {
    * groups across a separator; a wider one means a digit is hidden.
    */
   maxSeparatorGap: number;
+  /** The furthest a digit may sit from its template; unset means digits.ts's MAX_DISTANCE. */
+  maxDistance?: number;
 }
 
 /** One 4-connected blob of the mask, in region coordinates. */

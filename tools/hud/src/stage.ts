@@ -20,6 +20,12 @@ export interface StageNumber {
 const HYPHEN_GAP = 1.4;
 /** The stages of a chapter run from 1 to this. */
 const LAST_STAGE = 30;
+/**
+ * The stage glyphs are about 20 px tall, so a pixel's shift moves a sample further from its
+ * template than the bigger Conquest digits do: a learned 8 has read at 0.14. The next-nearest digit
+ * stays beyond 0.3, so the looser limit doesn't let one digit pass for another.
+ */
+const STAGE_MAX_DISTANCE = 0.2;
 
 /**
  * The number in the top bar's "Stage 358-20", in pale yellow. "Stage" ends at column 459 and the
@@ -30,6 +36,7 @@ export const STAGE_BAR: Field = {
   isInk: (r, g, b) => r >= 200 && g >= 200 && b <= 190,
   minHeight: 15,
   maxSeparatorGap: HYPHEN_GAP,
+  maxDistance: STAGE_MAX_DISTANCE,
 };
 
 /**
@@ -42,6 +49,7 @@ export const STAGE_REPEAT: Field = {
   isInk: (r, g, b) => r >= 200 && g >= 200 && b <= 100,
   minHeight: 12,
   maxSeparatorGap: HYPHEN_GAP,
+  maxDistance: STAGE_MAX_DISTANCE,
 };
 
 /** A place a stage shows its number, and the font it is drawn in there. */

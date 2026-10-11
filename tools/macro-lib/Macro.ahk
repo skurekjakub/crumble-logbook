@@ -10,6 +10,12 @@ global Cfg := Map()
 global Running := false
 global Probing := false
 global Phase := "idle"
+; Knobs every macro has, read with its own: [Status] TipWindow is the window the tooltips sit on
+; (AutoHotkey WinTitle syntax; the title matches anywhere in it).
+global CORE_DEFAULTS := Map("Status", Map("TipWindow", "CookieRun: Crumble ahk_exe MuMuNxDevice.exe"))
+
+; Tooltips go where TipAt puts them on the screen, not relative to whatever window is active.
+CoordMode("ToolTip", "Screen")
 
 F7:: ToggleProbe()
 F8:: ToggleRun()
@@ -49,14 +55,30 @@ MacroInit(parts) {
 }
 
 /**
- * Reads every knob from the INI into Cfg, falling back to the macro's defaults.
+ * Reads every knob from the INI into Cfg, falling back to the macro's defaults and the core's.
  */
 LoadConfig() {
     global Cfg
     Cfg := Map()
-    for section, keys in Macro.Defaults
-        for key, fallback in keys
-            Cfg[key] := Trim(IniRead(Macro.IniPath, section, key, fallback))
+    for defaults in [CORE_DEFAULTS, Macro.Defaults]
+        for section, keys in defaults
+            for key, fallback in keys
+                Cfg[key] := Trim(IniRead(Macro.IniPath, section, key, fallback))
+}
+
+/**
+ * Places a tooltip line on the game's window, so it stays put whatever window is active.
+ * @param row 1 for the status line, 2 for the probe under it
+ * @returns {x, y} in screen pixels: inside the window's top-left corner, below its title bar;
+ *   the screen's top-left corner when the window isn't open
+ */
+TipAt(row) {
+    dy := row = 1 ? 0 : 50
+    if WinExist(Cfg.Get("TipWindow", "")) {
+        WinGetPos(&x, &y)
+        return {x: x + 10, y: y + 40 + dy}
+    }
+    return {x: 10, y: 10 + dy}
 }
 
 /**
@@ -108,13 +130,14 @@ AppendCsv(name, header, rows) {
 }
 
 /**
- * Shows the status tooltip in the top-left corner of the screen.
+ * Shows the status tooltip on the game's window.
  * @param extra optional detail appended after the phase
  */
 UpdateStatus(extra := "") {
     state := Running ? "RUNNING" : "stopped"
+    at := TipAt(1)
     ToolTip(Macro.Title ": " state " | " Macro.Counters.Call() " | " Phase (extra ? " " extra : "")
-        . "`nF8 start/stop  F7 probe" Macro.Keys "  F10 reload ini  F12 exit", 10, 10, 1)
+        . "`nF8 start/stop  F7 probe" Macro.Keys "  F10 reload ini  F12 exit", at.x, at.y, 1)
 }
 
 /**
@@ -152,12 +175,13 @@ Tap(name) {
 
 /**
  * Saves the current screen to stops\ next to the script, so a stop or a recovery can be explained.
+ * @param prefix put before the time in the file's name, e.g. "unread_358-27_"; may be empty
  * @returns a log line naming the file, or saying none could be saved
  */
-SaveStopShot() {
+SaveStopShot(prefix := "") {
     dir := A_ScriptDir "\stops"
     try DirCreate(dir)
-    name := FormatTime(, "yyyy-MM-dd_HHmmss") ".png"
+    name := prefix FormatTime(, "yyyy-MM-dd_HHmmss") ".png"
     return SaveScreenshot(dir "\" name) ? "screen saved: stops\" name : "screen not saved"
 }
 
@@ -209,5 +233,6 @@ ShowProbe() {
         text := Macro.Probe.Call(Capture())
     catch Error as e
         text := e.Message
-    ToolTip(text, 10, 60, 2)
+    at := TipAt(2)
+    ToolTip(text, at.x, at.y, 2)
 }
