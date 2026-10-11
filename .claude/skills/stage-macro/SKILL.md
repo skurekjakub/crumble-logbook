@@ -88,7 +88,9 @@ Report each event to the user in one short line.
 The walk's rules (from the user, in the `stage-scripts-aim-at-cluster` memory):
 - One straight walk from the HUD that ends with the **whole team on top of the boss's pack**, not
   touching its edge. The team walks in a long line; size the walk for the **back line**, not the
-  lead cookie. Spread-out packs need longer walks.
+  lead cookie. Spread-out packs need longer walks, and a big single-bodied boss (the Cookievorous
+  Plant of chapter 362) needs the walk to carry the team **well past its middle**: the user's
+  words were "way deeper". Err long on these.
 - Plain `D` when the boss is level; add `W`/`S` (as a diagonal `W+D` / `S+D`) only when it is
   clearly above or below. No padding legs, no mid-fight tracking.
 - Change a script only when a recording shows the team missing the pack (short, or past it). A
@@ -135,6 +137,10 @@ Never commit `stage-runs*.csv`, the log, recordings or `stops\`.
   watcher or one-off `grep`/`tail -n`.
 - **`/Validate` from Git Bash** needs `MSYS_NO_PATHCONV=1`, or AutoHotkey gets a mangled path and
   leaves an "ErrorStdOut" dialog the user has to close.
+- **A script's `encounter` step ends when the map shows** (`map showing at +N s`), not when the
+  boss's HUD does, so the walk starts seconds earlier than it did for scripts written before
+  2026-10-11. The user wants the hold to start the moment the map loads. A full-screen capture
+  takes 1.5–2 s, which is most of the lag that remains.
 - **Changing the loop's code while it runs**: work in a worktree lane, merge, then stop and
   relaunch the loop between fights (state is carried). Faster captures shift script timing
   slightly; watch whether stages that used to win start missing.

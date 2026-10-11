@@ -33,11 +33,11 @@ One step per line, played from the scene change after the tap on Summon Boss (th
 | Step | Does |
 |---|---|
 | `wait <ms>` | Nothing, for that long, while the loop follows the encounter on the screen. |
-| `encounter` | Waits for the encounter's HUD, so the steps after it walk the team their full length. |
+| `encounter` | Waits for the encounter's map: the first capture after the change that isn't the dark transition screen. |
 | `W 800` | Holds W for 800 ms. `A`, `S` and `D` likewise. |
 | `W+D 600` | Holds W and D together: a diagonal. |
 
-The scene usually changes about 1 s after the tap, but has taken over 11 s, which is why scripts count from the change. Between the change and the encounter's HUD the game plays the boss's intro, and the team doesn't move: a key held through the intro walks the team only for the part of the hold left once the HUD is up. How long that part is depends on how quickly a capture caught the change, so a walk from `encounter` lands the same way every try. While a key is held the team walks in formation and stops attacking; once released, it fights whatever is in reach.
+The scene usually changes about 1 s after the tap, but has taken over 11 s, which is why scripts count from the change. The dark screen clears to the encounter's map a second or more before the boss's HUD shows, and the team can walk from then, so a walk from `encounter` starts as soon as the map is up and lands the same way every try. While a key is held the team walks in formation and stops attacking; once released, it fights whatever is in reach.
 
 A script is read afresh on every try, so an edit takes effect on the next one. A step the loop can't parse is logged and ends the script for that try, and so does the encounter ending: a script can follow the boss with steps late in the fight without walking the team about once it's over.
 

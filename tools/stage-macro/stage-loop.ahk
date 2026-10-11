@@ -412,8 +412,9 @@ SceneChange(started) {
  * Plays a movement script, logging each step with its time from the scene change. One step per
  * line, `;` starts a comment.
  * - `wait <ms>`: does nothing for that long, while following the encounter (Watch).
- * - `encounter`: waits for the encounter's HUD, capturing back to back. The boss's intro plays
- *   between the scene change and the HUD, and the team won't move during it.
+ * - `encounter`: waits for the encounter's map, the first capture after the scene change that
+ *   isn't the transition's dark screen, capturing back to back. The team can walk from then, a
+ *   second or more before the boss's HUD shows.
  * - `<keys> <ms>`: holds W, A, S or D, or several joined by +, e.g. `W+D 1200`, for that long.
  * The script stops early once the encounter has ended.
  * @param path the script's path
@@ -432,14 +433,23 @@ PlayScript(path, a) {
         if (m[1] != "") {
             ; Captures back to back, without a poll's wait between them: every moment the walk
             ; starts late is one the team spends short of the boss.
-            while (!a.seen && A_TickCount - a.changed < N("StartWaitMs")) {
+            shown := 0
+            while (A_TickCount - a.changed < N("StartWaitMs")) {
                 CheckStop()
+                at := A_TickCount
                 buf := TimedCapture()
-                Judge(a, Observe(buf), buf)
+                screen := Observe(buf)
+                Judge(a, screen, buf)
+                if (screen = "summon")
+                    break
+                if !Shows(buf, Cfg["Transition"]) {
+                    shown := at
+                    break
+                }
             }
-            Log(a.seen ? Format("encounter showing at +{} s", Secs(a.changed, a.seen))
-                : "script stopped: no encounter " N("StartWaitMs") " ms after the scene change")
-            if !a.seen
+            Log(shown ? Format("map showing at +{} s", Secs(a.changed, shown))
+                : "script stopped: no map " N("StartWaitMs") " ms after the scene change")
+            if !shown
                 return
             continue
         }
