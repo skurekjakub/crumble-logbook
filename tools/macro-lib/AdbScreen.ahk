@@ -178,6 +178,21 @@ RecordScreen(devicePath, seconds, options := "") {
 }
 
 /**
+ * Stops a recording RecordScreen started, the way Ctrl+C would, so screenrecord finishes the file,
+ * and waits up to 5 s for it to exit.
+ * @returns true when no recording is running any more
+ */
+StopRecording() {
+    Adb("shell pkill -2 screenrecord")
+    loop 10 {
+        if (Trim(AdbOut("shell pidof screenrecord"), " `r`n") = "")
+            return true
+        Sleep 500
+    }
+    return false
+}
+
+/**
  * Copies a file off the device and deletes it there.
  * @param devicePath the file on the device, e.g. "/sdcard/boss.mp4"
  * @param localPath where to save it

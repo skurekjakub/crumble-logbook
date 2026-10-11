@@ -1,0 +1,7 @@
+; 358-22, Blueberry Cream Hermit Crab (two of them): spawn up and to the right of the team.
+; With no input they kept 47% at the end. This script won 1 of 3 tries on 2026-10-11 (the losses
+; kept about 14%); it carries the team a little past the crabs, so a shorter D is the next thing
+; to try if it loses.
+wait 2000
+W+D 1000
+D 1500

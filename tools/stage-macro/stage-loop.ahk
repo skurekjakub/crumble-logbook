@@ -22,7 +22,7 @@ global DEFAULTS := Map(
     "Detect", Map("Summon", "600,360,FB3B00|660,360,F93D00|820,360,FB3B00|640,400,FFF647|720,400,FFF647",
                   "Boss", "320,380,FF632D|360,380,FF632D|320,400,FF3617|380,400,FF3617",
                   "Tolerance", "30"),
-    "Timing", Map("PollMs", "1000", "UnreadLimit", "10"),
+    "Timing", Map("PollMs", "1000", "UnreadLimit", "10", "StartWaitMs", "12000"),
     "Stages", Map("Worlds", "9", "ScriptDir", "stages", "WaitForScript", "1"),
     "Record", Map("Video", "1", "Seconds", "45", "BitRate", "4000000", "VideoDir", "recordings"),
     "Run", Map("MaxTries", "0", "LogFile", "stage-loop.log", "RunsFile", "stage-runs.csv"),
@@ -69,17 +69,20 @@ ScriptPath(num) {
 
 /**
  * The loop, run on its own thread by F8. Polls the screen every PollMs.
- * - On Summon Boss, it reads the stage's number and settles the attempt it was waiting on: the
- *   same number means the boss won. Then it taps Summon Boss and plays the stage's script.
+ * - On Summon Boss, it reads the stage's number and settles the attempt it was waiting on, once
+ *   that attempt's encounter has shown: the same number means the boss won. Then it taps Summon
+ *   Boss and plays the stage's script.
  * - Anywhere else, with an attempt waiting, a stage number other than the attempt's means the
  *   boss fell.
+ * - An attempt whose encounter hasn't shown StartWaitMs after the tap, with Summon Boss still up,
+ *   didn't start; it is dropped and the stage summoned again.
  * - A stage without a script whose boss won waits for its script (WaitForScript), so the next
  *   try plays it.
  * @throws Error, caught here, when the stage's number stays unreadable for UnreadLimit polls on
  *   Summon Boss, or a stage loses MaxTries times in a row
  */
 RunLoop() {
-    global Phase, Current
+    global Phase, Current, Tries
     pending := ""
     unread := 0
     try {
@@ -87,9 +90,22 @@ RunLoop() {
             buf := Capture()
             screen := ScreenOf(buf)
             if (screen = "boss") {
+                if (pending != "")
+                    pending.seen := true
                 Phase := "boss"
                 Wait(N("PollMs"))
                 continue
+            }
+            ; Summon Boss stays up for a moment after the tap, before the scene changes.
+            if (pending != "" && !pending.seen) {
+                if (screen != "summon" || A_TickCount - pending.started < N("StartWaitMs")) {
+                    Wait(N("PollMs"))
+                    continue
+                }
+                Log("the encounter didn't start; summoning again")
+                StopRecording()
+                Tries[pending.num] -= 1
+                pending := ""
             }
             num := (screen = "summon" || pending != "") ? ReadStage(buf) : ""
             if (pending != "" && num != "" && (num != pending.num || screen = "summon")) {
@@ -135,7 +151,8 @@ RunLoop() {
  * script from the tap.
  * @param num the stage's number, e.g. "358-20"
  * @param script the script's path; a missing script plays nothing
- * @returns the attempt: {num, try, script, started, video}, the video empty when not recording
+ * @returns the attempt: {num, try, script, started, video, seen}: seen turns true once the loop
+ *   sees the encounter; the video is empty when not recording
  * @throws StopSignal when F8 stops the loop mid-script
  */
 Attempt(num, script) {
@@ -144,10 +161,11 @@ Attempt(num, script) {
     rel := StrReplace(script, A_ScriptDir "\")
     has := FileExist(script) != ""
     video := N("Video") ? VideoName(num, Tries[num]) : ""
-    if (video != "")
+    if (video != "") {
         RecordScreen("/sdcard/stage-boss.mp4", N("Seconds"), "--bit-rate " Cfg["BitRate"])
         ; screenrecord takes a moment to start; without this the first frames of the scene change are lost.
         Sleep 300
+    }
     Phase := "summoning"
     Tap("Summon")
     started := A_TickCount
@@ -163,7 +181,7 @@ Attempt(num, script) {
         }
     }
     Phase := "boss"
-    return {num: num, try: Tries[num], script: has ? rel : "", started: started, video: video}
+    return {num: num, try: Tries[num], script: has ? rel : "", started: started, video: video, seen: false}
 }
 
 /**
@@ -225,18 +243,15 @@ VideoName(num, attempt) {
 }
 
 /**
- * Copies the last boss recording off the device into VideoDir, once the recording has stopped.
+ * Stops the boss recording and copies it off the device into VideoDir.
  * @param name the file's name, from VideoName
- * @returns the saved path relative to the script; empty when the copy failed
+ * @returns the saved path relative to the script; empty when the recording wouldn't stop or the
+ *   copy failed
  */
 SaveVideo(name) {
     try DirCreate(A_ScriptDir "\" Cfg["VideoDir"])
-    ; screenrecord finishes the file only when it stops, which it does by itself after Seconds.
-    loop 20 {
-        if (Trim(AdbOut("shell pidof screenrecord"), " `r`n") = "")
-            break
-        Sleep 1000
-    }
+    if !StopRecording()
+        return ""
     rel := Cfg["VideoDir"] "\" name
     return PullFile("/sdcard/stage-boss.mp4", A_ScriptDir "\" rel) ? rel : ""
 }
