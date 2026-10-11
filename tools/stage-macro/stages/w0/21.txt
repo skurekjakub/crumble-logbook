@@ -1,0 +1,7 @@
+; 360-21, Ginkgoblin Bomber: stands right of the team at the HUD, a little above it, as on 360-1.
+; Lost with no input: 24% health left at 30 s. 360-1's walk (W+D 200, D 350) lost 5 tries, 8% to
+; 56% left: it stopped the team's back half short of the boss. On 2026-10-11 a 6th try with it
+; lost too, and the stage was then beaten by hand. This longer walk is untested.
+encounter
+W+D 250
+D 500

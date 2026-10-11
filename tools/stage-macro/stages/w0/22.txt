@@ -1,0 +1,6 @@
+; 360-22, Ginkgoblin Bomber: stands right of the team at the HUD, a little above it, as on 360-21.
+; Lost with no input: 23% health left at 30 s. This script, 360-21's longer walk, won its
+; first try here on 2026-10-11, in about 15 s.
+encounter
+W+D 250
+D 500

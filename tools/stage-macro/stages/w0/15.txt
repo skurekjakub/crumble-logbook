@@ -1,0 +1,6 @@
+; 360-15, Ginkgoblin Sharpshooter: stands right of the team at the HUD, a little above it, as on
+; 360-11.
+; Lost with no input: 50% health left at 32 s. With this script, 360-11's, it lost 2
+; tries (31% and 8% left) and won the 3rd on 2026-10-11, in about 19 s.
+encounter
+D 450

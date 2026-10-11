@@ -1,0 +1,5 @@
+; 360-19, Spactus: stands up and right of the team at the HUD, as on 360-2.
+; Lost with no input: 45% health left at 31 s. This script, 360-2's, won its first try
+; here on 2026-10-11, in about 20 s.
+encounter
+W+D 400

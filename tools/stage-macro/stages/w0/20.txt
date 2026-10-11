@@ -1,0 +1,7 @@
+; 360-20, Ginkgoblin Stormer: stands at the right edge of the screen at the HUD, a little above
+; the team.
+; Lost with no input: 30% health left at 32 s. With this walk it lost 4 tries (3% to
+; 49% left) and won the 5th on 2026-10-11, in about 24 s.
+encounter
+W+D 150
+D 450
