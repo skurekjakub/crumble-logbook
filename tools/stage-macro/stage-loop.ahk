@@ -31,8 +31,8 @@ global DEFAULTS := Map(
     "Detect", Map("Summon", "600,360,FB3B00|660,360,F93D00|820,360,FB3B00|640,400,FFF647|720,400,FFF647",
                   "Boss", "320,380,FF632D|360,380,FF632D|320,400,FF3617|380,400,FF3617",
                   "Transition", "300,800,271D1D|720,1200,271D1D|1100,1000,271D1D|300,1400,271D1D|1100,600,271D1D",
-                  "Tolerance", "30"),
-    "Timing", Map("PollMs", "1000", "UnreadLimit", "10", "StartWaitMs", "25000", "PassAfterMs", "15000"),
+                  "Tolerance", "30", "HpBar", "416,1170,438", "HpEmptyMax", "112"),
+    "Timing", Map("PollMs", "1000", "UnreadLimit", "10", "StartWaitMs", "25000", "PassAfterMs", "30000"),
     "Stages", Map("Worlds", "9", "Stages", "30", "ScriptDir", "stages", "WaitForScript", "1"),
     "Record", Map("Video", "1", "Seconds", "45", "BitRate", "4000000", "VideoDir", "recordings"),
     "Run", Map("MaxTries", "0", "LogFile", "stage-loop.log", "RunsFile", "stage-runs.csv"),
@@ -55,6 +55,30 @@ ScreenOf(buf) {
     if Shows(buf, Cfg["Summon"])
         return "summon"
     return "other"
+}
+
+/**
+ * Reads the boss's health off its bar in an encounter's HUD: where, going right along the bar's row,
+ * the dark empty part begins. The percentage is written in white across the bar and red damage
+ * numbers float over it, but neither is dark, so neither moves that point.
+ * @param buf capture from Capture() of an encounter
+ * @returns the health in percent, 0-100
+ */
+BossHp(buf) {
+    bar := StrSplit(Cfg["HpBar"], ",")
+    left := Integer(bar[1]), right := Integer(bar[2]), y := Integer(bar[3])
+    dark := N("HpEmptyMax")
+    run := 0
+    x := left
+    while (x <= right) {
+        c := Pixel(buf, x, y)
+        ; Two dark samples in a row, so a lone dark pixel of an effect doesn't end the fill.
+        run := ((c >> 16) <= dark && ((c >> 8) & 0xFF) <= dark && (c & 0xFF) <= dark) ? run + 1 : 0
+        if (run = 2)
+            return Round(100 * (x - 2 - left) / (right - left))
+        x += 2
+    }
+    return 100
 }
 
 /**
@@ -135,7 +159,7 @@ RunLoop() {
             buf := Capture()
             screen := Observe(buf)
             if (pending != "") {
-                verdict := Judge(pending, screen)
+                verdict := Judge(pending, screen, buf)
                 if (verdict = "") {
                     Wait(N("PollMs"))
                     continue
@@ -209,13 +233,17 @@ RunLoop() {
  * Follows a try's encounter, one poll at a time, to a result. It needs no stage number: a lost
  * boss brings Summon Boss back within seconds, while a beaten one sends the game back to clearing
  * enemies, where Summon Boss stays away for minutes.
- * @param a the try from Attempt; its seen and ended ticks are filled in, and its reason on a result
+ * It also reads the boss's health on every capture of the encounter, logging it each time it falls
+ * past another 10%.
+ * @param a the try from Attempt; its seen and ended ticks are filled in, its hp, and its reason on
+ *   a result
  * @param screen the poll's screen, from Observe
+ * @param buf the poll's capture
  * @returns "fail" when Summon Boss shows after the encounter; "pass" when it hasn't PassAfterMs
  *   after the encounter ended; "dropped" when Summon Boss is still up StartWaitMs after the tap with
  *   no encounter seen; empty while the result isn't in
  */
-Judge(a, screen) {
+Judge(a, screen, buf) {
     now := A_TickCount
     if (screen = "boss") {
         if !a.seen {
@@ -225,6 +253,12 @@ Judge(a, screen) {
             Log(Format("encounter showing again after {} s away", Secs(a.ended, now)))
         }
         a.ended := 0
+        hp := BossHp(buf)
+        if (hp < a.hp) {
+            if (hp // 10 < a.hp // 10 || a.hp = 101)
+                Log(Format("boss at {}% at +{} s", hp, Secs(a.changed, now)))
+            a.hp := hp
+        }
         return ""
     }
     if !a.seen
@@ -249,9 +283,10 @@ Judge(a, screen) {
  * change, and plays the stage's script from the change.
  * @param num the stage's number, e.g. "358-20"
  * @param script the script's path; a missing script plays nothing
- * @returns the try: {num, try, script, video, started, changed, seen, ended, reason}: the ticks
- *   of the tap and the scene change (0 when it didn't change), and of the encounter showing and
- *   ending (0 until they do), which Judge fills in
+ * @returns the try: {num, try, script, video, started, changed, seen, ended, hp, reason}: the
+ *   ticks of the tap and the scene change (0 when it didn't change), and of the encounter showing
+ *   and ending (0 until they do), and the boss's lowest health in percent (101 until read), which
+ *   Judge fills in
  * @throws StopSignal when F8 stops the loop mid-script
  */
 Attempt(num, script) {
@@ -274,7 +309,7 @@ Attempt(num, script) {
     Log(changed ? Format("scene changed {} s after the tap", Secs(started, changed))
         : Format("Summon Boss still up {} s after the tap", Secs(started, A_TickCount)))
     a := {num: num, try: Tries[num], script: has ? rel : "", video: video, started: started,
-        changed: changed, seen: 0, ended: 0, reason: ""}
+        changed: changed, seen: 0, ended: 0, hp: 101, reason: ""}
     if (has && changed) {
         Phase := "playing " rel
         try {
@@ -337,7 +372,8 @@ PlayScript(path, a) {
             ; starts late is one the team spends short of the boss.
             while (!a.seen && A_TickCount - a.changed < N("StartWaitMs")) {
                 CheckStop()
-                Judge(a, Observe(Capture()))
+                buf := Capture()
+                Judge(a, Observe(buf), buf)
             }
             Log(a.seen ? Format("encounter showing at +{} s", Secs(a.changed, a.seen))
                 : "script stopped: no encounter " N("StartWaitMs") " ms after the scene change")
@@ -374,7 +410,8 @@ Watch(a, ms) {
     loop {
         ; A capture takes about half a second; one closer to the deadline would overrun it.
         if (deadline - A_TickCount > 700) {
-            Judge(a, Observe(Capture()))
+            buf := Capture()
+            Judge(a, Observe(buf), buf)
             ; A blast over the boss icon can hide the encounter for a poll; gone 2 s is over.
             if (a.ended && A_TickCount - a.ended >= 2000)
                 return false
@@ -397,13 +434,15 @@ Settle(a, result) {
     tapToChange := Secs(a.started, a.changed)
     changeToShown := Secs(a.changed, a.seen)
     shownFor := Secs(a.seen, a.ended)
-    Log(Format("{} on try {} ({}): {}; scene change {} s after the tap, encounter {} s after that, lasting {} s{}",
-        result, a.try, a.script = "" ? "no script" : a.script, a.reason, tapToChange, changeToShown, shownFor,
-        saved != "" ? "; video " saved : "; no video"))
+    ; A beaten boss's bar empties as it dies, after the last capture of the encounter.
+    hp := result = "pass" ? 0 : a.hp <= 100 ? a.hp : ""
+    Log(Format("{} on try {} ({}): {}; boss left at {}; scene change {} s after the tap, encounter {} s after that, lasting {} s{}",
+        result, a.try, a.script = "" ? "no script" : a.script, a.reason, hp = "" ? "unread health" : hp "%",
+        tapToChange, changeToShown, shownFor, saved != "" ? "; video " saved : "; no video"))
     parts := StrSplit(a.num, "-")
-    AppendCsv(Cfg["RunsFile"], "time,chapter,stage,world,try,script,result,reason,tap_to_change_s,change_to_encounter_s,encounter_s,video",
-        Format("{},{},{},{},{},{},{},{},{},{},{},{}`n", FormatTime(, "yyyy-MM-dd HH:mm:ss"), parts[1], parts[2],
-            Mod(Integer(parts[1]), N("Worlds")), a.try, a.script, result, a.reason, tapToChange, changeToShown,
+    AppendCsv(Cfg["RunsFile"], "time,chapter,stage,world,try,script,result,reason,boss_hp_pct,tap_to_change_s,change_to_encounter_s,encounter_s,video",
+        Format("{},{},{},{},{},{},{},{},{},{},{},{},{}`n", FormatTime(, "yyyy-MM-dd HH:mm:ss"), parts[1], parts[2],
+            Mod(Integer(parts[1]), N("Worlds")), a.try, a.script, result, a.reason, hp, tapToChange, changeToShown,
             shownFor, saved))
     if (result = "pass") {
         Passes += 1

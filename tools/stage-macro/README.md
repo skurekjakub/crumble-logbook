@@ -12,8 +12,8 @@ The adb helpers and the loop's frame are shared with the other macros, in `tools
 - `stage-loop.ahk`: the script. Needs [AutoHotkey v2](https://www.autohotkey.com/).
 - `stage-loop.ini`: every knob. The script reads it at start and on F10.
 - `stages/`: the movement scripts, one per stage (below).
-- `stage-loop.log`: the audit trail. Every screen change, every stage number read (or why it couldn't be), each tap, the scene change's delay, each script step with its time from the change, the encounter showing and ending, and each result with its reason and timings.
-- `stage-runs.csv`: one row per boss encounter: `time`, `chapter`, `stage`, `world`, `try`, `script` (empty when the stage had none), `result` (`pass` or `fail`), `reason`, `tap_to_change_s`, `change_to_encounter_s`, `encounter_s`, `video`.
+- `stage-loop.log`: the audit trail. Every screen change, every stage number read (or why it couldn't be), each tap, the scene change's delay, each script step with its time from the change, the encounter showing and ending, the boss's health each time it falls past another 10%, and each result with its reason and timings.
+- `stage-runs.csv`: one row per boss encounter: `time`, `chapter`, `stage`, `world`, `try`, `script` (empty when the stage had none), `result` (`pass` or `fail`), `reason`, `boss_hp_pct` (the boss's lowest health read off its bar, 0 on a pass, empty when unread), `tap_to_change_s`, `change_to_encounter_s`, `encounter_s`, `video`.
 - `stage-loop.state`: the stage being fought or next up, so a restart knows it without reading it.
 - `recordings\`: each encounter's video, `<stage>_<try>_<time>.mp4` (`[Record]`).
 - `stops\`: the screen the loop stopped on after an error, and `unread_<stage>_<time>.png`, a Summon Boss screen whose number the reader couldn't read, for teaching it.

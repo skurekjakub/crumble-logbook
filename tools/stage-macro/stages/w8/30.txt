@@ -1,7 +1,6 @@
-; 359-30, GingerCraven: spawns right of the team, a little above it.
-; Lost with no input: 59% health left at 28 s. From the HUD, W+D 150 then D 300 left the team
-; just under it and lost 4 tries (41% to 61% left). This one carries on up onto it; untested.
+; 359-30, GingerCraven: at the HUD it already stands just above the team, a little left of it.
+; Lost with no input: 59% health left at 28 s. Walks right from the HUD (W+D, D, W, up to about
+; 1.3 s of holds) carried the team past it, and lost every try. This short step up onto it is
+; untested.
 encounter
-W+D 150
-D 300
 W 200
