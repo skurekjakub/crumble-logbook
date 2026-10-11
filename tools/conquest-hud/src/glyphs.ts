@@ -1,7 +1,7 @@
 /**
- * Finds the digits of a number on the Guild Conquest fight screen: the running score (the big
- * red-to-orange number at the top, e.g. 1,776,472,632,591) or the countdown under it (white,
- * e.g. 30.267).
+ * Finds the digits of a number on a Guild Conquest screen: the fight's running score (the big
+ * red-to-orange number at the top, e.g. 1,776,472,632,591), the countdown under it (white,
+ * e.g. 30.267), or the final score on the BATTLE OVER results (yellow-to-orange).
  *
  * @module
  */
@@ -15,9 +15,9 @@ export interface Region {
   height: number;
 }
 
-/** A number on the fight screen: where it sits, the colour of its glyphs, and how tall they are. */
+/** A number on a screen: where it sits, the colour of its glyphs, and how tall they are. */
 export interface Field {
-  name: "score" | "timer";
+  name: "score" | "timer" | "final";
   region: Region;
   /** Tells whether a pixel is the glyphs' ink. */
   isInk: (r: number, g: number, b: number) => boolean;
@@ -47,6 +47,19 @@ export const TIMER: Field = {
   region: { x: 605, y: 512, width: 275, height: 60 },
   isInk: (r, g, b) => r >= 200 && g >= 200 && b >= 200,
   minHeight: 20,
+};
+
+/**
+ * The final score on the BATTLE OVER results, under the "Final Score" title. Its glyphs span about
+ * rows 1045 to 1137 and settle a few pixels as the results slide in. Its fill runs from yellow
+ * (FFE84A) at the top to orange (FC8D26) at the bottom; the orange stripes behind it stay under
+ * a red of A8.
+ */
+export const FINAL: Field = {
+  name: "final",
+  region: { x: 100, y: 1000, width: 1240, height: 180 },
+  isInk: (r, g, b) => r >= 230 && g >= 130 && b <= 110,
+  minHeight: 50,
 };
 
 /** One 4-connected blob of the mask, in region coordinates. */

@@ -1,10 +1,11 @@
 /**
- * Draws synthetic fight screens: the score in its fill colour and the countdown in white, in a
- * blocky 5x7 font on a dark backdrop, laid out like the game's (separators on the baseline).
+ * Draws synthetic screens: the fight's score in its fill colour and the countdown in white, and
+ * the results' final score in yellow, in a blocky 5x7 font on a dark backdrop, laid out like the
+ * game's (separators on the baseline).
  *
  * @module
  */
-import { SCORE, TIMER } from "../src/glyphs.ts";
+import { FINAL, SCORE, TIMER } from "../src/glyphs.ts";
 import type { Screen } from "../src/screen.ts";
 
 const FONT: Record<string, string[]> = {
@@ -55,16 +56,24 @@ export const TIMER_LAYOUT: Layout = {
   ink: [0xff, 0xff, 0xff],
 };
 
+/** The final score's layout: yellow glyphs 72 px tall. */
+export const FINAL_LAYOUT: Layout = {
+  ...SCORE_LAYOUT,
+  left: FINAL.region.x + 100,
+  top: FINAL.region.y + 40,
+  ink: [0xff, 0xc0, 0x3a],
+};
+
 const BACKDROP: Rgb = [0x10, 0x10, 0x20];
 
 /**
- * Makes a blank screen in the backdrop colour, tall enough to hold both fields.
+ * Makes a blank screen in the backdrop colour, tall enough to hold every field.
  *
  * @returns the screen.
  */
 export function blankScreen(): Screen {
   const width = 1440;
-  const height = TIMER.region.y + TIMER.region.height + 50;
+  const height = FINAL.region.y + FINAL.region.height + 50;
   const rgba = new Uint8Array(width * height * 4);
   for (let i = 0; i < rgba.length; i += 4) rgba.set([...BACKDROP, 255], i);
   return { width, height, rgba };

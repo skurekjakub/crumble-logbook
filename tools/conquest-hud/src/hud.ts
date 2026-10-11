@@ -1,20 +1,24 @@
 /**
- * Reads the Guild Conquest fight's running score and countdown from a capture, and learns the
- * digit templates from a capture whose numbers are known.
+ * Reads the Guild Conquest fight's running score and countdown, and the results' final score,
+ * from a capture, and learns the digit templates from a capture whose numbers are known.
  *
  * @module
  */
 import type { DigitTemplate } from "./digits.ts";
 import { isConfident, learn, match, shapeOf } from "./digits.ts";
 import type { Field } from "./glyphs.ts";
-import { digitGlyphs, findBlobs, groupDigits, SCORE, TIMER } from "./glyphs.ts";
+import { digitGlyphs, findBlobs, FINAL, groupDigits, SCORE, TIMER } from "./glyphs.ts";
 import type { Screen } from "./screen.ts";
 
 /** The learned digits of each field; the fields use different fonts. */
 export interface HudTemplates {
   score: DigitTemplate[];
   timer: DigitTemplate[];
+  final: DigitTemplate[];
 }
+
+/** The fields by name. */
+const FIELDS: Record<Field["name"], Field> = { score: SCORE, timer: TIMER, final: FINAL };
 
 /** A number read off the screen, or why it can't be read. */
 export type Reading = { ok: true; value: number } | { ok: false; reason: string };
@@ -68,7 +72,33 @@ function readDigits(
  * @throws Error when there are no score templates.
  */
 export function readScore(screen: Screen, templates: HudTemplates): Reading {
-  const read = readDigits(screen, SCORE, templates.score);
+  return readThousands(screen, SCORE, templates.score);
+}
+
+/**
+ * Reads the final score on the BATTLE OVER results, e.g. 3,491,361,381,300.
+ *
+ * @param screen - a capture of the results.
+ * @param templates - the learned digits.
+ * @returns the final score, or the reason it can't be read: not on screen, a glyph no template
+ *   matches, or digits that don't group in thousands.
+ * @throws Error when there are no final-score templates.
+ */
+export function readFinal(screen: Screen, templates: HudTemplates): Reading {
+  return readThousands(screen, FINAL, templates.final);
+}
+
+/**
+ * Reads a field that shows a whole number grouped in thousands.
+ *
+ * @param screen - the capture.
+ * @param field - the number to read.
+ * @param templates - the field's learned digits.
+ * @returns the number, or the reason it can't be read.
+ * @throws Error when the field has no templates.
+ */
+function readThousands(screen: Screen, field: Field, templates: DigitTemplate[]): Reading {
+  const read = readDigits(screen, field, templates);
   if (!read.ok) return read;
   const { groups } = read;
   if (groups[0]! > 3 || groups.slice(1).some((n) => n !== 3))
@@ -100,8 +130,8 @@ export function readTimer(screen: Screen, templates: HudTemplates): Reading {
  * Learns the digits of a capture whose number is known, folding each glyph into its digit's
  * template.
  *
- * @param screen - a capture of the fight screen.
- * @param field - "score" or "timer".
+ * @param screen - a capture of the fight screen, or of the results for "final".
+ * @param field - the field the number is in.
  * @param shown - the number the field shows, with or without its separators, e.g.
  *   "1,776,472,632,591" or "30.267".
  * @param templates - the current templates; left unchanged.
@@ -111,13 +141,13 @@ export function readTimer(screen: Screen, templates: HudTemplates): Reading {
  */
 export function learnField(
   screen: Screen,
-  field: "score" | "timer",
+  field: Field["name"],
   shown: string,
   templates: HudTemplates,
 ): HudTemplates {
   const expected = shown.replaceAll(/[,.]/g, "");
   if (!/^\d+$/.test(expected)) throw new Error(`"${shown}" isn't a number`);
-  const spec = field === "score" ? SCORE : TIMER;
+  const spec = FIELDS[field];
   const blobs = findBlobs(screen, spec);
   const glyphs = digitGlyphs(blobs, spec);
   groupDigits(glyphs);

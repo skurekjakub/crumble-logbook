@@ -11,6 +11,7 @@ The adb helpers are shared with the EXP Dungeon macro, in `tools/adb-lib/AdbScre
 - `conquest-loop.ahk`: the script. Needs [AutoHotkey v2](https://www.autohotkey.com/) (`winget install AutoHotkey.AutoHotkey`).
 - `conquest-loop.ini`: every knob. The script reads it at start and on F10. F9 writes learned signatures to it.
 - `conquest-loop.log`: one line per tap, run, learn or stop.
+- `conquest-runs.csv`: one row per run, for charting (see [Runs file](#runs-file)).
 - `stops\`: when the loop stops on an error, the screen it stopped on, as a PNG named by the time, logged next to the error.
 
 ## What the loop does
@@ -22,6 +23,7 @@ Every 2 s it captures the screen and:
    - **Pace check:** from `PruneFromMs` after ENTER it reads the fight's score and countdown as fast as captures come. If the score is below `MinScore` when the countdown shows `CheckAtS` seconds left, it ends the run: the bottom-centre button, then **End Battle** on "Are you sure you want to end the battle?".
    - The score at exactly `CheckAtS` is interpolated between the reads either side of it. Around 30 s left the score climbs about 0.16T a second, so a late read would flatter it.
    - It taps Dismiss (the bottom-centre button) once the results show: `AfterEndMs` after End Battle, otherwise once the result screen is learned or `MinFightMs` (66 s: loading plus the 60 s fight) has passed since ENTER. It never taps it earlier, because in a running fight that button asks to end the battle.
+   - Before that first Dismiss it reads the final score off BATTLE OVER, for up to `FinalWaitMs`, and records the run.
    - With no lobby `MaxFightMs` after ENTER, it recovers.
 
 The pace check reads the HUD with `tools/conquest-hud`, which Node 24+ runs directly (`[Prune] Node`). It cuts each digit out by colour and matches it against `tools/conquest-hud/templates.json`. A digit hidden behind a floating damage number makes the read fail, never misread. With no score read by `CheckAtS - LateS`, the run is kept.
@@ -34,6 +36,26 @@ The pace check reads the HUD with `tools/conquest-hud`, which Node 24+ runs dire
 
 It saves the screen to `stops\` when it starts recovering, and stops after `RecoverTries` tries.
 
+## Runs file
+
+`conquest-runs.csv` (`[Run] RunsFile`) gets a row per run, and the log a matching `run over:` line. It stays local, like the log.
+
+| Column | Value |
+|---|---|
+| `time` | When ENTER was tapped. |
+| `run` | The run number in the log. |
+| `end` | How the run ended (below). |
+| `pace_score` | The score at `CheckAtS` seconds left; empty when none was read. |
+| `final_score` | The BATTLE OVER final score; empty when it couldn't be read, in which case the screen is saved to `stops\`. |
+
+| `end` | Meaning |
+|---|---|
+| `pruned` | Behind `MinScore` at `CheckAtS`; ended with End Battle. |
+| `kept-on-pace` | Met `MinScore`; played the full fight. |
+| `kept-unjudged` | No score read at `CheckAtS` (the check off, a fight already running when the loop started, or the HUD unreadable); played the full fight. |
+| `kept-end-failed` | Behind pace, but the end-battle question never showed; played the full fight. |
+| `stopped`, `error` | F8 or an error stopped the loop mid-run; no final score. |
+
 The fight facts behind these defaults come from `research/001-guild-conquest-meta`: the fight is 60 s, and the team wipes when the timer shows about 17 s. ENTER and Dismiss sit where the earlier mouse-driven version tapped them through Season 6.
 
 ## First run of a season
@@ -43,13 +65,14 @@ The lobby layout was read from the game on 2026-10-07, between seasons, so ENTER
 2. Press **F8**.
 3. When the first results show, press **F9 → Result screen** before the loop dismisses them. From then on it dismisses as soon as the results appear, including after an early wipe, instead of waiting the full time.
 
-**F7** shows what the script sees: the screen it classifies, the score and countdown it reads, and the colour at each signature pixel next to the colour it wants.
+**F7** shows what the script sees: the screen it classifies, the scores and countdown it reads, and the colour at each signature pixel next to the colour it wants.
 
-If an update changes the HUD's font and the pace check logs unreadable digits, teach it the new digits from a fight screenshot (`adb exec-out screencap -p -d <id> > shot.png`) whose numbers you can read:
+If an update changes a font and the pace check or the final score logs unreadable digits, teach it the new digits from a screenshot (`adb exec-out screencap -p -d <id> > shot.png`) whose numbers you can read: a fight for `score` and `timer`, BATTLE OVER for `final`.
 
 ```powershell
 node tools/conquest-hud/src/cli.ts learn shot.png score 1,776,472,632,591
 node tools/conquest-hud/src/cli.ts learn shot.png timer 30.267
+node tools/conquest-hud/src/cli.ts learn results.png final 2,831,485,998,371
 ```
 
 ## Hotkeys

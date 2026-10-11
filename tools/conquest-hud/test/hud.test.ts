@@ -1,15 +1,22 @@
 import { describe, expect, it } from "vitest";
 import type { HudTemplates } from "../src/hud.ts";
-import { learnField, readScore, readTimer } from "../src/hud.ts";
-import { blankScreen, drawNumber, fillRect, SCORE_LAYOUT, TIMER_LAYOUT } from "./helpers.ts";
+import { learnField, readFinal, readScore, readTimer } from "../src/hud.ts";
+import {
+  blankScreen,
+  drawNumber,
+  fillRect,
+  FINAL_LAYOUT,
+  SCORE_LAYOUT,
+  TIMER_LAYOUT,
+} from "./helpers.ts";
 
 /**
- * Learns templates from synthetic screens that show every digit in both fields.
+ * Learns templates from synthetic screens that show every digit in every field.
  *
  * @returns the learned templates.
  */
 function synthTemplates(): HudTemplates {
-  let templates: HudTemplates = { score: [], timer: [] };
+  let templates: HudTemplates = { score: [], timer: [], final: [] };
   for (const [score, timer] of [
     ["1,234,567,890", "12.345"],
     ["9,876,543,210", "50.678"],
@@ -18,8 +25,10 @@ function synthTemplates(): HudTemplates {
     const screen = blankScreen();
     drawNumber(screen, score, SCORE_LAYOUT);
     drawNumber(screen, timer, TIMER_LAYOUT);
+    drawNumber(screen, score, FINAL_LAYOUT);
     templates = learnField(screen, "score", score, templates);
     templates = learnField(screen, "timer", timer, templates);
+    templates = learnField(screen, "final", score, templates);
   }
   return templates;
 }
@@ -109,18 +118,32 @@ describe("readTimer", () => {
   });
 });
 
+describe("readFinal", () => {
+  const templates = synthTemplates();
+
+  it("reads the results' final score", () => {
+    const screen = blankScreen();
+    drawNumber(screen, "3,491,361,381,300", FINAL_LAYOUT);
+    expect(readFinal(screen, templates)).toEqual({ ok: true, value: 3491361381300 });
+  });
+
+  it("doesn't take the fight's score for the final score", () => {
+    const screen = blankScreen();
+    drawNumber(screen, "3,491,361,381,300", SCORE_LAYOUT);
+    expect(readFinal(screen, templates)).toEqual({ ok: false, reason: "not on screen" });
+  });
+});
+
 describe("learnField", () => {
+  const none: HudTemplates = { score: [], timer: [], final: [] };
+
   it("refuses a number with a different count of digits from the capture", () => {
     const screen = blankScreen();
     drawNumber(screen, "123,456", SCORE_LAYOUT);
-    expect(() => learnField(screen, "score", "12,345", { score: [], timer: [] })).toThrow(
-      /6 digits/,
-    );
+    expect(() => learnField(screen, "score", "12,345", none)).toThrow(/6 digits/);
   });
 
   it("refuses text that isn't a number", () => {
-    expect(() => learnField(blankScreen(), "score", "1.2T", { score: [], timer: [] })).toThrow(
-      /isn't a number/,
-    );
+    expect(() => learnField(blankScreen(), "score", "1.2T", none)).toThrow(/isn't a number/);
   });
 });

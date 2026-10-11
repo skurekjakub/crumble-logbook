@@ -30,10 +30,11 @@ global DEFAULTS := Map(
                   "Tolerance", "30"),
     "Timing", Map("PollMs", "2000", "AfterEnterMs", "6000", "MinFightMs", "66000", "MaxFightMs", "100000",
                   "RecoverStepMs", "4000", "LaunchWaitMs", "90000", "PruneFromMs", "24000",
-                  "ConfirmWaitMs", "1500", "AfterEndMs", "4000"),
+                  "ConfirmWaitMs", "1500", "AfterEndMs", "4000", "FinalWaitMs", "8000"),
     "Prune", Map("MinScore", "1950000000000", "CheckAtS", "30", "LateS", "3", "Node", "node"),
     "Run", Map("MaxRuns", "0", "StuckLimit", "3", "GreyLimit", "8", "RecoverTries", "8",
-               "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log")
+               "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log",
+               "RunsFile", "conquest-runs.csv")
 )
 
 LoadConfig()
@@ -149,6 +150,8 @@ Wait(ms) {
  *   Dismiss is the bottom-centre button, which leaves a running fight, so it is never tapped earlier.
  * - PruneFromMs after ENTER, it judges the fight once with JudgePace, and ends it with EndRun
  *   when the score is behind MinScore; Dismiss then closes the results without waiting.
+ * - Before the first Dismiss of a run, it reads the final score with ReadFinal and records the
+ *   run with RecordRun. A run stopped by F8 or an error mid-fight is recorded without one.
  * - Still off the lobby MaxFightMs after ENTER, it navigates back to the lobby with Recover.
  * @throws Error, caught here, when ENTER is greyed, ENTER keeps leaving the lobby showing, or
  *   Recover can't reach the lobby
@@ -159,12 +162,13 @@ RunLoop() {
     grey := 0
     ; Started off the lobby: assume a fight began now, so Dismiss waits as it would after ENTER.
     enteredAt := A_TickCount
-    judged := false
-    ended := false
+    rec := NewRun()
     try {
         while Running {
             buf := Capture()
             screen := ScreenOf(buf)
+            if (screen != "lobby")
+                rec.fought := true
             if (screen = "lobby") {
                 if (N("MaxRuns") > 0 && Runs >= N("MaxRuns")) {
                     Log("MaxRuns reached")
@@ -191,8 +195,7 @@ RunLoop() {
                 Tap("Enter")
                 Runs += 1
                 enteredAt := A_TickCount
-                judged := false
-                ended := false
+                rec := NewRun()
                 Log("entered")
                 Wait(N("AfterEnterMs"))
                 stuck := ScreenOf(Capture()) = "lobby" ? stuck + 1 : 0
@@ -202,15 +205,17 @@ RunLoop() {
             if (since >= N("MaxFightMs")) {
                 Recover("no lobby " Round(since / 1000) " s after ENTER")
                 enteredAt := A_TickCount
-            } else if (!judged && !ended && N("MinScore") > 0 && since >= N("PruneFromMs") && since < N("MinFightMs")) {
-                judged := true
+            } else if (!rec.judged && !rec.ended && N("MinScore") > 0 && since >= N("PruneFromMs") && since < N("MinFightMs")) {
+                rec.judged := true
                 Phase := "judging"
-                score := JudgePace(enteredAt + N("MinFightMs"))
-                if (score != "" && score < N("MinScore")) {
-                    ended := EndRun()
+                rec.pace := JudgePace(enteredAt + N("MinFightMs"))
+                if (rec.pace != "" && rec.pace < N("MinScore")) {
+                    rec.ended := EndRun()
                     continue
                 }
-            } else if (screen = "result" || (Cfg["Result"] = "" && (since >= N("MinFightMs") || ended))) {
+            } else if (screen = "result" || (Cfg["Result"] = "" && (since >= N("MinFightMs") || rec.ended))) {
+                if !rec.recorded
+                    RecordRun(rec,EndOf(rec), ReadFinal())
                 Phase := "results"
                 Tap("Dismiss")
             } else {
@@ -220,9 +225,13 @@ RunLoop() {
         }
     } catch StopSignal {
         Log("stopped by user")
+        if (rec.fought && !rec.recorded)
+            RecordRun(rec,"stopped", "")
     } catch Error as e {
         Log("error: " e.Message)
         Log(SaveStopShot())
+        if (rec.fought && !rec.recorded)
+            RecordRun(rec,"error", "")
         TrayTip(e.Message, "Conquest loop stopped", 3)
     }
     Running := false
@@ -353,10 +362,95 @@ EndRun() {
 }
 
 /**
- * Reads the fight's score and countdown from a capture with tools/conquest-hud.
+ * Starts the record of a run, numbered and timed from now.
+ * @returns {number, entered, fought, judged, pace, ended, recorded}: the run's number, when it
+ *   started, whether its fight showed, whether JudgePace ran, the score it read (empty when none),
+ *   whether EndRun ended it, and whether RecordRun wrote it
+ */
+NewRun() {
+    return {number: Runs, entered: FormatTime(, "yyyy-MM-dd HH:mm:ss"), fought: false, judged: false,
+        pace: "", ended: false, recorded: false}
+}
+
+/**
+ * Tells how a run that reached its results ended, for the runs file.
+ * @param rec the run's record from NewRun
+ * @returns "pruned" when EndRun ended it behind pace; otherwise it played the full fight:
+ *   "kept-on-pace" when its score at CheckAtS met MinScore, "kept-end-failed" when it was behind
+ *   but the end-battle confirmation never showed, and "kept-unjudged" when no score was read
+ *   (the pace check off, a fight already running at start, or the HUD unreadable)
+ */
+EndOf(rec) {
+    if rec.ended
+        return "pruned"
+    if (rec.pace = "")
+        return "kept-unjudged"
+    return rec.pace >= N("MinScore") ? "kept-on-pace" : "kept-end-failed"
+}
+
+/**
+ * Reads the final score off the BATTLE OVER results. The results slide in, so it takes a reading
+ * only once two captures in a row agree.
+ * @returns the final score; empty when FinalWaitMs pass or the lobby shows first, in which case
+ *   it logs the last reading and saves the screen to stops\
+ * @throws StopSignal when F8 stops the loop
+ */
+ReadFinal() {
+    global Phase
+    Phase := "reading the final score"
+    deadline := A_TickCount + N("FinalWaitMs")
+    last := ""
+    hud := {out: ""}
+    while (A_TickCount < deadline) {
+        if !Running
+            throw StopSignal()
+        UpdateStatus()
+        buf := Capture()
+        if (ScreenOf(buf) = "lobby")
+            break
+        hud := ReadHud(buf)
+        if (hud.final != "" && hud.final = last)
+            return hud.final
+        last := hud.final
+    }
+    Log("final score unreadable. Last read: " Trim(StrReplace(hud.out, "`n", " | "), " |`r"))
+    Log(SaveStopShot())
+    return ""
+}
+
+/**
+ * Logs a run's outcome and appends it to RunsFile next to the script, a CSV with the columns
+ * time, run, end, pace_score and final_score; it writes the header when it creates the file.
+ * A write that fails is retried briefly and then logged, never raised.
+ * @param rec the run's record from NewRun; marked recorded
+ * @param end how the run ended: an EndOf value, "stopped" or "error"
+ * @param final the final score; empty when it wasn't read
+ */
+RecordRun(rec,end, final) {
+    rec.recorded := true
+    Log(Format("run over: {}; {}; final {}", end
+        , rec.pace = "" ? "no score read at " N("CheckAtS") " s left" : Short(rec.pace) " at " N("CheckAtS") " s left"
+        , final = "" ? "unread" : Short(final)))
+    path := A_ScriptDir "\" Cfg["RunsFile"]
+    line := rec.entered "," rec.number "," end "," rec.pace "," final "`n"
+    loop 5 {
+        try {
+            if !FileExist(path)
+                FileAppend("time,run,end,pace_score,final_score`n", path, "UTF-8-RAW")
+            FileAppend(line, path, "UTF-8-RAW")
+            return
+        }
+        Sleep 100
+    }
+    Log("couldn't write " Cfg["RunsFile"])
+}
+
+/**
+ * Reads the fight's score and countdown, and the results' final score, from a capture with
+ * tools/conquest-hud.
  * @param buf capture from Capture()
- * @returns {score, timer, out}: the score as an integer and the seconds left as a number, each
- *   empty when it couldn't be read, and the reader's output for the log
+ * @returns {score, timer, final, out}: the scores as integers and the seconds left as a number,
+ *   each empty when it couldn't be read, and the reader's output for the log
  */
 ReadHud(buf) {
     path := A_Temp "\conquest-hud-" ProcessExist() ".bin"
@@ -366,7 +460,8 @@ ReadHud(buf) {
     out := RunOut('"' Cfg["Node"] '" "' HudCli '" read "' path '"')
     score := RegExMatch(out, "m)^score (\d+)", &s) ? Integer(s[1]) : ""
     timer := RegExMatch(out, "m)^timer (\d+(?:\.\d+)?)", &t) ? Number(t[1]) : ""
-    return {score: score, timer: timer, out: out}
+    final := RegExMatch(out, "m)^final (\d+)", &f) ? Integer(f[1]) : ""
+    return {score: score, timer: timer, final: final, out: out}
 }
 
 /**

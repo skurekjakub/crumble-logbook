@@ -1,8 +1,8 @@
 /**
  * `node tools/conquest-hud/src/cli.ts <command> …`, run by the Guild Conquest macro:
- * - `read <capture>`: prints `score <n>` and `timer <seconds>`, each as `score ? <reason>` when
- *   it can't be read.
- * - `learn <capture> score|timer <shown>`: folds the capture's digits into `templates.json`.
+ * - `read <capture>`: prints `score <n>`, `timer <seconds>` and `final <n>`, each as
+ *   `score ? <reason>` when it can't be read.
+ * - `learn <capture> score|timer|final <shown>`: folds the capture's digits into `templates.json`.
  *
  * A capture is the raw dump of `adb exec-out screencap` or the PNG of `screencap -p`.
  *
@@ -12,23 +12,25 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { DigitTemplate } from "./digits.ts";
 import type { HudTemplates, Reading } from "./hud.ts";
-import { learnField, readScore, readTimer } from "./hud.ts";
+import { learnField, readFinal, readScore, readTimer } from "./hud.ts";
 import { decodeScreen } from "./screen.ts";
 
 const TEMPLATES = join(import.meta.dirname, "..", "templates.json");
-const USAGE = "usage: cli.ts read <capture> | cli.ts learn <capture> score|timer <shown>";
+const USAGE = "usage: cli.ts read <capture> | cli.ts learn <capture> score|timer|final <shown>";
+const FIELD_NAMES = ["score", "timer", "final"] as const;
 
 /**
  * Loads the learned digit templates.
  *
- * @returns the templates; empty lists when none are learned yet.
+ * @returns the templates; empty lists for the fields with none learned yet.
  * @throws Error when templates.json exists but isn't valid JSON.
  */
 function loadTemplates(): HudTemplates {
+  const empty: HudTemplates = { score: [], timer: [], final: [] };
   try {
-    return JSON.parse(readFileSync(TEMPLATES, "utf8")) as HudTemplates;
+    return { ...empty, ...(JSON.parse(readFileSync(TEMPLATES, "utf8")) as Partial<HudTemplates>) };
   } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === "ENOENT") return { score: [], timer: [] };
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return empty;
     throw err;
   }
 }
@@ -48,13 +50,20 @@ function rounded(templates: DigitTemplate[]): DigitTemplate[] {
 }
 
 /**
- * Formats a reading as one output line.
+ * Reads a field and formats the reading as one output line. A field that can't be read at all,
+ * such as one with no templates learned, gets a line too, so the other fields still print.
  *
  * @param name - the field's name.
- * @param reading - what was read.
+ * @param read - reads the field.
  * @returns e.g. "score 1776472632591" or "timer ? not on screen".
  */
-function line(name: string, reading: Reading): string {
+function line(name: string, read: () => Reading): string {
+  let reading: Reading;
+  try {
+    reading = read();
+  } catch (err) {
+    reading = { ok: false, reason: err instanceof Error ? err.message : String(err) };
+  }
   return reading.ok ? `${name} ${reading.value}\n` : `${name} ? ${reading.reason}\n`;
 }
 
@@ -71,13 +80,20 @@ function main(args: string[]): number {
     const templates = loadTemplates();
     const screen = decodeScreen(readFileSync(path));
     process.stdout.write(
-      line("score", readScore(screen, templates)) + line("timer", readTimer(screen, templates)),
+      line("score", () => readScore(screen, templates)) +
+        line("timer", () => readTimer(screen, templates)) +
+        line("final", () => readFinal(screen, templates)),
     );
     return 0;
   }
-  if (command === "learn" && path && (field === "score" || field === "timer") && shown) {
-    const learned = learnField(decodeScreen(readFileSync(path)), field, shown, loadTemplates());
-    const out = { score: rounded(learned.score), timer: rounded(learned.timer) };
+  const name = FIELD_NAMES.find((n) => n === field);
+  if (command === "learn" && path && name && shown) {
+    const learned = learnField(decodeScreen(readFileSync(path)), name, shown, loadTemplates());
+    const out = {
+      score: rounded(learned.score),
+      timer: rounded(learned.timer),
+      final: rounded(learned.final),
+    };
     writeFileSync(TEMPLATES, JSON.stringify(out) + "\n");
     process.stdout.write(`learned ${field} ${shown}\n`);
     return 0;

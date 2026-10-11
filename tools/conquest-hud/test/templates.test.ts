@@ -9,7 +9,7 @@ const templates = JSON.parse(
 ) as HudTemplates;
 
 describe("templates.json", () => {
-  for (const field of ["score", "timer"] as const) {
+  for (const field of ["score", "timer", "final"] as const) {
     it(`holds one ${field} template per digit, on the current grid`, () => {
       expect(templates[field].map((t) => t.digit)).toEqual("0123456789".split(""));
       for (const t of templates[field]) expect(t.cells).toHaveLength(GRID_COLUMNS * GRID_ROWS);
