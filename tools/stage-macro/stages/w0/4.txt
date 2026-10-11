@@ -1,0 +1,6 @@
+; 360-4, Ginkgoblin Bomber: stands right of the team at the HUD, a little above it, as on 360-1.
+; Lost with no input: 25% health left at 28 s. With this script, 360-1's, it lost 2
+; tries (16% and 44% left) and won the 3rd on 2026-10-11, in about 26 s.
+encounter
+W+D 200
+D 350

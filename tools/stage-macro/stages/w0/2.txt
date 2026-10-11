@@ -1,0 +1,6 @@
+; 360-2, Spactus: stands up and right of the team at the HUD; how far right varies from try to try.
+; Lost with no input: 33% health left at 31 s. A walk mostly up (W+D 150, W 300) lost three
+; tries, and a shorter one right (W+D 200, D 250) lost four, at best leaving 6%. This longer
+; diagonal lost 4 tries (32% to 3% left) and won the 5th on 2026-10-11, in about 19 s.
+encounter
+W+D 400
