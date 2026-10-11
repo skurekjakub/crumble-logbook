@@ -1,0 +1,5 @@
+; 359-26, Broken Collection Bot: spawns up and right of the team.
+; Won with no input on 2026-10-11, in about 19 s. This script, 359-21's, is untested here.
+encounter
+W+D 350
+D 300

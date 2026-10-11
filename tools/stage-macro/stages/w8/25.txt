@@ -1,0 +1,5 @@
+; 359-25, Broken Cleaning Bot: spawns up and right of the team, as on 359-21.
+; Won with no input on 2026-10-11, at 26 s. This script, 359-21's, is untested here.
+encounter
+W+D 350
+D 300
