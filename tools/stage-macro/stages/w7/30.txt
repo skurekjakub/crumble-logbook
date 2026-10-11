@@ -1,0 +1,4 @@
+; 358-30, Cool Mint Cookie: spawns right of the team, a little above it.
+; Won with no input on 2026-10-11, in about 20 s. This script is untested.
+wait 500
+D 1200

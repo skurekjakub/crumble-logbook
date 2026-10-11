@@ -1,0 +1,6 @@
+; 359-2, Rowdy Biker: spawns right of the team and a little above it.
+; Won with no input on 2026-10-11, but only at 28.5 s: 48% health was left at 24 s. This script
+; is untested.
+wait 500
+W+D 400
+D 1000
