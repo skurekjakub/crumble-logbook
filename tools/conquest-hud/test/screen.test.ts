@@ -17,16 +17,17 @@ function chunk(type: string, data: Uint8Array): Buffer {
 }
 
 /**
- * Encodes a 2x2 RGB PNG whose rows use the given filters.
+ * Encodes a 2-pixel-wide, 8-bit PNG.
  *
  * @param rows - per row, the filter byte and the filtered bytes.
+ * @param colour - the PNG colour type: 2 for RGB, 6 for RGBA.
  * @returns the PNG file.
  */
-function png(rows: number[][]): Buffer {
+function png(rows: number[][], colour: 2 | 6 = 2): Buffer {
   const ihdr = Buffer.alloc(13);
   ihdr.writeUInt32BE(2, 0);
   ihdr.writeUInt32BE(rows.length, 4);
-  ihdr.set([8, 2, 0, 0, 0], 8);
+  ihdr.set([8, colour, 0, 0, 0], 8);
   return Buffer.concat([
     Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
     chunk("IHDR", ihdr),
@@ -53,36 +54,26 @@ describe("decodeScreen", () => {
     const raw = Buffer.alloc(16 + 4);
     raw.writeUInt32LE(2, 0);
     raw.writeUInt32LE(1, 4);
-    expect(() => decodeScreen(raw)).toThrow(ScreenError);
+    expect(() => decodeScreen(raw)).toThrow(
+      new ScreenError("the capture holds fewer pixels than 2x1"),
+    );
   });
 
-  it("decodes an RGB PNG through its row filters", () => {
-    // Row 0 unfiltered: (10,20,30) (40,50,60). Row 1 Sub, then Up: (11,22,33) (44,55,66).
-    const subRow = [1, 11, 22, 33, 44 - 11, 55 - 22, 66 - 33];
-    const upRow = [2, 11 - 10, 22 - 20, 33 - 30, 44 - 40, 55 - 50, 66 - 60];
-    for (const second of [subRow, upRow]) {
-      const screen = decodeScreen(png([[0, 10, 20, 30, 40, 50, 60], second]));
-      expect([...screen.rgba]).toEqual([
-        10, 20, 30, 255, 40, 50, 60, 255, 11, 22, 33, 255, 44, 55, 66, 255,
-      ]);
-    }
+  // Row 0, unfiltered, sits above row 1. The bytes are picked so that in the second pixel,
+  // Paeth predicts from the left byte in red, the byte above in green and the upper-left in blue.
+  const ROW_0 = [0, 10, 22, 100, 12, 201, 150];
+  it.for([
+    ["Sub", [1, 100, 20, 50, 11, 191, 61]],
+    ["Up", [2, 90, 254, 206, 99, 10, 217]],
+    ["Average", [3, 95, 9, 0, 55, 101, 11]],
+    ["Paeth", [4, 90, 254, 206, 11, 10, 11]],
+  ] as const)("decodes an RGB PNG row under the %s filter", ([, row1]) => {
+    const screen = decodeScreen(png([ROW_0, [...row1]]));
+    expect([...screen.rgba.subarray(8)]).toEqual([100, 20, 50, 255, 111, 211, 111, 255]);
   });
 
-  it("decodes the Average and Paeth filters", () => {
-    // Row 1 is (11,22,33) (44,55,66) under each filter, with row 0 (10,20,30) (40,50,60).
-    const avg = [
-      3,
-      11 - 5,
-      22 - 10,
-      33 - 15,
-      44 - ((11 + 40) >> 1),
-      55 - ((22 + 50) >> 1),
-      66 - ((33 + 60) >> 1),
-    ];
-    const paeth = [4, 11 - 10, 22 - 20, 33 - 30, 44 - 40, 55 - 50, 66 - 60];
-    for (const second of [avg, paeth]) {
-      const screen = decodeScreen(png([[0, 10, 20, 30, 40, 50, 60], second]));
-      expect([...screen.rgba.subarray(8)]).toEqual([11, 22, 33, 255, 44, 55, 66, 255]);
-    }
+  it("decodes an RGBA PNG, alpha and all", () => {
+    const screen = decodeScreen(png([[1, 1, 2, 3, 4, 4, 4, 4, 4]], 6));
+    expect([...screen.rgba]).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 });

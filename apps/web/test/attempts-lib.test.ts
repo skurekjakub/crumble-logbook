@@ -4,7 +4,6 @@ import {
   CUT_MARGIN,
   formatScore,
   histogram,
-  niceStep,
   paceOf,
   pearson,
   scoreAt,
@@ -36,15 +35,19 @@ describe("scoreAt", () => {
   ];
 
   it("interpolates between the readings either side", () => {
-    expect(scoreAt(curve, 39.5)).toBe(1_050);
-    expect(scoreAt(curve, 39)).toBe(1_100);
+    expect(scoreAt(curve, 39.75)).toBe(1_025);
   });
 
-  it("won't vouch for a moment between readings far apart, or outside the curve", () => {
-    expect(scoreAt(curve, 37)).toBeNull();
-    expect(scoreAt(curve, 41)).toBeNull();
-    expect(scoreAt(curve, 30)).toBeNull();
+  it("reads the first reading at its own moment", () => {
+    expect(scoreAt(curve, 40)).toBe(1_000);
   });
+
+  it.for([37, 41, 30])(
+    "won't vouch for %s s left, between readings far apart or outside the curve",
+    (tLeft) => {
+      expect(scoreAt(curve, tLeft)).toBeNull();
+    },
+  );
 });
 
 describe("paceOf", () => {
@@ -74,14 +77,14 @@ describe("testCut", () => {
   const attempts = [
     run("2026-10-11 09:00:00", 1_000, "pruned"),
     run("2026-10-11 09:00:40", 1_500, "pruned"),
-    run("2026-10-11 09:01:20", 2_200, "kept-on-pace"),
+    run("2026-10-11 09:01:20", 2_000, "kept-on-pace"),
     run("2026-10-11 09:02:00", 3_000, "kept-on-pace"),
   ];
 
-  it("sets the cut just below the weakest passing run's early score, pruning none of them", () => {
+  it("sets the cut just below the weakest passing run's early score, a run at the bar passing", () => {
     const test = testCut(attempts, RULE, 45);
     expect(test.passing).toBe(2);
-    expect(test.cut).toBeCloseTo(1_100 * (1 - CUT_MARGIN));
+    expect(test.cut).toBeCloseTo(1_000 * (1 - CUT_MARGIN));
     expect(test.prunedShare).toBe(0.5);
     expect(test.savedS).toBe(15);
     expect(test.r).toBeCloseTo(1);
@@ -95,32 +98,43 @@ describe("testCut", () => {
   });
 
   it("has nothing to test with the pace check off", () => {
-    expect(testCut(attempts, { minScore: 0, checkAtS: 30 }, 45).pairs).toEqual([]);
+    const test = testCut(attempts, { minScore: 0, checkAtS: 30 }, 45);
+    expect(test.pairs.map((p) => p.attempt.time)).toEqual([]);
   });
 });
 
 describe("pearson", () => {
-  it("reads a perfect, an inverse and no relationship", () => {
-    expect(pearson([1, 2, 3], [2, 4, 6])).toBeCloseTo(1);
-    expect(pearson([1, 2, 3], [6, 4, 2])).toBeCloseTo(-1);
+  it.for([
+    ["a perfect", [2, 4, 6], 1],
+    ["an inverse", [6, 4, 2], -1],
+  ] as const)("reads %s relationship", ([, ys, r]) => {
+    expect(pearson([1, 2, 3], ys)).toBeCloseTo(r);
+  });
+
+  it("reads none against a constant", () => {
     expect(pearson([1, 2, 3], [5, 5, 5])).toBeNull();
+  });
+
+  it("reads none from fewer than 3 runs", () => {
     expect(pearson([1, 2], [1, 2])).toBeNull();
   });
 });
 
 describe("histogram", () => {
-  it("cuts the range into round bins and counts every value once", () => {
+  it("cuts the range into round bins, empty ones included, and counts every value once", () => {
     const bins = histogram([1.02, 1.07, 1.31, 1.49], 5);
-    expect(niceStep(0.47, 5)).toBe(0.1);
     expect(bins.map((b) => b.count)).toEqual([2, 0, 0, 1, 1]);
-    expect(bins.reduce((s, b) => s + b.count, 0)).toBe(4);
   });
 });
 
 describe("formatScore", () => {
-  it("abbreviates the way the game does", () => {
-    expect(formatScore(2_359_000_000_000)).toBe("2.359T");
-    expect(formatScore(812_400_000_000)).toBe("812.4G");
-    expect(formatScore(null)).toBe("–");
+  it.for([
+    [2_359_000_000_000, "2.359T"],
+    [812_400_000_000, "812.4G"],
+    [1_500_000, "1.5M"],
+    [999_999, "999999"],
+    [null, "–"],
+  ] as const)("abbreviates %s as %s", ([score, shown]) => {
+    expect(formatScore(score)).toBe(shown);
   });
 });

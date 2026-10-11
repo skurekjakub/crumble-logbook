@@ -128,7 +128,8 @@ export function drawNumber(screen: Screen, text: string, layout: Layout): number
     x += (last - first) * cell + block;
     if (text[i + 1] === "," || text[i + 1] === ".") {
       const dot = Math.ceil(block / 2);
-      fillRect(screen, x + layout.separatorGap / 2 - dot / 2, top + 6 * cell, dot, block, ink);
+      const dotLeft = x + Math.floor((layout.separatorGap - dot) / 2);
+      fillRect(screen, dotLeft, top + 6 * cell, dot, block, ink);
       x += layout.separatorGap;
     } else {
       x += layout.digitGap;

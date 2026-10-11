@@ -92,7 +92,35 @@ describe("GET /api/attempts", () => {
     ]);
     const body = await getAttempts();
     expect(body.attempts.map((a) => a.run)).toEqual([1]);
-    expect(body.rule).toEqual({ minScore: null, checkAtS: null });
+  });
+
+  it("skips a curve reading it can't read, keeping the run and its other readings", async () => {
+    write("conquest-runs.csv", [
+      "time,run,end,pace_score,final_score",
+      "2026-10-11 09:00:00,1,pruned,1661000000000,",
+    ]);
+    write("conquest-curves.csv", [
+      "time,t_left,score",
+      "2026-10-11 09:00:00,30.233,1635000000000",
+      "2026-10-11 09:00:00,29.",
+    ]);
+    const [attempt] = (await getAttempts()).attempts;
+    expect(attempt?.curve).toEqual([[30.233, 1635000000000]]);
+  });
+
+  it("skips a curve reading cut off after a comma rather than reading it as 0", async () => {
+    write("conquest-runs.csv", [
+      "time,run,end,pace_score,final_score",
+      "2026-10-11 09:00:00,1,pruned,1661000000000,",
+    ]);
+    write("conquest-curves.csv", [
+      "time,t_left,score",
+      "2026-10-11 09:00:00,30.233,1635000000000",
+      "2026-10-11 09:00:00,29.700,",
+      "2026-10-11 09:00:00,,1700000000000",
+    ]);
+    const [attempt] = (await getAttempts()).attempts;
+    expect(attempt?.curve).toEqual([[30.233, 1635000000000]]);
   });
 
   it("reads the files the INI names", async () => {
@@ -112,8 +140,10 @@ describe("GET /api/attempts", () => {
 
 describe("parseIni", () => {
   it("reads keys by section, skipping comments and blank lines", () => {
-    const ini = parseIni("[A]\r\n; note\r\nx = 1\r\n\r\n[B]\r\ny=two words\r\n");
-    expect(ini.get("A")?.get("x")).toBe("1");
-    expect(ini.get("B")?.get("y")).toBe("two words");
+    const ini = parseIni("[A]\r\n; x = 2\r\nx = 1\r\n\r\n[B]\r\ny=two words\r\n");
+    expect([...ini].map(([section, keys]) => [section, Object.fromEntries(keys)])).toEqual([
+      ["A", { x: "1" }],
+      ["B", { y: "two words" }],
+    ]);
   });
 });

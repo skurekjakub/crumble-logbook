@@ -51,32 +51,50 @@ describe("readScore", () => {
     expect(readScore(screen, templates)).toEqual({ ok: true, value: 40799090 });
   });
 
-  it("ignores floating damage numbers and confetti around the score", () => {
+  it.for<[string, [x: number, y: number, w: number, h: number]]>([
+    ["a tall blob off the digits' line", [1250, top + 40, 50, 75]],
+    ["a sliver as tall as the digits", [1250, top, 10, 72]],
+  ])("reads the score past %s", ([, [x, y, w, h]]) => {
     const screen = blankScreen();
     drawNumber(screen, "2,991,944,928,180", SCORE_LAYOUT);
-    fillRect(screen, 60, top - 25, 30, 20, SCORE_INK);
-    fillRect(screen, 1250, top + 10, 25, 25, SCORE_INK);
+    fillRect(screen, x, y, w, h, SCORE_INK);
     expect(readScore(screen, templates)).toEqual({ ok: true, value: 2991944928180 });
   });
 
-  it("refuses a score with a digit hidden, rather than read it short", () => {
+  it("doesn't take confetti for a score", () => {
+    const screen = blankScreen();
+    fillRect(screen, 60, top - 25, 30, 20, SCORE_INK);
+    fillRect(screen, 1250, top + 10, 25, 25, SCORE_INK);
+    expect(readScore(screen, templates)).toEqual({ ok: false, reason: "not on screen" });
+  });
+
+  it("refuses a score with a whole group hidden, rather than read it short", () => {
     const screen = blankScreen();
     const lefts = drawNumber(screen, "2,991,944,928,180", SCORE_LAYOUT);
-    fillRect(screen, lefts[4]! - 2, top - 2, 60, 80, [0, 0, 0]);
-    expect(readScore(screen, templates)).toMatchObject({ ok: false });
+    fillRect(screen, lefts[4]! - 2, top - 2, lefts[7]! - lefts[4]! - 30, 80, [0, 0, 0]);
+    expect(readScore(screen, templates)).toEqual({
+      ok: false,
+      reason: expect.stringMatching(/a digit is hidden/),
+    });
   });
 
   it("refuses a score with a digit merged into a damage number", () => {
     const screen = blankScreen();
     const lefts = drawNumber(screen, "2,991,944,928,180", SCORE_LAYOUT);
     fillRect(screen, lefts[6]!, top - 20, 30, 25, SCORE_INK);
-    expect(readScore(screen, templates)).toMatchObject({ ok: false });
+    expect(readScore(screen, templates)).toEqual({
+      ok: false,
+      reason: expect.stringMatching(/a digit is hidden/),
+    });
   });
 
-  it("refuses digits that don't group in thousands", () => {
+  it.for(["12,34", "1234,567"])("refuses %s, which doesn't group in thousands", (text) => {
     const screen = blankScreen();
-    drawNumber(screen, "12,34", SCORE_LAYOUT);
-    expect(readScore(screen, templates)).toMatchObject({ ok: false });
+    drawNumber(screen, text, SCORE_LAYOUT);
+    expect(readScore(screen, templates)).toEqual({
+      ok: false,
+      reason: expect.stringMatching(/aren't a thousands grouping/),
+    });
   });
 
   it("refuses a screen without a score", () => {
@@ -85,36 +103,43 @@ describe("readScore", () => {
 
   it("refuses a glyph that matches no digit closely", () => {
     const screen = blankScreen();
-    drawNumber(screen, "123", SCORE_LAYOUT);
-    fillRect(screen, 900, top, 52, 72, SCORE_INK);
-    expect(readScore(screen, templates)).toMatchObject({ ok: false });
+    const lefts = drawNumber(screen, "12", SCORE_LAYOUT);
+    fillRect(screen, lefts[1]! + 62, top, 52, 72, SCORE_INK);
+    expect(readScore(screen, templates)).toEqual({
+      ok: false,
+      reason: expect.stringMatching(/^digit 3 is unclear/),
+    });
   });
 });
 
 describe("readTimer", () => {
   const templates = synthTemplates();
 
-  it("reads the seconds left, with one or two whole digits", () => {
-    for (const [text, seconds] of [
-      ["30.267", 30.267],
-      ["7.810", 7.81],
-    ] as const) {
-      const screen = blankScreen();
-      drawNumber(screen, text, TIMER_LAYOUT);
-      expect(readTimer(screen, templates)).toEqual({ ok: true, value: seconds });
-    }
+  it.for([
+    ["30.267", 30.267],
+    ["7.810", 7.81],
+  ] as const)("reads %s seconds left", ([text, seconds]) => {
+    const screen = blankScreen();
+    drawNumber(screen, text, TIMER_LAYOUT);
+    expect(readTimer(screen, templates)).toEqual({ ok: true, value: seconds });
   });
 
   it("refuses a countdown longer than a fight", () => {
     const screen = blankScreen();
     drawNumber(screen, "61.000", TIMER_LAYOUT);
-    expect(readTimer(screen, templates)).toMatchObject({ ok: false });
+    expect(readTimer(screen, templates)).toEqual({
+      ok: false,
+      reason: "61 s is longer than a fight",
+    });
   });
 
   it("refuses digits that aren't seconds and milliseconds", () => {
     const screen = blankScreen();
     drawNumber(screen, "30.26", TIMER_LAYOUT);
-    expect(readTimer(screen, templates)).toMatchObject({ ok: false });
+    expect(readTimer(screen, templates)).toEqual({
+      ok: false,
+      reason: expect.stringMatching(/aren't seconds.millis/),
+    });
   });
 });
 

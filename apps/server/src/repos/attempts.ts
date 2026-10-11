@@ -90,9 +90,11 @@ function optionalInt(field: string | undefined): number | null {
 export function groupCurves(rows: readonly string[][]): Map<string, CurvePoint[]> {
   const curves = new Map<string, CurvePoint[]>();
   for (const [time, tLeft, score] of rows) {
+    // Number("") is 0, so an empty field would pass as a reading of 0.
+    if (!time || !tLeft || !score) continue;
     const t = Number(tLeft);
     const s = Number(score);
-    if (!time || !Number.isFinite(t) || !Number.isSafeInteger(s) || t < 0 || s < 0) continue;
+    if (!Number.isFinite(t) || !Number.isSafeInteger(s) || t < 0 || s < 0) continue;
     const curve = curves.get(time) ?? [];
     curve.push([t, s]);
     curves.set(time, curve);
