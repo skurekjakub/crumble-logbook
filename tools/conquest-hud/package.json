@@ -1,0 +1,14 @@
+{
+  "name": "@crumble/conquest-hud",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "vitest run",
+    "hud": "node src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.0"
+  }
+}

@@ -2,10 +2,13 @@
 #SingleInstance Force
 #Include ..\adb-lib\AdbScreen.ahk
 ; Guild Conquest retry loop over adb: lobby -> ENTER -> fight -> dismiss the results -> repeat.
+; A fight whose score is behind MinScore when the countdown reaches CheckAtS is ended early.
 ; It reads the screen with `adb exec-out screencap` and taps with `adb shell input`, so the emulator
 ; window can sit behind other windows. Every knob is in conquest-loop.ini; see README.md.
 
 global IniPath := A_ScriptDir "\conquest-loop.ini"
+; Reads the fight's score and countdown from a capture; see tools/conquest-hud.
+global HudCli := A_ScriptDir "\..\conquest-hud\src\cli.ts"
 global Cfg := Map()
 global Running := false
 global Probing := false
@@ -17,14 +20,18 @@ global DEFAULTS := Map(
     "Adb", Map("Path", "C:\Program Files\Netease\MuMuPlayer\nx_main\adb.exe", "Serial", "127.0.0.1:5557",
                "Package", "com.devsisters.cc", "CaptureDisplay", "auto", "InputDisplay", "auto"),
     "Points", Map("EnterX", "712", "EnterY", "2172", "DismissX", "720", "DismissY", "2470",
-                  "GuildNavX", "933", "GuildNavY", "2413", "ConquestX", "267", "ConquestY", "1450", "JitterPx", "6"),
+                  "GuildNavX", "933", "GuildNavY", "2413", "ConquestX", "267", "ConquestY", "1450",
+                  "EndBattleX", "988", "EndBattleY", "2248", "JitterPx", "6"),
     "Detect", Map("Lobby", "1200,1374,00CB8F|100,1494,005667|60,2300,007E91|1100,2290,007E91|1320,2160,00CB8F",
                   "EnterReady", "880,2144,FD9500",
+                  "EndConfirm", "880,2230,FD9A0D|1100,2260,FD9500|300,2230,14AEB8|720,2060,005E72",
                   "Result", "",
                   "ResultPoints", "200,300|720,300|1240,300|200,1280|720,1280|1240,1280|200,2300|720,2300|1240,2300",
                   "Tolerance", "30"),
     "Timing", Map("PollMs", "2000", "AfterEnterMs", "6000", "MinFightMs", "66000", "MaxFightMs", "100000",
-                  "RecoverStepMs", "4000", "LaunchWaitMs", "90000"),
+                  "RecoverStepMs", "4000", "LaunchWaitMs", "90000", "PruneFromMs", "24000",
+                  "ConfirmWaitMs", "1500", "AfterEndMs", "4000"),
+    "Prune", Map("MinScore", "1950000000000", "CheckAtS", "30", "LateS", "3", "Node", "node"),
     "Run", Map("MaxRuns", "0", "StuckLimit", "3", "GreyLimit", "8", "RecoverTries", "8",
                "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log")
 )
@@ -140,6 +147,8 @@ Wait(ms) {
  * - Off the lobby, it taps Dismiss once the learned result screen shows, or, with no result
  *   learned, once MinFightMs have passed since ENTER (the fight's full 60 s plus loading).
  *   Dismiss is the bottom-centre button, which leaves a running fight, so it is never tapped earlier.
+ * - PruneFromMs after ENTER, it judges the fight once with JudgePace, and ends it with EndRun
+ *   when the score is behind MinScore; Dismiss then closes the results without waiting.
  * - Still off the lobby MaxFightMs after ENTER, it navigates back to the lobby with Recover.
  * @throws Error, caught here, when ENTER is greyed, ENTER keeps leaving the lobby showing, or
  *   Recover can't reach the lobby
@@ -150,6 +159,8 @@ RunLoop() {
     grey := 0
     ; Started off the lobby: assume a fight began now, so Dismiss waits as it would after ENTER.
     enteredAt := A_TickCount
+    judged := false
+    ended := false
     try {
         while Running {
             buf := Capture()
@@ -180,6 +191,8 @@ RunLoop() {
                 Tap("Enter")
                 Runs += 1
                 enteredAt := A_TickCount
+                judged := false
+                ended := false
                 Log("entered")
                 Wait(N("AfterEnterMs"))
                 stuck := ScreenOf(Capture()) = "lobby" ? stuck + 1 : 0
@@ -189,7 +202,15 @@ RunLoop() {
             if (since >= N("MaxFightMs")) {
                 Recover("no lobby " Round(since / 1000) " s after ENTER")
                 enteredAt := A_TickCount
-            } else if (screen = "result" || (Cfg["Result"] = "" && since >= N("MinFightMs"))) {
+            } else if (!judged && !ended && N("MinScore") > 0 && since >= N("PruneFromMs") && since < N("MinFightMs")) {
+                judged := true
+                Phase := "judging"
+                score := JudgePace(enteredAt + N("MinFightMs"))
+                if (score != "" && score < N("MinScore")) {
+                    ended := EndRun()
+                    continue
+                }
+            } else if (screen = "result" || (Cfg["Result"] = "" && (since >= N("MinFightMs") || ended))) {
                 Phase := "results"
                 Tap("Dismiss")
             } else {
@@ -252,6 +273,125 @@ Recover(reason, leaveFirst := false) {
         Wait(N("RecoverStepMs"))
     }
     throw Error("couldn't get back to the Conquest lobby after " N("RecoverTries") " tries")
+}
+
+/**
+ * Reads the fight's score at the moment the countdown shows CheckAtS seconds left. It reads the
+ * HUD as fast as captures come until the countdown passes CheckAtS, and interpolates between the
+ * last reading above it and the first at or below it, since the score climbs fast enough there
+ * that a second's lag would add more than the leniency in MinScore.
+ * @param deadline A_TickCount by which to give up, e.g. when the fight must be over
+ * @returns the score at CheckAtS; empty when the HUD couldn't be read before the countdown
+ *   passed CheckAtS - LateS or the deadline, or the fight screen went away
+ * @throws StopSignal when F8 stops the loop
+ */
+JudgePace(deadline) {
+    at := N("CheckAtS")
+    before := ""
+    hud := {out: ""}
+    loop {
+        if !Running
+            throw StopSignal()
+        if (A_TickCount >= deadline) {
+            Log("pace: no reading by the deadline; keeping the run. Last read: " Trim(StrReplace(hud.out, "`n", " | "), " |`r"))
+            return ""
+        }
+        buf := Capture()
+        if (ScreenOf(buf) != "other") {
+            Log("pace: the fight screen went away before " at " s left")
+            return ""
+        }
+        hud := ReadHud(buf)
+        if (hud.timer = "") {
+            UpdateStatus()
+            continue
+        }
+        Phase := Format("judging, {:.1f} s left", hud.timer)
+        UpdateStatus()
+        if (hud.timer > at) {
+            if (hud.score != "")
+                before := hud
+            continue
+        }
+        if (hud.timer < at - N("LateS")) {
+            Log(Format("pace: no score read by {:.3f} s left; keeping the run", hud.timer))
+            return ""
+        }
+        if (hud.score = "")
+            continue
+        score := hud.score
+        if (before != "")
+            score := Round(before.score + (hud.score - before.score) * (before.timer - at) / (before.timer - hud.timer))
+        Log(Format("pace: {} at {} s left (read {} at {:.3f} s{}); need {}", Short(score), at, Short(hud.score), hud.timer
+            , before != "" ? Format(", {} at {:.3f} s", Short(before.score), before.timer) : "", Short(N("MinScore"))))
+        return score
+    }
+}
+
+/**
+ * Ends the running fight: the bottom-centre button asks "Are you sure you want to end the
+ * battle?", and End Battle goes to the results with the score so far.
+ * @returns true when End Battle was tapped; false when the confirmation never showed
+ * @throws StopSignal when F8 stops the loop mid-wait
+ */
+EndRun() {
+    global Phase
+    Phase := "ending the run"
+    loop 2 {
+        Tap("Dismiss")
+        Wait(N("ConfirmWaitMs"))
+        if Shows(Capture(), Cfg["EndConfirm"]) {
+            Tap("EndBattle")
+            Log("ended the run")
+            Wait(N("AfterEndMs"))
+            return true
+        }
+    }
+    Log("the end-battle confirmation didn't show; letting the fight run out")
+    Log(SaveStopShot())
+    return false
+}
+
+/**
+ * Reads the fight's score and countdown from a capture with tools/conquest-hud.
+ * @param buf capture from Capture()
+ * @returns {score, timer, out}: the score as an integer and the seconds left as a number, each
+ *   empty when it couldn't be read, and the reader's output for the log
+ */
+ReadHud(buf) {
+    path := A_Temp "\conquest-hud-" ProcessExist() ".bin"
+    f := FileOpen(path, "w")
+    f.RawWrite(buf)
+    f.Close()
+    out := RunOut('"' Cfg["Node"] '" "' HudCli '" read "' path '"')
+    score := RegExMatch(out, "m)^score (\d+)", &s) ? Integer(s[1]) : ""
+    timer := RegExMatch(out, "m)^timer (\d+(?:\.\d+)?)", &t) ? Number(t[1]) : ""
+    return {score: score, timer: timer, out: out}
+}
+
+/**
+ * Runs a command line, hidden, and returns what it printed.
+ * @param cmd the command line, e.g. '"node" "cli.ts" read "x.bin"'
+ * @returns stdout and stderr; empty when it printed nothing
+ */
+RunOut(cmd) {
+    path := A_Temp "\conquest-run-" ProcessExist() ".txt"
+    try FileDelete(path)
+    RunWait(A_ComSpec ' /c "' cmd ' > "' path '" 2>&1"', , "Hide")
+    try return FileRead(path, "UTF-8")
+    return ""
+}
+
+/**
+ * Formats a score the way the game abbreviates it, e.g. 1.776T or 37.14G.
+ * @param n the score
+ * @returns the abbreviated score
+ */
+Short(n) {
+    for unit in [["T", 1e12], ["G", 1e9], ["M", 1e6], ["K", 1e3]]
+        if (n >= unit[2])
+            return Format("{:.3f}", n / unit[2]) unit[1]
+    return String(n)
 }
 
 /**
@@ -332,7 +472,9 @@ ToggleProbe() {
 ShowProbe() {
     try {
         buf := Capture()
-        text := "screen: " ScreenOf(buf) "`nLobby:" Describe(buf, Cfg["Lobby"])
+        hud := ReadHud(buf)
+        text := "screen: " ScreenOf(buf) "`nHUD: " StrReplace(Trim(hud.out, "`r`n"), "`n", " | ")
+            . "`nLobby:" Describe(buf, Cfg["Lobby"])
             . "`nEnterReady:" Describe(buf, Cfg["EnterReady"]) "`nResult:" Describe(buf, Cfg["Result"])
     } catch Error as e {
         text := e.Message
