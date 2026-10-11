@@ -55,7 +55,8 @@ user asks, or to restart on new code. A recording in flight ends at its own time
 
 ## React to each event
 
-- **`pass on try N`**: if the stage has a script, update its comment (below). Nothing else.
+- **`pass on try N`**: if the stage has a script, update its comment (below), then delete the
+  stage's recordings (Gotchas).
 - **`fail on try 1 (no script)` + `waiting for stages\wX\N.txt`**: write the script now (below).
   The loop is idle until the file exists.
 - **`fail on try N (stages\…)`**: leave the script and let the loop retry, unless the recording
@@ -132,11 +133,19 @@ Never commit `stage-runs*.csv`, the log, recordings or `stops\`.
 - **`[Record] Video`** is `unscripted` by default: only no-script tries are recorded, which is all
   writing scripts needs. To diagnose a scripted stage, set `all` in `stage-loop.ini` and press F10
   in the loop (it rereads the ini); set it back after.
-- **Recordings fill the disk** (~20–35 MB each). Don't delete them without the user's go-ahead.
+- **Recordings fill the disk** (~20–35 MB each). Clean them up as you go, which the user asked
+  for: once a stage passes, delete its recordings (`recordings\<stage>_*.mp4`). Keep the stage in
+  progress's until it passes, and wait for the next stage's first try to confirm the pass (a
+  recording or a read showing the next stage): a false pass deleted 362-22's only recording.
 - **Never `tail -f` the log**: it locks the file on Windows and the loop drops lines. Use the
   watcher or one-off `grep`/`tail -n`.
 - **`/Validate` from Git Bash** needs `MSYS_NO_PATHCONV=1`, or AutoHotkey gets a mangled path and
   leaves an "ErrorStdOut" dialog the user has to close.
+- **The loop going quiet after a "pass" whose boss was still high** means it doesn't see Summon
+  Boss. Take a screenshot: "Repeating Stage <stage>…" under the button is the game repeating a
+  stage whose boss won, and that screen once drew the button's lettering where `[Detect] Summon`
+  didn't expect it. Sample the button's pixels (`ffmpeg -i shot.png -vf crop=1:1:x:y -f rawvideo
+  -pix_fmt rgb24 - | xxd -p`) and fix the signature in the ini and the script's DEFAULTS.
 - **A script's `encounter` step ends when the map shows** (`map showing at +N s`), not when the
   boss's HUD does, so the walk starts seconds earlier than it did for scripts written before
   2026-10-11. The user wants the hold to start the moment the map loads. A full-screen capture

@@ -31,7 +31,7 @@ global DEFAULTS := Map(
     "Adb", Map("Path", "C:\Program Files\Netease\MuMuPlayer\nx_main\adb.exe", "Serial", "127.0.0.1:5557",
                "Package", "com.devsisters.cc", "CaptureDisplay", "auto", "InputDisplay", "auto"),
     "Points", Map("SummonX", "720", "SummonY", "380", "JitterPx", "6"),
-    "Detect", Map("Summon", "600,360,FB3B00|660,360,F93D00|820,360,FB3B00|640,400,FFF647|720,400,FFF647",
+    "Detect", Map("Summon", "600,360,FB3B00|660,360,F93D00|820,360,FB3B00|680,350,FD001C|750,350,FD011C|720,400,FFF647",
                   "Boss", "320,380,FF632D|360,380,FF632D|320,400,FF3617|380,400,FF3617",
                   "Transition", "300,800,271D1D|720,1200,271D1D|1100,1000,271D1D|300,1400,271D1D|1100,600,271D1D",
                   "Tolerance", "30", "HpBar", "416,1170,438", "HpEmptyMax", "112"),
