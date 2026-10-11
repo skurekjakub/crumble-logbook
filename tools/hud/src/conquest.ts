@@ -1,66 +1,61 @@
 /**
- * Reads the Guild Conquest fight's running score and countdown, and the results' final score,
- * from a capture, and learns the digit templates from a capture whose numbers are known.
+ * The Guild Conquest numbers: the fight's running score (the big red-to-orange number at the top,
+ * e.g. 1,776,472,632,591), the countdown under it (white, e.g. 30.267), and the final score on the
+ * BATTLE OVER results (yellow-to-orange).
  *
  * @module
  */
 import type { DigitTemplate } from "./digits.ts";
-import { isConfident, learn, match, shapeOf } from "./digits.ts";
 import type { Field } from "./glyphs.ts";
-import { digitGlyphs, findBlobs, FINAL, groupDigits, SCORE, TIMER } from "./glyphs.ts";
+import type { HudTemplates, Reading } from "./hud.ts";
+import { learnDigits, readDigits } from "./hud.ts";
 import type { Screen } from "./screen.ts";
 
-/** The learned digits of each field; the fields use different fonts. */
-export interface HudTemplates {
-  score: DigitTemplate[];
-  timer: DigitTemplate[];
-  final: DigitTemplate[];
-}
+/** Gaps up to this fraction of the line height part two groups across a comma or the dot (about 0.5). */
+const SEPARATOR_GAP = 0.75;
 
-/** The fields by name. */
-const FIELDS: Record<Field["name"], Field> = { score: SCORE, timer: TIMER, final: FINAL };
+/**
+ * The score on the 1440x2560 portrait display. Its glyphs span rows 404 to 477; the band is wider
+ * so a longer number or a small layout shift still fits. Its fill runs from a pink red (E6324F)
+ * at the top to an orange red (EE4A37) at the bottom; the black outline, the pink and orange bears
+ * and the blue Piñata all fall outside it.
+ */
+export const SCORE: Field = {
+  region: { x: 40, y: 370, width: 1360, height: 150 },
+  isInk: (r, g, b) => r >= 200 && g <= 150 && b <= 110 && r - g >= 90,
+  minHeight: 40,
+  maxSeparatorGap: SEPARATOR_GAP,
+};
 
-/** A number read off the screen, or why it can't be read. */
-export type Reading = { ok: true; value: number } | { ok: false; reason: string };
+/**
+ * The countdown, seconds left in the fight. Its glyphs span rows 527 to 556 from column 613; the
+ * band starts right of the clock icon and stops above the leaderboard's names.
+ */
+export const TIMER: Field = {
+  region: { x: 605, y: 512, width: 275, height: 60 },
+  isInk: (r, g, b) => r >= 200 && g >= 200 && b >= 200,
+  minHeight: 20,
+  maxSeparatorGap: SEPARATOR_GAP,
+};
+
+/**
+ * The final score on the BATTLE OVER results, under the "Final Score" title. Its glyphs span about
+ * rows 1045 to 1137 and settle a few pixels as the results slide in. Its fill runs from yellow
+ * (FFE84A) at the top to orange (FC8D26) at the bottom; the orange stripes behind it stay under
+ * a red of A8.
+ */
+export const FINAL: Field = {
+  region: { x: 100, y: 1000, width: 1240, height: 180 },
+  isInk: (r, g, b) => r >= 230 && g >= 130 && b <= 110,
+  minHeight: 50,
+  maxSeparatorGap: SEPARATOR_GAP,
+};
+
+/** The Guild Conquest fields by font: each is the only field drawn in its font. */
+export const CONQUEST_FIELDS = { score: SCORE, timer: TIMER, final: FINAL } as const;
 
 /** The fight lasts this long; a countdown above it is a misread. */
 const FIGHT_SECONDS = 60;
-
-/**
- * Reads a field's digits. Every digit must be found, sit in its group and match a template
- * confidently; otherwise the reading fails rather than guess.
- *
- * @param screen - a capture of the fight screen.
- * @param field - the number to read.
- * @param templates - the field's learned digits.
- * @returns the digits and their grouping, or the reason they can't be read.
- * @throws Error when the field has no templates.
- */
-function readDigits(
-  screen: Screen,
-  field: Field,
-  templates: DigitTemplate[],
-): { ok: true; digits: string; groups: number[] } | { ok: false; reason: string } {
-  const blobs = findBlobs(screen, field);
-  const glyphs = digitGlyphs(blobs, field);
-  let groups: number[];
-  try {
-    groups = groupDigits(glyphs);
-  } catch (err) {
-    return { ok: false, reason: (err as Error).message };
-  }
-  let digits = "";
-  for (const [i, glyph] of glyphs.entries()) {
-    const m = match(shapeOf(blobs, glyph), templates);
-    if (!isConfident(m))
-      return {
-        ok: false,
-        reason: `digit ${i + 1} is unclear (nearest ${m.digit} at ${m.distance.toFixed(3)}, next at ${m.runnerUp.toFixed(3)})`,
-      };
-    digits += m.digit;
-  }
-  return { ok: true, digits, groups };
-}
 
 /**
  * Reads the score, e.g. 1,776,472,632,591.
@@ -127,13 +122,11 @@ export function readTimer(screen: Screen, templates: HudTemplates): Reading {
 }
 
 /**
- * Learns the digits of a capture whose number is known, folding each glyph into its digit's
- * template.
+ * Learns a Guild Conquest field's digits from a capture whose number is known.
  *
  * @param screen - a capture of the fight screen, or of the results for "final".
- * @param field - the field the number is in.
- * @param shown - the number the field shows, with or without its separators, e.g.
- *   "1,776,472,632,591" or "30.267".
+ * @param font - the field the number is in.
+ * @param shown - the number the field shows, e.g. "1,776,472,632,591" or "30.267".
  * @param templates - the current templates; left unchanged.
  * @returns the updated templates.
  * @throws Error when `shown` isn't a number, or the capture's digits can't be found or don't
@@ -141,20 +134,12 @@ export function readTimer(screen: Screen, templates: HudTemplates): Reading {
  */
 export function learnField(
   screen: Screen,
-  field: Field["name"],
+  font: keyof typeof CONQUEST_FIELDS,
   shown: string,
   templates: HudTemplates,
 ): HudTemplates {
-  const expected = shown.replaceAll(/[,.]/g, "");
-  if (!/^\d+$/.test(expected)) throw new Error(`"${shown}" isn't a number`);
-  const spec = FIELDS[field];
-  const blobs = findBlobs(screen, spec);
-  const glyphs = digitGlyphs(blobs, spec);
-  groupDigits(glyphs);
-  if (glyphs.length !== expected.length)
-    throw new Error(`the capture shows ${glyphs.length} digits, ${shown} has ${expected.length}`);
-  let learned = templates[field];
-  for (const [i, glyph] of glyphs.entries())
-    learned = learn(learned, expected[i]!, shapeOf(blobs, glyph));
-  return { ...templates, [field]: learned };
+  return {
+    ...templates,
+    [font]: learnDigits(screen, CONQUEST_FIELDS[font], shown, templates[font]),
+  };
 }

@@ -1,7 +1,7 @@
 packages:
   - "packages/*"
   - "apps/*"
-  - "tools/conquest-hud"
+  - "tools/hud"
   # The lint stack: it carries its own TypeScript 6.0 because typescript-eslint needs the JS compiler API,
   # which the native TypeScript 7 used by `tsc` doesn't ship yet.
   - "tools/eslint-config"

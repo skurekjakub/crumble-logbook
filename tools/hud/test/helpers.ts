@@ -1,12 +1,14 @@
 /**
- * Draws synthetic screens: the fight's score in its fill colour and the countdown in white, and
- * the results' final score in yellow, in a blocky 5x7 font on a dark backdrop, laid out like the
- * game's (separators on the baseline).
+ * Draws synthetic screens: the fight's score in its fill colour and the countdown in white, the
+ * results' final score in yellow, and a stage's number in the top bar or under Summon Boss, in a
+ * blocky 5x7 font on a dark backdrop, laid out like the game's (commas and dots on the baseline,
+ * hyphens at mid-height).
  *
  * @module
  */
-import { FINAL, SCORE, TIMER } from "../src/glyphs.ts";
+import { FINAL, SCORE, TIMER } from "../src/conquest.ts";
 import type { Screen } from "../src/screen.ts";
+import { STAGE_BAR, STAGE_REPEAT } from "../src/stage.ts";
 
 const FONT: Record<string, string[]> = {
   "0": ["01110", "10001", "10011", "10101", "11001", "10001", "01110"],
@@ -64,6 +66,25 @@ export const FINAL_LAYOUT: Layout = {
   ink: [0xff, 0xc0, 0x3a],
 };
 
+/** The top bar's stage number: pale yellow glyphs 22 px tall. */
+export const STAGE_BAR_LAYOUT: Layout = {
+  left: STAGE_BAR.region.x + 8,
+  top: STAGE_BAR.region.y + 13,
+  cell: 3,
+  block: 4,
+  digitGap: 3,
+  separatorGap: 22,
+  ink: [0xff, 0xf0, 0xa0],
+};
+
+/** The stage number under Summon Boss: yellow glyphs 22 px tall, further right. */
+export const STAGE_REPEAT_LAYOUT: Layout = {
+  ...STAGE_BAR_LAYOUT,
+  left: STAGE_REPEAT.region.x + 230,
+  top: STAGE_REPEAT.region.y + 14,
+  ink: [0xff, 0xe6, 0x00],
+};
+
 const BACKDROP: Rgb = [0x10, 0x10, 0x20];
 
 /**
@@ -103,10 +124,10 @@ export function fillRect(
 }
 
 /**
- * Draws a number the way the fight screen shows it.
+ * Draws a number the way the game shows it.
  *
  * @param screen - the screen, changed in place.
- * @param text - digits with their separators, e.g. "1,776,472,632,591" or "30.267".
+ * @param text - digits with their separators, e.g. "1,776,472,632,591", "30.267" or "358-20".
  * @param layout - where and how to draw it.
  * @returns each digit's left column, in reading order.
  */
@@ -115,7 +136,7 @@ export function drawNumber(screen: Screen, text: string, layout: Layout): number
   const lefts: number[] = [];
   let x = layout.left;
   for (const [i, ch] of text.split("").entries()) {
-    if (ch === "," || ch === ".") continue;
+    if (ch === "," || ch === "." || ch === "-") continue;
     const rows = FONT[ch]!;
     const lit = rows.flatMap((r) => r.split("").flatMap((c, col) => (c === "1" ? [col] : [])));
     const first = Math.min(...lit);
@@ -130,6 +151,10 @@ export function drawNumber(screen: Screen, text: string, layout: Layout): number
       const dot = Math.ceil(block / 2);
       const dotLeft = x + Math.floor((layout.separatorGap - dot) / 2);
       fillRect(screen, dotLeft, top + 6 * cell, dot, block, ink);
+      x += layout.separatorGap;
+    } else if (text[i + 1] === "-") {
+      const dash = Math.floor(layout.separatorGap / 2);
+      fillRect(screen, x + Math.floor(dash / 2), top + 3 * cell, dash, block, ink);
       x += layout.separatorGap;
     } else {
       x += layout.digitGap;

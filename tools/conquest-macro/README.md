@@ -6,7 +6,7 @@ It talks to the emulator over adb rather than the mouse, so the MuMu window can 
 - It reads the screen with `adb exec-out screencap` (raw RGBA) every `PollMs` (2 s).
 - It taps with `adb shell input`.
 
-The adb helpers are shared with the EXP Dungeon macro, in `tools/adb-lib/AdbScreen.ahk`.
+The adb helpers and the loop's frame (INI, log, status tooltip, start/stop, probe, hotkeys) are shared with the other macros, in `tools/macro-lib/`.
 
 - `conquest-loop.ahk`: the script. Needs [AutoHotkey v2](https://www.autohotkey.com/) (`winget install AutoHotkey.AutoHotkey`).
 - `conquest-loop.ini`: every knob. The script reads it at start and on F10. F9 writes learned signatures to it.
@@ -27,7 +27,7 @@ Every 2 s it captures the screen and:
    - Before that first Dismiss it reads the final score off BATTLE OVER, for up to `FinalWaitMs`, and records the run.
    - With no lobby `MaxFightMs` after ENTER, it recovers.
 
-The pace check reads the HUD with `tools/conquest-hud`, which Node 24+ runs directly (`[Prune] Node`). It cuts each digit out by colour and matches it against `tools/conquest-hud/templates.json`. A digit hidden behind a floating damage number makes the read fail, never misread. With no score read by `CheckAtS - LateS`, the run is kept.
+The pace check reads the HUD with `tools/hud`, which Node 24+ runs directly (`[Prune] Node`). It cuts each digit out by colour and matches it against `tools/hud/templates.json`. A digit hidden behind a floating damage number makes the read fail, never misread. With no score read by `CheckAtS - LateS`, the run is kept.
 
 **Recovering** brings the game back to the Conquest lobby from anywhere: the main screen, the guild hall, a popup, or a closed game. On the lobby the bottom-centre button is Back, and in the guild hall it is Close, so a missed lobby can walk Dismiss out to the main screen. Each try:
 1. Relaunches the game (`Activity`) and waits `LaunchWaitMs` if it isn't on top.
@@ -72,9 +72,9 @@ The lobby layout was read from the game on 2026-10-07, between seasons, so ENTER
 If an update changes a font and the pace check or the final score logs unreadable digits, teach it the new digits from a screenshot (`adb exec-out screencap -p -d <id> > shot.png`) whose numbers you can read: a fight for `score` and `timer`, BATTLE OVER for `final`.
 
 ```powershell
-node tools/conquest-hud/src/cli.ts learn shot.png score 1,776,472,632,591
-node tools/conquest-hud/src/cli.ts learn shot.png timer 30.267
-node tools/conquest-hud/src/cli.ts learn results.png final 2,831,485,998,371
+node tools/hud/src/cli.ts learn shot.png score 1,776,472,632,591
+node tools/hud/src/cli.ts learn shot.png timer 30.267
+node tools/hud/src/cli.ts learn results.png final 2,831,485,998,371
 ```
 
 ## Hotkeys

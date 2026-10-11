@@ -4,6 +4,34 @@
 
 ; The game's displays as last resolved for "auto": Map("Input", logical id, "Capture", SurfaceFlinger id).
 global AdbDisplays := Map()
+; Numbers each temp file, so a probe timer that interrupts the loop never shares one with it.
+global TempSerial := 0
+
+/**
+ * Names a temp file no other call is using.
+ * @param stem the file's prefix, e.g. "adb-screen"
+ * @param ext the extension with its dot, e.g. ".bin"
+ * @returns a path in the temp folder
+ */
+TempPath(stem, ext) {
+    global TempSerial
+    TempSerial += 1
+    return A_Temp "\" stem "-" ProcessExist() "-" TempSerial ext
+}
+
+/**
+ * Runs a command line, hidden, and returns what it printed.
+ * @param cmd the command line, e.g. '"node" "cli.ts" read "x.bin"'
+ * @returns stdout and stderr; empty when it printed nothing
+ */
+RunOut(cmd) {
+    path := TempPath("run-out", ".txt")
+    RunWait(A_ComSpec ' /c "' cmd ' > "' path '" 2>&1"', , "Hide")
+    out := ""
+    try out := FileRead(path, "UTF-8")
+    try FileDelete(path)
+    return out
+}
 
 /**
  * Runs adb against the configured device, hidden, and waits for it.
@@ -15,6 +43,16 @@ Adb(args) {
 }
 
 /**
+ * Starts adb against the configured device, hidden, without waiting for it.
+ * @param args everything after `adb -s <serial>`, e.g. "shell screenrecord /sdcard/x.mp4"
+ * @returns the process id
+ */
+AdbStart(args) {
+    Run(A_ComSpec ' /c ""' Cfg["Path"] '" -s ' Cfg["Serial"] " " args '"', , "Hide", &pid)
+    return pid
+}
+
+/**
  * Runs adb, hidden, and returns what it printed.
  * @param args everything after `adb -s <serial>`, e.g. "shell dumpsys display"; with onDevice
  *   false, everything after `adb`, e.g. "connect 127.0.0.1:5557"
@@ -22,12 +60,7 @@ Adb(args) {
  * @returns adb's stdout and stderr; empty when it printed nothing
  */
 AdbOut(args, onDevice := true) {
-    path := A_Temp "\adb-out-" ProcessExist() ".txt"
-    target := onDevice ? " -s " Cfg["Serial"] : ""
-    try FileDelete(path)
-    RunWait(A_ComSpec ' /c ""' Cfg["Path"] '"' target " " args ' > "' path '" 2>&1"', , "Hide")
-    try return FileRead(path, "UTF-8")
-    return ""
+    return RunOut('"' Cfg["Path"] '"' (onDevice ? " -s " Cfg["Serial"] : "") " " args)
 }
 
 /**
@@ -84,11 +117,10 @@ ResolveDisplays() {
 
 /**
  * Tells whether the game is the top activity on some display, resolving its displays afresh.
+ * When it isn't, the displays it last ran on stay known, so LaunchGame can start it there.
  * @returns true when it is; false when it isn't running or another app covers it
  */
 GameOnTop() {
-    global AdbDisplays
-    AdbDisplays := Map()
     try {
         ResolveDisplays()
         return true
@@ -113,6 +145,46 @@ LaunchGame(activity) {
 KeyEvent(code) {
     id := GameDisplay("Input")
     Adb("shell input" (id != "" ? " -d " id : "") " keyevent " code)
+}
+
+/**
+ * Holds keys down together on the game's display, e.g. W and D to walk diagonally, and returns
+ * once they are released.
+ * @param keys key code names, e.g. ["KEYCODE_W", "KEYCODE_D"]
+ * @param ms how long to hold them
+ * @throws Error from GameDisplay when "auto" can't find the game
+ */
+HoldKeys(keys, ms) {
+    id := GameDisplay("Input")
+    names := ""
+    for k in keys
+        names .= " " k
+    command := keys.Length = 1 ? " keyevent --duration " : " keycombination -t "
+    Adb("shell input" (id != "" ? " -d " id : "") command Round(ms) names)
+}
+
+/**
+ * Starts recording the game's display on the device, without waiting for it.
+ * @param devicePath where the device writes the video, e.g. "/sdcard/boss.mp4"
+ * @param seconds when the recording stops
+ * @returns the adb process id
+ * @throws Error from GameDisplay when "auto" can't find the game
+ */
+RecordScreen(devicePath, seconds) {
+    id := GameDisplay("Capture")
+    return AdbStart("shell screenrecord" (id != "" ? " --display-id " id : "") " --time-limit " seconds " " devicePath)
+}
+
+/**
+ * Copies a file off the device and deletes it there.
+ * @param devicePath the file on the device, e.g. "/sdcard/boss.mp4"
+ * @param localPath where to save it
+ * @returns true when the file arrived
+ */
+PullFile(devicePath, localPath) {
+    Adb('pull ' devicePath ' "' localPath '"')
+    Adb("shell rm -f " devicePath)
+    return FileExist(localPath) != ""
 }
 
 /**
@@ -156,15 +228,15 @@ IsImage(buf) {
  */
 Capture() {
     global AdbDisplays
-    path := A_Temp "\adb-screen-" ProcessExist() ".bin"
+    path := TempPath("adb-screen", ".bin")
     loop 4 {
         id := GameDisplay("Capture")
         display := id != "" ? " -d " id : ""
-        try FileDelete(path)
         RunWait(A_ComSpec ' /c ""' Cfg["Path"] '" -s ' Cfg["Serial"] " exec-out screencap" display ' > "' path '""', , "Hide")
         try buf := FileRead(path, "RAW")
         catch
             buf := Buffer(0)
+        try FileDelete(path)
         if IsImage(buf)
             return buf
         AdbDisplays := Map()

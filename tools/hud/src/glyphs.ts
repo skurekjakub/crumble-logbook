@@ -1,7 +1,6 @@
 /**
- * Finds the digits of a number on a Guild Conquest screen: the fight's running score (the big
- * red-to-orange number at the top, e.g. 1,776,472,632,591), the countdown under it (white,
- * e.g. 30.267), or the final score on the BATTLE OVER results (yellow-to-orange).
+ * Finds the digits of a number on a game screen: masks the field's ink in its region, labels the
+ * blobs, keeps the ones on the digits' line, and groups them by the gaps a separator leaves.
  *
  * @module
  */
@@ -17,50 +16,17 @@ export interface Region {
 
 /** A number on a screen: where it sits, the colour of its glyphs, and how tall they are. */
 export interface Field {
-  name: "score" | "timer" | "final";
   region: Region;
   /** Tells whether a pixel is the glyphs' ink. */
   isInk: (r: number, g: number, b: number) => boolean;
   /** Blobs shorter than this are separators, floating damage numbers or confetti. */
   minHeight: number;
+  /**
+   * The widest gap between two digits, as a fraction of the line height, that still parts two
+   * groups across a separator; a wider one means a digit is hidden.
+   */
+  maxSeparatorGap: number;
 }
-
-/**
- * The score on the 1440x2560 portrait display. Its glyphs span rows 404 to 477; the band is wider
- * so a longer number or a small layout shift still fits. Its fill runs from a pink red (E6324F)
- * at the top to an orange red (EE4A37) at the bottom; the black outline, the pink and orange bears
- * and the blue Piñata all fall outside it.
- */
-export const SCORE: Field = {
-  name: "score",
-  region: { x: 40, y: 370, width: 1360, height: 150 },
-  isInk: (r, g, b) => r >= 200 && g <= 150 && b <= 110 && r - g >= 90,
-  minHeight: 40,
-};
-
-/**
- * The countdown, seconds left in the fight. Its glyphs span rows 527 to 556 from column 613; the
- * band starts right of the clock icon and stops above the leaderboard's names.
- */
-export const TIMER: Field = {
-  name: "timer",
-  region: { x: 605, y: 512, width: 275, height: 60 },
-  isInk: (r, g, b) => r >= 200 && g >= 200 && b >= 200,
-  minHeight: 20,
-};
-
-/**
- * The final score on the BATTLE OVER results, under the "Final Score" title. Its glyphs span about
- * rows 1045 to 1137 and settle a few pixels as the results slide in. Its fill runs from yellow
- * (FFE84A) at the top to orange (FC8D26) at the bottom; the orange stripes behind it stay under
- * a red of A8.
- */
-export const FINAL: Field = {
-  name: "final",
-  region: { x: 100, y: 1000, width: 1240, height: 180 },
-  isInk: (r, g, b) => r >= 230 && g >= 130 && b <= 110,
-  minHeight: 50,
-};
 
 /** One 4-connected blob of the mask, in region coordinates. */
 export interface Glyph {
@@ -89,8 +55,6 @@ const EDGE_TOLERANCE = 4;
 const MIN_GLYPH_ASPECT = 0.25;
 /** Gaps up to this fraction of the line height part digits of one group; a "1" next to a digit leaves about 0.15. */
 const MAX_DIGIT_GAP = 0.28;
-/** Gaps up to this fraction part two groups across a comma or the dot (about 0.5); wider ones mean a digit went missing. */
-const MAX_SEPARATOR_GAP = 0.75;
 
 /**
  * Labels the 4-connected blobs of a field's ink in its region of the screen.
@@ -173,15 +137,16 @@ export function digitGlyphs(blobs: Blobs, field: Field): Glyph[] {
 }
 
 /**
- * Splits the digits into groups by the gaps between them: a separator (a comma or the dot) leaves
- * a wider gap than two digits do. A digit hidden behind a floating damage number or merged with
- * one leaves a gap too wide for either, so a misread can't pass as a shorter number.
+ * Splits the digits into groups by the gaps between them: a separator (a comma, the dot or a
+ * hyphen) leaves a wider gap than two digits do. A digit hidden behind a floating damage number or
+ * merged with one leaves a gap too wide for either, so a misread can't pass as a shorter number.
  *
  * @param digits - the digit glyphs in reading order.
+ * @param field - the field the digits came from, for its widest separator gap.
  * @returns the number of digits in each group, left to right.
  * @throws Error when there are no digits or a gap is too wide.
  */
-export function groupDigits(digits: Glyph[]): number[] {
+export function groupDigits(digits: Glyph[], field: Field): number[] {
   if (digits.length === 0) throw new Error("not on screen");
   const lineHeight = median(digits.map((g) => g.y1 - g.y0 + 1));
   const groups = [1];
@@ -189,7 +154,7 @@ export function groupDigits(digits: Glyph[]): number[] {
     const gap = digits[i]!.x0 - digits[i - 1]!.x1 - 1;
     if (gap <= MAX_DIGIT_GAP * lineHeight) {
       groups[groups.length - 1]! += 1;
-    } else if (gap <= MAX_SEPARATOR_GAP * lineHeight) {
+    } else if (gap <= field.maxSeparatorGap * lineHeight) {
       groups.push(1);
     } else {
       throw new Error(`a ${gap} px gap after digit ${i}: a digit is hidden`);

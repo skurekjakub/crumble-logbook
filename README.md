@@ -13,7 +13,9 @@ A local research tool for Cookie Run: Crumble: what top Korean and global player
 | `apps/web` | The web app: React + TanStack Router/Query, typed against the API through `hc<AppType>`. One section per game mode (driven by `src/app/modes/`, a file per mode, and served by the shared routes under `src/routes/$mode/`), plus the Damage formula (record 007's pipeline of multipliers, crit calculator and community claims against the client's code), Account (the reader's roadmap and lineups), Research, Sources and Glossary. |
 | `data/` | `crumble.db` (local, gitignored) and `snapshot.json`, the committed, diffable dump of the database. |
 | `tools/conquest-macro/` | An AutoHotkey v2 loop that retries the Guild Conquest fight; its README covers tuning. The runs and score curves it records locally are charted on Guild Conquest's Attempts tab. |
-| `tools/conquest-hud/` | Reads the fight's score and countdown, and the results' final score, off a capture for the macro. |
+| `tools/exp-dungeon-macro/` | An AutoHotkey v2 loop that retries an EXP Dungeon stage until it falls. |
+| `tools/macro-lib/` | What the macros share: adb screen capture, taps and key holds, and the loop's frame (INI, log, status, start/stop, probe, hotkeys). |
+| `tools/hud/` | Reads numbers off a capture for the macros: the Guild Conquest score, countdown and final score, and a stage's number. |
 | `tools/eslint-config/` | The ESLint flat config (a workspace package). It carries its own TypeScript 6.0, because typescript-eslint needs the JS compiler API, which the native TypeScript 7 behind `tsc` doesn't ship yet (expected in 7.1). |
 | `docs/superpowers/` | The design specs (`specs/`) and the implementation plans (`plans/`). |
 | `OPEN-QUESTIONS.md` | Decisions waiting on the user. |
