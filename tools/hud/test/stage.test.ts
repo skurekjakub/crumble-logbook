@@ -1,29 +1,16 @@
 import { describe, expect, it } from "vitest";
-import type { HudTemplates } from "../src/hud.ts";
 import { emptyTemplates } from "../src/hud.ts";
 import { learnStage, readStage } from "../src/stage.ts";
-import { blankScreen, drawNumber, STAGE_BAR_LAYOUT, STAGE_REPEAT_LAYOUT } from "./helpers.ts";
-
-/**
- * Learns stage templates from synthetic screens that show every digit, in the top bar and under
- * Summon Boss.
- *
- * @returns the learned templates.
- */
-function synthTemplates(): HudTemplates {
-  let templates = emptyTemplates();
-  for (const layout of [STAGE_BAR_LAYOUT, STAGE_REPEAT_LAYOUT]) {
-    for (const shown of ["1234-5", "6789-10"]) {
-      const screen = blankScreen();
-      drawNumber(screen, shown, layout);
-      templates = learnStage(screen, shown, templates);
-    }
-  }
-  return templates;
-}
+import {
+  blankScreen,
+  drawNumber,
+  STAGE_BAR_LAYOUT,
+  STAGE_REPEAT_LAYOUT,
+  stageTemplates,
+} from "./helpers.ts";
 
 describe("readStage", () => {
-  const templates = synthTemplates();
+  const templates = stageTemplates();
 
   it.for([
     ["358-20", { chapter: 358, stage: 20 }],
@@ -60,7 +47,7 @@ describe("readStage", () => {
   });
 
   it("learns each place's digits into that place's font", () => {
-    const templates = synthTemplates();
+    const templates = stageTemplates();
     expect(templates.stageBar.map((t) => t.digit)).toEqual("0123456789".split(""));
     expect(templates.stageRepeat.map((t) => t.digit)).toEqual("0123456789".split(""));
   });

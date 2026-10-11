@@ -4,6 +4,8 @@
  *   `final <n>`, each as `score ? <reason>` when it can't be read.
  * - `stage <capture>`: prints the stage's number, `stage <chapter>-<stage>`, or
  *   `stage ? <reason>`.
+ * - `serve`: answers `read` and `stage` requests, a line each on stdin, until stdin closes
+ *   (`serve.ts`).
  * - `learn <capture> score|timer|final|stage <shown>`: folds the capture's digits into
  *   `templates.json`; a stage number goes to the font of the place that shows it.
  *
@@ -13,16 +15,18 @@
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { CONQUEST_FIELDS, learnField, readFinal, readScore, readTimer } from "./conquest.ts";
+import { CONQUEST_FIELDS, learnField } from "./conquest.ts";
 import type { DigitTemplate } from "./digits.ts";
-import type { HudTemplates, Reading } from "./hud.ts";
+import type { HudTemplates } from "./hud.ts";
 import { emptyTemplates, FONT_NAMES } from "./hud.ts";
+import { isRead, READS } from "./reads.ts";
 import { decodeScreen } from "./screen.ts";
-import { learnStage, readStage } from "./stage.ts";
+import { serve } from "./serve.ts";
+import { learnStage } from "./stage.ts";
 
 const TEMPLATES = join(import.meta.dirname, "..", "templates.json");
 const USAGE =
-  "usage: cli.ts read <capture> | cli.ts stage <capture> | cli.ts learn <capture> score|timer|final|stage <shown>";
+  "usage: cli.ts read <capture> | cli.ts stage <capture> | cli.ts serve | cli.ts learn <capture> score|timer|final|stage <shown>";
 const CONQUEST_FONTS = Object.keys(CONQUEST_FIELDS) as (keyof typeof CONQUEST_FIELDS)[];
 
 /**
@@ -58,57 +62,21 @@ function rounded(templates: DigitTemplate[]): DigitTemplate[] {
 }
 
 /**
- * Reads a field and formats the reading as one output line. A field that can't be read at all,
- * such as one with no templates learned, gets a line too, so the other fields still print.
- *
- * @param name - the field's name.
- * @param read - reads the field.
- * @param format - prints the value; numbers print as they are.
- * @returns e.g. "score 1776472632591", "stage 358-20" or "timer ? not on screen".
- */
-function line<T>(
-  name: string,
-  read: () => Reading<T>,
-  format: (value: T) => string = String,
-): string {
-  let reading: Reading<T>;
-  try {
-    reading = read();
-  } catch (err) {
-    reading = { ok: false, reason: err instanceof Error ? err.message : String(err) };
-  }
-  return reading.ok ? `${name} ${format(reading.value)}\n` : `${name} ? ${reading.reason}\n`;
-}
-
-/**
  * Runs a command and prints its result.
  *
  * @param args - the command line after the script.
  * @returns the exit code: 0 on success, 2 on bad usage.
  * @throws ScreenError when a capture can't be decoded; Error when a learn doesn't fit the capture.
  */
-function main(args: string[]): number {
+async function main(args: string[]): Promise<number> {
   const [command, path, field, shown] = args;
-  if (command === "read" && path && args.length === 2) {
+  if (isRead(command) && path && args.length === 2) {
     const templates = loadTemplates();
-    const screen = decodeScreen(readFileSync(path));
-    process.stdout.write(
-      line("score", () => readScore(screen, templates)) +
-        line("timer", () => readTimer(screen, templates)) +
-        line("final", () => readFinal(screen, templates)),
-    );
+    process.stdout.write(READS[command](decodeScreen(readFileSync(path)), templates));
     return 0;
   }
-  if (command === "stage" && path && args.length === 2) {
-    const templates = loadTemplates();
-    const screen = decodeScreen(readFileSync(path));
-    process.stdout.write(
-      line(
-        "stage",
-        () => readStage(screen, templates),
-        (s) => `${s.chapter}-${s.stage}`,
-      ),
-    );
+  if (command === "serve" && args.length === 1) {
+    await serve(process.stdin, process.stdout, loadTemplates);
     return 0;
   }
   const conquestField = CONQUEST_FONTS.find((n) => n === field);
@@ -128,7 +96,7 @@ function main(args: string[]): number {
 }
 
 try {
-  process.exitCode = main(process.argv.slice(2));
+  process.exitCode = await main(process.argv.slice(2));
 } catch (err) {
   process.stderr.write(`${err instanceof Error ? err.message : String(err)}\n`);
   process.exitCode = 1;

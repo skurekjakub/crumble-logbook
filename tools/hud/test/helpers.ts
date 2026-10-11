@@ -2,13 +2,16 @@
  * Draws synthetic screens: the fight's score in its fill colour and the countdown in white, the
  * results' final score in yellow, and a stage's number in the top bar or under Summon Boss, in a
  * blocky 5x7 font on a dark backdrop, laid out like the game's (commas and dots on the baseline,
- * hyphens at mid-height).
+ * hyphens at mid-height). Also learns the stage font off them, and dumps a screen the way
+ * `adb exec-out screencap` does.
  *
  * @module
  */
 import { FINAL, SCORE, TIMER } from "../src/conquest.ts";
+import type { HudTemplates } from "../src/hud.ts";
+import { emptyTemplates } from "../src/hud.ts";
 import type { Screen } from "../src/screen.ts";
-import { STAGE_BAR, STAGE_REPEAT } from "../src/stage.ts";
+import { learnStage, STAGE_BAR, STAGE_REPEAT } from "../src/stage.ts";
 
 const FONT: Record<string, string[]> = {
   "0": ["01110", "10001", "10011", "10101", "11001", "10001", "01110"],
@@ -161,4 +164,37 @@ export function drawNumber(screen: Screen, text: string, layout: Layout): number
     }
   }
   return lefts;
+}
+
+/**
+ * Learns stage templates from synthetic screens that show every digit, in the top bar and under
+ * Summon Boss.
+ *
+ * @returns the learned templates.
+ */
+export function stageTemplates(): HudTemplates {
+  let templates = emptyTemplates();
+  for (const layout of [STAGE_BAR_LAYOUT, STAGE_REPEAT_LAYOUT]) {
+    for (const shown of ["1234-5", "6789-10"]) {
+      const screen = blankScreen();
+      drawNumber(screen, shown, layout);
+      templates = learnStage(screen, shown, templates);
+    }
+  }
+  return templates;
+}
+
+/**
+ * Dumps a screen the way `adb exec-out screencap` does: width, height, pixel format and colour
+ * space as little-endian UInt32s, then the RGBA pixels.
+ *
+ * @param screen - the screen.
+ * @returns the dump's bytes.
+ */
+export function rawDump(screen: Screen): Buffer {
+  const header = Buffer.alloc(16);
+  header.writeUInt32LE(screen.width, 0);
+  header.writeUInt32LE(screen.height, 4);
+  header.writeUInt32LE(1, 8);
+  return Buffer.concat([header, screen.rgba]);
 }
