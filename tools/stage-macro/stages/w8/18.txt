@@ -1,0 +1,6 @@
+; 359-18, Broken Cleaning Bot: spawns up and right of the team.
+; Lost with no input: 44% health left at 28 s. Won its first try with this script on 2026-10-11,
+; at 24 s.
+encounter
+W+D 350
+D 400
