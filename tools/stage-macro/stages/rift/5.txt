@@ -1,4 +1,8 @@
-; Dimensional rift 5, Well-Aged Archangel. The win is down to luck, so the team stands and the loop
-; summons the boss again after each loss (the user's call for the rift, 2026-10-12). Its 15% damage
-; line is 11.517G (crumb's rift table, season 2); at about 10.6G the team deals 5% and left it at
-; 80% to 91% over its first tries on 2026-10-12. Untested above the line.
+; Dimensional rift 5, Well-Aged Archangel: a big model that stands right of the team at the HUD,
+; slightly above it. The walk puts the team on top of the model (the user's call, 2026-10-12).
+; Its 15% damage line is 11.517G (crumb's rift table, season 2); standing still at about 10.6G the
+; team deals 5% and left it at 80% to 92% over its first tries on 2026-10-12. W+D 300, D 500
+; left the team at the model's lower left, so the walk is longer. Untested.
+encounter
+W+D 500
+D 1000
