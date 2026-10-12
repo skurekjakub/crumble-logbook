@@ -43,7 +43,9 @@ for, the launch command, or an operating lesson changes, update this file (and `
      summoning, so its scripts have no steps. Write the next chapter stage back when the user
      returns to the chapters. The rift has its own purple Summon Dimensional Boss button, read
      and tapped as `RiftSummon` in `[Detect]` and `[Points]` (sampled 2026-10-12); the boss HUD
-     is the stages' one.
+     is the stages' one. Rift 4's walk copies a video clear from the boss's HUD, so it starts
+     with `hud` instead of `encounter`; a recording on 2026-10-12 showed it packing the team
+     into the column the video shows. The loss there is power (the 15% damage cut), not the walk.
 4. Check the game: Summon Boss screen or clearing, and **Auto Summon off** (below).
 5. Arm the watcher, then launch:
    - `Monitor` with `bash "C:/repositories/crumble-logbook/.claude/skills/stage-macro/watch.sh"`,
