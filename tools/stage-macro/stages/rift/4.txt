@@ -4,9 +4,9 @@
 ; This walk copies a season-1 rift 4 clear at 15% (그니, youtube.com/shorts/z9nKY8Z7Ius): a short
 ; hold down, then a slow walk down-left towards 7 o'clock, so the trucks' charge rams a packed
 ; column instead of a spread line, then nothing to the end. The video walks about 5 s from the
-; boss's HUD; here the keys go down at the map, about 2 s earlier, and hold that much longer. A
-; recording of the walk timed from the HUD showed the column forming and the trucks ramming it,
-; with 76% health left.
+; boss's HUD; here the keys go down at the map, about 2 s earlier. Holding down-left 6.5 s was
+; about 2 s too long by the user's eye on 2026-10-12, so it holds 4.5 s. A recording of the walk
+; timed from the HUD showed the column forming and the trucks ramming it, with 76% health left.
 encounter
 S 500
-S+A 6500
+S+A 4500
