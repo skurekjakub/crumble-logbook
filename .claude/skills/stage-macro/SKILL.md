@@ -39,8 +39,10 @@ for, the launch command, or an operating lesson changes, update this file (and `
    `tools/stage-macro/stage-loop.state` (e.g. `362-1`, nothing else) with the Write tool while the
    loop is stopped. Otherwise leave the state file alone: the loop carries it.
    - The dimensional rift is its own set: write `rift-<stage>` (e.g. `rift-4`), and its scripts
-     live in `stages/rift/`. The user's rule for the rift: no movement, it's luck, just keep
-     summoning, so its scripts have no steps. Write the next chapter stage back when the user
+     live in `stages/rift/`. The user's rule for the rift: each new stage gets one unscripted,
+     recorded try, then a straight walk onto the boss from that recording, and the loop retries
+     it until the team's power reaches the stage's line and it wins. Do this for every rift stage
+     as the game advances, without asking. Write the next chapter stage back when the user
      returns to the chapters. The rift has its own purple Summon Dimensional Boss button, read
      and tapped as `RiftSummon` in `[Detect]` and `[Points]` (sampled 2026-10-12); the boss HUD
      is the stages' one. Rift 4's walk copies a video clear whose times count from the boss's

@@ -2,7 +2,9 @@
 ; slightly above it. The walk puts the team on top of the model (the user's call, 2026-10-12).
 ; Its 15% damage line is 11.517G (crumb's rift table, season 2); standing still at about 10.6G the
 ; team deals 5% and left it at 80% to 92% over its first tries on 2026-10-12. W+D 300, D 500
-; left the team at the model's lower left, so the walk is longer. Untested.
+; left the team at the model's lower left, so the walk is longer. Rift 5 was cleared on
+; 2026-10-12, but the loop's pass (try 54) last read the boss at 87%, so the win isn't credited
+; to this walk.
 encounter
 W+D 500
 D 1000
