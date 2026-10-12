@@ -1,10 +1,12 @@
 ; Dimensional rift 4, three Rowdy Trucks, at the 15% damage cut. They stand up and right of the
 ; team at the HUD and charge it. Standing still: 61% to 86% health left over 30 tries on
 ; 2026-10-12.
-; This walk copies a season-1 rift 4 clear at 15% (그니, youtube.com/shorts/z9nKY8Z7Ius): from the
-; boss's HUD, a short hold down, then a slow walk down-left towards 7 o'clock for about 4.5 s, so
-; the trucks' charge rams a packed column instead of a spread line, then nothing to the end.
-; Untested.
-hud
+; This walk copies a season-1 rift 4 clear at 15% (그니, youtube.com/shorts/z9nKY8Z7Ius): a short
+; hold down, then a slow walk down-left towards 7 o'clock, so the trucks' charge rams a packed
+; column instead of a spread line, then nothing to the end. The video walks about 5 s from the
+; boss's HUD; here the keys go down at the map, about 2 s earlier, and hold that much longer. A
+; recording of the walk timed from the HUD showed the column forming and the trucks ramming it,
+; with 76% health left.
+encounter
 S 500
-S+A 4400
+S+A 6500
