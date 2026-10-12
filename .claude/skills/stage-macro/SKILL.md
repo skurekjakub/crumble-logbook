@@ -154,6 +154,11 @@ Never commit `stage-runs*.csv`, the log, recordings or `stops\`.
   pass. A very short `lasting` on a pass is the tell; check the recording. The loop reads the
   stage on the next Summon Boss and corrects itself (`read X on Summon Boss where Y was
   expected`), so nothing needs fixing by hand, but don't credit a script with that win.
+- **A game restart mid-fight is logged as a pass too**, and in a set (`rift-<n>`) nothing corrects
+  it, since the loop never reads a set's stage. On every set pass, check the last `boss at N%`: a
+  high one (rift 5's try 78 on 2026-10-12 showed 89%, then the title screen) means stop the loop,
+  write the old stage back to the state file, untick Auto Summon (the restart ticks it) and
+  relaunch.
 - **`[Record] Video`** is `unscripted` by default: only no-script tries are recorded, which is all
   writing scripts needs. To diagnose a scripted stage, set `all` in `stage-loop.ini` and press F10
   in the loop (it rereads the ini); set it back after.
