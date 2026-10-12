@@ -47,6 +47,11 @@ for, the launch command, or an operating lesson changes, update this file (and `
      HUD; it still starts at the map (`encounter`) and holds longer, because the user wants the
      keys down the moment the map loads, never waiting for the HUD. The loss there is power (the
      15% damage cut), not the walk.
+   - **A rift stage is winnable only from its 15% power line.** Below it the team deals 5% of
+     its damage and no walk or luck helps; the per-stage lines are on crumb's Dimensional Rift
+     table (Stages page, season 2: rift 4 from 9.405G, rift 5 from 11.517G). On 2026-10-12 rift
+     4 lost hundreds of tries at about 8.7G and fell within minutes of the power passing 9.4G.
+     Compare the lobby power with the line before blaming a script.
    - **Auto Summon must be off in the rift too.** With it on, a win sends the game straight into
      the next rift stage's boss, so the loop never sees the pause that marks a pass, logs a fail,
      and plays the old stage's script against the new boss: rift 4's win on 2026-10-12 went
