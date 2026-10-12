@@ -1,0 +1,6 @@
+; 364-28, Ice Cone Lancer: stands right of the team at the HUD, about level with it, amid a pack
+; spread out to its right, as on 364-26.
+; Lost with no input: 24% health left at 29 s. With this script, 364-26's, it lost 3 tries (2%, 21%,
+; then 24% left) and won the 4th on 2026-10-12.
+encounter
+D 700

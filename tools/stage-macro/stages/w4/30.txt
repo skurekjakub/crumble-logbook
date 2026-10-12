@@ -1,0 +1,7 @@
+; 364-30, GingerCraven: the chapter's boss, a cookie that stands right of the team at the HUD near the
+; screen's edge, about level with it, with its pack around it.
+; Lost with no input: 45% health left at 32 s. D 900, as on 363-30, carried the team past it and
+; did worse than no input: 45%, 63%, 48%, 69%, then 50% left over 5 tries on 2026-10-12. Beaten
+; by hand the same day, so this script is untested.
+encounter
+D 400

@@ -38,6 +38,12 @@ for, the launch command, or an operating lesson changes, update this file (and `
 3. To resume from a given stage (the user beat one by hand, or names where to start), write it to
    `tools/stage-macro/stage-loop.state` (e.g. `362-1`, nothing else) with the Write tool while the
    loop is stopped. Otherwise leave the state file alone: the loop carries it.
+   - The dimensional rift is its own set: write `rift-<stage>` (e.g. `rift-4`), and its scripts
+     live in `stages/rift/`. The user's rule for the rift: no movement, it's luck, just keep
+     summoning, so its scripts have no steps. Write the next chapter stage back when the user
+     returns to the chapters. The rift has its own purple Summon Dimensional Boss button, read
+     and tapped as `RiftSummon` in `[Detect]` and `[Points]` (sampled 2026-10-12); the boss HUD
+     is the stages' one.
 4. Check the game: Summon Boss screen or clearing, and **Auto Summon off** (below).
 5. Arm the watcher, then launch:
    - `Monitor` with `bash "C:/repositories/crumble-logbook/.claude/skills/stage-macro/watch.sh"`,
@@ -122,6 +128,9 @@ Never commit `stage-runs*.csv`, the log, recordings or `stops\`.
   SurfaceFlinger id for screencap is the matching `uniqueId` in `dumpsys display`) and
   `adb shell input -d <display> tap <x> <y>` on the checkbox (it sat at 655,305 on 2026-10-11;
   confirm on a screenshot first, then again after). The loop resolves displays itself on start.
+- **Identical screenshots don't mean the game froze.** On 2026-10-12 screenshots of 364-24 came
+  back the same seconds apart, and the loop was stopped for a "freeze" that the user says never
+  happened. Ask the user before stopping the loop over a freeze.
 - **A restart of the emulator can kill the loop silently**: after the user restarts it, check
   `tasklist` and relaunch.
 - **`boss left at 0%` on a fail is a misread**: the bar drains on the defeat screen after time

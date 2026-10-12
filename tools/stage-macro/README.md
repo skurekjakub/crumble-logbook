@@ -28,6 +28,8 @@ Turn the game's **Auto Summon** off (the checkbox beside the stage's bar). The g
 
 A stage's number is `<chapter>-<stage>`, e.g. `358-20`. The game's worlds repeat every `[Stages] Worlds` chapters (9), so a stage's script is `stages\w<chapter mod 9>\<stage>.txt`: 358-20 plays `stages\w7\20.txt`, and so will 367-20.
 
+A stage outside the chapters, such as the dimensional rift's, is `<set>-<stage>`, e.g. `rift-4`, and its script is `stages\<set>\<stage>.txt`: `stages\rift\4.txt`. The loop never reads a set's number off the screen: write it to `stage-loop.state` before starting, and a pass moves on to the set's next stage (`rift-5`). Write a chapter stage back to the state file to return to the chapters. A script with no steps plays nothing, so the loop just summons the boss again after each loss.
+
 One step per line, played from the scene change after the tap on Summon Boss (the first capture of the solid dark transition screen, or of the encounter when a capture misses it); `;` starts a comment.
 
 | Step | Does |

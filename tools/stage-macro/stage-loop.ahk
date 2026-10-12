@@ -4,7 +4,8 @@
 #Include ..\macro-lib\Macro.ahk
 #Include ..\macro-lib\Hud.ahk
 ; Stage boss loop over adb: on Summon Boss, taps it and plays the stage's movement script
-; (stages\w<world>\<stage>.txt) from the scene change, so the team walks onto the boss as the
+; (stages\w<world>\<stage>.txt, or stages\<set>\<stage>.txt for a set such as the rift) from the
+; scene change, so the team walks onto the boss as the
 ; encounter opens. A lost boss brings Summon Boss back within seconds and the loop tries again; a
 ; beaten one sends the game back to clearing enemies on the next stage. Every knob is in
 ; stage-loop.ini; see README.md.
@@ -30,8 +31,9 @@ global CaptureMs := 1500
 global DEFAULTS := Map(
     "Adb", Map("Path", "C:\Program Files\Netease\MuMuPlayer\nx_main\adb.exe", "Serial", "127.0.0.1:5557",
                "Package", "com.devsisters.cc", "CaptureDisplay", "auto", "InputDisplay", "auto"),
-    "Points", Map("SummonX", "720", "SummonY", "380", "JitterPx", "6"),
+    "Points", Map("SummonX", "720", "SummonY", "380", "RiftSummonX", "718", "RiftSummonY", "625", "JitterPx", "6"),
     "Detect", Map("Summon", "600,360,FB3B00|660,360,F93D00|820,360,FB3B00|680,350,FD001C|750,350,FD011C|720,400,FFF647",
+                  "RiftSummon", "620,580,DC44F6|820,580,A242EA|600,610,C026F4|640,665,7D0EEE|700,603,FFF647|718,645,FFF647",
                   "Boss", "320,380,FF632D|360,380,FF632D|320,400,FF3617|380,400,FF3617",
                   "Transition", "300,800,271D1D|720,1200,271D1D|1100,1000,271D1D|300,1400,271D1D|1100,600,271D1D",
                   "Tolerance", "30", "HpBar", "416,1170,438", "HpEmptyMax", "112"),
@@ -56,9 +58,19 @@ MacroInit({Title: "Stage loop", IniPath: A_ScriptDir "\stage-loop.ini", Defaults
 ScreenOf(buf) {
     if Shows(buf, Cfg["Boss"])
         return "boss"
-    if Shows(buf, Cfg["Summon"])
+    if Shows(buf, Cfg[SummonButton()])
         return "summon"
     return "other"
+}
+
+/**
+ * Names the Summon Boss button of the stage being fought or next up. A set outside the chapters
+ * has its own button: the rift's is "RiftSummon", the purple Summon Dimensional Boss.
+ * @returns the button's name: its signature's key in [Detect] and its point's prefix in [Points]
+ */
+SummonButton() {
+    at := Current = "" ? 0 : World(Current)
+    return IsInteger(at) ? "Summon" : StrTitle(at) "Summon"
 }
 
 /**
@@ -101,24 +113,40 @@ Observe(buf) {
 }
 
 /**
- * Finds a stage's movement script. Worlds repeat every Worlds chapters, so a stage's script is
- * filed by its world, the chapter modulo Worlds, and its stage.
- * @param num the stage's number, e.g. "358-20"
- * @returns the script's path, e.g. "…\stages\w7\20.txt", whether or not it exists
+ * Tells which set a stage belongs to. Worlds repeat every Worlds chapters, so a chapter's stage
+ * belongs to its world, the chapter modulo Worlds. A stage outside the chapters, such as the
+ * dimensional rift's "rift-4", is named by its set.
+ * @param num the stage's number, e.g. "358-20" or "rift-4"
+ * @returns the world, e.g. 7, or the set's name, e.g. "rift"
  */
-ScriptPath(num) {
-    parts := StrSplit(num, "-")
-    return A_ScriptDir "\" Cfg["ScriptDir"] "\w" Mod(Integer(parts[1]), N("Worlds")) "\" parts[2] ".txt"
+World(num) {
+    set := StrSplit(num, "-")[1]
+    return IsInteger(set) ? Mod(Integer(set), N("Worlds")) : set
 }
 
 /**
- * Tells which stage follows a beaten one.
- * @param num the stage's number, e.g. "358-30"
- * @returns the next stage's number, e.g. "359-1"
+ * Finds a stage's movement script, filed by its world (stages\w<world>) or its set
+ * (stages\<set>), and its stage.
+ * @param num the stage's number, e.g. "358-20" or "rift-4"
+ * @returns the script's path, e.g. "…\stages\w7\20.txt" or "…\stages\rift\4.txt", whether or not
+ *   it exists
+ */
+ScriptPath(num) {
+    at := World(num)
+    folder := IsInteger(at) ? "w" at : at
+    return A_ScriptDir "\" Cfg["ScriptDir"] "\" folder "\" StrSplit(num, "-")[2] ".txt"
+}
+
+/**
+ * Tells which stage follows a beaten one. A set outside the chapters just counts up.
+ * @param num the stage's number, e.g. "358-30" or "rift-4"
+ * @returns the next stage's number, e.g. "359-1" or "rift-5"
  */
 NextStage(num) {
     parts := StrSplit(num, "-")
     stage := Integer(parts[2]) + 1
+    if !IsInteger(parts[1])
+        return parts[1] "-" stage
     return stage > N("Stages") ? Integer(parts[1]) + 1 "-1" : parts[1] "-" stage
 }
 
@@ -238,6 +266,9 @@ RunLoop() {
                 Pace(polled, N("ClearingPollMs"))
                 continue
             }
+            ; The reader knows only chapter stages' numbers, so a set's stage is always carried.
+            if (!known && Current != "" && !IsInteger(World(Current)))
+                known := true
             if !known {
                 out := HudRun("stage", buf)
                 read := HudField(out, "stage")
@@ -365,7 +396,7 @@ Attempt(num, script) {
         Log("recording, to be saved as " Cfg["VideoDir"] "\" video)
     }
     Phase := "summoning"
-    Tap("Summon")
+    Tap(SummonButton())
     started := A_TickCount
     changed := SceneChange(started)
     Log(changed ? Format("scene changed {} s after the tap", Secs(started, changed))
@@ -514,7 +545,7 @@ Settle(a, result) {
     parts := StrSplit(a.num, "-")
     AppendCsv(Cfg["RunsFile"], "time,chapter,stage,world,try,script,result,reason,boss_hp_pct,tap_to_change_s,change_to_encounter_s,encounter_s,video",
         Format("{},{},{},{},{},{},{},{},{},{},{},{},{}`n", FormatTime(, "yyyy-MM-dd HH:mm:ss"), parts[1], parts[2],
-            Mod(Integer(parts[1]), N("Worlds")), a.try, a.script, result, a.reason, hp, tapToChange, changeToShown,
+            World(a.num), a.try, a.script, result, a.reason, hp, tapToChange, changeToShown,
             shownFor, saved))
     if (result = "pass") {
         Passes += 1
@@ -556,5 +587,5 @@ SaveVideo(name) {
  */
 ProbeText(buf) {
     return "screen: " ScreenOf(buf) "`nHUD: " HudLine(HudRun("stage", buf))
-        . "`nSummon:" Describe(buf, Cfg["Summon"]) "`nBoss:" Describe(buf, Cfg["Boss"])
+        . "`nSummon:" Describe(buf, Cfg[SummonButton()]) "`nBoss:" Describe(buf, Cfg["Boss"])
 }
