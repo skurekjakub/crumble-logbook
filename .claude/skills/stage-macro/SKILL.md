@@ -47,6 +47,11 @@ for, the launch command, or an operating lesson changes, update this file (and `
      HUD; it still starts at the map (`encounter`) and holds longer, because the user wants the
      keys down the moment the map loads, never waiting for the HUD. The loss there is power (the
      15% damage cut), not the walk.
+   - **Auto Summon must be off in the rift too.** With it on, a win sends the game straight into
+     the next rift stage's boss, so the loop never sees the pause that marks a pass, logs a fail,
+     and plays the old stage's script against the new boss: rift 4's win on 2026-10-12 went
+     unnoticed for about a dozen tries. Since the loop never reads a rift stage's number, check
+     a screenshot when the results jump. The checkbox sat at 800,376 during a rift fight.
 4. Check the game: Summon Boss screen or clearing, and **Auto Summon off** (below).
 5. Arm the watcher, then launch:
    - `Monitor` with `bash "C:/repositories/crumble-logbook/.claude/skills/stage-macro/watch.sh"`,

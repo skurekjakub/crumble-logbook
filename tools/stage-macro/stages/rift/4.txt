@@ -7,6 +7,8 @@
 ; boss's HUD; here the keys go down at the map, about 2 s earlier. Holding down-left 6.5 s was
 ; about 2 s too long by the user's eye on 2026-10-12, so it holds 4.5 s. A recording of the walk
 ; timed from the HUD showed the column forming and the trucks ramming it, with 76% health left.
+; This walk won on 2026-10-12 after about 330 tries, mostly 65% to 90% left, in about 19 s: the
+; team power had risen to about 10.6G by then.
 encounter
 S 500
 S+A 4500
