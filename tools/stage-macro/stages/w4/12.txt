@@ -1,0 +1,6 @@
+; 364-12, Ice Cone Lancer: stands right of the team at the HUD, about level with it, amid a pack
+; spread out to its right, as on 364-10.
+; Lost with no input: 27% health left at 28 s. This script, 364-10's, won its first try here on
+; 2026-10-12.
+encounter
+D 700

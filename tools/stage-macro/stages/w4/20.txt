@@ -1,0 +1,8 @@
+; 364-20, Ice Candy Golem: a big single body that stands up and right of the team at the HUD, at the
+; screen's right edge, amid its pack. The walk carries the team well past its middle, as for the
+; big plants of chapter 362.
+; Lost with no input: 36% health left at 31 s. This walk lost 5 tries (9% to 32% left) and won
+; the 6th on 2026-10-12, in about 21 s.
+encounter
+W+D 400
+D 800
