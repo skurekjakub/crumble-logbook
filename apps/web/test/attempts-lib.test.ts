@@ -24,7 +24,7 @@ const RULE: PaceRule = { minScore: 2_000, checkAtS: 30 };
 function run(time: string, at30: number, end: Attempt["end"]): Attempt {
   const curve: Attempt["curve"] = [];
   for (let t = 58; t >= 30; t--) curve.push([t, Math.round((at30 * (60 - t)) / 30)]);
-  return { time, run: 1, end, paceScore: null, finalScore: null, curve };
+  return { time, run: 1, end, paceScore: null, finalScore: null, sample: null, curve };
 }
 
 describe("scoreAt", () => {

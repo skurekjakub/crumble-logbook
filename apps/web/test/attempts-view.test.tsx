@@ -15,7 +15,7 @@ import { bodyRows, renderRoute } from "./view-harness";
 function run(time: string, at30: number, end: Attempt["end"], finalScore: number): Attempt {
   const curve: Attempt["curve"] = [];
   for (let t = 58; t >= 30; t--) curve.push([t, Math.round((at30 * (60 - t)) / 30)]);
-  return { time, run: 1, end, paceScore: at30, finalScore, curve };
+  return { time, run: 1, end, paceScore: at30, finalScore, sample: null, curve };
 }
 
 const RULE: Attempts["rule"] = { minScore: 1_950_000_000_000, checkAtS: 30 };

@@ -104,9 +104,22 @@ export function groupCurves(rows: readonly string[][]): Map<string, CurvePoint[]
 }
 
 /**
+ * Reads the runs file's `sample` flag.
+ *
+ * @param field - the field's text
+ * @returns true for "1", false for "0"; null when empty or absent, as on rows written before
+ *   the column
+ */
+function sampleFlag(field: string | undefined): boolean | null {
+  if (field === "1") return true;
+  if (field === "0") return false;
+  return null;
+}
+
+/**
  * Builds the attempts from the runs file's rows and the grouped curves.
  *
- * @param rows - the runs file's rows: time, run, end, pace_score, final_score
+ * @param rows - the runs file's rows: time, run, end, pace_score, final_score, sample
  * @param curves - each run's readings, by run time
  * @returns the attempts that parse, in file order
  */
@@ -114,13 +127,14 @@ export function parseAttempts(
   rows: readonly string[][],
   curves: ReadonlyMap<string, CurvePoint[]>,
 ): Attempt[] {
-  return rows.flatMap(([time, run, end, pace, final]) => {
+  return rows.flatMap(([time, run, end, pace, final, sample]) => {
     const parsed = attemptSchema.safeParse({
       time,
       run: Number(run),
       end,
       paceScore: optionalInt(pace),
       finalScore: optionalInt(final),
+      sample: sampleFlag(sample),
       curve: (time && curves.get(time)) ?? [],
     });
     return parsed.success ? [parsed.data] : [];

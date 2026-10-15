@@ -13,6 +13,7 @@ export const END_BADGE: Readonly<Record<AttemptEnd, readonly [PillKind, string]>
   pruned: ["obsolete", "pruned"],
   "kept-unjudged": ["medium", "not judged"],
   "kept-end-failed": ["medium", "end failed"],
+  "kept-played-out": ["medium", "played out"],
   stopped: ["low", "stopped"],
   error: ["low", "error"],
   "no-results": ["low", "no results"],

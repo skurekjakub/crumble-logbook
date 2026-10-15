@@ -4,7 +4,8 @@
 #Include ..\macro-lib\Macro.ahk
 #Include ..\macro-lib\Hud.ahk
 ; Guild Conquest retry loop over adb: lobby -> ENTER -> fight -> dismiss the results -> repeat.
-; A fight whose score is behind MinScore when the countdown reaches CheckAtS is ended early.
+; A fight whose score is behind MinScore when the countdown reaches CheckAtS is ended early, except
+; every PlayOutEvery-th run, which plays out so the data holds finals of runs of every pace.
 ; It reads the screen with `adb exec-out screencap` and taps with `adb shell input`, so the emulator
 ; window can sit behind other windows. Every knob is in conquest-loop.ini; see README.md.
 
@@ -26,7 +27,7 @@ global DEFAULTS := Map(
     "Timing", Map("PollMs", "2000", "AfterEnterMs", "6000", "MinFightMs", "66000", "MaxFightMs", "100000",
                   "RecoverStepMs", "4000", "LaunchWaitMs", "90000", "ReadFromMs", "0", "GoneMs", "3000",
                   "ConfirmWaitMs", "1500", "AfterEndMs", "4000", "FinalWaitMs", "8000"),
-    "Prune", Map("MinScore", "1950000000000", "CheckAtS", "30", "LateS", "3", "Node", "node"),
+    "Prune", Map("MinScore", "1950000000000", "CheckAtS", "30", "LateS", "3", "PlayOutEvery", "4", "Node", "node"),
     "Run", Map("MaxRuns", "0", "StuckLimit", "3", "GreyLimit", "8", "RecoverTries", "8",
                "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log",
                "RunsFile", "conquest-runs.csv", "CurvesFile", "conquest-curves.csv")
@@ -269,8 +270,11 @@ TrackFight(rec, deadline) {
             , before != "" ? Format(", {} at {:.3f} s", Short(before.score), before.timer) : "", Short(N("MinScore"))))
         rec.pace := score
         judging := false
-        if (score < N("MinScore"))
+        if (score >= N("MinScore"))
+            continue
+        if !rec.playOut
             return "behind"
+        Log("pace: behind, but every " N("PlayOutEvery") "th run plays out")
     }
 }
 
@@ -300,13 +304,16 @@ EndRun() {
 
 /**
  * Starts the record of a run, numbered and timed from now.
- * @returns {number, entered, fought, tracked, curve, pace, over, ended, recorded}: the run's
- *   number, when it started, whether its fight showed, whether TrackFight ran, its readings as
- *   [seconds left, score] pairs, its score at CheckAtS (empty when none was read), whether the
- *   fight was seen to end, whether EndRun ended it, and whether RecordRun wrote it
+ * @returns {number, entered, playOut, fought, tracked, curve, pace, over, ended, recorded}: the
+ *   run's number, when it started, whether it plays out behind pace (every PlayOutEvery-th run),
+ *   whether its fight showed, whether TrackFight ran, its readings as [seconds left, score] pairs,
+ *   its score at CheckAtS (empty when none was read), whether the fight was seen to end, whether
+ *   EndRun ended it, and whether RecordRun wrote it
  */
 NewRun() {
-    return {number: Runs, entered: FormatTime(, "yyyy-MM-dd HH:mm:ss"), fought: false, tracked: false,
+    every := N("PlayOutEvery")
+    return {number: Runs, entered: FormatTime(, "yyyy-MM-dd HH:mm:ss"),
+        playOut: every > 0 && Mod(Runs, every) = 0, fought: false, tracked: false,
         curve: [], pace: "", over: false, ended: false, recorded: false}
 }
 
@@ -314,16 +321,19 @@ NewRun() {
  * Tells how a run that reached its results ended, for the runs file.
  * @param rec the run's record from NewRun
  * @returns "pruned" when EndRun ended it behind pace; otherwise it played the full fight:
- *   "kept-on-pace" when its score at CheckAtS met MinScore, "kept-end-failed" when it was behind
- *   but the end-battle confirmation never showed, and "kept-unjudged" when no score was read
- *   (the pace check off, a fight already running at start, or the HUD unreadable)
+ *   "kept-on-pace" when its score at CheckAtS met MinScore, "kept-played-out" when it was behind
+ *   on a run that plays out, "kept-end-failed" when it was behind but the end-battle
+ *   confirmation never showed, and "kept-unjudged" when no score was read (the pace check off, a
+ *   fight already running at start, or the HUD unreadable)
  */
 EndOf(rec) {
     if rec.ended
         return "pruned"
     if (rec.pace = "")
         return "kept-unjudged"
-    return rec.pace >= N("MinScore") ? "kept-on-pace" : "kept-end-failed"
+    if (rec.pace >= N("MinScore"))
+        return "kept-on-pace"
+    return rec.playOut ? "kept-played-out" : "kept-end-failed"
 }
 
 /**
@@ -357,8 +367,8 @@ ReadFinal() {
 
 /**
  * Logs a run's outcome and appends it to the CSVs next to the script: a row to RunsFile (time,
- * run, end, pace_score, final_score) and its curve to CurvesFile (time, t_left, score: a row
- * per reading, keyed to the run by time).
+ * run, end, pace_score, final_score, sample: 1 when the run plays out whatever its pace, else 0)
+ * and its curve to CurvesFile (time, t_left, score: a row per reading, keyed to the run by time).
  * @param rec the run's record from NewRun; marked recorded
  * @param end how the run ended: an EndOf value, "stopped", "error" or "no-results"
  * @param final the final score; empty when it wasn't read
@@ -368,8 +378,8 @@ RecordRun(rec, end, final) {
     Log(Format("run over: {}; {}; final {}; {} readings", end
         , rec.pace = "" ? "no score read at " N("CheckAtS") " s left" : Short(rec.pace) " at " N("CheckAtS") " s left"
         , final = "" ? "unread" : Short(final), rec.curve.Length))
-    AppendCsv(Cfg["RunsFile"], "time,run,end,pace_score,final_score"
-        , rec.entered "," rec.number "," end "," rec.pace "," final "`n")
+    AppendCsv(Cfg["RunsFile"], "time,run,end,pace_score,final_score,sample"
+        , rec.entered "," rec.number "," end "," rec.pace "," final "," (rec.playOut ? 1 : 0) "`n")
     rows := ""
     for p in rec.curve
         rows .= rec.entered "," Format("{:.3f}", p[1]) "," p[2] "`n"

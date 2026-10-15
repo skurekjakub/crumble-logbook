@@ -21,7 +21,7 @@ Every 2 s it captures the screen and:
 2. **Lobby with ENTER greyed:** waits. The lobby greys ENTER for a moment on its way back from the results, so the loop stops (the season is closed) only after `GreyLimit` polls in a row.
 3. **Anything else:** a fight or the results.
    - **Following the fight:** from `ReadFromMs` after ENTER it reads the fight's score and countdown as fast as captures come (about two a second), and keeps every reading as the run's score curve. The fight is over when the countdown reads 0, or when neither number has been read for `GoneMs`.
-   - **Pace check:** if the score is below `MinScore` when the countdown shows `CheckAtS` seconds left, it ends the run: the bottom-centre button, then **End Battle** on "Are you sure you want to end the battle?".
+   - **Pace check:** if the score is below `MinScore` when the countdown shows `CheckAtS` seconds left, it ends the run: the bottom-centre button, then **End Battle** on "Are you sure you want to end the battle?". Every `PlayOutEvery`-th run plays out instead, so the runs file holds finals of runs of every pace.
    - The score at exactly `CheckAtS` is interpolated between the reads either side of it. Around 30 s left the score climbs about 0.16T a second, so a late read would flatter it.
    - It taps Dismiss (the bottom-centre button) once the results show: `AfterEndMs` after End Battle, once it has seen the fight end, or once the result screen is learned or `MinFightMs` (66 s: loading plus the 60 s fight) has passed since ENTER. It never taps it earlier, because in a running fight that button asks to end the battle.
    - Before that first Dismiss it reads the final score off BATTLE OVER, for up to `FinalWaitMs`, and records the run.
@@ -47,7 +47,8 @@ It saves the screen to `stops\` when it starts recovering, and stops after `Reco
 | `run` | The run number in the log. |
 | `end` | How the run ended (below). |
 | `pace_score` | The score at `CheckAtS` seconds left; empty when none was read. |
-| `final_score` | The BATTLE OVER final score; empty when it couldn't be read, in which case the screen is saved to `stops\`. |
+| `final_score` | The BATTLE OVER final score; empty when it couldn't be read, in which case the screen is saved to `stops\`. For a `pruned` run it is the score when End Battle was tapped. |
+| `sample` | `1` when the run plays out whatever its pace (every `PlayOutEvery`-th run), else `0`; empty on rows written before the column. The sample runs' finals are an unbiased draw of the fight's outcomes. |
 
 | `end` | Meaning |
 |---|---|
@@ -55,6 +56,7 @@ It saves the screen to `stops\` when it starts recovering, and stops after `Reco
 | `kept-on-pace` | Met `MinScore`; played the full fight. |
 | `kept-unjudged` | No score read at `CheckAtS` (the check off, a fight already running when the loop started, or the HUD unreadable); played the full fight. |
 | `kept-end-failed` | Behind pace, but the end-battle question never showed; played the full fight. |
+| `kept-played-out` | Behind pace on a run that plays out (`PlayOutEvery`); played the full fight. |
 | `stopped`, `error` | F8 or an error stopped the loop mid-run; no final score. |
 | `no-results` | The lobby came back without the results showing; no final score. |
 

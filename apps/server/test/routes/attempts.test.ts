@@ -67,6 +67,7 @@ describe("GET /api/attempts", () => {
           end: "pruned",
           paceScore: 1661000000000,
           finalScore: 1902000000000,
+          sample: null,
           curve: [
             [30.233, 1635000000000],
             [29.7, 1695000000000],
@@ -78,10 +79,26 @@ describe("GET /api/attempts", () => {
           end: "kept-on-pace",
           paceScore: 2359000000000,
           finalScore: null,
+          sample: null,
           curve: [],
         },
       ],
     });
+  });
+
+  it("reads the sample column: 1 plays out whatever its pace, 0 doesn't, empty on older rows", async () => {
+    write("conquest-runs.csv", [
+      "time,run,end,pace_score,final_score",
+      "2026-10-15 22:18:00,1,pruned,1444941718902,1867635049618",
+      "2026-10-15 22:18:43,4,kept-played-out,1377627928444,3911916613267,1",
+      "2026-10-15 22:19:30,5,pruned,1444941718902,1867635049618,0",
+    ]);
+    const body = await getAttempts();
+    expect(body.attempts.map((a) => [a.end, a.sample])).toEqual([
+      ["pruned", null],
+      ["kept-played-out", true],
+      ["pruned", false],
+    ]);
   });
 
   it("skips a row it can't read, such as one the macro is still writing", async () => {

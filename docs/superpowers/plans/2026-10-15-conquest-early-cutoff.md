@@ -12,6 +12,12 @@
 - Tests never hard-code a record's curated values; fixtures are staged.
 - `pnpm verify` passes before every commit; every commit is pushed (fetch first, fast-forward only).
 - The Conquest macro is gathering data: test runs slow captures and gap the curves of runs meanwhile (the user accepted this). Don't touch `tools/conquest-macro/` or its CSVs.
+- The target is the top 1% of the **sample runs'** finals (spec § What "top 1%" means); the runs file's `sample` column marks them.
+
+## Task 0: The `sample` column (orchestrator, inline)
+
+- [x] The macro plays out every `PlayOutEvery`-th run and writes `sample` (`tools/conquest-macro/`), with the `kept-played-out` end in the schema and the tab's badge.
+- [x] `Attempt.sample: boolean | null` in `packages/schema/src/attempts.ts`, parsed by `apps/server/src/repos/attempts.ts` from the sixth column; the route test covers a row with and without it.
 - Reviews run on Opus.
 
 ## Task 1: `@crumble/schema/cutoff`
@@ -37,7 +43,7 @@ export function analyzeCutoff(attempts: readonly Attempt[], minScore: number): C
 export function checkpointsLine(rule: CutoffRule, minScore: number): string; // "47.5:61000000000|30:1950000000000"
 ```
 
-`CutoffAnalysis` is `{ ok: false, reason }` or `{ ok: true, runs, leftOut, passes, reference, fits, best, baseline }`, where `fits` holds per `δ` per checkpoint `{ tLeft, threshold | null (unscorable), cuts, savedS, looLosses }`, `best` is the chosen `CutoffRule { delta, checkpoints: { tLeft, minScore }[], runsPerHour, passesPerHour, lossBound }` or null when no candidate qualifies, and `baseline` is runs and passes per hour under the 30 s bar alone.
+`CutoffAnalysis` is `{ ok: false, reason }` or `{ ok: true, samples, others, bar, top, reference, fits, best, baseline }`, where `fits` holds per `δ` per checkpoint `{ tLeft, threshold | null (unscorable), cuts, savedS, looLosses }`, `best` is the chosen `CutoffRule { delta, checkpoints: { tLeft, minScore }[], hours, topPerHour, lossBound }` or null when no candidate qualifies, and `baseline` is the INI's 30 s rule on the same sample runs (hours, top runs cut, top per hour). `analyzeCutoff(attempts, minScore)` takes the INI's `MinScore` for the baseline only.
 
 - [ ] `rubber-duk-tests` (WRITE) writes `packages/schema/test/cutoff.test.ts` from the spec's Tests section, on synthetic attempts; seen failing (module missing).
 - [ ] `rubber-duk-backend` (IMPLEMENT) writes `cutoff.ts` and the export until the tests pass: `pnpm exec vitest run packages/schema/test/cutoff.test.ts`.
