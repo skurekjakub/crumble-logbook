@@ -1,0 +1,10 @@
+; Dimensional rift 10, Rowdy Trucks: rift 4's boss, and rift 4's walk, which won there on
+; 2026-10-12 (see 4.txt): a short hold down, then down-left so the trucks' charge rams a packed
+; column, then nothing to the end. The 15% line is 22.69G on crumb.gg (season 2); the team was at
+; about 21.9G when this was written on 2026-10-13, and at 24.5G when the loop started it at
+; 00:52 on 2026-10-14. Rift 4's walk left 17%, 27%, a misread 0% and 16%; the user then switched
+; to a down-left hold from the tap.
+; Untested.
+tap
+wait 1600
+S+A 4500

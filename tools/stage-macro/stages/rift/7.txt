@@ -1,0 +1,7 @@
+; Dimensional rift 7: rift 4's walk from the tap (see 4.txt). Its one unscripted try left the boss
+; at 37% on 2026-10-13; the stage was beaten before the loop played this walk.
+; Untested.
+tap
+wait 1600
+S 500
+S+A 4500

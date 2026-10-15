@@ -13,7 +13,7 @@ The adb helpers and the loop's frame are shared with the other macros, in `tools
 - `stage-loop.ini`: every knob. The script reads it at start and on F10.
 - `stages/`: the movement scripts, one per stage (below).
 - `stage-loop.log`: the audit trail. Every screen change, every stage number read (or why it couldn't be), each tap, the scene change's delay, each script step with its time from the change, the encounter showing and ending, the boss's health each time it falls past another 10%, and each result with its reason and timings.
-- `stage-runs.csv`: one row per boss encounter: `time`, `chapter`, `stage`, `world`, `try`, `script` (empty when the stage had none), `result` (`pass` or `fail`), `reason`, `boss_hp_pct` (the boss's lowest health read off its bar, 0 on a pass, empty when unread), `tap_to_change_s`, `change_to_encounter_s`, `encounter_s`, `video`.
+- `stage-runs.csv`: one row per boss encounter: `time`, `chapter`, `stage`, `world`, `try`, `script` (empty when the stage had none), `result` (`pass` or `fail`), `reason`, `boss_hp_pct` (the boss's lowest health read off its bar, 0 on a pass, empty when unread), `tap_to_change_s`, `change_to_encounter_s`, `encounter_s`, `video`. The status tooltip shows the stage's `lowest` health over its lost tries, read from this file on start (0 skipped: a loss's bar drains on the defeat screen).
 - `stage-loop.state`: the stage being fought or next up, so a restart knows it without reading it.
 - `recordings\`: the recorded encounters' videos, `<stage>_<try>_<time>.mp4`. `[Record] Video` picks the tries: `unscripted` (the default) records only tries of a stage with no script, `all` every try, `off` none. The loop reads it on every try, so F10 can switch to `all` while tuning a stubborn stage.
 - `stops\`: the screen the loop stopped on after an error, and `unread_<stage>_<time>.png`, a Summon Boss screen whose number the reader couldn't read, for teaching it.
@@ -34,12 +34,13 @@ One step per line, played from the scene change after the tap on Summon Boss (th
 
 | Step | Does |
 |---|---|
-| `wait <ms>` | Nothing, for that long, while the loop follows the encounter on the screen. |
+| `tap` | Only as the first step: the script plays from the tap on Summon Boss, with no capture before it, instead of from the scene change. Not with `encounter`. |
+| `wait <ms>` | Nothing, for that long, while the loop follows the encounter on the screen. After `tap`, it only waits, so the steps keep their times from the tap. |
 | `encounter` | Waits for the encounter's map: the first capture after the change that isn't the dark transition screen. |
 | `W 800` | Holds W for 800 ms. `A`, `S` and `D` likewise. |
 | `W+D 600` | Holds W and D together: a diagonal. |
 
-The scene usually changes about 1 s after the tap, but has taken over 11 s, which is why scripts count from the change. The dark screen clears to the encounter's map a second or more before the boss's HUD shows, and the team can walk from then, so a walk from `encounter` starts as soon as the map is up and lands the same way every try. While a key is held the team walks in formation and stops attacking; once released, it fights whatever is in reach.
+The scene usually changes about 1 s after the tap, but has taken over 11 s, which is why scripts count from the change. The dark screen clears to the encounter's map a second or more before the boss's HUD shows, and the team can walk from then, so a walk from `encounter` starts as soon as the map is up and lands the same way every try. Each of those waits takes a capture, which takes longer as the emulator runs; a script that starts with `tap` holds its keys right after the tap instead, and lands only as well as the scene change's timing allows. While a key is held the team walks in formation and stops attacking; once released, it fights whatever is in reach.
 
 A script is read afresh on every try, so an edit takes effect on the next one. A step the loop can't parse is logged and ends the script for that try, and so does the encounter ending: a script can follow the boss with steps late in the fight without walking the team about once it's over.
 

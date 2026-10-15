@@ -1,0 +1,12 @@
+; Dimensional rift 8, Cool Mint Cookie: stands at the right edge of the screen at the map, about
+; level with the team, behind a wall of her mint adds. YouTube guides (regular stages, none for
+; the rift) give no special movement, only team building against her knockback. Rift 6's walk
+; from the tap played before the scene changed (3.3-4.4 s after the tap here) and left 79%, 68%,
+; 64% and 62% on 2026-10-13 at about 21.9G. Waiting for the map and holding right for 2800 ms put
+; the whole team on her (try 6's recording), and over tries 6-34 she kept 20-88% (median about
+; 52%): above the 15% line (18.02G on crumb.gg), the losses are damage. The user cut the hold to
+; 1800 ms after try 34. The game was past rift 8 and 9 and on rift 10 by 19:28 on 2026-10-13,
+; with this walk: the loop logged every try as a loss (it never reads a rift stage's number), so
+; which try won is unknown.
+encounter
+D 1800

@@ -1,0 +1,6 @@
+; Dimensional rift 12: rift 6's walk, which beat GingerCraven there on 2026-10-13 (try 289; see
+; 6.txt): a straight right hold from the tap. The boss and its stance aren't recorded yet.
+; Untested.
+tap
+wait 1600
+D 1000

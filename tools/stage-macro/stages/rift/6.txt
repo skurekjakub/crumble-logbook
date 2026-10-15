@@ -1,6 +1,11 @@
 ; Dimensional rift 6, GingerCraven: a single body that stands level with the team at the map,
 ; about a third of the screen to its right. Standing still at about 13.5G it left 85% on
 ; 2026-10-12. The walk is a straight right hold sized to carry the back line past its middle.
-; Untested.
-encounter
-D 1500
+; It plays on a timer from the tap, with no capture first: by 2026-10-13 08h a capture took
+; 2-3 s, and waiting for the map started the walk with the boss's HUD. On rift 4 and 5, when
+; captures were quick, the map showed 1.6 s after the tap or later in nine tries of ten (median
+; 1.8 s).
+; This walk won on 2026-10-13 at 13:31, on try 289 of the session, with the encounter up 29.6 s.
+tap
+wait 1600
+D 1000

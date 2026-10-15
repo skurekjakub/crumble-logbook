@@ -26,6 +26,8 @@ global LastScreen := ""
 ; How long a capture takes, in ms, averaged over recent ones, so Watch knows whether one still fits
 ; before a wait's end. Starts at a typical capture's time over MuMu's adb.
 global CaptureMs := 1500
+; The lowest boss health a lost try left, in percent, by stage: from RunsFile at start, then each try.
+global Lowest := Map()
 
 ; Fallbacks used when a key is missing from the INI. Section -> key -> value.
 global DEFAULTS := Map(
@@ -46,7 +48,7 @@ global DEFAULTS := Map(
 )
 
 MacroInit({Title: "Stage loop", IniPath: A_ScriptDir "\stage-loop.ini", Defaults: DEFAULTS,
-    Counters: () => "passes " Passes " | fails " Fails, Tag: () => Current = "" ? "-" : Current " #" Tries.Get(Current, 0),
+    Counters: () => "passes " Passes " | fails " Fails (Lowest.Has(Current) ? " | lowest " Lowest[Current] "%" : ""), Tag: () => Current = "" ? "-" : Current " #" Tries.Get(Current, 0),
     Probe: ProbeText, Run: RunLoop, Keys: ""})
 
 /**
@@ -233,6 +235,7 @@ RunLoop() {
     unread := 0
     ; The stage on Summon Boss is settled, read or carried forward, since the screen came to it.
     known := false
+    LoadLowest()
     Log("expecting " (Current = "" ? "an unknown stage" : Current))
     try {
         while Running {
@@ -371,7 +374,8 @@ Judge(a, screen, buf) {
 
 /**
  * Fights a stage's boss once: starts the recording when RecordMode wants this try's, taps Summon
- * Boss, waits for the scene to change, and plays the stage's script from the change.
+ * Boss, waits for the scene to change, and plays the stage's script from the change, or from the
+ * tap, before waiting, when the script starts with `tap`.
  * @param num the stage's number, e.g. "358-20"
  * @param script the script's path; a missing script plays nothing
  * @returns the try: {num, try, script, video, started, changed, seen, ended, hp, reason}: the
@@ -395,24 +399,20 @@ Attempt(num, script) {
         Sleep 300
         Log("recording, to be saved as " Cfg["VideoDir"] "\" video)
     }
+    steps := has ? ReadSteps(script) : []
+    fromTap := PlaysFromTap(steps)
     Phase := "summoning"
     Tap(SummonButton())
     started := A_TickCount
-    changed := SceneChange(started)
-    Log(changed ? Format("scene changed {} s after the tap", Secs(started, changed))
-        : Format("Summon Boss still up {} s after the tap", Secs(started, A_TickCount)))
     a := {num: num, try: Tries[num], script: has ? rel : "", video: video, started: started,
-        changed: changed, seen: 0, ended: 0, hp: 101, reason: ""}
-    if (has && changed) {
-        Phase := "playing " rel
-        try {
-            PlayScript(script, a)
-        } catch Error as e {
-            if (e is StopSignal)
-                throw e
-            Log("script stopped: " e.Message)
-        }
-    }
+        changed: 0, seen: 0, ended: 0, hp: 101, reason: ""}
+    if fromTap
+        TryScript(steps, a, started, rel)
+    a.changed := SceneChange(started)
+    Log(a.changed ? Format("scene changed {} s after the tap", Secs(started, a.changed))
+        : Format("Summon Boss still up {} s after the tap", Secs(started, A_TickCount)))
+    if (has && !fromTap && a.changed)
+        TryScript(steps, a, a.changed, rel)
     Phase := "boss"
     return a
 }
@@ -440,32 +440,88 @@ SceneChange(started) {
 }
 
 /**
- * Plays a movement script, logging each step with its time from the scene change. One step per
- * line, `;` starts a comment.
- * - `wait <ms>`: does nothing for that long, while following the encounter (Watch).
+ * Reads a movement script's steps: its lines with `;` comments and blank lines dropped.
+ * @param path the script's path
+ * @returns [{line, step}]: each step's line number and its text, trimmed and lowercased
+ */
+ReadSteps(path) {
+    steps := []
+    for i, line in StrSplit(FileRead(path, "UTF-8"), "`n", "`r") {
+        step := StrLower(Trim(RegExReplace(line, ";.*$")))
+        if (step != "")
+            steps.Push({line: i, step: step})
+    }
+    return steps
+}
+
+/**
+ * Tells whether a movement script plays from the tap on Summon Boss: its first step is `tap`.
+ * @param steps the script's steps, from ReadSteps
+ * @returns true when it does
+ */
+PlaysFromTap(steps) {
+    return steps.Length > 0 && steps[1].step = "tap"
+}
+
+/**
+ * Plays a movement script with PlayScript, logging an error in it rather than throwing, so the
+ * try goes on to its result.
+ * @param steps the script's steps, from ReadSteps
+ * @param a the try from Attempt
+ * @param from A_TickCount the script counts from
+ * @param rel the script's path for the status line
+ * @throws StopSignal when F8 stops the loop
+ */
+TryScript(steps, a, from, rel) {
+    global Phase
+    Phase := "playing " rel
+    try {
+        PlayScript(steps, a, from)
+    } catch Error as e {
+        if (e is StopSignal)
+            throw e
+        Log("script stopped: " e.Message)
+    }
+}
+
+/**
+ * Plays a movement script, logging each step with its time from `from`.
+ * - `tap`, only as the first step: the script plays from the tap on Summon Boss, with no capture
+ *   before it, instead of from the scene change.
+ * - `wait <ms>`: does nothing for that long, while following the encounter (Watch); in a script
+ *   that starts with `tap`, without capturing.
  * - `encounter`: waits for the encounter's map, the first capture after the scene change that
  *   isn't the transition's dark screen, capturing back to back. The team can walk from then, a
- *   second or more before the boss's HUD shows.
+ *   second or more before the boss's HUD shows. Not in a script that starts with `tap`.
  * - `<keys> <ms>`: holds W, A, S or D, or several joined by +, e.g. `W+D 1200`, for that long.
  * The script stops early once the encounter has ended.
- * @param path the script's path
- * @param a the try from Attempt; the script counts from its scene change
- * @throws Error naming the line when a step isn't one of those; StopSignal when F8 stops the loop
+ * @param steps the script's steps, from ReadSteps
+ * @param a the try from Attempt
+ * @param from A_TickCount the script counts from:the scene change, or the tap for a `tap` script
+ * @throws Error naming the line when a step isn't one of those, `tap` isn't first, or `encounter`
+ *   follows `tap`; StopSignal when F8 stops the loop
  */
-PlayScript(path, a) {
-    for i, line in StrSplit(FileRead(path, "UTF-8"), "`n", "`r") {
-        step := Trim(RegExReplace(line, ";.*$"))
-        if (step = "")
+PlayScript(steps, a, from) {
+    fromTap := PlaysFromTap(steps)
+    for i, s in steps {
+        step := s.step
+        if (step = "tap") {
+            if (i > 1)
+                throw Error("line " s.line ": tap must be the first step")
+            Log("script plays from the tap")
             continue
-        if !RegExMatch(step, "i)^(?:(encounter)|(wait|[WASD](?:\+[WASD])*)\s+(\d+))$", &m)
-            throw Error("line " i " isn't a step: " step)
+        }
+        if !RegExMatch(step, "^(?:(encounter)|(wait|[wasd](?:\+[wasd])*)\s+(\d+))$", &m)
+            throw Error("line " s.line " isn't a step: " step)
+        if (m[1] != "" && fromTap)
+            throw Error("line " s.line ": encounter can't follow tap")
         CheckStop()
-        Log(Format("step at +{} s: {}", Secs(a.changed, A_TickCount), step))
+        Log(Format("step at +{} s: {}", Secs(from, A_TickCount), step))
         if (m[1] != "") {
             ; Captures back to back, without a poll's wait between them: every moment the walk
             ; starts late is one the team spends short of the boss.
             shown := 0
-            while (A_TickCount - a.changed < N("StartWaitMs")) {
+            while (A_TickCount - from < N("StartWaitMs")) {
                 CheckStop()
                 at := A_TickCount
                 buf := TimedCapture()
@@ -478,15 +534,20 @@ PlayScript(path, a) {
                     break
                 }
             }
-            Log(shown ? Format("map showing at +{} s", Secs(a.changed, shown))
+            Log(shown ? Format("map showing at +{} s", Secs(from, shown))
                 : "script stopped: no map " N("StartWaitMs") " ms after the scene change")
             if !shown
                 return
             continue
         }
         if (m[2] = "wait") {
+            ; A capture can overrun a wait's end, so a tap script's timing never waits on one.
+            if fromTap {
+                Wait(Integer(m[3]))
+                continue
+            }
             if !Watch(a, Integer(m[3])) {
-                Log(Format("script stopped at +{} s: the encounter has ended", Secs(a.changed, A_TickCount)))
+                Log(Format("script stopped at +{} s: the encounter has ended", Secs(from, A_TickCount)))
                 return
             }
             continue
@@ -496,7 +557,7 @@ PlayScript(path, a) {
             keys.Push("KEYCODE_" k)
         HoldKeys(keys, Integer(m[3]))
     }
-    Log(Format("script done at +{} s", Secs(a.changed, A_TickCount)))
+    Log(Format("script done at +{} s", Secs(from, A_TickCount)))
 }
 
 /**
@@ -552,7 +613,44 @@ Settle(a, result) {
         Tries.Delete(a.num)
     } else {
         Fails += 1
+        NoteLowest(a.num, hp)
     }
+}
+
+/**
+ * Fills Lowest from RunsFile: each stage's lowest boss health over its lost tries, by NoteLowest.
+ * A file that can't be read, or that has no boss_hp_pct column, leaves Lowest empty.
+ */
+LoadLowest() {
+    global Lowest
+    Lowest := Map()
+    try text := FileRead(A_ScriptDir "\" Cfg["RunsFile"], "UTF-8")
+    catch
+        return
+    cols := Map()
+    for i, line in StrSplit(text, "`n", "`r") {
+        f := StrSplit(line, ",")
+        if (i = 1) {
+            for j, name in f
+                cols[name] := j
+            if !(cols.Has("chapter") && cols.Has("stage") && cols.Has("result") && cols.Has("boss_hp_pct"))
+                return
+            continue
+        }
+        if (f.Length >= cols["boss_hp_pct"] && f[cols["result"]] = "fail")
+            NoteLowest(f[cols["chapter"]] "-" f[cols["stage"]], f[cols["boss_hp_pct"]])
+    }
+}
+
+/**
+ * Keeps a lost try's boss health in Lowest when it is the stage's lowest. 0 is skipped: on a loss
+ * the bar drains on the defeat screen, so 0 is a misread.
+ * @param num the stage's number, e.g. "rift-6"
+ * @param hp the boss's health in percent; empty when unread
+ */
+NoteLowest(num, hp) {
+    if (IsInteger(hp) && hp > 0 && hp < Lowest.Get(num, 101))
+        Lowest[num] := Integer(hp)
 }
 
 /**
