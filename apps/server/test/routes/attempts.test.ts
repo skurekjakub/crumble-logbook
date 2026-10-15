@@ -4,7 +4,7 @@ import { join } from "node:path";
 import type { Attempts } from "@crumble/schema";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { createApp } from "../../src/app";
-import { createAttemptsRepo, parseIni } from "../../src/repos/attempts";
+import { createAttemptsRepo, parseIni, runsPath } from "../../src/repos/attempts";
 import { createServices } from "../../src/services";
 import { readJson, testStore } from "../helpers";
 
@@ -152,6 +152,16 @@ describe("GET /api/attempts", () => {
     const none = { available: false, rule: { minScore: null, checkAtS: null }, attempts: [] };
     expect(await getAttempts()).toEqual(none);
     expect(await getAttempts(null)).toEqual(none);
+  });
+});
+
+describe("runsPath", () => {
+  it("resolves the runs file the INI names, else the macro's default, whether or not it exists", () => {
+    expect(runsPath(dir)).toBe(join(dir, "conquest-runs.csv"));
+
+    write("conquest-loop.ini", ["[Run]", "RunsFile=runs.csv"]);
+
+    expect(runsPath(dir)).toBe(join(dir, "runs.csv"));
   });
 });
 

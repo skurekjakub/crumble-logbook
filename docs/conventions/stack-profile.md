@@ -13,8 +13,8 @@ this stack: the versions to look up rather than remember, the skills to load, an
 - `apps/server`: Hono 4 over SQLite, through Node's `node:sqlite` and drizzle-orm 1.0 beta
   (`drizzle-orm/node-sqlite`), run with `tsx`. Layers are `routes → services → repos → db`, held by
   `test/architecture.test.ts`. Content types are declared once in `src/registry.ts`. `src/importers/`
-  loads research records; `src/cli/` holds the import, snapshot and Vercel build commands;
-  `src/vercel.ts` is the read-only deployment.
+  loads research records; `src/cli/` holds the commands the package scripts run; `src/vercel.ts` is
+  the read-only deployment.
 - `apps/web`: React 19, TanStack Router file routes (`src/routes/`, generated `src/routeTree.gen.ts`),
   TanStack Query, Hono's typed client `hc<AppType>` (`src/api/client.ts`), Vite 8. Charts are
   hand-written SVG components; there is no chart library. Styles are plain CSS in `src/styles/`, read

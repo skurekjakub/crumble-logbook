@@ -16,6 +16,7 @@
     "db:export": "tsx src/cli/export.ts",
     "db:restore": "tsx src/cli/restore.ts",
     "db:scope": "tsx src/cli/snapshot-scope.ts",
+    "cutoff": "tsx src/cli/cutoff.ts",
     "build:vercel": "tsx src/cli/build-vercel.ts"
   },
   "dependencies": {

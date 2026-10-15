@@ -8,7 +8,7 @@ import {
   medianCycle,
   scoreAt,
   type CheckpointFit,
-  type CutoffAnalysis,
+  type CutoffFitted,
   type CutoffRule,
 } from "../src/cutoff";
 
@@ -35,8 +35,6 @@ interface RunSpec {
   curve: CurvePoint[];
   paceScore?: number;
 }
-
-type Fitted = Extract<CutoffAnalysis, { ok: true }>;
 
 /**
  * Samples a growth function every half second, most seconds left first.
@@ -159,7 +157,7 @@ const CUT_RUNS: RunSpec[] = Array.from({ length: 99 }, () => ({
  * @returns the analysis
  * @throws if the analysis refuses
  */
-function analyze(specs: readonly RunSpec[]): Fitted {
+function analyze(specs: readonly RunSpec[]): CutoffFitted {
   const analysis = analyzeCutoff(session([...CUT_RUNS, ...specs]), MIN);
   if (!analysis.ok) throw new Error(`refused: ${analysis.reason}`);
   return analysis;
@@ -173,7 +171,7 @@ function analyze(specs: readonly RunSpec[]): Fitted {
  * @param tLeft - the checkpoint, in seconds left
  * @returns the fit; undefined when the analysis has none
  */
-function fitAt(analysis: Fitted, delta: number, tLeft: number) {
+function fitAt(analysis: CutoffFitted, delta: number, tLeft: number) {
   return analysis.fits.find((f) => f.delta === delta)?.checkpoints.find((c) => c.tLeft === tLeft);
 }
 
@@ -187,7 +185,7 @@ function fitAt(analysis: Fitted, delta: number, tLeft: number) {
  * @throws if the analysis has no fit there, or reports it unscorable
  */
 function scoredAt(
-  analysis: Fitted,
+  analysis: CutoffFitted,
   delta: number,
   tLeft: number,
 ): Extract<CheckpointFit, { threshold: number }> {
@@ -203,7 +201,7 @@ function scoredAt(
  * @param delta - the leniency, in seconds
  * @returns their seconds left, in the analysis's order
  */
-function scorable(analysis: Fitted, delta: number): number[] {
+function scorable(analysis: CutoffFitted, delta: number): number[] {
   const fit = analysis.fits.find((f) => f.delta === delta);
   return (fit?.checkpoints ?? []).filter((c) => c.threshold !== null).map((c) => c.tLeft);
 }
@@ -385,28 +383,36 @@ describe("analyzeCutoff", () => {
     expect(analysis.reference.map((a) => a.run)).toEqual(analysis.top.map((a) => a.run));
   });
 
-  it("refuses a reference set under 5 sample runs", () => {
-    expect(analyzeCutoff(session(CUT_RUNS), MIN)).toMatchObject({
+  it("refuses a reference set under 5 sample runs, counting the runs read and the sample runs a fit needs", () => {
+    expect(analyzeCutoff(session(CUT_RUNS), MIN)).toEqual({
       ok: false,
       reason: "small-reference",
+      samples: 0,
+      others: 99,
+      samplesNeeded: 81,
     });
-    expect(analyzeCutoff(session([...CUT_RUNS, ...leaders(), ...field(75)]), MIN)).toMatchObject({
+    expect(analyzeCutoff(session([...CUT_RUNS, ...leaders(), ...field(75)]), MIN)).toEqual({
       ok: false,
       reason: "small-reference",
+      samples: 80,
+      others: 99,
+      samplesNeeded: 81,
     });
     expect(analyzeCutoff(session([...CUT_RUNS, ...leaders(), ...field(76)]), MIN)).toMatchObject({
       ok: true,
     });
   });
 
-  it("refuses a file with no pruned run to measure the cut-run cycle on", () => {
+  it("refuses a file with no pruned run to measure the cut-run cycle on, counting the runs read", () => {
     expect(analyzeCutoff(session([...leaders(), ...field(95)]), MIN)).toEqual({
       ok: false,
       reason: "no-cut-cycle",
+      samples: 100,
+      others: 0,
     });
   });
 
-  it("refuses a file with no played-out run followed by another within 300 s", () => {
+  it("refuses a file with no played-out run followed by another within 300 s, counting the runs read", () => {
     const start = CUT_RUNS.length * CUT_S;
     const played = session([...leaders(), ...field(95)]).map((run, i) => ({
       ...run,
@@ -416,6 +422,8 @@ describe("analyzeCutoff", () => {
     expect(analyzeCutoff([...session(CUT_RUNS), ...played], MIN)).toEqual({
       ok: false,
       reason: "no-kept-cycle",
+      samples: 100,
+      others: 99,
     });
   });
 
@@ -545,6 +553,24 @@ describe("analyzeCutoff", () => {
     });
   });
 
+  it("names each leniency's best qualifying rule, and chooses the best of them", () => {
+    const gapped = curve(paced(), 54).filter(([t]) => t >= 43.5 || t <= 40.5);
+    const analysis = analyze([
+      ...leaders((i) => (i === 2 ? gapped : curve(paced(), 54))),
+      ...field(30, () => curve(paced(behindBetween(46, 60)), 54)),
+      ...field(40, () => curve(paced(behindBetween(41, 44)), 54)),
+      ...field(25, () => curve(paced(), 54)),
+    ]);
+
+    expect(analysis.fits.map((fit) => [fit.delta, fit.best?.delta, moments(fit.best)])).toEqual([
+      [0.5, 0.5, [52.5]],
+      [1, 1, [52.5, 42.5]],
+      [1.5, 1.5, [52.5, 42.5]],
+      [2, 2, [50, 42.5]],
+    ]);
+    expect(analysis.best).toEqual(analysis.fits.find((fit) => fit.delta === 1.5)!.best);
+  });
+
   it("breaks a tie in hours toward the later checkpoints", () => {
     const analysis = analyze([
       ...leaders(),
@@ -570,6 +596,7 @@ describe("analyzeCutoff", () => {
 
     expect(fitAt(analysis, 0.5, 40)?.threshold).toBeNull();
     expect(analysis.best).toBeNull();
+    expect(analysis.fits.map((fit) => fit.best)).toEqual(analysis.fits.map(() => null));
   });
 });
 

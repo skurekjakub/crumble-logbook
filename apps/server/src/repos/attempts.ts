@@ -142,6 +142,48 @@ export function parseAttempts(
 }
 
 /**
+ * Reads the macro's INI.
+ *
+ * @param dir - the macro's folder
+ * @returns section → key → value; empty when there is no INI
+ */
+function readIni(dir: string): Map<string, Map<string, string>> {
+  const path = join(dir, INI);
+  return existsSync(path)
+    ? parseIni(readFileSync(path, "utf-8"))
+    : new Map<string, Map<string, string>>();
+}
+
+/**
+ * Resolves one of the files the macro writes, as its INI's `[Run]` section names it.
+ *
+ * @param dir - the macro's folder
+ * @param ini - its parsed INI
+ * @param key - the `[Run]` key naming the file
+ * @param fallback - the macro's default file name
+ * @returns the file's path in the folder, whether or not it exists
+ */
+function runFile(
+  dir: string,
+  ini: Map<string, Map<string, string>>,
+  key: "RunsFile" | "CurvesFile",
+  fallback: string,
+): string {
+  return join(dir, ini.get("Run")?.get(key) ?? fallback);
+}
+
+/**
+ * Resolves the runs file {@link AttemptsRepo.read} reads: the INI's `[Run] RunsFile`, else the
+ * macro's default.
+ *
+ * @param dir - the macro's folder
+ * @returns the file's path, whether or not it exists
+ */
+export function runsPath(dir: string): string {
+  return runFile(dir, readIni(dir), "RunsFile", DEFAULT_RUNS);
+}
+
+/**
  * Builds an {@link AttemptsRepo} over the macro's folder.
  *
  * @param dir - the folder holding the macro's INI and the CSVs it writes; null where there is
@@ -154,21 +196,17 @@ export function createAttemptsRepo(dir: string | null): AttemptsRepo {
     read() {
       const none: PaceRule = { minScore: null, checkAtS: null };
       if (!dir) return { available: false, rule: none, attempts: [] };
-      const iniPath = join(dir, INI);
-      const ini = existsSync(iniPath)
-        ? parseIni(readFileSync(iniPath, "utf-8"))
-        : new Map<string, Map<string, string>>();
+      const ini = readIni(dir);
       const prune = ini.get("Prune");
-      const run = ini.get("Run");
       const minScore = iniNumber(prune?.get("MinScore"));
       const rule: PaceRule = {
         minScore: minScore === null ? null : Math.round(minScore),
         checkAtS: iniNumber(prune?.get("CheckAtS")),
       };
-      const runsPath = join(dir, run?.get("RunsFile") ?? DEFAULT_RUNS);
-      if (!existsSync(runsPath)) return { available: false, rule, attempts: [] };
-      const curves = groupCurves(csvRows(join(dir, run?.get("CurvesFile") ?? DEFAULT_CURVES)));
-      return { available: true, rule, attempts: parseAttempts(csvRows(runsPath), curves) };
+      const runs = runFile(dir, ini, "RunsFile", DEFAULT_RUNS);
+      if (!existsSync(runs)) return { available: false, rule, attempts: [] };
+      const curves = groupCurves(csvRows(runFile(dir, ini, "CurvesFile", DEFAULT_CURVES)));
+      return { available: true, rule, attempts: parseAttempts(csvRows(runs), curves) };
     },
   };
 }

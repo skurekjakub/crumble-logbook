@@ -58,13 +58,13 @@ Settled while writing the tests: a run's cycle is the gap forward to the next ru
 
 ## Task 2: `pnpm conquest:cutoff`
 
-Files: `apps/server/src/cli/cutoff.ts` (new), `apps/server/package.json` (`"cutoff": "tsx src/cli/cutoff.ts"`), root `package.json` (`"conquest:cutoff": "pnpm --filter @crumble/server cutoff"`), `apps/server/test/cli/cutoff.test.ts` (new), `docs/conventions/stack-profile.md` (what `src/cli/` holds).
+Files: `apps/server/src/services/cutoff-report.ts` (new: the report, a pure function of the read attempts), `apps/server/src/cli/cutoff.ts` (new: reads the macro folder, prints, sets the exit code), `apps/server/package.json` (`"cutoff": "tsx src/cli/cutoff.ts"`), root `package.json` (`"conquest:cutoff": "pnpm --filter @crumble/server cutoff"`), `apps/server/test/services/cutoff-report.test.ts` (new), `packages/schema/src/cutoff.ts` (each fit's best rule, refusal counts), `docs/conventions/stack-profile.md` (what `src/cli/` holds).
 
 The CLI reads `createAttemptsRepo(macroDir).read()`, runs `analyzeCutoff(attempts, rule.minScore)` (with no `MinScore` in the INI, the baseline is the macro's default, `1950000000000`) and prints, per spec § 2 Report: the runs read (sample and other), the bar and the top runs, the reference set, per `δ` the best qualifying rule, the per-checkpoint table at the chosen `δ`, the chosen rule's top runs per hour against the baseline with its loss bound (marked optimistic), and the `Checkpoints=` line. A refusal prints its reason and exits 1 with no line. Its printing is a pure function the test calls on a staged fixture folder.
 
-- [ ] `rubber-duk-tests` (WRITE) writes the CLI test on a staged fixture folder (`apps/server/test/importers/fixtures/` shows the shape); seen failing.
-- [ ] `rubber-duk-backend` (IMPLEMENT) writes the CLI and scripts until it passes; `pnpm conquest:cutoff` runs against the live data.
-- [ ] `rubber-duk-review` over the diff; findings fixed.
+- [x] `rubber-duk-tests` (WRITE) writes the CLI test on a staged fixture folder (`apps/server/test/importers/fixtures/` shows the shape); seen failing.
+- [x] `rubber-duk-backend` (IMPLEMENT) writes the CLI and scripts until it passes; `pnpm conquest:cutoff` runs against the live data.
+- [x] `rubber-duk-review` over the diff; findings fixed.
 
 ## Task 3: The Attempts tab on the shared analysis
 
