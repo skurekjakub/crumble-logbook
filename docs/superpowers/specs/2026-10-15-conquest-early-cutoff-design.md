@@ -10,13 +10,13 @@ The Conquest macro (`tools/conquest-macro/`) retries the Piñata fight and ends 
 
 The top 1% means the top 1% of **finals**. The 30 s bar is not a stand-in for it: on 2026-10-15, runs at 1.28T, 1.33T and 1.38T at 30 s left, far under the 1.95T bar, played out to 3.90T, 3.99T and 3.91T, against 4.36T for a run that passed at 1.96T. Most of a final is earned after 30 s left, so the score at 30 s says little about it.
 
-Runs the macro cuts have no final, so their outcome is unknown, and the runs that play out because they passed are a filtered sample. The macro therefore plays out **every 4th run whatever its pace** (`[Prune] PlayOutEvery`, from 2026-10-15 22:18; the runs file's `sample` column marks them). The sample runs' finals are an unbiased draw of the fight's outcomes, and they alone define the target. About 500 runs give about 125 sample runs: a top 1% of one or two runs and a top 5% of about six.
+Runs the macro cuts have no final, so their outcome is unknown, and the runs that play out because they passed are a filtered sample. The macro therefore plays out **every 2nd run whatever its pace** (`[Prune] PlayOutEvery`; every 4th from 2026-10-15 22:18, every 2nd from that evening at the user's call; the runs file's `sample` column marks them). The sample runs' finals are an unbiased draw of the fight's outcomes, and they alone define the target. About 500 runs give about 250 sample runs: a top 1% of about three runs and a top 5% of about thirteen.
 
 ## Design
 
 ### 1. Gathering (running since 2026-10-15 21:48)
 
-The macro runs with the 30 s / 1.95T check, and every 4th run plays out (since 22:18). Each run's curve has about 2.4 readings a second from about 55 s left (`[Timing] AfterEnterMs=6000` holds the first read until then) to its cut at 30 s, or to 0 for a run that plays out. The earliest moment the analysis can judge is where every run has readings on both sides; the analysis computes it from the data rather than assuming one. Before 55 s left the score is under 0.2G and grows about twentyfold in two seconds, so those moments measure the fight's start time more than the run.
+The macro runs with the 30 s / 1.95T check, and every 2nd run plays out (every 4th from 22:18 until the evening's change). Each run's curve has about 2.4 readings a second from about 55 s left (`[Timing] AfterEnterMs=6000` holds the first read until then) to its cut at 30 s, or to 0 for a run that plays out. The earliest moment the analysis can judge is where every run has readings on both sides; the analysis computes it from the data rather than assuming one. Before 55 s left the score is under 0.2G and grows about twentyfold in two seconds, so those moments measure the fight's start time more than the run.
 
 ### 2. One analysis, shared: `@crumble/schema/cutoff`
 
@@ -32,13 +32,13 @@ The web's Attempts tab already ships an early-cut test (`testCut`, `scoreAt`, `C
 
 **Checkpoints.** The multiples of 2.5 s from the earliest one at which every reference run has a score at `c + δ`, down to 30 s left. The 30 s checkpoint is fitted like the rest: the data may show the 1.95T bar cutting runs that would have reached the top. A checkpoint where any reference run lacks a score is dropped and reported as unscorable, never given a threshold.
 
-**Cost of a run.** One helper measures cycles from the runs file's consecutive `time` values, median over gaps under 300 s, for a given set of runs: `cycleCut` over runs cut at 30 s, `cycleKept` over runs that played out, and the tab's runs-per-hour tile over all runs, as `summarize` does today. Under a rule, a sample run cut at checkpoint `c` costs `cycleCut − (c − 30)` seconds, and one not cut costs `cycleKept`.
+**Cost of a run.** One helper measures cycles from the runs file's consecutive `time` values, median over gaps under 300 s, for a given set of runs: `cycleCut` over pruned runs (once § 3 ships, only those cut at 30 s), `cycleKept` over runs that played out, and the tab's runs-per-hour tile over all runs, as `summarize` does today. Under a rule, a sample run cut at checkpoint `c` costs `cycleCut − (c − 30)` seconds, and one not cut costs `cycleKept`.
 
-**Choosing the rule.** The rule is `δ` and one or two checkpoints. Each candidate is applied to the sample runs, which stand for every run. It is judged by **leave-one-out over the reference set**: each reference run is judged by thresholds fitted without it, and the candidate's losses are the reference runs it would have cut. In-sample thresholds never cut a reference run, so only the leave-one-out count says anything. A candidate qualifies only with **zero losses**; among those the analysis picks the one whose sample runs cost the fewest hours (so the most top runs per hour, since every qualifying rule keeps them all), ties going to the larger `δ`, then the later checkpoints. Zero losses out of a reference set of `r` bounds the true rate at which the rule cuts a reference-like run at `1 − 0.05^(1/r)` (95%): about 39% at `r = 6`, 11% at `r = 25`. The report prints that bound beside the rule, and it is the number that says whether the data is enough.
+**Choosing the rule.** The rule is `δ` and one or two checkpoints. Each candidate is applied to the sample runs, which stand for every run. It is judged by **leave-one-out over the reference set**: each reference run is judged by thresholds fitted without it, and the candidate's losses are the reference runs it would have cut. In-sample thresholds never cut a reference run, so only the leave-one-out count says anything. A candidate qualifies only with **zero losses**; among those the analysis picks the one whose sample runs cost the fewest hours (so the most top runs per hour, since every qualifying rule keeps them all), ties going to fewer checkpoints, then the larger `δ`, then the later checkpoints. Zero losses out of a reference set of `r` bounds the true rate at which the rule cuts a reference-like run at `1 − 0.05^(1/r)` (95%): about 39% at `r = 6`, 11% at `r = 25`. The report prints that bound beside the rule, and it is the number that says whether the data is enough.
 
 **Baseline.** The INI's current rule (the 30 s check at `MinScore`), applied to the same sample runs: its hours, the top runs it would have cut, and top runs per hour.
 
-**Report.** The runs read (sample and other), `B` and the top and reference runs; per checkpoint at the chosen `δ`: `T(c)`, how many sample runs it would cut, the seconds those cuts save, and the leave-one-out losses; per `δ`, the best qualifying rule. For the chosen rule: top runs per hour against the baseline, the loss bound, and the INI line (§ 3). With no runs file, a reference set under 5 sample runs, or no qualifying rule, it reports why and no line.
+**Report.** The runs read (sample and other), `B` and the top and reference runs; per checkpoint at the chosen `δ`: `T(c)`, how many sample runs it would cut, the seconds those cuts save, and the leave-one-out losses; per `δ`, the best qualifying rule. For the chosen rule: top runs per hour against the baseline, the loss bound, and the INI line (§ 3). With no runs file, a reference set under 5 sample runs, no measurable cycle for a pruned or a played-out run, or no qualifying rule, it reports why and no line.
 
 ### 3. The macro: `[Prune] Checkpoints`, once the data earns it
 
@@ -63,7 +63,7 @@ The tab reads the rule as `checkpoints: { tLeft, minScore }[] | null` (null when
 
 - **A CLI-only analysis on the server** (`services/cutoff.ts`): would sit beside the tab's `testCut` with a different margin, grid and interpolation, two answers on one data set. One shared module instead.
 - **The pass at the 30 s bar as the target**: measurable on every run, but runs far under the bar finished within 10% of a run that passed it, so it predicts the final poorly. The sample runs measure the real target.
-- **Playing every run out**: the cleanest data, at about twice the time per run. Every 4th run (the user's call) gives an unbiased sample at about 7 s a run.
+- **Playing every run out**: the cleanest data, at about twice the time per run. Every 2nd run (the user's call, after every 4th at first) gives an unbiased sample twice as fast, at about half the extra time per run.
 - **A percentage leniency**: 5% is 0.03 s of fight at 55 s left and 0.13 s at 45 s, smallest where runs differ most. A time shift means the same thing at every moment.
 - **Applying every checkpoint**: each extra checkpoint adds its own out-of-sample risk (a new reference-like run falls under the minimum of 25 about one time in 26), so the rule takes at most two, chosen by leave-one-out.
 
@@ -98,4 +98,5 @@ Ripple, second step: `tools/conquest-macro/conquest-loop.ahk` and `.ini`, `tools
 
 Unknowns pass: skipped by the person.
 
-- About 125 sample runs out of 500 give a reference set of about six, so the loss bound will be wide (about 39%). Whether to play out a larger share once the first numbers are in is the user's call.
+- About 250 sample runs out of 500 give a reference set of about thirteen, so the loss bound stays wide (about 21%). Whether to gather longer once the first numbers are in is the user's call.
+- The printed bound is optimistic: it treats the chosen rule as fixed in advance, but the analysis picks the cheapest of every zero-loss candidate, and the leave-one-out trials share runs. The report says so; whether a stricter bound is worth building is the user's call.

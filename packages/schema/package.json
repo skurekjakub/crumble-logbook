@@ -6,7 +6,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./migrations": "./src/migrations-path.ts",
-    "./power": "./src/power.ts"
+    "./power": "./src/power.ts",
+    "./cutoff": "./src/cutoff.ts"
   },
   "scripts": {
     "typecheck": "tsc -p .",
