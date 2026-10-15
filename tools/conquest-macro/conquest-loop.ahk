@@ -27,7 +27,7 @@ global DEFAULTS := Map(
     "Timing", Map("PollMs", "2000", "AfterEnterMs", "6000", "MinFightMs", "66000", "MaxFightMs", "100000",
                   "RecoverStepMs", "4000", "LaunchWaitMs", "90000", "ReadFromMs", "0", "GoneMs", "3000",
                   "ConfirmWaitMs", "1500", "AfterEndMs", "4000", "FinalWaitMs", "8000"),
-    "Prune", Map("MinScore", "1950000000000", "CheckAtS", "30", "LateS", "3", "PlayOutEvery", "4", "Node", "node"),
+    "Prune", Map("MinScore", "1950000000000", "CheckAtS", "30", "LateS", "3", "PlayOutEvery", "2", "Node", "node"),
     "Run", Map("MaxRuns", "0", "StuckLimit", "3", "GreyLimit", "8", "RecoverTries", "8",
                "Activity", "com.devsisters.plugin.OvenUnityPlayerActivity", "LogFile", "conquest-loop.log",
                "RunsFile", "conquest-runs.csv", "CurvesFile", "conquest-curves.csv")
@@ -274,7 +274,7 @@ TrackFight(rec, deadline) {
             continue
         if !rec.playOut
             return "behind"
-        Log("pace: behind, but every " N("PlayOutEvery") "th run plays out")
+        Log("pace: behind, but a sample run (PlayOutEvery=" N("PlayOutEvery") ") plays out")
     }
 }
 
