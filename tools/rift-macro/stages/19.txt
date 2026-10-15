@@ -1,0 +1,7 @@
+; Dimensional rift 19: rift 7's and rift 13's boss, not yet recorded, and rift 7's walk (see 7.txt):
+; down, then down-left, from the tap.
+; Untested.
+tap
+wait 1600
+S 500
+S+A 4500

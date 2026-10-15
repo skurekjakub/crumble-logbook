@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import type { HudTemplates } from "../src/hud.ts";
 import { emptyTemplates } from "../src/hud.ts";
 import { READS } from "../src/reads.ts";
 import { learnRift, readRift } from "../src/rift.ts";
@@ -36,10 +37,14 @@ describe("readRift", () => {
     expect(readRift(blankScreen(), templates)).toEqual({ ok: false, reason: "not on screen" });
   });
 
-  it("reads with its own font, not the chapter stages' repeat font", () => {
+  it("matches a digit its font hasn't learned against the chapter stages' repeat font", () => {
+    let partial = { ...stageTemplates(), riftRepeat: [] as HudTemplates["riftRepeat"] };
+    const taught = blankScreen();
+    drawNumber(taught, "16", RIFT_REPEAT_LAYOUT);
+    partial = learnRift(taught, "16", partial);
     const screen = blankScreen();
-    drawNumber(screen, "12", RIFT_REPEAT_LAYOUT);
-    expect(() => readRift(screen, stageTemplates())).toThrow(/no digit templates/);
+    drawNumber(screen, "17", RIFT_REPEAT_LAYOUT);
+    expect(readRift(screen, partial)).toEqual({ ok: true, value: 17 });
   });
 
   it("prints its reading as a rift line", () => {

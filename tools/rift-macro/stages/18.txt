@@ -1,0 +1,7 @@
+; Dimensional rift 18, GingerCraven: rift 6's and rift 12's boss, and rift 6's walk, which won
+; there on 2026-10-13 (see 6.txt): a straight right hold from the tap. On 2026-10-15 the team was
+; below the stage's 15% power line, so it deals 5% of its damage until the power passes it.
+; Untested.
+tap
+wait 1600
+D 1000

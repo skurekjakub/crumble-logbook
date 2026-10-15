@@ -1,6 +1,7 @@
 ; Dimensional rift 16, Rowdy Trucks: rift 4's and rift 10's boss. The user's walk for them: down-left
 ; at once, from the tap, so the trucks' charge rams a packed column (see 4.txt and 10.txt).
-; Untested.
+; Beaten with this walk on 2026-10-15 within its first 8 tries (2% to 66% left on the others); the
+; loop logged the win as a loss, so which try won is unknown.
 tap
 wait 1600
 S+A 4500

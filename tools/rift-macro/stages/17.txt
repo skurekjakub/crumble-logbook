@@ -2,6 +2,7 @@
 ; slightly above it (see 5.txt). The user's rule (2026-10-15): walk right on top of it, with the
 ; team's centre on the model, not meeting it face to face. Rift 5's W+D 500, D 1000 from the map,
 ; held longer here since it plays from the tap.
+; Beaten on 2026-10-15 while the loop, misreading 17 as 16, played 16's walk: this one never played.
 ; Untested.
 tap
 wait 1600

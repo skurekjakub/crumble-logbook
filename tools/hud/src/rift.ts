@@ -5,6 +5,7 @@
  *
  * @module
  */
+import type { DigitTemplate } from "./digits.ts";
 import type { Field } from "./glyphs.ts";
 import type { HudTemplates, Reading } from "./hud.ts";
 import { learnDigits, readDigits } from "./hud.ts";
@@ -29,9 +30,24 @@ export const RIFT_REPEAT: Field = {
 
 /** The font the rift's number is read in: its key in `templates.json`. */
 const FONT = "riftRepeat";
+/** The font that stands in for a digit the rift's hasn't learned: the same shapes, drawn larger. */
+const FALLBACK = "stageRepeat";
 
 /** A rift stage's number has at most this many digits. */
 const MAX_DIGITS = 3;
+
+/**
+ * Picks the templates the rift's number is matched against: the rift's own, and for each digit it
+ * hasn't learned yet, the chapter stages' repeat font's. Without one, an unlearned digit could
+ * pass for its nearest learned one, as a 7 once read as a 6.
+ *
+ * @param templates - the learned digits.
+ * @returns the templates to match against.
+ */
+function riftDigits(templates: HudTemplates): DigitTemplate[] {
+  const learned = new Set(templates[FONT].map((t) => t.digit));
+  return [...templates[FONT], ...templates[FALLBACK].filter((t) => !learned.has(t.digit))];
+}
 
 /**
  * Reads the rift stage's number under Summon Dimensional Boss.
@@ -40,10 +56,10 @@ const MAX_DIGITS = 3;
  * @param templates - the learned digits.
  * @returns the stage's number, or why it can't be read: not on screen, a hidden or unclear
  *   digit, or digits that aren't one stage number.
- * @throws Error when the font has no templates.
+ * @throws Error when neither font has templates.
  */
 export function readRift(screen: Screen, templates: HudTemplates): Reading {
-  const read = readDigits(screen, RIFT_REPEAT, templates[FONT]);
+  const read = readDigits(screen, RIFT_REPEAT, riftDigits(templates));
   if (!read.ok) return read;
   if (read.groups.length !== 1 || read.digits.length > MAX_DIGITS || read.digits[0] === "0")
     return { ok: false, reason: `digit groups ${read.groups.join(",")} aren't a rift stage` };
