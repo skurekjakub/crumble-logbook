@@ -4,9 +4,10 @@
  *   `final <n>`, each as `score ? <reason>` when it can't be read.
  * - `stage <capture>`: prints the stage's number, `stage <chapter>-<stage>`, or
  *   `stage ? <reason>`.
- * - `serve`: answers `read` and `stage` requests, a line each on stdin, until stdin closes
- *   (`serve.ts`).
- * - `learn <capture> score|timer|final|stage <shown>`: folds the capture's digits into
+ * - `rift <capture>`: prints the rift stage's number, `rift <stage>`, or `rift ? <reason>`.
+ * - `serve`: answers `read`, `stage` and `rift` requests, a line each on stdin, until stdin
+ *   closes (`serve.ts`).
+ * - `learn <capture> score|timer|final|stage|rift <shown>`: folds the capture's digits into
  *   `templates.json`; a stage number goes to the font of the place that shows it.
  *
  * A capture is the raw dump of `adb exec-out screencap` or the PNG of `screencap -p`.
@@ -21,12 +22,15 @@ import type { HudTemplates } from "./hud.ts";
 import { emptyTemplates, FONT_NAMES } from "./hud.ts";
 import { isRead, READS } from "./reads.ts";
 import { decodeScreen } from "./screen.ts";
+import { learnRift } from "./rift.ts";
 import { serve } from "./serve.ts";
 import { learnStage } from "./stage.ts";
 
 const TEMPLATES = join(import.meta.dirname, "..", "templates.json");
 const USAGE =
-  "usage: cli.ts read <capture> | cli.ts stage <capture> | cli.ts serve | cli.ts learn <capture> score|timer|final|stage <shown>";
+  "usage: cli.ts read|stage|rift <capture> | cli.ts serve | cli.ts learn <capture> score|timer|final|stage|rift <shown>";
+/** How each non-Conquest field learns its digits from a capture. */
+const LEARNS = { stage: learnStage, rift: learnRift } as const;
 const CONQUEST_FONTS = Object.keys(CONQUEST_FIELDS) as (keyof typeof CONQUEST_FIELDS)[];
 
 /**
@@ -80,12 +84,13 @@ async function main(args: string[]): Promise<number> {
     return 0;
   }
   const conquestField = CONQUEST_FONTS.find((n) => n === field);
-  if (command === "learn" && path && (conquestField || field === "stage") && shown) {
+  const otherField = field === "stage" || field === "rift" ? field : undefined;
+  if (command === "learn" && path && (conquestField || otherField) && shown) {
     const screen = decodeScreen(readFileSync(path));
     const templates = loadTemplates();
     const learned = conquestField
       ? learnField(screen, conquestField, shown, templates)
-      : learnStage(screen, shown, templates);
+      : LEARNS[otherField!](screen, shown, templates);
     const out = Object.fromEntries(FONT_NAMES.map((n) => [n, rounded(learned[n])]));
     writeFileSync(TEMPLATES, JSON.stringify(out) + "\n");
     process.stdout.write(`learned ${field} ${shown}\n`);

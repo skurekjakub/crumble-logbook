@@ -1,6 +1,6 @@
 ---
 name: stage-macro
-description: Use when operating, monitoring or resuming the AutoHotkey stage boss loop (tools/stage-macro) — "resume the macro", "start the loop from 362-1", "keep pushing stages", "watch the macro", "write the stage scripts", "the loop says waiting for a script", "it keeps losing 361-2", "restart everything", "I restarted the emulator" — or when a stage-loop log line, a recording or a stage script needs acting on. Not for changing the loop's code: that is feature-development, project-bugfixing or codebase-refactoring, and this skill gets updated after.
+description: Use when operating, monitoring or resuming the AutoHotkey stage boss loop (tools/stage-macro) or the dimensional rift's (tools/rift-macro) — "resume the macro", "push the rift", "start the loop from 362-1", "keep pushing stages", "watch the macro", "write the stage scripts", "the loop says waiting for a script", "it keeps losing 361-2", "restart everything", "I restarted the emulator" — or when a stage-loop log line, a recording or a stage script needs acting on. Not for changing the loop's code: that is feature-development, project-bugfixing or codebase-refactoring, and this skill gets updated after.
 ---
 
 # Operating the stage boss loop
@@ -26,7 +26,7 @@ for, the launch command, or an operating lesson changes, update this file (and `
 |---|---|
 | AutoHotkey v2 | `C:\Users\skure\AppData\Local\Programs\AutoHotkey\v2\AutoHotkey64.exe` |
 | adb | `C:\Program Files\Netease\MuMuPlayer\nx_main\adb.exe`, serial `127.0.0.1:5557` |
-| Loop's working dir | `tools/stage-macro/` (log, runs CSV, state file, `recordings\`, `stops\`, all gitignored) |
+| Loop's working dir | `tools/stage-macro/`, or `tools/rift-macro/` for the rift (log, runs CSV, state file, `recordings\`, `stops\`, all gitignored) |
 | Watcher | `.claude/skills/stage-macro/watch.sh` (Monitor source) |
 | Frame grid | `.claude/skills/stage-macro/frames.sh <video> <out.png> [seconds…]` |
 
@@ -38,27 +38,32 @@ for, the launch command, or an operating lesson changes, update this file (and `
 3. To resume from a given stage (the user beat one by hand, or names where to start), write it to
    `tools/stage-macro/stage-loop.state` (e.g. `362-1`, nothing else) with the Write tool while the
    loop is stopped. Otherwise leave the state file alone: the loop carries it.
-   - The dimensional rift is its own set: write `rift-<stage>` (e.g. `rift-4`), and its scripts
-     live in `stages/rift/`. The user's rule for the rift: each new stage gets one unscripted,
-     recorded try, then a straight walk onto the boss from that recording, and the loop retries
-     it until the team's power reaches the stage's line and it wins. Do this for every rift stage
-     as the game advances, without asking. Write the next chapter stage back when the user
-     returns to the chapters. The rift has its own purple Summon Dimensional Boss button, read
-     and tapped as `RiftSummon` in `[Detect]` and `[Points]` (sampled 2026-10-12); the boss HUD
-     is the stages' one. Rift 4's walk copies a video clear whose times count from the boss's
-     HUD; it still starts at the map (`encounter`) and holds longer, because the user wants the
-     keys down the moment the map loads, never waiting for the HUD. The loss there is power (the
-     15% damage cut), not the walk.
+   - **The dimensional rift has its own macro**, `tools/rift-macro/` (its README): the same
+     boss loop and script format, its own ini, log (`rift-loop.log`), state (`rift-loop.state`,
+     e.g. `rift-12`) and scripts (`tools/rift-macro/stages/<stage>.txt`). Launch it like the
+     stage loop with `rift-loop.ahk` from `tools/rift-macro`, and pass its log to the watcher
+     (`watch.sh <log>`). Never run both macros at once. It reads the rift stage off "Repeating
+     Dimensional Rift Stage N..." under the button, so it follows the game on its own.
+   - The user's rule for the rift: each new stage gets a walk at once, and the loop retries it
+     until the team's power reaches the stage's line and it wins. Do this for every rift stage
+     as the game advances, without asking. The rift's bosses come round every 6 stages (Rowdy
+     Trucks on 4, 10 and 16; GingerCraven on 6 and 12), so a new stage copies the walk that beat
+     its boss before: the trucks get the immediate down-left hold from the tap (`10.txt`), the
+     user's call on 2026-10-15. Write a script for the next stage before the game gets there.
+     Rift 4's walk copies a video clear whose times count from the boss's HUD; the user wants the
+     keys down the moment the map loads, never waiting for the HUD.
    - **A rift stage is winnable only from its 15% power line.** Below it the team deals 5% of
      its damage and no walk or luck helps; the per-stage lines are on crumb's Dimensional Rift
      table (Stages page, season 2: rift 4 from 9.405G, rift 5 from 11.517G). On 2026-10-12 rift
      4 lost hundreds of tries at about 8.7G and fell within minutes of the power passing 9.4G.
      Compare the lobby power with the line before blaming a script.
    - **Auto Summon must be off in the rift too.** With it on, a win sends the game straight into
-     the next rift stage's boss, so the loop never sees the pause that marks a pass, logs a fail,
-     and plays the old stage's script against the new boss: rift 4's win on 2026-10-12 went
-     unnoticed for about a dozen tries. Since the loop never reads a rift stage's number, check
-     a screenshot when the results jump. The checkbox sat at 800,376 during a rift fight.
+     the next rift stage's boss and no walk plays. The checkbox sat at 653,532 beside the button
+     on 2026-10-15.
+   - **A rift win is often logged as a fail**: the button comes back within seconds of a win.
+     On 2026-10-15 the game went from rift 12 to 16 while the stage loop logged only losses. The
+     rift macro's read on the button corrects it (`read rift-N … where rift-M was expected`);
+     when that line shows, make sure `stages/<N>.txt` exists.
 4. Check the game: Summon Boss screen or clearing, and **Auto Summon off** (below).
 5. Arm the watcher, then launch:
    - `Monitor` with `bash "C:/repositories/crumble-logbook/.claude/skills/stage-macro/watch.sh"`,

@@ -13,7 +13,9 @@ import type { HudTemplates } from "./hud.ts";
 import { isRead, READS } from "./reads.ts";
 import { decodeScreen } from "./screen.ts";
 
-const USAGE = "usage: read <capture> | stage <capture>";
+const USAGE = `usage: ${Object.keys(READS)
+  .map((command) => `${command} <capture>`)
+  .join(" | ")}`;
 
 /**
  * Answers one request.

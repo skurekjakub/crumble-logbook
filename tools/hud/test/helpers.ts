@@ -1,8 +1,8 @@
 /**
  * Draws synthetic screens: the fight's score in its fill colour and the countdown in white, the
- * results' final score in yellow, and a stage's number in the top bar or under Summon Boss, in a
- * blocky 5x7 font on a dark backdrop, laid out like the game's (commas and dots on the baseline,
- * hyphens at mid-height). Also learns the stage font off them, and dumps a screen the way
+ * results' final score in yellow, and a stage's number in the top bar or under Summon Boss, or the
+ * rift's under Summon Dimensional Boss, in a blocky 5x7 font on a dark backdrop, laid out like the game's (commas and dots on the baseline,
+ * hyphens at mid-height). Also learns the stage and rift fonts off them, and dumps a screen the way
  * `adb exec-out screencap` does.
  *
  * @module
@@ -10,6 +10,7 @@
 import { FINAL, SCORE, TIMER } from "../src/conquest.ts";
 import type { HudTemplates } from "../src/hud.ts";
 import { emptyTemplates } from "../src/hud.ts";
+import { learnRift, RIFT_REPEAT } from "../src/rift.ts";
 import type { Screen } from "../src/screen.ts";
 import { learnStage, STAGE_BAR, STAGE_REPEAT } from "../src/stage.ts";
 
@@ -86,6 +87,13 @@ export const STAGE_REPEAT_LAYOUT: Layout = {
   left: STAGE_REPEAT.region.x + 230,
   top: STAGE_REPEAT.region.y + 14,
   ink: [0xff, 0xe6, 0x00],
+};
+
+/** The rift's stage number under Summon Dimensional Boss: the repeat line's glyphs, lower down. */
+export const RIFT_REPEAT_LAYOUT: Layout = {
+  ...STAGE_REPEAT_LAYOUT,
+  left: RIFT_REPEAT.region.x + 300,
+  top: RIFT_REPEAT.region.y + 15,
 };
 
 const BACKDROP: Rgb = [0x10, 0x10, 0x20];
@@ -180,6 +188,21 @@ export function stageTemplates(): HudTemplates {
       drawNumber(screen, shown, layout);
       templates = learnStage(screen, shown, templates);
     }
+  }
+  return templates;
+}
+
+/**
+ * Learns rift templates from synthetic screens that show every digit under Summon Dimensional Boss.
+ *
+ * @returns the learned templates.
+ */
+export function riftTemplates(): HudTemplates {
+  let templates = emptyTemplates();
+  for (const shown of ["123", "456", "789", "10"]) {
+    const screen = blankScreen();
+    drawNumber(screen, shown, RIFT_REPEAT_LAYOUT);
+    templates = learnRift(screen, shown, templates);
   }
   return templates;
 }

@@ -1,0 +1,9 @@
+; Dimensional rift 17, Well-Aged Archangel: rift 5's boss, a big model right of the team and
+; slightly above it (see 5.txt). The user's rule (2026-10-15): walk right on top of it, with the
+; team's centre on the model, not meeting it face to face. Rift 5's W+D 500, D 1000 from the map,
+; held longer here since it plays from the tap.
+; Untested.
+tap
+wait 1600
+W+D 600
+D 1300

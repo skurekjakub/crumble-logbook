@@ -60,7 +60,7 @@ describe("serve", () => {
 
   it("answers a request that isn't a read with its usage", async () => {
     expect(await exchange(["learn x.bin stage 358-20", "stage"])).toBe(
-      "usage: read <capture> | stage <capture>\n\n".repeat(2),
+      "usage: read <capture> | stage <capture> | rift <capture>\n\n".repeat(2),
     );
   });
 });
@@ -72,6 +72,9 @@ describe("cli.ts serve", () => {
       [join(import.meta.dirname, "..", "src", "cli.ts"), "serve"],
       { input: "nope\n", encoding: "utf8" },
     );
-    expect([run.status, run.stdout]).toEqual([0, "usage: read <capture> | stage <capture>\n\n"]);
+    expect([run.status, run.stdout]).toEqual([
+      0,
+      "usage: read <capture> | stage <capture> | rift <capture>\n\n",
+    ]);
   });
 });

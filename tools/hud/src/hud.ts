@@ -18,6 +18,7 @@ export interface HudTemplates {
   final: DigitTemplate[];
   stageBar: DigitTemplate[];
   stageRepeat: DigitTemplate[];
+  riftRepeat: DigitTemplate[];
 }
 
 /** A font's name: its key in `templates.json`. */
@@ -30,6 +31,7 @@ export const FONT_NAMES: readonly FontName[] = [
   "final",
   "stageBar",
   "stageRepeat",
+  "riftRepeat",
 ];
 
 /** A value read off the screen, or why it can't be read. */
@@ -45,7 +47,7 @@ export type DigitsReading =
  * @returns an empty list per font.
  */
 export function emptyTemplates(): HudTemplates {
-  return { score: [], timer: [], final: [], stageBar: [], stageRepeat: [] };
+  return { score: [], timer: [], final: [], stageBar: [], stageRepeat: [], riftRepeat: [] };
 }
 
 /**

@@ -6,6 +6,7 @@
  */
 import { readFinal, readScore, readTimer } from "./conquest.ts";
 import type { HudTemplates, Reading } from "./hud.ts";
+import { readRift } from "./rift.ts";
 import type { Screen } from "./screen.ts";
 import { readStage } from "./stage.ts";
 
@@ -34,7 +35,7 @@ function line<T>(
 
 /**
  * The reads by command: `read` prints the Guild Conquest `score`, `timer` and `final`, `stage`
- * prints the stage's number as `<chapter>-<stage>`.
+ * prints the stage's number as `<chapter>-<stage>`, and `rift` the rift stage's number.
  */
 export const READS = {
   read: (screen: Screen, templates: HudTemplates): string =>
@@ -47,6 +48,8 @@ export const READS = {
       () => readStage(screen, templates),
       (s) => `${s.chapter}-${s.stage}`,
     ),
+  rift: (screen: Screen, templates: HudTemplates): string =>
+    line("rift", () => readRift(screen, templates)),
 };
 
 /**
