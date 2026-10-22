@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { AtkOrder } from "../src/components/AtkOrder";
 import { CookieName } from "../src/components/CookieName";
@@ -8,16 +8,41 @@ import { SourceChips } from "../src/components/SourceChips";
 import { indexSources, sourceLabel } from "../src/lib/sources";
 
 describe("CookieName", () => {
-  it("shows the English name with the Korean beneath it", () => {
-    const { container } = render(<CookieName kr="우유" en="Milk" />);
-    expect(screen.getByText("Milk")).toBeInTheDocument();
-    expect(container.querySelector(".kr")).toHaveTextContent("우유");
+  it("shows the short English name alone, with the full English and the Korean in its tooltip", () => {
+    const { container } = render(<CookieName kr="밀크맛 쿠키" en="Milk Cookie" />);
+    expect(container).toHaveTextContent(/^Milk$/);
+    expect(container.firstElementChild).toHaveAttribute("title", "Milk Cookie (밀크맛 쿠키)");
   });
 
-  it("shows the Korean name alone when en is null, never 'null'", () => {
-    const { container } = render(<CookieName kr="브시커" en={null} />);
+  it("shows the short English name alone on one line when inline, with the same tooltip", () => {
+    const { container } = render(<CookieName kr="밀크맛 쿠키" en="Milk Cookie" inline />);
+    expect(container).toHaveTextContent(/^Milk$/);
+    expect(container.firstElementChild).toHaveAttribute("title", "Milk Cookie (밀크맛 쿠키)");
+  });
+
+  it("shows the stored name when en is null, never blank or 'null', with no tooltip to add", () => {
+    for (const inline of [false, true]) {
+      const { container } = render(<CookieName kr="브시커" en={null} inline={inline} />);
+      expect(container).toHaveTextContent(/^브시커$/);
+      expect(container.firstElementChild).not.toHaveAttribute("title");
+      cleanup();
+    }
+  });
+
+  it("keeps the Korean line visible with showKr, in both layouts", () => {
+    for (const inline of [false, true]) {
+      const { container } = render(
+        <CookieName kr="밀크맛 쿠키" en="Milk Cookie" inline={inline} showKr />,
+      );
+      expect(screen.getByText("밀크맛 쿠키")).toHaveClass("kr");
+      expect(container).toHaveTextContent(/^Milk\s?밀크맛 쿠키$/);
+      cleanup();
+    }
+  });
+
+  it("shows no Korean line with showKr when the name is unresolved", () => {
+    const { container } = render(<CookieName kr="브시커" en={null} showKr />);
     expect(container).toHaveTextContent(/^브시커$/);
-    expect(container.textContent).not.toContain("null");
     expect(container.querySelector(".kr")).toBeNull();
   });
 });

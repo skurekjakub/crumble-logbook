@@ -30,6 +30,13 @@ export type LinkTarget =
 /** A figure the header's stamp can show. */
 export type StampStat = "updated" | "season" | "sources" | "decks";
 
+/**
+ * Which of a mode's page lists a tab sits in: `setup`, what to run (the
+ * landing page, teams, runes, gear and the player tools), or `details`,
+ * the research behind it.
+ */
+export type TabGroup = "setup" | "details";
+
 /** A sub-tab within a section. */
 export interface SectionTab {
   /** Unique within the section. */
@@ -39,6 +46,8 @@ export interface SectionTab {
   to: AppPath;
   /** The tab's route, for a link. */
   link: LinkTarget;
+  /** The page list the tab sits in. */
+  group: TabGroup;
 }
 
 /**
@@ -61,7 +70,8 @@ export interface ViewCopy {
 
 /** The views several modes share, by name. */
 export type SharedView =
-  | "overview"
+  | "setup"
+  | "findings"
   | "decks"
   | "runes"
   | "gear"
@@ -71,14 +81,20 @@ export type SharedView =
   | "counters"
   | "usage";
 
+/**
+ * The side nav's group a section is listed in: the game modes, the builds
+ * across modes, the reader's own account, and the reference pages.
+ */
+export type NavGroupId = "play" | "builds" | "you" | "reference";
+
 /** What a top-level section has, whether a game mode or a shared page. */
 interface SectionBase {
   /** The first path segment. */
   id: string;
   /** Tab label. */
   label: string;
-  /** Korean name shown in the header label instead of `label`, when known. */
-  labelKr: string | null;
+  /** The side nav group the section is listed in. */
+  navGroup: NavGroupId;
   /** The header's `<h1>`. */
   title: string;
   /** The section's concrete path: `/<id>`. */
@@ -91,7 +107,10 @@ interface SectionBase {
   lede: string | null;
   /** Figures shown in the header stamp, in order. */
   stamp: readonly StampStat[];
-  /** Sub-tabs, in order; the first is the section's landing page. Empty for none. */
+  /**
+   * Sub-tabs, in order, the Setup tabs before the Details ones; the first is
+   * the section's landing page. Empty for none.
+   */
   tabs: readonly SectionTab[];
 }
 
@@ -165,7 +184,7 @@ export interface LeaderboardConfig extends ViewCopy {
   boards: Readonly<Record<RankingBoardFilter, string>>;
 }
 
-/** A mode's rules card on its overview: the mode's `rules` mechanics. */
+/** A mode's rules card on its findings page: the mode's `rules` mechanics. */
 export interface RulesConfig {
   /** The card's heading. */
   title: string;
@@ -189,9 +208,9 @@ export interface ModeSection extends SectionBase {
   boss: BossConfig | null;
   /** The mode's leaderboard on the scores view, when it has one. */
   leaderboard: LeaderboardConfig | null;
-  /** The overview's rules card, for a mode whose record files its rules as mechanics. */
+  /** The findings page's rules card, for a mode whose record files its rules as mechanics. */
   rules: RulesConfig | null;
-  /** The heading of the overview's card holding the record's advice for the reader's account. */
+  /** The heading of the findings page's card holding the record's advice for the reader's account. */
   accountTitle: string;
   /** The stage-pushing screens, for the stage mode. */
   stage: StageConfig | null;
@@ -259,6 +278,8 @@ export interface DungeonConfig {
   exclusions: ViewCopy;
   /** How many of the highest-power cookies deploy at once. */
   firstWave: number;
+  /** How many of the lead lineup's cookies Best setup lists rune builds for. */
+  setupRunes: number;
 }
 
 /**

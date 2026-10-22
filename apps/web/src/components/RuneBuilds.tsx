@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { CURATED } from "../lib/curated";
 import type { SourceIndex } from "../lib/sources";
 import { stance } from "../lib/verdict";
 import { Clamp } from "./Clamp";
@@ -70,13 +71,15 @@ export function RuneCard({ build, sources, headingLevel, deckName, children }: R
       </div>
       <div className="rune-lines">
         <span className="k">Runes</span>
-        <span className="v">{build.lines}</span>
+        <span className="v" {...CURATED}>
+          {build.lines}
+        </span>
       </div>
-      <div className="rune-why">
+      <div className="rune-why" {...CURATED}>
         <Clamp lines={2}>{build.why}</Clamp>
       </div>
       {build.disputed ? (
-        <div className="rune-dispute muted">
+        <div className="rune-dispute muted" {...CURATED}>
           <Clamp lines={1} length={build.disputed.length + 10}>
             <b>Disputed:</b> {build.disputed}
           </Clamp>

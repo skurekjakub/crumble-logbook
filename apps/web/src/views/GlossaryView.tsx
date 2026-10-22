@@ -46,7 +46,7 @@ export function validateGlossarySearch(search: Record<string, unknown>): Glossar
  */
 function EntryName({ entry }: { entry: GlossaryEntry }) {
   if (entry.kind === "cookie" || entry.kind === "pet") {
-    return <CookieName kr={entry.kr} en={entry.en} />;
+    return <CookieName kr={entry.kr} en={entry.en} showKr />;
   }
   return (
     <span className="name-stack term">

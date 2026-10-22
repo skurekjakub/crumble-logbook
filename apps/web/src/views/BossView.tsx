@@ -98,14 +98,7 @@ export function BossView({ mode, boss }: BossViewProps) {
 
   return (
     <>
-      <ViewHeader
-        title={
-          <>
-            {boss.name} <span className="kr">{boss.kr}</span>
-          </>
-        }
-        lede={boss.lede}
-      />
+      <ViewHeader title={<span title={boss.kr}>{boss.name}</span>} lede={boss.lede} />
       <Kv
         rows={[
           ...boss.facts.map(

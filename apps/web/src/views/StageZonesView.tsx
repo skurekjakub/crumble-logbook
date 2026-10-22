@@ -11,6 +11,7 @@ import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
 import { TocLayout } from "../components/TocLayout";
 import { shortName } from "../lib/cookie-icons";
+import { CURATED } from "../lib/curated";
 import type { SourceIndex } from "../lib/sources";
 import { bracketNoteParts } from "../lib/stage";
 import { CopyHeader } from "./ModeViewHeader";
@@ -143,8 +144,8 @@ function ZoneCard({
 }) {
   return (
     <section className="card zone-card" id={zoneId(zone)} aria-labelledby={`${zoneId(zone)}-title`}>
-      <h3 id={`${zoneId(zone)}-title`}>
-        {zone.zoneIndex}. {zone.zoneEn} <span className="kr">{zone.zoneKr}</span>
+      <h3 id={`${zoneId(zone)}-title`} title={zone.zoneKr}>
+        {zone.zoneIndex}. {zone.zoneEn}
       </h3>
       <p className="zone-chapters">Chapters {chaptersOf(zone.zoneIndex, fixedFrom)}</p>
       <ul className="zslots">
@@ -156,7 +157,7 @@ function ZoneCard({
             </div>
             <CookieName kr={s.bossKr} en={s.bossEn} size={40} />
             <Bring id={s.deckId} deck={s.deckId ? decks.get(s.deckId) : undefined} mode={mode} />
-            <span className="zslot-plan">
+            <span className="zslot-plan" {...CURATED}>
               <Clamp lines={2} perLine={40}>
                 {s.plan}
               </Clamp>

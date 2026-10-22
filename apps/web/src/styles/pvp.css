@@ -154,13 +154,6 @@ table.matrix th.corner span {
   line-clamp: 2;
   overflow: hidden;
 }
-.team-head .name-stack .kr {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 10em;
-}
 table.matrix tbody th {
   position: sticky;
   left: 0;

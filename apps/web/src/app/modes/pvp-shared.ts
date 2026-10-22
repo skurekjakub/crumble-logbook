@@ -45,7 +45,7 @@ export const PVP_COPY = {
     lede: [
       "What players measured or datamined.",
       "Confidence shows how well each point is sourced.",
-      "The mode's rules are on its overview.",
+      "The mode's rules are on its Findings page.",
     ],
   },
   timeline: {
@@ -58,17 +58,18 @@ export const PVP_COPY = {
  * A PvP mode's sub-tabs.
  *
  * @param mode - the mode's id, its first path segment
- * @returns the tabs, overview first
+ * @returns the tabs, the landing page first, then the rest of Setup, then Details
  */
 export function pvpTabs(mode: "arena" | "rumble"): SectionTab[] {
   return [
-    modeTab(mode, "overview", "Overview", "/$mode"),
-    modeTab(mode, "teams", "Teams", "/$mode/teams"),
-    modeTab(mode, "counters", "Counters", "/$mode/counters"),
-    modeTab(mode, "usage", "Usage", "/$mode/usage"),
-    modeTab(mode, "runes", "Sugar runes", "/$mode/runes"),
-    modeTab(mode, "gear", "Gear", "/$mode/gear"),
-    modeTab(mode, "mechanics", "Mechanics", "/$mode/mechanics"),
-    modeTab(mode, "timeline", "Timeline", "/$mode/timeline"),
+    modeTab(mode, "setup", "Best setup", "/$mode", "setup"),
+    modeTab(mode, "teams", "Teams", "/$mode/teams", "setup"),
+    modeTab(mode, "runes", "Sugar runes", "/$mode/runes", "setup"),
+    modeTab(mode, "gear", "Gear", "/$mode/gear", "setup"),
+    modeTab(mode, "findings", "Findings", "/$mode/findings", "details"),
+    modeTab(mode, "counters", "Counters", "/$mode/counters", "details"),
+    modeTab(mode, "usage", "Usage", "/$mode/usage", "details"),
+    modeTab(mode, "mechanics", "Mechanics", "/$mode/mechanics", "details"),
+    modeTab(mode, "timeline", "Timeline", "/$mode/timeline", "details"),
   ];
 }

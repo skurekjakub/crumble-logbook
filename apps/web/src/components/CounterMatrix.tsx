@@ -23,7 +23,7 @@ export interface CounterEdge {
 export interface MatrixDeck {
   id: string;
   nameEn: string;
-  /** The Korean name, shown beneath the English; null when unknown. */
+  /** The Korean name, shown in the tooltip; null when unknown. */
   nameKr: string | null;
   /** The cookies whose portraits stand for the deck, most telling first. */
   faces?: readonly FaceRef[];
@@ -39,30 +39,20 @@ const VERDICT: Readonly<Record<CounterEdge["confidence"], readonly [PillKind, st
 };
 
 /**
- * The first of a deck's Korean names, which often lists several ("호밀 원툴덱 / 호황").
- *
- * @param nameKr - the Korean name as stored
- * @returns the first name
- */
-const firstKr = (nameKr: string) => nameKr.split(" / ")[0]!.trim();
-
-/**
- * A team in a matrix heading: its portraits, then its short English name,
- * with its first Korean name beneath when known; the full names are in the
- * tooltip.
+ * A team in a matrix heading: its portraits, then its short English name;
+ * the full English name and the Korean are in the tooltip.
  *
  * @param props - the team's deck id, and its deck when listed
  * @returns the heading content; the bare id when the deck isn't listed
  */
 function TeamHead({ id, deck }: { id: string; deck: MatrixDeck | undefined }) {
   if (!deck) return <span className="team-head">{id}</span>;
-  const title = deck.nameKr ? `${deck.nameEn} ${deck.nameKr}` : deck.nameEn;
+  const title = deck.nameKr ? `${deck.nameEn} (${deck.nameKr})` : deck.nameEn;
   return (
     <span className="team-head" title={title}>
       <FaceStack faces={deck.faces ?? []} size={28} />
       <span className="name-stack">
         <span className="en">{shortDeckName(deck.nameEn)}</span>
-        {deck.nameKr ? <span className="kr">{firstKr(deck.nameKr)}</span> : null}
       </span>
     </span>
   );

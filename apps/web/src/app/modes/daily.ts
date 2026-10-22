@@ -12,7 +12,7 @@ export const DAILY = {
   id: "daily-dungeons",
   kind: "mode",
   label: "Daily Dungeons",
-  labelKr: "일일던전",
+  navGroup: "play",
   title: "Daily Dungeons Logbook",
   to: "/daily-dungeons",
   link: modeLink("daily-dungeons"),
@@ -20,16 +20,16 @@ export const DAILY = {
   lede: null,
   stamp: ["updated", "sources", "decks"],
   tabs: [
-    modeTab("daily-dungeons", "dungeons", "Dungeons", "/$mode"),
-    modeTab("daily-dungeons", "overview", "Overview", "/$mode/overview"),
-    modeTab("daily-dungeons", "teams", "Teams", "/$mode/teams"),
-    modeTab("daily-dungeons", "mechanics", "Mechanics", "/$mode/mechanics"),
-    modeTab("daily-dungeons", "timeline", "Timeline", "/$mode/timeline"),
+    modeTab("daily-dungeons", "dungeons", "Dungeons", "/$mode", "setup"),
+    modeTab("daily-dungeons", "teams", "Teams", "/$mode/teams", "setup"),
+    modeTab("daily-dungeons", "findings", "Findings", "/$mode/findings", "details"),
+    modeTab("daily-dungeons", "mechanics", "Mechanics", "/$mode/mechanics", "details"),
+    modeTab("daily-dungeons", "timeline", "Timeline", "/$mode/timeline", "details"),
   ],
   scope: { mode: "daily_dungeon" },
   placeholder: null,
   copy: {
-    overview: {
+    findings: {
       title: "What clears the daily dungeons",
       lede: ["How the dungeons work, then what the furthest clears share."],
     },

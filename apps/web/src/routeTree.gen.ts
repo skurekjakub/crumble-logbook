@@ -26,6 +26,7 @@ import { Route as ModeCurvesRouteImport } from './routes/$mode/curves'
 import { Route as ModeDataPointsRouteImport } from './routes/$mode/data-points'
 import { Route as ModeDecksRouteImport } from './routes/$mode/decks'
 import { Route as ModeExclusionsRouteImport } from './routes/$mode/exclusions'
+import { Route as ModeFindingsRouteImport } from './routes/$mode/findings'
 import { Route as ModeGearRouteImport } from './routes/$mode/gear'
 import { Route as ModeLineupsRouteImport } from './routes/$mode/lineups'
 import { Route as ModeMechanicsRouteImport } from './routes/$mode/mechanics'
@@ -129,6 +130,11 @@ const ModeDecksRoute = ModeDecksRouteImport.update({
 const ModeExclusionsRoute = ModeExclusionsRouteImport.update({
   id: '/exclusions',
   path: '/exclusions',
+  getParentRoute: () => ModeRoute,
+} as any)
+const ModeFindingsRoute = ModeFindingsRouteImport.update({
+  id: '/findings',
+  path: '/findings',
   getParentRoute: () => ModeRoute,
 } as any)
 const ModeGearRoute = ModeGearRouteImport.update({
@@ -244,6 +250,7 @@ export interface FileRoutesByFullPath {
   '/$mode/data-points': typeof ModeDataPointsRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/exclusions': typeof ModeExclusionsRoute
+  '/$mode/findings': typeof ModeFindingsRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
@@ -281,6 +288,7 @@ export interface FileRoutesByTo {
   '/$mode/data-points': typeof ModeDataPointsRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/exclusions': typeof ModeExclusionsRoute
+  '/$mode/findings': typeof ModeFindingsRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
@@ -320,6 +328,7 @@ export interface FileRoutesById {
   '/$mode/data-points': typeof ModeDataPointsRoute
   '/$mode/decks': typeof ModeDecksRoute
   '/$mode/exclusions': typeof ModeExclusionsRoute
+  '/$mode/findings': typeof ModeFindingsRoute
   '/$mode/gear': typeof ModeGearRoute
   '/$mode/lineups': typeof ModeLineupsRoute
   '/$mode/mechanics': typeof ModeMechanicsRoute
@@ -360,6 +369,7 @@ export interface FileRouteTypes {
     | '/$mode/data-points'
     | '/$mode/decks'
     | '/$mode/exclusions'
+    | '/$mode/findings'
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
@@ -397,6 +407,7 @@ export interface FileRouteTypes {
     | '/$mode/data-points'
     | '/$mode/decks'
     | '/$mode/exclusions'
+    | '/$mode/findings'
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
@@ -435,6 +446,7 @@ export interface FileRouteTypes {
     | '/$mode/data-points'
     | '/$mode/decks'
     | '/$mode/exclusions'
+    | '/$mode/findings'
     | '/$mode/gear'
     | '/$mode/lineups'
     | '/$mode/mechanics'
@@ -589,6 +601,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModeExclusionsRouteImport
       parentRoute: typeof ModeRoute
     }
+    '/$mode/findings': {
+      id: '/$mode/findings'
+      path: '/findings'
+      fullPath: '/$mode/findings'
+      preLoaderRoute: typeof ModeFindingsRouteImport
+      parentRoute: typeof ModeRoute
+    }
     '/$mode/gear': {
       id: '/$mode/gear'
       path: '/gear'
@@ -735,6 +754,7 @@ interface ModeRouteChildren {
   ModeDataPointsRoute: typeof ModeDataPointsRoute
   ModeDecksRoute: typeof ModeDecksRoute
   ModeExclusionsRoute: typeof ModeExclusionsRoute
+  ModeFindingsRoute: typeof ModeFindingsRoute
   ModeGearRoute: typeof ModeGearRoute
   ModeLineupsRoute: typeof ModeLineupsRoute
   ModeMechanicsRoute: typeof ModeMechanicsRoute
@@ -766,6 +786,7 @@ const ModeRouteChildren: ModeRouteChildren = {
   ModeDataPointsRoute: ModeDataPointsRoute,
   ModeDecksRoute: ModeDecksRoute,
   ModeExclusionsRoute: ModeExclusionsRoute,
+  ModeFindingsRoute: ModeFindingsRoute,
   ModeGearRoute: ModeGearRoute,
   ModeLineupsRoute: ModeLineupsRoute,
   ModeMechanicsRoute: ModeMechanicsRoute,

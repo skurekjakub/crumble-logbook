@@ -72,10 +72,12 @@ function Gate({ brackets, sources }: { brackets: readonly PowerBracket[]; source
       {steps.length ? (
         <ol className="gate" aria-label="Share of recommended power, then damage kept">
           {steps.map((b) => (
-            <li key={b.id} title={`${b.minRatioPct}% of recommended or more keeps ${b.damagePct}%`}>
+            <li
+              key={b.id}
+              title={`${b.minRatioPct}% of recommended or more keeps ${b.damagePct}% (${b.label})`}
+            >
               <span className="from">{b.minRatioPct}%+</span>
               <BracketTag pct={b.damagePct} />
-              <span className="kr">{b.label}</span>
             </li>
           ))}
         </ol>

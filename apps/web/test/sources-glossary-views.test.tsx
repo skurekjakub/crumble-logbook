@@ -154,7 +154,10 @@ describe("glossary view", () => {
     ]);
     const rows = [...panel().querySelectorAll("tbody tr")];
     expect(rows[0]!.querySelector(".cicon")).not.toBeNull();
-    expect(rows[0]!.querySelector(".name-row")).toHaveAttribute("title", "Pomegranate Cookie");
+    expect(rows[0]!.querySelector(".name-row")).toHaveAttribute(
+      "title",
+      "Pomegranate Cookie (석류맛 쿠키)",
+    );
     expect(rows[2]!.querySelector(".cicon")).toBeNull();
     expect(rows[3]!.querySelector(".cicon")).toBeNull();
     expect(within(rows[1] as HTMLElement).getByText("우유")).toHaveClass("chip");

@@ -24,20 +24,20 @@
 
 Files: `apps/web/src/components/CookieName.tsx`, `apps/web/src/views/GlossaryView.tsx`, `apps/web/src/styles/ui.css`, `apps/web/test/names-and-chips.test.tsx` and every test pinning a name's Korean line.
 
-- [ ] Visible text: the short English name; `title`: the full English name and the Korean; unresolved names show their stored form; a `showKr` prop keeps the Korean line, used by the Glossary's cookie and pet rows. JSDoc rewritten.
-- [ ] `.name-stack .kr` and `.name-inline .kr` rules go unless `showKr` uses them.
-- [ ] Tests (both layouts, tooltip, unresolved, `showKr`); the Glossary still shows a Korean term.
+- [x] Visible text: the short English name; `title`: the full English name and the Korean; unresolved names show their stored form; a `showKr` prop keeps the Korean line, used by the Glossary's cookie and pet rows. JSDoc rewritten.
+- [x] `.name-stack .kr` and `.name-inline .kr` rules go unless `showKr` uses them.
+- [x] Tests (both layouts, tooltip, unresolved, `showKr`); the Glossary still shows a Korean term.
 - Verify: `pnpm exec vitest run apps/web/test/names-and-chips.test.tsx apps/web/test/sources-glossary-views.test.tsx`, then `pnpm verify`.
 
 ### Task 2: no Korean in the chrome
 
 Files: `apps/web/src/app/modes/types.ts` and every `apps/web/src/app/modes/*.ts`, `apps/web/src/routes/__root.tsx`, `apps/web/src/components/SideNav.tsx`, `apps/web/src/components/PageHeader.tsx` (docblock), `apps/web/src/views/ResearchView.tsx`, the views the spec's Stage 1 lists (`DeckCard`, `BossView`, `CounterMatrix`, `DailyDungeonsView`, `StageZonesView`, `StageBracketsView`, `PowerSourcesView`, `PackagesView`, `TeamPowerParts`), `apps/web/src/views/RunesView.tsx`, `apps/web/src/lib/` (an `englishHalf` helper for "불/Fire"), `apps/web/src/styles/shell.css`, `apps/web/src/styles/shared-pages.css`, and the tests that pin the Korean.
 
-- [ ] `labelKr` deleted from `SectionBase` and every config; its renders removed.
-- [ ] Each listed `.kr` render moves into its element's `title`; their CSS goes.
-- [ ] Glossary `element` and `class` render their English half wherever shown.
-- [ ] Runes filter placeholder "Filter by cookie or stat, e.g. Milk, haste…"; a test types a Korean name and keeps the row.
-- [ ] `apps/web/test/app-shell.test.tsx`'s every-mode-every-page loop asserts no `/\p{Script=Hangul}/u` in the body text, `placeholder` or `aria-label`, outside `/glossary` and `/sources`. Curated strings still carry Korean until Stage 5, so the loop checks the chrome only: it strips the text of curated-data containers marked `data-curated` (added to the curated text nodes the views render: rune lines, whys, titles, notes) and the assertion tightens to the whole body in Task 12.
+- [x] `labelKr` deleted from `SectionBase` and every config; its renders removed.
+- [x] Each listed `.kr` render moves into its element's `title`; their CSS goes.
+- [x] Glossary `element` and `class` render their English half wherever shown.
+- [x] Runes filter placeholder "Filter by cookie or stat, e.g. Milk, haste…"; a test types a Korean name and keeps the row.
+- [x] `apps/web/test/app-shell.test.tsx`'s every-mode-every-page loop asserts no `/\p{Script=Hangul}/u` in the body text, `placeholder` or `aria-label`, outside `/glossary` and `/sources`. Curated strings still carry Korean until Stage 5, so the loop checks the chrome only: it strips the text of curated-data containers marked `data-curated` (added to the curated text nodes the views render: rune lines, whys, titles, notes) and the assertion tightens to the whole body in Task 12.
 - Verify: `pnpm exec vitest run apps/web/test/app-shell.test.tsx`, then `pnpm verify`.
 
 ## Stage 2 — Navigation (web lane)
@@ -46,26 +46,26 @@ Files: `apps/web/src/app/modes/types.ts` and every `apps/web/src/app/modes/*.ts`
 
 Files: `apps/web/src/app/modes/types.ts`, `apps/web/src/app/modes/index.ts`, `apps/web/src/app/modes/shared.ts`, `apps/web/src/components/SideNav.tsx`, `apps/web/src/routes/__root.tsx`, `apps/web/src/styles/shell.css`, `apps/web/test/app-shell.test.tsx`.
 
-- [ ] `navGroup: "play" | "builds" | "you" | "reference"` on `SectionBase`, set on every section; Team power in "you". The nav renders a labelled list per group (`aria-labelledby`), in the spec's order; the "builds" group renders once it has sections (Tasks 7 and 9 add them).
-- [ ] Tests: the groups, their labels and members; the active state survives.
+- [x] `navGroup: "play" | "builds" | "you" | "reference"` on `SectionBase`, set on every section; Team power in "you". The nav renders a labelled list per group (`aria-labelledby`), in the spec's order; the "builds" group renders once it has sections (Tasks 7 and 9 add them).
+- [x] Tests: the groups, their labels and members; the active state survives.
 - Verify: `pnpm exec vitest run apps/web/test/app-shell.test.tsx apps/web/test/modes.test.ts`, then `pnpm verify`.
 
 ### Task 4: Setup and Details
 
 Files: `apps/web/src/app/modes/types.ts`, `apps/web/src/app/modes/links.ts`, `apps/web/src/app/modes/pvp-shared.ts`, every mode config, `apps/web/src/components/SideNav.tsx`, `apps/web/src/components/ModePageStrip.tsx` (new), `apps/web/src/routes/__root.tsx`, `apps/web/src/styles/shell.css`, `apps/web/test/modes.test.ts`, `apps/web/test/app-shell.test.tsx`.
 
-- [ ] Required `group: "setup" | "details"` on `SectionTab`, through `modeTab()` and `pvpTabs()`; every tab assigned per the spec's Stage 2 lists.
-- [ ] The side nav renders a mode's pages as two labelled lists; `ModePageStrip` renders the Setup pages as `<Link aria-current>` at the top of every mode page, 44px touch targets at phone width, no `role="tab"`.
-- [ ] Tests: each tab in exactly one group; the stage mode's Setup list in order with Rift active; the strip on a mode page.
+- [x] Required `group: "setup" | "details"` on `SectionTab`, through `modeTab()` and `pvpTabs()`; every tab assigned per the spec's Stage 2 lists.
+- [x] The side nav renders a mode's pages as two labelled lists; `ModePageStrip` renders the Setup pages as `<Link aria-current>` at the top of every mode page, 44px touch targets at phone width, no `role="tab"`.
+- [x] Tests: each tab in exactly one group; the stage mode's Setup list in order with Rift active; the strip on a mode page.
 - Verify: `pnpm exec vitest run apps/web/test/modes.test.ts apps/web/test/app-shell.test.tsx`, then `pnpm verify`.
 
 ### Task 5: Best setup lands, Findings moves
 
 Files: `apps/web/src/app/modes/types.ts` (`SharedView` `setup`, `overview` → `findings`), every mode config (copy `setup`, `findings`; tabs), `apps/web/src/routes/$mode/index.tsx`, `apps/web/src/routes/$mode/findings.tsx` (new), `apps/web/src/routes/$mode/overview.tsx` (redirect), `apps/web/src/views/BestSetupView.tsx` (new), `apps/web/src/views/OverviewView.tsx` (copy key), `apps/web/src/views/DeckLink.tsx`, `apps/web/src/views/AccountRoadmap.tsx`, `apps/web/src/styles/` (a `setup.css`), `apps/web/src/routeTree.gen.ts`, the tests that render a mode root expecting findings (`app-shell`, `conquest-views`, `pvp-views`, `team-power-views`, `mode-isolation`, `daily-dungeon-views`), `apps/web/test/best-setup-view.test.tsx` (new).
 
-- [ ] `/$mode` renders `BestSetupView` for Guild Conquest, Arena, Rumble Arena, Stages and Crumble Dungeon; Daily Dungeons' board and Team power's landing as today. `/$mode/findings` renders the findings for every mode; `/daily-dungeons/overview` redirects to it.
-- [ ] Best setup per the spec: the first current `meta` deck by `position` (head only, link to its card), the gear block (the mode's `GearBoard` until Task 9), the runes per deck cookie (linked build, else unlinked, else the muted row), the Crumble Dungeon's first twelve, the stage's block per rift deck in a `TocLayout`.
-- [ ] Tests per the spec's Stage 2 list (landings, redirect, the obsolete/alt/meta fixture, the three rune cases, the rift blocks).
+- [x] `/$mode` renders `BestSetupView` for Guild Conquest, Arena, Rumble Arena, Stages and Crumble Dungeon; Daily Dungeons' board and Team power's landing as today. `/$mode/findings` renders the findings for every mode; `/daily-dungeons/overview` redirects to it.
+- [x] Best setup per the spec: the first current `meta` deck by `position` (head only, link to its card), the gear block (the mode's `GearBoard` until Task 9), the runes per deck cookie (linked build, else unlinked, else the muted row), the Crumble Dungeon's first twelve, the stage's block per rift deck in a `TocLayout`.
+- [x] Tests per the spec's Stage 2 list (landings, redirect, the obsolete/alt/meta fixture, the three rune cases, the rift blocks).
 - Verify: `pnpm exec vitest run apps/web/test/best-setup-view.test.tsx apps/web/test/app-shell.test.tsx`, then `pnpm verify`.
 
 ## Stage 3 — Cookies

@@ -289,9 +289,9 @@ const renderAt = (path: string, overrides: Record<string, Canned> = {}) =>
  */
 const panel = () => within(screen.getByRole("main"));
 
-describe("/conquest overview", () => {
+describe("/conquest/findings", () => {
   it("renders the caveat, takeaways in order with sources, and the account block", async () => {
-    await renderAt("/conquest");
+    await renderAt("/conquest/findings");
     const caveat = await panel().findByText(RECORD.caveat);
     expect(caveat.closest(".callout")).not.toBeNull();
     expect(within(caveat.closest(".callout") as HTMLElement).getByText("caveat")).toHaveClass(
@@ -333,7 +333,9 @@ describe("/conquest overview", () => {
       detail:
         "The Naver guide and the 1T 312G run field the same cookies and pets, and so does every top-board lineup posted since.",
     };
-    await renderAt("/conquest", { "/api/takeaways?mode=guild_conquest": { body: [long] } });
+    await renderAt("/conquest/findings", {
+      "/api/takeaways?mode=guild_conquest": { body: [long] },
+    });
     const item = (await panel().findByText("The Cherry deck is the meta.")).closest(
       "li",
     ) as HTMLElement;
@@ -349,7 +351,7 @@ describe("/conquest overview", () => {
   });
 
   it("shows the legacy empty message with no takeaways and omits the account block", async () => {
-    await renderAt("/conquest", {
+    await renderAt("/conquest/findings", {
       "/api/takeaways?mode=guild_conquest": { body: [] },
       "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
     });
@@ -358,7 +360,7 @@ describe("/conquest overview", () => {
   });
 
   it("names the failed resource when takeaways fail, and still shows the account block", async () => {
-    await renderAt("/conquest", {
+    await renderAt("/conquest/findings", {
       "/api/takeaways?mode=guild_conquest": { status: 500, body: { error: "x" } },
     });
     expect(await panel().findByRole("alert")).toHaveTextContent("Couldn't load takeaways");
@@ -407,7 +409,7 @@ describe("/conquest/decks", () => {
     ]);
     expect(c.getByText("Order by ATK, not power.")).toHaveClass("muted");
     const pets = c.getByText("Pets").nextElementSibling as HTMLElement;
-    expect(pets).toHaveTextContent("Octo Wasabi 와사비문어 · 핫도그");
+    expect(pets).toHaveTextContent(/^Octo Wasabi · 핫도그$/);
     expect(pets).not.toHaveTextContent("null");
 
     const swaps = c.getByText("Swaps").nextElementSibling as HTMLElement;
@@ -428,9 +430,9 @@ describe("/conquest/decks", () => {
       [...tr.querySelectorAll("td")].map((td) => td.textContent),
     );
     expect(rows).toEqual([
-      ["Milk우유", "Lv.100", "ATK #1 on purpose."],
+      ["Milk", "Lv.100", "ATK #1 on purpose."],
       [
-        "Skating Queen피겨",
+        "Skating Queen",
         "As high as possible while ATK < Milk",
         "Ranks into the beams on base ATK.",
       ],
@@ -501,7 +503,7 @@ describe("/conquest/runes", () => {
         .map((li) => li.textContent),
     ).toEqual(["Cherry deck", "Melon Soda deck"]);
     expect(m.getByRole("link", { name: "Naver 43653" })).toBeVisible();
-    expect(cookies()).toEqual(["Milk우유", "Pomegranate석류", "메소"]);
+    expect(cookies()).toEqual(["Milk", "Pomegranate", "메소"]);
     expect(
       panel().getByText(/Disputed: posters disagree/, { selector: "ul.points li" }),
     ).toBeVisible();
@@ -530,7 +532,7 @@ describe("/conquest/runes", () => {
   it("narrows rows to one deck with ?deck=", async () => {
     await renderAt("/conquest/runes?deck=meso");
     await panel().findByText("Placement cookie.");
-    expect(cookies()).toEqual(["Milk우유", "메소"]);
+    expect(cookies()).toEqual(["Milk", "메소"]);
     expect(panel().getByRole("combobox", { name: "Deck" })).toHaveValue("meso");
   });
 
@@ -554,13 +556,24 @@ describe("/conquest/runes", () => {
       target: { value: "cherry" },
     });
     await waitFor(() => expect(router.state.location.search).toEqual({ deck: "cherry" }));
-    expect(cookies()).toEqual(["Milk우유", "Pomegranate석류"]);
+    expect(cookies()).toEqual(["Milk", "Pomegranate"]);
 
     fireEvent.change(panel().getByRole("searchbox"), { target: { value: "pomegranate" } });
     await waitFor(() =>
       expect(router.state.location.search).toEqual({ deck: "cherry", q: "pomegranate" }),
     );
-    expect(cookies()).toEqual(["Pomegranate석류"]);
+    expect(cookies()).toEqual(["Pomegranate"]);
+  });
+
+  it("asks for an English cookie or stat, and still finds a cookie typed by its Korean name", async () => {
+    await renderAt("/conquest/runes");
+    await panel().findByText("Placement cookie.");
+    const box = panel().getByRole("searchbox", {
+      name: "Filter by cookie or stat, e.g. Milk, haste…",
+    });
+    expect(box).toHaveAttribute("placeholder", "Filter by cookie or stat, e.g. Milk, haste…");
+    fireEvent.change(box, { target: { value: "석류" } });
+    await waitFor(() => expect(cookies()).toEqual(["Pomegranate"]));
   });
 
   it("keeps a numeric text filter from the URL, which the router decodes as a number", async () => {

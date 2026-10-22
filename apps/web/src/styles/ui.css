@@ -65,7 +65,7 @@
   background: var(--el-dark);
 }
 
-/* CookieName: portrait, then the short English over the Korean (or on one line, inline). */
+/* CookieName: portrait, then the short English; with showKr, the Korean beneath it (or after it, inline). */
 .name-row {
   display: inline-flex;
   align-items: center;

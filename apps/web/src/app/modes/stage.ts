@@ -13,7 +13,7 @@ export const STAGE = {
   id: "stage",
   kind: "mode",
   label: "Stage",
-  labelKr: "스테이지",
+  navGroup: "play",
   title: "Stage Pushing Logbook",
   to: "/stage",
   link: modeLink("stage"),
@@ -21,23 +21,31 @@ export const STAGE = {
   lede: null,
   stamp: ["updated", "sources", "decks"],
   tabs: [
-    modeTab("stage", "overview", "Overview", "/$mode"),
-    modeTab("stage", "brackets", "Bracket calculator", "/$mode/brackets"),
-    modeTab("stage", "teams", "Teams", "/$mode/teams"),
-    modeTab("stage", "zones", "Zones & bosses", "/$mode/zones"),
-    modeTab("stage", "clears", "Clears", "/$mode/clears"),
-    modeTab("stage", "rift", "Dimensional Rift", "/$mode/rift"),
-    modeTab("stage", "rift-15", "Rift at 15%", "/$mode/rift-15"),
-    modeTab("stage", "usage", "Usage", "/$mode/usage"),
-    modeTab("stage", "runes", "Sugar runes", "/$mode/runes"),
-    modeTab("stage", "gear", "Gear", "/$mode/gear"),
-    modeTab("stage", "mechanics", "Mechanics", "/$mode/mechanics"),
-    modeTab("stage", "timeline", "Timeline", "/$mode/timeline"),
+    modeTab("stage", "setup", "Best setup", "/$mode", "setup"),
+    modeTab("stage", "teams", "Teams", "/$mode/teams", "setup"),
+    modeTab("stage", "runes", "Sugar runes", "/$mode/runes", "setup"),
+    modeTab("stage", "gear", "Gear", "/$mode/gear", "setup"),
+    modeTab("stage", "brackets", "Bracket calculator", "/$mode/brackets", "setup"),
+    modeTab("stage", "rift", "Dimensional Rift", "/$mode/rift", "setup"),
+    modeTab("stage", "rift-15", "Rift at 15%", "/$mode/rift-15", "setup"),
+    modeTab("stage", "findings", "Findings", "/$mode/findings", "details"),
+    modeTab("stage", "zones", "Zones & bosses", "/$mode/zones", "details"),
+    modeTab("stage", "clears", "Clears", "/$mode/clears", "details"),
+    modeTab("stage", "usage", "Usage", "/$mode/usage", "details"),
+    modeTab("stage", "mechanics", "Mechanics", "/$mode/mechanics", "details"),
+    modeTab("stage", "timeline", "Timeline", "/$mode/timeline", "details"),
   ],
   scope: { mode: "stage" },
   placeholder: null,
   copy: {
-    overview: {
+    setup: {
+      title: "Best setup for stages",
+      lede: [
+        "The lead stage team, then each Rift team.",
+        "Each with its runes; levels and why are on its card.",
+      ],
+    },
+    findings: {
       title: "How the pushers get through",
       lede: [
         "How stages work, then the findings that carry the push.",
@@ -79,7 +87,7 @@ export const STAGE = {
       lede: [
         "What players measured or datamined about stages.",
         "Confidence says how well each point is sourced.",
-        "The mode's rules are on its overview.",
+        "The mode's rules are on its Findings page.",
       ],
     },
     timeline: {
@@ -135,7 +143,7 @@ export const STAGE = {
       title: "Rift at 15%",
       lede: [
         "Highest level first, then lowest power; never a ratio.",
-        "The bracket is read off Rift power, 차원의 힘 included.",
+        "The bracket is read off Rift power, Dimensional Energy included.",
         "Attempts without it, at other brackets or failed bound the reach.",
       ],
       bracket: 15,

@@ -52,8 +52,8 @@ describe("Scatter", () => {
   it("draws the 100× and 300× iso lines inside the plot box", () => {
     const { container } = render(<Scatter {...props} />);
     const labels = [...container.querySelectorAll(".iso text")].map((t) => t.textContent);
-    expect(labels).toContain("100배");
-    expect(labels).toContain("300배");
+    expect(labels).toContain("100×");
+    expect(labels).toContain("300×");
     for (const line of container.querySelectorAll(".iso line")) {
       const [x1, y1, x2, y2] = ["x1", "y1", "x2", "y2"].map((a) => Number(line.getAttribute(a)));
       expect(inBox(x1!, y1!)).toBe(true);
@@ -65,10 +65,10 @@ describe("Scatter", () => {
     const { container } = render(<Scatter {...props} />);
     const tip = container.querySelector(".tip") as HTMLElement;
     expect(tip).not.toBeVisible();
-    const point = screen.getByRole("img", { name: "2T at 3.07G power, 651배: run 2" });
+    const point = screen.getByRole("img", { name: "2T at 3.07G power, 651× power: run 2" });
     fireEvent.focus(point);
     expect(tip).toBeVisible();
-    expect(tip).toHaveTextContent("2T at 3.07G power · 651배");
+    expect(tip).toHaveTextContent("2T at 3.07G power · 651× power");
     expect(tip).toHaveTextContent("run 2");
     fireEvent.blur(point);
     expect(tip).not.toBeVisible();
@@ -79,9 +79,9 @@ describe("Scatter", () => {
     const chart = screen.getByRole("group", { name: /damage against team power/ });
     const points = within(chart).getAllByRole("img");
     expect(points.map((p) => p.getAttribute("aria-label"))).toEqual([
-      "100G at 1G power, 100배: run 1",
-      "2T at 3.07G power, 651배: run 2",
-      "1.31T at 1.8G power, 729배: run 3",
+      "100G at 1G power, 100× power: run 1",
+      "2T at 3.07G power, 651× power: run 2",
+      "1.31T at 1.8G power, 729× power: run 3",
     ]);
     for (const p of points) expect(p).toHaveAttribute("tabindex", "0");
     expect(chart.closest("[role=img]")).toBeNull();
@@ -90,7 +90,7 @@ describe("Scatter", () => {
   it("shows the tooltip on hover", () => {
     const { container } = render(<Scatter {...props} />);
     fireEvent.mouseEnter(screen.getByRole("img", { name: /^100G at 1G power/ }));
-    expect(container.querySelector(".tip")).toHaveTextContent("100G at 1G power · 100배");
+    expect(container.querySelector(".tip")).toHaveTextContent("100G at 1G power · 100× power");
   });
 
   it("shows the empty state when nothing is plottable", () => {

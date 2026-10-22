@@ -270,12 +270,12 @@ describe("the daily dungeon board", () => {
   it("lists Daily Dungeons in the navigation, the board as its landing tab", async () => {
     await renderDaily("/daily-dungeons");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
-    const pages = within(nav).getByRole("list", { name: "Daily Dungeons sections" });
+    const pages = within(nav).getByRole("list", { name: "Daily Dungeons Setup" });
     expect(
       within(pages)
         .getAllByRole("link")
         .map((a) => a.getAttribute("href")),
-    ).toEqual(DAILY.tabs.map((t) => t.to));
+    ).toEqual(DAILY.tabs.filter((t) => t.group === "setup").map((t) => t.to));
     expect(within(pages).getByRole("link", { name: "Dungeons" })).toHaveAttribute(
       "aria-current",
       "page",

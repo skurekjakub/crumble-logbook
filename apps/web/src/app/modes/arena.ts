@@ -12,7 +12,7 @@ export const ARENA = {
   id: "arena",
   kind: "mode",
   label: "Arena",
-  labelKr: "아레나",
+  navGroup: "play",
   title: "Arena Logbook",
   to: "/arena",
   link: modeLink("arena"),
@@ -24,7 +24,14 @@ export const ARENA = {
   placeholder: null,
   copy: {
     ...PVP_COPY,
-    overview: {
+    setup: {
+      title: "Best setup for Arena",
+      lede: [
+        "The lead meta team, its runes and gear.",
+        "Levels and each cookie's why are on the team's card.",
+      ],
+    },
+    findings: {
       title: "What wins in Arena",
       lede: [
         "How the mode works, then the findings that decide it.",

@@ -4,7 +4,7 @@
  *
  * @module
  */
-import type { AppPath, LinkTarget, ModeRoutePath, SectionTab } from "./types";
+import type { AppPath, LinkTarget, ModeRoutePath, SectionTab, TabGroup } from "./types";
 
 /**
  * A route under a mode, made concrete for one mode.
@@ -35,8 +35,15 @@ export function modeLink(mode: string, route: ModeRoutePath = "/$mode"): LinkTar
  * @param id - the tab's id, unique within the mode
  * @param label - the tab's label
  * @param route - the route the tab shows
+ * @param group - the page list it sits in: `setup` or `details`
  * @returns the tab, with its concrete path and its link
  */
-export function modeTab(mode: string, id: string, label: string, route: ModeRoutePath): SectionTab {
-  return { id, label, to: modePath(mode, route), link: modeLink(mode, route) };
+export function modeTab(
+  mode: string,
+  id: string,
+  label: string,
+  route: ModeRoutePath,
+  group: TabGroup,
+): SectionTab {
+  return { id, label, to: modePath(mode, route), link: modeLink(mode, route), group };
 }

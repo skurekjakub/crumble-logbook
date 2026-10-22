@@ -185,14 +185,14 @@ function Caveat({ text }: { text: string }) {
 }
 
 /**
- * A mode's overview: its research record's caveats (the mode's own, then the
+ * A mode's findings: its research record's caveats (the mode's own, then the
  * record's) as one-line callouts, the mode's rules when it files them, the
  * ranked takeaways as scannable rows, and the recommendations for the
  * reader's own account. Each block loads on its own, so one failed resource
  * doesn't blank the others.
  *
  * @param mode - the mode whose record, lists and copy the view shows
- * @returns the overview
+ * @returns the findings
  */
 export function OverviewView({ mode }: { mode: ModeSection }) {
   const sources = useSourceIndex();
@@ -218,7 +218,7 @@ export function OverviewView({ mode }: { mode: ModeSection }) {
           ))}
         </div>
       ) : null}
-      <ModeViewHeader mode={mode} view="overview" fallbackTitle="Overview" />
+      <ModeViewHeader mode={mode} view="findings" fallbackTitle="Findings" />
       {mode.rules ? (
         <QueryResult query={rules} resource="rules">
           {(rows) => <Rules rows={rows} config={mode.rules!} sources={sources} />}

@@ -11,7 +11,7 @@ export const CONQUEST = {
   id: "conquest",
   kind: "mode",
   label: "Guild Conquest",
-  labelKr: "길드 토벌전",
+  navGroup: "play",
   title: "Piñata Raid Logbook",
   to: "/conquest",
   link: modeLink("conquest"),
@@ -19,20 +19,28 @@ export const CONQUEST = {
   lede: null,
   stamp: ["updated", "season", "sources", "decks"],
   tabs: [
-    modeTab("conquest", "overview", "Overview", "/$mode"),
-    modeTab("conquest", "decks", "Decks", "/$mode/decks"),
-    modeTab("conquest", "runes", "Sugar runes", "/$mode/runes"),
-    modeTab("conquest", "gear", "Gear", "/$mode/gear"),
-    modeTab("conquest", "scores", "Scores & RNG", "/$mode/scores"),
-    modeTab("conquest", "mechanics", "Mechanics", "/$mode/mechanics"),
-    modeTab("conquest", "timeline", "Timeline", "/$mode/timeline"),
-    modeTab("conquest", "boss", "Piñata", "/$mode/boss"),
-    modeTab("conquest", "attempts", "Attempts", "/$mode/attempts"),
+    modeTab("conquest", "setup", "Best setup", "/$mode", "setup"),
+    modeTab("conquest", "decks", "Decks", "/$mode/decks", "setup"),
+    modeTab("conquest", "runes", "Sugar runes", "/$mode/runes", "setup"),
+    modeTab("conquest", "gear", "Gear", "/$mode/gear", "setup"),
+    modeTab("conquest", "findings", "Findings", "/$mode/findings", "details"),
+    modeTab("conquest", "scores", "Scores & RNG", "/$mode/scores", "details"),
+    modeTab("conquest", "mechanics", "Mechanics", "/$mode/mechanics", "details"),
+    modeTab("conquest", "timeline", "Timeline", "/$mode/timeline", "details"),
+    modeTab("conquest", "boss", "Piñata", "/$mode/boss", "details"),
+    modeTab("conquest", "attempts", "Attempts", "/$mode/attempts", "details"),
   ],
   scope: { mode: "guild_conquest" },
   placeholder: null,
   copy: {
-    overview: {
+    setup: {
+      title: "Best setup for the Piñata",
+      lede: [
+        "The lead meta deck by damage, its runes and gear.",
+        "Levels and each cookie's why are on the deck's card.",
+      ],
+    },
+    findings: {
       title: "What the top players do",
       lede: ["Ranked findings, the strongest first.", "Each links the posts it stands on."],
     },
@@ -65,13 +73,13 @@ export const CONQUEST = {
       lede: [
         "Ranked by damage; the best run leads.",
         "Solid dots have a screenshot; faded dots are text claims.",
-        "Dashed lines mark 배 (damage ÷ power), a normaliser only.",
+        "Dashed lines mark damage as a multiple of power, a normaliser only.",
       ],
     },
     mechanics: {
       title: "Mechanics",
       lede: [
-        "What players measured or datamined (클뜯).",
+        "What players measured or datamined.",
         "Confidence rates the sourcing, not how plausible it sounds.",
       ],
     },

@@ -1,14 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import { createRootRouteWithContext, Outlet, useLocation } from "@tanstack/react-router";
-import type { ReactNode } from "react";
 import { decksQuery, recordQuery, sourcesQuery } from "../api/queries";
-import type { Section, StampStat } from "../app/modes";
-import { activeTab, SECTIONS, sectionForPath } from "../app/modes";
+import type { Section, SectionTab, StampStat, TabGroup } from "../app/modes";
+import { activeTab, NAV_GROUPS, sectionForPath, sectionsIn, TAB_GROUPS } from "../app/modes";
 import type { RouterContext } from "../app/router-context";
 import { useIconIndex } from "../api/hooks";
 import { IconIndexContext } from "../components/CookieIcon";
 import { ErrorBox } from "../components/ErrorBox";
+import { ModePageStrip } from "../components/ModePageStrip";
 import { PageHeader } from "../components/PageHeader";
+import type { NavPage } from "../components/SideNav";
 import { SideNav } from "../components/SideNav";
 import { TopBar } from "../components/TopBar";
 import { isCurrent } from "../lib/obsolete";
@@ -29,23 +30,40 @@ const STAT_LABEL: Record<StampStat, string> = {
 };
 
 /**
- * The header label's suffix: a mode's Korean name, or its English label
- * when that's unknown. Shared sections have none.
+ * The header label's suffix: a mode's name. Shared sections have none.
  *
  * @param section - the active section, if any
  * @returns the suffix, or null outside a mode
  */
-function headerContext(section: Section | undefined): ReactNode {
-  if (section?.kind !== "mode") return null;
-  return section.labelKr ? <span className="kr">{section.labelKr}</span> : section.label;
+function headerContext(section: Section | undefined): string | null {
+  return section?.kind === "mode" ? section.label : null;
+}
+
+/**
+ * A section's tabs of one page list, as navigation links.
+ *
+ * @param tabs - the section's tabs
+ * @param group - the page list to keep
+ * @param shown - the tab shown, marked current; undefined when none is
+ * @returns the list's pages, in tab order
+ */
+function navPages(
+  tabs: readonly SectionTab[],
+  group: TabGroup,
+  shown: SectionTab | undefined,
+): NavPage[] {
+  return tabs
+    .filter((t) => t.group === group)
+    .map((t) => ({ id: t.id, label: t.label, link: t.link, current: t.id === shown?.id }));
 }
 
 /**
  * The app chrome: the phone's top bar, the logbook navigation (every
- * section, the active section's pages beneath it), the header (from the
- * active mode's research record, with the record's own lede for that mode
- * on the section's landing page, and figures scoped to the record and
- * mode), the view in the main landmark, and the footer.
+ * section in its group, the active section's Setup and Details pages
+ * beneath it), the header (from the active mode's research record, with
+ * the record's own lede for that mode on the section's landing page, and
+ * figures scoped to the record and mode), a mode's strip of Setup pages,
+ * the view in the main landmark, and the footer.
  *
  * @returns the app chrome around the current view
  */
@@ -93,23 +111,24 @@ function RootLayout() {
         <SideNav
           id={NAV_ID}
           label="Logbook"
-          sections={SECTIONS.map((s, i) => ({
-            id: s.id,
-            label: s.label,
-            labelKr: s.labelKr,
-            link: s.link,
-            current: s.id !== section?.id ? null : landing ? "page" : "section",
-            startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",
-            hasPages: s.tabs.length > 0,
-            pages:
-              s.id === section?.id
-                ? s.tabs.map((t) => ({
-                    id: t.id,
-                    label: t.label,
-                    link: t.link,
-                    current: t.id === tab?.id,
-                  }))
-                : [],
+          groups={NAV_GROUPS.map((g) => ({
+            id: g.id,
+            label: g.label,
+            sections: sectionsIn(g.id).map((s) => ({
+              id: s.id,
+              label: s.label,
+              link: s.link,
+              current: s.id !== section?.id ? null : landing ? "page" : "section",
+              hasPages: s.tabs.length > 0,
+              pageLists:
+                s.id === section?.id
+                  ? TAB_GROUPS.map((list) => ({
+                      id: list.id,
+                      label: list.label,
+                      pages: navPages(s.tabs, list.id, tab),
+                    }))
+                  : [],
+            })),
           }))}
         />
         <div className="page">
@@ -120,6 +139,9 @@ function RootLayout() {
             lede={landing || record.isError ? lede : ""}
             stats={stamp.map((s) => [STAT_LABEL[s], values[s]] as const)}
           />
+          {section?.kind === "mode" ? (
+            <ModePageStrip label="Setup pages" pages={navPages(section.tabs, "setup", tab)} />
+          ) : null}
           <main>
             <section className="panel">
               <Outlet />

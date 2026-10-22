@@ -12,7 +12,7 @@ export const RUMBLE = {
   id: "rumble",
   kind: "mode",
   label: "Rumble Arena",
-  labelKr: "와글와글 아레나",
+  navGroup: "play",
   title: "Rumble Arena Logbook",
   to: "/rumble",
   link: modeLink("rumble"),
@@ -24,7 +24,14 @@ export const RUMBLE = {
   placeholder: null,
   copy: {
     ...PVP_COPY,
-    overview: {
+    setup: {
+      title: "Best setup for Rumble Arena",
+      lede: [
+        "The lead meta team, its runes and gear.",
+        "Levels and each cookie's why are on the team's card.",
+      ],
+    },
+    findings: {
       title: "What wins in Rumble Arena",
       lede: [
         "Season buffs first: they shape this meta.",

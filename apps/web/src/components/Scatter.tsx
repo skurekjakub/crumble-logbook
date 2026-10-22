@@ -148,7 +148,7 @@ export function Scatter<P extends ScatterPoint>({ points, color, label }: Scatte
             <g key={r}>
               <line x1={X(pa)} y1={Y(r * pa)} x2={X(pb)} y2={Y(r * pb)} />
               <text x={X(pb) + 4} y={Y(r * pb) + 4}>
-                {r}배
+                {r}×
               </text>
             </g>
           ))}
@@ -173,7 +173,7 @@ export function Scatter<P extends ScatterPoint>({ points, color, label }: Scatte
             r={13}
             tabIndex={0}
             role="img"
-            aria-label={`${formatG(p.damageG)} at ${formatG(p.powerG)} power, ${formatRatio(ratio(p))}배: ${label(p)}`}
+            aria-label={`${formatG(p.damageG)} at ${formatG(p.powerG)} power, ${formatRatio(ratio(p))}× power: ${label(p)}`}
             onMouseEnter={() => setActive(i)}
             onFocus={() => setActive(i)}
             onMouseLeave={() => setActive(null)}
@@ -191,7 +191,7 @@ export function Scatter<P extends ScatterPoint>({ points, color, label }: Scatte
         {tip && (
           <>
             <b>{formatG(tip.p.damageG)}</b> at {formatG(tip.p.powerG)} power ·{" "}
-            {formatRatio(ratio(tip.p))}배
+            {formatRatio(ratio(tip.p))}× power
             <br />
             {label(tip.p)}
           </>

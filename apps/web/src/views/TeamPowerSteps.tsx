@@ -121,9 +121,9 @@ function StepItem({ step, context }: { step: SpendingStep; context: StepContext 
         <div className="step-head">
           <span className="name">
             {step.packageSlug === null ? (
-              <PowerSourceLink mode={mode} slug={step.powerSource!} sources={data.sources} withKr />
+              <PowerSourceLink mode={mode} slug={step.powerSource!} sources={data.sources} />
             ) : (
-              <PackageLink mode={mode} slug={step.packageSlug} packages={data.packages} withKr />
+              <PackageLink mode={mode} slug={step.packageSlug} packages={data.packages} />
             )}
           </span>
           <BasisPill basis={step.basis} note={step.basisNote} />

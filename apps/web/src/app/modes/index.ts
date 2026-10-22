@@ -22,7 +22,7 @@ import { RUMBLE } from "./rumble";
 import { FORMULA, FORMULA_SCOPE, SHARED_SECTIONS } from "./shared";
 import { STAGE } from "./stage";
 import { TEAM_POWER } from "./team-power";
-import type { ModeSection, Section, SectionTab } from "./types";
+import type { ModeSection, NavGroupId, Section, SectionTab, TabGroup } from "./types";
 
 export type * from "./types";
 export { modeLink, modePath, modeTab } from "./links";
@@ -53,6 +53,42 @@ export const MODES: readonly ModeSection[] = [
 /** Every top-level section, modes first. */
 export const SECTIONS: readonly Section[] = [...MODES, ...SHARED_SECTIONS];
 
+/** A side nav group: its id and the label shown above its list. */
+export interface NavGroup {
+  id: NavGroupId;
+  label: string;
+}
+
+/** The side nav's groups, in nav order. */
+export const NAV_GROUPS: readonly NavGroup[] = [
+  { id: "play", label: "Play" },
+  { id: "builds", label: "Builds" },
+  { id: "you", label: "You" },
+  { id: "reference", label: "Reference" },
+];
+
+/** A mode's page list: its group and the label shown above it. */
+export interface TabGroupLabel {
+  id: TabGroup;
+  label: string;
+}
+
+/** A mode's page lists, in nav order. */
+export const TAB_GROUPS: readonly TabGroupLabel[] = [
+  { id: "setup", label: "Setup" },
+  { id: "details", label: "Details" },
+];
+
+/**
+ * The sections a side nav group lists, in {@link SECTIONS} order.
+ *
+ * @param group - the group
+ * @returns the sections; empty for a group no section is filed in yet
+ */
+export function sectionsIn(group: NavGroupId): Section[] {
+  return SECTIONS.filter((s) => s.navGroup === group);
+}
+
 /**
  * The game mode whose first path segment is `id`.
  *
@@ -79,7 +115,7 @@ export function tabAt(section: Section, pathname: string): SectionTab | undefine
 
 /**
  * The mechanics topics a mode shows somewhere other than its mechanics
- * view: its rules (on the overview) and its boss's facts (in the boss
+ * view: its rules (on its findings page) and its boss's facts (in the boss
  * screen's header list). The mechanics view leaves them out.
  *
  * @param mode - the mode

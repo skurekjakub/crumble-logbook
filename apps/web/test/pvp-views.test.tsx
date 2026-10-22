@@ -426,7 +426,7 @@ describe("PvP chrome", () => {
     await renderAt("/arena", ARENA);
     expect(await screen.findByText("Regular Arena: two decks lead.")).toHaveClass("lede");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Arena Logbook");
-    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent("아레나");
+    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent(/^Arena$/);
     await waitFor(() =>
       expect(stamp()).toEqual({ Updated: "2026-09-27", Sources: "2", Decks: "3" }),
     );
@@ -436,38 +436,30 @@ describe("PvP chrome", () => {
   it("fills the Rumble Arena header from the record's Rumble lede", async () => {
     await renderAt("/rumble", RUMBLE);
     expect(await screen.findByText("Rumble Arena: one 12-cookie team.")).toHaveClass("lede");
-    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent("와글와글 아레나");
+    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent(/^Rumble Arena$/);
   });
 
-  it("lists each PvP mode's pages under it in the navigation", async () => {
+  it("lists each PvP mode's pages under it in the navigation, Setup then Details", async () => {
     await renderAt("/arena/counters", ARENA);
-    const sub = within(screen.getByRole("navigation", { name: "Logbook" })).getByRole("list", {
-      name: "Arena sections",
-    });
-    expect(
-      within(sub)
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    const labels = (list: HTMLElement) =>
+      within(list)
         .getAllByRole("link")
-        .map((t) => t.textContent),
-    ).toEqual([
-      "Overview",
-      "Teams",
-      "Counters",
-      "Usage",
-      "Sugar runes",
-      "Gear",
-      "Mechanics",
-      "Timeline",
-    ]);
-    expect(within(sub).getByRole("link", { name: "Counters" })).toHaveAttribute(
+        .map((t) => t.textContent);
+    const setup = within(nav).getByRole("list", { name: "Arena Setup" });
+    expect(labels(setup)).toEqual(["Best setup", "Teams", "Sugar runes", "Gear"]);
+    const details = within(nav).getByRole("list", { name: "Arena Details" });
+    expect(labels(details)).toEqual(["Findings", "Counters", "Usage", "Mechanics", "Timeline"]);
+    expect(within(details).getByRole("link", { name: "Counters" })).toHaveAttribute(
       "aria-current",
       "page",
     );
   });
 });
 
-describe("PvP overview", () => {
+describe("PvP findings", () => {
   it("shows the mode's caveat, the record's caveat, the season buffs apart, the rules card and takeaways", async () => {
-    await renderAt("/arena", ARENA);
+    await renderAt("/arena/findings", ARENA);
     expect(await panel().findByText("No stats site covers regular Arena.")).toHaveClass("note");
     expect(panel().getByText(RECORD.caveat)).toHaveClass("note");
 
@@ -491,7 +483,7 @@ describe("PvP overview", () => {
   });
 
   it("states Rumble Arena's Season 1 buffs", async () => {
-    await renderAt("/rumble", RUMBLE);
+    await renderAt("/rumble/findings", RUMBLE);
     const buffs = (await panel().findByRole("heading", { name: "Season buffs" })).closest(
       ".card",
     ) as HTMLElement;
@@ -501,7 +493,9 @@ describe("PvP overview", () => {
   });
 
   it("says so when a mode has no rules recorded", async () => {
-    await renderAt("/arena", ARENA, { "/api/mechanics?mode=arena&topic=rules": { body: [] } });
+    await renderAt("/arena/findings", ARENA, {
+      "/api/mechanics?mode=arena&topic=rules": { body: [] },
+    });
     expect(await panel().findByText("No rules recorded yet.")).toHaveClass("empty");
     expect(panel().queryByRole("heading", { name: "Season buffs" })).toBeNull();
   });
@@ -546,7 +540,7 @@ describe("PvP teams", () => {
     const rows = [...levels.querySelectorAll("tbody tr")].map((tr) =>
       [...tr.querySelectorAll("td")].map((td) => td.textContent),
     );
-    expect(rows[1]).toEqual(["Rye호밀", "row2-1", "Lv.100", "8", "Rye why."]);
+    expect(rows[1]).toEqual(["Rye", "row2-1", "Lv.100", "8", "Rye why."]);
     expect(rows[0]![3]).toBe("?");
     expect(rows[2]![3]).toBe("~7 (inferred from the skill effect)");
     expect(rye.querySelector('[data-slot="row2-1"] .lv')).toHaveTextContent("Lv.100 · 8★");
@@ -735,19 +729,21 @@ describe("PvP counters", () => {
     expect(within(cell("Crepe–Espresso", "Rye one-carry")).getByRole("link")).toHaveClass("high");
   });
 
-  it("names each team in English with its Korean name beneath, on both axes", async () => {
+  it("names each team in English on both axes, its full name and Korean name in the tooltip", async () => {
     await renderAt("/arena/counters", ARENA);
     const table = await panel().findByRole("table", { name: /beaten by/i });
     const col = within(table).getByRole("columnheader", { name: /Rye one-carry/ });
-    expect(within(col).getByText("호밀 원툴덱")).toHaveClass("kr");
+    expect(col).toHaveTextContent(/^Rye one-carry$/);
     const row = within(table).getByRole("rowheader", { name: /Rye one-carry/ });
-    expect(within(row).getByText("호밀 원툴덱")).toHaveClass("kr");
+    expect(row).not.toHaveTextContent("호밀 원툴덱");
+    for (const head of [col, row]) {
+      expect(head.querySelector(".team-head")).toHaveAttribute(
+        "title",
+        "Rye one-carry deck (호밀 원툴덱)",
+      );
+    }
     const bari = within(table).getByRole("columnheader", { name: "Bari–Oven" });
-    expect(bari.querySelector(".kr")).toBeNull();
-    expect(col.querySelector(".team-head")).toHaveAttribute(
-      "title",
-      "Rye one-carry deck 호밀 원툴덱",
-    );
+    expect(bari.querySelector(".team-head")).toHaveAttribute("title", "Bari–Oven deck");
   });
 
   it("heads each team with the portraits its name mentions, and its row with its tier", async () => {
@@ -888,10 +884,7 @@ describe("PvP usage", () => {
     expect(c.getByText(/captured 2026-09-27/)).toBeVisible();
     expect(c.getByRole("link", { name: "crumbgg-rumble-live" })).toBeVisible();
     const bars = [...cookies.querySelectorAll("li.bar-row")];
-    expect(bars.map((li) => li.querySelector(".nm")!.textContent)).toEqual([
-      "Pomegranate석류맛 쿠키",
-      "Herb허브맛 쿠키",
-    ]);
+    expect(bars.map((li) => li.querySelector(".nm")!.textContent)).toEqual(["Pomegranate", "Herb"]);
     expect(bars.map((li) => li.querySelector(".bar-rank")!.textContent)).toEqual(["1", "2"]);
     expect(bars[0]).toHaveClass("top");
     expect(bars[1]).not.toHaveClass("top");
@@ -937,7 +930,7 @@ describe("PvP builds, mechanics and timeline", () => {
     expect(await panel().findByText("Skill haste on every right-side piece")).toHaveClass("stat");
   });
 
-  it("shows the mode's mechanics without its rules, which the overview shows", async () => {
+  it("shows the mode's mechanics without its rules, which the findings page shows", async () => {
     await renderAt("/arena/mechanics", ARENA);
     expect(
       await panel().findByRole("heading", { name: "Rye beats Bari is mostly Rumble evidence" }),

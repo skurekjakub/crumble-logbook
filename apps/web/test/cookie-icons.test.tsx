@@ -167,14 +167,14 @@ describe("CookieIcon", () => {
 });
 
 describe("names with portraits", () => {
-  it("CookieName shows the portrait, the short name and the full name as tooltip", () => {
+  it("CookieName shows the portrait, the short name, and the full name with the Korean as tooltip", () => {
     const { container } = withIcons(
       <CookieName kr="우유" en="Milk Cookie's Crunchy Strong Pediatrician" />,
     );
     expect(screen.getByText("Milk · Pediatrician")).toBeVisible();
     expect(container.querySelector(".name-row")).toHaveAttribute(
       "title",
-      "Milk Cookie's Crunchy Strong Pediatrician",
+      "Milk Cookie's Crunchy Strong Pediatrician (우유)",
     );
     expect(container.querySelector("img")).toHaveAttribute("src", "/icons/cookie0101.webp");
   });
@@ -184,7 +184,7 @@ describe("names with portraits", () => {
     expect(container.querySelector(".cicon")).toBeNull();
   });
 
-  it("a lineup slot carries the portrait above its level", () => {
+  it("a lineup slot carries the portrait above its level, its Korean name in the tooltip only", () => {
     const { container } = withIcons(
       <LineupSlot cookie={{ cookieKr: "우유", en: "Milk Cookie", level: "100", stars: "8" }} />,
     );
@@ -192,7 +192,8 @@ describe("names with portraits", () => {
     expect(slot.querySelector(".pic img")).toHaveAttribute("src", "/icons/cookie0101.webp");
     expect(slot.querySelector(".lv")).toHaveTextContent("Lv.100 · 8★");
     expect(slot.querySelector(".nm")).toHaveTextContent(/^Milk$/);
-    expect(slot).toHaveAttribute("title", "Milk Cookie");
+    expect(slot).toHaveAttribute("title", "Milk Cookie (우유)");
+    expect(slot).not.toHaveTextContent("우유");
   });
 
   it("the ATK order shows a portrait per step", () => {

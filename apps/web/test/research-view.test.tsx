@@ -69,9 +69,7 @@ describe("/research", () => {
     await renderRoute("/research", API);
     const pvp = await card("002-pvp-meta");
     const p = within(pvp);
-    expect(
-      p.getByRole("heading", { name: "Arena 아레나 Rumble Arena 와글와글 아레나" }),
-    ).toBeVisible();
+    expect(p.getByRole("heading", { name: "Arena Rumble Arena" })).toBeVisible();
     expect(p.getByText("done")).toHaveClass("pill", "legacy");
     expect(within(await card("001-guild-conquest-meta")).getByText("active")).toHaveClass(
       "pill",
@@ -93,14 +91,11 @@ describe("/research", () => {
     await renderRoute("/research", API);
     const pvp = await card("002-pvp-meta");
     const p = within(pvp);
-    expect(p.getByRole("link", { name: "Arena 아레나" })).toHaveAttribute("href", "/arena");
-    expect(p.getByRole("link", { name: "Rumble Arena 와글와글 아레나" })).toHaveAttribute(
-      "href",
-      "/rumble",
-    );
+    expect(p.getByRole("link", { name: "Arena" })).toHaveAttribute("href", "/arena");
+    expect(p.getByRole("link", { name: "Rumble Arena" })).toHaveAttribute("href", "/rumble");
     expect(p.queryByRole("link", { name: "Counters" })).toBeNull();
     const conquest = within(await card("001-guild-conquest-meta"));
-    expect(conquest.getByRole("link", { name: "Guild Conquest 길드 토벌전" })).toHaveAttribute(
+    expect(conquest.getByRole("link", { name: "Guild Conquest" })).toHaveAttribute(
       "href",
       "/conquest",
     );

@@ -14,6 +14,7 @@ import { Lineup } from "../components/Lineup";
 import { ObsoleteNotice } from "../components/ObsoleteNotice";
 import { Pill } from "../components/Pill";
 import { SourceChips } from "../components/SourceChips";
+import { CURATED } from "../lib/curated";
 import type { SourceIndex } from "../lib/sources";
 
 /**
@@ -76,7 +77,12 @@ function LevelTable({ cookies }: { cookies: readonly DeckCookie[] }) {
       : []),
     {
       header: "Why",
-      cell: (c) => (c.why ? <Clamp lines={1}>{c.why}</Clamp> : null),
+      cell: (c) =>
+        c.why ? (
+          <span {...CURATED}>
+            <Clamp lines={1}>{c.why}</Clamp>
+          </span>
+        ) : null,
       className: "wide",
     },
   ];
@@ -117,7 +123,7 @@ export const deckId = (d: Pick<Deck, "id">) => `deck-${d.id}`;
 function bullets(items: readonly string[]) {
   if (!items.length) return null;
   return (
-    <ul className="clean">
+    <ul className="clean" {...CURATED}>
       {items.map((x, i) => (
         <li key={i}>
           <Clamp lines={1}>{x}</Clamp>
@@ -135,7 +141,11 @@ function bullets(items: readonly string[]) {
  * @returns the clamped text, or null
  */
 function clamped(text: string | null) {
-  return text?.trim() ? <Clamp lines={1}>{text}</Clamp> : null;
+  return text?.trim() ? (
+    <span {...CURATED}>
+      <Clamp lines={1}>{text}</Clamp>
+    </span>
+  ) : null;
 }
 
 /**
@@ -169,7 +179,7 @@ export function DeckCard({
     <>
       <AtkOrder order={d.atkOrder} />
       {d.atkOrderNote ? (
-        <div className="muted">
+        <div className="muted" {...CURATED}>
           <Clamp lines={1}>{d.atkOrderNote}</Clamp>
         </div>
       ) : null}
@@ -204,9 +214,7 @@ export function DeckCard({
       ) : null}
       <div className="card-head deck-head">
         <div className="deck-title">
-          <h3>
-            {d.nameEn} <span className="kr">{d.nameKr ?? ""}</span>
-          </h3>
+          <h3 title={d.nameKr ?? undefined}>{d.nameEn}</h3>
           <div className="chips">
             <Pill kind={d.status} />
             {d.dailyDungeon ? <DeckRunChips run={d.dailyDungeon} /> : null}
@@ -214,7 +222,7 @@ export function DeckCard({
           </div>
         </div>
         {d.summary ? (
-          <div className="muted">
+          <div className="muted" {...CURATED}>
             <Clamp lines={1}>{d.summary}</Clamp>
           </div>
         ) : null}
@@ -232,7 +240,7 @@ export function DeckCard({
         ]}
       />
       {notes("unorthodox").map((u, i) => (
-        <div className="flag" key={i}>
+        <div className="flag" key={i} {...CURATED}>
           <Clamp lines={1}>{u}</Clamp>
         </div>
       ))}

@@ -304,15 +304,14 @@ const API: Record<string, Canned> = {
 const renderDungeon = (path: string) => renderRoute(path, API, { mode: DUNGEON });
 
 describe("the Crumble Dungeon section", () => {
-  it("lists Crumble Dungeon in the navigation with its pages, and its rules on the overview", async () => {
-    await renderDungeon("/dungeon");
+  it("lists Crumble Dungeon in the navigation with its pages, and its rules on its findings", async () => {
+    await renderDungeon("/dungeon/findings");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
-    const pages = within(nav).getByRole("list", { name: "Crumble Dungeon sections" });
-    expect(
-      within(pages)
+    const hrefs = (list: string) =>
+      within(within(nav).getByRole("list", { name: `Crumble Dungeon ${list}` }))
         .getAllByRole("link")
-        .map((a) => a.getAttribute("href")),
-    ).toEqual(DUNGEON.tabs.map((t) => t.to));
+        .map((a) => a.getAttribute("href"));
+    expect([...hrefs("Setup"), ...hrefs("Details")]).toEqual(DUNGEON.tabs.map((t) => t.to));
     expect(await screen.findByRole("heading", { name: "How Crumble Dungeon works" })).toBeVisible();
     expect(screen.getByText("No formation, no pet choice and no manual control.")).toBeVisible();
     expect(screen.getByText("The fight length comes from the wiki.")).toBeVisible();
@@ -512,12 +511,13 @@ describe("the lineups", () => {
     expect(wave.querySelectorAll("li .cicon")).toHaveLength(3);
     expect(wave.querySelector("li")).toHaveAttribute("title", `Milk Cookie · ${MILK}`);
     expect(wave.querySelector("li.flagged")).toHaveTextContent("Ion Cookie Robot");
-    await waitFor(() => expect(card).toHaveTextContent(`Oven Wanderer ${OVEN}Charger`));
+    await waitFor(() => expect(card).toHaveTextContent("Oven WandererCharger"));
+    expect(card).not.toHaveTextContent(OVEN);
     expect(card.querySelector(".card-head .pill.disputed")).toHaveTextContent(
       "Keeps 1 excluded cookie",
     );
     expect(card.querySelector(".callout.kept")).toHaveTextContent(
-      `On the exclusions list, kept here: Ion Cookie Robot ${ION} (Charger, disputed)`,
+      "On the exclusions list, kept here: Ion Cookie Robot (Charger, disputed)",
     );
     expect(within(card).getByRole("link", { name: "Milk–Scorpion beam lineup" })).toHaveAttribute(
       "href",

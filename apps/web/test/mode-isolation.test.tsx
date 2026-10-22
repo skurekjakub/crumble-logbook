@@ -204,7 +204,7 @@ const panel = () => within(screen.getByRole("main"));
 
 describe("Guild Conquest views never show PvP rows", () => {
   it.each([
-    ["/conquest", "Conquest takeaway.", "PvP takeaway."],
+    ["/conquest/findings", "Conquest takeaway.", "PvP takeaway."],
     ["/conquest/decks", "Cherry deck", "Rye PvP deck"],
     ["/conquest/runes", "Conquest runes", "PvP runes"],
     ["/conquest/gear", "Conquest gear", "PvP gear"],

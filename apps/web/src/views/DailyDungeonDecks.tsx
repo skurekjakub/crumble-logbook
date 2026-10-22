@@ -10,6 +10,7 @@ import { Lineup } from "../components/Lineup";
 import { Pill } from "../components/Pill";
 import { SourceChips } from "../components/SourceChips";
 import { shortName } from "../lib/cookie-icons";
+import { CURATED } from "../lib/curated";
 import { compactPower } from "../lib/stage";
 import type { SourceIndex } from "../lib/sources";
 import { DeckLink } from "./DeckLink";
@@ -152,7 +153,9 @@ export function HeroDeck({
             {deck.cookies.map((c) => (
               <li key={c.id}>
                 <CookieName kr={c.cookieKr} en={c.en} inline />
-                <Clamp lines={1}>{c.why}</Clamp>
+                <span {...CURATED}>
+                  <Clamp lines={1}>{c.why}</Clamp>
+                </span>
               </li>
             ))}
           </ul>

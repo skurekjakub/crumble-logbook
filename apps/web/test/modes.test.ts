@@ -14,7 +14,7 @@ import {
   sourcesQuery,
   usageQuery,
 } from "../src/api/queries";
-import type { ModeRoutePath } from "../src/app/modes";
+import type { ModeRoutePath, ModeSection, NavGroupId } from "../src/app/modes";
 import {
   activeTab,
   ARENA,
@@ -24,9 +24,12 @@ import {
   MODES,
   modeById,
   modePath,
+  NAV_GROUPS,
   RUMBLE,
+  SECTIONS,
   SHARED_SECTIONS,
   sectionForPath,
+  sectionsIn,
   STAGE,
   tabAt,
   TEAM_POWER,
@@ -55,7 +58,7 @@ describe("sectionForPath", () => {
 describe("activeTab", () => {
   const tabs = MODES.find((m) => m.id === "conquest")!.tabs;
 
-  it("picks the overview only on the mode root", () => {
+  it("picks the landing page only on the mode root", () => {
     expect(activeTab(tabs, "/conquest")?.to).toBe("/conquest");
     expect(activeTab(tabs, "/conquest/")?.to).toBe("/conquest");
   });
@@ -74,7 +77,8 @@ describe("modeById and tabAt", () => {
 
   it("find a tab at exactly a path, ignoring a trailing slash", () => {
     expect(tabAt(ARENA, "/arena/teams/")?.id).toBe("teams");
-    expect(tabAt(ARENA, "/arena")?.id).toBe("overview");
+    expect(tabAt(ARENA, "/arena")?.id).toBe("setup");
+    expect(tabAt(ARENA, "/arena/findings")?.id).toBe("findings");
     expect(tabAt(ARENA, "/arena/scores")).toBeUndefined();
     expect(tabAt(ARENA, "/Arena/Teams")?.id).toBe("teams");
     expect(tabAt(CONQUEST, "/conquest/scores")?.id).toBe("scores");
@@ -91,22 +95,60 @@ describe("modeById and tabAt", () => {
   });
 });
 
+/**
+ * A mode's pages in tab order, each as its path under the mode and its group.
+ *
+ * @param mode - the mode
+ * @returns `[sub-path, group]` pairs, e.g. `["/teams", "setup"]`
+ */
+const pages = (mode: ModeSection) => mode.tabs.map((t) => [t.to.slice(mode.to.length), t.group]);
+
 describe("MODES", () => {
   it("names the Guild Conquest research record", () => {
     expect(MODES.find((m) => m.id === "conquest")?.recordSlug).toBe("001-guild-conquest-meta");
   });
 
+  it("files Guild Conquest's deck, runes and gear under Setup and its research under Details", () => {
+    expect(pages(CONQUEST)).toEqual([
+      ["", "setup"],
+      ["/decks", "setup"],
+      ["/runes", "setup"],
+      ["/gear", "setup"],
+      ["/findings", "details"],
+      ["/scores", "details"],
+      ["/mechanics", "details"],
+      ["/timeline", "details"],
+      ["/boss", "details"],
+      ["/attempts", "details"],
+    ]);
+  });
+
+  it("puts every tab of every mode in exactly one group, Setup pages first with the landing page leading", () => {
+    for (const mode of MODES) {
+      const groups = mode.tabs.map((t) => t.group);
+      for (const g of groups) expect(["setup", "details"], mode.id).toContain(g);
+      expect(groups[0], mode.id).toBe("setup");
+      expect(groups, mode.id).toEqual(
+        [...groups].sort((a, b) => (a === b ? 0 : a === "setup" ? -1 : 1)),
+      );
+      expect(groups, mode.id).toContain("details");
+    }
+  });
+
   it("files Arena and Rumble Arena under the PvP research record, each with its own screens", () => {
     for (const mode of [ARENA, RUMBLE]) {
       expect(mode.recordSlug, mode.id).toBe("002-pvp-meta");
-      expect(
-        mode.tabs.map((t) => t.to),
-        mode.id,
-      ).toEqual(
-        ["", "/teams", "/counters", "/usage", "/runes", "/gear", "/mechanics", "/timeline"].map(
-          (sub) => `${mode.to}${sub}`,
-        ),
-      );
+      expect(pages(mode), mode.id).toEqual([
+        ["", "setup"],
+        ["/teams", "setup"],
+        ["/runes", "setup"],
+        ["/gear", "setup"],
+        ["/findings", "details"],
+        ["/counters", "details"],
+        ["/usage", "details"],
+        ["/mechanics", "details"],
+        ["/timeline", "details"],
+      ]);
       expect(mode.rules, mode.id).not.toBeNull();
     }
     expect(CONQUEST.rules).toBeNull();
@@ -115,22 +157,21 @@ describe("MODES", () => {
   it("files the stage section under record 003, with the shared pages and the stage screens", () => {
     expect(STAGE.recordSlug).toBe("003-stage-pushing-meta");
     expect(STAGE.scope.mode).toBe("stage");
-    expect(STAGE.tabs.map((t) => t.to)).toEqual(
-      [
-        "",
-        "/brackets",
-        "/teams",
-        "/zones",
-        "/clears",
-        "/rift",
-        "/rift-15",
-        "/usage",
-        "/runes",
-        "/gear",
-        "/mechanics",
-        "/timeline",
-      ].map((sub) => `/stage${sub}`),
-    );
+    expect(pages(STAGE)).toEqual([
+      ["", "setup"],
+      ["/teams", "setup"],
+      ["/runes", "setup"],
+      ["/gear", "setup"],
+      ["/brackets", "setup"],
+      ["/rift", "setup"],
+      ["/rift-15", "setup"],
+      ["/findings", "details"],
+      ["/zones", "details"],
+      ["/clears", "details"],
+      ["/usage", "details"],
+      ["/mechanics", "details"],
+      ["/timeline", "details"],
+    ]);
     expect(STAGE.stage.reach).toContain(35);
     for (const mode of [CONQUEST, ARENA, RUMBLE, DUNGEON]) expect(mode.stage, mode.id).toBeNull();
   });
@@ -138,21 +179,21 @@ describe("MODES", () => {
   it("files the Crumble Dungeon section under record 004, with the shared pages and the dungeon screens", () => {
     expect(DUNGEON.recordSlug).toBe("004-golden-drop-meta");
     expect(DUNGEON.scope.mode).toBe("crumble_dungeon");
-    expect(DUNGEON.tabs.map((t) => t.to)).toEqual(
-      [
-        "",
-        "/runs",
-        "/teams",
-        "/lineups",
-        "/exclusions",
-        "/usage",
-        "/runes",
-        "/gear",
-        "/mechanics",
-        "/timeline",
-      ].map((sub) => `/dungeon${sub}`),
-    );
+    expect(pages(DUNGEON)).toEqual([
+      ["", "setup"],
+      ["/teams", "setup"],
+      ["/runes", "setup"],
+      ["/gear", "setup"],
+      ["/lineups", "setup"],
+      ["/findings", "details"],
+      ["/runs", "details"],
+      ["/exclusions", "details"],
+      ["/usage", "details"],
+      ["/mechanics", "details"],
+      ["/timeline", "details"],
+    ]);
     expect(DUNGEON.dungeon.firstWave).toBe(40);
+    expect(DUNGEON.dungeon.setupRunes).toBeLessThan(DUNGEON.dungeon.firstWave);
     expect(DUNGEON.rules).not.toBeNull();
     for (const mode of [CONQUEST, ARENA, RUMBLE, STAGE]) expect(mode.dungeon, mode.id).toBeNull();
   });
@@ -160,21 +201,19 @@ describe("MODES", () => {
   it("files the team power section under record 005, with the shared pages and the team-power screens", () => {
     expect(TEAM_POWER.recordSlug).toBe("005-team-power-growth");
     expect(TEAM_POWER.scope.mode).toBe("team_power");
-    expect(TEAM_POWER.labelKr).toBe("팀투");
-    expect(TEAM_POWER.tabs.map((t) => t.to)).toEqual(
-      [
-        "",
-        "/routes",
-        "/power-sources",
-        "/spending",
-        "/planner",
-        "/packages",
-        "/curves",
-        "/data-points",
-        "/mechanics",
-        "/timeline",
-      ].map((sub) => `/team-power${sub}`),
-    );
+    expect(TEAM_POWER.label).toBe("Team power");
+    expect(pages(TEAM_POWER)).toEqual([
+      ["", "setup"],
+      ["/routes", "setup"],
+      ["/spending", "setup"],
+      ["/planner", "setup"],
+      ["/packages", "setup"],
+      ["/power-sources", "details"],
+      ["/curves", "details"],
+      ["/data-points", "details"],
+      ["/mechanics", "details"],
+      ["/timeline", "details"],
+    ]);
     expect(TEAM_POWER.teamPower.reach).toEqual([55, 35, 15]);
     expect(TEAM_POWER.rules).not.toBeNull();
     for (const mode of [CONQUEST, ARENA, RUMBLE, STAGE, DUNGEON]) {
@@ -186,15 +225,20 @@ describe("MODES", () => {
     expect(DAILY.recordSlug).toBe("006-daily-dungeons");
     expect(DAILY.scope.mode).toBe("daily_dungeon");
     expect(DAILY.to).toBe("/daily-dungeons");
-    expect(DAILY.tabs.map((t) => [t.id, t.to])).toEqual(
-      [
-        ["dungeons", ""],
-        ["overview", "/overview"],
-        ["teams", "/teams"],
-        ["mechanics", "/mechanics"],
-        ["timeline", "/timeline"],
-      ].map(([id, sub]) => [id, `/daily-dungeons${sub}`]),
-    );
+    expect(DAILY.tabs.map((t) => t.id)).toEqual([
+      "dungeons",
+      "teams",
+      "findings",
+      "mechanics",
+      "timeline",
+    ]);
+    expect(pages(DAILY)).toEqual([
+      ["", "setup"],
+      ["/teams", "setup"],
+      ["/findings", "details"],
+      ["/mechanics", "details"],
+      ["/timeline", "details"],
+    ]);
     expect(activeTab(DAILY.tabs, "/daily-dungeons")?.id).toBe("dungeons");
     expect(sectionForPath("/daily-dungeons/teams")?.id).toBe("daily-dungeons");
     for (const mode of MODES) expect(mode.daily === null, mode.id).toBe(mode !== DAILY);
@@ -210,6 +254,21 @@ describe("MODES", () => {
     ]);
     expect(sectionForPath("/research")?.id).toBe("research");
     expect(sectionForPath("/formula")?.id).toBe("formula");
+  });
+
+  it("files every section in a nav group: the game modes in Play, team power and the account in You", () => {
+    expect(NAV_GROUPS.map((g) => [g.id, g.label])).toEqual([
+      ["play", "Play"],
+      ["builds", "Builds"],
+      ["you", "You"],
+      ["reference", "Reference"],
+    ]);
+    const ids = (group: NavGroupId) => sectionsIn(group).map((s) => s.id);
+    expect(ids("play")).toEqual(MODES.filter((m) => m !== TEAM_POWER).map((m) => m.id));
+    expect(ids("you")).toEqual(["team-power", "account"]);
+    expect(ids("reference")).toEqual(["formula", "research", "sources", "glossary"]);
+    expect(ids("builds")).toEqual([]);
+    expect(NAV_GROUPS.flatMap((g) => sectionsIn(g.id))).toHaveLength(SECTIONS.length);
   });
 
   it("gives every mode its own API scope", () => {
