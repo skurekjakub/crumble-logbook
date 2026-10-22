@@ -5,6 +5,10 @@
 ; left the team at the model's lower left, so the walk is longer. Rift 5 was cleared on
 ; 2026-10-12, but the loop's pass (try 54) last read the boss at 87%, so the win isn't credited
 ; to this walk.
-encounter
-W+D 500
-D 1000
+; Season 3 (2026-10-22, team at 13.91G) plays on a timer from the tap, at 2.3 s, since keys held
+; under the BOSS card don't move the team (see 24.txt) and the map wait could give up at once (see
+; 25.txt). Rift 17's W+D 600, D 1300 left 37%, 46%, 34% and 17%; the user cut it to a plain right
+; hold, which won on 2026-10-22 at 19:45 on its second try.
+tap
+wait 2300
+D 1500

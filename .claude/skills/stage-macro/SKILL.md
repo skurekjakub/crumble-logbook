@@ -59,7 +59,19 @@ for, the launch command, or an operating lesson changes, update this file (and `
      Compare the lobby power with the line before blaming a script.
    - **Auto Summon must be off in the rift too.** With it on, a win sends the game straight into
      the next rift stage's boss and no walk plays. The checkbox sat at 653,532 beside the button
-     on 2026-10-15.
+     on 2026-10-15, and at 650,455 from season 3. Tap it **once**, then check a screenshot taken
+     3 s later: one taken right after the tap still shows the old state, and a second tap "to
+     make sure" turns it back on (2026-10-22).
+   - **A new rift season resets the rift and can move its panel.** Season 3 (2026-10-22) restarted
+     at rift 5 and moved the button, its "Repeating…" line and the Auto Summon box up 78 px, and
+     narrowed the boss's health bar (fill from x 420 to 1132; the read showed 0% all fight). On a
+     new season, screenshot the Summon screen and a fight, and check `[Points] Summon`,
+     `[Detect] Summon` and `HpBar` in `rift-loop.ini` (and the defaults in `rift-loop.ahk`) and
+     the band in `tools/hud/src/rift.ts` against them before launching. The walks for earlier
+     stages carry over: season 3's bosses came round as in season 2 (Archangel on 5). The
+     button's label wraps on one line or two ("Summon / Dimensional Boss"), so its signature
+     samples only the purple body: lettering pixels made the loop miss the button and log a
+     fight the user cut short at 79% as a pass.
    - **A rift win is often logged as a fail**: the button comes back within seconds of a win.
      On 2026-10-15 the game went from rift 12 to 16 while the stage loop logged only losses. The
      rift macro's read on the button corrects it (`read rift-N … where rift-M was expected`);
@@ -68,7 +80,7 @@ for, the launch command, or an operating lesson changes, update this file (and `
 5. Arm the watcher, then launch:
    - `Monitor` with `bash "C:/repositories/crumble-logbook/.claude/skills/stage-macro/watch.sh"`,
      `timeout_ms` 1800000. It expires every 30 min: re-arm on the expiry notice, then grep the log
-     for `pass on|fail on|waiting for|error|stopped|unread|started` since the last event so nothing
+     for `pass on|fail on|waiting for|error|stopped|unread|started|oven` since the last event so nothing
      was missed.
    - `powershell -NoProfile -Command "Start-Process -FilePath '<AutoHotkey64.exe>' -ArgumentList 'stage-loop.ahk','/start' -WorkingDirectory 'C:\repositories\crumble-logbook\tools\stage-macro'"`.
      (`cmd //c` fails under Git Bash.)
@@ -94,8 +106,19 @@ user asks, or to restart on new code. A recording in flight ends at its own time
 - **`stage number unread … screen saved: stops\unread_<stage>_<time>.png`**: teach the reader from
   that file: `node tools/hud/src/cli.ts learn <png> stage <stage>`, check with
   `node tools/hud/src/cli.ts stage <png>`, then `pnpm exec prettier --write tools/hud/templates.json`.
-  The loop carries the expected stage meanwhile, so this never blocks it.
+  The loop carries the expected stage meanwhile, so this never blocks it. Re-read a capture that
+  read fine before after learning: on 2026-10-22 learning a rift 5 made an older, clean 5 read as
+  3, so the learn was reverted (the miss was a one-off on a settling button).
 - **`Summon Boss still up … summoning again`**: a tap didn't land; the loop retries by itself.
+  A popup over the screen (an oven item's card, a menu) swallows the tap the same way.
+- **`oven: …`** (`[Oven] TendOven=1`, on in the rift): the oven was full, and the loop sold the
+  Auto Bake results and restarted it. The user's rule (2026-10-22): sell everything, keep
+  nothing, the oven is only for its experience, and only ever when it is full, since a part-full
+  oven has no Sell All and means selling item by item. Never sell or restart it by hand on a
+  timer. **`oven error: …`** means a window didn't show: the loop leaves the oven alone until it
+  restarts. Look at `stops\oven_*.png`, close whatever is open (a tap outside an item's card
+  closes it), restart Auto Bake by hand (Auto, then Start) if it stopped, fix the signature, and
+  restart the loop.
 - **`error` / `stopped`**: read the log's tail and `stops\`; fix the cause, restart.
 
 Report each event to the user in one short line.

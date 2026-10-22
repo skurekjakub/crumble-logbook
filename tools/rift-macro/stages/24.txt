@@ -1,0 +1,7 @@
+; Dimensional rift 24, GingerCraven: rift 6's, 12's and 18's boss. At the HUD the team stands
+; centre-left and the boss near the screen's right edge, about level with it. Rift 6's walk from
+; the tap (wait 1600, D 1000) played while the BOSS card still covered the map, so the team never
+; moved; it left 17-74% over 112 tries on 2026-10-21 at 114.56G. The user's call: walk onto the
+; boss and slightly past it, so this waits for the map and holds right longer. Untested.
+encounter
+D 2100

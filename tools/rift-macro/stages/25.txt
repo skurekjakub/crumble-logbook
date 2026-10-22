@@ -1,0 +1,9 @@
+; Dimensional rift 25, Cake Hound Pack: a wide pack of hounds right of the team at the HUD, about
+; level with it, that closes in around it. With no input it left 25% and 27% on 2026-10-21 at
+; 124.16G. A short right step into the middle of the pack, kept short so the team keeps hitting:
+; from the map it left 10% (try 2). It plays on a timer from the tap, at the time try 2's walk
+; started (2.3 s), because the map wait gave up at once when the scene change was read the instant
+; of the tap. Untested.
+tap
+wait 2300
+D 800

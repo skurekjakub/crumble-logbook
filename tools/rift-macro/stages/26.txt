@@ -1,0 +1,9 @@
+; Dimensional rift 26, Cool Mint Cookie: rift 8's and rift 20's boss, and their walk (see 8.txt and
+; 20.txt): a right hold that puts the whole team on her at the right edge. It plays on a timer
+; from the tap, at the time rift 25's map showed (2.3 s), since the map wait could give up at once.
+; On 2026-10-21 at 124.16G, D 1800 left 46-82% over tries 2-10 (median about 60%) and D 2600
+; left 45-80% over tries 11-16 (median about 67%), so the hold stays at 1800.
+; Untested.
+tap
+wait 2300
+D 1800

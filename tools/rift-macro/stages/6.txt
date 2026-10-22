@@ -6,6 +6,9 @@
 ; captures were quick, the map showed 1.6 s after the tap or later in nine tries of ten (median
 ; 1.8 s).
 ; This walk won on 2026-10-13 at 13:31, on try 289 of the session, with the encounter up 29.6 s.
+; Season 3 (2026-10-22) holds right from 2.3 s for 2100 ms, rift 24's walk onto the same boss and
+; slightly past it, since keys held under the BOSS card don't move the team (see 24.txt).
+; Untested.
 tap
-wait 1600
-D 1000
+wait 2300
+D 2100

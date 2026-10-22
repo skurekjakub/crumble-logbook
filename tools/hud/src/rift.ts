@@ -12,13 +12,13 @@ import { learnDigits, readDigits } from "./hud.ts";
 import type { Screen } from "./screen.ts";
 
 /**
- * The number in "Dimensional Rift Stage 12...", in yellow beside white words, rows 727 to 743 on
- * 2026-10-15. The line is centred, so the band spans its width; the trailing dots are too short
- * to be digits. The digits look like those of "Repeating Stage 358-20..." but are drawn a little
+ * The number in "Dimensional Rift Stage 12...", in yellow beside white words, rows 649 to 665 from
+ * season 3 (2026-10-22). The line is centred, so the band spans its width; the trailing dots are
+ * too short to be digits. The digits look like those of "Repeating Stage 358-20..." but are drawn a little
  * smaller, which puts them too far from that font's templates, so they learn their own.
  */
 export const RIFT_REPEAT: Field = {
-  region: { x: 560, y: 705, width: 600, height: 60 },
+  region: { x: 560, y: 627, width: 600, height: 60 },
   isInk: (r, g, b) => r >= 200 && g >= 200 && b <= 100,
   minHeight: 12,
   maxSeparatorGap: 1.4,

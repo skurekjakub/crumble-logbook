@@ -7,7 +7,7 @@
 # A Monitor's expiry kills only the wrapper shell, never this loop, so the loop ends itself: when
 # its parent is gone, when its output has no reader, and when a newer watcher starts.
 f="${1:-C:/repositories/crumble-logbook/tools/stage-macro/stage-loop.log}"
-stage_lines="pass on|fail on|waiting for|error|stopped|didn't start|where .* was expected|unread|started"
+stage_lines="pass on|fail on|waiting for|error|stopped|didn't start|where .* was expected|unread|started|oven"
 pattern="${2:-$stage_lines}"
 pidfile="${TMPDIR:-/tmp}/stage-macro-watch.pid"
 if read -r old 2>/dev/null < "$pidfile" && [ "$old" != "$$" ] &&

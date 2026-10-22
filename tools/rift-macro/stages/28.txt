@@ -1,0 +1,9 @@
+; Dimensional rift 28, Rowdy Trucks: rift 4's, 10's and 16's boss, and rift 16's walk, which beat
+; them there on 2026-10-15 (see 16.txt): down-left into the lower left corner, so the trucks'
+; charge rams a packed column. It starts at 2.3 s after the tap rather than rift 16's 1.6 s, since
+; keys held under the BOSS card don't move the team (see 24.txt). With no input it left 4% on
+; 2026-10-22.
+; Untested.
+tap
+wait 2300
+S+A 4500

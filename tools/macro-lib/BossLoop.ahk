@@ -22,6 +22,8 @@ global LastScreen := ""
 global CaptureMs := 1500
 ; The lowest boss health a lost try left, in percent, by stage: from RunsFile at start, then each try.
 global Lowest := Map()
+; Set when tending the oven went wrong, so the loop leaves the oven alone for the rest of the run.
+global OvenGaveUp := false
 
 ; Fallbacks every boss macro has, for keys missing from its INI. Section -> key -> value. A macro's
 ; own defaults are laid over these.
@@ -37,7 +39,15 @@ global BOSS_DEFAULTS := Map(
     "Stages", Map("ScriptDir", "stages", "WaitForScript", "1"),
     "Record", Map("Video", "unscripted", "Seconds", "45", "BitRate", "4000000", "VideoDir", "recordings"),
     "Run", Map("MaxTries", "0"),
-    "Hud", Map("Node", "node")
+    "Hud", Map("Node", "node"),
+    "Oven", Map("TendOven", "0", "OvenWaitMs", "5000",
+                "OvenIdle", "470,2280|570,2275|475,2315|575,2315", "OvenIdleMargin", "30",
+                "OvenStackX", "720", "OvenStackY", "2173", "OvenSellAllX", "1285", "OvenSellAllY", "2250",
+                "OvenConfirmX", "992", "OvenConfirmY", "2250", "OvenCloseX", "715", "OvenCloseY", "2453",
+                "OvenAutoX", "520", "OvenAutoY", "2283", "OvenStartX", "715", "OvenStartY", "2250",
+                "OvenResults", "300,1616,007E91|1100,1616,007E91|830,2240,FD9500|1285,2215,14AEB8",
+                "OvenConfirm", "600,2240,14AEB8|830,2240,FD9500|1100,2220,FD9500",
+                "OvenSettings", "200,419,007E91|1240,419,007E91|600,2240,FD9500|830,2240,FD9500")
 )
 
 /**
@@ -204,6 +214,8 @@ RecordMode() {
  * - While a try is out, Judge follows its encounter to a result.
  * - A stage without a script whose boss won waits for its script (WaitForScript), checking only
  *   that the file exists, so the next try plays it.
+ * - With TendOven on, when the Summon screen shows the oven full (OvenFull), it tends the oven
+ *   (TendOven) before the next tap.
  * @throws Error, caught here, when the stage's number is unknown and stays unreadable for
  *   UnreadLimit polls on the Summon button, or a stage loses MaxTries times in a row
  */
@@ -285,6 +297,11 @@ RunLoop() {
             }
             if (N("MaxTries") > 0 && Tries.Get(Current, 0) >= N("MaxTries"))
                 throw Error(Current " lost " Tries[Current] " times in a row; tune " StrReplace(script, A_ScriptDir "\"))
+            if (N("TendOven") && !OvenGaveUp && OvenFull(buf)) {
+                TendOven()
+                Pace(polled, N("PollMs"))
+                continue
+            }
             unread := 0
             ; The screen comes back to the Summon button after the try, and its stage is read afresh.
             known := false
@@ -391,6 +408,89 @@ Attempt(num, script) {
         TryScript(steps, a, a.changed, rel)
     Phase := "boss"
     return a
+}
+
+/**
+ * Tells whether Auto Bake has stopped, which it does once its results fill the oven: its Auto
+ * button is teal then, and orange while it bakes. Each OvenIdle point must be teal, its green and
+ * blue both over its red by OvenIdleMargin; the button pulses, so no single colour fits.
+ * @param buf capture from Capture() of the Summon screen
+ * @returns true when every point is teal
+ */
+OvenFull(buf) {
+    margin := N("OvenIdleMargin")
+    for part in StrSplit(Cfg["OvenIdle"], "|") {
+        p := StrSplit(Trim(part), ",")
+        c := Pixel(buf, Integer(p[1]), Integer(p[2]))
+        r := c >> 16, g := (c >> 8) & 0xFF, b := c & 0xFF
+        if (g < r + margin || b < r + margin)
+            return false
+    }
+    return true
+}
+
+/**
+ * Sells everything Auto Bake has baked and starts Auto Bake again, for the oven's experience: taps
+ * the oven's stack of results, Sell All, the confirmation the game asks for when some of it beats
+ * the equipped gear, then Auto and Start, which keeps Auto Bake's saved settings. Only for a full
+ * oven (OvenFull): with few results the window has no Sell All, and the stack, tapped while
+ * baking, opens one item's card instead. Each window is checked by its signature before its
+ * button is tapped; one that doesn't show within OvenWaitMs ends the routine with an "oven error"
+ * line and a saved screen, and the loop leaves the oven alone for the rest of the run.
+ * @throws StopSignal when F8 stops the loop
+ */
+TendOven() {
+    global Phase
+    Phase := "tending the oven"
+    Log("oven: selling the Auto Bake results")
+    Tap("OvenStack")
+    if !AwaitSignature("OvenResults", true)
+        return OvenError("the Auto Bake results didn't open")
+    Tap("OvenSellAll")
+    if AwaitSignature("OvenConfirm", true)
+        Tap("OvenConfirm")
+    if !AwaitSignature("OvenResults", false) {
+        Log("oven: the results stayed open after Sell All; closing them")
+        Tap("OvenClose")
+        if !AwaitSignature("OvenResults", false)
+            return OvenError("the Auto Bake results wouldn't close")
+    }
+    Tap("OvenAuto")
+    if !AwaitSignature("OvenSettings", true)
+        return OvenError("the Auto Bake settings didn't open")
+    Tap("OvenStart")
+    if !AwaitSignature("OvenSettings", false)
+        return OvenError("the Auto Bake settings stayed open after Start")
+    Log("oven: Auto Bake started again")
+}
+
+/**
+ * Captures until a window's signature shows, or stops showing.
+ * @param name the [Oven] signature's key, e.g. "OvenResults"
+ * @param shown true to wait for it to show, false to wait for it to go
+ * @returns true when it did within OvenWaitMs
+ * @throws StopSignal when F8 stops the loop
+ */
+AwaitSignature(name, shown) {
+    deadline := A_TickCount + N("OvenWaitMs")
+    while (A_TickCount < deadline) {
+        CheckStop()
+        if (Shows(TimedCapture(), Cfg[name]) = shown)
+            return true
+        Wait(300)
+    }
+    return false
+}
+
+/**
+ * Logs why tending the oven stopped short, with the screen saved to stops\, and stops the loop
+ * tending it for the rest of the run.
+ * @param why what didn't happen
+ */
+OvenError(why) {
+    global OvenGaveUp
+    OvenGaveUp := true
+    Log("oven error: " why "; leaving the oven alone until a restart; " SaveStopShot("oven_"))
 }
 
 /**
@@ -677,6 +777,6 @@ SaveVideo(name) {
  * @returns the tooltip text
  */
 ProbeText(buf) {
-    return "screen: " ScreenOf(buf) "`nHUD: " HudLine(HudRun(Boss.Hud, buf))
+    return "screen: " ScreenOf(buf) (OvenFull(buf) ? " | oven full" : "") "`nHUD: " HudLine(HudRun(Boss.Hud, buf))
         . "`nSummon:" Describe(buf, Cfg["Summon"]) "`nBoss:" Describe(buf, Cfg["Boss"])
 }

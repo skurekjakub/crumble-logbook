@@ -10,8 +10,8 @@
 
 BossLoopInit({Title: "Rift loop", IniPath: A_ScriptDir "\rift-loop.ini", StateFile: A_ScriptDir "\rift-loop.state",
     Defaults: Map(
-        "Points", Map("SummonX", "718", "SummonY", "625"),
-        "Detect", Map("Summon", "620,580,DC44F6|820,580,A242EA|600,610,C026F4|640,665,7D0EEE|700,603,FFF647|718,645,FFF647"),
+        "Points", Map("SummonX", "718", "SummonY", "547"),
+        "Detect", Map("Summon", "620,502,DC44F6|820,502,A242EA|600,532,C026F4|640,587,7D0EEE|560,560,9E1BEF|860,540,6F2FDC|780,600,2807B1"),
         "Run", Map("LogFile", "rift-loop.log", "RunsFile", "rift-runs.csv")),
     Hud: "rift", NumOf: (read) => "rift-" read, ScriptPath: RiftScript,
     NextStage: (num) => "rift-" (RiftStage(num) + 1),

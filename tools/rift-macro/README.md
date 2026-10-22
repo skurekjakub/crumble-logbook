@@ -13,6 +13,9 @@ Fights each dimensional rift stage's boss with a movement script for that stage.
 - **The stage's number** is read from "Repeating Dimensional Rift Stage 12..." under the button, with `tools/hud`'s `rift` read. Its digits are the font of "Repeating Stage 358-20...", so the reader knows them all. An unread number saves `stops\unread_<stage>_<time>.png`; teach it with `node tools/hud/src/cli.ts learn <png> rift <stage>`.
 - **A win can look like a loss.** The button can come back within seconds of a win, so a pass may be logged as a fail. The next read on the button corrects the stage (`read rift-13 on Summon Boss where rift-12 was expected`), and the loop plays the new stage's script from then.
 
+- **The oven** is tended here (`[Oven] TendOven=1`): when Auto Bake has stopped on a full oven, the loop sells its results and starts it again (`tools/stage-macro/README.md`, What the loop does).
+- **A new season can move the rift's panel.** Season 3 moved the button, its "Repeating…" line and the Auto Summon box up 78 px and narrowed the boss's health bar, so `[Points]`, `[Detect] Summon`, `HpBar` and the read's band in `tools/hud/src/rift.ts` were set again from screenshots.
+
 ## Before running
 
 Turn the game's **Auto Summon** off (the checkbox beside the energy bar). With it on, the game summons the next boss after a win by itself and the script never plays. A restart of the emulator or the game turns it back on.
