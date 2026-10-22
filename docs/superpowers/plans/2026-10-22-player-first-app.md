@@ -118,9 +118,9 @@ Files: `apps/web/src/components/GearBuild.tsx` (new), `apps/web/src/styles/gear.
 
 ### Task 10: the skill learns both jobs (orchestrator)
 
-Files: `.claude/skills/refresh-meta/SKILL.md` (Obsolete names gear builds), `.claude/skills/refresh-meta/area-brief.md` (the gear-builds and English jobs), `.claude/skills/refresh-meta/references/refresh-section.md` (the `translated` row kind).
+Files: `.claude/skills/refresh-meta/SKILL.md` (Obsolete names gear builds), `.claude/skills/refresh-meta/area-brief.md` (the gear-builds and English jobs), `.claude/skills/refresh-meta/refresh-section.md` (the `translated` row kind; the spec's `references/` folder doesn't exist).
 
-- [ ] The three edits; `pnpm verify`; commit.
+- [x] The three edits; `pnpm verify`; commit.
 
 ### Task 11: the round (orchestrator, per `.claude/skills/refresh-meta/SKILL.md`)
 

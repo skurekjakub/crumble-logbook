@@ -65,7 +65,8 @@ Not being mentioned is not evidence: the recommendation stays current and the re
 
 - `since` is the date of the patch that displaced it when the evidence ties it to one, else the round date; never after `curated/meta.json`'s `updated`, so `updated` moves to the round date first. The reason's sources are curated sources.
 - `superseded_by` is for decks only: a current deck of the same mode. The deck keeps its `status`.
-- In the same round, every row that recommends the deck moves off it: a counter edge naming it gets its own `obsolete` block, and a stage zone slot or a dungeon lineup naming it points at a current deck, or the import fails; a rune build or gear rec that names only obsolete decks gets its own block or names the successor, which the import doesn't check.
+- In the same round, every row that recommends the deck moves off it: a counter edge naming it gets its own `obsolete` block, and a stage zone slot or a dungeon lineup naming it points at a current deck, or the import fails; a rune build or gear rec that names only obsolete decks gets its own block or names the successor, which the import doesn't check. A gear build (`curated/gear-builds.json`) naming an obsolete deck gets its own block or names the successor, which the import does check: a current build can't name an obsolete deck.
+- A gear build is displaced the same way as a rune build: by evidence that the best players now roll something else for that mode and variant. Only one build per mode and variant is current, so the newcomer and the obsolete block land in the same round.
 - A later round removes the block on evidence, and the changelog lists the row as un-obsoleted.
 
 ## Rationalizations
