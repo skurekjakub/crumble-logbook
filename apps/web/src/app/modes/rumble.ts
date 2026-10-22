@@ -12,6 +12,7 @@ export const RUMBLE = {
   id: "rumble",
   kind: "mode",
   label: "Rumble Arena",
+  navGroup: "play",
   title: "Rumble Arena Logbook",
   to: "/rumble",
   link: modeLink("rumble"),

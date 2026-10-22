@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { createRootRouteWithContext, Outlet, useLocation } from "@tanstack/react-router";
 import { decksQuery, recordQuery, sourcesQuery } from "../api/queries";
 import type { Section, StampStat } from "../app/modes";
-import { activeTab, SECTIONS, sectionForPath } from "../app/modes";
+import { activeTab, NAV_GROUPS, sectionForPath, sectionsIn } from "../app/modes";
 import type { RouterContext } from "../app/router-context";
 import { useIconIndex } from "../api/hooks";
 import { IconIndexContext } from "../components/CookieIcon";
@@ -39,7 +39,7 @@ function headerContext(section: Section | undefined): string | null {
 
 /**
  * The app chrome: the phone's top bar, the logbook navigation (every
- * section, the active section's pages beneath it), the header (from the
+ * section in its group, the active section's pages beneath it), the header (from the
  * active mode's research record, with the record's own lede for that mode
  * on the section's landing page, and figures scoped to the record and
  * mode), the view in the main landmark, and the footer.
@@ -90,22 +90,25 @@ function RootLayout() {
         <SideNav
           id={NAV_ID}
           label="Logbook"
-          sections={SECTIONS.map((s, i) => ({
-            id: s.id,
-            label: s.label,
-            link: s.link,
-            current: s.id !== section?.id ? null : landing ? "page" : "section",
-            startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",
-            hasPages: s.tabs.length > 0,
-            pages:
-              s.id === section?.id
-                ? s.tabs.map((t) => ({
-                    id: t.id,
-                    label: t.label,
-                    link: t.link,
-                    current: t.id === tab?.id,
-                  }))
-                : [],
+          groups={NAV_GROUPS.map((g) => ({
+            id: g.id,
+            label: g.label,
+            sections: sectionsIn(g.id).map((s) => ({
+              id: s.id,
+              label: s.label,
+              link: s.link,
+              current: s.id !== section?.id ? null : landing ? "page" : "section",
+              hasPages: s.tabs.length > 0,
+              pages:
+                s.id === section?.id
+                  ? s.tabs.map((t) => ({
+                      id: t.id,
+                      label: t.label,
+                      link: t.link,
+                      current: t.id === tab?.id,
+                    }))
+                  : [],
+            })),
           }))}
         />
         <div className="page">

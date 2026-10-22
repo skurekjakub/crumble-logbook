@@ -12,6 +12,7 @@ export const DAILY = {
   id: "daily-dungeons",
   kind: "mode",
   label: "Daily Dungeons",
+  navGroup: "play",
   title: "Daily Dungeons Logbook",
   to: "/daily-dungeons",
   link: modeLink("daily-dungeons"),

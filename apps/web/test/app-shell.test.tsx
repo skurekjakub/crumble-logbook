@@ -125,24 +125,38 @@ describe("app shell", () => {
     await waitFor(() => expect(stamp().Decks).toBe("2"));
   });
 
-  it("lists every section by its English name and nests the current section's pages, marking the current ones", async () => {
+  it("groups the sections under labelled lists, the game modes first, leaving out a group with no sections", async () => {
     await renderAt("/conquest/decks");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
-    expect(sectionLinks(nav).map((a) => a.textContent)).toEqual([
+    const play = [
       "Guild Conquest",
       "Arena",
       "Rumble Arena",
       "Stage",
       "Crumble Dungeon",
       "Daily Dungeons",
-      "Team power",
-      "Damage formula",
-      "Account",
-      "Research",
-      "Sources",
-      "Glossary",
-    ]);
-    const conquest = within(nav).getByRole("link", { name: "Guild Conquest" });
+    ];
+    const you = ["Team power", "Account"];
+    const reference = ["Damage formula", "Research", "Sources", "Glossary"];
+    for (const [name, members] of [
+      ["Play", play],
+      ["You", you],
+      ["Reference", reference],
+    ] as const) {
+      const group = within(nav).getByRole("list", { name });
+      expect(sectionLinks(group).map((a) => a.textContent)).toEqual(members);
+      expect(within(nav).getByText(name, { selector: ".nav-group-label" })).toBeVisible();
+    }
+    expect(within(nav).queryByRole("list", { name: "Builds" })).toBeNull();
+    expect(sectionLinks(nav).map((a) => a.textContent)).toEqual([...play, ...you, ...reference]);
+  });
+
+  it("nests the current section's pages under it in its group, marking the current ones", async () => {
+    await renderAt("/conquest/decks");
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    const conquest = within(within(nav).getByRole("list", { name: "Play" })).getByRole("link", {
+      name: "Guild Conquest",
+    });
     expect(conquest).toHaveAttribute("href", "/conquest");
     expect(conquest).toHaveAttribute("aria-current", "true");
     expect(within(nav).getByRole("link", { name: "Arena" })).not.toHaveAttribute("aria-current");

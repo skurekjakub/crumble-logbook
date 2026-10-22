@@ -25,10 +25,17 @@
   margin: 0;
   padding: 0;
 }
-.nav-section.group {
+/* A labelled group of sections; each after the first sits under a rule. */
+.nav-group + .nav-group {
   margin-top: var(--sp-3);
   padding-top: var(--sp-3);
   border-top: 1px solid var(--line);
+}
+.nav-group-label {
+  display: block;
+  padding: 0 10px var(--sp-1);
+  font: 600 var(--fs-2xs) / 1.3 var(--body);
+  color: var(--ink-3);
 }
 .nav-section-link {
   display: grid;

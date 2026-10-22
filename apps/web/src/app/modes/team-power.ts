@@ -12,6 +12,7 @@ export const TEAM_POWER = {
   id: "team-power",
   kind: "mode",
   label: "Team power",
+  navGroup: "you",
   title: "Team Power Logbook",
   to: "/team-power",
   link: modeLink("team-power"),

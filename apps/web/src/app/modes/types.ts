@@ -71,12 +71,20 @@ export type SharedView =
   | "counters"
   | "usage";
 
+/**
+ * The side nav's group a section is listed in: the game modes, the builds
+ * across modes, the reader's own account, and the reference pages.
+ */
+export type NavGroupId = "play" | "builds" | "you" | "reference";
+
 /** What a top-level section has, whether a game mode or a shared page. */
 interface SectionBase {
   /** The first path segment. */
   id: string;
   /** Tab label. */
   label: string;
+  /** The side nav group the section is listed in. */
+  navGroup: NavGroupId;
   /** The header's `<h1>`. */
   title: string;
   /** The section's concrete path: `/<id>`. */

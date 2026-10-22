@@ -12,6 +12,7 @@ export const ARENA = {
   id: "arena",
   kind: "mode",
   label: "Arena",
+  navGroup: "play",
   title: "Arena Logbook",
   to: "/arena",
   link: modeLink("arena"),

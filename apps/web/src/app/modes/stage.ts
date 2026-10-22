@@ -13,6 +13,7 @@ export const STAGE = {
   id: "stage",
   kind: "mode",
   label: "Stage",
+  navGroup: "play",
   title: "Stage Pushing Logbook",
   to: "/stage",
   link: modeLink("stage"),

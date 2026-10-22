@@ -46,8 +46,8 @@ Files: `apps/web/src/app/modes/types.ts` and every `apps/web/src/app/modes/*.ts`
 
 Files: `apps/web/src/app/modes/types.ts`, `apps/web/src/app/modes/index.ts`, `apps/web/src/app/modes/shared.ts`, `apps/web/src/components/SideNav.tsx`, `apps/web/src/routes/__root.tsx`, `apps/web/src/styles/shell.css`, `apps/web/test/app-shell.test.tsx`.
 
-- [ ] `navGroup: "play" | "builds" | "you" | "reference"` on `SectionBase`, set on every section; Team power in "you". The nav renders a labelled list per group (`aria-labelledby`), in the spec's order; the "builds" group renders once it has sections (Tasks 7 and 9 add them).
-- [ ] Tests: the groups, their labels and members; the active state survives.
+- [x] `navGroup: "play" | "builds" | "you" | "reference"` on `SectionBase`, set on every section; Team power in "you". The nav renders a labelled list per group (`aria-labelledby`), in the spec's order; the "builds" group renders once it has sections (Tasks 7 and 9 add them).
+- [x] Tests: the groups, their labels and members; the active state survives.
 - Verify: `pnpm exec vitest run apps/web/test/app-shell.test.tsx apps/web/test/modes.test.ts`, then `pnpm verify`.
 
 ### Task 4: Setup and Details

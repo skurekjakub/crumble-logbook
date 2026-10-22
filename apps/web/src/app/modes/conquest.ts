@@ -11,6 +11,7 @@ export const CONQUEST = {
   id: "conquest",
   kind: "mode",
   label: "Guild Conquest",
+  navGroup: "play",
   title: "Piñata Raid Logbook",
   to: "/conquest",
   link: modeLink("conquest"),

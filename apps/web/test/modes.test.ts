@@ -14,7 +14,7 @@ import {
   sourcesQuery,
   usageQuery,
 } from "../src/api/queries";
-import type { ModeRoutePath } from "../src/app/modes";
+import type { ModeRoutePath, NavGroupId } from "../src/app/modes";
 import {
   activeTab,
   ARENA,
@@ -24,9 +24,12 @@ import {
   MODES,
   modeById,
   modePath,
+  NAV_GROUPS,
   RUMBLE,
+  SECTIONS,
   SHARED_SECTIONS,
   sectionForPath,
+  sectionsIn,
   STAGE,
   tabAt,
   TEAM_POWER,
@@ -210,6 +213,21 @@ describe("MODES", () => {
     ]);
     expect(sectionForPath("/research")?.id).toBe("research");
     expect(sectionForPath("/formula")?.id).toBe("formula");
+  });
+
+  it("files every section in a nav group: the game modes in Play, team power and the account in You", () => {
+    expect(NAV_GROUPS.map((g) => [g.id, g.label])).toEqual([
+      ["play", "Play"],
+      ["builds", "Builds"],
+      ["you", "You"],
+      ["reference", "Reference"],
+    ]);
+    const ids = (group: NavGroupId) => sectionsIn(group).map((s) => s.id);
+    expect(ids("play")).toEqual(MODES.filter((m) => m !== TEAM_POWER).map((m) => m.id));
+    expect(ids("you")).toEqual(["team-power", "account"]);
+    expect(ids("reference")).toEqual(["formula", "research", "sources", "glossary"]);
+    expect(ids("builds")).toEqual([]);
+    expect(NAV_GROUPS.flatMap((g) => sectionsIn(g.id))).toHaveLength(SECTIONS.length);
   });
 
   it("gives every mode its own API scope", () => {
