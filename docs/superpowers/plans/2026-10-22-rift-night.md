@@ -57,7 +57,7 @@ game-side work and the macro change it needs.
       and the gear pass restarts it either way.
 - [ ] 7. Gear passes through the night: equip rift-substat drops into
       DimensionRift, sell the rest, restart Auto Bake (log below).
-- [ ] 8. Switch lineup 4 to DimensionRift once it beats Conquest on the
+- [x] 8. Switch lineup 4 to DimensionRift once it beats Conquest on the
       rift's needs (accuracy and focus near 1,200, no haste).
 - [x] 9. Notes: rift macro README, stage-macro skill, memory, this plan.
 
@@ -116,3 +116,32 @@ preset. Pets: Continuum Cog, Octo Wasabi, Holy Baby Drop (Hot Doggie out).
   Reduction, Focus. Skill Haste taken off.
 
 ## Gear pass log
+
+### 2026-10-23 00:25–00:48 (first full oven under the rift filter)
+
+Equipped into DimensionRift (the rest sold with Sell All):
+
+| Slot | Item | Lv | Subs | Replaced |
+| --- | --- | --- | --- | --- |
+| TL1 | Axe-Spear of Blind Destruction | 118 | CRIT 16.60%, Skill AMP 9.20% | Lv.105 |
+| TL2 | Resplendent Wind Guardian | 120 | Skill AMP 8.11%, Accuracy 172.13 | Lv.105 |
+| TL3 | Dreaming Moon | 115 | Skill AMP 8.64%, Accuracy 151.30 | Lv.107 |
+| BL2 | Awakened Dragon Lord's Armor | 117 | DMG Reduction 6.73%, HP 9,026 | Lv.110 |
+| BL3 | Hollyberry Shield | 119 | DMG Reduction 6.55%, CRIT RES 21.82% | Lv.108 |
+| TR1 | Endless Void Necklace | 120 | Accuracy 149.94, Skill AMP 9.17% | Lv.109 |
+| TR2 | Eternally Sweet Paradise | 117 | CRIT 17.57%, Skill AMP 8.05% | Lv.110 |
+| BR2 | Ultimate Recipe Book | 117 | Focus 186.44, Evasion | Lv.111 (had Skill Haste) |
+| BR3 | Rainbow Ginseng | 119 | DMG Reduction 6.07%, Mov SPD | Lv.112 |
+
+- Kept: BL1 helmet, TR3 Light of Deceit, BR1 Lily (no better drop
+  without haste).
+- Totals now: Skill Haste 0; gear accuracy about 1,209 (Conquest 1,064);
+  gear focus about 856.
+- Lineup 4 switched to DimensionRift at 00:48: lineup power 9.76G → 9.19G,
+  header 18.30G → 17.36G (Dimensional Energy reached Lv.4 at about 00:30).
+- Equipping re-sorts the results list, so each pick is found again by icon
+  and level and confirmed on its card before Equip.
+- Back with no card open closes the results; a second Back opens "Exit the
+  game?" (Cancel at 432,2250).
+- First try after the switch: boss left at 46%. The 21 tries on Conquest
+  gear before it: 53–78%.

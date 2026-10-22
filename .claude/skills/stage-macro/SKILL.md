@@ -154,17 +154,19 @@ Stop the loop before working in menus and relaunch it after.
 - **Presets.** A lineup keeps its own gear preset (the dropdown in the lineup editor). The lobby's
   dropdown only switches which preset the lobby shows and equips into, stops Auto Bake, and
   snaps back to the lineup's preset when the cookie menu closes. DimensionRift (the renamed
-  Evasion preset) fills from the oven while the rift lineup keeps Conquest; switch lineup 4 to
-  it in the lineup editor once it beats Conquest on the rift's needs.
+  Evasion preset) fills from the oven; lineup 4 has worn it since 2026-10-23 00:48.
 - **Rift gear** (research in the plan above): Skill AMP on weapons and upper accessories, damage
   reduction and HP on armour, damage reduction on lower accessories, accuracy and focus near
   1,200, **no skill haste** (Caine's ATK buff breaks after GingerCraven's fear with any haste).
   Auto Bake's filter keeps Accuracy, Skill AMP, DMG Reduction and Focus; everything else is sold
   as it bakes.
-- **Gear pass** on `oven: Auto Bake stopped`: stop the loop; lobby dropdown → DimensionRift; open
-  the oven's stack; for each item whose subs fit its slot and beat DimensionRift's piece (no
-  haste line), tap it and Equip; then Sell All and confirm, Auto, Start; relaunch the loop.
-  Record each equip in the plan.
+- **Gear pass** on `oven: Auto Bake stopped`: stop the loop; make sure the lobby shows
+  DimensionRift (it does while lineup 4 wears it); open the oven's stack; catalogue every item's
+  compare card (one Back closes a card, and only when a card is open: its Equip button is orange
+  on an upgrade, teal otherwise); pick per slot the item whose subs fit it and beat
+  DimensionRift's piece, with no haste line; equip each pick, finding it again by icon and level
+  since every Equip re-sorts the list; then Sell All and confirm, Auto, Start; relaunch the
+  loop. Record each equip in the plan.
 - **Navigation.** One Back closes a card or menu. Back on the lobby opens the exit prompt ("Wait,
   hold on...") and a second one closes the game (2026-10-23). Relaunch with `adb shell am start
   -n com.devsisters.cc/com.devsisters.plugin.OvenUnityPlayerActivity`; it may come back on
