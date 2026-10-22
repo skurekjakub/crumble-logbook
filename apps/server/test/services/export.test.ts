@@ -100,6 +100,21 @@ function seedEverything(store: Store): SeedIds {
     ["dc:1"],
   );
 
+  services.gearBuilds.create(
+    {
+      slug: "cherry-default",
+      deckId: "cherry-onion",
+      position: 0,
+      confidence: "medium",
+      hasteLines: { min: 1, max: 4, note: null },
+      accuracy: 1000,
+      slots: { top_left: ["Skill AMP"], top_right: [], bottom_left: [], bottom_right: [] },
+      avoid: ["Crit damage"],
+      why: "dmg",
+    },
+    ["dc:1"],
+  );
+
   // A first score is created then deleted (and its citation with it), so
   // the surviving score's id and citation both skip past `1`.
   const droppedScore = services.scores.create(
@@ -558,6 +573,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       runeBuilds: 1,
       runeBuildDecks: 1,
       gearRecs: 1,
+      gearBuilds: 1,
       scores: 1,
       rankings: 1,
       mechanics: 1,
@@ -594,7 +610,7 @@ describe("exportSnapshot / restoreSnapshot", () => {
       formulaSteps: 1,
       formulaConstants: 1,
       formulaClaims: 1,
-      citations: 42,
+      citations: 43,
       factClaims: 1,
       accountSnapshots: 1,
       accountLineups: 1,

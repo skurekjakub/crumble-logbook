@@ -138,6 +138,7 @@ describe("importRecord on the daily dungeon fixture", () => {
       captain: {
         kr: "바삭튼튼 소아과 의사 우유맛 쿠키",
         en: "Milk Cookie's Crunchy Strong Pediatrician",
+        key: "cookie4019",
       },
     });
     expect(listed[0]!).toMatchObject({ perks: "Fixture: 복지 heal-boost perk" });

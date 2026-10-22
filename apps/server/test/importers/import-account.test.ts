@@ -314,10 +314,11 @@ describe("GET /api/account", () => {
     expect(lineup.captain).toEqual({
       kr: "체리 쿠키",
       en: "Cherry Cookie",
+      key: "cookie0024",
       resourceKey: "cookie0024",
     });
     expect(lineup.pets).toEqual([
-      { kr: "갓난갓방울", en: "Holy Baby Drop", resourceKey: "pet4001" },
+      { kr: "갓난갓방울", en: "Holy Baby Drop", key: null, resourceKey: "pet4001" },
     ]);
     expect(lineup.deck).toMatchObject({ label: "Bari dive", mode: "arena", found: true });
     expect(body.snapshot!.pets[0]).toMatchObject({

@@ -5,6 +5,7 @@ import { accountRouter } from "./routes/account";
 import { attemptsRouter } from "./routes/attempts";
 import { capturesRouter } from "./routes/captures";
 import { crudRouter } from "./routes/content";
+import { cookiesRouter } from "./routes/cookies";
 import { exportRouter } from "./routes/export";
 import { glossaryRouter } from "./routes/glossary";
 import { rankingsRouter } from "./routes/rankings";
@@ -35,6 +36,7 @@ export function createApp(services: Services) {
     .route(R.timeline.path, crudRouter(endpoints(services.timeline), R.timeline))
     .route(R.takeaways.path, crudRouter(endpoints(services.takeaways), R.takeaways))
     .route(R.gearRecs.path, crudRouter(endpoints(services.gearRecs), R.gearRecs))
+    .route(R.gearBuilds.path, crudRouter(endpoints(services.gearBuilds), R.gearBuilds))
     .route(
       R.recommendations.path,
       crudRouter(endpoints(services.recommendations), R.recommendations),
@@ -83,6 +85,7 @@ export function createApp(services: Services) {
     .route(R.formulaClaims.path, crudRouter(endpoints(services.formulaClaims), R.formulaClaims))
     .route(R.decks.path, crudRouter(services.decks, R.decks))
     .route(R.runeBuilds.path, crudRouter(services.runeBuilds, R.runeBuilds))
+    .route("/cookies", cookiesRouter(services.cookies))
     .route(R.sources.path, sourcesRouter(services.sources))
     .route(R.glossary.path, glossaryRouter(services.glossary))
     .route(R.rankings.path, rankingsRouter(services.rankings))

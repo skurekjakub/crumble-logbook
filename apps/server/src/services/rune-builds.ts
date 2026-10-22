@@ -7,20 +7,21 @@ import type { Repos, Store } from "../repos";
 import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
 import { applyFilters } from "./filters";
+import type { NameRef } from "./names";
 import { createNameResolver, recordsOf } from "./names";
 
 /**
  * A rune build as returned to callers: its cookie carries a resolved English
- * gloss alongside its stored Korean name (the build's own record's glossary
- * entries first), it lists the decks it applies to (by id, not resolved
- * further), and the sources that say why it became obsolete, empty while
- * it is current.
+ * gloss and cookie key alongside its stored Korean name (the build's own
+ * record's glossary entries first), it lists the decks it applies to (by
+ * id, not resolved further), and the sources that say why it became
+ * obsolete, empty while it is current.
  */
-export type RuneBuildView = Cited<RuneBuildRow> & {
-  en: string | null;
-  decks: string[];
-  obsoleteSources: string[];
-};
+export type RuneBuildView = Cited<RuneBuildRow> &
+  Omit<NameRef, "kr"> & {
+    decks: string[];
+    obsoleteSources: string[];
+  };
 
 /**
  * CRUD over the rune build aggregate: the rune build row, its m:n links to
@@ -110,13 +111,17 @@ export function createRuneBuildService(store: Store): RuneBuildService {
       OBSOLESCENCE,
       ids.map((id) => obsolescenceKey("rune_build", id)),
     );
-    return rows.map((row) => ({
-      ...row,
-      sources: sourcesById.get(String(row.id)) ?? [],
-      obsoleteSources: reasonsById.get(obsolescenceKey("rune_build", row.id)) ?? [],
-      en: resolve(row.cookieKr, recordsOf(row)).en,
-      decks: decksById.get(row.id) ?? [],
-    }));
+    return rows.map((row) => {
+      const { en, key } = resolve(row.cookieKr, recordsOf(row));
+      return {
+        ...row,
+        sources: sourcesById.get(String(row.id)) ?? [],
+        obsoleteSources: reasonsById.get(obsolescenceKey("rune_build", row.id)) ?? [],
+        en,
+        key,
+        decks: decksById.get(row.id) ?? [],
+      };
+    });
   };
 
   return {

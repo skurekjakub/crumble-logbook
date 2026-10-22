@@ -2,6 +2,7 @@ import type {
   Confidence,
   CounterInput,
   GameMode,
+  GearBuildInput,
   GearSlot,
   SourceSite,
   UsageStatInput,
@@ -23,6 +24,7 @@ import type { ManifestRecord } from "../manifest";
 import type {
   SeedCounter,
   SeedDeck,
+  SeedGearBuild,
   SeedGlossaryEntry,
   SeedMeta,
   SeedScore,
@@ -211,6 +213,31 @@ export function mapScore(s: SeedScore): ScoreInsert {
     season: s.season ?? null,
     player: s.player ?? null,
     note: s.note ?? null,
+  };
+}
+
+/**
+ * Maps a curated gear build onto a `gear_builds` row.
+ *
+ * @param b - the curated build, its mode resolved
+ * @returns the row: `id` becomes `slug`, `deck` `deckId`, `haste_lines`
+ *   `hasteLines`; an absent `variant`, `deck`, `accuracy` or `focus`
+ *   becomes `null`, an absent `avoid` `[]`
+ */
+export function mapGearBuild(b: SeedGearBuild): Values<GearBuildInput> {
+  return {
+    slug: b.id,
+    mode: b.mode,
+    variant: b.variant ?? null,
+    deckId: b.deck ?? null,
+    position: b.position,
+    confidence: b.confidence,
+    hasteLines: b.haste_lines,
+    accuracy: b.accuracy ?? null,
+    focus: b.focus ?? null,
+    slots: b.slots,
+    avoid: b.avoid ?? [],
+    why: b.why,
   };
 }
 

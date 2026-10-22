@@ -16,6 +16,7 @@ import {
   GLOSSARY_KIND,
   USAGE_KIND,
   deckSlug,
+  gearBuildInsert,
   isoDate,
   levelRuleText,
   sourceId,
@@ -152,6 +153,43 @@ export const seedGear = z.strictObject({
 });
 /** Output of {@link seedGear}, with its mode resolved. */
 export type SeedGear = Moded<z.output<typeof seedGear>>;
+
+const gearBuild = gearBuildInsert.shape;
+/**
+ * `gear-builds.json`: what to roll for, per mode and per boss or situation,
+ * each build citing its own sources, under a header (`about`, `measured`)
+ * that is accepted but not imported. `id` becomes the build's slug, `deck`
+ * the deck it is for; a field that may be `null` may also be left out, and
+ * `avoid` defaults to none. Each field keeps the table's insert rule, so a
+ * build the import accepts is one the API would. `obsolete`, when present,
+ * marks a build obsolete.
+ */
+export const seedGearBuilds = z.strictObject({
+  about: z.string().min(1),
+  measured: isoDate,
+  builds: z.array(
+    z.strictObject({
+      id: gearBuild.slug,
+      mode,
+      variant: gearBuild.variant,
+      deck: gearBuild.deckId,
+      position: gearBuild.position,
+      confidence: gearBuild.confidence,
+      haste_lines: gearBuild.hasteLines,
+      accuracy: gearBuild.accuracy,
+      focus: gearBuild.focus,
+      slots: gearBuild.slots,
+      avoid: gearBuild.avoid,
+      why: gearBuild.why,
+      obsolete: seedObsolete.optional(),
+      sources: cited,
+    }),
+  ),
+});
+/** Output of {@link seedGearBuilds}. */
+export type SeedGearBuilds = z.output<typeof seedGearBuilds>;
+/** One build of {@link seedGearBuilds}, with its mode resolved. */
+export type SeedGearBuild = Moded<SeedGearBuilds["builds"][number]>;
 
 /** One entry of `scores.json`, in billions (G). `power_g` and `deck` may be `null`. */
 export const seedScore = z.strictObject({

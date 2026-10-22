@@ -44,6 +44,8 @@ export interface CheckContext {
   obsoleteDecks: ReadonlySet<string>;
   /** The day the record was last updated (`meta.json`'s `updated`), when it has a meta file. */
   updated: string | undefined;
+  /** The game modes the record covers: `import.json`'s mode and each mode `meta.json` has a block for. */
+  modes: ReadonlySet<GameMode>;
 }
 
 /** What a collection's rows are mapped with, besides the rows themselves. */
@@ -243,7 +245,26 @@ export function parseModedRows<S extends z.ZodType<{ mode?: GameMode | undefined
   schema: S,
   mode: GameMode | undefined,
 ): Array<Moded<z.output<S>>> {
-  return parseRows(file, raw, schema).map((row, index) => {
+  return withModes(file, parseRows(file, raw, schema), mode);
+}
+
+/**
+ * Files every validated row that states no game mode under the record's.
+ *
+ * @typeParam T - the rows' shape
+ * @param file - the file's record-relative path, as errors name it
+ * @param rows - the validated rows, in file order
+ * @param mode - the record's mode, or `undefined` when the record states none
+ * @returns the rows, in file order, each with its mode
+ * @throws {ImportError} naming `file` and the index of the first row that
+ *   states no mode when the record states none
+ */
+export function withModes<T extends { mode?: GameMode | undefined }>(
+  file: string,
+  rows: readonly T[],
+  mode: GameMode | undefined,
+): Array<Moded<T>> {
+  return rows.map((row, index) => {
     const resolved = row.mode ?? mode;
     if (resolved === undefined) {
       throw new ImportError(

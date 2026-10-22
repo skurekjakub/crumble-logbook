@@ -13,20 +13,18 @@ import { NotFoundError } from "../errors";
 import type { Repos, Store } from "../repos";
 import type { AccountRefView } from "./account-refs";
 import { resolveRef } from "./account-refs";
-import type { NameResolver } from "./names";
-import { createNameResolver } from "./names";
+import type { NameRef } from "./names";
+import { RESOURCE_KEY, cookieKey, createEntryFinder, resourceKeyOf } from "./names";
 import { recordsCovering } from "./records";
 
 /**
  * A cookie or pet name as the account view shows it: the glossary's
- * Korean name and English gloss when the name resolves, and the game
- * resource key its icon is drawn from, when known.
+ * Korean name, English gloss and cookie key when the name resolves, and
+ * the game resource key its icon is drawn from, when known.
  */
-export interface AccountName {
+export interface AccountName extends NameRef {
   /** The glossary's Korean name, or the name as the snapshot gives it when unresolved. */
   kr: string;
-  /** The glossary's English name, or `null` when unresolved. */
-  en: string | null;
   /** The game resource key (`cookie0038`), from the snapshot or the glossary. */
   resourceKey: string | null;
 }
@@ -138,24 +136,22 @@ export interface AccountService {
 
 /**
  * Resolves the account's cookie and pet names against the glossary: by
- * the Korean name it is keyed by, then by the game resource key, then by
- * any name, shorthand or English gloss, preferring the entries of the
- * records covering the lineup's mode.
+ * the game resource key, then by the name as any entry's Korean name,
+ * shorthand or English gloss, then by the English name the snapshot gave,
+ * preferring the entries of the records covering the lineup's mode.
  *
  * @param repos - the repos to read the glossary and records from
- * @returns a function from a name, its resource key and its lineup's mode to the view's name
+ * @returns a function from a name, its resource key, its lineup's mode and
+ *   the snapshot's English name to the view's name
  */
 function nameResolver(repos: Repos) {
   const glossary = repos.glossary.list();
-  const byKr = new Map(glossary.map((entry) => [entry.kr, entry]));
-  const byKey = new Map<string, GlossaryRow>();
-  const byEn = new Map<string, GlossaryRow>();
+  const byResourceKey = new Map<string, GlossaryRow>();
   for (const entry of glossary) {
-    const key = entry.extra.resource_key;
-    if (typeof key === "string" && !byKey.has(key)) byKey.set(key, entry);
-    if (entry.en !== null && !byEn.has(entry.en)) byEn.set(entry.en, entry);
+    const key = resourceKeyOf(entry.extra);
+    if (key !== null && !byResourceKey.has(key)) byResourceKey.set(key, entry);
   }
-  const resolve: NameResolver = createNameResolver(glossary);
+  const find = createEntryFinder(glossary);
   const covering = new Map<GameMode, string[]>();
   /**
    * The records whose glossary entries win a name inside a mode's lineup.
@@ -174,33 +170,21 @@ function nameResolver(repos: Repos) {
     mode: GameMode | null,
     en: string | null = null,
   ): AccountName => {
-    const key = resourceKey ?? (RESOURCE_KEY.test(name) ? name : null);
-    const entry = (key === null ? undefined : byKey.get(key)) ?? byKr.get(name);
-    if (entry) {
-      const own = entry.extra.resource_key;
-      return {
-        kr: entry.kr,
-        en: entry.en ?? en,
-        resourceKey: key ?? (typeof own === "string" ? own : null),
-      };
-    }
+    const given = resourceKey ?? (RESOURCE_KEY.test(name) ? name : null);
     const records = recordsFor(mode);
-    const gloss = resolve(name, records).en ?? (en === null ? null : resolve(en, records).en);
-    const named = gloss === null ? undefined : byEn.get(gloss);
-    if (named) {
-      const own = named.extra.resource_key;
-      return {
-        kr: named.kr,
-        en: gloss,
-        resourceKey: key ?? (typeof own === "string" ? own : null),
-      };
-    }
-    return { kr: name, en: gloss ?? en, resourceKey: key };
+    const entry =
+      (given === null ? undefined : byResourceKey.get(given)) ??
+      find(name, records) ??
+      (en === null ? undefined : find(en, records));
+    if (!entry) return { kr: name, en, key: null, resourceKey: given };
+    return {
+      kr: entry.kr,
+      en: entry.en ?? en,
+      key: cookieKey(entry),
+      resourceKey: given ?? resourceKeyOf(entry.extra),
+    };
   };
 }
-
-/** A game resource key: `cookie` or `pet`, then digits. */
-const RESOURCE_KEY = /^(?:cookie|pet)\d+$/;
 
 /**
  * Reads the English name a snapshot gave a cookie, kept under its `extra`.

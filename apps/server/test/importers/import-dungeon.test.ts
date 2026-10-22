@@ -6,7 +6,7 @@ import { createApp } from "../../src/app";
 import { repoRoot } from "../../src/config";
 import { importRecord } from "../../src/importers/import-record";
 import { createServices } from "../../src/services";
-import { readJson, testStore } from "../helpers";
+import { curatedGearBuilds, readJson, testStore } from "../helpers";
 
 const DUNGEON = "004-golden-drop-meta";
 const dungeonDir = join(repoRoot, "research", DUNGEON);
@@ -116,6 +116,7 @@ describe("importRecord on research record 004", FULL_IMPORT, () => {
       dungeonRuns: runs.length,
       dungeonLineups: lineups.length,
       dungeonExclusions: exclusions.length,
+      gearBuilds: curatedGearBuilds(dungeonDir).length,
     });
     const services = createServices(store);
     expect(services.records.get(DUNGEON).mode).toBe("crumble_dungeon");

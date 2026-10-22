@@ -42,8 +42,8 @@ describe("glossary routes", () => {
 
     const res = await app.request(`/api/glossary/resolve?name=${encodeURIComponent("피겨")}`);
     expect(res.status).toBe(200);
-    const data = await readJson<{ kr: string; en: string | null }>(res);
-    expect(data).toEqual({ kr: "피겨", en: "Skating Queen" });
+    const data = await readJson<{ kr: string; en: string | null; key: string | null }>(res);
+    expect(data).toEqual({ kr: "피겨", en: "Skating Queen", key: "skating-queen" });
   });
 
   it("GET /resolve?mode= resolves 바궁 to Princess Bari in Guild Conquest and Wind Archer in Arena", async () => {

@@ -16,7 +16,7 @@ import { importRecord } from "../../src/importers/import-record";
 import type { Store } from "../../src/repos";
 import { createServices } from "../../src/services";
 import { exportSnapshot } from "../../src/services/export";
-import { testStore } from "../helpers";
+import { curatedGearBuilds, testStore } from "../helpers";
 
 const recordDir = join(repoRoot, "research", "001-guild-conquest-meta");
 /**
@@ -47,6 +47,7 @@ type CuratedDeck = Cited & {
 const decks = curated<CuratedDeck[]>("decks.json");
 const runes = curated<Array<Cited & { decks: string[] }>>("runes.json");
 const gear = curated<Cited[]>("gear.json");
+const gearBuilds = curatedGearBuilds(recordDir);
 const scores = curated<Cited[]>("scores.json");
 const mechanics = curated<Cited[]>("mechanics.json");
 const rng = curated<Cited[]>("rng.json");
@@ -112,6 +113,7 @@ const citedRows: Cited[] = [
   ...decks,
   ...runes,
   ...gear,
+  ...gearBuilds,
   ...scores,
   ...mechanics,
   ...rng,
@@ -135,6 +137,7 @@ const expectedCounts = {
   runeBuilds: runes.length,
   runeBuildDecks: sum(runes.map((r) => distinct(r.decks))),
   gearRecs: gear.length,
+  gearBuilds: gearBuilds.length,
   scores: scores.length,
   rankings: sum(manifest.rankings.map((spec) => tsvDataLines(spec.file))),
   mechanics: mechanics.length,

@@ -28,6 +28,7 @@ function buff(p: Partial<BuffValue> & Pick<BuffValue, "cookieKr" | "effectType">
     recordSlug: null,
     sources: [],
     en: null,
+    key: null,
     ...p,
   };
 }

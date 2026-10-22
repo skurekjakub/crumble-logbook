@@ -13,7 +13,7 @@ import type { Repos, Store } from "../../src/repos";
 import { createServices } from "../../src/services";
 import type { Snapshot } from "../../src/services/export";
 import { exportSnapshot } from "../../src/services/export";
-import { testStore } from "../helpers";
+import { curatedGearBuilds, testStore } from "../helpers";
 
 const CONQUEST = "001-guild-conquest-meta";
 const PVP = "002-pvp-meta";
@@ -115,6 +115,7 @@ describe("importRecord on research record 002", FULL_IMPORT, () => {
       decks: decks.length,
       deckCookies: decks.reduce((n, d) => n + d.cookies.length, 0),
       runeBuilds: runes.length,
+      gearBuilds: curatedGearBuilds(pvpDir).length,
       counters: counters.length,
       usageStats: usage.length,
       mechanics: mechanics.length + rules.length,

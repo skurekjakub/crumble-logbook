@@ -72,7 +72,7 @@ describe("daily dungeon routes", () => {
       recommendedPower: "1.8G",
       recommendedPowerG: 1.8,
       gearPreset: "Crit preset",
-      captain: { kr: "체리맛 쿠키", en: null },
+      captain: { kr: "체리맛 쿠키", en: null, key: null },
     });
   });
 

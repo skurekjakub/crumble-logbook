@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import type { SourceSite } from "@crumble/schema";
 import { openDb } from "../src/db/client";
 import { createStore } from "../src/repos";
@@ -39,6 +41,30 @@ export function jsonBody(body: unknown): RequestInit {
     headers: { "content-type": "application/json" },
     body: JSON.stringify(body),
   };
+}
+
+/** A curated gear build's citations: its own sources, and its obsolete reason's. */
+export interface CuratedGearBuild {
+  sources: string[];
+  obsolete?: { sources: string[] };
+}
+
+/**
+ * Reads a record's curated gear builds, from the file its curated manifest
+ * lists under `gearBuilds`.
+ *
+ * @param recordDir - absolute path to the record directory
+ * @returns the builds, unchecked; `[]` when the manifest lists no gear builds
+ */
+export function curatedGearBuilds(recordDir: string): CuratedGearBuild[] {
+  const curated = join(recordDir, "curated");
+  const manifest = JSON.parse(readFileSync(join(curated, "manifest.json"), "utf-8")) as {
+    collections: { gearBuilds?: string };
+  };
+  const file = manifest.collections.gearBuilds;
+  if (file === undefined) return [];
+  return (JSON.parse(readFileSync(join(curated, file), "utf-8")) as { builds: CuratedGearBuild[] })
+    .builds;
 }
 
 /**

@@ -108,9 +108,10 @@ function readCollections(
  * collection's own checks.
  *
  * @param curated - every listed collection's parsed content and file path
+ * @param mode - the record's mode from `import.json`, when it states one
  * @throws {ImportError} naming the file and row of the first bad reference
  */
-function checkCollections({ parsed, files }: CuratedFiles): void {
+function checkCollections({ parsed, files }: CuratedFiles, mode: GameMode | undefined): void {
   const known = {
     sources: new Set(Object.keys(parsed.sources ?? {})),
     decks: new Set((parsed.decks ?? []).map((deck) => deck.id)),
@@ -143,6 +144,10 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
       (parsed.decks ?? []).filter((deck) => deck.obsolete !== undefined).map((deck) => deck.id),
     ),
     updated: parsed.meta?.updated,
+    modes: new Set([
+      ...(mode === undefined ? [] : [mode]),
+      ...(Object.keys(parsed.meta?.modes ?? {}) as GameMode[]),
+    ]),
   };
   for (const [name, collection] of ORDERED) {
     if (parsed[name] !== undefined) collection.check?.(files[name]!, parsed[name], context);
@@ -166,7 +171,7 @@ function checkCollections({ parsed, files }: CuratedFiles): void {
 export function readRecord(recordDir: string): RecordPlan {
   const manifest = readManifest(recordDir);
   const curated = readCollections(recordDir, manifest.curated, { mode: manifest.record.mode });
-  checkCollections(curated);
+  checkCollections(curated, manifest.record.mode);
   const { parsed } = curated;
   const extraContext: ExtraContext = {
     recordDir,

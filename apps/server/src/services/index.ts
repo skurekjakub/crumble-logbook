@@ -11,6 +11,8 @@ import type { CapturesService } from "./captures";
 import { createCapturesService } from "./captures";
 import type { RegisteredService } from "./content";
 import { registeredService } from "./content";
+import type { CookieService } from "./cookies";
+import { createCookieService } from "./cookies";
 import { createDailyDungeonService } from "./daily-dungeons";
 import type { DeckService } from "./decks";
 import { createDeckService } from "./decks";
@@ -42,6 +44,7 @@ export type Services = ContentServices & {
   scores: ScoreService;
   decks: DeckService;
   runeBuilds: RuneBuildService;
+  cookies: CookieService;
   sources: SourcesService;
   glossary: GlossaryService;
   rankings: RankingsService;
@@ -67,12 +70,15 @@ export function createServices(
   const content = Object.fromEntries(
     CONTENT_KEYS.map((key) => [key, registeredService(store, key)]),
   ) as ContentServices;
+  const decks = createDeckService(store);
+  const runeBuilds = createRuneBuildService(store);
   return {
     ...content,
     dailyDungeons: createDailyDungeonService(store),
     scores: createScoreService(store),
-    decks: createDeckService(store),
-    runeBuilds: createRuneBuildService(store),
+    decks,
+    runeBuilds,
+    cookies: createCookieService(store, { decks, runeBuilds, usageStats: content.usageStats }),
     sources: createSourcesService(store),
     glossary: createGlossaryService(store),
     rankings: createRankingsService(store),

@@ -117,6 +117,9 @@ import {
   fightEventInput,
   fightEventPatch,
   fightEvents,
+  gearBuildInput,
+  gearBuildPatch,
+  gearBuilds,
   gearRecInput,
   gearRecPatch,
   gearRecs,
@@ -305,7 +308,7 @@ export interface ContentSpec<Row> {
    * @returns the source ids
    */
   innerSources?(values: Partial<Row>): string[];
-  /** A Korean-name column whose English gloss every view carries as `en`. */
+  /** A Korean-name column whose English gloss every view carries as `en`, its cookie key as `key`. */
   gloss?: ColumnOf<Row>;
   /**
    * The game mode every row is about, for a table with no `mode` column
@@ -318,6 +321,12 @@ export interface ContentSpec<Row> {
    * that would repeat another row's values in all of them is refused.
    */
   unique?: readonly ColumnOf<Row>[];
+  /**
+   * Columns no two current rows (those without an `obsoleteSince`) may
+   * share, `null` counting as a value: a write that would leave a current
+   * row repeating another current row's values in all of them is refused.
+   */
+  uniqueCurrent?: readonly ColumnOf<Row>[];
   /**
    * Checks a row as written (a patch merged in) against rules its columns,
    * the rows it links to and the decks it references must keep. It runs
@@ -461,6 +470,17 @@ export const REGISTRY = {
     entity: "gear_rec",
     api: { id: rowId, input: gearRecInput, patch: gearRecPatch },
     content: {},
+  }),
+  gearBuilds: entry(gearBuilds, {
+    path: "/gear-builds",
+    entity: "gear_build",
+    api: { id: rowId, input: gearBuildInput, patch: gearBuildPatch },
+    content: {
+      order: [{ column: "mode", rank: GAME_MODE }, "position", "id"],
+      refs: { deckId: "decks" },
+      // One current build per boss or situation of a mode, its default included.
+      uniqueCurrent: ["mode", "variant"],
+    },
   }),
   scores: entry(scores, {
     path: "/scores",
