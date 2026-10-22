@@ -455,9 +455,17 @@ TendOven() {
         if !AwaitSignature("OvenResults", false)
             return OvenError("the Auto Bake results wouldn't close")
     }
+    ; The closing results swallow taps for a moment after their signature has gone: Auto waits for
+    ; its idle colour, and gets a second tap if the settings still don't open.
+    if !AwaitScreen(OvenFull)
+        return OvenError("the oven's Auto button didn't come back after the sale")
     Tap("OvenAuto")
-    if !AwaitSignature("OvenSettings", true)
-        return OvenError("the Auto Bake settings didn't open")
+    if !AwaitSignature("OvenSettings", true) {
+        Log("oven: the Auto Bake settings didn't open; tapping Auto again")
+        Tap("OvenAuto")
+        if !AwaitSignature("OvenSettings", true)
+            return OvenError("the Auto Bake settings didn't open")
+    }
     Tap("OvenStart")
     if !AwaitSignature("OvenSettings", false)
         return OvenError("the Auto Bake settings stayed open after Start")
@@ -472,10 +480,20 @@ TendOven() {
  * @throws StopSignal when F8 stops the loop
  */
 AwaitSignature(name, shown) {
+    return AwaitScreen((buf) => Shows(buf, Cfg[name]) = shown)
+}
+
+/**
+ * Captures until a capture passes a test.
+ * @param test function taking a capture from Capture() and returning true when it is the one
+ * @returns true when one did within OvenWaitMs
+ * @throws StopSignal when F8 stops the loop
+ */
+AwaitScreen(test) {
     deadline := A_TickCount + N("OvenWaitMs")
     while (A_TickCount < deadline) {
         CheckStop()
-        if (Shows(TimedCapture(), Cfg[name]) = shown)
+        if test(TimedCapture())
             return true
         Wait(300)
     }
