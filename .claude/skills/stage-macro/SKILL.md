@@ -121,7 +121,10 @@ user asks, or to restart on new code. A recording in flight ends at its own time
   restart the loop.
 - **`error` / `stopped`**: read the log's tail and `stops\`; fix the cause, restart.
 
-Report each event to the user in one short line.
+Don't narrate every try. The user's rule (2026-10-22): report passes, errors, oven runs and
+stage-read corrections as they come, and losses only every 30 or so. Arm the watcher as
+`watch-batched.sh <log> 30` (beside `watch.sh`), which passes those lines through and sums up
+each 30 losses with the lowest health left; report each of its events in one short line.
 
 ## Write a stage's script
 
