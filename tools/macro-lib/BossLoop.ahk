@@ -24,6 +24,8 @@ global CaptureMs := 1500
 global Lowest := Map()
 ; Set when tending the oven went wrong, so the loop leaves the oven alone for the rest of the run.
 global OvenGaveUp := false
+; Set while a stopped Auto Bake has been logged for the gear pass (OvenSell off), so it is logged once.
+global OvenReported := false
 
 ; Fallbacks every boss macro has, for keys missing from its INI. Section -> key -> value. A macro's
 ; own defaults are laid over these.
@@ -40,7 +42,7 @@ global BOSS_DEFAULTS := Map(
     "Record", Map("Video", "unscripted", "Seconds", "45", "BitRate", "4000000", "VideoDir", "recordings"),
     "Run", Map("MaxTries", "0"),
     "Hud", Map("Node", "node"),
-    "Oven", Map("TendOven", "0", "OvenWaitMs", "5000",
+    "Oven", Map("TendOven", "0", "OvenSell", "1", "OvenWaitMs", "5000",
                 "OvenIdle", "470,2280|570,2275|475,2315|575,2315", "OvenIdleMargin", "30",
                 "OvenStackX", "720", "OvenStackY", "2173", "OvenSellAllX", "1285", "OvenSellAllY", "2250",
                 "OvenConfirmX", "992", "OvenConfirmY", "2250", "OvenCloseX", "715", "OvenCloseY", "2453",
@@ -214,13 +216,14 @@ RecordMode() {
  * - While a try is out, Judge follows its encounter to a result.
  * - A stage without a script whose boss won waits for its script (WaitForScript), checking only
  *   that the file exists, so the next try plays it.
- * - With TendOven on, when the Summon screen shows the oven full (OvenFull), it tends the oven
- *   (TendOven) before the next tap.
+ * - With TendOven on, when the Summon screen shows Auto Bake stopped (OvenFull), it tends the
+ *   oven (TendOven) before the next tap; with OvenSell off it only logs that once, leaving the
+ *   results for a gear pass by hand, and logs again when Auto Bake runs.
  * @throws Error, caught here, when the stage's number is unknown and stays unreadable for
  *   UnreadLimit polls on the Summon button, or a stage loses MaxTries times in a row
  */
 RunLoop() {
-    global Phase, Tries
+    global Phase, Tries, OvenReported
     pending := ""
     unread := 0
     ; The stage on the Summon screen is settled, read or carried forward, since the screen came to it.
@@ -298,9 +301,17 @@ RunLoop() {
             if (N("MaxTries") > 0 && Tries.Get(Current, 0) >= N("MaxTries"))
                 throw Error(Current " lost " Tries[Current] " times in a row; tune " StrReplace(script, A_ScriptDir "\"))
             if (N("TendOven") && !OvenGaveUp && OvenFull(buf)) {
-                TendOven()
-                Pace(polled, N("PollMs"))
-                continue
+                if N("OvenSell") {
+                    TendOven()
+                    Pace(polled, N("PollMs"))
+                    continue
+                }
+                if !OvenReported
+                    Log("oven: Auto Bake stopped; leaving its results for the gear pass")
+                OvenReported := true
+            } else if OvenReported {
+                Log("oven: Auto Bake is running again")
+                OvenReported := false
             }
             unread := 0
             ; The screen comes back to the Summon button after the try, and its stage is read afresh.

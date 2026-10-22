@@ -111,20 +111,64 @@ user asks, or to restart on new code. A recording in flight ends at its own time
   3, so the learn was reverted (the miss was a one-off on a settling button).
 - **`Summon Boss still up … summoning again`**: a tap didn't land; the loop retries by itself.
   A popup over the screen (an oven item's card, a menu) swallows the tap the same way.
-- **`oven: …`** (`[Oven] TendOven=1`, on in the rift): the oven was full, and the loop sold the
-  Auto Bake results and restarted it. The user's rule (2026-10-22): sell everything, keep
-  nothing, the oven is only for its experience, and only ever when it is full, since a part-full
-  oven has no Sell All and means selling item by item. Never sell or restart it by hand on a
-  timer. **`oven error: …`** means a window didn't show: the loop leaves the oven alone until it
-  restarts. Look at `stops\oven_*.png`, close whatever is open (a tap outside an item's card
-  closes it), restart Auto Bake by hand (Auto, then Start) if it stopped, fix the signature, and
-  restart the loop.
+- **`oven: …`** (`[Oven] TendOven=1`, on in the rift). With `OvenSell=1` the oven was full, and
+  the loop sold the Auto Bake results and restarted it. The rift runs `OvenSell=0` since
+  2026-10-23: the loop only logs `oven: Auto Bake stopped; leaving its results for the gear pass`
+  and keeps fighting, and you run the gear pass (Rift gear below) and restart Auto Bake by hand.
+  `oven: Auto Bake is running again` follows once it bakes. The user's rules: the oven is for its
+  experience, sold only when full (a part-full oven has no Sell All and means selling item by
+  item), never on a timer; items with the rift's substats go into DimensionRift first
+  (2026-10-22). Auto Bake also stops when the lobby's preset dropdown opens ("Stopping Auto Bake
+  to change Presets"), so a teal Auto button can mean a part-full oven: then restart it without
+  selling. **`oven error: …`** means a window didn't show: the loop leaves the oven alone until it
+  restarts. Look at `stops\oven_*.png`, close whatever is open (one Back closes an item's card),
+  restart Auto Bake by hand (Auto, then Start) if it stopped, fix the signature, and restart the
+  loop.
 - **`error` / `stopped`**: read the log's tail and `stops\`; fix the cause, restart.
 
 Don't narrate every try. The user's rule (2026-10-22): report passes, errors, oven runs and
 stage-read corrections as they come, and losses only every 30 or so. Arm the watcher as
 `watch-batched.sh <log> 30` (beside `watch.sh`), which passes those lines through and sums up
 each 30 losses with the lowest health left; report each of its events in one short line.
+
+## Rift lineup, levels and gear
+
+The user's rules (2026-10-22): sugar runes are never edited; a deck's ATK order moves only by
+deleveling, which is free and yours to do; the DimensionRift gear preset is built from oven drops.
+Stop the loop before working in menus and relaunch it after.
+
+- **ATK order.** Pomegranate's +69% Skill AMP beams go to Milk and Chardonnay first, then to the
+  highest-ATK allies (record 001, "Pomegranate's beam"); Tiger Lily's 다발 3 makes the sixth beam.
+  Rift 6 runs 그니's clear deck with Caine for Cheesecake, ordered Milk › Scorpion › Skating Queen
+  › Brightseeker › Caine, every other cookie under Caine with about 5% to spare (Chardonnay and
+  Pomegranate excepted). Read ATK on the cookie page's magnifier panel (exact to 1K). The levels,
+  ATK and pets set on 2026-10-23 are in `docs/superpowers/plans/2026-10-22-rift-night.md`.
+- **Deleveling.** Cookie page → the green Lv button beside the level → Reset Level (back to Lv.1,
+  all its EXP returned). Long-press Level Up opens a target picker (−, the level, +, Max): tap
+  Max, step down with −, then Level Up; or tap Level Up once per level. Fast tap bursts drop
+  some taps, so read the picker before Level Up. Approach the target from below: a level can't
+  go down again without another reset.
+- **Header power.** The lobby header sums the lobby team's cookie power with its gear, so each
+  delevel lowers it by that cookie's power change. The bracket line is judged on it: check it
+  against the stage's 15% line after every change (rift 6: 13.8G).
+- **Presets.** A lineup keeps its own gear preset (the dropdown in the lineup editor). The lobby's
+  dropdown only switches which preset the lobby shows and equips into, stops Auto Bake, and
+  snaps back to the lineup's preset when the cookie menu closes. DimensionRift (the renamed
+  Evasion preset) fills from the oven while the rift lineup keeps Conquest; switch lineup 4 to
+  it in the lineup editor once it beats Conquest on the rift's needs.
+- **Rift gear** (research in the plan above): Skill AMP on weapons and upper accessories, damage
+  reduction and HP on armour, damage reduction on lower accessories, accuracy and focus near
+  1,200, **no skill haste** (Caine's ATK buff breaks after GingerCraven's fear with any haste).
+  Auto Bake's filter keeps Accuracy, Skill AMP, DMG Reduction and Focus; everything else is sold
+  as it bakes.
+- **Gear pass** on `oven: Auto Bake stopped`: stop the loop; lobby dropdown → DimensionRift; open
+  the oven's stack; for each item whose subs fit its slot and beat DimensionRift's piece (no
+  haste line), tap it and Equip; then Sell All and confirm, Auto, Start; relaunch the loop.
+  Record each equip in the plan.
+- **Navigation.** One Back closes a card or menu. Back on the lobby opens the exit prompt ("Wait,
+  hold on...") and a second one closes the game (2026-10-23). Relaunch with `adb shell am start
+  -n com.devsisters.cc/com.devsisters.plugin.OvenUnityPlayerActivity`; it may come back on
+  another display (3 instead of 2), which the loop resolves itself, and with Auto Summon on.
 
 ## Write a stage's script
 
