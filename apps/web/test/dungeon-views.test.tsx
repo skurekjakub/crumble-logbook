@@ -508,12 +508,13 @@ describe("the lineups", () => {
     expect(wave.querySelectorAll("li .cicon")).toHaveLength(3);
     expect(wave.querySelector("li")).toHaveAttribute("title", `Milk Cookie · ${MILK}`);
     expect(wave.querySelector("li.flagged")).toHaveTextContent("Ion Cookie Robot");
-    await waitFor(() => expect(card).toHaveTextContent(`Oven Wanderer ${OVEN}Charger`));
+    await waitFor(() => expect(card).toHaveTextContent("Oven WandererCharger"));
+    expect(card).not.toHaveTextContent(OVEN);
     expect(card.querySelector(".card-head .pill.disputed")).toHaveTextContent(
       "Keeps 1 excluded cookie",
     );
     expect(card.querySelector(".callout.kept")).toHaveTextContent(
-      `On the exclusions list, kept here: Ion Cookie Robot ${ION} (Charger, disputed)`,
+      "On the exclusions list, kept here: Ion Cookie Robot (Charger, disputed)",
     );
     expect(within(card).getByRole("link", { name: "Milk–Scorpion beam lineup" })).toHaveAttribute(
       "href",

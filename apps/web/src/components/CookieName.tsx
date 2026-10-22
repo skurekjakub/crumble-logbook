@@ -8,47 +8,56 @@ export interface CookieNameProps {
   kr: string;
   /** The glossary's English name, or null when the name is unresolved. */
   en: string | null;
-  /** Put the Korean after the English on one line instead of beneath it (for inline lists). */
+  /** Lay the name out on one line, for inline lists; stacked when off. */
   inline?: boolean;
   /** Show the portrait before the name; on unless turned off. */
   icon?: boolean;
   /** The portrait's size; 28 stacked and 20 inline when omitted. */
   size?: IconSize;
+  /**
+   * Keep the stored name visible after the English one (beneath it when
+   * stacked), for a page about the Korean names themselves.
+   */
+  showKr?: boolean;
 }
 
 /**
- * A cookie or pet name with its portrait: the short English name (the full
- * one in the tooltip) with the Korean beneath it, or the Korean alone when
- * `en` is null.
+ * A cookie or pet name with its portrait: the short English name, with the
+ * full English and the stored name in the tooltip. A name with no English
+ * shows its stored form, so it never renders blank.
  *
- * @param props - the Korean and English names, the layout, and the portrait's size
+ * @param props - the Korean and English names, the layout, the portrait and whether the Korean shows
  * @returns the name
  */
-export function CookieName({ kr, en, inline = false, icon = true, size }: CookieNameProps) {
+export function CookieName({
+  kr,
+  en,
+  inline = false,
+  icon = true,
+  size,
+  showKr = false,
+}: CookieNameProps) {
   const short = en ? shortName(en) : null;
+  const title = en ? `${en} (${kr})` : undefined;
   const pic = icon ? <CookieIcon kr={kr} en={en} size={size ?? (inline ? 20 : 28)} /> : null;
+  const krLine = short && showKr ? <span className="kr">{kr}</span> : null;
   if (inline) {
     return (
-      <span className="name-inline" title={en ?? undefined}>
+      <span className="name-inline" title={title}>
         {pic}
         <span>
           {short ?? kr}
-          {short ? (
-            <>
-              {" "}
-              <span className="kr">{kr}</span>
-            </>
-          ) : null}
+          {krLine ? <> {krLine}</> : null}
         </span>
       </span>
     );
   }
   return (
-    <span className="name-row" title={en ?? undefined}>
+    <span className="name-row" title={title}>
       {pic}
       <span className="name-stack">
         <span className="en">{short ?? kr}</span>
-        {short ? <span className="kr">{kr}</span> : null}
+        {krLine}
       </span>
     </span>
   );

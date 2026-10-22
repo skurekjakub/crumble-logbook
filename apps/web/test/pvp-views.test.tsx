@@ -543,7 +543,7 @@ describe("PvP teams", () => {
     const rows = [...levels.querySelectorAll("tbody tr")].map((tr) =>
       [...tr.querySelectorAll("td")].map((td) => td.textContent),
     );
-    expect(rows[1]).toEqual(["Rye호밀", "row2-1", "Lv.100", "8", "Rye why."]);
+    expect(rows[1]).toEqual(["Rye", "row2-1", "Lv.100", "8", "Rye why."]);
     expect(rows[0]![3]).toBe("?");
     expect(rows[2]![3]).toBe("~7 (inferred from the skill effect)");
     expect(rye.querySelector('[data-slot="row2-1"] .lv')).toHaveTextContent("Lv.100 · 8★");
@@ -885,10 +885,7 @@ describe("PvP usage", () => {
     expect(c.getByText(/captured 2026-09-27/)).toBeVisible();
     expect(c.getByRole("link", { name: "crumbgg-rumble-live" })).toBeVisible();
     const bars = [...cookies.querySelectorAll("li.bar-row")];
-    expect(bars.map((li) => li.querySelector(".nm")!.textContent)).toEqual([
-      "Pomegranate석류맛 쿠키",
-      "Herb허브맛 쿠키",
-    ]);
+    expect(bars.map((li) => li.querySelector(".nm")!.textContent)).toEqual(["Pomegranate", "Herb"]);
     expect(bars.map((li) => li.querySelector(".bar-rank")!.textContent)).toEqual(["1", "2"]);
     expect(bars[0]).toHaveClass("top");
     expect(bars[1]).not.toHaveClass("top");

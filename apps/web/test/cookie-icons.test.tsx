@@ -167,14 +167,14 @@ describe("CookieIcon", () => {
 });
 
 describe("names with portraits", () => {
-  it("CookieName shows the portrait, the short name and the full name as tooltip", () => {
+  it("CookieName shows the portrait, the short name, and the full name with the Korean as tooltip", () => {
     const { container } = withIcons(
       <CookieName kr="우유" en="Milk Cookie's Crunchy Strong Pediatrician" />,
     );
     expect(screen.getByText("Milk · Pediatrician")).toBeVisible();
     expect(container.querySelector(".name-row")).toHaveAttribute(
       "title",
-      "Milk Cookie's Crunchy Strong Pediatrician",
+      "Milk Cookie's Crunchy Strong Pediatrician (우유)",
     );
     expect(container.querySelector("img")).toHaveAttribute("src", "/icons/cookie0101.webp");
   });

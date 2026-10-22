@@ -24,9 +24,9 @@
 
 Files: `apps/web/src/components/CookieName.tsx`, `apps/web/src/views/GlossaryView.tsx`, `apps/web/src/styles/ui.css`, `apps/web/test/names-and-chips.test.tsx` and every test pinning a name's Korean line.
 
-- [ ] Visible text: the short English name; `title`: the full English name and the Korean; unresolved names show their stored form; a `showKr` prop keeps the Korean line, used by the Glossary's cookie and pet rows. JSDoc rewritten.
-- [ ] `.name-stack .kr` and `.name-inline .kr` rules go unless `showKr` uses them.
-- [ ] Tests (both layouts, tooltip, unresolved, `showKr`); the Glossary still shows a Korean term.
+- [x] Visible text: the short English name; `title`: the full English name and the Korean; unresolved names show their stored form; a `showKr` prop keeps the Korean line, used by the Glossary's cookie and pet rows. JSDoc rewritten.
+- [x] `.name-stack .kr` and `.name-inline .kr` rules go unless `showKr` uses them.
+- [x] Tests (both layouts, tooltip, unresolved, `showKr`); the Glossary still shows a Korean term.
 - Verify: `pnpm exec vitest run apps/web/test/names-and-chips.test.tsx apps/web/test/sources-glossary-views.test.tsx`, then `pnpm verify`.
 
 ### Task 2: no Korean in the chrome
