@@ -8,7 +8,7 @@ import { repoRoot } from "../../src/config";
 import { ImportError } from "../../src/errors";
 import { importRecord } from "../../src/importers/import-record";
 import { createServices } from "../../src/services";
-import { readJson, testStore } from "../helpers";
+import { curatedGearBuilds, readJson, testStore } from "../helpers";
 
 const STAGE = "003-stage-pushing-meta";
 const stageDir = join(repoRoot, "research", STAGE);
@@ -141,6 +141,7 @@ describe("importRecord on research record 003", FULL_IMPORT, () => {
       stageZoneSlots: slots.length,
       stageClears: clears.length,
       riftBosses: riftBosses.length,
+      gearBuilds: curatedGearBuilds(stageDir).length,
     });
     const services = createServices(store);
     expect(services.records.get(STAGE).mode).toBe("stage");

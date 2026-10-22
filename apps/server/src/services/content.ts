@@ -448,8 +448,9 @@ function linksTo(target: ContentKey): Array<{ key: ContentKey; column: string }>
  * with a `mode` column must name only decks of its own mode, as written
  * (so an omitted `mode` is checked as its column default), and a row of a
  * type the registry files under one mode (`content.mode`) only decks of
- * that mode. A written row must also keep the entry's `content.check`, and
- * share its `content.unique` columns with no other row. Any of these
+ * that mode. A written row must also keep the entry's `content.check`,
+ * share its `content.unique` columns with no other row, and, while current,
+ * its `content.uniqueCurrent` columns with no other current row. Any of these
  * failing throws {@link ConflictError} and nothing is written. The
  * entry's `content.derive` columns are set on every write. Every slug a
  * `content.links` column names, and every source `content.innerSources`
@@ -472,6 +473,7 @@ export function registeredService<K extends ContentKey>(
   const refColumns = Object.keys(content?.refs ?? {});
   const links = Object.entries(content?.links ?? {}) as Array<[string, LinkTarget]>;
   const unique: readonly string[] = content?.unique ?? [];
+  const uniqueCurrent: readonly string[] = content?.uniqueCurrent ?? [];
   const namedBy = linksTo(key);
   type AnyRow = { id: number } & Record<string, unknown>;
   return createContentService<AnyRow, Record<string, unknown>>(store, {
@@ -532,14 +534,22 @@ export function registeredService<K extends ContentKey>(
     checkRow: (repos, row) => {
       const problem = content?.check?.(row, linkedIn(repos), deckDungeonIn(repos));
       if (problem) throw new ConflictError(`${entity!} ${row.id}: ${problem}`);
-      if (unique.length > 0) {
+      for (const [columns, current] of [
+        [unique, false],
+        [uniqueCurrent, true],
+      ] as const) {
+        if (columns.length === 0 || (current && row.obsoleteSince != null)) continue;
         const others = repos[key].list() as readonly AnyRow[];
         const twin = others.find(
-          (other) => other.id !== row.id && unique.every((column) => other[column] === row[column]),
+          (other) =>
+            other.id !== row.id &&
+            (!current || other.obsoleteSince == null) &&
+            columns.every((column) => other[column] === row[column]),
         );
         if (twin) {
-          const values = unique.map((column) => `${column} ${String(row[column])}`).join(", ");
-          throw new ConflictError(`${entity!} ${twin.id} already has ${values}`);
+          const values = columns.map((column) => `${column} ${String(row[column])}`).join(", ");
+          const which = current ? "current " : "";
+          throw new ConflictError(`${which}${entity!} ${twin.id} already has ${values}`);
         }
       }
       const mode = (row as { mode?: GameMode }).mode ?? content?.mode;

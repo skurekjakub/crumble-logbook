@@ -117,6 +117,9 @@ import {
   fightEventInput,
   fightEventPatch,
   fightEvents,
+  gearBuildInput,
+  gearBuildPatch,
+  gearBuilds,
   gearRecInput,
   gearRecPatch,
   gearRecs,
@@ -319,6 +322,12 @@ export interface ContentSpec<Row> {
    */
   unique?: readonly ColumnOf<Row>[];
   /**
+   * Columns no two current rows (those without an `obsoleteSince`) may
+   * share, `null` counting as a value: a write that would leave a current
+   * row repeating another current row's values in all of them is refused.
+   */
+  uniqueCurrent?: readonly ColumnOf<Row>[];
+  /**
    * Checks a row as written (a patch merged in) against rules its columns,
    * the rows it links to and the decks it references must keep. It runs
    * again when a row it links to, or a deck it references, is updated.
@@ -461,6 +470,17 @@ export const REGISTRY = {
     entity: "gear_rec",
     api: { id: rowId, input: gearRecInput, patch: gearRecPatch },
     content: {},
+  }),
+  gearBuilds: entry(gearBuilds, {
+    path: "/gear-builds",
+    entity: "gear_build",
+    api: { id: rowId, input: gearBuildInput, patch: gearBuildPatch },
+    content: {
+      order: [{ column: "mode", rank: GAME_MODE }, "position", "id"],
+      refs: { deckId: "decks" },
+      // One current build per boss or situation of a mode, its default included.
+      uniqueCurrent: ["mode", "variant"],
+    },
   }),
   scores: entry(scores, {
     path: "/scores",

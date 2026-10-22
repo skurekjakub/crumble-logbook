@@ -12,6 +12,7 @@ export const OBSOLETE_ENTITIES = [
   "deck",
   "rune_build",
   "gear_rec",
+  "gear_build",
   "counter",
 ] as const satisfies readonly CitedEntity[];
 /** A cited entity whose rows carry the obsolete lifecycle. */

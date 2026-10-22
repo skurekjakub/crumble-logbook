@@ -26,17 +26,21 @@ import { FORMULA_COLLECTIONS } from "./damage-formula-collections";
 import { DUNGEON_COLLECTIONS } from "./dungeon-collections";
 import type { Collection } from "./collection-kit";
 import {
+  assertDistinct,
+  checkCurrentDecks,
   checkObsoleteDates,
   citedRows,
   collection,
   modedRows,
   parseModedRows,
   parseRows,
+  withModes,
 } from "./collection-kit";
 import { parseFile } from "./files";
 import {
   mapCounter,
   mapDeck,
+  mapGearBuild,
   mapGearSlot,
   mapGlossary,
   mapMeta,
@@ -48,6 +52,7 @@ import {
   seedCounter,
   seedDeck,
   seedGear,
+  seedGearBuilds,
   seedGlossaryEntry,
   seedMechanic,
   seedMeta,
@@ -78,6 +83,16 @@ export type {
   PrepareContext,
   RowRefs,
 } from "./collection-kit";
+
+/**
+ * Names a gear build's variant as an error reads it.
+ *
+ * @param variant - the boss or situation, or `null`/`undefined` for the mode's default
+ * @returns the variant, or `the default`
+ */
+function variantName(variant: string | null | undefined): string {
+  return variant ?? "the default";
+}
 
 /** The counters collection's plain cited-row behaviour, before its own checks. */
 const counterRows = citedRows("counters", modedRows(seedCounter), mapCounter, (edge) => [
@@ -319,6 +334,102 @@ export const COLLECTIONS = {
     })),
     optional: true,
   },
+  gearBuilds: collection({
+    optional: true,
+    /** @inheritdoc */
+    parse: (file, raw, { mode }) => {
+      const parsed = parseFile(file, raw, seedGearBuilds);
+      return { ...parsed, builds: withModes(file, parsed.builds, mode) };
+    },
+    /** @inheritdoc */
+    refs: ({ builds }) =>
+      builds.map((build, index) => ({
+        row: index,
+        sources: [...build.sources, ...(build.obsolete?.sources ?? [])],
+        decks: build.deck == null ? [] : [build.deck],
+      })),
+    /** @inheritdoc */
+    check: (file, { builds }, context) => {
+      assertDistinct(
+        file,
+        "id",
+        builds.map((build) => build.id),
+      );
+      checkObsoleteDates(file, builds, context);
+      const current = new Map<string, string>();
+      builds.forEach((build, index) => {
+        if (!context.modes.has(build.mode)) {
+          const covered = [...context.modes].join(", ");
+          throw new ImportError(
+            file,
+            index,
+            `mode ${build.mode} isn't one the record covers (${covered})`,
+          );
+        }
+        if (build.deck != null) {
+          const deckMode = context.deckModes.get(build.deck);
+          const mismatch = deckModeMismatch("gear_build", build.mode, build.deck, deckMode);
+          if (mismatch) throw new ImportError(file, index, mismatch);
+        }
+        if (build.obsolete !== undefined) return;
+        const slot = JSON.stringify([build.mode, build.variant ?? null]);
+        const holder = current.get(slot);
+        if (holder !== undefined) {
+          throw new ImportError(
+            file,
+            index,
+            `build ${holder} is already the current ${build.mode} build for ${variantName(build.variant)}`,
+          );
+        }
+        current.set(slot, build.id);
+      });
+      checkCurrentDecks(
+        file,
+        "gear_build",
+        builds.map(
+          (build, index) =>
+            [index, build.obsolete === undefined ? (build.deck ?? undefined) : undefined] as const,
+        ),
+        context,
+      );
+    },
+    /** @inheritdoc */
+    prepare: ({ builds }, { file }) => [
+      (repos) => {
+        const stored = repos.gearBuilds.list();
+        const holders = new Map(stored.map((row) => [row.slug, row.recordSlug]));
+        assertUnclaimed(
+          file,
+          "gear build id",
+          builds.map((build) => build.id),
+          (slug) => holders.get(slug),
+        );
+        builds.forEach((build, index) => {
+          if (build.obsolete !== undefined) return;
+          const variant = build.variant ?? null;
+          const twin = stored.find(
+            (row) =>
+              row.obsoleteSince === null && row.mode === build.mode && row.variant === variant,
+          );
+          if (twin) {
+            throw new ImportError(
+              file,
+              index,
+              `build ${twin.slug} of record ${twin.recordSlug ?? "(none)"} is already the current ${build.mode} build for ${variantName(variant)}`,
+            );
+          }
+        });
+      },
+      insertCited(
+        "gearBuilds",
+        builds.map((build) => ({
+          values: mapGearBuild(build),
+          sources: build.sources,
+          obsolete: build.obsolete,
+        })),
+      ),
+    ],
+  }),
   scores: {
     ...citedRows(
       "scores",

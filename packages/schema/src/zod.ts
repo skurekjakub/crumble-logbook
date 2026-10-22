@@ -1,6 +1,6 @@
 import { createInsertSchema, createSelectSchema } from "drizzle-orm/zod";
 import { z } from "zod";
-import { POWER_PLACE } from "./enums";
+import { GEAR_BOARD_SLOT, POWER_PLACE } from "./enums";
 import { captureTool, evidencePath, isoDateTime, sha256Hex } from "./ledger";
 import * as t from "./tables";
 
@@ -173,6 +173,62 @@ export const gearRecInsert = createInsertSchema(t.gearRecs, {
 export const gearRecSelect = createSelectSchema(t.gearRecs);
 /** A row selected from `gear_recs`. */
 export type GearRecRow = typeof t.gearRecs.$inferSelect;
+
+/**
+ * The items on the in-game equipment board: three in each of its slots.
+ * Each rolls at most one Skill Haste line, so it caps a build's haste lines.
+ */
+export const BOARD_ITEMS = 3 * GEAR_BOARD_SLOT.length;
+
+/** A whole number of haste lines a board can roll: none up to {@link BOARD_ITEMS}. */
+const hasteCount = z.number().int().min(0).max(BOARD_ITEMS);
+
+/** A gear build's haste lines: a whole-number range, its least no more than its most, and a note. */
+export const hasteLines = z
+  .strictObject({ min: hasteCount, max: hasteCount, note: z.string().min(1).nullable() })
+  .refine((lines) => lines.min <= lines.max, {
+    message: "max is less than min",
+    path: ["max"],
+  });
+
+/** A gear build's substats: every board slot, each a list of stat names, one per line. */
+export const gearBuildSlots = z.record(z.enum(GEAR_BOARD_SLOT), z.array(z.string().min(1)));
+
+/** A gear build's target total of a stat (accuracy, focus): a whole number, zero or more. */
+const statTarget = z.number().int().min(0);
+
+/** Text that is one non-empty line. */
+const oneLine = z.string().regex(/^[^\r\n]+$/, "expected one non-empty line");
+
+/**
+ * Insert schema for `gear_builds`. `slug` and `deckId` are lowercase slugs;
+ * `variant`, when given, is non-empty; `position` is a whole number, zero or
+ * more; `hasteLines` a {@link hasteLines} range; `accuracy` and `focus`
+ * whole numbers, zero or more, or `null`; `slots` names every board slot
+ * ({@link gearBuildSlots}); `avoid` lists non-empty texts; `why` is one
+ * line; `obsoleteSince`, when present, is `YYYY-MM-DD`.
+ */
+export const gearBuildInsert = createInsertSchema(t.gearBuilds, {
+  slug: () => deckSlug,
+  variant: () => z.string().min(1).nullish(),
+  deckId: () => deckSlug.nullish(),
+  position: () => z.number().int().min(0),
+  hasteLines: () => hasteLines,
+  accuracy: () => statTarget.nullish(),
+  focus: () => statTarget.nullish(),
+  slots: () => gearBuildSlots,
+  avoid: () => nameList.optional(),
+  why: () => oneLine,
+  obsoleteSince: () => isoDate.nullish(),
+});
+/** Select schema for `gear_builds`, with its JSON columns typed precisely. */
+export const gearBuildSelect = createSelectSchema(t.gearBuilds, {
+  hasteLines: () => hasteLines,
+  slots: () => gearBuildSlots,
+  avoid: () => nameList,
+});
+/** A row selected from `gear_builds`. */
+export type GearBuildRow = typeof t.gearBuilds.$inferSelect;
 
 /**
  * Insert schema for `scores`. `damageG` must be positive; `powerG`, when

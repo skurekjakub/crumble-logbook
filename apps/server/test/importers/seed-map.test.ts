@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { ImportError } from "../../src/errors";
 import {
   mapDeck,
+  mapGearBuild,
   mapGearSlot,
   mapGlossary,
   mapMeta,
@@ -12,6 +13,7 @@ import type { SeedDeck } from "../../src/importers/seed/schema";
 import {
   seedDeck,
   seedGear,
+  seedGearBuilds,
   seedGlossaryEntry,
   seedMeta,
   seedMechanic,
@@ -359,6 +361,76 @@ describe("mapGearSlot", () => {
 
   it("maps an unknown slot to general", () => {
     expect(mapGearSlot("left-ear")).toBe("general");
+  });
+});
+
+describe("seedGearBuilds and mapGearBuild", () => {
+  const example = {
+    id: "example-build",
+    mode: "stage",
+    variant: "Boss name",
+    deck: "example-deck",
+    position: 1,
+    confidence: "medium",
+    haste_lines: { min: 1, max: 4, note: "Fewer with a long-cooldown buffer" },
+    accuracy: 1000,
+    focus: null,
+    slots: {
+      top_left: ["Skill AMP", "Skill AMP"],
+      top_right: ["Skill AMP", "Skill Haste"],
+      bottom_left: ["Damage reduction", "HP"],
+      bottom_right: ["Damage reduction"],
+    },
+    avoid: ["Crit damage over Skill AMP"],
+    why: "One line: what the build is for.",
+    sources: ["dc:00000"],
+  };
+  const file = (builds: unknown[]) => ({
+    about: "What to roll for, per mode or boss.",
+    measured: "2026-10-22",
+    builds,
+  });
+
+  it("maps a curated build onto its row, its id the slug", () => {
+    const [build] = seedGearBuilds.parse(file([example])).builds;
+    expect(mapGearBuild({ ...build!, mode: "stage" })).toEqual({
+      slug: "example-build",
+      mode: "stage",
+      variant: "Boss name",
+      deckId: "example-deck",
+      position: 1,
+      confidence: "medium",
+      hasteLines: { min: 1, max: 4, note: "Fewer with a long-cooldown buffer" },
+      accuracy: 1000,
+      focus: null,
+      slots: example.slots,
+      avoid: ["Crit damage over Skill AMP"],
+      why: "One line: what the build is for.",
+    });
+  });
+
+  it("maps a build that leaves its optional fields out to nulls and no avoid", () => {
+    const { variant: _v, deck: _d, accuracy: _a, focus: _f, avoid: _x, ...bare } = example;
+    const [build] = seedGearBuilds.parse(file([bare])).builds;
+    expect(mapGearBuild({ ...build!, mode: "stage" })).toMatchObject({
+      variant: null,
+      deckId: null,
+      accuracy: null,
+      focus: null,
+      avoid: [],
+    });
+  });
+
+  it("keeps the API input's rules: a haste range in order, every board slot, a cited row", () => {
+    const parse = (build: Record<string, unknown>) =>
+      seedGearBuilds.safeParse(file([{ ...example, ...build }])).success;
+    expect(parse({})).toBe(true);
+    expect(parse({ haste_lines: { min: 4, max: 1, note: null } })).toBe(false);
+    expect(parse({ haste_lines: { min: 1, max: 13, note: null } })).toBe(false);
+    expect(parse({ slots: { ...example.slots, bottom_right: undefined } })).toBe(false);
+    expect(parse({ sources: [] })).toBe(false);
+    expect(parse({ id: "Not A Slug" })).toBe(false);
+    expect(seedGearBuilds.safeParse({ ...file([example]), extra: 1 }).success).toBe(false);
   });
 });
 

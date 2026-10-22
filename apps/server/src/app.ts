@@ -36,6 +36,7 @@ export function createApp(services: Services) {
     .route(R.timeline.path, crudRouter(endpoints(services.timeline), R.timeline))
     .route(R.takeaways.path, crudRouter(endpoints(services.takeaways), R.takeaways))
     .route(R.gearRecs.path, crudRouter(endpoints(services.gearRecs), R.gearRecs))
+    .route(R.gearBuilds.path, crudRouter(endpoints(services.gearBuilds), R.gearBuilds))
     .route(
       R.recommendations.path,
       crudRouter(endpoints(services.recommendations), R.recommendations),

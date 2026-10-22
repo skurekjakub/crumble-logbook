@@ -153,6 +153,36 @@ describe("round trip: insert schema -> insert -> select -> select schema", () =>
 
     roundtrip(
       db,
+      tables.gearBuilds,
+      schemas.gearBuildInsert,
+      schemas.gearBuildSelect,
+      {
+        slug: "arena-burn-rush",
+        mode: "arena",
+        variant: "Burn Rush mirror",
+        deckId: deck.id,
+        position: 1,
+        confidence: "medium",
+        hasteLines: { min: 2, max: 4, note: "Fewer with a long-cooldown buffer" },
+        accuracy: 1000,
+        focus: null,
+        slots: {
+          top_left: ["Skill AMP", "Skill AMP"],
+          top_right: ["Skill Haste"],
+          bottom_left: ["Damage reduction", "HP"],
+          bottom_right: [],
+        },
+        avoid: ["Crit damage over Skill AMP"],
+        why: "Burns land before the dive.",
+        recordSlug: "gc-meta",
+        obsoleteSince: "2026-10-12",
+        obsoleteReason: "Patched.",
+      },
+      (b) => eq(b.slug, "arena-burn-rush"),
+    );
+
+    roundtrip(
+      db,
       tables.usageStats,
       schemas.usageStatInsert,
       schemas.usageStatSelect,

@@ -26,6 +26,7 @@ type SeededKey =
   | "decks"
   | "runeBuilds"
   | "gearRecs"
+  | "gearBuilds"
   | "scores"
   | "mechanics"
   | "rngFactors"
@@ -333,6 +334,21 @@ const SEEDS: Record<SeededKey, Seed> = {
   gearRecs: (store, services, over) => {
     const row = services.gearRecs.create(
       { slot: "top_left", substats: "ATK", context: "raid", why: "x", ...over },
+      cite(store),
+    );
+    return ["id", row.id];
+  },
+  gearBuilds: (store, services, over) => {
+    const row = services.gearBuilds.create(
+      {
+        slug: `gb-${++serial}`,
+        position: serial,
+        confidence: "high",
+        hasteLines: { min: 0, max: 2, note: null },
+        slots: { top_left: ["ATK"], top_right: [], bottom_left: [], bottom_right: [] },
+        why: "x",
+        ...over,
+      },
       cite(store),
     );
     return ["id", row.id];

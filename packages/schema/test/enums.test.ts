@@ -8,6 +8,7 @@ import {
   DECK_NOTE_KIND,
   DECK_STATUS,
   GAME_MODE,
+  GEAR_BOARD_SLOT,
   GEAR_CONTEXT,
   GEAR_SLOT,
   GLOSSARY_KIND,
@@ -253,6 +254,47 @@ describe("enum columns", () => {
     }
     expect(
       schemas.mechanicInsert.safeParse({ title: "t", body: "b", confidence: "bogus" }).success,
+    ).toBe(false);
+  });
+
+  it("gear board slot: a build names every member and round-trips; a non-member is rejected", () => {
+    const db = createTestDb();
+    const slots = Object.fromEntries(GEAR_BOARD_SLOT.map((slot) => [slot, [`stat-${slot}`]]));
+    const build = {
+      slug: "board",
+      position: 0,
+      confidence: "high",
+      hasteLines: { min: 0, max: 0, note: null },
+      why: "w",
+    };
+    const values = schemas.gearBuildInsert.parse({ ...build, slots });
+    db.insert(tables.gearBuilds).values(values).run();
+    expect(db.select().from(tables.gearBuilds).get()?.slots).toEqual(slots);
+    expect(
+      schemas.gearBuildInsert.safeParse({ ...build, slots: { ...slots, bogus: [] } }).success,
+    ).toBe(false);
+  });
+
+  it("gear build confidence: every member inserts and round-trips; a non-member is rejected", () => {
+    const db = createTestDb();
+    const build = {
+      position: 0,
+      hasteLines: { min: 0, max: 0, note: null },
+      slots: { top_left: [], top_right: [], bottom_left: [], bottom_right: [] },
+      why: "w",
+    };
+    for (const confidence of CONFIDENCE) {
+      const values = schemas.gearBuildInsert.parse({ ...build, slug: confidence, confidence });
+      db.insert(tables.gearBuilds).values(values).run();
+      const selected = db
+        .select()
+        .from(tables.gearBuilds)
+        .where(eq(tables.gearBuilds.slug, confidence))
+        .get();
+      expect(selected?.confidence).toBe(confidence);
+    }
+    expect(
+      schemas.gearBuildInsert.safeParse({ ...build, slug: "b", confidence: "certain" }).success,
     ).toBe(false);
   });
 

@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { CITED_ENTITY } from "../src/enums";
-import { counterInput, deckInput, gearRecInput, runeBuildInput } from "../src/inputs";
+import {
+  counterInput,
+  deckInput,
+  gearBuildInput,
+  gearRecInput,
+  runeBuildInput,
+} from "../src/inputs";
 import {
   OBSOLESCENCE,
   OBSOLETE_ENTITIES,
@@ -146,5 +152,17 @@ describe("the obsolete lifecycle", () => {
     });
     expect(deck).not.toHaveProperty("obsoleteSince");
     expect(deck).not.toHaveProperty("supersededBy");
+    const build = gearBuildInput.parse({
+      slug: "b",
+      position: 0,
+      confidence: "low",
+      hasteLines: { min: 0, max: 0, note: null },
+      slots: { top_left: [], top_right: [], bottom_left: [], bottom_right: [] },
+      why: "w",
+      sources: ["dc:1"],
+      ...lifecycle,
+    });
+    expect(build).not.toHaveProperty("obsoleteSince");
+    expect(build).not.toHaveProperty("obsoleteReason");
   });
 });

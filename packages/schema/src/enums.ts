@@ -21,14 +21,15 @@ export type DeckStatus = (typeof DECK_STATUS)[number];
 export const DECK_NOTE_KIND = ["substitution", "unorthodox"] as const;
 export type DeckNoteKind = (typeof DECK_NOTE_KIND)[number];
 
-/** Gear slot a recommendation applies to. */
-export const GEAR_SLOT = [
-  "top_left",
-  "top_right",
-  "bottom_left",
-  "bottom_right",
-  "general",
-] as const;
+/**
+ * A slot of the in-game equipment board: each holds three items of one
+ * kind (weapons, accessories, armour, special items).
+ */
+export const GEAR_BOARD_SLOT = ["top_left", "top_right", "bottom_left", "bottom_right"] as const;
+export type GearBoardSlot = (typeof GEAR_BOARD_SLOT)[number];
+
+/** Gear slot a recommendation applies to: a board slot, or the board as a whole. */
+export const GEAR_SLOT = [...GEAR_BOARD_SLOT, "general"] as const;
 export type GearSlot = (typeof GEAR_SLOT)[number];
 
 /** Game mode a gear recommendation is for. */
@@ -275,6 +276,7 @@ export const CITED_ENTITY = [
   "deck",
   "rune_build",
   "gear_rec",
+  "gear_build",
   "score",
   "mechanic",
   "rng_factor",

@@ -94,10 +94,10 @@ Files: `apps/web/src/routes/cookies.tsx`, `apps/web/src/routes/cookies_.$key.tsx
 
 Files: `packages/schema/src/tables/gear.ts` (or a new table file beside it), `packages/schema/src/zod.ts`, `packages/schema/src/inputs.ts`, `packages/schema/src/enums.ts`, `packages/schema/src/obsolete.ts`, the generated migration (`pnpm --filter @crumble/schema db:generate`), `apps/server/src/importers/` (seed schema, mapping, the `gearBuilds` collection, the manifest key), `apps/server/src/registry.ts`, `apps/server/src/app.ts`, `apps/server/test/registry.test.ts`, `apps/server/test/importers/` (seed-map, a staged fixture from `fixtures/006-daily-dungeons/`), `packages/schema/test/inputs.test.ts`, `packages/schema/test/enums.test.ts`, `packages/schema/test/roundtrip.test.ts`, the whole-record import tests.
 
-- [ ] The table, its Zod (JSON overrides), input (obsolete columns omitted, `min ≤ max` refined after the omit), enums and obsolete entity.
-- [ ] The importer collection: header file, optional, `slug` uniqueness across records, one current build per (mode, variant), moded-row rule, sources checked, `checkObsoleteDates`.
-- [ ] The registry entry and route, ordered by `position`, `?mode=` and `?current=` filters.
-- [ ] Tests per the spec's Stage 4 schema and importer list; whole-record tests derive the table's count from `curated/gear-builds.json` when present.
+- [x] The table, its Zod (JSON overrides), input (obsolete columns omitted, `min ≤ max` refined after the omit), enums and obsolete entity.
+- [x] The importer collection: header file, optional, `slug` uniqueness across records, one current build per (mode, variant), moded-row rule, sources checked, `checkObsoleteDates`.
+- [x] The registry entry and route, ordered by `position`, `?mode=` and `?current=` filters.
+- [x] Tests per the spec's Stage 4 schema and importer list; whole-record tests derive the table's count from `curated/gear-builds.json` when present.
 - Verify: `pnpm exec vitest run packages/schema apps/server/test/registry.test.ts apps/server/test/importers`, then `pnpm verify`.
 
 ### Task 9: the build card and the Gear builds page (after Task 8 merges)

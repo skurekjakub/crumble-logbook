@@ -29,6 +29,7 @@ import {
   formulaClaimInsert,
   formulaConstantInsert,
   formulaStepInsert,
+  gearBuildInsert,
   gearRecInsert,
   glossaryInsert,
   mechanicInsert,
@@ -160,6 +161,24 @@ export type GearRecInput = z.output<typeof gearRecInput>;
 export const gearRecPatch = gearRec.patch;
 /** Output of {@link gearRecPatch}. */
 export type GearRecPatch = z.output<typeof gearRecPatch>;
+
+const gearBuild = citedInputs(gearBuildInsert.omit(LIFECYCLE));
+/**
+ * Input for creating a gear build, with the sources that support it; its
+ * haste range must run from its least to its most. The obsolete
+ * lifecycle isn't accepted: a record's import sets it.
+ */
+export const gearBuildInput = gearBuild.input;
+/** Output of {@link gearBuildInput}. */
+export type GearBuildInput = z.output<typeof gearBuildInput>;
+/**
+ * Patch for updating a gear build. `sources`, if given, must be non-empty;
+ * a `hasteLines` given is checked as on create. The obsolete lifecycle
+ * isn't accepted: a record's import sets it.
+ */
+export const gearBuildPatch = gearBuild.patch;
+/** Output of {@link gearBuildPatch}. */
+export type GearBuildPatch = z.output<typeof gearBuildPatch>;
 
 const recommendation = citedInputs(recommendationInsert);
 /** Input for creating a recommendation, with the sources that support it. */
