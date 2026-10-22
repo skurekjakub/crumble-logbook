@@ -77,8 +77,6 @@ interface SectionBase {
   id: string;
   /** Tab label. */
   label: string;
-  /** Korean name shown in the header label instead of `label`, when known. */
-  labelKr: string | null;
   /** The header's `<h1>`. */
   title: string;
   /** The section's concrete path: `/<id>`. */

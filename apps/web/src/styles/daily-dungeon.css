@@ -95,11 +95,6 @@
   margin: 0;
   font-size: var(--fs-l);
 }
-.dd-panel-head .kr {
-  color: var(--ink-3);
-  font-size: var(--fs-s);
-  font-weight: 500;
-}
 .dd-facts {
   display: flex;
   flex-direction: column;

@@ -421,12 +421,13 @@ describe("Piñata boss view", () => {
     });
   });
 
-  it("heads the page with the boss's label and Korean name, and its cited English name, element, weakness, fight length and scoring", async () => {
+  it("heads the page with the boss's label, its Korean name in the tooltip, and its cited English name, element, weakness, fight length and scoring", async () => {
     await renderRoute(PATH, FULL);
     const heading = await screen.findByRole("heading", { level: 2 });
     expect(heading).toHaveTextContent("Piñata");
     expect(heading).not.toHaveTextContent("Extra");
-    expect(screen.getByText("지나치게 무거워진 피냐타")).toHaveClass("kr");
+    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/^Piñata$/);
+    expect(screen.getByTitle("지나치게 무거워진 피냐타")).toHaveTextContent(/^Piñata$/);
     const kv = document.querySelector("dl.kv") as HTMLElement;
     const dd = async (label: string) =>
       (await within(kv).findByText(label)).nextElementSibling as HTMLElement;

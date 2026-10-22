@@ -388,7 +388,8 @@ describe("the bracket calculator", () => {
     const gate = await screen.findByRole("region", { name: "The power gate" });
     const steps = within(gate).getAllByRole("listitem");
     expect(steps).toHaveLength(BRACKETS.length);
-    expect(steps[3]).toHaveTextContent("40%+35%40% 이상");
+    expect(steps[3]).toHaveTextContent(/^40%\+35%$/);
+    expect(steps[3]).toHaveAttribute("title", "40% of recommended or more keeps 35% (40% 이상)");
     expect(steps[3]!.querySelector(".bk.bk-mid")).not.toBeNull();
     expect(steps[2]!.querySelector(".bk.bk-low")).not.toBeNull();
   });
@@ -631,7 +632,7 @@ describe("the Rift at 15% page", () => {
     const [first, second] = bodyRows(ranked);
     expect(first!.slice(0, 2)).toEqual(["#1", "L2 S1of 20G"]);
     expect(first![2]).toContain("Rowdy Truck");
-    expect(first![3]).toBe("2.3GRift power · 차원의 힘 Lv.14");
+    expect(first![3]).toBe("2.3GRift power · Dimensional Energy Lv.14");
     expect(first![5]).toBe("acceptedscreenshotmanual");
     expect(first![6]).toBe("Rift shred deckrift note 1");
     expect(second!.slice(0, 2)).toEqual(["–", "L1 S1of 10G"]);
@@ -671,7 +672,7 @@ describe("the Rift at 15% page", () => {
     await waitFor(() => expect(bodyRows(ranked)).toHaveLength(1));
     const bounds = await screen.findByRole("region", { name: "Attempts that bound it" });
     await waitFor(() => expect(bodyRows(bounds)).toHaveLength(1));
-    expect(bodyRows(bounds)[0]![2]).toBe("2.3Gbasis unknown · 차원의 힘 Lv.14");
+    expect(bodyRows(bounds)[0]![2]).toBe("2.3Gbasis unknown · Dimensional Energy Lv.14");
   });
 
   it("prints a power the post doesn't give short, its words in the tooltip", async () => {

@@ -41,9 +41,6 @@
 .nav-section-link .nav-en {
   font-weight: 600;
 }
-.nav-section-link .kr {
-  font-size: var(--fs-2xs);
-}
 .nav-section-link:hover {
   background: var(--surface-2);
   color: var(--ink);

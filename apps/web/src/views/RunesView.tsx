@@ -78,7 +78,7 @@ export function RunesView({ mode, search, onSearch }: RunesViewProps) {
             value: q,
             onChange: (v) => onSearch({ q: v }),
             text: (r) => `${JSON.stringify(r)} ${r.en ?? ""}`,
-            placeholder: "Filter by cookie or stat (e.g. 시커, haste)",
+            placeholder: "Filter by cookie or stat, e.g. Milk, haste…",
           };
           const select: TableSelect<RuneBuild> = {
             name: "Deck",

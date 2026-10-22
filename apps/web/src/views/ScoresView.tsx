@@ -142,7 +142,7 @@ function scoreColumns(
       className: "n",
     },
     {
-      header: "배",
+      header: "× power",
       cell: (s) => formatRatio(ratio(s)),
       className: "n muted",
     },
@@ -203,7 +203,7 @@ function TopRun({
         </div>
         <div className="top-meta">
           <span>{top.powerG != null ? `at ${formatG(top.powerG)} power` : "power not shown"}</span>
-          {r != null ? <span>{r}배</span> : null}
+          {r != null ? <span>{r}× power</span> : null}
           <span>{series.name(top.deckId)}</span>
           {top.date ? <span>{top.date}</span> : null}
         </div>

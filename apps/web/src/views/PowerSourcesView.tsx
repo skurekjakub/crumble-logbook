@@ -225,7 +225,7 @@ function WithNumbers({
           return (
             <section key={slug} className="card">
               <h3>
-                <PowerSourceLink mode={mode} slug={slug} sources={data.sources} withKr />
+                <PowerSourceLink mode={mode} slug={slug} sources={data.sources} />
               </h3>
               <DataTable
                 columns={columns}
@@ -263,9 +263,7 @@ function PowerSourceCard({
   return (
     <section className="card ps-card" id={powerSourceAnchor(source.slug)}>
       <div className="card-head">
-        <h3>
-          {source.nameEn} <span className="kr">{source.nameKr}</span>
-        </h3>
+        <h3 title={source.nameKr}>{source.nameEn}</h3>
         <span className="chips">
           <GradePill note={source.efficiency[stage]} />
           <CostTag type={source.costType} />

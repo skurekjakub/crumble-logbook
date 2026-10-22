@@ -12,7 +12,6 @@ export const DUNGEON = {
   id: "dungeon",
   kind: "mode",
   label: "Crumble Dungeon",
-  labelKr: "크럼블 던전",
   title: "Crumble Dungeon Logbook",
   to: "/dungeon",
   link: modeLink("dungeon"),

@@ -447,10 +447,10 @@ function renderAt(path: string) {
 afterEach(cleanup);
 
 describe("the team power section", () => {
-  it("names the section with the record's Korean name and shows where team power counts", async () => {
+  it("names the section in English and shows where team power counts", async () => {
     await renderAt("/team-power");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
-    expect(within(nav).getByRole("link", { name: "Team power 팀투" })).toBeVisible();
+    expect(within(nav).getByRole("link", { name: "Team power" })).toBeVisible();
     const rules = await screen.findByRole("heading", { name: "What team power decides" });
     expect(rules.parentElement).toHaveTextContent("Only stages and the Rift compare team power.");
     expect(screen.getByText("Power is not strength.")).toBeVisible();

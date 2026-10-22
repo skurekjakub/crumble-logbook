@@ -12,7 +12,6 @@ export const ARENA = {
   id: "arena",
   kind: "mode",
   label: "Arena",
-  labelKr: "아레나",
   title: "Arena Logbook",
   to: "/arena",
   link: modeLink("arena"),

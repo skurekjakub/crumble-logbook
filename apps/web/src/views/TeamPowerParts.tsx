@@ -27,25 +27,25 @@ export interface PowerSourceLinkProps {
   slug: string;
   /** The power sources, to name it; a slug none has shows as it is. */
   sources: readonly PowerSource[];
-  /** Show the Korean name after the English one. */
-  withKr?: boolean;
 }
 
 /**
- * A power source's name, linking to its card on the cost and efficiency page.
+ * A power source's English name, linking to its card on the cost and
+ * efficiency page; its Korean name is the link's tooltip.
  *
- * @param props - the mode, the slug, the power sources and whether to show the Korean name
+ * @param props - the mode, the slug and the power sources
  * @returns the link
  */
-export function PowerSourceLink({ mode, slug, sources, withKr = false }: PowerSourceLinkProps) {
+export function PowerSourceLink({ mode, slug, sources }: PowerSourceLinkProps) {
   const source = sources.find((s) => s.slug === slug);
   return (
-    <>
-      <Link {...modeLink(mode.id, "/$mode/power-sources")} hash={powerSourceAnchor(slug)}>
-        {source?.nameEn ?? slug}
-      </Link>
-      {withKr && source ? <span className="kr"> {source.nameKr}</span> : null}
-    </>
+    <Link
+      {...modeLink(mode.id, "/$mode/power-sources")}
+      hash={powerSourceAnchor(slug)}
+      title={source?.nameKr}
+    >
+      {source?.nameEn ?? slug}
+    </Link>
   );
 }
 
@@ -57,26 +57,22 @@ export interface PackageLinkProps {
   slug: string;
   /** The packages, to name it; a slug none has shows as it is. */
   packages: readonly ShopPackage[];
-  /** Show the Korean name after the English one. */
-  withKr?: boolean;
 }
 
 /**
- * A package's name, linking to the packages page filtered to it.
+ * A package's English name, linking to the packages page filtered to it;
+ * its Korean name is the link's tooltip.
  *
- * @param props - the mode, the slug, the packages and whether to show the Korean name
+ * @param props - the mode, the slug and the packages
  * @returns the link
  */
-export function PackageLink({ mode, slug, packages, withKr = false }: PackageLinkProps) {
+export function PackageLink({ mode, slug, packages }: PackageLinkProps) {
   const pack = packages.find((p) => p.slug === slug);
   const name = pack?.nameEn ?? slug;
   return (
-    <>
-      <Link {...modeLink(mode.id, "/$mode/packages")} search={{ q: name }}>
-        {name}
-      </Link>
-      {withKr && pack ? <span className="kr"> {pack.nameKr}</span> : null}
-    </>
+    <Link {...modeLink(mode.id, "/$mode/packages")} search={{ q: name }} title={pack?.nameKr}>
+      {name}
+    </Link>
   );
 }
 

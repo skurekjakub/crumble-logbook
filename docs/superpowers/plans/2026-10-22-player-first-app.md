@@ -33,11 +33,11 @@ Files: `apps/web/src/components/CookieName.tsx`, `apps/web/src/views/GlossaryVie
 
 Files: `apps/web/src/app/modes/types.ts` and every `apps/web/src/app/modes/*.ts`, `apps/web/src/routes/__root.tsx`, `apps/web/src/components/SideNav.tsx`, `apps/web/src/components/PageHeader.tsx` (docblock), `apps/web/src/views/ResearchView.tsx`, the views the spec's Stage 1 lists (`DeckCard`, `BossView`, `CounterMatrix`, `DailyDungeonsView`, `StageZonesView`, `StageBracketsView`, `PowerSourcesView`, `PackagesView`, `TeamPowerParts`), `apps/web/src/views/RunesView.tsx`, `apps/web/src/lib/` (an `englishHalf` helper for "불/Fire"), `apps/web/src/styles/shell.css`, `apps/web/src/styles/shared-pages.css`, and the tests that pin the Korean.
 
-- [ ] `labelKr` deleted from `SectionBase` and every config; its renders removed.
-- [ ] Each listed `.kr` render moves into its element's `title`; their CSS goes.
-- [ ] Glossary `element` and `class` render their English half wherever shown.
-- [ ] Runes filter placeholder "Filter by cookie or stat, e.g. Milk, haste…"; a test types a Korean name and keeps the row.
-- [ ] `apps/web/test/app-shell.test.tsx`'s every-mode-every-page loop asserts no `/\p{Script=Hangul}/u` in the body text, `placeholder` or `aria-label`, outside `/glossary` and `/sources`. Curated strings still carry Korean until Stage 5, so the loop checks the chrome only: it strips the text of curated-data containers marked `data-curated` (added to the curated text nodes the views render: rune lines, whys, titles, notes) and the assertion tightens to the whole body in Task 12.
+- [x] `labelKr` deleted from `SectionBase` and every config; its renders removed.
+- [x] Each listed `.kr` render moves into its element's `title`; their CSS goes.
+- [x] Glossary `element` and `class` render their English half wherever shown.
+- [x] Runes filter placeholder "Filter by cookie or stat, e.g. Milk, haste…"; a test types a Korean name and keeps the row.
+- [x] `apps/web/test/app-shell.test.tsx`'s every-mode-every-page loop asserts no `/\p{Script=Hangul}/u` in the body text, `placeholder` or `aria-label`, outside `/glossary` and `/sources`. Curated strings still carry Korean until Stage 5, so the loop checks the chrome only: it strips the text of curated-data containers marked `data-curated` (added to the curated text nodes the views render: rune lines, whys, titles, notes) and the assertion tightens to the whole body in Task 12.
 - Verify: `pnpm exec vitest run apps/web/test/app-shell.test.tsx`, then `pnpm verify`.
 
 ## Stage 2 — Navigation (web lane)

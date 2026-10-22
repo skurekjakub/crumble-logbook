@@ -160,7 +160,7 @@ describe("MODES", () => {
   it("files the team power section under record 005, with the shared pages and the team-power screens", () => {
     expect(TEAM_POWER.recordSlug).toBe("005-team-power-growth");
     expect(TEAM_POWER.scope.mode).toBe("team_power");
-    expect(TEAM_POWER.labelKr).toBe("팀투");
+    expect(TEAM_POWER.label).toBe("Team power");
     expect(TEAM_POWER.tabs.map((t) => t.to)).toEqual(
       [
         "",

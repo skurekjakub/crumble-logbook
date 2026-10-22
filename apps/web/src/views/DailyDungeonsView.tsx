@@ -7,7 +7,9 @@ import { Clamp } from "../components/Clamp";
 import { EmptyState } from "../components/EmptyState";
 import { QueryResult } from "../components/QueryResult";
 import { SourceChips } from "../components/SourceChips";
+import { englishHalf } from "../lib/bilingual";
 import { initials } from "../lib/cookie-icons";
+import { CURATED } from "../lib/curated";
 import { elementKey, factVerdict, pickDungeon, rankDecks, splitHero } from "../lib/daily-dungeon";
 import { optionalText } from "../lib/search";
 import type { SourceIndex } from "../lib/sources";
@@ -135,13 +137,13 @@ function DungeonFacts({ dungeon: d, sources }: { dungeon: DailyDungeon; sources:
           </span>
         ) : null}
         <span className={`chip dd-el el-${element ?? "none"}`} title="Boss element">
-          {d.bossElement ?? "Element ?"}
+          {englishHalf(d.bossElement) ?? "Element ?"}
         </span>
         <span
           className={`chip dd-el${d.bossWeakness ? " weak" : ""} el-${weakness ?? "none"}`}
           title="Weak to"
         >
-          Weak: {d.bossWeakness ?? "?"}
+          Weak: {englishHalf(d.bossWeakness) ?? "?"}
         </span>
         <span className="chip dd-rotation" title="Whether the boss or its element changes">
           {d.bossRotates === null ? "Rotation ?" : d.bossRotates ? "↻ Rotates" : "Fixed boss"}
@@ -173,7 +175,7 @@ function DungeonFacts({ dungeon: d, sources }: { dungeon: DailyDungeon; sources:
         <SourceChips ids={d.topStageSource ? [d.topStageSource] : []} sources={sources} />
       </div>
       {notes.length ? (
-        <ul className="clean dd-notes">
+        <ul className="clean dd-notes" {...CURATED}>
           {notes.map((note, i) => (
             <li key={i}>
               <Clamp lines={1}>{note}</Clamp>
@@ -220,9 +222,7 @@ function DungeonPanel({
       aria-labelledby={`dd-tab-${dungeon.slug}`}
     >
       <div className="dd-panel-head">
-        <h3>
-          {dungeon.nameEn} <span className="kr">{dungeon.nameKr ?? ""}</span>
-        </h3>
+        <h3 title={dungeon.nameKr ?? undefined}>{dungeon.nameEn}</h3>
         <SourceChips ids={dungeon.sources} sources={sources} max={2} />
       </div>
       <DungeonFacts dungeon={dungeon} sources={sources} />

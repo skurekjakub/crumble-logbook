@@ -12,7 +12,6 @@ export const TEAM_POWER = {
   id: "team-power",
   kind: "mode",
   label: "Team power",
-  labelKr: "팀투",
   title: "Team Power Logbook",
   to: "/team-power",
   link: modeLink("team-power"),

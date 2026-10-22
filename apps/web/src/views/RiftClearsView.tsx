@@ -39,7 +39,7 @@ const STANDINGS: Readonly<Record<RiftClear["standing"], readonly [PillKind, stri
 
 /** What a posted figure is, per power basis, as a power cell's tooltip says it. */
 const BASES: Readonly<Record<NonNullable<RiftClear["powerBasis"]>, string>> = {
-  rift: "Rift power, 차원의 힘 included",
+  rift: "Rift power, Dimensional Energy included",
 };
 
 /** The ids of the page's sections. */
@@ -127,8 +127,8 @@ function LevelLines({
 
 /**
  * An attempt's team power, short, with which power the figure is and the
- * 차원의 힘 level under it when the post gives them; the post's wording in
- * the tooltip.
+ * Dimensional Energy level under it when the post gives them; the post's
+ * wording in the tooltip.
  *
  * @param props - the attempt
  * @returns the cell's content
@@ -139,7 +139,7 @@ function TeamPower({ clear: c }: { clear: RiftClear }) {
     <PowerCell posted={c.teamPower} powerG={c.powerG}>
       <span className="pw-of" title={basis}>
         {c.powerBasis === "rift" ? "Rift power" : "basis unknown"}
-        {c.riftPowerLevel === null ? "" : ` · 차원의 힘 Lv.${c.riftPowerLevel}`}
+        {c.riftPowerLevel === null ? "" : ` · Dimensional Energy Lv.${c.riftPowerLevel}`}
       </span>
     </PowerCell>
   );

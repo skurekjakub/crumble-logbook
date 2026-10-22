@@ -13,7 +13,6 @@ export const STAGE = {
   id: "stage",
   kind: "mode",
   label: "Stage",
-  labelKr: "스테이지",
   title: "Stage Pushing Logbook",
   to: "/stage",
   link: modeLink("stage"),
@@ -135,7 +134,7 @@ export const STAGE = {
       title: "Rift at 15%",
       lede: [
         "Highest level first, then lowest power; never a ratio.",
-        "The bracket is read off Rift power, 차원의 힘 included.",
+        "The bracket is read off Rift power, Dimensional Energy included.",
         "Attempts without it, at other brackets or failed bound the reach.",
       ],
       bracket: 15,

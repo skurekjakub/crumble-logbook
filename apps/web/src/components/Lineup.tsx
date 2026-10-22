@@ -1,4 +1,5 @@
 import { shortName } from "../lib/cookie-icons";
+import { CURATED } from "../lib/curated";
 import { CookieIcon } from "./CookieIcon";
 
 /** One cookie slot of a {@link Lineup}; a deck's `cookies[]` entries fit as they are. */
@@ -34,7 +35,7 @@ export function slotKind(level: string | null | undefined): "" | "max" | "filler
 /**
  * One cookie's slot: the portrait with the level and star count on it (and
  * a crown when it captains the team), the short English name (the full one
- * in the tooltip), and the Korean name and note beneath. Stars show only
+ * and the Korean in the tooltip), and the note beneath. Stars show only
  * when they're a plain number; free text ("?", "~7 (inferred …)") is left
  * to the levels table.
  *
@@ -45,8 +46,8 @@ export function LineupSlot({ cookie: c, slotId }: { cookie: LineupCookie; slotId
   const kind = slotKind(c.level);
   const lv = c.level != null && c.level !== "" ? `Lv.${c.level}` : "";
   const stars = c.stars && /^\d+$/.test(c.stars) ? ` · ${c.stars}★` : "";
-  const sub = [c.en ? c.cookieKr : "", c.note ?? ""].filter(Boolean).join(" · ");
-  const tip = [c.en, c.captain ? "captain" : null, c.note].filter(Boolean).join(" — ");
+  const name = c.en ? `${c.en} (${c.cookieKr})` : c.cookieKr;
+  const tip = [name, c.captain ? "captain" : null, c.note].filter(Boolean).join(" — ");
   const classes = ["slot", kind, c.captain ? "captain" : ""].filter(Boolean).join(" ");
   return (
     <div className={classes} title={tip} data-slot={slotId}>
@@ -63,7 +64,9 @@ export function LineupSlot({ cookie: c, slotId }: { cookie: LineupCookie; slotId
         {stars}
       </span>
       <span className="nm">{c.en ? shortName(c.en) : c.cookieKr}</span>
-      <span className="sub">{sub}</span>
+      <span className="sub" {...CURATED}>
+        {c.note ?? ""}
+      </span>
     </div>
   );
 }

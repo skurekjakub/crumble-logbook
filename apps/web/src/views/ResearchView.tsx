@@ -55,12 +55,6 @@ function RecordCard({ record, sources }: { record: ResearchRecord; sources: numb
                 {i > 0 ? " " : null}
                 <Link {...m.link} className="mode-chip">
                   {m.label}
-                  {m.labelKr ? (
-                    <>
-                      {" "}
-                      <span className="kr">{m.labelKr}</span>
-                    </>
-                  ) : null}
                 </Link>
               </Fragment>
             ))

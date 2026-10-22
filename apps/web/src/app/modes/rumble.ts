@@ -12,7 +12,6 @@ export const RUMBLE = {
   id: "rumble",
   kind: "mode",
   label: "Rumble Arena",
-  labelKr: "와글와글 아레나",
   title: "Rumble Arena Logbook",
   to: "/rumble",
   link: modeLink("rumble"),

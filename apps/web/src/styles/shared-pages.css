@@ -42,17 +42,10 @@
   font: 700 var(--fs-m) / 1.2 var(--body);
   text-decoration: none;
 }
-.mode-chip .kr {
-  font-size: var(--fs-2xs);
-}
 .mode-chip:hover,
 .mode-chip:focus-visible {
   background: var(--accent);
   color: var(--accent-ink);
-}
-.mode-chip:hover .kr,
-.mode-chip:focus-visible .kr {
-  color: inherit;
 }
 .record-lede {
   color: var(--ink-2);

@@ -423,7 +423,7 @@ describe("PvP chrome", () => {
     await renderAt("/arena", ARENA);
     expect(await screen.findByText("Regular Arena: two decks lead.")).toHaveClass("lede");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Arena Logbook");
-    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent("아레나");
+    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent(/^Arena$/);
     await waitFor(() =>
       expect(stamp()).toEqual({ Updated: "2026-09-27", Sources: "2", Decks: "3" }),
     );
@@ -433,7 +433,7 @@ describe("PvP chrome", () => {
   it("fills the Rumble Arena header from the record's Rumble lede", async () => {
     await renderAt("/rumble", RUMBLE);
     expect(await screen.findByText("Rumble Arena: one 12-cookie team.")).toHaveClass("lede");
-    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent("와글와글 아레나");
+    expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent(/^Rumble Arena$/);
   });
 
   it("lists each PvP mode's pages under it in the navigation", async () => {
@@ -732,19 +732,21 @@ describe("PvP counters", () => {
     expect(within(cell("Crepe–Espresso", "Rye one-carry")).getByRole("link")).toHaveClass("high");
   });
 
-  it("names each team in English with its Korean name beneath, on both axes", async () => {
+  it("names each team in English on both axes, its full name and Korean name in the tooltip", async () => {
     await renderAt("/arena/counters", ARENA);
     const table = await panel().findByRole("table", { name: /beaten by/i });
     const col = within(table).getByRole("columnheader", { name: /Rye one-carry/ });
-    expect(within(col).getByText("호밀 원툴덱")).toHaveClass("kr");
+    expect(col).toHaveTextContent(/^Rye one-carry$/);
     const row = within(table).getByRole("rowheader", { name: /Rye one-carry/ });
-    expect(within(row).getByText("호밀 원툴덱")).toHaveClass("kr");
+    expect(row).not.toHaveTextContent("호밀 원툴덱");
+    for (const head of [col, row]) {
+      expect(head.querySelector(".team-head")).toHaveAttribute(
+        "title",
+        "Rye one-carry deck (호밀 원툴덱)",
+      );
+    }
     const bari = within(table).getByRole("columnheader", { name: "Bari–Oven" });
-    expect(bari.querySelector(".kr")).toBeNull();
-    expect(col.querySelector(".team-head")).toHaveAttribute(
-      "title",
-      "Rye one-carry deck 호밀 원툴덱",
-    );
+    expect(bari.querySelector(".team-head")).toHaveAttribute("title", "Bari–Oven deck");
   });
 
   it("heads each team with the portraits its name mentions, and its row with its tier", async () => {

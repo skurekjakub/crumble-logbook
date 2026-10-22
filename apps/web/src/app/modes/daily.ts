@@ -12,7 +12,6 @@ export const DAILY = {
   id: "daily-dungeons",
   kind: "mode",
   label: "Daily Dungeons",
-  labelKr: "일일던전",
   title: "Daily Dungeons Logbook",
   to: "/daily-dungeons",
   link: modeLink("daily-dungeons"),

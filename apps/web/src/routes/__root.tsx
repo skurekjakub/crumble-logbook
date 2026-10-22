@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import { createRootRouteWithContext, Outlet, useLocation } from "@tanstack/react-router";
-import type { ReactNode } from "react";
 import { decksQuery, recordQuery, sourcesQuery } from "../api/queries";
 import type { Section, StampStat } from "../app/modes";
 import { activeTab, SECTIONS, sectionForPath } from "../app/modes";
@@ -29,15 +28,13 @@ const STAT_LABEL: Record<StampStat, string> = {
 };
 
 /**
- * The header label's suffix: a mode's Korean name, or its English label
- * when that's unknown. Shared sections have none.
+ * The header label's suffix: a mode's name. Shared sections have none.
  *
  * @param section - the active section, if any
  * @returns the suffix, or null outside a mode
  */
-function headerContext(section: Section | undefined): ReactNode {
-  if (section?.kind !== "mode") return null;
-  return section.labelKr ? <span className="kr">{section.labelKr}</span> : section.label;
+function headerContext(section: Section | undefined): string | null {
+  return section?.kind === "mode" ? section.label : null;
 }
 
 /**
@@ -96,7 +93,6 @@ function RootLayout() {
           sections={SECTIONS.map((s, i) => ({
             id: s.id,
             label: s.label,
-            labelKr: s.labelKr,
             link: s.link,
             current: s.id !== section?.id ? null : landing ? "page" : "section",
             startsGroup: s.kind === "shared" && SECTIONS[i - 1]?.kind === "mode",

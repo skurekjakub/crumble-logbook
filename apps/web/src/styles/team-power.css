@@ -212,7 +212,6 @@ td.verdict-cell .pill {
   flex-direction: column;
   line-height: 1.3;
 }
-.pack-name .kr,
 .pack-name .muted {
   font-size: var(--fs-2xs);
 }

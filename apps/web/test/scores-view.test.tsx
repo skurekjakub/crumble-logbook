@@ -99,7 +99,9 @@ describe("scores view", () => {
   it("renders the legacy heading, the best run, scatter, RNG cards and a damage-ranked table", async () => {
     await renderRoute("/conquest/scores", API);
     expect(await screen.findByRole("heading", { name: "Scores and RNG" })).toBeVisible();
-    expect(screen.getByText(/Dashed lines mark 배/).closest("ul")).toHaveClass("points");
+    expect(screen.getByText(/Dashed lines mark damage as a multiple/).closest("ul")).toHaveClass(
+      "points",
+    );
     await waitFor(() => expect(bodyRows(scoresTable())).toHaveLength(3));
     expect(bodyRows(scoresTable()).map((r) => r.slice(0, 2))).toEqual([
       ["1", "1.31T"],
@@ -115,12 +117,15 @@ describe("scores view", () => {
     expect(best).toHaveClass("top-run");
     expect(best.querySelector(".top-dmg")).toHaveTextContent("1.31T");
     expect(best).toHaveTextContent("at 26G power");
+    expect(best).toHaveTextContent("50× power");
     expect(within(best).getByText("screenshot")).toHaveClass("pill", "verified");
     expect(within(scoresTable()).getByText("Other")).toBeInTheDocument();
 
     expect(screen.getByRole("group", { name: /damage against team power/ })).toBeInTheDocument();
     expect(
-      screen.getByRole("img", { name: "1.31T at 26G power, 50배: Cherry deck · screenshot" }),
+      screen.getByRole("img", {
+        name: "1.31T at 26G power, 50× power: Cherry deck · screenshot",
+      }),
     ).toBeInTheDocument();
     const legend = document.querySelector(".legend-row")!;
     expect(legend).toHaveTextContent("Melon Soda deck");

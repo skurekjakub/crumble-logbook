@@ -147,8 +147,7 @@ function packageColumns(
       header: "Package",
       cell: (p) => (
         <span className="pack-name">
-          <b>{p.nameEn}</b>
-          <span className="kr">{p.nameKr}</span>
+          <b title={p.nameKr}>{p.nameEn}</b>
           <span className="muted">{p.kind}</span>
         </span>
       ),

@@ -143,10 +143,6 @@
   font: 600 var(--fs-xs) / 1 var(--mono);
   color: var(--ink-2);
 }
-.gate .kr {
-  font-size: var(--fs-2xs);
-  color: var(--ink-3);
-}
 .card-row {
   display: flex;
   flex-wrap: wrap;

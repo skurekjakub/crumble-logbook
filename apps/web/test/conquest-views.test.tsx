@@ -557,6 +557,17 @@ describe("/conquest/runes", () => {
     expect(cookies()).toEqual(["Pomegranate"]);
   });
 
+  it("asks for an English cookie or stat, and still finds a cookie typed by its Korean name", async () => {
+    await renderAt("/conquest/runes");
+    await panel().findByText("Placement cookie.");
+    const box = panel().getByRole("searchbox", {
+      name: "Filter by cookie or stat, e.g. Milk, haste…",
+    });
+    expect(box).toHaveAttribute("placeholder", "Filter by cookie or stat, e.g. Milk, haste…");
+    fireEvent.change(box, { target: { value: "석류" } });
+    await waitFor(() => expect(cookies()).toEqual(["Pomegranate"]));
+  });
+
   it("keeps a numeric text filter from the URL, which the router decodes as a number", async () => {
     await renderAt("/conquest/runes?q=9");
     expect(await panel().findByRole("searchbox")).toHaveValue("9");

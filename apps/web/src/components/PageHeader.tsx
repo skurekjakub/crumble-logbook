@@ -3,7 +3,7 @@ import { Clamp } from "./Clamp";
 
 /** Props for {@link PageHeader}. */
 export interface PageHeaderProps {
-  /** A tag after the title, e.g. the mode's Korean name; omitted when null. */
+  /** A tag after the title, e.g. the mode's name; omitted when null. */
   context: ReactNode;
   /** The `<h1>`. */
   title: string;

@@ -18,8 +18,6 @@ export interface NavSection {
   /** Unique within the nav; the React key. */
   id: string;
   label: string;
-  /** Korean name shown beneath the label; null for none. */
-  labelKr: string | null;
   link: LinkTarget;
   /**
    * `page` when the section's own landing page is shown, `section` when one
@@ -62,8 +60,8 @@ function closeAfterFollow(e: MouseEvent<HTMLElement>) {
 }
 
 /**
- * The logbook's index: every section with its Korean name, and the current
- * section's pages nested beneath it. The current page's link carries
+ * The logbook's index: every section, and the current section's pages
+ * nested beneath it. The current page's link carries
  * `aria-current="page"` and the current section's `aria-current="true"`.
  *
  * On a wide screen the stylesheet shows it as a sticky sidebar; on a phone
@@ -94,12 +92,6 @@ export function SideNav({ id, label, sections }: SideNavProps) {
               }
             >
               <span className="nav-en">{s.label}</span>
-              {s.labelKr ? (
-                <>
-                  {" "}
-                  <span className="kr">{s.labelKr}</span>
-                </>
-              ) : null}
             </Link>
             {s.pages.length ? (
               <ul className="nav-pages" aria-label={`${s.label} sections`}>
