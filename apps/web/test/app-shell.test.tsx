@@ -23,7 +23,7 @@ import type {
   UsageStat,
 } from "../src/api/types";
 import type { ModeSection } from "../src/app/modes";
-import { CONQUEST, MODES, SHARED_SECTIONS } from "../src/app/modes";
+import { CONQUEST, MODES, SHARED_SECTIONS, STAGE } from "../src/app/modes";
 import type { Canned } from "./helpers";
 import { CURRENT, CURRENT_DECK } from "./helpers";
 import { renderRoute } from "./view-harness";
@@ -160,18 +160,76 @@ describe("app shell", () => {
     expect(conquest).toHaveAttribute("href", "/conquest");
     expect(conquest).toHaveAttribute("aria-current", "true");
     expect(within(nav).getByRole("link", { name: "Arena" })).not.toHaveAttribute("aria-current");
-    const pages = within(nav).getByRole("list", { name: "Guild Conquest sections" });
-    const decks = within(pages).getByRole("link", { name: "Decks" });
+    const setup = within(nav).getByRole("list", { name: "Guild Conquest Setup" });
+    const decks = within(setup).getByRole("link", { name: "Decks" });
     expect(decks).toHaveAttribute("href", "/conquest/decks");
     expect(decks).toHaveAttribute("aria-current", "page");
-    expect(within(pages).getByRole("link", { name: "Overview" })).not.toHaveAttribute(
+    expect(within(setup).getByRole("link", { name: "Overview" })).not.toHaveAttribute(
       "aria-current",
     );
+    const details = within(nav).getByRole("list", { name: "Guild Conquest Details" });
+    expect(within(details).getByRole("link", { name: "Scores & RNG" })).toHaveAttribute(
+      "href",
+      "/conquest/scores",
+    );
     expect(within(nav).getAllByRole("link", { current: "page" })).toEqual([decks]);
-    expect(screen.queryByRole("list", { name: "Arena sections" })).toBeNull();
+    expect(screen.queryByRole("list", { name: "Arena Setup" })).toBeNull();
     expect(screen.queryByRole("tab")).toBeNull();
     expect(screen.queryByRole("tabpanel")).toBeNull();
     expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+
+  it("splits a mode's pages into its Setup and Details lists, each in the mode's order", async () => {
+    await renderRoute("/stage/rift", {}, { mode: STAGE });
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    const labels = (list: HTMLElement) =>
+      within(list)
+        .getAllByRole("link")
+        .map((a) => a.textContent);
+    const setup = within(nav).getByRole("list", { name: "Stage Setup" });
+    expect(labels(setup)).toEqual([
+      "Overview",
+      "Teams",
+      "Sugar runes",
+      "Gear",
+      "Bracket calculator",
+      "Dimensional Rift",
+      "Rift at 15%",
+    ]);
+    expect(within(setup).getByRole("link", { current: "page" })).toHaveTextContent(
+      "Dimensional Rift",
+    );
+    const details = within(nav).getByRole("list", { name: "Stage Details" });
+    expect(labels(details)).toEqual(["Zones & bosses", "Clears", "Usage", "Mechanics", "Timeline"]);
+    expect(within(details).queryByRole("link", { current: "page" })).toBeNull();
+    expect(within(nav).getByText("Setup", { selector: ".nav-pages-label" })).toBeVisible();
+    expect(within(nav).getByText("Details", { selector: ".nav-pages-label" })).toBeVisible();
+  });
+
+  it("heads every mode page with a strip of the mode's Setup pages, as links, the current one marked", async () => {
+    const router = await renderRoute("/stage/rift", {}, { mode: STAGE });
+    const strip = screen.getByRole("navigation", { name: "Setup pages" });
+    const links = within(strip).getAllByRole("link");
+    expect(links.map((a) => [a.textContent, a.getAttribute("href")])).toEqual(
+      STAGE.tabs.filter((t) => t.group === "setup").map((t) => [t.label, t.to]),
+    );
+    expect(within(strip).getByRole("link", { current: "page" })).toHaveTextContent(
+      "Dimensional Rift",
+    );
+    expect(strip.compareDocumentPosition(screen.getByRole("main"))).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    );
+    expect(screen.queryByRole("tab")).toBeNull();
+
+    await router.navigate({ to: "/$mode/mechanics", params: { mode: "stage" } });
+    await waitFor(() => expect(router.state.location.pathname).toBe("/stage/mechanics"));
+    const onDetails = screen.getByRole("navigation", { name: "Setup pages" });
+    expect(within(onDetails).queryByRole("link", { current: "page" })).toBeNull();
+  });
+
+  it("draws no page strip outside a mode", async () => {
+    await renderAt("/sources");
+    expect(screen.queryByRole("navigation", { name: "Setup pages" })).toBeNull();
   });
 
   it("marks a mode link and its overview as the current page on the mode's landing page", async () => {
@@ -202,7 +260,7 @@ describe("app shell", () => {
     fireEvent.click(within(nav).getByRole("link", { name: "Arena" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/arena"));
     expect(hidePopover).not.toHaveBeenCalled();
-    const arena = await within(nav).findByRole("list", { name: "Arena sections" });
+    const arena = await within(nav).findByRole("list", { name: "Arena Setup" });
     fireEvent.click(within(arena).getByRole("link", { name: "Gear" }));
     expect(hidePopover).toHaveBeenCalledTimes(1);
     fireEvent.click(within(nav).getByRole("link", { name: "Sources" }));
@@ -224,7 +282,9 @@ describe("app shell", () => {
         expect(router.state.location.pathname, tab.to).toBe(tab.to);
         expect(screen.queryByText(NOT_FOUND), tab.to).toBeNull();
         const nav = screen.getByRole("navigation", { name: "Logbook" });
-        const pages = within(nav).getByRole("list", { name: `${mode.label} sections` });
+        const pages = within(nav).getByRole("list", {
+          name: `${mode.label} ${tab.group === "setup" ? "Setup" : "Details"}`,
+        });
         expect(within(pages).getByRole("link", { current: "page" }), tab.to).toHaveTextContent(
           tab.label,
         );
@@ -241,10 +301,7 @@ describe("app shell", () => {
     ] as const) {
       const mode = MODES.find((m) => m.id === id)!;
       await renderRoute(path, {}, { mode });
-      expect(
-        await screen.findByRole("list", { name: `${mode.label} sections` }),
-        path,
-      ).toBeVisible();
+      expect(await screen.findByRole("list", { name: `${mode.label} Setup` }), path).toBeVisible();
       expect(screen.queryByText(NOT_FOUND), path).toBeNull();
       cleanup();
     }
@@ -276,8 +333,8 @@ describe("app shell", () => {
     const router = await renderAt("/conquest");
     fireEvent.click(screen.getByRole("link", { name: "Arena" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/arena"));
-    expect(await screen.findByRole("list", { name: "Arena sections" })).toBeVisible();
-    expect(screen.queryByRole("list", { name: "Guild Conquest sections" })).toBeNull();
+    expect(await screen.findByRole("list", { name: "Arena Setup" })).toBeVisible();
+    expect(screen.queryByRole("list", { name: "Guild Conquest Setup" })).toBeNull();
   });
 
   it("keeps the app working when the research record fails to load, reporting it on every page", async () => {
@@ -299,7 +356,7 @@ describe("app shell", () => {
     await renderAt("/sources");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Crumble Logbook");
     expect(screen.getByRole("link", { name: "Sources" })).toHaveAttribute("aria-current", "page");
-    expect(screen.queryByRole("list", { name: "Guild Conquest sections" })).toBeNull();
+    expect(screen.queryByRole("list", { name: "Guild Conquest Setup" })).toBeNull();
     expect(screen.getByRole("button", { name: "Menu: Sources" })).toBeInTheDocument();
     expect(document.querySelector("header.top .lede")).toBeNull();
   });

@@ -30,6 +30,13 @@ export type LinkTarget =
 /** A figure the header's stamp can show. */
 export type StampStat = "updated" | "season" | "sources" | "decks";
 
+/**
+ * Which of a mode's page lists a tab sits in: `setup`, what to run (the
+ * landing page, teams, runes, gear and the player tools), or `details`,
+ * the research behind it.
+ */
+export type TabGroup = "setup" | "details";
+
 /** A sub-tab within a section. */
 export interface SectionTab {
   /** Unique within the section. */
@@ -39,6 +46,8 @@ export interface SectionTab {
   to: AppPath;
   /** The tab's route, for a link. */
   link: LinkTarget;
+  /** The page list the tab sits in. */
+  group: TabGroup;
 }
 
 /**
@@ -97,7 +106,10 @@ interface SectionBase {
   lede: string | null;
   /** Figures shown in the header stamp, in order. */
   stamp: readonly StampStat[];
-  /** Sub-tabs, in order; the first is the section's landing page. Empty for none. */
+  /**
+   * Sub-tabs, in order, the Setup tabs before the Details ones; the first is
+   * the section's landing page. Empty for none.
+   */
   tabs: readonly SectionTab[];
 }
 

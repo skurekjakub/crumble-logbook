@@ -29,7 +29,17 @@ export interface NavSection {
    * phone drawer then stays open so one of them can be picked.
    */
   hasPages?: boolean;
-  /** The section's pages, listed under it; empty to list none. */
+  /** The section's page lists, drawn under it; empty to draw none. */
+  pageLists: readonly NavPageList[];
+}
+
+/** A labelled list of a section's pages, such as a mode's Setup pages. */
+export interface NavPageList {
+  /** Unique within the section; the React key and part of the label's id. */
+  id: string;
+  /** The label shown above the list; with the section's name, it names the list. */
+  label: string;
+  /** The pages, in order; a list with none isn't drawn. */
   pages: readonly NavPage[];
 }
 
@@ -69,17 +79,20 @@ function closeAfterFollow(e: MouseEvent<HTMLElement>) {
 }
 
 /**
- * One section's entry: its link, and its pages nested beneath it when it
- * lists them.
+ * One section's entry: its link, and its page lists nested beneath it,
+ * each under its label and named by the section's name and the label
+ * ("Stage Setup").
  *
- * @param props - the section
+ * @param props - the section, and the id its link's and labels' ids start with
  * @returns the list item
  */
-function SectionItem({ section: s }: { section: NavSection }) {
+function SectionItem({ section: s, idBase }: { section: NavSection; idBase: string }) {
+  const linkId = `${idBase}-${s.id}`;
   return (
     <li className="nav-section">
       <Link
         {...s.link}
+        id={linkId}
         className="nav-section-link"
         data-keep-open={s.hasPages ? "" : undefined}
         // Link forces aria-current="page" on an active match; exact matching keeps that to the page itself.
@@ -88,28 +101,35 @@ function SectionItem({ section: s }: { section: NavSection }) {
       >
         <span className="nav-en">{s.label}</span>
       </Link>
-      {s.pages.length ? (
-        <ul className="nav-pages" aria-label={`${s.label} sections`}>
-          {s.pages.map((p) => (
-            <li key={p.id}>
-              <Link
-                {...p.link}
-                activeOptions={{ exact: true, includeSearch: false, includeHash: false }}
-                aria-current={p.current ? "page" : undefined}
-              >
-                {p.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      {s.pageLists
+        .filter((list) => list.pages.length)
+        .map((list) => (
+          <div key={list.id} className="nav-pages-group">
+            <span className="nav-pages-label" id={`${linkId}-${list.id}`}>
+              {list.label}
+            </span>
+            <ul className="nav-pages" aria-labelledby={`${linkId} ${linkId}-${list.id}`}>
+              {list.pages.map((p) => (
+                <li key={p.id}>
+                  <Link
+                    {...p.link}
+                    activeOptions={{ exact: true, includeSearch: false, includeHash: false }}
+                    aria-current={p.current ? "page" : undefined}
+                  >
+                    {p.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
     </li>
   );
 }
 
 /**
  * The logbook's index: the sections in labelled groups, and the current
- * section's pages nested beneath it. The current page's link carries
+ * section's page lists nested beneath it. The current page's link carries
  * `aria-current="page"` and the current section's `aria-current="true"`.
  *
  * On a wide screen the stylesheet shows it as a sticky sidebar; on a phone
@@ -135,7 +155,7 @@ export function SideNav({ id, label, groups }: SideNavProps) {
             </span>
             <ul className="nav-sections" aria-labelledby={`${id}-${g.id}`}>
               {g.sections.map((s) => (
-                <SectionItem key={s.id} section={s} />
+                <SectionItem key={s.id} section={s} idBase={id} />
               ))}
             </ul>
           </div>

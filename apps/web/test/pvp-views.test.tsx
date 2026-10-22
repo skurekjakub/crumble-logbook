@@ -436,26 +436,18 @@ describe("PvP chrome", () => {
     expect(document.querySelector("header.top h1 .title-tag")).toHaveTextContent(/^Rumble Arena$/);
   });
 
-  it("lists each PvP mode's pages under it in the navigation", async () => {
+  it("lists each PvP mode's pages under it in the navigation, Setup then Details", async () => {
     await renderAt("/arena/counters", ARENA);
-    const sub = within(screen.getByRole("navigation", { name: "Logbook" })).getByRole("list", {
-      name: "Arena sections",
-    });
-    expect(
-      within(sub)
+    const nav = screen.getByRole("navigation", { name: "Logbook" });
+    const labels = (list: HTMLElement) =>
+      within(list)
         .getAllByRole("link")
-        .map((t) => t.textContent),
-    ).toEqual([
-      "Overview",
-      "Teams",
-      "Counters",
-      "Usage",
-      "Sugar runes",
-      "Gear",
-      "Mechanics",
-      "Timeline",
-    ]);
-    expect(within(sub).getByRole("link", { name: "Counters" })).toHaveAttribute(
+        .map((t) => t.textContent);
+    const setup = within(nav).getByRole("list", { name: "Arena Setup" });
+    expect(labels(setup)).toEqual(["Overview", "Teams", "Sugar runes", "Gear"]);
+    const details = within(nav).getByRole("list", { name: "Arena Details" });
+    expect(labels(details)).toEqual(["Counters", "Usage", "Mechanics", "Timeline"]);
+    expect(within(details).getByRole("link", { name: "Counters" })).toHaveAttribute(
       "aria-current",
       "page",
     );

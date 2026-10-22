@@ -303,12 +303,11 @@ describe("the Crumble Dungeon section", () => {
   it("lists Crumble Dungeon in the navigation with its pages, and its rules on the overview", async () => {
     await renderDungeon("/dungeon");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
-    const pages = within(nav).getByRole("list", { name: "Crumble Dungeon sections" });
-    expect(
-      within(pages)
+    const hrefs = (list: string) =>
+      within(within(nav).getByRole("list", { name: `Crumble Dungeon ${list}` }))
         .getAllByRole("link")
-        .map((a) => a.getAttribute("href")),
-    ).toEqual(DUNGEON.tabs.map((t) => t.to));
+        .map((a) => a.getAttribute("href"));
+    expect([...hrefs("Setup"), ...hrefs("Details")]).toEqual(DUNGEON.tabs.map((t) => t.to));
     expect(await screen.findByRole("heading", { name: "How Crumble Dungeon works" })).toBeVisible();
     expect(screen.getByText("No formation, no pet choice and no manual control.")).toBeVisible();
     expect(screen.getByText("The fight length comes from the wiki.")).toBeVisible();

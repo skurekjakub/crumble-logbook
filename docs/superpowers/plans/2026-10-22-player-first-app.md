@@ -54,9 +54,9 @@ Files: `apps/web/src/app/modes/types.ts`, `apps/web/src/app/modes/index.ts`, `ap
 
 Files: `apps/web/src/app/modes/types.ts`, `apps/web/src/app/modes/links.ts`, `apps/web/src/app/modes/pvp-shared.ts`, every mode config, `apps/web/src/components/SideNav.tsx`, `apps/web/src/components/ModePageStrip.tsx` (new), `apps/web/src/routes/__root.tsx`, `apps/web/src/styles/shell.css`, `apps/web/test/modes.test.ts`, `apps/web/test/app-shell.test.tsx`.
 
-- [ ] Required `group: "setup" | "details"` on `SectionTab`, through `modeTab()` and `pvpTabs()`; every tab assigned per the spec's Stage 2 lists.
-- [ ] The side nav renders a mode's pages as two labelled lists; `ModePageStrip` renders the Setup pages as `<Link aria-current>` at the top of every mode page, 44px touch targets at phone width, no `role="tab"`.
-- [ ] Tests: each tab in exactly one group; the stage mode's Setup list in order with Rift active; the strip on a mode page.
+- [x] Required `group: "setup" | "details"` on `SectionTab`, through `modeTab()` and `pvpTabs()`; every tab assigned per the spec's Stage 2 lists.
+- [x] The side nav renders a mode's pages as two labelled lists; `ModePageStrip` renders the Setup pages as `<Link aria-current>` at the top of every mode page, 44px touch targets at phone width, no `role="tab"`.
+- [x] Tests: each tab in exactly one group; the stage mode's Setup list in order with Rift active; the strip on a mode page.
 - Verify: `pnpm exec vitest run apps/web/test/modes.test.ts apps/web/test/app-shell.test.tsx`, then `pnpm verify`.
 
 ### Task 5: Best setup lands, Findings moves

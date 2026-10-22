@@ -22,7 +22,7 @@ import { RUMBLE } from "./rumble";
 import { FORMULA, FORMULA_SCOPE, SHARED_SECTIONS } from "./shared";
 import { STAGE } from "./stage";
 import { TEAM_POWER } from "./team-power";
-import type { ModeSection, NavGroupId, Section, SectionTab } from "./types";
+import type { ModeSection, NavGroupId, Section, SectionTab, TabGroup } from "./types";
 
 export type * from "./types";
 export { modeLink, modePath, modeTab } from "./links";
@@ -65,6 +65,18 @@ export const NAV_GROUPS: readonly NavGroup[] = [
   { id: "builds", label: "Builds" },
   { id: "you", label: "You" },
   { id: "reference", label: "Reference" },
+];
+
+/** A mode's page list: its group and the label shown above it. */
+export interface TabGroupLabel {
+  id: TabGroup;
+  label: string;
+}
+
+/** A mode's page lists, in nav order. */
+export const TAB_GROUPS: readonly TabGroupLabel[] = [
+  { id: "setup", label: "Setup" },
+  { id: "details", label: "Details" },
 ];
 
 /**

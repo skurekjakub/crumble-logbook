@@ -343,12 +343,11 @@ describe("the stage section", () => {
   it("lists Stage in the navigation with its pages, and a stamp of sources and decks", async () => {
     await renderStage("/stage");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
-    const pages = within(nav).getByRole("list", { name: "Stage sections" });
-    expect(
-      within(pages)
+    const hrefs = (list: string) =>
+      within(within(nav).getByRole("list", { name: `Stage ${list}` }))
         .getAllByRole("link")
-        .map((a) => a.getAttribute("href")),
-    ).toEqual(STAGE.tabs.map((t) => t.to));
+        .map((a) => a.getAttribute("href"));
+    expect([...hrefs("Setup"), ...hrefs("Details")]).toEqual(STAGE.tabs.map((t) => t.to));
     await waitFor(() => expect(document.querySelector(".stamp")).toHaveTextContent("Sources2"));
     expect(document.querySelector(".stamp")).toHaveTextContent("Decks2");
     expect(await screen.findByText("Main stages and the Rift.")).toBeVisible();
