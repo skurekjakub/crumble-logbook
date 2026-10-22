@@ -20,11 +20,12 @@ export const DUNGEON = {
   lede: null,
   stamp: ["updated", "sources", "decks"],
   tabs: [
-    modeTab("dungeon", "overview", "Overview", "/$mode", "setup"),
+    modeTab("dungeon", "setup", "Best setup", "/$mode", "setup"),
     modeTab("dungeon", "teams", "Teams", "/$mode/teams", "setup"),
     modeTab("dungeon", "runes", "Sugar runes", "/$mode/runes", "setup"),
     modeTab("dungeon", "gear", "Gear", "/$mode/gear", "setup"),
     modeTab("dungeon", "lineups", "Lineups", "/$mode/lineups", "setup"),
+    modeTab("dungeon", "findings", "Findings", "/$mode/findings", "details"),
     modeTab("dungeon", "runs", "Runs", "/$mode/runs", "details"),
     modeTab("dungeon", "exclusions", "Exclusions", "/$mode/exclusions", "details"),
     modeTab("dungeon", "usage", "Usage", "/$mode/usage", "details"),
@@ -34,7 +35,14 @@ export const DUNGEON = {
   scope: { mode: "crumble_dungeon" },
   placeholder: null,
   copy: {
-    overview: {
+    setup: {
+      title: "Best setup for Crumble Dungeon",
+      lede: [
+        "The lead lineup by score, runes for its first cookies.",
+        "Levels and each cookie's why are on the lineup's card.",
+      ],
+    },
+    findings: {
       title: "How the top scores are built",
       lede: ["How the dungeon works, then what the top scores share."],
     },
@@ -107,6 +115,7 @@ export const DUNGEON = {
       topic: "formation",
     },
     firstWave: 40,
+    setupRunes: 12,
   },
   teamPower: null,
   daily: null,

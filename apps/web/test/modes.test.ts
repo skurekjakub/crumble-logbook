@@ -58,7 +58,7 @@ describe("sectionForPath", () => {
 describe("activeTab", () => {
   const tabs = MODES.find((m) => m.id === "conquest")!.tabs;
 
-  it("picks the overview only on the mode root", () => {
+  it("picks the landing page only on the mode root", () => {
     expect(activeTab(tabs, "/conquest")?.to).toBe("/conquest");
     expect(activeTab(tabs, "/conquest/")?.to).toBe("/conquest");
   });
@@ -77,7 +77,8 @@ describe("modeById and tabAt", () => {
 
   it("find a tab at exactly a path, ignoring a trailing slash", () => {
     expect(tabAt(ARENA, "/arena/teams/")?.id).toBe("teams");
-    expect(tabAt(ARENA, "/arena")?.id).toBe("overview");
+    expect(tabAt(ARENA, "/arena")?.id).toBe("setup");
+    expect(tabAt(ARENA, "/arena/findings")?.id).toBe("findings");
     expect(tabAt(ARENA, "/arena/scores")).toBeUndefined();
     expect(tabAt(ARENA, "/Arena/Teams")?.id).toBe("teams");
     expect(tabAt(CONQUEST, "/conquest/scores")?.id).toBe("scores");
@@ -113,6 +114,7 @@ describe("MODES", () => {
       ["/decks", "setup"],
       ["/runes", "setup"],
       ["/gear", "setup"],
+      ["/findings", "details"],
       ["/scores", "details"],
       ["/mechanics", "details"],
       ["/timeline", "details"],
@@ -141,6 +143,7 @@ describe("MODES", () => {
         ["/teams", "setup"],
         ["/runes", "setup"],
         ["/gear", "setup"],
+        ["/findings", "details"],
         ["/counters", "details"],
         ["/usage", "details"],
         ["/mechanics", "details"],
@@ -162,6 +165,7 @@ describe("MODES", () => {
       ["/brackets", "setup"],
       ["/rift", "setup"],
       ["/rift-15", "setup"],
+      ["/findings", "details"],
       ["/zones", "details"],
       ["/clears", "details"],
       ["/usage", "details"],
@@ -181,6 +185,7 @@ describe("MODES", () => {
       ["/runes", "setup"],
       ["/gear", "setup"],
       ["/lineups", "setup"],
+      ["/findings", "details"],
       ["/runs", "details"],
       ["/exclusions", "details"],
       ["/usage", "details"],
@@ -188,6 +193,7 @@ describe("MODES", () => {
       ["/timeline", "details"],
     ]);
     expect(DUNGEON.dungeon.firstWave).toBe(40);
+    expect(DUNGEON.dungeon.setupRunes).toBeLessThan(DUNGEON.dungeon.firstWave);
     expect(DUNGEON.rules).not.toBeNull();
     for (const mode of [CONQUEST, ARENA, RUMBLE, STAGE]) expect(mode.dungeon, mode.id).toBeNull();
   });
@@ -222,14 +228,14 @@ describe("MODES", () => {
     expect(DAILY.tabs.map((t) => t.id)).toEqual([
       "dungeons",
       "teams",
-      "overview",
+      "findings",
       "mechanics",
       "timeline",
     ]);
     expect(pages(DAILY)).toEqual([
       ["", "setup"],
       ["/teams", "setup"],
-      ["/overview", "details"],
+      ["/findings", "details"],
       ["/mechanics", "details"],
       ["/timeline", "details"],
     ]);

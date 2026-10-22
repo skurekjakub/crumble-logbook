@@ -444,9 +444,9 @@ describe("PvP chrome", () => {
         .getAllByRole("link")
         .map((t) => t.textContent);
     const setup = within(nav).getByRole("list", { name: "Arena Setup" });
-    expect(labels(setup)).toEqual(["Overview", "Teams", "Sugar runes", "Gear"]);
+    expect(labels(setup)).toEqual(["Best setup", "Teams", "Sugar runes", "Gear"]);
     const details = within(nav).getByRole("list", { name: "Arena Details" });
-    expect(labels(details)).toEqual(["Counters", "Usage", "Mechanics", "Timeline"]);
+    expect(labels(details)).toEqual(["Findings", "Counters", "Usage", "Mechanics", "Timeline"]);
     expect(within(details).getByRole("link", { name: "Counters" })).toHaveAttribute(
       "aria-current",
       "page",
@@ -454,9 +454,9 @@ describe("PvP chrome", () => {
   });
 });
 
-describe("PvP overview", () => {
+describe("PvP findings", () => {
   it("shows the mode's caveat, the record's caveat, the season buffs apart, the rules card and takeaways", async () => {
-    await renderAt("/arena", ARENA);
+    await renderAt("/arena/findings", ARENA);
     expect(await panel().findByText("No stats site covers regular Arena.")).toHaveClass("note");
     expect(panel().getByText(RECORD.caveat)).toHaveClass("note");
 
@@ -480,7 +480,7 @@ describe("PvP overview", () => {
   });
 
   it("states Rumble Arena's Season 1 buffs", async () => {
-    await renderAt("/rumble", RUMBLE);
+    await renderAt("/rumble/findings", RUMBLE);
     const buffs = (await panel().findByRole("heading", { name: "Season buffs" })).closest(
       ".card",
     ) as HTMLElement;
@@ -490,7 +490,9 @@ describe("PvP overview", () => {
   });
 
   it("says so when a mode has no rules recorded", async () => {
-    await renderAt("/arena", ARENA, { "/api/mechanics?mode=arena&topic=rules": { body: [] } });
+    await renderAt("/arena/findings", ARENA, {
+      "/api/mechanics?mode=arena&topic=rules": { body: [] },
+    });
     expect(await panel().findByText("No rules recorded yet.")).toHaveClass("empty");
     expect(panel().queryByRole("heading", { name: "Season buffs" })).toBeNull();
   });
@@ -925,7 +927,7 @@ describe("PvP builds, mechanics and timeline", () => {
     expect(await panel().findByText("Skill haste on every right-side piece")).toHaveClass("stat");
   });
 
-  it("shows the mode's mechanics without its rules, which the overview shows", async () => {
+  it("shows the mode's mechanics without its rules, which the findings page shows", async () => {
     await renderAt("/arena/mechanics", ARENA);
     expect(
       await panel().findByRole("heading", { name: "Rye beats Bari is mostly Rumble evidence" }),

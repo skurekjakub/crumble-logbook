@@ -19,10 +19,11 @@ export const CONQUEST = {
   lede: null,
   stamp: ["updated", "season", "sources", "decks"],
   tabs: [
-    modeTab("conquest", "overview", "Overview", "/$mode", "setup"),
+    modeTab("conquest", "setup", "Best setup", "/$mode", "setup"),
     modeTab("conquest", "decks", "Decks", "/$mode/decks", "setup"),
     modeTab("conquest", "runes", "Sugar runes", "/$mode/runes", "setup"),
     modeTab("conquest", "gear", "Gear", "/$mode/gear", "setup"),
+    modeTab("conquest", "findings", "Findings", "/$mode/findings", "details"),
     modeTab("conquest", "scores", "Scores & RNG", "/$mode/scores", "details"),
     modeTab("conquest", "mechanics", "Mechanics", "/$mode/mechanics", "details"),
     modeTab("conquest", "timeline", "Timeline", "/$mode/timeline", "details"),
@@ -32,7 +33,14 @@ export const CONQUEST = {
   scope: { mode: "guild_conquest" },
   placeholder: null,
   copy: {
-    overview: {
+    setup: {
+      title: "Best setup for the Piñata",
+      lede: [
+        "The lead meta deck by damage, its runes and gear.",
+        "Levels and each cookie's why are on the deck's card.",
+      ],
+    },
+    findings: {
       title: "What the top players do",
       lede: ["Ranked findings, the strongest first.", "Each links the posts it stands on."],
     },

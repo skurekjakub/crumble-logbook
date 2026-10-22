@@ -1,18 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { requireTab } from "../../app/mode-route";
-import { OverviewView } from "../../views/OverviewView";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/$mode/overview")({
-  beforeLoad: ({ context, location }) => requireTab(context.mode, location.pathname),
-  component: Overview,
+  beforeLoad: ({ params }) => {
+    throw redirect({ to: "/$mode/findings", params: { mode: params.mode }, replace: true });
+  },
 });
-
-/**
- * The overview of a mode whose landing page is another screen (the daily
- * dungeon board), for the modes that list it among their tabs.
- *
- * @returns the view
- */
-function Overview() {
-  return <OverviewView mode={Route.useRouteContext().mode} />;
-}

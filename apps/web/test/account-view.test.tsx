@@ -155,6 +155,15 @@ const OVERVIEW = {
             obsolete: false,
           },
           {
+            record: "002-pvp-meta",
+            entity: "file",
+            id: "curated/takeaways.json",
+            label: "takeaways",
+            mode: "arena",
+            found: true,
+            obsolete: false,
+          },
+          {
             record: null,
             entity: null,
             id: "gone",
@@ -227,6 +236,10 @@ describe("/account", () => {
     expect(within(row).getByRole("link", { name: "runes" })).toHaveAttribute(
       "href",
       "/arena/runes",
+    );
+    expect(within(row).getByRole("link", { name: "takeaways" })).toHaveAttribute(
+      "href",
+      "/arena/findings",
     );
     expect(within(row).getByText("gone").closest(".chip")).toHaveClass("ref", "missing");
     const later = screen.getByText("Level runes to 15").closest("li")!;

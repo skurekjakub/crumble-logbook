@@ -70,7 +70,8 @@ export interface ViewCopy {
 
 /** The views several modes share, by name. */
 export type SharedView =
-  | "overview"
+  | "setup"
+  | "findings"
   | "decks"
   | "runes"
   | "gear"
@@ -183,7 +184,7 @@ export interface LeaderboardConfig extends ViewCopy {
   boards: Readonly<Record<RankingBoardFilter, string>>;
 }
 
-/** A mode's rules card on its overview: the mode's `rules` mechanics. */
+/** A mode's rules card on its findings page: the mode's `rules` mechanics. */
 export interface RulesConfig {
   /** The card's heading. */
   title: string;
@@ -207,9 +208,9 @@ export interface ModeSection extends SectionBase {
   boss: BossConfig | null;
   /** The mode's leaderboard on the scores view, when it has one. */
   leaderboard: LeaderboardConfig | null;
-  /** The overview's rules card, for a mode whose record files its rules as mechanics. */
+  /** The findings page's rules card, for a mode whose record files its rules as mechanics. */
   rules: RulesConfig | null;
-  /** The heading of the overview's card holding the record's advice for the reader's account. */
+  /** The heading of the findings page's card holding the record's advice for the reader's account. */
   accountTitle: string;
   /** The stage-pushing screens, for the stage mode. */
   stage: StageConfig | null;
@@ -277,6 +278,8 @@ export interface DungeonConfig {
   exclusions: ViewCopy;
   /** How many of the highest-power cookies deploy at once. */
   firstWave: number;
+  /** How many of the lead lineup's cookies Best setup lists rune builds for. */
+  setupRunes: number;
 }
 
 /**

@@ -115,7 +115,7 @@ export function tabAt(section: Section, pathname: string): SectionTab | undefine
 
 /**
  * The mechanics topics a mode shows somewhere other than its mechanics
- * view: its rules (on the overview) and its boss's facts (in the boss
+ * view: its rules (on its findings page) and its boss's facts (in the boss
  * screen's header list). The mechanics view leaves them out.
  *
  * @param mode - the mode

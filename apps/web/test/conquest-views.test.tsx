@@ -283,9 +283,9 @@ const renderAt = (path: string, overrides: Record<string, Canned> = {}) =>
  */
 const panel = () => within(screen.getByRole("main"));
 
-describe("/conquest overview", () => {
+describe("/conquest/findings", () => {
   it("renders the caveat, takeaways in order with sources, and the account block", async () => {
-    await renderAt("/conquest");
+    await renderAt("/conquest/findings");
     const caveat = await panel().findByText(RECORD.caveat);
     expect(caveat.closest(".callout")).not.toBeNull();
     expect(within(caveat.closest(".callout") as HTMLElement).getByText("caveat")).toHaveClass(
@@ -327,7 +327,9 @@ describe("/conquest overview", () => {
       detail:
         "The Naver guide and the 1T 312G run field the same cookies and pets, and so does every top-board lineup posted since.",
     };
-    await renderAt("/conquest", { "/api/takeaways?mode=guild_conquest": { body: [long] } });
+    await renderAt("/conquest/findings", {
+      "/api/takeaways?mode=guild_conquest": { body: [long] },
+    });
     const item = (await panel().findByText("The Cherry deck is the meta.")).closest(
       "li",
     ) as HTMLElement;
@@ -343,7 +345,7 @@ describe("/conquest overview", () => {
   });
 
   it("shows the legacy empty message with no takeaways and omits the account block", async () => {
-    await renderAt("/conquest", {
+    await renderAt("/conquest/findings", {
       "/api/takeaways?mode=guild_conquest": { body: [] },
       "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
     });
@@ -352,7 +354,7 @@ describe("/conquest overview", () => {
   });
 
   it("names the failed resource when takeaways fail, and still shows the account block", async () => {
-    await renderAt("/conquest", {
+    await renderAt("/conquest/findings", {
       "/api/takeaways?mode=guild_conquest": { status: 500, body: { error: "x" } },
     });
     expect(await panel().findByRole("alert")).toHaveTextContent("Couldn't load takeaways");

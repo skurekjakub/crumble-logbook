@@ -34,7 +34,7 @@ export const TEAM_POWER = {
   scope: { mode: "team_power" },
   placeholder: null,
   copy: {
-    overview: {
+    findings: {
       title: "What raises team power",
       lede: ["Where team power counts, then what raises it."],
     },

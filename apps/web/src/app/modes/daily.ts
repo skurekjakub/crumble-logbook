@@ -22,14 +22,14 @@ export const DAILY = {
   tabs: [
     modeTab("daily-dungeons", "dungeons", "Dungeons", "/$mode", "setup"),
     modeTab("daily-dungeons", "teams", "Teams", "/$mode/teams", "setup"),
-    modeTab("daily-dungeons", "overview", "Overview", "/$mode/overview", "details"),
+    modeTab("daily-dungeons", "findings", "Findings", "/$mode/findings", "details"),
     modeTab("daily-dungeons", "mechanics", "Mechanics", "/$mode/mechanics", "details"),
     modeTab("daily-dungeons", "timeline", "Timeline", "/$mode/timeline", "details"),
   ],
   scope: { mode: "daily_dungeon" },
   placeholder: null,
   copy: {
-    overview: {
+    findings: {
       title: "What clears the daily dungeons",
       lede: ["How the dungeons work, then what the furthest clears share."],
     },

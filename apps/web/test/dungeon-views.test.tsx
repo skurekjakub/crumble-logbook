@@ -300,8 +300,8 @@ const API: Record<string, Canned> = {
 const renderDungeon = (path: string) => renderRoute(path, API, { mode: DUNGEON });
 
 describe("the Crumble Dungeon section", () => {
-  it("lists Crumble Dungeon in the navigation with its pages, and its rules on the overview", async () => {
-    await renderDungeon("/dungeon");
+  it("lists Crumble Dungeon in the navigation with its pages, and its rules on its findings", async () => {
+    await renderDungeon("/dungeon/findings");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
     const hrefs = (list: string) =>
       within(within(nav).getByRole("list", { name: `Crumble Dungeon ${list}` }))

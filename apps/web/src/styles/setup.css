@@ -1,0 +1,107 @@
+/* Best setup (views/BestSetupView.tsx): a block per deck to run. The deck's tier leads its head;
+   each rune row leads with the cookie and the verdict pill, the lines and the why after them. */
+
+.setup-block {
+  gap: var(--sp-3);
+}
+.setup-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sp-1) var(--sp-3);
+}
+.setup-head h3 {
+  font-size: var(--fs-l);
+}
+/* A ceiling can be a sentence: the head's chips wrap instead of overflowing. */
+.setup-head .chips {
+  min-width: 0;
+}
+.setup-head .chip {
+  white-space: normal;
+}
+.setup-card-link {
+  align-self: flex-start;
+  font-size: var(--fs-s);
+  font-weight: 600;
+}
+.setup-tag {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/* A part of a block (gear, runes) under its small heading. */
+.setup-part {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--line);
+}
+.setup-part-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-1) var(--sp-3);
+}
+.setup-part-head a {
+  font-size: var(--fs-s);
+}
+.setup-part p {
+  margin: 0;
+  font-size: var(--fs-s);
+}
+
+/* One cookie's runes per row: name, verdict, then the lines over the why, sources last. */
+.setup-runes {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.setup-rune {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--sp-1) var(--sp-3);
+  padding: var(--sp-2) 0;
+}
+.setup-rune + .setup-rune {
+  border-top: 1px solid var(--line);
+}
+.setup-rune-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.setup-rune-lines {
+  font: 500 var(--fs-xs) / 1.4 var(--mono);
+  color: var(--ink-2);
+}
+.setup-rune-why {
+  min-width: 0;
+  font-size: var(--fs-s);
+}
+.setup-rune.none {
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+}
+.setup-rune.none .name-row {
+  opacity: 0.7;
+}
+
+/* Phones and narrow panels: the name and verdict on one line, the lines and why beneath. */
+@media (max-width: 760px) {
+  .setup-rune {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .setup-rune-body,
+  .setup-rune .chips.src {
+    grid-column: 1 / -1;
+  }
+  .setup-rune.none {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}

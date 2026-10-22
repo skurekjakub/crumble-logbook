@@ -21,13 +21,14 @@ export const STAGE = {
   lede: null,
   stamp: ["updated", "sources", "decks"],
   tabs: [
-    modeTab("stage", "overview", "Overview", "/$mode", "setup"),
+    modeTab("stage", "setup", "Best setup", "/$mode", "setup"),
     modeTab("stage", "teams", "Teams", "/$mode/teams", "setup"),
     modeTab("stage", "runes", "Sugar runes", "/$mode/runes", "setup"),
     modeTab("stage", "gear", "Gear", "/$mode/gear", "setup"),
     modeTab("stage", "brackets", "Bracket calculator", "/$mode/brackets", "setup"),
     modeTab("stage", "rift", "Dimensional Rift", "/$mode/rift", "setup"),
     modeTab("stage", "rift-15", "Rift at 15%", "/$mode/rift-15", "setup"),
+    modeTab("stage", "findings", "Findings", "/$mode/findings", "details"),
     modeTab("stage", "zones", "Zones & bosses", "/$mode/zones", "details"),
     modeTab("stage", "clears", "Clears", "/$mode/clears", "details"),
     modeTab("stage", "usage", "Usage", "/$mode/usage", "details"),
@@ -37,7 +38,14 @@ export const STAGE = {
   scope: { mode: "stage" },
   placeholder: null,
   copy: {
-    overview: {
+    setup: {
+      title: "Best setup for stages",
+      lede: [
+        "The lead stage team, then each Rift team.",
+        "Each with its runes; levels and why are on its card.",
+      ],
+    },
+    findings: {
       title: "How the pushers get through",
       lede: [
         "How stages work, then the findings that carry the push.",
@@ -79,7 +87,7 @@ export const STAGE = {
       lede: [
         "What players measured or datamined about stages.",
         "Confidence says how well each point is sourced.",
-        "The mode's rules are on its overview.",
+        "The mode's rules are on its Findings page.",
       ],
     },
     timeline: {

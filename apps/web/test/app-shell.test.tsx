@@ -58,6 +58,8 @@ const API: Record<string, Canned> = {
   "/api/decks?mode=guild_conquest": { body: DECKS },
   "/api/takeaways?mode=guild_conquest": { body: [] },
   "/api/recommendations?record=001-guild-conquest-meta": { body: [] },
+  "/api/rune-builds?mode=guild_conquest&current=true": { body: [] },
+  "/api/gear-recs?mode=guild_conquest&current=true": { body: [] },
 };
 
 /**
@@ -164,7 +166,7 @@ describe("app shell", () => {
     const decks = within(setup).getByRole("link", { name: "Decks" });
     expect(decks).toHaveAttribute("href", "/conquest/decks");
     expect(decks).toHaveAttribute("aria-current", "page");
-    expect(within(setup).getByRole("link", { name: "Overview" })).not.toHaveAttribute(
+    expect(within(setup).getByRole("link", { name: "Best setup" })).not.toHaveAttribute(
       "aria-current",
     );
     const details = within(nav).getByRole("list", { name: "Guild Conquest Details" });
@@ -188,7 +190,7 @@ describe("app shell", () => {
         .map((a) => a.textContent);
     const setup = within(nav).getByRole("list", { name: "Stage Setup" });
     expect(labels(setup)).toEqual([
-      "Overview",
+      "Best setup",
       "Teams",
       "Sugar runes",
       "Gear",
@@ -200,7 +202,14 @@ describe("app shell", () => {
       "Dimensional Rift",
     );
     const details = within(nav).getByRole("list", { name: "Stage Details" });
-    expect(labels(details)).toEqual(["Zones & bosses", "Clears", "Usage", "Mechanics", "Timeline"]);
+    expect(labels(details)).toEqual([
+      "Findings",
+      "Zones & bosses",
+      "Clears",
+      "Usage",
+      "Mechanics",
+      "Timeline",
+    ]);
     expect(within(details).queryByRole("link", { current: "page" })).toBeNull();
     expect(within(nav).getByText("Setup", { selector: ".nav-pages-label" })).toBeVisible();
     expect(within(nav).getByText("Details", { selector: ".nav-pages-label" })).toBeVisible();
@@ -232,14 +241,14 @@ describe("app shell", () => {
     expect(screen.queryByRole("navigation", { name: "Setup pages" })).toBeNull();
   });
 
-  it("marks a mode link and its overview as the current page on the mode's landing page", async () => {
+  it("marks a mode link and its Best setup page as the current page on the mode's landing page", async () => {
     await renderAt("/conquest");
     const nav = screen.getByRole("navigation", { name: "Logbook" });
     expect(
       within(nav)
         .getAllByRole("link", { current: "page" })
         .map((a) => a.textContent),
-    ).toEqual(["Guild Conquest", "Overview"]);
+    ).toEqual(["Guild Conquest", "Best setup"]);
   });
 
   it("opens the navigation from the phone's menu button, which names where the reader is", async () => {

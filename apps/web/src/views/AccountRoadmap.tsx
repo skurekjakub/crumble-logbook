@@ -24,7 +24,7 @@ const ENTITY_TAB: Record<string, string> = {
 /**
  * Where a reference that isn't a deck lands: the tab of its mode that
  * shows its kind of row (a record file's name picks it, `curated/runes.json`
- * the runes tab), else the mode's landing page.
+ * the runes tab), else the mode's findings, else its landing page.
  *
  * @param mode - the mode whose screens show the row
  * @param target - the reference
@@ -39,7 +39,9 @@ function refPage(mode: ModeSection, target: AccountRef): LinkTarget {
           .replace(/\.[^.]+$/, "")
       : (ENTITY_TAB[target.entity ?? ""] ?? "");
   const wanted = [name, name.replace(/^dungeon-/, "")];
-  return mode.tabs.find((tab) => wanted.includes(tab.id))?.link ?? mode.link;
+  const page =
+    mode.tabs.find((t) => wanted.includes(t.id)) ?? mode.tabs.find((t) => t.id === "findings");
+  return page?.link ?? mode.link;
 }
 
 /**

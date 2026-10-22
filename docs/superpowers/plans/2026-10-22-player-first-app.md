@@ -63,9 +63,9 @@ Files: `apps/web/src/app/modes/types.ts`, `apps/web/src/app/modes/links.ts`, `ap
 
 Files: `apps/web/src/app/modes/types.ts` (`SharedView` `setup`, `overview` → `findings`), every mode config (copy `setup`, `findings`; tabs), `apps/web/src/routes/$mode/index.tsx`, `apps/web/src/routes/$mode/findings.tsx` (new), `apps/web/src/routes/$mode/overview.tsx` (redirect), `apps/web/src/views/BestSetupView.tsx` (new), `apps/web/src/views/OverviewView.tsx` (copy key), `apps/web/src/views/DeckLink.tsx`, `apps/web/src/views/AccountRoadmap.tsx`, `apps/web/src/styles/` (a `setup.css`), `apps/web/src/routeTree.gen.ts`, the tests that render a mode root expecting findings (`app-shell`, `conquest-views`, `pvp-views`, `team-power-views`, `mode-isolation`, `daily-dungeon-views`), `apps/web/test/best-setup-view.test.tsx` (new).
 
-- [ ] `/$mode` renders `BestSetupView` for Guild Conquest, Arena, Rumble Arena, Stages and Crumble Dungeon; Daily Dungeons' board and Team power's landing as today. `/$mode/findings` renders the findings for every mode; `/daily-dungeons/overview` redirects to it.
-- [ ] Best setup per the spec: the first current `meta` deck by `position` (head only, link to its card), the gear block (the mode's `GearBoard` until Task 9), the runes per deck cookie (linked build, else unlinked, else the muted row), the Crumble Dungeon's first twelve, the stage's block per rift deck in a `TocLayout`.
-- [ ] Tests per the spec's Stage 2 list (landings, redirect, the obsolete/alt/meta fixture, the three rune cases, the rift blocks).
+- [x] `/$mode` renders `BestSetupView` for Guild Conquest, Arena, Rumble Arena, Stages and Crumble Dungeon; Daily Dungeons' board and Team power's landing as today. `/$mode/findings` renders the findings for every mode; `/daily-dungeons/overview` redirects to it.
+- [x] Best setup per the spec: the first current `meta` deck by `position` (head only, link to its card), the gear block (the mode's `GearBoard` until Task 9), the runes per deck cookie (linked build, else unlinked, else the muted row), the Crumble Dungeon's first twelve, the stage's block per rift deck in a `TocLayout`.
+- [x] Tests per the spec's Stage 2 list (landings, redirect, the obsolete/alt/meta fixture, the three rune cases, the rift blocks).
 - Verify: `pnpm exec vitest run apps/web/test/best-setup-view.test.tsx apps/web/test/app-shell.test.tsx`, then `pnpm verify`.
 
 ## Stage 3 — Cookies
