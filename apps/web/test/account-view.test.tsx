@@ -15,7 +15,12 @@ import {
 import { keyLabel } from "../src/views/AccountLineups";
 import { renderRoute } from "./view-harness";
 
-const CHERRY = { kr: "체리 쿠키", en: "Cherry Cookie", resourceKey: "cookie0024" };
+const CHERRY = {
+  kr: "체리 쿠키",
+  en: "Cherry Cookie",
+  key: "cookie0024",
+  resourceKey: "cookie0024",
+};
 
 const OVERVIEW = {
   snapshot: {
@@ -35,7 +40,7 @@ const OVERVIEW = {
         gameMode: "arena",
         power: "24270000",
         captain: CHERRY,
-        pets: [{ kr: "갓난갓방울", en: "Holy Baby Drop", resourceKey: "pet4001" }],
+        pets: [{ kr: "갓난갓방울", en: "Holy Baby Drop", key: null, resourceKey: "pet4001" }],
         gearPreset: "Conquest (equipped); lineup editor lists Power",
         deck: {
           record: "002-pvp-meta",
@@ -68,6 +73,7 @@ const OVERVIEW = {
             name: "미확인 쿠키",
             kr: "미확인 쿠키",
             en: null,
+            key: null,
             resourceKey: null,
             level: null,
             stars: null,
@@ -99,6 +105,7 @@ const OVERVIEW = {
         name: "Holy Baby Drop",
         kr: "갓난갓방울",
         en: "Holy Baby Drop",
+        key: null,
         resourceKey: "pet4001",
         chips: ["SSR", "20★"],
         detail: "Ally ATK +20%",

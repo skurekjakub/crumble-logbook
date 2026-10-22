@@ -19,7 +19,7 @@ import { assertSourcesExist } from "./citations";
 import type { Cited } from "./citations";
 import { deckModeMismatch } from "./deck-modes";
 import { applyFilters, filtersNeedGlossary } from "./filters";
-import type { NameResolver } from "./names";
+import type { NameRef, NameResolver } from "./names";
 import { createNameResolver, recordsOf } from "./names";
 
 /**
@@ -135,7 +135,7 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
   derive?: (row: Row) => Partial<Row>;
   /** The list filters `list` applies, by name. */
   filters?: AnyFilters;
-  /** A Korean-name column whose English gloss each view carries as `en`. */
+  /** A Korean-name column whose English gloss each view carries as `en`, its cookie key as `key`. */
   gloss?: string;
   /** The table's entity when its rows carry the obsolete lifecycle: views then carry `obsoleteSources`. */
   lifecycle?: ObsoleteEntity | undefined;
@@ -153,8 +153,8 @@ export interface ContentServiceSpec<Row extends { id: number }, Values> {
  * cited both itself and inside a list it no longer names goes with the
  * list). A view is the row, then `sources` (its citations), then
  * `obsoleteSources` (the sources of its obsolete reason) when
- * `spec.lifecycle` names its entity, then `en` when `spec.gloss` names a
- * column, glossed with the row's own record's entries first. Deleting a
+ * `spec.lifecycle` names its entity, then `en` and `key` when `spec.gloss`
+ * names a column, glossed with the row's own record's entries first. Deleting a
  * row deletes its obsolete reason's citations with it. The obsolete
  * lifecycle is the record importer's alone: the API's inputs leave it
  * out, and a caller of these writes must not pass it, since they would
@@ -244,15 +244,17 @@ export function createContentService<
    * @param row - the row
    * @param sources - the row's cited source ids
    * @param reasons - the sources of the row's obsolete reason
-   * @param resolve - the glossary resolver; without one, the view has no `en`
+   * @param resolve - the glossary resolver; without one, the view has no `en` or `key`
    * @returns the row with `sources`, `obsoleteSources` when the table has
-   *   the obsolete lifecycle, and `en` when `gloss` names a column
+   *   the obsolete lifecycle, and `en` and `key` when `gloss` names a column
    */
   const toView = (row: Row, sources: string[], reasons: string[], resolve?: NameResolver): View => {
     const view: Record<string, unknown> = { ...row, sources };
     if (lifecycle !== undefined) view.obsoleteSources = reasons;
     if (gloss !== undefined && resolve) {
-      view.en = resolve(String((row as Record<string, unknown>)[gloss]), recordsOf(row)).en;
+      const { en, key } = resolve(String((row as Record<string, unknown>)[gloss]), recordsOf(row));
+      view.en = en;
+      view.key = key;
     }
     return view as View;
   };
@@ -352,10 +354,10 @@ export function createContentService<
 /**
  * What a registered content type's reads and writes return: the row, its
  * `sources`, `obsoleteSources` when the type has the obsolete lifecycle,
- * and `en` when the type glosses a name column.
+ * and `en` and the cookie `key` when the type glosses a name column.
  */
 export type ContentView<K extends ContentKey> = Cited<RowOf<K>> &
-  (Registry[K]["content"] extends { gloss: string } ? { en: string | null } : unknown) &
+  (Registry[K]["content"] extends { gloss: string } ? Omit<NameRef, "kr"> : unknown) &
   (RowOf<K> extends { obsoleteSince: string | null } ? { obsoleteSources: string[] } : unknown);
 
 /** The service of the registered content type `K`. */

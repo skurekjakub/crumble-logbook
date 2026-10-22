@@ -5,6 +5,7 @@ import { accountRouter } from "./routes/account";
 import { attemptsRouter } from "./routes/attempts";
 import { capturesRouter } from "./routes/captures";
 import { crudRouter } from "./routes/content";
+import { cookiesRouter } from "./routes/cookies";
 import { exportRouter } from "./routes/export";
 import { glossaryRouter } from "./routes/glossary";
 import { rankingsRouter } from "./routes/rankings";
@@ -83,6 +84,7 @@ export function createApp(services: Services) {
     .route(R.formulaClaims.path, crudRouter(endpoints(services.formulaClaims), R.formulaClaims))
     .route(R.decks.path, crudRouter(services.decks, R.decks))
     .route(R.runeBuilds.path, crudRouter(services.runeBuilds, R.runeBuilds))
+    .route("/cookies", cookiesRouter(services.cookies))
     .route(R.sources.path, sourcesRouter(services.sources))
     .route(R.glossary.path, glossaryRouter(services.glossary))
     .route(R.rankings.path, rankingsRouter(services.rankings))

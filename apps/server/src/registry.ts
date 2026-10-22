@@ -305,7 +305,7 @@ export interface ContentSpec<Row> {
    * @returns the source ids
    */
   innerSources?(values: Partial<Row>): string[];
-  /** A Korean-name column whose English gloss every view carries as `en`. */
+  /** A Korean-name column whose English gloss every view carries as `en`, its cookie key as `key`. */
   gloss?: ColumnOf<Row>;
   /**
    * The game mode every row is about, for a table with no `mode` column

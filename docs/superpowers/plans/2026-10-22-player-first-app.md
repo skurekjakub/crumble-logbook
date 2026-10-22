@@ -74,10 +74,10 @@ Files: `apps/web/src/app/modes/types.ts` (`SharedView` `setup`, `overview` → `
 
 Files: `apps/server/src/services/names.ts`, `apps/server/src/services/account.ts`, every service that builds a name ref (`{ kr, en }`), `packages/schema/src/` (the name-ref type gains `key`), `apps/server/src/services/cookies.ts` (new), `apps/server/src/routes/cookies.ts` (new), `apps/server/src/services/index.ts` (or wherever services are composed), `apps/server/src/app.ts`, `apps/server/test/services/cookies.test.ts`, `apps/server/test/routes/cookies.test.ts` (new), the tests that assert name refs.
 
-- [ ] One resolver helper returning the winning glossary entry per row and its records; the cookie lookup keeps `kind: "cookie"`; key = `extra.resource_key`, else English slug, else Korean slug; the account service uses it.
-- [ ] Every API name ref gains `key` (null for non-cookies).
-- [ ] `GET /api/cookies` and `GET /api/cookies/:key` per the spec, composing the rune-build, deck and usage services; English halves of element and class; 404 `not_found`.
-- [ ] Tests per the spec's Stage 3 server list.
+- [x] One resolver helper returning the winning glossary entry per row and its records; the cookie lookup keeps `kind: "cookie"`; key = `extra.resource_key`, else English slug, else Korean slug; the account service uses it.
+- [x] Every API name ref gains `key` (null for non-cookies).
+- [x] `GET /api/cookies` and `GET /api/cookies/:key` per the spec, composing the rune-build, deck and usage services; English halves of element and class; 404 `not_found`.
+- [x] Tests per the spec's Stage 3 server list.
 - Verify: `pnpm exec vitest run apps/server/test/services/cookies.test.ts apps/server/test/routes/cookies.test.ts apps/server/test/architecture.test.ts`, then `pnpm verify`.
 
 ### Task 7: the cookie pages (after Tasks 1–6 merge)

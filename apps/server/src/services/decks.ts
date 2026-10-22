@@ -26,17 +26,20 @@ export type DailyRunView = Omit<DeckDailyDungeonRow, "deckId" | "captainKr"> & {
   captain: NameRef | null;
 };
 
+/** One cookie slot of a {@link DeckView}: the stored slot, its cookie's English gloss and key. */
+export type DeckCookieView = Omit<DeckCookieRow, "deckId"> & Omit<NameRef, "kr">;
+
 /**
  * A deck as returned to callers: its cookies and pets carry a resolved
- * English gloss alongside their stored Korean name (the deck's own record's
- * glossary entries first), `atkOrder` is resolved from a raw name list to
- * {@link NameRef}s (or stays `null`), `dailyDungeon` holds a daily dungeon
- * deck's run facts (`null` for any other deck), and the row carries its
- * citing sources, and the sources that say why it became obsolete
- * (`obsoleteSources`, empty while it is current).
+ * English gloss and cookie key alongside their stored Korean name (the
+ * deck's own record's glossary entries first), `atkOrder` is resolved from
+ * a raw name list to {@link NameRef}s (or stays `null`), `dailyDungeon`
+ * holds a daily dungeon deck's run facts (`null` for any other deck), and
+ * the row carries its citing sources, and the sources that say why it
+ * became obsolete (`obsoleteSources`, empty while it is current).
  */
 export type DeckView = Omit<Cited<DeckRow>, "atkOrder"> & {
-  cookies: Array<Omit<DeckCookieRow, "deckId"> & { en: string | null }>;
+  cookies: DeckCookieView[];
   pets: NameRef[];
   notes: Array<{ kind: DeckNoteKind; text: string }>;
   atkOrder: NameRef[] | null;
@@ -199,10 +202,10 @@ export function createDeckService(store: Store): DeckService {
         sources: sourcesById.get(row.id) ?? [],
         obsoleteSources: reasonsById.get(obsolescenceKey("deck", row.id)) ?? [],
         atkOrder: row.atkOrder ? row.atkOrder.map((name) => resolve(name, records)) : null,
-        cookies: (cookiesByDeck.get(row.id) ?? []).map(({ deckId: _deckId, ...cookie }) => ({
-          ...cookie,
-          en: resolve(cookie.cookieKr, records).en,
-        })),
+        cookies: (cookiesByDeck.get(row.id) ?? []).map(({ deckId: _deckId, ...cookie }) => {
+          const { en, key } = resolve(cookie.cookieKr, records);
+          return { ...cookie, en, key };
+        }),
         pets: (petsByDeck.get(row.id) ?? []).map((pet) => resolve(pet.petKr, records)),
         notes: (notesByDeck.get(row.id) ?? []).map((note) => ({
           kind: note.kind,
