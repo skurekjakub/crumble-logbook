@@ -165,8 +165,9 @@ Stop the loop before working in menus and relaunch it after.
   compare card (one Back closes a card, and only when a card is open: its Equip button is orange
   on an upgrade, teal otherwise); pick per slot the item whose subs fit it and beat
   DimensionRift's piece, with no haste line; equip each pick, finding it again by icon and level
-  since every Equip re-sorts the list; then Sell All and confirm, Auto, Start; relaunch the
-  loop. Record each equip in the plan.
+  since every Equip re-sorts the list, and check each one took on the lobby slot's level (an
+  Equip tap on a card opened from the lower row missed on 2026-10-23); then Sell All and
+  confirm, Auto, Start; relaunch the loop. Record each equip in the plan.
 - **Navigation.** One Back closes a card or menu. Back on the lobby opens the exit prompt ("Wait,
   hold on...") and a second one closes the game (2026-10-23). Relaunch with `adb shell am start
   -n com.devsisters.cc/com.devsisters.plugin.OvenUnityPlayerActivity`; it may come back on

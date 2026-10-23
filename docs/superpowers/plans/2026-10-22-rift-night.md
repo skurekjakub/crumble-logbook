@@ -145,3 +145,17 @@ Equipped into DimensionRift (the rest sold with Sell All):
   game?" (Cancel at 432,2250).
 - First try after the switch: boss left at 46%. The 21 tries on Conquest
   gear before it: 53–78%.
+- 00:49–01:09, 30 tries on DimensionRift: boss left 27–73%, median about
+  50% (Conquest gear, same lineup: median about 64%).
+
+### 2026-10-23 01:28–05:35 (second oven; the API usage limit paused it)
+
+- Equipped: TL1 Axe-Spear Lv.120 (CRIT 17.02%, Skill AMP 9.20%), replacing
+  the Lv.118.
+- Missed: a Lv.119 helmet (DMG Reduction 5.72%, HP 9,894) and a Lv.120
+  Hollyberry (DMG Reduction 6.76%, HP 10,279). The Equip tap didn't land on
+  cards opened from the grid's lower row, the list re-sorted as if it had,
+  and both went with Sell All. Check the lobby slot's level after each
+  Equip before selling.
+- The loop stood stopped from 01:29 to 05:36 while the session waited out
+  the limit.
